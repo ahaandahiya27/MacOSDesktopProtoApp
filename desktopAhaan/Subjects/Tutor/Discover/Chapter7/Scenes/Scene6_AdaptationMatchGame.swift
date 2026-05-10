@@ -1,0 +1,244 @@
+import SwiftUI
+
+/// Scene 6 — Adaptation Match Game.
+/// Drag-and-drop: 6 animals matched to 6 adaptations. Score out of 12 (2 per correct match).
+/// Uses DragGesture with zone rect tracking.
+struct Scene6_AdaptationMatchGame: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: (Int) -> Void
+
+    private struct MatchPair: Identifiable {
+        let id: Int
+        let animal: String
+        let adaptation: String
+    }
+
+    private static let pairs: [MatchPair] = [
+        MatchPair(id: 0, animal: "Polar Bear", adaptation: "Thick blubber"),
+        MatchPair(id: 1, animal: "Camel", adaptation: "Hump stores fat"),
+        MatchPair(id: 2, animal: "Toucan", adaptation: "Large beak for cooling"),
+        MatchPair(id: 3, animal: "Penguin", adaptation: "Huddling behaviour"),
+        MatchPair(id: 4, animal: "Elephant", adaptation: "Large ears for cooling"),
+        MatchPair(id: 5, animal: "Arctic Fox", adaptation: "White winter coat"),
+    ]
+
+    @State private var animalOrder: [MatchPair]
+    @State private var adaptationOrder: [MatchPair]
+    @State private var dragOffsets: [Int: CGSize] = [:]
+    @State private var adaptationRects: [Int: CGRect] = [:]
+    @State private var matched: Set<Int> = []
+    @State private var score: Int = 0
+    @State private var shakeId: Int? = nil
+    @State private var showConfetti = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        _animalOrder = State(initialValue: Self.pairs.shuffled())
+        _adaptationOrder = State(initialValue: Self.pairs.shuffled())
+    }
+
+    private var isDone: Bool { matched.count == Self.pairs.count }
+
+    var body: some View {
+        GeometryReader { _ in
+            ZStack {
+                VStack(spacing: 14) {
+                    HStack {
+                        Spacer()
+                        Text("Score: \(score) / 12")
+                            .font(.headline.monospacedDigit())
+                            .foregroundStyle(.indigo)
+                            .padding(.trailing, 24)
+                            .padding(.top, 8)
+                    }
+
+                    if !isDone {
+                        HStack(alignment: .top, spacing: 40) {
+                            // Animals (draggable)
+                            VStack(spacing: 10) {
+                                Text("Animals")
+                                    .font(.headline)
+                                    .foregroundStyle(.orange)
+                                ForEach(animalOrder) { pair in
+                                    if matched.contains(pair.id) {
+                                        matchedChip(pair.animal, color: .green)
+                                    } else {
+                                        draggableAnimalChip(pair)
+                                    }
+                                }
+                            }
+
+                            // Adaptations (drop targets)
+                            VStack(spacing: 10) {
+                                Text("Adaptations")
+                                    .font(.headline)
+                                    .foregroundStyle(.blue)
+                                ForEach(adaptationOrder) { pair in
+                                    if matched.contains(pair.id) {
+                                        matchedChip(pair.adaptation, color: .green)
+                                    } else {
+                                        adaptationTarget(pair)
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        Text("All matched!")
+                            .font(.title2.bold())
+                            .foregroundStyle(.green)
+                            .padding(.top, 20)
+                    }
+
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 24)
+
+                VStack(spacing: 14) {
+                    Spacer()
+
+                    SoftShadowCard(padding: 18) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label(isDone ? "Great matching!" : "Match Animals to Adaptations",
+                                  systemImage: isDone ? "star.fill" : "arrow.left.arrow.right")
+                                .font(.title2.bold())
+                                .foregroundStyle(isDone ? .orange : .primary)
+                            Text(isDone
+                                 ? "Every animal has unique adaptations that help it survive in its climate. You matched all 6 correctly!"
+                                 : "Drag each animal on the left to its matching adaptation on the right. Each correct match earns 2 points.")
+                                .font(.body)
+                                .lineSpacing(4)
+                        }
+                    }
+                    .frame(maxWidth: 640)
+
+                    if isDone {
+                        GotItButton { onComplete(score) }
+                            .padding(.bottom, 12)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .padding(.horizontal, 24)
+
+                if showConfetti {
+                    ParticleEmitter(isActive: true, particleCount: 40, duration: 1.5)
+                        .allowsHitTesting(false)
+                        .ignoresSafeArea()
+                }
+            }
+        }
+    }
+
+    // MARK: - Draggable animal chip
+
+    private func draggableAnimalChip(_ pair: MatchPair) -> some View {
+        let offset = dragOffsets[pair.id] ?? .zero
+        let isShaking = shakeId == pair.id
+
+        return Text(pair.animal)
+            .font(.body.weight(.medium))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .frame(minWidth: 140)
+            .background(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(Color(nsColor: .windowBackgroundColor))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .strokeBorder(.orange.opacity(0.4), lineWidth: 1.5)
+            )
+            .offset(offset)
+            .offset(x: isShaking ? -6 : 0)
+            .zIndex(offset == .zero ? 0 : 10)
+            .gesture(
+                DragGesture(coordinateSpace: .global)
+                    .onChanged { val in
+                        dragOffsets[pair.id] = val.translation
+                    }
+                    .onEnded { val in
+                        handleDrop(pair, at: val.location)
+                        dragOffsets[pair.id] = .zero
+                    }
+            )
+            .accessibilityLabel("\(pair.animal). Drag to matching adaptation.")
+    }
+
+    // MARK: - Adaptation target
+
+    private func adaptationTarget(_ pair: MatchPair) -> some View {
+        Text(pair.adaptation)
+            .font(.body.weight(.medium))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .frame(minWidth: 180)
+            .background(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(Color(nsColor: .windowBackgroundColor))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .strokeBorder(.blue.opacity(0.3), style: StrokeStyle(lineWidth: 1.5, dash: [6, 4]))
+            )
+            .background(
+                GeometryReader { geo in
+                    Color.clear
+                        .onAppear { adaptationRects[pair.id] = geo.frame(in: .global) }
+                        .onChange(of: geo.size) { _, _ in adaptationRects[pair.id] = geo.frame(in: .global) }
+                }
+            )
+            .accessibilityLabel("\(pair.adaptation) drop target")
+    }
+
+    // MARK: - Matched chip
+
+    private func matchedChip(_ text: String, color: Color) -> some View {
+        Text(text)
+            .font(.body.weight(.medium))
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+            .frame(minWidth: 140)
+            .background(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(color.opacity(0.12))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .strokeBorder(color.opacity(0.4), lineWidth: 1.5)
+            )
+    }
+
+    // MARK: - Drop logic
+
+    private func handleDrop(_ animalPair: MatchPair, at point: CGPoint) {
+        // Find which adaptation zone the drop landed in
+        for (adaptId, rect) in adaptationRects {
+            guard rect.contains(point) else { continue }
+            guard !matched.contains(adaptId) else { continue }
+
+            if adaptId == animalPair.id {
+                // Correct match
+                score += 2
+                _ = withAnimation(.easeInOut(duration: 0.25)) {
+                    matched.insert(animalPair.id)
+                }
+                showConfetti = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { showConfetti = false }
+            } else {
+                // Wrong match — shake
+                shakeId = animalPair.id
+                if !reduceMotion {
+                    withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) {
+                        shakeId = animalPair.id
+                    }
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { shakeId = nil }
+            }
+            return
+        }
+    }
+}

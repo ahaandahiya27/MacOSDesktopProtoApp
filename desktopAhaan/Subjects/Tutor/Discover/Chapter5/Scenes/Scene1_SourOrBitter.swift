@@ -1,0 +1,179 @@
+import SwiftUI
+
+/// Scene 1 — Sour or Bitter? Taste-sorting game.
+/// 6 items: user classifies each as Sour (Acid) or Bitter (Base).
+struct Scene1_SourOrBitter: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: () -> Void
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private struct TasteItem: Identifiable {
+        let id = UUID()
+        let name: String
+        let emoji: String
+        let isSour: Bool // true = acid (sour), false = base (bitter)
+    }
+
+    private static let allItems: [TasteItem] = [
+        TasteItem(name: "Lemon", emoji: "\u{1F34B}", isSour: true),
+        TasteItem(name: "Soap", emoji: "\u{1F9FC}", isSour: false),
+        TasteItem(name: "Vinegar", emoji: "\u{1FAD9}", isSour: true),
+        TasteItem(name: "Baking soda", emoji: "\u{1F9C2}", isSour: false),
+        TasteItem(name: "Orange", emoji: "\u{1F34A}", isSour: true),
+        TasteItem(name: "Milk of magnesia", emoji: "\u{1F95B}", isSour: false),
+    ]
+
+    @State private var items = Scene1_SourOrBitter.allItems
+    @State private var currentIndex: Int = 0
+    @State private var results: [Bool] = []          // true = correct
+    @State private var flashColor: Color? = nil
+    @State private var shakeOffset: CGFloat = 0
+    @State private var allDone = false
+
+    private var currentItem: TasteItem? {
+        currentIndex < items.count ? items[currentIndex] : nil
+    }
+
+    var body: some View {
+        GeometryReader { _ in
+            ZStack {
+                VStack(spacing: 16) {
+                    Text("Classify each item")
+                        .font(.title2.bold())
+                        .padding(.top, 18)
+
+                    // Progress pills
+                    HStack(spacing: 6) {
+                        ForEach(0..<items.count, id: \.self) { i in
+                            Capsule()
+                                .fill(pillColor(for: i))
+                                .frame(width: 36, height: 8)
+                        }
+                    }
+
+                    if let item = currentItem {
+                        // Current item card
+                        SoftShadowCard(padding: 24) {
+                            VStack(spacing: 12) {
+                                Text(item.emoji)
+                                    .font(.system(size: 64))
+                                Text(item.name)
+                                    .font(.title.bold())
+                            }
+                        }
+                        .frame(maxWidth: 340)
+                        .offset(x: shakeOffset)
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill((flashColor ?? .clear).opacity(0.2))
+                        )
+
+                        // Two choice buttons
+                        HStack(spacing: 20) {
+                            choiceButton(label: "Sour (Acid)", color: .red, isSourChoice: true)
+                            choiceButton(label: "Bitter (Base)", color: .blue, isSourChoice: false)
+                        }
+                        .frame(maxWidth: 500)
+                    }
+
+                    Spacer(minLength: 0)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                // Bottom card + GotIt
+                VStack(spacing: 14) {
+                    Spacer()
+                    if allDone {
+                        SoftShadowCard(padding: 18) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Label("Well done!", systemImage: "star.fill")
+                                    .font(.title2.bold())
+                                    .foregroundStyle(.orange)
+                                Text("Acids taste sour (like lemon and vinegar). Bases taste bitter and feel soapy (like baking soda and soap). Never taste unknown chemicals \u{2014} scientists use indicators instead!")
+                                    .font(.body)
+                                    .lineSpacing(4)
+                            }
+                        }
+                        .frame(maxWidth: 640)
+                        GotItButton { onComplete() }
+                            .padding(.bottom, 12)
+                    } else {
+                        SoftShadowCard(padding: 18) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Label("Sour or Bitter?", systemImage: "mouth.fill")
+                                    .font(.title2.bold())
+                                Text("Acids taste sour, bases taste bitter. Tap the correct category for each item!")
+                                    .font(.body)
+                                    .lineSpacing(4)
+                            }
+                        }
+                        .frame(maxWidth: 640)
+                        .padding(.bottom, 12)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .padding(.horizontal, 24)
+            }
+        }
+    }
+
+    // MARK: - Subviews
+
+    private func choiceButton(label: String, color: Color, isSourChoice: Bool) -> some View {
+        Button {
+            guard let item = currentItem else { return }
+            let correct = item.isSour == isSourChoice
+            results.append(correct)
+
+            if correct {
+                flashColor = .green
+                withAnimation(reduceMotion ? .none : .easeOut(duration: 0.3)) {
+                    flashColor = .green
+                }
+            } else {
+                flashColor = .red
+                if !reduceMotion {
+                    withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = 12 }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                        withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = -10 }
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeOffset = 0 }
+                    }
+                }
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                flashColor = nil
+                shakeOffset = 0
+                if currentIndex < items.count - 1 {
+                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
+                        currentIndex += 1
+                    }
+                } else {
+                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
+                        allDone = true
+                    }
+                }
+            }
+        } label: {
+            Text(label)
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+        }
+        .buttonStyle(.bordered)
+        .tint(color)
+        .accessibilityLabel("Classify as \(label)")
+    }
+
+    private func pillColor(for index: Int) -> Color {
+        if index < results.count {
+            return results[index] ? .green : .red
+        }
+        if index == currentIndex { return .indigo }
+        return .gray.opacity(0.25)
+    }
+}

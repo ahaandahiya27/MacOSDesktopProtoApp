@@ -1,0 +1,169 @@
+import Foundation
+import SwiftUI
+import Combine
+
+/// Loads every `*.json` file in the bundled `Subjects/Packs/` directory at
+/// app launch and exposes them as decoded `SubjectPack` instances.
+///
+/// The Xcode project uses `PBXFileSystemSynchronizedRootGroup`. JSON resources
+/// usually end up flat at the bundle root (Xcode strips nested folders for
+/// non-source files by default). The loader tries three strategies:
+///
+/// 1. **Subdirectory lookup** in case Xcode preserved the `Subjects/Packs`
+///    structure (it sometimes does for folder references).
+/// 2. **Flat lookup** at the bundle root, filtering by a `*_class<digit>.json`
+///    naming pattern that matches packs but EXCLUDES the dictionary file.
+/// 3. **Source-tree fallback** during development — uses `#filePath` to
+///    locate the SubjectRegistry.swift file and walks up to `Subjects/Packs/`.
+///    This makes pack loading work even when the build phase hasn't bundled
+///    the JSON files yet.
+@MainActor
+final class SubjectRegistry: ObservableObject {
+
+    @Published private(set) var packs: [SubjectPack] = []
+    @Published private(set) var loadErrors: [String] = []
+    /// True while the initial pack decode is running off-thread.
+    /// UI can use this to render a placeholder instead of an empty sidebar.
+    @Published private(set) var isLoading: Bool = true
+
+    init() {
+        Task { [weak self] in await self?.reload() }
+    }
+
+    /// Re-scans the bundle for pack files and reloads. Heavy JSON decoding
+    /// runs on a detached background task so app launch isn't blocked.
+    /// Returns to MainActor only to publish the final results.
+    func reload() async {
+        isLoading = true
+        let urls = Self.bundledPackURLs()
+        print("[SubjectRegistry] reload — found \(urls.count) candidate URL(s).")
+        for url in urls {
+            print("  candidate: \(url.path)")
+        }
+
+        if urls.isEmpty {
+            print("[SubjectRegistry] No pack files were found. Sanskrit and " +
+                  "Science subjects won't appear. Make sure the JSON files " +
+                  "are inside Subjects/Packs/ in the source tree.")
+            self.packs = []
+            self.loadErrors = []
+            self.isLoading = false
+            return
+        }
+
+        // Decode every pack on a background task. Each (pack, error) tuple
+        // captures success or failure separately so partial decode failures
+        // don't lose other successful packs.
+        let results: [(SubjectPack?, String?)] = urls.map { url in
+            do {
+                let pack = try PackDecoder.decode(from: url)
+                return (pack, nil)
+            } catch {
+                let msg = "\(url.lastPathComponent): \(error.localizedDescription)"
+                return (nil, msg)
+            }
+        }
+
+        var loaded: [SubjectPack] = []
+        var errors: [String] = []
+        for (pack, err) in results {
+            if let p = pack {
+                loaded.append(p)
+                print("[SubjectRegistry] Loaded \(p.id): \(p.title) — " +
+                      "\(p.chapters.count) chapters, \(p.conceptCount) concepts, " +
+                      "\(p.questionCount) questions")
+            }
+            if let e = err {
+                errors.append(e)
+                print("[SubjectRegistry] FAILED to load \(e)")
+            }
+        }
+
+        // Stable ordering: by grade ascending, then title ascending.
+        loaded.sort { lhs, rhs in
+            if lhs.grade != rhs.grade { return lhs.grade < rhs.grade }
+            return lhs.title < rhs.title
+        }
+
+        self.packs = loaded
+        self.loadErrors = errors
+        self.isLoading = false
+    }
+
+    /// Returns a pack by its id, or nil.
+    func pack(withId id: String) -> SubjectPack? {
+        packs.first { $0.id == id }
+    }
+
+    // MARK: - Bundle scanning
+
+    /// True if the URL's filename should be treated as a SubjectPack file.
+    /// Excludes the dictionary file which lives elsewhere but has a similar
+    /// naming pattern.
+    private static func isPackFilename(_ url: URL) -> Bool {
+        let name = url.lastPathComponent.lowercased()
+        guard name.hasSuffix(".json") else { return false }
+        guard name.contains("_class") else { return false }
+        // Specific exclusions: things that look like packs but aren't.
+        if name.contains("_dictionary") { return false }
+        return true
+    }
+
+    private static func bundledPackURLs() -> [URL] {
+        // Strategy 1: subdirectory-aware lookup. Works only if the
+        // synchronized group preserved the nested folder structure.
+        if let urls = Bundle.main.urls(forResourcesWithExtension: "json",
+                                       subdirectory: "Subjects/Packs"),
+           !urls.isEmpty {
+            print("[SubjectRegistry] Using subdirectory lookup (\(urls.count) files).")
+            return urls.filter(isPackFilename)
+        }
+
+        // Strategy 2: flat lookup at bundle root. Xcode usually flattens.
+        if let urls = Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) {
+            let filtered = urls.filter(isPackFilename)
+            if !filtered.isEmpty {
+                print("[SubjectRegistry] Using flat-bundle lookup (\(filtered.count) files).")
+                return filtered
+            }
+        }
+
+        // Strategy 3: source-tree fallback for development. Uses #filePath at
+        // compile time to find this very file's location, then walks up to
+        // Subjects/Packs.
+        return sourceTreePackURLs()
+    }
+
+    /// Compile-time absolute path of THIS Swift file. Used to locate the
+    /// source-tree Subjects/Packs/ directory during development builds.
+    private static let thisFilePath: String = #filePath
+
+    private static func sourceTreePackURLs() -> [URL] {
+        let fm = FileManager.default
+
+        // SubjectRegistry.swift lives at:
+        //   .../desktopAhaan/desktopAhaan/Subjects/Loader/SubjectRegistry.swift
+        // We want:
+        //   .../desktopAhaan/desktopAhaan/Subjects/Packs/
+        // So: drop the filename, drop "Loader", append "Packs".
+        let thisFile = URL(fileURLWithPath: thisFilePath)
+        let packsDir = thisFile
+            .deletingLastPathComponent()        // .../Subjects/Loader
+            .deletingLastPathComponent()        // .../Subjects
+            .appendingPathComponent("Packs", isDirectory: true)
+
+        guard let files = try? fm.contentsOfDirectory(at: packsDir,
+                                                       includingPropertiesForKeys: nil) else {
+            print("[SubjectRegistry] Source-tree fallback: directory not readable: \(packsDir.path)")
+            return []
+        }
+
+        let packs = files.filter(isPackFilename)
+        if packs.isEmpty {
+            print("[SubjectRegistry] Source-tree fallback: no pack files at \(packsDir.path)")
+        } else {
+            print("[SubjectRegistry] Using source-tree fallback (\(packs.count) files at \(packsDir.path)).")
+        }
+        return packs
+    }
+}

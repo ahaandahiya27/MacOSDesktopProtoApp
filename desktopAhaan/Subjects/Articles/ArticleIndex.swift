@@ -1,0 +1,716 @@
+import Foundation
+
+struct ArticleEntry: Hashable {
+    let id: String
+    let filename: String
+    let title: String
+    let chapterFolder: String
+    let estimatedMinutes: Int
+}
+
+enum ArticleIndex {
+    static let chapter1Folder = "Articles/Chapter1"
+    static let chapter2Folder = "Articles/Chapter2"
+    static let chapter3Folder = "Articles/Chapter3"
+    static let chapter4Folder = "Articles/Chapter4"
+    static let chapter5Folder = "Articles/Chapter5"
+    static let chapter6Folder = "Articles/Chapter6"
+    static let chapter7Folder = "Articles/Chapter7"
+    static let chapter19Folder = "Articles/Chapter19"
+
+    static let entries: [String: ArticleEntry] = [
+        // Chapter overview
+        "ch01": ArticleEntry(
+            id: "ch01",
+            filename: "ch01_overview.html",
+            title: "Nutrition in Plants — Chapter Overview",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+
+        // Topic 1: How Plants Make Their Own Food
+        "ch01_t01": ArticleEntry(
+            id: "ch01_t01",
+            filename: "ch01_t01_overview.html",
+            title: "How Plants Make Their Own Food — Topic Overview",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c01": ArticleEntry(
+            id: "ch01_t01_c01",
+            filename: "ch01_t01_c01.html",
+            title: "Autotrophs and Heterotrophs",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c02": ArticleEntry(
+            id: "ch01_t01_c02",
+            filename: "ch01_t01_c02.html",
+            title: "Photosynthesis: The Food-Making Process",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+        "ch01_t01_c03": ArticleEntry(
+            id: "ch01_t01_c03",
+            filename: "ch01_t01_c03.html",
+            title: "Chlorophyll: Why Leaves Are Green",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c04": ArticleEntry(
+            id: "ch01_t01_c04",
+            filename: "ch01_t01_c04.html",
+            title: "Stomata, Xylem and the Plumbing of a Leaf",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+        "ch01_t01_c05": ArticleEntry(
+            id: "ch01_t01_c05",
+            filename: "ch01_t01_c05.html",
+            title: "Modes of Nutrition",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c06": ArticleEntry(
+            id: "ch01_t01_c06",
+            filename: "ch01_t01_c06.html",
+            title: "Why Plants Need Food",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 4
+        ),
+        "ch01_t01_c07": ArticleEntry(
+            id: "ch01_t01_c07",
+            filename: "ch01_t01_c07.html",
+            title: "The Four Conditions for Photosynthesis",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c08": ArticleEntry(
+            id: "ch01_t01_c08",
+            filename: "ch01_t01_c08.html",
+            title: "The Iodine Test for Starch",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 4
+        ),
+        "ch01_t01_c09": ArticleEntry(
+            id: "ch01_t01_c09",
+            filename: "ch01_t01_c09.html",
+            title: "Why Leaves Are Broad and Thin",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t01_c10": ArticleEntry(
+            id: "ch01_t01_c10",
+            filename: "ch01_t01_c10.html",
+            title: "Photosynthesis Beyond Leaves",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+
+        // Topic 2: Plants That Don't Make Their Own Food
+        "ch01_t02": ArticleEntry(
+            id: "ch01_t02",
+            filename: "ch01_t02_overview.html",
+            title: "Plants That Don't Make Their Own Food — Topic Overview",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 4
+        ),
+        "ch01_t02_c01": ArticleEntry(
+            id: "ch01_t02_c01",
+            filename: "ch01_t02_c01.html",
+            title: "Parasitic Plants",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t02_c02": ArticleEntry(
+            id: "ch01_t02_c02",
+            filename: "ch01_t02_c02.html",
+            title: "Insectivorous Plants — The Bug Eaters",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+        "ch01_t02_c03": ArticleEntry(
+            id: "ch01_t02_c03",
+            filename: "ch01_t02_c03.html",
+            title: "Saprophytic Nutrition — Feeding on the Dead",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t02_c04": ArticleEntry(
+            id: "ch01_t02_c04",
+            filename: "ch01_t02_c04.html",
+            title: "Symbiotic Nutrition — Partners Helping Each Other",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+        "ch01_t02_c05": ArticleEntry(
+            id: "ch01_t02_c05",
+            filename: "ch01_t02_c05.html",
+            title: "The Family of Relationships — Symbiosis vs Parasitism",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t02_c06": ArticleEntry(
+            id: "ch01_t02_c06",
+            filename: "ch01_t02_c06.html",
+            title: "Insectivorous Plant Diversity",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t02_c07": ArticleEntry(
+            id: "ch01_t02_c07",
+            filename: "ch01_t02_c07.html",
+            title: "Saprotrophs and the Recycling of Death",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+
+        // Topic 3: Soil, Nitrogen and the Food Chain
+        "ch01_t03": ArticleEntry(
+            id: "ch01_t03",
+            filename: "ch01_t03_overview.html",
+            title: "Soil, Nitrogen and the Food Chain — Topic Overview",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 4
+        ),
+        "ch01_t03_c01": ArticleEntry(
+            id: "ch01_t03_c01",
+            filename: "ch01_t03_c01.html",
+            title: "Why Plants Need Nitrogen",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t03_c02": ArticleEntry(
+            id: "ch01_t03_c02",
+            filename: "ch01_t03_c02.html",
+            title: "Replenishing Soil Nutrients",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+        "ch01_t03_c03": ArticleEntry(
+            id: "ch01_t03_c03",
+            filename: "ch01_t03_c03.html",
+            title: "Plants as the First Link in the Food Chain",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_t03_c04": ArticleEntry(
+            id: "ch01_t03_c04",
+            filename: "ch01_t03_c04.html",
+            title: "Plants Talk to Each Other",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+
+        // ================================================================
+        // CHAPTER 2 — Nutrition in Animals
+        // ================================================================
+        "ch02": ArticleEntry(id: "ch02", filename: "ch02_overview.html",
+            title: "Nutrition in Animals — Chapter Overview",
+            chapterFolder: chapter2Folder, estimatedMinutes: 6),
+
+        "ch02_t01": ArticleEntry(id: "ch02_t01", filename: "ch02_t01_overview.html",
+            title: "How the Human Body Turns Food into Fuel — Topic Overview",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c01": ArticleEntry(id: "ch02_t01_c01", filename: "ch02_t01_c01.html",
+            title: "The Five Steps of Nutrition",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c02": ArticleEntry(id: "ch02_t01_c02", filename: "ch02_t01_c02.html",
+            title: "Different Ways Animals Take Food In",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c03": ArticleEntry(id: "ch02_t01_c03", filename: "ch02_t01_c03.html",
+            title: "The Mouth and Your 32 Teeth",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c04": ArticleEntry(id: "ch02_t01_c04", filename: "ch02_t01_c04.html",
+            title: "The Stomach: A Churning Chemical Bag",
+            chapterFolder: chapter2Folder, estimatedMinutes: 6),
+        "ch02_t01_c05": ArticleEntry(id: "ch02_t01_c05", filename: "ch02_t01_c05.html",
+            title: "Small Intestine — Where Digestion Finishes",
+            chapterFolder: chapter2Folder, estimatedMinutes: 6),
+        "ch02_t01_c06": ArticleEntry(id: "ch02_t01_c06", filename: "ch02_t01_c06.html",
+            title: "Large Intestine — Water, Waste, Goodbye",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c07": ArticleEntry(id: "ch02_t01_c07", filename: "ch02_t01_c07.html",
+            title: "The Oesophagus and Swallowing",
+            chapterFolder: chapter2Folder, estimatedMinutes: 4),
+        "ch02_t01_c08": ArticleEntry(id: "ch02_t01_c08", filename: "ch02_t01_c08.html",
+            title: "The Liver and Bile — Breaking Down Fats",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c09": ArticleEntry(id: "ch02_t01_c09", filename: "ch02_t01_c09.html",
+            title: "The Pancreas and Digestive Enzymes",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c10": ArticleEntry(id: "ch02_t01_c10", filename: "ch02_t01_c10.html",
+            title: "Saliva and the First Taste of Digestion",
+            chapterFolder: chapter2Folder, estimatedMinutes: 4),
+        "ch02_t01_c11": ArticleEntry(id: "ch02_t01_c11", filename: "ch02_t01_c11.html",
+            title: "Villi and Microvilli — Maximum Surface for Absorption",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t01_c12": ArticleEntry(id: "ch02_t01_c12", filename: "ch02_t01_c12.html",
+            title: "Peristalsis — How Food Moves Along",
+            chapterFolder: chapter2Folder, estimatedMinutes: 4),
+
+        "ch02_t02": ArticleEntry(id: "ch02_t02", filename: "ch02_t02_overview.html",
+            title: "Special Diets — Ruminants and Amoeba — Topic Overview",
+            chapterFolder: chapter2Folder, estimatedMinutes: 4),
+        "ch02_t02_c01": ArticleEntry(id: "ch02_t02_c01", filename: "ch02_t02_c01.html",
+            title: "Rumination — How a Cow Digests Grass",
+            chapterFolder: chapter2Folder, estimatedMinutes: 6),
+        "ch02_t02_c02": ArticleEntry(id: "ch02_t02_c02", filename: "ch02_t02_c02.html",
+            title: "Amoeba — Digestion Inside a Single Cell",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t02_c03": ArticleEntry(id: "ch02_t02_c03", filename: "ch02_t02_c03.html",
+            title: "Herbivores vs Omnivores vs Carnivores",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t02_c04": ArticleEntry(id: "ch02_t02_c04", filename: "ch02_t02_c04.html",
+            title: "Symbiosis in Digestion — The Rumen Microbiome",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t02_c05": ArticleEntry(id: "ch02_t02_c05", filename: "ch02_t02_c05.html",
+            title: "Single-Celled Feeders — Paramecium and Euglena",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+
+        "ch02_t03": ArticleEntry(id: "ch02_t03", filename: "ch02_t03_overview.html",
+            title: "The Journey of Nutrition — Topic Overview",
+            chapterFolder: chapter2Folder, estimatedMinutes: 4),
+        "ch02_t03_c01": ArticleEntry(id: "ch02_t03_c01", filename: "ch02_t03_c01.html",
+            title: "How Cells Use Absorbed Nutrients — Energy Factory",
+            chapterFolder: chapter2Folder, estimatedMinutes: 6),
+        "ch02_t03_c02": ArticleEntry(id: "ch02_t03_c02", filename: "ch02_t03_c02.html",
+            title: "Assimilation — Growth, Repair, and Building Tissue",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch02_t03_c03": ArticleEntry(id: "ch02_t03_c03", filename: "ch02_t03_c03.html",
+            title: "Smell, Taste and the Science of Flavour",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+
+        // ================================================================
+        // CHAPTER 3 — Fibre to Fabric
+        // ================================================================
+        "ch03": ArticleEntry(id: "ch03", filename: "ch03_overview.html",
+            title: "Fibre to Fabric — Chapter Overview",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+
+        "ch03_t01": ArticleEntry(id: "ch03_t01", filename: "ch03_t01_overview.html",
+            title: "Wool — From Sheep to Sweater — Topic Overview",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c01": ArticleEntry(id: "ch03_t01_c01", filename: "ch03_t01_c01.html",
+            title: "Animal Fibres vs Plant Fibres",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t01_c02": ArticleEntry(id: "ch03_t01_c02", filename: "ch03_t01_c02.html",
+            title: "Wool-Yielding Animals",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t01_c03": ArticleEntry(id: "ch03_t01_c03", filename: "ch03_t01_c03.html",
+            title: "From Fleece to Fabric — The Wool Pipeline",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c04": ArticleEntry(id: "ch03_t01_c04", filename: "ch03_t01_c04.html",
+            title: "Sorter's Disease — The Hidden Cost of Wool",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c05": ArticleEntry(id: "ch03_t01_c05", filename: "ch03_t01_c05.html",
+            title: "Types and Classifications of Wool",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c06": ArticleEntry(id: "ch03_t01_c06", filename: "ch03_t01_c06.html",
+            title: "Hair Types in Sheep — Guard Hair and Undercoat",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c07": ArticleEntry(id: "ch03_t01_c07", filename: "ch03_t01_c07.html",
+            title: "Fabric Care and Wool Washing Science",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t01_c08": ArticleEntry(id: "ch03_t01_c08", filename: "ch03_t01_c08.html",
+            title: "Plant Fibres vs Animal Fibres Compared",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+
+        "ch03_t02": ArticleEntry(id: "ch03_t02", filename: "ch03_t02_overview.html",
+            title: "Silk — The Cocoon-Spun Fabric — Topic Overview",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch03_t02_c01": ArticleEntry(id: "ch03_t02_c01", filename: "ch03_t02_c01.html",
+            title: "Sericulture and the Silkworm Life Cycle",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t02_c02": ArticleEntry(id: "ch03_t02_c02", filename: "ch03_t02_c02.html",
+            title: "Reeling Cocoons into Silk Fibre",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t02_c03": ArticleEntry(id: "ch03_t02_c03", filename: "ch03_t02_c03.html",
+            title: "Types of Silk Around the World",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t02_c04": ArticleEntry(id: "ch03_t02_c04", filename: "ch03_t02_c04.html",
+            title: "Ethical Concerns in Silk Production",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+
+        "ch03_t03": ArticleEntry(id: "ch03_t03", filename: "ch03_t03_overview.html",
+            title: "Synthetic vs Natural Fibres — Topic Overview",
+            chapterFolder: chapter3Folder, estimatedMinutes: 4),
+        "ch03_t03_c01": ArticleEntry(id: "ch03_t03_c01", filename: "ch03_t03_c01.html",
+            title: "Synthetic vs Natural Fibres",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t03_c02": ArticleEntry(id: "ch03_t03_c02", filename: "ch03_t03_c02.html",
+            title: "The Global Textile Industry",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+        "ch03_t03_c03": ArticleEntry(id: "ch03_t03_c03", filename: "ch03_t03_c03.html",
+            title: "Spider Silk — Nature's Engineering Marvel",
+            chapterFolder: chapter3Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 4 — Heat
+        // ================================================================
+        "ch04": ArticleEntry(id: "ch04", filename: "ch04_overview.html",
+            title: "Heat — Chapter Overview",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+
+        // Topic 1: Heat, Temperature, and Thermometers
+        "ch04_t01": ArticleEntry(id: "ch04_t01", filename: "ch04_t01_overview.html",
+            title: "Heat, Temperature, and Thermometers — Topic Overview",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t01_c01": ArticleEntry(id: "ch04_t01_c01", filename: "ch04_t01_c01.html",
+            title: "Heat vs Temperature — What's the Difference?",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t01_c02": ArticleEntry(id: "ch04_t01_c02", filename: "ch04_t01_c02.html",
+            title: "How a Thermometer Works",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t01_c03": ArticleEntry(id: "ch04_t01_c03", filename: "ch04_t01_c03.html",
+            title: "Celsius and Kelvin — Converting Between Scales",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t01_c04": ArticleEntry(id: "ch04_t01_c04", filename: "ch04_t01_c04.html",
+            title: "Why Hot Things Cool Down (Newton's Law of Cooling)",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t01_c05": ArticleEntry(id: "ch04_t01_c05", filename: "ch04_t01_c05.html",
+            title: "Temperature vs Heat — the Surprise Difference",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t01_c06": ArticleEntry(id: "ch04_t01_c06", filename: "ch04_t01_c06.html",
+            title: "Why Mercury Was Used in Thermometers",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t01_c07": ArticleEntry(id: "ch04_t01_c07", filename: "ch04_t01_c07.html",
+            title: "Specific Heat Capacity — Why Water is Special",
+            chapterFolder: chapter4Folder, estimatedMinutes: 7),
+
+        // Topic 2: How Heat Travels
+        "ch04_t02": ArticleEntry(id: "ch04_t02", filename: "ch04_t02_overview.html",
+            title: "How Heat Travels — Conduction, Convection, Radiation — Topic Overview",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t02_c01": ArticleEntry(id: "ch04_t02_c01", filename: "ch04_t02_c01.html",
+            title: "Conduction — Heat Travelling Through Solids",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t02_c02": ArticleEntry(id: "ch04_t02_c02", filename: "ch04_t02_c02.html",
+            title: "Convection — Heat Travelling Through Fluids",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t02_c03": ArticleEntry(id: "ch04_t02_c03", filename: "ch04_t02_c03.html",
+            title: "Radiation — Heat Travelling Without Any Material",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t02_c04": ArticleEntry(id: "ch04_t02_c04", filename: "ch04_t02_c04.html",
+            title: "Thermos Flask — Beating All Three Heat Modes",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t02_c05": ArticleEntry(id: "ch04_t02_c05", filename: "ch04_t02_c05.html",
+            title: "Cooking Vessels — Why Copper Bottoms, Wooden Handles",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t02_c06": ArticleEntry(id: "ch04_t02_c06", filename: "ch04_t02_c06.html",
+            title: "Sea Breeze and Land Breeze — Convection at Coastal Scale",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+
+        // Topic 3: Heat in Bodies, Climates, and the Future
+        "ch04_t03": ArticleEntry(id: "ch04_t03", filename: "ch04_t03_overview.html",
+            title: "Heat in Bodies, Climates, and the Future — Topic Overview",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch04_t03_c01": ArticleEntry(id: "ch04_t03_c01", filename: "ch04_t03_c01.html",
+            title: "Heat in the Human Body — Why 37 C, Why You Sweat",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+        "ch04_t03_c02": ArticleEntry(id: "ch04_t03_c02", filename: "ch04_t03_c02.html",
+            title: "Heat and Climate Change — A Planet With a Fever",
+            chapterFolder: chapter4Folder, estimatedMinutes: 7),
+        "ch04_t03_c03": ArticleEntry(id: "ch04_t03_c03", filename: "ch04_t03_c03.html",
+            title: "The Strange World of Cryogenics",
+            chapterFolder: chapter4Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 5 — Acids, Bases and Salts
+        // ================================================================
+        "ch05": ArticleEntry(id: "ch05", filename: "ch05_overview.html",
+            title: "Acids, Bases and Salts — Chapter Overview",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+
+        // Topic 1: Acids and bases — the two opposite families
+        "ch05_t01": ArticleEntry(id: "ch05_t01", filename: "ch05_t01_overview.html",
+            title: "Acids and Bases — The Two Opposite Families — Topic Overview",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t01_c01": ArticleEntry(id: "ch05_t01_c01", filename: "ch05_t01_c01.html",
+            title: "Acids — The Sour Family",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t01_c02": ArticleEntry(id: "ch05_t01_c02", filename: "ch05_t01_c02.html",
+            title: "Bases — The Bitter, Soapy Family",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t01_c03": ArticleEntry(id: "ch05_t01_c03", filename: "ch05_t01_c03.html",
+            title: "Indicators — How We Tell Acids from Bases",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t01_c04": ArticleEntry(id: "ch05_t01_c04", filename: "ch05_t01_c04.html",
+            title: "The pH Scale — Measuring Acidity and Alkalinity",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t01_c05": ArticleEntry(id: "ch05_t01_c05", filename: "ch05_t01_c05.html",
+            title: "Strong vs Weak Acids and Bases",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t01_c06": ArticleEntry(id: "ch05_t01_c06", filename: "ch05_t01_c06.html",
+            title: "Natural Indicators — Turmeric, Litmus, and More",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t01_c07": ArticleEntry(id: "ch05_t01_c07", filename: "ch05_t01_c07.html",
+            title: "Acids and Bases in the Kitchen",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+
+        // Topic 2: Neutralization and salts
+        "ch05_t02": ArticleEntry(id: "ch05_t02", filename: "ch05_t02_overview.html",
+            title: "Neutralisation and Salts — Topic Overview",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t02_c01": ArticleEntry(id: "ch05_t02_c01", filename: "ch05_t02_c01.html",
+            title: "Neutralisation — When Acid Meets Base",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t02_c02": ArticleEntry(id: "ch05_t02_c02", filename: "ch05_t02_c02.html",
+            title: "Salts in Everyday Life",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t02_c03": ArticleEntry(id: "ch05_t02_c03", filename: "ch05_t02_c03.html",
+            title: "Acid Rain — When the Sky Turns Sour",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t02_c04": ArticleEntry(id: "ch05_t02_c04", filename: "ch05_t02_c04.html",
+            title: "Antacids and Bee Stings — Neutralisation in Daily Life",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t02_c05": ArticleEntry(id: "ch05_t02_c05", filename: "ch05_t02_c05.html",
+            title: "Soil pH and Farming — Why Farmers Add Lime",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+
+        // Topic 3: Acids and Bases in Industry and Nature
+        "ch05_t03": ArticleEntry(id: "ch05_t03", filename: "ch05_t03_overview.html",
+            title: "Acids and Bases in Industry and Nature — Topic Overview",
+            chapterFolder: chapter5Folder, estimatedMinutes: 4),
+        "ch05_t03_c01": ArticleEntry(id: "ch05_t03_c01", filename: "ch05_t03_c01.html",
+            title: "Acids in Industry — From Batteries to Fertilisers",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        "ch05_t03_c02": ArticleEntry(id: "ch05_t03_c02", filename: "ch05_t03_c02.html",
+            title: "The Chemistry of Tooth Decay",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch05_t03_c03": ArticleEntry(id: "ch05_t03_c03", filename: "ch05_t03_c03.html",
+            title: "Ocean Acidification — Acids in the Sea",
+            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 6 — Physical and Chemical Changes
+        // ================================================================
+        "ch06": ArticleEntry(id: "ch06", filename: "ch06_overview.html",
+            title: "Physical and Chemical Changes — Chapter Overview",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+
+        // Topic 1: Two kinds of change — physical and chemical
+        "ch06_t01": ArticleEntry(id: "ch06_t01", filename: "ch06_t01_overview.html",
+            title: "Two Kinds of Change — Physical and Chemical — Topic Overview",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t01_c01": ArticleEntry(id: "ch06_t01_c01", filename: "ch06_t01_c01.html",
+            title: "Physical Change — Same Stuff, Different Shape",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t01_c02": ArticleEntry(id: "ch06_t01_c02", filename: "ch06_t01_c02.html",
+            title: "Chemical Change — New Substance, New Properties",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t01_c03": ArticleEntry(id: "ch06_t01_c03", filename: "ch06_t01_c03.html",
+            title: "Rusting of Iron — The Famous Chemical Change",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t01_c04": ArticleEntry(id: "ch06_t01_c04", filename: "ch06_t01_c04.html",
+            title: "Signs of a Chemical Reaction",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t01_c05": ArticleEntry(id: "ch06_t01_c05", filename: "ch06_t01_c05.html",
+            title: "Burning, Cooking, and Digestion as Chemical Changes",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t01_c06": ArticleEntry(id: "ch06_t01_c06", filename: "ch06_t01_c06.html",
+            title: "Reversible vs Irreversible Changes",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t01_c07": ArticleEntry(id: "ch06_t01_c07", filename: "ch06_t01_c07.html",
+            title: "Galvanisation and Preventing Rust",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t01_c08": ArticleEntry(id: "ch06_t01_c08", filename: "ch06_t01_c08.html",
+            title: "Physical vs Chemical — Tricky Cases",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+
+        // Topic 2: Crystallisation
+        "ch06_t02": ArticleEntry(id: "ch06_t02", filename: "ch06_t02_overview.html",
+            title: "Crystallisation — Pure Substances from Solution — Topic Overview",
+            chapterFolder: chapter6Folder, estimatedMinutes: 4),
+        "ch06_t02_c01": ArticleEntry(id: "ch06_t02_c01", filename: "ch06_t02_c01.html",
+            title: "How Crystallisation Works",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t02_c02": ArticleEntry(id: "ch06_t02_c02", filename: "ch06_t02_c02.html",
+            title: "Growing Crystals at Home — A Fun Experiment",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t02_c03": ArticleEntry(id: "ch06_t02_c03", filename: "ch06_t02_c03.html",
+            title: "Crystals in Nature and Industry",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+
+        // Topic 3: Chemical Changes in Everyday Life
+        "ch06_t03": ArticleEntry(id: "ch06_t03", filename: "ch06_t03_overview.html",
+            title: "Chemical Changes in Everyday Life — Topic Overview",
+            chapterFolder: chapter6Folder, estimatedMinutes: 4),
+        "ch06_t03_c01": ArticleEntry(id: "ch06_t03_c01", filename: "ch06_t03_c01.html",
+            title: "Baking Soda and Vinegar — Chemistry in Your Kitchen",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch06_t03_c02": ArticleEntry(id: "ch06_t03_c02", filename: "ch06_t03_c02.html",
+            title: "Fireworks and Sparklers — Spectacular Chemical Reactions",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        "ch06_t03_c03": ArticleEntry(id: "ch06_t03_c03", filename: "ch06_t03_c03.html",
+            title: "Photosynthesis and Respiration — Life's Chemical Engines",
+            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 7 — Weather, Climate and Adaptations
+        // ================================================================
+        "ch07": ArticleEntry(id: "ch07", filename: "ch07_overview.html",
+            title: "Weather, Climate and Adaptations — Chapter Overview",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+
+        // Topic 1: Weather, climate, and what shapes them
+        "ch07_t01": ArticleEntry(id: "ch07_t01", filename: "ch07_t01_overview.html",
+            title: "Weather, Climate, and What Shapes Them — Topic Overview",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        "ch07_t01_c01": ArticleEntry(id: "ch07_t01_c01", filename: "ch07_t01_c01.html",
+            title: "Weather vs Climate — What's the Difference?",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t01_c02": ArticleEntry(id: "ch07_t01_c02", filename: "ch07_t01_c02.html",
+            title: "What Shapes a Region's Climate",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t01_c03": ArticleEntry(id: "ch07_t01_c03", filename: "ch07_t01_c03.html",
+            title: "Measuring Weather — Instruments and Stations",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        "ch07_t01_c04": ArticleEntry(id: "ch07_t01_c04", filename: "ch07_t01_c04.html",
+            title: "The Water Cycle and Weather Patterns",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t01_c05": ArticleEntry(id: "ch07_t01_c05", filename: "ch07_t01_c05.html",
+            title: "Seasons — Why They Happen",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        "ch07_t01_c06": ArticleEntry(id: "ch07_t01_c06", filename: "ch07_t01_c06.html",
+            title: "Climate Zones of India",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t01_c07": ArticleEntry(id: "ch07_t01_c07", filename: "ch07_t01_c07.html",
+            title: "Extreme Weather Events — Cyclones, Droughts, Floods",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+
+        // Topic 2: How animals adapt to their climate
+        "ch07_t02": ArticleEntry(id: "ch07_t02", filename: "ch07_t02_overview.html",
+            title: "How Animals Adapt to Their Climate — Topic Overview",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        "ch07_t02_c01": ArticleEntry(id: "ch07_t02_c01", filename: "ch07_t02_c01.html",
+            title: "Polar Adaptations — Surviving Extreme Cold",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t02_c02": ArticleEntry(id: "ch07_t02_c02", filename: "ch07_t02_c02.html",
+            title: "Tropical Adaptations — Life in Hot, Wet Forests",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t02_c03": ArticleEntry(id: "ch07_t02_c03", filename: "ch07_t02_c03.html",
+            title: "Migration — The Long-Distance Solution",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t02_c04": ArticleEntry(id: "ch07_t02_c04", filename: "ch07_t02_c04.html",
+            title: "Desert Adaptations — Camels, Foxes, and Scorpions",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t02_c05": ArticleEntry(id: "ch07_t02_c05", filename: "ch07_t02_c05.html",
+            title: "Hibernation and Aestivation — Sleeping Through Extremes",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+
+        // Topic 3: Climate Change and Animal Survival
+        "ch07_t03": ArticleEntry(id: "ch07_t03", filename: "ch07_t03_overview.html",
+            title: "Climate Change and Animal Survival — Topic Overview",
+            chapterFolder: chapter7Folder, estimatedMinutes: 4),
+        "ch07_t03_c01": ArticleEntry(id: "ch07_t03_c01", filename: "ch07_t03_c01.html",
+            title: "Climate Change and Wildlife — Shifting Habitats",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t03_c02": ArticleEntry(id: "ch07_t03_c02", filename: "ch07_t03_c02.html",
+            title: "Coral Bleaching — When Oceans Get Too Warm",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+        "ch07_t03_c03": ArticleEntry(id: "ch07_t03_c03", filename: "ch07_t03_c03.html",
+            title: "Conservation — Helping Animals Survive a Changing World",
+            chapterFolder: chapter7Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 19 — Earth, Moon and the Sun
+        // ================================================================
+        "ch19": ArticleEntry(id: "ch19", filename: "ch19_overview.html",
+            title: "Earth, Moon and the Sun — Chapter Overview",
+            chapterFolder: chapter19Folder, estimatedMinutes: 6),
+
+        "ch19_t01": ArticleEntry(id: "ch19_t01", filename: "ch19_t01_overview.html",
+            title: "Earth's rotation, revolution, and seasons — Topic Overview",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c01": ArticleEntry(id: "ch19_t01_c01", filename: "ch19_t01_c01.html",
+            title: "Earth's shape and the tilted axis",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c02": ArticleEntry(id: "ch19_t01_c02", filename: "ch19_t01_c02.html",
+            title: "Rotation — what causes day and night",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c03": ArticleEntry(id: "ch19_t01_c03", filename: "ch19_t01_c03.html",
+            title: "Revolution — Earth's orbit around the Sun",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c04": ArticleEntry(id: "ch19_t01_c04", filename: "ch19_t01_c04.html",
+            title: "Seasons — why tilt plus revolution creates summer and winter",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c05": ArticleEntry(id: "ch19_t01_c05", filename: "ch19_t01_c05.html",
+            title: "Leap year — why we add a day every four years",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c06": ArticleEntry(id: "ch19_t01_c06", filename: "ch19_t01_c06.html",
+            title: "Time zones — why different places have different times",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c07": ArticleEntry(id: "ch19_t01_c07", filename: "ch19_t01_c07.html",
+            title: "The Coriolis effect — why winds and cyclones curve",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t01_c08": ArticleEntry(id: "ch19_t01_c08", filename: "ch19_t01_c08.html",
+            title: "Polaris — the North Star that appears fixed",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+
+        "ch19_t02": ArticleEntry(id: "ch19_t02", filename: "ch19_t02_overview.html",
+            title: "The Moon — phases, eclipses, and tides — Topic Overview",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c01": ArticleEntry(id: "ch19_t02_c01", filename: "ch19_t02_c01.html",
+            title: "The Moon — Earth's natural satellite",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c02": ArticleEntry(id: "ch19_t02_c02", filename: "ch19_t02_c02.html",
+            title: "Moon phases — from New Moon to Full Moon and back",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c03": ArticleEntry(id: "ch19_t02_c03", filename: "ch19_t02_c03.html",
+            title: "Tidal locking — why the Moon shows only one face",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c04": ArticleEntry(id: "ch19_t02_c04", filename: "ch19_t02_c04.html",
+            title: "Solar eclipse — when the Moon hides the Sun",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c05": ArticleEntry(id: "ch19_t02_c05", filename: "ch19_t02_c05.html",
+            title: "Lunar eclipse — when Earth's shadow falls on the Moon",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c06": ArticleEntry(id: "ch19_t02_c06", filename: "ch19_t02_c06.html",
+            title: "Tides — how the Moon pulls on Earth's oceans",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c07": ArticleEntry(id: "ch19_t02_c07", filename: "ch19_t02_c07.html",
+            title: "Spring tides and neap tides",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t02_c08": ArticleEntry(id: "ch19_t02_c08", filename: "ch19_t02_c08.html",
+            title: "The Moon landing — Neil Armstrong and Apollo 11",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+
+        "ch19_t03": ArticleEntry(id: "ch19_t03", filename: "ch19_t03_overview.html",
+            title: "Stars, constellations, and the Solar System — Topic Overview",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c01": ArticleEntry(id: "ch19_t03_c01", filename: "ch19_t03_c01.html",
+            title: "What stars are — giant balls of nuclear fusion",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c02": ArticleEntry(id: "ch19_t03_c02", filename: "ch19_t03_c02.html",
+            title: "Why stars twinkle but planets don't",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c03": ArticleEntry(id: "ch19_t03_c03", filename: "ch19_t03_c03.html",
+            title: "Constellations — star patterns in the sky",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c04": ArticleEntry(id: "ch19_t03_c04", filename: "ch19_t03_c04.html",
+            title: "The Pole Star (Dhruv Tara) and finding north",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c05": ArticleEntry(id: "ch19_t03_c05", filename: "ch19_t03_c05.html",
+            title: "The Solar System — Sun, 8 planets, and more",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c06": ArticleEntry(id: "ch19_t03_c06", filename: "ch19_t03_c06.html",
+            title: "Inner rocky planets vs outer gas giants",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+        "ch19_t03_c07": ArticleEntry(id: "ch19_t03_c07", filename: "ch19_t03_c07.html",
+            title: "Asteroids, comets, and meteors",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
+    ]
+
+    static func entry(forConceptId id: String) -> ArticleEntry? {
+        entries[id]
+    }
+
+    static func entry(forTopicId id: String) -> ArticleEntry? {
+        entries[id]
+    }
+
+    static func entry(forChapterId id: String) -> ArticleEntry? {
+        entries[id]
+    }
+}
