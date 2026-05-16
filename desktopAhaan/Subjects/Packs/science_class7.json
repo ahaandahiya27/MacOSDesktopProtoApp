@@ -8253,6 +8253,414 @@
                 82
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q05",
+              "prompt": "Which is a PHYSICAL change?",
+              "questionType": "mcq",
+              "options": [
+                "Burning paper",
+                "Rusting iron",
+                "Melting ice",
+                "Cooking an egg"
+              ],
+              "answer": "Melting ice",
+              "solutionSteps": [
+                "Melting only changes state (solid → liquid); no new substance forms; reversible.",
+                "Burning, rusting, and cooking all create new substances — chemical changes."
+              ],
+              "commonMistakes": [
+                "Confusing 'change in form' with 'change in substance'."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q06",
+              "prompt": "Which is a CHEMICAL change?",
+              "questionType": "mcq",
+              "options": [
+                "Cutting paper",
+                "Folding cloth",
+                "Burning wood",
+                "Dissolving sugar in water"
+              ],
+              "answer": "Burning wood",
+              "solutionSteps": [
+                "Burning wood produces ash, smoke, CO₂ — new substances. Chemical change.",
+                "Cutting, folding, and dissolving are reversible / no new substance."
+              ],
+              "commonMistakes": [
+                "Thinking dissolving sugar is chemical — it's physical; sugar is recoverable by evaporation."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q07",
+              "prompt": "Most physical changes are:",
+              "questionType": "mcq",
+              "options": [
+                "Irreversible",
+                "Reversible",
+                "Always exothermic",
+                "Coloured"
+              ],
+              "answer": "Reversible",
+              "solutionSteps": [
+                "Physical changes don't create new substances, so the original can usually be recovered (ice → water → ice).",
+                "Some are not easily reversible (cutting paper) but the substance itself is unchanged."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q08",
+              "prompt": "Rusting requires both:",
+              "questionType": "mcq",
+              "options": [
+                "Iron and copper",
+                "Iron and oxygen + moisture",
+                "Iron and lightning",
+                "Iron and acid only"
+              ],
+              "answer": "Iron and oxygen + moisture",
+              "solutionSteps": [
+                "Rust = hydrated iron oxide.",
+                "Both oxygen AND water (or humid air) are needed for it to form.",
+                "Dry iron in dry air rusts very slowly; iron in dry oxygen also rusts very slowly."
+              ],
+              "commonMistakes": [
+                "Thinking water alone rusts iron — you need oxygen too."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q09",
+              "prompt": "Galvanisation is:",
+              "questionType": "mcq",
+              "options": [
+                "Painting iron silver",
+                "Coating iron with a thin layer of zinc",
+                "Heating iron until it glows",
+                "Soaking iron in acid"
+              ],
+              "answer": "Coating iron with a thin layer of zinc",
+              "solutionSteps": [
+                "A zinc coating protects iron from rusting.",
+                "Even if the zinc gets scratched, zinc rusts (sacrifices itself) before the iron does — cathodic protection.",
+                "Iron sheets used on rooftops are typically galvanised."
+              ],
+              "commonMistakes": [
+                "Confusing galvanisation (zinc) with chrome plating (chromium)."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q10",
+              "prompt": "When dilute acid is added to baking soda, you observe:",
+              "questionType": "mcq",
+              "options": [
+                "No change",
+                "Bubbling and fizzing as gas is released",
+                "Colour change to red",
+                "Solid forms"
+              ],
+              "answer": "Bubbling and fizzing as gas is released",
+              "solutionSteps": [
+                "Acid + baking soda → CO₂ gas + water + salt.",
+                "The bubbling is the CO₂ escaping.",
+                "This is a chemical change — new substances are formed."
+              ],
+              "commonMistakes": [
+                "Believing fizzing is just bubbles like in a soft drink — here CO₂ is being generated by reaction."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q11",
+              "prompt": "Which is NOT a sign of a chemical change?",
+              "questionType": "mcq",
+              "options": [
+                "Heat or light is given off",
+                "A gas bubbles out",
+                "The substance is moved to a new container",
+                "Colour permanently changes"
+              ],
+              "answer": "The substance is moved to a new container",
+              "solutionSteps": [
+                "Heat/light, gas, permanent colour change, formation of a new solid — all signs of chemical change.",
+                "Just moving a substance doesn't change it chemically."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q12",
+              "prompt": "Crystallisation is a method to:",
+              "questionType": "mcq",
+              "options": [
+                "Make impure substances stay impure",
+                "Get pure crystals of a substance from a solution",
+                "Melt a solid",
+                "Boil a liquid"
+              ],
+              "answer": "Get pure crystals of a substance from a solution",
+              "solutionSteps": [
+                "Heat a solvent + dissolve as much solute as possible (saturated solution).",
+                "Cool the hot saturated solution slowly — pure crystals come out as solubility falls.",
+                "Impurities tend to stay dissolved or come out separately — purer crystals result."
+              ],
+              "commonMistakes": [
+                "Thinking crystallisation is just freezing — it's more selective than that."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q13",
+              "prompt": "True or false: Burning a candle is BOTH a physical and a chemical change.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "The wax melts (physical) AND the wax vapour burns to give CO₂ + water + heat (chemical).",
+                "Both changes happen at the same time."
+              ],
+              "commonMistakes": [
+                "Picking just one — a burning candle is a great example of two changes happening together."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q14",
+              "prompt": "Which of the following slows down rusting MOST effectively for outdoor iron gates?",
+              "questionType": "mcq",
+              "options": [
+                "Painting",
+                "Wrapping in plastic only",
+                "Leaving in sun",
+                "Washing daily"
+              ],
+              "answer": "Painting",
+              "solutionSteps": [
+                "A good paint layer keeps oxygen and water away from the iron surface.",
+                "Plastic wrap traps moisture and may accelerate rusting underneath.",
+                "Washing daily just adds water — speeds up rusting."
+              ],
+              "commonMistakes": [
+                "Thinking moisture-blocking is the only goal — air contact also matters."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q15",
+              "prompt": "Which of these involves a chemical change?",
+              "questionType": "mcq",
+              "options": [
+                "Mixing sand and salt",
+                "Whipping cream until stiff",
+                "Souring of milk",
+                "Spinning a top"
+              ],
+              "answer": "Souring of milk",
+              "solutionSteps": [
+                "Milk sours because bacteria turn lactose into lactic acid — new substance, chemical change.",
+                "Mixing sand and salt, whipping cream, spinning a top — all physical."
+              ],
+              "commonMistakes": [
+                "Confusing physical mixing with chemical reaction."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q16",
+              "prompt": "Which gas is needed for rusting?",
+              "questionType": "mcq",
+              "options": [
+                "Nitrogen",
+                "Hydrogen",
+                "Oxygen",
+                "Carbon dioxide"
+              ],
+              "answer": "Oxygen",
+              "solutionSteps": [
+                "Rust is iron oxide — formed by iron reacting with oxygen (and water).",
+                "Most of the air is nitrogen, but it's the small fraction of O₂ that does the rusting."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q17",
+              "prompt": "Why don't stainless steel utensils rust like ordinary iron?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Stainless steel contains chromium, which forms a thin invisible oxide layer that protects the metal underneath from further reaction.",
+              "solutionSteps": [
+                "Chromium in stainless steel reacts with air to form a protective oxide layer.",
+                "This layer is very thin, invisible, and self-healing — if scratched, fresh chromium underneath oxidises again.",
+                "That's why stainless steel resists rust."
+              ],
+              "commonMistakes": [
+                "Thinking stainless steel is plain iron — it's an alloy."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q18",
+              "prompt": "Rust is iron ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "oxide",
+              "solutionSteps": [
+                "Chemically, rust is hydrated iron(III) oxide."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q19",
+              "prompt": "Crystals obtained from a hot saturated solution are usually:",
+              "questionType": "mcq",
+              "options": [
+                "Larger if the solution cools slowly",
+                "Larger if the solution cools fast",
+                "Always the same size regardless",
+                "Smaller than the original solid"
+              ],
+              "answer": "Larger if the solution cools slowly",
+              "solutionSteps": [
+                "Slow cooling gives molecules time to arrange themselves into a clean lattice → bigger, well-formed crystals.",
+                "Fast cooling produces many small disorderly crystals."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q20",
+              "prompt": "True or false: A chemical change is always reversible.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "Many chemical changes are essentially irreversible (burning wood → ash; can't unburn).",
+                "Some can be reversed under special conditions (electrolysis can split water back to H₂ + O₂).",
+                "In general, assume chemical changes are NOT easily reversible."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q21",
+              "prompt": "Which is the BEST evidence that a chemical reaction has occurred?",
+              "questionType": "mcq",
+              "options": [
+                "The substance has been moved",
+                "A new substance with different properties has formed",
+                "The container changed colour",
+                "The volume changed slightly"
+              ],
+              "answer": "A new substance with different properties has formed",
+              "solutionSteps": [
+                "The defining test of a chemical change is the appearance of a new substance.",
+                "Property changes alone (colour, volume) can also occur in physical changes."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t01_q22",
+              "prompt": "Match each example with the type of change.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Melting butter — Physical change;Burning paper — Chemical change;Tearing paper — Physical change;Rusting iron — Chemical change;Sugar dissolving — Physical change",
+              "matchPairs": [
+                {
+                  "left": "Melting butter",
+                  "right": "Physical change"
+                },
+                {
+                  "left": "Burning paper",
+                  "right": "Chemical change"
+                },
+                {
+                  "left": "Tearing paper",
+                  "right": "Physical change"
+                },
+                {
+                  "left": "Rusting iron",
+                  "right": "Chemical change"
+                },
+                {
+                  "left": "Sugar dissolving",
+                  "right": "Physical change"
+                }
+              ],
+              "solutionSteps": [
+                "For each, ask: did a new substance form? Yes = chemical. No = physical."
+              ],
+              "commonMistakes": [
+                "Treating dissolving as chemical — it's physical."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -9082,6 +9490,415 @@
                 99
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t01_q06",
+              "prompt": "The force exerted per unit area by air is called:",
+              "questionType": "mcq",
+              "options": [
+                "Wind speed",
+                "Air pressure",
+                "Temperature",
+                "Humidity"
+              ],
+              "answer": "Air pressure",
+              "solutionSteps": [
+                "Air has mass and weight; that weight pressing on surfaces is air pressure.",
+                "Measured with a barometer in units like millibar or Pascal."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q07",
+              "prompt": "Air pressure DECREASES as you:",
+              "questionType": "mcq",
+              "options": [
+                "Go up a mountain",
+                "Dive deeper into the ocean",
+                "Stand on the ground",
+                "Sit in a basement"
+              ],
+              "answer": "Go up a mountain",
+              "solutionSteps": [
+                "Higher altitude → less air above you → lower air pressure.",
+                "That's why high-altitude trekkers need to acclimatise."
+              ],
+              "commonMistakes": [
+                "Confusing air pressure with water pressure — water pressure increases with depth."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q08",
+              "prompt": "Wind blows from:",
+              "questionType": "mcq",
+              "options": [
+                "Low to high pressure",
+                "High to low pressure",
+                "Two equal pressures",
+                "Anywhere in random directions"
+              ],
+              "answer": "High to low pressure",
+              "solutionSteps": [
+                "Like water flowing downhill, air flows from where the pressure is higher to where it's lower.",
+                "Big differences in pressure = strong winds."
+              ],
+              "commonMistakes": [
+                "Getting the direction backwards — air flows from HIGH to LOW."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q09",
+              "prompt": "Hot air rises because:",
+              "questionType": "mcq",
+              "options": [
+                "It's heavier than cold air",
+                "It's lighter (less dense) than cold air",
+                "It's pushed up by Earth's spin",
+                "Hot air has no weight"
+              ],
+              "answer": "It's lighter (less dense) than cold air",
+              "solutionSteps": [
+                "When air is heated, it expands.",
+                "Expanded air has the same mass but takes more volume → lower density.",
+                "Less-dense (lighter) air rises while denser cold air sinks to replace it."
+              ],
+              "commonMistakes": [
+                "Saying hot air has no weight — it does, just less per volume than cold air."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q10",
+              "prompt": "Sea breeze blows from:",
+              "questionType": "mcq",
+              "options": [
+                "Land to sea during the day",
+                "Sea to land during the day",
+                "Sea to land at night",
+                "No direction"
+              ],
+              "answer": "Sea to land during the day",
+              "solutionSteps": [
+                "During the day, land heats up faster than the sea.",
+                "Hot air rises over land → low pressure forms.",
+                "Cooler air from the sea flows in to replace it — that's the sea breeze."
+              ],
+              "commonMistakes": [
+                "Thinking the breeze is always sea-to-land — it reverses at night to land-to-sea."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q11",
+              "prompt": "Cyclones form over:",
+              "questionType": "mcq",
+              "options": [
+                "Cold polar oceans",
+                "Warm tropical oceans",
+                "Mountain peaks",
+                "Deserts"
+              ],
+              "answer": "Warm tropical oceans",
+              "solutionSteps": [
+                "Cyclones need lots of warm, moist air to power them.",
+                "Tropical oceans (>26 °C) provide this fuel by evaporation.",
+                "Once over cold water or land, cyclones weaken quickly."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q12",
+              "prompt": "The 'eye' of a cyclone is:",
+              "questionType": "mcq",
+              "options": [
+                "The strongest wind zone",
+                "A calm region at the centre",
+                "The warmest place on Earth",
+                "Where lightning strikes"
+              ],
+              "answer": "A calm region at the centre",
+              "solutionSteps": [
+                "At the very centre of a cyclone, air sinks rather than rises.",
+                "Sinking air means clear skies and almost no wind — the 'eye'.",
+                "Around the eye is the eyewall — the most violent winds."
+              ],
+              "commonMistakes": [
+                "Thinking the eye is most violent — it's actually the calmest part."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q13",
+              "prompt": "Tools that record wind speed and direction are called (respectively):",
+              "questionType": "mcq",
+              "options": [
+                "Barometer and altimeter",
+                "Anemometer and wind vane",
+                "Hydrometer and odometer",
+                "Compass and thermometer"
+              ],
+              "answer": "Anemometer and wind vane",
+              "solutionSteps": [
+                "Anemometer (rotating cups) → wind speed.",
+                "Wind vane (arrow on a pivot) → wind direction.",
+                "Barometer measures air pressure; altimeter measures altitude."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q14",
+              "prompt": "Lightning is mainly caused by:",
+              "questionType": "mcq",
+              "options": [
+                "Birds flying through clouds",
+                "Separation of electric charges between cloud regions, eventually discharging",
+                "Sun reflection",
+                "Loud sounds in clouds"
+              ],
+              "answer": "Separation of electric charges between cloud regions, eventually discharging",
+              "solutionSteps": [
+                "Inside a thundercloud, rising ice particles separate charges — top of cloud becomes positive, bottom negative.",
+                "When the voltage difference becomes huge, a lightning bolt jumps to neutralise it.",
+                "Thunder is the sound of air rapidly heated by the bolt."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q15",
+              "prompt": "During a thunderstorm, the SAFEST place to be is:",
+              "questionType": "mcq",
+              "options": [
+                "Under a tall tree",
+                "On top of a hill",
+                "Inside a building",
+                "In an open field"
+              ],
+              "answer": "Inside a building",
+              "solutionSteps": [
+                "Lightning prefers tall, isolated objects — trees, hilltops, open fields.",
+                "A solid building (especially with a lightning rod) is one of the safest places.",
+                "Avoid metal pipes and electrical fixtures even inside."
+              ],
+              "commonMistakes": [
+                "Sheltering under a tree — that's one of the worst places."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q16",
+              "prompt": "Cyclones in the Bay of Bengal and Arabian Sea are also called:",
+              "questionType": "mcq",
+              "options": [
+                "Hurricanes",
+                "Tornados",
+                "Cyclones (the same name)",
+                "Typhoons"
+              ],
+              "answer": "Cyclones (the same name)",
+              "solutionSteps": [
+                "The same kind of storm has different names in different ocean basins:",
+                "Bay of Bengal / Arabian Sea: cyclone",
+                "North Atlantic / Eastern Pacific: hurricane",
+                "Western Pacific: typhoon",
+                "Tornado is a different smaller, land-based phenomenon."
+              ],
+              "commonMistakes": [
+                "Confusing tornados with cyclones — tornados are much smaller and faster."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q17",
+              "prompt": "Indian cyclone warnings are issued by:",
+              "questionType": "mcq",
+              "options": [
+                "IMD (Indian Meteorological Department)",
+                "NASA",
+                "ISRO only",
+                "BCCI"
+              ],
+              "answer": "IMD (Indian Meteorological Department)",
+              "solutionSteps": [
+                "The IMD tracks cyclones with satellites + radar and issues alerts.",
+                "ISRO operates weather satellites that IMD uses, but IMD is the issuer."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q18",
+              "prompt": "True or false: Air pressure inside a cyclone's eye is LOWER than the surrounding pressure.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "The intense low pressure at the centre is what drives the surrounding winds inward.",
+                "Air rushes in to fill the low-pressure 'hole' — that's the cyclone wind."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q19",
+              "prompt": "Air masses moving on Earth's surface curve due to:",
+              "questionType": "mcq",
+              "options": [
+                "Magnetic field",
+                "Earth's rotation (the Coriolis effect)",
+                "Mountain ranges",
+                "Sea waves"
+              ],
+              "answer": "Earth's rotation (the Coriolis effect)",
+              "solutionSteps": [
+                "Earth spins eastward. As air moves from one latitude to another, its straight path appears to curve relative to the rotating surface.",
+                "This is the Coriolis effect; it makes cyclones rotate (anti-clockwise in the Northern Hemisphere)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q20",
+              "prompt": "Why do houses near the coast often have sloping roofs and storm shutters?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Sloping roofs let very strong cyclone winds slide off rather than rip them away; storm shutters protect windows from flying debris.",
+              "solutionSteps": [
+                "Flat roofs catch wind like sails; sloped roofs let it slide off.",
+                "Cyclone winds carry debris that can smash through ordinary windows.",
+                "Both adaptations reduce storm damage in coastal areas."
+              ],
+              "commonMistakes": [
+                "Thinking it's purely architectural style — it's an engineered storm response."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q21",
+              "prompt": "The eye of a cyclone is the ____ region at the storm's centre.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "calm",
+              "solutionSteps": [
+                "The eye is a region of clear skies and very low wind — surrounded by the violent eyewall."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q22",
+              "prompt": "Land breeze blows from:",
+              "questionType": "mcq",
+              "options": [
+                "Sea to land during the day",
+                "Land to sea during the night",
+                "Land to sea during the day",
+                "Equator to poles"
+              ],
+              "answer": "Land to sea during the night",
+              "solutionSteps": [
+                "At night, land cools faster than the sea, so the sea is now warmer.",
+                "Warmer air rises over the sea (low pressure) and cooler air from the land flows out to fill it.",
+                "Result: a breeze from land to sea at night."
+              ],
+              "commonMistakes": [
+                "Mixing up day and night breeze directions — they reverse with day/night heat patterns."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch08_t01_q23",
+              "prompt": "Match each storm with its location.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Cyclone — Bay of Bengal / Arabian Sea;Hurricane — North Atlantic / Eastern Pacific;Typhoon — Western Pacific (Philippines, Japan);Tornado — Localised funnel over land",
+              "matchPairs": [
+                {
+                  "left": "Cyclone",
+                  "right": "Bay of Bengal / Arabian Sea"
+                },
+                {
+                  "left": "Hurricane",
+                  "right": "North Atlantic / Eastern Pacific"
+                },
+                {
+                  "left": "Typhoon",
+                  "right": "Western Pacific (Philippines, Japan)"
+                },
+                {
+                  "left": "Tornado",
+                  "right": "Localised funnel over land"
+                }
+              ],
+              "solutionSteps": [
+                "Same kind of storm, different names by region; tornado is a separate land-based phenomenon."
+              ],
+              "commonMistakes": [
+                "Thinking tornado and cyclone are the same thing."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -9550,6 +10367,371 @@
                 114
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q04",
+              "prompt": "Soil is a mixture of:",
+              "questionType": "mcq",
+              "options": [
+                "Only mineral particles",
+                "Mineral particles, water, air, organic matter and living things",
+                "Sand and rocks only",
+                "Plants only"
+              ],
+              "answer": "Mineral particles, water, air, organic matter and living things",
+              "solutionSteps": [
+                "Soil isn't just dirt — it's an ecosystem.",
+                "Rock particles + water + air pockets + decaying matter + bacteria/worms/fungi all make up soil."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q05",
+              "prompt": "Sandy soil has:",
+              "questionType": "mcq",
+              "options": [
+                "Tiny clay particles only",
+                "Large coarse particles with big gaps",
+                "A mix of all sizes",
+                "No air spaces"
+              ],
+              "answer": "Large coarse particles with big gaps",
+              "solutionSteps": [
+                "Sand particles are large (0.05–2 mm).",
+                "Big particles → big gaps → water drains quickly → poor at holding water and nutrients.",
+                "Good drainage, poor fertility."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q06",
+              "prompt": "Clay soil tends to be:",
+              "questionType": "mcq",
+              "options": [
+                "Very gritty",
+                "Sticky and hold water well",
+                "Floating on water",
+                "Always dry"
+              ],
+              "answer": "Sticky and hold water well",
+              "solutionSteps": [
+                "Clay particles are extremely small (<0.002 mm).",
+                "They stick together when wet, retain water and nutrients, but are hard to till.",
+                "Pottery is made of clay because of this stickiness."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q07",
+              "prompt": "Loam is:",
+              "questionType": "mcq",
+              "options": [
+                "100% sand",
+                "100% clay",
+                "A balanced mix of sand, clay and silt — best for farming",
+                "A type of stone"
+              ],
+              "answer": "A balanced mix of sand, clay and silt — best for farming",
+              "solutionSteps": [
+                "Loam combines the drainage of sand and the nutrient-holding of clay.",
+                "It is the favourite soil of most crops."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q08",
+              "prompt": "Percolation rate is:",
+              "questionType": "mcq",
+              "options": [
+                "How fast soil dries in the sun",
+                "How fast water seeps down through soil",
+                "How fast plants grow in it",
+                "How quickly grass appears"
+              ],
+              "answer": "How fast water seeps down through soil",
+              "solutionSteps": [
+                "Pour a known volume of water onto a soil column and time how long it takes to seep through.",
+                "Higher rate = more drainable soil (e.g. sandy).",
+                "Lower rate = water holds longer (e.g. clayey)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q09",
+              "prompt": "Which soil has the HIGHEST percolation rate?",
+              "questionType": "mcq",
+              "options": [
+                "Sandy",
+                "Clay",
+                "Loam",
+                "Silt"
+              ],
+              "answer": "Sandy",
+              "solutionSteps": [
+                "Big particles + big gaps → water flows through easily.",
+                "Clay is the slowest; loam and silt are in between."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q10",
+              "prompt": "The dark, decayed organic matter in soil is called:",
+              "questionType": "mcq",
+              "options": [
+                "Humus",
+                "Mud",
+                "Gravel",
+                "Charcoal"
+              ],
+              "answer": "Humus",
+              "solutionSteps": [
+                "Humus is dead plant and animal matter that has been broken down by decomposers.",
+                "It is rich in nutrients and helps soil hold water and bind together."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q11",
+              "prompt": "Soil erosion by water is BEST prevented by:",
+              "questionType": "mcq",
+              "options": [
+                "Removing all plants",
+                "Planting trees and grass to bind the soil with roots",
+                "Concreting the entire ground",
+                "Adding more sand"
+              ],
+              "answer": "Planting trees and grass to bind the soil with roots",
+              "solutionSteps": [
+                "Roots form a mesh inside the soil; leaves cushion raindrops.",
+                "Together they hugely reduce how much soil washes off.",
+                "Removing plants exposes bare soil to wind and rain."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q12",
+              "prompt": "Cracks in the ground after a long dry spell are typical of which soil?",
+              "questionType": "mcq",
+              "options": [
+                "Sandy",
+                "Loamy",
+                "Clayey",
+                "Gravelly"
+              ],
+              "answer": "Clayey",
+              "solutionSteps": [
+                "Clay swells when wet and shrinks when dry.",
+                "Repeated wet-dry cycles open up wide cracks in clay-rich soil.",
+                "Sandy soil doesn't form cracks like this."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q13",
+              "prompt": "Topsoil is:",
+              "questionType": "mcq",
+              "options": [
+                "The deepest layer of rock",
+                "The uppermost layer rich in humus",
+                "The melted ice on top of soil",
+                "The colour of soil"
+              ],
+              "answer": "The uppermost layer rich in humus",
+              "solutionSteps": [
+                "Topsoil is the most fertile layer — where most plant roots live.",
+                "Below topsoil is subsoil (less humus) and then weathered rock.",
+                "Topsoil takes centuries to form; losing it to erosion is a big problem."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q14",
+              "prompt": "Earthworms benefit soil by:",
+              "questionType": "mcq",
+              "options": [
+                "Eating plant seeds",
+                "Tunneling through it, mixing layers, aerating, and producing humus",
+                "Eating the topsoil completely",
+                "Creating clay"
+              ],
+              "answer": "Tunneling through it, mixing layers, aerating, and producing humus",
+              "solutionSteps": [
+                "Earthworms are nature's tillers.",
+                "Their tunnels improve air and water flow; their castings enrich the soil."
+              ],
+              "commonMistakes": [
+                "Thinking worms are pests — they are very valuable for soil health."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q15",
+              "prompt": "Sandy soil is good for crops like:",
+              "questionType": "mcq",
+              "options": [
+                "Rice (paddy)",
+                "Wheat",
+                "Cactus and groundnuts",
+                "Lotus"
+              ],
+              "answer": "Cactus and groundnuts",
+              "solutionSteps": [
+                "Cacti tolerate quick-draining low-water soil very well.",
+                "Groundnuts grow well in sandy soil because their pods develop underground in loose grains.",
+                "Rice and lotus need waterlogged conditions — clay soils."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q16",
+              "prompt": "Crop rotation helps soil by:",
+              "questionType": "mcq",
+              "options": [
+                "Keeping the same nutrients out forever",
+                "Different crops using and adding different nutrients, keeping the soil balanced",
+                "Tiring the farmer",
+                "Increasing soil erosion"
+              ],
+              "answer": "Different crops using and adding different nutrients, keeping the soil balanced",
+              "solutionSteps": [
+                "Pulses (legumes) FIX nitrogen back into the soil.",
+                "Cereal crops then use that nitrogen.",
+                "Alternating crops keeps any one nutrient from being depleted."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q17",
+              "prompt": "True or false: Clay soil drains water faster than sandy soil.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "Clay particles are tiny and pack tightly — water seeps very slowly.",
+                "Sandy soil drains the fastest."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q18",
+              "prompt": "The decayed plant and animal matter in soil is called ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "humus",
+              "solutionSteps": [
+                "Humus is the dark, organic component that makes soil fertile."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q19",
+              "prompt": "Why do hills sometimes get terraced fields cut into their slopes?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Terraces slow down rainwater runoff and reduce soil erosion, while creating flat strips where crops can actually be planted.",
+              "solutionSteps": [
+                "Steep slopes lose soil quickly when it rains.",
+                "Cutting flat steps holds water and soil in place.",
+                "Each terrace holds a small field of crops that wouldn't grow on the slope itself."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch09_t01_q20",
+              "prompt": "Match each soil type with a characteristic.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Sandy — Large particles, drains fast;Clay — Tiny particles, sticky, holds water;Loam — Balanced mix, best for most crops",
+              "matchPairs": [
+                {
+                  "left": "Sandy",
+                  "right": "Large particles, drains fast"
+                },
+                {
+                  "left": "Clay",
+                  "right": "Tiny particles, sticky, holds water"
+                },
+                {
+                  "left": "Loam",
+                  "right": "Balanced mix, best for most crops"
+                }
+              ],
+              "solutionSteps": [
+                "Match each by particle size and water-holding behaviour."
+              ],
+              "commonMistakes": [
+                "Mixing loam and silt — loam is the balanced mix; silt is fine particles in between sand and clay."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -9898,6 +11080,380 @@
                 123
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q05",
+              "prompt": "Respiration in living cells releases:",
+              "questionType": "mcq",
+              "options": [
+                "Energy",
+                "Sound",
+                "Light only",
+                "Magnetism"
+              ],
+              "answer": "Energy",
+              "solutionSteps": [
+                "Cells respire to release the energy stored in food (mostly glucose).",
+                "That energy powers everything else — muscle contraction, heat, growth."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q06",
+              "prompt": "Aerobic respiration uses:",
+              "questionType": "mcq",
+              "options": [
+                "No oxygen",
+                "Oxygen",
+                "Carbon dioxide as input",
+                "Only water"
+              ],
+              "answer": "Oxygen",
+              "solutionSteps": [
+                "Aerobic = with oxygen.",
+                "Glucose + O₂ → CO₂ + H₂O + lots of energy.",
+                "This is the main respiration mode in most animals and plants under normal conditions."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q07",
+              "prompt": "Anaerobic respiration:",
+              "questionType": "mcq",
+              "options": [
+                "Uses oxygen",
+                "Doesn't use oxygen and produces less energy than aerobic",
+                "Always produces lots of energy",
+                "Happens only in plants"
+              ],
+              "answer": "Doesn't use oxygen and produces less energy than aerobic",
+              "solutionSteps": [
+                "When O₂ is scarce, cells fall back on anaerobic respiration.",
+                "By-products differ by organism: yeasts make ethanol + CO₂; muscle cells make lactic acid.",
+                "Energy yield is much smaller — only ~2 ATP per glucose vs ~38 ATP aerobically."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q08",
+              "prompt": "Lactic acid builds up in muscles when you:",
+              "questionType": "mcq",
+              "options": [
+                "Sleep peacefully",
+                "Walk slowly",
+                "Exercise hard and your muscles don't get enough O₂",
+                "Eat a lot of sugar"
+              ],
+              "answer": "Exercise hard and your muscles don't get enough O₂",
+              "solutionSteps": [
+                "During hard exercise, lungs and heart can't supply O₂ fast enough for the muscles' demand.",
+                "Muscles switch to anaerobic respiration, producing lactic acid.",
+                "Lactic acid build-up is partly responsible for the burning feeling and cramps."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q09",
+              "prompt": "Yeasts ferment sugar anaerobically to produce:",
+              "questionType": "mcq",
+              "options": [
+                "Water and salt",
+                "Ethanol (alcohol) and carbon dioxide",
+                "Lactic acid only",
+                "Pure oxygen"
+              ],
+              "answer": "Ethanol (alcohol) and carbon dioxide",
+              "solutionSteps": [
+                "This is the basis of bread baking, brewing, and wine making.",
+                "CO₂ makes bread rise; ethanol is the alcohol in beer/wine."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q10",
+              "prompt": "Air enters our body through the:",
+              "questionType": "mcq",
+              "options": [
+                "Skin",
+                "Eyes",
+                "Nose / mouth",
+                "Toes"
+              ],
+              "answer": "Nose / mouth",
+              "solutionSteps": [
+                "Air comes in through the nostrils or mouth.",
+                "It then travels through the trachea (windpipe) into the lungs."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q11",
+              "prompt": "Inside the lungs, gas exchange happens in tiny air sacs called:",
+              "questionType": "mcq",
+              "options": [
+                "Bronchi",
+                "Alveoli",
+                "Aorta",
+                "Auricles"
+              ],
+              "answer": "Alveoli",
+              "solutionSteps": [
+                "Alveoli are millions of tiny air sacs — together they give the lungs a huge surface area.",
+                "Their thin walls let O₂ pass into the blood and CO₂ pass out of it.",
+                "Aorta is the main artery; auricles are heart chambers."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q12",
+              "prompt": "The diaphragm is a:",
+              "questionType": "mcq",
+              "options": [
+                "Bone in the chest",
+                "Muscle below the lungs that helps breathing",
+                "Cell in the blood",
+                "Type of food"
+              ],
+              "answer": "Muscle below the lungs that helps breathing",
+              "solutionSteps": [
+                "The diaphragm sits below the lungs.",
+                "When it contracts and moves down, the chest cavity expands and air flows in (inhalation).",
+                "When it relaxes and moves up, air is pushed out (exhalation)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q13",
+              "prompt": "Earthworms breathe through their:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs",
+                "Gills",
+                "Moist skin",
+                "Tracheae"
+              ],
+              "answer": "Moist skin",
+              "solutionSteps": [
+                "Earthworms have no lungs or gills.",
+                "Gases diffuse directly across their moist skin into and out of small blood vessels just below.",
+                "If they dry out, they suffocate."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q14",
+              "prompt": "Fish breathe using:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs",
+                "Gills",
+                "Spiracles",
+                "Stomata"
+              ],
+              "answer": "Gills",
+              "solutionSteps": [
+                "Gills extract dissolved O₂ from water.",
+                "Water flows over the gills' feathery filaments, where O₂ diffuses into the blood and CO₂ diffuses out."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q15",
+              "prompt": "Insects breathe through openings called:",
+              "questionType": "mcq",
+              "options": [
+                "Nostrils",
+                "Spiracles",
+                "Pores",
+                "Tentacles"
+              ],
+              "answer": "Spiracles",
+              "solutionSteps": [
+                "Spiracles are small openings along the insect's body.",
+                "They lead into a network of tubes (tracheae) that deliver oxygen straight to body cells.",
+                "Most insects don't use blood to carry O₂."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q16",
+              "prompt": "Plants take in CO₂ and release O₂ during photosynthesis — but at NIGHT, plants:",
+              "questionType": "mcq",
+              "options": [
+                "Stop respiring",
+                "Only release CO₂",
+                "Still respire (take in O₂ and release CO₂)",
+                "Photosynthesise even harder"
+              ],
+              "answer": "Still respire (take in O₂ and release CO₂)",
+              "solutionSteps": [
+                "Photosynthesis needs sunlight — it stops at night.",
+                "Respiration continues 24/7 in plants, animals, and microbes alike.",
+                "So plants are net producers of O₂ during the day, but net producers of CO₂ at night."
+              ],
+              "commonMistakes": [
+                "Thinking plants only make O₂ — they also respire and make CO₂."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q17",
+              "prompt": "Hiccups happen because the:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs grow tired",
+                "Diaphragm contracts suddenly and irregularly",
+                "Stomach grumbles",
+                "Heart skips a beat"
+              ],
+              "answer": "Diaphragm contracts suddenly and irregularly",
+              "solutionSteps": [
+                "The diaphragm normally contracts smoothly.",
+                "If it spasms (sudden involuntary contraction), air rushes in and the vocal cords snap shut — making the 'hic' sound.",
+                "Drinking water and breath-holding often calm the diaphragm."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q18",
+              "prompt": "True or false: Breathing and respiration mean exactly the same thing.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "Breathing is the physical movement of air into and out of the lungs.",
+                "Respiration is the chemical reaction inside cells that releases energy from food.",
+                "Breathing supports respiration but they are different processes."
+              ],
+              "commonMistakes": [
+                "Using the two interchangeably — they're related but distinct."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q19",
+              "prompt": "The diaphragm and the rib cage muscles together cause ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "breathing",
+              "solutionSteps": [
+                "Together they expand and contract the chest cavity, drawing air in and pushing it out."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q20",
+              "prompt": "Why do we breathe faster when we run hard?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Hard exercise needs more energy, so cells need more oxygen and produce more CO₂; we breathe faster to bring in more O₂ and clear out CO₂.",
+              "solutionSteps": [
+                "Muscles burn through ATP fast during exercise.",
+                "To regenerate ATP they need more O₂ (and they produce more CO₂ as waste).",
+                "Faster breathing supplies more O₂ and removes more CO₂.",
+                "Heart rate also rises to deliver the gases faster."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch10_t01_q21",
+              "prompt": "Match each animal with how it breathes.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Earthworm — Moist skin;Fish — Gills;Insect — Spiracles + tracheae;Human — Lungs",
+              "matchPairs": [
+                {
+                  "left": "Earthworm",
+                  "right": "Moist skin"
+                },
+                {
+                  "left": "Fish",
+                  "right": "Gills"
+                },
+                {
+                  "left": "Insect",
+                  "right": "Spiracles + tracheae"
+                },
+                {
+                  "left": "Human",
+                  "right": "Lungs"
+                }
+              ],
+              "solutionSteps": [
+                "Each group has evolved a different respiratory surface."
+              ],
+              "commonMistakes": [
+                "Putting humans on gills — we use lungs."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -10362,6 +11918,394 @@
                 139
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q05",
+              "prompt": "The human heart has:",
+              "questionType": "mcq",
+              "options": [
+                "1 chamber",
+                "2 chambers",
+                "3 chambers",
+                "4 chambers"
+              ],
+              "answer": "4 chambers",
+              "solutionSteps": [
+                "Two upper chambers (atria) and two lower (ventricles).",
+                "Right side handles deoxygenated blood; left side handles oxygenated."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q06",
+              "prompt": "The pumping muscle of the heart is called the:",
+              "questionType": "mcq",
+              "options": [
+                "Cardiac muscle",
+                "Skeletal muscle",
+                "Smooth muscle",
+                "Diaphragm"
+              ],
+              "answer": "Cardiac muscle",
+              "solutionSteps": [
+                "Cardiac muscle is unique — it contracts rhythmically without conscious effort.",
+                "Skeletal muscles move limbs; smooth muscle lines internal organs.",
+                "The diaphragm helps breathing."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q07",
+              "prompt": "Arteries carry blood:",
+              "questionType": "mcq",
+              "options": [
+                "Towards the heart",
+                "Away from the heart",
+                "Inside the heart only",
+                "From muscle to muscle"
+              ],
+              "answer": "Away from the heart",
+              "solutionSteps": [
+                "Mnemonic: Arteries = Away.",
+                "Veins = back to the heart.",
+                "Capillaries connect the two and are where exchange with tissues happens."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q08",
+              "prompt": "Veins carry blood:",
+              "questionType": "mcq",
+              "options": [
+                "Away from the heart",
+                "Towards the heart",
+                "Through the bones",
+                "Through the skin only"
+              ],
+              "answer": "Towards the heart",
+              "solutionSteps": [
+                "Veins return deoxygenated blood (from body) and oxygenated blood (from lungs) back to the heart.",
+                "Arteries take blood out from the heart."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q09",
+              "prompt": "Red blood cells contain a red protein called:",
+              "questionType": "mcq",
+              "options": [
+                "Insulin",
+                "Haemoglobin",
+                "Albumin",
+                "Keratin"
+              ],
+              "answer": "Haemoglobin",
+              "solutionSteps": [
+                "Haemoglobin binds oxygen and carries it from lungs to tissues.",
+                "It is what gives blood its red colour.",
+                "Insulin regulates blood sugar; keratin is in hair and nails."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q10",
+              "prompt": "The instrument doctors use to check pulse and heart sounds is the:",
+              "questionType": "mcq",
+              "options": [
+                "Stethoscope",
+                "Thermometer",
+                "Barometer",
+                "Microscope"
+              ],
+              "answer": "Stethoscope",
+              "solutionSteps": [
+                "A stethoscope amplifies internal body sounds — heart, lungs, intestines.",
+                "Thermometers measure temperature, barometers air pressure."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q11",
+              "prompt": "Pulse is the:",
+              "questionType": "mcq",
+              "options": [
+                "Rhythm of breathing",
+                "Wave of pressure caused by each heart beat in the arteries",
+                "Sound the heart makes",
+                "Speed of blood cells"
+              ],
+              "answer": "Wave of pressure caused by each heart beat in the arteries",
+              "solutionSteps": [
+                "When the heart contracts, it sends a pressure wave through the arteries.",
+                "You can feel this wave on the wrist or neck — that's the pulse.",
+                "Pulse rate per minute equals the heart rate."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q12",
+              "prompt": "Adult resting pulse rate is roughly:",
+              "questionType": "mcq",
+              "options": [
+                "20–30 beats/min",
+                "40–50 beats/min",
+                "60–100 beats/min",
+                "150–200 beats/min"
+              ],
+              "answer": "60–100 beats/min",
+              "solutionSteps": [
+                "Healthy adults: 60–100 bpm at rest.",
+                "Children: usually higher.",
+                "Athletes may be 40–60 bpm because their hearts pump more blood per beat."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q13",
+              "prompt": "Excretion is the:",
+              "questionType": "mcq",
+              "options": [
+                "Movement of food in the gut",
+                "Removal of waste products from the body",
+                "Absorption of nutrients",
+                "Production of new blood cells"
+              ],
+              "answer": "Removal of waste products from the body",
+              "solutionSteps": [
+                "Living cells produce wastes like CO₂, urea, ammonia, excess salts.",
+                "Excretion gets rid of them.",
+                "Different organs handle different wastes: lungs (CO₂), kidneys (urea + water), skin (some salts)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q14",
+              "prompt": "Kidneys filter blood and produce:",
+              "questionType": "mcq",
+              "options": [
+                "Sweat",
+                "Urine",
+                "Bile",
+                "Saliva"
+              ],
+              "answer": "Urine",
+              "solutionSteps": [
+                "Kidneys remove urea, excess water, and salts from the blood.",
+                "This filtered waste collects as urine in the bladder."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q15",
+              "prompt": "Xylem in a plant carries:",
+              "questionType": "mcq",
+              "options": [
+                "Food downwards",
+                "Water and minerals upwards from roots to leaves",
+                "Oxygen to cells",
+                "Sap to flowers only"
+              ],
+              "answer": "Water and minerals upwards from roots to leaves",
+              "solutionSteps": [
+                "Xylem is one of two transport tissues in plants.",
+                "It runs in one direction: root → stem → leaves.",
+                "Phloem carries food from leaves to other parts."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q16",
+              "prompt": "Phloem in a plant carries:",
+              "questionType": "mcq",
+              "options": [
+                "Water upwards",
+                "Food (sugars) made in leaves to all other parts of the plant",
+                "Air",
+                "Dead cells"
+              ],
+              "answer": "Food (sugars) made in leaves to all other parts of the plant",
+              "solutionSteps": [
+                "Phloem is bidirectional — sugars can move up or down to wherever they are needed.",
+                "Xylem only goes up; phloem goes both directions."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q17",
+              "prompt": "Transpiration in plants is:",
+              "questionType": "mcq",
+              "options": [
+                "Water absorbed at the roots",
+                "Water vapour released from the leaves through stomata",
+                "Roots growing deeper",
+                "Flowers blooming"
+              ],
+              "answer": "Water vapour released from the leaves through stomata",
+              "solutionSteps": [
+                "Stomata are tiny pores on leaf undersides.",
+                "Water vapour escapes through them.",
+                "This 'pull' helps draw more water up the xylem from the roots."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q18",
+              "prompt": "True or false: Veins typically have valves to stop blood from flowing backwards.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Blood in veins moves at low pressure, so flap-like valves prevent backflow as it returns to the heart, especially against gravity.",
+                "Arteries don't need valves — high pressure keeps blood moving forward."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q19",
+              "prompt": "The largest artery in the human body is the ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "aorta",
+              "solutionSteps": [
+                "The aorta carries oxygen-rich blood from the left ventricle to the rest of the body."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q20",
+              "prompt": "Why does a person who loses a lot of blood need a transfusion quickly?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Blood carries oxygen, nutrients, and heat. Losing too much means organs can't get enough oxygen and the blood pressure drops dangerously low.",
+              "solutionSteps": [
+                "A large blood loss reduces oxygen-carrying capacity and blood pressure.",
+                "Both are needed to keep organs (especially brain and heart) alive.",
+                "A transfusion restores volume and oxygen-carrying capacity."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q21",
+              "prompt": "Which of these is NOT a function of blood?",
+              "questionType": "mcq",
+              "options": [
+                "Carry O₂ and CO₂",
+                "Carry nutrients and hormones",
+                "Fight infections",
+                "Digest food"
+              ],
+              "answer": "Digest food",
+              "solutionSteps": [
+                "Digestion happens in the digestive tract (stomach, intestines), not the blood.",
+                "Blood does the other three functions listed."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch11_t01_q22",
+              "prompt": "Match each plant tissue / organ with its function.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Xylem — Carries water and minerals up from roots;Phloem — Carries food made in leaves to the rest of the plant;Roots — Absorb water and minerals from the soil;Leaves — Make food via photosynthesis",
+              "matchPairs": [
+                {
+                  "left": "Xylem",
+                  "right": "Carries water and minerals up from roots"
+                },
+                {
+                  "left": "Phloem",
+                  "right": "Carries food made in leaves to the rest of the plant"
+                },
+                {
+                  "left": "Roots",
+                  "right": "Absorb water and minerals from the soil"
+                },
+                {
+                  "left": "Leaves",
+                  "right": "Make food via photosynthesis"
+                }
+              ],
+              "solutionSteps": [
+                "Match each plant part with its job in transport / production."
+              ],
+              "commonMistakes": [
+                "Confusing xylem and phloem — xylem goes up only; phloem is the food pipe."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -10690,6 +12634,400 @@
                 154
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_q04",
+              "prompt": "Asexual reproduction in plants produces offspring that are:",
+              "questionType": "mcq",
+              "options": [
+                "Genetically different from the parent",
+                "Genetically identical to the parent",
+                "A mix of two parents",
+                "Always larger than the parent"
+              ],
+              "answer": "Genetically identical to the parent",
+              "solutionSteps": [
+                "Only one parent is involved.",
+                "No mixing of genes → clones of the parent.",
+                "Useful for farmers: a desirable plant can be cloned reliably."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q05",
+              "prompt": "Which of these is NOT a method of asexual reproduction in plants?",
+              "questionType": "mcq",
+              "options": [
+                "Cuttings",
+                "Runners",
+                "Pollination by a bee",
+                "Tubers like potato eyes"
+              ],
+              "answer": "Pollination by a bee",
+              "solutionSteps": [
+                "Pollination is part of sexual reproduction (it brings pollen from one flower to another).",
+                "Cuttings, runners, tubers (potato 'eyes'), bulbs, and grafting are all asexual."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q06",
+              "prompt": "Strawberries reproduce asexually by sending out:",
+              "questionType": "mcq",
+              "options": [
+                "Pollen",
+                "Runners (horizontal stems above ground)",
+                "Tubers",
+                "Spores"
+              ],
+              "answer": "Runners (horizontal stems above ground)",
+              "solutionSteps": [
+                "A runner is a long thin stem that grows along the surface.",
+                "Where it touches the soil it grows roots and a new plant.",
+                "Strawberries, mint and grasses all do this."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q07",
+              "prompt": "Sexual reproduction in flowering plants requires:",
+              "questionType": "mcq",
+              "options": [
+                "Wind only",
+                "Pollen from anther reaching the stigma, then fertilising the egg",
+                "Two leaves to touch",
+                "Soil and water only"
+              ],
+              "answer": "Pollen from anther reaching the stigma, then fertilising the egg",
+              "solutionSteps": [
+                "Anther produces pollen (male gamete).",
+                "Pollen lands on the stigma (top of the female part), grows down through the style, and reaches the egg in the ovule.",
+                "Fusion of pollen nucleus with egg = fertilisation. Result: seed."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q08",
+              "prompt": "The MALE part of a flower is the:",
+              "questionType": "mcq",
+              "options": [
+                "Pistil",
+                "Stamen (anther + filament)",
+                "Petals",
+                "Sepal"
+              ],
+              "answer": "Stamen (anther + filament)",
+              "solutionSteps": [
+                "Anther produces pollen.",
+                "Filament is the stalk that holds the anther up.",
+                "Pistil is the female part (stigma + style + ovary).",
+                "Petals attract pollinators; sepals protect the bud."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q09",
+              "prompt": "The FEMALE part of a flower is called the:",
+              "questionType": "mcq",
+              "options": [
+                "Anther",
+                "Pistil (stigma + style + ovary)",
+                "Petal",
+                "Sepal"
+              ],
+              "answer": "Pistil (stigma + style + ovary)",
+              "solutionSteps": [
+                "Stigma — the sticky tip that catches pollen.",
+                "Style — the tube down which pollen tubes grow.",
+                "Ovary — contains the ovules (eggs) and becomes the fruit after fertilisation."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q10",
+              "prompt": "After fertilisation, the ovary of a flower develops into a:",
+              "questionType": "mcq",
+              "options": [
+                "Petal",
+                "Fruit",
+                "Sepal",
+                "Leaf"
+              ],
+              "answer": "Fruit",
+              "solutionSteps": [
+                "The ovary swells and becomes the fruit.",
+                "The ovules inside become seeds.",
+                "An apple's flesh is the developed ovary; the pips are the developed ovules."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q11",
+              "prompt": "Pollination by insects is called:",
+              "questionType": "mcq",
+              "options": [
+                "Anemophily",
+                "Entomophily (or zoophily)",
+                "Hydrophily",
+                "Ornithophily"
+              ],
+              "answer": "Entomophily (or zoophily)",
+              "solutionSteps": [
+                "Greek/Latin roots: entomo = insect; -phily = love.",
+                "Anemophily = wind pollination (anemos = wind).",
+                "Hydrophily = water; Ornithophily = birds."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q12",
+              "prompt": "Seeds dispersed by WIND tend to be:",
+              "questionType": "mcq",
+              "options": [
+                "Heavy and round",
+                "Small, light, with wing or hair attachments",
+                "Spiky and sticky",
+                "Brightly coloured and fleshy"
+              ],
+              "answer": "Small, light, with wing or hair attachments",
+              "solutionSteps": [
+                "Wind-dispersed seeds need to float on air currents — small mass + large surface area.",
+                "Examples: dandelion (parachute), maple (samara helicopter).",
+                "Spiky/sticky seeds use animal fur; fleshy fruits use animal stomachs."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q13",
+              "prompt": "Coconut seeds disperse by:",
+              "questionType": "mcq",
+              "options": [
+                "Wind",
+                "Water (floating across oceans)",
+                "Sticking to animals",
+                "Exploding"
+              ],
+              "answer": "Water (floating across oceans)",
+              "solutionSteps": [
+                "Coconuts have a thick fibrous husk that floats.",
+                "Tides and currents can carry them thousands of km to new beaches.",
+                "Once washed up, they sprout into new palms."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q14",
+              "prompt": "Burdock seeds with little hooks stick to passing animals — this is:",
+              "questionType": "mcq",
+              "options": [
+                "Wind dispersal",
+                "Water dispersal",
+                "Animal dispersal",
+                "Explosion dispersal"
+              ],
+              "answer": "Animal dispersal",
+              "solutionSteps": [
+                "The hooks catch on fur or clothes.",
+                "Animals carry the seeds elsewhere before they drop off.",
+                "This was the inspiration for Velcro!"
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q15",
+              "prompt": "Ripe pods that suddenly burst and fling seeds (e.g. balsam, garden pea) use:",
+              "questionType": "mcq",
+              "options": [
+                "Wind dispersal",
+                "Water dispersal",
+                "Animal dispersal",
+                "Explosion / mechanical dispersal"
+              ],
+              "answer": "Explosion / mechanical dispersal",
+              "solutionSteps": [
+                "The drying pod builds tension until it splits suddenly.",
+                "The split flings the seeds a short distance from the parent plant."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q16",
+              "prompt": "True or false: All flowering plants need bees to reproduce.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "Many flowering plants are pollinated by bees, but others use wind, water, birds, bats, or even self-pollination.",
+                "Grasses and pine trees are wind-pollinated."
+              ],
+              "commonMistakes": [
+                "Generalising bee pollination — it's important but not universal."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q17",
+              "prompt": "Self-pollination is when:",
+              "questionType": "mcq",
+              "options": [
+                "Pollen from one flower reaches the stigma of a different flower on a different plant",
+                "Pollen lands on the stigma of the SAME flower or another flower on the same plant",
+                "A flower reproduces with its leaves",
+                "No pollination is needed"
+              ],
+              "answer": "Pollen lands on the stigma of the SAME flower or another flower on the same plant",
+              "solutionSteps": [
+                "Self-pollination keeps genes within one plant — less variety.",
+                "Cross-pollination (between different plants) mixes genes — more variety."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q18",
+              "prompt": "Pollen grains are produced by the ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "anther",
+              "solutionSteps": [
+                "The anther sits on the filament; it is the part that releases pollen."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q19",
+              "prompt": "Why is it useful for a plant species that seeds disperse far away from the parent plant?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Seeds that fall right under the parent compete for the same light, water, and nutrients; dispersing far reduces competition and reaches new patches of habitat.",
+              "solutionSteps": [
+                "Parent plant has used up local resources.",
+                "Falling seeds would compete with the parent and each other.",
+                "Spreading further reduces competition AND lets the species expand its range."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q20",
+              "prompt": "Gardeners propagate roses commonly by:",
+              "questionType": "mcq",
+              "options": [
+                "Pollination only",
+                "Cuttings — a short stem from a parent plant is rooted in soil",
+                "Boiling seeds",
+                "Buying air"
+              ],
+              "answer": "Cuttings — a short stem from a parent plant is rooted in soil",
+              "solutionSteps": [
+                "A cutting is a small piece of stem that develops roots when planted.",
+                "The new rose is an exact clone of the parent.",
+                "Faster and more reliable than growing from seeds for many ornamental plants."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch12_t01_q21",
+              "prompt": "Match each seed with its dispersal method.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Dandelion (parachute seed) — Wind;Coconut — Water;Burdock (hooked seed) — Animal fur;Garden pea pod — Explosion / mechanical",
+              "matchPairs": [
+                {
+                  "left": "Dandelion (parachute seed)",
+                  "right": "Wind"
+                },
+                {
+                  "left": "Coconut",
+                  "right": "Water"
+                },
+                {
+                  "left": "Burdock (hooked seed)",
+                  "right": "Animal fur"
+                },
+                {
+                  "left": "Garden pea pod",
+                  "right": "Explosion / mechanical"
+                }
+              ],
+              "solutionSteps": [
+                "Match each by the structural adaptation each seed has evolved."
+              ],
+              "commonMistakes": [
+                "Mixing up coconut and dandelion — coconuts float in water, dandelions blow in the wind."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
