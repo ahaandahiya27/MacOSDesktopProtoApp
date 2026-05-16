@@ -51,6 +51,16 @@ struct TopicDetailView: View {
                     }
                 }
             }
+
+            if topic.concepts.isEmpty && topic.questions.isEmpty {
+                Section {
+                    Text("No concepts or questions in this topic yet \u{2014} open the article above to learn the basics.")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                        .padding(.vertical, 8)
+                }
+                .listRowBackground(Color.clear)
+            }
         }
         .listStyle(.inset)
         .frame(maxWidth: DesignTokens.contentMaxWidthWide)
@@ -75,7 +85,7 @@ private struct ConceptRow: View {
                     .lineLimit(2)
                 if concept.needsHumanReview {
                     Label("Needs review", systemImage: "exclamationmark.triangle.fill")
-                        .font(.caption2).foregroundColor(.orange)
+                        .font(.caption).foregroundColor(.orange)
                 }
             }
         }

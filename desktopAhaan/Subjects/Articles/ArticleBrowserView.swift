@@ -72,8 +72,10 @@ struct ArticleBrowserView: View {
 
                     Text(coordinator.pageTitle)
                         .font(.body)
-                        .lineLimit(1)
-                        .frame(maxWidth: 300)
+                        .lineLimit(2)
+                        .truncationMode(.tail)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: 360)
 
                     Spacer()
 

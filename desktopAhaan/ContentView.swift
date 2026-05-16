@@ -11,6 +11,7 @@ struct ContentView: View {
                 HStack(spacing: 8) {
                     Image(systemName: "exclamationmark.triangle.fill")
                         .foregroundColor(.orange)
+                        .accessibilityHidden(true)
                     Text(error)
                         .font(.caption)
                     Spacer()
@@ -92,6 +93,7 @@ struct ContentView: View {
                 }
             }
         }
+        .frame(minWidth: 220, idealWidth: 260, maxWidth: 320)
     }
 
     // MARK: - Detail
@@ -111,6 +113,7 @@ struct ContentView: View {
                     Image(systemName: "books.vertical")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)
+                        .accessibilityHidden(true)
                     Text("Subject not loaded")
                         .font(.title2.weight(.semibold))
                     Text("This subject couldn't be loaded. Please restart the app.")
