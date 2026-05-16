@@ -1033,6 +1033,251 @@
                 16
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch01_topup_q01",
+              "prompt": "Plants that make their own food are called:",
+              "questionType": "mcq",
+              "options": [
+                "Heterotrophs",
+                "Autotrophs",
+                "Carnivores",
+                "Decomposers"
+              ],
+              "answer": "Autotrophs",
+              "solutionSteps": [
+                "Auto = self, troph = nourish.",
+                "Green plants make their own food via photosynthesis."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q02",
+              "prompt": "Photosynthesis takes place mainly in:",
+              "questionType": "mcq",
+              "options": [
+                "Roots",
+                "Stems",
+                "Leaves (chloroplasts)",
+                "Flowers"
+              ],
+              "answer": "Leaves (chloroplasts)",
+              "solutionSteps": [
+                "Leaves contain chloroplasts with chlorophyll.",
+                "That's where photosynthesis happens."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q03",
+              "prompt": "Chlorophyll's main job is to:",
+              "questionType": "mcq",
+              "options": [
+                "Make leaves taste good",
+                "Absorb light energy for photosynthesis",
+                "Keep leaves cool",
+                "Repel insects"
+              ],
+              "answer": "Absorb light energy for photosynthesis",
+              "solutionSteps": [
+                "Chlorophyll absorbs mostly red and blue light, reflects green (why leaves look green).",
+                "Absorbed energy powers the reactions of photosynthesis."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q04",
+              "prompt": "Stomata are:",
+              "questionType": "mcq",
+              "options": [
+                "Plant leaves",
+                "Tiny pores on leaves for gas exchange",
+                "Plant roots",
+                "Pollen grains"
+              ],
+              "answer": "Tiny pores on leaves for gas exchange",
+              "solutionSteps": [
+                "Mostly on the underside of leaves.",
+                "CO₂ goes in, O₂ and water vapour go out."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q05",
+              "prompt": "Cuscuta (dodder) is a:",
+              "questionType": "mcq",
+              "options": [
+                "Carnivorous plant",
+                "Parasitic plant living on other plants",
+                "Saprophyte",
+                "Lichen"
+              ],
+              "answer": "Parasitic plant living on other plants",
+              "solutionSteps": [
+                "Cuscuta lacks chlorophyll and roots in soil.",
+                "It wraps around a host plant and draws nutrients from it."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q06",
+              "prompt": "Pitcher plants are:",
+              "questionType": "mcq",
+              "options": [
+                "Wind-pollinated",
+                "Carnivorous (insect-eating)",
+                "Underwater",
+                "Toxic to all animals"
+              ],
+              "answer": "Carnivorous (insect-eating)",
+              "solutionSteps": [
+                "Pitcher plants grow in nitrogen-poor soils.",
+                "They trap and digest insects to get nitrogen."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q07",
+              "prompt": "Saprophytes feed on:",
+              "questionType": "mcq",
+              "options": [
+                "Living animals",
+                "Dead and decaying matter",
+                "Sunlight only",
+                "Iron"
+              ],
+              "answer": "Dead and decaying matter",
+              "solutionSteps": [
+                "Saprophytes (many fungi, some bacteria) break down dead material.",
+                "They are nature's recyclers."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q08",
+              "prompt": "Lichens are made of:",
+              "questionType": "mcq",
+              "options": [
+                "A fungus and an alga living together",
+                "Two animals",
+                "Only fungi",
+                "Only plants"
+              ],
+              "answer": "A fungus and an alga living together",
+              "solutionSteps": [
+                "The fungus provides shelter; the alga makes food via photosynthesis.",
+                "This is symbiosis (mutualism) — both partners benefit."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q09",
+              "prompt": "Rhizobium bacteria live in the:",
+              "questionType": "mcq",
+              "options": [
+                "Stem of grass",
+                "Root nodules of leguminous plants (peas, beans)",
+                "Air sacs of insects",
+                "Eyes of fish"
+              ],
+              "answer": "Root nodules of leguminous plants (peas, beans)",
+              "solutionSteps": [
+                "Rhizobium fixes atmospheric nitrogen into a form plants can use.",
+                "In return, the plant supplies it with sugars."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q10",
+              "prompt": "True or false: Plants release oxygen during photosynthesis.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Photosynthesis: CO₂ + H₂O + sunlight → glucose + O₂.",
+                "O₂ is the by-product released through stomata."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch01_topup_q11",
+              "prompt": "Match each plant type with its feeding method.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Green plant — Autotroph (makes own food);Cuscuta — Parasite (lives on host);Pitcher plant — Insectivorous;Mushroom — Saprophyte (dead matter);Lichen — Symbiosis (fungus + alga)",
+              "matchPairs": [
+                {
+                  "left": "Green plant",
+                  "right": "Autotroph (makes own food)"
+                },
+                {
+                  "left": "Cuscuta",
+                  "right": "Parasite (lives on host)"
+                },
+                {
+                  "left": "Pitcher plant",
+                  "right": "Insectivorous"
+                },
+                {
+                  "left": "Mushroom",
+                  "right": "Saprophyte (dead matter)"
+                },
+                {
+                  "left": "Lichen",
+                  "right": "Symbiosis (fungus + alga)"
+                }
+              ],
+              "solutionSteps": [
+                "Match each by how it gets carbon / nitrogen."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -3361,6 +3606,251 @@
                 31
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch02_topup_q01",
+              "prompt": "Digestion of food in humans starts in the:",
+              "questionType": "mcq",
+              "options": [
+                "Stomach",
+                "Mouth",
+                "Small intestine",
+                "Liver"
+              ],
+              "answer": "Mouth",
+              "solutionSteps": [
+                "Teeth crush; saliva contains enzymes that begin starch digestion.",
+                "Stomach and intestines continue the process."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q02",
+              "prompt": "Saliva contains an enzyme that digests:",
+              "questionType": "mcq",
+              "options": [
+                "Proteins",
+                "Fats",
+                "Starch",
+                "Fibre"
+              ],
+              "answer": "Starch",
+              "solutionSteps": [
+                "The enzyme is amylase. It breaks starch (carbohydrate) into simpler sugars.",
+                "Proteins and fats are digested later, in stomach and intestine."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q03",
+              "prompt": "Adult humans typically have ____ teeth.",
+              "questionType": "mcq",
+              "options": [
+                "20",
+                "28",
+                "32",
+                "40"
+              ],
+              "answer": "32",
+              "solutionSteps": [
+                "32 = 8 incisors + 4 canines + 8 premolars + 12 molars (including 4 wisdom teeth).",
+                "Children have 20 milk teeth before adult teeth grow in."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q04",
+              "prompt": "Incisors are mainly used for:",
+              "questionType": "mcq",
+              "options": [
+                "Tearing",
+                "Cutting",
+                "Grinding",
+                "Sucking"
+              ],
+              "answer": "Cutting",
+              "solutionSteps": [
+                "Front, flat, chisel-like teeth.",
+                "Used to bite and cut food into smaller pieces."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q05",
+              "prompt": "Canines are mainly used for:",
+              "questionType": "mcq",
+              "options": [
+                "Tearing",
+                "Cutting",
+                "Grinding",
+                "Pulping"
+              ],
+              "answer": "Tearing",
+              "solutionSteps": [
+                "Pointed teeth on either side of the incisors.",
+                "They tear food, especially fibrous or meaty material."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q06",
+              "prompt": "Hydrochloric acid in the stomach:",
+              "questionType": "mcq",
+              "options": [
+                "Cools the food",
+                "Makes the environment acidic to help digestion and kill germs",
+                "Adds sugar to food",
+                "Makes food taste good"
+              ],
+              "answer": "Makes the environment acidic to help digestion and kill germs",
+              "solutionSteps": [
+                "HCl creates a pH of about 1-2 in the stomach.",
+                "This activates the protein-digesting enzyme pepsin and kills many swallowed bacteria."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q07",
+              "prompt": "Most nutrient absorption happens in the:",
+              "questionType": "mcq",
+              "options": [
+                "Stomach",
+                "Small intestine",
+                "Large intestine",
+                "Liver"
+              ],
+              "answer": "Small intestine",
+              "solutionSteps": [
+                "The small intestine is long (~6 m in adults) and lined with millions of finger-like villi.",
+                "These give a huge surface area for absorption."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q08",
+              "prompt": "Bile is produced by the ____ and stored in the ____.",
+              "questionType": "mcq",
+              "options": [
+                "Stomach; pancreas",
+                "Kidneys; bladder",
+                "Liver; gallbladder",
+                "Spleen; appendix"
+              ],
+              "answer": "Liver; gallbladder",
+              "solutionSteps": [
+                "Bile helps emulsify fats (breaks fat globules into tiny droplets) for easier digestion.",
+                "Made continuously by the liver, stored in the gallbladder until needed."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q09",
+              "prompt": "Cows are ruminants because they:",
+              "questionType": "mcq",
+              "options": [
+                "Eat meat",
+                "Have 4-chambered stomachs and chew cud",
+                "Sleep standing up",
+                "Lay eggs"
+              ],
+              "answer": "Have 4-chambered stomachs and chew cud",
+              "solutionSteps": [
+                "Ruminants regurgitate partly-digested grass (cud) and chew it again to break down cellulose.",
+                "Their four stomach chambers (rumen, reticulum, omasum, abomasum) each play a role."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q10",
+              "prompt": "Amoeba eats by:",
+              "questionType": "mcq",
+              "options": [
+                "Suckling",
+                "Filter-feeding",
+                "Engulfing food with pseudopodia",
+                "Stinging"
+              ],
+              "answer": "Engulfing food with pseudopodia",
+              "solutionSteps": [
+                "Amoeba is a single-celled organism.",
+                "It extends temporary 'false feet' (pseudopodia) around food, forming a food vacuole.",
+                "Digestion happens inside the vacuole."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q11",
+              "prompt": "Tiny finger-like projections inside the small intestine that increase absorption surface area are called ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "villi",
+              "solutionSteps": [
+                "Each villus contains blood vessels that pick up absorbed nutrients."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch02_topup_q12",
+              "prompt": "True or false: Most of what we call 'taste' is actually smell.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "The tongue detects only sweet/sour/salty/bitter/umami.",
+                "Subtler flavours come from food aromas reaching the nose — that's why food tastes bland with a blocked nose."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -4910,6 +5400,253 @@
                 38
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch03_topup_q01",
+              "prompt": "Wool is a:",
+              "questionType": "mcq",
+              "options": [
+                "Synthetic fibre",
+                "Natural animal fibre",
+                "Plant fibre",
+                "Mineral"
+              ],
+              "answer": "Natural animal fibre",
+              "solutionSteps": [
+                "Wool comes from the fleece of sheep, goats, yaks, alpacas, etc.",
+                "It is a natural fibre, made of the protein keratin."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q02",
+              "prompt": "Silk is produced by:",
+              "questionType": "mcq",
+              "options": [
+                "Spiders",
+                "Silkworms (larvae of silk moths)",
+                "Sheep",
+                "Cotton plants"
+              ],
+              "answer": "Silkworms (larvae of silk moths)",
+              "solutionSteps": [
+                "Silkworms spin a cocoon out of one continuous silk filament.",
+                "Workers unwind the cocoon to harvest the silk thread."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q03",
+              "prompt": "Sericulture is the rearing of:",
+              "questionType": "mcq",
+              "options": [
+                "Sheep",
+                "Silkworms (for silk)",
+                "Cattle",
+                "Goldfish"
+              ],
+              "answer": "Silkworms (for silk)",
+              "solutionSteps": [
+                "Sericulture is the cultivation of silkworms on mulberry leaves to produce raw silk.",
+                "Pisciculture is fish; apiculture is bees."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q04",
+              "prompt": "The process of removing fleece from sheep is called:",
+              "questionType": "mcq",
+              "options": [
+                "Shearing",
+                "Combing",
+                "Spinning",
+                "Dyeing"
+              ],
+              "answer": "Shearing",
+              "solutionSteps": [
+                "Shearing is done with electric clippers in summer.",
+                "It doesn't hurt the sheep — like a haircut.",
+                "Spinning is twisting fibres into yarn; dyeing colours the yarn."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q05",
+              "prompt": "Sorter's disease can affect workers who:",
+              "questionType": "mcq",
+              "options": [
+                "Drive trucks",
+                "Handle raw fleece contaminated with anthrax bacteria",
+                "Cook food",
+                "Make cars"
+              ],
+              "answer": "Handle raw fleece contaminated with anthrax bacteria",
+              "solutionSteps": [
+                "Raw fleece can carry anthrax spores.",
+                "Inhaling these can cause sorter's disease (pulmonary anthrax) — potentially fatal.",
+                "Modern PPE and sterilisation has made this rare."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q06",
+              "prompt": "Reeling is:",
+              "questionType": "mcq",
+              "options": [
+                "Removing wool from a sheep",
+                "Unwinding the silk filament from a cocoon",
+                "Spinning cotton",
+                "Cutting cloth"
+              ],
+              "answer": "Unwinding the silk filament from a cocoon",
+              "solutionSteps": [
+                "Reeling unwinds the single long silk thread from each cocoon.",
+                "Several cocoons' threads are often combined for strength."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q07",
+              "prompt": "Which is NOT a wool-producing animal?",
+              "questionType": "mcq",
+              "options": [
+                "Sheep",
+                "Goat",
+                "Yak",
+                "Crocodile"
+              ],
+              "answer": "Crocodile",
+              "solutionSteps": [
+                "Crocodiles have scales, not fleece.",
+                "Sheep, goats, yaks, alpacas, and angora rabbits all produce wool."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q08",
+              "prompt": "Silk is mainly composed of the protein:",
+              "questionType": "mcq",
+              "options": [
+                "Keratin",
+                "Fibroin (and a coating of sericin)",
+                "Cellulose",
+                "Starch"
+              ],
+              "answer": "Fibroin (and a coating of sericin)",
+              "solutionSteps": [
+                "Silk's strong inner core is fibroin.",
+                "Sericin is a sticky outer coating that is mostly washed off in processing.",
+                "Wool is keratin; cotton is cellulose."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q09",
+              "prompt": "Pashmina wool comes from:",
+              "questionType": "mcq",
+              "options": [
+                "Sheep",
+                "Yaks",
+                "Pashmina goats (Changthangi goats of Ladakh)",
+                "Camels"
+              ],
+              "answer": "Pashmina goats (Changthangi goats of Ladakh)",
+              "solutionSteps": [
+                "Pashmina is a fine wool from the soft undercoat of Changthangi goats.",
+                "It is woven into the famous Kashmiri shawls."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q10",
+              "prompt": "The killing of silkworms before they emerge is done because:",
+              "questionType": "mcq",
+              "options": [
+                "Moths are bad luck",
+                "If the moth emerges, it breaks the cocoon and the silk thread breaks too",
+                "Moths damage trees",
+                "Moths are too small to be useful"
+              ],
+              "answer": "If the moth emerges, it breaks the cocoon and the silk thread breaks too",
+              "solutionSteps": [
+                "For unbroken filament silk, the pupa must be killed (hot water/steam) before the moth emerges.",
+                "'Peace silk' / ahimsa silk lets the moth emerge — the resulting silk is shorter-staple and considered ethically preferable by some."
+              ],
+              "commonMistakes": [],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q11",
+              "prompt": "The thick covering of silk that a silkworm spins around itself is called a ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "cocoon",
+              "solutionSteps": [
+                "Inside the cocoon, the caterpillar transforms into a moth (pupa stage)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch03_topup_q12",
+              "prompt": "True or false: Cotton is a plant fibre, not an animal fibre.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Cotton fibres grow from cotton seeds (cellulose).",
+                "Wool and silk are animal fibres (proteins)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -6451,6 +7188,237 @@
                 48
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_topup_q01",
+              "prompt": "Heat flows from a body at higher temperature to a body at:",
+              "questionType": "mcq",
+              "options": [
+                "Same temperature",
+                "Lower temperature",
+                "Higher temperature",
+                "No direction"
+              ],
+              "answer": "Lower temperature",
+              "solutionSteps": [
+                "Heat naturally flows from hot to cold until both reach the same temperature (thermal equilibrium).",
+                "This is the second law of thermodynamics in everyday language."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q02",
+              "prompt": "Temperature is measured with a:",
+              "questionType": "mcq",
+              "options": [
+                "Barometer",
+                "Anemometer",
+                "Thermometer",
+                "Voltmeter"
+              ],
+              "answer": "Thermometer",
+              "solutionSteps": [
+                "Mercury, alcohol, and digital thermometers all measure temperature.",
+                "Barometers measure air pressure."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q03",
+              "prompt": "Normal human body temperature is about:",
+              "questionType": "mcq",
+              "options": [
+                "32 °C",
+                "37 °C",
+                "45 °C",
+                "100 °C"
+              ],
+              "answer": "37 °C",
+              "solutionSteps": [
+                "The healthy normal is around 37 °C (98.6 °F).",
+                "Fever is anything above ~37.8 °C."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q04",
+              "prompt": "Conduction transfers heat through:",
+              "questionType": "mcq",
+              "options": [
+                "Empty space",
+                "Direct contact between particles in solids",
+                "Currents in fluids",
+                "Light only"
+              ],
+              "answer": "Direct contact between particles in solids",
+              "solutionSteps": [
+                "In solids, vibrating particles pass energy to neighbouring particles.",
+                "No bulk movement of material — that's convection."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q05",
+              "prompt": "Convection happens mainly in:",
+              "questionType": "mcq",
+              "options": [
+                "Solids only",
+                "Liquids and gases (fluids)",
+                "Empty space",
+                "Iron only"
+              ],
+              "answer": "Liquids and gases (fluids)",
+              "solutionSteps": [
+                "Hot fluid rises (less dense); cold fluid sinks to replace it.",
+                "This bulk flow carries heat — convection currents.",
+                "Doesn't work in solids because particles aren't free to flow."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q06",
+              "prompt": "Radiation transfers heat through:",
+              "questionType": "mcq",
+              "options": [
+                "Direct contact",
+                "Bulk fluid flow",
+                "Electromagnetic waves (no medium needed)",
+                "Magnetism"
+              ],
+              "answer": "Electromagnetic waves (no medium needed)",
+              "solutionSteps": [
+                "The Sun heats Earth through 150 million km of vacuum — only radiation can do this.",
+                "Infrared radiation is the main heat-carrying type for everyday objects."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q07",
+              "prompt": "Materials that conduct heat well are called:",
+              "questionType": "mcq",
+              "options": [
+                "Insulators",
+                "Conductors",
+                "Reflectors",
+                "Absorbers"
+              ],
+              "answer": "Conductors",
+              "solutionSteps": [
+                "Metals (copper, aluminium) are great conductors.",
+                "Air, wood, plastic are insulators (poor conductors)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q08",
+              "prompt": "Wool is a good insulator because:",
+              "questionType": "mcq",
+              "options": [
+                "Sheep produce magic",
+                "It traps air pockets, and air is a poor conductor",
+                "It is very thick",
+                "It is wet"
+              ],
+              "answer": "It traps air pockets, and air is a poor conductor",
+              "solutionSteps": [
+                "Wool fibres trap millions of tiny air pockets.",
+                "Air conducts heat very poorly, so wool keeps body heat in (winter) and outside heat out (summer)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q09",
+              "prompt": "Land and sea breezes happen because:",
+              "questionType": "mcq",
+              "options": [
+                "Birds flap their wings",
+                "Land heats and cools faster than water, creating convection in the air",
+                "The Earth spins faster on hot days",
+                "Tides push the air"
+              ],
+              "answer": "Land heats and cools faster than water, creating convection in the air",
+              "solutionSteps": [
+                "Day: land hotter → air rises → sea breeze blows in from sea.",
+                "Night: land colder → air sinks → land breeze blows out to sea."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q10",
+              "prompt": "Dark-coloured clothes are uncomfortable in summer because:",
+              "questionType": "mcq",
+              "options": [
+                "They look hot",
+                "They absorb more sunlight and heat up more",
+                "Dye reacts with sweat",
+                "They reflect all colours"
+              ],
+              "answer": "They absorb more sunlight and heat up more",
+              "solutionSteps": [
+                "Dark surfaces absorb most visible light, converting it to heat.",
+                "White / light colours reflect most light, staying cooler — better for hot climates."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch04_topup_q11",
+              "prompt": "True or false: A vacuum flask uses both reflection and a vacuum to slow heat transfer.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "The vacuum between the inner and outer walls stops conduction and convection.",
+                "The silvered inside walls reflect radiation back.",
+                "Together they keep contents hot or cold for hours."
+              ],
+              "commonMistakes": [],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -7727,6 +8695,297 @@
                 72
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch05_topup_q01",
+              "prompt": "Lemons, oranges, and tamarind are sour because they contain:",
+              "questionType": "mcq",
+              "options": [
+                "Bases",
+                "Acids",
+                "Salts",
+                "Sugars only"
+              ],
+              "answer": "Acids",
+              "solutionSteps": [
+                "Citric acid (lemons, oranges) and tartaric acid (tamarind) give the sour taste.",
+                "Sourness is a hallmark of acids."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q02",
+              "prompt": "Soap is a:",
+              "questionType": "mcq",
+              "options": [
+                "Strong acid",
+                "Mild base",
+                "Neutral substance",
+                "Salt"
+              ],
+              "answer": "Mild base",
+              "solutionSteps": [
+                "Soaps and washing powders are mildly basic.",
+                "That's why they feel slippery."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q03",
+              "prompt": "The pH of pure water is:",
+              "questionType": "mcq",
+              "options": [
+                "1",
+                "3",
+                "7",
+                "14"
+              ],
+              "answer": "7",
+              "solutionSteps": [
+                "pH 7 is neutral — neither acidic nor basic.",
+                "Below 7 is acidic; above 7 is basic.",
+                "The pH scale runs from 0 (very acidic) to 14 (very basic)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q04",
+              "prompt": "Litmus paper turns RED in:",
+              "questionType": "mcq",
+              "options": [
+                "Acidic solutions",
+                "Basic solutions",
+                "Neutral solutions",
+                "All solutions equally"
+              ],
+              "answer": "Acidic solutions",
+              "solutionSteps": [
+                "Blue litmus → red in acid.",
+                "Red litmus → blue in base.",
+                "Mnemonic: red for acid."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q05",
+              "prompt": "Litmus paper turns BLUE in:",
+              "questionType": "mcq",
+              "options": [
+                "Acidic solutions",
+                "Basic solutions",
+                "Neutral solutions",
+                "No solutions"
+              ],
+              "answer": "Basic solutions",
+              "solutionSteps": [
+                "Red litmus turns blue in a basic (alkaline) solution.",
+                "Blue → red = acid; Red → blue = base."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q06",
+              "prompt": "An indicator that turns pink in basic solutions is:",
+              "questionType": "mcq",
+              "options": [
+                "Litmus",
+                "Phenolphthalein",
+                "Turmeric",
+                "Methyl orange"
+              ],
+              "answer": "Phenolphthalein",
+              "solutionSteps": [
+                "Phenolphthalein is colourless in acids and turns bright pink in bases.",
+                "Useful for titrations."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q07",
+              "prompt": "Turmeric (haldi) is an indicator that:",
+              "questionType": "mcq",
+              "options": [
+                "Turns blue in acid",
+                "Stays yellow in acid and turns red in base",
+                "Vanishes",
+                "Turns green in acid"
+              ],
+              "answer": "Stays yellow in acid and turns red in base",
+              "solutionSteps": [
+                "Old grandma's home remedy: turmeric stains on a sari that meet soap (basic) turn red.",
+                "That's why turmeric was traditionally tested with soap."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q08",
+              "prompt": "Acid + base → salt + water. This reaction is called:",
+              "questionType": "mcq",
+              "options": [
+                "Combustion",
+                "Neutralisation",
+                "Dispersion",
+                "Evaporation"
+              ],
+              "answer": "Neutralisation",
+              "solutionSteps": [
+                "The acidic and basic effects cancel each other.",
+                "The remaining substances are a salt and water."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q09",
+              "prompt": "An ant sting causes a burning sensation because the ant injects:",
+              "questionType": "mcq",
+              "options": [
+                "A base",
+                "Formic acid",
+                "Pure water",
+                "Sugar"
+              ],
+              "answer": "Formic acid",
+              "solutionSteps": [
+                "Ant venom contains formic acid.",
+                "Applying a mild base (baking soda paste) neutralises it and reduces the sting."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q10",
+              "prompt": "To treat a bee sting (which is acidic), one can apply a mild:",
+              "questionType": "mcq",
+              "options": [
+                "Stronger acid",
+                "Base like baking soda solution",
+                "Sugar paste",
+                "Hot oil"
+              ],
+              "answer": "Base like baking soda solution",
+              "solutionSteps": [
+                "Bee venom is acidic, so a mild base neutralises it.",
+                "Wasp stings are basic — vinegar (acid) works there.",
+                "Mnemonic: 'Wasps go vinegar, bees go bicarbonate'."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q11",
+              "prompt": "Acid rain forms when:",
+              "questionType": "mcq",
+              "options": [
+                "Pure water vapour falls",
+                "Sulphur and nitrogen oxides from pollution dissolve in rain to form acids",
+                "Lightning hits the ground",
+                "Plants release CO₂"
+              ],
+              "answer": "Sulphur and nitrogen oxides from pollution dissolve in rain to form acids",
+              "solutionSteps": [
+                "Industries and vehicles release SO₂ and NOₓ.",
+                "These react with atmospheric water to form sulphuric and nitric acids.",
+                "Acid rain damages buildings, lakes, forests, and soils."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q12",
+              "prompt": "Antacids work by:",
+              "questionType": "mcq",
+              "options": [
+                "Increasing stomach acid",
+                "Neutralising excess stomach acid",
+                "Cooling the stomach",
+                "Adding sugar"
+              ],
+              "answer": "Neutralising excess stomach acid",
+              "solutionSteps": [
+                "Stomach acid is HCl — needed for digestion but uncomfortable when in excess.",
+                "Antacid medicines contain mild bases (magnesium hydroxide, aluminium hydroxide).",
+                "They neutralise the excess acid, relieving heartburn."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q13",
+              "prompt": "True or false: Soil that is too acidic can be improved by adding lime (a base).",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Lime (calcium hydroxide) is a mild base.",
+                "Added to acidic soil, it neutralises the acidity, helping crops grow."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_topup_q14",
+              "prompt": "The pH scale runs from ____ to ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "0 to 14",
+              "solutionSteps": [
+                "0 = most acidic; 7 = neutral; 14 = most basic."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
@@ -9013,6 +10272,298 @@
                 89
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch07_topup_q01",
+              "prompt": "Weather is:",
+              "questionType": "mcq",
+              "options": [
+                "The long-term average pattern of conditions",
+                "Short-term day-to-day atmospheric conditions",
+                "The Earth's orbit",
+                "The seasons"
+              ],
+              "answer": "Short-term day-to-day atmospheric conditions",
+              "solutionSteps": [
+                "Weather changes hourly / daily: today might be sunny, tomorrow rainy.",
+                "Climate is the long-term average of weather in a region (usually 30+ years)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q02",
+              "prompt": "Climate is:",
+              "questionType": "mcq",
+              "options": [
+                "What it's like outside right now",
+                "The average pattern of weather in a region over many years",
+                "A type of storm",
+                "A scientist"
+              ],
+              "answer": "The average pattern of weather in a region over many years",
+              "solutionSteps": [
+                "Mumbai's climate is hot and humid.",
+                "Today's Mumbai weather might be cloudy and rainy.",
+                "Climate = long-term; weather = short-term."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q03",
+              "prompt": "A thick layer of fat (blubber) under the skin helps:",
+              "questionType": "mcq",
+              "options": [
+                "Camels in the desert",
+                "Polar bears in the Arctic",
+                "Snakes in trees",
+                "Bats in caves"
+              ],
+              "answer": "Polar bears in the Arctic",
+              "solutionSteps": [
+                "Blubber is great insulation against freezing cold.",
+                "Polar bears, seals, whales all rely on blubber.",
+                "Camels store fat in their hump for water and energy, but not for insulation."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q04",
+              "prompt": "Why are polar bears white?",
+              "questionType": "mcq",
+              "options": [
+                "Genetic accident",
+                "Camouflage in the snow + insulation",
+                "Hot Arctic sun bleaches them",
+                "To attract mates"
+              ],
+              "answer": "Camouflage in the snow + insulation",
+              "solutionSteps": [
+                "White fur blends with snow and ice — helps stalk seals.",
+                "Their fur is actually translucent; it scatters light, looking white."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q05",
+              "prompt": "Camels are adapted to deserts because they:",
+              "questionType": "mcq",
+              "options": [
+                "Drink seawater",
+                "Store fat in their hump, have long eyelashes, and can go days without water",
+                "Sleep in trees",
+                "Have gills"
+              ],
+              "answer": "Store fat in their hump, have long eyelashes, and can go days without water",
+              "solutionSteps": [
+                "Hump fat doubles as a water source when metabolised.",
+                "Long eyelashes keep sandstorms out of eyes.",
+                "Wide feet stop them sinking in sand."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q06",
+              "prompt": "Tropical rainforests are typically:",
+              "questionType": "mcq",
+              "options": [
+                "Cold and dry",
+                "Hot and humid with heavy rainfall",
+                "Cold and snowy",
+                "Hot and dry like a desert"
+              ],
+              "answer": "Hot and humid with heavy rainfall",
+              "solutionSteps": [
+                "Tropical = near the equator → year-round warm.",
+                "Heavy rainfall = lush green forests, very high biodiversity."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q07",
+              "prompt": "Migratory birds fly thousands of km because:",
+              "questionType": "mcq",
+              "options": [
+                "They're lost",
+                "To escape cold winters and find better food / breeding grounds",
+                "They are tired of one place",
+                "To deliver mail"
+              ],
+              "answer": "To escape cold winters and find better food / breeding grounds",
+              "solutionSteps": [
+                "Migration is an annual cycle driven by food availability and breeding.",
+                "Arctic terns migrate the longest known route — Arctic to Antarctic and back."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q08",
+              "prompt": "Penguins are well-adapted to the cold because they:",
+              "questionType": "mcq",
+              "options": [
+                "Sit by fires",
+                "Have a thick layer of feathers and blubber and huddle in groups",
+                "Drink hot tea",
+                "Fly south for winter"
+              ],
+              "answer": "Have a thick layer of feathers and blubber and huddle in groups",
+              "solutionSteps": [
+                "Penguins can't fly but are great swimmers.",
+                "They huddle to share warmth, rotate the outer birds inward to stay equally warm."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q09",
+              "prompt": "Animals that are mainly active at NIGHT are called:",
+              "questionType": "mcq",
+              "options": [
+                "Diurnal",
+                "Nocturnal",
+                "Crepuscular",
+                "Migratory"
+              ],
+              "answer": "Nocturnal",
+              "solutionSteps": [
+                "Nocturnal animals sleep during the day, hunt or forage at night.",
+                "Example: owls, bats, leopards (often).",
+                "Diurnal = active during the day."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q10",
+              "prompt": "Toucans live in tropical forests; their LARGE beak helps them:",
+              "questionType": "mcq",
+              "options": [
+                "Sing louder",
+                "Reach fruit on thin branches and dissipate body heat",
+                "Build nests",
+                "Dig burrows"
+              ],
+              "answer": "Reach fruit on thin branches and dissipate body heat",
+              "solutionSteps": [
+                "The beak is light but long — reach fruit branches that wouldn't hold the bird.",
+                "Recent research shows toucan beaks also act as heat radiators."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q11",
+              "prompt": "Why do lions and tigers have shorter ears than elephants?",
+              "questionType": "mcq",
+              "options": [
+                "They hear less well",
+                "Smaller ears lose less heat in their cooler forest habitats",
+                "Style",
+                "Heavier"
+              ],
+              "answer": "Smaller ears lose less heat in their cooler forest habitats",
+              "solutionSteps": [
+                "Elephants in hot grasslands use their huge ears as radiators to dump body heat.",
+                "Forest cats live in shadier, cooler habitats — they don't need oversized ears."
+              ],
+              "commonMistakes": [],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q12",
+              "prompt": "Hibernation is:",
+              "questionType": "mcq",
+              "options": [
+                "A bird's flight south",
+                "A long winter sleep with very slowed metabolism (used by some animals to survive cold)",
+                "A type of egg",
+                "Hot weather behaviour"
+              ],
+              "answer": "A long winter sleep with very slowed metabolism (used by some animals to survive cold)",
+              "solutionSteps": [
+                "Used by bears, ground squirrels, some bats, etc.",
+                "Body temperature, heart rate, breathing all drop — energy lasts much longer.",
+                "Aestivation is the same idea in summer (e.g. lungfish)."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q13",
+              "prompt": "True or false: Camels can drink 100 litres of water in just a few minutes.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "After days of dehydration, camels can rehydrate very rapidly.",
+                "Their red blood cells are uniquely shaped to handle the swelling without bursting."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_topup_q14",
+              "prompt": "Animals active in the daytime are called ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "diurnal",
+              "solutionSteps": [
+                "Diurnal animals sleep at night.",
+                "Nocturnal animals do the opposite."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         },
