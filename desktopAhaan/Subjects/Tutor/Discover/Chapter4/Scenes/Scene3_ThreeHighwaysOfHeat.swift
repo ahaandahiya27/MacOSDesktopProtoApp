@@ -2,7 +2,10 @@ import SwiftUI
 
 /// Scene 3 — Three Highways of Heat.
 /// Three side-by-side lanes: Conduction, Convection, Radiation. Tap each for explanation.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — each lane's animation runs from a single
+/// 20 fps Timer.publish writing into a shared `tick` state, with per-particle
+/// View structs replacing the old Canvas calls.
 struct Scene3_ThreeHighwaysOfHeat: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -10,6 +13,8 @@ struct Scene3_ThreeHighwaysOfHeat: View {
 
     @State private var tappedLanes: Set<Int> = []
     @State private var activeLane: Int? = nil
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allTapped: Bool { tappedLanes.count >= 3 }
@@ -84,6 +89,20 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
+    }
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     @ViewBuilder
@@ -133,13 +152,12 @@ struct Scene3_ThreeHighwaysOfHeat: View {
         if reduceMotion {
             staticLane(index: index)
         } else {
-            TimelineView(.animation(minimumInterval: 1.0 / 20)) { ctx in
-                let t = ctx.date.timeIntervalSince1970
-                Canvas { context, size in
+            GeometryReader { geo in
+                ZStack(alignment: .topLeading) {
                     switch index {
-                    case 0: drawConduction(context: context, size: size, t: t)
-                    case 1: drawConvection(context: context, size: size, t: t)
-                    default: drawRadiation(context: context, size: size, t: t)
+                    case 0: ConductionLane(t: tick, size: geo.size)
+                    case 1: ConvectionLane(t: tick, size: geo.size)
+                    default: RadiationLane(t: tick, size: geo.size)
                     }
                 }
             }
@@ -155,54 +173,127 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             }
         }
     }
+}
 
-    // MARK: - Canvas drawings
+// MARK: - Per-lane animated subviews
+//
+// Each Canvas-based drawing is replaced with a small View struct that uses
+// a ForEach of positioned shapes. Position math lives in computed
+// properties or helper functions so the Swift 5.5 type-checker doesn't
+// time out inside @ViewBuilder closures.
 
-    private func drawConduction(context: GraphicsContext, size: CGSize, t: TimeInterval) {
-        var ctx = context
-        let y = size.height * 0.5
-        for i in 0..<6 {
-            let phase = (t * 2 + Double(i) * 0.4).truncatingRemainder(dividingBy: 2.0) / 2.0
-            let x = size.width * 0.1 + size.width * 0.8 * (CGFloat(i) / 5.0)
-            let glow = sin(phase * .pi + Double(i) * 0.5) * 0.5 + 0.5
-            let rect = CGRect(x: x - 8, y: y - 8, width: 16, height: 16)
-            ctx.opacity = glow
-            ctx.fill(Path(ellipseIn: rect), with: .color(.orange))
-        }
-        // Rod line
-        ctx.opacity = 0.3
-        var rod = Path()
-        rod.move(to: CGPoint(x: size.width * 0.08, y: y))
-        rod.addLine(to: CGPoint(x: size.width * 0.92, y: y))
-        ctx.stroke(rod, with: .color(.gray), lineWidth: 4)
-    }
+private struct ConductionLane: View {
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            // Rod line
+            Path { p in
+                let y: CGFloat = size.height * 0.5
+                p.move(to: CGPoint(x: size.width * 0.08, y: y))
+                p.addLine(to: CGPoint(x: size.width * 0.92, y: y))
+            }
+            .stroke(Color.gray.opacity(0.3), lineWidth: 4)
 
-    private func drawConvection(context: GraphicsContext, size: CGSize, t: TimeInterval) {
-        var ctx = context
-        let cx = size.width * 0.5, cy = size.height * 0.5
-        let rx = size.width * 0.3, ry = size.height * 0.35
-        for i in 0..<8 {
-            let angle = (t * 0.8 + Double(i) * 0.785)
-            let x = cx + rx * CGFloat(cos(angle))
-            let y = cy + ry * CGFloat(sin(angle))
-            let isRising = sin(angle) < 0
-            let color: Color = isRising ? .red : .blue
-            let rect = CGRect(x: x - 6, y: y - 6, width: 12, height: 12)
-            ctx.opacity = 0.7
-            ctx.fill(Path(ellipseIn: rect), with: .color(color))
+            ForEach(0..<6, id: \.self) { i in
+                ConductionDot(index: i, t: t, size: size)
+            }
         }
     }
+}
 
-    private func drawRadiation(context: GraphicsContext, size: CGSize, t: TimeInterval) {
-        var ctx = context
-        for i in 0..<5 {
-            let phase = (t * 1.5 + Double(i) * 0.4).truncatingRemainder(dividingBy: 2.0) / 2.0
-            let x = size.width * 0.15 + size.width * 0.7 * CGFloat(phase)
-            let y = size.height * 0.3 + CGFloat(i) * (size.height * 0.08)
-            let wave = sin(phase * .pi * 4) * 8
-            let rect = CGRect(x: x - 3, y: y + wave - 3, width: 6, height: 6)
-            ctx.opacity = 1 - phase
-            ctx.fill(Path(ellipseIn: rect), with: .color(.yellow))
+private struct ConductionDot: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.orange)
+            .frame(width: 16, height: 16)
+            .opacity(p.opacity)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double; let opacity: Double }
+    private func compute() -> DotPos {
+        let phase: Double = ((Double(t) * 2.0 + Double(index) * 0.4).truncatingRemainder(dividingBy: 2.0)) / 2.0
+        let x: Double = Double(size.width) * 0.1 + Double(size.width) * 0.8 * (Double(index) / 5.0)
+        let y: Double = Double(size.height) * 0.5
+        let glow: Double = sin(Double(phase) * Double.pi + Double(index) * 0.5) * 0.5 + 0.5
+        return DotPos(x: x, y: y, opacity: glow)
+    }
+}
+
+private struct ConvectionLane: View {
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            ForEach(0..<8, id: \.self) { i in
+                ConvectionDot(index: i, t: t, size: size)
+            }
         }
+    }
+}
+
+private struct ConvectionDot: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(p.color)
+            .frame(width: 12, height: 12)
+            .opacity(0.7)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double; let color: Color }
+    private func compute() -> DotPos {
+        let cx: Double = Double(size.width) * 0.5
+        let cy: Double = Double(size.height) * 0.5
+        let rx: Double = Double(size.width) * 0.3
+        let ry: Double = Double(size.height) * 0.35
+        let angle: Double = Double(t) * 0.8 + Double(index) * 0.785
+        let x: Double = cx + rx * cos(angle)
+        let y: Double = cy + ry * sin(angle)
+        let isRising: Bool = sin(angle) < 0
+        let color: Color = isRising ? Color.red : Color.blue
+        return DotPos(x: x, y: y, color: color)
+    }
+}
+
+private struct RadiationLane: View {
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            ForEach(0..<5, id: \.self) { i in
+                RadiationDot(index: i, t: t, size: size)
+            }
+        }
+    }
+}
+
+private struct RadiationDot: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.yellow)
+            .frame(width: 6, height: 6)
+            .opacity(p.opacity)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double; let opacity: Double }
+    private func compute() -> DotPos {
+        let phase: Double = ((Double(t) * 1.5 + Double(index) * 0.4).truncatingRemainder(dividingBy: 2.0)) / 2.0
+        let x: Double = Double(size.width) * 0.15 + Double(size.width) * 0.7 * phase
+        let baseY: Double = Double(size.height) * 0.3 + Double(index) * Double(size.height) * 0.08
+        let wave: Double = sin(Double(phase) * Double.pi * 4.0) * 8.0
+        let y: Double = baseY + wave
+        return DotPos(x: x, y: y, opacity: 1.0 - phase)
     }
 }

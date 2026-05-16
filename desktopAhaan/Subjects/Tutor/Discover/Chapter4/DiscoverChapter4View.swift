@@ -77,12 +77,7 @@ struct DiscoverChapter4View: View {
         switch currentScene {
         case 0: Scene1_HotOrCold(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildYourThermometer(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2:
-            if #available(macOS 12, *) {
-                Scene3_ThreeHighwaysOfHeat(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
-            }
+        case 2: Scene3_ThreeHighwaysOfHeat(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
         case 3: Scene4_HotSoupColdSpoon(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4:
             if #available(macOS 12, *) {
