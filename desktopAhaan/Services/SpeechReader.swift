@@ -71,10 +71,11 @@ final class SpeechReader: NSObject, ObservableObject {
     func stop(owner: String? = nil) {
         if let owner = owner, let currentOwner = currentOwner, owner != currentOwner { return }
         if isSpeaking || isPaused {
-            let synth = synthesizer
-            DispatchQueue.global(qos: .userInitiated).async {
-                synth.stopSpeaking(at: .immediate)
-            }
+            // Called on MainActor (whole class is @MainActor). AVSpeechSynthesizer
+            // is not Sendable, so we can't capture it in a @Sendable DispatchQueue
+            // closure on Big Sur's Swift 5.5. stopSpeaking is fast enough to call
+            // synchronously here.
+            synthesizer.stopSpeaking(at: .immediate)
         }
         isSpeaking = false
         isPaused = false
