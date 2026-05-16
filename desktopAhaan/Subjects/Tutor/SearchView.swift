@@ -70,6 +70,7 @@ private struct SearchContent: View {
         }
     }
 
+    @ViewBuilder
     private var resultsList: some View {
         let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
         let matches = subjectRegistry.packs.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
@@ -79,7 +80,26 @@ private struct SearchContent: View {
             return (pack, cs, qs)
         }
 
-        return List {
+        if matches.isEmpty {
+            VStack(spacing: 12) {
+                Image(systemName: "magnifyingglass")
+                    .font(.system(size: 48))
+                    .foregroundColor(.secondary)
+                Text("No results for \u{201C}\(trimmed)\u{201D}")
+                    .font(.title3.weight(.semibold))
+                Text("Try a single word, or check the spelling.")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        } else {
+            matchesList(matches)
+        }
+    }
+
+    private func matchesList(_ matches: [(SubjectPack, [Concept], [Question])]) -> some View {
+        List {
             ForEach(matches, id: \.0.id) { pack, concepts, questions in
                 Section(header: Text(pack.title)) {
                     ForEach(concepts) { c in
@@ -113,7 +133,7 @@ private struct SearchContent: View {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(q.prompt).font(.body).lineLimit(2)
                                     Text("Answer: \(q.answer)")
-                                        .font(.caption).foregroundColor(.secondary).lineLimit(1)
+                                        .font(.caption).foregroundColor(.secondary).lineLimit(2)
                                 }
                             }
                             .padding(.vertical, 4)
@@ -125,9 +145,6 @@ private struct SearchContent: View {
                         }
                     }
                 }
-            }
-            if matches.isEmpty {
-                Text("No matches.").foregroundColor(.secondary)
             }
         }
         .listStyle(.inset)
