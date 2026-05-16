@@ -16966,7 +16966,33 @@
                 170,
                 171
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "matchPairs": [
+                {
+                  "left": "Mercury",
+                  "right": "Smallest planet and closest to the Sun"
+                },
+                {
+                  "left": "Venus",
+                  "right": "Hottest planet due to greenhouse effect"
+                },
+                {
+                  "left": "Mars",
+                  "right": "Red planet visited by India's Mangalyaan"
+                },
+                {
+                  "left": "Jupiter",
+                  "right": "Largest planet in the Solar System"
+                },
+                {
+                  "left": "Saturn",
+                  "right": "Famous for its prominent ring system"
+                },
+                {
+                  "left": "Neptune",
+                  "right": "Farthest planet from the Sun"
+                }
+              ]
             },
             {
               "id": "ch19_t03_q04",

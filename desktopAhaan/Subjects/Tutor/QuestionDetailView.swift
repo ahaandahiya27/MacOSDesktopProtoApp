@@ -17,6 +17,15 @@ struct QuestionDetailView: View {
     @State private var typedAnswer = ""
     @State private var attemptOutcome: AttemptOutcome = .unchecked
     @State private var selectedOptionIndex: Int? = nil
+    /// For .matchTheFollowing: the user's current left -> right assignment.
+    /// Keys are the `left` values from question.matchPairs; values are a
+    /// `right` choice picked from the shuffled right column. Missing keys
+    /// mean "not yet assigned".
+    @State private var matchAssignment: [String: String] = [:]
+    /// Stable shuffled order of the right column. Computed once per question
+    /// so the choices don't reshuffle as the user picks. Reset on question
+    /// change.
+    @State private var shuffledRights: [String] = []
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
@@ -47,6 +56,10 @@ struct QuestionDetailView: View {
                 if let opts = question.options, !opts.isEmpty {
                     optionsList(opts)
                 }
+                if question.questionType == .matchTheFollowing,
+                   let pairs = question.matchPairs, !pairs.isEmpty {
+                    matchTheFollowingSection(pairs: pairs)
+                }
                 userAnswerField
                 if attemptOutcome != .unchecked {
                     correctnessBanner
@@ -61,12 +74,16 @@ struct QuestionDetailView: View {
             .padding(20)
             .frame(maxWidth: 820, alignment: .leading)
         }
+        .onAppear { resetMatchStateIfNeeded() }
         .onChange(of: question.id) { _ in
             // Reset per-question state when Prev/Next swaps the question
             revealSolution = false
             typedAnswer = ""
             attemptOutcome = .unchecked
             selectedOptionIndex = nil
+            matchAssignment = [:]
+            shuffledRights = []
+            resetMatchStateIfNeeded()
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
@@ -286,11 +303,125 @@ struct QuestionDetailView: View {
         }
     }
 
+    // MARK: - Match-the-following
+
+    @ViewBuilder
+    private func matchTheFollowingSection(pairs: [MatchPair]) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Match each item")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .textCase(.uppercase)
+
+            ForEach(pairs) { pair in
+                matchRow(for: pair, allPairs: pairs)
+            }
+
+            HStack {
+                Spacer()
+                Button("Check") { recordMatchAttempt(pairs: pairs) }
+                    .disabled(matchAssignment.count != pairs.count
+                              || attemptOutcome != .unchecked)
+            }
+            .padding(.top, 4)
+        }
+    }
+
+    @ViewBuilder
+    private func matchRow(for pair: MatchPair, allPairs: [MatchPair]) -> some View {
+        let chosen = matchAssignment[pair.left]
+        let rowState: MatchRowState = {
+            guard attemptOutcome != .unchecked else { return .pending }
+            if chosen == pair.right { return .correctChoice }
+            return .wrongChoice
+        }()
+
+        HStack(alignment: .center, spacing: 12) {
+            Text(pair.left)
+                .font(.body.weight(.semibold))
+                .frame(minWidth: 110, alignment: .leading)
+                .foregroundColor(Color.compatIndigo)
+
+            // Right-side picker. We use Menu (macOS 11+) rather than .picker
+            // styles that need macOS 12 (e.g. .menu style).
+            Menu {
+                ForEach(shuffledRights, id: \.self) { r in
+                    Button(r) {
+                        guard attemptOutcome == .unchecked else { return }
+                        matchAssignment[pair.left] = r
+                    }
+                }
+                if chosen != nil {
+                    Divider()
+                    Button("Clear") {
+                        guard attemptOutcome == .unchecked else { return }
+                        matchAssignment.removeValue(forKey: pair.left)
+                    }
+                }
+            } label: {
+                HStack {
+                    Text(chosen ?? "Choose…")
+                        .foregroundColor(chosen == nil ? .secondary : .primary)
+                        .lineLimit(2)
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 6)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(matchRowBackground(state: rowState))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(matchRowBorder(state: rowState), lineWidth: 1)
+                )
+            }
+            .menuStyle(.borderlessButton)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .disabled(attemptOutcome != .unchecked)
+
+            // After Check, show ✓ or ✗ so the user sees per-row correctness
+            // even without re-reading the whole worked solution.
+            if attemptOutcome != .unchecked {
+                Image(systemName: rowState == .correctChoice ? "checkmark.circle.fill" : "xmark.circle.fill")
+                    .foregroundColor(rowState == .correctChoice ? .green : .red)
+            }
+        }
+    }
+
+    private enum MatchRowState { case pending, correctChoice, wrongChoice }
+
+    private func matchRowBackground(state: MatchRowState) -> Color {
+        switch state {
+        case .pending:       return Color.gray.opacity(0.1)
+        case .correctChoice: return Color.green.opacity(0.15)
+        case .wrongChoice:   return Color.red.opacity(0.12)
+        }
+    }
+    private func matchRowBorder(state: MatchRowState) -> Color {
+        switch state {
+        case .pending:       return Color.gray.opacity(0.3)
+        case .correctChoice: return Color.green
+        case .wrongChoice:   return Color.red
+        }
+    }
+
+    private func resetMatchStateIfNeeded() {
+        guard question.questionType == .matchTheFollowing,
+              let pairs = question.matchPairs, !pairs.isEmpty else { return }
+        if shuffledRights.isEmpty {
+            shuffledRights = pairs.map { $0.right }.shuffled()
+        }
+    }
+
     /// Free-text answer field. Hidden for MCQ — selection IS the answer
     /// there, and a second input would be misleading.
     @ViewBuilder
     private var userAnswerField: some View {
-        if question.questionType != .mcq {
+        if question.questionType != .mcq && question.questionType != .matchTheFollowing {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Try it yourself").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
                 HStack(spacing: 8) {
@@ -445,6 +576,24 @@ struct QuestionDetailView: View {
             isCorrect: isCorrect
         ))
         attemptOutcome = isCorrect ? .correct : .incorrect(userInput: selected)
+        revealSolution = true
+    }
+
+    private func recordMatchAttempt(pairs: [MatchPair]) {
+        let allAssigned = pairs.allSatisfy { matchAssignment[$0.left] != nil }
+        guard allAssigned else { return }
+        let allCorrect = pairs.allSatisfy { matchAssignment[$0.left] == $0.right }
+        let summary = pairs
+            .map { "\($0.left) → \(matchAssignment[$0.left] ?? "?")" }
+            .joined(separator: "; ")
+
+        dataStore.insertAttempt(QuestionAttempt(
+            subjectPackId: pack.id,
+            questionId: question.id,
+            userAnswer: summary,
+            isCorrect: allCorrect
+        ))
+        attemptOutcome = allCorrect ? .correct : .incorrect(userInput: summary)
         revealSolution = true
     }
 }
