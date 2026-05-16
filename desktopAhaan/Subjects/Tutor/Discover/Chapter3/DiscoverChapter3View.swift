@@ -93,12 +93,7 @@ struct DiscoverChapter3View: View {
             } else {
                 SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 4))
             }
-        case 5:
-            if #available(macOS 12, *) {
-                Scene6_SilkwormLifeCycle(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 5))
-            }
+        case 5: Scene6_SilkwormLifeCycle(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
         case 6:
             if #available(macOS 12, *) {
                 Scene7_TheCocoonReel(pack: pack, chapter: chapter, onComplete: { markComplete(6) })

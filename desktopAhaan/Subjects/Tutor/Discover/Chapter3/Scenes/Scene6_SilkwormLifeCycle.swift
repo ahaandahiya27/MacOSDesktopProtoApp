@@ -4,7 +4,8 @@ import SwiftUI
 ///
 /// 4 stages in a circular cycle: Egg → Larva → Pupa → Moth → back to egg.
 /// Tap each stage to advance. Timer next to each shows duration.
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — Canvas-based arrow ring replaced with
+/// a SilkwormCycleArrowsShape so the scene renders on macOS 11.
 struct Scene6_SilkwormLifeCycle: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -37,33 +38,9 @@ struct Scene6_SilkwormLifeCycle: View {
                     .stroke(Color.compatIndigo.opacity(0.2), lineWidth: 2)
                     .padding(40)
 
-                // Arrows between stages
-                Canvas { context, _ in
-                    let center = CGPoint(x: 200, y: 150)
-                    let radius: Double = 100.0
-                    for i in 0..<4 {
-                        let angle1: Double = Double(i) * (.pi * 2 / 4) - .pi / 2
-                        let angle2: Double = Double((i + 1) % 4) * (.pi * 2 / 4) - .pi / 2
-
-                        let start = CGPoint(
-                            x: center.x + radius * cos(Double(angle1)) * 0.85,
-                            y: center.y + radius * sin(Double(angle1)) * 0.85
-                        )
-                        let end = CGPoint(
-                            x: center.x + radius * cos(Double(angle2)) * 0.85,
-                            y: center.y + radius * sin(Double(angle2)) * 0.85
-                        )
-
-                        context.stroke(
-                            Path { p in
-                                p.move(to: start)
-                                p.addLine(to: end)
-                            },
-                            with: .color(.gray.opacity(0.4)),
-                            lineWidth: 1.5
-                        )
-                    }
-                }
+                // Arrows between stages (Shape, was Canvas)
+                SilkwormCycleArrowsShape()
+                    .stroke(Color.gray.opacity(0.4), lineWidth: 1.5)
 
                 // Stage nodes
                 ForEach(0..<4, id: \.self) { i in
@@ -94,7 +71,7 @@ struct Scene6_SilkwormLifeCycle: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(16)
-            .background(.white.opacity(0.5))
+            .background(Color.white.opacity(0.5))
             .cornerRadius(12)
             .padding(.horizontal, 24)
 
@@ -191,4 +168,29 @@ private struct LifeStage {
     let name: String
     let duration: String
     let desc: String
+}
+
+/// The four arrows connecting stage nodes around the cycle.
+/// Same geometry the old Canvas code used.
+struct SilkwormCycleArrowsShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let center = CGPoint(x: 200, y: 150)
+        let radius: Double = 100.0
+        for i in 0..<4 {
+            let angle1 = Double(i) * (.pi * 2 / 4) - .pi / 2
+            let angle2 = Double((i + 1) % 4) * (.pi * 2 / 4) - .pi / 2
+            let start = CGPoint(
+                x: center.x + radius * cos(angle1) * 0.85,
+                y: center.y + radius * sin(angle1) * 0.85
+            )
+            let end = CGPoint(
+                x: center.x + radius * cos(angle2) * 0.85,
+                y: center.y + radius * sin(angle2) * 0.85
+            )
+            p.move(to: start)
+            p.addLine(to: end)
+        }
+        return p
+    }
 }
