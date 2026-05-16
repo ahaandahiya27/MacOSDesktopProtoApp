@@ -222,6 +222,7 @@ enum SidebarSelection: Hashable {
 enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     case search
     case bookmarks
+    case discover
     case settings
 
     var id: String { rawValue }
@@ -230,6 +231,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         switch self {
         case .search:    return "Search"
         case .bookmarks: return "Bookmarks"
+        case .discover:  return "Discover Progress"
         case .settings:  return "Settings"
         }
     }
@@ -238,6 +240,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         switch self {
         case .search:    return "magnifyingglass"
         case .bookmarks: return "bookmark.fill"
+        case .discover:  return "sparkles"
         case .settings:  return "gearshape.fill"
         }
     }

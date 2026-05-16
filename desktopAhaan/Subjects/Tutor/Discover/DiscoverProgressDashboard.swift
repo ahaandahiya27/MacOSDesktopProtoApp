@@ -1,0 +1,154 @@
+import SwiftUI
+
+/// Sidebar tool: a single-page overview of every Discover chapter and how
+/// many scenes the kid has finished. Tapping a row jumps straight into that
+/// chapter's Discover experience.
+struct DiscoverProgressDashboard: View {
+    var body: some View {
+        TutorNavigationContainer {
+            DiscoverProgressContent()
+        }
+    }
+}
+
+private struct DiscoverProgressContent: View {
+    @EnvironmentObject private var subjectRegistry: SubjectRegistry
+    @EnvironmentObject private var dataStore: DataStore
+    @EnvironmentObject private var nav: TutorNavigationState
+
+    private var pack: SubjectPack? {
+        subjectRegistry.pack(withId: DiscoverMode.hostPackId)
+    }
+
+    private var chapters: [Chapter] {
+        guard let pack = pack else { return [] }
+        return DiscoverMode.supportedChapterIds.compactMap { id in
+            pack.chapters.first(where: { $0.id == id })
+        }
+    }
+
+    private var totalCompleted: Int {
+        chapters.reduce(0) { $0 + completedCount(for: $1) }
+    }
+
+    private var totalScenes: Int {
+        chapters.count * DiscoverMode.scenesPerChapter
+    }
+
+    private var overallPercent: Double {
+        guard totalScenes > 0 else { return 0 }
+        return Double(totalCompleted) / Double(totalScenes)
+    }
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
+                header
+                ForEach(chapters) { ch in
+                    chapterCard(ch)
+                }
+            }
+            .padding(20)
+            .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+            .frame(maxWidth: .infinity)
+        }
+        .background(Color(NSColor.windowBackgroundColor))
+        .navigationTitle("Discover Progress")
+    }
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("\u{2728}")
+                    .font(.system(size: 36))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Discover Mode")
+                        .font(.largeTitle.bold())
+                    Text("\(totalCompleted) of \(totalScenes) scenes completed across \(chapters.count) chapters")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            ProgressView(value: overallPercent)
+                .progressViewStyle(.linear)
+                .accessibilityLabel("Overall Discover progress")
+                .accessibilityValue("\(Int(overallPercent * 100)) percent")
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.compatIndigo.opacity(0.08))
+        )
+    }
+
+    @ViewBuilder
+    private func chapterCard(_ chapter: Chapter) -> some View {
+        let done = completedCount(for: chapter)
+        let total = DiscoverMode.scenesPerChapter
+        let fraction = total > 0 ? Double(done) / Double(total) : 0
+        let isComplete = done >= total
+
+        Button {
+            openChapter(chapter)
+        } label: {
+            HStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .strokeBorder(Color.gray.opacity(0.2), lineWidth: 4)
+                        .frame(width: 52, height: 52)
+                    Circle()
+                        .trim(from: 0, to: CGFloat(fraction))
+                        .stroke(isComplete ? Color.green : Color.compatIndigo,
+                                style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
+                        .frame(width: 52, height: 52)
+                    if isComplete {
+                        Image(systemName: "checkmark")
+                            .font(.body.weight(.bold))
+                            .foregroundColor(.green)
+                    } else {
+                        Text("\(done)/\(total)")
+                            .font(.caption.weight(.semibold))
+                            .foregroundColor(.primary)
+                    }
+                }
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Ch. \(chapter.number) \u{2014} \(chapter.title)")
+                        .font(.headline)
+                        .multilineTextAlignment(.leading)
+                    Text(isComplete ? "All scenes completed" : "\(total - done) scene\(total - done == 1 ? "" : "s") left")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.secondary)
+            }
+            .padding(14)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(NSColor.controlBackgroundColor))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Chapter \(chapter.number), \(chapter.title)")
+        .accessibilityValue("\(done) of \(total) scenes completed")
+    }
+
+    private func completedCount(for chapter: Chapter) -> Int {
+        dataStore.discoverRows(for: chapter.id).count
+    }
+
+    private func openChapter(_ chapter: Chapter) {
+        guard let pack = pack else { return }
+        nav.push(.discover(packId: pack.id, chapterId: chapter.id))
+    }
+}

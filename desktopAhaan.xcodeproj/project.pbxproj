@@ -28,6 +28,7 @@
 		04674C682FB8DECB004A7D5C /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C672FB8DECB004A7D5C /* ReviewFlagTests.swift */; };
 		04674C6A2FB8E09E004A7D5C /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C692FB8E09E004A7D5C /* SettingsManagerTests.swift */; };
 		04674C6C2FB8E0B4004A7D5C /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */; };
+		04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -368,6 +369,7 @@
 		04674C672FB8DECB004A7D5C /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFlagTests.swift; sourceTree = "<group>"; };
 		04674C692FB8E09E004A7D5C /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
 		04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRegistryTests.swift; sourceTree = "<group>"; };
+		04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverProgressDashboard.swift; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -1205,6 +1207,7 @@
 				7E4FE177C768CDAAE715A80C /* Chapter2 */,
 				FB1C25E11CB4A77B395A4C80 /* Chapter3 */,
 				A10D48F41E16E3B32C117E95 /* Chapter4 */,
+				04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -1786,6 +1789,7 @@
 				C586C92D6CFBAA502A789BE3 /* Question.swift in Sources */,
 				EE2427D02B636960C23EB772 /* SubjectPack.swift in Sources */,
 				8939D17295732CAC0ECEA0F3 /* Topic.swift in Sources */,
+				04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */,
 				14C6ABB78456E298F0327C38 /* UseCase.swift in Sources */,
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
 				F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */,
@@ -2141,7 +2145,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanTests;
@@ -2156,9 +2160,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanTests;

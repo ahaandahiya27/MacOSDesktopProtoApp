@@ -7,10 +7,11 @@ import SwiftUI
 /// scales without crashing.
 enum DiscoverMode {
 
-    /// Chapter ids for which we have a hand-built 9-scene experience. Adding
+    /// Chapter ids for which we have a hand-built 8-scene experience. Adding
     /// a new chapter only requires inserting its id here AND adding a case
     /// branch in `view(for:chapter:)` below.
-    private static let supportedChapterIds: Set<String> = [
+    /// Public so the Discover progress dashboard can enumerate them.
+    static let supportedChapterIds: [String] = [
         "ch01",   // Nutrition in Plants
         "ch02",   // Nutrition in Animals
         "ch03",   // Fibre to Fabric
@@ -21,11 +22,19 @@ enum DiscoverMode {
         "ch19"    // Earth, Moon and the Sun
     ]
 
+    /// Every supported chapter ships exactly this many interactive scenes.
+    /// Used by the progress dashboard to compute completion percentages.
+    static let scenesPerChapter: Int = 8
+
     /// Returns true if Discover Mode has hand-built scenes for this chapter.
     /// Used by `ChapterDetailView` to decide whether to show the entry button.
     static func hasExperience(for pack: SubjectPack, chapter: Chapter) -> Bool {
         return pack.id == "science_class7" && supportedChapterIds.contains(chapter.id)
     }
+
+    /// Pack id every Discover experience belongs to today. Hardcoded because
+    /// Discover Mode is Science-only for now.
+    static let hostPackId: String = "science_class7"
 
     @ViewBuilder
     static func view(for pack: SubjectPack, chapter: Chapter) -> some View {

@@ -69,6 +69,19 @@ struct ContentView: View {
         hasSeenWelcome && !showShortcutsSheet && !showCommandPalette
     }
 
+    /// Count questions in a pack that the parent still needs to triage.
+    /// `effectiveNeedsReview` honors the in-app "Mark reviewed" override, so
+    /// the badge decrements as the parent works through the list.
+    private func needsReviewCount(for pack: SubjectPack) -> Int {
+        pack.chapters.reduce(0) { chCount, ch in
+            chCount + ch.topics.reduce(0) { tCount, t in
+                tCount + t.questions.reduce(0) { qCount, q in
+                    qCount + (dataStore.effectiveNeedsReview(q) ? 1 : 0)
+                }
+            }
+        }
+    }
+
     /// Sidebar section header with a small "Clear" button on the right.
     private var recentHeader: some View {
         HStack {
@@ -109,9 +122,23 @@ struct ContentView: View {
                     ForEach(subjectRegistry.packs) { pack in
                         Label {
                             VStack(alignment: .leading, spacing: 1) {
-                                Text(pack.title).font(.body)
-                                    .lineLimit(2)
-                                    .truncationMode(.tail)
+                                HStack(spacing: 6) {
+                                    Text(pack.title).font(.body)
+                                        .lineLimit(2)
+                                        .truncationMode(.tail)
+                                    Spacer(minLength: 0)
+                                    let n = needsReviewCount(for: pack)
+                                    if n > 0 {
+                                        Text("\(n)")
+                                            .font(.caption2.weight(.semibold))
+                                            .foregroundColor(.white)
+                                            .padding(.horizontal, 6)
+                                            .padding(.vertical, 1)
+                                            .background(Capsule().fill(Color.orange))
+                                            .accessibilityLabel("\(n) questions need review")
+                                            .help("\(n) questions need review")
+                                    }
+                                }
                                 Text("\(pack.conceptCount) concepts · \(pack.questionCount) questions")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
@@ -211,6 +238,8 @@ struct ContentView: View {
             SearchView()
         case .tool(.bookmarks):
             BookmarksView()
+        case .tool(.discover):
+            DiscoverProgressDashboard()
         case .tool(.settings):
             SettingsScreen()
         }
