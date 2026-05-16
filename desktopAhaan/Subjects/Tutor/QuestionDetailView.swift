@@ -73,6 +73,7 @@ struct QuestionDetailView: View {
             }
             .padding(20)
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+            .frame(maxWidth: .infinity)
         }
         .onAppear { resetMatchStateIfNeeded() }
         .onChange(of: question.id) { _ in

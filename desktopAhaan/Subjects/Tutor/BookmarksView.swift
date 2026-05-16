@@ -25,6 +25,7 @@ private struct BookmarksContent: View {
                     Image(systemName: "bookmark")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)
+                        .accessibilityHidden(true)
                     Text("No bookmarks yet")
                         .font(.title2.weight(.semibold))
                     Text("Star concepts you want to revisit — tap the bookmark icon on any concept page.")

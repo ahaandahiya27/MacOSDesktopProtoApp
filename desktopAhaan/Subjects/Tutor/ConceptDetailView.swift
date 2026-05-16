@@ -34,6 +34,7 @@ struct ConceptDetailView: View {
             }
             .padding(20)
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+            .frame(maxWidth: .infinity)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(concept.title)

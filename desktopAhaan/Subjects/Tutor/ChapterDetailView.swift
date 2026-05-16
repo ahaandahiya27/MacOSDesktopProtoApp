@@ -44,6 +44,7 @@ struct ChapterDetailView: View {
             }
             .padding(20)
             .frame(maxWidth: DesignTokens.contentMaxWidthWide, alignment: .leading)
+            .frame(maxWidth: .infinity)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Ch. \(chapter.number) — \(chapter.title)")

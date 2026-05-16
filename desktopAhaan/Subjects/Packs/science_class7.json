@@ -8360,10 +8360,10 @@
             },
             {
               "id": "ch04_t03_q02",
-              "prompt": "How much heat energy is needed to raise the temperature of 2 kg of water from 20 C to 70 C? (Specific heat capacity of water = 4,200 J/kg C)",
+              "prompt": "How much heat energy is needed to raise the temperature of 2 kg of water from 20 °C to 70 °C? (Specific heat capacity of water = 4,200 J/kg·°C) Answer in joules.",
               "questionType": "numerical",
               "options": null,
-              "answer": "420000",
+              "answer": "420000 J",
               "solutionSteps": [
                 "Q = m x c x delta-T = 2 x 4200 x (70-20) = 2 x 4200 x 50 = 420,000 J."
               ],
@@ -12335,7 +12335,7 @@
           "questions": [
             {
               "id": "ch09_t02_q01",
-              "prompt": "If 200 mL of water takes 20 minutes to percolate through a soil sample, what is its percolation rate?",
+              "prompt": "If 200 mL of water takes 20 minutes to percolate through a soil sample, what is its percolation rate? Answer in mL/min.",
               "questionType": "numerical",
               "options": null,
               "answer": "10 mL/min",
@@ -14843,7 +14843,7 @@
             },
             {
               "id": "ch13_t01_q02",
-              "prompt": "A pendulum takes 240 oscillations in 2 minutes. Calculate its time period.",
+              "prompt": "A pendulum takes 240 oscillations in 2 minutes. Calculate its time period in seconds.",
               "questionType": "numerical",
               "options": null,
               "answer": "0.5 second per oscillation.",
@@ -16410,7 +16410,7 @@
           "questions": [
             {
               "id": "ch15_t01_q01",
-              "prompt": "A ray of light is incident at an angle of 60° on a surface. Find the angle of reflection.",
+              "prompt": "A ray of light is incident at an angle of 60° on a surface. Find the angle of reflection in degrees.",
               "questionType": "numerical",
               "options": null,
               "answer": "60°",
@@ -19728,7 +19728,7 @@
             },
             {
               "id": "ch19_t01_q04",
-              "prompt": "When it is 12:00 noon IST in India, what is the time in London (GMT/UTC)?",
+              "prompt": "When it is 12:00 noon IST in India, what is the time in London (GMT/UTC)? Answer using 12-hour format with AM/PM.",
               "questionType": "numerical",
               "options": null,
               "answer": "6:30 AM (UTC). IST is UTC + 5 hours 30 minutes, so London is 5 hours 30 minutes behind India.",
