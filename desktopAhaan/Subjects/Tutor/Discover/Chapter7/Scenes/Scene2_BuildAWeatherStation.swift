@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build a Weather Station.
 /// 5 instruments appear one by one. Tap each to learn what it measures.
-@available(macOS 12, *)
+
 struct Scene2_BuildAWeatherStation: View {
     let pack: SubjectPack
     let chapter: Chapter

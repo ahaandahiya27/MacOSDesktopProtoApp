@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 6 — Adaptation Match Game.
 /// Drag-and-drop: 6 animals matched to 6 adaptations. Score out of 12 (2 per correct match).
 /// Uses DragGesture with zone rect tracking.
-@available(macOS 12, *)
+
 struct Scene6_AdaptationMatchGame: View {
     let pack: SubjectPack
     let chapter: Chapter

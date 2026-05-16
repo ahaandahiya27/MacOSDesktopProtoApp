@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 5 — Tropical Rainforest Life.
 /// Layered rainforest: canopy, understory, forest floor. Tap each layer to see animals + adaptations.
-@available(macOS 12, *)
+
 struct Scene5_TropicalRainforestLife: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -31,7 +31,7 @@ struct Scene5_TropicalRainforestLife: View {
                         (name: "Monkey", adaptation: "Prehensile (gripping) tail acts like a fifth hand for swinging between branches"),
                         (name: "Lion-tailed Macaque", adaptation: "Rain-shedding fur keeps dry in heavy downpours; cheek pouches store food"),
                     ]),
-        ForestLayer(id: 2, name: "Forest Floor", color: .brown.opacity(0.5), heightFraction: 0.34,
+        ForestLayer(id: 2, name: "Forest Floor", color: Color.compatBrown.opacity(0.5), heightFraction: 0.34,
                     animals: [
                         (name: "Poison Dart Frog", adaptation: "Bright warning colours (red, yellow, blue) tell predators: 'I am toxic!'"),
                         (name: "Elephant", adaptation: "Sensitive trunk navigates dense undergrowth; large ears radiate excess heat"),

@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Weather vs Climate.
 /// Split comparison with animated icons. Tap each side for explanation.
-@available(macOS 12, *)
+
 struct Scene1_WeatherVsClimate: View {
     let pack: SubjectPack
     let chapter: Chapter
