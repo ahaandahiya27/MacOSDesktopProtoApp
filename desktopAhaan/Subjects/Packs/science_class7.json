@@ -11049,6 +11049,495 @@
                 167
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t01_q04",
+              "prompt": "The SI unit of speed is:",
+              "questionType": "mcq",
+              "options": [
+                "km/h",
+                "m/s",
+                "cm/min",
+                "miles per hour"
+              ],
+              "answer": "m/s",
+              "solutionSteps": [
+                "Speed = distance / time.",
+                "The SI unit of distance is the metre and of time the second.",
+                "So the SI unit of speed is m/s. km/h is common but not SI."
+              ],
+              "commonMistakes": [
+                "Picking km/h — that is allowed but not the SI unit."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q05",
+              "prompt": "An object covers 100 m in 25 s. Its speed is:",
+              "questionType": "mcq",
+              "options": [
+                "2 m/s",
+                "4 m/s",
+                "5 m/s",
+                "25 m/s"
+              ],
+              "answer": "4 m/s",
+              "solutionSteps": [
+                "Speed = distance / time = 100 / 25 = 4 m/s."
+              ],
+              "commonMistakes": [
+                "Forgetting to divide and just writing the distance."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q06",
+              "prompt": "Average speed over a journey is:",
+              "questionType": "mcq",
+              "options": [
+                "The highest speed reached",
+                "Total distance divided by total time",
+                "The speed at the midpoint",
+                "Half of the maximum speed"
+              ],
+              "answer": "Total distance divided by total time",
+              "solutionSteps": [
+                "Average speed considers the whole journey, not any single instant.",
+                "Add up all the distance covered, divide by the total time taken — including any rest periods."
+              ],
+              "commonMistakes": [
+                "Picking 'highest speed' — that's peak speed, not average."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q07",
+              "prompt": "A car covers 60 km in the first hour and 80 km in the second hour. Its average speed is:",
+              "questionType": "mcq",
+              "options": [
+                "60 km/h",
+                "70 km/h",
+                "80 km/h",
+                "140 km/h"
+              ],
+              "answer": "70 km/h",
+              "solutionSteps": [
+                "Total distance = 60 + 80 = 140 km.",
+                "Total time = 1 + 1 = 2 h.",
+                "Average = 140 / 2 = 70 km/h."
+              ],
+              "commonMistakes": [
+                "Just averaging 60 and 80 by inspection without working through."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q08",
+              "prompt": "Which of these is NOT a unit of time?",
+              "questionType": "mcq",
+              "options": [
+                "Second",
+                "Minute",
+                "Year",
+                "Newton"
+              ],
+              "answer": "Newton",
+              "solutionSteps": [
+                "Newton (N) is the SI unit of force.",
+                "Second, minute and year are all units of time."
+              ],
+              "commonMistakes": [
+                "Confusing units of force and time — they are different physical quantities."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q09",
+              "prompt": "The to-and-fro motion of a pendulum is called:",
+              "questionType": "mcq",
+              "options": [
+                "Rotation",
+                "Vibration",
+                "Oscillation",
+                "Translation"
+              ],
+              "answer": "Oscillation",
+              "solutionSteps": [
+                "Oscillation is a regular to-and-fro motion about a fixed point.",
+                "The pendulum's bob swings back and forth across its rest position — that is oscillation.",
+                "Rotation is spinning around an axis. Translation is moving in a straight line."
+              ],
+              "commonMistakes": [
+                "Saying 'vibration' — close, but vibration is usually faster and smaller-amplitude than oscillation."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q10",
+              "prompt": "The time taken by a pendulum to complete ONE full to-and-fro swing is called its:",
+              "questionType": "mcq",
+              "options": [
+                "Frequency",
+                "Time period",
+                "Amplitude",
+                "Wavelength"
+              ],
+              "answer": "Time period",
+              "solutionSteps": [
+                "Time period (T) is the duration of one complete oscillation.",
+                "Frequency is the number of oscillations per second (the reciprocal of T)."
+              ],
+              "commonMistakes": [
+                "Confusing time period with frequency — they are reciprocals."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q11",
+              "prompt": "A pendulum makes 30 oscillations in 60 seconds. Its time period is:",
+              "questionType": "mcq",
+              "options": [
+                "0.5 s",
+                "2 s",
+                "30 s",
+                "60 s"
+              ],
+              "answer": "2 s",
+              "solutionSteps": [
+                "Time period = total time / number of oscillations = 60 / 30 = 2 s."
+              ],
+              "commonMistakes": [
+                "Computing frequency (0.5 Hz) by mistake instead of period."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q12",
+              "prompt": "Modern wristwatches keep accurate time using:",
+              "questionType": "mcq",
+              "options": [
+                "A swinging pendulum",
+                "Sand flowing through a narrow opening",
+                "Vibrations of a quartz crystal",
+                "The shadow of a sundial"
+              ],
+              "answer": "Vibrations of a quartz crystal",
+              "solutionSteps": [
+                "A tiny quartz crystal in a watch vibrates at a precise high frequency when driven by the battery.",
+                "Electronics count these vibrations to keep time very accurately.",
+                "Pendulums and sand clocks were older methods; sundials only work in daylight."
+              ],
+              "commonMistakes": [
+                "Picking pendulum — that's for old grandfather clocks, not modern watches."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q13",
+              "prompt": "Which graph would represent a stationary object?",
+              "questionType": "mcq",
+              "options": [
+                "Distance-time graph: a straight line going upward",
+                "Distance-time graph: a horizontal line",
+                "Distance-time graph: a curved line",
+                "Distance-time graph: a vertical line"
+              ],
+              "answer": "Distance-time graph: a horizontal line",
+              "solutionSteps": [
+                "A stationary object means distance does not change with time.",
+                "On a distance-time graph this is a flat horizontal line.",
+                "An upward straight line would mean steady motion; a curved line means changing speed."
+              ],
+              "commonMistakes": [
+                "Picking 'vertical line' — that would mean distance changes infinitely fast (impossible)."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q14",
+              "prompt": "A distance-time graph that is a straight line sloping upward represents an object moving with:",
+              "questionType": "mcq",
+              "options": [
+                "Increasing speed",
+                "Decreasing speed",
+                "Constant speed",
+                "No motion"
+              ],
+              "answer": "Constant speed",
+              "solutionSteps": [
+                "A straight line on a distance-time graph means equal distance is covered in each equal interval of time.",
+                "Equal distance per equal time means constant speed.",
+                "A curved line would indicate changing speed."
+              ],
+              "commonMistakes": [
+                "Thinking a slope means accelerating — only the change in slope means changing speed."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q15",
+              "prompt": "An odometer in a car measures:",
+              "questionType": "mcq",
+              "options": [
+                "The car's speed",
+                "The total distance the car has travelled",
+                "Engine temperature",
+                "Fuel level"
+              ],
+              "answer": "The total distance the car has travelled",
+              "solutionSteps": [
+                "Odo- = distance, -meter = measure.",
+                "An odometer adds up all the distance the wheels have rotated through, since the car was made.",
+                "Speed is measured by the speedometer (a separate instrument)."
+              ],
+              "commonMistakes": [
+                "Confusing speedometer and odometer."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q16",
+              "prompt": "A speedometer measures:",
+              "questionType": "mcq",
+              "options": [
+                "Average speed over the trip",
+                "Instantaneous speed at this moment",
+                "Total distance travelled",
+                "Acceleration"
+              ],
+              "answer": "Instantaneous speed at this moment",
+              "solutionSteps": [
+                "A speedometer's needle shows the speed right now.",
+                "It does not remember past values, so it doesn't compute averages.",
+                "Total distance is on the odometer."
+              ],
+              "commonMistakes": [
+                "Confusing instantaneous vs average speed."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q17",
+              "prompt": "A train moves at 72 km/h. In m/s this is:",
+              "questionType": "mcq",
+              "options": [
+                "10 m/s",
+                "15 m/s",
+                "20 m/s",
+                "36 m/s"
+              ],
+              "answer": "20 m/s",
+              "solutionSteps": [
+                "To convert km/h to m/s, multiply by 1000/3600 = 5/18.",
+                "72 × 5/18 = 72 / 3.6 = 20.",
+                "So 72 km/h = 20 m/s."
+              ],
+              "commonMistakes": [
+                "Forgetting the unit conversion factor."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q18",
+              "prompt": "Which of the following clocks works without electricity or batteries?",
+              "questionType": "mcq",
+              "options": [
+                "Quartz wristwatch",
+                "Atomic clock",
+                "Pendulum wall clock",
+                "Digital clock"
+              ],
+              "answer": "Pendulum wall clock",
+              "solutionSteps": [
+                "A pendulum wall clock is wound by a spring — no battery needed.",
+                "Quartz, atomic, and digital clocks all require electrical energy of some kind."
+              ],
+              "commonMistakes": [
+                "Thinking 'mechanical' = 'old' = doesn't work — pendulum clocks are highly reliable."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q19",
+              "prompt": "If a runner runs 5 m every second, their speed is:",
+              "questionType": "mcq",
+              "options": [
+                "5 m/s and constant",
+                "5 m/s average only",
+                "5 km/h",
+                "Cannot be determined"
+              ],
+              "answer": "5 m/s and constant",
+              "solutionSteps": [
+                "The phrase 'every second' implies equal distance per equal time.",
+                "Equal distance per equal time = constant speed of 5 m/s."
+              ],
+              "commonMistakes": [
+                "Picking 'average only' — when it is constant, average and instantaneous match."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q20",
+              "prompt": "True or false: For a pendulum, increasing the amplitude (how far it swings) significantly changes its time period.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "For small swings, the time period of a simple pendulum depends almost only on its length.",
+                "Doubling the amplitude does not noticeably change the time period.",
+                "That's the discovery that made pendulum clocks possible: a reliable, amplitude-independent timekeeper."
+              ],
+              "commonMistakes": [
+                "Assuming bigger swing = faster — for small angles the period stays the same."
+              ],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q21",
+              "prompt": "The time period of a simple pendulum depends mainly on its:",
+              "questionType": "mcq",
+              "options": [
+                "Mass",
+                "Amplitude",
+                "Length",
+                "Colour"
+              ],
+              "answer": "Length",
+              "solutionSteps": [
+                "Longer pendulums swing more slowly (T = 2π√(L/g) for small swings).",
+                "Mass and amplitude have almost no effect for small swings — only length and the local g."
+              ],
+              "commonMistakes": [
+                "Thinking heavier mass = faster — actually mass does not affect the period."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q22",
+              "prompt": "Distance ÷ time gives ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "speed",
+              "solutionSteps": [
+                "This is the definition of speed."
+              ],
+              "commonMistakes": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q23",
+              "prompt": "Why are sundials not useful at night or on cloudy days?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "A sundial uses the position of the Sun's shadow to tell time — without sunshine there's no shadow, so it cannot be read.",
+              "solutionSteps": [
+                "A sundial works only when there is direct sunlight casting a clear shadow.",
+                "At night or under thick clouds there is no shadow.",
+                "Modern clocks don't depend on the Sun, which is why they work 24/7."
+              ],
+              "commonMistakes": [
+                "Saying 'sundials are broken' — they work perfectly, they just need sunlight."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch13_t01_q24",
+              "prompt": "Match each clock with the principle it uses.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Pendulum clock — swinging bob; Quartz watch — crystal vibrations; Sundial — Sun's shadow; Sand clock — sand flowing.",
+              "matchPairs": [
+                {
+                  "left": "Pendulum clock",
+                  "right": "Swinging pendulum bob"
+                },
+                {
+                  "left": "Quartz wristwatch",
+                  "right": "Vibrations of a quartz crystal"
+                },
+                {
+                  "left": "Sundial",
+                  "right": "Position of the Sun's shadow"
+                },
+                {
+                  "left": "Sand clock",
+                  "right": "Sand flowing through a narrow neck"
+                }
+              ],
+              "solutionSteps": [
+                "Match each clock with what makes it tick (literally)."
+              ],
+              "commonMistakes": [
+                "Swapping sundial and sand clock — sundials need sunlight, sand clocks don't."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
@@ -12848,6 +13337,499 @@
                 207
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t01_q03",
+              "prompt": "About what percentage of Earth's water is fresh water suitable for drinking?",
+              "questionType": "mcq",
+              "options": [
+                "~50%",
+                "~25%",
+                "~10%",
+                "Less than 1%"
+              ],
+              "answer": "Less than 1%",
+              "solutionSteps": [
+                "~97% of Earth's water is salt water in oceans — undrinkable.",
+                "Another ~2% is locked up in glaciers and ice caps.",
+                "Less than 1% is easily-accessible fresh water for drinking, farming, etc."
+              ],
+              "commonMistakes": [
+                "Thinking water is abundant because Earth looks blue — most of it is too salty to drink."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q04",
+              "prompt": "Liquid water turning into water vapour because of the Sun's heat is called:",
+              "questionType": "mcq",
+              "options": [
+                "Condensation",
+                "Evaporation",
+                "Precipitation",
+                "Sublimation"
+              ],
+              "answer": "Evaporation",
+              "solutionSteps": [
+                "Evaporation is the change from liquid to vapour at the water surface.",
+                "Condensation is the opposite (vapour → liquid).",
+                "Precipitation is when water falls from the sky as rain/snow."
+              ],
+              "commonMistakes": [
+                "Confusing evaporation and condensation — they go in opposite directions."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q05",
+              "prompt": "Water vapour high in the atmosphere cools and forms tiny droplets — this is:",
+              "questionType": "mcq",
+              "options": [
+                "Evaporation",
+                "Condensation",
+                "Sublimation",
+                "Filtration"
+              ],
+              "answer": "Condensation",
+              "solutionSteps": [
+                "When vapour loses heat, it returns to liquid form as tiny droplets — that's condensation.",
+                "Clouds are made of these tiny droplets."
+              ],
+              "commonMistakes": [
+                "Confusing 'clouds' with 'fog' — both are condensed water, just at different altitudes."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q06",
+              "prompt": "Water that falls from clouds is called:",
+              "questionType": "mcq",
+              "options": [
+                "Evaporation",
+                "Runoff",
+                "Precipitation",
+                "Infiltration"
+              ],
+              "answer": "Precipitation",
+              "solutionSteps": [
+                "Precipitation = rain, snow, hail, sleet — anything falling from clouds.",
+                "Runoff is precipitation flowing over the ground.",
+                "Infiltration is water soaking into the soil."
+              ],
+              "commonMistakes": [
+                "Confusing precipitation and runoff."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q07",
+              "prompt": "The continuous movement of water between oceans, atmosphere, and land is called:",
+              "questionType": "mcq",
+              "options": [
+                "Tidal cycle",
+                "Water cycle",
+                "Carbon cycle",
+                "Nitrogen cycle"
+              ],
+              "answer": "Water cycle",
+              "solutionSteps": [
+                "The water cycle (a.k.a. hydrological cycle) describes how water moves through evaporation, condensation, precipitation, and runoff.",
+                "Carbon and nitrogen cycles involve different elements."
+              ],
+              "commonMistakes": [
+                "Confusing water cycle with carbon cycle — they involve different molecules."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q08",
+              "prompt": "The upper level of underground water is called the:",
+              "questionType": "mcq",
+              "options": [
+                "Water roof",
+                "Water table",
+                "Aquifer ceiling",
+                "Sea level"
+              ],
+              "answer": "Water table",
+              "solutionSteps": [
+                "Underground water saturates the gaps in soil and rock below a certain depth.",
+                "The top boundary of that saturated zone is the water table.",
+                "When you dig a well, water seeps in once you go below the water table."
+              ],
+              "commonMistakes": [
+                "Confusing 'water table' with 'sea level' — they're different."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q09",
+              "prompt": "A rock layer that holds and yields groundwater is called an:",
+              "questionType": "mcq",
+              "options": [
+                "Aquifer",
+                "Aquaplane",
+                "Aqueduct",
+                "Atrium"
+              ],
+              "answer": "Aquifer",
+              "solutionSteps": [
+                "Aquifer = water-holding rock formation.",
+                "Aqueducts are man-made channels for moving water.",
+                "An atrium is a building feature."
+              ],
+              "commonMistakes": [
+                "Confusing aquifer (natural rock) with aqueduct (engineered channel)."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q10",
+              "prompt": "Which is the BEST way to reduce water wastage at home?",
+              "questionType": "mcq",
+              "options": [
+                "Leave taps running while brushing",
+                "Wash vehicles daily with running hoses",
+                "Fix dripping taps and use buckets / low-flow fixtures",
+                "Keep filling the overflowing overhead tank"
+              ],
+              "answer": "Fix dripping taps and use buckets / low-flow fixtures",
+              "solutionSteps": [
+                "A dripping tap can waste hundreds of litres of water per month.",
+                "Buckets use less water than running hoses, and low-flow fixtures reduce use without affecting use-cases.",
+                "Leaving taps running and overfilling tanks both waste water for no benefit."
+              ],
+              "commonMistakes": [
+                "Believing one drip is harmless — it adds up to thousands of litres a year."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q11",
+              "prompt": "Rainwater harvesting refers to:",
+              "questionType": "mcq",
+              "options": [
+                "Collecting and storing rainwater for use or to recharge groundwater",
+                "Draining rainwater into the sea",
+                "Boiling rainwater to purify it",
+                "Selling rainwater commercially"
+              ],
+              "answer": "Collecting and storing rainwater for use or to recharge groundwater",
+              "solutionSteps": [
+                "Rainwater harvesting captures rain from roofs and surfaces and stores it in tanks or directs it into pits/wells that recharge groundwater.",
+                "This reduces reliance on municipal supplies and helps lift falling water tables."
+              ],
+              "commonMistakes": [
+                "Confusing rainwater harvesting with simple drainage."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q12",
+              "prompt": "Drip irrigation saves water because:",
+              "questionType": "mcq",
+              "options": [
+                "It uses sea water",
+                "Water drips directly at the roots of each plant, with little evaporation",
+                "It uses ice instead of water",
+                "It only irrigates at night"
+              ],
+              "answer": "Water drips directly at the roots of each plant, with little evaporation",
+              "solutionSteps": [
+                "In drip irrigation, narrow pipes deliver water in small drops right at the root zone.",
+                "Very little water is lost to evaporation or runoff compared to flood/canal irrigation.",
+                "Result: much less water used per kilogram of crop."
+              ],
+              "commonMistakes": [
+                "Thinking drip irrigation is slow farming — it's water-efficient farming."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q13",
+              "prompt": "The water table in a region falls when:",
+              "questionType": "mcq",
+              "options": [
+                "More rain falls than is extracted",
+                "Less water is extracted than is recharged",
+                "More water is extracted than nature can recharge",
+                "Concrete pavements cover the entire ground"
+              ],
+              "answer": "More water is extracted than nature can recharge",
+              "solutionSteps": [
+                "The water table sits where the rate of recharge balances the rate of withdrawal.",
+                "If pumping outpaces recharge, the water table drops.",
+                "Concrete pavements ALSO reduce recharge — but the headline cause is over-extraction."
+              ],
+              "commonMistakes": [
+                "Thinking only urbanisation causes falling water tables — over-pumping is a bigger factor in most places."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q14",
+              "prompt": "Which of the following uses the MOST water per kilogram of product?",
+              "questionType": "mcq",
+              "options": [
+                "Wheat",
+                "Rice (paddy)",
+                "Tomatoes",
+                "Apples"
+              ],
+              "answer": "Rice (paddy)",
+              "solutionSteps": [
+                "Paddy rice is grown in flooded fields and is one of the most water-intensive staples.",
+                "It typically needs several times the water per kg compared to wheat or fruits."
+              ],
+              "commonMistakes": [
+                "Assuming all crops are equally thirsty — they aren't."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q15",
+              "prompt": "True or false: Plants release water vapour into the air through transpiration, and this is part of the water cycle.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Transpiration is water evaporating from tiny pores (stomata) on the underside of leaves.",
+                "Forests release massive amounts of water vapour this way — a significant part of the water cycle."
+              ],
+              "commonMistakes": [
+                "Thinking only oceans contribute to atmospheric vapour — forests are huge contributors too."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q16",
+              "prompt": "Salty seawater can be made drinkable by:",
+              "questionType": "mcq",
+              "options": [
+                "Boiling and condensing the vapour (distillation)",
+                "Adding more salt",
+                "Cooling it without other processing",
+                "Just filtering it through cloth"
+              ],
+              "answer": "Boiling and condensing the vapour (distillation)",
+              "solutionSteps": [
+                "Distillation: boil seawater, capture only the pure water vapour, condense it back to liquid.",
+                "Salt and other dissolved solids stay behind in the boiling vessel.",
+                "Cloth filtration removes only solid particles, not dissolved salts."
+              ],
+              "commonMistakes": [
+                "Believing cloth filters out salt — they only remove visible particles."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q17",
+              "prompt": "World Water Day is observed on ____ March every year.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "22",
+              "solutionSteps": [
+                "The UN designated 22 March as World Water Day to highlight the importance of fresh water and to advocate for sustainable management."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q18",
+              "prompt": "Why do paved cities sometimes flood after a heavy rain even though the same amount of rain wouldn't flood a forest?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Concrete and asphalt stop water from soaking into the ground, so rainfall has nowhere to go and runs along the surface, overwhelming drains.",
+              "solutionSteps": [
+                "In a forest, soil and roots absorb most rainfall.",
+                "In a paved city, water cannot soak in — it runs off into drains, which can overflow.",
+                "More paved area + intense rain = surface flooding."
+              ],
+              "commonMistakes": [
+                "Blaming only the drains — the root cause is the lost ability of ground to absorb water."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q19",
+              "prompt": "Bawris (step wells) and tankas were traditional Indian methods to:",
+              "questionType": "mcq",
+              "options": [
+                "Decorate towns",
+                "Store rainwater for use in dry months",
+                "Catch fish",
+                "Bathe royalty"
+              ],
+              "answer": "Store rainwater for use in dry months",
+              "solutionSteps": [
+                "Bawris (step wells) and tankas were ingenious water-storage structures.",
+                "They captured monsoon rains and groundwater and made it accessible all year, especially in dry regions like Rajasthan."
+              ],
+              "commonMistakes": [
+                "Thinking these were purely decorative — they were primarily life-supporting infrastructure."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q20",
+              "prompt": "Which of these is a BIG contributor to falling water tables in India?",
+              "questionType": "mcq",
+              "options": [
+                "Tube wells extracting groundwater faster than rain replenishes it",
+                "Heavy rain",
+                "Daily tides",
+                "Forest growth"
+              ],
+              "answer": "Tube wells extracting groundwater faster than rain replenishes it",
+              "solutionSteps": [
+                "Across India, tube wells powered by subsidised electricity have lifted huge volumes of groundwater for irrigation.",
+                "If they pump faster than natural recharge can keep up, the water table drops year on year.",
+                "Forests and rain HELP recharge; tides have nothing to do with groundwater."
+              ],
+              "commonMistakes": [
+                "Thinking it's just climate change — over-extraction is a bigger factor in many regions."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q21",
+              "prompt": "Frozen fresh water locked in glaciers and polar ice represents about:",
+              "questionType": "mcq",
+              "options": [
+                "1% of all Earth's water",
+                "2% of all Earth's water",
+                "20% of all Earth's water",
+                "50% of all Earth's water"
+              ],
+              "answer": "2% of all Earth's water",
+              "solutionSteps": [
+                "~97% of Earth's water is in the oceans (salty).",
+                "About 2% is locked up in glaciers and ice caps.",
+                "Less than 1% is easily-accessible fresh water."
+              ],
+              "commonMistakes": [
+                "Thinking glaciers contain the majority — oceans hold far more."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q22",
+              "prompt": "The MAIN form of fresh water that humans use directly is:",
+              "questionType": "mcq",
+              "options": [
+                "Ice in glaciers",
+                "Salty water in oceans",
+                "Liquid fresh water in lakes, rivers, and groundwater",
+                "Atmospheric vapour"
+              ],
+              "answer": "Liquid fresh water in lakes, rivers, and groundwater",
+              "solutionSteps": [
+                "You can't drink ice without melting it; you can't drink seawater without desalinating.",
+                "Lakes, rivers and groundwater are the usable forms.",
+                "Atmospheric vapour is too dispersed to be a primary source."
+              ],
+              "commonMistakes": [
+                "Thinking glaciers are the main source — they are a future buffer but daily use is from lakes/rivers/wells."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch16_t01_q23",
+              "prompt": "Match each water-cycle process with what it describes.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Evaporation — liquid to vapour; Condensation — vapour to liquid droplets; Precipitation — water falling from clouds; Transpiration — water released by plants.",
+              "matchPairs": [
+                {
+                  "left": "Evaporation",
+                  "right": "Liquid water turns into vapour"
+                },
+                {
+                  "left": "Condensation",
+                  "right": "Vapour turns back into liquid droplets"
+                },
+                {
+                  "left": "Precipitation",
+                  "right": "Water falls from clouds as rain or snow"
+                },
+                {
+                  "left": "Transpiration",
+                  "right": "Plants release water vapour from leaves"
+                }
+              ],
+              "solutionSteps": [
+                "Match each process to the direction or location it happens in the water cycle."
+              ],
+              "commonMistakes": [
+                "Mixing up evaporation and condensation — they're opposites."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
@@ -13056,6 +14038,476 @@
                 217
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t01_q03",
+              "prompt": "The TOPMOST layer of a forest is called the:",
+              "questionType": "mcq",
+              "options": [
+                "Forest floor",
+                "Understorey",
+                "Canopy",
+                "Emergent layer"
+              ],
+              "answer": "Canopy",
+              "solutionSteps": [
+                "The canopy is the leafy roof formed by the tallest, broadest trees.",
+                "Most photosynthesis in a tropical forest happens here because it gets the most sunlight."
+              ],
+              "commonMistakes": [
+                "Confusing canopy with understorey — understorey is below the canopy."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q04",
+              "prompt": "The LOWEST layer of a forest, where decomposers live, is the:",
+              "questionType": "mcq",
+              "options": [
+                "Canopy",
+                "Forest floor",
+                "Shrub layer",
+                "Emergent layer"
+              ],
+              "answer": "Forest floor",
+              "solutionSteps": [
+                "The forest floor is covered in fallen leaves, dead wood, and other organic matter.",
+                "Decomposers like bacteria, fungi, earthworms break this down into nutrients."
+              ],
+              "commonMistakes": [
+                "Picking 'shrub layer' — that's higher up, where small woody plants grow."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q05",
+              "prompt": "Forests are sometimes called 'green lungs' because they:",
+              "questionType": "mcq",
+              "options": [
+                "Are shaped like lungs",
+                "Release oxygen and absorb carbon dioxide",
+                "Make breathing harder",
+                "Filter dust only"
+              ],
+              "answer": "Release oxygen and absorb carbon dioxide",
+              "solutionSteps": [
+                "Through photosynthesis, forest plants absorb CO₂ and release O₂.",
+                "On a planetary scale, this exchange is huge — hence the 'green lungs' metaphor.",
+                "Forests also help filter dust, but the main reason for the metaphor is the O₂ / CO₂ exchange."
+              ],
+              "commonMistakes": [
+                "Thinking it is only about shape — it is about function."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q06",
+              "prompt": "Decomposers in a forest:",
+              "questionType": "mcq",
+              "options": [
+                "Eat the smallest animals",
+                "Break down dead plants and animals into nutrients",
+                "Build nests in trees",
+                "Pollinate flowers"
+              ],
+              "answer": "Break down dead plants and animals into nutrients",
+              "solutionSteps": [
+                "Bacteria and fungi are the main decomposers.",
+                "They feed on dead organic matter and return its nutrients to the soil for plants to reuse.",
+                "Without decomposers the forest floor would pile up with debris."
+              ],
+              "commonMistakes": [
+                "Confusing decomposers (recycle dead stuff) with herbivores (eat live plants)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q07",
+              "prompt": "Cutting down forests on a large scale is called:",
+              "questionType": "mcq",
+              "options": [
+                "Afforestation",
+                "Reforestation",
+                "Deforestation",
+                "Forestation"
+              ],
+              "answer": "Deforestation",
+              "solutionSteps": [
+                "Prefix de- = removal; deforestation = removal of forests.",
+                "Afforestation = planting trees on land that wasn't forested.",
+                "Reforestation = replanting trees on already-cleared forest land."
+              ],
+              "commonMistakes": [
+                "Mixing up deforestation and afforestation — they are opposites."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q08",
+              "prompt": "Trees help PREVENT soil erosion because:",
+              "questionType": "mcq",
+              "options": [
+                "They are heavy and weigh the soil down",
+                "Their roots hold the soil together",
+                "They are watered regularly",
+                "They produce shadows"
+              ],
+              "answer": "Their roots hold the soil together",
+              "solutionSteps": [
+                "A dense root network forms a mesh inside the soil.",
+                "This binds soil particles and helps them stay put when wind blows or water flows.",
+                "Removing trees leaves loose soil that washes or blows away easily."
+              ],
+              "commonMistakes": [
+                "Thinking weight is what holds soil — soil erosion is mostly about water and wind, not gravity."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q09",
+              "prompt": "Which of these animals is a CARNIVORE found in Indian forests?",
+              "questionType": "mcq",
+              "options": [
+                "Sambhar deer",
+                "Tiger",
+                "Cow",
+                "Mouse deer"
+              ],
+              "answer": "Tiger",
+              "solutionSteps": [
+                "A carnivore is a meat-eater.",
+                "Tiger eats other animals (deer, wild boar, etc.) — carnivore.",
+                "Sambhar, mouse deer, and cow are herbivores — they eat plants."
+              ],
+              "commonMistakes": [
+                "Picking 'mouse deer' just because it has 'mouse' in its name — it's still a herbivore."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q10",
+              "prompt": "Photosynthesis by forest trees produces:",
+              "questionType": "mcq",
+              "options": [
+                "Oxygen",
+                "Carbon dioxide",
+                "Methane",
+                "Nitrogen"
+              ],
+              "answer": "Oxygen",
+              "solutionSteps": [
+                "Photosynthesis takes in CO₂ + water + sunlight, makes glucose, and releases O₂ as a by-product.",
+                "Forests release a huge amount of O₂ this way."
+              ],
+              "commonMistakes": [
+                "Confusing the inputs (CO₂) with the outputs (O₂)."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q11",
+              "prompt": "Forests influence local rainfall mainly by:",
+              "questionType": "mcq",
+              "options": [
+                "Pulling clouds towards them with magnetism",
+                "Releasing water vapour by transpiration, which contributes to clouds",
+                "Producing electricity in the air",
+                "Reflecting sunlight back into space"
+              ],
+              "answer": "Releasing water vapour by transpiration, which contributes to clouds",
+              "solutionSteps": [
+                "Forests release vast amounts of water vapour through their leaves (transpiration).",
+                "That vapour rises, cools and condenses into clouds, which then bring rain.",
+                "Less forest → less transpiration → less local rainfall."
+              ],
+              "commonMistakes": [
+                "Magnetism, electricity — these have nothing to do with rainfall."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q12",
+              "prompt": "An animal that eats only plants is called a:",
+              "questionType": "mcq",
+              "options": [
+                "Carnivore",
+                "Herbivore",
+                "Omnivore",
+                "Decomposer"
+              ],
+              "answer": "Herbivore",
+              "solutionSteps": [
+                "Herbivores feed on grass, leaves, fruits, seeds.",
+                "Carnivores eat other animals; omnivores eat both; decomposers feed on dead matter."
+              ],
+              "commonMistakes": [
+                "Confusing the prefixes — herbi- = plant, carni- = meat, omni- = both."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q13",
+              "prompt": "Forests help control global climate by:",
+              "questionType": "mcq",
+              "options": [
+                "Storing carbon in wood and soil",
+                "Heating the air",
+                "Producing CO₂",
+                "Reflecting all sunlight"
+              ],
+              "answer": "Storing carbon in wood and soil",
+              "solutionSteps": [
+                "When trees photosynthesise they pull CO₂ out of the air and store the carbon as wood.",
+                "Forest soils also store carbon in roots and dead organic matter.",
+                "Burning or cutting these forests releases the stored carbon back to the atmosphere."
+              ],
+              "commonMistakes": [
+                "Thinking trees just produce O₂ — they also store carbon for decades."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q14",
+              "prompt": "Which is NOT a direct product humans get from forests?",
+              "questionType": "mcq",
+              "options": [
+                "Timber",
+                "Medicines",
+                "Fruits and nuts",
+                "Petroleum"
+              ],
+              "answer": "Petroleum",
+              "solutionSteps": [
+                "Petroleum is a fossil fuel — extracted from deep underground, not from forests directly.",
+                "Timber, medicines, fruits and nuts all come from living forest plants."
+              ],
+              "commonMistakes": [
+                "Confusing 'natural' resources — petroleum is geological, not biological."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q15",
+              "prompt": "Biodiversity in a forest means:",
+              "questionType": "mcq",
+              "options": [
+                "Many trees of the same species",
+                "A wide variety of species living together",
+                "Lots of soil layers",
+                "Lots of streams"
+              ],
+              "answer": "A wide variety of species living together",
+              "solutionSteps": [
+                "Bio = life, diversity = variety.",
+                "A biodiverse forest has many different plants, animals, fungi, and microbes — each with a role.",
+                "A monoculture plantation has low biodiversity."
+              ],
+              "commonMistakes": [
+                "Counting only large animals — biodiversity includes microbes and fungi too."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q16",
+              "prompt": "True or false: Decomposers help return nutrients from dead matter back to the soil.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Decomposers feed on dead organic matter.",
+                "As they break it down, the nutrients it contained (nitrogen, phosphorus etc.) are released into the soil for plants to reabsorb.",
+                "This is the recycling step of the nutrient cycle."
+              ],
+              "commonMistakes": [
+                "Thinking decomposers waste nutrients — they actually recycle them."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q17",
+              "prompt": "A young growing forest is called a:",
+              "questionType": "mcq",
+              "options": [
+                "Tropical forest",
+                "Sapling forest",
+                "Secondary forest",
+                "Sacred grove"
+              ],
+              "answer": "Secondary forest",
+              "solutionSteps": [
+                "A secondary forest grows back after the original primary forest is cleared.",
+                "It usually has lower biodiversity initially than the primary one it replaced.",
+                "Sacred groves are forest patches preserved by local communities for cultural / religious reasons."
+              ],
+              "commonMistakes": [
+                "Confusing 'secondary forest' with 'secondary school'."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q18",
+              "prompt": "Which of the following is the BEST personal action to support forests?",
+              "questionType": "mcq",
+              "options": [
+                "Use paper from sustainable / recycled sources",
+                "Buy more disposable products",
+                "Cut down trees in your neighbourhood",
+                "Build with rare tropical hardwoods"
+              ],
+              "answer": "Use paper from sustainable / recycled sources",
+              "solutionSteps": [
+                "Choosing recycled paper or paper certified from sustainable sources reduces pressure on virgin forests.",
+                "Disposable products and rare hardwoods tend to come from unsustainable harvesting.",
+                "Cutting trees personally just reduces local forest cover."
+              ],
+              "commonMistakes": [
+                "Thinking the issue is too big to affect personally — small daily choices add up."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q19",
+              "prompt": "Loss of forest habitat is the BIGGEST single threat to:",
+              "questionType": "mcq",
+              "options": [
+                "Mountain ranges",
+                "Wildlife species",
+                "Atmosphere",
+                "Roads"
+              ],
+              "answer": "Wildlife species",
+              "solutionSteps": [
+                "Most wild animals and plants are tied to a specific habitat.",
+                "When the forest is gone, they have nowhere to live, feed, or breed — populations crash.",
+                "Habitat loss is the leading cause of biodiversity decline worldwide."
+              ],
+              "commonMistakes": [
+                "Thinking pollution is the biggest driver — habitat loss is usually larger in impact."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q20",
+              "prompt": "Name two ways forests benefit us indirectly (without us cutting or harvesting them).",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Examples: producing oxygen, absorbing CO₂, holding soil, increasing local rainfall, supporting biodiversity, cooling the climate.",
+              "solutionSteps": [
+                "Indirect benefits = ecosystem services we get for free.",
+                "Listing any two of the above (or similar) is correct."
+              ],
+              "commonMistakes": [
+                "Saying 'wood' or 'fruits' — those are direct products, not indirect benefits."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q21",
+              "prompt": "Planting trees on land that was not earlier a forest is called ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "afforestation",
+              "solutionSteps": [
+                "Afforestation = creating new forest cover.",
+                "Reforestation = replanting where forest was recently lost."
+              ],
+              "commonMistakes": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch17_t01_q22",
+              "prompt": "Match each forest layer with what's typically found there.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Canopy — birds and monkeys in tall tree tops; Understorey — vines and saplings; Shrub layer — small bushes; Forest floor — decomposers and leaf litter.",
+              "matchPairs": [
+                {
+                  "left": "Canopy",
+                  "right": "Birds and monkeys in tall tree tops"
+                },
+                {
+                  "left": "Understorey",
+                  "right": "Vines and young saplings"
+                },
+                {
+                  "left": "Shrub layer",
+                  "right": "Small bushes and ferns"
+                },
+                {
+                  "left": "Forest floor",
+                  "right": "Decomposers and leaf litter"
+                }
+              ],
+              "solutionSteps": [
+                "Match each vertical forest layer with its typical inhabitants."
+              ],
+              "commonMistakes": [
+                "Putting decomposers in the canopy — they live in the forest floor."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
@@ -13270,6 +14722,477 @@
                 223
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t01_q03",
+              "prompt": "Sewage is:",
+              "questionType": "mcq",
+              "options": [
+                "Clean drinking water",
+                "Wastewater from homes, industries and farms",
+                "Underground oil",
+                "Rainwater"
+              ],
+              "answer": "Wastewater from homes, industries and farms",
+              "solutionSteps": [
+                "Sewage includes used water from sinks, toilets, factories, and farms.",
+                "It carries dissolved chemicals and disease-causing microbes — so it must be treated before being released back to nature."
+              ],
+              "commonMistakes": [
+                "Confusing 'rainwater' (storm water) with sewage — they're collected separately in good systems."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q04",
+              "prompt": "Substances dissolved or suspended in sewage that cause it to be a pollutant are called:",
+              "questionType": "mcq",
+              "options": [
+                "Contaminants",
+                "Confectionery",
+                "Conductors",
+                "Constants"
+              ],
+              "answer": "Contaminants",
+              "solutionSteps": [
+                "Contaminants are unwanted substances mixed into water that make it unsafe.",
+                "They can be physical (sand, plastic), chemical (oils, detergents) or biological (bacteria, viruses)."
+              ],
+              "commonMistakes": [
+                "Picking 'conductors' — that's an unrelated electrical term."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q05",
+              "prompt": "The first stage in a wastewater treatment plant is usually:",
+              "questionType": "mcq",
+              "options": [
+                "Disinfection with chlorine",
+                "Aeration tank",
+                "Screening to remove large objects",
+                "Bottling for sale"
+              ],
+              "answer": "Screening to remove large objects",
+              "solutionSteps": [
+                "Screening uses bar screens to catch large objects (rags, sticks, plastic) so they don't damage later equipment.",
+                "Disinfection and aeration come later, after the bigger solids are gone."
+              ],
+              "commonMistakes": [
+                "Thinking sewage goes straight to chlorine — large objects must be removed first."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q06",
+              "prompt": "Sand and small grit settle out of sewage in:",
+              "questionType": "mcq",
+              "options": [
+                "Aeration tank",
+                "Grit and sand removal tank",
+                "Disinfection tank",
+                "Pipeline directly to sea"
+              ],
+              "answer": "Grit and sand removal tank",
+              "solutionSteps": [
+                "After screening, sewage flows slowly through a grit tank.",
+                "The slow flow lets dense particles (sand, gravel, grit) sink to the bottom by gravity.",
+                "These are removed before further treatment so pumps and pipes don't get damaged."
+              ],
+              "commonMistakes": [
+                "Confusing the grit tank with the sedimentation tank — grit comes first; settled biological sludge later."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q07",
+              "prompt": "The thick semi-solid material that settles at the bottom of treatment tanks is called:",
+              "questionType": "mcq",
+              "options": [
+                "Scum",
+                "Sludge",
+                "Clarified water",
+                "Effluent"
+              ],
+              "answer": "Sludge",
+              "solutionSteps": [
+                "Sludge sinks; scum floats on top.",
+                "Clarified water is the cleaner liquid in the middle of the tank.",
+                "Effluent is the treated water that leaves the plant."
+              ],
+              "commonMistakes": [
+                "Mixing up sludge (bottom) and scum (top)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q08",
+              "prompt": "Floating impurities like oil, grease, and fats are removed in treatment as:",
+              "questionType": "mcq",
+              "options": [
+                "Sludge",
+                "Scum",
+                "Sand",
+                "Sediment"
+              ],
+              "answer": "Scum",
+              "solutionSteps": [
+                "Less-dense substances float — these are collectively called scum.",
+                "Scum is skimmed off the top of the tank by a moving arm.",
+                "Sludge is the dense stuff at the bottom."
+              ],
+              "commonMistakes": [
+                "Confusing scum and sludge — scum floats, sludge sinks."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q09",
+              "prompt": "Aerobic bacteria in the aeration tank:",
+              "questionType": "mcq",
+              "options": [
+                "Need oxygen and digest organic waste",
+                "Avoid oxygen and survive without breathing",
+                "Eat plastic only",
+                "Are introduced to disinfect"
+              ],
+              "answer": "Need oxygen and digest organic waste",
+              "solutionSteps": [
+                "Aerobic = needs oxygen.",
+                "These bacteria consume biodegradable organic matter, breaking it into simpler, safer compounds.",
+                "Air is pumped in to keep their population active."
+              ],
+              "commonMistakes": [
+                "Confusing aerobic (oxygen-using) with anaerobic (no oxygen)."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q10",
+              "prompt": "Anaerobic digestion of the settled sludge produces:",
+              "questionType": "mcq",
+              "options": [
+                "Petroleum",
+                "Biogas (a fuel)",
+                "Pure oxygen",
+                "Drinking water"
+              ],
+              "answer": "Biogas (a fuel)",
+              "solutionSteps": [
+                "Anaerobic bacteria (no oxygen) break down sludge and produce biogas — mostly methane (CH₄) and CO₂.",
+                "Biogas is a useful fuel and can power the plant itself.",
+                "Pure oxygen is not a product of digestion."
+              ],
+              "commonMistakes": [
+                "Thinking anaerobic digestion makes drinking water — it produces fuel."
+              ],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q11",
+              "prompt": "Chlorine is added at the end of treatment to:",
+              "questionType": "mcq",
+              "options": [
+                "Increase smell",
+                "Kill remaining germs",
+                "Soften the water",
+                "Make the water blue"
+              ],
+              "answer": "Kill remaining germs",
+              "solutionSteps": [
+                "Chlorination is a disinfection step that destroys most disease-causing microbes still present.",
+                "Other disinfection methods include ozone and UV light.",
+                "Chlorine doesn't soften water or change its colour at the doses used."
+              ],
+              "commonMistakes": [
+                "Confusing chlorination with water softening — they treat different problems."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q12",
+              "prompt": "Open drains and uncovered sewage are dangerous because they:",
+              "questionType": "mcq",
+              "options": [
+                "Look untidy",
+                "Spread disease and attract disease-carrying insects",
+                "Are decorative",
+                "Increase rainfall"
+              ],
+              "answer": "Spread disease and attract disease-carrying insects",
+              "solutionSteps": [
+                "Open sewage is a fertile breeding ground for mosquitoes, flies, and microbes.",
+                "Diseases like cholera, typhoid, dengue and malaria spread faster where sewage is exposed.",
+                "Sealed sewers + treatment plants are much safer."
+              ],
+              "commonMistakes": [
+                "Thinking 'untidy' is the main issue — the health risk is the real concern."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q13",
+              "prompt": "Which of these is the SAFEST disposal of human waste from a household?",
+              "questionType": "mcq",
+              "options": [
+                "Open defecation",
+                "Throwing into a river",
+                "A toilet connected to a sewer or septic tank",
+                "Burying anywhere"
+              ],
+              "answer": "A toilet connected to a sewer or septic tank",
+              "solutionSteps": [
+                "Toilets contain waste, send it to treatment, and keep people away from pathogens.",
+                "Open defecation contaminates soil and water and spreads disease.",
+                "Direct dumping in rivers pollutes downstream users."
+              ],
+              "commonMistakes": [
+                "Thinking burying is fine anywhere — it can still contaminate groundwater."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q14",
+              "prompt": "Treated water leaving a wastewater treatment plant is called the:",
+              "questionType": "mcq",
+              "options": [
+                "Influent",
+                "Effluent",
+                "Affluent",
+                "Solvent"
+              ],
+              "answer": "Effluent",
+              "solutionSteps": [
+                "Influent = what comes in (raw sewage).",
+                "Effluent = what flows out (treated water).",
+                "Affluent means wealthy — unrelated."
+              ],
+              "commonMistakes": [
+                "Mixing up influent and effluent — in goes in, out goes out."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q15",
+              "prompt": "True or false: Treated effluent is usually safe to drink straight from the WWTP outlet.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "Standard treated effluent is safe to release into rivers / soak into the ground, but not usually as drinking water.",
+                "Drinking water requires further treatment (advanced filtration, more disinfection)."
+              ],
+              "commonMistakes": [
+                "Assuming 'treated' = 'drinking' — drinking water needs higher purity than effluent standards."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q16",
+              "prompt": "Which substance, when poured down the drain, is HARDEST for a WWTP to handle?",
+              "questionType": "mcq",
+              "options": [
+                "Salt water",
+                "Hot water",
+                "Used cooking oil and grease",
+                "Tea leaves"
+              ],
+              "answer": "Used cooking oil and grease",
+              "solutionSteps": [
+                "Cooking oil cools and solidifies in pipes, leading to blockages and 'fatbergs'.",
+                "Treatment plants can handle some oil and grease, but at high volumes it overwhelms them.",
+                "The right disposal: bin it once cooled."
+              ],
+              "commonMistakes": [
+                "Pouring oil down the drain thinking hot water flushes it — it solidifies further along."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q17",
+              "prompt": "Why is it dangerous to bathe or wash clothes in a river immediately downstream of a city's sewage outflow?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Untreated or partially-treated sewage carries pathogens (bacteria, viruses) and chemicals that can cause skin infections and waterborne diseases.",
+              "solutionSteps": [
+                "Sewage contains harmful microbes and dissolved chemicals.",
+                "Direct contact can cause skin infections, eye infections, and even cholera or typhoid if the water is accidentally ingested.",
+                "Downstream water often carries pollutants from many upstream households."
+              ],
+              "commonMistakes": [
+                "Believing the river 'dilutes' everything safely — pollution levels in many Indian rivers are far above safe contact limits."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q18",
+              "prompt": "Which is a BETTER alternative to open defecation in rural areas without sewers?",
+              "questionType": "mcq",
+              "options": [
+                "Doing it in the field",
+                "Twin-pit composting toilets",
+                "Throwing waste into the village pond",
+                "Burying everywhere with no system"
+              ],
+              "answer": "Twin-pit composting toilets",
+              "solutionSteps": [
+                "Twin-pit toilets use two underground pits; once one is full, the other is used, while the full pit gradually composts safely.",
+                "After 1-2 years, the composted contents are safe to handle as manure.",
+                "Other options listed contaminate fields, ponds, and groundwater."
+              ],
+              "commonMistakes": [
+                "Believing rural areas can't have safe sanitation — twin-pit toilets are cheap and effective."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q19",
+              "prompt": "An open drain attracts mosquitoes because:",
+              "questionType": "mcq",
+              "options": [
+                "Mosquitoes drink dirty water",
+                "Standing water in the drain is where mosquitoes breed",
+                "Mosquitoes are coloured to match drains",
+                "Drains emit a chemical mosquitoes need"
+              ],
+              "answer": "Standing water in the drain is where mosquitoes breed",
+              "solutionSteps": [
+                "Mosquitoes lay their eggs in stagnant water.",
+                "Open drains are full of standing water — perfect breeding grounds.",
+                "Covering drains and clearing standing water breaks the breeding cycle."
+              ],
+              "commonMistakes": [
+                "Thinking mosquitoes are after the smell — they're after still water to lay eggs."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q20",
+              "prompt": "Industries discharging untreated chemical waste into rivers cause:",
+              "questionType": "mcq",
+              "options": [
+                "Better fish populations",
+                "Severe pollution and harm to aquatic life",
+                "Faster water flow",
+                "Cleaner downstream water"
+              ],
+              "answer": "Severe pollution and harm to aquatic life",
+              "solutionSteps": [
+                "Untreated industrial effluents may contain heavy metals, dyes, acids, or other toxins.",
+                "These poison fish, plants, and downstream communities.",
+                "Industries are legally required to treat their effluents to safe limits before discharge."
+              ],
+              "commonMistakes": [
+                "Hoping that 'dilution by the river' makes everything fine — it doesn't, especially for toxic compounds."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q21",
+              "prompt": "World Water Day is observed on 22 March; World Toilet Day is observed on 19 ____.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "November",
+              "solutionSteps": [
+                "World Toilet Day (19 November) was declared by the UN to raise awareness about the 3.6 billion people who still lack safe sanitation."
+              ],
+              "commonMistakes": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch18_t01_q22",
+              "prompt": "Match each treatment step with its purpose.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Screening — remove large objects; Sedimentation — settle solids; Aeration — bacteria digest organic matter; Disinfection — kill germs.",
+              "matchPairs": [
+                {
+                  "left": "Screening",
+                  "right": "Remove large objects from sewage"
+                },
+                {
+                  "left": "Sedimentation",
+                  "right": "Settle out heavy solids"
+                },
+                {
+                  "left": "Aeration",
+                  "right": "Bacteria digest organic matter"
+                },
+                {
+                  "left": "Disinfection",
+                  "right": "Kill remaining microbes"
+                }
+              ],
+              "solutionSteps": [
+                "Match each WWTP step with the problem it solves, in roughly the order they happen."
+              ],
+              "commonMistakes": [
+                "Putting disinfection at the start — it actually comes last."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
