@@ -3,6 +3,7 @@ import XCTest
 
 // MARK: - T-MOD-001 through T-MOD-020: Language & Model Layer Tests
 
+@available(macOS 13, *)
 final class LanguageModelTests: XCTestCase {
 
     // T-MOD-001: All languages have valid display names

@@ -409,6 +409,7 @@ final class PersistenceTests: XCTestCase {
     // MARK: - SettingsManager Tests
 
     /// T-PERS-020: preferOffline is a Bool
+    @MainActor
     func testPreferOfflineIsABool() {
         let settingsManager = SettingsManager.shared
         let preferOffline = settingsManager.preferOffline
