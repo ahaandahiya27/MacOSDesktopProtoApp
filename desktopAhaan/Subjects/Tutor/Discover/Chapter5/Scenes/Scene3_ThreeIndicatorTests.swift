@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 3 — Three Indicator Tests.
 /// Three test tubes with Litmus, Turmeric, Phenolphthalein. User adds acid or base to see color changes.
-@available(macOS 12, *)
+
 struct Scene3_ThreeIndicatorTests: View {
     let pack: SubjectPack
     let chapter: Chapter

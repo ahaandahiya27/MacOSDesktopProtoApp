@@ -71,25 +71,27 @@ struct DiscoverChapter5View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Scenes 4 and 8 still use Canvas / TimelineView (macOS 12+).
+        // The rest were over-cautiously gated and now run on macOS 11.
         switch currentScene {
         case 0: Scene1_SourOrBitter(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildYourpHStrip(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2: Scene3_ThreeIndicatorTests(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3: Scene4_NeutralisationInAction(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
+        case 3:
+            if #available(macOS 12, *) {
+                Scene4_NeutralisationInAction(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
+            }
         case 4: Scene5_AntStingFirstAid(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_AcidOrBaseSortingLab(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6: Scene7_SoilpHAndFarmer(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-        case 7: Scene8_AcidRainStory(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
+        case 7:
+            if #available(macOS 12, *) {
+                Scene8_AcidRainStory(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 7))
+            }
         case 8: Scene9_BossQuiz_Ch5(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()
         }

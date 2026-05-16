@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build Your pH Strip.
 /// Interactive pH scale 0-14 with draggable marker, color changes, and substance pins.
-@available(macOS 12, *)
+
 struct Scene2_BuildYourpHStrip: View {
     let pack: SubjectPack
     let chapter: Chapter

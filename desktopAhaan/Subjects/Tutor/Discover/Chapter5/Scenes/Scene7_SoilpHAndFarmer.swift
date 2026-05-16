@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 7 — Soil pH and the Farmer.
 /// Interactive: acidic soil + lime raises pH, basic soil + organic matter lowers pH.
-@available(macOS 12, *)
+
 struct Scene7_SoilpHAndFarmer: View {
     let pack: SubjectPack
     let chapter: Chapter

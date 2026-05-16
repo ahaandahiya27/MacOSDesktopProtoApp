@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 5 — Ant Sting First Aid.
 /// Story: ant stings, user picks correct remedy (baking soda) from options.
-@available(macOS 12, *)
+
 struct Scene5_AntStingFirstAid: View {
     let pack: SubjectPack
     let chapter: Chapter

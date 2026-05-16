@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Acid or Base Sorting Lab. Drag-and-drop game, 12 items, scored.
 /// Uses DragGesture with zone rect tracking.
-@available(macOS 12, *)
+
 struct Scene6_AcidOrBaseSortingLab: View {
     let pack: SubjectPack
     let chapter: Chapter

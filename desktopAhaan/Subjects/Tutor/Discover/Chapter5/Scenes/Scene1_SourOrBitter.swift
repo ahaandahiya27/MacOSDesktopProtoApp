@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Sour or Bitter? Taste-sorting game.
 /// 6 items: user classifies each as Sour (Acid) or Bitter (Base).
-@available(macOS 12, *)
+
 struct Scene1_SourOrBitter: View {
     let pack: SubjectPack
     let chapter: Chapter
