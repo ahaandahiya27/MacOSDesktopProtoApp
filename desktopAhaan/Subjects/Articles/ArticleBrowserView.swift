@@ -110,6 +110,12 @@ struct ArticleBrowserView: View {
                             .foregroundColor(.secondary)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else if coordinator.loadFailed {
+                    PlainTextArticleFallback(
+                        url: coordinator.currentURL,
+                        errorMessage: coordinator.lastError
+                    )
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     WebViewRepresentable(coordinator: coordinator)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -197,6 +203,16 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
     @Published var canGoBack = false
     @Published var canGoForward = false
     @Published var pageTitle = ""
+    /// Flips to true when the WKWebView WebContent process terminates or a
+    /// navigation fails. On older Macs (Big Sur + legacy GPU) the WebContent
+    /// process can crash while loading local file://, leaving us with a
+    /// blank, non-recoverable view. Parent view swaps to a plain-text
+    /// fallback when this is true.
+    @Published var loadFailed: Bool = false
+    @Published var lastError: String? = nil
+    /// The currently-loading file URL, snapshotted so the fallback view
+    /// can render the same article without going through WKWebView.
+    @Published var currentURL: URL? = nil
     private var currentFolder: String?
     private var observers: [NSKeyValueObservation] = []
 
@@ -223,8 +239,45 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
 
     func load(fileURL: URL, inFolder: String) {
         currentFolder = inFolder
+        currentURL = fileURL
+        // Clear any previous error state when starting a new load.
+        loadFailed = false
+        lastError = nil
         let accessURL = Bundle.main.resourceURL ?? fileURL.deletingLastPathComponent()
         webView.loadFileURL(fileURL, allowingReadAccessTo: accessURL)
+    }
+
+    // MARK: - Failure handlers
+
+    /// WKWebView's WebContent subprocess died (Metal/IconRendering shader
+    /// issues on Big Sur AMD R9 M290X, sandbox lookup failures, etc).
+    /// SwiftUI keeps the WKWebView alive but it'll never render again, so
+    /// flip the fallback flag.
+    nonisolated func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        Task { @MainActor [weak self] in
+            self?.loadFailed = true
+            self?.lastError = "Web renderer terminated unexpectedly."
+        }
+    }
+
+    nonisolated func webView(_ webView: WKWebView,
+                             didFail navigation: WKNavigation!,
+                             withError error: Error) {
+        let msg = error.localizedDescription
+        Task { @MainActor [weak self] in
+            self?.loadFailed = true
+            self?.lastError = msg
+        }
+    }
+
+    nonisolated func webView(_ webView: WKWebView,
+                             didFailProvisionalNavigation navigation: WKNavigation!,
+                             withError error: Error) {
+        let msg = error.localizedDescription
+        Task { @MainActor [weak self] in
+            self?.loadFailed = true
+            self?.lastError = msg
+        }
     }
 
     func setupObservers() {
@@ -308,5 +361,106 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
         // Files may live in a subdirectory or flat in the bundle root.
         // Allow any file inside the app's Resources directory.
         return canonicalUrl.hasPrefix(canonicalResources)
+    }
+}
+
+// MARK: - PlainTextArticleFallback
+//
+// Shown when WKWebView's WebContent process crashes (common on Big Sur
+// with legacy AMD GPUs — the IconRendering Metal shader cache fails).
+// Reads the same HTML file, strips tags with a minimal parser, and shows
+// the result in a ScrollView so the kid can still read the article even
+// when WebKit can't render it. Also offers an "Open in Safari" recovery.
+
+private struct PlainTextArticleFallback: View {
+    let url: URL?
+    let errorMessage: String?
+    @State private var bodyText: String = ""
+    @State private var loadError: String? = nil
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 14) {
+                HStack(spacing: 8) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .foregroundColor(.orange)
+                    Text("Showing simplified view")
+                        .font(.callout.weight(.semibold))
+                    Spacer()
+                    if let url = url {
+                        Button("Open in Safari") {
+                            NSWorkspace.shared.open(url)
+                        }
+                        .controlSize(.small)
+                    }
+                }
+                .padding(10)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color.orange.opacity(0.12))
+                )
+
+                if let err = errorMessage ?? loadError {
+                    Text(err)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+
+                if bodyText.isEmpty && loadError == nil {
+                    Text("Loading…")
+                        .foregroundColor(.secondary)
+                } else {
+                    // Note: textSelection requires macOS 12 — omit on Big Sur.
+                    Text(bodyText)
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            .padding(20)
+        }
+        .background(Color(NSColor.windowBackgroundColor))
+        .onAppear(perform: load)
+    }
+
+    private func load() {
+        guard let url = url else {
+            loadError = "Article location is unknown."
+            return
+        }
+        do {
+            let raw = try String(contentsOf: url, encoding: .utf8)
+            bodyText = Self.stripHTML(raw)
+        } catch {
+            loadError = error.localizedDescription
+        }
+    }
+
+    /// Cheap HTML→text reducer. Not a real parser — just enough to make a
+    /// concept article readable when WebKit is dead. Newlines after block
+    /// tags, two newlines after headings/paragraphs/list items.
+    static func stripHTML(_ html: String) -> String {
+        var s = html
+        let blockBreaks = ["</p>", "</h1>", "</h2>", "</h3>", "</h4>",
+                           "</h5>", "</h6>", "</li>", "</div>", "</section>",
+                           "</article>", "<br>", "<br/>", "<br />"]
+        for tag in blockBreaks {
+            s = s.replacingOccurrences(of: tag, with: "\n\n", options: .caseInsensitive)
+        }
+        // Strip all remaining tags.
+        s = s.replacingOccurrences(of: "<[^>]+>", with: "",
+                                   options: .regularExpression)
+        // Decode the few entities we expect from authored HTML.
+        let entities: [(String, String)] = [
+            ("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),
+            ("&quot;", "\""), ("&apos;", "'"), ("&nbsp;", " "),
+            ("&mdash;", "—"), ("&ndash;", "–"), ("&hellip;", "…")
+        ]
+        for (e, r) in entities {
+            s = s.replacingOccurrences(of: e, with: r)
+        }
+        // Collapse runs of 3+ newlines down to exactly 2.
+        s = s.replacingOccurrences(of: "\n{3,}", with: "\n\n",
+                                   options: .regularExpression)
+        return s.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
