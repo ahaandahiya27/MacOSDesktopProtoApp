@@ -29,6 +29,7 @@ struct QuestionDetailView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
+    @EnvironmentObject var appState: AppState
 
     private var currentSiblingIndex: Int? {
         nav.questionSiblings.firstIndex {
@@ -71,6 +72,7 @@ struct QuestionDetailView: View {
                 DispatchQueue.main.async {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
+                recordRecent()
             }
             .onChange(of: question.id) { _ in
                 // Reset per-question state when Prev/Next swaps the question.
@@ -85,6 +87,7 @@ struct QuestionDetailView: View {
                 withAnimation(.easeOut(duration: 0.2)) {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
+                recordRecent()
             }
         }
         .background(Color(NSColor.windowBackgroundColor))
@@ -522,6 +525,19 @@ struct QuestionDetailView: View {
         if shuffledRights.isEmpty {
             shuffledRights = pairs.map { $0.right }.shuffled()
         }
+    }
+
+    private func recordRecent() {
+        let chapterLabel = location.map { "Ch. \($0.chapter.number) — \($0.topic.title)" }
+            ?? pack.title
+        let displayTitle = String(question.prompt.prefix(80))
+        appState.recordRecent(RecentItem(
+            packId: pack.id,
+            kind: .question,
+            routeId: question.id,
+            title: displayTitle,
+            subtitle: chapterLabel
+        ))
     }
 
     /// Free-text answer field. Hidden for MCQ — selection IS the answer

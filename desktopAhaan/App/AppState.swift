@@ -37,10 +37,18 @@ final class AppState: ObservableObject {
     /// timing tricks.
     @Published var pendingRoute: PendingRoute? = nil
 
+    /// Recently viewed concepts and questions, newest first. Capped so the
+    /// sidebar section stays compact and the UserDefaults blob stays small.
+    @Published var recentItems: [RecentItem] = [] {
+        didSet { Self.persistRecents(recentItems) }
+    }
+
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "NetworkMonitor")
 
     private static let sidebarSelectionKey = "sidebarSelection"
+    private static let recentItemsKey = "recentItems"
+    private static let recentItemsLimit = 8
 
     private static func persist(_ selection: SidebarSelection) {
         UserDefaults.standard.set(selection.persistedString,
@@ -54,10 +62,24 @@ final class AppState: ObservableObject {
         return restored
     }
 
+    private static func persistRecents(_ items: [RecentItem]) {
+        if let data = try? JSONEncoder().encode(items) {
+            UserDefaults.standard.set(data, forKey: recentItemsKey)
+        }
+    }
+
+    private static func restoredRecents() -> [RecentItem] {
+        guard let data = UserDefaults.standard.data(forKey: recentItemsKey),
+              let items = try? JSONDecoder().decode([RecentItem].self, from: data)
+        else { return [] }
+        return items
+    }
+
     init() {
         // Restore last sidebar selection BEFORE the first publish so the
         // app boots into the user's last context, not the default.
         sidebarSelection = Self.restored()
+        recentItems = Self.restoredRecents()
         monitor.pathUpdateHandler = { [weak self] path in
             let satisfied = path.status == .satisfied
             DispatchQueue.main.async { [weak self] in
@@ -77,6 +99,74 @@ final class AppState: ObservableObject {
     func selectSanskritTab(_ tab: AppTab) {
         sidebarSelection = .subject("sanskrit_class7")
         selectedTab = tab
+    }
+
+    // MARK: - Recents
+
+    /// Append (or dedupe-and-promote) a recently viewed concept/question.
+    /// Keeps the newest at the front and trims to `recentItemsLimit`.
+    func recordRecent(_ item: RecentItem) {
+        var next = recentItems.filter { $0.id != item.id }
+        next.insert(item, at: 0)
+        if next.count > Self.recentItemsLimit {
+            next = Array(next.prefix(Self.recentItemsLimit))
+        }
+        recentItems = next
+    }
+
+    /// Jump to a recent item — flip the sidebar to its host subject and
+    /// hand the route off to TutorNavigationContainer via pendingRoute.
+    func openRecent(_ item: RecentItem) {
+        sidebarSelection = .subject(item.packId)
+        pendingRoute = PendingRoute(route: item.tutorRoute, siblings: [])
+    }
+
+    func clearRecents() {
+        recentItems = []
+    }
+}
+
+// MARK: - RecentItem
+
+/// A lightweight pointer to a concept or question the user opened recently.
+/// Persists primitives (not the TutorRoute directly) so we don't have to
+/// make the route enum Codable across modules.
+struct RecentItem: Identifiable, Codable, Hashable {
+    enum Kind: String, Codable { case concept, question }
+
+    let id: String
+    let packId: String
+    let kind: Kind
+    /// conceptId or questionId, depending on `kind`.
+    let routeId: String
+    let title: String
+    let subtitle: String
+    let timestamp: Date
+
+    init(packId: String, kind: Kind, routeId: String,
+         title: String, subtitle: String,
+         timestamp: Date = Date()) {
+        self.id = "\(packId)::\(kind.rawValue)::\(routeId)"
+        self.packId = packId
+        self.kind = kind
+        self.routeId = routeId
+        self.title = title
+        self.subtitle = subtitle
+        self.timestamp = timestamp
+    }
+
+    var tutorRoute: TutorRoute {
+        switch kind {
+        case .concept:  return .concept(packId: packId, conceptId: routeId)
+        case .question: return .question(packId: packId, questionId: routeId)
+        }
+    }
+
+    var systemImage: String {
+        switch kind {
+        case .concept:  return "lightbulb"
+        case .question: return "questionmark.circle"
+        }
     }
 }
 

@@ -11,6 +11,7 @@ struct ConceptDetailView: View {
     @EnvironmentObject private var nav: TutorNavigationState
     @ObservedObject private var speech = SpeechReader.shared
     @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var appState: AppState
 
     private var conceptIndex: [String: Concept] { pack.conceptIndex }
     private var questionIndex: [String: Question] { pack.questionIndex }
@@ -39,11 +40,13 @@ struct ConceptDetailView: View {
                 DispatchQueue.main.async {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
+                recordRecent()
             }
             .onChange(of: concept.id) { _ in
                 withAnimation(.easeOut(duration: 0.2)) {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
+                recordRecent()
             }
         }
         .background(Color(NSColor.windowBackgroundColor))
@@ -373,6 +376,18 @@ struct ConceptDetailView: View {
             conceptId: concept.id,
             conceptTitle: concept.title
         )
+    }
+
+    private func recordRecent() {
+        let chapterLabel = location.map { "Ch. \($0.chapter.number) — \($0.chapter.title)" }
+            ?? pack.title
+        appState.recordRecent(RecentItem(
+            packId: pack.id,
+            kind: .concept,
+            routeId: concept.id,
+            title: concept.title,
+            subtitle: chapterLabel
+        ))
     }
 }
 

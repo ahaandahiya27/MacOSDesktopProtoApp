@@ -69,6 +69,19 @@ struct ContentView: View {
         hasSeenWelcome && !showShortcutsSheet && !showCommandPalette
     }
 
+    /// Sidebar section header with a small "Clear" button on the right.
+    private var recentHeader: some View {
+        HStack {
+            Text("Recent")
+            Spacer()
+            Button("Clear") { appState.clearRecents() }
+                .buttonStyle(.plain)
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .help("Clear recent items")
+        }
+    }
+
     // MARK: - Sidebar
 
     private var sidebar: some View {
@@ -123,6 +136,33 @@ struct ContentView: View {
                     Image(systemName: SFSymbolCompat.name("list.bullet.clipboard.fill"))
                 }
                 .tag(SidebarSelection.quizBank)
+            }
+
+            if !appState.recentItems.isEmpty {
+                Section(header: recentHeader) {
+                    ForEach(appState.recentItems) { item in
+                        Button {
+                            appState.openRecent(item)
+                        } label: {
+                            Label {
+                                VStack(alignment: .leading, spacing: 1) {
+                                    Text(item.title)
+                                        .font(.body)
+                                        .lineLimit(1)
+                                        .truncationMode(.tail)
+                                    Text(item.subtitle)
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(1)
+                                }
+                            } icon: {
+                                Image(systemName: item.systemImage)
+                            }
+                        }
+                        .buttonStyle(.plain)
+                        .help("Jump to \(item.title)")
+                    }
+                }
             }
 
             Section(header: Text("Tools")) {
