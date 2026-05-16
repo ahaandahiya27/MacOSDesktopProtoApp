@@ -16,6 +16,7 @@ struct QuestionDetailView: View {
     @State private var revealSolution = false
     @State private var typedAnswer = ""
     @State private var attemptOutcome: AttemptOutcome = .unchecked
+    @State private var selectedOptionIndex: Int? = nil
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
@@ -65,6 +66,7 @@ struct QuestionDetailView: View {
             revealSolution = false
             typedAnswer = ""
             attemptOutcome = .unchecked
+            selectedOptionIndex = nil
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
@@ -167,36 +169,137 @@ struct QuestionDetailView: View {
             )
     }
 
+    /// Index of the correct option, if we can find it. Comparison uses the
+    /// same AnswerValidator as the free-text path so trivial whitespace /
+    /// case differences between the pack JSON's `answer` and the matching
+    /// `options[i]` entry don't cause false negatives.
+    private func correctOptionIndex(_ options: [String]) -> Int? {
+        options.firstIndex { AnswerValidator.matches(userInput: $0, truth: question.answer) }
+    }
+
+    @ViewBuilder
     private func optionsList(_ options: [String]) -> some View {
+        let isMCQ = question.questionType == .mcq
+        let correctIdx = isMCQ ? correctOptionIndex(options) : nil
         VStack(alignment: .leading, spacing: 8) {
             Text("Options").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
             ForEach(Array(options.enumerated()), id: \.offset) { idx, opt in
-                HStack {
-                    Text("\(["A","B","C","D","E","F"][safe: idx] ?? "?").")
-                        .font(.body.bold())
-                        .frame(width: 22, alignment: .leading)
-                        .foregroundColor(Color.compatIndigo)
-                    Text(opt).font(.body)
-                    Spacer()
+                if isMCQ {
+                    mcqOptionRow(idx: idx, opt: opt, correctIdx: correctIdx)
+                } else {
+                    // Non-MCQ (e.g. some legacy entries): keep the static
+                    // read-only row so we don't break older question shapes.
+                    optionRow(idx: idx, opt: opt)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.gray.opacity(0.1))
+                        )
                 }
-                .padding(.vertical, 6)
-                .padding(.horizontal, 10)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray.opacity(0.1))
-                )
+            }
+            if isMCQ {
+                HStack {
+                    Spacer()
+                    Button("Check") { recordMCQAttempt(options: options) }
+                        .disabled(selectedOptionIndex == nil || attemptOutcome != .unchecked)
+                }
+                .padding(.top, 4)
             }
         }
     }
 
+    /// Pure layout for one row of the options list. Pulled out so MCQ + the
+    /// non-MCQ fallback can share the chrome.
+    private func optionRow(idx: Int, opt: String) -> some View {
+        HStack {
+            Text("\(["A","B","C","D","E","F"][safe: idx] ?? "?").")
+                .font(.body.bold())
+                .frame(width: 22, alignment: .leading)
+                .foregroundColor(Color.compatIndigo)
+            Text(opt).font(.body)
+            Spacer()
+        }
+        .padding(.vertical, 6)
+        .padding(.horizontal, 10)
+    }
+
+    @ViewBuilder
+    private func mcqOptionRow(idx: Int, opt: String, correctIdx: Int?) -> some View {
+        Button(action: {
+            // Once an attempt is checked, lock the selection — Prev/Next
+            // resets and lets the user retry on a fresh question.
+            guard attemptOutcome == .unchecked else { return }
+            if selectedOptionIndex == idx {
+                selectedOptionIndex = nil
+            } else {
+                selectedOptionIndex = idx
+            }
+        }) {
+            HStack {
+                optionRow(idx: idx, opt: opt)
+                if attemptOutcome != .unchecked && idx == correctIdx {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                } else if case .incorrect = attemptOutcome, selectedOptionIndex == idx {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.red)
+                }
+            }
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(mcqRowBackground(idx: idx, correctIdx: correctIdx))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(mcqRowBorder(idx: idx, correctIdx: correctIdx), lineWidth: 1.5)
+            )
+        }
+        .buttonStyle(.plain)
+        .contentShape(Rectangle())
+        .accessibilityLabel("\(["A","B","C","D","E","F"][safe: idx] ?? "?"). \(opt)")
+    }
+
+    private func mcqRowBackground(idx: Int, correctIdx: Int?) -> Color {
+        switch attemptOutcome {
+        case .unchecked:
+            return selectedOptionIndex == idx
+                ? Color.compatIndigo.opacity(0.12)
+                : Color.gray.opacity(0.1)
+        case .correct:
+            return idx == correctIdx ? Color.green.opacity(0.18) : Color.gray.opacity(0.06)
+        case .incorrect:
+            if idx == correctIdx { return Color.green.opacity(0.18) }
+            if selectedOptionIndex == idx { return Color.red.opacity(0.15) }
+            return Color.gray.opacity(0.06)
+        }
+    }
+
+    private func mcqRowBorder(idx: Int, correctIdx: Int?) -> Color {
+        switch attemptOutcome {
+        case .unchecked:
+            return selectedOptionIndex == idx ? Color.compatIndigo : Color.clear
+        case .correct:
+            return idx == correctIdx ? Color.green : Color.clear
+        case .incorrect:
+            if idx == correctIdx { return Color.green }
+            if selectedOptionIndex == idx { return Color.red }
+            return Color.clear
+        }
+    }
+
+    /// Free-text answer field. Hidden for MCQ — selection IS the answer
+    /// there, and a second input would be misleading.
+    @ViewBuilder
     private var userAnswerField: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("Try it yourself").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
-            HStack(spacing: 8) {
-                TextField("Type your answer", text: $typedAnswer, onCommit: { recordAttempt() })
-                    .textFieldStyle(.roundedBorder)
-                Button("Check") { recordAttempt() }
-                    .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        if question.questionType != .mcq {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Try it yourself").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
+                HStack(spacing: 8) {
+                    TextField("Type your answer", text: $typedAnswer, onCommit: { recordAttempt() })
+                        .textFieldStyle(.roundedBorder)
+                    Button("Check") { recordAttempt() }
+                        .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                                  || attemptOutcome != .unchecked)
+                }
             }
         }
     }
@@ -327,6 +430,21 @@ struct QuestionDetailView: View {
             isCorrect: isCorrect
         ))
         attemptOutcome = isCorrect ? .correct : .incorrect(userInput: userInput)
+        revealSolution = true
+    }
+
+    private func recordMCQAttempt(options: [String]) {
+        guard let idx = selectedOptionIndex, options.indices.contains(idx) else { return }
+        let selected = options[idx]
+        let isCorrect = AnswerValidator.matches(userInput: selected, truth: question.answer)
+
+        dataStore.insertAttempt(QuestionAttempt(
+            subjectPackId: pack.id,
+            questionId: question.id,
+            userAnswer: selected,
+            isCorrect: isCorrect
+        ))
+        attemptOutcome = isCorrect ? .correct : .incorrect(userInput: selected)
         revealSolution = true
     }
 }
