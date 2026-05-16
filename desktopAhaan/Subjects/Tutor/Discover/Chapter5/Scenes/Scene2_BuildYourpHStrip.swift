@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build Your pH Strip.
 /// Interactive pH scale 0-14 with draggable marker, color changes, and substance pins.
+@available(macOS 12, *)
 struct Scene2_BuildYourpHStrip: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -53,10 +54,10 @@ struct Scene2_BuildYourpHStrip: View {
                     VStack(spacing: 4) {
                         Text("pH \(pH, specifier: "%.1f")")
                             .font(.system(size: 48, weight: .bold, design: .rounded).monospacedDigit())
-                            .foregroundStyle(colorForPH(pH))
+                            .foregroundColor(colorForPH(pH))
                         Text(pHLabel)
                             .font(.title3.weight(.semibold))
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     // Color strip
@@ -66,7 +67,7 @@ struct Scene2_BuildYourpHStrip: View {
 
                     // Slider
                     Slider(value: $pH, in: 0...14, step: 0.5)
-                        .tint(colorForPH(pH))
+                        .accentColor(colorForPH(pH))
                         .frame(maxWidth: 640)
                         .padding(.horizontal, 24)
                         .accessibilityLabel("pH slider, current value \(pH, specifier: "%.1f")")
@@ -118,7 +119,7 @@ struct Scene2_BuildYourpHStrip: View {
                 ForEach([0, 7, 14], id: \.self) { val in
                     Text("\(val)")
                         .font(.caption2.bold())
-                        .foregroundStyle(.white)
+                        .foregroundColor(.white)
                         .shadow(radius: 2)
                         .position(
                             x: geo.size.width * CGFloat(val) / 14.0,
@@ -151,19 +152,19 @@ struct Scene2_BuildYourpHStrip: View {
                         .multilineTextAlignment(.center)
                     Text("pH \(Int(sub.pH))")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
                 .frame(width: 82, height: 64)
                 .background(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(isNear ? colorForPH(sub.pH).opacity(0.15) : Color(nsColor: .windowBackgroundColor))
+                        .fill(isNear ? colorForPH(sub.pH).opacity(0.15) : Color(NSColor.windowBackgroundColor))
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
                         .strokeBorder(isNear ? colorForPH(sub.pH) : .clear, lineWidth: 2)
                 )
                 .scaleEffect(isNear ? 1.08 : 1.0)
-                .animation(reduceMotion ? .none : .easeInOut(duration: 0.2), value: isNear)
+                .animation(reduceMotion ? .none : .easeInOut(duration: 0.2))
             }
         }
     }

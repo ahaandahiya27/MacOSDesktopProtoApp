@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 8 — Kitchen Chemistry.
 /// Three kitchen experiments: baking soda + vinegar volcano, lemon juice on baking soda,
 /// and turmeric milk turning red with soap. Tap each to see the reaction.
+@available(macOS 12, *)
 struct Scene8_KitchenChemistry: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -60,7 +61,7 @@ struct Scene8_KitchenChemistry: View {
 
             Text("Tap an experiment to trigger the reaction")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             Spacer()
 
@@ -81,25 +82,25 @@ struct Scene8_KitchenChemistry: View {
                                 .font(.title3.bold())
                             Text(exp.ingredients)
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     }
 
                     if reacted.contains(exp.id) {
                         Text(exp.reaction)
                             .font(.title2.bold())
-                            .foregroundStyle(.orange)
+                            .foregroundColor(.orange)
                             .transition(.scale.combined(with: .opacity))
 
                         HStack(spacing: 6) {
                             Image(systemName: "flask.fill")
-                                .foregroundStyle(.purple)
+                                .foregroundColor(.purple)
                             Text(exp.type)
                                 .font(.headline)
-                                .foregroundStyle(.purple)
+                                .foregroundColor(.purple)
                             Text("Change")
                                 .font(.headline)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     } else {
                         Button("Mix them!") {
@@ -107,15 +108,15 @@ struct Scene8_KitchenChemistry: View {
                                 _ = reacted.insert(exp.id)
                             }
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.orange)
+                        
+                        .accentColor(.orange)
                     }
                 }
                 .padding()
                 .frame(maxWidth: 500)
                 .background(
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(Color(nsColor: .windowBackgroundColor))
+                        .fill(Color(NSColor.windowBackgroundColor))
                         .shadow(color: .black.opacity(0.08), radius: 8, y: 4)
                 )
             }
@@ -164,14 +165,14 @@ struct Scene8_KitchenChemistry: View {
                     .lineLimit(2)
                 if isDone {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                         .font(.caption)
                 }
             }
             .frame(width: 130, height: 110)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isSelected ? Color.orange.opacity(0.12) : Color(nsColor: .windowBackgroundColor))
+                    .fill(isSelected ? Color.orange.opacity(0.12) : Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

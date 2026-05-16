@@ -13,42 +13,41 @@ struct TranslationResultCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            // Header: Translated text
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     DifficultyBadge(level: response.difficulty)
                     Spacer()
                     HStack(spacing: 12) {
-                        // TTS button
                         Button(action: onSpeak) {
                             Image(systemName: isSpeaking ? "speaker.wave.3.fill" : "speaker.wave.2")
-                                .foregroundStyle(.indigo)
-                                .symbolEffect(.pulse, isActive: isSpeaking)
+                                .foregroundColor(Color.compatIndigo)
                         }
                         .disabled(isSpeaking)
+                        .help("Play pronunciation")
                         .accessibilityLabel("Play audio pronunciation")
                         .accessibilityHint("Hear the translated text spoken aloud")
 
-                        // Favorite button
                         Button(action: onFavorite) {
                             Image(systemName: isFavorited ? "heart.fill" : "heart")
-                                .foregroundStyle(.pink)
+                                .foregroundColor(.pink)
                         }
+                        .help(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityLabel(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityHint("Save or remove this translation from your favorites")
 
-                        // Copy button
                         Button(action: {
                             NSPasteboard.general.clearContents()
                             NSPasteboard.general.setString(response.translatedText, forType: .string)
                             showCopied = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            Task { @MainActor in
+                                try? await Task.sleep(nanoseconds: 1_500_000_000)
                                 showCopied = false
                             }
                         }) {
                             Image(systemName: showCopied ? "checkmark" : "doc.on.doc")
-                                .foregroundStyle(showCopied ? .green : .secondary)
+                                .foregroundColor(showCopied ? .green : .secondary)
                         }
+                        .help(showCopied ? "Copied!" : "Copy translation")
                         .accessibilityLabel(showCopied ? "Copied to clipboard" : "Copy translation")
                         .accessibilityHint("Copy the translated text to your clipboard")
                     }
@@ -57,40 +56,41 @@ struct TranslationResultCard: View {
 
                 Text(response.translatedText)
                     .font(.title2.weight(.semibold))
-                    .textSelection(.enabled)
 
                 if let translit = response.transliteration, !translit.isEmpty {
                     Text(translit)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                         .italic()
-                        .textSelection(.enabled)
                 }
             }
 
             Divider()
 
-            // Expandable details
-            DisclosureGroup("Learn More", isExpanded: $isExpanded) {
+            ExpandableCard(
+                isExpanded: $isExpanded,
+                systemImage: "book.fill",
+                title: "Learn More",
+                tint: Color.compatIndigo
+            ) {
                 VStack(alignment: .leading, spacing: 14) {
-                    // Word-by-word
                     if let words = response.wordByWord, !words.isEmpty {
                         DetailSection(title: "Word by Word", icon: "text.word.spacing") {
-                            ForEach(Array(words.enumerated()), id: \.offset) { index, word in
+                            ForEach(Array(words.enumerated()), id: \.offset) { _, word in
                                 HStack(alignment: .top) {
                                     Text(word.source)
                                         .font(.subheadline.weight(.medium))
                                         .frame(width: 80, alignment: .leading)
                                     Image(systemName: "arrow.right")
                                         .font(.caption)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundColor(.secondary)
                                     VStack(alignment: .leading) {
                                         Text(word.target)
                                             .font(.subheadline)
                                         if let note = word.note, !note.isEmpty {
                                             Text(note)
                                                 .font(.caption)
-                                                .foregroundStyle(.secondary)
+                                                .foregroundColor(.secondary)
                                         }
                                     }
                                 }
@@ -98,7 +98,6 @@ struct TranslationResultCard: View {
                         }
                     }
 
-                    // Grammar note
                     if let grammar = response.grammarNote, !grammar.isEmpty {
                         DetailSection(title: "Grammar", icon: "text.book.closed") {
                             Text(grammar)
@@ -106,16 +105,14 @@ struct TranslationResultCard: View {
                         }
                     }
 
-                    // Learning tip
                     if let tip = response.learningTip, !tip.isEmpty {
                         DetailSection(title: "Learning Tip", icon: "lightbulb") {
                             Text(tip)
                                 .font(.subheadline)
-                                .foregroundStyle(.indigo)
+                                .foregroundColor(Color.compatIndigo)
                         }
                     }
 
-                    // Alternatives
                     if let alts = response.alternatives, !alts.isEmpty {
                         DetailSection(title: "Alternatives", icon: "arrow.triangle.branch") {
                             ForEach(Array(alts.enumerated()), id: \.offset) { _, alt in
@@ -125,27 +122,23 @@ struct TranslationResultCard: View {
                         }
                     }
 
-                    // Confidence note
                     if let conf = response.confidenceNote, !conf.isEmpty {
                         HStack(alignment: .top, spacing: 6) {
                             Image(systemName: "info.circle")
-                                .foregroundStyle(.orange)
+                                .foregroundColor(.orange)
                             Text(conf)
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     }
                 }
-                .padding(.top, 8)
             }
-            .tint(.indigo)
         }
         .padding()
-        .background(.background)
+        .background(Color(NSColor.controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(color: .black.opacity(0.06), radius: 10, y: 3)
         .padding(.horizontal)
-        .animation(.easeInOut(duration: 0.2), value: isFavorited)
     }
 }
 
@@ -158,7 +151,7 @@ struct DetailSection<Content: View>: View {
         VStack(alignment: .leading, spacing: 6) {
             Label(title, systemImage: icon)
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             content
         }
     }
@@ -167,14 +160,28 @@ struct DetailSection<Content: View>: View {
 struct DifficultyBadge: View {
     let level: DifficultyLevel
 
+    private var iconName: String {
+        switch level {
+        case .easy: return "circle.fill"
+        case .medium: return "diamond.fill"
+        case .hard: return "exclamationmark.triangle.fill"
+        }
+    }
+
     var body: some View {
-        Text(level.rawValue)
-            .font(.caption2.weight(.bold))
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
-            .background(backgroundColor)
-            .foregroundStyle(foregroundColor)
-            .clipShape(Capsule())
+        Label {
+            Text(level.rawValue)
+                .font(.caption2.weight(.bold))
+        } icon: {
+            Image(systemName: iconName)
+                .font(.system(size: 6))
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(backgroundColor)
+        .foregroundColor(foregroundColor)
+        .clipShape(Capsule())
+        .accessibilityLabel("Difficulty: \(level.rawValue)")
     }
 
     private var backgroundColor: Color {

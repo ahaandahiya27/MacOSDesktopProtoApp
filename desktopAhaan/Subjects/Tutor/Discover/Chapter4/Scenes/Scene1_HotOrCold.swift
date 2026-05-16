@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Hot or Cold? The Touch Test.
 /// Tap 6 objects and watch a thermometer animate to each temperature.
+@available(macOS 12, *)
 struct Scene1_HotOrCold: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -52,7 +53,7 @@ struct Scene1_HotOrCold: View {
                                     if selectedIndex == idx {
                                         Text("\(obj.tempC)°C")
                                             .font(.caption2.bold())
-                                            .foregroundStyle(.orange)
+                                            .foregroundColor(.orange)
                                     }
                                 }
                                 .frame(width: 110, height: 100)
@@ -60,7 +61,7 @@ struct Scene1_HotOrCold: View {
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                                         .fill(selectedIndex == idx
                                               ? Color.orange.opacity(0.15)
-                                              : Color(nsColor: .windowBackgroundColor))
+                                              : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -131,7 +132,7 @@ struct Scene1_HotOrCold: View {
                 // Temperature label
                 Text("\(displayTemp)°C")
                     .font(.title3.bold().monospacedDigit())
-                    .foregroundStyle(.red)
+                    .foregroundColor(.red)
                     .offset(x: 50, y: -tubeH * mercuryHeight - bulbR)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)

@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 4 — Eclipse Builder.
 /// Two tabs: Solar Eclipse and Lunar Eclipse. Each shows Sun, Earth, Moon alignment diagram.
 /// User explores both to unlock GotIt.
+@available(macOS 12, *)
 struct Scene4_EclipseBuilder: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -30,7 +31,7 @@ struct Scene4_EclipseBuilder: View {
 
                     Text("\(explored.count) / 2 eclipses explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Tab picker
                     HStack(spacing: 12) {
@@ -50,14 +51,14 @@ struct Scene4_EclipseBuilder: View {
                                     if isExplored {
                                         Image(systemName: "checkmark.circle.fill")
                                             .font(.caption)
-                                            .foregroundStyle(.green)
+                                            .foregroundColor(.green)
                                     }
                                 }
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 10)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(isSelected ? Color.accentColor.opacity(0.15) : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? Color.accentColor.opacity(0.15) : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -85,7 +86,7 @@ struct Scene4_EclipseBuilder: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label(selectedType.rawValue, systemImage: selectedType == .solar ? "sun.max.fill" : "moon.fill")
                                 .font(.title2.bold())
-                                .foregroundStyle(selectedType == .solar ? .orange : .indigo)
+                                .foregroundColor(selectedType == .solar ? .orange : Color.compatIndigo)
 
                             Text(explanationText(for: selectedType))
                                 .font(.body)
@@ -93,7 +94,7 @@ struct Scene4_EclipseBuilder: View {
 
                             Text("Not every New or Full Moon causes an eclipse because the Moon's orbit is tilted about 5 degrees relative to Earth's orbit around the Sun.")
                                 .font(.callout)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                                 .lineSpacing(3)
                                 .padding(.top, 4)
                         }
@@ -149,14 +150,14 @@ struct Scene4_EclipseBuilder: View {
                  ? "Sun  >>>  Moon  >>>  Earth"
                  : "Sun  >>>  Earth  >>>  Moon")
                 .font(.caption.weight(.medium).monospaced())
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
         }
     }
 
     private func celestialBody(_ name: String, color: Color, size: CGFloat) -> some View {
         VStack(spacing: 4) {
             Circle()
-                .fill(color.gradient)
+                .fill(color)
                 .frame(width: size, height: size)
                 .shadow(color: color.opacity(0.4), radius: 6)
             Text(name)

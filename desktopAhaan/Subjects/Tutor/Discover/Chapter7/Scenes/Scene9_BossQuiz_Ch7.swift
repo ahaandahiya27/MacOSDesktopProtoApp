@@ -67,7 +67,7 @@ struct Scene9_BossQuiz_Ch7: View {
             if !done {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
-                    .font(.subheadline).foregroundStyle(.secondary)
+                    .font(.subheadline).foregroundColor(.secondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -88,7 +88,7 @@ struct Scene9_BossQuiz_Ch7: View {
                 if revealed[currentQ] {
                     SoftShadowCard(padding: 12) {
                         HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "lightbulb.fill").foregroundStyle(.yellow)
+                            Image(systemName: "lightbulb.fill").foregroundColor(.yellow)
                             Text(item.explanation).font(.callout)
                             Spacer(minLength: 0)
                         }
@@ -97,7 +97,7 @@ struct Scene9_BossQuiz_Ch7: View {
 
                 if revealed[currentQ] {
                     Button(currentQ < 4 ? "Next question" : "See my score") { advance() }
-                        .buttonStyle(.borderedProminent).tint(.indigo)
+                        .accentColor(Color.compatIndigo)
                 }
             } else {
                 completionView
@@ -105,12 +105,14 @@ struct Scene9_BossQuiz_Ch7: View {
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .overlay {
-            if celebrate {
-                ParticleEmitter(isActive: true, particleCount: 100, duration: 3.0)
-                    .allowsHitTesting(false).ignoresSafeArea()
+        .overlay(
+            Group {
+                if celebrate {
+                    ParticleEmitter(isActive: true, particleCount: 100, duration: 3.0)
+                        .allowsHitTesting(false).ignoresSafeArea()
+                }
             }
-        }
+        )
     }
 
     // MARK: - Quiz mechanics
@@ -133,10 +135,10 @@ struct Scene9_BossQuiz_Ch7: View {
         } else {
             if !reduceMotion {
                 withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 14 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 180_000_000)
                     withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = -10 }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.36) {
+                    try? await Task.sleep(nanoseconds: 180_000_000)
                     withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shake = 0 }
                 }
             }
@@ -161,44 +163,31 @@ struct Scene9_BossQuiz_Ch7: View {
                 .multilineTextAlignment(.center)
             Text("Score: \(score) / 5")
                 .font(.title2)
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18).padding(.vertical, 8)
-                .background(Capsule().fill(.indigo.opacity(0.12)))
+                .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
 
             HStack(spacing: 12) {
                 Button { saveCertificate() } label: {
                     Label("Print my certificate", systemImage: "doc.richtext")
                 }
-                .buttonStyle(.borderedProminent).tint(.indigo)
+                .accentColor(Color.compatIndigo)
 
                 Button("Back to chapter") { onComplete(score) }
-                    .buttonStyle(.bordered)
+                    
             }
 
             if let s = pdfStatus {
-                Text(s).font(.caption).foregroundStyle(.secondary)
+                Text(s).font(.caption).foregroundColor(.secondary)
             }
         }
         .frame(maxWidth: 560).padding(20)
     }
 
     private func saveCertificate() {
-        let renderer = ImageRenderer(content: CertificateView(score: score, total: 5))
-        renderer.scale = 2.0
-        guard let nsImage = renderer.nsImage,
-              let tiff = nsImage.tiffRepresentation,
-              let bitmap = NSBitmapImageRep(data: tiff),
-              let pngData = bitmap.representation(using: .png, properties: [:]) else {
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+              let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
-            return
-        }
-
-        let pdfPage: PDFPage? = {
-            if let img = NSImage(data: pngData) { return PDFPage(image: img) }
-            return nil
-        }()
-        guard let page = pdfPage else {
-            pdfStatus = "Couldn't make a PDF page."
             return
         }
         let doc = PDFDocument()
@@ -244,9 +233,9 @@ private struct Ch7AnswerButton: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 if state == .correct {
-                    Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                    Image(systemName: "checkmark.circle.fill").foregroundColor(.green)
                 } else if state == .wrong {
-                    Image(systemName: "xmark.circle.fill").foregroundStyle(.red)
+                    Image(systemName: "xmark.circle.fill").foregroundColor(.red)
                 }
             }
             .padding(.horizontal, 16)
@@ -262,13 +251,15 @@ private struct Ch7AnswerButton: View {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
                 .strokeBorder(stroke, lineWidth: 1.5)
         )
+        .accessibilityLabel(label)
+        .accessibilityValue(state == .correct ? "Correct" : state == .wrong ? "Incorrect" : "Not answered")
     }
 
     private var background: Color {
         switch state {
         case .correct: return .green.opacity(0.14)
         case .wrong:   return .red.opacity(0.12)
-        default:       return Color(nsColor: .windowBackgroundColor)
+        default:       return Color(NSColor.windowBackgroundColor)
         }
     }
     private var stroke: Color {
@@ -288,19 +279,19 @@ private struct CertificateView: View {
         VStack(spacing: 14) {
             Text("Certificate of Discovery")
                 .font(.system(size: 32, weight: .bold))
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
             Text("Chapter 7 — Weather, Climate and Adaptations")
                 .font(.title3)
             Text("Awarded to a curious learner")
                 .font(.body)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .padding(.top, 8)
             Text("Final score: \(score) / \(total)")
                 .font(.title2.bold())
                 .padding(.top, 12)
-            Text(Date(), format: .dateTime.day().month().year())
+            Text(formattedCurrentDate())
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .padding(.top, 16)
         }
         .padding(40)
@@ -310,7 +301,7 @@ private struct CertificateView: View {
                 .fill(.white)
                 .overlay(
                     RoundedRectangle(cornerRadius: 18)
-                        .strokeBorder(.indigo, lineWidth: 4)
+                        .strokeBorder(Color.compatIndigo, lineWidth: 4)
                         .padding(8)
                 )
         )

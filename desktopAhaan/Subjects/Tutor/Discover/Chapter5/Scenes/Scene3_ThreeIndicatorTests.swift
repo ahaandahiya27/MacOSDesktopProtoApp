@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 3 — Three Indicator Tests.
 /// Three test tubes with Litmus, Turmeric, Phenolphthalein. User adds acid or base to see color changes.
+@available(macOS 12, *)
 struct Scene3_ThreeIndicatorTests: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -44,8 +45,8 @@ struct Scene3_ThreeIndicatorTests: View {
         Indicator(
             name: "Phenolphthalein",
             icon: "flask.fill",
-            neutralColor: Color(nsColor: .windowBackgroundColor),
-            acidColor: Color(nsColor: .windowBackgroundColor),
+            neutralColor: Color(NSColor.windowBackgroundColor),
+            acidColor: Color(NSColor.windowBackgroundColor),
             baseColor: .pink,
             acidNote: "Phenolphthalein stays colourless in acid.",
             baseNote: "Phenolphthalein turns pink in base."
@@ -82,7 +83,7 @@ struct Scene3_ThreeIndicatorTests: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label(ind.name, systemImage: ind.icon)
                                     .font(.title2.bold())
-                                    .foregroundStyle(sol == .acid ? ind.acidColor : ind.baseColor)
+                                    .foregroundColor(sol == .acid ? ind.acidColor : ind.baseColor)
                                 Text(sol == .acid ? ind.acidNote : ind.baseNote)
                                     .font(.body)
                                     .lineSpacing(4)
@@ -109,7 +110,7 @@ struct Scene3_ThreeIndicatorTests: View {
                     } else {
                         Text("Test all 3 indicators with both acid and base")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                             .padding(.bottom, 12)
                     }
                 }
@@ -143,7 +144,7 @@ struct Scene3_ThreeIndicatorTests: View {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(currentColor.opacity(0.6))
                     .frame(width: 52, height: height * 0.4)
-                    .animation(reduceMotion ? .none : .easeInOut(duration: 0.5), value: currentColor.description)
+                    .animation(reduceMotion ? .none : .easeInOut(duration: 0.5))
 
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .strokeBorder(.gray.opacity(0.3), lineWidth: 2)
@@ -155,15 +156,15 @@ struct Scene3_ThreeIndicatorTests: View {
                 Button("+ Acid") {
                     addSolution(.acid, to: index)
                 }
-                .buttonStyle(.bordered)
-                .tint(.red)
+                
+                .accentColor(.red)
                 .controlSize(.small)
 
                 Button("+ Base") {
                     addSolution(.base, to: index)
                 }
-                .buttonStyle(.bordered)
-                .tint(.blue)
+                
+                .accentColor(.blue)
                 .controlSize(.small)
             }
 
@@ -171,12 +172,12 @@ struct Scene3_ThreeIndicatorTests: View {
             HStack(spacing: 4) {
                 if testedSolutions.contains(.acid) {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                         .font(.caption)
                 }
                 if testedSolutions.contains(.base) {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.blue)
+                        .foregroundColor(.blue)
                         .font(.caption)
                 }
             }
@@ -185,11 +186,11 @@ struct Scene3_ThreeIndicatorTests: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .strokeBorder(activeIndicator == index ? .indigo : .gray.opacity(0.2), lineWidth: 2)
+                .strokeBorder(activeIndicator == index ? Color.compatIndigo : .gray.opacity(0.2), lineWidth: 2)
         )
         .accessibilityLabel("\(indicator.name) test tube")
     }

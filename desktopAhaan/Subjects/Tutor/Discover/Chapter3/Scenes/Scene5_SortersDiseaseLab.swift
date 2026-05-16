@@ -5,6 +5,7 @@ import SwiftUI
 /// A drawn microscope. Three slides below: clean, contaminated, sterilized.
 /// Tap each slide — microscope shows: clean (no spores), contaminated (red spore dots),
 /// sterilized (no spores). Worker icon puts on PPE when contaminated is selected.
+@available(macOS 12, *)
 struct Scene5_SortersDiseaseLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -26,7 +27,7 @@ struct Scene5_SortersDiseaseLab: View {
             HStack {
                 Text("Sorter's Disease Lab")
                     .font(.largeTitle.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Spacer()
             }
             .padding(.horizontal, 24)
@@ -123,10 +124,10 @@ struct Scene5_SortersDiseaseLab: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Label("Anthrax Protection", systemImage: "shield.fill")
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.orange)
+                        .foregroundColor(.orange)
                     Text("Modern wool sorters wear N95 masks and gloves to prevent breathing spores. Raw fleece is disinfected before processing.")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
             }
             .frame(maxWidth: 600)
@@ -154,11 +155,11 @@ struct Scene5_SortersDiseaseLab: View {
                     .frame(height: 60)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .strokeBorder(selectedSlide == index ? Color.indigo : Color.clear, lineWidth: 2.5)
+                            .strokeBorder(selectedSlide == index ? Color.compatIndigo : Color.clear, lineWidth: 2.5)
                     )
                 Text(label)
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
             }
         }
         .buttonStyle(.plain)

@@ -5,6 +5,7 @@ import SwiftUI
 /// Three glowing icons (🐑 sheep, 🐛 silkworm, 🌿 cotton) drift in from the edges.
 /// Tapping each makes a thread emerge and weave into a small piece of fabric on the right.
 /// Caption explains these sources give us most fabrics.
+@available(macOS 12, *)
 struct Scene1_FluffToFibre: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -50,10 +51,10 @@ struct Scene1_FluffToFibre: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("From Fluff to Fibre", systemImage: "sparkles")
                                 .font(.title2.bold())
-                                .foregroundStyle(.indigo)
+                                .foregroundColor(Color.compatIndigo)
                             Text(kidFriendlyExplanation)
                                 .font(.body)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.primary)
                                 .lineSpacing(4)
                         }
                     }
@@ -88,7 +89,7 @@ struct Scene1_FluffToFibre: View {
         VStack {
             Text("Fabric Woven")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             Canvas { context, _ in
                 let fabricRect = CGRect(x: 20, y: 40, width: 140, height: 100)
@@ -112,7 +113,7 @@ struct Scene1_FluffToFibre: View {
                                 p.move(to: CGPoint(x: x, y: fabricRect.minY + 15))
                                 p.addLine(to: CGPoint(x: x, y: fabricRect.maxY - 15))
                             },
-                            with: .color(.indigo.opacity(0.7)),
+                            with: .color(Color.compatIndigo.opacity(0.7)),
                             lineWidth: 2
                         )
                     }
@@ -139,7 +140,8 @@ struct Scene1_FluffToFibre: View {
                 threadsWoven += 1
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 600_000_000)
             withAnimation(.easeOut(duration: 0.4)) {
                 switch emoji {
                 case "🐑": showSheep = false

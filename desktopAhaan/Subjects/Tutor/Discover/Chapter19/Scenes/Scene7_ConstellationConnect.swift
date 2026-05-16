@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 7 — Constellation Connect.
 /// Four constellation cards in a grid. Tap each to explore its details.
 /// After all 4 explored, show GotIt.
+@available(macOS 12, *)
 struct Scene7_ConstellationConnect: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -28,7 +29,7 @@ struct Scene7_ConstellationConnect: View {
             name: "Ursa Major",
             indianName: "Saptarishi",
             symbol: "star.fill",
-            color: .indigo,
+            color: Color.compatIndigo,
             shape: "Ladle / Plough",
             facts: [
                 "Seven bright stars form a ladle or plough shape in the sky.",
@@ -41,7 +42,7 @@ struct Scene7_ConstellationConnect: View {
             name: "Orion",
             indianName: "Mriga / The Hunter",
             symbol: "sparkles",
-            color: .cyan,
+            color: Color.compatCyan,
             shape: "Hunter with belt",
             facts: [
                 "Three stars in a straight line form Orion's Belt \u{2014} one of the easiest patterns to spot.",
@@ -89,7 +90,7 @@ struct Scene7_ConstellationConnect: View {
 
                     Text("\(explored.count) / \(constellations.count) constellations explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Starry sky backdrop
                     ZStack {
@@ -135,24 +136,24 @@ struct Scene7_ConstellationConnect: View {
                                 VStack(spacing: 6) {
                                     Image(systemName: constellation.symbol)
                                         .font(.title2)
-                                        .foregroundStyle(isSelected ? .white : constellation.color)
+                                        .foregroundColor(isSelected ? .white : constellation.color)
                                     Text(constellation.name)
                                         .font(.body.weight(.semibold))
-                                        .foregroundStyle(isSelected ? .white : .primary)
+                                        .foregroundColor(isSelected ? .white : .primary)
                                     Text(constellation.indianName)
                                         .font(.caption)
-                                        .foregroundStyle(isSelected ? .white.opacity(0.8) : .secondary)
+                                        .foregroundColor(isSelected ? .white.opacity(0.8) : .secondary)
                                     if isExplored {
                                         Image(systemName: "checkmark.circle.fill")
                                             .font(.caption)
-                                            .foregroundStyle(isSelected ? .white : .green)
+                                            .foregroundColor(isSelected ? .white : .green)
                                     }
                                 }
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? constellation.color : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? constellation.color : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -179,21 +180,21 @@ struct Scene7_ConstellationConnect: View {
                                let constellation = constellations.first(where: { $0.id == idx }) {
                                 Label("\(constellation.name) (\(constellation.indianName))", systemImage: constellation.symbol)
                                     .font(.title2.bold())
-                                    .foregroundStyle(constellation.color)
+                                    .foregroundColor(constellation.color)
 
                                 Text("Shape: \(constellation.shape)")
                                     .font(.subheadline.weight(.medium))
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
 
                                 ForEach(constellation.facts, id: \.self) { fact in
                                     HStack(alignment: .top, spacing: 6) {
                                         Image(systemName: "star.fill")
                                             .font(.caption2)
-                                            .foregroundStyle(constellation.color.opacity(0.7))
+                                            .foregroundColor(constellation.color.opacity(0.7))
                                             .padding(.top, 3)
                                         Text(fact)
                                             .font(.callout)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundColor(.secondary)
                                             .lineSpacing(3)
                                     }
                                 }
@@ -202,7 +203,7 @@ struct Scene7_ConstellationConnect: View {
                                     Divider().padding(.vertical, 4)
                                     HStack(alignment: .top, spacing: 6) {
                                         Image(systemName: "lightbulb.fill")
-                                            .foregroundStyle(.yellow)
+                                            .foregroundColor(.yellow)
                                         Text("Constellations are patterns of stars as seen from Earth. Stars in a constellation may actually be at very different distances from us. The Pole Star (Dhruv Tara) appears stationary because it is aligned with Earth\u{2019}s rotational axis.")
                                             .font(.callout)
                                             .lineSpacing(3)
@@ -211,7 +212,7 @@ struct Scene7_ConstellationConnect: View {
                             } else {
                                 Label("Constellations", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("Stars form patterns in the night sky called constellations. Ancient people named them and used them for navigation. Tap each constellation card to learn about it!")
                                     .font(.body)
                                     .lineSpacing(4)

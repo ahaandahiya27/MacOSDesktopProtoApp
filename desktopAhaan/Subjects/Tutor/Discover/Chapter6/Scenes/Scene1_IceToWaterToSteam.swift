@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 1 — Ice to Water to Steam.
 /// Temperature slider from -10 C to 120 C. Canvas particles speed up with temperature.
 /// Ice melts at 0 C, water boils at 100 C. All three are H2O — physical changes.
+@available(macOS 12, *)
 struct Scene1_IceToWaterToSteam: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -32,7 +33,7 @@ struct Scene1_IceToWaterToSteam: View {
 
         var color: Color {
             switch self {
-            case .ice: return .cyan
+            case .ice: return Color.compatCyan
             case .water: return .blue
             case .steam: return .gray
             }
@@ -49,7 +50,7 @@ struct Scene1_IceToWaterToSteam: View {
 
                     Text("Slide the temperature to see H₂O change state.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
 
@@ -69,7 +70,7 @@ struct Scene1_IceToWaterToSteam: View {
                                     .font(.system(size: 72))
                                 Text(phase.rawValue)
                                     .font(.headline)
-                                    .foregroundStyle(phase.color)
+                                    .foregroundColor(phase.color)
                             }
                         } else {
                             particleCanvas
@@ -82,11 +83,11 @@ struct Scene1_IceToWaterToSteam: View {
                     // Temperature readout
                     Text("\(Int(temperature))°C")
                         .font(.system(size: 36, weight: .bold, design: .monospaced))
-                        .foregroundStyle(temperatureColor)
+                        .foregroundColor(temperatureColor)
 
                     Text(phase.rawValue)
                         .font(.title3.weight(.semibold))
-                        .foregroundStyle(phase.color)
+                        .foregroundColor(phase.color)
 
                     // Slider
                     VStack(spacing: 4) {
@@ -94,13 +95,13 @@ struct Scene1_IceToWaterToSteam: View {
                             .frame(maxWidth: 460)
                             .accessibilityLabel("Temperature slider")
                         HStack {
-                            Text("-10°C").font(.caption).foregroundStyle(.secondary)
+                            Text("-10°C").font(.caption).foregroundColor(.secondary)
                             Spacer()
-                            Text("0°C").font(.caption).foregroundStyle(.cyan)
+                            Text("0°C").font(.caption).foregroundColor(Color.compatCyan)
                             Spacer()
-                            Text("100°C").font(.caption).foregroundStyle(.orange)
+                            Text("100°C").font(.caption).foregroundColor(.orange)
                             Spacer()
-                            Text("120°C").font(.caption).foregroundStyle(.secondary)
+                            Text("120°C").font(.caption).foregroundColor(.secondary)
                         }
                         .frame(maxWidth: 460)
                     }
@@ -173,7 +174,7 @@ struct Scene1_IceToWaterToSteam: View {
                         ctx.fill(Path(CGRect(
                             x: rect.origin.x, y: rect.origin.y,
                             width: rect.width, height: rect.height
-                        )), with: .color(.cyan.opacity(0.6)))
+                        )), with: .color(Color.compatCyan.opacity(0.6)))
                     } else {
                         ctx.fill(Path(ellipseIn: rect), with: .color(phase.color.opacity(0.6)))
                     }
@@ -183,7 +184,7 @@ struct Scene1_IceToWaterToSteam: View {
     }
 
     private var temperatureColor: Color {
-        if temperature < 0 { return .cyan }
+        if temperature < 0 { return Color.compatCyan }
         if temperature < 50 { return .blue }
         if temperature < 100 { return .orange }
         return .red

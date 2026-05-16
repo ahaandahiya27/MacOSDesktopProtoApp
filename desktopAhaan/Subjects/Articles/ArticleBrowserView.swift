@@ -6,26 +6,31 @@ import Combine
 struct ArticleBrowserView: View {
     let initialFile: String
     let chapterFolder: String
-    @Environment(\.dismiss) private var dismiss
+    let isWindow: Bool
+    @Environment(\.presentationMode) private var presentationMode
     @Environment(\.colorScheme) private var colorScheme
     @StateObject private var coordinator: WebViewCoordinator
     @ObservedObject private var speech = SpeechReader.shared
 
-    init(initialFile: String, chapterFolder: String) {
+    init(initialFile: String, chapterFolder: String, isWindow: Bool = false) {
         self.initialFile = initialFile
         self.chapterFolder = chapterFolder
+        self.isWindow = isWindow
         _coordinator = StateObject(wrappedValue: WebViewCoordinator())
     }
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
+        VStack(spacing: 0) {
                 // Toolbar with controls
                 HStack(spacing: 12) {
-                    Button(action: { dismiss() }) {
+                    Button(action: {
+                        if isWindow { NSApp.keyWindow?.close() }
+                        else { presentationMode.wrappedValue.dismiss() }
+                    }) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title3)
                     }
+                    .keyboardShortcut("w", modifiers: .command)
                     .accessibilityLabel("Close article")
                     .help("Close article")
 
@@ -52,6 +57,17 @@ struct ArticleBrowserView: View {
                     .accessibilityLabel("Reload")
                     .help("Reload")
 
+                    Button(action: {
+                        if let url = coordinator.webView.url {
+                            NSWorkspace.shared.open(url)
+                        }
+                    }) {
+                        Image(systemName: "safari")
+                            .font(.body)
+                    }
+                    .accessibilityLabel("Open in Safari")
+                    .help("Open in Safari")
+
                     Spacer()
 
                     Text(coordinator.pageTitle)
@@ -76,15 +92,28 @@ struct ArticleBrowserView: View {
                 }
                 .padding(.horizontal, 12)
                 .padding(.vertical, 10)
-                .background(Color(nsColor: .controlBackgroundColor))
-                .border(Color(nsColor: .separatorColor), width: 0.5)
+                .background(Color(NSColor.controlBackgroundColor))
+                .border(Color(NSColor.separatorColor), width: 0.5)
 
                 // Web view
-                WebViewRepresentable(coordinator: coordinator)
+                if articleNotFound {
+                    VStack(spacing: 12) {
+                        Image(systemName: "doc.text.magnifyingglass")
+                            .font(.system(size: 48))
+                            .foregroundColor(.secondary)
+                        Text("Article not found")
+                            .font(.title3.weight(.semibold))
+                        Text("The file \"\(initialFile)\" could not be located.")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    WebViewRepresentable(coordinator: coordinator)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             }
             .navigationTitle("")
-        }
         .onAppear {
             loadInitialURL()
         }
@@ -127,21 +156,17 @@ struct ArticleBrowserView: View {
         }
     }
 
+    @State private var articleNotFound = false
+
     private func loadInitialURL() {
-        guard let url = Bundle.main.url(
-            forResource: initialFile.replacingOccurrences(of: ".html", with: ""),
-            withExtension: "html",
-            subdirectory: chapterFolder
-        ) else {
-            if let flatUrl = Bundle.main.url(
-                forResource: initialFile.replacingOccurrences(of: ".html", with: ""),
-                withExtension: "html"
-            ) {
-                coordinator.load(fileURL: flatUrl, inFolder: chapterFolder)
-            }
-            return
+        let name = initialFile.replacingOccurrences(of: ".html", with: "")
+        if let url = Bundle.main.url(forResource: name, withExtension: "html", subdirectory: chapterFolder) {
+            coordinator.load(fileURL: url, inFolder: chapterFolder)
+        } else if let flatUrl = Bundle.main.url(forResource: name, withExtension: "html") {
+            coordinator.load(fileURL: flatUrl, inFolder: chapterFolder)
+        } else {
+            articleNotFound = true
         }
-        coordinator.load(fileURL: url, inFolder: chapterFolder)
     }
 }
 
@@ -194,7 +219,8 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
 
     func load(fileURL: URL, inFolder: String) {
         currentFolder = inFolder
-        webView.loadFileURL(fileURL, allowingReadAccessTo: fileURL.deletingLastPathComponent())
+        let accessURL = Bundle.main.resourceURL ?? fileURL.deletingLastPathComponent()
+        webView.loadFileURL(fileURL, allowingReadAccessTo: accessURL)
     }
 
     func setupObservers() {
@@ -246,8 +272,10 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
 
         if url.scheme == "file" {
             if isURLSafe(url) {
-                // Non-trivial file navigation: stop reading
-                SpeechReader.shared.stop(owner: "article")
+                let newFolder = url.deletingLastPathComponent().path
+                if newFolder != currentFolder {
+                    SpeechReader.shared.stop(owner: "article")
+                }
                 decisionHandler(.allow)
                 return
             } else {

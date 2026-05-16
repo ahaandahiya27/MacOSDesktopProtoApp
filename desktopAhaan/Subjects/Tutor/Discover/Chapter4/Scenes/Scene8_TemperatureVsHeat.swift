@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 8 — Temperature vs Heat.
 /// Two glasses at the same temperature but different volumes. Pour into a bathtub to see the difference.
+@available(macOS 12, *)
 struct Scene8_TemperatureVsHeat: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -9,8 +10,8 @@ struct Scene8_TemperatureVsHeat: View {
 
     @State private var poured = false
     @State private var pourProgress: CGFloat = 0
-    @State private var tubColorA: Color = .cyan.opacity(0.3)
-    @State private var tubColorB: Color = .cyan.opacity(0.3)
+    @State private var tubColorA: Color = Color.compatCyan.opacity(0.3)
+    @State private var tubColorB: Color = Color.compatCyan.opacity(0.3)
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
@@ -24,7 +25,7 @@ struct Scene8_TemperatureVsHeat: View {
                         // Glass A — small
                         VStack(spacing: 8) {
                             Text("Glass A").font(.headline)
-                            Text("50 ml  ·  80°C").font(.caption.weight(.medium)).foregroundStyle(.orange)
+                            Text("50 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(.orange)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 6)
@@ -40,20 +41,20 @@ struct Scene8_TemperatureVsHeat: View {
 
                             Image(systemName: "thermometer.high")
                                 .font(.title2)
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                             Text("80°C")
                                 .font(.caption.bold().monospacedDigit())
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                         }
 
                         Text("vs")
                             .font(.title.bold())
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
 
                         // Glass B — large
                         VStack(spacing: 8) {
                             Text("Glass B").font(.headline)
-                            Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundStyle(.orange)
+                            Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(.orange)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 8)
@@ -69,10 +70,10 @@ struct Scene8_TemperatureVsHeat: View {
 
                             Image(systemName: "thermometer.high")
                                 .font(.title2)
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                             Text("80°C")
                                 .font(.caption.bold().monospacedDigit())
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                         }
                     }
 
@@ -89,8 +90,8 @@ struct Scene8_TemperatureVsHeat: View {
                         Button("Pour both into bathtubs!") {
                             pourWater()
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.orange)
+                        
+                        .accentColor(.orange)
                         .font(.title3.weight(.semibold))
                     }
 
@@ -136,7 +137,7 @@ struct Scene8_TemperatureVsHeat: View {
                     .frame(width: 120, height: 60)
                 Text(tempLabel)
                     .font(.headline.monospacedDigit())
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
             }
             .accessibilityLabel("\(label) water temperature \(tempLabel)")
         }
@@ -147,9 +148,10 @@ struct Scene8_TemperatureVsHeat: View {
             poured = true
         }
         // Animate tub colors
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 500_000_000)
             withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.0)) {
-                tubColorA = .cyan.opacity(0.35) // barely warmer
+                tubColorA = Color.compatCyan.opacity(0.35) // barely warmer
                 tubColorB = .orange.opacity(0.4) // noticeably warmer
             }
         }

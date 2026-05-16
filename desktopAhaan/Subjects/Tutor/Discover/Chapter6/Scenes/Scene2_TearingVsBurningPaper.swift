@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 2 — Tearing vs Burning Paper.
 /// Split screen: left side tears paper (physical), right side burns paper (chemical).
 /// Tap each side for explanation. After both tapped: comparison card + GotItButton.
+@available(macOS 12, *)
 struct Scene2_TearingVsBurningPaper: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -27,14 +28,14 @@ struct Scene2_TearingVsBurningPaper: View {
 
                     Text("Two actions on the same paper. One is physical, the other chemical.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     HStack(spacing: 24) {
                         // Left: Tearing
                         VStack(spacing: 12) {
                             Text("Tearing Paper")
                                 .font(.headline)
-                                .foregroundStyle(.green)
+                                .foregroundColor(.green)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 12)
@@ -57,17 +58,17 @@ struct Scene2_TearingVsBurningPaper: View {
                                     tornTapped = true
                                 }
                             }
-                            .buttonStyle(.bordered)
-                            .tint(.green)
+                            
+                            .accentColor(.green)
                             .disabled(paperTorn)
 
                             if tornTapped {
                                 Text("Physical change")
                                     .font(.caption.bold())
-                                    .foregroundStyle(.green)
+                                    .foregroundColor(.green)
                                 Text("Still paper. Same substance.\nJust smaller pieces.")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                                     .multilineTextAlignment(.center)
                             }
                         }
@@ -79,7 +80,7 @@ struct Scene2_TearingVsBurningPaper: View {
                         VStack(spacing: 12) {
                             Text("Burning Paper")
                                 .font(.headline)
-                                .foregroundStyle(.orange)
+                                .foregroundColor(.orange)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 12)
@@ -98,13 +99,13 @@ struct Scene2_TearingVsBurningPaper: View {
                                     VStack(spacing: 6) {
                                         Text("💨 CO₂ + H₂O")
                                             .font(.caption)
-                                            .foregroundStyle(.gray)
+                                            .foregroundColor(.gray)
                                         RoundedRectangle(cornerRadius: 3)
                                             .fill(Color.gray.opacity(0.5))
                                             .frame(width: 80, height: 14)
                                         Text("Ash")
                                             .font(.caption2)
-                                            .foregroundStyle(.gray)
+                                            .foregroundColor(.gray)
                                     }
                                 }
                             }
@@ -113,7 +114,8 @@ struct Scene2_TearingVsBurningPaper: View {
                                 withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.4)) {
                                     paperBurning = true
                                 }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                Task { @MainActor in
+                                    try? await Task.sleep(nanoseconds: 1_500_000_000)
                                     withAnimation {
                                         paperBurning = false
                                         paperBurnt = true
@@ -121,17 +123,17 @@ struct Scene2_TearingVsBurningPaper: View {
                                     }
                                 }
                             }
-                            .buttonStyle(.bordered)
-                            .tint(.orange)
+                            
+                            .accentColor(.orange)
                             .disabled(paperBurning || paperBurnt)
 
                             if burntTapped {
                                 Text("Chemical change")
                                     .font(.caption.bold())
-                                    .foregroundStyle(.red)
+                                    .foregroundColor(.red)
                                 Text("New substances formed:\nash, CO₂, H₂O. Irreversible.")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                                     .multilineTextAlignment(.center)
                             }
                         }
@@ -162,7 +164,7 @@ struct Scene2_TearingVsBurningPaper: View {
                     } else {
                         Text("Try both sides to continue")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                             .padding(.bottom, 12)
                     }
                 }

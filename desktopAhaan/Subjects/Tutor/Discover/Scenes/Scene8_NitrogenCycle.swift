@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 8 — The Nitrogen Cycle. Four nodes with arrows between them. Tap an
 /// arrow to read what happens along that step. When all four arrows have been
 /// tapped, a final question slides in.
+@available(macOS 12, *)
 struct Scene8_NitrogenCycle: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -59,7 +60,7 @@ struct Scene8_NitrogenCycle: View {
                 .padding(.top, 18)
             Text("Tap each arrow to see what happens. Finish all four to unlock the question.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             // The diagram
             ZStack {
@@ -90,13 +91,13 @@ struct Scene8_NitrogenCycle: View {
             SoftShadowCard(padding: 14) {
                 if let sel = selected {
                     HStack(alignment: .top, spacing: 12) {
-                        Text(sel.label).font(.title3.bold()).foregroundStyle(.indigo)
+                        Text(sel.label).font(.title3.bold()).foregroundColor(Color.compatIndigo)
                         Spacer(minLength: 0)
                     }
                     Text(sel.explanation).font(.callout).padding(.top, 4)
                 } else {
                     Label("Tap any arrow on the diagram.", systemImage: "hand.tap.fill")
-                        .font(.callout).foregroundStyle(.secondary)
+                        .font(.callout).foregroundColor(.secondary)
                 }
             }
             .frame(maxWidth: 560)
@@ -105,13 +106,13 @@ struct Scene8_NitrogenCycle: View {
                 SoftShadowCard(padding: 16) {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("Quick check", systemImage: "questionmark.app.fill")
-                            .font(.headline).foregroundStyle(.green)
+                            .font(.headline).foregroundColor(.green)
                         Text(question).font(.body)
                         if answerRevealed {
                             Divider().padding(.vertical, 4)
                             Text(answer)
                                 .font(.callout)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.primary)
                                 .padding(.top, 2)
                         }
                         HStack {
@@ -126,10 +127,17 @@ struct Scene8_NitrogenCycle: View {
                 .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
 
-            GotItButton(action: onComplete)
-                .padding(.bottom, 12)
-                .disabled(!allTapped)
-                .opacity(allTapped ? 1 : 0.55)
+            VStack(spacing: 4) {
+                GotItButton(action: onComplete)
+                    .disabled(!allTapped)
+                    .opacity(allTapped ? 1 : 0.55)
+                if !allTapped {
+                    Text("Tap all steps to continue")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .padding(.bottom, 12)
 
             Spacer(minLength: 0)
         }
@@ -154,7 +162,7 @@ struct Scene8_NitrogenCycle: View {
             }
             .trim(from: 0, to: progress)
             .stroke(
-                visited ? Color.green : (isSelected ? Color.indigo : Color.gray.opacity(0.5)),
+                visited ? Color.green : (isSelected ? Color.compatIndigo : Color.gray.opacity(0.5)),
                 style: StrokeStyle(lineWidth: 3, lineCap: .round, dash: visited ? [] : [6, 4])
             )
 
@@ -171,9 +179,9 @@ struct Scene8_NitrogenCycle: View {
                     .padding(.vertical, 4)
                     .background(
                         Capsule()
-                            .fill(visited ? Color.green.opacity(0.18) : Color.indigo.opacity(0.12))
+                            .fill(visited ? Color.green.opacity(0.18) : Color.compatIndigo.opacity(0.12))
                     )
-                    .foregroundStyle(visited ? .green : .indigo)
+                    .foregroundColor(visited ? .green : Color.compatIndigo)
             }
             .buttonStyle(.plain)
             .position(mid)
@@ -196,14 +204,14 @@ struct Scene8_NitrogenCycle: View {
     private func node(at p: CGPoint, emoji: String, label: String) -> some View {
         VStack(spacing: 2) {
             Circle()
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
                 .frame(width: 64, height: 64)
                 .overlay(Text(emoji).font(.system(size: 32)))
-                .overlay(Circle().strokeBorder(.indigo.opacity(0.4), lineWidth: 2))
+                .overlay(Circle().strokeBorder(Color.compatIndigo.opacity(0.4), lineWidth: 2))
                 .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 3)
             Text(label)
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
         }
         .position(p)
     }

@@ -11,6 +11,7 @@ import Combine
 /// 2. `selectedTab` — Sanskrit-only internal tab navigation (translate / scan
 ///    / practice / history / favorites / settings). Preserved verbatim so the
 ///    existing menu-bar shortcuts and Sanskrit screens keep working.
+@MainActor
 final class AppState: ObservableObject {
     @Published var isOnline: Bool = true
 

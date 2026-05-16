@@ -6,6 +6,7 @@ import SwiftUI
 /// Tap each to drop it in. Once dropped, HCl droplets (red) and pepsin enzymes (purple)
 /// animate around it. After 4 seconds, food breaks into smaller fragments.
 /// Caption from ch02_t01_c04.
+@available(macOS 12, *)
 struct Scene3_TheStomachBath: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -14,6 +15,7 @@ struct Scene3_TheStomachBath: View {
     @State private var droppedItems: [DroppedFood] = []
     @State private var enzymeParticles: [EnzymeParticle] = []
     @State private var nextId = 0
+    @State private var sceneActive = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var stomachExplanation: String {
@@ -26,7 +28,7 @@ struct Scene3_TheStomachBath: View {
             VStack(spacing: 16) {
                 Text("The Stomach Bath")
                     .font(.title.bold())
-                    .foregroundStyle(.red)
+                    .foregroundColor(.red)
 
                 HStack(spacing: 12) {
                     ForEach([("Protein", "🥩"), ("Starch", "🍚"), ("Milk", "🥛")], id: \.0) { name, emoji in
@@ -46,9 +48,13 @@ struct Scene3_TheStomachBath: View {
                 .padding(.horizontal, 24)
 
                 ZStack {
-                    StomachShape()
-                        .fill(Color.pink.opacity(0.15))
-                        .stroke(Color.pink.opacity(0.5), lineWidth: 2)
+                    ZStack {
+                        StomachShape()
+                            .foregroundColor(Color.pink.opacity(0.15))
+                        StomachShape()
+                            .stroke(lineWidth: 2)
+                            .foregroundColor(Color.pink.opacity(0.5))
+                    }
 
                     // Dropped food items
                     ForEach(droppedItems) { item in
@@ -79,10 +85,10 @@ struct Scene3_TheStomachBath: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Stomach Bath", systemImage: "drop.triangle.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.red)
+                            .foregroundColor(.red)
                         Text(stomachExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -93,7 +99,11 @@ struct Scene3_TheStomachBath: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .onAppear {
+                sceneActive = true
                 startEnzymeAnimation()
+            }
+            .onDisappear {
+                sceneActive = false
             }
         }
     }
@@ -110,7 +120,8 @@ struct Scene3_TheStomachBath: View {
         droppedItems.append(food)
 
         // Simulate digestion after 4 seconds
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 4_000_000_000)
             if let index = droppedItems.firstIndex(where: { $0.id == food.id }) {
                 withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.8)) {
                     droppedItems[index].broken = true
@@ -123,6 +134,7 @@ struct Scene3_TheStomachBath: View {
         if reduceMotion { return }
 
         func generateParticles() {
+            guard sceneActive else { return }
             var particles: [EnzymeParticle] = []
             for _ in 0..<8 {
                 particles.append(EnzymeParticle(
@@ -134,9 +146,10 @@ struct Scene3_TheStomachBath: View {
             }
             enzymeParticles = particles
 
-            // Animate particles
-            for i in 0..<particles.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.1) {
+            Task { @MainActor in
+                for i in 0..<particles.count {
+                    try? await Task.sleep(nanoseconds: 100_000_000)
+                    guard sceneActive else { return }
                     withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
                         if i < enzymeParticles.count {
                             enzymeParticles[i].x += CGFloat.random(in: -60...60)
@@ -146,8 +159,8 @@ struct Scene3_TheStomachBath: View {
                 }
             }
 
-            // Restart animation loop
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
                 generateParticles()
             }
         }

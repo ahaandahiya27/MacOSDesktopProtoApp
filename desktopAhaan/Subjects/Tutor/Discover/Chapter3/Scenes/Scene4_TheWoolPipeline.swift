@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// 6 hexagonal nodes connected by arrows: Shearing → Scouring → Sorting → Carding → Spinning → Weaving.
 /// Each node is tappable; tapping shows a step description. After all 6 are tapped, a sweater ✅ appears.
+@available(macOS 12, *)
 struct Scene4_TheWoolPipeline: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -27,12 +28,12 @@ struct Scene4_TheWoolPipeline: View {
             HStack {
                 Text("The Wool Pipeline")
                     .font(.largeTitle.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Spacer()
                 if tappedSteps.count == 6 {
                     Label("Complete!", systemImage: "checkmark.circle.fill")
                         .font(.caption)
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                 }
             }
             .padding(.horizontal, 24)
@@ -53,7 +54,7 @@ struct Scene4_TheWoolPipeline: View {
                         VStack(spacing: 4) {
                             Image(systemName: "arrow.down")
                                 .font(.body.weight(.semibold))
-                                .foregroundStyle(.gray.opacity(0.5))
+                                .foregroundColor(.gray.opacity(0.5))
                         }
                         .frame(maxWidth: .infinity)
                     }
@@ -81,16 +82,16 @@ struct Scene4_TheWoolPipeline: View {
                             VStack(alignment: .leading) {
                                 Text(steps[selected].label)
                                     .font(.headline)
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("Step \(selected + 1) of 6")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
                         }
                         Divider()
                         Text(steps[selected].desc)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                     }
                 }
                 .frame(maxWidth: 600)
@@ -122,15 +123,15 @@ struct Scene4_TheWoolPipeline: View {
                         .font(.system(size: 40))
                     Text(step.label)
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.primary)
+                        .foregroundColor(.primary)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(16)
-                .background(isTapped ? Color.indigo.opacity(0.15) : Color.gray.opacity(0.05))
+                .background(isTapped ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.05))
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .strokeBorder(isTapped ? Color.indigo : Color.clear, lineWidth: 2)
+                        .strokeBorder(isTapped ? Color.compatIndigo : Color.clear, lineWidth: 2)
                 )
             }
             .buttonStyle(.plain)

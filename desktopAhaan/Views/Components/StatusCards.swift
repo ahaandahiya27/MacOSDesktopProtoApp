@@ -7,10 +7,10 @@ struct OfflineBanner: View {
             Text("You're offline. Some features need internet.")
                 .font(.caption)
         }
-        .foregroundStyle(.orange)
+        .foregroundColor(.orange)
         .padding(10)
         .frame(maxWidth: .infinity)
-        .background(.orange.opacity(0.1))
+        .background(Color.orange.opacity(0.1))
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .padding(.horizontal)
     }
@@ -22,14 +22,14 @@ struct ErrorCard: View {
     var body: some View {
         HStack(spacing: 10) {
             Image(systemName: "exclamationmark.triangle.fill")
-                .foregroundStyle(.red)
+                .foregroundColor(.red)
             Text(message)
                 .font(.subheadline)
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.red.opacity(0.08))
+        .background(Color.red.opacity(0.08))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.horizontal)
     }
@@ -44,10 +44,10 @@ struct InfoCard: View {
     var body: some View {
         HStack(spacing: 10) {
             Image(systemName: icon)
-                .foregroundStyle(color)
+                .foregroundColor(color)
             Text(message)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             Spacer()
 
@@ -55,12 +55,13 @@ struct InfoCard: View {
                 Button(action: dismiss) {
                     Image(systemName: "xmark")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
-                        .padding(6)
+                        .foregroundColor(.secondary)
+                        .frame(width: 28, height: 28)
                         .background(Color.gray.opacity(0.25))
                         .clipShape(Circle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Dismiss")
             }
         }
         .padding()
@@ -80,12 +81,12 @@ struct EmptyStateView: View {
         VStack(spacing: 12) {
             Image(systemName: icon)
                 .font(.system(size: 48))
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             Text(title)
                 .font(.headline)
             Text(subtitle)
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
         }
         .padding(40)

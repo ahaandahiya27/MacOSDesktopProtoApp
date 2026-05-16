@@ -17,6 +17,12 @@ import Combine
 ///    locate the SubjectRegistry.swift file and walks up to `Subjects/Packs/`.
 ///    This makes pack loading work even when the build phase hasn't bundled
 ///    the JSON files yet.
+private func debugLog(_ items: Any...) {
+    #if DEBUG
+    print(items.map { "\($0)" }.joined(separator: " "))
+    #endif
+}
+
 @MainActor
 final class SubjectRegistry: ObservableObject {
 
@@ -36,13 +42,13 @@ final class SubjectRegistry: ObservableObject {
     func reload() async {
         isLoading = true
         let urls = Self.bundledPackURLs()
-        print("[SubjectRegistry] reload — found \(urls.count) candidate URL(s).")
+        debugLog("[SubjectRegistry] reload — found \(urls.count) candidate URL(s).")
         for url in urls {
-            print("  candidate: \(url.path)")
+            debugLog("  candidate: \(url.path)")
         }
 
         if urls.isEmpty {
-            print("[SubjectRegistry] No pack files were found. Sanskrit and " +
+            debugLog("[SubjectRegistry] No pack files were found. Sanskrit and " +
                   "Science subjects won't appear. Make sure the JSON files " +
                   "are inside Subjects/Packs/ in the source tree.")
             self.packs = []
@@ -69,13 +75,13 @@ final class SubjectRegistry: ObservableObject {
         for (pack, err) in results {
             if let p = pack {
                 loaded.append(p)
-                print("[SubjectRegistry] Loaded \(p.id): \(p.title) — " +
+                debugLog("[SubjectRegistry] Loaded \(p.id): \(p.title) — " +
                       "\(p.chapters.count) chapters, \(p.conceptCount) concepts, " +
                       "\(p.questionCount) questions")
             }
             if let e = err {
                 errors.append(e)
-                print("[SubjectRegistry] FAILED to load \(e)")
+                debugLog("[SubjectRegistry] FAILED to load \(e)")
             }
         }
 
@@ -115,7 +121,7 @@ final class SubjectRegistry: ObservableObject {
         if let urls = Bundle.main.urls(forResourcesWithExtension: "json",
                                        subdirectory: "Subjects/Packs"),
            !urls.isEmpty {
-            print("[SubjectRegistry] Using subdirectory lookup (\(urls.count) files).")
+            debugLog("[SubjectRegistry] Using subdirectory lookup (\(urls.count) files).")
             return urls.filter(isPackFilename)
         }
 
@@ -123,7 +129,7 @@ final class SubjectRegistry: ObservableObject {
         if let urls = Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) {
             let filtered = urls.filter(isPackFilename)
             if !filtered.isEmpty {
-                print("[SubjectRegistry] Using flat-bundle lookup (\(filtered.count) files).")
+                debugLog("[SubjectRegistry] Using flat-bundle lookup (\(filtered.count) files).")
                 return filtered
             }
         }
@@ -154,15 +160,15 @@ final class SubjectRegistry: ObservableObject {
 
         guard let files = try? fm.contentsOfDirectory(at: packsDir,
                                                        includingPropertiesForKeys: nil) else {
-            print("[SubjectRegistry] Source-tree fallback: directory not readable: \(packsDir.path)")
+            debugLog("[SubjectRegistry] Source-tree fallback: directory not readable: \(packsDir.path)")
             return []
         }
 
         let packs = files.filter(isPackFilename)
         if packs.isEmpty {
-            print("[SubjectRegistry] Source-tree fallback: no pack files at \(packsDir.path)")
+            debugLog("[SubjectRegistry] Source-tree fallback: no pack files at \(packsDir.path)")
         } else {
-            print("[SubjectRegistry] Using source-tree fallback (\(packs.count) files at \(packsDir.path)).")
+            debugLog("[SubjectRegistry] Using source-tree fallback (\(packs.count) files at \(packsDir.path)).")
         }
         return packs
     }

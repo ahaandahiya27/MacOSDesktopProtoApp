@@ -1,15 +1,12 @@
 import SwiftUI
-import SwiftData
 
-/// Renders a single question with: prompt, collapsible solution, common
-/// mistakes, and 2+ variations (each with its own answer + steps).
 struct QuestionDetailView: View {
     let pack: SubjectPack
     let question: Question
 
     @State private var revealSolution = false
     @State private var typedAnswer = ""
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var dataStore: DataStore
 
     var body: some View {
         ScrollView {
@@ -27,7 +24,8 @@ struct QuestionDetailView: View {
             .padding(20)
             .frame(maxWidth: 820, alignment: .leading)
         }
-        .navigationTitle("Question")
+        .background(Color(NSColor.windowBackgroundColor))
+        .navigationTitle(String(question.prompt.prefix(50)))
     }
 
     // MARK: - Sections
@@ -37,13 +35,13 @@ struct QuestionDetailView: View {
             Label(question.questionType.displayName, systemImage: "questionmark.app.fill")
                 .font(.caption.bold())
                 .padding(.horizontal, 8).padding(.vertical, 4)
-                .background(.indigo.opacity(0.15), in: Capsule())
+                .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
             QuestionDifficultyBadge(level: question.difficulty)
             Spacer()
             if !question.pageRefs.isEmpty {
                 Text("p. \(question.pageRefs.map(String.init).joined(separator: ", "))")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
             }
         }
     }
@@ -54,54 +52,63 @@ struct QuestionDetailView: View {
             .lineSpacing(4)
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(.background.secondary, in: RoundedRectangle(cornerRadius: 14))
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.gray.opacity(0.1))
+            )
     }
 
     private func optionsList(_ options: [String]) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Options").font(.caption).foregroundStyle(.secondary).textCase(.uppercase)
+            Text("Options").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
             ForEach(Array(options.enumerated()), id: \.offset) { idx, opt in
                 HStack {
                     Text("\(["A","B","C","D","E","F"][safe: idx] ?? "?").")
                         .font(.body.bold())
                         .frame(width: 22, alignment: .leading)
-                        .foregroundStyle(.indigo)
+                        .foregroundColor(Color.compatIndigo)
                     Text(opt).font(.body)
                     Spacer()
                 }
                 .padding(.vertical, 6)
                 .padding(.horizontal, 10)
-                .background(.background.secondary, in: RoundedRectangle(cornerRadius: 10))
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.gray.opacity(0.1))
+                )
             }
         }
     }
 
     private var userAnswerField: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("Try it yourself").font(.caption).foregroundStyle(.secondary).textCase(.uppercase)
+            Text("Try it yourself").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
             HStack(spacing: 8) {
-                TextField("Type your answer", text: $typedAnswer)
+                TextField("Type your answer", text: $typedAnswer, onCommit: { recordAttempt() })
                     .textFieldStyle(.roundedBorder)
                 Button("Check") { recordAttempt() }
-                    .buttonStyle(.borderedProminent)
                     .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
         }
     }
 
     private var solutionDisclosure: some View {
-        DisclosureGroup(isExpanded: $revealSolution) {
+        ExpandableCard(
+            isExpanded: $revealSolution,
+            systemImage: "lightbulb.fill",
+            title: "Show worked solution"
+        ) {
             VStack(alignment: .leading, spacing: 10) {
                 Text(question.answer)
                     .font(.body.bold())
                     .padding(10)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(.green.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
                 ForEach(Array(question.solutionSteps.enumerated()), id: \.offset) { idx, step in
                     HStack(alignment: .top, spacing: 10) {
                         Text("\(idx + 1).")
                             .font(.body.bold())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .frame(width: 22, alignment: .trailing)
                         Text(step)
                             .font(.body)
@@ -109,13 +116,7 @@ struct QuestionDetailView: View {
                     }
                 }
             }
-            .padding(.top, 6)
-        } label: {
-            Label("Show worked solution", systemImage: "lightbulb.fill")
-                .font(.headline)
         }
-        .padding(16)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 14))
     }
 
     @ViewBuilder
@@ -127,13 +128,13 @@ struct QuestionDetailView: View {
                 ForEach(Array(question.commonMistakes.enumerated()), id: \.offset) { _, m in
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundStyle(.red)
+                            .foregroundColor(.red)
                         Text(m).font(.callout).lineSpacing(3)
                     }
                 }
             }
             .padding(16)
-            .background(.red.opacity(0.08), in: RoundedRectangle(cornerRadius: 14))
+            .background(RoundedRectangle(cornerRadius: 14).fill(Color.red.opacity(0.08)))
         }
     }
 
@@ -158,14 +159,12 @@ struct QuestionDetailView: View {
         let isCorrect = !normalizedUser.isEmpty &&
             (normalizedUser == normalizedTruth || normalizedTruth.contains(normalizedUser))
 
-        modelContext.insert(QuestionAttempt(
+        dataStore.insertAttempt(QuestionAttempt(
             subjectPackId: pack.id,
             questionId: question.id,
             userAnswer: typedAnswer,
             isCorrect: isCorrect
         ))
-        do { try modelContext.save() }
-        catch { print("[QuestionDetailView] attempt save failed: \(error)") }
         revealSolution = true
     }
 }
@@ -179,10 +178,9 @@ struct QuestionDifficultyBadge: View {
             ForEach(1...5, id: \.self) { i in
                 Image(systemName: i <= level ? "circle.fill" : "circle")
                     .font(.caption2)
-                    .foregroundStyle(i <= level ? color : .secondary.opacity(0.4))
+                    .foregroundColor(i <= level ? color : .secondary.opacity(0.4))
             }
         }
-        // Otherwise VoiceOver reads "circle.fill, circle.fill, circle, circle, circle".
         .accessibilityElement(children: .ignore)
         .accessibilityLabel("Difficulty \(level) of 5")
     }
@@ -202,30 +200,26 @@ private struct VariationCard: View {
     @State private var expanded = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            DisclosureGroup(isExpanded: $expanded) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(variation.answer)
-                        .font(.body.bold())
-                        .padding(8)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(.green.opacity(0.12), in: RoundedRectangle(cornerRadius: 6))
-                    ForEach(Array(variation.solutionSteps.enumerated()), id: \.offset) { idx, step in
-                        HStack(alignment: .top, spacing: 8) {
-                            Text("\(idx + 1).").font(.callout.bold()).foregroundStyle(.indigo)
-                            Text(step).font(.callout).lineSpacing(3)
-                        }
+        ExpandableCard(
+            isExpanded: $expanded,
+            systemImage: "arrow.triangle.branch",
+            title: variation.prompt,
+            tint: Color.compatIndigo
+        ) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(variation.answer)
+                    .font(.body.bold())
+                    .padding(8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(RoundedRectangle(cornerRadius: 6).fill(Color.green.opacity(0.12)))
+                ForEach(Array(variation.solutionSteps.enumerated()), id: \.offset) { idx, step in
+                    HStack(alignment: .top, spacing: 8) {
+                        Text("\(idx + 1).").font(.callout.bold()).foregroundColor(Color.compatIndigo)
+                        Text(step).font(.callout).lineSpacing(3)
                     }
                 }
-                .padding(.top, 4)
-            } label: {
-                Text(variation.prompt)
-                    .font(.body)
-                    .lineSpacing(3)
             }
         }
-        .padding(14)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 12))
     }
 }
 

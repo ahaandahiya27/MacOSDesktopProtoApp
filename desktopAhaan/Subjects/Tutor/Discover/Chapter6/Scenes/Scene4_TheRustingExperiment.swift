@@ -4,6 +4,7 @@ import SwiftUI
 /// Three test tubes showing that rusting needs BOTH water AND oxygen.
 /// (1) nail in water+air = rust, (2) nail in boiled water (no air) = no rust,
 /// (3) nail in dry air (CaCl2) = no rust. Canvas animation of rust forming.
+@available(macOS 12, *)
 struct Scene4_TheRustingExperiment: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -55,7 +56,7 @@ struct Scene4_TheRustingExperiment: View {
 
                     Text("Three test tubes, same iron nail. Tap each to fast-forward 2 weeks.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Three test tubes
                     HStack(spacing: 28) {
@@ -79,7 +80,7 @@ struct Scene4_TheRustingExperiment: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label("Conclusion", systemImage: "checkmark.seal.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("Rusting requires BOTH water AND oxygen. Remove either one and the iron nail stays shiny. Rusting is a chemical change: Iron + Water + Oxygen → Iron oxide (rust). This is why we keep iron objects dry and painted.")
                                     .font(.body)
                                     .lineSpacing(4)
@@ -132,7 +133,7 @@ struct Scene4_TheRustingExperiment: View {
                 // Water fill
                 if tube.hasWater {
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.cyan.opacity(0.2))
+                        .fill(Color.compatCyan.opacity(0.2))
                         .frame(width: 70, height: height * 0.6)
                         .padding(.bottom, 4)
                 }
@@ -174,7 +175,7 @@ struct Scene4_TheRustingExperiment: View {
                 if !tube.hasWater && tube.hasAir {
                     Text("CaCl₂")
                         .font(.system(size: 9, weight: .bold))
-                        .foregroundStyle(.orange)
+                        .foregroundColor(.orange)
                         .padding(.bottom, 8)
                 }
             }
@@ -183,21 +184,21 @@ struct Scene4_TheRustingExperiment: View {
             // Labels
             Text(tube.contents)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .frame(width: 100)
 
             if done {
                 Text(tube.rusts ? "RUSTED" : "No rust")
                     .font(.caption.bold())
-                    .foregroundStyle(tube.rusts ? .brown : .green)
+                    .foregroundColor(tube.rusts ? .brown : .green)
             }
 
             // Fast-forward button
             Button("Fast-forward") {
                 fastForward(index)
             }
-            .buttonStyle(.bordered)
+            
             .controlSize(.small)
             .disabled(done)
         }

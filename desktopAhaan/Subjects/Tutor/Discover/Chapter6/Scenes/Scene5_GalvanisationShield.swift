@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 5 — Galvanisation Shield.
 /// Iron pipe exposed to rain rusts. Then zinc coating applied (galvanisation).
 /// Rain hits but no rust. Shows zinc protecting iron. Also mentions painting, oiling, alloying.
+@available(macOS 12, *)
 struct Scene5_GalvanisationShield: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -29,7 +30,7 @@ struct Scene5_GalvanisationShield: View {
 
                     Text("How do we stop iron from rusting?")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
 
@@ -49,7 +50,7 @@ struct Scene5_GalvanisationShield: View {
                                         drop.move(to: CGPoint(x: x, y: fall))
                                         drop.addLine(to: CGPoint(x: x, y: fall + 10))
                                         ctx.opacity = 0.4
-                                        ctx.stroke(drop, with: .color(.cyan), lineWidth: 1.5)
+                                        ctx.stroke(drop, with: .color(Color.compatCyan), lineWidth: 1.5)
                                     }
                                 }
                             }
@@ -72,7 +73,7 @@ struct Scene5_GalvanisationShield: View {
                                     // Zinc coating layer
                                     RoundedRectangle(cornerRadius: 6)
                                         .strokeBorder(
-                                            step == .protected ? Color.mint.opacity(0.8) : .clear,
+                                            step == .protected ? Color.compatMint.opacity(0.8) : .clear,
                                             lineWidth: step == .protected ? 5 : 0
                                         )
                                 )
@@ -87,7 +88,7 @@ struct Scene5_GalvanisationShield: View {
                         if step == .coating || step == .protected {
                             Text("Zn")
                                 .font(.title3.bold())
-                                .foregroundStyle(.mint)
+                                .foregroundColor(.compatMint)
                                 .offset(x: 50)
                                 .transition(.opacity)
                         }
@@ -117,8 +118,8 @@ struct Scene5_GalvanisationShield: View {
                                 rustLevel = 1.0
                             }
                         }
-                        .buttonStyle(.bordered)
-                        .tint(.cyan)
+                        
+                        .accentColor(Color.compatCyan)
                         .disabled(step != .exposed || rainActive)
 
                         Button("Apply zinc coating") {
@@ -127,21 +128,22 @@ struct Scene5_GalvanisationShield: View {
                                 rainActive = false
                                 rustLevel = 0
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            Task { @MainActor in
+                                try? await Task.sleep(nanoseconds: 1_000_000_000)
                                 withAnimation {
                                     step = .protected
                                     rainActive = true
                                 }
                             }
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.mint)
+                        
+                        .accentColor(.compatMint)
                         .disabled(step != .exposed || !rainActive)
                     }
 
                     Text(stepLabel)
                         .font(.headline)
-                        .foregroundStyle(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? .brown : .secondary))
+                        .foregroundColor(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? .brown : .secondary))
 
                     Spacer()
                     Spacer()
@@ -205,7 +207,7 @@ struct Scene5_GalvanisationShield: View {
         VStack(spacing: 4) {
             Image(systemName: icon)
                 .font(.title3)
-                .foregroundStyle(color)
+                .foregroundColor(color)
             Text(label)
                 .font(.caption2)
                 .multilineTextAlignment(.center)

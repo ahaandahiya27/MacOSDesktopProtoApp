@@ -5,6 +5,7 @@ import SwiftUI
 /// Cocoon in centre. "Pull thread!" button unwinds filament onto a reel to the right.
 /// Counter: "Filament unwound: X m / 1200 m". When full, cocoon shrinks and finished thread shown.
 /// Includes ethics disclosure: "Why is the pupa killed?"
+@available(macOS 12, *)
 struct Scene7_TheCocoonReel: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -23,12 +24,12 @@ struct Scene7_TheCocoonReel: View {
             HStack {
                 Text("The Cocoon Reel")
                     .font(.largeTitle.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Spacer()
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("Progress")
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                     ProgressView(value: metersUnwound, total: maxMeters)
                         .frame(width: 120)
                 }
@@ -46,7 +47,7 @@ struct Scene7_TheCocoonReel: View {
                             .scaleEffect(cocoonScale)
                         Text("Cocoon")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .frame(maxWidth: .infinity)
 
@@ -87,7 +88,7 @@ struct Scene7_TheCocoonReel: View {
 
                         Text("Reel")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -99,10 +100,10 @@ struct Scene7_TheCocoonReel: View {
             VStack(spacing: 4) {
                 Text("Filament Unwound")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 Text("\(Int(metersUnwound)) m / \(Int(maxMeters)) m")
                     .font(.title2.weight(.bold))
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
             }
 
             // Pull thread button
@@ -112,29 +113,29 @@ struct Scene7_TheCocoonReel: View {
                 Label(metersUnwound >= maxMeters ? "Complete!" : "Pull Thread!", systemImage: "arrow.right.to.line")
                     .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.indigo)
+            .buttonStyle(.bordered)
+            .accentColor(Color.compatIndigo)
             .disabled(metersUnwound >= maxMeters)
             .padding(.horizontal, 24)
 
-            // Ethics disclosure
-            DisclosureGroup("Why is the pupa killed?") {
-                SoftShadowCard(padding: 12) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Traditional silk production kills the pupa inside the cocoon before reeling so the cocoon remains whole and the fibre unbroken.")
-                            .font(.caption)
-                            .foregroundStyle(.primary)
-                        Divider()
-                        Text("Some believe this is ethically questionable. Peace silk lets the moth emerge first, but yields shorter, lower-grade fibre. You can choose based on your values.")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
+            ExpandableCard(
+                isExpanded: $showEthicsDisclosure,
+                systemImage: "exclamationmark.circle",
+                title: "Why is the pupa killed?",
+                tint: .orange,
+                background: Color.gray.opacity(0.08)
+            ) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Traditional silk production kills the pupa inside the cocoon before reeling so the cocoon remains whole and the fibre unbroken.")
+                        .font(.caption)
+                        .foregroundColor(.primary)
+                    Divider()
+                    Text("Some believe this is ethically questionable. Peace silk lets the moth emerge first, but yields shorter, lower-grade fibre. You can choose based on your values.")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
             }
             .padding(.horizontal, 24)
-            .padding(12)
-            .background(.white.opacity(0.5))
-            .cornerRadius(8)
 
             Spacer()
 

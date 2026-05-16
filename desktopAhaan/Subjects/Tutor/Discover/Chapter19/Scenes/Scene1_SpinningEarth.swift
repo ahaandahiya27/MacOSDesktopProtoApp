@@ -4,6 +4,7 @@ import SwiftUI
 /// Interactive day/night demonstration. A circle representing Earth with a vertical
 /// dividing line between day (yellow) and night (dark blue). Tap "Spin" to rotate.
 /// After 3 spins the Got It button appears.
+@available(macOS 12, *)
 struct Scene1_SpinningEarth: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -26,7 +27,7 @@ struct Scene1_SpinningEarth: View {
 
                     Text("Tap Spin to watch Earth rotate and create day & night.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
 
@@ -36,11 +37,11 @@ struct Scene1_SpinningEarth: View {
                         VStack(spacing: 6) {
                             Image(systemName: "sun.max.fill")
                                 .font(.system(size: 54))
-                                .foregroundStyle(.yellow)
+                                .foregroundColor(.yellow)
                                 .shadow(color: .yellow.opacity(0.5), radius: 12)
                             Text("Sun")
                                 .font(.caption.weight(.medium))
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
 
                         // Earth
@@ -54,7 +55,7 @@ struct Scene1_SpinningEarth: View {
                             Circle()
                                 .fill(
                                     LinearGradient(
-                                        colors: [.green.opacity(0.7), .cyan.opacity(0.5)],
+                                        colors: [.green.opacity(0.7), Color.compatCyan.opacity(0.5)],
                                         startPoint: .top,
                                         endPoint: .bottom
                                     )
@@ -74,7 +75,7 @@ struct Scene1_SpinningEarth: View {
                             // North pole label
                             Text("N")
                                 .font(.caption2.bold())
-                                .foregroundStyle(.white)
+                                .foregroundColor(.white)
                                 .offset(y: -88)
                                 .rotationEffect(.degrees(rotationAngle))
 
@@ -96,13 +97,13 @@ struct Scene1_SpinningEarth: View {
                                 .padding(.horizontal, 24)
                                 .padding(.vertical, 10)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.indigo)
+                        
+                        .accentColor(Color.compatIndigo)
                         .disabled(isSpinning)
 
                         Text("\(spinCount) / 3 rotations")
                             .font(.caption.weight(.medium))
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .padding(.top, 8)
 
@@ -154,7 +155,9 @@ struct Scene1_SpinningEarth: View {
         withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
             rotationAngle = target
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + (reduceMotion ? 0.1 : 1.6)) {
+        let delay = UInt64((reduceMotion ? 0.1 : 1.6) * 1_000_000_000)
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: delay)
             spinCount += 1
             isSpinning = false
         }

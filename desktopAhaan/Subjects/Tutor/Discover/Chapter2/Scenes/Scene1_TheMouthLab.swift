@@ -6,6 +6,7 @@ import SwiftUI
 /// categorized as incisors, canines, premolars, molars. Tap each tooth to
 /// highlight and show its name and role. A toggle shows comparative animal teeth
 /// (lion's jaw). Pulls text from ch02_t01_c03.
+@available(macOS 12, *)
 struct Scene1_TheMouthLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -36,7 +37,7 @@ struct Scene1_TheMouthLab: View {
                             .padding(.horizontal, 24)
                         Text("A lion's teeth are sharp for tearing meat!")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     } else {
                         HumanJawDiagram(selectedTooth: $selectedTooth)
                             .frame(height: 200)
@@ -54,10 +55,10 @@ struct Scene1_TheMouthLab: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("The Mouth Lab", systemImage: "mouth.fill")
                                 .font(.title2.bold())
-                                .foregroundStyle(.orange)
+                                .foregroundColor(.orange)
                             Text(teethExplanation)
                                 .font(.body)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.primary)
                                 .lineSpacing(4)
                         }
                     }
@@ -84,6 +85,7 @@ struct Scene1_TheMouthLab: View {
 
 // MARK: - Human Jaw Diagram
 
+@available(macOS 12, *)
 struct HumanJawDiagram: View {
     @Binding var selectedTooth: Int?
 
@@ -146,6 +148,7 @@ struct HumanJawDiagram: View {
 
 // MARK: - Tooth Callout
 
+@available(macOS 12, *)
 struct ToothCallout: View {
     let tooth: String
 
@@ -154,10 +157,10 @@ struct ToothCallout: View {
             HStack(spacing: 12) {
                 Image(systemName: "arrowshape.left.fill")
                     .font(.title2)
-                    .foregroundStyle(.orange)
+                    .foregroundColor(.orange)
                 Text(tooth)
                     .font(.body.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
                 Spacer()
             }
         }
@@ -167,6 +170,7 @@ struct ToothCallout: View {
 
 // MARK: - Lion Jaw Diagram
 
+@available(macOS 12, *)
 struct LionJawDiagram: View {
     var body: some View {
         Canvas { context, _ in

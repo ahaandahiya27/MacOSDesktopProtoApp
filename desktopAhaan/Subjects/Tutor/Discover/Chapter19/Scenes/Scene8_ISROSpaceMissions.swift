@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 8 — ISRO Space Missions.
 /// Four Indian space mission cards side by side. Tap each for details.
 /// After all 4 explored, show GotIt.
+@available(macOS 12, *)
 struct Scene8_ISROSpaceMissions: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -28,7 +29,7 @@ struct Scene8_ISROSpaceMissions: View {
             name: "Chandrayaan-1",
             year: "2008",
             symbol: "moon.fill",
-            color: .indigo,
+            color: Color.compatIndigo,
             tagline: "India's First Lunar Mission",
             facts: [
                 "India\u{2019}s first mission to the Moon, launched on 22 October 2008.",
@@ -42,7 +43,7 @@ struct Scene8_ISROSpaceMissions: View {
             name: "Chandrayaan-3",
             year: "2023",
             symbol: "moon.fill",
-            color: .teal,
+            color: Color.compatTeal,
             tagline: "Soft Landing near Lunar South Pole",
             facts: [
                 "Successfully soft-landed on the Moon on 23 August 2023, making India the 4th country to achieve this.",
@@ -93,7 +94,7 @@ struct Scene8_ISROSpaceMissions: View {
 
                     Text("\(explored.count) / \(missions.count) missions explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Space backdrop
                     ZStack {
@@ -120,7 +121,7 @@ struct Scene8_ISROSpaceMissions: View {
                         // ISRO label
                         Text("ISRO")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
-                            .foregroundStyle(.white.opacity(0.15))
+                            .foregroundColor(.white.opacity(0.15))
                     }
                     .frame(maxWidth: 540, maxHeight: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
@@ -144,24 +145,24 @@ struct Scene8_ISROSpaceMissions: View {
                                 VStack(spacing: 6) {
                                     Image(systemName: mission.symbol)
                                         .font(.title2)
-                                        .foregroundStyle(isSelected ? .white : mission.color)
+                                        .foregroundColor(isSelected ? .white : mission.color)
                                     Text(mission.name)
                                         .font(.caption.weight(.bold))
-                                        .foregroundStyle(isSelected ? .white : .primary)
+                                        .foregroundColor(isSelected ? .white : .primary)
                                         .multilineTextAlignment(.center)
                                     Text(mission.year)
                                         .font(.caption2.weight(.medium))
-                                        .foregroundStyle(isSelected ? .white.opacity(0.8) : .secondary)
+                                        .foregroundColor(isSelected ? .white.opacity(0.8) : .secondary)
                                     if isExplored {
                                         Image(systemName: "checkmark.circle.fill")
                                             .font(.caption2)
-                                            .foregroundStyle(isSelected ? .white : .green)
+                                            .foregroundColor(isSelected ? .white : .green)
                                     }
                                 }
                                 .frame(width: 115, height: 110)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? mission.color : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? mission.color : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -188,13 +189,13 @@ struct Scene8_ISROSpaceMissions: View {
                                 HStack(spacing: 8) {
                                     Image(systemName: mission.symbol)
                                         .font(.title2)
-                                        .foregroundStyle(mission.color)
+                                        .foregroundColor(mission.color)
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text(mission.name)
                                             .font(.title2.bold())
                                         Text("\(mission.tagline) (\(mission.year))")
                                             .font(.subheadline.weight(.medium))
-                                            .foregroundStyle(.secondary)
+                                            .foregroundColor(.secondary)
                                     }
                                 }
 
@@ -202,18 +203,18 @@ struct Scene8_ISROSpaceMissions: View {
                                     HStack(alignment: .top, spacing: 6) {
                                         Image(systemName: "arrow.right.circle.fill")
                                             .font(.caption2)
-                                            .foregroundStyle(mission.color.opacity(0.7))
+                                            .foregroundColor(mission.color.opacity(0.7))
                                             .padding(.top, 3)
                                         Text(fact)
                                             .font(.callout)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundColor(.secondary)
                                             .lineSpacing(3)
                                     }
                                 }
                             } else {
                                 Label("Indian Space Exploration", systemImage: "airplane")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("India\u{2019}s space agency ISRO has achieved remarkable milestones \u{2014} from discovering water on the Moon to reaching Mars on the first try. Tap each mission card to explore these proud achievements!")
                                     .font(.body)
                                     .lineSpacing(4)

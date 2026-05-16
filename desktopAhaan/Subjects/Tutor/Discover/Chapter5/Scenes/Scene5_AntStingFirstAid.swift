@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 5 — Ant Sting First Aid.
 /// Story: ant stings, user picks correct remedy (baking soda) from options.
+@available(macOS 12, *)
 struct Scene5_AntStingFirstAid: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -56,7 +57,7 @@ struct Scene5_AntStingFirstAid: View {
                             Text("The ant injected formic acid into your skin. It stings and burns. What should you apply to feel better?")
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                                 .lineSpacing(4)
                         }
                     }
@@ -83,7 +84,7 @@ struct Scene5_AntStingFirstAid: View {
                                 .buttonStyle(.plain)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(Color(nsColor: .windowBackgroundColor))
+                                        .fill(Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -110,7 +111,7 @@ struct Scene5_AntStingFirstAid: View {
                                     systemImage: remedy.isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill"
                                 )
                                 .font(.title2.bold())
-                                .foregroundStyle(remedy.isCorrect ? .green : .red)
+                                .foregroundColor(remedy.isCorrect ? .green : .red)
 
                                 Text(remedy.explanation)
                                     .font(.body)
@@ -119,7 +120,7 @@ struct Scene5_AntStingFirstAid: View {
                                 if !remedy.isCorrect {
                                     Text("The correct answer is baking soda paste \u{2014} a base that neutralises formic acid.")
                                         .font(.callout)
-                                        .foregroundStyle(.indigo)
+                                        .foregroundColor(Color.compatIndigo)
                                         .padding(.top, 4)
                                 }
                             }
@@ -149,14 +150,15 @@ struct Scene5_AntStingFirstAid: View {
             // Shake then show
             if !reduceMotion {
                 withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = 12 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 150_000_000)
                     withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = -10 }
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    try? await Task.sleep(nanoseconds: 150_000_000)
                     withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeOffset = 0 }
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 500_000_000)
                 withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
                     showResult = true
                 }

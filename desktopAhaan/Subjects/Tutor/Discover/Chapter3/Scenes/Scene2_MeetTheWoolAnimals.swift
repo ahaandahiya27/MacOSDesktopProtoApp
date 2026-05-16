@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// Horizontal carousel of 6 FlipCards with wool animals.
 /// Front: emoji + breed name. Back: 3 facts about that animal's wool.
+@available(macOS 12, *)
 struct Scene2_MeetTheWoolAnimals: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -49,12 +50,12 @@ struct Scene2_MeetTheWoolAnimals: View {
         VStack(spacing: 18) {
             Text("Meet the Wool Animals")
                 .font(.largeTitle.bold())
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
                 .padding(.top, 20)
 
             Text("Tap any card to flip and learn!")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
@@ -68,7 +69,7 @@ struct Scene2_MeetTheWoolAnimals: View {
                                     ForEach(animal.facts, id: \.self) { fact in
                                         HStack(spacing: 8) {
                                             Circle()
-                                                .fill(.indigo)
+                                                .fill(Color.compatIndigo)
                                                 .frame(width: 6, height: 6)
                                             Text(fact)
                                                 .font(.caption)
@@ -96,7 +97,7 @@ struct Scene2_MeetTheWoolAnimals: View {
             SoftShadowCard(padding: 14) {
                 Label("Tap any animal to learn its wool secrets", systemImage: "info.circle.fill")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
             }
             .frame(maxWidth: 600)
             .padding(.horizontal, 24)

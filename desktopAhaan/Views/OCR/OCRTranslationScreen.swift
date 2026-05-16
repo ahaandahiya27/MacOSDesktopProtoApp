@@ -1,19 +1,16 @@
 import SwiftUI
-import SwiftData
 import AppKit
 import UniformTypeIdentifiers
 
-/// Screen for image-based OCR translation
 struct OCRTranslationScreen: View {
     @StateObject private var ocrService = OCRService()
     @StateObject private var vm = TranslatorViewModel()
     @EnvironmentObject var appState: AppState
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var dataStore: DataStore
 
     @State private var selectedImage: NSImage?
     @State private var editedText: String = ""
     @State private var hasExtractedText = false
-    @FocusState private var isTextEditorFocused: Bool
 
     var body: some View {
         ScrollView {
@@ -48,7 +45,7 @@ struct OCRTranslationScreen: View {
                         response: result,
                         onSpeak: { vm.speakResult() },
                         isSpeaking: vm.ttsManager.isSpeaking,
-                        onFavorite: { vm.toggleFavorite(for: result, modelContext: modelContext) },
+                        onFavorite: { vm.toggleFavorite(for: result, dataStore: dataStore) },
                         isFavorited: vm.isFavorited
                     )
                 }
@@ -76,12 +73,12 @@ struct OCRTranslationScreen: View {
                     openImagePanel()
                 }
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             } else {
                 VStack(spacing: 16) {
                     Image(systemName: "doc.text.viewfinder")
                         .font(.system(size: 48))
-                        .foregroundStyle(.indigo)
+                        .foregroundColor(.purple)
 
                     Text("Open or Drop an Image")
                         .font(.headline)
@@ -91,13 +88,11 @@ struct OCRTranslationScreen: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.indigo)
                 }
             }
         }
         .padding()
-        .background(.background)
+        .background(Color(NSColor.controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
         .onDrop(of: ["public.file-url"], isTargeted: nil, perform: handleDrop)
@@ -108,7 +103,7 @@ struct OCRTranslationScreen: View {
             HStack {
                 Text("Extracted Text (editable)")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 Spacer()
                 Button("Clear") {
                     editedText = ""
@@ -118,11 +113,10 @@ struct OCRTranslationScreen: View {
                     vm.clear()
                 }
                 .font(.caption)
-                .foregroundStyle(.red)
+                .foregroundColor(.red)
             }
 
             TextEditor(text: $editedText)
-                .focused($isTextEditorFocused)
                 .frame(minHeight: 80, maxHeight: 150)
                 .font(.body)
                 .padding(8)
@@ -130,7 +124,7 @@ struct OCRTranslationScreen: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .padding()
-        .background(.background)
+        .background(Color(NSColor.controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
     }
@@ -145,18 +139,15 @@ struct OCRTranslationScreen: View {
             )
 
             Button(action: {
-                isTextEditorFocused = false
                 vm.inputText = editedText
                 Task {
-                    await vm.translate(modelContext: modelContext, isOnline: appState.isOnline)
+                    await vm.translate(dataStore: dataStore, isOnline: appState.isOnline)
                 }
             }) {
                 Label("Translate", systemImage: "arrow.right.circle.fill")
                     .font(.headline)
                     .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.indigo)
             .disabled(editedText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || vm.isTranslating)
             .padding(.horizontal)
         }

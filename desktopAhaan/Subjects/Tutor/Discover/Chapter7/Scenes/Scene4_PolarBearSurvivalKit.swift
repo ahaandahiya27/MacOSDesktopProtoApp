@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 4 — Polar Bear Survival Kit.
 /// A polar bear with labeled adaptations. Tap each label for explanation.
+@available(macOS 12, *)
 struct Scene4_PolarBearSurvivalKit: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -52,7 +53,7 @@ struct Scene4_PolarBearSurvivalKit: View {
 
                     Text("\(tappedAdaptations.count) / \(adaptations.count) adaptations explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Bear diagram area
                     ZStack {
@@ -112,9 +113,9 @@ struct Scene4_PolarBearSurvivalKit: View {
                                 .padding(.vertical, 4)
                                 .background(
                                     Capsule()
-                                        .fill(isSelected ? Color.indigo : isTapped ? Color.green.opacity(0.8) : Color.blue.opacity(0.7))
+                                        .fill(isSelected ? Color.compatIndigo : isTapped ? Color.green.opacity(0.8) : Color.blue.opacity(0.7))
                                 )
-                                .foregroundStyle(.white)
+                                .foregroundColor(.white)
                             }
                             .buttonStyle(.plain)
                             .position(x: adapt.position.x * 400, y: adapt.position.y * 280)
@@ -124,7 +125,7 @@ struct Scene4_PolarBearSurvivalKit: View {
                     .frame(maxWidth: 400, maxHeight: 280)
                     .background(
                         RoundedRectangle(cornerRadius: 14)
-                            .fill(LinearGradient(colors: [.cyan.opacity(0.15), .blue.opacity(0.08)], startPoint: .top, endPoint: .bottom))
+                            .fill(LinearGradient(colors: [Color.compatCyan.opacity(0.15), .blue.opacity(0.08)], startPoint: .top, endPoint: .bottom))
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 14)

@@ -1,9 +1,6 @@
 import Foundation
-import SwiftData
 
-/// Persistent record of a translation saved in SwiftData
-@Model
-final class TranslationRecord {
+final class TranslationRecord: Identifiable, Codable {
     var id: UUID
     var sourceLanguage: String
     var targetLanguage: String
@@ -29,23 +26,34 @@ final class TranslationRecord {
         self.originalText = response.originalText
         self.translatedText = response.translatedText
         self.transliteration = response.transliteration
-        self.wordByWordJSON = try? JSONEncoder().encode(response.wordByWord)
+        do {
+            self.wordByWordJSON = try JSONEncoder().encode(response.wordByWord)
+        } catch {
+            print("[TranslationRecord] wordByWord encoding failed: \(error)")
+            self.wordByWordJSON = nil
+        }
         self.grammarNote = response.grammarNote
         self.learningTip = response.learningTip
         self.difficulty = response.difficulty.rawValue
-        self.alternativesJSON = try? JSONEncoder().encode(response.alternatives)
+        do {
+            self.alternativesJSON = try JSONEncoder().encode(response.alternatives)
+        } catch {
+            print("[TranslationRecord] alternatives encoding failed: \(error)")
+            self.alternativesJSON = nil
+        }
         self.confidenceNote = response.confidenceNote
         self.isFavorite = isFavorite
         self.createdAt = Date()
     }
 
-    /// Convert back to a TranslationResponse for display
     var asResponse: TranslationResponse {
-        let words: [WordMeaning]? = wordByWordJSON.flatMap {
-            try? JSONDecoder().decode([WordMeaning].self, from: $0)
+        let words: [WordMeaning]? = wordByWordJSON.flatMap { data in
+            do { return try JSONDecoder().decode([WordMeaning].self, from: data) }
+            catch { print("[TranslationRecord] wordByWord decode failed: \(error)"); return nil }
         }
-        let alts: [String]? = alternativesJSON.flatMap {
-            try? JSONDecoder().decode([String].self, from: $0)
+        let alts: [String]? = alternativesJSON.flatMap { data in
+            do { return try JSONDecoder().decode([String].self, from: data) }
+            catch { print("[TranslationRecord] alternatives decode failed: \(error)"); return nil }
         }
         return TranslationResponse(
             sourceLanguage: sourceLanguage,

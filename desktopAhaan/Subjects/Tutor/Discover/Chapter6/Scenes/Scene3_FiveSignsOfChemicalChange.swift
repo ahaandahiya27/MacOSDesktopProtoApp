@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 3 — Five Signs of Chemical Change.
 /// Five interactive cards. Tap each for an animated example + explanation.
 /// After all 5 tapped: GotItButton.
+@available(macOS 12, *)
 struct Scene3_FiveSignsOfChemicalChange: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -76,7 +77,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
 
                     Text("Tap each card to learn the five clues that a chemical change happened.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Five cards in a row
                     HStack(spacing: 12) {
@@ -104,11 +105,11 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                                         .font(.title)
                                     Label(sign.title, systemImage: sign.icon)
                                         .font(.title2.bold())
-                                        .foregroundStyle(sign.color)
+                                        .foregroundColor(sign.color)
                                 }
                                 Text("Example: \(sign.example)")
                                     .font(.callout.italic())
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                                 Text(sign.explanation)
                                     .font(.body)
                                     .lineSpacing(4)
@@ -135,7 +136,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                     } else {
                         Text("Tap all 5 cards to continue")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                             .padding(.bottom, 12)
                     }
                 }
@@ -160,7 +161,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
             VStack(spacing: 10) {
                 Image(systemName: sign.icon)
                     .font(.system(size: 28))
-                    .foregroundStyle(sign.color)
+                    .foregroundColor(sign.color)
 
                 Text(sign.emoji)
                     .font(.system(size: 36))
@@ -171,7 +172,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
 
                 if isTapped {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                         .font(.caption)
                 }
             }
@@ -179,7 +180,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
             .frame(height: height)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isTapped ? sign.color.opacity(0.1) : Color(nsColor: .windowBackgroundColor))
+                    .fill(isTapped ? sign.color.opacity(0.1) : Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

@@ -3,6 +3,7 @@ import Combine
 import Security
 
 /// Manages app settings. No API keys needed — the app uses free translation.
+@MainActor
 final class SettingsManager: ObservableObject {
     static let shared = SettingsManager()
 

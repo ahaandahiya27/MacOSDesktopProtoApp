@@ -1,37 +1,33 @@
 import SwiftUI
-import SwiftData
 
 struct PracticeScreen: View {
     @StateObject private var vm = PracticeViewModel()
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var dataStore: DataStore
 
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                // Daily phrase
                 if let phrase = vm.dailyPhrase {
                     DailyPhraseCard(item: phrase, onSpeak: {
                         vm.speak(text: phrase.sanskrit, language: .sanskrit, transliteration: phrase.transliteration)
                     })
                 }
 
-                // Mode selection
                 switch vm.mode {
                 case .categories:
                     CategoriesGrid(vm: vm)
                 case .flashcards:
                     FlashcardView(vm: vm)
                 case .quiz:
-                    QuizView(vm: vm, modelContext: modelContext)
+                    QuizView(vm: vm)
                 }
             }
             .padding(.vertical)
         }
-        .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Practice")
         .toolbar {
-            if vm.mode != .categories {
-                ToolbarItem {
+            ToolbarItem {
+                if vm.mode != .categories {
                     Button {
                         withAnimation {
                             vm.mode = .categories
@@ -61,12 +57,13 @@ struct DailyPhraseCard: View {
             HStack {
                 Label("Phrase of the Day", systemImage: "star.fill")
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.orange)
+                    .foregroundColor(.orange)
                 Spacer()
                 Button(action: onSpeak) {
                     Image(systemName: "speaker.wave.2")
-                        .foregroundStyle(.indigo)
+                        .foregroundColor(Color.compatIndigo)
                 }
+                .accessibilityLabel("Listen to phrase")
             }
 
             Text(item.sanskrit)
@@ -75,7 +72,7 @@ struct DailyPhraseCard: View {
             Text(item.transliteration)
                 .font(.subheadline)
                 .italic()
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             Divider()
 
@@ -85,14 +82,14 @@ struct DailyPhraseCard: View {
                         .font(.subheadline)
                     Text(item.hindi)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
                 Spacer()
                 DifficultyBadge(level: item.difficulty)
             }
         }
         .padding()
-        .background(.background)
+        .background(Color(NSColor.controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(color: .black.opacity(0.06), radius: 8, y: 2)
         .padding(.horizontal)
@@ -126,7 +123,6 @@ struct CategoriesGrid: View {
             }
             .padding(.horizontal)
 
-            // Quiz section
             VStack(alignment: .leading, spacing: 8) {
                 Text("Test Yourself")
                     .font(.headline)
@@ -143,8 +139,8 @@ struct CategoriesGrid: View {
                                     .font(.caption.weight(.medium))
                                     .padding(.horizontal, 12)
                                     .padding(.vertical, 8)
-                                    .background(.indigo.opacity(0.1))
-                                    .foregroundStyle(.indigo)
+                                    .background(Color.compatIndigo.opacity(0.1))
+                                    .foregroundColor(Color.compatIndigo)
                                     .clipShape(Capsule())
                             }
                         }
@@ -165,14 +161,14 @@ struct CategoryCard: View {
             VStack(spacing: 10) {
                 Image(systemName: category.icon)
                     .font(.title2)
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Text(category.rawValue)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 20)
-            .background(.ultraThinMaterial)
+            .background(Color.gray.opacity(0.15))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }
     }
@@ -190,11 +186,9 @@ struct FlashcardView: View {
             }
 
             if !vm.currentItems.isEmpty {
-                // Safe index access
                 let safeIndex = min(vm.flashcardIndex, vm.currentItems.count - 1)
                 let item = vm.currentItems[safeIndex]
 
-                // Flashcard
                 VStack(spacing: 16) {
                     Text(item.english)
                         .font(.title3)
@@ -202,24 +196,24 @@ struct FlashcardView: View {
 
                     Text(item.hindi)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     if vm.showFlashcardAnswer {
                         Divider()
 
                         Text(item.sanskrit)
                             .font(.title.weight(.bold))
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
 
                         Text(item.transliteration)
                             .font(.subheadline)
                             .italic()
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
 
                         if let note = item.grammarNote {
                             Text(note)
                                 .font(.caption)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                                 .padding(.top, 4)
                         }
 
@@ -229,13 +223,11 @@ struct FlashcardView: View {
                             Label("Listen", systemImage: "speaker.wave.2")
                                 .font(.caption)
                         }
-                        .buttonStyle(.bordered)
-                        .tint(.indigo)
                     }
                 }
                 .padding(24)
                 .frame(maxWidth: .infinity)
-                .background(.background)
+                .background(Color(NSColor.controlBackgroundColor))
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color: .black.opacity(0.08), radius: 12, y: 4)
                 .padding(.horizontal)
@@ -247,26 +239,28 @@ struct FlashcardView: View {
 
                 Text("Tap card to \(vm.showFlashcardAnswer ? "hide" : "reveal") answer")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
-                // Navigation
                 HStack(spacing: 20) {
                     Button(action: vm.previousFlashcard) {
                         Image(systemName: "chevron.left.circle.fill")
                             .font(.title)
                     }
                     .disabled(vm.currentItems.count <= 1)
+                    .accessibilityLabel("Previous flashcard")
 
                     Text("\(safeIndex + 1) / \(vm.currentItems.count)")
                         .font(.subheadline.weight(.medium))
+                        .accessibilityLabel("Card \(safeIndex + 1) of \(vm.currentItems.count)")
 
                     Button(action: vm.nextFlashcard) {
                         Image(systemName: "chevron.right.circle.fill")
                             .font(.title)
                     }
                     .disabled(vm.currentItems.count <= 1)
+                    .accessibilityLabel("Next flashcard")
                 }
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
             } else {
                 EmptyStateView(
                     icon: "rectangle.on.rectangle.slash",
@@ -281,8 +275,7 @@ struct FlashcardView: View {
 // MARK: - Quiz View
 struct QuizView: View {
     @ObservedObject var vm: PracticeViewModel
-    let modelContext: ModelContext
-    @FocusState private var isAnswerFocused: Bool
+    @EnvironmentObject var dataStore: DataStore
 
     var body: some View {
         VStack(spacing: 20) {
@@ -297,25 +290,16 @@ struct QuizView: View {
 
                 Text(item.hindi)
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
                 TextField("Type Sanskrit or transliteration...", text: $vm.quizAnswer)
                     .textFieldStyle(.roundedBorder)
                     .font(.body)
                     .padding(.horizontal)
-                    .focused($isAnswerFocused)
-                    .onSubmit {
-                        if !vm.quizAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                            vm.checkAnswer(modelContext: modelContext)
-                        }
-                    }
 
                 Button("Check Answer") {
-                    isAnswerFocused = false
-                    vm.checkAnswer(modelContext: modelContext)
+                    vm.checkAnswer(dataStore: dataStore)
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.indigo)
                 .disabled(vm.quizAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
 
                 if let result = vm.quizResult {
@@ -323,10 +307,10 @@ struct QuizView: View {
                     case .correct:
                         HStack {
                             Image(systemName: "checkmark.circle.fill")
-                                .foregroundStyle(.green)
+                                .foregroundColor(.green)
                             Text("Correct!")
                                 .font(.headline)
-                                .foregroundStyle(.green)
+                                .foregroundColor(.green)
                         }
                         .padding()
 
@@ -334,24 +318,20 @@ struct QuizView: View {
                         VStack(spacing: 8) {
                             HStack {
                                 Image(systemName: "xmark.circle.fill")
-                                    .foregroundStyle(.red)
+                                    .foregroundColor(.red)
                                 Text("Not quite.")
                                     .font(.headline)
-                                    .foregroundStyle(.red)
+                                    .foregroundColor(.red)
                             }
                             Text("The answer is: \(correct)")
                                 .font(.subheadline)
-                                .textSelection(.enabled)
                         }
                         .padding()
                     }
 
                     Button("Next Question") {
                         vm.nextQuizQuestion()
-                        isAnswerFocused = true
                     }
-                    .buttonStyle(.bordered)
-                    .tint(.indigo)
                 }
             } else {
                 EmptyStateView(
@@ -362,11 +342,5 @@ struct QuizView: View {
             }
         }
         .padding(.horizontal)
-        .onAppear {
-            // Focus the answer field when quiz starts
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                isAnswerFocused = true
-            }
-        }
     }
 }

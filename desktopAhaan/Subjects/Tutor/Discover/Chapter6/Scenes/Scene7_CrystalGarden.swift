@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 7 — Crystal Garden.
 /// Supersaturated solution simulation: heat water, add salt, cool slowly, watch crystals grow.
 /// Tap stages to advance. Shows seed crystal triggering rapid growth.
+@available(macOS 12, *)
 struct Scene7_CrystalGarden: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -27,7 +28,7 @@ struct Scene7_CrystalGarden: View {
 
             Text("Grow crystals from a supersaturated solution")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             Spacer()
 
@@ -59,7 +60,7 @@ struct Scene7_CrystalGarden: View {
                                 y: CGFloat([40, 50, 55, 45, 60, 35][i])
                             )
                             .opacity(stage == .heating ? 1 : 0)
-                            .animation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true).delay(Double(i) * 0.15), value: stage)
+                            .animation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true).delay(Double(i) * 0.15))
                     }
                 }
 
@@ -80,7 +81,7 @@ struct Scene7_CrystalGarden: View {
                 if stage == .cooling || stage == .grown {
                     Text("*")
                         .font(.title3.bold())
-                        .foregroundStyle(.purple)
+                        .foregroundColor(.purple)
                         .offset(y: 20)
                 }
 
@@ -117,14 +118,14 @@ struct Scene7_CrystalGarden: View {
                         }
                     }
                     .buttonStyle(.bordered)
-                    .tint(stage == s ? .purple : .secondary)
+                    .accentColor(stage == s ? .purple : .secondary)
                     .disabled(s.rawValue > stage.rawValue + 1)
                 }
             }
 
             Text(stageCaption)
                 .font(.headline)
-                .foregroundStyle(.purple)
+                .foregroundColor(.purple)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: 500)
                 .padding(.horizontal)
@@ -153,11 +154,11 @@ struct Scene7_CrystalGarden: View {
 
     private var liquidColor: Color {
         switch stage {
-        case .water: return .cyan.opacity(0.3)
-        case .heating: return .cyan.opacity(0.5)
-        case .saturated: return .cyan.opacity(0.6)
-        case .cooling: return .cyan.opacity(0.4)
-        case .grown: return .cyan.opacity(0.25)
+        case .water: return Color.compatCyan.opacity(0.3)
+        case .heating: return Color.compatCyan.opacity(0.5)
+        case .saturated: return Color.compatCyan.opacity(0.6)
+        case .cooling: return Color.compatCyan.opacity(0.4)
+        case .grown: return Color.compatCyan.opacity(0.25)
         }
     }
 

@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// 4 stages in a circular cycle: Egg → Larva → Pupa → Moth → back to egg.
 /// Tap each stage to advance. Timer next to each shows duration.
+@available(macOS 12, *)
 struct Scene6_SilkwormLifeCycle: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -24,7 +25,7 @@ struct Scene6_SilkwormLifeCycle: View {
             HStack {
                 Text("Silkworm Life Cycle")
                     .font(.largeTitle.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Spacer()
             }
             .padding(.horizontal, 24)
@@ -33,7 +34,7 @@ struct Scene6_SilkwormLifeCycle: View {
             // Circular cycle
             ZStack {
                 Circle()
-                    .stroke(.indigo.opacity(0.2), lineWidth: 2)
+                    .stroke(Color.compatIndigo.opacity(0.2), lineWidth: 2)
                     .padding(40)
 
                 // Arrows between stages
@@ -80,16 +81,16 @@ struct Scene6_SilkwormLifeCycle: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(stages[currentStage].name)
                             .font(.headline)
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                         Text(stages[currentStage].duration)
                             .font(.caption.weight(.semibold))
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     }
                 }
                 Divider()
                 Text(stages[currentStage].desc)
                     .font(.body)
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(16)
@@ -103,8 +104,8 @@ struct Scene6_SilkwormLifeCycle: View {
                 } label: {
                     Label("Next Stage", systemImage: "arrow.right.circle")
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(.indigo)
+                
+                .accentColor(Color.compatIndigo)
 
                 if currentStage > 0 {
                     Button {
@@ -112,7 +113,7 @@ struct Scene6_SilkwormLifeCycle: View {
                     } label: {
                         Label("Previous", systemImage: "arrow.left.circle")
                     }
-                    .buttonStyle(.bordered)
+                    
                 }
             }
             .padding(.horizontal, 24)
@@ -146,14 +147,14 @@ struct Scene6_SilkwormLifeCycle: View {
                     .font(.system(size: 36))
                 Text(stage.name)
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
             }
             .frame(width: 70, height: 70)
-            .background(currentStage == index ? Color.indigo.opacity(0.15) : Color.gray.opacity(0.05))
+            .background(currentStage == index ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.05))
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(currentStage == index ? Color.indigo : Color.clear, lineWidth: 2)
+                    .strokeBorder(currentStage == index ? Color.compatIndigo : Color.clear, lineWidth: 2)
             )
         }
         .buttonStyle(.plain)

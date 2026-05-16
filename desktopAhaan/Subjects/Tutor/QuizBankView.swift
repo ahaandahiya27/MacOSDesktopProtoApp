@@ -1,16 +1,25 @@
 import SwiftUI
 
 struct QuizBankView: View {
+    var body: some View {
+        TutorNavigationContainer {
+            QuizBankContent()
+        }
+    }
+}
+
+private struct QuizBankContent: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject private var nav: TutorNavigationState
 
     @State private var typeFilter: QuestionType? = nil
     @State private var difficultyFilter: Int? = nil
     @State private var chapterFilter: String? = nil
     @State private var searchText = ""
-    @State private var path = NavigationPath()
+    @State private var cachedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] = []
 
-    private var allEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
-        subjectRegistry.packs.flatMap { pack in
+    private func rebuildCache() {
+        cachedEntries = subjectRegistry.packs.flatMap { pack in
             pack.chapters.flatMap { chapter in
                 chapter.topics.flatMap { topic in
                     topic.questions.map { (pack, chapter, $0) }
@@ -20,7 +29,7 @@ struct QuizBankView: View {
     }
 
     private var filteredEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
-        allEntries.filter { entry in
+        cachedEntries.filter { entry in
             if let tf = typeFilter, entry.question.questionType != tf { return false }
             if let df = difficultyFilter, entry.question.difficulty != df { return false }
             if let cf = chapterFilter, entry.chapter.id != cf { return false }
@@ -34,74 +43,82 @@ struct QuizBankView: View {
 
     private var availableChapters: [(id: String, label: String)] {
         var seen = Set<String>()
-        return allEntries.compactMap { entry in
+        return cachedEntries.compactMap { entry in
             guard seen.insert(entry.chapter.id).inserted else { return nil }
             return (entry.chapter.id, "Ch. \(entry.chapter.number) — \(entry.chapter.title)")
         }
     }
 
     var body: some View {
-        NavigationStack(path: $path) {
-            VStack(spacing: 0) {
-                filterBar
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 10)
-                    .background(.bar)
+        VStack(spacing: 0) {
+            filterBar
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(Color(NSColor.controlBackgroundColor))
 
-                Divider()
+            Divider()
 
-                if filteredEntries.isEmpty {
-                    ContentUnavailableView(
-                        "No questions match",
-                        systemImage: "magnifyingglass",
-                        description: Text("Try adjusting your filters.")
-                    )
-                } else {
-                    List(filteredEntries, id: \.question.id) { entry in
-                        NavigationLink(value: QuizBankRoute(packId: entry.pack.id, questionId: entry.question.id)) {
-                            QuizBankRow(chapter: entry.chapter, question: entry.question)
-                        }
+            if filteredEntries.isEmpty {
+                VStack(spacing: 12) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 48))
+                        .foregroundColor(.secondary)
+                    Text("No questions match")
+                        .font(.title2.weight(.semibold))
+                    Text("Try adjusting your filters.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                List(filteredEntries, id: \.question.id) { entry in
+                    Button {
+                        nav.push(.question(packId: entry.pack.id, questionId: entry.question.id))
+                    } label: {
+                        QuizBankRow(chapter: entry.chapter, question: entry.question)
+                            .contentShape(Rectangle())
                     }
-                    .listStyle(.inset)
+                    .buttonStyle(.plain)
+                    .contextMenu {
+                        Button("Open") { nav.push(.question(packId: entry.pack.id, questionId: entry.question.id)) }
+                    }
                 }
+                .listStyle(.inset)
             }
-            .navigationTitle("Quiz Bank")
-            .toolbar {
-                ToolbarItem(placement: .automatic) {
-                    Text("Showing \(filteredEntries.count) of \(allEntries.count)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .navigationDestination(for: QuizBankRoute.self) { route in
-                if let pack = subjectRegistry.pack(withId: route.packId),
-                   let question = pack.allQuestions.first(where: { $0.id == route.questionId }) {
-                    QuestionDetailView(pack: pack, question: question)
-                } else {
-                    ContentUnavailableView("Question not found", systemImage: "questionmark.folder")
-                }
+        }
+        .background(Color(NSColor.windowBackgroundColor))
+        .navigationTitle("Quiz Bank")
+        .onAppear { rebuildCache() }
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Text("Showing \(filteredEntries.count) of \(cachedEntries.count)")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
         }
     }
 
     private var filterBar: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 10) {
             HStack(spacing: 4) {
                 Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 TextField("Search questions...", text: $searchText)
                     .textFieldStyle(.plain)
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .buttonStyle(.plain)
                 }
             }
             .padding(6)
-            .background(.background.secondary, in: RoundedRectangle(cornerRadius: 8))
-            .frame(maxWidth: 220)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.gray.opacity(0.1))
+            )
+            .frame(minWidth: 140)
 
             Picker("Type", selection: $typeFilter) {
                 Text("All Types").tag(QuestionType?.none)
@@ -109,7 +126,7 @@ struct QuizBankView: View {
                     Text(t.displayName).tag(QuestionType?.some(t))
                 }
             }
-            .frame(maxWidth: 160)
+            .fixedSize()
 
             Picker("Difficulty", selection: $difficultyFilter) {
                 Text("All Levels").tag(Int?.none)
@@ -117,7 +134,7 @@ struct QuizBankView: View {
                     Text("Level \(d)").tag(Int?.some(d))
                 }
             }
-            .frame(maxWidth: 120)
+            .fixedSize()
 
             Picker("Chapter", selection: $chapterFilter) {
                 Text("All Chapters").tag(String?.none)
@@ -125,7 +142,7 @@ struct QuizBankView: View {
                     Text(ch.label).tag(String?.some(ch.id))
                 }
             }
-            .frame(maxWidth: 220)
+            .frame(minWidth: 120)
 
             Spacer()
         }
@@ -147,8 +164,8 @@ private struct QuizBankRow: View {
                 .font(.caption2.bold())
                 .padding(.horizontal, 7)
                 .padding(.vertical, 3)
-                .foregroundStyle(.white)
-                .background(badgeColor, in: Capsule())
+                .foregroundColor(.white)
+                .background(Capsule().fill(badgeColor))
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(question.prompt)
@@ -159,8 +176,8 @@ private struct QuizBankRow: View {
                         .font(.caption2)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
-                        .background(.indigo.opacity(0.12), in: Capsule())
-                        .foregroundStyle(.indigo)
+                        .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
+                        .foregroundColor(Color.compatIndigo)
                     QuestionDifficultyBadge(level: question.difficulty)
                 }
             }
@@ -176,9 +193,9 @@ private struct QuizBankRow: View {
         case .shortAnswer:      return .orange
         case .longAnswer:       return .purple
         case .numerical:        return .green
-        case .trueFalse:        return .teal
+        case .trueFalse:        return Color.compatTeal
         case .matchTheFollowing: return .pink
-        case .fillInBlank:      return .cyan
+        case .fillInBlank:      return Color.compatCyan
         }
     }
 }

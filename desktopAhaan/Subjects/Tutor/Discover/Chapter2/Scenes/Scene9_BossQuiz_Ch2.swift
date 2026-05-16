@@ -73,7 +73,7 @@ struct Scene9_BossQuiz_Ch2: View {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -116,7 +116,7 @@ struct Scene9_BossQuiz_Ch2: View {
 
                     Text("Quiz Complete!")
                         .font(.title.bold())
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
 
                     HStack(spacing: 16) {
                         Text("Score: \(score)/5")
@@ -134,13 +134,13 @@ struct Scene9_BossQuiz_Ch2: View {
                             .padding(.vertical, 12)
                             .padding(.horizontal, 20)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.blue)
+                    
+                    .accentColor(.blue)
 
                     if let status = pdfStatus {
                         Text(status)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 }
                 .frame(maxWidth: 600)
@@ -178,19 +178,20 @@ struct Scene9_BossQuiz_Ch2: View {
             withAnimation(.spring(response: 0.35, dampingFraction: 0.6)) {
                 revealed[currentQ] = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 800_000_000)
                 advanceQuestion()
             }
         } else {
-            withAnimation(.easeInOut(duration: 0.1)) {
-                shake = -8
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            Task { @MainActor in
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    shake = -8
+                }
+                try? await Task.sleep(nanoseconds: 100_000_000)
                 withAnimation(.easeInOut(duration: 0.1)) {
                     shake = 8
                 }
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                try? await Task.sleep(nanoseconds: 100_000_000)
                 withAnimation(.easeInOut(duration: 0.1)) {
                     shake = 0
                 }
@@ -223,7 +224,8 @@ struct Scene9_BossQuiz_Ch2: View {
 
     private func downloadCertificate() {
         let cert = generateCertificateImage()
-        let url = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask)[0]
+        let url = (FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
+            ?? URL(fileURLWithPath: NSHomeDirectory()).appendingPathComponent("Downloads"))
             .appendingPathComponent("Chapter2_Certificate.pdf")
 
         let pdfDocument = PDFDocument()
@@ -301,8 +303,8 @@ struct AnswerButton: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 12)
         }
-        .buttonStyle(.bordered)
-        .foregroundStyle(color(for: state))
+        
+        .foregroundColor(color(for: state))
         .background(backgroundColor(for: state))
         .overlay(
             RoundedRectangle(cornerRadius: 8)

@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 7 — The Pitcher Plant Trap. A short hand-drawn animation: a fly
 /// hovers, lands on the rim, slips, tumbles into the pitcher, and dissolves
 /// into a green digestive juice.
+@available(macOS 12, *)
 struct Scene7_PitcherPlantTrap: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -54,7 +55,7 @@ struct Scene7_PitcherPlantTrap: View {
                         .frame(width: 200, height: phase >= 4 ? 140 : 80)
                         .clipShape(PitcherShape())
                         .frame(width: 220, height: 320, alignment: .bottom)
-                        .animation(.easeInOut(duration: stepDuration), value: phase)
+                        .animation(.easeInOut(duration: stepDuration))
                 }
 
                 // Glow at the rim — attracts the fly
@@ -78,14 +79,14 @@ struct Scene7_PitcherPlantTrap: View {
                     .scaleEffect(phase >= 3 ? 0.55 : 1)
                     .offset(flyOffset)
                     .rotationEffect(.degrees(flyRotation))
-                    .animation(reduceMotion ? .none : .easeInOut(duration: stepDuration), value: phase)
+                    .animation(reduceMotion ? .none : .easeInOut(duration: stepDuration))
             }
             .frame(width: 240, height: 340)
 
             if nitrogenAdded {
                 Label("Nitrogen absorbed: +1 🌱", systemImage: "leaf.arrow.circlepath")
                     .font(.headline)
-                    .foregroundStyle(.green)
+                    .foregroundColor(.green)
                     .transition(.opacity.combined(with: .scale))
             }
 
@@ -97,21 +98,17 @@ struct Scene7_PitcherPlantTrap: View {
                     .controlSize(.small)
             }
 
-            DisclosureGroup(isExpanded: $showWhy) {
+            ExpandableCard(
+                isExpanded: $showWhy,
+                systemImage: "questionmark.circle.fill",
+                title: "Why does it eat insects?",
+                tint: Color.compatIndigo,
+                background: Color.compatIndigo.opacity(0.06)
+            ) {
                 Text(expertExplanation)
                     .font(.callout)
-                    .padding(.top, 6)
                     .multilineTextAlignment(.leading)
-            } label: {
-                Label("Why does it eat insects?", systemImage: "questionmark.circle.fill")
-                    .font(.headline)
-                    .foregroundStyle(.indigo)
             }
-            .padding(14)
-            .background(
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(.indigo.opacity(0.06))
-            )
             .frame(maxWidth: 580)
 
             GotItButton(action: onComplete)
@@ -156,17 +153,16 @@ struct Scene7_PitcherPlantTrap: View {
             nitrogenAdded = true
             return
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * 0.6) {
-            withAnimation(.easeInOut(duration: stepDuration)) { phase = 1 }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * 1.6) {
-            withAnimation(.easeInOut(duration: stepDuration)) { phase = 2 }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * 2.6) {
-            withAnimation(.easeIn(duration: stepDuration)) { phase = 3 }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration * 4.0) {
-            withAnimation(.easeOut(duration: stepDuration)) { phase = 4 }
+        Task { @MainActor in
+            let step = stepDuration
+            try? await Task.sleep(nanoseconds: UInt64(step * 0.6 * 1_000_000_000))
+            withAnimation(.easeInOut(duration: step)) { phase = 1 }
+            try? await Task.sleep(nanoseconds: UInt64(step * 1.0 * 1_000_000_000))
+            withAnimation(.easeInOut(duration: step)) { phase = 2 }
+            try? await Task.sleep(nanoseconds: UInt64(step * 1.0 * 1_000_000_000))
+            withAnimation(.easeIn(duration: step)) { phase = 3 }
+            try? await Task.sleep(nanoseconds: UInt64(step * 1.4 * 1_000_000_000))
+            withAnimation(.easeOut(duration: step)) { phase = 4 }
             withAnimation(.spring().delay(0.2)) { nitrogenAdded = true }
         }
     }

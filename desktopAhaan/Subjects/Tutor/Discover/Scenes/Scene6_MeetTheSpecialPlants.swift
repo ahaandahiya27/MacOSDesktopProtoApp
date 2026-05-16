@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Meet the Special Plants. A horizontal row of FlipCards with the
 /// four special-nutrition plants (Cuscuta / Pitcher / Bread mould / Lichen).
+@available(macOS 12, *)
 struct Scene6_MeetTheSpecialPlants: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -14,7 +15,7 @@ struct Scene6_MeetTheSpecialPlants: View {
                 .padding(.top, 18)
             Text("Some plants don't make their own food. Tap each card to flip and meet them.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
 
             ScrollView(.horizontal, showsIndicators: false) {
@@ -104,7 +105,7 @@ struct Scene6_MeetTheSpecialPlants: View {
         VStack(alignment: .leading, spacing: 8) {
             ForEach(bullets, id: \.self) { b in
                 HStack(alignment: .top, spacing: 6) {
-                    Text("•").foregroundStyle(.green)
+                    Text("•").foregroundColor(.green)
                     Text(b).fixedSize(horizontal: false, vertical: true)
                 }
             }

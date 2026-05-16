@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 6 — Adaptation Match Game.
 /// Drag-and-drop: 6 animals matched to 6 adaptations. Score out of 12 (2 per correct match).
 /// Uses DragGesture with zone rect tracking.
+@available(macOS 12, *)
 struct Scene6_AdaptationMatchGame: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -51,7 +52,7 @@ struct Scene6_AdaptationMatchGame: View {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .padding(.trailing, 24)
                             .padding(.top, 8)
                     }
@@ -62,7 +63,7 @@ struct Scene6_AdaptationMatchGame: View {
                             VStack(spacing: 10) {
                                 Text("Animals")
                                     .font(.headline)
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 ForEach(animalOrder) { pair in
                                     if matched.contains(pair.id) {
                                         matchedChip(pair.animal, color: .green)
@@ -76,7 +77,7 @@ struct Scene6_AdaptationMatchGame: View {
                             VStack(spacing: 10) {
                                 Text("Adaptations")
                                     .font(.headline)
-                                    .foregroundStyle(.blue)
+                                    .foregroundColor(.blue)
                                 ForEach(adaptationOrder) { pair in
                                     if matched.contains(pair.id) {
                                         matchedChip(pair.adaptation, color: .green)
@@ -89,7 +90,7 @@ struct Scene6_AdaptationMatchGame: View {
                     } else {
                         Text("All matched!")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                             .padding(.top, 20)
                     }
 
@@ -106,7 +107,7 @@ struct Scene6_AdaptationMatchGame: View {
                             Label(isDone ? "Great matching!" : "Match Animals to Adaptations",
                                   systemImage: isDone ? "star.fill" : "arrow.left.arrow.right")
                                 .font(.title2.bold())
-                                .foregroundStyle(isDone ? .orange : .primary)
+                                .foregroundColor(isDone ? .orange : .primary)
                             Text(isDone
                                  ? "Every animal has unique adaptations that help it survive in its climate. You matched all 6 correctly!"
                                  : "Drag each animal on the left to its matching adaptation on the right. Each correct match earns 2 points.")
@@ -146,12 +147,14 @@ struct Scene6_AdaptationMatchGame: View {
             .frame(minWidth: 140)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(Color(nsColor: .windowBackgroundColor))
+                    .fill(Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .strokeBorder(.orange.opacity(0.4), lineWidth: 1.5)
             )
+            .shadow(color: .black.opacity(offset != .zero ? 0.25 : 0), radius: 12, x: 0, y: 6)
+            .scaleEffect(offset != .zero ? 1.08 : 1.0)
             .offset(offset)
             .offset(x: isShaking ? -6 : 0)
             .zIndex(offset == .zero ? 0 : 10)
@@ -178,7 +181,7 @@ struct Scene6_AdaptationMatchGame: View {
             .frame(minWidth: 180)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(Color(nsColor: .windowBackgroundColor))
+                    .fill(Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -188,7 +191,7 @@ struct Scene6_AdaptationMatchGame: View {
                 GeometryReader { geo in
                     Color.clear
                         .onAppear { adaptationRects[pair.id] = geo.frame(in: .global) }
-                        .onChange(of: geo.size) { _, _ in adaptationRects[pair.id] = geo.frame(in: .global) }
+                        .onChange(of: geo.size) { _ in adaptationRects[pair.id] = geo.frame(in: .global) }
                 }
             )
             .accessibilityLabel("\(pair.adaptation) drop target")
@@ -227,7 +230,10 @@ struct Scene6_AdaptationMatchGame: View {
                     matched.insert(animalPair.id)
                 }
                 showConfetti = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { showConfetti = false }
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 1_500_000_000)
+                    showConfetti = false
+                }
             } else {
                 // Wrong match — shake
                 shakeId = animalPair.id
@@ -236,7 +242,10 @@ struct Scene6_AdaptationMatchGame: View {
                         shakeId = animalPair.id
                     }
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { shakeId = nil }
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 400_000_000)
+                    shakeId = nil
+                }
             }
             return
         }

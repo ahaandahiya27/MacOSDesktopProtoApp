@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build a Weather Station.
 /// 5 instruments appear one by one. Tap each to learn what it measures.
+@available(macOS 12, *)
 struct Scene2_BuildAWeatherStation: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -61,22 +62,22 @@ struct Scene2_BuildAWeatherStation: View {
                                 VStack(spacing: 8) {
                                     Image(systemName: inst.symbol)
                                         .font(.title)
-                                        .foregroundStyle(isRevealed ? .indigo : .gray.opacity(0.3))
+                                        .foregroundColor(isRevealed ? Color.compatIndigo : .gray.opacity(0.3))
                                     Text(inst.name)
                                         .font(.caption.weight(.medium))
-                                        .foregroundStyle(isRevealed ? .primary : .secondary)
+                                        .foregroundColor(isRevealed ? .primary : .secondary)
                                     Text(inst.measures)
                                         .font(.caption2)
-                                        .foregroundStyle(.secondary)
+                                        .foregroundColor(.secondary)
                                 }
                                 .frame(width: 100, height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(isSelected ? Color.indigo.opacity(0.12) : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? Color.compatIndigo.opacity(0.12) : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .strokeBorder(isSelected ? .indigo : .gray.opacity(0.2), lineWidth: isSelected ? 2 : 1)
+                                        .strokeBorder(isSelected ? Color.compatIndigo : .gray.opacity(0.2), lineWidth: isSelected ? 2 : 1)
                                 )
                                 .opacity(isRevealed ? 1 : 0.4)
                             }
@@ -90,12 +91,12 @@ struct Scene2_BuildAWeatherStation: View {
                     HStack(spacing: 6) {
                         Text("Station progress:")
                             .font(.caption.weight(.medium))
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                         ProgressView(value: Double(revealedCount), total: 5)
                             .frame(maxWidth: 200)
                         Text("\(revealedCount) / 5")
                             .font(.caption.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                     }
 
                     // Add next instrument button
@@ -113,8 +114,8 @@ struct Scene2_BuildAWeatherStation: View {
                         } label: {
                             Label("Add next instrument", systemImage: "plus.circle.fill")
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.indigo)
+                        
+                        .accentColor(Color.compatIndigo)
                     }
 
                     Spacer()

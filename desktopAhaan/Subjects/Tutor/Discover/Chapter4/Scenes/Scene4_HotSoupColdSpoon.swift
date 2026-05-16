@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 4 — Hot Soup, Cold Spoon.
 /// Metal spoon in hot soup conducts heat. Toggle to wooden spoon to see insulation.
+@available(macOS 12, *)
 struct Scene4_HotSoupColdSpoon: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -23,16 +24,16 @@ struct Scene4_HotSoupColdSpoon: View {
                     HStack(spacing: 12) {
                         Text("Metal spoon")
                             .fontWeight(isWooden ? .regular : .bold)
-                            .foregroundStyle(isWooden ? .secondary : .primary)
+                            .foregroundColor(isWooden ? .secondary : .primary)
                         Toggle("", isOn: $isWooden)
                             .toggleStyle(.switch)
                             .labelsHidden()
-                            .onChange(of: isWooden) { _, _ in
+                            .onChange(of: isWooden) { _ in
                                 resetAnimation()
                             }
                         Text("Wooden spoon")
                             .fontWeight(isWooden ? .bold : .regular)
-                            .foregroundStyle(isWooden ? .primary : .secondary)
+                            .foregroundColor(isWooden ? .primary : .secondary)
                     }
                     .accessibilityLabel("Spoon type: \(isWooden ? "wooden" : "metal")")
 
@@ -85,7 +86,7 @@ struct Scene4_HotSoupColdSpoon: View {
                         if showOuch {
                             Text("Ouch! 🔥")
                                 .font(.title.bold())
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                                 .offset(x: 80, y: -160)
                                 .transition(.scale.combined(with: .opacity))
                         }
@@ -94,7 +95,7 @@ struct Scene4_HotSoupColdSpoon: View {
                         if heating && isWooden {
                             Image(systemName: "xmark.circle.fill")
                                 .font(.title)
-                                .foregroundStyle(.green)
+                                .foregroundColor(.green)
                                 .offset(x: 60, y: -10)
                                 .accessibilityLabel("Heat blocked by wood")
                         }
@@ -108,8 +109,8 @@ struct Scene4_HotSoupColdSpoon: View {
                             startHeating()
                         }
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.orange)
+                    
+                    .accentColor(.orange)
 
                     Spacer()
                     Spacer()
@@ -147,7 +148,8 @@ struct Scene4_HotSoupColdSpoon: View {
             dotProgress = 1.0
         }
         if !isWooden {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
                 withAnimation(.spring()) { showOuch = true }
             }
         }
@@ -162,6 +164,7 @@ struct Scene4_HotSoupColdSpoon: View {
 
 // MARK: - Steam wisp
 
+@available(macOS 12, *)
 private struct SteamWisp: View {
     let index: Int
     @State private var offset: CGFloat = 0
@@ -170,7 +173,7 @@ private struct SteamWisp: View {
     var body: some View {
         Text("~")
             .font(.title2)
-            .foregroundStyle(.white.opacity(0.5))
+            .foregroundColor(.white.opacity(0.5))
             .offset(x: CGFloat(index - 1) * 30, y: -20 - offset)
             .onAppear {
                 guard !reduceMotion else { return }

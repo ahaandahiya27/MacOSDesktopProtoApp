@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 5 — Tides and the Moon.
 /// Shows Earth with tidal bulges and an orbiting Moon. Three info cards to explore:
 /// High Tide, Low Tide, Spring & Neap Tides.
+@available(macOS 12, *)
 struct Scene5_TidesAndTheMoon: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -19,7 +20,7 @@ struct Scene5_TidesAndTheMoon: View {
     private let cards: [TideCard] = [
         TideCard(id: "high", title: "High Tide", icon: "arrow.up.circle.fill", color: .blue,
                  explanation: "The Moon's gravity pulls ocean water toward it, creating a bulge of high tide on the side nearest the Moon. There is also a bulge on the opposite side of Earth because Earth is pulled toward the Moon slightly more than the far-side water (centrifugal effect). Coastal areas under these bulges experience high tide."),
-        TideCard(id: "low", title: "Low Tide", icon: "arrow.down.circle.fill", color: .teal,
+        TideCard(id: "low", title: "Low Tide", icon: "arrow.down.circle.fill", color: Color.compatTeal,
                  explanation: "At positions 90 degrees from the tidal bulges, water is drawn away toward the bulges, so the water level drops. These areas experience low tide. Most coastlines see two high tides and two low tides every day as Earth rotates beneath the bulges."),
         TideCard(id: "spring_neap", title: "Spring & Neap Tides", icon: "sun.and.horizon.fill", color: .orange,
                  explanation: "During New Moon and Full Moon, the Sun, Moon, and Earth are roughly aligned. The Sun's gravity adds to the Moon's pull, producing extra-high spring tides. During First and Third Quarter Moon, the Sun and Moon are at right angles to Earth, partially cancelling each other out, producing weaker neap tides."),
@@ -42,7 +43,7 @@ struct Scene5_TidesAndTheMoon: View {
 
                     Text("\(explored.count) / \(cards.count) topics explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Tide diagram
                     tideDiagram
@@ -63,20 +64,20 @@ struct Scene5_TidesAndTheMoon: View {
                             } label: {
                                 HStack(spacing: 6) {
                                     Image(systemName: card.icon)
-                                        .foregroundStyle(card.color)
+                                        .foregroundColor(card.color)
                                     Text(card.title)
                                         .font(.caption.weight(.semibold))
                                     if isExplored {
                                         Image(systemName: "checkmark.circle.fill")
                                             .font(.caption2)
-                                            .foregroundStyle(.green)
+                                            .foregroundColor(.green)
                                     }
                                 }
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 8)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(isSelected ? card.color.opacity(0.12) : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? card.color.opacity(0.12) : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -100,7 +101,7 @@ struct Scene5_TidesAndTheMoon: View {
                             if let id = selectedCard, let card = cards.first(where: { $0.id == id }) {
                                 Label(card.title, systemImage: card.icon)
                                     .font(.title2.bold())
-                                    .foregroundStyle(card.color)
+                                    .foregroundColor(card.color)
                                 Text(card.explanation)
                                     .font(.body)
                                     .lineSpacing(4)
@@ -144,17 +145,17 @@ struct Scene5_TidesAndTheMoon: View {
 
             // Earth
             Circle()
-                .fill(Color.blue.gradient)
+                .fill(Color.blue)
                 .frame(width: 80, height: 80)
 
             Text("Earth")
                 .font(.caption2.weight(.bold))
-                .foregroundStyle(.white)
+                .foregroundColor(.white)
 
             // "High Tide" labels on bulge ends
             Text("High")
                 .font(.system(size: 9, weight: .semibold))
-                .foregroundStyle(.blue)
+                .foregroundColor(.blue)
                 .offset(
                     x: 95 * cos(moonAngle * .pi / 180),
                     y: 95 * sin(moonAngle * .pi / 180)
@@ -162,7 +163,7 @@ struct Scene5_TidesAndTheMoon: View {
 
             Text("High")
                 .font(.system(size: 9, weight: .semibold))
-                .foregroundStyle(.blue)
+                .foregroundColor(.blue)
                 .offset(
                     x: -95 * cos(moonAngle * .pi / 180),
                     y: -95 * sin(moonAngle * .pi / 180)
@@ -170,12 +171,12 @@ struct Scene5_TidesAndTheMoon: View {
 
             // Moon orbiting
             Circle()
-                .fill(Color.gray.gradient)
+                .fill(Color.gray)
                 .frame(width: 28, height: 28)
                 .overlay(
                     Text("Moon")
                         .font(.system(size: 7, weight: .bold))
-                        .foregroundStyle(.white)
+                        .foregroundColor(.white)
                 )
                 .shadow(color: .gray.opacity(0.4), radius: 4)
                 .offset(

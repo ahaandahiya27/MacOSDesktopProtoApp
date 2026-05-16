@@ -18,6 +18,7 @@ struct DraggableCard: View {
     let token: OrganismToken
     var settled: Bool = false
     var shakeOffset: CGFloat = 0
+    var isDragging: Bool = false
 
     var body: some View {
         VStack(spacing: 4) {
@@ -26,13 +27,16 @@ struct DraggableCard: View {
                 .accessibilityHidden(true)
             Text(token.label)
                 .font(.callout.weight(.medium))
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
         }
         .frame(width: 110, height: 96)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
-                .shadow(color: .black.opacity(settled ? 0.0 : 0.12), radius: 8, x: 0, y: 4)
+                .fill(Color(NSColor.windowBackgroundColor))
+                .shadow(
+                    color: .black.opacity(settled ? 0.0 : (isDragging ? 0.25 : 0.12)),
+                    radius: isDragging ? 16 : 8, x: 0, y: isDragging ? 8 : 4
+                )
         )
         .overlay(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -43,7 +47,9 @@ struct DraggableCard: View {
         )
         .opacity(settled ? 0.55 : 1)
         .offset(x: shakeOffset)
+        .scaleEffect(isDragging ? 1.08 : 1.0)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(token.label), \(token.isAutotroph ? "makes its own food" : "eats other things")")
+        .accessibilityHint(settled ? "Already placed" : "Drag to the correct zone")
     }
 }

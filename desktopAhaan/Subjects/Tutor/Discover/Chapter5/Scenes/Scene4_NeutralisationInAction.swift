@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 4 — Neutralisation in Action.
 /// Animated beaker: acid (red) + base (blue) mix to green. H+ and OH- ions combine.
+@available(macOS 12, *)
 struct Scene4_NeutralisationInAction: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -44,7 +45,7 @@ struct Scene4_NeutralisationInAction: View {
                             RoundedRectangle(cornerRadius: 6, style: .continuous)
                                 .fill(mixedColor.opacity(0.7))
                                 .frame(width: 112, height: 80 + pourProgress * 50)
-                                .animation(reduceMotion ? .none : .easeInOut(duration: 1.5), value: pourProgress)
+                                .animation(reduceMotion ? .none : .easeInOut(duration: 1.5))
 
                             RoundedRectangle(cornerRadius: 8, style: .continuous)
                                 .strokeBorder(.gray.opacity(0.4), lineWidth: 2)
@@ -65,8 +66,8 @@ struct Scene4_NeutralisationInAction: View {
                             Label("Pour & Mix!", systemImage: "drop.triangle.fill")
                                 .font(.headline)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.indigo)
+                        
+                        .accentColor(Color.compatIndigo)
                     }
 
                     // Ion animation area
@@ -81,10 +82,10 @@ struct Scene4_NeutralisationInAction: View {
                             VStack(spacing: 8) {
                                 Text("Acid + Base \u{2192} Salt + Water")
                                     .font(.title3.bold().monospaced())
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("HCl + NaOH \u{2192} NaCl + H\u{2082}O")
                                     .font(.body.monospaced())
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
                         }
                         .frame(maxWidth: 500)
@@ -131,14 +132,14 @@ struct Scene4_NeutralisationInAction: View {
                 RoundedRectangle(cornerRadius: 4, style: .continuous)
                     .fill(color.opacity(isPouring ? 0.3 : 0.6))
                     .frame(width: 54, height: isPouring ? 30 : 60)
-                    .animation(reduceMotion ? .none : .easeInOut(duration: 1.2), value: isPouring)
+                    .animation(reduceMotion ? .none : .easeInOut(duration: 1.2))
 
                 RoundedRectangle(cornerRadius: 6, style: .continuous)
                     .strokeBorder(.gray.opacity(0.4), lineWidth: 1.5)
                     .frame(width: 60, height: 90)
             }
             .rotationEffect(.degrees(tiltAngle))
-            .animation(reduceMotion ? .none : .easeInOut(duration: 0.8), value: tiltAngle)
+            .animation(reduceMotion ? .none : .easeInOut(duration: 0.8))
 
             Text(label)
                 .font(.caption.weight(.medium))
@@ -151,17 +152,17 @@ struct Scene4_NeutralisationInAction: View {
                 HStack(spacing: 16) {
                     Text("H\u{207A}")
                         .font(.title2.bold())
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                     Text("+")
                         .font(.title2)
                     Text("OH\u{207B}")
                         .font(.title2.bold())
-                        .foregroundStyle(.blue)
+                        .foregroundColor(.blue)
                     Text("\u{2192}")
                         .font(.title2)
                     Text("H\u{2082}O")
                         .font(.title2.bold())
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                 }
             } else {
                 TimelineView(.animation(minimumInterval: 1.0 / 20)) { ctx in
@@ -215,7 +216,8 @@ struct Scene4_NeutralisationInAction: View {
         withAnimation(reduceMotion ? .none : .easeInOut(duration: 2.0)) {
             pourProgress = 1.0
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 2_200_000_000)
             withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.4)) {
                 showEquation = true
             }

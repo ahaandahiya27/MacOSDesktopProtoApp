@@ -5,6 +5,7 @@ import SwiftUI
 /// A vertical tube (oesophagus) drawn with rounded rectangles. Tap "Swallow!"
 /// and a food bolus animates downward in a peristaltic squeeze pattern. Speed
 /// slider 0.5× to 2×. Caption from ch02_t01_c07.
+@available(macOS 12, *)
 struct Scene2_TheSwallowWave: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -26,7 +27,7 @@ struct Scene2_TheSwallowWave: View {
             VStack(spacing: 20) {
                 Text("The Swallow Wave")
                     .font(.title.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
 
                 ZStack {
                     OesophagusView(bolusPosition: bolusPosition, squeeze: squeeze)
@@ -52,8 +53,8 @@ struct Scene2_TheSwallowWave: View {
                             .padding(.vertical, 10)
                             .padding(.horizontal, 20)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.green)
+                    
+                    .accentColor(.green)
                     .disabled(isBolus)
 
                     VStack(alignment: .leading, spacing: 4) {
@@ -74,10 +75,10 @@ struct Scene2_TheSwallowWave: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Swallow Wave", systemImage: "arrow.down.circle.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                         Text(swallowExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -102,8 +103,9 @@ struct Scene2_TheSwallowWave: View {
 
         // Squeeze wave
         if !reduceMotion {
-            for i in 0..<5 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.15) {
+            Task { @MainActor in
+                for i in 0..<5 {
+                    try? await Task.sleep(nanoseconds: 150_000_000)
                     withAnimation(.easeInOut(duration: 0.3)) {
                         squeeze = CGFloat(i) * 0.2
                     }
@@ -111,7 +113,8 @@ struct Scene2_TheSwallowWave: View {
             }
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration + 0.3) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: UInt64((duration + 0.3) * 1_000_000_000))
             isBolus = false
             bolusPosition = 0
             squeeze = 0
@@ -121,6 +124,7 @@ struct Scene2_TheSwallowWave: View {
 
 // MARK: - Oesophagus View
 
+@available(macOS 12, *)
 struct OesophagusView: View {
     let bolusPosition: CGFloat
     let squeeze: CGFloat

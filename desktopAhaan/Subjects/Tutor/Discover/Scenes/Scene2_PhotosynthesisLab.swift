@@ -7,6 +7,7 @@ import SwiftUI
 /// button activates. Tapping it animates the tiles compressing into the leaf
 /// in the centre, the leaf glowing white-hot, and glucose + oxygen bursting
 /// out the other side.
+@available(macOS 12, *)
 struct Scene2_PhotosynthesisLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -43,14 +44,14 @@ struct Scene2_PhotosynthesisLab: View {
             // Equation row
             HStack(spacing: 12) {
                 IngredientTile(emoji: "💧", label: "6 H₂O", filled: hasWater)
-                Text("+").font(.title.bold()).foregroundStyle(.secondary)
+                Text("+").font(.title.bold()).foregroundColor(.secondary)
                 IngredientTile(emoji: "☁️", label: "6 CO₂", filled: hasCO2)
-                Text("+").font(.title.bold()).foregroundStyle(.secondary)
+                Text("+").font(.title.bold()).foregroundColor(.secondary)
                 IngredientTile(emoji: "☀️", label: "Light", filled: hasSun)
-                Text("→").font(.title.bold()).foregroundStyle(.secondary)
+                Text("→").font(.title.bold()).foregroundColor(.secondary)
                 IngredientTile(emoji: "🍇", label: "C₆H₁₂O₆", filled: produced, color: .purple)
-                Text("+").font(.title.bold()).foregroundStyle(.secondary)
-                IngredientTile(emoji: "💨", label: "6 O₂", filled: produced, color: .teal)
+                Text("+").font(.title.bold()).foregroundColor(.secondary)
+                IngredientTile(emoji: "💨", label: "6 O₂", filled: produced, color: Color.compatTeal)
             }
             .padding(.horizontal, 12)
 
@@ -71,7 +72,7 @@ struct Scene2_PhotosynthesisLab: View {
                         isActive: burstActive,
                         particleCount: 50,
                         duration: 1.2,
-                        palette: [.purple, .pink, .teal, .green]
+                        palette: [.purple, .pink, Color.compatTeal, .green]
                     )
                     .frame(width: 360, height: 200)
                     .allowsHitTesting(false)
@@ -89,8 +90,8 @@ struct Scene2_PhotosynthesisLab: View {
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(canCook ? .green : .gray)
+            
+            .accentColor(canCook ? .green : .gray)
             .disabled(!canCook && !produced)
 
             if produced {
@@ -98,7 +99,7 @@ struct Scene2_PhotosynthesisLab: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Label("What I learned", systemImage: "book.fill")
                             .font(.headline)
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                         Text(textbookExplanation)
                             .font(.callout)
                     }
@@ -110,9 +111,16 @@ struct Scene2_PhotosynthesisLab: View {
                 Button("🔁 Try again") { resetEverything() }
                     .buttonStyle(.bordered)
                     .disabled(!produced)
-                GotItButton(action: onComplete)
-                    .disabled(!produced)
-                    .opacity(produced ? 1 : 0.5)
+                VStack(spacing: 4) {
+                    GotItButton(action: onComplete)
+                        .disabled(!produced)
+                        .opacity(produced ? 1 : 0.5)
+                    if !produced {
+                        Text("Complete the experiment to continue")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
             .padding(.bottom, 12)
 
@@ -127,15 +135,15 @@ struct Scene2_PhotosynthesisLab: View {
         withAnimation(reduceMotion ? .none : .easeIn(duration: 0.8)) {
             // Just shows the cooking visual; nothing else to set here.
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 1_000_000_000)
             withAnimation(reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.7)) {
                 produced = true
                 burstActive = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
-                burstActive = false
-                cooking = false
-            }
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
+            burstActive = false
+            cooking = false
         }
     }
 
@@ -167,8 +175,8 @@ private struct FuelButton: View {
             }
             .frame(width: 96, height: 80)
         }
-        .buttonStyle(.bordered)
-        .tint(tint)
+        
+        .accentColor(tint)
         .opacity(on ? 0.5 : 1)
         .accessibilityLabel("Add \(label)")
     }

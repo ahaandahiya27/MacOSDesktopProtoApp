@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 7 — Soil pH and the Farmer.
 /// Interactive: acidic soil + lime raises pH, basic soil + organic matter lowers pH.
+@available(macOS 12, *)
 struct Scene7_SoilpHAndFarmer: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -53,28 +54,28 @@ struct Scene7_SoilpHAndFarmer: View {
                                 .overlay(
                                     Text("Soil")
                                         .font(.caption.bold())
-                                        .foregroundStyle(.white)
+                                        .foregroundColor(.white)
                                 )
-                                .animation(reduceMotion ? .none : .easeInOut(duration: 0.4), value: soilPH)
+                                .animation(reduceMotion ? .none : .easeInOut(duration: 0.4))
                         }
 
                         // pH meter
                         VStack(spacing: 6) {
                             Text("pH Meter")
                                 .font(.caption.weight(.medium))
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                             Text("\(soilPH, specifier: "%.1f")")
                                 .font(.system(size: 48, weight: .bold, design: .rounded).monospacedDigit())
-                                .foregroundStyle(meterColor)
+                                .foregroundColor(meterColor)
                             Text(pHDescription)
                                 .font(.subheadline.weight(.medium))
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                         .frame(width: 160)
                         .padding(16)
                         .background(
                             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(Color(nsColor: .windowBackgroundColor))
+                                .fill(Color(NSColor.windowBackgroundColor))
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -87,30 +88,30 @@ struct Scene7_SoilpHAndFarmer: View {
                         VStack(spacing: 8) {
                             Text("The soil is too acidic! Add lime to raise the pH.")
                                 .font(.body)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                             Button {
                                 addLime()
                             } label: {
                                 Label("Add Lime (CaO)", systemImage: "plus.circle.fill")
                                     .font(.headline)
                             }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.orange)
+                            
+                            .accentColor(.orange)
                             .disabled(soilPH >= 6.8)
                         }
                     } else if scenario == 1 {
                         VStack(spacing: 8) {
                             Text("Now the soil is too basic! Add organic matter to lower the pH.")
                                 .font(.body)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                             Button {
                                 addOrganic()
                             } label: {
                                 Label("Add Organic Matter", systemImage: "leaf.fill")
                                     .font(.headline)
                             }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            
+                            .accentColor(.green)
                             .disabled(soilPH <= 7.2)
                         }
                     }
@@ -178,7 +179,8 @@ struct Scene7_SoilpHAndFarmer: View {
         }
         if soilPH >= 6.8 {
             // Switch to scenario 1: basic soil
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 800_000_000)
                 withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.5)) {
                     soilPH = 9.5
                     scenario = 1
@@ -193,7 +195,8 @@ struct Scene7_SoilpHAndFarmer: View {
             soilPH = max(soilPH - 0.8, 7.0)
         }
         if soilPH <= 7.2 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 600_000_000)
                 withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
                     scenario = 2
                 }

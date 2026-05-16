@@ -1,30 +1,18 @@
 import SwiftUI
-import SwiftData
 
-/// The 9-scene driver for Chapter 7 — Weather, Climate and Adaptations.
+@available(macOS 12, *)
 struct DiscoverChapter7View: View {
     let pack: SubjectPack
     let chapter: Chapter
 
-    @Environment(\.modelContext) private var modelContext
-    @Query private var progressRows: [DiscoverProgress]
+    @EnvironmentObject private var dataStore: DataStore
     @AppStorage("discover_scene_ch07") private var currentScene: Int = 0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let totalScenes = 9
 
-    init(pack: SubjectPack, chapter: Chapter) {
-        self.pack = pack
-        self.chapter = chapter
-        let chId = chapter.id
-        _progressRows = Query(
-            filter: #Predicate<DiscoverProgress> { $0.chapterId == chId },
-            sort: [SortDescriptor(\.completedAt)]
-        )
-    }
-
     private var completedSceneIds: Set<String> {
-        Set(progressRows.map { $0.sceneId })
+        Set(dataStore.discoverRows(for: chapter.id).map { $0.sceneId })
     }
 
     var body: some View {
@@ -45,9 +33,7 @@ struct DiscoverChapter7View: View {
             }
         }
         .navigationTitle("Discover · Ch. 7 — Weather, Climate and Adaptations")
-        .focusable()
-        .onKeyPress(.leftArrow)  { goPrev();  return .handled }
-        .onKeyPress(.rightArrow) { goNext();  return .handled }
+        .onArrowKeys(left: { goPrev() }, right: { goNext() })
     }
 
     private var header: some View {
@@ -60,15 +46,15 @@ struct DiscoverChapter7View: View {
                 } label: {
                     Circle()
                         .fill(done ? Color.green : Color.gray.opacity(0.25))
-                        .overlay(Circle().strokeBorder(currentScene == i ? .indigo : .clear, lineWidth: 2.5))
-                        .frame(width: 14, height: 14)
+                        .overlay(Circle().strokeBorder(currentScene == i ? Color.compatIndigo : .clear, lineWidth: 2.5))
+                        .frame(width: 22, height: 22)
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
             }
             Spacer()
             Text("\(completedSceneIds.count) / \(totalScenes) done")
-                .font(.caption.weight(.medium)).foregroundStyle(.secondary)
+                .font(.caption.weight(.medium)).foregroundColor(.secondary)
         }
         .padding(.horizontal, 24).padding(.vertical, 12)
     }
@@ -92,12 +78,12 @@ struct DiscoverChapter7View: View {
     private var footer: some View {
         HStack {
             Button { goPrev() } label: { Label("Previous", systemImage: "chevron.left") }
-                .buttonStyle(.bordered).disabled(currentScene == 0)
+                .disabled(currentScene == 0)
             Spacer()
-            Text(sceneTitle(at: currentScene)).font(.headline).foregroundStyle(.indigo)
+            Text(sceneTitle(at: currentScene)).font(.headline).foregroundColor(Color.compatIndigo)
             Spacer()
             Button { goNext() } label: { Label("Next", systemImage: "chevron.right").labelStyle(.titleAndIcon) }
-                .buttonStyle(.borderedProminent).tint(.indigo).disabled(currentScene == totalScenes - 1)
+                .accentColor(Color.compatIndigo).disabled(currentScene == totalScenes - 1)
         }
         .padding(.horizontal, 24).padding(.vertical, 12)
     }
@@ -127,17 +113,12 @@ struct DiscoverChapter7View: View {
 
     private func markComplete(_ index: Int, score: Int? = nil, max: Int? = nil) {
         let id = sceneId(at: index)
-        if let existing = progressRows.first(where: { $0.sceneId == id }) {
-            if let s = score { existing.score = s }
-            if let m = max   { existing.maxScore = m }
-            existing.completedAt = Date()
-        } else {
-            let row = DiscoverProgress(chapterId: chapter.id, sceneId: id, score: score, maxScore: max)
-            modelContext.insert(row)
-        }
-        modelContext.safeSave()
+        dataStore.markSceneComplete(chapterId: chapter.id, sceneId: id, score: score, maxScore: max)
         if index < totalScenes - 1 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { goNext() }
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 400_000_000)
+                goNext()
+            }
         }
     }
 }

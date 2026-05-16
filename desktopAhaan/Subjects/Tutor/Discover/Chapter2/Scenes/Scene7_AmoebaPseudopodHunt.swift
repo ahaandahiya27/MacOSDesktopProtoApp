@@ -6,6 +6,7 @@ import SwiftUI
 /// Animation: pseudopodia extend toward food, surround it, fuse, and engulf it into
 /// a food vacuole that shrinks and digests. Reduce-motion respected. Tap food to
 /// restart. Caption from ch02_t02_c02.
+@available(macOS 12, *)
 struct Scene7_AmoebaPseudopodHunt: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -26,13 +27,17 @@ struct Scene7_AmoebaPseudopodHunt: View {
             VStack(spacing: 16) {
                 Text("Amoeba Pseudopod Hunt")
                     .font(.title.bold())
-                    .foregroundStyle(.cyan)
+                    .foregroundColor(Color.compatCyan)
 
                 ZStack {
                     // Amoeba body
-                    AmoebaBlobShape(pseudopodiaExtend: pseudopodiaExtend)
-                        .fill(Color.cyan.opacity(0.5))
-                        .stroke(Color.cyan.opacity(0.8), lineWidth: 2)
+                    ZStack {
+                        AmoebaBlobShape(pseudopodiaExtend: pseudopodiaExtend)
+                            .foregroundColor(Color.compatCyan.opacity(0.5))
+                        AmoebaBlobShape(pseudopodiaExtend: pseudopodiaExtend)
+                            .stroke(lineWidth: 2)
+                            .foregroundColor(Color.compatCyan.opacity(0.8))
+                    }
                         .frame(width: 100, height: 100)
                         .position(x: 150, y: 120)
 
@@ -68,8 +73,8 @@ struct Scene7_AmoebaPseudopodHunt: View {
                             .padding(.vertical, 10)
                             .padding(.horizontal, 20)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.cyan)
+                    
+                    .accentColor(Color.compatCyan)
                     .disabled(animating)
 
                     Spacer()
@@ -82,10 +87,10 @@ struct Scene7_AmoebaPseudopodHunt: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("Amoeba Pseudopod Hunt", systemImage: "bubble.left.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.cyan)
+                            .foregroundColor(Color.compatCyan)
                         Text(amoebExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -108,15 +113,13 @@ struct Scene7_AmoebaPseudopodHunt: View {
             pseudopodiaExtend = 1.0
         }
 
-        // Phase 2: Engulf food (1 second after phase 1)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        // Phase 2: Engulf food (1 second after phase 1), then reset
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
             withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.0)) {
                 foodEngulfed = 1.0
             }
-        }
-
-        // Reset after 3 seconds
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            try? await Task.sleep(nanoseconds: 1_800_000_000)
             animating = false
         }
     }

@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 3 — Moon Phases Wheel.
 /// Eight moon phase cards in a 2x4 grid. Each card shows a Canvas-drawn moon and
 /// phase name. Tap to see explanation. After all 8 explored, Got It appears.
+@available(macOS 12, *)
 struct Scene3_MoonPhasesWheel: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -61,7 +62,7 @@ struct Scene3_MoonPhasesWheel: View {
 
                     Text("Tap each phase to learn what you see in the sky.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // 2 x 4 grid
                     LazyVGrid(columns: columns, spacing: 14) {
@@ -74,7 +75,7 @@ struct Scene3_MoonPhasesWheel: View {
 
                     Text("\(exploredPhases.count) / \(phases.count) phases explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                         .padding(.top, 4)
 
                     Spacer()
@@ -140,19 +141,19 @@ struct Scene3_MoonPhasesWheel: View {
                     .multilineTextAlignment(.center)
                     .lineLimit(2)
                     .minimumScaleFactor(0.8)
-                    .foregroundStyle(isSelected ? .indigo : .primary)
+                    .foregroundColor(isSelected ? Color.compatIndigo : .primary)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)
             .padding(.horizontal, 6)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isSelected ? Color.indigo.opacity(0.1) : Color(nsColor: .windowBackgroundColor))
+                    .fill(isSelected ? Color.compatIndigo.opacity(0.1) : Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
                     .strokeBorder(
-                        isSelected ? .indigo : (isExplored ? .green.opacity(0.5) : .gray.opacity(0.25)),
+                        isSelected ? Color.compatIndigo : (isExplored ? .green.opacity(0.5) : .gray.opacity(0.25)),
                         lineWidth: 2
                     )
             )

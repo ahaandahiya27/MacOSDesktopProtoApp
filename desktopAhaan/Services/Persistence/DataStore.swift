@@ -1,0 +1,220 @@
+import Foundation
+import Combine
+
+@MainActor
+final class DataStore: ObservableObject {
+
+    static let shared = DataStore()
+
+    @Published var translationRecords: [TranslationRecord] = []
+    @Published var practiceProgress: [PracticeProgress] = []
+    @Published var studyBookmarks: [StudyBookmark] = []
+    @Published var questionAttempts: [QuestionAttempt] = []
+    @Published var studySessions: [StudySession] = []
+    @Published var discoverProgress: [DiscoverProgress] = []
+    @Published var lastSaveError: String?
+
+    private let storeDir: URL
+
+    init() {
+        let appSupport = FileManager.default.urls(
+            for: .applicationSupportDirectory, in: .userDomainMask
+        ).first ?? FileManager.default.temporaryDirectory
+        storeDir = appSupport
+            .appendingPathComponent("com.emoha.desktopAhaan")
+            .appendingPathComponent("data")
+        do {
+            try FileManager.default.createDirectory(
+                at: storeDir, withIntermediateDirectories: true
+            )
+        } catch {
+            print("[DataStore] Failed to create data directory: \(error)")
+            lastSaveError = "Could not create data directory. Data may not persist."
+        }
+        loadAll()
+    }
+
+    // MARK: - TranslationRecord
+
+    func insert(_ record: TranslationRecord) {
+        translationRecords.insert(record, at: 0)
+        save(translationRecords, to: "translations.json")
+    }
+
+    func delete(_ record: TranslationRecord) {
+        translationRecords.removeAll { $0.id == record.id }
+        save(translationRecords, to: "translations.json")
+    }
+
+    func deleteAllTranslations() {
+        translationRecords.removeAll()
+        save(translationRecords, to: "translations.json")
+    }
+
+    func saveTranslations() {
+        save(translationRecords, to: "translations.json")
+    }
+
+    func toggleRecordFavorite(_ record: TranslationRecord) {
+        record.isFavorite.toggle()
+        translationRecords = translationRecords
+        save(translationRecords, to: "translations.json")
+    }
+
+    func setFavorite(recordId: UUID, isFavorite: Bool) {
+        guard let record = translationRecords.first(where: { $0.id == recordId }) else { return }
+        record.isFavorite = isFavorite
+        translationRecords = translationRecords
+        save(translationRecords, to: "translations.json")
+    }
+
+    var favorites: [TranslationRecord] {
+        translationRecords
+            .filter { $0.isFavorite }
+            .sorted { $0.createdAt > $1.createdAt }
+    }
+
+    var recordsByDate: [TranslationRecord] {
+        translationRecords.sorted { $0.createdAt > $1.createdAt }
+    }
+
+    func findRecord(original: String, translated: String,
+                    srcLang: String, tgtLang: String) -> TranslationRecord? {
+        translationRecords.first {
+            $0.originalText == original &&
+            $0.translatedText == translated &&
+            $0.sourceLanguage == srcLang &&
+            $0.targetLanguage == tgtLang
+        }
+    }
+
+    // MARK: - PracticeProgress
+
+    func findProgress(phraseID: String) -> PracticeProgress? {
+        practiceProgress.first { $0.phraseID == phraseID }
+    }
+
+    func upsertProgress(_ progress: PracticeProgress) {
+        if let idx = practiceProgress.firstIndex(where: { $0.id == progress.id }) {
+            practiceProgress[idx] = progress
+        } else {
+            practiceProgress.append(progress)
+        }
+        save(practiceProgress, to: "practice.json")
+    }
+
+    func deleteAllProgress() {
+        practiceProgress.removeAll()
+        save(practiceProgress, to: "practice.json")
+    }
+
+    // MARK: - StudyBookmark
+
+    var bookmarksByDate: [StudyBookmark] {
+        studyBookmarks.sorted { $0.addedAt > $1.addedAt }
+    }
+
+    func isBookmarked(subjectPackId: String, conceptId: String) -> Bool {
+        let key = "\(subjectPackId)::\(conceptId)"
+        return studyBookmarks.contains { $0.id == key }
+    }
+
+    func toggleBookmark(subjectPackId: String, conceptId: String,
+                        conceptTitle: String) {
+        let key = "\(subjectPackId)::\(conceptId)"
+        if let idx = studyBookmarks.firstIndex(where: { $0.id == key }) {
+            studyBookmarks.remove(at: idx)
+        } else {
+            studyBookmarks.append(StudyBookmark(
+                subjectPackId: subjectPackId,
+                conceptId: conceptId,
+                conceptTitle: conceptTitle
+            ))
+        }
+        save(studyBookmarks, to: "bookmarks.json")
+    }
+
+    func deleteBookmark(_ bookmark: StudyBookmark) {
+        studyBookmarks.removeAll { $0.id == bookmark.id }
+        save(studyBookmarks, to: "bookmarks.json")
+    }
+
+    // MARK: - QuestionAttempt
+
+    func insertAttempt(_ attempt: QuestionAttempt) {
+        questionAttempts.append(attempt)
+        save(questionAttempts, to: "attempts.json")
+    }
+
+    // MARK: - StudySession
+
+    func insertSession(_ session: StudySession) {
+        studySessions.append(session)
+        save(studySessions, to: "sessions.json")
+    }
+
+    // MARK: - DiscoverProgress
+
+    func isSceneComplete(chapterId: String, sceneId: String) -> Bool {
+        let key = "\(chapterId)::\(sceneId)"
+        return discoverProgress.contains { $0.id == key }
+    }
+
+    func markSceneComplete(chapterId: String, sceneId: String,
+                           score: Int? = nil, maxScore: Int? = nil) {
+        let key = "\(chapterId)::\(sceneId)"
+        if let idx = discoverProgress.firstIndex(where: { $0.id == key }) {
+            if let s = score { discoverProgress[idx].score = s }
+            if let m = maxScore { discoverProgress[idx].maxScore = m }
+            discoverProgress[idx].completedAt = Date()
+        } else {
+            let row = DiscoverProgress(
+                chapterId: chapterId, sceneId: sceneId,
+                score: score, maxScore: maxScore
+            )
+            discoverProgress.append(row)
+        }
+        save(discoverProgress, to: "discover.json")
+    }
+
+    func discoverRows(for chapterId: String) -> [DiscoverProgress] {
+        discoverProgress.filter { $0.chapterId == chapterId }
+    }
+
+    // MARK: - Persistence helpers
+
+    private func save<T: Encodable>(_ items: [T], to filename: String) {
+        let url = storeDir.appendingPathComponent(filename)
+        do {
+            let data = try JSONEncoder().encode(items)
+            try data.write(to: url, options: .atomic)
+            lastSaveError = nil
+        } catch {
+            let msg = "Could not save data (\(filename)). Changes may be lost."
+            lastSaveError = msg
+            print("[DataStore] save \(filename) failed: \(error)")
+        }
+    }
+
+    private func load<T: Decodable>(from filename: String) -> [T] {
+        let url = storeDir.appendingPathComponent(filename)
+        guard FileManager.default.fileExists(atPath: url.path) else { return [] }
+        do {
+            let data = try Data(contentsOf: url)
+            return try JSONDecoder().decode([T].self, from: data)
+        } catch {
+            print("[DataStore] load \(filename) failed: \(error)")
+            lastSaveError = "Could not load \(filename). Some data may be missing."
+            return []
+        }
+    }
+
+    private func loadAll() {
+        translationRecords = load(from: "translations.json")
+        practiceProgress = load(from: "practice.json")
+        studyBookmarks = load(from: "bookmarks.json")
+        questionAttempts = load(from: "attempts.json")
+        studySessions = load(from: "sessions.json")
+        discoverProgress = load(from: "discover.json")
+    }
+}

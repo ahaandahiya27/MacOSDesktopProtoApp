@@ -7,6 +7,7 @@ import SwiftUI
 /// - Pancreas → orange juice flows
 /// - Both mix into small intestine as digestive juice
 /// Must tap each organ once before "I get it!". Text from ch02_t01_c08 and ch02_t01_c09.
+@available(macOS 12, *)
 struct Scene5_LiverPancreasBile: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -32,7 +33,7 @@ struct Scene5_LiverPancreasBile: View {
             VStack(spacing: 16) {
                 Text("Liver, Pancreas & Bile")
                     .font(.title.bold())
-                    .foregroundStyle(.green)
+                    .foregroundColor(.green)
 
                 ZStack {
                     // Liver
@@ -41,7 +42,7 @@ struct Scene5_LiverPancreasBile: View {
                             VStack(spacing: 4) {
                                 Image(systemName: "hexagon.fill")
                                     .font(.system(size: 32))
-                                    .foregroundStyle(.green)
+                                    .foregroundColor(.green)
                                 Text("Liver")
                                     .font(.caption.weight(.semibold))
                             }
@@ -70,7 +71,7 @@ struct Scene5_LiverPancreasBile: View {
                             VStack(spacing: 4) {
                                 Image(systemName: "waveform.circle.fill")
                                     .font(.system(size: 32))
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Pancreas")
                                     .font(.caption.weight(.semibold))
                             }
@@ -95,19 +96,24 @@ struct Scene5_LiverPancreasBile: View {
 
                     // Gallbladder (small pouch under liver)
                     ZStack {
-                        Circle()
-                            .fill(Color.yellow.opacity(0.3))
-                            .stroke(Color.green.opacity(0.5), lineWidth: 1)
+                        ZStack {
+                            Circle()
+                                .foregroundColor(Color.yellow.opacity(0.3))
+                            Circle()
+                                .stroke(lineWidth: 1)
+                                .foregroundColor(Color.green.opacity(0.5))
+                        }
                         Text("GB")
                             .font(.caption2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     }
                     .frame(width: 30, height: 30)
                     .position(x: 130, y: 160)
 
                     // Small intestine (bottom)
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.blue.opacity(0.5), lineWidth: 2)
+                        .stroke(lineWidth: 2)
+                        .foregroundColor(Color.blue.opacity(0.5))
                         .frame(width: 180, height: 40)
                         .position(x: 200, y: 220)
 
@@ -121,10 +127,10 @@ struct Scene5_LiverPancreasBile: View {
                 HStack {
                     Text("Tap each organ to see its juice flow")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                     if allTapped {
                         Image(systemName: "checkmark.circle.fill")
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -135,10 +141,10 @@ struct Scene5_LiverPancreasBile: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("Liver, Pancreas & Bile", systemImage: "drop.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                         Text(organExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -151,7 +157,7 @@ struct Scene5_LiverPancreasBile: View {
                 } else {
                     Text("Complete all organs first!")
                         .font(.caption)
-                        .foregroundStyle(.orange)
+                        .foregroundColor(.orange)
                         .padding(.bottom, 12)
                 }
             }
@@ -164,7 +170,8 @@ struct Scene5_LiverPancreasBile: View {
             liverTapped = true
             bileFlowing = true
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
                 bileFlowing = false
             }
         }
@@ -175,7 +182,8 @@ struct Scene5_LiverPancreasBile: View {
             pancreasTapped = true
             juiceFlowing = true
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 2_000_000_000)
                 juiceFlowing = false
             }
         }

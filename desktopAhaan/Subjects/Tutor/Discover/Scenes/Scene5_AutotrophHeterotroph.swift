@@ -14,6 +14,7 @@ import SwiftUI
 /// target from the final touch position relative to two zone rects we track
 /// with `GeometryReader`s. This keeps everything in pure SwiftUI without
 /// custom UTIs or AppKit pasteboards.
+@available(macOS 12, *)
 struct Scene5_AutotrophHeterotroph: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -69,7 +70,7 @@ struct Scene5_AutotrophHeterotroph: View {
 
             Text("Drag each card into the right zone. 🌱 makes its own food. 🐯 eats others.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             // Floating cards
             ZStack {
@@ -118,7 +119,7 @@ struct Scene5_AutotrophHeterotroph: View {
                         Color.clear.onAppear {
                             autotrophZoneRect = geo.frame(in: .global)
                         }
-                        .onChange(of: geo.size) { _, _ in
+                        .onChange(of: geo.size) { _ in
                             autotrophZoneRect = geo.frame(in: .global)
                         }
                     }
@@ -134,7 +135,7 @@ struct Scene5_AutotrophHeterotroph: View {
                         Color.clear.onAppear {
                             heterotrophZoneRect = geo.frame(in: .global)
                         }
-                        .onChange(of: geo.size) { _, _ in
+                        .onChange(of: geo.size) { _ in
                             heterotrophZoneRect = geo.frame(in: .global)
                         }
                     }
@@ -147,7 +148,7 @@ struct Scene5_AutotrophHeterotroph: View {
             if let fb = feedback {
                 Text(fb)
                     .font(.callout.weight(.medium))
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                     .padding(.top, 4)
                     .transition(.opacity)
             }
@@ -156,11 +157,18 @@ struct Scene5_AutotrophHeterotroph: View {
                 Button("Skip — show answers") {
                     skipAndShow()
                 }
-                .buttonStyle(.bordered)
+                
 
-                GotItButton(action: { onComplete(correctCount) })
-                    .disabled(!allPlaced && correctCount == 0)
-                    .opacity((allPlaced || correctCount > 0) ? 1 : 0.55)
+                VStack(spacing: 4) {
+                    GotItButton(action: { onComplete(correctCount) })
+                        .disabled(!allPlaced && correctCount == 0)
+                        .opacity((allPlaced || correctCount > 0) ? 1 : 0.55)
+                    if !allPlaced && correctCount == 0 {
+                        Text("Place all cards to continue")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
             .padding(.bottom, 12)
 
@@ -177,12 +185,12 @@ struct Scene5_AutotrophHeterotroph: View {
                                 .font(.title.bold())
                             Text("\(correctCount) out of 12 correct.")
                                 .font(.callout)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                             Button("Continue") {
                                 onComplete(correctCount)
                             }
-                            .buttonStyle(.borderedProminent)
-                            .tint(.green)
+                            
+                            .accentColor(.green)
                             .padding(.top, 6)
                         }
                         .padding(20)
@@ -249,7 +257,8 @@ struct Scene5_AutotrophHeterotroph: View {
             // Shake the card
             shakeMap[token.id] = 12
             withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shakeMap[token.id] = -10 }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 200_000_000)
                 withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeMap[token.id] = 0 }
             }
             feedback = "Try again — \(token.label) is a \(token.isAutotroph ? "🌱 autotroph" : "🐯 heterotroph")."
@@ -274,7 +283,7 @@ private struct DropZone: View {
     var body: some View {
         VStack(spacing: 6) {
             Text(title).font(.title3.bold())
-            Text(subtitle).font(.caption).foregroundStyle(.secondary)
+            Text(subtitle).font(.caption).foregroundColor(.secondary)
         }
         .frame(maxWidth: .infinity, minHeight: 120)
         .background(
@@ -289,6 +298,7 @@ private struct DropZone: View {
     }
 }
 
+@available(macOS 12, *)
 struct ScoreBadge: View {
     let value: Int
     let total: Int
@@ -297,7 +307,7 @@ struct ScoreBadge: View {
             .font(.headline.monospacedDigit())
             .padding(.horizontal, 14)
             .padding(.vertical, 6)
-            .background(Capsule().fill(.indigo.opacity(0.15)))
-            .foregroundStyle(.indigo)
+            .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
+            .foregroundColor(Color.compatIndigo)
     }
 }

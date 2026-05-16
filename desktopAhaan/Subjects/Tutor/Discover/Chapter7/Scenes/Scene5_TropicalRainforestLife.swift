@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 5 — Tropical Rainforest Life.
 /// Layered rainforest: canopy, understory, forest floor. Tap each layer to see animals + adaptations.
+@available(macOS 12, *)
 struct Scene5_TropicalRainforestLife: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -49,7 +50,7 @@ struct Scene5_TropicalRainforestLife: View {
 
                     Text("\(exploredLayers.count) / \(layers.count) layers explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Rainforest layers
                     VStack(spacing: 0) {
@@ -70,7 +71,7 @@ struct Scene5_TropicalRainforestLife: View {
                                     VStack(spacing: 4) {
                                         Text(layer.name)
                                             .font(.headline.bold())
-                                            .foregroundStyle(.white)
+                                            .foregroundColor(.white)
 
                                         HStack(spacing: 12) {
                                             ForEach(layer.animals, id: \.name) { animal in
@@ -79,13 +80,13 @@ struct Scene5_TropicalRainforestLife: View {
                                                     .padding(.horizontal, 8)
                                                     .padding(.vertical, 3)
                                                     .background(Capsule().fill(.white.opacity(0.3)))
-                                                    .foregroundStyle(.white)
+                                                    .foregroundColor(.white)
                                             }
                                         }
 
                                         if isExplored {
                                             Image(systemName: "checkmark.circle.fill")
-                                                .foregroundStyle(.white)
+                                                .foregroundColor(.white)
                                                 .font(.caption)
                                         }
                                     }
@@ -121,7 +122,7 @@ struct Scene5_TropicalRainforestLife: View {
                             if let idx = selectedLayer, let layer = layers.first(where: { $0.id == idx }) {
                                 Label(layer.name, systemImage: "leaf.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(layer.color)
+                                    .foregroundColor(layer.color)
 
                                 ForEach(layer.animals, id: \.name) { animal in
                                     VStack(alignment: .leading, spacing: 2) {
@@ -129,7 +130,7 @@ struct Scene5_TropicalRainforestLife: View {
                                             .font(.body.bold())
                                         Text(animal.adaptation)
                                             .font(.callout)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundColor(.secondary)
                                             .lineSpacing(3)
                                     }
                                     .padding(.top, 4)

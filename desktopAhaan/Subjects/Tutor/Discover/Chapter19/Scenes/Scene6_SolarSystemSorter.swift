@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 6 — Solar System Sorter (Scored).
 /// 8 planets shown in random order. User taps a planet then taps a slot to place it.
 /// Score: 2 points per correct placement = max 16.
+@available(macOS 12, *)
 struct Scene6_SolarSystemSorter: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -20,8 +21,8 @@ struct Scene6_SolarSystemSorter: View {
         "Mars": .red,
         "Jupiter": .brown,
         "Saturn": .yellow,
-        "Uranus": .cyan,
-        "Neptune": .indigo,
+        "Uranus": Color.compatCyan,
+        "Neptune": Color.compatIndigo,
     ]
 
     @State private var shuffledPlanets: [String]
@@ -57,11 +58,11 @@ struct Scene6_SolarSystemSorter: View {
                     if isSubmitted {
                         Text("Score: \(score) / 16")
                             .font(.headline.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                     } else {
                         Text("Arrange the 8 planets in order from the Sun")
                             .font(.callout)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     // Planet chips (available)
@@ -82,7 +83,7 @@ struct Scene6_SolarSystemSorter: View {
                                         .padding(.vertical, 8)
                                         .background(
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                                .fill(isSelected ? color.opacity(0.2) : Color(nsColor: .windowBackgroundColor))
+                                                .fill(isSelected ? color.opacity(0.2) : Color(NSColor.windowBackgroundColor))
                                         )
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -117,7 +118,7 @@ struct Scene6_SolarSystemSorter: View {
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(Color.accentColor)
                                 )
-                                .foregroundStyle(.white)
+                                .foregroundColor(.white)
                         }
                         .buttonStyle(.plain)
                         .padding(.top, 4)
@@ -136,7 +137,7 @@ struct Scene6_SolarSystemSorter: View {
                             if isSubmitted {
                                 Label("Results: \(score) / 16", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
 
                                 Text("Correct order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.")
                                     .font(.body)
@@ -144,7 +145,7 @@ struct Scene6_SolarSystemSorter: View {
 
                                 Text("Mnemonic: \"My Very Educated Mother Just Showed Us Neptune\"")
                                     .font(.callout.italic())
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                                     .padding(.top, 2)
                             } else {
                                 Label("Order the Planets", systemImage: "globe.americas.fill")
@@ -197,11 +198,11 @@ struct Scene6_SolarSystemSorter: View {
             VStack(spacing: 4) {
                 Text("\(index + 1)")
                     .font(.caption2.weight(.bold))
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(planet != nil ? color.opacity(0.15) : Color(nsColor: .windowBackgroundColor))
+                        .fill(planet != nil ? color.opacity(0.15) : Color(NSColor.windowBackgroundColor))
                         .frame(width: 72, height: 52)
 
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -216,7 +217,7 @@ struct Scene6_SolarSystemSorter: View {
                         )
                         .frame(width: 72, height: 52)
 
-                    if let planet {
+                    if let planet = planet {
                         Text(planet)
                             .font(.caption.weight(.semibold))
                             .lineLimit(1)
@@ -227,7 +228,7 @@ struct Scene6_SolarSystemSorter: View {
                 if let correct = isCorrect {
                     Image(systemName: correct ? "checkmark.circle.fill" : "xmark.circle.fill")
                         .font(.caption)
-                        .foregroundStyle(correct ? .green : .red)
+                        .foregroundColor(correct ? .green : .red)
                 } else {
                     Color.clear.frame(height: 14)
                 }

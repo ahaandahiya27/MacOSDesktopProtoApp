@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 6 — Physical or Chemical Sorting.
 /// Drag-and-drop game. 12 changes shown as cards. Two zones: Physical / Chemical.
 /// Score out of 12. Uses DragGesture with zone rect tracking.
+@available(macOS 12, *)
 struct Scene6_PhysicalOrChemicalSorting: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -55,7 +56,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .padding(.trailing, 24)
                             .padding(.top, 8)
                     }
@@ -74,7 +75,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                     } else {
                         Text("All sorted!")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                             .padding(.top, 20)
                     }
 
@@ -96,7 +97,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Physical changes keep the same substance — melting, dissolving, cutting. Chemical changes form new substances — burning, rusting, cooking, digestion.")
                                     .font(.body)
                                     .lineSpacing(4)
@@ -148,12 +149,14 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         .frame(width: 92, height: 68)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .strokeBorder(.gray.opacity(0.25), lineWidth: 1)
         )
+        .shadow(color: .black.opacity(draggingId == item.id ? 0.25 : 0), radius: 12, x: 0, y: 6)
+        .scaleEffect(draggingId == item.id ? 1.08 : 1.0)
         .offset(offset)
         .offset(x: isShaking ? -6 : 0)
         .zIndex(draggingId == item.id ? 100 : 0)
@@ -181,7 +184,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         VStack(spacing: 6) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(color)
+                .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 60), spacing: 4)]
             LazyVGrid(columns: cols, spacing: 4) {
@@ -213,7 +216,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                         if isChemical { chemicalRect = frame }
                         else { physicalRect = frame }
                     }
-                    .onChange(of: geo.size) { _, _ in
+                    .onChange(of: geo.size) { _ in
                         let frame = geo.frame(in: .global)
                         if isChemical { chemicalRect = frame }
                         else { physicalRect = frame }
@@ -243,7 +246,10 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                 else { physicalBin.append(item) }
             }
             showConfetti = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { showConfetti = false }
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+                showConfetti = false
+            }
         } else {
             shakeId = item.id
             if !reduceMotion {
@@ -251,7 +257,8 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                     shakeId = item.id
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 400_000_000)
                 shakeId = nil
             }
         }

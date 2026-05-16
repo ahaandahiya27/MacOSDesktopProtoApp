@@ -1,56 +1,57 @@
 import SwiftUI
 
-/// Top-level app shell. Two-section sidebar:
-///   • Subjects — dynamically populated from SubjectRegistry
-///   • Tools    — Search, Bookmarks, Settings
-///
-/// Sanskrit Kosh is rendered by SanskritSubjectHomeView (which wraps the
-/// existing translator/scan/practice/history/favorites screens). Other
-/// subjects use the generic SubjectHomeView (chapter/topic/concept/question
-/// navigation stack).
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject var dataStore: DataStore
 
     var body: some View {
-        NavigationSplitView {
-            sidebar
-                .navigationTitle("Sanskrit Kosh")
-        } detail: {
-            detailPane
+        VStack(spacing: 0) {
+            if let error = dataStore.lastSaveError {
+                HStack(spacing: 8) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .foregroundColor(.orange)
+                    Text(error)
+                        .font(.caption)
+                    Spacer()
+                    Button("Dismiss") { dataStore.lastSaveError = nil }
+                        .font(.caption)
+                }
+                .padding(8)
+                .background(Color.orange.opacity(0.1))
+            }
+            NavigationView {
+                sidebar
+                    .navigationTitle("Sanskrit Kosh")
+                detailPane
+            }
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
     }
 
     // MARK: - Sidebar
 
     private var sidebar: some View {
-        // Bind directly to the AppState's `sidebarSelection`. The published
-        // property has a non-nil default, and macOS List(selection:) handles
-        // optional binding internally — no DispatchQueue.main.async wrapper
-        // needed. (The earlier wrapper was masking an AttributeGraph cycle
-        // that no longer occurs after AppState's default was set.)
         List(selection: Binding(
             get: { appState.sidebarSelection },
             set: { newValue in
-                // Defer to next run-loop tick to avoid "Publishing changes
-                // from within view updates" runtime warning.
                 DispatchQueue.main.async {
                     appState.sidebarSelection = newValue ?? .subject("sanskrit_class7")
                 }
             }
         )) {
-            Section("Subjects") {
+            Section(header: Text("Subjects")) {
                 if subjectRegistry.isLoading {
                     HStack(spacing: 8) {
                         ProgressView().controlSize(.small)
                         Text("Loading subjects…")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 } else if subjectRegistry.packs.isEmpty {
                     Text("No subjects loaded")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 } else {
                     ForEach(subjectRegistry.packs) { pack in
                         Label {
@@ -60,7 +61,7 @@ struct ContentView: View {
                                     .truncationMode(.tail)
                                 Text("\(pack.conceptCount) concepts · \(pack.questionCount) questions")
                                     .font(.caption2)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
                         } icon: {
                             Text(pack.coverEmoji)
@@ -70,13 +71,13 @@ struct ContentView: View {
                 }
             }
 
-            Section("Quiz Bank") {
+            Section(header: Text("Quiz Bank")) {
                 Label {
                     VStack(alignment: .leading, spacing: 1) {
                         Text("Practice Questions").font(.body)
                         Text("\(subjectRegistry.packs.reduce(0) { $0 + $1.questionCount }) questions across all chapters")
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 } icon: {
                     Image(systemName: "list.bullet.clipboard.fill")
@@ -84,10 +85,9 @@ struct ContentView: View {
                 .tag(SidebarSelection.quizBank)
             }
 
-            Section("Tools") {
+            Section(header: Text("Tools")) {
                 ForEach(SidebarTool.allCases) { tool in
                     Label(tool.title, systemImage: tool.systemImage)
-                        .symbolRenderingMode(.hierarchical)
                         .tag(SidebarSelection.tool(tool))
                 }
             }
@@ -107,11 +107,21 @@ struct ContentView: View {
                     SubjectHomeView(pack: pack)
                 }
             } else {
-                ContentUnavailableView(
-                    "Subject not loaded",
-                    systemImage: "books.vertical",
-                    description: Text("Pack '\(id)' isn't bundled. Run the ContentPipeline to generate it.")
-                )
+                VStack(spacing: 12) {
+                    Image(systemName: "books.vertical")
+                        .font(.system(size: 48))
+                        .foregroundColor(.secondary)
+                    Text("Subject not loaded")
+                        .font(.title2.weight(.semibold))
+                    Text("This subject couldn't be loaded. Please restart the app.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                    Button("Retry") {
+                        Task { await subjectRegistry.reload() }
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         case .quizBank:
             QuizBankView()

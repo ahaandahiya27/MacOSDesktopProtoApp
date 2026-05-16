@@ -6,6 +6,7 @@ import SwiftUI
 /// as the kid taps "Next chamber". At each step, a callout describes what happens.
 /// At the end, a thought bubble answers "Why don't humans have four stomachs?"
 /// Text from ch02_t02_c01. A "Watch again" button restarts the tour.
+@available(macOS 12, *)
 struct Scene6_FourStomachsOfACow: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -34,7 +35,7 @@ struct Scene6_FourStomachsOfACow: View {
             VStack(spacing: 16) {
                 Text("The Four-Stomach Cow Tour")
                     .font(.title.bold())
-                    .foregroundStyle(.brown)
+                    .foregroundColor(.brown)
 
                 ZStack {
                     CowDiagram(currentChamber: currentChamber, foodPosition: foodPosition)
@@ -53,7 +54,7 @@ struct Scene6_FourStomachsOfACow: View {
                         Button(action: { previousChamber() }) {
                             Label("Previous", systemImage: "chevron.left")
                         }
-                        .buttonStyle(.bordered)
+                        
                     }
 
                     Spacer()
@@ -62,14 +63,14 @@ struct Scene6_FourStomachsOfACow: View {
                         Button(action: { nextChamber() }) {
                             Label("Next Chamber", systemImage: "chevron.right")
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.brown)
+                        
+                        .accentColor(.brown)
                     } else {
                         Button(action: { reset() }) {
                             Label("Watch Again", systemImage: "arrow.clockwise")
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.brown)
+                        
+                        .accentColor(.brown)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -82,10 +83,10 @@ struct Scene6_FourStomachsOfACow: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("🤔 Why don't humans have four stomachs?")
                                 .font(.body.weight(.semibold))
-                                .foregroundStyle(.brown)
+                                .foregroundColor(.brown)
                             Text("We eat softer, easier-to-digest foods like cooked meat & plants. Cows need four stomachs because grass is tough and takes time to break down with bacteria.")
                                 .font(.body)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                                 .lineSpacing(3)
                         }
                     }
@@ -98,10 +99,10 @@ struct Scene6_FourStomachsOfACow: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Four-Stomach Cow Tour", systemImage: "hare.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.brown)
+                            .foregroundColor(.brown)
                         Text(cowExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -142,6 +143,7 @@ struct Scene6_FourStomachsOfACow: View {
 
 // MARK: - Cow Diagram
 
+@available(macOS 12, *)
 struct CowDiagram: View {
     let currentChamber: Int
     let foodPosition: CGFloat
@@ -175,7 +177,6 @@ struct CowDiagram: View {
                     lineWidth: isActive ? 2 : 1
                 )
 
-                // Label
                 let label: String
                 switch i {
                 case 0: label = "R"
@@ -183,6 +184,11 @@ struct CowDiagram: View {
                 case 2: label = "O"
                 default: label = "A"
                 }
+                context.draw(
+                    Text(label).font(.system(size: 8, weight: .bold))
+                        .foregroundColor(color),
+                    at: CGPoint(x: rect.midX, y: rect.midY)
+                )
             }
 
             // Legs (simple lines)
@@ -198,6 +204,7 @@ struct CowDiagram: View {
 
 // MARK: - Chamber Callout
 
+@available(macOS 12, *)
 struct ChamberCallout: View {
     let text: String
 
@@ -205,7 +212,7 @@ struct ChamberCallout: View {
         SoftShadowCard(padding: 14) {
             Text(text)
                 .font(.body)
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
                 .lineSpacing(3)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }

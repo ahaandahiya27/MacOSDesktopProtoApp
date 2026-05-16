@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 3 — Climate Zones Map.
 /// Canvas-drawn simplified map with climate zones. Tap each zone for description + example animals.
+@available(macOS 12, *)
 struct Scene3_ClimateZonesMap: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -21,7 +22,7 @@ struct Scene3_ClimateZonesMap: View {
     }
 
     private let zones: [ClimateZone] = [
-        ClimateZone(id: 0, name: "Polar", color: .cyan.opacity(0.7),
+        ClimateZone(id: 0, name: "Polar", color: Color.compatCyan.opacity(0.7),
                     yRange: 0.0...0.15,
                     description: "Extremely cold all year. Temperatures drop below -30 C in winter. Snow and ice cover the ground for most of the year.",
                     animals: "Polar bears, Arctic foxes, penguins, snowy owls"),
@@ -37,7 +38,7 @@ struct Scene3_ClimateZonesMap: View {
                     yRange: 0.45...0.65,
                     description: "Hot and humid all year. Heavy rainfall. Home to the densest forests on Earth — tropical rainforests.",
                     animals: "Toucans, monkeys, tree frogs, lion-tailed macaques"),
-        ClimateZone(id: 4, name: "Mediterranean", color: .mint.opacity(0.6),
+        ClimateZone(id: 4, name: "Mediterranean", color: .compatMint.opacity(0.6),
                     yRange: 0.65...0.78,
                     description: "Hot dry summers and mild wet winters. Found near coastlines. Good for growing olives, grapes, and citrus.",
                     animals: "Chameleons, rabbits, hawks, Mediterranean monk seals"),
@@ -61,7 +62,7 @@ struct Scene3_ClimateZonesMap: View {
                                     .frame(width: 10, height: 10)
                                 Text(zone.name)
                                     .font(.caption2.weight(.medium))
-                                    .foregroundStyle(exploredZones.contains(zone.id) ? .primary : .secondary)
+                                    .foregroundColor(exploredZones.contains(zone.id) ? .primary : .secondary)
                             }
                         }
                     }
@@ -98,17 +99,21 @@ struct Scene3_ClimateZonesMap: View {
                     .clipShape(RoundedRectangle(cornerRadius: 14))
                     .overlay(
                         RoundedRectangle(cornerRadius: 14)
-                            .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
+                            .stroke(lineWidth: 1)
+                            .foregroundColor(Color.gray.opacity(0.3))
                     )
                     .contentShape(Rectangle())
-                    .onTapGesture { location in
-                        handleTap(at: location, canvasHeight: 260)
-                    }
+                    .gesture(
+                        DragGesture(minimumDistance: 0)
+                            .onEnded { value in
+                                handleTap(at: value.location, canvasHeight: 260)
+                            }
+                    )
 
                     // Explored count
                     Text("\(exploredZones.count) / \(zones.count) zones explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
                 }
@@ -123,13 +128,13 @@ struct Scene3_ClimateZonesMap: View {
                             if let idx = selectedZone, let zone = zones.first(where: { $0.id == idx }) {
                                 Label(zone.name, systemImage: "globe.americas.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(zone.color)
+                                    .foregroundColor(zone.color)
                                 Text(zone.description)
                                     .font(.body)
                                     .lineSpacing(4)
                                 Text("Animals: \(zone.animals)")
                                     .font(.callout)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             } else {
                                 Label("Tap a Zone", systemImage: "hand.tap.fill")
                                     .font(.title2.bold())

@@ -5,6 +5,7 @@ import SwiftUI
 /// Drag-and-drop sorting game. 6 fibre cards float at top. Three drop zones: Plant / Animal / Synthetic.
 /// Uses DragGesture + GeometryReader for zone tracking (not .draggable/.dropDestination).
 /// Wrong drop → red shake. Right drop → confetti + settle. Score badge "X / 6".
+@available(macOS 12, *)
 struct Scene8_FibreVsFibreGame: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -41,7 +42,7 @@ struct Scene8_FibreVsFibreGame: View {
 
             Text("Drag each fibre to the correct category.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .padding(.horizontal, 24)
 
             // Floating cards
@@ -51,19 +52,19 @@ struct Scene8_FibreVsFibreGame: View {
                         .offset(draggingId == fibre.id ? dragOffset : .zero)
                         .zIndex(draggingId == fibre.id ? 100 : 0)
                         .gesture(
-                            DragGesture()
+                            DragGesture(coordinateSpace: .named("fibreGame"))
                                 .onChanged { value in
                                     if draggingId == nil {
                                         draggingId = fibre.id
-                                        dragOrigin = value.location
+                                        dragOrigin = value.startLocation
                                     }
                                     dragOffset = CGSize(
                                         width: value.location.x - dragOrigin.x,
                                         height: value.location.y - dragOrigin.y
                                     )
                                 }
-                                .onEnded { _ in
-                                    handleDrop(fibre)
+                                .onEnded { value in
+                                    handleDrop(fibre, at: value.location)
                                 }
                         )
                 }
@@ -71,21 +72,16 @@ struct Scene8_FibreVsFibreGame: View {
             .frame(height: 200)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 24)
-            .background(.gray.opacity(0.05))
+            .background(Color.gray.opacity(0.05))
             .cornerRadius(8)
 
             // Drop zones
-            GeometryReader { geo in
-                HStack(spacing: 16) {
-                    dropZone("🌱 Plant", zone: "plant", geometry: geo)
-                    dropZone("🐑 Animal", zone: "animal", geometry: geo)
-                    dropZone("🛢 Synthetic", zone: "synthetic", geometry: geo)
-                }
-                .padding(.horizontal, 24)
-                .onAppear {
-                    // Store zone rects for drop detection
-                }
+            HStack(spacing: 16) {
+                dropZone("🌱 Plant", zone: "plant")
+                dropZone("🐑 Animal", zone: "animal")
+                dropZone("🛢 Synthetic", zone: "synthetic")
             }
+            .padding(.horizontal, 24)
             .frame(height: 120)
 
             Spacer()
@@ -95,6 +91,7 @@ struct Scene8_FibreVsFibreGame: View {
             }
             .padding(.bottom, 20)
         }
+        .coordinateSpace(name: "fibreGame")
         .onAppear {
             initializeFibres()
         }
@@ -121,39 +118,87 @@ struct Scene8_FibreVsFibreGame: View {
                     .font(.system(size: 28))
                 Text(fibre.label)
                     .font(.caption.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundColor(.primary)
             }
             .frame(width: 70, height: 70)
-            .background(.white)
+            .background(Color.white)
             .cornerRadius(8)
-            .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+            .shadow(color: .black.opacity(draggingId == fibre.id ? 0.25 : 0.1), radius: draggingId == fibre.id ? 12 : 4, x: 0, y: draggingId == fibre.id ? 6 : 2)
+            .scaleEffect(draggingId == fibre.id ? 1.08 : 1.0)
             .offset(x: shakeMap[fibre.id] ?? 0)
         }
     }
 
     @ViewBuilder
-    private func dropZone(_ label: String, zone: String, geometry: GeometryProxy) -> some View {
+    private func dropZone(_ label: String, zone: String) -> some View {
         VStack(spacing: 8) {
             Text(label)
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.indigo)
-            RoundedRectangle(cornerRadius: 8)
-                .fill(.indigo.opacity(0.05))
-                .strokeBorder(.indigo.opacity(0.3), lineWidth: 1.5)
+                .foregroundColor(Color.compatIndigo)
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(Color.compatIndigo.opacity(0.05))
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(lineWidth: 1.5)
+                    .foregroundColor(Color.compatIndigo.opacity(0.3))
+            }
         }
         .frame(maxWidth: .infinity)
         .frame(height: 100)
+        .background(
+            GeometryReader { geo in
+                Color.clear.onAppear {
+                    zoneRects[zone] = geo.frame(in: .named("fibreGame"))
+                }
+            }
+        )
     }
 
-    private func handleDrop(_ fibre: FibreCard) {
+    private func handleDrop(_ fibre: FibreCard, at location: CGPoint) {
         draggingId = nil
 
-        if fibre.zone == "plant" {
-            markPlaced(fibre, correct: true)
-        } else if fibre.zone == "animal" {
+        var droppedZone: String? = nil
+        for (zone, rect) in zoneRects {
+            if rect.contains(location) {
+                droppedZone = zone
+                break
+            }
+        }
+
+        withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.7)) {
+            dragOffset = .zero
+        }
+
+        guard let targetZone = droppedZone else {
+            return
+        }
+
+        let isCorrect = fibre.zone == targetZone
+        if isCorrect {
             markPlaced(fibre, correct: true)
         } else {
-            markPlaced(fibre, correct: true)
+            shakeCard(fibre.id)
+        }
+    }
+
+    private func shakeCard(_ id: String) {
+        guard !reduceMotion else { return }
+        Task { @MainActor in
+            withAnimation(.easeInOut(duration: 0.08)) {
+                shakeMap[id] = 12
+            }
+            try? await Task.sleep(nanoseconds: 80_000_000)
+            withAnimation(.easeInOut(duration: 0.08)) {
+                shakeMap[id] = -12
+            }
+            try? await Task.sleep(nanoseconds: 80_000_000)
+            withAnimation(.easeInOut(duration: 0.08)) {
+                shakeMap[id] = 8
+            }
+            try? await Task.sleep(nanoseconds: 80_000_000)
+            withAnimation(.easeInOut(duration: 0.08)) {
+                shakeMap[id] = 0
+            }
         }
     }
 

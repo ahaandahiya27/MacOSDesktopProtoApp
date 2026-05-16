@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 3 — Three Highways of Heat.
 /// Three side-by-side lanes: Conduction, Convection, Radiation. Tap each for explanation.
+@available(macOS 12, *)
 struct Scene3_ThreeHighwaysOfHeat: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -48,7 +49,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label(laneData[lane].title, systemImage: laneData[lane].icon)
                                     .font(.title2.bold())
-                                    .foregroundStyle(laneData[lane].color)
+                                    .foregroundColor(laneData[lane].color)
                                 Text(laneData[lane].desc)
                                     .font(.body)
                                     .lineSpacing(4)
@@ -75,7 +76,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     } else {
                         Text("Tap all 3 lanes to continue")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                             .padding(.bottom, 12)
                     }
                 }
@@ -99,7 +100,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             VStack(spacing: 12) {
                 Image(systemName: d.icon)
                     .font(.system(size: 36))
-                    .foregroundStyle(d.color)
+                    .foregroundColor(d.color)
 
                 laneAnimation(index: index, height: height * 0.5)
                     .frame(height: height * 0.5)
@@ -109,14 +110,14 @@ struct Scene3_ThreeHighwaysOfHeat: View {
 
                 if isTapped {
                     Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                 }
             }
             .frame(maxWidth: .infinity)
             .frame(height: height)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(isTapped ? d.color.opacity(0.1) : Color(nsColor: .windowBackgroundColor))
+                    .fill(isTapped ? d.color.opacity(0.1) : Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -148,9 +149,9 @@ struct Scene3_ThreeHighwaysOfHeat: View {
     private func staticLane(index: Int) -> some View {
         VStack {
             switch index {
-            case 0: Image(systemName: "line.horizontal.3").font(.title).foregroundStyle(.orange)
-            case 1: Image(systemName: "arrow.circlepath").font(.title).foregroundStyle(.blue)
-            default: Image(systemName: "wave.3.right").font(.title).foregroundStyle(.yellow)
+            case 0: Image(systemName: "line.horizontal.3").font(.title).foregroundColor(.orange)
+            case 1: Image(systemName: "arrow.circlepath").font(.title).foregroundColor(.blue)
+            default: Image(systemName: "wave.3.right").font(.title).foregroundColor(.yellow)
             }
         }
     }

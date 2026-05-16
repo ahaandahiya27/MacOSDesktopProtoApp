@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 5 — Sea Breeze, Land Breeze.
 /// Day/Night toggle shows convection currents reversing between sea and land.
+@available(macOS 12, *)
 struct Scene5_SeaBreezeLandBreeze: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -19,13 +20,13 @@ struct Scene5_SeaBreezeLandBreeze: View {
                     // Day / Night toggle
                     HStack(spacing: 12) {
                         Image(systemName: "sun.max.fill")
-                            .foregroundStyle(.yellow)
+                            .foregroundColor(.yellow)
                             .opacity(isDay ? 1 : 0.3)
                         Toggle("", isOn: $isDay)
                             .toggleStyle(.switch)
                             .labelsHidden()
                         Image(systemName: "moon.fill")
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .opacity(isDay ? 0.3 : 1)
                         Text(isDay ? "Daytime" : "Nighttime")
                             .font(.headline)
@@ -37,15 +38,15 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         // Sky
                         Rectangle()
                             .fill(isDay
-                                  ? LinearGradient(colors: [.cyan.opacity(0.6), .blue.opacity(0.3)], startPoint: .top, endPoint: .bottom)
-                                  : LinearGradient(colors: [.indigo.opacity(0.8), .black.opacity(0.6)], startPoint: .top, endPoint: .bottom))
+                                  ? LinearGradient(colors: [Color.compatCyan.opacity(0.6), .blue.opacity(0.3)], startPoint: .top, endPoint: .bottom)
+                                  : LinearGradient(colors: [Color.compatIndigo.opacity(0.8), .black.opacity(0.6)], startPoint: .top, endPoint: .bottom))
                             .frame(height: 160)
                             .offset(y: -60)
 
                         // Sun or moon
                         Image(systemName: isDay ? "sun.max.fill" : "moon.stars.fill")
                             .font(.system(size: 40))
-                            .foregroundStyle(isDay ? .yellow : .white)
+                            .foregroundColor(isDay ? .yellow : .white)
                             .offset(y: -120)
                             .accessibilityLabel(isDay ? "Sun" : "Moon")
 
@@ -53,7 +54,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         HStack(spacing: 0) {
                             // Sea
                             Rectangle()
-                                .fill(LinearGradient(colors: [.blue.opacity(0.5), .cyan.opacity(0.4)], startPoint: .top, endPoint: .bottom))
+                                .fill(LinearGradient(colors: [.blue.opacity(0.5), Color.compatCyan.opacity(0.4)], startPoint: .top, endPoint: .bottom))
                             // Land
                             Rectangle()
                                 .fill(LinearGradient(colors: [
@@ -67,11 +68,11 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         // Labels
                         Text("Sea")
                             .font(.caption.bold())
-                            .foregroundStyle(.white)
+                            .foregroundColor(.white)
                             .offset(x: -80, y: 60)
                         Text("Land")
                             .font(.caption.bold())
-                            .foregroundStyle(.white)
+                            .foregroundColor(.white)
                             .offset(x: 80, y: 60)
 
                         // Heat indicators
@@ -79,20 +80,20 @@ struct Scene5_SeaBreezeLandBreeze: View {
                             // Land heats up fast
                             Text("HOT")
                                 .font(.caption2.bold())
-                                .foregroundStyle(.red)
+                                .foregroundColor(.red)
                                 .offset(x: 80, y: 40)
                             Text("COOL")
                                 .font(.caption2.bold())
-                                .foregroundStyle(.blue)
+                                .foregroundColor(.blue)
                                 .offset(x: -80, y: 40)
                         } else {
                             Text("WARM")
                                 .font(.caption2.bold())
-                                .foregroundStyle(.orange)
+                                .foregroundColor(.orange)
                                 .offset(x: -80, y: 40)
                             Text("COOL")
                                 .font(.caption2.bold())
-                                .foregroundStyle(.blue)
+                                .foregroundColor(.blue)
                                 .offset(x: 80, y: 40)
                         }
 
@@ -141,7 +142,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
     private var staticArrow: some View {
         Image(systemName: isDay ? "arrow.left" : "arrow.right")
             .font(.title)
-            .foregroundStyle(.white)
+            .foregroundColor(.white)
             .offset(y: 10)
             .accessibilityLabel(isDay ? "Breeze from sea to land" : "Breeze from land to sea")
     }

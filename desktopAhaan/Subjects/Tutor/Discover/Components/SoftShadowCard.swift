@@ -4,7 +4,7 @@ import SwiftUI
 /// Discover Mode so cards have one consistent look.
 struct SoftShadowCard<Content: View>: View {
     var padding: CGFloat = 20
-    var cornerRadius: CGFloat = 16
+    var cornerRadius: CGFloat = DesignTokens.cornerRadiusLarge
     @ViewBuilder var content: () -> Content
 
     var body: some View {
@@ -12,7 +12,7 @@ struct SoftShadowCard<Content: View>: View {
             .padding(padding)
             .background(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .fill(Color(nsColor: .windowBackgroundColor))
+                    .fill(Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
@@ -52,8 +52,8 @@ struct GotItButton: View {
                 .padding(.horizontal, 22)
                 .padding(.vertical, 12)
         }
-        .buttonStyle(.borderedProminent)
-        .tint(.green)
+        .buttonStyle(.bordered)
+        .accentColor(.green)
         .keyboardShortcut(.space, modifiers: [])
         .accessibilityHint("Marks this scene as complete and moves on.")
     }

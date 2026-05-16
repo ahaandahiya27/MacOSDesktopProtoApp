@@ -1,18 +1,25 @@
 import SwiftUI
 
-/// Cross-subject full-text search. Matches against:
-///   • Concept titles and all four explanation depths
-///   • Question prompts and answers
-/// Results are grouped by subject pack.
 struct SearchView: View {
+    var body: some View {
+        TutorNavigationContainer {
+            SearchContent()
+        }
+    }
+}
+
+private struct SearchContent: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject private var nav: TutorNavigationState
     @State private var query: String = ""
+    @State private var debouncedQuery: String = ""
+    @State private var debounceWork: DispatchWorkItem?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Image(systemName: "magnifyingglass")
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 TextField("Search across all subjects", text: $query)
                     .textFieldStyle(.plain)
                     .font(.title3)
@@ -21,34 +28,50 @@ struct SearchView: View {
                         query = ""
                     } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .buttonStyle(.plain)
                     .accessibilityLabel("Clear search")
                 }
             }
             .padding(12)
-            .background(.background.secondary, in: RoundedRectangle(cornerRadius: 10))
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.gray.opacity(0.1))
+            )
             .padding(16)
 
             Divider()
 
             if query.trimmingCharacters(in: .whitespaces).isEmpty {
-                ContentUnavailableView(
-                    "Search across all subjects",
-                    systemImage: "magnifyingglass",
-                    description: Text("Type any phrase to find concepts and questions across every loaded pack.")
-                )
+                VStack(spacing: 12) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 48))
+                        .foregroundColor(.secondary)
+                    Text("Search across all subjects")
+                        .font(.title2.weight(.semibold))
+                    Text("Type any phrase to find concepts and questions across every loaded pack.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 resultsList
             }
         }
+        .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Search")
+        .onChange(of: query) { newValue in
+            debounceWork?.cancel()
+            let work = DispatchWorkItem { debouncedQuery = newValue }
+            debounceWork = work
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: work)
+        }
     }
 
     private var resultsList: some View {
-        let trimmed = query.trimmingCharacters(in: .whitespaces)
+        let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
         let matches = subjectRegistry.packs.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
             let cs = pack.allConcepts.filter { matchesConcept($0, trimmed) }
             let qs = pack.allQuestions.filter { matchesQuestion($0, trimmed) }
@@ -58,41 +81,57 @@ struct SearchView: View {
 
         return List {
             ForEach(matches, id: \.0.id) { pack, concepts, questions in
-                Section(pack.title) {
+                Section(header: Text(pack.title)) {
                     ForEach(concepts) { c in
-                        HStack(alignment: .top, spacing: 10) {
-                            Image(systemName: "lightbulb.fill")
-                                .foregroundStyle(.indigo)
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(c.title).font(.headline)
-                                Text(c.explanation(at: .oneLine))
-                                    .font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                        Button {
+                            nav.push(.concept(packId: pack.id, conceptId: c.id))
+                        } label: {
+                            HStack(alignment: .top, spacing: 10) {
+                                Image(systemName: "lightbulb.fill")
+                                    .foregroundColor(Color.compatIndigo)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(c.title).font(.headline)
+                                    Text(c.explanation(at: .oneLine))
+                                        .font(.caption).foregroundColor(.secondary).lineLimit(2)
+                                }
                             }
+                            .padding(.vertical, 4)
+                            .contentShape(Rectangle())
                         }
-                        .padding(.vertical, 4)
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
+                        }
                     }
                     ForEach(questions) { q in
-                        HStack(alignment: .top, spacing: 10) {
-                            Image(systemName: "questionmark.app.fill")
-                                .foregroundStyle(.orange)
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(q.prompt).font(.body).lineLimit(2)
-                                Text("Answer: \(q.answer)")
-                                    .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                        Button {
+                            nav.push(.question(packId: pack.id, questionId: q.id))
+                        } label: {
+                            HStack(alignment: .top, spacing: 10) {
+                                Image(systemName: "questionmark.app.fill")
+                                    .foregroundColor(.orange)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(q.prompt).font(.body).lineLimit(2)
+                                    Text("Answer: \(q.answer)")
+                                        .font(.caption).foregroundColor(.secondary).lineLimit(1)
+                                }
                             }
+                            .padding(.vertical, 4)
+                            .contentShape(Rectangle())
                         }
-                        .padding(.vertical, 4)
+                        .buttonStyle(.plain)
+                        .contextMenu {
+                            Button("Open") { nav.push(.question(packId: pack.id, questionId: q.id)) }
+                        }
                     }
                 }
             }
             if matches.isEmpty {
-                Text("No matches.").foregroundStyle(.secondary)
+                Text("No matches.").foregroundColor(.secondary)
             }
         }
         .listStyle(.inset)
     }
-
-    // MARK: - Matching
 
     private func matchesConcept(_ c: Concept, _ q: String) -> Bool {
         if c.title.range(of: q, options: [.caseInsensitive, .diacriticInsensitive]) != nil { return true }

@@ -1,29 +1,16 @@
 import SwiftUI
-import SwiftData
 
-/// Settings screen, redesigned for macOS native look.
-///
-/// Why this rewrite: the original screen used iOS `Form` patterns with bare
-/// HStacks. On macOS this caused visible content overflow (right-side text
-/// truncated as "246 entr..." and "Completely F..." in the original
-/// screenshots). The fix:
-///   • `.formStyle(.grouped)` for proper macOS section styling.
-///   • `LabeledContent` for two-column rows that flow correctly.
-///   • A `GroupBox` above the Form for the "How It Works" rich content,
-///     which Forms aren't designed for.
-///   • `.frame(maxWidth: 540)` so the form doesn't sprawl across wide windows.
 struct SettingsScreen: View {
     @ObservedObject private var settings = SettingsManager.shared
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject var dataStore: DataStore
     @State private var pinInput = ""
     @State private var isUnlocked = false
     @State private var pinError = false
     @State private var showClearConfirm = false
     @State private var newPIN = ""
     @State private var pinSaved = false
-
-    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         Group {
@@ -38,7 +25,7 @@ struct SettingsScreen: View {
                     }
                     .padding(20)
                     .frame(maxWidth: 560, alignment: .leading)
-                    .frame(maxWidth: .infinity)  // outer container fills, inner caps width
+                    .frame(maxWidth: .infinity)
                 }
             }
         }
@@ -53,26 +40,29 @@ struct SettingsScreen: View {
             systemImage: "info.circle"
         )
         .font(.caption)
-        .foregroundStyle(.secondary)
+        .foregroundColor(.secondary)
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 8))
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.gray.opacity(0.1))
+        )
     }
 
-    // MARK: - How It Works (rich, lives outside the Form)
+    // MARK: - How It Works
 
     private var howItWorks: some View {
-        GroupBox {
+        GroupBox(label: Label("Translation", systemImage: "character.book.closed")) {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 10) {
                     Image(systemName: "checkmark.shield.fill")
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                         .font(.title3)
                     VStack(alignment: .leading, spacing: 2) {
                         Text("No API Key Needed").font(.subheadline.weight(.semibold))
                         Text("Free to use. No accounts, no keys, no subscriptions.")
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 }
 
@@ -85,7 +75,7 @@ struct SettingsScreen: View {
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "internaldrive")
                             .font(.caption)
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .frame(width: 16)
                         Text("**Built-in Dictionary** — words and sentences from the Class 7 NCERT syllabus. Works offline, always free, always available.")
                             .font(.caption2)
@@ -94,45 +84,43 @@ struct SettingsScreen: View {
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "globe")
                             .font(.caption)
-                            .foregroundStyle(.blue)
+                            .foregroundColor(.blue)
                             .frame(width: 16)
                         Text("**Online Translation** — for phrases not in the dictionary, the app uses a free online service (MyMemory). No registration. Limit: ~1000 words/day.")
                             .font(.caption2)
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             }
             .padding(4)
-        } label: {
-            Label("Translation", systemImage: "character.book.closed")
         }
     }
 
-    // MARK: - Settings form (the macOS-friendly bits)
+    // MARK: - Settings form
 
     private var settingsForm: some View {
         Form {
-            // Connection status
-            Section("Status") {
-                LabeledContent("Connection") {
+            Section(header: Text("Status")) {
+                HStack {
+                    Text("Connection")
+                    Spacer()
                     HStack(spacing: 6) {
                         Circle()
                             .fill(appState.isOnline ? .green : .orange)
                             .frame(width: 8, height: 8)
                         Text(appState.isOnline ? "Online" : "Offline")
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 }
                 Toggle("Dictionary Only (Offline Mode)", isOn: $settings.preferOffline)
                 Text("When on, the app only uses the built-in dictionary — no internet requests at all. History, favorites, flashcards, and quizzes always work offline.")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Parent PIN
-            Section("Parent Lock") {
+            Section(header: Text("Parent Lock")) {
                 Toggle("Require PIN for Settings", isOn: Binding(
                     get: { settings.parentPINEnabled },
                     set: { newValue in
@@ -155,12 +143,14 @@ struct SettingsScreen: View {
                 ))
 
                 if settings.parentPINEnabled || !pinSaved {
-                    LabeledContent("Set PIN (4–6 digits)") {
+                    HStack {
+                        Text("Set PIN (4–6 digits)")
+                        Spacer()
                         HStack(spacing: 8) {
                             SecureField("PIN", text: $newPIN)
                                 .frame(maxWidth: 120)
                                 .accessibilityLabel("Parent PIN, 4 to 6 digits")
-                                .onChange(of: newPIN) { _, value in
+                                .onChange(of: newPIN) { value in
                                     let digits = value.filter { $0.isNumber }
                                     newPIN = String(digits.prefix(6))
                                 }
@@ -171,8 +161,6 @@ struct SettingsScreen: View {
                                     settings.parentPINEnabled = true
                                     pinSaved = true
                                 }
-                                .buttonStyle(.borderedProminent)
-                                .tint(.indigo)
                             }
                         }
                     }
@@ -180,55 +168,65 @@ struct SettingsScreen: View {
                     if pinSaved {
                         Label("PIN saved. Settings will be locked when you leave this tab.", systemImage: "checkmark.circle.fill")
                             .font(.caption2)
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     } else {
                         Text("Enter at least 4 digits and tap Save to enable the parent lock.")
                             .font(.caption2)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     Text("Protects this Settings screen only. Translation, history, favorites, and practice remain freely accessible.")
                         .font(.caption2)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
 
-            // Subject pack status — surfaces SubjectRegistry's loadErrors
-            // so the user can see when a JSON pack failed to decode.
-            Section("Subject packs") {
+            Section(header: Text("Subject packs")) {
                 if subjectRegistry.isLoading {
-                    LabeledContent("Status", value: "Loading…")
+                    HStack {
+                        Text("Status")
+                        Spacer()
+                        Text("Loading…").foregroundColor(.secondary)
+                    }
                 } else {
-                    LabeledContent("Loaded", value: "\(subjectRegistry.packs.count) pack\(subjectRegistry.packs.count == 1 ? "" : "s")")
+                    HStack {
+                        Text("Loaded")
+                        Spacer()
+                        Text("\(subjectRegistry.packs.count) pack\(subjectRegistry.packs.count == 1 ? "" : "s")")
+                            .foregroundColor(.secondary)
+                    }
                     ForEach(subjectRegistry.packs) { pack in
-                        LabeledContent(pack.title) {
+                        HStack {
+                            Text(pack.title)
+                            Spacer()
                             Text("v\(pack.version) · \(pack.conceptCount) concepts")
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     }
                     if subjectRegistry.loadErrors.isEmpty {
                         Label("All packs decoded successfully.", systemImage: "checkmark.circle")
                             .font(.caption2)
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     } else {
                         Label("\(subjectRegistry.loadErrors.count) pack(s) failed to load:",
                               systemImage: "exclamationmark.triangle.fill")
                             .font(.caption2)
-                            .foregroundStyle(.orange)
+                            .foregroundColor(.orange)
                         ForEach(subjectRegistry.loadErrors, id: \.self) { err in
                             Text(err)
                                 .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                 }
             }
 
-            // Speech
-            Section("Read Aloud") {
-                LabeledContent("Voice") {
+            Section(header: Text("Read Aloud")) {
+                HStack {
+                    Text("Voice")
+                    Spacer()
                     Picker("Language", selection: $settings.speechLanguage) {
                         ForEach(SettingsManager.availableLanguages, id: \.id) { lang in
                             Text(lang.label).tag(lang.id)
@@ -238,41 +236,57 @@ struct SettingsScreen: View {
                     .frame(maxWidth: 180)
                 }
 
-                LabeledContent("Speed (\(String(format: "%.1f×", settings.speechRate)))") {
+                HStack {
+                    Text("Speed (\(String(format: "%.1f×", settings.speechRate)))")
+                    Spacer()
                     Slider(value: $settings.speechRate, in: 0.7...1.2, step: 0.1)
                         .frame(maxWidth: 180)
                 }
 
                 Text("Controls the voice and speed used by the Read Aloud button on concept pages and articles.")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Data
-            Section("Data") {
-                Button("Clear All History", role: .destructive) {
-                    showClearConfirm = true
+            Section(header: Text("Data")) {
+                Button(action: { showClearConfirm = true }) {
+                    Text("Clear All History")
+                        .foregroundColor(.red)
                 }
-                .confirmationDialog("Clear all translation history?", isPresented: $showClearConfirm) {
-                    Button("Clear All", role: .destructive) { clearHistory() }
-                    Button("Cancel", role: .cancel) {}
-                } message: {
-                    Text("This removes all translations from history and favorites. Practice progress will also be reset.")
+                .alert(isPresented: $showClearConfirm) {
+                    Alert(
+                        title: Text("Clear all translation history?"),
+                        message: Text("This removes all translations from history and favorites. Practice progress will also be reset."),
+                        primaryButton: .destructive(Text("Clear All")) { clearHistory() },
+                        secondaryButton: .cancel()
+                    )
                 }
             }
 
-            // About
-            Section("About") {
-                LabeledContent("App", value: "Sanskrit Kosh v1.0")
-                LabeledContent("For", value: "Class 7 Sanskrit students")
-                LabeledContent("Cost") {
-                    Text("Completely free").foregroundStyle(.green)
+            Section(header: Text("About")) {
+                HStack {
+                    Text("App")
+                    Spacer()
+                    Text("Sanskrit Kosh v1.0").foregroundColor(.secondary)
                 }
-                LabeledContent("Dictionary", value: "\(SanskritDictionary.shared.entries.count) entries")
+                HStack {
+                    Text("For")
+                    Spacer()
+                    Text("Class 7 Sanskrit students").foregroundColor(.secondary)
+                }
+                HStack {
+                    Text("Cost")
+                    Spacer()
+                    Text("Completely free").foregroundColor(.green)
+                }
+                HStack {
+                    Text("Dictionary")
+                    Spacer()
+                    Text("\(SanskritDictionary.shared.entries.count) entries").foregroundColor(.secondary)
+                }
             }
         }
-        .formStyle(.grouped)
         .onAppear {
             if let existing = settings.parentPIN, !existing.isEmpty {
                 pinSaved = true
@@ -298,9 +312,8 @@ struct SettingsScreen: View {
     }
 
     private func clearHistory() {
-        try? modelContext.delete(model: TranslationRecord.self)
-        try? modelContext.delete(model: PracticeProgress.self)
-        modelContext.safeSave()
+        dataStore.deleteAllTranslations()
+        dataStore.deleteAllProgress()
     }
 }
 
@@ -315,14 +328,14 @@ struct PINEntryView: View {
         VStack(spacing: 24) {
             Image(systemName: "lock.fill")
                 .font(.system(size: 48))
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
 
             Text("Parent Settings")
                 .font(.title2.weight(.semibold))
 
             Text("Enter the parent PIN to access settings.")
                 .font(.subheadline)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
 
             SecureField("Enter PIN", text: $pinInput)
@@ -330,8 +343,7 @@ struct PINEntryView: View {
                 .frame(width: 200)
                 .multilineTextAlignment(.center)
                 .accessibilityLabel("Parent PIN")
-                .onSubmit { onSubmit() }
-                .onChange(of: pinInput) { _, value in
+                .onChange(of: pinInput) { value in
                     let digits = value.filter { $0.isNumber }
                     if digits != value {
                         pinInput = digits
@@ -341,12 +353,10 @@ struct PINEntryView: View {
             if pinError {
                 Text("Incorrect PIN. Please try again.")
                     .font(.caption)
-                    .foregroundStyle(.red)
+                    .foregroundColor(.red)
             }
 
             Button("Unlock") { onSubmit() }
-                .buttonStyle(.borderedProminent)
-                .tint(.indigo)
                 .disabled(pinInput.count < 4)
         }
         .padding()

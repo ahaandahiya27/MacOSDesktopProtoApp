@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Acid or Base Sorting Lab. Drag-and-drop game, 12 items, scored.
 /// Uses DragGesture with zone rect tracking.
+@available(macOS 12, *)
 struct Scene6_AcidOrBaseSortingLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -51,7 +52,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .padding(.trailing, 24)
                             .padding(.top, 8)
                     }
@@ -68,7 +69,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                     } else {
                         Text("All sorted!")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                             .padding(.top, 20)
                     }
 
@@ -90,7 +91,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Acids like HCl, vinegar, and lemon juice taste sour and turn blue litmus red. Bases like NaOH, soap, and baking soda taste bitter and turn red litmus blue.")
                                     .font(.body)
                                     .lineSpacing(4)
@@ -141,12 +142,14 @@ struct Scene6_AcidOrBaseSortingLab: View {
         .frame(width: 100, height: 64)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .strokeBorder(.gray.opacity(0.25), lineWidth: 1)
         )
+        .shadow(color: .black.opacity(offset != .zero ? 0.25 : 0), radius: 12, x: 0, y: 6)
+        .scaleEffect(offset != .zero ? 1.08 : 1.0)
         .offset(offset)
         .offset(x: isShaking ? -6 : 0)
         .zIndex(offset == .zero ? 0 : 10)
@@ -170,7 +173,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
         VStack(spacing: 6) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(color)
+                .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 70), spacing: 4)]
             LazyVGrid(columns: cols, spacing: 4) {
@@ -202,7 +205,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                         if isAcidZone { acidRect = frame }
                         else { baseRect = frame }
                     }
-                    .onChange(of: geo.size) { _, _ in
+                    .onChange(of: geo.size) { _ in
                         let frame = geo.frame(in: .global)
                         if isAcidZone { acidRect = frame }
                         else { baseRect = frame }
@@ -230,7 +233,10 @@ struct Scene6_AcidOrBaseSortingLab: View {
                 else { baseBin.append(sub) }
             }
             showConfetti = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { showConfetti = false }
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+                showConfetti = false
+            }
         } else {
             shakeId = sub.id
             if !reduceMotion {
@@ -238,7 +244,8 @@ struct Scene6_AcidOrBaseSortingLab: View {
                     shakeId = sub.id
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 400_000_000)
                 shakeId = nil
             }
         }

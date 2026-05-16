@@ -1,9 +1,6 @@
 import SwiftUI
 import Combine
-import SwiftData
-import Combine
 
-/// ViewModel for the main translator screen
 @MainActor
 final class TranslatorViewModel: ObservableObject {
     @Published var sourceLanguage: SupportedLanguage = .english
@@ -13,7 +10,7 @@ final class TranslatorViewModel: ObservableObject {
     @Published var isTranslating: Bool = false
     @Published var errorMessage: String?
     @Published var showResult: Bool = false
-    @Published var translationSource: String = "" // "Built-in Dictionary" or "Online Translation"
+    @Published var translationSource: String = ""
     @Published var isFavorited: Bool = false
 
     let speechManager = SpeechRecognitionManager()
@@ -27,7 +24,6 @@ final class TranslatorViewModel: ObservableObject {
         self.translationService = translationService ?? TranslationService.shared
         self.settings = settings ?? SettingsManager.shared
 
-        // Observe speech recognition text and sync to input field automatically
         speechManager.$recognizedText
             .receive(on: RunLoop.main)
             .sink { [weak self] text in
@@ -36,7 +32,6 @@ final class TranslatorViewModel: ObservableObject {
             }
             .store(in: &cancellables)
 
-        // Request mic/speech permissions early so first tap works
         speechManager.requestPermissions()
     }
 
@@ -55,8 +50,7 @@ final class TranslatorViewModel: ObservableObject {
         }
     }
 
-    /// Perform translation — tries dictionary first, then online if available
-    func translate(modelContext: ModelContext, isOnline: Bool) async {
+    func translate(dataStore: DataStore, isOnline: Bool) async {
         let trimmed = inputText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else {
             errorMessage = "Please type something to translate."
@@ -81,13 +75,10 @@ final class TranslatorViewModel: ObservableObject {
             showResult = true
             translationSource = translationService.lastUsedProvider
 
-            // Save to history
             let record = TranslationRecord(from: response)
-            modelContext.insert(record)
-            modelContext.safeSave()
+            dataStore.insert(record)
 
-            // Check if already favorited (from a previous identical translation)
-            checkFavoriteStatus(for: response, modelContext: modelContext)
+            checkFavoriteStatus(for: response, dataStore: dataStore)
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -104,34 +95,26 @@ final class TranslatorViewModel: ObservableObject {
         isFavorited = false
     }
 
-    func toggleFavorite(for response: TranslationResponse, modelContext: ModelContext) {
-        let original = response.originalText
-        let translated = response.translatedText
-        let srcLang = response.sourceLanguage
-        let tgtLang = response.targetLanguage
-        let descriptor = FetchDescriptor<TranslationRecord>(
-            predicate: #Predicate { $0.originalText == original && $0.translatedText == translated && $0.sourceLanguage == srcLang && $0.targetLanguage == tgtLang },
-            sortBy: [SortDescriptor(\.createdAt, order: .reverse)]
-        )
-        if let records = try? modelContext.fetch(descriptor),
-           let record = records.first {
+    func toggleFavorite(for response: TranslationResponse, dataStore: DataStore) {
+        if let record = dataStore.findRecord(
+            original: response.originalText,
+            translated: response.translatedText,
+            srcLang: response.sourceLanguage,
+            tgtLang: response.targetLanguage
+        ) {
             record.isFavorite.toggle()
             isFavorited = record.isFavorite
-            modelContext.safeSave()
+            dataStore.saveTranslations()
         }
     }
 
-    private func checkFavoriteStatus(for response: TranslationResponse, modelContext: ModelContext) {
-        let original = response.originalText
-        let translated = response.translatedText
-        let srcLang = response.sourceLanguage
-        let tgtLang = response.targetLanguage
-        let descriptor = FetchDescriptor<TranslationRecord>(
-            predicate: #Predicate { $0.originalText == original && $0.translatedText == translated && $0.sourceLanguage == srcLang && $0.targetLanguage == tgtLang },
-            sortBy: [SortDescriptor(\.createdAt, order: .reverse)]
-        )
-        if let records = try? modelContext.fetch(descriptor),
-           let record = records.first {
+    private func checkFavoriteStatus(for response: TranslationResponse, dataStore: DataStore) {
+        if let record = dataStore.findRecord(
+            original: response.originalText,
+            translated: response.translatedText,
+            srcLang: response.sourceLanguage,
+            tgtLang: response.targetLanguage
+        ) {
             isFavorited = record.isFavorite
         }
     }

@@ -1,47 +1,102 @@
 import SwiftUI
-import SwiftData
+import AppKit
 
 struct FavoritesScreen: View {
-    @Query(
-        filter: #Predicate<TranslationRecord> { $0.isFavorite == true },
-        sort: \TranslationRecord.createdAt,
-        order: .reverse
-    )
-    private var favorites: [TranslationRecord]
-
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var dataStore: DataStore
     @StateObject private var tts = TextToSpeechManager()
+    @State private var selectedRecordId: UUID? = nil
+
+    var favorites: [TranslationRecord] {
+        dataStore.favorites
+    }
 
     var body: some View {
-        Group {
-            if favorites.isEmpty {
-                EmptyStateView(
-                    icon: "heart",
-                    title: "No Favorites Yet",
-                    subtitle: "Tap the heart on any translation to save it here."
-                )
-            } else {
-                List {
-                    ForEach(favorites) { record in
-                        NavigationLink {
-                            HistoryDetailView(record: record)
-                        } label: {
-                            FavoriteRowView(record: record, tts: tts)
+        VStack(spacing: 0) {
+            if selectedRecordId != nil {
+                HStack {
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            selectedRecordId = nil
+                        }
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "chevron.left")
+                            Text("Back")
                         }
                     }
-                    .onDelete(perform: removeFavorites)
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(Color(NSColor.controlBackgroundColor))
+                Divider()
+            }
+
+            if let id = selectedRecordId,
+               let record = favorites.first(where: { $0.id == id }) {
+                HistoryDetailView(record: record)
+            } else {
+                favoritesList
+            }
+        }
+        .navigationTitle(selectedRecordId == nil ? "Favorites" : "Translation Detail")
+        .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
+            if selectedRecordId != nil {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    selectedRecordId = nil
                 }
             }
         }
-        .navigationTitle("Favorites")
+    }
+
+    @ViewBuilder
+    private var favoritesList: some View {
+        if favorites.isEmpty {
+            EmptyStateView(
+                icon: "heart",
+                title: "No Favorites Yet",
+                subtitle: "Tap the heart on any translation to save it here."
+            )
+        } else {
+            List {
+                ForEach(favorites) { record in
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            selectedRecordId = record.id
+                        }
+                    } label: {
+                        FavoriteRowView(record: record, tts: tts)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .contextMenu {
+                        Button {
+                            NSPasteboard.general.clearContents()
+                            NSPasteboard.general.setString(record.translatedText, forType: .string)
+                        } label: {
+                            Text("Copy translation")
+                            Image(systemName: "doc.on.doc")
+                        }
+                        Divider()
+                        Button {
+                            dataStore.setFavorite(recordId: record.id, isFavorite: false)
+                        } label: {
+                            Text("Remove from favorites")
+                            Image(systemName: "heart.slash")
+                        }
+                    }
+                }
+                .onDelete(perform: removeFavorites)
+            }
+        }
     }
 
     private func removeFavorites(at offsets: IndexSet) {
         for index in offsets {
             guard index >= 0 && index < favorites.count else { continue }
-            favorites[index].isFavorite = false
+            let record = favorites[index]
+            dataStore.setFavorite(recordId: record.id, isFavorite: false)
         }
-        modelContext.safeSave()
     }
 }
 
@@ -58,7 +113,7 @@ struct FavoriteRowView: View {
             HStack {
                 Text(record.translatedText)
                     .font(.subheadline.weight(.medium))
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                     .lineLimit(2)
 
                 Spacer()
@@ -69,15 +124,16 @@ struct FavoriteRowView: View {
                 } label: {
                     Image(systemName: tts.isSpeaking ? "speaker.wave.3.fill" : "speaker.wave.2")
                         .font(.caption)
-                        .foregroundStyle(.indigo)
+                        .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain)
+                .help("Play pronunciation")
             }
 
             if let translit = record.transliteration, !translit.isEmpty {
                 Text(translit)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                     .italic()
             }
         }

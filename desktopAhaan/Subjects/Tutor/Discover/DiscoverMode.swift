@@ -27,9 +27,18 @@ enum DiscoverMode {
         return pack.id == "science_class7" && supportedChapterIds.contains(chapter.id)
     }
 
-    /// Builds the appropriate Discover view for a given (pack, chapter).
     @ViewBuilder
     static func view(for pack: SubjectPack, chapter: Chapter) -> some View {
+        if #available(macOS 12, *) {
+            discoverContent(for: pack, chapter: chapter)
+        } else {
+            RequiresMacOS12View(chapterTitle: chapter.title)
+        }
+    }
+
+    @available(macOS 12, *)
+    @ViewBuilder
+    private static func discoverContent(for pack: SubjectPack, chapter: Chapter) -> some View {
         if pack.id == "science_class7" {
             switch chapter.id {
             case "ch01":
@@ -57,8 +66,32 @@ enum DiscoverMode {
     }
 }
 
-/// Friendly fallback for chapters that don't yet have a hand-built Discover
-/// experience.
+private struct RequiresMacOS12View: View {
+    let chapterTitle: String
+
+    var body: some View {
+        ZStack {
+            Color(NSColor.windowBackgroundColor)
+            VStack(spacing: 16) {
+                Image(systemName: "sparkles")
+                    .font(.system(size: 48))
+                    .foregroundColor(.secondary)
+                Text("Discover Mode")
+                    .font(.title2.bold())
+                Text("Interactive Discover scenes for \"\(chapterTitle)\" require macOS 12 or later.")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
+                Text("All chapter content is still available in the regular view.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            .padding(40)
+        }
+        .navigationTitle("Discover Mode")
+    }
+}
+
 private struct ComingSoonView: View {
     let chapterTitle: String
 
@@ -70,13 +103,13 @@ private struct ComingSoonView: View {
                     .font(.system(size: 64))
                 Text("Discover Mode is coming soon for")
                     .font(.title3)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 Text(chapterTitle)
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
                 Text("Until then, the regular chapter view has all the content.")
                     .font(.body)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                     .padding(.top, 8)
             }
             .padding(40)

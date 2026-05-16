@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 8 — Acid Rain Story.
 /// Illustrated scrollable panels: factory -> clouds -> acidic rain -> damage. Canvas rain animation.
+@available(macOS 12, *)
 struct Scene8_AcidRainStory: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -44,7 +45,7 @@ struct Scene8_AcidRainStory: View {
                     HStack(spacing: 6) {
                         ForEach(0..<panels.count, id: \.self) { i in
                             Circle()
-                                .fill(i == currentPanel ? Color.indigo : (viewedPanels.contains(i) ? .green : .gray.opacity(0.25)))
+                                .fill(i == currentPanel ? Color.compatIndigo : (viewedPanels.contains(i) ? .green : .gray.opacity(0.25)))
                                 .frame(width: 10, height: 10)
                         }
                     }
@@ -63,7 +64,7 @@ struct Scene8_AcidRainStory: View {
                                 .font(.body)
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(4)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     }
                     .frame(maxWidth: 560)
@@ -86,14 +87,14 @@ struct Scene8_AcidRainStory: View {
                         } label: {
                             Label("Back", systemImage: "chevron.left")
                         }
-                        .buttonStyle(.bordered)
+                        
                         .disabled(currentPanel == 0)
 
                         Spacer()
 
                         Text("\(currentPanel + 1) / \(panels.count)")
                             .font(.caption.monospacedDigit())
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
 
                         Spacer()
 
@@ -103,8 +104,8 @@ struct Scene8_AcidRainStory: View {
                             Label("Next", systemImage: "chevron.right")
                                 .labelStyle(.titleAndIcon)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.indigo)
+                        
+                        .accentColor(Color.compatIndigo)
                         .disabled(currentPanel == panels.count - 1)
                     }
                     .frame(maxWidth: 500)
@@ -144,7 +145,7 @@ struct Scene8_AcidRainStory: View {
                 HStack(spacing: 8) {
                     ForEach(0..<6, id: \.self) { _ in
                         Image(systemName: "drop.fill")
-                            .foregroundStyle(.blue.opacity(0.5))
+                            .foregroundColor(.blue.opacity(0.5))
                     }
                 }
             } else {

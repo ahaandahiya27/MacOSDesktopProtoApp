@@ -1,12 +1,14 @@
 import SwiftUI
-import SwiftData
+import AppKit
 
 struct HistoryScreen: View {
-    @Query(sort: \TranslationRecord.createdAt, order: .reverse)
-    private var records: [TranslationRecord]
-
+    @EnvironmentObject var dataStore: DataStore
     @State private var searchText = ""
-    @Environment(\.modelContext) private var modelContext
+    @State private var selectedRecordId: UUID? = nil
+
+    var records: [TranslationRecord] {
+        dataStore.recordsByDate
+    }
 
     var filteredRecords: [TranslationRecord] {
         if searchText.isEmpty { return records }
@@ -17,49 +19,109 @@ struct HistoryScreen: View {
     }
 
     var body: some View {
-        Group {
-            if records.isEmpty {
-                EmptyStateView(
-                    icon: "clock.arrow.circlepath",
-                    title: "No Translations Yet",
-                    subtitle: "Your translation history will appear here."
-                )
+        VStack(spacing: 0) {
+            if selectedRecordId != nil {
+                HStack {
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            selectedRecordId = nil
+                        }
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "chevron.left")
+                            Text("Back")
+                        }
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(Color(NSColor.controlBackgroundColor))
+                Divider()
+            }
+
+            if let id = selectedRecordId,
+               let record = records.first(where: { $0.id == id }) {
+                HistoryDetailView(record: record)
             } else {
+                historyList
+            }
+        }
+        .navigationTitle(selectedRecordId == nil ? "History" : "Translation Detail")
+        .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
+            if selectedRecordId != nil {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    selectedRecordId = nil
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var historyList: some View {
+        if records.isEmpty {
+            EmptyStateView(
+                icon: "clock.arrow.circlepath",
+                title: "No Translations Yet",
+                subtitle: "Your translation history will appear here."
+            )
+        } else {
+            VStack(spacing: 0) {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.secondary)
+                    TextField("Search translations", text: $searchText)
+                        .textFieldStyle(.roundedBorder)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+
                 List {
                     ForEach(filteredRecords) { record in
-                        NavigationLink {
-                            HistoryDetailView(record: record)
+                        Button {
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                selectedRecordId = record.id
+                            }
                         } label: {
                             HistoryRowView(record: record)
+                                .contentShape(Rectangle())
                         }
-                        .swipeActions(edge: .leading) {
+                        .buttonStyle(.plain)
+                        .contextMenu {
                             Button {
-                                record.isFavorite.toggle()
-                                modelContext.safeSave()
+                                dataStore.toggleRecordFavorite(record)
                             } label: {
-                                Label(
-                                    record.isFavorite ? "Unfavorite" : "Favorite",
-                                    systemImage: record.isFavorite ? "heart.slash" : "heart"
-                                )
+                                Text(record.isFavorite ? "Unfavorite" : "Favorite")
+                                Image(systemName: record.isFavorite ? "heart.slash" : "heart")
                             }
-                            .tint(.pink)
+                            Button {
+                                NSPasteboard.general.clearContents()
+                                NSPasteboard.general.setString(record.translatedText, forType: .string)
+                            } label: {
+                                Text("Copy translation")
+                                Image(systemName: "doc.on.doc")
+                            }
+                            Divider()
+                            Button {
+                                dataStore.delete(record)
+                            } label: {
+                                Text("Delete")
+                                Image(systemName: "trash")
+                            }
                         }
                     }
                     .onDelete(perform: deleteRecords)
                 }
-                .searchable(text: $searchText, prompt: "Search translations")
             }
         }
-        .navigationTitle("History")
     }
 
     private func deleteRecords(at offsets: IndexSet) {
         for index in offsets {
             guard index >= 0 && index < filteredRecords.count else { continue }
             let record = filteredRecords[index]
-            modelContext.delete(record)
+            dataStore.delete(record)
         }
-        modelContext.safeSave()
     }
 }
 
@@ -69,18 +131,18 @@ struct HistoryRowView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                Text("\(record.sourceLanguage.capitalized) \u{2192} \(record.targetLanguage.capitalized)")
+                Text("\(record.sourceLanguage.capitalized) → \(record.targetLanguage.capitalized)")
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                 Spacer()
                 if record.isFavorite {
                     Image(systemName: "heart.fill")
                         .font(.caption)
-                        .foregroundStyle(.pink)
+                        .foregroundColor(.pink)
                 }
                 Text(record.createdAt, style: .relative)
                     .font(.caption2)
-                    .foregroundStyle(.tertiary)
+                    .foregroundColor(.secondary)
             }
 
             Text(record.originalText)
@@ -89,7 +151,7 @@ struct HistoryRowView: View {
 
             Text(record.translatedText)
                 .font(.subheadline.weight(.medium))
-                .foregroundStyle(.indigo)
+                .foregroundColor(Color.compatIndigo)
                 .lineLimit(2)
         }
         .padding(.vertical, 4)
@@ -97,8 +159,8 @@ struct HistoryRowView: View {
 }
 
 struct HistoryDetailView: View {
-    @Bindable var record: TranslationRecord
-    @Environment(\.modelContext) private var modelContext
+    let record: TranslationRecord
+    @EnvironmentObject var dataStore: DataStore
     @StateObject private var tts = TextToSpeechManager()
 
     var body: some View {
@@ -111,13 +173,11 @@ struct HistoryDetailView: View {
                 },
                 isSpeaking: tts.isSpeaking,
                 onFavorite: {
-                    record.isFavorite.toggle()
-                    modelContext.safeSave()
+                    dataStore.toggleRecordFavorite(record)
                 },
                 isFavorited: record.isFavorite
             )
             .padding(.top)
         }
-        .navigationTitle("Translation Detail")
     }
 }

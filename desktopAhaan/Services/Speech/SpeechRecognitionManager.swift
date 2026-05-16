@@ -22,7 +22,8 @@ final class SpeechRecognitionManager: ObservableObject {
         if _audioEngine == nil {
             _audioEngine = AVAudioEngine()
         }
-        return _audioEngine!
+        // Safe: we just guaranteed _audioEngine is non-nil above
+        return _audioEngine.unsafelyUnwrapped
     }
 
     private var hasTapInstalled = false
@@ -207,9 +208,9 @@ final class SpeechRecognitionManager: ObservableObject {
             isListening = true
 
             // Auto-stop after 30 seconds to prevent indefinite recording
-            Task {
-                try? await Task.sleep(for: .seconds(30))
-                if self.isListening {
+            Task { [weak self] in
+                try? await Task.sleep(nanoseconds: 30_000_000_000)
+                if let self = self, self.isListening {
                     self.stopListening()
                 }
             }
@@ -248,6 +249,12 @@ final class SpeechRecognitionManager: ObservableObject {
 
         let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
+
+        guard recordingFormat.sampleRate > 0, recordingFormat.channelCount > 0 else {
+            showTemporaryError("Microphone returned invalid audio format. Please check System Settings > Sound and try again.")
+            return
+        }
+
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             recognitionRequest.append(buffer)
         }
@@ -269,6 +276,13 @@ final class SpeechRecognitionManager: ObservableObject {
         do {
             try audioEngine.start()
             isListening = true
+
+            Task { [weak self] in
+                try? await Task.sleep(nanoseconds: 30_000_000_000)
+                if let self = self, self.isListening {
+                    self.stopListening()
+                }
+            }
         } catch {
             showTemporaryError("Could not start listening. Please try again.")
             stopListening()
@@ -309,7 +323,7 @@ final class SpeechRecognitionManager: ObservableObject {
         errorMessage = message
         errorDismissTask?.cancel()
         errorDismissTask = Task {
-            try? await Task.sleep(for: .seconds(10))
+            try? await Task.sleep(nanoseconds: 10_000_000_000)
             if !Task.isCancelled {
                 self.errorMessage = nil
             }

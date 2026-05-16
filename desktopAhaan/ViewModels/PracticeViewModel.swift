@@ -1,8 +1,6 @@
 import SwiftUI
 import Combine
-import SwiftData
 
-/// ViewModel for practice / learning mode
 @MainActor
 final class PracticeViewModel: ObservableObject {
     @Published var selectedCategory: PracticeCategory?
@@ -59,22 +57,21 @@ final class PracticeViewModel: ObservableObject {
         mode = .quiz
     }
 
-    func checkAnswer(modelContext: ModelContext) {
+    func checkAnswer(dataStore: DataStore) {
         guard let item = quizItem else { return }
 
         let normalized = quizAnswer.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let correct = item.sanskrit.lowercased()
         let translitCorrect = item.transliteration.lowercased()
-        // Also compare with diacritics stripped for transliteration (e.g. "namaste" matches "namastē")
         let normalizedFolded = normalized.folding(options: .diacriticInsensitive, locale: .current)
         let translitFolded = translitCorrect.folding(options: .diacriticInsensitive, locale: .current)
 
         if normalized == correct || normalized == translitCorrect || normalizedFolded == translitFolded {
             quizResult = .correct
-            updateProgress(phraseID: item.id, correct: true, modelContext: modelContext)
+            updateProgress(phraseID: item.id, correct: true, dataStore: dataStore)
         } else {
             quizResult = .incorrect(correctAnswer: "\(item.sanskrit) (\(item.transliteration))")
-            updateProgress(phraseID: item.id, correct: false, modelContext: modelContext)
+            updateProgress(phraseID: item.id, correct: false, dataStore: dataStore)
         }
     }
 
@@ -86,17 +83,12 @@ final class PracticeViewModel: ObservableObject {
         quizResult = nil
     }
 
-    private func updateProgress(phraseID: String, correct: Bool, modelContext: ModelContext) {
-        let descriptor = FetchDescriptor<PracticeProgress>(
-            predicate: #Predicate { $0.phraseID == phraseID }
-        )
-
+    private func updateProgress(phraseID: String, correct: Bool, dataStore: DataStore) {
         let progress: PracticeProgress
-        if let existing = try? modelContext.fetch(descriptor).first {
+        if let existing = dataStore.findProgress(phraseID: phraseID) {
             progress = existing
         } else {
             progress = PracticeProgress(phraseID: phraseID)
-            modelContext.insert(progress)
         }
 
         progress.timesAttempted += 1
@@ -106,7 +98,7 @@ final class PracticeViewModel: ObservableObject {
             progress.isMastered = true
         }
 
-        modelContext.safeSave()
+        dataStore.upsertProgress(progress)
     }
 
     func speak(text: String, language: SupportedLanguage, transliteration: String? = nil) {

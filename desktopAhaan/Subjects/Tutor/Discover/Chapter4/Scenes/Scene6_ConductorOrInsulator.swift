@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Conductor or Insulator? Drag Game.
 /// 12 materials, drag into Good Conductor or Bad Conductor zones.
+@available(macOS 12, *)
 struct Scene6_ConductorOrInsulator: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -51,7 +52,7 @@ struct Scene6_ConductorOrInsulator: View {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                             .padding(.trailing, 24)
                             .padding(.top, 8)
                     }
@@ -68,7 +69,7 @@ struct Scene6_ConductorOrInsulator: View {
                     } else {
                         Text("All sorted!")
                             .font(.title2.bold())
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                             .padding(.top, 20)
                     }
 
@@ -90,7 +91,7 @@ struct Scene6_ConductorOrInsulator: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Metals like copper and silver let heat pass easily — they are conductors. Wood, wool, and air trap heat — they are insulators.")
                                     .font(.body)
                                     .lineSpacing(4)
@@ -140,12 +141,14 @@ struct Scene6_ConductorOrInsulator: View {
         .frame(width: 86, height: 64)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .strokeBorder(.gray.opacity(0.25), lineWidth: 1)
         )
+        .shadow(color: .black.opacity(offset != .zero ? 0.25 : 0), radius: 12, x: 0, y: 6)
+        .scaleEffect(offset != .zero ? 1.08 : 1.0)
         .offset(offset)
         .offset(x: isShaking ? -6 : 0)
         .zIndex(offset == .zero ? 0 : 10)
@@ -169,7 +172,7 @@ struct Scene6_ConductorOrInsulator: View {
         VStack(spacing: 6) {
             Text(title)
                 .font(.headline)
-                .foregroundStyle(color)
+                .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 60), spacing: 4)]
             LazyVGrid(columns: cols, spacing: 4) {
@@ -201,7 +204,7 @@ struct Scene6_ConductorOrInsulator: View {
                         if isConductor { conductorRect = frame }
                         else { insulatorRect = frame }
                     }
-                    .onChange(of: geo.size) { _, _ in
+                    .onChange(of: geo.size) { _ in
                         let frame = geo.frame(in: .global)
                         if isConductor { conductorRect = frame }
                         else { insulatorRect = frame }
@@ -229,7 +232,10 @@ struct Scene6_ConductorOrInsulator: View {
                 else { insulatorBin.append(mat) }
             }
             showConfetti = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { showConfetti = false }
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 1_500_000_000)
+                showConfetti = false
+            }
         } else {
             // Wrong — shake
             shakeId = mat.id
@@ -238,7 +244,8 @@ struct Scene6_ConductorOrInsulator: View {
                     shakeId = mat.id
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 400_000_000)
                 shakeId = nil
             }
         }

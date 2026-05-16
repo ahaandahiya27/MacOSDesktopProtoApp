@@ -4,6 +4,7 @@ import SwiftUI
 ///
 /// A drawn sheep. Tap "Start shearing!" — animated clipper runs across the sheep,
 /// fleece falls off. Counter: "12 kg fleece harvested."
+@available(macOS 12, *)
 struct Scene3_TheShearingDay: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -20,15 +21,15 @@ struct Scene3_TheShearingDay: View {
             HStack {
                 Text("The Shearing Day")
                     .font(.largeTitle.bold())
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
                 Spacer()
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Harvested")
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                     Text("\(Int(harvestedKg)) kg")
                         .font(.title3.weight(.bold))
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                 }
             }
             .padding(.horizontal, 24)
@@ -115,7 +116,7 @@ struct Scene3_TheShearingDay: View {
                 } label: {
                     Label(isShearing ? "Shearing..." : "Start Shearing!", systemImage: "scissors")
                 }
-                .buttonStyle(.borderedProminent)
+                
                 .disabled(isShearing)
 
                 if harvestedKg >= 12 {
@@ -124,7 +125,7 @@ struct Scene3_TheShearingDay: View {
                     } label: {
                         Label("Watch Again", systemImage: "arrow.clockwise")
                     }
-                    .buttonStyle(.bordered)
+                    
                 }
             }
             .padding(.horizontal, 24)
@@ -134,10 +135,10 @@ struct Scene3_TheShearingDay: View {
             SoftShadowCard(padding: 14) {
                 VStack(alignment: .leading, spacing: 6) {
                     Label("Don't worry, it doesn't hurt!", systemImage: "checkmark.circle.fill")
-                        .foregroundStyle(.green)
+                        .foregroundColor(.green)
                     Text("Sheep are sheared once a year in spring. The fleece grows back quickly and the sheep feels cooler in summer.")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
             }
             .frame(maxWidth: 600)
@@ -156,7 +157,8 @@ struct Scene3_TheShearingDay: View {
             clipperPosition = 1
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 300_000_000)
             for _ in 0..<8 {
                 let puff = FleecePuff(
                     x: CGFloat.random(in: 100...220),
@@ -168,9 +170,7 @@ struct Scene3_TheShearingDay: View {
                     harvestedKg += 1.5
                 }
             }
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+            try? await Task.sleep(nanoseconds: 1_900_000_000)
             withAnimation(.easeOut(duration: 1)) {
                 for i in fleecePiles.indices {
                     fleecePiles[i].opacity = 0

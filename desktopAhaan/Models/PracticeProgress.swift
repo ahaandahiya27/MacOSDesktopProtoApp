@@ -1,9 +1,6 @@
 import Foundation
-import SwiftData
 
-/// Tracks practice/quiz progress for a vocabulary item
-@Model
-final class PracticeProgress {
+final class PracticeProgress: Identifiable, Codable {
     var id: UUID
     var phraseID: String
     var timesCorrect: Int

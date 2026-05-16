@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build Your Thermometer.
 /// Draggable mercury level with live °C / °F, plus heat/cool buttons.
+@available(macOS 12, *)
 struct Scene2_BuildYourThermometer: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -37,8 +38,8 @@ struct Scene2_BuildYourThermometer: View {
                             Label("Heat (Bunsen)", systemImage: "flame.fill")
                                 .frame(maxWidth: 180)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.orange)
+                        
+                        .accentColor(.orange)
                         .accessibilityLabel("Heat the thermometer")
 
                         Button {
@@ -47,22 +48,22 @@ struct Scene2_BuildYourThermometer: View {
                             Label("Cool (Ice)", systemImage: "snowflake")
                                 .frame(maxWidth: 180)
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.cyan)
+                        
+                        .accentColor(Color.compatCyan)
                         .accessibilityLabel("Cool the thermometer")
 
                         HStack(spacing: 24) {
                             VStack {
                                 Text(String(format: "%.0f", tempC))
                                     .font(.largeTitle.bold().monospacedDigit())
-                                    .foregroundStyle(.red)
+                                    .foregroundColor(.red)
                                 Text("°C")
                                     .font(.headline)
                             }
                             VStack {
                                 Text(String(format: "%.0f", tempF))
                                     .font(.largeTitle.bold().monospacedDigit())
-                                    .foregroundStyle(.blue)
+                                    .foregroundColor(.blue)
                                 Text("°F")
                                     .font(.headline)
                             }
@@ -158,14 +159,14 @@ struct Scene2_BuildYourThermometer: View {
         VStack(spacing: 8) {
             Image(systemName: "thermometer.medium")
                 .font(.system(size: 60))
-                .foregroundStyle(.red)
+                .foregroundColor(.red)
             Text(String(format: "%.1f °C", tempC))
                 .font(.system(size: 36, weight: .bold, design: .monospaced))
         }
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(nsColor: .windowBackgroundColor))
+                .fill(Color(NSColor.windowBackgroundColor))
                 .shadow(color: .black.opacity(0.1), radius: 10)
         )
         .accessibilityLabel("Digital thermometer reading \(Int(tempC)) degrees")

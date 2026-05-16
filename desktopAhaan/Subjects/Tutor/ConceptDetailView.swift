@@ -1,27 +1,22 @@
 import SwiftUI
-import SwiftData
 
-/// The centerpiece. Renders a single concept with a four-depth segmented
-/// switcher, the "why is this true?" reasoning card, real-world use cases,
-/// and the "beyond the book" extension.
 struct ConceptDetailView: View {
     let pack: SubjectPack
     let concept: Concept
 
     @State private var depth: ExplanationDepth = .kidFriendly
     @State private var showAskFollowUp = false
+    @State private var reasoningExpanded = false
+    @State private var beyondExpanded = false
+    @EnvironmentObject private var nav: TutorNavigationState
     @ObservedObject private var speech = SpeechReader.shared
-    @Environment(\.modelContext) private var modelContext
-    @Query(sort: [SortDescriptor(\StudyBookmark.addedAt, order: .reverse)])
-    private var bookmarks: [StudyBookmark]
+    @EnvironmentObject var dataStore: DataStore
 
-    /// Lookup tables come from the pack itself, computed lazily.
     private var conceptIndex: [String: Concept] { pack.conceptIndex }
     private var questionIndex: [String: Question] { pack.questionIndex }
 
-    private var bookmarkRecord: StudyBookmark? {
-        let key = "\(pack.id)::\(concept.id)"
-        return bookmarks.first { $0.id == key }
+    private var isBookmarked: Bool {
+        dataStore.isBookmarked(subjectPackId: pack.id, conceptId: concept.id)
     }
 
     var body: some View {
@@ -40,18 +35,21 @@ struct ConceptDetailView: View {
             .padding(20)
             .frame(maxWidth: 820, alignment: .leading)
         }
+        .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(concept.title)
         .sheet(isPresented: $showAskFollowUp) {
             AskFollowUpView(pack: pack, concept: concept)
         }
         .toolbar {
-            ToolbarItem(placement: .secondaryAction) {
+            ToolbarItem(placement: .automatic) {
                 Button(action: toggleBookmark) {
                     Label(
-                        bookmarkRecord == nil ? "Bookmark" : "Bookmarked",
-                        systemImage: bookmarkRecord == nil ? "bookmark" : "bookmark.fill"
+                        isBookmarked ? "Bookmarked" : "Bookmark",
+                        systemImage: isBookmarked ? "bookmark.fill" : "bookmark"
                     )
                 }
+                .keyboardShortcut("b", modifiers: .command)
+                .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept")
             }
         }
         .onDisappear {
@@ -68,12 +66,12 @@ struct ConceptDetailView: View {
             if !concept.pageRefs.isEmpty {
                 Text("Pages \(concept.pageRefs.map(String.init).joined(separator: ", "))")
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
             }
             if concept.needsHumanReview {
                 Label("This section was flagged for human review.", systemImage: "exclamationmark.triangle.fill")
                     .font(.caption)
-                    .foregroundStyle(.orange)
+                    .foregroundColor(.orange)
             }
         }
     }
@@ -90,8 +88,7 @@ struct ConceptDetailView: View {
             readAloudButton
                 .help("Read aloud")
         }
-        .onChange(of: depth) { _, _ in
-            // If speech is active (speaking or paused), restart with new depth
+        .onChange(of: depth) { _ in
             if speech.isSpeaking || speech.isPaused {
                 speech.speak(concept.explanation(at: depth), owner: "concept_\(concept.id)")
             }
@@ -112,6 +109,8 @@ struct ConceptDetailView: View {
             }
         }
         .buttonStyle(.plain)
+        .keyboardShortcut("r", modifiers: .command)
+        .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read aloud"))
         .accessibilityLabel(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read aloud"))
         .accessibilityHint("Reads the current explanation aloud.")
         .accessibilityValue(speech.isSpeaking ? "Currently speaking" : (speech.isPaused ? "Currently paused" : "Idle"))
@@ -135,35 +134,44 @@ struct ConceptDetailView: View {
     private var explanationCard: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(depth.displayName)
-                .font(.caption).foregroundStyle(.secondary).textCase(.uppercase)
+                .font(.caption).foregroundColor(.secondary).textCase(.uppercase)
             Text(concept.explanation(at: depth))
                 .font(.body)
                 .lineSpacing(4)
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 14))
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.gray.opacity(0.1))
+        )
     }
 
     private var reasoningCard: some View {
-        DisclosureGroup {
+        ExpandableCard(
+            isExpanded: $reasoningExpanded,
+            systemImage: "questionmark.circle.fill",
+            title: "Why is this true?"
+        ) {
             Text(concept.reasoning)
                 .font(.body)
                 .lineSpacing(4)
-                .padding(.top, 4)
-        } label: {
-            Label("Why is this true?", systemImage: "questionmark.circle.fill")
-                .font(.headline)
         }
-        .padding(16)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 14))
     }
 
     private var useCasesSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("See it in real life", systemImage: "globe")
-                .font(.headline)
-            ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                Label("See it in real life", systemImage: "globe")
+                    .font(.headline)
+                Spacer()
+                if concept.useCases.count > 1 {
+                    Text("Scroll for more →")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
+            ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .top, spacing: 12) {
                     ForEach(concept.useCases) { useCase in
                         UseCaseCard(useCase: useCase)
@@ -171,24 +179,22 @@ struct ConceptDetailView: View {
                 }
                 .padding(.bottom, 4)
             }
-            // VoiceOver: announce as a single section so users don't get
-            // confused by horizontal navigation.
             .accessibilityLabel("Real-life examples, \(concept.useCases.count) items")
         }
     }
 
     private var beyondTheBookCard: some View {
-        DisclosureGroup {
+        ExpandableCard(
+            isExpanded: $beyondExpanded,
+            systemImage: "graduationcap.fill",
+            title: "Beyond the book",
+            tint: Color.compatIndigo,
+            background: Color.compatIndigo.opacity(0.10)
+        ) {
             Text(concept.beyondTheBook)
                 .font(.body)
                 .lineSpacing(4)
-                .padding(.top, 4)
-        } label: {
-            Label("Beyond the book", systemImage: "graduationcap.fill")
-                .font(.headline)
         }
-        .padding(16)
-        .background(.indigo.opacity(0.10), in: RoundedRectangle(cornerRadius: 14))
     }
 
     private var askFollowUpButton: some View {
@@ -202,15 +208,16 @@ struct ConceptDetailView: View {
                         .font(.headline)
                     Text("Have a doubt about this concept? The on-device tutor can help.")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
             }
             .padding(16)
             .frame(maxWidth: .infinity)
-            .background(.purple.opacity(0.10), in: RoundedRectangle(cornerRadius: 14))
+            .background(RoundedRectangle(cornerRadius: 14).fill(Color.purple.opacity(0.10)))
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
@@ -225,31 +232,39 @@ struct ConceptDetailView: View {
                     .font(.headline)
                 if !relatedConcepts.isEmpty {
                     ForEach(relatedConcepts) { c in
-                        NavigationLink(value: TutorRoute.concept(packId: pack.id, conceptId: c.id)) {
+                        Button { nav.push(.concept(packId: pack.id, conceptId: c.id)) } label: {
                             HStack {
                                 Image(systemName: "lightbulb")
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text(c.title).font(.body)
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
+                            .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .contextMenu {
+                            Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
+                            Button("Bookmark") {
+                                dataStore.toggleBookmark(subjectPackId: pack.id, conceptId: c.id, conceptTitle: c.title)
+                            }
+                        }
                         .padding(.vertical, 4)
                     }
                 }
                 if !relatedQuestions.isEmpty {
                     ForEach(relatedQuestions) { q in
-                        NavigationLink(value: TutorRoute.question(packId: pack.id, questionId: q.id)) {
+                        Button { nav.push(.question(packId: pack.id, questionId: q.id)) } label: {
                             HStack {
                                 Image(systemName: "questionmark.app")
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text(q.prompt).font(.body).lineLimit(2)
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
+                            .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
                         .padding(.vertical, 4)
@@ -257,24 +272,21 @@ struct ConceptDetailView: View {
                 }
             }
             .padding(16)
-            .background(.background.secondary, in: RoundedRectangle(cornerRadius: 14))
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.gray.opacity(0.1))
+            )
         }
     }
 
     // MARK: - Actions
 
     private func toggleBookmark() {
-        if let existing = bookmarkRecord {
-            modelContext.delete(existing)
-        } else {
-            modelContext.insert(StudyBookmark(
-                subjectPackId: pack.id,
-                conceptId: concept.id,
-                conceptTitle: concept.title
-            ))
-        }
-        do { try modelContext.save() }
-        catch { print("[ConceptDetailView] bookmark save failed: \(error)") }
+        dataStore.toggleBookmark(
+            subjectPackId: pack.id,
+            conceptId: concept.id,
+            conceptTitle: concept.title
+        )
     }
 }
 
@@ -287,33 +299,33 @@ private struct UseCaseCard: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(useCase.domain.uppercased())
                 .font(.caption2).bold()
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             Text(useCase.title)
                 .font(.subheadline).bold()
             Text(useCase.description)
                 .font(.callout)
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(14)
+        .padding(DesignTokens.cornerRadiusCard)
         .frame(width: 280, alignment: .leading)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 12))
+        .background(
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                .fill(Color.gray.opacity(0.1))
+        )
         .overlay(
-            RoundedRectangle(cornerRadius: 12)
-                .strokeBorder(.indigo.opacity(0.25), lineWidth: 1)
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
         )
     }
 }
 
 // MARK: - Routing
 
-/// Hashable navigation values used by NavigationStack inside the Science
-/// subject's home view.
 enum TutorRoute: Hashable {
     case chapter(packId: String, chapterId: String)
     case topic(packId: String, topicId: String)
     case concept(packId: String, conceptId: String)
     case question(packId: String, questionId: String)
-    /// The illustrated, interactive Discover Mode experience for a chapter.
     case discover(packId: String, chapterId: String)
 }

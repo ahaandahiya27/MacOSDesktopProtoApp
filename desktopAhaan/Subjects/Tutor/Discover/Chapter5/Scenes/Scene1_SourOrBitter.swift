@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Sour or Bitter? Taste-sorting game.
 /// 6 items: user classifies each as Sour (Acid) or Bitter (Base).
+@available(macOS 12, *)
 struct Scene1_SourOrBitter: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -90,7 +91,7 @@ struct Scene1_SourOrBitter: View {
                             VStack(alignment: .leading, spacing: 8) {
                                 Label("Well done!", systemImage: "star.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Acids taste sour (like lemon and vinegar). Bases taste bitter and feel soapy (like baking soda and soap). Never taste unknown chemicals \u{2014} scientists use indicators instead!")
                                     .font(.body)
                                     .lineSpacing(4)
@@ -136,16 +137,17 @@ struct Scene1_SourOrBitter: View {
                 flashColor = .red
                 if !reduceMotion {
                     withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = 12 }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                    Task { @MainActor in
+                        try? await Task.sleep(nanoseconds: 150_000_000)
                         withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = -10 }
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        try? await Task.sleep(nanoseconds: 150_000_000)
                         withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeOffset = 0 }
                     }
                 }
             }
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 600_000_000)
                 flashColor = nil
                 shakeOffset = 0
                 if currentIndex < items.count - 1 {
@@ -164,8 +166,8 @@ struct Scene1_SourOrBitter: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 14)
         }
-        .buttonStyle(.bordered)
-        .tint(color)
+        
+        .accentColor(color)
         .accessibilityLabel("Classify as \(label)")
     }
 
@@ -173,7 +175,7 @@ struct Scene1_SourOrBitter: View {
         if index < results.count {
             return results[index] ? .green : .red
         }
-        if index == currentIndex { return .indigo }
+        if index == currentIndex { return Color.compatIndigo }
         return .gray.opacity(0.25)
     }
 }

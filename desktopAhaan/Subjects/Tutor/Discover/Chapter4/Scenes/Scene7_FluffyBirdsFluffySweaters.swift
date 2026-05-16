@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 7 — Fluffy Birds, Fluffy Sweaters.
 /// Bird fluffs feathers in cold; trapped air pockets shown. Parallel sweater analogy.
+@available(macOS 12, *)
 struct Scene7_FluffyBirdsFluffySweaters: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -28,7 +29,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                     width: isCold ? 150 : 110,
                                     height: isCold ? 140 : 110
                                 )
-                                .animation(reduceMotion ? .none : .spring(response: 0.5), value: isCold)
+                                .animation(reduceMotion ? .none : .spring(response: 0.5))
                                 .accessibilityLabel(isCold ? "Bird with fluffed feathers" : "Bird with normal feathers")
 
                             // Head
@@ -55,7 +56,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                     let angle = Double(i) * .pi / 4
                                     let r: CGFloat = isCold ? 50 : 35
                                     Circle()
-                                        .fill(Color.cyan.opacity(0.4))
+                                        .fill(Color.compatCyan.opacity(0.4))
                                         .frame(width: 10, height: 10)
                                         .offset(
                                             x: cos(angle) * r,
@@ -68,7 +69,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                         Text(isCold ? "Feathers fluffed!" : "Normal feathers")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     // Sweater side
@@ -97,7 +98,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                     let row = i / 3
                                     let col = i % 3
                                     Circle()
-                                        .fill(Color.cyan.opacity(0.4))
+                                        .fill(Color.compatCyan.opacity(0.4))
                                         .frame(width: 10, height: 10)
                                         .offset(
                                             x: CGFloat(col - 1) * 30,
@@ -111,7 +112,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                         Text(showAirPockets ? "Air pockets trap heat" : "Woollen sweater")
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -121,8 +122,8 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                     Button(isCold ? "Make it warm!" : "Make it cold!") {
                         toggleCold()
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(isCold ? .orange : .cyan)
+                    
+                    .accentColor(isCold ? .orange : Color.compatCyan)
                     .padding(.top, 16)
 
                     Spacer()

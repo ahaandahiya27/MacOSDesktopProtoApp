@@ -69,9 +69,12 @@ final class SpeechReader: NSObject, ObservableObject {
     /// Stop the current speech entirely.
     /// When `owner` is provided, only stops if the current utterance belongs to that owner.
     func stop(owner: String? = nil) {
-        if let owner, let currentOwner, owner != currentOwner { return }
-        if synthesizer.isSpeaking || isPaused {
-            synthesizer.stopSpeaking(at: .immediate)
+        if let owner = owner, let currentOwner = currentOwner, owner != currentOwner { return }
+        if isSpeaking || isPaused {
+            let synth = synthesizer
+            DispatchQueue.global(qos: .userInitiated).async {
+                synth.stopSpeaking(at: .immediate)
+            }
         }
         isSpeaking = false
         isPaused = false
@@ -82,7 +85,7 @@ final class SpeechReader: NSObject, ObservableObject {
 
 // MARK: - AVSpeechSynthesizerDelegate
 
-extension SpeechReader: @preconcurrency AVSpeechSynthesizerDelegate {
+extension SpeechReader: AVSpeechSynthesizerDelegate {
     nonisolated func speechSynthesizer(
         _ synthesizer: AVSpeechSynthesizer,
         didStart utterance: AVSpeechUtterance

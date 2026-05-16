@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 8 — Desert Survival Tricks.
 /// Three desert animals side by side. Tap each for adaptations.
+@available(macOS 12, *)
 struct Scene8_DesertSurvivalTricks: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -32,7 +33,7 @@ struct Scene8_DesertSurvivalTricks: View {
                         (title: "Nocturnal", detail: "Fennec foxes are active at night when the desert is cool and rest in underground burrows during the scorching day."),
                         (title: "Fur-covered Paws", detail: "Thick fur on the soles of their feet protects against hot sand and provides traction on loose dunes."),
                      ]),
-        DesertAnimal(id: 2, name: "Kangaroo Rat", symbol: "leaf.fill", color: .teal,
+        DesertAnimal(id: 2, name: "Kangaroo Rat", symbol: "leaf.fill", color: Color.compatTeal,
                      adaptations: [
                         (title: "No Water Needed", detail: "Kangaroo rats never need to drink water! They get all moisture from metabolic water produced when digesting dry seeds."),
                         (title: "Nocturnal", detail: "They stay in cool underground burrows all day and only come out at night to forage, avoiding the blazing sun."),
@@ -52,7 +53,7 @@ struct Scene8_DesertSurvivalTricks: View {
 
                     Text("\(exploredAnimals.count) / \(animals.count) animals explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     // Desert background with animals
                     ZStack {
@@ -114,20 +115,20 @@ struct Scene8_DesertSurvivalTricks: View {
                                 VStack(spacing: 8) {
                                     Image(systemName: animal.symbol)
                                         .font(.title)
-                                        .foregroundStyle(isSelected ? .white : animal.color)
+                                        .foregroundColor(isSelected ? .white : animal.color)
                                     Text(animal.name)
                                         .font(.body.weight(.semibold))
-                                        .foregroundStyle(isSelected ? .white : .primary)
+                                        .foregroundColor(isSelected ? .white : .primary)
                                     if isExplored {
                                         Image(systemName: "checkmark.circle.fill")
                                             .font(.caption)
-                                            .foregroundStyle(isSelected ? .white : .green)
+                                            .foregroundColor(isSelected ? .white : .green)
                                     }
                                 }
                                 .frame(width: 130, height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? animal.color : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? animal.color : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
@@ -152,7 +153,7 @@ struct Scene8_DesertSurvivalTricks: View {
                             if let idx = selectedAnimal, let animal = animals.first(where: { $0.id == idx }) {
                                 Label(animal.name, systemImage: animal.symbol)
                                     .font(.title2.bold())
-                                    .foregroundStyle(animal.color)
+                                    .foregroundColor(animal.color)
 
                                 ForEach(animal.adaptations, id: \.title) { adapt in
                                     VStack(alignment: .leading, spacing: 2) {
@@ -160,7 +161,7 @@ struct Scene8_DesertSurvivalTricks: View {
                                             .font(.body.bold())
                                         Text(adapt.detail)
                                             .font(.callout)
-                                            .foregroundStyle(.secondary)
+                                            .foregroundColor(.secondary)
                                             .lineSpacing(3)
                                     }
                                     .padding(.top, 2)
@@ -168,7 +169,7 @@ struct Scene8_DesertSurvivalTricks: View {
                             } else {
                                 Label("Desert Survival", systemImage: "sun.max.fill")
                                     .font(.title2.bold())
-                                    .foregroundStyle(.orange)
+                                    .foregroundColor(.orange)
                                 Text("Deserts are harsh — scorching days, freezing nights, almost no water. Yet amazing animals thrive here using clever adaptations. Tap each animal to discover their survival tricks!")
                                     .font(.body)
                                     .lineSpacing(4)

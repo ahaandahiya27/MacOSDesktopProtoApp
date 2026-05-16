@@ -5,6 +5,7 @@ import SwiftUI
 /// The kid sees a glowing leaf at the centre. Sunlight rays fall, water drops
 /// rise, CO₂ wisps drift in. Tap the leaf — it pulses, a glucose hexagon
 /// emerges, and a speech bubble pops up.
+@available(macOS 12, *)
 struct Scene1_PlantKitchen: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -67,10 +68,10 @@ struct Scene1_PlantKitchen: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("The Plant Kitchen", systemImage: "leaf.circle.fill")
                                 .font(.title2.bold())
-                                .foregroundStyle(.green)
+                                .foregroundColor(.green)
                             Text(kidFriendlyExplanation)
                                 .font(.body)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.primary)
                                 .lineSpacing(4)
                         }
                     }
@@ -95,7 +96,8 @@ struct Scene1_PlantKitchen: View {
             showGlucose = true
             showBubble = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
             withAnimation(.easeOut(duration: 0.6)) {
                 pulse = 0
             }
@@ -113,7 +115,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = 1 - phase
             Image(systemName: "sun.max.fill")
                 .font(.system(size: 22))
-                .foregroundStyle(.yellow.opacity(opacity * 0.9))
+                .foregroundColor(.yellow.opacity(opacity * 0.9))
                 .position(x: x, y: y)
         }
     }
@@ -127,7 +129,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = 1 - phase
             Image(systemName: "drop.fill")
                 .font(.system(size: 16))
-                .foregroundStyle(.blue.opacity(opacity * 0.85))
+                .foregroundColor(.blue.opacity(opacity * 0.85))
                 .position(x: x, y: y)
         }
     }
@@ -141,7 +143,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = sin(phase * .pi)
             Text("CO₂")
                 .font(.system(size: 18, weight: .medium, design: .rounded))
-                .foregroundStyle(.gray.opacity(opacity * 0.7))
+                .foregroundColor(.gray.opacity(opacity * 0.7))
                 .position(x: x, y: y)
         }
     }
@@ -149,6 +151,7 @@ struct Scene1_PlantKitchen: View {
 
 // MARK: - Helper subviews
 
+@available(macOS 12, *)
 private struct GlucoseHex: View {
     var body: some View {
         ZStack {
@@ -162,17 +165,18 @@ private struct GlucoseHex: View {
                 .shadow(color: .purple.opacity(0.5), radius: 10)
             Text("C₆H₁₂O₆")
                 .font(.caption2.weight(.heavy))
-                .foregroundStyle(.white)
+                .foregroundColor(.white)
         }
     }
 }
 
+@available(macOS 12, *)
 private struct SpeechBubble: View {
     let text: String
     var body: some View {
         Text(text)
             .font(.title3.weight(.semibold))
-            .foregroundStyle(.primary)
+            .foregroundColor(.primary)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(

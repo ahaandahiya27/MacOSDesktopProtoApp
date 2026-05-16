@@ -6,6 +6,7 @@ import SwiftUI
 /// into one segment revealing villi. A second zoom shows microvilli. Glucose
 /// particles animate from lumen → villus → blood vessel. Text from
 /// ch02_t01_c05 and ch02_t01_c11.
+@available(macOS 12, *)
 struct Scene4_IntestineVillus: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -13,6 +14,7 @@ struct Scene4_IntestineVillus: View {
 
     @State private var zoomLevel: Int = 0 // 0: full intestine, 1: villi, 2: microvilli
     @State private var glucoseParticles: [GlucoseParticle] = []
+    @State private var sceneActive = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var villusExplanation: String {
@@ -25,7 +27,7 @@ struct Scene4_IntestineVillus: View {
             VStack(spacing: 16) {
                 Text(zoomLevel == 0 ? "The Intestine Villus Tour" : zoomLevel == 1 ? "Inside the Villus" : "Microvilli Detail")
                     .font(.title.bold())
-                    .foregroundStyle(.blue)
+                    .foregroundColor(.blue)
 
                 ZStack {
                     if zoomLevel == 0 {
@@ -44,15 +46,15 @@ struct Scene4_IntestineVillus: View {
                         Button(action: { zoomOut() }) {
                             Label("Zoom Out", systemImage: "magnifyingglass.circle.fill")
                         }
-                        .buttonStyle(.bordered)
+                        
                     }
 
                     if zoomLevel < 2 {
                         Button(action: { zoomIn() }) {
                             Label("Zoom In", systemImage: "magnifyingglass.circle.fill")
                         }
-                        .buttonStyle(.borderedProminent)
-                        .tint(.blue)
+                        
+                        .accentColor(.blue)
                     }
 
                     Spacer()
@@ -65,10 +67,10 @@ struct Scene4_IntestineVillus: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Intestine Villus Tour", systemImage: "smallcircle.filled.circle.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.blue)
+                            .foregroundColor(.blue)
                         Text(villusExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -78,7 +80,13 @@ struct Scene4_IntestineVillus: View {
                     .padding(.bottom, 12)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .onAppear { startGlucoseAnimation() }
+            .onAppear {
+                sceneActive = true
+                startGlucoseAnimation()
+            }
+            .onDisappear {
+                sceneActive = false
+            }
         }
     }
 
@@ -98,6 +106,7 @@ struct Scene4_IntestineVillus: View {
         if reduceMotion { return }
 
         func animateGlucose() {
+            guard sceneActive else { return }
             var particles: [GlucoseParticle] = []
             for i in 0..<4 {
                 particles.append(GlucoseParticle(
@@ -108,8 +117,10 @@ struct Scene4_IntestineVillus: View {
             }
             glucoseParticles = particles
 
-            for i in 0..<particles.count {
-                DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.3) {
+            Task { @MainActor in
+                for i in 0..<particles.count {
+                    try? await Task.sleep(nanoseconds: 300_000_000)
+                    guard sceneActive else { return }
                     withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
                         if i < glucoseParticles.count {
                             glucoseParticles[i].x = 280
@@ -119,7 +130,8 @@ struct Scene4_IntestineVillus: View {
                 }
             }
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 3_000_000_000)
                 animateGlucose()
             }
         }
@@ -130,6 +142,7 @@ struct Scene4_IntestineVillus: View {
 
 // MARK: - Full Intestine View
 
+@available(macOS 12, *)
 struct FullIntestineView: View {
     var body: some View {
         Canvas { context, _ in
@@ -167,6 +180,7 @@ struct FullIntestineView: View {
 
 // MARK: - Villi View
 
+@available(macOS 12, *)
 struct VilliView: View {
     @Binding var glucoseParticles: [GlucoseParticle]
 
@@ -228,6 +242,7 @@ struct VilliView: View {
 
 // MARK: - Microvilli View
 
+@available(macOS 12, *)
 struct MicrovilliView: View {
     @Binding var glucoseParticles: [GlucoseParticle]
 
@@ -269,7 +284,7 @@ struct MicrovilliView: View {
             for particle in glucoseParticles {
                 context.fill(
                     Circle().path(in: CGRect(x: particle.x - 3, y: particle.y - 3, width: 6, height: 6)),
-                    with: .color(.cyan.opacity(0.8))
+                    with: .color(Color.compatCyan.opacity(0.8))
                 )
             }
         }

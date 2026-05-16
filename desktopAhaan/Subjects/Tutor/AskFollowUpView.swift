@@ -9,25 +9,27 @@ struct AskFollowUpView: View {
     let pack: SubjectPack
     let concept: Concept
 
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
     @StateObject private var tutor = FoundationTutor()
     @State private var question: String = ""
     @State private var answer: String = ""
     @State private var error: String?
 
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
                 // Status banner
                 statusBanner
 
                 // The kid's question
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Your question")
-                        .font(.caption).foregroundStyle(.secondary).textCase(.uppercase)
-                    TextField("e.g. Why is the sky blue?", text: $question, axis: .vertical)
-                        .textFieldStyle(.roundedBorder)
-                        .lineLimit(2...5)
+                        .font(.caption).foregroundColor(.secondary).textCase(.uppercase)
+                    TextEditor(text: $question)
+                        .frame(minHeight: 50, maxHeight: 100)
+                        .font(.body)
+                        .padding(4)
+                        .background(Color.gray.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 6))
                 }
 
                 // Submit
@@ -42,18 +44,18 @@ struct AskFollowUpView: View {
                             Label("Ask the tutor", systemImage: "sparkles")
                         }
                     }
-                    .buttonStyle(.borderedProminent)
+                    
                     .disabled(!tutor.isAvailable || question.trimmingCharacters(in: .whitespaces).isEmpty || tutor.isThinking)
                 }
 
                 // Error
-                if let error {
+                if let error = error {
                     Label(error, systemImage: "exclamationmark.triangle.fill")
                         .font(.caption)
-                        .foregroundStyle(.orange)
+                        .foregroundColor(.orange)
                         .padding(10)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(.orange.opacity(0.10), in: RoundedRectangle(cornerRadius: 8))
+                        .background(RoundedRectangle(cornerRadius: 8).fill(.orange.opacity(0.10)))
                 }
 
                 // Answer
@@ -61,7 +63,7 @@ struct AskFollowUpView: View {
                     VStack(alignment: .leading, spacing: 6) {
                         Label("Tutor's answer", systemImage: "graduationcap.fill")
                             .font(.caption.bold())
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                         ScrollView {
                             Text(answer)
                                 .font(.body)
@@ -69,7 +71,7 @@ struct AskFollowUpView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .padding(12)
-                        .background(.indigo.opacity(0.08), in: RoundedRectangle(cornerRadius: 10))
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.08)))
                     }
                 }
 
@@ -77,13 +79,16 @@ struct AskFollowUpView: View {
             }
             .padding(20)
             .frame(minWidth: 420, minHeight: 380)
-            .navigationTitle("Ask about: \(concept.title)")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
+            .overlay(
+                HStack {
+                    Spacer()
+                    VStack {
+                        Button("Close") { presentationMode.wrappedValue.dismiss() }
+                            .padding(12)
+                        Spacer()
+                    }
                 }
-            }
-        }
+            )
     }
 
     // MARK: - Subviews
@@ -92,13 +97,13 @@ struct AskFollowUpView: View {
     private var statusBanner: some View {
         HStack(spacing: 10) {
             Image(systemName: tutor.isAvailable ? "checkmark.seal.fill" : "wifi.slash")
-                .foregroundStyle(tutor.isAvailable ? .green : .secondary)
+                .foregroundColor(tutor.isAvailable ? .green : .secondary)
             VStack(alignment: .leading, spacing: 2) {
                 Text(tutor.isAvailable ? "On-device tutor ready" : "On-device tutor unavailable")
                     .font(.callout.weight(.semibold))
                 Text(tutor.availability.userMessage)
                     .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
             }
             Spacer()
             Button {
@@ -110,7 +115,7 @@ struct AskFollowUpView: View {
         }
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.background.secondary, in: RoundedRectangle(cornerRadius: 10))
+        .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.1)))
     }
 
     // MARK: - Actions

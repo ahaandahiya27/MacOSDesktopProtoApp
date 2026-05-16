@@ -19,6 +19,15 @@ struct ParticleEmitter: View {
     @State private var startTime = Date()
 
     var body: some View {
+        if #available(macOS 12, *) {
+            canvasBody
+        } else {
+            Color.clear.frame(width: 0, height: 0)
+        }
+    }
+
+    @available(macOS 12, *)
+    private var canvasBody: some View {
         TimelineView(.animation) { context in
             Canvas { ctx, size in
                 guard !reduceMotion else { return }
@@ -26,7 +35,6 @@ struct ParticleEmitter: View {
                 for p in particles {
                     let life = elapsed - p.spawnDelay
                     guard life >= 0 else { continue }
-                    // Position with simple ballistic motion.
                     let x = p.startX * size.width + p.driftX * CGFloat(life) * 60
                     let y = -20 + 0.5 * 980 * CGFloat(life * life) * 0.4 + p.driftY * CGFloat(life) * 60
                     if y > size.height + 40 { continue }
@@ -37,7 +45,7 @@ struct ParticleEmitter: View {
             }
         }
         .allowsHitTesting(false)
-        .onChange(of: isActive) { _, newValue in
+        .onChange(of: isActive) { newValue in
             if newValue { kickOff() }
         }
         .onAppear {

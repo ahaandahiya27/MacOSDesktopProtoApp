@@ -19,12 +19,14 @@ struct LanguageSelectorBar: View {
             } label: {
                 LanguagePill(language: source, label: "From")
             }
+            .accessibilityLabel("Source language: \(source.displayName)")
+            .accessibilityHint("Double tap to change the source language")
 
             // Swap button
             Button(action: onSwap) {
                 Image(systemName: "arrow.left.arrow.right.circle.fill")
                     .font(.title2)
-                    .foregroundStyle(.indigo)
+                    .foregroundColor(Color.compatIndigo)
             }
             .disabled(!TranslationPair(source: target, target: source).isValid)
             .accessibilityLabel("Swap language direction")
@@ -39,6 +41,8 @@ struct LanguageSelectorBar: View {
             } label: {
                 LanguagePill(language: target, label: "To")
             }
+            .accessibilityLabel("Target language: \(target.displayName)")
+            .accessibilityHint("Double tap to change the target language")
         }
         .padding(.horizontal)
     }
@@ -52,14 +56,14 @@ struct LanguagePill: View {
         VStack(spacing: 4) {
             Text(label)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             Text(language.nativeLabel)
                 .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
-        .background(.ultraThinMaterial)
+        .background(Color.gray.opacity(0.15))
         .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }

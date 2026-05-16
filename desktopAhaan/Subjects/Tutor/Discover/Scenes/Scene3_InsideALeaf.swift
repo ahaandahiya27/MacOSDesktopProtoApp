@@ -5,6 +5,7 @@ import SwiftUI
 /// A stylized cross-section drawn with `Path`. Tappable hotspots reveal a
 /// callout explaining each part. Stomata pulse open/closed; water rises in
 /// xylem, sugar flows down in phloem.
+@available(macOS 12, *)
 struct Scene3_InsideALeaf: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -44,7 +45,7 @@ struct Scene3_InsideALeaf: View {
                 .padding(.top, 18)
             Text("Tap each part to learn what it does.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
 
             // The cross-section
             ZStack {
@@ -75,7 +76,7 @@ struct Scene3_InsideALeaf: View {
                     Label(zoomed ? "Zoom out" : "🔍 Zoom in",
                           systemImage: zoomed ? "minus.magnifyingglass" : "plus.magnifyingglass")
                 }
-                .buttonStyle(.bordered)
+                
             }
 
             // Callout for the selected part
@@ -88,7 +89,7 @@ struct Scene3_InsideALeaf: View {
                                 .font(.title3.bold())
                             Text(explanation(for: part))
                                 .font(.callout)
-                                .foregroundStyle(.primary)
+                                .foregroundColor(.primary)
                         }
                         Spacer(minLength: 0)
                     }
@@ -96,7 +97,7 @@ struct Scene3_InsideALeaf: View {
                     Label("Tap any glowing dot on the leaf above.",
                           systemImage: "hand.tap.fill")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
             }
             .frame(maxWidth: 640)
@@ -119,12 +120,12 @@ struct Scene3_InsideALeaf: View {
             }
         } label: {
             Circle()
-                .fill(.indigo.opacity(selectedPart == part ? 0.55 : 0.28))
+                .fill(Color.compatIndigo.opacity(selectedPart == part ? 0.55 : 0.28))
                 .overlay(
                     Circle().strokeBorder(.white, lineWidth: 1.5)
                 )
                 .frame(width: 22, height: 22)
-                .shadow(color: .indigo.opacity(0.5), radius: 4)
+                .shadow(color: Color.compatIndigo.opacity(0.5), radius: 4)
         }
         .buttonStyle(.plain)
         .position(position)
@@ -151,6 +152,7 @@ struct Scene3_InsideALeaf: View {
 
 // MARK: - The drawn cross-section
 
+@available(macOS 12, *)
 private struct LeafCrossSection: View {
     let reduceMotion: Bool
 
@@ -210,7 +212,7 @@ private struct LeafCrossSection: View {
                 let p = (phase + Double(i) / 3).truncatingRemainder(dividingBy: 1)
                 Image(systemName: "drop.fill")
                     .font(.system(size: 12))
-                    .foregroundStyle(.blue.opacity(0.85))
+                    .foregroundColor(.blue.opacity(0.85))
                     .position(x: 380, y: 240 - 200 * p)
             }
         }

@@ -6,6 +6,7 @@ import SwiftUI
 /// beams travel from the spectrum down to the molecule. Red and blue are
 /// absorbed; green is reflected. The kid can tap each colour to see the
 /// behaviour, and toggle a "what if chlorophyll absorbed green instead?" view.
+@available(macOS 12, *)
 struct Scene4_ColorTheChlorophyll: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -21,7 +22,7 @@ struct Scene4_ColorTheChlorophyll: View {
         (Color(red: 1, green: 0.55, blue: 0), "Orange"),
         (.yellow, "Yellow"),
         (.green, "Green"),
-        (Color.cyan, "Cyan"),
+        (Color.compatCyan, "Cyan"),
         (.blue, "Blue"),
         (.purple, "Violet")
     ]
@@ -44,7 +45,7 @@ struct Scene4_ColorTheChlorophyll: View {
                 .padding(.top, 18)
             Text("White light is a rainbow. Tap each colour and see what chlorophyll does with it.")
                 .font(.callout)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
 
             // Spectrum bar
@@ -59,7 +60,7 @@ struct Scene4_ColorTheChlorophyll: View {
                             .overlay(
                                 Text(bands[i].1)
                                     .font(.caption.weight(.semibold))
-                                    .foregroundStyle(.white.opacity(0.92))
+                                    .foregroundColor(.white.opacity(0.92))
                             )
                             .overlay(
                                 Rectangle()
@@ -104,13 +105,13 @@ struct Scene4_ColorTheChlorophyll: View {
                             if isAbsorbed(i) {
                                 Text("\(bands[i].1) light: ABSORBED")
                                     .font(.headline)
-                                    .foregroundStyle(.green)
+                                    .foregroundColor(.green)
                                 Text("Chlorophyll grabs this colour and uses its energy to cook food.")
                                     .font(.callout)
                             } else {
                                 Text("\(bands[i].1) light: REFLECTED")
                                     .font(.headline)
-                                    .foregroundStyle(.indigo)
+                                    .foregroundColor(Color.compatIndigo)
                                 Text("Chlorophyll bounces this colour back. That's the colour your eyes see — which is why leaves look the colour they do.")
                                     .font(.callout)
                             }
@@ -120,7 +121,7 @@ struct Scene4_ColorTheChlorophyll: View {
                 } else {
                     Label("Pick a colour from the spectrum above.", systemImage: "hand.tap.fill")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
             }
             .frame(maxWidth: 560)
@@ -147,10 +148,10 @@ struct Scene4_ColorTheChlorophyll: View {
         if !isAbsorbed(i) && !reduceMotion {
             // Quick shake for "rejected"
             withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 12 }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 200_000_000)
                 withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = -8 }
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                try? await Task.sleep(nanoseconds: 200_000_000)
                 withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shake = 0 }
             }
         }

@@ -4,6 +4,7 @@ import SwiftUI
 /// Shows Earth at four orbital positions around the Sun. The Earth circle has an
 /// axis tilted at 23.5 degrees. Tap each position to see which hemisphere tilts
 /// toward the Sun. After all 4 explored, Got It appears.
+@available(macOS 12, *)
 struct Scene2_WhySeasonsHappen: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -55,7 +56,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                     Text("Tap each Earth position to see how the 23.5 degree tilt creates seasons.")
                         .font(.callout)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
 
@@ -70,11 +71,11 @@ struct Scene2_WhySeasonsHappen: View {
                         VStack(spacing: 4) {
                             Image(systemName: "sun.max.fill")
                                 .font(.system(size: 40))
-                                .foregroundStyle(.yellow)
+                                .foregroundColor(.yellow)
                                 .shadow(color: .yellow.opacity(0.4), radius: 10)
                             Text("Sun")
                                 .font(.caption2.weight(.medium))
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
 
                         // Four Earth positions
@@ -87,7 +88,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                     Text("\(exploredPositions.count) / \(positions.count) positions explored")
                         .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
 
                     Spacer()
                     Spacer()
@@ -145,7 +146,7 @@ struct Scene2_WhySeasonsHappen: View {
                     Circle()
                         .fill(
                             LinearGradient(
-                                colors: [.cyan.opacity(0.6), .green.opacity(0.5)],
+                                colors: [Color.compatCyan.opacity(0.6), .green.opacity(0.5)],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
@@ -153,7 +154,7 @@ struct Scene2_WhySeasonsHappen: View {
                         .frame(width: 44, height: 44)
                         .overlay(
                             Circle()
-                                .strokeBorder(isSelected ? .indigo : (isExplored ? .green : .gray.opacity(0.4)), lineWidth: 2)
+                                .strokeBorder(isSelected ? Color.compatIndigo : (isExplored ? .green : .gray.opacity(0.4)), lineWidth: 2)
                         )
 
                     // Tilted axis line (23.5 degrees)
@@ -165,7 +166,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                 Text(pos.month)
                     .font(.caption.bold())
-                    .foregroundStyle(isSelected ? .indigo : .primary)
+                    .foregroundColor(isSelected ? Color.compatIndigo : .primary)
             }
         }
         .buttonStyle(.plain)

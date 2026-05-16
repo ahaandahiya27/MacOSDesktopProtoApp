@@ -2,6 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Weather vs Climate.
 /// Split comparison with animated icons. Tap each side for explanation.
+@available(macOS 12, *)
 struct Scene1_WeatherVsClimate: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -41,7 +42,7 @@ struct Scene1_WeatherVsClimate: View {
                     sideCard(
                         title: "Weather",
                         subtitle: "Changes daily",
-                        color: .cyan,
+                        color: Color.compatCyan,
                         icons: weatherIcons,
                         side: .weather,
                         pulse: $weatherPulse
@@ -51,7 +52,7 @@ struct Scene1_WeatherVsClimate: View {
                     VStack {
                         Text("vs")
                             .font(.title.bold())
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
                     .frame(width: 40)
 
@@ -117,28 +118,31 @@ struct Scene1_WeatherVsClimate: View {
             }
             if !reduceMotion {
                 pulse.wrappedValue = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { pulse.wrappedValue = false }
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 500_000_000)
+                    pulse.wrappedValue = false
+                }
             }
         } label: {
             VStack(spacing: 14) {
                 Text(title)
                     .font(.title.bold())
-                    .foregroundStyle(color)
+                    .foregroundColor(color)
 
                 Text(subtitle)
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
                 HStack(spacing: 16) {
                     ForEach(icons) { icon in
                         VStack(spacing: 4) {
                             Image(systemName: icon.symbol)
                                 .font(.title2)
-                                .foregroundStyle(color)
+                                .foregroundColor(color)
                                 .scaleEffect(pulse.wrappedValue ? 1.15 : 1.0)
                             Text(icon.label)
                                 .font(.caption2)
-                                .foregroundStyle(.secondary)
+                                .foregroundColor(.secondary)
                         }
                     }
                 }
@@ -148,7 +152,7 @@ struct Scene1_WeatherVsClimate: View {
             .padding(20)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(selectedSide == side ? color.opacity(0.12) : Color(nsColor: .windowBackgroundColor))
+                    .fill(selectedSide == side ? color.opacity(0.12) : Color(NSColor.windowBackgroundColor))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)

@@ -6,6 +6,7 @@ import SwiftUI
 /// Bottom: 4 food cards. "Pinch nose" toggle shows the same foods reduce to
 /// "Sweet + Watery" when smell is blocked — demonstrating 90% of flavour is smell.
 /// Text from ch02_t03_c03.
+@available(macOS 12, *)
 struct Scene8_TasteAndFlavour: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -24,7 +25,7 @@ struct Scene8_TasteAndFlavour: View {
             VStack(spacing: 16) {
                 Text("Taste & Flavour")
                     .font(.title.bold())
-                    .foregroundStyle(.red)
+                    .foregroundColor(.red)
 
                 TongueView()
                     .frame(height: 140)
@@ -38,7 +39,7 @@ struct Scene8_TasteAndFlavour: View {
                     if nosePressed {
                         Text("Smell blocked!")
                             .font(.caption)
-                            .foregroundStyle(.orange)
+                            .foregroundColor(.orange)
                             .padding(.horizontal, 24)
                     }
                 }
@@ -58,10 +59,10 @@ struct Scene8_TasteAndFlavour: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("Taste & Flavour", systemImage: "nose.fill")
                             .font(.title2.bold())
-                            .foregroundStyle(.red)
+                            .foregroundColor(.red)
                         Text(flavourExplanation)
                             .font(.body)
-                            .foregroundStyle(.primary)
+                            .foregroundColor(.primary)
                             .lineSpacing(4)
                     }
                 }
@@ -77,6 +78,7 @@ struct Scene8_TasteAndFlavour: View {
 
 // MARK: - Tongue View
 
+@available(macOS 12, *)
 struct TongueView: View {
     var body: some View {
         Canvas { context, _ in
@@ -127,6 +129,7 @@ struct TongueView: View {
 
 // MARK: - Food Card
 
+@available(macOS 12, *)
 struct FoodCard: View {
     let food: String
     let flavour: String

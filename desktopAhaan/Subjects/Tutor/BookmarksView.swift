@@ -1,49 +1,50 @@
 import SwiftUI
-import SwiftData
 
-/// Lists every concept the user has bookmarked, grouped by subject. Tapping
-/// a bookmark navigates to that concept inside its subject's NavigationStack.
 struct BookmarksView: View {
+    var body: some View {
+        TutorNavigationContainer {
+            BookmarksContent()
+        }
+    }
+}
+
+private struct BookmarksContent: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var appState: AppState
-    @Query(sort: [SortDescriptor(\StudyBookmark.addedAt, order: .reverse)]) private var bookmarks: [StudyBookmark]
-    @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject private var nav: TutorNavigationState
+
+    var bookmarks: [StudyBookmark] {
+        dataStore.bookmarksByDate
+    }
 
     var body: some View {
         Group {
             if bookmarks.isEmpty {
-                ContentUnavailableView(
-                    "No bookmarks yet",
-                    systemImage: "bookmark",
-                    description: Text("Tap the bookmark icon on any concept to save it here.")
-                )
+                VStack(spacing: 12) {
+                    Image(systemName: "bookmark")
+                        .font(.system(size: 48))
+                        .foregroundColor(.secondary)
+                    Text("No bookmarks yet")
+                        .font(.title2.weight(.semibold))
+                    Text("Star concepts you want to revisit — tap the bookmark icon on any concept page.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: 360)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 List {
                     ForEach(grouped, id: \.0) { (packId, items) in
-                        Section(packTitle(for: packId)) {
+                        Section(header: Text(packTitle(for: packId))) {
                             ForEach(items) { b in
-                                Button {
-                                    open(b)
-                                } label: {
-                                    HStack {
-                                        Image(systemName: "bookmark.fill").foregroundStyle(.indigo)
-                                        VStack(alignment: .leading, spacing: 2) {
-                                            Text(b.conceptTitle).font(.headline)
-                                            Text("Saved \(b.addedAt, style: .date)")
-                                                .font(.caption).foregroundStyle(.secondary)
-                                        }
-                                        Spacer()
-                                        Image(systemName: "chevron.right").foregroundStyle(.secondary)
-                                    }
-                                }
-                                .buttonStyle(.plain)
+                                bookmarkRow(b)
                             }
                             .onDelete { offsets in
                                 for offset in offsets {
-                                    modelContext.delete(items[offset])
+                                    dataStore.deleteBookmark(items[offset])
                                 }
-                                do { try modelContext.save() }
-                                catch { print("[BookmarksView] delete save failed: \(error)") }
                             }
                         }
                     }
@@ -51,6 +52,7 @@ struct BookmarksView: View {
                 .listStyle(.inset)
             }
         }
+        .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Bookmarks")
     }
 
@@ -64,10 +66,43 @@ struct BookmarksView: View {
         subjectRegistry.pack(withId: id)?.title ?? id
     }
 
-    private func open(_ b: StudyBookmark) {
-        // Switch the sidebar to the bookmark's subject. The user can then
-        // drill into the concept manually. (Cross-stack push isn't reliable
-        // on macOS NavigationStack; surfacing the subject is the safest UX.)
-        appState.sidebarSelection = .subject(b.subjectPackId)
+    @ViewBuilder
+    private func bookmarkRow(_ b: StudyBookmark) -> some View {
+        if let pack = subjectRegistry.pack(withId: b.subjectPackId),
+           let concept = pack.conceptIndex[b.conceptId] {
+            Button {
+                nav.push(.concept(packId: pack.id, conceptId: concept.id))
+            } label: {
+                bookmarkLabel(b)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .contextMenu {
+                Button("Open") { nav.push(.concept(packId: pack.id, conceptId: concept.id)) }
+                Button("Remove bookmark") { dataStore.deleteBookmark(b) }
+            }
+        } else {
+            Button { appState.sidebarSelection = .subject(b.subjectPackId) } label: {
+                bookmarkLabel(b)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .contextMenu {
+                Button("Remove bookmark") { dataStore.deleteBookmark(b) }
+            }
+        }
+    }
+
+    private func bookmarkLabel(_ b: StudyBookmark) -> some View {
+        HStack {
+            Image(systemName: "bookmark.fill").foregroundColor(Color.compatIndigo)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(b.conceptTitle).font(.headline)
+                Text("Saved \(b.addedAt, style: .date)")
+                    .font(.caption).foregroundColor(.secondary)
+            }
+            Spacer()
+            Image(systemName: "chevron.right").foregroundColor(.secondary)
+        }
     }
 }

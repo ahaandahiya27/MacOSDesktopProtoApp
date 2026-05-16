@@ -2,6 +2,7 @@ import SwiftUI
 
 /// A stylized chlorophyll molecule: a green hexagonal ring with a magnesium
 /// atom at the centre. Drawn with Path — no image assets.
+@available(macOS 12, *)
 struct DrawnChloroplast: View {
     /// 0 = dim, 1 = brightly excited (more glow). Drive from a TimelineView
     /// phase to "absorb" red and blue light beams.
@@ -56,7 +57,7 @@ struct DrawnChloroplast: View {
                     .overlay(
                         Text("Mg")
                             .font(.system(size: r * 0.2, weight: .heavy, design: .rounded))
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                     )
                     .position(x: cx, y: cy)
                     .shadow(color: .green.opacity(0.5 * excitation), radius: 12)

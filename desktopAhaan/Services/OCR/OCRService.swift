@@ -13,7 +13,8 @@ final class OCRService: ObservableObject {
 
     /// Extract text from an NSImage using Vision framework
     func extractText(from image: NSImage) async {
-        guard let cgImage = image.cgImage else {
+        let scaled = Self.downscaleIfNeeded(image, maxDimension: 2048)
+        guard let cgImage = scaled.cgImage else {
             errorMessage = "Could not process this image. Please try another one."
             return
         }
@@ -68,7 +69,7 @@ final class OCRService: ObservableObject {
             // Configure for multiple languages including Devanagari
             request.recognitionLevel = .accurate
             request.usesLanguageCorrection = true
-            if #available(iOS 16.0, *) {
+            if #available(macOS 13.0, *) {
                 request.automaticallyDetectsLanguage = true
             }
             // Support English, Hindi, Sanskrit (Devanagari script)
@@ -88,6 +89,23 @@ final class OCRService: ObservableObject {
         isProcessing = false
         errorMessage = nil
         confidence = 0.0
+    }
+}
+
+extension OCRService {
+    static func downscaleIfNeeded(_ image: NSImage, maxDimension: CGFloat) -> NSImage {
+        let w = image.size.width
+        let h = image.size.height
+        guard max(w, h) > maxDimension else { return image }
+        let scale = maxDimension / max(w, h)
+        let newSize = NSSize(width: w * scale, height: h * scale)
+        let resized = NSImage(size: newSize)
+        resized.lockFocus()
+        image.draw(in: NSRect(origin: .zero, size: newSize),
+                   from: NSRect(origin: .zero, size: image.size),
+                   operation: .copy, fraction: 1.0)
+        resized.unlockFocus()
+        return resized
     }
 }
 

@@ -3,6 +3,7 @@ import SwiftUI
 /// Scene 7 — Migration Superhero.
 /// Animated bird migration story. Arctic tern flies from Arctic to Antarctic.
 /// Canvas animation of bird path over simplified globe. Also mentions bar-headed geese and Siberian cranes.
+@available(macOS 12, *)
 struct Scene7_MigrationSuperhero: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -73,18 +74,18 @@ struct Scene7_MigrationSuperhero: View {
                                 VStack(spacing: 4) {
                                     Image(systemName: "bird.fill")
                                         .font(.title3)
-                                        .foregroundStyle(isSelected ? .white : .indigo)
+                                        .foregroundColor(isSelected ? .white : Color.compatIndigo)
                                     Text(fact.bird)
                                         .font(.caption.weight(.semibold))
-                                        .foregroundStyle(isSelected ? .white : .primary)
+                                        .foregroundColor(isSelected ? .white : .primary)
                                     Text(fact.stat)
                                         .font(.caption2)
-                                        .foregroundStyle(isSelected ? .white.opacity(0.8) : .secondary)
+                                        .foregroundColor(isSelected ? .white.opacity(0.8) : .secondary)
                                 }
                                 .frame(width: 140, height: 80)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(isSelected ? Color.indigo : isExplored ? Color.green.opacity(0.12) : Color(nsColor: .windowBackgroundColor))
+                                        .fill(isSelected ? Color.compatIndigo : isExplored ? Color.green.opacity(0.12) : Color(NSColor.windowBackgroundColor))
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -111,10 +112,10 @@ struct Scene7_MigrationSuperhero: View {
                                     .font(.title2.bold())
                                 HStack(spacing: 6) {
                                     Image(systemName: "arrow.right")
-                                        .foregroundStyle(.indigo)
+                                        .foregroundColor(Color.compatIndigo)
                                     Text(fact.route)
                                         .font(.callout.italic())
-                                        .foregroundStyle(.secondary)
+                                        .foregroundColor(.secondary)
                                 }
                                 Text(fact.detail)
                                     .font(.body)
@@ -156,11 +157,11 @@ struct Scene7_MigrationSuperhero: View {
                 drawContinents(&ctx, size: size)
 
                 // Arctic label
-                let arcticText = Text("Arctic").font(.caption2.bold()).foregroundColor(.cyan)
+                let arcticText = Text("Arctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
                 ctx.draw(ctx.resolve(arcticText), at: CGPoint(x: size.width * 0.5, y: 18))
 
                 // Antarctic label
-                let antText = Text("Antarctic").font(.caption2.bold()).foregroundColor(.cyan)
+                let antText = Text("Antarctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
                 ctx.draw(ctx.resolve(antText), at: CGPoint(x: size.width * 0.5, y: size.height - 14))
 
                 // Flight path — sine wave from top to bottom
@@ -206,9 +207,9 @@ struct Scene7_MigrationSuperhero: View {
             }
             ctx.stroke(flightPath, with: .color(.orange.opacity(0.5)), style: StrokeStyle(lineWidth: 2, dash: [4, 4]))
 
-            let arcticLabel = Text("Arctic").font(.caption2.bold()).foregroundColor(.cyan)
+            let arcticLabel = Text("Arctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
             ctx.draw(ctx.resolve(arcticLabel), at: CGPoint(x: size.width * 0.5, y: 18))
-            let antLabel = Text("Antarctic").font(.caption2.bold()).foregroundColor(.cyan)
+            let antLabel = Text("Antarctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
             ctx.draw(ctx.resolve(antLabel), at: CGPoint(x: size.width * 0.5, y: size.height - 14))
         }
         .accessibilityLabel("Static Arctic tern migration path from Arctic to Antarctic")

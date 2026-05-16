@@ -68,7 +68,7 @@ struct Scene9_BossQuiz_Ch3: View {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -103,10 +103,10 @@ struct Scene9_BossQuiz_Ch3: View {
                     VStack(spacing: 8) {
                         Text("Quiz Complete!")
                             .font(.headline)
-                            .foregroundStyle(.green)
+                            .foregroundColor(.green)
                         Text("You scored \(score) / 5")
                             .font(.title2.weight(.bold))
-                            .foregroundStyle(.indigo)
+                            .foregroundColor(Color.compatIndigo)
                     }
 
                     Button {
@@ -115,13 +115,13 @@ struct Scene9_BossQuiz_Ch3: View {
                         Label("🎓 Print my certificate", systemImage: "printer")
                             .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .tint(.green)
+                    
+                    .accentColor(.green)
 
                     if let status = pdfStatus {
                         Text(status)
                             .font(.caption)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     Spacer()
@@ -130,7 +130,8 @@ struct Scene9_BossQuiz_Ch3: View {
 
             GotItButton {
                 if !done {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    Task { @MainActor in
+                        try? await Task.sleep(nanoseconds: 300_000_000)
                         onComplete(score)
                     }
                 }
@@ -169,25 +170,24 @@ struct Scene9_BossQuiz_Ch3: View {
             withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.5)) {
                 // Correct
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 800_000_000)
                 advance()
             }
         } else {
-            withAnimation(.easeInOut(duration: 0.3)) {
-                shake = -6
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            Task { @MainActor in
+                withAnimation(.easeInOut(duration: 0.3)) {
+                    shake = -6
+                }
+                try? await Task.sleep(nanoseconds: 150_000_000)
                 withAnimation(.easeInOut(duration: 0.3)) {
                     shake = 6
                 }
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                try? await Task.sleep(nanoseconds: 150_000_000)
                 withAnimation(.easeInOut(duration: 0.3)) {
                     shake = 0
                 }
-            }
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                try? await Task.sleep(nanoseconds: 500_000_000)
                 revealed[currentQ] = true
             }
         }
@@ -207,26 +207,23 @@ struct Scene9_BossQuiz_Ch3: View {
     }
 
     private func generateCertificate() {
+        guard let image = renderViewToImage(certificateView(), size: CGSize(width: 600, height: 400)),
+              let pdfPage = PDFPage(image: image) else {
+            pdfStatus = "Couldn't render certificate."
+            return
+        }
         let pdf = PDFDocument()
+        pdf.insert(pdfPage, at: 0)
 
-        // Create certificate page as image
-        let renderer = ImageRenderer(content: certificateView())
-        if let image = renderer.nsImage {
-            if let pdfPage = PDFPage(image: image) {
-                pdf.insert(pdfPage, at: 0)
+        let homeDir = FileManager.default.homeDirectoryForCurrentUser
+        let downloadsDir = homeDir.appendingPathComponent("Downloads")
+        let filename = "FibreFabric_Certificate_\(DateFormatter.certificateDateFormat().string(from: Date())).pdf"
+        let fileURL = downloadsDir.appendingPathComponent(filename)
 
-                let homeDir = FileManager.default.homeDirectoryForCurrentUser
-                let downloadsDir = homeDir.appendingPathComponent("Downloads")
-
-                let filename = "FibreFabric_Certificate_\(DateFormatter.certificateDateFormat().string(from: Date())).pdf"
-                let fileURL = downloadsDir.appendingPathComponent(filename)
-
-                if pdf.write(to: fileURL) {
-                    pdfStatus = "✓ Saved to Downloads!"
-                } else {
-                    pdfStatus = "Error saving PDF"
-                }
-            }
+        if pdf.write(to: fileURL) {
+            pdfStatus = "✓ Saved to Downloads!"
+        } else {
+            pdfStatus = "Error saving PDF"
         }
     }
 
@@ -246,17 +243,17 @@ struct Scene9_BossQuiz_Ch3: View {
                 .font(.caption.weight(.semibold))
             Text(Date(), style: .date)
                 .font(.caption)
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
         }
         .padding(40)
         .frame(width: 600, height: 400)
         .background(
             LinearGradient(
-                colors: [.indigo.opacity(0.1), .purple.opacity(0.1)],
+                colors: [Color.compatIndigo.opacity(0.1), .purple.opacity(0.1)],
                 startPoint: .topLeading, endPoint: .bottomTrailing
             )
         )
-        .border(Color.indigo, width: 3)
+        .border(Color.compatIndigo, width: 3)
     }
 }
 
@@ -273,7 +270,7 @@ private struct Ch3AnswerButton: View {
                 .frame(maxWidth: .infinity)
                 .padding(14)
                 .background(backgroundColor())
-                .foregroundStyle(.primary)
+                .foregroundColor(.primary)
                 .cornerRadius(8)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
