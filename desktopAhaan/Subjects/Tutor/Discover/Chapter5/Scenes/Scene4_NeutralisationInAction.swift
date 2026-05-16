@@ -2,7 +2,10 @@ import SwiftUI
 
 /// Scene 4 — Neutralisation in Action.
 /// Animated beaker: acid (red) + base (blue) mix to green. H+ and OH- ions combine.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the ion animation Canvas is replaced
+/// with a Timer.publish + ForEach of small Hion / OHion / WaterMolecule
+/// subviews.
 struct Scene4_NeutralisationInAction: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -13,6 +16,8 @@ struct Scene4_NeutralisationInAction: View {
     @State private var pourProgress: CGFloat = 0       // 0 = not started, 1 = fully mixed
     @State private var isPouring = false
     @State private var showEquation = false
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
 
     private var mixedColor: Color {
         Color(
@@ -81,10 +86,10 @@ struct Scene4_NeutralisationInAction: View {
                         SoftShadowCard(padding: 14) {
                             VStack(spacing: 8) {
                                 Text("Acid + Base \u{2192} Salt + Water")
-                                    .font(.title3.bold().monospaced())
+                                    .font(.system(.title3, design: .monospaced).bold())
                                     .foregroundColor(Color.compatIndigo)
                                 Text("HCl + NaOH \u{2192} NaCl + H\u{2082}O")
-                                    .font(.body.monospaced())
+                                    .font(.system(.body, design: .monospaced))
                                     .foregroundColor(.secondary)
                             }
                         }
@@ -165,48 +170,35 @@ struct Scene4_NeutralisationInAction: View {
                         .foregroundColor(.green)
                 }
             } else {
-                TimelineView(.animation(minimumInterval: 1.0 / 20)) { ctx in
-                    let t = ctx.date.timeIntervalSince1970
-                    Canvas { context, size in
-                        var gfx = context
-                        drawIons(gfx: &gfx, size: size, t: t)
+                GeometryReader { geo in
+                    ZStack(alignment: .topLeading) {
+                        ForEach(0..<4, id: \.self) { i in
+                            HIon(index: i, t: tick, size: geo.size)
+                        }
+                        ForEach(0..<4, id: \.self) { i in
+                            OHIon(index: i, t: tick, size: geo.size)
+                        }
+                        ForEach(0..<3, id: \.self) { i in
+                            WaterMolecule(index: i, t: tick, size: geo.size)
+                        }
                     }
                 }
+                .onAppear(perform: startAnimation)
+                .onDisappear(perform: stopAnimation)
             }
         }
     }
 
-    private func drawIons(gfx: inout GraphicsContext, size: CGSize, t: TimeInterval) {
-        let cx = size.width * 0.5
-        let cy = size.height * 0.5
-
-        // H+ ions (red) moving from left
-        for i in 0..<4 {
-            let phase = (t * 0.8 + Double(i) * 0.6).truncatingRemainder(dividingBy: 3.0) / 3.0
-            let x = size.width * 0.1 + phase * (cx - size.width * 0.1)
-            let y = cy + sin(t * 2 + Double(i)) * 15
-            let rect = CGRect(x: x - 8, y: y - 8, width: 16, height: 16)
-            gfx.opacity = 1.0 - phase * 0.5
-            gfx.fill(Path(ellipseIn: rect), with: .color(.red))
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
         }
-
-        // OH- ions (blue) moving from right
-        for i in 0..<4 {
-            let phase = (t * 0.8 + Double(i) * 0.6).truncatingRemainder(dividingBy: 3.0) / 3.0
-            let x = size.width * 0.9 - phase * (size.width * 0.9 - cx)
-            let y = cy + cos(t * 2 + Double(i)) * 15
-            let rect = CGRect(x: x - 8, y: y - 8, width: 16, height: 16)
-            gfx.opacity = 1.0 - phase * 0.5
-            gfx.fill(Path(ellipseIn: rect), with: .color(.blue))
-        }
-
-        // Water molecules (green) at center
-        for i in 0..<3 {
-            let spread = sin(t + Double(i) * 2) * 20
-            let rect = CGRect(x: cx + spread - 6, y: cy + cos(t + Double(i)) * 10 - 6, width: 12, height: 12)
-            gfx.opacity = 0.6
-            gfx.fill(Path(ellipseIn: rect), with: .color(.green))
-        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     // MARK: - Actions
@@ -222,5 +214,72 @@ struct Scene4_NeutralisationInAction: View {
                 showEquation = true
             }
         }
+    }
+}
+
+// MARK: - Ion / molecule subviews
+
+private struct HIon: View {
+    let index: Int; let t: TimeInterval; let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.red)
+            .frame(width: 16, height: 16)
+            .opacity(p.opacity)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double; let opacity: Double }
+    private func compute() -> DotPos {
+        let cx: Double = Double(size.width) * 0.5
+        let cy: Double = Double(size.height) * 0.5
+        let phase: Double = ((Double(t) * 0.8 + Double(index) * 0.6).truncatingRemainder(dividingBy: 3.0)) / 3.0
+        let x: Double = Double(size.width) * 0.1 + phase * (cx - Double(size.width) * 0.1)
+        let y: Double = cy + sin(Double(t) * 2.0 + Double(index)) * 15.0
+        let opacity: Double = 1.0 - phase * 0.5
+        return DotPos(x: x, y: y, opacity: opacity)
+    }
+}
+
+private struct OHIon: View {
+    let index: Int; let t: TimeInterval; let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.blue)
+            .frame(width: 16, height: 16)
+            .opacity(p.opacity)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double; let opacity: Double }
+    private func compute() -> DotPos {
+        let cx: Double = Double(size.width) * 0.5
+        let cy: Double = Double(size.height) * 0.5
+        let phase: Double = ((Double(t) * 0.8 + Double(index) * 0.6).truncatingRemainder(dividingBy: 3.0)) / 3.0
+        let x: Double = Double(size.width) * 0.9 - phase * (Double(size.width) * 0.9 - cx)
+        let y: Double = cy + cos(Double(t) * 2.0 + Double(index)) * 15.0
+        let opacity: Double = 1.0 - phase * 0.5
+        return DotPos(x: x, y: y, opacity: opacity)
+    }
+}
+
+private struct WaterMolecule: View {
+    let index: Int; let t: TimeInterval; let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.green)
+            .frame(width: 12, height: 12)
+            .opacity(0.6)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+    private struct DotPos { let x: Double; let y: Double }
+    private func compute() -> DotPos {
+        let cx: Double = Double(size.width) * 0.5
+        let cy: Double = Double(size.height) * 0.5
+        let spread: Double = sin(Double(t) + Double(index) * 2.0) * 20.0
+        let x: Double = cx + spread
+        let y: Double = cy + cos(Double(t) + Double(index)) * 10.0
+        return DotPos(x: x, y: y)
     }
 }

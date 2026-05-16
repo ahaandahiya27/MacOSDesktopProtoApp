@@ -77,12 +77,7 @@ struct DiscoverChapter5View: View {
         case 0: Scene1_SourOrBitter(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildYourpHStrip(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2: Scene3_ThreeIndicatorTests(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3:
-            if #available(macOS 12, *) {
-                Scene4_NeutralisationInAction(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
-            }
+        case 3: Scene4_NeutralisationInAction(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_AntStingFirstAid(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_AcidOrBaseSortingLab(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6: Scene7_SoilpHAndFarmer(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
