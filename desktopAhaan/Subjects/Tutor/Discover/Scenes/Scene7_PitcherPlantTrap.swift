@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 7 — The Pitcher Plant Trap. A short hand-drawn animation: a fly
 /// hovers, lands on the rim, slips, tumbles into the pitcher, and dissolves
 /// into a green digestive juice.
-@available(macOS 12, *)
+
 struct Scene7_PitcherPlantTrap: View {
     let pack: SubjectPack
     let chapter: Chapter

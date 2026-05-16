@@ -6,7 +6,7 @@ import SwiftUI
 /// beams travel from the spectrum down to the molecule. Red and blue are
 /// absorbed; green is reflected. The kid can tap each colour to see the
 /// behaviour, and toggle a "what if chlorophyll absorbed green instead?" view.
-@available(macOS 12, *)
+
 struct Scene4_ColorTheChlorophyll: View {
     let pack: SubjectPack
     let chapter: Chapter

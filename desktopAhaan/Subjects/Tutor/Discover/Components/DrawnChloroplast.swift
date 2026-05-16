@@ -2,7 +2,8 @@ import SwiftUI
 
 /// A stylized chlorophyll molecule: a green hexagonal ring with a magnesium
 /// atom at the centre. Drawn with Path — no image assets.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible.
 struct DrawnChloroplast: View {
     /// 0 = dim, 1 = brightly excited (more glow). Drive from a TimelineView
     /// phase to "absorb" red and blue light beams.

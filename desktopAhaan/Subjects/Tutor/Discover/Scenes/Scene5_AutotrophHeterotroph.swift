@@ -14,7 +14,7 @@ import SwiftUI
 /// target from the final touch position relative to two zone rects we track
 /// with `GeometryReader`s. This keeps everything in pure SwiftUI without
 /// custom UTIs or AppKit pasteboards.
-@available(macOS 12, *)
+
 struct Scene5_AutotrophHeterotroph: View {
     let pack: SubjectPack
     let chapter: Chapter

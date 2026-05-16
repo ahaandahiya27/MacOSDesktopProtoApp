@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Meet the Special Plants. A horizontal row of FlipCards with the
 /// four special-nutrition plants (Cuscuta / Pitcher / Bread mould / Lichen).
-@available(macOS 12, *)
+
 struct Scene6_MeetTheSpecialPlants: View {
     let pack: SubjectPack
     let chapter: Chapter

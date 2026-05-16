@@ -3,7 +3,9 @@ import SwiftUI
 /// A reusable leaf shape drawn entirely with `Path`. No image assets.
 /// The leaf has a gentle "pulse" parameter (0…1) so callers can drive a
 /// breathing animation by attaching a TimelineView phase.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — uses only Path/Shape/GeometryReader/
+/// gradients/Circle, all macOS 10.15+.
 struct DrawnLeaf: View {
     /// 0 = fully relaxed, 1 = fully pulsed. Drives subtle scale + glow.
     var pulse: CGFloat = 0

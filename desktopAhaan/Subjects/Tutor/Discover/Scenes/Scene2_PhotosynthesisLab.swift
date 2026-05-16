@@ -7,7 +7,7 @@ import SwiftUI
 /// button activates. Tapping it animates the tiles compressing into the leaf
 /// in the centre, the leaf glowing white-hot, and glucose + oxygen bursting
 /// out the other side.
-@available(macOS 12, *)
+
 struct Scene2_PhotosynthesisLab: View {
     let pack: SubjectPack
     let chapter: Chapter

@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 8 — The Nitrogen Cycle. Four nodes with arrows between them. Tap an
 /// arrow to read what happens along that step. When all four arrows have been
 /// tapped, a final question slides in.
-@available(macOS 12, *)
+
 struct Scene8_NitrogenCycle: View {
     let pack: SubjectPack
     let chapter: Chapter
