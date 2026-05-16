@@ -24,6 +24,7 @@
 		04674C602FB8BA48004A7D5C /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C5F2FB8BA48004A7D5C /* TutorNavigationTests.swift */; };
 		04674C622FB8C66D004A7D5C /* DictationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C612FB8C66D004A7D5C /* DictationButton.swift */; };
 		04674C642FB8D415004A7D5C /* KeyboardShortcutsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C632FB8D415004A7D5C /* KeyboardShortcutsSheet.swift */; };
+		04674C662FB8D97D004A7D5C /* CommandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C652FB8D97D004A7D5C /* CommandPalette.swift */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -360,6 +361,7 @@
 		04674C5F2FB8BA48004A7D5C /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorNavigationTests.swift; sourceTree = "<group>"; };
 		04674C612FB8C66D004A7D5C /* DictationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationButton.swift; sourceTree = "<group>"; };
 		04674C632FB8D415004A7D5C /* KeyboardShortcutsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutsSheet.swift; sourceTree = "<group>"; };
+		04674C652FB8D97D004A7D5C /* CommandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPalette.swift; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -971,6 +973,7 @@
 				04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */,
 				04674C612FB8C66D004A7D5C /* DictationButton.swift */,
 				04674C632FB8D415004A7D5C /* KeyboardShortcutsSheet.swift */,
+				04674C652FB8D97D004A7D5C /* CommandPalette.swift */,
 			);
 			path = Tutor;
 			sourceTree = "<group>";
@@ -1784,6 +1787,7 @@
 				BA934CBAAF04DEEA41776185 /* AskFollowUpView.swift in Sources */,
 				C5834237D6A667663DBB25D1 /* BookmarksView.swift in Sources */,
 				C36EAE42C2EBF7A5207F18DB /* ChapterDetailView.swift in Sources */,
+				04674C662FB8D97D004A7D5C /* CommandPalette.swift in Sources */,
 				7068B3ECF23DC8D53DF28044 /* ChapterListView.swift in Sources */,
 				5A91FBC7292A7B95172E5469 /* ConceptDetailView.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,

@@ -6,6 +6,7 @@ struct ContentView: View {
     @EnvironmentObject var dataStore: DataStore
     @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
     @State private var showShortcutsSheet = false
+    @State private var showCommandPalette = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -36,13 +37,23 @@ struct ContentView: View {
         .sheet(isPresented: $showShortcutsSheet) {
             KeyboardShortcutsSheet { showShortcutsSheet = false }
         }
+        .sheet(isPresented: $showCommandPalette) {
+            CommandPalette { showCommandPalette = false }
+                .environmentObject(subjectRegistry)
+                .environmentObject(appState)
+                .environmentObject(dataStore)
+        }
         .background(
-            // Invisible button hosting the ⌘/ shortcut — works app-wide.
-            Button("Show keyboard shortcuts") { showShortcutsSheet = true }
-                .keyboardShortcut("/", modifiers: .command)
-                .opacity(0)
-                .frame(width: 0, height: 0)
-                .accessibilityHidden(true)
+            // Invisible buttons hosting global keyboard shortcuts.
+            ZStack {
+                Button("Show keyboard shortcuts") { showShortcutsSheet = true }
+                    .keyboardShortcut("/", modifiers: .command)
+                Button("Open command palette") { showCommandPalette = true }
+                    .keyboardShortcut("k", modifiers: .command)
+            }
+            .opacity(0)
+            .frame(width: 0, height: 0)
+            .accessibilityHidden(true)
         )
     }
 

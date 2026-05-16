@@ -19,6 +19,7 @@ struct KeyboardShortcutsSheet: View {
 
     private let groups: [Group] = [
         Group(title: "Navigation", shortcuts: [
+            Shortcut(combo: "⌘K",        description: "Jump to anything (command palette)"),
             Shortcut(combo: "⌘[",        description: "Go back"),
             Shortcut(combo: "⌘⇧[",       description: "Back to subject home"),
             Shortcut(combo: "⌘←",        description: "Previous question (also bare ←)"),
@@ -31,6 +32,7 @@ struct KeyboardShortcutsSheet: View {
         ]),
         Group(title: "Discover Mode", shortcuts: [
             Shortcut(combo: "←  →",      description: "Previous / next scene"),
+            Shortcut(combo: "⌘1..⌘9",   description: "Jump to scene N in the current chapter"),
         ]),
         Group(title: "Concept detail", shortcuts: [
             Shortcut(combo: "⌘B",        description: "Bookmark / unbookmark this concept"),

@@ -105,6 +105,13 @@ struct TutorNavigationContainer<Root: View>: View {
         .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
             nav.pop()
         }
+        .onReceive(NotificationCenter.default.publisher(for: .openTutorRoute)) { note in
+            guard let route = note.object as? TutorRoute else { return }
+            // Pop to the root of this container first so the new route sits
+            // at depth 1, not piled on top of where the user was.
+            nav.popToRoot()
+            nav.push(route)
+        }
     }
 
     @ViewBuilder
