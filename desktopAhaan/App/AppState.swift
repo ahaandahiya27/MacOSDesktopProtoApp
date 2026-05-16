@@ -18,7 +18,12 @@ final class AppState: ObservableObject {
     /// The new top-level sidebar selection. `.subject("sanskrit_class7")`
     /// shows the Sanskrit translator wrapped in a SubjectHomeView; other
     /// subjects show the Tutor UI.
-    @Published var sidebarSelection: SidebarSelection = .subject("sanskrit_class7")
+    ///
+    /// Persisted across launches via UserDefaults so the kid returns to the
+    /// same subject they were last working on.
+    @Published var sidebarSelection: SidebarSelection {
+        didSet { Self.persist(sidebarSelection) }
+    }
 
     /// Sanskrit-only internal tab. Existing screens and menu commands read /
     /// write this. Don't remove.
@@ -27,7 +32,24 @@ final class AppState: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "NetworkMonitor")
 
+    private static let sidebarSelectionKey = "sidebarSelection"
+
+    private static func persist(_ selection: SidebarSelection) {
+        UserDefaults.standard.set(selection.persistedString,
+                                  forKey: sidebarSelectionKey)
+    }
+
+    private static func restored() -> SidebarSelection {
+        guard let raw = UserDefaults.standard.string(forKey: sidebarSelectionKey),
+              let restored = SidebarSelection(persistedString: raw)
+        else { return .subject("sanskrit_class7") }
+        return restored
+    }
+
     init() {
+        // Restore last sidebar selection BEFORE the first publish so the
+        // app boots into the user's last context, not the default.
+        sidebarSelection = Self.restored()
         monitor.pathUpdateHandler = { [weak self] path in
             let satisfied = path.status == .satisfied
             DispatchQueue.main.async { [weak self] in
@@ -58,6 +80,29 @@ enum SidebarSelection: Hashable {
     case subject(String)        // packId
     case quizBank
     case tool(SidebarTool)
+
+    /// Stable string form for UserDefaults persistence.
+    var persistedString: String {
+        switch self {
+        case .subject(let id):  return "subject:\(id)"
+        case .quizBank:         return "quizBank"
+        case .tool(let t):      return "tool:\(t.rawValue)"
+        }
+    }
+
+    init?(persistedString: String) {
+        if persistedString == "quizBank" {
+            self = .quizBank
+        } else if persistedString.hasPrefix("subject:") {
+            self = .subject(String(persistedString.dropFirst("subject:".count)))
+        } else if persistedString.hasPrefix("tool:") {
+            let raw = String(persistedString.dropFirst("tool:".count))
+            guard let t = SidebarTool(rawValue: raw) else { return nil }
+            self = .tool(t)
+        } else {
+            return nil
+        }
+    }
 }
 
 enum SidebarTool: String, Hashable, CaseIterable, Identifiable {

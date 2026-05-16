@@ -62,13 +62,27 @@ struct TutorNavigationContainer<Root: View>: View {
     var body: some View {
         VStack(spacing: 0) {
             if nav.canGoBack {
-                HStack {
+                HStack(spacing: 12) {
                     Button { nav.pop() } label: {
                         HStack(spacing: 4) {
                             Image(systemName: "chevron.left")
                             Text("Back")
                         }
                     }
+                    .keyboardShortcut("[", modifiers: .command)
+                    .help("Back (⌘[)")
+
+                    if nav.path.count > 1 {
+                        Button { nav.popToRoot() } label: {
+                            HStack(spacing: 4) {
+                                Image(systemName: "house")
+                                Text("Subject home")
+                            }
+                        }
+                        .keyboardShortcut("[", modifiers: [.command, .shift])
+                        .help("Back to subject home (⌘⇧[)")
+                    }
+
                     Spacer()
                 }
                 .padding(.horizontal, 16)

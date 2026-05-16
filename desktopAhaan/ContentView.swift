@@ -5,6 +5,7 @@ struct ContentView: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var dataStore: DataStore
     @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
+    @State private var showShortcutsSheet = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -32,6 +33,17 @@ struct ContentView: View {
         .sheet(isPresented: Binding(get: { !hasSeenWelcome }, set: { if !$0 { hasSeenWelcome = true } })) {
             WelcomeSheet { hasSeenWelcome = true }
         }
+        .sheet(isPresented: $showShortcutsSheet) {
+            KeyboardShortcutsSheet { showShortcutsSheet = false }
+        }
+        .background(
+            // Invisible button hosting the ⌘/ shortcut — works app-wide.
+            Button("Show keyboard shortcuts") { showShortcutsSheet = true }
+                .keyboardShortcut("/", modifiers: .command)
+                .opacity(0)
+                .frame(width: 0, height: 0)
+                .accessibilityHidden(true)
+        )
     }
 
     // MARK: - Sidebar

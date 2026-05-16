@@ -20,18 +20,27 @@ struct ConceptDetailView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                breadcrumb
-                header
-                depthPicker
-                articleButton
-                explanationGroup
-                followOnGroup
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    breadcrumb
+                    header
+                    depthPicker
+                    articleButton
+                    explanationGroup
+                    followOnGroup
+                }
+                .padding(20)
+                .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                .frame(maxWidth: .infinity)
+                .id("__top__")
             }
-            .padding(20)
-            .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-            .frame(maxWidth: .infinity)
+            .onAppear { proxy.scrollTo("__top__", anchor: .top) }
+            .onChange(of: concept.id) { _ in
+                withAnimation(.easeOut(duration: 0.2)) {
+                    proxy.scrollTo("__top__", anchor: .top)
+                }
+            }
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(concept.title)

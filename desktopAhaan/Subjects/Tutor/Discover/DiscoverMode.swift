@@ -173,6 +173,32 @@ struct DiscoverShell<SceneBody: View>: View {
         }
         .navigationTitle(navigationTitle)
         .onArrowKeys(left: { goPrev() }, right: { goNext() })
+        .background(sceneJumpShortcuts)
+    }
+
+    /// ⌘1..⌘9 jump straight to scene N. Invisible Buttons under the chrome
+    /// so the shortcuts work regardless of focus.
+    private var sceneJumpShortcuts: some View {
+        ZStack {
+            ForEach(0..<min(totalScenes, 9), id: \.self) { i in
+                Button {
+                    jumpToScene(i)
+                } label: { EmptyView() }
+                .keyboardShortcut(
+                    KeyEquivalent(Character("\(i + 1)")),
+                    modifiers: .command
+                )
+            }
+        }
+        .frame(width: 0, height: 0)
+        .opacity(0)
+    }
+
+    private func jumpToScene(_ index: Int) {
+        guard sceneTitles.indices.contains(index) else { return }
+        withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
+            currentScene = index
+        }
     }
 
     private var header: some View {

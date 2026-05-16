@@ -49,28 +49,39 @@ struct QuestionDetailView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                breadcrumb
-                header
-                promptCard
-                answerInteractionGroup
-                postAttemptGroup
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    breadcrumb
+                    header
+                    promptCard
+                    answerInteractionGroup
+                    postAttemptGroup
+                }
+                .padding(20)
+                .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                .frame(maxWidth: .infinity)
+                .id("__top__")
             }
-            .padding(20)
-            .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-            .frame(maxWidth: .infinity)
-        }
-        .onAppear { resetMatchStateIfNeeded() }
-        .onChange(of: question.id) { _ in
-            // Reset per-question state when Prev/Next swaps the question
-            revealSolution = false
-            typedAnswer = ""
-            attemptOutcome = .unchecked
-            selectedOptionIndex = nil
-            matchAssignment = [:]
-            shuffledRights = []
-            resetMatchStateIfNeeded()
+            .onAppear {
+                resetMatchStateIfNeeded()
+                // Land at the top whenever this detail is first shown.
+                proxy.scrollTo("__top__", anchor: .top)
+            }
+            .onChange(of: question.id) { _ in
+                // Reset per-question state when Prev/Next swaps the question.
+                revealSolution = false
+                typedAnswer = ""
+                attemptOutcome = .unchecked
+                selectedOptionIndex = nil
+                matchAssignment = [:]
+                shuffledRights = []
+                resetMatchStateIfNeeded()
+                // Snap back to the top so the new prompt is visible.
+                withAnimation(.easeOut(duration: 0.2)) {
+                    proxy.scrollTo("__top__", anchor: .top)
+                }
+            }
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
@@ -123,6 +134,14 @@ struct QuestionDetailView: View {
                 .disabled(!hasPrevious)
             Button(action: gotoNext) { EmptyView() }
                 .keyboardShortcut(.rightArrow, modifiers: [])
+                .disabled(!hasNext)
+            // Cmd+arrow alternatives — also work when the answer field has
+            // focus (where bare arrow keys would move the text cursor).
+            Button(action: gotoPrevious) { EmptyView() }
+                .keyboardShortcut(.leftArrow, modifiers: .command)
+                .disabled(!hasPrevious)
+            Button(action: gotoNext) { EmptyView() }
+                .keyboardShortcut(.rightArrow, modifiers: .command)
                 .disabled(!hasNext)
         }
         .frame(width: 0, height: 0)
