@@ -121,7 +121,7 @@ struct Scene8_FibreVsFibreGame: View {
                     .foregroundColor(.primary)
             }
             .frame(width: 70, height: 70)
-            .background(Color.white)
+            .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(8)
             .shadow(color: .black.opacity(draggingId == fibre.id ? 0.25 : 0.1), radius: draggingId == fibre.id ? 12 : 4, x: 0, y: draggingId == fibre.id ? 6 : 2)
             .scaleEffect(draggingId == fibre.id ? 1.08 : 1.0)

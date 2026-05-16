@@ -107,7 +107,7 @@ struct Scene1_FluffToFibre: View {
             .frame(width: 180, height: 150)
         }
         .padding(16)
-        .background(Color.white)
+        .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
         .position(x: geoSize.width * 0.8, y: geoSize.height * 0.35)
