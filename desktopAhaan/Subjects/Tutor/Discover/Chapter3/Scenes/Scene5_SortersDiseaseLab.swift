@@ -5,7 +5,9 @@ import SwiftUI
 /// A drawn microscope. Three slides below: clean, contaminated, sterilized.
 /// Tap each slide — microscope shows: clean (no spores), contaminated (red spore dots),
 /// sterilized (no spores). Worker icon puts on PPE when contaminated is selected.
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — the microscope diagram is now drawn
+/// with standard SwiftUI shapes (RoundedRectangle, Path, Ellipse)
+/// instead of a Canvas.
 struct Scene5_SortersDiseaseLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -34,61 +36,22 @@ struct Scene5_SortersDiseaseLab: View {
             .padding(.top, 20)
 
             ZStack {
-                // Drawn microscope
-                Canvas { context, _ in
-                    // Base
-                    context.fill(
-                        Path(roundedRect: CGRect(x: 100, y: 200, width: 200, height: 30), cornerRadius: 4),
-                        with: .color(.gray)
-                    )
-
-                    // Arm
-                    context.stroke(
-                        Path { p in
-                            p.move(to: CGPoint(x: 200, y: 200))
-                            p.addLine(to: CGPoint(x: 200, y: 100))
-                        },
-                        with: .color(.gray),
-                        lineWidth: 8
-                    )
-
-                    // Eyepiece
-                    context.fill(
-                        Path(ellipseIn: CGRect(x: 180, y: 70, width: 40, height: 40)),
-                        with: .color(.gray.opacity(0.7))
-                    )
-
-                    // Objective lens
-                    context.fill(
-                        Path(ellipseIn: CGRect(x: 185, y: 130, width: 30, height: 30)),
-                        with: .color(.blue.opacity(0.5))
-                    )
-
-                    // Stage
-                    context.fill(
-                        Path(ellipseIn: CGRect(x: 175, y: 145, width: 50, height: 50)),
-                        with: .color(.white)
-                    )
-                    context.stroke(
-                        Path(ellipseIn: CGRect(x: 175, y: 145, width: 50, height: 50)),
-                        with: .color(.gray),
-                        lineWidth: 1
-                    )
-                }
-                .frame(width: 400, height: 280)
+                // Drawn microscope (Shapes, was Canvas)
+                MicroscopeDiagram()
+                    .frame(width: 400, height: 280)
 
                 // Viewed through eyepiece
                 VStack {
                     ZStack {
                         Circle()
-                            .fill(.black)
+                            .fill(Color.black)
                             .frame(width: 100, height: 100)
                             .position(x: 200, y: 90)
 
                         if showSpores {
                             ForEach(0..<12, id: \.self) { i in
                                 Circle()
-                                    .fill(.red.opacity(0.8))
+                                    .fill(Color.red.opacity(0.8))
                                     .frame(width: 4, height: 4)
                                     .position(
                                         x: 200 + CGFloat.random(in: -30...30),
@@ -173,6 +136,48 @@ struct Scene5_SortersDiseaseLab: View {
         case 1: return .red.opacity(0.2)
         case 2: return .green.opacity(0.2)
         default: return .gray.opacity(0.1)
+        }
+    }
+}
+
+
+/// Microscope side view used in Scene5_SortersDiseaseLab. Was previously
+/// drawn via Canvas; rebuilt with standard shapes so it renders on macOS 11.
+struct MicroscopeDiagram: View {
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            // Base
+            RoundedRectangle(cornerRadius: 4)
+                .fill(Color.gray)
+                .frame(width: 200, height: 30)
+                .offset(x: 100, y: 200)
+
+            // Arm
+            Path { p in
+                p.move(to: CGPoint(x: 200, y: 200))
+                p.addLine(to: CGPoint(x: 200, y: 100))
+            }
+            .stroke(Color.gray, lineWidth: 8)
+
+            // Eyepiece
+            Ellipse()
+                .fill(Color.gray.opacity(0.7))
+                .frame(width: 40, height: 40)
+                .offset(x: 180, y: 70)
+
+            // Objective lens
+            Ellipse()
+                .fill(Color.blue.opacity(0.5))
+                .frame(width: 30, height: 30)
+                .offset(x: 185, y: 130)
+
+            // Stage (fill + stroke)
+            ZStack {
+                Ellipse().fill(Color.white)
+                Ellipse().stroke(Color.gray, lineWidth: 1)
+            }
+            .frame(width: 50, height: 50)
+            .offset(x: 175, y: 145)
         }
     }
 }
