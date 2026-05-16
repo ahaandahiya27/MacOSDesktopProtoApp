@@ -73,12 +73,7 @@ struct DiscoverChapter1View: View {
     private var sceneContent: some View {
         // Scenes 1 and 3 still use TimelineView (macOS 12+).
         switch currentScene {
-        case 0:
-            if #available(macOS 12, *) {
-                Scene1_PlantKitchen(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 0))
-            }
+        case 0: Scene1_PlantKitchen(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_PhotosynthesisLab(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2:
             if #available(macOS 12, *) {

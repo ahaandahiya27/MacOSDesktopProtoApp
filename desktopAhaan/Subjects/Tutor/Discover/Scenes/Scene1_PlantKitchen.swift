@@ -5,7 +5,12 @@ import SwiftUI
 /// The kid sees a glowing leaf at the centre. Sunlight rays fall, water drops
 /// rise, CO₂ wisps drift in. Tap the leaf — it pulses, a glucose hexagon
 /// emerges, and a speech bubble pops up.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the ambient animation that used to be
+/// driven by `TimelineView(.animation(minimumInterval:))` (macOS 12+) is now
+/// driven by a 30 fps `Timer.publish` feeding a single `@State` tick value.
+/// The ambient sub-views read the same tick to recompute their positions,
+/// preserving the visual behaviour on both macOS 11 and modern macOS.
 struct Scene1_PlantKitchen: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -14,6 +19,11 @@ struct Scene1_PlantKitchen: View {
     @State private var pulse: CGFloat = 0
     @State private var showGlucose = false
     @State private var showBubble = false
+    /// Continuously-updated animation clock — replaces TimelineView's
+    /// `ctx.date.timeIntervalSince1970`. Started in onAppear, stopped in
+    /// onDisappear so the scene doesn't keep the CPU busy when hidden.
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var kidFriendlyExplanation: String {
@@ -24,15 +34,12 @@ struct Scene1_PlantKitchen: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                // Background ambient animation
+                // Ambient animation (sunlight rays, water drops, CO₂ wisps)
                 if !reduceMotion {
-                    TimelineView(.animation(minimumInterval: 1.0 / 30)) { ctx in
-                        let t = ctx.date.timeIntervalSince1970
-                        ZStack {
-                            sunRays(t: t, in: geo.size)
-                            waterDrops(t: t, in: geo.size)
-                            co2Wisps(t: t, in: geo.size)
-                        }
+                    ZStack {
+                        sunRays(t: tick, in: geo.size)
+                        waterDrops(t: tick, in: geo.size)
+                        co2Wisps(t: tick, in: geo.size)
                     }
                 }
 
@@ -86,6 +93,24 @@ struct Scene1_PlantKitchen: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimationLoop)
+        .onDisappear(perform: stopAnimationLoop)
+    }
+
+    // MARK: - Animation loop
+
+    private func startAnimationLoop() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        // 30 fps matches the old TimelineView(.animation(minimumInterval: 1/30))
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+
+    private func stopAnimationLoop() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     // MARK: - Tap handling
@@ -115,7 +140,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = 1 - phase
             Image(systemName: "sun.max.fill")
                 .font(.system(size: 22))
-                .foregroundColor(.yellow.opacity(opacity * 0.9))
+                .foregroundColor(Color.yellow.opacity(opacity * 0.9))
                 .position(x: x, y: y)
         }
     }
@@ -129,7 +154,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = 1 - phase
             Image(systemName: "drop.fill")
                 .font(.system(size: 16))
-                .foregroundColor(.blue.opacity(opacity * 0.85))
+                .foregroundColor(Color.blue.opacity(opacity * 0.85))
                 .position(x: x, y: y)
         }
     }
@@ -143,7 +168,7 @@ struct Scene1_PlantKitchen: View {
             let opacity = sin(phase * .pi)
             Text("CO₂")
                 .font(.system(size: 18, weight: .medium, design: .rounded))
-                .foregroundColor(.gray.opacity(opacity * 0.7))
+                .foregroundColor(Color.gray.opacity(opacity * 0.7))
                 .position(x: x, y: y)
         }
     }
@@ -151,18 +176,17 @@ struct Scene1_PlantKitchen: View {
 
 // MARK: - Helper subviews
 
-@available(macOS 12, *)
 private struct GlucoseHex: View {
     var body: some View {
         ZStack {
             HexagonShape()
                 .fill(
                     LinearGradient(
-                        colors: [.purple.opacity(0.85), .pink.opacity(0.85)],
+                        colors: [Color.purple.opacity(0.85), Color.pink.opacity(0.85)],
                         startPoint: .topLeading, endPoint: .bottomTrailing
                     )
                 )
-                .shadow(color: .purple.opacity(0.5), radius: 10)
+                .shadow(color: Color.purple.opacity(0.5), radius: 10)
             Text("C₆H₁₂O₆")
                 .font(.caption2.weight(.heavy))
                 .foregroundColor(.white)
@@ -170,7 +194,6 @@ private struct GlucoseHex: View {
     }
 }
 
-@available(macOS 12, *)
 private struct SpeechBubble: View {
     let text: String
     var body: some View {
@@ -182,17 +205,17 @@ private struct SpeechBubble: View {
             .background(
                 ZStack(alignment: .bottomLeading) {
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(.white)
+                        .fill(Color.white)
                     Path { p in
                         p.move(to: CGPoint(x: 18, y: 20))
                         p.addLine(to: CGPoint(x: 6, y: 38))
                         p.addLine(to: CGPoint(x: 36, y: 22))
                         p.closeSubpath()
                     }
-                    .fill(.white)
+                    .fill(Color.white)
                     .offset(y: 12)
                 }
             )
-            .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 4)
+            .shadow(color: Color.black.opacity(0.15), radius: 10, x: 0, y: 4)
     }
 }
