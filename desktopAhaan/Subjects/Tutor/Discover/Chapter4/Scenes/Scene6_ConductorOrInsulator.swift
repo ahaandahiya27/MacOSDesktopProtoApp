@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 6 — Conductor or Insulator? Drag Game.
 /// 12 materials, drag into Good Conductor or Bad Conductor zones.
-@available(macOS 12, *)
+
 struct Scene6_ConductorOrInsulator: View {
     let pack: SubjectPack
     let chapter: Chapter

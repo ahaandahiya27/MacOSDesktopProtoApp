@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 4 — Hot Soup, Cold Spoon.
 /// Metal spoon in hot soup conducts heat. Toggle to wooden spoon to see insulation.
-@available(macOS 12, *)
+
 struct Scene4_HotSoupColdSpoon: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -41,7 +41,7 @@ struct Scene4_HotSoupColdSpoon: View {
                     ZStack {
                         // Bowl
                         Ellipse()
-                            .fill(LinearGradient(colors: [.brown.opacity(0.7), .brown.opacity(0.5)], startPoint: .top, endPoint: .bottom))
+                            .fill(LinearGradient(colors: [Color.compatBrown.opacity(0.7), Color.compatBrown.opacity(0.5)], startPoint: .top, endPoint: .bottom))
                             .frame(width: 220, height: 120)
                             .offset(y: 40)
 
@@ -61,7 +61,7 @@ struct Scene4_HotSoupColdSpoon: View {
                         // Spoon handle
                         RoundedRectangle(cornerRadius: 4)
                             .fill(isWooden
-                                  ? LinearGradient(colors: [.brown, .brown.opacity(0.7)], startPoint: .bottom, endPoint: .top)
+                                  ? LinearGradient(colors: [Color.compatBrown, Color.compatBrown.opacity(0.7)], startPoint: .bottom, endPoint: .top)
                                   : LinearGradient(colors: [.gray, .gray.opacity(0.5)], startPoint: .bottom, endPoint: .top))
                             .frame(width: 10, height: 160)
                             .rotationEffect(.degrees(-20))
@@ -164,7 +164,7 @@ struct Scene4_HotSoupColdSpoon: View {
 
 // MARK: - Steam wisp
 
-@available(macOS 12, *)
+
 private struct SteamWisp: View {
     let index: Int
     @State private var offset: CGFloat = 0

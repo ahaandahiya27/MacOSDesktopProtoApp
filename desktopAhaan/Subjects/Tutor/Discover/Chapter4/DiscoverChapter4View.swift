@@ -71,22 +71,25 @@ struct DiscoverChapter4View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Scenes 3 and 5 still use TimelineView (macOS 12+) for ambient
+        // animation; the rest have been verified Big-Sur clean and run
+        // directly on macOS 11.
         switch currentScene {
         case 0: Scene1_HotOrCold(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildYourThermometer(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2: Scene3_ThreeHighwaysOfHeat(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
+        case 2:
+            if #available(macOS 12, *) {
+                Scene3_ThreeHighwaysOfHeat(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
+            }
         case 3: Scene4_HotSoupColdSpoon(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-        case 4: Scene5_SeaBreezeLandBreeze(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
+        case 4:
+            if #available(macOS 12, *) {
+                Scene5_SeaBreezeLandBreeze(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 4))
+            }
         case 5: Scene6_ConductorOrInsulator(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6: Scene7_FluffyBirdsFluffySweaters(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
         case 7: Scene8_TemperatureVsHeat(pack: pack, chapter: chapter, onComplete: { markComplete(7) })

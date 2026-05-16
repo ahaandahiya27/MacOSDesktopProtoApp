@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 1 — Hot or Cold? The Touch Test.
 /// Tap 6 objects and watch a thermometer animate to each temperature.
-@available(macOS 12, *)
+
 struct Scene1_HotOrCold: View {
     let pack: SubjectPack
     let chapter: Chapter

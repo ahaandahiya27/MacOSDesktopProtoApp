@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 2 — Build Your Thermometer.
 /// Draggable mercury level with live °C / °F, plus heat/cool buttons.
-@available(macOS 12, *)
+
 struct Scene2_BuildYourThermometer: View {
     let pack: SubjectPack
     let chapter: Chapter

@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 8 — Temperature vs Heat.
 /// Two glasses at the same temperature but different volumes. Pour into a bathtub to see the difference.
-@available(macOS 12, *)
+
 struct Scene8_TemperatureVsHeat: View {
     let pack: SubjectPack
     let chapter: Chapter

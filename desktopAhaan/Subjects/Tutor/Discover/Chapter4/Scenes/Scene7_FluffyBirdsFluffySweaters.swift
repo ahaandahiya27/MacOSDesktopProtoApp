@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Scene 7 — Fluffy Birds, Fluffy Sweaters.
 /// Bird fluffs feathers in cold; trapped air pockets shown. Parallel sweater analogy.
-@available(macOS 12, *)
+
 struct Scene7_FluffyBirdsFluffySweaters: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -24,7 +24,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                         ZStack {
                             // Bird body
                             Ellipse()
-                                .fill(LinearGradient(colors: [.brown.opacity(0.6), .brown.opacity(0.3)], startPoint: .top, endPoint: .bottom))
+                                .fill(LinearGradient(colors: [Color.compatBrown.opacity(0.6), Color.compatBrown.opacity(0.3)], startPoint: .top, endPoint: .bottom))
                                 .frame(
                                     width: isCold ? 150 : 110,
                                     height: isCold ? 140 : 110
@@ -34,7 +34,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                             // Head
                             Circle()
-                                .fill(Color.brown.opacity(0.5))
+                                .fill(Color.compatBrown.opacity(0.5))
                                 .frame(width: 40, height: 40)
                                 .offset(y: isCold ? -60 : -50)
 
