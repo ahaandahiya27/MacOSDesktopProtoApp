@@ -16,6 +16,8 @@ import Foundation
 /// Substring matching is deliberately NOT used; it produced false positives
 /// (e.g. the empty string matched every truth).
 enum AnswerValidator {
+    /// Strict match — required for `.fillInBlank` and `.numerical` where the
+    /// truth is short and exactness matters.
     static func matches(userInput: String, truth: String) -> Bool {
         let u = normalize(userInput)
         let t = normalize(truth)
@@ -26,6 +28,26 @@ enum AnswerValidator {
         let tTokens = tokenize(t)
         if !uTokens.isEmpty && uTokens == tTokens { return true }
         return false
+    }
+
+    /// Lenient match for `.shortAnswer` / `.longAnswer` where the truth is a
+    /// full sentence and the kid may answer with a correct *phrase*. Counts
+    /// the user's content tokens that also appear in the truth and considers
+    /// a match if (a) at least `minMatched` overlap AND (b) at least
+    /// `coverageThreshold` of the user's tokens are in the truth. Falls back
+    /// to strict match first so exact-phrase answers keep passing.
+    static func matchesLenient(userInput: String,
+                               truth: String,
+                               coverageThreshold: Double = 0.6,
+                               minMatched: Int = 2) -> Bool {
+        if matches(userInput: userInput, truth: truth) { return true }
+        let uTokens = tokenize(normalize(userInput))
+        let tTokens = Set(tokenize(normalize(truth)))
+        guard !uTokens.isEmpty, !tTokens.isEmpty else { return false }
+        let matched = uTokens.filter { tTokens.contains($0) }.count
+        guard matched >= minMatched else { return false }
+        let coverage = Double(matched) / Double(uTokens.count)
+        return coverage >= coverageThreshold
     }
 
     private static func normalize(_ s: String) -> String {

@@ -84,7 +84,7 @@ private struct QuizBankContent: View {
                     Button {
                         openQuestion(entry)
                     } label: {
-                        QuizBankRow(chapter: entry.chapter, question: entry.question)
+                        QuizBankRow(pack: entry.pack, chapter: entry.chapter, question: entry.question)
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
@@ -164,6 +164,7 @@ struct QuizBankRoute: Hashable {
 }
 
 private struct QuizBankRow: View {
+    let pack: SubjectPack
     let chapter: Chapter
     let question: Question
 
@@ -180,13 +181,15 @@ private struct QuizBankRow: View {
                 Text(question.prompt)
                     .font(.body)
                     .lineLimit(2)
+                    .devanagariAwareLocale(packId: pack.id)
                 HStack(spacing: 8) {
-                    Text("Ch. \(chapter.number)")
+                    Text("\(pack.coverEmoji) Ch. \(chapter.number)")
                         .font(.caption2)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 2)
                         .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
                         .foregroundColor(Color.compatIndigo)
+                        .accessibilityLabel("\(pack.title), Chapter \(chapter.number)")
                     QuestionDifficultyBadge(level: question.difficulty)
                 }
             }

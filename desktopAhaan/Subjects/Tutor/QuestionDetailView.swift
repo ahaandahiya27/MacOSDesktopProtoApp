@@ -465,7 +465,15 @@ struct QuestionDetailView: View {
 
     @ViewBuilder
     private var commonMistakesCard: some View {
-        if !question.commonMistakes.isEmpty {
+        // Only show after the kid has answered incorrectly OR after they've
+        // explicitly revealed the solution. Showing it on first render trains
+        // memorization of the wrong moves before any thinking happens.
+        let shouldShow: Bool = {
+            if revealSolution { return true }
+            if case .incorrect = attemptOutcome { return true }
+            return false
+        }()
+        if shouldShow && !question.commonMistakes.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Label("Common mistakes", systemImage: "exclamationmark.triangle.fill")
                     .font(.headline)
@@ -553,7 +561,16 @@ struct QuestionDetailView: View {
     private func recordAttempt() {
         let userInput = typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !userInput.isEmpty else { return }
-        let isCorrect = AnswerValidator.matches(userInput: userInput, truth: question.answer)
+        // For free-text answer types where the truth is often a full sentence,
+        // accept correct *phrases* via subset-tolerant matching. Strict match
+        // is kept for fill-in-blank and numerical.
+        let isCorrect: Bool
+        switch question.questionType {
+        case .shortAnswer, .longAnswer:
+            isCorrect = AnswerValidator.matchesLenient(userInput: userInput, truth: question.answer)
+        default:
+            isCorrect = AnswerValidator.matches(userInput: userInput, truth: question.answer)
+        }
 
         dataStore.insertAttempt(QuestionAttempt(
             subjectPackId: pack.id,

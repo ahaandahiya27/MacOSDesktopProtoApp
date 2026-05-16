@@ -203,8 +203,16 @@ final class DataStore: ObservableObject {
             let data = try Data(contentsOf: url)
             return try JSONDecoder().decode([T].self, from: data)
         } catch {
-            print("[DataStore] load \(filename) failed: \(error)")
-            lastSaveError = "Could not load \(filename). Some data may be missing."
+            // Don't silently throw away the corrupt file — rename it with a
+            // timestamp so a future investigation (or the parent) can recover
+            // partial data. Then return [] and surface the issue in the UI.
+            let stamp = ISO8601DateFormatter().string(from: Date())
+                .replacingOccurrences(of: ":", with: "-")
+            let rescue = url.deletingPathExtension()
+                .appendingPathExtension("corrupt.\(stamp).json")
+            try? FileManager.default.moveItem(at: url, to: rescue)
+            print("[DataStore] load \(filename) failed: \(error); preserved as \(rescue.lastPathComponent)")
+            lastSaveError = "Saved \(filename) couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
             return []
         }
     }
