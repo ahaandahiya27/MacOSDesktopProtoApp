@@ -89,12 +89,7 @@ struct DiscoverChapter3View: View {
         case 3: Scene4_TheWoolPipeline(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_SortersDiseaseLab(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_SilkwormLifeCycle(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-        case 6:
-            if #available(macOS 12, *) {
-                Scene7_TheCocoonReel(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 6))
-            }
+        case 6: Scene7_TheCocoonReel(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
         case 7: Scene8_FibreVsFibreGame(pack: pack, chapter: chapter, onComplete: { score in markComplete(7, score: score, max: 6) })
         case 8: Scene9_BossQuiz_Ch3(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()

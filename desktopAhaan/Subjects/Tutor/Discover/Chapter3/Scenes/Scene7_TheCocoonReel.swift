@@ -5,7 +5,8 @@ import SwiftUI
 /// Cocoon in centre. "Pull thread!" button unwinds filament onto a reel to the right.
 /// Counter: "Filament unwound: X m / 1200 m". When full, cocoon shrinks and finished thread shown.
 /// Includes ethics disclosure: "Why is the pupa killed?"
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — reel + wrapped thread drawn with
+/// Ellipse + dynamic Shape (CocoonReelThreadShape) instead of Canvas.
 struct Scene7_TheCocoonReel: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -51,38 +52,18 @@ struct Scene7_TheCocoonReel: View {
                     }
                     .frame(maxWidth: .infinity)
 
-                    // Reel with wrapped thread
+                    // Reel with wrapped thread (Shapes, was Canvas)
                     VStack {
-                        Canvas { context, _ in
-                            // Reel body
-                            context.fill(
-                                Path(ellipseIn: CGRect(x: 140, y: 60, width: 60, height: 60)),
-                                with: .color(.gray.opacity(0.3))
-                            )
-                            context.stroke(
-                                Path(ellipseIn: CGRect(x: 140, y: 60, width: 60, height: 60)),
-                                with: .color(.gray),
-                                lineWidth: 2
-                            )
-
-                            // Wrapped thread visualization
-                            let wraps = Int(metersUnwound / 100)
-                            for i in 0..<wraps {
-                                let angle = CGFloat(i) * 0.2
-                                context.stroke(
-                                    Path { p in
-                                        p.addArc(
-                                            center: CGPoint(x: 170, y: 90),
-                                            radius: 15 + CGFloat(i) * 2,
-                                            startAngle: .degrees(0),
-                                            endAngle: .degrees(Double(angle) * 57.3),
-                                            clockwise: false
-                                        )
-                                    },
-                                    with: .color(.yellow.opacity(0.7)),
-                                    lineWidth: 2
-                                )
+                        ZStack(alignment: .topLeading) {
+                            ZStack {
+                                Ellipse().fill(Color.gray.opacity(0.3))
+                                Ellipse().stroke(Color.gray, lineWidth: 2)
                             }
+                            .frame(width: 60, height: 60)
+                            .offset(x: 140, y: 60)
+
+                            CocoonReelThreadShape(metersUnwound: CGFloat(metersUnwound))
+                                .stroke(Color.yellow.opacity(0.7), lineWidth: 2)
                         }
                         .frame(width: 300, height: 150)
 
@@ -156,5 +137,30 @@ struct Scene7_TheCocoonReel: View {
                 cocoonScale = 1.0 - (metersUnwound / maxMeters) * 0.7
             }
         }
+    }
+}
+
+/// Spiral of progressively-larger arcs showing how much filament has been
+/// wound onto the reel. Was a Canvas loop; rebuilt as a Shape so it
+/// renders on macOS 11.
+struct CocoonReelThreadShape: Shape {
+    let metersUnwound: CGFloat
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let center = CGPoint(x: 170, y: 90)
+        let wraps = Int(metersUnwound / 100)
+        guard wraps > 0 else { return p }
+        for i in 0..<wraps {
+            let angle = CGFloat(i) * 0.2
+            p.addArc(
+                center: center,
+                radius: 15 + CGFloat(i) * 2,
+                startAngle: .degrees(0),
+                endAngle: .degrees(Double(angle) * 57.3),
+                clockwise: false
+            )
+        }
+        return p
     }
 }
