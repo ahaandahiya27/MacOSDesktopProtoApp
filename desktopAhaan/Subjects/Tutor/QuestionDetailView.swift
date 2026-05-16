@@ -428,6 +428,7 @@ struct QuestionDetailView: View {
                 HStack(spacing: 8) {
                     TextField("Type your answer", text: $typedAnswer, onCommit: { recordAttempt() })
                         .textFieldStyle(.roundedBorder)
+                    DictationButton(transcript: $typedAnswer)
                     Button("Check") { recordAttempt() }
                         .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                                   || attemptOutcome != .unchecked)

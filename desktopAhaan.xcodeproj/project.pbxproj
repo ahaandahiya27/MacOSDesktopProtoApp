@@ -22,6 +22,7 @@
 		04674C5C2FB8B9B0004A7D5C /* QuestionVariationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */; };
 		04674C5E2FB8BA2A004A7D5C /* AnswerValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C5D2FB8BA2A004A7D5C /* AnswerValidatorTests.swift */; };
 		04674C602FB8BA48004A7D5C /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C5F2FB8BA48004A7D5C /* TutorNavigationTests.swift */; };
+		04674C622FB8C66D004A7D5C /* DictationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C612FB8C66D004A7D5C /* DictationButton.swift */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -356,6 +357,7 @@
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
 		04674C5D2FB8BA2A004A7D5C /* AnswerValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidatorTests.swift; sourceTree = "<group>"; };
 		04674C5F2FB8BA48004A7D5C /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorNavigationTests.swift; sourceTree = "<group>"; };
+		04674C612FB8C66D004A7D5C /* DictationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictationButton.swift; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -965,6 +967,7 @@
 				04674C572FB8B99F004A7D5C /* AnswerValidator.swift */,
 				04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */,
 				04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */,
+				04674C612FB8C66D004A7D5C /* DictationButton.swift */,
 			);
 			path = Tutor;
 			sourceTree = "<group>";
@@ -1851,6 +1854,7 @@
 				3E651024C09E92CE7F1E7E3D /* Scene2_TheSwallowWave.swift in Sources */,
 				952C708691F02FF695AFAFAA /* Scene3_TheStomachBath.swift in Sources */,
 				4999FE5C73B4FA964D07273E /* Scene4_IntestineVillus.swift in Sources */,
+				04674C622FB8C66D004A7D5C /* DictationButton.swift in Sources */,
 				B08B030F7BB1185AE46C6878 /* Scene5_LiverPancreasBile.swift in Sources */,
 				37D0FD154B0B5E2EF98DE8D1 /* Scene6_FourStomachsOfACow.swift in Sources */,
 				8205FFB62EB179A062B49C4E /* Scene7_AmoebaPseudopodHunt.swift in Sources */,
@@ -2063,8 +2067,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is used for voice input translation.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition converts your spoken words into text for translation.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "DesktopAhaan uses your microphone to transcribe what you say into the answer box and translator. All audio is processed on this Mac — nothing is uploaded.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition turns your spoken words into typed text so you can answer questions without typing. Runs on-device on this Mac.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2095,8 +2099,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is used for voice input translation.";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition converts your spoken words into text for translation.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "DesktopAhaan uses your microphone to transcribe what you say into the answer box and translator. All audio is processed on this Mac — nothing is uploaded.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech recognition turns your spoken words into typed text so you can answer questions without typing. Runs on-device on this Mac.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

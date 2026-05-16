@@ -248,6 +248,11 @@ final class SpeechRecognitionManager: ObservableObject {
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         guard let recognitionRequest = recognitionRequest else { return }
         recognitionRequest.shouldReportPartialResults = true
+        // Prefer on-device transcription so nothing leaves the iMac. macOS 10.15+
+        // honors this; falls back transparently if the locale lacks a local model.
+        if finalRecognizer.supportsOnDeviceRecognition {
+            recognitionRequest.requiresOnDeviceRecognition = true
+        }
 
         let inputNode = audioEngine.inputNode
         let recordingFormat = inputNode.outputFormat(forBus: 0)
