@@ -6,7 +6,9 @@ import SwiftUI
 /// categorized as incisors, canines, premolars, molars. Tap each tooth to
 /// highlight and show its name and role. A toggle shows comparative animal teeth
 /// (lion's jaw). Pulls text from ch02_t01_c03.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — both jaw diagrams now use a ZStack of
+/// stroked arc Paths + RoundedRectangle tooth shapes instead of a Canvas.
 struct Scene1_TheMouthLab: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -85,70 +87,84 @@ struct Scene1_TheMouthLab: View {
 
 // MARK: - Human Jaw Diagram
 
-@available(macOS 12, *)
+/// Human jaw — 32 teeth arranged around an upper + lower arc. The old
+/// Canvas-based version drew everything in a single GraphicsContext;
+/// here each tooth is a positioned RoundedRectangle so taps can be wired
+/// without recomputing geometry. Geometry mirrors the old code.
 struct HumanJawDiagram: View {
     @Binding var selectedTooth: Int?
+    private let center = CGPoint(x: 200, y: 100)
+    private let radius: CGFloat = 80
 
     var body: some View {
-        Canvas { context, _ in
-            let center = CGPoint(x: 200, y: 100)
-            let radius: CGFloat = 80
+        ZStack(alignment: .topLeading) {
+            JawArc(center: center, radius: radius, upper: true)
+                .stroke(Color.gray.opacity(0.5), lineWidth: 3)
+            JawArc(center: center, radius: radius, upper: false)
+                .stroke(Color.gray.opacity(0.5), lineWidth: 3)
 
-            // Upper jaw (semi-circular arc)
-            var upperPath = Path()
-            upperPath.addArc(center: center, radius: radius, startAngle: .degrees(180), endAngle: .degrees(0), clockwise: false)
-            context.stroke(
-                upperPath,
-                with: .color(.gray.opacity(0.5)),
-                lineWidth: 3
-            )
-
-            // Lower jaw (semi-circular arc)
-            var lowerPath = Path()
-            lowerPath.addArc(center: center, radius: radius, startAngle: .degrees(0), endAngle: .degrees(180), clockwise: false)
-            context.stroke(
-                lowerPath,
-                with: .color(.gray.opacity(0.5)),
-                lineWidth: 3
-            )
-
-            // Draw 32 teeth: 16 upper + 16 lower
-            for i in 0..<16 {
-                let angle = CGFloat(i) * (180 / 16)
-                let radians = angle * .pi / 180
-                let x = center.x + radius * cos(radians)
-                let y = center.y - radius * sin(radians)
-                drawTooth(at: CGPoint(x: x, y: y), index: i, in: &context, isSelected: selectedTooth == i)
-            }
-
-            for i in 0..<16 {
-                let angle = CGFloat(i) * (180 / 16)
-                let radians = angle * .pi / 180
-                let x = center.x + radius * cos(radians)
-                let y = center.y + radius * sin(radians)
-                drawTooth(at: CGPoint(x: x, y: y), index: i + 16, in: &context, isSelected: selectedTooth == (i + 16))
+            ForEach(0..<32, id: \.self) { idx in
+                let pos = toothPosition(idx)
+                ToothShapeView(isSelected: selectedTooth == idx)
+                    .frame(width: 12, height: 20)
+                    .position(x: pos.x, y: pos.y)
+                    .onTapGesture { selectedTooth = idx }
             }
         }
     }
 
-    private func drawTooth(at point: CGPoint, index: Int, in context: inout GraphicsContext, isSelected: Bool) {
-        let toothRect = CGRect(x: point.x - 6, y: point.y - 10, width: 12, height: 20)
-        let path = Path(roundedRect: toothRect, cornerRadius: 2)
-        context.fill(
-            path,
-            with: .color(isSelected ? .yellow : .white)
-        )
-        context.stroke(
-            path,
-            with: .color(isSelected ? .orange : .gray),
-            lineWidth: isSelected ? 2 : 1
-        )
+    private func toothPosition(_ index: Int) -> CGPoint {
+        let inLowerJaw = index >= 16
+        let i = index % 16
+        let angleDeg = CGFloat(i) * (180 / 16)
+        let radians = angleDeg * .pi / 180
+        let x = center.x + radius * cos(radians)
+        let y = inLowerJaw
+            ? center.y + radius * sin(radians)
+            : center.y - radius * sin(radians)
+        return CGPoint(x: x, y: y)
+    }
+}
+
+/// A single tooth rendered as a rounded rect with selection highlight.
+private struct ToothShapeView: View {
+    let isSelected: Bool
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 2)
+                .fill(isSelected ? Color.yellow : Color.white)
+            RoundedRectangle(cornerRadius: 2)
+                .stroke(isSelected ? Color.orange : Color.gray,
+                        lineWidth: isSelected ? 2 : 1)
+        }
+    }
+}
+
+/// Half-circle arc used for the upper and lower jaw outlines.
+struct JawArc: Shape {
+    let center: CGPoint
+    let radius: CGFloat
+    /// `true` = top half (start 180°, end 0° clockwise=false);
+    /// `false` = bottom half (start 0°, end 180° clockwise=false).
+    let upper: Bool
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        if upper {
+            p.addArc(center: center, radius: radius,
+                     startAngle: .degrees(180), endAngle: .degrees(0),
+                     clockwise: false)
+        } else {
+            p.addArc(center: center, radius: radius,
+                     startAngle: .degrees(0), endAngle: .degrees(180),
+                     clockwise: false)
+        }
+        return p
     }
 }
 
 // MARK: - Tooth Callout
 
-@available(macOS 12, *)
 struct ToothCallout: View {
     let tooth: String
 
@@ -170,42 +186,31 @@ struct ToothCallout: View {
 
 // MARK: - Lion Jaw Diagram
 
-@available(macOS 12, *)
+/// Lion jaw — six teeth along the upper arc, with enlarged canines at
+/// positions 1 and 4. Rebuilt with Shape views.
 struct LionJawDiagram: View {
+    private let center = CGPoint(x: 200, y: 100)
+    private let radius: CGFloat = 70
+
     var body: some View {
-        Canvas { context, _ in
-            let center = CGPoint(x: 200, y: 100)
-            let radius: CGFloat = 70
+        ZStack(alignment: .topLeading) {
+            JawArc(center: center, radius: radius, upper: true)
+                .stroke(Color.red.opacity(0.6), lineWidth: 4)
+            JawArc(center: center, radius: radius, upper: false)
+                .stroke(Color.red.opacity(0.6), lineWidth: 4)
 
-            // Upper jaw
-            var upperPath = Path()
-            upperPath.addArc(center: center, radius: radius, startAngle: .degrees(180), endAngle: .degrees(0), clockwise: false)
-            context.stroke(
-                upperPath,
-                with: .color(.red.opacity(0.6)),
-                lineWidth: 4
-            )
-
-            // Lower jaw
-            var lowerPath = Path()
-            lowerPath.addArc(center: center, radius: radius, startAngle: .degrees(0), endAngle: .degrees(180), clockwise: false)
-            context.stroke(
-                lowerPath,
-                with: .color(.red.opacity(0.6)),
-                lineWidth: 4
-            )
-
-            // Lion's larger canines and teeth
-            for i in 0..<6 {
-                let angle = CGFloat(i) * (180 / 6)
-                let radians = angle * .pi / 180
+            ForEach(0..<6, id: \.self) { i in
+                let angleDeg = CGFloat(i) * (180 / 6)
+                let radians = angleDeg * .pi / 180
                 let x = center.x + radius * cos(radians)
                 let y = center.y - radius * sin(radians)
-                let size: CGFloat = (i == 1 || i == 4) ? 20 : 14 // Larger canines
-                let toothRect = CGRect(x: x - 4, y: y - size / 2, width: 8, height: size)
-                let path = Path(roundedRect: toothRect, cornerRadius: 2)
-                context.fill(path, with: .color(.white))
-                context.stroke(path, with: .color(.gray), lineWidth: 1)
+                let size: CGFloat = (i == 1 || i == 4) ? 20 : 14
+                ZStack {
+                    RoundedRectangle(cornerRadius: 2).fill(Color.white)
+                    RoundedRectangle(cornerRadius: 2).stroke(Color.gray, lineWidth: 1)
+                }
+                .frame(width: 8, height: size)
+                .position(x: x, y: y)
             }
         }
     }

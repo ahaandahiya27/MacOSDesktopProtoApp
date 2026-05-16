@@ -5,7 +5,8 @@ import SwiftUI
 /// A vertical tube (oesophagus) drawn with rounded rectangles. Tap "Swallow!"
 /// and a food bolus animates downward in a peristaltic squeeze pattern. Speed
 /// slider 0.5× to 2×. Caption from ch02_t01_c07.
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — OesophagusView and the bolus marker
+/// now use stacked RoundedRectangle shapes instead of two Canvas blocks.
 struct Scene2_TheSwallowWave: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -34,16 +35,13 @@ struct Scene2_TheSwallowWave: View {
                         .frame(width: 100, height: 300)
 
                     if isBolus {
-                        Canvas { context, _ in
-                            let centerX = 50.0
-                            let y = 50 + bolusPosition * 200
-                            let rect = CGRect(x: centerX - 20, y: y - 15, width: 40, height: 30)
-                            context.fill(
-                                Path(roundedRect: rect, cornerRadius: 8),
-                                with: .color(.brown.opacity(0.8))
-                            )
-                        }
-                        .frame(width: 100, height: 300)
+                        // Brown food bolus marker (was Canvas) — positioned by
+                        // bolusPosition (0...1) inside the 100x300 oesophagus.
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(Color.compatBrown.opacity(0.8))
+                            .frame(width: 40, height: 30)
+                            .position(x: 50, y: 50 + bolusPosition * 200)
+                            .frame(width: 100, height: 300, alignment: .topLeading)
                     }
                 }
 
@@ -124,44 +122,32 @@ struct Scene2_TheSwallowWave: View {
 
 // MARK: - Oesophagus View
 
-@available(macOS 12, *)
+/// Oesophagus rendered as 10 stacked RoundedRectangle segments. The
+/// `squeeze` parameter (0...1) defines where the peristaltic wave is —
+/// segments near that position narrow to simulate the muscle squeeze.
+/// Geometry identical to the old Canvas implementation.
 struct OesophagusView: View {
     let bolusPosition: CGFloat
     let squeeze: CGFloat
 
+    private let tubeX: CGFloat = 25
+    private let tubeWidth: CGFloat = 50
+    private let tubeHeight: CGFloat = 300
+    private let segmentCount = 10
+
     var body: some View {
-        Canvas { context, _ in
-            let tubeX = 25.0
-            let tubeWidth = 50.0
-            let tubeHeight = 300.0
-
-            // Draw segments of the tube with squeeze effect
-            for i in 0..<10 {
-                let y = CGFloat(i) * (tubeHeight / 10)
-                let segmentHeight = tubeHeight / 10
-
-                // Calculate squeeze at this segment
-                let squeezeAtSegment: CGFloat
-                let squeezePos = squeeze * 10
+        ZStack(alignment: .topLeading) {
+            ForEach(0..<segmentCount, id: \.self) { i in
+                let y = CGFloat(i) * (tubeHeight / CGFloat(segmentCount))
+                let segH = tubeHeight / CGFloat(segmentCount)
+                let squeezePos = squeeze * CGFloat(segmentCount)
                 let dist = abs(CGFloat(i) - squeezePos)
-                if dist < 2 {
-                    squeezeAtSegment = max(0, 1 - dist / 2) * 8
-                } else {
-                    squeezeAtSegment = 0
-                }
-
-                let width = max(20, tubeWidth - squeezeAtSegment)
-                let rect = CGRect(
-                    x: tubeX + (tubeWidth - width) / 2,
-                    y: y,
-                    width: width,
-                    height: segmentHeight
-                )
-                context.stroke(
-                    Path(roundedRect: rect, cornerRadius: 4),
-                    with: .color(.gray.opacity(0.5)),
-                    lineWidth: 2
-                )
+                let squeezeAt: CGFloat = dist < 2 ? max(0, 1 - dist / 2) * 8 : 0
+                let w = max(20, tubeWidth - squeezeAt)
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.gray.opacity(0.5), lineWidth: 2)
+                    .frame(width: w, height: segH)
+                    .position(x: tubeX + tubeWidth / 2, y: y + segH / 2)
             }
         }
     }
