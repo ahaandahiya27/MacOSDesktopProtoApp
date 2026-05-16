@@ -15,6 +15,13 @@ final class SettingsManager: ObservableObject {
         static let parentPINEnabled = "parentPINEnabled"
         static let speechRate = "speechRate"
         static let speechLanguage = "speechLanguage"
+        static let autoAdvanceOnCorrect = "autoAdvanceOnCorrect"
+    }
+
+    /// Auto-advance to the next sibling question after a correct answer.
+    /// Off by default — flashcard-style drilling can enable it.
+    @Published var autoAdvanceOnCorrect: Bool {
+        didSet { defaults.set(autoAdvanceOnCorrect, forKey: Keys.autoAdvanceOnCorrect) }
     }
 
     // MARK: - Offline preference
@@ -62,6 +69,7 @@ final class SettingsManager: ObservableObject {
         let storedRate = defaults.float(forKey: Keys.speechRate)
         self.speechRate = storedRate > 0 ? storedRate : 0.9
         self.speechLanguage = defaults.string(forKey: Keys.speechLanguage) ?? "en-IN"
+        self.autoAdvanceOnCorrect = defaults.bool(forKey: Keys.autoAdvanceOnCorrect)
     }
 
     // MARK: - Keychain

@@ -581,6 +581,7 @@ struct QuestionDetailView: View {
         ))
         attemptOutcome = isCorrect ? .correct : .incorrect(userInput: userInput)
         revealSolution = true
+        maybeAutoAdvanceAfterCorrect(isCorrect)
     }
 
     private func recordMCQAttempt(options: [String]) {
@@ -596,6 +597,7 @@ struct QuestionDetailView: View {
         ))
         attemptOutcome = isCorrect ? .correct : .incorrect(userInput: selected)
         revealSolution = true
+        maybeAutoAdvanceAfterCorrect(isCorrect)
     }
 
     private func recordMatchAttempt(pairs: [MatchPair]) {
@@ -614,6 +616,21 @@ struct QuestionDetailView: View {
         ))
         attemptOutcome = allCorrect ? .correct : .incorrect(userInput: summary)
         revealSolution = true
+        maybeAutoAdvanceAfterCorrect(allCorrect)
+    }
+
+    /// If the user has flipped on "Auto-advance after correct answer" in
+    /// Settings AND there's a next sibling, jump to the next question after
+    /// a brief delay so the kid can read the green banner.
+    private func maybeAutoAdvanceAfterCorrect(_ isCorrect: Bool) {
+        guard isCorrect, SettingsManager.shared.autoAdvanceOnCorrect, hasNext else { return }
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 1_400_000_000)
+            // The user may have manually navigated away during the delay.
+            if hasNext && attemptOutcome == .correct {
+                gotoNext()
+            }
+        }
     }
 }
 

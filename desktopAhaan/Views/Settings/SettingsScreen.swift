@@ -249,6 +249,15 @@ struct SettingsScreen: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
+            Section(header: Text("Quiz Flow")) {
+                Toggle("Auto-advance after correct answer",
+                       isOn: $settings.autoAdvanceOnCorrect)
+                Text("When on, the next question is shown automatically about a second after you get one right. Useful for fast flashcard-style drilling.")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
             Section(header: Text("Data")) {
                 Button(action: { showClearConfirm = true }) {
                     Text("Clear All History")
