@@ -97,7 +97,7 @@ struct Scene3_MoonPhasesWheel: View {
                                     .font(.body)
                                     .lineSpacing(4)
                             } else {
-                                Label("Phases of the Moon", systemImage: "hand.tap.fill")
+                                Label("Phases of the Moon", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                                     .font(.title2.bold())
                                 Text("The Moon does not produce its own light -- it reflects sunlight. As it orbits Earth, we see different amounts of the lit side. One full cycle takes about 29.5 days. Tap each card to explore!")
                                     .font(.body)

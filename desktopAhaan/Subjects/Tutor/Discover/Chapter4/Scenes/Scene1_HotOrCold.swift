@@ -82,7 +82,7 @@ struct Scene1_HotOrCold: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Hot or Cold?", systemImage: "hand.raised.fingers.spread")
+                            Label("Hot or Cold?", systemImage: SFSymbolCompat.name("hand.raised.fingers.spread"))
                                 .font(.title2.bold())
                             Text("Different objects feel hot or cold because they are at different temperatures. Tap each object to see its temperature on the thermometer!")
                                 .font(.body)

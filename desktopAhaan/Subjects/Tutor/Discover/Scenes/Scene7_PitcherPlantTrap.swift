@@ -84,7 +84,7 @@ struct Scene7_PitcherPlantTrap: View {
             .frame(width: 240, height: 340)
 
             if nitrogenAdded {
-                Label("Nitrogen absorbed: +1 🌱", systemImage: "leaf.arrow.circlepath")
+                Label("Nitrogen absorbed: +1 🌱", systemImage: SFSymbolCompat.name("leaf.arrow.circlepath"))
                     .font(.headline)
                     .foregroundColor(.green)
                     .transition(.opacity.combined(with: .scale))

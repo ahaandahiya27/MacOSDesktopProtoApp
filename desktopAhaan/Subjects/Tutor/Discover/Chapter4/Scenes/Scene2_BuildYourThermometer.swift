@@ -77,7 +77,7 @@ struct Scene2_BuildYourThermometer: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Build Your Thermometer", systemImage: "thermometer.medium")
+                            Label("Build Your Thermometer", systemImage: SFSymbolCompat.name("thermometer.medium"))
                                 .font(.title2.bold())
                             Text("A thermometer measures temperature. The liquid inside expands when heated and shrinks when cooled. Drag the mercury or use the buttons!")
                                 .font(.body)
@@ -157,7 +157,7 @@ struct Scene2_BuildYourThermometer: View {
 
     private var digitalThermometer: some View {
         VStack(spacing: 8) {
-            Image(systemName: "thermometer.medium")
+            Image(systemName: SFSymbolCompat.name("thermometer.medium"))
                 .font(.system(size: 60))
                 .foregroundColor(.red)
             Text(String(format: "%.1f °C", tempC))

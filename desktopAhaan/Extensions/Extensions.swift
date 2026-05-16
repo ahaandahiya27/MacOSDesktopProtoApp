@@ -56,6 +56,53 @@ extension Color {
     static let sanskritBackground = Color(NSColor.windowBackgroundColor)
 }
 
+// MARK: - SF Symbols backfill for Big Sur
+
+/// Big Sur ships SF Symbols 2.0. Symbols introduced in SF Symbols 3 (macOS 12)
+/// or 4 (macOS 13) render as missing glyphs on macOS 11. Call sites pass the
+/// modern symbol name; on macOS 12+ this is returned unchanged, on Big Sur the
+/// closest SF Symbols 1/2 equivalent is substituted.
+enum SFSymbolCompat {
+    static func name(_ modern: String) -> String {
+        if #available(macOS 12, *) {
+            return modern
+        }
+        switch modern {
+        case "bird.fill":                  return "pawprint.fill"
+        case "flask.fill":                 return "drop.fill"
+        case "mouth.fill":                 return "sparkles"
+        case "frying.pan.fill":            return "fork.knife"
+        case "globe.europe.africa.fill":   return "globe"
+        case "globe.americas.fill":        return "globe"
+        case "hand.raised.fingers.spread": return "hand.raised.fill"
+        case "hand.tap.fill":              return "hand.point.up.left.fill"
+        case "hand.tap":                   return "hand.point.up.left"
+        case "leaf.arrow.circlepath":      return "leaf.fill"
+        case "thermometer.medium":         return "thermometer"
+        case "thermometer.high":           return "thermometer"
+        case "shield.lefthalf.filled":     return "shield.fill"
+        case "water.waves":                return "drop.fill"
+        case "list.bullet.clipboard.fill": return "list.bullet"
+        default:                           return modern
+        }
+    }
+}
+
+// MARK: - Hardware tier for the 2014 iMac target
+
+/// Picks animation budgets that work on a Late-2014 iMac (AMD R9 M290X 2 GB).
+/// On macOS 11 we assume we're on that hardware and halve particle / frame
+/// rate budgets. On modern macOS we keep the rich animations.
+enum HardwareTier {
+    static var isLegacy: Bool {
+        if #available(macOS 12, *) { return false }
+        return true
+    }
+    static var particleBudget: Int { isLegacy ? 40 : 80 }
+    static var animationFPS: Double { isLegacy ? 20 : 30 }
+    static var animationInterval: TimeInterval { 1.0 / animationFPS }
+}
+
 // MARK: - Design tokens
 
 enum DesignTokens {

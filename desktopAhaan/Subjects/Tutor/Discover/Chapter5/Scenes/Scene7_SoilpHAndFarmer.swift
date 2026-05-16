@@ -124,7 +124,7 @@ struct Scene7_SoilpHAndFarmer: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Why Farmers Test Soil", systemImage: "leaf.arrow.circlepath")
+                            Label("Why Farmers Test Soil", systemImage: SFSymbolCompat.name("leaf.arrow.circlepath"))
                                 .font(.title2.bold())
                             if scenario == 2 {
                                 Text("Plants grow best in soil with pH near 7 (neutral). If soil is too acidic, farmers add lime (a base). If too basic, they add organic matter (which is slightly acidic). This is neutralisation at work on the farm!")

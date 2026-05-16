@@ -75,7 +75,7 @@ struct Scene7_MigrationSuperhero: View {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedFact, let fact = facts.first(where: { $0.id == idx }) {
-                                Label("\(fact.bird)", systemImage: "bird.fill")
+                                Label("\(fact.bird)", systemImage: SFSymbolCompat.name("bird.fill"))
                                     .font(.title2.bold())
                                 HStack(spacing: 6) {
                                     Image(systemName: "arrow.right")
@@ -88,7 +88,7 @@ struct Scene7_MigrationSuperhero: View {
                                     .font(.body)
                                     .lineSpacing(4)
                             } else {
-                                Label("Bird Migration", systemImage: "bird.fill")
+                                Label("Bird Migration", systemImage: SFSymbolCompat.name("bird.fill"))
                                     .font(.title2.bold())
                                 Text("Many birds migrate thousands of kilometres to escape harsh winters and find food. Tap each bird below to learn about the world's most incredible migrations!")
                                     .font(.body)
@@ -123,7 +123,7 @@ struct Scene7_MigrationSuperhero: View {
             }
         } label: {
             VStack(spacing: 4) {
-                Image(systemName: "bird.fill")
+                Image(systemName: SFSymbolCompat.name("bird.fill"))
                     .font(.title3)
                     .foregroundColor(isSelected ? .white : Color.compatIndigo)
                 Text(fact.bird)

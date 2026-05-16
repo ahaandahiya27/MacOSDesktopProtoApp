@@ -100,7 +100,7 @@ struct Scene3_InsideALeaf: View {
                     }
                 } else {
                     Label("Tap any glowing dot on the leaf above.",
-                          systemImage: "hand.tap.fill")
+                          systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout)
                         .foregroundColor(.secondary)
                 }

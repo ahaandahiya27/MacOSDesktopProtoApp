@@ -103,7 +103,7 @@ struct Scene1_SourOrBitter: View {
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
-                                Label("Sour or Bitter?", systemImage: "mouth.fill")
+                                Label("Sour or Bitter?", systemImage: SFSymbolCompat.name("mouth.fill"))
                                     .font(.title2.bold())
                                 Text("Acids taste sour, bases taste bitter. Tap the correct category for each item!")
                                     .font(.body)

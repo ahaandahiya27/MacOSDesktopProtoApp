@@ -130,7 +130,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Fluffy Birds, Fluffy Sweaters", systemImage: "bird.fill")
+                            Label("Fluffy Birds, Fluffy Sweaters", systemImage: SFSymbolCompat.name("bird.fill"))
                                 .font(.title2.bold())
                             Text("When it is cold, birds fluff their feathers to trap air between them. Air is a very poor conductor — it is one of the best insulators! Woollen sweaters work the same way: tiny air pockets between the fibres keep you warm.")
                                 .font(.body)

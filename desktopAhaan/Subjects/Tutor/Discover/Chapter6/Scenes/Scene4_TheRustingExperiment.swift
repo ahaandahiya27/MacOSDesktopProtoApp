@@ -96,7 +96,7 @@ struct Scene4_TheRustingExperiment: View {
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
-                                Label("What does iron need to rust?", systemImage: "flask.fill")
+                                Label("What does iron need to rust?", systemImage: SFSymbolCompat.name("flask.fill"))
                                     .font(.title2.bold())
                                 Text("Tap each test tube to fast-forward 2 weeks and see what happens to the nail.")
                                     .font(.body)

@@ -117,7 +117,7 @@ struct Scene1_SpinningEarth: View {
 
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Day & Night", systemImage: "globe.americas.fill")
+                            Label("Day & Night", systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                 .font(.title2.bold())
                             Text(explanationText)
                                 .font(.body)

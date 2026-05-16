@@ -39,7 +39,7 @@ struct Scene8_TemperatureVsHeat: View {
                             .frame(width: 50, height: 70)
                             .accessibilityLabel("Small glass, 50 millilitres at 80 degrees")
 
-                            Image(systemName: "thermometer.high")
+                            Image(systemName: SFSymbolCompat.name("thermometer.high"))
                                 .font(.title2)
                                 .foregroundColor(.red)
                             Text("80°C")
@@ -68,7 +68,7 @@ struct Scene8_TemperatureVsHeat: View {
                             .frame(width: 90, height: 120)
                             .accessibilityLabel("Large glass, 500 millilitres at 80 degrees")
 
-                            Image(systemName: "thermometer.high")
+                            Image(systemName: SFSymbolCompat.name("thermometer.high"))
                                 .font(.title2)
                                 .foregroundColor(.red)
                             Text("80°C")

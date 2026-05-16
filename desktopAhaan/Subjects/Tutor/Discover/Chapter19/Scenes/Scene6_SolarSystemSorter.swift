@@ -148,7 +148,7 @@ struct Scene6_SolarSystemSorter: View {
                                     .foregroundColor(.secondary)
                                     .padding(.top, 2)
                             } else {
-                                Label("Order the Planets", systemImage: "globe.americas.fill")
+                                Label("Order the Planets", systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                     .font(.title2.bold())
                                 Text("Tap a planet chip, then tap a numbered slot to place it. Tap a filled slot to remove it. Arrange all 8 planets from closest to farthest from the Sun, then check your answer!")
                                     .font(.body)

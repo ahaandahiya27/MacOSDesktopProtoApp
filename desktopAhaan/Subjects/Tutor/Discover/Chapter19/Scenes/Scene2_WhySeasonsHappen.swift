@@ -101,13 +101,13 @@ struct Scene2_WhySeasonsHappen: View {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedPosition, let pos = positions.first(where: { $0.id == idx }) {
-                                Label("\(pos.label) -- \(pos.northSeason) (North)", systemImage: "globe.europe.africa.fill")
+                                Label("\(pos.label) -- \(pos.northSeason) (North)", systemImage: SFSymbolCompat.name("globe.europe.africa.fill"))
                                     .font(.title2.bold())
                                 Text(pos.description)
                                     .font(.body)
                                     .lineSpacing(4)
                             } else {
-                                Label("Earth's Tilted Axis", systemImage: "hand.tap.fill")
+                                Label("Earth's Tilted Axis", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                                     .font(.title2.bold())
                                 Text("Seasons are NOT caused by Earth being closer or farther from the Sun. They happen because Earth's axis is tilted at 23.5 degrees. Tap each position on the orbit to explore!")
                                     .font(.body)

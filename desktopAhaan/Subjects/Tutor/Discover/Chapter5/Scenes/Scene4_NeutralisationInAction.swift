@@ -105,7 +105,7 @@ struct Scene4_NeutralisationInAction: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Neutralisation", systemImage: "flask.fill")
+                            Label("Neutralisation", systemImage: SFSymbolCompat.name("flask.fill"))
                                 .font(.title2.bold())
                             Text("When an acid and a base react, they neutralise each other to form a salt and water. The H\u{207A} ions from the acid combine with OH\u{207B} ions from the base.")
                                 .font(.body)

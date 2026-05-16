@@ -80,7 +80,7 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                     }
                 } icon: {
-                    Image(systemName: "list.bullet.clipboard.fill")
+                    Image(systemName: SFSymbolCompat.name("list.bullet.clipboard.fill"))
                 }
                 .tag(SidebarSelection.quizBank)
             }

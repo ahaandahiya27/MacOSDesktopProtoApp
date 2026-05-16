@@ -106,7 +106,7 @@ struct Scene5_TidesAndTheMoon: View {
                                     .font(.body)
                                     .lineSpacing(4)
                             } else {
-                                Label("Ocean Tides", systemImage: "water.waves")
+                                Label("Ocean Tides", systemImage: SFSymbolCompat.name("water.waves"))
                                     .font(.title2.bold())
                                 Text("The Moon's gravity is the main cause of ocean tides on Earth. Tap each topic above to learn how tides work!")
                                     .font(.body)

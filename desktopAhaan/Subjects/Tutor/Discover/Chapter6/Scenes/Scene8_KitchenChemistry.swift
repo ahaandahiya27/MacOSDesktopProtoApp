@@ -93,7 +93,7 @@ struct Scene8_KitchenChemistry: View {
                             .transition(.scale.combined(with: .opacity))
 
                         HStack(spacing: 6) {
-                            Image(systemName: "flask.fill")
+                            Image(systemName: SFSymbolCompat.name("flask.fill"))
                                 .foregroundColor(.purple)
                             Text(exp.type)
                                 .font(.headline)

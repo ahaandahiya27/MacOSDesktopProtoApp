@@ -149,7 +149,7 @@ struct Scene5_GalvanisationShield: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Preventing rust", systemImage: "shield.lefthalf.filled")
+                            Label("Preventing rust", systemImage: SFSymbolCompat.name("shield.lefthalf.filled"))
                                 .font(.title2.bold())
                             Text("Galvanisation coats iron with a layer of zinc. Even if scratched, zinc reacts first, protecting the iron underneath. Other methods include:")
                                 .font(.body)

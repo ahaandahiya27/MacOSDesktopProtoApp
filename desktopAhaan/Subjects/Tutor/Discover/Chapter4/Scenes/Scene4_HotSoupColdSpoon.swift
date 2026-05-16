@@ -121,7 +121,7 @@ struct Scene4_HotSoupColdSpoon: View {
                     Spacer()
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("Hot Soup, Cold Spoon", systemImage: "frying.pan.fill")
+                            Label("Hot Soup, Cold Spoon", systemImage: SFSymbolCompat.name("frying.pan.fill"))
                                 .font(.title2.bold())
                             Text(isWooden
                                  ? "Wood is a poor conductor (insulator). Heat barely travels through it, so the handle stays cool."

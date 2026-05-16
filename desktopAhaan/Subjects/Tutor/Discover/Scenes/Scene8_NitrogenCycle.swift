@@ -96,7 +96,7 @@ struct Scene8_NitrogenCycle: View {
                     }
                     Text(sel.explanation).font(.callout).padding(.top, 4)
                 } else {
-                    Label("Tap any arrow on the diagram.", systemImage: "hand.tap.fill")
+                    Label("Tap any arrow on the diagram.", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout).foregroundColor(.secondary)
                 }
             }
