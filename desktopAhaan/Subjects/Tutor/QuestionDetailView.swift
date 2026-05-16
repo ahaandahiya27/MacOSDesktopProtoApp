@@ -51,6 +51,7 @@ struct QuestionDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
+                breadcrumb
                 header
                 promptCard
                 if let opts = question.options, !opts.isEmpty {
@@ -158,6 +159,35 @@ struct QuestionDetailView: View {
     }
 
     // MARK: - Sections
+
+    /// Walks the pack to find which chapter+topic owns this question. Returns
+    /// nil for orphans (shouldn't happen in normal data but stays defensive).
+    private var location: (chapter: Chapter, topic: Topic)? {
+        for chapter in pack.chapters {
+            for topic in chapter.topics where topic.questions.contains(where: { $0.id == question.id }) {
+                return (chapter, topic)
+            }
+        }
+        return nil
+    }
+
+    @ViewBuilder
+    private var breadcrumb: some View {
+        if let loc = location {
+            HStack(spacing: 4) {
+                Text(pack.coverEmoji)
+                Text(pack.title).font(.caption.weight(.medium))
+                Text("›").foregroundColor(.secondary)
+                Text("Ch. \(loc.chapter.number)").font(.caption)
+                Text("›").foregroundColor(.secondary)
+                Text(loc.topic.title).font(.caption).lineLimit(1).truncationMode(.tail)
+                Spacer(minLength: 0)
+            }
+            .foregroundColor(.secondary)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(pack.title), Chapter \(loc.chapter.number), \(loc.topic.title)")
+        }
+    }
 
     private var header: some View {
         HStack(spacing: 12) {

@@ -22,6 +22,7 @@ struct ConceptDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
+                breadcrumb
                 header
                 depthPicker
                 articleButton
@@ -59,6 +60,34 @@ struct ConceptDetailView: View {
     }
 
     // MARK: - Sections
+
+    /// Walks the pack to find which chapter+topic owns this concept.
+    private var location: (chapter: Chapter, topic: Topic)? {
+        for chapter in pack.chapters {
+            for topic in chapter.topics where topic.concepts.contains(where: { $0.id == concept.id }) {
+                return (chapter, topic)
+            }
+        }
+        return nil
+    }
+
+    @ViewBuilder
+    private var breadcrumb: some View {
+        if let loc = location {
+            HStack(spacing: 4) {
+                Text(pack.coverEmoji)
+                Text(pack.title).font(.caption.weight(.medium))
+                Text("›").foregroundColor(.secondary)
+                Text("Ch. \(loc.chapter.number)").font(.caption)
+                Text("›").foregroundColor(.secondary)
+                Text(loc.topic.title).font(.caption).lineLimit(1).truncationMode(.tail)
+                Spacer(minLength: 0)
+            }
+            .foregroundColor(.secondary)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(pack.title), Chapter \(loc.chapter.number), \(loc.topic.title)")
+        }
+    }
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -133,20 +162,45 @@ struct ConceptDetailView: View {
             .padding(.top, 8)
     }
 
+    @ViewBuilder
     private var explanationCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(depth.displayName)
-                .font(.caption).foregroundColor(.secondary).textCase(.uppercase)
-            Text(concept.explanation(at: depth))
-                .font(.body)
-                .lineSpacing(4)
+        let text = concept.explanation(at: depth)
+                          .trimmingCharacters(in: .whitespacesAndNewlines)
+        if text.isEmpty {
+            // No explanation at this depth — common for the auto-generated
+            // Sanskrit vocabulary entries. Show a friendly fallback rather
+            // than a blank panel.
+            VStack(alignment: .leading, spacing: 6) {
+                Label("Glossary entry", systemImage: "book.closed.fill")
+                    .font(.caption.weight(.semibold))
+                    .foregroundColor(.secondary)
+                Text("\(concept.title) — no \(depth.displayName.lowercased()) explanation has been written for this entry yet. Use the Translate tab to look up usage, or pick a different depth above.")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    .lineSpacing(4)
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.gray.opacity(0.07))
+            )
+        } else {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(depth.displayName)
+                    .font(.caption).foregroundColor(.secondary).textCase(.uppercase)
+                Text(text)
+                    .font(.body)
+                    .lineSpacing(4)
+                    .devanagariAwareLocale(packId: pack.id)
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.gray.opacity(0.1))
+            )
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: 14)
-                .fill(Color.gray.opacity(0.1))
-        )
     }
 
     private var reasoningCard: some View {

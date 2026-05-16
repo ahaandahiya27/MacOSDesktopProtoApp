@@ -15,8 +15,16 @@ private struct QuizBankContent: View {
     @State private var typeFilter: QuestionType? = nil
     @State private var difficultyFilter: Int? = nil
     @State private var chapterFilter: String? = nil
+    @State private var reviewFilter: ReviewFilter = .all
     @State private var searchText = ""
     @State private var cachedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] = []
+
+    enum ReviewFilter: String, CaseIterable, Identifiable {
+        case all = "All"
+        case reviewed = "Reviewed"
+        case needsReview = "Needs review"
+        var id: String { rawValue }
+    }
 
     private func rebuildCache() {
         cachedEntries = subjectRegistry.packs.flatMap { pack in
@@ -33,6 +41,11 @@ private struct QuizBankContent: View {
             if let tf = typeFilter, entry.question.questionType != tf { return false }
             if let df = difficultyFilter, entry.question.difficulty != df { return false }
             if let cf = chapterFilter, entry.chapter.id != cf { return false }
+            switch reviewFilter {
+            case .all: break
+            case .reviewed: if entry.question.needsHumanReview { return false }
+            case .needsReview: if !entry.question.needsHumanReview { return false }
+            }
             if !searchText.isEmpty {
                 let text = searchText.lowercased()
                 if !entry.question.prompt.lowercased().contains(text) { return false }
@@ -153,6 +166,14 @@ private struct QuizBankContent: View {
             }
             .frame(minWidth: 120)
 
+            Picker("Review", selection: $reviewFilter) {
+                ForEach(ReviewFilter.allCases) { rf in
+                    Text(rf.rawValue).tag(rf)
+                }
+            }
+            .fixedSize()
+            .help("Filter to questions a parent should triage (flagged with needsHumanReview).")
+
             Spacer()
         }
     }
@@ -191,6 +212,12 @@ private struct QuizBankRow: View {
                         .foregroundColor(Color.compatIndigo)
                         .accessibilityLabel("\(pack.title), Chapter \(chapter.number)")
                     QuestionDifficultyBadge(level: question.difficulty)
+                    if question.needsHumanReview {
+                        Label("Needs review", systemImage: "exclamationmark.triangle.fill")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundColor(.orange)
+                            .accessibilityLabel("Flagged for human review")
+                    }
                 }
             }
 
