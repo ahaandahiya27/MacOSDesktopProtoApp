@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 5 — Tides and the Moon.
 /// Shows Earth with tidal bulges and an orbiting Moon. Three info cards to explore:
 /// High Tide, Low Tide, Spring & Neap Tides.
-@available(macOS 12, *)
+
 struct Scene5_TidesAndTheMoon: View {
     let pack: SubjectPack
     let chapter: Chapter

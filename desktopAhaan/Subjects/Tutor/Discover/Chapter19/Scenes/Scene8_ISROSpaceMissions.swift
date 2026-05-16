@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 8 — ISRO Space Missions.
 /// Four Indian space mission cards side by side. Tap each for details.
 /// After all 4 explored, show GotIt.
-@available(macOS 12, *)
+
 struct Scene8_ISROSpaceMissions: View {
     let pack: SubjectPack
     let chapter: Chapter

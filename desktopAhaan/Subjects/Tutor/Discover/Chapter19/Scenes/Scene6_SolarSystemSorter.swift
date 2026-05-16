@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 6 — Solar System Sorter (Scored).
 /// 8 planets shown in random order. User taps a planet then taps a slot to place it.
 /// Score: 2 points per correct placement = max 16.
-@available(macOS 12, *)
+
 struct Scene6_SolarSystemSorter: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -19,7 +19,7 @@ struct Scene6_SolarSystemSorter: View {
         "Venus": .orange,
         "Earth": .blue,
         "Mars": .red,
-        "Jupiter": .brown,
+        "Jupiter": Color.compatBrown,
         "Saturn": .yellow,
         "Uranus": Color.compatCyan,
         "Neptune": Color.compatIndigo,

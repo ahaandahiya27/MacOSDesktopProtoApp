@@ -43,6 +43,14 @@ extension Color {
         }
     }
 
+    static var compatBrown: Color {
+        if #available(macOS 12, *) {
+            return .brown
+        } else {
+            return Color(red: 0.6, green: 0.42, blue: 0.25)
+        }
+    }
+
     static var sanskritPrimary: Color { compatIndigo }
     static let sanskritAccent = Color.orange
     static let sanskritBackground = Color(NSColor.windowBackgroundColor)

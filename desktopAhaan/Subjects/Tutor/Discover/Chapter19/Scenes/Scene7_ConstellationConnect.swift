@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 7 — Constellation Connect.
 /// Four constellation cards in a grid. Tap each to explore its details.
 /// After all 4 explored, show GotIt.
-@available(macOS 12, *)
+
 struct Scene7_ConstellationConnect: View {
     let pack: SubjectPack
     let chapter: Chapter

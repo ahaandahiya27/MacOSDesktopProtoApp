@@ -4,7 +4,7 @@ import SwiftUI
 /// Interactive day/night demonstration. A circle representing Earth with a vertical
 /// dividing line between day (yellow) and night (dark blue). Tap "Spin" to rotate.
 /// After 3 spins the Got It button appears.
-@available(macOS 12, *)
+
 struct Scene1_SpinningEarth: View {
     let pack: SubjectPack
     let chapter: Chapter

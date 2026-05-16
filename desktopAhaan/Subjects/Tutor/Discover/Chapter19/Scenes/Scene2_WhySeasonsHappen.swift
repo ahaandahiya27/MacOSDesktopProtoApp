@@ -4,7 +4,7 @@ import SwiftUI
 /// Shows Earth at four orbital positions around the Sun. The Earth circle has an
 /// axis tilted at 23.5 degrees. Tap each position to see which hemisphere tilts
 /// toward the Sun. After all 4 explored, Got It appears.
-@available(macOS 12, *)
+
 struct Scene2_WhySeasonsHappen: View {
     let pack: SubjectPack
     let chapter: Chapter

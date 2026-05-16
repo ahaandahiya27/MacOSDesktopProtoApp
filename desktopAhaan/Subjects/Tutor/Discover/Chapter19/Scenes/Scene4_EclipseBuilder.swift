@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 4 — Eclipse Builder.
 /// Two tabs: Solar Eclipse and Lunar Eclipse. Each shows Sun, Earth, Moon alignment diagram.
 /// User explores both to unlock GotIt.
-@available(macOS 12, *)
+
 struct Scene4_EclipseBuilder: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -149,7 +149,7 @@ struct Scene4_EclipseBuilder: View {
             Text(type == .solar
                  ? "Sun  >>>  Moon  >>>  Earth"
                  : "Sun  >>>  Earth  >>>  Moon")
-                .font(.caption.weight(.medium).monospaced())
+                .font(.system(.caption, design: .monospaced).weight(.medium))
                 .foregroundColor(.secondary)
         }
     }

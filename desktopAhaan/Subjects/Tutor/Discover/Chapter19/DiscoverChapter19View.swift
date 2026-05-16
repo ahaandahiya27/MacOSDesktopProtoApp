@@ -71,22 +71,10 @@ struct DiscoverChapter19View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        // Scenes that have been backported to Big Sur (macOS 11) run
-        // unconditionally. Everything else still needs macOS 12+ for Canvas
-        // / TimelineView and falls through to modernSceneContent.
-        if currentScene == 2 {
-            Scene3_MoonPhasesWheel(pack: pack, chapter: chapter,
-                                   onComplete: { markComplete(2) })
-        } else if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Every Ch.19 scene has been backported to Big Sur — none of them
+        // use Canvas or TimelineView. Scene 3 uses a custom Shape for the
+        // moon glyphs; the rest are pure SwiftUI primitives that have
+        // always been available on macOS 11.
         switch currentScene {
         case 0: Scene1_SpinningEarth(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_WhySeasonsHappen(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
