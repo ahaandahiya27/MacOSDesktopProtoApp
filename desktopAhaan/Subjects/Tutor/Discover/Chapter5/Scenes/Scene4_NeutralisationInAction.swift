@@ -112,7 +112,7 @@ struct Scene4_NeutralisationInAction: View {
                                 .lineSpacing(4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if pourProgress >= 1 {
                         GotItButton { onComplete() }

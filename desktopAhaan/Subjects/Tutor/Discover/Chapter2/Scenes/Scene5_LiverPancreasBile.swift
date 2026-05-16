@@ -148,7 +148,7 @@ struct Scene5_LiverPancreasBile: View {
                             .lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: 640)
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                 if allTapped {
                     GotItButton { onComplete() }

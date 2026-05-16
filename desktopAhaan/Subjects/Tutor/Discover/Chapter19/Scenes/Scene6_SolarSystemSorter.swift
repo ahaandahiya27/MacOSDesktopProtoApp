@@ -156,7 +156,7 @@ struct Scene6_SolarSystemSorter: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if isSubmitted {
                         GotItButton { onComplete(score) }

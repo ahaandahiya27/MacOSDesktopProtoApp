@@ -68,7 +68,7 @@ struct Scene4_TheRustingExperiment: View {
                             testTubeView(index: i, height: min(geo.size.height * 0.4, 280))
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)
 
                     Spacer()
@@ -90,7 +90,7 @@ struct Scene4_TheRustingExperiment: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     } else {
@@ -103,7 +103,7 @@ struct Scene4_TheRustingExperiment: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .padding(.bottom, 12)
                     }
                 }

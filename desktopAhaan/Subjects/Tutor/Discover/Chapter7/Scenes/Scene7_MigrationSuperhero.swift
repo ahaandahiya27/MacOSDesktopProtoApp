@@ -96,7 +96,7 @@ struct Scene7_MigrationSuperhero: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allExplored {
                         GotItButton { onComplete() }

@@ -108,7 +108,7 @@ struct Scene6_FourStomachsOfACow: View {
                             .lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: 640)
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)

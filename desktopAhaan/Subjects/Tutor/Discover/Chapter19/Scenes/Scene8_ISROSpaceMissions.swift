@@ -221,7 +221,7 @@ struct Scene8_ISROSpaceMissions: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allExplored {
                         GotItButton { onComplete() }

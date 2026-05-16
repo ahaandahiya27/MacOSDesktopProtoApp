@@ -113,7 +113,7 @@ struct Scene8_TemperatureVsHeat: View {
                                 .lineSpacing(4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
                     if poured {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

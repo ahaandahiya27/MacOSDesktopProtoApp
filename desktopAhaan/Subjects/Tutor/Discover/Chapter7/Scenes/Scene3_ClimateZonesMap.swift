@@ -148,7 +148,7 @@ struct Scene3_ClimateZonesMap: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allExplored {
                         GotItButton { onComplete() }

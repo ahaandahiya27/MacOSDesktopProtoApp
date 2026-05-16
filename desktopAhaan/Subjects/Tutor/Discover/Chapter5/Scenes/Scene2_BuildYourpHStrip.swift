@@ -68,7 +68,7 @@ struct Scene2_BuildYourpHStrip: View {
                     // Slider
                     Slider(value: $pH, in: 0...14, step: 0.5)
                         .accentColor(colorForPH(pH))
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .padding(.horizontal, 24)
                         .accessibilityLabel("pH slider, current value \(pH, specifier: "%.1f")")
 
@@ -92,7 +92,7 @@ struct Scene2_BuildYourpHStrip: View {
                                 .lineSpacing(4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

@@ -103,7 +103,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     } else {
@@ -116,7 +116,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .padding(.bottom, 12)
                     }
                 }

@@ -89,7 +89,7 @@ struct Scene3_ThreeIndicatorTests: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .transition(.opacity)
                     } else {
                         SoftShadowCard(padding: 18) {
@@ -101,7 +101,7 @@ struct Scene3_ThreeIndicatorTests: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
                     if allTested {

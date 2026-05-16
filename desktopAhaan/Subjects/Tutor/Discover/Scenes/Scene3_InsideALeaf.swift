@@ -105,7 +105,7 @@ struct Scene3_InsideALeaf: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .frame(maxWidth: 640)
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
 
             GotItButton(action: onComplete)
                 .padding(.bottom, 12)

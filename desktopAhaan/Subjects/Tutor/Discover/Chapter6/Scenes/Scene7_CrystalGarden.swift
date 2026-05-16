@@ -141,7 +141,7 @@ struct Scene7_CrystalGarden: View {
                         .lineSpacing(4)
                 }
             }
-            .frame(maxWidth: 640)
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
             GotItButton { onComplete() }

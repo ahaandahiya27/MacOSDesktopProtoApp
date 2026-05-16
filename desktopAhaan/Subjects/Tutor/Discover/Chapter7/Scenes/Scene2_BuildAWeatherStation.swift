@@ -144,7 +144,7 @@ struct Scene2_BuildAWeatherStation: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if stationComplete {
                         GotItButton { onComplete() }

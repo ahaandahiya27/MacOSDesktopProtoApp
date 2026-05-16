@@ -125,7 +125,7 @@ struct Scene5_AntStingFirstAid: View {
                                 }
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

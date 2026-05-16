@@ -141,7 +141,7 @@ struct Scene5_TropicalRainforestLife: View {
         VStack(spacing: 14) {
             Spacer()
             detailCard
-                .frame(maxWidth: 640)
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
 
             if allExplored {
                 GotItButton { onComplete() }

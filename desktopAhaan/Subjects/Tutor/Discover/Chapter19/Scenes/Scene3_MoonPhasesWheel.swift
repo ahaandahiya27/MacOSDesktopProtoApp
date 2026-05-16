@@ -105,7 +105,7 @@ struct Scene3_MoonPhasesWheel: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allDone {
                         GotItButton { onComplete() }

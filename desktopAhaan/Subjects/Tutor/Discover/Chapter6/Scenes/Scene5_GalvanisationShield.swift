@@ -161,7 +161,7 @@ struct Scene5_GalvanisationShield: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

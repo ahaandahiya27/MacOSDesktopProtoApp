@@ -99,7 +99,7 @@ struct Scene4_EclipseBuilder: View {
                                 .padding(.top, 4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allExplored {
                         GotItButton { onComplete() }

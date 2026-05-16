@@ -137,7 +137,7 @@ struct Scene7_SoilpHAndFarmer: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if scenario == 2 {
                         GotItButton { onComplete() }

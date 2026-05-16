@@ -59,7 +59,7 @@ struct Scene1_FluffToFibre: View {
                                 .lineSpacing(4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton {
                         onComplete()

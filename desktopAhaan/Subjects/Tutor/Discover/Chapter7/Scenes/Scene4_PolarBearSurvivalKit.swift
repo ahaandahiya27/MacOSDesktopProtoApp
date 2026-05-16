@@ -185,7 +185,7 @@ struct Scene4_PolarBearSurvivalKit: View {
         VStack(spacing: 14) {
             Spacer()
             detailCard
-                .frame(maxWidth: 640)
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
 
             if allTapped {
                 GotItButton { onComplete() }

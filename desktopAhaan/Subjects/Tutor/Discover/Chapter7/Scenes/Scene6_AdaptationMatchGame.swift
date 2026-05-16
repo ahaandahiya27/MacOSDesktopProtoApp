@@ -115,7 +115,7 @@ struct Scene6_AdaptationMatchGame: View {
                                 .lineSpacing(4)
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if isDone {
                         GotItButton { onComplete(score) }

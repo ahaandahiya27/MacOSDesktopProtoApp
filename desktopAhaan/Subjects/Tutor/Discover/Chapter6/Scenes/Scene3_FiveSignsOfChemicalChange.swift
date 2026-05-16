@@ -115,7 +115,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .transition(.opacity)
                     } else {
                         SoftShadowCard(padding: 18) {
@@ -127,7 +127,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                                     .lineSpacing(4)
                             }
                         }
-                        .frame(maxWidth: 640)
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
                     if allTapped {

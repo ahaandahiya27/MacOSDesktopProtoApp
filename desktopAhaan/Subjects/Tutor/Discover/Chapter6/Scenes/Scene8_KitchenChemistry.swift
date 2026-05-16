@@ -138,7 +138,7 @@ struct Scene8_KitchenChemistry: View {
                     }
                 }
             }
-            .frame(maxWidth: 640)
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
             GotItButton { onComplete() }

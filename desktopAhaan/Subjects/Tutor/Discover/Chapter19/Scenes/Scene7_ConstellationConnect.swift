@@ -219,7 +219,7 @@ struct Scene7_ConstellationConnect: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allExplored {
                         GotItButton { onComplete() }

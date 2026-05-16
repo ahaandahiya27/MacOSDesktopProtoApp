@@ -115,7 +115,7 @@ struct Scene2_WhySeasonsHappen: View {
                             }
                         }
                     }
-                    .frame(maxWidth: 640)
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if allDone {
                         GotItButton { onComplete() }
