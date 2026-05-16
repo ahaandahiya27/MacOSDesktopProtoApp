@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 2 — Tearing vs Burning Paper.
 /// Split screen: left side tears paper (physical), right side burns paper (chemical).
 /// Tap each side for explanation. After both tapped: comparison card + GotItButton.
-@available(macOS 12, *)
+
 struct Scene2_TearingVsBurningPaper: View {
     let pack: SubjectPack
     let chapter: Chapter

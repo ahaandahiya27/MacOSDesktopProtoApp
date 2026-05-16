@@ -71,22 +71,29 @@ struct DiscoverChapter6View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Scenes 1, 4, 5 still use TimelineView / Canvas (macOS 12+).
+        // The rest are over-cautiously gated and now run on macOS 11.
         switch currentScene {
-        case 0: Scene1_IceToWaterToSteam(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+        case 0:
+            if #available(macOS 12, *) {
+                Scene1_IceToWaterToSteam(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 0))
+            }
         case 1: Scene2_TearingVsBurningPaper(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2: Scene3_FiveSignsOfChemicalChange(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3: Scene4_TheRustingExperiment(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-        case 4: Scene5_GalvanisationShield(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
+        case 3:
+            if #available(macOS 12, *) {
+                Scene4_TheRustingExperiment(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
+            }
+        case 4:
+            if #available(macOS 12, *) {
+                Scene5_GalvanisationShield(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 4))
+            }
         case 5: Scene6_PhysicalOrChemicalSorting(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6: Scene7_CrystalGarden(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
         case 7: Scene8_KitchenChemistry(pack: pack, chapter: chapter, onComplete: { markComplete(7) })

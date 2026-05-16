@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 6 — Physical or Chemical Sorting.
 /// Drag-and-drop game. 12 changes shown as cards. Two zones: Physical / Chemical.
 /// Score out of 12. Uses DragGesture with zone rect tracking.
-@available(macOS 12, *)
+
 struct Scene6_PhysicalOrChemicalSorting: View {
     let pack: SubjectPack
     let chapter: Chapter

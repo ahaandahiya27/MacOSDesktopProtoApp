@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 7 — Crystal Garden.
 /// Supersaturated solution simulation: heat water, add salt, cool slowly, watch crystals grow.
 /// Tap stages to advance. Shows seed crystal triggering rapid growth.
-@available(macOS 12, *)
+
 struct Scene7_CrystalGarden: View {
     let pack: SubjectPack
     let chapter: Chapter

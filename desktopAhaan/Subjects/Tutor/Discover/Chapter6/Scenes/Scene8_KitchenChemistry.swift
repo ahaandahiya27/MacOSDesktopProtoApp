@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 8 — Kitchen Chemistry.
 /// Three kitchen experiments: baking soda + vinegar volcano, lemon juice on baking soda,
 /// and turmeric milk turning red with soap. Tap each to see the reaction.
-@available(macOS 12, *)
+
 struct Scene8_KitchenChemistry: View {
     let pack: SubjectPack
     let chapter: Chapter

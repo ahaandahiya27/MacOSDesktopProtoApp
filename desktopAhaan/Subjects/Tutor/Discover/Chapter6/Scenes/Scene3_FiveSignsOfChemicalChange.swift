@@ -3,7 +3,7 @@ import SwiftUI
 /// Scene 3 — Five Signs of Chemical Change.
 /// Five interactive cards. Tap each for an animated example + explanation.
 /// After all 5 tapped: GotItButton.
-@available(macOS 12, *)
+
 struct Scene3_FiveSignsOfChemicalChange: View {
     let pack: SubjectPack
     let chapter: Chapter
