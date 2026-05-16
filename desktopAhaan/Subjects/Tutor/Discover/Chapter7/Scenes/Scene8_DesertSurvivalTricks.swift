@@ -2,7 +2,8 @@ import SwiftUI
 
 /// Scene 8 — Desert Survival Tricks.
 /// Three desert animals side by side. Tap each for adaptations.
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — sand dunes drawn via DesertDunesShape
+/// instead of a SwiftUI Canvas. .brown swapped for Color.compatBrown.
 struct Scene8_DesertSurvivalTricks: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -21,7 +22,7 @@ struct Scene8_DesertSurvivalTricks: View {
     }
 
     private let animals: [DesertAnimal] = [
-        DesertAnimal(id: 0, name: "Camel", symbol: "hare.fill", color: .brown,
+        DesertAnimal(id: 0, name: "Camel", symbol: "hare.fill", color: Color.compatBrown,
                      adaptations: [
                         (title: "Hump", detail: "The hump stores fat (not water!) which is broken down for energy and metabolic water when food is scarce."),
                         (title: "Minimal Sweating", detail: "Camels can tolerate body temperature rising to 42 C before sweating, conserving precious water."),
@@ -59,39 +60,21 @@ struct Scene8_DesertSurvivalTricks: View {
                     ZStack {
                         // Desert gradient
                         LinearGradient(
-                            colors: [.yellow.opacity(0.3), .orange.opacity(0.2), .brown.opacity(0.15)],
+                            colors: [Color.yellow.opacity(0.3), Color.orange.opacity(0.2), Color.compatBrown.opacity(0.15)],
                             startPoint: .top,
                             endPoint: .bottom
                         )
 
                         // Sun
                         Circle()
-                            .fill(.yellow.opacity(0.5))
+                            .fill(Color.yellow.opacity(0.5))
                             .frame(width: 50, height: 50)
                             .offset(x: 180, y: -60)
 
-                        // Sand dunes (simplified)
-                        Canvas { ctx, size in
-                            var dunePath = Path()
-                            dunePath.move(to: CGPoint(x: 0, y: size.height * 0.7))
-                            dunePath.addQuadCurve(
-                                to: CGPoint(x: size.width * 0.4, y: size.height * 0.6),
-                                control: CGPoint(x: size.width * 0.2, y: size.height * 0.5)
-                            )
-                            dunePath.addQuadCurve(
-                                to: CGPoint(x: size.width * 0.8, y: size.height * 0.65),
-                                control: CGPoint(x: size.width * 0.6, y: size.height * 0.75)
-                            )
-                            dunePath.addQuadCurve(
-                                to: CGPoint(x: size.width, y: size.height * 0.6),
-                                control: CGPoint(x: size.width * 0.9, y: size.height * 0.55)
-                            )
-                            dunePath.addLine(to: CGPoint(x: size.width, y: size.height))
-                            dunePath.addLine(to: CGPoint(x: 0, y: size.height))
-                            dunePath.closeSubpath()
-                            ctx.fill(dunePath, with: .color(.brown.opacity(0.25)))
-                        }
-                        .allowsHitTesting(false)
+                        // Sand dunes (Shape, was Canvas)
+                        DesertDunesShape()
+                            .fill(Color.compatBrown.opacity(0.25))
+                            .allowsHitTesting(false)
                     }
                     .frame(maxWidth: 500, maxHeight: 160)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
@@ -187,5 +170,32 @@ struct Scene8_DesertSurvivalTricks: View {
                 .padding(.horizontal, 24)
             }
         }
+    }
+}
+
+/// Sand-dune silhouette across the bottom of the desert backdrop.
+/// Pulled out of the old `Canvas { ... }` so it renders on macOS 11.
+struct DesertDunesShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let w = rect.width
+        let h = rect.height
+        var p = Path()
+        p.move(to: CGPoint(x: 0, y: h * 0.7))
+        p.addQuadCurve(
+            to: CGPoint(x: w * 0.4, y: h * 0.6),
+            control: CGPoint(x: w * 0.2, y: h * 0.5)
+        )
+        p.addQuadCurve(
+            to: CGPoint(x: w * 0.8, y: h * 0.65),
+            control: CGPoint(x: w * 0.6, y: h * 0.75)
+        )
+        p.addQuadCurve(
+            to: CGPoint(x: w, y: h * 0.6),
+            control: CGPoint(x: w * 0.9, y: h * 0.55)
+        )
+        p.addLine(to: CGPoint(x: w, y: h))
+        p.addLine(to: CGPoint(x: 0, y: h))
+        p.closeSubpath()
+        return p
     }
 }

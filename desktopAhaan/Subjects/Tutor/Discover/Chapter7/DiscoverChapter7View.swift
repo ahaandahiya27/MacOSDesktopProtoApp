@@ -80,12 +80,7 @@ struct DiscoverChapter7View: View {
             } else {
                 SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 6))
             }
-        case 7:
-            if #available(macOS 12, *) {
-                Scene8_DesertSurvivalTricks(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 7))
-            }
+        case 7: Scene8_DesertSurvivalTricks(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
         case 8: Scene9_BossQuiz_Ch7(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()
         }
