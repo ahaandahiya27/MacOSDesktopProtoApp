@@ -1,11 +1,21 @@
 import SwiftUI
 
+/// Outcome of the user's most recent Check tap on this question. Used to
+/// drive the correctness banner and to gate when the worked solution is
+/// revealed.
+enum AttemptOutcome: Equatable {
+    case unchecked
+    case correct
+    case incorrect(userInput: String)
+}
+
 struct QuestionDetailView: View {
     let pack: SubjectPack
     let question: Question
 
     @State private var revealSolution = false
     @State private var typedAnswer = ""
+    @State private var attemptOutcome: AttemptOutcome = .unchecked
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
@@ -37,6 +47,9 @@ struct QuestionDetailView: View {
                     optionsList(opts)
                 }
                 userAnswerField
+                if attemptOutcome != .unchecked {
+                    correctnessBanner
+                }
                 solutionDisclosure
                 commonMistakesCard
                 variationsSection
@@ -46,6 +59,12 @@ struct QuestionDetailView: View {
             }
             .padding(20)
             .frame(maxWidth: 820, alignment: .leading)
+        }
+        .onChange(of: question.id) { _ in
+            // Reset per-question state when Prev/Next swaps the question
+            revealSolution = false
+            typedAnswer = ""
+            attemptOutcome = .unchecked
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
@@ -241,13 +260,65 @@ struct QuestionDetailView: View {
         }
     }
 
+    // MARK: - Correctness banner
+
+    @ViewBuilder
+    private var correctnessBanner: some View {
+        switch attemptOutcome {
+        case .unchecked:
+            EmptyView()
+        case .correct:
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: "checkmark.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(.green)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Correct").font(.headline).foregroundColor(.green)
+                    Text("Nice work — the worked solution below explains why.")
+                        .font(.callout)
+                        .foregroundColor(.primary)
+                }
+                Spacer()
+            }
+            .padding(12)
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.green.opacity(0.12)))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.green.opacity(0.4), lineWidth: 1)
+            )
+        case .incorrect(let userInput):
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: "xmark.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(.red)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Not quite").font(.headline).foregroundColor(.red)
+                    if !userInput.isEmpty {
+                        Text("You answered: \(userInput)")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                    }
+                    Text("The correct answer is shown below.")
+                        .font(.callout)
+                        .foregroundColor(.primary)
+                }
+                Spacer()
+            }
+            .padding(12)
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.red.opacity(0.10)))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.red.opacity(0.4), lineWidth: 1)
+            )
+        }
+    }
+
     // MARK: - Actions
 
     private func recordAttempt() {
-        let normalizedUser = typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        let normalizedTruth = question.answer.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        let isCorrect = !normalizedUser.isEmpty &&
-            (normalizedUser == normalizedTruth || normalizedTruth.contains(normalizedUser))
+        let userInput = typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !userInput.isEmpty else { return }
+        let isCorrect = AnswerValidator.matches(userInput: userInput, truth: question.answer)
 
         dataStore.insertAttempt(QuestionAttempt(
             subjectPackId: pack.id,
@@ -255,7 +326,54 @@ struct QuestionDetailView: View {
             userAnswer: typedAnswer,
             isCorrect: isCorrect
         ))
+        attemptOutcome = isCorrect ? .correct : .incorrect(userInput: userInput)
         revealSolution = true
+    }
+}
+
+// MARK: - AnswerValidator
+
+/// Free-text answer matcher tuned for short, single-fact answers
+/// (numbers, single nouns, short phrases). Used by both QuestionDetailView
+/// and any future quiz UI.
+///
+/// Rules, evaluated in order:
+///   1. Whitespace-trimmed, case-folded exact match.
+///   2. If both sides parse as numbers (Int or Double), compare numerically
+///      so "8" == "8.0" == " 8 ".
+///   3. Token-set match for multi-word answers — order-independent equality
+///      of the meaningful tokens (drops punctuation and stop-ish words),
+///      so "8 teeth" matches "teeth 8" but NOT "abcd".
+/// Substring matching is deliberately NOT used; it produced false positives
+/// (e.g. the empty string matched every truth).
+enum AnswerValidator {
+    static func matches(userInput: String, truth: String) -> Bool {
+        let u = normalize(userInput)
+        let t = normalize(truth)
+        if u.isEmpty || t.isEmpty { return false }
+        if u == t { return true }
+        if let un = Double(u), let tn = Double(t), un == tn { return true }
+        let uTokens = tokenize(u)
+        let tTokens = tokenize(t)
+        if !uTokens.isEmpty && uTokens == tTokens { return true }
+        return false
+    }
+
+    private static func normalize(_ s: String) -> String {
+        s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+
+    /// Sorted set of meaningful tokens. Strips punctuation and a tiny set of
+    /// English filler words so "the sun" and "sun" are considered equal.
+    private static let stopWords: Set<String> = ["the", "a", "an", "is", "are"]
+    private static func tokenize(_ s: String) -> [String] {
+        let cleaned = s.unicodeScalars
+            .map { CharacterSet.alphanumerics.contains($0) ? Character($0) : " " }
+        return String(cleaned)
+            .split(separator: " ")
+            .map(String.init)
+            .filter { !$0.isEmpty && !stopWords.contains($0) }
+            .sorted()
     }
 }
 
