@@ -11,6 +11,7 @@ final class DataStore: ObservableObject {
     @Published var translationRecords: [TranslationRecord] = []
     @Published var practiceProgress: [PracticeProgress] = []
     @Published var studyBookmarks: [StudyBookmark] = []
+    @Published var questionBookmarks: [QuestionBookmark] = []
     @Published var questionAttempts: [QuestionAttempt] = []
     @Published var studySessions: [StudySession] = []
     @Published var discoverProgress: [DiscoverProgress] = []
@@ -145,6 +146,37 @@ final class DataStore: ObservableObject {
         save(studyBookmarks, to: "bookmarks.json")
     }
 
+    // MARK: - QuestionBookmark
+
+    var questionBookmarksByDate: [QuestionBookmark] {
+        questionBookmarks.sorted { $0.addedAt > $1.addedAt }
+    }
+
+    func isQuestionBookmarked(subjectPackId: String, questionId: String) -> Bool {
+        let key = "\(subjectPackId)::\(questionId)"
+        return questionBookmarks.contains { $0.id == key }
+    }
+
+    func toggleQuestionBookmark(subjectPackId: String, questionId: String,
+                                questionPrompt: String) {
+        let key = "\(subjectPackId)::\(questionId)"
+        if let idx = questionBookmarks.firstIndex(where: { $0.id == key }) {
+            questionBookmarks.remove(at: idx)
+        } else {
+            questionBookmarks.append(QuestionBookmark(
+                subjectPackId: subjectPackId,
+                questionId: questionId,
+                questionPrompt: questionPrompt
+            ))
+        }
+        save(questionBookmarks, to: "questionBookmarks.json")
+    }
+
+    func deleteQuestionBookmark(_ bookmark: QuestionBookmark) {
+        questionBookmarks.removeAll { $0.id == bookmark.id }
+        save(questionBookmarks, to: "questionBookmarks.json")
+    }
+
     // MARK: - QuestionAttempt
 
     func insertAttempt(_ attempt: QuestionAttempt) {
@@ -250,6 +282,7 @@ final class DataStore: ObservableObject {
         translationRecords = load(from: "translations.json")
         practiceProgress = load(from: "practice.json")
         studyBookmarks = load(from: "bookmarks.json")
+        questionBookmarks = load(from: "questionBookmarks.json")
         questionAttempts = load(from: "attempts.json")
         studySessions = load(from: "sessions.json")
         discoverProgress = load(from: "discover.json")

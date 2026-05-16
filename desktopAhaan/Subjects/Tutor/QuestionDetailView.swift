@@ -93,7 +93,39 @@ struct QuestionDetailView: View {
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
         .background(keyboardShortcutSink)
-        .toolbar { reviewToolbarItem }
+        .toolbar {
+            bookmarkToolbarItem
+            reviewToolbarItem
+        }
+    }
+
+    private var isQuestionBookmarked: Bool {
+        dataStore.isQuestionBookmarked(
+            subjectPackId: pack.id, questionId: question.id
+        )
+    }
+
+    @ToolbarContentBuilder
+    private var bookmarkToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .automatic) {
+            Button {
+                dataStore.toggleQuestionBookmark(
+                    subjectPackId: pack.id,
+                    questionId: question.id,
+                    questionPrompt: question.prompt
+                )
+            } label: {
+                Label(
+                    isQuestionBookmarked ? "Bookmarked" : "Bookmark",
+                    systemImage: isQuestionBookmarked
+                        ? "bookmark.fill" : "bookmark"
+                )
+            }
+            .keyboardShortcut("b", modifiers: .command)
+            .help(isQuestionBookmarked
+                  ? "Remove bookmark"
+                  : "Bookmark this question to revisit it later")
+        }
     }
 
     /// Toolbar button (parent action): flip this question out of the

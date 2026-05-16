@@ -8,19 +8,50 @@ struct BookmarksView: View {
     }
 }
 
+/// Unified bookmark entry — concepts and questions share the same list now.
+/// The associated value is the original record so delete/open work on the
+/// concrete type without re-querying the data store.
+private enum BookmarkEntry: Identifiable {
+    case concept(StudyBookmark)
+    case question(QuestionBookmark)
+
+    var id: String {
+        switch self {
+        case .concept(let b):  return "c::\(b.id)"
+        case .question(let b): return "q::\(b.id)"
+        }
+    }
+
+    var subjectPackId: String {
+        switch self {
+        case .concept(let b):  return b.subjectPackId
+        case .question(let b): return b.subjectPackId
+        }
+    }
+
+    var addedAt: Date {
+        switch self {
+        case .concept(let b):  return b.addedAt
+        case .question(let b): return b.addedAt
+        }
+    }
+}
+
 private struct BookmarksContent: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject private var nav: TutorNavigationState
 
-    var bookmarks: [StudyBookmark] {
-        dataStore.bookmarksByDate
+    private var entries: [BookmarkEntry] {
+        let concepts = dataStore.bookmarksByDate.map(BookmarkEntry.concept)
+        let questions = dataStore.questionBookmarksByDate.map(BookmarkEntry.question)
+        return (concepts + questions).sorted { $0.addedAt > $1.addedAt }
     }
 
     var body: some View {
         Group {
-            if bookmarks.isEmpty {
+            if entries.isEmpty {
                 VStack(spacing: 12) {
                     Image(systemName: "bookmark")
                         .font(.system(size: 48))
@@ -28,7 +59,7 @@ private struct BookmarksContent: View {
                         .accessibilityHidden(true)
                     Text("No bookmarks yet")
                         .font(.title2.weight(.semibold))
-                    Text("Star concepts you want to revisit — tap the bookmark icon on any concept page.")
+                    Text("Star concepts or questions you want to revisit — tap the bookmark icon on any concept or question page.")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
@@ -39,13 +70,8 @@ private struct BookmarksContent: View {
                 List {
                     ForEach(grouped, id: \.0) { (packId, items) in
                         Section(header: Text(packTitle(for: packId))) {
-                            ForEach(items) { b in
-                                bookmarkRow(b)
-                            }
-                            .onDelete { offsets in
-                                for offset in offsets {
-                                    dataStore.deleteBookmark(items[offset])
-                                }
+                            ForEach(items) { entry in
+                                entryRow(entry)
                             }
                         }
                     }
@@ -57,8 +83,8 @@ private struct BookmarksContent: View {
         .navigationTitle("Bookmarks")
     }
 
-    private var grouped: [(String, [StudyBookmark])] {
-        Dictionary(grouping: bookmarks, by: \.subjectPackId)
+    private var grouped: [(String, [BookmarkEntry])] {
+        Dictionary(grouping: entries, by: \.subjectPackId)
             .map { ($0.key, $0.value) }
             .sorted { $0.0 < $1.0 }
     }
@@ -68,14 +94,27 @@ private struct BookmarksContent: View {
     }
 
     @ViewBuilder
-    private func bookmarkRow(_ b: StudyBookmark) -> some View {
+    private func entryRow(_ entry: BookmarkEntry) -> some View {
+        switch entry {
+        case .concept(let b):  conceptRow(b)
+        case .question(let b): questionRow(b)
+        }
+    }
+
+    @ViewBuilder
+    private func conceptRow(_ b: StudyBookmark) -> some View {
         if let pack = subjectRegistry.pack(withId: b.subjectPackId),
            let concept = pack.conceptIndex[b.conceptId] {
             Button {
                 nav.push(.concept(packId: pack.id, conceptId: concept.id))
             } label: {
-                bookmarkLabel(b)
-                    .contentShape(Rectangle())
+                bookmarkLabel(
+                    icon: "lightbulb.fill",
+                    title: b.conceptTitle,
+                    date: b.addedAt,
+                    kind: "Concept"
+                )
+                .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .contextMenu {
@@ -84,8 +123,13 @@ private struct BookmarksContent: View {
             }
         } else {
             Button { appState.sidebarSelection = .subject(b.subjectPackId) } label: {
-                bookmarkLabel(b)
-                    .contentShape(Rectangle())
+                bookmarkLabel(
+                    icon: "lightbulb",
+                    title: b.conceptTitle,
+                    date: b.addedAt,
+                    kind: "Concept (missing)"
+                )
+                .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .contextMenu {
@@ -94,13 +138,59 @@ private struct BookmarksContent: View {
         }
     }
 
-    private func bookmarkLabel(_ b: StudyBookmark) -> some View {
+    @ViewBuilder
+    private func questionRow(_ b: QuestionBookmark) -> some View {
+        if let pack = subjectRegistry.pack(withId: b.subjectPackId),
+           pack.questionIndex[b.questionId] != nil {
+            Button {
+                nav.push(.question(packId: pack.id, questionId: b.questionId))
+            } label: {
+                bookmarkLabel(
+                    icon: "questionmark.circle.fill",
+                    title: b.questionPrompt,
+                    date: b.addedAt,
+                    kind: "Question"
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .contextMenu {
+                Button("Open") { nav.push(.question(packId: pack.id, questionId: b.questionId)) }
+                Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
+            }
+        } else {
+            Button { appState.sidebarSelection = .subject(b.subjectPackId) } label: {
+                bookmarkLabel(
+                    icon: "questionmark.circle",
+                    title: b.questionPrompt,
+                    date: b.addedAt,
+                    kind: "Question (missing)"
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .contextMenu {
+                Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
+            }
+        }
+    }
+
+    private func bookmarkLabel(icon: String, title: String,
+                               date: Date, kind: String) -> some View {
         HStack {
-            Image(systemName: "bookmark.fill").foregroundColor(Color.compatIndigo)
+            Image(systemName: icon).foregroundColor(Color.compatIndigo)
             VStack(alignment: .leading, spacing: 2) {
-                Text(b.conceptTitle).font(.headline)
-                Text("Saved \(b.addedAt, style: .date)")
-                    .font(.caption).foregroundColor(.secondary)
+                Text(title)
+                    .font(.headline)
+                    .lineLimit(2)
+                    .truncationMode(.tail)
+                HStack(spacing: 8) {
+                    Text(kind)
+                        .font(.caption2.weight(.semibold))
+                        .foregroundColor(Color.compatIndigo)
+                    Text("Saved \(date, style: .date)")
+                        .font(.caption).foregroundColor(.secondary)
+                }
             }
             Spacer()
             Image(systemName: "chevron.right").foregroundColor(.secondary)

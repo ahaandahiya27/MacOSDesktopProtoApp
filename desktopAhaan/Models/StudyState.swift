@@ -16,6 +16,26 @@ final class StudyBookmark: Identifiable, Codable {
     }
 }
 
+/// Same idea as StudyBookmark but for individual questions. Stored separately
+/// so the existing concept bookmarks file format stays untouched.
+final class QuestionBookmark: Identifiable, Codable {
+    var id: String
+    var subjectPackId: String
+    var questionId: String
+    /// Snapshotted at bookmark time so the bookmarks list can render even if
+    /// the question is later renamed or removed from the pack.
+    var questionPrompt: String
+    var addedAt: Date
+
+    init(subjectPackId: String, questionId: String, questionPrompt: String, addedAt: Date = Date()) {
+        self.id = "\(subjectPackId)::\(questionId)"
+        self.subjectPackId = subjectPackId
+        self.questionId = questionId
+        self.questionPrompt = questionPrompt
+        self.addedAt = addedAt
+    }
+}
+
 final class QuestionAttempt: Identifiable, Codable {
     var id: UUID
     var subjectPackId: String
