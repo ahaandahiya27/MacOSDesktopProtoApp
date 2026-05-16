@@ -54,23 +54,8 @@ struct QuestionDetailView: View {
                 breadcrumb
                 header
                 promptCard
-                if let opts = question.options, !opts.isEmpty {
-                    optionsList(opts)
-                }
-                if question.questionType == .matchTheFollowing,
-                   let pairs = question.matchPairs, !pairs.isEmpty {
-                    matchTheFollowingSection(pairs: pairs)
-                }
-                userAnswerField
-                if attemptOutcome != .unchecked {
-                    correctnessBanner
-                }
-                solutionDisclosure
-                commonMistakesCard
-                variationsSection
-                if currentSiblingIndex != nil {
-                    navigationFooter
-                }
+                answerInteractionGroup
+                postAttemptGroup
             }
             .padding(20)
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
@@ -156,6 +141,37 @@ struct QuestionDetailView: View {
               idx < nav.questionSiblings.count - 1 else { return }
         let next = nav.questionSiblings[idx + 1]
         nav.replaceTop(.question(packId: next.packId, questionId: next.questionId))
+    }
+
+    // MARK: - Body subgroups
+    //
+    // Swift 5.5 / Xcode 13 (Big Sur) @ViewBuilder caps at 10 subviews per
+    // closure; the body VStack exceeds that, so the answer-interaction and
+    // post-attempt subviews are bundled into Groups here.
+
+    @ViewBuilder
+    private var answerInteractionGroup: some View {
+        if let opts = question.options, !opts.isEmpty {
+            optionsList(opts)
+        }
+        if question.questionType == .matchTheFollowing,
+           let pairs = question.matchPairs, !pairs.isEmpty {
+            matchTheFollowingSection(pairs: pairs)
+        }
+        userAnswerField
+        if attemptOutcome != .unchecked {
+            correctnessBanner
+        }
+    }
+
+    @ViewBuilder
+    private var postAttemptGroup: some View {
+        solutionDisclosure
+        commonMistakesCard
+        variationsSection
+        if currentSiblingIndex != nil {
+            navigationFooter
+        }
     }
 
     // MARK: - Sections

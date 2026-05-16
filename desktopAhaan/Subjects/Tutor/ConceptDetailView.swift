@@ -26,12 +26,8 @@ struct ConceptDetailView: View {
                 header
                 depthPicker
                 articleButton
-                explanationCard
-                reasoningCard
-                useCasesSection
-                beyondTheBookCard
-                askFollowUpButton
-                relatedSection
+                explanationGroup
+                followOnGroup
             }
             .padding(20)
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
@@ -57,6 +53,27 @@ struct ConceptDetailView: View {
         .onDisappear {
             speech.stop(owner: "concept_\(concept.id)")
         }
+    }
+
+    // MARK: - Body subgroups
+    //
+    // Swift 5.5 / Xcode 13 (Big Sur) caps SwiftUI @ViewBuilder closures at
+    // 10 direct children. The body VStack was sitting exactly at 10 — one
+    // future addition would trigger "Extra argument in call" on the iMac.
+    // Group adjacent sections so there's headroom.
+
+    @ViewBuilder
+    private var explanationGroup: some View {
+        explanationCard
+        reasoningCard
+        useCasesSection
+    }
+
+    @ViewBuilder
+    private var followOnGroup: some View {
+        beyondTheBookCard
+        askFollowUpButton
+        relatedSection
     }
 
     // MARK: - Sections
