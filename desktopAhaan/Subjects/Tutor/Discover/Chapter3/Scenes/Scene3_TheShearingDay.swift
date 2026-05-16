@@ -4,7 +4,8 @@ import SwiftUI
 ///
 /// A drawn sheep. Tap "Start shearing!" — animated clipper runs across the sheep,
 /// fleece falls off. Counter: "12 kg fleece harvested."
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — sheep diagram and clipper marker
+/// use Ellipse / Path shapes instead of Canvas blocks.
 struct Scene3_TheShearingDay: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -35,54 +36,39 @@ struct Scene3_TheShearingDay: View {
             .padding(.horizontal, 24)
             .padding(.top, 20)
 
-            ZStack {
-                // Drawn sheep
-                Canvas { context, _ in
-                    // Body (oval)
-                    let bodyRect = CGRect(x: 80, y: 100, width: 140, height: 100)
-                    context.fill(
-                        Path(ellipseIn: bodyRect),
-                        with: .color(.white)
-                    )
-                    context.stroke(
-                        Path(ellipseIn: bodyRect),
-                        with: .color(.gray.opacity(0.5)),
-                        lineWidth: 2
-                    )
+            ZStack(alignment: .topLeading) {
+                // Drawn sheep (Shapes, was Canvas) — wrapped in a sized
+                // container so the inner .offset coordinates line up with
+                // the old Canvas (x, y) values.
+                ZStack(alignment: .topLeading) {
+                    // Body
+                    ZStack {
+                        Ellipse().fill(Color.white)
+                        Ellipse().stroke(Color.gray.opacity(0.5), lineWidth: 2)
+                    }
+                    .frame(width: 140, height: 100)
+                    .offset(x: 80, y: 100)
 
                     // Head
-                    let headRect = CGRect(x: 140, y: 40, width: 60, height: 60)
-                    context.fill(
-                        Path(ellipseIn: headRect),
-                        with: .color(.white)
-                    )
-                    context.stroke(
-                        Path(ellipseIn: headRect),
-                        with: .color(.gray.opacity(0.5)),
-                        lineWidth: 2
-                    )
+                    ZStack {
+                        Ellipse().fill(Color.white)
+                        Ellipse().stroke(Color.gray.opacity(0.5), lineWidth: 2)
+                    }
+                    .frame(width: 60, height: 60)
+                    .offset(x: 140, y: 40)
 
                     // Eyes
-                    context.fill(
-                        Path(ellipseIn: CGRect(x: 150, y: 55, width: 6, height: 8)),
-                        with: .color(.black)
-                    )
-                    context.fill(
-                        Path(ellipseIn: CGRect(x: 175, y: 55, width: 6, height: 8)),
-                        with: .color(.black)
-                    )
+                    Ellipse().fill(Color.black).frame(width: 6, height: 8).offset(x: 150, y: 55)
+                    Ellipse().fill(Color.black).frame(width: 6, height: 8).offset(x: 175, y: 55)
 
-                    // Legs
-                    for legX in [100.0, 130.0, 180.0, 210.0] {
-                        context.stroke(
-                            Path { p in
-                                p.move(to: CGPoint(x: legX, y: 200))
-                                p.addLine(to: CGPoint(x: legX, y: 250))
-                            },
-                            with: .color(.gray),
-                            lineWidth: 3
-                        )
+                    // Legs (4 vertical strokes)
+                    Path { p in
+                        for legX in [100.0, 130.0, 180.0, 210.0] {
+                            p.move(to: CGPoint(x: legX, y: 200))
+                            p.addLine(to: CGPoint(x: legX, y: 250))
+                        }
                     }
+                    .stroke(Color.gray, lineWidth: 3)
                 }
                 .frame(height: 280)
 
@@ -94,17 +80,13 @@ struct Scene3_TheShearingDay: View {
                         .opacity(puff.opacity)
                 }
 
-                // Clipper animation
+                // Clipper animation (was a single-ellipse Canvas)
                 if isShearing {
-                    Canvas { context, _ in
-                        let clipX = 80 + clipperPosition * 140
-                        let clipY = 120.0
-                        context.fill(
-                            Path(ellipseIn: CGRect(x: clipX - 12, y: clipY - 8, width: 24, height: 16)),
-                            with: .color(.yellow.opacity(0.7))
-                        )
-                    }
-                    .frame(height: 280)
+                    Ellipse()
+                        .fill(Color.yellow.opacity(0.7))
+                        .frame(width: 24, height: 16)
+                        .position(x: 80 + clipperPosition * 140, y: 120)
+                        .frame(height: 280, alignment: .topLeading)
                 }
             }
             .frame(height: 280)
