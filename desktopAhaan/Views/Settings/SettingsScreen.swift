@@ -77,8 +77,8 @@ struct SettingsScreen: View {
                             .font(.caption)
                             .foregroundColor(Color.compatIndigo)
                             .frame(width: 16)
-                        Text("**Built-in Dictionary** — words and sentences from the Class 7 NCERT syllabus. Works offline, always free, always available.")
-                            .font(.caption2)
+                        (Text("Built-in Dictionary").font(.caption.weight(.semibold))
+                          + Text(" — words and sentences from the Class 7 NCERT syllabus. Works offline, always free, always available.").font(.caption))
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     HStack(alignment: .top, spacing: 8) {
@@ -86,8 +86,8 @@ struct SettingsScreen: View {
                             .font(.caption)
                             .foregroundColor(.blue)
                             .frame(width: 16)
-                        Text("**Online Translation** — for phrases not in the dictionary, the app uses a free online service (MyMemory). No registration. Limit: ~1000 words/day.")
-                            .font(.caption2)
+                        (Text("Online Translation").font(.caption.weight(.semibold))
+                          + Text(" — for phrases not in the dictionary, the app uses a free online service (MyMemory). No registration. Limit: ~1000 words/day.").font(.caption))
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }

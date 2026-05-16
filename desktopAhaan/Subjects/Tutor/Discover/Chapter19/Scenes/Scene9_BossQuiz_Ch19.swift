@@ -326,7 +326,7 @@ private struct Ch19CertificateView: View {
         .frame(width: 600, height: 420)
         .background(
             RoundedRectangle(cornerRadius: 18)
-                .fill(.white)
+                .fill(Color(NSColor.controlBackgroundColor))
                 .overlay(
                     RoundedRectangle(cornerRadius: 18)
                         .strokeBorder(Color.compatIndigo, lineWidth: 4)

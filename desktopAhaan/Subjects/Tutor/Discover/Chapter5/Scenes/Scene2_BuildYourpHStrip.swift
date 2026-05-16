@@ -130,7 +130,7 @@ struct Scene2_BuildYourpHStrip: View {
                 // Marker
                 let xPos = geo.size.width * CGFloat(pH / 14.0)
                 RoundedRectangle(cornerRadius: 3)
-                    .fill(.white)
+                    .fill(Color(NSColor.controlBackgroundColor))
                     .frame(width: 4, height: geo.size.height + 8)
                     .shadow(radius: 2)
                     .position(x: xPos, y: geo.size.height * 0.5)

@@ -43,7 +43,7 @@ struct Scene3_TheShearingDay: View {
                 ZStack(alignment: .topLeading) {
                     // Body
                     ZStack {
-                        Ellipse().fill(Color.white)
+                        Ellipse().fill(Color(NSColor.controlBackgroundColor))
                         Ellipse().stroke(Color.gray.opacity(0.5), lineWidth: 2)
                     }
                     .frame(width: 140, height: 100)
@@ -51,15 +51,15 @@ struct Scene3_TheShearingDay: View {
 
                     // Head
                     ZStack {
-                        Ellipse().fill(Color.white)
+                        Ellipse().fill(Color(NSColor.controlBackgroundColor))
                         Ellipse().stroke(Color.gray.opacity(0.5), lineWidth: 2)
                     }
                     .frame(width: 60, height: 60)
                     .offset(x: 140, y: 40)
 
                     // Eyes
-                    Ellipse().fill(Color.black).frame(width: 6, height: 8).offset(x: 150, y: 55)
-                    Ellipse().fill(Color.black).frame(width: 6, height: 8).offset(x: 175, y: 55)
+                    Ellipse().fill(Color.primary).frame(width: 6, height: 8).offset(x: 150, y: 55)
+                    Ellipse().fill(Color.primary).frame(width: 6, height: 8).offset(x: 175, y: 55)
 
                     // Legs (4 vertical strokes)
                     Path { p in

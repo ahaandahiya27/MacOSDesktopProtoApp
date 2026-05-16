@@ -46,7 +46,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                             // Eye
                             Circle()
-                                .fill(.black)
+                                .fill(Color.primary)
                                 .frame(width: 6, height: 6)
                                 .offset(x: 6, y: isCold ? -64 : -54)
 

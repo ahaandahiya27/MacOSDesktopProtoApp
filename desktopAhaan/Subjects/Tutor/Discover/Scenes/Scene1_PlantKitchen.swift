@@ -222,14 +222,14 @@ private struct SpeechBubble: View {
             .background(
                 ZStack(alignment: .bottomLeading) {
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(Color.white)
+                        .fill(Color(NSColor.controlBackgroundColor))
                     Path { p in
                         p.move(to: CGPoint(x: 18, y: 20))
                         p.addLine(to: CGPoint(x: 6, y: 38))
                         p.addLine(to: CGPoint(x: 36, y: 22))
                         p.closeSubpath()
                     }
-                    .fill(Color.white)
+                    .fill(Color(NSColor.controlBackgroundColor))
                     .offset(y: 12)
                 }
             )

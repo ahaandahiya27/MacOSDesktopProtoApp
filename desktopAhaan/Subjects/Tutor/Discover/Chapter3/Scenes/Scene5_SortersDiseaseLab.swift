@@ -44,7 +44,7 @@ struct Scene5_SortersDiseaseLab: View {
                 VStack {
                     ZStack {
                         Circle()
-                            .fill(Color.black)
+                            .fill(Color.primary)
                             .frame(width: 100, height: 100)
                             .position(x: 200, y: 90)
 
@@ -173,7 +173,7 @@ struct MicroscopeDiagram: View {
 
             // Stage (fill + stroke)
             ZStack {
-                Ellipse().fill(Color.white)
+                Ellipse().fill(Color(NSColor.controlBackgroundColor))
                 Ellipse().stroke(Color.gray, lineWidth: 1)
             }
             .frame(width: 50, height: 50)

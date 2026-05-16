@@ -206,7 +206,7 @@ struct LionJawDiagram: View {
                 let y = center.y - radius * sin(radians)
                 let size: CGFloat = (i == 1 || i == 4) ? 20 : 14
                 ZStack {
-                    RoundedRectangle(cornerRadius: 2).fill(Color.white)
+                    RoundedRectangle(cornerRadius: 2).fill(Color(NSColor.controlBackgroundColor))
                     RoundedRectangle(cornerRadius: 2).stroke(Color.gray, lineWidth: 1)
                 }
                 .frame(width: 8, height: size)

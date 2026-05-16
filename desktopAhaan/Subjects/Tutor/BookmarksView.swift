@@ -32,7 +32,7 @@ private struct BookmarksContent: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
-                        .frame(maxWidth: 360)
+                        .frame(maxWidth: 520)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {

@@ -135,7 +135,7 @@ struct Scene4_PolarBearSurvivalKit: View {
     private func blackEllipse(x: CGFloat, y: CGFloat,
                               width: CGFloat, height: CGFloat) -> some View {
         Ellipse()
-            .fill(Color.black)
+            .fill(Color.primary)
             .frame(width: width, height: height)
             .position(x: x + width / 2, y: y + height / 2)
     }

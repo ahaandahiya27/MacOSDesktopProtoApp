@@ -170,6 +170,6 @@ private struct WelcomeSheet: View {
             .keyboardShortcut(.defaultAction)
         }
         .padding(28)
-        .frame(width: 480)
+        .frame(minWidth: 420, idealWidth: 480, maxWidth: 560)
     }
 }

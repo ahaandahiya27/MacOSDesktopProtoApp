@@ -178,7 +178,7 @@ struct Scene2_TearingVsBurningPaper: View {
 
     private var paperSheet: some View {
         RoundedRectangle(cornerRadius: 4)
-            .fill(.white)
+            .fill(Color(NSColor.controlBackgroundColor))
             .frame(width: 100, height: 130)
             .overlay(
                 VStack(spacing: 6) {
@@ -198,7 +198,7 @@ struct Scene2_TearingVsBurningPaper: View {
 
     private var paperPiece: some View {
         RoundedRectangle(cornerRadius: 3)
-            .fill(.white)
+            .fill(Color(NSColor.controlBackgroundColor))
             .frame(width: 42, height: 110)
             .overlay(
                 RoundedRectangle(cornerRadius: 3)
