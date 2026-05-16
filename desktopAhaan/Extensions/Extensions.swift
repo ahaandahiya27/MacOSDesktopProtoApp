@@ -101,6 +101,13 @@ enum HardwareTier {
     static var particleBudget: Int { isLegacy ? 40 : 80 }
     static var animationFPS: Double { isLegacy ? 20 : 30 }
     static var animationInterval: TimeInterval { 1.0 / animationFPS }
+
+    /// Returns the slower of `ideal` and the legacy interval, so a scene that
+    /// asks for 30 fps gets capped at 20 fps on the 2014 iMac, while a scene
+    /// that already runs at 15 fps stays at 15 fps everywhere.
+    static func interval(ideal: TimeInterval) -> TimeInterval {
+        isLegacy ? max(ideal, animationInterval) : ideal
+    }
 }
 
 // MARK: - Design tokens

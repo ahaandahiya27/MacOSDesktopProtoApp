@@ -192,7 +192,7 @@ struct Scene4_NeutralisationInAction: View {
     private func startAnimation() {
         guard !reduceMotion, animationTimer == nil else { return }
         let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20, repeats: true) { _ in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 20), repeats: true) { _ in
             tick = Date().timeIntervalSince1970 - start
         }
     }

@@ -64,7 +64,7 @@ struct ParticleEmitter: View {
             )
         }
         animationTimer?.invalidate()
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.animationInterval, repeats: true) { _ in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
             tick = Date().timeIntervalSince(startTime)
         }
     }
