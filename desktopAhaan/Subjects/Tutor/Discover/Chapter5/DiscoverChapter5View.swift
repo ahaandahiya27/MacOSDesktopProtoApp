@@ -81,12 +81,7 @@ struct DiscoverChapter5View: View {
         case 4: Scene5_AntStingFirstAid(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_AcidOrBaseSortingLab(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6: Scene7_SoilpHAndFarmer(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-        case 7:
-            if #available(macOS 12, *) {
-                Scene8_AcidRainStory(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 7))
-            }
+        case 7: Scene8_AcidRainStory(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
         case 8: Scene9_BossQuiz_Ch5(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()
         }

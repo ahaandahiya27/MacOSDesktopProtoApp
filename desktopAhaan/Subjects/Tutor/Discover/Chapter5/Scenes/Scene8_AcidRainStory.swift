@@ -1,8 +1,8 @@
 import SwiftUI
 
 /// Scene 8 — Acid Rain Story.
-/// Illustrated scrollable panels: factory -> clouds -> acidic rain -> damage. Canvas rain animation.
-@available(macOS 12, *)
+/// Illustrated scrollable panels: factory -> clouds -> acidic rain -> damage.
+/// Rain animation now uses Timer.publish + RainStreak shapes (Big Sur compatible).
 struct Scene8_AcidRainStory: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -12,6 +12,8 @@ struct Scene8_AcidRainStory: View {
 
     @State private var currentPanel: Int = 0
     @State private var viewedPanels: Set<Int> = [0]
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
 
     private let panels: [(title: String, emoji: String, text: String)] = [
         ("Factory Emissions",
@@ -45,7 +47,7 @@ struct Scene8_AcidRainStory: View {
                     HStack(spacing: 6) {
                         ForEach(0..<panels.count, id: \.self) { i in
                             Circle()
-                                .fill(i == currentPanel ? Color.compatIndigo : (viewedPanels.contains(i) ? .green : .gray.opacity(0.25)))
+                                .fill(i == currentPanel ? Color.compatIndigo : (viewedPanels.contains(i) ? Color.green : Color.gray.opacity(0.25)))
                                 .frame(width: 10, height: 10)
                         }
                     }
@@ -102,9 +104,8 @@ struct Scene8_AcidRainStory: View {
                             goPanel(1)
                         } label: {
                             Label("Next", systemImage: "chevron.right")
-                                .labelStyle(.titleAndIcon)
                         }
-                        
+
                         .accentColor(Color.compatIndigo)
                         .disabled(currentPanel == panels.count - 1)
                     }
@@ -145,36 +146,33 @@ struct Scene8_AcidRainStory: View {
                 HStack(spacing: 8) {
                     ForEach(0..<6, id: \.self) { _ in
                         Image(systemName: "drop.fill")
-                            .foregroundColor(.blue.opacity(0.5))
+                            .foregroundColor(Color.blue.opacity(0.5))
                     }
                 }
             } else {
-                TimelineView(.animation(minimumInterval: 1.0 / 20)) { ctx in
-                    let t = ctx.date.timeIntervalSince1970
-                    Canvas { context, size in
-                        var gfx = context
-                        drawRain(gfx: &gfx, size: size, t: t)
+                GeometryReader { geo in
+                    ZStack(alignment: .topLeading) {
+                        ForEach(0..<20, id: \.self) { i in
+                            RainStreak(index: i, t: tick, size: geo.size)
+                        }
                     }
                 }
+                .onAppear(perform: startAnimation)
+                .onDisappear(perform: stopAnimation)
             }
         }
     }
 
-    private func drawRain(gfx: inout GraphicsContext, size: CGSize, t: TimeInterval) {
-        for i in 0..<20 {
-            let seed = Double(i) * 1.7
-            let x = (seed * 37.0).truncatingRemainder(dividingBy: size.width)
-            let speed = 1.5 + (seed * 0.3).truncatingRemainder(dividingBy: 1.0)
-            let yPhase = (t * speed + seed).truncatingRemainder(dividingBy: 2.0) / 2.0
-            let y = yPhase * size.height
-
-            var dropPath = Path()
-            dropPath.move(to: CGPoint(x: x, y: y))
-            dropPath.addLine(to: CGPoint(x: x, y: y + 8))
-
-            gfx.opacity = 0.5
-            gfx.stroke(dropPath, with: .color(.blue), lineWidth: 1.5)
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
         }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     private func goPanel(_ delta: Int) {
@@ -184,5 +182,27 @@ struct Scene8_AcidRainStory: View {
             currentPanel = next
         }
         viewedPanels.insert(next)
+    }
+}
+
+private struct RainStreak: View {
+    let index: Int; let t: TimeInterval; let size: CGSize
+    var body: some View {
+        let p = compute()
+        return Path { path in
+            path.move(to: CGPoint(x: CGFloat(p.x), y: CGFloat(p.y)))
+            path.addLine(to: CGPoint(x: CGFloat(p.x), y: CGFloat(p.y + 8.0)))
+        }
+        .stroke(Color.blue, lineWidth: 1.5)
+        .opacity(0.5)
+    }
+    private struct Pos { let x: Double; let y: Double }
+    private func compute() -> Pos {
+        let seed: Double = Double(index) * 1.7
+        let x: Double = (seed * 37.0).truncatingRemainder(dividingBy: Double(size.width))
+        let speed: Double = 1.5 + (seed * 0.3).truncatingRemainder(dividingBy: 1.0)
+        let yPhase: Double = ((Double(t) * speed + seed).truncatingRemainder(dividingBy: 2.0)) / 2.0
+        let y: Double = yPhase * Double(size.height)
+        return Pos(x: x, y: y)
     }
 }
