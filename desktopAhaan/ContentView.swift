@@ -4,6 +4,7 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var dataStore: DataStore
+    @AppStorage("hasSeenWelcome") private var hasSeenWelcome: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -27,6 +28,9 @@ struct ContentView: View {
                 detailPane
             }
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        }
+        .sheet(isPresented: Binding(get: { !hasSeenWelcome }, set: { if !$0 { hasSeenWelcome = true } })) {
+            WelcomeSheet { hasSeenWelcome = true }
         }
     }
 
@@ -135,5 +139,37 @@ struct ContentView: View {
         case .tool(.settings):
             SettingsScreen()
         }
+    }
+}
+
+/// One-time welcome sheet shown on first launch. Dismissed via the
+/// `hasSeenWelcome` AppStorage flag, so it never reappears for the same user.
+private struct WelcomeSheet: View {
+    var onDismiss: () -> Void
+
+    var body: some View {
+        VStack(spacing: 18) {
+            Text("\u{1F44B}")
+                .font(.system(size: 56))
+            Text("Welcome to Sanskrit Kosh")
+                .font(.title.bold())
+            Text("Pick a subject from the sidebar on the left to start. Use the Sanskrit translator, browse the Science tutor's chapters and topics, or jump into Discover Mode for interactive scenes.")
+                .font(.body)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.secondary)
+                .lineSpacing(4)
+                .padding(.horizontal, 8)
+            Button(action: onDismiss) {
+                Text("Let's go")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+            }
+            .buttonStyle(.bordered)
+            .accentColor(Color.compatIndigo)
+            .keyboardShortcut(.defaultAction)
+        }
+        .padding(28)
+        .frame(width: 480)
     }
 }

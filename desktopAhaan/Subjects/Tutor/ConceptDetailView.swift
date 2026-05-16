@@ -63,6 +63,7 @@ struct ConceptDetailView: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(concept.title)
                 .font(.largeTitle).bold()
+                .devanagariAwareLocale(packId: pack.id)
             if !concept.pageRefs.isEmpty {
                 Text("Pages \(concept.pageRefs.map(String.init).joined(separator: ", "))")
                     .font(.caption)

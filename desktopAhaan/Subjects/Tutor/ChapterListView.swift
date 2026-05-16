@@ -4,6 +4,20 @@ import AppKit
 struct ChapterListView: View {
     let pack: SubjectPack
     @EnvironmentObject private var nav: TutorNavigationState
+    @EnvironmentObject private var dataStore: DataStore
+
+    /// Most-recently-completed Discover scene across the pack, used to power
+    /// the "Continue where you left off" card. Nil if the kid hasn't touched
+    /// Discover Mode yet.
+    private var mostRecent: (Chapter, DiscoverProgress)? {
+        let rows = dataStore.discoverProgress
+            .filter { row in pack.chapters.contains(where: { $0.id == row.chapterId }) }
+            .sorted { $0.completedAt > $1.completedAt }
+        guard let top = rows.first,
+              let chapter = pack.chapters.first(where: { $0.id == top.chapterId })
+        else { return nil }
+        return (chapter, top)
+    }
 
     var body: some View {
         Group {
@@ -21,24 +35,41 @@ struct ChapterListView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                List(pack.chapters) { chapter in
-                    Button {
-                        nav.push(.chapter(packId: pack.id, chapterId: chapter.id))
-                    } label: {
-                        ChapterRow(chapter: chapter)
-                            .contentShape(Rectangle())
-                    }
-                    .buttonStyle(.plain)
-                    .contextMenu {
-                        Button("Open") { nav.push(.chapter(packId: pack.id, chapterId: chapter.id)) }
-                        Button("Copy title") {
-                            NSPasteboard.general.clearContents()
-                            NSPasteboard.general.setString(chapter.title, forType: .string)
-                        }
-                        if DiscoverMode.hasExperience(for: pack, chapter: chapter) {
-                            Divider()
-                            Button("Start Discover Mode") {
+                List {
+                    if let (chapter, _) = mostRecent {
+                        Section {
+                            Button {
                                 nav.push(.discover(packId: pack.id, chapterId: chapter.id))
+                            } label: {
+                                ContinueCard(chapter: chapter)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                        }
+                        .listRowBackground(Color.clear)
+                    }
+
+                    Section(header: mostRecent != nil ? Text("All chapters") : nil) {
+                        ForEach(pack.chapters) { chapter in
+                            Button {
+                                nav.push(.chapter(packId: pack.id, chapterId: chapter.id))
+                            } label: {
+                                ChapterRow(chapter: chapter)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .contextMenu {
+                                Button("Open") { nav.push(.chapter(packId: pack.id, chapterId: chapter.id)) }
+                                Button("Copy title") {
+                                    NSPasteboard.general.clearContents()
+                                    NSPasteboard.general.setString(chapter.title, forType: .string)
+                                }
+                                if DiscoverMode.hasExperience(for: pack, chapter: chapter) {
+                                    Divider()
+                                    Button("Start Discover Mode") {
+                                        nav.push(.discover(packId: pack.id, chapterId: chapter.id))
+                                    }
+                                }
                             }
                         }
                     }
@@ -86,5 +117,43 @@ private struct ChapterRow: View {
             }
         }
         .padding(.vertical, 4)
+    }
+}
+
+/// Highlights the most recently completed Discover chapter so the kid can
+/// jump straight back in without scrolling the chapter list.
+private struct ContinueCard: View {
+    let chapter: Chapter
+
+    var body: some View {
+        HStack(spacing: 14) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(LinearGradient(
+                        colors: [Color.compatIndigo.opacity(0.85), Color.compatTeal.opacity(0.85)],
+                        startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .frame(width: 56, height: 56)
+                Image(systemName: "play.circle.fill")
+                    .font(.system(size: 28))
+                    .foregroundColor(.white)
+                    .accessibilityHidden(true)
+            }
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Continue where you left off")
+                    .font(.caption.weight(.semibold))
+                    .foregroundColor(.secondary)
+                    .textCase(.uppercase)
+                Text("Ch. \(chapter.number) — \(chapter.title)")
+                    .font(.headline)
+                    .lineLimit(2)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .foregroundColor(.secondary)
+                .accessibilityHidden(true)
+        }
+        .padding(.vertical, 6)
+        .accessibilityElement(children: .combine)
+        .accessibilityHint("Returns to Discover Mode for this chapter.")
     }
 }

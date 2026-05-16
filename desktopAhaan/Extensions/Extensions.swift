@@ -145,9 +145,31 @@ struct DevanagariFont: ViewModifier {
     }
 }
 
+/// Sets the Sanskrit locale on text when the active subject pack id starts
+/// with `sanskrit_`, so the system picks Devanagari-tuned glyph metrics.
+/// Does not override `.font(...)` on the wrapped view.
+struct DevanagariAwareFont: ViewModifier {
+    let packId: String
+
+    func body(content: Content) -> some View {
+        if packId.hasPrefix("sanskrit_") {
+            content.environment(\.locale, Locale(identifier: "sa"))
+        } else {
+            content
+        }
+    }
+}
+
 extension View {
     func devanagariFont(size: CGFloat = 17) -> some View {
         modifier(DevanagariFont(size: size))
+    }
+
+    /// Applies a Sanskrit (Devanagari) text locale only when the active pack
+    /// is the Sanskrit one. Lets the surrounding `.font(...)` size win while
+    /// nudging the system to use Devanagari-tuned glyph metrics on macOS.
+    func devanagariAwareLocale(packId: String) -> some View {
+        modifier(DevanagariAwareFont(packId: packId))
     }
 
     func onArrowKeys(left: @escaping () -> Void, right: @escaping () -> Void) -> some View {

@@ -177,6 +177,7 @@ struct QuestionDetailView: View {
     private var promptCard: some View {
         Text(question.prompt)
             .font(.title3)
+            .devanagariAwareLocale(packId: pack.id)
             .lineSpacing(4)
             .padding(16)
             .frame(maxWidth: .infinity, alignment: .leading)
