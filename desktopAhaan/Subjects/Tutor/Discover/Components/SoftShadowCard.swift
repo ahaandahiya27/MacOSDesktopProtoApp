@@ -16,7 +16,7 @@ struct SoftShadowCard<Content: View>: View {
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .strokeBorder(.black.opacity(0.05), lineWidth: 0.5)
+                    .strokeBorder(Color.primary.opacity(0.08), lineWidth: 0.5)
             )
             .shadow(color: .black.opacity(0.08), radius: 14, x: 0, y: 6)
     }

@@ -99,13 +99,13 @@ struct Scene2_TearingVsBurningPaper: View {
                                     VStack(spacing: 6) {
                                         Text("💨 CO₂ + H₂O")
                                             .font(.caption)
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(.secondary)
                                         RoundedRectangle(cornerRadius: 3)
                                             .fill(Color.gray.opacity(0.5))
                                             .frame(width: 80, height: 14)
                                         Text("Ash")
                                             .font(.caption2)
-                                            .foregroundColor(.gray)
+                                            .foregroundColor(.secondary)
                                     }
                                 }
                             }
