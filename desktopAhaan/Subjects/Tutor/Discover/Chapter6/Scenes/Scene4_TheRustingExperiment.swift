@@ -3,8 +3,10 @@ import SwiftUI
 /// Scene 4 — The Rusting Experiment.
 /// Three test tubes showing that rusting needs BOTH water AND oxygen.
 /// (1) nail in water+air = rust, (2) nail in boiled water (no air) = no rust,
-/// (3) nail in dry air (CaCl2) = no rust. Canvas animation of rust forming.
-@available(macOS 12, *)
+/// (3) nail in dry air (CaCl2) = no rust.
+///
+/// Big Sur (macOS 11) compatible — rust-particle Canvas + TimelineView are
+/// replaced by a Timer.publish + ForEach of RustParticle subviews.
 struct Scene4_TheRustingExperiment: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -12,6 +14,8 @@ struct Scene4_TheRustingExperiment: View {
 
     @State private var tubeProgress: [CGFloat] = [0, 0, 0]  // 0..1 per tube
     @State private var fastForwarded: Set<Int> = []
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allDone: Bool { fastForwarded.count == 3 }
@@ -107,6 +111,20 @@ struct Scene4_TheRustingExperiment: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
+    }
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 15, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     @ViewBuilder
@@ -149,21 +167,12 @@ struct Scene4_TheRustingExperiment: View {
                 }
                 .padding(.bottom, height * 0.15)
 
-                // Rust particles (Canvas)
+                // Rust particles (Timer-driven; Big Sur compatible)
                 if tube.rusts && progress > 0.2 && !reduceMotion {
-                    TimelineView(.animation(minimumInterval: 1.0 / 15)) { timeline in
-                        let t = timeline.date.timeIntervalSince1970
-                        Canvas { context, size in
-                            var ctx = context
-                            let rustCount = Int(progress * 10)
-                            for j in 0..<rustCount {
-                                let seed = Double(j) * 2.71
-                                let x = (seed * 47.0).truncatingRemainder(dividingBy: 1.0) * Double(size.width) * 0.6 + Double(size.width) * 0.2
-                                let baseY = Double(size.height) * 0.7 + Double(j) * 3.0
-                                let wobble = sin(t * 1.5 + seed) * 2.0
-                                let rect = CGRect(x: x - 3, y: baseY + wobble, width: 6, height: 6)
-                                ctx.opacity = Double(progress) * 0.7
-                                ctx.fill(Path(ellipseIn: rect), with: .color(.brown))
+                    GeometryReader { rgeo in
+                        ZStack(alignment: .topLeading) {
+                            ForEach(0..<Int(progress * 10), id: \.self) { j in
+                                RustParticle(index: j, t: tick, progress: Double(progress), size: rgeo.size)
                             }
                         }
                     }
@@ -191,7 +200,7 @@ struct Scene4_TheRustingExperiment: View {
             if done {
                 Text(tube.rusts ? "RUSTED" : "No rust")
                     .font(.caption.bold())
-                    .foregroundColor(tube.rusts ? .brown : .green)
+                    .foregroundColor(tube.rusts ? Color.compatBrown : .green)
             }
 
             // Fast-forward button
@@ -216,6 +225,36 @@ struct Scene4_TheRustingExperiment: View {
         guard rusts else { return .gray }
         if progress < 0.1 { return .gray }
         if progress < 0.5 { return .orange }
-        return .brown
+        return Color.compatBrown
+    }
+}
+
+// MARK: - Rust particle subview
+
+private struct RustParticle: View {
+    let index: Int
+    let t: TimeInterval
+    let progress: Double
+    let size: CGSize
+
+    var body: some View {
+        let p = compute()
+        return Circle()
+            .fill(Color.compatBrown)
+            .frame(width: 6, height: 6)
+            .opacity(p.opacity)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+
+    private struct ParticlePos { let x: Double; let y: Double; let opacity: Double }
+
+    private func compute() -> ParticlePos {
+        let seed: Double = Double(index) * 2.71
+        let x: Double = (seed * 47.0).truncatingRemainder(dividingBy: 1.0) * Double(size.width) * 0.6 + Double(size.width) * 0.2
+        let baseY: Double = Double(size.height) * 0.7 + Double(index) * 3.0
+        let wobble: Double = sin(Double(t) * 1.5 + seed) * 2.0
+        let y: Double = baseY + wobble
+        let opacity: Double = progress * 0.7
+        return ParticlePos(x: x, y: y, opacity: opacity)
     }
 }

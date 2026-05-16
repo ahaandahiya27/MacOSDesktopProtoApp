@@ -2,16 +2,20 @@ import SwiftUI
 
 /// Scene 7 — Migration Superhero.
 /// Animated bird migration story. Arctic tern flies from Arctic to Antarctic.
-/// Canvas animation of bird path over simplified globe. Also mentions bar-headed geese and Siberian cranes.
-@available(macOS 12, *)
+/// Simplified globe with flight path. Also mentions bar-headed geese and Siberian cranes.
+///
+/// Big Sur (macOS 11) compatible — the Canvas + TimelineView based globe is
+/// replaced by SwiftUI Shapes (continents + flight path) plus a Timer-driven
+/// bird marker.
 struct Scene7_MigrationSuperhero: View {
     let pack: SubjectPack
     let chapter: Chapter
     let onComplete: () -> Void
 
-    @State private var animationPhase: Double = 0
     @State private var selectedFact: Int? = nil
     @State private var exploredFacts: Set<Int> = []
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private struct MigrationFact: Identifiable {
@@ -44,56 +48,19 @@ struct Scene7_MigrationSuperhero: View {
                         .font(.title2.bold())
                         .padding(.top, 14)
 
-                    // Animated globe with flight path
-                    ZStack {
-                        if reduceMotion {
-                            staticGlobe
-                        } else {
-                            animatedGlobe
-                        }
-                    }
-                    .frame(maxWidth: 500, maxHeight: 240)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14)
-                            .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
-                    )
+                    // Globe with flight path
+                    globeView
+                        .frame(maxWidth: 500, maxHeight: 240)
+                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14)
+                                .strokeBorder(Color.gray.opacity(0.3), lineWidth: 1)
+                        )
 
                     // Bird fact buttons
                     HStack(spacing: 12) {
                         ForEach(facts) { fact in
-                            let isSelected = selectedFact == fact.id
-                            let isExplored = exploredFacts.contains(fact.id)
-
-                            Button {
-                                withAnimation(reduceMotion ? .none : .spring()) {
-                                    selectedFact = fact.id
-                                    exploredFacts.insert(fact.id)
-                                }
-                            } label: {
-                                VStack(spacing: 4) {
-                                    Image(systemName: "bird.fill")
-                                        .font(.title3)
-                                        .foregroundColor(isSelected ? .white : Color.compatIndigo)
-                                    Text(fact.bird)
-                                        .font(.caption.weight(.semibold))
-                                        .foregroundColor(isSelected ? .white : .primary)
-                                    Text(fact.stat)
-                                        .font(.caption2)
-                                        .foregroundColor(isSelected ? .white.opacity(0.8) : .secondary)
-                                }
-                                .frame(width: 140, height: 80)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(isSelected ? Color.compatIndigo : isExplored ? Color.green.opacity(0.12) : Color(NSColor.windowBackgroundColor))
-                                )
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .strokeBorder(isExplored ? .green.opacity(0.4) : .gray.opacity(0.2), lineWidth: 1)
-                                )
-                            }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("\(fact.bird). \(fact.stat). \(isExplored ? "Explored" : "Tap to learn more")")
+                            factButton(fact: fact)
                         }
                     }
 
@@ -140,101 +107,165 @@ struct Scene7_MigrationSuperhero: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
     }
 
-    // MARK: - Animated globe
+    // MARK: - Subviews
 
-    private var animatedGlobe: some View {
-        TimelineView(.animation(minimumInterval: 1.0 / 30)) { timeline in
-            Canvas { context, size in
-                var ctx = context
-                let t = timeline.date.timeIntervalSince1970
+    private func factButton(fact: MigrationFact) -> some View {
+        let isSelected = selectedFact == fact.id
+        let isExplored = exploredFacts.contains(fact.id)
+        return Button {
+            withAnimation(reduceMotion ? .none : .spring()) {
+                selectedFact = fact.id
+                exploredFacts.insert(fact.id)
+            }
+        } label: {
+            VStack(spacing: 4) {
+                Image(systemName: "bird.fill")
+                    .font(.title3)
+                    .foregroundColor(isSelected ? .white : Color.compatIndigo)
+                Text(fact.bird)
+                    .font(.caption.weight(.semibold))
+                    .foregroundColor(isSelected ? .white : .primary)
+                Text(fact.stat)
+                    .font(.caption2)
+                    .foregroundColor(isSelected ? Color.white.opacity(0.8) : .secondary)
+            }
+            .frame(width: 140, height: 80)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(isSelected ? Color.compatIndigo : (isExplored ? Color.green.opacity(0.12) : Color(NSColor.windowBackgroundColor)))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .strokeBorder(isExplored ? Color.green.opacity(0.4) : Color.gray.opacity(0.2), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(fact.bird). \(fact.stat). \(isExplored ? "Explored" : "Tap to learn more")")
+    }
 
-                // Background — ocean
-                ctx.fill(Path(CGRect(origin: .zero, size: size)), with: .color(.blue.opacity(0.15)))
+    // MARK: - Globe (Shape-based; Big Sur compatible)
 
-                // Simplified continents
-                drawContinents(&ctx, size: size)
+    private var globeView: some View {
+        GeometryReader { geo in
+            ZStack {
+                // Ocean background
+                Rectangle()
+                    .fill(Color.blue.opacity(0.15))
 
-                // Arctic label
-                let arcticText = Text("Arctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
-                ctx.draw(ctx.resolve(arcticText), at: CGPoint(x: size.width * 0.5, y: 18))
+                // Continents
+                ContinentsShape()
+                    .fill(Color.green.opacity(0.25))
 
-                // Antarctic label
-                let antText = Text("Antarctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
-                ctx.draw(ctx.resolve(antText), at: CGPoint(x: size.width * 0.5, y: size.height - 14))
+                // Flight path (dashed)
+                FlightPathShape()
+                    .stroke(Color.orange.opacity(reduceMotion ? 0.5 : 0.4),
+                            style: StrokeStyle(lineWidth: 2, dash: [4, 4]))
 
-                // Flight path — sine wave from top to bottom
-                var flightPath = Path()
-                let steps = 60
-                for i in 0...steps {
-                    let frac = CGFloat(i) / CGFloat(steps)
-                    let x = size.width * 0.5 + sin(frac * .pi * 3) * size.width * 0.2
-                    let y = frac * size.height
-                    if i == 0 { flightPath.move(to: CGPoint(x: x, y: y)) }
-                    else { flightPath.addLine(to: CGPoint(x: x, y: y)) }
-                }
-                ctx.stroke(flightPath, with: .color(.orange.opacity(0.4)), style: StrokeStyle(lineWidth: 2, dash: [4, 4]))
+                // Pole labels
+                Text("Arctic")
+                    .font(.caption2.bold())
+                    .foregroundColor(Color.compatCyan)
+                    .position(x: geo.size.width * 0.5, y: 18)
 
-                // Bird position
-                let phase = (t * 0.3).truncatingRemainder(dividingBy: 1.0)
-                let birdFrac = CGFloat(phase)
-                let birdX = size.width * 0.5 + sin(birdFrac * .pi * 3) * size.width * 0.2
-                let birdY = birdFrac * size.height
+                Text("Antarctic")
+                    .font(.caption2.bold())
+                    .foregroundColor(Color.compatCyan)
+                    .position(x: geo.size.width * 0.5, y: geo.size.height - 14)
 
-                let birdText = Text("V").font(.title3.bold()).foregroundColor(.orange)
-                ctx.draw(ctx.resolve(birdText), at: CGPoint(x: birdX, y: birdY))
+                // Bird marker (Timer-driven; static when reduceMotion)
+                BirdMarker(t: tick, reduceMotion: reduceMotion, size: geo.size)
             }
         }
-        .accessibilityLabel("Animated Arctic tern migration path from Arctic to Antarctic")
+        .accessibilityLabel(reduceMotion
+                            ? "Static Arctic tern migration path from Arctic to Antarctic"
+                            : "Animated Arctic tern migration path from Arctic to Antarctic")
     }
 
-    private var staticGlobe: some View {
-        Canvas { context, size in
-            var ctx = context
-            ctx.fill(Path(CGRect(origin: .zero, size: size)), with: .color(.blue.opacity(0.15)))
-            drawContinents(&ctx, size: size)
+    // MARK: - Animation lifecycle
 
-            // Static flight path
-            var flightPath = Path()
-            let steps = 60
-            for i in 0...steps {
-                let frac = CGFloat(i) / CGFloat(steps)
-                let x = size.width * 0.5 + sin(frac * .pi * 3) * size.width * 0.2
-                let y = frac * size.height
-                if i == 0 { flightPath.move(to: CGPoint(x: x, y: y)) }
-                else { flightPath.addLine(to: CGPoint(x: x, y: y)) }
-            }
-            ctx.stroke(flightPath, with: .color(.orange.opacity(0.5)), style: StrokeStyle(lineWidth: 2, dash: [4, 4]))
-
-            let arcticLabel = Text("Arctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
-            ctx.draw(ctx.resolve(arcticLabel), at: CGPoint(x: size.width * 0.5, y: 18))
-            let antLabel = Text("Antarctic").font(.caption2.bold()).foregroundColor(Color.compatCyan)
-            ctx.draw(ctx.resolve(antLabel), at: CGPoint(x: size.width * 0.5, y: size.height - 14))
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
         }
-        .accessibilityLabel("Static Arctic tern migration path from Arctic to Antarctic")
     }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
+    }
+}
 
-    private func drawContinents(_ ctx: inout GraphicsContext, size: CGSize) {
-        // Simplified land masses
-        let landColor: Color = .green.opacity(0.25)
+// MARK: - Shapes
 
+private struct FlightPathShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let steps = 60
+        for i in 0...steps {
+            let frac = CGFloat(i) / CGFloat(steps)
+            let x = rect.width * 0.5 + sin(Double(frac) * .pi * 3) * Double(rect.width) * 0.2
+            let y = Double(frac) * Double(rect.height)
+            let p = CGPoint(x: CGFloat(x), y: CGFloat(y))
+            if i == 0 { path.move(to: p) } else { path.addLine(to: p) }
+        }
+        return path
+    }
+}
+
+private struct ContinentsShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
         // North America
-        let na = Path(ellipseIn: CGRect(x: size.width * 0.1, y: size.height * 0.1, width: size.width * 0.25, height: size.height * 0.25))
-        ctx.fill(na, with: .color(landColor))
-
-        // Europe/Africa
-        let eu = Path(ellipseIn: CGRect(x: size.width * 0.5, y: size.height * 0.05, width: size.width * 0.15, height: size.height * 0.2))
-        ctx.fill(eu, with: .color(landColor))
-        let af = Path(ellipseIn: CGRect(x: size.width * 0.5, y: size.height * 0.3, width: size.width * 0.18, height: size.height * 0.35))
-        ctx.fill(af, with: .color(landColor))
-
+        path.addEllipse(in: CGRect(x: rect.width * 0.1, y: rect.height * 0.1,
+                                   width: rect.width * 0.25, height: rect.height * 0.25))
+        // Europe
+        path.addEllipse(in: CGRect(x: rect.width * 0.5, y: rect.height * 0.05,
+                                   width: rect.width * 0.15, height: rect.height * 0.2))
+        // Africa
+        path.addEllipse(in: CGRect(x: rect.width * 0.5, y: rect.height * 0.3,
+                                   width: rect.width * 0.18, height: rect.height * 0.35))
         // South America
-        let sa = Path(ellipseIn: CGRect(x: size.width * 0.2, y: size.height * 0.45, width: size.width * 0.15, height: size.height * 0.3))
-        ctx.fill(sa, with: .color(landColor))
-
+        path.addEllipse(in: CGRect(x: rect.width * 0.2, y: rect.height * 0.45,
+                                   width: rect.width * 0.15, height: rect.height * 0.3))
         // Asia
-        let asia = Path(ellipseIn: CGRect(x: size.width * 0.65, y: size.height * 0.1, width: size.width * 0.25, height: size.height * 0.3))
-        ctx.fill(asia, with: .color(landColor))
+        path.addEllipse(in: CGRect(x: rect.width * 0.65, y: rect.height * 0.1,
+                                   width: rect.width * 0.25, height: rect.height * 0.3))
+        return path
+    }
+}
+
+// MARK: - Bird marker subview
+
+private struct BirdMarker: View {
+    let t: TimeInterval
+    let reduceMotion: Bool
+    let size: CGSize
+
+    var body: some View {
+        let p = compute()
+        return Text("V")
+            .font(.title3.bold())
+            .foregroundColor(.orange)
+            .position(x: CGFloat(p.x), y: CGFloat(p.y))
+    }
+
+    private struct MarkerPos { let x: Double; let y: Double }
+
+    private func compute() -> MarkerPos {
+        // When reduceMotion, anchor the bird at the start of the path (top pole).
+        let frac: Double
+        if reduceMotion {
+            frac = 0.0
+        } else {
+            frac = (Double(t) * 0.3).truncatingRemainder(dividingBy: 1.0)
+        }
+        let x = Double(size.width) * 0.5 + sin(frac * .pi * 3) * Double(size.width) * 0.2
+        let y = frac * Double(size.height)
+        return MarkerPos(x: x, y: y)
     }
 }

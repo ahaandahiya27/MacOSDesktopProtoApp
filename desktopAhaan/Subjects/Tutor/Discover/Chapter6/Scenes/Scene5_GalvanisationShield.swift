@@ -3,7 +3,9 @@ import SwiftUI
 /// Scene 5 — Galvanisation Shield.
 /// Iron pipe exposed to rain rusts. Then zinc coating applied (galvanisation).
 /// Rain hits but no rust. Shows zinc protecting iron. Also mentions painting, oiling, alloying.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — rain Canvas + TimelineView replaced with
+/// a Timer.publish + ForEach of GalvRainDrop subviews.
 struct Scene5_GalvanisationShield: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -12,6 +14,8 @@ struct Scene5_GalvanisationShield: View {
     @State private var step: GalvStep = .exposed
     @State private var rustLevel: CGFloat = 0
     @State private var rainActive = false
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private enum GalvStep: Int, CaseIterable {
@@ -36,21 +40,12 @@ struct Scene5_GalvanisationShield: View {
 
                     // Pipe visual
                     ZStack {
-                        // Rain
+                        // Rain (Timer-driven; Big Sur compatible)
                         if rainActive && !reduceMotion {
-                            TimelineView(.animation(minimumInterval: 1.0 / 20)) { timeline in
-                                let t = timeline.date.timeIntervalSince1970
-                                Canvas { context, size in
-                                    var ctx = context
-                                    for i in 0..<15 {
-                                        let seed = Double(i) * 3.14
-                                        let x = (seed * 53.0).truncatingRemainder(dividingBy: 1.0) * Double(size.width)
-                                        let fall = (t * 120 + seed * 40.0).truncatingRemainder(dividingBy: Double(size.height))
-                                        var drop = Path()
-                                        drop.move(to: CGPoint(x: x, y: fall))
-                                        drop.addLine(to: CGPoint(x: x, y: fall + 10))
-                                        ctx.opacity = 0.4
-                                        ctx.stroke(drop, with: .color(Color.compatCyan), lineWidth: 1.5)
+                            GeometryReader { rgeo in
+                                ZStack(alignment: .topLeading) {
+                                    ForEach(0..<15, id: \.self) { i in
+                                        GalvRainDrop(index: i, t: tick, size: rgeo.size)
                                     }
                                 }
                             }
@@ -88,7 +83,7 @@ struct Scene5_GalvanisationShield: View {
                         if step == .coating || step == .protected {
                             Text("Zn")
                                 .font(.title3.bold())
-                                .foregroundColor(.compatMint)
+                                .foregroundColor(Color.compatMint)
                                 .offset(x: 50)
                                 .transition(.opacity)
                         }
@@ -97,7 +92,7 @@ struct Scene5_GalvanisationShield: View {
                         if step == .exposed && rustLevel > 0.3 {
                             ForEach(0..<Int(rustLevel * 6), id: \.self) { i in
                                 Circle()
-                                    .fill(Color.brown.opacity(0.7))
+                                    .fill(Color.compatBrown.opacity(0.7))
                                     .frame(width: CGFloat.random(in: 5...12))
                                     .offset(
                                         x: CGFloat([-18, -8, 5, 15, -12, 10][i % 6]),
@@ -137,13 +132,13 @@ struct Scene5_GalvanisationShield: View {
                             }
                         }
                         
-                        .accentColor(.compatMint)
+                        .accentColor(Color.compatMint)
                         .disabled(step != .exposed || !rainActive)
                     }
 
                     Text(stepLabel)
                         .font(.headline)
-                        .foregroundColor(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? .brown : .secondary))
+                        .foregroundColor(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? Color.compatBrown : .secondary))
 
                     Spacer()
                     Spacer()
@@ -174,11 +169,25 @@ struct Scene5_GalvanisationShield: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
+    }
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 20, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     private var pipeColor: Color {
         if step == .exposed && rustLevel > 0.3 {
-            return Color.brown.opacity(0.6 + Double(rustLevel) * 0.4)
+            return Color.compatBrown.opacity(0.6 + Double(rustLevel) * 0.4)
         }
         if step == .protected { return .gray }
         return .gray
@@ -213,5 +222,33 @@ struct Scene5_GalvanisationShield: View {
                 .multilineTextAlignment(.center)
         }
         .frame(width: 80)
+    }
+}
+
+// MARK: - Rain drop subview
+
+private struct GalvRainDrop: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+
+    var body: some View {
+        let p = compute()
+        return Path { path in
+            path.move(to: CGPoint(x: CGFloat(p.x), y: CGFloat(p.y)))
+            path.addLine(to: CGPoint(x: CGFloat(p.x), y: CGFloat(p.y + 10)))
+        }
+        .stroke(Color.compatCyan, lineWidth: 1.5)
+        .opacity(0.4)
+    }
+
+    private struct DropPos { let x: Double; let y: Double }
+
+    private func compute() -> DropPos {
+        let seed: Double = Double(index) * 3.14
+        let x: Double = (seed * 53.0).truncatingRemainder(dividingBy: 1.0) * Double(size.width)
+        let raw: Double = Double(t) * 120.0 + seed * 40.0
+        let y: Double = raw.truncatingRemainder(dividingBy: Double(size.height))
+        return DropPos(x: x, y: y)
     }
 }
