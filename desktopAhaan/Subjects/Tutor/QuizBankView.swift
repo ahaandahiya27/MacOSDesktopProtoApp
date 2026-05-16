@@ -11,6 +11,7 @@ struct QuizBankView: View {
 private struct QuizBankContent: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject private var nav: TutorNavigationState
+    @EnvironmentObject private var dataStore: DataStore
 
     @State private var typeFilter: QuestionType? = nil
     @State private var difficultyFilter: Int? = nil
@@ -43,8 +44,11 @@ private struct QuizBankContent: View {
             if let cf = chapterFilter, entry.chapter.id != cf { return false }
             switch reviewFilter {
             case .all: break
-            case .reviewed: if entry.question.needsHumanReview { return false }
-            case .needsReview: if !entry.question.needsHumanReview { return false }
+            case .reviewed:
+                // "Reviewed" = no JSON flag OR the parent marked it in-app.
+                if dataStore.effectiveNeedsReview(entry.question) { return false }
+            case .needsReview:
+                if !dataStore.effectiveNeedsReview(entry.question) { return false }
             }
             if !searchText.isEmpty {
                 let text = searchText.lowercased()
@@ -190,6 +194,8 @@ private struct QuizBankRow: View {
     let chapter: Chapter
     let question: Question
 
+    @EnvironmentObject private var dataStore: DataStore
+
     var body: some View {
         HStack(spacing: 12) {
             Text(question.questionType.displayName)
@@ -213,11 +219,18 @@ private struct QuizBankRow: View {
                         .foregroundColor(Color.compatIndigo)
                         .accessibilityLabel("\(pack.title), Chapter \(chapter.number)")
                     QuestionDifficultyBadge(level: question.difficulty)
-                    if question.needsHumanReview {
+                    if dataStore.effectiveNeedsReview(question) {
                         Label("Needs review", systemImage: "exclamationmark.triangle.fill")
                             .font(.caption2.weight(.semibold))
                             .foregroundColor(.orange)
                             .accessibilityLabel("Flagged for human review")
+                    } else if question.needsHumanReview {
+                        // JSON flag is still on, but the parent marked it
+                        // reviewed in-app — show a subtle green confirmation.
+                        Label("Reviewed", systemImage: "checkmark.seal.fill")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundColor(.green)
+                            .accessibilityLabel("Already triaged")
                     }
                 }
             }

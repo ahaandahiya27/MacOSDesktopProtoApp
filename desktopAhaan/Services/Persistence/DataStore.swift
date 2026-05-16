@@ -14,6 +14,10 @@ final class DataStore: ObservableObject {
     @Published var questionAttempts: [QuestionAttempt] = []
     @Published var studySessions: [StudySession] = []
     @Published var discoverProgress: [DiscoverProgress] = []
+    /// Question IDs the parent has triaged. Used to override
+    /// `Question.needsHumanReview` for auto-generated content (e.g. the 154
+    /// Sanskrit MCQs) without having to edit the pack JSON.
+    @Published var reviewedQuestionIds: Set<String> = []
     @Published var lastSaveError: String?
 
     private let storeDir: URL
@@ -183,6 +187,29 @@ final class DataStore: ObservableObject {
         discoverProgress.filter { $0.chapterId == chapterId }
     }
 
+    // MARK: - Review status
+
+    /// True when the parent has flipped this question out of the
+    /// "needs review" queue via the in-app Mark Reviewed button.
+    func isReviewed(questionId: String) -> Bool {
+        reviewedQuestionIds.contains(questionId)
+    }
+
+    /// Effective "needs review" status — the JSON flag wins unless the parent
+    /// has explicitly marked the question reviewed in-app.
+    func effectiveNeedsReview(_ question: Question) -> Bool {
+        question.needsHumanReview && !isReviewed(questionId: question.id)
+    }
+
+    func setReviewed(questionId: String, reviewed: Bool) {
+        if reviewed {
+            reviewedQuestionIds.insert(questionId)
+        } else {
+            reviewedQuestionIds.remove(questionId)
+        }
+        save(Array(reviewedQuestionIds), to: "reviewedQuestionIds.json")
+    }
+
     // MARK: - Persistence helpers
 
     private func save<T: Encodable>(_ items: [T], to filename: String) {
@@ -226,5 +253,7 @@ final class DataStore: ObservableObject {
         questionAttempts = load(from: "attempts.json")
         studySessions = load(from: "sessions.json")
         discoverProgress = load(from: "discover.json")
+        let reviewedArray: [String] = load(from: "reviewedQuestionIds.json")
+        reviewedQuestionIds = Set(reviewedArray)
     }
 }

@@ -90,6 +90,42 @@ struct QuestionDetailView: View {
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
         .background(keyboardShortcutSink)
+        .toolbar { reviewToolbarItem }
+    }
+
+    /// Toolbar button (parent action): flip this question out of the
+    /// "needs review" queue. Only relevant when the pack flagged it for
+    /// review in the first place; otherwise the toolbar slot is empty.
+    @ToolbarContentBuilder
+    private var reviewToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .automatic) {
+            reviewButton
+        }
+    }
+
+    @ViewBuilder
+    private var reviewButton: some View {
+        if question.needsHumanReview {
+            let isReviewed = dataStore.isReviewed(questionId: question.id)
+            Button {
+                dataStore.setReviewed(
+                    questionId: question.id,
+                    reviewed: !isReviewed
+                )
+            } label: {
+                Label(
+                    isReviewed ? "Reviewed" : "Mark reviewed",
+                    systemImage: isReviewed
+                        ? "checkmark.seal.fill"
+                        : "exclamationmark.triangle.fill"
+                )
+            }
+            .help(isReviewed
+                  ? "This question has been triaged. Click to send it back to the Needs Review queue."
+                  : "Mark this question as triaged. It will drop out of the Needs Review filter in Quiz Bank.")
+        } else {
+            EmptyView()
+        }
     }
 
     // MARK: - Prev/Next
