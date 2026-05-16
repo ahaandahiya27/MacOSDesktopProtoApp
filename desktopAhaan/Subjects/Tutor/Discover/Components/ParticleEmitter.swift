@@ -46,6 +46,10 @@ struct ParticleEmitter: View {
         .onDisappear {
             stop()
         }
+        .pauseTimerWhenBackgrounded(
+            start: { if isActive { kickOff() } },
+            stop: stop
+        )
     }
 
     private func kickOff() {

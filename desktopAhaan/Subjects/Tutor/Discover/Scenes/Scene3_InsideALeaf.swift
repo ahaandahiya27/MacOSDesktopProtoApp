@@ -201,6 +201,7 @@ private struct LeafCrossSection: View {
         .frame(width: 500, height: 280)
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     private func startAnimation() {

@@ -185,6 +185,7 @@ struct Scene4_NeutralisationInAction: View {
                 }
                 .onAppear(perform: startAnimation)
                 .onDisappear(perform: stopAnimation)
+                .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
             }
         }
     }

@@ -95,6 +95,7 @@ struct Scene1_PlantKitchen: View {
         }
         .onAppear(perform: startAnimationLoop)
         .onDisappear(perform: stopAnimationLoop)
+        .pauseTimerWhenBackgrounded(start: startAnimationLoop, stop: stopAnimationLoop)
     }
 
     // MARK: - Animation loop

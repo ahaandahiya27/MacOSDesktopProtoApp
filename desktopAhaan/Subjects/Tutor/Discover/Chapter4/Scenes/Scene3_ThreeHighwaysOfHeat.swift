@@ -91,6 +91,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
         }
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     private func startAnimation() {

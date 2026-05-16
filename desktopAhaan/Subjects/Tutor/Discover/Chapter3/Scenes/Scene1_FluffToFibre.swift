@@ -72,6 +72,7 @@ struct Scene1_FluffToFibre: View {
         }
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     private func startAnimation() {

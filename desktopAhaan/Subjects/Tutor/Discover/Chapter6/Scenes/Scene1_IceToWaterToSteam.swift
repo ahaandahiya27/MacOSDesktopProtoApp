@@ -138,6 +138,7 @@ struct Scene1_IceToWaterToSteam: View {
         }
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     // MARK: - Animation timer

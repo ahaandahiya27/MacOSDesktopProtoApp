@@ -162,6 +162,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
         .accessibilityLabel(isDay ? "Animated sea breeze arrows" : "Animated land breeze arrows")
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     private func startAnimation() {

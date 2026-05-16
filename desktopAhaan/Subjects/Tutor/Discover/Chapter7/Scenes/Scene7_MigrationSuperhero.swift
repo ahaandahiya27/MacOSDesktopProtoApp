@@ -109,6 +109,7 @@ struct Scene7_MigrationSuperhero: View {
         }
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     // MARK: - Subviews

@@ -113,6 +113,7 @@ struct Scene4_TheRustingExperiment: View {
         }
         .onAppear(perform: startAnimation)
         .onDisappear(perform: stopAnimation)
+        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
     }
 
     private func startAnimation() {

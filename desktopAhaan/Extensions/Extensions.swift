@@ -153,6 +153,27 @@ extension View {
     func onArrowKeys(left: @escaping () -> Void, right: @escaping () -> Void) -> some View {
         modifier(ArrowKeyModifier(onLeft: left, onRight: right))
     }
+
+    /// Pauses a Timer-driven scene when the SwiftUI scene phase leaves
+    /// `.active` (app backgrounded), and resumes when it comes back. Pair
+    /// with `startAnimation` / `stopAnimation` helpers that guard against
+    /// double-starts. Saves GPU/CPU on the 2014 iMac when the user tabs away.
+    func pauseTimerWhenBackgrounded(start: @escaping () -> Void,
+                                    stop: @escaping () -> Void) -> some View {
+        modifier(ScenePhasePauseModifier(start: start, stop: stop))
+    }
+}
+
+private struct ScenePhasePauseModifier: ViewModifier {
+    let start: () -> Void
+    let stop: () -> Void
+    @Environment(\.scenePhase) private var scenePhase
+
+    func body(content: Content) -> some View {
+        content.onChange(of: scenePhase) { phase in
+            if phase == .active { start() } else { stop() }
+        }
+    }
 }
 
 // MARK: - Date formatting (replaces FormatStyle which requires macOS 12+)
