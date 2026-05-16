@@ -1,15 +1,20 @@
 import SwiftUI
 
 /// Scene 1 — Ice to Water to Steam.
-/// Temperature slider from -10 C to 120 C. Canvas particles speed up with temperature.
+/// Temperature slider from -10 C to 120 C. Particles speed up with temperature.
 /// Ice melts at 0 C, water boils at 100 C. All three are H2O — physical changes.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the Canvas/TimelineView particle field
+/// is replaced with a 30 fps Timer.publish driving a ForEach of small
+/// MoleculeDot views. Same particle physics, identical visual output.
 struct Scene1_IceToWaterToSteam: View {
     let pack: SubjectPack
     let chapter: Chapter
     let onComplete: () -> Void
 
     @State private var temperature: Double = -10
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var phase: MatterPhase {
@@ -18,7 +23,7 @@ struct Scene1_IceToWaterToSteam: View {
         return .steam
     }
 
-    private enum MatterPhase: String {
+    fileprivate enum MatterPhase: String {
         case ice = "Ice (solid)"
         case water = "Water (liquid)"
         case steam = "Steam (gas)"
@@ -131,53 +136,37 @@ struct Scene1_IceToWaterToSteam: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
     }
 
-    // MARK: - Particle Canvas
+    // MARK: - Animation timer
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
+    }
+
+    // MARK: - Molecule field (was a Canvas inside TimelineView)
 
     private var particleCanvas: some View {
-        TimelineView(.animation(minimumInterval: 1.0 / 20)) { timeline in
-            let t = timeline.date.timeIntervalSince1970
-            Canvas { context, size in
-                var ctx = context
-                let speed = max(0.1, (temperature + 10) / 130.0)
-                let count = 20
-
-                for i in 0..<count {
-                    let seed = Double(i) * 1.618
-                    let baseX = (seed * 73.0).truncatingRemainder(dividingBy: 1.0)
-                    let baseY = (seed * 137.0).truncatingRemainder(dividingBy: 1.0)
-
-                    let jitterX = sin(t * speed * 3.0 + seed * 5.0) * Double(speed) * 30.0
-                    let jitterY = cos(t * speed * 2.5 + seed * 7.0) * Double(speed) * 30.0
-
-                    let x = baseX * Double(size.width) + jitterX
-                    let y: Double
-                    if phase == .steam {
-                        let rise = (t * speed * 40.0 + seed * 50.0)
-                            .truncatingRemainder(dividingBy: Double(size.height))
-                        y = Double(size.height) - rise + jitterY * 0.5
-                    } else {
-                        y = baseY * Double(size.height) + jitterY
-                    }
-
-                    let radius: CGFloat = phase == .ice ? 10 : (phase == .water ? 7 : 5)
-                    let rect = CGRect(
-                        x: x - Double(radius),
-                        y: y - Double(radius),
-                        width: Double(radius) * 2,
-                        height: Double(radius) * 2
+        GeometryReader { geo in
+            ZStack(alignment: .topLeading) {
+                ForEach(0..<20, id: \.self) { i in
+                    MoleculeDot(
+                        index: i,
+                        t: tick,
+                        size: geo.size,
+                        temperature: temperature,
+                        phase: phase
                     )
-
-                    ctx.opacity = phase == .steam ? 0.4 : 0.7
-                    if phase == .ice {
-                        ctx.fill(Path(CGRect(
-                            x: rect.origin.x, y: rect.origin.y,
-                            width: rect.width, height: rect.height
-                        )), with: .color(Color.compatCyan.opacity(0.6)))
-                    } else {
-                        ctx.fill(Path(ellipseIn: rect), with: .color(phase.color.opacity(0.6)))
-                    }
                 }
             }
         }
@@ -185,8 +174,82 @@ struct Scene1_IceToWaterToSteam: View {
 
     private var temperatureColor: Color {
         if temperature < 0 { return Color.compatCyan }
-        if temperature < 50 { return .blue }
-        if temperature < 100 { return .orange }
-        return .red
+        if temperature < 50 { return Color.blue }
+        if temperature < 100 { return Color.orange }
+        return Color.red
     }
+}
+
+/// One animated H₂O molecule inside the particle field. Extracted into its
+/// own struct (with explicit Double types throughout) so the Swift 5.5
+/// type-checker doesn't time out on the inline trig + position math.
+private struct MoleculeDot: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    let temperature: Double
+    let phase: Scene1_IceToWaterToSteam.MatterPhase
+
+    var body: some View {
+        let m = computePosition()
+        return AnyShape(squareOrCircle: phase == .ice)
+            .fill(m.fillColor.opacity(m.opacity))
+            .frame(width: m.dotSize, height: m.dotSize)
+            .position(x: CGFloat(m.x), y: CGFloat(m.y))
+    }
+
+    private struct MoleculePosition {
+        let x: Double
+        let y: Double
+        let dotSize: CGFloat
+        let opacity: Double
+        let fillColor: Color
+    }
+
+    private func computePosition() -> MoleculePosition {
+        let speed: Double = max(0.1, (temperature + 10) / 130.0)
+        let seed: Double = Double(index) * 1.618
+        let baseX: Double = (seed * 73.0).truncatingRemainder(dividingBy: 1.0)
+        let baseY: Double = (seed * 137.0).truncatingRemainder(dividingBy: 1.0)
+        let jitterX: Double = sin(Double(t) * speed * 3.0 + seed * 5.0) * speed * 30.0
+        let jitterY: Double = cos(Double(t) * speed * 2.5 + seed * 7.0) * speed * 30.0
+        let x: Double = baseX * Double(size.width) + jitterX
+        let y: Double
+        if phase == .steam {
+            let rise: Double = (Double(t) * speed * 40.0 + seed * 50.0)
+                .truncatingRemainder(dividingBy: Double(size.height))
+            y = Double(size.height) - rise + jitterY * 0.5
+        } else {
+            y = baseY * Double(size.height) + jitterY
+        }
+        let dotSize: CGFloat = phase == .ice ? 20 : (phase == .water ? 14 : 10)
+        let baseOpacity: Double = phase == .steam ? 0.4 : 0.7
+        let opacity: Double = baseOpacity * 0.6
+        let fillColor: Color = phase == .ice ? Color.compatCyan : phase.color
+        return MoleculePosition(x: x, y: y, dotSize: dotSize,
+                                opacity: opacity, fillColor: fillColor)
+    }
+}
+
+/// Tiny type-erased Shape so MoleculeDot can swap between a square (ice)
+/// and a circle (water/steam) without an `if`/`else` branch in the body
+/// that confuses @ViewBuilder type inference on Swift 5.5.
+private struct AnyShape: Shape {
+    private let pathBuilder: (CGRect) -> Path
+    init(squareOrCircle isSquare: Bool) {
+        if isSquare {
+            self.pathBuilder = { rect in Path(rect) }
+        } else {
+            self.pathBuilder = { rect in Path(ellipseIn: rect) }
+        }
+    }
+    func path(in rect: CGRect) -> Path { pathBuilder(rect) }
+}
+
+// Expose the MatterPhase enum (it was a nested private enum before; make
+// it accessible to MoleculeDot which lives at file scope now).
+extension Scene1_IceToWaterToSteam {
+    // (MatterPhase is declared on the struct already — re-export via a
+    // typealias would be redundant. MoleculeDot uses the qualified name
+    // Scene1_IceToWaterToSteam.MatterPhase directly above.)
 }

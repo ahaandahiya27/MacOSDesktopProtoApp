@@ -74,12 +74,7 @@ struct DiscoverChapter6View: View {
         // Scenes 1, 4, 5 still use TimelineView / Canvas (macOS 12+).
         // The rest are over-cautiously gated and now run on macOS 11.
         switch currentScene {
-        case 0:
-            if #available(macOS 12, *) {
-                Scene1_IceToWaterToSteam(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 0))
-            }
+        case 0: Scene1_IceToWaterToSteam(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_TearingVsBurningPaper(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2: Scene3_FiveSignsOfChemicalChange(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
         case 3:
