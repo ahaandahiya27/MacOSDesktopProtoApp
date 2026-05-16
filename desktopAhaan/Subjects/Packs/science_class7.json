@@ -12121,6 +12121,512 @@
                 200
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_q03",
+              "prompt": "Light travels in:",
+              "questionType": "mcq",
+              "options": [
+                "Curved lines",
+                "Zig-zag lines",
+                "Straight lines",
+                "Random directions"
+              ],
+              "answer": "Straight lines",
+              "solutionSteps": [
+                "Light travels in straight lines unless it hits something that bends it (a lens, water surface, mirror).",
+                "This is why shadows have sharp edges and a torch beam goes straight."
+              ],
+              "commonMistakes": [
+                "Thinking light curves like a thrown ball — light moves in straight lines unless something refracts or reflects it."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q04",
+              "prompt": "The angle of incidence equals the angle of:",
+              "questionType": "mcq",
+              "options": [
+                "Refraction",
+                "Reflection",
+                "Diffraction",
+                "Dispersion"
+              ],
+              "answer": "Reflection",
+              "solutionSteps": [
+                "This is the second law of reflection.",
+                "Both angles are measured from the normal — the perpendicular to the surface at the point of incidence."
+              ],
+              "commonMistakes": [
+                "Measuring from the surface itself instead of from the normal."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q05",
+              "prompt": "A plane mirror forms an image that is:",
+              "questionType": "mcq",
+              "options": [
+                "Real, inverted, and magnified",
+                "Virtual, erect, and the same size",
+                "Virtual, inverted, and diminished",
+                "Real, erect, and diminished"
+              ],
+              "answer": "Virtual, erect, and the same size",
+              "solutionSteps": [
+                "The image in a plane mirror cannot be projected on a screen — it is virtual.",
+                "It is the same way up as the object — erect.",
+                "It is the same size as the object."
+              ],
+              "commonMistakes": [
+                "Thinking the mirror image is magnified — it's exactly the same size."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q06",
+              "prompt": "The image in a plane mirror is:",
+              "questionType": "mcq",
+              "options": [
+                "Behind the mirror at the same distance",
+                "Inside the mirror",
+                "On the mirror surface",
+                "Behind you"
+              ],
+              "answer": "Behind the mirror at the same distance",
+              "solutionSteps": [
+                "A plane mirror forms a virtual image that appears to lie behind the mirror.",
+                "The image distance equals the object distance — if you stand 1 m in front, the image looks 1 m behind."
+              ],
+              "commonMistakes": [
+                "Thinking the image is 'on' the mirror — it appears to be behind it."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q07",
+              "prompt": "Lateral inversion in a plane mirror means:",
+              "questionType": "mcq",
+              "options": [
+                "Top and bottom of the image swap",
+                "Left and right of the image swap",
+                "The image is upside down",
+                "The image is bigger than the object"
+              ],
+              "answer": "Left and right of the image swap",
+              "solutionSteps": [
+                "Stand in front of a mirror and raise your right hand — the image raises its left.",
+                "Lateral = sideways. Top and bottom stay the same; only left/right reverse."
+              ],
+              "commonMistakes": [
+                "Confusing lateral inversion with 'upside down' — top stays top in a normal mirror."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q08",
+              "prompt": "The word AMBULANCE is written in reverse on the front of an ambulance because:",
+              "questionType": "mcq",
+              "options": [
+                "It looks cool",
+                "The driver in front sees it correctly in their rear-view mirror",
+                "It saves paint",
+                "To confuse pedestrians"
+              ],
+              "answer": "The driver in front sees it correctly in their rear-view mirror",
+              "solutionSteps": [
+                "A car's rear-view mirror laterally inverts what it sees.",
+                "Writing AMBULANCE in reverse means that in the mirror it appears correctly — so the driver ahead can read 'AMBULANCE' and pull over quickly."
+              ],
+              "commonMistakes": [
+                "Thinking it's purely decorative — there's a real safety reason."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q09",
+              "prompt": "A concave mirror is also called:",
+              "questionType": "mcq",
+              "options": [
+                "Diverging mirror",
+                "Converging mirror",
+                "Plane mirror",
+                "Cylindrical mirror"
+              ],
+              "answer": "Converging mirror",
+              "solutionSteps": [
+                "A concave mirror's reflective surface curves inward.",
+                "Parallel rays hitting it bend toward each other and converge at a single point — the focus.",
+                "Hence concave = converging."
+              ],
+              "commonMistakes": [
+                "Swapping concave and convex — concave is curved-in like a cave."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q10",
+              "prompt": "Convex mirrors are used as rear-view mirrors in vehicles because they:",
+              "questionType": "mcq",
+              "options": [
+                "Magnify the image",
+                "Show a wider field of view",
+                "Make objects look closer",
+                "Cannot break"
+              ],
+              "answer": "Show a wider field of view",
+              "solutionSteps": [
+                "A convex mirror is curved-outward and always forms a small, erect virtual image.",
+                "Because the image is small, you can see a much wider area than a flat mirror could show.",
+                "Wider view = better awareness of what's behind/beside the vehicle."
+              ],
+              "commonMistakes": [
+                "Thinking convex mirrors magnify — they actually shrink images, but cover more area."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q11",
+              "prompt": "Why does a doctor use a concave mirror to examine ears, teeth, or the throat?",
+              "questionType": "mcq",
+              "options": [
+                "It diverges light away from the patient",
+                "It forms a magnified, erect image when the object is close",
+                "It changes the colour of the light",
+                "It absorbs all light"
+              ],
+              "answer": "It forms a magnified, erect image when the object is close",
+              "solutionSteps": [
+                "When an object is between a concave mirror and its focus, the image is virtual, erect, and enlarged.",
+                "Doctors hold the mirror close to the area of interest to see a clear magnified view."
+              ],
+              "commonMistakes": [
+                "Thinking the mirror is for the doctor's own face — it's actually used as a magnifier."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q12",
+              "prompt": "A concave lens is used to correct which eye defect?",
+              "questionType": "mcq",
+              "options": [
+                "Long-sightedness (hypermetropia)",
+                "Short-sightedness (myopia)",
+                "Colour blindness",
+                "Astigmatism only"
+              ],
+              "answer": "Short-sightedness (myopia)",
+              "solutionSteps": [
+                "Short-sighted people cannot see distant objects clearly because their eye lens converges light too strongly.",
+                "A concave (diverging) lens spreads the light slightly before it enters the eye, so the eye's natural lens can then focus it correctly on the retina."
+              ],
+              "commonMistakes": [
+                "Picking long-sightedness — that uses convex lenses, not concave."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q13",
+              "prompt": "Sunlight passing through a prism splits into seven colours. This phenomenon is called:",
+              "questionType": "mcq",
+              "options": [
+                "Reflection",
+                "Refraction",
+                "Dispersion",
+                "Diffraction"
+              ],
+              "answer": "Dispersion",
+              "solutionSteps": [
+                "White light is made up of many colours, each having a different wavelength.",
+                "Different colours refract by slightly different amounts inside a prism.",
+                "The light spreads out into a rainbow-like spectrum — that's dispersion."
+              ],
+              "commonMistakes": [
+                "Confusing dispersion (splitting white into colours) with diffraction (bending around edges)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": [
+                {
+                  "prompt": "Name the seven colours of the spectrum in order.",
+                  "answer": "Violet, Indigo, Blue, Green, Yellow, Orange, Red (VIBGYOR).",
+                  "solutionSteps": [
+                    "Use the mnemonic VIBGYOR — Violet to Red, by increasing wavelength."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ch15_t01_q14",
+              "prompt": "The seven colours of white light, in order, can be remembered with the word:",
+              "questionType": "mcq",
+              "options": [
+                "RAINBOW",
+                "VIBGYOR",
+                "COLOURS",
+                "SPECTRUM"
+              ],
+              "answer": "VIBGYOR",
+              "solutionSteps": [
+                "VIBGYOR stands for Violet, Indigo, Blue, Green, Yellow, Orange, Red.",
+                "It goes from the shortest visible wavelength (violet) to the longest (red)."
+              ],
+              "commonMistakes": [
+                "Reciting the colours from red to violet — VIBGYOR goes violet to red."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q15",
+              "prompt": "Newton's disc spins white because:",
+              "questionType": "mcq",
+              "options": [
+                "The paint is white underneath",
+                "The seven colours blend back together too fast for the eye to see them separately",
+                "The disc is hot",
+                "The disc reflects sunlight"
+              ],
+              "answer": "The seven colours blend back together too fast for the eye to see them separately",
+              "solutionSteps": [
+                "Newton's disc has seven coloured sectors painted on it.",
+                "When spun fast, persistence of vision in the eye blends the colours.",
+                "The result is the same recombined white light that originally split into them — a neat reverse-dispersion demonstration."
+              ],
+              "commonMistakes": [
+                "Thinking the disc is physically painted white — it is the spinning that produces the white."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q16",
+              "prompt": "Light bends when it passes from one medium to another. This bending is called:",
+              "questionType": "mcq",
+              "options": [
+                "Reflection",
+                "Refraction",
+                "Dispersion",
+                "Absorption"
+              ],
+              "answer": "Refraction",
+              "solutionSteps": [
+                "Light slows down when entering a denser medium (e.g. air → water).",
+                "The change in speed bends its path at the boundary.",
+                "This bending is refraction. Reflection is bouncing back, dispersion is splitting into colours."
+              ],
+              "commonMistakes": [
+                "Confusing refraction with reflection — refraction is going through, reflection is bouncing back."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q17",
+              "prompt": "A pencil appears bent when half-dipped in water because of:",
+              "questionType": "mcq",
+              "options": [
+                "Reflection",
+                "Refraction at the air–water boundary",
+                "Dispersion",
+                "Magnification by the water"
+              ],
+              "answer": "Refraction at the air–water boundary",
+              "solutionSteps": [
+                "Light coming from the submerged portion of the pencil bends as it leaves the water.",
+                "Your eye traces the light back in a straight line, so the pencil tip looks shifted — making the pencil appear bent at the surface."
+              ],
+              "commonMistakes": [
+                "Thinking the pencil is actually bent — it isn't; the light path is."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q18",
+              "prompt": "A rainbow is formed because raindrops act like tiny:",
+              "questionType": "mcq",
+              "options": [
+                "Mirrors",
+                "Prisms (refracting + reflecting droplets)",
+                "Magnifying glasses",
+                "Sources of light"
+              ],
+              "answer": "Prisms (refracting + reflecting droplets)",
+              "solutionSteps": [
+                "Sunlight enters a raindrop, refracts (bends and splits), reflects off the back of the drop, then refracts out again.",
+                "The double refraction separates white light into its component colours.",
+                "Millions of droplets together form the arc of colours we see."
+              ],
+              "commonMistakes": [
+                "Thinking only reflection is involved — the colour splitting requires refraction inside the drop."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q19",
+              "prompt": "True or false: A real image can be projected on a screen, but a virtual image cannot.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "A real image is formed where rays actually converge — you can catch it on a screen (think cinema projector).",
+                "A virtual image only appears to exist where rays seem to diverge from — your eye can see it but a screen at that spot would show nothing."
+              ],
+              "commonMistakes": [
+                "Thinking 'virtual' means 'fake' — it's just an image you can't catch on a screen."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q20",
+              "prompt": "Which type of mirror gives a magnified, erect image when the object is very close to it?",
+              "questionType": "mcq",
+              "options": [
+                "Plane mirror",
+                "Convex mirror",
+                "Concave mirror",
+                "None of the above"
+              ],
+              "answer": "Concave mirror",
+              "solutionSteps": [
+                "When an object is between the focus and the surface of a concave mirror, the image is virtual, erect and magnified.",
+                "That's why concave mirrors are used as shaving and make-up mirrors.",
+                "Convex mirrors always give small images; plane mirrors give same-size images."
+              ],
+              "commonMistakes": [
+                "Picking convex — convex always shrinks the image."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q21",
+              "prompt": "Match each mirror/lens with its common use.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Concave mirror — shaving mirror; Convex mirror — car rear-view; Convex lens — magnifying glass; Concave lens — myopia correction; Plane mirror — bathroom mirror.",
+              "matchPairs": [
+                {
+                  "left": "Concave mirror",
+                  "right": "Shaving / dentist's mirror"
+                },
+                {
+                  "left": "Convex mirror",
+                  "right": "Vehicle rear-view mirror"
+                },
+                {
+                  "left": "Convex lens",
+                  "right": "Magnifying glass"
+                },
+                {
+                  "left": "Concave lens",
+                  "right": "Myopia (short-sight) correction"
+                },
+                {
+                  "left": "Plane mirror",
+                  "right": "Bathroom / dressing-table mirror"
+                }
+              ],
+              "solutionSteps": [
+                "Match by what each optical element does (magnifies, widens view, corrects vision, etc.) and where it's commonly seen."
+              ],
+              "commonMistakes": [
+                "Swapping concave and convex — concave is curved-in like a bowl/cave, convex is curved-out like a dome."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q22",
+              "prompt": "Why is the inside of a car headlight shaped like a concave mirror?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "A bulb placed at the focus of a concave mirror sends out a strong parallel beam, so the light reaches far ahead.",
+              "solutionSteps": [
+                "A concave mirror reflects parallel rays through a single point (its focus) and vice versa.",
+                "If the bulb is placed at the focus, the reflected rays come out parallel — a powerful forward beam.",
+                "That's exactly what you want from a headlight."
+              ],
+              "commonMistakes": [
+                "Thinking the mirror's job is just to make the bulb brighter — it also shapes the beam."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t01_q23",
+              "prompt": "Light from the Sun reaches the Earth in about ____ minutes.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "8",
+              "solutionSteps": [
+                "Light travels at about 3 × 10^8 m/s.",
+                "The Sun is about 150 million km from Earth.",
+                "Time = distance / speed ≈ 8 minutes and 20 seconds.",
+                "Rounded: about 8 minutes."
+              ],
+              "commonMistakes": [
+                "Thinking sunlight is instantaneous — it takes about 8 minutes to get here."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
