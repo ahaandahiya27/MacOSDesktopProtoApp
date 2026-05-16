@@ -45,7 +45,10 @@ struct SanskritKoshApp: App {
                 .environmentObject(appState)
                 .environmentObject(subjectRegistry)
                 .environmentObject(dataStore)
-                .frame(minWidth: 980, minHeight: 640)
+                .frame(
+                    minWidth: 1280, idealWidth: 1500,
+                    minHeight: 800, idealHeight: 950
+                )
         }
         .commands {
             CommandGroup(after: .newItem) {

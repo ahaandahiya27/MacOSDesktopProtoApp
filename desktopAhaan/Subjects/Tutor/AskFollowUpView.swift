@@ -78,7 +78,10 @@ struct AskFollowUpView: View {
                 Spacer()
             }
             .padding(20)
-            .frame(minWidth: 420, minHeight: 380)
+            .frame(
+                minWidth: 420, idealWidth: 600, maxWidth: 720,
+                minHeight: 380, idealHeight: 600, maxHeight: 800
+            )
             .overlay(
                 HStack {
                     Spacer()
