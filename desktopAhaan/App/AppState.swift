@@ -29,6 +29,14 @@ final class AppState: ObservableObject {
     /// write this. Don't remove.
     @Published var selectedTab: AppTab = .translate
 
+    /// One-shot pending TutorNavigation route. Set by the ⌘K command palette
+    /// (or any future caller) AFTER flipping `sidebarSelection` to the
+    /// container that should host the route. The next TutorNavigationContainer
+    /// to mount (or the current one, via .onChange) consumes it once and
+    /// clears the slot. Deterministic alternative to NotificationCenter
+    /// timing tricks.
+    @Published var pendingRoute: PendingRoute? = nil
+
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "NetworkMonitor")
 
@@ -69,6 +77,22 @@ final class AppState: ObservableObject {
     func selectSanskritTab(_ tab: AppTab) {
         sidebarSelection = .subject("sanskrit_class7")
         selectedTab = tab
+    }
+}
+
+// MARK: - PendingRoute
+
+/// A route to push (with optional sibling list for Prev/Next) that arrives
+/// from outside any TutorNavigationContainer — e.g. the ⌘K palette posting
+/// a destination after switching the sidebar.
+struct PendingRoute: Equatable {
+    let route: TutorRoute
+    /// Sibling questions for Prev/Next walking. Empty means no siblings.
+    let siblings: [QuestionRef]
+
+    init(route: TutorRoute, siblings: [QuestionRef] = []) {
+        self.route = route
+        self.siblings = siblings
     }
 }
 

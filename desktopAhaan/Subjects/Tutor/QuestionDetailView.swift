@@ -66,7 +66,11 @@ struct QuestionDetailView: View {
             .onAppear {
                 resetMatchStateIfNeeded()
                 // Land at the top whenever this detail is first shown.
-                proxy.scrollTo("__top__", anchor: .top)
+                // Deferred to the next runloop tick so the inner VStack has
+                // laid out before we ask the proxy to scroll.
+                DispatchQueue.main.async {
+                    proxy.scrollTo("__top__", anchor: .top)
+                }
             }
             .onChange(of: question.id) { _ in
                 // Reset per-question state when Prev/Next swaps the question.

@@ -35,7 +35,11 @@ struct ConceptDetailView: View {
                 .frame(maxWidth: .infinity)
                 .id("__top__")
             }
-            .onAppear { proxy.scrollTo("__top__", anchor: .top) }
+            .onAppear {
+                DispatchQueue.main.async {
+                    proxy.scrollTo("__top__", anchor: .top)
+                }
+            }
             .onChange(of: concept.id) { _ in
                 withAnimation(.easeOut(duration: 0.2)) {
                     proxy.scrollTo("__top__", anchor: .top)

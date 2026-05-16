@@ -7,9 +7,6 @@ extension Notification.Name {
     static let speakResultCommand = Notification.Name("speakResultCommand")
     static let translateCommand = Notification.Name("translateCommand")
     static let navigateBackCommand = Notification.Name("navigateBackCommand")
-    /// CommandPalette → TutorNavigationContainer: push the carried TutorRoute.
-    /// The route is delivered via the notification's `object`.
-    static let openTutorRoute = Notification.Name("openTutorRoute")
 }
 
 // MARK: - Color extensions for Devanagari-friendly theming

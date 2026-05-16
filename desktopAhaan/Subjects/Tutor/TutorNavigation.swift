@@ -53,6 +53,7 @@ final class TutorNavigationState: ObservableObject {
 struct TutorNavigationContainer<Root: View>: View {
     @StateObject private var nav = TutorNavigationState()
     @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject var appState: AppState
     let root: Root
 
     init(@ViewBuilder root: () -> Root) {
@@ -105,13 +106,19 @@ struct TutorNavigationContainer<Root: View>: View {
         .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
             nav.pop()
         }
-        .onReceive(NotificationCenter.default.publisher(for: .openTutorRoute)) { note in
-            guard let route = note.object as? TutorRoute else { return }
-            // Pop to the root of this container first so the new route sits
-            // at depth 1, not piled on top of where the user was.
-            nav.popToRoot()
-            nav.push(route)
-        }
+        .onAppear { consumePendingRouteIfAny() }
+        .onChange(of: appState.pendingRoute) { _ in consumePendingRouteIfAny() }
+    }
+
+    /// Pull the one-shot pending route out of AppState, apply it to this
+    /// container's nav, and clear the slot so it can't be consumed twice.
+    /// Runs on mount AND whenever a fresh pending route appears.
+    private func consumePendingRouteIfAny() {
+        guard let req = appState.pendingRoute else { return }
+        nav.popToRoot()
+        nav.push(req.route)
+        nav.questionSiblings = req.siblings
+        appState.pendingRoute = nil
     }
 
     @ViewBuilder

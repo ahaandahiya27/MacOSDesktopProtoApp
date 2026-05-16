@@ -45,16 +45,28 @@ struct ContentView: View {
         }
         .background(
             // Invisible buttons hosting global keyboard shortcuts.
+            // Gated on `noOtherSheetOpen` so triggering ⌘K or ⌘/ while the
+            // welcome sheet (or another sheet) is up is a no-op rather than
+            // a sheet-stacking glitch.
             ZStack {
-                Button("Show keyboard shortcuts") { showShortcutsSheet = true }
-                    .keyboardShortcut("/", modifiers: .command)
-                Button("Open command palette") { showCommandPalette = true }
-                    .keyboardShortcut("k", modifiers: .command)
+                Button("Show keyboard shortcuts") {
+                    if noOtherSheetOpen { showShortcutsSheet = true }
+                }
+                .keyboardShortcut("/", modifiers: .command)
+
+                Button("Open command palette") {
+                    if noOtherSheetOpen { showCommandPalette = true }
+                }
+                .keyboardShortcut("k", modifiers: .command)
             }
             .opacity(0)
             .frame(width: 0, height: 0)
             .accessibilityHidden(true)
         )
+    }
+
+    private var noOtherSheetOpen: Bool {
+        hasSeenWelcome && !showShortcutsSheet && !showCommandPalette
     }
 
     // MARK: - Sidebar

@@ -258,17 +258,27 @@ struct CommandPalette: View {
 
     private func open(_ entry: Entry) {
         onDismiss()
-        // Switch to the universal Quiz Bank container (which already wraps
-        // its content in a TutorNavigationContainer) and post the route so
-        // the container pushes it as the new top of stack.
+        // For a question, populate Prev/Next siblings = every other question
+        // in the same topic, so ⌘← / ⌘→ work after the palette lands the
+        // user. Non-question routes get an empty sibling list.
+        let siblings = siblingRefs(for: entry)
+        // Stage the route in AppState first, THEN flip the sidebar. The
+        // TutorNavigationContainer that mounts (or is already mounted) reads
+        // pendingRoute on appear AND on change — no notification timing race.
+        appState.pendingRoute = PendingRoute(route: entry.route, siblings: siblings)
         appState.sidebarSelection = .quizBank
-        // Tiny delay so the container is mounted before we post.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            NotificationCenter.default.post(
-                name: .openTutorRoute,
-                object: entry.route
-            )
+    }
+
+    private func siblingRefs(for entry: Entry) -> [QuestionRef] {
+        guard case .question(_, let qid) = entry.route else { return [] }
+        for chapter in entry.pack.chapters {
+            for topic in chapter.topics where topic.questions.contains(where: { $0.id == qid }) {
+                return topic.questions.map {
+                    QuestionRef(packId: entry.pack.id, questionId: $0.id)
+                }
+            }
         }
+        return []
     }
 
     private func kindEmoji(_ kind: Kind) -> String {
