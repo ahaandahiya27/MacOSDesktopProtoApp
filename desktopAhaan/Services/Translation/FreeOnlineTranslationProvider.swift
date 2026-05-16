@@ -39,7 +39,23 @@ final class FreeOnlineTranslationProvider: TranslationProvider {
         var request = URLRequest(url: url)
         request.timeoutInterval = 15
 
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response): (Data, URLResponse)
+        if #available(macOS 12.0, *) {
+            (data, response) = try await URLSession.shared.data(for: request)
+        } else {
+            (data, response) = try await withCheckedThrowingContinuation { continuation in
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    if let error = error {
+                        continuation.resume(throwing: error)
+                    } else if let data = data, let response = response {
+                        continuation.resume(returning: (data, response))
+                    } else {
+                        continuation.resume(throwing: TranslationError.invalidResponse)
+                    }
+                }
+                task.resume()
+            }
+        }
 
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
