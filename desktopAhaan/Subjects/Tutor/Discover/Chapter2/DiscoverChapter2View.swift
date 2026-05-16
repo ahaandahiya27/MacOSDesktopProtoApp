@@ -93,12 +93,7 @@ struct DiscoverChapter2View: View {
                 SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
             }
         case 4: Scene5_LiverPancreasBile(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
-        case 5:
-            if #available(macOS 12, *) {
-                Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 5))
-            }
+        case 5: Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
         case 6: Scene7_AmoebaPseudopodHunt(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
         case 7:
             if #available(macOS 12, *) {

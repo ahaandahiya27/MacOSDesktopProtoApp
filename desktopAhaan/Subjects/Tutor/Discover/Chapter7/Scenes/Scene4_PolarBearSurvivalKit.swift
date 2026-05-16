@@ -2,7 +2,10 @@ import SwiftUI
 
 /// Scene 4 — Polar Bear Survival Kit.
 /// A polar bear with labeled adaptations. Tap each label for explanation.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the bear body is drawn with SwiftUI
+/// `Ellipse` shapes inside a `GeometryReader` rather than a `Canvas`
+/// (which is macOS 12+). Output is visually identical on modern macOS.
 struct Scene4_PolarBearSurvivalKit: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -86,33 +89,55 @@ struct Scene4_PolarBearSurvivalKit: View {
     }
 
     private var bearCanvas: some View {
-        Canvas { ctx, size in
-            let bodyRect = CGRect(x: size.width * 0.25, y: size.height * 0.3,
-                                  width: size.width * 0.5, height: size.height * 0.45)
-            ctx.fill(Path(ellipseIn: bodyRect), with: .color(.white.opacity(0.9)))
-            ctx.stroke(Path(ellipseIn: bodyRect), with: .color(.gray.opacity(0.3)), lineWidth: 1.5)
-
-            let headRect = CGRect(x: size.width * 0.38, y: size.height * 0.08,
-                                  width: size.width * 0.24, height: size.height * 0.28)
-            ctx.fill(Path(ellipseIn: headRect), with: .color(.white.opacity(0.9)))
-            ctx.stroke(Path(ellipseIn: headRect), with: .color(.gray.opacity(0.3)), lineWidth: 1.5)
-
-            let eyeSize: CGFloat = 6
-            let leftEye = CGRect(x: size.width * 0.44, y: size.height * 0.18, width: eyeSize, height: eyeSize)
-            let rightEye = CGRect(x: size.width * 0.52, y: size.height * 0.18, width: eyeSize, height: eyeSize)
-            ctx.fill(Path(ellipseIn: leftEye), with: .color(.black))
-            ctx.fill(Path(ellipseIn: rightEye), with: .color(.black))
-
-            let nose = CGRect(x: size.width * 0.475, y: size.height * 0.24, width: 10, height: 7)
-            ctx.fill(Path(ellipseIn: nose), with: .color(.black))
-
-            let paw1 = CGRect(x: size.width * 0.28, y: size.height * 0.68, width: size.width * 0.12, height: size.height * 0.12)
-            let paw2 = CGRect(x: size.width * 0.6, y: size.height * 0.68, width: size.width * 0.12, height: size.height * 0.12)
-            ctx.fill(Path(ellipseIn: paw1), with: .color(.white.opacity(0.9)))
-            ctx.stroke(Path(ellipseIn: paw1), with: .color(.gray.opacity(0.3)), lineWidth: 1.5)
-            ctx.fill(Path(ellipseIn: paw2), with: .color(.white.opacity(0.9)))
-            ctx.stroke(Path(ellipseIn: paw2), with: .color(.gray.opacity(0.3)), lineWidth: 1.5)
+        GeometryReader { geo in
+            let w = geo.size.width
+            let h = geo.size.height
+            // Body: white-filled ellipse with gray outline
+            bearEllipse(x: w * 0.25, y: h * 0.3,
+                        width: w * 0.5, height: h * 0.45,
+                        fillOpacity: 0.9, withStroke: true)
+            // Head
+            bearEllipse(x: w * 0.38, y: h * 0.08,
+                        width: w * 0.24, height: h * 0.28,
+                        fillOpacity: 0.9, withStroke: true)
+            // Eyes
+            blackEllipse(x: w * 0.44, y: h * 0.18, width: 6, height: 6)
+            blackEllipse(x: w * 0.52, y: h * 0.18, width: 6, height: 6)
+            // Nose
+            blackEllipse(x: w * 0.475, y: h * 0.24, width: 10, height: 7)
+            // Paws
+            bearEllipse(x: w * 0.28, y: h * 0.68,
+                        width: w * 0.12, height: h * 0.12,
+                        fillOpacity: 0.9, withStroke: true)
+            bearEllipse(x: w * 0.6, y: h * 0.68,
+                        width: w * 0.12, height: h * 0.12,
+                        fillOpacity: 0.9, withStroke: true)
         }
+    }
+
+    /// White-filled ellipse with optional gray outline. Positioned by the
+    /// rect's top-left corner the same way the old Canvas code was.
+    @ViewBuilder
+    private func bearEllipse(x: CGFloat, y: CGFloat,
+                             width: CGFloat, height: CGFloat,
+                             fillOpacity: Double, withStroke: Bool) -> some View {
+        ZStack {
+            Ellipse().fill(Color.white.opacity(fillOpacity))
+            if withStroke {
+                Ellipse().stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
+            }
+        }
+        .frame(width: width, height: height)
+        .position(x: x + width / 2, y: y + height / 2)
+    }
+
+    @ViewBuilder
+    private func blackEllipse(x: CGFloat, y: CGFloat,
+                              width: CGFloat, height: CGFloat) -> some View {
+        Ellipse()
+            .fill(Color.black)
+            .frame(width: width, height: height)
+            .position(x: x + width / 2, y: y + height / 2)
     }
 
     private var bearDiagramBackground: some View {

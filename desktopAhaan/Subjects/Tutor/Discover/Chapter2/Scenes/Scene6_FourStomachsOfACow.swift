@@ -6,7 +6,9 @@ import SwiftUI
 /// as the kid taps "Next chamber". At each step, a callout describes what happens.
 /// At the end, a thought bubble answers "Why don't humans have four stomachs?"
 /// Text from ch02_t02_c01. A "Watch again" button restarts the tour.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — CowDiagram now uses Shape/Ellipse/Path
+/// views instead of a SwiftUI Canvas.
 struct Scene6_FourStomachsOfACow: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -35,7 +37,7 @@ struct Scene6_FourStomachsOfACow: View {
             VStack(spacing: 16) {
                 Text("The Four-Stomach Cow Tour")
                     .font(.title.bold())
-                    .foregroundColor(.brown)
+                    .foregroundColor(Color.compatBrown)
 
                 ZStack {
                     CowDiagram(currentChamber: currentChamber, foodPosition: foodPosition)
@@ -64,13 +66,13 @@ struct Scene6_FourStomachsOfACow: View {
                             Label("Next Chamber", systemImage: "chevron.right")
                         }
                         
-                        .accentColor(.brown)
+                        .accentColor(Color.compatBrown)
                     } else {
                         Button(action: { reset() }) {
                             Label("Watch Again", systemImage: "arrow.clockwise")
                         }
                         
-                        .accentColor(.brown)
+                        .accentColor(Color.compatBrown)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -83,7 +85,7 @@ struct Scene6_FourStomachsOfACow: View {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("🤔 Why don't humans have four stomachs?")
                                 .font(.body.weight(.semibold))
-                                .foregroundColor(.brown)
+                                .foregroundColor(Color.compatBrown)
                             Text("We eat softer, easier-to-digest foods like cooked meat & plants. Cows need four stomachs because grass is tough and takes time to break down with bacteria.")
                                 .font(.body)
                                 .foregroundColor(.secondary)
@@ -99,7 +101,7 @@ struct Scene6_FourStomachsOfACow: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Four-Stomach Cow Tour", systemImage: "hare.fill")
                             .font(.title2.bold())
-                            .foregroundColor(.brown)
+                            .foregroundColor(Color.compatBrown)
                         Text(cowExplanation)
                             .font(.body)
                             .foregroundColor(.primary)
@@ -143,68 +145,73 @@ struct Scene6_FourStomachsOfACow: View {
 
 // MARK: - Cow Diagram
 
-@available(macOS 12, *)
+/// Side-view cow with four stomach chambers. Rewritten from `Canvas`
+/// (macOS 12+) to a `ZStack` of standard SwiftUI shapes so it renders
+/// on Big Sur. Geometry coordinates are kept identical to the old
+/// Canvas version.
 struct CowDiagram: View {
     let currentChamber: Int
     let foodPosition: CGFloat
 
+    private let chambers: [CGRect] = [
+        CGRect(x: 50, y: 65, width: 30, height: 20),
+        CGRect(x: 85, y: 65, width: 25, height: 20),
+        CGRect(x: 115, y: 65, width: 20, height: 20),
+        CGRect(x: 140, y: 65, width: 18, height: 20)
+    ]
+    private let chamberLabels = ["R", "Re", "O", "A"]
+    private let legXs: [CGFloat] = [60, 80, 100, 120]
+
     var body: some View {
-        Canvas { context, _ in
-            // Cow body (simplified side view)
-            let bodyPath = Path(ellipseIn: CGRect(x: 30, y: 50, width: 100, height: 60))
-            context.stroke(bodyPath, with: .color(.brown.opacity(0.4)), lineWidth: 2)
+        ZStack {
+            // Cow body (outlined ellipse)
+            Ellipse()
+                .stroke(Color.compatBrown.opacity(0.4), lineWidth: 2)
+                .frame(width: 100, height: 60)
+                .position(x: 30 + 50, y: 50 + 30)
 
-            // Head
-            context.fill(
-                Path(ellipseIn: CGRect(x: 130, y: 60, width: 30, height: 25)),
-                with: .color(.brown.opacity(0.3))
-            )
+            // Head (filled ellipse)
+            Ellipse()
+                .fill(Color.compatBrown.opacity(0.3))
+                .frame(width: 30, height: 25)
+                .position(x: 130 + 15, y: 60 + 12.5)
 
-            // Four stomach chambers (drawn as nested rectangles)
-            let chambers = [
-                CGRect(x: 50, y: 65, width: 30, height: 20),
-                CGRect(x: 85, y: 65, width: 25, height: 20),
-                CGRect(x: 115, y: 65, width: 20, height: 20),
-                CGRect(x: 140, y: 65, width: 18, height: 20)
-            ]
-
-            for (i, rect) in chambers.enumerated() {
-                let isActive = i <= currentChamber
-                let color: Color = isActive ? .green : .gray
-                context.stroke(
-                    Path(roundedRect: rect, cornerRadius: 3),
-                    with: .color(color.opacity(isActive ? 0.6 : 0.2)),
-                    lineWidth: isActive ? 2 : 1
-                )
-
-                let label: String
-                switch i {
-                case 0: label = "R"
-                case 1: label = "Re"
-                case 2: label = "O"
-                default: label = "A"
-                }
-                context.draw(
-                    Text(label).font(.system(size: 8, weight: .bold))
-                        .foregroundColor(color),
-                    at: CGPoint(x: rect.midX, y: rect.midY)
-                )
+            // Four stomach chambers
+            ForEach(0..<chambers.count, id: \.self) { i in
+                chamberView(at: i)
             }
 
-            // Legs (simple lines)
-            for x in [60, 80, 100, 120] {
-                var legPath = Path()
-                legPath.move(to: CGPoint(x: x, y: 110))
-                legPath.addLine(to: CGPoint(x: x, y: 135))
-                context.stroke(legPath, with: .color(.brown.opacity(0.5)), lineWidth: 2)
+            // Legs
+            ForEach(legXs, id: \.self) { x in
+                Path { p in
+                    p.move(to: CGPoint(x: x, y: 110))
+                    p.addLine(to: CGPoint(x: x, y: 135))
+                }
+                .stroke(Color.compatBrown.opacity(0.5), lineWidth: 2)
             }
         }
+    }
+
+    @ViewBuilder
+    private func chamberView(at i: Int) -> some View {
+        let rect = chambers[i]
+        let isActive = i <= currentChamber
+        let color: Color = isActive ? .green : .gray
+        ZStack {
+            RoundedRectangle(cornerRadius: 3)
+                .stroke(color.opacity(isActive ? 0.6 : 0.2),
+                        lineWidth: isActive ? 2 : 1)
+            Text(chamberLabels[i])
+                .font(.system(size: 8, weight: .bold))
+                .foregroundColor(color)
+        }
+        .frame(width: rect.width, height: rect.height)
+        .position(x: rect.midX, y: rect.midY)
     }
 }
 
 // MARK: - Chamber Callout
 
-@available(macOS 12, *)
 struct ChamberCallout: View {
     let text: String
 

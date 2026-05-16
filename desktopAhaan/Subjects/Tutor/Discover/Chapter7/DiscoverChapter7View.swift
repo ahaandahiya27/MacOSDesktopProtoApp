@@ -71,12 +71,7 @@ struct DiscoverChapter7View: View {
             } else {
                 SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
             }
-        case 3:
-            if #available(macOS 12, *) {
-                Scene4_PolarBearSurvivalKit(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
-            }
+        case 3: Scene4_PolarBearSurvivalKit(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_TropicalRainforestLife(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_AdaptationMatchGame(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
         case 6:
