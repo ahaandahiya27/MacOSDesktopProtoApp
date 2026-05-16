@@ -416,7 +416,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t01_q01",
+              "prompt": "What does अहम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "he / that",
+                "they (masculine)",
+                "I",
+                "we"
+              ],
+              "answer": "I",
+              "solutionSteps": [
+                "अहम् appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'I'."
+              ],
+              "commonMistakes": [
+                "Mixing up अहम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q02",
+              "prompt": "Which Sanskrit word means 'I'?",
+              "questionType": "mcq",
+              "options": [
+                "अहम्",
+                "भवान्",
+                "वयम्",
+                "किम्"
+              ],
+              "answer": "अहम्",
+              "solutionSteps": [
+                "'I' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is अहम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q03",
+              "prompt": "What does भवान् mean?",
+              "questionType": "mcq",
+              "options": [
+                "you (respectful, feminine)",
+                "you (respectful)",
+                "they (masculine)",
+                "who"
+              ],
+              "answer": "you (respectful)",
+              "solutionSteps": [
+                "भवान् appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'you (respectful)'."
+              ],
+              "commonMistakes": [
+                "Mixing up भवान् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q04",
+              "prompt": "Which Sanskrit word means 'you (respectful)'?",
+              "questionType": "mcq",
+              "options": [
+                "भवान्",
+                "अहम्",
+                "भवती",
+                "किम्"
+              ],
+              "answer": "भवान्",
+              "solutionSteps": [
+                "'you (respectful)' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is भवान्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q05",
+              "prompt": "What does भवती mean?",
+              "questionType": "mcq",
+              "options": [
+                "who",
+                "they (masculine)",
+                "you (respectful, feminine)",
+                "what"
+              ],
+              "answer": "you (respectful, feminine)",
+              "solutionSteps": [
+                "भवती appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'you (respectful, feminine)'."
+              ],
+              "commonMistakes": [
+                "Mixing up भवती with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q06",
+              "prompt": "Which Sanskrit word means 'you (respectful, feminine)'?",
+              "questionType": "mcq",
+              "options": [
+                "सः",
+                "तत्",
+                "एषा",
+                "भवती"
+              ],
+              "answer": "भवती",
+              "solutionSteps": [
+                "'you (respectful, feminine)' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is भवती."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q07",
+              "prompt": "What does सः mean?",
+              "questionType": "mcq",
+              "options": [
+                "he / that",
+                "this (feminine)",
+                "what",
+                "that (neuter)"
+              ],
+              "answer": "he / that",
+              "solutionSteps": [
+                "सः appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'he / that'."
+              ],
+              "commonMistakes": [
+                "Mixing up सः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q08",
+              "prompt": "Which Sanskrit word means 'he / that'?",
+              "questionType": "mcq",
+              "options": [
+                "भवान्",
+                "सः",
+                "एषा",
+                "वयम्"
+              ],
+              "answer": "सः",
+              "solutionSteps": [
+                "'he / that' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q09",
+              "prompt": "What does सा mean?",
+              "questionType": "mcq",
+              "options": [
+                "what",
+                "this (masculine)",
+                "he / that",
+                "she / that"
+              ],
+              "answer": "she / that",
+              "solutionSteps": [
+                "सा appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'she / that'."
+              ],
+              "commonMistakes": [
+                "Mixing up सा with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q10",
+              "prompt": "Which Sanskrit word means 'she / that'?",
+              "questionType": "mcq",
+              "options": [
+                "एषः",
+                "सा",
+                "किम्",
+                "वयम्"
+              ],
+              "answer": "सा",
+              "solutionSteps": [
+                "'she / that' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सा."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q11",
+              "prompt": "What does तत् mean?",
+              "questionType": "mcq",
+              "options": [
+                "he / that",
+                "she / that",
+                "you (respectful)",
+                "that (neuter)"
+              ],
+              "answer": "that (neuter)",
+              "solutionSteps": [
+                "तत् appears in the Pronouns group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'that (neuter)'."
+              ],
+              "commonMistakes": [
+                "Mixing up तत् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q12",
+              "prompt": "Which Sanskrit word means 'that (neuter)'?",
+              "questionType": "mcq",
+              "options": [
+                "तत्",
+                "किम्",
+                "भवान्",
+                "सा"
+              ],
+              "answer": "तत्",
+              "solutionSteps": [
+                "'that (neuter)' belongs to the Pronouns category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is तत्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t02",
@@ -820,7 +1097,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t02_q01",
+              "prompt": "What does नमस्ते mean?",
+              "questionType": "mcq",
+              "options": [
+                "no / not",
+                "thank you",
+                "excuse me / forgive me",
+                "hello / greetings"
+              ],
+              "answer": "hello / greetings",
+              "solutionSteps": [
+                "नमस्ते appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'hello / greetings'."
+              ],
+              "commonMistakes": [
+                "Mixing up नमस्ते with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q02",
+              "prompt": "Which Sanskrit word means 'hello / greetings'?",
+              "questionType": "mcq",
+              "options": [
+                "न",
+                "नमस्ते",
+                "शुभसन्ध्या",
+                "अहं कुशली अस्मि"
+              ],
+              "answer": "नमस्ते",
+              "solutionSteps": [
+                "'hello / greetings' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is नमस्ते."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q03",
+              "prompt": "What does सुप्रभातम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "no / not",
+                "how are you?",
+                "good morning",
+                "yes"
+              ],
+              "answer": "good morning",
+              "solutionSteps": [
+                "सुप्रभातम् appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'good morning'."
+              ],
+              "commonMistakes": [
+                "Mixing up सुप्रभातम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q04",
+              "prompt": "Which Sanskrit word means 'good morning'?",
+              "questionType": "mcq",
+              "options": [
+                "भवान् कथम् अस्ति?",
+                "शुभसन्ध्या",
+                "सुप्रभातम्",
+                "नमस्ते"
+              ],
+              "answer": "सुप्रभातम्",
+              "solutionSteps": [
+                "'good morning' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सुप्रभातम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q05",
+              "prompt": "What does शुभसन्ध्या mean?",
+              "questionType": "mcq",
+              "options": [
+                "good evening",
+                "excuse me / forgive me",
+                "goodbye / we shall meet again",
+                "please"
+              ],
+              "answer": "good evening",
+              "solutionSteps": [
+                "शुभसन्ध्या appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'good evening'."
+              ],
+              "commonMistakes": [
+                "Mixing up शुभसन्ध्या with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q06",
+              "prompt": "Which Sanskrit word means 'good evening'?",
+              "questionType": "mcq",
+              "options": [
+                "आम्",
+                "सुप्रभातम्",
+                "धन्यवादः",
+                "शुभसन्ध्या"
+              ],
+              "answer": "शुभसन्ध्या",
+              "solutionSteps": [
+                "'good evening' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is शुभसन्ध्या."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q07",
+              "prompt": "What does धन्यवादः mean?",
+              "questionType": "mcq",
+              "options": [
+                "please",
+                "welcome",
+                "good evening",
+                "thank you"
+              ],
+              "answer": "thank you",
+              "solutionSteps": [
+                "धन्यवादः appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'thank you'."
+              ],
+              "commonMistakes": [
+                "Mixing up धन्यवादः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q08",
+              "prompt": "Which Sanskrit word means 'thank you'?",
+              "questionType": "mcq",
+              "options": [
+                "सुप्रभातम्",
+                "शुभसन्ध्या",
+                "भवान् कथम् अस्ति?",
+                "धन्यवादः"
+              ],
+              "answer": "धन्यवादः",
+              "solutionSteps": [
+                "'thank you' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is धन्यवादः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q09",
+              "prompt": "What does स्वागतम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "good evening",
+                "goodbye / we shall meet again",
+                "welcome",
+                "I am fine"
+              ],
+              "answer": "welcome",
+              "solutionSteps": [
+                "स्वागतम् appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'welcome'."
+              ],
+              "commonMistakes": [
+                "Mixing up स्वागतम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q10",
+              "prompt": "Which Sanskrit word means 'welcome'?",
+              "questionType": "mcq",
+              "options": [
+                "स्वागतम्",
+                "धन्यवादः",
+                "क्षम्यताम्",
+                "पुनर्मिलामः"
+              ],
+              "answer": "स्वागतम्",
+              "solutionSteps": [
+                "'welcome' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is स्वागतम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q11",
+              "prompt": "What does कृपया mean?",
+              "questionType": "mcq",
+              "options": [
+                "yes",
+                "please",
+                "thank you",
+                "good evening"
+              ],
+              "answer": "please",
+              "solutionSteps": [
+                "कृपया appears in the Greetings group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'please'."
+              ],
+              "commonMistakes": [
+                "Mixing up कृपया with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q12",
+              "prompt": "Which Sanskrit word means 'please'?",
+              "questionType": "mcq",
+              "options": [
+                "स्वागतम्",
+                "नमस्ते",
+                "कृपया",
+                "न"
+              ],
+              "answer": "कृपया",
+              "solutionSteps": [
+                "'please' belongs to the Greetings category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कृपया."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t03",
@@ -1257,7 +1811,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t03_q01",
+              "prompt": "What does एकम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "one",
+                "twenty",
+                "seven",
+                "hundred"
+              ],
+              "answer": "one",
+              "solutionSteps": [
+                "एकम् appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'one'."
+              ],
+              "commonMistakes": [
+                "Mixing up एकम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q02",
+              "prompt": "Which Sanskrit word means 'one'?",
+              "questionType": "mcq",
+              "options": [
+                "नव",
+                "दश",
+                "पञ्चाशत्",
+                "एकम्"
+              ],
+              "answer": "एकम्",
+              "solutionSteps": [
+                "'one' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is एकम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q03",
+              "prompt": "What does द्वे mean?",
+              "questionType": "mcq",
+              "options": [
+                "three",
+                "nine",
+                "eight",
+                "two"
+              ],
+              "answer": "two",
+              "solutionSteps": [
+                "द्वे appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'two'."
+              ],
+              "commonMistakes": [
+                "Mixing up द्वे with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q04",
+              "prompt": "Which Sanskrit word means 'two'?",
+              "questionType": "mcq",
+              "options": [
+                "नव",
+                "द्वे",
+                "त्रीणि",
+                "पञ्च"
+              ],
+              "answer": "द्वे",
+              "solutionSteps": [
+                "'two' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is द्वे."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q05",
+              "prompt": "What does त्रीणि mean?",
+              "questionType": "mcq",
+              "options": [
+                "one",
+                "three",
+                "two",
+                "twenty"
+              ],
+              "answer": "three",
+              "solutionSteps": [
+                "त्रीणि appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'three'."
+              ],
+              "commonMistakes": [
+                "Mixing up त्रीणि with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q06",
+              "prompt": "Which Sanskrit word means 'three'?",
+              "questionType": "mcq",
+              "options": [
+                "द्वे",
+                "सप्त",
+                "त्रीणि",
+                "दश"
+              ],
+              "answer": "त्रीणि",
+              "solutionSteps": [
+                "'three' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is त्रीणि."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q07",
+              "prompt": "What does चत्वारि mean?",
+              "questionType": "mcq",
+              "options": [
+                "twenty",
+                "four",
+                "eight",
+                "three"
+              ],
+              "answer": "four",
+              "solutionSteps": [
+                "चत्वारि appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'four'."
+              ],
+              "commonMistakes": [
+                "Mixing up चत्वारि with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q08",
+              "prompt": "Which Sanskrit word means 'four'?",
+              "questionType": "mcq",
+              "options": [
+                "नव",
+                "पञ्चाशत्",
+                "द्वे",
+                "चत्वारि"
+              ],
+              "answer": "चत्वारि",
+              "solutionSteps": [
+                "'four' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is चत्वारि."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q09",
+              "prompt": "What does पञ्च mean?",
+              "questionType": "mcq",
+              "options": [
+                "two",
+                "five",
+                "nine",
+                "six"
+              ],
+              "answer": "five",
+              "solutionSteps": [
+                "पञ्च appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'five'."
+              ],
+              "commonMistakes": [
+                "Mixing up पञ्च with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q10",
+              "prompt": "Which Sanskrit word means 'five'?",
+              "questionType": "mcq",
+              "options": [
+                "पञ्च",
+                "शतम्",
+                "नव",
+                "षट्"
+              ],
+              "answer": "पञ्च",
+              "solutionSteps": [
+                "'five' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पञ्च."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q11",
+              "prompt": "What does षट् mean?",
+              "questionType": "mcq",
+              "options": [
+                "six",
+                "four",
+                "seven",
+                "ten"
+              ],
+              "answer": "six",
+              "solutionSteps": [
+                "षट् appears in the Numbers group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'six'."
+              ],
+              "commonMistakes": [
+                "Mixing up षट् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q12",
+              "prompt": "Which Sanskrit word means 'six'?",
+              "questionType": "mcq",
+              "options": [
+                "दश",
+                "पञ्च",
+                "षट्",
+                "द्वे"
+              ],
+              "answer": "षट्",
+              "solutionSteps": [
+                "'six' belongs to the Numbers category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is षट्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t04",
@@ -1859,7 +2690,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t04_q01",
+              "prompt": "What does माता mean?",
+              "questionType": "mcq",
+              "options": [
+                "grandfather",
+                "mother",
+                "boy / child",
+                "student (female)"
+              ],
+              "answer": "mother",
+              "solutionSteps": [
+                "माता appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'mother'."
+              ],
+              "commonMistakes": [
+                "Mixing up माता with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q02",
+              "prompt": "Which Sanskrit word means 'mother'?",
+              "questionType": "mcq",
+              "options": [
+                "बालकः",
+                "मित्रम्",
+                "माता",
+                "पितामही"
+              ],
+              "answer": "माता",
+              "solutionSteps": [
+                "'mother' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is माता."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q03",
+              "prompt": "What does पिता mean?",
+              "questionType": "mcq",
+              "options": [
+                "grandfather",
+                "man / person",
+                "father",
+                "grandmother"
+              ],
+              "answer": "father",
+              "solutionSteps": [
+                "पिता appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'father'."
+              ],
+              "commonMistakes": [
+                "Mixing up पिता with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q04",
+              "prompt": "Which Sanskrit word means 'father'?",
+              "questionType": "mcq",
+              "options": [
+                "नरः",
+                "पिता",
+                "गुरुः",
+                "पुत्रः"
+              ],
+              "answer": "पिता",
+              "solutionSteps": [
+                "'father' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पिता."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q05",
+              "prompt": "What does भ्राता mean?",
+              "questionType": "mcq",
+              "options": [
+                "son",
+                "sister",
+                "brother",
+                "student (female)"
+              ],
+              "answer": "brother",
+              "solutionSteps": [
+                "भ्राता appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'brother'."
+              ],
+              "commonMistakes": [
+                "Mixing up भ्राता with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q06",
+              "prompt": "Which Sanskrit word means 'brother'?",
+              "questionType": "mcq",
+              "options": [
+                "छात्रः",
+                "पितामही",
+                "पुत्रः",
+                "भ्राता"
+              ],
+              "answer": "भ्राता",
+              "solutionSteps": [
+                "'brother' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is भ्राता."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q07",
+              "prompt": "What does भगिनी mean?",
+              "questionType": "mcq",
+              "options": [
+                "student (female)",
+                "sister",
+                "boy / child",
+                "man / person"
+              ],
+              "answer": "sister",
+              "solutionSteps": [
+                "भगिनी appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'sister'."
+              ],
+              "commonMistakes": [
+                "Mixing up भगिनी with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q08",
+              "prompt": "Which Sanskrit word means 'sister'?",
+              "questionType": "mcq",
+              "options": [
+                "बालकः",
+                "मित्रम्",
+                "भगिनी",
+                "पितामही"
+              ],
+              "answer": "भगिनी",
+              "solutionSteps": [
+                "'sister' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is भगिनी."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q09",
+              "prompt": "What does पुत्रः mean?",
+              "questionType": "mcq",
+              "options": [
+                "boy / child",
+                "brother",
+                "friend",
+                "son"
+              ],
+              "answer": "son",
+              "solutionSteps": [
+                "पुत्रः appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'son'."
+              ],
+              "commonMistakes": [
+                "Mixing up पुत्रः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q10",
+              "prompt": "Which Sanskrit word means 'son'?",
+              "questionType": "mcq",
+              "options": [
+                "भ्राता",
+                "नारी",
+                "पुत्रः",
+                "पितामहः"
+              ],
+              "answer": "पुत्रः",
+              "solutionSteps": [
+                "'son' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पुत्रः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q11",
+              "prompt": "What does पुत्री mean?",
+              "questionType": "mcq",
+              "options": [
+                "man / person",
+                "daughter",
+                "son",
+                "student (male)"
+              ],
+              "answer": "daughter",
+              "solutionSteps": [
+                "पुत्री appears in the Family group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'daughter'."
+              ],
+              "commonMistakes": [
+                "Mixing up पुत्री with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q12",
+              "prompt": "Which Sanskrit word means 'daughter'?",
+              "questionType": "mcq",
+              "options": [
+                "नारी",
+                "पुत्री",
+                "बालकः",
+                "माता"
+              ],
+              "answer": "पुत्री",
+              "solutionSteps": [
+                "'daughter' belongs to the Family category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पुत्री."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t05",
@@ -2527,7 +3635,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t05_q01",
+              "prompt": "What does वृक्षः mean?",
+              "questionType": "mcq",
+              "options": [
+                "lion",
+                "tree",
+                "fire",
+                "elephant"
+              ],
+              "answer": "tree",
+              "solutionSteps": [
+                "वृक्षः appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'tree'."
+              ],
+              "commonMistakes": [
+                "Mixing up वृक्षः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q02",
+              "prompt": "Which Sanskrit word means 'tree'?",
+              "questionType": "mcq",
+              "options": [
+                "वायुः",
+                "वृक्षः",
+                "खगः",
+                "पृथ्वी"
+              ],
+              "answer": "वृक्षः",
+              "solutionSteps": [
+                "'tree' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is वृक्षः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q03",
+              "prompt": "What does पुष्पम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "moon",
+                "river",
+                "leaf",
+                "flower"
+              ],
+              "answer": "flower",
+              "solutionSteps": [
+                "पुष्पम् appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'flower'."
+              ],
+              "commonMistakes": [
+                "Mixing up पुष्पम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q04",
+              "prompt": "Which Sanskrit word means 'flower'?",
+              "questionType": "mcq",
+              "options": [
+                "सिंहः",
+                "पुष्पम्",
+                "चन्द्रः",
+                "खगः"
+              ],
+              "answer": "पुष्पम्",
+              "solutionSteps": [
+                "'flower' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पुष्पम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q05",
+              "prompt": "What does नदी mean?",
+              "questionType": "mcq",
+              "options": [
+                "water",
+                "tree",
+                "river",
+                "moon"
+              ],
+              "answer": "river",
+              "solutionSteps": [
+                "नदी appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'river'."
+              ],
+              "commonMistakes": [
+                "Mixing up नदी with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q06",
+              "prompt": "Which Sanskrit word means 'river'?",
+              "questionType": "mcq",
+              "options": [
+                "पुष्पम्",
+                "फलम्",
+                "सिंहः",
+                "नदी"
+              ],
+              "answer": "नदी",
+              "solutionSteps": [
+                "'river' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is नदी."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q07",
+              "prompt": "What does पर्वतः mean?",
+              "questionType": "mcq",
+              "options": [
+                "sky",
+                "fire",
+                "mountain",
+                "earth / land"
+              ],
+              "answer": "mountain",
+              "solutionSteps": [
+                "पर्वतः appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'mountain'."
+              ],
+              "commonMistakes": [
+                "Mixing up पर्वतः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q08",
+              "prompt": "Which Sanskrit word means 'mountain'?",
+              "questionType": "mcq",
+              "options": [
+                "नदी",
+                "सिंहः",
+                "वृक्षः",
+                "पर्वतः"
+              ],
+              "answer": "पर्वतः",
+              "solutionSteps": [
+                "'mountain' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पर्वतः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q09",
+              "prompt": "What does सूर्यः mean?",
+              "questionType": "mcq",
+              "options": [
+                "horse",
+                "sky",
+                "bird",
+                "sun"
+              ],
+              "answer": "sun",
+              "solutionSteps": [
+                "सूर्यः appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'sun'."
+              ],
+              "commonMistakes": [
+                "Mixing up सूर्यः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q10",
+              "prompt": "Which Sanskrit word means 'sun'?",
+              "questionType": "mcq",
+              "options": [
+                "अग्निः",
+                "आकाशः",
+                "खगः",
+                "सूर्यः"
+              ],
+              "answer": "सूर्यः",
+              "solutionSteps": [
+                "'sun' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सूर्यः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q11",
+              "prompt": "What does चन्द्रः mean?",
+              "questionType": "mcq",
+              "options": [
+                "lotus",
+                "moon",
+                "mountain",
+                "horse"
+              ],
+              "answer": "moon",
+              "solutionSteps": [
+                "चन्द्रः appears in the Nature group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'moon'."
+              ],
+              "commonMistakes": [
+                "Mixing up चन्द्रः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q12",
+              "prompt": "Which Sanskrit word means 'moon'?",
+              "questionType": "mcq",
+              "options": [
+                "नदी",
+                "चन्द्रः",
+                "गजः",
+                "अग्निः"
+              ],
+              "answer": "चन्द्रः",
+              "solutionSteps": [
+                "'moon' belongs to the Nature category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is चन्द्रः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t06",
@@ -2997,7 +4382,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t06_q01",
+              "prompt": "What does पुस्तकम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "book",
+                "road / path",
+                "garden",
+                "temple"
+              ],
+              "answer": "book",
+              "solutionSteps": [
+                "पुस्तकम् appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'book'."
+              ],
+              "commonMistakes": [
+                "Mixing up पुस्तकम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q02",
+              "prompt": "Which Sanskrit word means 'book'?",
+              "questionType": "mcq",
+              "options": [
+                "पुस्तकम्",
+                "विद्या",
+                "देशः",
+                "कक्षा"
+              ],
+              "answer": "पुस्तकम्",
+              "solutionSteps": [
+                "'book' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पुस्तकम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q03",
+              "prompt": "What does लेखनी mean?",
+              "questionType": "mcq",
+              "options": [
+                "classroom",
+                "pen",
+                "knowledge / learning",
+                "road / path"
+              ],
+              "answer": "pen",
+              "solutionSteps": [
+                "लेखनी appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'pen'."
+              ],
+              "commonMistakes": [
+                "Mixing up लेखनी with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q04",
+              "prompt": "Which Sanskrit word means 'pen'?",
+              "questionType": "mcq",
+              "options": [
+                "ग्रामः",
+                "नगरम्",
+                "भोजनम्",
+                "लेखनी"
+              ],
+              "answer": "लेखनी",
+              "solutionSteps": [
+                "'pen' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is लेखनी."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q05",
+              "prompt": "What does विद्यालयः mean?",
+              "questionType": "mcq",
+              "options": [
+                "school",
+                "temple",
+                "pen",
+                "village"
+              ],
+              "answer": "school",
+              "solutionSteps": [
+                "विद्यालयः appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'school'."
+              ],
+              "commonMistakes": [
+                "Mixing up विद्यालयः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q06",
+              "prompt": "Which Sanskrit word means 'school'?",
+              "questionType": "mcq",
+              "options": [
+                "देशः",
+                "पुस्तकम्",
+                "उद्यानम्",
+                "विद्यालयः"
+              ],
+              "answer": "विद्यालयः",
+              "solutionSteps": [
+                "'school' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is विद्यालयः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q07",
+              "prompt": "What does कक्षा mean?",
+              "questionType": "mcq",
+              "options": [
+                "classroom",
+                "garden",
+                "food",
+                "pen"
+              ],
+              "answer": "classroom",
+              "solutionSteps": [
+                "कक्षा appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'classroom'."
+              ],
+              "commonMistakes": [
+                "Mixing up कक्षा with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q08",
+              "prompt": "Which Sanskrit word means 'classroom'?",
+              "questionType": "mcq",
+              "options": [
+                "पुस्तकम्",
+                "गृहम्",
+                "कक्षा",
+                "मन्दिरम्"
+              ],
+              "answer": "कक्षा",
+              "solutionSteps": [
+                "'classroom' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कक्षा."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q09",
+              "prompt": "What does विद्या mean?",
+              "questionType": "mcq",
+              "options": [
+                "house / home",
+                "road / path",
+                "city",
+                "knowledge / learning"
+              ],
+              "answer": "knowledge / learning",
+              "solutionSteps": [
+                "विद्या appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'knowledge / learning'."
+              ],
+              "commonMistakes": [
+                "Mixing up विद्या with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q10",
+              "prompt": "Which Sanskrit word means 'knowledge / learning'?",
+              "questionType": "mcq",
+              "options": [
+                "ग्रामः",
+                "विद्या",
+                "उद्यानम्",
+                "लेखनी"
+              ],
+              "answer": "विद्या",
+              "solutionSteps": [
+                "'knowledge / learning' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is विद्या."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q11",
+              "prompt": "What does गृहम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "pen",
+                "house / home",
+                "knowledge / learning",
+                "city"
+              ],
+              "answer": "house / home",
+              "solutionSteps": [
+                "गृहम् appears in the Classroom group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'house / home'."
+              ],
+              "commonMistakes": [
+                "Mixing up गृहम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q12",
+              "prompt": "Which Sanskrit word means 'house / home'?",
+              "questionType": "mcq",
+              "options": [
+                "लेखनी",
+                "गृहम्",
+                "मन्दिरम्",
+                "विद्या"
+              ],
+              "answer": "गृहम्",
+              "solutionSteps": [
+                "'house / home' belongs to the Classroom category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is गृहम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t07",
@@ -3203,7 +4865,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t07_q01",
+              "prompt": "What does नेत्रम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "hand",
+                "mouth / face",
+                "eye",
+                "ear"
+              ],
+              "answer": "eye",
+              "solutionSteps": [
+                "नेत्रम् appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'eye'."
+              ],
+              "commonMistakes": [
+                "Mixing up नेत्रम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q02",
+              "prompt": "Which Sanskrit word means 'eye'?",
+              "questionType": "mcq",
+              "options": [
+                "नेत्रम्",
+                "हस्तः",
+                "शिरः",
+                "पादः"
+              ],
+              "answer": "नेत्रम्",
+              "solutionSteps": [
+                "'eye' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is नेत्रम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q03",
+              "prompt": "What does हस्तः mean?",
+              "questionType": "mcq",
+              "options": [
+                "head",
+                "mouth / face",
+                "hand",
+                "eye"
+              ],
+              "answer": "hand",
+              "solutionSteps": [
+                "हस्तः appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'hand'."
+              ],
+              "commonMistakes": [
+                "Mixing up हस्तः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q04",
+              "prompt": "Which Sanskrit word means 'hand'?",
+              "questionType": "mcq",
+              "options": [
+                "पादः",
+                "कर्णः",
+                "मुखम्",
+                "हस्तः"
+              ],
+              "answer": "हस्तः",
+              "solutionSteps": [
+                "'hand' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is हस्तः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q05",
+              "prompt": "What does पादः mean?",
+              "questionType": "mcq",
+              "options": [
+                "ear",
+                "foot",
+                "head",
+                "eye"
+              ],
+              "answer": "foot",
+              "solutionSteps": [
+                "पादः appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'foot'."
+              ],
+              "commonMistakes": [
+                "Mixing up पादः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q06",
+              "prompt": "Which Sanskrit word means 'foot'?",
+              "questionType": "mcq",
+              "options": [
+                "शिरः",
+                "हस्तः",
+                "नेत्रम्",
+                "पादः"
+              ],
+              "answer": "पादः",
+              "solutionSteps": [
+                "'foot' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पादः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q07",
+              "prompt": "What does शिरः mean?",
+              "questionType": "mcq",
+              "options": [
+                "eye",
+                "mouth / face",
+                "foot",
+                "head"
+              ],
+              "answer": "head",
+              "solutionSteps": [
+                "शिरः appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'head'."
+              ],
+              "commonMistakes": [
+                "Mixing up शिरः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q08",
+              "prompt": "Which Sanskrit word means 'head'?",
+              "questionType": "mcq",
+              "options": [
+                "मुखम्",
+                "शिरः",
+                "कर्णः",
+                "पादः"
+              ],
+              "answer": "शिरः",
+              "solutionSteps": [
+                "'head' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is शिरः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q09",
+              "prompt": "What does मुखम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "ear",
+                "mouth / face",
+                "hand",
+                "head"
+              ],
+              "answer": "mouth / face",
+              "solutionSteps": [
+                "मुखम् appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'mouth / face'."
+              ],
+              "commonMistakes": [
+                "Mixing up मुखम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q10",
+              "prompt": "Which Sanskrit word means 'mouth / face'?",
+              "questionType": "mcq",
+              "options": [
+                "मुखम्",
+                "नेत्रम्",
+                "कर्णः",
+                "पादः"
+              ],
+              "answer": "मुखम्",
+              "solutionSteps": [
+                "'mouth / face' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is मुखम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q11",
+              "prompt": "What does कर्णः mean?",
+              "questionType": "mcq",
+              "options": [
+                "eye",
+                "mouth / face",
+                "foot",
+                "ear"
+              ],
+              "answer": "ear",
+              "solutionSteps": [
+                "कर्णः appears in the Body group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'ear'."
+              ],
+              "commonMistakes": [
+                "Mixing up कर्णः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t07_q12",
+              "prompt": "Which Sanskrit word means 'ear'?",
+              "questionType": "mcq",
+              "options": [
+                "कर्णः",
+                "हस्तः",
+                "मुखम्",
+                "पादः"
+              ],
+              "answer": "कर्णः",
+              "solutionSteps": [
+                "'ear' belongs to the Body category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कर्णः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t08",
@@ -3508,7 +5447,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t08_q01",
+              "prompt": "What does दिनम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "year",
+                "morning",
+                "today",
+                "day"
+              ],
+              "answer": "day",
+              "solutionSteps": [
+                "दिनम् appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'day'."
+              ],
+              "commonMistakes": [
+                "Mixing up दिनम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q02",
+              "prompt": "Which Sanskrit word means 'day'?",
+              "questionType": "mcq",
+              "options": [
+                "अद्य",
+                "दिनम्",
+                "अधुना",
+                "ह्यः"
+              ],
+              "answer": "दिनम्",
+              "solutionSteps": [
+                "'day' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is दिनम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q03",
+              "prompt": "What does रात्रिः mean?",
+              "questionType": "mcq",
+              "options": [
+                "today",
+                "night",
+                "yesterday",
+                "morning"
+              ],
+              "answer": "night",
+              "solutionSteps": [
+                "रात्रिः appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'night'."
+              ],
+              "commonMistakes": [
+                "Mixing up रात्रिः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q04",
+              "prompt": "Which Sanskrit word means 'night'?",
+              "questionType": "mcq",
+              "options": [
+                "दिनम्",
+                "सदा",
+                "रात्रिः",
+                "श्वः"
+              ],
+              "answer": "रात्रिः",
+              "solutionSteps": [
+                "'night' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is रात्रिः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q05",
+              "prompt": "What does प्रातः mean?",
+              "questionType": "mcq",
+              "options": [
+                "day",
+                "morning",
+                "yesterday",
+                "tomorrow"
+              ],
+              "answer": "morning",
+              "solutionSteps": [
+                "प्रातः appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'morning'."
+              ],
+              "commonMistakes": [
+                "Mixing up प्रातः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q06",
+              "prompt": "Which Sanskrit word means 'morning'?",
+              "questionType": "mcq",
+              "options": [
+                "ह्यः",
+                "प्रातः",
+                "श्वः",
+                "अद्य"
+              ],
+              "answer": "प्रातः",
+              "solutionSteps": [
+                "'morning' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is प्रातः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q07",
+              "prompt": "What does अद्य mean?",
+              "questionType": "mcq",
+              "options": [
+                "today",
+                "now",
+                "yesterday",
+                "morning"
+              ],
+              "answer": "today",
+              "solutionSteps": [
+                "अद्य appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'today'."
+              ],
+              "commonMistakes": [
+                "Mixing up अद्य with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q08",
+              "prompt": "Which Sanskrit word means 'today'?",
+              "questionType": "mcq",
+              "options": [
+                "प्रातः",
+                "वर्षम्",
+                "सदा",
+                "अद्य"
+              ],
+              "answer": "अद्य",
+              "solutionSteps": [
+                "'today' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is अद्य."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q09",
+              "prompt": "What does श्वः mean?",
+              "questionType": "mcq",
+              "options": [
+                "day",
+                "morning",
+                "now",
+                "tomorrow"
+              ],
+              "answer": "tomorrow",
+              "solutionSteps": [
+                "श्वः appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'tomorrow'."
+              ],
+              "commonMistakes": [
+                "Mixing up श्वः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q10",
+              "prompt": "Which Sanskrit word means 'tomorrow'?",
+              "questionType": "mcq",
+              "options": [
+                "श्वः",
+                "अधुना",
+                "दिनम्",
+                "सदा"
+              ],
+              "answer": "श्वः",
+              "solutionSteps": [
+                "'tomorrow' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is श्वः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q11",
+              "prompt": "What does ह्यः mean?",
+              "questionType": "mcq",
+              "options": [
+                "yesterday",
+                "night",
+                "day",
+                "now"
+              ],
+              "answer": "yesterday",
+              "solutionSteps": [
+                "ह्यः appears in the Time group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'yesterday'."
+              ],
+              "commonMistakes": [
+                "Mixing up ह्यः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t08_q12",
+              "prompt": "Which Sanskrit word means 'yesterday'?",
+              "questionType": "mcq",
+              "options": [
+                "श्वः",
+                "ह्यः",
+                "दिनम्",
+                "वर्षम्"
+              ],
+              "answer": "ह्यः",
+              "solutionSteps": [
+                "'yesterday' belongs to the Time category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is ह्यः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t09",
@@ -3813,7 +6029,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t09_q01",
+              "prompt": "What does सुन्दरम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "new",
+                "big / great",
+                "true",
+                "good / beautiful"
+              ],
+              "answer": "good / beautiful",
+              "solutionSteps": [
+                "सुन्दरम् appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'good / beautiful'."
+              ],
+              "commonMistakes": [
+                "Mixing up सुन्दरम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q02",
+              "prompt": "Which Sanskrit word means 'good / beautiful'?",
+              "questionType": "mcq",
+              "options": [
+                "प्रसन्नः",
+                "लघु",
+                "कृष्णम्",
+                "सुन्दरम्"
+              ],
+              "answer": "सुन्दरम्",
+              "solutionSteps": [
+                "'good / beautiful' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सुन्दरम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q03",
+              "prompt": "What does महत् mean?",
+              "questionType": "mcq",
+              "options": [
+                "black",
+                "big / great",
+                "white",
+                "small / little"
+              ],
+              "answer": "big / great",
+              "solutionSteps": [
+                "महत् appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'big / great'."
+              ],
+              "commonMistakes": [
+                "Mixing up महत् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q04",
+              "prompt": "Which Sanskrit word means 'big / great'?",
+              "questionType": "mcq",
+              "options": [
+                "महत्",
+                "प्राचीनम्",
+                "प्रसन्नः",
+                "सत्यम्"
+              ],
+              "answer": "महत्",
+              "solutionSteps": [
+                "'big / great' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is महत्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q05",
+              "prompt": "What does लघु mean?",
+              "questionType": "mcq",
+              "options": [
+                "small / little",
+                "black",
+                "good / beautiful",
+                "white"
+              ],
+              "answer": "small / little",
+              "solutionSteps": [
+                "लघु appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'small / little'."
+              ],
+              "commonMistakes": [
+                "Mixing up लघु with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q06",
+              "prompt": "Which Sanskrit word means 'small / little'?",
+              "questionType": "mcq",
+              "options": [
+                "नवीनम्",
+                "कृष्णम्",
+                "लघु",
+                "सत्यम्"
+              ],
+              "answer": "लघु",
+              "solutionSteps": [
+                "'small / little' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is लघु."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q07",
+              "prompt": "What does नवीनम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "true",
+                "good / beautiful",
+                "old",
+                "new"
+              ],
+              "answer": "new",
+              "solutionSteps": [
+                "नवीनम् appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'new'."
+              ],
+              "commonMistakes": [
+                "Mixing up नवीनम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q08",
+              "prompt": "Which Sanskrit word means 'new'?",
+              "questionType": "mcq",
+              "options": [
+                "प्राचीनम्",
+                "कृष्णम्",
+                "नवीनम्",
+                "सत्यम्"
+              ],
+              "answer": "नवीनम्",
+              "solutionSteps": [
+                "'new' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is नवीनम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q09",
+              "prompt": "What does प्राचीनम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "new",
+                "old",
+                "happy",
+                "true"
+              ],
+              "answer": "old",
+              "solutionSteps": [
+                "प्राचीनम् appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'old'."
+              ],
+              "commonMistakes": [
+                "Mixing up प्राचीनम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q10",
+              "prompt": "Which Sanskrit word means 'old'?",
+              "questionType": "mcq",
+              "options": [
+                "प्राचीनम्",
+                "नवीनम्",
+                "सुन्दरम्",
+                "शुक्लम्"
+              ],
+              "answer": "प्राचीनम्",
+              "solutionSteps": [
+                "'old' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is प्राचीनम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q11",
+              "prompt": "What does शुक्लम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "big / great",
+                "old",
+                "happy",
+                "white"
+              ],
+              "answer": "white",
+              "solutionSteps": [
+                "शुक्लम् appears in the Adjectives group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'white'."
+              ],
+              "commonMistakes": [
+                "Mixing up शुक्लम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t09_q12",
+              "prompt": "Which Sanskrit word means 'white'?",
+              "questionType": "mcq",
+              "options": [
+                "सुन्दरम्",
+                "महत्",
+                "शुक्लम्",
+                "नवीनम्"
+              ],
+              "answer": "शुक्लम्",
+              "solutionSteps": [
+                "'white' belongs to the Adjectives category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is शुक्लम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t10",
@@ -7121,7 +9614,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t10_q01",
+              "prompt": "What does गच्छति mean?",
+              "questionType": "mcq",
+              "options": [
+                "goes",
+                "is (exists)",
+                "want",
+                "pull"
+              ],
+              "answer": "goes",
+              "solutionSteps": [
+                "गच्छति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'goes'."
+              ],
+              "commonMistakes": [
+                "Mixing up गच्छति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q02",
+              "prompt": "Which Sanskrit word means 'goes'?",
+              "questionType": "mcq",
+              "options": [
+                "उत्तरं ददाति",
+                "पृच्छति",
+                "क्रीडति",
+                "गच्छति"
+              ],
+              "answer": "गच्छति",
+              "solutionSteps": [
+                "'goes' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is गच्छति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q03",
+              "prompt": "What does आगच्छति mean?",
+              "questionType": "mcq",
+              "options": [
+                "goes",
+                "build",
+                "learn",
+                "comes"
+              ],
+              "answer": "comes",
+              "solutionSteps": [
+                "आगच्छति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'comes'."
+              ],
+              "commonMistakes": [
+                "Mixing up आगच्छति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q04",
+              "prompt": "Which Sanskrit word means 'comes'?",
+              "questionType": "mcq",
+              "options": [
+                "अन्विष्यति",
+                "आगच्छति",
+                "अस्मि",
+                "उद्घाटयति"
+              ],
+              "answer": "आगच्छति",
+              "solutionSteps": [
+                "'comes' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is आगच्छति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q05",
+              "prompt": "What does पठति mean?",
+              "questionType": "mcq",
+              "options": [
+                "knows",
+                "reads / studies",
+                "laugh",
+                "goes"
+              ],
+              "answer": "reads / studies",
+              "solutionSteps": [
+                "पठति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'reads / studies'."
+              ],
+              "commonMistakes": [
+                "Mixing up पठति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q06",
+              "prompt": "Which Sanskrit word means 'reads / studies'?",
+              "questionType": "mcq",
+              "options": [
+                "पठति",
+                "पश्यति",
+                "गोपयति",
+                "जानाति"
+              ],
+              "answer": "पठति",
+              "solutionSteps": [
+                "'reads / studies' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is पठति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q07",
+              "prompt": "What does लिखति mean?",
+              "questionType": "mcq",
+              "options": [
+                "gives",
+                "sit",
+                "do",
+                "writes"
+              ],
+              "answer": "writes",
+              "solutionSteps": [
+                "लिखति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'writes'."
+              ],
+              "commonMistakes": [
+                "Mixing up लिखति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q08",
+              "prompt": "Which Sanskrit word means 'writes'?",
+              "questionType": "mcq",
+              "options": [
+                "लिखति",
+                "पिदधाति",
+                "करोति",
+                "आरोहति"
+              ],
+              "answer": "लिखति",
+              "solutionSteps": [
+                "'writes' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is लिखति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q09",
+              "prompt": "What does वदति mean?",
+              "questionType": "mcq",
+              "options": [
+                "sees / looks",
+                "stands",
+                "speaks / says",
+                "worship"
+              ],
+              "answer": "speaks / says",
+              "solutionSteps": [
+                "वदति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'speaks / says'."
+              ],
+              "commonMistakes": [
+                "Mixing up वदति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q10",
+              "prompt": "Which Sanskrit word means 'speaks / says'?",
+              "questionType": "mcq",
+              "options": [
+                "वदति",
+                "जानाति",
+                "उपविशति",
+                "क्रीणाति"
+              ],
+              "answer": "वदति",
+              "solutionSteps": [
+                "'speaks / says' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is वदति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q11",
+              "prompt": "What does खादति mean?",
+              "questionType": "mcq",
+              "options": [
+                "writes",
+                "open",
+                "climb",
+                "eats"
+              ],
+              "answer": "eats",
+              "solutionSteps": [
+                "खादति appears in the Verbs group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'eats'."
+              ],
+              "commonMistakes": [
+                "Mixing up खादति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t10_q12",
+              "prompt": "Which Sanskrit word means 'eats'?",
+              "questionType": "mcq",
+              "options": [
+                "पश्यति",
+                "लभते",
+                "क्रीडति",
+                "खादति"
+              ],
+              "answer": "खादति",
+              "solutionSteps": [
+                "'eats' belongs to the Verbs category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is खादति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t11",
@@ -7789,7 +10559,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t11_q01",
+              "prompt": "What does बालकः विद्यालयं गच्छति mean?",
+              "questionType": "mcq",
+              "options": [
+                "Water is life",
+                "The boy goes to school",
+                "Please sit down",
+                "I go to school"
+              ],
+              "answer": "The boy goes to school",
+              "solutionSteps": [
+                "बालकः विद्यालयं गच्छति appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'The boy goes to school'."
+              ],
+              "commonMistakes": [
+                "Mixing up बालकः विद्यालयं गच्छति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q02",
+              "prompt": "Which Sanskrit word means 'The boy goes to school'?",
+              "questionType": "mcq",
+              "options": [
+                "भारतम् मम देशः अस्ति",
+                "बालकः विद्यालयं गच्छति",
+                "पृथ्वी गोलाकारा अस्ति",
+                "कृपया उपविशतु"
+              ],
+              "answer": "बालकः विद्यालयं गच्छति",
+              "solutionSteps": [
+                "'The boy goes to school' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is बालकः विद्यालयं गच्छति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q03",
+              "prompt": "What does बालिका पुस्तकं पठति mean?",
+              "questionType": "mcq",
+              "options": [
+                "Children play in the garden",
+                "I understand",
+                "Please sit down",
+                "The girl reads a book"
+              ],
+              "answer": "The girl reads a book",
+              "solutionSteps": [
+                "बालिका पुस्तकं पठति appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'The girl reads a book'."
+              ],
+              "commonMistakes": [
+                "Mixing up बालिका पुस्तकं पठति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q04",
+              "prompt": "Which Sanskrit word means 'The girl reads a book'?",
+              "questionType": "mcq",
+              "options": [
+                "सा दुग्धं पिबति",
+                "मम नाम...अस्ति",
+                "बालिका पुस्तकं पठति",
+                "सूर्यः उदेति"
+              ],
+              "answer": "बालिका पुस्तकं पठति",
+              "solutionSteps": [
+                "'The girl reads a book' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is बालिका पुस्तकं पठति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q05",
+              "prompt": "What does जलम् एव जीवनम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "She drinks milk",
+                "Water is life",
+                "I understand",
+                "Sanskrit is a beautiful language"
+              ],
+              "answer": "Water is life",
+              "solutionSteps": [
+                "जलम् एव जीवनम् appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'Water is life'."
+              ],
+              "commonMistakes": [
+                "Mixing up जलम् एव जीवनम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q06",
+              "prompt": "Which Sanskrit word means 'Water is life'?",
+              "questionType": "mcq",
+              "options": [
+                "जलम् एव जीवनम्",
+                "भवतः नाम किम्?",
+                "वृक्षाः फलानि यच्छन्ति",
+                "सा दुग्धं पिबति"
+              ],
+              "answer": "जलम् एव जीवनम्",
+              "solutionSteps": [
+                "'Water is life' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is जलम् एव जीवनम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q07",
+              "prompt": "What does विद्या बलम् अस्ति mean?",
+              "questionType": "mcq",
+              "options": [
+                "Knowledge is power",
+                "She drinks milk",
+                "The earth is round",
+                "Water is life"
+              ],
+              "answer": "Knowledge is power",
+              "solutionSteps": [
+                "विद्या बलम् अस्ति appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'Knowledge is power'."
+              ],
+              "commonMistakes": [
+                "Mixing up विद्या बलम् अस्ति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q08",
+              "prompt": "Which Sanskrit word means 'Knowledge is power'?",
+              "questionType": "mcq",
+              "options": [
+                "अहं न अवगच्छामि",
+                "बालकः विद्यालयं गच्छति",
+                "भवतः नाम किम्?",
+                "विद्या बलम् अस्ति"
+              ],
+              "answer": "विद्या बलम् अस्ति",
+              "solutionSteps": [
+                "'Knowledge is power' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is विद्या बलम् अस्ति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q09",
+              "prompt": "What does सूर्यः उदेति mean?",
+              "questionType": "mcq",
+              "options": [
+                "The sun rises",
+                "He reads a book",
+                "What is your name?",
+                "Children play in the garden"
+              ],
+              "answer": "The sun rises",
+              "solutionSteps": [
+                "सूर्यः उदेति appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'The sun rises'."
+              ],
+              "commonMistakes": [
+                "Mixing up सूर्यः उदेति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q10",
+              "prompt": "Which Sanskrit word means 'The sun rises'?",
+              "questionType": "mcq",
+              "options": [
+                "सूर्यः उदेति",
+                "अहं विद्यालयं गच्छामि",
+                "गजः चलति",
+                "अहं न अवगच्छामि"
+              ],
+              "answer": "सूर्यः उदेति",
+              "solutionSteps": [
+                "'The sun rises' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सूर्यः उदेति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q11",
+              "prompt": "What does वृक्षाः फलानि यच्छन्ति mean?",
+              "questionType": "mcq",
+              "options": [
+                "Water is life",
+                "I understand",
+                "I do not understand",
+                "Trees give fruit"
+              ],
+              "answer": "Trees give fruit",
+              "solutionSteps": [
+                "वृक्षाः फलानि यच्छन्ति appears in the Sentences group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'Trees give fruit'."
+              ],
+              "commonMistakes": [
+                "Mixing up वृक्षाः फलानि यच्छन्ति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t11_q12",
+              "prompt": "Which Sanskrit word means 'Trees give fruit'?",
+              "questionType": "mcq",
+              "options": [
+                "बालकः विद्यालयं गच्छति",
+                "वृक्षाः फलानि यच्छन्ति",
+                "भारतम् मम देशः अस्ति",
+                "कृपया उपविशतु"
+              ],
+              "answer": "वृक्षाः फलानि यच्छन्ति",
+              "solutionSteps": [
+                "'Trees give fruit' belongs to the Sentences category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is वृक्षाः फलानि यच्छन्ति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t12",
@@ -7962,7 +11009,238 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t12_q01",
+              "prompt": "What does कुत्र mean?",
+              "questionType": "mcq",
+              "options": [
+                "why",
+                "how",
+                "where",
+                "how many"
+              ],
+              "answer": "where",
+              "solutionSteps": [
+                "कुत्र appears in the Question Words group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'where'."
+              ],
+              "commonMistakes": [
+                "Mixing up कुत्र with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q02",
+              "prompt": "Which Sanskrit word means 'where'?",
+              "questionType": "mcq",
+              "options": [
+                "किमर्थम्",
+                "कदा",
+                "कुत्र",
+                "कति"
+              ],
+              "answer": "कुत्र",
+              "solutionSteps": [
+                "'where' belongs to the Question Words category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कुत्र."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q03",
+              "prompt": "What does कदा mean?",
+              "questionType": "mcq",
+              "options": [
+                "how",
+                "where",
+                "why",
+                "when"
+              ],
+              "answer": "when",
+              "solutionSteps": [
+                "कदा appears in the Question Words group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'when'."
+              ],
+              "commonMistakes": [
+                "Mixing up कदा with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q04",
+              "prompt": "Which Sanskrit word means 'when'?",
+              "questionType": "mcq",
+              "options": [
+                "कदा",
+                "कति",
+                "कथम्",
+                "कुत्र"
+              ],
+              "answer": "कदा",
+              "solutionSteps": [
+                "'when' belongs to the Question Words category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कदा."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q05",
+              "prompt": "What does किमर्थम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "how",
+                "when",
+                "how many",
+                "why"
+              ],
+              "answer": "why",
+              "solutionSteps": [
+                "किमर्थम् appears in the Question Words group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'why'."
+              ],
+              "commonMistakes": [
+                "Mixing up किमर्थम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q06",
+              "prompt": "Which Sanskrit word means 'why'?",
+              "questionType": "mcq",
+              "options": [
+                "कुत्र",
+                "कदा",
+                "किमर्थम्",
+                "कति"
+              ],
+              "answer": "किमर्थम्",
+              "solutionSteps": [
+                "'why' belongs to the Question Words category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is किमर्थम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q07",
+              "prompt": "What does कथम् mean?",
+              "questionType": "mcq",
+              "options": [
+                "how",
+                "why",
+                "where",
+                "when"
+              ],
+              "answer": "how",
+              "solutionSteps": [
+                "कथम् appears in the Question Words group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'how'."
+              ],
+              "commonMistakes": [
+                "Mixing up कथम् with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q08",
+              "prompt": "Which Sanskrit word means 'how'?",
+              "questionType": "mcq",
+              "options": [
+                "किमर्थम्",
+                "कति",
+                "कथम्",
+                "कदा"
+              ],
+              "answer": "कथम्",
+              "solutionSteps": [
+                "'how' belongs to the Question Words category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कथम्."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q09",
+              "prompt": "What does कति mean?",
+              "questionType": "mcq",
+              "options": [
+                "where",
+                "how many",
+                "when",
+                "how"
+              ],
+              "answer": "how many",
+              "solutionSteps": [
+                "कति appears in the Question Words group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'how many'."
+              ],
+              "commonMistakes": [
+                "Mixing up कति with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t12_q10",
+              "prompt": "Which Sanskrit word means 'how many'?",
+              "questionType": "mcq",
+              "options": [
+                "किमर्थम्",
+                "कति",
+                "कथम्",
+                "कदा"
+              ],
+              "answer": "कति",
+              "solutionSteps": [
+                "'how many' belongs to the Question Words category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is कति."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ch01_t13",
@@ -8234,7 +11512,284 @@
               "needsHumanReview": false
             }
           ],
-          "questions": []
+          "questions": [
+            {
+              "id": "ch01_t13_q01",
+              "prompt": "What does च mean?",
+              "questionType": "mcq",
+              "options": [
+                "with",
+                "there",
+                "and",
+                "from"
+              ],
+              "answer": "and",
+              "solutionSteps": [
+                "च appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'and'."
+              ],
+              "commonMistakes": [
+                "Mixing up च with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q02",
+              "prompt": "Which Sanskrit word means 'and'?",
+              "questionType": "mcq",
+              "options": [
+                "तत्र",
+                "सह",
+                "च",
+                "तः"
+              ],
+              "answer": "च",
+              "solutionSteps": [
+                "'and' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is च."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q03",
+              "prompt": "What does परन्तु mean?",
+              "questionType": "mcq",
+              "options": [
+                "with",
+                "and",
+                "but / however",
+                "also / too"
+              ],
+              "answer": "but / however",
+              "solutionSteps": [
+                "परन्तु appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'but / however'."
+              ],
+              "commonMistakes": [
+                "Mixing up परन्तु with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q04",
+              "prompt": "Which Sanskrit word means 'but / however'?",
+              "questionType": "mcq",
+              "options": [
+                "अतीव",
+                "अपि",
+                "परन्तु",
+                "सह"
+              ],
+              "answer": "परन्तु",
+              "solutionSteps": [
+                "'but / however' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is परन्तु."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q05",
+              "prompt": "What does अपि mean?",
+              "questionType": "mcq",
+              "options": [
+                "very / much",
+                "with",
+                "and",
+                "also / too"
+              ],
+              "answer": "also / too",
+              "solutionSteps": [
+                "अपि appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'also / too'."
+              ],
+              "commonMistakes": [
+                "Mixing up अपि with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q06",
+              "prompt": "Which Sanskrit word means 'also / too'?",
+              "questionType": "mcq",
+              "options": [
+                "तः",
+                "अपि",
+                "तत्र",
+                "परन्तु"
+              ],
+              "answer": "अपि",
+              "solutionSteps": [
+                "'also / too' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is अपि."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q07",
+              "prompt": "What does सह mean?",
+              "questionType": "mcq",
+              "options": [
+                "and",
+                "with",
+                "but / however",
+                "from"
+              ],
+              "answer": "with",
+              "solutionSteps": [
+                "सह appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'with'."
+              ],
+              "commonMistakes": [
+                "Mixing up सह with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q08",
+              "prompt": "Which Sanskrit word means 'with'?",
+              "questionType": "mcq",
+              "options": [
+                "तः",
+                "तत्र",
+                "सह",
+                "च"
+              ],
+              "answer": "सह",
+              "solutionSteps": [
+                "'with' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is सह."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q09",
+              "prompt": "What does तः mean?",
+              "questionType": "mcq",
+              "options": [
+                "and",
+                "also / too",
+                "from",
+                "there"
+              ],
+              "answer": "from",
+              "solutionSteps": [
+                "तः appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'from'."
+              ],
+              "commonMistakes": [
+                "Mixing up तः with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q10",
+              "prompt": "Which Sanskrit word means 'from'?",
+              "questionType": "mcq",
+              "options": [
+                "अत्र",
+                "अतीव",
+                "परन्तु",
+                "तः"
+              ],
+              "answer": "तः",
+              "solutionSteps": [
+                "'from' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is तः."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q11",
+              "prompt": "What does अत्र mean?",
+              "questionType": "mcq",
+              "options": [
+                "there",
+                "here",
+                "very / much",
+                "with"
+              ],
+              "answer": "here",
+              "solutionSteps": [
+                "अत्र appears in the Particles group of the NCERT Class 7 Sanskrit dictionary.",
+                "Its meaning is 'here'."
+              ],
+              "commonMistakes": [
+                "Mixing up अत्र with another word from the same group — re-read each option and pick the closest match in meaning."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t13_q12",
+              "prompt": "Which Sanskrit word means 'here'?",
+              "questionType": "mcq",
+              "options": [
+                "तत्र",
+                "अत्र",
+                "च",
+                "परन्तु"
+              ],
+              "answer": "अत्र",
+              "solutionSteps": [
+                "'here' belongs to the Particles category of Class 7 Sanskrit vocabulary.",
+                "The Sanskrit form is अत्र."
+              ],
+              "commonMistakes": [
+                "Picking a word from the same group with similar sound. Read each option carefully and match by meaning, not by spelling."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "pageRefs": []
