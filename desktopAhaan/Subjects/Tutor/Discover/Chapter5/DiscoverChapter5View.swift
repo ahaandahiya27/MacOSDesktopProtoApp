@@ -5,7 +5,7 @@ struct DiscoverChapter5View: View {
     let chapter: Chapter
 
     @EnvironmentObject private var dataStore: DataStore
-    @AppStorage("discover_scene_ch05") private var currentScene: Int = 0
+    @AppStorage(AppStorageKeys.discoverScene(5)) private var currentScene: Int = 0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private let totalScenes = 9

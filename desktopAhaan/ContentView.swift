@@ -4,7 +4,7 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var dataStore: DataStore
-    @AppStorage("hasSeenWelcome") private var hasSeenWelcome: Bool = false
+    @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {

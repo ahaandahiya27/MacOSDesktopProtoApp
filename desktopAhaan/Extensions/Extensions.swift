@@ -56,6 +56,23 @@ extension Color {
     static let sanskritBackground = Color(NSColor.windowBackgroundColor)
 }
 
+// MARK: - AppStorage keys
+
+/// Central registry for every `@AppStorage` key the app uses. Routing every
+/// key through this enum prevents typo-driven progress loss across the eight
+/// Discover chapter dispatchers (a single misspelled key silently forks a
+/// fresh cursor on next launch).
+enum AppStorageKeys {
+    /// One-time first-launch welcome overlay dismissal flag.
+    static let hasSeenWelcome = "hasSeenWelcome"
+
+    /// Per-chapter Discover Mode scene cursor (0-indexed). `chapterNumber`
+    /// is the integer chapter number (1, 2, ..., 19 in the current pack).
+    static func discoverScene(_ chapterNumber: Int) -> String {
+        String(format: "discover_scene_ch%02d", chapterNumber)
+    }
+}
+
 // MARK: - SF Symbols backfill for Big Sur
 
 /// Big Sur ships SF Symbols 2.0. Symbols introduced in SF Symbols 3 (macOS 12)
