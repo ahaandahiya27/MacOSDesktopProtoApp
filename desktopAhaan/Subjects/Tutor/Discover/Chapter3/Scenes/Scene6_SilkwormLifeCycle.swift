@@ -71,7 +71,7 @@ struct Scene6_SilkwormLifeCycle: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(16)
-            .background(Color.white.opacity(0.5))
+            .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
             .cornerRadius(12)
             .padding(.horizontal, 24)
 
