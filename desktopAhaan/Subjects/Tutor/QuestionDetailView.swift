@@ -489,7 +489,7 @@ struct QuestionDetailView: View {
                 Label("Now try these variations", systemImage: "arrow.triangle.branch")
                     .font(.headline)
                 ForEach(question.variations) { v in
-                    VariationCard(variation: v)
+                    QuestionVariationCard(variation: v)
                 }
             }
         }
@@ -596,106 +596,6 @@ struct QuestionDetailView: View {
         ))
         attemptOutcome = allCorrect ? .correct : .incorrect(userInput: summary)
         revealSolution = true
-    }
-}
-
-// MARK: - AnswerValidator
-
-/// Free-text answer matcher tuned for short, single-fact answers
-/// (numbers, single nouns, short phrases). Used by both QuestionDetailView
-/// and any future quiz UI.
-///
-/// Rules, evaluated in order:
-///   1. Whitespace-trimmed, case-folded exact match.
-///   2. If both sides parse as numbers (Int or Double), compare numerically
-///      so "8" == "8.0" == " 8 ".
-///   3. Token-set match for multi-word answers — order-independent equality
-///      of the meaningful tokens (drops punctuation and stop-ish words),
-///      so "8 teeth" matches "teeth 8" but NOT "abcd".
-/// Substring matching is deliberately NOT used; it produced false positives
-/// (e.g. the empty string matched every truth).
-enum AnswerValidator {
-    static func matches(userInput: String, truth: String) -> Bool {
-        let u = normalize(userInput)
-        let t = normalize(truth)
-        if u.isEmpty || t.isEmpty { return false }
-        if u == t { return true }
-        if let un = Double(u), let tn = Double(t), un == tn { return true }
-        let uTokens = tokenize(u)
-        let tTokens = tokenize(t)
-        if !uTokens.isEmpty && uTokens == tTokens { return true }
-        return false
-    }
-
-    private static func normalize(_ s: String) -> String {
-        s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-    }
-
-    /// Sorted set of meaningful tokens. Strips punctuation and a tiny set of
-    /// English filler words so "the sun" and "sun" are considered equal.
-    private static let stopWords: Set<String> = ["the", "a", "an", "is", "are"]
-    private static func tokenize(_ s: String) -> [String] {
-        let cleaned = s.unicodeScalars
-            .map { CharacterSet.alphanumerics.contains($0) ? Character($0) : " " }
-        return String(cleaned)
-            .split(separator: " ")
-            .map(String.init)
-            .filter { !$0.isEmpty && !stopWords.contains($0) }
-            .sorted()
-    }
-}
-
-// MARK: - DifficultyBadge
-
-struct QuestionDifficultyBadge: View {
-    let level: Int
-    var body: some View {
-        HStack(spacing: 2) {
-            ForEach(1...5, id: \.self) { i in
-                Image(systemName: i <= level ? "circle.fill" : "circle")
-                    .font(.caption2)
-                    .foregroundColor(i <= level ? color : .secondary.opacity(0.4))
-            }
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Difficulty \(level) of 5")
-    }
-    private var color: Color {
-        switch level {
-        case 1...2: return .green
-        case 3:     return .yellow
-        default:    return .orange
-        }
-    }
-}
-
-// MARK: - VariationCard
-
-private struct VariationCard: View {
-    let variation: QuestionVariation
-    @State private var expanded = false
-
-    var body: some View {
-        ExpandableCard(
-            isExpanded: $expanded,
-            systemImage: "arrow.triangle.branch",
-            title: variation.prompt,
-            tint: Color.compatIndigo
-        ) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(variation.answer)
-                    .font(.body.bold())
-                    .padding(8)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(RoundedRectangle(cornerRadius: 6).fill(Color.green.opacity(0.12)))
-                ForEach(Array(variation.solutionSteps.enumerated()), id: \.offset) { idx, step in
-                    HStack(alignment: .top, spacing: 8) {
-                        Text("\(idx + 1).").font(.callout.bold()).foregroundColor(Color.compatIndigo)
-                        Text(step).font(.callout).lineSpacing(3)
-                    }
-                }
-            }
-        }
     }
 }
 

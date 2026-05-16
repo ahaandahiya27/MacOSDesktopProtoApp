@@ -17,6 +17,9 @@
 		020AADDEDC7A754C6FD63FE4 /* Scene8_NitrogenCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C700CBA2BF10545B5E922F /* Scene8_NitrogenCycle.swift */; };
 		0285215969F94AD942B6DD58 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260BF9D568AC5E4718E7D25 /* Chapter.swift */; };
 		02FF903720E65789B25CE7B1 /* ch01_t01_c06.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C6D0AB7AAC446869C77E02F /* ch01_t01_c06.html */; };
+		04674C582FB8B99F004A7D5C /* AnswerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C572FB8B99F004A7D5C /* AnswerValidator.swift */; };
+		04674C5A2FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */; };
+		04674C5C2FB8B9B0004A7D5C /* QuestionVariationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -346,6 +349,9 @@
 		0343FBC99494449AB5416D38 /* ch01_t02_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_t02_c02.html; sourceTree = "<group>"; };
 		0434CE872FA733CD000C01F2 /* desktopAhaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktopAhaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
+		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
+		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -952,6 +958,9 @@
 				E064DB5E81A6338CC8CE23B3 /* TopicDetailView.swift */,
 				536B1A5799289CDCFF278E2A /* TutorNavigation.swift */,
 				7BBC28F09BA1320433B6B3D5 /* Discover */,
+				04674C572FB8B99F004A7D5C /* AnswerValidator.swift */,
+				04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */,
+				04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */,
 			);
 			path = Tutor;
 			sourceTree = "<group>";
@@ -1780,6 +1789,7 @@
 				A1D333A734BE17054F899037 /* Scene4_ColorTheChlorophyll.swift in Sources */,
 				067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */,
 				004C16C83F28DBAEB7295D63 /* Scene6_MeetTheSpecialPlants.swift in Sources */,
+				04674C5C2FB8B9B0004A7D5C /* QuestionVariationCard.swift in Sources */,
 				DE28F6D027575E6F80FA595E /* Scene7_PitcherPlantTrap.swift in Sources */,
 				020AADDEDC7A754C6FD63FE4 /* Scene8_NitrogenCycle.swift in Sources */,
 				01E41B8A315A2FBDDE3A478E /* Scene9_BossQuiz.swift in Sources */,
@@ -1801,6 +1811,7 @@
 				E553929F822C2FAB1B798996 /* Scene5_TropicalRainforestLife.swift in Sources */,
 				0827672EF081DD4818BE3848 /* Scene6_AdaptationMatchGame.swift in Sources */,
 				B8E80EC4D8CB04769403BA44 /* Scene7_MigrationSuperhero.swift in Sources */,
+				04674C582FB8B99F004A7D5C /* AnswerValidator.swift in Sources */,
 				B75433668EE92FBF8EE984A1 /* Scene8_DesertSurvivalTricks.swift in Sources */,
 				9674D6D51791C04CDC542C4B /* Scene9_BossQuiz_Ch7.swift in Sources */,
 				8CA543E15838D84F12D53C7B /* DiscoverChapter19View.swift in Sources */,
@@ -1875,6 +1886,7 @@
 				6EF755DA8007B1E221B77552 /* FreeOnlineTranslationProvider.swift in Sources */,
 				FB54B3338CE8D8F8B8CF090E /* LocalTranslationProvider.swift in Sources */,
 				6846A16E9AF5B568EBF5DB7A /* MockTranslationProvider.swift in Sources */,
+				04674C5A2FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift in Sources */,
 				AC7767A19FA76A4B9C480625 /* TranslationProvider.swift in Sources */,
 				8A576116F1128A36540ADCEC /* TranslationService.swift in Sources */,
 				9A2B23A41660E505C18B6D3A /* OCRService.swift in Sources */,
