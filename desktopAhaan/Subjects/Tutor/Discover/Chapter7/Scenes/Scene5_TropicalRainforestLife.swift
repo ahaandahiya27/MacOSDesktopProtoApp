@@ -41,118 +41,144 @@ struct Scene5_TropicalRainforestLife: View {
     private var allExplored: Bool { exploredLayers.count == layers.count }
 
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader { _ in
             ZStack {
-                VStack(spacing: 12) {
-                    Text("Tropical Rainforest Life")
+                mainColumn
+                bottomOverlay
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var mainColumn: some View {
+        VStack(spacing: 12) {
+            Text("Tropical Rainforest Life")
+                .font(.title2.bold())
+                .padding(.top, 14)
+
+            Text("\(exploredLayers.count) / \(layers.count) layers explored")
+                .font(.caption.weight(.medium))
+                .foregroundColor(.secondary)
+
+            layersStack
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 24)
+    }
+
+    @ViewBuilder
+    private var layersStack: some View {
+        VStack(spacing: 0) {
+            ForEach(layers) { layer in
+                layerButton(layer)
+            }
+        }
+        .frame(maxWidth: 500)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(
+            RoundedRectangle(cornerRadius: 14)
+                .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
+        )
+    }
+
+    @ViewBuilder
+    private func layerButton(_ layer: ForestLayer) -> some View {
+        let isSelected = selectedLayer == layer.id
+        let isExplored = exploredLayers.contains(layer.id)
+
+        Button {
+            withAnimation(reduceMotion ? .none : .spring()) {
+                selectedLayer = layer.id
+                exploredLayers.insert(layer.id)
+            }
+        } label: {
+            layerButtonLabel(layer, isSelected: isSelected, isExplored: isExplored)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(layer.name) layer. \(isExplored ? "Explored" : "Tap to explore")")
+    }
+
+    @ViewBuilder
+    private func layerButtonLabel(_ layer: ForestLayer, isSelected: Bool, isExplored: Bool) -> some View {
+        ZStack {
+            Rectangle()
+                .fill(isSelected ? layer.color.opacity(0.9) : layer.color.opacity(0.5))
+
+            VStack(spacing: 4) {
+                Text(layer.name)
+                    .font(.headline.bold())
+                    .foregroundColor(.white)
+
+                HStack(spacing: 12) {
+                    ForEach(layer.animals, id: \.name) { animal in
+                        Text(animal.name)
+                            .font(.caption)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 3)
+                            .background(Capsule().fill(.white.opacity(0.3)))
+                            .foregroundColor(.white)
+                    }
+                }
+
+                if isExplored {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.white)
+                        .font(.caption)
+                }
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 80)
+        .overlay(
+            Rectangle()
+                .strokeBorder(isSelected ? .white : .clear, lineWidth: 2)
+        )
+    }
+
+    @ViewBuilder
+    private var bottomOverlay: some View {
+        VStack(spacing: 14) {
+            Spacer()
+            detailCard
+                .frame(maxWidth: 640)
+
+            if allExplored {
+                GotItButton { onComplete() }
+                    .padding(.bottom, 12)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .padding(.horizontal, 24)
+    }
+
+    @ViewBuilder
+    private var detailCard: some View {
+        SoftShadowCard(padding: 18) {
+            VStack(alignment: .leading, spacing: 8) {
+                if let idx = selectedLayer, let layer = layers.first(where: { $0.id == idx }) {
+                    Label(layer.name, systemImage: "leaf.fill")
                         .font(.title2.bold())
-                        .padding(.top, 14)
+                        .foregroundColor(layer.color)
 
-                    Text("\(exploredLayers.count) / \(layers.count) layers explored")
-                        .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
-
-                    // Rainforest layers
-                    VStack(spacing: 0) {
-                        ForEach(layers) { layer in
-                            let isSelected = selectedLayer == layer.id
-                            let isExplored = exploredLayers.contains(layer.id)
-
-                            Button {
-                                withAnimation(reduceMotion ? .none : .spring()) {
-                                    selectedLayer = layer.id
-                                    exploredLayers.insert(layer.id)
-                                }
-                            } label: {
-                                ZStack {
-                                    Rectangle()
-                                        .fill(isSelected ? layer.color.opacity(0.9) : layer.color.opacity(0.5))
-
-                                    VStack(spacing: 4) {
-                                        Text(layer.name)
-                                            .font(.headline.bold())
-                                            .foregroundColor(.white)
-
-                                        HStack(spacing: 12) {
-                                            ForEach(layer.animals, id: \.name) { animal in
-                                                Text(animal.name)
-                                                    .font(.caption)
-                                                    .padding(.horizontal, 8)
-                                                    .padding(.vertical, 3)
-                                                    .background(Capsule().fill(.white.opacity(0.3)))
-                                                    .foregroundColor(.white)
-                                            }
-                                        }
-
-                                        if isExplored {
-                                            Image(systemName: "checkmark.circle.fill")
-                                                .foregroundColor(.white)
-                                                .font(.caption)
-                                        }
-                                    }
-                                }
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 80)
-                                .overlay(
-                                    Rectangle()
-                                        .strokeBorder(isSelected ? .white : .clear, lineWidth: 2)
-                                )
-                            }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("\(layer.name) layer. \(isExplored ? "Explored" : "Tap to explore")")
+                    ForEach(layer.animals, id: \.name) { animal in
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(animal.name)
+                                .font(.body.bold())
+                            Text(animal.adaptation)
+                                .font(.callout)
+                                .foregroundColor(.secondary)
+                                .lineSpacing(3)
                         }
+                        .padding(.top, 4)
                     }
-                    .frame(maxWidth: 500)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 14)
-                            .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
-                    )
-
-                    Spacer()
+                } else {
+                    Label("Rainforest Layers", systemImage: "tree.fill")
+                        .font(.title2.bold())
+                    Text("Tropical rainforests are hot and humid all year, with heavy rainfall. They have three main layers — canopy, understory, and forest floor — each with unique animals. Tap a layer to explore!")
+                        .font(.body)
+                        .lineSpacing(4)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
-
-                VStack(spacing: 14) {
-                    Spacer()
-
-                    SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            if let idx = selectedLayer, let layer = layers.first(where: { $0.id == idx }) {
-                                Label(layer.name, systemImage: "leaf.fill")
-                                    .font(.title2.bold())
-                                    .foregroundColor(layer.color)
-
-                                ForEach(layer.animals, id: \.name) { animal in
-                                    VStack(alignment: .leading, spacing: 2) {
-                                        Text(animal.name)
-                                            .font(.body.bold())
-                                        Text(animal.adaptation)
-                                            .font(.callout)
-                                            .foregroundColor(.secondary)
-                                            .lineSpacing(3)
-                                    }
-                                    .padding(.top, 4)
-                                }
-                            } else {
-                                Label("Rainforest Layers", systemImage: "tree.fill")
-                                    .font(.title2.bold())
-                                Text("Tropical rainforests are hot and humid all year, with heavy rainfall. They have three main layers — canopy, understory, and forest floor — each with unique animals. Tap a layer to explore!")
-                                    .font(.body)
-                                    .lineSpacing(4)
-                            }
-                        }
-                    }
-                    .frame(maxWidth: 640)
-
-                    if allExplored {
-                        GotItButton { onComplete() }
-                            .padding(.bottom, 12)
-                    }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                .padding(.horizontal, 24)
             }
         }
     }

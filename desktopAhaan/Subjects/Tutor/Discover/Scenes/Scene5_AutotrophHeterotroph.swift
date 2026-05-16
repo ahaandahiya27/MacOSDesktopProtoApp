@@ -59,151 +59,176 @@ struct Scene5_AutotrophHeterotroph: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            HStack {
-                Text("Autotroph or Heterotroph?")
-                    .font(.largeTitle.bold())
-                Spacer()
-                ScoreBadge(value: correctCount, total: 12)
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 18)
-
-            Text("Drag each card into the right zone. 🌱 makes its own food. 🐯 eats others.")
-                .font(.callout)
-                .foregroundColor(.secondary)
-
-            // Floating cards
-            ZStack {
-                // Layout in a wrap-grid manually
-                VStack(spacing: 8) {
-                    ForEach(0..<3, id: \.self) { row in
-                        HStack(spacing: 10) {
-                            ForEach(0..<4, id: \.self) { col in
-                                let idx = row * 4 + col
-                                if idx < tokens.count {
-                                    let token = tokens[idx]
-                                    let isPlacedCorrect = placed[token.id] == true
-                                    DraggableCard(
-                                        token: token,
-                                        settled: isPlacedCorrect,
-                                        shakeOffset: shakeMap[token.id] ?? 0
-                                    )
-                                    .opacity(isPlacedCorrect ? 0.4 : 1)
-                                    .offset(draggingId == token.id ? dragOffset : .zero)
-                                    .zIndex(draggingId == token.id ? 100 : 0)
-                                    .gesture(dragGesture(for: token))
-                                    .accessibilityAction(named: Text("Place in autotrophs")) {
-                                        placeViaA11y(token, asAutotroph: true)
-                                    }
-                                    .accessibilityAction(named: Text("Place in heterotrophs")) {
-                                        placeViaA11y(token, asAutotroph: false)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .frame(maxWidth: 560)
-            .padding(.horizontal, 24)
-
-            // Drop zones
-            HStack(spacing: 16) {
-                DropZone(
-                    title: "🌱 Autotrophs",
-                    subtitle: "make own food",
-                    tint: .green
-                )
-                .background(
-                    GeometryReader { geo in
-                        Color.clear.onAppear {
-                            autotrophZoneRect = geo.frame(in: .global)
-                        }
-                        .onChange(of: geo.size) { _ in
-                            autotrophZoneRect = geo.frame(in: .global)
-                        }
-                    }
-                )
-
-                DropZone(
-                    title: "🐯 Heterotrophs",
-                    subtitle: "eat others",
-                    tint: .orange
-                )
-                .background(
-                    GeometryReader { geo in
-                        Color.clear.onAppear {
-                            heterotrophZoneRect = geo.frame(in: .global)
-                        }
-                        .onChange(of: geo.size) { _ in
-                            heterotrophZoneRect = geo.frame(in: .global)
-                        }
-                    }
-                )
-            }
-            .frame(maxWidth: 600)
-            .padding(.horizontal, 24)
-
-            // Feedback line
-            if let fb = feedback {
-                Text(fb)
-                    .font(.callout.weight(.medium))
-                    .foregroundColor(Color.compatIndigo)
-                    .padding(.top, 4)
-                    .transition(.opacity)
-            }
-
-            HStack(spacing: 14) {
-                Button("Skip — show answers") {
-                    skipAndShow()
-                }
-                
-
-                VStack(spacing: 4) {
-                    GotItButton(action: { onComplete(correctCount) })
-                        .disabled(!allPlaced && correctCount == 0)
-                        .opacity((allPlaced || correctCount > 0) ? 1 : 0.55)
-                    if !allPlaced && correctCount == 0 {
-                        Text("Place all cards to continue")
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
-                    }
-                }
-            }
-            .padding(.bottom, 12)
-
+            headerSection
+            instructionLine
+            floatingCardsGrid
+            dropZonesRow
+            feedbackLine
+            actionsRow
             Spacer(minLength: 0)
         }
-        .overlay {
-            if celebrate {
-                ZStack {
-                    Color.black.opacity(0.18).ignoresSafeArea()
-                    SoftShadowCard {
-                        VStack(spacing: 10) {
-                            Text("🎉").font(.system(size: 56))
-                            Text("Well done!")
-                                .font(.title.bold())
-                            Text("\(correctCount) out of 12 correct.")
-                                .font(.callout)
-                                .foregroundColor(.secondary)
-                            Button("Continue") {
-                                onComplete(correctCount)
-                            }
-                            
-                            .accentColor(.green)
-                            .padding(.top, 6)
-                        }
-                        .padding(20)
-                    }
-                    .frame(maxWidth: 320)
-                    ParticleEmitter(isActive: true, particleCount: 80)
-                        .allowsHitTesting(false)
-                }
-                .transition(.opacity)
-            }
-        }
+        .overlay(celebrationOverlay)
         .onAppear {
             if tokens.isEmpty { tokens = allTokens.shuffled() }
+        }
+    }
+
+    @ViewBuilder
+    private var headerSection: some View {
+        HStack {
+            Text("Autotroph or Heterotroph?")
+                .font(.largeTitle.bold())
+            Spacer()
+            ScoreBadge(value: correctCount, total: 12)
+        }
+        .padding(.horizontal, 24)
+        .padding(.top, 18)
+    }
+
+    @ViewBuilder
+    private var instructionLine: some View {
+        Text("Drag each card into the right zone. 🌱 makes its own food. 🐯 eats others.")
+            .font(.callout)
+            .foregroundColor(.secondary)
+    }
+
+    @ViewBuilder
+    private func cardCell(at idx: Int) -> some View {
+        if idx < tokens.count {
+            let token = tokens[idx]
+            let isPlacedCorrect = placed[token.id] == true
+            DraggableCard(
+                token: token,
+                settled: isPlacedCorrect,
+                shakeOffset: shakeMap[token.id] ?? 0
+            )
+            .opacity(isPlacedCorrect ? 0.4 : 1)
+            .offset(draggingId == token.id ? dragOffset : .zero)
+            .zIndex(draggingId == token.id ? 100 : 0)
+            .gesture(dragGesture(for: token))
+            .accessibilityAction(named: Text("Place in autotrophs")) {
+                placeViaA11y(token, asAutotroph: true)
+            }
+            .accessibilityAction(named: Text("Place in heterotrophs")) {
+                placeViaA11y(token, asAutotroph: false)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var floatingCardsGrid: some View {
+        ZStack {
+            VStack(spacing: 8) {
+                ForEach(0..<3, id: \.self) { row in
+                    HStack(spacing: 10) {
+                        ForEach(0..<4, id: \.self) { col in
+                            cardCell(at: row * 4 + col)
+                        }
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: 560)
+        .padding(.horizontal, 24)
+    }
+
+    @ViewBuilder
+    private var dropZonesRow: some View {
+        HStack(spacing: 16) {
+            DropZone(
+                title: "🌱 Autotrophs",
+                subtitle: "make own food",
+                tint: .green
+            )
+            .background(autotrophZoneTracker)
+
+            DropZone(
+                title: "🐯 Heterotrophs",
+                subtitle: "eat others",
+                tint: .orange
+            )
+            .background(heterotrophZoneTracker)
+        }
+        .frame(maxWidth: 600)
+        .padding(.horizontal, 24)
+    }
+
+    @ViewBuilder
+    private var autotrophZoneTracker: some View {
+        GeometryReader { geo in
+            Color.clear
+                .onAppear { autotrophZoneRect = geo.frame(in: .global) }
+                .onChange(of: geo.size) { _ in autotrophZoneRect = geo.frame(in: .global) }
+        }
+    }
+
+    @ViewBuilder
+    private var heterotrophZoneTracker: some View {
+        GeometryReader { geo in
+            Color.clear
+                .onAppear { heterotrophZoneRect = geo.frame(in: .global) }
+                .onChange(of: geo.size) { _ in heterotrophZoneRect = geo.frame(in: .global) }
+        }
+    }
+
+    @ViewBuilder
+    private var feedbackLine: some View {
+        if let fb = feedback {
+            Text(fb)
+                .font(.callout.weight(.medium))
+                .foregroundColor(Color.compatIndigo)
+                .padding(.top, 4)
+                .transition(.opacity)
+        }
+    }
+
+    @ViewBuilder
+    private var actionsRow: some View {
+        HStack(spacing: 14) {
+            Button("Skip — show answers") {
+                skipAndShow()
+            }
+
+            VStack(spacing: 4) {
+                GotItButton(action: { onComplete(correctCount) })
+                    .disabled(!allPlaced && correctCount == 0)
+                    .opacity((allPlaced || correctCount > 0) ? 1 : 0.55)
+                if !allPlaced && correctCount == 0 {
+                    Text("Place all cards to continue")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+            }
+        }
+        .padding(.bottom, 12)
+    }
+
+    @ViewBuilder
+    private var celebrationOverlay: some View {
+        if celebrate {
+            ZStack {
+                Color.black.opacity(0.18).ignoresSafeArea()
+                SoftShadowCard {
+                    VStack(spacing: 10) {
+                        Text("🎉").font(.system(size: 56))
+                        Text("Well done!")
+                            .font(.title.bold())
+                        Text("\(correctCount) out of 12 correct.")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                        Button("Continue") {
+                            onComplete(correctCount)
+                        }
+                        .accentColor(.green)
+                        .padding(.top, 6)
+                    }
+                    .padding(20)
+                }
+                .frame(maxWidth: 320)
+                ParticleEmitter(isActive: true, particleCount: 80)
+                    .allowsHitTesting(false)
+            }
+            .transition(.opacity)
         }
     }
 
