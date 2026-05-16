@@ -7,6 +7,26 @@ struct QuestionDetailView: View {
     @State private var revealSolution = false
     @State private var typedAnswer = ""
     @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var subjectRegistry: SubjectRegistry
+    @EnvironmentObject var nav: TutorNavigationState
+
+    private var currentSiblingIndex: Int? {
+        nav.questionSiblings.firstIndex {
+            $0.packId == pack.id && $0.questionId == question.id
+        }
+    }
+    private var hasPrevious: Bool {
+        if let idx = currentSiblingIndex { return idx > 0 }
+        return false
+    }
+    private var hasNext: Bool {
+        if let idx = currentSiblingIndex { return idx < nav.questionSiblings.count - 1 }
+        return false
+    }
+    private var siblingPositionLabel: String? {
+        guard let idx = currentSiblingIndex else { return nil }
+        return "\(idx + 1) / \(nav.questionSiblings.count)"
+    }
 
     var body: some View {
         ScrollView {
@@ -20,12 +40,82 @@ struct QuestionDetailView: View {
                 solutionDisclosure
                 commonMistakesCard
                 variationsSection
+                if currentSiblingIndex != nil {
+                    navigationFooter
+                }
             }
             .padding(20)
             .frame(maxWidth: 820, alignment: .leading)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(String(question.prompt.prefix(50)))
+        .background(keyboardShortcutSink)
+    }
+
+    // MARK: - Prev/Next
+
+    @ViewBuilder
+    private var navigationFooter: some View {
+        HStack(spacing: 12) {
+            Button(action: gotoPrevious) {
+                HStack(spacing: 4) {
+                    Image(systemName: "chevron.left")
+                    Text("Previous")
+                }
+            }
+            .disabled(!hasPrevious)
+            .keyboardShortcut(.leftArrow, modifiers: [])
+            .accessibilityLabel("Previous question")
+
+            Spacer()
+            if let label = siblingPositionLabel {
+                Text(label)
+                    .font(.caption.monospacedDigit())
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+
+            Button(action: gotoNext) {
+                HStack(spacing: 4) {
+                    Text("Next")
+                    Image(systemName: "chevron.right")
+                }
+            }
+            .disabled(!hasNext)
+            .keyboardShortcut(.rightArrow, modifiers: [])
+            .accessibilityLabel("Next question")
+        }
+        .padding(.top, 8)
+    }
+
+    /// Two zero-size buttons that exist purely to register the arrow-key
+    /// shortcuts even when the user hasn't focused the visible navigation
+    /// buttons. Placed in a background so they don't occupy layout space.
+    private var keyboardShortcutSink: some View {
+        ZStack {
+            Button(action: gotoPrevious) { EmptyView() }
+                .keyboardShortcut(.leftArrow, modifiers: [])
+                .disabled(!hasPrevious)
+            Button(action: gotoNext) { EmptyView() }
+                .keyboardShortcut(.rightArrow, modifiers: [])
+                .disabled(!hasNext)
+        }
+        .frame(width: 0, height: 0)
+        .opacity(0)
+        .allowsHitTesting(false)
+    }
+
+    private func gotoPrevious() {
+        guard let idx = currentSiblingIndex, idx > 0 else { return }
+        let prev = nav.questionSiblings[idx - 1]
+        nav.replaceTop(.question(packId: prev.packId, questionId: prev.questionId))
+    }
+
+    private func gotoNext() {
+        guard let idx = currentSiblingIndex,
+              idx < nav.questionSiblings.count - 1 else { return }
+        let next = nav.questionSiblings[idx + 1]
+        nav.replaceTop(.question(packId: next.packId, questionId: next.questionId))
     }
 
     // MARK: - Sections

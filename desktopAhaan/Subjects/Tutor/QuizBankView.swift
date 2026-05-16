@@ -41,6 +41,15 @@ private struct QuizBankContent: View {
         }
     }
 
+    /// Push a question detail view, also recording the current filtered list
+    /// as the sibling set so Prev/Next inside the detail view can walk it.
+    private func openQuestion(_ entry: (pack: SubjectPack, chapter: Chapter, question: Question)) {
+        nav.questionSiblings = filteredEntries.map {
+            QuestionRef(packId: $0.pack.id, questionId: $0.question.id)
+        }
+        nav.push(.question(packId: entry.pack.id, questionId: entry.question.id))
+    }
+
     private var availableChapters: [(id: String, label: String)] {
         var seen = Set<String>()
         return cachedEntries.compactMap { entry in
@@ -73,14 +82,14 @@ private struct QuizBankContent: View {
             } else {
                 List(filteredEntries, id: \.question.id) { entry in
                     Button {
-                        nav.push(.question(packId: entry.pack.id, questionId: entry.question.id))
+                        openQuestion(entry)
                     } label: {
                         QuizBankRow(chapter: entry.chapter, question: entry.question)
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                     .contextMenu {
-                        Button("Open") { nav.push(.question(packId: entry.pack.id, questionId: entry.question.id)) }
+                        Button("Open") { openQuestion(entry) }
                     }
                 }
                 .listStyle(.inset)

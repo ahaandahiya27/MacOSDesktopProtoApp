@@ -1,9 +1,20 @@
 import SwiftUI
 import Combine
 
+/// A pointer into a list of questions, used to enable Prev/Next navigation
+/// inside QuestionDetailView. The QuizBank populates this when pushing a
+/// question; other callers can leave it empty and Prev/Next stays disabled.
+struct QuestionRef: Hashable {
+    let packId: String
+    let questionId: String
+}
+
 @MainActor
 final class TutorNavigationState: ObservableObject {
     @Published var path: [TutorRoute] = []
+    /// Ordered question siblings that QuestionDetailView's Prev/Next walk
+    /// through. Set by the screen that pushed the question (e.g. QuizBank).
+    @Published var questionSiblings: [QuestionRef] = []
 
     func push(_ route: TutorRoute) {
         withAnimation(.easeInOut(duration: 0.2)) {
@@ -22,6 +33,17 @@ final class TutorNavigationState: ObservableObject {
         withAnimation(.easeInOut(duration: 0.2)) {
             path.removeAll()
         }
+    }
+
+    /// Replace the topmost route without pushing a new entry. Used by
+    /// QuestionDetailView's Prev/Next so the back-button still returns to
+    /// the parent list instead of unwinding through every visited question.
+    func replaceTop(_ route: TutorRoute) {
+        guard !path.isEmpty else {
+            push(route)
+            return
+        }
+        path[path.count - 1] = route
     }
 
     var currentRoute: TutorRoute? { path.last }
