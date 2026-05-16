@@ -61,7 +61,7 @@ struct SettingsScreen: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("No API Key Needed").font(.subheadline.weight(.semibold))
                         Text("Free to use. No accounts, no keys, no subscriptions.")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.secondary)
                     }
                 }
@@ -115,7 +115,7 @@ struct SettingsScreen: View {
                 }
                 Toggle("Dictionary Only (Offline Mode)", isOn: $settings.preferOffline)
                 Text("When on, the app only uses the built-in dictionary — no internet requests at all. History, favorites, flashcards, and quizzes always work offline.")
-                    .font(.caption2)
+                    .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -167,16 +167,16 @@ struct SettingsScreen: View {
 
                     if pinSaved {
                         Label("PIN saved. Settings will be locked when you leave this tab.", systemImage: "checkmark.circle.fill")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.green)
                     } else {
                         Text("Enter at least 4 digits and tap Save to enable the parent lock.")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.secondary)
                     }
 
                     Text("Protects this Settings screen only. Translation, history, favorites, and practice remain freely accessible.")
-                        .font(.caption2)
+                        .font(.caption)
                         .foregroundColor(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -206,16 +206,16 @@ struct SettingsScreen: View {
                     }
                     if subjectRegistry.loadErrors.isEmpty {
                         Label("All packs decoded successfully.", systemImage: "checkmark.circle")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.green)
                     } else {
                         Label("\(subjectRegistry.loadErrors.count) pack(s) failed to load:",
                               systemImage: "exclamationmark.triangle.fill")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.orange)
                         ForEach(subjectRegistry.loadErrors, id: \.self) { err in
                             Text(err)
-                                .font(.caption2)
+                                .font(.caption)
                                 .foregroundColor(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
@@ -244,7 +244,7 @@ struct SettingsScreen: View {
                 }
 
                 Text("Controls the voice and speed used by the Read Aloud button on concept pages and articles.")
-                    .font(.caption2)
+                    .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -253,7 +253,7 @@ struct SettingsScreen: View {
                 Toggle("Auto-advance after correct answer",
                        isOn: $settings.autoAdvanceOnCorrect)
                 Text("When on, the next question is shown automatically about a second after you get one right. Useful for fast flashcard-style drilling.")
-                    .font(.caption2)
+                    .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }

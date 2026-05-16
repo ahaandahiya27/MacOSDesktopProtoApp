@@ -354,7 +354,7 @@ private struct UseCaseCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(useCase.domain.uppercased())
-                .font(.caption2).bold()
+                .font(.caption).bold()
                 .foregroundColor(.secondary)
             Text(useCase.title)
                 .font(.subheadline).bold()

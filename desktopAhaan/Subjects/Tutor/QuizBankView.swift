@@ -85,6 +85,7 @@ private struct QuizBankContent: View {
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)
+                        .accessibilityHidden(true)
                     Text("No questions match")
                         .font(.title2.weight(.semibold))
                     Text("Try adjusting your filters.")

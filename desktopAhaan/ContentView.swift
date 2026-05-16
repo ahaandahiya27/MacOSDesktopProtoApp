@@ -65,7 +65,7 @@ struct ContentView: View {
                                     .lineLimit(2)
                                     .truncationMode(.tail)
                                 Text("\(pack.conceptCount) concepts · \(pack.questionCount) questions")
-                                    .font(.caption2)
+                                    .font(.caption)
                                     .foregroundColor(.secondary)
                             }
                         } icon: {
@@ -81,7 +81,7 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 1) {
                         Text("Practice Questions").font(.body)
                         Text("\(subjectRegistry.packs.reduce(0) { $0 + $1.questionCount }) questions across all chapters")
-                            .font(.caption2)
+                            .font(.caption)
                             .foregroundColor(.secondary)
                     }
                 } icon: {

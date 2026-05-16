@@ -1,10 +1,12 @@
 import Foundation
 import Combine
+import os.log
 
 @MainActor
 final class DataStore: ObservableObject {
 
     static let shared = DataStore()
+    private static let logger = Logger(subsystem: "com.emoha.desktopAhaan", category: "DataStore")
 
     @Published var translationRecords: [TranslationRecord] = []
     @Published var practiceProgress: [PracticeProgress] = []
@@ -28,7 +30,7 @@ final class DataStore: ObservableObject {
                 at: storeDir, withIntermediateDirectories: true
             )
         } catch {
-            print("[DataStore] Failed to create data directory: \(error)")
+            Self.logger.error("Failed to create data directory: \(error.localizedDescription, privacy: .public)")
             lastSaveError = "Could not create data directory. Data may not persist."
         }
         loadAll()
@@ -192,7 +194,7 @@ final class DataStore: ObservableObject {
         } catch {
             let msg = "Could not save data (\(filename)). Changes may be lost."
             lastSaveError = msg
-            print("[DataStore] save \(filename) failed: \(error)")
+            Self.logger.error("save \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
         }
     }
 
@@ -211,7 +213,7 @@ final class DataStore: ObservableObject {
             let rescue = url.deletingPathExtension()
                 .appendingPathExtension("corrupt.\(stamp).json")
             try? FileManager.default.moveItem(at: url, to: rescue)
-            print("[DataStore] load \(filename) failed: \(error); preserved as \(rescue.lastPathComponent)")
+            Self.logger.error("load \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public); preserved as \(rescue.lastPathComponent, privacy: .public)")
             lastSaveError = "Saved \(filename) couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
             return []
         }
