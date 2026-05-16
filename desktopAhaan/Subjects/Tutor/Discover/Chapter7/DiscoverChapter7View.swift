@@ -1,6 +1,5 @@
 import SwiftUI
 
-@available(macOS 12, *)
 struct DiscoverChapter7View: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -61,6 +60,16 @@ struct DiscoverChapter7View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
+        if #available(macOS 12, *) {
+            modernSceneContent
+        } else {
+            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
+        }
+    }
+
+    @available(macOS 12, *)
+    @ViewBuilder
+    private var modernSceneContent: some View {
         switch currentScene {
         case 0: Scene1_WeatherVsClimate(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildAWeatherStation(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
@@ -82,7 +91,7 @@ struct DiscoverChapter7View: View {
             Spacer()
             Text(sceneTitle(at: currentScene)).font(.headline).foregroundColor(Color.compatIndigo)
             Spacer()
-            Button { goNext() } label: { Label("Next", systemImage: "chevron.right").labelStyle(.titleAndIcon) }
+            Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
                 .accentColor(Color.compatIndigo).disabled(currentScene == totalScenes - 1)
         }
         .padding(.horizontal, 24).padding(.vertical, 12)

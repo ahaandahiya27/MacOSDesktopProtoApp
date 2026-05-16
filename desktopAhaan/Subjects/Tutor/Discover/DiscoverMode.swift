@@ -29,16 +29,6 @@ enum DiscoverMode {
 
     @ViewBuilder
     static func view(for pack: SubjectPack, chapter: Chapter) -> some View {
-        if #available(macOS 12, *) {
-            discoverContent(for: pack, chapter: chapter)
-        } else {
-            RequiresMacOS12View(chapterTitle: chapter.title)
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private static func discoverContent(for pack: SubjectPack, chapter: Chapter) -> some View {
         if pack.id == "science_class7" {
             switch chapter.id {
             case "ch01":
@@ -66,29 +56,37 @@ enum DiscoverMode {
     }
 }
 
-private struct RequiresMacOS12View: View {
-    let chapterTitle: String
+/// Per-scene fallback shown on Big Sur (macOS 11) when a specific Discover
+/// scene relies on APIs that aren't available before macOS 12 (Canvas,
+/// TimelineView). The chapter shell, navigation, and progress dots still
+/// work — only the interactive scene body is replaced.
+struct SceneRequiresMacOS12View: View {
+    let sceneTitle: String
 
     var body: some View {
-        ZStack {
-            Color(NSColor.windowBackgroundColor)
-            VStack(spacing: 16) {
-                Image(systemName: "sparkles")
-                    .font(.system(size: 48))
-                    .foregroundColor(.secondary)
-                Text("Discover Mode")
-                    .font(.title2.bold())
-                Text("Interactive Discover scenes for \"\(chapterTitle)\" require macOS 12 or later.")
-                    .font(.body)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-                Text("All chapter content is still available in the regular view.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            .padding(40)
+        VStack(spacing: 12) {
+            Image(systemName: "sparkles")
+                .font(.system(size: 36))
+                .foregroundColor(.secondary)
+            Text(sceneTitle)
+                .font(.title3.bold())
+            Text("This interactive scene needs macOS 12 or later to render.")
+                .font(.callout)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+            Text("You can still browse the rest of this chapter from the regular chapter view.")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.top, 4)
         }
-        .navigationTitle("Discover Mode")
+        .padding(28)
+        .frame(maxWidth: 460)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.gray.opacity(0.08))
+        )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
