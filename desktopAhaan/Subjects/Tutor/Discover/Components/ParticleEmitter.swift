@@ -15,7 +15,7 @@ import SwiftUI
 /// macOS.
 struct ParticleEmitter: View {
     var isActive: Bool
-    var particleCount: Int = 80
+    var particleCount: Int = HardwareTier.particleBudget
     var duration: Double = 2.5
     var palette: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .pink]
     /// Reduce-motion respects this and short-circuits the emitter entirely.
@@ -64,7 +64,7 @@ struct ParticleEmitter: View {
             )
         }
         animationTimer?.invalidate()
-        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.animationInterval, repeats: true) { _ in
             tick = Date().timeIntervalSince(startTime)
         }
     }
