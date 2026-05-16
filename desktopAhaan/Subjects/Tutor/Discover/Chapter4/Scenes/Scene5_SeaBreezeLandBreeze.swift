@@ -2,13 +2,16 @@ import SwiftUI
 
 /// Scene 5 — Sea Breeze, Land Breeze.
 /// Day/Night toggle shows convection currents reversing between sea and land.
-@available(macOS 12, *)
+/// Big Sur (macOS 11) compatible — breeze arrow animation now uses
+/// Timer.publish + ForEach of BreezeArrow shapes instead of Canvas.
 struct Scene5_SeaBreezeLandBreeze: View {
     let pack: SubjectPack
     let chapter: Chapter
     let onComplete: () -> Void
 
     @State private var isDay = true
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
@@ -58,7 +61,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
                             // Land
                             Rectangle()
                                 .fill(LinearGradient(colors: [
-                                    isDay ? .brown.opacity(0.7) : .brown.opacity(0.4),
+                                    isDay ? Color.compatBrown.opacity(0.7) : Color.compatBrown.opacity(0.4),
                                     .green.opacity(0.5)
                                 ], startPoint: .top, endPoint: .bottom))
                         }
@@ -148,35 +151,82 @@ struct Scene5_SeaBreezeLandBreeze: View {
     }
 
     private var breezeArrows: some View {
-        TimelineView(.animation(minimumInterval: 1.0 / 15)) { ctx in
-            let t = ctx.date.timeIntervalSince1970
-            Canvas { context, size in
-                let cx = size.width * 0.5
-                let y = size.height * 0.45
-                for i in 0..<4 {
-                    let phase = (t * 1.2 + Double(i) * 0.5).truncatingRemainder(dividingBy: 2.5) / 2.5
-                    let direction: CGFloat = isDay ? -1 : 1
-                    let x = cx + direction * (CGFloat(phase) * size.width * 0.4 - size.width * 0.05)
-                    let opacity = sin(phase * .pi)
-                    let arrowSize: CGFloat = 16
-                    // Draw a small triangle arrow
-                    var path = Path()
-                    if isDay {
-                        path.move(to: CGPoint(x: x - arrowSize, y: y))
-                        path.addLine(to: CGPoint(x: x, y: y - arrowSize * 0.5))
-                        path.addLine(to: CGPoint(x: x, y: y + arrowSize * 0.5))
-                    } else {
-                        path.move(to: CGPoint(x: x + arrowSize, y: y))
-                        path.addLine(to: CGPoint(x: x, y: y - arrowSize * 0.5))
-                        path.addLine(to: CGPoint(x: x, y: y + arrowSize * 0.5))
-                    }
-                    path.closeSubpath()
-                    context.opacity = opacity
-                    context.fill(path, with: .color(.white.opacity(0.8)))
+        GeometryReader { geo in
+            ZStack(alignment: .topLeading) {
+                ForEach(0..<4, id: \.self) { i in
+                    BreezeArrow(index: i, t: tick, size: geo.size, isDay: isDay)
                 }
             }
         }
         .allowsHitTesting(false)
         .accessibilityLabel(isDay ? "Animated sea breeze arrows" : "Animated land breeze arrows")
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
+    }
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 15, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
+    }
+}
+
+private struct BreezeArrow: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    let isDay: Bool
+
+    var body: some View {
+        let p = compute()
+        return BreezeArrowShape(centerX: p.x, centerY: p.y,
+                                size: 16, pointsLeft: isDay)
+            .fill(Color.white.opacity(0.8))
+            .opacity(p.opacity)
+    }
+
+    private struct DotPos { let x: Double; let y: Double; let opacity: Double }
+    private func compute() -> DotPos {
+        let phase: Double = ((Double(t) * 1.2 + Double(index) * 0.5).truncatingRemainder(dividingBy: 2.5)) / 2.5
+        let direction: Double = isDay ? -1.0 : 1.0
+        let cx: Double = Double(size.width) * 0.5
+        let y: Double = Double(size.height) * 0.45
+        let x: Double = cx + direction * (phase * Double(size.width) * 0.4 - Double(size.width) * 0.05)
+        let opacity: Double = sin(Double(phase) * Double.pi)
+        return DotPos(x: x, y: y, opacity: opacity)
+    }
+}
+
+/// A small triangle that points left (sea breeze, day) or right (land
+/// breeze, night). Drawing the triangle as a Shape — rather than placing
+/// a positioned Image — keeps the geometry identical to the old Canvas
+/// path-based version.
+private struct BreezeArrowShape: Shape {
+    let centerX: Double
+    let centerY: Double
+    let size: CGFloat
+    let pointsLeft: Bool
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let cx = CGFloat(centerX)
+        let cy = CGFloat(centerY)
+        if pointsLeft {
+            p.move(to: CGPoint(x: cx - size, y: cy))
+            p.addLine(to: CGPoint(x: cx, y: cy - size * 0.5))
+            p.addLine(to: CGPoint(x: cx, y: cy + size * 0.5))
+        } else {
+            p.move(to: CGPoint(x: cx + size, y: cy))
+            p.addLine(to: CGPoint(x: cx, y: cy - size * 0.5))
+            p.addLine(to: CGPoint(x: cx, y: cy + size * 0.5))
+        }
+        p.closeSubpath()
+        return p
     }
 }
