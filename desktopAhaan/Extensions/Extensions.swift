@@ -115,6 +115,16 @@ enum DesignTokens {
     static let spacingMedium: CGFloat = 12
     static let spacingRelaxed: CGFloat = 16
     static let spacingWide: CGFloat = 24
+
+    /// Cap for text-heavy reading panels (concept explanations, question
+    /// prompts). Sized so a 27" 5K iMac canvas (logical ~2560pt wide minus
+    /// ~280pt sidebar) is mostly filled without violating a comfortable
+    /// 80-character line length on body text.
+    static let contentMaxWidth: CGFloat = 1100
+
+    /// Cap for chapter/topic lists where the cards have richer horizontal
+    /// content (icons + meta + chevrons) and can use more canvas.
+    static let contentMaxWidthWide: CGFloat = 1280
 }
 
 // MARK: - View modifier for Devanagari text

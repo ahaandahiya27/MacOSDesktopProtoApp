@@ -33,7 +33,7 @@ struct ConceptDetailView: View {
                 relatedSection
             }
             .padding(20)
-            .frame(maxWidth: 820, alignment: .leading)
+            .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(concept.title)
