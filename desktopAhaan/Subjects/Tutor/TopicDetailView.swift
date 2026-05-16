@@ -53,6 +53,8 @@ struct TopicDetailView: View {
             }
         }
         .listStyle(.inset)
+        .frame(maxWidth: DesignTokens.contentMaxWidthWide)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(topic.title)
     }
