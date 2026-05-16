@@ -5,7 +5,11 @@ import SwiftUI
 /// Three glowing icons (🐑 sheep, 🐛 silkworm, 🌿 cotton) drift in from the edges.
 /// Tapping each makes a thread emerge and weave into a small piece of fabric on the right.
 /// Caption explains these sources give us most fabrics.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the drifting-icon TimelineView is
+/// replaced with a Timer.publish + a small DriftingIcon view per icon;
+/// the fabric Canvas becomes a Shape (FabricWeaveShape) drawn behind the
+/// fabric panel.
 struct Scene1_FluffToFibre: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -15,6 +19,8 @@ struct Scene1_FluffToFibre: View {
     @State private var showSilkworm = false
     @State private var showCotton = false
     @State private var threadsWoven = 0
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var kidFriendlyExplanation: String {
@@ -26,20 +32,15 @@ struct Scene1_FluffToFibre: View {
         GeometryReader { geo in
             ZStack {
                 // Drifting icons
-                if !reduceMotion {
-                    TimelineView(.animation(minimumInterval: 1.0 / 30)) { ctx in
-                        let t = ctx.date.timeIntervalSince1970
-                        ZStack {
-                            driftingIcon("🐑", x: 0.15, y: 0.3, phase: t, in: geo.size)
-                            driftingIcon("🐛", x: 0.15, y: 0.5, phase: t + 1.0, in: geo.size)
-                            driftingIcon("🌿", x: 0.15, y: 0.7, phase: t + 2.0, in: geo.size)
-                        }
-                    }
-                } else {
-                    driftingIcon("🐑", x: 0.15, y: 0.3, phase: 0, in: geo.size)
-                    driftingIcon("🐛", x: 0.15, y: 0.5, phase: 0, in: geo.size)
-                    driftingIcon("🌿", x: 0.15, y: 0.7, phase: 0, in: geo.size)
-                }
+                DriftingIcon(emoji: "🐑", baseX: 0.15, baseY: 0.3,
+                             phaseOffset: 0.0, t: tick, size: geo.size,
+                             onTap: { tapIcon("🐑") })
+                DriftingIcon(emoji: "🐛", baseX: 0.15, baseY: 0.5,
+                             phaseOffset: 1.0, t: tick, size: geo.size,
+                             onTap: { tapIcon("🐛") })
+                DriftingIcon(emoji: "🌿", baseX: 0.15, baseY: 0.7,
+                             phaseOffset: 2.0, t: tick, size: geo.size,
+                             onTap: { tapIcon("🌿") })
 
                 // Fabric weaving on the right
                 fabricPanel(geoSize: geo.size)
@@ -69,19 +70,20 @@ struct Scene1_FluffToFibre: View {
                 .padding(.horizontal, 24)
             }
         }
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
     }
 
-    @ViewBuilder
-    private func driftingIcon(_ emoji: String, x: CGFloat, y: CGFloat, phase: TimeInterval, in size: CGSize) -> some View {
-        let bobPhase = sin(phase * 1.5) * 0.1
-        Text(emoji)
-            .font(.system(size: 64))
-            .position(x: size.width * x, y: size.height * (y + bobPhase))
-            .onTapGesture {
-                tapIcon(emoji)
-            }
-            .accessibilityAddTraits(.isButton)
-            .accessibilityLabel("Tap \(emoji) to weave a fibre")
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
+        }
+    }
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 
     @ViewBuilder
@@ -91,40 +93,23 @@ struct Scene1_FluffToFibre: View {
                 .font(.caption.weight(.semibold))
                 .foregroundColor(.secondary)
 
-            Canvas { context, _ in
-                let fabricRect = CGRect(x: 20, y: 40, width: 140, height: 100)
-                context.fill(
-                    Path(roundedRect: fabricRect, cornerRadius: 8),
-                    with: .color(.gray.opacity(0.1))
-                )
-                context.stroke(
-                    Path(roundedRect: fabricRect, cornerRadius: 8),
-                    with: .color(.gray.opacity(0.3)),
-                    lineWidth: 1.5
-                )
-
-                // Draw woven threads
-                let threadSpacing = 10.0
-                for i in stride(from: 0, through: threadsWoven, by: 1) {
-                    let x = fabricRect.minX + 20 + CGFloat(i) * threadSpacing
-                    if x <= fabricRect.maxX - 20 {
-                        context.stroke(
-                            Path { p in
-                                p.move(to: CGPoint(x: x, y: fabricRect.minY + 15))
-                                p.addLine(to: CGPoint(x: x, y: fabricRect.maxY - 15))
-                            },
-                            with: .color(Color.compatIndigo.opacity(0.7)),
-                            lineWidth: 2
-                        )
-                    }
-                }
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.gray.opacity(0.1))
+                    .frame(width: 140, height: 100)
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
+                    .frame(width: 140, height: 100)
+                FabricWeaveShape(threads: threadsWoven)
+                    .stroke(Color.compatIndigo.opacity(0.7), lineWidth: 2)
+                    .frame(width: 140, height: 100)
             }
             .frame(width: 180, height: 150)
         }
         .padding(16)
-        .background(.white)
+        .background(Color.white)
         .cornerRadius(12)
-        .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 4)
+        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
         .position(x: geoSize.width * 0.8, y: geoSize.height * 0.35)
     }
 
@@ -151,5 +136,55 @@ struct Scene1_FluffToFibre: View {
                 }
             }
         }
+    }
+}
+
+/// One emoji icon that gently bobs up and down using a sine wave fed by
+/// the parent's tick. Extracted so the position math doesn't appear inline
+/// inside a @ViewBuilder.
+private struct DriftingIcon: View {
+    let emoji: String
+    let baseX: CGFloat
+    let baseY: CGFloat
+    let phaseOffset: TimeInterval
+    let t: TimeInterval
+    let size: CGSize
+    let onTap: () -> Void
+
+    var body: some View {
+        let bob: Double = sin(Double(t + phaseOffset) * 1.5) * 0.1
+        let y: CGFloat = size.height * (baseY + CGFloat(bob))
+        Text(emoji)
+            .font(.system(size: 64))
+            .position(x: size.width * baseX, y: y)
+            .onTapGesture { onTap() }
+            .accessibilityAddTraits(.isButton)
+            .accessibilityLabel("Tap \(emoji) to weave a fibre")
+    }
+}
+
+/// The fabric's vertical thread pattern. `threads` controls how many of
+/// the available 12 thread positions are drawn. Used to be a Canvas loop
+/// inside the fabric panel; rebuilt as a Shape so it renders on macOS 11.
+private struct FabricWeaveShape: Shape {
+    let threads: Int
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        // Position threads inside an inner rectangle, matching the old
+        // Canvas geometry: 20-pt inset horizontally, 15-pt inset vertically,
+        // 10-pt thread spacing.
+        let innerX0 = rect.minX + 20
+        let innerY0 = rect.minY + 15
+        let innerY1 = rect.maxY - 15
+        let maxX = rect.maxX - 20
+        let spacing: CGFloat = 10
+        for i in 0...threads {
+            let x = innerX0 + CGFloat(i) * spacing
+            if x > maxX { break }
+            p.move(to: CGPoint(x: x, y: innerY0))
+            p.addLine(to: CGPoint(x: x, y: innerY1))
+        }
+        return p
     }
 }
