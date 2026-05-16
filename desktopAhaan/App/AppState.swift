@@ -29,8 +29,9 @@ final class AppState: ObservableObject {
 
     init() {
         monitor.pathUpdateHandler = { [weak self] path in
-            DispatchQueue.main.async {
-                self?.isOnline = path.status == .satisfied
+            let satisfied = path.status == .satisfied
+            DispatchQueue.main.async { [weak self] in
+                self?.isOnline = satisfied
             }
         }
         monitor.start(queue: queue)

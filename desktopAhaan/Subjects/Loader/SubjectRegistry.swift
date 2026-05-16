@@ -106,7 +106,7 @@ final class SubjectRegistry: ObservableObject {
     /// True if the URL's filename should be treated as a SubjectPack file.
     /// Excludes the dictionary file which lives elsewhere but has a similar
     /// naming pattern.
-    private static func isPackFilename(_ url: URL) -> Bool {
+    nonisolated private static func isPackFilename(_ url: URL) -> Bool {
         let name = url.lastPathComponent.lowercased()
         guard name.hasSuffix(".json") else { return false }
         guard name.contains("_class") else { return false }
@@ -115,7 +115,7 @@ final class SubjectRegistry: ObservableObject {
         return true
     }
 
-    private static func bundledPackURLs() -> [URL] {
+    nonisolated private static func bundledPackURLs() -> [URL] {
         // Strategy 1: subdirectory-aware lookup. Works only if the
         // synchronized group preserved the nested folder structure.
         if let urls = Bundle.main.urls(forResourcesWithExtension: "json",
@@ -142,9 +142,9 @@ final class SubjectRegistry: ObservableObject {
 
     /// Compile-time absolute path of THIS Swift file. Used to locate the
     /// source-tree Subjects/Packs/ directory during development builds.
-    private static let thisFilePath: String = #filePath
+    nonisolated private static let thisFilePath: String = #filePath
 
-    private static func sourceTreePackURLs() -> [URL] {
+    nonisolated private static func sourceTreePackURLs() -> [URL] {
         let fm = FileManager.default
 
         // SubjectRegistry.swift lives at:

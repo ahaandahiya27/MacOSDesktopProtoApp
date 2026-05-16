@@ -104,39 +104,39 @@ struct Scene4_IntestineVillus: View {
 
     private func startGlucoseAnimation() {
         if reduceMotion { return }
+        animateGlucose()
+    }
 
-        func animateGlucose() {
-            guard sceneActive else { return }
-            var particles: [GlucoseParticle] = []
-            for i in 0..<4 {
-                particles.append(GlucoseParticle(
-                    id: i,
-                    x: CGFloat.random(in: 80...120),
-                    y: 100 + CGFloat(i) * 20
-                ))
-            }
-            glucoseParticles = particles
+    private func animateGlucose() {
+        guard sceneActive else { return }
+        var particles: [GlucoseParticle] = []
+        for i in 0..<4 {
+            particles.append(GlucoseParticle(
+                id: i,
+                x: CGFloat.random(in: 80...120),
+                y: 100 + CGFloat(i) * 20
+            ))
+        }
+        glucoseParticles = particles
+        let count = particles.count
 
-            Task { @MainActor in
-                for i in 0..<particles.count {
-                    try? await Task.sleep(nanoseconds: 300_000_000)
-                    guard sceneActive else { return }
-                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
-                        if i < glucoseParticles.count {
-                            glucoseParticles[i].x = 280
-                            glucoseParticles[i].y = 180
-                        }
+        Task { @MainActor in
+            for i in 0..<count {
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                guard sceneActive else { return }
+                withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
+                    if i < glucoseParticles.count {
+                        glucoseParticles[i].x = 280
+                        glucoseParticles[i].y = 180
                     }
                 }
             }
-
-            Task { @MainActor in
-                try? await Task.sleep(nanoseconds: 3_000_000_000)
-                animateGlucose()
-            }
         }
 
-        animateGlucose()
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 3_000_000_000)
+            animateGlucose()
+        }
     }
 }
 

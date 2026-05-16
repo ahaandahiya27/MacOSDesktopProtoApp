@@ -12,7 +12,7 @@ final class TextToSpeechManager: ObservableObject {
 
     init() {
         delegate = TTSDelegate { [weak self] in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 self?.isSpeaking = false
                 #if os(iOS) && !targetEnvironment(simulator)
                 // Deactivate audio session when done (real device only)

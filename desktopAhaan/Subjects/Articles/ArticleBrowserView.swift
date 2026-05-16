@@ -227,27 +227,30 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
         let backObserver = webView.observe(
             \.canGoBack,
             options: [.new],
-            changeHandler: { [weak self] _, _ in
-                Task { @MainActor [weak self] in
-                    self?.canGoBack = self?.webView.canGoBack ?? false
+            changeHandler: { [weak self] _, change in
+                let newValue = change.newValue ?? false
+                DispatchQueue.main.async { [weak self] in
+                    self?.canGoBack = newValue
                 }
             }
         )
         let forwardObserver = webView.observe(
             \.canGoForward,
             options: [.new],
-            changeHandler: { [weak self] _, _ in
-                Task { @MainActor [weak self] in
-                    self?.canGoForward = self?.webView.canGoForward ?? false
+            changeHandler: { [weak self] _, change in
+                let newValue = change.newValue ?? false
+                DispatchQueue.main.async { [weak self] in
+                    self?.canGoForward = newValue
                 }
             }
         )
         let titleObserver = webView.observe(
             \.title,
             options: [.new],
-            changeHandler: { [weak self] _, _ in
-                Task { @MainActor [weak self] in
-                    self?.pageTitle = self?.webView.title ?? ""
+            changeHandler: { [weak self] _, change in
+                let newValue = (change.newValue ?? nil) ?? ""
+                DispatchQueue.main.async { [weak self] in
+                    self?.pageTitle = newValue
                 }
             }
         )

@@ -41,7 +41,7 @@ final class SpeechRecognitionManager: ObservableObject {
     /// Request permissions for speech recognition and microphone — call once early
     func requestPermissions() {
         SFSpeechRecognizer.requestAuthorization { [weak self] status in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 self?.authorizationStatus = status
                 if status == .authorized {
                     #if os(iOS) && !targetEnvironment(simulator)
@@ -51,7 +51,7 @@ final class SpeechRecognitionManager: ObservableObject {
                         self?.permissionsReady = micGranted
                     } else {
                         AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                            Task { @MainActor in
+                            Task { @MainActor [weak self] in
                                 self?.permissionsReady = granted
                             }
                         }
@@ -180,7 +180,7 @@ final class SpeechRecognitionManager: ObservableObject {
         hasTapInstalled = true
 
         recognitionTask = finalRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 guard let self = self else { return }
 
                 if let result = result {
@@ -210,8 +210,10 @@ final class SpeechRecognitionManager: ObservableObject {
             // Auto-stop after 30 seconds to prevent indefinite recording
             Task { [weak self] in
                 try? await Task.sleep(nanoseconds: 30_000_000_000)
-                if let self = self, self.isListening {
-                    self.stopListening()
+                await MainActor.run { [weak self] in
+                    if let self = self, self.isListening {
+                        self.stopListening()
+                    }
                 }
             }
         } catch {
@@ -261,7 +263,7 @@ final class SpeechRecognitionManager: ObservableObject {
         hasTapInstalled = true
 
         recognitionTask = finalRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
-            Task { @MainActor in
+            Task { @MainActor [weak self] in
                 guard let self = self else { return }
                 if let result = result {
                     self.recognizedText = result.bestTranscription.formattedString
@@ -279,8 +281,10 @@ final class SpeechRecognitionManager: ObservableObject {
 
             Task { [weak self] in
                 try? await Task.sleep(nanoseconds: 30_000_000_000)
-                if let self = self, self.isListening {
-                    self.stopListening()
+                await MainActor.run { [weak self] in
+                    if let self = self, self.isListening {
+                        self.stopListening()
+                    }
                 }
             }
         } catch {

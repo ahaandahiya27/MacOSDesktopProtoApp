@@ -242,7 +242,7 @@ struct FlashcardView: View {
                     .foregroundColor(.secondary)
 
                 HStack(spacing: 20) {
-                    Button(action: vm.previousFlashcard) {
+                    Button(action: { vm.previousFlashcard() }) {
                         Image(systemName: "chevron.left.circle.fill")
                             .font(.title)
                     }
@@ -253,7 +253,7 @@ struct FlashcardView: View {
                         .font(.subheadline.weight(.medium))
                         .accessibilityLabel("Card \(safeIndex + 1) of \(vm.currentItems.count)")
 
-                    Button(action: vm.nextFlashcard) {
+                    Button(action: { vm.nextFlashcard() }) {
                         Image(systemName: "chevron.right.circle.fill")
                             .font(.title)
                     }

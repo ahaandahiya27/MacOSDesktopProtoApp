@@ -132,40 +132,40 @@ struct Scene3_TheStomachBath: View {
 
     private func startEnzymeAnimation() {
         if reduceMotion { return }
+        generateEnzymeParticles()
+    }
 
-        func generateParticles() {
-            guard sceneActive else { return }
-            var particles: [EnzymeParticle] = []
-            for _ in 0..<8 {
-                particles.append(EnzymeParticle(
-                    id: Int.random(in: 0..<10000),
-                    x: CGFloat.random(in: 100...300),
-                    y: CGFloat.random(in: 80...180),
-                    isAcid: Bool.random()
-                ))
-            }
-            enzymeParticles = particles
+    private func generateEnzymeParticles() {
+        guard sceneActive else { return }
+        var particles: [EnzymeParticle] = []
+        for _ in 0..<8 {
+            particles.append(EnzymeParticle(
+                id: Int.random(in: 0..<10000),
+                x: CGFloat.random(in: 100...300),
+                y: CGFloat.random(in: 80...180),
+                isAcid: Bool.random()
+            ))
+        }
+        enzymeParticles = particles
+        let count = particles.count
 
-            Task { @MainActor in
-                for i in 0..<particles.count {
-                    try? await Task.sleep(nanoseconds: 100_000_000)
-                    guard sceneActive else { return }
-                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
-                        if i < enzymeParticles.count {
-                            enzymeParticles[i].x += CGFloat.random(in: -60...60)
-                            enzymeParticles[i].y += CGFloat.random(in: -40...40)
-                        }
+        Task { @MainActor in
+            for i in 0..<count {
+                try? await Task.sleep(nanoseconds: 100_000_000)
+                guard sceneActive else { return }
+                withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
+                    if i < enzymeParticles.count {
+                        enzymeParticles[i].x += CGFloat.random(in: -60...60)
+                        enzymeParticles[i].y += CGFloat.random(in: -40...40)
                     }
                 }
             }
-
-            Task { @MainActor in
-                try? await Task.sleep(nanoseconds: 2_000_000_000)
-                generateParticles()
-            }
         }
 
-        generateParticles()
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            generateEnzymeParticles()
+        }
     }
 }
 
