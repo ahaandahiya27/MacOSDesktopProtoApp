@@ -115,3 +115,142 @@ private struct ComingSoonView: View {
         .navigationTitle("Discover Mode")
     }
 }
+
+// MARK: - DiscoverShell — shared chrome for every chapter's Discover view
+
+/// The header (progress dots), footer (prev/next), background, divider, scene
+/// transitions, and arrow-key navigation that every DiscoverChapterNView used
+/// to inline ~80 lines of boilerplate to produce. Now each chapter dispatcher
+/// only owns the scene-switch and the chapter-specific markComplete logic.
+///
+/// Usage:
+/// ```
+/// DiscoverShell(
+///     pack: pack, chapter: chapter,
+///     navigationTitle: "Discover · Ch. 1 — Nutrition in Plants",
+///     sceneTitles: ["Plant Kitchen", "Photosynthesis Lab", ...],
+///     currentScene: $currentScene
+/// ) { i in
+///     switch i {
+///     case 0: Scene1_PlantKitchen(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+///     ...
+///     }
+/// }
+/// ```
+struct DiscoverShell<SceneBody: View>: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let navigationTitle: String
+    let sceneTitles: [String]
+    @Binding var currentScene: Int
+    @ViewBuilder let scene: (Int) -> SceneBody
+
+    @EnvironmentObject private var dataStore: DataStore
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    var totalScenes: Int { sceneTitles.count }
+
+    private var completedSceneIds: Set<String> {
+        Set(dataStore.discoverRows(for: chapter.id).map { $0.sceneId })
+    }
+
+    var body: some View {
+        ZStack {
+            DiscoverBackground()
+            VStack(spacing: 0) {
+                header
+                Divider().opacity(0.3)
+                scene(currentScene)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
+                    .id(currentScene)
+                Divider().opacity(0.3)
+                footer
+            }
+        }
+        .navigationTitle(navigationTitle)
+        .onArrowKeys(left: { goPrev() }, right: { goNext() })
+    }
+
+    private var header: some View {
+        HStack(spacing: 8) {
+            ForEach(0..<totalScenes, id: \.self) { i in
+                let id = "scene\(i + 1)"
+                let done = completedSceneIds.contains(id)
+                Button {
+                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
+                        currentScene = i
+                    }
+                } label: {
+                    Circle()
+                        .fill(done ? Color.green : Color.gray.opacity(0.25))
+                        .overlay(
+                            Circle()
+                                .strokeBorder(currentScene == i ? Color.compatIndigo : .clear, lineWidth: 2.5)
+                        )
+                        .frame(width: 22, height: 22)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
+            }
+            Spacer()
+            Text("\(completedSceneIds.count) / \(totalScenes) done")
+                .font(.caption.weight(.medium))
+                .foregroundColor(.secondary)
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 12)
+    }
+
+    private var footer: some View {
+        HStack {
+            Button { goPrev() } label: { Label("Previous", systemImage: "chevron.left") }
+                .disabled(currentScene == 0)
+
+            Spacer()
+
+            Text(sceneTitles[currentScene])
+                .font(.headline)
+                .foregroundColor(Color.compatIndigo)
+
+            Spacer()
+
+            Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
+                .accentColor(Color.compatIndigo)
+                .disabled(currentScene == totalScenes - 1)
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 12)
+    }
+
+    private func goNext() {
+        guard currentScene < totalScenes - 1 else { return }
+        withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
+            currentScene += 1
+        }
+    }
+
+    private func goPrev() {
+        guard currentScene > 0 else { return }
+        withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
+            currentScene -= 1
+        }
+    }
+}
+
+/// Helper used inside `markComplete` to advance the scene cursor with the
+/// same animation curve as the prev/next buttons. Each chapter dispatcher
+/// owns the data-store write but shares this advance. Takes a Binding so it
+/// works correctly with the @AppStorage-backed scene cursor.
+@MainActor
+func advanceDiscoverScene(_ currentScene: Binding<Int>,
+                          total: Int,
+                          reduceMotion: Bool) {
+    guard currentScene.wrappedValue < total - 1 else { return }
+    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
+        currentScene.wrappedValue += 1
+    }
+}
