@@ -1,5 +1,10 @@
 # Backport Log — Big Sur Compatibility
 
+> **HISTORICAL.** This file recorded the baseline state of the codebase at the
+> start of the Big Sur backport effort (2026-05-10). The backport itself was
+> tracked in git commits rather than expanded here, and the post-merge state
+> is documented in `POST_MERGE_AUDIT.md`.
+
 ## Baseline State (2026-05-10)
 
 | Property | Value |

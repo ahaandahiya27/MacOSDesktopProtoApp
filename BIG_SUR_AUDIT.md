@@ -1,5 +1,11 @@
 # Big Sur Backport Audit
 
+> **HISTORICAL — superseded.** This is the original 2026-05-10 audit of what
+> needed to change to make the Sonoma-targeted codebase compile on Xcode 13.2.1
+> / macOS Big Sur 11.7.11. Every blocker listed below has since been resolved.
+> For the current state of the codebase see **`POST_MERGE_AUDIT.md`** in the
+> repo root, which lists the remaining (now mostly polish) items.
+
 ## Summary
 
 | Metric | Value |

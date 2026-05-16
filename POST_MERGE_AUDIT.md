@@ -4,6 +4,11 @@ Snapshot taken **after** the 12 Big Sur / 5K iMac commits merged to `main`
 (`1302dbc`). Captured before iMac evaluation so you have a list of issues to
 either watch for during testing, or to pick up next.
 
+> **Status update (2026-05-16, post-iMac evaluation):** All HIGH items and
+> the majority of MED/LOW items below have been resolved in commits
+> 39bc95d → 521aac9 → 4698851. Most items now show as ✅ done; a handful
+> remain as deferred polish. See the per-section markers.
+
 **Target machine**: iMac (Retina 5K, 27-inch, Late 2014) · macOS Big Sur 11.7.11 · AMD Radeon R9 M290X 2 GB · ~2560×1440 logical points @2x.
 
 **Legend**
