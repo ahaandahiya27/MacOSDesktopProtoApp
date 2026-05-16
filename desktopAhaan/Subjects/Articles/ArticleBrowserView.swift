@@ -198,9 +198,11 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
     private var currentFolder: String?
     private var observers: [NSKeyValueObservation] = []
 
-    override init() {
+    nonisolated override init() {
         super.init()
-        setupObservers()
+        Task { @MainActor [weak self] in
+            self?.setupObservers()
+        }
     }
 
     func setupWebView() {

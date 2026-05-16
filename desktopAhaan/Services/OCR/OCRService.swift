@@ -69,10 +69,17 @@ final class OCRService: ObservableObject {
             // Configure for multiple languages including Devanagari
             request.recognitionLevel = .accurate
             request.usesLanguageCorrection = true
+            // automaticallyDetectsLanguage was added in macOS 13. The symbol
+            // is not in the macOS 12 SDK that ships with Big Sur's Xcode 13.2,
+            // so we can't reference it directly even behind an #available
+            // guard. KVC bypasses compile-time symbol resolution; the call is
+            // gated by #available so it only runs on macOS 13+.
             if #available(macOS 13.0, *) {
-                request.automaticallyDetectsLanguage = true
+                request.setValue(true, forKey: "automaticallyDetectsLanguage")
             }
-            // Support English, Hindi, Sanskrit (Devanagari script)
+            // Support English, Hindi, Sanskrit (Devanagari script).
+            // On Big Sur this is the authoritative language list; on macOS 13+
+            // it's a fallback if auto-detection can't decide.
             request.recognitionLanguages = ["en", "hi", "sa"]
 
             let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
