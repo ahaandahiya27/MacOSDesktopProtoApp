@@ -5,7 +5,12 @@ import SwiftUI
 /// A stylized cross-section drawn with `Path`. Tappable hotspots reveal a
 /// callout explaining each part. Stomata pulse open/closed; water rises in
 /// xylem, sugar flows down in phloem.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — the `TimelineView(.animation)` driving
+/// the xylem / phloem / stomata animation is replaced with a 30 fps
+/// `Timer.publish` writing into a `@State tick: TimeInterval`. The per-
+/// particle position math is also lifted into small subviews with
+/// explicit `Double` types to keep the Swift 5.5 type-checker happy.
 struct Scene3_InsideALeaf: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -76,7 +81,7 @@ struct Scene3_InsideALeaf: View {
                     Label(zoomed ? "Zoom out" : "🔍 Zoom in",
                           systemImage: zoomed ? "minus.magnifyingglass" : "plus.magnifyingglass")
                 }
-                
+
             }
 
             // Callout for the selected part
@@ -122,7 +127,7 @@ struct Scene3_InsideALeaf: View {
             Circle()
                 .fill(Color.compatIndigo.opacity(selectedPart == part ? 0.55 : 0.28))
                 .overlay(
-                    Circle().strokeBorder(.white, lineWidth: 1.5)
+                    Circle().strokeBorder(Color.white, lineWidth: 1.5)
                 )
                 .frame(width: 22, height: 22)
                 .shadow(color: Color.compatIndigo.opacity(0.5), radius: 4)
@@ -152,97 +157,156 @@ struct Scene3_InsideALeaf: View {
 
 // MARK: - The drawn cross-section
 
-@available(macOS 12, *)
+/// Cross-section with an internal 30 fps timer that drives the xylem,
+/// phloem, and stomata animations. Was a TimelineView (macOS 12+).
 private struct LeafCrossSection: View {
     let reduceMotion: Bool
 
+    @State private var tick: TimeInterval = 0
+    @State private var animationTimer: Timer? = nil
+
     var body: some View {
-        TimelineView(.animation(minimumInterval: 1.0 / 30, paused: reduceMotion)) { ctx in
-            let phase = (ctx.date.timeIntervalSince1970.truncatingRemainder(dividingBy: 2)) / 2
-            ZStack {
-                // Outer cuticle (waxy band)
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(LinearGradient(colors: [.green.opacity(0.4), .green.opacity(0.65)],
-                                         startPoint: .top, endPoint: .bottom))
-                    .frame(height: 18)
-                    .frame(maxWidth: .infinity)
-                    .position(x: 250, y: 22)
+        // `phase` cycles 0 → 1 every 2 seconds, exactly matching the old
+        // TimelineView's `phase = (date.timeIntervalSince1970 % 2) / 2`.
+        let phase: Double = (tick.truncatingRemainder(dividingBy: 2.0)) / 2.0
+        ZStack {
+            // Outer cuticle (waxy band)
+            RoundedRectangle(cornerRadius: 12)
+                .fill(LinearGradient(
+                    colors: [Color.green.opacity(0.4), Color.green.opacity(0.65)],
+                    startPoint: .top, endPoint: .bottom))
+                .frame(height: 18)
+                .frame(maxWidth: .infinity)
+                .position(x: 250, y: 22)
 
-                // Body of leaf (palisade + spongy mesophyll)
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(.green.opacity(0.18))
-                    .frame(width: 460, height: 230)
-                    .position(x: 250, y: 150)
+            // Body of leaf (palisade + spongy mesophyll)
+            RoundedRectangle(cornerRadius: 18)
+                .fill(Color.green.opacity(0.18))
+                .frame(width: 460, height: 230)
+                .position(x: 250, y: 150)
 
-                // Cells (drawn as ovals) with chloroplasts (small green dots)
-                ForEach(0..<6, id: \.self) { i in
-                    let x = 70 + Double(i) * 60
-                    Ellipse()
-                        .stroke(.green.opacity(0.55), lineWidth: 1.5)
-                        .frame(width: 58, height: 70)
-                        .position(x: x, y: 110)
-                    // 3 chloroplasts per cell
-                    ForEach(0..<3, id: \.self) { j in
-                        Capsule()
-                            .fill(.green.opacity(0.85))
-                            .frame(width: 12, height: 8)
-                            .position(x: x - 12 + Double(j) * 12, y: 110 + Double(j % 2) * 18 - 8)
-                    }
-                }
-
-                // Xylem channel (right side, water rising)
-                xylemColumn(phase: phase)
-                // Phloem channel (right side, sugar going down)
-                phloemColumn(phase: phase)
-
-                // Stomata (pair of guard cells at the bottom centre, opening/closing)
-                stomata(phase: phase)
+            // Cells (drawn as ovals) with chloroplasts (small green dots)
+            ForEach(0..<6, id: \.self) { i in
+                LeafCellWithChloroplasts(index: i)
             }
-            .frame(width: 500, height: 280)
+
+            // Xylem channel (right side, water rising)
+            XylemColumn(phase: phase)
+            // Phloem channel (right side, sugar going down)
+            PhloemColumn(phase: phase)
+
+            // Stomata (pair of guard cells at the bottom centre, opening/closing)
+            StomataPair(phase: phase)
+        }
+        .frame(width: 500, height: 280)
+        .onAppear(perform: startAnimation)
+        .onDisappear(perform: stopAnimation)
+    }
+
+    private func startAnimation() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        let start = Date().timeIntervalSince1970
+        animationTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 30, repeats: true) { _ in
+            tick = Date().timeIntervalSince1970 - start
         }
     }
 
-    private func xylemColumn(phase: Double) -> some View {
+    private func stopAnimation() {
+        animationTimer?.invalidate()
+        animationTimer = nil
+    }
+}
+
+// MARK: - Small subviews (so the Swift 5.5 type-checker stays happy)
+
+private struct LeafCellWithChloroplasts: View {
+    let index: Int
+    var body: some View {
+        let x: Double = 70.0 + Double(index) * 60.0
+        ZStack {
+            Ellipse()
+                .stroke(Color.green.opacity(0.55), lineWidth: 1.5)
+                .frame(width: 58, height: 70)
+                .position(x: CGFloat(x), y: 110)
+            ForEach(0..<3, id: \.self) { j in
+                let cx: Double = x - 12.0 + Double(j) * 12.0
+                let cy: Double = 110.0 + Double(j % 2) * 18.0 - 8.0
+                Capsule()
+                    .fill(Color.green.opacity(0.85))
+                    .frame(width: 12, height: 8)
+                    .position(x: CGFloat(cx), y: CGFloat(cy))
+            }
+        }
+    }
+}
+
+private struct XylemColumn: View {
+    let phase: Double
+    var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
-                .stroke(.blue.opacity(0.5), lineWidth: 1.5)
+                .stroke(Color.blue.opacity(0.5), lineWidth: 1.5)
                 .frame(width: 22, height: 200)
                 .position(x: 380, y: 140)
             ForEach(0..<3, id: \.self) { i in
-                let p = (phase + Double(i) / 3).truncatingRemainder(dividingBy: 1)
-                Image(systemName: "drop.fill")
-                    .font(.system(size: 12))
-                    .foregroundColor(.blue.opacity(0.85))
-                    .position(x: 380, y: 240 - 200 * p)
+                XylemDrop(phase: phase, index: i)
             }
         }
     }
+}
 
-    private func phloemColumn(phase: Double) -> some View {
+private struct XylemDrop: View {
+    let phase: Double
+    let index: Int
+    var body: some View {
+        let p: Double = (phase + Double(index) / 3.0).truncatingRemainder(dividingBy: 1.0)
+        let y: Double = 240.0 - 200.0 * p
+        Image(systemName: "drop.fill")
+            .font(.system(size: 12))
+            .foregroundColor(Color.blue.opacity(0.85))
+            .position(x: 380, y: CGFloat(y))
+    }
+}
+
+private struct PhloemColumn: View {
+    let phase: Double
+    var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
-                .stroke(.orange.opacity(0.5), lineWidth: 1.5)
+                .stroke(Color.orange.opacity(0.5), lineWidth: 1.5)
                 .frame(width: 22, height: 200)
                 .position(x: 415, y: 140)
             ForEach(0..<3, id: \.self) { i in
-                let p = (phase + Double(i) / 3).truncatingRemainder(dividingBy: 1)
-                Circle()
-                    .fill(.orange.opacity(0.8))
-                    .frame(width: 8, height: 8)
-                    .position(x: 415, y: 40 + 200 * p)
+                PhloemDot(phase: phase, index: i)
             }
         }
     }
+}
 
-    private func stomata(phase: Double) -> some View {
-        let openness = 0.4 + 0.6 * abs(sin(phase * 2 * .pi))
-        return HStack(spacing: 1) {
+private struct PhloemDot: View {
+    let phase: Double
+    let index: Int
+    var body: some View {
+        let p: Double = (phase + Double(index) / 3.0).truncatingRemainder(dividingBy: 1.0)
+        let y: Double = 40.0 + 200.0 * p
+        Circle()
+            .fill(Color.orange.opacity(0.8))
+            .frame(width: 8, height: 8)
+            .position(x: 415, y: CGFloat(y))
+    }
+}
+
+private struct StomataPair: View {
+    let phase: Double
+    var body: some View {
+        let openness: Double = 0.4 + 0.6 * abs(sin(Double(phase) * 2.0 * Double.pi))
+        HStack(spacing: 1) {
             Capsule()
-                .fill(.green.opacity(0.7))
+                .fill(Color.green.opacity(0.7))
                 .frame(width: 16, height: 28)
                 .rotationEffect(.degrees(-15 * openness))
             Capsule()
-                .fill(.green.opacity(0.7))
+                .fill(Color.green.opacity(0.7))
                 .frame(width: 16, height: 28)
                 .rotationEffect(.degrees(15 * openness))
         }

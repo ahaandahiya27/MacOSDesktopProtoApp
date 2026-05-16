@@ -75,12 +75,7 @@ struct DiscoverChapter1View: View {
         switch currentScene {
         case 0: Scene1_PlantKitchen(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_PhotosynthesisLab(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2:
-            if #available(macOS 12, *) {
-                Scene3_InsideALeaf(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
-            }
+        case 2: Scene3_InsideALeaf(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
         case 3: Scene4_ColorTheChlorophyll(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_AutotrophHeterotroph(pack: pack, chapter: chapter, onComplete: { score in markComplete(4, score: score, max: 12) })
         case 5: Scene6_MeetTheSpecialPlants(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
