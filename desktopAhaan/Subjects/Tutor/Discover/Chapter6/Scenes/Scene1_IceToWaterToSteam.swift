@@ -221,7 +221,9 @@ private struct MoleculeDot: View {
 /// and a circle (water/steam) without an `if`/`else` branch in the body
 /// that confuses @ViewBuilder type inference on Swift 5.5.
 private struct AnyShape: Shape {
-    private let pathBuilder: (CGRect) -> Path
+    // @Sendable so the closure inherits Sendable in Swift 6 strict-concurrency
+    // mode, matching the Shape protocol's Sendable conformance.
+    private let pathBuilder: @Sendable (CGRect) -> Path
     init(squareOrCircle isSquare: Bool) {
         if isSquare {
             self.pathBuilder = { rect in Path(rect) }
