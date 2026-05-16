@@ -119,7 +119,7 @@ struct Scene4_ColorTheChlorophyll: View {
                         Spacer(minLength: 0)
                     }
                 } else {
-                    Label("Pick a colour from the spectrum above.", systemImage: "hand.tap.fill")
+                    Label("Pick a colour from the spectrum above.", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout)
                         .foregroundColor(.secondary)
                 }

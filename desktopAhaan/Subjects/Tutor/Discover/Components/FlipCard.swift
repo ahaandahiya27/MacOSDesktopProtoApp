@@ -66,7 +66,7 @@ struct FlipCard<Front: View, Back: View>: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 12)
             Spacer(minLength: 0)
-            Label("Tap to flip", systemImage: "hand.tap")
+            Label("Tap to flip", systemImage: SFSymbolCompat.name("hand.tap"))
                 .font(.caption)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.bottom, 12)
