@@ -134,43 +134,78 @@ struct Scene1_PlantKitchen: View {
     @ViewBuilder
     private func sunRays(t: TimeInterval, in size: CGSize) -> some View {
         ForEach(0..<5, id: \.self) { i in
-            let phase = (t + Double(i) * 0.4).truncatingRemainder(dividingBy: 3) / 3
-            let x = size.width * (0.15 + Double(i) * 0.18)
-            let y = size.height * 0.05 + size.height * 0.4 * phase
-            let opacity = 1 - phase
-            Image(systemName: "sun.max.fill")
-                .font(.system(size: 22))
-                .foregroundColor(Color.yellow.opacity(opacity * 0.9))
-                .position(x: x, y: y)
+            SunRayDot(index: i, t: t, size: size)
         }
     }
 
     @ViewBuilder
     private func waterDrops(t: TimeInterval, in size: CGSize) -> some View {
         ForEach(0..<5, id: \.self) { i in
-            let phase = (t + Double(i) * 0.3).truncatingRemainder(dividingBy: 3) / 3
-            let x = size.width * (0.25 + Double(i) * 0.13)
-            let y = size.height * 0.95 - size.height * 0.4 * phase
-            let opacity = 1 - phase
-            Image(systemName: "drop.fill")
-                .font(.system(size: 16))
-                .foregroundColor(Color.blue.opacity(opacity * 0.85))
-                .position(x: x, y: y)
+            WaterDrop(index: i, t: t, size: size)
         }
     }
 
     @ViewBuilder
     private func co2Wisps(t: TimeInterval, in size: CGSize) -> some View {
         ForEach(0..<3, id: \.self) { i in
-            let phase = (t + Double(i) * 0.7).truncatingRemainder(dividingBy: 4) / 4
-            let x = size.width * 0.05 + size.width * 0.4 * phase
-            let y = size.height * (0.30 + Double(i) * 0.18)
-            let opacity = sin(phase * .pi)
-            Text("CO₂")
-                .font(.system(size: 18, weight: .medium, design: .rounded))
-                .foregroundColor(Color.gray.opacity(opacity * 0.7))
-                .position(x: x, y: y)
+            CO2Wisp(index: i, t: t, size: size)
         }
+    }
+}
+
+// MARK: - Ambient particle subviews
+//
+// These are split into their own structs so the per-particle position /
+// opacity math is type-checked locally. The Big Sur Swift 5.5 compiler
+// times out trying to infer the long chained expression inside a
+// @ViewBuilder ForEach. Wrapping each particle in a small View keeps the
+// per-expression complexity bounded.
+
+private struct SunRayDot: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let phase: Double = ((t + Double(index) * 0.4).truncatingRemainder(dividingBy: 3.0)) / 3.0
+        let x: Double = Double(size.width) * (0.15 + Double(index) * 0.18)
+        let y: Double = Double(size.height) * 0.05 + Double(size.height) * 0.4 * phase
+        let opacity: Double = 1.0 - phase
+        Image(systemName: "sun.max.fill")
+            .font(.system(size: 22))
+            .foregroundColor(Color.yellow.opacity(opacity * 0.9))
+            .position(x: CGFloat(x), y: CGFloat(y))
+    }
+}
+
+private struct WaterDrop: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let phase: Double = ((t + Double(index) * 0.3).truncatingRemainder(dividingBy: 3.0)) / 3.0
+        let x: Double = Double(size.width) * (0.25 + Double(index) * 0.13)
+        let y: Double = Double(size.height) * 0.95 - Double(size.height) * 0.4 * phase
+        let opacity: Double = 1.0 - phase
+        Image(systemName: "drop.fill")
+            .font(.system(size: 16))
+            .foregroundColor(Color.blue.opacity(opacity * 0.85))
+            .position(x: CGFloat(x), y: CGFloat(y))
+    }
+}
+
+private struct CO2Wisp: View {
+    let index: Int
+    let t: TimeInterval
+    let size: CGSize
+    var body: some View {
+        let phase: Double = ((t + Double(index) * 0.7).truncatingRemainder(dividingBy: 4.0)) / 4.0
+        let x: Double = Double(size.width) * 0.05 + Double(size.width) * 0.4 * phase
+        let y: Double = Double(size.height) * (0.30 + Double(index) * 0.18)
+        let opacity: Double = sin(Double(phase) * Double.pi)
+        Text("CO₂")
+            .font(.system(size: 18, weight: .medium, design: .rounded))
+            .foregroundColor(Color.gray.opacity(opacity * 0.7))
+            .position(x: CGFloat(x), y: CGFloat(y))
     }
 }
 
