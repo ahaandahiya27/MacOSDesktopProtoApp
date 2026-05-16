@@ -323,7 +323,6 @@ private struct DropZone: View {
     }
 }
 
-@available(macOS 12, *)
 struct ScoreBadge: View {
     let value: Int
     let total: Int

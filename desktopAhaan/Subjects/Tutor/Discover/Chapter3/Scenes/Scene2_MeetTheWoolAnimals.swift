@@ -4,7 +4,7 @@ import SwiftUI
 ///
 /// Horizontal carousel of 6 FlipCards with wool animals.
 /// Front: emoji + breed name. Back: 3 facts about that animal's wool.
-@available(macOS 12, *)
+
 struct Scene2_MeetTheWoolAnimals: View {
     let pack: SubjectPack
     let chapter: Chapter

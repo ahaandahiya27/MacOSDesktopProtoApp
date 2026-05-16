@@ -71,25 +71,41 @@ struct DiscoverChapter2View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Scenes 1, 2, 4, 6, 8 still use Canvas (macOS 12+).
         switch currentScene {
-        case 0: Scene1_TheMouthLab(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
-        case 1: Scene2_TheSwallowWave(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
+        case 0:
+            if #available(macOS 12, *) {
+                Scene1_TheMouthLab(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 0))
+            }
+        case 1:
+            if #available(macOS 12, *) {
+                Scene2_TheSwallowWave(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 1))
+            }
         case 2: Scene3_TheStomachBath(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3: Scene4_IntestineVillus(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
+        case 3:
+            if #available(macOS 12, *) {
+                Scene4_IntestineVillus(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
+            }
         case 4: Scene5_LiverPancreasBile(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
-        case 5: Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
+        case 5:
+            if #available(macOS 12, *) {
+                Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 5))
+            }
         case 6: Scene7_AmoebaPseudopodHunt(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-        case 7: Scene8_TasteAndFlavour(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
+        case 7:
+            if #available(macOS 12, *) {
+                Scene8_TasteAndFlavour(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 7))
+            }
         case 8: Scene9_BossQuiz_Ch2(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()
         }

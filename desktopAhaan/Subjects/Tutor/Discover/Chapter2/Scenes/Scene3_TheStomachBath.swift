@@ -6,7 +6,7 @@ import SwiftUI
 /// Tap each to drop it in. Once dropped, HCl droplets (red) and pepsin enzymes (purple)
 /// animate around it. After 4 seconds, food breaks into smaller fragments.
 /// Caption from ch02_t01_c04.
-@available(macOS 12, *)
+
 struct Scene3_TheStomachBath: View {
     let pack: SubjectPack
     let chapter: Chapter

@@ -6,7 +6,7 @@ import SwiftUI
 /// Animation: pseudopodia extend toward food, surround it, fuse, and engulf it into
 /// a food vacuole that shrinks and digests. Reduce-motion respected. Tap food to
 /// restart. Caption from ch02_t02_c02.
-@available(macOS 12, *)
+
 struct Scene7_AmoebaPseudopodHunt: View {
     let pack: SubjectPack
     let chapter: Chapter

@@ -7,7 +7,7 @@ import SwiftUI
 /// - Pancreas → orange juice flows
 /// - Both mix into small intestine as digestive juice
 /// Must tap each organ once before "I get it!". Text from ch02_t01_c08 and ch02_t01_c09.
-@available(macOS 12, *)
+
 struct Scene5_LiverPancreasBile: View {
     let pack: SubjectPack
     let chapter: Chapter

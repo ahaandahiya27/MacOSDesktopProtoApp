@@ -71,24 +71,40 @@ struct DiscoverChapter3View: View {
 
     @ViewBuilder
     private var sceneContent: some View {
-        if #available(macOS 12, *) {
-            modernSceneContent
-        } else {
-            SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: currentScene))
-        }
-    }
-
-    @available(macOS 12, *)
-    @ViewBuilder
-    private var modernSceneContent: some View {
+        // Scenes 1, 3, 5, 6, 7 still use Canvas / TimelineView (macOS 12+).
         switch currentScene {
-        case 0: Scene1_FluffToFibre(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+        case 0:
+            if #available(macOS 12, *) {
+                Scene1_FluffToFibre(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 0))
+            }
         case 1: Scene2_MeetTheWoolAnimals(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2: Scene3_TheShearingDay(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
+        case 2:
+            if #available(macOS 12, *) {
+                Scene3_TheShearingDay(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
+            }
         case 3: Scene4_TheWoolPipeline(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-        case 4: Scene5_SortersDiseaseLab(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
-        case 5: Scene6_SilkwormLifeCycle(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-        case 6: Scene7_TheCocoonReel(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
+        case 4:
+            if #available(macOS 12, *) {
+                Scene5_SortersDiseaseLab(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 4))
+            }
+        case 5:
+            if #available(macOS 12, *) {
+                Scene6_SilkwormLifeCycle(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 5))
+            }
+        case 6:
+            if #available(macOS 12, *) {
+                Scene7_TheCocoonReel(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
+            } else {
+                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 6))
+            }
         case 7: Scene8_FibreVsFibreGame(pack: pack, chapter: chapter, onComplete: { score in markComplete(7, score: score, max: 6) })
         case 8: Scene9_BossQuiz_Ch3(pack: pack, chapter: chapter, onComplete: { score in markComplete(8, score: score, max: 5) })
         default: EmptyView()

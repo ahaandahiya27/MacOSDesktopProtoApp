@@ -4,7 +4,7 @@ import SwiftUI
 ///
 /// 6 hexagonal nodes connected by arrows: Shearing → Scouring → Sorting → Carding → Spinning → Weaving.
 /// Each node is tappable; tapping shows a step description. After all 6 are tapped, a sweater ✅ appears.
-@available(macOS 12, *)
+
 struct Scene4_TheWoolPipeline: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -68,7 +68,7 @@ struct Scene4_TheWoolPipeline: View {
                 }
             }
             .padding(24)
-            .background(.white.opacity(0.5))
+            .background(Color.white.opacity(0.5))
             .cornerRadius(12)
             .padding(.horizontal, 24)
 

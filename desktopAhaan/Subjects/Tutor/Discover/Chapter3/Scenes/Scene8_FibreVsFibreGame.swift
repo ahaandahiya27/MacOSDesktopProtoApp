@@ -5,7 +5,7 @@ import SwiftUI
 /// Drag-and-drop sorting game. 6 fibre cards float at top. Three drop zones: Plant / Animal / Synthetic.
 /// Uses DragGesture + GeometryReader for zone tracking (not .draggable/.dropDestination).
 /// Wrong drop → red shake. Right drop → confetti + settle. Score badge "X / 6".
-@available(macOS 12, *)
+
 struct Scene8_FibreVsFibreGame: View {
     let pack: SubjectPack
     let chapter: Chapter
