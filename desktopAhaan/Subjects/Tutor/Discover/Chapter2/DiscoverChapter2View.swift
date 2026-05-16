@@ -76,12 +76,7 @@ struct DiscoverChapter2View: View {
         case 0: Scene1_TheMouthLab(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_TheSwallowWave(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
         case 2: Scene3_TheStomachBath(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3:
-            if #available(macOS 12, *) {
-                Scene4_IntestineVillus(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 3))
-            }
+        case 3: Scene4_IntestineVillus(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_LiverPancreasBile(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
         case 6: Scene7_AmoebaPseudopodHunt(pack: pack, chapter: chapter, onComplete: { markComplete(6) })

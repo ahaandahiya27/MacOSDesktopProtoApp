@@ -6,7 +6,10 @@ import SwiftUI
 /// into one segment revealing villi. A second zoom shows microvilli. Glucose
 /// particles animate from lumen → villus → blood vessel. Text from
 /// ch02_t01_c05 and ch02_t01_c11.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — Full intestine coil, villi, and
+/// microvilli diagrams use custom Shapes / standard Ellipses instead of
+/// Canvas blocks.
 struct Scene4_IntestineVillus: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -142,150 +145,136 @@ struct Scene4_IntestineVillus: View {
 
 // MARK: - Full Intestine View
 
-@available(macOS 12, *)
+/// Coiled small intestine outline. Was Canvas; now a custom Shape so it
+/// renders on Big Sur.
 struct FullIntestineView: View {
     var body: some View {
-        Canvas { context, _ in
-            var path = Path()
-            let center = CGPoint(x: 200, y: 120)
+        IntestineCoilShape()
+            .stroke(Color.blue.opacity(0.6), lineWidth: 12)
+    }
+}
 
-            // Coiled small intestine shape
-            for i in 0...3 {
-                let angle = CGFloat(i) * .pi / 2
-                let x = center.x + 60 * cos(angle)
-                let y = center.y + 60 * sin(angle)
-                let nextI = i + 1
-                let nextAngle = CGFloat(nextI) * .pi / 2
-                let nextX = center.x + 60 * cos(nextAngle)
-                let nextY = center.y + 60 * sin(nextAngle)
-
-                if i == 0 {
-                    path.move(to: CGPoint(x: x, y: y))
-                }
-                path.addCurve(
-                    to: CGPoint(x: nextX, y: nextY),
-                    control1: CGPoint(x: x + 20, y: y + 20),
-                    control2: CGPoint(x: nextX - 20, y: nextY - 20)
-                )
-            }
-
-            context.stroke(
-                path,
-                with: .color(.blue.opacity(0.6)),
-                lineWidth: 12
+struct IntestineCoilShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let center = CGPoint(x: 200, y: 120)
+        for i in 0...3 {
+            let angle = CGFloat(i) * .pi / 2
+            let x = center.x + 60 * cos(angle)
+            let y = center.y + 60 * sin(angle)
+            let nextI = i + 1
+            let nextAngle = CGFloat(nextI) * .pi / 2
+            let nextX = center.x + 60 * cos(nextAngle)
+            let nextY = center.y + 60 * sin(nextAngle)
+            if i == 0 { path.move(to: CGPoint(x: x, y: y)) }
+            path.addCurve(
+                to: CGPoint(x: nextX, y: nextY),
+                control1: CGPoint(x: x + 20, y: y + 20),
+                control2: CGPoint(x: nextX - 20, y: nextY - 20)
             )
         }
+        return path
     }
 }
 
 // MARK: - Villi View
 
-@available(macOS 12, *)
+/// Villi zoom level. Rebuilt as a ZStack of RoundedRectangle (lumen +
+/// blood vessel) + a VilliFingersShape for the finger-like villi, with
+/// the glucose particles rendered as positioned circles.
 struct VilliView: View {
     @Binding var glucoseParticles: [GlucoseParticle]
 
     var body: some View {
-        Canvas { context, _ in
-            let lumenY: CGFloat = 60
-            let bloodVesselY: CGFloat = 200
-
-            // Intestinal lumen (top)
-            context.fill(
-                Path(roundedRect: CGRect(x: 80, y: lumenY - 20, width: 240, height: 30), cornerRadius: 4),
-                with: .color(.yellow.opacity(0.3))
-            )
-            context.stroke(
-                Path(roundedRect: CGRect(x: 80, y: lumenY - 20, width: 240, height: 30), cornerRadius: 4),
-                with: .color(.orange.opacity(0.5)),
-                lineWidth: 1
-            )
-
-            // Draw 6 villi as finger-like structures
-            for i in 0..<6 {
-                let x = 110 + CGFloat(i) * 35
-                let villPath = Path()
-                var villPath2 = villPath
-                villPath2.move(to: CGPoint(x: x, y: lumenY))
-                villPath2.addCurve(
-                    to: CGPoint(x: x, y: bloodVesselY - 20),
-                    control1: CGPoint(x: x - 8, y: lumenY + 40),
-                    control2: CGPoint(x: x - 8, y: bloodVesselY - 40)
-                )
-                context.stroke(
-                    villPath2,
-                    with: .color(.pink.opacity(0.7)),
-                    lineWidth: 3
-                )
+        ZStack(alignment: .topLeading) {
+            // Lumen (top)
+            ZStack {
+                RoundedRectangle(cornerRadius: 4).fill(Color.yellow.opacity(0.3))
+                RoundedRectangle(cornerRadius: 4).stroke(Color.orange.opacity(0.5), lineWidth: 1)
             }
+            .frame(width: 240, height: 30)
+            .offset(x: 80, y: 40)
+
+            // Villi finger curves
+            VilliFingersShape(count: 6, startX: 110, stepX: 35, topY: 60, bottomY: 180)
+                .stroke(Color.pink.opacity(0.7), lineWidth: 3)
 
             // Blood vessel (bottom)
-            context.fill(
-                Path(roundedRect: CGRect(x: 80, y: bloodVesselY, width: 240, height: 25), cornerRadius: 4),
-                with: .color(.red.opacity(0.2))
-            )
-            context.stroke(
-                Path(roundedRect: CGRect(x: 80, y: bloodVesselY, width: 240, height: 25), cornerRadius: 4),
-                with: .color(.red.opacity(0.5)),
-                lineWidth: 1
-            )
+            ZStack {
+                RoundedRectangle(cornerRadius: 4).fill(Color.red.opacity(0.2))
+                RoundedRectangle(cornerRadius: 4).stroke(Color.red.opacity(0.5), lineWidth: 1)
+            }
+            .frame(width: 240, height: 25)
+            .offset(x: 80, y: 200)
 
-            // Draw glucose particles
-            for particle in glucoseParticles {
-                context.fill(
-                    Circle().path(in: CGRect(x: particle.x - 4, y: particle.y - 4, width: 8, height: 8)),
-                    with: .color(.green.opacity(0.8))
-                )
+            // Glucose particles
+            ForEach(glucoseParticles) { particle in
+                Circle()
+                    .fill(Color.green.opacity(0.8))
+                    .frame(width: 8, height: 8)
+                    .position(x: particle.x, y: particle.y)
             }
         }
     }
 }
 
+/// `count` finger-like quadratic curves used by both VilliView (6
+/// fingers, larger control offset) and MicrovilliView (12 fingers,
+/// smaller offset).
+struct VilliFingersShape: Shape {
+    let count: Int
+    let startX: CGFloat
+    let stepX: CGFloat
+    let topY: CGFloat
+    let bottomY: CGFloat
+
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        // The original offset was -8 for villi, -4 for microvilli. Derive
+        // proportional to stepX so the helper works for both.
+        let controlOffset: CGFloat = stepX > 20 ? -8 : -4
+        for i in 0..<count {
+            let x = startX + CGFloat(i) * stepX
+            p.move(to: CGPoint(x: x, y: topY))
+            p.addCurve(
+                to: CGPoint(x: x, y: bottomY - 20),
+                control1: CGPoint(x: x + controlOffset, y: topY + 40),
+                control2: CGPoint(x: x + controlOffset, y: bottomY - 40)
+            )
+        }
+        return p
+    }
+}
+
 // MARK: - Microvilli View
 
-@available(macOS 12, *)
 struct MicrovilliView: View {
     @Binding var glucoseParticles: [GlucoseParticle]
 
     var body: some View {
-        Canvas { context, _ in
-            let tipY: CGFloat = 80
-            let baseY: CGFloat = 180
-
+        ZStack(alignment: .topLeading) {
             // Villus tip surface
-            context.fill(
-                Path(ellipseIn: CGRect(x: 100, y: tipY - 15, width: 200, height: 30)),
-                with: .color(.pink.opacity(0.2))
-            )
+            Ellipse()
+                .fill(Color.pink.opacity(0.2))
+                .frame(width: 200, height: 30)
+                .offset(x: 100, y: 65)
 
-            // Draw 12 microvilli as tiny finger-like projections
-            for i in 0..<12 {
-                let x = 110 + CGFloat(i) * 17
-                var microPath = Path()
-                microPath.move(to: CGPoint(x: x, y: tipY))
-                microPath.addCurve(
-                    to: CGPoint(x: x, y: baseY - 20),
-                    control1: CGPoint(x: x - 4, y: tipY + 30),
-                    control2: CGPoint(x: x - 4, y: baseY - 30)
-                )
-                context.stroke(
-                    microPath,
-                    with: .color(.purple.opacity(0.6)),
-                    lineWidth: 2
-                )
-            }
+            // Microvilli finger curves (12 thinner fingers)
+            VilliFingersShape(count: 12, startX: 110, stepX: 17, topY: 80, bottomY: 180)
+                .stroke(Color.purple.opacity(0.6), lineWidth: 2)
 
             // Nutrient absorption zone
-            context.fill(
-                Path(roundedRect: CGRect(x: 80, y: baseY, width: 240, height: 35), cornerRadius: 4),
-                with: .color(.blue.opacity(0.15))
-            )
+            RoundedRectangle(cornerRadius: 4)
+                .fill(Color.blue.opacity(0.15))
+                .frame(width: 240, height: 35)
+                .offset(x: 80, y: 180)
 
-            // Draw glucose particles
-            for particle in glucoseParticles {
-                context.fill(
-                    Circle().path(in: CGRect(x: particle.x - 3, y: particle.y - 3, width: 6, height: 6)),
-                    with: .color(Color.compatCyan.opacity(0.8))
-                )
+            // Glucose particles (smaller, cyan)
+            ForEach(glucoseParticles) { particle in
+                Circle()
+                    .fill(Color.compatCyan.opacity(0.8))
+                    .frame(width: 6, height: 6)
+                    .position(x: particle.x, y: particle.y)
             }
         }
     }
