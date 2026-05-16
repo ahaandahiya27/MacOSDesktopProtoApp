@@ -1,9 +1,12 @@
 import SwiftUI
 
 /// Scene 3 — Moon Phases Wheel.
-/// Eight moon phase cards in a 2x4 grid. Each card shows a Canvas-drawn moon and
+/// Eight moon phase cards in a 2x4 grid. Each card shows a Shape-drawn moon and
 /// phase name. Tap to see explanation. After all 8 explored, Got It appears.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible: the moon glyph is rendered via a custom
+/// `Shape` rather than SwiftUI's `Canvas` (which is macOS 12+). The visual
+/// output is identical on both macOS 11 and modern macOS.
 struct Scene3_MoonPhasesWheel: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -128,11 +131,13 @@ struct Scene3_MoonPhasesWheel: View {
             }
         } label: {
             VStack(spacing: 8) {
-                // Canvas-drawn moon
-                Canvas { ctx, size in
-                    drawMoon(ctx: ctx, size: size,
-                             fraction: phase.illuminationFraction,
-                             waxing: phase.waxing)
+                // Shape-drawn moon (macOS 11 compatible — was Canvas before)
+                ZStack {
+                    Circle().fill(Color.gray.opacity(0.2))
+                    MoonLitShape(fraction: phase.illuminationFraction,
+                                 waxing: phase.waxing)
+                        .fill(Color.white.opacity(0.9))
+                    Circle().stroke(Color.gray.opacity(0.4), lineWidth: 1)
                 }
                 .frame(width: 56, height: 56)
 
@@ -162,72 +167,67 @@ struct Scene3_MoonPhasesWheel: View {
         .accessibilityLabel("\(phase.name). \(isExplored ? "Explored" : "Not yet explored")")
     }
 
-    // MARK: - Canvas Moon Drawing
+}
 
-    /// Draws a moon phase using arcs.
-    /// `fraction` 0 = new (dark), 0.25 = crescent, 0.5 = half, 0.75 = gibbous, 1 = full.
-    /// `waxing` true = lit from right, false = lit from left.
-    private func drawMoon(ctx: GraphicsContext, size: CGSize,
-                          fraction: Double, waxing: Bool) {
-        let center = CGPoint(x: size.width / 2, y: size.height / 2)
-        let radius = min(size.width, size.height) / 2 - 2
+// MARK: - MoonLitShape (Big Sur friendly replacement for the old Canvas)
 
-        // Dark background circle (the moon body)
-        let moonRect = CGRect(x: center.x - radius, y: center.y - radius,
-                              width: radius * 2, height: radius * 2)
-        ctx.fill(Path(ellipseIn: moonRect), with: .color(.gray.opacity(0.2)))
+/// The lit portion of the Moon for a given phase. Used to be drawn inside a
+/// SwiftUI `Canvas` block; Canvas is macOS 12+ so on Big Sur we draw the
+/// same arcs inside a `Shape` (macOS 10.15+).
+///
+/// `fraction`: 0 = new (fully dark, empty path), 0.25 = crescent,
+/// 0.5 = half, 0.75 = gibbous, 1 = full.
+/// `waxing`: true = lit from the right, false = lit from the left.
+struct MoonLitShape: Shape {
+    let fraction: Double
+    let waxing: Bool
 
-        // Outline
-        ctx.stroke(Path(ellipseIn: moonRect), with: .color(.gray.opacity(0.4)), lineWidth: 1)
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let center = CGPoint(x: rect.midX, y: rect.midY)
+        let radius = min(rect.width, rect.height) / 2 - 2
 
-        if fraction <= 0.001 {
-            // New moon: fully dark -- nothing more to draw
-            return
-        }
+        // New moon — nothing lit.
+        if fraction <= 0.001 { return path }
 
-        // Build lit portion path
-        var litPath = Path()
+        let moonRect = CGRect(
+            x: center.x - radius, y: center.y - radius,
+            width: radius * 2, height: radius * 2
+        )
 
+        // Full moon — whole disc lit.
         if fraction >= 0.999 {
-            // Full moon: entire circle lit
-            litPath.addEllipse(in: moonRect)
-        } else {
-            // Build lit half using two arcs:
-            // 1) A semicircle arc on the lit side
-            // 2) An elliptical arc for the terminator
-
-            let startAngle: Angle = .degrees(-90)
-            let endAngle: Angle = .degrees(90)
-
-            if waxing {
-                // Lit semicircle on the right
-                litPath.addArc(center: center, radius: radius,
-                               startAngle: startAngle, endAngle: endAngle,
-                               clockwise: false)
-
-                // Terminator curve (elliptical)
-                let terminatorX = radius * (1 - 2 * fraction)
-                litPath.addQuadCurve(
-                    to: CGPoint(x: center.x, y: center.y - radius),
-                    control: CGPoint(x: center.x + terminatorX, y: center.y)
-                )
-            } else {
-                // Lit semicircle on the left
-                litPath.addArc(center: center, radius: radius,
-                               startAngle: endAngle, endAngle: startAngle,
-                               clockwise: false)
-
-                // Terminator curve
-                let terminatorX = radius * (2 * fraction - 1)
-                litPath.addQuadCurve(
-                    to: CGPoint(x: center.x, y: center.y + radius),
-                    control: CGPoint(x: center.x + terminatorX, y: center.y)
-                )
-            }
-
-            litPath.closeSubpath()
+            path.addEllipse(in: moonRect)
+            return path
         }
 
-        ctx.fill(litPath, with: .color(.white.opacity(0.9)))
+        // Partial phase: a semicircle on the lit side joined to a quadratic
+        // terminator curve on the inside. Geometry matches the old Canvas
+        // version 1:1 so visual output is identical on modern macOS.
+        let startAngle: Angle = .degrees(-90)
+        let endAngle: Angle = .degrees(90)
+
+        if waxing {
+            path.addArc(center: center, radius: radius,
+                        startAngle: startAngle, endAngle: endAngle,
+                        clockwise: false)
+            let terminatorX = radius * (1 - 2 * fraction)
+            path.addQuadCurve(
+                to: CGPoint(x: center.x, y: center.y - radius),
+                control: CGPoint(x: center.x + terminatorX, y: center.y)
+            )
+        } else {
+            path.addArc(center: center, radius: radius,
+                        startAngle: endAngle, endAngle: startAngle,
+                        clockwise: false)
+            let terminatorX = radius * (2 * fraction - 1)
+            path.addQuadCurve(
+                to: CGPoint(x: center.x, y: center.y + radius),
+                control: CGPoint(x: center.x + terminatorX, y: center.y)
+            )
+        }
+
+        path.closeSubpath()
+        return path
     }
 }
