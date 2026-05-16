@@ -14,7 +14,6 @@ struct Scene3_ThreeHighwaysOfHeat: View {
     @State private var tappedLanes: Set<Int> = []
     @State private var activeLane: Int? = nil
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allTapped: Bool { tappedLanes.count >= 3 }
@@ -89,21 +88,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 20), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 20, tick: $tick)
     }
 
     @ViewBuilder

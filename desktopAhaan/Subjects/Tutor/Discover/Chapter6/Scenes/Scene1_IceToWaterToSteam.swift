@@ -14,7 +14,6 @@ struct Scene1_IceToWaterToSteam: View {
 
     @State private var temperature: Double = -10
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var phase: MatterPhase {
@@ -136,24 +135,10 @@ struct Scene1_IceToWaterToSteam: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
+        .timedScene(idealFPS: 30, tick: $tick)
     }
 
     // MARK: - Animation timer
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
-    }
 
     // MARK: - Molecule field (was a Canvas inside TimelineView)
 

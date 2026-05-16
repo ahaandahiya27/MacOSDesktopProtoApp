@@ -15,7 +15,6 @@ struct Scene5_GalvanisationShield: View {
     @State private var rustLevel: CGFloat = 0
     @State private var rainActive = false
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private enum GalvStep: Int, CaseIterable {
@@ -169,21 +168,7 @@ struct Scene5_GalvanisationShield: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 20), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 20, tick: $tick)
     }
 
     private var pipeColor: Color {

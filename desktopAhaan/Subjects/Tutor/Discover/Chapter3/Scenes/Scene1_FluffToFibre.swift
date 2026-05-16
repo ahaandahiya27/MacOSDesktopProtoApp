@@ -20,7 +20,6 @@ struct Scene1_FluffToFibre: View {
     @State private var showCotton = false
     @State private var threadsWoven = 0
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var kidFriendlyExplanation: String {
@@ -70,21 +69,7 @@ struct Scene1_FluffToFibre: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 30, tick: $tick)
     }
 
     @ViewBuilder

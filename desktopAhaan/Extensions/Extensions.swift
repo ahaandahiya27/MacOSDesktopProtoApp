@@ -201,6 +201,17 @@ extension View {
                                     stop: @escaping () -> Void) -> some View {
         modifier(ScenePhasePauseModifier(start: start, stop: stop))
     }
+
+    /// One-line replacement for the ~20-line `@State tick` /
+    /// `@State animationTimer` / `startAnimation` / `stopAnimation` /
+    /// `.onAppear` / `.onDisappear` / `.pauseTimerWhenBackgrounded` boilerplate
+    /// that every Timer-driven Discover scene used to inline. Pass an `idealFPS`
+    /// (`HardwareTier.interval` is applied so Big Sur gets the legacy floor)
+    /// and a `Binding<TimeInterval>` for the scene's tick. Respects
+    /// reduce-motion (no timer is created) and pauses on app background.
+    func timedScene(idealFPS: Double = 30, tick: Binding<TimeInterval>) -> some View {
+        modifier(TimedSceneModifier(idealFPS: idealFPS, tick: tick))
+    }
 }
 
 private struct ScenePhasePauseModifier: ViewModifier {
@@ -212,6 +223,41 @@ private struct ScenePhasePauseModifier: ViewModifier {
         content.onChange(of: scenePhase) { phase in
             if phase == .active { start() } else { stop() }
         }
+    }
+}
+
+/// Owns the timer lifecycle for a `timedScene(idealFPS:tick:)` call. Honors
+/// reduce-motion (no timer is created), pauses on app backgrounding, and
+/// invalidates the timer on view disappear.
+private struct TimedSceneModifier: ViewModifier {
+    let idealFPS: Double
+    @Binding var tick: TimeInterval
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var animationTimer: Timer? = nil
+    @State private var startDate = Date()
+
+    func body(content: Content) -> some View {
+        content
+            .onAppear { start() }
+            .onDisappear { stop() }
+            .onChange(of: scenePhase) { phase in
+                if phase == .active { start() } else { stop() }
+            }
+    }
+
+    private func start() {
+        guard !reduceMotion, animationTimer == nil else { return }
+        startDate = Date()
+        let interval = HardwareTier.interval(ideal: 1.0 / idealFPS)
+        animationTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
+            tick = Date().timeIntervalSince(startDate)
+        }
+    }
+
+    private func stop() {
+        animationTimer?.invalidate()
+        animationTimer = nil
     }
 }
 

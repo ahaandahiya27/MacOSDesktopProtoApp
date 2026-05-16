@@ -163,7 +163,6 @@ private struct LeafCrossSection: View {
     let reduceMotion: Bool
 
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
 
     var body: some View {
         // `phase` cycles 0 → 1 every 2 seconds, exactly matching the old
@@ -199,22 +198,7 @@ private struct LeafCrossSection: View {
             StomataPair(phase: phase)
         }
         .frame(width: 500, height: 280)
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 30, tick: $tick)
     }
 }
 

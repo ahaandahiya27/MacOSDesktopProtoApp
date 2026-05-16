@@ -13,7 +13,6 @@ struct Scene8_AcidRainStory: View {
     @State private var currentPanel: Int = 0
     @State private var viewedPanels: Set<Int> = [0]
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
 
     private let panels: [(title: String, emoji: String, text: String)] = [
         ("Factory Emissions",
@@ -157,23 +156,9 @@ struct Scene8_AcidRainStory: View {
                         }
                     }
                 }
-                .onAppear(perform: startAnimation)
-                .onDisappear(perform: stopAnimation)
-                .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
+                .timedScene(idealFPS: 20, tick: $tick)
             }
         }
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 20), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
     }
 
     private func goPanel(_ delta: Int) {

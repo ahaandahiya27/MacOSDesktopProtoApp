@@ -23,7 +23,6 @@ struct Scene1_PlantKitchen: View {
     /// `ctx.date.timeIntervalSince1970`. Started in onAppear, stopped in
     /// onDisappear so the scene doesn't keep the CPU busy when hidden.
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var kidFriendlyExplanation: String {
@@ -93,25 +92,7 @@ struct Scene1_PlantKitchen: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimationLoop)
-        .onDisappear(perform: stopAnimationLoop)
-        .pauseTimerWhenBackgrounded(start: startAnimationLoop, stop: stopAnimationLoop)
-    }
-
-    // MARK: - Animation loop
-
-    private func startAnimationLoop() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        // 30 fps matches the old TimelineView(.animation(minimumInterval: 1/30))
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-
-    private func stopAnimationLoop() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 30, tick: $tick)
     }
 
     // MARK: - Tap handling

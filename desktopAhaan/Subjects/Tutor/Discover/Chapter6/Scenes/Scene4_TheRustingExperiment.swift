@@ -15,7 +15,6 @@ struct Scene4_TheRustingExperiment: View {
     @State private var tubeProgress: [CGFloat] = [0, 0, 0]  // 0..1 per tube
     @State private var fastForwarded: Set<Int> = []
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allDone: Bool { fastForwarded.count == 3 }
@@ -111,21 +110,7 @@ struct Scene4_TheRustingExperiment: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 15), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 15, tick: $tick)
     }
 
     @ViewBuilder

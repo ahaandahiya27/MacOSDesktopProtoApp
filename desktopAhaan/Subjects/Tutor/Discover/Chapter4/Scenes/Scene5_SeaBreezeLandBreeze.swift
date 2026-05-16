@@ -11,7 +11,6 @@ struct Scene5_SeaBreezeLandBreeze: View {
 
     @State private var isDay = true
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
@@ -160,21 +159,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
         }
         .allowsHitTesting(false)
         .accessibilityLabel(isDay ? "Animated sea breeze arrows" : "Animated land breeze arrows")
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
-    }
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 15), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
+        .timedScene(idealFPS: 15, tick: $tick)
     }
 }
 

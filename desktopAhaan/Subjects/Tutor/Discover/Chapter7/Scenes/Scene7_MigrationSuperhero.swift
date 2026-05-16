@@ -15,7 +15,6 @@ struct Scene7_MigrationSuperhero: View {
     @State private var selectedFact: Int? = nil
     @State private var exploredFacts: Set<Int> = []
     @State private var tick: TimeInterval = 0
-    @State private var animationTimer: Timer? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private struct MigrationFact: Identifiable {
@@ -107,9 +106,7 @@ struct Scene7_MigrationSuperhero: View {
                 .padding(.horizontal, 24)
             }
         }
-        .onAppear(perform: startAnimation)
-        .onDisappear(perform: stopAnimation)
-        .pauseTimerWhenBackgrounded(start: startAnimation, stop: stopAnimation)
+        .timedScene(idealFPS: 30, tick: $tick)
     }
 
     // MARK: - Subviews
@@ -187,18 +184,6 @@ struct Scene7_MigrationSuperhero: View {
     }
 
     // MARK: - Animation lifecycle
-
-    private func startAnimation() {
-        guard !reduceMotion, animationTimer == nil else { return }
-        let start = Date().timeIntervalSince1970
-        animationTimer = Timer.scheduledTimer(withTimeInterval: HardwareTier.interval(ideal: 1.0 / 30), repeats: true) { _ in
-            tick = Date().timeIntervalSince1970 - start
-        }
-    }
-    private func stopAnimation() {
-        animationTimer?.invalidate()
-        animationTimer = nil
-    }
 }
 
 // MARK: - Shapes
