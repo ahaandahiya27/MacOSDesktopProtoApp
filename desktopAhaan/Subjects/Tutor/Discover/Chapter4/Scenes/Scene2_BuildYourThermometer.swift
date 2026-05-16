@@ -12,8 +12,8 @@ struct Scene2_BuildYourThermometer: View {
     @State private var isDigital = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var tempC: Double { -10 + fraction * 120 }
-    private var tempF: Double { tempC * 9 / 5 + 32 }
+    private var tempC: Double { -10.0 + Double(fraction) * 120.0 }
+    private var tempF: Double { tempC * 9.0 / 5.0 + 32.0 }
 
     var body: some View {
         GeometryReader { geo in

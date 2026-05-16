@@ -40,18 +40,18 @@ struct Scene6_SilkwormLifeCycle: View {
                 // Arrows between stages
                 Canvas { context, _ in
                     let center = CGPoint(x: 200, y: 150)
-                    let radius = 100.0
+                    let radius: Double = 100.0
                     for i in 0..<4 {
-                        let angle1 = CGFloat(i) * (.pi * 2 / 4) - .pi / 2
-                        let angle2 = CGFloat((i + 1) % 4) * (.pi * 2 / 4) - .pi / 2
+                        let angle1: Double = Double(i) * (.pi * 2 / 4) - .pi / 2
+                        let angle2: Double = Double((i + 1) % 4) * (.pi * 2 / 4) - .pi / 2
 
                         let start = CGPoint(
-                            x: center.x + radius * cos(angle1) * 0.85,
-                            y: center.y + radius * sin(angle1) * 0.85
+                            x: center.x + radius * cos(Double(angle1)) * 0.85,
+                            y: center.y + radius * sin(Double(angle1)) * 0.85
                         )
                         let end = CGPoint(
-                            x: center.x + radius * cos(angle2) * 0.85,
-                            y: center.y + radius * sin(angle2) * 0.85
+                            x: center.x + radius * cos(Double(angle2)) * 0.85,
+                            y: center.y + radius * sin(Double(angle2)) * 0.85
                         )
 
                         context.stroke(
@@ -127,38 +127,49 @@ struct Scene6_SilkwormLifeCycle: View {
         }
     }
 
+    private func stageNodePosition(index: Int) -> CGPoint {
+        let angle: Double = Double(index) * (.pi * 2.0 / 4.0) - .pi / 2.0
+        let centerX: Double = 200.0
+        let centerY: Double = 150.0
+        let radius: Double = 100.0
+        let x = centerX + radius * cos(angle)
+        let y = centerY + radius * sin(angle)
+        return CGPoint(x: x, y: y)
+    }
+
+    @ViewBuilder
+    private func stageNodeLabel(_ stage: LifeStage, index: Int) -> some View {
+        let bgColor: Color = (currentStage == index)
+            ? Color.compatIndigo.opacity(0.15)
+            : Color.gray.opacity(0.05)
+        let borderColor: Color = (currentStage == index) ? Color.compatIndigo : Color.clear
+        VStack(spacing: 6) {
+            Text(stage.emoji)
+                .font(.system(size: 36))
+            Text(stage.name)
+                .font(.caption.weight(.semibold))
+                .foregroundColor(.primary)
+        }
+        .frame(width: 70, height: 70)
+        .background(bgColor)
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(borderColor, lineWidth: 2)
+        )
+    }
+
     @ViewBuilder
     private func stageNode(_ stage: LifeStage, index: Int) -> some View {
-        let angle = CGFloat(index) * (.pi * 2 / 4) - .pi / 2
-        let center = CGPoint(x: 200, y: 150)
-        let radius = 100.0
-        let position = CGPoint(
-            x: center.x + radius * cos(angle),
-            y: center.y + radius * sin(angle)
-        )
-
         Button {
             withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
                 currentStage = index
             }
         } label: {
-            VStack(spacing: 6) {
-                Text(stage.emoji)
-                    .font(.system(size: 36))
-                Text(stage.name)
-                    .font(.caption.weight(.semibold))
-                    .foregroundColor(.primary)
-            }
-            .frame(width: 70, height: 70)
-            .background(currentStage == index ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.05))
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(currentStage == index ? Color.compatIndigo : Color.clear, lineWidth: 2)
-            )
+            stageNodeLabel(stage, index: index)
         }
         .buttonStyle(.plain)
-        .position(position)
+        .position(stageNodePosition(index: index))
         .accessibilityLabel(stage.name)
     }
 
