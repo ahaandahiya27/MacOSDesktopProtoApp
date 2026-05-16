@@ -2,7 +2,9 @@ import SwiftUI
 
 /// Scene 3 — Climate Zones Map.
 /// Canvas-drawn simplified map with climate zones. Tap each zone for description + example animals.
-@available(macOS 12, *)
+///
+/// Big Sur (macOS 11) compatible — climate zone bands now use a `VStack`
+/// of zone Rectangles with overlay Text labels instead of a `Canvas`.
 struct Scene3_ClimateZonesMap: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -67,33 +69,35 @@ struct Scene3_ClimateZonesMap: View {
                         }
                     }
 
-                    // Canvas map
-                    Canvas { ctx, size in
-                        for zone in zones {
-                            let y0 = size.height * zone.yRange.lowerBound
-                            let y1 = size.height * zone.yRange.upperBound
-                            let rect = CGRect(x: 0, y: y0, width: size.width, height: y1 - y0)
-                            let isSelected = selectedZone == zone.id
+                    // Climate zones map (was Canvas; now Shape-based)
+                    GeometryReader { geo in
+                        let size = geo.size
+                        ZStack(alignment: .topLeading) {
+                            ForEach(zones) { zone in
+                                let y0 = size.height * zone.yRange.lowerBound
+                                let y1 = size.height * zone.yRange.upperBound
+                                let h = y1 - y0
+                                let isSelected = selectedZone == zone.id
+                                ZStack {
+                                    Rectangle()
+                                        .fill(isSelected ? zone.color.opacity(0.9) : zone.color.opacity(0.5))
+                                    Text(zone.name)
+                                        .font(.caption.bold())
+                                        .foregroundColor(.white)
+                                }
+                                .frame(width: size.width, height: h)
+                                .offset(x: 0, y: y0)
+                            }
 
-                            ctx.fill(
-                                Path(roundedRect: rect, cornerRadius: 0),
-                                with: .color(isSelected ? zone.color.opacity(0.9) : zone.color.opacity(0.5))
-                            )
-
-                            // Zone label
-                            let text = Text(zone.name)
-                                .font(.caption.bold())
-                                .foregroundColor(.white)
-                            let resolved = ctx.resolve(text)
-                            ctx.draw(resolved, at: CGPoint(x: size.width * 0.5, y: (y0 + y1) / 2))
+                            // Equator line
+                            Path { p in
+                                let eqY = size.height * 0.55
+                                p.move(to: CGPoint(x: 0, y: eqY))
+                                p.addLine(to: CGPoint(x: size.width, y: eqY))
+                            }
+                            .stroke(Color.red.opacity(0.6),
+                                    style: StrokeStyle(lineWidth: 1, dash: [6, 4]))
                         }
-
-                        // Equator line
-                        let eqY = size.height * 0.55
-                        var eqPath = Path()
-                        eqPath.move(to: CGPoint(x: 0, y: eqY))
-                        eqPath.addLine(to: CGPoint(x: size.width, y: eqY))
-                        ctx.stroke(eqPath, with: .color(.red.opacity(0.6)), style: StrokeStyle(lineWidth: 1, dash: [6, 4]))
                     }
                     .frame(maxWidth: 600, maxHeight: 260)
                     .clipShape(RoundedRectangle(cornerRadius: 14))

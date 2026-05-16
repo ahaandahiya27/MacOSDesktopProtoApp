@@ -65,12 +65,7 @@ struct DiscoverChapter7View: View {
         switch currentScene {
         case 0: Scene1_WeatherVsClimate(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
         case 1: Scene2_BuildAWeatherStation(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2:
-            if #available(macOS 12, *) {
-                Scene3_ClimateZonesMap(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-            } else {
-                SceneRequiresMacOS12View(sceneTitle: sceneTitle(at: 2))
-            }
+        case 2: Scene3_ClimateZonesMap(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
         case 3: Scene4_PolarBearSurvivalKit(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
         case 4: Scene5_TropicalRainforestLife(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
         case 5: Scene6_AdaptationMatchGame(pack: pack, chapter: chapter, onComplete: { score in markComplete(5, score: score, max: 12) })
