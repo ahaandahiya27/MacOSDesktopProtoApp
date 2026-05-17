@@ -180,7 +180,7 @@ struct ContentView: View {
                                     let n = needsReviewCount(for: pack)
                                     if n > 0 {
                                         Text("\(n)")
-                                            .font(.caption2.weight(.semibold))
+                                            .font(.caption2.weight(.semibold).monospacedDigit())
                                             .foregroundColor(.white)
                                             .padding(.horizontal, 6)
                                             .padding(.vertical, 1)
@@ -190,13 +190,14 @@ struct ContentView: View {
                                     }
                                 }
                                 Text("\(pack.conceptCount) concepts · \(pack.questionCount) questions")
-                                    .font(.caption)
+                                    .font(.caption.monospacedDigit())
                                     .foregroundColor(.secondary)
                             }
                         } icon: {
                             Text(pack.coverEmoji)
                         }
                         .tag(SidebarSelection.subject(pack.id))
+                        .help(pack.title)
                     }
                 }
             }
@@ -206,7 +207,7 @@ struct ContentView: View {
                     VStack(alignment: .leading, spacing: 1) {
                         Text("Practice Questions").font(.body)
                         Text("\(subjectRegistry.packs.reduce(0) { $0 + $1.questionCount }) questions across all chapters")
-                            .font(.caption)
+                            .font(.caption.monospacedDigit())
                             .foregroundColor(.secondary)
                     }
                 } icon: {

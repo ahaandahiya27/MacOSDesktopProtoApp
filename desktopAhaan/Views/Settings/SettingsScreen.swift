@@ -184,9 +184,10 @@ struct SettingsScreen: View {
 
             Section(header: Text("Subject packs")) {
                 if subjectRegistry.isLoading {
-                    HStack {
+                    HStack(spacing: 6) {
                         Text("Status")
                         Spacer()
+                        ProgressView().controlSize(.small)
                         Text("Loading…").foregroundColor(.secondary)
                     }
                 } else {

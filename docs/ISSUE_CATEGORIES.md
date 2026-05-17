@@ -369,7 +369,7 @@ in the project memory.
 | TY3 | Single font scale (`.title.bold()` / `.body` / `.caption`) — no semantic intermediate | ✅ `DesignTokens.Typography` enum added (Phase 2) — `heroTitle / pageTitle / sectionTitle / cardTitle / sectionHeader / bodyEmphasis / body / bodyRelaxed / metaCaption / microCaption / mono / monoBold`. Call-site migration deferred to Phase 6 |
 | TY4 | Dynamic Type at xLarge unverified — dup of H4 | 🟡 |
 | TY5 | Line-height (`.lineSpacing`) applied inconsistently | 🟡 `DesignTokens.Typography` now exposes `tightLineSpacing` (1pt) / `bodyLineSpacing` (3pt) / `looseLineSpacing` (5pt) primitives. Call-site rollout deferred to Phase 6 |
-| TY6 | Sidebar item titles truncate at narrow widths with no tooltip | 🟡 Phase 4 |
+| TY6 | Sidebar item titles truncate at narrow widths with no tooltip | ✅ subject rows now carry `.help(pack.title)` for hover tooltip showing full title when the 2-line truncation kicks in. Recent rows already had `.help("Jump to \(item.title)")`. QuizBank / Tool rows have short titles that don't truncate |
 | TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
 | TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ✅ rolled out — DiscoverShell header counter uses `Font.monoDigitCaption` (Big-Sur-safe wrapper around `NSFont.monospacedDigitSystemFont`). Other counter sites use the `.monospacedDigit()` Font modifier already proven on this codebase (`DiscoverProgressDashboard` × 3, `CommandPalette` result count, `QuizBank` toolbar) so digit columns stay aligned as state changes |
 | TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
@@ -434,7 +434,7 @@ in the project memory.
 | MO3 | Got It state-change has no completion celebration | ❌ Phase 6 |
 | MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
-| MO6 | Loading / decoding states not animated (just static text) | ❌ |
+| MO6 | Loading / decoding states not animated (just static text) | ✅ audit: ContentView sidebar / OCR / Translator already use `ProgressView` for in-flight states. SettingsScreen "Loading…" status row was the lone bare-text holdout — now has a small `ProgressView().controlSize(.small)` spinner alongside |
 | MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback applied app-wide (see AC4 ✅). Scale / color hover states (e.g., card lift, background tint shift) still pending — would close fully with the same `HoverableCardModifier` mentioned in CL9 |
 
 ### Z.CP — Component consistency
@@ -471,7 +471,7 @@ in the project memory.
 |----|----------|--------|
 | SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 Phase 4 |
 | SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
-| SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | 🟡 |
+| SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | ✅ dup of TY6 — subject rows now carry `.help(pack.title)` |
 | SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
 | SB5 | Subject badges inconsistent — dup of CL7 | 🟡 |
 | SB6 | Active subject / tool selection style varies | ❌ |
