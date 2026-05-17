@@ -7,6 +7,7 @@ struct Scene8_RestVsRun: View {
     let onComplete: () -> Void
 
     @State private var activity: Double = 0   // 0=sleep, 1=sit, 2=walk, 3=run, 4=sprint
+    @State private var runSpeedKMH: Double = 6   // free-play: a different angle — heart rate vs running speed
 
     private var bpm: Int {
         let table = [12, 16, 22, 35, 55]
@@ -51,16 +52,31 @@ struct Scene8_RestVsRun: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 11 Bio → NEET",
-                detail: "Class 11 'Breathing' covers rate of breathing (12-16/min rest, up to 60/min exercise), tidal volume, vital capacity, residual volume. NEET asks lung-volume capacity questions every year. Class 12 adds asthma, emphysema, oxygen debt physiology."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
+            Group {
+                LookingAheadCallout(
+                    title: "Class 11 Bio → NEET",
+                    detail: "Class 11 'Breathing' covers rate of breathing (12-16/min rest, up to 60/min exercise), tidal volume, vital capacity, residual volume. NEET asks lung-volume capacity questions every year. Class 12 adds asthma, emphysema, oxygen debt physiology."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Rest vs stair run",
-                detail: "Count breaths/min sitting still. Then run up and down a flight of stairs 3 times. Count again immediately. The rate doubles or triples — your muscles demanded more oxygen."
+                TryAtHomeCallout(
+                    title: "Rest vs stair run",
+                    detail: "Count breaths/min sitting still. Then run up and down a flight of stairs 3 times. Count again immediately. The rate doubles or triples — your muscles demanded more oxygen."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
+
+            DiscoveryWidget(
+                title: "Discovery — heart rate vs running speed",
+                subtitle: "A normal child's resting heart rate is ~80 bpm. Drag the speed to see how fast the heart works at each pace.",
+                value: $runSpeedKMH,
+                range: 0...20,
+                step: 0.5,
+                valueLabel: { v in String(format: "Speed: %.1f km/h", v) },
+                output: runningHeartRateExplanation
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
@@ -69,5 +85,24 @@ struct Scene8_RestVsRun: View {
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func runningHeartRateExplanation(_ kmh: Double) -> String {
+        // Rough model: 80 bpm resting + ~6 bpm per km/h above zero.
+        let hr = Int(80 + kmh * 6)
+        let label: String
+        switch kmh {
+        case ..<1:
+            label = "Standing still — your heart ticks along at baseline."
+        case ..<5:
+            label = "Casual walk. Heart rate barely lifts."
+        case ..<9:
+            label = "Brisk walk / light jog — comfortable warm-up pace."
+        case ..<14:
+            label = "Steady running. Sustainable for several minutes if trained."
+        default:
+            label = "Near-sprint! Heart and lungs at near-maximum — not sustainable for more than a minute or two."
+        }
+        return "Estimated heart rate ≈ \(hr) bpm. \(label)"
     }
 }

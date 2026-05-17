@@ -23,6 +23,7 @@ struct Scene3_PercolationRate: View {
     @State private var pouring = false
     @State private var fillFraction: CGFloat = 0
     @State private var runID: UUID = UUID()
+    @State private var sandPct: Double = 50          // free-play: how sandy is your soil?
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Cap animation to 5 s so clayey doesn't feel broken (was 15 s).
@@ -70,16 +71,31 @@ struct Scene3_PercolationRate: View {
                 .font(.headline)
                 .foregroundColor(Color.compatIndigo)
 
-            SoftShadowCard(padding: 14) {
-                Text("Percolation = how fast water seeps down. Sandy soils drain fast (low water holding). Clayey soils drain slowly (waterlogged). Loamy soils are in between — ideal for most crops.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
+            Group {
+                SoftShadowCard(padding: 14) {
+                    Text("Percolation = how fast water seeps down. Sandy soils drain fast (low water holding). Clayey soils drain slowly (waterlogged). Loamy soils are in between — ideal for most crops.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Three-cup race",
-                detail: "Get three plastic cups; punch the same number of holes in the bottoms. Fill one with sand, one with garden soil, one with clay-rich mud. Pour the same amount of water in each and time how fast it drains."
+                TryAtHomeCallout(
+                    title: "Three-cup race",
+                    detail: "Get three plastic cups; punch the same number of holes in the bottoms. Fill one with sand, one with garden soil, one with clay-rich mud. Pour the same amount of water in each and time how fast it drains."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
+
+            DiscoveryWidget(
+                title: "Discovery — adjust the sand content",
+                subtitle: "Real soils are mixtures. More sand = bigger gaps = faster drainage. Drag to see the percolation rate.",
+                value: $sandPct,
+                range: 0...100,
+                step: 5,
+                valueLabel: { v in String(format: "Sand: %.0f%%", v) },
+                output: sandPercolationExplanation
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
@@ -89,5 +105,22 @@ struct Scene3_PercolationRate: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onDisappear { runID = UUID() }
+    }
+
+    private func sandPercolationExplanation(_ pct: Double) -> String {
+        // Linear blend between clayey (~4 ml/min) and sandy (~30 ml/min).
+        let rate = 4 + (pct / 100.0) * 26
+        let label: String
+        switch pct {
+        case ..<20:
+            label = "Clay-dominant. Holds water for days — great for rice paddies, bad drainage."
+        case ..<55:
+            label = "Loam — the gardener's sweet spot. Holds enough water AND drains the excess."
+        case ..<85:
+            label = "Sandy loam. Used for desert-fringe crops like millet and groundnut."
+        default:
+            label = "Pure sand. Water rushes through; cacti and adapted shrubs only."
+        }
+        return String(format: "Percolation ≈ %.1f mL/min. ", rate) + label
     }
 }
