@@ -20,6 +20,7 @@ struct Scene6_PeriscopeBuilder: View {
 
                 VStack(spacing: 6) {
                     Text(built ? "👀" : "🚧").font(.system(size: 38))
+                        .accessibilityLabel(built ? "Looking out through the periscope" : "Periscope not yet assembled")
                     Rectangle().fill(Color.compatIndigo.opacity(built ? 0.8 : 0.3))
                         .frame(width: 8, height: 50)
                         .rotationEffect(.degrees(built ? 45 : 0))

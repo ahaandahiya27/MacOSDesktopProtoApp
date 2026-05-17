@@ -95,7 +95,7 @@ Done:
 Still deferred:
 
 - **H-1** Reusable `RayDiagram` component (cross-cuts Ch 14 + Ch 15).
-- **H-3** Comprehensive VoiceOver label sweep on emoji art across all 99 scenes (added in HeartBeats, PulseCounter, MirrorMirror so far).
+- **H-3** Partial sweep done — added `.accessibilityLabel` to 9 flagship emoji visuals (Ch 8 balloon, Ch 9 worm, Ch 10 lungs & yeast balloon, Ch 11 kidney, Ch 12 flower, Ch 13 sundial shadow, Ch 15 periscope, Ch 18 drain-water-path drop). Comprehensive label-everything-everywhere sweep still TBD.
 - ~~H-5~~ Done above. Could extend per-scene title accents in a future polish run.
 - ~~H-6~~ Done — see follow-up batch below.
 - **H-7** Draggable circuit wires (Ch 14 Scene 1).

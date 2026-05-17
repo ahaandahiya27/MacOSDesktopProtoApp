@@ -21,6 +21,7 @@ struct Scene5_KidneyFilter: View {
                 }
                 Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
                 Text("🫘").font(.system(size: 80))
+                    .accessibilityLabel("Kidney filtering blood")
                 Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
                 VStack {
                     Text(filtered ? "💧" : "—").font(.system(size: 56))

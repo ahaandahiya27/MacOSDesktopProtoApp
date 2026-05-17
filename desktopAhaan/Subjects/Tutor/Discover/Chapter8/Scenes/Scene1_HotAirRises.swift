@@ -26,6 +26,7 @@ struct Scene1_HotAirRises: View {
                     .font(.system(size: 96))
                     .offset(y: balloonY)
                     .animation(reduceMotion ? .none : .easeOut(duration: 1.2), value: balloonY)
+                    .accessibilityLabel(flameOn ? "Hot-air balloon rising" : "Hot-air balloon at rest")
 
                 VStack {
                     Spacer()

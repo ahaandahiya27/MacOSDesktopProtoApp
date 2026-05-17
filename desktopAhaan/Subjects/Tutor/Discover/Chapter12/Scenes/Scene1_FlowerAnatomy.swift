@@ -32,6 +32,7 @@ struct Scene1_FlowerAnatomy: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.pink.opacity(0.10)).frame(width: 320, height: 220)
                 Text("🌷").font(.system(size: 120))
+                    .accessibilityLabel("A flower showing its sepals, petals, stamen and pistil")
             }
 
             HStack(spacing: 10) {

@@ -32,6 +32,7 @@ struct Scene7_WormEngineer: View {
                 Text("🪱")
                     .font(.system(size: 44))
                     .offset(y: CGFloat(depth) * 130 - 130)
+                    .accessibilityLabel("Earthworm at depth \(Int(depth * 100)) percent")
             }
 
             Slider(value: $depth, in: 0...1) { _ in

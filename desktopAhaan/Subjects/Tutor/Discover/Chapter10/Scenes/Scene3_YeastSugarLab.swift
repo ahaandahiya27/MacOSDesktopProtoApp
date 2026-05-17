@@ -22,6 +22,7 @@ struct Scene3_YeastSugarLab: View {
                 VStack(spacing: 4) {
                     Text("🎈").font(.system(size: added ? 96 : 40))
                         .animation(reduceMotion ? .none : .easeInOut(duration: 1.6), value: added)
+                        .accessibilityLabel(added ? "Balloon inflated by yeast CO2" : "Empty balloon")
                     Text("🧪").font(.system(size: 64))
                 }
                 .padding(.top, 16)

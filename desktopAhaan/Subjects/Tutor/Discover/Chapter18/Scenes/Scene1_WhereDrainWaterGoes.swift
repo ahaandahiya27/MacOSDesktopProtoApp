@@ -21,7 +21,10 @@ struct Scene1_WhereDrainWaterGoes: View {
                         Text(path[i]).font(.headline)
                             .foregroundColor(i <= step ? Color.compatIndigo : .secondary)
                         Spacer()
-                        if i <= step { Image(systemName: "drop.fill").foregroundColor(.blue) }
+                        if i <= step {
+                            Image(systemName: "drop.fill").foregroundColor(.blue)
+                                .accessibilityLabel("Reached this stage of the wastewater journey")
+                        }
                     }
                     .padding(10)
                     .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
