@@ -11,6 +11,7 @@ struct Scene1_WeatherVsClimate: View {
     @State private var selectedSide: Side? = nil
     @State private var weatherPulse = false
     @State private var climatePulse = false
+    @State private var yearsAveraged: Double = 0       // free-play slider: 0 days → 30 years
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private enum Side: String { case weather, climate }
@@ -84,6 +85,17 @@ struct Scene1_WeatherVsClimate: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    DiscoveryWidget(
+                        title: "Discovery — how much time = climate?",
+                        subtitle: "Slide the years you average over. See exactly where weather ends and climate begins.",
+                        value: $yearsAveraged,
+                        range: 0...30,
+                        step: 1,
+                        valueLabel: { v in averagingLabel(v) },
+                        output: averagingExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }
@@ -101,6 +113,29 @@ struct Scene1_WeatherVsClimate: View {
             return "Climate is the average weather pattern of a place measured over 25 years or more. It tells us what to generally expect — tropical regions are warm year-round, polar regions stay cold."
         case nil:
             return "Weather is what you wear today; climate is what's in your wardrobe. Tap each side to learn more!"
+        }
+    }
+
+    private func averagingLabel(_ years: Double) -> String {
+        if years < 1 { return "Today only" }
+        if years < 2 { return "1 year" }
+        return "\(Int(years)) years"
+    }
+
+    private func averagingExplanation(_ years: Double) -> String {
+        switch years {
+        case ..<1:
+            return "That's pure weather — what's happening right NOW: sunny, raining, hot, cold."
+        case ..<2:
+            return "One year covers all four seasons but only ONE of each. Still mostly weather."
+        case ..<5:
+            return "A few years smooth out odd seasons, but a single hot summer can still skew the average."
+        case ..<15:
+            return "Now patterns emerge — average monsoon onset, average winter temperature. Edging towards climate."
+        case ..<25:
+            return "Almost climate. The official definition uses 30 years to define a region's climate."
+        default:
+            return "That's full climate: a 30-year (or longer) average. This is what tells us 'India is tropical, Antarctica is polar'."
         }
     }
 
