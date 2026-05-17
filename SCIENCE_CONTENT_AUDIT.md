@@ -126,7 +126,25 @@ Closes part of the §5 backlog "Topic-level articles for Ch 8-18". Ch 15 (Light)
 
 Each article is ~350-500 words, NCERT-aligned, with "Try this at home" sidebars where natural. Cross-references between mirror types and back to Ch 8 (reflection ≡ echoes). Appended a small `table` ruleset to `ch15_style.css` so the comparison chart in c04 renders cleanly. Updated `ArticleIndex.swift` with 5 new entries (`ch15_t01`, `ch15_t01_c01..c04`).
 
-Topics 2 (Refraction & Prism) and 3 (Lenses) remain on the backlog.
+Topic 3 (Lenses) remains on the backlog. Topic 2 now done — see below.
+
+## Ch 15 (Light) — Topic 2 articles (Refraction, Prism & Rainbow)
+
+Four new articles, each ~400-550 words, NCERT-aligned with explicit "Looking ahead" tie-ins to Class 10 / 11+12 / JEE / NEET — per the user's "go beyond scope for exam prep continuity" direction:
+
+- `ch15_t02_overview.html` — Topic overview (refraction = bending; prism splits white; rainbow = many prisms)
+- `ch15_t02_c01.html` — Refraction (Class 7 mechanism + the pencil-in-water illusion + a Class 10/12/JEE preview of Snell's law n₁sinθ₁ = n₂sinθ₂, refractive index of common materials, TIR, optical fibres, apparent depth, mirage)
+- `ch15_t02_c02.html` — The Prism & Dispersion (Newton 1666 → VIBGYOR → why each colour bends differently → Class 10 atmospheric optics → Class 12/JEE prism deviation formula δ = (μ-1)A and angular dispersion)
+- `ch15_t02_c03.html` — The Rainbow (geometry inside one drop → 42° angle → why arc, not line → primary vs secondary → atmospheric optics extensions)
+
+Each concept article has three structured sections that mirror the SwiftUI sidebar styles already in the Discover scenes:
+- **The concept itself** (corresponds to `SoftShadowCard`).
+- **"Try this at home"** (corresponds to `TryAtHomeCallout`).
+- **"Looking ahead"** (corresponds to `LookingAheadCallout`).
+
+The chapter article reader and the Discover scenes now teach the same three-layer story.
+
+ArticleIndex.swift gains 4 new entries (`ch15_t02`, `ch15_t02_c01..c03`). Estimated read times tuned 5-7 min each.
 
 ## Hands-on / "Try this at home" component (NEW)
 

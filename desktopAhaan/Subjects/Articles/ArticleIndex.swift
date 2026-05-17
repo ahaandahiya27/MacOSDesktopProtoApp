@@ -697,6 +697,20 @@ enum ArticleIndex {
             title: "The Convex Mirror",
             chapterFolder: chapter15Folder, estimatedMinutes: 6),
 
+        // Topic 2: Refraction, Prism & Rainbow
+        "ch15_t02": ArticleEntry(id: "ch15_t02", filename: "ch15_t02_overview.html",
+            title: "Refraction, Prism & Rainbow — Topic Overview",
+            chapterFolder: chapter15Folder, estimatedMinutes: 5),
+        "ch15_t02_c01": ArticleEntry(id: "ch15_t02_c01", filename: "ch15_t02_c01.html",
+            title: "Refraction",
+            chapterFolder: chapter15Folder, estimatedMinutes: 7),
+        "ch15_t02_c02": ArticleEntry(id: "ch15_t02_c02", filename: "ch15_t02_c02.html",
+            title: "The Prism & Dispersion",
+            chapterFolder: chapter15Folder, estimatedMinutes: 7),
+        "ch15_t02_c03": ArticleEntry(id: "ch15_t02_c03", filename: "ch15_t02_c03.html",
+            title: "The Rainbow",
+            chapterFolder: chapter15Folder, estimatedMinutes: 7),
+
         // ================================================================
         // CHAPTER 16 — Water: A Precious Resource
         // ================================================================
