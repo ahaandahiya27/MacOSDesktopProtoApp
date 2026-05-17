@@ -51,19 +51,23 @@ struct Scene5_LensWorkshop: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 10 / JEE / NEET Optics",
-                detail: "Lenses get the same formula treatment: 1/v - 1/u = 1/f (sign convention matters!), plus power P = 1/f (dioptres) in Class 10. JEE adds lensmaker's equation; NEET tests the eye + corrective lenses (myopia, hypermetropia)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                LookingAheadCallout(
+                    title: "Class 10 / JEE / NEET Optics",
+                    detail: "Lenses get the same formula treatment: 1/v - 1/u = 1/f (sign convention matters!), plus power P = 1/f (dioptres) in Class 10. JEE adds lensmaker's equation; NEET tests the eye + corrective lenses (myopia, hypermetropia)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Magnifying-glass eyeglass",
-                detail: "If you wear reading glasses (or borrow), hold one lens between a bright window and a piece of paper. Slide it until you see a TINY, inverted image of the window on the paper — a real image. Move the same lens close to text and see the magnified, upright (virtual) image."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Magnifying-glass eyeglass",
+                    detail: "If you wear reading glasses (or borrow), hold one lens between a bright window and a piece of paper. Slide it until you see a TINY, inverted image of the window on the paper — a real image. Move the same lens close to text and see the magnified, upright (virtual) image."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)

@@ -42,26 +42,30 @@ struct Scene1_MirrorMirror: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 10 / JEE Optics",
-                detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                LookingAheadCallout(
+                    title: "Class 10 / JEE Optics",
+                    detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Mirror + torch on paper",
-                detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Mirror + torch on paper",
+                    detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            RelatedConceptsCallout(
-                title: "Related: Ch 8 (Winds, Storms)",
-                detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                RelatedConceptsCallout(
+                    title: "Related: Ch 8 (Winds, Storms)",
+                    detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)

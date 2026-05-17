@@ -18,12 +18,7 @@ struct Scene8_Kaleidoscope: View {
                 Circle().fill(Color.black).frame(width: 240, height: 240)
                 ForEach(0..<6, id: \.self) { i in
                     ForEach(0..<3, id: \.self) { j in
-                        Image(systemName: ["star.fill", "diamond.fill", "circle.fill", "triangle.fill"][((seed * (i + 1) * (j + 1)) % 4)])
-                            .foregroundColor([.red, .yellow, .green, .blue, .purple, .orange][((seed * i + j) % 6 + 6) % 6])
-                            .font(.system(size: 24))
-                            .offset(x: CGFloat(Double((seed * (j + 1)) % 70 - 35)),
-                                    y: CGFloat(Double((seed * (i + 1)) % 70 - 35) - 60))
-                            .rotationEffect(.degrees(Double(i) * 60))
+                        KaleidoscopeTile(seed: seed, i: i, j: j)
                     }
                 }
             }
@@ -60,5 +55,32 @@ struct Scene8_Kaleidoscope: View {
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+/// Extracted tile so Swift 5.5 (Xcode 13.2.1 / Big Sur target) can
+/// type-check the body in reasonable time. Inlined, the array-literal
+/// subscripting + Int/Double/CGFloat mixing inside two nested ForEach
+/// closures pushes type inference into a timeout.
+private struct KaleidoscopeTile: View {
+    let seed: Int
+    let i: Int
+    let j: Int
+
+    private static let symbols: [String] = ["star.fill", "diamond.fill", "circle.fill", "triangle.fill"]
+    private static let palette: [Color] = [.red, .yellow, .green, .blue, .purple, .orange]
+
+    var body: some View {
+        let symbolIndex: Int = (seed * (i + 1) * (j + 1)) % Self.symbols.count
+        let colorIndex: Int = (seed * i + j) % Self.palette.count
+        let dx: CGFloat = CGFloat((seed * (j + 1)) % 70 - 35)
+        let dy: CGFloat = CGFloat((seed * (i + 1)) % 70 - 35 - 60)
+        let rotation: Double = Double(i) * 60
+
+        return Image(systemName: Self.symbols[symbolIndex])
+            .foregroundColor(Self.palette[colorIndex])
+            .font(.system(size: 24))
+            .offset(x: dx, y: dy)
+            .rotationEffect(.degrees(rotation))
     }
 }

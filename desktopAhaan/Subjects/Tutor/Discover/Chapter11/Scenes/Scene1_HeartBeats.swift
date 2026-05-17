@@ -48,26 +48,30 @@ struct Scene1_HeartBeats: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 11 Biology → NEET",
-                detail: "In Class 11 \"Body Fluids and Circulation\", the same heart you played with here becomes the focus: SAN/AVN pacemaker cells, cardiac cycle, ECG reading, double circulation. A perennial NEET high-yield topic."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                LookingAheadCallout(
+                    title: "Class 11 Biology → NEET",
+                    detail: "In Class 11 \"Body Fluids and Circulation\", the same heart you played with here becomes the focus: SAN/AVN pacemaker cells, cardiac cycle, ECG reading, double circulation. A perennial NEET high-yield topic."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Heartbeat through a tube",
-                detail: "Roll up a sheet of paper into a long tube. Press one end to a friend's chest (over the heart, below the left collarbone) and the other to your ear. Listen — you'll hear lub-DUB...lub-DUB."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Heartbeat through a tube",
+                    detail: "Roll up a sheet of paper into a long tube. Press one end to a friend's chest (over the heart, below the left collarbone) and the other to your ear. Listen — you'll hear lub-DUB...lub-DUB."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            RelatedConceptsCallout(
-                title: "Related: Ch 10 (Respiration), Ch 1 (Nutrition in Plants)",
-                detail: "The heart's right side pumps blood TO the lungs (Ch 10) to pick up oxygen; the left side pumps it to every cell that respires (Ch 10 again). The same oxygen was made by plants doing photosynthesis (Ch 1)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                RelatedConceptsCallout(
+                    title: "Related: Ch 10 (Respiration), Ch 1 (Nutrition in Plants)",
+                    detail: "The heart's right side pumps blood TO the lungs (Ch 10) to pick up oxygen; the left side pumps it to every cell that respires (Ch 10 again). The same oxygen was made by plants doing photosynthesis (Ch 1)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)

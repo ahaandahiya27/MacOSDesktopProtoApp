@@ -56,19 +56,23 @@ struct Scene2_ConcaveConvex: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "The polished spoon test",
-                detail: "Look at your face in the inside (concave) of a polished steel spoon held close — you look magnified, upright. Now slowly move it away — your reflection shrinks, blurs, then flips upside down. You just crossed the focal point. Flip the spoon: the back (convex) always shows you smaller and upright, no matter the distance."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                TryAtHomeCallout(
+                    title: "The polished spoon test",
+                    detail: "Look at your face in the inside (concave) of a polished steel spoon held close — you look magnified, upright. Now slowly move it away — your reflection shrinks, blurs, then flips upside down. You just crossed the focal point. Flip the spoon: the back (convex) always shows you smaller and upright, no matter the distance."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 10 / JEE Optics",
-                detail: "Class 10 formalises this with the mirror formula 1/v + 1/u = 1/f (sign convention matters!) and magnification m = -v/u. JEE adds image construction with 3 principal rays, sign-convention problems on combined mirror-lens systems, and ray-tracing in spherical concave mirrors used inside telescopes."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                LookingAheadCallout(
+                    title: "Class 10 / JEE Optics",
+                    detail: "Class 10 formalises this with the mirror formula 1/v + 1/u = 1/f (sign convention matters!) and magnification m = -v/u. JEE adds image construction with 3 principal rays, sign-convention problems on combined mirror-lens systems, and ray-tracing in spherical concave mirrors used inside telescopes."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)

@@ -49,26 +49,30 @@ struct Scene5_O2CO2Balance: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 12 Bio → NEET",
-                detail: "Class 12 'Ecosystem' formalises this as the carbon cycle, with quantitative carbon flux numbers. NEET asks ecosystem-level energy and carbon flow (10% rule, gross vs net primary productivity, decomposer role) every year. Climate change is studied in 'Environmental Issues'."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                LookingAheadCallout(
+                    title: "Class 12 Bio → NEET",
+                    detail: "Class 12 'Ecosystem' formalises this as the carbon cycle, with quantitative carbon flux numbers. NEET asks ecosystem-level energy and carbon flow (10% rule, gross vs net primary productivity, decomposer role) every year. Climate change is studied in 'Environmental Issues'."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Limewater + leafy plant test",
-                detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Limewater + leafy plant test",
+                    detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            RelatedConceptsCallout(
-                title: "Related: Ch 1, Ch 10, Ch 11",
-                detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                RelatedConceptsCallout(
+                    title: "Related: Ch 1, Ch 10, Ch 11",
+                    detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)

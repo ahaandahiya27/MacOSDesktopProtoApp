@@ -52,26 +52,30 @@ struct Scene7_WormEngineer: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 11/12 Bio → NEET",
-                detail: "Earthworms are studied in detail in Class 11 'Structural Organisation in Animals' — their anatomy, blood vascular system, and nephridial excretion. NEET asks earthworm-specific morphology questions every cycle. Class 12 'Microbes in Human Welfare' covers vermicompost and how earthworm cultures help in soil enrichment."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped so the outer VStack stays within Swift 5.5's
+            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+            Group {
+                LookingAheadCallout(
+                    title: "Class 11/12 Bio → NEET",
+                    detail: "Earthworms are studied in detail in Class 11 'Structural Organisation in Animals' — their anatomy, blood vascular system, and nephridial excretion. NEET asks earthworm-specific morphology questions every cycle. Class 12 'Microbes in Human Welfare' covers vermicompost and how earthworm cultures help in soil enrichment."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Worm hunt after rain",
-                detail: "Just after a rain shower, walk through a garden. You'll spot earthworms on the surface — they came up because their tunnels flooded. Note how moist soil feels different from dry soil."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Worm hunt after rain",
+                    detail: "Just after a rain shower, walk through a garden. You'll spot earthworms on the surface — they came up because their tunnels flooded. Note how moist soil feels different from dry soil."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            RelatedConceptsCallout(
-                title: "Related: Ch 17 (Forests), Ch 18 (Wastewater)",
-                detail: "Earthworms decompose leaf litter into humus — Ch 17 shows the same animals at work in forest floors. Modern composting (Ch 18) uses the same biology to recycle home kitchen waste."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                RelatedConceptsCallout(
+                    title: "Related: Ch 17 (Forests), Ch 18 (Wastewater)",
+                    detail: "Earthworms decompose leaf litter into humus — Ch 17 shows the same animals at work in forest floors. Modern composting (Ch 18) uses the same biology to recycle home kitchen waste."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
