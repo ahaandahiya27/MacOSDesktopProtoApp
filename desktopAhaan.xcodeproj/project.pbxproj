@@ -163,6 +163,11 @@
 		04F59E2B2FB94F0400568BDE /* ch18_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E2A2FB94F0400568BDE /* ch18_overview.html */; };
 		04F59E2D2FB95A6100568BDE /* ChapterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */; };
 		04F59E2F2FB9620A00568BDE /* TryAtHomeCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59E2E2FB9620A00568BDE /* TryAtHomeCallout.swift */; };
+		04F59E312FB9632900568BDE /* ch15_t01_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E302FB9632900568BDE /* ch15_t01_overview.html */; };
+		04F59E332FB9632900568BDE /* ch15_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E322FB9632900568BDE /* ch15_t01_c01.html */; };
+		04F59E352FB9632A00568BDE /* ch15_t01_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E342FB9632A00568BDE /* ch15_t01_c02.html */; };
+		04F59E372FB9632A00568BDE /* ch15_t01_c03.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E362FB9632A00568BDE /* ch15_t01_c03.html */; };
+		04F59E392FB9632B00568BDE /* ch15_t01_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E382FB9632B00568BDE /* ch15_t01_c04.html */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -638,6 +643,11 @@
 		04F59E2A2FB94F0400568BDE /* ch18_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_overview.html; sourceTree = "<group>"; };
 		04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTheme.swift; sourceTree = "<group>"; };
 		04F59E2E2FB9620A00568BDE /* TryAtHomeCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAtHomeCallout.swift; sourceTree = "<group>"; };
+		04F59E302FB9632900568BDE /* ch15_t01_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t01_overview.html; sourceTree = "<group>"; };
+		04F59E322FB9632900568BDE /* ch15_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t01_c01.html; sourceTree = "<group>"; };
+		04F59E342FB9632A00568BDE /* ch15_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t01_c02.html; sourceTree = "<group>"; };
+		04F59E362FB9632A00568BDE /* ch15_t01_c03.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t01_c03.html; sourceTree = "<group>"; };
+		04F59E382FB9632B00568BDE /* ch15_t01_c04.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t01_c04.html; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -1352,6 +1362,11 @@
 			children = (
 				04F59E192FB94EFF00568BDE /* ch15_style.css */,
 				04F59E1B2FB94F0000568BDE /* ch15_overview.html */,
+				04F59E302FB9632900568BDE /* ch15_t01_overview.html */,
+				04F59E322FB9632900568BDE /* ch15_t01_c01.html */,
+				04F59E342FB9632A00568BDE /* ch15_t01_c02.html */,
+				04F59E362FB9632A00568BDE /* ch15_t01_c03.html */,
+				04F59E382FB9632B00568BDE /* ch15_t01_c04.html */,
 			);
 			path = Chapter15;
 			sourceTree = "<group>";
@@ -2262,6 +2277,7 @@
 				2FF3961EEC3B9471C84D0298 /* ch01_t01_c04.html in Resources */,
 				1B01FC8866F170735B8AC12E /* ch01_t01_c05.html in Resources */,
 				04F59E1A2FB94EFF00568BDE /* ch15_style.css in Resources */,
+				04F59E392FB9632B00568BDE /* ch15_t01_c04.html in Resources */,
 				04F59E062FB94EF900568BDE /* ch11_style.css in Resources */,
 				02FF903720E65789B25CE7B1 /* ch01_t01_c06.html in Resources */,
 				ED4C85FD348C854BAA290065 /* ch01_t01_c07.html in Resources */,
@@ -2306,6 +2322,7 @@
 				35393992B3343A7ECE1F00F3 /* ch07_t01_c03.html in Resources */,
 				4BA12482023B1A69E50EF7E2 /* ch07_t01_c04.html in Resources */,
 				55F602916D21A2C0CD35C3F3 /* ch07_t01_c05.html in Resources */,
+				04F59E352FB9632A00568BDE /* ch15_t01_c02.html in Resources */,
 				A8A91EDBFC916E94353871E5 /* ch07_t01_c06.html in Resources */,
 				DAB94F39EC352F0DA9E3F567 /* ch07_t01_c07.html in Resources */,
 				36DC146F83127D1D27F61926 /* ch07_t01_overview.html in Resources */,
@@ -2341,6 +2358,7 @@
 				32D8858C48FE3975559EDE31 /* ch19_t03_c04.html in Resources */,
 				04F59DF92FB94EF500568BDE /* ch08_overview.html in Resources */,
 				75E792CCFB86C4CCFD1CF43E /* ch19_t03_c05.html in Resources */,
+				04F59E332FB9632900568BDE /* ch15_t01_c01.html in Resources */,
 				4005EF57F7CC5740997CF94A /* ch19_t03_c06.html in Resources */,
 				54BB1A91AF01CE1D9C1FB0D7 /* ch19_t03_c07.html in Resources */,
 				21DBE83FA05EB89DC36C9F61 /* ch19_t03_overview.html in Resources */,
@@ -2355,6 +2373,7 @@
 				5A4D45558ECDAE36DCDB0A53 /* ch05_t01_c06.html in Resources */,
 				CE94715C819089529ABF0259 /* ch05_t01_c07.html in Resources */,
 				8F7E37770D9E733ECC6851DD /* ch05_t01_overview.html in Resources */,
+				04F59E372FB9632A00568BDE /* ch15_t01_c03.html in Resources */,
 				139BC2B1D9AF850975FAE130 /* ch05_t02_overview.html in Resources */,
 				04F59DFE2FB94EF700568BDE /* ch09_overview.html in Resources */,
 				318220D5B53CC11DACB9661F /* ch05_t03_overview.html in Resources */,
@@ -2423,6 +2442,7 @@
 				46945BA72ADB7913837231E7 /* ch04_t01_overview.html in Resources */,
 				9F8D11BCDEAF3F2E5708391F /* ch04_t02_c01.html in Resources */,
 				369AD68D9E0CE92A9CABAD45 /* ch04_t02_c02.html in Resources */,
+				04F59E312FB9632900568BDE /* ch15_t01_overview.html in Resources */,
 				CF2131CE86FB1979CCBEFFEC /* ch04_t02_c03.html in Resources */,
 				05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */,
 				04F59E2B2FB94F0400568BDE /* ch18_overview.html in Resources */,

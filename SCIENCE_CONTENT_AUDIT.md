@@ -79,6 +79,20 @@ Verified statically:
 
 Manual run-the-app verification is left for the user as the final smoke check.
 
+## Ch 15 (Light) — Topic 1 articles (Reflection & Mirrors)
+
+Closes part of the §5 backlog "Topic-level articles for Ch 8-18". Ch 15 (Light) gets full topic + concept article scaffolding for Topic 1, matching the depth of Ch 1 / Ch 5 / Ch 6 / Ch 19:
+
+- `ch15_t01_overview.html` — Topic 1 overview (Reflection & Mirrors)
+- `ch15_t01_c01.html` — The Law of Reflection
+- `ch15_t01_c02.html` — The Plane Mirror
+- `ch15_t01_c03.html` — The Concave Mirror
+- `ch15_t01_c04.html` — The Convex Mirror
+
+Each article is ~350-500 words, NCERT-aligned, with "Try this at home" sidebars where natural. Cross-references between mirror types and back to Ch 8 (reflection ≡ echoes). Appended a small `table` ruleset to `ch15_style.css` so the comparison chart in c04 renders cleanly. Updated `ArticleIndex.swift` with 5 new entries (`ch15_t01`, `ch15_t01_c01..c04`).
+
+Topics 2 (Refraction & Prism) and 3 (Lenses) remain on the backlog.
+
 ## Hands-on / "Try this at home" component (NEW)
 
 - ✅ New `TryAtHomeCallout` component at `Subjects/Tutor/Discover/Components/TryAtHomeCallout.swift`. Orange-tinted box with a raised-hand SF Symbol, used inside scenes to suggest a quick real-world experiment using everyday materials. Distinct from `SoftShadowCard` so kids learn to recognise "this is something I can actually do" at a glance.

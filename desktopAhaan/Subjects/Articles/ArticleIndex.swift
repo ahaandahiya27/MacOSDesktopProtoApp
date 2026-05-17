@@ -680,6 +680,23 @@ enum ArticleIndex {
             title: "Light — Chapter Overview",
             chapterFolder: chapter15Folder, estimatedMinutes: 7),
 
+        // Topic 1: Reflection & Mirrors
+        "ch15_t01": ArticleEntry(id: "ch15_t01", filename: "ch15_t01_overview.html",
+            title: "Reflection & Mirrors — Topic Overview",
+            chapterFolder: chapter15Folder, estimatedMinutes: 5),
+        "ch15_t01_c01": ArticleEntry(id: "ch15_t01_c01", filename: "ch15_t01_c01.html",
+            title: "The Law of Reflection",
+            chapterFolder: chapter15Folder, estimatedMinutes: 5),
+        "ch15_t01_c02": ArticleEntry(id: "ch15_t01_c02", filename: "ch15_t01_c02.html",
+            title: "The Plane Mirror",
+            chapterFolder: chapter15Folder, estimatedMinutes: 6),
+        "ch15_t01_c03": ArticleEntry(id: "ch15_t01_c03", filename: "ch15_t01_c03.html",
+            title: "The Concave Mirror",
+            chapterFolder: chapter15Folder, estimatedMinutes: 6),
+        "ch15_t01_c04": ArticleEntry(id: "ch15_t01_c04", filename: "ch15_t01_c04.html",
+            title: "The Convex Mirror",
+            chapterFolder: chapter15Folder, estimatedMinutes: 6),
+
         // ================================================================
         // CHAPTER 16 — Water: A Precious Resource
         // ================================================================
