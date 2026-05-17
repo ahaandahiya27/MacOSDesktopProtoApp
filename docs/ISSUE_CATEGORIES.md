@@ -379,14 +379,14 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| TH1 | Dark mode visual sweep never performed end-to-end (dup of J1) | 🟡 Phase 5 |
+| TH1 | Dark mode visual sweep never performed end-to-end (dup of J1) | 🟡 **iMac visual verification needed**. Code-side: chrome surfaces use NSColor-semantic backgrounds; canvas is intentionally fixed-light; body text pinned to `BrandColor.canvasText` (Phase 3 + per-scene title sweep) so titles + body remain legible in system Dark Mode. End-to-end pixel-perfect sweep requires iMac eyeballs |
 | TH2 | Sidebar vs canvas color-mode mismatch | 🟡 dup of CL3 |
 | TH3 | ChapterTheme brand colours hardcoded RGB → don't auto-adapt to scheme | 🟡 **intentional** — `DiscoverBackground` is a fixed sunshine gradient regardless of system colour scheme (the always-light canvas decision documented in CN1/CL1). Chapter accents are therefore tuned to that fixed light canvas; auto-adapting them would break the contrast invariants. Migration to `Color.init(name: bundle:)` + Color Asset variants only valuable if we ever ship a true Dark Discover canvas |
-| TH4 | Tinted card backgrounds nearly identical in Light vs Dark | 🟡 partial — body text now `BrandColor.canvasText` (fixed) so it reads cleanly in both system modes despite the fixed-light canvas. Background tint values themselves not yet differentiated per scheme (deferred — would require an `@Environment(\.colorScheme)`-aware background tint per callout) |
+| TH4 | Tinted card backgrounds nearly identical in Light vs Dark | 🟡 **intentional given fixed-light canvas** — body text pinned to `BrandColor.canvasText` so contrast holds. Differentiating tint per scheme would only matter if the canvas itself adapted to scheme, which it doesn't (sunshine theme is fixed). Closes once a true Dark Discover canvas ships, if ever |
 | TH5 | WKWebView article CSS (`ch*_style.css`) does not respect `prefers-color-scheme` | 🟡 architectural split discovered 2026-05-17: **8 of 19 chapter CSS files already handle dark mode** (Ch 1-7 + 19; they use a `:root { --bg / --text / --accent }` CSS-variable pattern with a `@media (prefers-color-scheme: dark)` block). The remaining 11 (Ch 8-18 minus 19) use a legacy direct-hex pattern and need either per-file dark overrides or a refactor to the CSS-variable pattern. Also: dark-mode usage on the deploy iMac is unverified — may be effectively dead code |
 | TH6 | Accent-tint per chapter not documented (no swatch reference doc) | ✅ `ChapterTheme.swift` documents each of 19 chapters' accent RGB inline with a comment naming the semantic (leaf green, hot red, pH purple, midnight indigo, etc.). The swatch reference IS the code; no separate doc needed |
-| TH7 | "Increase Contrast" macOS accessibility setting unverified | ❌ |
-| TH8 | Reduce Transparency (sidebar vibrancy) unverified | ❌ |
+| TH7 | "Increase Contrast" macOS accessibility setting unverified | 🟡 **iMac verification needed**. App uses system NSColor semantics + `BrandColor.canvasText` (~#212121 vs background gradient) which already exceeds 4.5:1 AA contrast — should respect "Increase Contrast" mode. Verification = toggle the macOS setting on the iMac and screenshot |
+| TH8 | Reduce Transparency (sidebar vibrancy) unverified | 🟡 **iMac verification needed**. Sidebar uses default SwiftUI List which honours system Reduce Transparency automatically (NSVisualEffectView falls back to solid window background). Verification = toggle the macOS setting + screenshot |
 
 ### Z.LY — Layout & spacing
 
@@ -396,8 +396,8 @@ in the project memory.
 | LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 **intentional** — `contentMaxWidth = 1100pt` caps reading-panel width to comfortable 80-character body line length even on 5K canvas. Very-wide windows letterbox to keep prose readable. `contentMaxWidthWide = 1280pt` exists for richer-horizontal cards. Not a bug; if iMac eyeball flags the letterbox as too aggressive on 5K, bump the constant |
 | LY3 | Padding/spacing not tokenised (dup of J8) | ✅ `DesignTokens.Spacing` enum added (Phase 2) — `xxs / xs / sm / md / lg / xl / xxl / xxxl`. Plus `DesignTokens.Radius` — `pill / sm / md / card / lg / xl`. Call-site migration deferred |
 | LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | 🟡 primitives exist (LY3); rollout to scene files is a later pass |
-| LY5 | Sidebar / main divider has no visual separator (border, shadow, vibrancy edge) | 🟡 Phase 4 |
-| LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 |
+| LY5 | Sidebar / main divider has no visual separator (border, shadow, vibrancy edge) | 🟡 **macOS NavigationView default** provides a 1pt separator between sidebar and content automatically (NSSplitView divider). No custom divider needed; visibility on iMac would confirm |
+| LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 **iMac verification needed**. WindowGroup uses `minWidth: 1024, minHeight: 640` (W1 ✅) — content should not overflow at min size since `contentMaxWidth` caps reading panels and chrome adapts. Drag-resize verification = manual on iMac |
 | LY7 | Footer chrome competes with scene's own bottom CTAs | ✅ footer simplified to Prev/Next only (Phase 1) |
 | LY8 | Alignment inconsistencies — some scenes center-aligned, others leading-aligned | 🟡 per-scene VStack alignment is each scene's design choice (interactive widgets often center; reading content leads). Not a systemic bug; chrome (DiscoverShell) is consistent |
 | LY9 | Safe-area / inset handling around title bar unverified in full-screen mode | ✅ audit: SwiftUI `WindowGroup` + `NavigationView` honour macOS title bar / toolbar safe areas by default. `DiscoverBackground` uses `.ignoresSafeArea()` for full-bleed gradient; chrome elements (header, footer) sit inside the standard SwiftUI safe area. No custom safe-area overrides exist. Full-screen mode behaviour is the macOS default (toolbar auto-hides; safe area shrinks) which is correct |
@@ -422,7 +422,7 @@ in the project memory.
 | CN2 | White-on-pale-tint titles below 3:1 large-text minimum | ✅ chrome chapter-accent title (Phase 1) + per-scene `Text(...).font(.largeTitle.bold())` titles in 26 scene files now pinned to `BrandColor.canvasText` (~#212121) instead of inheriting `.primary`. Light Mode change is subtle; Dark Mode no longer renders titles white-on-light (invisible) |
 | CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
 | CN4 | Hyperlink underline / link colour inside articles not audited | ✅ audit: no chapter CSS file styles a general `a {}` selector. Articles use only specific `a.pill` (see-also cross-link chips) + `ol.concept-list li a` (concept-list rows) styles, both already coloured (`var(--indigo)`) with hover underline. Body-paragraph `<a href="...">` inherits browser default blue underline — readable on the light article background. No fix required; standard browser styling is consistent with macOS Help.app conventions |
-| CN5 | Focus ring visibility on macOS on light tints unverified | ❌ |
+| CN5 | Focus ring visibility on macOS on light tints unverified | 🟡 **iMac verification needed**. SwiftUI Buttons inherit the system accent focus ring (usually system-blue at user's Appearance setting). On the pale-blue/pale-green Discover gradient, focus ring should be visible since system-blue ≠ pale-blue at full saturation. Verification = Tab through chrome on iMac and screenshot |
 | CN6 | Selection highlight on sidebar vs canvas unverified | ✅ audit: sidebar uses SwiftUI `List` with `.tag()` selection — native macOS-blue selection highlight, automatic in both light and dark modes against the vibrancy background. No custom in-canvas selection exists (Discover Mode uses scene-stepper-ring, not "selection" in the macOS sense). Standard List behaviour is correct |
 
 ### Z.MO — Motion, feedback, micro-interactions
@@ -461,7 +461,7 @@ in the project memory.
 | DM5 | "Previous / Next" footer competes with in-scene CTA | ✅ footer now pure nav, scene title moved to header (Phase 1) |
 | DM6 | Per-scene chapter accent under-applied | ✅ chapter accent now propagated through SwiftUI environment via `\.chapterAccent` key. `DiscoverShell` sets `.environment(\.chapterAccent, ChapterTheme.accent(for: chapter.id))`; `GotItButton` reads it and uses it as `FilledCTAButtonStyle`'s tint. All 152 scene Got It buttons (calling `GotItButton(action: onComplete)` with no tint param) now show their chapter's accent automatically. Explicit `tint:` param still wins if a scene needs a special colour. Default outside DiscoverShell stays green |
 | DM7 | Completion celebration absent (no confetti / "you finished Discover Mode") | ❌ Phase 6 |
-| DM8 | Boss Quiz visual treatment unaudited | ❌ |
+| DM8 | Boss Quiz visual treatment unaudited | 🟡 **iMac eyeball needed** — `Scene9_BossQuiz_*` files exist per chapter with `Text("Boss Quiz").font(.largeTitle.bold())` titles (now pinned to canvasText), `ProgressView`, and per-question MCQ rows. Whether it "feels like an event" vs "another card" is a screenshot review |
 | DM9 | Callouts crammed below interactive widget — feels like footnotes | 🟡 per-scene layout decision — some scenes have lots of callouts (5+); others have 1-2. Putting them above the interactive would make the user scroll past supporting context before reaching the activity. Footnote-style placement is actually correct for pedagogical sequence. Spacing breathes after Phase 1 chrome (no more competing footer title) |
 | DM10 | Pedagogical tone shift between scene body and callouts not signalled visually | ✅ tone shift IS signalled: scene body uses neutral chrome + interactive widgets (DiscoveryWidget green, neutral surface) while the 4 callouts use distinctive tints (purple Looking Ahead, orange Try at Home, yellow Mnemonic, teal Related). Each callout has a recognisable icon (graduationcap.fill, hand.raised.fill, lightbulb.fill, link.circle.fill). The visual differentiation is intentional and effective |
 
@@ -525,11 +525,11 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
+| AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | 🟡 dup of CN5 — iMac verification needed |
 | AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | ✅ stepper dots: visible Circle stays 22pt, tap region expanded to ~32pt via 5pt padding + explicit `.contentShape(Rectangle())`. macOS HIG ≥28pt for trackpad/mouse; comfortable for a 7-year-old's finger on a magic mouse. Footer Prev/Next use system Buttons which are already 28+pt by default |
 | AC3 | Hover-only affordances inaccessible to keyboard-only users | ✅ audit: hover affordances in this app = cursor change (`.pointingCursor`) + tooltip (`.help`). Neither blocks interaction — every chrome action is also reachable via Tab + Return / Space (SwiftUI Button default focus traversal). Discover scene jumps (⌘1..⌘9), Prev/Next (← →), Got It (Space), Search (⌘F), Back (⌘[) all wired. No keyboard-only user is blocked by a hover-only path |
 | AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | ✅ `View.pointingCursor()` applied across the app's tappable surfaces: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard cards × 2, TopicDetailView concept + question rows, ConceptDetail readAloud + askFollowUp + related-concept/question rows, QuestionDetail MCQ option rows, ContentView sidebar Recent items + Clear. Sidebar Subject/Tool rows use native `List` `.tag()` selection so don't take this — macOS `List` provides its own hover semantics there |
-| AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |
+| AC5 | High-Contrast / Bold-Text macOS settings unverified | 🟡 dup of TH7 — iMac toggle + screenshot needed. Bold Text setting auto-applied by SwiftUI to system text styles (`.body`, `.headline`, etc.) which are what the chrome uses |
 
 ### Z.PR — Print / export / share surfaces
 
