@@ -20,6 +20,7 @@ struct Scene4_ElectricIron: View {
     }
 
     @State private var pick: Part = .element
+    @State private var currentA: Double = 5    // free-play: current through the heating coil
 
     var body: some View {
         VStack(spacing: 14) {
@@ -59,9 +60,36 @@ struct Scene4_ElectricIron: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            DiscoveryWidget(
+                title: "Discovery — Joule's law in your hand",
+                subtitle: "P = I²R. Drag the current and watch the heating power for a typical 50 Ω nichrome coil.",
+                value: $currentA,
+                range: 0...10,
+                step: 0.5,
+                valueLabel: { v in String(format: "Current: %.1f A", v) },
+                output: ironPowerExplanation
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func ironPowerExplanation(_ amps: Double) -> String {
+        let R: Double = 50              // nichrome coil resistance (Ω)
+        let power = amps * amps * R     // Joule's law: P = I²R, watts
+        switch amps {
+        case ..<1:
+            return String(format: "Power ≈ %.0f W. Barely warm — wouldn't iron a shirt.", power)
+        case ..<3:
+            return String(format: "Power ≈ %.0f W. A low-temperature delicate setting.", power)
+        case ..<6:
+            return String(format: "Power ≈ %.0f W. A normal cotton-setting iron.", power)
+        default:
+            return String(format: "Power ≈ %.0f W. High setting — would scorch a thin fabric if held still.", power)
+        }
     }
 }

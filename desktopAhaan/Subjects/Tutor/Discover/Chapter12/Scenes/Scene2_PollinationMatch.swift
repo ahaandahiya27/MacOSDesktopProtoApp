@@ -15,6 +15,7 @@ struct Scene2_PollinationMatch: View {
     ]
     private let options = ["Wind", "Insect", "Water", "Bird"]
     @State private var picks: [UUID: String] = [:]
+    @State private var windKMH: Double = 8           // free-play: wind speed for pollen dispersal
 
     private var done: Bool { picks.count == pairs.count }
     private var score: Int { pairs.reduce(0) { $0 + ((picks[$1.id] == $1.agent) ? 1 : 0) } }
@@ -69,9 +70,35 @@ struct Scene2_PollinationMatch: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            DiscoveryWidget(
+                title: "Discovery — wind-pollination range",
+                subtitle: "Wind-pollinated plants (grass, pine, maize) make a LOT of light pollen. Drag the breeze to see how far it travels.",
+                value: $windKMH,
+                range: 0...50,
+                step: 1,
+                valueLabel: { v in String(format: "Breeze: %.0f km/h", v) },
+                output: windPollenExplanation
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func windPollenExplanation(_ kmh: Double) -> String {
+        let metres = Int(kmh * 12)        // rough rule of thumb: ~12 m/(km/h) reach
+        switch kmh {
+        case ..<3:
+            return "Still air. Pollen drifts a few metres at most — wind-pollinated species would fail today."
+        case ..<10:
+            return "Gentle breeze. Pollen carries ~\(metres) m — covers a small field of grass or maize."
+        case ..<25:
+            return "Moderate wind. Pollen reaches ~\(metres) m — pine, eucalyptus, sal forests do this every spring."
+        default:
+            return "Strong wind. Pollen blows ~\(metres) m+ — but also blown clean OFF flowers, hurting fertilisation."
+        }
     }
 }
