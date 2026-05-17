@@ -16,6 +16,12 @@ private struct QuizBankContent: View {
     @State private var typeFilter: QuestionType? = nil
     @State private var difficultyFilter: Int? = nil
     @State private var chapterFilter: String? = nil
+    /// Subject (pack) filter. Bug fix: without this scope, two packs with
+    /// overlapping chapter IDs (Sanskrit Ch4 vs Science Ch4 = Heat) would
+    /// both match a single chapterFilter pick. Selecting a subject narrows
+    /// every downstream control — including which chapters appear in the
+    /// chapter dropdown — to that pack only.
+    @State private var packFilter: String? = nil
     @State private var reviewFilter: ReviewFilter = .all
     @State private var searchText = ""
     @State private var cachedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] = []
@@ -39,6 +45,7 @@ private struct QuizBankContent: View {
 
     private var filteredEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
         cachedEntries.filter { entry in
+            if let pf = packFilter, entry.pack.id != pf { return false }
             if let tf = typeFilter, entry.question.questionType != tf { return false }
             if let df = difficultyFilter, entry.question.difficulty != df { return false }
             if let cf = chapterFilter, entry.chapter.id != cf { return false }
@@ -58,6 +65,17 @@ private struct QuizBankContent: View {
         }
     }
 
+    /// Pack-aware. When a subject is selected, the chapter dropdown only
+    /// lists that subject's chapters — fixes the cross-pack chapter-id
+    /// collision (e.g., "Ch.4" meaning Sanskrit Ch4 vs Science Heat).
+    private var availablePacks: [(id: String, label: String)] {
+        var seen = Set<String>()
+        return cachedEntries.compactMap { entry in
+            guard seen.insert(entry.pack.id).inserted else { return nil }
+            return (entry.pack.id, "\(entry.pack.coverEmoji) \(entry.pack.title)")
+        }
+    }
+
     /// Push a question detail view, also recording the current filtered list
     /// as the sibling set so Prev/Next inside the detail view can walk it.
     private func openQuestion(_ entry: (pack: SubjectPack, chapter: Chapter, question: Question)) {
@@ -70,6 +88,8 @@ private struct QuizBankContent: View {
     private var availableChapters: [(id: String, label: String)] {
         var seen = Set<String>()
         return cachedEntries.compactMap { entry in
+            // Restrict to selected pack so chapter IDs are unambiguous.
+            if let pf = packFilter, entry.pack.id != pf { return nil }
             guard seen.insert(entry.chapter.id).inserted else { return nil }
             return (entry.chapter.id, "Ch. \(entry.chapter.number) — \(entry.chapter.title)")
         }
@@ -146,6 +166,24 @@ private struct QuizBankContent: View {
                     .fill(Color.gray.opacity(0.1))
             )
             .frame(minWidth: 140)
+
+            // Subject (pack) filter — first dropdown so the user sees that
+            // picking a subject narrows everything downstream (chapter list,
+            // results) to one pack at a time.
+            Picker("Subject", selection: $packFilter) {
+                Text("All Subjects").tag(String?.none)
+                ForEach(availablePacks, id: \.id) { p in
+                    Text(p.label).tag(String?.some(p.id))
+                }
+            }
+            .fixedSize()
+            .onChange(of: packFilter) { _ in
+                // Reset chapter selection when changing subject — a chapter id
+                // from one pack is meaningless in another (and would silently
+                // match a same-number chapter, which is exactly the bug we
+                // are fixing here).
+                chapterFilter = nil
+            }
 
             Picker("Type", selection: $typeFilter) {
                 Text("All Types").tag(QuestionType?.none)

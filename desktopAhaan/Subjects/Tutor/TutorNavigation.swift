@@ -92,15 +92,26 @@ struct TutorNavigationContainer<Root: View>: View {
                 Divider()
             }
 
+            // BUG fix: previously `.id(nav.currentRoute)` was applied to the
+            // whole Group, so every push/pop changed the Group's identity and
+            // SwiftUI tore down `root` (search box text, filter pickers,
+            // scroll position) along with it. Result: pop-back showed a
+            // fresh root with empty state — the "list is compromised on
+            // back" symptom.
+            //
+            // Now the .id() is on the routeView only, so route detail views
+            // still get a fresh identity per route (preventing state bleed
+            // between, say, question q1 and question q2) but `root` keeps a
+            // stable identity and its @State survives across navigation.
             Group {
                 if let route = nav.currentRoute {
                     routeView(for: route)
+                        .id(route)
                 } else {
                     root
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .id(nav.currentRoute)
         }
         .environmentObject(nav)
         .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
