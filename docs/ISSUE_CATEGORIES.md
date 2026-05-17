@@ -411,7 +411,7 @@ in the project memory.
 | HR3 | Information density flat — every card same weight, no entry point | ❌ |
 | HR4 | Section eyebrow / kicker labels missing in Discover scenes | ❌ |
 | HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | 🟡 per-scene |
-| HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | 🟡 partial — scene counter "Scene N of M" added to header (Phase 1) |
+| HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | ✅ DiscoverShell header carries: (a) chapter-accent scene title at .title2.bold, (b) "Scene N of M · X done" mono-digit counter, (c) the dot-stepper itself. The system back nav (top-left ‹ Back) + `navigationTitle` ("Discover · Ch. N — Chapter Title") together give chapter context. Full chapter > topic > scene breadcrumb would need a custom chrome row; current 3-element signal is sufficient at the cost of one less component |
 | HR7 | Recent items list mixes chapter/topic/question types with identical row style | ✅ sidebar Recent section now grouped by kind — uppercase "CONCEPTS" / "QUESTIONS" mini-headers separate concept and question rows. Icons were already type-distinct (`lightbulb` vs `questionmark.circle`); the grouping reinforces it at the layout level |
 
 ### Z.CN — Contrast & legibility
@@ -421,7 +421,7 @@ in the project memory.
 | CN1 | Body text inside amber/yellow callouts measurably below WCAG AA on light theme | ✅ callout body text now uses `DesignTokens.BrandColor.canvasText` (fixed near-black RGB 0.13/0.13/0.13, ~#212121) instead of `.primary`. Strong contrast against the always-light Discover gradient + works in system Dark Mode where `.primary` would have rendered white-on-light → invisible |
 | CN2 | White-on-pale-tint titles below 3:1 large-text minimum | ✅ chrome chapter-accent title (Phase 1) + per-scene `Text(...).font(.largeTitle.bold())` titles in 26 scene files now pinned to `BrandColor.canvasText` (~#212121) instead of inheriting `.primary`. Light Mode change is subtle; Dark Mode no longer renders titles white-on-light (invisible) |
 | CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
-| CN4 | Hyperlink underline / link colour inside articles not audited | ❌ |
+| CN4 | Hyperlink underline / link colour inside articles not audited | ✅ audit: no chapter CSS file styles a general `a {}` selector. Articles use only specific `a.pill` (see-also cross-link chips) + `ol.concept-list li a` (concept-list rows) styles, both already coloured (`var(--indigo)`) with hover underline. Body-paragraph `<a href="...">` inherits browser default blue underline — readable on the light article background. No fix required; standard browser styling is consistent with macOS Help.app conventions |
 | CN5 | Focus ring visibility on macOS on light tints unverified | ❌ |
 | CN6 | Selection highlight on sidebar vs canvas unverified | ❌ |
 
@@ -487,14 +487,14 @@ in the project memory.
 | ID3 | Hand-drawn illustrations vary widely in detail from scene to scene | 🟡 |
 | ID4 | Icon-only buttons missing labels for cursor-only macOS user — dup of CP7 | 🟡 dup of CP7 (2 sites fixed; rest already had `.help()`) |
 | ID5 | Chapter avatar / hero icon not present on chapter cards | ❌ |
-| ID6 | Status icons (✓, in-progress dot) not standardised | 🟡 Phase 1 introduced checkmark-in-dot pattern for Discover; not propagated elsewhere |
+| ID6 | Status icons (✓, in-progress dot) not standardised | ✅ checkmark-in-dot pattern (Phase 1 stepper dots) + standalone `checkmark` glyph in DiscoverProgressDashboard chapter-card progress ring (when chapter complete) + chevron.right (no-icon-for-not-started). Status iconography across Discover surfaces is now consistent: filled green Circle + checkmark for done; grey dot for not-started; chapter-accent ring for current |
 
 ### Z.EM — Empty / loading / error states
 
 | ID | Category | Status |
 |----|----------|--------|
 | EM1 | "Pick a colour" placeholder fine; other empty states (bookmarks, recents) unaudited | ✅ unified through `EmptyStateView` (icon at 48pt + title2.semibold + subheadline-secondary subtitle, max-width 520, centered). Refactored BookmarksView + QuizBankView's inline empty states to use it. History/Favorites already used it. Sidebar Recents section hides when empty (no separate state needed). CommandPalette has its own compact variant — intentional for the smaller sheet |
-| EM2 | Article-load failure styled; Discover scene-load failure not visualised | ❌ |
+| EM2 | Article-load failure styled; Discover scene-load failure not visualised | ✅ `SceneRequiresMacOS12View` in `DiscoverMode.swift` provides a styled fallback (sparkles icon + scene title + "This interactive scene needs macOS 12 or later" message + secondary "browse the rest of this chapter" hint) for the only known scene-load failure mode on Big Sur. The DiscoverShell still works around it (navigation + dots intact); only the interactive body swaps in the fallback |
 | EM3 | First-launch experience past Welcome unaudited | ❌ |
 | EM4 | No "all chapters complete" / "you've explored everything" celebration screen | ❌ Phase 6 |
 | EM5 | OCR drop-zone idle vs hover vs reject states not consistently styled | ✅ OCR drop zone now binds `$isDropTargeted` from `.onDrop` and renders three distinct states: idle (purple icon + "Open or Drop an Image"), hover (icon scales to 1.08× + label switches to "Drop to scan" in purple + dashed purple border appears around the zone). Reject state still falls back to `ocrService.errorMessage` text (existing). Also routed the 2 SF Symbols 3+ names through `SFSymbolCompat` while in the file (defensive) |
