@@ -63,6 +63,20 @@ struct Scene4_PrismRainbow: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "CD as a prism",
+                detail: "Hold an old CD or DVD up to a sunny window so light bounces off the rainbow side. You'll see VIBGYOR — not because of dispersion, but because of diffraction off the tiny tracks. The same seven colours, fanned out by a different physical mechanism. (For real dispersion, put a triangular glass paperweight in the sunlight.)"
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 12 → JEE",
+                detail: "Class 12 'Ray Optics' gives you the prism deviation formula δ = (μ − 1)A for small angles, and angular dispersion (μ_v − μ_r)A. JEE Physics asks deviation problems on equilateral prisms every year. Class 12 'Wave Optics' explains the CD rainbow too — diffraction-grating physics."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

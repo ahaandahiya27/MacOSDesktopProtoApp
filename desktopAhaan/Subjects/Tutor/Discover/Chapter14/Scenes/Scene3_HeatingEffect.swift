@@ -48,6 +48,20 @@ struct Scene3_HeatingEffect: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Feel the kettle and the bulb",
+                detail: "Carefully feel an electric kettle while it's running — but only the body, never the steaming spout. Then turn on an old incandescent bulb (not LED) for a minute and feel the glass with the back of your hand from a safe distance. Both convert electrical energy into heat — the kettle is designed to do it, the bulb does it as a waste product."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 10 → JEE",
+                detail: "Class 10 introduces Joule's heating law: heat produced H = I²Rt. That's why a kettle uses a thick wire (low R) but very high current, while the same wire material in a thin nichrome heater coil (high R) gets red-hot. JEE Physics asks tricky H = I²Rt problems on series vs parallel power dissipation every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

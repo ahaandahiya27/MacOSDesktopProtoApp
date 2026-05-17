@@ -49,6 +49,13 @@ struct Scene2_WWTPStageBuilder: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 Biology 'Environmental Issues' covers the same treatment stages plus BOD (Biological Oxygen Demand) and COD (Chemical Oxygen Demand) — quantitative measures of water pollution that NEET tests every year. The aeration tank is where the microbes you saw here do the heavy lifting."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

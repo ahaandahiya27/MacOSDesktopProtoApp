@@ -47,6 +47,20 @@ struct Scene5_MagneticEffect: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Compass near a wire",
+                detail: "Place a compass on a flat table. Run a wire from a 1.5 V cell across the compass, switching the cell ON for a couple of seconds. The needle deflects — exactly Ørsted's 1820 observation. Reverse the cell polarity; the needle deflects the OTHER way. This single demonstration changed physics."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 10 / 12 → JEE",
+                detail: "Class 10 covers the magnetic field of a straight wire (right-hand thumb rule). Class 12 'Magnetic Effects of Current' adds the Biot-Savart law (B = μ₀I / 2πr for a straight wire), Ampère's law, and the force F = BIL on a current-carrying conductor. This whole chain is a JEE Physics gold mine."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

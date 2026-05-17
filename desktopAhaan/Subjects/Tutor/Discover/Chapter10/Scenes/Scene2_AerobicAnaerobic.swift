@@ -50,6 +50,20 @@ struct Scene2_AerobicAnaerobic: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Yogurt = bacterial respiration",
+                detail: "Mix a spoon of fresh dahi (curd) into warm milk in a covered bowl. Leave it overnight in a warm spot. The Lactobacillus bacteria respire anaerobically on milk sugars, producing lactic acid that curdles the milk — that's yogurt."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "In Class 11 Biology you'll meet glycolysis, the Krebs (citric acid) cycle, and the electron transport chain — the actual chemical steps that produce ATP from glucose. NEET asks aerobic vs anaerobic energy yields (38 ATP vs 2 ATP per glucose) every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

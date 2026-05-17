@@ -54,6 +54,20 @@ struct Scene4_SpeedometerOdometer: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Read a real odometer",
+                detail: "Next car ride, look at the odometer before you start and again when you reach your destination. Subtract → that's the distance covered. Divide by the time taken → that's your average speed. The needle on the speedometer was showing instantaneous speed."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "In Class 11 'Motion in a Straight Line' you'll formalise average speed vs instantaneous speed (the speedometer reads instantaneous; the odometer ÷ time gives average). JEE Kinematics builds on this with derivatives — instantaneous speed = ds/dt."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

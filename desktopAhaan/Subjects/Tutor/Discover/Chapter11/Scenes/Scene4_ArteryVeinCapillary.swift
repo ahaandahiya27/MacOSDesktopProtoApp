@@ -55,6 +55,20 @@ struct Scene4_ArteryVeinCapillary: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Find pulse points",
+                detail: "Try feeling your pulse at four spots: inside the wrist (radial), side of the neck (carotid), back of the knee (popliteal), top of the foot (dorsalis pedis). All of them carry blood from the heart — that's why they pulse with each beat."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Body Fluids and Circulation' covers the three vessel types in microscopic detail — tunica intima/media/externa, valve mechanics, blood pressure measurement (systolic/diastolic). Almost guaranteed NEET questions every cycle."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

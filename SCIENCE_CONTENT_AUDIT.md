@@ -221,6 +221,30 @@ This is the same shape any future bulk-resource-addition should take. Documented
 
 ArticleIndex.swift gains 27 new entries (`ch{NN}_t01..t03` for chapters 8, 9, 10, 11, 12, 13, 16, 17, 18).
 
+## Broadened Try-at-Home + Looking-Ahead coverage (consistency layer 2)
+
+After the structural skeleton was equalised, the next inconsistency in the audit was sidebar coverage: only 8 of 99 new-chapter scenes had a `TryAtHomeCallout` and only 7 had a `LookingAheadCallout`. Closes part of that gap by applying both (or one, where natural) to 10 more flagship scenes:
+
+| File | Try at Home | Looking Ahead |
+|---|---|---|
+| Ch 9 / Scene1_SoilProfileDig | — | Class 9 Geography — Indian soil types (alluvial, black, red, laterite) |
+| Ch 10 / Scene2_AerobicAnaerobic | Yogurt-making (Lactobacillus anaerobic respiration) | Class 11 glycolysis / Krebs / ETC — NEET ATP-yield questions |
+| Ch 11 / Scene4_ArteryVeinCapillary | Find pulse at 4 body sites (radial, carotid, popliteal, dorsalis pedis) | Class 11 vessel anatomy — tunica intima/media/externa, BP measurement |
+| Ch 13 / Scene4_SpeedometerOdometer | Read a real car odometer + compute average speed | Class 11 instantaneous vs average speed; JEE Kinematics ds/dt |
+| Ch 14 / Scene3_HeatingEffect | Feel kettle body / incandescent bulb glass safely | Class 10 Joule's law H = I²Rt — JEE power-dissipation problems |
+| Ch 14 / Scene5_MagneticEffect | Compass deflection near a current-carrying wire (Ørsted 1820) | Class 10 right-hand thumb rule; Class 12 Biot-Savart B = μ₀I/2πr; Ampère's law; F = BIL |
+| Ch 15 / Scene2_ConcaveConvex | Polished steel spoon — crossing the focal point experiment | Class 10 mirror formula 1/v + 1/u = 1/f; JEE combined mirror-lens systems |
+| Ch 15 / Scene4_PrismRainbow | CD as a (diffraction) rainbow producer | Class 12 prism deviation δ = (μ−1)A and angular dispersion (μ_v−μ_r)A; Class 12 Wave Optics |
+| Ch 17 / Scene5_O2CO2Balance | — | Class 12 Ecosystem chapter — carbon cycle quantitative; 10% rule; NEET productivity questions |
+| Ch 18 / Scene2_WWTPStageBuilder | — | Class 12 Bio Environmental Issues — BOD / COD measures of pollution |
+
+Implementation note: applied via a Python script that inserts `TryAtHomeCallout` or `LookingAheadCallout` SwiftUI blocks just before the first `GotItButton(` line, with idempotency (skip if the exact callout already exists). 13 callout insertions across 10 files in one sweep.
+
+Running coverage after this commit:
+- **18 of 99** new-chapter scenes now have at least one TryAtHomeCallout (was 8).
+- **17 of 99** have at least one LookingAheadCallout (was 7).
+- Comprehensive sweep across the remaining ~80 scenes is the next pass.
+
 ## Hands-on / "Try this at home" component (NEW)
 
 - ✅ New `TryAtHomeCallout` component at `Subjects/Tutor/Discover/Components/TryAtHomeCallout.swift`. Orange-tinted box with a raised-hand SF Symbol, used inside scenes to suggest a quick real-world experiment using everyday materials. Distinct from `SoftShadowCard` so kids learn to recognise "this is something I can actually do" at a glance.
