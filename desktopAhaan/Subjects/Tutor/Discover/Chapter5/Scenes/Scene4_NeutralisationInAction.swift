@@ -17,6 +17,7 @@ struct Scene4_NeutralisationInAction: View {
     @State private var isPouring = false
     @State private var showEquation = false
     @State private var tick: TimeInterval = 0
+    @State private var basemL: Double = 0               // free-play slider — ml of NaOH added
 
     private var mixedColor: Color {
         Color(
@@ -113,6 +114,17 @@ struct Scene4_NeutralisationInAction: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    DiscoveryWidget(
+                        title: "Discovery — add base drop by drop",
+                        subtitle: "Imagine adding NaOH base to 10 mL of HCl acid. Drag the slider to see the pH change.",
+                        value: $basemL,
+                        range: 0...10,
+                        step: 0.5,
+                        valueLabel: { v in String(format: "Added: %.1f mL", v) },
+                        output: pHExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if pourProgress >= 1 {
             RelatedConceptsCallout(
                 title: "Related: Ch 6 (Phys/Chem Changes), Ch 9 (Soil), Ch 18 (Wastewater)",
@@ -195,6 +207,30 @@ struct Scene4_NeutralisationInAction: View {
     }
 
     // MARK: - Actions
+
+    private func pHExplanation(_ ml: Double) -> String {
+        // Simple acid-base model: 10 mL of strong acid + ml mL of equally strong base.
+        // pH ~ 1 at start, ~7 at 5 mL (halfway), basic >5 mL.
+        let approxPH: Double
+        switch ml {
+        case 0: approxPH = 1
+        case ..<2: approxPH = 1 + ml
+        case ..<4.5: approxPH = 3 + (ml - 2) * 1.2
+        case 4.5..<5.5: approxPH = 7   // neutral plateau
+        case ..<7: approxPH = 7 + (ml - 5.5) * 1.6
+        default: approxPH = 11 + min(2, (ml - 7) * 0.6)
+        }
+        let phStr = String(format: "pH ≈ %.1f", approxPH)
+        let label: String
+        switch approxPH {
+        case ..<3: label = "Strongly acidic — sour, dissolves marble."
+        case ..<6: label = "Mildly acidic — turns blue litmus red."
+        case 6...8: label = "Neutral — salt + water formed. Reaction complete!"
+        case ..<11: label = "Mildly basic — turns red litmus blue."
+        default: label = "Strongly basic — soapy, dissolves grease."
+        }
+        return "\(phStr). \(label)"
+    }
 
     private func startPouring() {
         isPouring = true
