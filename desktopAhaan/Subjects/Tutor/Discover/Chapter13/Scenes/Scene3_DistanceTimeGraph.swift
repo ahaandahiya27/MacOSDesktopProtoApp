@@ -14,14 +14,6 @@ struct Scene3_DistanceTimeGraph: View {
     }
     @State private var motion: Motion = .uniform
 
-    private func y(for x: Double) -> Double {
-        switch motion {
-        case .still:        return 0
-        case .uniform:      return x
-        case .accelerating: return x * x * 0.1
-        }
-    }
-
     var body: some View {
         VStack(spacing: 14) {
             Text("Distance–Time Graph").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
@@ -32,7 +24,7 @@ struct Scene3_DistanceTimeGraph: View {
                 ForEach(Motion.allCases) { Text($0.rawValue).tag($0) }
             }.pickerStyle(.segmented).frame(maxWidth: 460)
 
-            DistanceTimePlot(yFunction: y)
+            DistanceTimePlot(motion: motion)
                 .frame(width: 360, height: 240)
                 .accessibilityLabel("Distance vs time graph for \(motion.rawValue)")
 
@@ -72,7 +64,10 @@ struct Scene3_DistanceTimeGraph: View {
 /// Layers are extracted into Shapes so Swift 5.5's type-checker can resolve
 /// the GeometryReader closure without timing out.
 private struct DistanceTimePlot: View {
-    let yFunction: (Double) -> Double
+    /// Pass the motion enum (a Sendable value) instead of a closure so the
+    /// surrounding Shape struct stays Sendable-conforming under the Swift 6
+    /// stricter rules. The math lives inside CurveShape — see `evaluate(_:)`.
+    let motion: Scene3_DistanceTimeGraph.Motion
 
     var body: some View {
         GeometryReader { geo in
@@ -94,7 +89,7 @@ private struct DistanceTimePlot: View {
             AxesShape(layout: layout)
                 .stroke(Color.gray.opacity(0.75), lineWidth: 1.5)
 
-            CurveShape(layout: layout, yFunction: yFunction)
+            CurveShape(layout: layout, motion: motion)
                 .stroke(Color.compatIndigo, lineWidth: 3)
 
             axisLabels(layout: layout, size: size)
@@ -173,13 +168,23 @@ private struct AxesShape: Shape {
 
 private struct CurveShape: Shape {
     let layout: PlotLayout
-    let yFunction: (Double) -> Double
+    /// The motion is a Sendable enum value, so `CurveShape` stays
+    /// Sendable-conformant under Swift 6 strict concurrency without a
+    /// stored closure capturing `self`. The math is inlined here.
+    let motion: Scene3_DistanceTimeGraph.Motion
+    private func evaluate(_ x: Double) -> Double {
+        switch motion {
+        case .still:        return 0
+        case .uniform:      return x
+        case .accelerating: return x * x * 0.1
+        }
+    }
     func path(in rect: CGRect) -> Path {
         var p = Path()
         var first = true
         for stepInt in 0...100 {
             let step = Double(stepInt) / 10.0
-            let pt = CGPoint(x: layout.sx(step), y: layout.sy(yFunction(step)))
+            let pt = CGPoint(x: layout.sx(step), y: layout.sy(evaluate(step)))
             if first {
                 p.move(to: pt)
                 first = false

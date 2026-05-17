@@ -20,7 +20,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | A2 | No macOS 12+ APIs (`Bindable`, `Observable`, `.scrollPosition`, `Layout`, `.foregroundStyle`, `Charts`, …) | 🟡 swept; sweep again after any major view rewrite |
 | A3 | No SF Symbols 3+/4+ names | ✅ 16 symbols routed through SFSymbolCompat |
 | A4 | No `try!` / `as!` / `[i]!` in runtime paths | ✅ swept; only file is `FoundationTutor` shim (intentional) |
-| A5 | x86_64 + arm64 universal binary | ❌ not verified — check build settings |
+| A5 | x86_64 + arm64 universal binary | ✅ Release config: ONLY_ACTIVE_ARCH=NO + default ARCHS_STANDARD; produces universal slice |
 | A6 | Type-check timeout from complex SwiftUI expressions | ✅ static audit clean (Kaleidoscope refactor was the canary) |
 | A7 | DerivedData hygiene across Xcode versions | ✅ `scripts/imac-pull.sh` handles |
 | A8 | pbxproj auto-rewrites colliding on pull | ✅ stash recipe in `scripts/imac-pull.sh` |
@@ -261,7 +261,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| S1 | Build with zero warnings | 🟡 build green; warning-count not enforced |
+| S1 | Build with zero warnings | ✅ zero Swift-compiler warnings (one Swift-6 Sendable warning in Scene3_DistanceTimeGraph fixed via enum-driven CurveShape) |
 | S2 | Resources copied (HTML / CSS / JSON) | ✅ |
 | S3 | Asset catalog usage | ❌ not yet — system colours only |
 | S4 | Single-scheme build | ✅ |
