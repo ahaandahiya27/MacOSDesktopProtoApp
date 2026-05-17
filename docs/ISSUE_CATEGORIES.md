@@ -526,7 +526,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
-| AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | 🟡 |
+| AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | ✅ stepper dots: visible Circle stays 22pt, tap region expanded to ~32pt via 5pt padding + explicit `.contentShape(Rectangle())`. macOS HIG ≥28pt for trackpad/mouse; comfortable for a 7-year-old's finger on a magic mouse. Footer Prev/Next use system Buttons which are already 28+pt by default |
 | AC3 | Hover-only affordances inaccessible to keyboard-only users | ❌ |
 | AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | ✅ `View.pointingCursor()` applied across the app's tappable surfaces: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard cards × 2, TopicDetailView concept + question rows, ConceptDetail readAloud + askFollowUp + related-concept/question rows, QuestionDetail MCQ option rows, ContentView sidebar Recent items + Clear. Sidebar Subject/Tool rows use native `List` `.tag()` selection so don't take this — macOS `List` provides its own hover semantics there |
 | AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |

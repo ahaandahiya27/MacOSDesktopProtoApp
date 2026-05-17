@@ -288,6 +288,11 @@ struct DiscoverShell<SceneBody: View>: View {
                                     .strokeBorder(currentScene == i ? chapterAccent : .clear, lineWidth: 2.5)
                             )
                             .frame(width: 22, height: 22)
+                            // Expand tap region to ~32pt (AC2) while keeping the
+                            // visible dot at 22pt — macOS HIG ≥28pt for
+                            // trackpad/mouse; comfortable for a 7-year-old.
+                            .padding(5)
+                            .contentShape(Rectangle())
                     }
                     .buttonStyle(PressableButtonStyle())
                     .pointingCursor()
