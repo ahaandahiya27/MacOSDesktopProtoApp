@@ -7,6 +7,7 @@ struct Scene4_ForestAsSponge: View {
     let onComplete: () -> Void
 
     @State private var hasForest = true
+    @State private var coverPct: Double = 70   // free-play: forest cover percentage
 
     var body: some View {
         VStack(spacing: 14) {
@@ -57,9 +58,35 @@ struct Scene4_ForestAsSponge: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            DiscoveryWidget(
+                title: "Discovery — adjust the forest cover",
+                subtitle: "Forest cover (%) controls how much rainwater the land can hold. Drag to see the flood-risk band.",
+                value: $coverPct,
+                range: 0...100,
+                step: 5,
+                valueLabel: { v in String(format: "Cover: %.0f%%", v) },
+                output: forestCoverExplanation
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func forestCoverExplanation(_ pct: Double) -> String {
+        let runoffPct = max(0, 100 - pct * 0.9)   // healthy forest absorbs ~90% of rain
+        switch pct {
+        case ..<20:
+            return String(format: "%.0f%% of rain runs off as flood. Bare hillsides — landslides and topsoil loss in monsoon.", runoffPct)
+        case ..<50:
+            return String(format: "%.0f%% runoff. Degraded forest. Streams turn muddy and flash-flood during heavy rain.", runoffPct)
+        case ..<80:
+            return String(format: "%.0f%% runoff. Mixed scrub + forest. Decent water retention; recharges aquifers.", runoffPct)
+        default:
+            return String(format: "%.0f%% runoff. Dense forest. Slow soak; springs run year-round; flood risk near zero.", runoffPct)
+        }
     }
 }
