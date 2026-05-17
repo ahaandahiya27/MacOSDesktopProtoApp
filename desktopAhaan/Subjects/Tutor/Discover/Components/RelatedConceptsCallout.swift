@@ -30,7 +30,7 @@ struct RelatedConceptsCallout: View {
                 Text(detail)
                     .font(.callout)
                     .lineSpacing(3)
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             Spacer(minLength: 0)
         }

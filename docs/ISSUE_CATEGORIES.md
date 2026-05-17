@@ -350,7 +350,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | 🟡 partial — scene title now hoisted into chapter-accent header (Phase 1); per-scene title text in scene bodies still inherits `.primary` |
-| CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | 🟡 bg opacity bumped 0.10→0.14 + border 0.35→0.45 (Phase 1) — text colour still `.primary`, needs iMac eyeballs |
+| CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | ✅ Phase 1 bumped bg opacity 0.10→0.14 + border 0.35→0.45. Phase 3 now pins body text to `BrandColor.canvasText` (~#212121) instead of `.primary`, giving high-contrast reading on the tinted background regardless of system colour scheme |
 | CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
 | CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ❌ |
 | CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | 🟡 Phase 2 added `DesignTokens.BrandColor` semantic-name layer; WCAG measurement pending in Phase 3 |
@@ -382,7 +382,7 @@ in the project memory.
 | TH1 | Dark mode visual sweep never performed end-to-end (dup of J1) | 🟡 Phase 5 |
 | TH2 | Sidebar vs canvas color-mode mismatch | 🟡 dup of CL3 |
 | TH3 | ChapterTheme brand colours hardcoded RGB → don't auto-adapt to scheme | 🟡 Phase 3/5 |
-| TH4 | Tinted card backgrounds nearly identical in Light vs Dark | ❌ Phase 5 |
+| TH4 | Tinted card backgrounds nearly identical in Light vs Dark | 🟡 partial — body text now `BrandColor.canvasText` (fixed) so it reads cleanly in both system modes despite the fixed-light canvas. Background tint values themselves not yet differentiated per scheme (deferred — would require an `@Environment(\.colorScheme)`-aware background tint per callout) |
 | TH5 | WKWebView article CSS (`ch*_style.css`) does not respect `prefers-color-scheme` | 🟡 architectural split discovered 2026-05-17: **8 of 19 chapter CSS files already handle dark mode** (Ch 1-7 + 19; they use a `:root { --bg / --text / --accent }` CSS-variable pattern with a `@media (prefers-color-scheme: dark)` block). The remaining 11 (Ch 8-18 minus 19) use a legacy direct-hex pattern and need either per-file dark overrides or a refactor to the CSS-variable pattern. Also: dark-mode usage on the deploy iMac is unverified — may be effectively dead code |
 | TH6 | Accent-tint per chapter not documented (no swatch reference doc) | ❌ |
 | TH7 | "Increase Contrast" macOS accessibility setting unverified | ❌ |
@@ -418,7 +418,7 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| CN1 | Body text inside amber/yellow callouts measurably below WCAG AA on light theme | 🟡 bg opacity bumped (Phase 1); text colour pending iMac eyeball |
+| CN1 | Body text inside amber/yellow callouts measurably below WCAG AA on light theme | ✅ callout body text now uses `DesignTokens.BrandColor.canvasText` (fixed near-black RGB 0.13/0.13/0.13, ~#212121) instead of `.primary`. Strong contrast against the always-light Discover gradient + works in system Dark Mode where `.primary` would have rendered white-on-light → invisible |
 | CN2 | White-on-pale-tint titles below 3:1 large-text minimum | 🟡 chapter-accent title in header (Phase 1) covers chrome; per-scene title still pale |
 | CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
 | CN4 | Hyperlink underline / link colour inside articles not audited | ❌ |

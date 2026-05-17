@@ -58,11 +58,11 @@ struct MnemonicCallout: View {
                     // `Font.system(_:design:)` which has shipped since
                     // macOS 11 to get the same monospaced rendering.
                     .font(.system(.title2, design: .monospaced).weight(.bold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text(meaning)
                     .font(.callout)
                     .lineSpacing(3)
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                 if !expansion.isEmpty {
                     expansionList
                 }
@@ -92,7 +92,7 @@ struct MnemonicCallout: View {
                         .frame(width: 18, alignment: .leading)
                     Text(row.word)
                         .font(.callout)
-                        .foregroundColor(.primary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
             }
         }

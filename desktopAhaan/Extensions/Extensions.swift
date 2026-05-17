@@ -274,6 +274,19 @@ enum DesignTokens {
         // Neutral surfaces.
         static let mutedSurface: Color = Color.gray.opacity(0.25)
         static let dividerLine: Color = Color.primary.opacity(0.08)
+
+        // Fixed text colours for the always-light Discover canvas.
+        // The `DiscoverBackground` gradient is intentionally sunshine-themed
+        // regardless of system colour scheme, so on-canvas body text must
+        // NOT follow `.primary` (which renders white in system Dark Mode →
+        // invisible on the light canvas). Pin these to RGB values that
+        // sit at AA contrast on the pale-blue/pale-green gradient.
+        //
+        // Hue chosen as a soft near-black (Material Design slate ~#212121)
+        // — strong contrast without the harshness of pure black.
+        static let canvasText: Color = Color(red: 0.13, green: 0.13, blue: 0.13)
+        /// Secondary on-canvas text — captions, meta, "Animals: …" subhead.
+        static let canvasTextSecondary: Color = Color(red: 0.36, green: 0.38, blue: 0.42)
     }
 }
 
