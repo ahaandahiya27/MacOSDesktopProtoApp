@@ -31,6 +31,8 @@
 		04674C6C2FB8E0B4004A7D5C /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */; };
 		04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */; };
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
+		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
+		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
 		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
 		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
 		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
@@ -614,6 +616,8 @@
 		04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverProgressDashboard.swift; sourceTree = "<group>"; };
 		04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_t01_c01.html; sourceTree = "<group>"; };
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
+		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
+		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
 		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
 		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
 		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
@@ -2254,6 +2258,8 @@
 				04F59E3A2FB9650000568BDE /* LookingAheadCallout.swift */,
 				04F59E562FB976F900568BDE /* RelatedConceptsCallout.swift */,
 				04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */,
+				04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */,
+				04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -3093,6 +3099,7 @@
 				82BAFD25C82EE82CBF69A42A /* Scene1_FluffToFibre.swift in Sources */,
 				04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */,
 				04F59DEE2FB8F34500568BDE /* Scene6_SanitationMap.swift in Sources */,
+				04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */,
 				04F59D262FB8EED200568BDE /* Scene5_SoilErosionStory.swift in Sources */,
 				BCCC1CDD8765101D08581EDD /* Scene2_MeetTheWoolAnimals.swift in Sources */,
 				BDABA0E4F5C845143A802CCC /* Scene3_TheShearingDay.swift in Sources */,
@@ -3102,6 +3109,7 @@
 				04F59D862FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift in Sources */,
 				98E99F951BADE03456CCF87C /* Scene6_SilkwormLifeCycle.swift in Sources */,
 				D9B04A98A2D43AB4C09617F6 /* Scene7_TheCocoonReel.swift in Sources */,
+				04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */,
 				680E0A1A2E478F91AB42573A /* Scene8_FibreVsFibreGame.swift in Sources */,
 				FE7AA532DCB846B180F505B7 /* Scene9_BossQuiz_Ch3.swift in Sources */,
 				CB6E371F2AD11FCD60C8D162 /* DiscoverChapter4View.swift in Sources */,

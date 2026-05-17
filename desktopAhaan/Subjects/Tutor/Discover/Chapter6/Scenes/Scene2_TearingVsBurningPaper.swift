@@ -14,6 +14,7 @@ struct Scene2_TearingVsBurningPaper: View {
     @State private var paperTorn = false
     @State private var paperBurning = false
     @State private var paperBurnt = false
+    @State private var meltVsCook = true   // free-play DiscoveryToggle: melting (physical) vs cooking (chemical)
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var bothDone: Bool { tornTapped && burntTapped }
@@ -159,6 +160,20 @@ struct Scene2_TearingVsBurningPaper: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    }
+
+                    DiscoveryToggle(
+                        title: "Discovery — physical or chemical?",
+                        subtitle: "Two everyday changes. Same kitchen. Which is which?",
+                        optionA: "🧊 Ice melting",
+                        optionB: "🍳 Egg cooking",
+                        selectionIsA: $meltVsCook,
+                        outputA: "Physical change. Same H₂O molecule, just rearranging from solid → liquid. Pop it in the freezer and it's ice again.",
+                        outputB: "Chemical change. Heat tangles egg-white proteins permanently. No way to un-cook back to a raw egg."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    if bothDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     } else {

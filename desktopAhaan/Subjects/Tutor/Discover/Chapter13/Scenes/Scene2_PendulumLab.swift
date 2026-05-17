@@ -11,6 +11,7 @@ struct Scene2_PendulumLab: View {
     @State private var phase: Double = 0       // radians, accumulated smoothly
     @State private var lastTick: TimeInterval = 0
     @State private var tick: TimeInterval = 0
+    @State private var famousPendulum: Int = 2   // DiscoveryStepper: preset historic pendulum
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var period: Double { 2.0 * .pi * sqrt(length / 9.81) }
@@ -70,19 +71,42 @@ struct Scene2_PendulumLab: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 11 Physics → JEE",
-                detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
+            Group {
+                LookingAheadCallout(
+                    title: "Class 11 Physics → JEE",
+                    detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "DIY pendulum",
-                detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
+                TryAtHomeCallout(
+                    title: "DIY pendulum",
+                    detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
+
+            DiscoveryStepper(
+                title: "Discovery — historic pendulums",
+                subtitle: "Pick a famous pendulum length. The slider above shows its swing live.",
+                options: ["Pocket (0.10 m)", "Wall (0.25 m)", "Grandfather (1.0 m)", "Big Ben (4.0 m)"],
+                selection: $famousPendulum,
+                outputs: [
+                    "≈ 0.6 s per swing. Pocket-watch escapement scale. Very quick tick.",
+                    "≈ 1.0 s per swing. A typical wall-clock pendulum.",
+                    "≈ 2.0 s per swing. The classic 'grandfather' tick-tock once per second.",
+                    "≈ 4.0 s per swing. London's Big Ben — 13.5-tonne bob, used for the BBC's pip signal."
+                ]
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
+            .onChange(of: famousPendulum) { newIndex in
+                let presets: [Double] = [0.10, 0.25, 1.0, 4.0]
+                let target = presets[max(0, min(newIndex, presets.count - 1))]
+                length = min(2.0, max(0.2, target))
+            }
 
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
