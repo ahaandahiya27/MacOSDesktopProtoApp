@@ -12,6 +12,7 @@ struct Scene2_WhySeasonsHappen: View {
 
     @State private var selectedPosition: Int? = nil
     @State private var exploredPositions: Set<Int> = []
+    @State private var tiltDegrees: Double = 23.5
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private struct OrbitalPosition: Identifiable {
@@ -117,6 +118,17 @@ struct Scene2_WhySeasonsHappen: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    DiscoveryWidget(
+                        title: "Discovery — try a different tilt",
+                        subtitle: "Earth's axis is tilted at 23.5°. Drag the slider to imagine other worlds with different tilts.",
+                        value: $tiltDegrees,
+                        range: 0...45,
+                        step: 0.5,
+                        valueLabel: { v in String(format: "Tilt: %.1f°", v) },
+                        output: tiltExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
@@ -171,6 +183,23 @@ struct Scene2_WhySeasonsHappen: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(pos.label) position. \(isExplored ? "Explored" : "Not yet explored"). North hemisphere: \(pos.northSeason)")
+    }
+
+    private func tiltExplanation(_ v: Double) -> String {
+        switch v {
+        case ..<2:
+            return "Almost no seasons. Equal daylight all year everywhere — boring for kids who love summer holidays!"
+        case ..<12:
+            return "Very mild seasons. Tropical-like climate would stretch far north and south."
+        case 12..<20:
+            return "Gentle seasons — milder than Earth today. Summers and winters would feel less different."
+        case 20...25:
+            return "Earth-like seasons (Earth is 23.5°). The familiar pattern of warm summers and cold winters in temperate zones."
+        case 25..<35:
+            return "Stronger seasons. Hotter summers, colder winters, longer polar days and nights."
+        default:
+            return "Extreme seasons. Polar regions would spend months in total darkness, then months of nonstop sun."
+        }
     }
 
     private func orbitalOffset(for angleDeg: Double) -> CGSize {
