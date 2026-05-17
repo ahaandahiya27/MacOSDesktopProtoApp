@@ -144,6 +144,20 @@ struct Scene7_CrystalGarden: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Chemistry → JEE (Crystal Lattices)",
+                detail: "Crystals = atoms arranged in regular repeating 3D patterns. JEE Solid State chapter covers 7 crystal systems (cubic, tetragonal, orthorhombic, hexagonal, …) and 4 Bravais centerings. NaCl, sucrose, copper sulphate — all classifiable. Same chemistry idea that lets a kid grow crystal candy lets industrial chemists design transistors and gemstones."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Grow your own crystal in 3 days",
+                detail: "Dissolve a heaped half-cup of sugar in a half-cup of hot water until it stops dissolving. Pour into a clean jar. Hang a wooden stick (skewer) from a pencil across the rim so it dangles in the syrup. Place somewhere undisturbed. By day 3 you'll see geometric crystals on the stick — rock candy. The 'unit cell' is repeating itself thousands of times to make your snack."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }
                 .padding(.bottom, 12)
         }

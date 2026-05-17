@@ -115,6 +115,18 @@ struct Scene4_TheRustingExperiment: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 12 Chemistry → JEE (Electrochemistry)",
+                        detail: "Rusting is *electrochemical corrosion*: iron loses electrons (oxidation) at one spot, oxygen accepts them (reduction) elsewhere — water + dissolved ions are the electrolyte that completes the circuit. JEE asks 'why does iron rust faster near salt water?' — sea water conducts the electron flow far better than fresh water. Stainless steel survives because chromium forms a passive oxide film that blocks the electrolyte."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Rust race in 3 test tubes",
+                        detail: "Three iron nails: (1) in dry sealed jar, (2) in tap water, (3) in salt water. Check daily for a week. Dry stays clean. Tap water rusts moderately. Salt water rusts dramatically — orange flakes after 2 days. You just replicated 200 years of marine-engineering wisdom about why ships need anodes."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

@@ -128,6 +128,19 @@ struct Scene1_IceToWaterToSteam: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Chemistry → JEE (Phases of Matter)",
+                        detail: "Ice → water → steam is *phase change* — JEE Thermodynamics asks for the latent heat: 334 J/g to melt ice (Lf), 2260 J/g to evaporate water (Lv). The amount needed to boil is 6× the amount to melt — because breaking ALL the bonds between molecules costs more than just loosening them. Same H₂O, dramatically different bond energy at each stage."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Watch latent heat at work",
+                        detail: "Put a thermometer in a bowl of crushed ice. Add salt. Stir. The temperature drops below 0°C — sometimes to -10°C or lower. The salt makes ice melt faster, and that melting absorbs heat from the rest of the mixture (latent heat). This is the same trick old ice-cream makers use to chill cream below freezing without electricity."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

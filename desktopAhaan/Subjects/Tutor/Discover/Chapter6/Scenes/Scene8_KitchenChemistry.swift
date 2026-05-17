@@ -141,6 +141,20 @@ struct Scene8_KitchenChemistry: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Chemistry → JEE / NEET",
+                detail: "Baking-soda + vinegar: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑. That's an acid-base neutralisation AND a gas evolution AND a salt formation in one step — three of the 5 signs of chemical change you've already learned. JEE asks the stoichiometry: 1 mol of each makes 1 mol CO₂, so 84 g baking soda + 60 g vinegar (acetic acid) → 22.4 L of CO₂ at STP."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Pop a balloon with chemistry (no needle)",
+                detail: "Pour 2 tablespoons vinegar into an empty plastic bottle. Spoon 2 teaspoons baking soda into a balloon. Stretch the balloon over the bottle mouth WITHOUT spilling. Lift the balloon — the soda falls into the vinegar. Fizz starts, balloon inflates from the CO₂. You just turned a chemical reaction's gas product into mechanical work — the principle behind every airbag in a car."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }
                 .padding(.bottom, 12)
         }

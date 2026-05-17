@@ -104,6 +104,19 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        LookingAheadCallout(
+                            title: "Class 11 Chemistry → JEE (Energy + Mass Conservation)",
+                            detail: "JEE tests: does mass change in physical vs chemical changes? Answer: NO in both — conservation of mass holds. The difference is *bond energy*: physical change rearranges molecules, chemical change rearranges atoms within molecules. Energy diagrams (activation energy hill, ΔH of formation) become how you tell the two apart on a calorimeter trace."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Mass-balance experiment",
+                            detail: "Weigh an empty kitchen scale. Add an effervescent vitamin tablet to a glass of water on the scale. Note the mass. Drop the tablet in. After fizzing stops, weigh again. Mass DECREASES because CO₂ left the system as gas. Repeat in a closed bottle — mass stays the same (gas trapped). This is Conservation of Mass + the difference between open vs closed system."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     } else {

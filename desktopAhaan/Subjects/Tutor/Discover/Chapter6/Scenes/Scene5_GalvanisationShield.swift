@@ -161,6 +161,19 @@ struct Scene5_GalvanisationShield: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 12 Chemistry → JEE (Sacrificial Anode)",
+                        detail: "Galvanisation = coating iron with zinc. Zinc is MORE reactive than iron, so it corrodes first (sacrificially), keeping iron intact. JEE asks the reactivity series — K > Na > Ca > Mg > Al > Zn > Fe > Cu > Ag > Au. Ships use giant zinc blocks bolted to the hull (called sacrificial anodes) — they get eaten so the steel hull doesn't. Same trick: 5 km long bridges, 5 kg blocks."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Spot a sacrificial anode",
+                        detail: "Next to any boat at a marina, look for chunky grey-white metal blocks bolted to the hull below the waterline — those are zinc or aluminium sacrificial anodes. You can also spot them on home water heater tanks (a rod called the 'anode rod' lasts ~5 years, then replaced). Cheaper to replace a sacrificial rod than rebuild a tank."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

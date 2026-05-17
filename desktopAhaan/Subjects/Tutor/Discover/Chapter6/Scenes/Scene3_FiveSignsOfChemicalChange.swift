@@ -130,6 +130,18 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
+                    LookingAheadCallout(
+                        title: "Class 11 Chemistry → JEE (Reaction Signatures)",
+                        detail: "The 5 signs — colour change / gas / precipitate / energy / smell — map to JEE reaction types: redox (colour change of Cu²⁺ pale blue → dark blue with NH₃), gas evolution (HCl + Zn → H₂), precipitation (BaCl₂ + Na₂SO₄ → BaSO₄↓), exothermic (heat released), and characteristic odour (rotten eggs = H₂S, ammonia, ester sweetness)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Spot 5 signs in 5 different events",
+                        detail: "Make a checklist: ① Cut an apple, leave 10 minutes (browning = colour change). ② Soda water in glass (CO₂ gas escaping). ③ Mix milk + lemon (curdling = precipitation). ④ Iron filings on a hot pan (incandescent = energy out). ⑤ Onion slicing (sulphur compound smell = chemical reaction with air). Five different chemical reactions in your kitchen, before lunch."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allTapped {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

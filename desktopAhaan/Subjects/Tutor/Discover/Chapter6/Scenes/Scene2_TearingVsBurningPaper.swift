@@ -173,6 +173,18 @@ struct Scene2_TearingVsBurningPaper: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Chemistry → JEE (Reversibility)",
+                        detail: "Physical = molecules rearrange, bonds unchanged → reversible. Chemical = bonds break and reform → usually irreversible. JEE asks 'is dissolution of salt in water physical or chemical?' — physical, because evaporation returns the salt. But 'rusting'? Chemical — Fe + O₂ → Fe₂O₃, you can't 'un-rust'. The reversibility test is a clean shortcut."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Tear paper, then burn paper",
+                        detail: "Tear a piece of paper into 4 pieces — still paper. Tape it back — still paper. Now burn a different piece (with adult supervision over a sink). The ash that's left is NOT paper anymore — it's carbon. You can't reassemble paper from ash. Difference between physical and chemical change in 30 seconds."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if bothDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
