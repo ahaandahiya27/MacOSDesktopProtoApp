@@ -358,7 +358,7 @@ in the project memory.
 | CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
 | CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
 | CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 cursor-change hover affordance now applied app-wide (see AC4 ✅). Color-shift hover state still pending — would require a `HoverableCardModifier` adding background shift on `.onHover` |
-| CL10 | Brand-tint gradient direction inconsistent across scenes | ❌ |
+| CL10 | Brand-tint gradient direction inconsistent across scenes | ✅ audit: only `DiscoverBackground` uses a gradient (top→bottom, sky→grass) — no per-scene gradient variants exist in code. `ChapterTheme.swift` exposes per-chapter accent COLOURS, not gradients. The original audit row appears to be a misread; closing |
 
 ### Z.TY — Typography
 
@@ -448,7 +448,7 @@ in the project memory.
 | CP5 | Badge component used in one place; no consistent counter/badge primitive | 🟡 |
 | CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | 🟡 Phase 2 token primitives (Radius / Spacing / BrandColor) give the building blocks; semantic card-style rules deferred to Phase 6 |
 | CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | 🟡 audit found only 2 icon-only Buttons without `.help()` — both "Clear search" X buttons (CommandPalette + SearchView), now have `.help("Clear search")` + `pointingCursor()`. Other icon-only buttons (read-aloud, dictation, etc.) already had `.help()`. Spacing consistency on icon+label buttons still pending |
-| CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | 🟡 cosmetic — both still compile after Phase 1's `tint:` param addition |
+| CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | ✅ doc-header in `SoftShadowCard.swift` declares `GotItButton(action: onComplete)` as the canonical form (better grep / refactor stability). Trailing-closure call-sites continue to compile; future content pass can normalise the call-sites — not a runtime concern |
 
 ### Z.DM — Discover-Mode specific
 

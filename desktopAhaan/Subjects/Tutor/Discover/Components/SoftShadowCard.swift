@@ -50,6 +50,16 @@ struct DiscoverBackground: View {
 /// `DiscoverShell`) > fallback `.green`. So 152 existing `GotItButton(action:)`
 /// call-sites in scene files pick up their chapter's accent colour
 /// automatically inside Discover Mode (DM6) without per-file edits.
+///
+/// **Canonical call form** (CP8) — prefer the named-param style:
+///
+///     GotItButton(action: onComplete)
+///
+/// Trailing-closure form `GotItButton { onComplete() }` also compiles
+/// (single-closure-param), but the named form keeps grep / refactor
+/// rename safety because `action:` shows up as a stable token rather
+/// than a bare `{`. Existing scene files mix both — leave as-is until a
+/// future content pass.
 struct GotItButton: View {
     var label: String = "I get it!"
     var systemImage: String = "checkmark.seal.fill"
