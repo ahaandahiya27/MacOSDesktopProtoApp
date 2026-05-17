@@ -34,11 +34,11 @@ struct TryAtHomeCallout: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.orange.opacity(0.10))
+                .fill(Color.orange.opacity(0.14))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color.orange.opacity(0.35), lineWidth: 1)
+                .strokeBorder(Color.orange.opacity(0.45), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Try this at home. \(title). \(detail)")

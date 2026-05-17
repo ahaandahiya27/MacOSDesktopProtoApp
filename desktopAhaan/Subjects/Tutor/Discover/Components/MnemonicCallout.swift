@@ -72,11 +72,11 @@ struct MnemonicCallout: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.yellow.opacity(0.14))
+                .fill(Color.yellow.opacity(0.18))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color.orange.opacity(0.40), lineWidth: 1)
+                .strokeBorder(Color.orange.opacity(0.50), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
         .accessibilityLabel(accessibilityText)

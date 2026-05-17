@@ -37,11 +37,11 @@ struct RelatedConceptsCallout: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.compatTeal.opacity(0.10))
+                .fill(Color.compatTeal.opacity(0.14))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color.compatTeal.opacity(0.35), lineWidth: 1)
+                .strokeBorder(Color.compatTeal.opacity(0.45), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Related concepts. \(title). \(detail)")

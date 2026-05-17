@@ -247,49 +247,65 @@ struct DiscoverShell<SceneBody: View>: View {
         }
     }
 
+    // Header: two-row chrome.
+    //   Row 1 — chapter-accent scene title + "Scene N of M · X done" counter.
+    //   Row 2 — stepper dots; completed dots carry a checkmark glyph so done/
+    //   not-done is recognisable at a glance instead of relying on fill alone.
+    // Hoisting the title here makes the redundant footer title (was DM4) safe
+    // to remove and gives the canvas a single, high-contrast scene heading.
     private var header: some View {
-        HStack(spacing: 8) {
-            ForEach(0..<totalScenes, id: \.self) { i in
-                let id = "scene\(i + 1)"
-                let done = completedSceneIds.contains(id)
-                Button {
-                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
-                        currentScene = i
-                    }
-                } label: {
-                    Circle()
-                        .fill(done ? Color.green : Color.gray.opacity(0.25))
-                        .overlay(
-                            Circle()
-                                .strokeBorder(currentScene == i ? chapterAccent : .clear, lineWidth: 2.5)
-                        )
-                        .frame(width: 22, height: 22)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
+        VStack(spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Text(sceneTitles[currentScene])
+                    .font(.title2.bold())
+                    .foregroundColor(chapterAccent)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                Spacer(minLength: 0)
+                Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedSceneIds.count) done")
+                    .font(.caption.weight(.medium))
+                    .foregroundColor(.secondary)
             }
-            Spacer()
-            Text("\(completedSceneIds.count) / \(totalScenes) done")
-                .font(.caption.weight(.medium))
-                .foregroundColor(.secondary)
+            HStack(spacing: 8) {
+                ForEach(0..<totalScenes, id: \.self) { i in
+                    let id = "scene\(i + 1)"
+                    let done = completedSceneIds.contains(id)
+                    Button {
+                        withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
+                            currentScene = i
+                        }
+                    } label: {
+                        Circle()
+                            .fill(done ? Color.green : Color.gray.opacity(0.25))
+                            .overlay(
+                                Image(systemName: "checkmark")
+                                    .font(.system(size: 10, weight: .bold))
+                                    .foregroundColor(.white)
+                                    .opacity(done ? 1 : 0)
+                            )
+                            .overlay(
+                                Circle()
+                                    .strokeBorder(currentScene == i ? chapterAccent : .clear, lineWidth: 2.5)
+                            )
+                            .frame(width: 22, height: 22)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
+                }
+                Spacer(minLength: 0)
+            }
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
     }
 
+    // Footer: pure navigation. Scene title now lives in the header (DM4) so
+    // the footer no longer has to play caption + nav simultaneously.
     private var footer: some View {
         HStack {
             Button { goPrev() } label: { Label("Previous", systemImage: "chevron.left") }
                 .disabled(currentScene == 0)
-
             Spacer()
-
-            Text(sceneTitles[currentScene])
-                .font(.headline)
-                .foregroundColor(chapterAccent)
-
-            Spacer()
-
             Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
                 .accentColor(chapterAccent)
                 .disabled(currentScene == totalScenes - 1)
