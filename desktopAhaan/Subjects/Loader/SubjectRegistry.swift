@@ -33,6 +33,13 @@ final class SubjectRegistry: ObservableObject {
     @Published private(set) var isLoading: Bool = true
 
     init() {
+        // Detached load is intentional and app-lifetime: the registry is
+        // owned by the App via @StateObject and exists for the duration of
+        // the process. We don't store the Task because there's nothing to
+        // cancel against — the only consumer that matters (ContentView)
+        // observes `isLoading` to render the placeholder. `[weak self]`
+        // covers the theoretical case where the App scene is torn down
+        // during the very first ~150 ms of launch.
         Task { [weak self] in await self?.reload() }
     }
 

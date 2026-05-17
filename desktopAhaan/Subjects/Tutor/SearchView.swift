@@ -81,6 +81,14 @@ private struct SearchContent: View {
             debounceWork = work
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: work)
         }
+        // Cancel any pending debounce work on view disappear so the work
+        // doesn't fire after the kid has navigated away and surprise-touch
+        // `debouncedQuery` (the @State persists across navigations via the
+        // C1 fix, but the work item itself should still drop cleanly).
+        .onDisappear {
+            debounceWork?.cancel()
+            debounceWork = nil
+        }
     }
 
     /// Pack-scope filter pills. Mirrors the QuizBank pattern (E3): a

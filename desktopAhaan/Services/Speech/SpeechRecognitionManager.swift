@@ -16,14 +16,17 @@ final class SpeechRecognitionManager: ObservableObject {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
 
-    // Audio engine is created lazily to avoid triggering hardware init on Simulator
+    // Audio engine is created lazily to avoid triggering hardware init on
+    // Simulator. Re-written to avoid `unsafelyUnwrapped` (which sets the
+    // wrong tone even on a thread we control — every force-unwrap should
+    // make a reader ask "what if?"). Class is `@MainActor`-isolated so
+    // the if-let/assign sequence is race-free.
     private var _audioEngine: AVAudioEngine?
     private var audioEngine: AVAudioEngine {
-        if _audioEngine == nil {
-            _audioEngine = AVAudioEngine()
-        }
-        // Safe: we just guaranteed _audioEngine is non-nil above
-        return _audioEngine.unsafelyUnwrapped
+        if let existing = _audioEngine { return existing }
+        let engine = AVAudioEngine()
+        _audioEngine = engine
+        return engine
     }
 
     private var hasTapInstalled = false
