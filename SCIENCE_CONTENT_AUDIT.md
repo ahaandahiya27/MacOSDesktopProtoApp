@@ -79,6 +79,24 @@ Verified statically:
 
 Manual run-the-app verification is left for the user as the final smoke check.
 
+## "Looking ahead" — Class 7 → Class 10 / 11+12 / JEE / NEET continuity (NEW)
+
+User direction: "build everything within scope but can go beyond scope as learning can be vast for a child of Class 7 and they need to close large exam post 10+2 both medical and engineering."
+
+Response: new `LookingAheadCallout` component (purple-tinted, `graduationcap.fill` SF Symbol) that previews how the Class 7 concept extends in Class 10, Class 11–12, JEE Physics, and NEET Biology. Applied to 7 flagship scenes where the academic continuity is strongest and the topic is JEE/NEET high-yield:
+
+- **Ch 10 / InhaleExhale** → Class 11 Bio, "Breathing and Exchange of Gases", NEET pillar.
+- **Ch 11 / HeartBeats** → Class 11 Bio, "Body Fluids and Circulation" (SAN/AVN, cardiac cycle, ECG, double circulation).
+- **Ch 13 / PendulumLab** → Class 11 Physics, Simple Harmonic Motion (T = 2π√(L/g)); JEE Oscillations & Waves.
+- **Ch 13 / DistanceTimeGraph** → Class 11 Kinematics — slope of d-t graph = velocity; reappears throughout JEE Mechanics.
+- **Ch 14 / BuildACircuit** → Class 10 Ohm's Law (V = IR); Class 12 Kirchhoff's KVL / KCL.
+- **Ch 15 / MirrorMirror** → Class 10 mirror formula 1/v + 1/u = 1/f, magnification m = -v/u; JEE adds TIR and combined systems.
+- **Ch 15 / LensWorkshop** → Class 10 lens formula and power (dioptres); JEE lensmaker's equation; NEET eye + corrective lenses.
+
+macOS 11 (Big Sur) safe — SF Symbols 2 (`graduationcap.fill`), pure `Color.purple.opacity` tint, no `.foregroundStyle` / `.symbolEffect` / system-only colours. VoiceOver reads the whole callout as one combined element: "Looking ahead. (title). (detail)".
+
+This is a deliberate scope-widening per user request — beyond NCERT Class 7, into the academic arc that matters for kids prepping JEE/NEET later. The component is reusable so more scenes can get a "Looking ahead" sidebar as topics demand.
+
 ## Scene title accents (H-5 extension)
 
 Every scene body in Ch 8-18 had a generic black `Text("Scene Title").font(.largeTitle.bold()).padding(.top, 18)` at the top. That now gets the chapter accent applied:

@@ -42,6 +42,13 @@ struct Scene1_MirrorMirror: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 / JEE Optics",
+                detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

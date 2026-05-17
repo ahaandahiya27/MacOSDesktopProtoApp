@@ -51,6 +51,13 @@ struct Scene5_LensWorkshop: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 / JEE / NEET Optics",
+                detail: "Lenses get the same formula treatment: 1/v - 1/u = 1/f (sign convention matters!), plus power P = 1/f (dioptres) in Class 10. JEE adds lensmaker's equation; NEET tests the eye + corrective lenses (myopia, hypermetropia)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

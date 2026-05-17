@@ -70,6 +70,13 @@ struct Scene2_PendulumLab: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

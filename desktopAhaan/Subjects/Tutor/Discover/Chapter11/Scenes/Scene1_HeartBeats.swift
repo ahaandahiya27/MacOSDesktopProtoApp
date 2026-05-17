@@ -48,6 +48,13 @@ struct Scene1_HeartBeats: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET",
+                detail: "In Class 11 \"Body Fluids and Circulation\", the same heart you played with here becomes the focus: SAN/AVN pacemaker cells, cardiac cycle, ECG reading, double circulation. A perennial NEET high-yield topic."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

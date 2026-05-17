@@ -74,6 +74,13 @@ struct Scene1_BuildACircuit: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 / 12 Physics → JEE",
+                detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
