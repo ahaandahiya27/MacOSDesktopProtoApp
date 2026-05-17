@@ -322,9 +322,9 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | X1 | iMac pull-and-build script | ✅ `scripts/imac-pull.sh` |
 | X2 | Crash log capture + Help menu | ✅ |
 | X3 | Memory / reference docs (CLAUDE memories) | ✅ multiple files in memory/ |
-| X4 | CLAUDE.md in repo | ❌ |
-| X5 | README.md in repo | ❌ |
-| X6 | Contributing guidelines | ❌ |
+| X4 | CLAUDE.md in repo | ✅ working agreement: platform constraints, cross-machine workflow, gotchas, conventional commits |
+| X5 | README.md in repo | ✅ overview + repo tour + build instructions + sandbox/entitlement table |
+| X6 | Contributing guidelines | ✅ folded into CLAUDE.md (conventional commits + don't-break-Big-Sur rules) |
 | X7 | Branch policy / commit conventions | ✅ conventional commits in use |
 
 ## Y. Content pipeline (auxiliary scripts in ContentPipeline/)
