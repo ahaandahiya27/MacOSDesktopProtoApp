@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.26.0-baseline-concept-parity",
+  "version": "0.27.0-concept-+1-boosts",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -10830,6 +10830,48 @@
                 84
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_c02",
+              "title": "Crystallization at home and in industry",
+              "explanations": {
+                "oneLine": "Common-salt crystals from evaporating seawater, copper-sulphate crystals from a school lab, and pharmaceutical purification all use the same trick: dissolve, then slowly cool or evaporate.",
+                "kidFriendly": "Visit a Tamil Nadu salt pan and you'll see crystallization at industrial scale: shallow ponds of seawater dry under the sun and leave behind white salt crystals. In a school lab, dissolve copper sulphate powder in hot water until no more dissolves, then let the solution cool slowly overnight — beautiful blue crystals form. Crystallization is also how drug companies make the white pills you take — they grow crystals so pure that nothing else gets in. The slower you cool, the bigger and purer the crystals.",
+                "textbook": "Crystallization is widely used to obtain pure substances from a solution. Common-salt manufacture (~80% of India's salt comes from this method, especially Gujarat and Tamil Nadu salt pans). Lab purification of compounds like copper sulphate, alum (potash alum), and sugar. The process: dissolve impure substance in a minimum quantity of hot solvent → filter (removes insoluble impurities) → cool slowly (allows pure substance to crystallize while soluble impurities remain dissolved) → collect crystals and dry.",
+                "expert": "Industrial crystallization is engineered around supersaturation, nucleation, and crystal growth rates. Cooling-curve crystallization, evaporative crystallization (forced-circulation evaporators), and anti-solvent precipitation each suit different solubility curves. Pharmaceutical crystallization controls polymorph (different crystal forms of the same molecule can have different bioavailability — the 1998 ranitidine polymorph case is a textbook example). Crystal engineering in materials science designs metal-organic frameworks and pharmaceuticals at the molecular level."
+              },
+              "reasoning": "Different substances have different solubilities at different temperatures. By dissolving in hot water and cooling, the substance crystallizes out (its solubility drops) while impurities (different solubility curves) stay in solution.",
+              "useCases": [
+                {
+                  "title": "Tamil Nadu salt pans",
+                  "description": "Seawater is held in shallow ponds; sun + wind evaporate water leaving common salt crystals.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Copper sulphate crystal in school",
+                  "description": "A classic experiment — dissolve in hot water, suspend a string, watch big blue crystals grow overnight.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Sugar crystals from sugarcane juice",
+                  "description": "Industrial sugar factories crystallize sucrose from boiled-down cane juice — same physics at megaton scale.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 9 Chemistry 'Is Matter Around Us Pure?', crystallization is one of the standard purification methods. Class 12 Organic Chemistry uses recrystallization to purify newly-synthesised compounds. JEE Chemistry probes purity assessments (melting-point sharpness as a purity indicator). NEET / Biology Engineering uses crystallization to grow protein crystals for X-ray crystallography.",
+              "relatedConceptIds": [
+                "ch06_t02_c01",
+                "ch06_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t02_q03",
+                "ch06_t02_q05"
+              ],
+              "pageRefs": [
+                71,
+                72
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -14045,6 +14087,48 @@
                 125
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_c01",
+              "title": "Alveoli — where oxygen meets blood",
+              "explanations": {
+                "oneLine": "Tiny grape-like sacs at the end of bronchioles called alveoli are where oxygen from the air diffuses into blood and carbon dioxide diffuses out — the actual point of gas exchange.",
+                "kidFriendly": "Take a breath. The air goes nose → trachea → branches into smaller and smaller tubes (bronchi → bronchioles) → ends in millions of tiny balloon-like sacs called alveoli. Each alveolus is wrapped in tiny blood capillaries. Oxygen in the inhaled air slips through the thin alveolus wall into the blood; carbon dioxide leaves the blood and goes into the alveolus to be exhaled. There are about 300 million alveoli in human lungs — if you spread them out flat, they'd cover an area as big as a tennis court. That's why we can take up enough oxygen to power our whole body.",
+                "textbook": "Alveoli are the functional units of gas exchange in the human respiratory system. Structure: clusters of thin-walled (1 cell thick) sacs at the end of respiratory bronchioles, surrounded by a network of pulmonary capillaries. Each lung contains ~150 million alveoli; total surface area for gas exchange ~70-80 m² (about half a tennis court). Function: O₂ diffuses from alveolar air (higher PO₂) into capillary blood (lower PO₂) and binds to haemoglobin in RBCs; CO₂ diffuses from blood (higher PCO₂) into alveolar air (lower PCO₂) and is exhaled.",
+                "expert": "Gas exchange across the alveolar membrane follows Fick's law: rate ∝ (area × partial-pressure gradient) / thickness. The thinness (~0.5 μm) of the respiratory membrane and the huge surface area make diffusion extremely efficient. Pulmonary diseases damage this: emphysema reduces surface area (alveoli walls break down), fibrosis thickens it (slowing diffusion), COVID-19's diffuse alveolar damage combines both. Surfactant (a lipoprotein produced by Type II alveolar cells) reduces surface tension and prevents alveolar collapse — premature babies receive synthetic surfactant therapy."
+              },
+              "reasoning": "Effective gas exchange needs maximum surface area + minimum diffusion distance. Evolution solved this with millions of tiny thin-walled sacs, each surrounded by capillaries — turning a small lung volume into a giant exchange surface.",
+              "useCases": [
+                {
+                  "title": "Tennis-court analogy",
+                  "description": "300 million alveoli spread flat would cover the area of a singles tennis court — vast exchange surface in a small chest.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Smoking damage",
+                  "description": "Cigarette smoke destroys alveolar walls, reducing exchange surface — leading to emphysema and breathlessness.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Premature baby surfactant therapy",
+                  "description": "Babies born before 32 weeks often lack lung surfactant; doctors administer synthetic surfactant directly into the trachea.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Breathing and Exchange of Gases' you'll meet detailed alveolar histology, transport of O₂ and CO₂, and pulmonary disorders. NEET Biology hammers gas-exchange physics every year. Class 12 Sports / Physical Education covers VO₂ max — the maximum rate at which the alveoli + circulatory system can deliver oxygen to muscles. JEE Biotechnology / Class 12 Biology cover artificial lung designs that mimic alveolar function (ECMO machines).",
+              "relatedConceptIds": [
+                "ch10_t02_c01",
+                "ch10_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t01_q02",
+                "ch10_t01_q05"
+              ],
+              "pageRefs": [
+                120,
+                121
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -14629,6 +14713,48 @@
                 127
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t03_c01",
+              "title": "Plant respiration — stomata work day and night",
+              "explanations": {
+                "oneLine": "Plants respire too — through tiny pores on leaves called stomata — taking in O₂ and releasing CO₂; in daylight, photosynthesis overwhelms this, but at night plants are pure respirers.",
+                "kidFriendly": "People often think plants only release oxygen. They don't — they also respire, just like animals. Every plant cell burns sugars in O₂ to make energy, releasing CO₂. The catch is that during the day, photosynthesis in green leaves makes much more O₂ than respiration uses, so the net flow is OUT. But at night photosynthesis stops; only respiration continues — so plants release CO₂ at night, just like us. Plants don't have lungs; they breathe through tiny pores on their leaves called stomata, and through pores called lenticels on stems. That's why hospitals advise NOT to keep too many plants in a closed bedroom at night.",
+                "textbook": "Plant respiration is the metabolic breakdown of glucose with O₂ to release energy (ATP) — the same biochemistry as animals: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + ATP. Gas exchange happens through (1) stomata — pores on leaves, especially the lower surface; flanked by guard cells that open/close them; (2) lenticels — pores in the bark of woody stems; (3) roots — diffusion across root hairs. During daylight, photosynthesis produces much more O₂ than respiration uses, so leaves are net O₂ emitters. At night, only respiration runs, so leaves emit CO₂. Crops like rice and wheat have measurable 'night respiration' losses (~30% of daytime carbon gain).",
+                "expert": "Plant respiration is split into mitochondrial respiration (in all living plant cells) and photorespiration (a wasteful side-process of RuBisCO in C3 plants under high O₂). Cyanide-resistant alternative respiration in plant mitochondria dissipates excess electrons as heat — used by skunk-cabbage and some lotus species to warm flowers and attract pollinators. CAM plants (cacti, succulents) reverse the daily rhythm: open stomata only at night to absorb CO₂ (stored as malate), close them by day to conserve water. C4 plants (maize, sugarcane) suppress photorespiration through a CO₂-concentrating mechanism — a high-yield evolutionary trick."
+              },
+              "reasoning": "Every living cell — plant, animal, fungal — needs ATP to function. The cheapest way to make ATP is aerobic respiration: oxidise glucose with O₂. So plants run this everywhere, all the time. Photosynthesis is an ADDITIONAL talent green plant cells have on top of respiration.",
+              "useCases": [
+                {
+                  "title": "Bedroom plant rule",
+                  "description": "Doctors traditionally advised not to put plants in a closed bedroom at night — they consume O₂ and produce CO₂ during sleep hours.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Rice-field night respiration loss",
+                  "description": "Up to 30% of a rice plant's daytime photosynthetic gain is lost to night respiration — a target for climate-resilient crop breeding.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Cactus CAM cycle",
+                  "description": "Cacti open stomata only at night to fix CO₂, conserving water in deserts — opposite rhythm to most plants.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Respiration in Plants' you study glycolysis, Krebs cycle, ETC, and respiratory quotient — at full molecular detail. NEET Biology tests photorespiration vs respiration distinctions every year. JEE Biotechnology / Class 12 Biology covers C3, C4, CAM photosynthesis-respiration coupling.",
+              "relatedConceptIds": [
+                "ch10_t02_c01",
+                "ch10_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t03_q04",
+                "ch10_t03_q05"
+              ],
+              "pageRefs": [
+                124,
+                125
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -14924,6 +15050,48 @@
                 134,
                 135,
                 138
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_c02",
+              "title": "Double circulation — pulmonary and systemic loops",
+              "explanations": {
+                "oneLine": "Mammals have double circulation: blood passes through the heart TWICE per round-trip — once to the lungs (pulmonary), once to the body (systemic) — keeping oxygenated and deoxygenated blood completely separate.",
+                "kidFriendly": "Trace one drop of blood. It starts in the right side of your heart, gets pumped to your lungs to pick up oxygen, comes back to the LEFT side of your heart, gets pumped out again to your whole body, delivers oxygen, returns to the right side. Two heart-passes per full lap. This is double circulation. Fish have just single circulation — heart → gills → body → heart — so by the time blood reaches the body it's already slowed and lost pressure. Mammals' double-pump design keeps body blood pressure high. The right side handles deoxygenated (blue) blood; the left side handles oxygenated (red) blood. They never mix in a healthy heart.",
+                "textbook": "Double circulation in mammals and birds consists of two distinct circuits sharing the heart: (1) Pulmonary circuit — deoxygenated blood from the body enters the right atrium → right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium. Gas exchange happens in the lungs. (2) Systemic circuit — oxygenated blood from the lungs → left atrium → left ventricle → aorta → body tissues → venae cavae → right atrium. The two circuits are kept separate by the muscular septum dividing the right and left chambers; in a healthy heart they never mix. Advantage over single circulation (fish): high blood pressure can be maintained in the systemic circuit while the pulmonary circuit operates at safer lower pressure (lungs are delicate).",
+                "expert": "Heart development in mammals begins as a single tube that twists and folds during embryogenesis; congenital defects like ventricular septal defect (VSD) or tetralogy of Fallot result from incomplete partitioning. The double-circulation pressure profile (systemic ~120/80 mmHg vs pulmonary ~25/10 mmHg) optimises gas exchange efficiency without bursting the alveolar capillaries. Comparative anatomy: amphibians have an incomplete septum and partial mixing; reptiles have varying degrees of separation; only birds and mammals achieve fully separate circulations — convergent evolution driven by high metabolic demand."
+              },
+              "reasoning": "If oxygenated and deoxygenated blood mixed in the heart, every cell in the body would receive only partially-oxygenated blood — limiting how fast tissues can metabolise. Keeping the two streams separate via two complete loops solves this elegantly.",
+              "useCases": [
+                {
+                  "title": "Heart-sound 'lub-dub'",
+                  "description": "Lub = closure of AV valves between atria and ventricles; dub = closure of semilunar valves at the start of pulmonary/aortic outflow — same beat in both loops.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Blue baby syndrome",
+                  "description": "Congenital heart defects can leave septum holes, mixing oxygenated and deoxygenated blood — the baby's skin appears blue from low oxygen.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Exercise heart rate",
+                  "description": "During exercise both circuits work harder; cardiac output can triple to deliver O₂ at the rate muscles demand.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Body Fluids and Circulation' you build a full model of double circulation including pulmonary vs systemic blood pressure, ECG waves, cardiac cycle. NEET Biology asks about it every year. Class 12 / JEE Biotechnology covers heart-related medical devices — pacemakers, stents, artificial hearts.",
+              "relatedConceptIds": [
+                "ch11_t01_c01",
+                "ch11_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t01_q01",
+                "ch11_t01_q06"
+              ],
+              "pageRefs": [
+                131,
+                132
               ],
               "needsHumanReview": false
             }
@@ -15323,6 +15491,47 @@
                 139
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_c01",
+              "title": "Nephrons — the filters inside your kidneys",
+              "explanations": {
+                "oneLine": "Each kidney contains about a million tiny filters called nephrons; they pull urea and waste out of blood while keeping the useful stuff (sugar, salts, proteins, water) — what's left is urine.",
+                "kidFriendly": "Your two kidneys are bean-shaped organs in your lower back. They look small but each contains about ONE MILLION tiny filtering units called nephrons. Each nephron is a long looped tube wrapped around a ball of capillaries called a glomerulus. Blood enters the glomerulus under pressure; water, urea, salts, and small molecules squeeze out into the tube. As the tube winds back through the kidney, useful stuff — sugar, most water, salts — is reabsorbed into nearby blood vessels. What's left when the tube reaches the bladder pipe is concentrated urea + extra water + salts = urine. Together your kidneys filter about 180 litres of blood per day — but you only urinate ~1.5 L. Most of it is reabsorbed.",
+                "textbook": "Each kidney contains ~1 million nephrons — the structural and functional unit of the kidney. A nephron has: (1) Bowman's capsule + glomerulus — where blood is filtered by pressure-driven ultrafiltration. (2) Proximal Convoluted Tubule (PCT) — reabsorbs glucose (~100%), amino acids, ~65% of water, ions. (3) Loop of Henle — concentrates urine via a counter-current multiplier. (4) Distal Convoluted Tubule (DCT) — fine-tunes ions under hormonal control (aldosterone). (5) Collecting Duct — adjusts water reabsorption under ADH. Each day kidneys filter ~180 L of plasma; ~99% is reabsorbed; ~1.5 L exits as urine carrying urea, creatinine, excess salts.",
+                "expert": "Renal physiology is mathematically intricate. Glomerular Filtration Rate (GFR ~125 mL/min in adults) is regulated through tubuloglomerular feedback. The counter-current multiplier in the Loop of Henle creates a medullary osmotic gradient of up to 1200 mOsm/kg, enabling urine concentration. Renin from the juxtaglomerular apparatus drives the renin-angiotensin-aldosterone system (RAAS) — a master regulator of blood pressure. Chronic Kidney Disease affects 8-10% of Indians; hemodialysis substitutes for failed kidneys by passing blood across a semipermeable membrane."
+              },
+              "reasoning": "The kidney's job is selective: keep most things in blood, remove only the wastes. Pure passive filtration would lose everything. So the kidney first squeezes EVERYTHING out (ultrafiltration), then carefully reabsorbs the useful stuff — leaving only waste in the urine.",
+              "useCases": [
+                {
+                  "title": "Daily urine output",
+                  "description": "Healthy adult passes ~1.5 L of urine per day from 180 L of filtration — extreme efficiency of reabsorption.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Hemodialysis machine",
+                  "description": "When kidneys fail, blood is routed through a machine that mimics nephron filtration — typically 3 sessions of 4 hours per week.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Diabetes and kidney damage",
+                  "description": "High blood sugar damages glomerular capillaries over decades — diabetic nephropathy is a leading cause of kidney failure in India.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Excretory Products and their Elimination' you'll meet every nephron part with full molecular detail, hormonal regulation, and dialysis. NEET Biology asks about nephron histology and counter-current multiplier every year. Class 12 / JEE Bio-engineering covers hemodialysis machine design and artificial kidneys (still in R&D).",
+              "relatedConceptIds": [
+                "ch11_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t02_q03",
+                "ch11_t02_q05"
+              ],
+              "pageRefs": [
+                135,
+                136
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -15569,6 +15778,47 @@
               "pageRefs": [
                 140,
                 141
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_c02",
+              "title": "Transpiration — the engine of plant water transport",
+              "explanations": {
+                "oneLine": "Water evaporating from leaves through stomata creates a suction that pulls more water up the xylem from the roots — the same physics as drinking through a straw, but powered by sunlight and dry air.",
+                "kidFriendly": "How does a 50-metre tall eucalyptus tree pull water from soil to its top branches against gravity? The answer is transpiration. Water inside leaf cells evaporates through the tiny stomatal pores. As water leaves, it creates a pull on the column of water below — like sucking a straw. Because water molecules stick to each other (cohesion), this pull travels all the way down to the roots, drawing fresh water up the xylem. On a hot day, a single corn plant transpires several litres of water. The sun's heat and dry air drive this engine for free. The cost: the plant loses lots of water, which is why plants in deserts have small leaves and waxy coatings.",
+                "textbook": "Transpiration is the loss of water vapour from plant leaves through stomata (mostly) and lenticels (woody parts). Water evaporates from the moist mesophyll cell walls into the air space inside the leaf and diffuses out via stomata. This evaporation generates a negative pressure (tension) at the top of the xylem column. Because of cohesion among water molecules (hydrogen bonding) and adhesion of water to xylem walls, the entire water column in the xylem is pulled upward — the Cohesion-Tension Theory of water transport. A single sunflower plant transpires ~1 L of water per day; a large hardwood tree can transpire 100s of litres on a hot day. Stomata regulate the rate by opening (in sunlight) and closing (at night, drought, high CO₂).",
+                "expert": "Quantitatively, transpiration is driven by the Vapour Pressure Deficit (VPD) between leaf air and atmosphere. Cohesion-tension explains how trees over 100 m tall (e.g., coast redwoods) move water without active pumping; xylem sap can be under tensions of -2 MPa or more (effectively a vacuum). Cavitation (formation of air bubbles in the xylem) can break the water column — plants have evolved many adaptations to prevent or repair cavitation, including small-diameter tracheids, vessel-end perforation plates, and recovery mechanisms. Climate change threatens trees by widening VPD, accelerating transpiration, and increasing cavitation events — the 2010-2020 die-back of giant ponderosa pines in the western US."
+              },
+              "reasoning": "Plants need water at the top (leaves) but their roots are at the bottom — no pump in between. Evaporation at the top creates a pull that, transmitted through the connected water column, can lift water to incredible heights — free energy from sunlight and dry air.",
+              "useCases": [
+                {
+                  "title": "Banyan tree daily water lift",
+                  "description": "An old banyan transpires hundreds of litres per day — equal to a small swimming pool over a year — all lifted by evaporative pull.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Wilting houseplant",
+                  "description": "Forget to water and stomata close, but evaporation keeps happening; leaves lose water faster than roots can supply → wilting.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Desert plant adaptations",
+                  "description": "Cacti have nearly no leaves (no place to transpire from), thick waxy cuticles, and CAM photosynthesis — all to slow transpiration.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Transport in Plants' you'll meet the Cohesion-Tension Theory, the apoplast/symplast pathways, and stomatal opening/closing mechanism (potassium ion pumps). NEET Biology asks numerical problems on transpiration pull and adhesive vs cohesive forces. Class 12 / JEE Biology covers root pressure (a minor secondary mechanism) and guttation.",
+              "relatedConceptIds": [
+                "ch11_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t03_q03",
+                "ch11_t03_q05"
+              ],
+              "pageRefs": [
+                138,
+                139
               ],
               "needsHumanReview": false
             }
@@ -15861,6 +16111,48 @@
                 154
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_c01",
+              "title": "Flower anatomy — petals, stamens, pistil, ovary",
+              "explanations": {
+                "oneLine": "A flower has four whorls of organs: sepals (green outer leaves), petals (colourful), stamens (male — pollen producers), and pistil (female — receives pollen, contains ovary with eggs).",
+                "kidFriendly": "Pick any flower from a garden and pull it apart carefully. From outside in you'll find FOUR layers. (1) Sepals — small green leaves outside that protect the bud. (2) Petals — the colourful part that attracts insects. (3) Stamens — thin stalks topped with little sacs of pollen (the male part). (4) Pistil — at the very centre, shaped like a bottle, with a sticky top (stigma), a long neck (style), and a swollen base (ovary) containing eggs. The flower's job is to bring male pollen and female eggs together to make seeds. The colourful petals are advertising; the pollen is what the bee carries; the eggs are inside the ovary.",
+                "textbook": "A typical flower has four concentric whorls of organs: (1) Calyx — outermost whorl of sepals; usually green and leaf-like; protects the bud before opening. (2) Corolla — whorl of petals; usually colourful, often scented; attracts pollinators. (3) Androecium — whorl of stamens (the male reproductive parts); each stamen has a thin stalk (filament) and a pollen-bearing head (anther). Pollen grains contain male gametes. (4) Gynoecium / Pistil — innermost whorl; the female reproductive part. Each pistil consists of stigma (sticky receptive top), style (narrow neck), and ovary (swollen base containing ovules with female gametes/eggs). After pollination and fertilisation, the ovary develops into a fruit and ovules become seeds.",
+                "expert": "Flower morphology is the basis of plant taxonomy. Floral diagrams and formulas (K, C, A, G notation) encode whorl arrangement, fusion (syncarpous vs apocarpous gynoecium, gamopetalous vs polypetalous corolla), and symmetry (actinomorphic radial vs zygomorphic bilateral). The number of floral parts is taxonomically conserved (monocots typically 3-fold, eudicots typically 4- or 5-fold). Coevolution between flowers and pollinators has produced extreme specialisations: orchids mimicking female bees (sexual deceit), Darwin's prediction of a moth with a 30 cm tongue to fit a Madagascar orchid (later confirmed), heliconia flowers fitted to hummingbird beaks."
+              },
+              "reasoning": "Sexual reproduction needs (a) male and female gametes meeting, (b) protection of resulting embryo. A flower is an evolutionary solution: bright petals attract pollinators that deliver pollen to stigma; the developing seed is protected inside a closed ovary. Different whorls have different specialised jobs.",
+              "useCases": [
+                {
+                  "title": "Hibiscus dissection",
+                  "description": "5 sepals, 5 large red petals, many stamens fused into a tube, single 5-lobed stigma at the top — a classic teaching flower.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Rose petal count",
+                  "description": "Wild roses have 5 petals; cultivated garden roses are doubled/tripled via selective breeding to make them showier.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Sunflower disc and ray florets",
+                  "description": "A 'sunflower' is actually hundreds of tiny flowers — disc florets in the centre and ray florets (the 'petals') around the edge.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Biology 'Morphology of Flowering Plants' you meet floral diagrams, formulas, and the full classification of inflorescences. NEET Biology asks about specific floral characteristics of named families every year (Fabaceae, Solanaceae, Liliaceae). Class 12 'Sexual Reproduction in Flowering Plants' goes deep into development of male and female gametophytes within these whorls.",
+              "relatedConceptIds": [
+                "ch12_t01_c02",
+                "ch12_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t01_q03",
+                "ch12_t01_q04"
+              ],
+              "pageRefs": [
+                142,
+                143
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -16112,6 +16404,48 @@
               "pageRefs": [
                 155,
                 156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t02_c02",
+              "title": "Fertilisation and fruit formation",
+              "explanations": {
+                "oneLine": "After a pollen grain lands on the stigma, it grows a tube down to the ovary; the male nucleus inside fuses with the female egg — that's fertilisation; the fertilised ovule becomes a seed and the ovary swells into a fruit.",
+                "kidFriendly": "Pollination is just the first half. After a pollen grain lands on the sticky stigma, it grows a long tube down through the style into the ovary. The male nucleus inside the pollen travels through this tube to the female egg inside an ovule. They fuse — that's fertilisation. After fertilisation, two things happen in slow motion: (1) the ovule develops into a SEED (with an embryo inside, ready to grow into a new plant); (2) the ovary swells up and develops into a FRUIT around the seeds. So an apple is a swollen ovary containing seeds; a mango pit is the seed inside the swollen ovary; a coconut is the same.",
+                "textbook": "Fertilisation in flowering plants: after pollination, the pollen grain on the stigma germinates and grows a pollen tube through the style and into the ovary. The pollen tube carries two male nuclei (gametes). On reaching the ovule it discharges its gametes into the embryo sac. One gamete fuses with the egg to form a diploid zygote (this is fertilisation in the strict sense). The second gamete fuses with two polar nuclei to form the triploid primary endosperm nucleus — this is unique to flowering plants and is called double fertilisation. Post-fertilisation development: the zygote develops into the embryo of the seed; the primary endosperm nucleus develops into the endosperm (nutritional tissue); the ovule wall thickens to form the seed coat; the ovary wall develops into the fruit wall (pericarp).",
+                "expert": "Double fertilisation is a defining feature of angiosperms (flowering plants); gymnosperms have only single fertilisation. The two-step (pollination + double fertilisation) reproductive cycle has driven angiosperm dominance since ~140 million years ago. Pollen tube growth is the fastest known plant growth — up to 1 cm/hour. In agriculture, knowledge of fertilisation timing is critical for hybrid-seed production: emasculation (removing male parts) prevents self-pollination; cross-pollination is then induced manually. Apomixis (seed formation without fertilisation) in citrus, mango, and grass species is being engineered into crop plants to fix hybrid vigour."
+              },
+              "reasoning": "A seed needs an embryo (a tiny plant ready to grow), a food store (the endosperm or stored starch in the cotyledons), and a protective coat. Fertilisation triggers all three to develop from the ovule, while the surrounding ovary becomes a fruit that helps disperse the seed.",
+              "useCases": [
+                {
+                  "title": "Apple = swollen ovary",
+                  "description": "Bite into an apple — you see the seeds in the centre, surrounded by the fleshy ovary tissue.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Coconut = single huge fruit-seed",
+                  "description": "The hard shell is the inner ovary wall; the white kernel is the endosperm; the hollow water inside is liquid endosperm.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Tomato ripening",
+                  "description": "After a tomato flower is pollinated and fertilised, the green ovary swells and ripens to red over a few weeks.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 12 Biology 'Sexual Reproduction in Flowering Plants' you study double fertilisation, embryogenesis, endosperm development, fruit-seed correlations — all NEET-frequent material. Class 12 NCERT distinguishes true vs false fruits, parthenocarpic fruits (seedless), apomixis. JEE Biotechnology covers manipulation of fertilisation for hybrid seed industry.",
+              "relatedConceptIds": [
+                "ch12_t02_c01",
+                "ch12_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t02_q01",
+                "ch12_t02_q02"
+              ],
+              "pageRefs": [
+                146,
+                147
               ],
               "needsHumanReview": false
             }
@@ -16374,6 +16708,47 @@
               ],
               "relatedQuestionIds": [
                 "ch12_t01_q01"
+              ],
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t03_c02",
+              "title": "Vegetative propagation, budding, fragmentation",
+              "explanations": {
+                "oneLine": "Plants and simple animals reproduce asexually through vegetative propagation (cuttings, runners, tubers), budding (yeast, hydra), and fragmentation (algae, sea-stars) — making genetic copies of one parent.",
+                "kidFriendly": "Take a stem cutting from a rose plant and stick it in moist soil — within weeks roots grow and you have a NEW rose plant identical to the parent. This is vegetative propagation — making new plants from a piece of stem, leaf or root. Potato is a swollen underground stem (tuber); each 'eye' can grow into a new plant. Strawberry plants send out long stems (runners) along the ground; wherever they touch soil, a new plant grows. Yeast cells (used in bread-making) reproduce by BUDDING — a small bud grows out of the side and detaches as a new yeast. Hydra (a small pond animal) does the same. Some algae and sea-stars break into pieces (fragmentation); each piece becomes a new individual. All asexual — no flower, no fertilisation, just copying.",
+                "textbook": "Asexual reproduction in plants and simple animals: (1) Vegetative propagation in plants — natural via stolons/runners (strawberry, grass), tubers (potato), bulbs (onion, garlic), corms (gladiolus), rhizomes (ginger, ferns), suckers (banana), leaf buds (Bryophyllum — note the famous 'leaves grow on the edges' experiment); artificial via stem cuttings (rose, hibiscus, sugarcane), root cuttings, layering (bougainvillea), grafting (mango, apple, citrus on root stocks), and tissue culture (micropropagation of orchids, banana). (2) Budding — a small outgrowth on the parent develops into a new individual then separates. Examples: yeast (Saccharomyces), hydra. (3) Fragmentation — the parent body breaks into pieces, each capable of regenerating into a complete organism. Examples: filamentous algae (Spirogyra), planaria flatworms, sea-stars, sponges. Offspring are clones — genetic copies of the parent (no genetic recombination unless mutation).",
+                "expert": "Asexual reproduction trades off genetic diversity for speed and resource efficiency. Beneficial for plants in stable habitats and during rapid colonisation. Modern micropropagation (Murashige-Skoog medium, regulated phytohormone cocktails) can produce millions of identical banana, orchid, or potato plants per year from a single tissue sample — backbone of horticulture. The downside is monoculture vulnerability: the Cavendish banana, propagated entirely vegetatively, is genetically uniform and currently threatened by Tropical Race 4 of Fusarium fungus, with no genetic diversity to fall back on. Grafting onto disease-resistant rootstocks (used widely in apple, citrus, grape industry) protects elite varieties."
+              },
+              "reasoning": "Sexual reproduction is expensive — needs two parents, gametes, sometimes pollinators. Asexual is cheaper — one parent, no gamete fusion, just cell division. When conditions are good and stable, copying yourself is the fastest way to fill the niche. When conditions change, sexual reproduction's genetic mixing pays off.",
+              "useCases": [
+                {
+                  "title": "Strawberry runners",
+                  "description": "A single strawberry plant sends out 5-6 runners per season; each can root and become a new plant — a strawberry patch is one giant clone.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Bryophyllum leaf-margin plantlets",
+                  "description": "Lay a Bryophyllum leaf on moist soil — tiny plantlets emerge from the leaf margins within weeks, ready to root.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Hydra budding in a pond",
+                  "description": "Look at hydra under a microscope and you may see one with a side-bud — the bud will detach as a fully-formed new hydra.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Biology 'Reproduction in Plants' and 'Reproduction in Organisms' you'll meet every mode in detail with NEET-friendly examples. Class 12 Biotechnology covers tissue culture, plant transformation, and synthetic biology. JEE Biotech and Class 12 cover the genetic uniformity downsides — the Cavendish banana crisis is a textbook case study.",
+              "relatedConceptIds": [
+                "ch12_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t03_q03",
+                "ch12_t03_q04"
               ],
               "pageRefs": [
                 148,
@@ -16649,6 +17024,48 @@
                 161,
                 168,
                 171
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t01_c02",
+              "title": "Uniform vs non-uniform motion, distance-time graphs",
+              "explanations": {
+                "oneLine": "Uniform motion means equal distance in equal time intervals (a straight-line distance-time graph); non-uniform motion means changing speed (a curving graph).",
+                "kidFriendly": "Imagine two scooters. The first travels exactly 20 metres every second — 20 m in second 1, 20 m in second 2, 20 m in second 3. That's UNIFORM motion. Plot distance vs time and you get a straight slanting line. The second scooter goes 10 m in the first second, 30 m in the next, 40 m after that. That's NON-UNIFORM motion. Plot it and you get a CURVE. A car cruising on a clear highway is roughly uniform; a car in city traffic — speeding up at green lights, braking at red ones — is non-uniform. Distance-time graphs let you SEE speed at a glance: the steeper the line, the faster the speed.",
+                "textbook": "Uniform motion: an object covers EQUAL distances in EQUAL intervals of time. Speed is constant. On a distance-time graph, this plots as a straight slanting line; the slope equals the speed (Δd/Δt). Non-uniform motion: the distance covered in equal time intervals is NOT equal — i.e., speed changes. On a distance-time graph, the plot is curved. Speed at any instant equals the slope of the tangent at that point — what Class 11 Physics will formalise as the derivative. A horizontal line on the graph means the object is at rest. A steeper line means a higher speed. Distance-time graphs are a powerful tool for studying motion qualitatively before equations are introduced.",
+                "expert": "Class 11 / JEE Physics extends this to velocity-time and acceleration-time graphs, with area-under-curve giving distance, and Galileo's discovery that for uniform acceleration, distance ∝ t² (the famous v² = u² + 2as kinematic equation). Distance-time graphs of falling bodies in Galileo's inclined-plane experiments were the historical evidence for uniform acceleration under gravity. Modern motion-tracking software (Tracker, Coach Video Analysis) lets students compute velocity from video frames — same principle, digital tools."
+              },
+              "reasoning": "Equal speed means equal distance per unit time — by definition. Plotting equal vs unequal distances against time naturally produces straight vs curved graphs. The slope of the line equals the speed. So the graph tells you everything about the motion: is it constant, accelerating, stopped?",
+              "useCases": [
+                {
+                  "title": "Cricket score-card",
+                  "description": "Runs scored over each over forms a non-uniform graph — periods of acceleration (fours, sixes) and stationary stretches.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Highway cruise control",
+                  "description": "Cruise control keeps a car at constant speed → uniform motion → straight slanting distance-time line for hours.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Traffic-jam stop-start",
+                  "description": "City driving shows characteristic stair-step non-uniform motion — flat stretches when stopped, slanting when moving.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "In Class 9 / 10 / 11 Physics 'Motion' you'll meet velocity-time graphs and the SUVAT kinematic equations. JEE Mains / Advanced load up on graphical-analysis problems: 'given a v-t graph, find total distance' uses areas under the curve. NEET / Class 11 Biology applies the same maths to animal movement and cardiac output curves.",
+              "relatedConceptIds": [
+                "ch13_t01_c01",
+                "ch13_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t01_q04",
+                "ch13_t01_q06"
+              ],
+              "pageRefs": [
+                152,
+                153
               ],
               "needsHumanReview": false
             }
@@ -17323,6 +17740,48 @@
                 165,
                 166,
                 169
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t03_c02",
+              "title": "From sundial to atomic clock — 4000 years of time-keeping",
+              "explanations": {
+                "oneLine": "Humans started with sundials (3500 BCE), then water clocks, then pendulum clocks (1656), then quartz watches (1928), then atomic clocks (1955) — each one a thousand times more accurate than the last.",
+                "kidFriendly": "How accurate is your wristwatch? Ancient Egyptians used a SHADOW STICK (sundial) — accurate to the hour. Greeks invented WATER CLOCKS that dripped water through a hole to mark time. The first mechanical clocks (1300s) used falling weights and gears — accurate to ~15 minutes per day. Christiaan Huygens' PENDULUM CLOCK in 1656 was a leap — accurate to ~10 seconds per day. A QUARTZ WRISTWATCH (1928 onwards, mass production from 1969) is accurate to a second per month. ATOMIC CLOCKS (1955) measure the vibration of caesium atoms — accurate to one second every 30 million years. Modern OPTICAL-LATTICE clocks are 1000 times better still. Every step in this timeline = better physics + better engineering.",
+                "textbook": "Timeline of time-keeping: (1) Sundial, ~3500 BCE — gnomon's shadow on a calibrated dial; accuracy ~1 hour. Jantar Mantar (1734, Jaipur) sundials achieve ~2 seconds. (2) Water clocks (clepsydra) and sand hourglasses, ~1500 BCE — measure intervals. (3) Mechanical escapement clocks, 1300s — falling weights + verge-and-foliot; accuracy ~15 min/day. (4) Pendulum clock (Huygens, 1656) — based on Galileo's isochronism; accuracy ~10 s/day → ~0.5 s/day with temperature compensation. (5) Marine chronometer (Harrison, 1761) — for ship navigation, accurate to seconds across months. (6) Quartz crystal oscillator (Marrison, 1928; wristwatches from 1969 Seiko Astron) — 32,768 Hz crystal; ~1 s/month. (7) Atomic clock (Essen, 1955) — caesium-133 hyperfine transition; ~1 s in 30 million years. (8) Optical-lattice clocks (since ~2010) — strontium and ytterbium; ~1 s in 15 billion years.",
+                "expert": "Each clock revolution corresponds to a more stable physical reference: Earth's rotation → pendulum gravity → crystal piezoelectric vibration → atomic electronic transition → optical electronic transition. Modern GPS and the internet depend on a global network of atomic clocks delivering nanosecond precision. The leap-second adjustment (last added in 2016, possibly being phased out by 2035) reconciles atomic time with Earth's slightly variable rotation. India's National Physical Laboratory (NPL Delhi) maintains the national time standard via 8 caesium fountains and 2 hydrogen masers; ISRO satellites carry rubidium clocks for IRNSS."
+              },
+              "reasoning": "A clock is just a count of something that repeats predictably. The more stable and frequent the repetition, the more accurate the clock. Civilisation has moved from counting Earth's rotation (years, days) to counting atom vibrations (10⁹ per second) — and that's why GPS works.",
+              "useCases": [
+                {
+                  "title": "Jantar Mantar (Jaipur, 1734)",
+                  "description": "Maharaja Sawai Jai Singh II built the world's largest sundial, the Samrat Yantra — accurate to 2 seconds in clear sunshine.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Quartz wristwatch",
+                  "description": "A tiny piezoelectric quartz tuning fork vibrates 32,768 times per second; the watch electronics divide this to seconds.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Atomic clock in GPS satellites",
+                  "description": "Each GPS satellite carries 4 atomic clocks; your phone reads signals from 4+ of them and triangulates your position to within metres.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Physics 'Units and Measurements' the SI second is defined via the caesium transition. Class 12 / JEE Modern Physics introduces atomic spectroscopy that underlies atomic clocks. NEET Biology touches on circadian rhythms — the body's own internal 'clock'. UPSC General Studies includes Indian astronomical observatories.",
+              "relatedConceptIds": [
+                "ch13_t03_c01",
+                "ch13_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t03_q02",
+                "ch13_t03_q03"
+              ],
+              "pageRefs": [
+                154,
+                155
               ],
               "needsHumanReview": false
             }
@@ -22385,6 +22844,48 @@
                 221
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t01_c02",
+              "title": "From household to river — the wastewater journey",
+              "explanations": {
+                "oneLine": "Wastewater leaves your house through small pipes → joins main sewers → reaches a treatment plant → cleaned → released into a river or used for irrigation; without this chain, raw sewage would contaminate everything.",
+                "kidFriendly": "Every drop of water that goes down a sink, shower, washing-machine, or toilet starts a journey. From your house it flows into small underground pipes (the household sewer). These join with pipes from neighbouring houses into bigger sewers under the street. Big sewers carry the combined wastewater of an entire neighbourhood to a wastewater treatment plant — usually located outside the city. There the water is cleaned through multiple stages over a day, and finally released into a river, lake, or used for irrigation. Without this journey, dirty water would pile up around homes — exactly what happens in places without sewers, causing epidemics. The Roman aqueduct system pioneered this design 2000 years ago; modern Indian cities are still expanding their sewer networks.",
+                "textbook": "The wastewater journey from source to disposal: (1) Source — domestic (kitchens, bathrooms, washing-machines, toilets), commercial (shops, hotels, restaurants), or industrial. (2) House drains — pipes carry wastewater from individual fixtures to a single outlet pipe leaving the building. (3) Lateral sewers — collect from many houses on a street. (4) Main / trunk sewers — large pipes carry combined flow toward the treatment plant. Designed to use gravity; lift-stations pump where elevation forces it. (5) Wastewater Treatment Plant (WWTP) — multi-stage purification. (6) Discharge — treated 'effluent' is released into a receiving water body (river, lake, sea) OR reused for agricultural irrigation, industrial cooling, or groundwater recharge. Indian cities treat only ~38% of generated sewage; the remainder flows untreated into rivers, polluting them severely.",
+                "expert": "Modern sewer engineering uses hydraulic design (Manning's equation), CCTV inspection for blockage detection, and increasingly Smart Sewer IoT sensors that detect overflow and infiltration. Combined Sewer Overflows (CSOs) — where stormwater + sewage mix and overflow during heavy rain — are a major urban-flooding pollution problem. Decentralised treatment (small modular plants in housing colonies) is a growing alternative to giant centralised plants. Resource recovery from sewage — biogas from anaerobic digestion, nutrient recovery from sludge — turns wastewater into a resource. Singapore's NEWater treats sewage to drinking-water purity."
+              },
+              "reasoning": "Every house produces wastewater every day. If left untreated, this water would accumulate and contaminate drinking water. So cities build a pyramid of pipes: small at each home, larger as they combine, ending at a treatment plant. The chain MUST be unbroken — one missing link spills sewage into streets or rivers.",
+              "useCases": [
+                {
+                  "title": "Delhi's Yamuna River pollution",
+                  "description": "Most Delhi sewage flows untreated into the Yamuna — over 22 drains discharge raw sewage daily, choking the river.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Roman cloaca maxima (2nd century BCE)",
+                  "description": "The original 'great sewer' under Rome is still functioning — humanity's longest-serving piece of infrastructure.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Singapore NEWater",
+                  "description": "Treated wastewater is purified to drinking quality and supplies ~40% of Singapore's water — a benchmark India aims for.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography 'Water Resources' covers sewerage as urban infrastructure. UPSC Public Administration tests AMRUT 2.0 (urban infrastructure scheme) and Namami Gange (Ganga cleaning). JEE Civil engineering covers sewer hydraulics. NEET Biology touches on water-borne diseases linked to sewage exposure.",
+              "relatedConceptIds": [
+                "ch18_t01_c01",
+                "ch18_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch18_t01_q04",
+                "ch18_t01_q05"
+              ],
+              "pageRefs": [
+                230,
+                231
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -22644,6 +23145,49 @@
                 223,
                 224,
                 225
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t02_c02",
+              "title": "Aeration tank and sludge digester — biological treatment stages",
+              "explanations": {
+                "oneLine": "After physical screening, sewage goes through biological treatment: bacteria in aerated tanks digest dissolved organic matter, then the resulting sludge is further digested by anaerobic bacteria — producing biogas.",
+                "kidFriendly": "After the physical stages (bar screen, grit chamber) remove the large stuff, the wastewater still looks dirty — there are millions of bacteria and dissolved organic chemicals in it. That's where biology takes over. The water enters a huge AERATION TANK where powerful fans pump air bubbles into it. Bacteria multiply in this oxygen-rich environment and eat the dissolved organic matter. After hours of aeration, the bacterial 'flocs' settle in a CLARIFIER TANK. The remaining clear water is mostly clean and is discharged. The thick goo that settles is the SLUDGE — and it's not wasted. It's piped into a sealed SLUDGE DIGESTER where anaerobic bacteria (no oxygen) break it down further, producing BIOGAS — a fuel that powers the plant itself.",
+                "textbook": "Biological wastewater treatment uses microorganisms to break down dissolved organic matter that physical methods can't remove. Two main stages: (1) Aeration tank (activated sludge process) — wastewater is mixed with returning 'activated sludge' (microbe-rich biomass) and aerated for 4-8 hours. Aerobic bacteria (Pseudomonas, Bacillus, etc.) and protozoa metabolise organic matter into CO₂ and water, multiplying as they go. The mixture settles in a clarifier; the clear effluent moves on; concentrated biomass is partially returned to the aeration tank and partially wasted to the sludge stream. (2) Sludge digestion — settled sludge from both primary clarification and the aeration stage is pumped to a sealed sludge digester. Anaerobic bacteria break it down at ~35 °C over 20-30 days, producing biogas (60-70% methane, 30-40% CO₂). Digested sludge (biosolids) can be used as fertiliser or sent to landfill. Biogas runs the plant's heating and electricity needs.",
+                "expert": "Activated-sludge process design parameters include Mixed Liquor Suspended Solids (MLSS), Solids Retention Time (SRT), Food-to-Microorganism ratio (F/M), and dissolved oxygen (DO ~2 mg/L). Modern variants include Sequential Batch Reactors (SBR), Membrane Bio-Reactors (MBR — combining biological treatment with membrane filtration), and Anaerobic Ammonium Oxidation (anammox) for energy-efficient nitrogen removal. Sludge digestion produces ~0.4 m³ of biogas per kg of volatile solids destroyed; large plants like Pune's Vadgaon WWTP generate enough biogas for net-positive energy operation. Future direction: water-energy-nutrient resource-recovery plants ('water resource recovery facilities') replacing the term 'wastewater treatment plant'."
+              },
+              "reasoning": "Physical processes (screening, settling) can't remove dissolved organic matter. Biology can: bacteria EAT it for energy. So the treatment plant runs a giant bacterial farm in two flavours — aerobic (with air, to break down most stuff) and anaerobic (without air, to recover energy from settled sludge as biogas).",
+              "useCases": [
+                {
+                  "title": "Activated-sludge aeration tank",
+                  "description": "Loud blowers force air into vast concrete tanks the size of swimming pools; the white-bubbling water inside is teeming with cleanup bacteria.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Biogas-powered WWTP",
+                  "description": "Pune's Vadgaon plant uses digester biogas to generate electricity for its own operation — energy-neutral wastewater treatment.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Sludge fertiliser",
+                  "description": "Digested biosolids are dewatered into cake and used as agricultural fertiliser in many countries — Class A biosolids meet strict pathogen and contaminant limits.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Environmental Science 'Pollution' covers WWTP basics. UPSC General Studies III tests Namami Gange's STP construction targets. JEE Civil engineering teaches activated-sludge design (SRT, F/M, MLSS). Class 12 Biology / NEET Biotechnology covers anaerobic digestion as a microbial process and biofuel pathway.",
+              "relatedConceptIds": [
+                "ch18_t02_c01",
+                "ch18_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch18_t02_q01",
+                "ch18_t02_q02",
+                "ch18_t02_q04"
+              ],
+              "pageRefs": [
+                235,
+                236
               ],
               "needsHumanReview": false
             }
