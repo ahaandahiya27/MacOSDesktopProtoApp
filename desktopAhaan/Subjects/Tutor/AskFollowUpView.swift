@@ -30,6 +30,15 @@ struct AskFollowUpView: View {
                         .padding(4)
                         .background(Color.gray.opacity(0.1))
                         .clipShape(RoundedRectangle(cornerRadius: 6))
+                        // Soft cap: a Class-7 follow-up is a sentence
+                        // or two. 500 chars keeps the on-device model
+                        // prompt-sized and prevents accidental paste
+                        // of huge text into the AskFollowUp box.
+                        .onChange(of: question) { newValue in
+                            if newValue.count > 500 {
+                                question = String(newValue.prefix(500))
+                            }
+                        }
                 }
 
                 // Submit

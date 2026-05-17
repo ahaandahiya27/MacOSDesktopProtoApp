@@ -96,7 +96,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F1 | Concept IDs unique across pack | ✅ enforced by edf4c8b |
 | F2 | Question IDs unique across pack | ✅ enforced by 44e284b |
 | F3 | Concept-ID topic prefix matches parent topic | ✅ post edf4c8b |
-| F4 | Question-ID topic prefix matches parent topic | 🟡 some cosmetic mismatches remain (don't crash, ugly to read) |
+| F4 | Question-ID topic prefix matches parent topic | 🟡 180 IDs use `ch##_topup_q##` (intentional bulk-load marker) instead of `ch##_t##_q##`; uniqueness still enforced via F2, no runtime impact |
 | F5 | relatedConceptIds resolve | ✅ orphan removed |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
 | F7 | All four explanation depths populated | 🟡 spot-checked; bulk audit pending |
@@ -195,9 +195,9 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| M1 | TextField bounds (max length, prevent newlines) | 🟡 most fields fine |
+| M1 | TextField bounds (max length, prevent newlines) | ✅ translator 500c, OCR 2000c, AskFollowUp 500c; search boxes unbounded (intentional — short queries) |
 | M2 | Slider bounds (range respected) | ✅ |
-| M3 | Picker default selection invariant (never nil-on-required) | 🟡 |
+| M3 | Picker default selection invariant (never nil-on-required) | ✅ all pickers either bind to enum (Settings/QuizBank typeFilter/ReviewFilter/Concept depth/Sanskrit tab) or Optional with explicit "All" tag — no nil-on-required |
 | M4 | Empty-query search shows guidance, not crash | ✅ |
 | M5 | Drag/drop file handling (Sanskrit scan) | 🟡 needs verification |
 

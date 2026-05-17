@@ -122,6 +122,13 @@ struct OCRTranslationScreen: View {
                 .padding(8)
                 .background(Color.gray.opacity(0.15))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                // Soft cap matched to a typical textbook page after OCR;
+                // anything longer is almost certainly accidental paste.
+                .onChange(of: editedText) { newValue in
+                    if newValue.count > 2000 {
+                        editedText = String(newValue.prefix(2000))
+                    }
+                }
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
