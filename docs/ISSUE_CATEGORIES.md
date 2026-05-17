@@ -431,7 +431,7 @@ in the project memory.
 |----|----------|--------|
 | MO1 | Counter / score changes have no animation / scale-pop | ❌ Phase 6 |
 | MO2 | Tap on stepper dot has no immediate feedback | ✅ stepper dots now use `PressableButtonStyle` — brief inward scale-to-0.85 on press with spring(response: 0.25) ease-out. Honours Reduce Motion. Press feedback complements the existing `.easeInOut` scene-switch animation |
-| MO3 | Got It state-change has no completion celebration | ❌ Phase 6 |
+| MO3 | Got It state-change has no completion celebration | ✅ tap on Got It now triggers a brief scale-pop to 1.12× with a `.spring(response: 0.32, dampingFraction: 0.55)` ease-out, then advances after 350ms. Combined with the press-state compression of `FilledCTAButtonStyle`, the sequence reads as "click! pop! done!" before the scene transition. Reduce Motion users skip the delay entirely |
 | MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
 | MO6 | Loading / decoding states not animated (just static text) | ✅ audit: ContentView sidebar / OCR / Translator already use `ProgressView` for in-flight states. SettingsScreen "Loading…" status row was the lone bare-text holdout — now has a small `ProgressView().controlSize(.small)` spinner alongside |

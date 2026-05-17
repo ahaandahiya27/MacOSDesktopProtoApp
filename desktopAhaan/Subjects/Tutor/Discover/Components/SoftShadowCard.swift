@@ -57,18 +57,44 @@ struct GotItButton: View {
     var action: () -> Void
 
     @Environment(\.chapterAccent) private var envChapterAccent
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    @State private var celebrating: Bool = false
 
     var body: some View {
-        Button(action: action) {
+        Button(action: handleTap) {
             Label(label, systemImage: systemImage)
                 .font(.title3.bold())
                 .padding(.horizontal, 28)
                 .padding(.vertical, 14)
+                // Celebration scale-pop (MO3) — brief outward bounce after
+                // the press-state compression of `FilledCTAButtonStyle`, so
+                // the tap reads as "click! pop! done!" before the scene
+                // transitions. Suppressed when Reduce Motion is on.
+                .scaleEffect(celebrating ? 1.12 : 1.0)
+                .animation(reduceMotion ? nil : .spring(response: 0.32, dampingFraction: 0.55),
+                           value: celebrating)
         }
         .buttonStyle(FilledCTAButtonStyle(tint: tint ?? envChapterAccent))
         .keyboardShortcut(.space, modifiers: [])
         .pointingCursor()
         .accessibilityHint("Marks this scene as complete and moves on.")
+    }
+
+    private func handleTap() {
+        // Reduce-Motion users skip the celebration delay entirely.
+        if reduceMotion {
+            action()
+            return
+        }
+        // Debounce repeated taps during the celebration window.
+        guard !celebrating else { return }
+        celebrating = true
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 350_000_000)
+            celebrating = false
+            action()
+        }
     }
 }
 
