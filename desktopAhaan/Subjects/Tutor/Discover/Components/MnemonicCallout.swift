@@ -54,7 +54,10 @@ struct MnemonicCallout: View {
                     .foregroundColor(.orange)
                     .textCase(.uppercase)
                 Text(hook)
-                    .font(.title2.weight(.bold).monospaced())
+                    // `.monospaced()` on Font requires macOS 12+. Use
+                    // `Font.system(_:design:)` which has shipped since
+                    // macOS 11 to get the same monospaced rendering.
+                    .font(.system(.title2, design: .monospaced).weight(.bold))
                     .foregroundColor(.primary)
                 Text(meaning)
                     .font(.callout)
@@ -84,7 +87,7 @@ struct MnemonicCallout: View {
             ForEach(expansion, id: \.letter) { row in
                 HStack(alignment: .firstTextBaseline, spacing: 8) {
                     Text(row.letter)
-                        .font(.callout.weight(.bold).monospaced())
+                        .font(.system(.callout, design: .monospaced).weight(.bold))
                         .foregroundColor(.orange)
                         .frame(width: 18, alignment: .leading)
                     Text(row.word)
