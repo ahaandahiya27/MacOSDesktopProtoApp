@@ -133,19 +133,25 @@ struct Scene4_ColorTheChlorophyll: View {
             }
             .frame(maxWidth: 560)
 
-            LookingAheadCallout(
-                title: "Class 11 / NEET Biology",
-                detail: "Chlorophyll a + b are the headliners but plants carry four more accessory pigments (carotenoids, xanthophylls) that funnel light to chlorophyll. NEET tests chromatography — strip leaf pigments apart on paper and you see all four bands. The colour of autumn leaves is what's left when chlorophyll breaks down in the cold."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            // Group { } wraps the 2 pedagogical callouts as a single
+            // ViewBuilder child so the outer VStack stays under Swift 5.5's
+            // 10-child cap on Xcode 13.2.1 / Big Sur. (Modern Xcode silently
+            // accepts 11; the iMac's strictly-enforced 10 caught this.)
+            Group {
+                LookingAheadCallout(
+                    title: "Class 11 / NEET Biology",
+                    detail: "Chlorophyll a + b are the headliners but plants carry four more accessory pigments (carotenoids, xanthophylls) that funnel light to chlorophyll. NEET tests chromatography — strip leaf pigments apart on paper and you see all four bands. The colour of autumn leaves is what's left when chlorophyll breaks down in the cold."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Paper chromatography in 20 minutes",
-                detail: "Grind a handful of spinach with a little rubbing alcohol. Strain. Dip the bottom edge of a paper coffee filter strip in the green liquid. Hang it so the level just touches the liquid. As alcohol creeps up the paper, different pigments climb different distances — and you see three or four coloured bands separate out. Real chemistry from your kitchen."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Paper chromatography in 20 minutes",
+                    detail: "Grind a handful of spinach with a little rubbing alcohol. Strain. Dip the bottom edge of a paper coffee filter strip in the green liquid. Hang it so the level just touches the liquid. As alcohol creeps up the paper, different pigments climb different distances — and you see three or four coloured bands separate out. Real chemistry from your kitchen."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+            }
 
             GotItButton(action: onComplete)
                 .padding(.bottom, 12)
