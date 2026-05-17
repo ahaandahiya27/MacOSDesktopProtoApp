@@ -14,6 +14,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
     @State private var tappedLanes: Set<Int> = []
     @State private var activeLane: Int? = nil
     @State private var tick: TimeInterval = 0
+    @State private var rodMM: Double = 5                // free-play slider: rod thickness
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allTapped: Bool { tappedLanes.count >= 3 }
@@ -74,6 +75,17 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
+                    DiscoveryWidget(
+                        title: "Discovery — try a different rod thickness",
+                        subtitle: "Heat conducts FASTER through thin metal, slower through thick. Drag to see how a chef picks a pan.",
+                        value: $rodMM,
+                        range: 1...20,
+                        step: 1,
+                        valueLabel: { v in String(format: "Thickness: %.0f mm", v) },
+                        output: conductionExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allTapped {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
@@ -89,6 +101,25 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             }
         }
         .timedScene(idealFPS: 20, tick: $tick)
+    }
+
+    private func conductionExplanation(_ mm: Double) -> String {
+        // Heat conduction rate ∝ 1 / thickness (for steady-state across a slab).
+        // Reference: 5 mm = baseline.
+        let relativeRate = 5.0 / max(0.1, mm)
+        let pct = Int(relativeRate * 100)
+        let label: String
+        switch mm {
+        case ..<3:
+            label = "Paper-thin. Heat transfers almost instantly — like a metal spatula handle that burns your hand."
+        case ..<7:
+            label = "Standard cookware. Used in everyday tava, kadhai, dosa pan."
+        case ..<13:
+            label = "Thick pan. Heat spreads evenly, ideal for slow cooking but slow to react."
+        default:
+            label = "Very thick — like a cast-iron skillet. Holds heat for a long time, slow to warm or cool."
+        }
+        return "Heat-transfer rate ≈ \(pct)% of a 5 mm rod. \(label)"
     }
 
     @ViewBuilder

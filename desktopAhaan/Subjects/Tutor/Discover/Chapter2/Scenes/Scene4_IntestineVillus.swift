@@ -18,6 +18,7 @@ struct Scene4_IntestineVillus: View {
     @State private var zoomLevel: Int = 0 // 0: full intestine, 1: villi, 2: microvilli
     @State private var glucoseParticles: [GlucoseParticle] = []
     @State private var sceneActive = false
+    @State private var intestineMetres: Double = 7   // free-play slider: intestine length
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var villusExplanation: String {
@@ -79,6 +80,17 @@ struct Scene4_IntestineVillus: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                DiscoveryWidget(
+                    title: "Discovery — try a different intestine length",
+                    subtitle: "Human small intestine is ~7 m long, with villi multiplying surface area ~600×. Drag to see absorption surface in tennis-court equivalents.",
+                    value: $intestineMetres,
+                    range: 1...12,
+                    step: 0.5,
+                    valueLabel: { v in String(format: "Length: %.1f m", v) },
+                    output: intestineSurfaceExplanation
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }
@@ -91,6 +103,28 @@ struct Scene4_IntestineVillus: View {
                 sceneActive = false
             }
         }
+    }
+
+    private func intestineSurfaceExplanation(_ metres: Double) -> String {
+        // Bare intestine inner surface ≈ (length m) × (circumference 0.08 m) → m²
+        // Villi & microvilli multiply this ~600×.
+        let bareArea = metres * 0.08
+        let amplifiedArea = bareArea * 600    // m²
+        // Tennis singles court ≈ 195 m². Convert.
+        let courts = amplifiedArea / 195
+        let label: String
+        switch metres {
+        case ..<2:
+            label = "Too short — a baby's intestine, not enough surface to absorb a full meal."
+        case ..<5:
+            label = "Child-sized intestine. Less absorption headroom, smaller meals."
+        case 5...8:
+            label = "Adult-typical (7 m). Villi + microvilli make this the gold standard."
+        default:
+            label = "Above-average length. Some herbivores (cows, sheep) have far longer intestines to digest cellulose."
+        }
+        let header = String(format: "Absorbing surface ≈ %.0f m² ≈ %.1f tennis courts.", amplifiedArea, courts)
+        return "\(header) \(label)"
     }
 
     private func zoomIn() {
