@@ -521,6 +521,15 @@
 		1E698FA4687E1036FDE70511 /* ch18_t01_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F93091D7482112CCA18B2FE /* ch18_t01_overview.html */; };
 		742A1E5F2C6924A58AB3DF3A /* ch18_t02_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = FDD7F1023BC3AFB418095407 /* ch18_t02_overview.html */; };
 		7DF3A1082B0F1426C4FCA6A7 /* ch18_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 50F439AC9D87D8318A6B01BD /* ch18_t03_overview.html */; };
+		139792F8D5B66F707D740B1B /* ch08_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 39167830997E93A2492C77A3 /* ch08_t01_c01.html */; };
+		DDADE721DA68C1D134349624 /* ch09_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = C211EAB55AF7F209DAD8C784 /* ch09_t01_c01.html */; };
+		1AAF3B2C2B6CACA1C1881E78 /* ch10_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = A187445E077AC498F59CCA05 /* ch10_t01_c01.html */; };
+		0B9077D739BF0DCEDD0F5D47 /* ch11_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = B264E08BC7A3AC9F5579EA70 /* ch11_t01_c01.html */; };
+		6485974D365FFA7CAF91A303 /* ch12_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 57F792E3EE4C3DC4BB627E3B /* ch12_t01_c01.html */; };
+		56A13991B1CFCFFE4B3E97FD /* ch13_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 4280839D8E46177F70C1AC0B /* ch13_t01_c01.html */; };
+		B3A94E0C9EA055E39201E757 /* ch16_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */; };
+		304946FF613104751C0C3233 /* ch17_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = BD053F56DFD4D1072C55BDFC /* ch17_t01_c01.html */; };
+		DC2975C1ADE43F2B4049E0E2 /* ch18_t01_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = C0605962D85E58B06E7AF723 /* ch18_t01_c01.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1051,6 +1060,15 @@
 		5F93091D7482112CCA18B2FE /* ch18_t01_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_t01_overview.html; sourceTree = "<group>"; };
 		FDD7F1023BC3AFB418095407 /* ch18_t02_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_t02_overview.html; sourceTree = "<group>"; };
 		50F439AC9D87D8318A6B01BD /* ch18_t03_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_t03_overview.html; sourceTree = "<group>"; };
+		39167830997E93A2492C77A3 /* ch08_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch08_t01_c01.html; sourceTree = "<group>"; };
+		C211EAB55AF7F209DAD8C784 /* ch09_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch09_t01_c01.html; sourceTree = "<group>"; };
+		A187445E077AC498F59CCA05 /* ch10_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch10_t01_c01.html; sourceTree = "<group>"; };
+		B264E08BC7A3AC9F5579EA70 /* ch11_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch11_t01_c01.html; sourceTree = "<group>"; };
+		57F792E3EE4C3DC4BB627E3B /* ch12_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch12_t01_c01.html; sourceTree = "<group>"; };
+		4280839D8E46177F70C1AC0B /* ch13_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch13_t01_c01.html; sourceTree = "<group>"; };
+		04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_t01_c01.html; sourceTree = "<group>"; };
+		BD053F56DFD4D1072C55BDFC /* ch17_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch17_t01_c01.html; sourceTree = "<group>"; };
+		C0605962D85E58B06E7AF723 /* ch18_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_t01_c01.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1379,6 +1397,7 @@
 		04F59DF52FB94EF500568BDE /* Chapter8 */ = {
 			isa = PBXGroup;
 			children = (
+				39167830997E93A2492C77A3 /* ch08_t01_c01.html */,
 				9D5FF04786678B7FE18EB46B /* ch08_t01_overview.html */,
 				9DA2EB007132FBC497E9FAE6 /* ch08_t02_overview.html */,
 				5920A4993B5867466473DE41 /* ch08_t03_overview.html */,
@@ -1391,6 +1410,7 @@
 		04F59DFA2FB94EF600568BDE /* Chapter9 */ = {
 			isa = PBXGroup;
 			children = (
+				C211EAB55AF7F209DAD8C784 /* ch09_t01_c01.html */,
 				774D5B9C93F681907DE55D05 /* ch09_t01_overview.html */,
 				C6A285502E4DB39116E5C13D /* ch09_t02_overview.html */,
 				5C5280700EF29F751B8611AE /* ch09_t03_overview.html */,
@@ -1403,6 +1423,7 @@
 		04F59DFF2FB94EF700568BDE /* Chapter10 */ = {
 			isa = PBXGroup;
 			children = (
+				A187445E077AC498F59CCA05 /* ch10_t01_c01.html */,
 				4AC19C73A59577DC8942ACE7 /* ch10_t01_overview.html */,
 				2228A8370BC0F8A4E5998A37 /* ch10_t02_overview.html */,
 				3A207FD7E943B2E03C4D6C73 /* ch10_t03_overview.html */,
@@ -1415,6 +1436,7 @@
 		04F59E042FB94EF900568BDE /* Chapter11 */ = {
 			isa = PBXGroup;
 			children = (
+				B264E08BC7A3AC9F5579EA70 /* ch11_t01_c01.html */,
 				D4AE2FFF504E6D07A600D924 /* ch11_t01_overview.html */,
 				5983EFAA0EBADF6517EC0573 /* ch11_t02_overview.html */,
 				EF51A633BA2C968FEDB80F07 /* ch11_t03_overview.html */,
@@ -1427,6 +1449,7 @@
 		04F59E092FB94EFA00568BDE /* Chapter12 */ = {
 			isa = PBXGroup;
 			children = (
+				57F792E3EE4C3DC4BB627E3B /* ch12_t01_c01.html */,
 				CB7CAE8FE3BBB530AF092B31 /* ch12_t01_overview.html */,
 				C201AECC832D2487EE4CB568 /* ch12_t02_overview.html */,
 				6DCCC920D8E73894BF0E1AFF /* ch12_t03_overview.html */,
@@ -1439,6 +1462,7 @@
 		04F59E0E2FB94EFC00568BDE /* Chapter13 */ = {
 			isa = PBXGroup;
 			children = (
+				4280839D8E46177F70C1AC0B /* ch13_t01_c01.html */,
 				166315F3032C58797DC2FC4F /* ch13_t01_overview.html */,
 				4C61E544CF7BEE8FDA371CE1 /* ch13_t02_overview.html */,
 				A51067524D3AF58314878B83 /* ch13_t03_overview.html */,
@@ -1487,6 +1511,7 @@
 		04F59E1D2FB94F0100568BDE /* Chapter16 */ = {
 			isa = PBXGroup;
 			children = (
+				04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */,
 				8AB178BEECAF03D92FAB60E9 /* ch16_t01_overview.html */,
 				D15ACB4F8833EA3C9427A0B9 /* ch16_t02_overview.html */,
 				914736AE51D09E1E6C1119B9 /* ch16_t03_overview.html */,
@@ -1499,6 +1524,7 @@
 		04F59E222FB94F0200568BDE /* Chapter17 */ = {
 			isa = PBXGroup;
 			children = (
+				BD053F56DFD4D1072C55BDFC /* ch17_t01_c01.html */,
 				2C9965788E4772783765A8CC /* ch17_t01_overview.html */,
 				1992C9AA8B70EF80FE12B643 /* ch17_t02_overview.html */,
 				D812DD1AD9DCEF1B1779CFD9 /* ch17_t03_overview.html */,
@@ -1511,6 +1537,7 @@
 		04F59E272FB94F0300568BDE /* Chapter18 */ = {
 			isa = PBXGroup;
 			children = (
+				C0605962D85E58B06E7AF723 /* ch18_t01_c01.html */,
 				5F93091D7482112CCA18B2FE /* ch18_t01_overview.html */,
 				FDD7F1023BC3AFB418095407 /* ch18_t02_overview.html */,
 				50F439AC9D87D8318A6B01BD /* ch18_t03_overview.html */,
@@ -2391,6 +2418,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139792F8D5B66F707D740B1B /* ch08_t01_c01.html in Resources */,
+				DDADE721DA68C1D134349624 /* ch09_t01_c01.html in Resources */,
+				1AAF3B2C2B6CACA1C1881E78 /* ch10_t01_c01.html in Resources */,
+				0B9077D739BF0DCEDD0F5D47 /* ch11_t01_c01.html in Resources */,
+				6485974D365FFA7CAF91A303 /* ch12_t01_c01.html in Resources */,
+				56A13991B1CFCFFE4B3E97FD /* ch13_t01_c01.html in Resources */,
+				B3A94E0C9EA055E39201E757 /* ch16_t01_c01.html in Resources */,
+				304946FF613104751C0C3233 /* ch17_t01_c01.html in Resources */,
+				DC2975C1ADE43F2B4049E0E2 /* ch18_t01_c01.html in Resources */,
 				1D9905C14510658F4B984DBE /* ch08_t01_overview.html in Resources */,
 				8A357C54E6EB59D0F1614DCF /* ch08_t02_overview.html in Resources */,
 				C5EF6E2628AC6CCAC6248C10 /* ch08_t03_overview.html in Resources */,

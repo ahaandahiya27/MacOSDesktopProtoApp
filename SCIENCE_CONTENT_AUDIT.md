@@ -512,6 +512,32 @@ Single Python sweep wrote 71 new TryAtHome callouts, each tied precisely to the 
 
 **Every learning scene now has at least one hands-on experiment.** 89% of learning scenes have both a hands-on experiment AND a Class 10/12/JEE/NEET continuity sidebar. The "consistent functionality across chapters" architectural goal at the scene level is now fully met.
 
+## First concept-level articles for 9 sparse chapters
+
+Architect's audit: nine new chapters (Ch 8, 9, 10, 11, 12, 13, 16, 17, 18) had **zero** concept-level articles, while Ch 14 had 4, Ch 15 had 11, and the older Ch 1-7 / 19 each had 5-23. Closes the first slice of that gap by writing **one foundational concept article (c01) per chapter** — the single most important concept of each chapter's Topic 1:
+
+| Chapter | New article | Focal concept |
+|---|---|---|
+| Ch 8 | Why Air Rises When Heated | Density change with temperature; convection cells |
+| Ch 9 | The Four Soil Horizons | O / A / B / C / R layers and their formation |
+| Ch 10 | Inhalation and Exhalation | Diaphragm mechanics, alveoli surface area (70 m²) |
+| Ch 11 | The Four-Chambered Heart | RA / RV / LA / LV anatomy, cardiac cycle, lub-DUB |
+| Ch 12 | Flower Anatomy in Detail | The four whorls — calyx / corolla / androecium / gynoecium |
+| Ch 13 | What is Speed? | s = d / t, scalar vs vector, typical-speed scale chart |
+| Ch 16 | How Much Drinkable Water Earth Has | 97.5 / 1.7 / 0.8 / 0.01 split; India's 18% pop, 4% water |
+| Ch 17 | Forest Strata | Canopy / understory / shrub / forest floor; why light decides |
+| Ch 18 | What is Sewage? | Organic / inorganic / pathogens; sink-to-river path |
+
+Each article is ~400-600 words, NCERT-aligned, with the standard three-section structure (concept / Try-at-home / Looking-ahead). Looking-ahead sections name Class 10 / 11 / 12 / JEE / NEET continuations precisely (e.g. Ch 10's article points to Class 11 partial pressures + the Bohr effect; Ch 11's article to SAN/AVN pacemaker + ECG; Ch 17's article to ecological pyramids and the 10% rule).
+
+Each chapter now has at least **5 article surfaces** (1 chapter overview + 3 topic overviews + 1 concept article) — still less than Ch 5/6/7 (15-19) or Ch 19 (27), but the structural skeleton matches and concept-level content has officially started.
+
+Files registered into `project.pbxproj` via the same Articles/Chapter<n>-group-finding script pattern as the topic-overview commit. 9 new entries added to `ArticleIndex.swift` (ch{NN}_t01_c01 for the 9 sparse chapters).
+
+Build verified green. macOS 11 (Big Sur) safe — HTML + CSS only, reuses each chapter's existing themed style.css.
+
+The remaining concept-article gap (each chapter wants ~5-10 more c-articles to reach Ch 5/6 depth) is a multi-pass authoring task; this commit ships one solid c01 per sparse chapter as a foundation.
+
 ---
 
 *Generated at: 2026-05-17.*
