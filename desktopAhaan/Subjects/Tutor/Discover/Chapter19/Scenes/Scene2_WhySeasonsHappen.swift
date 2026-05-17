@@ -129,6 +129,18 @@ struct Scene2_WhySeasonsHappen: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Geography + Physics → JEE / NEET",
+                        detail: "Earth's 23.5° axial tilt is THE reason seasons exist — NOT distance from the Sun (common misconception). NEET / JEE Geography asks: 'When the Northern hemisphere has summer, where is Earth in its orbit?' Counter-intuitive answer: farthest from Sun (aphelion, July 4). Tilt > distance. Class 12 Physics asks the angular-momentum reason the tilt itself doesn't wobble (gyroscope effect)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Demonstrate the tilt with a flashlight",
+                        detail: "Hold a flashlight directly above a tabletop — bright circle, concentrated. Now tilt it 30° — the same light spreads into an oval, less concentrated per cm². That's exactly what happens to sunlight on a hemisphere tilted away from the Sun: same total energy, spread thinner, lower temperature. Winter."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

@@ -221,6 +221,18 @@ struct Scene7_ConstellationConnect: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE / Astrophysics",
+                        detail: "Constellations are *line-of-sight patterns* — the stars in Orion's Belt are at very different distances from Earth, only looking aligned from here. JEE Astrophysics covers stellar magnitudes (apparent vs absolute brightness), parallax (distance measurement), and Doppler shift (red/blue indicates motion). Hindu astronomy mapped 27 *nakshatras* (lunar mansions) — a different parsing of the same sky."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Stargaze with the Stellarium app",
+                        detail: "Install the free Stellarium Mobile app (or Sky Map on Android). Open it on a clear night, point at the sky. The app overlays constellation lines on what you actually see. Find Orion (Dec-Feb, easiest in winter), Saptarishi (Big Dipper, Mar-Aug), and the Pole Star (Polaris — always due North). Free astronomy lesson with your phone as a telescope."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

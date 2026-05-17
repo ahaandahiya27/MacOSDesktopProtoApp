@@ -101,6 +101,18 @@ struct Scene4_EclipseBuilder: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11/12 Physics → JEE / NEET (Optics + Geometry)",
+                        detail: "Solar eclipse possible because the Sun is 400× larger than the Moon AND 400× farther — they appear the same size from Earth. A cosmic coincidence, not a design. JEE asks the similar-triangles geometry. NEET asks 'why don't eclipses happen every month?' Answer: the Moon's orbit is tilted 5° to Earth's orbit — eclipses only when the three align in 3D, not 2D."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Simulate an eclipse with a ball and a lamp",
+                        detail: "In a dark room, place a desk lamp (Sun). Hold a tennis ball (Moon) between you and the lamp at arm's length. Your face is in the Moon's shadow = a tiny solar eclipse. Move the ball aside — the lamp lights your face again. Reverse it (lamp behind you, ball in front lit by lamp) — that's a lunar eclipse, where Earth's shadow falls on the Moon."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

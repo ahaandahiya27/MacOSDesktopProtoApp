@@ -126,6 +126,18 @@ struct Scene1_SpinningEarth: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Rotational Mechanics)",
+                        detail: "Earth spins at 1670 km/h at the equator yet you can't feel it — because YOU spin with it. JEE asks 'why do hurricanes spin opposite ways in the two hemispheres?' Answer: Coriolis effect — a consequence of the rotating frame. NEET asks 'why does the Sun rise in the East?' — because Earth rotates West → East; the Sun appears to move East → West relative to the ground."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Coriolis-effect water-drain myth",
+                        detail: "The popular claim that water spirals opposite ways in north/south hemispheres is mostly wrong at sink scale (the effect is too weak — basin geometry dominates). But on hurricane scale it's real. Watch a satellite image of any big storm: northern hemisphere storms spin counter-clockwise, southern clockwise. Earth's rotation is steering the wind."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

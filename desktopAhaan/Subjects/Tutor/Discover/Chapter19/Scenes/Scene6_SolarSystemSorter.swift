@@ -158,6 +158,18 @@ struct Scene6_SolarSystemSorter: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Kepler's Laws)",
+                        detail: "Inner rocky planets (Mercury, Venus, Earth, Mars) vs outer gas giants (Jupiter, Saturn, Uranus, Neptune) — divided by the *frost line* where ices condensed. JEE asks Kepler's 3rd law: T² ∝ r³ — orbital period squared is proportional to distance cubed. Mercury: 88 days. Earth: 365 days. Neptune: 165 YEARS. The same equation governs every satellite ISRO has launched."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Scale the solar system on a road",
+                        detail: "On any long road or hallway, mark the Sun (a marble) at one end. Walk 4 m → Mercury (pinhead). 7 m → Venus (peppercorn). 10 m → Earth (peppercorn). 15 m → Mars (pinhead). 52 m → Jupiter (marble). 95 m → Saturn (smaller marble). 190 m → Uranus + Neptune (peas). The space is mostly emptiness — that's why interplanetary missions take years."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if isSubmitted {
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)

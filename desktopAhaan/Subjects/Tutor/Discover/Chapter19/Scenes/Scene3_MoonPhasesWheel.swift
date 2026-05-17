@@ -107,6 +107,18 @@ struct Scene3_MoonPhasesWheel: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Lunar Cycle)",
+                        detail: "29.5 days from new moon → new moon = the *synodic* month. The moon's actual orbit takes only 27.3 days (sidereal month), but during that time Earth moves a chunk of its own orbit around the Sun, so the moon needs to 'catch up' to the same Sun-Earth-Moon geometry. JEE Physics asks the difference between sidereal and synodic periods — same problem for Mercury, Venus, satellites."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Moon-phase diary for 30 days",
+                        detail: "Each clear evening, look at the moon (any direction visible). Sketch the shape in a notebook with the date. After 30 days you have a hand-drawn lunar calendar. You'll see the lit-side direction follows the Sun's position — the moon is half-lit always, you just see different angles. The Hindu calendar's tithi system is built on these same observations."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allDone {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

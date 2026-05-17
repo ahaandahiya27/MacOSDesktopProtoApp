@@ -116,6 +116,18 @@ struct Scene5_TidesAndTheMoon: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Gravitation)",
+                        detail: "Tides arise from Moon's gravity pulling Earth's near-side water more than its centre, and the centre more than its far-side — a *tidal force* (F ∝ 1/r³, gradient of gravity). JEE-Advanced asks why there are TWO high tides daily, not one. Answer: bulge on Moon-facing side AND opposite-side bulge from inertia. Spring tides (Sun + Moon aligned) vs neap tides (perpendicular)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Check Mumbai tide tables online",
+                        detail: "Google 'Mumbai tide table'. You'll see 2 high tides + 2 low tides each day — separated by ~6 hours. Compare with the moon phase: at full or new moon, the high tides are HIGHER (spring tides) because Sun and Moon pull together. At first/third quarter they're lower (neap tides). The math of gravity, visible at the harbour."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

@@ -223,6 +223,18 @@ struct Scene8_ISROSpaceMissions: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 / 12 Physics → JEE / ISRO entrance",
+                        detail: "ISRO's missions are JEE Physics live-action: Chandrayaan-3 used a gravity-assist trajectory (saves fuel). Mangalyaan reached Mars using only 75 kg of fuel — cheapest interplanetary mission ever. Aditya-L1 sits at Lagrangian point L1 (gravitational equilibrium between Earth + Sun, the maths is a JEE Advanced problem). Future Gaganyaan crewed missions and Chandrayaan-4 sample-return will keep extending the curriculum's reach into the real world."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Watch the next ISRO launch live",
+                        detail: "ISRO live-streams every launch from Sriharikota on YouTube (channel: ISRO Official). The countdown commentary explains pad, payload, orbit, separation timings in real-time. After launch, the satellite track is on isro.gov.in. Watching a launch is the most exciting introduction to Class 11/12 mechanics + thermodynamics + materials science a kid can have."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
