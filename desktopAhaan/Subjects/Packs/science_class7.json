@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.25.0-ch15-3topic-parity",
+  "version": "0.26.0-baseline-concept-parity",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -12309,7 +12309,92 @@
           "id": "ch08_t02",
           "title": "Sea Breeze and Land Breeze",
           "summary": "Coastal places have a daily wind rhythm because land heats and cools faster than water. By day air flows from sea to land; by night the breeze reverses.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch08_t02_c01",
+              "title": "Sea breeze — day-time wind from sea to land",
+              "explanations": {
+                "oneLine": "During the day, land heats up faster than the sea, so the hot air over land rises and cooler air rushes in from the sea — that's the sea breeze.",
+                "kidFriendly": "Spend a day at a beach and you'll feel a cool wind blowing from the sea towards you. Why? Land warms up faster than water under the same sun. The air sitting over land becomes hot and light, rises up like a hot-air balloon, and the cooler heavier air over the sea flows in to take its place. That incoming wind from sea to land is called a sea breeze. It's the reason beaches feel breezy and pleasant in the daytime even when the air far inland is still and hot.",
+                "textbook": "A sea breeze is a wind that blows from the sea towards the land during the day. The cause is differential heating: land and water absorb the same solar energy, but water has a much higher specific heat capacity, so land heats up faster than the adjacent sea. Air over the warm land becomes lighter and rises. This creates a low-pressure region over land. Cooler, denser air over the sea (higher pressure) flows horizontally towards the land to fill the gap, completing a convection cell. The wind is strongest in the late afternoon when the land-sea temperature difference peaks.",
+                "expert": "Sea breezes form part of a closed convection cell — air rising over land returns aloft towards the sea, descends over cooler water, and flows back in at the surface. The horizontal wind speed depends on the temperature gradient and can reach 10-20 km/h on hot days. The 'sea breeze front' — the leading edge advancing inland — is a common trigger for afternoon thunderstorms along coasts. In coastal aviation, sea breeze fronts produce sharp wind-shear that pilots account for during landings."
+              },
+              "reasoning": "Hot air over land rises (low density, low pressure); cooler, denser air over the sea has higher pressure and naturally flows from high to low. So daytime wind blows from sea to land.",
+              "useCases": [
+                {
+                  "title": "Mumbai sea breeze in summer",
+                  "description": "Coastal Mumbai gets a steady afternoon sea breeze that drops the temperature by 3-5 °C compared to inland Pune.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Beach umbrella tilt",
+                  "description": "Beach-goers anchor umbrellas against the cool wind blowing inland from the water.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Coastal kite festivals",
+                  "description": "Marina Beach in Chennai hosts kite festivals timed to the strong afternoon sea breeze.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Geography (and JEE Main/NEET Physics) this becomes the chapter on Convection and Atmospheric Pressure — the same physics governs monsoon onset, tropical cyclones, and even the trade winds. The differential heating concept extends to land-ocean climate models used in IPCC reports.",
+              "relatedConceptIds": [
+                "ch08_t01_c01",
+                "ch08_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t02_q01",
+                "ch08_t02_q04"
+              ],
+              "pageRefs": [
+                91,
+                92
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_c02",
+              "title": "Land breeze — night-time wind from land to sea",
+              "explanations": {
+                "oneLine": "At night, land cools down faster than the sea, so the warmer air over the sea rises and cooler air flows out from the land — that's the land breeze, the reverse of the sea breeze.",
+                "kidFriendly": "Stand on the same beach at night and the wind has flipped. Now it blows from the land out towards the sea. At night, land loses its heat to the cool sky faster than the sea does. The air over the sea stays warmer, rises up, and the cooler air sitting over the land flows out to take its place. This reverse wind is the land breeze. Fishermen on India's coasts traditionally set sail late at night using this offshore breeze — the wind carries them out to sea — and come back in the afternoon with the sea breeze.",
+                "textbook": "A land breeze is a night-time wind that blows from land to sea, reversing the daytime sea breeze. Cause: at night the land radiates heat to the sky faster than the sea (which retains its heat thanks to water's high specific heat capacity). Air over the warmer sea rises, creating a local low-pressure region over the sea. Cooler, denser air over the land flows seawards along the surface to fill the gap. The breeze is generally weaker than the daytime sea breeze because the temperature contrast at night is smaller.",
+                "expert": "The land-sea breeze cycle is a closed convection loop driven by the diurnal temperature contrast. Its strength scales with the land-sea temperature difference (typically a few °C) and is modulated by synoptic-scale winds. In Indian coastal meteorology, the land breeze can extend 10-20 km offshore and contributes to early-morning fog dispersal over inland areas. Sound propagation is also affected: at night, the inversion over the sea bends sound waves downward, which is why distant ship horns are sometimes audible from inland in the small hours."
+              },
+              "reasoning": "Water cools much more slowly than land at night, so by midnight the sea is warmer than the land. Air over the warmer sea is lighter and rises; air over the cooler land flows out to fill the void. So night-time wind blows from land to sea.",
+              "useCases": [
+                {
+                  "title": "Traditional fishing departures",
+                  "description": "Indian fishermen in Kerala and Tamil Nadu have set sail just after midnight for centuries — the land breeze pushes their boats out.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Night beach calm reversal",
+                  "description": "By midnight, beach-goers feel the wind flipping: gusts now come from inland towards the water.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Coastal fog clearance",
+                  "description": "Land breezes carry inland fog out over the sea each morning, leaving the coast clear for the next day's sea breeze.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Geography and JEE Earth Sciences, the land-sea breeze cycle is a textbook example of a mesoscale circulation. The same physics scaled up over weeks and continents produces monsoon winds. NEET / Class 11 Biology students study how marine ecosystems align their feeding rhythms with these daily wind cycles.",
+              "relatedConceptIds": [
+                "ch08_t02_c01",
+                "ch08_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t02_q02",
+                "ch08_t02_q03"
+              ],
+              "pageRefs": [
+                91,
+                92
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch08_t01_q10",
@@ -12917,7 +13002,92 @@
           "id": "ch09_t01",
           "title": "The Soil Profile and Types",
           "summary": "Soil is a layered structure (O, A, B, C, R horizons) and classified by particle size into sandy, clayey and loamy types.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch09_t01_c01",
+              "title": "The soil profile — layered structure of soil",
+              "explanations": {
+                "oneLine": "Soil is not uniform; it's arranged in horizontal layers called horizons (O, A, B, C, R) that differ in colour, particle size, and organic content.",
+                "kidFriendly": "Dig a deep hole in any garden and you'll see soil isn't all the same brown stuff. It comes in bands. The very top is dark and crumbly — that's the O horizon, rich in dead leaves and humus (decayed matter). Below it sits the A horizon, the topsoil where plants grow. Further down is the lighter, harder B horizon. Below that is the C horizon — bits of broken rock. At the bottom is the R horizon — the solid bedrock. A complete top-to-bottom slice is called a soil profile.",
+                "textbook": "A soil profile is the vertical section through soil revealing its horizons: (1) O horizon — surface organic layer (dead leaves, humus). (2) A horizon — topsoil; dark with mixed humus and minerals; where most root activity happens. (3) B horizon — subsoil; lighter colour; contains minerals leached down from above (clay, iron oxides). (4) C horizon — weathered parent rock; not yet true soil. (5) R horizon — unweathered solid bedrock. The depth and clarity of each horizon depends on climate, vegetation, and time. A fertile farm soil may show a 30-50 cm thick A horizon; desert soils may have no O horizon at all.",
+                "expert": "Soil horizon formation is driven by pedogenic processes: physical and chemical weathering of bedrock (forming the C horizon), biological accumulation of organic matter at the surface (O and A horizons), and downward translocation of clay and ions by percolating water (creating the B horizon). Pedologists classify global soils using systems like USDA Soil Taxonomy (12 orders including Mollisols, Aridisols, Oxisols) or FAO's World Reference Base. Indian soils are dominated by Vertisols (black cotton soil of the Deccan) and Inceptisols (Indo-Gangetic plain alluvium)."
+              },
+              "reasoning": "Soil forms from rock weathering at the bottom AND from organic accumulation at the top, simultaneously. So young soils are layered. Each layer reflects how long that part has been weathered and how much organic matter has reached it.",
+              "useCases": [
+                {
+                  "title": "Garden compost pit",
+                  "description": "A compost pit shows a mini O horizon — leaves and kitchen scraps decomposing into rich dark humus.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Construction-site soil exposure",
+                  "description": "A road cutting through a hillside exposes a complete soil profile — gardeners look for the A horizon to take topsoil from.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Forest floor leaf litter",
+                  "description": "A walk through a deciduous forest in autumn shows the O horizon forming in real time — thick layers of leaves slowly turning to humus.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 9 (Natural Resources) and Class 11 Geography you'll meet soil-forming factors: parent material, climate, topography, biota, and time (CLORPT). Class 12 Biology covers nutrient cycling between soil and plants. NEET Biology and JEE Earth Sciences both expect understanding of how soil horizons store water and minerals — the basis of agriculture.",
+              "relatedConceptIds": [
+                "ch09_t01_c02",
+                "ch09_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch09_t01_q02",
+                "ch09_t01_q04"
+              ],
+              "pageRefs": [
+                100,
+                101
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_c02",
+              "title": "Sandy, clayey and loamy soils",
+              "explanations": {
+                "oneLine": "Soils are classified by particle size: sandy (large particles, drains fast), clayey (tiny particles, holds water), and loamy (a balanced mix — the gardener's gold).",
+                "kidFriendly": "Pick up a handful of soil and rub it between your fingers. If it feels gritty and falls apart, it's sandy — lots of large grains, water rushes straight through. If it feels sticky and stays in a ball when wet, it's clayey — tiny particles packed tight, water can't drain. If it's a happy mix of both with some humus, it's loam — soft, crumbly, perfect for growing vegetables. Loam holds enough water for roots but lets the extra drain away. That's why farmers prize loamy soil and gardeners pay extra for 'loamy potting mix' at nurseries.",
+                "textbook": "Soil is classified by mineral particle size into three main types: (1) Sandy soil — particles 0.05-2.0 mm; large gaps between particles; high percolation rate; low water-holding capacity; poor in nutrients. Found in deserts and along river banks. (2) Clayey soil — particles <0.002 mm; tiny gaps; very low percolation; high water-holding capacity (can become waterlogged); rich in minerals but heavy when wet, hard when dry. Found in the Deccan plateau (black cotton soil). (3) Loamy soil — a balanced mixture of sand, silt and clay, with humus. Best for crops — drains adequately, holds enough water, easy to till.",
+                "expert": "The USDA soil texture triangle defines 12 soil texture classes by percentages of sand, silt, and clay. Cation Exchange Capacity (CEC) — a measure of how many positively-charged plant nutrients (Ca²⁺, K⁺, Mg²⁺) the soil can hold — rises sharply with clay content because clay particles carry negative surface charges. This is why clay soils, while difficult to till, are often very fertile. Indian black cotton soil (Regur) is rich in montmorillonite clay; it expands strongly when wet and shrinks when dry, cracking the surface — a recurring hazard for foundations and roads in Maharashtra."
+              },
+              "reasoning": "Particle size controls everything about a soil: bigger gaps = faster drainage, more air, less water-holding. Tiny particles pack tight = slow drainage, more water-holding, but compaction risk. The middle ground — loam — gives crops both water and air.",
+              "useCases": [
+                {
+                  "title": "Cactus in sandy desert",
+                  "description": "Cacti and adapted shrubs thrive in sandy soil because they evolved to use the brief moisture flashes before water drains away.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Rice paddy fields",
+                  "description": "Rice grows in flooded clayey fields — the slow drainage holds water for the long growing season.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Vegetable kitchen garden",
+                  "description": "Tomatoes, brinjal, spinach need loamy soil — gardeners mix sand, clay and compost to make perfect loam.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 10 Geography and Class 11 Biology, soil texture connects to agricultural productivity, irrigation choice, and crop selection. NEET Biology covers root systems adapted to each soil type. JEE Earth Sciences includes soil mechanics — bearing capacity, compaction, slope stability — all governed by texture and moisture content.",
+              "relatedConceptIds": [
+                "ch09_t01_c01",
+                "ch09_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch09_t01_q01",
+                "ch09_t01_q03"
+              ],
+              "pageRefs": [
+                101,
+                102
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch09_t01_q09",
@@ -13580,7 +13750,92 @@
           "id": "ch09_t03",
           "title": "Soil Conservation",
           "summary": "Roots hold soil, deforestation strips it, and earthworms rebuild it. Three classic techniques: terracing, cover crops, contour ploughing.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch09_t03_c01",
+              "title": "Soil erosion — when soil is lost",
+              "explanations": {
+                "oneLine": "Soil erosion is the wearing-away of fertile topsoil by wind, water, or human action; it can strip a fertile field bare in a few seasons.",
+                "kidFriendly": "Topsoil is the most precious layer of soil — the A horizon where plants grow. But it's the easiest to lose. Heavy rain on bare ground washes the dark fertile layer downhill into rivers (water erosion). Strong wind on dry ploughed fields lifts up a fine dust cloud and blows it away (wind erosion). Cutting down forests, overgrazing animals, and ploughing up and down a slope all speed up erosion. Once the topsoil is gone, the land below — clay or rock — can't grow much. India loses an estimated 5 billion tonnes of topsoil every year. That's why farmers in the Himalayas use terraces and farmers in the dry north plant rows of trees as wind-breaks.",
+                "textbook": "Soil erosion is the removal of the upper layer of soil (topsoil) by natural agents (water, wind, glaciers) or human action. Major causes: (1) water erosion — sheet wash, rill, gully erosion on bare slopes during heavy rain; (2) wind erosion — fine particles blown off dry, exposed fields; (3) human contributors — deforestation, overgrazing, over-ploughing, urbanisation. Consequences: loss of fertile topsoil, decreased crop yield, river siltation, landslides, desertification. India loses roughly 16 tonnes per hectare per year on average — and over 60 tonnes in vulnerable regions like the Shivalik foothills.",
+                "expert": "Soil erosion rates are quantified using the Universal Soil Loss Equation (USLE): A = R·K·L·S·C·P, where R is rainfall erosivity, K is soil erodibility, L and S are slope length and steepness, C is cover-management, and P is support-practice factor. Geographical Information Systems (GIS) combined with satellite remote sensing (NRSC and ISRO use Cartosat / Sentinel-2 data) map erosion-prone zones across India. Soil erosion is also coupled to climate change — increased intensity of extreme rainfall raises R; loss of forest cover lowers C. Restoration techniques include agroforestry, conservation tillage, and engineered structures like check-dams."
+              },
+              "reasoning": "Topsoil is only a few centimetres thick and held in place by roots and humus. Remove the protection (the plants) and add a force (rain or wind) and gravity does the rest — the loose surface washes away.",
+              "useCases": [
+                {
+                  "title": "Bare hillside after monsoon",
+                  "description": "Hills in the Himalayas show muddy runoff streaking down — topsoil being carried into the Ganges system.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Dust storms in Rajasthan",
+                  "description": "Pre-monsoon dust storms (Andhi) in northwestern India carry fine soil grains over hundreds of kilometres.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Roof of a deforested hill",
+                  "description": "Once-fertile slopes become rocky and bare within a few years if forest cover is removed and rain keeps falling.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography you'll meet the full taxonomy of erosion (sheet, rill, gully, mass-wasting) and India's Drylands map. Class 12 Biology covers desertification and the role of vegetation in soil retention. JEE Civil engineering aspirants use the USLE equation for hydraulic design; NEET / Class 11 Biology covers ecosystem services like soil-formation tracts that erosion destroys.",
+              "relatedConceptIds": [
+                "ch09_t01_c01",
+                "ch09_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch09_t03_q01",
+                "ch09_t03_q04"
+              ],
+              "pageRefs": [
+                108,
+                109
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t03_c02",
+              "title": "Soil conservation — terracing, contour ploughing, cover crops",
+              "explanations": {
+                "oneLine": "Three time-tested practices stop soil from washing or blowing away: cutting flat terraces into slopes, ploughing along the contour (not up-down), and keeping the soil covered with crops or mulch.",
+                "kidFriendly": "If erosion is the disease, conservation is the cure. Farmers on hill slopes cut their fields into flat steps called terraces — each step holds rainwater in place instead of letting it gush downhill. On gentler slopes, farmers plough along the curve of the hill (contour ploughing) rather than up and down — the furrows act like little dams trapping rainwater. Between crops, instead of leaving the field bare, they grow a 'cover crop' (often legumes) that holds the soil and even adds nitrogen back. Planting rows of trees as wind-breaks across windy plains stops the dust blowing away. Modern eco-friendly farms combine all four: terraces, contour lines, cover crops, and windbreaks.",
+                "textbook": "Soil conservation methods aim to keep topsoil in place: (1) Terracing — cutting flat platforms into a hillside so water moves laterally, not vertically. Used widely in the Himalayan foothills, Nilgiris, and famously in the rice terraces of the Philippines. (2) Contour ploughing — ploughing along the slope's elevation lines so each furrow becomes a small water trap. (3) Cover crops & mulching — keeping vegetation or organic matter on the soil surface between main crops to break raindrop impact and reduce wind exposure. (4) Crop rotation — alternating crops to maintain soil fertility (e.g., legumes after grain crops). (5) Afforestation and shelter belts — rows of trees that slow wind speed and stabilise soil with their roots. (6) Check-dams in gullies — slowing runoff and trapping sediment.",
+                "expert": "Modern soil-conservation technology layers traditional practices with engineering and informatics. Conservation tillage (no-till and minimum-till) leaves crop residues on the surface — reducing erosion by 60-90% relative to conventional ploughing. Watershed-scale interventions use GIS-based prioritisation: digital elevation models identify high-risk slopes; bio-engineering combines vetiver grass strips with retaining walls. ICAR and NABARD have funded large 'Integrated Watershed Management Programmes' in India that bundle terracing, check-dams, afforestation and farmer training — Ralegan Siddhi (Maharashtra) is the canonical success story."
+              },
+              "reasoning": "Erosion needs three things — bare soil, force (water/wind), and slope. Every conservation practice removes at least one: terracing flattens the slope, cover crops cover the bare soil, windbreaks slow the wind. Combine them and erosion stops.",
+              "useCases": [
+                {
+                  "title": "Himalayan rice terraces",
+                  "description": "Centuries-old stepped fields in Uttarakhand and Sikkim still grow rice on slopes that would otherwise lose topsoil with every rain.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Vetiver grass hedges",
+                  "description": "Indian farmers plant lines of vetiver grass along contours — the deep roots hold soil and the dense leaves slow runoff.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Punjab shelterbelts",
+                  "description": "Rows of eucalyptus and poplar planted across Punjab's flat farmlands break the dry summer winds and reduce dust erosion.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography this is the 'Soil and Water Management' unit. Class 12 Biology connects soil conservation to ecosystem services and the UN Sustainable Development Goal 15 (Life on Land). JEE / NEET / UPSC aspirants encounter this both as scientific content and as a policy theme — Soil Health Card scheme, Integrated Watershed Management Programme.",
+              "relatedConceptIds": [
+                "ch09_t03_c01",
+                "ch09_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch09_t03_q02",
+                "ch09_t03_q03"
+              ],
+              "pageRefs": [
+                109,
+                110
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch09_t01_q14",
@@ -16700,7 +16955,93 @@
           "id": "ch13_t02",
           "title": "The Pendulum and Measuring Time",
           "summary": "A pendulum's period depends only on its length. Used in clocks for 300 years.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch13_t02_c01",
+              "title": "The simple pendulum",
+              "explanations": {
+                "oneLine": "A simple pendulum is a bob hanging from a string; it swings back and forth, and the time for one full swing (its period) depends only on the string's length and gravity — not on the bob's mass or how far you push it.",
+                "kidFriendly": "Tie a small stone to a long thread, hang it from a nail, and pull it sideways. Let go. The stone swings back and forth — left-right-left-right — for a long time before stopping. The to-and-fro motion is called oscillation. Each complete left-to-right-and-back swing is one oscillation. The time for one full oscillation is the period (T). The amazing rule, discovered by Galileo as a 17-year-old watching a swaying chandelier in a Pisa cathedral: T depends on the LENGTH of the string and on gravity — NOT on the mass of the bob and NOT on how hard you push it. Make the string longer → T gets bigger. Make it shorter → T gets smaller.",
+                "textbook": "A simple pendulum consists of a small heavy bob attached to a string of length L, free to swing about a pivot. One complete oscillation takes a fixed time called the time period T = 2π√(L/g), where g is the acceleration due to gravity. The motion is approximately Simple Harmonic Motion (SHM) for small amplitudes (under about 15°). Key observations: (1) T is independent of mass — a heavy and a light bob with the same string length swing at the same rate. (2) T is independent of amplitude (for small angles) — Galileo's isochronism. (3) T depends on L (square-root) and on g. A 1 m pendulum has T ≈ 2 s on Earth.",
+                "expert": "Strictly, the simple-pendulum formula T = 2π√(L/g) is the small-angle approximation, valid when sin θ ≈ θ. The exact pendulum equation is non-linear (d²θ/dt² + (g/L) sin θ = 0), with elliptic-integral solutions whose period grows with amplitude. Foucault used a 67 m pendulum in 1851 to demonstrate Earth's rotation — the pendulum's plane appears to rotate relative to the ground. Atomic clocks have replaced pendulums for precision timekeeping (one part in 10¹⁵), but pendulum clocks dominated for 300 years (Huygens 1656) and were the most accurate timepieces on Earth until the quartz oscillator (1928)."
+              },
+              "reasoning": "A pendulum's swing is restored by gravity — and the gravitational force on the bob is proportional to the bob's mass. The bob's inertia (which resists motion) is also proportional to its mass. The masses cancel out, leaving only L and g to determine T.",
+              "useCases": [
+                {
+                  "title": "Cathedral chandelier (Galileo's discovery)",
+                  "description": "Young Galileo timed a swinging chandelier with his pulse and noticed the period was constant regardless of how much it had been pushed — the start of physics of oscillation.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Grandfather clock",
+                  "description": "A pendulum of about 1 m gives a 2-second period — perfect for a 'tick-tock' second-hand mechanism in 17th-century clocks.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Swing in the playground",
+                  "description": "A child on a swing is a pendulum; the period depends on chain length and gravity, not on the child's weight.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Physics you'll meet Simple Harmonic Motion fully — the maths behind T = 2π√(L/g), the energy oscillating between kinetic and potential, and damping. JEE Mains/Advanced go further into the physical pendulum (period of an irregularly-shaped pivoting object) and forced oscillations / resonance. NEET Biology students see the same SHM applied to a contracting heart muscle and lung breathing rhythms — biological 'pendulums'.",
+              "relatedConceptIds": [
+                "ch13_t01_c01",
+                "ch13_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t02_q01",
+                "ch13_t02_q02"
+              ],
+              "pageRefs": [
+                150,
+                151
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_c02",
+              "title": "Measuring time — units, sundials, modern clocks",
+              "explanations": {
+                "oneLine": "Time is measured in seconds; older devices used the Sun's shadow (sundial) or a swinging pendulum, today we use quartz crystals and atomic clocks accurate to a billionth of a second.",
+                "kidFriendly": "How do we measure time? In Class 7 you mostly use seconds, minutes, hours. The official SI unit is the second (s). A minute = 60 s; an hour = 60 min; a day = 24 h. Long ago, people read time from a sundial — a stick stuck in the ground whose shadow swept across markings as the Sun moved. Then came hourglasses (sand running through a narrow neck) and water clocks. Galileo's pendulum gave the first really accurate clocks. Your watch today uses a tiny vibrating quartz crystal — quartz vibrates 32,768 times per second when you put a voltage on it, which the watch counts to keep time. The most accurate clocks of all are atomic clocks, which measure the vibration of caesium atoms — accurate to one second in 30 million years.",
+                "textbook": "Time is measured in seconds (s) in the SI system. Common units: 1 minute = 60 s, 1 hour = 3600 s, 1 day = 86,400 s. Historical timekeeping devices: (1) Sundial — vertical stick (gnomon) whose shadow sweeps across a calibrated dial as Earth rotates. Only works in sunlight. (2) Water clock and sand clock — measure intervals from the steady flow of water or sand. (3) Pendulum clock (1656, Huygens) — uses a pendulum's regular swing; T = 2π√(L/g) gives the famous 1-second 'tick'. (4) Quartz watch (1928) — a quartz crystal vibrates at a precise high frequency (32,768 Hz in wristwatches); the electronics divides this down to seconds. (5) Atomic clock (1955) — the second is officially defined as 9,192,631,770 cycles of radiation from caesium-133. NIST and India's NPL maintain national time references.",
+                "expert": "The current SI definition of the second (since 1967) is purely atomic: 'the duration of 9,192,631,770 periods of the radiation corresponding to the transition between two hyperfine levels of caesium-133'. Optical-lattice clocks (using strontium or ytterbium atoms) now achieve fractional accuracy of 10⁻¹⁸ — better than caesium. The international time standard UTC is derived by averaging ~400 atomic clocks worldwide and is adjusted with leap seconds to keep pace with Earth's slowly-varying rotation. GPS depends entirely on atomic clocks aboard satellites — a clock drift of 1 microsecond would shift your GPS location by 300 m."
+              },
+              "reasoning": "Time is just a count of something that repeats steadily — Earth's rotation (a day), Moon's phases (a month), a pendulum's swing, or an atom's vibration. The more steady and frequent the repetition, the more accurate the clock.",
+              "useCases": [
+                {
+                  "title": "Jantar Mantar sundial in Jaipur",
+                  "description": "Built by Maharaja Sawai Jai Singh II in 1734, the Samrat Yantra is the world's largest sundial — accurate to 2 seconds.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Quartz wristwatch",
+                  "description": "Almost every modern wristwatch uses a tiny tuning-fork quartz crystal vibrating 32,768 times per second.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "GPS in your phone",
+                  "description": "Your phone reads atomic-clock timing signals from at least 4 satellites; the difference in arrival times locates you within metres.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Class 11 Physics you'll meet the precise definition of the second and dimensional analysis. JEE Physics covers oscillations and the design of pendulum vs. quartz vs. atomic clocks. Class 12 Modern Physics introduces atomic spectroscopy that underlies atomic clocks. NEET / Class 11 Biology covers the body's own 'clock' — circadian rhythms — measured against external time references.",
+              "relatedConceptIds": [
+                "ch13_t02_c01",
+                "ch13_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t02_q03",
+                "ch13_t02_q04"
+              ],
+              "pageRefs": [
+                152,
+                153,
+                154
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch13_t01_q02",
@@ -17721,7 +18062,93 @@
           "id": "ch14_t02",
           "title": "Heating Effect",
           "summary": "Joule's law H = I²Rt; nichrome heating elements; bulbs, irons, fuses, heaters.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch14_t02_c01",
+              "title": "Heating effect of electric current",
+              "explanations": {
+                "oneLine": "When current flows through a wire, the wire heats up; the heat produced equals I²Rt (current squared times resistance times time) — Joule's Law.",
+                "kidFriendly": "Plug an iron into the wall and the soleplate gets hot enough to press shirts. Inside, there's just a coil of resistance wire — no flame, no chemical. Where does the heat come from? Electricity. When electric current passes through a wire that resists its flow, the wire heats up. The narrower or longer the wire, the more it resists, the more heat. Thicker copper wires (low resistance) hardly warm up — that's why house wires stay cool. Special alloys like nichrome have very high resistance — they're used inside heaters, toasters, irons and bulb filaments because they get red-hot without melting.",
+                "textbook": "When an electric current I flows through a conductor of resistance R for time t, the heat produced is H = I² R t — this is Joule's Law of Heating. The electrical energy lost to resistance is converted entirely into heat. Devices that use this heating effect: electric heater, geyser, iron, toaster, kettle, electric bulb (the tungsten filament reaches ~2500 °C), fuse. The choice of material matters: nichrome (an alloy of nickel and chromium) has high resistance, high melting point (~1400 °C), and does not oxidise on heating — ideal for heating elements. Tungsten (melting point 3422 °C, the highest of any metal) is used in bulb filaments because it can glow white-hot without melting.",
+                "expert": "Joule's Law H = I²Rt is a direct consequence of energy conservation: the electrical power P = VI = I²R is dissipated as heat in a resistor. Differentiated: dH/dt = I²R is the instantaneous Joule heating rate (Watts). In real materials, the heat raises temperature according to ΔT = H / (m·c), where m is mass and c is specific heat capacity. At very high currents in semiconductor devices (microprocessors), Joule heating becomes the limiting factor — modern CPUs spend more silicon on heat-spreader plumbing than on logic. Superconductors carry current with zero resistance, so I²R = 0 — they don't heat up at all, the basis for MRI magnets and quantum computers."
+              },
+              "reasoning": "Electrons in a current-carrying wire collide with the wire's atoms, transferring kinetic energy to them — the atoms vibrate harder, which is exactly what 'heat' means. More resistance → more collisions → more heat. More current → faster collisions → more heat.",
+              "useCases": [
+                {
+                  "title": "Electric iron",
+                  "description": "A nichrome heating coil inside heats the soleplate to ~150 °C — perfect for pressing cotton shirts.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Filament light bulb",
+                  "description": "Tungsten filament glows white-hot when current passes — most of the energy is actually heat, only ~10% is light (LEDs are 80%+ efficient).",
+                  "domain": "building"
+                },
+                {
+                  "title": "Electric kettle",
+                  "description": "Heating elements at the base boil water in 2 minutes using I²R heating — same Joule's law.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 10 Electricity, you'll meet Joule's Law explicitly with formula derivations and numerical problems. Class 12 / JEE Physics extends it to AC circuits where heating depends on RMS current. JEE Mains / Advanced ask numerical problems comparing series and parallel heater configurations. NEET Biology connects the same principle to RFID-style hyperthermia treatments and electrocautery in surgery.",
+              "relatedConceptIds": [
+                "ch14_t01_c01",
+                "ch14_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t02_q01",
+                "ch14_t02_q03"
+              ],
+              "pageRefs": [
+                170,
+                171
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_c02",
+              "title": "Electric bulb, fuse, and the choice of materials",
+              "explanations": {
+                "oneLine": "A bulb glows because its tungsten filament gets white-hot; a fuse protects circuits by melting when too much current flows — both are clever uses of the heating effect.",
+                "kidFriendly": "Look closely at an old-style filament bulb: there's a tiny coiled wire inside — that's tungsten, and it's getting heated by current to about 2500 °C, hot enough to glow brilliantly white. The glass globe is filled with an unreactive gas (argon) so the tungsten doesn't burn up. A fuse works the OPPOSITE way: it's a short piece of metal alloy designed to melt at a specific current. If a fault sends too much current through the circuit, the fuse melts — breaking the circuit — and stops the dangerously high current from causing a fire or destroying appliances. So one device (bulb) celebrates the heating effect, and another (fuse) uses it as a built-in safety alarm.",
+                "textbook": "An electric bulb (incandescent) consists of a tungsten filament sealed inside a glass envelope filled with an inert gas (argon or nitrogen). When current flows, the filament heats to ~2500-3000 °C and emits visible white light — most energy (~90%) is actually emitted as heat (infra-red). Tungsten is chosen for its very high melting point (3422 °C), high resistivity, and good drawing properties. A fuse is a thin wire of low-melting-point alloy (often tin-lead) inserted in series with a circuit. If the current exceeds the fuse's rated value, the wire heats to its melting point (H = I²Rt) and physically breaks, cutting off the current. Modern circuits use re-settable circuit breakers (MCBs) but the principle is the same: detect the heating effect and break the circuit.",
+                "expert": "Filament bulbs have largely been displaced by LEDs (light-emitting diodes), which produce light by electroluminescence in a semiconductor — no heating, ~5-10× more efficient. CFLs use a low-pressure mercury arc to emit UV which excites a phosphor coating. Fuses come in many ratings (5 A, 13 A, 32 A for household appliances) and grades (HRC for industrial use). MCBs (miniature circuit breakers) replace fuses in modern installations; they trip electromagnetically AND thermally for both overload and short-circuit protection. ELCB/RCD (Earth Leakage Circuit Breaker / Residual Current Device) protect against ground faults — they detect tiny imbalances between live and neutral and trip within milliseconds, saving lives."
+              },
+              "reasoning": "A bulb's filament uses the heating effect as the desired outcome: get hot, glow. A fuse uses the same effect as a safety feature: get hot, melt, break the circuit. Different materials (tungsten vs tin-lead alloy) and geometries make the same physics do opposite jobs.",
+              "useCases": [
+                {
+                  "title": "Tungsten filament bulb",
+                  "description": "Brilliant white light at ~2500 °C — common in older homes and theatre stage lights.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Cartridge fuse in a plug top",
+                  "description": "Indian 3-pin plugs have a 13 A or 5 A fuse cartridge — designed to blow before the wiring overheats.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Power-strip MCB",
+                  "description": "Modern surge-protected strips trip a circuit breaker when too many high-power appliances run together — saving the building's wiring.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "In Class 10 Electricity, fuses and circuit-breakers are the safety topic; Class 11 Engineering / JEE design problems pick fuse ratings for given loads. Class 12 Modern Physics covers the band-gap origin of LEDs replacing filaments. NEET / Biophysics looks at incandescent lamps used in plant growth and infrared therapy.",
+              "relatedConceptIds": [
+                "ch14_t02_c01",
+                "ch14_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t02_q02",
+                "ch14_t02_q04",
+                "ch14_t02_q05"
+              ],
+              "pageRefs": [
+                171,
+                172
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch14_t01_q08",
@@ -17910,7 +18337,94 @@
           "id": "ch14_t03",
           "title": "Magnetic Effect",
           "summary": "Ørsted 1820 discovery; electromagnets; right-hand rule; motors, bells, MRI.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch14_t03_c01",
+              "title": "Magnetic effect of electric current (Ørsted's discovery)",
+              "explanations": {
+                "oneLine": "An electric current produces a magnetic field around the wire it flows through — Hans Christian Ørsted discovered this in 1820, linking electricity and magnetism for the first time.",
+                "kidFriendly": "Place a small magnetic compass under a long straight wire. With no current, the compass needle points north. Switch on a current through the wire — the needle DEFLECTS! Turn off the current — needle returns to north. Reverse the current — needle deflects the OTHER way. Hans Christian Ørsted, a Danish physics professor, accidentally noticed this during a 1820 lecture — and changed physics forever. Until that moment, electricity (lightning, batteries) and magnetism (compass needles, lodestone) were thought to be totally separate phenomena. Ørsted proved they are linked: electricity creates magnetism. Every electromagnet, electric motor, doorbell, MRI scanner, and even the speakers in your phone descend from this single observation.",
+                "textbook": "Ørsted's experiment (1820): a magnetic compass placed near a current-carrying wire is deflected — proving that an electric current produces a magnetic field around it. The direction of the magnetic field around a straight current-carrying conductor is given by the Right-Hand Thumb Rule: point your right thumb in the direction of current flow; your curled fingers show the direction of the magnetic field lines around the wire. The magnetic field forms concentric circles around the wire; its strength is greatest close to the wire and weakens with distance. Reversing the current reverses the field direction. This is the foundation of electromagnetism — the unification of electricity and magnetism — completed mathematically by James Clerk Maxwell in the 1860s.",
+                "expert": "Ampère's Law gives the magnetic field around a long straight wire: B = μ₀I / (2πr), where μ₀ = 4π × 10⁻⁷ T·m/A is the permeability of free space, I is the current, and r is the perpendicular distance. The Biot-Savart Law gives the field of any current distribution. Maxwell synthesised this with Faraday's Law of Induction (a changing magnetic field creates an electric field) to produce Maxwell's Equations — predicting electromagnetic waves and identifying light itself as an electromagnetic wave. The Lorentz force F = qv × B (force on a moving charge in a magnetic field) underlies all electric motors and modern particle accelerators."
+              },
+              "reasoning": "An electric current is moving charges. A moving charge generates a magnetic field around it (a deep fact of nature). So a current — many moving charges — generates a strong, summed-up magnetic field around the wire it flows in. Stop the current and the field vanishes.",
+              "useCases": [
+                {
+                  "title": "Ørsted's compass over wire (1820)",
+                  "description": "The original experiment — a wire over a compass needle, with cells in series. Reproducible in any physics lab in 5 minutes.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Doorbell solenoid",
+                  "description": "Pressing the doorbell button passes current through a coiled wire; the coil's magnetic field pulls a metal striker against a bell.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Electric guitar pickup",
+                  "description": "Vibrating steel strings disturb the magnetic field of a wire-wrapped magnet underneath; the changing field induces tiny currents that become the amplified sound.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Class 10 Electricity and Class 12 Magnetic Effects of Current ('Moving Charges and Magnetism') build a full quantitative theory: Ampère's Law, Biot-Savart, force on a current-carrying conductor F = BIL. JEE Physics packs heavy numerical content on solenoids, toroids, force between two parallel wires. NEET Biology and Class 12 Physics together explain MRI scanning — using strong magnetic fields and radio waves to image the human body.",
+              "relatedConceptIds": [
+                "ch14_t02_c01",
+                "ch14_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t03_q03",
+                "ch14_t03_q04"
+              ],
+              "pageRefs": [
+                176,
+                177
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_c02",
+              "title": "Electromagnets and their uses",
+              "explanations": {
+                "oneLine": "An electromagnet is a coil of wire wrapped around an iron core — passing a current through the coil turns it into a magnet; switch off the current and it stops being a magnet.",
+                "kidFriendly": "Take a long iron nail. Wrap a coated copper wire around it many times. Connect the wire's two ends to a battery. The nail is now a MAGNET — pick up paper clips, attract a compass needle, push another magnet around. Disconnect the battery and the nail loses its magnetism in an instant. This is an electromagnet. It's enormously useful because you can switch it ON and OFF: scrapyards lift heavy cars with electromagnets and drop them at will; doorbells use electromagnets to ring a bell each time the button is pressed; trains in Japan and Shanghai (Maglev) float above the rails using powerful electromagnets that levitate the entire carriage.",
+                "textbook": "An electromagnet is a temporary magnet made by passing electric current through a coil of insulated wire wound around a soft iron core. The coil's magnetic field magnetises the iron, multiplying the field strength manyfold. Three knobs to adjust the strength: (1) more turns of wire → stronger; (2) more current → stronger; (3) better core material (soft iron is best for switchable magnetism — it loses magnetism quickly when current stops). Key advantage over permanent magnets: the magnetism can be switched on/off by switching the current. Uses: electric motors, generators, transformers, loudspeakers, doorbells, MRI scanners, scrap-yard lifting magnets, magnetic locks, particle accelerators, Maglev trains, and electrical relays.",
+                "expert": "An electromagnet's field strength is B ≈ μ₀μᵣnI for an idealised long solenoid, where μᵣ is the relative permeability of the core (~5000 for soft iron, only 1 for vacuum), n is turns per unit length, and I is the current. The choice of core is crucial: soft iron has low coercivity (releases magnetism easily) and is used for switching applications; permanent magnets use hard ferrites or Nd-Fe-B alloys with high coercivity. Superconducting electromagnets (cooled to liquid helium temperature) produce magnetic fields of 10+ Tesla with no continuous power input — the basis of MRI scanners and the LHC particle collider at CERN. Maglev trains use a combination of electromagnetic suspension and propulsion to float and accelerate at 600 km/h without contact with the rails."
+              },
+              "reasoning": "An electric current creates a magnetic field around the wire (Ørsted). Coiling the wire layers many wires next to each other — their fields add up. Adding an iron core multiplies the field again because iron is a 'magnetic amplifier'. Result: a strong, switchable magnet whose strength can be tuned by the current.",
+              "useCases": [
+                {
+                  "title": "Scrapyard lifting electromagnet",
+                  "description": "A giant electromagnet picks up car bodies and steel scraps; the operator drops them by switching off the current.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "MRI scanner",
+                  "description": "A massive superconducting electromagnet inside MRI machines produces a 1.5-3 Tesla field — about 30,000 times Earth's magnetic field.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Maglev train (Shanghai, Japan)",
+                  "description": "Trains float above the track on a magnetic cushion and are pushed forward by another set of switched electromagnets — speeds up to 600 km/h with no friction.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "In Class 10 you'll meet the right-hand thumb rule and the force on a current-carrying conductor F = BIL. Class 12 / JEE Physics covers solenoids, toroids, the magnetic field of a coil at the centre B = μ₀NI/(2R), the motional emf, and the design of motors and generators. NEET Biology / Class 12 Physics together explain MRI — protons in body water aligning with strong magnetic fields and emitting radio signals when nudged. Maglev and particle accelerator physics are JEE Advanced favourites.",
+              "relatedConceptIds": [
+                "ch14_t03_c01",
+                "ch14_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t03_q01",
+                "ch14_t03_q02",
+                "ch14_t03_q05"
+              ],
+              "pageRefs": [
+                177,
+                178,
+                179
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch14_t01_q02",
@@ -20347,7 +20861,93 @@
           "id": "ch16_t02",
           "title": "Irrigation and Rainwater Harvesting",
           "summary": "Drip, sprinkler and flood irrigation; harvesting rainwater from rooftops.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch16_t02_c01",
+              "title": "Irrigation methods — flood, sprinkler, and drip",
+              "explanations": {
+                "oneLine": "Irrigation is the artificial watering of crops; three main methods differ in how much water they waste — flood (most wasteful), sprinkler (better), drip (most efficient).",
+                "kidFriendly": "Crops in India often grow in places where rain alone isn't enough. Farmers solve this by irrigating — bringing water to the field artificially. The simplest, oldest method is flood irrigation: open a channel and let water flow across the whole field. It works but wastes a lot of water — most evaporates or sinks past the roots. Sprinkler irrigation uses overhead pipes that spray water like rain — better, less waste. Drip irrigation runs thin tubes directly to each plant's base, dripping water one drop at a time. It uses only about a fifth of the water that flood irrigation uses. Israel pioneered drip in the 1960s and now sells the technology worldwide; Maharashtra uses it heavily for sugarcane.",
+                "textbook": "Irrigation supplies water to crops where rainfall is insufficient. Three major methods: (1) Flood irrigation (surface irrigation) — water is let into the field via canals and floods the basin. Cheap, simple, but loses 40-60% of water to evaporation and percolation. Used widely for rice and wheat. (2) Sprinkler irrigation — water is pressurised and sprayed onto the field through overhead pipes and nozzles. Efficiency 60-75%. Suitable for sandy soils and uneven terrain. (3) Drip irrigation — small-bore pipes deliver water drop by drop directly at the root zone of each plant. Efficiency 85-95% — the highest. Suited for orchards, vegetables, sugarcane. Pioneered in Israel by Netafim in the 1960s. India is now the world's second-largest drip-irrigated area (~7 million hectares by 2024) thanks to subsidies under the Pradhan Mantri Krishi Sinchayee Yojana.",
+                "expert": "Irrigation engineering uses Crop Water Requirement models combining evapotranspiration (Penman-Monteith equation), root depth, soil texture, and climate. Drip irrigation paired with fertigation (dissolving fertiliser in irrigation water) achieves the highest Water Use Efficiency (WUE) — up to 95%. Pulsed-irrigation controllers further optimise timing using soil-moisture sensors. Israel-India collaborations have built Centers of Excellence in Maharashtra, Gujarat, Karnataka demonstrating drip + greenhouses. Modern smart-irrigation systems use IoT moisture sensors, cloud analytics, and machine learning to time waterings — reducing water use by another 20-30% over basic drip."
+              },
+              "reasoning": "Plants take up water only at their roots. The closer irrigation can put water to the roots — and the more slowly it delivers it — the less is lost to evaporation, runoff, and percolation. So precision = efficiency.",
+              "useCases": [
+                {
+                  "title": "Flooded paddy field in Punjab",
+                  "description": "Rice grows in standing water; farmers flood fields by opening channels from a canal. Wasteful but traditional.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Sprinkler in a Maharashtra orchard",
+                  "description": "Mango and orange orchards in Vidarbha use sprinklers to cover large areas under controlled water pressure.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Drip in a Karnataka grape farm",
+                  "description": "Vineyards in Bijapur use drip with built-in moisture sensors — delivering water directly to each vine's roots.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography this becomes the 'Irrigation' unit covering canal, tank, and tubewell irrigation across India. Class 12 Biology and Agriculture courses introduce the concept of Water Use Efficiency (WUE). JEE Civil engineering covers the design of canal systems and pump selection. NEET / Class 11 Biology connects irrigation to root absorption and stomatal conductance.",
+              "relatedConceptIds": [
+                "ch16_t01_c01",
+                "ch16_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch16_t02_q02",
+                "ch16_t02_q05"
+              ],
+              "pageRefs": [
+                210,
+                211
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_c02",
+              "title": "Rainwater harvesting — rooftop, bawri, tanka",
+              "explanations": {
+                "oneLine": "Rainwater harvesting captures rain where it falls, before it can run off — into tanks from rooftops, into bawris (step wells), or into underground tankas.",
+                "kidFriendly": "Most rainwater that falls on a roof or open ground runs straight off into drains and is lost. Rainwater harvesting catches and stores it instead. The simplest method is rooftop harvesting: rain falling on the roof is channelled down a pipe into an underground storage tank or directly into a recharge pit that puts the water back into the ground. India has an ancient tradition of harvesting — bawris (step wells) in Rajasthan are deep stepped tanks that catch monsoon water; tankas are huge underground rooftop-fed tanks across Rajasthan and Gujarat used during droughts. Modern Tamil Nadu and Chennai have made rooftop harvesting compulsory for all new buildings since 2003 — and groundwater levels have measurably recovered as a result.",
+                "textbook": "Rainwater harvesting (RWH) is the deliberate collection and storage of rainwater for later use, or its directed infiltration into aquifers to recharge groundwater. Two main approaches: (1) Storage harvesting — rainwater is led from a roof or paved area into a storage tank (above-ground or underground) for direct use. (2) Recharge harvesting — rainwater is led into recharge wells, pits, or trenches that allow it to seep into the underlying aquifer. Traditional Indian structures: bawris/baolis (stepped wells, Rajasthan and Gujarat — Chand Baori in Abhaneri is a famous tourist site); tankas (sealed underground rooftop tanks, Rajasthan); kunds (saucer-shaped covered tanks, Rajasthan); zings (collected glacier-melt cisterns, Ladakh); ahars (catchment basins, Bihar); johads (small earthen check-dams, Alwar). Tamil Nadu mandated rooftop RWH for all buildings in 2003; this raised Chennai's groundwater table by an average of 3 m within 5 years.",
+                "expert": "Modern RWH design uses runoff coefficients (typically 0.8 for hard rooftops), first-flush diverters (to discard the first dirty 1-2 mm of rainfall), filtration systems, and storage sized to typical dry-spell duration. Distinguishing surface harvesting from artificial recharge to confined aquifers is regulated by the Central Ground Water Authority. India's Atal Bhujal Yojana (2020) funds community-led groundwater management combining RWH with watershed restoration. Future challenges include water-quality monitoring (urban rooftops collect atmospheric pollutants), climate-change-driven shifts in rainfall patterns, and integration with smart-city water-metering grids."
+              },
+              "reasoning": "Rain is a free resource that falls all over a roof or piece of land. Without harvesting, that water runs off into drains and is lost. With harvesting, you direct it into a tank or back into the ground — buying yourself drinking water and aquifer recharge at almost zero cost.",
+              "useCases": [
+                {
+                  "title": "Chand Baori step well (Rajasthan)",
+                  "description": "Over 1000 years old, 13 storeys deep — collects monsoon rain and provides cool water year-round for the village above.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Chennai mandatory rooftop RWH",
+                  "description": "Every new building in Chennai since 2003 has a rooftop tank or recharge pit — groundwater levels measurably rose afterwards.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Tarun Bharat Sangh's johads",
+                  "description": "Rajendra Singh ('Waterman of India') revived 3000+ traditional johads in Rajasthan — five dry rivers now flow again.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography RWH is part of 'Water Resources'. Class 12 Civil Engineering / JEE Earth Sciences explores hydrology — runoff coefficients, infiltration, aquifer recharge equations. NEET / Class 11 Biology covers water-cycle disruptions and ecosystem services. UPSC and policy aspirants need RWH context for India's Jal Shakti and Atal Bhujal Yojana schemes.",
+              "relatedConceptIds": [
+                "ch16_t02_c01",
+                "ch16_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch16_t02_q01",
+                "ch16_t02_q03",
+                "ch16_t02_q04"
+              ],
+              "pageRefs": [
+                211,
+                212
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch16_t01_q19",
@@ -20479,7 +21079,93 @@
           "id": "ch16_t03",
           "title": "Water Conservation",
           "summary": "Daily habits, scarcity, World Water Day, and India's water challenges.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch16_t03_c01",
+              "title": "Why water conservation matters — scarcity and waste",
+              "explanations": {
+                "oneLine": "Only 0.5% of Earth's water is fresh and accessible; the rest is in oceans (salty) or locked in glaciers — every drop we waste comes from that tiny fraction.",
+                "kidFriendly": "Earth has lots of water — 70% of the surface is covered in it — but almost all of it is salty seawater you can't drink. Of all the water on Earth, less than 3% is freshwater, and most of THAT is frozen in glaciers and polar ice. The water actually available to us — in rivers, lakes, and underground — is just half of one percent of all the water on the planet. India has 17% of the world's population but only 4% of the world's freshwater. Cities like Bangalore and Chennai have already faced 'Day Zero' situations — when taps almost ran dry. So when we leave the tap running while brushing teeth, or wash a car with a hose, we're spending a tiny precious budget. Saving water at home, in the kitchen, in farms, and at the factory all add up.",
+                "textbook": "Of all water on Earth: ~97% is salty oceans, ~2% is frozen in glaciers and polar ice, ~0.5% is accessible freshwater in lakes, rivers, and aquifers. India has 17% of global population but only 4% of global freshwater — a structural water-stress situation. Major causes of scarcity: (1) Over-extraction of groundwater (NABARD data: 60% of irrigation depends on groundwater; >100 districts are 'over-exploited'). (2) Pollution rendering freshwater unusable. (3) Urbanisation reducing aquifer recharge. (4) Climate change shifting rainfall patterns and accelerating glacier melt. UN goal: SDG 6 calls for universal access to safe water by 2030. World Water Day (22 March) and World Toilet Day (19 November) raise awareness. Practical conservation at the household level: closing taps while brushing/lathering, using bucket-bath instead of long showers, fixing leaks (one dripping tap can waste 30+ litres a day), washing-machine full-load only, mulching gardens.",
+                "expert": "Water scarcity is increasingly framed as a 'water security' issue — overlapping economics, geopolitics, and climate science. The Indus Water Treaty (1960), Cauvery dispute, Krishna-Godavari arbitration — all major Indian water conflicts arise from how we share a finite resource. Virtual water (the embedded water in goods like rice and beef) is a powerful policy lens: India exports massive virtual water through basmati rice exports. Smart-water-grid technology (IoT meters, leak detection AI) is reducing urban network losses from 30-50% to under 15% in cities like Bangalore that adopt it. Climate-adaptive crops (millets over rice) are being promoted nationally under the International Year of Millets 2023."
+              },
+              "reasoning": "Water is a finite shared resource. The total freshwater on Earth is roughly constant year to year, but human demand keeps rising — more people, more crops, more industry. So unless every user (you, farmers, factories) becomes more efficient, the shared pool can't keep up.",
+              "useCases": [
+                {
+                  "title": "Day Zero Chennai 2019",
+                  "description": "Chennai's reservoirs hit near-zero in summer 2019; trains brought water from 200 km away; city of 11 million was 7 days from running dry.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Bangalore lake revival",
+                  "description": "Citizens crowdfunded the cleanup of Kaikondrahalli Lake — recharging local groundwater and showing community-led water restoration works.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Leaky tap audit",
+                  "description": "A single tap dripping once per second wastes 30 litres per day = 11,000 litres per year — enough for one person's drinking water.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography you'll meet water resources at chapter length. Class 12 Civics and UPSC cover the constitutional placement of water (state subject), the National Water Policy, and inter-state water disputes. NEET / Class 12 Biology touches on ecosystem services and freshwater biodiversity. JEE Civil engineering aspirants design urban water-supply networks under scarcity constraints.",
+              "relatedConceptIds": [
+                "ch16_t02_c02",
+                "ch16_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch16_t03_q03",
+                "ch16_t03_q04"
+              ],
+              "pageRefs": [
+                214,
+                215
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_c02",
+              "title": "Saving water at home and on the farm",
+              "explanations": {
+                "oneLine": "Small everyday habits — closing taps, fixing leaks, bucket baths, drip irrigation, rainwater tanks — together cut water use dramatically without changing how comfortable life feels.",
+                "kidFriendly": "Saving water doesn't mean giving up showers or letting the garden die. It just means cutting WASTE. At home: turn off the tap while you brush your teeth (saves ~6 litres per brush). Bucket-bath uses ~15 litres; a shower uses ~50 litres. Fix dripping taps within a day. Run washing machines and dishwashers only when full. Re-use water from washing vegetables to water houseplants. On the farm: switch from flood to drip irrigation (uses 1/5th the water). Mulch the soil with leaves to slow evaporation. Plant millets instead of thirsty rice in dry districts. Each one of these saves litres without anyone feeling deprived — and over millions of households and lakhs of farms, it adds up to whole reservoirs.",
+                "textbook": "Practical water-conservation steps fall into household, agricultural, and industrial buckets. Household: close taps while brushing and lathering; bucket-bath over showers; fix leaks immediately; full-load washing-machine and dishwasher cycles; greywater reuse (washing-machine outlet → garden); rainwater harvesting (Class 7 chapter 16 t02). Agricultural: shift from flood to sprinkler or drip irrigation; mulch + cover crops to reduce soil evaporation; choose less-thirsty crops (millets, pulses) where appropriate; precision irrigation scheduling using soil-moisture sensors. Industrial / commercial: closed-loop cooling water in factories; recycling rinse water; rainwater harvesting on warehouse roofs; pressure-loss audits. Government schemes supporting these: Jal Jeevan Mission, Atal Bhujal Yojana, Pradhan Mantri Krishi Sinchayee Yojana. World Water Day: 22 March. World Toilet Day: 19 November.",
+                "expert": "Water-conservation engineering has progressed to whole-city water-balance modelling. Cities track Non-Revenue Water (water produced but not billed — typically 30-50% in Indian cities due to leakage and theft); smart-water-meter rollouts and pressure-zoning have reduced this to under 15% in best-in-class cities. Demand-side reductions through smart-tariff structures (rising-block pricing) and behaviour-change campaigns combine with supply-side investments in RWH and treated-wastewater reuse. Singapore reuses ~40% of its wastewater through its NEWater treatment plants — providing 40% of its drinking water. India's Indore is closing in on similar treatment rates for tertiary irrigation reuse."
+              },
+              "reasoning": "Each saving tactic targets a specific waste point: leaks (continuous, invisible loss), evaporation (open surfaces and inefficient irrigation), and runoff (water that never reaches its target). Fix each leak, cover each surface, target each delivery — and consumption drops without any sacrifice.",
+              "useCases": [
+                {
+                  "title": "Indian middle-class bucket-bath",
+                  "description": "Traditional bucket-bath uses ~15-20 L; a 5-minute power shower uses ~75 L — a 5× saving without anyone feeling unclean.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Drip + mulched mango farm",
+                  "description": "Maharashtra mango farmers using drip + leaf mulch use 30-40% of pre-conversion water — same yield, same fruit quality.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Singapore NEWater treatment",
+                  "description": "Treated wastewater is purified to drinking quality and supplies 40% of Singapore's water — a benchmark India is studying.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography 'Water resources' covers conservation extensively. Class 12 Biology / Environmental Science connects to ecosystem-level water-cycle thinking. UPSC aspirants need the policy framework. NEET Biology covers the human kidney's water-conservation mechanisms (mirroring the city-level concept). JEE Civil + Environmental engineering focuses on Non-Revenue Water reduction and wastewater reuse.",
+              "relatedConceptIds": [
+                "ch16_t03_c01",
+                "ch18_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch16_t03_q01",
+                "ch16_t03_q02",
+                "ch16_t03_q05"
+              ],
+              "pageRefs": [
+                215,
+                216
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch16_t01_q10",
@@ -21147,7 +21833,93 @@
           "id": "ch17_t02",
           "title": "Decomposers and the Soil-Forest Cycle",
           "summary": "Fungi, bacteria, worms break down dead matter into humus that feeds new plants.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch17_t02_c01",
+              "title": "Decomposers — nature's recyclers",
+              "explanations": {
+                "oneLine": "Decomposers (fungi, bacteria, earthworms, small insects) break down dead plants and animals into humus, returning nutrients to the soil so new plants can grow.",
+                "kidFriendly": "Walk through a forest and notice — the floor isn't piled high with dead leaves and dead animals. Why? Because tiny living things are constantly breaking them down. Fungi (mushrooms, moulds) and bacteria are the main 'decomposers' — they eat dead matter and release the chemicals back into the soil. Earthworms, ants, beetles, and millipedes help speed this up. The decayed material is called humus — a dark, soft, nutrient-rich layer at the top of forest soil. Without decomposers the forest floor would be metres deep in dead matter, and trees would have nothing to grow on. So although you don't see them working, decomposers are why a forest can keep going for thousands of years on the same patch of soil.",
+                "textbook": "Decomposers are organisms that break down dead organic matter into simpler substances, recycling nutrients back into the ecosystem. Main groups: (1) Microbial decomposers — bacteria and fungi do most of the chemical breakdown; specialised fungi like Mycorrhiza partner with tree roots. (2) Detritivores — earthworms, woodlice, millipedes, dung beetles — physically fragment leaf litter, increasing surface area for microbes. (3) Larger scavengers — vultures, hyenas — handle the largest dead bodies. The end product is humus, a dark amorphous organic-rich material in the topsoil. Without decomposers, dead matter would accumulate indefinitely, locking up the nutrients (N, P, K, C) that living plants need.",
+                "expert": "Decomposition is the rate-limiting step of all biogeochemical cycles. The microbial loop in forest soils processes ~70% of net primary production through fungal hyphae networks (the 'wood-wide web'). Decomposition rate (k) depends on substrate quality (C:N ratio), moisture, temperature, oxygen — characterised by Olson's exponential decay model. Tropical rainforests have k as high as 1.5 (litter half-life of a few months); boreal forests have k ~0.05 (decades). Climate change is accelerating decomposition in some ecosystems and slowing it (via drought) in others — feeding back into the carbon cycle. Mycorrhizal networks are increasingly recognised as ecosystem-scale information / nutrient routers."
+              },
+              "reasoning": "Plants build their bodies out of nutrients in the soil. When they die, those nutrients are locked inside their dead tissue. Decomposers unlock them — breaking down the dead tissue into simpler chemicals the next generation of plants can absorb. Without this cycle, soil nutrients would run out.",
+              "useCases": [
+                {
+                  "title": "Compost bin in a garden",
+                  "description": "A backyard compost pile is a mini-decomposer ecosystem — bacteria, fungi, worms turning kitchen scraps into humus in 2-3 months.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Mushrooms on a fallen log",
+                  "description": "Bracket fungi grow out of decaying tree trunks; their hyphae penetrate the wood and digest cellulose and lignin.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Vulture cleanup of carcasses",
+                  "description": "South Indian vultures used to clean dead cattle in hours — until a 1990s drug accidentally wiped out 99% of them, exposing the role they played.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "In Class 11 / 12 Biology decomposers are part of 'Ecosystem' and 'Biogeochemical Cycles' — quantitative coverage of decomposition rates, mineralisation, immobilisation. NEET Biology asks about specific decomposer roles every year. UPSC Environment and JEE Earth Sciences cover the carbon cycle and the role of decomposition under climate change. Class 12 Microbes in Human Welfare covers vermicompost and industrial decomposer applications.",
+              "relatedConceptIds": [
+                "ch17_t01_c01",
+                "ch17_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch17_t02_q02",
+                "ch17_t02_q05"
+              ],
+              "pageRefs": [
+                220,
+                221
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t02_c02",
+              "title": "The soil–forest nutrient cycle",
+              "explanations": {
+                "oneLine": "Trees absorb minerals through their roots, build leaves and wood, drop them when dead, decomposers break them back down — the same nutrients cycle indefinitely between soil and forest.",
+                "kidFriendly": "A forest is a closed loop of nutrients. Imagine a single atom of nitrogen. A tree absorbs it from the soil through its roots. The nitrogen ends up inside a leaf as protein. Autumn comes, the leaf falls. Fungi and bacteria break the leaf down. The nitrogen atom returns to the soil. A different tree absorbs it next spring. The cycle repeats — and that single nitrogen atom may stay in a forest for thousands of years. Same for carbon, phosphorus, potassium. The forest doesn't need fertiliser the way a wheat field does, because the nutrients never leave — they just cycle from soil to leaf to soil to leaf. Cut the forest down and remove the timber, and the cycle breaks — the nutrients leave with the wood, and the soil becomes poor.",
+                "textbook": "The nutrient cycle in a forest ecosystem operates as follows: (1) Trees and other producers absorb minerals (N, P, K, Ca, Mg) and water from soil through their roots, and CO₂ from air through their leaves. (2) Photosynthesis builds organic compounds — leaves, wood, fruit. (3) Some material is eaten by herbivores → carnivores (food chain transfer). (4) Eventually all organic material dies — leaves drop, animals die, branches fall. (5) Decomposers (fungi, bacteria, earthworms) break down dead matter, releasing nutrients back into the soil as inorganic ions. (6) Cycle restarts at step 1. The forest is a near-closed system; total nutrient loss is minimal, hence forests can sustain themselves on poor soil. This is contrasted with monoculture cropland — when crops are harvested, nutrients leave with the produce and must be replaced with fertilisers.",
+                "expert": "Forest nutrient cycles are studied quantitatively in biogeochemistry: input (atmospheric deposition, weathering of bedrock) balances output (stream-water leaching, harvest). The Hubbard Brook experimental forest in the USA (1960s) was the first to measure these fluxes ecosystem-wide. Forest clearance experiments showed nitrogen loss in streams jumped 60-fold after deforestation — demonstrating the role of vegetation in nutrient retention. Indian tropical forests are typically nitrogen-limited and operate near full nutrient closure. Climate change introduces new perturbations: warming accelerates decomposition (releasing nutrients faster), drought slows it (locking nutrients up), shifting forest composition over decades."
+              },
+              "reasoning": "A forest's nutrients can't escape — they cycle between soil, plants, and decomposers. Nothing is being mined from outside, nothing is being exported. So the forest stays nutrient-rich generation after generation as long as the cycle is closed.",
+              "useCases": [
+                {
+                  "title": "Western Ghats rainforest",
+                  "description": "Centuries-old shola forests grow on geologically poor lateritic soils — the nutrient cycle keeps them productive without external input.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Slash-and-burn agriculture (jhum)",
+                  "description": "Tribal farmers in NE India burn forest to release nutrients in ash; after 2-3 crops the cycle is broken and they move on, allowing forest to regrow.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Vermicompost",
+                  "description": "Earthworms convert organic waste to nutrient-rich humus in weeks — the same biology that operates in a forest, scaled to a backyard bin.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 11 / 12 Biology this is the core of the 'Ecosystem' chapter — biogeochemical cycles of C, N, P, S, water. NEET Biology asks ecosystem-level questions every cycle. UPSC Environment and Class 12 Geography both cover forests as carbon sinks and the climate role of preserving nutrient cycles. JEE Earth Sciences students explore quantitative models of nutrient flow under disturbance.",
+              "relatedConceptIds": [
+                "ch17_t02_c01",
+                "ch17_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch17_t02_q01",
+                "ch17_t02_q03",
+                "ch17_t02_q04"
+              ],
+              "pageRefs": [
+                221,
+                222
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch17_t01_q05",
@@ -21335,7 +22107,93 @@
           "id": "ch17_t03",
           "title": "Deforestation and Conservation",
           "summary": "Deforestation triggers floods, erosion and climate change. India's Van Mahotsav and reserve system.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch17_t03_c01",
+              "title": "Deforestation — causes and consequences",
+              "explanations": {
+                "oneLine": "Deforestation is the large-scale cutting down of forests; the immediate causes are timber, farming, and urban land — but the consequences cascade into climate change, biodiversity loss, floods, and erosion.",
+                "kidFriendly": "Forests are cut down for many reasons. Timber for furniture and construction. Land cleared for farms, cattle, mines, and cities. Roads built through the forest open it up. India lost about 80% of its forest cover in the last 1000 years. Globally, the Amazon, Indonesian, and Congo rainforests are still being cleared at a rate of about 10 million hectares per year — that's an area the size of Karnataka, every year. The consequences are huge: animals lose their homes (tigers, orangutans, jaguars all face extinction); rainfall patterns shift; topsoil washes away in floods; CO₂ that was stored in trees is released, warming the planet. So deforestation isn't just 'trees gone' — it's a chain reaction affecting climate, water, animals, and people.",
+                "textbook": "Deforestation is the permanent removal of forest cover, usually to convert the land to non-forest use. Causes: (1) Commercial logging — for timber, paper, plywood. (2) Agricultural expansion — palm-oil plantations in SE Asia, soy and cattle in Latin America, jhum cultivation in NE India. (3) Mining — coal in Jharkhand, iron-ore in Goa, bauxite in Odisha. (4) Urbanisation and infrastructure — roads, dams, settlements. (5) Forest fires — natural and human-caused. Consequences: (a) Biodiversity loss — habitat destruction extinguishes species. (b) Climate change — burning and decomposing wood releases stored CO₂; loss of forest reduces future carbon sequestration. (c) Soil erosion — without roots holding soil, topsoil washes downhill in monsoons. (d) Flooding and landslides — bare slopes can't absorb rain. (e) Altered rainfall — forests transpire moisture that fuels regional rainfall; clearing them dries up downwind regions. (f) Loss of livelihoods — tribal and forest-dependent communities suffer most.",
+                "expert": "Quantitative tracking of deforestation uses satellite remote sensing — the Global Forest Watch (Hansen et al.) annual dataset, ISRO's National Carbon Project, FSI's India State of Forest Report (biennial). Globally, 420 million hectares lost since 1990 — roughly 10% of all forest. Tropical forests store ~25% of all terrestrial carbon; their clearing accounts for 10-15% of anthropogenic CO₂ emissions. The REDD+ framework (UN Reducing Emissions from Deforestation and Forest Degradation) pays tropical-forest countries to maintain forest cover. India added 2261 km² of forest between 2019-2021 according to FSI — but quality (proportion of dense forest vs degraded) is declining."
+              },
+              "reasoning": "Forests stand at the intersection of climate, hydrology, soil and biodiversity. Remove them and you don't just lose trees — you trigger feedback loops that affect every system that depended on the forest's presence.",
+              "useCases": [
+                {
+                  "title": "Amazon rainforest deforestation",
+                  "description": "The Brazilian Amazon lost 11,500 km² of forest in 2021 — equivalent to 100,000 football fields per month — driven mainly by cattle ranching and soy.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Goa iron-ore mining",
+                  "description": "Open-cast mining stripped large tracts of Western Ghats forest in the 2000s before being halted by the Supreme Court in 2012.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Borneo orangutan habitat loss",
+                  "description": "Palm-oil plantations have reduced orangutan habitat by 80% in 75 years; the species is critically endangered.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Geography, deforestation is part of 'Forest and Wildlife Resources'. Class 12 Biology covers Biodiversity and Conservation in depth. UPSC General Studies + Environment papers test the EIA Notification, Forest Conservation Act, FRA 2006. JEE Earth Sciences and Class 12 NCERT both link deforestation to climate-system carbon flux modelling.",
+              "relatedConceptIds": [
+                "ch17_t02_c02",
+                "ch17_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch17_t03_q02",
+                "ch17_t03_q05"
+              ],
+              "pageRefs": [
+                225,
+                226
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_c02",
+              "title": "Conservation — Chipko, reserves, and reforestation",
+              "explanations": {
+                "oneLine": "Forest conservation combines local activism (Chipko Movement), legal protection (reserves, parks, sanctuaries), and active replanting (afforestation, agroforestry).",
+                "kidFriendly": "Saving forests is everyone's job. The Chipko Movement (1973) is the most famous Indian example — village women in Uttarakhand hugged trees to physically stop loggers. The movement spread across India and helped pass a 1980 law banning commercial logging in Himalayan forests. India now has a system of protected areas: National Parks (104, fully protected), Wildlife Sanctuaries (566, partial protection), Tiger Reserves (54), Biosphere Reserves (18). Project Tiger (1973) saved the Bengal tiger from extinction. Government celebrates Van Mahotsav (1 July week) for tree-planting. Farmers practice agroforestry — growing trees alongside crops. NGOs like Tarun Bharat Sangh restore traditional johads. Children plant a tree on their birthday. Every action — small or huge — helps slow the loss and rebuild what's gone.",
+                "textbook": "Forest conservation has three main pillars: (1) Legal protection — Forest Conservation Act 1980, Wildlife Protection Act 1972, Forest Rights Act 2006. India's Protected Area Network covers ~5% of land area. National Parks: Jim Corbett (first, 1936), Kanha, Bandipur, Periyar, Sundarbans. Tiger Reserves under Project Tiger (1973). Biosphere Reserves (UNESCO) like Nilgiri, Nanda Devi, Sundarbans, Pachmarhi. (2) Active restoration — afforestation (planting trees on barren land), reforestation (replanting where forest was cleared), agroforestry (integrating trees with crops). Government schemes: Green India Mission, Van Mahotsav (1st week of July), Compensatory Afforestation Fund Management and Planning Authority (CAMPA). (3) Community participation — Chipko Movement (Uttarakhand, 1973 — Gaura Devi, Sundarlal Bahuguna), Appiko (Karnataka), Joint Forest Management programmes engaging tribal communities. Result: India is one of few countries showing net forest cover gain.",
+                "expert": "Modern conservation biology has evolved beyond fortress-style protected areas. Approaches like 'rewilding' (large-scale ecosystem restoration including apex predators), landscape connectivity (wildlife corridors between protected fragments), and OECMs (Other Effective Conservation Measures) extend protection beyond designated areas. India's Tiger Reserves are buffered by community-managed forests. REDD+ payments and carbon-credit markets monetise forest preservation. The Bonn Challenge target — restore 350 million hectares of degraded land by 2030 — has Indian commitments of 26 million hectares. AI + drone monitoring detects illegal logging in near-real-time; satellite carbon-stock tools enable verifiable carbon-trading. Genetic seed banks (NBPGR, IIFM Sehore) preserve native tree varieties for future restoration."
+              },
+              "reasoning": "A forest is too valuable to lose to short-term gain. So civilisations protect them through law (don't cut), action (replant), and culture (don't waste paper, eat less beef, support tribal communities). Each lever covers a part of the threat.",
+              "useCases": [
+                {
+                  "title": "Chipko Movement (1973)",
+                  "description": "Gaura Devi and women of Reni village hugged trees marked for felling — birthing India's most famous environmental movement and stopping logging.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Project Tiger (1973)",
+                  "description": "Started with 9 reserves and ~1800 tigers; now 54 reserves and ~3000 tigers — a globally celebrated species-recovery story.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Auroville reforestation",
+                  "description": "On a barren plateau near Pondicherry, a community has planted >2 million trees since 1968, creating a new forest where there was none.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 / 12 Geography and Civics, conservation policy is core. NEET / Class 12 Biology has a full unit on Biodiversity and Conservation. UPSC General Studies tests Forest Conservation Act, FRA 2006, EIA Notification, and CAMPA. JEE Earth Sciences covers quantitative models of forest carbon storage and ecological-economic trade-offs.",
+              "relatedConceptIds": [
+                "ch17_t03_c01",
+                "ch17_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch17_t03_q01",
+                "ch17_t03_q03",
+                "ch17_t03_q04"
+              ],
+              "pageRefs": [
+                226,
+                227
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch17_t01_q20",
@@ -22097,7 +22955,93 @@
           "id": "ch18_t03",
           "title": "Sanitation at Home",
           "summary": "Pit latrines, septic tanks, bio-toilets, soak-pits, composting.",
-          "concepts": [],
+          "concepts": [
+            {
+              "id": "ch18_t03_c01",
+              "title": "Better sanitation alternatives — pit latrines, septic tanks, bio-toilets",
+              "explanations": {
+                "oneLine": "Where there's no sewer line, safe alternatives are pit latrines, septic tanks, bio-toilets (microbial breakdown), and soak-pits — each turns human waste into something that doesn't pollute groundwater.",
+                "kidFriendly": "In villages and remote areas, there's no sewer line carrying waste to a treatment plant. So safe local options are needed. A pit latrine is just a deep hole in the ground covered by a slab with a hole — simple and cheap, but the pit can pollute groundwater if it leaks. A septic tank is a sealed underground tank where solids settle and bacteria break them down — used by individual households or small clusters. A bio-toilet uses special bacteria to digest the waste into harmless water and gas — Indian Railways replaced all 2,00,000 train toilets with bio-toilets, ending the open-defecation problem on tracks. A soak-pit is a small pit lined with stones where the liquid waste seeps into the ground after being pre-treated. Together these are alternatives that work where pipes don't reach.",
+                "textbook": "Sanitation alternatives for areas without sewerage: (1) Pit latrine — deep pit covered by a slab; cheap; one of two designs — single-pit (filled, then sealed and a new pit dug) or twin-pit pour-flush (two pits used alternately so one composts while the other fills). (2) Septic tank — sealed multi-chamber tank; solids settle as sludge; anaerobic bacteria break it down; liquid effluent drains to a soak-field. (3) Bio-toilet — uses specific microbial cultures (developed by DRDO) to digest waste into water + CO₂ + methane; suitable for trains, ships, remote areas. Indian Railways' fleet-wide bio-toilet rollout (2017-2019) eliminated track contamination. (4) Soak-pit — receives liquid effluent and lets it percolate into surrounding soil; soil microbes complete the treatment. (5) Composting toilet — separates urine, dries faecal matter, produces safe compost in 6-12 months — used widely in Auroville, Sikkim, eco-resorts. Government scheme: Swachh Bharat Abhiyan (2014-) built ~110 million toilets, drastically reducing open defecation.",
+                "expert": "Sanitation engineering at the household level balances cost, water use, soil permeability, water-table depth, and cultural acceptance. The Vacuum Improved Pit (VIP) latrine adds a vent pipe to control odour and flies. Pour-flush twin-pit designs (DEWATS, BORDA approach) are the gold standard for rural India. Bio-toilet microbial cultures use psychrophilic bacteria capable of operating at low temperatures — critical for Himalayan and Antarctic stations. Recent innovation: container-based sanitation (Sanergy in Kenya, Loowatt in Madagascar) collects sealed waste packets for centralised treatment, replacing pit latrines in dense slums. WHO's Joint Monitoring Programme tracks 'safely managed sanitation' under SDG 6.2."
+              },
+              "reasoning": "Human waste contains pathogens that contaminate water and spread cholera, typhoid, hepatitis A. So 'sanitation' is really 'separation' — physically isolating waste from drinking water and food until pathogens are inactivated. Each technology achieves this isolation differently — pits, sealed tanks, microbes, or soil filtration.",
+              "useCases": [
+                {
+                  "title": "Indian Railways bio-toilets",
+                  "description": "DRDO-developed microbial culture inside under-coach tanks digests human waste — by 2019 every Indian train had bio-toilets, ending track contamination.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Twin-pit pour-flush latrines under Swachh Bharat",
+                  "description": "A rural family uses one pit at a time; when full, switches to the second; the first composts safely for a year and then can be safely emptied for use as garden fertiliser.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Auroville composting toilet",
+                  "description": "Urine is diverted, faecal matter dries on a separator, ash is added daily, and after 12 months becomes safe garden compost.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 / 12 Geography 'Sanitation' is a key social-infrastructure topic. UPSC Public Administration + Social Justice papers test the Swachh Bharat Mission outcomes. NEET / Class 11 Biology covers water-borne diseases linked to poor sanitation. JEE Civil + Environmental engineering picks septic-tank sizing, soak-pit hydraulics, and microbial treatment kinetics as practical design problems.",
+              "relatedConceptIds": [
+                "ch18_t01_c01",
+                "ch18_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch18_t03_q02",
+                "ch18_t03_q04"
+              ],
+              "pageRefs": [
+                239,
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_c02",
+              "title": "Open drains, hygiene, and Swachh Bharat",
+              "explanations": {
+                "oneLine": "Open drains carry untreated sewage into rivers and contaminate groundwater; the Swachh Bharat Abhiyan (2014) and World Toilet Day (19 November) push the world toward universal safe sanitation.",
+                "kidFriendly": "If you've walked through an Indian city slum or village without proper sanitation, you've seen open drains — narrow channels with dirty grey-black water running through alleys. These are sewer lines without lids, carrying untreated wastewater. They cause four big problems: (1) Disease — flies and mosquitoes breed there, spreading cholera, dengue, diarrhoea. (2) Smell. (3) Groundwater contamination — the sewage seeps down and pollutes drinking wells. (4) Children fall into them. The fix is covered drains + working treatment plants + community toilets. The Swachh Bharat Abhiyan, launched on 2 October 2014 by PM Modi, built over 110 million household toilets in 5 years and made India officially 'open-defecation-free' in 2019. World Toilet Day on 19 November raises global awareness. Personal hygiene — handwashing with soap, especially before eating and after using the toilet — is the single most effective health measure ever invented.",
+                "textbook": "Open drains and open defecation are major public-health hazards: (1) Disease transmission — water-borne pathogens (V. cholerae, Salmonella, rotavirus, hepatitis A) infect ~1.7 million Indians annually; flies, mosquitoes, and rats breed in open sewage and spread vector-borne diseases. (2) Environmental contamination — untreated sewage flows into rivers; <40% of Indian urban sewage is treated. (3) Social cost — women in households without toilets face dignity and safety risks. The Swachh Bharat Abhiyan (October 2014) addressed this through household-toilet construction (over 110 million by 2019), community toilets, behaviour-change campaigns, and waste-management infrastructure. India was declared 'Open-Defecation-Free' in October 2019. WHO data shows childhood-diarrhoea mortality in India dropped ~30% over the campaign period. Key dates: World Toilet Day 19 November; Global Handwashing Day 15 October. WHO's 5-step handwashing protocol (wet, soap, scrub 20 s, rinse, dry) is the single most cost-effective public-health intervention ever quantified.",
+                "expert": "Sanitation epidemiology distinguishes morbidity (illness) from mortality (death) outcomes. WHO assigns DALYs (Disability-Adjusted Life Years) to quantify burden: poor sanitation accounts for ~5% of global DALY burden, concentrated in low-income countries. The 'safely managed' sanitation tier under SDG 6.2 requires confinement of excreta + treatment + safe disposal — far stricter than 'has a toilet'. Faecal sludge management (FSM) is the missing-middle problem: India's Swachh Bharat focused on toilet-construction but emptying and treating sludge from septic tanks and pit latrines remains under-built. Bangalore, Pune, and Trichy are pilot cities for FSM at scale. WASH (Water Sanitation Hygiene) integration with primary-school programmes (Anganwadi + Mid-Day Meal Scheme handwashing) has measurably reduced school-absentee days."
+              },
+              "reasoning": "Pathogens that cause water-borne illness multiply in untreated sewage and human waste. Open drains expose everyone walking past to those pathogens. Covering drains, building toilets, and handwashing physically interrupt the transmission chain — saving lives at almost no cost per person.",
+              "useCases": [
+                {
+                  "title": "Swachh Bharat Abhiyan (2014-2019)",
+                  "description": "Built 110+ million toilets in 5 years; declared India Open-Defecation-Free in October 2019.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Bangalore Bagmane drainage upgrade",
+                  "description": "A pilot programme covered open drains in a slum cluster, dropping reported diarrhoea cases by ~50% in the first year.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Global Handwashing Day 15 October",
+                  "description": "School programmes pair toilet-construction with handwashing-with-soap drives; one study showed pneumonia cases dropping 23% in pilot villages.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 / 12 Geography and Civics, sanitation policy is core. NEET / Class 12 Biology covers water-borne diseases — cholera, typhoid, dysentery, hepatitis A — and prevention. UPSC papers test Swachh Bharat outcomes, MDM scheme, and the Right to Sanitation. JEE Civil engineers design citywide drainage and treatment networks; WHO/UNICEF integration is the policy-side analogue.",
+              "relatedConceptIds": [
+                "ch18_t03_c01",
+                "ch16_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch18_t03_q01",
+                "ch18_t03_q03",
+                "ch18_t03_q05"
+              ],
+              "pageRefs": [
+                240,
+                241
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "questions": [
             {
               "id": "ch18_t01_q12",
