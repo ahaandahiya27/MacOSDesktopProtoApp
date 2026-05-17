@@ -472,7 +472,7 @@ in the project memory.
 | SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 Phase 4 |
 | SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
 | SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | 🟡 |
-| SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ❌ |
+| SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
 | SB5 | Subject badges inconsistent — dup of CL7 | 🟡 |
 | SB6 | Active subject / tool selection style varies | ❌ |
 | SB7 | Sidebar width not resizable / persisted | ❌ |

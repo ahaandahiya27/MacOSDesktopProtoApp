@@ -97,8 +97,8 @@ struct ContentView: View {
             Button("Clear") { appState.clearRecents() }
                 .buttonStyle(.plain)
                 .pointingCursor()
-                .font(.caption)
-                .foregroundColor(.secondary)
+                .font(.caption.weight(.semibold))
+                .foregroundColor(Color.compatIndigo)
                 .help("Clear recent items")
         }
     }
