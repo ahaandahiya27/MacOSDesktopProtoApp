@@ -413,6 +413,7 @@ struct QuestionDetailView: View {
             )
         }
         .buttonStyle(.plain)
+        .pointingCursor()
         .contentShape(Rectangle())
         .accessibilityLabel("\(["A","B","C","D","E","F"][safe: idx] ?? "?"). \(opt)")
     }

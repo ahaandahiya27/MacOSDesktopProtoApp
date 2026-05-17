@@ -357,7 +357,7 @@ in the project memory.
 | CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
 | CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
 | CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
-| CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 cursor-change hover affordance now broadly applied (Discover chrome + chapter rows + bookmark rows + topic cards + command-palette rows + DiscoverProgressDashboard cards — see AC4). Color-shift hover state still pending |
+| CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 cursor-change hover affordance now applied app-wide (see AC4 ✅). Color-shift hover state still pending — would require a `HoverableCardModifier` adding background shift on `.onHover` |
 | CL10 | Brand-tint gradient direction inconsistent across scenes | ❌ |
 
 ### Z.TY — Typography
@@ -435,7 +435,7 @@ in the project memory.
 | MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
 | MO6 | Loading / decoding states not animated (just static text) | ❌ |
-| MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback now applied across chapter rows + topic cards + bookmark rows + CommandPalette rows + DiscoverProgressDashboard cards (see AC4). Scale / color hover states still pending |
+| MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback applied app-wide (see AC4 ✅). Scale / color hover states (e.g., card lift, background tint shift) still pending — would close fully with the same `HoverableCardModifier` mentioned in CL9 |
 
 ### Z.CP — Component consistency
 
@@ -528,7 +528,7 @@ in the project memory.
 | AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
 | AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | 🟡 |
 | AC3 | Hover-only affordances inaccessible to keyboard-only users | ❌ |
-| AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | 🟡 `View.pointingCursor()` extension applied to: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard chapter cards × 2. Pending: sidebar tool rows (Search/Bookmarks/Discover Progress/Settings), TopicDetailView concept cards, QuestionDetail/ConceptDetail tappables |
+| AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | ✅ `View.pointingCursor()` applied across the app's tappable surfaces: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard cards × 2, TopicDetailView concept + question rows, ConceptDetail readAloud + askFollowUp + related-concept/question rows, QuestionDetail MCQ option rows, ContentView sidebar Recent items + Clear. Sidebar Subject/Tool rows use native `List` `.tag()` selection so don't take this — macOS `List` provides its own hover semantics there |
 | AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |
 
 ### Z.PR — Print / export / share surfaces

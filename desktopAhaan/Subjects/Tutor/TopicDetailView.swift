@@ -25,6 +25,7 @@ struct TopicDetailView: View {
                                 .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .pointingCursor()
                         .contextMenu {
                             Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
                             Button("Copy title") {
@@ -45,6 +46,7 @@ struct TopicDetailView: View {
                                 .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .pointingCursor()
                         .contextMenu {
                             Button("Open") { nav.push(.question(packId: pack.id, questionId: q.id)) }
                         }

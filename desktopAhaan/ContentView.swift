@@ -96,6 +96,7 @@ struct ContentView: View {
             Spacer()
             Button("Clear") { appState.clearRecents() }
                 .buttonStyle(.plain)
+                .pointingCursor()
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .help("Clear recent items")
@@ -194,6 +195,7 @@ struct ContentView: View {
                             }
                         }
                         .buttonStyle(.plain)
+                        .pointingCursor()
                         .help("Jump to \(item.title)")
                     }
                 }

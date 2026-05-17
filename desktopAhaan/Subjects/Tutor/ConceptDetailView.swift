@@ -173,6 +173,7 @@ struct ConceptDetailView: View {
             }
         }
         .buttonStyle(.plain)
+        .pointingCursor()
         .keyboardShortcut("r", modifiers: .command)
         .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read aloud"))
         .accessibilityLabel(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read aloud"))
@@ -309,6 +310,7 @@ struct ConceptDetailView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .pointingCursor()
     }
 
     @ViewBuilder
@@ -333,6 +335,7 @@ struct ConceptDetailView: View {
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .pointingCursor()
                         .contextMenu {
                             Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
                             Button("Bookmark") {
@@ -356,6 +359,7 @@ struct ConceptDetailView: View {
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .pointingCursor()
                         .padding(.vertical, 4)
                     }
                 }
