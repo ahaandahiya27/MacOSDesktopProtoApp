@@ -3,7 +3,7 @@
 **Auto-generated** by `scripts/generate_chapter_manifest.py`. 
 Do not edit by hand — re-run the script after content changes.
 
-Source pack: `science_class7.json` v0.31.0-topup-ids-canonical (2026-05-03T19:30:00Z)
+Source pack: `science_class7.json` v0.31.0-question-ids-topic-aligned (2026-05-03T19:30:00Z)
 
 | Ch | Title | Topics | Concepts | Questions | (+topup) | HTML files | style.css |
 |---:|-------|-------:|---------:|----------:|---------:|-----------:|:---------:|

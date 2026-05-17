@@ -96,7 +96,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F1 | Concept IDs unique across pack | ✅ enforced by edf4c8b |
 | F2 | Question IDs unique across pack | ✅ enforced by 44e284b |
 | F3 | Concept-ID topic prefix matches parent topic | ✅ post edf4c8b |
-| F4 | Question-ID topic prefix matches parent topic | ✅ 74 `ch##_topup_q##` IDs renamed to canonical `ch##_t##_q##` sequence (continuing from each topic's existing max); zero cross-references to topup IDs so the rename is safe; pack version `0.31.0-topup-ids-canonical` |
+| F4 | Question-ID topic prefix matches parent topic | ✅ 74 topup-IDs + 106 cross-topic mis-filings renamed to canonical `<topic.id>_q##` (continuing from each topic's existing max); 27 `relatedQuestionIds` references updated in lockstep; `testEveryQuestionIdPrefixedByTopicId` gates against regression; pack version `0.31.0-question-ids-topic-aligned` |
 | F5 | relatedConceptIds resolve | ✅ orphans removed + 126 reverse edges added → graph is now symmetric (testRelatedConceptIdsAreSymmetric green) |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
 | F7 | All four explanation depths populated | ✅ `testEveryConceptHasOneLineExplanation` — every concept has at least one non-empty explanation; depth-laddering covers gaps |

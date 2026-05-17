@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.31.0-topup-ids-canonical",
+  "version": "0.31.0-question-ids-topic-aligned",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -13365,7 +13365,7 @@
                 "ch08_t01_c02"
               ],
               "relatedQuestionIds": [
-                "ch08_t02_q01"
+                "ch08_t03_q08"
               ],
               "pageRefs": [
                 91,
@@ -13407,8 +13407,8 @@
                 "ch08_t03_c01"
               ],
               "relatedQuestionIds": [
-                "ch08_t02_q02",
-                "ch08_t02_q03"
+                "ch08_t03_q09",
+                "ch08_t03_q10"
               ],
               "pageRefs": [
                 91,
@@ -13419,7 +13419,7 @@
           ],
           "questions": [
             {
-              "id": "ch08_t01_q10",
+              "id": "ch08_t02_q28",
               "prompt": "Sea breeze blows from:",
               "questionType": "mcq",
               "options": [
@@ -13443,7 +13443,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q22",
+              "id": "ch08_t02_q29",
               "prompt": "Land breeze blows from:",
               "questionType": "mcq",
               "options": [
@@ -13608,7 +13608,7 @@
                 "ch08_t02_c02"
               ],
               "relatedQuestionIds": [
-                "ch08_t02_q01"
+                "ch08_t03_q08"
               ],
               "pageRefs": [
                 99,
@@ -13648,8 +13648,8 @@
                 "ch08_t02_c01"
               ],
               "relatedQuestionIds": [
-                "ch08_t02_q02",
-                "ch08_t02_q03"
+                "ch08_t03_q09",
+                "ch08_t03_q10"
               ],
               "pageRefs": [
                 101,
@@ -13660,7 +13660,7 @@
           ],
           "questions": [
             {
-              "id": "ch08_t01_q12",
+              "id": "ch08_t03_q01",
               "prompt": "The 'eye' of a cyclone is:",
               "questionType": "mcq",
               "options": [
@@ -13684,7 +13684,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q14",
+              "id": "ch08_t03_q02",
               "prompt": "Lightning is mainly caused by:",
               "questionType": "mcq",
               "options": [
@@ -13706,7 +13706,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q15",
+              "id": "ch08_t03_q03",
               "prompt": "During a thunderstorm, the SAFEST place to be is:",
               "questionType": "mcq",
               "options": [
@@ -13730,7 +13730,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q16",
+              "id": "ch08_t03_q04",
               "prompt": "Cyclones in the Bay of Bengal and Arabian Sea are also called:",
               "questionType": "mcq",
               "options": [
@@ -13756,7 +13756,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q17",
+              "id": "ch08_t03_q05",
               "prompt": "Indian cyclone warnings are issued by:",
               "questionType": "mcq",
               "options": [
@@ -13777,7 +13777,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q21",
+              "id": "ch08_t03_q06",
               "prompt": "The eye of a cyclone is the ____ region at the storm's centre.",
               "questionType": "fillInBlank",
               "options": null,
@@ -13792,7 +13792,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t01_q23",
+              "id": "ch08_t03_q07",
               "prompt": "Match each storm with its location.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -13827,7 +13827,7 @@
               "variations": []
             },
             {
-              "id": "ch08_t02_q01",
+              "id": "ch08_t03_q08",
               "prompt": "Explain in detail what a thunderstorm is, how it forms, and what precautions one should take during a thunderstorm.",
               "questionType": "longAnswer",
               "options": null,
@@ -13889,7 +13889,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch08_t02_q02",
+              "id": "ch08_t03_q09",
               "prompt": "What are the characteristics of the eye of a cyclone?",
               "questionType": "longAnswer",
               "options": null,
@@ -13943,7 +13943,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch08_t02_q03",
+              "id": "ch08_t03_q10",
               "prompt": "List four safety precautions to take during a cyclone.",
               "questionType": "longAnswer",
               "options": null,
@@ -14060,8 +14060,8 @@
                 "ch09_t03_c01"
               ],
               "relatedQuestionIds": [
-                "ch09_t01_q02",
-                "ch09_t01_q04"
+                "ch09_t02_q04",
+                "ch09_t02_q05"
               ],
               "pageRefs": [
                 100,
@@ -14103,7 +14103,7 @@
                 "ch09_t02_c01"
               ],
               "relatedQuestionIds": [
-                "ch09_t01_q01"
+                "ch09_t02_q03"
               ],
               "pageRefs": [
                 101,
@@ -14314,7 +14314,7 @@
                 "ch09_t01_c02"
               ],
               "relatedQuestionIds": [
-                "ch09_t01_q01"
+                "ch09_t02_q03"
               ],
               "pageRefs": [
                 108,
@@ -14355,7 +14355,7 @@
                 "ch09_t02_c03"
               ],
               "relatedQuestionIds": [
-                "ch09_t01_q02",
+                "ch09_t02_q04",
                 "ch09_t02_q01"
               ],
               "pageRefs": [
@@ -14411,7 +14411,7 @@
           ],
           "questions": [
             {
-              "id": "ch09_t01_q01",
+              "id": "ch09_t02_q03",
               "prompt": "What is soil made of? Give the approximate percentages.",
               "questionType": "shortAnswer",
               "options": null,
@@ -14458,7 +14458,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch09_t01_q02",
+              "id": "ch09_t02_q04",
               "prompt": "Differentiate between sandy soil, clay soil, and loamy soil.",
               "questionType": "longAnswer",
               "options": null,
@@ -14505,7 +14505,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch09_t01_q04",
+              "id": "ch09_t02_q05",
               "prompt": "Soil is a mixture of:",
               "questionType": "mcq",
               "options": [
@@ -14526,7 +14526,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q05",
+              "id": "ch09_t02_q06",
               "prompt": "Sandy soil has:",
               "questionType": "mcq",
               "options": [
@@ -14548,7 +14548,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q06",
+              "id": "ch09_t02_q07",
               "prompt": "Clay soil tends to be:",
               "questionType": "mcq",
               "options": [
@@ -14570,7 +14570,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q07",
+              "id": "ch09_t02_q08",
               "prompt": "Loam is:",
               "questionType": "mcq",
               "options": [
@@ -14591,7 +14591,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q08",
+              "id": "ch09_t02_q09",
               "prompt": "Percolation rate is:",
               "questionType": "mcq",
               "options": [
@@ -14613,7 +14613,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q11",
+              "id": "ch09_t02_q10",
               "prompt": "Soil erosion by water is BEST prevented by:",
               "questionType": "mcq",
               "options": [
@@ -14635,7 +14635,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q15",
+              "id": "ch09_t02_q11",
               "prompt": "Sandy soil is good for crops like:",
               "questionType": "mcq",
               "options": [
@@ -14657,7 +14657,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q16",
+              "id": "ch09_t02_q12",
               "prompt": "Crop rotation helps soil by:",
               "questionType": "mcq",
               "options": [
@@ -14679,7 +14679,7 @@
               "variations": []
             },
             {
-              "id": "ch09_t01_q17",
+              "id": "ch09_t02_q13",
               "prompt": "True or false: Clay soil drains water faster than sandy soil.",
               "questionType": "trueFalse",
               "options": [
@@ -14861,7 +14861,7 @@
           ],
           "questions": [
             {
-              "id": "ch09_t01_q14",
+              "id": "ch09_t03_q25",
               "prompt": "Earthworms benefit soil by:",
               "questionType": "mcq",
               "options": [
@@ -15063,7 +15063,7 @@
                 "ch10_t03_c02"
               ],
               "relatedQuestionIds": [
-                "ch10_t02_q01"
+                "ch10_t01_q21"
               ],
               "pageRefs": [
                 121,
@@ -15106,8 +15106,8 @@
                 "ch10_t03_c02"
               ],
               "relatedQuestionIds": [
-                "ch10_t01_q02",
-                "ch10_t01_q05"
+                "ch10_t02_q02",
+                "ch10_t02_q03"
               ],
               "pageRefs": [
                 120,
@@ -15260,7 +15260,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t02_q01",
+              "id": "ch10_t01_q21",
               "prompt": "From which part does the air enter the human body?",
               "questionType": "shortAnswer",
               "options": null,
@@ -15347,8 +15347,8 @@
                 "ch10_t02_c03"
               ],
               "relatedQuestionIds": [
-                "ch10_t01_q01",
-                "ch10_t01_q02"
+                "ch10_t02_q01",
+                "ch10_t02_q02"
               ],
               "pageRefs": [
                 120,
@@ -15391,7 +15391,7 @@
                 "ch10_t01_c01"
               ],
               "relatedQuestionIds": [
-                "ch10_t01_q02"
+                "ch10_t02_q02"
               ],
               "pageRefs": [
                 122
@@ -15440,7 +15440,7 @@
           ],
           "questions": [
             {
-              "id": "ch10_t01_q01",
+              "id": "ch10_t02_q01",
               "prompt": "Why do all living organisms need energy?",
               "questionType": "longAnswer",
               "options": null,
@@ -15492,7 +15492,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t01_q02",
+              "id": "ch10_t02_q02",
               "prompt": "Differentiate between aerobic and anaerobic respiration.",
               "questionType": "longAnswer",
               "options": null,
@@ -15545,7 +15545,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t01_q05",
+              "id": "ch10_t02_q03",
               "prompt": "Respiration in living cells releases:",
               "questionType": "mcq",
               "options": [
@@ -15566,7 +15566,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q06",
+              "id": "ch10_t02_q04",
               "prompt": "Aerobic respiration uses:",
               "questionType": "mcq",
               "options": [
@@ -15588,7 +15588,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q07",
+              "id": "ch10_t02_q05",
               "prompt": "Anaerobic respiration:",
               "questionType": "mcq",
               "options": [
@@ -15610,7 +15610,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q08",
+              "id": "ch10_t02_q06",
               "prompt": "Lactic acid builds up in muscles when you:",
               "questionType": "mcq",
               "options": [
@@ -15632,7 +15632,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q09",
+              "id": "ch10_t02_q07",
               "prompt": "Yeasts ferment sugar anaerobically to produce:",
               "questionType": "mcq",
               "options": [
@@ -15691,7 +15691,7 @@
                 "ch10_t01_c01"
               ],
               "relatedQuestionIds": [
-                "ch10_t02_q02"
+                "ch10_t03_q29"
               ],
               "pageRefs": [
                 126,
@@ -15742,7 +15742,7 @@
           ],
           "questions": [
             {
-              "id": "ch10_t01_q13",
+              "id": "ch10_t03_q24",
               "prompt": "Earthworms breathe through their:",
               "questionType": "mcq",
               "options": [
@@ -15764,7 +15764,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q14",
+              "id": "ch10_t03_q25",
               "prompt": "Fish breathe using:",
               "questionType": "mcq",
               "options": [
@@ -15785,7 +15785,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q15",
+              "id": "ch10_t03_q26",
               "prompt": "Insects breathe through openings called:",
               "questionType": "mcq",
               "options": [
@@ -15807,7 +15807,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q16",
+              "id": "ch10_t03_q27",
               "prompt": "Plants take in CO₂ and release O₂ during photosynthesis — but at NIGHT, plants:",
               "questionType": "mcq",
               "options": [
@@ -15831,7 +15831,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t01_q21",
+              "id": "ch10_t03_q28",
               "prompt": "Match each animal with how it breathes.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -15866,7 +15866,7 @@
               "variations": []
             },
             {
-              "id": "ch10_t02_q02",
+              "id": "ch10_t03_q29",
               "prompt": "How do earthworms respire? Why do they come out of the soil during heavy rains?",
               "questionType": "longAnswer",
               "options": null,
@@ -16470,7 +16470,7 @@
                 "ch11_t01_c01"
               ],
               "relatedQuestionIds": [
-                "ch11_t01_q03"
+                "ch11_t02_q20"
               ],
               "pageRefs": [
                 139
@@ -16519,7 +16519,7 @@
           ],
           "questions": [
             {
-              "id": "ch11_t01_q03",
+              "id": "ch11_t02_q20",
               "prompt": "What is the role of kidneys in the human body?",
               "questionType": "shortAnswer",
               "options": null,
@@ -16572,7 +16572,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch11_t01_q13",
+              "id": "ch11_t02_q21",
               "prompt": "Excretion is the:",
               "questionType": "mcq",
               "options": [
@@ -16594,7 +16594,7 @@
               "variations": []
             },
             {
-              "id": "ch11_t01_q14",
+              "id": "ch11_t02_q22",
               "prompt": "Kidneys filter blood and produce:",
               "questionType": "mcq",
               "options": [
@@ -16757,7 +16757,7 @@
                 "ch11_t03_c02"
               ],
               "relatedQuestionIds": [
-                "ch11_t02_q01"
+                "ch11_t03_q30"
               ],
               "pageRefs": [
                 140,
@@ -16806,7 +16806,7 @@
           ],
           "questions": [
             {
-              "id": "ch11_t01_q15",
+              "id": "ch11_t03_q26",
               "prompt": "Xylem in a plant carries:",
               "questionType": "mcq",
               "options": [
@@ -16828,7 +16828,7 @@
               "variations": []
             },
             {
-              "id": "ch11_t01_q16",
+              "id": "ch11_t03_q27",
               "prompt": "Phloem in a plant carries:",
               "questionType": "mcq",
               "options": [
@@ -16849,7 +16849,7 @@
               "variations": []
             },
             {
-              "id": "ch11_t01_q17",
+              "id": "ch11_t03_q28",
               "prompt": "Transpiration in plants is:",
               "questionType": "mcq",
               "options": [
@@ -16871,7 +16871,7 @@
               "variations": []
             },
             {
-              "id": "ch11_t01_q22",
+              "id": "ch11_t03_q29",
               "prompt": "Match each plant tissue / organ with its function.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -16906,7 +16906,7 @@
               "variations": []
             },
             {
-              "id": "ch11_t02_q01",
+              "id": "ch11_t03_q30",
               "prompt": "Differentiate between xylem and phloem.",
               "questionType": "longAnswer",
               "options": null,
@@ -17126,7 +17126,7 @@
                 "ch12_t02_c02"
               ],
               "relatedQuestionIds": [
-                "ch12_t01_q04"
+                "ch12_t03_q25"
               ],
               "pageRefs": [
                 142,
@@ -17432,7 +17432,7 @@
           ],
           "questions": [
             {
-              "id": "ch12_t01_q10",
+              "id": "ch12_t02_q02",
               "prompt": "After fertilisation, the ovary of a flower develops into a:",
               "questionType": "mcq",
               "options": [
@@ -17454,7 +17454,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q12",
+              "id": "ch12_t02_q03",
               "prompt": "Seeds dispersed by WIND tend to be:",
               "questionType": "mcq",
               "options": [
@@ -17476,7 +17476,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q13",
+              "id": "ch12_t02_q04",
               "prompt": "Coconut seeds disperse by:",
               "questionType": "mcq",
               "options": [
@@ -17498,7 +17498,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q14",
+              "id": "ch12_t02_q05",
               "prompt": "Burdock seeds with little hooks stick to passing animals — this is:",
               "questionType": "mcq",
               "options": [
@@ -17520,7 +17520,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q15",
+              "id": "ch12_t02_q06",
               "prompt": "Ripe pods that suddenly burst and fling seeds (e.g. balsam, garden pea) use:",
               "questionType": "mcq",
               "options": [
@@ -17541,7 +17541,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q19",
+              "id": "ch12_t02_q07",
               "prompt": "Why is it useful for a plant species that seeds disperse far away from the parent plant?",
               "questionType": "shortAnswer",
               "options": null,
@@ -17558,7 +17558,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q21",
+              "id": "ch12_t02_q08",
               "prompt": "Match each seed with its dispersal method.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -17688,7 +17688,7 @@
                 "ch12_t03_c02"
               ],
               "relatedQuestionIds": [
-                "ch12_t01_q01"
+                "ch12_t03_q24"
               ],
               "pageRefs": [
                 148,
@@ -17737,7 +17737,7 @@
           ],
           "questions": [
             {
-              "id": "ch12_t01_q01",
+              "id": "ch12_t03_q24",
               "prompt": "What is asexual reproduction? Give two examples in plants.",
               "questionType": "longAnswer",
               "options": null,
@@ -17789,7 +17789,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch12_t01_q04",
+              "id": "ch12_t03_q25",
               "prompt": "Asexual reproduction in plants produces offspring that are:",
               "questionType": "mcq",
               "options": [
@@ -17811,7 +17811,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q05",
+              "id": "ch12_t03_q26",
               "prompt": "Which of these is NOT a method of asexual reproduction in plants?",
               "questionType": "mcq",
               "options": [
@@ -17832,7 +17832,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q06",
+              "id": "ch12_t03_q27",
               "prompt": "Strawberries reproduce asexually by sending out:",
               "questionType": "mcq",
               "options": [
@@ -17854,7 +17854,7 @@
               "variations": []
             },
             {
-              "id": "ch12_t01_q20",
+              "id": "ch12_t03_q28",
               "prompt": "Gardeners propagate roses commonly by:",
               "questionType": "mcq",
               "options": [
@@ -17998,7 +17998,7 @@
               ],
               "relatedQuestionIds": [
                 "ch13_t01_q01",
-                "ch13_t01_q02"
+                "ch13_t02_q01"
               ],
               "pageRefs": [
                 161,
@@ -18437,7 +18437,7 @@
           ],
           "questions": [
             {
-              "id": "ch13_t01_q02",
+              "id": "ch13_t02_q01",
               "prompt": "A pendulum takes 240 oscillations in 2 minutes. Calculate its time period in seconds.",
               "questionType": "numerical",
               "options": null,
@@ -18483,7 +18483,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch13_t01_q03",
+              "id": "ch13_t02_q02",
               "prompt": "What is a simple pendulum? On what factors does its time period depend?",
               "questionType": "longAnswer",
               "options": null,
@@ -18535,7 +18535,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch13_t01_q08",
+              "id": "ch13_t02_q03",
               "prompt": "Which of these is NOT a unit of time?",
               "questionType": "mcq",
               "options": [
@@ -18558,7 +18558,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q09",
+              "id": "ch13_t02_q04",
               "prompt": "The to-and-fro motion of a pendulum is called:",
               "questionType": "mcq",
               "options": [
@@ -18582,7 +18582,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q10",
+              "id": "ch13_t02_q05",
               "prompt": "The time taken by a pendulum to complete ONE full to-and-fro swing is called its:",
               "questionType": "mcq",
               "options": [
@@ -18605,7 +18605,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q11",
+              "id": "ch13_t02_q06",
               "prompt": "A pendulum makes 30 oscillations in 60 seconds. Its time period is:",
               "questionType": "mcq",
               "options": [
@@ -18627,7 +18627,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q20",
+              "id": "ch13_t02_q07",
               "prompt": "True or false: For a pendulum, increasing the amplitude (how far it swings) significantly changes its time period.",
               "questionType": "trueFalse",
               "options": [
@@ -18649,7 +18649,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q21",
+              "id": "ch13_t02_q08",
               "prompt": "The time period of a simple pendulum depends mainly on its:",
               "questionType": "mcq",
               "options": [
@@ -18712,7 +18712,7 @@
                 "ch13_t03_c02"
               ],
               "relatedQuestionIds": [
-                "ch13_t01_q03"
+                "ch13_t02_q02"
               ],
               "pageRefs": [
                 165,
@@ -18763,7 +18763,7 @@
           ],
           "questions": [
             {
-              "id": "ch13_t01_q12",
+              "id": "ch13_t03_q29",
               "prompt": "Modern wristwatches keep accurate time using:",
               "questionType": "mcq",
               "options": [
@@ -18787,7 +18787,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q18",
+              "id": "ch13_t03_q30",
               "prompt": "Which of the following clocks works without electricity or batteries?",
               "questionType": "mcq",
               "options": [
@@ -18810,7 +18810,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q23",
+              "id": "ch13_t03_q31",
               "prompt": "Why are sundials not useful at night or on cloudy days?",
               "questionType": "shortAnswer",
               "options": null,
@@ -18829,7 +18829,7 @@
               "variations": []
             },
             {
-              "id": "ch13_t01_q24",
+              "id": "ch13_t03_q32",
               "prompt": "Match each clock with the principle it uses.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -19052,7 +19052,7 @@
                 "ch14_t01_c03"
               ],
               "relatedQuestionIds": [
-                "ch14_t01_q02"
+                "ch14_t03_q01"
               ],
               "pageRefs": [
                 180,
@@ -19582,7 +19582,7 @@
           ],
           "questions": [
             {
-              "id": "ch14_t01_q08",
+              "id": "ch14_t02_q19",
               "prompt": "Which device uses the HEATING effect of current?",
               "questionType": "mcq",
               "options": [
@@ -19614,7 +19614,7 @@
               ]
             },
             {
-              "id": "ch14_t01_q12",
+              "id": "ch14_t02_q20",
               "prompt": "Inside an electric bulb the part that glows is the:",
               "questionType": "mcq",
               "options": [
@@ -19638,7 +19638,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q13",
+              "id": "ch14_t02_q21",
               "prompt": "Tungsten is used for filaments because it:",
               "questionType": "mcq",
               "options": [
@@ -19852,7 +19852,7 @@
           ],
           "questions": [
             {
-              "id": "ch14_t01_q02",
+              "id": "ch14_t03_q01",
               "prompt": "What is an electromagnet? How is it made?",
               "questionType": "longAnswer",
               "options": null,
@@ -19900,7 +19900,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch14_t01_q09",
+              "id": "ch14_t03_q02",
               "prompt": "An electromagnet is made by:",
               "questionType": "mcq",
               "options": [
@@ -19924,7 +19924,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q10",
+              "id": "ch14_t03_q03",
               "prompt": "Which property does an electromagnet have that a permanent magnet does NOT?",
               "questionType": "mcq",
               "options": [
@@ -19948,7 +19948,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q11",
+              "id": "ch14_t03_q04",
               "prompt": "When current passes through a wire it produces:",
               "questionType": "mcq",
               "options": [
@@ -19972,7 +19972,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q14",
+              "id": "ch14_t03_q05",
               "prompt": "Which of the following depends mainly on the MAGNETIC effect of current?",
               "questionType": "mcq",
               "options": [
@@ -19996,7 +19996,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q20",
+              "id": "ch14_t03_q06",
               "prompt": "Fill in the blank: A device that converts electrical energy into mechanical energy is called an electric ____.",
               "questionType": "fillInBlank",
               "options": null,
@@ -20015,7 +20015,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q21",
+              "id": "ch14_t03_q07",
               "prompt": "Match each electrical part with its function.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -20055,7 +20055,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q22",
+              "id": "ch14_t03_q08",
               "prompt": "If you reverse the direction of current through an electromagnet, what happens?",
               "questionType": "mcq",
               "options": [
@@ -20079,7 +20079,7 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q26",
+              "id": "ch14_t03_q09",
               "prompt": "Identify the device: it converts mechanical energy into electrical energy.",
               "questionType": "shortAnswer",
               "options": null,
@@ -22375,7 +22375,7 @@
           ],
           "questions": [
             {
-              "id": "ch16_t01_q19",
+              "id": "ch16_t02_q25",
               "prompt": "Bawris (step wells) and tankas were traditional Indian methods to:",
               "questionType": "mcq",
               "options": [
@@ -22587,7 +22587,7 @@
           ],
           "questions": [
             {
-              "id": "ch16_t01_q10",
+              "id": "ch16_t03_q23",
               "prompt": "Which is the BEST way to reduce water wastage at home?",
               "questionType": "mcq",
               "options": [
@@ -22611,7 +22611,7 @@
               "variations": []
             },
             {
-              "id": "ch16_t01_q17",
+              "id": "ch16_t03_q24",
               "prompt": "World Water Day is observed on ____ March every year.",
               "questionType": "fillInBlank",
               "options": null,
@@ -23337,7 +23337,7 @@
           ],
           "questions": [
             {
-              "id": "ch17_t01_q05",
+              "id": "ch17_t02_q21",
               "prompt": "Forests are sometimes called 'green lungs' because they:",
               "questionType": "mcq",
               "options": [
@@ -23361,7 +23361,7 @@
               "variations": []
             },
             {
-              "id": "ch17_t01_q06",
+              "id": "ch17_t02_q22",
               "prompt": "Decomposers in a forest:",
               "questionType": "mcq",
               "options": [
@@ -23385,7 +23385,7 @@
               "variations": []
             },
             {
-              "id": "ch17_t01_q10",
+              "id": "ch17_t02_q23",
               "prompt": "Photosynthesis by forest trees produces:",
               "questionType": "mcq",
               "options": [
@@ -23408,7 +23408,7 @@
               "variations": []
             },
             {
-              "id": "ch17_t01_q13",
+              "id": "ch17_t02_q24",
               "prompt": "Forests help control global climate by:",
               "questionType": "mcq",
               "options": [
@@ -23432,7 +23432,7 @@
               "variations": []
             },
             {
-              "id": "ch17_t01_q16",
+              "id": "ch17_t02_q25",
               "prompt": "True or false: Decomposers help return nutrients from dead matter back to the soil.",
               "questionType": "trueFalse",
               "options": [
@@ -23454,7 +23454,7 @@
               "variations": []
             },
             {
-              "id": "ch17_t01_q18",
+              "id": "ch17_t02_q26",
               "prompt": "Which of the following is the BEST personal action to support forests?",
               "questionType": "mcq",
               "options": [
@@ -23606,7 +23606,7 @@
           ],
           "questions": [
             {
-              "id": "ch17_t01_q20",
+              "id": "ch17_t03_q26",
               "prompt": "Name two ways forests benefit us indirectly (without us cutting or harvesting them).",
               "questionType": "shortAnswer",
               "options": null,
@@ -23834,7 +23834,7 @@
               ],
               "relatedQuestionIds": [
                 "ch18_t01_q04",
-                "ch18_t01_q05"
+                "ch18_t02_q02"
               ],
               "pageRefs": [
                 230,
@@ -24096,7 +24096,7 @@
                 "ch18_t03_c01"
               ],
               "relatedQuestionIds": [
-                "ch18_t01_q02"
+                "ch18_t02_q01"
               ],
               "pageRefs": [
                 222,
@@ -24148,7 +24148,7 @@
           ],
           "questions": [
             {
-              "id": "ch18_t01_q02",
+              "id": "ch18_t02_q01",
               "prompt": "Describe the main stages of wastewater treatment.",
               "questionType": "longAnswer",
               "options": null,
@@ -24201,7 +24201,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch18_t01_q05",
+              "id": "ch18_t02_q02",
               "prompt": "The first stage in a wastewater treatment plant is usually:",
               "questionType": "mcq",
               "options": [
@@ -24224,7 +24224,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q06",
+              "id": "ch18_t02_q03",
               "prompt": "Sand and small grit settle out of sewage in:",
               "questionType": "mcq",
               "options": [
@@ -24248,7 +24248,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q07",
+              "id": "ch18_t02_q04",
               "prompt": "The thick semi-solid material that settles at the bottom of treatment tanks is called:",
               "questionType": "mcq",
               "options": [
@@ -24272,7 +24272,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q08",
+              "id": "ch18_t02_q05",
               "prompt": "Floating impurities like oil, grease, and fats are removed in treatment as:",
               "questionType": "mcq",
               "options": [
@@ -24296,7 +24296,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q09",
+              "id": "ch18_t02_q06",
               "prompt": "Aerobic bacteria in the aeration tank:",
               "questionType": "mcq",
               "options": [
@@ -24320,7 +24320,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q10",
+              "id": "ch18_t02_q07",
               "prompt": "Anaerobic digestion of the settled sludge produces:",
               "questionType": "mcq",
               "options": [
@@ -24344,7 +24344,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q11",
+              "id": "ch18_t02_q08",
               "prompt": "Chlorine is added at the end of treatment to:",
               "questionType": "mcq",
               "options": [
@@ -24368,7 +24368,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q15",
+              "id": "ch18_t02_q09",
               "prompt": "True or false: Treated effluent is usually safe to drink straight from the WWTP outlet.",
               "questionType": "trueFalse",
               "options": [
@@ -24389,7 +24389,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q16",
+              "id": "ch18_t02_q10",
               "prompt": "Which substance, when poured down the drain, is HARDEST for a WWTP to handle?",
               "questionType": "mcq",
               "options": [
@@ -24413,7 +24413,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q22",
+              "id": "ch18_t02_q11",
               "prompt": "Match each treatment step with its purpose.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -24536,7 +24536,7 @@
           ],
           "questions": [
             {
-              "id": "ch18_t01_q12",
+              "id": "ch18_t03_q27",
               "prompt": "Open drains and uncovered sewage are dangerous because they:",
               "questionType": "mcq",
               "options": [
@@ -24560,7 +24560,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q18",
+              "id": "ch18_t03_q28",
               "prompt": "Which is a BETTER alternative to open defecation in rural areas without sewers?",
               "questionType": "mcq",
               "options": [
@@ -24584,7 +24584,7 @@
               "variations": []
             },
             {
-              "id": "ch18_t01_q21",
+              "id": "ch18_t03_q29",
               "prompt": "World Water Day is observed on 22 March; World Toilet Day is observed on 19 ____.",
               "questionType": "fillInBlank",
               "options": null,
