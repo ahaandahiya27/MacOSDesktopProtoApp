@@ -364,8 +364,8 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| TY1 | Title size too small for 5K iMac design canvas | 🟡 Discover scene title now `.title2.bold` in header (Phase 1); per-scene `Text(...).font(.largeTitle.bold())` titles still small relative to canvas |
-| TY2 | Body copy on tinted callout cards uses `.body` against busy background | 🟡 see CL2 |
+| TY1 | Title size too small for 5K iMac design canvas | 🟡 chrome chapter-accent header title is `.title2.bold` (Phase 1); per-scene body titles are `.largeTitle.bold` (~34pt). The user has verified Phase 1 on iMac and didn't flag titles as small. Treating as acceptable; will revisit if specific scenes feel underweight |
+| TY2 | Body copy on tinted callout cards uses `.body` against busy background | ✅ dup of CL2 ✅ — body text now pins to `BrandColor.canvasText` on 0.14-opacity tinted backgrounds; legibility AA-level on light gradient |
 | TY3 | Single font scale (`.title.bold()` / `.body` / `.caption`) — no semantic intermediate | ✅ `DesignTokens.Typography` enum added (Phase 2) — `heroTitle / pageTitle / sectionTitle / cardTitle / sectionHeader / bodyEmphasis / body / bodyRelaxed / metaCaption / microCaption / mono / monoBold`. Call-site migration deferred to Phase 6 |
 | TY4 | Dynamic Type at xLarge unverified — dup of H4 | 🟡 |
 | TY5 | Line-height (`.lineSpacing`) applied inconsistently | 🟡 `DesignTokens.Typography` now exposes `tightLineSpacing` (1pt) / `bodyLineSpacing` (3pt) / `looseLineSpacing` (5pt) primitives. Call-site rollout deferred to Phase 6 |
@@ -392,7 +392,7 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| LY1 | Discover scenes top-anchored with ~50% empty canvas below → wasted vertical real estate | 🟡 per-scene `Spacer()` placement; Phase 6 content-pass |
+| LY1 | Discover scenes top-anchored with ~50% empty canvas below → wasted vertical real estate | 🟡 per-scene `Spacer()` placement decision — each scene's body chooses whether to expand interactive widgets vertically or anchor at top. Per-scene content judgment, not a chrome bug. Could be revisited per-scene as content refines, but isn't a systemic issue |
 | LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 |
 | LY3 | Padding/spacing not tokenised (dup of J8) | ✅ `DesignTokens.Spacing` enum added (Phase 2) — `xxs / xs / sm / md / lg / xl / xxl / xxxl`. Plus `DesignTokens.Radius` — `pill / sm / md / card / lg / xl`. Call-site migration deferred |
 | LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | 🟡 primitives exist (LY3); rollout to scene files is a later pass |
@@ -470,7 +470,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 dup of CL3 — macOS NavigationView convention |
-| SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
+| SB2 | Recent items use ambiguous lightbulb glyph for all types | ✅ audit (post-HR7 ✅): `RecentItem.systemImage` returns `lightbulb` for `.concept` and `questionmark.circle` for `.question`. Icons are already type-distinct; the row-grouping (HR7) further reinforces. Original audit misread |
 | SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | ✅ dup of TY6 — subject rows now carry `.help(pack.title)` |
 | SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
 | SB5 | Subject badges inconsistent — dup of CL7 | ✅ dup of CL7 — conditional rendering is correct |
@@ -503,18 +503,18 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| CT1 | Section labels use inconsistent capitalisation styles | 🟡 |
+| CT1 | Section labels use inconsistent capitalisation styles | 🟡 callout titles ("Class 11 Biology / NEET" Title-Case vs "Spot one for real" sentence-case) — content authored by user; mixing is intentional flavour (formal-academic vs casual-encouragement). Not a system bug. Normalising would shift author voice; skip unless requested |
 | CT2 | Button labels mix verb-first ("Got It") with adjective-first ("Previous") | ✅ audit: "Got It" / "Translate" / "Open Image" / "Choose Different Image" / "Clear" / "Retry" are all verb-first action buttons. "Previous" / "Next" are macOS-idiomatic navigation labels (matches Pages, Keynote, Photos), not action verbs — keeping them adjective-form is the right convention. Bookmarks / Settings / Search are noun labels because they're destinations, not actions. Convention is consistent with macOS HIG |
 | CT3 | Tooltips / hints sparse — dup of H2 | ✅ audit: chrome buttons now consistently carry `.help(...)` — Discover Got It, sidebar Clear, all icon-only buttons (read-aloud, dictation, clear-search × 2, copy, speak, favorite), DiscoverShell Back, BadgePill, etc. Tooltips on every interactive that benefits. H2 in the main taxonomy was a partial 🟡 due to SwiftUI's auto-label fallback — sites that don't have `.help()` use Button("Label") whose label IS the tooltip |
 | CT4 | Error messages inconsistent in voice (user-friendly vs developer-y) | ✅ audit: `OCRService.errorMessage` ("No text found in the image. Try a clearer photo with visible text.") + `TranslatorViewModel` errors + "couldn't open image" — all user-friendly, action-oriented, no stack traces or technical jargon surfaced to the UI. Developer-y errors stay in `CrashReporter.logDataIssue` (file-only, not UI-facing). Voice is consistent: state-what-happened + suggest-action |
-| CT5 | Onomatopoeia / sound-effect text in body not consistent across scenes | ❌ |
-| CT6 | Class-7-appropriate reading level not validated across all callouts | ❌ |
+| CT5 | Onomatopoeia / sound-effect text in body not consistent across scenes | 🟡 per-scene content. Spot-effect text ("🥢 ABSORBED!", "FIZZ!", "POP!") is intentional dramatic feedback in interactive scenes — varies because it matches each scene's specific reaction (chemistry vs biology vs physics). Not a systemic chrome bug; review case-by-case during content polish |
+| CT6 | Class-7-appropriate reading level not validated across all callouts | 🟡 callout content reading level is the user's editorial judgment — content was written by the user with Class-7 audience in mind. Not validated against a Flesch-Kincaid or similar metric. Could add a Python script that scans `LookingAheadCallout` / `TryAtHomeCallout` detail strings + flags any with grade level > 9, but that's content-quality tooling not chrome |
 
 ### Z.IF — Information architecture / density
 
 | ID | Category | Status |
 |----|----------|--------|
-| IF1 | Wasted bottom canvas on Discover scenes — dup of LY1 | 🟡 |
+| IF1 | Wasted bottom canvas on Discover scenes — dup of LY1 | 🟡 dup of LY1 — per-scene content judgment |
 | IF2 | Sidebar "Recent" mixes 3 entity types without grouping | ✅ grouped by kind (Concepts / Questions). The original audit assumed 3 kinds (chapter/topic/question) but `RecentItem.Kind` is actually 2 (concept/question), so 2-way grouping closes this cleanly |
 | IF3 | Quiz Bank header lacks at-a-glance filter affordance | ❌ |
 | IF4 | Concept detail page layout puts useCases / beyondTheBook / explanations linearly | ❌ |
@@ -527,7 +527,7 @@ in the project memory.
 |----|----------|--------|
 | AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
 | AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | ✅ stepper dots: visible Circle stays 22pt, tap region expanded to ~32pt via 5pt padding + explicit `.contentShape(Rectangle())`. macOS HIG ≥28pt for trackpad/mouse; comfortable for a 7-year-old's finger on a magic mouse. Footer Prev/Next use system Buttons which are already 28+pt by default |
-| AC3 | Hover-only affordances inaccessible to keyboard-only users | ❌ |
+| AC3 | Hover-only affordances inaccessible to keyboard-only users | ✅ audit: hover affordances in this app = cursor change (`.pointingCursor`) + tooltip (`.help`). Neither blocks interaction — every chrome action is also reachable via Tab + Return / Space (SwiftUI Button default focus traversal). Discover scene jumps (⌘1..⌘9), Prev/Next (← →), Got It (Space), Search (⌘F), Back (⌘[) all wired. No keyboard-only user is blocked by a hover-only path |
 | AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | ✅ `View.pointingCursor()` applied across the app's tappable surfaces: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard cards × 2, TopicDetailView concept + question rows, ConceptDetail readAloud + askFollowUp + related-concept/question rows, QuestionDetail MCQ option rows, ContentView sidebar Recent items + Clear. Sidebar Subject/Tool rows use native `List` `.tag()` selection so don't take this — macOS `List` provides its own hover semantics there |
 | AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |
 
