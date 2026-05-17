@@ -293,4 +293,96 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertTrue(longTitles.isEmpty,
                       "Concept titles longer than 90 chars risk clipping at Dynamic Type xLarge: \(longTitles.prefix(3).joined(separator: ", "))")
     }
+
+    // MARK: - Additional content invariants
+    //
+    // Each guard catches a content-edit regression that would otherwise
+    // ship silently — concept.reasoning empty falls back to "(no
+    // explanation available)" in the UI, empty question prompt makes
+    // a quiz row unreadable, etc.
+
+    @MainActor func testEveryConceptHasReasoning() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        let empty = pack.allConcepts.filter { $0.reasoning.isEmpty }.map { $0.id }
+        XCTAssertTrue(empty.isEmpty,
+                      "Concepts with empty `reasoning`: \(empty.prefix(5).joined(separator: ", "))")
+    }
+
+    @MainActor func testNoQuestionHasEmptyPromptOrAnswer() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var emptyPrompts: [String] = []
+        var emptyAnswers: [String] = []
+        for q in pack.allQuestions {
+            if q.prompt.isEmpty { emptyPrompts.append(q.id) }
+            if q.answer.isEmpty { emptyAnswers.append(q.id) }
+        }
+        XCTAssertTrue(emptyPrompts.isEmpty,
+                      "Questions with empty prompt: \(emptyPrompts.prefix(5).joined(separator: ", "))")
+        XCTAssertTrue(emptyAnswers.isEmpty,
+                      "Questions with empty answer: \(emptyAnswers.prefix(5).joined(separator: ", "))")
+    }
+
+    @MainActor func testEveryChapterHasThreeTopics() {
+        // Mirrors G1 — guard against a content edit that drops a topic.
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        for chapter in pack.chapters {
+            XCTAssertEqual(chapter.topics.count, 3,
+                           "Chapter \(chapter.id) has \(chapter.topics.count) topics, expected 3")
+        }
+    }
+
+    @MainActor func testEveryTopicHasAtLeastTwoConcepts() {
+        // Mirrors G2.
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var thin: [(String, Int)] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics where topic.concepts.count < 2 {
+                thin.append((topic.id, topic.concepts.count))
+            }
+        }
+        XCTAssertTrue(thin.isEmpty,
+                      "Topics with fewer than 2 concepts: \(thin.prefix(5).map { "\($0.0)=\($0.1)" }.joined(separator: ", "))")
+    }
+
+    @MainActor func testEveryTopicHasAtLeastThreeMCQs() {
+        // Mirrors G3 — every topic should ship at least 3 multiple-choice
+        // questions so Discover Mode's BossQuiz has material.
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var thin: [(String, Int)] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics {
+                let mcqs = topic.questions.filter { $0.questionType == .mcq }
+                if mcqs.count < 3 {
+                    thin.append((topic.id, mcqs.count))
+                }
+            }
+        }
+        XCTAssertTrue(thin.isEmpty,
+                      "Topics with fewer than 3 MCQs: \(thin.prefix(5).map { "\($0.0)=\($0.1)" }.joined(separator: ", "))")
+    }
 }
