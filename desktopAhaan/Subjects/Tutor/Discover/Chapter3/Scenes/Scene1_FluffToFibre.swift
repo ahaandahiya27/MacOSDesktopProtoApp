@@ -20,6 +20,7 @@ struct Scene1_FluffToFibre: View {
     @State private var showCotton = false
     @State private var threadsWoven = 0
     @State private var tick: TimeInterval = 0
+    @State private var fibreLengthMM: Double = 22       // free-play slider: cotton staple length
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var kidFriendlyExplanation: String {
@@ -60,6 +61,17 @@ struct Scene1_FluffToFibre: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    DiscoveryWidget(
+                        title: "Discovery — pick a fibre length",
+                        subtitle: "Cotton, wool, jute and silk are graded by fibre length (called 'staple'). Drag to see what each length is good for.",
+                        value: $fibreLengthMM,
+                        range: 5...50,
+                        step: 1,
+                        valueLabel: { v in String(format: "Length: %.0f mm", v) },
+                        output: fibreGradeExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton {
                         onComplete()
                     }
@@ -97,6 +109,19 @@ struct Scene1_FluffToFibre: View {
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
         .position(x: geoSize.width * 0.8, y: geoSize.height * 0.35)
+    }
+
+    private func fibreGradeExplanation(_ mm: Double) -> String {
+        switch mm {
+        case ..<10:
+            return "Short staple — coarse fibres like jute or coir. Used for ropes, gunny sacks, doormats."
+        case ..<25:
+            return "Medium staple — most everyday cotton. Used for kurta, t-shirts, bedsheets."
+        case ..<35:
+            return "Long staple — fine textiles. Egyptian cotton, Pima cotton — luxury shirts and Pochampally sarees."
+        default:
+            return "Extra-long staple or silk — premium grade. Smooth, lustrous fabrics like silk sarees, fine suits."
+        }
     }
 
     private func tapIcon(_ emoji: String) {

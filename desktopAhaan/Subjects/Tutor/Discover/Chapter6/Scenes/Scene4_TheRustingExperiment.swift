@@ -15,6 +15,7 @@ struct Scene4_TheRustingExperiment: View {
     @State private var tubeProgress: [CGFloat] = [0, 0, 0]  // 0..1 per tube
     @State private var fastForwarded: Set<Int> = []
     @State private var tick: TimeInterval = 0
+    @State private var humidityPct: Double = 60         // free-play slider: ambient humidity
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var allDone: Bool { fastForwarded.count == 3 }
@@ -90,8 +91,6 @@ struct Scene4_TheRustingExperiment: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        GotItButton { onComplete() }
-                            .padding(.bottom, 12)
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -103,7 +102,24 @@ struct Scene4_TheRustingExperiment: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.bottom, 12)
+                    }
+
+                    DiscoveryWidget(
+                        title: "Discovery — vary the humidity",
+                        subtitle: "Water + oxygen + iron is the recipe. How fast does rust appear at different humidities?",
+                        value: $humidityPct,
+                        range: 0...100,
+                        step: 5,
+                        valueLabel: { v in String(format: "Humidity: %.0f%%", v) },
+                        output: rustRateExplanation
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    if allDone {
+                        GotItButton { onComplete() }
+                            .padding(.bottom, 12)
+                    } else {
+                        Spacer().frame(height: 12)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -198,6 +214,19 @@ struct Scene4_TheRustingExperiment: View {
             .disabled(done)
         }
         .accessibilityLabel("\(tube.title): \(tube.contents). \(done ? (tube.rusts ? "Rusted" : "No rust") : "Tap fast-forward.")")
+    }
+
+    private func rustRateExplanation(_ pct: Double) -> String {
+        switch pct {
+        case ..<20:
+            return "Bone dry. Iron stays shiny indefinitely — this is why Tube C (with CaCl₂ desiccant) shows no rust."
+        case ..<50:
+            return "Slow rusting. Months for visible rust outdoors. Most dry-zone Indian cities sit here in winter."
+        case ..<75:
+            return "Steady rusting. Weeks to clear orange spots on bare iron. Typical North Indian summer humidity."
+        default:
+            return "Fast rusting! Days are enough for visible rust. Coastal cities (Mumbai, Chennai) and monsoon months hit here — painted iron is a must."
+        }
     }
 
     private func fastForward(_ index: Int) {
