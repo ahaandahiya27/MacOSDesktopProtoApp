@@ -102,7 +102,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F7 | All four explanation depths populated | ✅ `testEveryConceptHasOneLineExplanation` — every concept has at least one non-empty explanation; depth-laddering covers gaps |
 | F8 | useCases ≥ 3 per concept | ✅ `testEveryConceptHasThreeUseCases` — green across all 190 concepts |
 | F9 | beyondTheBook non-empty | ✅ `testEveryConceptHasBeyondTheBook` — green across all 190 concepts |
-| F10 | pageRefs reasonable (within textbook page range) | 🟡 typed as Int? in JSON; out-of-range values would just show "page —" without crashing; bulk audit deferred until Y3 textbook backfill |
+| F10 | pageRefs reasonable (within textbook page range) | ✅ N/A — audit shows zero pageRef values currently populated across 190 concepts + 637 questions (field is optional Int?); becomes meaningful when Y3 lands the textbook backfill |
 | F11 | JSON schema decoding `do/catch` (don't crash on malformed pack) | ✅ per-pack do/catch in SubjectRegistry.reload; failures pipe to CrashReporter.logDataIssue AND surface in Settings |
 
 ## G. Content coverage parity (science only — Sanskrit not in scope)
@@ -130,7 +130,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | H1 | VoiceOver `.accessibilityLabel` on every interactive | ✅ Discover-mode deep audit (Explore agent over 74 Swift files): only one truly-icon-only Button found (DiscoveryMode ⌘1-⌘9 jump shortcuts) — now labeled `"Jump to scene N"`. Every other Discover Button uses Text or `.accessibilityLabel` on shape-only |
 | H2 | `.accessibilityHint` where non-obvious | 🟡 used sparingly; SwiftUI's `Button("Label")` auto-narrates label as VoiceOver hint, so most controls don't need explicit hints |
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 DiscoveryStepper + DiscoveryWidget surfaced; Settings sliders rely on default SwiftUI accessibility |
-| H4 | Dynamic Type Large / xLarge no clipping | 🟡 most surfaces use `.lineLimit(2)` + scrollable parents; xLarge clipping unverified visually |
+| H4 | Dynamic Type Large / xLarge no clipping | 🟡 `testConceptTitlesStayShortEnoughForDynamicType` asserts no concept title > 90 chars (proxy for xLarge fit in card headers); full visual verification still needs a UI test |
 | H5 | Reduce Motion respected on animations | 🟡 TimedSceneModifier + ParticleEmitter (the heavy animations) honour `@Environment(\.accessibilityReduceMotion)`; spot `.animation(...)` on tap feedback in Scene buttons does not — visual only, no time-critical info lost |
 | H6 | Color-contrast both Light / Dark | 🟡 every Color reference is semantic or `Color.compat*` and adapts automatically — pixel-perfect contrast not measured |
 | H7 | Keyboard-only navigation full coverage | 🟡 every action has a menu Command (with shortcut) or a focused Button; full coverage relies on SwiftUI's default focus traversal |
@@ -199,7 +199,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | M2 | Slider bounds (range respected) | ✅ |
 | M3 | Picker default selection invariant (never nil-on-required) | ✅ all pickers either bind to enum (Settings/QuizBank typeFilter/ReviewFilter/Concept depth/Sanskrit tab) or Optional with explicit "All" tag — no nil-on-required |
 | M4 | Empty-query search shows guidance, not crash | ✅ |
-| M5 | Drag/drop file handling (Sanskrit scan) | 🟡 OCR uses NSOpenPanel as the primary path; drag/drop coverage in OCRTranslationScreen is per-component and not verified end-to-end |
+| M5 | Drag/drop file handling (Sanskrit scan) | ✅ OCR drop zone accepts `public.file-url`, filters to image extensions (png/jpg/heic/etc), surfaces "not an image" or "couldn't open" errors via `ocrService.errorMessage` |
 
 ## N. Sanskrit / translator specific
 

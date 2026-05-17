@@ -179,6 +179,20 @@ struct OCRTranslationScreen: View {
         provider.loadItem(forTypeIdentifier: "public.file-url", options: nil) { item, _ in
             guard let data = item as? Data,
                   let url = URL(dataRepresentation: data, relativeTo: nil) else { return }
+            // Only accept image files. Dropping a .txt or .pdf was previously
+            // accepted silently and NSImage init would just fail without any
+            // user-visible feedback.
+            let ext = url.pathExtension.lowercased()
+            let imageExtensions: Set<String> = [
+                "png", "jpg", "jpeg", "heic", "heif", "tiff", "tif",
+                "gif", "bmp", "webp"
+            ]
+            guard imageExtensions.contains(ext) else {
+                Task { @MainActor in
+                    ocrService.errorMessage = "That's not an image file. Drop a PNG, JPG, HEIC, or similar."
+                }
+                return
+            }
             Task { @MainActor in
                 loadImage(from: url)
             }
@@ -188,7 +202,10 @@ struct OCRTranslationScreen: View {
 
     @MainActor
     private func loadImage(from url: URL) {
-        guard let image = NSImage(contentsOf: url) else { return }
+        guard let image = NSImage(contentsOf: url) else {
+            ocrService.errorMessage = "Couldn't open that image. The file may be corrupt or in an unsupported format."
+            return
+        }
         selectedImage = image
         Task {
             await ocrService.extractText(from: image)

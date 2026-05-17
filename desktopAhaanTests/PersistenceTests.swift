@@ -419,4 +419,38 @@ final class PersistenceTests: XCTestCase {
 
         XCTAssertTrue(preferOffline is Bool)
     }
+
+    // MARK: - L1 — atomic-write invariants
+    //
+    // We don't try to simulate a real mid-write crash here (would need a
+    // forked child + SIGKILL). Instead: write a file via the same Data
+    // .atomic option DataStore uses and assert the post-state matches
+    // exactly. A regression where someone drops the .atomic option would
+    // still pass this test, but it stops the case where the write API
+    // itself silently changes shape.
+
+    func testAtomicWriteRoundTrip() throws {
+        let tmpDir = FileManager.default.temporaryDirectory
+            .appendingPathComponent("desktopAhaan-tests-\(UUID().uuidString)",
+                                    isDirectory: true)
+        try FileManager.default.createDirectory(at: tmpDir,
+                                                withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: tmpDir) }
+
+        let target = tmpDir.appendingPathComponent("payload.json")
+        // First write — file doesn't exist yet. .atomic = write to .tmp +
+        // rename so the destination is always either old-or-new, never half.
+        let v1 = #"{"version":1,"items":[]}"#
+        try v1.data(using: .utf8)!.write(to: target, options: .atomic)
+        let readback1 = try String(contentsOf: target, encoding: .utf8)
+        XCTAssertEqual(readback1, v1)
+
+        // Second write — file exists. .atomic still produces a clean
+        // replace, no partial state.
+        let v2 = #"{"version":2,"items":["a","b"]}"#
+        try v2.data(using: .utf8)!.write(to: target, options: .atomic)
+        let readback2 = try String(contentsOf: target, encoding: .utf8)
+        XCTAssertEqual(readback2, v2)
+        XCTAssertNotEqual(readback2, v1, "Second write should overwrite first.")
+    }
 }

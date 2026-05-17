@@ -269,4 +269,28 @@ final class ChapterContentTests: XCTestCase {
             }
         }
     }
+
+    // MARK: - Content-text bounds (H4 Dynamic Type safety)
+    //
+    // True Dynamic-Type-clipping verification needs a UI test target
+    // (XCUIAutomation). Until then, the proxy is: every user-facing
+    // string is bounded enough that Large / xLarge text scales won't
+    // overflow the standard surface. Concept titles in particular are
+    // shown in card headers with `.lineLimit(2)`; titles longer than
+    // ~80 chars start to break that layout even at default text size.
+
+    /// H4 — concept titles stay short enough that Dynamic Type xLarge
+    /// has a chance of fitting in the standard 2-line card header.
+    @MainActor func testConceptTitlesStayShortEnoughForDynamicType() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        let longTitles = pack.allConcepts.filter { $0.title.count > 90 }
+            .map { "\($0.id) (\($0.title.count) chars)" }
+        XCTAssertTrue(longTitles.isEmpty,
+                      "Concept titles longer than 90 chars risk clipping at Dynamic Type xLarge: \(longTitles.prefix(3).joined(separator: ", "))")
+    }
 }
