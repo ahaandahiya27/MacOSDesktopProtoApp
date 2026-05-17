@@ -173,7 +173,7 @@ struct Scene5_TropicalRainforestLife: View {
                         .padding(.top, 4)
                     }
                 } else {
-                    Label("Rainforest Layers", systemImage: "tree.fill")
+                    Label("Rainforest Layers", systemImage: SFSymbolCompat.name("tree.fill"))
                         .font(.title2.bold())
                     Text("Tropical rainforests are hot and humid all year, with heavy rainfall. They have three main layers — canopy, understory, and forest floor — each with unique animals. Tap a layer to explore!")
                         .font(.body)

@@ -22,7 +22,7 @@ struct Scene8_DesertSurvivalTricks: View {
     }
 
     private let animals: [DesertAnimal] = [
-        DesertAnimal(id: 0, name: "Camel", symbol: "hare.fill", color: Color.compatBrown,
+        DesertAnimal(id: 0, name: "Camel", symbol: SFSymbolCompat.name("hare.fill"), color: Color.compatBrown,
                      adaptations: [
                         (title: "Hump", detail: "The hump stores fat (not water!) which is broken down for energy and metabolic water when food is scarce."),
                         (title: "Minimal Sweating", detail: "Camels can tolerate body temperature rising to 42 C before sweating, conserving precious water."),

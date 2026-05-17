@@ -46,7 +46,7 @@ struct Scene8_AnemometerReader: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Cups catch the wind", systemImage: "gauge.medium")
+                    Label("Cups catch the wind", systemImage: SFSymbolCompat.name("gauge.medium"))
                         .font(.title2.bold())
                     Text("An anemometer measures wind speed. Three or four cups catch the breeze and rotate. The rotation rate is converted to km/h. Weather stations report this every few minutes.")
                         .font(.body).lineSpacing(4)

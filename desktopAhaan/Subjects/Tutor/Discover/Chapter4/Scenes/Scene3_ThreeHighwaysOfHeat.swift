@@ -186,7 +186,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             switch index {
             case 0: Image(systemName: "line.horizontal.3").font(.title).foregroundColor(.orange)
             case 1: Image(systemName: "arrow.circlepath").font(.title).foregroundColor(.blue)
-            default: Image(systemName: "wave.3.right").font(.title).foregroundColor(.yellow)
+            default: Image(systemName: SFSymbolCompat.name("wave.3.right")).font(.title).foregroundColor(.yellow)
             }
         }
     }

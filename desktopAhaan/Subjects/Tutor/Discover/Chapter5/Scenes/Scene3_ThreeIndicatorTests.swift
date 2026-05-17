@@ -94,7 +94,7 @@ struct Scene3_ThreeIndicatorTests: View {
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
-                                Label("Three Indicator Tests", systemImage: "testtube.2")
+                                Label("Three Indicator Tests", systemImage: SFSymbolCompat.name("testtube.2"))
                                     .font(.title2.bold())
                                 Text("Indicators change colour in acids and bases. Tap the acid or base button on each test tube to see what happens!")
                                     .font(.body)

@@ -52,7 +52,7 @@ struct SettingsScreen: View {
     // MARK: - How It Works
 
     private var howItWorks: some View {
-        GroupBox(label: Label("Translation", systemImage: "character.book.closed")) {
+        GroupBox(label: Label("Translation", systemImage: SFSymbolCompat.name("character.book.closed"))) {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 10) {
                     Image(systemName: "checkmark.shield.fill")
@@ -73,7 +73,7 @@ struct SettingsScreen: View {
 
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(alignment: .top, spacing: 8) {
-                        Image(systemName: "internaldrive")
+                        Image(systemName: SFSymbolCompat.name("internaldrive"))
                             .font(.caption)
                             .foregroundColor(Color.compatIndigo)
                             .frame(width: 16)

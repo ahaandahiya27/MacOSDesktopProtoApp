@@ -63,7 +63,7 @@ struct Scene2_PendulumLab: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Longer string → slower swing", systemImage: "metronome")
+                    Label("Longer string → slower swing", systemImage: SFSymbolCompat.name("metronome"))
                         .font(.title2.bold())
                     Text("The time for one swing depends only on the string length, not on the mass or how far you pull it back. Galileo discovered this. It's why pendulums were used for accurate clocks for 300 years.")
                         .font(.body).lineSpacing(4)

@@ -34,7 +34,7 @@ struct Scene4_LimeWaterTest: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("How we test for CO₂", systemImage: "testtube.2")
+                    Label("How we test for CO₂", systemImage: SFSymbolCompat.name("testtube.2"))
                         .font(.title2.bold())
                     Text("Calcium hydroxide (limewater) reacts with CO₂ to form solid calcium carbonate (chalk), turning the liquid milky. Your exhaled breath contains around 4% CO₂ — enough to do this in seconds.")
                         .font(.body).lineSpacing(4)

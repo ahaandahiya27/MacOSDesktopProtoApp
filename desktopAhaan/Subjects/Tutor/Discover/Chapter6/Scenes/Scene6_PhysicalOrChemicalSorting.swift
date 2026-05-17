@@ -109,7 +109,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
-                                Label("Drag each card", systemImage: "hand.draw.fill")
+                                Label("Drag each card", systemImage: SFSymbolCompat.name("hand.draw.fill"))
                                     .font(.title2.bold())
                                 Text("Drag each change into the correct bin: Physical Change or Chemical Change.")
                                     .font(.body)

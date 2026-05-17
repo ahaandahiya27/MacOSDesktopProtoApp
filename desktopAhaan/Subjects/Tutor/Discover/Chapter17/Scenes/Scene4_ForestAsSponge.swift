@@ -36,7 +36,7 @@ struct Scene4_ForestAsSponge: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Living water tank", systemImage: "drop.degreesign")
+                    Label("Living water tank", systemImage: SFSymbolCompat.name("drop.degreesign"))
                         .font(.title2.bold())
                     Text("Tree canopies break the force of raindrops. Roots hold the soil and let water seep down slowly. Cleared land lets rain run off fast — flooding rivers and stripping topsoil.")
                         .font(.body).lineSpacing(4)

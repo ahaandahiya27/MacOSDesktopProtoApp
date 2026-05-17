@@ -81,7 +81,7 @@ struct TranslatorScreen: View {
 
                         if !vm.translationSource.isEmpty {
                             HStack(spacing: 4) {
-                                Image(systemName: vm.translationSource.contains("Online") ? "globe" : "internaldrive")
+                                Image(systemName: SFSymbolCompat.name(vm.translationSource.contains("Online") ? "globe" : "internaldrive"))
                                     .font(.caption2)
                                 Text("via \(vm.translationSource)")
                                     .font(.caption2)

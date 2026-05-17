@@ -99,7 +99,7 @@ struct Scene6_FourStomachsOfACow: View {
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("The Four-Stomach Cow Tour", systemImage: "hare.fill")
+                        Label("The Four-Stomach Cow Tour", systemImage: SFSymbolCompat.name("hare.fill"))
                             .font(.title2.bold())
                             .foregroundColor(Color.compatBrown)
                         Text(cowExplanation)

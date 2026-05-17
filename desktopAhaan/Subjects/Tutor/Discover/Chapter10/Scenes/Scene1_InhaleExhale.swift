@@ -35,7 +35,7 @@ struct Scene1_InhaleExhale: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Ribs up, diaphragm down", systemImage: "lungs.fill")
+                    Label("Ribs up, diaphragm down", systemImage: SFSymbolCompat.name("lungs.fill"))
                         .font(.title2.bold())
                     Text("When you inhale, your ribs lift up and your diaphragm pushes down — chest cavity expands, air flows in. When you exhale, the opposite: chest shrinks, air leaves. Oxygen enters the blood, CO₂ leaves it.")
                         .font(.body).lineSpacing(4)

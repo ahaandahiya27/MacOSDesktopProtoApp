@@ -100,6 +100,23 @@ enum SFSymbolCompat {
         case "shield.lefthalf.filled":     return "shield.fill"
         case "water.waves":                return "drop.fill"
         case "list.bullet.clipboard.fill": return "list.bullet"
+        // --- Round 2 audit (Big Sur compile-and-run sweep) ---
+        case "metronome":                  return "clock.fill"
+        case "barometer":                  return "thermometer"
+        case "bubbles.and.sparkles":       return "sparkles"
+        case "flag.checkered":             return "flag.fill"
+        case "drop.degreesign":            return "drop.fill"
+        case "testtube.2":                 return "drop.fill"
+        case "tree.fill":                  return "leaf.fill"
+        case "nose.fill":                  return "face.smiling"
+        case "lungs.fill":                 return "wind"
+        case "gauge.medium":               return "gauge"
+        case "internaldrive":              return "externaldrive"
+        case "wave.3.right":               return "wifi"
+        case "hand.draw.fill":             return "hand.point.up.fill"
+        case "character.book.closed":      return "book.closed"
+        case "leaf.arrow.triangle.circlepath": return "leaf.fill"
+        case "hare.fill":                  return "tortoise"
         default:                           return modern
         }
     }

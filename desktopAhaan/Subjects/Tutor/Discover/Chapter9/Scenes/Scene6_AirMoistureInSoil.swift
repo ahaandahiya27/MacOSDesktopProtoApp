@@ -40,7 +40,7 @@ struct Scene6_AirMoistureInSoil: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Soil is not just solid", systemImage: "bubbles.and.sparkles")
+                    Label("Soil is not just solid", systemImage: SFSymbolCompat.name("bubbles.and.sparkles"))
                         .font(.title2.bold())
                     Text("Pour dry soil into water → tiny bubbles escape. Heat moist soil in a test tube → water vapour condenses on the cool top. Soil is a mix of solids, water, and air — that's why roots can breathe through it.")
                         .font(.body).lineSpacing(4)

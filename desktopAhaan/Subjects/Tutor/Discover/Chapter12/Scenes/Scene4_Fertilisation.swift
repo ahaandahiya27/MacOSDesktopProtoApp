@@ -41,7 +41,7 @@ struct Scene4_Fertilisation: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Pollination ≠ Fertilisation", systemImage: "leaf.arrow.triangle.circlepath")
+                    Label("Pollination ≠ Fertilisation", systemImage: SFSymbolCompat.name("leaf.arrow.triangle.circlepath"))
                         .font(.title2.bold())
                     Text("Pollination is just the delivery of pollen. Fertilisation happens later: the pollen grows a tube down to the ovary, where its sperm nucleus fuses with the egg. The ovule then becomes a seed and the ovary becomes a fruit.")
                         .font(.body).lineSpacing(4)

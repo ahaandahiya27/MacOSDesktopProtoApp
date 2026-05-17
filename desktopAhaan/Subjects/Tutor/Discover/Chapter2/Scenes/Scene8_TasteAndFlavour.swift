@@ -59,7 +59,7 @@ struct Scene8_TasteAndFlavour: View {
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("Taste & Flavour", systemImage: "nose.fill")
+                        Label("Taste & Flavour", systemImage: SFSymbolCompat.name("nose.fill"))
                             .font(.title2.bold())
                             .foregroundColor(.red)
                         Text(flavourExplanation)

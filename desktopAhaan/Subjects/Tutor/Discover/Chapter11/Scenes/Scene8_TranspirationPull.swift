@@ -55,7 +55,7 @@ struct Scene8_TranspirationPull: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Plants sweat — and it pulls water up", systemImage: "drop.degreesign")
+                    Label("Plants sweat — and it pulls water up", systemImage: SFSymbolCompat.name("drop.degreesign"))
                         .font(.title2.bold())
                     Text("Water vapour leaves through stomata in the leaf. This loss creates a suction that drags more water up the xylem all the way from the roots — like sipping through a straw, but powered by evaporation.")
                         .font(.body).lineSpacing(4)

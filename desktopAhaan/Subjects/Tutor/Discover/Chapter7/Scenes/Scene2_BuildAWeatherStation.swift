@@ -136,7 +136,7 @@ struct Scene2_BuildAWeatherStation: View {
                                     .font(.body)
                                     .lineSpacing(4)
                             } else {
-                                Label("Weather Station", systemImage: "barometer")
+                                Label("Weather Station", systemImage: SFSymbolCompat.name("barometer"))
                                     .font(.title2.bold())
                                 Text("A weather station uses instruments to measure atmospheric conditions. Tap 'Add next instrument' to build yours one step at a time!")
                                     .font(.body)

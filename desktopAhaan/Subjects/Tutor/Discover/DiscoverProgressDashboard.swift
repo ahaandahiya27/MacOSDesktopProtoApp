@@ -74,7 +74,7 @@ private struct DiscoverProgressContent: View {
     private var closestCard: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 8) {
-                Image(systemName: "flag.checkered")
+                Image(systemName: SFSymbolCompat.name("flag.checkered"))
                     .foregroundColor(.orange)
                 Text("Almost there")
                     .font(.headline)

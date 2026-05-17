@@ -271,7 +271,7 @@ enum AppTab: String, Hashable, CaseIterable, Identifiable {
 
     var systemImage: String {
         switch self {
-        case .translate: return "character.book.closed"
+        case .translate: return SFSymbolCompat.name("character.book.closed")
         case .history:   return "clock.arrow.circlepath"
         case .favorites: return "heart.fill"
         case .practice:  return "graduationcap.fill"
