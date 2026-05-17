@@ -434,4 +434,53 @@ final class TranslationServiceTests: XCTestCase {
         let provider = FreeOnlineTranslationProvider()
         XCTAssertFalse(provider.isAvailableOffline)
     }
+
+    // MARK: - K1 — preferOffline gate
+
+    /// K1 — when `preferOffline = true` AND the word isn't in the local
+    /// dictionary, the service must throw `.notInDictionary` rather than
+    /// fall through to `FreeOnlineTranslationProvider`. Equivalent to
+    /// proving that flipping the Settings → "Dictionary Only" toggle
+    /// genuinely removes the only network surface in the app.
+    func testPreferOfflineNeverCallsOnlineProvider() async {
+        // A made-up word that's guaranteed to not be in the bundled
+        // dictionary. Combined with `preferOffline: true`, the service
+        // should bail out at step 3 before any URLSession is built.
+        let nonsense = "ZzZyXxQqPp" + String(Int.random(in: 1_000_000...9_999_999))
+        do {
+            _ = try await service.translate(
+                text: nonsense,
+                from: .english,
+                to: .sanskrit,
+                preferOffline: true,
+                isOnline: true  // network "is" reachable; the gate is preferOffline
+            )
+            XCTFail("Expected .notInDictionary error when offline-only is set")
+        } catch TranslationError.notInDictionary {
+            // expected
+        } catch {
+            XCTFail("Expected .notInDictionary, got \(error)")
+        }
+    }
+
+    /// K1 corollary — when offline is forced off (isOnline=false), the
+    /// service also throws .notInDictionary rather than hanging on a
+    /// network call.
+    func testIsOnlineFalseNeverCallsOnlineProvider() async {
+        let nonsense = "ZzZyXxQqPp" + String(Int.random(in: 1_000_000...9_999_999))
+        do {
+            _ = try await service.translate(
+                text: nonsense,
+                from: .english,
+                to: .sanskrit,
+                preferOffline: false,
+                isOnline: false
+            )
+            XCTFail("Expected .notInDictionary error when network is down")
+        } catch TranslationError.notInDictionary {
+            // expected
+        } catch {
+            XCTFail("Expected .notInDictionary, got \(error)")
+        }
+    }
 }
