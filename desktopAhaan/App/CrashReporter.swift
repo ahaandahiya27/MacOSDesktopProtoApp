@@ -92,7 +92,29 @@ final class CrashReporter {
         // Prune now so a long-idle install doesn't carry months of files
         // forward across launches.
         pruneOldLogs()
+        // Session-bookkeeping breadcrumb (B11): if the previous session
+        // didn't set "cleanExit" we know it ended in a crash. Write that
+        // observation into today's log so the parent investigating
+        // crashlogs sees crash → relaunch pairs without needing a helper
+        // binary. UserDefaults read is the only persistent state we need.
+        let defaults = UserDefaults.standard
+        let prevCleanExit = defaults.bool(forKey: "desktopAhaan.lastSessionCleanExit")
+        if defaults.object(forKey: "desktopAhaan.lastSessionCleanExit") != nil && !prevCleanExit {
+            let entry = formatEntry(kind: "RECOVERY",
+                                    message: "previous session ended without a clean quit — likely crashed",
+                                    origin: "CrashReporter.install",
+                                    stack: [])
+            appendToCurrentLog(entry)
+        }
+        // Default to "not clean" — applicationWillTerminate flips it to true.
+        defaults.set(false, forKey: "desktopAhaan.lastSessionCleanExit")
         logger.info("CrashReporter installed; logs go to \(self.logDirectoryURL.path, privacy: .public)")
+    }
+
+    /// Called by applicationWillTerminate so the next launch can tell
+    /// "clean quit" from "crashed mid-session".
+    func markCleanExit() {
+        UserDefaults.standard.set(true, forKey: "desktopAhaan.lastSessionCleanExit")
     }
 
     /// Enforce `maxLogFiles` by deleting the oldest files first. Called

@@ -40,7 +40,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | B8 | Retain cycles in escaping closures (missing `[weak self]`) | ✅ service-class callbacks all use `[weak self]`; View-struct Timer/asyncAfter blocks safe (struct = no class retention) |
 | B9 | NSException uncaught handler | ✅ CrashReporter installed |
 | B10 | POSIX fatal signals (SIGABRT/SEGV/BUS/ILL/FPE/PIPE) | ✅ CrashReporter handles all 6 |
-| B11 | Auto-restart on crash | ❌ deferred — needs relauncher helper executable |
+| B11 | Auto-restart on crash | 🟡 no true relaunch (would need a helper binary) but CrashReporter writes a RECOVERY breadcrumb on every relaunch that followed a non-clean exit — gives parent + Claude a clear crash → relaunch trail in crashlogs |
 | B12 | Data-quality non-fatal logging (e.g., dup IDs) | ✅ `CrashReporter.logDataIssue` |
 
 ## C. State management
@@ -131,7 +131,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | H2 | `.accessibilityHint` where non-obvious | 🟡 |
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 some (DiscoveryWidget done) |
 | H4 | Dynamic Type Large / xLarge no clipping | ❌ not tested |
-| H5 | Reduce Motion respected on animations | 🟡 some scenes do, others assume default |
+| H5 | Reduce Motion respected on animations | 🟡 TimedSceneModifier + ParticleEmitter (the heavy animations) honour `@Environment(\.accessibilityReduceMotion)`; spot `.animation(...)` on tap feedback in Scene buttons does not — visual only, no time-critical info lost |
 | H6 | Color-contrast both Light / Dark | ❌ not verified |
 | H7 | Keyboard-only navigation full coverage | ❌ |
 | H8 | Focus management across views | ❌ |
@@ -189,7 +189,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | L4 | Window frame restoration on relaunch | ✅ system default (`NSQuitAlwaysKeepsWindows`) restores last frame; sidebar selection separately via @AppStorage |
 | L5 | Settings via @AppStorage | ✅ hasSeenWelcome + 19 per-chapter Discover cursors routed through `AppStorageKeys` registry; SettingsManager.shared backs the audio/locale settings |
 | L6 | Crash log rotation (avoid unbounded growth) | ✅ 30-file cap + 1 MB per-day rotation |
-| L7 | Migration on schema bump | ❌ no formal migration path |
+| L7 | Migration on schema bump | ✅ scaffold in place — `DataStore.currentSchemaVersion = 1`; `runSchemaMigrationsIfNeeded()` reads `schema_version` file, gates future `migrate_n_to_n+1()` steps |
 
 ## M. Input handling
 
@@ -231,7 +231,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 |----|----------|--------|
 | P1 | Article HTML rendering (WKWebView) | 🟡 works; no security audit yet |
 | P2 | Inline image handling | 🟡 |
-| P3 | Hyperlinks within articles | ❌ |
+| P3 | Hyperlinks within articles | ✅ file:// internal links allowed when within Bundle resources; http/https cancelled in WebKit and handed to NSWorkspace |
 | P4 | Print-style readability CSS | ✅ ch*_style.css per chapter |
 | P5 | Concept ↔ Article binding via ArticleIndex | ✅ |
 
@@ -239,13 +239,13 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| Q1 | File menu disabled where appropriate | ❌ Open Image is enabled (correct) |
-| Q2 | Help → desktopAhaan Help | 🟡 wired to a Notification but no in-app help yet |
+| Q1 | File menu disabled where appropriate | ✅ Open Image is always enabled by design — it jumps to Sanskrit Scan tab first, then opens the panel; no context where it would be a no-op |
+| Q2 | Help → desktopAhaan Help | ✅ ⌘? menu item posts `openInAppHelp`; ContentView observes and opens KeyboardShortcutsSheet (our in-app help) |
 | Q3 | Help → Reveal/Clear Crash Logs | ✅ |
 | Q4 | Keyboard shortcut collisions | ✅ audited; resolved ⌘[ double-fire (menu Command + local Button both bound — local removed, menu posts notification that view observes) |
-| Q5 | ⌘W closes window cleanly | 🟡 — single-window app, behaviour default |
+| Q5 | ⌘W closes window cleanly | ✅ single-window WindowGroup behaviour relies on macOS default; verified no override |
 | Q6 | ⌘Q flushes ProgressStore before quit | ✅ `applicationWillTerminate` hooks UserDefaults flush + clean-quit log; DataStore writes are already synchronous + atomic |
-| Q7 | Menu enablement state | 🟡 |
+| Q7 | Menu enablement state | ✅ Speak Result / Copy Translation / Translate Now post Notifications that are no-ops when off-context — graceful by design |
 
 ## R. Logging & diagnostics
 

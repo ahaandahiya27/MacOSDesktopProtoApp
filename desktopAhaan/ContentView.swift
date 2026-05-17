@@ -63,6 +63,13 @@ struct ContentView: View {
             .frame(width: 0, height: 0)
             .accessibilityHidden(true)
         )
+        // The Help → "desktopAhaan Help" menu item posts this notification.
+        // We point it at the keyboard-shortcuts sheet for now — that's the
+        // most useful in-app help we have today (shortcuts + a brief
+        // overview header).
+        .onReceive(NotificationCenter.default.publisher(for: .openInAppHelp)) { _ in
+            if noOtherSheetOpen { showShortcutsSheet = true }
+        }
     }
 
     private var noOtherSheetOpen: Bool {

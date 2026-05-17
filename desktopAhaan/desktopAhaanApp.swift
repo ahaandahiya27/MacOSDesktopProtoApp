@@ -35,6 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     ///   - log the clean-quit so a future "did the app quit or did it
     ///     crash?" investigation is unambiguous against the crash log.
     func applicationWillTerminate(_ notification: Notification) {
+        CrashReporter.shared.markCleanExit()
         UserDefaults.standard.synchronize()
         appLogger.info("applicationWillTerminate — clean quit.")
     }
@@ -128,13 +129,16 @@ struct SanskritKoshApp: App {
                 .keyboardShortcut("[", modifiers: .command)
             }
 
-            // Help menu additions for the crash-log workflow:
+            // Help menu additions:
+            //   desktopAhaan Help          — opens KeyboardShortcutsSheet
+            //                                (our only in-app help today)
             //   Reveal Crash Logs in Finder — one-click access to the folder
             //   Clear Crash Logs           — wipe everything after a fix lands
             CommandGroup(replacing: .help) {
                 Button("desktopAhaan Help") {
                     NotificationCenter.default.post(name: .openInAppHelp, object: nil)
                 }
+                .keyboardShortcut("?", modifiers: .command)
 
                 Divider()
 

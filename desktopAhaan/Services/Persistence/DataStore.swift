@@ -23,6 +23,13 @@ final class DataStore: ObservableObject {
 
     private let storeDir: URL
 
+    /// Current persistence schema version. Bump whenever a stored JSON
+    /// shape changes in a way that an older decoder would reject. The
+    /// migration scaffold below runs `applyMigrations(_:to:)` from the
+    /// last-seen on-disk version up to this constant before `loadAll()`
+    /// reads any file.
+    static let currentSchemaVersion: Int = 1
+
     init() {
         let appSupport = FileManager.default.urls(
             for: .applicationSupportDirectory, in: .userDomainMask
@@ -38,7 +45,47 @@ final class DataStore: ObservableObject {
             Self.logger.error("Failed to create data directory: \(error.localizedDescription, privacy: .public)")
             lastSaveError = "Could not create data directory. Data may not persist."
         }
+        runSchemaMigrationsIfNeeded()
         loadAll()
+    }
+
+    // MARK: - Schema migration scaffold (L7)
+
+    /// Reads `schema_version` from `~/Library/Application Support/.../data/`.
+    /// Defaults to 0 if missing — i.e. fresh install or never-migrated install.
+    private var diskSchemaVersion: Int {
+        let url = storeDir.appendingPathComponent("schema_version")
+        guard let data = try? Data(contentsOf: url),
+              let str = String(data: data, encoding: .utf8),
+              let v = Int(str.trimmingCharacters(in: .whitespacesAndNewlines)) else {
+            return 0
+        }
+        return v
+    }
+
+    private func writeDiskSchemaVersion(_ version: Int) {
+        let url = storeDir.appendingPathComponent("schema_version")
+        try? "\(version)".data(using: .utf8)?.write(to: url, options: .atomic)
+    }
+
+    /// Runs every `migrate_<n>_to_<n+1>()` step from the on-disk version
+    /// up to `currentSchemaVersion`. Today only the version-stamp pass
+    /// exists; future schema bumps add a step here.
+    private func runSchemaMigrationsIfNeeded() {
+        let from = diskSchemaVersion
+        let to = Self.currentSchemaVersion
+        guard from < to else {
+            // Either already up-to-date or somehow ahead (downgrade?) — in
+            // either case, leave files alone.
+            return
+        }
+        Self.logger.info("DataStore migration: \(from, privacy: .public) → \(to, privacy: .public)")
+        // No real migrations to run yet — bumping from 0 (no stamp) to 1
+        // just marks "this install has been versioned now". The scaffold
+        // is in place so a future Codable shape change can add:
+        //   if from < 2 { migrate_1_to_2() }
+        //   if from < 3 { migrate_2_to_3() }
+        writeDiskSchemaVersion(to)
     }
 
     // MARK: - TranslationRecord
