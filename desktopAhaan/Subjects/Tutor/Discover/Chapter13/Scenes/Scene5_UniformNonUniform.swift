@@ -51,6 +51,13 @@ struct Scene5_UniformNonUniform: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 Kinematics introduces ACCELERATION (a = dv/dt) as the rate of change of velocity. Three equations of motion: v = u + at, s = ut + ½at², v² = u² + 2as. The d-t and v-t graph slopes are heavily JEE-tested, including motion-under-gravity (g = 9.8 m/s²) and projectile problems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

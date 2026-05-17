@@ -66,6 +66,13 @@ struct Scene5_CycloneEye: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "In Class 11 Physics you'll meet the Coriolis force — the rotating-frame effect that decides which way a cyclone spins (counter-clockwise in the Northern Hemisphere, clockwise in the Southern). JEE rarely asks cyclones directly, but Coriolis problems on rotating reference frames are standard."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

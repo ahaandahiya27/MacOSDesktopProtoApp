@@ -61,6 +61,13 @@ struct Scene2_SandClayLoam: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Squeeze test",
+                detail: "Take a fist-sized handful of moist soil. Sandy soil falls apart immediately. Clayey soil holds its shape and feels sticky. Loamy soil holds a loose ball that crumbles when poked. Try this with three different garden samples to feel the difference."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

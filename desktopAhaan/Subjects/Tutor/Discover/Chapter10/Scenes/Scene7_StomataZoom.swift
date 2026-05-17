@@ -50,6 +50,20 @@ struct Scene7_StomataZoom: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Peel and peek",
+                detail: "Carefully peel a thin transparent layer from the lower side of a tulsi or money-plant leaf. Press it onto sticky tape on a glass slide. Hold it against a bright sky. With a magnifying glass you can see tiny ovals — stomata. The two guard cells around each one open and close to let air in and out."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Transpiration' covers the guard-cell mechanism (K⁺ ion movement → swelling → stomata open), CAM and C4 photosynthesis variants, and the role of abscisic acid in stomatal closure. Asked every NEET — and JEE Bio (PCB stream) tests the same."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

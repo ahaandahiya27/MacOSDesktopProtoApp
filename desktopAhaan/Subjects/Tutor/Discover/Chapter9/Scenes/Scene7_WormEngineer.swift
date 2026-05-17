@@ -52,6 +52,13 @@ struct Scene7_WormEngineer: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11/12 Bio → NEET",
+                detail: "Earthworms are studied in detail in Class 11 'Structural Organisation in Animals' — their anatomy, blood vascular system, and nephridial excretion. NEET asks earthworm-specific morphology questions every cycle. Class 12 'Microbes in Human Welfare' covers vermicompost and how earthworm cultures help in soil enrichment."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

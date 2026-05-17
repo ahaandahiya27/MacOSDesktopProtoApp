@@ -41,6 +41,13 @@ struct Scene5_FishGillFlow: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Breathing and Exchange of Gases' contrasts the counter-current flow in fish gills (which extracts ~80% of dissolved O₂) with the parallel-flow alveoli of mammals (~25% extraction). Counter-current efficiency is a perennial NEET question."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

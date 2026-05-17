@@ -58,6 +58,13 @@ struct Scene3_BloodSort: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Body Fluids and Circulation' (plus Class 12 Health & Disease) covers ABO + Rh blood groups, blood typing for transfusions, haemophilia genetics, and the immune role of WBCs (B-cells, T-cells, antibodies). Blood-group genetics problems appear in nearly every NEET paper."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

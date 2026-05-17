@@ -429,6 +429,32 @@ Some buckets are skewed (e.g. ch16 = 20/1/2) — this reflects the actual semant
 
 Build verified green after the JSON regeneration.
 
+## Sidebar coverage pass 3 — 13 more scenes (Ch 8-17)
+
+Continued the sidebar-callout sweep with 14 new insertions across 13 scenes. Picked one or two scenes per chapter where there was no callout yet, prioritising NCERT-aligned NEET / JEE high-yield arcs:
+
+| File | Callout(s) |
+|---|---|
+| Ch 8 / Scene5_CycloneEye | LookingAhead → Class 11 Coriolis force, JEE rotating-frame mechanics |
+| Ch 8 / Scene6_ThunderstormSafety | LookingAhead → Class 12 Electrostatics, dielectric breakdown, lightning rod physics |
+| Ch 9 / Scene2_SandClayLoam | TryAtHome → squeeze test of three garden soil samples |
+| Ch 9 / Scene7_WormEngineer | LookingAhead → Class 11 earthworm anatomy (NEET), Class 12 vermicompost |
+| Ch 10 / Scene5_FishGillFlow | LookingAhead → Class 11 counter-current vs parallel flow extraction (~80% vs 25%) |
+| Ch 10 / Scene7_StomataZoom | TryAtHome (peel a leaf onto tape, view through magnifier) **+** LookingAhead → Class 11 guard-cell K⁺ mechanism, CAM/C4 photosynthesis |
+| Ch 11 / Scene3_BloodSort | LookingAhead → Class 12 ABO + Rh blood groups, haemophilia genetics, immune WBCs |
+| Ch 11 / Scene5_KidneyFilter | LookingAhead → Class 11 nephron anatomy + GFR, loop of Henle counter-current, ADH/aldosterone |
+| Ch 12 / Scene4_Fertilisation | LookingAhead → Class 12 double fertilisation, triploid (3n) endosperm |
+| Ch 13 / Scene5_UniformNonUniform | LookingAhead → Class 11 acceleration a = dv/dt, 3 equations of motion, projectile |
+| Ch 14 / Scene7_FuseMCB | LookingAhead → Class 10 P = VI = I²R = V²/R; Class 12 fuse-wire design |
+| Ch 16 / Scene1_WaterPie | LookingAhead → Class 9 Geography India's freshwater stress, river disputes, SDG 6 |
+| Ch 17 / Scene1_ForestLayers | LookingAhead → Class 12 ecological pyramids (biomass / energy / numbers), 10% rule |
+
+Running coverage after this commit:
+- **TryAtHomeCallout**: 18 → 20 of 99 new-chapter scenes
+- **LookingAheadCallout**: 17 → 29 of 99 new-chapter scenes
+
+~50% of scenes now have at least one academic-continuity sidebar. Comprehensive sweep across the remaining ~50 scenes (mostly the lower-impact / boss-quiz scenes) is the next pass.
+
 ---
 
 *Generated at: 2026-05-17.*

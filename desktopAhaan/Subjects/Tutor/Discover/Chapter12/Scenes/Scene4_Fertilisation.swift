@@ -49,6 +49,13 @@ struct Scene4_Fertilisation: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Sexual Reproduction in Flowering Plants' covers microsporogenesis, megasporogenesis, and the famous double fertilisation (two male gametes — one fuses with egg → diploid zygote, the other with central cell → triploid primary endosperm nucleus). Endosperm being triploid (3n) is a guaranteed NEET fact."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

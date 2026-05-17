@@ -67,6 +67,13 @@ struct Scene6_ThunderstormSafety: View {
             .padding(.horizontal, 24)
 
             if done {
+            LookingAheadCallout(
+                title: "Class 12 Physics → NEET",
+                detail: "Lightning is a giant electrostatic discharge. Class 12 'Electrostatics' covers the physics of charge build-up, dielectric breakdown of air (~3 MV/m), and how a lightning rod works (sharp tip = high electric field that ionises air before damage occurs). JEE asks problems on capacitance and breakdown voltage every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                 GotItButton { onComplete(score) }.padding(.bottom, 12)
             }
             Spacer(minLength: 0)

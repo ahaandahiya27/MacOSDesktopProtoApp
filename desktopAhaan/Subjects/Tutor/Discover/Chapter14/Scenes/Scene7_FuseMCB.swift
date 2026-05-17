@@ -41,6 +41,13 @@ struct Scene7_FuseMCB: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 / 12 → JEE",
+                detail: "Class 10 covers electric power P = VI = I²R = V²/R, and household wiring with fuses and MCBs. Class 12 'Current Electricity' adds the design of fuse wires from the Joule heating formula H = I²Rt. JEE asks power-rating problems on series vs parallel appliances."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
