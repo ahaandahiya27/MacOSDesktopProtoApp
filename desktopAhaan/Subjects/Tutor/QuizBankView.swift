@@ -158,6 +158,7 @@ private struct QuizBankContent: View {
                             .foregroundColor(.secondary)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("Clear search")
                 }
             }
             .padding(6)

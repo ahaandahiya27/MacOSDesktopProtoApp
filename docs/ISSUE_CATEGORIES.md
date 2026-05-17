@@ -80,14 +80,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | E1 | Global Search shows source pack per result | ✅ Section header per pack |
-| E2 | Global Search subject-scope toggle | ❌ deferred — could mirror QuizBank pattern |
+| E2 | Global Search subject-scope toggle | ✅ "All / Science / Sanskrit" capsule row, hidden when only one pack loaded |
 | E3 | QuizBank subject filter (chapter-id collision fix) | ✅ pack picker added |
 | E4 | Debouncing of text input | ✅ 200 ms in SearchView |
 | E5 | Diacritic & case insensitivity | ✅ `.caseInsensitive, .diacriticInsensitive` |
 | E6 | Empty state UI | ✅ in both SearchView and QuizBank |
 | E7 | Result ranking / relevance | ✅ score-based: title/prompt prefix (100) > contains (50) > body/answer (10-20) |
 | E8 | Search clears properly on navigate | ✅ via C1 fix (state survives, user can clear) |
-| E9 | Tokenization (multi-word queries) | ❌ single-token only today |
+| E9 | Tokenization (multi-word queries) | ✅ AND-of-tokens — every whitespace-separated token must match; per-token scores summed |
 
 ## F. Data integrity
 
@@ -127,7 +127,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| H1 | VoiceOver `.accessibilityLabel` on every interactive | 🟡 spot-checked, full sweep pending |
+| H1 | VoiceOver `.accessibilityLabel` on every interactive | 🟡 swept icon-only Buttons in SearchView, QuizBank, CommandPalette, ArticleBrowser, Favorites; bulk audit of Discover scenes still pending |
 | H2 | `.accessibilityHint` where non-obvious | 🟡 |
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 some (DiscoveryWidget done) |
 | H4 | Dynamic Type Large / xLarge no clipping | ❌ not tested |
@@ -242,7 +242,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | Q1 | File menu disabled where appropriate | ❌ Open Image is enabled (correct) |
 | Q2 | Help → desktopAhaan Help | 🟡 wired to a Notification but no in-app help yet |
 | Q3 | Help → Reveal/Clear Crash Logs | ✅ |
-| Q4 | Keyboard shortcut collisions | ❌ not audited |
+| Q4 | Keyboard shortcut collisions | ✅ audited; resolved ⌘[ double-fire (menu Command + local Button both bound — local removed, menu posts notification that view observes) |
 | Q5 | ⌘W closes window cleanly | 🟡 — single-window app, behaviour default |
 | Q6 | ⌘Q flushes ProgressStore before quit | ✅ `applicationWillTerminate` hooks UserDefaults flush + clean-quit log; DataStore writes are already synchronous + atomic |
 | Q7 | Menu enablement state | 🟡 |

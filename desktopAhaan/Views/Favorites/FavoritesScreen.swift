@@ -128,6 +128,7 @@ struct FavoriteRowView: View {
                 }
                 .buttonStyle(.plain)
                 .help("Play pronunciation")
+                .accessibilityLabel("Play pronunciation")
             }
 
             if let translit = record.transliteration, !translit.isEmpty {

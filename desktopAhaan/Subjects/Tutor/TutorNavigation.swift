@@ -64,13 +64,18 @@ struct TutorNavigationContainer<Root: View>: View {
         VStack(spacing: 0) {
             if nav.canGoBack {
                 HStack(spacing: 12) {
+                    // No local `.keyboardShortcut("[")` here — the
+                    // app-level Edit menu's "Go Back" already owns ⌘[
+                    // and posts `navigateBackCommand`, which this view
+                    // observes via .onReceive below. Wiring it on both
+                    // levels would double-pop the stack (in-view button
+                    // fires AND the notification handler fires).
                     Button { nav.pop() } label: {
                         HStack(spacing: 4) {
                             Image(systemName: "chevron.left")
                             Text("Back")
                         }
                     }
-                    .keyboardShortcut("[", modifiers: .command)
                     .help("Back (⌘[)")
 
                     if nav.path.count > 1 {

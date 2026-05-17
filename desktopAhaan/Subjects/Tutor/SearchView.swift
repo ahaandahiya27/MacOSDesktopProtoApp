@@ -14,6 +14,10 @@ private struct SearchContent: View {
     @State private var query: String = ""
     @State private var debouncedQuery: String = ""
     @State private var debounceWork: DispatchWorkItem?
+    /// Subject-scope filter. `nil` means "all subjects". Mirrors the
+    /// pack picker added to QuizBank (E3) so the kid can ask "find this
+    /// in Science but not Sanskrit" or vice versa.
+    @State private var packFilter: String? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -39,9 +43,17 @@ private struct SearchContent: View {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.gray.opacity(0.1))
             )
-            .padding(16)
+            .padding(.horizontal, 16)
+            .padding(.top, 16)
+
+            if subjectRegistry.packs.count > 1 {
+                subjectScopeFilter
+                    .padding(.horizontal, 16)
+                    .padding(.top, 8)
+            }
 
             Divider()
+                .padding(.top, 12)
 
             if query.trimmingCharacters(in: .whitespaces).isEmpty {
                 VStack(spacing: 12) {
@@ -71,22 +83,80 @@ private struct SearchContent: View {
         }
     }
 
+    /// Pack-scope filter pills. Mirrors the QuizBank pattern (E3): a
+    /// segmented "All / Science / Sanskrit" row that scopes the search
+    /// to a single subject. Hidden when only one pack is loaded.
+    private var subjectScopeFilter: some View {
+        HStack(spacing: 6) {
+            Text("Subject:")
+                .font(.caption)
+                .foregroundColor(.secondary)
+            Button {
+                packFilter = nil
+            } label: {
+                Text("All")
+                    .font(.caption.weight(packFilter == nil ? .semibold : .regular))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(
+                        Capsule().fill(packFilter == nil
+                                       ? Color.compatIndigo.opacity(0.18)
+                                       : Color.gray.opacity(0.08))
+                    )
+            }
+            .buttonStyle(.plain)
+            ForEach(subjectRegistry.packs, id: \.id) { pack in
+                Button {
+                    packFilter = pack.id
+                } label: {
+                    Text(pack.title)
+                        .font(.caption.weight(packFilter == pack.id ? .semibold : .regular))
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 4)
+                        .background(
+                            Capsule().fill(packFilter == pack.id
+                                           ? Color.compatIndigo.opacity(0.18)
+                                           : Color.gray.opacity(0.08))
+                        )
+                }
+                .buttonStyle(.plain)
+            }
+            Spacer()
+        }
+    }
+
+    /// Tokenize a multi-word query on whitespace, drop empties, lower-case.
+    /// "leaves of a plant" → ["leaves", "of", "a", "plant"]. The matcher
+    /// then requires EVERY token to match (AND-of-substrings) so the kid
+    /// can narrow results with extra words without losing recall on a
+    /// single-word query.
+    private func tokenize(_ q: String) -> [String] {
+        q.split(whereSeparator: { $0.isWhitespace })
+            .map { $0.lowercased() }
+            .filter { !$0.isEmpty }
+    }
+
     @ViewBuilder
     private var resultsList: some View {
         let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
-        let matches = subjectRegistry.packs.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
+        let tokens = tokenize(trimmed)
+        let scopedPacks: [SubjectPack] = {
+            guard let id = packFilter else { return subjectRegistry.packs }
+            return subjectRegistry.packs.filter { $0.id == id }
+        }()
+        let matches = scopedPacks.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
             // Score each concept/question by match quality, then sort
             // descending. Title/prompt prefix > title contains > body
             // contains. Stable for ties via the original collection order.
             let scoredConcepts: [(Concept, Int)] = pack.allConcepts
                 .compactMap { c in
-                    let s = scoreConcept(c, trimmed)
+                    let s = scoreConcept(c, tokens)
                     return s > 0 ? (c, s) : nil
                 }
                 .sorted { $0.1 > $1.1 }
             let scoredQuestions: [(Question, Int)] = pack.allQuestions
                 .compactMap { q in
-                    let s = scoreQuestion(q, trimmed)
+                    let s = scoreQuestion(q, tokens)
                     return s > 0 ? (q, s) : nil
                 }
                 .sorted { $0.1 > $1.1 }
@@ -167,32 +237,54 @@ private struct SearchContent: View {
         .listStyle(.inset)
     }
 
-    /// 0 = no match, higher = better match.
-    ///   100  title starts with query   (best)
-    ///    50  title contains query
-    ///    10  any explanation contains query
-    private func scoreConcept(_ c: Concept, _ q: String) -> Int {
+    /// Multi-token scoring. EVERY token must match somewhere (title,
+    /// explanations) — return 0 if any token is missing. The returned
+    /// score is the SUM of per-token scores so that matching the same
+    /// token in title (50) and explanation (10) doesn't double-count
+    /// the better signal — we keep per-token max.
+    ///
+    /// Per-token score:
+    ///   100  title prefix
+    ///    50  title contains
+    ///    10  any explanation contains
+    private func scoreConcept(_ c: Concept, _ tokens: [String]) -> Int {
+        guard !tokens.isEmpty else { return 0 }
         let opts: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
-        if let r = c.title.range(of: q, options: opts) {
-            return r.lowerBound == c.title.startIndex ? 100 : 50
+        var total = 0
+        for t in tokens {
+            var per = 0
+            if let r = c.title.range(of: t, options: opts) {
+                per = (r.lowerBound == c.title.startIndex) ? 100 : 50
+            } else {
+                for v in c.explanations.values {
+                    if v.range(of: t, options: opts) != nil { per = 10; break }
+                }
+            }
+            if per == 0 { return 0 }  // AND-of-tokens
+            total += per
         }
-        for v in c.explanations.values {
-            if v.range(of: q, options: opts) != nil { return 10 }
-        }
-        return 0
+        return total
     }
 
-    /// 0 = no match, higher = better match.
-    ///   100  prompt starts with query
-    ///    50  prompt contains query
-    ///    20  answer contains query   (answer matches rank below prompt
-    ///         matches because answers are short — "true" matches too much)
-    private func scoreQuestion(_ qn: Question, _ q: String) -> Int {
+    /// Multi-token scoring for questions.
+    ///   100  prompt prefix
+    ///    50  prompt contains
+    ///    20  answer contains   (below prompt — answers are short, "true"
+    ///         would otherwise dominate)
+    private func scoreQuestion(_ qn: Question, _ tokens: [String]) -> Int {
+        guard !tokens.isEmpty else { return 0 }
         let opts: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
-        if let r = qn.prompt.range(of: q, options: opts) {
-            return r.lowerBound == qn.prompt.startIndex ? 100 : 50
+        var total = 0
+        for t in tokens {
+            var per = 0
+            if let r = qn.prompt.range(of: t, options: opts) {
+                per = (r.lowerBound == qn.prompt.startIndex) ? 100 : 50
+            } else if qn.answer.range(of: t, options: opts) != nil {
+                per = 20
+            }
+            if per == 0 { return 0 }
+            total += per
         }
-        if qn.answer.range(of: q, options: opts) != nil { return 20 }
-        return 0
+        return total
     }
 }
