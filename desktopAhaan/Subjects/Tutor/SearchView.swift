@@ -35,6 +35,8 @@ private struct SearchContent: View {
                             .foregroundColor(.secondary)
                     }
                     .buttonStyle(.plain)
+                    .pointingCursor()
+                    .help("Clear search")
                     .accessibilityLabel("Clear search")
                 }
             }

@@ -134,6 +134,8 @@ struct CommandPalette: View {
                         .foregroundColor(.secondary)
                 }
                 .buttonStyle(.plain)
+                .pointingCursor()
+                .help("Clear search")
                 .accessibilityLabel("Clear search")
             }
         }

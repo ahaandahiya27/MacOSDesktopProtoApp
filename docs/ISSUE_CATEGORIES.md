@@ -447,7 +447,7 @@ in the project memory.
 | CP4 | Input field style unstyled relative to surrounding card-driven UI | 🟡 |
 | CP5 | Badge component used in one place; no consistent counter/badge primitive | 🟡 |
 | CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | 🟡 Phase 2 token primitives (Radius / Spacing / BrandColor) give the building blocks; semantic card-style rules deferred to Phase 6 |
-| CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | ❌ |
+| CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | 🟡 audit found only 2 icon-only Buttons without `.help()` — both "Clear search" X buttons (CommandPalette + SearchView), now have `.help("Clear search")` + `pointingCursor()`. Other icon-only buttons (read-aloud, dictation, etc.) already had `.help()`. Spacing consistency on icon+label buttons still pending |
 | CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | 🟡 cosmetic — both still compile after Phase 1's `tint:` param addition |
 
 ### Z.DM — Discover-Mode specific
@@ -485,7 +485,7 @@ in the project memory.
 | ID1 | SF Symbol weight inconsistent (some `.regular`, some `.semibold`) | ❌ |
 | ID2 | Emoji used as inline glyphs mixes with SF Symbols → tonal split | 🟡 |
 | ID3 | Hand-drawn illustrations vary widely in detail from scene to scene | 🟡 |
-| ID4 | Icon-only buttons missing labels for cursor-only macOS user — dup of CP7 | ❌ |
+| ID4 | Icon-only buttons missing labels for cursor-only macOS user — dup of CP7 | 🟡 dup of CP7 (2 sites fixed; rest already had `.help()`) |
 | ID5 | Chapter avatar / hero icon not present on chapter cards | ❌ |
 | ID6 | Status icons (✓, in-progress dot) not standardised | 🟡 Phase 1 introduced checkmark-in-dot pattern for Discover; not propagated elsewhere |
 
