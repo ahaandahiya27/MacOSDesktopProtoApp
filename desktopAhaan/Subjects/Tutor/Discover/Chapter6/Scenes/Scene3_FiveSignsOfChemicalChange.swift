@@ -73,6 +73,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                 VStack(spacing: 16) {
                     Text("Five Signs of Chemical Change")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Tap each card to learn the five clues that a chemical change happened.")

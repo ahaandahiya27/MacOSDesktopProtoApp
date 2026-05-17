@@ -56,6 +56,7 @@ struct Scene4_TheRustingExperiment: View {
                 VStack(spacing: 16) {
                     Text("The Rusting Experiment")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Three test tubes, same iron nail. Tap each to fast-forward 2 weeks.")

@@ -34,6 +34,7 @@ struct Scene8_FibreVsFibreGame: View {
             HStack {
                 Text("Fibre vs Fibre Game")
                     .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Spacer()
                 ScoreBadge(value: correctCount, total: 6)
             }

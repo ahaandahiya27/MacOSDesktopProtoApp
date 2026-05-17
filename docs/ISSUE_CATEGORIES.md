@@ -349,7 +349,7 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | 🟡 partial — scene title now hoisted into chapter-accent header (Phase 1); per-scene title text in scene bodies still inherits `.primary` |
+| CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | ✅ chrome chapter-accent title in header (Phase 1) + per-scene title pin to `BrandColor.canvasText` across 26 scene files. On-canvas titles now hold contrast in both system Light and Dark Mode |
 | CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | ✅ Phase 1 bumped bg opacity 0.10→0.14 + border 0.35→0.45. Phase 3 now pins body text to `BrandColor.canvasText` (~#212121) instead of `.primary`, giving high-contrast reading on the tinted background regardless of system colour scheme |
 | CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
 | CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ❌ |
@@ -419,7 +419,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | CN1 | Body text inside amber/yellow callouts measurably below WCAG AA on light theme | ✅ callout body text now uses `DesignTokens.BrandColor.canvasText` (fixed near-black RGB 0.13/0.13/0.13, ~#212121) instead of `.primary`. Strong contrast against the always-light Discover gradient + works in system Dark Mode where `.primary` would have rendered white-on-light → invisible |
-| CN2 | White-on-pale-tint titles below 3:1 large-text minimum | 🟡 chapter-accent title in header (Phase 1) covers chrome; per-scene title still pale |
+| CN2 | White-on-pale-tint titles below 3:1 large-text minimum | ✅ chrome chapter-accent title (Phase 1) + per-scene `Text(...).font(.largeTitle.bold())` titles in 26 scene files now pinned to `BrandColor.canvasText` (~#212121) instead of inheriting `.primary`. Light Mode change is subtle; Dark Mode no longer renders titles white-on-light (invisible) |
 | CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
 | CN4 | Hyperlink underline / link colour inside articles not audited | ❌ |
 | CN5 | Focus ring visibility on macOS on light tints unverified | ❌ |

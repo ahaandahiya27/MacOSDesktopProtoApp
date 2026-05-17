@@ -24,6 +24,7 @@ struct Scene7_CrystalGarden: View {
         VStack(spacing: 14) {
             Text("Crystal Garden")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
 
             Text("Grow crystals from a supersaturated solution")

@@ -50,6 +50,7 @@ struct Scene1_IceToWaterToSteam: View {
                 VStack(spacing: 16) {
                     Text("Ice to Water to Steam")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Slide the temperature to see H₂O change state.")

@@ -53,6 +53,7 @@ struct Scene2_WhySeasonsHappen: View {
                 VStack(spacing: 12) {
                     Text("Why Seasons Happen")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Tap each Earth position to see how the 23.5 degree tilt creates seasons.")

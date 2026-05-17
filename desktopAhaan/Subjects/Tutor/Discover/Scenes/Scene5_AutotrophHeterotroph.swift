@@ -94,6 +94,7 @@ struct Scene5_AutotrophHeterotroph: View {
         HStack {
             Text("Autotroph or Heterotroph?")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
             Spacer()
             ScoreBadge(value: correctCount, total: 12)
         }

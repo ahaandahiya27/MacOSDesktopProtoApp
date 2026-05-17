@@ -61,6 +61,7 @@ struct Scene3_MoonPhasesWheel: View {
                 VStack(spacing: 12) {
                     Text("Moon Phases")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Tap each phase to learn what you see in the sky.")

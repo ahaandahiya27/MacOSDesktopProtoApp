@@ -25,6 +25,7 @@ struct Scene2_TearingVsBurningPaper: View {
                 VStack(spacing: 16) {
                     Text("Tearing vs Burning Paper")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Two actions on the same paper. One is physical, the other chemical.")

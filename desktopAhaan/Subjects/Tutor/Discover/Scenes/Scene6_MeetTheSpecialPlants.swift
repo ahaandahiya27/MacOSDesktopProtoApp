@@ -12,6 +12,7 @@ struct Scene6_MeetTheSpecialPlants: View {
         VStack(spacing: 14) {
             Text("Meet the Special Plants")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
             Text("Some plants don't make their own food. Tap each card to flip and meet them.")
                 .font(.callout)

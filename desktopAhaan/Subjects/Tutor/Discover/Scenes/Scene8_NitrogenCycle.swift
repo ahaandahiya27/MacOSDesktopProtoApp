@@ -57,6 +57,7 @@ struct Scene8_NitrogenCycle: View {
         VStack(spacing: 14) {
             Text("The Nitrogen Cycle")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
             Text("Tap each arrow to see what happens. Finish all four to unlock the question.")
                 .font(.callout)

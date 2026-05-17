@@ -64,6 +64,7 @@ struct Scene9_BossQuiz_Ch4: View {
         VStack(spacing: 14) {
             Text("Boss Quiz")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
 
             ProgressView(value: Double(currentQ), total: 5)

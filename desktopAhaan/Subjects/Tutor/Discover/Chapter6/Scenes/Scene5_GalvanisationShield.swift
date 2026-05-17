@@ -29,6 +29,7 @@ struct Scene5_GalvanisationShield: View {
                 VStack(spacing: 16) {
                     Text("Galvanisation Shield")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("How do we stop iron from rusting?")

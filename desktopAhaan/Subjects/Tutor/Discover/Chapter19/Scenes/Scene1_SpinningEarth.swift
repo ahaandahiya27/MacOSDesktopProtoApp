@@ -23,6 +23,7 @@ struct Scene1_SpinningEarth: View {
                 VStack(spacing: 16) {
                     Text("Spinning Earth")
                         .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.top, 18)
 
                     Text("Tap Spin to watch Earth rotate and create day & night.")

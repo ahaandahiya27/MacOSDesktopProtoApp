@@ -26,6 +26,7 @@ struct Scene7_PitcherPlantTrap: View {
         VStack(spacing: 14) {
             Text("The Pitcher Plant Trap")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
 
             ZStack {

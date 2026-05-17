@@ -32,6 +32,7 @@ struct Scene2_PhotosynthesisLab: View {
         VStack(spacing: 18) {
             Text("Photosynthesis Lab")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
 
             // Fuel buttons

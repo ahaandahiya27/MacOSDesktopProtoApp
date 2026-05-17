@@ -47,6 +47,7 @@ struct Scene3_InsideALeaf: View {
         VStack(spacing: 12) {
             Text("Inside a Leaf")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
             Text("Tap each part to learn what it does.")
                 .font(.callout)

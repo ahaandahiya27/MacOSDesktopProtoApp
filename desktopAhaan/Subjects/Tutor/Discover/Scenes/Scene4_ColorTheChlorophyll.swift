@@ -42,6 +42,7 @@ struct Scene4_ColorTheChlorophyll: View {
         VStack(spacing: 14) {
             Text("Why are leaves green?")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
             Text("White light is a rainbow. Tap each colour and see what chlorophyll does with it.")
                 .font(.callout)

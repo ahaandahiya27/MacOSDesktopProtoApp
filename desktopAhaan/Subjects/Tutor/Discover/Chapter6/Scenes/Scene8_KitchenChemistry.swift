@@ -57,6 +57,7 @@ struct Scene8_KitchenChemistry: View {
         VStack(spacing: 14) {
             Text("Kitchen Chemistry")
                 .font(.largeTitle.bold())
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(.top, 18)
 
             Text("Tap an experiment to trigger the reaction")
