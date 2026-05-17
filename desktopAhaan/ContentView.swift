@@ -103,6 +103,48 @@ struct ContentView: View {
         }
     }
 
+    /// Per-kind subgroup label inside the Recent section ("Concepts" /
+    /// "Questions"). Same `.uppercase + .caption2.weight(.semibold)`
+    /// treatment used by macOS sidebars for tertiary group labels.
+    /// Marked `.accessibilityHidden` because the screen-reader already
+    /// announces each row's kind via its icon + title.
+    @ViewBuilder
+    private func recentGroupHeader(_ title: String) -> some View {
+        Text(title)
+            .font(.caption2.weight(.semibold))
+            .foregroundColor(.secondary)
+            .textCase(.uppercase)
+            .listRowBackground(Color.clear)
+            .accessibilityHidden(true)
+    }
+
+    /// One Recent-item row. Extracted from the inline `ForEach` so the
+    /// two type-grouped iterations share rendering.
+    @ViewBuilder
+    private func recentRow(_ item: RecentItem) -> some View {
+        Button {
+            appState.openRecent(item)
+        } label: {
+            Label {
+                VStack(alignment: .leading, spacing: 1) {
+                    Text(item.title)
+                        .font(.body)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                    Text(item.subtitle)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                }
+            } icon: {
+                Image(systemName: item.systemImage)
+            }
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .help("Jump to \(item.title)")
+    }
+
     // MARK: - Sidebar
 
     private var sidebar: some View {
@@ -175,28 +217,15 @@ struct ContentView: View {
 
             if !appState.recentItems.isEmpty {
                 Section(header: recentHeader) {
-                    ForEach(appState.recentItems) { item in
-                        Button {
-                            appState.openRecent(item)
-                        } label: {
-                            Label {
-                                VStack(alignment: .leading, spacing: 1) {
-                                    Text(item.title)
-                                        .font(.body)
-                                        .lineLimit(1)
-                                        .truncationMode(.tail)
-                                    Text(item.subtitle)
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                        .lineLimit(1)
-                                }
-                            } icon: {
-                                Image(systemName: item.systemImage)
-                            }
-                        }
-                        .buttonStyle(.plain)
-                        .pointingCursor()
-                        .help("Jump to \(item.title)")
+                    let recentConcepts = appState.recentItems.filter { $0.kind == .concept }
+                    let recentQuestions = appState.recentItems.filter { $0.kind == .question }
+                    if !recentConcepts.isEmpty {
+                        recentGroupHeader("Concepts")
+                        ForEach(recentConcepts) { item in recentRow(item) }
+                    }
+                    if !recentQuestions.isEmpty {
+                        recentGroupHeader("Questions")
+                        ForEach(recentQuestions) { item in recentRow(item) }
                     }
                 }
             }

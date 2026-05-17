@@ -412,7 +412,7 @@ in the project memory.
 | HR4 | Section eyebrow / kicker labels missing in Discover scenes | ❌ |
 | HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | 🟡 per-scene |
 | HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | 🟡 partial — scene counter "Scene N of M" added to header (Phase 1) |
-| HR7 | Recent items list mixes chapter/topic/question types with identical row style | ❌ Phase 4 |
+| HR7 | Recent items list mixes chapter/topic/question types with identical row style | ✅ sidebar Recent section now grouped by kind — uppercase "CONCEPTS" / "QUESTIONS" mini-headers separate concept and question rows. Icons were already type-distinct (`lightbulb` vs `questionmark.circle`); the grouping reinforces it at the layout level |
 
 ### Z.CN — Contrast & legibility
 
@@ -515,7 +515,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | IF1 | Wasted bottom canvas on Discover scenes — dup of LY1 | 🟡 |
-| IF2 | Sidebar "Recent" mixes 3 entity types without grouping | 🟡 Phase 4 |
+| IF2 | Sidebar "Recent" mixes 3 entity types without grouping | ✅ grouped by kind (Concepts / Questions). The original audit assumed 3 kinds (chapter/topic/question) but `RecentItem.Kind` is actually 2 (concept/question), so 2-way grouping closes this cleanly |
 | IF3 | Quiz Bank header lacks at-a-glance filter affordance | ❌ |
 | IF4 | Concept detail page layout puts useCases / beyondTheBook / explanations linearly | ❌ |
 | IF5 | No reading-time / scene-duration estimate per Discover card | ❌ |
