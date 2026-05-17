@@ -7,6 +7,7 @@ struct Scene3_RefractionPool: View {
     let onComplete: () -> Void
 
     @State private var inWater = false
+    @State private var poolDepthM: Double = 2          // free-play: real pool depth in metres
 
     var body: some View {
         VStack(spacing: 14) {
@@ -54,9 +55,37 @@ struct Scene3_RefractionPool: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            DiscoveryWidget(
+                title: "Discovery — apparent vs real pool depth",
+                subtitle: "Apparent depth = real depth ÷ refractive index (water ≈ 1.33). Drag to see why pools look shallower.",
+                value: $poolDepthM,
+                range: 0.5...4,
+                step: 0.1,
+                valueLabel: { v in String(format: "Real depth: %.1f m", v) },
+                output: apparentDepthExplanation
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func apparentDepthExplanation(_ real: Double) -> String {
+        let apparent = real / 1.33
+        let label: String
+        switch real {
+        case ..<1:
+            label = "Wading pool. Looks even shallower — pretty safe for tiny kids."
+        case ..<2:
+            label = "Children's pool. Looks ~25% shallower — common cause of misjudged dives."
+        case 2..<3:
+            label = "Standard adult pool. Looks deceptively safer than it is — always check the depth sign."
+        default:
+            label = "Deep dive zone. Looks far more inviting than it should — never jump without checking."
+        }
+        return String(format: "Looks like %.1f m. (Real: %.1f m.) ", apparent, real) + label
     }
 }
