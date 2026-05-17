@@ -276,7 +276,7 @@ Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Disc
 | T2 | UI tests (XCUIAutomation) | ❌ none |
 | T3 | Smoke test for navigation | 🟡 covered indirectly by TutorNavigationTests, no end-to-end click test |
 | T4 | Snapshot tests | ❌ |
-| T5 | CI on every commit | ✅ `.github/workflows/build-and-test.yml` runs `scripts/ci-build-test.sh` on every push to main + every PR — macos-13 runner with MACOSX_DEPLOYMENT_TARGET=11.0 so target-incompat APIs surface as build errors before the iMac pulls |
+| T5 | CI on every commit | 🟡 `.github/workflows/build-and-test.yml` authored locally — calls `scripts/ci-build-test.sh` on push/PR via macos-13 runner with MACOSX_DEPLOYMENT_TARGET=11.0. **Pending push**: GitHub blocks the file until the Personal Access Token gains the `workflow` scope. Flip to ✅ once the workflow is on origin |
 | T6 | Pre-commit hooks | ✅ scripts/hooks/{pre-commit,pre-push} — try!/as! gate + ViewBuilder warn on commit; full ci-build-test.sh on push; install via scripts/install-git-hooks.sh |
 | T7 | Static analysis (treat warnings as errors) | ✅ build is zero-warning (S1); flipping the project setting next |
 
