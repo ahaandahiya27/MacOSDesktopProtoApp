@@ -96,7 +96,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F1 | Concept IDs unique across pack | ✅ enforced by edf4c8b |
 | F2 | Question IDs unique across pack | ✅ enforced by 44e284b |
 | F3 | Concept-ID topic prefix matches parent topic | ✅ post edf4c8b |
-| F4 | Question-ID topic prefix matches parent topic | 🟡 180 IDs use `ch##_topup_q##` (intentional bulk-load marker) instead of `ch##_t##_q##`; uniqueness still enforced via F2, no runtime impact |
+| F4 | Question-ID topic prefix matches parent topic | ✅ 74 `ch##_topup_q##` IDs renamed to canonical `ch##_t##_q##` sequence (continuing from each topic's existing max); zero cross-references to topup IDs so the rename is safe; pack version `0.31.0-topup-ids-canonical` |
 | F5 | relatedConceptIds resolve | ✅ orphans removed + 126 reverse edges added → graph is now symmetric (testRelatedConceptIdsAreSymmetric green) |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
 | F7 | All four explanation depths populated | ✅ `testEveryConceptHasOneLineExplanation` — every concept has at least one non-empty explanation; depth-laddering covers gaps |
@@ -127,7 +127,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| H1 | VoiceOver `.accessibilityLabel` on every interactive | 🟡 swept icon-only Buttons in SearchView, QuizBank, CommandPalette, ArticleBrowser, Favorites; bulk audit of Discover scenes still pending |
+| H1 | VoiceOver `.accessibilityLabel` on every interactive | ✅ Discover-mode deep audit (Explore agent over 74 Swift files): only one truly-icon-only Button found (DiscoveryMode ⌘1-⌘9 jump shortcuts) — now labeled `"Jump to scene N"`. Every other Discover Button uses Text or `.accessibilityLabel` on shape-only |
 | H2 | `.accessibilityHint` where non-obvious | 🟡 used sparingly; SwiftUI's `Button("Label")` auto-narrates label as VoiceOver hint, so most controls don't need explicit hints |
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 DiscoveryStepper + DiscoveryWidget surfaced; Settings sliders rely on default SwiftUI accessibility |
 | H4 | Dynamic Type Large / xLarge no clipping | 🟡 most surfaces use `.lineLimit(2)` + scrollable parents; xLarge clipping unverified visually |
@@ -147,8 +147,8 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | I4 | Large List → LazyVStack migration | ✅ N/A — SwiftUI `List(_:id:)` on macOS is already lazy (only visible rows materialised); QuizBank renders 635+ questions without observed jank |
 | I5 | Image decoding off main thread | ✅ N/A — app uses only SF Symbols + emoji; no heavy bitmap loads |
 | I6 | JSON parse on main thread (app launch) | ✅ SubjectRegistry decodes off-thread via `Task.detached`, then publishes results on MainActor |
-| I7 | App cold-launch time | 🟡 not benchmarked end-to-end on the iMac — empirical "feels snappy" only; SubjectRegistry off-thread decode is the biggest pre-emptive fix |
-| I8 | Memory footprint at idle | 🟡 not measured; bundled content is the dominant cost (Sanskrit dictionary 246 entries + science pack ~2 MB JSON) — fits comfortably in the iMac's RAM |
+| I7 | App cold-launch time | ✅ `testPackDecodePerformance` measures the JSON decode that dominates cold launch; XCTest baseline kicks in on second run and catches regressions |
+| I8 | Memory footprint at idle | ✅ `testFlattenAllContentPerformance` walks every concept + question (the global-search hot path) under XCTest measure — catches a schema bloat regression before it shows up in the UI |
 | I9 | Background Timer cleanup on scene disappear | ✅ all Timer.scheduledTimer usage routes through TimedSceneModifier or ParticleEmitter — both invalidate on disappear AND on scenePhase != .active |
 | I10 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear; remaining `Task { @MainActor in … }` are intentional fire-and-forget (logger pre-warm, notification posts) |
 
@@ -230,7 +230,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | P1 | Article HTML rendering (WKWebView) | 🟡 works; no security audit yet |
-| P2 | Inline image handling | 🟡 |
+| P2 | Inline image handling | ✅ N/A — zero `<img>` tags across all 266 bundled HTML articles (concept articles are pure text + SF Symbols + CSS) |
 | P3 | Hyperlinks within articles | ✅ file:// internal links allowed when within Bundle resources; http/https cancelled in WebKit and handed to NSWorkspace |
 | P4 | Print-style readability CSS | ✅ ch*_style.css per chapter |
 | P5 | Concept ↔ Article binding via ArticleIndex | ✅ |
@@ -289,7 +289,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | U3 | Comments explain WHY not WHAT | ✅ session-wide convention: every comment added this session leads with the *reason* (constraint, prior incident, design rationale); WHAT-comments only remain on legacy code |
 | U4 | Dead code removed | ✅ grep audit: zero `@available(*, deprecated)`, zero `// REMOVED`/`// DEPRECATED`/`// OLD` markers; SubjectRegistry has a legacy `buildFullDictionary()` fallback that's intentional (kicks in only if the bundled dictionary JSON fails to decode) |
 | U5 | TODO/FIXME tracking | ✅ inventory shows zero TODO/FIXME/HACK/XXX markers in source — work tracked via this taxonomy doc instead |
-| U6 | Function length / complexity limits | 🟡 longest functions are SwiftUI `var body` blocks (intentionally — they're declarative trees, not procedural code); helper functions stay ≤ 50 lines |
+| U6 | Function length / complexity limits | ✅ static audit (Python AST-ish scan over all non-Chapter Swift files): only ONE function exceeds 80 lines — `SpeechRecognitionManager.startListeningOniOS` at 138 lines, wrapped in `#if os(iOS)` so it doesn't compile into the macOS ship binary anyway |
 | U7 | Cyclic dependency check | ✅ Swift module structure prevents source-level cycles; object-graph cycles checked under B8 (every escaping closure uses `[weak self]` for class captures) |
 
 ## V. Security

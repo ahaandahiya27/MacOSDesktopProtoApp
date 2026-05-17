@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.31.0-related-symmetric",
+  "version": "0.31.0-topup-ids-canonical",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -1035,7 +1035,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch01_topup_q01",
+              "id": "ch01_t01_q06",
               "prompt": "Plants that make their own food are called:",
               "questionType": "mcq",
               "options": [
@@ -1056,7 +1056,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q02",
+              "id": "ch01_t01_q07",
               "prompt": "Photosynthesis takes place mainly in:",
               "questionType": "mcq",
               "options": [
@@ -1077,7 +1077,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q03",
+              "id": "ch01_t01_q08",
               "prompt": "Chlorophyll's main job is to:",
               "questionType": "mcq",
               "options": [
@@ -1098,7 +1098,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q04",
+              "id": "ch01_t01_q09",
               "prompt": "Stomata are:",
               "questionType": "mcq",
               "options": [
@@ -1119,7 +1119,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q05",
+              "id": "ch01_t01_q10",
               "prompt": "Cuscuta (dodder) is a:",
               "questionType": "mcq",
               "options": [
@@ -1140,7 +1140,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q06",
+              "id": "ch01_t01_q11",
               "prompt": "Pitcher plants are:",
               "questionType": "mcq",
               "options": [
@@ -1161,7 +1161,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q07",
+              "id": "ch01_t01_q12",
               "prompt": "Saprophytes feed on:",
               "questionType": "mcq",
               "options": [
@@ -1182,7 +1182,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q08",
+              "id": "ch01_t01_q13",
               "prompt": "Lichens are made of:",
               "questionType": "mcq",
               "options": [
@@ -1203,7 +1203,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q09",
+              "id": "ch01_t01_q14",
               "prompt": "Rhizobium bacteria live in the:",
               "questionType": "mcq",
               "options": [
@@ -1224,7 +1224,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q10",
+              "id": "ch01_t01_q15",
               "prompt": "True or false: Plants release oxygen during photosynthesis.",
               "questionType": "trueFalse",
               "options": [
@@ -1243,7 +1243,7 @@
               "variations": []
             },
             {
-              "id": "ch01_topup_q11",
+              "id": "ch01_t01_q16",
               "prompt": "Match each plant type with its feeding method.",
               "questionType": "matchTheFollowing",
               "options": null,
@@ -3775,7 +3775,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch02_topup_q01",
+              "id": "ch02_t01_q05",
               "prompt": "Digestion of food in humans starts in the:",
               "questionType": "mcq",
               "options": [
@@ -3796,7 +3796,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q02",
+              "id": "ch02_t01_q06",
               "prompt": "Saliva contains an enzyme that digests:",
               "questionType": "mcq",
               "options": [
@@ -3817,7 +3817,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q03",
+              "id": "ch02_t01_q07",
               "prompt": "Adult humans typically have ____ teeth.",
               "questionType": "mcq",
               "options": [
@@ -3838,7 +3838,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q04",
+              "id": "ch02_t01_q08",
               "prompt": "Incisors are mainly used for:",
               "questionType": "mcq",
               "options": [
@@ -3859,7 +3859,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q05",
+              "id": "ch02_t01_q09",
               "prompt": "Canines are mainly used for:",
               "questionType": "mcq",
               "options": [
@@ -3880,7 +3880,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q06",
+              "id": "ch02_t01_q10",
               "prompt": "Hydrochloric acid in the stomach:",
               "questionType": "mcq",
               "options": [
@@ -3901,7 +3901,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q07",
+              "id": "ch02_t01_q11",
               "prompt": "Most nutrient absorption happens in the:",
               "questionType": "mcq",
               "options": [
@@ -3922,7 +3922,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q08",
+              "id": "ch02_t01_q12",
               "prompt": "Bile is produced by the ____ and stored in the ____.",
               "questionType": "mcq",
               "options": [
@@ -3943,7 +3943,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q09",
+              "id": "ch02_t01_q13",
               "prompt": "Cows are ruminants because they:",
               "questionType": "mcq",
               "options": [
@@ -3964,7 +3964,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q10",
+              "id": "ch02_t01_q14",
               "prompt": "Amoeba eats by:",
               "questionType": "mcq",
               "options": [
@@ -3986,7 +3986,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q11",
+              "id": "ch02_t01_q15",
               "prompt": "Tiny finger-like projections inside the small intestine that increase absorption surface area are called ____.",
               "questionType": "fillInBlank",
               "options": null,
@@ -4001,7 +4001,7 @@
               "variations": []
             },
             {
-              "id": "ch02_topup_q12",
+              "id": "ch02_t01_q16",
               "prompt": "True or false: Most of what we call 'taste' is actually smell.",
               "questionType": "trueFalse",
               "options": [
@@ -5776,7 +5776,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch03_topup_q01",
+              "id": "ch03_t01_q04",
               "prompt": "Wool is a:",
               "questionType": "mcq",
               "options": [
@@ -5797,7 +5797,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q02",
+              "id": "ch03_t01_q05",
               "prompt": "Silk is produced by:",
               "questionType": "mcq",
               "options": [
@@ -5818,7 +5818,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q03",
+              "id": "ch03_t01_q06",
               "prompt": "Sericulture is the rearing of:",
               "questionType": "mcq",
               "options": [
@@ -5839,7 +5839,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q04",
+              "id": "ch03_t01_q07",
               "prompt": "The process of removing fleece from sheep is called:",
               "questionType": "mcq",
               "options": [
@@ -5861,7 +5861,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q05",
+              "id": "ch03_t01_q08",
               "prompt": "Sorter's disease can affect workers who:",
               "questionType": "mcq",
               "options": [
@@ -5883,7 +5883,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q06",
+              "id": "ch03_t01_q09",
               "prompt": "Reeling is:",
               "questionType": "mcq",
               "options": [
@@ -5904,7 +5904,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q07",
+              "id": "ch03_t01_q10",
               "prompt": "Which is NOT a wool-producing animal?",
               "questionType": "mcq",
               "options": [
@@ -5925,7 +5925,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q08",
+              "id": "ch03_t01_q11",
               "prompt": "Silk is mainly composed of the protein:",
               "questionType": "mcq",
               "options": [
@@ -5947,7 +5947,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q09",
+              "id": "ch03_t01_q12",
               "prompt": "Pashmina wool comes from:",
               "questionType": "mcq",
               "options": [
@@ -5968,7 +5968,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q10",
+              "id": "ch03_t01_q13",
               "prompt": "The killing of silkworms before they emerge is done because:",
               "questionType": "mcq",
               "options": [
@@ -5989,7 +5989,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q11",
+              "id": "ch03_t01_q14",
               "prompt": "The thick covering of silk that a silkworm spins around itself is called a ____.",
               "questionType": "fillInBlank",
               "options": null,
@@ -6004,7 +6004,7 @@
               "variations": []
             },
             {
-              "id": "ch03_topup_q12",
+              "id": "ch03_t01_q15",
               "prompt": "True or false: Cotton is a plant fibre, not an animal fibre.",
               "questionType": "trueFalse",
               "options": [
@@ -7778,7 +7778,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch04_topup_q01",
+              "id": "ch04_t01_q03",
               "prompt": "Heat flows from a body at higher temperature to a body at:",
               "questionType": "mcq",
               "options": [
@@ -7799,7 +7799,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q02",
+              "id": "ch04_t01_q04",
               "prompt": "Temperature is measured with a:",
               "questionType": "mcq",
               "options": [
@@ -7820,7 +7820,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q03",
+              "id": "ch04_t01_q05",
               "prompt": "Normal human body temperature is about:",
               "questionType": "mcq",
               "options": [
@@ -7841,7 +7841,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q04",
+              "id": "ch04_t01_q06",
               "prompt": "Conduction transfers heat through:",
               "questionType": "mcq",
               "options": [
@@ -7862,7 +7862,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q05",
+              "id": "ch04_t01_q07",
               "prompt": "Convection happens mainly in:",
               "questionType": "mcq",
               "options": [
@@ -7884,7 +7884,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q06",
+              "id": "ch04_t01_q08",
               "prompt": "Radiation transfers heat through:",
               "questionType": "mcq",
               "options": [
@@ -7905,7 +7905,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q07",
+              "id": "ch04_t01_q09",
               "prompt": "Materials that conduct heat well are called:",
               "questionType": "mcq",
               "options": [
@@ -7926,7 +7926,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q08",
+              "id": "ch04_t01_q10",
               "prompt": "Wool is a good insulator because:",
               "questionType": "mcq",
               "options": [
@@ -7947,7 +7947,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q09",
+              "id": "ch04_t01_q11",
               "prompt": "Land and sea breezes happen because:",
               "questionType": "mcq",
               "options": [
@@ -7968,7 +7968,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q10",
+              "id": "ch04_t01_q12",
               "prompt": "Dark-coloured clothes are uncomfortable in summer because:",
               "questionType": "mcq",
               "options": [
@@ -7989,7 +7989,7 @@
               "variations": []
             },
             {
-              "id": "ch04_topup_q11",
+              "id": "ch04_t01_q13",
               "prompt": "True or false: A vacuum flask uses both reflection and a vacuum to slow heat transfer.",
               "questionType": "trueFalse",
               "options": [
@@ -9485,7 +9485,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch05_topup_q01",
+              "id": "ch05_t01_q04",
               "prompt": "Lemons, oranges, and tamarind are sour because they contain:",
               "questionType": "mcq",
               "options": [
@@ -9506,7 +9506,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q02",
+              "id": "ch05_t01_q05",
               "prompt": "Soap is a:",
               "questionType": "mcq",
               "options": [
@@ -9527,7 +9527,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q03",
+              "id": "ch05_t01_q06",
               "prompt": "The pH of pure water is:",
               "questionType": "mcq",
               "options": [
@@ -9549,7 +9549,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q04",
+              "id": "ch05_t01_q07",
               "prompt": "Litmus paper turns RED in:",
               "questionType": "mcq",
               "options": [
@@ -9571,7 +9571,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q05",
+              "id": "ch05_t01_q08",
               "prompt": "Litmus paper turns BLUE in:",
               "questionType": "mcq",
               "options": [
@@ -9592,7 +9592,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q06",
+              "id": "ch05_t01_q09",
               "prompt": "An indicator that turns pink in basic solutions is:",
               "questionType": "mcq",
               "options": [
@@ -9613,7 +9613,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q07",
+              "id": "ch05_t01_q10",
               "prompt": "Turmeric (haldi) is an indicator that:",
               "questionType": "mcq",
               "options": [
@@ -9634,7 +9634,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q08",
+              "id": "ch05_t01_q11",
               "prompt": "Acid + base → salt + water. This reaction is called:",
               "questionType": "mcq",
               "options": [
@@ -9655,7 +9655,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q09",
+              "id": "ch05_t01_q12",
               "prompt": "An ant sting causes a burning sensation because the ant injects:",
               "questionType": "mcq",
               "options": [
@@ -9676,7 +9676,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q10",
+              "id": "ch05_t01_q13",
               "prompt": "To treat a bee sting (which is acidic), one can apply a mild:",
               "questionType": "mcq",
               "options": [
@@ -9698,7 +9698,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q11",
+              "id": "ch05_t01_q14",
               "prompt": "Acid rain forms when:",
               "questionType": "mcq",
               "options": [
@@ -9720,7 +9720,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q12",
+              "id": "ch05_t01_q15",
               "prompt": "Antacids work by:",
               "questionType": "mcq",
               "options": [
@@ -9742,7 +9742,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q13",
+              "id": "ch05_t01_q16",
               "prompt": "True or false: Soil that is too acidic can be improved by adding lime (a base).",
               "questionType": "trueFalse",
               "options": [
@@ -9761,7 +9761,7 @@
               "variations": []
             },
             {
-              "id": "ch05_topup_q14",
+              "id": "ch05_t01_q17",
               "prompt": "The pH scale runs from ____ to ____.",
               "questionType": "fillInBlank",
               "options": null,
@@ -11910,7 +11910,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch07_topup_q01",
+              "id": "ch07_t01_q04",
               "prompt": "Weather is:",
               "questionType": "mcq",
               "options": [
@@ -11931,7 +11931,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q02",
+              "id": "ch07_t01_q05",
               "prompt": "Climate is:",
               "questionType": "mcq",
               "options": [
@@ -11953,7 +11953,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q03",
+              "id": "ch07_t01_q06",
               "prompt": "A thick layer of fat (blubber) under the skin helps:",
               "questionType": "mcq",
               "options": [
@@ -11975,7 +11975,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q04",
+              "id": "ch07_t01_q07",
               "prompt": "Why are polar bears white?",
               "questionType": "mcq",
               "options": [
@@ -11996,7 +11996,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q05",
+              "id": "ch07_t01_q08",
               "prompt": "Camels are adapted to deserts because they:",
               "questionType": "mcq",
               "options": [
@@ -12018,7 +12018,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q06",
+              "id": "ch07_t01_q09",
               "prompt": "Tropical rainforests are typically:",
               "questionType": "mcq",
               "options": [
@@ -12039,7 +12039,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q07",
+              "id": "ch07_t01_q10",
               "prompt": "Migratory birds fly thousands of km because:",
               "questionType": "mcq",
               "options": [
@@ -12060,7 +12060,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q08",
+              "id": "ch07_t01_q11",
               "prompt": "Penguins are well-adapted to the cold because they:",
               "questionType": "mcq",
               "options": [
@@ -12081,7 +12081,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q09",
+              "id": "ch07_t01_q12",
               "prompt": "Animals that are mainly active at NIGHT are called:",
               "questionType": "mcq",
               "options": [
@@ -12103,7 +12103,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q10",
+              "id": "ch07_t01_q13",
               "prompt": "Toucans live in tropical forests; their LARGE beak helps them:",
               "questionType": "mcq",
               "options": [
@@ -12124,7 +12124,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q11",
+              "id": "ch07_t01_q14",
               "prompt": "Why do lions and tigers have shorter ears than elephants?",
               "questionType": "mcq",
               "options": [
@@ -12145,7 +12145,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q12",
+              "id": "ch07_t01_q15",
               "prompt": "Hibernation is:",
               "questionType": "mcq",
               "options": [
@@ -12167,7 +12167,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q13",
+              "id": "ch07_t01_q16",
               "prompt": "True or false: Camels can drink 100 litres of water in just a few minutes.",
               "questionType": "trueFalse",
               "options": [
@@ -12186,7 +12186,7 @@
               "variations": []
             },
             {
-              "id": "ch07_topup_q14",
+              "id": "ch07_t01_q17",
               "prompt": "Animals active in the daytime are called ____.",
               "questionType": "fillInBlank",
               "options": null,

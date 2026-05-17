@@ -233,6 +233,7 @@ struct DiscoverShell<SceneBody: View>: View {
                     KeyEquivalent(Character("\(i + 1)")),
                     modifiers: .command
                 )
+                .accessibilityLabel("Jump to scene \(i + 1)")
             }
         }
         .frame(width: 0, height: 0)

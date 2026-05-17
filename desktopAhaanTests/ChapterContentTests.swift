@@ -222,4 +222,51 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertTrue(empty.isEmpty,
                       "Concepts with empty beyondTheBook: \(empty.prefix(5).joined(separator: ", "))")
     }
+
+    // MARK: - Performance benchmarks (I7 / I8)
+    //
+    // XCTest's `measure(_:)` runs the block multiple times and reports the
+    // baseline + standard deviation. These tests catch a regression where
+    // someone introduces a synchronous slow operation on the launch path.
+    // Numbers are reported relative to the Xcode-computed baseline — fail
+    // if the standard deviation drifts above the threshold Xcode sets when
+    // you "Set Baseline" in the test result. Today's runs are informational.
+
+    /// I7 — decode the bundled science_class7.json from raw Data. This is
+    /// the dominant cost of SubjectRegistry.reload(), so measuring it
+    /// directly is a stand-in for cold-launch JSON cost.
+    func testPackDecodePerformance() throws {
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json") else {
+            XCTFail("science_class7.json not in bundle")
+            return
+        }
+        let data = try Data(contentsOf: url)
+        measure {
+            for _ in 0..<5 {
+                _ = try? JSONDecoder().decode(SubjectPack.self, from: data)
+            }
+        }
+    }
+
+    /// I8 — touching every concept + question once (the work the global
+    /// search does on first query). Bounds memory-walk cost so a future
+    /// schema bloat shows up here before it shows up in the UI.
+    @MainActor func testFlattenAllContentPerformance() throws {
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        measure {
+            for _ in 0..<10 {
+                var n = 0
+                for c in pack.allConcepts { n += c.title.count }
+                for q in pack.allQuestions { n += q.prompt.count }
+                _ = n  // prevent dead-code elimination
+            }
+        }
+    }
 }
