@@ -50,6 +50,13 @@ struct Scene4_ForestAsSponge: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bare patch vs grass patch",
+                detail: "Find two small patches of ground in a park — one bare soil, one covered in grass. Sprinkle 1 litre of water on each. Time how long until water vanishes (gets absorbed). Grass-patch beats bare-soil every time."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

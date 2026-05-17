@@ -480,6 +480,38 @@ Final scene-level coverage:
 
 The "no chapter has less functionality than another" goal at the sidebar layer is essentially achieved: every chapter (Ch 8–18) now has at least 6 of 8 learning scenes carrying the LookingAhead sidebar. Future passes can deepen TryAtHome coverage and continue concept-level article authoring.
 
+## Sidebar coverage pass 5 — universal TryAtHome (71 more scenes → 100%)
+
+Architect closes the asymmetry. After pass 4, `LookingAheadCallout` was at 89% of learning scenes while `TryAtHomeCallout` was at 19%. Pass 5 brings TryAtHome to **100% parity** — every one of the 88 learning scenes now has a unique, doable, Class-7-appropriate experiment.
+
+Single Python sweep wrote 71 new TryAtHome callouts, each tied precisely to the scene's concept. Examples:
+
+- **Ch 8 / HotAirRises** → paper spiral above a candle (rising hot air spins it).
+- **Ch 9 / SoilProfileDig** → dig a foot-deep pit in the garden to see O/A/B horizons live.
+- **Ch 10 / RestVsRun** → count breaths sitting still, then after running stairs three times.
+- **Ch 11 / HeartBeats** → paper-tube stethoscope on a friend's chest.
+- **Ch 11 / KidneyFilter** → drink 500 mL, time the bathroom break.
+- **Ch 12 / FlowerAnatomy** → dissect a hibiscus on a plate.
+- **Ch 12 / Budding** → bake bread and watch yeast inflate the dough.
+- **Ch 13 / Sundial** → stick + chalk circle in a sunny patch, mark shadow each hour.
+- **Ch 14 / SafetyLab** → inspect an unplugged 3-pin plug (live + neutral + earth pins).
+- **Ch 15 / MirrorMirror** → mirror + torch on A4 with a protractor to verify angle of incidence = reflection.
+- **Ch 16 / WaterPie** → measure a litre, pour out 30 mL freshwater, then 0.6 mL usable.
+- **Ch 17 / DecomposerCycle** → glass jar with fruit peels + soil; watch humus form over 4 weeks.
+- **Ch 18 / SortContaminants** → examine kitchen sink-strainer catch and sort organic vs inorganic.
+
+(Full catalogue of 71 entries in the commit body.)
+
+**Final scene-level coverage:**
+
+| Sidebar | Coverage of 88 learning scenes |
+|---|---|
+| TryAtHomeCallout | **88 / 88 = 100%** |
+| LookingAheadCallout | 79 / 88 = 89% |
+| Both | 79 / 88 = 89% |
+
+**Every learning scene now has at least one hands-on experiment.** 89% of learning scenes have both a hands-on experiment AND a Class 10/12/JEE/NEET continuity sidebar. The "consistent functionality across chapters" architectural goal at the scene level is now fully met.
+
 ---
 
 *Generated at: 2026-05-17.*

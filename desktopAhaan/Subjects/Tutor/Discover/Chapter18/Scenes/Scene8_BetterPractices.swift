@@ -52,6 +52,13 @@ struct Scene8_BetterPractices: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "One-week waste diary",
+                detail: "Track everything that goes down your drains and into your trash for one week. List patterns. Pick ONE thing to change next week — usually cooking oil, sanitary waste, or single-use plastic. Small habits compound."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

@@ -48,6 +48,13 @@ struct Scene7_FuseMCB: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Find your MCB box",
+                detail: "Locate the main switchboard or MCB box at home. Each MCB controls one circuit (bathroom, kitchen, living room). Try switching one off and see which lights/sockets stop. Now you know which fuse handles what."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -53,6 +53,13 @@ struct Scene2_SeriesVsParallel: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Two-bulb brightness test",
+                detail: "Take two identical small bulbs and a battery. Wire them in series and switch on — both dim. Re-wire the same two in parallel — both bright. Same battery, very different brightness."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

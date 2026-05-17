@@ -78,6 +78,13 @@ struct Scene7_CycloneWarningCodes: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "IMD app or website",
+                detail: "Search 'IMD' or download the Mausam app (free). Live cyclone warnings, satellite images, and the same colour-coded warning levels shown here. Try it before the next monsoon."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                 GotItButton { onComplete(score) }.padding(.bottom, 12)
             }
             Spacer(minLength: 0)

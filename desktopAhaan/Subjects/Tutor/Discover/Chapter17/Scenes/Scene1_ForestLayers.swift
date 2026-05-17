@@ -55,6 +55,13 @@ struct Scene1_ForestLayers: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Park stratification walk",
+                detail: "In your nearest park, look UP at three heights: tall tree-tops (canopy), 3-metre shrubs (understory), and the ground (floor). Note which birds and insects you see at each level. Most species stick to one layer for their entire lives."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

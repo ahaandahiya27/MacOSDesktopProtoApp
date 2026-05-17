@@ -56,6 +56,13 @@ struct Scene4_Fertilisation: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Watch a flower become a fruit",
+                detail: "Mark one fresh flower on a tomato or chilli plant with a coloured thread. Check daily. Over 4-6 weeks you'll watch the petals fall, the ovary swell, and a tiny green fruit form where the flower was."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

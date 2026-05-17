@@ -62,6 +62,13 @@ struct Scene4_IrrigationCompare: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Drip-irrigation bottle",
+                detail: "Take a 1-litre plastic bottle. Punch one tiny pin-hole at the bottom and fill with water. Place it next to a pot plant with the hole touching the soil. Water drips slowly — a drip-irrigation system that uses 50% less water than pouring from a watering can."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

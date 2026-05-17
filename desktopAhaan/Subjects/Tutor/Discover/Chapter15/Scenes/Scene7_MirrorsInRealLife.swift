@@ -56,6 +56,13 @@ struct Scene7_MirrorsInRealLife: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Mirror inventory",
+                detail: "List every mirror in your home, then guess what type each is: bathroom plane mirror, shaving concave mirror (if any), car side-view convex mirror, decorative reflectors. Note which one makes you look bigger / smaller / same-size."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

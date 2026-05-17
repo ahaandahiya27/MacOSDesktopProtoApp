@@ -70,6 +70,13 @@ struct Scene3_LandBreezeSeaBreeze: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Hand-on-window test",
+                detail: "On a hot afternoon, place one hand on a closed window facing the sun, another on the floor under it. The window glass is warmer than the floor. At night the reverse is true. Same uneven-heating mechanism, just smaller scale."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -57,6 +57,13 @@ struct Scene2_WaterTableSlider: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Water table in a clear jar",
+                detail: "Fill a clear jar half-way with sand. Slowly pour water in. Watch the water rise from the bottom — the boundary between dry and wet sand IS the water table. Pour more water and it rises; tilt the jar and one side's table drops."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -55,6 +55,13 @@ struct Scene1_HeartBeats: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Heartbeat through a tube",
+                detail: "Roll up a sheet of paper into a long tube. Press one end to a friend's chest (over the heart, below the left collarbone) and the other to your ear. Listen — you'll hear lub-DUB...lub-DUB."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

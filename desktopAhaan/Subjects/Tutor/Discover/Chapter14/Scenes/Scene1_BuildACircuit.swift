@@ -81,6 +81,13 @@ struct Scene1_BuildACircuit: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Smallest possible circuit",
+                detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

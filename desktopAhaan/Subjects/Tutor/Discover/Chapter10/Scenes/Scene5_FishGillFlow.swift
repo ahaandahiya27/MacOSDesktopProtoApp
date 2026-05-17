@@ -48,6 +48,13 @@ struct Scene5_FishGillFlow: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Aquarium watch",
+                detail: "If you have an aquarium at home (or pass one at a pet shop), watch a fish closely. Its mouth opens and closes; its gill covers flap. Every cycle pulls one mouthful of water across the gills."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

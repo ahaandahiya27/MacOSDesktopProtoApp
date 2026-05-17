@@ -56,6 +56,13 @@ struct Scene6_AirMoistureInSoil: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bubbles from soil",
+                detail: "Drop a fistful of dry garden soil into a glass of water. Watch the bubbles rise — that's air that was hiding between the soil grains."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

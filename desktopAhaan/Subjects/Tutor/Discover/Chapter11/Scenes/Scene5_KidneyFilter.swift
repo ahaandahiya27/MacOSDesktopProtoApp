@@ -49,6 +49,13 @@ struct Scene5_KidneyFilter: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Water in, water out",
+                detail: "Drink 500 mL of water all at once. Note the time. Within 30-60 minutes you'll feel the need to urinate — that's your kidneys filtering the extra water out of your blood."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

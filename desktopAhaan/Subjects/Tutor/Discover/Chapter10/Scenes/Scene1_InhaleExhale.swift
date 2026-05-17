@@ -51,6 +51,13 @@ struct Scene1_InhaleExhale: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Count breaths at rest",
+                detail: "Sit still for a minute, then count your breaths for 30 seconds. Multiply by 2 — that's your resting breath rate (usually 12-20 per minute for kids)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

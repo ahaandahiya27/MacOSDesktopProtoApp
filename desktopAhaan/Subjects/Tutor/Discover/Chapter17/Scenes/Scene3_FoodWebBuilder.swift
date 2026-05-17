@@ -55,6 +55,13 @@ struct Scene3_FoodWebBuilder: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Garden food web",
+                detail: "Sit in a park or garden for 10 minutes with paper. List everything alive you spot: grass, ants, beetles, sparrows, crows, dog. Draw arrows showing 'eats': grass → ant → spider → sparrow. You've drawn a food chain. Combine three of them and you get a food web."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

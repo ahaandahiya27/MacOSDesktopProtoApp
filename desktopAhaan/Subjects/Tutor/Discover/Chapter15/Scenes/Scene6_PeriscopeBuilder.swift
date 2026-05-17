@@ -52,6 +52,13 @@ struct Scene6_PeriscopeBuilder: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Paper-towel-tube periscope",
+                detail: "Take a long cardboard tube (paper-towel inner). Cut a small window near each end on OPPOSITE sides. Tape one small mirror inside at the top window at 45°, another inside at the bottom window at 45°. Hold it up over a wall — you can see what's on the other side."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

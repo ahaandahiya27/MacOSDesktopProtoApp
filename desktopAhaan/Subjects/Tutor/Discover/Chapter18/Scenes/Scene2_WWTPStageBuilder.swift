@@ -56,6 +56,13 @@ struct Scene2_WWTPStageBuilder: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bottle filter",
+                detail: "Cut a 1-litre bottle in half. Invert the top into the bottom. Layer the top with cotton, then sand, then fine gravel, then coarse gravel. Pour muddy water from the top. Clear (but not safe to drink) water drips out. That's a primary-treatment filter."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

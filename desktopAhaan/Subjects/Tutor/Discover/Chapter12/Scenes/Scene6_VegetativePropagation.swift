@@ -52,6 +52,13 @@ struct Scene6_VegetativePropagation: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Money-plant cutting",
+                detail: "Cut a stem from a money-plant (or pothos) so it includes 2 nodes. Place the cut end in a glass of water on a windowsill. Roots will sprout in 7-14 days. No seed needed — you've cloned the parent."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

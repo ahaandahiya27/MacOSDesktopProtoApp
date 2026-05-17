@@ -52,6 +52,13 @@ struct Scene4_ElectricIron: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Cool vs hot iron base",
+                detail: "Touch an unplugged iron's bottom plate — cool. After turning it on for 1 minute, hold a hand 10 cm above it (NEVER touch). The heat shimmer is visible — that's the heating element's I²R energy radiating."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

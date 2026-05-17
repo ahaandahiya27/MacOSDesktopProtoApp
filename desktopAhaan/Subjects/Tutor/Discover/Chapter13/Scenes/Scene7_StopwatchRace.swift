@@ -74,6 +74,13 @@ struct Scene7_StopwatchRace: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Reaction-time game",
+                detail: "Have a friend hold a ruler vertically with the 0-mark down. Place your fingers just below the 0 mark, ready to catch. They drop the ruler without warning. Note where you catch it. Use t = √(2d/g) → d in cm gives reaction time in seconds (≈ 0.1-0.2 s)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

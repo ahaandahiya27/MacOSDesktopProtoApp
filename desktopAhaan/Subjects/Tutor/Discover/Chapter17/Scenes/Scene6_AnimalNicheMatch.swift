@@ -56,6 +56,13 @@ struct Scene6_AnimalNicheMatch: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Sparrow vs crow",
+                detail: "Notice how sparrows hop on the ground hunting seeds while crows eat fruits and garbage from above. They share the same neighborhood but never compete — different niches. Try spotting 3 species and figure out each one's niche."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

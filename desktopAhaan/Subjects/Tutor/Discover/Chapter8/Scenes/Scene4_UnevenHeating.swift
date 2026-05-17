@@ -61,6 +61,13 @@ struct Scene4_UnevenHeating: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Sun vs shade thermometer",
+                detail: "Place a kitchen thermometer first in direct sunlight on the ground, then under a shaded leaf canopy. After 5 minutes you'll see a 10-15°C difference. That gap is what drives wind."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -65,6 +65,13 @@ struct Scene3_BloodSort: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Microscope a blood smear",
+                detail: "Most school science labs have prepared blood-smear slides. Under a microscope you'll see tiny red dots (RBCs), an occasional larger irregular blob (WBC), and the smaller speckles (platelets) floating in plasma."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

@@ -49,6 +49,13 @@ struct Scene8_Kaleidoscope: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Pringles-tube kaleidoscope",
+                detail: "Three strips of mirror foil + an empty Pringles tube. Tape them inside in a triangular prism shape, mirror-side inward. At one end, put a transparent disc; sprinkle a few colourful beads or sequins; cover loosely with a frosted paper. Look through the other end and twist."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

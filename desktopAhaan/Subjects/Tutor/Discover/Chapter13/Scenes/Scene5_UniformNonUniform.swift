@@ -58,6 +58,13 @@ struct Scene5_UniformNonUniform: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Marble race",
+                detail: "Roll a marble on a smooth flat floor — almost uniform speed (it slows only slightly from friction). Now roll the same marble down a slope — clearly non-uniform, it speeds up. You've felt the difference between zero acceleration and gravity-driven acceleration."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

@@ -62,6 +62,13 @@ struct Scene2_PollinationMatch: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bee-watching",
+                detail: "On a sunny morning, sit near a flowering plant for 10 minutes. Count the visiting insects — bees, butterflies, sometimes hover-flies. Each one is unknowingly carrying pollen between flowers."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

@@ -60,6 +60,13 @@ struct Scene8_ConservationHero: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Sloped vs flat patch",
+                detail: "Find a slope in your school playground. Water erosion has probably already worn a small gully. Compare to a flat grassy patch nearby — much less erosion. That's why hilly fields use terraces."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -50,6 +50,13 @@ struct Scene1_WhereDrainWaterGoes: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Trace your kitchen sink",
+                detail: "Open the cabinet under your kitchen sink. Follow the pipe out of the wall as far as you can see. It goes through the floor, the wall, joins the main sewer line on your street — and from there, kilometres to a treatment plant."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

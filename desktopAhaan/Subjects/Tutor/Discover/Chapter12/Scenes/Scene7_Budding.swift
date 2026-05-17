@@ -46,6 +46,13 @@ struct Scene7_Budding: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Watch bread rise",
+                detail: "Mix yeast + warm water + sugar + flour. Cover and wait 1 hour. The dough doubles in size because of CO₂ from yeast cells budding their way through it. Same chemistry as Scene 3 of this chapter — just baked."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

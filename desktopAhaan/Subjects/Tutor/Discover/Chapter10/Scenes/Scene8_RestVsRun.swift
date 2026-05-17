@@ -58,6 +58,13 @@ struct Scene8_RestVsRun: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Rest vs stair run",
+                detail: "Count breaths/min sitting still. Then run up and down a flight of stairs 3 times. Count again immediately. The rate doubles or triples — your muscles demanded more oxygen."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

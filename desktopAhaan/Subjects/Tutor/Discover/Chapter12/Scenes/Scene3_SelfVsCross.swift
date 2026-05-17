@@ -56,6 +56,13 @@ struct Scene3_SelfVsCross: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bag a flower bud",
+                detail: "Choose an unopened flower bud on a plant. Tie a paper bag over it before it opens. Open the bag a week later — if it has formed seeds without any pollinator visit, it self-pollinated."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

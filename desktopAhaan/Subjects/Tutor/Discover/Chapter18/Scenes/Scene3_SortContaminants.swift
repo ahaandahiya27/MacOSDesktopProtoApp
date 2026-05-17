@@ -63,6 +63,13 @@ struct Scene3_SortContaminants: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Sink-strainer check",
+                detail: "Remove your kitchen sink's strainer. Examine what's caught: vegetable peels, hair, oil droplets, soap scum. Sort what you see into organic (peels, hair) and inorganic (soap, plastic bits). Both went down the drain — both are pollutants."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

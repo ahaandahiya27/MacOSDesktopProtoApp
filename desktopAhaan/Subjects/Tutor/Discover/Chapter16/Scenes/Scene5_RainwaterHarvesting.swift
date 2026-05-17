@@ -51,6 +51,13 @@ struct Scene5_RainwaterHarvesting: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Rooftop bucket",
+                detail: "Next rain shower, place a clean wide-mouth bucket directly under the rain (clear of dust). Time it: 15 minutes of moderate rain typically fills it 5-10 cm. A small house roof can collect HUNDREDS of buckets a year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

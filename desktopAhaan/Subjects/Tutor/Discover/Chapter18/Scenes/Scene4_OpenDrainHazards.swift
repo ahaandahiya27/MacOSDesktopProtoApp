@@ -50,6 +50,13 @@ struct Scene4_OpenDrainHazards: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Open-drain audit",
+                detail: "Walk around your colony or street with an adult. Count: open drains, closed drains, broken manholes, areas with stagnant water near drains. Note which days the corporation cleans them. This is your immediate sanitation environment."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

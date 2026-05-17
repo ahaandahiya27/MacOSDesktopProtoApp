@@ -51,6 +51,13 @@ struct Scene5_CompostPitBuilder: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Apartment composter",
+                detail: "Get a clean small bucket with a lid. Layer: 5 cm dry brown leaves, 5 cm fresh kitchen peels, sprinkle of garden soil. Repeat. Stir weekly. In 6-8 weeks the smell goes away and you have dark, crumbly compost — free fertiliser for plants."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -47,6 +47,13 @@ struct Scene6_BawdiStepwell: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Stepwell trip",
+                detail: "Stepwells exist all over India — Chand Baori (Rajasthan), Rani-ki-Vav (Gujarat), Agrasen ki Baoli (Delhi). Plan a visit on your next vacation, or search YouTube for a virtual walkthrough. Notice the symmetry, the descending steps, the cool air."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

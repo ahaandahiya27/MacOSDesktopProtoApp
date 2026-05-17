@@ -77,6 +77,13 @@ struct Scene2_PendulumLab: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "DIY pendulum",
+                detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

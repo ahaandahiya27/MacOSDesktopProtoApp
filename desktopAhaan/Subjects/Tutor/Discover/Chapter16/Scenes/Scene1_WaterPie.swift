@@ -48,6 +48,13 @@ struct Scene1_WaterPie: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Earth's water in a litre",
+                detail: "Measure 1 litre of water in a jug — that represents all of Earth's water. Pour out 30 mL — that's all freshwater. Now isolate just 0.6 mL — that's the freshwater we can actually USE. The rest is frozen or trapped underground. Tiny."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

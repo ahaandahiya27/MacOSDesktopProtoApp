@@ -65,6 +65,13 @@ struct Scene4_WhichCropWhichSoil: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Three-pot seed race",
+                detail: "Plant the same seed (mustard, moong, methi) in three pots: one with sand, one with garden soil, one with potter's clay. Water all three equally and watch over 2 weeks. The garden soil (loamy) wins."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

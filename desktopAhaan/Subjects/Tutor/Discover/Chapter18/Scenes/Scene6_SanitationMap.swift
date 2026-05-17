@@ -51,6 +51,13 @@ struct Scene6_SanitationMap: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Map school toilets",
+                detail: "Walk through your school and note toilet types: flush-with-sewer (modern), septic tank (most schools), or pit latrines (some rural). Count the number of toilets vs students. WHO recommendation is 1 per 30."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

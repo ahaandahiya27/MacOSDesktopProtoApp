@@ -53,6 +53,13 @@ struct Scene8_UnitsOfTime: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Inventory of clocks",
+                detail: "List every timekeeping device in your home: phone (atomic-clock-synced), wall clock (quartz), wristwatch, microwave timer, oven timer, kitchen stopwatch, computer system clock. Note which is fastest to read at a glance — that's why each one is shaped the way it is."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

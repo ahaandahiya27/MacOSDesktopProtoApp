@@ -49,6 +49,13 @@ struct Scene1_MirrorMirror: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Mirror + torch on paper",
+                detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

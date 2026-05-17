@@ -70,6 +70,13 @@ struct Scene8_TranspirationPull: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bag a leaf",
+                detail: "Tie a clear polythene bag over a leafy branch of a potted plant outdoors. Tighten with a string. Come back 2 hours later — droplets of water have collected inside the bag. The leaves were sweating."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

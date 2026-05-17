@@ -66,6 +66,13 @@ struct Scene1_FastOrSlow: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Time a household member",
+                detail: "Use a stopwatch and a measured 10-metre stretch. Time everyone in your family walking it. Compute their speeds in m/s. Repeat after they jog. Plot a tiny bar chart of resting vs jogging speeds."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

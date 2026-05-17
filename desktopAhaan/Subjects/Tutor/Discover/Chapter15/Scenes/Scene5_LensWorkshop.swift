@@ -58,6 +58,13 @@ struct Scene5_LensWorkshop: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Magnifying-glass eyeglass",
+                detail: "If you wear reading glasses (or borrow), hold one lens between a bright window and a piece of paper. Slide it until you see a TINY, inverted image of the window on the paper — a real image. Move the same lens close to text and see the magnified, upright (virtual) image."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -45,6 +45,13 @@ struct Scene8_Fragmentation: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Pond-water peek",
+                detail: "A spoonful of pond water under a magnifying glass usually contains green threads of Spirogyra. Each thread can break into pieces and each piece grows into a new thread — fragmentation in action."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

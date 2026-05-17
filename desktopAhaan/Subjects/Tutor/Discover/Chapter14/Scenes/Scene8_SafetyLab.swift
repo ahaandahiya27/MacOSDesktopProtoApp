@@ -53,6 +53,13 @@ struct Scene8_SafetyLab: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Three-pin plug inspection",
+                detail: "Examine an unplugged 3-pin Indian plug. The two thinner pins are LIVE (right) and NEUTRAL (left). The thicker top pin is EARTH — it's longer so it connects first. The plastic body is insulator. Total safety in one design."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

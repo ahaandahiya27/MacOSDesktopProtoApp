@@ -59,6 +59,13 @@ struct Scene5_SoilErosionStory: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Tilt-plate rainstorm",
+                detail: "Get two plates, fill one with bare soil and the other with the same soil covered in grass clippings. Tilt both at the same angle and sprinkle water from a height. Watch which one washes away."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

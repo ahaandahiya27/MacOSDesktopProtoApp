@@ -47,6 +47,13 @@ struct Scene7_SoakPitDesign: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bottle soak-pit",
+                detail: "Fill a clear 1-litre bottle with layers: 10 cm coarse gravel at bottom, 5 cm fine sand on top, 5 cm garden soil on the very top. Pour grey water (used dishwashing water) into the top. It seeps out the bottom much cleaner than it went in."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -57,6 +57,13 @@ struct Scene6_InsectsWorms: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Ant-trail observation",
+                detail: "Find an ant trail near your kitchen or garden. Ants don't have lungs — they breathe through tracheal tubes opening at spiracles along their bodies. The little hairy bumps on their sides are those openings."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

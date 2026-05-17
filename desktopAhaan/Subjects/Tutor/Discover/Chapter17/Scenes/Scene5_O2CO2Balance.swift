@@ -56,6 +56,13 @@ struct Scene5_O2CO2Balance: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Limewater + leafy plant test",
+                detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

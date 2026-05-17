@@ -73,6 +73,13 @@ struct Scene5_CycloneEye: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Glass-of-water cyclone",
+                detail: "Stir a tall glass of water vigorously with a spoon, then pull the spoon out. A miniature 'eye' forms in the middle — the same low-pressure column that exists inside a real cyclone, just made of water instead of air."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

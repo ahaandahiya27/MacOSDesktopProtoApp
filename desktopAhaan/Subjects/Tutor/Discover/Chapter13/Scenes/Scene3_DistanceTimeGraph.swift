@@ -53,6 +53,13 @@ struct Scene3_DistanceTimeGraph: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Walk-a-graph game",
+                detail: "On a long corridor, mark every metre with chalk. Walk slowly for 5 seconds, then stop for 5, then run for 5. Have a friend write down where you are each second. Plot the points on graph paper. You just made a distance-time graph of your own motion."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

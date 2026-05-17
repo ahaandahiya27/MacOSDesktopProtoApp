@@ -62,6 +62,13 @@ struct Scene5_SeedDispersal: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Seed sort",
+                detail: "Collect 10 different seeds from a 5-minute walk — dry pods on the ground, fluffy parachutes, fruit-eaten droppings, sticky burrs on socks. Sort them by dispersal method: wind / water / animal / explosion."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

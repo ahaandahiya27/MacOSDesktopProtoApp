@@ -57,6 +57,13 @@ struct Scene7_PhloemSugarPipeline: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Sweet potato vs raw potato",
+                detail: "Taste a raw sweet potato and a regular raw potato. Both store sugar moved down via the phloem, but sweet-potato cells haven't converted it to starch yet — that's why it tastes sweet."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

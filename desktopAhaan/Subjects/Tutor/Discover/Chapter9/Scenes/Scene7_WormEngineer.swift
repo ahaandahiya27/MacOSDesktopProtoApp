@@ -59,6 +59,13 @@ struct Scene7_WormEngineer: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Worm hunt after rain",
+                detail: "Just after a rain shower, walk through a garden. You'll spot earthworms on the surface — they came up because their tunnels flooded. Note how moist soil feels different from dry soil."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

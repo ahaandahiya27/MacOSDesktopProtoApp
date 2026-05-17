@@ -49,6 +49,13 @@ struct Scene8_WaterPledge: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "30-day habit challenge",
+                detail: "Pick three water-saving habits from this scene. Track them for 30 days using a chart on your room wall: 'Closed tap while brushing — ✓, Bucket bath instead of shower — ✓'. After 30 days, the habits stick on their own."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

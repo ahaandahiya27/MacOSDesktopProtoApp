@@ -64,6 +64,13 @@ struct Scene1_FlowerAnatomy: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Dissect a hibiscus",
+                detail: "Pluck one fresh hibiscus flower from a garden or roadside. Gently pull it apart on a plate — count 5 petals, 5 fused sepals, many stamens (the yellow-orange male parts), and one pistil with a sticky stigma. India's national-list flower for biology practicals."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

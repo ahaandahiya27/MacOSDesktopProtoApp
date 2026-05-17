@@ -74,6 +74,13 @@ struct Scene1_SoilProfileDig: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Dig a shoebox-deep pit",
+                detail: "With permission, dig a foot-deep hole in a garden. Notice the colours change with depth — dark on top, lighter below, then small stones. You've just seen O → A → B horizons."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.top, 8).padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -57,6 +57,13 @@ struct Scene2_DecomposerCycle: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Compost-jar diary",
+                detail: "Put fruit and vegetable peels in a glass jar, cover loosely, add a teaspoon of garden soil. Leave on a balcony. Note over 2 weeks: peels darken, lose volume, smell musty. After 4 weeks you'll see crumbly humus forming. That's decomposition you can watch."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

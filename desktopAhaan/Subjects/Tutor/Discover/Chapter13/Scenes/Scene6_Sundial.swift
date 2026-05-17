@@ -53,6 +53,13 @@ struct Scene6_Sundial: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Stick-shadow sundial",
+                detail: "On a sunny day, push a 30 cm straight stick vertically into a flat patch of ground. Mark the shadow's tip with a stone every hour from 9 am to 5 pm. The marks form a fan — your home-made sundial."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

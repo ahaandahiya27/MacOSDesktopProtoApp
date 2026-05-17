@@ -62,6 +62,13 @@ struct Scene8_AnemometerReader: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Paper-cup anemometer",
+                detail: "Tape 4 small paper cups onto cross-shaped sticks pinned at the centre to a pencil. Mark one cup red. Hold it outside on a windy day and count rotations of the red cup in 30 seconds. That's your wind speed in 'cups per half-minute'."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

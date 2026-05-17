@@ -74,6 +74,13 @@ struct Scene6_ThunderstormSafety: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Count the lightning",
+                detail: "Next thunderstorm (from inside a building, not in the open!): count seconds between lightning flash and thunder. Divide by 3 — that's the distance to the storm in kilometres (sound travels 343 m/s)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                 GotItButton { onComplete(score) }.padding(.bottom, 12)
             }
             Spacer(minLength: 0)

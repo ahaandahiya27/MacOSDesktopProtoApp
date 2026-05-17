@@ -66,6 +66,13 @@ struct Scene1_HotAirRises: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Hold paper above a candle",
+                detail: "Cut a paper spiral, balance it on a pencil tip, and hold it well ABOVE a candle flame (not in it). The rising hot air spins the spiral. Do this with an adult present."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

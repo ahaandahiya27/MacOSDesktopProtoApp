@@ -58,6 +58,13 @@ struct Scene7_DeforestationDomino: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "News-search exercise",
+                detail: "Search 'deforestation India 2024' on a news site. Pick one story. Identify which dominoes from this scene applied to that case: was there flooding? topsoil loss? wildlife displacement? climate impact?"
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

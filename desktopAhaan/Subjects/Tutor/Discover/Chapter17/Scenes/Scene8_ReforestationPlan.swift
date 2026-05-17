@@ -48,6 +48,13 @@ struct Scene8_ReforestationPlan: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Plant a sapling",
+                detail: "Visit a nursery, pick a native tree sapling (neem, banyan, peepal). Plant it in a corner of your garden or school grounds. Water daily for two weeks, then weekly. In five years, you've given the planet a tree that absorbs 21 kg of CO₂ a year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

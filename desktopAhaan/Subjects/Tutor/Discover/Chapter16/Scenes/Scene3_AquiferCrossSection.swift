@@ -58,6 +58,13 @@ struct Scene3_AquiferCrossSection: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Layered jar aquifer",
+                detail: "Fill a clear jar with alternating layers: pebbles, sand, soil, more pebbles. Slowly pour water on top. Watch it travel down through each layer at different speeds — you've just modeled how groundwater seeps through an aquifer."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
