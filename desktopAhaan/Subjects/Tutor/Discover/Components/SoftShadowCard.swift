@@ -45,11 +45,18 @@ struct DiscoverBackground: View {
 /// reads as a primary action on the 5K iMac canvas — `.bordered` rendered
 /// almost invisibly against the pale Discover gradient. macOS 12+ would have
 /// `.borderedProminent`; we recreate it manually for Big Sur compatibility.
+///
+/// `tint` priority: explicit param > environment `\.chapterAccent` (set by
+/// `DiscoverShell`) > fallback `.green`. So 152 existing `GotItButton(action:)`
+/// call-sites in scene files pick up their chapter's accent colour
+/// automatically inside Discover Mode (DM6) without per-file edits.
 struct GotItButton: View {
     var label: String = "I get it!"
     var systemImage: String = "checkmark.seal.fill"
-    var tint: Color = .green
+    var tint: Color? = nil
     var action: () -> Void
+
+    @Environment(\.chapterAccent) private var envChapterAccent
 
     var body: some View {
         Button(action: action) {
@@ -58,10 +65,26 @@ struct GotItButton: View {
                 .padding(.horizontal, 28)
                 .padding(.vertical, 14)
         }
-        .buttonStyle(FilledCTAButtonStyle(tint: tint))
+        .buttonStyle(FilledCTAButtonStyle(tint: tint ?? envChapterAccent))
         .keyboardShortcut(.space, modifiers: [])
         .pointingCursor()
         .accessibilityHint("Marks this scene as complete and moves on.")
+    }
+}
+
+// MARK: - Chapter-accent environment
+
+private struct ChapterAccentKey: EnvironmentKey {
+    /// Default outside `DiscoverShell` — keeps `GotItButton` green when used
+    /// off-Discover (e.g., a future modal CTA). `DiscoverShell` overrides
+    /// this with the chapter's `ChapterTheme.accent(for:)` colour.
+    static let defaultValue: Color = .green
+}
+
+extension EnvironmentValues {
+    var chapterAccent: Color {
+        get { self[ChapterAccentKey.self] }
+        set { self[ChapterAccentKey.self] = newValue }
     }
 }
 

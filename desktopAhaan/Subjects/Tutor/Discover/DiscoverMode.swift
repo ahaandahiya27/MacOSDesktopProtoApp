@@ -216,6 +216,11 @@ struct DiscoverShell<SceneBody: View>: View {
                 footer
             }
         }
+        // Propagate this chapter's accent colour down through SwiftUI's
+        // environment so descendant `GotItButton`s and any other accent-
+        // aware chrome pick it up automatically (DM6). Defaults to green
+        // outside `DiscoverShell` so off-Discover CTAs are unaffected.
+        .environment(\.chapterAccent, chapterAccent)
         .navigationTitle(navigationTitle)
         .onArrowKeys(left: { goPrev() }, right: { goNext() })
         .background(sceneJumpShortcuts)

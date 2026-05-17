@@ -459,7 +459,7 @@ in the project memory.
 | DM3 | Top "Back" button has no breadcrumb (chapter/topic context lost) | 🟡 system back nav still used; in-canvas breadcrumb deferred |
 | DM4 | Bottom footer redundantly repeats scene title | ✅ removed (Phase 1) |
 | DM5 | "Previous / Next" footer competes with in-scene CTA | ✅ footer now pure nav, scene title moved to header (Phase 1) |
-| DM6 | Per-scene chapter accent under-applied | 🟡 partial — header title + scene-dot ring + Next button now carry chapter accent; Got It button still hardcoded green (tint param exists for future thread-through) |
+| DM6 | Per-scene chapter accent under-applied | ✅ chapter accent now propagated through SwiftUI environment via `\.chapterAccent` key. `DiscoverShell` sets `.environment(\.chapterAccent, ChapterTheme.accent(for: chapter.id))`; `GotItButton` reads it and uses it as `FilledCTAButtonStyle`'s tint. All 152 scene Got It buttons (calling `GotItButton(action: onComplete)` with no tint param) now show their chapter's accent automatically. Explicit `tint:` param still wins if a scene needs a special colour. Default outside DiscoverShell stays green |
 | DM7 | Completion celebration absent (no confetti / "you finished Discover Mode") | ❌ Phase 6 |
 | DM8 | Boss Quiz visual treatment unaudited | ❌ |
 | DM9 | Callouts crammed below interactive widget — feels like footnotes | 🟡 per-scene |
