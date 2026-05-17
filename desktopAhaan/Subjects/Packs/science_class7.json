@@ -15513,8 +15513,8 @@
       "topics": [
         {
           "id": "ch14_t01",
-          "title": "Current, circuits, and effects",
-          "summary": "A circuit needs a source, conductor, and load. Current flowing through wires produces heat (toaster) and a magnetic field (electromagnet).",
+          "title": "Circuits & Current",
+          "summary": "Electric current as a flow of electrons in a closed loop; cells; series vs parallel; conductors and insulators.",
           "concepts": [
             {
               "id": "ch14_t01_c01",
@@ -15692,54 +15692,6 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch14_t01_q02",
-              "prompt": "What is an electromagnet? How is it made?",
-              "questionType": "longAnswer",
-              "options": null,
-              "answer": "An electromagnet is a temporary magnet made by passing electric current through a coil of insulated wire wound around a soft iron core. When current flows, the iron core becomes magnetic and can attract iron objects. When current stops, the magnetism disappears.",
-              "solutionSteps": [
-                "Take a soft iron rod or nail.",
-                "Wind insulated copper wire around it many times (more turns = stronger magnet).",
-                "Connect the ends to a battery.",
-                "Current flows through the coil → magnetic field → iron core becomes magnetised.",
-                "Disconnect the battery → magnetism stops.",
-                "Used in electric bells, motors, MRI machines, junkyard cranes lifting cars, telephone receivers."
-              ],
-              "commonMistakes": [
-                "Confusing electromagnet with permanent magnet. Permanent magnet stays magnetic; electromagnet only when current flows.",
-                "Forgetting the iron core. Without it, the field is much weaker."
-              ],
-              "variations": [
-                {
-                  "prompt": "Why is soft iron used in electromagnets and not steel?",
-                  "answer": "Soft iron loses its magnetism quickly when current stops; steel retains magnetism. For an electromagnet you want it to switch on and off cleanly — soft iron does that.",
-                  "solutionSteps": [
-                    "Soft iron: easily magnetised AND easily demagnetised.",
-                    "Steel: easily magnetised but RETAINS magnetism (becomes a permanent magnet).",
-                    "An electromagnet must turn off when current stops — soft iron is essential.",
-                    "Steel is used to make permanent magnets where lasting magnetism is wanted."
-                  ]
-                },
-                {
-                  "prompt": "How does an electric bell work?",
-                  "answer": "Press the bell button → current flows → electromagnet attracts an iron strip → strip's hammer hits the bell. As the strip moves, it breaks the circuit → magnet off → strip springs back → contact remakes → cycle repeats. The repeated striking is the ringing sound.",
-                  "solutionSteps": [
-                    "Circuit: button → battery → electromagnet coil → spring strip → back to button.",
-                    "Press button: current flows, electromagnet pulls strip, hammer hits bell.",
-                    "Strip moving breaks the spring contact → circuit opens → magnet off.",
-                    "Strip springs back, remakes contact → magnet on again → hits bell again.",
-                    "This rapid on-off cycle (10-20 times per second) creates the buzzing sound."
-                  ]
-                }
-              ],
-              "difficulty": 3,
-              "pageRefs": [
-                180,
-                181
-              ],
-              "needsHumanReview": false
-            },
-            {
               "id": "ch14_t01_q03",
               "prompt": "Electric current is the flow of what?",
               "questionType": "mcq",
@@ -15861,182 +15813,6 @@
                 "Confusing tap water (mildly conductive) with pure water (very poor conductor)."
               ],
               "difficulty": 2,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q08",
-              "prompt": "Which device uses the HEATING effect of current?",
-              "questionType": "mcq",
-              "options": [
-                "Electromagnet",
-                "Electric bell",
-                "Electric iron",
-                "Electric motor"
-              ],
-              "answer": "Electric iron",
-              "solutionSteps": [
-                "Heating effect = current converted to heat in a resistance wire.",
-                "Electric irons, geysers, toasters and heaters all rely on heating.",
-                "Electromagnets, bells and motors rely on the MAGNETIC effect."
-              ],
-              "commonMistakes": [
-                "Picking the electric motor — motors use the magnetic effect, not heating."
-              ],
-              "difficulty": 2,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": [
-                {
-                  "prompt": "Name two devices in your home that use the heating effect of current.",
-                  "answer": "Examples: electric heater, electric iron, geyser, toaster, incandescent bulb.",
-                  "solutionSteps": [
-                    "Any device that converts electrical energy into heat uses the heating effect."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "ch14_t01_q09",
-              "prompt": "An electromagnet is made by:",
-              "questionType": "mcq",
-              "options": [
-                "Rubbing a magnet on iron",
-                "Passing current through a coil wound around an iron piece",
-                "Heating a magnet until it glows",
-                "Connecting two magnets end to end"
-              ],
-              "answer": "Passing current through a coil wound around an iron piece",
-              "solutionSteps": [
-                "Current creates a magnetic field around a wire.",
-                "Winding the wire into a coil concentrates the field.",
-                "Placing an iron core inside the coil amplifies the field strongly — that's an electromagnet."
-              ],
-              "commonMistakes": [
-                "Confusing a permanent magnet (rubbing technique) with an electromagnet (requires current)."
-              ],
-              "difficulty": 2,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q10",
-              "prompt": "Which property does an electromagnet have that a permanent magnet does NOT?",
-              "questionType": "mcq",
-              "options": [
-                "It can attract iron",
-                "It has a north and south pole",
-                "Its magnetism can be switched on and off",
-                "It can pick up plastic"
-              ],
-              "answer": "Its magnetism can be switched on and off",
-              "solutionSteps": [
-                "Both magnets attract iron and both have N and S poles.",
-                "Neither picks up plastic.",
-                "Only the electromagnet can be turned on and off by controlling the current."
-              ],
-              "commonMistakes": [
-                "Thinking electromagnets are stronger by default — they can be made stronger, but the unique feature is switchability."
-              ],
-              "difficulty": 2,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q11",
-              "prompt": "When current passes through a wire it produces:",
-              "questionType": "mcq",
-              "options": [
-                "Only heat",
-                "Only a magnetic field",
-                "Both heat and a magnetic field",
-                "Neither heat nor a magnetic field"
-              ],
-              "answer": "Both heat and a magnetic field",
-              "solutionSteps": [
-                "Every current-carrying wire warms up because of resistance — the heating effect.",
-                "Every current-carrying wire also has a magnetic field around it — the magnetic effect.",
-                "Both effects always happen together; their strengths depend on the wire and current."
-              ],
-              "commonMistakes": [
-                "Picking 'only heat' — every current also produces a magnetic field, even if weak."
-              ],
-              "difficulty": 3,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q12",
-              "prompt": "Inside an electric bulb the part that glows is the:",
-              "questionType": "mcq",
-              "options": [
-                "Glass shell",
-                "Filament",
-                "Cap",
-                "Insulator at the base"
-              ],
-              "answer": "Filament",
-              "solutionSteps": [
-                "The filament is a very thin coiled tungsten wire inside the bulb.",
-                "Current passing through it gets very hot — hot enough to glow white.",
-                "The glass shell only protects the filament from air."
-              ],
-              "commonMistakes": [
-                "Thinking the glass produces the light — the glass is just a transparent container."
-              ],
-              "difficulty": 1,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q13",
-              "prompt": "Tungsten is used for filaments because it:",
-              "questionType": "mcq",
-              "options": [
-                "Conducts the most electricity of any metal",
-                "Has a very high melting point",
-                "Is cheap and easy to mine",
-                "Is non-magnetic"
-              ],
-              "answer": "Has a very high melting point",
-              "solutionSteps": [
-                "The filament has to reach extremely high temperatures to glow.",
-                "Tungsten melts at ~3422 °C, so it can stay solid even when white-hot.",
-                "Most other metals would melt long before reaching that temperature."
-              ],
-              "commonMistakes": [
-                "Confusing 'conducts best' (silver/copper) with 'survives heat' (tungsten)."
-              ],
-              "difficulty": 3,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q14",
-              "prompt": "Which of the following depends mainly on the MAGNETIC effect of current?",
-              "questionType": "mcq",
-              "options": [
-                "Toaster",
-                "Electric bell",
-                "Electric heater",
-                "Incandescent bulb"
-              ],
-              "answer": "Electric bell",
-              "solutionSteps": [
-                "An electric bell has an electromagnet that pulls a metal striker.",
-                "When the striker hits the gong, the circuit breaks, the electromagnet releases the striker, and the cycle repeats.",
-                "Toasters, heaters and bulbs all use the HEATING effect, not magnetic."
-              ],
-              "commonMistakes": [
-                "Forgetting that bells use an electromagnet — they don't generate heat to ring."
-              ],
-              "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
@@ -16171,6 +15947,330 @@
               "variations": []
             },
             {
+              "id": "ch14_t01_q23",
+              "prompt": "True or false: Birds sitting on a single high-voltage line don't get shocked because no closed circuit is formed through their body.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Current flows only when there is a closed path with a voltage difference across it.",
+                "A bird on one wire has both feet at the same voltage — no difference, no current.",
+                "If a bird touched two wires at different voltages, or one wire and a pole, current would flow."
+              ],
+              "commonMistakes": [
+                "Thinking the wire isn't live — it is; the bird just doesn't complete a circuit."
+              ],
+              "difficulty": 4,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q24",
+              "prompt": "Which component(s) in a torch (flashlight) are the source of energy?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "cells",
+              "solutionSteps": [
+                "A torch has one or more dry cells (commonly two 1.5 V cells in series).",
+                "These cells store chemical energy and convert it to electrical energy when the circuit is closed.",
+                "The bulb is the load, the switch is the control — neither is a source of energy."
+              ],
+              "commonMistakes": [
+                "Confusing the bulb with the energy source — the bulb just uses the energy."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q25",
+              "prompt": "Why must we never use water to put out a fire on an electrical appliance?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Water conducts electricity and the person spraying it can get a fatal shock.",
+              "solutionSteps": [
+                "Tap water contains dissolved salts, making it a conductor.",
+                "Spraying water onto a live appliance creates a conductive path from the appliance to the person.",
+                "Instead, switch off the supply at the main board first, then use a CO2 or dry-powder extinguisher."
+              ],
+              "commonMistakes": [
+                "Thinking water cools the fire safely — for electrical fires, the shock risk is more immediate than the cooling benefit."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q27",
+              "prompt": "An MCB has rating 10 A. If a device draws 12 A through it, the MCB will:",
+              "questionType": "mcq",
+              "options": [
+                "Stop the appliance instantly",
+                "Trip and disconnect the circuit",
+                "Run the appliance faster",
+                "Increase the rating to 12 A automatically"
+              ],
+              "answer": "Trip and disconnect the circuit",
+              "solutionSteps": [
+                "A 10 A MCB is rated for currents up to 10 A.",
+                "If the load draws more (here 12 A), the MCB senses overload and trips its internal switch.",
+                "The circuit is disconnected until someone resets the MCB."
+              ],
+              "commonMistakes": [
+                "Thinking MCBs adjust their rating — the rating is fixed by the device's design."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
+        },
+        {
+          "id": "ch14_t02",
+          "title": "Heating Effect",
+          "summary": "Joule's law H = I²Rt; nichrome heating elements; bulbs, irons, fuses, heaters.",
+          "concepts": [],
+          "questions": [
+            {
+              "id": "ch14_t01_q08",
+              "prompt": "Which device uses the HEATING effect of current?",
+              "questionType": "mcq",
+              "options": [
+                "Electromagnet",
+                "Electric bell",
+                "Electric iron",
+                "Electric motor"
+              ],
+              "answer": "Electric iron",
+              "solutionSteps": [
+                "Heating effect = current converted to heat in a resistance wire.",
+                "Electric irons, geysers, toasters and heaters all rely on heating.",
+                "Electromagnets, bells and motors rely on the MAGNETIC effect."
+              ],
+              "commonMistakes": [
+                "Picking the electric motor — motors use the magnetic effect, not heating."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": [
+                {
+                  "prompt": "Name two devices in your home that use the heating effect of current.",
+                  "answer": "Examples: electric heater, electric iron, geyser, toaster, incandescent bulb.",
+                  "solutionSteps": [
+                    "Any device that converts electrical energy into heat uses the heating effect."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ch14_t01_q12",
+              "prompt": "Inside an electric bulb the part that glows is the:",
+              "questionType": "mcq",
+              "options": [
+                "Glass shell",
+                "Filament",
+                "Cap",
+                "Insulator at the base"
+              ],
+              "answer": "Filament",
+              "solutionSteps": [
+                "The filament is a very thin coiled tungsten wire inside the bulb.",
+                "Current passing through it gets very hot — hot enough to glow white.",
+                "The glass shell only protects the filament from air."
+              ],
+              "commonMistakes": [
+                "Thinking the glass produces the light — the glass is just a transparent container."
+              ],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q13",
+              "prompt": "Tungsten is used for filaments because it:",
+              "questionType": "mcq",
+              "options": [
+                "Conducts the most electricity of any metal",
+                "Has a very high melting point",
+                "Is cheap and easy to mine",
+                "Is non-magnetic"
+              ],
+              "answer": "Has a very high melting point",
+              "solutionSteps": [
+                "The filament has to reach extremely high temperatures to glow.",
+                "Tungsten melts at ~3422 °C, so it can stay solid even when white-hot.",
+                "Most other metals would melt long before reaching that temperature."
+              ],
+              "commonMistakes": [
+                "Confusing 'conducts best' (silver/copper) with 'survives heat' (tungsten)."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
+        },
+        {
+          "id": "ch14_t03",
+          "title": "Magnetic Effect",
+          "summary": "Ørsted 1820 discovery; electromagnets; right-hand rule; motors, bells, MRI.",
+          "concepts": [],
+          "questions": [
+            {
+              "id": "ch14_t01_q02",
+              "prompt": "What is an electromagnet? How is it made?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "An electromagnet is a temporary magnet made by passing electric current through a coil of insulated wire wound around a soft iron core. When current flows, the iron core becomes magnetic and can attract iron objects. When current stops, the magnetism disappears.",
+              "solutionSteps": [
+                "Take a soft iron rod or nail.",
+                "Wind insulated copper wire around it many times (more turns = stronger magnet).",
+                "Connect the ends to a battery.",
+                "Current flows through the coil → magnetic field → iron core becomes magnetised.",
+                "Disconnect the battery → magnetism stops.",
+                "Used in electric bells, motors, MRI machines, junkyard cranes lifting cars, telephone receivers."
+              ],
+              "commonMistakes": [
+                "Confusing electromagnet with permanent magnet. Permanent magnet stays magnetic; electromagnet only when current flows.",
+                "Forgetting the iron core. Without it, the field is much weaker."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is soft iron used in electromagnets and not steel?",
+                  "answer": "Soft iron loses its magnetism quickly when current stops; steel retains magnetism. For an electromagnet you want it to switch on and off cleanly — soft iron does that.",
+                  "solutionSteps": [
+                    "Soft iron: easily magnetised AND easily demagnetised.",
+                    "Steel: easily magnetised but RETAINS magnetism (becomes a permanent magnet).",
+                    "An electromagnet must turn off when current stops — soft iron is essential.",
+                    "Steel is used to make permanent magnets where lasting magnetism is wanted."
+                  ]
+                },
+                {
+                  "prompt": "How does an electric bell work?",
+                  "answer": "Press the bell button → current flows → electromagnet attracts an iron strip → strip's hammer hits the bell. As the strip moves, it breaks the circuit → magnet off → strip springs back → contact remakes → cycle repeats. The repeated striking is the ringing sound.",
+                  "solutionSteps": [
+                    "Circuit: button → battery → electromagnet coil → spring strip → back to button.",
+                    "Press button: current flows, electromagnet pulls strip, hammer hits bell.",
+                    "Strip moving breaks the spring contact → circuit opens → magnet off.",
+                    "Strip springs back, remakes contact → magnet on again → hits bell again.",
+                    "This rapid on-off cycle (10-20 times per second) creates the buzzing sound."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                180,
+                181
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t01_q09",
+              "prompt": "An electromagnet is made by:",
+              "questionType": "mcq",
+              "options": [
+                "Rubbing a magnet on iron",
+                "Passing current through a coil wound around an iron piece",
+                "Heating a magnet until it glows",
+                "Connecting two magnets end to end"
+              ],
+              "answer": "Passing current through a coil wound around an iron piece",
+              "solutionSteps": [
+                "Current creates a magnetic field around a wire.",
+                "Winding the wire into a coil concentrates the field.",
+                "Placing an iron core inside the coil amplifies the field strongly — that's an electromagnet."
+              ],
+              "commonMistakes": [
+                "Confusing a permanent magnet (rubbing technique) with an electromagnet (requires current)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q10",
+              "prompt": "Which property does an electromagnet have that a permanent magnet does NOT?",
+              "questionType": "mcq",
+              "options": [
+                "It can attract iron",
+                "It has a north and south pole",
+                "Its magnetism can be switched on and off",
+                "It can pick up plastic"
+              ],
+              "answer": "Its magnetism can be switched on and off",
+              "solutionSteps": [
+                "Both magnets attract iron and both have N and S poles.",
+                "Neither picks up plastic.",
+                "Only the electromagnet can be turned on and off by controlling the current."
+              ],
+              "commonMistakes": [
+                "Thinking electromagnets are stronger by default — they can be made stronger, but the unique feature is switchability."
+              ],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q11",
+              "prompt": "When current passes through a wire it produces:",
+              "questionType": "mcq",
+              "options": [
+                "Only heat",
+                "Only a magnetic field",
+                "Both heat and a magnetic field",
+                "Neither heat nor a magnetic field"
+              ],
+              "answer": "Both heat and a magnetic field",
+              "solutionSteps": [
+                "Every current-carrying wire warms up because of resistance — the heating effect.",
+                "Every current-carrying wire also has a magnetic field around it — the magnetic effect.",
+                "Both effects always happen together; their strengths depend on the wire and current."
+              ],
+              "commonMistakes": [
+                "Picking 'only heat' — every current also produces a magnetic field, even if weak."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch14_t01_q14",
+              "prompt": "Which of the following depends mainly on the MAGNETIC effect of current?",
+              "questionType": "mcq",
+              "options": [
+                "Toaster",
+                "Electric bell",
+                "Electric heater",
+                "Incandescent bulb"
+              ],
+              "answer": "Electric bell",
+              "solutionSteps": [
+                "An electric bell has an electromagnet that pulls a metal striker.",
+                "When the striker hits the gong, the circuit breaks, the electromagnet releases the striker, and the cycle repeats.",
+                "Toasters, heaters and bulbs all use the HEATING effect, not magnetic."
+              ],
+              "commonMistakes": [
+                "Forgetting that bells use an electromagnet — they don't generate heat to ring."
+              ],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
               "id": "ch14_t01_q20",
               "prompt": "Fill in the blank: A device that converts electrical energy into mechanical energy is called an electric ____.",
               "questionType": "fillInBlank",
@@ -16254,66 +16354,6 @@
               "variations": []
             },
             {
-              "id": "ch14_t01_q23",
-              "prompt": "True or false: Birds sitting on a single high-voltage line don't get shocked because no closed circuit is formed through their body.",
-              "questionType": "trueFalse",
-              "options": [
-                "True",
-                "False"
-              ],
-              "answer": "True",
-              "solutionSteps": [
-                "Current flows only when there is a closed path with a voltage difference across it.",
-                "A bird on one wire has both feet at the same voltage — no difference, no current.",
-                "If a bird touched two wires at different voltages, or one wire and a pole, current would flow."
-              ],
-              "commonMistakes": [
-                "Thinking the wire isn't live — it is; the bird just doesn't complete a circuit."
-              ],
-              "difficulty": 4,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q24",
-              "prompt": "Which component(s) in a torch (flashlight) are the source of energy?",
-              "questionType": "shortAnswer",
-              "options": null,
-              "answer": "cells",
-              "solutionSteps": [
-                "A torch has one or more dry cells (commonly two 1.5 V cells in series).",
-                "These cells store chemical energy and convert it to electrical energy when the circuit is closed.",
-                "The bulb is the load, the switch is the control — neither is a source of energy."
-              ],
-              "commonMistakes": [
-                "Confusing the bulb with the energy source — the bulb just uses the energy."
-              ],
-              "difficulty": 1,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q25",
-              "prompt": "Why must we never use water to put out a fire on an electrical appliance?",
-              "questionType": "shortAnswer",
-              "options": null,
-              "answer": "Water conducts electricity and the person spraying it can get a fatal shock.",
-              "solutionSteps": [
-                "Tap water contains dissolved salts, making it a conductor.",
-                "Spraying water onto a live appliance creates a conductive path from the appliance to the person.",
-                "Instead, switch off the supply at the main board first, then use a CO2 or dry-powder extinguisher."
-              ],
-              "commonMistakes": [
-                "Thinking water cools the fire safely — for electrical fires, the shock risk is more immediate than the cooling benefit."
-              ],
-              "difficulty": 3,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
               "id": "ch14_t01_q26",
               "prompt": "Identify the device: it converts mechanical energy into electrical energy.",
               "questionType": "shortAnswer",
@@ -16328,30 +16368,6 @@
                 "Confusing motor and generator — they are mirror images of each other."
               ],
               "difficulty": 2,
-              "pageRefs": [],
-              "needsHumanReview": false,
-              "variations": []
-            },
-            {
-              "id": "ch14_t01_q27",
-              "prompt": "An MCB has rating 10 A. If a device draws 12 A through it, the MCB will:",
-              "questionType": "mcq",
-              "options": [
-                "Stop the appliance instantly",
-                "Trip and disconnect the circuit",
-                "Run the appliance faster",
-                "Increase the rating to 12 A automatically"
-              ],
-              "answer": "Trip and disconnect the circuit",
-              "solutionSteps": [
-                "A 10 A MCB is rated for currents up to 10 A.",
-                "If the load draws more (here 12 A), the MCB senses overload and trips its internal switch.",
-                "The circuit is disconnected until someone resets the MCB."
-              ],
-              "commonMistakes": [
-                "Thinking MCBs adjust their rating — the rating is fixed by the device's design."
-              ],
-              "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []

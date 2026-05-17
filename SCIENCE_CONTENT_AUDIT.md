@@ -639,6 +639,31 @@ Catching up to Ch 5 (19), Ch 6 (15), Ch 7 (15). Still gap remains but closing 4�
 
 Build verified green. macOS 11 safe — HTML + CSS only, reuses each chapter's existing themed style.css.
 
+## Chapter 14 brought to full topic parity
+
+Audit caught a remaining outlier: **Chapter 14 (Electric Current)** still had only 1 topic in `science_class7.json` (27 questions all in t01) and only Topic 1 in articles. Every other Ch 8-18 chapter has 3 topics in both surfaces. Closing the gap in one commit:
+
+1. **JSON restructure** — same script as the earlier Ch 8-13, 16-18 rebalance. Ch 14 now has 3 topics matching the article structure:
+   - `ch14_t01` Circuits & Current — 15 questions
+   - `ch14_t02` Heating Effect — 3 questions
+   - `ch14_t03` Magnetic Effect — 9 questions
+
+   Questions redistributed by keyword scoring; IDs preserved.
+
+2. **4 new HTML articles**:
+   - `ch14_t02_overview.html` — Heating Effect of Current (Joule's law preview, nichrome rationale)
+   - `ch14_t02_c01.html` — The Filament Bulb and Joule's Law (Edison 1879, H = I²Rt, why tungsten + argon)
+   - `ch14_t03_overview.html` — Magnetic Effect of Current (Ørsted 1820, right-hand rule, applications)
+   - `ch14_t03_c01.html` — Electromagnets — Ørsted to Modern Cranes (four ways to strengthen one, MRI / Maglev / scrap-crane uses)
+
+3. **pbxproj + ArticleIndex** — 4 file registrations in the `Articles/Chapter14` group, and 4 new `ArticleEntry` records inserted after `ch14_t01_c04`.
+
+**Chapter 14 article surfaces: 6 → 10** (1 chapter overview + 3 topic overviews + 4 t01 concepts + 2 new concepts in t02 and t03).
+
+Both TopicListView and the article reader now show three topics for Ch 14 — matching every other Ch 8-18 chapter and the older Ch 1-4 / 19.
+
+Build verified green. macOS 11 safe — HTML + CSS reusing `ch14_style.css` (the amber-palette table styles I added earlier).
+
 ---
 
 *Generated at: 2026-05-17.*

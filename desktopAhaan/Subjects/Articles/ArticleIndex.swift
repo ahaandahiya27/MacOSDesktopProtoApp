@@ -852,6 +852,22 @@ enum ArticleIndex {
             title: "Conductors and Insulators",
             chapterFolder: chapter14Folder, estimatedMinutes: 7),
 
+        "ch14_t02": ArticleEntry(id: "ch14_t02", filename: "ch14_t02_overview.html",
+            title: "Heating Effect — Topic Overview",
+            chapterFolder: chapter14Folder, estimatedMinutes: 5),
+
+        "ch14_t02_c01": ArticleEntry(id: "ch14_t02_c01", filename: "ch14_t02_c01.html",
+            title: "The Filament Bulb and Joule\'s Law",
+            chapterFolder: chapter14Folder, estimatedMinutes: 7),
+
+        "ch14_t03": ArticleEntry(id: "ch14_t03", filename: "ch14_t03_overview.html",
+            title: "Magnetic Effect — Topic Overview",
+            chapterFolder: chapter14Folder, estimatedMinutes: 5),
+
+        "ch14_t03_c01": ArticleEntry(id: "ch14_t03_c01", filename: "ch14_t03_c01.html",
+            title: "Electromagnets — Ørsted to Modern Cranes",
+            chapterFolder: chapter14Folder, estimatedMinutes: 8),
+
         // ================================================================
         // CHAPTER 15 — Light
         // ================================================================

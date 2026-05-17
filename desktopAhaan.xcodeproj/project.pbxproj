@@ -558,6 +558,10 @@
 		70C115B09A95B0F62B617420 /* ch16_t01_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 7D3383C3B081921730CF8649 /* ch16_t01_c02.html */; };
 		8D0B8AE3A097B6492C665818 /* ch17_t01_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CF9A6227949AA75E9A800FD /* ch17_t01_c02.html */; };
 		793B094DFECF2AD469D24EDC /* ch18_t01_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F792CD94BD334B04A499DD5 /* ch18_t01_c02.html */; };
+		1097D09556204DDE9F82A6D1 /* ch14_t02_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 127D1D00FA406FB692315B2B /* ch14_t02_overview.html */; };
+		05BE9E58D1316C78B239EAAA /* ch14_t02_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE9DAEF22B1022048C6A /* ch14_t02_c01.html */; };
+		5EA6BC2E0288E4BF3C856650 /* ch14_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = C1E0988AFED62C6DC9F907B6 /* ch14_t03_overview.html */; };
+		D3DA3F02F90C6C743E0E272B /* ch14_t03_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 9713323EEE1531863F1793E6 /* ch14_t03_c01.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1125,6 +1129,10 @@
 		7D3383C3B081921730CF8649 /* ch16_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_t01_c02.html; sourceTree = "<group>"; };
 		6CF9A6227949AA75E9A800FD /* ch17_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch17_t01_c02.html; sourceTree = "<group>"; };
 		0F792CD94BD334B04A499DD5 /* ch18_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_t01_c02.html; sourceTree = "<group>"; };
+		127D1D00FA406FB692315B2B /* ch14_t02_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch14_t02_overview.html; sourceTree = "<group>"; };
+		1AA2DE9DAEF22B1022048C6A /* ch14_t02_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch14_t02_c01.html; sourceTree = "<group>"; };
+		C1E0988AFED62C6DC9F907B6 /* ch14_t03_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch14_t03_overview.html; sourceTree = "<group>"; };
+		9713323EEE1531863F1793E6 /* ch14_t03_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch14_t03_c01.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1549,6 +1557,10 @@
 		04F59E132FB94EFD00568BDE /* Chapter14 */ = {
 			isa = PBXGroup;
 			children = (
+				127D1D00FA406FB692315B2B /* ch14_t02_overview.html */,
+				1AA2DE9DAEF22B1022048C6A /* ch14_t02_c01.html */,
+				C1E0988AFED62C6DC9F907B6 /* ch14_t03_overview.html */,
+				9713323EEE1531863F1793E6 /* ch14_t03_c01.html */,
 				04F59E142FB94EFE00568BDE /* ch14_style.css */,
 				04F59E162FB94EFE00568BDE /* ch14_overview.html */,
 				04F59E4C2FB9682F00568BDE /* ch14_t01_overview.html */,
@@ -2502,6 +2514,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1097D09556204DDE9F82A6D1 /* ch14_t02_overview.html in Resources */,
+				05BE9E58D1316C78B239EAAA /* ch14_t02_c01.html in Resources */,
+				5EA6BC2E0288E4BF3C856650 /* ch14_t03_overview.html in Resources */,
+				D3DA3F02F90C6C743E0E272B /* ch14_t03_c01.html in Resources */,
 				4A249579B782C31F630F37DB /* ch08_t01_c02.html in Resources */,
 				ECA13DA6A11C3FC7FBF02CC3 /* ch09_t01_c02.html in Resources */,
 				1545474C09E18CEE00E61E62 /* ch10_t01_c02.html in Resources */,
