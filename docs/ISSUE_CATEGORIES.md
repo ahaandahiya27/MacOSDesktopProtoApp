@@ -8,7 +8,7 @@ concrete instances, fix them, mark the category done. Status legend:
 - 🟡 partially addressed; known gaps remain
 - ❌ not yet audited
 
-Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow).
+Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow + Phase 2 design-tokens primitives).
 
 ---
 
@@ -163,7 +163,7 @@ Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Disc
 | J5 | Layout at 2560×1440 design canvas | ✅ primary test target |
 | J6 | Layout at very-wide windows | ✅ content cards carry `maxWidth: DesignTokens.contentMaxWidth` and `.frame(maxWidth:)` so very-wide windows letterbox instead of stretching |
 | J7 | SF Symbols 2 fallbacks for SF Symbols 3+ | ✅ |
-| J8 | Padding / spacing consistency via DesignTokens | 🟡 `DesignTokens.contentMaxWidth` is the only token used app-wide; padding is per-component |
+| J8 | Padding / spacing consistency via DesignTokens | 🟡 Phase 2 added `DesignTokens.Spacing` / `Radius` / `Typography` / `BrandColor` nested enums (primitive layer only). Existing flat constants kept for source-compat; call-site migration deferred to later phase |
 | J9 | Empty / error / loading states styled | ✅ SearchView empty-state, QuizBank empty-state, RouteNotFoundView error-state, ArticleBrowser PlainTextArticleFallback, Settings load-error banner all styled with icon + heading + caption |
 | J10 | Sheet sizes set explicitly (`.frame(minWidth:minHeight:)`) | ✅ Welcome / KeyboardShortcuts / CommandPalette / AskFollowUp all carry explicit frames |
 
@@ -353,7 +353,7 @@ in the project memory.
 | CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | 🟡 bg opacity bumped 0.10→0.14 + border 0.35→0.45 (Phase 1) — text colour still `.primary`, needs iMac eyeballs |
 | CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
 | CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ❌ |
-| CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | ❌ Phase 3 |
+| CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | 🟡 Phase 2 added `DesignTokens.BrandColor` semantic-name layer; WCAG measurement pending in Phase 3 |
 | CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
 | CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
 | CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
@@ -366,9 +366,9 @@ in the project memory.
 |----|----------|--------|
 | TY1 | Title size too small for 5K iMac design canvas | 🟡 Discover scene title now `.title2.bold` in header (Phase 1); per-scene `Text(...).font(.largeTitle.bold())` titles still small relative to canvas |
 | TY2 | Body copy on tinted callout cards uses `.body` against busy background | 🟡 see CL2 |
-| TY3 | Single font scale (`.title.bold()` / `.body` / `.caption`) — no semantic intermediate | ❌ Phase 2 (token module will add `Typography` enum) |
+| TY3 | Single font scale (`.title.bold()` / `.body` / `.caption`) — no semantic intermediate | ✅ `DesignTokens.Typography` enum added (Phase 2) — `heroTitle / pageTitle / sectionTitle / cardTitle / sectionHeader / bodyEmphasis / body / bodyRelaxed / metaCaption / microCaption / mono / monoBold`. Call-site migration deferred to Phase 6 |
 | TY4 | Dynamic Type at xLarge unverified — dup of H4 | 🟡 |
-| TY5 | Line-height (`.lineSpacing`) applied inconsistently | ❌ Phase 2 |
+| TY5 | Line-height (`.lineSpacing`) applied inconsistently | ❌ deferred — `Typography` tokens (Phase 2) don't bundle line-height; Phase 6 will add a `Typography.bodyLineSpacing` constant + rollout |
 | TY6 | Sidebar item titles truncate at narrow widths with no tooltip | 🟡 Phase 4 |
 | TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
 | TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ❌ |
@@ -394,8 +394,8 @@ in the project memory.
 |----|----------|--------|
 | LY1 | Discover scenes top-anchored with ~50% empty canvas below → wasted vertical real estate | 🟡 per-scene `Spacer()` placement; Phase 6 content-pass |
 | LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 |
-| LY3 | Padding/spacing not tokenised (dup of J8) | 🟡 Phase 2 |
-| LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | ❌ Phase 2 |
+| LY3 | Padding/spacing not tokenised (dup of J8) | ✅ `DesignTokens.Spacing` enum added (Phase 2) — `xxs / xs / sm / md / lg / xl / xxl / xxxl`. Plus `DesignTokens.Radius` — `pill / sm / md / card / lg / xl`. Call-site migration deferred |
+| LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | 🟡 primitives exist (LY3); rollout to scene files is a later pass |
 | LY5 | Sidebar / main divider has no visual separator (border, shadow, vibrancy edge) | 🟡 Phase 4 |
 | LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 |
 | LY7 | Footer chrome competes with scene's own bottom CTAs | ✅ footer simplified to Prev/Next only (Phase 1) |
@@ -446,7 +446,7 @@ in the project memory.
 | CP3 | Disclosure triangle styles differ (article inline vs Discover) | ❌ |
 | CP4 | Input field style unstyled relative to surrounding card-driven UI | 🟡 |
 | CP5 | Badge component used in one place; no consistent counter/badge primitive | 🟡 |
-| CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | ❌ Phase 2 |
+| CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | 🟡 Phase 2 token primitives (Radius / Spacing / BrandColor) give the building blocks; semantic card-style rules deferred to Phase 6 |
 | CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | ❌ |
 | CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | 🟡 cosmetic — both still compile after Phase 1's `tint:` param addition |
 

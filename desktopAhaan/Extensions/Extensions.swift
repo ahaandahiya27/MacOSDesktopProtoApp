@@ -166,6 +166,104 @@ enum DesignTokens {
     /// Cap for chapter/topic lists where the cards have richer horizontal
     /// content (icons + meta + chevrons) and can use more canvas.
     static let contentMaxWidthWide: CGFloat = 1280
+
+    // MARK: - Structured token namespaces (phase 2 of visual sweep)
+    //
+    // The flat constants above stay as-is for source-compatibility with the
+    // 100+ existing call sites. New code should prefer these structured
+    // namespaces — they make intent legible (`Spacing.md` over the magic
+    // number `12`) and give phases 3 / 5 / 6 a single place to refine values
+    // (e.g., Phase 3 will swap BrandColor hues to WCAG-measured pairs).
+    //
+    // Phase 2 only adds primitives — no call-site migration happens here.
+
+    /// Spacing scale used for padding, stack spacing, gutters.
+    /// Aliases the existing `spacing*` constants where applicable so a future
+    /// migration can be a mechanical find-replace.
+    enum Spacing {
+        static let xxs: CGFloat = 2
+        static let xs: CGFloat = 4
+        static let sm: CGFloat = 8     // = spacingTight
+        static let md: CGFloat = 12    // = spacingMedium
+        static let lg: CGFloat = 16    // = spacingRelaxed
+        static let xl: CGFloat = 24    // = spacingWide
+        static let xxl: CGFloat = 32
+        static let xxxl: CGFloat = 48
+    }
+
+    /// Corner radii — names mirror Spacing's scale so a `md` radius pairs
+    /// visually with `md` spacing without a lookup table.
+    enum Radius {
+        static let pill: CGFloat = 999
+        static let sm: CGFloat = 8     // = cornerRadiusSmall
+        static let md: CGFloat = 10    // = cornerRadiusMedium
+        static let card: CGFloat = 14  // = cornerRadiusCard
+        static let lg: CGFloat = 16    // = cornerRadiusLarge
+        static let xl: CGFloat = 22
+    }
+
+    /// Semantic font roles. Today these all wrap stock SwiftUI Fonts; the
+    /// indirection exists so Phase 6 can swap (e.g.) `pageTitle` to a
+    /// larger size on 5K canvases (TY1 in the Z taxonomy) without
+    /// touching every call site.
+    ///
+    /// macOS 11 baseline only — `.title2` / `.title3` (macOS 11+),
+    /// `.bold()` / `.weight(...)` (macOS 10.15+), `Font.system(_:design:)`
+    /// (macOS 10.15+). No `.foregroundStyle`, no `.monospaced()` modifier.
+    enum Typography {
+        /// Largest heading — reserved for hero / first-launch screens.
+        static let heroTitle: Font = .system(size: 48, weight: .bold)
+        /// Per-scene page title (was inline `.largeTitle.bold()` in scenes).
+        static let pageTitle: Font = .largeTitle.bold()
+        /// Section heading in the DiscoverShell header (`Phase 1` introduced).
+        static let sectionTitle: Font = .title2.bold()
+        /// Card / callout / panel heading.
+        static let cardTitle: Font = .title3.bold()
+        /// Inline section header (above paragraphs / inside cards).
+        static let sectionHeader: Font = Font.headline
+        /// Emphasised inline body text.
+        static let bodyEmphasis: Font = Font.body.weight(.semibold)
+        /// Default reading body.
+        static let body: Font = Font.body
+        /// Long-form callout body — looser than `.body` for paragraph reads.
+        static let bodyRelaxed: Font = Font.callout
+        /// Counters, badges, "Scene 3 of 9" — semibold caption.
+        static let metaCaption: Font = Font.caption.weight(.medium)
+        /// Tiny tertiary meta — timestamps, tooltips.
+        static let microCaption: Font = Font.caption2
+        /// Monospaced inline (mnemonic per-letter rows).
+        static let mono: Font = .system(.callout, design: .monospaced)
+        /// Monospaced display (mnemonic hook word).
+        static let monoBold: Font = .system(.title2, design: .monospaced).weight(.bold)
+    }
+
+    /// Semantic colour roles. The defaults today match what the components
+    /// already use (purple = LookingAhead, orange = TryAtHome, yellow =
+    /// Mnemonic, teal = RelatedConcepts, green = primary CTA / completed).
+    /// Phase 3 will replace these with WCAG-measured pairs that work on
+    /// the Discover gradient canvas in both Light and Dark mode.
+    ///
+    /// Direct system colours (`.purple` / `.orange` / `.yellow` / `.green`)
+    /// are macOS 10.15 baseline. `Color.compatTeal` lives in this file too
+    /// (further down) as a Big-Sur-safe fallback for system `.teal`.
+    enum BrandColor {
+        // Discover-Mode callout tints — semantic names, not hue names.
+        static let lookingAhead: Color = .purple
+        static let tryAtHome: Color = .orange
+        static let mnemonic: Color = .yellow
+        static let mnemonicAccent: Color = .orange
+        static let relatedConcepts: Color = Color.compatTeal
+
+        // Action / state.
+        static let primaryAction: Color = .green
+        static let success: Color = .green
+        static let danger: Color = .red
+        static let warning: Color = .orange
+
+        // Neutral surfaces.
+        static let mutedSurface: Color = Color.gray.opacity(0.25)
+        static let dividerLine: Color = Color.primary.opacity(0.08)
+    }
 }
 
 // MARK: - View modifier for Devanagari text
