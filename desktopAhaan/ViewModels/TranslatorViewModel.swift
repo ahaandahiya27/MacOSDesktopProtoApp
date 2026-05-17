@@ -75,8 +75,19 @@ final class TranslatorViewModel: ObservableObject {
             showResult = true
             translationSource = translationService.lastUsedProvider
 
-            let record = TranslationRecord(from: response)
-            dataStore.insert(record)
+            // Dedup: if the exact same (original, translated, src, tgt)
+            // tuple is already in history, don't insert a second copy.
+            // The user re-translating "नमः" → "salutation" 5 times in
+            // a row shouldn't bloat the history list.
+            if dataStore.findRecord(
+                original: response.originalText,
+                translated: response.translatedText,
+                srcLang: response.sourceLanguage,
+                tgtLang: response.targetLanguage
+            ) == nil {
+                let record = TranslationRecord(from: response)
+                dataStore.insert(record)
+            }
 
             checkFavoriteStatus(for: response, dataStore: dataStore)
         } catch {

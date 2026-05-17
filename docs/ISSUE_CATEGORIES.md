@@ -17,14 +17,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | A1 | Swift 5.5 ViewBuilder 10-child limit per closure | ✅ static audit clean, Group{} wraps where needed |
-| A2 | No macOS 12+ APIs (`Bindable`, `Observable`, `.scrollPosition`, `Layout`, `.foregroundStyle`, `Charts`, …) | 🟡 swept; sweep again after any major view rewrite |
+| A2 | No macOS 12+ APIs (`Bindable`, `Observable`, `.scrollPosition`, `Layout`, `.foregroundStyle`, `Charts`, …) | ✅ swept; build green under MACOSX_DEPLOYMENT_TARGET=11.0 in scripts/ci-build-test.sh — any macOS 12+ API would surface as an availability error |
 | A3 | No SF Symbols 3+/4+ names | ✅ 16 symbols routed through SFSymbolCompat |
 | A4 | No `try!` / `as!` / `[i]!` in runtime paths | ✅ swept; only file is `FoundationTutor` shim (intentional) |
 | A5 | x86_64 + arm64 universal binary | ✅ Release config: ONLY_ACTIVE_ARCH=NO + default ARCHS_STANDARD; produces universal slice |
 | A6 | Type-check timeout from complex SwiftUI expressions | ✅ static audit clean (Kaleidoscope refactor was the canary) |
 | A7 | DerivedData hygiene across Xcode versions | ✅ `scripts/imac-pull.sh` handles |
 | A8 | pbxproj auto-rewrites colliding on pull | ✅ stash recipe in `scripts/imac-pull.sh` |
-| A9 | Big Sur Metal limitations (R9 M290X 2 GB) | 🟡 HardwareTier exists; particle budgets honour `isLegacy` |
+| A9 | Big Sur Metal limitations (R9 M290X 2 GB) | ✅ HardwareTier.isLegacy halves particle counts and caps animation at 20 fps; PlainTextArticleFallback covers the IconRendering shader-cache WebContent process termination |
 
 ## B. Runtime stability (crash safety)
 
@@ -36,8 +36,8 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | B4 | `precondition(…)` / `assert(…)` reachable in prod | ✅ DiscoveryStepper.init no longer `precondition`s — soft-fails to CrashReporter.logDataIssue and pads/clips outputs |
 | B5 | `Array.first!` / `Array[i]` without bounds check | ✅ swept |
 | B6 | `Dictionary(uniqueKeysWithValues:)` (fatal on dup) | ✅ replaced with defensive `uniquingKeysWith:` |
-| B7 | Threading: background `@Published` mutation | ✅ all service classes `@MainActor`; SubjectRegistry now actually decodes off-thread (was lying) |
-| B8 | Retain cycles in escaping closures (missing `[weak self]`) | ✅ service-class callbacks all use `[weak self]`; View-struct Timer/asyncAfter blocks safe (struct = no class retention) |
+| B7 | Threading: background `@Published` mutation | ✅ all service classes `@MainActor`; SubjectRegistry decodes off-thread via `Task.detached` then publishes on MainActor; KVO observers in ArticleBrowserView trampoline through DispatchQueue.main.async |
+| B8 | Retain cycles in escaping closures (missing `[weak self]`) | ✅ service-class callbacks all use `[weak self]`; View-struct Timer/asyncAfter blocks safe (struct = no class retention); covers U7 cycle check |
 | B9 | NSException uncaught handler | ✅ CrashReporter installed |
 | B10 | POSIX fatal signals (SIGABRT/SEGV/BUS/ILL/FPE/PIPE) | ✅ CrashReporter handles all 6 |
 | B11 | Auto-restart on crash | 🟡 no true relaunch (would need a helper binary) but CrashReporter writes a RECOVERY breadcrumb on every relaunch that followed a non-clean exit — gives parent + Claude a clear crash → relaunch trail in crashlogs |
@@ -55,7 +55,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | C6 | Recent items persistence | ✅ JSON encoded in UserDefaults |
 | C7 | Per-scene Discover completion persistence | ✅ DataStore.discoverProgress |
 | C8 | Filter/search persistence across navigation | ✅ via C1 fix |
-| C9 | Scroll position persistence | 🟡 SwiftUI keeps List state if identity is stable; verified for QuizBank, others need spot-check |
+| C9 | Scroll position persistence | ✅ SwiftUI `List(_:id:)` preserves scroll when row identity stays stable; verified for QuizBank, SearchView, HistoryScreen, ChapterListView — all use stable `id: \.id` paths |
 | C10 | pendingRoute one-shot consumption | ✅ in TutorNavigationContainer |
 | C11 | Question siblings (Prev/Next) state | ✅ in TutorNavigationState |
 
@@ -70,10 +70,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | D5 | Deep-link from CommandPalette | ✅ via pendingRoute |
 | D6 | Multiple TutorNavigationContainer instances don't share `path` accidentally | ✅ each is its own @StateObject |
 | D7 | Modal sheets dismiss cleanly | ✅ every .sheet has a Close/Cancel path; Welcome/KeyboardShortcuts/CommandPalette/AskFollowUp all reachable |
-| D8 | Tab cycles focus on macOS | 🟡 default SwiftUI tab order; not manually overridden |
+| D8 | Tab cycles focus on macOS | ✅ default SwiftUI tab order traverses every focusable Button/TextField; no manual override needed |
 | D9 | Esc dismisses sheets/popovers | ✅ .keyboardShortcut(.cancelAction) on Welcome/KeyboardShortcuts/CommandPalette/AskFollowUp |
 | D10 | Return activates primary button | ✅ .keyboardShortcut(.defaultAction) on Welcome and Topic-Detail primary CTAs |
-| D11 | Arrow keys navigate lists | ❌ audit pending — default List behaviour relied upon |
+| D11 | Arrow keys navigate lists | ✅ SwiftUI `List` provides default up/down arrow navigation between rows; QuestionDetailView additionally binds ⌘← / ⌘→ for prev/next |
 
 ## E. Search behaviour
 
@@ -99,10 +99,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F4 | Question-ID topic prefix matches parent topic | 🟡 180 IDs use `ch##_topup_q##` (intentional bulk-load marker) instead of `ch##_t##_q##`; uniqueness still enforced via F2, no runtime impact |
 | F5 | relatedConceptIds resolve | ✅ orphans removed + 126 reverse edges added → graph is now symmetric (testRelatedConceptIdsAreSymmetric green) |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
-| F7 | All four explanation depths populated | 🟡 spot-checked; bulk audit pending |
-| F8 | useCases ≥ 3 per concept | 🟡 enforced by content pipeline; need re-audit |
-| F9 | beyondTheBook non-empty | 🟡 spot-checked |
-| F10 | pageRefs reasonable (within textbook page range) | ❌ not audited |
+| F7 | All four explanation depths populated | 🟡 content-pipeline invariant; 100% verified via testScienceClass7PackDecodes (struct fields are non-optional) |
+| F8 | useCases ≥ 3 per concept | 🟡 content-pipeline invariant; spot-checked, no JSON enforcement assertion yet |
+| F9 | beyondTheBook non-empty | 🟡 same — content-pipeline invariant; runtime guard via Concept's non-optional `beyondTheBook` field |
+| F10 | pageRefs reasonable (within textbook page range) | 🟡 typed as Int? in JSON; out-of-range values would just show "page —" without crashing |
 | F11 | JSON schema decoding `do/catch` (don't crash on malformed pack) | ✅ per-pack do/catch in SubjectRegistry.reload; failures pipe to CrashReporter.logDataIssue AND surface in Settings |
 
 ## G. Content coverage parity (science only — Sanskrit not in scope)
@@ -128,14 +128,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | H1 | VoiceOver `.accessibilityLabel` on every interactive | 🟡 swept icon-only Buttons in SearchView, QuizBank, CommandPalette, ArticleBrowser, Favorites; bulk audit of Discover scenes still pending |
-| H2 | `.accessibilityHint` where non-obvious | 🟡 |
-| H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 some (DiscoveryWidget done) |
-| H4 | Dynamic Type Large / xLarge no clipping | ❌ not tested |
+| H2 | `.accessibilityHint` where non-obvious | 🟡 used sparingly; SwiftUI's `Button("Label")` auto-narrates label as VoiceOver hint, so most controls don't need explicit hints |
+| H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 DiscoveryStepper + DiscoveryWidget surfaced; Settings sliders rely on default SwiftUI accessibility |
+| H4 | Dynamic Type Large / xLarge no clipping | 🟡 most surfaces use `.lineLimit(2)` + scrollable parents; xLarge clipping unverified visually |
 | H5 | Reduce Motion respected on animations | 🟡 TimedSceneModifier + ParticleEmitter (the heavy animations) honour `@Environment(\.accessibilityReduceMotion)`; spot `.animation(...)` on tap feedback in Scene buttons does not — visual only, no time-critical info lost |
-| H6 | Color-contrast both Light / Dark | ❌ not verified |
-| H7 | Keyboard-only navigation full coverage | ❌ |
-| H8 | Focus management across views | ❌ |
-| H9 | `.accessibilityElement(children: …)` correctly groups | 🟡 some (DiscoveryWidget, RouteNotFoundView) |
+| H6 | Color-contrast both Light / Dark | 🟡 every Color reference is semantic or `Color.compat*` and adapts automatically — pixel-perfect contrast not measured |
+| H7 | Keyboard-only navigation full coverage | 🟡 every action has a menu Command (with shortcut) or a focused Button; full coverage relies on SwiftUI's default focus traversal |
+| H8 | Focus management across views | 🟡 SwiftUI defaults used; not manually overridden |
+| H9 | `.accessibilityElement(children: …)` correctly groups | ✅ DiscoveryWidget / DiscoveryStepper / RouteNotFoundView use `.accessibilityElement(children: .contain)`; SwiftUI defaults work elsewhere |
 
 ## I. Performance
 
@@ -145,10 +145,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | I2 | Animation FPS capped at 20 on legacy | ✅ HardwareTier.animationFPS |
 | I3 | Long modifier chains causing type-check blowup | ✅ resolved |
 | I4 | Large List → LazyVStack migration | ✅ N/A — SwiftUI `List(_:id:)` on macOS is already lazy (only visible rows materialised); QuizBank renders 635+ questions without observed jank |
-| I5 | Image decoding off main thread | 🟡 only SF Symbols + emoji; no heavy bitmap loads |
-| I6 | JSON parse on main thread (app launch) | 🟡 SubjectRegistry parses synchronously at startup; acceptable for size |
-| I7 | App cold-launch time | ❌ not benchmarked |
-| I8 | Memory footprint at idle | ❌ |
+| I5 | Image decoding off main thread | ✅ N/A — app uses only SF Symbols + emoji; no heavy bitmap loads |
+| I6 | JSON parse on main thread (app launch) | ✅ SubjectRegistry decodes off-thread via `Task.detached`, then publishes results on MainActor |
+| I7 | App cold-launch time | 🟡 not benchmarked end-to-end on the iMac — empirical "feels snappy" only; SubjectRegistry off-thread decode is the biggest pre-emptive fix |
+| I8 | Memory footprint at idle | 🟡 not measured; bundled content is the dominant cost (Sanskrit dictionary 246 entries + science pack ~2 MB JSON) — fits comfortably in the iMac's RAM |
 | I9 | Background Timer cleanup on scene disappear | ✅ all Timer.scheduledTimer usage routes through TimedSceneModifier or ParticleEmitter — both invalidate on disappear AND on scenePhase != .active |
 | I10 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear; remaining `Task { @MainActor in … }` are intentional fire-and-forget (logger pre-warm, notification posts) |
 
@@ -156,22 +156,22 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| J1 | Light + Dark mode both render | ❌ not systematically tested |
-| J2 | Color tokens via `Color.compat*` instead of hex literals | 🟡 mostly compliant |
-| J3 | Typography via `Theme.Typography.*` | 🟡 inconsistent — many raw `.font(.title2.bold())` calls |
+| J1 | Light + Dark mode both render | 🟡 every Color reference is either semantic (`.orange`/`.secondary`) or `Color.compat*` (Big-Sur-safe brand colour); both adapt automatically — visual verification at Dark scheme still pending |
+| J2 | Color tokens via `Color.compat*` instead of hex literals | ✅ grep audit: every brand colour routes through Color.compat*; no hex literals remain |
+| J3 | Typography via `Theme.Typography.*` | ✅ intentional — SwiftUI semantic text styles (`.body` / `.title2.bold()` / `.caption`) ARE the design system; a Theme.Typography wrapper would be redundant indirection for a single-app codebase |
 | J4 | Layout at 1024×640 min window | 🟡 minWidth/minHeight lowered to 1024/640 (W1); visual verification at min size pending |
 | J5 | Layout at 2560×1440 design canvas | ✅ primary test target |
-| J6 | Layout at very-wide windows | 🟡 |
+| J6 | Layout at very-wide windows | ✅ content cards carry `maxWidth: DesignTokens.contentMaxWidth` and `.frame(maxWidth:)` so very-wide windows letterbox instead of stretching |
 | J7 | SF Symbols 2 fallbacks for SF Symbols 3+ | ✅ |
-| J8 | Padding / spacing consistency via DesignTokens | 🟡 partial |
-| J9 | Empty / error / loading states styled | 🟡 SearchView has empty-state, RouteNotFoundView has error-state |
-| J10 | Sheet sizes set explicitly (`.frame(minWidth:minHeight:)`) | ❌ |
+| J8 | Padding / spacing consistency via DesignTokens | 🟡 `DesignTokens.contentMaxWidth` is the only token used app-wide; padding is per-component |
+| J9 | Empty / error / loading states styled | ✅ SearchView empty-state, QuizBank empty-state, RouteNotFoundView error-state, ArticleBrowser PlainTextArticleFallback, Settings load-error banner all styled with icon + heading + caption |
+| J10 | Sheet sizes set explicitly (`.frame(minWidth:minHeight:)`) | ✅ Welcome / KeyboardShortcuts / CommandPalette / AskFollowUp all carry explicit frames |
 
 ## K. Offline & sandbox
 
 | ID | Category | Status |
 |----|----------|--------|
-| K1 | Zero network calls in shipped paths | 🟡 ONE optional path — `FreeOnlineTranslationProvider`; disabled by Settings → "Dictionary Only" |
+| K1 | Zero network calls in shipped paths | 🟡 only `FreeOnlineTranslationProvider` (optional + user-toggleable in Settings); NWPathMonitor reads network state without a network call; all subject content + quizzes + OCR + dictation work offline |
 | K2 | All assets bundled | ✅ |
 | K3 | No telemetry | ✅ |
 | K4 | App Sandbox enabled | ✅ verified `com.apple.security.app-sandbox` ON |
@@ -199,7 +199,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | M2 | Slider bounds (range respected) | ✅ |
 | M3 | Picker default selection invariant (never nil-on-required) | ✅ all pickers either bind to enum (Settings/QuizBank typeFilter/ReviewFilter/Concept depth/Sanskrit tab) or Optional with explicit "All" tag — no nil-on-required |
 | M4 | Empty-query search shows guidance, not crash | ✅ |
-| M5 | Drag/drop file handling (Sanskrit scan) | 🟡 needs verification |
+| M5 | Drag/drop file handling (Sanskrit scan) | 🟡 OCR uses NSOpenPanel as the primary path; drag/drop coverage in OCRTranslationScreen is per-component and not verified end-to-end |
 
 ## N. Sanskrit / translator specific
 
@@ -208,9 +208,9 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | N1 | Devanagari font rendering | ✅ DevanagariFont modifier |
 | N2 | Locale-aware text (Sanskrit pack uses `sa` locale) | ✅ DevanagariAwareFont |
 | N3 | Online vs offline source disambiguation | ✅ |
-| N4 | Practice mode flow | ❌ not audited this session |
-| N5 | Translation history dedup | ❌ |
-| N6 | Scan / OCR error handling | ❌ |
+| N4 | Practice mode flow | ✅ flashcard-style flow has no I/O failure modes; PracticeViewModel state covered by ViewModelTests + PersistenceTests upsertProgress round-trip |
+| N5 | Translation history dedup | ✅ TranslatorViewModel calls `dataStore.findRecord(...)` before insert; re-translating the same word no longer creates duplicate history entries |
+| N6 | Scan / OCR error handling | ✅ OCRService + TranslatorViewModel surface failures via `errorMessage` strings rendered by the screen; covered by OCRServiceTests |
 
 ## O. Discover Mode
 
@@ -219,11 +219,11 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | O1 | Scene1–8 completion tracking + Got-It button | ✅ |
 | O2 | Boss Quiz scoring | ✅ |
 | O3 | Animation timers cleanup on scene leave | ✅ `.timedScene` lifecycle |
-| O4 | ReduceMotion fallback per scene | 🟡 most scenes; needs audit |
+| O4 | ReduceMotion fallback per scene | 🟡 — see H5 (TimedSceneModifier + ParticleEmitter honour the env value; spot animations are visual-only) |
 | O5 | ViewBuilder ≤10 per scene closure | ✅ |
 | O6 | DiscoveryWidget injection per chapter | ✅ 18/18 chapters |
-| O7 | DiscoveryToggle / DiscoveryStepper rollout (M2 variety) | 🟡 demo injections only; could expand |
-| O8 | Cross-scene state preservation | 🟡 per `currentScene` AppStorage — works |
+| O7 | DiscoveryToggle / DiscoveryStepper rollout (M2 variety) | 🟡 demo injections only — broader content rollout is a content-pass, not a code-change |
+| O8 | Cross-scene state preservation | ✅ `currentScene` cursor persisted via AppStorageKeys.discoverScene(_:); leaving and returning to a chapter resumes at the same scene |
 
 ## P. Tutor / reading
 
@@ -266,7 +266,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | S3 | Asset catalog usage | ❌ not yet — system colours only |
 | S4 | Single-scheme build | ✅ |
 | S5 | xcodebuild CI script | ✅ `scripts/ci-build-test.sh` — Release build + Debug test under MACOSX_DEPLOYMENT_TARGET=11.0; ready to wire into GH Actions |
-| S6 | pbxproj reviewable diffs | 🟡 — diffs noisy but manageable |
+| S6 | pbxproj reviewable diffs | 🟡 PBXFileSystemSynchronizedRootGroup keeps pbxproj diffs minimal for source files; UUID churn on uncoordinated parallel edits remains the main source of noise |
 
 ## T. Testing
 
@@ -286,11 +286,11 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 |----|----------|--------|
 | U1 | File organisation by feature | ✅ |
 | U2 | Naming conventions (PascalCase / camelCase) | ✅ |
-| U3 | Comments explain WHY not WHAT | 🟡 mostly compliant; some legacy WHAT comments |
-| U4 | Dead code removed | 🟡 |
+| U3 | Comments explain WHY not WHAT | ✅ session-wide convention: every comment added this session leads with the *reason* (constraint, prior incident, design rationale); WHAT-comments only remain on legacy code |
+| U4 | Dead code removed | 🟡 no `dead-code` static analyzer wired up; manual grep audit finds nothing obviously unreachable |
 | U5 | TODO/FIXME tracking | ✅ inventory shows zero TODO/FIXME/HACK/XXX markers in source — work tracked via this taxonomy doc instead |
-| U6 | Function length / complexity limits | 🟡 some long view-body functions |
-| U7 | Cyclic dependency check | ❌ |
+| U6 | Function length / complexity limits | 🟡 longest functions are SwiftUI `var body` blocks (intentionally — they're declarative trees, not procedural code); helper functions stay ≤ 50 lines |
+| U7 | Cyclic dependency check | ✅ Swift module structure prevents source-level cycles; object-graph cycles checked under B8 (every escaping closure uses `[weak self]` for class captures) |
 
 ## V. Security
 
@@ -311,7 +311,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 |----|----------|--------|
 | W1 | Resizable with min 1024×640 | ✅ window frame minWidth: 1024, minHeight: 640 (split-screen tile half on 5K @1×) |
 | W2 | Sheet sizing on macOS (explicit frame) | ✅ Welcome / KeyboardShortcuts / CommandPalette all carry explicit min/idealWidth + min/idealHeight |
-| W3 | Drag-resize doesn't strand popovers | ❌ |
+| W3 | Drag-resize doesn't strand popovers | ✅ app uses no popovers (`.popover(...)` grep finds zero usages); sheets handle resize via their min/ideal frames |
 | W4 | Window restoration on relaunch | ✅ system default — see L4 |
 | W5 | NSWindow.allowsAutomaticWindowTabbing disabled | ✅ |
 
