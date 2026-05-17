@@ -142,6 +142,9 @@ struct TutorNavigationContainer<Root: View>: View {
         if let pack = subjectRegistry.pack(withId: packId),
            let chapter = pack.chapters.first(where: { $0.id == chapterId }) {
             ChapterDetailView(pack: pack, chapter: chapter)
+        } else {
+            RouteNotFoundView(kind: "chapter", packId: packId,
+                              itemId: chapterId, onBack: { nav.pop() })
         }
     }
 
@@ -150,6 +153,9 @@ struct TutorNavigationContainer<Root: View>: View {
         if let pack = subjectRegistry.pack(withId: packId),
            let topic = pack.chapters.flatMap(\.topics).first(where: { $0.id == topicId }) {
             TopicDetailView(pack: pack, topic: topic)
+        } else {
+            RouteNotFoundView(kind: "topic", packId: packId,
+                              itemId: topicId, onBack: { nav.pop() })
         }
     }
 
@@ -158,6 +164,9 @@ struct TutorNavigationContainer<Root: View>: View {
         if let pack = subjectRegistry.pack(withId: packId),
            let concept = pack.conceptIndex[conceptId] {
             ConceptDetailView(pack: pack, concept: concept)
+        } else {
+            RouteNotFoundView(kind: "concept", packId: packId,
+                              itemId: conceptId, onBack: { nav.pop() })
         }
     }
 
@@ -166,6 +175,9 @@ struct TutorNavigationContainer<Root: View>: View {
         if let pack = subjectRegistry.pack(withId: packId),
            let question = pack.questionIndex[questionId] {
             QuestionDetailView(pack: pack, question: question)
+        } else {
+            RouteNotFoundView(kind: "question", packId: packId,
+                              itemId: questionId, onBack: { nav.pop() })
         }
     }
 
@@ -174,6 +186,47 @@ struct TutorNavigationContainer<Root: View>: View {
         if let pack = subjectRegistry.pack(withId: packId),
            let chapter = pack.chapters.first(where: { $0.id == chapterId }) {
             DiscoverMode.view(for: pack, chapter: chapter)
+        } else {
+            RouteNotFoundView(kind: "discover-chapter", packId: packId,
+                              itemId: chapterId, onBack: { nav.pop() })
+        }
+    }
+}
+
+/// Fallback shown when a route refers to an id that no longer exists
+/// in the loaded pack (stale link, corrupt data, bookmarked-then-renamed).
+/// Replaces the silent blank screen with a recoverable error + a logged
+/// data issue that surfaces in the crash log for later diagnosis.
+///
+/// Big Sur compatible: pure SwiftUI, SF Symbols 1 icon, ≤10 children.
+private struct RouteNotFoundView: View {
+    let kind: String
+    let packId: String
+    let itemId: String
+    let onBack: () -> Void
+
+    var body: some View {
+        VStack(spacing: 14) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.system(size: 48))
+                .foregroundColor(.orange)
+                .accessibilityHidden(true)
+            Text("Couldn't open this \(kind)")
+                .font(.title2.weight(.semibold))
+            Text("ID '\(itemId)' wasn't found in pack '\(packId)'.\nThe link may be from an older content version.")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+            Button("Go back") { onBack() }
+                .keyboardShortcut(.defaultAction)
+                .accessibilityHint("Returns to the previous screen")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(24)
+        .onAppear {
+            CrashReporter.shared.logDataIssue(
+                "route lookup failed: \(kind) '\(itemId)' in pack '\(packId)'"
+            )
         }
     }
 }

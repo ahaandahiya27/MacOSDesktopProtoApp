@@ -29,7 +29,9 @@ import os.log
 final class CrashReporter {
     static let shared = CrashReporter()
 
-    private let logDirectoryURL: URL
+    /// Folder where crash logs are written (one append-only file per UTC day).
+    /// Exposed so the Help menu's "Reveal Crash Logs in Finder" can locate it.
+    let logDirectoryURL: URL
     private let logger = Logger(subsystem: "in.emoha.desktopAhaan", category: "crash")
     private let dateFormatter: DateFormatter = {
         let f = DateFormatter()

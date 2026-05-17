@@ -103,6 +103,36 @@ struct SanskritKoshApp: App {
                 }
                 .keyboardShortcut("[", modifiers: .command)
             }
+
+            // Help menu additions for the crash-log workflow:
+            //   Reveal Crash Logs in Finder — one-click access to the folder
+            //   Clear Crash Logs           — wipe everything after a fix lands
+            CommandGroup(replacing: .help) {
+                Button("desktopAhaan Help") {
+                    NotificationCenter.default.post(name: .openInAppHelp, object: nil)
+                }
+
+                Divider()
+
+                Button("Reveal Crash Logs in Finder") {
+                    let url = CrashReporter.shared.logDirectoryURL
+                    NSWorkspace.shared.activateFileViewerSelecting([url])
+                }
+
+                Button("Clear Crash Logs") {
+                    let n = CrashReporter.shared.clearAllLogs()
+                    let alert = NSAlert()
+                    alert.messageText = "Cleared \(n) crash log file(s)."
+                    alert.informativeText = "New crashes will produce a fresh log file."
+                    alert.alertStyle = .informational
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+            }
         }
     }
+}
+
+extension Notification.Name {
+    static let openInAppHelp = Notification.Name("desktopAhaan.openInAppHelp")
 }
