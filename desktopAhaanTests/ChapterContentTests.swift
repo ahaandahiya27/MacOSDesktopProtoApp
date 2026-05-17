@@ -385,4 +385,73 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertTrue(thin.isEmpty,
                       "Topics with fewer than 3 MCQs: \(thin.prefix(5).map { "\($0.0)=\($0.1)" }.joined(separator: ", "))")
     }
+
+    // MARK: - Sanskrit pack parity
+    //
+    // The full F-row invariant suite above runs against science_class7.
+    // The Sanskrit pack uses the same SubjectPack schema and has been
+    // audited clean once (246 concepts, 0 orphans, 0 asymmetry, 0
+    // empty invariant fields) — these tests pin it.
+
+    @MainActor func testSanskritPackDecodes() {
+        guard let url = Bundle.main.url(forResource: "sanskrit_class7", withExtension: "json") else {
+            XCTFail("sanskrit_class7.json not in bundle")
+            return
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            _ = try JSONDecoder().decode(SubjectPack.self, from: data)
+        } catch {
+            XCTFail("Sanskrit pack failed to decode: \(error)")
+        }
+    }
+
+    @MainActor func testSanskritPackContentInvariants() {
+        guard let url = Bundle.main.url(forResource: "sanskrit_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load Sanskrit pack")
+            return
+        }
+        // Same shape as the F7/F8/F9 + Q-prompt assertions, applied to
+        // the second pack. Failure prints the first offender so a
+        // content edit's regression is locatable.
+        for c in pack.allConcepts {
+            XCTAssertFalse(c.explanations.values.contains { !$0.isEmpty } == false,
+                           "Sanskrit concept \(c.id) has no explanation")
+            XCTAssertGreaterThanOrEqual(c.useCases.count, 3,
+                                        "Sanskrit concept \(c.id) has \(c.useCases.count) useCases (<3)")
+            XCTAssertFalse(c.beyondTheBook.isEmpty,
+                           "Sanskrit concept \(c.id) has empty beyondTheBook")
+            XCTAssertFalse(c.reasoning.isEmpty,
+                           "Sanskrit concept \(c.id) has empty reasoning")
+        }
+        for q in pack.allQuestions {
+            XCTAssertFalse(q.prompt.isEmpty,
+                           "Sanskrit question \(q.id) has empty prompt")
+            XCTAssertFalse(q.answer.isEmpty,
+                           "Sanskrit question \(q.id) has empty answer")
+        }
+    }
+
+    @MainActor func testSanskritPackRelatedRefsResolve() {
+        guard let url = Bundle.main.url(forResource: "sanskrit_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load Sanskrit pack")
+            return
+        }
+        let conceptIds = Set(pack.allConcepts.map { $0.id })
+        let questionIds = Set(pack.allQuestions.map { $0.id })
+        for c in pack.allConcepts {
+            for rid in c.relatedConceptIds {
+                XCTAssertTrue(conceptIds.contains(rid),
+                              "Sanskrit concept \(c.id) references missing relatedConcept \(rid)")
+            }
+            for rid in c.relatedQuestionIds {
+                XCTAssertTrue(questionIds.contains(rid),
+                              "Sanskrit concept \(c.id) references missing relatedQuestion \(rid)")
+            }
+        }
+    }
 }
