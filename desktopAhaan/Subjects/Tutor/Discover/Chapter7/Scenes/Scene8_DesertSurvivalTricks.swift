@@ -161,6 +161,18 @@ struct Scene8_DesertSurvivalTricks: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 12 Biology → NEET (Xerophytic Adaptations)",
+                        detail: "Desert organisms each solve one problem: water loss. Camel hump = fat storage (NOT water — common misconception NEET loves). Cactus = reduced leaves (no transpiration) + thick water-storing stem + waxy cuticle (reflects light). Kangaroo rat = metabolises hydrogen in its food into water (literally manufactures H₂O from its diet, the way bears manufacture vitamins). Three engineering solutions to one constraint."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Build a solar still — desert water-maker",
+                        detail: "Dig a small pit. Place a glass at the centre. Drop fresh green leaves around it (NOT IN the glass). Cover the pit with cling film. Put a small stone on top of the cling film, directly above the glass. Leave in sunlight for 2 hours. Water evaporates from the leaves, condenses on the cling film, runs down to the dip, drips into the glass. You've extracted water from leaves — a survival technique used in actual deserts."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

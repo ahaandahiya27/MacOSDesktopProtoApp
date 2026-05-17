@@ -187,6 +187,18 @@ struct Scene4_PolarBearSurvivalKit: View {
             detailCard
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+            LookingAheadCallout(
+                title: "Class 11 / 12 Biology → NEET (Adaptations)",
+                detail: "Polar-bear adaptations are *NEET classics*: black skin under transparent (NOT white) fur — black absorbs all sunlight wavelengths; transparent hollow hairs trap warm air. Thick subcutaneous fat = blubber insulation. Specialised paw pads with friction nodules for ice grip. Each adaptation maps to a specific Class-11 physics/chemistry principle."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+            TryAtHomeCallout(
+                title: "Blubber-glove ice test",
+                detail: "Get two plastic bags. Fill one with vegetable shortening or butter (~3 cm thick). Leave the other empty. Plunge each hand inside, then put both into a bowl of ice. The 'blubber' hand stays warm for minutes — the bare hand feels the cold immediately. This is exactly why polar bears (and whales, seals, walruses) have fat as their primary insulation."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+
             if allTapped {
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)

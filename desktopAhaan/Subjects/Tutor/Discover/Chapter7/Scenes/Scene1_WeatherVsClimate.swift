@@ -96,6 +96,18 @@ struct Scene1_WeatherVsClimate: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Geography + Statistics → JEE / NEET / UPSC",
+                        detail: "Weather = today's measurement; Climate = 30-year average. JEE Stats asks the same question as standard deviation. NEET Ecology asks 'why does monsoon arrive in June every year?' (climate). UPSC asks 'why is climate change different from weather change?' Same data, three frames: instantaneous → trend → long-term mean."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Be the family meteorologist for 30 days",
+                        detail: "Make a daily weather chart: date, temperature (kitchen thermometer outside window), 'sunny/cloudy/rain', wind direction (lick a finger and feel which side cools — that's the wind source). After 30 days you have your first climate dataset. Compare with the IMD historical average for your city — you'll see what 'climate' actually means."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

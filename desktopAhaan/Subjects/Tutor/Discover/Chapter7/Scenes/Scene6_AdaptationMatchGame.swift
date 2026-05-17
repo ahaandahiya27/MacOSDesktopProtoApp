@@ -117,6 +117,18 @@ struct Scene6_AdaptationMatchGame: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 12 Biology → NEET (Natural Selection)",
+                        detail: "Each match you just made is a *natural-selection success story*: random variation in ancestors → some variants survived their habitat → those variants reproduced more → species drifted in that direction. NEET asks 'is adaptation goal-directed?' — NO, it's the residue of survival. Darwin's *On the Origin of Species* explains the mechanism Class 12 dissects formally."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Spot adaptations near your home",
+                        detail: "Walk through a local park. Make a list: a city pigeon (eats anything → urban), a cactus (waxy + thorny → drought), a stray dog (matted ear hair → mosquito repellent), a banyan tree (aerial roots → support its massive canopy). Every organism in plain sight is an adaptation portfolio. Class-12 ecologists publish papers on what you see in 20 minutes."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if isDone {
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)

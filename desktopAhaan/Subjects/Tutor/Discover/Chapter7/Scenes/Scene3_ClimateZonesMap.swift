@@ -150,6 +150,18 @@ struct Scene3_ClimateZonesMap: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Geography → JEE / NEET / UPSC",
+                        detail: "Koppen's climate classification has 5 main zones (A-tropical, B-arid, C-temperate, D-continental, E-polar) and 30+ subtypes. Each maps to a specific vegetation, soil, agriculture, disease pattern. NEET Bio asks 'why does malaria only thrive in zones A and parts of C?' (Anopheles needs sustained warm + standing water). UPSC asks the same questions for civil services."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Find your city's Koppen code",
+                        detail: "Google '<your city> Koppen climate'. Delhi: Cwa (humid-subtropical, dry winter, hot summer). Mumbai: Aw (tropical savannah). Bangalore: Aw too, but cooler thanks to altitude. Chennai: As (tropical with dry summer). The letter code captures ~30 years of climate in 3 characters — useful shorthand for travel + agriculture planning."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

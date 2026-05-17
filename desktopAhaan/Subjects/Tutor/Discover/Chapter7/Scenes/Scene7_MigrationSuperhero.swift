@@ -97,6 +97,18 @@ struct Scene7_MigrationSuperhero: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11/12 Biology + Physics → NEET / JEE",
+                        detail: "Birds navigate using: (1) the Sun's position by day, (2) star patterns by night, (3) Earth's magnetic field via cryptochrome proteins in their eyes. NEET asks the magnetic-sense mechanism — quantum biology, an active research area. Arctic terns fly 70,000 km/year (pole-to-pole-and-back) — the longest migration on Earth. JEE Physics: that's an average speed of ~190 km/day, sustained for months."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Spot a migrant bird in your city",
+                        detail: "Indian winter (Nov-Feb) brings migratory birds from Central Asia to wetlands across India. Local hotspots: Bharatpur (Rajasthan), Chilika Lake (Odisha), Sultanpur (Haryana). Even your city's park lake hosts visitors. Look for: bar-headed geese, painted storks, ducks. Each has flown ~3000 km to be there. Same bird returns to same lake every winter — that's genetic GPS in action."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allExplored {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

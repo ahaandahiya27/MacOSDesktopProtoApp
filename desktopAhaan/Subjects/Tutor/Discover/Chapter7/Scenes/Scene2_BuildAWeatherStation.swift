@@ -146,6 +146,18 @@ struct Scene2_BuildAWeatherStation: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics + Geography → JEE / IIT-JAM",
+                        detail: "Each instrument measures a physical quantity: thermometer (T), barometer (P), hygrometer (relative humidity), anemometer (wind speed), rain gauge (precipitation). JEE asks the ideal-gas relation PV=nRT — barometer + thermometer + a fixed-volume balloon together can give you n. Indian Met Department feeds these readings into models that predict the monsoon."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Build a rain gauge from a plastic bottle",
+                        detail: "Cut a 1-litre plastic bottle horizontally near the top. Invert the top piece into the bottom like a funnel. Mark the side with 5-mm steps using a ruler. Leave outside on the next rainy day. By dinner you've measured rainfall in mm — same unit the weather report uses. Calibration tip: 1 cm³ per cm² of mouth area = 1 mm rainfall."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if stationComplete {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

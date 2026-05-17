@@ -143,6 +143,18 @@ struct Scene5_TropicalRainforestLife: View {
             detailCard
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET (Biodiversity hotspots)",
+                detail: "Tropical rainforests cover ~7% of Earth's land but host >50% of species — the highest biodiversity per square km on the planet. NEET asks the 4 stratification layers (emergent / canopy / understorey / forest floor) and why each houses different species. India's Western Ghats are one of the 36 global biodiversity hotspots — Class 12 Ecology tests this often."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+            TryAtHomeCallout(
+                title: "Mini-rainforest in a jar",
+                detail: "Wash an empty jam jar. Add 2 cm pebbles → 1 cm activated charcoal → 3 cm potting soil. Plant 2-3 small moss or fern pieces. Spritz with water. Seal the lid. The jar is now a closed ecosystem — moisture evaporates, condenses on the glass, drips back down (water cycle). With light, it'll self-sustain for months. You've built a terrarium that mimics rainforest humidity recycling."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+
             if allExplored {
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
