@@ -11,7 +11,7 @@ struct Scene8_Fragmentation: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Fragmentation").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Fragmentation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide to break the algae filament. Each piece grows into a new one.")
                 .font(.callout).foregroundColor(.secondary)
 

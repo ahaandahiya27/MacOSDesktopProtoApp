@@ -23,7 +23,7 @@ struct Scene4_ElectricIron: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Inside an Electric Iron").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Inside an Electric Iron").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap any part to see what it does.").font(.callout).foregroundColor(.secondary)
 
             ZStack {

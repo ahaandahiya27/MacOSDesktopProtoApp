@@ -21,7 +21,7 @@ struct Scene4_WhichCropWhichSoil: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Which Crop, Which Soil?").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Which Crop, Which Soil?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick the best soil for each crop.").font(.callout).foregroundColor(.secondary)
 
             VStack(spacing: 10) {

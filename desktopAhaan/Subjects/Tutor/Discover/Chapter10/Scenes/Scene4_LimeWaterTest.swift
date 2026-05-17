@@ -11,7 +11,7 @@ struct Scene4_LimeWaterTest: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Lime Water Test").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Lime Water Test").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Blow into clear limewater. It turns milky if your breath has CO₂.")
                 .font(.callout).foregroundColor(.secondary)
 

@@ -14,7 +14,7 @@ struct Scene1_HeartBeats: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Heart Beats").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Heart Beats").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Set a heart rate. Watch the beat.").font(.callout).foregroundColor(.secondary)
 
             FourChamberHeart()

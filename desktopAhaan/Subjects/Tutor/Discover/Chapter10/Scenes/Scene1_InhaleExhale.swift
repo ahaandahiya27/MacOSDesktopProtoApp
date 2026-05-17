@@ -11,7 +11,7 @@ struct Scene1_InhaleExhale: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Inhale, Exhale").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Inhale, Exhale").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap the chest to breathe in. Tap again to breathe out.")
                 .font(.callout).foregroundColor(.secondary)
 

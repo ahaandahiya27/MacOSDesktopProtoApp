@@ -16,7 +16,7 @@ struct Scene2_SeriesVsParallel: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Series vs Parallel").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Series vs Parallel").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("In series, removing one bulb kills the rest. In parallel, others stay lit.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

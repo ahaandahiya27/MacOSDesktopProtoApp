@@ -24,7 +24,7 @@ struct Scene3_DistanceTimeGraph: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Distance–Time Graph").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Distance–Time Graph").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick a motion. Watch how the line changes shape.")
                 .font(.callout).foregroundColor(.secondary)
 

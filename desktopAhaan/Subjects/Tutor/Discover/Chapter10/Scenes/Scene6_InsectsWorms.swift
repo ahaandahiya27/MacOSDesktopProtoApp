@@ -27,7 +27,7 @@ struct Scene6_InsectsWorms: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("How Insects & Worms Breathe").font(.largeTitle.bold()).padding(.top, 18)
+            Text("How Insects & Worms Breathe").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Each species solved \"how to get oxygen\" differently.")
                 .font(.callout).foregroundColor(.secondary)
 

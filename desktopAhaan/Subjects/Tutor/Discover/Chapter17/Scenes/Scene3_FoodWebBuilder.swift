@@ -12,7 +12,7 @@ struct Scene3_FoodWebBuilder: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Food Web Builder").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Food Web Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap each link to add it to the web. Energy flows from plants up.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

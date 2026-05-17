@@ -26,7 +26,7 @@ struct Scene6_VegetativePropagation: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Vegetative Propagation").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("No flowers, no seeds — these plants clone themselves.")
                 .font(.callout).foregroundColor(.secondary)
 

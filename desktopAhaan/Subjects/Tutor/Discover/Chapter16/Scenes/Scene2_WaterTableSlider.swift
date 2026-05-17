@@ -14,7 +14,7 @@ struct Scene2_WaterTableSlider: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Water Table Slider").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Water Table Slider").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Move the two sliders. Watch the underground water level rise and fall.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

@@ -21,7 +21,7 @@ struct Scene3_BloodSort: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Blood Components").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Blood Components").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Each component has a different job. Match them up.")
                 .font(.callout).foregroundColor(.secondary)
 

@@ -11,7 +11,7 @@ struct Scene5_KidneyFilter: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Kidney Filter").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Kidney Filter").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap the button to push blood through the kidney.").font(.callout).foregroundColor(.secondary)
 
             HStack(spacing: 24) {

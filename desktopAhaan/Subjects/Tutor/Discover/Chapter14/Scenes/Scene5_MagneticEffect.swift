@@ -10,7 +10,7 @@ struct Scene5_MagneticEffect: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Magnetic Effect").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Magnetic Effect").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Place a compass near a wire. Turn current on — needle swings.")
                 .font(.callout).foregroundColor(.secondary)
 

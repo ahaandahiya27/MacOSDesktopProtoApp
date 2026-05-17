@@ -17,7 +17,7 @@ struct Scene2_PendulumLab: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Pendulum Lab").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Pendulum Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Change the string length. The period changes too.")
                 .font(.callout).foregroundColor(.secondary)
 

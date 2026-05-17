@@ -20,7 +20,7 @@ struct Scene4_ArteryVeinCapillary: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Artery / Vein / Capillary").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Artery / Vein / Capillary").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Three kinds of blood vessels — pick the right one.")
                 .font(.callout).foregroundColor(.secondary)
 

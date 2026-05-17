@@ -79,6 +79,23 @@ Verified statically:
 
 Manual run-the-app verification is left for the user as the final smoke check.
 
+## Scene title accents (H-5 extension)
+
+Every scene body in Ch 8-18 had a generic black `Text("Scene Title").font(.largeTitle.bold()).padding(.top, 18)` at the top. That now gets the chapter accent applied:
+
+```swift
+Text("Scene Title")
+    .font(.largeTitle.bold())
+    .foregroundColor(ChapterTheme.accent(for: chapter.id))
+    .padding(.top, 18)
+```
+
+Swept 99 scene files across Ch 8-18 with a single Python regex pass. Result: every scene's title now matches the chapter accent already used in the DiscoverShell header/footer and the dashboard progress arc — completing the per-chapter visual identity loop.
+
+Pure SwiftUI `Color` modifier — zero new APIs, zero GPU/memory delta on macOS 11 / R9 M290X.
+
+Scope was deliberately limited to Ch 8-18 (the 11 chapters added in this session). Ch 1-7 + Ch 19 scenes are untouched to avoid disturbing their already-polished look — applying the theme there would be a separate considered change.
+
 ## Ch 15 (Light) — Topic 1 articles (Reflection & Mirrors)
 
 Closes part of the §5 backlog "Topic-level articles for Ch 8-18". Ch 15 (Light) gets full topic + concept article scaffolding for Topic 1, matching the depth of Ch 1 / Ch 5 / Ch 6 / Ch 19:

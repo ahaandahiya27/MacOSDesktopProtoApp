@@ -12,7 +12,7 @@ struct Scene7_PhloemSugarPipeline: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Phloem Sugar Pipeline").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Phloem Sugar Pipeline").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Phloem carries sugar from where it's made to where it's needed.")
                 .font(.callout).foregroundColor(.secondary)
 

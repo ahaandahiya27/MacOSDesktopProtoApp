@@ -40,7 +40,7 @@ struct Scene9_BossQuiz_Ch8: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Boss Quiz").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
 
             if !done {

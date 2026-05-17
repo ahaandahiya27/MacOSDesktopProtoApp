@@ -20,7 +20,7 @@ struct Scene5_UniformNonUniform: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Uniform vs Non-Uniform").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Uniform vs Non-Uniform").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Same speed throughout, or changing speed?")
                 .font(.callout).foregroundColor(.secondary)
 

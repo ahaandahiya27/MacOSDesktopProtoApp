@@ -20,7 +20,7 @@ struct Scene8_WaterPledge: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("World Water Day Pledge").font(.largeTitle.bold()).padding(.top, 18)
+            Text("World Water Day Pledge").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick the pledges you'll keep this month.").font(.callout).foregroundColor(.secondary)
 
             VStack(spacing: 8) {

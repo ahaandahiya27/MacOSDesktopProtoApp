@@ -25,7 +25,7 @@ struct Scene1_FastOrSlow: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Fast or Slow?").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Drag/tap to order these from slowest → fastest.")
                 .font(.callout).foregroundColor(.secondary)
 

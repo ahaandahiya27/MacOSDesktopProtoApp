@@ -22,7 +22,7 @@ struct Scene6_SanitationMap: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Sanitation Map").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Sanitation Map").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("There's no single toilet — choose by water, money and place.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

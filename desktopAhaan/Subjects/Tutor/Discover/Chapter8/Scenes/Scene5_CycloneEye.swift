@@ -24,7 +24,7 @@ struct Scene5_CycloneEye: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Cyclone Eye").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Cyclone Eye").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Drag the wind-speed slider. The eye stays calm; the bands around it whip faster.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

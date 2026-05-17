@@ -21,7 +21,7 @@ struct Scene8_SafetyLab: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Safety Lab").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap Safe or Unsafe for each action.")
                 .font(.callout).foregroundColor(.secondary)
 

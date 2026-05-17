@@ -13,7 +13,7 @@ struct Scene5_O2CO2Balance: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("O₂ ⇄ CO₂ Balance").font(.largeTitle.bold()).padding(.top, 18)
+            Text("O₂ ⇄ CO₂ Balance").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Forest cover ↔ atmospheric oxygen. Slide to see the effect.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

@@ -12,7 +12,7 @@ struct Scene1_MirrorMirror: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Mirror Mirror").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide the incoming ray. The reflected ray follows the law.")
                 .font(.callout).foregroundColor(.secondary)
 

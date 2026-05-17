@@ -19,7 +19,7 @@ struct Scene8_RestVsRun: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Rest vs Run").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Rest vs Run").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide the activity level. Watch breathing speed up.")
                 .font(.callout).foregroundColor(.secondary)
 

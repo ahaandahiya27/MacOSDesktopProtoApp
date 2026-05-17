@@ -22,7 +22,7 @@ struct Scene3_HeatingEffect: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Heating Effect").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Heating Effect").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Current flowing through a wire heats it up.").font(.callout).foregroundColor(.secondary)
 
             ZStack {

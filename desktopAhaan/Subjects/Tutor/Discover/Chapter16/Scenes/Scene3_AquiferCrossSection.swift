@@ -26,7 +26,7 @@ struct Scene3_AquiferCrossSection: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Aquifer Cross-Section").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Aquifer Cross-Section").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap a layer to learn what's underground.").font(.callout).foregroundColor(.secondary)
 
             VStack(spacing: 2) {

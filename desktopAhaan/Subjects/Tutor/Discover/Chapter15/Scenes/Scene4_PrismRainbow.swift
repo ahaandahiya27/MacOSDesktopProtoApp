@@ -21,7 +21,7 @@ struct Scene4_PrismRainbow: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Prism & Rainbow").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Prism & Rainbow").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Send white light through a glass prism. Out comes a rainbow.")
                 .font(.callout).foregroundColor(.secondary)
 

@@ -21,7 +21,7 @@ struct Scene7_WaterAudit: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Daily Water Audit").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap each activity you did today. See your total.")
                 .font(.callout).foregroundColor(.secondary)
 

@@ -15,7 +15,7 @@ struct Scene5_CompostPitBuilder: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Compost Pit Builder").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Compost Pit Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Add greens, browns, moisture — then wait 6+ weeks.")
                 .font(.callout).foregroundColor(.secondary)
 

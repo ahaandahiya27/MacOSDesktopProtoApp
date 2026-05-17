@@ -16,7 +16,7 @@ struct Scene6_AirMoistureInSoil: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Air & Moisture in Soil").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Air & Moisture in Soil").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Two simple home experiments prove soil has both air and water.")
                 .font(.callout).foregroundColor(.secondary)
 

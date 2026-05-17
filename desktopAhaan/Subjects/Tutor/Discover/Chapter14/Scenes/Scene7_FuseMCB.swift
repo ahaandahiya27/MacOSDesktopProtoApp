@@ -11,7 +11,7 @@ struct Scene7_FuseMCB: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Fuse & MCB").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Fuse & MCB").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Push the current up. The fuse melts (or the MCB trips) past its rating.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

@@ -15,7 +15,7 @@ struct Scene8_AnemometerReader: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Anemometer Reader").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Anemometer Reader").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide to spin the cups. Faster spin = stronger wind.")
                 .font(.callout).foregroundColor(.secondary)
 

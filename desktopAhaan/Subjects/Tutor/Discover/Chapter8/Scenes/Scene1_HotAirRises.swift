@@ -13,7 +13,7 @@ struct Scene1_HotAirRises: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Hot Air Rises").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Hot Air Rises").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap the flame to heat the air inside the balloon.")
                 .font(.callout).foregroundColor(.secondary)
 

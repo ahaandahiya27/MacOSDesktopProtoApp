@@ -11,7 +11,7 @@ struct Scene5_SoilErosionStory: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Soil Erosion Story").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Soil Erosion Story").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Toggle the forest. See how much muddy water washes away after rain.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

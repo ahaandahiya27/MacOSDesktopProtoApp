@@ -33,7 +33,7 @@ struct Scene3_PercolationRate: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Percolation Rate").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Percolation Rate").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pour the same amount of water. How fast does it sink through?").font(.callout).foregroundColor(.secondary)
 
             Picker("", selection: $soil) {

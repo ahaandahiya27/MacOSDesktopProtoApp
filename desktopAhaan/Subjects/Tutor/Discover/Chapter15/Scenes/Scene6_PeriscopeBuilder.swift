@@ -10,7 +10,7 @@ struct Scene6_PeriscopeBuilder: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Periscope Builder").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Periscope Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Two mirrors at 45° — and suddenly you can see over walls.")
                 .font(.callout).foregroundColor(.secondary)
 

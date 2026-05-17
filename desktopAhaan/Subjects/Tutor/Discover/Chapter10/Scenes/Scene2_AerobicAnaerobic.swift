@@ -20,7 +20,7 @@ struct Scene2_AerobicAnaerobic: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Aerobic vs Anaerobic").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Aerobic vs Anaerobic").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap whether each happens WITH or WITHOUT oxygen.").font(.callout).foregroundColor(.secondary)
 
             VStack(spacing: 10) {

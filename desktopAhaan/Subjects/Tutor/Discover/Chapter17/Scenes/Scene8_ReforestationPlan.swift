@@ -18,7 +18,7 @@ struct Scene8_ReforestationPlan: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Reforestation Plan").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Reforestation Plan").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick actions you'll commit to. We'll count the trees you help.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 

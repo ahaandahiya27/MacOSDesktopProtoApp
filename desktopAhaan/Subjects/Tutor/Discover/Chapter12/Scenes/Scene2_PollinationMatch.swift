@@ -21,7 +21,7 @@ struct Scene2_PollinationMatch: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Pollination Match").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(.secondary)
 
             VStack(spacing: 10) {

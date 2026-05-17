@@ -11,7 +11,7 @@ struct Scene3_YeastSugarLab: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Yeast & Sugar Lab").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Yeast & Sugar Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Sugar + warm water + yeast → CO₂. Watch the balloon inflate.")
                 .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
 
