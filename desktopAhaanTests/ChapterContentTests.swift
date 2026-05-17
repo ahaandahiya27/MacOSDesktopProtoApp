@@ -434,6 +434,65 @@ final class ChapterContentTests: XCTestCase {
         }
     }
 
+    /// F4 — every question id starts with its topic id. The
+    /// `_topup_` rename in commit b2f6f9f normalised the 74 outliers;
+    /// this test prevents the old pattern from sneaking back in via a
+    /// content edit.
+    @MainActor func testEveryQuestionIdPrefixedByTopicId() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var mismatches: [(String, String)] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics {
+                let prefix = topic.id + "_q"
+                for q in topic.questions where !q.id.hasPrefix(prefix) {
+                    mismatches.append((q.id, topic.id))
+                }
+            }
+        }
+        XCTAssertTrue(mismatches.isEmpty,
+                      "Questions whose id doesn't start with `<topic.id>_q`: \(mismatches.prefix(5).map { "\($0.0) (in \($0.1))" }.joined(separator: ", "))")
+    }
+
+    /// Cross-pack ID-collision posture.
+    ///
+    /// Concept IDs MUST be unique across all packs because Bookmarks
+    /// + DataStore.discoverProgress key by `"\(packId)::\(conceptId)"`
+    /// internally but the registry occasionally surfaces them flat (e.g.
+    /// CommandPalette deep-link).
+    ///
+    /// Question IDs are ALLOWED to collide across packs because every
+    /// navigation route + storage key carries packId explicitly (see
+    /// TutorNavigationState.push(.question(packId:questionId:))). This
+    /// test pins that posture so a future "let's globally namespace"
+    /// refactor doesn't silently break the contract — or so the day
+    /// we DO globally namespace, this test fails first.
+    @MainActor func testNoCrossPackConceptIdCollision() {
+        let sci = try? loadPack("science_class7")
+        let san = try? loadPack("sanskrit_class7")
+        guard let s = sci, let a = san else {
+            XCTFail("Could not load both packs")
+            return
+        }
+        let sIds = Set(s.allConcepts.map { $0.id })
+        let aIds = Set(a.allConcepts.map { $0.id })
+        let collisions = sIds.intersection(aIds)
+        XCTAssertTrue(collisions.isEmpty,
+                      "Concept IDs collide across packs: \(collisions.prefix(5))")
+    }
+
+    private func loadPack(_ resource: String) throws -> SubjectPack {
+        guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else {
+            throw NSError(domain: "test", code: 1, userInfo: [NSLocalizedDescriptionKey: "\(resource).json not in bundle"])
+        }
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(SubjectPack.self, from: data)
+    }
+
     @MainActor func testSanskritPackRelatedRefsResolve() {
         guard let url = Bundle.main.url(forResource: "sanskrit_class7", withExtension: "json"),
               let data = try? Data(contentsOf: url),
