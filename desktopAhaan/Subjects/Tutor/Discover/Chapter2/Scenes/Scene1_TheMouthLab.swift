@@ -66,6 +66,20 @@ struct Scene1_TheMouthLab: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Biology → NEET",
+                        detail: "The four tooth shapes you just clicked become a heteodont dental formula in Class 11 — 2-1-2-3 (per quadrant: incisors-canines-premolars-molars). NEET asks 'compare the formula of a herbivore vs a carnivore' — the difference is in the canines. And salivary amylase from this scene is the first digestive enzyme in a chain of 20+ you'll meet."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Chew a cracker for 60 seconds",
+                        detail: "Take a plain cracker (no salt, no sugar). Chew slowly without swallowing for a full minute. After 30 seconds the bland taste turns slightly sweet. That's salivary amylase breaking starch (tasteless) into maltose (sweet). Your tongue is testing the enzyme reaction in real-time."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

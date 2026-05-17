@@ -70,6 +70,20 @@ struct Scene8_TasteAndFlavour: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 11 Biology → NEET (Sensory physiology)",
+                    detail: "Five taste types — sweet, sour, salty, bitter, umami — map to five distinct receptor families. NEET asks 'how does the brain locate the source of a flavour?' Answer: it doesn't — flavour is taste (tongue) PLUS smell (olfactory bulb). Pinch your nose, eat a slice of onion — it tastes like nothing. Take in a smell-free dose first, then THINK 'apple' — your brain fills in flavour."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Onion-apple swap test",
+                    detail: "Cut a thin sliver each of apple and raw onion. Close your eyes, pinch your nose tightly. Have someone hand you a sliver. Chew. You CAN'T tell apple from onion without smell. Now release your nose mid-chew — the apple identity floods in instantly. ~80% of 'taste' is actually smell. (This is also why food is bland when you have a cold.)"
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }

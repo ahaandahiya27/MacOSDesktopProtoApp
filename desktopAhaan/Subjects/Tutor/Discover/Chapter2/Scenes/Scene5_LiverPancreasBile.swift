@@ -150,6 +150,20 @@ struct Scene5_LiverPancreasBile: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 12 Biology → NEET",
+                    detail: "Bile from liver, pancreatic juice from pancreas — they meet in the duodenum and finish the job stomach acid started. NEET asks 'list 5 enzymes secreted by the pancreas' (trypsin / chymotrypsin / lipase / amylase / nucleases) and 'why does jaundice colour eyes yellow?' (bilirubin from broken-down RBCs can't drain into bile, builds up in blood)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "See bile emulsify oil",
+                    detail: "Mix a tablespoon of cooking oil into a glass of water. Watch the oil sit on top in big globs. Now add a few drops of dish-soap (a surfactant — same job as bile). Stir. The oil breaks into tiny droplets that mix into the water. That's exactly what bile does to dietary fat: breaks it into droplets so the water-loving enzyme lipase can attack."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 if allTapped {
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)

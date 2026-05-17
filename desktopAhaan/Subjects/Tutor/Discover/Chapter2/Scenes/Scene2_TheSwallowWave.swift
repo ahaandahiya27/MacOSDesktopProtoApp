@@ -82,6 +82,20 @@ struct Scene2_TheSwallowWave: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 11 Biology → NEET",
+                    detail: "Peristalsis you just animated is *smooth-muscle physiology*: alternating contraction + relaxation of circular and longitudinal muscle layers in the oesophagus wall. NEET asks 'why can astronauts swallow upside-down in zero gravity?' — because peristalsis doesn't use gravity, it pushes food mechanically regardless of orientation."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Swallow while hanging upside down",
+                    detail: "(With supervision!) Hang your head off the edge of a bed so it's lower than your feet. Take a small sip of water and swallow. It still reaches your stomach — peristalsis works against gravity. Same trick gives giraffes their absurd neck and astronauts their lunch in space."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }

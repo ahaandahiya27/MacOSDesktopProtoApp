@@ -110,6 +110,20 @@ struct Scene6_FourStomachsOfACow: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 11 / NEET — Cellulose digestion",
+                    detail: "Humans can't digest cellulose (no enzyme). Cows can't either — but the bacteria + protozoa in the rumen CAN, and they live there for free. The cow eats grass; microbes eat the cellulose; cow eats the microbes (kind of). NEET tests this as 'mutualism with rumen microbiota' and pairs it with termite-gut symbionts and Rhizobium-root nodules from Ch 1."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Spot the cud",
+                    detail: "Next time you see a cow lying down peacefully, watch its jaw. It'll be moving in circles even when no food is in sight. That's it ruminating — pulling food back up from the rumen for a second chew. Time the chews — 50-70 per minute is typical. You're watching four-stomach digestion live."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }

@@ -94,6 +94,20 @@ struct Scene3_TheStomachBath: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 11 + 12 Chemistry → JEE / NEET",
+                    detail: "Stomach HCl has pH ~1.5 — a million times more acidic than blood. JEE Chem asks 'how does the stomach not digest itself?' Answer: a bicarbonate-rich mucus layer with pH ~7 lines the inside, neutralising HCl that touches the wall. The enzyme pepsin you saw works ONLY at acidic pH, then snaps off when food enters the alkaline intestine — pH-gated activity."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "pH-test antacid neutralisation",
+                    detail: "Crush half an antacid tablet (Eno / Digene) into a glass of vinegar. Watch the fizzing. The base in the antacid neutralises the acid like it does inside the stomach during heartburn. Test with red litmus (turns blue when base wins) or pH paper if you have any."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }

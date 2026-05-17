@@ -91,6 +91,20 @@ struct Scene4_IntestineVillus: View {
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                LookingAheadCallout(
+                    title: "Class 11 → NEET (surface-area + diffusion)",
+                    detail: "Villi multiply the intestinal surface area ~30× and micro-villi multiply it another 600×. Total absorptive surface: ~250 m² — a tennis court folded into your belly. NEET pairs this with diffusion math (Fick's law: rate ∝ area × concentration gradient ÷ thickness) — every term is solved by villus + capillary anatomy."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Folding for area — the towel trick",
+                    detail: "Take a hand towel. Spread it flat — that's how much surface a smooth gut would have. Now scrunch it into hundreds of tiny folds (villi). Spread it back — way more surface fit inside the same outer length! Now imagine each fold has tinier folds on it (micro-villi). That's how 7 metres of intestine fits a tennis-court of absorbing area inside your tummy."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }
