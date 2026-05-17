@@ -289,9 +289,10 @@ struct DiscoverShell<SceneBody: View>: View {
                             )
                             .frame(width: 22, height: 22)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(PressableButtonStyle())
                     .pointingCursor()
                     .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
+                    .accessibilityHint("Jumps to scene \(i + 1)")
                 }
                 Spacer(minLength: 0)
             }

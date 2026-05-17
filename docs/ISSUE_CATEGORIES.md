@@ -430,7 +430,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | MO1 | Counter / score changes have no animation / scale-pop | ❌ Phase 6 |
-| MO2 | Tap on stepper dot has no immediate feedback | 🟡 .easeInOut transition on scene switch exists; press-state ripple absent |
+| MO2 | Tap on stepper dot has no immediate feedback | ✅ stepper dots now use `PressableButtonStyle` — brief inward scale-to-0.85 on press with spring(response: 0.25) ease-out. Honours Reduce Motion. Press feedback complements the existing `.easeInOut` scene-switch animation |
 | MO3 | Got It state-change has no completion celebration | ❌ Phase 6 |
 | MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |

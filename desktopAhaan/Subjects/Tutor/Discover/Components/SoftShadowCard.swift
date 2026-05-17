@@ -65,6 +65,26 @@ struct GotItButton: View {
     }
 }
 
+/// Press-feedback button style with no chrome — equivalent to
+/// `.buttonStyle(.plain)` plus a brief inward scale on press. Designed for
+/// small custom tappables (stepper dots, badges, chips) where the absence of
+/// a default press visual makes the click feel unresponsive. Honours
+/// Reduce Motion (no scale when the env value is on).
+///
+/// macOS 10.15+ compatible — `@Environment(\.accessibilityReduceMotion)`
+/// available since iOS 13 / macOS 10.15.
+struct PressableButtonStyle: ButtonStyle {
+    var pressedScale: CGFloat = 0.85
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed && !reduceMotion ? pressedScale : 1.0)
+            .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.6),
+                       value: configuration.isPressed)
+    }
+}
+
 /// **The** primary-action button style for Discover Mode and beyond. Pair with
 /// a tappable `Button`, never a passive `Label`. Use this for: scene completion
 /// ("I get it!"), modal confirmations, "Start Quiz", "Submit" actions. For
