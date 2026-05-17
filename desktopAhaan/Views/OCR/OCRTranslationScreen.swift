@@ -11,6 +11,9 @@ struct OCRTranslationScreen: View {
     @State private var selectedImage: NSImage?
     @State private var editedText: String = ""
     @State private var hasExtractedText = false
+    /// Tracks whether a file is being dragged over the drop zone — drives
+    /// the EM5 hover-state styling (dashed purple border + icon scale).
+    @State private var isDropTargeted: Bool = false
 
     var body: some View {
         ScrollView {
@@ -74,28 +77,42 @@ struct OCRTranslationScreen: View {
                 }
                 .font(.caption)
                 .foregroundColor(.secondary)
+                .pointingCursor()
             } else {
                 VStack(spacing: 16) {
-                    Image(systemName: "doc.text.viewfinder")
+                    Image(systemName: SFSymbolCompat.name("doc.text.viewfinder"))
                         .font(.system(size: 48))
                         .foregroundColor(.purple)
+                        .scaleEffect(isDropTargeted ? 1.08 : 1.0)
+                        .animation(.spring(response: 0.25, dampingFraction: 0.65), value: isDropTargeted)
 
-                    Text("Open or Drop an Image")
+                    Text(isDropTargeted ? "Drop to scan" : "Open or Drop an Image")
                         .font(.headline)
+                        .foregroundColor(isDropTargeted ? .purple : .primary)
 
                     Button(action: openImagePanel) {
-                        Label("Open Image", systemImage: "photo.on.rectangle.angled")
+                        Label("Open Image", systemImage: SFSymbolCompat.name("photo.on.rectangle.angled"))
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                     }
+                    .pointingCursor()
                 }
             }
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
+        .overlay(
+            // Drop-zone hover state: dashed purple border appears when the
+            // user is dragging a valid file over the area (EM5).
+            RoundedRectangle(cornerRadius: 16)
+                .strokeBorder(
+                    Color.purple.opacity(isDropTargeted ? 0.85 : 0),
+                    style: StrokeStyle(lineWidth: 2, dash: [6, 4])
+                )
+        )
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
-        .onDrop(of: ["public.file-url"], isTargeted: nil, perform: handleDrop)
+        .onDrop(of: ["public.file-url"], isTargeted: $isDropTargeted, perform: handleDrop)
     }
 
     private var extractedTextEditor: some View {

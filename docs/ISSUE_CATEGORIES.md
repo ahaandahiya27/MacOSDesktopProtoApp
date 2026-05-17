@@ -497,7 +497,7 @@ in the project memory.
 | EM2 | Article-load failure styled; Discover scene-load failure not visualised | ❌ |
 | EM3 | First-launch experience past Welcome unaudited | ❌ |
 | EM4 | No "all chapters complete" / "you've explored everything" celebration screen | ❌ Phase 6 |
-| EM5 | OCR drop-zone idle vs hover vs reject states not consistently styled | ❌ |
+| EM5 | OCR drop-zone idle vs hover vs reject states not consistently styled | ✅ OCR drop zone now binds `$isDropTargeted` from `.onDrop` and renders three distinct states: idle (purple icon + "Open or Drop an Image"), hover (icon scales to 1.08× + label switches to "Drop to scan" in purple + dashed purple border appears around the zone). Reject state still falls back to `ocrService.errorMessage` text (existing). Also routed the 2 SF Symbols 3+ names through `SFSymbolCompat` while in the file (defensive) |
 
 ### Z.CT — Copy & microcopy
 
