@@ -99,6 +99,20 @@ struct Scene4_TheWoolPipeline: View {
                 .transition(.opacity.combined(with: .scale))
             }
 
+            LookingAheadCallout(
+                title: "Class 11 Chemistry → JEE (Industrial Chemistry)",
+                detail: "The wool pipeline you just walked is one example of unit operations — scouring, sorting, dyeing, spinning, weaving. JEE Chem teaches the same operations for industrial fibres: PET bottles ground → polymer chips → extruded as polyester thread → woven into fabric. Different chemistry, same pipeline shape."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Trace a t-shirt's journey",
+                detail: "Pick any cotton t-shirt. Read the label: cotton from (country), made in (country), sold in (your city). That's 3-4 stops of the same pipeline. A typical t-shirt has travelled 15,000+ km from seed to your dresser. Map it on Google Earth for one shirt — it's a lesson in global supply chains."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             Spacer()
 
             GotItButton {

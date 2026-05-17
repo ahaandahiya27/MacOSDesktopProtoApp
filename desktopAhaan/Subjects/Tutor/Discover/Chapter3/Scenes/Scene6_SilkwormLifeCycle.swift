@@ -95,6 +95,20 @@ struct Scene6_SilkwormLifeCycle: View {
             }
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET (Holometabola)",
+                detail: "Complete metamorphosis (egg → larva → pupa → adult) is called *holometaboly*. NEET asks 'why do butterflies and beetles develop this way?' — because larva and adult eat different food sources (caterpillar eats leaves, butterfly drinks nectar), so they don't compete. Same trick: silkworm caterpillar eats mulberry; the moth doesn't eat at all — it lives just to mate."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Find a real silkworm",
+                detail: "If you're in southern India or West Bengal, sericulture farms (Karnataka in particular) sell raw silkworm cocoons. Or visit a Khadi shop — they often display caterpillars, cocoons, and reeled silk side-by-side. Watching one cocoon unwind into 1,000+ metres of single continuous thread is a wow moment."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             Spacer()
 
             GotItButton {

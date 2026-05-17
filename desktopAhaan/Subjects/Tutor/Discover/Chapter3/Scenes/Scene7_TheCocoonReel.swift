@@ -118,6 +118,20 @@ struct Scene7_TheCocoonReel: View {
             }
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Materials Science → JEE",
+                detail: "Silk fibroin has a tensile strength close to steel by weight — JEE Materials questions love this comparison. Silk's secret: a β-pleated sheet structure where amino acids stack via hydrogen bonds. Modern bioengineering grows artificial spider silk in goats (transgenic, milked from milk) — same protein, factory scale."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Pull test silk vs cotton",
+                detail: "Find a single thread of silk (a silk saree's frayed edge works) and a single cotton thread. Hold each between thumbs and pull steadily. Silk stretches noticeably then snaps. Cotton snaps almost immediately. You just measured tensile elongation — the same property structural engineers chart for steel and concrete."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             Spacer()
 
             GotItButton {

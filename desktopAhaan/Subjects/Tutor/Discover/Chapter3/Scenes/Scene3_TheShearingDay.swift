@@ -126,6 +126,20 @@ struct Scene3_TheShearingDay: View {
             .frame(maxWidth: 600)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Economics + NEET ethics",
+                detail: "Shearing season + 'sustainable wool' raise NEET / Class-12 ethics-style questions: cruelty-free certification (RWS standard), carbon cost (sheep methane vs synthetic-fibre fossil CO₂), and animal-welfare law. Whether wool is 'ethical' isn't a yes/no — it's a chain of choices from pasture to label."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Read a wool label",
+                detail: "Find a wool product (shawl, sweater, blanket). Look for these tags: 'RWS' (Responsible Wool Standard — cruelty-free), 'Merino' (breed name = fine wool), 'Pashmina / Cashmere' (goat undercoat from Ladakh / Mongolia). The label is a supply-chain map — country, breed, ethics certification, microns of fineness."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton {
                 onComplete()
             }

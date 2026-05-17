@@ -84,6 +84,20 @@ struct Scene8_FibreVsFibreGame: View {
             .padding(.horizontal, 24)
             .frame(height: 120)
 
+            LookingAheadCallout(
+                title: "Class 11 / 12 Polymer Chemistry → JEE",
+                detail: "The cotton-vs-polyester-vs-silk sorting you just did becomes natural-polymers-vs-synthetic-polymers in Class 11 (cellulose vs PET nylon Kevlar). JEE Organic Chem asks 'what's the monomer of nylon-6?' (caprolactam) and 'why is Kevlar bullet-proof?' (rigid aromatic rings + hydrogen-bonded sheets — the same idea as silk, optimised industrially)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Build your own classification chart",
+                detail: "Pick 10 items of clothing or fabric at home. Read each label. Classify into: (1) plant fibre (cotton / linen / jute / hemp), (2) animal fibre (wool / silk / cashmere), (3) synthetic (polyester / nylon / acrylic / rayon — actually semi-synthetic). You'll discover most modern clothes are blends — engineering trade-offs between softness, strength, and cost."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             Spacer()
 
             GotItButton(label: "Got It!") {

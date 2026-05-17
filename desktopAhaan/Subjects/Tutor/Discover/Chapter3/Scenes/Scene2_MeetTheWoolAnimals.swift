@@ -102,6 +102,20 @@ struct Scene2_MeetTheWoolAnimals: View {
             .frame(maxWidth: 600)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET",
+                detail: "Different climates produced different wool textures — sheep at altitude grow thicker undercoats. NEET tests this as 'adaptive radiation' in Class 11 Evolution: same ancestor, multiple niches, multiple morphologies. The Pashmina goat (Chyangra) in Ladakh has the finest wool because cold + thin air = densest insulation needed."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Feel the difference",
+                detail: "Find a Pashmina shawl, a Merino sweater, and a generic acrylic sweater (or compare labels at a clothing store). Pashmina feels almost weightless and warm; Merino feels soft and slightly springy; acrylic feels plasticky and conducts cold faster. Same job (insulation), three engineering grades — your fingers can tell the polymer apart."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton {
                 onComplete()
             }

@@ -72,6 +72,20 @@ struct Scene1_FluffToFibre: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 12 Chemistry → JEE",
+                        detail: "Cotton, jute, silk, wool — all polymers. Cotton + jute are cellulose (β-1,4 glucose chain, plant-made). Silk + wool are proteins (amino-acid chains, animal-made). JEE Organic Chem asks 'why does silk burn smelling of hair?' — because silk fibroin and your hair are both protein. Polymer chemistry is the through-line from this fluff to industrial synthesis."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Burn-test cotton vs polyester",
+                        detail: "Snip one thread of cotton and one of polyester (read garment labels first). Hold each with tweezers and touch a candle flame (with adult). Cotton burns fast, smells like burning paper, leaves grey ash. Polyester melts into a shrinking ball, smells chemical, leaves a hard bead. Same test forensic scientists use on fibre evidence."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
                     GotItButton {
                         onComplete()
                     }
