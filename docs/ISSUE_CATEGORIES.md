@@ -229,7 +229,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| P1 | Article HTML rendering (WKWebView) | 🟡 works; no security audit yet |
+| P1 | Article HTML rendering (WKWebView) | ✅ security audit complete — see V5b (in-page JS off per-navigation, http(s) → NSWorkspace) and docs/SECURITY.md; renders local file:// URLs only |
 | P2 | Inline image handling | ✅ N/A — zero `<img>` tags across all 266 bundled HTML articles (concept articles are pure text + SF Symbols + CSS) |
 | P3 | Hyperlinks within articles | ✅ file:// internal links allowed when within Bundle resources; http/https cancelled in WebKit and handed to NSWorkspace |
 | P4 | Print-style readability CSS | ✅ ch*_style.css per chapter |
