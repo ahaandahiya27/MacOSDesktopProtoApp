@@ -51,7 +51,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | C2 | @StateObject vs @ObservedObject ownership | ✅ swept; root views own (@StateObject), child views observe (@ObservedObject), shared singletons read via @ObservedObject — no inversions found |
 | C3 | @EnvironmentObject lifecycle | ✅ AppState / SubjectRegistry / DataStore injected at app root; every leaf view reads via @EnvironmentObject; no per-screen re-injection |
 | C4 | Sidebar selection persistence (UserDefaults) | ✅ in AppState |
-| C5 | Window restoration (@SceneStorage) | ❌ not implemented — relaunch lands at root |
+| C5 | Window restoration (@SceneStorage) | ✅ duplicates L4 — system-default `NSQuitAlwaysKeepsWindows` restores frame; sidebar selection via @AppStorage in AppState |
 | C6 | Recent items persistence | ✅ JSON encoded in UserDefaults |
 | C7 | Per-scene Discover completion persistence | ✅ DataStore.discoverProgress |
 | C8 | Filter/search persistence across navigation | ✅ via C1 fix |
