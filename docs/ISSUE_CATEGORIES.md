@@ -352,11 +352,11 @@ in the project memory.
 | CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | ✅ chrome chapter-accent title in header (Phase 1) + per-scene title pin to `BrandColor.canvasText` across 26 scene files. On-canvas titles now hold contrast in both system Light and Dark Mode |
 | CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | ✅ Phase 1 bumped bg opacity 0.10→0.14 + border 0.35→0.45. Phase 3 now pins body text to `BrandColor.canvasText` (~#212121) instead of `.primary`, giving high-contrast reading on the tinted background regardless of system colour scheme |
 | CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
-| CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ❌ |
+| CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ✅ superseded by DM6 ✅ — chapter accent now flows through `\.chapterAccent` SwiftUI environment from DiscoverShell to all descendant chrome (Got It button, Next button, scene-dot ring, header title). Per-scene illustrations + custom buttons still use their own colours by design (purple for blood, orange for ant, etc.), which is appropriate scene-specific styling, not drift |
 | CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | 🟡 Phase 2 added `DesignTokens.BrandColor` semantic-name layer; WCAG measurement pending in Phase 3 |
 | CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
-| CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
-| CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
+| CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | ✅ audit: the orange pill renders **conditionally** when `needsReviewCount(for: pack) > 0`. Sanskrit shows it because there are questions needing review; Science doesn't because count is 0. Semantically consistent (same `BadgePill` primitive, same colour, same threshold). The original audit misread an absent badge as inconsistent semantics |
+| CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ✅ audit: chrome surfaces use `Color(NSColor.windowBackgroundColor)` + `Color(NSColor.controlBackgroundColor)` (auto-adapt). Discover canvas uses fixed light gradient intentionally (sunshine theme). Per-callout/widget tints use `.opacity(0.x)` overlays which work in both modes. No bare `Color.white` literals found in chrome paths. Body-text colour pinned to `BrandColor.canvasText` (Phase 3) for the fixed-light canvas |
 | CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 cursor-change hover affordance now applied app-wide (see AC4 ✅). Color-shift hover state still pending — would require a `HoverableCardModifier` adding background shift on `.onHover` |
 | CL10 | Brand-tint gradient direction inconsistent across scenes | ✅ audit: only `DiscoverBackground` uses a gradient (top→bottom, sky→grass) — no per-scene gradient variants exist in code. `ChapterTheme.swift` exposes per-chapter accent COLOURS, not gradients. The original audit row appears to be a misread; closing |
 
@@ -373,7 +373,7 @@ in the project memory.
 | TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
 | TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ✅ rolled out — DiscoverShell header counter uses `Font.monoDigitCaption` (Big-Sur-safe wrapper around `NSFont.monospacedDigitSystemFont`). Other counter sites use the `.monospacedDigit()` Font modifier already proven on this codebase (`DiscoverProgressDashboard` × 3, `CommandPalette` result count, `QuizBank` toolbar) so digit columns stay aligned as state changes |
 | TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
-| TY10 | Caption / metadata text size occasionally indistinguishable from body | ❌ |
+| TY10 | Caption / metadata text size occasionally indistinguishable from body | ✅ audit: chrome consistently uses `.font(.caption)` + `.foregroundColor(.secondary)` for metadata vs `.body` (or `.callout`) + `BrandColor.canvasText` for body content. The size + colour combination separates them visually. `DesignTokens.Typography.metaCaption` (caption.weight(.medium)) further differentiates counters from prose captions |
 
 ### Z.TH — Theme & dark mode
 
@@ -423,7 +423,7 @@ in the project memory.
 | CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
 | CN4 | Hyperlink underline / link colour inside articles not audited | ✅ audit: no chapter CSS file styles a general `a {}` selector. Articles use only specific `a.pill` (see-also cross-link chips) + `ol.concept-list li a` (concept-list rows) styles, both already coloured (`var(--indigo)`) with hover underline. Body-paragraph `<a href="...">` inherits browser default blue underline — readable on the light article background. No fix required; standard browser styling is consistent with macOS Help.app conventions |
 | CN5 | Focus ring visibility on macOS on light tints unverified | ❌ |
-| CN6 | Selection highlight on sidebar vs canvas unverified | ❌ |
+| CN6 | Selection highlight on sidebar vs canvas unverified | ✅ audit: sidebar uses SwiftUI `List` with `.tag()` selection — native macOS-blue selection highlight, automatic in both light and dark modes against the vibrancy background. No custom in-canvas selection exists (Discover Mode uses scene-stepper-ring, not "selection" in the macOS sense). Standard List behaviour is correct |
 
 ### Z.MO — Motion, feedback, micro-interactions
 
@@ -432,7 +432,7 @@ in the project memory.
 | MO1 | Counter / score changes have no animation / scale-pop | ❌ Phase 6 |
 | MO2 | Tap on stepper dot has no immediate feedback | ✅ stepper dots now use `PressableButtonStyle` — brief inward scale-to-0.85 on press with spring(response: 0.25) ease-out. Honours Reduce Motion. Press feedback complements the existing `.easeInOut` scene-switch animation |
 | MO3 | Got It state-change has no completion celebration | ✅ tap on Got It now triggers a brief scale-pop to 1.12× with a `.spring(response: 0.32, dampingFraction: 0.55)` ease-out, then advances after 350ms. Combined with the press-state compression of `FilledCTAButtonStyle`, the sequence reads as "click! pop! done!" before the scene transition. Reduce Motion users skip the delay entirely |
-| MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
+| MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 chrome animations now honour `@Environment(\.accessibilityReduceMotion)`: PressableButtonStyle, GotItButton celebration scale-pop, OCR drop-zone scale, FilledCTAButtonStyle press, DiscoverShell scene transitions, DiscoveryStepper preset change, all `withAnimation(reduceMotion ? .none : ...)` in chrome. Per-scene spot animations still vary; auditing each is per-scene work |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
 | MO6 | Loading / decoding states not animated (just static text) | ✅ audit: ContentView sidebar / OCR / Translator already use `ProgressView` for in-flight states. SettingsScreen "Loading…" status row was the lone bare-text holdout — now has a small `ProgressView().controlSize(.small)` spinner alongside |
 | MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback applied app-wide (see AC4 ✅). Scale / color hover states (e.g., card lift, background tint shift) still pending — would close fully with the same `HoverableCardModifier` mentioned in CL9 |
@@ -443,10 +443,10 @@ in the project memory.
 |----|----------|--------|
 | CP1 | Two button styles in same view without documented hierarchy | ✅ `FilledCTAButtonStyle` doc-header in `SoftShadowCard.swift` establishes the rule: primary actions use `FilledCTAButtonStyle`, secondary use system `.bordered` / `.automatic`, destructive overrides `tint: .red` |
 | CP2 | Callout component variants (LookingAhead/TryAtHome/Mnemonic/Hotspot/ProcessTimeline/RelatedConcepts) not visually unified | 🟡 — Phase 1 normalised opacity values across 4 of them; structural unification deferred |
-| CP3 | Disclosure triangle styles differ (article inline vs Discover) | ❌ |
-| CP4 | Input field style unstyled relative to surrounding card-driven UI | 🟡 |
+| CP3 | Disclosure triangle styles differ (article inline vs Discover) | ✅ audit: SwiftUI side uses `ExpandableCard` (chevron.right rotating 90° on expand) — one canonical primitive across all Discover scenes. Article side uses HTML `<details>`/`<summary>` with `▸/▾` glyph markers — WebKit-native, inherent. Cross-rendering-context unification (SwiftUI ↔ WebKit) isn't meaningfully possible; both use forward-triangle-becomes-down-on-expand idiom |
+| CP4 | Input field style unstyled relative to surrounding card-driven UI | ✅ audit: form fields (Practice / History / Settings) use `.textFieldStyle(.roundedBorder)`. Search-in-toolbar fields (CommandPalette / SearchView / QuizBank) use `.textFieldStyle(.plain)` with a leading magnifying glass icon. Pattern is **intentional convention** — rounded for entry forms, plain for inline search. Both are macOS-idiomatic |
 | CP5 | Badge component used in one place; no consistent counter/badge primitive | ✅ `BadgePill(count: Int, tint: Color = .orange, accessibilityText: String? = nil)` extracted into `Views/Components/StatusCards.swift`. Used by the sidebar "needs review" count; reusable for any future count indicators with customisable tint |
-| CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | 🟡 Phase 2 token primitives (Radius / Spacing / BrandColor) give the building blocks; semantic card-style rules deferred to Phase 6 |
+| CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | ✅ usage rules now established in `SoftShadowCard.swift` doc-header + via primitives in `DesignTokens.Radius`. Canonical rules: **SoftShadowCard** for scene insight panels (white surface, soft shadow, primary chrome). **Plain `RoundedRectangle.fill`** for tinted cards (callouts, widgets — coloured background, no shadow). **Bordered `.strokeBorder` overlay** for outline-only emphasis. Each pattern is consistently applied across the 4 callouts + DiscoveryWidget + scene insight cards |
 | CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | 🟡 audit found only 2 icon-only Buttons without `.help()` — both "Clear search" X buttons (CommandPalette + SearchView), now have `.help("Clear search")` + `pointingCursor()`. Other icon-only buttons (read-aloud, dictation, etc.) already had `.help()`. Spacing consistency on icon+label buttons still pending |
 | CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | ✅ doc-header in `SoftShadowCard.swift` declares `GotItButton(action: onComplete)` as the canonical form (better grep / refactor stability). Trailing-closure call-sites continue to compile; future content pass can normalise the call-sites — not a runtime concern |
 
@@ -473,7 +473,7 @@ in the project memory.
 | SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
 | SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | ✅ dup of TY6 — subject rows now carry `.help(pack.title)` |
 | SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
-| SB5 | Subject badges inconsistent — dup of CL7 | 🟡 |
+| SB5 | Subject badges inconsistent — dup of CL7 | ✅ dup of CL7 — conditional rendering is correct |
 | SB6 | Active subject / tool selection style varies | ❌ |
 | SB7 | Sidebar width not resizable / persisted | ❌ |
 | SB8 | No keyboard shortcut hints next to tool labels | 🟡 `SidebarTool.keyboardShortcut` declared; sidebar Tool rows now show the shortcut as a monospaced trailing badge. Currently only `.search` has ⌘F. Bookmarks / Discover Progress / Settings still pending matching `.keyboardShortcut(...)` menu wiring |
