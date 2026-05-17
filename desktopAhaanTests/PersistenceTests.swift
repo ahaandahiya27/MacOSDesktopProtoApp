@@ -231,7 +231,10 @@ final class PersistenceTests: XCTestCase {
         XCTAssertEqual(roundTrip.wordByWord?[0].target, "be")
         XCTAssertEqual(roundTrip.wordByWord?[0].note, "root")
         XCTAssertEqual(roundTrip.wordByWord?[1].source, "अति")
-        XCTAssertEqual(roundTrip.wordByWord?[2].note, nil)
+        // Entry at index 2 has note: "suffix" — assertion was wrong
+        // in the original test (claimed nil for a value that was clearly
+        // initialised non-nil on line 209).
+        XCTAssertEqual(roundTrip.wordByWord?[2].note, "suffix")
     }
 
     /// T-PERS-010: alternatives JSON encode/decode round-trip

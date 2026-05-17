@@ -205,7 +205,14 @@ final class DictionaryTests: XCTestCase {
     // MARK: - Expanded Verb Dictionary Tests
 
     func testT_DICT_026_DictionaryHasVerbEntries() {
-        let verbEntries = dictionary.entries.filter { $0.category == "Common Verbs" || $0.category == "Verbs - Expanded" }
+        // Bundled dictionary uses the single category "Verbs" (the old
+        // hand-coded Swift fallback had "Common Verbs" / "Verbs - Expanded"
+        // splits that no longer exist).
+        let verbEntries = dictionary.entries.filter {
+            $0.category == "Verbs"
+                || $0.category == "Common Verbs"
+                || $0.category == "Verbs - Expanded"
+        }
         XCTAssertGreaterThanOrEqual(verbEntries.count, 80, "Dictionary should have at least 80 verb entries")
     }
 
@@ -326,7 +333,11 @@ final class DictionaryTests: XCTestCase {
     }
 
     func testT_DICT_044_VerbEntriesHaveGrammarNotes() {
-        let verbEntries = dictionary.entries.filter { $0.category == "Common Verbs" || $0.category == "Verbs - Expanded" }
+        let verbEntries = dictionary.entries.filter {
+            $0.category == "Verbs"
+                || $0.category == "Common Verbs"
+                || $0.category == "Verbs - Expanded"
+        }
         let withNotes = verbEntries.filter { !$0.grammarNote.isEmpty }
         XCTAssertGreaterThan(withNotes.count, 0, "Some verb entries should have grammar notes")
     }

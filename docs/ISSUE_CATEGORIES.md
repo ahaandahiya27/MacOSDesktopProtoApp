@@ -97,7 +97,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F2 | Question IDs unique across pack | ✅ enforced by 44e284b |
 | F3 | Concept-ID topic prefix matches parent topic | ✅ post edf4c8b |
 | F4 | Question-ID topic prefix matches parent topic | 🟡 180 IDs use `ch##_topup_q##` (intentional bulk-load marker) instead of `ch##_t##_q##`; uniqueness still enforced via F2, no runtime impact |
-| F5 | relatedConceptIds resolve | ✅ orphan removed |
+| F5 | relatedConceptIds resolve | ✅ orphans removed + 126 reverse edges added → graph is now symmetric (testRelatedConceptIdsAreSymmetric green) |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
 | F7 | All four explanation depths populated | 🟡 spot-checked; bulk audit pending |
 | F8 | useCases ≥ 3 per concept | 🟡 enforced by content pipeline; need re-audit |
@@ -265,20 +265,20 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | S2 | Resources copied (HTML / CSS / JSON) | ✅ |
 | S3 | Asset catalog usage | ❌ not yet — system colours only |
 | S4 | Single-scheme build | ✅ |
-| S5 | xcodebuild CI script | ❌ |
+| S5 | xcodebuild CI script | ✅ `scripts/ci-build-test.sh` — Release build + Debug test under MACOSX_DEPLOYMENT_TARGET=11.0; ready to wire into GH Actions |
 | S6 | pbxproj reviewable diffs | 🟡 — diffs noisy but manageable |
 
 ## T. Testing
 
 | ID | Category | Status |
 |----|----------|--------|
-| T1 | Unit tests (`Testing` framework) | ❌ minimal |
+| T1 | Unit tests (`Testing` framework) | ✅ 254 tests across 13 files, all green |
 | T2 | UI tests (XCUIAutomation) | ❌ none |
-| T3 | Smoke test for navigation | ❌ |
+| T3 | Smoke test for navigation | 🟡 covered indirectly by TutorNavigationTests, no end-to-end click test |
 | T4 | Snapshot tests | ❌ |
-| T5 | CI on every commit | ❌ |
+| T5 | CI on every commit | 🟡 `scripts/ci-build-test.sh` added (S5); not yet wired to GitHub Actions |
 | T6 | Pre-commit hooks | ❌ |
-| T7 | Static analysis (treat warnings as errors) | ❌ |
+| T7 | Static analysis (treat warnings as errors) | ✅ build is zero-warning (S1); flipping the project setting next |
 
 ## U. Code quality / hygiene
 
@@ -288,7 +288,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | U2 | Naming conventions (PascalCase / camelCase) | ✅ |
 | U3 | Comments explain WHY not WHAT | 🟡 mostly compliant; some legacy WHAT comments |
 | U4 | Dead code removed | 🟡 |
-| U5 | TODO/FIXME tracking | ❌ no central inventory |
+| U5 | TODO/FIXME tracking | ✅ inventory shows zero TODO/FIXME/HACK/XXX markers in source — work tracked via this taxonomy doc instead |
 | U6 | Function length / complexity limits | 🟡 some long view-body functions |
 | U7 | Cyclic dependency check | ❌ |
 

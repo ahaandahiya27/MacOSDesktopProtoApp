@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.31.0-orphan-refs-pruned",
+  "version": "0.31.0-related-symmetric",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -7202,7 +7202,13 @@
               "beyondTheBook": "Lord Kelvin (William Thomson) proposed an absolute temperature scale in 1848 — the Kelvin scale. Its zero point is the coldest possible temperature in the universe, where atoms have minimum motion. Modern labs reach within a billionth of a degree of absolute zero using laser cooling. At those temperatures, matter behaves in strange new ways — Bose-Einstein condensates form (a fifth state of matter you'll meet in higher classes).",
               "relatedConceptIds": [
                 "ch04_t01_c02",
-                "ch04_t01_c03"
+                "ch04_t01_c03",
+                "ch04_t01_c05",
+                "ch04_t01_c07",
+                "ch04_t02_c06",
+                "ch19_t01_c04",
+                "ch04_t03_c01",
+                "ch04_t01_c04"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q02",
@@ -7279,7 +7285,8 @@
               "beyondTheBook": "The first reliable thermometer was built by Daniel Fahrenheit in 1714 — he chose 32 °F as ice's melting point and 212 °F as water's boiling point because his original zero was the lowest temperature he could make in his lab (a salt-ice mixture). Anders Celsius proposed in 1742 a 0–100 scale (later inverted to today's 0 = ice, 100 = boiling water). Now you know why two scales exist for the same physics — historical accident.",
               "relatedConceptIds": [
                 "ch04_t01_c01",
-                "ch04_t01_c03"
+                "ch04_t01_c03",
+                "ch04_t01_c06"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q01",
@@ -7357,7 +7364,9 @@
               "beyondTheBook": "Negative Kelvin temperatures sound impossible — and almost are. But in 2013 a German lab achieved 'negative' Kelvin temperatures in a quantum gas — counterintuitively, this is HOTTER than positive infinity Kelvin. The mathematics is wild and is studied in Class 12 / undergraduate physics. For now: Kelvin = Celsius + 273 is all you need.",
               "relatedConceptIds": [
                 "ch04_t01_c01",
-                "ch04_t01_c02"
+                "ch04_t01_c02",
+                "ch04_t03_c03",
+                "ch04_t01_c06"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q02"
@@ -7434,7 +7443,8 @@
                 "ch04_t01_c01",
                 "ch04_t01_c05",
                 "ch04_t02_c03",
-                "ch01_t01_c02"
+                "ch01_t01_c02",
+                "ch04_t03_c03"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q01"
@@ -7511,7 +7521,8 @@
               "relatedConceptIds": [
                 "ch04_t01_c01",
                 "ch04_t01_c07",
-                "ch02_t03_c01"
+                "ch02_t03_c01",
+                "ch04_t01_c04"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q02"
@@ -7666,7 +7677,8 @@
                 "ch04_t01_c01",
                 "ch04_t01_c05",
                 "ch04_t02_c06",
-                "ch01_t01_c02"
+                "ch01_t01_c02",
+                "ch04_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch04_t01_q01"
@@ -8068,7 +8080,10 @@
               "beyondTheBook": "Some materials are so good at conducting heat that they're used as 'heat sinks' on computer chips. Copper plates pull heat away from the CPU and dump it into the air. The opposite — aerogel — is a strange foam-like material 99% air, and is the world's best insulator. NASA used aerogel in the Mars rovers to keep electronics warm in -120 °C nights.",
               "relatedConceptIds": [
                 "ch04_t02_c02",
-                "ch04_t02_c03"
+                "ch04_t02_c03",
+                "ch04_t02_c05",
+                "ch04_t01_c06",
+                "ch04_t02_c04"
               ],
               "relatedQuestionIds": [
                 "ch04_t02_q01"
@@ -8144,7 +8159,10 @@
               "beyondTheBook": "The Earth's mantle convects on geological timescales. Solid rock 'flows' like extremely thick honey, hot rock rising from the core-mantle boundary and cool rock sinking back down over millions of years. This convection drives plate tectonics — moving continents around the globe. So the Indian subcontinent crashing into Asia and forming the Himalayas was, ultimately, a convection current.",
               "relatedConceptIds": [
                 "ch04_t02_c01",
-                "ch04_t02_c03"
+                "ch04_t02_c03",
+                "ch04_t02_c04",
+                "ch04_t02_c06",
+                "ch04_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch04_t02_q02"
@@ -8221,7 +8239,12 @@
               "beyondTheBook": "All three modes work together in your kitchen. A pressure cooker conducts heat through its metal walls (conduction) and through the boiling water (convection), while the flame's radiation also heats the pot from below. The reason a pressure cooker is faster: the trapped steam at higher pressure raises the boiling point, so dal cooks at 120 °C instead of 100 °C — saving fuel and time.",
               "relatedConceptIds": [
                 "ch04_t02_c01",
-                "ch04_t02_c02"
+                "ch04_t02_c02",
+                "ch19_t01_c02",
+                "ch04_t01_c04",
+                "ch04_t03_c01",
+                "ch04_t02_c04",
+                "ch04_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch04_t02_q03",
@@ -8300,7 +8323,9 @@
                 "ch04_t02_c01",
                 "ch04_t02_c02",
                 "ch04_t02_c03",
-                "ch03_t01_c01"
+                "ch03_t01_c01",
+                "ch04_t03_c03",
+                "ch04_t02_c05"
               ],
               "relatedQuestionIds": [
                 "ch04_t02_q01"
@@ -8817,7 +8842,8 @@
                 "ch04_t02_c02",
                 "ch04_t02_c03",
                 "ch02_t03_c01",
-                "ch01_t01_c02"
+                "ch01_t01_c02",
+                "ch04_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch04_t03_q01"
@@ -9226,7 +9252,10 @@
               "beyondTheBook": "Sulphuric acid is the most-produced industrial chemical in the world. India alone makes over 2.5 million tonnes per year, mostly for fertilisers (urea + sulphuric acid → ammonium sulphate). The Bhopal gas tragedy in 1984 was caused by a reaction involving methyl isocyanate, related to acid chemistry — it remains the world's worst industrial accident.",
               "relatedConceptIds": [
                 "ch05_t01_c02",
-                "ch05_t01_c03"
+                "ch05_t01_c03",
+                "ch05_t02_c01",
+                "ch05_t03_c01",
+                "ch05_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch05_t01_q01",
@@ -9269,7 +9298,8 @@
               "beyondTheBook": "Lye soap was made by Indian villages and around the world for centuries: wood ashes (rich in potassium hydroxide) were soaked in water, then mixed with animal fat. The resulting hard soap was the only soap people had. Industrial sodium hydroxide arrived in the 19th century via electrolysis of brine, making mass-produced bar soaps possible.",
               "relatedConceptIds": [
                 "ch05_t01_c01",
-                "ch05_t01_c03"
+                "ch05_t01_c03",
+                "ch05_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch05_t01_q02"
@@ -9782,7 +9812,9 @@
               "beyondTheBook": "The Apollo astronauts on the Moon used lithium hydroxide canisters to remove CO₂ from their cabin air — the LiOH (a base) reacted with the acidic CO₂ to form lithium carbonate. When Apollo 13's air system failed, ground engineers improvised an adapter from spare LiOH canisters and a flight manual cover — the famous 'square peg in a round hole' fix that saved three lives. Neutralisation chemistry, in space.",
               "relatedConceptIds": [
                 "ch05_t01_c01",
-                "ch05_t01_c02"
+                "ch05_t01_c02",
+                "ch05_t02_c02",
+                "ch06_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch05_t02_q01",
@@ -10115,7 +10147,8 @@
               "beyondTheBook": "In Class 9 / 10 / 11 / 12 Chemistry, industrial acids appear in 'p-block elements', 'Equilibrium', 'Acids, Bases and Salts'. JEE Chemistry tests the Contact and Ostwald processes (numerical yield problems). NEET / Class 12 Biology covers stomach HCl, plant acid metabolism. UPSC Geography includes the fertiliser-belt of India and global sulphur trade.",
               "relatedConceptIds": [
                 "ch05_t01_c01",
-                "ch05_t03_c02"
+                "ch05_t03_c02",
+                "ch05_t03_c03"
               ],
               "relatedQuestionIds": [
                 "ch05_t03_q01",
@@ -10199,7 +10232,8 @@
               "beyondTheBook": "In Class 10 / 11 / 12 Chemistry, the carbonate buffer system is fundamental. Class 11 / 12 Biology and UPSC Environment cover ocean acidification as a driver of biodiversity loss. NEET / JEE Earth Sciences includes the chemistry and ecological impact in depth. UPSC Geography covers the IPCC reports and global climate negotiations.",
               "relatedConceptIds": [
                 "ch05_t03_c01",
-                "ch17_t03_c01"
+                "ch17_t03_c01",
+                "ch07_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch05_t03_q05",
@@ -10427,7 +10461,10 @@
               "beyondTheBook": "Some 'physical' changes are surprisingly profound. When you stretch a steel spring beyond its elastic limit it stays bent — the iron atoms have slid past each other (plastic deformation). Still no new substance, still chemically iron. The micro-structure of metals — engineered through physical processes like rolling, forging, and heat treatment — determines whether your bicycle frame breaks or bends.",
               "relatedConceptIds": [
                 "ch06_t01_c02",
-                "ch06_t02_c01"
+                "ch06_t02_c01",
+                "ch06_t03_c02",
+                "ch06_t02_c02",
+                "ch06_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch06_t01_q01",
@@ -11103,7 +11140,8 @@
               ],
               "beyondTheBook": "Sir William Bragg and his son Lawrence Bragg won the 1915 Nobel Prize for showing that X-rays diffract through crystals — letting us see the arrangement of atoms inside. This technique (X-ray crystallography) revealed the double-helix structure of DNA in 1953, and continues to be the most powerful tool for working out the 3D shape of new drugs and proteins. Every crystal is a window into atomic arrangement.",
               "relatedConceptIds": [
-                "ch06_t01_c01"
+                "ch06_t01_c01",
+                "ch06_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch06_t02_q01"
@@ -11344,7 +11382,8 @@
               "beyondTheBook": "In Class 9 / 10 Chemistry, this is the canonical neutralisation reaction. JEE Chemistry covers the full acid-base equilibrium and pKa calculations. Class 12 / NEET Biology includes bicarbonate as the major blood buffer (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻) — same chemistry, life-critical context.",
               "relatedConceptIds": [
                 "ch05_t02_c01",
-                "ch06_t01_c01"
+                "ch06_t01_c01",
+                "ch06_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch06_t03_q01",
@@ -11671,7 +11710,10 @@
               "beyondTheBook": "The Indian Meteorological Department (IMD), founded in 1875, is one of the oldest national weather agencies in the world. Its monsoon forecasts each spring guide the planting decisions of millions of farmers. A misjudged monsoon — drought or flood — directly affects food prices in your kitchen.",
               "relatedConceptIds": [
                 "ch07_t01_c02",
-                "ch07_t02_c01"
+                "ch07_t02_c01",
+                "ch19_t01_c04",
+                "ch19_t01_c07",
+                "ch19_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch07_t01_q01",
@@ -12196,7 +12238,10 @@
               "beyondTheBook": "Climate change is changing polar life faster than evolution can keep up. Polar bears are losing sea ice they need to hunt seals, leading to longer fasts and lower body weight. Some scientists predict their range could shrink by half this century. Polar adaptations that evolved over millions of years may not survive a few decades of warming.",
               "relatedConceptIds": [
                 "ch07_t02_c02",
-                "ch07_t02_c03"
+                "ch07_t02_c03",
+                "ch07_t01_c01",
+                "ch07_t03_c01",
+                "ch07_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch07_t02_q01"
@@ -12571,7 +12616,8 @@
               "beyondTheBook": "In Class 11 / 12 Biology 'Biodiversity and Conservation' and 'Environmental Issues', climate change is a central biodiversity threat. UPSC Environment paper tests IPCC, IUCN, and India's climate strategy. NEET Biology asks about specific species impacts. JEE Earth Sciences and Class 12 cover climate-modelling fundamentals.",
               "relatedConceptIds": [
                 "ch07_t02_c01",
-                "ch07_t03_c02"
+                "ch07_t03_c02",
+                "ch07_t03_c03"
               ],
               "relatedQuestionIds": [
                 "ch07_t03_q01",
@@ -12932,7 +12978,10 @@
               ],
               "beyondTheBook": "Otto von Guericke's famous 1654 experiment in Magdeburg, Germany: he created two metal hemispheres, sealed them together, and pumped out the air. Atmospheric pressure squeezed them so tightly that 16 horses (8 on each side) couldn't pull them apart. The audience was stunned — it was the first dramatic public proof that air had weight.",
               "relatedConceptIds": [
-                "ch08_t01_c02"
+                "ch08_t01_c02",
+                "ch08_t02_c02",
+                "ch19_t01_c07",
+                "ch08_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch08_t01_q01"
@@ -13311,7 +13360,9 @@
               "beyondTheBook": "In Class 11 Geography (and JEE Main/NEET Physics) this becomes the chapter on Convection and Atmospheric Pressure — the same physics governs monsoon onset, tropical cyclones, and even the trade winds. The differential heating concept extends to land-ocean climate models used in IPCC reports.",
               "relatedConceptIds": [
                 "ch08_t01_c01",
-                "ch08_t02_c02"
+                "ch08_t02_c02",
+                "ch08_t03_c02",
+                "ch08_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch08_t02_q01"
@@ -13352,7 +13403,8 @@
               "beyondTheBook": "In Class 11 Geography and JEE Earth Sciences, the land-sea breeze cycle is a textbook example of a mesoscale circulation. The same physics scaled up over weeks and continents produces monsoon winds. NEET / Class 11 Biology students study how marine ecosystems align their feeding rhythms with these daily wind cycles.",
               "relatedConceptIds": [
                 "ch08_t02_c01",
-                "ch08_t01_c01"
+                "ch08_t01_c01",
+                "ch08_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch08_t02_q02",
@@ -14003,7 +14055,9 @@
               "beyondTheBook": "In Class 9 (Natural Resources) and Class 11 Geography you'll meet soil-forming factors: parent material, climate, topography, biota, and time (CLORPT). Class 12 Biology covers nutrient cycling between soil and plants. NEET Biology and JEE Earth Sciences both expect understanding of how soil horizons store water and minerals — the basis of agriculture.",
               "relatedConceptIds": [
                 "ch09_t01_c02",
-                "ch09_t02_c03"
+                "ch09_t02_c03",
+                "ch09_t02_c02",
+                "ch09_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch09_t01_q02",
@@ -14045,7 +14099,8 @@
               "beyondTheBook": "In Class 10 Geography and Class 11 Biology, soil texture connects to agricultural productivity, irrigation choice, and crop selection. NEET Biology covers root systems adapted to each soil type. JEE Earth Sciences includes soil mechanics — bearing capacity, compaction, slope stability — all governed by texture and moisture content.",
               "relatedConceptIds": [
                 "ch09_t01_c01",
-                "ch09_t02_c03"
+                "ch09_t02_c03",
+                "ch09_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch09_t01_q01"
@@ -14339,7 +14394,10 @@
               ],
               "beyondTheBook": "Mumbai's monsoon flooding has worsened over decades because concrete and tar surfaces have replaced soil — percolation is near zero in built-up city areas. Cities like Hyderabad and Chennai have mandated permeable paving and rainwater harvesting since the 2000s — engineering percolation back into urban surfaces.",
               "relatedConceptIds": [
-                "ch09_t01_c02"
+                "ch09_t01_c02",
+                "ch09_t03_c02",
+                "ch09_t02_c02",
+                "ch09_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch09_t02_q01"
@@ -14999,7 +15057,10 @@
               "beyondTheBook": "Birds have a different and superior breathing system: air flows through their lungs in ONE direction (not in and out like ours), powered by air sacs that fill on inhalation and exhalation. This is why high-altitude birds (bar-headed geese cross the Himalayas at 8,000+ m) can fly where humans need supplemental oxygen.",
               "relatedConceptIds": [
                 "ch10_t02_c02",
-                "ch10_t03_c01"
+                "ch10_t03_c01",
+                "ch11_t03_c01",
+                "ch10_t01_c02",
+                "ch10_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch10_t02_q01"
@@ -15041,7 +15102,8 @@
               "beyondTheBook": "In Class 11 Biology 'Breathing and Exchange of Gases' you'll meet detailed alveolar histology, transport of O₂ and CO₂, and pulmonary disorders. NEET Biology hammers gas-exchange physics every year. Class 12 Sports / Physical Education covers VO₂ max — the maximum rate at which the alveoli + circulatory system can deliver oxygen to muscles. JEE Biotechnology / Class 12 Biology cover artificial lung designs that mimic alveolar function (ECMO machines).",
               "relatedConceptIds": [
                 "ch10_t01_c01",
-                "ch10_t02_c02"
+                "ch10_t02_c02",
+                "ch10_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q02",
@@ -15324,7 +15386,9 @@
               "beyondTheBook": "Oxygen wasn't always abundant. Earth's early atmosphere had almost none. Around 2.4 billion years ago, photosynthetic cyanobacteria flooded the air with O₂ — the 'Great Oxidation Event'. This was an extinction-level catastrophe for the anaerobic life of the time but enabled the evolution of all complex aerobic life including animals. Every breath you take is the legacy of that ancient bacterial pollution.",
               "relatedConceptIds": [
                 "ch10_t01_c02",
-                "ch10_t02_c03"
+                "ch10_t02_c03",
+                "ch10_t02_c01",
+                "ch10_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q02"
@@ -15363,7 +15427,8 @@
               ],
               "beyondTheBook": "Some deep-sea organisms NEVER use oxygen. Tube worms near hydrothermal vents host symbiotic bacteria that respire hydrogen sulphide (H₂S) instead — chemoautotrophic respiration. An entire food web exists at the bottom of the ocean independent of sunlight or oxygen, fundamentally challenging assumptions about what's needed for life.",
               "relatedConceptIds": [
-                "ch10_t02_c02"
+                "ch10_t02_c02",
+                "ch10_t02_c01"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -15664,7 +15729,8 @@
               "beyondTheBook": "In Class 11 Biology 'Respiration in Plants' you study glycolysis, Krebs cycle, ETC, and respiratory quotient — at full molecular detail. NEET Biology tests photorespiration vs respiration distinctions every year. JEE Biotechnology / Class 12 Biology covers C3, C4, CAM photosynthesis-respiration coupling.",
               "relatedConceptIds": [
                 "ch10_t01_c01",
-                "ch10_t01_c02"
+                "ch10_t01_c02",
+                "ch06_t03_c03"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -15957,7 +16023,9 @@
               "beyondTheBook": "The first successful human heart transplant was performed in 1967 by Dr Christiaan Barnard in South Africa. The patient lived 18 days. Today, heart transplants have a 5-year survival rate above 75%. India's first heart transplant was in 1994 at AIIMS Delhi. The heart, despite being central to so much of poetry and emotion, is medically just a pump — but a brilliantly designed one that beats 2.5 billion times in an average lifetime without rest.",
               "relatedConceptIds": [
                 "ch11_t01_c02",
-                "ch11_t02_c02"
+                "ch11_t02_c02",
+                "ch11_t02_c01",
+                "ch11_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch11_t01_q01",
@@ -16438,7 +16506,8 @@
               ],
               "beyondTheBook": "In Class 11 Biology 'Excretory Products and their Elimination' you'll meet every nephron part with full molecular detail, hormonal regulation, and dialysis. NEET Biology asks about nephron histology and counter-current multiplier every year. Class 12 / JEE Bio-engineering covers hemodialysis machine design and artificial kidneys (still in R&D).",
               "relatedConceptIds": [
-                "ch11_t01_c02"
+                "ch11_t01_c02",
+                "ch11_t01_c01"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -16684,7 +16753,8 @@
               "beyondTheBook": "The world's tallest tree (a coast redwood named Hyperion in California) is 116 m tall. Lifting water 116 m up xylem requires overcoming about 11 atmospheres of pressure — yet trees do it passively with no pump, just leaf evaporation pulling water upward via the cohesive properties of water molecules. Engineers have studied tree xylem to design new water-lifting devices for villages.",
               "relatedConceptIds": [
                 "ch11_t01_c01",
-                "ch10_t01_c01"
+                "ch10_t01_c01",
+                "ch11_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch11_t02_q01"
@@ -17008,7 +17078,8 @@
               "beyondTheBook": "Charles Darwin spent decades studying orchid pollination — he predicted that the long-spurred Madagascar orchid Angraecum sesquipedale must have a moth pollinator with a 30-cm proboscis to reach its nectar. Decades after his death, exactly such a moth was discovered. Co-evolution at its most dramatic.",
               "relatedConceptIds": [
                 "ch12_t01_c02",
-                "ch12_t02_c01"
+                "ch12_t02_c01",
+                "ch12_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch12_t01_q02"
@@ -17305,7 +17376,8 @@
               ],
               "beyondTheBook": "The Velcro fastener was invented in 1941 by Swiss engineer George de Mestral after burrs stuck to his dog's fur during a hike. He examined them under a microscope, saw the tiny hooks, and copied the design. Plants invented Velcro a hundred million years before humans did.",
               "relatedConceptIds": [
-                "ch12_t01_c01"
+                "ch12_t01_c01",
+                "ch12_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch12_t02_q01"
@@ -17612,7 +17684,8 @@
               ],
               "beyondTheBook": "Quaking aspens in Utah form a forest of 47,000 trees that all share one root system — a single genetic individual called 'Pando' covering 43 hectares, weighing 6,000 tonnes. It's one of the largest organisms on Earth, and it reproduced entirely by sending out underground runners that sprouted into 'separate' trees. Asexual reproduction at planet-changing scale.",
               "relatedConceptIds": [
-                "ch12_t01_c01"
+                "ch12_t01_c01",
+                "ch12_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch12_t01_q01"
@@ -17919,7 +17992,9 @@
               ],
               "beyondTheBook": "The fastest land animal, the cheetah, hits 110 km/h — but only for short bursts (~30 seconds). Sustained over an hour, no land animal beats the pronghorn antelope (~80 km/h). The fastest measured object in space, NASA's Parker Solar Probe, hits 690,000 km/h diving toward the Sun — about 600 times faster than a passenger jet.",
               "relatedConceptIds": [
-                "ch13_t01_c02"
+                "ch13_t01_c02",
+                "ch13_t02_c01",
+                "ch13_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch13_t01_q01",
@@ -18308,7 +18383,8 @@
               "beyondTheBook": "In Class 11 Physics you'll meet Simple Harmonic Motion fully — the maths behind T = 2π√(L/g), the energy oscillating between kinetic and potential, and damping. JEE Mains/Advanced go further into the physical pendulum (period of an irregularly-shaped pivoting object) and forced oscillations / resonance. NEET Biology students see the same SHM applied to a contracting heart muscle and lung breathing rhythms — biological 'pendulums'.",
               "relatedConceptIds": [
                 "ch13_t01_c01",
-                "ch13_t02_c02"
+                "ch13_t02_c02",
+                "ch13_t01_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -18347,7 +18423,8 @@
               "beyondTheBook": "In Class 11 Physics you'll meet the precise definition of the second and dimensional analysis. JEE Physics covers oscillations and the design of pendulum vs. quartz vs. atomic clocks. Class 12 Modern Physics introduces atomic spectroscopy that underlies atomic clocks. NEET / Class 11 Biology covers the body's own 'clock' — circadian rhythms — measured against external time references.",
               "relatedConceptIds": [
                 "ch13_t02_c01",
-                "ch13_t03_c01"
+                "ch13_t03_c01",
+                "ch13_t03_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -18630,7 +18707,9 @@
               ],
               "beyondTheBook": "The Bhangarh Fort in Rajasthan has astronomical alignments dating back to 1573, used for tracking time before clocks. Jaipur's Jantar Mantar (1734) has the world's largest stone sundial — the 27-metre Samrat Yantra — which can tell time accurate to 2 seconds. Indian astronomical instruments competed with the best in Europe before the era of mechanical clocks.",
               "relatedConceptIds": [
-                "ch13_t01_c01"
+                "ch13_t01_c01",
+                "ch13_t02_c02",
+                "ch13_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch13_t01_q03"
@@ -18927,7 +19006,8 @@
               "beyondTheBook": "Alessandro Volta built the first electric battery (the voltaic pile) in 1800 by stacking copper and zinc discs separated by salt-soaked paper. Until then, electricity was just static sparks. The volt (V) is named after him. Modern lithium-ion batteries (Nobel Prize 2019) make electric vehicles and laptops possible — same chemistry idea, hugely refined.",
               "relatedConceptIds": [
                 "ch14_t01_c02",
-                "ch14_t01_c03"
+                "ch14_t01_c03",
+                "ch14_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch14_t01_q01"
@@ -19009,7 +19089,8 @@
               ],
               "beyondTheBook": "The first fuse was invented by Thomas Edison in 1880 to protect his early electrical systems. Before fuses, every short circuit risked burning down the building. Now every electrical device worldwide has fuse-like protection. India's Bureau of Indian Standards (BIS) certifies wires and fuses; the ISI mark on wiring is a safety guarantee.",
               "relatedConceptIds": [
-                "ch14_t01_c01"
+                "ch14_t01_c01",
+                "ch14_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch14_t01_q03"
@@ -19448,7 +19529,9 @@
               "beyondTheBook": "In Class 10 Electricity, you'll meet Joule's Law explicitly with formula derivations and numerical problems. Class 12 / JEE Physics extends it to AC circuits where heating depends on RMS current. JEE Mains / Advanced ask numerical problems comparing series and parallel heater configurations. NEET Biology connects the same principle to RFID-style hyperthermia treatments and electrocautery in surgery.",
               "relatedConceptIds": [
                 "ch14_t01_c01",
-                "ch14_t02_c02"
+                "ch14_t02_c02",
+                "ch14_t03_c01",
+                "ch14_t03_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -19716,7 +19799,8 @@
               "beyondTheBook": "Class 10 Electricity and Class 12 Magnetic Effects of Current ('Moving Charges and Magnetism') build a full quantitative theory: Ampère's Law, Biot-Savart, force on a current-carrying conductor F = BIL. JEE Physics packs heavy numerical content on solenoids, toroids, force between two parallel wires. NEET Biology and Class 12 Physics together explain MRI scanning — using strong magnetic fields and radio waves to image the human body.",
               "relatedConceptIds": [
                 "ch14_t02_c01",
-                "ch14_t03_c02"
+                "ch14_t03_c02",
+                "ch14_t02_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -20072,7 +20156,12 @@
               ],
               "beyondTheBook": "The 1.6-km-long pool at the Reflecting Pool of the Lincoln Memorial in Washington, DC was designed specifically to mirror the Washington Monument across it. Engineers had to design it so still water held the perfect reflection most of the time. Light reflection at the architectural scale.",
               "relatedConceptIds": [
-                "ch15_t01_c02"
+                "ch15_t01_c02",
+                "ch15_t03_c03",
+                "ch15_t03_c02",
+                "ch19_t02_c05",
+                "ch15_t02_c01",
+                "ch19_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch15_t01_q01"
@@ -20112,7 +20201,8 @@
               ],
               "beyondTheBook": "The world's largest telescope mirror is the 39-metre Extremely Large Telescope (ELT) being built in Chile — it's actually 798 hexagonal mirror segments aligned to act as one giant concave mirror. Light from galaxies billions of light years away gets focused onto sensitive cameras. Indian astronomers contribute to the GMT and TMT projects — same principle, just bigger.",
               "relatedConceptIds": [
-                "ch15_t01_c01"
+                "ch15_t01_c01",
+                "ch15_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch15_t01_q02"
@@ -21606,7 +21696,8 @@
               ],
               "beyondTheBook": "Water on Earth is older than the Sun — much of it came from comet impacts and primordial gas during planet formation. The water in your glass might contain molecules that were inside dinosaurs, or in a Roman aqueduct, or evaporated from the Indian Ocean last week. The same molecules cycle endlessly.",
               "relatedConceptIds": [
-                "ch16_t01_c02"
+                "ch16_t01_c02",
+                "ch16_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch16_t01_q01"
@@ -22483,7 +22574,8 @@
               "beyondTheBook": "In Class 10 / 11 Geography 'Water resources' covers conservation extensively. Class 12 Biology / Environmental Science connects to ecosystem-level water-cycle thinking. UPSC aspirants need the policy framework. NEET Biology covers the human kidney's water-conservation mechanisms (mirroring the city-level concept). JEE Civil + Environmental engineering focuses on Non-Revenue Water reduction and wastewater reuse.",
               "relatedConceptIds": [
                 "ch16_t03_c01",
-                "ch18_t01_c01"
+                "ch18_t01_c01",
+                "ch18_t03_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -22688,7 +22780,8 @@
               ],
               "beyondTheBook": "Forests act as 'rain producers' — through transpiration, the Amazon produces ~50% of its own rainfall. Cutting down forests can reduce regional rainfall and turn forests into deserts. The Brazilian Amazon is approaching a tipping point where deforestation could collapse the rainfall pattern that sustains it. Indian researchers have documented similar but smaller-scale effects in the Western Ghats.",
               "relatedConceptIds": [
-                "ch17_t01_c02"
+                "ch17_t01_c02",
+                "ch17_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch17_t01_q01"
@@ -23230,7 +23323,9 @@
               "beyondTheBook": "In Class 11 / 12 Biology this is the core of the 'Ecosystem' chapter — biogeochemical cycles of C, N, P, S, water. NEET Biology asks ecosystem-level questions every cycle. UPSC Environment and Class 12 Geography both cover forests as carbon sinks and the climate role of preserving nutrient cycles. JEE Earth Sciences students explore quantitative models of nutrient flow under disturbance.",
               "relatedConceptIds": [
                 "ch17_t02_c01",
-                "ch17_t03_c01"
+                "ch17_t03_c01",
+                "ch17_t03_c02",
+                "ch06_t03_c03"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -23458,7 +23553,8 @@
               "beyondTheBook": "In Class 10 / 11 Geography, deforestation is part of 'Forest and Wildlife Resources'. Class 12 Biology covers Biodiversity and Conservation in depth. UPSC General Studies + Environment papers test the EIA Notification, Forest Conservation Act, FRA 2006. JEE Earth Sciences and Class 12 NCERT both link deforestation to climate-system carbon flux modelling.",
               "relatedConceptIds": [
                 "ch17_t02_c02",
-                "ch17_t03_c02"
+                "ch17_t03_c02",
+                "ch05_t03_c03"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -23497,7 +23593,8 @@
               "beyondTheBook": "In Class 10 / 11 / 12 Geography and Civics, conservation policy is core. NEET / Class 12 Biology has a full unit on Biodiversity and Conservation. UPSC General Studies tests Forest Conservation Act, FRA 2006, EIA Notification, and CAMPA. JEE Earth Sciences covers quantitative models of forest carbon storage and ecological-economic trade-offs.",
               "relatedConceptIds": [
                 "ch17_t03_c01",
-                "ch17_t02_c02"
+                "ch17_t02_c02",
+                "ch07_t03_c03"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -23688,7 +23785,10 @@
               ],
               "beyondTheBook": "John Snow famously traced an 1854 London cholera outbreak to a single contaminated water pump on Broad Street — founding the field of epidemiology. His insight: sewage was contaminating drinking water. Modern WWTPs were invented in response. India's Total Sanitation Campaign (now Swachh Bharat Mission) builds on these public-health principles.",
               "relatedConceptIds": [
-                "ch18_t01_c02"
+                "ch18_t01_c02",
+                "ch16_t03_c02",
+                "ch18_t02_c01",
+                "ch18_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch18_t01_q01"
@@ -23729,7 +23829,8 @@
               "beyondTheBook": "In Class 10 / 11 Geography 'Water Resources' covers sewerage as urban infrastructure. UPSC Public Administration tests AMRUT 2.0 (urban infrastructure scheme) and Namami Gange (Ganga cleaning). JEE Civil engineering covers sewer hydraulics. NEET Biology touches on water-borne diseases linked to sewage exposure.",
               "relatedConceptIds": [
                 "ch18_t01_c01",
-                "ch18_t02_c01"
+                "ch18_t02_c01",
+                "ch18_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch18_t01_q04",
@@ -23989,7 +24090,10 @@
               ],
               "beyondTheBook": "Sweden's Stockholm WWTP not only cleans water but extracts phosphorus (a nutrient mined globally) from sludge for fertiliser. Phosphorus mining is destroying African ecosystems, so recovering it from sewage is a hidden environmental win. India is starting similar phosphorus-recovery pilots — sewage as a resource, not just waste.",
               "relatedConceptIds": [
-                "ch18_t01_c01"
+                "ch18_t01_c01",
+                "ch18_t02_c02",
+                "ch18_t01_c02",
+                "ch18_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch18_t01_q02"
@@ -24380,7 +24484,8 @@
               "beyondTheBook": "In Class 10 / 11 / 12 Geography 'Sanitation' is a key social-infrastructure topic. UPSC Public Administration + Social Justice papers test the Swachh Bharat Mission outcomes. NEET / Class 11 Biology covers water-borne diseases linked to poor sanitation. JEE Civil + Environmental engineering picks septic-tank sizing, soak-pit hydraulics, and microbial treatment kinetics as practical design problems.",
               "relatedConceptIds": [
                 "ch18_t01_c01",
-                "ch18_t02_c01"
+                "ch18_t02_c01",
+                "ch18_t03_c02"
               ],
               "relatedQuestionIds": [],
               "pageRefs": [
@@ -24693,7 +24798,10 @@
                 "ch19_t01_c02",
                 "ch19_t01_c04",
                 "ch19_t01_c08",
-                "ch07_t01_c01"
+                "ch07_t01_c01",
+                "ch19_t02_c01",
+                "ch19_t01_c06",
+                "ch19_t01_c03"
               ],
               "relatedQuestionIds": [
                 "ch19_t01_q01",
@@ -24757,7 +24865,10 @@
                 "ch19_t01_c01",
                 "ch19_t01_c06",
                 "ch19_t01_c03",
-                "ch04_t02_c03"
+                "ch04_t02_c03",
+                "ch19_t01_c08",
+                "ch19_t03_c04",
+                "ch19_t01_c07"
               ],
               "relatedQuestionIds": [
                 "ch19_t01_q01",
@@ -24815,7 +24926,8 @@
               "relatedConceptIds": [
                 "ch19_t01_c01",
                 "ch19_t01_c04",
-                "ch19_t01_c05"
+                "ch19_t01_c05",
+                "ch19_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch19_t01_q02",
@@ -24879,7 +24991,8 @@
                 "ch19_t01_c01",
                 "ch19_t01_c03",
                 "ch07_t01_c01",
-                "ch04_t01_c01"
+                "ch04_t01_c01",
+                "ch19_t01_c05"
               ],
               "relatedQuestionIds": [
                 "ch19_t01_q03",
@@ -25090,7 +25203,8 @@
               "relatedConceptIds": [
                 "ch19_t01_c01",
                 "ch19_t01_c02",
-                "ch19_t03_c04"
+                "ch19_t03_c04",
+                "ch19_t03_c03"
               ],
               "relatedQuestionIds": [
                 "ch19_t01_q05"
@@ -26819,7 +26933,11 @@
                 "ch19_t02_c02",
                 "ch19_t02_c05",
                 "ch19_t02_c06",
-                "ch19_t01_c01"
+                "ch19_t01_c01",
+                "ch19_t02_c04",
+                "ch19_t02_c07",
+                "ch19_t02_c08",
+                "ch19_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch19_t02_q01"
@@ -26881,7 +26999,10 @@
               "relatedConceptIds": [
                 "ch19_t02_c01",
                 "ch19_t02_c03",
-                "ch19_t02_c05"
+                "ch19_t02_c05",
+                "ch19_t02_c04",
+                "ch19_t02_c07",
+                "ch19_t02_c06"
               ],
               "relatedQuestionIds": [
                 "ch19_t02_q01",
@@ -27038,7 +27159,8 @@
               "relatedConceptIds": [
                 "ch19_t02_c04",
                 "ch19_t02_c02",
-                "ch15_t01_c01"
+                "ch15_t01_c01",
+                "ch19_t02_c01"
               ],
               "relatedQuestionIds": [
                 "ch19_t02_q03",
@@ -27149,7 +27271,8 @@
               "relatedConceptIds": [
                 "ch19_t02_c06",
                 "ch19_t02_c02",
-                "ch19_t02_c01"
+                "ch19_t02_c01",
+                "ch19_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch19_t02_q05"
@@ -28938,7 +29061,9 @@
               "relatedConceptIds": [
                 "ch19_t03_c02",
                 "ch19_t03_c03",
-                "ch19_t03_c05"
+                "ch19_t03_c05",
+                "ch19_t03_c07",
+                "ch19_t03_c06"
               ],
               "relatedQuestionIds": [
                 "ch19_t03_q01"
@@ -29046,7 +29171,8 @@
               "relatedConceptIds": [
                 "ch19_t03_c04",
                 "ch19_t03_c01",
-                "ch19_t01_c08"
+                "ch19_t01_c08",
+                "ch19_t03_c02"
               ],
               "relatedQuestionIds": [
                 "ch19_t03_q02",

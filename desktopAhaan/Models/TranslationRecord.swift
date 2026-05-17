@@ -29,19 +29,31 @@ final class TranslationRecord: Identifiable, Codable {
         self.originalText = response.originalText
         self.translatedText = response.translatedText
         self.transliteration = response.transliteration
-        do {
-            self.wordByWordJSON = try JSONEncoder().encode(response.wordByWord)
-        } catch {
-            recordLogger.error("wordByWord encoding failed: \(error.localizedDescription, privacy: .public)")
+        // Short-circuit when the source is nil so we don't store the
+        // JSON literal "null" (4 wasted bytes per record) and so the
+        // round-trip nil-in / nil-out invariant holds for callers that
+        // check `wordByWordJSON == nil`.
+        if let words = response.wordByWord {
+            do {
+                self.wordByWordJSON = try JSONEncoder().encode(words)
+            } catch {
+                recordLogger.error("wordByWord encoding failed: \(error.localizedDescription, privacy: .public)")
+                self.wordByWordJSON = nil
+            }
+        } else {
             self.wordByWordJSON = nil
         }
         self.grammarNote = response.grammarNote
         self.learningTip = response.learningTip
         self.difficulty = response.difficulty.rawValue
-        do {
-            self.alternativesJSON = try JSONEncoder().encode(response.alternatives)
-        } catch {
-            recordLogger.error("alternatives encoding failed: \(error.localizedDescription, privacy: .public)")
+        if let alts = response.alternatives {
+            do {
+                self.alternativesJSON = try JSONEncoder().encode(alts)
+            } catch {
+                recordLogger.error("alternatives encoding failed: \(error.localizedDescription, privacy: .public)")
+                self.alternativesJSON = nil
+            }
+        } else {
             self.alternativesJSON = nil
         }
         self.confidenceNote = response.confidenceNote
