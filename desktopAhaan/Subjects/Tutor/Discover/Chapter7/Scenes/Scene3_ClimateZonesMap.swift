@@ -130,7 +130,7 @@ struct Scene3_ClimateZonesMap: View {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedZone, let zone = zones.first(where: { $0.id == idx }) {
-                                Label(zone.name, systemImage: "globe.americas.fill")
+                                Label(zone.name, systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                     .font(.title2.bold())
                                     .foregroundColor(zone.color)
                                 Text(zone.description)
@@ -140,7 +140,7 @@ struct Scene3_ClimateZonesMap: View {
                                     .font(.callout)
                                     .foregroundColor(.secondary)
                             } else {
-                                Label("Tap a Zone", systemImage: "hand.tap.fill")
+                                Label("Tap a Zone", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                                     .font(.title2.bold())
                                 Text("The Earth has different climate zones based on temperature and rainfall. Tap each coloured band on the map to explore!")
                                     .font(.body)

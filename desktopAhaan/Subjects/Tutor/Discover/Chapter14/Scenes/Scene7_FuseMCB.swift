@@ -33,7 +33,7 @@ struct Scene7_FuseMCB: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Safety first", systemImage: "shield.lefthalf.filled")
+                    Label("Safety first", systemImage: SFSymbolCompat.name("shield.lefthalf.filled"))
                         .font(.title2.bold())
                     Text("A fuse contains a thin wire that melts if too much current flows — breaking the circuit before things catch fire. A miniature circuit breaker (MCB) does the same job but you can reset it instead of replacing a wire.")
                         .font(.body).lineSpacing(4)

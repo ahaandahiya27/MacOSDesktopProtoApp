@@ -90,7 +90,7 @@ struct HotspotDiagram: View {
 
     private var header: some View {
         HStack(spacing: 8) {
-            Image(systemName: "hand.tap.fill")
+            Image(systemName: SFSymbolCompat.name("hand.tap.fill"))
                 .font(.title3)
                 .foregroundColor(baseColor)
                 .accessibilityHidden(true)

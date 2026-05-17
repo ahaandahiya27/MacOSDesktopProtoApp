@@ -125,7 +125,7 @@ struct Scene8_KitchenChemistry: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Chemistry in your kitchen", systemImage: "frying.pan.fill")
+                    Label("Chemistry in your kitchen", systemImage: SFSymbolCompat.name("frying.pan.fill"))
                         .font(.title2.bold())
                     if let sel = selectedExperiment, let exp = experiments.first(where: { $0.id == sel }), reacted.contains(exp.id) {
                         Text(exp.explanation)

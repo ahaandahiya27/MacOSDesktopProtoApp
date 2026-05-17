@@ -69,7 +69,7 @@ struct Scene7_AmoebaPseudopodHunt: View {
 
                 HStack {
                     Button(action: { hunt() }) {
-                        Label("Hunt Food", systemImage: "fork.knife")
+                        Label("Hunt Food", systemImage: SFSymbolCompat.name("fork.knife"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 20)
                     }

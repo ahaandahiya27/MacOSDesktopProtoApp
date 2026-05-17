@@ -8,7 +8,7 @@ concrete instances, fix them, mark the category done. Status legend:
 - 🟡 partially addressed; known gaps remain
 - ❌ not yet audited
 
-Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow + Phase 2 design-tokens primitives + line-height tokens + `pointingCursor()` hover affordances on Discover-Mode chrome + TH5 architectural discovery).
+Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow + Phase 2 design-tokens primitives + line-height tokens + `pointingCursor()` hover affordances on Discover-Mode chrome + TH5 architectural discovery + iMac SF-Symbol runtime warnings cleared (3 reported + 1 cascading shim bug + 5 bypass call-sites) + TY8 mono-digit counter helper).
 
 ---
 
@@ -18,7 +18,7 @@ Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Disc
 |----|----------|--------|
 | A1 | Swift 5.5 ViewBuilder 10-child limit per closure | ✅ static audit clean, Group{} wraps where needed |
 | A2 | No macOS 12+ APIs (`Bindable`, `Observable`, `.scrollPosition`, `Layout`, `.foregroundStyle`, `Charts`, …) | ✅ swept; build green under MACOSX_DEPLOYMENT_TARGET=11.0 in scripts/ci-build-test.sh — any macOS 12+ API would surface as an availability error |
-| A3 | No SF Symbols 3+/4+ names | ✅ 16 symbols routed through SFSymbolCompat |
+| A3 | No SF Symbols 3+/4+ names | ✅ ~36 symbols routed through SFSymbolCompat. 2026-05-17 follow-up: iMac runtime surfaced 3 unrouted symbols (`fork.knife`, `figure.2.and.child.holdinghands`, `pencil.and.ruler.fill`) — added to shim + fixed 5 direct-bypass call-sites + caught a cascading bug where `frying.pan.fill` fell back to also-modern `fork.knife` |
 | A4 | No `try!` / `as!` / `[i]!` in runtime paths | ✅ swept; only file is `FoundationTutor` shim (intentional) |
 | A5 | x86_64 + arm64 universal binary | ✅ Release config: ONLY_ACTIVE_ARCH=NO + default ARCHS_STANDARD; produces universal slice |
 | A6 | Type-check timeout from complex SwiftUI expressions | ✅ static audit clean (Kaleidoscope refactor was the canary) |
@@ -371,7 +371,7 @@ in the project memory.
 | TY5 | Line-height (`.lineSpacing`) applied inconsistently | 🟡 `DesignTokens.Typography` now exposes `tightLineSpacing` (1pt) / `bodyLineSpacing` (3pt) / `looseLineSpacing` (5pt) primitives. Call-site rollout deferred to Phase 6 |
 | TY6 | Sidebar item titles truncate at narrow widths with no tooltip | 🟡 Phase 4 |
 | TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
-| TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ❌ |
+| TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | 🟡 `Font.monoDigitCaption` helper added (Big-Sur-safe via `NSFont.monospacedDigitSystemFont` — SwiftUI's `.monospacedDigit()` is macOS 12+) and applied to the DiscoverShell "Scene N of M · X done" counter. Quiz Bank / dictionary counters pending |
 | TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
 | TY10 | Caption / metadata text size occasionally indistinguishable from body | ❌ |
 

@@ -27,10 +27,10 @@ enum PracticeCategory: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .greetings: return "hand.wave.fill"
         case .numbers: return "number.circle.fill"
-        case .family: return "figure.2.and.child.holdinghands"
+        case .family: return SFSymbolCompat.name("figure.2.and.child.holdinghands")
         case .classroom: return "book.fill"
         case .dailyActions: return "sun.max.fill"
-        case .schoolPhrases: return "pencil.and.ruler.fill"
+        case .schoolPhrases: return SFSymbolCompat.name("pencil.and.ruler.fill")
         case .simpleSentences: return "text.bubble.fill"
         }
     }

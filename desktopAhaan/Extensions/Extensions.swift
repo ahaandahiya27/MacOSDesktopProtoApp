@@ -88,7 +88,8 @@ enum SFSymbolCompat {
         case "bird.fill":                  return "pawprint.fill"
         case "flask.fill":                 return "drop.fill"
         case "mouth.fill":                 return "sparkles"
-        case "frying.pan.fill":            return "fork.knife"
+        case "frying.pan.fill":            return "flame.fill"  // was "fork.knife" — also SF Symbols 3+, cascaded warning on Big Sur
+        case "fork.knife":                 return "flame.fill"  // SF Symbols 3+ — added 2026-05-17 after iMac runtime warning
         case "globe.europe.africa.fill":   return "globe"
         case "globe.americas.fill":        return "globe"
         case "hand.raised.fingers.spread": return "hand.raised.fill"
@@ -117,6 +118,8 @@ enum SFSymbolCompat {
         case "character.book.closed":      return "book.closed"
         case "leaf.arrow.triangle.circlepath": return "leaf.fill"
         case "hare.fill":                  return "tortoise"
+        case "figure.2.and.child.holdinghands": return "person.2.fill"  // SF Symbols 4+ — added 2026-05-17 after iMac runtime warning
+        case "pencil.and.ruler.fill":      return "pencil"              // SF Symbols 3+ — added 2026-05-17 after iMac runtime warning
         default:                           return modern
         }
     }
@@ -271,6 +274,23 @@ enum DesignTokens {
         // Neutral surfaces.
         static let mutedSurface: Color = Color.gray.opacity(0.25)
         static let dividerLine: Color = Color.primary.opacity(0.08)
+    }
+}
+
+// MARK: - Monospaced-digit fonts (Big-Sur-safe)
+
+extension Font {
+    /// Big-Sur-safe monospaced-digit caption font for counters that change in
+    /// real time ("Scene N of M · X done", score readouts, badge numbers).
+    /// SwiftUI's `.monospacedDigit()` modifier on Font is macOS 12+; this
+    /// builds the same effect via AppKit's `NSFont.monospacedDigitSystemFont`
+    /// which has shipped since macOS 10.7, so digit columns stay aligned as
+    /// the number changes — no jitter as widths shift between `1` and `8`.
+    static var monoDigitCaption: Font {
+        Font(NSFont.monospacedDigitSystemFont(
+            ofSize: NSFont.smallSystemFontSize,
+            weight: .medium
+        ))
     }
 }
 

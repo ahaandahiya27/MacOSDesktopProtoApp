@@ -263,7 +263,7 @@ struct DiscoverShell<SceneBody: View>: View {
                     .truncationMode(.tail)
                 Spacer(minLength: 0)
                 Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedSceneIds.count) done")
-                    .font(.caption.weight(.medium))
+                    .font(.monoDigitCaption)
                     .foregroundColor(.secondary)
             }
             HStack(spacing: 8) {

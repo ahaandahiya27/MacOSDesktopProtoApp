@@ -55,7 +55,7 @@ struct Scene1_TheMouthLab: View {
 
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
-                            Label("The Mouth Lab", systemImage: "mouth.fill")
+                            Label("The Mouth Lab", systemImage: SFSymbolCompat.name("mouth.fill"))
                                 .font(.title2.bold())
                                 .foregroundColor(.orange)
                             Text(teethExplanation)
