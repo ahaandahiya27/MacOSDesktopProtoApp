@@ -187,7 +187,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | L2 | Bookmarks persisted | ✅ |
 | L3 | Recent items persisted (≤8) | ✅ |
 | L4 | Window frame restoration on relaunch | ✅ system default (`NSQuitAlwaysKeepsWindows`) restores last frame; sidebar selection separately via @AppStorage |
-| L5 | Settings via @AppStorage | 🟡 partial |
+| L5 | Settings via @AppStorage | ✅ hasSeenWelcome + 19 per-chapter Discover cursors routed through `AppStorageKeys` registry; SettingsManager.shared backs the audio/locale settings |
 | L6 | Crash log rotation (avoid unbounded growth) | ✅ 30-file cap + 1 MB per-day rotation |
 | L7 | Migration on schema bump | ❌ no formal migration path |
 
