@@ -127,6 +127,20 @@ struct Scene8_NitrogenCycle: View {
                 .transition(.opacity.combined(with: .move(edge: .bottom)))
             }
 
+            LookingAheadCallout(
+                title: "Class 12 Chemistry + Biology → JEE / NEET",
+                detail: "The natural N-cycle you just walked through is one half. The other half humans built: the Haber-Bosch process — combining N₂ from the air with H₂ at 400°C and 200 atmospheres to make ammonia. JEE Chemistry asks the thermodynamics. NEET Biology asks how the resulting fertiliser, applied to soil, can over-feed algae in rivers downstream (eutrophication) and choke the water of oxygen."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Read a fertiliser bag",
+                detail: "Any kitchen-garden fertiliser bag has three numbers, e.g. 10-26-26. Those are %N, %P₂O₅, %K₂O — the NPK ratio. High first number = leafy growth (nitrogen). High second = root + flower (phosphorus). High third = fruit + sturdiness (potassium). Match the numbers to what your plant needs and you're farming chemistry."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             VStack(spacing: 4) {
                 GotItButton(action: onComplete)
                     .disabled(!allTapped)

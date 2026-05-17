@@ -73,6 +73,20 @@ struct Scene6_MeetTheSpecialPlants: View {
             }
             .frame(maxWidth: .infinity)
 
+            LookingAheadCallout(
+                title: "Class 12 / NEET — Symbiosis",
+                detail: "Lichens you just met are *the* textbook example of mutualism — both partners gain. NEET tests three big partnership types: lichen (alga + fungus), mycorrhiza (plant roots + fungus, deep in soil), and Rhizobium (bacteria + leguminous plant roots, fixes atmospheric nitrogen for free). Same idea, three scales — molecular to forest."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Find a lichen",
+                detail: "Walk past any old wall, tree bark, or stone bench — look for the dusty grey-green or yellow-orange crusty patches. That's NOT one organism. It's an alga and a fungus living glued together. Where the air is polluted, lichens disappear first — they're a pollution sensor you can spot on your morning walk."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton(action: onComplete)
                 .padding(.bottom, 12)
 

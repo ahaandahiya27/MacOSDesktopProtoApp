@@ -90,6 +90,33 @@ struct Scene1_PlantKitchen: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            MnemonicCallout(
+                hook: "SLAW",
+                meaning: "The four things a plant needs to cook its food.",
+                expansion: [
+                    ("S", "Sunlight — the energy source"),
+                    ("L", "Leaf — the kitchen (chlorophyll)"),
+                    ("A", "Air — carbon dioxide from the atmosphere"),
+                    ("W", "Water — pulled up from the roots")
+                ]
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET",
+                detail: "This whole chapter compresses into one equation in Class 11: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂. NEET tests the two stages separately — Light reactions (in thylakoids, produces ATP + NADPH) and the Calvin cycle (in stroma, fixes carbon). Knowing SLAW now makes those two stages feel obvious in five years."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Sun-test with a leaf",
+                detail: "Pick one healthy leaf on a houseplant. Cover half of it with kitchen foil (a small square) and leave the plant in sunlight for 3 days. Pluck the leaf, dip it in boiling water (ask a grown-up) to soften, then drop iodine on it. The UNCOVERED half turns blue-black (starch made from photosynthesis); the covered half stays brown (no sunlight = no food made). Real proof, in your kitchen."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                     GotItButton {
                         onComplete()
                     }

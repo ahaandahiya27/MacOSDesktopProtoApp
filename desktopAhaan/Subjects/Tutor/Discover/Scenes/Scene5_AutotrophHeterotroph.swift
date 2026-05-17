@@ -64,6 +64,7 @@ struct Scene5_AutotrophHeterotroph: View {
             floatingCardsGrid
             dropZonesRow
             feedbackLine
+            forwardCallouts
             actionsRow
             Spacer(minLength: 0)
         }
@@ -71,6 +72,21 @@ struct Scene5_AutotrophHeterotroph: View {
         .onAppear {
             if tokens.isEmpty { tokens = allTokens.shuffled() }
         }
+    }
+
+    private var forwardCallouts: some View {
+        VStack(spacing: 10) {
+            LookingAheadCallout(
+                title: "Class 12 Biology → NEET",
+                detail: "What you just sorted is the foundation of ecology: producers vs consumers. NEET tests trophic pyramids — only 10% of energy moves up each step. Tigers are rare not because they're shy but because the math forbids many tigers at the top of a long food chain."
+            )
+            TryAtHomeCallout(
+                title: "Build a food-chain mobile",
+                detail: "Cut out 5 cards: Sun, Grass, Grasshopper, Frog, Snake. Connect them with thread top-down. Hang from the ceiling. Now lift the Sun gently — every card below moves. Cut the Grass thread — Sun keeps swinging but the others fall. Energy flows ONE way down, and any break stops everything below it."
+            )
+        }
+        .frame(maxWidth: DesignTokens.contentMaxWidth)
+        .padding(.horizontal, 24)
     }
 
     @ViewBuilder

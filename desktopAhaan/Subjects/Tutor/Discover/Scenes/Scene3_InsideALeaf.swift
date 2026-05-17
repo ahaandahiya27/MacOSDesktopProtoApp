@@ -107,6 +107,20 @@ struct Scene3_InsideALeaf: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology → NEET",
+                detail: "Each leaf part you just clicked becomes a whole NEET topic: mesophyll cells (palisade vs spongy → light-capture vs gas-exchange specialisation), stomatal guard cells (turgor mechanics, transpiration physics), vascular bundles (xylem ↑ water, phloem ↓ sugar). Knowing the parts now means in Class 11 you're learning their *physiology*, not their *names*."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "See stomata yourself",
+                detail: "Peel the thin underside skin off a fresh leaf (Rheo or money-plant works best — it lifts off in big sheets). Lay it on a glass slide. Even a 10× pocket magnifier will show the mouth-like stomata. Each one is two guard cells curved around an opening, breathing for the plant."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton(action: onComplete)
                 .padding(.bottom, 12)
                 .disabled(selectedPart == nil)

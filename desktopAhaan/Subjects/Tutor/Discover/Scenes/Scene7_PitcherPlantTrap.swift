@@ -111,6 +111,20 @@ struct Scene7_PitcherPlantTrap: View {
             }
             .frame(maxWidth: 580)
 
+            LookingAheadCallout(
+                title: "Class 11 Biology / NEET",
+                detail: "Insectivorous plants are NEET-favourite case studies of convergent evolution: Nepenthes (Asian pitcher), Sarracenia (American pitcher), and Drosera (sundew) all evolved insect-trapping independently from different ancestors — driven by the same problem (low-nitrogen soils) toward the same solution (catch your own nitrogen). Same mathematician, three different proofs."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Spot one for real",
+                detail: "Botanical gardens in most Indian cities (Lalbagh in Bangalore, Indian Botanic Garden in Howrah) keep pitcher plants and Venus flytraps in their conservatories. Watch carefully — the pitcher's mouth is slippery, the inside hairs all point downward, and there's a centimetre of digestive fluid waiting at the bottom. Evolution doesn't have a brain, but it engineers."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton(action: onComplete)
                 .padding(.bottom, 12)
 
