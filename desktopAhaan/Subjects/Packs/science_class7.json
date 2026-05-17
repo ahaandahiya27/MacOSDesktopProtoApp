@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.27.0-concept-+1-boosts",
+  "version": "0.28.0-ch5-6-7-third-topics",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -10082,6 +10082,294 @@
               "needsHumanReview": false
             }
           ]
+        },
+        {
+          "id": "ch05_t03",
+          "title": "Acids and Bases in Industry and Nature",
+          "summary": "Acids and bases drive massive industries, shape your dental health, and even change the chemistry of the oceans. The same reactions from Topics 1 and 2 play out at planet-scale.",
+          "concepts": [
+            {
+              "id": "ch05_t03_c01",
+              "title": "Acids in industry — sulphuric, hydrochloric, nitric",
+              "explanations": {
+                "oneLine": "Three strong acids do most of the world's industrial work: sulphuric makes fertilisers and refines petroleum, hydrochloric cleans metals, nitric makes explosives and dyes.",
+                "kidFriendly": "Industrial chemistry runs on three workhorse acids. SULPHURIC ACID (H₂SO₄) is the most-produced chemical on Earth — over 250 million tonnes a year. It's used to make fertilisers (super-phosphate for crops), refine petroleum into petrol and diesel, clean rust off metal, and inside every car battery. HYDROCHLORIC ACID (HCl) cleans metals before they're painted or coated, processes leather, and pickles food in the kitchen. NITRIC ACID (HNO₃) makes explosives, dyes, and fertilisers. India's biggest fertiliser plants in Kanpur and Trombay run rivers of sulphuric and nitric acid 24 hours a day — invisible chemistry behind every kilogram of food on your plate.",
+                "textbook": "Three strong mineral acids dominate industrial chemistry: (1) Sulphuric acid (H₂SO₄) — over 250 million tonnes produced globally per year (largest of any chemical). Made by the Contact Process from sulphur → SO₂ → SO₃ → H₂SO₄. Uses: phosphate fertiliser manufacture (60% of consumption), petroleum refining, metal pickling, lead-acid car batteries. (2) Hydrochloric acid (HCl) — produced by direct chlorination of hydrogen or as a by-product of organic chlorination. Uses: metal cleaning (descaling, pickling), food processing (gelatine, corn syrup), leather processing. (3) Nitric acid (HNO₃) — made from ammonia via the Ostwald process. Uses: fertilisers (ammonium nitrate), explosives (TNT, dynamite), dyes, plastics. India is the world's 3rd-largest sulphuric-acid producer; key plants in Trombay, Sindri, Jamshedpur.",
+                "expert": "Industrial acid chemistry hinges on equilibrium and economics. The Contact Process for H₂SO₄ operates the SO₂ → SO₃ step at 400-450 °C with V₂O₅ catalyst — a temperature compromise between thermodynamic favourability (Le Chatelier: exothermic so lower-T favoured) and kinetic rate (higher T = faster). Green-chemistry initiatives are reducing acid intensity: the Solvay process for soda ash uses less acid than the older Leblanc process; bio-based succinic acid is replacing petrochemical maleic anhydride. Acid-rain mitigation requires capturing SO₂ from coal-fired plants before it oxidises to H₂SO₄ in the atmosphere."
+              },
+              "reasoning": "Strong acids cheaply make positively-charged H⁺ ions available in huge quantities. H⁺ ions react with almost everything — metals, oxides, organic compounds, biological tissue. Industries exploit this for cleaning, reacting, refining. Cheap, plentiful, versatile — the workhorse trio runs the chemical economy.",
+              "useCases": [
+                {
+                  "title": "Lead-acid car battery",
+                  "description": "Every internal-combustion-engine car contains ~5 L of dilute sulphuric acid inside its battery; the chemistry inside is reversible (charging vs discharging).",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Kanpur leather pickling",
+                  "description": "Massive HCl vats clean and prepare hides at India's leather-belt factories — the same process Roman tanners used 2000 years ago.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Diwali fireworks",
+                  "description": "Nitric-acid-derived nitrates are the oxidisers in fireworks shells that send sparks high into the sky.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "In Class 9 / 10 / 11 / 12 Chemistry, industrial acids appear in 'p-block elements', 'Equilibrium', 'Acids, Bases and Salts'. JEE Chemistry tests the Contact and Ostwald processes (numerical yield problems). NEET / Class 12 Biology covers stomach HCl, plant acid metabolism. UPSC Geography includes the fertiliser-belt of India and global sulphur trade.",
+              "relatedConceptIds": [
+                "ch05_t01_c01",
+                "ch05_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t03_q01",
+                "ch05_t03_q02"
+              ],
+              "pageRefs": [
+                65,
+                66
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t03_c02",
+              "title": "The chemistry of tooth decay",
+              "explanations": {
+                "oneLine": "Bacteria in your mouth eat sugar and produce acids that dissolve tooth enamel (calcium phosphate) — that's how a cavity starts; brushing with fluoride toothpaste and rinsing after sweets prevent it.",
+                "kidFriendly": "After you eat anything sugary, bacteria living on your teeth feast on the sugar and produce LACTIC ACID as a by-product. This acid dissolves the calcium-phosphate enamel — the hard mineral shell of your tooth. Over weeks and months of repeated acid attacks, a microscopic hole forms; the hole grows into a CAVITY. Saliva fights back — it contains bicarbonate that neutralises acid; calcium and phosphate that re-mineralise enamel. Fluoride toothpaste swaps softer hydroxyapatite for harder fluorapatite — making teeth more resistant. Rinsing your mouth or chewing sugar-free gum after eating sweets gives saliva a fighting chance.",
+                "textbook": "Tooth enamel is composed primarily of hydroxyapatite — Ca₁₀(PO₄)₆(OH)₂ — a calcium-phosphate mineral; the hardest substance in the human body. Dental caries (cavities) form through a four-step process: (1) bacteria (mainly Streptococcus mutans) colonise tooth surfaces as plaque; (2) when sugar is consumed, the bacteria ferment it to produce lactic acid; (3) the acid lowers oral pH from ~7 to ~5 within minutes, dissolving hydroxyapatite (demineralisation); (4) if acid attacks recur faster than saliva can buffer/remineralise, a cavity forms. Prevention: (a) reduce sugar frequency (not just amount — frequency matters more because each sugar pulse triggers an acid attack); (b) brush teeth with fluoride toothpaste (fluoride substitutes into apatite making fluorapatite, harder and acid-resistant); (c) rinse mouth or chew sugar-free gum after eating to boost saliva; (d) regular dental check-ups.",
+                "expert": "Caries microbiology has shifted from a 'specific-bacteria' model to a complex 'ecological plaque hypothesis' — biofilm dysbiosis driven by frequent sugar pulses. New protective strategies include xylitol (a sugar alcohol that bacteria can't metabolise but find), arginine + calcium agents that boost alkalising bacteria, and recombinant lactoperoxidase. The WHO Global Oral Health Status Report 2022 estimates ~2.5 billion people live with untreated caries — the most prevalent disease worldwide. Indian fluoridation programmes through community salt and water reach hundreds of millions; school dental-checkup programmes target rural children."
+              },
+              "reasoning": "Teeth are made of a calcium-phosphate mineral. Sugar feeds bacteria that produce acid. Acid + mineral → dissolved mineral = cavity. Saliva fights back chemically (bicarbonate buffer) and structurally (re-deposit). Time and frequency tip the balance one way or the other.",
+              "useCases": [
+                {
+                  "title": "Diwali sweets and dentist visits",
+                  "description": "Indian dentists report a measurable spike in cavity cases in the weeks after Diwali — frequent sugar exposure overwhelms enamel.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Fluoride toothpaste",
+                  "description": "Toothpaste contains 1000-1500 ppm fluoride; daily brushing replaces softer enamel hydroxyl groups with harder fluoride.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Sugar-free chewing gum",
+                  "description": "Stimulates saliva flow → buffers acid → speeds remineralisation. Studies show gum-chewing after meals reduces caries by 28%.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 Biology 'Life Processes' covers digestive acids and tooth structure. NEET Biology asks about enamel composition and caries pathogens. JEE Biotechnology / Class 12 Microbes in Human Welfare covers oral microbiome research. UPSC General Studies includes the Swachh Bharat school oral-hygiene programmes.",
+              "relatedConceptIds": [
+                "ch05_t01_c01",
+                "ch05_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t03_q03",
+                "ch05_t03_q04"
+              ],
+              "pageRefs": [
+                66,
+                67
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t03_c03",
+              "title": "Ocean acidification — CO₂ from the air dissolving in the sea",
+              "explanations": {
+                "oneLine": "About 30% of the CO₂ humans put into the atmosphere dissolves in the oceans, forming weak carbonic acid; this is making seawater more acidic and dissolving coral reefs.",
+                "kidFriendly": "Every year humans release ~40 billion tonnes of CO₂ into the air by burning coal, oil, gas, and forests. About a third of that CO₂ dissolves in the ocean — and dissolved CO₂ reacts with water to make CARBONIC ACID (H₂CO₃). The oceans have become measurably more acidic — pH dropped from ~8.2 (pre-industrial) to ~8.1 today, a 30% increase in H⁺ ions. Corals, shellfish, sea-urchins, and tiny ocean creatures called pteropods build their shells from calcium carbonate — and CARBONATE DISSOLVES IN ACID. So as oceans acidify, shell-building gets harder and harder. The Great Barrier Reef is already losing coral cover; in some regions, oyster farms have collapsed. This is climate change's chemistry twin.",
+                "textbook": "Ocean acidification is a direct consequence of rising atmospheric CO₂. About 30% of all anthropogenic CO₂ emitted since 1750 has been absorbed by the oceans. Once in seawater, CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ — releasing protons. Surface-ocean pH has dropped from ~8.2 (pre-industrial) to ~8.1 (today) — a 30% increase in H⁺ ion concentration (pH is logarithmic). Projections to 2100 (RCP 8.5): another 0.3 unit drop. Effects: (1) Calcifying organisms (corals, molluscs, foraminifera, coccolithophores, pteropods) cannot build shells/skeletons as efficiently; some begin to DISSOLVE. (2) Coral bleaching is exacerbated. (3) Fish behaviour (sensory, predator-avoidance) is impaired at high CO₂. (4) Marine food webs disrupted. India's western coast is particularly vulnerable; CMFRI has documented declining shellfish landings in Karnataka and Kerala.",
+                "expert": "Ocean carbonate chemistry is governed by the bicarbonate buffer system. The aragonite saturation horizon (Ω_arag = 1 below which aragonite dissolves) has risen ~200 m in the Pacific since pre-industrial times. Climate-change-driven acidification has 10× faster pH change rates than the Paleocene-Eocene Thermal Maximum (PETM, 56 million years ago) — likely the fastest acidification in 300 million years. Mitigation strategies include reduced fossil-fuel emissions (primary), seaweed and shellfish aquaculture (sequesters CO₂), and at-scale ocean alkalinity enhancement (controversial). India's Indian Council of Agricultural Research (ICAR-CMFRI) runs ocean acidification monitoring stations off both coasts."
+              },
+              "reasoning": "More CO₂ in the air = more CO₂ dissolves in the sea (Henry's Law). Dissolved CO₂ + water = carbonic acid + H⁺. Higher H⁺ = lower pH = more acidic. Carbonate shells (made of CaCO₃) dissolve in acid. So increasing atmospheric CO₂ directly attacks every shell-building creature in the oceans.",
+              "useCases": [
+                {
+                  "title": "Coral reef bleaching + dissolving",
+                  "description": "The Great Barrier Reef has lost over 50% of its coral since 1995 due to warming AND acidification.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Pacific oyster industry collapse (2008)",
+                  "description": "Washington-state oyster farms suddenly lost their larvae; the cause was acidified upwelling water dissolving the larval shells.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Pteropod shell dissolution",
+                  "description": "Sea butterflies (pteropods) caught in Southern Ocean show visible shell damage under SEM; a base of the food chain at risk.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "In Class 10 / 11 / 12 Chemistry, the carbonate buffer system is fundamental. Class 11 / 12 Biology and UPSC Environment cover ocean acidification as a driver of biodiversity loss. NEET / JEE Earth Sciences includes the chemistry and ecological impact in depth. UPSC Geography covers the IPCC reports and global climate negotiations.",
+              "relatedConceptIds": [
+                "ch05_t03_c01",
+                "ch17_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t03_q05",
+                "ch05_t03_q06"
+              ],
+              "pageRefs": [
+                67,
+                68
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch05_t03_q01",
+              "prompt": "Which is the most-produced chemical in the world by mass?",
+              "questionType": "mcq",
+              "options": [
+                "Hydrochloric acid",
+                "Sulphuric acid",
+                "Nitric acid",
+                "Sodium hydroxide"
+              ],
+              "answer": "Sulphuric acid",
+              "solutionSteps": [
+                "Sulphuric acid (H₂SO₄) production exceeds 250 million tonnes per year — more than any other manufactured chemical.",
+                "It's used in fertilisers, batteries, petroleum refining, and metal cleaning.",
+                "Its production volume is so important that it's often used as an economic indicator of a country's industrial activity."
+              ],
+              "commonMistakes": [
+                "Confusing volume of use with importance — many other chemicals are critical but used in smaller quantities."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                65
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_t03_q02",
+              "prompt": "Sulphuric acid is used in:",
+              "questionType": "mcq",
+              "options": [
+                "Car batteries only",
+                "Fertiliser manufacture only",
+                "Both car batteries and fertilisers (plus many other industrial uses)",
+                "Cleaning glass only"
+              ],
+              "answer": "Both car batteries and fertilisers (plus many other industrial uses)",
+              "solutionSteps": [
+                "Sulphuric acid has many uses: ~60% goes into fertiliser manufacture, the rest into car batteries, petroleum refining, metal cleaning, chemical synthesis.",
+                "All these together make it the most-produced chemical."
+              ],
+              "commonMistakes": [
+                "Picking just one application — sulphuric acid is the Swiss-army-knife of industrial chemicals."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                65
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_t03_q03",
+              "prompt": "Tooth decay (cavities) is caused by:",
+              "questionType": "mcq",
+              "options": [
+                "Bacteria producing acid from sugar",
+                "Eating cold food",
+                "Lack of calcium in food",
+                "Brushing too hard"
+              ],
+              "answer": "Bacteria producing acid from sugar",
+              "solutionSteps": [
+                "Mouth bacteria (Streptococcus mutans mainly) feed on sugar.",
+                "They produce lactic acid as a by-product.",
+                "Acid dissolves the calcium-phosphate enamel of teeth.",
+                "Repeated acid attacks form a cavity."
+              ],
+              "commonMistakes": [
+                "Believing sugar directly damages teeth — sugar feeds bacteria, the bacteria's acid damages teeth.",
+                "Thinking calcium-rich food prevents cavities by itself — it helps, but daily brushing and reducing sugar frequency matter more."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_t03_q04",
+              "prompt": "Why does fluoride toothpaste help prevent cavities?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Fluoride replaces some of the hydroxyl groups in tooth enamel's hydroxyapatite, forming fluorapatite — which is harder and more resistant to acid attack from bacteria.",
+              "solutionSteps": [
+                "Enamel is mainly hydroxyapatite (Ca₁₀(PO₄)₆(OH)₂).",
+                "Fluoride ions from toothpaste swap into the structure, making fluorapatite (Ca₁₀(PO₄)₆F₂).",
+                "Fluorapatite is harder and dissolves less easily in acid.",
+                "Daily fluoride application slows enamel demineralisation."
+              ],
+              "commonMistakes": [
+                "Thinking fluoride kills bacteria — its main role is making enamel more acid-resistant.",
+                "Overusing fluoride toothpaste in children can cause dental fluorosis (white spots) — a balance is needed."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_t03_q05",
+              "prompt": "Why is the ocean becoming more acidic?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Because increasing CO₂ in the atmosphere dissolves in seawater and reacts with water to form carbonic acid: CO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻. The released H⁺ ions lower the ocean's pH.",
+              "solutionSteps": [
+                "Humans release ~40 billion tonnes of CO₂ per year (mostly burning fossil fuels).",
+                "About 30% of this CO₂ dissolves in the oceans.",
+                "Dissolved CO₂ reacts with water to form carbonic acid.",
+                "Carbonic acid releases H⁺ ions, lowering pH (making the water more acidic).",
+                "Ocean pH has dropped from ~8.2 (pre-industrial) to ~8.1 (today) — a 30% increase in H⁺ concentration."
+              ],
+              "commonMistakes": [
+                "Thinking acid is being directly dumped into the ocean — the cause is atmospheric CO₂ dissolving.",
+                "Confusing acidification (pH drop) with warming (temperature rise) — both are climate-change effects but different mechanisms."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                67
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch05_t03_q06",
+              "prompt": "Ocean acidification mainly harms which type of marine life?",
+              "questionType": "mcq",
+              "options": [
+                "Sharks",
+                "Whales",
+                "Shell-builders (corals, oysters, sea-urchins)",
+                "Seaweeds"
+              ],
+              "answer": "Shell-builders (corals, oysters, sea-urchins)",
+              "solutionSteps": [
+                "Acidified seawater dissolves calcium carbonate (CaCO₃) — the mineral shells and skeletons of corals, molluscs, sea urchins.",
+                "Carbonate ions are also consumed by the acid, leaving fewer building blocks available for new shells.",
+                "Result: weak shells, smaller skeletons, eventually population collapse."
+              ],
+              "commonMistakes": [
+                "Picking sharks/whales — they have cartilage and bone, not calcium-carbonate shells.",
+                "Picking seaweeds — they're plants and actually do better with more dissolved CO₂."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                67
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
         }
       ],
       "pageRefs": [
@@ -11025,6 +11313,311 @@
               "needsHumanReview": false
             }
           ]
+        },
+        {
+          "id": "ch06_t03",
+          "title": "Chemical Changes in Everyday Life",
+          "summary": "Chemical changes don't happen only in laboratories — they happen in your kitchen, in fireworks, and inside every plant and animal. This topic tours real-world chemistry.",
+          "concepts": [
+            {
+              "id": "ch06_t03_c01",
+              "title": "Kitchen chemistry — baking soda and vinegar",
+              "explanations": {
+                "oneLine": "Mixing baking soda (a base) and vinegar (an acid) produces salt, water, and CO₂ gas — the same neutralisation reaction you learned about, fizzing in front of your eyes.",
+                "kidFriendly": "Pour a spoon of BAKING SODA (sodium bicarbonate) into a glass and add a splash of VINEGAR (dilute acetic acid). It fizzes and bubbles for a minute, then stops. What just happened? A neutralisation reaction. The acid in vinegar reacted with the base (baking soda) producing three things: WATER, a SALT (sodium acetate, dissolved invisibly), and CARBON DIOXIDE gas (the fizz). It's the same equation that runs in volcano-shaped science projects, in baking powder making cakes rise, and in some fire extinguishers. The kitchen is a chemistry lab in disguise.",
+                "textbook": "Baking soda (sodium hydrogen carbonate, NaHCO₃) is a mild base. Vinegar contains acetic acid (CH₃COOH, ~5%). The reaction: NaHCO₃ + CH₃COOH → CH₃COONa (sodium acetate) + H₂O + CO₂↑. This is a classic acid-base neutralisation producing salt + water, plus CO₂ (because the base contains a carbonate group). The CO₂ gas is what makes the fizz. Same reaction is used in: (a) baking powder (a dry mix of NaHCO₃ + a solid acid like cream of tartar) — when wet batter is heated, CO₂ is released, making cakes and bread rise; (b) some fire extinguishers — a solution of NaHCO₃ + acid generates CO₂ which smothers small fires; (c) school 'volcano' science projects.",
+                "expert": "The reaction is rate-controlled by the dissociation of acetic acid (weak acid pKa ≈ 4.76) and the surface area of available NaHCO₃. CO₂ release rate determines the visible fizz. Industrially, the Solvay process makes ~50 Mt/year of sodium carbonate (washing soda) from CO₂ + NH₃ + NaCl — humanity's largest deliberate use of this acid-base salt chemistry. Baking-powder formulation is a topic in cereal-science engineering: the timing of CO₂ release (immediate vs delayed via temperature-activated acid components) controls dough rise profile."
+              },
+              "reasoning": "Acids and bases neutralise each other. Baking soda is a base; vinegar is a (mild) acid. When they mix, the acid donates H⁺ and the base accepts it, breaking down to release CO₂ gas — the chemistry you see fizzing.",
+              "useCases": [
+                {
+                  "title": "School 'volcano' project",
+                  "description": "Baking soda + vinegar + red food colouring + dish soap in a plastic-bottle volcano produces a foamy 'lava' eruption.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Cake rising in the oven",
+                  "description": "Baking powder in the batter slowly releases CO₂ when heated — the trapped bubbles make the cake rise.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Bicarbonate fire extinguisher",
+                  "description": "Older extinguishers contained a NaHCO₃ + dilute acid mixture; activation produced CO₂ that smothered the flames.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "In Class 9 / 10 Chemistry, this is the canonical neutralisation reaction. JEE Chemistry covers the full acid-base equilibrium and pKa calculations. Class 12 / NEET Biology includes bicarbonate as the major blood buffer (CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻) — same chemistry, life-critical context.",
+              "relatedConceptIds": [
+                "ch05_t02_c01",
+                "ch06_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t03_q01",
+                "ch06_t03_q02"
+              ],
+              "pageRefs": [
+                73,
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t03_c02",
+              "title": "Fireworks and sparklers — chemistry of colour and bang",
+              "explanations": {
+                "oneLine": "Fireworks burn metal salts to produce colours (strontium = red, copper = blue, sodium = yellow), oxidisers (KNO₃) to keep the burning going, and powder shells that explode upward — every Diwali display is a chemistry exhibition.",
+                "kidFriendly": "On Diwali night the sky lights up with red, green, blue, gold sparkles — and that's not magic, it's chemistry. Each colour comes from a different METAL SALT burnt inside the firework: STRONTIUM gives red, COPPER gives blue-green, SODIUM gives yellow, BARIUM gives green, ALUMINIUM gives silver-white sparks. The metals are mixed with an OXIDISER (potassium nitrate KNO₃, or potassium chlorate) so the fire can keep burning even high in the air. A black-powder charge launches the shell upward, then a timed fuse ignites the colour mix at peak height. The BANG of a firecracker comes from explosive nitrates and aluminium powder reacting almost instantly to produce hot expanding gas.",
+                "textbook": "Fireworks chemistry is based on emission spectroscopy of metal ions. Heated metal salts in a flame emit characteristic colours due to electron transitions: Sr²⁺ — bright red (~605 nm); Li⁺ — crimson red; Cu²⁺ + Cl⁻ → CuCl emitter — blue-green; Ba²⁺ — apple green; Na⁺ — yellow (~589 nm); K⁺ — pale violet; Mg/Al — white due to incandescent metal oxide particles. Components of a typical firework shell: (1) Fuel — charcoal, sulphur, or organic binders. (2) Oxidiser — KNO₃ (potassium nitrate, 'saltpetre'), KClO₃ or KClO₄. (3) Colour-producing metal salt. (4) Binder — dextrin or starch. The black powder propellant in the base launches the shell; a time-fuse ignites the burst charge that ignites the 'stars' (compressed pellets containing colour + fuel + oxidiser).",
+                "expert": "Firework chemistry is at the intersection of pyrotechnics and atomic emission spectroscopy — the same electron-transition physics used to identify elements in stars. Green-firework chemistry has improved sharply due to environmental concerns: barium chlorate (toxic, hazardous) is being replaced by less harmful boron compounds; perchlorates that pollute drinking water are being eliminated. India's Sivakasi (Tamil Nadu) makes ~90% of Indian fireworks; the industry employs ~200,000 workers and faces ongoing safety regulation. Aerial-show choreography uses computer-controlled firing sequences synchronised with music — Disney and Sony use proprietary timing software."
+              },
+              "reasoning": "Different elements emit different colours when their electrons drop back to ground state after being excited by heat. Fireworks use that fact: pick the metal salt for the colour you want, mix with an oxidiser for sustained burning, package in a shell that launches up and explodes at altitude.",
+              "useCases": [
+                {
+                  "title": "Diwali sky shows",
+                  "description": "Indian Diwali fireworks blanket every city with the colours of Sr, Cu, Na, Ba in carefully-timed displays.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Olympic ceremony fireworks",
+                  "description": "Modern Olympic shows use computer-controlled launches; each colour is a chemistry choice — silver (Mg/Al), gold (Fe filings), red (Sr).",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Flame-test in chemistry lab",
+                  "description": "Class 10 / 11 students learn to identify metal ions by dipping a wire dipped in a salt into a flame — same physics as fireworks.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Class 10 / 11 / 12 Chemistry covers atomic emission, flame-test analysis, and the Bohr model that explains colour-by-element. JEE Chemistry and NEET / Class 12 include the spectroscopic principles. UPSC Environment notes fireworks-pollution links to air-quality.",
+              "relatedConceptIds": [
+                "ch06_t01_c01",
+                "ch06_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t03_q03",
+                "ch06_t03_q04"
+              ],
+              "pageRefs": [
+                74,
+                75
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t03_c03",
+              "title": "Photosynthesis and respiration — life's chemical engines",
+              "explanations": {
+                "oneLine": "Plants run PHOTOSYNTHESIS to build sugar from CO₂ + water using sunlight; all living cells run RESPIRATION to burn that sugar with O₂ for energy — the two opposite reactions cycle the same atoms around the biosphere.",
+                "kidFriendly": "Every plant cell with chlorophyll runs PHOTOSYNTHESIS: it absorbs CO₂ from air, water from soil, and sunlight, and makes SUGAR + OXYGEN. Every living cell — yours, a fish's, a bacterium's — runs RESPIRATION: it burns SUGAR with OXYGEN to release ENERGY + CO₂ + WATER. Look at the two equations side by side and they're MIRROR IMAGES. Plants build the sugar; animals (and at night, plants themselves) burn it. The same atoms — carbon, hydrogen, oxygen — cycle endlessly between living things and the air. Photosynthesis stores sunlight in chemical bonds; respiration releases it for life's work.",
+                "textbook": "Two complementary biochemical processes: (1) Photosynthesis (in chloroplasts of green plants and some bacteria): 6 CO₂ + 6 H₂O + sunlight → C₆H₁₂O₆ (glucose) + 6 O₂. Reactants come from air (CO₂), soil (water), and Sun (energy); products are glucose (stored in plants as starch) and O₂ (released to atmosphere). (2) Respiration (in mitochondria of all eukaryotes, and in cytoplasm of prokaryotes): C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energy (~36 ATP molecules). Reactants are glucose and O₂; products are CO₂ and water + cellular energy currency (ATP). The two equations are essentially the reverse of each other. Together they cycle ~ 120 billion tonnes of carbon between atmosphere and biosphere every year.",
+                "expert": "Photosynthesis comprises light reactions (chlorophyll absorbs photons, generates ATP and NADPH, splits water releasing O₂ — the only known biological route to O₂) and the Calvin cycle (CO₂ is fixed into 3-phosphoglycerate via RuBisCO, the planet's most abundant protein). Respiration comprises glycolysis (cytosol, 2 ATP), the citric acid cycle (mitochondrial matrix, NADH/FADH₂ generation), and oxidative phosphorylation (inner mitochondrial membrane, ATP synthesis driven by proton gradient and chemiosmosis — Mitchell 1961 Nobel). C4 and CAM plants have engineered variants of photosynthesis suited to high-temperature or arid environments. Climate change is shifting the balance: warmer temperatures favour respiration (faster) over photosynthesis (acclimation lags), pushing some ecosystems from net carbon sinks to sources."
+              },
+              "reasoning": "Photosynthesis 'captures' sunlight energy by building it into the chemical bonds of glucose. Respiration 'releases' that energy by breaking those bonds back down with O₂. Together, the two run a closed carbon-and-oxygen cycle, with sunlight as the only energy input.",
+              "useCases": [
+                {
+                  "title": "Plant in sunlight vs darkness",
+                  "description": "Submerge a plant in water, expose to bright sun, count gas bubbles — you're seeing real-time O₂ release from photosynthesis.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Heavy breathing while running",
+                  "description": "Your body's increased glucose burn during exercise needs more O₂ — you breathe faster to supply it and exhale more CO₂.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Yeast bread rising",
+                  "description": "Yeast in bread dough respires sugar anaerobically, releasing CO₂ that makes the bread rise — same respiration biochemistry, no oxygen needed.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "Class 10 / 11 Biology 'Life Processes' and Class 11 'Photosynthesis in Higher Plants' & 'Respiration in Plants' cover both equations exhaustively. NEET Biology asks numerical questions on glucose, ATP, and electron-transport-chain mechanics. JEE Biotechnology covers RuBisCO engineering and photosynthesis-improvement research. Class 12 / UPSC Environment includes climate-change carbon-cycle balance.",
+              "relatedConceptIds": [
+                "ch10_t03_c01",
+                "ch17_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t03_q05",
+                "ch06_t03_q06"
+              ],
+              "pageRefs": [
+                75,
+                76
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch06_t03_q01",
+              "prompt": "When baking soda is mixed with vinegar, the gas released is:",
+              "questionType": "mcq",
+              "options": [
+                "Hydrogen",
+                "Oxygen",
+                "Carbon dioxide",
+                "Nitrogen"
+              ],
+              "answer": "Carbon dioxide",
+              "solutionSteps": [
+                "Baking soda (NaHCO₃) reacts with vinegar (acetic acid, CH₃COOH).",
+                "The acid-base reaction produces sodium acetate (a salt), water, and CO₂.",
+                "Equation: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑.",
+                "The CO₂ is the fizz."
+              ],
+              "commonMistakes": [
+                "Picking hydrogen — that would come from a metal + acid reaction, not a carbonate + acid reaction."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                73
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t03_q02",
+              "prompt": "Why does a cake rise in the oven?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Baking powder in the batter releases CO₂ gas when heated. The CO₂ bubbles are trapped in the dough, expanding it. As the batter sets in the oven, the bubble structure is locked in, leaving the cake light and porous.",
+              "solutionSteps": [
+                "Baking powder contains a base (NaHCO₃) and a solid acid (cream of tartar) mixed dry.",
+                "When wet batter is heated, the two react and release CO₂.",
+                "The CO₂ forms bubbles inside the dough.",
+                "Continued heating cooks the dough around the bubbles, freezing the shape.",
+                "Result: a fluffy, risen cake."
+              ],
+              "commonMistakes": [
+                "Confusing baking powder (acid + base in one packet) with baking soda alone (just the base — needs separate acid in the recipe, like buttermilk or vinegar)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t03_q03",
+              "prompt": "Why does strontium produce red colour in fireworks?",
+              "questionType": "mcq",
+              "options": [
+                "Strontium is naturally red",
+                "Heated strontium ions emit light at red wavelengths",
+                "Strontium reflects red light",
+                "Strontium contains red dye"
+              ],
+              "answer": "Heated strontium ions emit light at red wavelengths",
+              "solutionSteps": [
+                "When strontium salts are heated, their electrons are excited to higher energy levels.",
+                "Electrons fall back, emitting photons at specific wavelengths.",
+                "For Sr²⁺, the dominant emission is in the red region (~605 nm).",
+                "Different metal ions emit different characteristic colours — the basis of the flame test in chemistry."
+              ],
+              "commonMistakes": [
+                "Picking 'naturally red' — strontium metal is a silvery-white solid; the red is purely from electronic emission when heated."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t03_q04",
+              "prompt": "Match each metal with its firework colour.",
+              "questionType": "matchTheFollowing",
+              "options": null,
+              "answer": "Strontium = red; Copper = blue-green; Sodium = yellow; Barium = green; Aluminium/Magnesium = silver-white",
+              "solutionSteps": [
+                "Each metal ion has a unique emission spectrum when heated.",
+                "Match by recall of the characteristic colour of each."
+              ],
+              "commonMistakes": [
+                "Mixing up barium (green) and copper (blue-green) — they're close but distinguishable in pure form."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                75
+              ],
+              "needsHumanReview": false,
+              "variations": [],
+              "matchPairs": [
+                {
+                  "left": "Strontium (Sr)",
+                  "right": "Red"
+                },
+                {
+                  "left": "Copper (Cu)",
+                  "right": "Blue-green"
+                },
+                {
+                  "left": "Sodium (Na)",
+                  "right": "Yellow"
+                },
+                {
+                  "left": "Barium (Ba)",
+                  "right": "Green"
+                },
+                {
+                  "left": "Magnesium/Aluminium",
+                  "right": "Silver-white"
+                }
+              ]
+            },
+            {
+              "id": "ch06_t03_q05",
+              "prompt": "Write the balanced equation for photosynthesis.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "6 CO₂ + 6 H₂O + sunlight → C₆H₁₂O₆ + 6 O₂. Six molecules of carbon dioxide plus six molecules of water, using sunlight as the energy source, produce one molecule of glucose plus six molecules of oxygen.",
+              "solutionSteps": [
+                "Reactants: carbon dioxide (from air) and water (from soil), energy from sunlight.",
+                "Catalyst: chlorophyll in green leaves.",
+                "Products: glucose (sugar, used by the plant or stored as starch) and oxygen (released to atmosphere).",
+                "Stoichiometry: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂."
+              ],
+              "commonMistakes": [
+                "Forgetting sunlight is the energy source — it doesn't appear as a reactant but as energy.",
+                "Writing unbalanced equation — both sides must have equal atoms of C, H, O."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                75
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch06_t03_q06",
+              "prompt": "Photosynthesis and respiration are best described as:",
+              "questionType": "mcq",
+              "options": [
+                "Identical reactions",
+                "Two completely unrelated reactions",
+                "Opposite (one builds glucose, the other burns it)",
+                "Both are physical changes"
+              ],
+              "answer": "Opposite (one builds glucose, the other burns it)",
+              "solutionSteps": [
+                "Photosynthesis: 6 CO₂ + 6 H₂O + sunlight → C₆H₁₂O₆ + 6 O₂ (builds glucose, uses energy).",
+                "Respiration: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + energy (burns glucose, releases energy).",
+                "The two equations are reverses of each other.",
+                "Together they cycle carbon, hydrogen, and oxygen atoms endlessly between life and the atmosphere."
+              ],
+              "commonMistakes": [
+                "Picking 'identical' — they're opposites.",
+                "Picking 'unrelated' — they're complementary halves of the carbon cycle."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                76
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
         }
       ],
       "pageRefs": [
@@ -11945,6 +12538,292 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch07_t03",
+          "title": "Climate Change and Animal Survival",
+          "summary": "Earth's climate has always changed slowly over millennia, but today human activity is forcing rapid change. Animals adapted to old conditions face habitat shifts, coral bleaching, and altered food chains.",
+          "concepts": [
+            {
+              "id": "ch07_t03_c01",
+              "title": "Climate change and shifting habitats",
+              "explanations": {
+                "oneLine": "As Earth warms, the temperature zones where each animal evolved are moving — towards the poles and up mountains; species that can't move fast enough face extinction.",
+                "kidFriendly": "Tigers thrive in warm forests; polar bears in icy seas; mountain marmots in cold high meadows. Each species evolved over thousands of years for the exact climate where it lives. But Earth is now WARMING faster than ever in recorded history — by ~1.1 °C since 1900. That doesn't sound like much, but it means: tropical forests creeping north, ice caps shrinking, alpine zones moving up the mountain. Animals must MOVE WITH their climate — or die where they are. Polar bears are losing sea ice. Western Ghats frogs are forced upslope. Wild yaks in Ladakh have only so much higher to climb. If a species can't keep up, it goes extinct.",
+                "textbook": "Climate change refers to long-term shifts in average global temperature, precipitation patterns, and weather extremes caused mainly by greenhouse-gas emissions from human activity since the Industrial Revolution. Effects on biodiversity: (1) Range shifts — species are documented to be moving poleward (~17 km per decade on average) and upslope (~11 m per decade) to track their temperature niche. (2) Phenological shifts — flowering, migration, and breeding are happening earlier in spring; mismatches between predator and prey, or pollinator and flower, are emerging. (3) Direct mortality — heat waves, fires, droughts kill species directly. (4) Habitat loss for ice-dependent species (polar bears, walruses, emperor penguins). (5) Species at high altitude and high latitude have nowhere left to go. IPCC AR6 estimates 14% of species at very high risk of extinction by 2050 if warming exceeds 2 °C.",
+                "expert": "Climate-niche modelling combines current species distributions with future climate projections (CMIP6 RCP scenarios) to predict habitat shifts. The IUCN Red List incorporates climate vulnerability assessments alongside traditional threat criteria. Phenological-mismatch studies in temperate forests show flowering advancing ~3 days per decade; pollinators advancing only ~1.5 days — a growing mismatch. Climate-induced range shifts also bring new species into contact, creating opportunities for hybridisation, novel competition, and pathogen exposure (e.g., West Nile virus in temperate birds). India's Western Ghats and Eastern Himalaya are both biodiversity hotspots particularly vulnerable to climate range-shifts."
+              },
+              "reasoning": "Each animal species has a 'thermal niche' — a range of temperatures where it can survive and breed. As climate warms, that niche moves. The animal must follow it. Species that can move (birds, mammals on continuous habitat) often manage; species that can't (corals, summit-dwelling mountain plants) get squeezed to extinction.",
+              "useCases": [
+                {
+                  "title": "Western Ghats frogs upslope",
+                  "description": "Indian climate-biology surveys document amphibians moving 30-100 m higher up Western Ghats peaks in 30 years.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Arctic polar bears",
+                  "description": "Sea-ice loss has cut polar-bear hunting time, leading to thinner bodies, fewer cubs, and a 30% population decline in some regions.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Indian rhino habitat shift",
+                  "description": "Kaziranga's grassland is shifting as Brahmaputra floods become more intense — rhinos retreat to higher patches.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "In Class 11 / 12 Biology 'Biodiversity and Conservation' and 'Environmental Issues', climate change is a central biodiversity threat. UPSC Environment paper tests IPCC, IUCN, and India's climate strategy. NEET Biology asks about specific species impacts. JEE Earth Sciences and Class 12 cover climate-modelling fundamentals.",
+              "relatedConceptIds": [
+                "ch07_t02_c01",
+                "ch07_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t03_q01",
+                "ch07_t03_q02"
+              ],
+              "pageRefs": [
+                81,
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t03_c02",
+              "title": "Coral bleaching — when oceans get too warm",
+              "explanations": {
+                "oneLine": "Corals normally host colourful algae that feed them in exchange for shelter; warm seawater stresses corals into expelling the algae, leaving them ghost-white and starving — that's coral bleaching.",
+                "kidFriendly": "Coral reefs look like underwater rainforests — colourful, alive with fish. But the colour isn't from the corals themselves. Tiny algae called ZOOXANTHELLAE live INSIDE the coral animals. The algae photosynthesise and feed the coral; the coral provides shelter and minerals. A perfect partnership. But when seawater gets too warm, the corals STRESS and EXPEL their algae. Now there's no colour and no food. The white skeleton beneath is exposed — the coral has 'bleached'. If conditions return to normal in a few weeks, corals can take up new algae and recover. If the heat lasts longer, they die. The Great Barrier Reef has lost over 50% of its coral cover since 1995 due to repeated bleaching events.",
+                "textbook": "Reef-building (scleractinian) corals are animals (cnidarians) in symbiosis with single-celled photosynthetic algae called zooxanthellae (Symbiodinium spp.). The algae live inside coral tissue, photosynthesise sunlight, and provide >90% of the coral's energy needs; the coral supplies inorganic nutrients (CO₂, nitrogen waste). When seawater temperature exceeds the corals' tolerance threshold (typically 1-2 °C above local summer maximum) for several weeks, oxidative stress damages the photosynthetic machinery of zooxanthellae. The coral expels them as a defence. Without algae, the coral animal is largely transparent — revealing the white CaCO₃ skeleton beneath = 'bleached'. Recovery is possible if the algae return within ~4-6 weeks. Prolonged bleaching causes coral starvation and death. Major mass-bleaching events: 1998, 2010, 2014-2017, 2020-2024 — driven by El Niño and underlying ocean warming.",
+                "expert": "Coral-thermal physiology is being studied at molecular detail: heat-shock proteins in zooxanthellae break down above thermal thresholds. Some Symbiodinium clades (Durusdinium) are more heat-tolerant than others (Cladocopium); assisted-evolution research is breeding 'super-corals' with heat-tolerant symbionts. India's Lakshadweep and Andaman & Nicobar reefs have experienced repeated bleaching; CMFRI tracks coral health via satellite SST + diver surveys. The IPCC AR6 projects that 70-90% of coral reefs will be lost at 1.5 °C of warming; 99% at 2 °C — making coral the canary in the climate-change coal mine."
+              },
+              "reasoning": "Corals depend on symbiotic algae for most of their food. The algae depend on cool, clear water. Warm water kills the algae's photosynthesis, the coral expels them, and the partnership collapses. Without intervention, both partners die.",
+              "useCases": [
+                {
+                  "title": "Great Barrier Reef bleaching events",
+                  "description": "Five mass-bleaching events since 1998 have left over half the GBR coral cover dead.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Lakshadweep reef monitoring",
+                  "description": "Indian researchers track coral cover quarterly; the 1998 El Niño killed nearly 80% of Lakshadweep corals; partial recovery since.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Aquarium coral keepers",
+                  "description": "Hobbyists know to keep saltwater aquaria below ~28 °C — any higher and their corals start to lose colour.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 12 Biology 'Biodiversity and Conservation' coral reefs are listed as the most diverse marine ecosystems. NEET Biology asks about coral symbiosis. UPSC Environment covers Indian reef status and global climate hotspots. JEE Earth Sciences uses bleaching threshold modelling as a coupled ocean-climate problem.",
+              "relatedConceptIds": [
+                "ch07_t03_c01",
+                "ch05_t03_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t03_q03",
+                "ch07_t03_q04"
+              ],
+              "pageRefs": [
+                82,
+                83
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t03_c03",
+              "title": "Conservation — what we can do",
+              "explanations": {
+                "oneLine": "Protecting wildlife combines national parks (legal protection), breeding programmes (saving species near extinction), and small daily actions (saving energy, planting trees, supporting tribal communities).",
+                "kidFriendly": "Saving wildlife isn't only a government job. Every action matters. India has 104 NATIONAL PARKS and 566 SANCTUARIES where animals are legally protected. PROJECT TIGER (1973) saved the Bengal tiger from extinction — numbers grew from 1,800 to 3,000+. PROJECT ELEPHANT, GANGETIC DOLPHIN RESERVES, and many more species-specific programmes followed. Captive breeding has saved species near extinction. But government action alone isn't enough — you can help too: save electricity (every kWh saved = less CO₂), plant a tree (each absorbs ~20 kg of CO₂ per year), eat less meat (livestock is a major emitter), avoid single-use plastic, support tribal communities who protect forests. Small choices, multiplied by a billion Indians, become huge.",
+                "textbook": "Wildlife conservation strategies combine multiple approaches: (1) Legal protection — India's Wildlife Protection Act 1972 created National Parks (104, full protection), Wildlife Sanctuaries (566, partial), Tiger Reserves (54), Biosphere Reserves (18 under UNESCO MAB). (2) Species-specific programmes — Project Tiger (1973), Project Elephant (1992), Crocodile Conservation Project, Olive Ridley Turtle Conservation. (3) Captive breeding for critically endangered species — Asiatic lion at Gir, vultures at Pinjore, Indian gharial at Lucknow. (4) Habitat restoration — reforestation, wetland revival, coral-reef restoration. (5) Community-based conservation — Joint Forest Management, Van Panchayats, community-conserved areas. (6) Personal action — energy conservation, reducing meat/dairy, plastic reduction, tree planting, supporting eco-tourism, supporting tribal communities. International frameworks include CBD, CITES, IUCN Red List, Ramsar Convention (wetlands), CMS (migratory species).",
+                "expert": "Conservation biology has matured into a quantitative interdisciplinary science combining ecology, genetics, economics, and policy. Population Viability Analysis (PVA) predicts species extinction risks. Landscape connectivity (wildlife corridors, road underpasses, dams with fish ladders) reduces population fragmentation. Genetic-rescue interventions (Florida panther outbreeding 1995) save inbred populations. Economic valuation (ecosystem services, payments for ecosystem services, REDD+) creates incentives for conservation. India's recent Vulture Conservation Action Plan and Cheetah Reintroduction (2022) demonstrate active conservation engineering. Climate adaptation planning is being mainstreamed into national park management."
+              },
+              "reasoning": "Conservation works when many levers are pulled together: legal protection stops killing; breeding programmes rebuild populations; habitat restoration gives them somewhere to live; community engagement aligns local people's livelihoods with wildlife survival; personal action reduces the global pressure of climate change and pollution.",
+              "useCases": [
+                {
+                  "title": "Project Tiger (1973)",
+                  "description": "Started with 9 reserves and ~1800 tigers; now 54 reserves and ~3000 tigers — globally recognised conservation success.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Gir Asiatic lions",
+                  "description": "From <100 lions in the early 1900s to ~700 today — single-population dependence is now the main risk.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Eat less meat — climate impact",
+                  "description": "Livestock production accounts for ~15% of global greenhouse-gas emissions; eating less meat reduces this footprint.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "Class 11 / 12 Biology 'Biodiversity and Conservation' is a NEET-heavy chapter. UPSC Environment paper requires deep knowledge of Indian protected-area network and species-specific programmes. JEE Earth Sciences and Class 12 cover conservation genetics and ecological economics. Personal-level actions feature in UPSC Ethics paper and Class 9 / 10 Sustainable Development units.",
+              "relatedConceptIds": [
+                "ch07_t03_c01",
+                "ch17_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t03_q05",
+                "ch07_t03_q06"
+              ],
+              "pageRefs": [
+                83,
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch07_t03_q01",
+              "prompt": "Why are species moving to higher altitudes and towards the poles?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Because Earth's climate is warming. Each species evolved for a specific temperature range; as temperatures rise, that range moves towards cooler places — towards higher altitudes (cooler at altitude) and towards the poles (cooler at high latitudes). Species are tracking their thermal niche.",
+              "solutionSteps": [
+                "Each animal species is adapted to a specific climate.",
+                "Earth's global temperature has risen ~1.1 °C since 1900.",
+                "The location of suitable temperatures has shifted poleward and upslope.",
+                "Animals follow their thermal niche by migrating.",
+                "Species that can't move fast enough — or have nowhere to go (mountain summit, polar regions) — face extinction."
+              ],
+              "commonMistakes": [
+                "Thinking species 'choose' to move — they're forced by temperature.",
+                "Confusing this with seasonal migration — climate-change range shifts are permanent, year-round shifts."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                81
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q02",
+              "prompt": "Which animal is MOST threatened by Arctic sea-ice loss?",
+              "questionType": "mcq",
+              "options": [
+                "Indian elephant",
+                "Polar bear",
+                "Bengal tiger",
+                "Asiatic lion"
+              ],
+              "answer": "Polar bear",
+              "solutionSteps": [
+                "Polar bears hunt seals from the edge of Arctic sea ice.",
+                "Sea ice has shrunk by ~13% per decade since 1979 (NASA data).",
+                "Less ice = less hunting platform = less food = thinner bears + fewer cubs.",
+                "Several Arctic populations have declined 30%+ in 30 years.",
+                "The other listed species live in tropical/subtropical India — not directly affected by Arctic ice."
+              ],
+              "commonMistakes": [
+                "Picking elephant or tiger — they live in warm India, not Arctic."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                81
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q03",
+              "prompt": "What is coral bleaching?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Coral bleaching is the loss of symbiotic algae (zooxanthellae) from coral animals due to environmental stress — usually high seawater temperature. The corals turn pale or white because the colourful algae are gone. If the algae don't return within weeks, the corals starve and die.",
+              "solutionSteps": [
+                "Reef-building corals host colourful single-celled algae inside their tissues.",
+                "The algae photosynthesise and provide most of the coral's food.",
+                "When seawater warms 1-2 °C above the corals' tolerance for several weeks, the algae are expelled.",
+                "Without algae, the coral is largely transparent — revealing the white CaCO₃ skeleton beneath.",
+                "If conditions return to normal in a few weeks, algae can recolonise and the coral recovers.",
+                "Prolonged bleaching causes the coral to starve and die."
+              ],
+              "commonMistakes": [
+                "Thinking the coral is being killed by sunlight — it's heat-stress, not sunlight.",
+                "Believing corals are plants — they're animals (cnidarians) in symbiosis with algae."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q04",
+              "prompt": "True or false: Coral reefs are home to about a quarter of all known marine species, despite covering less than 1% of the ocean.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "True",
+              "solutionSteps": [
+                "Coral reefs cover only ~0.1% of ocean surface area.",
+                "But they support ~25% of marine biodiversity — fish, crustaceans, molluscs, echinoderms.",
+                "Hence the nickname 'rainforests of the sea'."
+              ],
+              "commonMistakes": [
+                "Underestimating their biodiversity — reefs are extraordinarily species-rich."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q05",
+              "prompt": "What is Project Tiger and when was it launched?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Project Tiger is India's flagship tiger-conservation programme launched in 1973. It established a network of Tiger Reserves where tigers and their habitat are protected. Starting with 9 reserves and ~1800 tigers, the programme now covers 54 reserves and ~3000 tigers — one of the world's most celebrated species-recovery stories.",
+              "solutionSteps": [
+                "Project Tiger was launched in 1973 by the Government of India.",
+                "It started with 9 dedicated Tiger Reserves: Corbett, Kanha, Manas, Ranthambore, Bandipur, Melghat, Palamau, Simlipal, Sunderbans.",
+                "Aim: stop the decline of tiger numbers from poaching and habitat loss.",
+                "Tiger population grew from ~1800 (1972) to ~3000+ (2022).",
+                "Now there are 54 Tiger Reserves across the country."
+              ],
+              "commonMistakes": [
+                "Confusing 1973 launch with the Wildlife Protection Act (1972)."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                83
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q06",
+              "prompt": "Which of these is NOT a personal action against climate change?",
+              "questionType": "mcq",
+              "options": [
+                "Saving electricity",
+                "Planting trees",
+                "Burning more coal",
+                "Reducing single-use plastic"
+              ],
+              "answer": "Burning more coal",
+              "solutionSteps": [
+                "Saving electricity reduces fossil-fuel power generation → less CO₂.",
+                "Planting trees absorbs CO₂ over their lifetime.",
+                "Reducing single-use plastic reduces petroleum demand and pollution.",
+                "Burning more coal RELEASES CO₂ and worsens climate change — exactly the opposite of conservation."
+              ],
+              "commonMistakes": [
+                "Picking 'planting trees' if you confused short-term carbon impact (small) with long-term sequestration (significant)."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false,
+              "variations": []
             }
           ]
         }
