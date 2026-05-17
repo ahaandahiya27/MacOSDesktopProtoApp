@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.28.0-ch5-6-7-third-topics",
+  "version": "0.29.0-concept-id-cleanup",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -11432,7 +11432,7 @@
               ],
               "beyondTheBook": "Class 10 / 11 Biology 'Life Processes' and Class 11 'Photosynthesis in Higher Plants' & 'Respiration in Plants' cover both equations exhaustively. NEET Biology asks numerical questions on glucose, ATP, and electron-transport-chain mechanics. JEE Biotechnology covers RuBisCO engineering and photosynthesis-improvement research. Class 12 / UPSC Environment includes climate-change carbon-cycle balance.",
               "relatedConceptIds": [
-                "ch10_t03_c01",
+                "ch10_t03_c02",
                 "ch17_t02_c02"
               ],
               "relatedQuestionIds": [
@@ -12881,8 +12881,7 @@
               ],
               "beyondTheBook": "Otto von Guericke's famous 1654 experiment in Magdeburg, Germany: he created two metal hemispheres, sealed them together, and pumped out the air. Atmospheric pressure squeezed them so tightly that 16 horses (8 on each side) couldn't pull them apart. The audience was stunned — it was the first dramatic public proof that air had weight.",
               "relatedConceptIds": [
-                "ch08_t01_c02",
-                "ch08_t01_c03"
+                "ch08_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch08_t01_q01"
@@ -13476,7 +13475,7 @@
           "summary": "A cyclone is a giant low-pressure storm with violent spiraling winds and a calm eye. Thunderstorms, lightning and cyclone safety rules.",
           "concepts": [
             {
-              "id": "ch08_t02_c01",
+              "id": "ch08_t03_c01",
               "title": "Thunderstorms — wind, water, and electricity together",
               "explanations": {
                 "oneLine": "A thunderstorm is a violent atmospheric disturbance with rapidly rising warm humid air, towering clouds, lightning, thunder, and heavy rain.",
@@ -13516,7 +13515,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch08_t02_c02",
+              "id": "ch08_t03_c02",
               "title": "Cyclones — giant rotating storms",
               "explanations": {
                 "oneLine": "A cyclone is a large rotating storm formed over warm tropical seas, with very low central pressure (the calm 'eye'), strong winds, and heavy rain.",
@@ -13954,7 +13953,7 @@
               "beyondTheBook": "In Class 9 (Natural Resources) and Class 11 Geography you'll meet soil-forming factors: parent material, climate, topography, biota, and time (CLORPT). Class 12 Biology covers nutrient cycling between soil and plants. NEET Biology and JEE Earth Sciences both expect understanding of how soil horizons store water and minerals — the basis of agriculture.",
               "relatedConceptIds": [
                 "ch09_t01_c02",
-                "ch09_t02_c01"
+                "ch09_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch09_t01_q02",
@@ -13996,7 +13995,7 @@
               "beyondTheBook": "In Class 10 Geography and Class 11 Biology, soil texture connects to agricultural productivity, irrigation choice, and crop selection. NEET Biology covers root systems adapted to each soil type. JEE Earth Sciences includes soil mechanics — bearing capacity, compaction, slope stability — all governed by texture and moisture content.",
               "relatedConceptIds": [
                 "ch09_t01_c01",
-                "ch09_t02_c01"
+                "ch09_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch09_t01_q01",
@@ -14180,7 +14179,7 @@
           "summary": "Roots and crops depend on the right mix of water, air and nutrients in soil. Percolation rate decides what grows where.",
           "concepts": [
             {
-              "id": "ch09_t01_c01",
+              "id": "ch09_t02_c01",
               "title": "What soil is made of",
               "explanations": {
                 "oneLine": "Soil is a mixture of mineral particles, water, air, organic matter, and tiny living organisms.",
@@ -14220,7 +14219,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch09_t01_c02",
+              "id": "ch09_t02_c02",
               "title": "Three types of soil — sandy, clay, and loam",
               "explanations": {
                 "oneLine": "Soils are classified by particle size: sandy (large, gritty), clay (tiny, sticky), and loam (a balanced mix — best for farming).",
@@ -14249,7 +14248,7 @@
               "beyondTheBook": "The 'black gold' of Indian agriculture is the black cotton soil (regur) found in Maharashtra, Madhya Pradesh, and Gujarat. It's a clay so rich in iron and lime that it cracks open in dry season into deep fissures, mixing the surface with the subsoil — a natural ploughing. This self-mixing property is why cotton, soybean, and oilseeds thrive on it without needing intensive irrigation.",
               "relatedConceptIds": [
                 "ch09_t01_c01",
-                "ch09_t02_c01"
+                "ch09_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch09_t01_q02",
@@ -14263,7 +14262,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch09_t02_c01",
+              "id": "ch09_t02_c03",
               "title": "Percolation rate and how to measure it",
               "explanations": {
                 "oneLine": "Percolation rate is the speed at which water seeps down through soil, measured in mL per minute.",
@@ -14744,7 +14743,7 @@
               "beyondTheBook": "In Class 10 / 11 Geography this is the 'Soil and Water Management' unit. Class 12 Biology connects soil conservation to ecosystem services and the UN Sustainable Development Goal 15 (Life on Land). JEE / NEET / UPSC aspirants encounter this both as scientific content and as a policy theme — Soil Health Card scheme, Integrated Watershed Management Programme.",
               "relatedConceptIds": [
                 "ch09_t03_c01",
-                "ch09_t02_c01"
+                "ch09_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch09_t03_q02",
@@ -14926,7 +14925,7 @@
           "summary": "Air passes through nose, trachea and bronchi to alveoli where O₂ and CO₂ are exchanged. The diaphragm and ribs control inhale/exhale.",
           "concepts": [
             {
-              "id": "ch10_t02_c01",
+              "id": "ch10_t01_c01",
               "title": "Human respiratory system and breathing mechanism",
               "explanations": {
                 "oneLine": "Air enters through the nose, travels down the trachea into the lungs; the diaphragm pulls down to inhale and pushes up to exhale.",
@@ -14954,8 +14953,8 @@
               ],
               "beyondTheBook": "Birds have a different and superior breathing system: air flows through their lungs in ONE direction (not in and out like ours), powered by air sacs that fill on inhalation and exhalation. This is why high-altitude birds (bar-headed geese cross the Himalayas at 8,000+ m) can fly where humans need supplemental oxygen.",
               "relatedConceptIds": [
-                "ch10_t01_c02",
-                "ch10_t02_c02"
+                "ch10_t02_c02",
+                "ch10_t03_c01"
               ],
               "relatedQuestionIds": [
                 "ch10_t02_q01"
@@ -14968,7 +14967,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t01_c01",
+              "id": "ch10_t01_c02",
               "title": "Alveoli — where oxygen meets blood",
               "explanations": {
                 "oneLine": "Tiny grape-like sacs at the end of bronchioles called alveoli are where oxygen from the air diffuses into blood and carbon dioxide diffuses out — the actual point of gas exchange.",
@@ -14996,8 +14995,8 @@
               ],
               "beyondTheBook": "In Class 11 Biology 'Breathing and Exchange of Gases' you'll meet detailed alveolar histology, transport of O₂ and CO₂, and pulmonary disorders. NEET Biology hammers gas-exchange physics every year. Class 12 Sports / Physical Education covers VO₂ max — the maximum rate at which the alveoli + circulatory system can deliver oxygen to muscles. JEE Biotechnology / Class 12 Biology cover artificial lung designs that mimic alveolar function (ECMO machines).",
               "relatedConceptIds": [
-                "ch10_t02_c01",
-                "ch10_t01_c02"
+                "ch10_t01_c01",
+                "ch10_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q02",
@@ -15209,7 +15208,7 @@
           "summary": "Most respiration uses oxygen (aerobic) to fully release energy from glucose. Some cells (yeast, tired muscles) respire anaerobically.",
           "concepts": [
             {
-              "id": "ch10_t01_c01",
+              "id": "ch10_t02_c01",
               "title": "What respiration actually is",
               "explanations": {
                 "oneLine": "Respiration is the chemical process by which living cells break down food (glucose) to release energy.",
@@ -15237,8 +15236,8 @@
               ],
               "beyondTheBook": "Mitochondrial DNA is inherited only from your mother — fathers' sperm mitochondria don't survive fertilisation. Researchers have used this to trace human ancestry back to a single woman who lived ~150,000 years ago, often called 'Mitochondrial Eve'. Every glucose-burning mitochondrion in your body is a descendant of one she carried.",
               "relatedConceptIds": [
-                "ch10_t01_c02",
-                "ch10_t01_c03"
+                "ch10_t02_c02",
+                "ch10_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q01",
@@ -15251,7 +15250,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t01_c02",
+              "id": "ch10_t02_c02",
               "title": "Aerobic respiration — the oxygen-using kind",
               "explanations": {
                 "oneLine": "Aerobic respiration uses oxygen to fully break down glucose into CO₂ + water + a lot of energy (38 ATP per glucose).",
@@ -15279,8 +15278,8 @@
               ],
               "beyondTheBook": "Oxygen wasn't always abundant. Earth's early atmosphere had almost none. Around 2.4 billion years ago, photosynthetic cyanobacteria flooded the air with O₂ — the 'Great Oxidation Event'. This was an extinction-level catastrophe for the anaerobic life of the time but enabled the evolution of all complex aerobic life including animals. Every breath you take is the legacy of that ancient bacterial pollution.",
               "relatedConceptIds": [
-                "ch10_t01_c01",
-                "ch10_t01_c03"
+                "ch10_t01_c02",
+                "ch10_t02_c03"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q02",
@@ -15292,7 +15291,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t01_c03",
+              "id": "ch10_t02_c03",
               "title": "Anaerobic respiration — without oxygen",
               "explanations": {
                 "oneLine": "Anaerobic respiration breaks down glucose without oxygen, producing less energy (2 ATP) and by-products like alcohol or lactic acid.",
@@ -15320,7 +15319,7 @@
               ],
               "beyondTheBook": "Some deep-sea organisms NEVER use oxygen. Tube worms near hydrothermal vents host symbiotic bacteria that respire hydrogen sulphide (H₂S) instead — chemoautotrophic respiration. An entire food web exists at the bottom of the ocean independent of sunlight or oxygen, fundamentally challenging assumptions about what's needed for life.",
               "relatedConceptIds": [
-                "ch10_t01_c02"
+                "ch10_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch10_t01_q03"
@@ -15554,7 +15553,7 @@
           "summary": "Fish use gills, insects use tracheae, earthworms breathe through skin, plants use stomata.",
           "concepts": [
             {
-              "id": "ch10_t02_c02",
+              "id": "ch10_t03_c01",
               "title": "Respiration in earthworms, fish, and insects",
               "explanations": {
                 "oneLine": "Earthworms breathe through moist skin; fish use gills; insects use a network of tracheae that delivers air directly to cells.",
@@ -15582,7 +15581,7 @@
               ],
               "beyondTheBook": "Tardigrades — the famous 'water bears' — survive in space, near boiling water, and freezing cold. They breathe through their skin like earthworms but can also enter a state called cryptobiosis when conditions get harsh, essentially suspending all respiration for years. They've been revived after 30 years of dormancy.",
               "relatedConceptIds": [
-                "ch10_t02_c01"
+                "ch10_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch10_t02_q02"
@@ -15594,7 +15593,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch10_t03_c01",
+              "id": "ch10_t03_c02",
               "title": "Plant respiration — stomata work day and night",
               "explanations": {
                 "oneLine": "Plants respire too — through tiny pores on leaves called stomata — taking in O₂ and releasing CO₂; in daylight, photosynthesis overwhelms this, but at night plants are pure respirers.",
@@ -15622,8 +15621,8 @@
               ],
               "beyondTheBook": "In Class 11 Biology 'Respiration in Plants' you study glycolysis, Krebs cycle, ETC, and respiratory quotient — at full molecular detail. NEET Biology tests photorespiration vs respiration distinctions every year. JEE Biotechnology / Class 12 Biology covers C3, C4, CAM photosynthesis-respiration coupling.",
               "relatedConceptIds": [
-                "ch10_t02_c01",
-                "ch10_t01_c01"
+                "ch10_t01_c01",
+                "ch10_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch10_t03_q04",
@@ -15919,7 +15918,7 @@
               "beyondTheBook": "The first successful human heart transplant was performed in 1967 by Dr Christiaan Barnard in South Africa. The patient lived 18 days. Today, heart transplants have a 5-year survival rate above 75%. India's first heart transplant was in 1994 at AIIMS Delhi. The heart, despite being central to so much of poetry and emotion, is medically just a pump — but a brilliantly designed one that beats 2.5 billion times in an average lifetime without rest.",
               "relatedConceptIds": [
                 "ch11_t01_c02",
-                "ch11_t02_c01"
+                "ch11_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch11_t01_q01",
@@ -15962,7 +15961,7 @@
               "beyondTheBook": "In Class 11 Biology 'Body Fluids and Circulation' you build a full model of double circulation including pulmonary vs systemic blood pressure, ECG waves, cardiac cycle. NEET Biology asks about it every year. Class 12 / JEE Biotechnology covers heart-related medical devices — pacemakers, stents, artificial hearts.",
               "relatedConceptIds": [
                 "ch11_t01_c01",
-                "ch11_t02_c01"
+                "ch11_t02_c02"
               ],
               "relatedQuestionIds": [
                 "ch11_t01_q01",
@@ -16333,7 +16332,7 @@
           "summary": "Kidneys filter blood, removing urea and excess water as urine.",
           "concepts": [
             {
-              "id": "ch11_t01_c02",
+              "id": "ch11_t02_c01",
               "title": "Excretion — kidneys and urine",
               "explanations": {
                 "oneLine": "Kidneys filter blood, removing waste products like urea and excess water as urine.",
@@ -16372,7 +16371,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch11_t02_c01",
+              "id": "ch11_t02_c02",
               "title": "Nephrons — the filters inside your kidneys",
               "explanations": {
                 "oneLine": "Each kidney contains about a million tiny filters called nephrons; they pull urea and waste out of blood while keeping the useful stuff (sugar, salts, proteins, water) — what's left is urine.",
@@ -16620,7 +16619,7 @@
           "summary": "Xylem carries water up; phloem carries sugars; transpiration powers the pull.",
           "concepts": [
             {
-              "id": "ch11_t02_c01",
+              "id": "ch11_t03_c01",
               "title": "Xylem and phloem — the plant's two pipes",
               "explanations": {
                 "oneLine": "Xylem carries water and minerals from roots to leaves; phloem carries food (sugar) from leaves to all other parts of the plant.",
@@ -16649,7 +16648,7 @@
               "beyondTheBook": "The world's tallest tree (a coast redwood named Hyperion in California) is 116 m tall. Lifting water 116 m up xylem requires overcoming about 11 atmospheres of pressure — yet trees do it passively with no pump, just leaf evaporation pulling water upward via the cohesive properties of water molecules. Engineers have studied tree xylem to design new water-lifting devices for villages.",
               "relatedConceptIds": [
                 "ch11_t01_c01",
-                "ch10_t02_c01"
+                "ch10_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch11_t02_q01"
@@ -16947,7 +16946,7 @@
           "summary": "A flower's anatomy and the agents that move pollen — wind, water, insects, birds.",
           "concepts": [
             {
-              "id": "ch12_t01_c02",
+              "id": "ch12_t01_c01",
               "title": "Sexual reproduction — flowers, pollination, fertilization",
               "explanations": {
                 "oneLine": "Sexual reproduction in plants involves pollen from the male part (anther) reaching the female part (stigma), traveling down to fertilize the egg, and producing a seed.",
@@ -16975,7 +16974,7 @@
               ],
               "beyondTheBook": "Charles Darwin spent decades studying orchid pollination — he predicted that the long-spurred Madagascar orchid Angraecum sesquipedale must have a moth pollinator with a 30-cm proboscis to reach its nectar. Decades after his death, exactly such a moth was discovered. Co-evolution at its most dramatic.",
               "relatedConceptIds": [
-                "ch12_t01_c01",
+                "ch12_t01_c02",
                 "ch12_t02_c01"
               ],
               "relatedQuestionIds": [
@@ -16992,7 +16991,7 @@
               "needsHumanReview": false
             },
             {
-              "id": "ch12_t01_c01",
+              "id": "ch12_t01_c02",
               "title": "Flower anatomy — petals, stamens, pistil, ovary",
               "explanations": {
                 "oneLine": "A flower has four whorls of organs: sepals (green outer leaves), petals (colourful), stamens (male — pollen producers), and pistil (female — receives pollen, contains ovary with eggs).",
@@ -17020,7 +17019,7 @@
               ],
               "beyondTheBook": "In Class 11 Biology 'Morphology of Flowering Plants' you meet floral diagrams, formulas, and the full classification of inflorescences. NEET Biology asks about specific floral characteristics of named families every year (Fabaceae, Solanaceae, Liliaceae). Class 12 'Sexual Reproduction in Flowering Plants' goes deep into development of male and female gametophytes within these whorls.",
               "relatedConceptIds": [
-                "ch12_t01_c02",
+                "ch12_t01_c01",
                 "ch12_t02_c02"
               ],
               "relatedQuestionIds": [
@@ -17275,7 +17274,7 @@
               ],
               "beyondTheBook": "The Velcro fastener was invented in 1941 by Swiss engineer George de Mestral after burrs stuck to his dog's fur during a hike. He examined them under a microscope, saw the tiny hooks, and copied the design. Plants invented Velcro a hundred million years before humans did.",
               "relatedConceptIds": [
-                "ch12_t01_c02"
+                "ch12_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch12_t02_q01"
@@ -17316,7 +17315,7 @@
               "beyondTheBook": "In Class 12 Biology 'Sexual Reproduction in Flowering Plants' you study double fertilisation, embryogenesis, endosperm development, fruit-seed correlations — all NEET-frequent material. Class 12 NCERT distinguishes true vs false fruits, parthenocarpic fruits (seedless), apomixis. JEE Biotechnology covers manipulation of fertilisation for hybrid seed industry.",
               "relatedConceptIds": [
                 "ch12_t02_c01",
-                "ch12_t01_c01"
+                "ch12_t01_c02"
               ],
               "relatedQuestionIds": [
                 "ch12_t02_q01",
@@ -17555,7 +17554,7 @@
           "summary": "Some plants and microbes reproduce without seeds — vegetative propagation, budding, fragmentation.",
           "concepts": [
             {
-              "id": "ch12_t01_c01",
+              "id": "ch12_t03_c01",
               "title": "Asexual reproduction — copies from one parent",
               "explanations": {
                 "oneLine": "In asexual reproduction, a new plant grows from a single parent plant — through cuttings, runners, tubers, or budding — producing genetically identical offspring.",
@@ -17583,7 +17582,7 @@
               ],
               "beyondTheBook": "Quaking aspens in Utah form a forest of 47,000 trees that all share one root system — a single genetic individual called 'Pando' covering 43 hectares, weighing 6,000 tonnes. It's one of the largest organisms on Earth, and it reproduced entirely by sending out underground runners that sprouted into 'separate' trees. Asexual reproduction at planet-changing scale.",
               "relatedConceptIds": [
-                "ch12_t01_c02"
+                "ch12_t01_c01"
               ],
               "relatedQuestionIds": [
                 "ch12_t01_q01"
@@ -18582,7 +18581,7 @@
           "summary": "Sundials, water clocks, pendulum clocks, quartz watches, atomic clocks.",
           "concepts": [
             {
-              "id": "ch13_t01_c02",
+              "id": "ch13_t03_c01",
               "title": "Measuring time — pendulum, sand clock, modern clocks",
               "explanations": {
                 "oneLine": "Time has been measured by sundials, sand clocks, and pendulums historically; modern clocks use quartz crystal oscillations or atomic vibrations.",
@@ -23986,7 +23985,7 @@
           "summary": "Bar screen, grit chamber, aeration tank, clarifier, sludge digester.",
           "concepts": [
             {
-              "id": "ch18_t01_c02",
+              "id": "ch18_t02_c01",
               "title": "Wastewater Treatment Plant (WWTP)",
               "explanations": {
                 "oneLine": "A Wastewater Treatment Plant cleans sewage in stages — screening, sedimentation, biological treatment with bacteria, and disinfection.",
