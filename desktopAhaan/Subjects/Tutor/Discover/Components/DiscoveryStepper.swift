@@ -123,8 +123,10 @@ struct DiscoveryStepper: View {
                                 .fill(selection == i ? Color.green : Color.green.opacity(0.12))
                         )
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(PressableButtonStyle())
+                .pointingCursor()
                 .accessibilityLabel(options[i])
+                .accessibilityValue(currentOutput)
                 .accessibilityAddTraits(selection == i ? [.isSelected, .isButton] : .isButton)
             }
         }

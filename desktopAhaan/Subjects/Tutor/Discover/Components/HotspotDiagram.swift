@@ -141,7 +141,8 @@ struct HotspotDiagram: View {
             }
             .shadow(color: .black.opacity(0.15), radius: 2, y: 1)
         }
-        .buttonStyle(.plain)
+        .buttonStyle(PressableButtonStyle())
+        .pointingCursor()
         .position(x: spot.x * size, y: spot.y * size)
         .accessibilityLabel("Part \(index + 1): \(spot.label)")
         .accessibilityHint(spot.detail)
