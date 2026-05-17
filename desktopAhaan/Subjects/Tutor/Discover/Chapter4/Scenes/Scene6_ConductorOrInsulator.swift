@@ -98,6 +98,19 @@ struct Scene6_ConductorOrInsulator: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        LookingAheadCallout(
+                            title: "Class 11 / 12 Physics → JEE",
+                            detail: "Conductor vs insulator extends from heat to electricity in Class 11: same metals (Cu, Ag) conduct both well because free-flowing electrons carry both energy and charge. JEE asks: 'Why are graphene and diamond made of identical carbon but graphene conducts and diamond doesn't?' Answer: lattice geometry — graphene's hexagonal sheets allow electron mobility, diamond's tetrahedral cage doesn't."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Build a thermos with newspaper",
+                            detail: "Wrap an ice cube in dry newspaper (5+ layers). Put a second cube on the table uncovered. Set a 10-minute timer. The newspaper-wrapped cube survives almost intact; the bare one halves. Trapped air between paper fibres = insulation. Same principle as a thermos's vacuum, your sweater's wool, polar-bear fur, double-glazed windows."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     } else {

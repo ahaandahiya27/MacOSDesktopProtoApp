@@ -132,6 +132,19 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Physics + Geography → JEE / NEET",
+                        detail: "Sea-breeze physics is real-world convection: water has specific heat ~4× higher than soil, so land heats faster by day, cools faster by night — pressure differential drives wind. JEE asks you to calculate it from c (specific heat) and ΔT. NEET Bio asks why monsoons exist (same idea at continental scale — Indian Ocean vs Tibetan Plateau heating asymmetry)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Detect sea-breeze direction",
+                        detail: "Next coastal trip: stick a damp finger in the air at noon vs at midnight. The side that feels cool tells you which way the breeze is blowing. By day breeze blows from sea to land (sea-breeze). By night reverses (land-breeze). Even a small lake produces a tiny version — the same physics scales from puddle to ocean."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

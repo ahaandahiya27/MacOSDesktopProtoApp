@@ -86,6 +86,18 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Heat Transfer)",
+                        detail: "The three highways become exact equations in JEE: Fourier's law for conduction (Q/t = -kA·ΔT/Δx), Newton's law of cooling for convection (Q/t = hA·ΔT), and Stefan-Boltzmann for radiation (Q/t = σεA·T⁴). Conduction is the only one without bulk motion of matter. Radiation is the only one that works through vacuum — sunlight reaches Earth via radiation, not conduction or convection."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Catch all three in your kitchen",
+                        detail: "Watch a pot of water boiling on a gas stove for 1 minute. Spot: (1) CONDUCTION through the pot's metal base, (2) CONVECTION in the water — hot water rises, cooler water sinks, you can see the swirling, (3) RADIATION as the warm pot makes everything around it slightly warm without touching. Three transfer modes, one kitchen scene."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allTapped {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

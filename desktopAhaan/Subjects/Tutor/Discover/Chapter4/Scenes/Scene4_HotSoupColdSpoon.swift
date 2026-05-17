@@ -131,6 +131,19 @@ struct Scene4_HotSoupColdSpoon: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Thermal Conductivity)",
+                        detail: "Materials have a thermal-conductivity number k (W/m·K). Copper k=400, aluminium k=237, water k=0.6, wood k=0.13, air k=0.024. The 6,000× difference between copper and wood is why JEE problem sets love these comparisons. Why are pot handles often wood or plastic? Same reason aircraft fuselages have insulation — control where heat goes."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Make your own conductivity ladder",
+                        detail: "Take a metal spoon, a wooden chopstick, and a plastic ruler. Stand all three in a cup of warm (NOT boiling) water at the same time. After 30 seconds, touch the top of each. Metal warmest, wood barely warmer, plastic in between. You just ranked three materials by k — informally but accurately."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

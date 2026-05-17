@@ -138,6 +138,19 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 → NEET (Animal Physiology)",
+                        detail: "Birds 'fluffing up' is *piloerection* — same reflex makes goosebumps on YOUR arm when cold. The hair on your skin can't trap much air (humans evolved away from fur 1M years ago), so your goosebumps are a vestigial reflex — fossil behaviour from when our ancestors were furrier. NEET tests vestigial structures + thermoregulation."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Test 1 sweater vs 2 thin sweaters",
+                        detail: "On a cold day, compare wearing one thick sweater vs two thinner sweaters of the same total mass. Two layers feel warmer — because the air trapped BETWEEN the layers adds insulation. Same total wool, more insulation. This is why a duvet beats a thick blanket, and why mountaineers swear by layering."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

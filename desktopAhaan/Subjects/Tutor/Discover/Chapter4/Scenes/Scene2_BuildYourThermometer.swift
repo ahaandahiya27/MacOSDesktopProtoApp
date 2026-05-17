@@ -85,6 +85,19 @@ struct Scene2_BuildYourThermometer: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Thermal Expansion)",
+                        detail: "Mercury expands ~0.018% per °C — small but linear, which is why old thermometers worked. JEE asks for the *coefficient of linear, area, and volume expansion* (α, β, γ) and their ratio (γ = 3α for isotropic solids). Modern thermometers replace mercury with digital thermistors (resistance changes with T) — same physics, different transducer."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Rubber-band thermometer",
+                        detail: "Stretch a rubber band tightly between two pins on a board. Measure its sag. Now use a hair-dryer to gently warm it (don't melt it). The rubber band CONTRACTS when heated (opposite of metal!) — because long polymer chains coil up when energetic. You just discovered why a rubber band gets hot when stretched — entropy doing chemistry."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

@@ -114,6 +114,19 @@ struct Scene8_TemperatureVsHeat: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (this is *the* exam classic)",
+                        detail: "Temperature ≠ heat — this distinction is JEE-2024 Q2-level fundamental. Q = m·c·ΔT. A bathtub at 30°C contains far MORE heat energy than a candle flame at 1000°C, because the bathtub has 100,000× more mass. Heat is an extensive property (depends on amount); temperature is intensive (doesn't). Get this right at 12 and Calorimetry in Class 11 is a victory lap."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Spark vs bath analogy",
+                        detail: "A welder's spark from a grinder is at ~1500°C and flies onto your bare arm — and barely tickles. A bath at 50°C scalds you. Same physics: the spark has microscopic mass (Q = m·c·ΔT, tiny m, tiny Q), the bath has kilograms of water (huge m, huge Q). Temperature matters less than total transferable energy."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if poured {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

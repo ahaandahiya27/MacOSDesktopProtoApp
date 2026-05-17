@@ -90,6 +90,19 @@ struct Scene1_HotOrCold: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE (Thermodynamics)",
+                        detail: "Hot vs cold is your nerves measuring heat FLOW into or out of skin, not absolute temperature. JEE asks: 'Why does metal at room temperature feel colder than wood at room temperature?' Same temperature, but metal conducts heat away from your skin 1000× faster — your nerves register the rapid heat-loss as 'cold'. Thermometers measure temperature; skin measures thermal conductivity."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Metal vs wood thermometer test",
+                        detail: "Put a metal spoon and a wooden pencil side-by-side on your desk for 10 minutes. They're now both at room temperature. Touch each — the metal feels distinctly colder. Now check with a thermometer (kitchen or any digital) — same number for both. Your skin lied; the thermometer told the truth. This is JEE Q5 in disguise."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }
