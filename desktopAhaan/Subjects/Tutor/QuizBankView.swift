@@ -105,18 +105,11 @@ private struct QuizBankContent: View {
             Divider()
 
             if filteredEntries.isEmpty {
-                VStack(spacing: 12) {
-                    Image(systemName: "magnifyingglass")
-                        .font(.system(size: 48))
-                        .foregroundColor(.secondary)
-                        .accessibilityHidden(true)
-                    Text("No questions match")
-                        .font(.title2.weight(.semibold))
-                    Text("Try adjusting your filters.")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                EmptyStateView(
+                    icon: "magnifyingglass",
+                    title: "No questions match",
+                    subtitle: "Try adjusting your filters — or clear them to see every question across all chapters."
+                )
             } else {
                 List(filteredEntries, id: \.question.id) { entry in
                     Button {
@@ -126,6 +119,7 @@ private struct QuizBankContent: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .pointingCursor()
                     .contextMenu {
                         Button("Open") { openQuestion(entry) }
                     }

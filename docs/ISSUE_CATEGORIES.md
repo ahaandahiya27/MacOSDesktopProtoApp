@@ -493,7 +493,7 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| EM1 | "Pick a colour" placeholder fine; other empty states (bookmarks, recents) unaudited | ❌ |
+| EM1 | "Pick a colour" placeholder fine; other empty states (bookmarks, recents) unaudited | ✅ unified through `EmptyStateView` (icon at 48pt + title2.semibold + subheadline-secondary subtitle, max-width 520, centered). Refactored BookmarksView + QuizBankView's inline empty states to use it. History/Favorites already used it. Sidebar Recents section hides when empty (no separate state needed). CommandPalette has its own compact variant — intentional for the smaller sheet |
 | EM2 | Article-load failure styled; Discover scene-load failure not visualised | ❌ |
 | EM3 | First-launch experience past Welcome unaudited | ❌ |
 | EM4 | No "all chapters complete" / "you've explored everything" celebration screen | ❌ Phase 6 |

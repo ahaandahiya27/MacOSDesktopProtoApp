@@ -52,20 +52,11 @@ private struct BookmarksContent: View {
     var body: some View {
         Group {
             if entries.isEmpty {
-                VStack(spacing: 12) {
-                    Image(systemName: "bookmark")
-                        .font(.system(size: 48))
-                        .foregroundColor(.secondary)
-                        .accessibilityHidden(true)
-                    Text("No bookmarks yet")
-                        .font(.title2.weight(.semibold))
-                    Text("Star concepts or questions you want to revisit — tap the bookmark icon on any concept or question page.")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: 520)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                EmptyStateView(
+                    icon: "bookmark",
+                    title: "No bookmarks yet",
+                    subtitle: "Star concepts or questions you want to revisit — tap the bookmark icon on any concept or question page."
+                )
             } else {
                 List {
                     ForEach(grouped, id: \.0) { (packId, items) in

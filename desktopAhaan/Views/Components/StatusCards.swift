@@ -72,6 +72,10 @@ struct InfoCard: View {
     }
 }
 
+/// Standard empty-state for screens with no content yet (no bookmarks,
+/// no history, no favorites, no search results, etc.). Use this directly
+/// rather than re-inlining a `VStack { Image + Text + Text }` per screen,
+/// so visual treatment stays consistent across the app.
 struct EmptyStateView: View {
     let icon: String
     let title: String
@@ -82,13 +86,16 @@ struct EmptyStateView: View {
             Image(systemName: icon)
                 .font(.system(size: 48))
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
             Text(title)
-                .font(.headline)
+                .font(.title2.weight(.semibold))
             Text(subtitle)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
+                .frame(maxWidth: 520)
         }
         .padding(40)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
