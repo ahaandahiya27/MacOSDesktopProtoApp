@@ -127,6 +127,19 @@ struct Scene8_AcidRainStory: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        LookingAheadCallout(
+                            title: "Class 12 Chemistry → JEE (Atmospheric Chem)",
+                            detail: "Acid rain mechanism: SO₂ + ½O₂ → SO₃; SO₃ + H₂O → H₂SO₄. And: NO₂ + H₂O → HNO₃ + HNO₂. Coal combustion + car exhaust supplies SO₂ and NOₓ. JEE asks the catalytic-converter chemistry that fixes it: noble-metal beads (Pt/Pd/Rh) oxidise CO + unburnt fuel and reduce NOₓ back to N₂ — three-way catalysis."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Lemon-juice mini acid rain",
+                            detail: "Sprinkle a few drops of fresh lemon juice on a piece of limestone or chalk. Watch fizzing — CO₂ released as the acid dissolves the carbonate. That's exactly what acid rain does to the Taj Mahal's marble (calcium carbonate) over decades. The damage you see in 5 seconds in your kitchen is what 200 years of pollution does to monuments."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }

@@ -139,6 +139,18 @@ struct Scene7_SoilpHAndFarmer: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    LookingAheadCallout(
+                        title: "Class 12 Biology / Chemistry → NEET / Agriculture",
+                        detail: "Most crops grow best between pH 6 and pH 7.5. Tea (pH 4.5-5.5), blueberries (4.5), and rhododendrons love acidic soil. Cotton (6-6.5) and most cereals (6.5-7.5) like near-neutral. Beyond that range, plants can't absorb essential ions — iron locks up in alkaline soil; aluminium becomes toxic in acidic. JEE Geography meets NEET Botany in one beaker."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Test your home soil pH",
+                        detail: "Take a teaspoon of soil from a flowerpot or garden bed. Add it to a glass of distilled water (or boiled-then-cooled tap water). Stir. Dip pH paper. Most home soil hits 6.5-7.5 — perfectly normal. If yours reads below 5.5 or above 8, that explains why some plants struggle to grow there. You've just done agricultural chemistry."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if scenario == 2 {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

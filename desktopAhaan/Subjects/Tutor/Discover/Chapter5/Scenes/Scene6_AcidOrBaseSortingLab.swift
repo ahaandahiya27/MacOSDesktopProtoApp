@@ -98,6 +98,19 @@ struct Scene6_AcidOrBaseSortingLab: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        LookingAheadCallout(
+                            title: "Class 11 Chemistry → JEE (Strong vs Weak)",
+                            detail: "HCl, HNO₃, H₂SO₄ are *strong* acids (fully ionise). Citric, lactic, acetic — *weak* (partly ionise). NaOH, KOH — strong bases. Ammonia, calcium hydroxide — weak. JEE asks the dissociation constant Kₐ and pKₐ — same items you sorted today, ranked by strength. NEET asks 'why does ammonia smell so strong?' — because it's a volatile weak base that partially escapes water."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Smell test (carefully) for volatile vs salt",
+                            detail: "Hold a piece of pH paper above an open bottle of vinegar — paper reddens slightly (volatile acid molecules in the air). Now hold above a beaker of dissolved table salt — nothing happens (it's neutral). Then above an ammonia-based cleaner like Colin (DO NOT inhale deeply!) — paper blues. You're detecting acid/base molecules in air without touching the liquid."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     } else {

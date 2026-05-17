@@ -93,6 +93,19 @@ struct Scene2_BuildYourpHStrip: View {
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Chemistry → JEE",
+                        detail: "pH is logarithmic: pH = -log₁₀[H⁺]. JEE asks: 'A solution of pH 3 is how many times more acidic than pH 6?' Answer: 1000× (because 10⁻³ ÷ 10⁻⁶). The numbers 0-14 look gentle but every step is a 10× concentration change. Stomach acid (pH 1.5) is 10 million times more acidic than blood (pH 7.4)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "pH-strip the kitchen",
+                        detail: "Buy a roll of universal pH paper (₹40 at any chemistry supplier or pharmacy). Test: tap water, lemon juice, vinegar, baking soda solution, toothpaste, shampoo, milk, coffee. Make a colour-coded chart on graph paper. Notice which everyday items cluster around neutral (most foods), which are deeply acidic (citrus), which basic (cleaning products)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }

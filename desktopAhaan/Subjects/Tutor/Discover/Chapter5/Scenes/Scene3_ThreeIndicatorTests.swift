@@ -104,6 +104,18 @@ struct Scene3_ThreeIndicatorTests: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
+                    LookingAheadCallout(
+                        title: "Class 11 Chemistry → JEE (Acid-Base Titrations)",
+                        detail: "Indicators are weak acids/bases whose protonated and deprotonated forms have different colours. Phenolphthalein is colourless below pH 8.3 and pink above. JEE asks: 'Which indicator should I use for HCl + NaOH titration?' Phenolphthalein (works at strong-acid + strong-base endpoint pH ≈ 7). But for weak-acid + strong-base, the endpoint is pH 9 — methyl orange would mislead you. Choose the indicator to match the equivalence point."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                    TryAtHomeCallout(
+                        title: "Turmeric is an acid-base indicator",
+                        detail: "Mix a pinch of turmeric powder in water — yellow solution. Add baking soda — turns reddish-brown. Add lemon juice — back to yellow. That's why old stains from turmeric get worse when you wipe with soap (basic) but lift with lemon (acidic). Same chemistry NCERT writes formally as phenolphthalein."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     if allTested {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)

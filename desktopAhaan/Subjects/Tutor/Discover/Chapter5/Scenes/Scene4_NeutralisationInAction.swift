@@ -133,6 +133,20 @@ struct Scene4_NeutralisationInAction: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 / 12 Chemistry → JEE (Thermochemistry)",
+                detail: "Neutralisation releases heat: ΔH = -57.1 kJ/mol for any strong-acid + strong-base in water — surprisingly constant. JEE asks why: because the underlying reaction is always H⁺(aq) + OH⁻(aq) → H₂O(l), regardless of what salt ions hang around. The constant heat of neutralisation is itself proof of the ionic theory."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            TryAtHomeCallout(
+                title: "Feel neutralisation warming",
+                detail: "Pour 50 ml of vinegar in a glass. Touch the outside — room temperature. Add a teaspoon of baking soda. Fizzing starts (CO₂). Touch again after 30 seconds — slightly warmer. That tiny temperature rise is the heat of neutralisation, demonstrable with a kitchen thermometer to ±1°C accuracy."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }

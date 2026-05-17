@@ -127,6 +127,18 @@ struct Scene5_AntStingFirstAid: View {
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                        LookingAheadCallout(
+                            title: "Class 12 Biology → NEET (Sting Pharmacology)",
+                            detail: "Ant + bee venom = mostly *formic acid* (acidic) → neutralise with baking soda paste. Wasp venom = mostly *alkaline* peptides → neutralise with vinegar. Snake venom = a protein cocktail (more complex). NEET tests venom chemistry alongside antivenom (passive immunisation by injecting horse antibodies). Knowing 'acid vs base' first-aid is real medicine the kid can do."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Test the first-aid logic",
+                            detail: "If anyone gets a *bee* sting (acidic): apply baking soda + water paste. If a *wasp* sting (alkaline): apply vinegar. Watch the pain ease within a minute. You're doing literal chemistry as medicine — same molecules NCERT teaches you in Class 7, applied at the right pH."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }

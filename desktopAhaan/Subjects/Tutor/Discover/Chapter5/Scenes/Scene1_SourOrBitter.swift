@@ -98,6 +98,19 @@ struct Scene1_SourOrBitter: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        LookingAheadCallout(
+                            title: "Class 11 Chemistry → JEE / NEET",
+                            detail: "Sour-and-bitter is your tongue measuring H⁺ vs OH⁻ — JEE's Arrhenius definition. By Class 11 you learn three definitions (Arrhenius, Brønsted-Lowry, Lewis), each catching cases the previous misses. NEET asks 'why does NH₃ act as a base?' — it accepts H⁺ (Brønsted) and donates electron pair (Lewis), even though it has no OH⁻ (fails Arrhenius)."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                        TryAtHomeCallout(
+                            title: "Red-cabbage indicator at home",
+                            detail: "Boil chopped red cabbage in water for 10 minutes. Strain — you have purple cabbage juice. Drop it into vinegar (red/pink), lemon juice (pink), water (purple), baking soda (blue), soap solution (green). One natural indicator, six colours across the pH range. Cheaper than litmus and just as scientific."
+                        )
+                        .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     } else {
