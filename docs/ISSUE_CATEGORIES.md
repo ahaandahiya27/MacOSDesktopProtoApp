@@ -85,7 +85,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | E4 | Debouncing of text input | ✅ 200 ms in SearchView |
 | E5 | Diacritic & case insensitivity | ✅ `.caseInsensitive, .diacriticInsensitive` |
 | E6 | Empty state UI | ✅ in both SearchView and QuizBank |
-| E7 | Result ranking / relevance | 🟡 currently substring match in order; no ranking |
+| E7 | Result ranking / relevance | ✅ score-based: title/prompt prefix (100) > contains (50) > body/answer (10-20) |
 | E8 | Search clears properly on navigate | ✅ via C1 fix (state survives, user can clear) |
 | E9 | Tokenization (multi-word queries) | ❌ single-token only today |
 
@@ -103,7 +103,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F8 | useCases ≥ 3 per concept | 🟡 enforced by content pipeline; need re-audit |
 | F9 | beyondTheBook non-empty | 🟡 spot-checked |
 | F10 | pageRefs reasonable (within textbook page range) | ❌ not audited |
-| F11 | JSON schema decoding `do/catch` (don't crash on malformed pack) | ❌ — SubjectPack decodes throw-style; one bad pack may still abort load |
+| F11 | JSON schema decoding `do/catch` (don't crash on malformed pack) | ✅ per-pack do/catch in SubjectRegistry.reload; failures pipe to CrashReporter.logDataIssue AND surface in Settings |
 
 ## G. Content coverage parity (science only — Sanskrit not in scope)
 
@@ -159,7 +159,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | J1 | Light + Dark mode both render | ❌ not systematically tested |
 | J2 | Color tokens via `Color.compat*` instead of hex literals | 🟡 mostly compliant |
 | J3 | Typography via `Theme.Typography.*` | 🟡 inconsistent — many raw `.font(.title2.bold())` calls |
-| J4 | Layout at 1024×640 min window | ❌ not tested |
+| J4 | Layout at 1024×640 min window | 🟡 minWidth/minHeight lowered to 1024/640 (W1); visual verification at min size pending |
 | J5 | Layout at 2560×1440 design canvas | ✅ primary test target |
 | J6 | Layout at very-wide windows | 🟡 |
 | J7 | SF Symbols 2 fallbacks for SF Symbols 3+ | ✅ |
@@ -186,7 +186,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | L1 | Atomic writes for progress.json | ✅ verified — DataStore + CrashReporter both use `.atomic` |
 | L2 | Bookmarks persisted | ✅ |
 | L3 | Recent items persisted (≤8) | ✅ |
-| L4 | Window state via @SceneStorage | ❌ |
+| L4 | Window frame restoration on relaunch | ✅ system default (`NSQuitAlwaysKeepsWindows`) restores last frame; sidebar selection separately via @AppStorage |
 | L5 | Settings via @AppStorage | 🟡 partial |
 | L6 | Crash log rotation (avoid unbounded growth) | ✅ 30-file cap + 1 MB per-day rotation |
 | L7 | Migration on schema bump | ❌ no formal migration path |
@@ -309,10 +309,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| W1 | Resizable with min 1024×640 | ✅ frame(minWidth: 1280) but smaller min — needs check |
-| W2 | Sheet sizing on macOS (explicit frame) | ❌ |
+| W1 | Resizable with min 1024×640 | ✅ window frame minWidth: 1024, minHeight: 640 (split-screen tile half on 5K @1×) |
+| W2 | Sheet sizing on macOS (explicit frame) | ✅ Welcome / KeyboardShortcuts / CommandPalette all carry explicit min/idealWidth + min/idealHeight |
 | W3 | Drag-resize doesn't strand popovers | ❌ |
-| W4 | Window restoration on relaunch | ❌ |
+| W4 | Window restoration on relaunch | ✅ system default — see L4 |
 | W5 | NSWindow.allowsAutomaticWindowTabbing disabled | ✅ |
 
 ## X. Workflow / tooling

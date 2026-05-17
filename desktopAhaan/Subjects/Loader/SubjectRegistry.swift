@@ -96,6 +96,11 @@ final class SubjectRegistry: ObservableObject {
             if let e = err {
                 errors.append(e)
                 debugLog("[SubjectRegistry] FAILED to load \(e)")
+                // Pipe pack-decode failures into the crashlog so the
+                // parent / Claude can see them next session without
+                // needing to dig through Settings. Non-fatal — other
+                // packs still load.
+                CrashReporter.shared.logDataIssue("SubjectPack decode failure: \(e)")
             }
         }
 

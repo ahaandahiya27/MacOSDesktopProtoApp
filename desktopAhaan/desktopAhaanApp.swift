@@ -14,7 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Install crash capture before any UI runs so we catch even
         // setup-time exceptions.
         CrashReporter.shared.install()
-        UserDefaults.standard.set(false, forKey: "NSQuitAlwaysKeepsWindows")
+        // NSQuitAlwaysKeepsWindows is left at its system default (true) so
+        // macOS restores the window's last position and size at the next
+        // launch. The actual app state (sidebar selection, recent items,
+        // settings) is restored independently via @AppStorage in AppState,
+        // so window-frame restoration is purely about not making the kid
+        // re-place the window every morning.
         NSWindow.allowsAutomaticWindowTabbing = false
         ensureMetalCacheDirectory()
     }
@@ -69,9 +74,14 @@ struct SanskritKoshApp: App {
                 .environmentObject(appState)
                 .environmentObject(subjectRegistry)
                 .environmentObject(dataStore)
+                // Min 1024×640 honours macOS's split-screen tile half-width
+                // on the deploy iMac's 5K @1×; ideal sized for full-screen
+                // use on the same display. Sidebar (≥220) + detailPane
+                // (≥420) totals 640 of internal content min, leaving room
+                // for the standard window chrome inside 1024.
                 .frame(
-                    minWidth: 1280, idealWidth: 1500,
-                    minHeight: 800, idealHeight: 950
+                    minWidth: 1024, idealWidth: 1500,
+                    minHeight: 640, idealHeight: 950
                 )
         }
         .commands {
