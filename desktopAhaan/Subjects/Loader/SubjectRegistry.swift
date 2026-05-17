@@ -36,9 +36,17 @@ final class SubjectRegistry: ObservableObject {
         Task { [weak self] in await self?.reload() }
     }
 
-    /// Re-scans the bundle for pack files and reloads. Heavy JSON decoding
-    /// runs on a detached background task so app launch isn't blocked.
-    /// Returns to MainActor only to publish the final results.
+    /// Re-scans the bundle for pack files and reloads.
+    ///
+    /// Heavy JSON decoding **is now actually moved off the main thread** via
+    /// `Task.detached`. Before this fix, the comment claimed background
+    /// decoding but the loop ran synchronously inside the `@MainActor`
+    /// `reload()` body — every keystroke and animation stalled while
+    /// ~28K lines of JSON parsed on the slow iMac AMD CPU at launch.
+    ///
+    /// Now: enumerate bundle URLs on MainActor (cheap), then hand the
+    /// decode list to a detached, sendable Task, then come back to
+    /// MainActor only to publish the results.
     func reload() async {
         isLoading = true
         let urls = Self.bundledPackURLs()
@@ -57,18 +65,24 @@ final class SubjectRegistry: ObservableObject {
             return
         }
 
-        // Decode every pack on a background task. Each (pack, error) tuple
-        // captures success or failure separately so partial decode failures
-        // don't lose other successful packs.
-        let results: [(SubjectPack?, String?)] = urls.map { url in
-            do {
-                let pack = try PackDecoder.decode(from: url)
-                return (pack, nil)
-            } catch {
-                let msg = "\(url.lastPathComponent): \(error.localizedDescription)"
-                return (nil, msg)
+        // Decode every pack on a DETACHED task so the main thread stays
+        // free to render the launch UI. Each (pack, error) tuple captures
+        // success or failure separately so partial failures don't lose
+        // other successful packs.
+        let t0 = Date()
+        let results: [(SubjectPack?, String?)] = await Task.detached(priority: .userInitiated) {
+            return urls.map { url in
+                do {
+                    let pack = try PackDecoder.decode(from: url)
+                    return (pack as SubjectPack?, nil as String?)
+                } catch {
+                    let msg = "\(url.lastPathComponent): \(error.localizedDescription)"
+                    return (nil as SubjectPack?, msg as String?)
+                }
             }
-        }
+        }.value
+        let elapsedMs = Int(Date().timeIntervalSince(t0) * 1000)
+        debugLog("[SubjectRegistry] decoded \(urls.count) pack(s) off-thread in \(elapsedMs) ms")
 
         var loaded: [SubjectPack] = []
         var errors: [String] = []

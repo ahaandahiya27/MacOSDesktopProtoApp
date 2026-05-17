@@ -36,8 +36,8 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | B4 | `precondition(…)` / `assert(…)` reachable in prod | 🟡 only in `DiscoveryStepper.init` (`options.count == outputs.count`); contract enforced |
 | B5 | `Array.first!` / `Array[i]` without bounds check | ✅ swept |
 | B6 | `Dictionary(uniqueKeysWithValues:)` (fatal on dup) | ✅ replaced with defensive `uniquingKeysWith:` |
-| B7 | Threading: background `@Published` mutation | 🟡 spot-checked; full audit pending |
-| B8 | Retain cycles in escaping closures (missing `[weak self]`) | ❌ not yet audited |
+| B7 | Threading: background `@Published` mutation | ✅ all service classes `@MainActor`; SubjectRegistry now actually decodes off-thread (was lying) |
+| B8 | Retain cycles in escaping closures (missing `[weak self]`) | ✅ service-class callbacks all use `[weak self]`; View-struct Timer/asyncAfter blocks safe (struct = no class retention) |
 | B9 | NSException uncaught handler | ✅ CrashReporter installed |
 | B10 | POSIX fatal signals (SIGABRT/SEGV/BUS/ILL/FPE/PIPE) | ✅ CrashReporter handles all 6 |
 | B11 | Auto-restart on crash | ❌ deferred — needs relauncher helper executable |
