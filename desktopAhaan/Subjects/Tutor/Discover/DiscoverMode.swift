@@ -290,6 +290,7 @@ struct DiscoverShell<SceneBody: View>: View {
                             .frame(width: 22, height: 22)
                     }
                     .buttonStyle(.plain)
+                    .pointingCursor()
                     .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
                 }
                 Spacer(minLength: 0)
@@ -305,10 +306,12 @@ struct DiscoverShell<SceneBody: View>: View {
         HStack {
             Button { goPrev() } label: { Label("Previous", systemImage: "chevron.left") }
                 .disabled(currentScene == 0)
+                .pointingCursor()
             Spacer()
             Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
                 .accentColor(chapterAccent)
                 .disabled(currentScene == totalScenes - 1)
+                .pointingCursor()
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)

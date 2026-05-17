@@ -235,6 +235,14 @@ enum DesignTokens {
         static let mono: Font = .system(.callout, design: .monospaced)
         /// Monospaced display (mnemonic hook word).
         static let monoBold: Font = .system(.title2, design: .monospaced).weight(.bold)
+
+        // Line-height (`.lineSpacing`) constants paired with the Font roles.
+        // Apply via `Text(...).lineSpacing(DesignTokens.Typography.bodyLineSpacing)`.
+        // Existing scenes/cards used a mix of 3 / 4 / no `lineSpacing`; these
+        // formalise the rhythm for the Phase 6 typography pass.
+        static let tightLineSpacing: CGFloat = 1   // captions, single-line meta
+        static let bodyLineSpacing: CGFloat = 3    // default reading body
+        static let looseLineSpacing: CGFloat = 5   // long-form / callout body
     }
 
     /// Semantic colour roles. The defaults today match what the components
@@ -429,5 +437,27 @@ private struct ArrowKeyModifier: ViewModifier {
                     monitor = nil
                 }
             }
+    }
+}
+
+// MARK: - Pointing-hand cursor on hover
+
+extension View {
+    /// Switches the mouse cursor to a pointing-hand while hovering this view.
+    /// SwiftUI's `Button` on macOS keeps the default arrow cursor — fine for
+    /// adults but Ahaan (7) relies on the cursor change as a primary
+    /// clickability signal. Apply on Discover-Mode chrome buttons + any other
+    /// custom-built tappables.
+    ///
+    /// macOS 11 compatible — `.onHover` is macOS 11+, `NSCursor` is in AppKit.
+    /// Uses push/pop so nested hovers don't leave a sticky cursor.
+    func pointingCursor() -> some View {
+        onHover { hovering in
+            if hovering {
+                NSCursor.pointingHand.push()
+            } else {
+                NSCursor.pop()
+            }
+        }
     }
 }

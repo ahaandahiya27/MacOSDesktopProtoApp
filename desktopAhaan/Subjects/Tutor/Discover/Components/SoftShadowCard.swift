@@ -60,14 +60,21 @@ struct GotItButton: View {
         }
         .buttonStyle(FilledCTAButtonStyle(tint: tint))
         .keyboardShortcut(.space, modifiers: [])
+        .pointingCursor()
         .accessibilityHint("Marks this scene as complete and moves on.")
     }
 }
 
-/// Filled primary-action button style. Big-Sur-safe substitute for the
-/// macOS 12 `.borderedProminent` style. Carries a soft accent-tinted shadow
-/// to anchor the CTA against the Discover gradient background, a clear
-/// disabled state, and a press-feedback scale + overlay so taps register.
+/// **The** primary-action button style for Discover Mode and beyond. Pair with
+/// a tappable `Button`, never a passive `Label`. Use this for: scene completion
+/// ("I get it!"), modal confirmations, "Start Quiz", "Submit" actions. For
+/// secondary actions (Prev/Next, Cancel) keep using system `.bordered` or
+/// `.automatic`. For destructive actions, override `tint` to `.red`.
+///
+/// Big-Sur-safe substitute for the macOS 12 `.borderedProminent` style.
+/// Carries a soft accent-tinted shadow to anchor the CTA against the Discover
+/// gradient background, a clear disabled state (0.42 opacity), and a
+/// press-feedback scale + overlay so taps register visually.
 private struct FilledCTAButtonStyle: ButtonStyle {
     let tint: Color
     @Environment(\.isEnabled) private var isEnabled
