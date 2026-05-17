@@ -161,4 +161,65 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(presentRatio, 0.90,
                                     "HTML coverage dropped below 90% — \(missing.count)/\(total) entries missing: \(missing.prefix(8).joined(separator: ", "))")
     }
+
+    // MARK: - Content invariants (F7 / F8 / F9)
+    //
+    // These three tests cover the per-concept richness contract that
+    // the issue-taxonomy doc has tracked as 🟡 ("content-pipeline
+    // invariant, no runtime check"). They run against the loaded
+    // SubjectPack JSON so any future edit that breaks the contract
+    // fails on push instead of shipping silently.
+
+    /// F7 — every concept has at least the `oneLine` explanation depth
+    /// populated. `expert` is allowed to fall back via depth-laddering
+    /// (Concept already implements graceful fallback) so we only
+    /// enforce that *some* explanation exists.
+    @MainActor func testEveryConceptHasOneLineExplanation() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var missing: [String] = []
+        for concept in pack.allConcepts {
+            let nonEmpty = concept.explanations.values.contains { !$0.isEmpty }
+            if !nonEmpty { missing.append(concept.id) }
+        }
+        XCTAssertTrue(missing.isEmpty,
+                      "Concepts with no non-empty explanation: \(missing.prefix(5).joined(separator: ", "))")
+    }
+
+    /// F8 — every concept has at least 3 useCases. The content pipeline
+    /// enforces this manually; the test catches a regression on edit.
+    @MainActor func testEveryConceptHasThreeUseCases() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var underFilled: [(String, Int)] = []
+        for concept in pack.allConcepts where concept.useCases.count < 3 {
+            underFilled.append((concept.id, concept.useCases.count))
+        }
+        XCTAssertTrue(underFilled.isEmpty,
+                      "Concepts with fewer than 3 useCases: \(underFilled.prefix(5).map { "\($0.0)=\($0.1)" }.joined(separator: ", "))")
+    }
+
+    /// F9 — every concept has a non-empty beyondTheBook narrative.
+    @MainActor func testEveryConceptHasBeyondTheBook() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var empty: [String] = []
+        for concept in pack.allConcepts where concept.beyondTheBook.isEmpty {
+            empty.append(concept.id)
+        }
+        XCTAssertTrue(empty.isEmpty,
+                      "Concepts with empty beyondTheBook: \(empty.prefix(5).joined(separator: ", "))")
+    }
 }

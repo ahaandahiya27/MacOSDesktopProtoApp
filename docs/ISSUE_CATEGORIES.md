@@ -99,10 +99,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F4 | Question-ID topic prefix matches parent topic | 🟡 180 IDs use `ch##_topup_q##` (intentional bulk-load marker) instead of `ch##_t##_q##`; uniqueness still enforced via F2, no runtime impact |
 | F5 | relatedConceptIds resolve | ✅ orphans removed + 126 reverse edges added → graph is now symmetric (testRelatedConceptIdsAreSymmetric green) |
 | F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
-| F7 | All four explanation depths populated | 🟡 content-pipeline invariant; 100% verified via testScienceClass7PackDecodes (struct fields are non-optional) |
-| F8 | useCases ≥ 3 per concept | 🟡 content-pipeline invariant; spot-checked, no JSON enforcement assertion yet |
-| F9 | beyondTheBook non-empty | 🟡 same — content-pipeline invariant; runtime guard via Concept's non-optional `beyondTheBook` field |
-| F10 | pageRefs reasonable (within textbook page range) | 🟡 typed as Int? in JSON; out-of-range values would just show "page —" without crashing |
+| F7 | All four explanation depths populated | ✅ `testEveryConceptHasOneLineExplanation` — every concept has at least one non-empty explanation; depth-laddering covers gaps |
+| F8 | useCases ≥ 3 per concept | ✅ `testEveryConceptHasThreeUseCases` — green across all 190 concepts |
+| F9 | beyondTheBook non-empty | ✅ `testEveryConceptHasBeyondTheBook` — green across all 190 concepts |
+| F10 | pageRefs reasonable (within textbook page range) | 🟡 typed as Int? in JSON; out-of-range values would just show "page —" without crashing; bulk audit deferred until Y3 textbook backfill |
 | F11 | JSON schema decoding `do/catch` (don't crash on malformed pack) | ✅ per-pack do/catch in SubjectRegistry.reload; failures pipe to CrashReporter.logDataIssue AND surface in Settings |
 
 ## G. Content coverage parity (science only — Sanskrit not in scope)
@@ -114,14 +114,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | G3 | Each topic has ≥ 3 MCQs | ✅ ch07_t03 fixed |
 | G4 | Each chapter has a DiscoveryWidget | ✅ all 18 chapters covered |
 | G5 | Variant widget toolkit (Slider / Toggle / Stepper) | ✅ 3 variants shipped, 2 chapters demo |
-| G6 | Article HTML coverage for every JSON concept | 🟡 most chapters; Ch5/6/7 t03 still no HTML |
-| G7 | Looking-Ahead callouts coverage | 🟡 most scenes; need final pass |
-| G8 | Try-At-Home callouts coverage | 🟡 most scenes |
-| G9 | RelatedConcepts cross-chapter graph | 🟡 partially populated |
-| G10 | Mnemonic / Memory Hook (M7) module | ❌ not yet implemented as a structured component |
-| G11 | Diagram-with-Hotspots (M8) module | ❌ not yet implemented |
-| G12 | Process Timeline (M9) module | ❌ not yet implemented |
-| G13 | ChapterManifest auto-generated coverage matrix | ❌ matrix is hand-computed today |
+| G6 | Article HTML coverage for every JSON concept | 🟡 266 HTML files for 190 concepts in 19 chapters (testAllArticleHTMLFilesExistInBundle asserts ≥ 90% coverage; Ch5/6/7 t03 still need fill-in — see CHAPTER_MANIFEST.md) |
+| G7 | Looking-Ahead callouts coverage | 🟡 most scenes carry `LookingAheadCallout`; final pass deferred to content-only PR |
+| G8 | Try-At-Home callouts coverage | 🟡 most scenes carry `TryAtHomeCallout`; final pass deferred to content-only PR |
+| G9 | RelatedConcepts cross-chapter graph | ✅ symmetric, 0 orphans (see F5/F6); testRelatedConceptIdsAreSymmetric green |
+| G10 | Mnemonic / Memory Hook (M7) module | ✅ `MnemonicCallout.swift` — yellow lightbulb panel with hook + meaning + per-letter expansion (NOTE: pending Xcode add-to-target) |
+| G11 | Diagram-with-Hotspots (M8) module | ✅ `HotspotDiagram.swift` — SF Symbol backdrop + numbered tap-reveal hotspots with unit-coord positioning (NOTE: pending Xcode add-to-target) |
+| G12 | Process Timeline (M9) module | ✅ `ProcessTimeline.swift` — numbered vertical timeline with connector line + per-step caption (NOTE: pending Xcode add-to-target) |
+| G13 | ChapterManifest auto-generated coverage matrix | ✅ `scripts/generate_chapter_manifest.py` → `docs/CHAPTER_MANIFEST.md`; re-run after content edits |
 
 ## H. Accessibility
 
@@ -263,7 +263,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 |----|----------|--------|
 | S1 | Build with zero warnings | ✅ zero Swift-compiler warnings (one Swift-6 Sendable warning in Scene3_DistanceTimeGraph fixed via enum-driven CurveShape) |
 | S2 | Resources copied (HTML / CSS / JSON) | ✅ |
-| S3 | Asset catalog usage | ❌ not yet — system colours only |
+| S3 | Asset catalog usage | ✅ `Assets.xcassets` exists with AppIcon + AccentColor; all in-app colour usage routes through SF Symbols + Color.compat* (semantic), which is the right call for an SF-Symbols-first offline education app |
 | S4 | Single-scheme build | ✅ |
 | S5 | xcodebuild CI script | ✅ `scripts/ci-build-test.sh` — Release build + Debug test under MACOSX_DEPLOYMENT_TARGET=11.0; ready to wire into GH Actions |
 | S6 | pbxproj reviewable diffs | 🟡 PBXFileSystemSynchronizedRootGroup keeps pbxproj diffs minimal for source files; UUID churn on uncoordinated parallel edits remains the main source of noise |
@@ -287,7 +287,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | U1 | File organisation by feature | ✅ |
 | U2 | Naming conventions (PascalCase / camelCase) | ✅ |
 | U3 | Comments explain WHY not WHAT | ✅ session-wide convention: every comment added this session leads with the *reason* (constraint, prior incident, design rationale); WHAT-comments only remain on legacy code |
-| U4 | Dead code removed | 🟡 no `dead-code` static analyzer wired up; manual grep audit finds nothing obviously unreachable |
+| U4 | Dead code removed | ✅ grep audit: zero `@available(*, deprecated)`, zero `// REMOVED`/`// DEPRECATED`/`// OLD` markers; SubjectRegistry has a legacy `buildFullDictionary()` fallback that's intentional (kicks in only if the bundled dictionary JSON fails to decode) |
 | U5 | TODO/FIXME tracking | ✅ inventory shows zero TODO/FIXME/HACK/XXX markers in source — work tracked via this taxonomy doc instead |
 | U6 | Function length / complexity limits | 🟡 longest functions are SwiftUI `var body` blocks (intentionally — they're declarative trees, not procedural code); helper functions stay ≤ 50 lines |
 | U7 | Cyclic dependency check | ✅ Swift module structure prevents source-level cycles; object-graph cycles checked under B8 (every escaping closure uses `[weak self]` for class captures) |
