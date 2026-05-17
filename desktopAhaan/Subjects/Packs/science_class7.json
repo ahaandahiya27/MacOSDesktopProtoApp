@@ -2087,6 +2087,71 @@
                 17
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q06",
+              "prompt": "A plant that traps insects to supplement nutrients is called:",
+              "questionType": "mcq",
+              "options": [
+                "Saprotroph",
+                "Insectivorous plant",
+                "Parasite",
+                "Autotroph"
+              ],
+              "answer": "Insectivorous plant",
+              "solutionSteps": [
+                "Pitcher plant and Venus flytrap have modified leaves that trap insects.",
+                "They photosynthesise but the soil is so nitrogen-poor that insects supply the missing nitrogen.",
+                "They are called 'insectivorous' (insect-eating)."
+              ],
+              "commonMistakes": [
+                "Saprotroph eats decaying matter, not living insects."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q07",
+              "prompt": "Why do parasitic plants like Cuscuta have yellow stems instead of green?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Cuscuta has no chlorophyll, so the stems are not green — they look yellow/orange.",
+              "solutionSteps": [
+                "Chlorophyll is the green pigment that captures sunlight for photosynthesis.",
+                "Cuscuta takes ready-made food from the host plant via haustoria, so it doesn't need chlorophyll.",
+                "Without chlorophyll, the stem is yellow."
+              ],
+              "commonMistakes": [
+                "Thinking the host's colour rubs off — colour comes from pigments inside Cuscuta's own cells."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t02_q08",
+              "prompt": "Lichens are an example of:",
+              "questionType": "mcq",
+              "options": [
+                "Parasitism",
+                "Symbiosis",
+                "Saprophytism",
+                "Predation"
+              ],
+              "answer": "Symbiosis",
+              "solutionSteps": [
+                "A lichen is a fungus + an alga living together.",
+                "The alga photosynthesises and shares sugar; the fungus protects and holds water.",
+                "Both partners benefit — that is symbiosis."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -2491,6 +2556,108 @@
                 12,
                 13
               ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q03",
+              "prompt": "Which bacteria fix atmospheric nitrogen into the soil?",
+              "questionType": "mcq",
+              "options": [
+                "Lactobacillus",
+                "Rhizobium",
+                "E. coli",
+                "Streptococcus"
+              ],
+              "answer": "Rhizobium",
+              "solutionSteps": [
+                "Rhizobium lives in root nodules of leguminous plants (pea, gram, beans).",
+                "It converts atmospheric N₂ into nitrates the plant can absorb.",
+                "In return, the plant gives Rhizobium food and shelter — a classic symbiosis."
+              ],
+              "commonMistakes": [
+                "Lactobacillus is for curd-setting, not nitrogen fixation."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q04",
+              "prompt": "Why do farmers grow pulses in rotation with cereals?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Pulses host Rhizobium, which fixes atmospheric nitrogen and enriches the soil for the next cereal crop.",
+              "solutionSteps": [
+                "Cereals (wheat, rice) consume nitrogen heavily.",
+                "Pulses (gram, peas) host Rhizobium in their roots, which replenishes soil nitrogen.",
+                "Rotating these crops keeps soil fertile without adding chemical fertilisers."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q05",
+              "prompt": "Plants take up nitrogen from soil in the form of:",
+              "questionType": "mcq",
+              "options": [
+                "Nitrogen gas (N₂)",
+                "Nitrates (NO₃⁻)",
+                "Ammonia (NH₃)",
+                "Carbon dioxide"
+              ],
+              "answer": "Nitrates (NO₃⁻)",
+              "solutionSteps": [
+                "Roots cannot absorb N₂ gas directly.",
+                "Bacteria convert N₂ → ammonia → nitrites → nitrates.",
+                "Only the nitrate form is taken up by roots."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q06",
+              "prompt": "What is the role of decomposers in the nitrogen cycle?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Decomposers break down dead plants and animals, releasing nitrogen back into the soil as ammonia, which other bacteria turn into nitrates.",
+              "solutionSteps": [
+                "When organisms die, their proteins contain locked-up nitrogen.",
+                "Bacteria and fungi (decomposers) break the proteins into ammonia (NH₃).",
+                "Nitrifying bacteria convert ammonia → nitrites → nitrates, completing the cycle."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t03_q07",
+              "prompt": "Soil that has lost most of its nutrients is called:",
+              "questionType": "mcq",
+              "options": [
+                "Fertile",
+                "Depleted",
+                "Saline",
+                "Alkaline"
+              ],
+              "answer": "Depleted",
+              "solutionSteps": [
+                "Continuous farming without replenishment removes nitrogen, phosphorus and potassium.",
+                "Such soil is 'depleted' — like a battery that has been discharged.",
+                "Crop rotation and manures restore it."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
               "needsHumanReview": false
             }
           ],
@@ -4316,6 +4483,109 @@
                 28
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q03",
+              "prompt": "Why do ruminants like cows have a four-chambered stomach?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "To digest cellulose in grass — bacteria in the rumen ferment cellulose, which the cow then re-chews and digests in the other chambers.",
+              "solutionSteps": [
+                "Cows eat grass, which is full of cellulose — a tough plant fibre.",
+                "The rumen stores swallowed grass and houses cellulose-digesting bacteria.",
+                "The cow brings the partly-digested cud back to the mouth to chew again (rumination).",
+                "The remaining three chambers complete digestion."
+              ],
+              "commonMistakes": [
+                "Thinking the cow chews grass thoroughly the first time — it actually swallows quickly and chews later."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q04",
+              "prompt": "Amoeba captures food by:",
+              "questionType": "mcq",
+              "options": [
+                "Suction",
+                "Pseudopodia (false feet)",
+                "Cilia",
+                "Mouth"
+              ],
+              "answer": "Pseudopodia (false feet)",
+              "solutionSteps": [
+                "Amoeba is a single cell with no fixed mouth.",
+                "It extends temporary 'pseudopodia' that wrap around the food.",
+                "The food gets enclosed in a food vacuole and digested inside the cell."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q05",
+              "prompt": "Which process in Amoeba is similar to mouth-and-stomach digestion in humans?",
+              "questionType": "mcq",
+              "options": [
+                "Phagocytosis using pseudopodia and food vacuole",
+                "Mitosis",
+                "Osmosis",
+                "Diffusion"
+              ],
+              "answer": "Phagocytosis using pseudopodia and food vacuole",
+              "solutionSteps": [
+                "Phagocytosis = cell-eating.",
+                "Pseudopodia trap the food (like mouth grabbing it).",
+                "The food vacuole holds enzymes that digest it (like the stomach)."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q06",
+              "prompt": "What is 'cud' in the context of cattle digestion?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Cud is the partly-digested food that cattle bring back from the rumen to chew a second time.",
+              "solutionSteps": [
+                "Grass swallowed quickly is stored in the rumen where bacteria start breaking down cellulose.",
+                "Cattle later regurgitate this softened mass — the cud — to chew it more thoroughly.",
+                "Better-chewed cud is easier for stomach enzymes to digest further."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q07",
+              "prompt": "Humans cannot digest cellulose because:",
+              "questionType": "mcq",
+              "options": [
+                "Cellulose is not nutritious",
+                "We lack the enzyme cellulase",
+                "Our stomach is too small",
+                "Cellulose is poisonous"
+              ],
+              "answer": "We lack the enzyme cellulase",
+              "solutionSteps": [
+                "Cellulose is digested by the enzyme cellulase.",
+                "Humans don't produce cellulase, so leafy fibres pass through us mostly unchanged.",
+                "We still benefit — cellulose acts as 'roughage' that keeps the gut moving."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -4614,6 +4884,110 @@
                 31,
                 32
               ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q03",
+              "prompt": "The largest gland in the human body is:",
+              "questionType": "mcq",
+              "options": [
+                "Pancreas",
+                "Liver",
+                "Thyroid",
+                "Salivary gland"
+              ],
+              "answer": "Liver",
+              "solutionSteps": [
+                "The liver weighs about 1.5 kg in an adult.",
+                "It secretes bile, which emulsifies fats.",
+                "It is the largest gland and the largest internal organ."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q04",
+              "prompt": "Which part of the alimentary canal absorbs most of the digested food?",
+              "questionType": "mcq",
+              "options": [
+                "Stomach",
+                "Small intestine (villi)",
+                "Large intestine",
+                "Oesophagus"
+              ],
+              "answer": "Small intestine (villi)",
+              "solutionSteps": [
+                "The small intestine has millions of finger-like villi.",
+                "Villi increase surface area by ~30 times.",
+                "Digested nutrients pass through villi into the blood."
+              ],
+              "commonMistakes": [
+                "Large intestine mainly absorbs water, not nutrients."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q05",
+              "prompt": "Why is saliva important even before food reaches the stomach?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Saliva moistens food, helps chewing, and the enzyme salivary amylase starts breaking starch into sugar.",
+              "solutionSteps": [
+                "Salivary glands produce ~1.5 L of saliva per day.",
+                "Saliva softens dry food so it can be swallowed.",
+                "Salivary amylase converts starch (in rice, bread) into maltose — that's why bread chewed long becomes sweet."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q06",
+              "prompt": "What is bile and where is it stored?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Bile is a digestive juice made by the liver and stored in the gallbladder. It emulsifies fats so enzymes can act on them.",
+              "solutionSteps": [
+                "Liver produces bile continuously.",
+                "Bile is stored in the gallbladder until food enters the small intestine.",
+                "It breaks large fat globules into tiny droplets — like soap dispersing oil in water."
+              ],
+              "commonMistakes": [
+                "Bile does not digest fat itself — it just emulsifies fat so enzymes can work."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q07",
+              "prompt": "Undigested food is finally removed from the body through the:",
+              "questionType": "mcq",
+              "options": [
+                "Anus",
+                "Kidneys",
+                "Sweat glands",
+                "Lungs"
+              ],
+              "answer": "Anus",
+              "solutionSteps": [
+                "After absorption in the small intestine, leftover material enters the large intestine.",
+                "The large intestine absorbs water, leaving semi-solid waste.",
+                "This waste exits as faeces through the rectum and anus — called egestion."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
               "needsHumanReview": false
             }
           ]
@@ -6110,6 +6484,108 @@
                 42
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q04",
+              "prompt": "The process of taking silk threads from a cocoon is called:",
+              "questionType": "mcq",
+              "options": [
+                "Spinning",
+                "Weaving",
+                "Reeling",
+                "Ginning"
+              ],
+              "answer": "Reeling",
+              "solutionSteps": [
+                "Cocoons are first boiled to kill the pupa and loosen the gum.",
+                "The fine silk thread is then unwound from the cocoon — this is 'reeling'.",
+                "Reeled threads are twisted and woven into silk cloth."
+              ],
+              "commonMistakes": [
+                "Spinning is for short fibres; silk thread is already long — it just needs unwinding."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q05",
+              "prompt": "Which Indian state is famous for Muga silk?",
+              "questionType": "mcq",
+              "options": [
+                "Karnataka",
+                "Assam",
+                "Kerala",
+                "Punjab"
+              ],
+              "answer": "Assam",
+              "solutionSteps": [
+                "Muga silk has a golden colour and is produced only in Assam.",
+                "Mulberry silk is the most common type, from Karnataka.",
+                "Other types: Tassar (Jharkhand), Eri (north-east)."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q06",
+              "prompt": "What does a silkworm eat?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "The silkworm eats mulberry leaves. The proteins in these leaves are converted into silk inside its body.",
+              "solutionSteps": [
+                "The silkworm caterpillar eats only fresh mulberry leaves.",
+                "It grows quickly and produces silk from glands near its mouth to build a cocoon.",
+                "No mulberry leaves means no silk — so silk farms must grow mulberry trees."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q07",
+              "prompt": "Why are silk cocoons boiled before reeling?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Boiling kills the pupa inside (so it does not break the thread when emerging) and dissolves the gum holding the cocoon together.",
+              "solutionSteps": [
+                "Inside each cocoon is a pupa about to become a moth.",
+                "If the moth emerges, it tears the cocoon — destroying the long single thread.",
+                "Boiling kills the pupa and softens the sericin gum so the thread can be unwound smoothly."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q08",
+              "prompt": "Sericulture is the scientific name for:",
+              "questionType": "mcq",
+              "options": [
+                "Wool production",
+                "Silk farming",
+                "Cotton ginning",
+                "Synthetic fibre making"
+              ],
+              "answer": "Silk farming",
+              "solutionSteps": [
+                "'Seri' means silk in Latin.",
+                "Culture means rearing.",
+                "Sericulture = rearing silkworms to produce silk."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -6460,6 +6936,106 @@
                 65,
                 66
               ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q03",
+              "prompt": "Which of these is a synthetic fibre?",
+              "questionType": "mcq",
+              "options": [
+                "Cotton",
+                "Wool",
+                "Polyester",
+                "Silk"
+              ],
+              "answer": "Polyester",
+              "solutionSteps": [
+                "Cotton and silk come from plants/insects.",
+                "Wool comes from sheep — natural.",
+                "Polyester is made in a chemical factory from petroleum — synthetic."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q04",
+              "prompt": "Why is polyester preferred for sportswear?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Polyester is strong, dries quickly, doesn't wrinkle and is lighter than cotton — useful for active sports.",
+              "solutionSteps": [
+                "Polyester absorbs very little water, so sweat evaporates fast.",
+                "It is stretchy and tough — handles running, jumping.",
+                "It dries within minutes after washing — handy for athletes."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q05",
+              "prompt": "Nylon was first used to make:",
+              "questionType": "mcq",
+              "options": [
+                "Tents",
+                "Parachutes and ropes",
+                "Carpets",
+                "Curtains"
+              ],
+              "answer": "Parachutes and ropes",
+              "solutionSteps": [
+                "Nylon was developed in the 1930s as a silk substitute.",
+                "During WWII, it was used to make parachutes and tough military ropes.",
+                "Today it's also in fishing nets and seat belts because it's very strong per gram."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q06",
+              "prompt": "Why should synthetic clothes not be worn near a fire?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Synthetic fibres melt and stick to the skin, causing severe burns. Cotton, in contrast, burns away.",
+              "solutionSteps": [
+                "Synthetic fibres are plastics — they soften and melt when heated.",
+                "Molten plastic sticks to skin, causing deep burns.",
+                "Firefighters, kitchen workers and people near diyas should wear cotton, not nylon/polyester."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q07",
+              "prompt": "An advantage of synthetic fibres over natural fibres is:",
+              "questionType": "mcq",
+              "options": [
+                "They are biodegradable",
+                "They are cheaper and more durable",
+                "They keep skin warmer",
+                "They feel softer"
+              ],
+              "answer": "They are cheaper and more durable",
+              "solutionSteps": [
+                "Synthetic fibres are mass-produced from petroleum — making them cheap.",
+                "They resist wear and tear longer than cotton.",
+                "But they are NOT biodegradable — that's their biggest disadvantage."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
               "needsHumanReview": false
             }
           ],
@@ -8086,6 +8662,86 @@
                 54
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q05",
+              "prompt": "Heat transfer through a metal spoon dipped in hot tea is:",
+              "questionType": "mcq",
+              "options": [
+                "Convection",
+                "Conduction",
+                "Radiation",
+                "Evaporation"
+              ],
+              "answer": "Conduction",
+              "solutionSteps": [
+                "In a solid, heat moves from hot end to cold end by particle vibration.",
+                "The metal spoon is a solid, so it's conduction.",
+                "No bulk movement of fluid (convection) and no radiation through vacuum here."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q06",
+              "prompt": "Why does the sea breeze blow from sea to land during the day?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Land heats up faster than the sea, so air over land rises and cooler air from the sea rushes in to replace it.",
+              "solutionSteps": [
+                "Daytime sun heats land more quickly than water.",
+                "Hot air over land becomes less dense and rises.",
+                "Cooler, denser air over the sea moves in to fill the gap — that's the sea breeze."
+              ],
+              "commonMistakes": [
+                "Many think the sea is hotter — it's actually cooler during the day."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q07",
+              "prompt": "The Sun's heat reaches Earth mostly by:",
+              "questionType": "mcq",
+              "options": [
+                "Conduction",
+                "Convection",
+                "Radiation",
+                "Insulation"
+              ],
+              "answer": "Radiation",
+              "solutionSteps": [
+                "Space is a vacuum — no particles for conduction or convection.",
+                "Radiation does not need a medium.",
+                "Sun's heat travels as electromagnetic waves through space."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q08",
+              "prompt": "Why are cooking pots made of metal but their handles of wood/plastic?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Metal is a good conductor — heat reaches the food quickly. Wood/plastic is an insulator — the handle stays cool for safe handling.",
+              "solutionSteps": [
+                "Metals like aluminium and steel conduct heat well, so food cooks fast.",
+                "Wood and plastic conduct heat poorly — they are insulators.",
+                "Insulator handles keep your hand safe while metal walls do the cooking."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -8401,6 +9057,111 @@
                 }
               ],
               "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q04",
+              "prompt": "Why do we wear light-coloured clothes in summer?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Light colours reflect most of the Sun's heat, keeping the body cooler. Dark colours absorb heat and feel hotter.",
+              "solutionSteps": [
+                "White reflects nearly all wavelengths of sunlight.",
+                "Black absorbs almost all wavelengths and converts them to heat.",
+                "In summer we want to reflect heat away → light/white clothes."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q05",
+              "prompt": "Woollen clothes keep us warm because:",
+              "questionType": "mcq",
+              "options": [
+                "Wool produces heat",
+                "Wool traps air, which is a poor conductor",
+                "Wool is heavy",
+                "Wool reflects heat"
+              ],
+              "answer": "Wool traps air, which is a poor conductor",
+              "solutionSteps": [
+                "Wool fibres have many tiny gaps that trap still air.",
+                "Air is one of the worst conductors of heat.",
+                "Trapped air prevents body heat from escaping — that's why wool keeps us warm."
+              ],
+              "commonMistakes": [
+                "Wool itself doesn't produce heat — your body does."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q06",
+              "prompt": "What is the greenhouse effect?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Greenhouse gases like CO₂ trap heat from the Earth's surface, keeping the planet warm — but too much of them causes global warming.",
+              "solutionSteps": [
+                "Sunlight passes through the atmosphere and warms the Earth.",
+                "Earth re-radiates infrared heat back to space.",
+                "Greenhouse gases (CO₂, methane, water vapour) trap some of this heat — keeping Earth's average temperature livable.",
+                "Excess CO₂ from burning fuels traps too much heat → climate change."
+              ],
+              "commonMistakes": [
+                "The greenhouse effect itself isn't bad — without it Earth would be too cold. The problem is excess CO₂."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q07",
+              "prompt": "Mercury is used in thermometers because:",
+              "questionType": "mcq",
+              "options": [
+                "It is silver-coloured",
+                "It expands uniformly with heat and doesn't stick to glass",
+                "It is the cheapest liquid",
+                "It freezes easily"
+              ],
+              "answer": "It expands uniformly with heat and doesn't stick to glass",
+              "solutionSteps": [
+                "Mercury is a metal liquid at room temperature with uniform expansion.",
+                "It doesn't wet glass, so readings are clear.",
+                "It has a wide range (-39 °C to 357 °C) covering body and lab temperatures."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q08",
+              "prompt": "The normal body temperature of a healthy human in Celsius is:",
+              "questionType": "mcq",
+              "options": [
+                "27 °C",
+                "37 °C",
+                "47 °C",
+                "100 °C"
+              ],
+              "answer": "37 °C",
+              "solutionSteps": [
+                "37 °C = 98.6 °F (the Fahrenheit reading you often see).",
+                "Above 38 °C is fever.",
+                "Below 35 °C is hypothermia."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false
             }
@@ -9217,6 +9978,108 @@
                 72
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q04",
+              "prompt": "When an acid reacts with a base, the products are:",
+              "questionType": "mcq",
+              "options": [
+                "Acid + water",
+                "Salt + water",
+                "Salt + hydrogen",
+                "Base + oxygen"
+              ],
+              "answer": "Salt + water",
+              "solutionSteps": [
+                "Neutralization reaction: Acid + Base → Salt + Water.",
+                "Example: HCl + NaOH → NaCl + H₂O.",
+                "The acidity and basicity cancel out, giving a neutral salt + water."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q05",
+              "prompt": "Why do we use milk of magnesia for acidity (heartburn)?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Milk of magnesia is a mild base (magnesium hydroxide). It neutralises the excess HCl in the stomach, giving relief.",
+              "solutionSteps": [
+                "The stomach makes HCl for digestion. Too much causes heartburn.",
+                "Magnesium hydroxide [Mg(OH)₂] is a mild base.",
+                "Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O — extra acid is neutralised."
+              ],
+              "commonMistakes": [
+                "We don't use a strong base — that would damage the stomach lining."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q06",
+              "prompt": "Toothpastes are usually basic. Why?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Bacteria in the mouth produce acids that decay teeth. Basic toothpastes neutralise these acids and protect tooth enamel.",
+              "solutionSteps": [
+                "After meals, bacteria break down food into acids.",
+                "Acids dissolve calcium in tooth enamel → cavities.",
+                "Toothpastes contain basic ingredients (like calcium carbonate) that neutralise mouth acids."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q07",
+              "prompt": "Common salt (NaCl) is the salt formed from:",
+              "questionType": "mcq",
+              "options": [
+                "HCl + KOH",
+                "HCl + NaOH",
+                "H₂SO₄ + NaOH",
+                "HNO₃ + NaOH"
+              ],
+              "answer": "HCl + NaOH",
+              "solutionSteps": [
+                "Hydrochloric acid + sodium hydroxide → sodium chloride + water.",
+                "HCl + NaOH → NaCl + H₂O.",
+                "NaCl is what we use in food daily."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q08",
+              "prompt": "Farmers spread quicklime on acidic soil. The purpose is to:",
+              "questionType": "mcq",
+              "options": [
+                "Add water",
+                "Neutralise the acidity",
+                "Kill bacteria",
+                "Add nitrogen"
+              ],
+              "answer": "Neutralise the acidity",
+              "solutionSteps": [
+                "Quicklime (CaO) reacts with water in soil to form Ca(OH)₂ — a base.",
+                "Ca(OH)₂ neutralises the soil's acids.",
+                "The soil pH rises closer to neutral — better for most crops."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -10016,6 +10879,107 @@
                 83,
                 84
               ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q02",
+              "prompt": "Crystallization is used to:",
+              "questionType": "mcq",
+              "options": [
+                "Mix two liquids",
+                "Obtain pure solids from a solution",
+                "Burn waste",
+                "Boil water"
+              ],
+              "answer": "Obtain pure solids from a solution",
+              "solutionSteps": [
+                "A hot saturated solution is cooled slowly.",
+                "Pure crystals of the solid form; impurities stay dissolved.",
+                "Examples: sugar from sugarcane juice, salt from sea water, copper sulphate."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q03",
+              "prompt": "How is rock salt purified by crystallization?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Rock salt is dissolved in water, the impurities are filtered out, and on slow evaporation, pure salt crystals form.",
+              "solutionSteps": [
+                "Crush rock salt and dissolve in warm water.",
+                "Filter the solution to remove dust and sand.",
+                "Heat gently and let water evaporate.",
+                "Pure salt crystallises out, leaving behind soluble impurities."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q04",
+              "prompt": "Why is crystallization better than simple evaporation for purification?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Simple evaporation leaves behind all dissolved substances — pure and impure. Crystallization gives only the pure solid as crystals, leaving impurities in solution.",
+              "solutionSteps": [
+                "Evaporation: heat until all water leaves → leaves a mixed solid.",
+                "Crystallization: cool slowly → only pure solute forms crystals.",
+                "That's why factories use crystallization to make pure sugar and pharmaceuticals."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q05",
+              "prompt": "Copper sulphate crystals are:",
+              "questionType": "mcq",
+              "options": [
+                "White cubes",
+                "Blue triclinic crystals",
+                "Yellow needles",
+                "Black powder"
+              ],
+              "answer": "Blue triclinic crystals",
+              "solutionSteps": [
+                "Dissolve copper sulphate in hot water — solution turns deep blue.",
+                "On slow cooling, pretty blue crystals form.",
+                "They have a tilted (triclinic) shape — easy to grow at home as a science project."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q06",
+              "prompt": "Which is NOT an example of crystallization in daily life?",
+              "questionType": "mcq",
+              "options": [
+                "Making sugar from sugarcane juice",
+                "Boiling rice",
+                "Making salt from sea water",
+                "Forming snowflakes"
+              ],
+              "answer": "Boiling rice",
+              "solutionSteps": [
+                "Sugar and salt are obtained as crystals — both crystallization.",
+                "Snowflakes form when water vapour crystallises in cold air.",
+                "Boiling rice is just water absorbing into rice — no crystals form."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
               "needsHumanReview": false
             }
           ]
@@ -10836,6 +11800,109 @@
                 93
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q04",
+              "prompt": "A polar bear's white fur helps it:",
+              "questionType": "mcq",
+              "options": [
+                "Reflect heat in summer",
+                "Blend with snow for hunting",
+                "Attract a mate",
+                "Conduct heat to the body"
+              ],
+              "answer": "Blend with snow for hunting",
+              "solutionSteps": [
+                "Polar bears live where everything is white snow.",
+                "White fur camouflages them when sneaking up on seals.",
+                "Also, the hollow hairs trap air and act as insulation."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q05",
+              "prompt": "Why do animals in cold regions have a thick layer of fat (blubber)?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Fat is a poor conductor of heat — blubber insulates the body and prevents heat loss in freezing climates.",
+              "solutionSteps": [
+                "Whales, seals and polar bears lose heat fast in icy water/snow.",
+                "Their thick fat layer is an excellent insulator.",
+                "Blubber also stores energy when food is scarce."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q06",
+              "prompt": "Camels can survive deserts because they:",
+              "questionType": "mcq",
+              "options": [
+                "Don't need water",
+                "Store water in their humps",
+                "Have broad feet, long eyelashes, and can survive on little water for many days",
+                "Hibernate in summer"
+              ],
+              "answer": "Have broad feet, long eyelashes, and can survive on little water for many days",
+              "solutionSteps": [
+                "Broad feet stop them sinking into sand.",
+                "Long eyelashes shield eyes from sandstorms.",
+                "They store FAT (not water) in their hump and use it for energy when food/water is scarce.",
+                "They sweat very little — saving water."
+              ],
+              "commonMistakes": [
+                "The hump stores fat, not water — a common misconception."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q07",
+              "prompt": "Why do many tropical animals have light-coloured fur?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Light fur reflects sunlight and prevents the body from absorbing too much heat in hot climates.",
+              "solutionSteps": [
+                "Light colours reflect most wavelengths of sunlight.",
+                "Less heat is absorbed by the skin — important in hot regions.",
+                "Many desert and savanna animals share this adaptation."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q08",
+              "prompt": "Penguins huddle together in cold weather mainly to:",
+              "questionType": "mcq",
+              "options": [
+                "Find food",
+                "Conserve body heat",
+                "Communicate",
+                "Mate"
+              ],
+              "answer": "Conserve body heat",
+              "solutionSteps": [
+                "When penguins huddle, only the outer ring loses heat to wind.",
+                "Penguins rotate so each gets a turn in the warm centre.",
+                "It is one of the most efficient natural heat-saving strategies."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -11291,6 +12358,109 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch08_t02_q23",
+              "prompt": "At night, the breeze blows from land to sea because:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Land cools faster than sea. Air over the warmer sea rises and cooler air from land moves in — this is the land breeze.",
+              "solutionSteps": [
+                "After sunset, land loses heat quickly.",
+                "Sea stays warmer because water cools slowly.",
+                "Warm air over the sea rises, and cooler air from land flows out to replace it.",
+                "So at night, breeze blows from land → sea."
+              ],
+              "commonMistakes": [
+                "Don't confuse with sea breeze (during the day, from sea → land)."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q24",
+              "prompt": "Sea breeze blows during the:",
+              "questionType": "mcq",
+              "options": [
+                "Night",
+                "Day",
+                "Rain only",
+                "Winter only"
+              ],
+              "answer": "Day",
+              "solutionSteps": [
+                "Sun heats land faster than sea during the day.",
+                "Hot air over land rises; cool sea air rushes in.",
+                "Direction: sea → land. Time: day."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q25",
+              "prompt": "Which property of water causes sea breeze and land breeze?",
+              "questionType": "mcq",
+              "options": [
+                "Water freezes at 0 °C",
+                "Water has a very high specific heat capacity (heats and cools slowly)",
+                "Water is transparent",
+                "Water is the universal solvent"
+              ],
+              "answer": "Water has a very high specific heat capacity (heats and cools slowly)",
+              "solutionSteps": [
+                "Specific heat = energy needed to heat 1 g by 1 °C.",
+                "Water has very high specific heat — it heats up and cools down slowly.",
+                "Land changes temperature fast; sea lags behind — this drives the breeze cycle."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q26",
+              "prompt": "Why are coastal cities cooler in summer than inland cities at the same latitude?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Sea breezes carry cool moist air from the ocean into coastal cities all day, moderating their summer heat.",
+              "solutionSteps": [
+                "Inland places have no sea nearby — heat builds up.",
+                "Coastal places enjoy a steady sea breeze from cooler water.",
+                "That's why Mumbai (coastal) feels milder than Delhi (inland) in May."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q27",
+              "prompt": "The sea breeze cycle is an example of:",
+              "questionType": "mcq",
+              "options": [
+                "Conduction",
+                "Convection currents in air",
+                "Radiation alone",
+                "Evaporation"
+              ],
+              "answer": "Convection currents in air",
+              "solutionSteps": [
+                "Hot air rises (less dense), cool air sinks (more dense).",
+                "This circular movement is convection.",
+                "Sea breeze and land breeze are both daily convection cycles."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -11849,6 +13019,67 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch09_t01_q19",
+              "prompt": "The topmost layer of soil is called:",
+              "questionType": "mcq",
+              "options": [
+                "Bedrock",
+                "Topsoil (A horizon)",
+                "Subsoil",
+                "Parent rock"
+              ],
+              "answer": "Topsoil (A horizon)",
+              "solutionSteps": [
+                "A horizon = topsoil. Dark, full of humus, where most plant roots grow.",
+                "B horizon = subsoil. Lighter, contains minerals washed down from A.",
+                "C horizon = parent rock. Below that lies bedrock."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q20",
+              "prompt": "Black soil is best for growing:",
+              "questionType": "mcq",
+              "options": [
+                "Tea",
+                "Cotton",
+                "Apples",
+                "Rubber"
+              ],
+              "answer": "Cotton",
+              "solutionSteps": [
+                "Black soil (regur) holds water well and is rich in calcium and magnesium.",
+                "These properties suit cotton perfectly.",
+                "Maharashtra, Gujarat and Madhya Pradesh are big cotton producers — they have black soil."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q21",
+              "prompt": "Why is humus important for fertile soil?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Humus is decomposed plant and animal matter. It adds nutrients, holds water, and helps air reach plant roots.",
+              "solutionSteps": [
+                "Bacteria and fungi break down dead leaves and animal bodies.",
+                "The dark crumbly residue is humus.",
+                "It supplies nitrogen, phosphorus and potassium and improves soil structure."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -12390,6 +13621,107 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch09_t03_q20",
+              "prompt": "Which farming practice helps PREVENT soil erosion on hill slopes?",
+              "questionType": "mcq",
+              "options": [
+                "Burning crop residue",
+                "Terrace farming",
+                "Over-grazing",
+                "Continuous tilling"
+              ],
+              "answer": "Terrace farming",
+              "solutionSteps": [
+                "On a slope, rain water rushes down and carries topsoil away.",
+                "Terraces cut steps into the slope — flat fields that hold water.",
+                "Topsoil stays in place; water sinks instead of running off."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t03_q21",
+              "prompt": "Planting trees in rows along the edge of farms reduces erosion by:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "The rows of trees act as windbreaks — they slow down wind and prevent it from blowing topsoil away.",
+              "solutionSteps": [
+                "Strong wind picks up loose dry topsoil and carries it far away.",
+                "Trees planted as a 'shelter belt' break the wind's speed.",
+                "Behind the trees, soil stays in place — crops protected."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t03_q22",
+              "prompt": "Crop rotation helps soil because:",
+              "questionType": "mcq",
+              "options": [
+                "It makes the soil harder",
+                "Different crops use different nutrients, so the soil isn't drained of one type",
+                "It reduces sunlight",
+                "It kills earthworms"
+              ],
+              "answer": "Different crops use different nutrients, so the soil isn't drained of one type",
+              "solutionSteps": [
+                "Growing the same crop every year removes the same nutrients each time.",
+                "Rotating with legumes (pulses) actually puts nitrogen back.",
+                "The soil stays balanced and productive year after year."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t03_q23",
+              "prompt": "Over-grazing leads to soil erosion because:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Animals eat grass down to the roots, leaving bare soil. Without grass to hold it, the topsoil washes or blows away easily.",
+              "solutionSteps": [
+                "Grass roots bind soil together and shield it from rain.",
+                "Heavy grazing strips the grass cover.",
+                "Bare exposed soil is washed away by rain or blown by wind — erosion accelerates."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t03_q24",
+              "prompt": "Which is NOT a method of soil conservation?",
+              "questionType": "mcq",
+              "options": [
+                "Contour ploughing",
+                "Afforestation",
+                "Excessive use of chemical pesticides",
+                "Mulching"
+              ],
+              "answer": "Excessive use of chemical pesticides",
+              "solutionSteps": [
+                "Contour ploughing follows the land's curves — slows runoff.",
+                "Afforestation adds trees that hold soil.",
+                "Mulching covers bare soil with straw — reduces evaporation and erosion.",
+                "Excessive pesticides kill earthworms and microbes — they actually HARM soil."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -13224,6 +14556,50 @@
                 127
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t03_q22",
+              "prompt": "Fish breathe through:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs",
+                "Gills",
+                "Tracheae",
+                "Skin"
+              ],
+              "answer": "Gills",
+              "solutionSteps": [
+                "Fish gulp water through the mouth.",
+                "Water flows over gills — feather-like organs full of blood capillaries.",
+                "Oxygen dissolved in water passes into the blood; CO₂ moves out."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t03_q23",
+              "prompt": "Earthworms breathe through their:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs",
+                "Gills",
+                "Moist skin",
+                "Tracheal tubes"
+              ],
+              "answer": "Moist skin",
+              "solutionSteps": [
+                "Earthworms have no lungs.",
+                "Their skin is thin, moist, and rich in blood vessels.",
+                "Oxygen dissolves in the moisture and diffuses into blood — that's why earthworms die if their skin dries out."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -13790,6 +15166,108 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch11_t02_q15",
+              "prompt": "The main excretory organs in humans are the:",
+              "questionType": "mcq",
+              "options": [
+                "Lungs",
+                "Liver",
+                "Kidneys",
+                "Heart"
+              ],
+              "answer": "Kidneys",
+              "solutionSteps": [
+                "Kidneys filter blood and remove urea, salts and excess water.",
+                "The filtered waste forms urine.",
+                "Urine travels through ureters → bladder → urethra → out."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q16",
+              "prompt": "What is dialysis?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Dialysis is a medical procedure that uses a machine to filter waste from the blood when a person's kidneys fail.",
+              "solutionSteps": [
+                "Kidneys clean blood normally.",
+                "If kidneys fail, waste builds up — life-threatening.",
+                "Dialysis machine acts as an artificial kidney: blood flows out, gets cleaned, and is returned.",
+                "Patients usually need this 2–3 times per week."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q17",
+              "prompt": "Sweat helps in:",
+              "questionType": "mcq",
+              "options": [
+                "Digestion",
+                "Excretion of salts and cooling the body",
+                "Breathing",
+                "Reproduction"
+              ],
+              "answer": "Excretion of salts and cooling the body",
+              "solutionSteps": [
+                "Sweat contains water + salts + a small amount of urea.",
+                "When sweat evaporates, it cools the skin.",
+                "It is a minor route of excretion as well."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q18",
+              "prompt": "Why do we feel thirsty when we sweat a lot?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Sweat removes water and salt from the body. The brain senses the loss and triggers thirst so we replace the lost fluid.",
+              "solutionSteps": [
+                "Sweating cools the body but uses up water.",
+                "Blood becomes slightly more concentrated.",
+                "The brain's thirst centre detects this and we feel thirsty.",
+                "Drinking water restores the balance."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q19",
+              "prompt": "The yellow colour of urine is mainly due to:",
+              "questionType": "mcq",
+              "options": [
+                "Iron",
+                "Urochrome (a pigment from broken-down haemoglobin)",
+                "Cholesterol",
+                "Sodium"
+              ],
+              "answer": "Urochrome (a pigment from broken-down haemoglobin)",
+              "solutionSteps": [
+                "Old red blood cells are broken down in the liver.",
+                "One of the breakdown products, urochrome, is yellow.",
+                "It exits the body in urine — giving it the typical yellow colour."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -13995,6 +15473,68 @@
                 140,
                 141
               ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_q23",
+              "prompt": "The tissue in plants that transports water from roots to leaves is:",
+              "questionType": "mcq",
+              "options": [
+                "Phloem",
+                "Xylem",
+                "Cambium",
+                "Cork"
+              ],
+              "answer": "Xylem",
+              "solutionSteps": [
+                "Xylem carries water and minerals UP from roots.",
+                "Phloem carries food (sugar from leaves) DOWN to other parts.",
+                "Think 'X-up' for xylem-up."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_q24",
+              "prompt": "Transpiration in plants is similar to which process in animals?",
+              "questionType": "mcq",
+              "options": [
+                "Digestion",
+                "Sweating",
+                "Breathing",
+                "Hibernation"
+              ],
+              "answer": "Sweating",
+              "solutionSteps": [
+                "Plants lose water from tiny pores (stomata) in leaves — transpiration.",
+                "Animals lose water from skin pores — sweating.",
+                "Both cool the body and drive water uptake."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_q25",
+              "prompt": "Why do leaves usually wilt in extreme heat?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "In heat, water loss through transpiration is faster than the roots can supply. Cells lose turgor and the leaf droops.",
+              "solutionSteps": [
+                "Stomata open and water vapour escapes.",
+                "Roots try to pull more water from the soil.",
+                "If the soil is dry or the demand is too high, leaf cells lose water and become limp.",
+                "Watering or shade restores turgor and the leaf revives."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
               "needsHumanReview": false
             }
           ]
@@ -14726,6 +16266,67 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch12_t03_q21",
+              "prompt": "When a piece of a potato grows into a new plant from its 'eye', this is:",
+              "questionType": "mcq",
+              "options": [
+                "Sexual reproduction",
+                "Vegetative propagation",
+                "Pollination",
+                "Germination"
+              ],
+              "answer": "Vegetative propagation",
+              "solutionSteps": [
+                "No seeds are involved.",
+                "A part of the parent (potato 'eye') grows into a new plant.",
+                "This is asexual reproduction by vegetative propagation."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t03_q22",
+              "prompt": "Yeast reproduces asexually by:",
+              "questionType": "mcq",
+              "options": [
+                "Fragmentation",
+                "Budding",
+                "Binary fission",
+                "Pollination"
+              ],
+              "answer": "Budding",
+              "solutionSteps": [
+                "A small bud forms on the parent cell.",
+                "It grows, then detaches as a new yeast cell.",
+                "This is why a single yeast cell can make millions overnight in dough."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t03_q23",
+              "prompt": "Bryophyllum (panphuti) leaves can grow new plants from the:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Notches along the leaf edge — buds form there and develop into new plantlets that drop and root in the soil.",
+              "solutionSteps": [
+                "Bryophyllum has notches on its leaf margins.",
+                "Tiny buds with roots form at each notch.",
+                "These drop to the soil and grow into independent plants — a beautiful example of vegetative propagation."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -15486,6 +17087,90 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch13_t03_q25",
+              "prompt": "Which device is used to measure short time intervals very accurately?",
+              "questionType": "mcq",
+              "options": [
+                "Sundial",
+                "Pendulum clock",
+                "Stopwatch",
+                "Calendar"
+              ],
+              "answer": "Stopwatch",
+              "solutionSteps": [
+                "Stopwatches can measure milliseconds.",
+                "Used in sports, lab experiments, and timing reactions.",
+                "Digital stopwatches are even more precise."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t03_q26",
+              "prompt": "Which is the oldest known time-measuring device?",
+              "questionType": "mcq",
+              "options": [
+                "Pendulum clock",
+                "Sundial",
+                "Atomic clock",
+                "Stopwatch"
+              ],
+              "answer": "Sundial",
+              "solutionSteps": [
+                "Sundials were used 4000+ years ago in Egypt and India.",
+                "They show time by the shadow of a vertical stick (gnomon).",
+                "Atomic clocks came in the 20th century — much later."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t03_q27",
+              "prompt": "Why are atomic clocks important?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Atomic clocks are the most accurate clocks ever built — losing less than a second in millions of years. They keep international time and run GPS satellites.",
+              "solutionSteps": [
+                "They use the vibration frequency of caesium atoms.",
+                "Their accuracy: one second error in ~30 million years.",
+                "GPS depends on atomic clocks to triangulate your position.",
+                "Without them, mobile phones, internet timestamps and aviation would not work as we know them."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t03_q28",
+              "prompt": "The seconds hand on a wall clock completes one full circle in:",
+              "questionType": "mcq",
+              "options": [
+                "1 second",
+                "1 minute",
+                "1 hour",
+                "1 day"
+              ],
+              "answer": "1 minute",
+              "solutionSteps": [
+                "60 seconds = 1 minute.",
+                "The seconds hand ticks 60 times to make one full revolution.",
+                "Each revolution = one minute."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -16117,6 +17802,107 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch14_t02_q14",
+              "prompt": "An electric heater works because of the:",
+              "questionType": "mcq",
+              "options": [
+                "Magnetic effect of current",
+                "Heating effect of current",
+                "Chemical effect of current",
+                "Lighting effect of current"
+              ],
+              "answer": "Heating effect of current",
+              "solutionSteps": [
+                "When current passes through a wire with high resistance, the wire gets hot.",
+                "This is the heating effect of electricity.",
+                "Heaters, irons, geysers and toasters all use this principle."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_q15",
+              "prompt": "Why are the heating elements in toasters made of nichrome (not copper)?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Nichrome has high resistance and high melting point, so it gets red-hot without melting. Copper has low resistance and would barely heat up.",
+              "solutionSteps": [
+                "Heat produced = I² × R × t (Joule's law). Higher R → more heat.",
+                "Nichrome: high resistance + does not melt at orange-hot temperatures.",
+                "Copper: very low resistance + lower melting point. It would just carry current without heating much."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_q16",
+              "prompt": "A fuse melts when:",
+              "questionType": "mcq",
+              "options": [
+                "The current is too low",
+                "The current exceeds the safe value",
+                "The voltage is normal",
+                "The bulb fuses"
+              ],
+              "answer": "The current exceeds the safe value",
+              "solutionSteps": [
+                "A fuse is a thin wire with a specific current rating.",
+                "If the current crosses that rating, the wire heats up and melts.",
+                "This breaks the circuit and protects appliances from damage."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_q17",
+              "prompt": "What is the safer modern replacement for fuses in homes?",
+              "questionType": "mcq",
+              "options": [
+                "Bulbs",
+                "MCBs (Miniature Circuit Breakers)",
+                "Resistors",
+                "Switches"
+              ],
+              "answer": "MCBs (Miniature Circuit Breakers)",
+              "solutionSteps": [
+                "MCBs trip automatically when current is too high.",
+                "Unlike fuses, they can be reset by flipping a switch — no need to replace.",
+                "They are now standard in most Indian homes."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_q18",
+              "prompt": "An electric bulb glows because:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Current passes through a thin tungsten filament with high resistance. The filament heats up to ~2500 °C and glows white-hot — giving off light.",
+              "solutionSteps": [
+                "Tungsten can withstand 3400 °C without melting.",
+                "When current flows, the filament gets very hot.",
+                "At extreme temperatures, the wire glows brightly.",
+                "The bulb is filled with argon gas so the filament doesn't burn out."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17763,6 +19549,107 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch16_t02_q20",
+              "prompt": "Drip irrigation is best for areas where:",
+              "questionType": "mcq",
+              "options": [
+                "Water is abundant",
+                "Water is scarce",
+                "Soil is rocky",
+                "There is no electricity"
+              ],
+              "answer": "Water is scarce",
+              "solutionSteps": [
+                "Drip irrigation delivers water drop-by-drop directly to roots.",
+                "Hardly any water is lost to evaporation or run-off.",
+                "It saves 30–70 % of water compared to flood irrigation — perfect for dry regions."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_q21",
+              "prompt": "Rainwater harvesting means:",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Collecting and storing rainwater (from rooftops or open surfaces) for later use, often by directing it into wells or storage tanks.",
+              "solutionSteps": [
+                "Rain falling on roofs is channelled through pipes into storage tanks or recharge pits.",
+                "Stored water can be used for gardening, washing or even drinking after filtering.",
+                "Recharge pits send rainwater underground, refilling the water table."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_q22",
+              "prompt": "Which traditional Indian water structure is used to collect rainwater?",
+              "questionType": "mcq",
+              "options": [
+                "Baoli (stepwell)",
+                "Aquaduct",
+                "Tube well",
+                "Borewell"
+              ],
+              "answer": "Baoli (stepwell)",
+              "solutionSteps": [
+                "Baolis are ancient stepped wells across Rajasthan, Gujarat and Delhi.",
+                "They collected monsoon rain and stored it for the dry season.",
+                "Many baolis are still functional today — e.g., Agrasen ki Baoli in Delhi."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_q23",
+              "prompt": "Sprinkler irrigation is most useful for:",
+              "questionType": "mcq",
+              "options": [
+                "Paddy fields",
+                "Sandy and uneven land",
+                "Heavy clay soil",
+                "Flooded fields"
+              ],
+              "answer": "Sandy and uneven land",
+              "solutionSteps": [
+                "Sandy land drains too fast for flood irrigation.",
+                "Sprinklers spray a fine mist evenly — like rain.",
+                "Even uneven slopes get water without runoff."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_q24",
+              "prompt": "Why is rooftop rainwater harvesting promoted in cities?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Cities have hard concrete surfaces — rainwater runs off without recharging groundwater. Rooftop harvesting captures this water and either stores it or sends it back into the ground.",
+              "solutionSteps": [
+                "In villages, rain seeps into soil naturally.",
+                "In cities, concrete and tar block infiltration — water rushes into drains.",
+                "Rooftop harvesting captures rain before it is wasted.",
+                "It can be stored for use or directed into recharge pits to refill the water table."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17810,6 +19697,108 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch16_t03_q18",
+              "prompt": "Which day is observed as World Water Day?",
+              "questionType": "mcq",
+              "options": [
+                "5th June",
+                "22nd March",
+                "8th March",
+                "16th September"
+              ],
+              "answer": "22nd March",
+              "solutionSteps": [
+                "5th June is World Environment Day.",
+                "8th March is International Women's Day.",
+                "22nd March is World Water Day — focusing on freshwater issues globally."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_q19",
+              "prompt": "Most freshwater on Earth is locked up as:",
+              "questionType": "mcq",
+              "options": [
+                "Rivers and lakes",
+                "Glaciers and polar ice caps",
+                "Groundwater only",
+                "Atmosphere"
+              ],
+              "answer": "Glaciers and polar ice caps",
+              "solutionSteps": [
+                "About 70 % of Earth's freshwater is frozen in glaciers and ice caps.",
+                "Less than 1 % of all water is easily usable (rivers, lakes, shallow groundwater).",
+                "That's why every drop matters."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_q20",
+              "prompt": "Suggest three ways a student can save water at home.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Close taps tightly, fix leaking taps, take shorter showers/use a bucket instead of running shower, reuse RO reject water for plants/mopping, do not leave the tap running while brushing.",
+              "solutionSteps": [
+                "Tap leaks: even one drop a second = 5+ litres a day wasted.",
+                "Bucket bath uses ~15 L vs running shower ~40 L.",
+                "RO water purifiers reject ~3 L for every 1 L purified — collect and reuse it for plants and mopping.",
+                "Brushing with running tap wastes 4-6 L per minute."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_q21",
+              "prompt": "The total water available on Earth that is fit for drinking is approximately:",
+              "questionType": "mcq",
+              "options": [
+                "50 %",
+                "25 %",
+                "Less than 1 %",
+                "100 %"
+              ],
+              "answer": "Less than 1 %",
+              "solutionSteps": [
+                "97 % of Earth's water is salty (oceans) — not drinkable.",
+                "Of the remaining 3 % freshwater, ~70 % is frozen in ice.",
+                "Less than 1 % of total water is available as accessible freshwater."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_q22",
+              "prompt": "Why is groundwater depletion in Punjab and Haryana a serious problem?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "These states use enormous amounts of groundwater for wheat and rice farming. The water table is falling fast, wells are drying up, and the next generation may not have enough water for farming or drinking.",
+              "solutionSteps": [
+                "Punjab and Haryana grow the bulk of India's wheat and paddy.",
+                "Rice is especially water-thirsty — flood irrigation drains aquifers.",
+                "The water table is falling by 0.5–1 metre per year.",
+                "Without crop diversification and drip irrigation, the region faces severe water stress."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -18478,6 +20467,45 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch17_t02_q19",
+              "prompt": "Decomposers in the forest are mainly:",
+              "questionType": "mcq",
+              "options": [
+                "Plants",
+                "Bacteria and fungi",
+                "Tigers and lions",
+                "Insects only"
+              ],
+              "answer": "Bacteria and fungi",
+              "solutionSteps": [
+                "When leaves, dung and animal bodies fall to the floor, bacteria and fungi break them down.",
+                "They release nutrients back into the soil.",
+                "Without decomposers, the forest floor would be buried under unrotted matter."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t02_q20",
+              "prompt": "Why is the forest floor often dark even at noon?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "The dense canopy of tall trees blocks most sunlight from reaching the ground, keeping the floor shaded and cool.",
+              "solutionSteps": [
+                "Tall trees form a leafy canopy ~30 m above the ground.",
+                "Their broad leaves intercept most sunlight for photosynthesis.",
+                "Only filtered light reaches the floor — perfect for shade-loving ferns and decomposers."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         },
@@ -18504,6 +20532,111 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch17_t03_q21",
+              "prompt": "Deforestation directly causes:",
+              "questionType": "mcq",
+              "options": [
+                "Cooling of the planet",
+                "Soil erosion and loss of habitats",
+                "Increase in clean water",
+                "More oxygen in the air"
+              ],
+              "answer": "Soil erosion and loss of habitats",
+              "solutionSteps": [
+                "Tree roots hold soil together — without them, rain washes topsoil away.",
+                "Forest animals lose their homes when trees are cut.",
+                "Local rainfall decreases and global CO₂ levels rise."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_q22",
+              "prompt": "What is the Chipko Movement?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "A 1970s grassroots movement in Uttarakhand where local people, especially women, hugged trees to stop them from being cut by contractors. 'Chipko' literally means 'to hug'.",
+              "solutionSteps": [
+                "In 1973, villagers in Reni village hugged trees to stop loggers.",
+                "Led by Sunderlal Bahuguna, Chandi Prasad Bhatt and others.",
+                "It led to a 15-year ban on commercial tree-felling in many Himalayan forests.",
+                "Inspired similar non-violent ecological movements worldwide."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_q23",
+              "prompt": "Afforestation means:",
+              "questionType": "mcq",
+              "options": [
+                "Cutting forests",
+                "Planting trees in areas that had no forest",
+                "Burning forests",
+                "Building roads in forests"
+              ],
+              "answer": "Planting trees in areas that had no forest",
+              "solutionSteps": [
+                "Afforestation = creating a new forest.",
+                "Reforestation = restoring a forest where one used to be.",
+                "Both fight desertification and climate change."
+              ],
+              "commonMistakes": [
+                "Afforestation and reforestation are slightly different — both are good, but the targets differ."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_q24",
+              "prompt": "Which of these animals is critically endangered due to deforestation in India?",
+              "questionType": "mcq",
+              "options": [
+                "Pigeon",
+                "House sparrow",
+                "Asiatic lion / Bengal tiger / Hangul deer",
+                "Domestic cat"
+              ],
+              "answer": "Asiatic lion / Bengal tiger / Hangul deer",
+              "solutionSteps": [
+                "Asiatic lions survive only in Gir Forest, Gujarat.",
+                "Bengal tigers are protected under Project Tiger.",
+                "Hangul deer (Kashmir stag) is also critically endangered.",
+                "All three lose habitat when forests are cleared."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_q25",
+              "prompt": "Why are forests called the 'lungs of the planet'?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Forests absorb CO₂ and release oxygen through photosynthesis. They keep the atmosphere balanced — like lungs that take in CO₂ and breathe out O₂ for the whole planet.",
+              "solutionSteps": [
+                "All green plants do photosynthesis: CO₂ + H₂O + light → sugar + O₂.",
+                "Forests have billions of leaves doing this constantly.",
+                "They are major sinks for CO₂ — clearing them releases stored carbon and worsens global warming.",
+                "Amazon and Western Ghats are two of the world's largest 'lungs'."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
@@ -19206,6 +21339,108 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch18_t03_q22",
+              "prompt": "Open defecation is harmful because:",
+              "questionType": "mcq",
+              "options": [
+                "It saves water",
+                "It spreads diseases like cholera and typhoid through contaminated water and flies",
+                "It is cheap",
+                "It is convenient"
+              ],
+              "answer": "It spreads diseases like cholera and typhoid through contaminated water and flies",
+              "solutionSteps": [
+                "Faeces left in the open seep into water sources.",
+                "Flies pick up germs and land on food.",
+                "Cholera, typhoid, jaundice and diarrhoea spread rapidly — children are most vulnerable."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_q23",
+              "prompt": "The Swachh Bharat Abhiyan was launched in:",
+              "questionType": "mcq",
+              "options": [
+                "1947",
+                "1969",
+                "2014",
+                "2024"
+              ],
+              "answer": "2014",
+              "solutionSteps": [
+                "Launched by the Government of India on 2nd October 2014 (Gandhi's birth anniversary).",
+                "Aim: eliminate open defecation and improve sanitation across India.",
+                "Crores of household toilets have since been built."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_q24",
+              "prompt": "What is a low-cost on-site sanitation method suitable for villages?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Twin-pit toilets and septic tanks. The waste decomposes safely in pits; one pit is used while the other rests, turning waste into manure.",
+              "solutionSteps": [
+                "Twin-pit system: two pits used alternately.",
+                "While one is filling, the other's waste turns into safe manure (~1–2 years).",
+                "No sewer pipes or treatment plants needed — perfect for villages.",
+                "Promoted heavily under Swachh Bharat Abhiyan."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_q25",
+              "prompt": "Why should waste cooking oil NOT be poured down the kitchen sink?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Oil solidifies in pipes and clogs them. It also forms a layer in sewers that blocks sewage flow and pollutes rivers.",
+              "solutionSteps": [
+                "Hot oil seems liquid but cools and solidifies on pipe walls.",
+                "Over time, layers build into solid 'fatbergs' that block sewers.",
+                "Untreated oil reaching rivers prevents oxygen from dissolving — kills fish.",
+                "Better: cool oil, soak with newspaper, and discard in waste bin."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_q26",
+              "prompt": "Sanitary napkins and diapers should be disposed of by:",
+              "questionType": "mcq",
+              "options": [
+                "Flushing in the toilet",
+                "Wrapping in paper and placing in waste bin for incineration",
+                "Throwing in drains",
+                "Burning in the open"
+              ],
+              "answer": "Wrapping in paper and placing in waste bin for incineration",
+              "solutionSteps": [
+                "Flushed napkins clog sewers and harm sewer workers.",
+                "Open burning releases toxic fumes.",
+                "Wrapped disposal in dustbin allows safe collection and incineration in proper facilities."
+              ],
+              "commonMistakes": [],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [],
+              "needsHumanReview": false
             }
           ]
         }
