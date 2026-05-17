@@ -83,6 +83,13 @@ struct Scene1_PlantKitchen: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 11 (Transportation), Ch 17 (Forests)",
+                detail: "Plants need water reaching their leaves to do photosynthesis — Ch 11 explains the xylem pipeline that gets it there. And the global O₂ cycle this powers is covered in Ch 17."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                     GotItButton {
                         onComplete()
                     }

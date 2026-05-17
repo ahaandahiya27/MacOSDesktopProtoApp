@@ -55,6 +55,13 @@ struct Scene1_WaterPie: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 7 (Weather), Ch 8 (Winds), Ch 18 (Wastewater)",
+                detail: "The water cycle is the engine: evaporation → clouds (Ch 7) → wind carries them (Ch 8) → rain falls back. After we use it, Ch 18 shows how it returns to the same cycle through treatment plants."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

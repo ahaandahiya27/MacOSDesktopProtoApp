@@ -66,6 +66,13 @@ struct Scene7_WormEngineer: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 17 (Forests), Ch 18 (Wastewater)",
+                detail: "Earthworms decompose leaf litter into humus — Ch 17 shows the same animals at work in forest floors. Modern composting (Ch 18) uses the same biology to recycle home kitchen waste."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

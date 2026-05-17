@@ -58,6 +58,13 @@ struct Scene1_InhaleExhale: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 11 (Transportation), Ch 17 (Forests)",
+                detail: "Your lungs put O₂ into the blood — Chapter 11 takes over from there, showing how the heart pumps that blood to every cell. And every breath of O₂ you take was once exhaled by a plant — Chapter 17 covers how forests keep that supply going."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

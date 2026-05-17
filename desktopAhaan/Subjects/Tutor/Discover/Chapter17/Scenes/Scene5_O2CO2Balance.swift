@@ -63,6 +63,13 @@ struct Scene5_O2CO2Balance: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 1, Ch 10, Ch 11",
+                detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

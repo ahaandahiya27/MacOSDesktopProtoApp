@@ -69,6 +69,13 @@ struct Scene5_SeedDispersal: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 17 (Forests), Ch 8 (Winds)",
+                detail: "Seed dispersal is how forests regrow (Ch 17). Wind-dispersed seeds (dandelion, pine) ride the same air currents that drive cyclones and breezes (Ch 8). The atmosphere is part of how life spreads."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

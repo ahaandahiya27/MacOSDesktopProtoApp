@@ -56,6 +56,13 @@ struct Scene1_MirrorMirror: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 8 (Winds, Storms)",
+                detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

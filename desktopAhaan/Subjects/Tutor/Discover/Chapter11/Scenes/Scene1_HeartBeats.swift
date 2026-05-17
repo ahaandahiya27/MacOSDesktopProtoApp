@@ -62,6 +62,13 @@ struct Scene1_HeartBeats: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 10 (Respiration), Ch 1 (Nutrition in Plants)",
+                detail: "The heart's right side pumps blood TO the lungs (Ch 10) to pick up oxygen; the left side pumps it to every cell that respires (Ch 10 again). The same oxygen was made by plants doing photosynthesis (Ch 1)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

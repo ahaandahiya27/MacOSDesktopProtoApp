@@ -73,6 +73,13 @@ struct Scene1_HotAirRises: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 4 (Heat), Ch 6 (Phys/Chem Changes)",
+                detail: "The reason hot air rises — thermal expansion — is part of the bigger heat-transfer story in Ch 4 (conduction, convection, radiation). And Ch 6 covers how heat drives state changes (ice → water → steam) using the same physics."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

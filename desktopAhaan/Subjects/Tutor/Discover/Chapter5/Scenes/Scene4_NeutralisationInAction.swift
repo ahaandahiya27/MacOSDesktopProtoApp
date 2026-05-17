@@ -114,6 +114,13 @@ struct Scene4_NeutralisationInAction: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     if pourProgress >= 1 {
+            RelatedConceptsCallout(
+                title: "Related: Ch 6 (Phys/Chem Changes), Ch 9 (Soil), Ch 18 (Wastewater)",
+                detail: "Neutralisation is one of Chapter 6's classic chemical changes (new substance formed). Farmers use it on acidic soil (Ch 9 — add lime). Treatment plants use it on acidic industrial effluent (Ch 18 — neutralise before release)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }

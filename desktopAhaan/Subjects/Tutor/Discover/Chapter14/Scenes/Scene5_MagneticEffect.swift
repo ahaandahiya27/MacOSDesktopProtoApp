@@ -61,6 +61,13 @@ struct Scene5_MagneticEffect: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 15 (Light)",
+                detail: "Electric current creates a magnetic field (Ørsted 1820). The reverse is also true — a changing magnetic field creates a current (Faraday). In Class 12 you'll learn light itself is an oscillating combination of these two — that's why Light (Ch 15) and Electricity (Ch 14) eventually merge."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

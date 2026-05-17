@@ -574,6 +574,40 @@ Every sparse chapter now has **7 article surfaces** — closing to within striki
 
 Build verified green after pbxproj patching. macOS 11 (Big Sur) safe — pure HTML + CSS reusing each chapter's themed style.css.
 
+## Cross-chapter concept links — the knowledge-graph layer (NEW)
+
+After every scene now has its own Try-at-Home and Looking-Ahead sidebars, the next architectural gap was: **the chapters didn't talk to each other**. Class 7 NCERT's actual genius is the interlinking — photosynthesis ↔ transpiration ↔ forests; respiration ↔ circulation; electricity ↔ light via the EM spectrum — but none of those connections were surfaced in the app.
+
+New component: `RelatedConceptsCallout` (teal-tinted, `link.circle.fill` SF Symbol). Visually distinct from the existing three sidebar styles:
+
+| Sidebar | Colour | Meaning |
+|---|---|---|
+| `SoftShadowCard` | neutral grey | The concept itself |
+| `TryAtHomeCallout` | orange | Do-it-at-home experiment |
+| `LookingAheadCallout` | purple | Class 10 / 12 / JEE / NEET continuation |
+| **`RelatedConceptsCallout`** | **teal** | **Same idea, different chapter** |
+
+Applied to **12 scenes** where the cross-chapter pedagogy is strongest:
+
+| Scene | Cross-links |
+|---|---|
+| Ch 1 / PlantKitchen | → Ch 11 (water transport) + Ch 17 (forests) |
+| Ch 5 / NeutralisationInAction | → Ch 6 chemical changes + Ch 9 soil pH + Ch 18 effluent treatment |
+| Ch 8 / HotAirRises | → Ch 4 heat conduction/convection/radiation + Ch 6 state changes |
+| Ch 9 / WormEngineer | → Ch 17 forest decomposers + Ch 18 home composting |
+| Ch 10 / InhaleExhale | → Ch 11 circulation + Ch 17 forests as oxygen source |
+| Ch 11 / HeartBeats | → Ch 10 lungs + Ch 1 plants making the O₂ |
+| Ch 11 / TranspirationPull | → Ch 1 photosynthesis + Ch 16 water cycle |
+| Ch 12 / SeedDispersal | → Ch 17 forest regrowth + Ch 8 wind currents |
+| Ch 14 / MagneticEffect | → Ch 15 light (Class 12: EM waves unify the two) |
+| Ch 15 / MirrorMirror | → Sound reflection (echoes follow the same law) |
+| Ch 16 / WaterPie | → Ch 7 weather + Ch 8 winds + Ch 18 wastewater |
+| Ch 17 / O₂CO₂Balance | → Ch 1 photosynthesis + Ch 10 respiration + Ch 11 transport — full carbon/O₂ cycle |
+
+This is now four sidebar types per scene maximum. Kids see a coherent "concept graph" rather than 19 isolated chapters — exactly the way teachers connect them on a blackboard.
+
+macOS 11 (Big Sur) safe — SF Symbols 2 (`link.circle.fill`) + `Color.compatTeal.opacity` + standard SwiftUI. Zero new APIs.
+
 ---
 
 *Generated at: 2026-05-17.*

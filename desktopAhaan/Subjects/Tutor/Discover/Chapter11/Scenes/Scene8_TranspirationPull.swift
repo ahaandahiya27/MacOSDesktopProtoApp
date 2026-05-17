@@ -77,6 +77,13 @@ struct Scene8_TranspirationPull: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            RelatedConceptsCallout(
+                title: "Related: Ch 1 (Nutrition in Plants), Ch 16 (Water)",
+                detail: "Transpiration carries water + dissolved minerals to the leaves — where Ch 1's photosynthesis uses them. And every litre a tree transpires came from the water cycle covered in Ch 16."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
