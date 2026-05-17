@@ -68,7 +68,7 @@ struct SettingsScreen: View {
 
                 Divider()
 
-                Label("How It Works", systemImage: "gearshape.2")
+                Label("How It Works", systemImage: SFSymbolCompat.name("gearshape.2"))
                     .font(.caption.weight(.semibold))
 
                 VStack(alignment: .leading, spacing: 8) {

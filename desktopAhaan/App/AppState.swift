@@ -244,6 +244,20 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .settings:  return "gearshape.fill"
         }
     }
+
+    /// Pretty-printed keyboard shortcut shown as a trailing badge in the
+    /// sidebar row, when this tool has a corresponding `Command` in the
+    /// menu bar (currently only Search has `⌘F` via `desktopAhaanApp.swift`).
+    /// Future tools that get a shortcut should declare it here AND wire the
+    /// `Command` next to the matching `.keyboardShortcut(...)` call.
+    var keyboardShortcut: String? {
+        switch self {
+        case .search:    return "\u{2318}F"  // ⌘F
+        case .bookmarks: return nil
+        case .discover:  return nil
+        case .settings:  return nil
+        }
+    }
 }
 
 // MARK: - AppTab (legacy, Sanskrit-internal)

@@ -18,7 +18,7 @@ Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Disc
 |----|----------|--------|
 | A1 | Swift 5.5 ViewBuilder 10-child limit per closure | ✅ static audit clean, Group{} wraps where needed |
 | A2 | No macOS 12+ APIs (`Bindable`, `Observable`, `.scrollPosition`, `Layout`, `.foregroundStyle`, `Charts`, …) | ✅ swept; build green under MACOSX_DEPLOYMENT_TARGET=11.0 in scripts/ci-build-test.sh — any macOS 12+ API would surface as an availability error |
-| A3 | No SF Symbols 3+/4+ names | ✅ ~36 symbols routed through SFSymbolCompat. 2026-05-17 follow-up: iMac runtime surfaced 3 unrouted symbols (`fork.knife`, `figure.2.and.child.holdinghands`, `pencil.and.ruler.fill`) — added to shim + fixed 5 direct-bypass call-sites + caught a cascading bug where `frying.pan.fill` fell back to also-modern `fork.knife` |
+| A3 | No SF Symbols 3+/4+ names | ✅ ~38 symbols routed through SFSymbolCompat. 2026-05-17 follow-up: iMac runtime surfaced 3 unrouted symbols (`fork.knife`, `figure.2.and.child.holdinghands`, `pencil.and.ruler.fill`); defensive sweep added 2 more (`figure.run`, `gearshape.2`); fixed 7 direct-bypass call-sites; caught a cascading bug where `frying.pan.fill` fell back to also-modern `fork.knife` |
 | A4 | No `try!` / `as!` / `[i]!` in runtime paths | ✅ swept; only file is `FoundationTutor` shim (intentional) |
 | A5 | x86_64 + arm64 universal binary | ✅ Release config: ONLY_ACTIVE_ARCH=NO + default ARCHS_STANDARD; produces universal slice |
 | A6 | Type-check timeout from complex SwiftUI expressions | ✅ static audit clean (Kaleidoscope refactor was the canary) |
@@ -476,7 +476,7 @@ in the project memory.
 | SB5 | Subject badges inconsistent — dup of CL7 | 🟡 |
 | SB6 | Active subject / tool selection style varies | ❌ |
 | SB7 | Sidebar width not resizable / persisted | ❌ |
-| SB8 | No keyboard shortcut hints next to tool labels | ❌ |
+| SB8 | No keyboard shortcut hints next to tool labels | 🟡 `SidebarTool.keyboardShortcut` declared; sidebar Tool rows now show the shortcut as a monospaced trailing badge. Currently only `.search` has ⌘F. Bookmarks / Discover Progress / Settings still pending matching `.keyboardShortcut(...)` menu wiring |
 
 ### Z.ID — Iconography & imagery
 

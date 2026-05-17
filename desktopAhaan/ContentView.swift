@@ -203,8 +203,17 @@ struct ContentView: View {
 
             Section(header: Text("Tools")) {
                 ForEach(SidebarTool.allCases) { tool in
-                    Label(tool.title, systemImage: tool.systemImage)
-                        .tag(SidebarSelection.tool(tool))
+                    HStack {
+                        Label(tool.title, systemImage: tool.systemImage)
+                        Spacer(minLength: 6)
+                        if let shortcut = tool.keyboardShortcut {
+                            Text(shortcut)
+                                .font(.system(.caption, design: .monospaced))
+                                .foregroundColor(.secondary)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                    .tag(SidebarSelection.tool(tool))
                 }
             }
         }

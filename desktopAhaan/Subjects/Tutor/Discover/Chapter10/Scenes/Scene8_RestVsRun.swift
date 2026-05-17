@@ -44,7 +44,7 @@ struct Scene8_RestVsRun: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("More activity, more oxygen", systemImage: "figure.run")
+                    Label("More activity, more oxygen", systemImage: SFSymbolCompat.name("figure.run"))
                         .font(.title2.bold())
                     Text("Running muscles burn glucose faster, so they demand more oxygen. Your brain tells the lungs to pump quicker and deeper. After exercise, deep breaths repay the oxygen debt that built up.")
                         .font(.body).lineSpacing(4)
