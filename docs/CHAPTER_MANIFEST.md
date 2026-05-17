@@ -11,12 +11,12 @@ Source pack: `science_class7.json` v0.31.0-topup-ids-canonical (2026-05-03T19:30
 |  2 | Nutrition in Animals | 3 | 20 | 30 | 0 | 24 | ✅ |
 |  3 | Fibre to Fabric | 3 | 15 | 30 | 0 | 19 | ✅ |
 |  4 | Heat | 3 | 16 | 29 | 0 | 20 | ✅ |
-|  5 | Acids, Bases and Salts | 3 | 8 | 31 | 0 | 11 | ✅ |
-|  6 | Physical and Chemical Changes | 3 | 8 | 33 | 0 | 12 | ✅ |
-|  7 | Weather, Climate and Adaptations of Animals to Climate | 3 | 8 | 33 | 0 | 12 | ✅ |
+|  5 | Acids, Bases and Salts | 3 | 8 | 31 | 0 | 16 | ✅ |
+|  6 | Physical and Chemical Changes | 3 | 8 | 33 | 0 | 17 | ✅ |
+|  7 | Weather, Climate and Adaptations of Animals to Climate | 3 | 8 | 33 | 0 | 17 | ✅ |
 |  8 | Winds, Storms and Cyclones | 3 | 6 | 28 | 0 | 10 | ✅ |
-|  9 | Soil | 3 | 7 | 28 | 0 | 10 | ✅ |
-| 10 | Respiration in Organisms | 3 | 7 | 23 | 0 | 10 | ✅ |
+|  9 | Soil | 3 | 7 | 28 | 0 | 11 | ✅ |
+| 10 | Respiration in Organisms | 3 | 7 | 23 | 0 | 11 | ✅ |
 | 11 | Transportation in Animals and Plants | 3 | 6 | 30 | 0 | 10 | ✅ |
 | 12 | Reproduction in Plants | 3 | 6 | 24 | 0 | 10 | ✅ |
 | 13 | Motion and Time | 3 | 6 | 28 | 0 | 10 | ✅ |
@@ -26,7 +26,7 @@ Source pack: `science_class7.json` v0.31.0-topup-ids-canonical (2026-05-03T19:30
 | 17 | Forest: Our Lifeline | 3 | 6 | 29 | 0 | 10 | ✅ |
 | 18 | Wastewater Story | 3 | 6 | 27 | 0 | 10 | ✅ |
 | 19 | Earth, Moon and the Sun | 3 | 23 | 99 | 0 | 27 | ✅ |
-| | **Total** | **57** | **190** | **637** | **0** | **266** | **19/19** |
+| | **Total** | **57** | **190** | **637** | **0** | **283** | **19/19** |
 
 ## How to read this
 
