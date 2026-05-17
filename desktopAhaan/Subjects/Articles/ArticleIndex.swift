@@ -638,6 +638,10 @@ enum ArticleIndex {
         "ch08_t01_c01": ArticleEntry(id: "ch08_t01_c01", filename: "ch08_t01_c01.html",
             title: "Why Air Rises When Heated",
             chapterFolder: chapter8Folder, estimatedMinutes: 6),
+        "ch08_t01_c02": ArticleEntry(id: "ch08_t01_c02", filename: "ch08_t01_c02.html",
+            title: "Air Pressure and How We Measure It",
+            chapterFolder: chapter8Folder, estimatedMinutes: 6),
+
 
         "ch08_t02": ArticleEntry(id: "ch08_t02", filename: "ch08_t02_overview.html",
             title: "Sea Breeze and Land Breeze — Topic Overview",
@@ -668,6 +672,10 @@ enum ArticleIndex {
         "ch09_t01_c01": ArticleEntry(id: "ch09_t01_c01", filename: "ch09_t01_c01.html",
             title: "The Four Soil Horizons",
             chapterFolder: chapter9Folder, estimatedMinutes: 6),
+        "ch09_t01_c02": ArticleEntry(id: "ch09_t01_c02", filename: "ch09_t01_c02.html",
+            title: "Sand, Clay and Loam — Why Particle Size Matters",
+            chapterFolder: chapter9Folder, estimatedMinutes: 6),
+
 
         "ch09_t02": ArticleEntry(id: "ch09_t02", filename: "ch09_t02_overview.html",
             title: "Soil for Life — Topic Overview",
@@ -698,6 +706,10 @@ enum ArticleIndex {
         "ch10_t01_c01": ArticleEntry(id: "ch10_t01_c01", filename: "ch10_t01_c01.html",
             title: "Inhalation and Exhalation",
             chapterFolder: chapter10Folder, estimatedMinutes: 6),
+        "ch10_t01_c02": ArticleEntry(id: "ch10_t01_c02", filename: "ch10_t01_c02.html",
+            title: "Gas Exchange in the Alveoli",
+            chapterFolder: chapter10Folder, estimatedMinutes: 7),
+
 
         "ch10_t02": ArticleEntry(id: "ch10_t02", filename: "ch10_t02_overview.html",
             title: "Aerobic vs Anaerobic Respiration — Topic Overview",
@@ -728,6 +740,10 @@ enum ArticleIndex {
         "ch11_t01_c01": ArticleEntry(id: "ch11_t01_c01", filename: "ch11_t01_c01.html",
             title: "The Four-Chambered Heart",
             chapterFolder: chapter11Folder, estimatedMinutes: 7),
+        "ch11_t01_c02": ArticleEntry(id: "ch11_t01_c02", filename: "ch11_t01_c02.html",
+            title: "Blood Components",
+            chapterFolder: chapter11Folder, estimatedMinutes: 7),
+
 
         "ch11_t02": ArticleEntry(id: "ch11_t02", filename: "ch11_t02_overview.html",
             title: "Excretion and the Kidneys — Topic Overview",
@@ -758,6 +774,10 @@ enum ArticleIndex {
         "ch12_t01_c01": ArticleEntry(id: "ch12_t01_c01", filename: "ch12_t01_c01.html",
             title: "Flower Anatomy in Detail",
             chapterFolder: chapter12Folder, estimatedMinutes: 7),
+        "ch12_t01_c02": ArticleEntry(id: "ch12_t01_c02", filename: "ch12_t01_c02.html",
+            title: "Pollinators and Their Strategies",
+            chapterFolder: chapter12Folder, estimatedMinutes: 7),
+
 
         "ch12_t02": ArticleEntry(id: "ch12_t02", filename: "ch12_t02_overview.html",
             title: "Fertilisation and Seed Formation — Topic Overview",
@@ -788,6 +808,10 @@ enum ArticleIndex {
         "ch13_t01_c01": ArticleEntry(id: "ch13_t01_c01", filename: "ch13_t01_c01.html",
             title: "What is Speed?",
             chapterFolder: chapter13Folder, estimatedMinutes: 6),
+        "ch13_t01_c02": ArticleEntry(id: "ch13_t01_c02", filename: "ch13_t01_c02.html",
+            title: "Uniform vs Non-Uniform Motion",
+            chapterFolder: chapter13Folder, estimatedMinutes: 6),
+
 
         "ch13_t02": ArticleEntry(id: "ch13_t02", filename: "ch13_t02_overview.html",
             title: "The Pendulum and Measuring Time — Topic Overview",
@@ -894,6 +918,10 @@ enum ArticleIndex {
         "ch16_t01_c01": ArticleEntry(id: "ch16_t01_c01", filename: "ch16_t01_c01.html",
             title: "How Much Drinkable Water Earth Actually Has",
             chapterFolder: chapter16Folder, estimatedMinutes: 6),
+        "ch16_t01_c02": ArticleEntry(id: "ch16_t01_c02", filename: "ch16_t01_c02.html",
+            title: "The Water Table and Aquifers",
+            chapterFolder: chapter16Folder, estimatedMinutes: 7),
+
 
         "ch16_t02": ArticleEntry(id: "ch16_t02", filename: "ch16_t02_overview.html",
             title: "Irrigation and Rainwater Harvesting — Topic Overview",
@@ -924,6 +952,10 @@ enum ArticleIndex {
         "ch17_t01_c01": ArticleEntry(id: "ch17_t01_c01", filename: "ch17_t01_c01.html",
             title: "Forest Strata",
             chapterFolder: chapter17Folder, estimatedMinutes: 6),
+        "ch17_t01_c02": ArticleEntry(id: "ch17_t01_c02", filename: "ch17_t01_c02.html",
+            title: "Food Webs and Energy Flow",
+            chapterFolder: chapter17Folder, estimatedMinutes: 7),
+
 
         "ch17_t02": ArticleEntry(id: "ch17_t02", filename: "ch17_t02_overview.html",
             title: "Decomposers and the Soil-Forest Cycle — Topic Overview",
@@ -954,6 +986,10 @@ enum ArticleIndex {
         "ch18_t01_c01": ArticleEntry(id: "ch18_t01_c01", filename: "ch18_t01_c01.html",
             title: "What Is Sewage?",
             chapterFolder: chapter18Folder, estimatedMinutes: 7),
+        "ch18_t01_c02": ArticleEntry(id: "ch18_t01_c02", filename: "ch18_t01_c02.html",
+            title: "Sources of Wastewater",
+            chapterFolder: chapter18Folder, estimatedMinutes: 7),
+
 
         "ch18_t02": ArticleEntry(id: "ch18_t02", filename: "ch18_t02_overview.html",
             title: "Treatment Plant Stages — Topic Overview",

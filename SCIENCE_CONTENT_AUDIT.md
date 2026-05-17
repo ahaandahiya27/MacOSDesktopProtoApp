@@ -608,6 +608,37 @@ This is now four sidebar types per scene maximum. Kids see a coherent "concept g
 
 macOS 11 (Big Sur) safe — SF Symbols 2 (`link.circle.fill`) + `Color.compatTeal.opacity` + standard SwiftUI. Zero new APIs.
 
+## Concept articles wave 3 — c02 inside t01 of each sparse chapter
+
+After waves 1 & 2, each sparse chapter had 3 concept articles (one c01 per topic). Wave 3 adds a SECOND concept article inside topic 1 (t01_c02) for each sparse chapter — bringing each chapter from 7 → **8 article surfaces** and giving t01 the same depth (c01 + c02) that Ch 5/6 have in their main topics.
+
+9 new articles, ~400-600 words each, standard three-section structure:
+
+| Chapter | New article (t01_c02) |
+|---|---|
+| Ch 8 | Air Pressure and How We Measure It (Torricelli barometer, isobars, mb/Pa, Mt Everest example) |
+| Ch 9 | Sand, Clay and Loam — Why Particle Size Matters (size classes, surface area effects, texture triangle) |
+| Ch 10 | Gas Exchange in the Alveoli (300 million sacs, 70 m² area, diffusion wall, surfactant) |
+| Ch 11 | Blood Components (RBC/WBC/platelets/plasma — full anatomy and roles) |
+| Ch 12 | Pollinators and Their Strategies (bees, butterflies, birds, wind — and the bee crisis) |
+| Ch 13 | Uniform vs Non-Uniform Motion (slope = speed, instantaneous vs average) |
+| Ch 16 | The Water Table and Aquifers (unconfined vs confined, artesian wells, Indo-Gangetic depletion) |
+| Ch 17 | Food Webs and Energy Flow (10% rule, ecological pyramids, biomagnification) |
+| Ch 18 | Sources of Wastewater (domestic / industrial / agricultural — different pollutants, different treatments) |
+
+Each "Looking Ahead" section names Class 9/10/11/12/JEE/NEET continuations precisely (e.g. Ch 11's BloodComponents → Class 12 leukaemia/anaemia/thalassemia; Ch 17's FoodWebs → Lindemann's law + NEET pyramid questions).
+
+Article-surface count progression:
+- **Wave 0** (start of session): sparse chapters had 1 each (chapter overview only)
+- **+ topic overviews**: 4 each
+- **+ wave 1 (t01_c01)**: 5 each
+- **+ wave 2 (t02_c01 + t03_c01)**: 7 each
+- **+ wave 3 (t01_c02)**: **8 each**
+
+Catching up to Ch 5 (19), Ch 6 (15), Ch 7 (15). Still gap remains but closing 4× from start.
+
+Build verified green. macOS 11 safe — HTML + CSS only, reuses each chapter's existing themed style.css.
+
 ---
 
 *Generated at: 2026-05-17.*
