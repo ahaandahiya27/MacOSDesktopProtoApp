@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.29.0-concept-id-cleanup",
+  "version": "0.30.0-ch07-t03-mcq-floor",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -12821,6 +12821,62 @@
               "difficulty": 1,
               "pageRefs": [
                 84
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q07",
+              "prompt": "When seawater becomes too warm, corals expel their symbiotic algae and turn:",
+              "questionType": "mcq",
+              "options": [
+                "Green",
+                "Black",
+                "White (bleached)",
+                "Yellow"
+              ],
+              "answer": "White (bleached)",
+              "solutionSteps": [
+                "Corals normally host coloured single-celled algae (zooxanthellae) inside their tissues.",
+                "Heat-stressed corals expel these algae as a defence response.",
+                "Without the algae's pigments, the coral animal is largely transparent.",
+                "The white calcium-carbonate skeleton beneath shows through — the coral appears 'bleached'."
+              ],
+              "commonMistakes": [
+                "Confusing the colour change with death — bleaching is reversible if water cools within weeks.",
+                "Thinking the corals themselves change colour — it's the loss of their algal partners that strips the colour."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch07_t03_q08",
+              "prompt": "Project Tiger was launched in:",
+              "questionType": "mcq",
+              "options": [
+                "1947",
+                "1973",
+                "1991",
+                "2014"
+              ],
+              "answer": "1973",
+              "solutionSteps": [
+                "Project Tiger was launched in 1973 to protect tigers and their habitat.",
+                "It began with 9 dedicated Tiger Reserves across India.",
+                "Tiger numbers grew from ~1800 (1972) to ~3000+ (2022) — a celebrated species-recovery story.",
+                "There are now 54 Tiger Reserves across the country."
+              ],
+              "commonMistakes": [
+                "Confusing 1973 (Project Tiger launch) with 1972 (Wildlife Protection Act passing).",
+                "Picking 2014 — that's the year of Swachh Bharat, a different programme."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                83
               ],
               "needsHumanReview": false,
               "variations": []
