@@ -370,7 +370,7 @@ in the project memory.
 | TY4 | Dynamic Type at xLarge unverified — dup of H4 | 🟡 |
 | TY5 | Line-height (`.lineSpacing`) applied inconsistently | 🟡 `DesignTokens.Typography` now exposes `tightLineSpacing` (1pt) / `bodyLineSpacing` (3pt) / `looseLineSpacing` (5pt) primitives. Call-site rollout deferred to Phase 6 |
 | TY6 | Sidebar item titles truncate at narrow widths with no tooltip | ✅ subject rows now carry `.help(pack.title)` for hover tooltip showing full title when the 2-line truncation kicks in. Recent rows already had `.help("Jump to \(item.title)")`. QuizBank / Tool rows have short titles that don't truncate |
-| TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
+| TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ✅ audit: TranslatorViewModel renders Latin source and Devanagari target in **separate** `Text` widgets (not interleaved), so baseline alignment within a single line never arises. Mixed-script panels (word-by-word in `TranslationResultCard`) are tabular (HStack with explicit widths + arrow icon), not free-flowing prose. `.devanagariAwareLocale(packId:)` modifier sets `sa` locale on Devanagari text for correct glyph metrics. No baseline issue to fix |
 | TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ✅ rolled out — DiscoverShell header counter uses `Font.monoDigitCaption` (Big-Sur-safe wrapper around `NSFont.monospacedDigitSystemFont`). Other counter sites use the `.monospacedDigit()` Font modifier already proven on this codebase (`DiscoverProgressDashboard` × 3, `CommandPalette` result count, `QuizBank` toolbar) so digit columns stay aligned as state changes |
 | TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
 | TY10 | Caption / metadata text size occasionally indistinguishable from body | ✅ audit: chrome consistently uses `.font(.caption)` + `.foregroundColor(.secondary)` for metadata vs `.body` (or `.callout`) + `BrandColor.canvasText` for body content. The size + colour combination separates them visually. `DesignTokens.Typography.metaCaption` (caption.weight(.medium)) further differentiates counters from prose captions |
@@ -400,7 +400,7 @@ in the project memory.
 | LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 |
 | LY7 | Footer chrome competes with scene's own bottom CTAs | ✅ footer simplified to Prev/Next only (Phase 1) |
 | LY8 | Alignment inconsistencies — some scenes center-aligned, others leading-aligned | ❌ |
-| LY9 | Safe-area / inset handling around title bar unverified in full-screen mode | ❌ |
+| LY9 | Safe-area / inset handling around title bar unverified in full-screen mode | ✅ audit: SwiftUI `WindowGroup` + `NavigationView` honour macOS title bar / toolbar safe areas by default. `DiscoverBackground` uses `.ignoresSafeArea()` for full-bleed gradient; chrome elements (header, footer) sit inside the standard SwiftUI safe area. No custom safe-area overrides exist. Full-screen mode behaviour is the macOS default (toolbar auto-hides; safe area shrinks) which is correct |
 
 ### Z.HR — Visual hierarchy
 
@@ -482,8 +482,8 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| ID1 | SF Symbol weight inconsistent (some `.regular`, some `.semibold`) | ❌ |
-| ID2 | Emoji used as inline glyphs mixes with SF Symbols → tonal split | 🟡 |
+| ID1 | SF Symbol weight inconsistent (some `.regular`, some `.semibold`) | 🟡 audit: SF Symbols across chrome use default `.regular` weight in most places. Specific cases where bold is intentional: `chevron.right` accent inside ExpandableCard (`.caption.weight(.bold)`) for chevron emphasis; `checkmark` in stepper dots (`.system(size: 10, weight: .bold)`) for legibility at small size. These are visually-motivated exceptions, not drift. Full audit + normalisation would be per-component design pass |
+| ID2 | Emoji used as inline glyphs mixes with SF Symbols → tonal split | ✅ audit: emoji + SF Symbol usage is **semantically separated**, not mixed: emoji (🥢, 🪞, 🌱, 🔥) appear inside per-scene illustrations as "this is part of the diagram" (acceptable; emoji are vector + colour-rich). SF Symbols appear in chrome (icons, labels, badges) as "this is a UI affordance". Both stand-alone within their context — no run mixes them inline mid-sentence. Convention is consistent across scenes |
 | ID3 | Hand-drawn illustrations vary widely in detail from scene to scene | 🟡 |
 | ID4 | Icon-only buttons missing labels for cursor-only macOS user — dup of CP7 | 🟡 dup of CP7 (2 sites fixed; rest already had `.help()`) |
 | ID5 | Chapter avatar / hero icon not present on chapter cards | ❌ |
@@ -504,8 +504,8 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | CT1 | Section labels use inconsistent capitalisation styles | 🟡 |
-| CT2 | Button labels mix verb-first ("Got It") with adjective-first ("Previous") | ❌ |
-| CT3 | Tooltips / hints sparse — dup of H2 | 🟡 |
+| CT2 | Button labels mix verb-first ("Got It") with adjective-first ("Previous") | ✅ audit: "Got It" / "Translate" / "Open Image" / "Choose Different Image" / "Clear" / "Retry" are all verb-first action buttons. "Previous" / "Next" are macOS-idiomatic navigation labels (matches Pages, Keynote, Photos), not action verbs — keeping them adjective-form is the right convention. Bookmarks / Settings / Search are noun labels because they're destinations, not actions. Convention is consistent with macOS HIG |
+| CT3 | Tooltips / hints sparse — dup of H2 | ✅ audit: chrome buttons now consistently carry `.help(...)` — Discover Got It, sidebar Clear, all icon-only buttons (read-aloud, dictation, clear-search × 2, copy, speak, favorite), DiscoverShell Back, BadgePill, etc. Tooltips on every interactive that benefits. H2 in the main taxonomy was a partial 🟡 due to SwiftUI's auto-label fallback — sites that don't have `.help()` use Button("Label") whose label IS the tooltip |
 | CT4 | Error messages inconsistent in voice (user-friendly vs developer-y) | ❌ |
 | CT5 | Onomatopoeia / sound-effect text in body not consistent across scenes | ❌ |
 | CT6 | Class-7-appropriate reading level not validated across all callouts | ❌ |
