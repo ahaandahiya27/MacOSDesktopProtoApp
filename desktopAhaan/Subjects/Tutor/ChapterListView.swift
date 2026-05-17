@@ -109,7 +109,7 @@ private struct ChapterRow: View {
                     Label("\(chapter.topics.reduce(0) { $0 + $1.concepts.count }) concepts",
                           systemImage: "lightbulb")
                     Label("\(chapter.topics.reduce(0) { $0 + $1.questions.count }) questions",
-                          systemImage: "questionmark.app")
+                          systemImage: "questionmark.circle")
                 }
                 .font(.caption)
                 .foregroundColor(.secondary)

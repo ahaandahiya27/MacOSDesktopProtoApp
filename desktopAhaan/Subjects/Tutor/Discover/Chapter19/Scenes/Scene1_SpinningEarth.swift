@@ -92,7 +92,7 @@ struct Scene1_SpinningEarth: View {
                             guard !isSpinning else { return }
                             performSpin()
                         } label: {
-                            Label("Spin", systemImage: "arrow.trianglehead.2.counterclockwise.rotate.90")
+                            Label("Spin", systemImage: "arrow.triangle.2.circlepath")
                                 .font(.title3.weight(.semibold))
                                 .padding(.horizontal, 24)
                                 .padding(.vertical, 10)

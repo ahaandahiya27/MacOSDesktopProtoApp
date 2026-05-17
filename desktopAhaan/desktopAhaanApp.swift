@@ -1,65 +1,17 @@
 import SwiftUI
 import os.log
 
-/// Logs uncaught Objective-C exceptions and POSIX signal crashes to a file
-/// in Application Support and to the unified log. Doesn't *prevent* crashes,
-/// but ensures the next launch can read the trail without relying on the
-/// Console app — useful on the older iMac where Crashpad reports are sparse.
-private enum CrashLogger {
-    static let logger = Logger(subsystem: "com.emoha.desktopAhaan", category: "Crash")
-
-    static func install() {
-        NSSetUncaughtExceptionHandler { exception in
-            let name = exception.name.rawValue
-            let reason = exception.reason ?? "(no reason)"
-            let stack = exception.callStackSymbols.joined(separator: "\n")
-            let payload = """
-            [Uncaught NSException] \(name)
-            Reason: \(reason)
-            Stack:
-            \(stack)
-            """
-            CrashLogger.logger.error("\(payload, privacy: .public)")
-            CrashLogger.writeToFile(payload)
-        }
-
-        // POSIX signals that commonly crash an AppKit/SwiftUI app on Big Sur:
-        // SIGABRT (assertions), SIGSEGV (bad memory), SIGBUS (alignment),
-        // SIGILL (illegal instruction). Default handlers run after ours.
-        for sig in [SIGABRT, SIGSEGV, SIGBUS, SIGILL] {
-            signal(sig) { signalNumber in
-                let payload = "[Signal] caught \(signalNumber)"
-                // Logger may not be safe inside a signal handler, but
-                // os_log is async-signal-safe enough for our purposes.
-                CrashLogger.logger.error("\(payload, privacy: .public)")
-                // Re-raise with the default handler so the process actually
-                // terminates with the right signal code instead of hanging.
-                signal(signalNumber, SIG_DFL)
-                raise(signalNumber)
-            }
-        }
-    }
-
-    private static func writeToFile(_ text: String) {
-        let fm = FileManager.default
-        guard let supportDir = fm.urls(for: .applicationSupportDirectory,
-                                       in: .userDomainMask).first else { return }
-        let dir = supportDir
-            .appendingPathComponent("com.emoha.desktopAhaan")
-            .appendingPathComponent("crashes")
-        try? fm.createDirectory(at: dir, withIntermediateDirectories: true)
-        let stamp = ISO8601DateFormatter().string(from: Date())
-            .replacingOccurrences(of: ":", with: "-")
-        let url = dir.appendingPathComponent("crash-\(stamp).log")
-        try? text.data(using: .utf8)?.write(to: url, options: .atomic)
-    }
-}
+// Crash capture: see App/CrashReporter.swift. It writes uncaught
+// NSExceptions, POSIX fatal signals (SIGABRT, SIGSEGV, SIGBUS, SIGILL,
+// SIGFPE, SIGPIPE), AND non-fatal data-quality issues (e.g. duplicate
+// IDs caught by SubjectPack) to one append-only file per UTC day under
+// ~/Library/Application Support/desktopAhaan/crashlogs/.
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillFinishLaunching(_ notification: Notification) {
-        // Install the crash logger before any UI runs so we capture
-        // setup-time exceptions too.
-        CrashLogger.install()
+        // Install crash capture before any UI runs so we catch even
+        // setup-time exceptions.
+        CrashReporter.shared.install()
         UserDefaults.standard.set(false, forKey: "NSQuitAlwaysKeepsWindows")
         NSWindow.allowsAutomaticWindowTabbing = false
         ensureMetalCacheDirectory()

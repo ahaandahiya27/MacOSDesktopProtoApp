@@ -130,7 +130,7 @@ private struct SearchContent: View {
                             nav.push(.question(packId: pack.id, questionId: q.id))
                         } label: {
                             HStack(alignment: .top, spacing: 10) {
-                                Image(systemName: "questionmark.app.fill")
+                                Image(systemName: "questionmark.circle.fill")
                                     .foregroundColor(.orange)
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(q.prompt).font(.body).lineLimit(2)

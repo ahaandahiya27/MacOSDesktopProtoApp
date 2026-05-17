@@ -33,6 +33,7 @@
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
+		04C77ECE2FB9BFE30025F850 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */; };
 		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
 		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
 		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
@@ -618,6 +619,7 @@
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
+		04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReporter.swift; sourceTree = "<group>"; };
 		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
 		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
 		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
@@ -2195,6 +2197,7 @@
 			isa = PBXGroup;
 			children = (
 				AC71A19BFA8EA90753C75167 /* AppState.swift */,
+				04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -3088,6 +3091,7 @@
 				B08B030F7BB1185AE46C6878 /* Scene5_LiverPancreasBile.swift in Sources */,
 				04F59D182FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift in Sources */,
 				37D0FD154B0B5E2EF98DE8D1 /* Scene6_FourStomachsOfACow.swift in Sources */,
+				04C77ECE2FB9BFE30025F850 /* CrashReporter.swift in Sources */,
 				8205FFB62EB179A062B49C4E /* Scene7_AmoebaPseudopodHunt.swift in Sources */,
 				04F59DA62FB8F1C900568BDE /* Scene3_RefractionPool.swift in Sources */,
 				04F59D7C2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift in Sources */,

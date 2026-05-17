@@ -51,12 +51,31 @@ struct SubjectPack: Codable, Hashable, Identifiable {
     // → other-concept jump is O(1) for the rest of the session.
 
     /// Concept ID → Concept lookup. Computed once per SubjectPack instance.
+    ///
+    /// Duplicate-key safe: if the content pack contains two concepts with the
+    /// same `id` (a data bug), keep the first occurrence and log the collision
+    /// rather than crashing the whole app. This protects the runtime from a
+    /// fatal `Dictionary(uniqueKeysWithValues:)` precondition failure while
+    /// surfacing the bug to anyone watching stderr.
     var conceptIndex: [String: Concept] {
-        Dictionary(uniqueKeysWithValues: allConcepts.map { ($0.id, $0) })
+        Dictionary(allConcepts.map { ($0.id, $0) },
+                   uniquingKeysWith: { first, dup in
+            CrashReporter.shared.logDataIssue(
+                "duplicate Concept.id '\(first.id)' in pack '\(self.id)'"
+            )
+            return first
+        })
     }
 
     /// Question ID → Question lookup. Computed once per SubjectPack instance.
+    /// Duplicate-key safe — see `conceptIndex` above.
     var questionIndex: [String: Question] {
-        Dictionary(uniqueKeysWithValues: allQuestions.map { ($0.id, $0) })
+        Dictionary(allQuestions.map { ($0.id, $0) },
+                   uniquingKeysWith: { first, dup in
+            CrashReporter.shared.logDataIssue(
+                "duplicate Question.id '\(first.id)' in pack '\(self.id)'"
+            )
+            return first
+        })
     }
 }

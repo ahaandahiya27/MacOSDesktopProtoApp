@@ -346,7 +346,7 @@ struct ConceptDetailView: View {
                     ForEach(relatedQuestions) { q in
                         Button { nav.push(.question(packId: pack.id, questionId: q.id)) } label: {
                             HStack {
-                                Image(systemName: "questionmark.app")
+                                Image(systemName: "questionmark.circle")
                                     .foregroundColor(.orange)
                                 Text(q.prompt).font(.body).lineLimit(2)
                                 Spacer()

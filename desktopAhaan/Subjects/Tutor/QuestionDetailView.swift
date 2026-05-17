@@ -301,7 +301,7 @@ struct QuestionDetailView: View {
 
     private var header: some View {
         HStack(spacing: 12) {
-            Label(question.questionType.displayName, systemImage: "questionmark.app.fill")
+            Label(question.questionType.displayName, systemImage: "questionmark.circle.fill")
                 .font(.caption.bold())
                 .padding(.horizontal, 8).padding(.vertical, 4)
                 .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))

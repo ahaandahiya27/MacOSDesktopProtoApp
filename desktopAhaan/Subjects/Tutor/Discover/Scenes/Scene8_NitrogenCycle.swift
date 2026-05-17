@@ -105,7 +105,7 @@ struct Scene8_NitrogenCycle: View {
             if allTapped {
                 SoftShadowCard(padding: 16) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("Quick check", systemImage: "questionmark.app.fill")
+                        Label("Quick check", systemImage: "questionmark.circle.fill")
                             .font(.headline).foregroundColor(.green)
                         Text(question).font(.body)
                         if answerRevealed {

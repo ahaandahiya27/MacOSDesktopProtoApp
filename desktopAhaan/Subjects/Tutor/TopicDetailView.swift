@@ -97,7 +97,7 @@ private struct QuestionRow: View {
     let question: Question
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            Image(systemName: "questionmark.app.fill")
+            Image(systemName: "questionmark.circle.fill")
                 .foregroundColor(.orange)
                 .font(.title3)
             VStack(alignment: .leading, spacing: 4) {

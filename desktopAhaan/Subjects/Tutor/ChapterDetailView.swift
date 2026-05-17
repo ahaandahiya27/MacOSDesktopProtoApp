@@ -113,7 +113,7 @@ private struct TopicCard: View {
                     .lineSpacing(3)
                 HStack(spacing: 12) {
                     Label("\(topic.concepts.count) concepts", systemImage: "lightbulb")
-                    Label("\(topic.questions.count) questions", systemImage: "questionmark.app")
+                    Label("\(topic.questions.count) questions", systemImage: "questionmark.circle")
                 }
                 .font(.caption)
                 .foregroundColor(.secondary)
