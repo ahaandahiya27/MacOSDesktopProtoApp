@@ -178,6 +178,49 @@ Same three-section structure as the Ch 15 articles (concept / try at home / look
 
 Topics 2 (Heating Effect) and 3 (Magnetic Effect) of Ch 14 remain on the backlog.
 
+## Architect-level consistency: structural skeleton across all chapters
+
+User direction: "find the gaps left… I want all chapters should have consistent functionalities, it should not be like one chapter have more functionality or more content and other have low content or functionality."
+
+Audit revealed a structural inconsistency:
+
+| Chapter set | HTML files |
+|---|---|
+| Ch 1, 2, 3, 4, 5, 6, 7, 19 (pre-existing) | 11–27 each |
+| Ch 14 Topic 1 + Ch 15 all topics (this session) | 6 and 14 |
+| Ch 8, 9, 10, 11, 12, 13, 16, 17, 18 | only 1 (chapter overview) |
+
+Closed the gap by adding **27 topic-overview HTMLs** across the 9 sparse chapters (3 topic overviews each). Every chapter now has at least chapter overview + 3 topic overviews = **4 article surfaces minimum**. Concept-level articles (the leaves of the tree) remain a future pass.
+
+The topic divisions for each chapter map cleanly to NCERT splits:
+
+- **Ch 8 (Winds):** Why Wind Exists · Sea/Land Breeze · Cyclones & Safety
+- **Ch 9 (Soil):** Soil Profile & Types · Soil for Life · Soil Conservation
+- **Ch 10 (Respiration):** How Humans Breathe · Aerobic vs Anaerobic · Across Species
+- **Ch 11 (Transportation):** Circulatory System · Excretion & Kidneys · Transport in Plants
+- **Ch 12 (Reproduction):** Flowers & Pollination · Fertilisation & Seeds · Asexual Reproduction
+- **Ch 13 (Motion & Time):** Speed and Motion · Pendulum & Measuring Time · Instruments & History
+- **Ch 16 (Water):** Earth's Water & Water Table · Irrigation & Harvesting · Conservation
+- **Ch 17 (Forests):** Forest Layers & Food Webs · Decomposers & Cycle · Deforestation & Conservation
+- **Ch 18 (Wastewater):** Where it Goes · Treatment Stages · Sanitation at Home
+
+Each topic overview ends with a "Looking ahead → Class 10 / 12 / JEE / NEET" section for the user-requested cross-class continuity.
+
+### How the registration actually happened (architectural note)
+
+These files were written via Python directly to the filesystem, not through XcodeWrite. To register them in the Xcode project, I patched `project.pbxproj` programmatically:
+
+1. Generated two new hex UUIDs per file (one PBXBuildFile, one PBXFileReference).
+2. Wrote a Python script that:
+   - Located the **Articles/Chapter<n>** group by finding the PBXGroup whose `children` list already contained `chNN_overview.html` (this disambiguates from the `Discover/Chapter<n>` group, which has the same display name — a gotcha that broke the first attempt).
+   - Inserted the new PBXBuildFile + PBXFileReference lines into their respective sections.
+   - Added the new file UUIDs to the Chapter group's `children` list.
+   - Added the new build UUIDs to the main app's `PBXResourcesBuildPhase.files` list.
+
+This is the same shape any future bulk-resource-addition should take. Documented here so subsequent runs don't lose 27 XcodeWrite round trips re-discovering the pattern.
+
+ArticleIndex.swift gains 27 new entries (`ch{NN}_t01..t03` for chapters 8, 9, 10, 11, 12, 13, 16, 17, 18).
+
 ## Hands-on / "Try this at home" component (NEW)
 
 - ✅ New `TryAtHomeCallout` component at `Subjects/Tutor/Discover/Components/TryAtHomeCallout.swift`. Orange-tinted box with a raised-hand SF Symbol, used inside scenes to suggest a quick real-world experiment using everyday materials. Distinct from `SoftShadowCard` so kids learn to recognise "this is something I can actually do" at a glance.
