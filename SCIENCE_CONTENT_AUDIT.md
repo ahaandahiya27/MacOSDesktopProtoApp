@@ -538,6 +538,42 @@ Build verified green. macOS 11 (Big Sur) safe — HTML + CSS only, reuses each c
 
 The remaining concept-article gap (each chapter wants ~5-10 more c-articles to reach Ch 5/6 depth) is a multi-pass authoring task; this commit ships one solid c01 per sparse chapter as a foundation.
 
+## Concept articles wave 2 — every topic of every sparse chapter
+
+Continues closing the concept-article gap. Wave 1 added one c01 (t01_c01) per sparse chapter. Wave 2 adds c01 for **t02 and t03** of each of those chapters — bringing every sparse chapter from 1 → **3 concept articles** (one per topic).
+
+18 new concept articles, ~400-600 words each, same three-section structure (concept / Try at Home / Looking Ahead):
+
+| Ch | t02_c01 | t03_c01 |
+|---|---|---|
+| 8 | Why Sea Breeze Blows During the Day | Inside a Cyclone (eye + wall + bands) |
+| 9 | How Water Moves Through Soil (percolation, capillary, crops) | Earthworms — Nature's Plough (Darwin, vermicompost) |
+| 10 | Aerobic Respiration in Detail (38 ATP, mitochondria, Krebs preview) | How Fish Use Their Gills (counter-current 80% extraction) |
+| 11 | How Kidneys Filter Blood (180 L/day, nephron 3 stages) | Xylem — The Water Pipeline (cohesion-tension, 400 L/day in an oak) |
+| 12 | Pollination to Fertilisation (double fertilisation, 3n endosperm) | Vegetative Propagation (5 methods, tissue culture preview) |
+| 13 | Galileo and the Pendulum (Pisa 1583, T = 2π√L/g, pendulum clocks) | Atomic Clocks and Modern Time (9,192,631,770 cycles, GPS) |
+| 16 | Drip Irrigation — Water at the Roots (Simcha Blass 1959, PMKSY subsidies) | Rainwater Harvesting Systems (rooftop, khadins, johads, kuls, eris, bawdis, bhandaras) |
+| 17 | Decomposers — Recycling Death (fungi, bacteria, saprotrophs vs detritivores) | Why Deforestation Hurts Everyone (7-step cascade, India's response) |
+| 18 | Inside a Sewage Treatment Plant (5 stages, BOD/COD preview) | Compost Pits and Soak Pits (Swachh Bharat decentralised sanitation) |
+
+Implementation followed the same proven pattern as wave 1:
+1. 18 HTML files written via Python.
+2. `project.pbxproj` patched programmatically — 36 new entries (build + file ref per file), all routed to the correct `Articles/Chapter<n>` group (not the Discover/Chapter<n> group of the same display name).
+3. 18 ArticleEntry records inserted into `ArticleIndex.swift`, each placed just after its parent topic-overview entry.
+
+Article-surface count progression:
+
+| Chapter | Wave 0 (start) | After wave 1 | **After wave 2 (now)** |
+|---|---|---|---|
+| Ch 8/9/10/11/12/13/16/17/18 | 4 each | 5 each | **7 each** |
+| Ch 14 | 6 | 6 | 6 |
+| Ch 15 | 15 | 15 | 15 |
+| Ch 1-7 / 19 | 11-27 | unchanged | unchanged |
+
+Every sparse chapter now has **7 article surfaces** — closing to within striking distance of the older chapters (Ch 5 = 19, Ch 6 = 15, Ch 7 = 15). The remaining gap is mostly in the second-level concept articles (c02, c03, c04 per topic), which is a follow-on multi-pass content authoring task.
+
+Build verified green after pbxproj patching. macOS 11 (Big Sur) safe — pure HTML + CSS reusing each chapter's themed style.css.
+
 ---
 
 *Generated at: 2026-05-17.*

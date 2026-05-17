@@ -642,9 +642,17 @@ enum ArticleIndex {
         "ch08_t02": ArticleEntry(id: "ch08_t02", filename: "ch08_t02_overview.html",
             title: "Sea Breeze and Land Breeze — Topic Overview",
             chapterFolder: chapter8Folder, estimatedMinutes: 5),
+        "ch08_t02_c01": ArticleEntry(id: "ch08_t02_c01", filename: "ch08_t02_c01.html",
+            title: "Why Sea Breeze Blows During the Day",
+            chapterFolder: chapter8Folder, estimatedMinutes: 6),
+
         "ch08_t03": ArticleEntry(id: "ch08_t03", filename: "ch08_t03_overview.html",
             title: "Cyclones, Storms and Safety — Topic Overview",
             chapterFolder: chapter8Folder, estimatedMinutes: 5),
+        "ch08_t03_c01": ArticleEntry(id: "ch08_t03_c01", filename: "ch08_t03_c01.html",
+            title: "Inside a Cyclone",
+            chapterFolder: chapter8Folder, estimatedMinutes: 7),
+
 
         // ================================================================
         // CHAPTER 9 — Soil
@@ -664,9 +672,17 @@ enum ArticleIndex {
         "ch09_t02": ArticleEntry(id: "ch09_t02", filename: "ch09_t02_overview.html",
             title: "Soil for Life — Topic Overview",
             chapterFolder: chapter9Folder, estimatedMinutes: 5),
+        "ch09_t02_c01": ArticleEntry(id: "ch09_t02_c01", filename: "ch09_t02_c01.html",
+            title: "How Water Moves Through Soil",
+            chapterFolder: chapter9Folder, estimatedMinutes: 6),
+
         "ch09_t03": ArticleEntry(id: "ch09_t03", filename: "ch09_t03_overview.html",
             title: "Soil Conservation — Topic Overview",
             chapterFolder: chapter9Folder, estimatedMinutes: 5),
+        "ch09_t03_c01": ArticleEntry(id: "ch09_t03_c01", filename: "ch09_t03_c01.html",
+            title: "Earthworms — Nature's Plough",
+            chapterFolder: chapter9Folder, estimatedMinutes: 6),
+
 
         // ================================================================
         // CHAPTER 10 — Respiration in Organisms
@@ -686,9 +702,17 @@ enum ArticleIndex {
         "ch10_t02": ArticleEntry(id: "ch10_t02", filename: "ch10_t02_overview.html",
             title: "Aerobic vs Anaerobic Respiration — Topic Overview",
             chapterFolder: chapter10Folder, estimatedMinutes: 5),
+        "ch10_t02_c01": ArticleEntry(id: "ch10_t02_c01", filename: "ch10_t02_c01.html",
+            title: "Aerobic Respiration in Detail",
+            chapterFolder: chapter10Folder, estimatedMinutes: 7),
+
         "ch10_t03": ArticleEntry(id: "ch10_t03", filename: "ch10_t03_overview.html",
             title: "Respiration Across Species — Topic Overview",
             chapterFolder: chapter10Folder, estimatedMinutes: 5),
+        "ch10_t03_c01": ArticleEntry(id: "ch10_t03_c01", filename: "ch10_t03_c01.html",
+            title: "How Fish Use Their Gills",
+            chapterFolder: chapter10Folder, estimatedMinutes: 6),
+
 
         // ================================================================
         // CHAPTER 11 — Transportation in Animals and Plants
@@ -708,9 +732,17 @@ enum ArticleIndex {
         "ch11_t02": ArticleEntry(id: "ch11_t02", filename: "ch11_t02_overview.html",
             title: "Excretion and the Kidneys — Topic Overview",
             chapterFolder: chapter11Folder, estimatedMinutes: 5),
+        "ch11_t02_c01": ArticleEntry(id: "ch11_t02_c01", filename: "ch11_t02_c01.html",
+            title: "How Kidneys Filter Blood",
+            chapterFolder: chapter11Folder, estimatedMinutes: 7),
+
         "ch11_t03": ArticleEntry(id: "ch11_t03", filename: "ch11_t03_overview.html",
             title: "Transport in Plants — Topic Overview",
             chapterFolder: chapter11Folder, estimatedMinutes: 5),
+        "ch11_t03_c01": ArticleEntry(id: "ch11_t03_c01", filename: "ch11_t03_c01.html",
+            title: "Xylem — The Water Pipeline",
+            chapterFolder: chapter11Folder, estimatedMinutes: 6),
+
 
         // ================================================================
         // CHAPTER 12 — Reproduction in Plants
@@ -730,9 +762,17 @@ enum ArticleIndex {
         "ch12_t02": ArticleEntry(id: "ch12_t02", filename: "ch12_t02_overview.html",
             title: "Fertilisation and Seed Formation — Topic Overview",
             chapterFolder: chapter12Folder, estimatedMinutes: 5),
+        "ch12_t02_c01": ArticleEntry(id: "ch12_t02_c01", filename: "ch12_t02_c01.html",
+            title: "Pollination to Fertilisation",
+            chapterFolder: chapter12Folder, estimatedMinutes: 7),
+
         "ch12_t03": ArticleEntry(id: "ch12_t03", filename: "ch12_t03_overview.html",
             title: "Asexual Reproduction — Topic Overview",
             chapterFolder: chapter12Folder, estimatedMinutes: 5),
+        "ch12_t03_c01": ArticleEntry(id: "ch12_t03_c01", filename: "ch12_t03_c01.html",
+            title: "Vegetative Propagation",
+            chapterFolder: chapter12Folder, estimatedMinutes: 6),
+
 
         // ================================================================
         // CHAPTER 13 — Motion and Time
@@ -752,9 +792,17 @@ enum ArticleIndex {
         "ch13_t02": ArticleEntry(id: "ch13_t02", filename: "ch13_t02_overview.html",
             title: "The Pendulum and Measuring Time — Topic Overview",
             chapterFolder: chapter13Folder, estimatedMinutes: 5),
+        "ch13_t02_c01": ArticleEntry(id: "ch13_t02_c01", filename: "ch13_t02_c01.html",
+            title: "Galileo and the Pendulum",
+            chapterFolder: chapter13Folder, estimatedMinutes: 6),
+
         "ch13_t03": ArticleEntry(id: "ch13_t03", filename: "ch13_t03_overview.html",
             title: "Instruments and the History of Time — Topic Overview",
             chapterFolder: chapter13Folder, estimatedMinutes: 5),
+        "ch13_t03_c01": ArticleEntry(id: "ch13_t03_c01", filename: "ch13_t03_c01.html",
+            title: "Atomic Clocks and Modern Time",
+            chapterFolder: chapter13Folder, estimatedMinutes: 7),
+
 
         // ================================================================
         // CHAPTER 14 — Electric Current and its Effects
@@ -850,9 +898,17 @@ enum ArticleIndex {
         "ch16_t02": ArticleEntry(id: "ch16_t02", filename: "ch16_t02_overview.html",
             title: "Irrigation and Rainwater Harvesting — Topic Overview",
             chapterFolder: chapter16Folder, estimatedMinutes: 5),
+        "ch16_t02_c01": ArticleEntry(id: "ch16_t02_c01", filename: "ch16_t02_c01.html",
+            title: "Drip Irrigation — Water at the Roots",
+            chapterFolder: chapter16Folder, estimatedMinutes: 7),
+
         "ch16_t03": ArticleEntry(id: "ch16_t03", filename: "ch16_t03_overview.html",
             title: "Water Conservation — Topic Overview",
             chapterFolder: chapter16Folder, estimatedMinutes: 5),
+        "ch16_t03_c01": ArticleEntry(id: "ch16_t03_c01", filename: "ch16_t03_c01.html",
+            title: "Rainwater Harvesting Systems",
+            chapterFolder: chapter16Folder, estimatedMinutes: 7),
+
 
         // ================================================================
         // CHAPTER 17 — Forests: Our Lifeline
@@ -872,9 +928,17 @@ enum ArticleIndex {
         "ch17_t02": ArticleEntry(id: "ch17_t02", filename: "ch17_t02_overview.html",
             title: "Decomposers and the Soil-Forest Cycle — Topic Overview",
             chapterFolder: chapter17Folder, estimatedMinutes: 5),
+        "ch17_t02_c01": ArticleEntry(id: "ch17_t02_c01", filename: "ch17_t02_c01.html",
+            title: "Decomposers — Recycling Death",
+            chapterFolder: chapter17Folder, estimatedMinutes: 6),
+
         "ch17_t03": ArticleEntry(id: "ch17_t03", filename: "ch17_t03_overview.html",
             title: "Deforestation and Conservation — Topic Overview",
             chapterFolder: chapter17Folder, estimatedMinutes: 5),
+        "ch17_t03_c01": ArticleEntry(id: "ch17_t03_c01", filename: "ch17_t03_c01.html",
+            title: "Why Deforestation Hurts Everyone",
+            chapterFolder: chapter17Folder, estimatedMinutes: 7),
+
 
         // ================================================================
         // CHAPTER 18 — Wastewater Story
@@ -894,9 +958,17 @@ enum ArticleIndex {
         "ch18_t02": ArticleEntry(id: "ch18_t02", filename: "ch18_t02_overview.html",
             title: "Treatment Plant Stages — Topic Overview",
             chapterFolder: chapter18Folder, estimatedMinutes: 5),
+        "ch18_t02_c01": ArticleEntry(id: "ch18_t02_c01", filename: "ch18_t02_c01.html",
+            title: "Inside a Sewage Treatment Plant",
+            chapterFolder: chapter18Folder, estimatedMinutes: 7),
+
         "ch18_t03": ArticleEntry(id: "ch18_t03", filename: "ch18_t03_overview.html",
             title: "Sanitation at Home — Topic Overview",
             chapterFolder: chapter18Folder, estimatedMinutes: 5),
+        "ch18_t03_c01": ArticleEntry(id: "ch18_t03_c01", filename: "ch18_t03_c01.html",
+            title: "Compost Pits and Soak Pits",
+            chapterFolder: chapter18Folder, estimatedMinutes: 6),
+
 
         // ================================================================
         // CHAPTER 19 — Earth, Moon and the Sun
