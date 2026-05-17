@@ -1,4 +1,7 @@
 import Foundation
+import os.log
+
+private let recordLogger = Logger(subsystem: "com.emoha.desktopAhaan", category: "TranslationRecord")
 
 final class TranslationRecord: Identifiable, Codable {
     var id: UUID
@@ -29,7 +32,7 @@ final class TranslationRecord: Identifiable, Codable {
         do {
             self.wordByWordJSON = try JSONEncoder().encode(response.wordByWord)
         } catch {
-            print("[TranslationRecord] wordByWord encoding failed: \(error)")
+            recordLogger.error("wordByWord encoding failed: \(error.localizedDescription, privacy: .public)")
             self.wordByWordJSON = nil
         }
         self.grammarNote = response.grammarNote
@@ -38,7 +41,7 @@ final class TranslationRecord: Identifiable, Codable {
         do {
             self.alternativesJSON = try JSONEncoder().encode(response.alternatives)
         } catch {
-            print("[TranslationRecord] alternatives encoding failed: \(error)")
+            recordLogger.error("alternatives encoding failed: \(error.localizedDescription, privacy: .public)")
             self.alternativesJSON = nil
         }
         self.confidenceNote = response.confidenceNote
@@ -49,11 +52,17 @@ final class TranslationRecord: Identifiable, Codable {
     var asResponse: TranslationResponse {
         let words: [WordMeaning]? = wordByWordJSON.flatMap { data in
             do { return try JSONDecoder().decode([WordMeaning].self, from: data) }
-            catch { print("[TranslationRecord] wordByWord decode failed: \(error)"); return nil }
+            catch {
+                recordLogger.error("wordByWord decode failed: \(error.localizedDescription, privacy: .public)")
+                return nil
+            }
         }
         let alts: [String]? = alternativesJSON.flatMap { data in
             do { return try JSONDecoder().decode([String].self, from: data) }
-            catch { print("[TranslationRecord] alternatives decode failed: \(error)"); return nil }
+            catch {
+                recordLogger.error("alternatives decode failed: \(error.localizedDescription, privacy: .public)")
+                return nil
+            }
         }
         return TranslationResponse(
             sourceLanguage: sourceLanguage,

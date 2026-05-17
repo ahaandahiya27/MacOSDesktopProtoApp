@@ -183,12 +183,12 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| L1 | Atomic writes for progress.json | 🟡 — need to verify `FileManager.replaceItemAt` usage |
+| L1 | Atomic writes for progress.json | ✅ verified — DataStore + CrashReporter both use `.atomic` |
 | L2 | Bookmarks persisted | ✅ |
 | L3 | Recent items persisted (≤8) | ✅ |
 | L4 | Window state via @SceneStorage | ❌ |
 | L5 | Settings via @AppStorage | 🟡 partial |
-| L6 | Crash log rotation (avoid unbounded growth) | 🟡 — one file per day, no cap |
+| L6 | Crash log rotation (avoid unbounded growth) | ✅ 30-file cap + 1 MB per-day rotation |
 | L7 | Migration on schema bump | ❌ no formal migration path |
 
 ## M. Input handling
@@ -244,7 +244,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | Q3 | Help → Reveal/Clear Crash Logs | ✅ |
 | Q4 | Keyboard shortcut collisions | ❌ not audited |
 | Q5 | ⌘W closes window cleanly | 🟡 — single-window app, behaviour default |
-| Q6 | ⌘Q flushes ProgressStore before quit | 🟡 — verify `applicationWillTerminate` hook |
+| Q6 | ⌘Q flushes ProgressStore before quit | ✅ `applicationWillTerminate` hooks UserDefaults flush + clean-quit log; DataStore writes are already synchronous + atomic |
 | Q7 | Menu enablement state | 🟡 |
 
 ## R. Logging & diagnostics
@@ -252,7 +252,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | R1 | os.Logger usage with subsystem/category | ✅ |
-| R2 | No `print()` in shipped runtime code | 🟡 a few prints in app pre-warm; non-critical |
+| R2 | No `print()` in shipped runtime code | ✅ all runtime prints routed to Logger; only DEBUG-gated debugLog remains in SubjectRegistry |
 | R3 | Verbose logging disabled by default | ✅ |
 | R4 | Crash log format human-readable | ✅ |
 | R5 | Data-issue logging (defensive Dictionary collisions) | ✅ |
@@ -301,7 +301,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | V3 | No hardcoded secrets / keys | ✅ grep-audited; all TranslationProviders return `requiresAPIKey=false` |
 | V4 | Atomic file writes | ✅ verified — CrashReporter + DataStore both use `.atomic` |
 | V5 | Input sanitisation on search/text | ✅ (no eval / injection surfaces) |
-| V5b | WKWebView JS-disabled + scoped read access | 🟡 not verified for article renderer |
+| V5b | WKWebView JS-disabled + scoped read access | ✅ in-page JS off via per-navigation `WKWebpagePreferences.allowsContentJavaScript = false`; native `evaluateJavaScript` still works for Read Aloud |
 | V6 | URL handler attack surface (custom schemes) | ✅ none registered — no `CFBundleURLTypes`, no `onOpenURL` |
 | V7 | Privacy strings for mic + speech | ✅ via `INFOPLIST_KEY_*` build settings |
 

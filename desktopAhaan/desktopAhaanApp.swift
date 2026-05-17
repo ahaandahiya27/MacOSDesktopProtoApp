@@ -7,6 +7,8 @@ import os.log
 // IDs caught by SubjectPack) to one append-only file per UTC day under
 // ~/Library/Application Support/desktopAhaan/crashlogs/.
 
+private let appLogger = Logger(subsystem: "com.emoha.desktopAhaan", category: "App")
+
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillFinishLaunching(_ notification: Notification) {
         // Install crash capture before any UI runs so we catch even
@@ -18,6 +20,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+    }
+
+    /// Belt-and-suspenders at ⌘Q. Every `DataStore` mutation already calls
+    /// `try data.write(to:options:.atomic)` synchronously on the main actor
+    /// so there is no in-memory queue waiting to drain. We still:
+    ///   - force a `UserDefaults` synchronize (a no-op on modern macOS but
+    ///     harmless and makes intent explicit).
+    ///   - log the clean-quit so a future "did the app quit or did it
+    ///     crash?" investigation is unambiguous against the crash log.
+    func applicationWillTerminate(_ notification: Notification) {
+        UserDefaults.standard.synchronize()
+        appLogger.info("applicationWillTerminate — clean quit.")
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
@@ -44,8 +58,8 @@ struct SanskritKoshApp: App {
 
     init() {
         Task(priority: .utility) {
-            _ = SanskritDictionary.shared.entries.count
-            print("[App] SanskritDictionary pre-warmed.")
+            let n = SanskritDictionary.shared.entries.count
+            appLogger.info("SanskritDictionary pre-warmed (\(n, privacy: .public) entries).")
         }
     }
 

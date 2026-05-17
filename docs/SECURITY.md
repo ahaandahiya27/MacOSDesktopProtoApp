@@ -76,12 +76,13 @@ The app registers no custom URL schemes (no `CFBundleURLTypes` in pbxproj, no `o
 
 Search query strings are passed to `String.range(of:options:)` for substring matching with `.caseInsensitive, .diacriticInsensitive`. No `eval`, no shell-out, no JavaScript injection surface (HTML articles are rendered with `WKWebView` loading bundled file:// URLs — no remote content, no JS evaluation).
 
-The `WKWebView` configuration in the article renderer should additionally:
-- Disable JavaScript by default (verify — currently 🟡 unverified).
-- Restrict `WKContentRuleList` to block any inline scripts that slip in.
-- Use `loadFileURL(_:allowingReadAccessTo:)` with the chapter's specific Articles folder, not a parent.
+The `WKWebView` configuration in the article renderer:
+- **In-page JavaScript is disabled** for every navigation via the per-navigation `decidePolicyFor:preferences:` delegate, which sets `preferences.allowsContentJavaScript = false`. The host app's own `evaluateJavaScript` (used by Read Aloud to pull article text out of the DOM) is unaffected — that gate is for JS embedded inside the loaded HTML, not host-app evaluation.
+- `loadFileURL(_:allowingReadAccessTo:)` is scoped to `Bundle.main.resourceURL` (not `/`), and the `decidePolicyFor:` delegate further gates every link click through `isURLSafe(_:)`, which requires the target path to live inside the bundle's Resources directory.
+- `javaScriptCanOpenWindowsAutomatically` is forced to `false` even on the legacy `WKPreferences` layer.
+- `http://` and `https://` schemes are explicitly cancelled and handed to `NSWorkspace.shared.open(url)` so external links never load inside our chrome.
 
-This is documented as **V5b** in the issue taxonomy as a future-pass item; the current bundled HTML is hand-authored so the risk is theoretical for now.
+The bundled HTML is hand-authored and JS-free today, so disabling content JS is purely defence in depth against a future pack that ever ships an inline `<script>`.
 
 ## Hardcoded secrets
 

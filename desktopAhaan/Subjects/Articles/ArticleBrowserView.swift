@@ -224,12 +224,11 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
     }
 
     func setupWebView() {
-        let preferences = WKWebpagePreferences()
-        preferences.allowsContentJavaScript = true
-
-        let config = WKWebViewConfiguration()
-        config.defaultWebpagePreferences = preferences
-        config.mediaTypesRequiringUserActionForPlayback = []
+        // Apply legacy-API JS disable. The per-navigation
+        // `decidePolicyFor:preferences:` delegate below also enforces this,
+        // so even on macOS versions where the legacy key is ignored we
+        // still keep in-page JavaScript off.
+        webView.configuration.preferences.javaScriptCanOpenWindowsAutomatically = false
 
         if webView.navigationDelegate == nil {
             webView.navigationDelegate = self
@@ -351,6 +350,44 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
         }
 
         decisionHandler(.allow)
+    }
+
+    /// Per-navigation preferences hook. Disables in-page JavaScript for
+    /// every load. The host app's `evaluateJavaScript` calls (used by Read
+    /// Aloud to extract article text) are unaffected — that gate is for
+    /// JS authored INSIDE the bundled HTML, which we never need. Bundled
+    /// articles are hand-authored, so this is purely defence in depth in
+    /// case a future content pack ever ships an inline `<script>`.
+    func webView(
+        _ webView: WKWebView,
+        decidePolicyFor navigationAction: WKNavigationAction,
+        preferences: WKWebpagePreferences,
+        decisionHandler: @escaping (WKNavigationActionPolicy, WKWebpagePreferences) -> Void
+    ) {
+        preferences.allowsContentJavaScript = false
+
+        guard let url = navigationAction.request.url else {
+            decisionHandler(.allow, preferences)
+            return
+        }
+        if url.scheme == "file" {
+            if isURLSafe(url) {
+                let newFolder = url.deletingLastPathComponent().path
+                if newFolder != currentFolder {
+                    SpeechReader.shared.stop(owner: "article")
+                }
+                decisionHandler(.allow, preferences)
+            } else {
+                decisionHandler(.cancel, preferences)
+            }
+            return
+        }
+        if url.scheme == "http" || url.scheme == "https" {
+            decisionHandler(.cancel, preferences)
+            NSWorkspace.shared.open(url)
+            return
+        }
+        decisionHandler(.allow, preferences)
     }
 
     private func isURLSafe(_ url: URL) -> Bool {

@@ -1,4 +1,7 @@
 import Foundation
+import os.log
+
+private let dictLogger = Logger(subsystem: "com.emoha.desktopAhaan", category: "SanskritDictionary")
 
 /// Comprehensive Sanskrit ↔ English ↔ Hindi dictionary for Class 7 level.
 /// This is the core offline translation database.
@@ -38,7 +41,7 @@ final class SanskritDictionary {
             // Fallback: the legacy hard-coded Swift dictionary. Keeps the app
             // working if the bundled JSON is missing or fails to decode (e.g.
             // during local dev before the JSON has been regenerated).
-            print("[SanskritDictionary] WARNING: bundled JSON not loaded; falling back to built-in Swift dictionary.")
+            dictLogger.warning("bundled JSON not loaded; falling back to built-in Swift dictionary.")
             entries = Self.buildFullDictionary()
         }
         buildIndices()
@@ -73,10 +76,10 @@ final class SanskritDictionary {
                     difficulty: level
                 )
             }
-            print("[SanskritDictionary] Loaded \(mapped.count) entries from bundled JSON (v\(payload.version)).")
+            dictLogger.info("loaded \(mapped.count, privacy: .public) entries from bundled JSON (v\(payload.version, privacy: .public)).")
             return mapped.isEmpty ? nil : mapped
         } catch {
-            print("[SanskritDictionary] Failed to decode bundled JSON: \(error.localizedDescription)")
+            dictLogger.error("failed to decode bundled JSON: \(error.localizedDescription, privacy: .public)")
             return nil
         }
     }

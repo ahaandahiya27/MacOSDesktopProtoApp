@@ -47,6 +47,18 @@ final class CrashReporter {
         return f
     }()
 
+    /// Hard cap on how many daily crashlog files to keep. Older files are
+    /// pruned on `install()` and on each rotate check. 30 keeps roughly a
+    /// month of context, plenty for diagnosing patterns but bounded so a
+    /// long-running install never grows unbounded under the child's home
+    /// directory.
+    private let maxLogFiles: Int = 30
+    /// Hard cap on a single daily file's size in bytes. A runaway loop
+    /// hitting a data-issue every frame could otherwise write megabytes
+    /// per minute. When today's file exceeds this, it gets rotated to a
+    /// `.bak` and a fresh file starts; pruning then enforces `maxLogFiles`.
+    private let maxLogFileSizeBytes: Int = 1_048_576  // 1 MB
+
     private init() {
         // Resolve ~/Library/Application Support/desktopAhaan/crashlogs/
         let fm = FileManager.default
@@ -77,7 +89,24 @@ final class CrashReporter {
                 raise(signo)
             }
         }
+        // Prune now so a long-idle install doesn't carry months of files
+        // forward across launches.
+        pruneOldLogs()
         logger.info("CrashReporter installed; logs go to \(self.logDirectoryURL.path, privacy: .public)")
+    }
+
+    /// Enforce `maxLogFiles` by deleting the oldest files first. Called
+    /// on install + after every rotation. Non-fatal — failures are logged
+    /// but never throw out of the crash handler.
+    private func pruneOldLogs() {
+        let files = allLogFiles()
+        guard files.count > maxLogFiles else { return }
+        let excess = files.count - maxLogFiles
+        let fm = FileManager.default
+        for url in files.prefix(excess) {
+            try? fm.removeItem(at: url)
+        }
+        logger.info("CrashReporter: pruned \(excess, privacy: .public) old log file(s)")
     }
 
     /// Path of the log file for today (one file per UTC day, append-only).
@@ -181,12 +210,19 @@ final class CrashReporter {
     }
 
     /// Synchronous append so we still flush if the next instruction crashes.
+    /// Rotates today's file off to `.bak` and starts a fresh one when it
+    /// exceeds `maxLogFileSizeBytes`, so a runaway data-issue loop can't
+    /// fill the disk.
     private func appendToCurrentLog(_ entry: String) {
         let url = currentLogFileURL
         let data = entry.data(using: .utf8) ?? Data()
         let fm = FileManager.default
+
+        rotateIfNeeded(url: url, incomingBytes: data.count)
+
         if !fm.fileExists(atPath: url.path) {
             try? data.write(to: url, options: .atomic)
+            pruneOldLogs()
             return
         }
         if let handle = try? FileHandle(forWritingTo: url) {
@@ -199,5 +235,23 @@ final class CrashReporter {
                 try? data.write(to: url, options: .atomic)
             }
         }
+    }
+
+    /// If appending would push today's file past `maxLogFileSizeBytes`,
+    /// rename it to `<name>.bak-<timestamp>` and let the next write create
+    /// a fresh file. Then enforce `maxLogFiles` so we don't accumulate.
+    private func rotateIfNeeded(url: URL, incomingBytes: Int) {
+        let fm = FileManager.default
+        guard let attrs = try? fm.attributesOfItem(atPath: url.path),
+              let size = attrs[.size] as? Int else { return }
+        if size + incomingBytes <= maxLogFileSizeBytes { return }
+
+        let stamp = ISO8601DateFormatter().string(from: Date())
+            .replacingOccurrences(of: ":", with: "-")
+        let backup = url.deletingPathExtension()
+            .appendingPathExtension("bak-\(stamp).txt")
+        try? fm.moveItem(at: url, to: backup)
+        logger.info("CrashReporter: rotated oversize log to \(backup.lastPathComponent, privacy: .public)")
+        pruneOldLogs()
     }
 }
