@@ -173,6 +173,10 @@
 		04F59E3F2FB9662A00568BDE /* ch15_t02_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E3E2FB9662A00568BDE /* ch15_t02_c01.html */; };
 		04F59E412FB9662A00568BDE /* ch15_t02_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E402FB9662A00568BDE /* ch15_t02_c02.html */; };
 		04F59E432FB9662B00568BDE /* ch15_t02_c03.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E422FB9662B00568BDE /* ch15_t02_c03.html */; };
+		04F59E452FB966FD00568BDE /* ch15_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E442FB966FD00568BDE /* ch15_t03_overview.html */; };
+		04F59E472FB966FD00568BDE /* ch15_t03_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E462FB966FD00568BDE /* ch15_t03_c01.html */; };
+		04F59E492FB966FE00568BDE /* ch15_t03_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E482FB966FE00568BDE /* ch15_t03_c02.html */; };
+		04F59E4B2FB966FE00568BDE /* ch15_t03_c03.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E4A2FB966FE00568BDE /* ch15_t03_c03.html */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -658,6 +662,10 @@
 		04F59E3E2FB9662A00568BDE /* ch15_t02_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t02_c01.html; sourceTree = "<group>"; };
 		04F59E402FB9662A00568BDE /* ch15_t02_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t02_c02.html; sourceTree = "<group>"; };
 		04F59E422FB9662B00568BDE /* ch15_t02_c03.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t02_c03.html; sourceTree = "<group>"; };
+		04F59E442FB966FD00568BDE /* ch15_t03_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t03_overview.html; sourceTree = "<group>"; };
+		04F59E462FB966FD00568BDE /* ch15_t03_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t03_c01.html; sourceTree = "<group>"; };
+		04F59E482FB966FE00568BDE /* ch15_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t03_c02.html; sourceTree = "<group>"; };
+		04F59E4A2FB966FE00568BDE /* ch15_t03_c03.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_t03_c03.html; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -1381,6 +1389,10 @@
 				04F59E3E2FB9662A00568BDE /* ch15_t02_c01.html */,
 				04F59E402FB9662A00568BDE /* ch15_t02_c02.html */,
 				04F59E422FB9662B00568BDE /* ch15_t02_c03.html */,
+				04F59E442FB966FD00568BDE /* ch15_t03_overview.html */,
+				04F59E462FB966FD00568BDE /* ch15_t03_c01.html */,
+				04F59E482FB966FE00568BDE /* ch15_t03_c02.html */,
+				04F59E4A2FB966FE00568BDE /* ch15_t03_c03.html */,
 			);
 			path = Chapter15;
 			sourceTree = "<group>";
@@ -2299,6 +2311,7 @@
 				ED4C85FD348C854BAA290065 /* ch01_t01_c07.html in Resources */,
 				37212E609910F63EC3FD7B76 /* ch01_t01_c08.html in Resources */,
 				A1FDED2DD7D7821FF9810039 /* ch01_t01_c09.html in Resources */,
+				04F59E4B2FB966FE00568BDE /* ch15_t03_c03.html in Resources */,
 				1B55728AE3F992BF51708ADF /* ch01_t01_c10.html in Resources */,
 				EF727FE09F9E26AD56BE2C5F /* ch01_t01_overview.html in Resources */,
 				1609BE0BC3BEA58B8851DA54 /* ch01_t02_c01.html in Resources */,
@@ -2322,6 +2335,7 @@
 				2004CAD7B759F8E4641986D7 /* ch06_t01_c04.html in Resources */,
 				04F59E1F2FB94F0100568BDE /* ch16_style.css in Resources */,
 				04F59E012FB94EF800568BDE /* ch10_style.css in Resources */,
+				04F59E452FB966FD00568BDE /* ch15_t03_overview.html in Resources */,
 				04F59E0B2FB94EFA00568BDE /* ch12_style.css in Resources */,
 				394047854566D8E61FB547DE /* ch06_t01_c05.html in Resources */,
 				E62424D01E778CD6ABA207DA /* ch06_t01_c06.html in Resources */,
@@ -2365,6 +2379,7 @@
 				13F82C70F6B0487D06672418 /* ch19_t02_c04.html in Resources */,
 				227B8E71FD3FB7F15DAB4757 /* ch19_t02_c05.html in Resources */,
 				AD01BA2A7C03149B829EECD9 /* ch19_t02_c06.html in Resources */,
+				04F59E492FB966FE00568BDE /* ch15_t03_c02.html in Resources */,
 				66D754A510BD6BA1447A3ACD /* ch19_t02_c07.html in Resources */,
 				B59835E67150B7EA2C9F2456 /* ch19_t02_c08.html in Resources */,
 				2310C7C4E6075514051772A8 /* ch19_t02_overview.html in Resources */,
@@ -2456,6 +2471,7 @@
 				4BE10A6CF6E016E69E0F9662 /* ch04_t01_c04.html in Resources */,
 				576F3B830E62DEA07A1E2457 /* ch04_t01_c05.html in Resources */,
 				6F29A4256511DDA9DD7DCB17 /* ch04_t01_c06.html in Resources */,
+				04F59E472FB966FD00568BDE /* ch15_t03_c01.html in Resources */,
 				DD8A681B30AE08D8D4CE5E7F /* ch04_t01_c07.html in Resources */,
 				46945BA72ADB7913837231E7 /* ch04_t01_overview.html in Resources */,
 				9F8D11BCDEAF3F2E5708391F /* ch04_t02_c01.html in Resources */,

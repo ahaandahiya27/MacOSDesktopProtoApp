@@ -711,6 +711,20 @@ enum ArticleIndex {
             title: "The Rainbow",
             chapterFolder: chapter15Folder, estimatedMinutes: 7),
 
+        // Topic 3: Lenses & Optical Instruments
+        "ch15_t03": ArticleEntry(id: "ch15_t03", filename: "ch15_t03_overview.html",
+            title: "Lenses & Optical Instruments — Topic Overview",
+            chapterFolder: chapter15Folder, estimatedMinutes: 5),
+        "ch15_t03_c01": ArticleEntry(id: "ch15_t03_c01", filename: "ch15_t03_c01.html",
+            title: "Lenses",
+            chapterFolder: chapter15Folder, estimatedMinutes: 8),
+        "ch15_t03_c02": ArticleEntry(id: "ch15_t03_c02", filename: "ch15_t03_c02.html",
+            title: "The Periscope",
+            chapterFolder: chapter15Folder, estimatedMinutes: 6),
+        "ch15_t03_c03": ArticleEntry(id: "ch15_t03_c03", filename: "ch15_t03_c03.html",
+            title: "The Kaleidoscope",
+            chapterFolder: chapter15Folder, estimatedMinutes: 7),
+
         // ================================================================
         // CHAPTER 16 — Water: A Precious Resource
         // ================================================================

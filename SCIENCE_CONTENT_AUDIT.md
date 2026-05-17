@@ -126,7 +126,7 @@ Closes part of the §5 backlog "Topic-level articles for Ch 8-18". Ch 15 (Light)
 
 Each article is ~350-500 words, NCERT-aligned, with "Try this at home" sidebars where natural. Cross-references between mirror types and back to Ch 8 (reflection ≡ echoes). Appended a small `table` ruleset to `ch15_style.css` so the comparison chart in c04 renders cleanly. Updated `ArticleIndex.swift` with 5 new entries (`ch15_t01`, `ch15_t01_c01..c04`).
 
-Topic 3 (Lenses) remains on the backlog. Topic 2 now done — see below.
+Topic 2 now done — see below. Topic 3 (Lenses + instruments) now done — see further below.
 
 ## Ch 15 (Light) — Topic 2 articles (Refraction, Prism & Rainbow)
 
@@ -145,6 +145,21 @@ Each concept article has three structured sections that mirror the SwiftUI sideb
 The chapter article reader and the Discover scenes now teach the same three-layer story.
 
 ArticleIndex.swift gains 4 new entries (`ch15_t02`, `ch15_t02_c01..c03`). Estimated read times tuned 5-7 min each.
+
+## Ch 15 (Light) — Topic 3 articles (Lenses, Periscope & Kaleidoscope)
+
+Four more articles closing out Chapter 15 to the same depth as Ch 1 / 5 / 6 / 7 / 19. Heavy JEE/NEET territory — lens formula, lensmaker's equation, eye optics, microscope/telescope are the JEE Ray Optics and NEET Eye-chapter mainstays.
+
+- `ch15_t03_overview.html` — Topic overview tying lenses, periscope, kaleidoscope into "Optical Instruments".
+- `ch15_t03_c01.html` — Lenses (convex/concave, three image rules, focal length, magnifier vs camera vs eye; preview of 1/v − 1/u = 1/f, magnification m = v/u, power in dioptres, lensmaker's equation, compound microscope and telescope formulas).
+- `ch15_t03_c02.html` — Periscope (two plane mirrors at 45°, submarine use, building one from a paper-towel tube; preview of 45-45-90 prism TIR-based modern periscopes and optical-fibre endoscopes).
+- `ch15_t03_c03.html` — Kaleidoscope (mirror angle θ → (360/θ − 1) images, David Brewster 1816, infinite reflections, build-from-Pringles-tube experiment; preview of rotational symmetry in Class 9/10 Maths, point groups in Class 12 Chemistry, crystal lattices in Physics, Brewster's law).
+
+Same three-section structure as Topic 1/2 articles (concept / try at home / looking ahead). ArticleIndex.swift gains 4 new entries (`ch15_t03`, `ch15_t03_c01..c03`).
+
+**Chapter 15 (Light) is now at full topic depth** — chapter overview + 3 topic overviews + 11 concept articles = 15 article files total, matching the article-richness of Ch 1 (25 files) / Ch 5 (19) / Ch 6 (15) / Ch 7 (15) / Ch 19 (27).
+
+Topic-level articles for the other 10 new chapters (Ch 8, 9, 10, 11, 12, 13, 14, 16, 17, 18) remain on the backlog.
 
 ## Hands-on / "Try this at home" component (NEW)
 
