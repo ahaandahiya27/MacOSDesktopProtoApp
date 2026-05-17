@@ -78,4 +78,29 @@ struct SubjectPack: Codable, Hashable, Identifiable {
             return first
         })
     }
+
+    /// Walk every concept's `relatedConceptIds` and `relatedQuestionIds`
+    /// and log any reference that doesn't resolve in this pack. Called
+    /// once by SubjectRegistry after successful decode; orphans are
+    /// silently dropped by `compactMap` in the UI, so this is the only
+    /// way they surface anywhere visible.
+    func validateRelatedRefs() {
+        let conceptIds = Set(allConcepts.map { $0.id })
+        let questionIds = Set(allQuestions.map { $0.id })
+        var orphanConcepts = 0
+        var orphanQuestions = 0
+        for concept in allConcepts {
+            for rid in concept.relatedConceptIds where !conceptIds.contains(rid) {
+                orphanConcepts += 1
+            }
+            for rid in concept.relatedQuestionIds where !questionIds.contains(rid) {
+                orphanQuestions += 1
+            }
+        }
+        if orphanConcepts > 0 || orphanQuestions > 0 {
+            CrashReporter.shared.logDataIssue(
+                "SubjectPack '\(id)' has \(orphanConcepts) orphan concept refs and \(orphanQuestions) orphan question refs in relatedConceptIds/relatedQuestionIds"
+            )
+        }
+    }
 }

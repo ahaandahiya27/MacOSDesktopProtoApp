@@ -98,7 +98,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | F3 | Concept-ID topic prefix matches parent topic | ✅ post edf4c8b |
 | F4 | Question-ID topic prefix matches parent topic | 🟡 some cosmetic mismatches remain (don't crash, ugly to read) |
 | F5 | relatedConceptIds resolve | ✅ orphan removed |
-| F6 | relatedQuestionIds resolve | 🟡 not exhaustively audited |
+| F6 | relatedQuestionIds resolve | ✅ 66 orphan refs pruned from science pack; SubjectPack.validateRelatedRefs() runs at load and logs any future orphans to CrashReporter |
 | F7 | All four explanation depths populated | 🟡 spot-checked; bulk audit pending |
 | F8 | useCases ≥ 3 per concept | 🟡 enforced by content pipeline; need re-audit |
 | F9 | beyondTheBook non-empty | 🟡 spot-checked |

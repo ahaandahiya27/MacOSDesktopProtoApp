@@ -92,6 +92,11 @@ final class SubjectRegistry: ObservableObject {
                 debugLog("[SubjectRegistry] Loaded \(p.id): \(p.title) — " +
                       "\(p.chapters.count) chapters, \(p.conceptCount) concepts, " +
                       "\(p.questionCount) questions")
+                // Surface relatedConceptIds / relatedQuestionIds refs that
+                // don't resolve. Orphans are silently dropped by the UI's
+                // compactMap, so this is the only place they become
+                // visible to anyone investigating crashlogs.
+                p.validateRelatedRefs()
             }
             if let e = err {
                 errors.append(e)
