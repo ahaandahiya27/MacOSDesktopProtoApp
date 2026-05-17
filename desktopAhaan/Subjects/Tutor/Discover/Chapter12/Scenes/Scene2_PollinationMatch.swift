@@ -55,6 +55,13 @@ struct Scene2_PollinationMatch: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 covers pollination types in detail — autogamy, geitonogamy, xenogamy — plus the floral adaptations for each (cleistogamy, dichogamy, herkogamy). NEET asks these distinction questions every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

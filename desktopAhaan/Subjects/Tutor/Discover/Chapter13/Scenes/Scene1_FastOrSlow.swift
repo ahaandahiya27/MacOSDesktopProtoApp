@@ -59,6 +59,13 @@ struct Scene1_FastOrSlow: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 'Motion in a Straight Line' formalises speed (scalar) vs velocity (vector — direction matters). Average speed ≠ |average velocity| in general. JEE Kinematics tests this distinction in multi-segment journey problems every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

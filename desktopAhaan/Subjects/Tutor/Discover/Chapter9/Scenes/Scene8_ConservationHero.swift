@@ -53,6 +53,13 @@ struct Scene8_ConservationHero: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 Geography",
+                detail: "Class 10 'Resources and Development' formalises soil conservation as a national-level issue — the National Mission for Sustainable Agriculture, watershed development, and the role of NGOs in dryland restoration."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

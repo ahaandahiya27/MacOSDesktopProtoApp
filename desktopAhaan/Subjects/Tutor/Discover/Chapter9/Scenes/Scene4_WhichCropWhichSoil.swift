@@ -58,6 +58,13 @@ struct Scene4_WhichCropWhichSoil: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 9 Geography → NCERT",
+                detail: "Class 9 Geography covers India's major crops and the soil types that suit them — paddy on alluvial, wheat on loamy black, cotton on Deccan black, sugarcane on alluvial. CBSE Class 10 Economics tests cropping patterns and irrigation needs."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

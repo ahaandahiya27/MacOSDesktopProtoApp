@@ -49,6 +49,13 @@ struct Scene6_AnimalNicheMatch: View {
                 Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
             }
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Organisms and Populations' formalises niche as the role + range an organism occupies. Two species cannot occupy the same niche indefinitely (Gause's competitive exclusion principle). NEET asks niche-vs-habitat distinction questions every cycle."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

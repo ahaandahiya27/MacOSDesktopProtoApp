@@ -39,6 +39,13 @@ struct Scene7_Budding: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Reproduction in Organisms' covers asexual modes: binary fission (Amoeba), multiple fission (Plasmodium), budding (Hydra, yeast), fragmentation (Spirogyra), spore formation (Rhizopus). NEET tests these reproductive modes every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

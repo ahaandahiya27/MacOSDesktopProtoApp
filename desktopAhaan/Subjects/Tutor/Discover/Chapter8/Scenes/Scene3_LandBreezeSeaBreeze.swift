@@ -63,6 +63,13 @@ struct Scene3_LandBreezeSeaBreeze: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 9 Geography",
+                detail: "Class 9 Geography expands this into the Indian monsoon — a continent-scale land-sea breeze driven by the same uneven heating but operating over 6 months instead of 12 hours. NCERT covers the monsoon's role in agriculture and the SW vs NE monsoon mechanism."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -63,6 +63,13 @@ struct Scene8_TranspirationPull: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Transport in Plants' covers the cohesion-tension theory of water ascent — water columns can support a tension of several MPa because of hydrogen bonding between molecules. Lets trees as tall as 100m get water from root to canopy. NEET high-yield."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -43,6 +43,13 @@ struct Scene4_OpenDrainHazards: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Human Health and Disease' covers water-borne diseases — cholera (Vibrio cholerae), typhoid (Salmonella typhi), dysentery (Entamoeba histolytica), hepatitis A. Their transmission and prevention is asked in NEET every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

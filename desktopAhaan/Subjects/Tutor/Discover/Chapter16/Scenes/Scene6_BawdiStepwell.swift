@@ -40,6 +40,13 @@ struct Scene6_BawdiStepwell: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 9 History + Geography",
+                detail: "Class 9 History 'Climate, Environment and Civilisation' covers the Indus Valley's drainage engineering. Class 10 Geography covers traditional Indian water-storage architecture — bawdis, johads, tankas. UNESCO has listed Rani-ki-Vav (Gujarat) as a World Heritage Site."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

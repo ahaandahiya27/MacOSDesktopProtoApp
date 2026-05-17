@@ -54,6 +54,13 @@ struct Scene7_WaterAudit: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Civics / EVS",
+                detail: "Class 9 Civics 'Working of Institutions' covers India's water-policy framework — Jal Shakti Ministry (2019), water-as-fundamental-right court cases, and the Atal Bhujal Yojana. Class 10 EVS asks personal-impact-on-environment questions."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

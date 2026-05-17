@@ -54,6 +54,13 @@ struct Scene4_UnevenHeating: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 Thermal Physics introduces heat transfer in three modes — conduction, convection, radiation. Wind is large-scale convection. JEE asks the Stefan-Boltzmann law (radiation: E = σT⁴) and Newton's law of cooling regularly."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

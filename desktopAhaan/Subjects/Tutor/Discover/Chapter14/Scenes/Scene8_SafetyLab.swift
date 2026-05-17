@@ -46,6 +46,13 @@ struct Scene8_SafetyLab: View {
                 Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
             }
 
+            LookingAheadCallout(
+                title: "Class 10 Physics + ITI",
+                detail: "Class 10 covers home wiring — live (red), neutral (black), earth (green/yellow); 3-pin plugs; MCBs and ELCBs. Industrial Training (ITI / polytechnic) takes this further into wiring codes and load calculation. JEE rarely asks safety directly but tests power-supply problems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

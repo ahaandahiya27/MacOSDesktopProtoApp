@@ -45,6 +45,13 @@ struct Scene4_ElectricIron: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 → JEE",
+                detail: "Class 10 covers thermostat (bimetallic strip) physics in 'Heating Effects of Electric Current'. Class 12 / JEE adds the temperature coefficient of resistance α — why nichrome is used (low α) for stable heating elements."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

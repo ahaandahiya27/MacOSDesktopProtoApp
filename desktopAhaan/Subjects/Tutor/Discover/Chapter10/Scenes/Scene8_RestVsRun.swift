@@ -51,6 +51,13 @@ struct Scene8_RestVsRun: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Breathing' covers rate of breathing (12-16/min rest, up to 60/min exercise), tidal volume, vital capacity, residual volume. NEET asks lung-volume capacity questions every year. Class 12 adds asthma, emphysema, oxygen debt physiology."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

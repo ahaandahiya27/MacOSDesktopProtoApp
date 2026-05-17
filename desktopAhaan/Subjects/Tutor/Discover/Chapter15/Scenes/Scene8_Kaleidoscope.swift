@@ -42,6 +42,13 @@ struct Scene8_Kaleidoscope: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 9/10 Maths + JEE",
+                detail: "Class 9/10 Maths formalises this as 'Symmetry' — rotational order, lines of symmetry, reflection groups. Class 12 / JEE Chemistry covers molecular symmetry (point groups C₂, C₃, σ planes) using the same mathematical framework that makes a kaleidoscope work."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

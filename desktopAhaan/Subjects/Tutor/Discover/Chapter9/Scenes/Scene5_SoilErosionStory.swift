@@ -52,6 +52,13 @@ struct Scene5_SoilErosionStory: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 9 Geography",
+                detail: "Class 9 'Natural Vegetation and Wildlife' covers soil erosion as a deforestation consequence — gully erosion, sheet erosion, ravines (badlands of Chambal). Conservation is in Class 10 'Resources and Development' — terraces, contour ploughing, shelter-belts."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

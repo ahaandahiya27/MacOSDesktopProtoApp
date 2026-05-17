@@ -50,6 +50,13 @@ struct Scene7_PhloemSugarPipeline: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Bio → NEET",
+                detail: "Class 11 'Transport in Plants' covers the source-sink hypothesis (Münch's pressure-flow theory) — how sugar moves from leaf (source) to root/fruit (sink) by osmotic pressure. NEET asks Münch hypothesis questions every cycle."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -45,6 +45,13 @@ struct Scene6_PeriscopeBuilder: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 → JEE Optics",
+                detail: "Class 12 'Ray Optics' covers Total Internal Reflection (TIR) — the principle behind modern fibre-optic submarine periscopes and the internet's optical fibres. Critical angle θ_c = sin⁻¹(1/μ). JEE asks TIR problems every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

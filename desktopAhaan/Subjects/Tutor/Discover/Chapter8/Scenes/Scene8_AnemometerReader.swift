@@ -55,6 +55,13 @@ struct Scene8_AnemometerReader: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 Physics covers angular speed ω = v/r and the relation between rpm and SI units. JEE asks rotational kinematics problems on rotating bodies (centripetal force, angular momentum) using exactly this kind of cup-and-radius setup."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

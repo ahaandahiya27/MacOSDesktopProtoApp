@@ -45,6 +45,13 @@ struct Scene8_BetterPractices: View {
                 Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
             }
 
+            LookingAheadCallout(
+                title: "Class 12 Bio + Civics",
+                detail: "Class 12 'Environmental Issues' covers individual and policy responses to pollution. Class 10 Civics covers India's environmental policy — Polluter Pays principle, EPA 1986, NGT (National Green Tribunal)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

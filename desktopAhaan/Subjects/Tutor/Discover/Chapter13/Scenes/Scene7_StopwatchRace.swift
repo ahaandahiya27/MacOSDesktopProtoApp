@@ -67,6 +67,13 @@ struct Scene7_StopwatchRace: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 'Units and Measurements' introduces measurement precision and significant figures. JEE Physics expects sig-fig discipline in numerical answers, and Class 12 Modern Physics uses the atomic clock as the definition of one second (9,192,631,770 cycles of Cs-133)."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

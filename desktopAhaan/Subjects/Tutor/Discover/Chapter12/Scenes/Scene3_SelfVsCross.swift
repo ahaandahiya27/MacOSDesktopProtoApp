@@ -49,6 +49,13 @@ struct Scene3_SelfVsCross: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 covers the genetic consequences: self-pollination reduces variability (Mendel exploited this with pure-breeding pea plants); cross-pollination maintains variability. The trade-off is a perennial Bio examiner favourite for NEET."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

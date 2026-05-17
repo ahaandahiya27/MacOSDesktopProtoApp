@@ -49,6 +49,13 @@ struct Scene7_MirrorsInRealLife: View {
                 Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
             }
 
+            LookingAheadCallout(
+                title: "Class 10 / JEE Optics",
+                detail: "Class 10 Light: 'Spherical Mirrors and Image Formation' covers the same use-cases formally — concave for shaving + headlight + telescope, convex for vehicle mirrors. Class 12 / JEE adds the silvering process and front-surface vs back-surface mirrors."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
             Spacer(minLength: 0)
         }

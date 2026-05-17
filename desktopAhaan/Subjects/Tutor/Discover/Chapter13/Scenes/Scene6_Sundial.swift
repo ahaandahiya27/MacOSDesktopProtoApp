@@ -46,6 +46,13 @@ struct Scene6_Sundial: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics + Astronomy",
+                detail: "Class 11 covers Earth's rotation, equation of time, and how a sundial's hour markings actually need adjustment by season (the analemma). JEE Astronomy questions are rare but the Earth-Sun geometry shows up in Ray Optics (apparent solar position) and time-zone problems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

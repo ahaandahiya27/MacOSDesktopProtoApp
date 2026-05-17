@@ -43,6 +43,13 @@ struct Scene4_ForestAsSponge: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Geography",
+                detail: "Class 11 Geography 'The Atmosphere and Hydrosphere' covers the water cycle in detail — evapotranspiration from forests is a key driver of the global hydrological cycle. Forests act as 'biotic pumps' that maintain regional rainfall patterns."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

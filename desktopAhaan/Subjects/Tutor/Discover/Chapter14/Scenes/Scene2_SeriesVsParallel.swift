@@ -46,6 +46,13 @@ struct Scene2_SeriesVsParallel: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 10 → JEE",
+                detail: "Class 10 introduces R_series = ΣR and 1/R_parallel = Σ1/R. JEE / Class 12 'Current Electricity' adds combination problems with cells in series/parallel, terminal voltage V = EMF − Ir, and the Wheatstone bridge condition."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -44,6 +44,13 @@ struct Scene6_SanitationMap: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Civics / Public Health",
+                detail: "Class 9 Civics 'Constitutional Design' covers fundamental rights and the Right to Sanitation as derived from Article 21 (Right to Life). India's Swachh Bharat Mission (2014-2019) built 100M+ toilets. Class 10 Civics tests programme evaluation."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

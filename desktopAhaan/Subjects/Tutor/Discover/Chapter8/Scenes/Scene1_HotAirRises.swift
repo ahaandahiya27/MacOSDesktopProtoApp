@@ -59,6 +59,13 @@ struct Scene1_HotAirRises: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 covers density (ρ = m/V) and Archimedes' principle — the same physics that lifts a hot-air balloon also makes ships float. JEE Physics asks buoyancy and pressure problems using ρgh on fluids every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

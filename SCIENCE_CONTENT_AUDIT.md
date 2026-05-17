@@ -455,6 +455,31 @@ Running coverage after this commit:
 
 ~50% of scenes now have at least one academic-continuity sidebar. Comprehensive sweep across the remaining ~50 scenes (mostly the lower-impact / boss-quiz scenes) is the next pass.
 
+## Sidebar coverage pass 4 — universal LookingAhead (50 more scenes)
+
+Architect's audit: 61 of 99 scenes still had no sidebar after pass 3. 11 of those are boss quizzes (deliberately skipped — they're quiz-only screens). The other **50 are every remaining learning scene**.
+
+Single Python sweep wrote a unique, scene-specific `LookingAheadCallout` for each — each callout 1–3 sentences naming the Class 9 / 10 / 11 / 12 / JEE / NEET continuation tied precisely to that scene's concept. Examples:
+
+- **Ch 8 / HotAirRises** → Class 11 density + Archimedes' principle + ρgh
+- **Ch 11 / PhloemSugarPipeline** → Class 11 Münch source-sink pressure-flow theory (NEET-favourite)
+- **Ch 12 / FlowerAnatomy** → Class 12 micro-/megasporogenesis, embryo-sac (8 nuclei / 7 cells)
+- **Ch 13 / FastOrSlow** → Class 11 speed (scalar) vs velocity (vector) for JEE
+- **Ch 14 / ElectricIron** → Class 10 thermostat; Class 12 temperature coefficient of resistance α
+- **Ch 15 / PeriscopeBuilder** → Class 12 Total Internal Reflection, critical angle, optical fibres
+- **Ch 16 / RainwaterHarvesting** → Class 10 traditional Indian techniques (khadins, johads, kuls, eris, bhandaras)
+- **Ch 17 / FoodWebBuilder** → Class 12 ecosystem trophic levels, 10% rule, energy pyramid
+- **Ch 18 / OpenDrainHazards** → Class 12 'Human Health and Disease' (cholera, typhoid, dysentery, hepatitis A)
+
+(Full catalogue of 50 entries in the commit body.)
+
+Final scene-level coverage:
+
+- **LookingAheadCallout: 29 → 79 of 99 scenes** (80% overall, **89% of the 88 learning scenes**; the 9 still missing are boss quizzes and a handful of edge cases).
+- **TryAtHomeCallout**: 17 of 99 (~19%, unchanged this pass — focused on academic-arc coverage this turn).
+
+The "no chapter has less functionality than another" goal at the sidebar layer is essentially achieved: every chapter (Ch 8–18) now has at least 6 of 8 learning scenes carrying the LookingAhead sidebar. Future passes can deepen TryAtHome coverage and continue concept-level article authoring.
+
 ---
 
 *Generated at: 2026-05-17.*

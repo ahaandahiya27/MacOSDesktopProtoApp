@@ -48,6 +48,13 @@ struct Scene3_FoodWebBuilder: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Ecosystem' covers food chains, food webs, and the 10% rule of energy transfer (only ~10% of energy at each trophic level reaches the next). NEET asks energy-pyramid calculations and the difference between detritus and grazing food chains."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

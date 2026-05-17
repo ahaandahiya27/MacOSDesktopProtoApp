@@ -42,6 +42,13 @@ struct Scene8_WaterPledge: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Civics / SDG framework",
+                detail: "UN Sustainable Development Goal 6 (Clean Water and Sanitation) is part of CBSE Class 10 syllabus. Targets include universal access to safe water and sanitation by 2030, halving untreated wastewater, and protecting water-related ecosystems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

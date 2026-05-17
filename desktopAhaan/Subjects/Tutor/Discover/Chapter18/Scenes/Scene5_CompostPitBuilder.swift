@@ -44,6 +44,13 @@ struct Scene5_CompostPitBuilder: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 12 Bio → NEET",
+                detail: "Class 12 'Microbes in Human Welfare' covers vermicompost (Eisenia foetida earthworm), biogas plants (methanogen bacteria), and sewage treatment using BOD-reducing microbes. NEET asks microbe-application questions every year."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

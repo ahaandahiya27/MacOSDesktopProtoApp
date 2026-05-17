@@ -46,6 +46,13 @@ struct Scene8_UnitsOfTime: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            LookingAheadCallout(
+                title: "Class 11 Physics → JEE",
+                detail: "Class 11 'Units and Measurements' covers the SI base units: metre, kilogram, second, ampere, kelvin, mole, candela. The second is now defined using the caesium-133 atomic clock (exact). JEE asks unit-system conversion problems."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
