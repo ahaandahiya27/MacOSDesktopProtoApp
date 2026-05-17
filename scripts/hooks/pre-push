@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# pre-push — run the full build + test suite before any push to origin.
+#
+# This is the gate that keeps origin/main from carrying a broken state
+# that the iMac would pull and fail to build. Slow (~30 s) but only runs
+# at push time, not commit time.
+#
+# Bypass with: git push --no-verify   (use sparingly)
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+if [ ! -x "scripts/ci-build-test.sh" ]; then
+    echo "pre-push: scripts/ci-build-test.sh missing or not executable — skipping."
+    exit 0
+fi
+
+echo "pre-push: running scripts/ci-build-test.sh"
+bash scripts/ci-build-test.sh

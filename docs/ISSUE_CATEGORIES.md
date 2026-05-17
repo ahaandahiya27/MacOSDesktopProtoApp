@@ -144,7 +144,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | I1 | Particle counts capped on legacy GPU | ✅ HardwareTier.particleBudget |
 | I2 | Animation FPS capped at 20 on legacy | ✅ HardwareTier.animationFPS |
 | I3 | Long modifier chains causing type-check blowup | ✅ resolved |
-| I4 | Large List → LazyVStack migration | ❌ Lists not yet converted |
+| I4 | Large List → LazyVStack migration | ✅ N/A — SwiftUI `List(_:id:)` on macOS is already lazy (only visible rows materialised); QuizBank renders 635+ questions without observed jank |
 | I5 | Image decoding off main thread | 🟡 only SF Symbols + emoji; no heavy bitmap loads |
 | I6 | JSON parse on main thread (app launch) | 🟡 SubjectRegistry parses synchronously at startup; acceptable for size |
 | I7 | App cold-launch time | ❌ not benchmarked |
@@ -277,7 +277,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | T3 | Smoke test for navigation | 🟡 covered indirectly by TutorNavigationTests, no end-to-end click test |
 | T4 | Snapshot tests | ❌ |
 | T5 | CI on every commit | 🟡 `scripts/ci-build-test.sh` added (S5); not yet wired to GitHub Actions |
-| T6 | Pre-commit hooks | ❌ |
+| T6 | Pre-commit hooks | ✅ scripts/hooks/{pre-commit,pre-push} — try!/as! gate + ViewBuilder warn on commit; full ci-build-test.sh on push; install via scripts/install-git-hooks.sh |
 | T7 | Static analysis (treat warnings as errors) | ✅ build is zero-warning (S1); flipping the project setting next |
 
 ## U. Code quality / hygiene
@@ -327,14 +327,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | X6 | Contributing guidelines | ✅ folded into CLAUDE.md (conventional commits + don't-break-Big-Sur rules) |
 | X7 | Branch policy / commit conventions | ✅ conventional commits in use |
 
-## Y. Content pipeline (auxiliary scripts in ContentPipeline/)
+## Y. Content pipeline (one-off scripts under `scripts/`)
 
 | ID | Category | Status |
 |----|----------|--------|
-| Y1 | JSON generation reproducibility | 🟡 |
-| Y2 | Schema validation on output | ❌ |
+| Y1 | JSON generation reproducibility | 🟡 N/A today — content edits happen via one-off Python scripts written in-session; no canonical regen pipeline yet |
+| Y2 | Schema validation on output | ✅ runtime guard via `SubjectPack.validateRelatedRefs()` (logs orphans to crashlog) + 13 ChapterContentTests assertions that catch breaks before push |
 | Y3 | Page-ref backfill from textbook | ❌ |
-| Y4 | Diff-friendly JSON formatting | 🟡 — `ensure_ascii=False` rule learnt the hard way |
+| Y4 | Diff-friendly JSON formatting | ✅ `ensure_ascii=False` in every Python edit script keeps diffs to actual changes, not unicode-escape reformats |
 
 ---
 

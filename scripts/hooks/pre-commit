@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# pre-commit — static checks that must pass before any commit lands.
+#
+# Cheap only. Heavy work (build + tests) lives in pre-push. Anything that
+# takes longer than ~3 seconds belongs in pre-push or CI.
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+# 1) Refuse to commit obvious force-unwrap regressions in runtime paths.
+#    Tests are exempt — XCTest assertions legitimately force unwraps.
+STAGED_SWIFT=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^desktopAhaan/.*\.swift$' \
+    | grep -v 'FoundationTutor.swift' \
+    || true)
+if [ -n "$STAGED_SWIFT" ]; then
+    FORBIDDEN=$(echo "$STAGED_SWIFT" | xargs grep -n -E '(try!|as!)' || true)
+    if [ -n "$FORBIDDEN" ]; then
+        echo "pre-commit: refusing — try! / as! found in staged runtime code:"
+        echo "$FORBIDDEN"
+        echo
+        echo "If this is intentional, run with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
+# 2) ViewBuilder ≤10 children static check (heuristic; ok if it over-flags).
+if [ -f "scripts/check_viewbuilder_limit.py" ]; then
+    if ! python3 scripts/check_viewbuilder_limit.py --quiet 2>/dev/null; then
+        # The script prints details; fall through and let the dev decide.
+        echo
+        echo "pre-commit: ViewBuilder check flagged something — verify on Big Sur."
+        echo "If false-positive, run with: git commit --no-verify"
+        # Don't block; this is a heuristic. Comment out the next line to enforce.
+        # exit 1
+    fi
+fi
+
+exit 0
