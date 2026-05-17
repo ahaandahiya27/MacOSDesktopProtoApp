@@ -1,0 +1,36 @@
+name: build-and-test
+
+# Closes T5 in docs/ISSUE_CATEGORIES.md. Runs the same script
+# scripts/ci-build-test.sh that the local pre-push hook runs, so a
+# commit that compiles on the dev mac but not against the iMac's
+# Big Sur target gets caught before it hits origin/main.
+#
+# macOS 13 runner + MACOSX_DEPLOYMENT_TARGET=11.0 mirrors what the
+# script enforces locally; GitHub Actions no longer offers a Big Sur
+# (macOS 11) runner image, so target enforcement is via the deploy
+# target flag, not the runner OS.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: macos-13
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Install xcpretty
+        run: gem install xcpretty --no-document
+
+      - name: Build (Release) + Test (Debug) under MACOSX_DEPLOYMENT_TARGET=11.0
+        run: bash scripts/ci-build-test.sh
