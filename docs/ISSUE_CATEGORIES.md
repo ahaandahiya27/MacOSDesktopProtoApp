@@ -33,7 +33,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | B1 | Force unwraps (`!`) outside test code | ✅ none found in runtime paths |
 | B2 | Force casts (`as!`) outside test code | ✅ none found |
 | B3 | `fatalError(…)` outside dev-only shims | ✅ only in `FoundationTutor.swift` (AI shim) |
-| B4 | `precondition(…)` / `assert(…)` reachable in prod | 🟡 only in `DiscoveryStepper.init` (`options.count == outputs.count`); contract enforced |
+| B4 | `precondition(…)` / `assert(…)` reachable in prod | ✅ DiscoveryStepper.init no longer `precondition`s — soft-fails to CrashReporter.logDataIssue and pads/clips outputs |
 | B5 | `Array.first!` / `Array[i]` without bounds check | ✅ swept |
 | B6 | `Dictionary(uniqueKeysWithValues:)` (fatal on dup) | ✅ replaced with defensive `uniquingKeysWith:` |
 | B7 | Threading: background `@Published` mutation | ✅ all service classes `@MainActor`; SubjectRegistry now actually decodes off-thread (was lying) |
@@ -48,8 +48,8 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | ID | Category | Status |
 |----|----------|--------|
 | C1 | @State preservation across push/pop in TutorNavigation | ✅ `.id()` moved off root |
-| C2 | @StateObject vs @ObservedObject ownership | 🟡 spot-checked, full sweep pending |
-| C3 | @EnvironmentObject lifecycle | 🟡 |
+| C2 | @StateObject vs @ObservedObject ownership | ✅ swept; root views own (@StateObject), child views observe (@ObservedObject), shared singletons read via @ObservedObject — no inversions found |
+| C3 | @EnvironmentObject lifecycle | ✅ AppState / SubjectRegistry / DataStore injected at app root; every leaf view reads via @EnvironmentObject; no per-screen re-injection |
 | C4 | Sidebar selection persistence (UserDefaults) | ✅ in AppState |
 | C5 | Window restoration (@SceneStorage) | ❌ not implemented — relaunch lands at root |
 | C6 | Recent items persistence | ✅ JSON encoded in UserDefaults |

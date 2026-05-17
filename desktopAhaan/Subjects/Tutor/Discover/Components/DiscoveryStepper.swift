@@ -26,7 +26,9 @@ import SwiftUI
 /// macOS 11 (Big Sur) / Swift 5.5 compatible:
 ///  - HStack + Button + RoundedRectangle + Text only.
 ///  - Each @ViewBuilder closure ≤ 10 direct children.
-///  - options.count must equal outputs.count (precondition).
+///  - options.count is expected to equal outputs.count; mismatches
+///    are logged via CrashReporter.logDataIssue and `outputs` is
+///    padded/clipped so the widget still renders.
 struct DiscoveryStepper: View {
     let title: String
     let subtitle: String
@@ -39,13 +41,27 @@ struct DiscoveryStepper: View {
          options: [String],
          selection: Binding<Int>,
          outputs: [String]) {
-        precondition(options.count == outputs.count,
-                     "DiscoveryStepper: options.count must equal outputs.count")
         self.title = title
         self.subtitle = subtitle
         self.options = options
         self._selection = selection
-        self.outputs = outputs
+        // Soft-fail instead of `precondition` — if a future scene ever
+        // ships mismatched lists, log it to the crash file and pad/clip
+        // `outputs` so the widget renders something sensible rather than
+        // killing the whole Discover scene. `currentOutput` already
+        // clamps the index defensively.
+        if options.count == outputs.count {
+            self.outputs = outputs
+        } else {
+            CrashReporter.shared.logDataIssue(
+                "DiscoveryStepper: options.count (\(options.count)) != outputs.count (\(outputs.count)) — title=\(title)"
+            )
+            if outputs.count >= options.count {
+                self.outputs = Array(outputs.prefix(options.count))
+            } else {
+                self.outputs = outputs + Array(repeating: "", count: options.count - outputs.count)
+            }
+        }
     }
 
     var body: some View {
