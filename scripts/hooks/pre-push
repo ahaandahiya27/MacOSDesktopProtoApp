@@ -17,5 +17,13 @@ if [ ! -x "scripts/ci-build-test.sh" ]; then
     exit 0
 fi
 
+# Y1 — content-pack JSON round-trip check. Catches a stray edit script
+# that ran with ensure_ascii=True (or wrong indent) before we waste CI
+# minutes on a build.
+if [ -x "scripts/verify_pack_roundtrip.py" ]; then
+    echo "pre-push: pack JSON round-trip check"
+    python3 scripts/verify_pack_roundtrip.py || exit 1
+fi
+
 echo "pre-push: running scripts/ci-build-test.sh"
 bash scripts/ci-build-test.sh

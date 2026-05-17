@@ -132,7 +132,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | 🟡 DiscoveryStepper + DiscoveryWidget surfaced; Settings sliders rely on default SwiftUI accessibility |
 | H4 | Dynamic Type Large / xLarge no clipping | 🟡 `testConceptTitlesStayShortEnoughForDynamicType` asserts no concept title > 90 chars (proxy for xLarge fit in card headers); full visual verification still needs a UI test |
 | H5 | Reduce Motion respected on animations | 🟡 TimedSceneModifier + ParticleEmitter (the heavy animations) honour `@Environment(\.accessibilityReduceMotion)`; spot `.animation(...)` on tap feedback in Scene buttons does not — visual only, no time-critical info lost |
-| H6 | Color-contrast both Light / Dark | 🟡 every Color reference is semantic or `Color.compat*` and adapts automatically — pixel-perfect contrast not measured |
+| H6 | Color-contrast both Light / Dark | 🟡 SwiftUI semantic colours (.orange, .secondary, NSColor.*) auto-adapt; explicit `Color(red:green:blue:)` literals live only in `ChapterTheme.swift` (per-chapter brand identity, intentionally consistent across modes) — pixel-perfect contrast not measured |
 | H7 | Keyboard-only navigation full coverage | 🟡 every action has a menu Command (with shortcut) or a focused Button; full coverage relies on SwiftUI's default focus traversal |
 | H8 | Focus management across views | 🟡 SwiftUI defaults used; not manually overridden |
 | H9 | `.accessibilityElement(children: …)` correctly groups | ✅ DiscoveryWidget / DiscoveryStepper / RouteNotFoundView use `.accessibilityElement(children: .contain)`; SwiftUI defaults work elsewhere |
@@ -331,7 +331,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| Y1 | JSON generation reproducibility | 🟡 N/A today — content edits happen via one-off Python scripts written in-session; no canonical regen pipeline yet |
+| Y1 | JSON generation reproducibility | ✅ `scripts/verify_pack_roundtrip.py` asserts every pack matches `json.dump(..., ensure_ascii=False, indent=2)` byte-for-byte; wired into `scripts/hooks/pre-push` so a stray ensure_ascii=True edit script is blocked before reaching origin |
 | Y2 | Schema validation on output | ✅ runtime guard via `SubjectPack.validateRelatedRefs()` (logs orphans to crashlog) + 13 ChapterContentTests assertions that catch breaks before push |
 | Y3 | Page-ref backfill from textbook | ❌ |
 | Y4 | Diff-friendly JSON formatting | ✅ `ensure_ascii=False` in every Python edit script keeps diffs to actual changes, not unicode-escape reformats |
