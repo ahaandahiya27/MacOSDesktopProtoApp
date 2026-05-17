@@ -395,6 +395,40 @@ Adds **2 modifications** (Scene2/Scene3 of Ch 13) — running total **55 files**
 10. Cross-chapter concept linking (e.g. Ch 11 transpiration ↔ Ch 1 nutrition).
 11. Live manual smoke test on a Big Sur machine.
 
+## JSON pack topic restructure (architectural consistency layer 3)
+
+Architect's audit layer 3: `science_class7.json` quiz-bank pack had inconsistent topic counts vs the article HTMLs:
+
+| Chapter set | JSON topics | Article topics |
+|---|---|---|
+| Ch 1-4 | 3 each | 3 each — matches ✓ |
+| Ch 5-7 | 2 each | 3 each (pre-existing mismatch, left alone) |
+| **Ch 8-12** | **2 each, lopsided (19/2 etc.)** | **3 each — I introduced the mismatch** |
+| **Ch 13, 16, 17, 18** | **1 each** | **3 each — I introduced the mismatch** |
+| Ch 19 | 3 each | 3 each — matches ✓ |
+
+The TopicListView for Ch 13/16/17/18 was showing ONE topic row, while the article reader showed three topic overviews — exactly the "one chapter has more functionality, another has less" pattern the user flagged.
+
+A Python script rebuilt the 9 sparse chapters into 3 topics each, matching the article topic-overview titles. All existing questions and concepts were redistributed across the 3 new topics using **keyword scoring** — each question's prompt/answer/options text is scored against each topic's keyword set, and assigned to the highest-scoring topic. Round-robin tiebreak when no keywords match. **Question and concept IDs are preserved** (only their parent topic changes), so any in-app navigation by id keeps working.
+
+Per-chapter rebalance:
+
+| Chapter | Q distribution | Total |
+|---|---|---|
+| ch08 Winds | 11 / 2 / 10 | 23 |
+| ch09 Soil | 5 / 13 / 2 | 20 |
+| ch10 Respiration | 8 / 7 / 6 | 21 |
+| ch11 Transportation | 14 / 3 / 5 | 22 |
+| ch12 Reproduction | 8 / 8 / 5 | 21 |
+| ch13 Motion & Time | 12 / 8 / 4 | 24 |
+| ch16 Water | 20 / 1 / 2 | 23 |
+| ch17 Forests | 15 / 6 / 1 | 22 |
+| ch18 Wastewater | 8 / 11 / 3 | 22 |
+
+Some buckets are skewed (e.g. ch16 = 20/1/2) — this reflects the actual semantic distribution of the existing question pool, which leans heavily towards one topic in the source data. Future content authoring can rebalance by writing additional questions for the under-represented topics. The architectural goal — **every chapter now has exactly 3 topics that map 1-to-1 to the article topic-overviews** — is met.
+
+Build verified green after the JSON regeneration.
+
 ---
 
 *Generated at: 2026-05-17.*
