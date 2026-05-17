@@ -179,14 +179,7 @@ struct ContentView: View {
                                     Spacer(minLength: 0)
                                     let n = needsReviewCount(for: pack)
                                     if n > 0 {
-                                        Text("\(n)")
-                                            .font(.caption2.weight(.semibold).monospacedDigit())
-                                            .foregroundColor(.white)
-                                            .padding(.horizontal, 6)
-                                            .padding(.vertical, 1)
-                                            .background(Capsule().fill(Color.orange))
-                                            .accessibilityLabel("\(n) questions need review")
-                                            .help("\(n) questions need review")
+                                        BadgePill(count: n, accessibilityText: "\(n) questions need review")
                                     }
                                 }
                                 Text("\(pack.conceptCount) concepts · \(pack.questionCount) questions")

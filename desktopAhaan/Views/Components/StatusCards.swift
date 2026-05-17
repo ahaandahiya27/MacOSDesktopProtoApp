@@ -72,6 +72,32 @@ struct InfoCard: View {
     }
 }
 
+/// Compact pill-shaped count badge (e.g., "8 needs review", "3 new").
+/// Reused wherever a small numerical indicator sits next to a label or
+/// row title. Defaults to orange (the existing "needs review" semantic)
+/// but accepts any tint.
+///
+/// macOS 10.15+ compatible.
+struct BadgePill: View {
+    let count: Int
+    var tint: Color = .orange
+    /// Optional `.help(...)` and `.accessibilityLabel(...)` text. When
+    /// non-nil, the pill is screen-reader-announced as this; when nil,
+    /// the bare count is announced.
+    var accessibilityText: String? = nil
+
+    var body: some View {
+        Text("\(count)")
+            .font(.caption2.weight(.semibold).monospacedDigit())
+            .foregroundColor(.white)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 1)
+            .background(Capsule().fill(tint))
+            .accessibilityLabel(accessibilityText ?? "\(count)")
+            .help(accessibilityText ?? "")
+    }
+}
+
 /// Standard empty-state for screens with no content yet (no bookmarks,
 /// no history, no favorites, no search results, etc.). Use this directly
 /// rather than re-inlining a `VStack { Image + Text + Text }` per screen,
