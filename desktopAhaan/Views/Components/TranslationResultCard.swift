@@ -23,6 +23,7 @@ struct TranslationResultCard: View {
                                 .foregroundColor(Color.compatIndigo)
                         }
                         .disabled(isSpeaking)
+                        .pointingCursor()
                         .help("Play pronunciation")
                         .accessibilityLabel("Play audio pronunciation")
                         .accessibilityHint("Hear the translated text spoken aloud")
@@ -31,6 +32,7 @@ struct TranslationResultCard: View {
                             Image(systemName: isFavorited ? "heart.fill" : "heart")
                                 .foregroundColor(.pink)
                         }
+                        .pointingCursor()
                         .help(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityLabel(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityHint("Save or remove this translation from your favorites")
@@ -47,6 +49,7 @@ struct TranslationResultCard: View {
                             Image(systemName: showCopied ? "checkmark" : "doc.on.doc")
                                 .foregroundColor(showCopied ? .green : .secondary)
                         }
+                        .pointingCursor()
                         .help(showCopied ? "Copied!" : "Copy translation")
                         .accessibilityLabel(showCopied ? "Copied to clipboard" : "Copy translation")
                         .accessibilityHint("Copy the translated text to your clipboard")

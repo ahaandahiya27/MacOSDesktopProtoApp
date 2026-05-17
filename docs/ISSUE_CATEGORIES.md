@@ -537,7 +537,7 @@ in the project memory.
 |----|----------|--------|
 | PR1 | Article print stylesheet exists; Discover scenes have no print-equivalent recap | ❌ |
 | PR2 | No "share / export" of progress card to parent | ❌ |
-| PR3 | OCR result not styled for copy-out | ❌ |
+| PR3 | OCR result not styled for copy-out | ✅ `TranslationResultCard` (shown after OCR translation) already exposes a Copy button writing `response.translatedText` to `NSPasteboard.general` + a 1.5s "Copied!" feedback state. Also Speak (audio playback) + Favorite. All three are icon-only Buttons; added `.pointingCursor()` to each (AC4 follow-up). Text-only copy via system clipboard works correctly for Devanagari and Latin |
 
 ---
 
