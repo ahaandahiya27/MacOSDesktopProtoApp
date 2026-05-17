@@ -159,7 +159,24 @@ Same three-section structure as Topic 1/2 articles (concept / try at home / look
 
 **Chapter 15 (Light) is now at full topic depth** — chapter overview + 3 topic overviews + 11 concept articles = 15 article files total, matching the article-richness of Ch 1 (25 files) / Ch 5 (19) / Ch 6 (15) / Ch 7 (15) / Ch 19 (27).
 
-Topic-level articles for the other 10 new chapters (Ch 8, 9, 10, 11, 12, 13, 14, 16, 17, 18) remain on the backlog.
+Topic-level articles for the other 10 new chapters remain on the backlog.
+
+## Ch 14 (Electric Current) — Topic 1 articles (Circuits & Current)
+
+Broadens topic depth to a second chapter — Electric Current — chosen because it's the highest JEE-yield physics chapter beyond Light. Class 10 (Electricity) and Class 12 (Current Electricity, Magnetic Effects) both build directly on this thread.
+
+Five new articles in `Chapter14/`:
+- `ch14_t01_overview.html` — Circuits & Current topic overview.
+- `ch14_t01_c01.html` — What is an Electric Current? (electrons drifting, ampere, drift speed, ammeter scale, conventional vs electron-flow direction; preview of I = dQ/dt, drift velocity v_d = I/neA, resistivity, KCL).
+- `ch14_t01_c02.html` — The Cell and the Closed Loop (cell chemistry, battery, circuit symbol table, switch open/closed, what drains a cell; lemon-battery experiment; preview of voltage V, EMF ε, internal resistance r, KVL).
+- `ch14_t01_c03.html` — Series vs Parallel (same-current vs split-current; brightness behaviour; why house wiring is parallel; comparison table; flickering-brightness experiment; preview of R_series = ΣR, 1/R_parallel = Σ1/R, full Kirchhoff's laws, Wheatstone bridge).
+- `ch14_t01_c04.html` — Conductors and Insulators (free-electron explanation, common conductors/insulators, semiconductors as an in-between class, real safety implications, homemade conductivity tester; preview of resistance R, resistivity ρ, R = ρL/A, temperature dependence, superconductors).
+
+Appended a `<table>` ruleset to `ch14_style.css` so the circuit-symbols table and the series-vs-parallel comparison render cleanly (amber palette matching the chapter accent).
+
+Same three-section structure as the Ch 15 articles (concept / try at home / looking ahead). ArticleIndex.swift gains 5 new entries (`ch14_t01`, `ch14_t01_c01..c04`).
+
+Topics 2 (Heating Effect) and 3 (Magnetic Effect) of Ch 14 remain on the backlog.
 
 ## Hands-on / "Try this at home" component (NEW)
 

@@ -673,6 +673,23 @@ enum ArticleIndex {
             title: "Electric Current and its Effects — Chapter Overview",
             chapterFolder: chapter14Folder, estimatedMinutes: 6),
 
+        // Topic 1: Circuits & Current
+        "ch14_t01": ArticleEntry(id: "ch14_t01", filename: "ch14_t01_overview.html",
+            title: "Circuits & Current — Topic Overview",
+            chapterFolder: chapter14Folder, estimatedMinutes: 5),
+        "ch14_t01_c01": ArticleEntry(id: "ch14_t01_c01", filename: "ch14_t01_c01.html",
+            title: "What is an Electric Current?",
+            chapterFolder: chapter14Folder, estimatedMinutes: 7),
+        "ch14_t01_c02": ArticleEntry(id: "ch14_t01_c02", filename: "ch14_t01_c02.html",
+            title: "The Cell and the Closed Loop",
+            chapterFolder: chapter14Folder, estimatedMinutes: 7),
+        "ch14_t01_c03": ArticleEntry(id: "ch14_t01_c03", filename: "ch14_t01_c03.html",
+            title: "Series vs Parallel",
+            chapterFolder: chapter14Folder, estimatedMinutes: 7),
+        "ch14_t01_c04": ArticleEntry(id: "ch14_t01_c04", filename: "ch14_t01_c04.html",
+            title: "Conductors and Insulators",
+            chapterFolder: chapter14Folder, estimatedMinutes: 7),
+
         // ================================================================
         // CHAPTER 15 — Light
         // ================================================================

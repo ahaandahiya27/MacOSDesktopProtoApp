@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Series vs Parallel</title>
+<link rel="stylesheet" href="ch14_style.css">
+</head>
+<body>
+<h1>Series vs Parallel</h1>
+<p class="subtitle">Chapter 14 · Topic 1 · Concept 3</p>
+
+<h2>Two ways to wire two bulbs</h2>
+<p>Once you've built one circuit, the next question is: how do I add a second bulb? There are exactly two answers:</p>
+<ul>
+  <li>Wire them on the <strong>same loop</strong>, one after the other. That's <strong>series</strong>.</li>
+  <li>Give each bulb its <strong>own loop</strong> back to the cell. That's <strong>parallel</strong>.</li>
+</ul>
+<p>It looks like a tiny detail. It changes everything.</p>
+
+<h2>The series circuit</h2>
+<p>In a series circuit, the same current has to pass through every component on the loop. Imagine traffic on a single-lane road — every car visits every shop in order. Three consequences:</p>
+<ul>
+  <li><strong>One break = total blackout.</strong> Snap a wire, remove a bulb, open a switch — and the whole loop dies.</li>
+  <li><strong>Bulbs glow dimmer</strong> when you add more of them. Each bulb "uses up" some of the cell's push, leaving less for the next one.</li>
+  <li><strong>Same current everywhere.</strong> Whatever current flows out of the cell flows through each bulb and back to the cell.</li>
+</ul>
+
+<div class="callout">
+Old-fashioned Christmas-tree lights were wired in series. If a single bulb fused, the entire string went dark — and you had to test each bulb to find the broken one. Modern strings get around this with little tricks (shunts) inside each bulb.
+</div>
+
+<h2>The parallel circuit</h2>
+<p>In a parallel circuit, each component has its own loop back to the cell. The current splits at one junction, runs through each branch, and recombines at the other. Three completely different consequences:</p>
+<ul>
+  <li><strong>One break ≠ blackout.</strong> If one bulb fuses, its loop opens, but the others stay lit.</li>
+  <li><strong>All bulbs glow at full brightness</strong> (assuming the cell can deliver enough current). Each branch gets the cell's full push.</li>
+  <li><strong>Current splits</strong> between the branches in inverse proportion to their resistance (Class 10 detail).</li>
+</ul>
+
+<h2>Why house wiring is always parallel</h2>
+<p>Think about your home. If your fridge, your TV, and your lights were all wired in series:</p>
+<ul>
+  <li>You'd have to turn them all on or off together (one switch breaks the whole loop).</li>
+  <li>Adding a fourth device would dim everything you already have.</li>
+  <li>One faulty bulb would cut power to the whole house.</li>
+</ul>
+<p>Wired in parallel, each appliance gets its own loop with its own switch. You can turn the lights off without unplugging the fridge. A burned-out bulb in the bedroom doesn't kill the kitchen.</p>
+
+<h2>Quick comparison</h2>
+<table>
+<tr><th>Question</th><th>Series</th><th>Parallel</th></tr>
+<tr><td>What happens if one bulb fails?</td><td>All others go off</td><td>Others stay on</td></tr>
+<tr><td>Brightness with more bulbs added?</td><td>Each bulb dimmer</td><td>Each stays the same</td></tr>
+<tr><td>Switch options?</td><td>One switch for all</td><td>Independent switch for each</td></tr>
+<tr><td>Used in?</td><td>Old Christmas lights, fuses</td><td>House wiring, every modern building</td></tr>
+</table>
+
+<h2>Try this at home</h2>
+<p><strong>The flickering brightness test.</strong> Get two identical torch bulbs, a fresh battery, and some wire. First, wire both bulbs in series and switch on — both bulbs are dim. Now, rewire the same bulbs in parallel — both are now bright. You just saw the difference live.</p>
+
+<h2>Looking ahead</h2>
+<p>In <strong>Class 10 (Electricity)</strong> you'll learn the two combination formulas:</p>
+<ul>
+  <li><strong>Resistors in series:</strong> R<sub>total</sub> = R₁ + R₂ + R₃ + … (resistances add up).</li>
+  <li><strong>Resistors in parallel:</strong> 1/R<sub>total</sub> = 1/R₁ + 1/R₂ + 1/R₃ + … (reciprocals add up; the result is always less than the smallest individual R).</li>
+</ul>
+<p>In <strong>Class 12 / JEE Physics</strong> these expand into general circuit analysis with <strong>Kirchhoff's two laws</strong>:</p>
+<ul>
+  <li>KCL at any junction: ΣI<sub>in</sub> = ΣI<sub>out</sub>.</li>
+  <li>KVL around any loop: ΣV = 0.</li>
+</ul>
+<p>From these two laws every circuit imaginable can be solved — including the famous <strong>Wheatstone bridge</strong> used in JEE problems on metre-bridge and unknown-resistance measurement. NEET also asks parallel-combination problems with up to 4 resistors regularly.</p>
+</body>
+</html>
