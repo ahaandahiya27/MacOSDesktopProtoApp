@@ -52,7 +52,8 @@ def parse_id(concept_id: str):
     return int(m.group(1)), int(m.group(2)), int(m.group(3))
 
 
-def render_article(concept: dict, topic_id: str, chapter_num: int) -> str:
+def render_article(concept: dict, topic_id: str, chapter_num: int,
+                   title_index: dict) -> str:
     title = htmlescape(concept["title"])
     expl = concept.get("explanations", {})
     one_line = htmlescape(expl.get("oneLine", ""))
@@ -82,8 +83,11 @@ def render_article(concept: dict, topic_id: str, chapter_num: int) -> str:
         )
     use_cases_block = "\n".join(use_case_rows)
 
+    # Resolve each related concept id to its readable title so the pill
+    # row reads like "Acids — The Sour Family" instead of "ch05_t01_c01".
     related_pills = "\n".join(
-        f'      <a class="pill" href="{rid}.html">{htmlescape(rid)}</a>'
+        f'      <a class="pill" href="{rid}.html">'
+        f'{htmlescape(title_index.get(rid, rid))}</a>'
         for rid in related
     )
 
@@ -156,8 +160,17 @@ def main() -> int:
     with PACK.open() as f:
         pack = json.load(f)
 
+    # Build {concept_id: title} once so related-pill rendering can
+    # resolve hrefs to human titles.
+    title_index: dict = {}
+    for ch in pack["chapters"]:
+        for t in ch["topics"]:
+            for c in t.get("concepts", []):
+                title_index[c["id"]] = c.get("title", c["id"])
+
     created = 0
     skipped = 0
+    regenerated = 0
     for ch in pack["chapters"]:
         ch_num = ch["number"]
         ch_dir = ARTICLES / f"Chapter{ch_num}"
@@ -167,9 +180,6 @@ def main() -> int:
             tid = t["id"]
             for concept in t.get("concepts", []):
                 target = ch_dir / f"{concept['id']}.html"
-                if target.exists():
-                    skipped += 1
-                    continue
                 # Skip if the chapter dir lacks a style.css — those chapters
                 # haven't been set up at all.
                 css = ch_dir / f"ch{ch_num:02d}_style.css"
@@ -177,12 +187,33 @@ def main() -> int:
                     print(f"  ! no css for chapter {ch_num}, skipping {concept['id']}",
                           file=sys.stderr)
                     continue
-                html_doc = render_article(concept, tid, ch_num)
-                target.write_text(html_doc, encoding="utf-8")
-                created += 1
-                print(f"  + wrote {target.relative_to(REPO_ROOT)}")
 
-    print(f"\nDone. Created {created} new article(s); {skipped} already existed.")
+                # If a previously generated file exists, only regenerate when
+                # it carries our auto-generated signature. Don't trample
+                # hand-authored articles.
+                regen_only = False
+                if target.exists():
+                    existing = target.read_text(encoding="utf-8")
+                    # Heuristic: our generator always emits the
+                    # `class="beyond-the-book"` aside. Hand-authored Ch1
+                    # articles use `class="fact-box"` etc.
+                    if 'class="beyond-the-book"' in existing:
+                        regen_only = True
+                    else:
+                        skipped += 1
+                        continue
+
+                html_doc = render_article(concept, tid, ch_num, title_index)
+                target.write_text(html_doc, encoding="utf-8")
+                if regen_only:
+                    regenerated += 1
+                    print(f"  ~ regenerated {target.relative_to(REPO_ROOT)}")
+                else:
+                    created += 1
+                    print(f"  + wrote {target.relative_to(REPO_ROOT)}")
+
+    print(f"\nDone. Created {created} new article(s); "
+          f"{regenerated} regenerated; {skipped} hand-authored skipped.")
     return 0
 
 
