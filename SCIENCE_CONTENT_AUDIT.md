@@ -79,6 +79,22 @@ Verified statically:
 
 Manual run-the-app verification is left for the user as the final smoke check.
 
+## Hands-on / "Try this at home" component (NEW)
+
+- ✅ New `TryAtHomeCallout` component at `Subjects/Tutor/Discover/Components/TryAtHomeCallout.swift`. Orange-tinted box with a raised-hand SF Symbol, used inside scenes to suggest a quick real-world experiment using everyday materials. Distinct from `SoftShadowCard` so kids learn to recognise "this is something I can actually do" at a glance.
+- Applied to 8 flagship scenes:
+  - Ch 8 / Scene 2 Air Pressure Drop — Bernoulli at the table (paper strips).
+  - Ch 9 / Scene 3 Percolation Rate — three-cup race (sand vs garden soil vs clay mud).
+  - Ch 10 / Scene 3 Yeast Sugar Lab — Make a yeast balloon.
+  - Ch 10 / Scene 4 Lime Water Test — Brew your own limewater from chunna.
+  - Ch 11 / Scene 2 Pulse Counter — Find your real pulse on the wrist.
+  - Ch 11 / Scene 6 Xylem Water Climb — Celery + food colouring.
+  - Ch 14 / Scene 6 Build Electromagnet — Iron-nail electromagnet from a cell.
+  - Ch 15 / Scene 3 Refraction Pool — The reappearing coin in an opaque bowl.
+- macOS 11 (Big Sur) compatible — SF Symbols 2 only (`hand.raised.fill`), no `.foregroundStyle` / `.symbolEffect`, plain `Color.orange.opacity(…)` for tint.
+- Hooked up `.accessibilityElement(children: .combine)` so VoiceOver reads "Try this at home. (title). (detail)" as one block.
+- Naming gotcha caught during build: `body` as a stored property shadows `View.body` — renamed to `detail`.
+
 ## Phase H — Polish backlog
 
 Done:

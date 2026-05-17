@@ -42,6 +42,13 @@ struct Scene4_LimeWaterTest: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Brew your own limewater",
+                detail: "Mix slaked lime (chunna, from a paan shop) with water in a jar, let it settle overnight. Pour off the clear top into a glass. Blow through a straw — the liquid turns milky."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

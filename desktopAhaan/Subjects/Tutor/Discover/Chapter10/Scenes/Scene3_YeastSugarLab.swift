@@ -41,6 +41,13 @@ struct Scene3_YeastSugarLab: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Make a yeast balloon",
+                detail: "In an empty plastic bottle: 1 tsp dry yeast + 1 tsp sugar + warm (not hot) water. Stretch a balloon over the neck. In 15 to 30 minutes the balloon inflates as yeast produces CO₂."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

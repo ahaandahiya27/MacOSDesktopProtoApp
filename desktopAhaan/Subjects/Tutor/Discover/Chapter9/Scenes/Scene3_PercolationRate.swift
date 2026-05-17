@@ -77,6 +77,13 @@ struct Scene3_PercolationRate: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Three-cup race",
+                detail: "Get three plastic cups; punch the same number of holes in the bottoms. Fill one with sand, one with garden soil, one with clay-rich mud. Pour the same amount of water in each and time how fast it drains."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

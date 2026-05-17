@@ -65,6 +65,13 @@ struct Scene2_PulseCounter: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Find your real pulse",
+                detail: "Press two fingers (not the thumb) on the inside of your wrist, below the base of the thumb. Count the beats for 15 seconds. Multiply by 4 to get your beats-per-minute."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

@@ -47,6 +47,13 @@ struct Scene3_RefractionPool: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "The reappearing coin",
+                detail: "Drop a coin into an opaque bowl. Step back until the rim hides the coin. Without moving, ask someone to slowly pour water into the bowl. The coin appears — refraction bends the light around the rim."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

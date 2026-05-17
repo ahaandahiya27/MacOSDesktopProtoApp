@@ -45,6 +45,13 @@ struct Scene6_BuildElectromagnet: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Iron-nail electromagnet",
+                detail: "Wrap about 30 turns of insulated wire around a long iron nail. Connect the two ends to a 1.5 V cell. Hold the nail near steel paper clips — it picks them up. Disconnect the cell and the magnet switches off."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

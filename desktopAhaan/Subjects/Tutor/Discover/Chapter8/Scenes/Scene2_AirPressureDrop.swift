@@ -51,6 +51,13 @@ struct Scene2_AirPressureDrop: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Bernoulli at the table",
+                detail: "Hold two strips of paper a finger-width apart. Blow hard between them. They swing TOGETHER, not apart — fast air has lower pressure."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }

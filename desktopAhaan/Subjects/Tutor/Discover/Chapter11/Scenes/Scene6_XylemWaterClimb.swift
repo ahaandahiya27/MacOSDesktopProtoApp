@@ -39,6 +39,13 @@ struct Scene6_XylemWaterClimb: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+            TryAtHomeCallout(
+                title: "Celery + food colouring",
+                detail: "Put a stick of celery (with leaves) into a glass of water with a few drops of red food colouring. Look at it after 1 hour, 4 hours, overnight. Watch the dye climb."
+            )
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
             GotItButton { onComplete() }.padding(.bottom, 12)
             Spacer(minLength: 0)
         }
