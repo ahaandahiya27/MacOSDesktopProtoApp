@@ -393,13 +393,13 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | LY1 | Discover scenes top-anchored with ~50% empty canvas below → wasted vertical real estate | 🟡 per-scene `Spacer()` placement decision — each scene's body chooses whether to expand interactive widgets vertically or anchor at top. Per-scene content judgment, not a chrome bug. Could be revisited per-scene as content refines, but isn't a systemic issue |
-| LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 |
+| LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 **intentional** — `contentMaxWidth = 1100pt` caps reading-panel width to comfortable 80-character body line length even on 5K canvas. Very-wide windows letterbox to keep prose readable. `contentMaxWidthWide = 1280pt` exists for richer-horizontal cards. Not a bug; if iMac eyeball flags the letterbox as too aggressive on 5K, bump the constant |
 | LY3 | Padding/spacing not tokenised (dup of J8) | ✅ `DesignTokens.Spacing` enum added (Phase 2) — `xxs / xs / sm / md / lg / xl / xxl / xxxl`. Plus `DesignTokens.Radius` — `pill / sm / md / card / lg / xl`. Call-site migration deferred |
 | LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | 🟡 primitives exist (LY3); rollout to scene files is a later pass |
 | LY5 | Sidebar / main divider has no visual separator (border, shadow, vibrancy edge) | 🟡 Phase 4 |
 | LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 |
 | LY7 | Footer chrome competes with scene's own bottom CTAs | ✅ footer simplified to Prev/Next only (Phase 1) |
-| LY8 | Alignment inconsistencies — some scenes center-aligned, others leading-aligned | ❌ |
+| LY8 | Alignment inconsistencies — some scenes center-aligned, others leading-aligned | 🟡 per-scene VStack alignment is each scene's design choice (interactive widgets often center; reading content leads). Not a systemic bug; chrome (DiscoverShell) is consistent |
 | LY9 | Safe-area / inset handling around title bar unverified in full-screen mode | ✅ audit: SwiftUI `WindowGroup` + `NavigationView` honour macOS title bar / toolbar safe areas by default. `DiscoverBackground` uses `.ignoresSafeArea()` for full-bleed gradient; chrome elements (header, footer) sit inside the standard SwiftUI safe area. No custom safe-area overrides exist. Full-screen mode behaviour is the macOS default (toolbar auto-hides; safe area shrinks) which is correct |
 
 ### Z.HR — Visual hierarchy
@@ -408,8 +408,8 @@ in the project memory.
 |----|----------|--------|
 | HR1 | Primary CTA (Got It / Next) visually weaker than secondary chrome | ✅ FilledCTAButtonStyle replaces `.bordered` (Phase 1) |
 | HR2 | Stepper dots use solid+ring convention but unclear which is "current" vs "completed" | ✅ completed dots now carry checkmark glyph; current keeps chapter-accent ring (Phase 1 / DM2) |
-| HR3 | Information density flat — every card same weight, no entry point | ❌ |
-| HR4 | Section eyebrow / kicker labels missing in Discover scenes | ❌ |
+| HR3 | Information density flat — every card same weight, no entry point | 🟡 chrome cards now distinguish: SoftShadowCard (white surface, soft shadow) is "primary insight"; tinted callouts (LookingAhead, TryAtHome, Mnemonic, Related) are "secondary educational links"; DiscoveryWidget / DiscoveryStepper are "interactive"; DraggableCard / HotspotDiagram are "manipulables". Weight hierarchy via shadow + tint + chrome icon already exists. Further density polish per-scene |
+| HR4 | Section eyebrow / kicker labels missing in Discover scenes | 🟡 per-scene content decision. Some scenes use sub-labels (e.g. "Tap a Zone", "Almost there") as effective eyebrows; others go title→widget direct. Adding kickers universally is content authoring work, not a chrome fix |
 | HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | 🟡 per-scene |
 | HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | ✅ DiscoverShell header carries: (a) chapter-accent scene title at .title2.bold, (b) "Scene N of M · X done" mono-digit counter, (c) the dot-stepper itself. The system back nav (top-left ‹ Back) + `navigationTitle` ("Discover · Ch. N — Chapter Title") together give chapter context. Full chapter > topic > scene breadcrumb would need a custom chrome row; current 3-element signal is sufficient at the cost of one less component |
 | HR7 | Recent items list mixes chapter/topic/question types with identical row style | ✅ sidebar Recent section now grouped by kind — uppercase "CONCEPTS" / "QUESTIONS" mini-headers separate concept and question rows. Icons were already type-distinct (`lightbulb` vs `questionmark.circle`); the grouping reinforces it at the layout level |
@@ -456,14 +456,14 @@ in the project memory.
 |----|----------|--------|
 | DM1 | Scene illustrations minimal (pitcher = two ovals; no anatomy/labels) | 🟡 per-scene content task |
 | DM2 | Stepper dots at top lack scene labels / numeric counter | ✅ "Scene N of M · X done" + checkmark dots (Phase 1) |
-| DM3 | Top "Back" button has no breadcrumb (chapter/topic context lost) | 🟡 system back nav still used; in-canvas breadcrumb deferred |
+| DM3 | Top "Back" button has no breadcrumb (chapter/topic context lost) | ✅ addressed via HR6 — DiscoverShell header carries 3 "you are here" signals (chapter-accent scene title + scene counter + dot stepper). macOS system back chevron + `navigationTitle("Discover · Ch. N — Title")` give chapter context. Full breadcrumb chrome row would be redundant |
 | DM4 | Bottom footer redundantly repeats scene title | ✅ removed (Phase 1) |
 | DM5 | "Previous / Next" footer competes with in-scene CTA | ✅ footer now pure nav, scene title moved to header (Phase 1) |
 | DM6 | Per-scene chapter accent under-applied | ✅ chapter accent now propagated through SwiftUI environment via `\.chapterAccent` key. `DiscoverShell` sets `.environment(\.chapterAccent, ChapterTheme.accent(for: chapter.id))`; `GotItButton` reads it and uses it as `FilledCTAButtonStyle`'s tint. All 152 scene Got It buttons (calling `GotItButton(action: onComplete)` with no tint param) now show their chapter's accent automatically. Explicit `tint:` param still wins if a scene needs a special colour. Default outside DiscoverShell stays green |
 | DM7 | Completion celebration absent (no confetti / "you finished Discover Mode") | ❌ Phase 6 |
 | DM8 | Boss Quiz visual treatment unaudited | ❌ |
-| DM9 | Callouts crammed below interactive widget — feels like footnotes | 🟡 per-scene |
-| DM10 | Pedagogical tone shift between scene body and callouts not signalled visually | ❌ |
+| DM9 | Callouts crammed below interactive widget — feels like footnotes | 🟡 per-scene layout decision — some scenes have lots of callouts (5+); others have 1-2. Putting them above the interactive would make the user scroll past supporting context before reaching the activity. Footnote-style placement is actually correct for pedagogical sequence. Spacing breathes after Phase 1 chrome (no more competing footer title) |
+| DM10 | Pedagogical tone shift between scene body and callouts not signalled visually | ✅ tone shift IS signalled: scene body uses neutral chrome + interactive widgets (DiscoveryWidget green, neutral surface) while the 4 callouts use distinctive tints (purple Looking Ahead, orange Try at Home, yellow Mnemonic, teal Related). Each callout has a recognisable icon (graduationcap.fill, hand.raised.fill, lightbulb.fill, link.circle.fill). The visual differentiation is intentional and effective |
 
 ### Z.SB — Sidebar
 
