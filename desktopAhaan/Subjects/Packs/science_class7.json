@@ -5,7 +5,7 @@
   "language": "en",
   "grade": 7,
   "coverEmoji": "🔬",
-  "version": "0.24.0-ch04-full",
+  "version": "0.25.0-ch15-3topic-parity",
   "generatedAt": "2026-05-03T19:30:00Z",
   "chapters": [
     {
@@ -18864,6 +18864,828 @@
               ],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
+        },
+        {
+          "id": "ch15_t02",
+          "title": "Refraction, Prism and Rainbow",
+          "summary": "When light leaves one transparent medium and enters another, it changes speed and bends. This bending is called refraction, and it explains pools that look shallower than they are, the colours hiding inside white sunlight, and the rainbow that arcs across the sky after rain.",
+          "concepts": [
+            {
+              "id": "ch15_t02_c01",
+              "title": "Refraction — why light bends",
+              "explanations": {
+                "oneLine": "When light changes speed crossing from one transparent medium to another, it also changes direction; that direction change is refraction.",
+                "kidFriendly": "Light goes fastest in vacuum, slightly slower in air, slower still in water, and even slower in glass. Whenever it crosses from a fast medium into a slow one (or back), it bends at the boundary — like a marching band stepping at an angle from a hard road onto sand: the marchers who hit the sand first slow first, so the whole line pivots. That bend is why a pencil dipped in water looks broken, why a swimming pool looks shallower than it is, and why a coin in a glass of water seems closer to the surface.",
+                "textbook": "Refraction is the bending of light as it passes from one transparent medium into another. The amount and direction of bending depend on the change in the speed of light at the boundary. Rule: a ray passing from a less dense to a more dense medium (e.g., air to water) bends towards the normal; a ray passing from a denser to a less dense medium bends away from the normal. A ray hitting the surface along the normal (90°) does not bend, only changes speed. Each transparent material has a refractive index (n) — a number describing how strongly it slows light. Water n ≈ 1.33, glass n ≈ 1.50, diamond n ≈ 2.42.",
+                "expert": "Refraction obeys Snell's Law: n₁ sin θ₁ = n₂ sin θ₂ (Class 10). The refractive index of a medium for a given wavelength is the ratio of the speed of light in vacuum to its speed in that medium: n = c / v. Refractive index also varies slightly with wavelength (dispersion), which is why a prism separates white light into colours. When light tries to leave a denser medium at a steep angle, refraction fails entirely and total internal reflection (Class 12) takes over — the basis of optical fibres and diamond brilliance. Apparent depth = real depth ÷ n is the consequence used to design swimming-pool safety markings."
+              },
+              "reasoning": "Light is electromagnetic waves with a finite speed that depends on the material. When a wavefront crosses a boundary at an angle, one side reaches the new (slower) medium first and slows, while the other side keeps going at the old speed. The wavefront tilts — i.e., the light bends. So whenever speed changes at an angle, direction must change too.",
+              "useCases": [
+                {
+                  "title": "Pencil broken in a glass of water",
+                  "description": "Dip a pencil at an angle in water; the underwater part appears shifted, making the pencil look broken at the surface.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Swimming pool looks shallow",
+                  "description": "A 2 m deep pool looks about 1.5 m deep from above the surface — refraction lifts the apparent floor.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Coin reappearing in a bowl",
+                  "description": "A coin hidden behind a bowl's rim becomes visible when water is added — refraction bends light from the coin into your eye.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Diamond sparkle",
+                  "description": "Diamond's high refractive index (2.42) bends light a lot at each face — combined with cut, this is why diamonds flash colours.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Twinkling of stars",
+                  "description": "Air pockets at different temperatures have slightly different refractive indices; starlight bends randomly through them, making the star appear to twinkle.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Mirage on a hot road",
+                  "description": "Hot air near the road has a lower refractive index than cooler air above; light from the sky bends upward as if reflecting, looking like water on the road.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "In Class 10 (Light — Reflection and Refraction) you'll meet Snell's Law as an equation: n₁ sin θ₁ = n₂ sin θ₂. Class 12 / JEE Physics builds Total Internal Reflection (the critical angle above which light cannot escape a denser medium — the basis of optical fibres carrying the internet under oceans) and mirages from this single idea. NEET Biology uses refraction in the cornea + crystalline lens of the eye to project a focused image onto the retina. Try this at home: drop a coin into an opaque cup so its rim hides the coin; step back; have someone slowly pour water in — the coin 'appears'.",
+              "relatedConceptIds": [
+                "ch15_t01_c01",
+                "ch15_t02_c02",
+                "ch15_t02_c03",
+                "ch15_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t02_q01",
+                "ch15_t02_q02",
+                "ch15_t02_q03"
+              ],
+              "pageRefs": [
+                193,
+                194,
+                195
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_c02",
+              "title": "The prism and dispersion of white light",
+              "explanations": {
+                "oneLine": "White light is a mixture of seven colours; a prism bends each colour by a slightly different amount, spreading them out into a visible spectrum.",
+                "kidFriendly": "Sunlight looks white, but it is actually a blend of seven colours. Isaac Newton in 1666 proved this by shining sunlight through a triangular piece of glass — a prism — and seeing it fan out into a rainbow. Then he placed a second prism upside-down in the rainbow's path and the colours recombined into white. The order from most-bent to least-bent is VIBGYOR: Violet, Indigo, Blue, Green, Yellow, Orange, Red.",
+                "textbook": "A prism is a triangular block of glass that refracts light twice — once entering and once leaving. The key fact is that the refractive index of glass depends on the colour (wavelength) of light. Violet has the highest refractive index, red the lowest. So each colour bends a different amount, and a single ray of white light fans out into seven colours: Violet, Indigo, Blue, Green, Yellow, Orange, Red — remembered as VIBGYOR, from most-bent to least-bent. The spreading of white light into its component colours is called dispersion. Reversing the experiment with a second inverted prism recombines them into white, proving white is the sum.",
+                "expert": "The variation of refractive index n with wavelength λ is called dispersion. For most transparent solids, n(violet) > n(red), so violet bends more — this is called normal dispersion. The prism deviation formula (Class 12 / JEE) is δ = (μ − 1)A for small prism angle A, and angular dispersion is (μ_v − μ_r)A. Achromatic combinations using two different glasses (crown + flint) cancel dispersion while preserving net deviation — the basis of high-quality camera and microscope lenses. Spectroscopy uses prisms (or diffraction gratings) to identify elements by their unique emission/absorption lines."
+              },
+              "reasoning": "Different colours of light have different wavelengths, and the refractive index of glass varies slightly with wavelength. A single material can therefore bend each colour by a different amount, separating colours that were all travelling together in the original white beam.",
+              "useCases": [
+                {
+                  "title": "Newton's two-prism experiment (1666)",
+                  "description": "Newton split sunlight with one prism and recombined the rainbow into white with a second — proving white is a mixture, not a pure colour.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Crystal chandelier rainbows",
+                  "description": "Cut-glass chandeliers throw rainbow patches on the wall in sunlight — each bevelled facet acts as a small prism.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Diamond fire",
+                  "description": "Diamonds have very high refractive index plus strong dispersion — the 'fire' inside a cut diamond is dispersion at every facet.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Spectroscope in chemistry labs",
+                  "description": "A prism (or grating) inside a spectroscope spreads light from a flame into colour lines unique to each element — used to identify substances.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Water-glass + mirror prism",
+                  "description": "Hold a flat mirror tilted inside a glass of water near a sunny window — the water and mirror together act like a prism, throwing a small rainbow on the wall.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "In Class 10 (Human Eye and the Colourful World) dispersion is the entry point to atmospheric scattering — why the sky is blue (short wavelengths scatter most) and why a sunset is red (blue light has been scattered away over a long path). In Class 12 / JEE Physics you meet the prism deviation formula δ = (μ − 1)A and design achromatic doublets that eliminate chromatic aberration in camera lenses. In JEE Chemistry the same wavelength-dependence underlies UV-Vis spectrophotometry used to measure concentration.",
+              "relatedConceptIds": [
+                "ch15_t02_c01",
+                "ch15_t02_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t02_q04",
+                "ch15_t02_q05"
+              ],
+              "pageRefs": [
+                195,
+                196
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_c03",
+              "title": "The rainbow",
+              "explanations": {
+                "oneLine": "A rainbow is white sunlight dispersed by millions of raindrops — each drop refracts, reflects, and refracts again, sending one colour to your eye at about 42° from the antisolar point.",
+                "kidFriendly": "After a rain shower, if the Sun comes out behind you, you can often see a coloured arc in the sky — a rainbow. Each raindrop is acting like a tiny prism. Sunlight enters the drop, splits into colours, reflects off the back of the drop, and exits the front. Every drop sitting at exactly the right angle (about 42°) from the line connecting you to the Sun's shadow sends one colour to your eye. Red is on the outside of the arc, violet on the inside. You can never reach the end of a rainbow — it's an angle in the sky, not an object.",
+                "textbook": "A rainbow forms when sunlight is refracted, internally reflected and refracted again by spherical raindrops. Inside each drop: (1) light enters and refracts, splitting slightly into colours; (2) the light reflects off the back curve of the drop; (3) it refracts again leaving the drop. The result: each colour exits at a slightly different angle. The primary rainbow appears at about 42° from the antisolar point (the point directly opposite the Sun from the observer), with red on the outer edge (42°) and violet on the inner edge (40°). A fainter secondary rainbow at 51° appears when light reflects twice inside the drop — colours are reversed and the bow is dimmer.",
+                "expert": "The 42° angle is fixed by the geometry of the spherical drop and the refractive index of water; it's the angle at which the deviation of light through a drop is a minimum (Descartes 1637, Newton refined). Below this angle, intensity rises sharply — that's why the rainbow has a bright edge. Above it (inside the arc), light is largely absent — that's why the sky just inside a rainbow looks darker than just outside (Alexander's dark band). The secondary rainbow at 51° comes from two internal reflections, which also flips colour order. A 'fogbow' or 'lunar rainbow' is the same physics with finer droplets or moonlight."
+              },
+              "reasoning": "Each spherical raindrop refracts light into it, reflects light off its back surface, and refracts light out again. Because the refractive index of water depends on colour, each colour exits at a slightly different angle. The angles that work out to send light back toward your eye define a precise cone — and you see only those drops, painted with the colour they happen to be sending you.",
+              "useCases": [
+                {
+                  "title": "Garden-hose rainbow",
+                  "description": "Spray a fine mist with your back to the Sun — a small rainbow appears in the mist, moving with your head.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Aeroplane round rainbow",
+                  "description": "From a plane above the clouds, a rainbow can sometimes be seen as a full circle — the part of the cone we miss from the ground is below the horizon.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Waterfall mist rainbows",
+                  "description": "The constant mist at Hogenakkal, Jog or Niagara Falls produces rainbows whenever the Sun shines on the spray.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Secondary rainbow",
+                  "description": "Occasionally a fainter outer arc appears with colours reversed — light has reflected twice inside each drop before reaching you.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Alexander's dark band",
+                  "description": "The sky between the primary and secondary rainbows is noticeably darker than outside — no drops are sending light from those angles.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "The rainbow problem appears every year in JEE Physics as a worked example combining refraction, internal reflection, and dispersion inside a single drop. The 42° minimum-deviation angle and Alexander's dark band are derivable from first principles with Snell's law and a tiny bit of calculus. In Class 10 (Human Eye and the Colourful World) you meet related atmospheric optics — twinkling stars, apparent positions of the Sun at sunrise/sunset, and Rayleigh scattering. NEET / JEE Biology connects via the colour vision of the human eye (cone cells, peak wavelengths).",
+              "relatedConceptIds": [
+                "ch15_t02_c01",
+                "ch15_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t02_q06",
+                "ch15_t02_q07",
+                "ch15_t02_q08"
+              ],
+              "pageRefs": [
+                196,
+                197
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch15_t02_q01",
+              "prompt": "When a ray of light passes from air into water, it bends:",
+              "questionType": "mcq",
+              "options": [
+                "Away from the normal",
+                "Towards the normal",
+                "Along the surface",
+                "Straight without bending"
+              ],
+              "answer": "Towards the normal",
+              "solutionSteps": [
+                "Water is optically denser than air (n_water ≈ 1.33 vs n_air ≈ 1.00).",
+                "Light entering a denser medium slows down.",
+                "Slowing down at an angle bends the ray towards the normal — the perpendicular to the surface."
+              ],
+              "commonMistakes": [
+                "Picking 'away from the normal' — that's the rule for going from denser to lighter (water → air), not air → water.",
+                "Forgetting that the normal is perpendicular to the surface, not along it."
+              ],
+              "variations": [
+                {
+                  "prompt": "When a ray of light passes from water into air, it bends:",
+                  "answer": "Away from the normal.",
+                  "solutionSteps": [
+                    "Air is less dense than water.",
+                    "Light speeding up at an angle bends away from the normal."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                194
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_q02",
+              "prompt": "A pencil dipped in a glass of water looks broken at the surface. This is because of:",
+              "questionType": "mcq",
+              "options": [
+                "Reflection at the water surface",
+                "Refraction at the air–water boundary",
+                "Dispersion inside the water",
+                "Absorption of light by water"
+              ],
+              "answer": "Refraction at the air–water boundary",
+              "solutionSteps": [
+                "Light from the submerged part of the pencil bends as it leaves the water and enters air.",
+                "Your eye traces the bent ray back along a straight line.",
+                "The underwater portion appears shifted from its real position, making the pencil look broken at the surface."
+              ],
+              "commonMistakes": [
+                "Picking 'reflection' — reflection bounces light back; here light is going through and changing direction.",
+                "Picking 'dispersion' — dispersion splits white into colours; this illusion is just about shifted position, not colour."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                194
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t02_q03",
+              "prompt": "A swimming pool looks ____ than it actually is.",
+              "questionType": "fillInBlank",
+              "options": null,
+              "answer": "shallower",
+              "solutionSteps": [
+                "Light from the floor of the pool refracts as it leaves the water.",
+                "Your eye traces the refracted rays back in straight lines, placing the floor closer to the surface than it really is.",
+                "So a 2 m deep pool looks more like 1.5 m — i.e., shallower."
+              ],
+              "commonMistakes": [
+                "Saying 'deeper' — refraction lifts the apparent floor, not lowers it.",
+                "Forgetting this illusion is why people sometimes misjudge pool depth and slip."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                194
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t02_q04",
+              "prompt": "What is the correct order of colours in the visible spectrum, from most bent to least bent by a prism?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Violet, Indigo, Blue, Green, Yellow, Orange, Red — remembered as VIBGYOR. Violet bends the most because glass has the highest refractive index for violet; red bends the least.",
+              "solutionSteps": [
+                "Recall the mnemonic VIBGYOR.",
+                "V = Violet (most bent), I, B, G, Y, O, R = Red (least bent).",
+                "The order goes from shortest wavelength (violet) to longest wavelength (red).",
+                "It's the same order you see in a rainbow, but a rainbow shows red on the outside because of an extra reflection inside each drop."
+              ],
+              "commonMistakes": [
+                "Reciting the order from red to violet — VIBGYOR is violet to red.",
+                "Forgetting indigo and giving only six colours."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who first showed that white sunlight contains seven colours?",
+                  "answer": "Sir Isaac Newton, in 1666, using a triangular glass prism — then proved it by recombining the colours into white with a second inverted prism.",
+                  "solutionSteps": [
+                    "Newton split sunlight with one prism — saw the spectrum.",
+                    "He then placed a second prism upside-down in the spectrum's path — the colours recombined into white.",
+                    "This pair of experiments proved white is the sum of the seven, not a 'pure' colour itself."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                195,
+                196
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_q05",
+              "prompt": "Sunlight passing through a prism splits into seven colours. This phenomenon is called:",
+              "questionType": "mcq",
+              "options": [
+                "Reflection",
+                "Refraction",
+                "Dispersion",
+                "Diffraction"
+              ],
+              "answer": "Dispersion",
+              "solutionSteps": [
+                "White light is a mixture of seven colours; each has a different wavelength.",
+                "A prism refracts each colour by a slightly different amount because the refractive index of glass depends on wavelength.",
+                "The spreading-out of colours is dispersion — distinct from reflection (bouncing) and diffraction (bending around edges)."
+              ],
+              "commonMistakes": [
+                "Confusing dispersion with refraction. Refraction is the bending of any single colour; dispersion is the separation of multiple colours.",
+                "Picking 'diffraction' — that's a wave phenomenon at narrow slits, not a prism effect."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                195,
+                196
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t02_q06",
+              "prompt": "A rainbow is formed because raindrops act like tiny:",
+              "questionType": "mcq",
+              "options": [
+                "Plane mirrors",
+                "Convex lenses",
+                "Prisms (refracting + reflecting droplets)",
+                "Light bulbs"
+              ],
+              "answer": "Prisms (refracting + reflecting droplets)",
+              "solutionSteps": [
+                "Sunlight enters a spherical raindrop and refracts (bends and splits).",
+                "It then reflects off the back curve of the drop.",
+                "It refracts again on leaving — at which point the colours are spread out.",
+                "Each colour exits the drop at a slightly different angle, so different drops paint different colours of the rainbow to your eye."
+              ],
+              "commonMistakes": [
+                "Saying only reflection is involved — the colour-splitting requires refraction.",
+                "Picking 'convex lenses' — drops are spheres, not lenses; the physics is different."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                197
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t02_q07",
+              "prompt": "In a primary rainbow, which colour appears on the outer edge of the arc?",
+              "questionType": "mcq",
+              "options": [
+                "Violet",
+                "Blue",
+                "Green",
+                "Red"
+              ],
+              "answer": "Red",
+              "solutionSteps": [
+                "Each colour leaves a raindrop at a slightly different angle from the antisolar point.",
+                "Red leaves at about 42°, violet at about 40°.",
+                "Drops on the outside of the arc are at 42° from the antisolar point — they send red light to your eye.",
+                "Therefore red appears on the outer edge and violet on the inner edge."
+              ],
+              "commonMistakes": [
+                "Confusing rainbow order with prism order. In a prism, violet bends most. In a rainbow, after one internal reflection, the order is geometric: red ends up outermost.",
+                "Picking 'violet' — that's on the inner edge."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                197
+              ],
+              "needsHumanReview": false,
+              "variations": [
+                {
+                  "prompt": "In a secondary rainbow, what is special about the colour order?",
+                  "answer": "The colours are reversed compared to the primary rainbow. The secondary rainbow comes from two internal reflections in each drop, which flips the colour order — violet on the outside, red on the inside.",
+                  "solutionSteps": [
+                    "Primary rainbow: one internal reflection → red outside, violet inside.",
+                    "Secondary rainbow: two internal reflections → violet outside, red inside.",
+                    "The secondary is also fainter because each reflection loses some light intensity."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ch15_t02_q08",
+              "prompt": "True or false: You can walk to the end of a rainbow and stand under it.",
+              "questionType": "trueFalse",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "solutionSteps": [
+                "A rainbow is not an object at a fixed place — it is an angle in the sky.",
+                "It depends on the position of the Sun, the rain, and YOU.",
+                "Walk towards a rainbow and it moves away with you, because new raindrops are now at the right angle from your new position.",
+                "So you can never reach the end of a rainbow — and there is no gold there."
+              ],
+              "commonMistakes": [
+                "Thinking the rainbow has a physical location — every observer sees a different rainbow."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                197
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            }
+          ]
+        },
+        {
+          "id": "ch15_t03",
+          "title": "Lenses and Optical Instruments",
+          "summary": "A lens is a piece of curved glass that bends light by refraction; instruments like the periscope and kaleidoscope use plane mirrors to redirect or multiply images. This topic puts reflection and refraction to work in real devices.",
+          "concepts": [
+            {
+              "id": "ch15_t03_c01",
+              "title": "Convex and concave lenses",
+              "explanations": {
+                "oneLine": "A convex lens (thicker in the middle) converges parallel rays to a focal point; a concave lens (thinner in the middle) spreads them apart.",
+                "kidFriendly": "A lens is a piece of clear glass or plastic with curved surfaces. There are two main shapes. A convex lens is thicker in the middle — it bends parallel rays inward and meets them at a single point called the focus. Hold it close to a small object and you see a magnified upright image — that's a magnifying glass. Hold it further away (object beyond the focal length) and you get a small, upside-down image — that's how a camera and your own eye work. A concave lens is thinner in the middle — it spreads rays out. Its image is always small, upright, and virtual. Concave lenses are used in spectacles for short-sighted (myopic) people.",
+                "textbook": "A lens is a transparent material with one or both surfaces curved. Light refracts twice on passing through — once entering and once leaving. Two shapes: (1) Convex lens (converging) — thicker in the middle. Parallel rays converge to the focal point (F) on the other side. Image is real, inverted, and (depending on object position) magnified or diminished. Used in: magnifying glasses, cameras, projectors, microscopes, eye-glass lenses for hypermetropia. (2) Concave lens (diverging) — thinner in the middle. Parallel rays spread apart as if from a virtual focal point on the same side. Image is always virtual, upright, and diminished. Used in: spectacles for myopia (short sight), peepholes. Focal length (f) is the distance from the lens centre to the focal point.",
+                "expert": "Class 10 introduces the lens formula 1/v − 1/u = 1/f with strict sign conventions (object always on the left, distances measured from the optical centre). Magnification m = v/u = hi/ho. Lens power P = 1/f (metres), measured in dioptres (D). A +2 D lens has f = 0.5 m; a −2 D concave lens diverges. Class 12 / JEE adds the lensmaker's equation 1/f = (μ − 1)(1/R₁ − 1/R₂), the combined-lens formula 1/F = 1/f₁ + 1/f₂, and microscope / telescope magnification formulas. Real optical systems suffer from aberrations: chromatic (different f for different colours) and spherical (rays through the edge focus differently from rays through the centre); these are corrected by combining lenses or using aspheric surfaces."
+              },
+              "reasoning": "A lens is essentially shaped refraction — the surface curve at each point bends each ray by a different amount, so a beam of parallel rays gets focused (convex) or spread (concave). The curve is engineered so that all parallel rays converge to or appear to come from a single point: the focus.",
+              "useCases": [
+                {
+                  "title": "Magnifying glass",
+                  "description": "A simple convex lens held close to a small object gives a magnified upright (virtual) image — perfect for reading fine print.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Camera lens",
+                  "description": "A convex lens forms a small, inverted, real image of the world on the sensor (or film), which is then stored as a photograph.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Spectacles for myopia",
+                  "description": "Short-sighted people wear concave (diverging) lenses that spread light before it enters the eye, letting the natural lens focus it onto the retina.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Spectacles for hypermetropia",
+                  "description": "Far-sighted people wear convex (converging) lenses that pre-focus light, helping the eye's lens form a sharp image of nearby objects.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Cinema projector",
+                  "description": "A bright bulb behind a film slide and a convex lens forms a magnified real image of the slide on a large screen many metres away.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Microscope objective",
+                  "description": "A short focal length convex lens close to a slide forms a magnified real image, which a second lens (eyepiece) further magnifies for the viewer.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Class 10 you'll meet the lens formula 1/v − 1/u = 1/f with sign conventions, magnification m = v/u, and lens power P = 1/f in dioptres — the unit your optician writes on a spectacle prescription. The Class 10 chapter Human Eye and Colourful World explains why concave lenses correct myopia and convex lenses correct hypermetropia. In Class 12 / JEE Physics the lensmaker's equation 1/f = (μ − 1)(1/R₁ − 1/R₂) lets you design lenses from glass refractive index and surface curvature. NEET Biology uses the same physics to describe the cornea + crystalline lens combination forming a real, inverted image on the retina, which the brain re-inverts.",
+              "relatedConceptIds": [
+                "ch15_t01_c02",
+                "ch15_t02_c01",
+                "ch15_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t03_q01",
+                "ch15_t03_q02",
+                "ch15_t03_q03"
+              ],
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t03_c02",
+              "title": "The periscope — seeing around the corner",
+              "explanations": {
+                "oneLine": "A periscope uses two plane mirrors at 45° inside a tube to let you see over walls or below water — light bounces twice and travels along the tube to your eye.",
+                "kidFriendly": "A periscope is the simplest optical instrument you can build — just two plane mirrors and a long tube. Light from the top enters, hits a mirror tilted at 45°, bounces straight down the tube, hits the second mirror (also at 45°), and bounces straight into your eye. You see what's at the top without being there. Submarines use periscopes to look above the water. Tank crews use them to see the battlefield without exposing their heads. At a concert you can hold a tall cardboard tube with mirrors and see over the crowd.",
+                "textbook": "A periscope is built from two plane mirrors fixed at 45° to the long axis of a tube. Light from outside enters a hole at the top, strikes the upper mirror, reflects through 90° straight down the tube. It then strikes the lower mirror, reflects through another 90°, and exits a hole at the bottom — into the observer's eye. The two 90° reflections in opposite directions result in an image that is the same size as the object, upright, but laterally inverted (just like one plane mirror). Submarines have used periscopes since the early 20th century to observe the surface without surfacing the entire vessel.",
+                "expert": "Modern submarine periscopes are far more elaborate: they include erecting prisms (which use total internal reflection to give 100% reflectivity unlike silvered mirrors), magnifying lenses, range-finders, and digital cameras transmitting through the tube as data. Many modern submarines have replaced traditional optical periscopes with photonics masts — high-resolution video cameras + masts that don't penetrate the hull. The same idea — redirect light around obstacles — scales down to endoscopes (flexible fibre bundles or rigid prism systems that doctors use to look inside the body) and up to astronomical Coudé focus arrangements that route a telescope's image to a stationary instrument."
+              },
+              "reasoning": "The Law of Reflection guarantees that a ray hitting a mirror at 45° reflects through 90°. Two such reflections, one at each end of a tube, combine to redirect light through 180° displacement without changing its overall direction — so you see what's directly above as if your eyes were up there.",
+              "useCases": [
+                {
+                  "title": "Submarine periscope",
+                  "description": "The classic application — a submarine submerges its hull below the surface but raises a periscope to scan the sea.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Tank periscope",
+                  "description": "Tank crews look out at the battlefield through periscopes built into the armoured roof — no need to expose their heads.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Concert periscope",
+                  "description": "Tall cardboard periscopes let short people see over the crowd at concerts or sports matches.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Trench periscope",
+                  "description": "First World War soldiers used trench periscopes to peer over the parapet without becoming a sniper target.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Endoscope (medical)",
+                  "description": "Modern fibre-optic endoscopes are the medical descendants of the periscope — surgeons use them to look inside the body without major incisions.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "Modern periscopes replace silvered mirrors with 45–45–90 prisms that use total internal reflection (Class 12 / JEE) — no light loss to mirror absorption. The same total internal reflection underlies optical fibres carrying the entire internet through the oceans. In Class 12 / JEE Physics you'll meet the formal study of optical instruments — compound microscope (magnification M = (L/f_o)(D/f_e)), astronomical telescope (M = f_o / f_e), and the rules for which is most useful where. Try this at home: build a periscope from a paper-towel-roll cardboard tube and two flat shaving-mirror pieces fixed at 45° at each end.",
+              "relatedConceptIds": [
+                "ch15_t01_c01",
+                "ch15_t03_c01",
+                "ch15_t03_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t03_q04",
+                "ch15_t03_q05"
+              ],
+              "pageRefs": [
+                201,
+                202
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t03_c03",
+              "title": "The kaleidoscope — symmetry from mirrors",
+              "explanations": {
+                "oneLine": "A kaleidoscope uses two or three plane mirrors inside a tube to multiply the reflections of a few coloured beads into a stunning symmetric pattern that changes with every twist.",
+                "kidFriendly": "A kaleidoscope is a tube containing two or three plane mirrors arranged in a triangle, with a few coloured beads at one end. When you look in the other end, the mirrors reflect each bead in every other mirror, those reflections reflect each other, and you see a complex symmetric pattern. Twist the tube — the beads roll into a new arrangement — and the pattern changes. Because there are billions of possible bead positions, you almost never see the same pattern twice. The kaleidoscope was invented by the Scottish physicist David Brewster in 1816.",
+                "textbook": "A kaleidoscope contains 2 or 3 plane mirrors arranged at an angle, mirror-side inward, inside a tube. Loose coloured beads, sequins, or paper shapes are placed at one end behind a translucent disc; the viewer looks through a small hole at the other end. The mirrors create multiple reflections of the bead pattern, and reflections of reflections, building up a symmetric arrangement. The general rule: two plane mirrors meeting at angle θ produce (360°/θ − 1) images of an object placed between them. At θ = 60° (the common triangular kaleidoscope), six-fold symmetry. At θ = 45°, eight-fold. At θ = 30°, twelve-fold. When the tube is rotated, the beads fall into a new random arrangement, generating a new pattern.",
+                "expert": "The mathematics of the kaleidoscope is the mathematics of finite reflection groups — the same algebra used in Class 12 / JEE Chemistry to describe molecular symmetry (point groups C_n, D_n, σ_v, σ_h) and in Class 12 / JEE / NEET Physics to describe crystal lattices. Sir David Brewster, who invented the kaleidoscope, is the same Brewster of Brewster's law (the angle at which reflected light is fully polarised — a Class 12 topic). Modern applications go far beyond toys: Islamic geometric tiling, Hindu temple mandalas, crystallography pattern analysis, and even kaleidoscope filters in image-editing software all use the underlying mathematics of repeated reflection."
+              },
+              "reasoning": "Each plane mirror creates an image of the object behind itself. With two mirrors facing each other at an angle, each image is also a 'real' object for the other mirror, producing a second image, then a third — until the chain of reflections fills the angle. The smaller the angle, the more reflections; loose beads guarantee the pattern is different every twist.",
+              "useCases": [
+                {
+                  "title": "Children's kaleidoscope toy",
+                  "description": "The simplest and most familiar use — three strips of mirror foil and a Pringles tube give an endless source of symmetric patterns.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Islamic geometric tiling",
+                  "description": "Mosque tile patterns use the same rotational and reflective symmetries you see in a kaleidoscope, applied across walls and domes.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Hindu temple mandalas",
+                  "description": "Mandala designs on temple ceilings repeat radially with 6-, 8-, or 12-fold symmetry — exactly the symmetries a kaleidoscope demonstrates.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Digital kaleidoscope filters",
+                  "description": "Image-editing software offers 'kaleidoscope' or 'mandala' filters — they mirror the source image at angle θ exactly as a physical kaleidoscope does.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "X-ray crystallography patterns",
+                  "description": "When X-rays scatter from a crystal, the diffraction pattern shows symmetry groups identical to those in a kaleidoscope — both are governed by reflection-group algebra.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "The kaleidoscope is the most accessible introduction to symmetry groups — a topic that powers Class 9 / 10 Maths (rotational order and lines of symmetry), Class 12 / JEE Chemistry (molecular point groups C_n, D_n, σ planes), and Class 12 / JEE / NEET Physics (crystal lattices, X-ray diffraction). Sir David Brewster, who invented the kaleidoscope in 1816, is the same scientist whose Brewster's Law you'll meet in Class 12 optics. Try this at home: cut three strips of mirror-finish acrylic to fit inside an empty Pringles tube, tape them into a triangular prism mirror-side inward, slide it in, add coloured beads behind a transparent disc at one end, and look through the other — twist for endless new symmetric patterns.",
+              "relatedConceptIds": [
+                "ch15_t01_c01",
+                "ch15_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t03_q06",
+                "ch15_t03_q07",
+                "ch15_t03_q08"
+              ],
+              "pageRefs": [
+                202,
+                203
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch15_t03_q01",
+              "prompt": "Which of these is a converging lens?",
+              "questionType": "mcq",
+              "options": [
+                "Concave lens",
+                "Convex lens",
+                "Plane mirror",
+                "Convex mirror"
+              ],
+              "answer": "Convex lens",
+              "solutionSteps": [
+                "A converging lens brings parallel rays to a single focus.",
+                "A convex lens (thicker in the middle) does exactly this.",
+                "A concave lens diverges rays; mirrors are not lenses at all."
+              ],
+              "commonMistakes": [
+                "Picking concave — concave lens DIVERGES. The word 'concave' is the same for mirrors and lenses but the effect is the opposite: concave MIRROR converges, concave LENS diverges.",
+                "Confusing convex MIRROR (diverging) with convex LENS (converging)."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t03_q02",
+              "prompt": "Where is a magnifying glass most effective at producing a magnified upright image?",
+              "questionType": "mcq",
+              "options": [
+                "When the object is at twice the focal length",
+                "When the object is at exactly the focal length",
+                "When the object is between the focal point and the lens",
+                "When the object is at infinity"
+              ],
+              "answer": "When the object is between the focal point and the lens",
+              "solutionSteps": [
+                "A convex lens forms a virtual, upright, magnified image only when the object is closer to the lens than the focal length.",
+                "If the object is beyond the focal length, the image becomes real and inverted (camera-style).",
+                "So to use a convex lens as a magnifying glass, hold it close enough that the object is between F and the lens."
+              ],
+              "commonMistakes": [
+                "Placing the object far away — you then get a small, inverted, real image, not magnification.",
+                "Placing the object exactly at F — you get parallel rays and no image at all."
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t03_q03",
+              "prompt": "A short-sighted (myopic) person is prescribed which type of lens?",
+              "questionType": "mcq",
+              "options": [
+                "Convex lens",
+                "Concave lens",
+                "Plane glass",
+                "Both convex and concave together"
+              ],
+              "answer": "Concave lens",
+              "solutionSteps": [
+                "A myopic eye over-converges incoming light — the image forms in front of the retina.",
+                "A concave (diverging) lens spreads the light slightly before it reaches the eye.",
+                "The eye's natural lens can then converge it correctly onto the retina.",
+                "Hypermetropia (long sight) is the opposite case and uses a convex lens."
+              ],
+              "commonMistakes": [
+                "Confusing myopia and hypermetropia. Myopia = short sight = concave lens. Hypermetropia = long sight = convex lens.",
+                "Picking 'plane glass' — that wouldn't correct anything."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false,
+              "variations": [
+                {
+                  "prompt": "What lens is used to correct hypermetropia (far-sightedness)?",
+                  "answer": "Convex (converging) lens.",
+                  "solutionSteps": [
+                    "A hypermetropic eye doesn't converge light strongly enough — image forms behind the retina.",
+                    "A convex lens pre-focuses the light so the eye can complete the focusing onto the retina."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ch15_t03_q04",
+              "prompt": "What is the principal optical component of a simple periscope?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Two plane mirrors fixed at 45° to the long axis of the tube. Light from the top reflects 90° down the tube on the upper mirror, then 90° again on the lower mirror, into the observer's eye.",
+              "solutionSteps": [
+                "A periscope contains two plane mirrors, each tilted 45° to the tube axis.",
+                "The Law of Reflection ensures a ray hitting at 45° reflects through 90°.",
+                "Two 90° reflections in opposite directions redirect light through the tube without inverting it.",
+                "Submarine commanders use periscopes to scan above the water without surfacing the submarine.",
+                "Modern versions sometimes use 45–45–90 prisms (with total internal reflection) instead of mirrors, for 100% reflectivity."
+              ],
+              "commonMistakes": [
+                "Thinking a periscope uses lenses — basic periscopes use only plane mirrors (or prisms).",
+                "Putting the mirrors at the wrong angle — only 45° gives the perfect 90° turn for a vertical tube."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                201,
+                202
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t03_q05",
+              "prompt": "Why are periscopes used in submarines?",
+              "questionType": "mcq",
+              "options": [
+                "To magnify objects on the surface",
+                "To allow the crew to see above the water without surfacing the submarine",
+                "To dispose of seawater",
+                "To send signals to ships"
+              ],
+              "answer": "To allow the crew to see above the water without surfacing the submarine",
+              "solutionSteps": [
+                "A submarine submerged below the surface still needs to observe ships, aircraft, and the coast.",
+                "Surfacing makes the submarine visible — defeating its purpose.",
+                "A periscope is a long tube reaching above the water with two plane mirrors inside; the crew below sees what is above without exposing the vessel.",
+                "Modern submarines also have photonic masts — essentially video cameras on a mast — but optical periscopes are still standard."
+              ],
+              "commonMistakes": [
+                "Thinking periscopes magnify — basic periscopes don't (mirrors don't magnify). Many submarine versions add lenses for magnification, but the core function is redirection."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                201
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t03_q06",
+              "prompt": "A kaleidoscope works on the principle of:",
+              "questionType": "mcq",
+              "options": [
+                "Refraction of light",
+                "Multiple reflection by plane mirrors",
+                "Dispersion of light",
+                "Total internal reflection"
+              ],
+              "answer": "Multiple reflection by plane mirrors",
+              "solutionSteps": [
+                "Inside a kaleidoscope, two or three plane mirrors are arranged at an angle, mirror-side inward.",
+                "Light from a few coloured beads at the bottom is reflected from one mirror to another to a third, building up many images.",
+                "Each pair of mirrors at angle θ produces (360°/θ − 1) images of the same bead arrangement.",
+                "At 60° (the common case) you see six-fold symmetry."
+              ],
+              "commonMistakes": [
+                "Picking 'refraction' or 'dispersion' — those involve light bending through transparent material, not reflecting off mirrors.",
+                "Picking 'total internal reflection' — that's a phenomenon in lenses and prisms, not in mirror toys."
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                202
+              ],
+              "needsHumanReview": false,
+              "variations": []
+            },
+            {
+              "id": "ch15_t03_q07",
+              "prompt": "Two plane mirrors are placed at an angle of 60° to each other with an object between them. How many images of the object will be seen?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "5 images",
+              "solutionSteps": [
+                "The general rule for two plane mirrors at angle θ is: number of images = (360°/θ) − 1.",
+                "Substitute θ = 60°: number of images = (360/60) − 1 = 6 − 1 = 5.",
+                "The five images, plus the original object, fit around the apex of the mirror arrangement — six things in total, arranged symmetrically."
+              ],
+              "commonMistakes": [
+                "Forgetting to subtract 1 — that counts the object itself.",
+                "Picking the wrong formula — angle θ is between the mirrors, not the angle of incidence."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two plane mirrors at 45° — how many images?",
+                  "answer": "7 images.",
+                  "solutionSteps": [
+                    "Number = (360 / 45) − 1 = 8 − 1 = 7."
+                  ]
+                },
+                {
+                  "prompt": "Two plane mirrors parallel to each other — how many images?",
+                  "answer": "Theoretically infinite. With θ = 0°, the formula breaks down, and each mirror keeps making new images of the previous reflection.",
+                  "solutionSteps": [
+                    "Parallel mirrors are like θ → 0; the formula (360/θ − 1) → ∞.",
+                    "In practice, each successive reflection is dimmer because of small mirror losses, so the image chain fades."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                202
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t03_q08",
+              "prompt": "Who invented the kaleidoscope?",
+              "questionType": "mcq",
+              "options": [
+                "Isaac Newton",
+                "David Brewster",
+                "Galileo Galilei",
+                "Albert Einstein"
+              ],
+              "answer": "David Brewster",
+              "solutionSteps": [
+                "The Scottish physicist Sir David Brewster invented the kaleidoscope in 1816.",
+                "He originally meant it as a serious instrument for studying optical symmetry; it became a popular toy almost overnight.",
+                "Brewster is also remembered in Class 12 / JEE Physics for Brewster's Law — the angle at which reflected light is fully polarised."
+              ],
+              "commonMistakes": [
+                "Picking Newton — Newton's contributions to optics are dispersion and reflecting telescopes, not the kaleidoscope.",
+                "Picking Galileo — Galileo built telescopes, not kaleidoscopes."
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                203
+              ],
               "needsHumanReview": false,
               "variations": []
             }
