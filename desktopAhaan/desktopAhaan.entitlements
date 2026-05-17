@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<!--
+  desktopAhaan entitlements — kept minimal. Every key below is required
+  by a specific feature and would break it if removed. See docs/SECURITY.md
+  for the full rationale.
+
+  app-sandbox             always required — opts the process into the
+                          macOS Sandbox so writes are confined to the
+                          app's container and reads are gated by other
+                          entitlements.
+  network.client          ONLY for FreeOnlineTranslationProvider. The
+                          user can disable online translation entirely
+                          via Settings → "Dictionary Only (Offline Mode)"
+                          which makes the app fully offline. NWPathMonitor
+                          observation alone does NOT require this entitlement.
+  files.user-selected.read-only
+                          ONLY for the "Open Image…" command which uses
+                          NSOpenPanel so the user can pick an image to
+                          OCR. Read-only — the app never writes back to
+                          the picked file.
+  device.audio-input      ONLY for SpeechRecognitionManager (microphone
+                          dictation for translator + practice answers).
+                          Paired with NSMicrophoneUsageDescription +
+                          NSSpeechRecognitionUsageDescription in Info.plist
+                          (configured via INFOPLIST_KEY_* build settings).
+-->
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>

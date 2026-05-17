@@ -171,12 +171,12 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| K1 | Zero network calls in shipped paths | 🟡 NWPathMonitor used for status; no actual outbound calls |
+| K1 | Zero network calls in shipped paths | 🟡 ONE optional path — `FreeOnlineTranslationProvider`; disabled by Settings → "Dictionary Only" |
 | K2 | All assets bundled | ✅ |
 | K3 | No telemetry | ✅ |
-| K4 | App Sandbox enabled | ❌ verify entitlements |
-| K5 | Read-only network entitlement off | ❌ verify |
-| K6 | User-selected file entitlement off | ❌ verify |
+| K4 | App Sandbox enabled | ✅ verified `com.apple.security.app-sandbox` ON |
+| K5 | `network.client` entitlement state | ✅ ON, justified — only the online translation fallback needs it; documented in docs/SECURITY.md |
+| K6 | `files.user-selected.read-only` state | ✅ ON, justified — required by OCR "Open Image…" command; documented |
 | K7 | Writes scoped to Application Support | ✅ for progress + crash logs |
 
 ## L. Persistence & user data
@@ -296,12 +296,14 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 
 | ID | Category | Status |
 |----|----------|--------|
-| V1 | App Sandbox enabled in entitlements | ❌ verify |
-| V2 | Minimal entitlements | ❌ verify |
-| V3 | No hardcoded secrets / keys | ✅ no API in app |
-| V4 | Atomic file writes | 🟡 |
+| V1 | App Sandbox enabled in entitlements | ✅ verified |
+| V2 | Minimal entitlements (every key justified) | ✅ verified — 4 keys, all used; XML comments + docs/SECURITY.md table |
+| V3 | No hardcoded secrets / keys | ✅ grep-audited; all TranslationProviders return `requiresAPIKey=false` |
+| V4 | Atomic file writes | ✅ verified — CrashReporter + DataStore both use `.atomic` |
 | V5 | Input sanitisation on search/text | ✅ (no eval / injection surfaces) |
-| V6 | URL handler safety (if any deep links) | ❌ |
+| V5b | WKWebView JS-disabled + scoped read access | 🟡 not verified for article renderer |
+| V6 | URL handler attack surface (custom schemes) | ✅ none registered — no `CFBundleURLTypes`, no `onOpenURL` |
+| V7 | Privacy strings for mic + speech | ✅ via `INFOPLIST_KEY_*` build settings |
 
 ## W. Window management
 
