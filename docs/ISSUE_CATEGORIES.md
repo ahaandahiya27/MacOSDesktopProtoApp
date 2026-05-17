@@ -351,7 +351,7 @@ in the project memory.
 |----|----------|--------|
 | CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | ✅ chrome chapter-accent title in header (Phase 1) + per-scene title pin to `BrandColor.canvasText` across 26 scene files. On-canvas titles now hold contrast in both system Light and Dark Mode |
 | CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | ✅ Phase 1 bumped bg opacity 0.10→0.14 + border 0.35→0.45. Phase 3 now pins body text to `BrandColor.canvasText` (~#212121) instead of `.primary`, giving high-contrast reading on the tinted background regardless of system colour scheme |
-| CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
+| CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | 🟡 **macOS convention** — system-dark sidebar (NSVisualEffectView) + lighter content area is the standard NavigationView appearance used by Mail, Notes, Reminders, Music, etc. Considered "two regions" by users new to macOS but is the platform norm. Custom unification would fight system theming. Keeping unless screenshot review surfaces a specific issue |
 | CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ✅ superseded by DM6 ✅ — chapter accent now flows through `\.chapterAccent` SwiftUI environment from DiscoverShell to all descendant chrome (Got It button, Next button, scene-dot ring, header title). Per-scene illustrations + custom buttons still use their own colours by design (purple for blood, orange for ant, etc.), which is appropriate scene-specific styling, not drift |
 | CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | 🟡 Phase 2 added `DesignTokens.BrandColor` semantic-name layer; WCAG measurement pending in Phase 3 |
 | CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
@@ -381,10 +381,10 @@ in the project memory.
 |----|----------|--------|
 | TH1 | Dark mode visual sweep never performed end-to-end (dup of J1) | 🟡 Phase 5 |
 | TH2 | Sidebar vs canvas color-mode mismatch | 🟡 dup of CL3 |
-| TH3 | ChapterTheme brand colours hardcoded RGB → don't auto-adapt to scheme | 🟡 Phase 3/5 |
+| TH3 | ChapterTheme brand colours hardcoded RGB → don't auto-adapt to scheme | 🟡 **intentional** — `DiscoverBackground` is a fixed sunshine gradient regardless of system colour scheme (the always-light canvas decision documented in CN1/CL1). Chapter accents are therefore tuned to that fixed light canvas; auto-adapting them would break the contrast invariants. Migration to `Color.init(name: bundle:)` + Color Asset variants only valuable if we ever ship a true Dark Discover canvas |
 | TH4 | Tinted card backgrounds nearly identical in Light vs Dark | 🟡 partial — body text now `BrandColor.canvasText` (fixed) so it reads cleanly in both system modes despite the fixed-light canvas. Background tint values themselves not yet differentiated per scheme (deferred — would require an `@Environment(\.colorScheme)`-aware background tint per callout) |
 | TH5 | WKWebView article CSS (`ch*_style.css`) does not respect `prefers-color-scheme` | 🟡 architectural split discovered 2026-05-17: **8 of 19 chapter CSS files already handle dark mode** (Ch 1-7 + 19; they use a `:root { --bg / --text / --accent }` CSS-variable pattern with a `@media (prefers-color-scheme: dark)` block). The remaining 11 (Ch 8-18 minus 19) use a legacy direct-hex pattern and need either per-file dark overrides or a refactor to the CSS-variable pattern. Also: dark-mode usage on the deploy iMac is unverified — may be effectively dead code |
-| TH6 | Accent-tint per chapter not documented (no swatch reference doc) | ❌ |
+| TH6 | Accent-tint per chapter not documented (no swatch reference doc) | ✅ `ChapterTheme.swift` documents each of 19 chapters' accent RGB inline with a comment naming the semantic (leaf green, hot red, pH purple, midnight indigo, etc.). The swatch reference IS the code; no separate doc needed |
 | TH7 | "Increase Contrast" macOS accessibility setting unverified | ❌ |
 | TH8 | Reduce Transparency (sidebar vibrancy) unverified | ❌ |
 
@@ -469,7 +469,7 @@ in the project memory.
 
 | ID | Category | Status |
 |----|----------|--------|
-| SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 Phase 4 |
+| SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 dup of CL3 — macOS NavigationView convention |
 | SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
 | SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | ✅ dup of TY6 — subject rows now carry `.help(pack.title)` |
 | SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
@@ -506,7 +506,7 @@ in the project memory.
 | CT1 | Section labels use inconsistent capitalisation styles | 🟡 |
 | CT2 | Button labels mix verb-first ("Got It") with adjective-first ("Previous") | ✅ audit: "Got It" / "Translate" / "Open Image" / "Choose Different Image" / "Clear" / "Retry" are all verb-first action buttons. "Previous" / "Next" are macOS-idiomatic navigation labels (matches Pages, Keynote, Photos), not action verbs — keeping them adjective-form is the right convention. Bookmarks / Settings / Search are noun labels because they're destinations, not actions. Convention is consistent with macOS HIG |
 | CT3 | Tooltips / hints sparse — dup of H2 | ✅ audit: chrome buttons now consistently carry `.help(...)` — Discover Got It, sidebar Clear, all icon-only buttons (read-aloud, dictation, clear-search × 2, copy, speak, favorite), DiscoverShell Back, BadgePill, etc. Tooltips on every interactive that benefits. H2 in the main taxonomy was a partial 🟡 due to SwiftUI's auto-label fallback — sites that don't have `.help()` use Button("Label") whose label IS the tooltip |
-| CT4 | Error messages inconsistent in voice (user-friendly vs developer-y) | ❌ |
+| CT4 | Error messages inconsistent in voice (user-friendly vs developer-y) | ✅ audit: `OCRService.errorMessage` ("No text found in the image. Try a clearer photo with visible text.") + `TranslatorViewModel` errors + "couldn't open image" — all user-friendly, action-oriented, no stack traces or technical jargon surfaced to the UI. Developer-y errors stay in `CrashReporter.logDataIssue` (file-only, not UI-facing). Voice is consistent: state-what-happened + suggest-action |
 | CT5 | Onomatopoeia / sound-effect text in body not consistent across scenes | ❌ |
 | CT6 | Class-7-appropriate reading level not validated across all callouts | ❌ |
 
