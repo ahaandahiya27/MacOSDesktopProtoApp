@@ -19,12 +19,24 @@ enum DiscoverMode {
         "ch05",   // Acids, Bases and Salts
         "ch06",   // Physical and Chemical Changes
         "ch07",   // Weather, Climate and Adaptations
+        "ch08",   // Winds, Storms and Cyclones
+        "ch09",   // Soil
+        "ch10",   // Respiration in Organisms
+        "ch11",   // Transportation in Animals and Plants
+        "ch12",   // Reproduction in Plants
+        "ch13",   // Motion and Time
+        "ch14",   // Electric Current and its Effects
+        "ch15",   // Light
+        "ch16",   // Water: A Precious Resource
+        "ch17",   // Forests: Our Lifeline
+        "ch18",   // Wastewater Story
         "ch19"    // Earth, Moon and the Sun
     ]
 
-    /// Every supported chapter ships exactly this many interactive scenes.
+    /// Every supported chapter ships exactly this many interactive scenes,
+    /// counting the 8 learning scenes plus the closing Boss Quiz.
     /// Used by the progress dashboard to compute completion percentages.
-    static let scenesPerChapter: Int = 8
+    static let scenesPerChapter: Int = 9
 
     /// Returns true if Discover Mode has hand-built scenes for this chapter.
     /// Used by `ChapterDetailView` to decide whether to show the entry button.
@@ -54,6 +66,28 @@ enum DiscoverMode {
                 DiscoverChapter6View(pack: pack, chapter: chapter)
             case "ch07":
                 DiscoverChapter7View(pack: pack, chapter: chapter)
+            case "ch08":
+                DiscoverChapter8View(pack: pack, chapter: chapter)
+            case "ch09":
+                DiscoverChapter9View(pack: pack, chapter: chapter)
+            case "ch10":
+                DiscoverChapter10View(pack: pack, chapter: chapter)
+            case "ch11":
+                DiscoverChapter11View(pack: pack, chapter: chapter)
+            case "ch12":
+                DiscoverChapter12View(pack: pack, chapter: chapter)
+            case "ch13":
+                DiscoverChapter13View(pack: pack, chapter: chapter)
+            case "ch14":
+                DiscoverChapter14View(pack: pack, chapter: chapter)
+            case "ch15":
+                DiscoverChapter15View(pack: pack, chapter: chapter)
+            case "ch16":
+                DiscoverChapter16View(pack: pack, chapter: chapter)
+            case "ch17":
+                DiscoverChapter17View(pack: pack, chapter: chapter)
+            case "ch18":
+                DiscoverChapter18View(pack: pack, chapter: chapter)
             case "ch19":
                 DiscoverChapter19View(pack: pack, chapter: chapter)
             default:
@@ -163,6 +197,8 @@ struct DiscoverShell<SceneBody: View>: View {
         Set(dataStore.discoverRows(for: chapter.id).map { $0.sceneId })
     }
 
+    private var chapterAccent: Color { ChapterTheme.accent(for: chapter.id) }
+
     var body: some View {
         ZStack {
             DiscoverBackground()
@@ -224,7 +260,7 @@ struct DiscoverShell<SceneBody: View>: View {
                         .fill(done ? Color.green : Color.gray.opacity(0.25))
                         .overlay(
                             Circle()
-                                .strokeBorder(currentScene == i ? Color.compatIndigo : .clear, lineWidth: 2.5)
+                                .strokeBorder(currentScene == i ? chapterAccent : .clear, lineWidth: 2.5)
                         )
                         .frame(width: 22, height: 22)
                 }
@@ -249,12 +285,12 @@ struct DiscoverShell<SceneBody: View>: View {
 
             Text(sceneTitles[currentScene])
                 .font(.headline)
-                .foregroundColor(Color.compatIndigo)
+                .foregroundColor(chapterAccent)
 
             Spacer()
 
             Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
-                .accentColor(Color.compatIndigo)
+                .accentColor(chapterAccent)
                 .disabled(currentScene == totalScenes - 1)
         }
         .padding(.horizontal, 24)

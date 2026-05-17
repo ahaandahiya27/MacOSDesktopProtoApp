@@ -16,6 +16,17 @@ enum ArticleIndex {
     static let chapter5Folder = "Articles/Chapter5"
     static let chapter6Folder = "Articles/Chapter6"
     static let chapter7Folder = "Articles/Chapter7"
+    static let chapter8Folder = "Articles/Chapter8"
+    static let chapter9Folder = "Articles/Chapter9"
+    static let chapter10Folder = "Articles/Chapter10"
+    static let chapter11Folder = "Articles/Chapter11"
+    static let chapter12Folder = "Articles/Chapter12"
+    static let chapter13Folder = "Articles/Chapter13"
+    static let chapter14Folder = "Articles/Chapter14"
+    static let chapter15Folder = "Articles/Chapter15"
+    static let chapter16Folder = "Articles/Chapter16"
+    static let chapter17Folder = "Articles/Chapter17"
+    static let chapter18Folder = "Articles/Chapter18"
     static let chapter19Folder = "Articles/Chapter19"
 
     static let entries: [String: ArticleEntry] = [
@@ -612,6 +623,83 @@ enum ArticleIndex {
         "ch07_t03_c03": ArticleEntry(id: "ch07_t03_c03", filename: "ch07_t03_c03.html",
             title: "Conservation — Helping Animals Survive a Changing World",
             chapterFolder: chapter7Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 8 — Winds, Storms and Cyclones
+        // ================================================================
+        "ch08": ArticleEntry(id: "ch08", filename: "ch08_overview.html",
+            title: "Winds, Storms and Cyclones — Chapter Overview",
+            chapterFolder: chapter8Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 9 — Soil
+        // ================================================================
+        "ch09": ArticleEntry(id: "ch09", filename: "ch09_overview.html",
+            title: "Soil — Chapter Overview",
+            chapterFolder: chapter9Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 10 — Respiration in Organisms
+        // ================================================================
+        "ch10": ArticleEntry(id: "ch10", filename: "ch10_overview.html",
+            title: "Respiration in Organisms — Chapter Overview",
+            chapterFolder: chapter10Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 11 — Transportation in Animals and Plants
+        // ================================================================
+        "ch11": ArticleEntry(id: "ch11", filename: "ch11_overview.html",
+            title: "Transportation in Animals and Plants — Chapter Overview",
+            chapterFolder: chapter11Folder, estimatedMinutes: 7),
+
+        // ================================================================
+        // CHAPTER 12 — Reproduction in Plants
+        // ================================================================
+        "ch12": ArticleEntry(id: "ch12", filename: "ch12_overview.html",
+            title: "Reproduction in Plants — Chapter Overview",
+            chapterFolder: chapter12Folder, estimatedMinutes: 7),
+
+        // ================================================================
+        // CHAPTER 13 — Motion and Time
+        // ================================================================
+        "ch13": ArticleEntry(id: "ch13", filename: "ch13_overview.html",
+            title: "Motion and Time — Chapter Overview",
+            chapterFolder: chapter13Folder, estimatedMinutes: 7),
+
+        // ================================================================
+        // CHAPTER 14 — Electric Current and its Effects
+        // ================================================================
+        "ch14": ArticleEntry(id: "ch14", filename: "ch14_overview.html",
+            title: "Electric Current and its Effects — Chapter Overview",
+            chapterFolder: chapter14Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 15 — Light
+        // ================================================================
+        "ch15": ArticleEntry(id: "ch15", filename: "ch15_overview.html",
+            title: "Light — Chapter Overview",
+            chapterFolder: chapter15Folder, estimatedMinutes: 7),
+
+        // ================================================================
+        // CHAPTER 16 — Water: A Precious Resource
+        // ================================================================
+        "ch16": ArticleEntry(id: "ch16", filename: "ch16_overview.html",
+            title: "Water: A Precious Resource — Chapter Overview",
+            chapterFolder: chapter16Folder, estimatedMinutes: 7),
+
+        // ================================================================
+        // CHAPTER 17 — Forests: Our Lifeline
+        // ================================================================
+        "ch17": ArticleEntry(id: "ch17", filename: "ch17_overview.html",
+            title: "Forests: Our Lifeline — Chapter Overview",
+            chapterFolder: chapter17Folder, estimatedMinutes: 6),
+
+        // ================================================================
+        // CHAPTER 18 — Wastewater Story
+        // ================================================================
+        "ch18": ArticleEntry(id: "ch18", filename: "ch18_overview.html",
+            title: "Wastewater Story — Chapter Overview",
+            chapterFolder: chapter18Folder, estimatedMinutes: 7),
 
         // ================================================================
         // CHAPTER 19 — Earth, Moon and the Sun

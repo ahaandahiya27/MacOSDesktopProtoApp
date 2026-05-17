@@ -1,0 +1,63 @@
+import SwiftUI
+
+/// Scene 8 — Anemometer Reader. Spin rate (slider) maps to a wind-speed reading.
+struct Scene8_AnemometerReader: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: () -> Void
+
+    @State private var rpm: Double = 30
+    @State private var rotation: Double = 0
+    @State private var tick: TimeInterval = 0
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private var kmh: Double { rpm * 0.5 }
+
+    var body: some View {
+        VStack(spacing: 14) {
+            Text("Anemometer Reader").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Slide to spin the cups. Faster spin = stronger wind.")
+                .font(.callout).foregroundColor(.secondary)
+
+            ZStack {
+                Circle().fill(Color.gray.opacity(0.08)).frame(width: 240, height: 240)
+                ForEach(0..<3, id: \.self) { i in
+                    Text("🥣")
+                        .font(.system(size: 36))
+                        .offset(x: 90)
+                        .rotationEffect(.degrees(Double(i) * 120))
+                }
+                Circle().fill(Color.compatIndigo).frame(width: 14, height: 14)
+            }
+            .rotationEffect(.degrees(rotation))
+            .onChange(of: tick) { _ in
+                guard !reduceMotion else { return }
+                rotation = (rotation + rpm * 0.3).truncatingRemainder(dividingBy: 360)
+            }
+            .timedScene(idealFPS: 30, tick: $tick)
+
+            Text("\(Int(rpm)) rpm  ≈  \(Int(kmh)) km/h")
+                .font(.system(size: 30, weight: .bold, design: .monospaced))
+                .foregroundColor(Color.compatIndigo)
+
+            Slider(value: $rpm, in: 0...200, step: 1)
+                .frame(maxWidth: 460)
+                .padding(.horizontal, 24)
+
+            SoftShadowCard(padding: 18) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Label("Cups catch the wind", systemImage: "gauge.medium")
+                        .font(.title2.bold())
+                    Text("An anemometer measures wind speed. Three or four cups catch the breeze and rotate. The rotation rate is converted to km/h. Weather stations report this every few minutes.")
+                        .font(.body).lineSpacing(4)
+                }
+            }
+            .frame(maxWidth: DesignTokens.contentMaxWidth)
+            .padding(.horizontal, 24)
+
+            GotItButton { onComplete() }.padding(.bottom, 12)
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}

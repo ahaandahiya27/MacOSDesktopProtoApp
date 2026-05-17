@@ -1,0 +1,57 @@
+import SwiftUI
+
+/// Scene 6 — Animal Niche Match. 4 animals to their forest layer.
+struct Scene6_AnimalNicheMatch: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: (Int) -> Void
+
+    struct Pair: Identifiable { let id = UUID(); let animal: String; let layer: String }
+    private let pairs: [Pair] = [
+        Pair(animal: "🦅 Eagle",        layer: "Canopy"),
+        Pair(animal: "🐒 Langur",       layer: "Understory"),
+        Pair(animal: "🦌 Deer",          layer: "Shrub"),
+        Pair(animal: "🐍 Cobra",        layer: "Forest floor"),
+    ]
+    private let options = ["Canopy", "Understory", "Shrub", "Forest floor"]
+    @State private var picks: [UUID: String] = [:]
+
+    private var done: Bool { picks.count == pairs.count }
+    private var score: Int { pairs.reduce(0) { $0 + ((picks[$1.id] == $1.layer) ? 1 : 0) } }
+
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("Animal Niche Match").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Each animal calls a particular layer home.").font(.callout).foregroundColor(.secondary)
+
+            VStack(spacing: 10) {
+                ForEach(pairs) { p in
+                    HStack {
+                        Text(p.animal).font(.headline).frame(width: 140, alignment: .leading)
+                        Picker("", selection: Binding(
+                            get: { picks[p.id] ?? "" }, set: { picks[p.id] = $0 }
+                        )) {
+                            Text("— pick —").tag("")
+                            ForEach(options, id: \.self) { Text($0).tag($0) }
+                        }.pickerStyle(.menu).frame(width: 180)
+                        if let v = picks[p.id], !v.isEmpty {
+                            Image(systemName: v == p.layer ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                .foregroundColor(v == p.layer ? .green : .red)
+                        }
+                    }
+                    .padding(10)
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                }
+            }
+            .frame(maxWidth: 540).padding(.horizontal, 24)
+
+            if done {
+                Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+            }
+
+            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}

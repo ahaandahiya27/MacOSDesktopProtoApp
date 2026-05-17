@@ -1,0 +1,53 @@
+import SwiftUI
+
+/// Scene 6 — Vegetative Propagation. Pick a plant; see which part grows a new one.
+struct Scene6_VegetativePropagation: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: () -> Void
+
+    enum Plant: String, CaseIterable, Identifiable {
+        case potato = "Potato", rose = "Rose", bryophyllum = "Bryophyllum", onion = "Onion"
+        var id: String { rawValue }
+        var emoji: String {
+            switch self { case .potato: return "🥔"; case .rose: return "🌹"; case .bryophyllum: return "🌱"; case .onion: return "🧅" }
+        }
+        var partUsed: String {
+            switch self {
+            case .potato:      return "Tuber — the 'eyes' sprout new shoots"
+            case .rose:        return "Stem cutting — sticks into soil & grows roots"
+            case .bryophyllum: return "Leaf margin — buds grow into mini-plants and fall off"
+            case .onion:       return "Bulb — stores food underground, sprouts new plants"
+            }
+        }
+    }
+
+    @State private var plant: Plant = .potato
+
+    var body: some View {
+        VStack(spacing: 14) {
+            Text("Vegetative Propagation").font(.largeTitle.bold()).padding(.top, 18)
+            Text("No flowers, no seeds — these plants clone themselves.")
+                .font(.callout).foregroundColor(.secondary)
+
+            Picker("", selection: $plant) {
+                ForEach(Plant.allCases) { Text($0.rawValue).tag($0) }
+            }.pickerStyle(.segmented).frame(maxWidth: 460)
+
+            Text(plant.emoji).font(.system(size: 96))
+
+            SoftShadowCard(padding: 18) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(plant.rawValue).font(.title3.bold())
+                    Text(plant.partUsed).font(.body).lineSpacing(4)
+                    Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(.secondary)
+                }
+            }
+            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+            GotItButton { onComplete() }.padding(.bottom, 12)
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}

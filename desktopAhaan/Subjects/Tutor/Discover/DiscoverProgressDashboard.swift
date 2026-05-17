@@ -40,10 +40,25 @@ private struct DiscoverProgressContent: View {
         return Double(totalCompleted) / Double(totalScenes)
     }
 
+    /// 3 chapters with at least one scene done but not yet complete, ordered
+    /// by how close they are to completion. Encourages finishing started work.
+    private var closestToCompletion: [Chapter] {
+        let total = DiscoverMode.scenesPerChapter
+        let scored = chapters.compactMap { ch -> (Chapter, Int)? in
+            let done = completedCount(for: ch)
+            guard done > 0 && done < total else { return nil }
+            return (ch, done)
+        }
+        return scored.sorted { $0.1 > $1.1 }.prefix(3).map { $0.0 }
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 header
+                if !closestToCompletion.isEmpty {
+                    closestCard
+                }
                 ForEach(chapters) { ch in
                     chapterCard(ch)
                 }
@@ -54,6 +69,49 @@ private struct DiscoverProgressContent: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Discover Progress")
+    }
+
+    private var closestCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: "flag.checkered")
+                    .foregroundColor(.orange)
+                Text("Almost there")
+                    .font(.headline)
+                Spacer()
+            }
+            ForEach(closestToCompletion) { ch in
+                let done = completedCount(for: ch)
+                let total = DiscoverMode.scenesPerChapter
+                Button {
+                    openChapter(ch)
+                } label: {
+                    HStack {
+                        Text("Ch. \(ch.number) — \(ch.title)")
+                            .font(.callout.weight(.medium))
+                            .lineLimit(1)
+                        Spacer()
+                        Text("\(done)/\(total)")
+                            .font(.caption.weight(.semibold).monospacedDigit())
+                            .foregroundColor(.secondary)
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                    }
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.orange.opacity(0.10))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .strokeBorder(Color.orange.opacity(0.30), lineWidth: 1)
+        )
     }
 
     private var header: some View {
@@ -98,7 +156,7 @@ private struct DiscoverProgressContent: View {
                         .frame(width: 52, height: 52)
                     Circle()
                         .trim(from: 0, to: CGFloat(fraction))
-                        .stroke(isComplete ? Color.green : Color.compatIndigo,
+                        .stroke(isComplete ? Color.green : ChapterTheme.accent(for: chapter.id),
                                 style: StrokeStyle(lineWidth: 4, lineCap: .round))
                         .rotationEffect(.degrees(-90))
                         .frame(width: 52, height: 52)

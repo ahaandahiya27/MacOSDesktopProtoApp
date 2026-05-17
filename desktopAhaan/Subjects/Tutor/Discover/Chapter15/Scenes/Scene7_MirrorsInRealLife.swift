@@ -1,0 +1,57 @@
+import SwiftUI
+
+/// Scene 7 — Mirrors in Real Life. Match 3 uses to mirror types.
+struct Scene7_MirrorsInRealLife: View {
+    let pack: SubjectPack
+    let chapter: Chapter
+    let onComplete: (Int) -> Void
+
+    struct Item: Identifiable { let id = UUID(); let use: String; let answer: String }
+    private let items: [Item] = [
+        Item(use: "🚗 Car side mirror (wide view of traffic)", answer: "Convex"),
+        Item(use: "🪞 Dentist's tiny mirror (magnified tooth)",  answer: "Concave"),
+        Item(use: "🛁 Bathroom mirror",                         answer: "Plane"),
+    ]
+    private let options = ["Plane", "Concave", "Convex"]
+    @State private var picks: [UUID: String] = [:]
+
+    private var done: Bool { picks.count == items.count }
+    private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.answer) ? 1 : 0) } }
+
+    var body: some View {
+        VStack(spacing: 12) {
+            Text("Mirrors in Real Life").font(.largeTitle.bold()).padding(.top, 18)
+            Text("Which type of mirror is used in each case?")
+                .font(.callout).foregroundColor(.secondary)
+
+            VStack(spacing: 10) {
+                ForEach(items) { item in
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(item.use).font(.body)
+                        HStack(spacing: 8) {
+                            ForEach(options, id: \.self) { opt in
+                                Button(opt) { picks[item.id] = opt }
+                                    .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
+                            }
+                            if let p = picks[item.id] {
+                                Image(systemName: p == item.answer ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                    .foregroundColor(p == item.answer ? .green : .red)
+                            }
+                        }
+                    }
+                    .padding(10)
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                }
+            }
+            .frame(maxWidth: 640).padding(.horizontal, 24)
+
+            if done {
+                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+            }
+
+            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+            Spacer(minLength: 0)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}

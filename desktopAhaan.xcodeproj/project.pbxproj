@@ -29,6 +29,139 @@
 		04674C6A2FB8E09E004A7D5C /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C692FB8E09E004A7D5C /* SettingsManagerTests.swift */; };
 		04674C6C2FB8E0B4004A7D5C /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */; };
 		04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */; };
+		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
+		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
+		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
+		04F59D0C2FB8EE4800568BDE /* Scene3_LandBreezeSeaBreeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D0B2FB8EE4800568BDE /* Scene3_LandBreezeSeaBreeze.swift */; };
+		04F59D0E2FB8EE4900568BDE /* Scene4_UnevenHeating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D0D2FB8EE4900568BDE /* Scene4_UnevenHeating.swift */; };
+		04F59D102FB8EE4900568BDE /* Scene5_CycloneEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D0F2FB8EE4900568BDE /* Scene5_CycloneEye.swift */; };
+		04F59D122FB8EE4A00568BDE /* Scene6_ThunderstormSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D112FB8EE4A00568BDE /* Scene6_ThunderstormSafety.swift */; };
+		04F59D142FB8EE4B00568BDE /* Scene7_CycloneWarningCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D132FB8EE4B00568BDE /* Scene7_CycloneWarningCodes.swift */; };
+		04F59D162FB8EE4B00568BDE /* Scene8_AnemometerReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D152FB8EE4B00568BDE /* Scene8_AnemometerReader.swift */; };
+		04F59D182FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D172FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift */; };
+		04F59D1B2FB8EECE00568BDE /* DiscoverChapter9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D1A2FB8EECE00568BDE /* DiscoverChapter9View.swift */; };
+		04F59D1E2FB8EECF00568BDE /* Scene1_SoilProfileDig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D1D2FB8EECF00568BDE /* Scene1_SoilProfileDig.swift */; };
+		04F59D202FB8EED000568BDE /* Scene2_SandClayLoam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D1F2FB8EED000568BDE /* Scene2_SandClayLoam.swift */; };
+		04F59D222FB8EED000568BDE /* Scene3_PercolationRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D212FB8EED000568BDE /* Scene3_PercolationRate.swift */; };
+		04F59D242FB8EED100568BDE /* Scene4_WhichCropWhichSoil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D232FB8EED100568BDE /* Scene4_WhichCropWhichSoil.swift */; };
+		04F59D262FB8EED200568BDE /* Scene5_SoilErosionStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D252FB8EED200568BDE /* Scene5_SoilErosionStory.swift */; };
+		04F59D282FB8EED300568BDE /* Scene6_AirMoistureInSoil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D272FB8EED300568BDE /* Scene6_AirMoistureInSoil.swift */; };
+		04F59D2A2FB8EED400568BDE /* Scene7_WormEngineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D292FB8EED400568BDE /* Scene7_WormEngineer.swift */; };
+		04F59D2C2FB8EED400568BDE /* Scene8_ConservationHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D2B2FB8EED400568BDE /* Scene8_ConservationHero.swift */; };
+		04F59D2E2FB8EED400568BDE /* Scene9_BossQuiz_Ch9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D2D2FB8EED400568BDE /* Scene9_BossQuiz_Ch9.swift */; };
+		04F59D312FB8EF4B00568BDE /* DiscoverChapter10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D302FB8EF4B00568BDE /* DiscoverChapter10View.swift */; };
+		04F59D342FB8EF4B00568BDE /* Scene1_InhaleExhale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D332FB8EF4B00568BDE /* Scene1_InhaleExhale.swift */; };
+		04F59D362FB8EF4C00568BDE /* Scene2_AerobicAnaerobic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D352FB8EF4C00568BDE /* Scene2_AerobicAnaerobic.swift */; };
+		04F59D382FB8EF4C00568BDE /* Scene3_YeastSugarLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D372FB8EF4C00568BDE /* Scene3_YeastSugarLab.swift */; };
+		04F59D3A2FB8EF4D00568BDE /* Scene4_LimeWaterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D392FB8EF4D00568BDE /* Scene4_LimeWaterTest.swift */; };
+		04F59D3C2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D3B2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift */; };
+		04F59D3E2FB8EF4E00568BDE /* Scene6_InsectsWorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D3D2FB8EF4E00568BDE /* Scene6_InsectsWorms.swift */; };
+		04F59D402FB8EF4F00568BDE /* Scene7_StomataZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D3F2FB8EF4F00568BDE /* Scene7_StomataZoom.swift */; };
+		04F59D422FB8EF5000568BDE /* Scene8_RestVsRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D412FB8EF5000568BDE /* Scene8_RestVsRun.swift */; };
+		04F59D442FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D432FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift */; };
+		04F59D472FB8EFCB00568BDE /* DiscoverChapter11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D462FB8EFCB00568BDE /* DiscoverChapter11View.swift */; };
+		04F59D4A2FB8EFCB00568BDE /* Scene1_HeartBeats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D492FB8EFCB00568BDE /* Scene1_HeartBeats.swift */; };
+		04F59D4C2FB8EFCB00568BDE /* Scene2_PulseCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D4B2FB8EFCB00568BDE /* Scene2_PulseCounter.swift */; };
+		04F59D4E2FB8EFCC00568BDE /* Scene3_BloodSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D4D2FB8EFCC00568BDE /* Scene3_BloodSort.swift */; };
+		04F59D502FB8EFCD00568BDE /* Scene4_ArteryVeinCapillary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D4F2FB8EFCD00568BDE /* Scene4_ArteryVeinCapillary.swift */; };
+		04F59D522FB8EFCE00568BDE /* Scene5_KidneyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D512FB8EFCE00568BDE /* Scene5_KidneyFilter.swift */; };
+		04F59D542FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D532FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift */; };
+		04F59D562FB8EFCF00568BDE /* Scene7_PhloemSugarPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D552FB8EFCF00568BDE /* Scene7_PhloemSugarPipeline.swift */; };
+		04F59D582FB8EFD000568BDE /* Scene8_TranspirationPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D572FB8EFD000568BDE /* Scene8_TranspirationPull.swift */; };
+		04F59D5A2FB8EFD100568BDE /* Scene9_BossQuiz_Ch11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D592FB8EFD100568BDE /* Scene9_BossQuiz_Ch11.swift */; };
+		04F59D5D2FB8F04700568BDE /* DiscoverChapter12View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D5C2FB8F04700568BDE /* DiscoverChapter12View.swift */; };
+		04F59D602FB8F04700568BDE /* Scene1_FlowerAnatomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D5F2FB8F04700568BDE /* Scene1_FlowerAnatomy.swift */; };
+		04F59D622FB8F04800568BDE /* Scene2_PollinationMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D612FB8F04800568BDE /* Scene2_PollinationMatch.swift */; };
+		04F59D642FB8F04900568BDE /* Scene3_SelfVsCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D632FB8F04900568BDE /* Scene3_SelfVsCross.swift */; };
+		04F59D662FB8F04A00568BDE /* Scene4_Fertilisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D652FB8F04A00568BDE /* Scene4_Fertilisation.swift */; };
+		04F59D682FB8F04A00568BDE /* Scene5_SeedDispersal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D672FB8F04A00568BDE /* Scene5_SeedDispersal.swift */; };
+		04F59D6A2FB8F04B00568BDE /* Scene6_VegetativePropagation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D692FB8F04B00568BDE /* Scene6_VegetativePropagation.swift */; };
+		04F59D6C2FB8F04B00568BDE /* Scene7_Budding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D6B2FB8F04B00568BDE /* Scene7_Budding.swift */; };
+		04F59D6E2FB8F04C00568BDE /* Scene8_Fragmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D6D2FB8F04C00568BDE /* Scene8_Fragmentation.swift */; };
+		04F59D702FB8F04D00568BDE /* Scene9_BossQuiz_Ch12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D6F2FB8F04D00568BDE /* Scene9_BossQuiz_Ch12.swift */; };
+		04F59D732FB8F0CA00568BDE /* DiscoverChapter13View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D722FB8F0CA00568BDE /* DiscoverChapter13View.swift */; };
+		04F59D762FB8F0CA00568BDE /* Scene1_FastOrSlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D752FB8F0CA00568BDE /* Scene1_FastOrSlow.swift */; };
+		04F59D782FB8F0CB00568BDE /* Scene2_PendulumLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D772FB8F0CB00568BDE /* Scene2_PendulumLab.swift */; };
+		04F59D7A2FB8F0CC00568BDE /* Scene3_DistanceTimeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D792FB8F0CC00568BDE /* Scene3_DistanceTimeGraph.swift */; };
+		04F59D7C2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D7B2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift */; };
+		04F59D7E2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D7D2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift */; };
+		04F59D802FB8F0CE00568BDE /* Scene6_Sundial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D7F2FB8F0CE00568BDE /* Scene6_Sundial.swift */; };
+		04F59D822FB8F0CF00568BDE /* Scene7_StopwatchRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D812FB8F0CF00568BDE /* Scene7_StopwatchRace.swift */; };
+		04F59D842FB8F0CF00568BDE /* Scene8_UnitsOfTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D832FB8F0CF00568BDE /* Scene8_UnitsOfTime.swift */; };
+		04F59D862FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D852FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift */; };
+		04F59D892FB8F14400568BDE /* DiscoverChapter14View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D882FB8F14400568BDE /* DiscoverChapter14View.swift */; };
+		04F59D8C2FB8F14400568BDE /* Scene1_BuildACircuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D8B2FB8F14400568BDE /* Scene1_BuildACircuit.swift */; };
+		04F59D8E2FB8F14500568BDE /* Scene2_SeriesVsParallel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D8D2FB8F14500568BDE /* Scene2_SeriesVsParallel.swift */; };
+		04F59D902FB8F14600568BDE /* Scene3_HeatingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D8F2FB8F14600568BDE /* Scene3_HeatingEffect.swift */; };
+		04F59D922FB8F14700568BDE /* Scene4_ElectricIron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D912FB8F14700568BDE /* Scene4_ElectricIron.swift */; };
+		04F59D942FB8F14700568BDE /* Scene5_MagneticEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D932FB8F14700568BDE /* Scene5_MagneticEffect.swift */; };
+		04F59D962FB8F14800568BDE /* Scene6_BuildElectromagnet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D952FB8F14800568BDE /* Scene6_BuildElectromagnet.swift */; };
+		04F59D982FB8F14800568BDE /* Scene7_FuseMCB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D972FB8F14800568BDE /* Scene7_FuseMCB.swift */; };
+		04F59D9A2FB8F14900568BDE /* Scene8_SafetyLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D992FB8F14900568BDE /* Scene8_SafetyLab.swift */; };
+		04F59D9C2FB8F14A00568BDE /* Scene9_BossQuiz_Ch14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D9B2FB8F14A00568BDE /* Scene9_BossQuiz_Ch14.swift */; };
+		04F59D9F2FB8F1C700568BDE /* DiscoverChapter15View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D9E2FB8F1C700568BDE /* DiscoverChapter15View.swift */; };
+		04F59DA22FB8F1C800568BDE /* Scene1_MirrorMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DA12FB8F1C800568BDE /* Scene1_MirrorMirror.swift */; };
+		04F59DA42FB8F1C800568BDE /* Scene2_ConcaveConvex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DA32FB8F1C800568BDE /* Scene2_ConcaveConvex.swift */; };
+		04F59DA62FB8F1C900568BDE /* Scene3_RefractionPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DA52FB8F1C900568BDE /* Scene3_RefractionPool.swift */; };
+		04F59DA82FB8F1CA00568BDE /* Scene4_PrismRainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DA72FB8F1CA00568BDE /* Scene4_PrismRainbow.swift */; };
+		04F59DAA2FB8F1CB00568BDE /* Scene5_LensWorkshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DA92FB8F1CB00568BDE /* Scene5_LensWorkshop.swift */; };
+		04F59DAC2FB8F1CB00568BDE /* Scene6_PeriscopeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DAB2FB8F1CB00568BDE /* Scene6_PeriscopeBuilder.swift */; };
+		04F59DAE2FB8F1CC00568BDE /* Scene7_MirrorsInRealLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DAD2FB8F1CC00568BDE /* Scene7_MirrorsInRealLife.swift */; };
+		04F59DB02FB8F1CC00568BDE /* Scene8_Kaleidoscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DAF2FB8F1CC00568BDE /* Scene8_Kaleidoscope.swift */; };
+		04F59DB22FB8F1CD00568BDE /* Scene9_BossQuiz_Ch15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DB12FB8F1CD00568BDE /* Scene9_BossQuiz_Ch15.swift */; };
+		04F59DB52FB8F24700568BDE /* DiscoverChapter16View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DB42FB8F24700568BDE /* DiscoverChapter16View.swift */; };
+		04F59DB82FB8F24800568BDE /* Scene1_WaterPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DB72FB8F24800568BDE /* Scene1_WaterPie.swift */; };
+		04F59DBA2FB8F24800568BDE /* Scene2_WaterTableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DB92FB8F24800568BDE /* Scene2_WaterTableSlider.swift */; };
+		04F59DBC2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DBB2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift */; };
+		04F59DBE2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DBD2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift */; };
+		04F59DC02FB8F24A00568BDE /* Scene5_RainwaterHarvesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DBF2FB8F24A00568BDE /* Scene5_RainwaterHarvesting.swift */; };
+		04F59DC22FB8F24B00568BDE /* Scene6_BawdiStepwell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DC12FB8F24B00568BDE /* Scene6_BawdiStepwell.swift */; };
+		04F59DC42FB8F24C00568BDE /* Scene7_WaterAudit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DC32FB8F24C00568BDE /* Scene7_WaterAudit.swift */; };
+		04F59DC62FB8F24D00568BDE /* Scene8_WaterPledge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DC52FB8F24D00568BDE /* Scene8_WaterPledge.swift */; };
+		04F59DC82FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DC72FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift */; };
+		04F59DCB2FB8F2C300568BDE /* DiscoverChapter17View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DCA2FB8F2C300568BDE /* DiscoverChapter17View.swift */; };
+		04F59DCE2FB8F2C400568BDE /* Scene1_ForestLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DCD2FB8F2C400568BDE /* Scene1_ForestLayers.swift */; };
+		04F59DD02FB8F2C400568BDE /* Scene2_DecomposerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DCF2FB8F2C400568BDE /* Scene2_DecomposerCycle.swift */; };
+		04F59DD22FB8F2C500568BDE /* Scene3_FoodWebBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DD12FB8F2C500568BDE /* Scene3_FoodWebBuilder.swift */; };
+		04F59DD42FB8F2C600568BDE /* Scene4_ForestAsSponge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DD32FB8F2C600568BDE /* Scene4_ForestAsSponge.swift */; };
+		04F59DD62FB8F2C600568BDE /* Scene5_O2CO2Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DD52FB8F2C600568BDE /* Scene5_O2CO2Balance.swift */; };
+		04F59DD82FB8F2C700568BDE /* Scene6_AnimalNicheMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DD72FB8F2C700568BDE /* Scene6_AnimalNicheMatch.swift */; };
+		04F59DDA2FB8F2C800568BDE /* Scene7_DeforestationDomino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DD92FB8F2C800568BDE /* Scene7_DeforestationDomino.swift */; };
+		04F59DDC2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DDB2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift */; };
+		04F59DDE2FB8F2C900568BDE /* Scene9_BossQuiz_Ch17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DDD2FB8F2C900568BDE /* Scene9_BossQuiz_Ch17.swift */; };
+		04F59DE12FB8F34100568BDE /* DiscoverChapter18View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DE02FB8F34100568BDE /* DiscoverChapter18View.swift */; };
+		04F59DE42FB8F34100568BDE /* Scene1_WhereDrainWaterGoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DE32FB8F34100568BDE /* Scene1_WhereDrainWaterGoes.swift */; };
+		04F59DE62FB8F34200568BDE /* Scene2_WWTPStageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DE52FB8F34200568BDE /* Scene2_WWTPStageBuilder.swift */; };
+		04F59DE82FB8F34300568BDE /* Scene3_SortContaminants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DE72FB8F34300568BDE /* Scene3_SortContaminants.swift */; };
+		04F59DEA2FB8F34400568BDE /* Scene4_OpenDrainHazards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DE92FB8F34400568BDE /* Scene4_OpenDrainHazards.swift */; };
+		04F59DEC2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DEB2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift */; };
+		04F59DEE2FB8F34500568BDE /* Scene6_SanitationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DED2FB8F34500568BDE /* Scene6_SanitationMap.swift */; };
+		04F59DF02FB8F34600568BDE /* Scene7_SoakPitDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DEF2FB8F34600568BDE /* Scene7_SoakPitDesign.swift */; };
+		04F59DF22FB8F34600568BDE /* Scene8_BetterPractices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DF12FB8F34600568BDE /* Scene8_BetterPractices.swift */; };
+		04F59DF42FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59DF32FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift */; };
+		04F59DF72FB94EF500568BDE /* ch08_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59DF62FB94EF500568BDE /* ch08_style.css */; };
+		04F59DF92FB94EF500568BDE /* ch08_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59DF82FB94EF500568BDE /* ch08_overview.html */; };
+		04F59DFC2FB94EF600568BDE /* ch09_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59DFB2FB94EF600568BDE /* ch09_style.css */; };
+		04F59DFE2FB94EF700568BDE /* ch09_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59DFD2FB94EF700568BDE /* ch09_overview.html */; };
+		04F59E012FB94EF800568BDE /* ch10_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E002FB94EF800568BDE /* ch10_style.css */; };
+		04F59E032FB94EF800568BDE /* ch10_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E022FB94EF800568BDE /* ch10_overview.html */; };
+		04F59E062FB94EF900568BDE /* ch11_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E052FB94EF900568BDE /* ch11_style.css */; };
+		04F59E082FB94EF900568BDE /* ch11_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E072FB94EF900568BDE /* ch11_overview.html */; };
+		04F59E0B2FB94EFA00568BDE /* ch12_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E0A2FB94EFA00568BDE /* ch12_style.css */; };
+		04F59E0D2FB94EFB00568BDE /* ch12_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E0C2FB94EFB00568BDE /* ch12_overview.html */; };
+		04F59E102FB94EFC00568BDE /* ch13_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E0F2FB94EFC00568BDE /* ch13_style.css */; };
+		04F59E122FB94EFD00568BDE /* ch13_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E112FB94EFD00568BDE /* ch13_overview.html */; };
+		04F59E152FB94EFE00568BDE /* ch14_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E142FB94EFE00568BDE /* ch14_style.css */; };
+		04F59E172FB94EFE00568BDE /* ch14_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E162FB94EFE00568BDE /* ch14_overview.html */; };
+		04F59E1A2FB94EFF00568BDE /* ch15_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E192FB94EFF00568BDE /* ch15_style.css */; };
+		04F59E1C2FB94F0000568BDE /* ch15_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E1B2FB94F0000568BDE /* ch15_overview.html */; };
+		04F59E1F2FB94F0100568BDE /* ch16_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E1E2FB94F0100568BDE /* ch16_style.css */; };
+		04F59E212FB94F0100568BDE /* ch16_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E202FB94F0100568BDE /* ch16_overview.html */; };
+		04F59E242FB94F0200568BDE /* ch17_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E232FB94F0200568BDE /* ch17_style.css */; };
+		04F59E262FB94F0300568BDE /* ch17_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E252FB94F0300568BDE /* ch17_overview.html */; };
+		04F59E292FB94F0400568BDE /* ch18_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E282FB94F0400568BDE /* ch18_style.css */; };
+		04F59E2B2FB94F0400568BDE /* ch18_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 04F59E2A2FB94F0400568BDE /* ch18_overview.html */; };
+		04F59E2D2FB95A6100568BDE /* ChapterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */; };
 		05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */ = {isa = PBXBuildFile; fileRef = 0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */; };
 		05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */ = {isa = PBXBuildFile; fileRef = BF0E1E735D6B7CD5B79DD5E5 /* ch04_t02_c04.html */; };
 		067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502C3E83CAEA287D1BCC6B1B /* Scene5_AutotrophHeterotroph.swift */; };
@@ -370,6 +503,139 @@
 		04674C692FB8E09E004A7D5C /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerTests.swift; sourceTree = "<group>"; };
 		04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRegistryTests.swift; sourceTree = "<group>"; };
 		04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverProgressDashboard.swift; sourceTree = "<group>"; };
+		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
+		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
+		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
+		04F59D0B2FB8EE4800568BDE /* Scene3_LandBreezeSeaBreeze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_LandBreezeSeaBreeze.swift; sourceTree = "<group>"; };
+		04F59D0D2FB8EE4900568BDE /* Scene4_UnevenHeating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_UnevenHeating.swift; sourceTree = "<group>"; };
+		04F59D0F2FB8EE4900568BDE /* Scene5_CycloneEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_CycloneEye.swift; sourceTree = "<group>"; };
+		04F59D112FB8EE4A00568BDE /* Scene6_ThunderstormSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_ThunderstormSafety.swift; sourceTree = "<group>"; };
+		04F59D132FB8EE4B00568BDE /* Scene7_CycloneWarningCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_CycloneWarningCodes.swift; sourceTree = "<group>"; };
+		04F59D152FB8EE4B00568BDE /* Scene8_AnemometerReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_AnemometerReader.swift; sourceTree = "<group>"; };
+		04F59D172FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch8.swift; sourceTree = "<group>"; };
+		04F59D1A2FB8EECE00568BDE /* DiscoverChapter9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter9View.swift; sourceTree = "<group>"; };
+		04F59D1D2FB8EECF00568BDE /* Scene1_SoilProfileDig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_SoilProfileDig.swift; sourceTree = "<group>"; };
+		04F59D1F2FB8EED000568BDE /* Scene2_SandClayLoam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_SandClayLoam.swift; sourceTree = "<group>"; };
+		04F59D212FB8EED000568BDE /* Scene3_PercolationRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_PercolationRate.swift; sourceTree = "<group>"; };
+		04F59D232FB8EED100568BDE /* Scene4_WhichCropWhichSoil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_WhichCropWhichSoil.swift; sourceTree = "<group>"; };
+		04F59D252FB8EED200568BDE /* Scene5_SoilErosionStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_SoilErosionStory.swift; sourceTree = "<group>"; };
+		04F59D272FB8EED300568BDE /* Scene6_AirMoistureInSoil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_AirMoistureInSoil.swift; sourceTree = "<group>"; };
+		04F59D292FB8EED400568BDE /* Scene7_WormEngineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_WormEngineer.swift; sourceTree = "<group>"; };
+		04F59D2B2FB8EED400568BDE /* Scene8_ConservationHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_ConservationHero.swift; sourceTree = "<group>"; };
+		04F59D2D2FB8EED400568BDE /* Scene9_BossQuiz_Ch9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch9.swift; sourceTree = "<group>"; };
+		04F59D302FB8EF4B00568BDE /* DiscoverChapter10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter10View.swift; sourceTree = "<group>"; };
+		04F59D332FB8EF4B00568BDE /* Scene1_InhaleExhale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_InhaleExhale.swift; sourceTree = "<group>"; };
+		04F59D352FB8EF4C00568BDE /* Scene2_AerobicAnaerobic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AerobicAnaerobic.swift; sourceTree = "<group>"; };
+		04F59D372FB8EF4C00568BDE /* Scene3_YeastSugarLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_YeastSugarLab.swift; sourceTree = "<group>"; };
+		04F59D392FB8EF4D00568BDE /* Scene4_LimeWaterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_LimeWaterTest.swift; sourceTree = "<group>"; };
+		04F59D3B2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_FishGillFlow.swift; sourceTree = "<group>"; };
+		04F59D3D2FB8EF4E00568BDE /* Scene6_InsectsWorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_InsectsWorms.swift; sourceTree = "<group>"; };
+		04F59D3F2FB8EF4F00568BDE /* Scene7_StomataZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_StomataZoom.swift; sourceTree = "<group>"; };
+		04F59D412FB8EF5000568BDE /* Scene8_RestVsRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_RestVsRun.swift; sourceTree = "<group>"; };
+		04F59D432FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch10.swift; sourceTree = "<group>"; };
+		04F59D462FB8EFCB00568BDE /* DiscoverChapter11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter11View.swift; sourceTree = "<group>"; };
+		04F59D492FB8EFCB00568BDE /* Scene1_HeartBeats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HeartBeats.swift; sourceTree = "<group>"; };
+		04F59D4B2FB8EFCB00568BDE /* Scene2_PulseCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_PulseCounter.swift; sourceTree = "<group>"; };
+		04F59D4D2FB8EFCC00568BDE /* Scene3_BloodSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_BloodSort.swift; sourceTree = "<group>"; };
+		04F59D4F2FB8EFCD00568BDE /* Scene4_ArteryVeinCapillary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_ArteryVeinCapillary.swift; sourceTree = "<group>"; };
+		04F59D512FB8EFCE00568BDE /* Scene5_KidneyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_KidneyFilter.swift; sourceTree = "<group>"; };
+		04F59D532FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_XylemWaterClimb.swift; sourceTree = "<group>"; };
+		04F59D552FB8EFCF00568BDE /* Scene7_PhloemSugarPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_PhloemSugarPipeline.swift; sourceTree = "<group>"; };
+		04F59D572FB8EFD000568BDE /* Scene8_TranspirationPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_TranspirationPull.swift; sourceTree = "<group>"; };
+		04F59D592FB8EFD100568BDE /* Scene9_BossQuiz_Ch11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch11.swift; sourceTree = "<group>"; };
+		04F59D5C2FB8F04700568BDE /* DiscoverChapter12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter12View.swift; sourceTree = "<group>"; };
+		04F59D5F2FB8F04700568BDE /* Scene1_FlowerAnatomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_FlowerAnatomy.swift; sourceTree = "<group>"; };
+		04F59D612FB8F04800568BDE /* Scene2_PollinationMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_PollinationMatch.swift; sourceTree = "<group>"; };
+		04F59D632FB8F04900568BDE /* Scene3_SelfVsCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_SelfVsCross.swift; sourceTree = "<group>"; };
+		04F59D652FB8F04A00568BDE /* Scene4_Fertilisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_Fertilisation.swift; sourceTree = "<group>"; };
+		04F59D672FB8F04A00568BDE /* Scene5_SeedDispersal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_SeedDispersal.swift; sourceTree = "<group>"; };
+		04F59D692FB8F04B00568BDE /* Scene6_VegetativePropagation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_VegetativePropagation.swift; sourceTree = "<group>"; };
+		04F59D6B2FB8F04B00568BDE /* Scene7_Budding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_Budding.swift; sourceTree = "<group>"; };
+		04F59D6D2FB8F04C00568BDE /* Scene8_Fragmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_Fragmentation.swift; sourceTree = "<group>"; };
+		04F59D6F2FB8F04D00568BDE /* Scene9_BossQuiz_Ch12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch12.swift; sourceTree = "<group>"; };
+		04F59D722FB8F0CA00568BDE /* DiscoverChapter13View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter13View.swift; sourceTree = "<group>"; };
+		04F59D752FB8F0CA00568BDE /* Scene1_FastOrSlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_FastOrSlow.swift; sourceTree = "<group>"; };
+		04F59D772FB8F0CB00568BDE /* Scene2_PendulumLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_PendulumLab.swift; sourceTree = "<group>"; };
+		04F59D792FB8F0CC00568BDE /* Scene3_DistanceTimeGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_DistanceTimeGraph.swift; sourceTree = "<group>"; };
+		04F59D7B2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_SpeedometerOdometer.swift; sourceTree = "<group>"; };
+		04F59D7D2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_UniformNonUniform.swift; sourceTree = "<group>"; };
+		04F59D7F2FB8F0CE00568BDE /* Scene6_Sundial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_Sundial.swift; sourceTree = "<group>"; };
+		04F59D812FB8F0CF00568BDE /* Scene7_StopwatchRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_StopwatchRace.swift; sourceTree = "<group>"; };
+		04F59D832FB8F0CF00568BDE /* Scene8_UnitsOfTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_UnitsOfTime.swift; sourceTree = "<group>"; };
+		04F59D852FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch13.swift; sourceTree = "<group>"; };
+		04F59D882FB8F14400568BDE /* DiscoverChapter14View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter14View.swift; sourceTree = "<group>"; };
+		04F59D8B2FB8F14400568BDE /* Scene1_BuildACircuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_BuildACircuit.swift; sourceTree = "<group>"; };
+		04F59D8D2FB8F14500568BDE /* Scene2_SeriesVsParallel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_SeriesVsParallel.swift; sourceTree = "<group>"; };
+		04F59D8F2FB8F14600568BDE /* Scene3_HeatingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_HeatingEffect.swift; sourceTree = "<group>"; };
+		04F59D912FB8F14700568BDE /* Scene4_ElectricIron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_ElectricIron.swift; sourceTree = "<group>"; };
+		04F59D932FB8F14700568BDE /* Scene5_MagneticEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_MagneticEffect.swift; sourceTree = "<group>"; };
+		04F59D952FB8F14800568BDE /* Scene6_BuildElectromagnet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_BuildElectromagnet.swift; sourceTree = "<group>"; };
+		04F59D972FB8F14800568BDE /* Scene7_FuseMCB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_FuseMCB.swift; sourceTree = "<group>"; };
+		04F59D992FB8F14900568BDE /* Scene8_SafetyLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_SafetyLab.swift; sourceTree = "<group>"; };
+		04F59D9B2FB8F14A00568BDE /* Scene9_BossQuiz_Ch14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch14.swift; sourceTree = "<group>"; };
+		04F59D9E2FB8F1C700568BDE /* DiscoverChapter15View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter15View.swift; sourceTree = "<group>"; };
+		04F59DA12FB8F1C800568BDE /* Scene1_MirrorMirror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_MirrorMirror.swift; sourceTree = "<group>"; };
+		04F59DA32FB8F1C800568BDE /* Scene2_ConcaveConvex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_ConcaveConvex.swift; sourceTree = "<group>"; };
+		04F59DA52FB8F1C900568BDE /* Scene3_RefractionPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_RefractionPool.swift; sourceTree = "<group>"; };
+		04F59DA72FB8F1CA00568BDE /* Scene4_PrismRainbow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_PrismRainbow.swift; sourceTree = "<group>"; };
+		04F59DA92FB8F1CB00568BDE /* Scene5_LensWorkshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_LensWorkshop.swift; sourceTree = "<group>"; };
+		04F59DAB2FB8F1CB00568BDE /* Scene6_PeriscopeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_PeriscopeBuilder.swift; sourceTree = "<group>"; };
+		04F59DAD2FB8F1CC00568BDE /* Scene7_MirrorsInRealLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_MirrorsInRealLife.swift; sourceTree = "<group>"; };
+		04F59DAF2FB8F1CC00568BDE /* Scene8_Kaleidoscope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_Kaleidoscope.swift; sourceTree = "<group>"; };
+		04F59DB12FB8F1CD00568BDE /* Scene9_BossQuiz_Ch15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch15.swift; sourceTree = "<group>"; };
+		04F59DB42FB8F24700568BDE /* DiscoverChapter16View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter16View.swift; sourceTree = "<group>"; };
+		04F59DB72FB8F24800568BDE /* Scene1_WaterPie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_WaterPie.swift; sourceTree = "<group>"; };
+		04F59DB92FB8F24800568BDE /* Scene2_WaterTableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_WaterTableSlider.swift; sourceTree = "<group>"; };
+		04F59DBB2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_AquiferCrossSection.swift; sourceTree = "<group>"; };
+		04F59DBD2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_IrrigationCompare.swift; sourceTree = "<group>"; };
+		04F59DBF2FB8F24A00568BDE /* Scene5_RainwaterHarvesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_RainwaterHarvesting.swift; sourceTree = "<group>"; };
+		04F59DC12FB8F24B00568BDE /* Scene6_BawdiStepwell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_BawdiStepwell.swift; sourceTree = "<group>"; };
+		04F59DC32FB8F24C00568BDE /* Scene7_WaterAudit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_WaterAudit.swift; sourceTree = "<group>"; };
+		04F59DC52FB8F24D00568BDE /* Scene8_WaterPledge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_WaterPledge.swift; sourceTree = "<group>"; };
+		04F59DC72FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch16.swift; sourceTree = "<group>"; };
+		04F59DCA2FB8F2C300568BDE /* DiscoverChapter17View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter17View.swift; sourceTree = "<group>"; };
+		04F59DCD2FB8F2C400568BDE /* Scene1_ForestLayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_ForestLayers.swift; sourceTree = "<group>"; };
+		04F59DCF2FB8F2C400568BDE /* Scene2_DecomposerCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_DecomposerCycle.swift; sourceTree = "<group>"; };
+		04F59DD12FB8F2C500568BDE /* Scene3_FoodWebBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_FoodWebBuilder.swift; sourceTree = "<group>"; };
+		04F59DD32FB8F2C600568BDE /* Scene4_ForestAsSponge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_ForestAsSponge.swift; sourceTree = "<group>"; };
+		04F59DD52FB8F2C600568BDE /* Scene5_O2CO2Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_O2CO2Balance.swift; sourceTree = "<group>"; };
+		04F59DD72FB8F2C700568BDE /* Scene6_AnimalNicheMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_AnimalNicheMatch.swift; sourceTree = "<group>"; };
+		04F59DD92FB8F2C800568BDE /* Scene7_DeforestationDomino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_DeforestationDomino.swift; sourceTree = "<group>"; };
+		04F59DDB2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_ReforestationPlan.swift; sourceTree = "<group>"; };
+		04F59DDD2FB8F2C900568BDE /* Scene9_BossQuiz_Ch17.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch17.swift; sourceTree = "<group>"; };
+		04F59DE02FB8F34100568BDE /* DiscoverChapter18View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter18View.swift; sourceTree = "<group>"; };
+		04F59DE32FB8F34100568BDE /* Scene1_WhereDrainWaterGoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_WhereDrainWaterGoes.swift; sourceTree = "<group>"; };
+		04F59DE52FB8F34200568BDE /* Scene2_WWTPStageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_WWTPStageBuilder.swift; sourceTree = "<group>"; };
+		04F59DE72FB8F34300568BDE /* Scene3_SortContaminants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3_SortContaminants.swift; sourceTree = "<group>"; };
+		04F59DE92FB8F34400568BDE /* Scene4_OpenDrainHazards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene4_OpenDrainHazards.swift; sourceTree = "<group>"; };
+		04F59DEB2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene5_CompostPitBuilder.swift; sourceTree = "<group>"; };
+		04F59DED2FB8F34500568BDE /* Scene6_SanitationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene6_SanitationMap.swift; sourceTree = "<group>"; };
+		04F59DEF2FB8F34600568BDE /* Scene7_SoakPitDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene7_SoakPitDesign.swift; sourceTree = "<group>"; };
+		04F59DF12FB8F34600568BDE /* Scene8_BetterPractices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene8_BetterPractices.swift; sourceTree = "<group>"; };
+		04F59DF32FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene9_BossQuiz_Ch18.swift; sourceTree = "<group>"; };
+		04F59DF62FB94EF500568BDE /* ch08_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch08_style.css; sourceTree = "<group>"; };
+		04F59DF82FB94EF500568BDE /* ch08_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch08_overview.html; sourceTree = "<group>"; };
+		04F59DFB2FB94EF600568BDE /* ch09_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch09_style.css; sourceTree = "<group>"; };
+		04F59DFD2FB94EF700568BDE /* ch09_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch09_overview.html; sourceTree = "<group>"; };
+		04F59E002FB94EF800568BDE /* ch10_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch10_style.css; sourceTree = "<group>"; };
+		04F59E022FB94EF800568BDE /* ch10_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch10_overview.html; sourceTree = "<group>"; };
+		04F59E052FB94EF900568BDE /* ch11_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch11_style.css; sourceTree = "<group>"; };
+		04F59E072FB94EF900568BDE /* ch11_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch11_overview.html; sourceTree = "<group>"; };
+		04F59E0A2FB94EFA00568BDE /* ch12_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch12_style.css; sourceTree = "<group>"; };
+		04F59E0C2FB94EFB00568BDE /* ch12_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch12_overview.html; sourceTree = "<group>"; };
+		04F59E0F2FB94EFC00568BDE /* ch13_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch13_style.css; sourceTree = "<group>"; };
+		04F59E112FB94EFD00568BDE /* ch13_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch13_overview.html; sourceTree = "<group>"; };
+		04F59E142FB94EFE00568BDE /* ch14_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch14_style.css; sourceTree = "<group>"; };
+		04F59E162FB94EFE00568BDE /* ch14_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch14_overview.html; sourceTree = "<group>"; };
+		04F59E192FB94EFF00568BDE /* ch15_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch15_style.css; sourceTree = "<group>"; };
+		04F59E1B2FB94F0000568BDE /* ch15_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch15_overview.html; sourceTree = "<group>"; };
+		04F59E1E2FB94F0100568BDE /* ch16_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch16_style.css; sourceTree = "<group>"; };
+		04F59E202FB94F0100568BDE /* ch16_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_overview.html; sourceTree = "<group>"; };
+		04F59E232FB94F0200568BDE /* ch17_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch17_style.css; sourceTree = "<group>"; };
+		04F59E252FB94F0300568BDE /* ch17_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch17_overview.html; sourceTree = "<group>"; };
+		04F59E282FB94F0400568BDE /* ch18_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = ch18_style.css; sourceTree = "<group>"; };
+		04F59E2A2FB94F0400568BDE /* ch18_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch18_overview.html; sourceTree = "<group>"; };
+		04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTheme.swift; sourceTree = "<group>"; };
 		0592696A0CC499F77FBCB9A2 /* ch03_t01_c08.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c08.html; sourceTree = "<group>"; };
 		0707FD8C785E5B4691AB50C4 /* ch03_t01_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch03_t01_c02.html; sourceTree = "<group>"; };
 		0798E69539E5013A407BA147 /* ch19_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch19_t03_c02.html; sourceTree = "<group>"; };
@@ -739,6 +1005,380 @@
 				043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		04F59D032FB8EE4700568BDE /* Chapter8 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */,
+				04F59D062FB8EE4700568BDE /* Scenes */,
+			);
+			path = Chapter8;
+			sourceTree = "<group>";
+		};
+		04F59D062FB8EE4700568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */,
+				04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */,
+				04F59D0B2FB8EE4800568BDE /* Scene3_LandBreezeSeaBreeze.swift */,
+				04F59D0D2FB8EE4900568BDE /* Scene4_UnevenHeating.swift */,
+				04F59D0F2FB8EE4900568BDE /* Scene5_CycloneEye.swift */,
+				04F59D112FB8EE4A00568BDE /* Scene6_ThunderstormSafety.swift */,
+				04F59D132FB8EE4B00568BDE /* Scene7_CycloneWarningCodes.swift */,
+				04F59D152FB8EE4B00568BDE /* Scene8_AnemometerReader.swift */,
+				04F59D172FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D192FB8EECE00568BDE /* Chapter9 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D1A2FB8EECE00568BDE /* DiscoverChapter9View.swift */,
+				04F59D1C2FB8EECE00568BDE /* Scenes */,
+			);
+			path = Chapter9;
+			sourceTree = "<group>";
+		};
+		04F59D1C2FB8EECE00568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D1D2FB8EECF00568BDE /* Scene1_SoilProfileDig.swift */,
+				04F59D1F2FB8EED000568BDE /* Scene2_SandClayLoam.swift */,
+				04F59D212FB8EED000568BDE /* Scene3_PercolationRate.swift */,
+				04F59D232FB8EED100568BDE /* Scene4_WhichCropWhichSoil.swift */,
+				04F59D252FB8EED200568BDE /* Scene5_SoilErosionStory.swift */,
+				04F59D272FB8EED300568BDE /* Scene6_AirMoistureInSoil.swift */,
+				04F59D292FB8EED400568BDE /* Scene7_WormEngineer.swift */,
+				04F59D2B2FB8EED400568BDE /* Scene8_ConservationHero.swift */,
+				04F59D2D2FB8EED400568BDE /* Scene9_BossQuiz_Ch9.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D2F2FB8EF4B00568BDE /* Chapter10 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D302FB8EF4B00568BDE /* DiscoverChapter10View.swift */,
+				04F59D322FB8EF4B00568BDE /* Scenes */,
+			);
+			path = Chapter10;
+			sourceTree = "<group>";
+		};
+		04F59D322FB8EF4B00568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D332FB8EF4B00568BDE /* Scene1_InhaleExhale.swift */,
+				04F59D352FB8EF4C00568BDE /* Scene2_AerobicAnaerobic.swift */,
+				04F59D372FB8EF4C00568BDE /* Scene3_YeastSugarLab.swift */,
+				04F59D392FB8EF4D00568BDE /* Scene4_LimeWaterTest.swift */,
+				04F59D3B2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift */,
+				04F59D3D2FB8EF4E00568BDE /* Scene6_InsectsWorms.swift */,
+				04F59D3F2FB8EF4F00568BDE /* Scene7_StomataZoom.swift */,
+				04F59D412FB8EF5000568BDE /* Scene8_RestVsRun.swift */,
+				04F59D432FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D452FB8EFCA00568BDE /* Chapter11 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D462FB8EFCB00568BDE /* DiscoverChapter11View.swift */,
+				04F59D482FB8EFCB00568BDE /* Scenes */,
+			);
+			path = Chapter11;
+			sourceTree = "<group>";
+		};
+		04F59D482FB8EFCB00568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D492FB8EFCB00568BDE /* Scene1_HeartBeats.swift */,
+				04F59D4B2FB8EFCB00568BDE /* Scene2_PulseCounter.swift */,
+				04F59D4D2FB8EFCC00568BDE /* Scene3_BloodSort.swift */,
+				04F59D4F2FB8EFCD00568BDE /* Scene4_ArteryVeinCapillary.swift */,
+				04F59D512FB8EFCE00568BDE /* Scene5_KidneyFilter.swift */,
+				04F59D532FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift */,
+				04F59D552FB8EFCF00568BDE /* Scene7_PhloemSugarPipeline.swift */,
+				04F59D572FB8EFD000568BDE /* Scene8_TranspirationPull.swift */,
+				04F59D592FB8EFD100568BDE /* Scene9_BossQuiz_Ch11.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D5B2FB8F04700568BDE /* Chapter12 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D5C2FB8F04700568BDE /* DiscoverChapter12View.swift */,
+				04F59D5E2FB8F04700568BDE /* Scenes */,
+			);
+			path = Chapter12;
+			sourceTree = "<group>";
+		};
+		04F59D5E2FB8F04700568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D5F2FB8F04700568BDE /* Scene1_FlowerAnatomy.swift */,
+				04F59D612FB8F04800568BDE /* Scene2_PollinationMatch.swift */,
+				04F59D632FB8F04900568BDE /* Scene3_SelfVsCross.swift */,
+				04F59D652FB8F04A00568BDE /* Scene4_Fertilisation.swift */,
+				04F59D672FB8F04A00568BDE /* Scene5_SeedDispersal.swift */,
+				04F59D692FB8F04B00568BDE /* Scene6_VegetativePropagation.swift */,
+				04F59D6B2FB8F04B00568BDE /* Scene7_Budding.swift */,
+				04F59D6D2FB8F04C00568BDE /* Scene8_Fragmentation.swift */,
+				04F59D6F2FB8F04D00568BDE /* Scene9_BossQuiz_Ch12.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D712FB8F0CA00568BDE /* Chapter13 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D722FB8F0CA00568BDE /* DiscoverChapter13View.swift */,
+				04F59D742FB8F0CA00568BDE /* Scenes */,
+			);
+			path = Chapter13;
+			sourceTree = "<group>";
+		};
+		04F59D742FB8F0CA00568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D752FB8F0CA00568BDE /* Scene1_FastOrSlow.swift */,
+				04F59D772FB8F0CB00568BDE /* Scene2_PendulumLab.swift */,
+				04F59D792FB8F0CC00568BDE /* Scene3_DistanceTimeGraph.swift */,
+				04F59D7B2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift */,
+				04F59D7D2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift */,
+				04F59D7F2FB8F0CE00568BDE /* Scene6_Sundial.swift */,
+				04F59D812FB8F0CF00568BDE /* Scene7_StopwatchRace.swift */,
+				04F59D832FB8F0CF00568BDE /* Scene8_UnitsOfTime.swift */,
+				04F59D852FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D872FB8F14400568BDE /* Chapter14 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D882FB8F14400568BDE /* DiscoverChapter14View.swift */,
+				04F59D8A2FB8F14400568BDE /* Scenes */,
+			);
+			path = Chapter14;
+			sourceTree = "<group>";
+		};
+		04F59D8A2FB8F14400568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D8B2FB8F14400568BDE /* Scene1_BuildACircuit.swift */,
+				04F59D8D2FB8F14500568BDE /* Scene2_SeriesVsParallel.swift */,
+				04F59D8F2FB8F14600568BDE /* Scene3_HeatingEffect.swift */,
+				04F59D912FB8F14700568BDE /* Scene4_ElectricIron.swift */,
+				04F59D932FB8F14700568BDE /* Scene5_MagneticEffect.swift */,
+				04F59D952FB8F14800568BDE /* Scene6_BuildElectromagnet.swift */,
+				04F59D972FB8F14800568BDE /* Scene7_FuseMCB.swift */,
+				04F59D992FB8F14900568BDE /* Scene8_SafetyLab.swift */,
+				04F59D9B2FB8F14A00568BDE /* Scene9_BossQuiz_Ch14.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59D9D2FB8F1C700568BDE /* Chapter15 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59D9E2FB8F1C700568BDE /* DiscoverChapter15View.swift */,
+				04F59DA02FB8F1C800568BDE /* Scenes */,
+			);
+			path = Chapter15;
+			sourceTree = "<group>";
+		};
+		04F59DA02FB8F1C800568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DA12FB8F1C800568BDE /* Scene1_MirrorMirror.swift */,
+				04F59DA32FB8F1C800568BDE /* Scene2_ConcaveConvex.swift */,
+				04F59DA52FB8F1C900568BDE /* Scene3_RefractionPool.swift */,
+				04F59DA72FB8F1CA00568BDE /* Scene4_PrismRainbow.swift */,
+				04F59DA92FB8F1CB00568BDE /* Scene5_LensWorkshop.swift */,
+				04F59DAB2FB8F1CB00568BDE /* Scene6_PeriscopeBuilder.swift */,
+				04F59DAD2FB8F1CC00568BDE /* Scene7_MirrorsInRealLife.swift */,
+				04F59DAF2FB8F1CC00568BDE /* Scene8_Kaleidoscope.swift */,
+				04F59DB12FB8F1CD00568BDE /* Scene9_BossQuiz_Ch15.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59DB32FB8F24700568BDE /* Chapter16 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DB42FB8F24700568BDE /* DiscoverChapter16View.swift */,
+				04F59DB62FB8F24700568BDE /* Scenes */,
+			);
+			path = Chapter16;
+			sourceTree = "<group>";
+		};
+		04F59DB62FB8F24700568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DB72FB8F24800568BDE /* Scene1_WaterPie.swift */,
+				04F59DB92FB8F24800568BDE /* Scene2_WaterTableSlider.swift */,
+				04F59DBB2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift */,
+				04F59DBD2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift */,
+				04F59DBF2FB8F24A00568BDE /* Scene5_RainwaterHarvesting.swift */,
+				04F59DC12FB8F24B00568BDE /* Scene6_BawdiStepwell.swift */,
+				04F59DC32FB8F24C00568BDE /* Scene7_WaterAudit.swift */,
+				04F59DC52FB8F24D00568BDE /* Scene8_WaterPledge.swift */,
+				04F59DC72FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59DC92FB8F2C300568BDE /* Chapter17 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DCA2FB8F2C300568BDE /* DiscoverChapter17View.swift */,
+				04F59DCC2FB8F2C300568BDE /* Scenes */,
+			);
+			path = Chapter17;
+			sourceTree = "<group>";
+		};
+		04F59DCC2FB8F2C300568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DCD2FB8F2C400568BDE /* Scene1_ForestLayers.swift */,
+				04F59DCF2FB8F2C400568BDE /* Scene2_DecomposerCycle.swift */,
+				04F59DD12FB8F2C500568BDE /* Scene3_FoodWebBuilder.swift */,
+				04F59DD32FB8F2C600568BDE /* Scene4_ForestAsSponge.swift */,
+				04F59DD52FB8F2C600568BDE /* Scene5_O2CO2Balance.swift */,
+				04F59DD72FB8F2C700568BDE /* Scene6_AnimalNicheMatch.swift */,
+				04F59DD92FB8F2C800568BDE /* Scene7_DeforestationDomino.swift */,
+				04F59DDB2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift */,
+				04F59DDD2FB8F2C900568BDE /* Scene9_BossQuiz_Ch17.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59DDF2FB8F34100568BDE /* Chapter18 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DE02FB8F34100568BDE /* DiscoverChapter18View.swift */,
+				04F59DE22FB8F34100568BDE /* Scenes */,
+			);
+			path = Chapter18;
+			sourceTree = "<group>";
+		};
+		04F59DE22FB8F34100568BDE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DE32FB8F34100568BDE /* Scene1_WhereDrainWaterGoes.swift */,
+				04F59DE52FB8F34200568BDE /* Scene2_WWTPStageBuilder.swift */,
+				04F59DE72FB8F34300568BDE /* Scene3_SortContaminants.swift */,
+				04F59DE92FB8F34400568BDE /* Scene4_OpenDrainHazards.swift */,
+				04F59DEB2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift */,
+				04F59DED2FB8F34500568BDE /* Scene6_SanitationMap.swift */,
+				04F59DEF2FB8F34600568BDE /* Scene7_SoakPitDesign.swift */,
+				04F59DF12FB8F34600568BDE /* Scene8_BetterPractices.swift */,
+				04F59DF32FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		04F59DF52FB94EF500568BDE /* Chapter8 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DF62FB94EF500568BDE /* ch08_style.css */,
+				04F59DF82FB94EF500568BDE /* ch08_overview.html */,
+			);
+			path = Chapter8;
+			sourceTree = "<group>";
+		};
+		04F59DFA2FB94EF600568BDE /* Chapter9 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59DFB2FB94EF600568BDE /* ch09_style.css */,
+				04F59DFD2FB94EF700568BDE /* ch09_overview.html */,
+			);
+			path = Chapter9;
+			sourceTree = "<group>";
+		};
+		04F59DFF2FB94EF700568BDE /* Chapter10 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E002FB94EF800568BDE /* ch10_style.css */,
+				04F59E022FB94EF800568BDE /* ch10_overview.html */,
+			);
+			path = Chapter10;
+			sourceTree = "<group>";
+		};
+		04F59E042FB94EF900568BDE /* Chapter11 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E052FB94EF900568BDE /* ch11_style.css */,
+				04F59E072FB94EF900568BDE /* ch11_overview.html */,
+			);
+			path = Chapter11;
+			sourceTree = "<group>";
+		};
+		04F59E092FB94EFA00568BDE /* Chapter12 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E0A2FB94EFA00568BDE /* ch12_style.css */,
+				04F59E0C2FB94EFB00568BDE /* ch12_overview.html */,
+			);
+			path = Chapter12;
+			sourceTree = "<group>";
+		};
+		04F59E0E2FB94EFC00568BDE /* Chapter13 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E0F2FB94EFC00568BDE /* ch13_style.css */,
+				04F59E112FB94EFD00568BDE /* ch13_overview.html */,
+			);
+			path = Chapter13;
+			sourceTree = "<group>";
+		};
+		04F59E132FB94EFD00568BDE /* Chapter14 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E142FB94EFE00568BDE /* ch14_style.css */,
+				04F59E162FB94EFE00568BDE /* ch14_overview.html */,
+			);
+			path = Chapter14;
+			sourceTree = "<group>";
+		};
+		04F59E182FB94EFF00568BDE /* Chapter15 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E192FB94EFF00568BDE /* ch15_style.css */,
+				04F59E1B2FB94F0000568BDE /* ch15_overview.html */,
+			);
+			path = Chapter15;
+			sourceTree = "<group>";
+		};
+		04F59E1D2FB94F0100568BDE /* Chapter16 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E1E2FB94F0100568BDE /* ch16_style.css */,
+				04F59E202FB94F0100568BDE /* ch16_overview.html */,
+			);
+			path = Chapter16;
+			sourceTree = "<group>";
+		};
+		04F59E222FB94F0200568BDE /* Chapter17 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E232FB94F0200568BDE /* ch17_style.css */,
+				04F59E252FB94F0300568BDE /* ch17_overview.html */,
+			);
+			path = Chapter17;
+			sourceTree = "<group>";
+		};
+		04F59E272FB94F0300568BDE /* Chapter18 */ = {
+			isa = PBXGroup;
+			children = (
+				04F59E282FB94F0400568BDE /* ch18_style.css */,
+				04F59E2A2FB94F0400568BDE /* ch18_overview.html */,
+			);
+			path = Chapter18;
 			sourceTree = "<group>";
 		};
 		05FC7786B19C98F3028BF947 /* Persistence */ = {
@@ -1208,6 +1848,18 @@
 				FB1C25E11CB4A77B395A4C80 /* Chapter3 */,
 				A10D48F41E16E3B32C117E95 /* Chapter4 */,
 				04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */,
+				04F59D032FB8EE4700568BDE /* Chapter8 */,
+				04F59D192FB8EECE00568BDE /* Chapter9 */,
+				04F59D2F2FB8EF4B00568BDE /* Chapter10 */,
+				04F59D452FB8EFCA00568BDE /* Chapter11 */,
+				04F59D5B2FB8F04700568BDE /* Chapter12 */,
+				04F59D712FB8F0CA00568BDE /* Chapter13 */,
+				04F59D872FB8F14400568BDE /* Chapter14 */,
+				04F59D9D2FB8F1C700568BDE /* Chapter15 */,
+				04F59DB32FB8F24700568BDE /* Chapter16 */,
+				04F59DC92FB8F2C300568BDE /* Chapter17 */,
+				04F59DDF2FB8F34100568BDE /* Chapter18 */,
+				04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -1412,6 +2064,17 @@
 				150A97DC83E604B09193C1ED /* Chapter2 */,
 				D3EBBE33F5C6ECA854E721FA /* Chapter3 */,
 				32B3F72D92F97BA1999869DF /* Chapter4 */,
+				04F59DF52FB94EF500568BDE /* Chapter8 */,
+				04F59DFA2FB94EF600568BDE /* Chapter9 */,
+				04F59DFF2FB94EF700568BDE /* Chapter10 */,
+				04F59E042FB94EF900568BDE /* Chapter11 */,
+				04F59E092FB94EFA00568BDE /* Chapter12 */,
+				04F59E0E2FB94EFC00568BDE /* Chapter13 */,
+				04F59E132FB94EFD00568BDE /* Chapter14 */,
+				04F59E182FB94EFF00568BDE /* Chapter15 */,
+				04F59E1D2FB94F0100568BDE /* Chapter16 */,
+				04F59E222FB94F0200568BDE /* Chapter17 */,
+				04F59E272FB94F0300568BDE /* Chapter18 */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -1595,6 +2258,8 @@
 				A30E56AF3A2A452E91AB2C42 /* ch01_t01_c03.html in Resources */,
 				2FF3961EEC3B9471C84D0298 /* ch01_t01_c04.html in Resources */,
 				1B01FC8866F170735B8AC12E /* ch01_t01_c05.html in Resources */,
+				04F59E1A2FB94EFF00568BDE /* ch15_style.css in Resources */,
+				04F59E062FB94EF900568BDE /* ch11_style.css in Resources */,
 				02FF903720E65789B25CE7B1 /* ch01_t01_c06.html in Resources */,
 				ED4C85FD348C854BAA290065 /* ch01_t01_c07.html in Resources */,
 				37212E609910F63EC3FD7B76 /* ch01_t01_c08.html in Resources */,
@@ -1620,11 +2285,15 @@
 				C1368FF90D2F19A88C58C8E7 /* ch06_t01_c02.html in Resources */,
 				CB62E24F11D4BA543A111A41 /* ch06_t01_c03.html in Resources */,
 				2004CAD7B759F8E4641986D7 /* ch06_t01_c04.html in Resources */,
+				04F59E1F2FB94F0100568BDE /* ch16_style.css in Resources */,
+				04F59E012FB94EF800568BDE /* ch10_style.css in Resources */,
+				04F59E0B2FB94EFA00568BDE /* ch12_style.css in Resources */,
 				394047854566D8E61FB547DE /* ch06_t01_c05.html in Resources */,
 				E62424D01E778CD6ABA207DA /* ch06_t01_c06.html in Resources */,
 				0A8C2BC90C1F6D5D9A9D99B8 /* ch06_t01_c07.html in Resources */,
 				AACA5845945ABD8719E50059 /* ch06_t01_c08.html in Resources */,
 				5D209A08615DCC5ECEE45CFA /* ch06_t01_overview.html in Resources */,
+				04F59E032FB94EF800568BDE /* ch10_overview.html in Resources */,
 				2C61CF627EA778C6E3159D7D /* ch06_t02_overview.html in Resources */,
 				CA927E6576200C2F92B6CE76 /* ch06_t03_overview.html in Resources */,
 				926AD2B02D28E3D5F3A89931 /* ch07_overview.html in Resources */,
@@ -1646,13 +2315,16 @@
 				016BFD7626F72F90A52CA07F /* ch19_t01_c02.html in Resources */,
 				F997E5782A868A788D77A26A /* ch19_t01_c03.html in Resources */,
 				31BDB159FF11E32A184CF791 /* ch19_t01_c04.html in Resources */,
+				04F59E0D2FB94EFB00568BDE /* ch12_overview.html in Resources */,
 				ED2BC3D39ED11DBE8B049F91 /* ch19_t01_c05.html in Resources */,
 				0B14079CCAC36774EA6D92CF /* ch19_t01_c06.html in Resources */,
 				4F92B2A37076CCE2D5F5E2F9 /* ch19_t01_c07.html in Resources */,
+				04F59E212FB94F0100568BDE /* ch16_overview.html in Resources */,
 				67E9426D64C6DB08DF00A43B /* ch19_t01_c08.html in Resources */,
 				E7060FFF041DE47FB8817E1C /* ch19_t01_overview.html in Resources */,
 				78CF61ED0B6ECCE281EC5404 /* ch19_t02_c01.html in Resources */,
 				095B05EF78301ADB95B702F8 /* ch19_t02_c02.html in Resources */,
+				04F59E242FB94F0200568BDE /* ch17_style.css in Resources */,
 				B801B1712EEB6CABC80B5394 /* ch19_t02_c03.html in Resources */,
 				13F82C70F6B0487D06672418 /* ch19_t02_c04.html in Resources */,
 				227B8E71FD3FB7F15DAB4757 /* ch19_t02_c05.html in Resources */,
@@ -1664,6 +2336,7 @@
 				7352147E7F168C5B8ACCD981 /* ch19_t03_c02.html in Resources */,
 				3B2BB6E1408C1878A4A64F91 /* ch19_t03_c03.html in Resources */,
 				32D8858C48FE3975559EDE31 /* ch19_t03_c04.html in Resources */,
+				04F59DF92FB94EF500568BDE /* ch08_overview.html in Resources */,
 				75E792CCFB86C4CCFD1CF43E /* ch19_t03_c05.html in Resources */,
 				4005EF57F7CC5740997CF94A /* ch19_t03_c06.html in Resources */,
 				54BB1A91AF01CE1D9C1FB0D7 /* ch19_t03_c07.html in Resources */,
@@ -1674,15 +2347,18 @@
 				4344F1460009568D22C3BB2D /* ch05_t01_c02.html in Resources */,
 				45B34F38D097CC87A14CFB67 /* ch05_t01_c03.html in Resources */,
 				78B82015704454E6E4BC2C60 /* ch05_t01_c04.html in Resources */,
+				04F59E292FB94F0400568BDE /* ch18_style.css in Resources */,
 				634BF0B76C20CE983D0237E2 /* ch05_t01_c05.html in Resources */,
 				5A4D45558ECDAE36DCDB0A53 /* ch05_t01_c06.html in Resources */,
 				CE94715C819089529ABF0259 /* ch05_t01_c07.html in Resources */,
 				8F7E37770D9E733ECC6851DD /* ch05_t01_overview.html in Resources */,
 				139BC2B1D9AF850975FAE130 /* ch05_t02_overview.html in Resources */,
+				04F59DFE2FB94EF700568BDE /* ch09_overview.html in Resources */,
 				318220D5B53CC11DACB9661F /* ch05_t03_overview.html in Resources */,
 				B27420F53AFEAFF7CA66F73F /* ch02_overview.html in Resources */,
 				A4D9EFA00139EF6E306E9457 /* ch02_style.css in Resources */,
 				29BB6130CF2A32E51D003773 /* ch02_t01_c01.html in Resources */,
+				04F59DF72FB94EF500568BDE /* ch08_style.css in Resources */,
 				28CAF3A7CF50615815725FFD /* ch02_t01_c02.html in Resources */,
 				09C5A4C27043A5BC60511E3B /* ch02_t01_c03.html in Resources */,
 				C518EA0B59E73F86FB427820 /* ch02_t01_c04.html in Resources */,
@@ -1691,11 +2367,15 @@
 				F27071749E2FD3C7A1473B54 /* ch02_t01_c07.html in Resources */,
 				BC43FD157CD678FA96FF19F3 /* ch02_t01_c08.html in Resources */,
 				F5985696EBD394A38916302B /* ch02_t01_c09.html in Resources */,
+				04F59E122FB94EFD00568BDE /* ch13_overview.html in Resources */,
 				6A639C6EF564F11C703E67B7 /* ch02_t01_c10.html in Resources */,
 				D7DA3BFE578171BEEDB3BCF3 /* ch02_t01_c11.html in Resources */,
 				5AAF33431DBDBC1851BFA531 /* ch02_t01_c12.html in Resources */,
+				04F59E1C2FB94F0000568BDE /* ch15_overview.html in Resources */,
 				547A5FC7896DA240279CD951 /* ch02_t01_overview.html in Resources */,
+				04F59E152FB94EFE00568BDE /* ch14_style.css in Resources */,
 				503EF7D47368F262F7F66DAA /* ch02_t02_c01.html in Resources */,
+				04F59E172FB94EFE00568BDE /* ch14_overview.html in Resources */,
 				8B197851F2075CECBFE458DF /* ch02_t02_c02.html in Resources */,
 				B7466E24BD13E89722500E4D /* ch02_t02_c03.html in Resources */,
 				5520A0C12484258BD15911DF /* ch02_t02_c04.html in Resources */,
@@ -1705,6 +2385,7 @@
 				3DCE0181153DDB2296173FDD /* ch02_t03_c02.html in Resources */,
 				2E1D4752F5A481B0485D393D /* ch02_t03_c03.html in Resources */,
 				7A7A4CEF0176129E9F1935F0 /* ch02_t03_overview.html in Resources */,
+				04F59E082FB94EF900568BDE /* ch11_overview.html in Resources */,
 				F2599027A58EA146582BB7AC /* ch03_overview.html in Resources */,
 				C80ABD142E93CFD311BAC156 /* ch03_style.css in Resources */,
 				0ED6AE291A21CA675387A6A2 /* ch03_t01_c01.html in Resources */,
@@ -1713,11 +2394,13 @@
 				E98A52EDF4BAA49864CABCE5 /* ch03_t01_c04.html in Resources */,
 				6EC504E4B5AAA2834E2EC6C3 /* ch03_t01_c05.html in Resources */,
 				4CBC556DFFCFACD6930FC70D /* ch03_t01_c06.html in Resources */,
+				04F59E262FB94F0300568BDE /* ch17_overview.html in Resources */,
 				E5E6BD3AB1879652819BF195 /* ch03_t01_c07.html in Resources */,
 				05B10E7512AB4481A1171985 /* ch03_t01_c08.html in Resources */,
 				E5724BAC3D246A2E5BE8F09C /* ch03_t01_overview.html in Resources */,
 				405D9F4C96F6F83CA4B4A1A3 /* ch03_t02_c01.html in Resources */,
 				BF5F55519A7C5436CA2EBD8C /* ch03_t02_c02.html in Resources */,
+				04F59DFC2FB94EF600568BDE /* ch09_style.css in Resources */,
 				D4FBD416466A0E3371F14DBC /* ch03_t02_c03.html in Resources */,
 				902F7558DEE4714956C4BD63 /* ch03_t02_c04.html in Resources */,
 				206002876E4D7C854C8230D4 /* ch03_t02_overview.html in Resources */,
@@ -1739,10 +2422,12 @@
 				369AD68D9E0CE92A9CABAD45 /* ch04_t02_c02.html in Resources */,
 				CF2131CE86FB1979CCBEFFEC /* ch04_t02_c03.html in Resources */,
 				05BD0D8B09AB0301ED642AA0 /* ch04_t02_c04.html in Resources */,
+				04F59E2B2FB94F0400568BDE /* ch18_overview.html in Resources */,
 				9C5297275E1489D023DAA409 /* ch04_t02_c05.html in Resources */,
 				B44AB007F6929CF2D3858CEA /* ch04_t02_c06.html in Resources */,
 				A4DE4073A13D31548A932602 /* ch04_t02_overview.html in Resources */,
 				D18473D050449768B2F4661E /* ch04_t03_c01.html in Resources */,
+				04F59E102FB94EFC00568BDE /* ch13_style.css in Resources */,
 				71219B73418C57F8F33644F4 /* ch04_t03_c02.html in Resources */,
 				CA583DA67D3F154843299711 /* ch04_t03_c03.html in Resources */,
 				3EFBA6E7BFF16D044E996A1E /* ch04_t03_overview.html in Resources */,
@@ -1768,106 +2453,189 @@
 			buildActionMask = 2147483647;
 			files = (
 				04674C642FB8D415004A7D5C /* KeyboardShortcutsSheet.swift in Sources */,
+				04F59DDE2FB8F2C900568BDE /* Scene9_BossQuiz_Ch17.swift in Sources */,
 				3D356F7A6DC8B5968B75653C /* ContentView.swift in Sources */,
+				04F59D3E2FB8EF4E00568BDE /* Scene6_InsectsWorms.swift in Sources */,
+				04F59D622FB8F04800568BDE /* Scene2_PollinationMatch.swift in Sources */,
 				BCB6ACD587E1D568F9BD7B9C /* desktopAhaanApp.swift in Sources */,
 				D14E24688C8F43C1E89F4225 /* PracticeViewModel.swift in Sources */,
+				04F59DA42FB8F1C800568BDE /* Scene2_ConcaveConvex.swift in Sources */,
+				04F59DAA2FB8F1CB00568BDE /* Scene5_LensWorkshop.swift in Sources */,
 				62A22C2A07D4F6EEE0CB030A /* TranslatorViewModel.swift in Sources */,
 				00DCA742E478215AFA4A4D3B /* AppState.swift in Sources */,
 				9A4E6B5370E2165DE8D0585D /* BuiltInContent.swift in Sources */,
 				5069F44BBE59E7E8529295D2 /* SanskritDictionary.swift in Sources */,
+				04F59D6C2FB8F04B00568BDE /* Scene7_Budding.swift in Sources */,
 				CBEBC9C2C3002FCC3B937DE1 /* Language.swift in Sources */,
+				04F59D902FB8F14600568BDE /* Scene3_HeatingEffect.swift in Sources */,
+				04F59DAC2FB8F1CB00568BDE /* Scene6_PeriscopeBuilder.swift in Sources */,
 				1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */,
 				70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */,
 				B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */,
+				04F59D982FB8F14800568BDE /* Scene7_FuseMCB.swift in Sources */,
 				58A3CB4A194EAA9A8D5BFD3B /* TranslationRecord.swift in Sources */,
+				04F59DE42FB8F34100568BDE /* Scene1_WhereDrainWaterGoes.swift in Sources */,
 				37836085349CB334374EB860 /* TranslationResult.swift in Sources */,
 				21FD504C29AFA2074CB9A031 /* Extensions.swift in Sources */,
+				04F59D582FB8EFD000568BDE /* Scene8_TranspirationPull.swift in Sources */,
 				C705C4CCFC9FDE33025F1191 /* ModelContext+SafeSave.swift in Sources */,
+				04F59D3C2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift in Sources */,
+				04F59D542FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift in Sources */,
+				04F59D202FB8EED000568BDE /* Scene2_SandClayLoam.swift in Sources */,
 				0285215969F94AD942B6DD58 /* Chapter.swift in Sources */,
 				7BAF2E39EA259F6E783988C3 /* Concept.swift in Sources */,
+				04F59D4A2FB8EFCB00568BDE /* Scene1_HeartBeats.swift in Sources */,
 				FADE34B9C903710922C1D0DE /* ExplanationDepth.swift in Sources */,
 				C586C92D6CFBAA502A789BE3 /* Question.swift in Sources */,
+				04F59D0E2FB8EE4900568BDE /* Scene4_UnevenHeating.swift in Sources */,
+				04F59D162FB8EE4B00568BDE /* Scene8_AnemometerReader.swift in Sources */,
 				EE2427D02B636960C23EB772 /* SubjectPack.swift in Sources */,
+				04F59DC82FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift in Sources */,
+				04F59DBC2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift in Sources */,
 				8939D17295732CAC0ECEA0F3 /* Topic.swift in Sources */,
 				04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */,
 				14C6ABB78456E298F0327C38 /* UseCase.swift in Sources */,
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
 				F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */,
+				04F59DDC2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift in Sources */,
+				04F59D522FB8EFCE00568BDE /* Scene5_KidneyFilter.swift in Sources */,
+				04F59D472FB8EFCB00568BDE /* DiscoverChapter11View.swift in Sources */,
 				D44E3B389CACA7470A4DC680 /* ArticleIndex.swift in Sources */,
+				04F59D8C2FB8F14400568BDE /* Scene1_BuildACircuit.swift in Sources */,
 				B7BF87A31A41FB215C526C95 /* ExpandableCard.swift in Sources */,
+				04F59DA82FB8F1CA00568BDE /* Scene4_PrismRainbow.swift in Sources */,
 				7D3538D03F70E424D53E7641 /* PackDecoder.swift in Sources */,
 				FB6EFA468495DB7CAF8CF563 /* SubjectRegistry.swift in Sources */,
+				04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */,
 				BA934CBAAF04DEEA41776185 /* AskFollowUpView.swift in Sources */,
+				04F59D7E2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift in Sources */,
 				C5834237D6A667663DBB25D1 /* BookmarksView.swift in Sources */,
+				04F59E2D2FB95A6100568BDE /* ChapterTheme.swift in Sources */,
+				04F59D442FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift in Sources */,
 				C36EAE42C2EBF7A5207F18DB /* ChapterDetailView.swift in Sources */,
 				04674C662FB8D97D004A7D5C /* CommandPalette.swift in Sources */,
+				04F59DC22FB8F24B00568BDE /* Scene6_BawdiStepwell.swift in Sources */,
+				04F59DF42FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift in Sources */,
 				7068B3ECF23DC8D53DF28044 /* ChapterListView.swift in Sources */,
+				04F59DD42FB8F2C600568BDE /* Scene4_ForestAsSponge.swift in Sources */,
 				5A91FBC7292A7B95172E5469 /* ConceptDetailView.swift in Sources */,
+				04F59D762FB8F0CA00568BDE /* Scene1_FastOrSlow.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,
 				8B35F409465BC5F103622B78 /* QuizBankView.swift in Sources */,
 				FD21543D866EBAF82E8DF6DA /* SanskritSubjectHomeView.swift in Sources */,
 				A5C9475A516F1D5E5EFD3A75 /* SearchView.swift in Sources */,
+				04F59DB82FB8F24800568BDE /* Scene1_WaterPie.swift in Sources */,
 				D9626BC44EB672A378F5E8A9 /* SubjectHomeView.swift in Sources */,
 				5FDF23638A8DB4AD48194C98 /* TopicDetailView.swift in Sources */,
+				04F59D382FB8EF4C00568BDE /* Scene3_YeastSugarLab.swift in Sources */,
+				04F59D642FB8F04900568BDE /* Scene3_SelfVsCross.swift in Sources */,
+				04F59DC62FB8F24D00568BDE /* Scene8_WaterPledge.swift in Sources */,
 				F06D55CAD3C952B1A9EC7E82 /* TutorNavigation.swift in Sources */,
+				04F59D3A2FB8EF4D00568BDE /* Scene4_LimeWaterTest.swift in Sources */,
+				04F59DBA2FB8F24800568BDE /* Scene2_WaterTableSlider.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */,
 				0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */,
 				C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */,
+				04F59D782FB8F0CB00568BDE /* Scene2_PendulumLab.swift in Sources */,
 				A1D333A734BE17054F899037 /* Scene4_ColorTheChlorophyll.swift in Sources */,
+				04F59D282FB8EED300568BDE /* Scene6_AirMoistureInSoil.swift in Sources */,
 				067E988F12EBF03E1D14FF8E /* Scene5_AutotrophHeterotroph.swift in Sources */,
 				004C16C83F28DBAEB7295D63 /* Scene6_MeetTheSpecialPlants.swift in Sources */,
+				04F59D732FB8F0CA00568BDE /* DiscoverChapter13View.swift in Sources */,
 				04674C5C2FB8B9B0004A7D5C /* QuestionVariationCard.swift in Sources */,
+				04F59D342FB8EF4B00568BDE /* Scene1_InhaleExhale.swift in Sources */,
+				04F59D702FB8F04D00568BDE /* Scene9_BossQuiz_Ch12.swift in Sources */,
 				DE28F6D027575E6F80FA595E /* Scene7_PitcherPlantTrap.swift in Sources */,
+				04F59D7A2FB8F0CC00568BDE /* Scene3_DistanceTimeGraph.swift in Sources */,
 				020AADDEDC7A754C6FD63FE4 /* Scene8_NitrogenCycle.swift in Sources */,
 				01E41B8A315A2FBDDE3A478E /* Scene9_BossQuiz.swift in Sources */,
 				61B6B045598F0F82BAFD18FE /* DiscoverChapter6View.swift in Sources */,
+				04F59DE82FB8F34300568BDE /* Scene3_SortContaminants.swift in Sources */,
+				04F59D4C2FB8EFCB00568BDE /* Scene2_PulseCounter.swift in Sources */,
+				04F59D312FB8EF4B00568BDE /* DiscoverChapter10View.swift in Sources */,
 				1F2887BA2C702B88E537F30F /* Scene1_IceToWaterToSteam.swift in Sources */,
+				04F59D142FB8EE4B00568BDE /* Scene7_CycloneWarningCodes.swift in Sources */,
 				5ACBC8E04A13DA4B9E1C0D63 /* Scene2_TearingVsBurningPaper.swift in Sources */,
 				D08A17C69C6D494762C7782B /* Scene3_FiveSignsOfChemicalChange.swift in Sources */,
 				6405E7D96B02E213AE0B8E1D /* Scene4_TheRustingExperiment.swift in Sources */,
+				04F59DA22FB8F1C800568BDE /* Scene1_MirrorMirror.swift in Sources */,
 				4F89837C32078BC6B6250952 /* Scene5_GalvanisationShield.swift in Sources */,
 				411AAB84F00C05F7144F84D8 /* Scene6_PhysicalOrChemicalSorting.swift in Sources */,
+				04F59DC02FB8F24A00568BDE /* Scene5_RainwaterHarvesting.swift in Sources */,
+				04F59D842FB8F0CF00568BDE /* Scene8_UnitsOfTime.swift in Sources */,
 				54F82701DFEF69CEA13520B3 /* Scene7_CrystalGarden.swift in Sources */,
+				04F59D242FB8EED100568BDE /* Scene4_WhichCropWhichSoil.swift in Sources */,
 				73546712D44ED3F845585519 /* Scene8_KitchenChemistry.swift in Sources */,
+				04F59D1B2FB8EECE00568BDE /* DiscoverChapter9View.swift in Sources */,
+				04F59D8E2FB8F14500568BDE /* Scene2_SeriesVsParallel.swift in Sources */,
+				04F59DB22FB8F1CD00568BDE /* Scene9_BossQuiz_Ch15.swift in Sources */,
 				2941084C9C001460E09795AF /* Scene9_BossQuiz_Ch6.swift in Sources */,
+				04F59D922FB8F14700568BDE /* Scene4_ElectricIron.swift in Sources */,
 				35F68AE99DDCBD17A8125BBE /* DiscoverChapter7View.swift in Sources */,
+				04F59D822FB8F0CF00568BDE /* Scene7_StopwatchRace.swift in Sources */,
 				CBEB5C9BB92B9E0C88C1B8AE /* Scene1_WeatherVsClimate.swift in Sources */,
 				890D940CB140A1FBE8F3B786 /* Scene2_BuildAWeatherStation.swift in Sources */,
+				04F59DDA2FB8F2C800568BDE /* Scene7_DeforestationDomino.swift in Sources */,
 				F1EA44B691BC51A603BB03A1 /* Scene3_ClimateZonesMap.swift in Sources */,
+				04F59DD82FB8F2C700568BDE /* Scene6_AnimalNicheMatch.swift in Sources */,
 				95103C83236E9EBA9C20EB3C /* Scene4_PolarBearSurvivalKit.swift in Sources */,
 				E553929F822C2FAB1B798996 /* Scene5_TropicalRainforestLife.swift in Sources */,
 				0827672EF081DD4818BE3848 /* Scene6_AdaptationMatchGame.swift in Sources */,
 				B8E80EC4D8CB04769403BA44 /* Scene7_MigrationSuperhero.swift in Sources */,
+				04F59D892FB8F14400568BDE /* DiscoverChapter14View.swift in Sources */,
 				04674C582FB8B99F004A7D5C /* AnswerValidator.swift in Sources */,
+				04F59DD02FB8F2C400568BDE /* Scene2_DecomposerCycle.swift in Sources */,
+				04F59D1E2FB8EECF00568BDE /* Scene1_SoilProfileDig.swift in Sources */,
 				B75433668EE92FBF8EE984A1 /* Scene8_DesertSurvivalTricks.swift in Sources */,
+				04F59D9F2FB8F1C700568BDE /* DiscoverChapter15View.swift in Sources */,
 				9674D6D51791C04CDC542C4B /* Scene9_BossQuiz_Ch7.swift in Sources */,
 				8CA543E15838D84F12D53C7B /* DiscoverChapter19View.swift in Sources */,
+				04F59D2E2FB8EED400568BDE /* Scene9_BossQuiz_Ch9.swift in Sources */,
+				04F59D102FB8EE4900568BDE /* Scene5_CycloneEye.swift in Sources */,
+				04F59D402FB8EF4F00568BDE /* Scene7_StomataZoom.swift in Sources */,
+				04F59DAE2FB8F1CC00568BDE /* Scene7_MirrorsInRealLife.swift in Sources */,
 				CCA672195BCEDA49B342D5E9 /* Scene1_SpinningEarth.swift in Sources */,
+				04F59DCB2FB8F2C300568BDE /* DiscoverChapter17View.swift in Sources */,
 				20EED83834B489967D03700E /* Scene2_WhySeasonsHappen.swift in Sources */,
+				04F59D502FB8EFCD00568BDE /* Scene4_ArteryVeinCapillary.swift in Sources */,
+				04F59DCE2FB8F2C400568BDE /* Scene1_ForestLayers.swift in Sources */,
+				04F59DB52FB8F24700568BDE /* DiscoverChapter16View.swift in Sources */,
 				0177CABB5AB7F1EE3DC4B83D /* Scene3_MoonPhasesWheel.swift in Sources */,
 				A99484C320404CF965598D94 /* Scene4_EclipseBuilder.swift in Sources */,
 				6AFA5B4DEB81AD6451820855 /* Scene5_TidesAndTheMoon.swift in Sources */,
 				AEFD1875E5CDBDB6CD9DDC97 /* Scene6_SolarSystemSorter.swift in Sources */,
 				6AA92037881E196CB00234D5 /* Scene7_ConstellationConnect.swift in Sources */,
+				04F59DC42FB8F24C00568BDE /* Scene7_WaterAudit.swift in Sources */,
 				231C7014E2F19882D3852C7D /* Scene8_ISROSpaceMissions.swift in Sources */,
 				61F9F06A647F3B06CB1727F9 /* Scene9_BossQuiz_Ch19.swift in Sources */,
 				631A5B22D0E09AA8C758CD66 /* DraggableCard.swift in Sources */,
 				09049D07FCCF1AA99E41A021 /* DrawnChloroplast.swift in Sources */,
 				0FB2A53AAD164DEEF52C717E /* DrawnLeaf.swift in Sources */,
 				FB8A19AD82CB21DF66C7DC81 /* FlipCard.swift in Sources */,
+				04F59D9C2FB8F14A00568BDE /* Scene9_BossQuiz_Ch14.swift in Sources */,
 				0C38CAE0B73E5E47536DC57E /* ParticleEmitter.swift in Sources */,
 				F6B9C2085C935808C13ABCB7 /* SoftShadowCard.swift in Sources */,
 				43D34BC2DFA97058A12AC907 /* DiscoverChapter5View.swift in Sources */,
 				CCE0DE71AAF55D36681A8CDA /* Scene1_SourOrBitter.swift in Sources */,
+				04F59D0C2FB8EE4800568BDE /* Scene3_LandBreezeSeaBreeze.swift in Sources */,
+				04F59DB02FB8F1CC00568BDE /* Scene8_Kaleidoscope.swift in Sources */,
+				04F59D2A2FB8EED400568BDE /* Scene7_WormEngineer.swift in Sources */,
+				04F59D602FB8F04700568BDE /* Scene1_FlowerAnatomy.swift in Sources */,
 				44BA8C57E97836CB6A295843 /* Scene2_BuildYourpHStrip.swift in Sources */,
+				04F59D942FB8F14700568BDE /* Scene5_MagneticEffect.swift in Sources */,
+				04F59DEC2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift in Sources */,
+				04F59D682FB8F04A00568BDE /* Scene5_SeedDispersal.swift in Sources */,
 				95C4E116FF13473FE754303A /* Scene3_ThreeIndicatorTests.swift in Sources */,
+				04F59DE62FB8F34200568BDE /* Scene2_WWTPStageBuilder.swift in Sources */,
+				04F59DD22FB8F2C500568BDE /* Scene3_FoodWebBuilder.swift in Sources */,
 				997639ACB46B8A73AA87C1E5 /* Scene4_NeutralisationInAction.swift in Sources */,
 				97E8A3A2863C5A573EFBF4FF /* Scene5_AntStingFirstAid.swift in Sources */,
 				081E0085AA8A8CD373BF86E9 /* Scene6_AcidOrBaseSortingLab.swift in Sources */,
 				58CFCF1EDB6BA7409B3ECFA8 /* Scene7_SoilpHAndFarmer.swift in Sources */,
+				04F59DD62FB8F2C600568BDE /* Scene5_O2CO2Balance.swift in Sources */,
 				EF76CCA2C6ABA1F90F57F95B /* Scene8_AcidRainStory.swift in Sources */,
 				612A185667283F225BFB3800 /* Scene9_BossQuiz_Ch5.swift in Sources */,
 				90900A62F34A881A650F4D4E /* DiscoverChapter2View.swift in Sources */,
@@ -1877,16 +2645,25 @@
 				4999FE5C73B4FA964D07273E /* Scene4_IntestineVillus.swift in Sources */,
 				04674C622FB8C66D004A7D5C /* DictationButton.swift in Sources */,
 				B08B030F7BB1185AE46C6878 /* Scene5_LiverPancreasBile.swift in Sources */,
+				04F59D182FB8EE4C00568BDE /* Scene9_BossQuiz_Ch8.swift in Sources */,
 				37D0FD154B0B5E2EF98DE8D1 /* Scene6_FourStomachsOfACow.swift in Sources */,
 				8205FFB62EB179A062B49C4E /* Scene7_AmoebaPseudopodHunt.swift in Sources */,
+				04F59DA62FB8F1C900568BDE /* Scene3_RefractionPool.swift in Sources */,
+				04F59D7C2FB8F0CC00568BDE /* Scene4_SpeedometerOdometer.swift in Sources */,
+				04F59D5A2FB8EFD100568BDE /* Scene9_BossQuiz_Ch11.swift in Sources */,
+				04F59D4E2FB8EFCC00568BDE /* Scene3_BloodSort.swift in Sources */,
 				AC4AD8FDADA437441B9DEC55 /* Scene8_TasteAndFlavour.swift in Sources */,
 				2341864DD7A15D069B62CB93 /* Scene9_BossQuiz_Ch2.swift in Sources */,
 				E00188A6EF25CFCACF6125E6 /* DiscoverChapter3View.swift in Sources */,
 				82BAFD25C82EE82CBF69A42A /* Scene1_FluffToFibre.swift in Sources */,
+				04F59DEE2FB8F34500568BDE /* Scene6_SanitationMap.swift in Sources */,
+				04F59D262FB8EED200568BDE /* Scene5_SoilErosionStory.swift in Sources */,
 				BCCC1CDD8765101D08581EDD /* Scene2_MeetTheWoolAnimals.swift in Sources */,
 				BDABA0E4F5C845143A802CCC /* Scene3_TheShearingDay.swift in Sources */,
 				463494E6EBD53277E3061550 /* Scene4_TheWoolPipeline.swift in Sources */,
 				FA580670BBF00907F54A6F4E /* Scene5_SortersDiseaseLab.swift in Sources */,
+				04F59D122FB8EE4A00568BDE /* Scene6_ThunderstormSafety.swift in Sources */,
+				04F59D862FB8F0D000568BDE /* Scene9_BossQuiz_Ch13.swift in Sources */,
 				98E99F951BADE03456CCF87C /* Scene6_SilkwormLifeCycle.swift in Sources */,
 				D9B04A98A2D43AB4C09617F6 /* Scene7_TheCocoonReel.swift in Sources */,
 				680E0A1A2E478F91AB42573A /* Scene8_FibreVsFibreGame.swift in Sources */,
@@ -1895,12 +2672,18 @@
 				FDF6BA967AA03E261C22B88A /* Scene1_HotOrCold.swift in Sources */,
 				65D1A21C7591134D7726D67B /* Scene2_BuildYourThermometer.swift in Sources */,
 				0C7675C262226B26DCF6B6F2 /* Scene3_ThreeHighwaysOfHeat.swift in Sources */,
+				04F59D2C2FB8EED400568BDE /* Scene8_ConservationHero.swift in Sources */,
+				04F59D6A2FB8F04B00568BDE /* Scene6_VegetativePropagation.swift in Sources */,
+				04F59DF02FB8F34600568BDE /* Scene7_SoakPitDesign.swift in Sources */,
 				7F32269B73BF4F61831073D9 /* Scene4_HotSoupColdSpoon.swift in Sources */,
 				8F9B980573AADD26295F1145 /* Scene5_SeaBreezeLandBreeze.swift in Sources */,
 				0701A86BFE808EC35402DD17 /* Scene6_ConductorOrInsulator.swift in Sources */,
+				04F59D802FB8F0CE00568BDE /* Scene6_Sundial.swift in Sources */,
 				58B6A09C22EC7DC56DFAE75D /* Scene7_FluffyBirdsFluffySweaters.swift in Sources */,
+				04F59DE12FB8F34100568BDE /* DiscoverChapter18View.swift in Sources */,
 				9B1D819B3072CA46B43FB941 /* Scene8_TemperatureVsHeat.swift in Sources */,
 				BD08ABF60371400F035BF783 /* Scene9_BossQuiz_Ch4.swift in Sources */,
+				04F59D6E2FB8F04C00568BDE /* Scene8_Fragmentation.swift in Sources */,
 				E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */,
 				1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */,
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
@@ -1910,21 +2693,34 @@
 				A0E892E4C3E3C6276B51BC74 /* InputCard.swift in Sources */,
 				41C4B5B835D45DEF2271CAD2 /* LanguageSelectorBar.swift in Sources */,
 				3ECB88DEAA05D71F0A5DD91E /* StatusCards.swift in Sources */,
+				04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */,
+				04F59D562FB8EFCF00568BDE /* Scene7_PhloemSugarPipeline.swift in Sources */,
 				C2A4310F2E679E3C18307AE7 /* TranslationResultCard.swift in Sources */,
 				8804427F446D141EA9DDAEDB /* HistoryScreen.swift in Sources */,
+				04F59DF22FB8F34600568BDE /* Scene8_BetterPractices.swift in Sources */,
+				04F59D362FB8EF4C00568BDE /* Scene2_AerobicAnaerobic.swift in Sources */,
 				61A479A6DDA7413FEAE5F80F /* PracticeScreen.swift in Sources */,
+				04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */,
 				EFE7D4131FAA75099607AE28 /* SpeechReader.swift in Sources */,
 				6EF755DA8007B1E221B77552 /* FreeOnlineTranslationProvider.swift in Sources */,
+				04F59D422FB8EF5000568BDE /* Scene8_RestVsRun.swift in Sources */,
+				04F59D9A2FB8F14900568BDE /* Scene8_SafetyLab.swift in Sources */,
 				FB54B3338CE8D8F8B8CF090E /* LocalTranslationProvider.swift in Sources */,
+				04F59D662FB8F04A00568BDE /* Scene4_Fertilisation.swift in Sources */,
 				6846A16E9AF5B568EBF5DB7A /* MockTranslationProvider.swift in Sources */,
 				04674C5A2FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift in Sources */,
 				AC7767A19FA76A4B9C480625 /* TranslationProvider.swift in Sources */,
+				04F59D5D2FB8F04700568BDE /* DiscoverChapter12View.swift in Sources */,
 				8A576116F1128A36540ADCEC /* TranslationService.swift in Sources */,
 				9A2B23A41660E505C18B6D3A /* OCRService.swift in Sources */,
 				9AA602BE5DDA32C1FAFE975E /* SpeechRecognitionManager.swift in Sources */,
 				F823C6C991599668F1A04663 /* TextToSpeechManager.swift in Sources */,
+				04F59DEA2FB8F34400568BDE /* Scene4_OpenDrainHazards.swift in Sources */,
+				04F59D962FB8F14800568BDE /* Scene6_BuildElectromagnet.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
 				C5A96ABF47DC77F8082F8495 /* SettingsManager.swift in Sources */,
+				04F59D222FB8EED000568BDE /* Scene3_PercolationRate.swift in Sources */,
+				04F59DBE2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
