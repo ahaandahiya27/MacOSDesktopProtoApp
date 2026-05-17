@@ -139,7 +139,7 @@ private struct QuizBankContent: View {
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Text("Showing \(filteredEntries.count) of \(cachedEntries.count)")
-                    .font(.caption)
+                    .font(.caption.monospacedDigit())
                     .foregroundColor(.secondary)
             }
         }

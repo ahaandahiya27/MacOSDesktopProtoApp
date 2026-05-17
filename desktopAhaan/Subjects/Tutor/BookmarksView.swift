@@ -117,6 +117,7 @@ private struct BookmarksContent: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .pointingCursor()
             .contextMenu {
                 Button("Open") { nav.push(.concept(packId: pack.id, conceptId: concept.id)) }
                 Button("Remove bookmark") { dataStore.deleteBookmark(b) }
@@ -132,6 +133,7 @@ private struct BookmarksContent: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .pointingCursor()
             .contextMenu {
                 Button("Remove bookmark") { dataStore.deleteBookmark(b) }
             }
@@ -154,6 +156,7 @@ private struct BookmarksContent: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .pointingCursor()
             .contextMenu {
                 Button("Open") { nav.push(.question(packId: pack.id, questionId: b.questionId)) }
                 Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
@@ -169,6 +172,7 @@ private struct BookmarksContent: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .pointingCursor()
             .contextMenu {
                 Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
             }

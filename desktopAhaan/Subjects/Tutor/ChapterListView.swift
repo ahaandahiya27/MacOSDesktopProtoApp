@@ -45,6 +45,7 @@ struct ChapterListView: View {
                                     .contentShape(Rectangle())
                             }
                             .buttonStyle(.plain)
+                            .pointingCursor()
                         }
                         .listRowBackground(Color.clear)
                     }
@@ -58,6 +59,7 @@ struct ChapterListView: View {
                                     .contentShape(Rectangle())
                             }
                             .buttonStyle(.plain)
+                            .pointingCursor()
                             .contextMenu {
                                 Button("Open") { nav.push(.chapter(packId: pack.id, chapterId: chapter.id)) }
                                 Button("Copy title") {

@@ -8,7 +8,7 @@ concrete instances, fix them, mark the category done. Status legend:
 - 🟡 partially addressed; known gaps remain
 - ❌ not yet audited
 
-Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow + Phase 2 design-tokens primitives + line-height tokens + `pointingCursor()` hover affordances on Discover-Mode chrome + TH5 architectural discovery + iMac SF-Symbol runtime warnings cleared (3 reported + 1 cascading shim bug + 5 bypass call-sites) + TY8 mono-digit counter helper).
+Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow + Phase 2 design-tokens primitives + line-height tokens + `pointingCursor()` rolled out across chapter/topic/bookmark/command-palette/dashboard rows + TH5 architectural discovery + iMac SF-Symbol runtime warnings cleared (3 reported + 1 cascading shim bug + 5 bypass call-sites) + TY8 mono-digit counters applied across DiscoverProgressDashboard / CommandPalette / QuizBank).
 
 ---
 
@@ -357,7 +357,7 @@ in the project memory.
 | CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
 | CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
 | CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
-| CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 partial — Discover-Mode chrome now changes cursor on hover via `pointingCursor()` (see AC4). Color-shift hover state still pending |
+| CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | 🟡 cursor-change hover affordance now broadly applied (Discover chrome + chapter rows + bookmark rows + topic cards + command-palette rows + DiscoverProgressDashboard cards — see AC4). Color-shift hover state still pending |
 | CL10 | Brand-tint gradient direction inconsistent across scenes | ❌ |
 
 ### Z.TY — Typography
@@ -371,7 +371,7 @@ in the project memory.
 | TY5 | Line-height (`.lineSpacing`) applied inconsistently | 🟡 `DesignTokens.Typography` now exposes `tightLineSpacing` (1pt) / `bodyLineSpacing` (3pt) / `looseLineSpacing` (5pt) primitives. Call-site rollout deferred to Phase 6 |
 | TY6 | Sidebar item titles truncate at narrow widths with no tooltip | 🟡 Phase 4 |
 | TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
-| TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | 🟡 `Font.monoDigitCaption` helper added (Big-Sur-safe via `NSFont.monospacedDigitSystemFont` — SwiftUI's `.monospacedDigit()` is macOS 12+) and applied to the DiscoverShell "Scene N of M · X done" counter. Quiz Bank / dictionary counters pending |
+| TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ✅ rolled out — DiscoverShell header counter uses `Font.monoDigitCaption` (Big-Sur-safe wrapper around `NSFont.monospacedDigitSystemFont`). Other counter sites use the `.monospacedDigit()` Font modifier already proven on this codebase (`DiscoverProgressDashboard` × 3, `CommandPalette` result count, `QuizBank` toolbar) so digit columns stay aligned as state changes |
 | TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
 | TY10 | Caption / metadata text size occasionally indistinguishable from body | ❌ |
 
@@ -435,7 +435,7 @@ in the project memory.
 | MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
 | MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
 | MO6 | Loading / decoding states not animated (just static text) | ❌ |
-| MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback present on Discover-Mode chrome via `View.pointingCursor()` (see AC4). Scale / color hover states still pending |
+| MO7 | Hover feedback on buttons absent | 🟡 cursor-change feedback now applied across chapter rows + topic cards + bookmark rows + CommandPalette rows + DiscoverProgressDashboard cards (see AC4). Scale / color hover states still pending |
 
 ### Z.CP — Component consistency
 
@@ -528,7 +528,7 @@ in the project memory.
 | AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
 | AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | 🟡 |
 | AC3 | Hover-only affordances inaccessible to keyboard-only users | ❌ |
-| AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | 🟡 `View.pointingCursor()` extension added (Big-Sur-safe push/pop) and applied to Discover-Mode chrome (GotItButton + stepper dots + Prev/Next). Rest of app pending; reuse the extension at each call site |
+| AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | 🟡 `View.pointingCursor()` extension applied to: Discover-Mode chrome (GotItButton + stepper dots + Prev/Next), chapter row + Continue card (`ChapterListView`), topic card (`ChapterDetailView`), all bookmark rows × 4 (`BookmarksView`), CommandPalette result rows, DiscoverProgressDashboard chapter cards × 2. Pending: sidebar tool rows (Search/Bookmarks/Discover Progress/Settings), TopicDetailView concept cards, QuestionDetail/ConceptDetail tappables |
 | AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |
 
 ### Z.PR — Print / export / share surfaces

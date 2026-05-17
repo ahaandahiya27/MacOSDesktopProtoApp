@@ -101,6 +101,7 @@ private struct DiscoverProgressContent: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
+                .pointingCursor()
             }
         }
         .padding(14)
@@ -123,7 +124,7 @@ private struct DiscoverProgressContent: View {
                     Text("Discover Mode")
                         .font(.largeTitle.bold())
                     Text("\(totalCompleted) of \(totalScenes) scenes completed across \(chapters.count) chapters")
-                        .font(.subheadline)
+                        .font(.subheadline.monospacedDigit())
                         .foregroundColor(.secondary)
                 }
             }
@@ -166,7 +167,7 @@ private struct DiscoverProgressContent: View {
                             .foregroundColor(.green)
                     } else {
                         Text("\(done)/\(total)")
-                            .font(.caption.weight(.semibold))
+                            .font(.caption.weight(.semibold).monospacedDigit())
                             .foregroundColor(.primary)
                     }
                 }
@@ -197,6 +198,7 @@ private struct DiscoverProgressContent: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .pointingCursor()
         .accessibilityLabel("Chapter \(chapter.number), \(chapter.title)")
         .accessibilityValue("\(done) of \(total) scenes completed")
     }

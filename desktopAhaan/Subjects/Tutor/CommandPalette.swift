@@ -149,6 +149,7 @@ struct CommandPalette: View {
                         row(for: entry, isSelected: idx == selectedIndex)
                             .id(idx)
                             .onTapGesture { open(entry) }
+                            .pointingCursor()
                     }
                 }
                 .padding(.vertical, 6)
@@ -216,7 +217,7 @@ struct CommandPalette: View {
                 .font(.caption2)
             Spacer()
             Text("\(filtered.count) result\(filtered.count == 1 ? "" : "s")")
-                .font(.caption2)
+                .font(.caption2.monospacedDigit())
                 .foregroundColor(.secondary)
         }
         .foregroundColor(.secondary)

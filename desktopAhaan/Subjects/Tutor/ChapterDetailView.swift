@@ -33,6 +33,7 @@ struct ChapterDetailView: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .pointingCursor()
                     .contextMenu {
                         Button("Open") { nav.push(.topic(packId: pack.id, topicId: topic.id)) }
                         Button("Copy title") {
