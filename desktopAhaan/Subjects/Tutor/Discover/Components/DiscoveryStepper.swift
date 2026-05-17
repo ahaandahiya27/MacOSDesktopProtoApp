@@ -69,7 +69,7 @@ struct DiscoveryStepper: View {
             header
             Text(subtitle)
                 .font(.callout)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
             pillRow
             Text(currentOutput)

@@ -27,7 +27,7 @@ struct DraggableCard: View {
                 .accessibilityHidden(true)
             Text(token.label)
                 .font(.callout.weight(.medium))
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
         .frame(width: 110, height: 96)
         .background(

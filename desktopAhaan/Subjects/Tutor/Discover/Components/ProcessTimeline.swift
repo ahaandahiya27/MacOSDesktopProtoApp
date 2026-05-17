@@ -73,7 +73,7 @@ struct ProcessTimeline: View {
                 .accessibilityHidden(true)
             Text(title)
                 .font(.headline)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
             Spacer(minLength: 0)
         }
     }
@@ -108,7 +108,7 @@ private struct StepRow: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(step.title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text(step.detail)
                     .font(.callout)
                     .foregroundColor(.secondary)

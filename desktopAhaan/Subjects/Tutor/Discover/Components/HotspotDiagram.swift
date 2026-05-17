@@ -96,7 +96,7 @@ struct HotspotDiagram: View {
                 .accessibilityHidden(true)
             Text(title)
                 .font(.headline)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
             Spacer(minLength: 0)
             Text("Tap a number")
                 .font(.caption)
@@ -155,7 +155,7 @@ struct HotspotDiagram: View {
                 .foregroundColor(baseColor)
             Text(spot.detail)
                 .font(.callout)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
         }

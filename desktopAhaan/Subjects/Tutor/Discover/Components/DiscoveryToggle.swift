@@ -36,7 +36,7 @@ struct DiscoveryToggle: View {
             header
             Text(subtitle)
                 .font(.callout)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
             picker
             Text(selectionIsA ? outputA : outputB)

@@ -58,7 +58,7 @@ struct DiscoveryWidget: View {
             header
             Text(subtitle)
                 .font(.callout)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
             sliderRow
             Text(output(value))
