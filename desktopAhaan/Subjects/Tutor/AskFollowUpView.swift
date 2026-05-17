@@ -88,6 +88,7 @@ struct AskFollowUpView: View {
                     VStack {
                         Button("Close") { presentationMode.wrappedValue.dismiss() }
                             .padding(12)
+                            .keyboardShortcut(.cancelAction)
                         Spacer()
                     }
                 }

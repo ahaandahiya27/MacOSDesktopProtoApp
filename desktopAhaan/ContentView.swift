@@ -276,5 +276,15 @@ private struct WelcomeSheet: View {
         .padding(28)
         .frame(minWidth: 420, idealWidth: 480, maxWidth: 560,
                minHeight: 340, idealHeight: 380)
+        // Invisible Esc handler so the welcome sheet also responds to Esc
+        // (the "Let's go" button owns .defaultAction for ⏎; a Button can
+        // only carry one keyboardShortcut so we attach .cancelAction here).
+        .background(
+            Button("Dismiss", action: onDismiss)
+                .keyboardShortcut(.cancelAction)
+                .opacity(0)
+                .frame(width: 0, height: 0)
+                .accessibilityHidden(true)
+        )
     }
 }

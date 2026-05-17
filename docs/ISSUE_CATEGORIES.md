@@ -69,10 +69,10 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | D4 | Sidebar selection survives quit/relaunch | ✅ persisted |
 | D5 | Deep-link from CommandPalette | ✅ via pendingRoute |
 | D6 | Multiple TutorNavigationContainer instances don't share `path` accidentally | ✅ each is its own @StateObject |
-| D7 | Modal sheets dismiss cleanly | ❌ audit pending |
-| D8 | Tab cycles focus on macOS | ❌ audit pending |
-| D9 | Esc dismisses sheets/popovers | ❌ audit pending |
-| D10 | Return activates primary button | ❌ audit pending |
+| D7 | Modal sheets dismiss cleanly | ✅ every .sheet has a Close/Cancel path; Welcome/KeyboardShortcuts/CommandPalette/AskFollowUp all reachable |
+| D8 | Tab cycles focus on macOS | 🟡 default SwiftUI tab order; not manually overridden |
+| D9 | Esc dismisses sheets/popovers | ✅ .keyboardShortcut(.cancelAction) on Welcome/KeyboardShortcuts/CommandPalette/AskFollowUp |
+| D10 | Return activates primary button | ✅ .keyboardShortcut(.defaultAction) on Welcome and Topic-Detail primary CTAs |
 | D11 | Arrow keys navigate lists | ❌ audit pending — default List behaviour relied upon |
 
 ## E. Search behaviour
@@ -149,8 +149,8 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | I6 | JSON parse on main thread (app launch) | 🟡 SubjectRegistry parses synchronously at startup; acceptable for size |
 | I7 | App cold-launch time | ❌ not benchmarked |
 | I8 | Memory footprint at idle | ❌ |
-| I9 | Background Timer cleanup on scene disappear | 🟡 most scenes use `.timedScene` which manages lifecycle |
-| I10 | `.task` cancellation on view disappear | 🟡 mixed; some `Task { @MainActor in … }` for fire-and-forget |
+| I9 | Background Timer cleanup on scene disappear | ✅ all Timer.scheduledTimer usage routes through TimedSceneModifier or ParticleEmitter — both invalidate on disappear AND on scenePhase != .active |
+| I10 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear; remaining `Task { @MainActor in … }` are intentional fire-and-forget (logger pre-warm, notification posts) |
 
 ## J. Theming & visual polish
 
