@@ -8,7 +8,7 @@ concrete instances, fix them, mark the category done. Status legend:
 - 🟡 partially addressed; known gaps remain
 - ❌ not yet audited
 
-Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
+Last status touch: 2026-05-17 (Claude session — Big Sur ViewBuilder fix + Discover-Mode chrome Phase 1 + Z visual taxonomy seeded + T5 CI workflow).
 
 ---
 
@@ -276,7 +276,7 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | T2 | UI tests (XCUIAutomation) | ❌ none |
 | T3 | Smoke test for navigation | 🟡 covered indirectly by TutorNavigationTests, no end-to-end click test |
 | T4 | Snapshot tests | ❌ |
-| T5 | CI on every commit | 🟡 `scripts/ci-build-test.sh` added (S5); not yet wired to GitHub Actions |
+| T5 | CI on every commit | ✅ `.github/workflows/build-and-test.yml` runs `scripts/ci-build-test.sh` on every push to main + every PR — macos-13 runner with MACOSX_DEPLOYMENT_TARGET=11.0 so target-incompat APIs surface as build errors before the iMac pulls |
 | T6 | Pre-commit hooks | ✅ scripts/hooks/{pre-commit,pre-push} — try!/as! gate + ViewBuilder warn on commit; full ci-build-test.sh on push; install via scripts/install-git-hooks.sh |
 | T7 | Static analysis (treat warnings as errors) | ✅ build is zero-warning (S1); flipping the project setting next |
 
@@ -335,6 +335,209 @@ Last status touch: 2026-05-17 (Claude session — Rohan's iMac stability sweep).
 | Y2 | Schema validation on output | ✅ runtime guard via `SubjectPack.validateRelatedRefs()` (logs orphans to crashlog) + 13 ChapterContentTests assertions that catch breaks before push |
 | Y3 | Page-ref backfill from textbook | ❌ |
 | Y4 | Diff-friendly JSON formatting | ✅ `ensure_ascii=False` in every Python edit script keeps diffs to actual changes, not unicode-escape reformats |
+
+## Z. Visual & UX (color / typography / theme / layout / hierarchy / motion)
+
+Seeded 2026-05-17 from a screenshot-driven audit of the Discover-Mode "Pitcher
+Plant Trap" frame plus a code-scan of the shared chrome. Distinct from H
+(semantic accessibility) and J (high-level theming) — Z is the rendered-pixel
+audit surface. Phase 1 of the sweep landed in the same session (Discover-Mode
+chrome unification — DM2 / DM4 / HR1 / CN1 / CN3); rest of plan is phases 2–6
+in the project memory.
+
+### Z.CL — Color & palette
+
+| ID | Category | Status |
+|----|----------|--------|
+| CL1 | Pale-tint canvas backgrounds with insufficient contrast against on-canvas text (e.g., Discover scene-body titles white-ish on pale gradient) | 🟡 partial — scene title now hoisted into chapter-accent header (Phase 1); per-scene title text in scene bodies still inherits `.primary` |
+| CL2 | Tinted callout cards (amber LookingAhead, yellow TryAtHome) body text close to card tint | 🟡 bg opacity bumped 0.10→0.14 + border 0.35→0.45 (Phase 1) — text colour still `.primary`, needs iMac eyeballs |
+| CL3 | Sidebar uses NSColor system vibrancy (dark) while main canvas uses light gradient → two color-mode regions in same window | ❌ Phase 4 (sidebar reconciliation) |
+| CL4 | ChapterTheme accents drift away from chapter accent in some scenes | ❌ |
+| CL5 | `Color.compat*` palette not cataloged with WCAG contrast pairs | ❌ Phase 3 |
+| CL6 | Disabled-state colour barely distinguishable from enabled | ✅ GotItButton now uses explicit 0.42 opacity via FilledCTAButtonStyle (Phase 1) |
+| CL7 | Status / badge colour semantics inconsistent (orange "164" pill on Sanskrit Kosh; no badge on Science) | 🟡 Phase 4 |
+| CL8 | Pure white vs. semantic `Color(NSColor.textBackgroundColor)` — Dark-mode inverts unexpectedly | ❌ Phase 5 |
+| CL9 | Tap-feedback / hover-state colour absent on most macOS-native interactive surfaces | ❌ Phase 6 |
+| CL10 | Brand-tint gradient direction inconsistent across scenes | ❌ |
+
+### Z.TY — Typography
+
+| ID | Category | Status |
+|----|----------|--------|
+| TY1 | Title size too small for 5K iMac design canvas | 🟡 Discover scene title now `.title2.bold` in header (Phase 1); per-scene `Text(...).font(.largeTitle.bold())` titles still small relative to canvas |
+| TY2 | Body copy on tinted callout cards uses `.body` against busy background | 🟡 see CL2 |
+| TY3 | Single font scale (`.title.bold()` / `.body` / `.caption`) — no semantic intermediate | ❌ Phase 2 (token module will add `Typography` enum) |
+| TY4 | Dynamic Type at xLarge unverified — dup of H4 | 🟡 |
+| TY5 | Line-height (`.lineSpacing`) applied inconsistently | ❌ Phase 2 |
+| TY6 | Sidebar item titles truncate at narrow widths with no tooltip | 🟡 Phase 4 |
+| TY7 | Devanagari + Latin mixed runs may have baseline misalignment in translator | ❌ |
+| TY8 | Numerals not lined/tabular for stepper counters, scores, entry counts | ❌ |
+| TY9 | Title repeated twice on Discover screen (top + footer) | ✅ footer dup removed (Phase 1 / DM4) |
+| TY10 | Caption / metadata text size occasionally indistinguishable from body | ❌ |
+
+### Z.TH — Theme & dark mode
+
+| ID | Category | Status |
+|----|----------|--------|
+| TH1 | Dark mode visual sweep never performed end-to-end (dup of J1) | 🟡 Phase 5 |
+| TH2 | Sidebar vs canvas color-mode mismatch | 🟡 dup of CL3 |
+| TH3 | ChapterTheme brand colours hardcoded RGB → don't auto-adapt to scheme | 🟡 Phase 3/5 |
+| TH4 | Tinted card backgrounds nearly identical in Light vs Dark | ❌ Phase 5 |
+| TH5 | WKWebView article CSS (`ch*_style.css`) does not respect `prefers-color-scheme` | ❌ Phase 5 (mechanical — 19 CSS files) |
+| TH6 | Accent-tint per chapter not documented (no swatch reference doc) | ❌ |
+| TH7 | "Increase Contrast" macOS accessibility setting unverified | ❌ |
+| TH8 | Reduce Transparency (sidebar vibrancy) unverified | ❌ |
+
+### Z.LY — Layout & spacing
+
+| ID | Category | Status |
+|----|----------|--------|
+| LY1 | Discover scenes top-anchored with ~50% empty canvas below → wasted vertical real estate | 🟡 per-scene `Spacer()` placement; Phase 6 content-pass |
+| LY2 | `DesignTokens.contentMaxWidth` letterboxes very-wide windows to narrow column | 🟡 |
+| LY3 | Padding/spacing not tokenised (dup of J8) | 🟡 Phase 2 |
+| LY4 | Card-stack vertical rhythm uneven (spacing varies per scene) | ❌ Phase 2 |
+| LY5 | Sidebar / main divider has no visual separator (border, shadow, vibrancy edge) | 🟡 Phase 4 |
+| LY6 | Min-window (1024×640) layouts unverified — dup of J4 | 🟡 |
+| LY7 | Footer chrome competes with scene's own bottom CTAs | ✅ footer simplified to Prev/Next only (Phase 1) |
+| LY8 | Alignment inconsistencies — some scenes center-aligned, others leading-aligned | ❌ |
+| LY9 | Safe-area / inset handling around title bar unverified in full-screen mode | ❌ |
+
+### Z.HR — Visual hierarchy
+
+| ID | Category | Status |
+|----|----------|--------|
+| HR1 | Primary CTA (Got It / Next) visually weaker than secondary chrome | ✅ FilledCTAButtonStyle replaces `.bordered` (Phase 1) |
+| HR2 | Stepper dots use solid+ring convention but unclear which is "current" vs "completed" | ✅ completed dots now carry checkmark glyph; current keeps chapter-accent ring (Phase 1 / DM2) |
+| HR3 | Information density flat — every card same weight, no entry point | ❌ |
+| HR4 | Section eyebrow / kicker labels missing in Discover scenes | ❌ |
+| HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | 🟡 per-scene |
+| HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | 🟡 partial — scene counter "Scene N of M" added to header (Phase 1) |
+| HR7 | Recent items list mixes chapter/topic/question types with identical row style | ❌ Phase 4 |
+
+### Z.CN — Contrast & legibility
+
+| ID | Category | Status |
+|----|----------|--------|
+| CN1 | Body text inside amber/yellow callouts measurably below WCAG AA on light theme | 🟡 bg opacity bumped (Phase 1); text colour pending iMac eyeball |
+| CN2 | White-on-pale-tint titles below 3:1 large-text minimum | 🟡 chapter-accent title in header (Phase 1) covers chrome; per-scene title still pale |
+| CN3 | Got It / Previous / Next disabled vs enabled colour delta too small | ✅ explicit 0.42 opacity in FilledCTAButtonStyle (Phase 1) |
+| CN4 | Hyperlink underline / link colour inside articles not audited | ❌ |
+| CN5 | Focus ring visibility on macOS on light tints unverified | ❌ |
+| CN6 | Selection highlight on sidebar vs canvas unverified | ❌ |
+
+### Z.MO — Motion, feedback, micro-interactions
+
+| ID | Category | Status |
+|----|----------|--------|
+| MO1 | Counter / score changes have no animation / scale-pop | ❌ Phase 6 |
+| MO2 | Tap on stepper dot has no immediate feedback | 🟡 .easeInOut transition on scene switch exists; press-state ripple absent |
+| MO3 | Got It state-change has no completion celebration | ❌ Phase 6 |
+| MO4 | Reduce Motion respected by TimedScene + ParticleEmitter; spot animations still bypass (dup of H5/O4) | 🟡 |
+| MO5 | Page transitions between Discover scenes — currently asymmetric slide+fade | ✅ DiscoverShell already does .move + .opacity |
+| MO6 | Loading / decoding states not animated (just static text) | ❌ |
+| MO7 | Hover feedback on buttons absent | ❌ Phase 6 |
+
+### Z.CP — Component consistency
+
+| ID | Category | Status |
+|----|----------|--------|
+| CP1 | Two button styles in same view without documented hierarchy | 🟡 partial — FilledCTAButtonStyle is now the named primary; Prev/Next still `.automatic` system buttons |
+| CP2 | Callout component variants (LookingAhead/TryAtHome/Mnemonic/Hotspot/ProcessTimeline/RelatedConcepts) not visually unified | 🟡 — Phase 1 normalised opacity values across 4 of them; structural unification deferred |
+| CP3 | Disclosure triangle styles differ (article inline vs Discover) | ❌ |
+| CP4 | Input field style unstyled relative to surrounding card-driven UI | 🟡 |
+| CP5 | Badge component used in one place; no consistent counter/badge primitive | 🟡 |
+| CP6 | SoftShadowCard / plain card / bordered card all exist; no rule for when to use which | ❌ Phase 2 |
+| CP7 | Icon-only buttons lack tooltips; icon + label buttons lack consistent spacing | ❌ |
+| CP8 | `GotItButton(action:)` vs `GotItButton { onComplete() }` API drift | 🟡 cosmetic — both still compile after Phase 1's `tint:` param addition |
+
+### Z.DM — Discover-Mode specific
+
+| ID | Category | Status |
+|----|----------|--------|
+| DM1 | Scene illustrations minimal (pitcher = two ovals; no anatomy/labels) | 🟡 per-scene content task |
+| DM2 | Stepper dots at top lack scene labels / numeric counter | ✅ "Scene N of M · X done" + checkmark dots (Phase 1) |
+| DM3 | Top "Back" button has no breadcrumb (chapter/topic context lost) | 🟡 system back nav still used; in-canvas breadcrumb deferred |
+| DM4 | Bottom footer redundantly repeats scene title | ✅ removed (Phase 1) |
+| DM5 | "Previous / Next" footer competes with in-scene CTA | ✅ footer now pure nav, scene title moved to header (Phase 1) |
+| DM6 | Per-scene chapter accent under-applied | 🟡 partial — header title + scene-dot ring + Next button now carry chapter accent; Got It button still hardcoded green (tint param exists for future thread-through) |
+| DM7 | Completion celebration absent (no confetti / "you finished Discover Mode") | ❌ Phase 6 |
+| DM8 | Boss Quiz visual treatment unaudited | ❌ |
+| DM9 | Callouts crammed below interactive widget — feels like footnotes | 🟡 per-scene |
+| DM10 | Pedagogical tone shift between scene body and callouts not signalled visually | ❌ |
+
+### Z.SB — Sidebar
+
+| ID | Category | Status |
+|----|----------|--------|
+| SB1 | Visual mode mismatch (dark vibrant sidebar vs light canvas) — dup of CL3/TH2 | 🟡 Phase 4 |
+| SB2 | Recent items use ambiguous lightbulb glyph for all types | 🟡 Phase 4 |
+| SB3 | Long titles truncate to "…" with no full-string tooltip — dup of TY6 | 🟡 |
+| SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ❌ |
+| SB5 | Subject badges inconsistent — dup of CL7 | 🟡 |
+| SB6 | Active subject / tool selection style varies | ❌ |
+| SB7 | Sidebar width not resizable / persisted | ❌ |
+| SB8 | No keyboard shortcut hints next to tool labels | ❌ |
+
+### Z.ID — Iconography & imagery
+
+| ID | Category | Status |
+|----|----------|--------|
+| ID1 | SF Symbol weight inconsistent (some `.regular`, some `.semibold`) | ❌ |
+| ID2 | Emoji used as inline glyphs mixes with SF Symbols → tonal split | 🟡 |
+| ID3 | Hand-drawn illustrations vary widely in detail from scene to scene | 🟡 |
+| ID4 | Icon-only buttons missing labels for cursor-only macOS user — dup of CP7 | ❌ |
+| ID5 | Chapter avatar / hero icon not present on chapter cards | ❌ |
+| ID6 | Status icons (✓, in-progress dot) not standardised | 🟡 Phase 1 introduced checkmark-in-dot pattern for Discover; not propagated elsewhere |
+
+### Z.EM — Empty / loading / error states
+
+| ID | Category | Status |
+|----|----------|--------|
+| EM1 | "Pick a colour" placeholder fine; other empty states (bookmarks, recents) unaudited | ❌ |
+| EM2 | Article-load failure styled; Discover scene-load failure not visualised | ❌ |
+| EM3 | First-launch experience past Welcome unaudited | ❌ |
+| EM4 | No "all chapters complete" / "you've explored everything" celebration screen | ❌ Phase 6 |
+| EM5 | OCR drop-zone idle vs hover vs reject states not consistently styled | ❌ |
+
+### Z.CT — Copy & microcopy
+
+| ID | Category | Status |
+|----|----------|--------|
+| CT1 | Section labels use inconsistent capitalisation styles | 🟡 |
+| CT2 | Button labels mix verb-first ("Got It") with adjective-first ("Previous") | ❌ |
+| CT3 | Tooltips / hints sparse — dup of H2 | 🟡 |
+| CT4 | Error messages inconsistent in voice (user-friendly vs developer-y) | ❌ |
+| CT5 | Onomatopoeia / sound-effect text in body not consistent across scenes | ❌ |
+| CT6 | Class-7-appropriate reading level not validated across all callouts | ❌ |
+
+### Z.IF — Information architecture / density
+
+| ID | Category | Status |
+|----|----------|--------|
+| IF1 | Wasted bottom canvas on Discover scenes — dup of LY1 | 🟡 |
+| IF2 | Sidebar "Recent" mixes 3 entity types without grouping | 🟡 Phase 4 |
+| IF3 | Quiz Bank header lacks at-a-glance filter affordance | ❌ |
+| IF4 | Concept detail page layout puts useCases / beyondTheBook / explanations linearly | ❌ |
+| IF5 | No reading-time / scene-duration estimate per Discover card | ❌ |
+| IF6 | Subject pack switching is a primary nav action but lives at the top of the sidebar without affordance | ❌ |
+
+### Z.AC — Accessibility (UI surface only — H rows cover semantic AX)
+
+| ID | Category | Status |
+|----|----------|--------|
+| AC1 | Focus ring visibility on tinted backgrounds unverified — dup of CN5 | ❌ |
+| AC2 | Hit-target sizes for stepper dots, footer Prev/Next look <40pt — under macOS-comfortable threshold for a 7-year-old | 🟡 |
+| AC3 | Hover-only affordances inaccessible to keyboard-only users | ❌ |
+| AC4 | Cursor change on interactive areas (`.pointingHand`) absent in most places | ❌ |
+| AC5 | High-Contrast / Bold-Text macOS settings unverified | ❌ |
+
+### Z.PR — Print / export / share surfaces
+
+| ID | Category | Status |
+|----|----------|--------|
+| PR1 | Article print stylesheet exists; Discover scenes have no print-equivalent recap | ❌ |
+| PR2 | No "share / export" of progress card to parent | ❌ |
+| PR3 | OCR result not styled for copy-out | ❌ |
 
 ---
 
