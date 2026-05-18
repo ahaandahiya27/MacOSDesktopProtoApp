@@ -260,7 +260,7 @@ private struct Ch7AnswerButton: View {
         switch state {
         case .correct: return .green.opacity(0.14)
         case .wrong:   return .red.opacity(0.12)
-        default:       return Color(NSColor.windowBackgroundColor)
+        default:       return Color.white
         }
     }
     private var stroke: Color {

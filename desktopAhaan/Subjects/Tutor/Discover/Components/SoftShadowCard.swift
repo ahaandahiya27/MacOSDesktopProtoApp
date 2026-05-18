@@ -10,7 +10,7 @@ struct SoftShadowCard<Content: View>: View {
     var body: some View {
         content()
             .padding(padding)
-            // Fixed-light fill (not Color(NSColor.windowBackgroundColor),
+            // Fixed-light fill (not Color.white,
             // which adapts to dark mode and turns this card into a dark
             // slab on the still-pale Discover canvas — the visible
             // "camouflage" symptom the kid sees on the iMac). The canvas

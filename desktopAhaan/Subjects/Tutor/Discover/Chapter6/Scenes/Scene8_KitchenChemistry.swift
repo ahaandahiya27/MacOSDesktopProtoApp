@@ -117,7 +117,7 @@ struct Scene8_KitchenChemistry: View {
                 .frame(maxWidth: 500)
                 .background(
                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(Color(NSColor.windowBackgroundColor))
+                        .fill(Color.white)
                         .shadow(color: .black.opacity(0.08), radius: 8, y: 4)
                 )
             }
@@ -187,7 +187,7 @@ struct Scene8_KitchenChemistry: View {
             .frame(width: 130, height: 110)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isSelected ? Color.orange.opacity(0.12) : Color(NSColor.windowBackgroundColor))
+                    .fill(isSelected ? Color.orange.opacity(0.12) : Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

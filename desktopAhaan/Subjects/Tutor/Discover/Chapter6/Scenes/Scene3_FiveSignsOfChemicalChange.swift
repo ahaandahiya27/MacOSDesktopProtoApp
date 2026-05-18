@@ -193,7 +193,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
             .frame(height: height)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isTapped ? sign.color.opacity(0.1) : Color(NSColor.windowBackgroundColor))
+                    .fill(isTapped ? sign.color.opacity(0.1) : Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

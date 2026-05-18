@@ -32,7 +32,7 @@ struct DraggableCard: View {
         .frame(width: 110, height: 96)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
                 .shadow(
                     color: .black.opacity(settled ? 0.0 : (isDragging ? 0.25 : 0.12)),
                     radius: isDragging ? 16 : 8, x: 0, y: isDragging ? 8 : 4

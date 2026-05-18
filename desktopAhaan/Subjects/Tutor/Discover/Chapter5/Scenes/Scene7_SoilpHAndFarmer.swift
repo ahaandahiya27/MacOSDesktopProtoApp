@@ -75,7 +75,7 @@ struct Scene7_SoilpHAndFarmer: View {
                         .padding(16)
                         .background(
                             RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                .fill(Color(NSColor.windowBackgroundColor))
+                                .fill(Color.white)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 14, style: .continuous)

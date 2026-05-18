@@ -84,7 +84,7 @@ struct Scene5_AntStingFirstAid: View {
                                 .buttonStyle(.plain)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(Color(NSColor.windowBackgroundColor))
+                                        .fill(Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)

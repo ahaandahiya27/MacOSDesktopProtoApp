@@ -111,7 +111,7 @@ struct Scene8_DesertSurvivalTricks: View {
                                 .frame(width: 130, height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? animal.color : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? animal.color : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)

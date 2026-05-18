@@ -162,7 +162,7 @@ struct Scene8_ISROSpaceMissions: View {
                                 .frame(width: 115, height: 110)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? mission.color : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? mission.color : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)

@@ -153,7 +153,7 @@ struct Scene7_ConstellationConnect: View {
                                 .frame(height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)
-                                        .fill(isSelected ? constellation.color : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? constellation.color : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 14, style: .continuous)

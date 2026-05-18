@@ -166,7 +166,7 @@ struct Scene3_MoonPhasesWheel: View {
             .padding(.horizontal, 6)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isSelected ? Color.compatIndigo.opacity(0.1) : Color(NSColor.windowBackgroundColor))
+                    .fill(isSelected ? Color.compatIndigo.opacity(0.1) : Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

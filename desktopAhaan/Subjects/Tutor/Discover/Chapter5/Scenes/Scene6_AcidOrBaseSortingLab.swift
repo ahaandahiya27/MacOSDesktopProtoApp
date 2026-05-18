@@ -155,7 +155,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
         .frame(width: 100, height: 64)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)

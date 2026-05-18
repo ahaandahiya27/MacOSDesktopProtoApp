@@ -146,7 +146,7 @@ struct Scene7_MigrationSuperhero: View {
             .frame(width: 140, height: 80)
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(isSelected ? Color.compatIndigo : (isExplored ? Color.green.opacity(0.12) : Color(NSColor.windowBackgroundColor)))
+                    .fill(isSelected ? Color.compatIndigo : (isExplored ? Color.green.opacity(0.12) : Color.white))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)

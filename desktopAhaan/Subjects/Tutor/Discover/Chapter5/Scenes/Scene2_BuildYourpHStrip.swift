@@ -170,7 +170,7 @@ struct Scene2_BuildYourpHStrip: View {
                 .frame(width: 82, height: 64)
                 .background(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(isNear ? colorForPH(sub.pH).opacity(0.15) : Color(NSColor.windowBackgroundColor))
+                        .fill(isNear ? colorForPH(sub.pH).opacity(0.15) : Color.white)
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 8, style: .continuous)

@@ -77,7 +77,7 @@ struct Scene5_TidesAndTheMoon: View {
                                 .padding(.vertical, 8)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(isSelected ? card.color.opacity(0.12) : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? card.color.opacity(0.12) : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)

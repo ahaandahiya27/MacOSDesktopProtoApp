@@ -70,7 +70,7 @@ private struct DiscoverProgressContent: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
         }
-        .background(Color(NSColor.windowBackgroundColor))
+        .background(Color.white)
         .navigationTitle("Discover Progress")
     }
 

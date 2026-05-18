@@ -159,7 +159,7 @@ struct Scene6_AdaptationMatchGame: View {
             .frame(minWidth: 140)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(Color(NSColor.windowBackgroundColor))
+                    .fill(Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -193,7 +193,7 @@ struct Scene6_AdaptationMatchGame: View {
             .frame(minWidth: 180)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(Color(NSColor.windowBackgroundColor))
+                    .fill(Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)

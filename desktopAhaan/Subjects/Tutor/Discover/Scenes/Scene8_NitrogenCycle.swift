@@ -219,7 +219,7 @@ struct Scene8_NitrogenCycle: View {
     private func node(at p: CGPoint, emoji: String, label: String) -> some View {
         VStack(spacing: 2) {
             Circle()
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
                 .frame(width: 64, height: 64)
                 .overlay(Text(emoji).font(.system(size: 32)))
                 .overlay(Circle().strokeBorder(Color.compatIndigo.opacity(0.4), lineWidth: 2))

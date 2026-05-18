@@ -45,8 +45,8 @@ struct Scene3_ThreeIndicatorTests: View {
         Indicator(
             name: "Phenolphthalein",
             icon: "flask.fill",
-            neutralColor: Color(NSColor.windowBackgroundColor),
-            acidColor: Color(NSColor.windowBackgroundColor),
+            neutralColor: Color.white,
+            acidColor: Color.white,
             baseColor: .pink,
             acidNote: "Phenolphthalein stays colourless in acid.",
             baseNote: "Phenolphthalein turns pink in base."
@@ -212,7 +212,7 @@ struct Scene3_ThreeIndicatorTests: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 16, style: .continuous)

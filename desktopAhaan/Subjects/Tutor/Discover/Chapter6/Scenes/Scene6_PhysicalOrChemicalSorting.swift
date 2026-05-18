@@ -162,7 +162,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         .frame(width: 92, height: 68)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)

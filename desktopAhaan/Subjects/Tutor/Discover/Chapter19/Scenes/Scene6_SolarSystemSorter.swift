@@ -83,7 +83,7 @@ struct Scene6_SolarSystemSorter: View {
                                         .padding(.vertical, 8)
                                         .background(
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                                .fill(isSelected ? color.opacity(0.2) : Color(NSColor.windowBackgroundColor))
+                                                .fill(isSelected ? color.opacity(0.2) : Color.white)
                                         )
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -214,7 +214,7 @@ struct Scene6_SolarSystemSorter: View {
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(planet != nil ? color.opacity(0.15) : Color(NSColor.windowBackgroundColor))
+                        .fill(planet != nil ? color.opacity(0.15) : Color.white)
                         .frame(width: 72, height: 52)
 
                     RoundedRectangle(cornerRadius: 10, style: .continuous)

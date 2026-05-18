@@ -199,7 +199,7 @@ struct Scene1_WeatherVsClimate: View {
             .padding(20)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(selectedSide == side ? color.opacity(0.12) : Color(NSColor.windowBackgroundColor))
+                    .fill(selectedSide == side ? color.opacity(0.12) : Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)

@@ -176,7 +176,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             .frame(height: height)
             .background(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(isTapped ? d.color.opacity(0.1) : Color(NSColor.windowBackgroundColor))
+                    .fill(isTapped ? d.color.opacity(0.1) : Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 16, style: .continuous)

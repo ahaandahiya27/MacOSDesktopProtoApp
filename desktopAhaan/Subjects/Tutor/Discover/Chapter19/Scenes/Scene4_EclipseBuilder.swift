@@ -58,7 +58,7 @@ struct Scene4_EclipseBuilder: View {
                                 .padding(.vertical, 10)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                        .fill(isSelected ? Color.accentColor.opacity(0.15) : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? Color.accentColor.opacity(0.15) : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)

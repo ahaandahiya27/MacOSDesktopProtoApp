@@ -73,7 +73,7 @@ struct Scene2_BuildAWeatherStation: View {
                                 .frame(width: 100, height: 100)
                                 .background(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                        .fill(isSelected ? Color.compatIndigo.opacity(0.12) : Color(NSColor.windowBackgroundColor))
+                                        .fill(isSelected ? Color.compatIndigo.opacity(0.12) : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)

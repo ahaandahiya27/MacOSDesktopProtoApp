@@ -61,7 +61,7 @@ struct Scene1_HotOrCold: View {
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                                         .fill(selectedIndex == idx
                                               ? Color.orange.opacity(0.15)
-                                              : Color(NSColor.windowBackgroundColor))
+                                              : Color.white)
                                 )
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 12, style: .continuous)

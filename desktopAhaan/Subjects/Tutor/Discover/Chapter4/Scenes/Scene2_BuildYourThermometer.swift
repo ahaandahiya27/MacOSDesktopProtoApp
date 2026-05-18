@@ -179,7 +179,7 @@ struct Scene2_BuildYourThermometer: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(Color(NSColor.windowBackgroundColor))
+                .fill(Color.white)
                 .shadow(color: .black.opacity(0.1), radius: 10)
         )
         .accessibilityLabel("Digital thermometer reading \(Int(tempC)) degrees")
