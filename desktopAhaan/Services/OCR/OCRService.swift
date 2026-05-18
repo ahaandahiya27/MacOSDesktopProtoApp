@@ -38,8 +38,8 @@ final class OCRService: ObservableObject {
         isProcessing = false
     }
 
-    private func performOCR(on cgImage: CGImage) async throws -> (text: String, confidence: Double) {
-        try await withCheckedThrowingContinuation { continuation in
+    private nonisolated func performOCR(on cgImage: CGImage) async throws -> (text: String, confidence: Double) {
+        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<(text: String, confidence: Double), Error>) in
             let request = VNRecognizeTextRequest { request, error in
                 if let error = error {
                     continuation.resume(throwing: error)
@@ -82,11 +82,19 @@ final class OCRService: ObservableObject {
             // it's a fallback if auto-detection can't decide.
             request.recognitionLanguages = ["en", "hi", "sa"]
 
-            let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-            do {
-                try handler.perform([request])
-            } catch {
-                continuation.resume(throwing: error)
+            // Vision's `handler.perform(...)` is **synchronous** on the
+            // calling thread. With OCRService isolated to @MainActor, the
+            // previous direct call blocked the main thread for seconds on
+            // large images on the 1.4 GHz iMac CPU. Dispatch to a
+            // user-initiated background queue so the UI stays responsive
+            // while OCR runs.
+            DispatchQueue.global(qos: .userInitiated).async {
+                let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+                do {
+                    try handler.perform([request])
+                } catch {
+                    continuation.resume(throwing: error)
+                }
             }
         }
     }
