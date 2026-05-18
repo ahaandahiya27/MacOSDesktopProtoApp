@@ -24,8 +24,11 @@ struct Scene3_TheStomachBath: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 16) {
+        // Refactored GeometryReader+VStack+mid-Spacer to ScrollView+VStack
+        // so cards flow naturally below the stomach diagram without an
+        // empty band in the middle.
+        ScrollView {
+            VStack(spacing: 14) {
                 Text("The Stomach Bath")
                     .font(.title.bold())
                     .foregroundColor(.red)
@@ -79,8 +82,6 @@ struct Scene3_TheStomachBath: View {
                 .frame(height: 240)
                 .padding(.horizontal, 24)
 
-                Spacer()
-
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Stomach Bath", systemImage: "drop.triangle.fill")
@@ -111,14 +112,15 @@ struct Scene3_TheStomachBath: View {
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .onAppear {
-                sceneActive = true
-                startEnzymeAnimation()
-            }
-            .onDisappear {
-                sceneActive = false
-            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
+        }
+        .onAppear {
+            sceneActive = true
+            startEnzymeAnimation()
+        }
+        .onDisappear {
+            sceneActive = false
         }
     }
 

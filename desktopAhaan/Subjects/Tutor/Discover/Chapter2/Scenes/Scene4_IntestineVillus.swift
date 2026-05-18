@@ -27,8 +27,9 @@ struct Scene4_IntestineVillus: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 16) {
+        // Refactored GeometryReader+VStack+mid-Spacer to ScrollView+VStack.
+        ScrollView {
+            VStack(spacing: 14) {
                 Text(zoomLevel == 0 ? "The Intestine Villus Tour" : zoomLevel == 1 ? "Inside the Villus" : "Microvilli Detail")
                     .font(.title.bold())
                     .foregroundColor(.blue)
@@ -64,8 +65,6 @@ struct Scene4_IntestineVillus: View {
                     Spacer()
                 }
                 .padding(.horizontal, 24)
-
-                Spacer()
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -108,14 +107,15 @@ struct Scene4_IntestineVillus: View {
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .onAppear {
-                sceneActive = true
-                startGlucoseAnimation()
-            }
-            .onDisappear {
-                sceneActive = false
-            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
+        }
+        .onAppear {
+            sceneActive = true
+            startGlucoseAnimation()
+        }
+        .onDisappear {
+            sceneActive = false
         }
     }
 

@@ -29,8 +29,10 @@ struct Scene5_LiverPancreasBile: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 16) {
+
+        ScrollView {
+
+            VStack(spacing: 14) {
                 Text("Liver, Pancreas & Bile")
                     .font(.title.bold())
                     .foregroundColor(.green)
@@ -135,8 +137,6 @@ struct Scene5_LiverPancreasBile: View {
                 }
                 .padding(.horizontal, 24)
 
-                Spacer()
-
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("Liver, Pancreas & Bile", systemImage: "drop.fill")
@@ -174,8 +174,14 @@ struct Scene5_LiverPancreasBile: View {
                         .foregroundColor(.orange)
                         .padding(.bottom, 12)
                 }
+            
+
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

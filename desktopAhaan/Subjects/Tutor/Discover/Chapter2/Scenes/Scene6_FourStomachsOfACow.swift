@@ -33,8 +33,10 @@ struct Scene6_FourStomachsOfACow: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 16) {
+
+        ScrollView {
+
+            VStack(spacing: 14) {
                 Text("The Four-Stomach Cow Tour")
                     .font(.title.bold())
                     .foregroundColor(Color.compatBrown)
@@ -58,8 +60,6 @@ struct Scene6_FourStomachsOfACow: View {
                         }
                         
                     }
-
-                    Spacer()
 
                     if currentChamber < 4 {
                         Button(action: { nextChamber() }) {
@@ -95,8 +95,6 @@ struct Scene6_FourStomachsOfACow: View {
                     .padding(.horizontal, 24)
                 }
 
-                Spacer()
-
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
                         Label("The Four-Stomach Cow Tour", systemImage: SFSymbolCompat.name("hare.fill"))
@@ -126,8 +124,14 @@ struct Scene6_FourStomachsOfACow: View {
 
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
+            
+
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

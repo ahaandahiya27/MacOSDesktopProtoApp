@@ -23,8 +23,10 @@ struct Scene8_TasteAndFlavour: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 16) {
+
+        ScrollView {
+
+            VStack(spacing: 14) {
                 Text("Taste & Flavour")
                     .font(.title.bold())
                     .foregroundColor(.red)
@@ -37,7 +39,7 @@ struct Scene8_TasteAndFlavour: View {
                     Toggle("Pinch Nose", isOn: $nosePressed)
                         .font(.body)
                         .padding(.horizontal, 24)
-                    Spacer()
+
                     if nosePressed {
                         Text("Smell blocked!")
                             .font(.caption)
@@ -54,8 +56,6 @@ struct Scene8_TasteAndFlavour: View {
                     FoodCard(food: "mango", flavour: nosePressed ? "Sweet + Watery" : "Mango")
                 }
                 .padding(.horizontal, 24)
-
-                Spacer()
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -86,8 +86,14 @@ struct Scene8_TasteAndFlavour: View {
 
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
+            
+
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 }

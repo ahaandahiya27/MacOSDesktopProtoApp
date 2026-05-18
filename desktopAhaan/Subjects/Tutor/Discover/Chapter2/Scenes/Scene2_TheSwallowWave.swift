@@ -24,8 +24,10 @@ struct Scene2_TheSwallowWave: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 20) {
+
+        ScrollView {
+
+            VStack(spacing: 14) {
                 Text("The Swallow Wave")
                     .font(.title.bold())
                     .foregroundColor(Color.compatIndigo)
@@ -59,15 +61,13 @@ struct Scene2_TheSwallowWave: View {
                         HStack {
                             Text("Speed: \(String(format: "%.1f", speed))×")
                                 .font(.caption)
-                            Spacer()
+
                         }
                         Slider(value: $speed, in: 0.5...2.0, step: 0.1)
                     }
                     .frame(maxWidth: 150)
                 }
                 .padding(.horizontal, 24)
-
-                Spacer()
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -98,8 +98,14 @@ struct Scene2_TheSwallowWave: View {
 
                 GotItButton { onComplete() }
                     .padding(.bottom, 12)
+            
+
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 
