@@ -34,13 +34,24 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         chapters.reduce(0) { $0 + $1.topics.count }
     }
 
-    /// All concepts flattened — convenient for global search.
+    /// All concepts flattened — convenient for global search. Cached via
+    /// `SubjectPackIndexCache` so SearchView's debounced query path doesn't
+    /// rebuild the flat array on every keystroke (and so internal cache
+    /// builders like `conceptIndex` / `needsHumanReviewIds` reuse it).
     var allConcepts: [Concept] {
+        SubjectPackIndexCache.shared.allConcepts(for: self)
+    }
+
+    /// All questions flattened. Cached — see `allConcepts`.
+    var allQuestions: [Question] {
+        SubjectPackIndexCache.shared.allQuestions(for: self)
+    }
+
+    fileprivate func buildAllConcepts() -> [Concept] {
         chapters.flatMap { $0.topics.flatMap { $0.concepts } }
     }
 
-    /// All questions flattened.
-    var allQuestions: [Question] {
+    fileprivate func buildAllQuestions() -> [Question] {
         chapters.flatMap { $0.topics.flatMap { $0.questions } }
     }
 
@@ -168,6 +179,8 @@ final class SubjectPackIndexCache {
     private var questionIndices: [String: [String: Question]] = [:]
     private var needsHumanReviewIdSets: [String: Set<String>] = [:]
     private var chapterIndices: [String: [String: Chapter]] = [:]
+    private var allConceptsCache: [String: [Concept]] = [:]
+    private var allQuestionsCache: [String: [Question]] = [:]
 
     func conceptIndex(for pack: SubjectPack) -> [String: Concept] {
         lock.lock(); defer { lock.unlock() }
@@ -209,6 +222,26 @@ final class SubjectPackIndexCache {
         return built
     }
 
+    func allConcepts(for pack: SubjectPack) -> [Concept] {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = allConceptsCache[pack.id] {
+            return cached
+        }
+        let built = pack.buildAllConcepts()
+        allConceptsCache[pack.id] = built
+        return built
+    }
+
+    func allQuestions(for pack: SubjectPack) -> [Question] {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = allQuestionsCache[pack.id] {
+            return cached
+        }
+        let built = pack.buildAllQuestions()
+        allQuestionsCache[pack.id] = built
+        return built
+    }
+
     /// Drops any cached indices. Called by `SubjectRegistry.reload()` so
     /// post-reload pack content isn't read through a stale dictionary.
     func invalidateAll() {
@@ -217,5 +250,7 @@ final class SubjectPackIndexCache {
         questionIndices.removeAll()
         needsHumanReviewIdSets.removeAll()
         chapterIndices.removeAll()
+        allConceptsCache.removeAll()
+        allQuestionsCache.removeAll()
     }
 }
