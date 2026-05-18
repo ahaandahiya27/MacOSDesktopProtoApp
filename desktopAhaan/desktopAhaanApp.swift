@@ -63,7 +63,13 @@ struct SanskritKoshApp: App {
     @StateObject private var dataStore = DataStore()
 
     init() {
-        Task(priority: .utility) {
+        // Pre-warm the Sanskrit dictionary off the main thread so the
+        // first translator open doesn't hit cold-decode of the bundled
+        // JSON. Wrapped defensively in case `SanskritDictionary.shared`
+        // ever fails to init — we don't want a swallow-no-warning silent
+        // miss, but we also don't want a single warming Task to crash the
+        // App's launch scene.
+        Task.detached(priority: .utility) {
             let n = SanskritDictionary.shared.entries.count
             appLogger.info("SanskritDictionary pre-warmed (\(n, privacy: .public) entries).")
         }
