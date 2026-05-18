@@ -46,7 +46,7 @@ struct Scene4_ColorTheChlorophyll: View {
                 .padding(.top, 18)
             Text("White light is a rainbow. Tap each colour and see what chlorophyll does with it.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
 
             // Spectrum bar
@@ -122,7 +122,7 @@ struct Scene4_ColorTheChlorophyll: View {
                 } else {
                     Label("Pick a colour from the spectrum above.", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: 560)

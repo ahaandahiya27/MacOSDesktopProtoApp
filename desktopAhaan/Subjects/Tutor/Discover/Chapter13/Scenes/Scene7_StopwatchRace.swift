@@ -19,7 +19,7 @@ struct Scene7_StopwatchRace: View {
         VStack(spacing: 14) {
             Text("Stopwatch Race").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Can you stop the watch at exactly 5.00 seconds?")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Text(String(format: "%.2f s", elapsed))
                 .font(.system(size: 56, weight: .bold, design: .monospaced))

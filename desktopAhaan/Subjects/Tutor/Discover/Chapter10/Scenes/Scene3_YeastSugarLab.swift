@@ -13,7 +13,7 @@ struct Scene3_YeastSugarLab: View {
         VStack(spacing: 14) {
             Text("Yeast & Sugar Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Sugar + warm water + yeast → CO₂. Watch the balloon inflate.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack(alignment: .top) {
                 RoundedRectangle(cornerRadius: 18).fill(Color.yellow.opacity(0.10))

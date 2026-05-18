@@ -62,7 +62,7 @@ struct Scene6_SolarSystemSorter: View {
                     } else {
                         Text("Arrange the 8 planets in order from the Sun")
                             .font(.callout)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
 
                     // Planet chips (available)
@@ -145,7 +145,7 @@ struct Scene6_SolarSystemSorter: View {
 
                                 Text("Mnemonic: \"My Very Educated Mother Just Showed Us Neptune\"")
                                     .font(.callout.italic())
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                     .padding(.top, 2)
                             } else {
                                 Label("Order the Planets", systemImage: SFSymbolCompat.name("globe.americas.fill"))
@@ -210,7 +210,7 @@ struct Scene6_SolarSystemSorter: View {
             VStack(spacing: 4) {
                 Text("\(index + 1)")
                     .font(.caption2.weight(.bold))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)

@@ -31,7 +31,7 @@ struct Scene1_SoilProfileDig: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Soil Profile Dig").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Tap a layer to learn what lives there.").font(.callout).foregroundColor(.secondary)
+            Text("Tap a layer to learn what lives there.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             HStack(alignment: .top, spacing: 24) {
                 VStack(spacing: 0) {
@@ -63,7 +63,7 @@ struct Scene1_SoilProfileDig: View {
                     }
                     .frame(maxWidth: 320)
                 } else {
-                    Text("← Tap a horizon").font(.callout).foregroundColor(.secondary).padding(.top, 20)
+                    Text("← Tap a horizon").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).padding(.top, 20)
                 }
             }
 

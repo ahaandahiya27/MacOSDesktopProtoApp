@@ -31,7 +31,7 @@ struct Scene4_EclipseBuilder: View {
 
                     Text("\(explored.count) / 2 eclipses explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Tab picker
                     HStack(spacing: 12) {
@@ -94,7 +94,7 @@ struct Scene4_EclipseBuilder: View {
 
                             Text("Not every New or Full Moon causes an eclipse because the Moon's orbit is tilted about 5 degrees relative to Earth's orbit around the Sun.")
                                 .font(.callout)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(3)
                                 .padding(.top, 4)
                         }
@@ -162,7 +162,7 @@ struct Scene4_EclipseBuilder: View {
                  ? "Sun  >>>  Moon  >>>  Earth"
                  : "Sun  >>>  Earth  >>>  Moon")
                 .font(.system(.caption, design: .monospaced).weight(.medium))
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
     }
 

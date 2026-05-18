@@ -12,7 +12,7 @@ struct Scene8_Kaleidoscope: View {
         VStack(spacing: 14) {
             Text("Kaleidoscope").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap the disc to shake the kaleidoscope. Each shake = new pattern.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack {
                 Circle().fill(Color.black).frame(width: 240, height: 240)

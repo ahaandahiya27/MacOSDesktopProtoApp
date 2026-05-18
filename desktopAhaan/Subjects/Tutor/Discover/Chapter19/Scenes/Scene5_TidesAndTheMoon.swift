@@ -43,7 +43,7 @@ struct Scene5_TidesAndTheMoon: View {
 
                     Text("\(explored.count) / \(cards.count) topics explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Tide diagram
                     tideDiagram

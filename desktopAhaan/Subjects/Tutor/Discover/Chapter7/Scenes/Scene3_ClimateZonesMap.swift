@@ -117,7 +117,7 @@ struct Scene3_ClimateZonesMap: View {
                     // Explored count
                     Text("\(exploredZones.count) / \(zones.count) zones explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
                 }
@@ -138,7 +138,7 @@ struct Scene3_ClimateZonesMap: View {
                                     .lineSpacing(4)
                                 Text("Animals: \(zone.animals)")
                                     .font(.callout)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             } else {
                                 Label("Tap a Zone", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                                     .font(.title2.bold())

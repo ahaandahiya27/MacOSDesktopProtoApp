@@ -15,7 +15,7 @@ struct Scene1_HeartBeats: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Heart Beats").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Set a heart rate. Watch the beat.").font(.callout).foregroundColor(.secondary)
+            Text("Set a heart rate. Watch the beat.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             FourChamberHeart()
                 .frame(width: 220, height: 220)
@@ -34,8 +34,8 @@ struct Scene1_HeartBeats: View {
 
             Slider(value: $bpm, in: 50...180, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
             HStack {
-                Text("Rest").font(.caption).foregroundColor(.secondary); Spacer()
-                Text("Exercising").font(.caption).foregroundColor(.secondary)
+                Text("Rest").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary); Spacer()
+                Text("Exercising").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }.frame(maxWidth: 460).padding(.horizontal, 24)
 
             SoftShadowCard(padding: 18) {

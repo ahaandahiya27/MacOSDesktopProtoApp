@@ -77,7 +77,7 @@ struct Scene1_PlantKitchen: View {
                                 .foregroundColor(.green)
                             Text(kidFriendlyExplanation)
                                 .font(.body)
-                                .foregroundColor(.primary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
                                 .lineSpacing(4)
                         }
                     }
@@ -250,7 +250,7 @@ private struct SpeechBubble: View {
     var body: some View {
         Text(text)
             .font(.title3.weight(.semibold))
-            .foregroundColor(.primary)
+            .foregroundColor(DesignTokens.BrandColor.canvasText)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(

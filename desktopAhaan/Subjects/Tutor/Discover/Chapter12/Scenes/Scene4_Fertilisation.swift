@@ -20,7 +20,7 @@ struct Scene4_Fertilisation: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Fertilisation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Slide forward to see how a seed is formed.").font(.callout).foregroundColor(.secondary)
+            Text("Slide forward to see how a seed is formed.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.12))

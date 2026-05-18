@@ -16,7 +16,7 @@ struct Scene6_MeetTheSpecialPlants: View {
                 .padding(.top, 18)
             Text("Some plants don't make their own food. Tap each card to flip and meet them.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
 
             ScrollView(.horizontal, showsIndicators: false) {

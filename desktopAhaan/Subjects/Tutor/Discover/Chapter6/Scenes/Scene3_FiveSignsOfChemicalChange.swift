@@ -78,7 +78,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
 
                     Text("Tap each card to learn the five clues that a chemical change happened.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Five cards in a row
                     HStack(spacing: 12) {
@@ -110,7 +110,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                                 }
                                 Text("Example: \(sign.example)")
                                     .font(.callout.italic())
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 Text(sign.explanation)
                                     .font(.body)
                                     .lineSpacing(4)
@@ -149,7 +149,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                     } else {
                         Text("Tap all 5 cards to continue")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .padding(.bottom, 12)
                     }
                 }

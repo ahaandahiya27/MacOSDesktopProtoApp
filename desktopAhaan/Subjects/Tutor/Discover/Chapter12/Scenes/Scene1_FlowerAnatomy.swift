@@ -27,7 +27,7 @@ struct Scene1_FlowerAnatomy: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Flower Anatomy").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Tap a part to find out what it does.").font(.callout).foregroundColor(.secondary)
+            Text("Tap a part to find out what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.pink.opacity(0.10)).frame(width: 320, height: 220)

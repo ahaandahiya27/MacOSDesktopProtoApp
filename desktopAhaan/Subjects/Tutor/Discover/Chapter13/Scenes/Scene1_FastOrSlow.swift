@@ -28,7 +28,7 @@ struct Scene1_FastOrSlow: View {
         VStack(spacing: 12) {
             Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Drag/tap to order these from slowest → fastest.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 8) {
                 ForEach(Array(current.enumerated()), id: \.element.id) { i, v in

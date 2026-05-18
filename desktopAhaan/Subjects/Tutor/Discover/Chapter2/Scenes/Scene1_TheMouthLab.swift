@@ -39,7 +39,7 @@ struct Scene1_TheMouthLab: View {
                             .padding(.horizontal, 24)
                         Text("A lion's teeth are sharp for tearing meat!")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     } else {
                         HumanJawDiagram(selectedTooth: $selectedTooth)
                             .frame(height: 200)
@@ -60,7 +60,7 @@ struct Scene1_TheMouthLab: View {
                                 .foregroundColor(.orange)
                             Text(teethExplanation)
                                 .font(.body)
-                                .foregroundColor(.primary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
                                 .lineSpacing(4)
                         }
                     }
@@ -190,7 +190,7 @@ struct ToothCallout: View {
                     .foregroundColor(.orange)
                 Text(tooth)
                     .font(.body.weight(.semibold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Spacer()
             }
         }

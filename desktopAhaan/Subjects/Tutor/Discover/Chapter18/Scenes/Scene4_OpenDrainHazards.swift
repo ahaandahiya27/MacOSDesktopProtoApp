@@ -17,7 +17,7 @@ struct Scene4_OpenDrainHazards: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Open Drain Hazards").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Tap Next to uncover each hazard of open drains.").font(.callout).foregroundColor(.secondary)
+            Text("Tap Next to uncover each hazard of open drains.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 8) {
                 ForEach(0..<hazards.count, id: \.self) { i in

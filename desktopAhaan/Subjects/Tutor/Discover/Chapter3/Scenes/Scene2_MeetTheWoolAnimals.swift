@@ -55,7 +55,7 @@ struct Scene2_MeetTheWoolAnimals: View {
 
             Text("Tap any card to flip and learn!")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
@@ -100,7 +100,7 @@ struct Scene2_MeetTheWoolAnimals: View {
             SoftShadowCard(padding: 14) {
                 Label("Tap any animal to learn its wool secrets", systemImage: "info.circle.fill")
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
             .frame(maxWidth: 600)
             .padding(.horizontal, 24)

@@ -57,7 +57,7 @@ struct Scene2_BuildYourpHStrip: View {
                             .foregroundColor(colorForPH(pH))
                         Text(pHLabel)
                             .font(.title3.weight(.semibold))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
 
                     // Color strip
@@ -165,7 +165,7 @@ struct Scene2_BuildYourpHStrip: View {
                         .multilineTextAlignment(.center)
                     Text("pH \(Int(sub.pH))")
                         .font(.caption2)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
                 .frame(width: 82, height: 64)
                 .background(

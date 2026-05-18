@@ -24,7 +24,7 @@ struct Scene1_ForestLayers: View {
         VStack(spacing: 14) {
             Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("A forest is built like a 4-storey building. Tap each floor.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 2) {
                 ForEach(Layer.allCases) { l in

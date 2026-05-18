@@ -63,13 +63,13 @@ struct Scene7_SoilpHAndFarmer: View {
                         VStack(spacing: 6) {
                             Text("pH Meter")
                                 .font(.caption.weight(.medium))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             Text("\(soilPH, specifier: "%.1f")")
                                 .font(.system(size: 48, weight: .bold, design: .rounded).monospacedDigit())
                                 .foregroundColor(meterColor)
                             Text(pHDescription)
                                 .font(.subheadline.weight(.medium))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                         .frame(width: 160)
                         .padding(16)
@@ -88,7 +88,7 @@ struct Scene7_SoilpHAndFarmer: View {
                         VStack(spacing: 8) {
                             Text("The soil is too acidic! Add lime to raise the pH.")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             Button {
                                 addLime()
                             } label: {
@@ -103,7 +103,7 @@ struct Scene7_SoilpHAndFarmer: View {
                         VStack(spacing: 8) {
                             Text("Now the soil is too basic! Add organic matter to lower the pH.")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             Button {
                                 addOrganic()
                             } label: {

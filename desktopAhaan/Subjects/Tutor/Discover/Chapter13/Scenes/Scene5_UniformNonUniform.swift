@@ -22,7 +22,7 @@ struct Scene5_UniformNonUniform: View {
         VStack(spacing: 12) {
             Text("Uniform vs Non-Uniform").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Same speed throughout, or changing speed?")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

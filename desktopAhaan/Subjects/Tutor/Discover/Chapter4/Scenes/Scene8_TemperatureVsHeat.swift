@@ -49,7 +49,7 @@ struct Scene8_TemperatureVsHeat: View {
 
                         Text("vs")
                             .font(.title.bold())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                         // Glass B — large
                         VStack(spacing: 8) {
@@ -150,7 +150,7 @@ struct Scene8_TemperatureVsHeat: View {
                     .frame(width: 120, height: 60)
                 Text(tempLabel)
                     .font(.headline.monospacedDigit())
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             .accessibilityLabel("\(label) water temperature \(tempLabel)")
         }

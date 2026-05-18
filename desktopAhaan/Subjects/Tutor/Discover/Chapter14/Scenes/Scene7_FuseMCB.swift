@@ -13,7 +13,7 @@ struct Scene7_FuseMCB: View {
         VStack(spacing: 14) {
             Text("Fuse & MCB").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Push the current up. The fuse melts (or the MCB trips) past its rating.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.gray.opacity(0.08))

@@ -43,7 +43,7 @@ struct Scene8_FibreVsFibreGame: View {
 
             Text("Drag each fibre to the correct category.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .padding(.horizontal, 24)
 
             // Floating cards
@@ -133,7 +133,7 @@ struct Scene8_FibreVsFibreGame: View {
                     .font(.system(size: 28))
                 Text(fibre.label)
                     .font(.caption.weight(.semibold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             .frame(width: 70, height: 70)
             .background(Color(NSColor.controlBackgroundColor))

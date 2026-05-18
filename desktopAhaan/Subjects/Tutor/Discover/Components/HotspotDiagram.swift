@@ -100,7 +100,7 @@ struct HotspotDiagram: View {
             Spacer(minLength: 0)
             Text("Tap a number")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
     }
 
@@ -171,10 +171,10 @@ struct HotspotDiagram: View {
     private var emptyState: some View {
         HStack(spacing: 6) {
             Image(systemName: "info.circle")
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             Text("Tap any numbered dot to learn what that part does.")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
         .padding(.vertical, 6)
     }

@@ -16,7 +16,7 @@ struct Scene2_PulseCounter: View {
         VStack(spacing: 14) {
             Text("Pulse Counter").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Press Start. Tap the heart with every pulse for 15 seconds.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             if counting {
                 Text("\(secondsLeft)s")
@@ -35,7 +35,7 @@ struct Scene2_PulseCounter: View {
 
             Text(counting ? "Taps so far: \(taps)" : " ")
                 .font(.headline.monospacedDigit())
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             HStack(spacing: 16) {
                 Button(counting ? "Counting…" : "Start 15s") {

@@ -25,7 +25,7 @@ struct Scene4_ElectricIron: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Inside an Electric Iron").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Tap any part to see what it does.").font(.callout).foregroundColor(.secondary)
+            Text("Tap any part to see what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.orange.opacity(0.10))

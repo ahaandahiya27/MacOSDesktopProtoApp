@@ -12,7 +12,7 @@ struct Scene3_SelfVsCross: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Self vs Cross Pollination").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Same flower or two different ones?").font(.callout).foregroundColor(.secondary)
+            Text("Same flower or two different ones?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $mode) {
                 ForEach(Mode.allCases) { Text($0.rawValue).tag($0) }

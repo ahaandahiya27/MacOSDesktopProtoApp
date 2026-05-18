@@ -13,7 +13,7 @@ struct Scene6_XylemWaterClimb: View {
         VStack(spacing: 14) {
             Text("Xylem Water Climb").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Put celery in coloured water. Watch the dye climb the stem.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 6).fill(Color.green.opacity(0.5))

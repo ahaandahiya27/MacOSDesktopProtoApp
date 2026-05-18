@@ -68,7 +68,7 @@ struct Scene9_BossQuiz_Ch7: View {
             if !done {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
-                    .font(.subheadline).foregroundColor(.secondary)
+                    .font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -179,7 +179,7 @@ struct Scene9_BossQuiz_Ch7: View {
             }
 
             if let s = pdfStatus {
-                Text(s).font(.caption).foregroundColor(.secondary)
+                Text(s).font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
         }
         .frame(maxWidth: 560).padding(20)
@@ -285,14 +285,14 @@ private struct CertificateView: View {
                 .font(.title3)
             Text("Awarded to a curious learner")
                 .font(.body)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .padding(.top, 8)
             Text("Final score: \(score) / \(total)")
                 .font(.title2.bold())
                 .padding(.top, 12)
             Text(formattedCurrentDate())
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .padding(.top, 16)
         }
         .padding(40)

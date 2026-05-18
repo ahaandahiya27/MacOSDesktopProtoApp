@@ -21,7 +21,7 @@ struct Scene2_DecomposerCycle: View {
         VStack(spacing: 14) {
             Text("Decomposer Cycle").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide forward in time. Watch a leaf become new soil.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.10))

@@ -55,7 +55,7 @@ struct Scene1_FluffToFibre: View {
                                 .foregroundColor(Color.compatIndigo)
                             Text(kidFriendlyExplanation)
                                 .font(.body)
-                                .foregroundColor(.primary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
                                 .lineSpacing(4)
                         }
                     }
@@ -103,7 +103,7 @@ struct Scene1_FluffToFibre: View {
         VStack {
             Text("Fabric Woven")
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 8)

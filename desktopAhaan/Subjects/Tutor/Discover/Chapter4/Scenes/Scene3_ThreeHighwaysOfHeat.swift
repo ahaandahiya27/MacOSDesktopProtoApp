@@ -115,7 +115,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     } else {
                         Text("Tap all 3 lanes to continue")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .padding(.bottom, 12)
                     }
                 }

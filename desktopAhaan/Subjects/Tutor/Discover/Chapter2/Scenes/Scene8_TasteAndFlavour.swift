@@ -64,7 +64,7 @@ struct Scene8_TasteAndFlavour: View {
                             .foregroundColor(.red)
                         Text(flavourExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }

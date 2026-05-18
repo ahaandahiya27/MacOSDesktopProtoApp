@@ -90,7 +90,7 @@ struct Scene5_SortersDiseaseLab: View {
                         .foregroundColor(.orange)
                     Text("Modern wool sorters wear N95 masks and gloves to prevent breathing spores. Raw fleece is disinfected before processing.")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: 600)
@@ -136,7 +136,7 @@ struct Scene5_SortersDiseaseLab: View {
                     )
                 Text(label)
                     .font(.caption.weight(.semibold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
         }
         .buttonStyle(.plain)

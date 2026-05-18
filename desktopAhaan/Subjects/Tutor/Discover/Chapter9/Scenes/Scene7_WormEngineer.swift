@@ -16,7 +16,7 @@ struct Scene7_WormEngineer: View {
         VStack(spacing: 14) {
             Text("Worm — the Engineer").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Drag the worm down. Watch it leave tunnels behind.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 14)

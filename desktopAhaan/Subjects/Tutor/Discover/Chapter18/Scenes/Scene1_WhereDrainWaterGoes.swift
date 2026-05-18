@@ -13,7 +13,7 @@ struct Scene1_WhereDrainWaterGoes: View {
         VStack(spacing: 14) {
             Text("Where Does Drain Water Go?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap Next to follow the journey from your tap to the river.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 8) {
                 ForEach(0..<path.count, id: \.self) { i in

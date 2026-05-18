@@ -20,7 +20,7 @@ struct Scene7_DeforestationDomino: View {
         VStack(spacing: 14) {
             Text("Deforestation Domino").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Each domino is a consequence. Tap to topple them.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 6) {
                 ForEach(0..<chain.count, id: \.self) { i in

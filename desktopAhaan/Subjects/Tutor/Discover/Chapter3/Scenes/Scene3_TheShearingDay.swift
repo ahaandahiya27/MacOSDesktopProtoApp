@@ -27,7 +27,7 @@ struct Scene3_TheShearingDay: View {
                 VStack(alignment: .trailing, spacing: 4) {
                     Text("Harvested")
                         .font(.caption.weight(.semibold))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     Text("\(Int(harvestedKg)) kg")
                         .font(.title3.weight(.bold))
                         .foregroundColor(.green)
@@ -120,7 +120,7 @@ struct Scene3_TheShearingDay: View {
                         .foregroundColor(.green)
                     Text("Sheep are sheared once a year in spring. The fleece grows back quickly and the sheep feels cooler in summer.")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: 600)

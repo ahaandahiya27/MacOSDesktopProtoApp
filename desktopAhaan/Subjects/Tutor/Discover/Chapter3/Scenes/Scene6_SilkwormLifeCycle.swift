@@ -67,7 +67,7 @@ struct Scene6_SilkwormLifeCycle: View {
                 Divider()
                 Text(stages[currentStage].desc)
                     .font(.body)
-                    .foregroundColor(.primary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(16)
@@ -139,7 +139,7 @@ struct Scene6_SilkwormLifeCycle: View {
                 .font(.system(size: 36))
             Text(stage.name)
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
         .frame(width: 70, height: 70)
         .background(bgColor)

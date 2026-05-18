@@ -17,7 +17,7 @@ struct Scene5_CompostPitBuilder: View {
         VStack(spacing: 14) {
             Text("Compost Pit Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Add greens, browns, moisture — then wait 6+ weeks.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.3))

@@ -20,7 +20,7 @@ struct Scene8_ReforestationPlan: View {
         VStack(spacing: 14) {
             Text("Reforestation Plan").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick actions you'll commit to. We'll count the trees you help.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             VStack(spacing: 8) {
                 ForEach(0..<actions.count, id: \.self) { i in

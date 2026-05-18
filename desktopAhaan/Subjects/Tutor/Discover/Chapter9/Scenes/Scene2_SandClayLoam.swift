@@ -26,7 +26,7 @@ struct Scene2_SandClayLoam: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(.secondary)
+            Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 12) {
                 ForEach(samples) { s in

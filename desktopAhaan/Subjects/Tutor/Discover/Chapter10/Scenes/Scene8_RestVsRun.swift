@@ -22,7 +22,7 @@ struct Scene8_RestVsRun: View {
         VStack(spacing: 14) {
             Text("Rest vs Run").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide the activity level. Watch breathing speed up.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 Circle().strokeBorder(Color.compatIndigo.opacity(0.5), lineWidth: 6)
@@ -31,7 +31,7 @@ struct Scene8_RestVsRun: View {
                     Text(label).font(.title3.bold())
                     Text("\(bpm)").font(.system(size: 48, weight: .bold, design: .monospaced))
                         .foregroundColor(Color.compatIndigo)
-                    Text("breaths / min").font(.caption).foregroundColor(.secondary)
+                    Text("breaths / min").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
 

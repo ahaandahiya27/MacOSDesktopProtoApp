@@ -61,7 +61,7 @@ struct Scene4_TheRustingExperiment: View {
 
                     Text("Three test tubes, same iron nail. Tap each to fast-forward 2 weeks.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Three test tubes
                     HStack(spacing: 28) {
@@ -208,7 +208,7 @@ struct Scene4_TheRustingExperiment: View {
             // Labels
             Text(tube.contents)
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
                 .frame(width: 100)
 

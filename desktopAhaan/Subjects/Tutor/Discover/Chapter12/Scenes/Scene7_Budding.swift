@@ -12,7 +12,7 @@ struct Scene7_Budding: View {
         VStack(spacing: 14) {
             Text("Budding").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap to grow the bud. Watch it become a new yeast cell.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.yellow.opacity(0.12))

@@ -13,7 +13,7 @@ struct Scene5_SoilErosionStory: View {
         VStack(spacing: 14) {
             Text("Soil Erosion Story").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Toggle the forest. See how much muddy water washes away after rain.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             Picker("", selection: $deforested) {
                 Text("🌳 With trees").tag(false)

@@ -22,7 +22,7 @@ struct Scene8_BetterPractices: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Better Practices").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(.secondary)
+            Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

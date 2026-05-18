@@ -55,7 +55,7 @@ struct Scene1_IceToWaterToSteam: View {
 
                     Text("Slide the temperature to see H₂O change state.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
 
@@ -100,13 +100,13 @@ struct Scene1_IceToWaterToSteam: View {
                             .frame(maxWidth: 460)
                             .accessibilityLabel("Temperature slider")
                         HStack {
-                            Text("-10°C").font(.caption).foregroundColor(.secondary)
+                            Text("-10°C").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             Spacer()
                             Text("0°C").font(.caption).foregroundColor(Color.compatCyan)
                             Spacer()
                             Text("100°C").font(.caption).foregroundColor(.orange)
                             Spacer()
-                            Text("120°C").font(.caption).foregroundColor(.secondary)
+                            Text("120°C").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                         .frame(maxWidth: 460)
                     }

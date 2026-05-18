@@ -23,7 +23,7 @@ struct Scene4_PrismRainbow: View {
         VStack(spacing: 14) {
             Text("Prism & Rainbow").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Send white light through a glass prism. Out comes a rainbow.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.black.opacity(0.85))

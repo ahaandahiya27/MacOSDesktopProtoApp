@@ -127,7 +127,7 @@ struct Scene5_LiverPancreasBile: View {
                 HStack {
                     Text("Tap each organ to see its juice flow")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     if allTapped {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(.green)
@@ -144,7 +144,7 @@ struct Scene5_LiverPancreasBile: View {
                             .foregroundColor(.green)
                         Text(organExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }

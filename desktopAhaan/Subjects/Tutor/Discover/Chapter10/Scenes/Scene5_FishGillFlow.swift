@@ -15,7 +15,7 @@ struct Scene5_FishGillFlow: View {
         VStack(spacing: 14) {
             Text("Fish Gill Flow").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Watch how a fish pulls oxygen out of water using its gills.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.blue.opacity(0.15))

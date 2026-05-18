@@ -96,9 +96,9 @@ private struct DiscoverProgressContent: View {
                         Spacer()
                         Text("\(done)/\(total)")
                             .font(.caption.weight(.semibold).monospacedDigit())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         Image(systemName: "chevron.right")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .font(.caption)
                     }
                     .contentShape(Rectangle())
@@ -128,7 +128,7 @@ private struct DiscoverProgressContent: View {
                         .font(.largeTitle.bold())
                     Text("\(totalCompleted) of \(totalScenes) scenes completed across \(chapters.count) chapters")
                         .font(.subheadline.monospacedDigit())
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             ProgressView(value: overallPercent)
@@ -171,7 +171,7 @@ private struct DiscoverProgressContent: View {
                     } else {
                         Text("\(done)/\(total)")
                             .font(.caption.weight(.semibold).monospacedDigit())
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                     }
                 }
 
@@ -181,13 +181,13 @@ private struct DiscoverProgressContent: View {
                         .multilineTextAlignment(.leading)
                     Text(isComplete ? "All scenes completed" : "\(total - done) scene\(total - done == 1 ? "" : "s") left")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
 
                 Spacer()
 
                 Image(systemName: "chevron.right")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
             .padding(14)
             .background(

@@ -64,7 +64,7 @@ struct Scene4_PolarBearSurvivalKit: View {
 
             Text("\(tappedAdaptations.count) / \(adaptations.count) adaptations explored")
                 .font(.caption.weight(.medium))
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             bearDiagram
             Spacer()

@@ -34,7 +34,7 @@ struct Scene5_GalvanisationShield: View {
 
                     Text("How do we stop iron from rusting?")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
 

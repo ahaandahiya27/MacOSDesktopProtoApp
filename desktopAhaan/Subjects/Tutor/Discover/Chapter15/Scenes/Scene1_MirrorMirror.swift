@@ -14,7 +14,7 @@ struct Scene1_MirrorMirror: View {
         VStack(spacing: 14) {
             Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide the incoming ray. The reflected ray follows the law.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // Diagram canvas. Mirror is the horizontal line at the bottom;
             // hit point is the centre of that line. Normal goes straight up.
@@ -135,7 +135,7 @@ private struct MirrorDiagram: View {
                     .position(x: CGFloat(outEndX) - 22, y: CGFloat(outEndY) + 10)
                 Text("normal")
                     .font(.caption2)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .position(x: centerX + 30, y: mirrorY - 175)
             }
         }

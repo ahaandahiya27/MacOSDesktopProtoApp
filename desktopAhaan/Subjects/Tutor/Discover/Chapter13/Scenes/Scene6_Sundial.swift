@@ -14,7 +14,7 @@ struct Scene6_Sundial: View {
         VStack(spacing: 14) {
             Text("Sundial").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide through the day. Watch the shadow swing.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 Circle().strokeBorder(Color.compatIndigo.opacity(0.4), lineWidth: 3)

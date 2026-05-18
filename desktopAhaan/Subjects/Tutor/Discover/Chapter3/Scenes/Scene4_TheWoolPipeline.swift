@@ -85,13 +85,13 @@ struct Scene4_TheWoolPipeline: View {
                                     .foregroundColor(Color.compatIndigo)
                                 Text("Step \(selected + 1) of 6")
                                     .font(.caption)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             }
                         }
                         Divider()
                         Text(steps[selected].desc)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                     }
                 }
                 .frame(maxWidth: 600)
@@ -137,7 +137,7 @@ struct Scene4_TheWoolPipeline: View {
                         .font(.system(size: 40))
                     Text(step.label)
                         .font(.caption.weight(.semibold))
-                        .foregroundColor(.primary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(16)

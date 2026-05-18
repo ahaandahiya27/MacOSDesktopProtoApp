@@ -22,7 +22,7 @@ struct Scene7_MirrorsInRealLife: View {
         VStack(spacing: 12) {
             Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Which type of mirror is used in each case?")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

@@ -24,7 +24,7 @@ struct Scene6_SanitationMap: View {
         VStack(spacing: 14) {
             Text("Sanitation Map").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("There's no single toilet — choose by water, money and place.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             Picker("", selection: $pick) {
                 ForEach(Toilet.allCases) { Text($0.rawValue).tag($0) }

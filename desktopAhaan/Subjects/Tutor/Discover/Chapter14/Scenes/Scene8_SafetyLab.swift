@@ -23,7 +23,7 @@ struct Scene8_SafetyLab: View {
         VStack(spacing: 12) {
             Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap Safe or Unsafe for each action.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

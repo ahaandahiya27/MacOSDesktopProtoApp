@@ -45,7 +45,7 @@ struct Scene9_BossQuiz_Ch12: View {
 
             if !done {
                 let q = qs[i]
-                Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(.secondary)
+                Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 SoftShadowCard(padding: 18) {
                     Text(q.prompt).font(.title3.bold()).frame(maxWidth: .infinity, alignment: .leading)
                 }

@@ -90,7 +90,7 @@ struct Scene7_ConstellationConnect: View {
 
                     Text("\(explored.count) / \(constellations.count) constellations explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Starry sky backdrop
                     ZStack {
@@ -184,7 +184,7 @@ struct Scene7_ConstellationConnect: View {
 
                                 Text("Shape: \(constellation.shape)")
                                     .font(.subheadline.weight(.medium))
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                                 ForEach(constellation.facts, id: \.self) { fact in
                                     HStack(alignment: .top, spacing: 6) {
@@ -194,7 +194,7 @@ struct Scene7_ConstellationConnect: View {
                                             .padding(.top, 3)
                                         Text(fact)
                                             .font(.callout)
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                             .lineSpacing(3)
                                     }
                                 }

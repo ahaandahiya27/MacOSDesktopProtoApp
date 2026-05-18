@@ -69,7 +69,7 @@ struct Scene9_BossQuiz_Ch3: View {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -122,7 +122,7 @@ struct Scene9_BossQuiz_Ch3: View {
                     if let status = pdfStatus {
                         Text(status)
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
 
                     Spacer()
@@ -244,7 +244,7 @@ struct Scene9_BossQuiz_Ch3: View {
                 .font(.caption.weight(.semibold))
             Text(Date(), style: .date)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
         .padding(40)
         .frame(width: 600, height: 400)
@@ -271,7 +271,7 @@ private struct Ch3AnswerButton: View {
                 .frame(maxWidth: .infinity)
                 .padding(14)
                 .background(backgroundColor())
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .cornerRadius(8)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)

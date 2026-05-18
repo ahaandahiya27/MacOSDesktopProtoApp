@@ -90,7 +90,7 @@ struct Scene4_NeutralisationInAction: View {
                                     .foregroundColor(Color.compatIndigo)
                                 Text("HCl + NaOH \u{2192} NaCl + H\u{2082}O")
                                     .font(.system(.body, design: .monospaced))
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             }
                         }
                         .frame(maxWidth: 500)

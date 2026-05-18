@@ -22,7 +22,7 @@ struct Scene4_ArteryVeinCapillary: View {
         VStack(spacing: 12) {
             Text("Artery / Vein / Capillary").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Three kinds of blood vessels — pick the right one.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

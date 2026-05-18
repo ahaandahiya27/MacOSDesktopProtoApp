@@ -15,7 +15,7 @@ struct Scene5_O2CO2Balance: View {
         VStack(spacing: 14) {
             Text("O₂ ⇄ CO₂ Balance").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Forest cover ↔ atmospheric oxygen. Slide to see the effect.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             HStack(spacing: 24) {
                 VStack {

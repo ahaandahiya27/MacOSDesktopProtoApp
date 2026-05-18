@@ -69,7 +69,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                         Text(isCold ? "Feathers fluffed!" : "Normal feathers")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
 
                     // Sweater side
@@ -112,7 +112,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                         Text(showAirPockets ? "Air pockets trap heat" : "Woollen sweater")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)

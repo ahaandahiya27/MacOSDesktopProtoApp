@@ -30,7 +30,7 @@ struct Scene2_TearingVsBurningPaper: View {
 
                     Text("Two actions on the same paper. One is physical, the other chemical.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     HStack(spacing: 24) {
                         // Left: Tearing
@@ -70,7 +70,7 @@ struct Scene2_TearingVsBurningPaper: View {
                                     .foregroundColor(.green)
                                 Text("Still paper. Same substance.\nJust smaller pieces.")
                                     .font(.caption)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                     .multilineTextAlignment(.center)
                             }
                         }
@@ -101,13 +101,13 @@ struct Scene2_TearingVsBurningPaper: View {
                                     VStack(spacing: 6) {
                                         Text("💨 CO₂ + H₂O")
                                             .font(.caption)
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                         RoundedRectangle(cornerRadius: 3)
                                             .fill(Color.gray.opacity(0.5))
                                             .frame(width: 80, height: 14)
                                         Text("Ash")
                                             .font(.caption2)
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                     }
                                 }
                             }
@@ -135,7 +135,7 @@ struct Scene2_TearingVsBurningPaper: View {
                                     .foregroundColor(.red)
                                 Text("New substances formed:\nash, CO₂, H₂O. Irreversible.")
                                     .font(.caption)
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                     .multilineTextAlignment(.center)
                             }
                         }
@@ -192,7 +192,7 @@ struct Scene2_TearingVsBurningPaper: View {
                     } else {
                         Text("Try both sides to continue")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .padding(.bottom, 12)
                     }
                 }

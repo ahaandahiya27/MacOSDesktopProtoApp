@@ -74,7 +74,7 @@ struct Scene4_IntestineVillus: View {
                             .foregroundColor(.blue)
                         Text(villusExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }

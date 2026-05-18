@@ -67,7 +67,7 @@ struct FlipCard<Front: View, Back: View>: View {
                 .font(.title2.bold())
             Text(frontSubtitle)
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 12)
             Spacer(minLength: 0)

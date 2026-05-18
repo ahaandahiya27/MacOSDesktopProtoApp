@@ -29,7 +29,7 @@ struct Scene7_CycloneWarningCodes: View {
         VStack(spacing: 12) {
             Text("Cyclone Warning Codes").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Match each IMD warning stage to what it means.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(codes) { item in

@@ -24,7 +24,7 @@ struct Scene7_WaterAudit: View {
         VStack(spacing: 12) {
             Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Tap each activity you did today. See your total.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 8) {
                 ForEach(items) { item in
@@ -32,7 +32,7 @@ struct Scene7_WaterAudit: View {
                         Image(systemName: checked.contains(item.id) ? "checkmark.square.fill" : "square")
                             .foregroundColor(Color.compatIndigo)
                         Text(item.name).frame(maxWidth: .infinity, alignment: .leading)
-                        Text("\(item.litres) L").font(.headline.monospacedDigit()).foregroundColor(.secondary)
+                        Text("\(item.litres) L").font(.headline.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .padding(10)
                     .contentShape(Rectangle())

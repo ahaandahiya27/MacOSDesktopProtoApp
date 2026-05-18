@@ -23,7 +23,7 @@ struct Scene3_SortContaminants: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Sort the Contaminants").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Classify each pollutant.").font(.callout).foregroundColor(.secondary)
+            Text("Classify each pollutant.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(items) { item in

@@ -58,7 +58,7 @@ struct Scene5_TropicalRainforestLife: View {
 
             Text("\(exploredLayers.count) / \(layers.count) layers explored")
                 .font(.caption.weight(.medium))
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             layersStack
             Spacer()
@@ -179,7 +179,7 @@ struct Scene5_TropicalRainforestLife: View {
                                 .font(.body.bold())
                             Text(animal.adaptation)
                                 .font(.callout)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(3)
                         }
                         .padding(.top, 4)

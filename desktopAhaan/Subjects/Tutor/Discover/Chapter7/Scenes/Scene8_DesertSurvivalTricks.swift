@@ -54,7 +54,7 @@ struct Scene8_DesertSurvivalTricks: View {
 
                     Text("\(exploredAnimals.count) / \(animals.count) animals explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Desert background with animals
                     ZStack {
@@ -144,7 +144,7 @@ struct Scene8_DesertSurvivalTricks: View {
                                             .font(.body.bold())
                                         Text(adapt.detail)
                                             .font(.callout)
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                             .lineSpacing(3)
                                     }
                                     .padding(.top, 2)

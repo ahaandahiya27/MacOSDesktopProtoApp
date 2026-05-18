@@ -12,7 +12,7 @@ struct Scene5_MagneticEffect: View {
         VStack(spacing: 14) {
             Text("Magnetic Effect").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Place a compass near a wire. Turn current on — needle swings.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.gray.opacity(0.08))

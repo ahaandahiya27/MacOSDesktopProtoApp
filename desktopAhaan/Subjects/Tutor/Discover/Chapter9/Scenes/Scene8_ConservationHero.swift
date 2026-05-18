@@ -26,7 +26,7 @@ struct Scene8_ConservationHero: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("Conservation Hero").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Turn on techniques to protect this hillside.").font(.callout).foregroundColor(.secondary)
+            Text("Turn on techniques to protect this hillside.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.18))

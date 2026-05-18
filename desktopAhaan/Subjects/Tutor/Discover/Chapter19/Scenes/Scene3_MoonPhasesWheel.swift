@@ -66,7 +66,7 @@ struct Scene3_MoonPhasesWheel: View {
 
                     Text("Tap each phase to learn what you see in the sky.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // 2 x 4 grid
                     LazyVGrid(columns: columns, spacing: 14) {
@@ -79,7 +79,7 @@ struct Scene3_MoonPhasesWheel: View {
 
                     Text("\(exploredPhases.count) / \(phases.count) phases explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         .padding(.top, 4)
 
                     Spacer()

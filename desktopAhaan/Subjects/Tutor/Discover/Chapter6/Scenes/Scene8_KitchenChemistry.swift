@@ -62,7 +62,7 @@ struct Scene8_KitchenChemistry: View {
 
             Text("Tap an experiment to trigger the reaction")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Spacer()
 
@@ -83,7 +83,7 @@ struct Scene8_KitchenChemistry: View {
                                 .font(.title3.bold())
                             Text(exp.ingredients)
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
 
@@ -101,7 +101,7 @@ struct Scene8_KitchenChemistry: View {
                                 .foregroundColor(.purple)
                             Text("Change")
                                 .font(.headline)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     } else {
                         Button("Mix them!") {

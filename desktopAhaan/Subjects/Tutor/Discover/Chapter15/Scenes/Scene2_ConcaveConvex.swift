@@ -25,7 +25,7 @@ struct Scene2_ConcaveConvex: View {
         VStack(spacing: 14) {
             Text("Concave & Convex Mirrors").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Curved mirrors stretch, shrink and even flip the image.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $m) {
                 ForEach(Mirror.allCases) { Text($0.rawValue).tag($0) }
@@ -39,7 +39,7 @@ struct Scene2_ConcaveConvex: View {
             }
 
             Text("Object distance: \(Int(distance)) cm")
-                .font(.headline).foregroundColor(.secondary)
+                .font(.headline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             Slider(value: $distance, in: 5...60, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
 
             SoftShadowCard(padding: 18) {
@@ -51,7 +51,7 @@ struct Scene2_ConcaveConvex: View {
                          : m == .concave
                             ? "Used in shaving mirrors (close-up, magnified) and torches/headlights (focus the beam)."
                             : "Everyday flat mirrors — equal size, equal distance behind.")
-                        .font(.callout).foregroundColor(.secondary).lineSpacing(3)
+                        .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).lineSpacing(3)
                 }
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)

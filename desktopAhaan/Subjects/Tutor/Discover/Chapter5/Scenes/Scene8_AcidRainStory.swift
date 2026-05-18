@@ -65,7 +65,7 @@ struct Scene8_AcidRainStory: View {
                                 .font(.body)
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(4)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
                     .frame(maxWidth: 560)
@@ -95,7 +95,7 @@ struct Scene8_AcidRainStory: View {
 
                         Text("\(currentPanel + 1) / \(panels.count)")
                             .font(.caption.monospacedDigit())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                         Spacer()
 

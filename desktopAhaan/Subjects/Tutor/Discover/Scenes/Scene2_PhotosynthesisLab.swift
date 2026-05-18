@@ -52,13 +52,13 @@ struct Scene2_PhotosynthesisLab: View {
             // Equation row
             HStack(spacing: 12) {
                 IngredientTile(emoji: "💧", label: "6 H₂O", filled: hasWater)
-                Text("+").font(.title.bold()).foregroundColor(.secondary)
+                Text("+").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "☁️", label: "6 CO₂", filled: hasCO2)
-                Text("+").font(.title.bold()).foregroundColor(.secondary)
+                Text("+").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "☀️", label: "Light", filled: hasSun)
-                Text("→").font(.title.bold()).foregroundColor(.secondary)
+                Text("→").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "🍇", label: "C₆H₁₂O₆", filled: produced, color: .purple)
-                Text("+").font(.title.bold()).foregroundColor(.secondary)
+                Text("+").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "💨", label: "6 O₂", filled: produced, color: Color.compatTeal)
             }
             .padding(.horizontal, 12)
@@ -144,7 +144,7 @@ struct Scene2_PhotosynthesisLab: View {
                         if !produced {
                             Text("Complete the experiment to continue")
                                 .font(.caption2)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
                 }

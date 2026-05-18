@@ -53,7 +53,7 @@ struct Scene1_WeatherVsClimate: View {
                     VStack {
                         Text("vs")
                             .font(.title.bold())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .frame(width: 40)
 
@@ -178,7 +178,7 @@ struct Scene1_WeatherVsClimate: View {
 
                 Text(subtitle)
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 HStack(spacing: 16) {
                     ForEach(icons) { icon in
@@ -189,7 +189,7 @@ struct Scene1_WeatherVsClimate: View {
                                 .scaleEffect(pulse.wrappedValue ? 1.15 : 1.0)
                             Text(icon.label)
                                 .font(.caption2)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
                 }

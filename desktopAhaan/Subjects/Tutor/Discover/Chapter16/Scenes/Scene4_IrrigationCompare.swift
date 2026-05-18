@@ -22,7 +22,7 @@ struct Scene4_IrrigationCompare: View {
         VStack(spacing: 12) {
             Text("Drip, Sprinkler or Flood?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Rank these irrigation methods by water efficiency.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(methods) { m in

@@ -90,7 +90,7 @@ struct Scene7_AmoebaPseudopodHunt: View {
                             .foregroundColor(Color.compatCyan)
                         Text(amoebExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }

@@ -58,7 +58,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                     Text("Tap each Earth position to see how the 23.5 degree tilt creates seasons.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
 
@@ -77,7 +77,7 @@ struct Scene2_WhySeasonsHappen: View {
                                 .shadow(color: .yellow.opacity(0.4), radius: 10)
                             Text("Sun")
                                 .font(.caption2.weight(.medium))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
 
                         // Four Earth positions
@@ -90,7 +90,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                     Text("\(exploredPositions.count) / \(positions.count) positions explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
                     Spacer()

@@ -12,7 +12,7 @@ struct Scene6_PeriscopeBuilder: View {
         VStack(spacing: 14) {
             Text("Periscope Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Two mirrors at 45° — and suddenly you can see over walls.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.1))

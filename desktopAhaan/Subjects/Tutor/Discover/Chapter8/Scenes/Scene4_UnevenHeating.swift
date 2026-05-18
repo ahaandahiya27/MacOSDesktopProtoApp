@@ -22,7 +22,7 @@ struct Scene4_UnevenHeating: View {
         VStack(spacing: 14) {
             Text("Uneven Heating Builds Wind").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("The Sun heats the equator more than the poles. The bigger the gap, the stronger the wind.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18)

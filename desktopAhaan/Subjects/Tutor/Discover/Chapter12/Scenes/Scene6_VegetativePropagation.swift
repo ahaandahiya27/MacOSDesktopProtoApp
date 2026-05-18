@@ -28,7 +28,7 @@ struct Scene6_VegetativePropagation: View {
         VStack(spacing: 14) {
             Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("No flowers, no seeds — these plants clone themselves.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $plant) {
                 ForEach(Plant.allCases) { Text($0.rawValue).tag($0) }
@@ -40,7 +40,7 @@ struct Scene6_VegetativePropagation: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(plant.rawValue).font(.title3.bold())
                     Text(plant.partUsed).font(.body).lineSpacing(4)
-                    Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(.secondary)
+                    Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)

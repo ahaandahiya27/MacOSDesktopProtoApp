@@ -22,7 +22,7 @@ struct Scene6_AnimalNicheMatch: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Animal Niche Match").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Each animal calls a particular layer home.").font(.callout).foregroundColor(.secondary)
+            Text("Each animal calls a particular layer home.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
                 ForEach(pairs) { p in

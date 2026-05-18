@@ -18,7 +18,7 @@ struct Scene2_SeriesVsParallel: View {
         VStack(spacing: 14) {
             Text("Series vs Parallel").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("In series, removing one bulb kills the rest. In parallel, others stay lit.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             Picker("", selection: $wiring) {
                 ForEach(Wiring.allCases) { Text($0.rawValue).tag($0) }

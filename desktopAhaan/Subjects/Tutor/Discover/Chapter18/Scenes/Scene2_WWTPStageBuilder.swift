@@ -24,7 +24,7 @@ struct Scene2_WWTPStageBuilder: View {
     var body: some View {
         VStack(spacing: 14) {
             Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
-            Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(.secondary)
+            Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             HStack(spacing: 6) {
                 ForEach(Stage.allCases) { s in

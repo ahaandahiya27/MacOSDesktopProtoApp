@@ -110,16 +110,16 @@ struct SceneRequiresMacOS12View: View {
         VStack(spacing: 12) {
             Image(systemName: "sparkles")
                 .font(.system(size: 36))
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             Text(sceneTitle)
                 .font(.title3.bold())
             Text("This interactive scene needs macOS 12 or later to render.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
             Text("You can still browse the rest of this chapter from the regular chapter view.")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
                 .padding(.top, 4)
         }
@@ -144,13 +144,13 @@ private struct ComingSoonView: View {
                     .font(.system(size: 64))
                 Text("Discover Mode is coming soon for")
                     .font(.title3)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 Text(chapterTitle)
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
                 Text("Until then, the regular chapter view has all the content.")
                     .font(.body)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .padding(.top, 8)
             }
             .padding(40)
@@ -274,7 +274,7 @@ struct DiscoverShell<SceneBody: View>: View {
                 Spacer(minLength: 0)
                 Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedIds.count) done")
                     .font(.monoDigitCaption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
             HStack(spacing: 8) {
                 ForEach(0..<totalScenes, id: \.self) { i in

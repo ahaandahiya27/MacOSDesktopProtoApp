@@ -51,7 +51,7 @@ struct Scene3_InsideALeaf: View {
                 .padding(.top, 18)
             Text("Tap each part to learn what it does.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // The cross-section
             ZStack {
@@ -95,7 +95,7 @@ struct Scene3_InsideALeaf: View {
                                 .font(.title3.bold())
                             Text(explanation(for: part))
                                 .font(.callout)
-                                .foregroundColor(.primary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
                         }
                         Spacer(minLength: 0)
                     }
@@ -103,7 +103,7 @@ struct Scene3_InsideALeaf: View {
                     Label("Tap any glowing dot on the leaf above.",
                           systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth)

@@ -57,7 +57,7 @@ struct Scene5_AntStingFirstAid: View {
                             Text("The ant injected formic acid into your skin. It stings and burns. What should you apply to feel better?")
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(4)
                         }
                     }

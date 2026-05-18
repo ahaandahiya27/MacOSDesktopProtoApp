@@ -106,7 +106,7 @@ struct Scene5_AutotrophHeterotroph: View {
     private var instructionLine: some View {
         Text("Drag each card into the right zone. 🌱 makes its own food. 🐯 eats others.")
             .font(.callout)
-            .foregroundColor(.secondary)
+            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
     }
 
     @ViewBuilder
@@ -213,7 +213,7 @@ struct Scene5_AutotrophHeterotroph: View {
                 if !allPlaced && correctCount == 0 {
                     Text("Place all cards to continue")
                         .font(.caption2)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
         }
@@ -232,7 +232,7 @@ struct Scene5_AutotrophHeterotroph: View {
                             .font(.title.bold())
                         Text("\(correctCount) out of 12 correct.")
                             .font(.callout)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         Button("Continue") {
                             onComplete(correctCount)
                         }
@@ -325,7 +325,7 @@ private struct DropZone: View {
     var body: some View {
         VStack(spacing: 6) {
             Text(title).font(.title3.bold())
-            Text(subtitle).font(.caption).foregroundColor(.secondary)
+            Text(subtitle).font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
         .frame(maxWidth: .infinity, minHeight: 120)
         .background(

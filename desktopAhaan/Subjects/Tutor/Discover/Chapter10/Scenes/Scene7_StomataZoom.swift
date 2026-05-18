@@ -27,7 +27,7 @@ struct Scene7_StomataZoom: View {
         VStack(spacing: 14) {
             Text("Plant Stomata Zoom").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Zoom in. Find the tiny mouths leaves use to breathe.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.18))

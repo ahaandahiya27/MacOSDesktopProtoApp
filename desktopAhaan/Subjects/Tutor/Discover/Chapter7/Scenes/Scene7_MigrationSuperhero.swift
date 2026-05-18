@@ -81,7 +81,7 @@ struct Scene7_MigrationSuperhero: View {
                                         .foregroundColor(Color.compatIndigo)
                                     Text(fact.route)
                                         .font(.callout.italic())
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 }
                                 Text(fact.detail)
                                     .font(.body)

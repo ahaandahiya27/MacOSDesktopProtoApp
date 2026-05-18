@@ -29,7 +29,7 @@ struct Scene7_CrystalGarden: View {
 
             Text("Grow crystals from a supersaturated solution")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Spacer()
 

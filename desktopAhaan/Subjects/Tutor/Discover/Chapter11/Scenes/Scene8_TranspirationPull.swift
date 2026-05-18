@@ -15,7 +15,7 @@ struct Scene8_TranspirationPull: View {
         VStack(spacing: 14) {
             Text("Transpiration Pull").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Cover a leafy branch with polythene. Watch water vapour collect.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.10))
@@ -50,7 +50,7 @@ struct Scene8_TranspirationPull: View {
                     }
                 }
                 .accentColor(Color.compatIndigo)
-                if covered { Text("\(seconds)s").font(.headline).foregroundColor(.secondary) }
+                if covered { Text("\(seconds)s").font(.headline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary) }
             }
 
             SoftShadowCard(padding: 18) {

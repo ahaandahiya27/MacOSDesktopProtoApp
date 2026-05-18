@@ -13,7 +13,7 @@ struct Scene8_Fragmentation: View {
         VStack(spacing: 14) {
             Text("Fragmentation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Slide to break the algae filament. Each piece grows into a new one.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // Fragment width scales down with count and leaves visible gaps.
             HStack(spacing: 8) {

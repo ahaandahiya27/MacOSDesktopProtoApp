@@ -30,7 +30,7 @@ struct Scene8_UnitsOfTime: View {
         VStack(spacing: 14) {
             Text("Units of Time").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Humans have measured time for thousands of years. Each device was a leap forward.")
-                .font(.callout).foregroundColor(.secondary).multilineTextAlignment(.center)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             Picker("", selection: $device) {
                 ForEach(Device.allCases) { Text($0.rawValue).tag($0) }

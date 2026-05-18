@@ -88,7 +88,7 @@ struct Scene3_TheStomachBath: View {
                             .foregroundColor(.red)
                         Text(stomachExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }

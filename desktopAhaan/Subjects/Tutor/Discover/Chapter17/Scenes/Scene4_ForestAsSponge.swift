@@ -13,7 +13,7 @@ struct Scene4_ForestAsSponge: View {
         VStack(spacing: 14) {
             Text("Forest as Sponge").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Toggle the forest cover. Pour the same rain on both.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $hasForest) {
                 Text("🌳 With forest").tag(true)

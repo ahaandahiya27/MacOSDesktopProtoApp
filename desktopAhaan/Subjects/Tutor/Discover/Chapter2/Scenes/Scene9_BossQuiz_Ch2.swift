@@ -74,7 +74,7 @@ struct Scene9_BossQuiz_Ch2: View {
                 let item = quiz[currentQ]
                 Text("Question \(currentQ + 1) of 5")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 SoftShadowCard(padding: 18) {
                     Text(item.prompt)
@@ -141,7 +141,7 @@ struct Scene9_BossQuiz_Ch2: View {
                     if let status = pdfStatus {
                         Text(status)
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                 }
                 .frame(maxWidth: 600)

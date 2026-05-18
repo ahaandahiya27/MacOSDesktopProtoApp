@@ -15,7 +15,7 @@ struct Scene4_SpeedometerOdometer: View {
         VStack(spacing: 14) {
             Text("Speedometer & Odometer").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Speedometer = current speed. Odometer = total distance.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             HStack(spacing: 30) {
                 VStack {

@@ -88,7 +88,7 @@ struct Scene6_FourStomachsOfACow: View {
                                 .foregroundColor(Color.compatBrown)
                             Text("We eat softer, easier-to-digest foods like cooked meat & plants. Cows need four stomachs because grass is tough and takes time to break down with bacteria.")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(3)
                         }
                     }
@@ -104,7 +104,7 @@ struct Scene6_FourStomachsOfACow: View {
                             .foregroundColor(Color.compatBrown)
                         Text(cowExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }
@@ -233,7 +233,7 @@ struct ChamberCallout: View {
         SoftShadowCard(padding: 14) {
             Text(text)
                 .font(.body)
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(3)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }

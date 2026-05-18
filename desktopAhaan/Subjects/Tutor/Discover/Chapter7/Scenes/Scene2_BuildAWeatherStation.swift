@@ -68,7 +68,7 @@ struct Scene2_BuildAWeatherStation: View {
                                         .foregroundColor(isRevealed ? .primary : .secondary)
                                     Text(inst.measures)
                                         .font(.caption2)
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 }
                                 .frame(width: 100, height: 100)
                                 .background(
@@ -91,7 +91,7 @@ struct Scene2_BuildAWeatherStation: View {
                     HStack(spacing: 6) {
                         Text("Station progress:")
                             .font(.caption.weight(.medium))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         ProgressView(value: Double(revealedCount), total: 5)
                             .frame(maxWidth: 200)
                         Text("\(revealedCount) / 5")

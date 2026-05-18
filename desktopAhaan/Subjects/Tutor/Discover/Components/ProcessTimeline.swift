@@ -111,7 +111,7 @@ private struct StepRow: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text(step.detail)
                     .font(.callout)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .lineSpacing(2)
                     .fixedSize(horizontal: false, vertical: true)
             }

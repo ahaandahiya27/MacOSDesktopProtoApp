@@ -61,7 +61,7 @@ struct Scene8_NitrogenCycle: View {
                 .padding(.top, 18)
             Text("Tap each arrow to see what happens. Finish all four to unlock the question.")
                 .font(.callout)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // The diagram
             ZStack {
@@ -98,7 +98,7 @@ struct Scene8_NitrogenCycle: View {
                     Text(sel.explanation).font(.callout).padding(.top, 4)
                 } else {
                     Label("Tap any arrow on the diagram.", systemImage: SFSymbolCompat.name("hand.tap.fill"))
-                        .font(.callout).foregroundColor(.secondary)
+                        .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .frame(maxWidth: 560)
@@ -113,7 +113,7 @@ struct Scene8_NitrogenCycle: View {
                             Divider().padding(.vertical, 4)
                             Text(answer)
                                 .font(.callout)
-                                .foregroundColor(.primary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
                                 .padding(.top, 2)
                         }
                         HStack {
@@ -149,7 +149,7 @@ struct Scene8_NitrogenCycle: View {
                 if !allTapped {
                     Text("Tap all steps to continue")
                         .font(.caption2)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .padding(.bottom, 12)
@@ -226,7 +226,7 @@ struct Scene8_NitrogenCycle: View {
                 .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 3)
             Text(label)
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.primary)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
         .position(p)
     }

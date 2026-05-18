@@ -30,7 +30,7 @@ struct Scene7_TheCocoonReel: View {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text("Progress")
                         .font(.caption.weight(.semibold))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     ProgressView(value: metersUnwound, total: maxMeters)
                         .frame(width: 120)
                 }
@@ -48,7 +48,7 @@ struct Scene7_TheCocoonReel: View {
                             .scaleEffect(cocoonScale)
                         Text("Cocoon")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .frame(maxWidth: .infinity)
 
@@ -69,7 +69,7 @@ struct Scene7_TheCocoonReel: View {
 
                         Text("Reel")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -81,7 +81,7 @@ struct Scene7_TheCocoonReel: View {
             VStack(spacing: 4) {
                 Text("Filament Unwound")
                     .font(.caption.weight(.semibold))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 Text("\(Int(metersUnwound)) m / \(Int(maxMeters)) m")
                     .font(.title2.weight(.bold))
                     .foregroundColor(Color.compatIndigo)
@@ -109,11 +109,11 @@ struct Scene7_TheCocoonReel: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Traditional silk production kills the pupa inside the cocoon before reeling so the cocoon remains whole and the fibre unbroken.")
                         .font(.caption)
-                        .foregroundColor(.primary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
                     Divider()
                     Text("Some believe this is ethically questionable. Peace silk lets the moth emerge first, but yields shorter, lower-grade fibre. You can choose based on your values.")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
             .padding(.horizontal, 24)

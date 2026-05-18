@@ -28,7 +28,7 @@ struct Scene1_SpinningEarth: View {
 
                     Text("Tap Spin to watch Earth rotate and create day & night.")
                         .font(.callout)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     Spacer()
 
@@ -42,7 +42,7 @@ struct Scene1_SpinningEarth: View {
                                 .shadow(color: .yellow.opacity(0.5), radius: 12)
                             Text("Sun")
                                 .font(.caption.weight(.medium))
-                                .foregroundColor(.secondary)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
 
                         // Earth
@@ -104,7 +104,7 @@ struct Scene1_SpinningEarth: View {
 
                         Text("\(spinCount) / 3 rotations")
                             .font(.caption.weight(.medium))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .padding(.top, 8)
 

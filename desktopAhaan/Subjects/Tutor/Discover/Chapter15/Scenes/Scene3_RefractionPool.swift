@@ -13,7 +13,7 @@ struct Scene3_RefractionPool: View {
         VStack(spacing: 14) {
             Text("Refraction Pool").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Dip a pencil into water. Notice how it appears to break at the surface.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack(alignment: .center) {
                 VStack(spacing: 0) {

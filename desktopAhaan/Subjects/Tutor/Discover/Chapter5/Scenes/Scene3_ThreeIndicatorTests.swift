@@ -136,7 +136,7 @@ struct Scene3_ThreeIndicatorTests: View {
                     } else {
                         Text("Test all 3 indicators with both acid and base")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .padding(.bottom, 12)
                     }
                 }

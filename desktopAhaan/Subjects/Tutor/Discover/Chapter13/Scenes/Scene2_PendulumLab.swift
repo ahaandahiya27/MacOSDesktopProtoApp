@@ -20,7 +20,7 @@ struct Scene2_PendulumLab: View {
         VStack(spacing: 14) {
             Text("Pendulum Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Change the string length. The period changes too.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 Rectangle().fill(Color.gray.opacity(0.4)).frame(width: 200, height: 4)
@@ -153,11 +153,11 @@ private struct PeriodLengthCurve: View {
 
             Text("T")
                 .font(.caption2.bold())
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .position(x: layout.padLeft - 12, y: layout.padTop + 6)
             Text("L")
                 .font(.caption2.bold())
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .position(x: size.width - 10, y: size.height - layout.padBottom - 8)
         }
     }

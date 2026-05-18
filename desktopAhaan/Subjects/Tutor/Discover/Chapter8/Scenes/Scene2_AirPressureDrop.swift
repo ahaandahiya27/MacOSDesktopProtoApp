@@ -14,7 +14,7 @@ struct Scene2_AirPressureDrop: View {
         VStack(spacing: 14) {
             Text("Air Pressure Drop").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Press & hold the button. Watch the two paper strips swing together.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18)

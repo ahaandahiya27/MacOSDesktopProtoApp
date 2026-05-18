@@ -94,7 +94,7 @@ struct Scene8_ISROSpaceMissions: View {
 
                     Text("\(explored.count) / \(missions.count) missions explored")
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Space backdrop
                     ZStack {
@@ -195,7 +195,7 @@ struct Scene8_ISROSpaceMissions: View {
                                             .font(.title2.bold())
                                         Text("\(mission.tagline) (\(mission.year))")
                                             .font(.subheadline.weight(.medium))
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                     }
                                 }
 
@@ -207,7 +207,7 @@ struct Scene8_ISROSpaceMissions: View {
                                             .padding(.top, 3)
                                         Text(fact)
                                             .font(.callout)
-                                            .foregroundColor(.secondary)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                             .lineSpacing(3)
                                     }
                                 }

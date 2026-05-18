@@ -22,7 +22,7 @@ struct Scene7_SoakPitDesign: View {
         VStack(spacing: 14) {
             Text("Soak-Pit Design").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Design a soak-pit. Get the quality bar to green.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ProgressView(value: quality).progressViewStyle(.linear).accentColor(.green)
                 .frame(width: 320)

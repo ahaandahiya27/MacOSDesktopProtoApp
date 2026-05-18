@@ -18,7 +18,7 @@ struct Scene3_DistanceTimeGraph: View {
         VStack(spacing: 14) {
             Text("Distance–Time Graph").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
             Text("Pick a motion. Watch how the line changes shape.")
-                .font(.callout).foregroundColor(.secondary)
+                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $motion) {
                 ForEach(Motion.allCases) { Text($0.rawValue).tag($0) }
@@ -114,17 +114,17 @@ private struct DistanceTimePlot: View {
         ZStack {
             Text("distance")
                 .font(.caption2.bold())
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .rotationEffect(.degrees(-90))
                 .position(x: layout.padLeft - 18,
                           y: layout.padTop + layout.plotH / 2)
             Text("time →")
                 .font(.caption2.bold())
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .position(x: size.width - 30, y: size.height - 8)
             Text("0")
                 .font(.caption2)
-                .foregroundColor(.secondary)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .position(x: layout.padLeft - 8, y: size.height - layout.padBottom + 8)
         }
     }

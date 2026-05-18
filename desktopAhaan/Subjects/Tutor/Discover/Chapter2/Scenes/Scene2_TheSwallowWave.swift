@@ -76,7 +76,7 @@ struct Scene2_TheSwallowWave: View {
                             .foregroundColor(.green)
                         Text(swallowExplanation)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .lineSpacing(4)
                     }
                 }
