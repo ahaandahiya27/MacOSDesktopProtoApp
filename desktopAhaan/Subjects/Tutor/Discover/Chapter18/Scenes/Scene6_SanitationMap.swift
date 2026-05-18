@@ -22,13 +22,13 @@ struct Scene6_SanitationMap: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Sanitation Map").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Sanitation Map").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("There's no single toilet — choose by water, money and place.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             Picker("", selection: $pick) {
                 ForEach(Toilet.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 520).padding(.horizontal, 16)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, 16)
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {

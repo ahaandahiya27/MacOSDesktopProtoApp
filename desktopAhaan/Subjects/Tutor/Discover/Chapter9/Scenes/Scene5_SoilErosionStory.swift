@@ -11,7 +11,7 @@ struct Scene5_SoilErosionStory: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Soil Erosion Story").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Soil Erosion Story").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Toggle the forest. See how much muddy water washes away after rain.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
@@ -19,7 +19,7 @@ struct Scene5_SoilErosionStory: View {
                 Text("🌳 With trees").tag(false)
                 Text("🪓 Deforested").tag(true)
             }
-            .pickerStyle(.segmented).frame(maxWidth: 360)
+            .pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 360)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.15))

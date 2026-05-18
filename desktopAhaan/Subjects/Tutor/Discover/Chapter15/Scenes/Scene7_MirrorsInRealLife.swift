@@ -20,7 +20,7 @@ struct Scene7_MirrorsInRealLife: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Which type of mirror is used in each case?")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -40,7 +40,7 @@ struct Scene7_MirrorsInRealLife: View {
                         }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 640).padding(.horizontal, 24)

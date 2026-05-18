@@ -141,7 +141,7 @@ struct Scene4_TheWoolPipeline: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(16)
-                .background(isTapped ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.05))
+                .background(isTapped ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95))
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)

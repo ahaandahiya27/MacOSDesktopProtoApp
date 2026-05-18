@@ -21,13 +21,13 @@ struct Scene5_LensWorkshop: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Lens Workshop").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Lens Workshop").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("A lens bends light to form an image. Pick a lens, move the object.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $lens) {
                 ForEach(Lens.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 420)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 420)
 
             HStack(spacing: 12) {
                 Text("📕").font(.system(size: 40))

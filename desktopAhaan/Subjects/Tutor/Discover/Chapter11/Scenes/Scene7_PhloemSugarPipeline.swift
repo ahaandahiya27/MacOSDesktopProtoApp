@@ -12,13 +12,13 @@ struct Scene7_PhloemSugarPipeline: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Phloem Sugar Pipeline").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Phloem Sugar Pipeline").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Phloem carries sugar from where it's made to where it's needed.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $season) {
                 ForEach(Season.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 260)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 260)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.12))

@@ -27,7 +27,7 @@ struct Scene7_CycloneWarningCodes: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Cyclone Warning Codes").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Cyclone Warning Codes").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Match each IMD warning stage to what it means.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -50,7 +50,7 @@ struct Scene7_CycloneWarningCodes: View {
                         }
                     }
                     .padding(8)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 620)

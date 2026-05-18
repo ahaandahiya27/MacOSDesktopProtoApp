@@ -8,7 +8,7 @@ struct Scene1_WaterPie: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Earth's Water Pie").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Earth's Water Pie").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Earth is 70% water — but how much is actually drinkable?")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

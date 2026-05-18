@@ -127,7 +127,7 @@ struct SceneRequiresMacOS12View: View {
         .frame(maxWidth: 460)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(Color.gray.opacity(0.08))
+                .fill(Color.white.opacity(0.95))
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -266,15 +266,31 @@ struct DiscoverShell<SceneBody: View>: View {
         let completedIds = completedSceneIds
         return VStack(spacing: 8) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
+                // Scene title — use canvasText (dark slate) instead of the
+                // raw chapter accent. Some chapter accents (e.g. Ch.14
+                // yellow, Ch.13 green) sit too close to the pale Discover
+                // canvas hue and disappear. The chapter accent continues
+                // to appear on the GotItButton fill, the active stepper
+                // dot ring, and the chapter-tinted scene elements — just
+                // not on text-on-canvas where contrast must be high.
                 Text(sceneTitles[currentScene])
                     .font(.title2.bold())
-                    .foregroundColor(chapterAccent)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .lineLimit(1)
                     .truncationMode(.tail)
                 Spacer(minLength: 0)
+                // Scene counter — pill background so it reads as a single
+                // chip and never blends with the canvas hue.
                 Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedIds.count) done")
                     .font(.monoDigitCaption)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 4)
+                    .background(
+                        Capsule()
+                            .fill(Color.white.opacity(0.85))
+                            .overlay(Capsule().strokeBorder(Color.black.opacity(0.12), lineWidth: 0.5))
+                    )
             }
             HStack(spacing: 8) {
                 ForEach(0..<totalScenes, id: \.self) { i in
@@ -318,19 +334,53 @@ struct DiscoverShell<SceneBody: View>: View {
 
     // Footer: pure navigation. Scene title now lives in the header (DM4) so
     // the footer no longer has to play caption + nav simultaneously.
+    //
+    // Each button gets a solid-white capsule with a slate border + soft
+    // shadow so the controls always pop against the pale Discover canvas
+    // regardless of chapter accent hue. Disabled buttons fade to 40% so
+    // "you can't go back from scene 1" reads unambiguously.
     private var footer: some View {
         HStack {
-            Button { goPrev() } label: { Label("Previous", systemImage: "chevron.left") }
-                .disabled(currentScene == 0)
-                .pointingCursor()
+            stepperButton(
+                title: "Previous",
+                systemImage: "chevron.left",
+                action: { goPrev() },
+                disabled: currentScene == 0
+            )
             Spacer()
-            Button { goNext() } label: { Label("Next", systemImage: "chevron.right") }
-                .accentColor(chapterAccent)
-                .disabled(currentScene == totalScenes - 1)
-                .pointingCursor()
+            stepperButton(
+                title: "Next",
+                systemImage: "chevron.right",
+                action: { goNext() },
+                disabled: currentScene == totalScenes - 1
+            )
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
+    }
+
+    @ViewBuilder
+    private func stepperButton(title: String,
+                               systemImage: String,
+                               action: @escaping () -> Void,
+                               disabled: Bool) -> some View {
+        Button(action: action) {
+            Label(title, systemImage: systemImage)
+                .font(.callout.weight(.semibold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(
+                    Capsule()
+                        .fill(Color.white)
+                        .overlay(Capsule().strokeBorder(Color.black.opacity(0.15), lineWidth: 1))
+                )
+                .shadow(color: .black.opacity(0.08), radius: 4, x: 0, y: 1)
+        }
+        .buttonStyle(PressableButtonStyle())
+        .opacity(disabled ? 0.4 : 1.0)
+        .disabled(disabled)
+        .pointingCursor()
     }
 
     private func goNext() {

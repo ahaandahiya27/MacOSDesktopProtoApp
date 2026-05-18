@@ -22,7 +22,7 @@ struct Scene7_WaterAudit: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap each activity you did today. See your total.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -40,7 +40,7 @@ struct Scene7_WaterAudit: View {
                         if checked.contains(item.id) { checked.remove(item.id) }
                         else { checked.insert(item.id) }
                     }
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 540)

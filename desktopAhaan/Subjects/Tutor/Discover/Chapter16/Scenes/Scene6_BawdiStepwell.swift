@@ -10,7 +10,7 @@ struct Scene6_BawdiStepwell: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Bawdi — the Stepwell").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Bawdi — the Stepwell").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Ancient Indian water architecture. Slide down to the cool depths.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 

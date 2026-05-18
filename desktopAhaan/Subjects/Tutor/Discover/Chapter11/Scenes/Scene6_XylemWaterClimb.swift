@@ -11,7 +11,7 @@ struct Scene6_XylemWaterClimb: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Xylem Water Climb").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Xylem Water Climb").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Put celery in coloured water. Watch the dye climb the stem.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

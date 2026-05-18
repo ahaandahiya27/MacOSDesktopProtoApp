@@ -226,7 +226,7 @@ private struct IngredientTile: View {
         .frame(width: 78, height: 70)
         .background(
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(filled ? color.opacity(0.18) : Color.gray.opacity(0.08))
+                .fill(filled ? color.opacity(0.18) : Color.white.opacity(0.95))
         )
         .overlay(
             RoundedRectangle(cornerRadius: 10, style: .continuous)

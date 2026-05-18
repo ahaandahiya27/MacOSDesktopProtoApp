@@ -20,14 +20,14 @@ struct Scene8_WaterPledge: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("World Water Day Pledge").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("World Water Day Pledge").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Pick the pledges you'll keep this month.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 8) {
                 ForEach(0..<pledges.count, id: \.self) { i in
                     Toggle(texts[i], isOn: $pledges[i])
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 560).padding(.horizontal, 24)

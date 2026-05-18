@@ -104,7 +104,7 @@ struct Scene7_TheCocoonReel: View {
                 systemImage: "exclamationmark.circle",
                 title: "Why is the pupa killed?",
                 tint: .orange,
-                background: Color.gray.opacity(0.08)
+                background: Color.white.opacity(0.95)
             ) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Traditional silk production kills the pupa inside the cocoon before reeling so the cocoon remains whole and the fibre unbroken.")

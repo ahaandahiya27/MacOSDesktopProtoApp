@@ -25,7 +25,7 @@ struct Scene2_SandClayLoam: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 12) {
@@ -44,7 +44,7 @@ struct Scene2_SandClayLoam: View {
                         }
                     }
                     .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 620)

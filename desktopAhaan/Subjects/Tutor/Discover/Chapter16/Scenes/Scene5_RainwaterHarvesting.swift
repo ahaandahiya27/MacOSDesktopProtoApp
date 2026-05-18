@@ -13,7 +13,7 @@ struct Scene5_RainwaterHarvesting: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Rainwater Harvesting").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Rainwater Harvesting").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Add gutters and a tank to your roof. Catch the rain.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

@@ -21,7 +21,7 @@ struct Scene8_SafetyLab: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap Safe or Unsafe for each action.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -37,7 +37,7 @@ struct Scene8_SafetyLab: View {
                         }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 680).padding(.horizontal, 24)

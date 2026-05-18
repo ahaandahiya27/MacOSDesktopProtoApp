@@ -73,7 +73,7 @@ struct Scene8_FibreVsFibreGame: View {
             .frame(height: 200)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 24)
-            .background(Color.gray.opacity(0.05))
+            .background(Color.white.opacity(0.95))
             .cornerRadius(8)
 
             // Drop zones

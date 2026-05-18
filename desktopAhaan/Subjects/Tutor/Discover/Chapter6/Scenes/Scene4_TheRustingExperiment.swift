@@ -156,7 +156,7 @@ struct Scene4_TheRustingExperiment: View {
             ZStack(alignment: .bottom) {
                 // Tube outline
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(Color.gray.opacity(0.05))
+                    .fill(Color.white.opacity(0.95))
                     .frame(width: 80, height: height)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10, style: .continuous)

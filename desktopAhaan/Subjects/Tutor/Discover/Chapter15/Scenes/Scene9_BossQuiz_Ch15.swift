@@ -40,7 +40,7 @@ struct Scene9_BossQuiz_Ch15: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
 
             if !done {
@@ -68,7 +68,7 @@ struct Scene9_BossQuiz_Ch15: View {
                                 }
                             }
                             .padding(12)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.08)))
+                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                         }
                         .buttonStyle(.plain)
                     }

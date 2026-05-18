@@ -76,7 +76,7 @@ struct DiscoveryToggle: View {
             Text(optionA).tag(true)
             Text(optionB).tag(false)
         }
-        .pickerStyle(.segmented)
+        .pickerStyle(.segmented).discoverControlChrome()
         .accentColor(.green)
         .accessibilityValue(selectionIsA ? optionA : optionB)
     }

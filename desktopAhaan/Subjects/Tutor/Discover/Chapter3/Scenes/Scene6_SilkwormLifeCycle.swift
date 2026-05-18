@@ -132,7 +132,7 @@ struct Scene6_SilkwormLifeCycle: View {
     private func stageNodeLabel(_ stage: LifeStage, index: Int) -> some View {
         let bgColor: Color = (currentStage == index)
             ? Color.compatIndigo.opacity(0.15)
-            : Color.gray.opacity(0.05)
+            : Color.white.opacity(0.95)
         let borderColor: Color = (currentStage == index) ? Color.compatIndigo : Color.clear
         VStack(spacing: 6) {
             Text(stage.emoji)

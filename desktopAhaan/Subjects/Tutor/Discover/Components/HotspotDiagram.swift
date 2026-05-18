@@ -119,7 +119,7 @@ struct HotspotDiagram: View {
         .frame(width: size, height: size)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.gray.opacity(0.05))
+                .fill(Color.white.opacity(0.95))
         )
     }
 

@@ -27,7 +27,7 @@ struct Scene6_ThunderstormSafety: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Thunderstorm Safety").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Thunderstorm Safety").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap Safe or Unsafe for each action.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -47,7 +47,7 @@ struct Scene6_ThunderstormSafety: View {
                         }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 620)

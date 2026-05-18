@@ -23,7 +23,7 @@ struct Scene2_WWTPStageBuilder: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             HStack(spacing: 6) {
@@ -35,7 +35,7 @@ struct Scene2_WWTPStageBuilder: View {
                         }
                         .padding(6)
                         .frame(width: 90)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.06)))
+                        .background(RoundedRectangle(cornerRadius: 8).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                     }
                     .buttonStyle(.plain)
                 }

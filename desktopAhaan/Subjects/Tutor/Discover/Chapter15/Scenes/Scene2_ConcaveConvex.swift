@@ -23,13 +23,13 @@ struct Scene2_ConcaveConvex: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Concave & Convex Mirrors").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Concave & Convex Mirrors").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Curved mirrors stretch, shrink and even flip the image.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $m) {
                 ForEach(Mirror.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 320)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 320)
 
             HStack(spacing: 30) {
                 Text("🙂").font(.system(size: 64))

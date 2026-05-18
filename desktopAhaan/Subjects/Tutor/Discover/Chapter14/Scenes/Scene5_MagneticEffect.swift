@@ -10,12 +10,12 @@ struct Scene5_MagneticEffect: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Magnetic Effect").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Magnetic Effect").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Place a compass near a wire. Turn current on — needle swings.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
-                RoundedRectangle(cornerRadius: 18).fill(Color.gray.opacity(0.08))
+                RoundedRectangle(cornerRadius: 18).fill(Color.white.opacity(0.95))
                     .frame(width: 320, height: 220)
                 Rectangle().fill(currentOn ? Color.compatIndigo : Color.gray)
                     .frame(width: 240, height: 6)

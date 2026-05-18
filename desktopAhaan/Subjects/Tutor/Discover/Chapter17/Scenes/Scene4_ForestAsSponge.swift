@@ -11,14 +11,14 @@ struct Scene4_ForestAsSponge: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Forest as Sponge").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Forest as Sponge").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Toggle the forest cover. Pour the same rain on both.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $hasForest) {
                 Text("🌳 With forest").tag(true)
                 Text("🪓 Cleared land").tag(false)
-            }.pickerStyle(.segmented).frame(maxWidth: 320)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 320)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.compatCyan.opacity(0.12))

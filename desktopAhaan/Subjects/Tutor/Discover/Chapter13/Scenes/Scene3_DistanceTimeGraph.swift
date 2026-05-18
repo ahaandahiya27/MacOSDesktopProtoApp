@@ -16,13 +16,13 @@ struct Scene3_DistanceTimeGraph: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Distance–Time Graph").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Distance–Time Graph").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Pick a motion. Watch how the line changes shape.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $motion) {
                 ForEach(Motion.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 460)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 460)
 
             DistanceTimePlot(motion: motion)
                 .frame(width: 360, height: 240)
@@ -94,7 +94,7 @@ private struct DistanceTimePlot: View {
         let layout = PlotLayout(size: size)
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.gray.opacity(0.06))
+                .fill(Color.white.opacity(0.95))
 
             GridShape(layout: layout)
                 .stroke(Color.gray.opacity(0.20),

@@ -12,14 +12,14 @@ struct Scene1_MirrorMirror: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Slide the incoming ray. The reflected ray follows the law.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // Diagram canvas. Mirror is the horizontal line at the bottom;
             // hit point is the centre of that line. Normal goes straight up.
             ZStack {
-                RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.06))
+                RoundedRectangle(cornerRadius: 16).fill(Color.white.opacity(0.95))
                     .frame(width: 360, height: 240)
 
                 MirrorDiagram(angle: angle)

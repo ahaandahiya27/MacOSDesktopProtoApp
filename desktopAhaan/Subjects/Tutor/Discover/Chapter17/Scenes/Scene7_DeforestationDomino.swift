@@ -18,7 +18,7 @@ struct Scene7_DeforestationDomino: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Deforestation Domino").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Deforestation Domino").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Each domino is a consequence. Tap to topple them.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -32,7 +32,7 @@ struct Scene7_DeforestationDomino: View {
                         if i < fallen { Image(systemName: "arrow.down").foregroundColor(.red) }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     .offset(x: i < fallen ? 0 : -20)
                     .opacity(i < fallen ? 1 : 0.55)
                     .animation(.easeOut(duration: 0.35), value: fallen)

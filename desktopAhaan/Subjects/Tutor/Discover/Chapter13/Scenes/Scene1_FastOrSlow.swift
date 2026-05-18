@@ -26,7 +26,7 @@ struct Scene1_FastOrSlow: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Drag/tap to order these from slowest → fastest.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -40,7 +40,7 @@ struct Scene1_FastOrSlow: View {
                         Button("↓") { swapDown(i) }.disabled(i == current.count - 1)
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 480)

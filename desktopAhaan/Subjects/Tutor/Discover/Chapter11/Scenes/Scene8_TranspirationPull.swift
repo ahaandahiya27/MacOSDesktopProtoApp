@@ -13,7 +13,7 @@ struct Scene8_TranspirationPull: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Transpiration Pull").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Transpiration Pull").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Cover a leafy branch with polythene. Watch water vapour collect.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

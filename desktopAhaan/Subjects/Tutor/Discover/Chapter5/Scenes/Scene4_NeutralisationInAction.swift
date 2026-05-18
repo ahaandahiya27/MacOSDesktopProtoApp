@@ -44,7 +44,7 @@ struct Scene4_NeutralisationInAction: View {
                         // Central mixing beaker
                         ZStack(alignment: .bottom) {
                             RoundedRectangle(cornerRadius: 8, style: .continuous)
-                                .fill(Color.gray.opacity(0.08))
+                                .fill(Color.white.opacity(0.95))
                                 .frame(width: 120, height: 160)
 
                             RoundedRectangle(cornerRadius: 6, style: .continuous)
@@ -163,7 +163,7 @@ struct Scene4_NeutralisationInAction: View {
         VStack(spacing: 6) {
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 6, style: .continuous)
-                    .fill(Color.gray.opacity(0.08))
+                    .fill(Color.white.opacity(0.95))
                     .frame(width: 60, height: 90)
 
                 RoundedRectangle(cornerRadius: 4, style: .continuous)

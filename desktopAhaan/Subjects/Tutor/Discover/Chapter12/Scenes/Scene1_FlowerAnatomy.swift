@@ -26,7 +26,7 @@ struct Scene1_FlowerAnatomy: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Flower Anatomy").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Flower Anatomy").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap a part to find out what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
@@ -43,7 +43,7 @@ struct Scene1_FlowerAnatomy: View {
                             Text(p.rawValue).font(.caption)
                         }
                         .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(pick == p ? Color.compatIndigo.opacity(0.15) : Color.gray.opacity(0.05)))
+                        .background(RoundedRectangle(cornerRadius: 8).fill(pick == p ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                     }
                     .buttonStyle(.plain)
                 }

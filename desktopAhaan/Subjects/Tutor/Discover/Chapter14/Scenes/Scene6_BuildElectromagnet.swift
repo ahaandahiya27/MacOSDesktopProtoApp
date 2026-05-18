@@ -12,12 +12,12 @@ struct Scene6_BuildElectromagnet: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Build an Electromagnet").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Build an Electromagnet").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Wrap more turns of wire around the iron nail. Watch it grab more clips.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack {
-                RoundedRectangle(cornerRadius: 18).fill(Color.gray.opacity(0.08))
+                RoundedRectangle(cornerRadius: 18).fill(Color.white.opacity(0.95))
                     .frame(width: 320, height: 220)
                 VStack(spacing: 6) {
                     Text("🔩").font(.system(size: 60))

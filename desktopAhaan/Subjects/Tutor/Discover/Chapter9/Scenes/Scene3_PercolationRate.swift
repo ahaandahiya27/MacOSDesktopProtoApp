@@ -34,12 +34,12 @@ struct Scene3_PercolationRate: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Percolation Rate").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Percolation Rate").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Pour the same amount of water. How fast does it sink through?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $soil) {
                 ForEach(Soil.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 360)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 360)
 
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 14).fill(Color.gray.opacity(0.15))

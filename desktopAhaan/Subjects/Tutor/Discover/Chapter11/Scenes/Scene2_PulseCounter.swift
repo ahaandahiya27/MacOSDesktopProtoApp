@@ -14,7 +14,7 @@ struct Scene2_PulseCounter: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Pulse Counter").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Pulse Counter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Press Start. Tap the heart with every pulse for 15 seconds.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 

@@ -24,7 +24,7 @@ struct Scene4_ElectricIron: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Inside an Electric Iron").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Inside an Electric Iron").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap any part to see what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
@@ -36,7 +36,7 @@ struct Scene4_ElectricIron: View {
 
             Picker("", selection: $pick) {
                 ForEach(Part.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 520).padding(.horizontal, 16)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, 16)
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {

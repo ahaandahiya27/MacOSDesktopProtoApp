@@ -15,12 +15,12 @@ struct Scene8_AnemometerReader: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Anemometer Reader").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Anemometer Reader").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Slide to spin the cups. Faster spin = stronger wind.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
-                Circle().fill(Color.gray.opacity(0.08)).frame(width: 240, height: 240)
+                Circle().fill(Color.white.opacity(0.95)).frame(width: 240, height: 240)
                 ForEach(0..<3, id: \.self) { i in
                     Text("🥣")
                         .font(.system(size: 36))

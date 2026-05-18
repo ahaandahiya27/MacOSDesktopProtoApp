@@ -21,7 +21,7 @@ struct Scene5_SeedDispersal: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Seed Dispersal").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Seed Dispersal").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("How does each seed travel away from its parent?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
@@ -40,7 +40,7 @@ struct Scene5_SeedDispersal: View {
                         }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 640).padding(.horizontal, 24)

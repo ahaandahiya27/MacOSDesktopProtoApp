@@ -337,6 +337,27 @@ struct DevanagariAwareFont: ViewModifier {
 }
 
 extension View {
+    /// Solid-white pill chrome for on-canvas controls (segmented Pickers,
+    /// Menus, Toggles) in Discover Mode. The native macOS rendering of
+    /// these controls uses a translucent background that disappears
+    /// against the pale Discover gradient — the kid sees "ghost" labels
+    /// floating on the canvas. This modifier gives every control an
+    /// opaque card so the labels always pop, regardless of system
+    /// appearance or chapter accent hue.
+    func discoverControlChrome() -> some View {
+        self
+            .padding(.horizontal, 8)
+            .padding(.vertical, 6)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.white.opacity(0.95))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .strokeBorder(Color.black.opacity(0.12), lineWidth: 0.5)
+                    )
+            )
+    }
+
     func devanagariFont(size: CGFloat = 17) -> some View {
         modifier(DevanagariFont(size: size))
     }

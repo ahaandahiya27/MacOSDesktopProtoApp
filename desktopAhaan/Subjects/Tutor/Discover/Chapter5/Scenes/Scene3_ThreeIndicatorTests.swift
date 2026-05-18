@@ -164,7 +164,7 @@ struct Scene3_ThreeIndicatorTests: View {
             // Test tube shape
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(Color.gray.opacity(0.08))
+                    .fill(Color.white.opacity(0.95))
                     .frame(width: 60, height: height * 0.6)
 
                 RoundedRectangle(cornerRadius: 10, style: .continuous)

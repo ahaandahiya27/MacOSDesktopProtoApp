@@ -27,14 +27,14 @@ struct Scene6_InsectsWorms: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("How Insects & Worms Breathe").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("How Insects & Worms Breathe").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Each species solved \"how to get oxygen\" differently.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $pick) {
                 ForEach(Creature.allCases) { Text($0.rawValue).tag($0) }
             }
-            .pickerStyle(.segmented).frame(maxWidth: 380)
+            .pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 380)
 
             ZStack {
                 RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.10))

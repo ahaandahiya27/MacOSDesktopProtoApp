@@ -10,15 +10,24 @@ struct SoftShadowCard<Content: View>: View {
     var body: some View {
         content()
             .padding(padding)
+            // Fixed-light fill (not Color(NSColor.windowBackgroundColor),
+            // which adapts to dark mode and turns this card into a dark
+            // slab on the still-pale Discover canvas — the visible
+            // "camouflage" symptom the kid sees on the iMac). The canvas
+            // is locked-light by design, so the cards on it must be too.
             .background(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .fill(Color(NSColor.windowBackgroundColor))
+                    .fill(Color.white)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .strokeBorder(Color.primary.opacity(0.08), lineWidth: 0.5)
+                    .strokeBorder(Color.black.opacity(0.10), lineWidth: 0.5)
             )
-            .shadow(color: .black.opacity(0.08), radius: 14, x: 0, y: 6)
+            .shadow(color: .black.opacity(0.10), radius: 14, x: 0, y: 6)
+            // Force any inherited `.foregroundColor(.primary)` inside the
+            // card to read as a fixed-light token, so dark-mode users
+            // don't get white text on a now-white card.
+            .foregroundColor(DesignTokens.BrandColor.canvasText)
     }
 }
 

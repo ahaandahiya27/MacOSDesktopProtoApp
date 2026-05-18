@@ -17,14 +17,14 @@ struct Scene3_LandBreezeSeaBreeze: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Land Breeze, Sea Breeze").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Land Breeze, Sea Breeze").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Pick Day or Night. Which way does the breeze blow?")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $time) {
                 ForEach(TimeOfDay.allCases) { Text($0.rawValue).tag($0) }
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(.segmented).discoverControlChrome()
             .frame(maxWidth: 280)
 
             ZStack {

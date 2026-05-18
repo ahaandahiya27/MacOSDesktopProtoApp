@@ -11,12 +11,12 @@ struct Scene7_FuseMCB: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Fuse & MCB").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Fuse & MCB").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Push the current up. The fuse melts (or the MCB trips) past its rating.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
             ZStack {
-                RoundedRectangle(cornerRadius: 18).fill(Color.gray.opacity(0.08))
+                RoundedRectangle(cornerRadius: 18).fill(Color.white.opacity(0.95))
                     .frame(width: 320, height: 200)
                 VStack {
                     Text(blown ? "💥" : "🔌").font(.system(size: 60))

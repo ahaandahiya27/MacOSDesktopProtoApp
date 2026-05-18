@@ -26,13 +26,13 @@ struct Scene6_VegetativePropagation: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("No flowers, no seeds — these plants clone themselves.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             Picker("", selection: $plant) {
                 ForEach(Plant.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).frame(maxWidth: 460)
+            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 460)
 
             Text(plant.emoji).font(.system(size: 96))
 

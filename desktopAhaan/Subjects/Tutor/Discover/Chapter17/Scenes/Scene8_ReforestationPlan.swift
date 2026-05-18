@@ -18,7 +18,7 @@ struct Scene8_ReforestationPlan: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Reforestation Plan").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Reforestation Plan").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Pick actions you'll commit to. We'll count the trees you help.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
@@ -26,7 +26,7 @@ struct Scene8_ReforestationPlan: View {
                 ForEach(0..<actions.count, id: \.self) { i in
                     Toggle(texts[i], isOn: $actions[i])
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 560)

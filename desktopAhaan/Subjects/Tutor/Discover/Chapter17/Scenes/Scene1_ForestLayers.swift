@@ -22,7 +22,7 @@ struct Scene1_ForestLayers: View {
 
     var body: some View {
         VStack(spacing: 14) {
-            Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("A forest is built like a 4-storey building. Tap each floor.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

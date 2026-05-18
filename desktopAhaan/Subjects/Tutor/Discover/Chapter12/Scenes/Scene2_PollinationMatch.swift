@@ -22,7 +22,7 @@ struct Scene2_PollinationMatch: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(ChapterTheme.accent(for: chapter.id)).padding(.top, 18)
+            Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             VStack(spacing: 10) {
@@ -41,7 +41,7 @@ struct Scene2_PollinationMatch: View {
                         }
                     }
                     .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.06)))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
             }
             .frame(maxWidth: 640).padding(.horizontal, 24)
