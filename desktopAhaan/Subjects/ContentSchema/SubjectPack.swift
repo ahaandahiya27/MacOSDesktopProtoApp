@@ -85,6 +85,17 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         SubjectPackIndexCache.shared.needsHumanReviewIds(for: self)
     }
 
+    /// Chapter ID → Chapter lookup. Replaces `pack.chapters.first(where:)`
+    /// scans in TutorNavigation, ChapterListView, DiscoverProgressDashboard,
+    /// etc. — was O(chapters.count) per call.
+    var chapterIndex: [String: Chapter] {
+        SubjectPackIndexCache.shared.chapterIndex(for: self)
+    }
+
+    fileprivate func buildChapterIndex() -> [String: Chapter] {
+        Dictionary(uniqueKeysWithValues: chapters.map { ($0.id, $0) })
+    }
+
     fileprivate func buildNeedsHumanReviewIds() -> Set<String> {
         Set(allQuestions.lazy.filter { $0.needsHumanReview }.map { $0.id })
     }
@@ -156,6 +167,7 @@ final class SubjectPackIndexCache {
     private var conceptIndices: [String: [String: Concept]] = [:]
     private var questionIndices: [String: [String: Question]] = [:]
     private var needsHumanReviewIdSets: [String: Set<String>] = [:]
+    private var chapterIndices: [String: [String: Chapter]] = [:]
 
     func conceptIndex(for pack: SubjectPack) -> [String: Concept] {
         lock.lock(); defer { lock.unlock() }
@@ -187,6 +199,16 @@ final class SubjectPackIndexCache {
         return built
     }
 
+    func chapterIndex(for pack: SubjectPack) -> [String: Chapter] {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = chapterIndices[pack.id] {
+            return cached
+        }
+        let built = pack.buildChapterIndex()
+        chapterIndices[pack.id] = built
+        return built
+    }
+
     /// Drops any cached indices. Called by `SubjectRegistry.reload()` so
     /// post-reload pack content isn't read through a stale dictionary.
     func invalidateAll() {
@@ -194,5 +216,6 @@ final class SubjectPackIndexCache {
         conceptIndices.removeAll()
         questionIndices.removeAll()
         needsHumanReviewIdSets.removeAll()
+        chapterIndices.removeAll()
     }
 }

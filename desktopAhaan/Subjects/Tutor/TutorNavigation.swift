@@ -156,7 +156,7 @@ struct TutorNavigationContainer<Root: View>: View {
     @ViewBuilder
     private func chapterDetail(packId: String, chapterId: String) -> some View {
         if let pack = subjectRegistry.pack(withId: packId),
-           let chapter = pack.chapters.first(where: { $0.id == chapterId }) {
+           let chapter = pack.chapterIndex[chapterId] {
             ChapterDetailView(pack: pack, chapter: chapter)
         } else {
             RouteNotFoundView(kind: "chapter", packId: packId,
@@ -200,7 +200,7 @@ struct TutorNavigationContainer<Root: View>: View {
     @ViewBuilder
     private func discoverDetail(packId: String, chapterId: String) -> some View {
         if let pack = subjectRegistry.pack(withId: packId),
-           let chapter = pack.chapters.first(where: { $0.id == chapterId }) {
+           let chapter = pack.chapterIndex[chapterId] {
             DiscoverMode.view(for: pack, chapter: chapter)
         } else {
             RouteNotFoundView(kind: "discover-chapter", packId: packId,

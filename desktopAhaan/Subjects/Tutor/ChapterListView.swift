@@ -10,11 +10,15 @@ struct ChapterListView: View {
     /// the "Continue where you left off" card. Nil if the kid hasn't touched
     /// Discover Mode yet.
     private var mostRecent: (Chapter, DiscoverProgress)? {
+        // O(1) lookup via cached chapter index instead of two linear scans
+        // per body render (one filter contains() per progress row + one
+        // first(where:) on the top match).
+        let chapterIndex = pack.chapterIndex
         let rows = dataStore.discoverProgress
-            .filter { row in pack.chapters.contains(where: { $0.id == row.chapterId }) }
+            .filter { row in chapterIndex[row.chapterId] != nil }
             .sorted { $0.completedAt > $1.completedAt }
         guard let top = rows.first,
-              let chapter = pack.chapters.first(where: { $0.id == top.chapterId })
+              let chapter = chapterIndex[top.chapterId]
         else { return nil }
         return (chapter, top)
     }

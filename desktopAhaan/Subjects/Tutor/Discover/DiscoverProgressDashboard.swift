@@ -22,9 +22,10 @@ private struct DiscoverProgressContent: View {
 
     private var chapters: [Chapter] {
         guard let pack = pack else { return [] }
-        return DiscoverMode.supportedChapterIds.compactMap { id in
-            pack.chapters.first(where: { $0.id == id })
-        }
+        // O(1) dict lookup vs O(N) first(where:) per supportedChapterId
+        // (was 19 × 19 = 361 comparisons per dashboard render).
+        let index = pack.chapterIndex
+        return DiscoverMode.supportedChapterIds.compactMap { index[$0] }
     }
 
     private var totalCompleted: Int {
