@@ -13,70 +13,77 @@ struct Scene2_PulseCounter: View {
     @State private var runID: UUID = UUID()
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Pulse Counter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Press Start. Tap the heart with every pulse for 15 seconds.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Pulse Counter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Press Start. Tap the heart with every pulse for 15 seconds.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
-            if counting {
-                Text("\(secondsLeft)s")
-                    .font(.system(size: 48, weight: .bold, design: .monospaced))
-                    .foregroundColor(Color.compatIndigo)
-            } else if let bpm = bpm {
-                Text("Your pulse: \(bpm) BPM")
-                    .font(.title2.bold())
-                    .foregroundColor(.green)
-            }
-
-            Text("❤️")
-                .font(.system(size: 96))
-                .onTapGesture { if counting { taps += 1 } }
-                .accessibilityLabel("Tap with every pulse")
-
-            Text(counting ? "Taps so far: \(taps)" : " ")
-                .font(.headline.monospacedDigit())
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-            HStack(spacing: 16) {
-                Button(counting ? "Counting…" : "Start 15s") {
-                    counting = true
-                    taps = 0
-                    secondsLeft = 15
-                    bpm = nil
-                    let token = UUID()
-                    runID = token
-                    tick(token: token)
+                if counting {
+                    Text("\(secondsLeft)s")
+                        .font(.system(size: 48, weight: .bold, design: .monospaced))
+                        .foregroundColor(Color.compatIndigo)
+                } else if let bpm = bpm {
+                    Text("Your pulse: \(bpm) BPM")
+                        .font(.title2.bold())
+                        .foregroundColor(.green)
                 }
-                .accentColor(Color.compatIndigo)
-                .disabled(counting)
 
-                Button("Reset") {
-                    counting = false
-                    runID = UUID()         // invalidate any pending tick
-                    taps = 0
-                    bpm = nil
-                    secondsLeft = 15
+                Text("❤️")
+                    .font(.system(size: 96))
+                    .onTapGesture { if counting { taps += 1 } }
+                    .accessibilityLabel("Tap with every pulse")
+
+                Text(counting ? "Taps so far: \(taps)" : " ")
+                    .font(.headline.monospacedDigit())
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+
+                HStack(spacing: 16) {
+                    Button(counting ? "Counting…" : "Start 15s") {
+                        counting = true
+                        taps = 0
+                        secondsLeft = 15
+                        bpm = nil
+                        let token = UUID()
+                        runID = token
+                        tick(token: token)
+                    }
+                    .accentColor(Color.compatIndigo)
+                    .disabled(counting)
+
+                    Button("Reset") {
+                        counting = false
+                        runID = UUID()         // invalidate any pending tick
+                        taps = 0
+                        bpm = nil
+                        secondsLeft = 15
+                    }
                 }
+
+                SoftShadowCard(padding: 14) {
+                    Text("Resting pulse for kids is usually 70–100 BPM. After exercise it climbs above 120. Athletes can dip below 60 because their hearts pump more blood per beat.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Find your real pulse",
+                    detail: "Press two fingers (not the thumb) on the inside of your wrist, below the base of the thumb. Count the beats for 15 seconds. Multiply by 4 to get your beats-per-minute."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-
-            SoftShadowCard(padding: 14) {
-                Text("Resting pulse for kids is usually 70–100 BPM. After exercise it climbs above 120. Athletes can dip below 60 because their hearts pump more blood per beat.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Find your real pulse",
-                detail: "Press two fingers (not the thumb) on the inside of your wrist, below the base of the thumb. Count the beats for 15 seconds. Multiply by 4 to get your beats-per-minute."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onDisappear { runID = UUID() }   // invalidate on navigate-away
+        .onDisappear { runID = UUID() }
     }
 
     /// `token` is captured at start of run. On each tick we compare to the

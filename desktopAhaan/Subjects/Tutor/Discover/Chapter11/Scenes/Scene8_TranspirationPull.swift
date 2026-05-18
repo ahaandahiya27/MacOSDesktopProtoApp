@@ -12,81 +12,88 @@ struct Scene8_TranspirationPull: View {
     @State private var runID: UUID = UUID()
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Transpiration Pull").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Cover a leafy branch with polythene. Watch water vapour collect.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Transpiration Pull").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Cover a leafy branch with polythene. Watch water vapour collect.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            ZStack {
-                RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.10))
-                    .frame(width: 320, height: 260)
-                VStack(spacing: 6) {
-                    if covered {
-                        Text("💧💧💧").font(.system(size: 36))
-                            .opacity(seconds >= 3 ? 1 : 0)
-                    }
-                    Text("🌿").font(.system(size: 80))
-                }
-            }
-            .overlay(
-                covered
-                ? RoundedRectangle(cornerRadius: 18)
-                    .strokeBorder(Color.blue.opacity(0.6), style: StrokeStyle(lineWidth: 3, dash: [6]))
-                    .frame(width: 320, height: 260)
-                : nil
-            )
-
-            HStack(spacing: 16) {
-                Button(covered ? "Remove cover" : "Add polythene cover") {
-                    covered.toggle()
-                    if covered {
-                        let token = UUID()
-                        runID = token
-                        seconds = 0
-                        advance(token: token)
-                    } else {
-                        runID = UUID()  // invalidate any pending advance
-                        seconds = 0
+                ZStack {
+                    RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.10))
+                        .frame(width: 320, height: 260)
+                    VStack(spacing: 6) {
+                        if covered {
+                            Text("💧💧💧").font(.system(size: 36))
+                                .opacity(seconds >= 3 ? 1 : 0)
+                        }
+                        Text("🌿").font(.system(size: 80))
                     }
                 }
-                .accentColor(Color.compatIndigo)
-                if covered { Text("\(seconds)s").font(.headline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary) }
-            }
+                .overlay(
+                    covered
+                    ? RoundedRectangle(cornerRadius: 18)
+                        .strokeBorder(Color.blue.opacity(0.6), style: StrokeStyle(lineWidth: 3, dash: [6]))
+                        .frame(width: 320, height: 260)
+                    : nil
+                )
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Plants sweat — and it pulls water up", systemImage: SFSymbolCompat.name("drop.degreesign"))
-                        .font(.title2.bold())
-                    Text("Water vapour leaves through stomata in the leaf. This loss creates a suction that drags more water up the xylem all the way from the roots — like sipping through a straw, but powered by evaporation.")
-                        .font(.body).lineSpacing(4)
+                HStack(spacing: 16) {
+                    Button(covered ? "Remove cover" : "Add polythene cover") {
+                        covered.toggle()
+                        if covered {
+                            let token = UUID()
+                            runID = token
+                            seconds = 0
+                            advance(token: token)
+                        } else {
+                            runID = UUID()  // invalidate any pending advance
+                            seconds = 0
+                        }
+                    }
+                    .accentColor(Color.compatIndigo)
+                    if covered { Text("\(seconds)s").font(.headline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary) }
                 }
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Plants sweat — and it pulls water up", systemImage: SFSymbolCompat.name("drop.degreesign"))
+                            .font(.title2.bold())
+                        Text("Water vapour leaves through stomata in the leaf. This loss creates a suction that drags more water up the xylem all the way from the roots — like sipping through a straw, but powered by evaporation.")
+                            .font(.body).lineSpacing(4)
+                    }
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 11 Bio → NEET",
+                    detail: "Class 11 'Transport in Plants' covers the cohesion-tension theory of water ascent — water columns can support a tension of several MPa because of hydrogen bonding between molecules. Lets trees as tall as 100m get water from root to canopy. NEET high-yield."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Bag a leaf",
+                    detail: "Tie a clear polythene bag over a leafy branch of a potted plant outdoors. Tighten with a string. Come back 2 hours later — droplets of water have collected inside the bag. The leaves were sweating."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                RelatedConceptsCallout(
+                    title: "Related: Ch 1 (Nutrition in Plants), Ch 16 (Water)",
+                    detail: "Transpiration carries water + dissolved minerals to the leaves — where Ch 1's photosynthesis uses them. And every litre a tree transpires came from the water cycle covered in Ch 16."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Bio → NEET",
-                detail: "Class 11 'Transport in Plants' covers the cohesion-tension theory of water ascent — water columns can support a tension of several MPa because of hydrogen bonding between molecules. Lets trees as tall as 100m get water from root to canopy. NEET high-yield."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Bag a leaf",
-                detail: "Tie a clear polythene bag over a leafy branch of a potted plant outdoors. Tighten with a string. Come back 2 hours later — droplets of water have collected inside the bag. The leaves were sweating."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            RelatedConceptsCallout(
-                title: "Related: Ch 1 (Nutrition in Plants), Ch 16 (Water)",
-                detail: "Transpiration carries water + dissolved minerals to the leaves — where Ch 1's photosynthesis uses them. And every litre a tree transpires came from the water cycle covered in Ch 16."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onDisappear { runID = UUID() }
     }

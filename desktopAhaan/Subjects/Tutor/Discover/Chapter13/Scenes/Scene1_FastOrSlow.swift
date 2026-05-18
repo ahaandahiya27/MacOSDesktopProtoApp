@@ -25,73 +25,80 @@ struct Scene1_FastOrSlow: View {
     }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Drag/tap to order these from slowest → fastest.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Drag/tap to order these from slowest → fastest.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 8) {
-                ForEach(Array(current.enumerated()), id: \.element.id) { i, v in
-                    HStack {
-                        Text("\(i + 1).").font(.headline).frame(width: 30)
-                        Text(v.name).font(.headline)
-                        Spacer()
-                        Button("↑") { swapUp(i) }.disabled(i == 0)
-                        Button("↓") { swapDown(i) }.disabled(i == current.count - 1)
+                VStack(spacing: 8) {
+                    ForEach(Array(current.enumerated()), id: \.element.id) { i, v in
+                        HStack {
+                            Text("\(i + 1).").font(.headline).frame(width: 30)
+                            Text(v.name).font(.headline)
+                            Spacer()
+                            Button("↑") { swapUp(i) }.disabled(i == 0)
+                            Button("↓") { swapDown(i) }.disabled(i == current.count - 1)
+                        }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                 }
-            }
-            .frame(maxWidth: 480)
+                .frame(maxWidth: 480)
 
-            HStack(spacing: 16) {
-                Button("Check") { done = true }.accentColor(Color.compatIndigo)
-                Button("Shuffle") { current.shuffle(); done = false }
-            }
+                HStack(spacing: 16) {
+                    Button("Check") { done = true }.accentColor(Color.compatIndigo)
+                    Button("Shuffle") { current.shuffle(); done = false }
+                }
 
-            if done {
-                Text("Score: \(score) / \(correctOrder.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
+                if done {
+                    Text("Score: \(score) / \(correctOrder.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
 
-            SoftShadowCard(padding: 14) {
-                Text("Speed = distance ÷ time. A cycle ≈ 15 km/h, a car ≈ 80, a train ≈ 160, a plane ≈ 900. Bigger speed = covers more ground per minute.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                SoftShadowCard(padding: 14) {
+                    Text("Speed = distance ÷ time. A cycle ≈ 15 km/h, a car ≈ 80, a train ≈ 160, a plane ≈ 900. Bigger speed = covers more ground per minute.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
-            Group {
-                LookingAheadCallout(
-                    title: "Class 11 Physics → JEE",
-                    detail: "Class 11 'Motion in a Straight Line' formalises speed (scalar) vs velocity (vector — direction matters). Average speed ≠ |average velocity| in general. JEE Kinematics tests this distinction in multi-segment journey problems every year."
+                // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
+                Group {
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE",
+                        detail: "Class 11 'Motion in a Straight Line' formalises speed (scalar) vs velocity (vector — direction matters). Average speed ≠ |average velocity| in general. JEE Kinematics tests this distinction in multi-segment journey problems every year."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Time a household member",
+                        detail: "Use a stopwatch and a measured 10-metre stretch. Time everyone in your family walking it. Compute their speeds in m/s. Repeat after they jog. Plot a tiny bar chart of resting vs jogging speeds."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+                }
+
+                DiscoveryWidget(
+                    title: "Discovery — pick a speed, see the journey",
+                    subtitle: "How long would 1000 km from Delhi to Mumbai take at different speeds?",
+                    value: $trySpeedKMH,
+                    range: 5...900,
+                    step: 5,
+                    valueLabel: { v in String(format: "Speed: %.0f km/h", v) },
+                    output: travelTimeExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
 
-                TryAtHomeCallout(
-                    title: "Time a household member",
-                    detail: "Use a stopwatch and a measured 10-metre stretch. Time everyone in your family walking it. Compute their speeds in m/s. Repeat after they jog. Plot a tiny bar chart of resting vs jogging speeds."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-
-            DiscoveryWidget(
-                title: "Discovery — pick a speed, see the journey",
-                subtitle: "How long would 1000 km from Delhi to Mumbai take at different speeds?",
-                value: $trySpeedKMH,
-                range: 5...900,
-                step: 5,
-                valueLabel: { v in String(format: "Speed: %.0f km/h", v) },
-                output: travelTimeExplanation
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear { if current.isEmpty { current = correctOrder.shuffled() } }
     }

@@ -12,71 +12,78 @@ struct Scene5_O2CO2Balance: View {
     private var co2: Int { 100 - o2 }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("O₂ ⇄ CO₂ Balance").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Forest cover ↔ atmospheric oxygen. Slide to see the effect.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("O₂ ⇄ CO₂ Balance").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Forest cover ↔ atmospheric oxygen. Slide to see the effect.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
-            HStack(spacing: 24) {
-                VStack {
-                    Text("O₂").font(.headline).foregroundColor(.green)
-                    ProgressView(value: Double(o2) / 100)
-                        .progressViewStyle(.linear).frame(width: 100, height: 12)
-                        .accentColor(.green)
-                    Text("\(o2)%").font(.headline.monospacedDigit())
+                HStack(spacing: 24) {
+                    VStack {
+                        Text("O₂").font(.headline).foregroundColor(.green)
+                        ProgressView(value: Double(o2) / 100)
+                            .progressViewStyle(.linear).frame(width: 100, height: 12)
+                            .accentColor(.green)
+                        Text("\(o2)%").font(.headline.monospacedDigit())
+                    }
+                    VStack {
+                        Text("CO₂").font(.headline).foregroundColor(.orange)
+                        ProgressView(value: Double(co2) / 100)
+                            .progressViewStyle(.linear).frame(width: 100, height: 12)
+                            .accentColor(.orange)
+                        Text("\(co2)%").font(.headline.monospacedDigit())
+                    }
                 }
-                VStack {
-                    Text("CO₂").font(.headline).foregroundColor(.orange)
-                    ProgressView(value: Double(co2) / 100)
-                        .progressViewStyle(.linear).frame(width: 100, height: 12)
-                        .accentColor(.orange)
-                    Text("\(co2)%").font(.headline.monospacedDigit())
+
+                Text("Forest cover: \(Int(coverage * 100))%")
+                    .font(.headline)
+                    .foregroundColor(Color.compatIndigo)
+                Slider(value: $coverage, in: 0...1).frame(maxWidth: 460).padding(.horizontal, 24)
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Trees are Earth's lungs", systemImage: "leaf.fill")
+                            .font(.title2.bold())
+                        Text("Forests absorb CO₂ during photosynthesis and release O₂. They also remove airborne dust and pollutants. Cutting forests adds CO₂ to the air — and removes the system that cleans it up.")
+                            .font(.body).lineSpacing(4)
+                    }
                 }
-            }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            Text("Forest cover: \(Int(coverage * 100))%")
-                .font(.headline)
-                .foregroundColor(Color.compatIndigo)
-            Slider(value: $coverage, in: 0...1).frame(maxWidth: 460).padding(.horizontal, 24)
+                // Grouped so the outer VStack stays within Swift 5.5's
+                // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+                Group {
+                    LookingAheadCallout(
+                        title: "Class 12 Bio → NEET",
+                        detail: "Class 12 'Ecosystem' formalises this as the carbon cycle, with quantitative carbon flux numbers. NEET asks ecosystem-level energy and carbon flow (10% rule, gross vs net primary productivity, decomposer role) every year. Climate change is studied in 'Environmental Issues'."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Trees are Earth's lungs", systemImage: "leaf.fill")
-                        .font(.title2.bold())
-                    Text("Forests absorb CO₂ during photosynthesis and release O₂. They also remove airborne dust and pollutants. Cutting forests adds CO₂ to the air — and removes the system that cleans it up.")
-                        .font(.body).lineSpacing(4)
+                    TryAtHomeCallout(
+                        title: "Limewater + leafy plant test",
+                        detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    RelatedConceptsCallout(
+                        title: "Related: Ch 1, Ch 10, Ch 11",
+                        detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
                 }
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            // Grouped so the outer VStack stays within Swift 5.5's
-            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
-            Group {
-                LookingAheadCallout(
-                    title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Ecosystem' formalises this as the carbon cycle, with quantitative carbon flux numbers. NEET asks ecosystem-level energy and carbon flow (10% rule, gross vs net primary productivity, decomposer role) every year. Climate change is studied in 'Environmental Issues'."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-
-                TryAtHomeCallout(
-                    title: "Limewater + leafy plant test",
-                    detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-
-                RelatedConceptsCallout(
-                    title: "Related: Ch 1, Ch 10, Ch 11",
-                    detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-            }
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

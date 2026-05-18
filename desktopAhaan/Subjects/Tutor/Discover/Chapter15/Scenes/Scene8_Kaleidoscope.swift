@@ -9,51 +9,58 @@ struct Scene8_Kaleidoscope: View {
     @State private var seed: Int = 1
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Kaleidoscope").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Tap the disc to shake the kaleidoscope. Each shake = new pattern.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Kaleidoscope").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Tap the disc to shake the kaleidoscope. Each shake = new pattern.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
-            ZStack {
-                Circle().fill(Color.black).frame(width: 240, height: 240)
-                ForEach(0..<6, id: \.self) { i in
-                    ForEach(0..<3, id: \.self) { j in
-                        KaleidoscopeTile(seed: seed, i: i, j: j)
+                ZStack {
+                    Circle().fill(Color.black).frame(width: 240, height: 240)
+                    ForEach(0..<6, id: \.self) { i in
+                        ForEach(0..<3, id: \.self) { j in
+                            KaleidoscopeTile(seed: seed, i: i, j: j)
+                        }
                     }
                 }
-            }
-            .onTapGesture { seed = Int.random(in: 1...100) }
+                .onTapGesture { seed = Int.random(in: 1...100) }
 
-            Button("Shake!") { seed = Int.random(in: 1...100) }
-                .accentColor(Color.compatIndigo)
+                Button("Shake!") { seed = Int.random(in: 1...100) }
+                    .accentColor(Color.compatIndigo)
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Symmetry from mirrors", systemImage: "sparkles")
-                        .font(.title2.bold())
-                    Text("Inside a kaleidoscope, 2 or 3 mirrors are arranged at angles. A few coloured beads at the bottom reflect across all the mirrors — creating a stunning symmetric pattern that changes with every twist.")
-                        .font(.body).lineSpacing(4)
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Symmetry from mirrors", systemImage: "sparkles")
+                            .font(.title2.bold())
+                        Text("Inside a kaleidoscope, 2 or 3 mirrors are arranged at angles. A few coloured beads at the bottom reflect across all the mirrors — creating a stunning symmetric pattern that changes with every twist.")
+                            .font(.body).lineSpacing(4)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 9/10 Maths + JEE",
+                    detail: "Class 9/10 Maths formalises this as 'Symmetry' — rotational order, lines of symmetry, reflection groups. Class 12 / JEE Chemistry covers molecular symmetry (point groups C₂, C₃, σ planes) using the same mathematical framework that makes a kaleidoscope work."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Pringles-tube kaleidoscope",
+                    detail: "Three strips of mirror foil + an empty Pringles tube. Tape them inside in a triangular prism shape, mirror-side inward. At one end, put a transparent disc; sprinkle a few colourful beads or sequins; cover loosely with a frosted paper. Look through the other end and twist."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 9/10 Maths + JEE",
-                detail: "Class 9/10 Maths formalises this as 'Symmetry' — rotational order, lines of symmetry, reflection groups. Class 12 / JEE Chemistry covers molecular symmetry (point groups C₂, C₃, σ planes) using the same mathematical framework that makes a kaleidoscope work."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Pringles-tube kaleidoscope",
-                detail: "Three strips of mirror foil + an empty Pringles tube. Tape them inside in a triangular prism shape, mirror-side inward. At one end, put a transparent disc; sprinkle a few colourful beads or sequins; cover loosely with a frosted paper. Look through the other end and twist."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

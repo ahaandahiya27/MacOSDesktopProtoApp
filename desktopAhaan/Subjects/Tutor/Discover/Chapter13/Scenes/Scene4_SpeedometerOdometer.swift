@@ -12,65 +12,72 @@ struct Scene4_SpeedometerOdometer: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Speedometer & Odometer").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Speedometer = current speed. Odometer = total distance.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Speedometer & Odometer").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Speedometer = current speed. Odometer = total distance.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            HStack(spacing: 30) {
-                VStack {
-                    ZStack {
-                        Circle().strokeBorder(Color.compatIndigo, lineWidth: 4).frame(width: 160, height: 160)
-                        Text("\(Int(speed))")
-                            .font(.system(size: 48, weight: .bold, design: .monospaced))
-                            .foregroundColor(Color.compatIndigo)
+                HStack(spacing: 30) {
+                    VStack {
+                        ZStack {
+                            Circle().strokeBorder(Color.compatIndigo, lineWidth: 4).frame(width: 160, height: 160)
+                            Text("\(Int(speed))")
+                                .font(.system(size: 48, weight: .bold, design: .monospaced))
+                                .foregroundColor(Color.compatIndigo)
+                        }
+                        Text("km/h").font(.caption)
                     }
-                    Text("km/h").font(.caption)
+                    VStack {
+                        Text(String(format: "%07.0f", odometer))
+                            .font(.system(size: 32, weight: .bold, design: .monospaced))
+                            .padding(8)
+                            .background(RoundedRectangle(cornerRadius: 8).fill(Color.black))
+                            .foregroundColor(.green)
+                        Text("km").font(.caption)
+                    }
                 }
-                VStack {
-                    Text(String(format: "%07.0f", odometer))
-                        .font(.system(size: 32, weight: .bold, design: .monospaced))
-                        .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(Color.black))
-                        .foregroundColor(.green)
-                    Text("km").font(.caption)
+                .onChange(of: tick) { _ in
+                    guard !reduceMotion else { return }
+                    odometer += speed / 60.0 / 60.0
                 }
-            }
-            .onChange(of: tick) { _ in
-                guard !reduceMotion else { return }
-                odometer += speed / 60.0 / 60.0
-            }
-            .timedScene(idealFPS: 30, tick: $tick)
+                .timedScene(idealFPS: 30, tick: $tick)
 
-            Slider(value: $speed, in: 0...160, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $speed, in: 0...160, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Two instruments, two stories", systemImage: "speedometer")
-                        .font(.title2.bold())
-                    Text("The speedometer tells you how fast you're going right now. The odometer is a counter that adds up every km you've ever driven. Same gearbox, different jobs.")
-                        .font(.body).lineSpacing(4)
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Two instruments, two stories", systemImage: "speedometer")
+                            .font(.title2.bold())
+                        Text("The speedometer tells you how fast you're going right now. The odometer is a counter that adds up every km you've ever driven. Same gearbox, different jobs.")
+                            .font(.body).lineSpacing(4)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Read a real odometer",
+                    detail: "Next car ride, look at the odometer before you start and again when you reach your destination. Subtract → that's the distance covered. Divide by the time taken → that's your average speed. The needle on the speedometer was showing instantaneous speed."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 11 Physics → JEE",
+                    detail: "In Class 11 'Motion in a Straight Line' you'll formalise average speed vs instantaneous speed (the speedometer reads instantaneous; the odometer ÷ time gives average). JEE Kinematics builds on this with derivatives — instantaneous speed = ds/dt."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Read a real odometer",
-                detail: "Next car ride, look at the odometer before you start and again when you reach your destination. Subtract → that's the distance covered. Divide by the time taken → that's your average speed. The needle on the speedometer was showing instantaneous speed."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Physics → JEE",
-                detail: "In Class 11 'Motion in a Straight Line' you'll formalise average speed vs instantaneous speed (the speedometer reads instantaneous; the odometer ÷ time gives average). JEE Kinematics builds on this with derivatives — instantaneous speed = ds/dt."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

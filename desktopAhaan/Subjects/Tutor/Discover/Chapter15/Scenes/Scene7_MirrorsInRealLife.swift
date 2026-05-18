@@ -19,53 +19,60 @@ struct Scene7_MirrorsInRealLife: View {
     private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.answer) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Which type of mirror is used in each case?")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Which type of mirror is used in each case?")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(items) { item in
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(item.use).font(.body)
-                        HStack(spacing: 8) {
-                            ForEach(options, id: \.self) { opt in
-                                Button(opt) { picks[item.id] = opt }
-                                    .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
-                            }
-                            if let p = picks[item.id] {
-                                Image(systemName: p == item.answer ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                    .foregroundColor(p == item.answer ? .green : .red)
+                VStack(spacing: 10) {
+                    ForEach(items) { item in
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(item.use).font(.body)
+                            HStack(spacing: 8) {
+                                ForEach(options, id: \.self) { opt in
+                                    Button(opt) { picks[item.id] = opt }
+                                        .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
+                                }
+                                if let p = picks[item.id] {
+                                    Image(systemName: p == item.answer ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                        .foregroundColor(p == item.answer ? .green : .red)
+                                }
                             }
                         }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 640).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                LookingAheadCallout(
+                    title: "Class 10 / JEE Optics",
+                    detail: "Class 10 Light: 'Spherical Mirrors and Image Formation' covers the same use-cases formally — concave for shaving + headlight + telescope, convex for vehicle mirrors. Class 12 / JEE adds the silvering process and front-surface vs back-surface mirrors."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Mirror inventory",
+                    detail: "List every mirror in your home, then guess what type each is: bathroom plane mirror, shaving concave mirror (if any), car side-view convex mirror, decorative reflectors. Note which one makes you look bigger / smaller / same-size."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 640).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            LookingAheadCallout(
-                title: "Class 10 / JEE Optics",
-                detail: "Class 10 Light: 'Spherical Mirrors and Image Formation' covers the same use-cases formally — concave for shaving + headlight + telescope, convex for vehicle mirrors. Class 12 / JEE adds the silvering process and front-surface vs back-surface mirrors."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Mirror inventory",
-                detail: "List every mirror in your home, then guess what type each is: bathroom plane mirror, shaving concave mirror (if any), car side-view convex mirror, decorative reflectors. Note which one makes you look bigger / smaller / same-size."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

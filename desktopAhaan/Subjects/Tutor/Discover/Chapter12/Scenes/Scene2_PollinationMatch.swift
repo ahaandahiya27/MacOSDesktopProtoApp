@@ -21,70 +21,77 @@ struct Scene2_PollinationMatch: View {
     private var score: Int { pairs.reduce(0) { $0 + ((picks[$1.id] == $1.agent) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(pairs) { p in
-                    HStack {
-                        Text(p.flower).font(.body).frame(maxWidth: .infinity, alignment: .leading)
-                        Picker("", selection: Binding(
-                            get: { picks[p.id] ?? "" }, set: { picks[p.id] = $0 }
-                        )) {
-                            Text("— pick —").tag("")
-                            ForEach(options, id: \.self) { Text($0).tag($0) }
-                        }.pickerStyle(.menu).frame(width: 150)
-                        if let v = picks[p.id], !v.isEmpty {
-                            Image(systemName: v == p.agent ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundColor(v == p.agent ? .green : .red)
+                VStack(spacing: 10) {
+                    ForEach(pairs) { p in
+                        HStack {
+                            Text(p.flower).font(.body).frame(maxWidth: .infinity, alignment: .leading)
+                            Picker("", selection: Binding(
+                                get: { picks[p.id] ?? "" }, set: { picks[p.id] = $0 }
+                            )) {
+                                Text("— pick —").tag("")
+                                ForEach(options, id: \.self) { Text($0).tag($0) }
+                            }.pickerStyle(.menu).frame(width: 150)
+                            if let v = picks[p.id], !v.isEmpty {
+                                Image(systemName: v == p.agent ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                    .foregroundColor(v == p.agent ? .green : .red)
+                            }
                         }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 640).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                SoftShadowCard(padding: 14) {
+                    Text("Plants can't walk to find a mate, so they hire carriers. Wind & water are free but wasteful. Insects & birds are precise but need a reward — that's what nectar and bright petals are for.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio → NEET",
+                    detail: "Class 12 covers pollination types in detail — autogamy, geitonogamy, xenogamy — plus the floral adaptations for each (cleistogamy, dichogamy, herkogamy). NEET asks these distinction questions every year."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Bee-watching",
+                    detail: "On a sunny morning, sit near a flowering plant for 10 minutes. Count the visiting insects — bees, butterflies, sometimes hover-flies. Each one is unknowingly carrying pollen between flowers."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                DiscoveryWidget(
+                    title: "Discovery — wind-pollination range",
+                    subtitle: "Wind-pollinated plants (grass, pine, maize) make a LOT of light pollen. Drag the breeze to see how far it travels.",
+                    value: $windKMH,
+                    range: 0...50,
+                    step: 1,
+                    valueLabel: { v in String(format: "Breeze: %.0f km/h", v) },
+                    output: windPollenExplanation
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 640).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            SoftShadowCard(padding: 14) {
-                Text("Plants can't walk to find a mate, so they hire carriers. Wind & water are free but wasteful. Insects & birds are precise but need a reward — that's what nectar and bright petals are for.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Bio → NEET",
-                detail: "Class 12 covers pollination types in detail — autogamy, geitonogamy, xenogamy — plus the floral adaptations for each (cleistogamy, dichogamy, herkogamy). NEET asks these distinction questions every year."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Bee-watching",
-                detail: "On a sunny morning, sit near a flowering plant for 10 minutes. Count the visiting insects — bees, butterflies, sometimes hover-flies. Each one is unknowingly carrying pollen between flowers."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            DiscoveryWidget(
-                title: "Discovery — wind-pollination range",
-                subtitle: "Wind-pollinated plants (grass, pine, maize) make a LOT of light pollen. Drag the breeze to see how far it travels.",
-                value: $windKMH,
-                range: 0...50,
-                step: 1,
-                valueLabel: { v in String(format: "Breeze: %.0f km/h", v) },
-                output: windPollenExplanation
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

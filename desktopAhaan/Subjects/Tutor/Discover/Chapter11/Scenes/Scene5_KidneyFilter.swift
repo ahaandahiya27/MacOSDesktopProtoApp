@@ -11,71 +11,78 @@ struct Scene5_KidneyFilter: View {
     @State private var waterIntakeML: Double = 500     // free-play slider: water you drink
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Kidney Filter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Tap the button to push blood through the kidney.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Kidney Filter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Tap the button to push blood through the kidney.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            HStack(spacing: 24) {
-                VStack {
-                    Text(filtered ? "❤️" : "🟤").font(.system(size: 56))
-                    Text(filtered ? "Clean blood" : "Dirty blood").font(.caption)
+                HStack(spacing: 24) {
+                    VStack {
+                        Text(filtered ? "❤️" : "🟤").font(.system(size: 56))
+                        Text(filtered ? "Clean blood" : "Dirty blood").font(.caption)
+                    }
+                    Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
+                    Text("🫘").font(.system(size: 80))
+                        .accessibilityLabel("Kidney filtering blood")
+                    Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
+                    VStack {
+                        Text(filtered ? "💧" : "—").font(.system(size: 56))
+                        Text(filtered ? "Urine" : "(waste)").font(.caption)
+                    }
                 }
-                Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
-                Text("🫘").font(.system(size: 80))
-                    .accessibilityLabel("Kidney filtering blood")
-                Text("→").font(.title.bold()).foregroundColor(Color.compatIndigo)
-                VStack {
-                    Text(filtered ? "💧" : "—").font(.system(size: 56))
-                    Text(filtered ? "Urine" : "(waste)").font(.caption)
+
+                Button(filtered ? "Reset" : "Filter blood now") { filtered.toggle() }
+                    .accentColor(Color.compatIndigo)
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Two bean-shaped life-savers", systemImage: "drop.fill")
+                            .font(.title2.bold())
+                        Text("Your kidneys filter about 180 litres of blood every day. They remove urea (a waste from protein breakdown) and extra water, sending them to the bladder as urine. Useful nutrients are kept and returned to the blood.")
+                            .font(.body).lineSpacing(4)
+                    }
                 }
-            }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            Button(filtered ? "Reset" : "Filter blood now") { filtered.toggle() }
-                .accentColor(Color.compatIndigo)
+                // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit
+                // (Big Sur / Xcode 13.2.1 target).
+                Group {
+                    LookingAheadCallout(
+                        title: "Class 11 Bio → NEET",
+                        detail: "Class 11 'Excretory Products and their Elimination' covers nephron anatomy in detail, glomerular filtration rate (~125 mL/min), the loop of Henle counter-current multiplier, ADH and aldosterone hormones, and dialysis. The nephron diagram is one of the most-tested NEET visuals year after year."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Two bean-shaped life-savers", systemImage: "drop.fill")
-                        .font(.title2.bold())
-                    Text("Your kidneys filter about 180 litres of blood every day. They remove urea (a waste from protein breakdown) and extra water, sending them to the bladder as urine. Useful nutrients are kept and returned to the blood.")
-                        .font(.body).lineSpacing(4)
+                    TryAtHomeCallout(
+                        title: "Water in, water out",
+                        detail: "Drink 500 mL of water all at once. Note the time. Within 30-60 minutes you'll feel the need to urinate — that's your kidneys filtering the extra water out of your blood."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
                 }
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit
-            // (Big Sur / Xcode 13.2.1 target).
-            Group {
-                LookingAheadCallout(
-                    title: "Class 11 Bio → NEET",
-                    detail: "Class 11 'Excretory Products and their Elimination' covers nephron anatomy in detail, glomerular filtration rate (~125 mL/min), the loop of Henle counter-current multiplier, ADH and aldosterone hormones, and dialysis. The nephron diagram is one of the most-tested NEET visuals year after year."
+                DiscoveryWidget(
+                    title: "Discovery — how fast do kidneys respond?",
+                    subtitle: "Imagine you drink this much water now. Drag to see roughly when you'll need to pee.",
+                    value: $waterIntakeML,
+                    range: 100...1500,
+                    step: 50,
+                    valueLabel: { v in String(format: "Drank: %.0f mL", v) },
+                    output: kidneyResponseExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
 
-                TryAtHomeCallout(
-                    title: "Water in, water out",
-                    detail: "Drink 500 mL of water all at once. Note the time. Within 30-60 minutes you'll feel the need to urinate — that's your kidneys filtering the extra water out of your blood."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-
-            DiscoveryWidget(
-                title: "Discovery — how fast do kidneys respond?",
-                subtitle: "Imagine you drink this much water now. Drag to see roughly when you'll need to pee.",
-                value: $waterIntakeML,
-                range: 100...1500,
-                step: 50,
-                valueLabel: { v in String(format: "Drank: %.0f mL", v) },
-                output: kidneyResponseExplanation
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

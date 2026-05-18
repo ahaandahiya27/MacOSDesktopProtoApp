@@ -27,42 +27,49 @@ struct Scene8_UnitsOfTime: View {
     @State private var device: Device = .sundial
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Units of Time").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Humans have measured time for thousands of years. Each device was a leap forward.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Units of Time").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Humans have measured time for thousands of years. Each device was a leap forward.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
-            Picker("", selection: $device) {
-                ForEach(Device.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.menu)
+                Picker("", selection: $device) {
+                    ForEach(Device.allCases) { Text($0.rawValue).tag($0) }
+                }.pickerStyle(.menu)
 
-            Text(device.emoji).font(.system(size: 96))
+                Text(device.emoji).font(.system(size: 96))
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(device.rawValue).font(.title3.bold())
-                    Text(device.era).font(.body).lineSpacing(4)
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(device.rawValue).font(.title3.bold())
+                        Text(device.era).font(.body).lineSpacing(4)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 11 Physics → JEE",
+                    detail: "Class 11 'Units and Measurements' covers the SI base units: metre, kilogram, second, ampere, kelvin, mole, candela. The second is now defined using the caesium-133 atomic clock (exact). JEE asks unit-system conversion problems."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Inventory of clocks",
+                    detail: "List every timekeeping device in your home: phone (atomic-clock-synced), wall clock (quartz), wristwatch, microwave timer, oven timer, kitchen stopwatch, computer system clock. Note which is fastest to read at a glance — that's why each one is shaped the way it is."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Physics → JEE",
-                detail: "Class 11 'Units and Measurements' covers the SI base units: metre, kilogram, second, ampere, kelvin, mole, candela. The second is now defined using the caesium-133 atomic clock (exact). JEE asks unit-system conversion problems."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Inventory of clocks",
-                detail: "List every timekeeping device in your home: phone (atomic-clock-synced), wall clock (quartz), wristwatch, microwave timer, oven timer, kitchen stopwatch, computer system clock. Note which is fastest to read at a glance — that's why each one is shaped the way it is."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

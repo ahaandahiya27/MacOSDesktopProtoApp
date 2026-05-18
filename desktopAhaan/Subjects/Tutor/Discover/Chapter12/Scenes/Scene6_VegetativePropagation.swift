@@ -25,43 +25,50 @@ struct Scene6_VegetativePropagation: View {
     @State private var plant: Plant = .potato
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("No flowers, no seeds — these plants clone themselves.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Vegetative Propagation").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("No flowers, no seeds — these plants clone themselves.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            Picker("", selection: $plant) {
-                ForEach(Plant.allCases) { Text($0.rawValue).tag($0) }
-            }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 460)
+                Picker("", selection: $plant) {
+                    ForEach(Plant.allCases) { Text($0.rawValue).tag($0) }
+                }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 460)
 
-            Text(plant.emoji).font(.system(size: 96))
+                Text(plant.emoji).font(.system(size: 96))
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(plant.rawValue).font(.title3.bold())
-                    Text(plant.partUsed).font(.body).lineSpacing(4)
-                    Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(plant.rawValue).font(.title3.bold())
+                        Text(plant.partUsed).font(.body).lineSpacing(4)
+                        Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio",
+                    detail: "Class 12 Bio covers commercial applications — micropropagation in tissue culture (industrial-scale cloning of orchids, bananas), grafting in fruit trees, runners in strawberries, suckers in bananas. Asked in NEET Plant Biotechnology questions."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Money-plant cutting",
+                    detail: "Cut a stem from a money-plant (or pothos) so it includes 2 nodes. Place the cut end in a glass of water on a windowsill. Roots will sprout in 7-14 days. No seed needed — you've cloned the parent."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Bio",
-                detail: "Class 12 Bio covers commercial applications — micropropagation in tissue culture (industrial-scale cloning of orchids, bananas), grafting in fruit trees, runners in strawberries, suckers in bananas. Asked in NEET Plant Biotechnology questions."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Money-plant cutting",
-                detail: "Cut a stem from a money-plant (or pothos) so it includes 2 nodes. Place the cut end in a glass of water on a windowsill. Roots will sprout in 7-14 days. No seed needed — you've cloned the parent."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

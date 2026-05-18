@@ -19,59 +19,66 @@ struct Scene4_ArteryVeinCapillary: View {
     private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.answer) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Artery / Vein / Capillary").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Three kinds of blood vessels — pick the right one.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Artery / Vein / Capillary").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Three kinds of blood vessels — pick the right one.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(items) { item in
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(item.text).font(.body)
-                        HStack(spacing: 8) {
-                            ForEach(options, id: \.self) { opt in
-                                Button(opt) { picks[item.id] = opt }
-                                    .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
-                            }
-                            if let p = picks[item.id] {
-                                Image(systemName: p == item.answer ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                    .foregroundColor(p == item.answer ? .green : .red)
+                VStack(spacing: 10) {
+                    ForEach(items) { item in
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(item.text).font(.body)
+                            HStack(spacing: 8) {
+                                ForEach(options, id: \.self) { opt in
+                                    Button(opt) { picks[item.id] = opt }
+                                        .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
+                                }
+                                if let p = picks[item.id] {
+                                    Image(systemName: p == item.answer ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                        .foregroundColor(p == item.answer ? .green : .red)
+                                }
                             }
                         }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 640).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                SoftShadowCard(padding: 14) {
+                    Text("Arteries push blood out under high pressure, so their walls are thick & elastic. Veins return it at low pressure, with valves to stop backflow. Capillaries are the tiny exchange networks.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Find pulse points",
+                    detail: "Try feeling your pulse at four spots: inside the wrist (radial), side of the neck (carotid), back of the knee (popliteal), top of the foot (dorsalis pedis). All of them carry blood from the heart — that's why they pulse with each beat."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 11 Bio → NEET",
+                    detail: "Class 11 'Body Fluids and Circulation' covers the three vessel types in microscopic detail — tunica intima/media/externa, valve mechanics, blood pressure measurement (systolic/diastolic). Almost guaranteed NEET questions every cycle."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 640).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            SoftShadowCard(padding: 14) {
-                Text("Arteries push blood out under high pressure, so their walls are thick & elastic. Veins return it at low pressure, with valves to stop backflow. Capillaries are the tiny exchange networks.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Find pulse points",
-                detail: "Try feeling your pulse at four spots: inside the wrist (radial), side of the neck (carotid), back of the knee (popliteal), top of the foot (dorsalis pedis). All of them carry blood from the heart — that's why they pulse with each beat."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Bio → NEET",
-                detail: "Class 11 'Body Fluids and Circulation' covers the three vessel types in microscopic detail — tunica intima/media/externa, valve mechanics, blood pressure measurement (systolic/diastolic). Almost guaranteed NEET questions every cycle."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

@@ -21,58 +21,65 @@ struct Scene3_SortContaminants: View {
     private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.kind) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Sort the Contaminants").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Classify each pollutant.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Sort the Contaminants").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Classify each pollutant.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(items) { item in
-                    HStack {
-                        Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
-                        HStack(spacing: 6) {
-                            ForEach(options, id: \.self) { opt in
-                                Button(opt) { picks[item.id] = opt }
-                                    .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
+                VStack(spacing: 10) {
+                    ForEach(items) { item in
+                        HStack {
+                            Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
+                            HStack(spacing: 6) {
+                                ForEach(options, id: \.self) { opt in
+                                    Button(opt) { picks[item.id] = opt }
+                                        .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
+                                }
+                            }
+                            if let p = picks[item.id] {
+                                Image(systemName: p == item.kind ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                    .foregroundColor(p == item.kind ? .green : .red)
                             }
                         }
-                        if let p = picks[item.id] {
-                            Image(systemName: p == item.kind ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundColor(p == item.kind ? .green : .red)
-                        }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 720).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                SoftShadowCard(padding: 14) {
+                    Text("Organic = once living (food, hair, paper). Inorganic = chemicals, metals, detergents. Pathogens = disease-causing microbes. Each needs a different treatment step.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio + Chemistry",
+                    detail: "Class 12 Bio 'Environmental Issues' covers water-pollution sources (sewage, industrial effluents, agricultural runoff, thermal). Class 12 Chemistry 'Environmental Chemistry' adds eutrophication, biomagnification (DDT, mercury in tuna), and acid rain. NEET asks these regularly."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Sink-strainer check",
+                    detail: "Remove your kitchen sink's strainer. Examine what's caught: vegetable peels, hair, oil droplets, soap scum. Sort what you see into organic (peels, hair) and inorganic (soap, plastic bits). Both went down the drain — both are pollutants."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 720).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            SoftShadowCard(padding: 14) {
-                Text("Organic = once living (food, hair, paper). Inorganic = chemicals, metals, detergents. Pathogens = disease-causing microbes. Each needs a different treatment step.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Bio + Chemistry",
-                detail: "Class 12 Bio 'Environmental Issues' covers water-pollution sources (sewage, industrial effluents, agricultural runoff, thermal). Class 12 Chemistry 'Environmental Chemistry' adds eutrophication, biomagnification (DDT, mercury in tuna), and acid rain. NEET asks these regularly."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Sink-strainer check",
-                detail: "Remove your kitchen sink's strainer. Examine what's caught: vegetable peels, hair, oil droplets, soap scum. Sort what you see into organic (peels, hair) and inorganic (soap, plastic bits). Both went down the drain — both are pollutants."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

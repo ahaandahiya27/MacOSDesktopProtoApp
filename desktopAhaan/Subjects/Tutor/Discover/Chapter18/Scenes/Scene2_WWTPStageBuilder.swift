@@ -22,50 +22,57 @@ struct Scene2_WWTPStageBuilder: View {
     @State private var pick: Stage = .barScreen
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            HStack(spacing: 6) {
-                ForEach(Stage.allCases) { s in
-                    Button { pick = s } label: {
-                        VStack {
-                            Text(stageEmoji(s)).font(.system(size: 36))
-                            Text(s.rawValue).font(.caption2)
+                HStack(spacing: 6) {
+                    ForEach(Stage.allCases) { s in
+                        Button { pick = s } label: {
+                            VStack {
+                                Text(stageEmoji(s)).font(.system(size: 36))
+                                Text(s.rawValue).font(.caption2)
+                            }
+                            .padding(6)
+                            .frame(width: 90)
+                            .background(RoundedRectangle(cornerRadius: 8).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                         }
-                        .padding(6)
-                        .frame(width: 90)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
-            }
 
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(pick.rawValue).font(.title3.bold())
-                    Text(pick.role).font(.body).lineSpacing(4)
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(pick.rawValue).font(.title3.bold())
+                        Text(pick.role).font(.body).lineSpacing(4)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio → NEET",
+                    detail: "Class 12 Biology 'Environmental Issues' covers the same treatment stages plus BOD (Biological Oxygen Demand) and COD (Chemical Oxygen Demand) — quantitative measures of water pollution that NEET tests every year. The aeration tank is where the microbes you saw here do the heavy lifting."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Bottle filter",
+                    detail: "Cut a 1-litre bottle in half. Invert the top into the bottom. Layer the top with cotton, then sand, then fine gravel, then coarse gravel. Pour muddy water from the top. Clear (but not safe to drink) water drips out. That's a primary-treatment filter."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Bio → NEET",
-                detail: "Class 12 Biology 'Environmental Issues' covers the same treatment stages plus BOD (Biological Oxygen Demand) and COD (Chemical Oxygen Demand) — quantitative measures of water pollution that NEET tests every year. The aeration tank is where the microbes you saw here do the heavy lifting."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Bottle filter",
-                detail: "Cut a 1-litre bottle in half. Invert the top into the bottom. Layer the top with cotton, then sand, then fine gravel, then coarse gravel. Pour muddy water from the top. Clear (but not safe to drink) water drips out. That's a primary-treatment filter."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

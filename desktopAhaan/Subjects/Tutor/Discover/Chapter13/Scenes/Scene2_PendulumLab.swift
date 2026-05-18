@@ -17,100 +17,107 @@ struct Scene2_PendulumLab: View {
     private var period: Double { 2.0 * .pi * sqrt(length / 9.81) }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Pendulum Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Change the string length. The period changes too.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Pendulum Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Change the string length. The period changes too.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            ZStack {
-                Rectangle().fill(Color.gray.opacity(0.4)).frame(width: 200, height: 4)
-                Path { p in
-                    p.move(to: CGPoint(x: 100, y: 2))
-                    p.addLine(to: CGPoint(x: 100 + sin(angle * .pi / 180) * length * 100,
-                                          y: 2 + cos(angle * .pi / 180) * length * 100))
+                ZStack {
+                    Rectangle().fill(Color.gray.opacity(0.4)).frame(width: 200, height: 4)
+                    Path { p in
+                        p.move(to: CGPoint(x: 100, y: 2))
+                        p.addLine(to: CGPoint(x: 100 + sin(angle * .pi / 180) * length * 100,
+                                              y: 2 + cos(angle * .pi / 180) * length * 100))
+                    }
+                    .stroke(Color.compatIndigo, lineWidth: 2)
+                    .frame(width: 200, height: 200, alignment: .top)
+                    Circle().fill(Color.compatIndigo)
+                        .frame(width: 28, height: 28)
+                        .offset(x: CGFloat(sin(angle * .pi / 180) * length * 100),
+                                y: CGFloat(cos(angle * .pi / 180) * length * 100) - 100)
                 }
-                .stroke(Color.compatIndigo, lineWidth: 2)
-                .frame(width: 200, height: 200, alignment: .top)
-                Circle().fill(Color.compatIndigo)
-                    .frame(width: 28, height: 28)
-                    .offset(x: CGFloat(sin(angle * .pi / 180) * length * 100),
-                            y: CGFloat(cos(angle * .pi / 180) * length * 100) - 100)
-            }
-            .frame(width: 240, height: 260)
-            .onChange(of: tick) { newTick in
-                guard !reduceMotion else { return }
-                let dt = max(0, newTick - lastTick)
-                lastTick = newTick
-                // Advance phase smoothly even when `period` (length) changes.
-                phase = (phase + (2 * .pi / period) * dt).truncatingRemainder(dividingBy: 2 * .pi)
-                angle = 30 * cos(phase)
-            }
-            .timedScene(idealFPS: 30, tick: $tick)
-
-            HStack(alignment: .center, spacing: 18) {
-                VStack(spacing: 6) {
-                    Text("Length: \(String(format: "%.2f", length)) m").font(.headline)
-                    Text("Period (1 swing): \(String(format: "%.2f", period)) s")
-                        .font(.title3.weight(.semibold))
-                        .foregroundColor(Color.compatIndigo)
+                .frame(width: 240, height: 260)
+                .onChange(of: tick) { newTick in
+                    guard !reduceMotion else { return }
+                    let dt = max(0, newTick - lastTick)
+                    lastTick = newTick
+                    // Advance phase smoothly even when `period` (length) changes.
+                    phase = (phase + (2 * .pi / period) * dt).truncatingRemainder(dividingBy: 2 * .pi)
+                    angle = 30 * cos(phase)
                 }
-                PeriodLengthCurve(currentLength: length)
-                    .frame(width: 200, height: 90)
-                    .accessibilityLabel("Period grows with the square root of length")
-            }
+                .timedScene(idealFPS: 30, tick: $tick)
 
-            Slider(value: $length, in: 0.2...2.0, step: 0.05).frame(maxWidth: 460).padding(.horizontal, 24)
-
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Longer string → slower swing", systemImage: SFSymbolCompat.name("metronome"))
-                        .font(.title2.bold())
-                    Text("The time for one swing depends only on the string length, not on the mass or how far you pull it back. Galileo discovered this. It's why pendulums were used for accurate clocks for 300 years.")
-                        .font(.body).lineSpacing(4)
+                HStack(alignment: .center, spacing: 18) {
+                    VStack(spacing: 6) {
+                        Text("Length: \(String(format: "%.2f", length)) m").font(.headline)
+                        Text("Period (1 swing): \(String(format: "%.2f", period)) s")
+                            .font(.title3.weight(.semibold))
+                            .foregroundColor(Color.compatIndigo)
+                    }
+                    PeriodLengthCurve(currentLength: length)
+                        .frame(width: 200, height: 90)
+                        .accessibilityLabel("Period grows with the square root of length")
                 }
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
-            Group {
-                LookingAheadCallout(
-                    title: "Class 11 Physics → JEE",
-                    detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
+                Slider(value: $length, in: 0.2...2.0, step: 0.05).frame(maxWidth: 460).padding(.horizontal, 24)
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Longer string → slower swing", systemImage: SFSymbolCompat.name("metronome"))
+                            .font(.title2.bold())
+                        Text("The time for one swing depends only on the string length, not on the mass or how far you pull it back. Galileo discovered this. It's why pendulums were used for accurate clocks for 300 years.")
+                            .font(.body).lineSpacing(4)
+                    }
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
+                Group {
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE",
+                        detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "DIY pendulum",
+                        detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+                }
+
+                DiscoveryStepper(
+                    title: "Discovery — historic pendulums",
+                    subtitle: "Pick a famous pendulum length. The slider above shows its swing live.",
+                    options: ["Pocket (0.10 m)", "Wall (0.25 m)", "Grandfather (1.0 m)", "Big Ben (4.0 m)"],
+                    selection: $famousPendulum,
+                    outputs: [
+                        "≈ 0.6 s per swing. Pocket-watch escapement scale. Very quick tick.",
+                        "≈ 1.0 s per swing. A typical wall-clock pendulum.",
+                        "≈ 2.0 s per swing. The classic 'grandfather' tick-tock once per second.",
+                        "≈ 4.0 s per swing. London's Big Ben — 13.5-tonne bob, used for the BBC's pip signal."
+                    ]
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
+                .onChange(of: famousPendulum) { newIndex in
+                    let presets: [Double] = [0.10, 0.25, 1.0, 4.0]
+                    let target = presets[max(0, min(newIndex, presets.count - 1))]
+                    length = min(2.0, max(0.2, target))
+                }
 
-                TryAtHomeCallout(
-                    title: "DIY pendulum",
-                    detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-
-            DiscoveryStepper(
-                title: "Discovery — historic pendulums",
-                subtitle: "Pick a famous pendulum length. The slider above shows its swing live.",
-                options: ["Pocket (0.10 m)", "Wall (0.25 m)", "Grandfather (1.0 m)", "Big Ben (4.0 m)"],
-                selection: $famousPendulum,
-                outputs: [
-                    "≈ 0.6 s per swing. Pocket-watch escapement scale. Very quick tick.",
-                    "≈ 1.0 s per swing. A typical wall-clock pendulum.",
-                    "≈ 2.0 s per swing. The classic 'grandfather' tick-tock once per second.",
-                    "≈ 4.0 s per swing. London's Big Ben — 13.5-tonne bob, used for the BBC's pip signal."
-                ]
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-            .onChange(of: famousPendulum) { newIndex in
-                let presets: [Double] = [0.10, 0.25, 1.0, 4.0]
-                let target = presets[max(0, min(newIndex, presets.count - 1))]
-                length = min(2.0, max(0.2, target))
-            }
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

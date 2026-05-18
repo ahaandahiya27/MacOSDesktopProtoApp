@@ -24,53 +24,60 @@ struct Scene2_SandClayLoam: View {
     private var score: Int { samples.reduce(0) { $0 + ((picks[$1.id] == $1.kind) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 12) {
-                ForEach(samples) { s in
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(s.clue).font(.body)
-                        HStack(spacing: 8) {
-                            ForEach(options, id: \.self) { opt in
-                                Button(opt) { picks[s.id] = opt }
-                                    .accentColor(picks[s.id] == opt ? Color.compatIndigo : .gray)
-                            }
-                            if let p = picks[s.id] {
-                                Image(systemName: p == s.kind ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                    .foregroundColor(p == s.kind ? .green : .red)
+                VStack(spacing: 12) {
+                    ForEach(samples) { s in
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(s.clue).font(.body)
+                            HStack(spacing: 8) {
+                                ForEach(options, id: \.self) { opt in
+                                    Button(opt) { picks[s.id] = opt }
+                                        .accentColor(picks[s.id] == opt ? Color.compatIndigo : .gray)
+                                }
+                                if let p = picks[s.id] {
+                                    Image(systemName: p == s.kind ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                        .foregroundColor(p == s.kind ? .green : .red)
+                                }
                             }
                         }
+                        .padding(12)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(12)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 620)
+                .padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(samples.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                SoftShadowCard(padding: 14) {
+                    Text("Soil is classified by the size of its particles. Sand has the biggest grains (water drains fast), clay has the smallest (water gets trapped), loam is a mix — the goldilocks soil for farming.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Squeeze test",
+                    detail: "Take a fist-sized handful of moist soil. Sandy soil falls apart immediately. Clayey soil holds its shape and feels sticky. Loamy soil holds a loose ball that crumbles when poked. Try this with three different garden samples to feel the difference."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 620)
-            .padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(samples.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            SoftShadowCard(padding: 14) {
-                Text("Soil is classified by the size of its particles. Sand has the biggest grains (water drains fast), clay has the smallest (water gets trapped), loam is a mix — the goldilocks soil for farming.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Squeeze test",
-                detail: "Take a fist-sized handful of moist soil. Sandy soil falls apart immediately. Clayey soil holds its shape and feels sticky. Loamy soil holds a loose ball that crumbles when poked. Try this with three different garden samples to feel the difference."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

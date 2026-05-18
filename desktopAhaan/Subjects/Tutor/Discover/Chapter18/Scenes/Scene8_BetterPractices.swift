@@ -20,48 +20,55 @@ struct Scene8_BetterPractices: View {
     private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.isGood) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Better Practices").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Better Practices").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(items) { item in
-                    HStack {
-                        Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
-                        Button("Good") { picks[item.id] = true  }.accentColor(picks[item.id] == true ? .green : .gray)
-                        Button("Bad")  { picks[item.id] = false }.accentColor(picks[item.id] == false ? .red   : .gray)
-                        if let p = picks[item.id] {
-                            Image(systemName: p == item.isGood ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundColor(p == item.isGood ? .green : .red)
+                VStack(spacing: 10) {
+                    ForEach(items) { item in
+                        HStack {
+                            Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
+                            Button("Good") { picks[item.id] = true  }.accentColor(picks[item.id] == true ? .green : .gray)
+                            Button("Bad")  { picks[item.id] = false }.accentColor(picks[item.id] == false ? .red   : .gray)
+                            if let p = picks[item.id] {
+                                Image(systemName: p == item.isGood ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                    .foregroundColor(p == item.isGood ? .green : .red)
+                            }
                         }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 680).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio + Civics",
+                    detail: "Class 12 'Environmental Issues' covers individual and policy responses to pollution. Class 10 Civics covers India's environmental policy — Polluter Pays principle, EPA 1986, NGT (National Green Tribunal)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "One-week waste diary",
+                    detail: "Track everything that goes down your drains and into your trash for one week. List patterns. Pick ONE thing to change next week — usually cooking oil, sanitary waste, or single-use plastic. Small habits compound."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 680).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            LookingAheadCallout(
-                title: "Class 12 Bio + Civics",
-                detail: "Class 12 'Environmental Issues' covers individual and policy responses to pollution. Class 10 Civics covers India's environmental policy — Polluter Pays principle, EPA 1986, NGT (National Green Tribunal)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "One-week waste diary",
-                detail: "Track everything that goes down your drains and into your trash for one week. List patterns. Pick ONE thing to change next week — usually cooking oil, sanitary waste, or single-use plastic. Small habits compound."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

@@ -20,49 +20,56 @@ struct Scene8_SafetyLab: View {
     private var score: Int { items.reduce(0) { $0 + ((picks[$1.id] == $1.isSafe) ? 1 : 0) } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Tap Safe or Unsafe for each action.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Tap Safe or Unsafe for each action.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 10) {
-                ForEach(items) { item in
-                    HStack {
-                        Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
-                        Button("Safe")  { picks[item.id] = true  }.accentColor(picks[item.id] == true ? .green : .gray)
-                        Button("Unsafe"){ picks[item.id] = false }.accentColor(picks[item.id] == false ? .red : .gray)
-                        if let p = picks[item.id] {
-                            Image(systemName: p == item.isSafe ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundColor(p == item.isSafe ? .green : .red)
+                VStack(spacing: 10) {
+                    ForEach(items) { item in
+                        HStack {
+                            Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
+                            Button("Safe")  { picks[item.id] = true  }.accentColor(picks[item.id] == true ? .green : .gray)
+                            Button("Unsafe"){ picks[item.id] = false }.accentColor(picks[item.id] == false ? .red : .gray)
+                            if let p = picks[item.id] {
+                                Image(systemName: p == item.isSafe ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                    .foregroundColor(p == item.isSafe ? .green : .red)
+                            }
                         }
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 680).padding(.horizontal, 24)
+
+                if done {
+                    Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
+                }
+
+                LookingAheadCallout(
+                    title: "Class 10 Physics + ITI",
+                    detail: "Class 10 covers home wiring — live (red), neutral (black), earth (green/yellow); 3-pin plugs; MCBs and ELCBs. Industrial Training (ITI / polytechnic) takes this further into wiring codes and load calculation. JEE rarely asks safety directly but tests power-supply problems."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Three-pin plug inspection",
+                    detail: "Examine an unplugged 3-pin Indian plug. The two thinner pins are LIVE (right) and NEUTRAL (left). The thicker top pin is EARTH — it's longer so it connects first. The plastic body is insulator. Total safety in one design."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 680).padding(.horizontal, 24)
-
-            if done {
-                Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-            }
-
-            LookingAheadCallout(
-                title: "Class 10 Physics + ITI",
-                detail: "Class 10 covers home wiring — live (red), neutral (black), earth (green/yellow); 3-pin plugs; MCBs and ELCBs. Industrial Training (ITI / polytechnic) takes this further into wiring codes and load calculation. JEE rarely asks safety directly but tests power-supply problems."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Three-pin plug inspection",
-                detail: "Examine an unplugged 3-pin Indian plug. The two thinner pins are LIVE (right) and NEUTRAL (left). The thicker top pin is EARTH — it's longer so it connects first. The plastic body is insulator. Total safety in one design."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

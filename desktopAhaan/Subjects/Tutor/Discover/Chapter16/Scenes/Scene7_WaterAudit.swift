@@ -21,69 +21,76 @@ struct Scene7_WaterAudit: View {
     private var total: Int { items.filter { checked.contains($0.id) }.reduce(0) { $0 + $1.litres } }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Tap each activity you did today. See your total.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 12) {
+                Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Tap each activity you did today. See your total.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 8) {
-                ForEach(items) { item in
-                    HStack {
-                        Image(systemName: checked.contains(item.id) ? "checkmark.square.fill" : "square")
-                            .foregroundColor(Color.compatIndigo)
-                        Text(item.name).frame(maxWidth: .infinity, alignment: .leading)
-                        Text("\(item.litres) L").font(.headline.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                VStack(spacing: 8) {
+                    ForEach(items) { item in
+                        HStack {
+                            Image(systemName: checked.contains(item.id) ? "checkmark.square.fill" : "square")
+                                .foregroundColor(Color.compatIndigo)
+                            Text(item.name).frame(maxWidth: .infinity, alignment: .leading)
+                            Text("\(item.litres) L").font(.headline.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        }
+                        .padding(10)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            if checked.contains(item.id) { checked.remove(item.id) }
+                            else { checked.insert(item.id) }
+                        }
+                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
-                    .padding(10)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        if checked.contains(item.id) { checked.remove(item.id) }
-                        else { checked.insert(item.id) }
-                    }
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                 }
+                .frame(maxWidth: 540)
+
+                Text("Total today: \(total) L")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundColor(Color.compatIndigo)
+
+                SoftShadowCard(padding: 14) {
+                    Text("An average Indian uses around 135 L per day; in cities it can climb past 200 L. Closing the tap, switching to a bucket bath, and fixing leaky taps each save dozens of litres daily.")
+                        .font(.callout).lineSpacing(4)
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Civics / EVS",
+                    detail: "Class 9 Civics 'Working of Institutions' covers India's water-policy framework — Jal Shakti Ministry (2019), water-as-fundamental-right court cases, and the Atal Bhujal Yojana. Class 10 EVS asks personal-impact-on-environment questions."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "One-day water log",
+                    detail: "Tomorrow, count every tap-use: brushing teeth (12 L), bath (40-80 L), flushing (10 L each), cooking (5 L), drinking (3 L). Add it up. Total daily water = how many 20-L bottles? Now imagine carrying that from a well 1 km away (the reality for millions)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                DiscoveryWidget(
+                    title: "Discovery — scale to family size",
+                    subtitle: "Your audit shows YOUR water use. Now drag the family-size slider to see the household's daily total.",
+                    value: $familySize,
+                    range: 1...10,
+                    step: 1,
+                    valueLabel: { v in String(format: "Family: %.0f people", v) },
+                    output: { v in self.familyTotalExplanation(v) }
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: 540)
-
-            Text("Total today: \(total) L")
-                .font(.system(size: 28, weight: .bold))
-                .foregroundColor(Color.compatIndigo)
-
-            SoftShadowCard(padding: 14) {
-                Text("An average Indian uses around 135 L per day; in cities it can climb past 200 L. Closing the tap, switching to a bucket bath, and fixing leaky taps each save dozens of litres daily.")
-                    .font(.callout).lineSpacing(4)
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Civics / EVS",
-                detail: "Class 9 Civics 'Working of Institutions' covers India's water-policy framework — Jal Shakti Ministry (2019), water-as-fundamental-right court cases, and the Atal Bhujal Yojana. Class 10 EVS asks personal-impact-on-environment questions."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "One-day water log",
-                detail: "Tomorrow, count every tap-use: brushing teeth (12 L), bath (40-80 L), flushing (10 L each), cooking (5 L), drinking (3 L). Add it up. Total daily water = how many 20-L bottles? Now imagine carrying that from a well 1 km away (the reality for millions)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            DiscoveryWidget(
-                title: "Discovery — scale to family size",
-                subtitle: "Your audit shows YOUR water use. Now drag the family-size slider to see the household's daily total.",
-                value: $familySize,
-                range: 1...10,
-                step: 1,
-                valueLabel: { v in String(format: "Family: %.0f people", v) },
-                output: { v in self.familyTotalExplanation(v) }
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

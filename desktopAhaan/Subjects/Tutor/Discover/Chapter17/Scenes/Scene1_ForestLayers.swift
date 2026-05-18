@@ -21,50 +21,57 @@ struct Scene1_ForestLayers: View {
     @State private var pick: Layer = .canopy
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("A forest is built like a 4-storey building. Tap each floor.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("A forest is built like a 4-storey building. Tap each floor.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            VStack(spacing: 2) {
-                ForEach(Layer.allCases) { l in
-                    Button { pick = l } label: {
-                        HStack { Text(l.rawValue).foregroundColor(.white); Spacer() }
-                            .padding()
-                            .frame(width: 320, height: 50)
-                            .background(layerColor(l).opacity(0.85))
-                            .overlay(Rectangle().strokeBorder(pick == l ? Color.compatIndigo : .clear, lineWidth: 3))
+                VStack(spacing: 2) {
+                    ForEach(Layer.allCases) { l in
+                        Button { pick = l } label: {
+                            HStack { Text(l.rawValue).foregroundColor(.white); Spacer() }
+                                .padding()
+                                .frame(width: 320, height: 50)
+                                .background(layerColor(l).opacity(0.85))
+                                .overlay(Rectangle().strokeBorder(pick == l ? Color.compatIndigo : .clear, lineWidth: 3))
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
 
-            SoftShadowCard(padding: 16) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(pick.rawValue).font(.title3.bold())
-                    Text(pick.blurb).font(.body).lineSpacing(4)
+                SoftShadowCard(padding: 16) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(pick.rawValue).font(.title3.bold())
+                        Text(pick.blurb).font(.body).lineSpacing(4)
+                    }
                 }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 12 Bio → NEET",
+                    detail: "Class 12 'Ecosystem' formalises this as ecological pyramids — pyramid of biomass, pyramid of energy (always upright due to 10% rule), pyramid of numbers (can be inverted in parasitic chains). NEET tests these pyramid types every year. Class 12 'Biodiversity & Conservation' adds Indian forest types and biodiversity hotspots."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Park stratification walk",
+                    detail: "In your nearest park, look UP at three heights: tall tree-tops (canopy), 3-metre shrubs (understory), and the ground (floor). Note which birds and insects you see at each level. Most species stick to one layer for their entire lives."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Bio → NEET",
-                detail: "Class 12 'Ecosystem' formalises this as ecological pyramids — pyramid of biomass, pyramid of energy (always upright due to 10% rule), pyramid of numbers (can be inverted in parasitic chains). NEET tests these pyramid types every year. Class 12 'Biodiversity & Conservation' adds Indian forest types and biodiversity hotspots."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Park stratification walk",
-                detail: "In your nearest park, look UP at three heights: tall tree-tops (canopy), 3-metre shrubs (understory), and the ground (floor). Note which birds and insects you see at each level. Most species stick to one layer for their entire lives."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 

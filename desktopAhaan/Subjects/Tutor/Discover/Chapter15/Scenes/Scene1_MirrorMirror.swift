@@ -11,65 +11,72 @@ struct Scene1_MirrorMirror: View {
     @State private var angle: Double = 30   // degrees from normal
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Slide the incoming ray. The reflected ray follows the law.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Slide the incoming ray. The reflected ray follows the law.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            // Diagram canvas. Mirror is the horizontal line at the bottom;
-            // hit point is the centre of that line. Normal goes straight up.
-            ZStack {
-                RoundedRectangle(cornerRadius: 16).fill(Color.white.opacity(0.95))
-                    .frame(width: 360, height: 240)
+                // Diagram canvas. Mirror is the horizontal line at the bottom;
+                // hit point is the centre of that line. Normal goes straight up.
+                ZStack {
+                    RoundedRectangle(cornerRadius: 16).fill(Color.white.opacity(0.95))
+                        .frame(width: 360, height: 240)
 
-                MirrorDiagram(angle: angle)
-                    .frame(width: 360, height: 240)
-            }
-
-            Text("∠ incidence = ∠ reflection = \(Int(angle))°")
-                .font(.title3.weight(.semibold))
-                .foregroundColor(Color.compatIndigo)
-
-            Slider(value: $angle, in: 5...75, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
-
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Law of Reflection", systemImage: "arrow.turn.up.right")
-                        .font(.title2.bold())
-                    Text("Light bounces off a mirror at the same angle it hit. Both angles are measured from the normal (an imaginary line at 90° to the mirror). This single rule explains everything you see in a mirror.")
-                        .font(.body).lineSpacing(4)
+                    MirrorDiagram(angle: angle)
+                        .frame(width: 360, height: 240)
                 }
+
+                Text("∠ incidence = ∠ reflection = \(Int(angle))°")
+                    .font(.title3.weight(.semibold))
+                    .foregroundColor(Color.compatIndigo)
+
+                Slider(value: $angle, in: 5...75, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Law of Reflection", systemImage: "arrow.turn.up.right")
+                            .font(.title2.bold())
+                        Text("Light bounces off a mirror at the same angle it hit. Both angles are measured from the normal (an imaginary line at 90° to the mirror). This single rule explains everything you see in a mirror.")
+                            .font(.body).lineSpacing(4)
+                    }
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                // Grouped so the outer VStack stays within Swift 5.5's
+                // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+                Group {
+                    LookingAheadCallout(
+                        title: "Class 10 / JEE Optics",
+                        detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Mirror + torch on paper",
+                        detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    RelatedConceptsCallout(
+                        title: "Related: Ch 8 (Winds, Storms)",
+                        detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+                }
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            // Grouped so the outer VStack stays within Swift 5.5's
-            // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
-            Group {
-                LookingAheadCallout(
-                    title: "Class 10 / JEE Optics",
-                    detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-
-                TryAtHomeCallout(
-                    title: "Mirror + torch on paper",
-                    detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-
-                RelatedConceptsCallout(
-                    title: "Related: Ch 8 (Winds, Storms)",
-                    detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
-            }
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

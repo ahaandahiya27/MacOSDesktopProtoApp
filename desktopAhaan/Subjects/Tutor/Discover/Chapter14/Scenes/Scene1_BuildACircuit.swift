@@ -14,83 +14,90 @@ struct Scene1_BuildACircuit: View {
     private var glowing: Bool { hasCell && switchOn }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Build a Circuit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            Text("Connect a cell, close the switch, and watch the bulb glow.")
-                .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // Wrapped in ScrollView so the scene scrolls on
+        // shorter windows and overflowing content remains accessible.
+        ScrollView {
+    VStack(spacing: 14) {
+                Text("Build a Circuit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+                Text("Connect a cell, close the switch, and watch the bulb glow.")
+                    .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            ZStack {
-                CircuitWires(active: glowing)
+                ZStack {
+                    CircuitWires(active: glowing)
+                        .frame(width: 360, height: 220)
+
+                    VStack(spacing: 20) {
+                        HStack {
+                            // Cell on the left
+                            VStack(spacing: 2) {
+                                Text(hasCell ? "🔋" : "🪫")
+                                    .font(.system(size: 44))
+                                    .opacity(hasCell ? 1 : 0.35)
+                                Text("Cell").font(.caption2)
+                            }
+                            Spacer()
+                            // Bulb on the right
+                            VStack(spacing: 2) {
+                                Text("💡")
+                                    .font(.system(size: 50))
+                                    .opacity(glowing ? 1 : 0.25)
+                                    .shadow(color: .yellow.opacity(glowing ? 0.8 : 0), radius: glowing ? 8 : 0)
+                                Text("Bulb").font(.caption2)
+                            }
+                        }
+                        .padding(.horizontal, 50)
+
+                        // Switch at the bottom
+                        VStack(spacing: 2) {
+                            Text(switchOn ? "🔘" : "⚪")
+                                .font(.system(size: 32))
+                            Text("Switch").font(.caption2)
+                        }
+                    }
                     .frame(width: 360, height: 220)
+                }
 
-                VStack(spacing: 20) {
-                    HStack {
-                        // Cell on the left
-                        VStack(spacing: 2) {
-                            Text(hasCell ? "🔋" : "🪫")
-                                .font(.system(size: 44))
-                                .opacity(hasCell ? 1 : 0.35)
-                            Text("Cell").font(.caption2)
-                        }
-                        Spacer()
-                        // Bulb on the right
-                        VStack(spacing: 2) {
-                            Text("💡")
-                                .font(.system(size: 50))
-                                .opacity(glowing ? 1 : 0.25)
-                                .shadow(color: .yellow.opacity(glowing ? 0.8 : 0), radius: glowing ? 8 : 0)
-                            Text("Bulb").font(.caption2)
-                        }
-                    }
-                    .padding(.horizontal, 50)
+                HStack(spacing: 24) {
+                    Toggle("Cell connected",   isOn: $hasCell)
+                    Toggle("Switch ON",        isOn: $switchOn)
+                }
+                .frame(maxWidth: 400)
 
-                    // Switch at the bottom
-                    VStack(spacing: 2) {
-                        Text(switchOn ? "🔘" : "⚪")
-                            .font(.system(size: 32))
-                        Text("Switch").font(.caption2)
+                Text(glowing ? "✅ Circuit complete — current flows!" : "⛔ Open circuit — no current")
+                    .font(.headline)
+                    .foregroundColor(glowing ? .green : .secondary)
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("Closed loop = current", systemImage: "bolt.fill")
+                            .font(.title2.bold())
+                        Text("Electric current flows only when there's an unbroken path from one terminal of a cell, through a conductor, and back to the other terminal. Open the switch anywhere and the loop breaks.")
+                            .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(width: 360, height: 220)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 10 / 12 Physics → JEE",
+                    detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Smallest possible circuit",
+                    detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
             }
-
-            HStack(spacing: 24) {
-                Toggle("Cell connected",   isOn: $hasCell)
-                Toggle("Switch ON",        isOn: $switchOn)
-            }
-            .frame(maxWidth: 400)
-
-            Text(glowing ? "✅ Circuit complete — current flows!" : "⛔ Open circuit — no current")
-                .font(.headline)
-                .foregroundColor(glowing ? .green : .secondary)
-
-            SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Label("Closed loop = current", systemImage: "bolt.fill")
-                        .font(.title2.bold())
-                    Text("Electric current flows only when there's an unbroken path from one terminal of a cell, through a conductor, and back to the other terminal. Open the switch anywhere and the loop breaks.")
-                        .font(.body).lineSpacing(4)
-                }
-            }
-            .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 10 / 12 Physics → JEE",
-                detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Smallest possible circuit",
-                detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
