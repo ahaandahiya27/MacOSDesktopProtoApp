@@ -26,8 +26,17 @@ private func debugLog(_ items: Any...) {
 @MainActor
 final class SubjectRegistry: ObservableObject {
 
-    @Published private(set) var packs: [SubjectPack] = []
+    @Published private(set) var packs: [SubjectPack] = [] {
+        didSet { _packsById = nil }
+    }
     @Published private(set) var loadErrors: [String] = []
+
+    /// `pack.id → SubjectPack` lookup, rebuilt on `packs` change. Replaces
+    /// the linear `packs.first { $0.id == id }` scan that `pack(withId:)`
+    /// previously performed. Called from every TutorNavigation route push,
+    /// every sidebar render, every dashboard. Tiny win at 2 packs but
+    /// completes the index-cache pattern.
+    private var _packsById: [String: SubjectPack]?
     /// True while the initial pack decode is running off-thread.
     /// UI can use this to render a placeholder instead of an empty sidebar.
     @Published private(set) var isLoading: Bool = true
@@ -147,7 +156,10 @@ final class SubjectRegistry: ObservableObject {
 
     /// Returns a pack by its id, or nil.
     func pack(withId id: String) -> SubjectPack? {
-        packs.first { $0.id == id }
+        if _packsById == nil {
+            _packsById = Dictionary(uniqueKeysWithValues: packs.map { ($0.id, $0) })
+        }
+        return _packsById?[id]
     }
 
     // MARK: - Bundle scanning

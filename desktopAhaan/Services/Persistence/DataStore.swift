@@ -8,15 +8,30 @@ final class DataStore: ObservableObject {
     static let shared = DataStore()
     private static let logger = Logger(subsystem: "com.emoha.desktopAhaan", category: "DataStore")
 
-    @Published var translationRecords: [TranslationRecord] = []
+    @Published var translationRecords: [TranslationRecord] = [] {
+        didSet { _recordsByDateCache = nil }
+    }
     @Published var practiceProgress: [PracticeProgress] = []
-    @Published var studyBookmarks: [StudyBookmark] = []
-    @Published var questionBookmarks: [QuestionBookmark] = []
+    @Published var studyBookmarks: [StudyBookmark] = [] {
+        didSet { _bookmarksByDateCache = nil }
+    }
+    @Published var questionBookmarks: [QuestionBookmark] = [] {
+        didSet { _questionBookmarksByDateCache = nil }
+    }
     @Published var questionAttempts: [QuestionAttempt] = []
     @Published var studySessions: [StudySession] = []
     @Published var discoverProgress: [DiscoverProgress] = [] {
         didSet { _discoverCountByChapterCache = nil }
     }
+
+    /// Sorted-by-date caches. The `*ByDate` accessors below re-sort the
+    /// whole array on every access — fine at the typical kid's <100-item
+    /// scale but pure waste when called from a body that re-renders on
+    /// every dataStore publish. didSet on each underlying @Published
+    /// invalidates the matching cache so the next access rebuilds once.
+    private var _recordsByDateCache: [TranslationRecord]?
+    private var _bookmarksByDateCache: [StudyBookmark]?
+    private var _questionBookmarksByDateCache: [QuestionBookmark]?
     /// Cached chapterId → completed-scene count derived from
     /// `discoverProgress`. Invalidated on every mutation; rebuilt lazily.
     /// Replaces the per-chapter linear scan that DiscoverProgressDashboard
@@ -136,7 +151,10 @@ final class DataStore: ObservableObject {
     }
 
     var recordsByDate: [TranslationRecord] {
-        translationRecords.sorted { $0.createdAt > $1.createdAt }
+        if let cached = _recordsByDateCache { return cached }
+        let built = translationRecords.sorted { $0.createdAt > $1.createdAt }
+        _recordsByDateCache = built
+        return built
     }
 
     func findRecord(original: String, translated: String,
@@ -172,7 +190,10 @@ final class DataStore: ObservableObject {
     // MARK: - StudyBookmark
 
     var bookmarksByDate: [StudyBookmark] {
-        studyBookmarks.sorted { $0.addedAt > $1.addedAt }
+        if let cached = _bookmarksByDateCache { return cached }
+        let built = studyBookmarks.sorted { $0.addedAt > $1.addedAt }
+        _bookmarksByDateCache = built
+        return built
     }
 
     func isBookmarked(subjectPackId: String, conceptId: String) -> Bool {
@@ -203,7 +224,10 @@ final class DataStore: ObservableObject {
     // MARK: - QuestionBookmark
 
     var questionBookmarksByDate: [QuestionBookmark] {
-        questionBookmarks.sorted { $0.addedAt > $1.addedAt }
+        if let cached = _questionBookmarksByDateCache { return cached }
+        let built = questionBookmarks.sorted { $0.addedAt > $1.addedAt }
+        _questionBookmarksByDateCache = built
+        return built
     }
 
     func isQuestionBookmarked(subjectPackId: String, questionId: String) -> Bool {

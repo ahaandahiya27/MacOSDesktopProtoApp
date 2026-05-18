@@ -697,7 +697,7 @@ deploy iMac. Status legend per A–Y / Z convention.
 | DG2 | XCTest performance baselines | ✅ `testPackDecodePerformance` + `testFlattenAllContentPerformance` exist (I7/I8 in main taxonomy) |
 | DG3 | Time Profiler instrument runs against real iMac | ❌ user needed to do this on actual iMac; CI doesn't run Instruments |
 | DG4 | Allocations / leaks instrument | ❌ not run |
-| DG5 | Hang detector instrumentation (anything > 250 ms on main) | ❌ could add via `os_signpost` + log-on-overrun pattern |
+| DG5 | Hang detector instrumentation (anything > 250 ms on main) | ✅ `CrashReporter.startHangDetection()` (DEBUG-only) runs a background `DispatchSourceTimer` at 250ms cadence pinging the main runloop. If main is blocked > 1000ms, logs a `HANG: main thread blocked for ~Xms` entry to today's crashlog (rate-limited to 30/session, latched per hang to avoid duplicate logs). Release builds no-op. Wired from `applicationDidFinishLaunching` |
 | DG6 | RUM logging for slow user actions | ❌ no `CrashReporter.logSlowEvent` yet — could surface in crashlogs |
 | DG7 | Frame-rate logging on legacy tier | 🟡 HardwareTier caps at 20fps but doesn't log actual achieved rate |
 | DG8 | Energy log review | ❌ never reviewed |

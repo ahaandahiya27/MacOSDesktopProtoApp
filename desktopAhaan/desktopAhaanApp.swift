@@ -25,6 +25,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Start the main-thread hang watchdog after the run-loop is fully
+        // up (avoids false positives during the launch cascade). DEBUG-only;
+        // release builds no-op.
+        CrashReporter.shared.startHangDetection()
     }
 
     /// Belt-and-suspenders at ⌘Q. Every `DataStore` mutation already calls

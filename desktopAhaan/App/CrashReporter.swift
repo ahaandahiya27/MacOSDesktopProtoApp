@@ -111,6 +111,101 @@ final class CrashReporter {
         logger.info("CrashReporter installed; logs go to \(self.logDirectoryURL.path, privacy: .public)")
     }
 
+    // MARK: - Hang detector (DG5, DEBUG-only)
+    //
+    // Background watchdog that pings the main thread every 250ms. If the
+    // ping doesn't get processed within `hangThresholdSeconds`, main is
+    // stuck — we log a `HANG` entry into today's crashlog with the
+    // observed block duration. The kid never sees this; it's a developer
+    // diagnostic. Release builds skip the whole thing (`startHangDetection`
+    // is a no-op outside DEBUG) so there's zero shipping-cost.
+    //
+    // False-positive shield: bounded at `maxHangsPerSession` entries per
+    // session to prevent a 10-minute background sleep / wake from filling
+    // a crashlog. `hangCurrentlyReported` flag also collapses a single
+    // long hang into one log entry (not one per check tick).
+    //
+    // Race-shielded with a private NSLock — heartbeat read/write from two
+    // threads (main publishes; background reads), but Date is a value
+    // type and the lock keeps `lastMainHeartbeat` / `hangsLoggedThisSession`
+    // safe. The DEBUG-only nature means tolerable rare false-positives
+    // from clock skew are fine.
+
+    #if DEBUG
+    private let hangLock = NSLock()
+    private var hangTimer: DispatchSourceTimer?
+    private var lastMainHeartbeat: Date = Date()
+    private var hangCurrentlyReported: Bool = false
+    private var hangsLoggedThisSession: Int = 0
+    private let hangThresholdSeconds: TimeInterval = 1.0
+    private let hangCheckIntervalSeconds: TimeInterval = 0.25
+    private let maxHangsPerSession: Int = 30
+    #endif
+
+    /// Starts the main-thread hang watchdog. DEBUG-only; release builds
+    /// no-op. Idempotent — calling twice is a no-op after the first.
+    /// Call from `applicationDidFinishLaunching` so the run-loop is fully
+    /// up before the heartbeat starts (avoids false positives during
+    /// launch cascade).
+    func startHangDetection() {
+        #if DEBUG
+        guard hangTimer == nil else { return }
+        let queue = DispatchQueue(
+            label: "com.emoha.desktopAhaan.hang-detector",
+            qos: .utility
+        )
+        let timer = DispatchSource.makeTimerSource(queue: queue)
+        timer.schedule(deadline: .now() + hangCheckIntervalSeconds,
+                       repeating: hangCheckIntervalSeconds)
+        timer.setEventHandler { [weak self] in
+            self?.hangCheckTick()
+        }
+        timer.resume()
+        hangTimer = timer
+        logger.info("Hang detector started (DEBUG, threshold \(Int(self.hangThresholdSeconds * 1000), privacy: .public)ms).")
+        #endif
+    }
+
+    #if DEBUG
+    private func hangCheckTick() {
+        let now = Date()
+        hangLock.lock()
+        let lastTick = lastMainHeartbeat
+        let alreadyReporting = hangCurrentlyReported
+        let count = hangsLoggedThisSession
+        hangLock.unlock()
+
+        let elapsed = now.timeIntervalSince(lastTick)
+
+        if elapsed > hangThresholdSeconds {
+            if !alreadyReporting && count < maxHangsPerSession {
+                hangLock.lock()
+                hangCurrentlyReported = true
+                hangsLoggedThisSession += 1
+                hangLock.unlock()
+
+                let ms = Int(elapsed * 1000)
+                logDataIssue("HANG: main thread blocked for ~\(ms) ms (threshold \(Int(hangThresholdSeconds * 1000))ms)")
+            }
+        } else if alreadyReporting {
+            // Main woke up — clear the latch so we can log the next hang.
+            hangLock.lock()
+            hangCurrentlyReported = false
+            hangLock.unlock()
+        }
+
+        // Heartbeat back to main. If main runs the closure, lastMainHeartbeat
+        // updates; if main is stuck, the closure sits in the queue and the
+        // next background tick sees stale data.
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.hangLock.lock()
+            self.lastMainHeartbeat = Date()
+            self.hangLock.unlock()
+        }
+    }
+    #endif
+
     /// Called by applicationWillTerminate so the next launch can tell
     /// "clean quit" from "crashed mid-session".
     func markCleanExit() {
