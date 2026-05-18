@@ -552,7 +552,7 @@ deploy iMac. Status legend per A–Y / Z convention.
 | ID | Category | Status |
 |----|----------|--------|
 | LC1 | App cold-launch wall-clock time on 2014 iMac (Fusion Drive + 1.4 GHz Haswell) | 🟡 `testPackDecodePerformance` provides regression baseline; manual timing on iMac TBD |
-| LC2 | EXC_BAD_ACCESS crash on `@main` init seen on iMac (screenshot) | 🟡 needs deeper stack — defensive fixes applied (LC3, duplicate-reload guard); root cause may be StateObject autoclosure firing twice during dev |
+| LC2 | EXC_BAD_ACCESS crash on `@main` init seen on iMac (screenshot) | 🟡 defensive fixes applied: LC3 reload guard + `Task.detached` for dictionary pre-warm (no longer inherits caller actor context) + SubjectPack index cache eliminates a class of races. Root cause needs full Thread-1 backtrace if it recurs |
 | LC3 | Duplicate `SubjectRegistry.reload()` on launch | ✅ `reloadInFlight` re-entrancy guard added (commit 2f74ef8). Second call short-circuits — saves ~115ms decode + redundant UI cascade |
 | LC4 | SwiftUI `WindowGroup` body recomputed during initial cascade | 🟡 standard SwiftUI behaviour; mitigated by token primitives + cached indices |
 | LC5 | `applicationDidFinishLaunching` work-loop budget | ✅ AppDelegate only sets sandbox flags + ensures Metal cache dir |
@@ -572,10 +572,10 @@ deploy iMac. Status legend per A–Y / Z convention.
 | MT6 | OCR text recognition on main thread (Vision request) | ✅ `performOCR()` marked `nonisolated` + Vision `handler.perform([request])` dispatched to `DispatchQueue.global(qos: .userInitiated)`. Multi-second freeze on large image → spinner runs (commit cd43ca1) |
 | MT7 | AVSpeechSynthesizer setup / speak | 🟡 SpeechReader.shared singleton; first-time speak instantiates synth — measurable but sub-100ms |
 | MT8 | Heavy `@Published` setters triggering cascade re-render | ✅ partial — major hot paths (sidebar needsReviewCount, DiscoverProgress count, QuizBank filter) now use cached lookups |
-| MT9 | Long computed properties read by `body` | ✅ QuizBank `filteredEntries`, DiscoverShell `completedSceneIds`, DiscoverProgressDashboard `completedCount` all captured once per body via local `let` |
+| MT9 | Long computed properties read by `body` | ✅ QuizBank `filteredEntries`, DiscoverShell `completedSceneIds`, DiscoverProgressDashboard `completedCount`, BookmarksView `entries`+`grouped`, CommandPalette `filtered`, QuestionDetailView `currentSiblingIndex` (via O(1) cache) — all captured once / cached |
 | MT10 | `Dictionary(uniquingKeysWith:)` over large pack on main | ✅ moved to `SubjectPackIndexCache` — built once per pack.id per process |
 | MT11 | `validateRelatedRefs()` cost at every render | ✅ called once per pack at decode time only (commit history); not per render |
-| MT12 | Hot-path string normalisation (lowercased + diacriticInsensitive) per keystroke | ✅ QuizBank: `searchText.lowercased()` hoisted out of per-entry closure (commit 020b4d1). SearchView: uses `String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]` which is more efficient |
+| MT12 | Hot-path string normalisation (lowercased + diacriticInsensitive) per keystroke | ✅ QuizBank: hoist; CommandPalette: query.lowercased() hoisted; SearchView: `.caseInsensitive, .diacriticInsensitive` |
 
 ### PE.SU — SwiftUI rendering / view churn
 
