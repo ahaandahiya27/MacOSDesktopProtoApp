@@ -32,8 +32,11 @@ struct ConceptDetailView: View {
                     followOnGroup
                 }
                 .padding(20)
+                // Center the bounded-width column inside the full-width
+                // detail pane. See QuestionDetailView.swift for the same
+                // pattern + the Big-Sur centering rationale.
                 .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .id("__top__")
             }
             .onAppear {

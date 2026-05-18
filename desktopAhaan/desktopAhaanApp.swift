@@ -86,13 +86,17 @@ struct SanskritKoshApp: App {
                 .environmentObject(subjectRegistry)
                 .environmentObject(dataStore)
                 // Min 1024×640 honours macOS's split-screen tile half-width
-                // on the deploy iMac's 5K @1×; ideal sized for full-screen
-                // use on the same display. Sidebar (≥220) + detailPane
-                // (≥420) totals 640 of internal content min, leaving room
-                // for the standard window chrome inside 1024.
+                // on the deploy iMac's 5K @1×.
+                //
+                // Ideal size bumped to 2200×1380 so the first-launch window
+                // fills more of the iMac 5K display (2560×1440 logical) —
+                // previously the 1500pt ideal left ~1060pt of desktop
+                // visible on the right, which read as "half-screen" /
+                // "distorted" rendering. Smaller-screen Macs will still
+                // clip to the available area automatically.
                 .frame(
-                    minWidth: 1024, idealWidth: 1500,
-                    minHeight: 640, idealHeight: 950
+                    minWidth: 1024, idealWidth: 2200,
+                    minHeight: 640, idealHeight: 1380
                 )
         }
         .commands {

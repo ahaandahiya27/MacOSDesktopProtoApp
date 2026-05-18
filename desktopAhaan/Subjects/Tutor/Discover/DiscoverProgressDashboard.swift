@@ -65,8 +65,10 @@ private struct DiscoverProgressContent: View {
                 }
             }
             .padding(20)
+            // Center the bounded-width content within the full-width
+            // detail pane. See QuestionDetailView for the same pattern.
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .center)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Discover Progress")

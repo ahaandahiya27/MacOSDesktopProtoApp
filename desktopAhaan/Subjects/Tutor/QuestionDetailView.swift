@@ -62,8 +62,15 @@ struct QuestionDetailView: View {
                     postAttemptGroup
                 }
                 .padding(20)
+                // Two-stage frame: cap the readable column width via
+                // contentMaxWidth, then expand the OUTER container to fill
+                // the available detail-pane width and center the inner
+                // column. Without the explicit `.center` alignment on the
+                // outer frame, SwiftUI on Big Sur leaves the bounded
+                // column hugging the LEADING edge — content appears
+                // half-screen with empty space on the right.
                 .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .id("__top__")
             }
             .onAppear {

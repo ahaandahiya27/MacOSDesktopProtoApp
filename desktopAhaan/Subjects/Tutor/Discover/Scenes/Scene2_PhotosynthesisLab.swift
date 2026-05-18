@@ -30,6 +30,13 @@ struct Scene2_PhotosynthesisLab: View {
 
     var body: some View {
         VStack(spacing: 18) {
+            // Top spacer balances the trailing Spacer below so the lab
+            // content (title → fuel buttons → equation → leaf → cook →
+            // callouts → CTAs) centers vertically inside the scene canvas
+            // instead of stacking at the top with a large empty band
+            // beneath it on the 5K iMac.
+            Spacer(minLength: 0)
+
             Text("Photosynthesis Lab")
                 .font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -95,51 +102,56 @@ struct Scene2_PhotosynthesisLab: View {
             .accentColor(canCook ? .green : .gray)
             .disabled(!canCook && !produced)
 
-            if produced {
-                SoftShadowCard(padding: 16) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Label("What I learned", systemImage: "book.fill")
-                            .font(.headline)
-                            .foregroundColor(Color.compatIndigo)
-                        Text(textbookExplanation)
-                            .font(.callout)
+            // Grouped to stay within Swift 5.5's ≤10-child ViewBuilder cap
+            // — top Spacer + 9 visible items + bottom Spacer would be 11
+            // direct children. Group is invisible at runtime.
+            Group {
+                if produced {
+                    SoftShadowCard(padding: 16) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Label("What I learned", systemImage: "book.fill")
+                                .font(.headline)
+                                .foregroundColor(Color.compatIndigo)
+                            Text(textbookExplanation)
+                                .font(.callout)
+                        }
                     }
+                    .frame(maxWidth: 720)
                 }
-                .frame(maxWidth: 720)
-            }
 
-            LookingAheadCallout(
-                title: "Class 12 Biology → NEET",
-                detail: "You'll meet TWO photosynthesis pathways in NEET: C3 plants (rice, wheat) and C4 plants (sugarcane, maize, the speed champions). The reactant ratio you just balanced is the same; the trick C4 plants pull is concentrating CO₂ near the chlorophyll so the enzyme RuBisCO doesn't waste energy on photorespiration. Tropical heat = C4 advantage."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                LookingAheadCallout(
+                    title: "Class 12 Biology → NEET",
+                    detail: "You'll meet TWO photosynthesis pathways in NEET: C3 plants (rice, wheat) and C4 plants (sugarcane, maize, the speed champions). The reactant ratio you just balanced is the same; the trick C4 plants pull is concentrating CO₂ near the chlorophyll so the enzyme RuBisCO doesn't waste energy on photorespiration. Tropical heat = C4 advantage."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Count the bubbles",
-                detail: "Take a small sprig of pondweed (Hydrilla / Elodea — pet shops sell it). Drop it into a glass of water with a pinch of baking soda dissolved (CO₂ source). Cover the sprig with a funnel; balance a test tube on top. Shine a desk lamp on it. Count bubbles of O₂ escaping for 1 minute. Move the lamp closer — count again. You just measured the rate of photosynthesis."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                TryAtHomeCallout(
+                    title: "Count the bubbles",
+                    detail: "Take a small sprig of pondweed (Hydrilla / Elodea — pet shops sell it). Drop it into a glass of water with a pinch of baking soda dissolved (CO₂ source). Cover the sprig with a funnel; balance a test tube on top. Shine a desk lamp on it. Count bubbles of O₂ escaping for 1 minute. Move the lamp closer — count again. You just measured the rate of photosynthesis."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            HStack(spacing: 12) {
-                Button("🔁 Try again") { resetEverything() }
-                    .buttonStyle(.bordered)
-                    .disabled(!produced)
-                VStack(spacing: 4) {
-                    GotItButton(action: onComplete)
+                HStack(spacing: 12) {
+                    Button("🔁 Try again") { resetEverything() }
+                        .buttonStyle(.bordered)
                         .disabled(!produced)
-                        .opacity(produced ? 1 : 0.5)
-                    if !produced {
-                        Text("Complete the experiment to continue")
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
+                    VStack(spacing: 4) {
+                        GotItButton(action: onComplete)
+                            .disabled(!produced)
+                            .opacity(produced ? 1 : 0.5)
+                        if !produced {
+                            Text("Complete the experiment to continue")
+                                .font(.caption2)
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
-            }
-            .padding(.bottom, 12)
+                .padding(.bottom, 12)
 
-            Spacer(minLength: 0)
+                Spacer(minLength: 0)
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
