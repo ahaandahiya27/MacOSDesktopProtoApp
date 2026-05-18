@@ -79,14 +79,16 @@ struct ContentView: View {
     /// Count questions in a pack that the parent still needs to triage.
     /// `effectiveNeedsReview` honors the in-app "Mark reviewed" override, so
     /// the badge decrements as the parent works through the list.
+    /// Pack's "needs review" count using the cached `needsHumanReviewIds`
+    /// set. Replaces the previous chapter→topic→question walk that did
+    /// ~640 `effectiveNeedsReview()` calls per render, per pack (the
+    /// sidebar re-rendered on every dataStore publish).
+    ///
+    /// `pack.needsHumanReviewIds` is process-cached by pack.id. The
+    /// `subtracting` op is O(|needsHumanReviewIds|) which is far smaller
+    /// than total question count.
     private func needsReviewCount(for pack: SubjectPack) -> Int {
-        pack.chapters.reduce(0) { chCount, ch in
-            chCount + ch.topics.reduce(0) { tCount, t in
-                tCount + t.questions.reduce(0) { qCount, q in
-                    qCount + (dataStore.effectiveNeedsReview(q) ? 1 : 0)
-                }
-            }
-        }
+        pack.needsHumanReviewIds.subtracting(dataStore.reviewedQuestionIds).count
     }
 
     /// Sidebar section header with a small "Clear" button on the right.

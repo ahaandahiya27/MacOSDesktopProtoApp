@@ -75,6 +75,20 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         SubjectPackIndexCache.shared.questionIndex(for: self)
     }
 
+    /// Set of question IDs flagged `needsHumanReview` in the JSON pack.
+    /// Cached so the sidebar's "needs review" count can be
+    /// `needsHumanReviewIds.subtracting(reviewedQuestionIds).count` —
+    /// O(needs-review-set-size) instead of walking every chapter / topic /
+    /// question per sidebar render. (~640 questions × 2 packs = 1280 calls
+    /// removed from the main thread on every dataStore publish.)
+    var needsHumanReviewIds: Set<String> {
+        SubjectPackIndexCache.shared.needsHumanReviewIds(for: self)
+    }
+
+    fileprivate func buildNeedsHumanReviewIds() -> Set<String> {
+        Set(allQuestions.lazy.filter { $0.needsHumanReview }.map { $0.id })
+    }
+
     /// Builds the underlying concept dictionary. Only called by the cache
     /// on first access for a given pack.id.
     fileprivate func buildConceptIndex() -> [String: Concept] {
@@ -141,6 +155,7 @@ final class SubjectPackIndexCache {
     private let lock = NSLock()
     private var conceptIndices: [String: [String: Concept]] = [:]
     private var questionIndices: [String: [String: Question]] = [:]
+    private var needsHumanReviewIdSets: [String: Set<String>] = [:]
 
     func conceptIndex(for pack: SubjectPack) -> [String: Concept] {
         lock.lock(); defer { lock.unlock() }
@@ -162,11 +177,22 @@ final class SubjectPackIndexCache {
         return built
     }
 
+    func needsHumanReviewIds(for pack: SubjectPack) -> Set<String> {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = needsHumanReviewIdSets[pack.id] {
+            return cached
+        }
+        let built = pack.buildNeedsHumanReviewIds()
+        needsHumanReviewIdSets[pack.id] = built
+        return built
+    }
+
     /// Drops any cached indices. Called by `SubjectRegistry.reload()` so
     /// post-reload pack content isn't read through a stale dictionary.
     func invalidateAll() {
         lock.lock(); defer { lock.unlock() }
         conceptIndices.removeAll()
         questionIndices.removeAll()
+        needsHumanReviewIdSets.removeAll()
     }
 }
