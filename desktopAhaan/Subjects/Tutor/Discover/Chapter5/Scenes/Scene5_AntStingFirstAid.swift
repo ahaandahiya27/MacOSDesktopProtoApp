@@ -38,8 +38,10 @@ struct Scene5_AntStingFirstAid: View {
     }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 16) {
                     // Story header
                     Text("Ant Sting First Aid")
@@ -101,8 +103,7 @@ struct Scene5_AntStingFirstAid: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                 // Result + GotIt
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     if showResult, let remedy = chosenRemedy {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -142,10 +143,13 @@ struct Scene5_AntStingFirstAid: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

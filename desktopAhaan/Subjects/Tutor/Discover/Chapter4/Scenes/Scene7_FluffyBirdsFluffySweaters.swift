@@ -13,8 +13,10 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 HStack(spacing: 40) {
                     // Bird side
                     VStack(spacing: 14) {
@@ -117,7 +119,8 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
-                VStack(spacing: 14) {
+                Group {
+
                     // Button at top area
                     Button(isCold ? "Make it warm!" : "Make it cold!") {
                         toggleCold()
@@ -125,9 +128,6 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                     
                     .accentColor(isCold ? .orange : Color.compatCyan)
                     .padding(.top, 16)
-
-                    Spacer()
-
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Fluffy Birds, Fluffy Sweaters", systemImage: SFSymbolCompat.name("bird.fill"))
@@ -153,10 +153,13 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

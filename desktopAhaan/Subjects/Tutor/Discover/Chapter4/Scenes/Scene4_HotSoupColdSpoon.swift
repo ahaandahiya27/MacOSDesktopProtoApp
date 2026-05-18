@@ -15,8 +15,10 @@ struct Scene4_HotSoupColdSpoon: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 20) {
                     Spacer()
 
@@ -117,8 +119,7 @@ struct Scene4_HotSoupColdSpoon: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Hot Soup, Cold Spoon", systemImage: SFSymbolCompat.name("frying.pan.fill"))
@@ -146,10 +147,13 @@ struct Scene4_HotSoupColdSpoon: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

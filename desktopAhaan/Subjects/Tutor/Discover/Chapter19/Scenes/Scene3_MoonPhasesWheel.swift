@@ -56,8 +56,10 @@ struct Scene3_MoonPhasesWheel: View {
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 14), count: 4)
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 12) {
                     Text("Moon Phases")
                         .font(.largeTitle.bold())
@@ -86,9 +88,7 @@ struct Scene3_MoonPhasesWheel: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedPhase, let phase = phases.first(where: { $0.id == idx }) {
@@ -124,10 +124,13 @@ struct Scene3_MoonPhasesWheel: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

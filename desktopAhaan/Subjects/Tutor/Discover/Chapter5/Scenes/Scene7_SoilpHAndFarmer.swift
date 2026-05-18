@@ -34,8 +34,10 @@ struct Scene7_SoilpHAndFarmer: View {
     }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Soil pH and the Farmer")
                         .font(.title2.bold())
@@ -120,8 +122,7 @@ struct Scene7_SoilpHAndFarmer: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Why Farmers Test Soil", systemImage: SFSymbolCompat.name("leaf.arrow.circlepath"))
@@ -155,10 +156,13 @@ struct Scene7_SoilpHAndFarmer: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

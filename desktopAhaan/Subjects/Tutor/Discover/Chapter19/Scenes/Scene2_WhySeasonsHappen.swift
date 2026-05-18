@@ -48,8 +48,10 @@ struct Scene2_WhySeasonsHappen: View {
     private var allDone: Bool { exploredPositions.count == positions.count }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 12) {
                     Text("Why Seasons Happen")
                         .font(.largeTitle.bold())
@@ -97,9 +99,7 @@ struct Scene2_WhySeasonsHappen: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedPosition, let pos = positions.first(where: { $0.id == idx }) {
@@ -146,10 +146,13 @@ struct Scene2_WhySeasonsHappen: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

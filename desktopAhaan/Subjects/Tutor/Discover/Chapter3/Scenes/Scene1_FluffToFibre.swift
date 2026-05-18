@@ -29,25 +29,34 @@ struct Scene1_FluffToFibre: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                // Drifting icons
-                DriftingIcon(emoji: "🐑", baseX: 0.15, baseY: 0.3,
-                             phaseOffset: 0.0, t: tick, size: geo.size,
-                             onTap: { tapIcon("🐑") })
-                DriftingIcon(emoji: "🐛", baseX: 0.15, baseY: 0.5,
-                             phaseOffset: 1.0, t: tick, size: geo.size,
-                             onTap: { tapIcon("🐛") })
-                DriftingIcon(emoji: "🌿", baseX: 0.15, baseY: 0.7,
-                             phaseOffset: 2.0, t: tick, size: geo.size,
-                             onTap: { tapIcon("🌿") })
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content. The
+        // drifting-icon animation needs a GeometryReader for its
+        // size-relative positioning; that lives in a fixed-height
+        // wrapper at the top.
+        ScrollView {
+            VStack(spacing: 14) {
+                GeometryReader { geo in
+                    ZStack(alignment: .topLeading) {
+                        // Drifting icons
+                        DriftingIcon(emoji: "🐑", baseX: 0.15, baseY: 0.3,
+                                     phaseOffset: 0.0, t: tick, size: geo.size,
+                                     onTap: { tapIcon("🐑") })
+                        DriftingIcon(emoji: "🐛", baseX: 0.15, baseY: 0.5,
+                                     phaseOffset: 1.0, t: tick, size: geo.size,
+                                     onTap: { tapIcon("🐛") })
+                        DriftingIcon(emoji: "🌿", baseX: 0.15, baseY: 0.7,
+                                     phaseOffset: 2.0, t: tick, size: geo.size,
+                                     onTap: { tapIcon("🌿") })
 
-                // Fabric weaving on the right
-                fabricPanel(geoSize: geo.size)
+                        // Fabric weaving on the right
+                        fabricPanel(geoSize: geo.size)
+                    }
+                }
+                .frame(height: 280)
 
                 // Caption + button
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("From Fluff to Fibre", systemImage: "sparkles")
@@ -90,10 +99,13 @@ struct Scene1_FluffToFibre: View {
                         onComplete()
                     }
                     .padding(.bottom, 12)
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }

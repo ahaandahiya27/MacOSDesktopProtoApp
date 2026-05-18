@@ -20,8 +20,10 @@ struct Scene2_TearingVsBurningPaper: View {
     private var bothDone: Bool { tornTapped && burntTapped }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Tearing vs Burning Paper")
                         .font(.largeTitle.bold())
@@ -148,8 +150,7 @@ struct Scene2_TearingVsBurningPaper: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     if bothDone {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -195,10 +196,13 @@ struct Scene2_TearingVsBurningPaper: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

@@ -18,8 +18,10 @@ struct Scene1_SpinningEarth: View {
     private var allDone: Bool { spinCount >= 3 }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Spinning Earth")
                         .font(.largeTitle.bold())
@@ -113,9 +115,7 @@ struct Scene1_SpinningEarth: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Day & Night", systemImage: SFSymbolCompat.name("globe.americas.fill"))
@@ -143,10 +143,13 @@ struct Scene1_SpinningEarth: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

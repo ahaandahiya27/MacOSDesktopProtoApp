@@ -38,8 +38,10 @@ struct Scene1_SourOrBitter: View {
     }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Classify each item")
                         .font(.title2.bold())
@@ -84,8 +86,7 @@ struct Scene1_SourOrBitter: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                 // Bottom card + GotIt
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     if allDone {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -126,10 +127,13 @@ struct Scene1_SourOrBitter: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

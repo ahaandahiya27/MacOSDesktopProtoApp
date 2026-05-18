@@ -48,8 +48,10 @@ struct Scene6_SolarSystemSorter: View {
     }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so
+        // explanation cards don't cover the interactive content.
+        ScrollView {
+            VStack(spacing: 14) {
                 VStack(spacing: 14) {
                     Text("Solar System Sorter")
                         .font(.title2.bold())
@@ -129,9 +131,7 @@ struct Scene6_SolarSystemSorter: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if isSubmitted {
@@ -174,10 +174,13 @@ struct Scene6_SolarSystemSorter: View {
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     }
+                
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
+            
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 
