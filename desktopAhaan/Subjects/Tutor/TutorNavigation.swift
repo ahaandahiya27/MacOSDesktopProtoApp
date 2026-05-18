@@ -82,52 +82,29 @@ struct TutorNavigationContainer<Root: View>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            if nav.canGoBack {
-                HStack(spacing: 12) {
-                    // No local `.keyboardShortcut("[")` here — the
-                    // app-level Edit menu's "Go Back" already owns ⌘[
-                    // and posts `navigateBackCommand`, which this view
-                    // observes via .onReceive below. Wiring it on both
-                    // levels would double-pop the stack (in-view button
-                    // fires AND the notification handler fires).
-                    Button { nav.pop() } label: {
-                        HStack(spacing: 4) {
-                            Image(systemName: "chevron.left")
-                            Text("Back")
-                        }
-                    }
-                    .help("Back (⌘[)")
+            // BUG fix (filter persistence): the back bar is always rendered
+            // — visibility is controlled by `.opacity` + collapsed `.frame`
+            // instead of an `if nav.canGoBack`. Reason: when the bar appears
+            // / disappears, an `if`-based conditional changes the VStack's
+            // child count from 1 to 3, moving the `Group { root }` from
+            // index 0 to index 2. SwiftUI's structural-identity tracker
+            // treats that as a different view and tears down `root`'s
+            // @State (filter pickers, search text, scroll position).
+            // Keeping the bar always-present at index 0 makes the Group's
+            // position stable, so QuizBankContent's @State survives push +
+            // pop and the user returns to the same filtered view.
+            backBar
+                .opacity(nav.canGoBack ? 1 : 0)
+                .frame(height: nav.canGoBack ? nil : 0)
+                .clipped()
+                .allowsHitTesting(nav.canGoBack)
 
-                    if nav.path.count > 1 {
-                        Button { nav.popToRoot() } label: {
-                            HStack(spacing: 4) {
-                                Image(systemName: "house")
-                                Text("Subject home")
-                            }
-                        }
-                        .keyboardShortcut("[", modifiers: [.command, .shift])
-                        .help("Back to subject home (⌘⇧[)")
-                    }
-
-                    Spacer()
-                }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(Color(NSColor.controlBackgroundColor))
-                Divider()
-            }
-
-            // BUG fix: previously `.id(nav.currentRoute)` was applied to the
-            // whole Group, so every push/pop changed the Group's identity and
-            // SwiftUI tore down `root` (search box text, filter pickers,
-            // scroll position) along with it. Result: pop-back showed a
-            // fresh root with empty state — the "list is compromised on
-            // back" symptom.
-            //
-            // Now the .id() is on the routeView only, so route detail views
-            // still get a fresh identity per route (preventing state bleed
-            // between, say, question q1 and question q2) but `root` keeps a
-            // stable identity and its @State survives across navigation.
+            // The previous `.id(nav.currentRoute)` was on this Group's
+            // wrapper, which forced a re-init on every push/pop. Now the
+            // `.id()` is on `routeView` only, so route detail views still
+            // get a fresh identity per route (preventing state bleed
+            // between, say, question q1 and question q2) but `root` keeps
+            // its identity and its @State survives across navigation.
             Group {
                 if let route = nav.currentRoute {
                     routeView(for: route)
@@ -144,6 +121,42 @@ struct TutorNavigationContainer<Root: View>: View {
         }
         .onAppear { consumePendingRouteIfAny() }
         .onChange(of: appState.pendingRoute) { _ in consumePendingRouteIfAny() }
+    }
+
+    /// The Back / Subject-home bar shown at the top of the navigation
+    /// container. Extracted so we can always render it (with conditional
+    /// visibility) without changing the VStack's child count — see the
+    /// state-persistence bug fix in `body`.
+    private var backBar: some View {
+        HStack(spacing: 12) {
+            // No local `.keyboardShortcut("[")` here — the app-level
+            // Edit menu's "Go Back" already owns ⌘[ and posts
+            // `navigateBackCommand`, observed via `.onReceive` below.
+            Button { nav.pop() } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "chevron.left")
+                    Text("Back")
+                }
+            }
+            .help("Back (⌘[)")
+
+            if nav.path.count > 1 {
+                Button { nav.popToRoot() } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "house")
+                        Text("Subject home")
+                    }
+                }
+                .keyboardShortcut("[", modifiers: [.command, .shift])
+                .help("Back to subject home (⌘⇧[)")
+            }
+
+            Spacer()
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
+        .background(Color(NSColor.controlBackgroundColor))
+        .overlay(Divider(), alignment: .bottom)
     }
 
     /// Pull the one-shot pending route out of AppState, apply it to this
