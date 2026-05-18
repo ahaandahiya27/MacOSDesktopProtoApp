@@ -65,8 +65,10 @@ struct TopicDetailView: View {
             }
         }
         .listStyle(.inset)
+        // Center the bounded-width column inside the full detail pane
+        // instead of pinning to leading; matches Concept/Question detail.
         .frame(maxWidth: DesignTokens.contentMaxWidthWide)
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .center)
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle(topic.title)
     }

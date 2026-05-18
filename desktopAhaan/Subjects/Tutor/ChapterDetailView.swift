@@ -44,8 +44,10 @@ struct ChapterDetailView: View {
                 }
             }
             .padding(20)
+            // Center the bounded-width column inside the full-width
+            // detail pane. Same pattern as ConceptDetailView / QuestionDetailView.
             .frame(maxWidth: DesignTokens.contentMaxWidthWide, alignment: .leading)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .center)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Ch. \(chapter.number) — \(chapter.title)")
