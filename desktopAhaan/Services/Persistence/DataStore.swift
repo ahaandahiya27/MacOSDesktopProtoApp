@@ -14,7 +14,14 @@ final class DataStore: ObservableObject {
     @Published var questionBookmarks: [QuestionBookmark] = []
     @Published var questionAttempts: [QuestionAttempt] = []
     @Published var studySessions: [StudySession] = []
-    @Published var discoverProgress: [DiscoverProgress] = []
+    @Published var discoverProgress: [DiscoverProgress] = [] {
+        didSet { _discoverCountByChapterCache = nil }
+    }
+    /// Cached chapterId → completed-scene count derived from
+    /// `discoverProgress`. Invalidated on every mutation; rebuilt lazily.
+    /// Replaces the per-chapter linear scan that DiscoverProgressDashboard
+    /// was doing 19+ times per render.
+    private var _discoverCountByChapterCache: [String: Int]?
     /// Question IDs the parent has triaged. Used to override
     /// `Question.needsHumanReview` for auto-generated content (e.g. the 154
     /// Sanskrit MCQs) without having to edit the pack JSON.
@@ -264,6 +271,19 @@ final class DataStore: ObservableObject {
 
     func discoverRows(for chapterId: String) -> [DiscoverProgress] {
         discoverProgress.filter { $0.chapterId == chapterId }
+    }
+
+    /// Fast count-only accessor for `discoverProgress` rows by chapter.
+    /// Use this in dashboards / sidebars that only need the count — the
+    /// per-chapter cache avoids the linear scan that `discoverRows(for:)`
+    /// performs.
+    func discoverRowCount(for chapterId: String) -> Int {
+        if _discoverCountByChapterCache == nil {
+            _discoverCountByChapterCache = Dictionary(
+                grouping: discoverProgress, by: { $0.chapterId }
+            ).mapValues { $0.count }
+        }
+        return _discoverCountByChapterCache?[chapterId] ?? 0
     }
 
     // MARK: - Review status

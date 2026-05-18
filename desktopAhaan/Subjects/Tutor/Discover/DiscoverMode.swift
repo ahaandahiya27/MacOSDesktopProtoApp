@@ -259,7 +259,12 @@ struct DiscoverShell<SceneBody: View>: View {
     // Hoisting the title here makes the redundant footer title (was DM4) safe
     // to remove and gives the canvas a single, high-contrast scene heading.
     private var header: some View {
-        VStack(spacing: 8) {
+        // Compute completedSceneIds ONCE per header render — was being
+        // invoked once for the counter + once per stepper dot (= 1 + N).
+        // Each call did `dataStore.discoverRows(for:).filter { ... }.map`
+        // → Set, which is a linear scan over all DiscoverProgress entries.
+        let completedIds = completedSceneIds
+        return VStack(spacing: 8) {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 Text(sceneTitles[currentScene])
                     .font(.title2.bold())
@@ -267,14 +272,14 @@ struct DiscoverShell<SceneBody: View>: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                 Spacer(minLength: 0)
-                Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedSceneIds.count) done")
+                Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedIds.count) done")
                     .font(.monoDigitCaption)
                     .foregroundColor(.secondary)
             }
             HStack(spacing: 8) {
                 ForEach(0..<totalScenes, id: \.self) { i in
                     let id = "scene\(i + 1)"
-                    let done = completedSceneIds.contains(id)
+                    let done = completedIds.contains(id)
                     Button {
                         withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
                             currentScene = i

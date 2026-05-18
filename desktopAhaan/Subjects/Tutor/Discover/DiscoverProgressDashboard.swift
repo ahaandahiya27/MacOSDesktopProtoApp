@@ -203,8 +203,13 @@ private struct DiscoverProgressContent: View {
         .accessibilityValue("\(done) of \(total) scenes completed")
     }
 
+    /// Uses `dataStore.discoverRowCount(for:)` which is backed by a cached
+    /// chapterId → count dict. The previous `.discoverRows(for:).count` did
+    /// a linear scan over all DiscoverProgress entries — and this dashboard
+    /// calls `completedCount` 19+ times per render (closestToCompletion +
+    /// totalCompleted + per-chapterCard).
     private func completedCount(for chapter: Chapter) -> Int {
-        dataStore.discoverRows(for: chapter.id).count
+        dataStore.discoverRowCount(for: chapter.id)
     }
 
     private func openChapter(_ chapter: Chapter) {
