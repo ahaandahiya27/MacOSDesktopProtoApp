@@ -40,10 +40,12 @@ struct Scene2_BuildAWeatherStation: View {
     ]
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
-                VStack(spacing: 16) {
-                    Text("Build Your Weather Station")
+        // Refactored ZStack-overlap to ScrollView+VStack so the cards
+        // don't sit in a separate Z-plane with empty space between them
+        // and the instrument row.
+        ScrollView {
+            VStack(spacing: 14) {
+                Text("Build Your Weather Station")
                         .font(.title2.bold())
                         .padding(.top, 14)
 
@@ -118,14 +120,7 @@ struct Scene2_BuildAWeatherStation: View {
                         .accentColor(Color.compatIndigo)
                     }
 
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
-
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedInstrument, idx < instruments.count {
@@ -163,15 +158,16 @@ struct Scene2_BuildAWeatherStation: View {
                             .padding(.bottom, 12)
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
-
-                if stationComplete {
-                    ParticleEmitter(isActive: true, particleCount: 40, duration: 2.0)
-                        .allowsHitTesting(false)
-                        .ignoresSafeArea()
-                }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
+        .overlay(
+            stationComplete
+                ? ParticleEmitter(isActive: true, particleCount: 40, duration: 2.0)
+                    .allowsHitTesting(false)
+                : nil
+        )
     }
 }
