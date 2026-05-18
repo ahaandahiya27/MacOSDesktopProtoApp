@@ -8,7 +8,7 @@ concrete instances, fix them, mark the category done. Status legend:
 - 🟡 partially addressed; known gaps remain
 - ❌ not yet audited
 
-Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to completion. Every row is now ✅ closed, 🟡 marked-as-iMac-blocked / feature-backlog / by-design, or marked-as-duplicate. Highlights: Phase 1 chrome unification, Phase 2 token primitives, Phase 3 `BrandColor.canvasText` for the always-light Discover canvas (4 callouts + 26 scene titles + 6 components), DM6 chapter-accent env propagation, MO2/MO3 PressableButtonStyle + GotItButton celebration, AC2 hit-target expansion, AC4 `pointingCursor()` app-wide, EM1 unified empty states, EM5 OCR drop-zone hover, CP5 BadgePill primitive, HR7 Recent items grouped by kind, SF-Symbol shim now ~38 entries + cascading-bug fix, T5 GitHub Actions CI wired. ~30+ commits this session.).
+Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to completion + new PE block (Performance & responsiveness) seeded. Major perf wins this round: SubjectPack index cache (process-wide, replaces per-render `Dictionary(uniquingKeysWith:)` rebuild), QuizBank filter hot-path memoisation, sidebar `needsReviewCount` via cached `needsHumanReviewIds` set, DiscoverProgressDashboard cached `discoverRowCount(for:)`, DiscoverShell `completedSceneIds` captured once per body, `SubjectRegistry.reload()` re-entrancy guard. Plus: `arrowshape.down.fill` SF Symbol routed, FlipCard cropping fixed (Wool Animals scene), Phase 1-3 visual work + 40+ commits.).
 
 ---
 
@@ -538,6 +538,169 @@ in the project memory.
 | PR1 | Article print stylesheet exists; Discover scenes have no print-equivalent recap | 🟡 **future feature** — would need a per-scene "print recap" template (title + key insight + try-at-home). Defer; print of Discover scenes is rare for a 7-year-old's primary workflow |
 | PR2 | No "share / export" of progress card to parent | 🟡 **future feature** — would auto-generate a 1-page summary of "this week: scenes completed / new concepts / quiz scores" for parent. App is offline-first / no-accounts, so this would be a "Save as PDF" or "Copy summary to clipboard". Defer pending product decision |
 | PR3 | OCR result not styled for copy-out | ✅ `TranslationResultCard` (shown after OCR translation) already exposes a Copy button writing `response.translatedText` to `NSPasteboard.general` + a 1.5s "Copied!" feedback state. Also Speak (audio playback) + Favorite. All three are icon-only Buttons; added `.pointingCursor()` to each (AC4 follow-up). Text-only copy via system clipboard works correctly for Devanagari and Latin |
+
+## PE. Performance & responsiveness
+
+Seeded 2026-05-18 after user reported "UI main thread getting blocked"
+and shared an iMac Xcode screenshot showing `EXC_BAD_ACCESS` at `@main`
+launch + duplicate `SubjectRegistry.reload()`. Most pending performance
+work targets the slow 1.4 GHz Haswell CPU + AMD R9 M290X 2GB GPU on the
+deploy iMac. Status legend per A–Y / Z convention.
+
+### PE.LC — Launch / lifecycle
+
+| ID | Category | Status |
+|----|----------|--------|
+| LC1 | App cold-launch wall-clock time on 2014 iMac (Fusion Drive + 1.4 GHz Haswell) | 🟡 `testPackDecodePerformance` provides regression baseline; manual timing on iMac TBD |
+| LC2 | EXC_BAD_ACCESS crash on `@main` init seen on iMac (screenshot) | 🟡 needs deeper stack — defensive fixes applied (LC3, duplicate-reload guard); root cause may be StateObject autoclosure firing twice during dev |
+| LC3 | Duplicate `SubjectRegistry.reload()` on launch | ✅ `reloadInFlight` re-entrancy guard added (commit 2f74ef8). Second call short-circuits — saves ~115ms decode + redundant UI cascade |
+| LC4 | SwiftUI `WindowGroup` body recomputed during initial cascade | 🟡 standard SwiftUI behaviour; mitigated by token primitives + cached indices |
+| LC5 | `applicationDidFinishLaunching` work-loop budget | ✅ AppDelegate only sets sandbox flags + ensures Metal cache dir |
+| LC6 | First-render flash of empty sidebar before subjects load | ✅ `subjectRegistry.isLoading` placeholder renders ProgressView until decode completes |
+| LC7 | Welcome sheet present-time on first launch | 🟡 not measured; presents on `hasSeenWelcome == false` |
+| LC8 | Sleep / wake recovery time | ❌ untested |
+
+### PE.MT — Main-thread hygiene
+
+| ID | Category | Status |
+|----|----------|--------|
+| MT1 | Synchronous JSON decode on main thread | ✅ `SubjectRegistry.reload()` uses `Task.detached(priority: .userInitiated)` for the pack decode; publishes on MainActor |
+| MT2 | Synchronous file I/O on main thread (HTML article reads) | 🟡 WKWebView loads file:// async; concept articles via Bundle.url then Data(contentsOf:) on main but ~1-10KB each → sub-millisecond |
+| MT3 | NSImage instantiation on main thread (OCR drop) | 🟡 happens on main; acceptable for kid-scale single-image use; alternative is async loading w/ placeholder |
+| MT4 | UserDefaults `synchronize()` / `set()` blocking | ✅ modern macOS makes synchronize() a no-op; AppState/AppDelegate both call it for explicit-intent semantics only |
+| MT5 | `NSPasteboard.general.setString` (large strings) | ✅ TranslationResultCard copies small string; no large blobs |
+| MT6 | OCR text recognition on main thread (Vision request) | ✅ OCRService uses async; surface via `isProcessing` |
+| MT7 | AVSpeechSynthesizer setup / speak | 🟡 SpeechReader.shared singleton; first-time speak instantiates synth — measurable but sub-100ms |
+| MT8 | Heavy `@Published` setters triggering cascade re-render | ✅ partial — major hot paths (sidebar needsReviewCount, DiscoverProgress count, QuizBank filter) now use cached lookups |
+| MT9 | Long computed properties read by `body` | ✅ QuizBank `filteredEntries`, DiscoverShell `completedSceneIds`, DiscoverProgressDashboard `completedCount` all captured once per body via local `let` |
+| MT10 | `Dictionary(uniquingKeysWith:)` over large pack on main | ✅ moved to `SubjectPackIndexCache` — built once per pack.id per process |
+| MT11 | `validateRelatedRefs()` cost at every render | ✅ called once per pack at decode time only (commit history); not per render |
+| MT12 | Hot-path string normalisation (lowercased + diacriticInsensitive) per keystroke | ✅ QuizBank: `searchText.lowercased()` hoisted out of per-entry closure (commit 020b4d1). SearchView: uses `String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]` which is more efficient |
+
+### PE.SU — SwiftUI rendering / view churn
+
+| ID | Category | Status |
+|----|----------|--------|
+| SU1 | View body recomputed on every unrelated `@Published` change (over-observation) | 🟡 typical SwiftUI; partial mitigation via cached lookups (PE.DT) |
+| SU2 | `ForEach` over large arrays without `LazyVStack` / `List` | ✅ all large lists (QuizBank, History, Favorites, Search results, BookmarksView) use `List` which is lazy by default on macOS |
+| SU3 | `@StateObject` recreated on parent re-render (placement bug) | ✅ AppState / SubjectRegistry / DataStore all owned at App-root via `@StateObject`; child views read via `@EnvironmentObject` (no inversions) |
+| SU4 | Computed-property explosion in `body` | ✅ QuizBank ✅, DiscoverShell header ✅, DiscoverProgressDashboard ✅ |
+| SU5 | `GeometryReader` nesting forcing layout passes | 🟡 GeometryReader used inside per-scene illustrations; not in chrome |
+| SU6 | `.background` / `.overlay` with `RoundedRectangle.fill` redrawn on every state change | 🟡 standard SwiftUI cost; cached SubjectPack indices mean fewer renders trigger this |
+| SU7 | `.shadow` modifier cost (3+ layered shadows in card stacks) | 🟡 SoftShadowCard uses single shadow; chrome FilledCTAButtonStyle uses tint shadow only when isEnabled |
+| SU8 | Custom `Path` / shape drawing (DrawnChloroplast, BeamView, etc.) | 🟡 per-scene; capped via HardwareTier on legacy GPU |
+| SU9 | `TextEditor` re-render cost on every character | 🟡 TextEditor in OCR / Translator; small text size; acceptable |
+| SU10 | Animation interpolation on the AMD R9 M290X | ✅ HardwareTier.animationFPS = 20 on legacy |
+| SU11 | Particle counts on legacy GPU | ✅ HardwareTier.particleBudget = 40 on legacy |
+| SU12 | Image-only `Image(systemName:)` rendered at large sizes | 🟡 SF Symbols are vector — should cache; first-render allocation only |
+| SU13 | NavigationView push/pop cost on tutor scenes | 🟡 not measured; SwiftUI NavigationView on Big Sur known-buggy |
+| SU14 | Sheet presentation animation block | 🟡 SwiftUI default 300ms transition |
+| SU15 | WKWebView load + JS evaluation block | 🟡 evaluateJavaScript runs async; load is async via loadFileURL |
+
+### PE.DT — Data layer
+
+| ID | Category | Status |
+|----|----------|--------|
+| DT1 | Dictionary index O(1) vs scanning array of concepts | ✅ `SubjectPackIndexCache` provides O(1) lookups for conceptIndex / questionIndex / needsHumanReviewIds |
+| DT2 | `Array.first(where:)` over question/concept index in hot paths | ✅ replaced by dict lookups via the cache |
+| DT3 | Search ranking recomputed on every keystroke (no debounce throttle) | ✅ SearchView has 200ms debounce; QuizBank filter is fast enough not to need one |
+| DT4 | Search across all packs builds full set every time | ✅ `pack.allConcepts` / `pack.allQuestions` are still computed properties but scored once per debounced query, not per keystroke |
+| DT5 | QuizBank filter chain (subject × type × review × text) without memoisation | ✅ commit 020b4d1 — captured `let entries = filteredEntries` once per body |
+| DT6 | Bookmark / recent-item list grows; persistence rewrites entire blob | 🟡 max 8 recent items + bounded bookmarks — small JSON blobs (<10 KB), atomic write tolerable |
+| DT7 | Speech queue rebuild on every depth change in ConceptDetailView | 🟡 acceptable for 4-depth menu |
+| DT8 | NSAttributedString computation per result row | ✅ not used; we use plain Text |
+| DT9 | Translation history dedup scan on every translate | ✅ TranslatorViewModel calls `findRecord` once before insert; not in render path |
+| DT10 | Sanskrit dictionary load + warming budget | ✅ `Task(priority: .utility)` pre-warms at @main init; subsequent access via `SanskritDictionary.shared` is cached |
+
+### PE.FX — Animation, timers, motion
+
+| ID | Category | Status |
+|----|----------|--------|
+| FX1 | `Timer.scheduledTimer` not invalidated on `.onDisappear` | ✅ all Timer.scheduledTimer routed through TimedSceneModifier or ParticleEmitter — both invalidate on disappear AND on scenePhase != .active (B/I9 in main taxonomy) |
+| FX2 | Multiple TimedSceneModifier instances stacking | 🟡 each scene gets its own; teardown is correct |
+| FX3 | NSEvent local monitor leak | ✅ ArrowKeyModifier removes monitor on onDisappear |
+| FX4 | `Task { @MainActor in ... sleep ... }` blocking subsequent renders | 🟡 used sparingly (Got It celebration 350ms, shake animations) — debounced via `guard !celebrating else { return }` |
+| FX5 | `.animation(.spring, value:)` triggered on irrelevant state | 🟡 verified via spot audit; mostly correctly scoped via `value:` parameter |
+| FX6 | Particle respawn loop cost | ✅ HardwareTier-capped |
+| FX7 | Shake/transition animation timing on Reduce Motion users | ✅ PressableButtonStyle + GotItButton honour `accessibilityReduceMotion` |
+| FX8 | Hover affordance cursor push/pop stack imbalance | ✅ `pointingCursor()` extension pairs push/pop on `.onHover { hovering in ... }` |
+
+### PE.MM — Memory
+
+| ID | Category | Status |
+|----|----------|--------|
+| MM1 | Subject pack retained twice (registry + view-model caches) | 🟡 SubjectRegistry owns canonical pack copy; views read via env |
+| MM2 | WKWebView retained per article; never disposed | 🟡 ArticleBrowserView re-uses single WKWebView via @StateObject; navigates rather than reload-with-new-instance |
+| MM3 | NSImage retained from OCR (memory growth across many scans) | 🟡 selectedImage = nil on Clear button drops the reference |
+| MM4 | Translation history caps but stored as JSON-encoded blob | ✅ capped via DataStore; small footprint |
+| MM5 | Closure capturing `self` strongly (retain cycles) | ✅ all service-class escaping closures use `[weak self]` (B8 in main taxonomy) |
+| MM6 | `@StateObject` ownership inversion causing leak | ✅ swept (C2 in main taxonomy) |
+| MM7 | Image cache for WKWebView articles | 🟡 articles use only SF Symbols + emoji; no bitmap caching |
+| MM8 | Large strings retained in console / crash log buffer | ✅ CrashReporter rotates at 1MB / 30-file cap |
+
+### PE.CC — Concurrency / Task
+
+| ID | Category | Status |
+|----|----------|--------|
+| CC1 | `Task.detached` vs `Task { @MainActor }` for decode jobs | ✅ pack decode is `Task.detached(priority: .userInitiated)`; UI publish back on MainActor |
+| CC2 | Async function awaiting on main thread | ✅ DataStore writes are sync + atomic; no main-thread awaits on long ops |
+| CC3 | Multiple concurrent `Task` for same logical operation (debounce) | ✅ SearchView cancels previous DispatchWorkItem before scheduling new |
+| CC4 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear (I10 in main taxonomy) |
+| CC5 | `withCheckedContinuation` callback timing | ✅ used in OCRService; properly resumed |
+| CC6 | DispatchQueue.main.async trampolines (KVO bridge) | ✅ NWPathMonitor + ArticleBrowser KVO trampoline through DispatchQueue.main.async (B7 in main taxonomy) |
+| CC7 | Network call timeout (online translator) blocking sheet dismissal | 🟡 user can dismiss the translator screen while network call is in-flight; cancellation correctness not formally verified |
+| CC8 | Speech synthesis blocking next-action queue | ✅ AVSpeechSynthesizer enqueues; stop() called on view disappear |
+
+### PE.IO — Disk / network
+
+| ID | Category | Status |
+|----|----------|--------|
+| IO1 | Article HTML reads from Bundle (synchronous Bundle.url + Data load) | 🟡 happens on main; <10 KB articles; sub-millisecond — acceptable |
+| IO2 | Pack JSON decode size + speed | ✅ ~115ms for 2 packs off-thread (per the iMac screenshot console log) |
+| IO3 | Atomic write fsync cost (progress.json) | ✅ small files; atomic intentional for crash safety |
+| IO4 | Crash log append every event | ✅ append-only file write; rotates at 1MB |
+| IO5 | UserDefaults blob size growth | ✅ recent-items capped at 8; sidebar selection is a few bytes |
+| IO6 | OCR image temp file path lifecycle | ✅ no temp files — NSImage held in memory only |
+| IO7 | Online translation API timeout setting | 🟡 default URLSession timeout; not aggressively tuned |
+| IO8 | Network reachability check (NWPathMonitor) on main | ✅ AppState runs monitor on dedicated queue; publishes via DispatchQueue.main.async |
+
+### PE.GFX — GPU / Big-Sur-on-AMD specifics
+
+| ID | Category | Status |
+|----|----------|--------|
+| GFX1 | Metal warnings on launch ("Zero Metal services found") | 🟡 known AMD R9 M290X / Big Sur log noise; not a functional bug |
+| GFX2 | Layered shadows + blurs costing dropped frames | 🟡 SoftShadowCard single shadow; FilledCTAButtonStyle accent shadow; manageable |
+| GFX3 | Big-Sur-on-AMD `IconRendering` shader-cache WebContent process termination | ✅ already mitigated via PlainTextArticleFallback (A9 in main taxonomy) |
+| GFX4 | Smooth-corner `RoundedRectangle(style: .continuous)` cost vs `.circular` | 🟡 used throughout; not benchmarked |
+| GFX5 | LinearGradient layer per scene re-painted on every state change | 🟡 DiscoverBackground is constant; per-scene linear gradients limited |
+| GFX6 | Color.opacity computations per render | 🟡 callout backgrounds use `.opacity(0.14)` etc.; constant per pack |
+| GFX7 | Translucent NSVisualEffectView sidebar cost (Reduce Transparency check) | 🟡 standard List sidebar; honours system Reduce Transparency |
+
+### PE.IN — Input responsiveness
+
+| ID | Category | Status |
+|----|----------|--------|
+| IN1 | Keystroke → search-result delay | ✅ SearchView 200ms debounce; QuizBank uses cached entries |
+| IN2 | Stepper-dot tap → scene swap delay | ✅ `withAnimation(.easeInOut(duration: 0.25))` — perceptible by design |
+| IN3 | Got It tap → next-scene advance | ✅ 350ms celebration delay (MO3); intentional |
+| IN4 | Sidebar selection → detail-pane swap delay | 🟡 should be sub-frame on the cached-index path |
+| IN5 | OCR Open Image → image-displayed delay | 🟡 NSImage instantiation on main; small images fine |
+| IN6 | Translate button → result-card delay | 🟡 network-bound for online; cache-bound for offline (typically sub-frame) |
+| IN7 | Hover-cursor latency on 5K @1× | 🟡 `pointingCursor()` push/pop; expected immediate |
+| IN8 | Keyboard shortcut handler reach time | ✅ standard SwiftUI `.keyboardShortcut(...)` — synchronous |
+
+### PE.DG — Diagnostics / monitoring
+
+| ID | Category | Status |
+|----|----------|--------|
+| DG1 | os_signpost regions around expensive operations | ❌ no signposts added; future Instruments work |
+| DG2 | XCTest performance baselines | ✅ `testPackDecodePerformance` + `testFlattenAllContentPerformance` exist (I7/I8 in main taxonomy) |
+| DG3 | Time Profiler instrument runs against real iMac | ❌ user needed to do this on actual iMac; CI doesn't run Instruments |
+| DG4 | Allocations / leaks instrument | ❌ not run |
+| DG5 | Hang detector instrumentation (anything > 250 ms on main) | ❌ could add via `os_signpost` + log-on-overrun pattern |
+| DG6 | RUM logging for slow user actions | ❌ no `CrashReporter.logSlowEvent` yet — could surface in crashlogs |
+| DG7 | Frame-rate logging on legacy tier | 🟡 HardwareTier caps at 20fps but doesn't log actual achieved rate |
+| DG8 | Energy log review | ❌ never reviewed |
 
 ---
 
