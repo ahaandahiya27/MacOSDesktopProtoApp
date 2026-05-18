@@ -44,12 +44,24 @@ private struct QuizBankContent: View {
     }
 
     private var filteredEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
-        cachedEntries.filter { entry in
-            if let pf = packFilter, entry.pack.id != pf { return false }
-            if let tf = typeFilter, entry.question.questionType != tf { return false }
-            if let df = difficultyFilter, entry.question.difficulty != df { return false }
-            if let cf = chapterFilter, entry.chapter.id != cf { return false }
-            switch reviewFilter {
+        // Hot-path performance: hoist `searchText.lowercased()` out of the
+        // per-entry closure so it's computed ONCE per filter call instead of
+        // ~791 times per keystroke. On the 1.4 GHz Haswell iMac CPU this was
+        // a measurable main-thread block while typing in the search field.
+        let trimmedSearch = searchText.trimmingCharacters(in: .whitespaces)
+        let needle: String? = trimmedSearch.isEmpty ? nil : trimmedSearch.lowercased()
+        let pf = packFilter
+        let tf = typeFilter
+        let df = difficultyFilter
+        let cf = chapterFilter
+        let rf = reviewFilter
+
+        return cachedEntries.filter { entry in
+            if let pf = pf, entry.pack.id != pf { return false }
+            if let tf = tf, entry.question.questionType != tf { return false }
+            if let df = df, entry.question.difficulty != df { return false }
+            if let cf = cf, entry.chapter.id != cf { return false }
+            switch rf {
             case .all: break
             case .reviewed:
                 // "Reviewed" = no JSON flag OR the parent marked it in-app.
@@ -57,9 +69,9 @@ private struct QuizBankContent: View {
             case .needsReview:
                 if !dataStore.effectiveNeedsReview(entry.question) { return false }
             }
-            if !searchText.isEmpty {
-                let text = searchText.lowercased()
-                if !entry.question.prompt.lowercased().contains(text) { return false }
+            if let needle = needle,
+               !entry.question.prompt.lowercased().contains(needle) {
+                return false
             }
             return true
         }
@@ -96,7 +108,12 @@ private struct QuizBankContent: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
+        // Compute filteredEntries ONCE per body render — was called twice
+        // (`.isEmpty` check + `List(...)` initializer) which doubled the
+        // ~791-entry filter cost on every render.
+        let entries = filteredEntries
+
+        return VStack(spacing: 0) {
             filterBar
                 .padding(.horizontal, 16)
                 .padding(.vertical, 10)
@@ -104,14 +121,14 @@ private struct QuizBankContent: View {
 
             Divider()
 
-            if filteredEntries.isEmpty {
+            if entries.isEmpty {
                 EmptyStateView(
                     icon: "magnifyingglass",
                     title: "No questions match",
                     subtitle: "Try adjusting your filters — or clear them to see every question across all chapters."
                 )
             } else {
-                List(filteredEntries, id: \.question.id) { entry in
+                List(entries, id: \.question.id) { entry in
                     Button {
                         openQuestion(entry)
                     } label: {

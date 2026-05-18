@@ -69,6 +69,10 @@ final class SubjectRegistry: ObservableObject {
         reloadInFlight = true
         defer { reloadInFlight = false }
 
+        // Drop any cached `pack.conceptIndex` / `pack.questionIndex` lookups
+        // so post-reload pack content isn't read through stale dictionaries.
+        SubjectPackIndexCache.shared.invalidateAll()
+
         isLoading = true
         let urls = Self.bundledPackURLs()
         debugLog("[SubjectRegistry] reload — found \(urls.count) candidate URL(s).")

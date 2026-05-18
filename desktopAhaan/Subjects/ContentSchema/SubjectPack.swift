@@ -44,22 +44,42 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         chapters.flatMap { $0.topics.flatMap { $0.questions } }
     }
 
-    // MARK: - Lookup tables (cached on first access)
+    // MARK: - Lookup tables (process-wide cached by pack.id)
     //
-    // ConceptDetailView previously rebuilt these dictionaries inside `body`,
-    // hitting them on every render. Cache them on first access so a concept
-    // → other-concept jump is O(1) for the rest of the session.
+    // **Performance**: Previously these computed properties did a full
+    // `chapters.flatMap { ... }` + `Dictionary(uniquingKeysWith:)` build on
+    // EVERY access — and the call-sites (ConceptDetailView, BookmarksView
+    // row resolution, QuizBank filter, RelatedConcepts lookup) hit them
+    // many times per body render. On a ~250-concept / ~640-question
+    // Science pack this was ~5–10 ms of main-thread work per render on the
+    // 1.4 GHz iMac, which the user observed as CTA-tap freezes.
+    //
+    // Now cached process-wide by `pack.id`. Packs are immutable after
+    // SubjectRegistry decode; on reload (rare, only at app launch or
+    // explicit Retry), the registry calls `invalidateIndexCaches(for:)`.
+    // Cache access is serialised via a NSLock so the rare cross-thread
+    // call (Task.detached decode → MainActor publish) doesn't race.
 
-    /// Concept ID → Concept lookup. Computed once per SubjectPack instance.
+    /// Concept ID → Concept lookup. Built once per `pack.id` per process.
     ///
     /// Duplicate-key safe: if the content pack contains two concepts with the
     /// same `id` (a data bug), keep the first occurrence and log the collision
-    /// rather than crashing the whole app. This protects the runtime from a
-    /// fatal `Dictionary(uniqueKeysWithValues:)` precondition failure while
-    /// surfacing the bug to anyone watching stderr.
+    /// rather than crashing the whole app.
     var conceptIndex: [String: Concept] {
+        SubjectPackIndexCache.shared.conceptIndex(for: self)
+    }
+
+    /// Question ID → Question lookup. Built once per `pack.id` per process.
+    /// Duplicate-key safe — see `conceptIndex` above.
+    var questionIndex: [String: Question] {
+        SubjectPackIndexCache.shared.questionIndex(for: self)
+    }
+
+    /// Builds the underlying concept dictionary. Only called by the cache
+    /// on first access for a given pack.id.
+    fileprivate func buildConceptIndex() -> [String: Concept] {
         Dictionary(allConcepts.map { ($0.id, $0) },
-                   uniquingKeysWith: { first, dup in
+                   uniquingKeysWith: { first, _ in
             CrashReporter.shared.logDataIssue(
                 "duplicate Concept.id '\(first.id)' in pack '\(self.id)'"
             )
@@ -67,11 +87,11 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         })
     }
 
-    /// Question ID → Question lookup. Computed once per SubjectPack instance.
-    /// Duplicate-key safe — see `conceptIndex` above.
-    var questionIndex: [String: Question] {
+    /// Builds the underlying question dictionary. Only called by the cache
+    /// on first access for a given pack.id.
+    fileprivate func buildQuestionIndex() -> [String: Question] {
         Dictionary(allQuestions.map { ($0.id, $0) },
-                   uniquingKeysWith: { first, dup in
+                   uniquingKeysWith: { first, _ in
             CrashReporter.shared.logDataIssue(
                 "duplicate Question.id '\(first.id)' in pack '\(self.id)'"
             )
@@ -102,5 +122,51 @@ struct SubjectPack: Codable, Hashable, Identifiable {
                 "SubjectPack '\(id)' has \(orphanConcepts) orphan concept refs and \(orphanQuestions) orphan question refs in relatedConceptIds/relatedQuestionIds"
             )
         }
+    }
+}
+
+// MARK: - Process-wide pack-index cache
+
+/// Holds `pack.id → [String: Concept]` and `pack.id → [String: Question]`
+/// lookups so SwiftUI body recomputes don't rebuild the dictionaries on
+/// every render. Thread-safe via NSLock — packs are immutable after
+/// SubjectRegistry decode, so concurrent reads from main thread + the
+/// detached decode task are safe with a single shared lock.
+///
+/// Invalidated explicitly by `SubjectRegistry.reload()` so a future
+/// content reload picks up fresh data.
+final class SubjectPackIndexCache {
+    static let shared = SubjectPackIndexCache()
+
+    private let lock = NSLock()
+    private var conceptIndices: [String: [String: Concept]] = [:]
+    private var questionIndices: [String: [String: Question]] = [:]
+
+    func conceptIndex(for pack: SubjectPack) -> [String: Concept] {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = conceptIndices[pack.id] {
+            return cached
+        }
+        let built = pack.buildConceptIndex()
+        conceptIndices[pack.id] = built
+        return built
+    }
+
+    func questionIndex(for pack: SubjectPack) -> [String: Question] {
+        lock.lock(); defer { lock.unlock() }
+        if let cached = questionIndices[pack.id] {
+            return cached
+        }
+        let built = pack.buildQuestionIndex()
+        questionIndices[pack.id] = built
+        return built
+    }
+
+    /// Drops any cached indices. Called by `SubjectRegistry.reload()` so
+    /// post-reload pack content isn't read through a stale dictionary.
+    func invalidateAll() {
+        lock.lock(); defer { lock.unlock() }
+        conceptIndices.removeAll()
+        questionIndices.removeAll()
     }
 }
