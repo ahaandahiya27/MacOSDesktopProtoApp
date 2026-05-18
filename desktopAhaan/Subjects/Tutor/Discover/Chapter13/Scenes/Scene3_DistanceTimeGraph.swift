@@ -38,22 +38,36 @@ struct Scene3_DistanceTimeGraph: View {
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-            LookingAheadCallout(
-                title: "Class 11 Physics → JEE",
-                detail: "The slope of a distance-time graph is velocity. The slope of a velocity-time graph is acceleration. These reading-the-graph skills become the heart of Class 11 Kinematics and reappear in JEE Mechanics."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            Group {
+                MnemonicCallout(
+                    hook: "DST triangle",
+                    meaning: "Cover the quantity you want — the other two tell you to multiply or divide.",
+                    expansion: [
+                        ("D", "Distance sits on top of the triangle"),
+                        ("S", "Speed and Time sit side-by-side below"),
+                        ("=", "Cover D → S × T. Cover S → D ÷ T. Cover T → D ÷ S")
+                    ]
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            TryAtHomeCallout(
-                title: "Walk-a-graph game",
-                detail: "On a long corridor, mark every metre with chalk. Walk slowly for 5 seconds, then stop for 5, then run for 5. Have a friend write down where you are each second. Plot the points on graph paper. You just made a distance-time graph of your own motion."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+                LookingAheadCallout(
+                    title: "Class 11 Physics → JEE",
+                    detail: "The slope of a distance-time graph is velocity. The slope of a velocity-time graph is acceleration. These reading-the-graph skills become the heart of Class 11 Kinematics and reappear in JEE Mechanics."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-            GotItButton { onComplete() }.padding(.bottom, 12)
-            Spacer(minLength: 0)
+                TryAtHomeCallout(
+                    title: "Walk-a-graph game",
+                    detail: "On a long corridor, mark every metre with chalk. Walk slowly for 5 seconds, then stop for 5, then run for 5. Have a friend write down where you are each second. Plot the points on graph paper. You just made a distance-time graph of your own motion."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
+                Spacer(minLength: 0)
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

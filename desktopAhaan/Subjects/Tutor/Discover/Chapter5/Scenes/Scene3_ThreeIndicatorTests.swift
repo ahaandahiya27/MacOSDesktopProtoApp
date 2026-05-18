@@ -104,6 +104,20 @@ struct Scene3_ThreeIndicatorTests: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                     }
 
+                    MnemonicCallout(
+                        hook: "BRA in Acid, RBB in Base",
+                        meaning: "Litmus colour rule — never confuse the two again.",
+                        expansion: [
+                            ("B", "Blue litmus"),
+                            ("R", "turns Red"),
+                            ("A", "in Acid → so red = acid"),
+                            ("R", "Red litmus"),
+                            ("B", "turns Blue"),
+                            ("B", "in Base → so blue = base")
+                        ]
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     LookingAheadCallout(
                         title: "Class 11 Chemistry → JEE (Acid-Base Titrations)",
                         detail: "Indicators are weak acids/bases whose protonated and deprotonated forms have different colours. Phenolphthalein is colourless below pH 8.3 and pink above. JEE asks: 'Which indicator should I use for HCl + NaOH titration?' Phenolphthalein (works at strong-acid + strong-base endpoint pH ≈ 7). But for weak-acid + strong-base, the endpoint is pH 9 — methyl orange would mislead you. Choose the indicator to match the equivalence point."

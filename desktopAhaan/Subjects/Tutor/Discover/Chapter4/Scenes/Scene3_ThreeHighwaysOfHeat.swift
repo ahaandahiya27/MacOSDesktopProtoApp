@@ -86,6 +86,17 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    MnemonicCallout(
+                        hook: "C C R",
+                        meaning: "The three highways heat travels — Conduction, Convection, Radiation.",
+                        expansion: [
+                            ("C", "Conduction — heat through direct contact in solids"),
+                            ("C", "Convection — heat carried by moving fluids/gases"),
+                            ("R", "Radiation — heat as waves through empty space")
+                        ]
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     LookingAheadCallout(
                         title: "Class 11 Physics → JEE (Heat Transfer)",
                         detail: "The three highways become exact equations in JEE: Fourier's law for conduction (Q/t = -kA·ΔT/Δx), Newton's law of cooling for convection (Q/t = hA·ΔT), and Stefan-Boltzmann for radiation (Q/t = σεA·T⁴). Conduction is the only one without bulk motion of matter. Radiation is the only one that works through vacuum — sunlight reaches Earth via radiation, not conduction or convection."
