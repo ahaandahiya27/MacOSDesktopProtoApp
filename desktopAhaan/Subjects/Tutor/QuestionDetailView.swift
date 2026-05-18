@@ -32,9 +32,11 @@ struct QuestionDetailView: View {
     @EnvironmentObject var appState: AppState
 
     private var currentSiblingIndex: Int? {
-        nav.questionSiblings.firstIndex {
-            $0.packId == pack.id && $0.questionId == question.id
-        }
+        // O(1) lookup via cached siblings index. The previous
+        // `firstIndex(where:)` linear-scanned ~640 sibling entries — and
+        // `hasPrevious` / `hasNext` / `siblingPositionLabel` each called
+        // this independently per render, so 3+ scans per body cycle.
+        nav.siblingIndex(packId: pack.id, questionId: question.id)
     }
     private var hasPrevious: Bool {
         if let idx = currentSiblingIndex { return idx > 0 }

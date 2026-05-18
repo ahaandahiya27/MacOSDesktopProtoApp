@@ -14,7 +14,27 @@ final class TutorNavigationState: ObservableObject {
     @Published var path: [TutorRoute] = []
     /// Ordered question siblings that QuestionDetailView's Prev/Next walk
     /// through. Set by the screen that pushed the question (e.g. QuizBank).
-    @Published var questionSiblings: [QuestionRef] = []
+    @Published var questionSiblings: [QuestionRef] = [] {
+        didSet { _questionSiblingIndex = nil }
+    }
+
+    /// Lazy `"\(packId)::\(questionId)" → Int` lookup for the siblings
+    /// list. QuestionDetailView calls `currentSiblingIndex` from
+    /// `hasPrevious` / `hasNext` / `siblingPositionLabel` etc. — that's
+    /// 3+ linear scans of up to ~640 entries per render. Cached here on
+    /// first access and invalidated when siblings change.
+    private var _questionSiblingIndex: [String: Int]?
+    func siblingIndex(packId: String, questionId: String) -> Int? {
+        if _questionSiblingIndex == nil {
+            var built: [String: Int] = [:]
+            built.reserveCapacity(questionSiblings.count)
+            for (i, ref) in questionSiblings.enumerated() {
+                built["\(ref.packId)::\(ref.questionId)"] = i
+            }
+            _questionSiblingIndex = built
+        }
+        return _questionSiblingIndex?["\(packId)::\(questionId)"]
+    }
 
     func push(_ route: TutorRoute) {
         withAnimation(.easeInOut(duration: 0.2)) {
