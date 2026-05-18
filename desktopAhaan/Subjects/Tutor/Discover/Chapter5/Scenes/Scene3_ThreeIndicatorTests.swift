@@ -62,20 +62,20 @@ struct Scene3_ThreeIndicatorTests: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+        // Test tubes stack above the explanation card instead of being
+        // covered by it.
+        ScrollView {
+            VStack(spacing: 14) {
                 HStack(spacing: 20) {
                     ForEach(Array(indicators.enumerated()), id: \.offset) { idx, ind in
-                        testTubeView(index: idx, indicator: ind, height: geo.size.height * 0.42)
+                        testTubeView(index: idx, indicator: ind, height: 240)
                     }
                 }
-                .frame(maxWidth: 720, maxHeight: .infinity, alignment: .top)
+                .frame(maxWidth: 720)
                 .padding(.top, 20)
-                .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     // Explanation card
                     if let ai = activeIndicator, let sol = activeSolution {
                         let ind = indicators[ai]
@@ -140,9 +140,10 @@ struct Scene3_ThreeIndicatorTests: View {
                             .padding(.bottom, 12)
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

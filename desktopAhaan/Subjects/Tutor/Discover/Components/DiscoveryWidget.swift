@@ -53,6 +53,11 @@ struct DiscoveryWidget: View {
         self.output = output
     }
 
+    /// Darker, readable variant of `.green` for body text on the pale
+    /// green-tinted chip. Pure `.green` was too low-contrast against the
+    /// `Color.green.opacity(0.08)` fill on the iMac.
+    private static let darkGreen: Color = Color(red: 0.10, green: 0.45, blue: 0.20)
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             header
@@ -60,12 +65,14 @@ struct DiscoveryWidget: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
             sliderRow
             Text(output(value))
                 .font(.callout.weight(.medium))
-                .foregroundColor(.green)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
                 .padding(.top, 2)
+                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel("Result: \(output(value))")
         }
         .padding(14)
@@ -84,15 +91,15 @@ struct DiscoveryWidget: View {
         HStack(spacing: 10) {
             Image(systemName: "slider.horizontal.3")
                 .font(.title3)
-                .foregroundColor(.green)
+                .foregroundColor(Self.darkGreen)
                 .accessibilityHidden(true)
             Text(title)
                 .font(.subheadline.weight(.semibold))
-                .foregroundColor(.green)
+                .foregroundColor(Self.darkGreen)
             Spacer(minLength: 0)
             Text(valueLabel(value))
                 .font(.caption.weight(.medium).monospacedDigit())
-                .foregroundColor(.green)
+                .foregroundColor(Self.darkGreen)
         }
     }
 

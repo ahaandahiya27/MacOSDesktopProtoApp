@@ -24,11 +24,15 @@ struct TryAtHomeCallout: View {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(.orange)
+                    .fixedSize(horizontal: false, vertical: true)
                 Text(detail)
                     .font(.callout)
                     .lineSpacing(3)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             Spacer(minLength: 0)
         }
         .padding(12)

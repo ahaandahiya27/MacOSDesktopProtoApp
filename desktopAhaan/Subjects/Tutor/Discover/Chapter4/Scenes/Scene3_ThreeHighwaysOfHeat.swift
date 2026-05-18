@@ -35,20 +35,21 @@ struct Scene3_ThreeHighwaysOfHeat: View {
     ]
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored from `GeometryReader { ZStack { lanes + Spacer+cards } }`
+        // — that pattern stacked the cards ON TOP of the lanes in the same
+        // canvas region, making them visibly overlap on the 5K iMac. Now a
+        // proper ScrollView+VStack: lanes at top, sized to a fixed band, then
+        // cards as siblings below in natural stacking order.
+        ScrollView {
+            VStack(spacing: 14) {
                 HStack(spacing: 16) {
                     ForEach(0..<3, id: \.self) { i in
-                        laneView(index: i, height: geo.size.height * 0.45)
+                        laneView(index: i, height: 240)
                     }
                 }
-                .frame(maxWidth: 720, maxHeight: .infinity, alignment: .top)
+                .frame(maxWidth: 720)
                 .padding(.top, 20)
-                .frame(maxWidth: .infinity)
-
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     if let lane = activeLane {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -119,9 +120,10 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                             .padding(.bottom, 12)
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
         .timedScene(idealFPS: 20, tick: $tick)
     }

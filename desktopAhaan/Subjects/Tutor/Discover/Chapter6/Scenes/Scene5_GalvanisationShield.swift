@@ -24,21 +24,20 @@ struct Scene5_GalvanisationShield: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                VStack(spacing: 16) {
-                    Text("Galvanisation Shield")
-                        .font(.largeTitle.bold())
-                        .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.top, 18)
+        // Refactored ZStack-overlap to ScrollView+VStack so cards don't
+        // cover the pipe animation.
+        ScrollView {
+            VStack(spacing: 14) {
+                Text("Galvanisation Shield")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-                    Text("How do we stop iron from rusting?")
-                        .font(.callout)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                Text("How do we stop iron from rusting?")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                    Spacer()
-
-                    // Pipe visual
+                // Pipe visual
                     ZStack {
                         // Rain (Timer-driven; Big Sur compatible)
                         if rainActive && !reduceMotion {
@@ -136,17 +135,11 @@ struct Scene5_GalvanisationShield: View {
                         .disabled(step != .exposed || !rainActive)
                     }
 
-                    Text(stepLabel)
-                        .font(.headline)
-                        .foregroundColor(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? Color.compatBrown : .secondary))
+                Text(stepLabel)
+                    .font(.headline)
+                    .foregroundColor(step == .protected ? .green : (step == .exposed && rustLevel > 0 ? Color.compatBrown : DesignTokens.BrandColor.canvasTextSecondary))
 
-                    Spacer()
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
-
-                VStack(spacing: 14) {
-                    Spacer()
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Preventing rust", systemImage: SFSymbolCompat.name("shield.lefthalf.filled"))
@@ -178,9 +171,10 @@ struct Scene5_GalvanisationShield: View {
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
         .timedScene(idealFPS: 20, tick: $tick)
     }

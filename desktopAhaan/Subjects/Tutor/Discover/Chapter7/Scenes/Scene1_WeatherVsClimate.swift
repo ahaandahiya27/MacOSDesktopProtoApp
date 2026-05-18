@@ -36,8 +36,10 @@ struct Scene1_WeatherVsClimate: View {
     ]
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so the
+        // comparison panels are not covered by the explanation card.
+        ScrollView {
+            VStack(spacing: 14) {
                 HStack(spacing: 20) {
                     // Weather side
                     sideCard(
@@ -69,11 +71,9 @@ struct Scene1_WeatherVsClimate: View {
                 }
                 .padding(.horizontal, 32)
                 .padding(.top, 20)
-                .frame(maxHeight: geo.size.height * 0.55)
+                .frame(height: 280)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Weather vs Climate", systemImage: "cloud.sun.fill")
@@ -111,9 +111,10 @@ struct Scene1_WeatherVsClimate: View {
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

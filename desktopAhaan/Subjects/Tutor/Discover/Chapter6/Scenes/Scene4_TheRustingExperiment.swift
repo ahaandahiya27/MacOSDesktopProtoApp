@@ -51,35 +51,29 @@ struct Scene4_TheRustingExperiment: View {
     ]
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                VStack(spacing: 16) {
-                    Text("The Rusting Experiment")
-                        .font(.largeTitle.bold())
-                        .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.top, 18)
+        // Refactored from ZStack-overlap to ScrollView+VStack so the cards
+        // don't cover the test tubes.
+        ScrollView {
+            VStack(spacing: 14) {
+                Text("The Rusting Experiment")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-                    Text("Three test tubes, same iron nail. Tap each to fast-forward 2 weeks.")
-                        .font(.callout)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                Text("Three test tubes, same iron nail. Tap each to fast-forward 2 weeks.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                    // Three test tubes
-                    HStack(spacing: 28) {
-                        ForEach(0..<3, id: \.self) { i in
-                            testTubeView(index: i, height: min(geo.size.height * 0.4, 280))
-                        }
+                // Three test tubes
+                HStack(spacing: 28) {
+                    ForEach(0..<3, id: \.self) { i in
+                        testTubeView(index: i, height: 240)
                     }
-                    .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-
-                    Spacer()
-                    Spacer()
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
 
-                VStack(spacing: 14) {
-                    Spacer()
-
+                Group {
                     if allDone {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -135,9 +129,10 @@ struct Scene4_TheRustingExperiment: View {
                         Spacer().frame(height: 12)
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
                 .padding(.horizontal, 24)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
         .timedScene(idealFPS: 15, tick: $tick)
     }

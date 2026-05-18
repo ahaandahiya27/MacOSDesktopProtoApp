@@ -31,6 +31,8 @@ struct DiscoveryToggle: View {
     let outputA: String
     let outputB: String
 
+    private static let darkGreen: Color = Color(red: 0.10, green: 0.45, blue: 0.20)
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             header
@@ -38,12 +40,14 @@ struct DiscoveryToggle: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
             picker
             Text(selectionIsA ? outputA : outputB)
                 .font(.callout.weight(.medium))
-                .foregroundColor(.green)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
                 .padding(.top, 2)
+                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel("Result: \(selectionIsA ? outputA : outputB)")
         }
         .padding(14)
@@ -62,11 +66,11 @@ struct DiscoveryToggle: View {
         HStack(spacing: 10) {
             Image(systemName: "slider.horizontal.3")
                 .font(.title3)
-                .foregroundColor(.green)
+                .foregroundColor(Self.darkGreen)
                 .accessibilityHidden(true)
             Text(title)
                 .font(.subheadline.weight(.semibold))
-                .foregroundColor(.green)
+                .foregroundColor(Self.darkGreen)
             Spacer(minLength: 0)
         }
     }
