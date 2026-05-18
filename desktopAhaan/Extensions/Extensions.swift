@@ -122,6 +122,7 @@ enum SFSymbolCompat {
         case "pencil.and.ruler.fill":      return "pencil"              // SF Symbols 3+ — added 2026-05-17 after iMac runtime warning
         case "figure.run":                 return "figure.walk"         // SF Symbols 3+ — defensive add 2026-05-17 (figure.walk is SF Symbols 1)
         case "gearshape.2":                return "gearshape.fill"      // SF Symbols 3+ — defensive add 2026-05-17
+        case "arrowshape.down.fill":       return "arrow.down.circle.fill" // SF Symbols 3+ — added 2026-05-18 after iMac runtime warning
         default:                           return modern
         }
     }

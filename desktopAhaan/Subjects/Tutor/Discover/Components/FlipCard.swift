@@ -41,6 +41,11 @@ struct FlipCard<Front: View, Back: View>: View {
                     axis: (x: 0, y: 1, z: 0)
                 )
         }
+        // Default sized to fit emoji + title + subtitle + "Tap to flip" hint
+        // on the front, and 3-4 facts on the back. Callers can override
+        // with their own `.frame(...)` but smaller than ~220×280 will crop
+        // (Scene2_MeetTheWoolAnimals previously used 200×220 → "Wool Source"
+        // subtitle got cropped; now matches 220×300).
         .frame(width: 220, height: 300)
         .contentShape(Rectangle())
         .onTapGesture {

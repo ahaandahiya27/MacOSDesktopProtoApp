@@ -86,7 +86,10 @@ struct Scene2_MeetTheWoolAnimals: View {
                                 .cornerRadius(12)
                             }
                         )
-                        .frame(width: 200, height: 220)
+                        // FlipCard self-sizes to 220×300; explicit frame
+                        // here would override and crop subtitle (the "Wool
+                        // Source" + "Tap to flip" footer) — see FlipCard
+                        // doc-comment.
                     }
                 }
                 .padding(.horizontal, 24)

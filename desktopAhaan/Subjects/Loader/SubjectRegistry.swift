@@ -54,7 +54,21 @@ final class SubjectRegistry: ObservableObject {
     /// Now: enumerate bundle URLs on MainActor (cheap), then hand the
     /// decode list to a detached, sendable Task, then come back to
     /// MainActor only to publish the results.
+    /// Re-entrancy guard for `reload()` — prevents the duplicate "[SubjectRegistry]
+    /// reload — found 2 candidate URL(s)" + duplicate JSON decode observed on
+    /// some launches (StateObject autoclosure can fire twice, or Retry tap can
+    /// race with the init-time reload). When already loading, the second call
+    /// is a no-op and returns immediately.
+    private var reloadInFlight: Bool = false
+
     func reload() async {
+        if reloadInFlight {
+            debugLog("[SubjectRegistry] reload() skipped — already in flight")
+            return
+        }
+        reloadInFlight = true
+        defer { reloadInFlight = false }
+
         isLoading = true
         let urls = Self.bundledPackURLs()
         debugLog("[SubjectRegistry] reload — found \(urls.count) candidate URL(s).")

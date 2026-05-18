@@ -47,7 +47,7 @@ struct Scene2_TheSwallowWave: View {
 
                 HStack(spacing: 16) {
                     Button(action: { swallow() }) {
-                        Label("Swallow!", systemImage: "arrowshape.down.fill")
+                        Label("Swallow!", systemImage: SFSymbolCompat.name("arrowshape.down.fill"))
                             .padding(.vertical, 10)
                             .padding(.horizontal, 20)
                     }
