@@ -14,17 +14,13 @@ struct Scene5_SeaBreezeLandBreeze: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
 
         // Inner GeometryReader is preserved for size-relative
 
         // interactive content; cards now sit as siblings below it.
-
         ScrollView {
-
             VStack(spacing: 14) {
-
                 GeometryReader { geo in
 
                     ZStack {

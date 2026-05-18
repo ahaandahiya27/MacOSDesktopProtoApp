@@ -31,62 +31,52 @@ struct Scene1_PlantKitchen: View {
     }
 
     var body: some View {
-
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
-
+        // Refactored ZStack-overlap pattern to ScrollView+VStack. The
+        // ambient particles + leaf + speech bubble all live in an inner
+        // GeometryReader-backed canvas sized to 420pt so the leaf
+        // (220×280, centered) AND the speech bubble (positioned ~170pt
+        // above center) both fit without clipping.
         ScrollView {
-
             VStack(spacing: 14) {
-
                 GeometryReader { geo in
-
                     ZStack {
-                // Ambient animation (sunlight rays, water drops, CO₂ wisps)
-                if !reduceMotion {
-                    ZStack {
-                        sunRays(t: tick, in: geo.size)
-                        waterDrops(t: tick, in: geo.size)
-                        co2Wisps(t: tick, in: geo.size)
+                        // Ambient animation (sunlight rays, water drops, CO₂ wisps)
+                        if !reduceMotion {
+                            ZStack {
+                                sunRays(t: tick, in: geo.size)
+                                waterDrops(t: tick, in: geo.size)
+                                co2Wisps(t: tick, in: geo.size)
+                            }
+                        }
+
+                        // The central leaf
+                        ZStack {
+                            DrawnLeaf(pulse: pulse)
+                                .frame(width: 220, height: 280)
+                                .onTapGesture { tappedLeaf() }
+                                .accessibilityAddTraits(.isButton)
+                                .accessibilityLabel("Tap the leaf to make it cook food.")
+
+                            // Glucose molecule that emerges on tap
+                            if showGlucose {
+                                GlucoseHex()
+                                    .frame(width: 80, height: 80)
+                                    .offset(x: 140, y: -100)
+                                    .transition(.opacity.combined(with: .scale))
+                            }
+                        }
+                        .position(x: geo.size.width / 2, y: geo.size.height * 0.55)
+
+                        // Speech bubble — placed above the leaf, still inside
+                        // the 420pt canvas so it doesn't clip.
+                        if showBubble {
+                            SpeechBubble(text: "I just made my own food!")
+                                .position(x: geo.size.width / 2 + 160, y: geo.size.height * 0.18)
+                                .transition(.scale.combined(with: .opacity))
+                        }
                     }
                 }
-
-                // The central leaf
-                ZStack {
-                    DrawnLeaf(pulse: pulse)
-                        .frame(width: 220, height: 280)
-                        .onTapGesture { tappedLeaf() }
-                        .accessibilityAddTraits(.isButton)
-                        .accessibilityLabel("Tap the leaf to make it cook food.")
-
-                    // Glucose molecule that emerges on tap
-                    if showGlucose {
-                        GlucoseHex()
-                            .frame(width: 80, height: 80)
-                            .offset(x: 140, y: -100)
-                            .transition(.opacity.combined(with: .scale))
-                    }
-                }
-                .position(x: geo.size.width / 2, y: geo.size.height / 2 - 30)
-
-                // Speech bubble
-                if showBubble {
-                    SpeechBubble(text: "I just made my own food!")
-                        .position(x: geo.size.width / 2 + 160, y: geo.size.height / 2 - 170)
-                        .transition(.scale.combined(with: .opacity))
-                }
-
-                // Caption + got-it button
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
+                .frame(height: 420)
 
                 Group {
                     SoftShadowCard(padding: 18) {

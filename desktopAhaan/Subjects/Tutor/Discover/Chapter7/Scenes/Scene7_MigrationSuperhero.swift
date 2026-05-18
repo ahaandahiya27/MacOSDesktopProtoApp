@@ -40,17 +40,13 @@ struct Scene7_MigrationSuperhero: View {
     private var allExplored: Bool { exploredFacts.count == facts.count }
 
     var body: some View {
-
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
 
         // Inner GeometryReader is preserved for size-relative
 
         // interactive content; cards now sit as siblings below it.
-
         ScrollView {
-
             VStack(spacing: 14) {
-
                 GeometryReader { geo in
 
                     ZStack {

@@ -16,17 +16,13 @@ struct Scene2_BuildYourThermometer: View {
     private var tempF: Double { tempC * 9.0 / 5.0 + 32.0 }
 
     var body: some View {
-
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
 
         // Inner GeometryReader is preserved for size-relative
 
         // interactive content; cards now sit as siblings below it.
-
         ScrollView {
-
             VStack(spacing: 14) {
-
                 GeometryReader { geo in
 
                     ZStack {

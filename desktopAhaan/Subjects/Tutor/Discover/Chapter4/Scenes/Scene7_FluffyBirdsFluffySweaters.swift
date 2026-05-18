@@ -120,7 +120,6 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
 
                 Group {
-
                     // Button at top area
                     Button(isCold ? "Make it warm!" : "Make it cold!") {
                         toggleCold()

@@ -181,7 +181,6 @@ struct Scene4_HotSoupColdSpoon: View {
 
 // MARK: - Steam wisp
 
-
 private struct SteamWisp: View {
     let index: Int
     @State private var offset: CGFloat = 0

@@ -44,17 +44,13 @@ struct Scene6_ConductorOrInsulator: View {
     private var isDone: Bool { remaining.isEmpty }
 
     var body: some View {
-
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
 
         // Inner GeometryReader is preserved for size-relative
 
         // interactive content; cards now sit as siblings below it.
-
         ScrollView {
-
             VStack(spacing: 14) {
-
                 GeometryReader { geo in
 
                     ZStack {
