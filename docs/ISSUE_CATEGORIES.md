@@ -569,7 +569,7 @@ deploy iMac. Status legend per A–Y / Z convention.
 | MT3 | NSImage instantiation on main thread (OCR drop) | 🟡 happens on main; acceptable for kid-scale single-image use; alternative is async loading w/ placeholder |
 | MT4 | UserDefaults `synchronize()` / `set()` blocking | ✅ modern macOS makes synchronize() a no-op; AppState/AppDelegate both call it for explicit-intent semantics only |
 | MT5 | `NSPasteboard.general.setString` (large strings) | ✅ TranslationResultCard copies small string; no large blobs |
-| MT6 | OCR text recognition on main thread (Vision request) | ✅ OCRService uses async; surface via `isProcessing` |
+| MT6 | OCR text recognition on main thread (Vision request) | ✅ `performOCR()` marked `nonisolated` + Vision `handler.perform([request])` dispatched to `DispatchQueue.global(qos: .userInitiated)`. Multi-second freeze on large image → spinner runs (commit cd43ca1) |
 | MT7 | AVSpeechSynthesizer setup / speak | 🟡 SpeechReader.shared singleton; first-time speak instantiates synth — measurable but sub-100ms |
 | MT8 | Heavy `@Published` setters triggering cascade re-render | ✅ partial — major hot paths (sidebar needsReviewCount, DiscoverProgress count, QuizBank filter) now use cached lookups |
 | MT9 | Long computed properties read by `body` | ✅ QuizBank `filteredEntries`, DiscoverShell `completedSceneIds`, DiscoverProgressDashboard `completedCount` all captured once per body via local `let` |
@@ -601,8 +601,8 @@ deploy iMac. Status legend per A–Y / Z convention.
 
 | ID | Category | Status |
 |----|----------|--------|
-| DT1 | Dictionary index O(1) vs scanning array of concepts | ✅ `SubjectPackIndexCache` provides O(1) lookups for conceptIndex / questionIndex / needsHumanReviewIds |
-| DT2 | `Array.first(where:)` over question/concept index in hot paths | ✅ replaced by dict lookups via the cache |
+| DT1 | Dictionary index O(1) vs scanning array of concepts | ✅ `SubjectPackIndexCache` provides O(1) lookups for conceptIndex / questionIndex / needsHumanReviewIds / **chapterIndex** |
+| DT2 | `Array.first(where:)` over question/concept index in hot paths | ✅ replaced by dict lookups via the cache. `pack.chapters.first(where:)` sites in ChapterListView / TutorNavigation / DiscoverProgressDashboard now use `pack.chapterIndex[id]` |
 | DT3 | Search ranking recomputed on every keystroke (no debounce throttle) | ✅ SearchView has 200ms debounce; QuizBank filter is fast enough not to need one |
 | DT4 | Search across all packs builds full set every time | ✅ `pack.allConcepts` / `pack.allQuestions` are still computed properties but scored once per debounced query, not per keystroke |
 | DT5 | QuizBank filter chain (subject × type × review × text) without memoisation | ✅ commit 020b4d1 — captured `let entries = filteredEntries` once per body |
