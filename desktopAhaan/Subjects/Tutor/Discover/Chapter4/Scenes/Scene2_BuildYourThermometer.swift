@@ -16,8 +16,20 @@ struct Scene2_BuildYourThermometer: View {
     private var tempF: Double { tempC * 9.0 / 5.0 + 32.0 }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 HStack(spacing: 40) {
                     // Thermometer
                     if isDigital {
@@ -73,8 +85,15 @@ struct Scene2_BuildYourThermometer: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Build Your Thermometer", systemImage: SFSymbolCompat.name("thermometer.medium"))
@@ -100,10 +119,19 @@ struct Scene2_BuildYourThermometer: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

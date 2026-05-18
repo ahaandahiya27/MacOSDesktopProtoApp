@@ -49,8 +49,20 @@ struct Scene3_ClimateZonesMap: View {
     private var allExplored: Bool { exploredZones.count == zones.count }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 12) {
                     Text("Climate Zones of the World")
                         .font(.title2.bold())
@@ -124,9 +136,15 @@ struct Scene3_ClimateZonesMap: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
 
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedZone, let zone = zones.first(where: { $0.id == idx }) {
@@ -166,10 +184,19 @@ struct Scene3_ClimateZonesMap: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

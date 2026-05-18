@@ -45,8 +45,20 @@ struct Scene1_IceToWaterToSteam: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 16) {
                     Text("Ice to Water to Steam")
                         .font(.largeTitle.bold())
@@ -117,8 +129,15 @@ struct Scene1_IceToWaterToSteam: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Same substance, different forms", systemImage: "drop.triangle.fill")
@@ -144,10 +163,19 @@ struct Scene1_IceToWaterToSteam: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }

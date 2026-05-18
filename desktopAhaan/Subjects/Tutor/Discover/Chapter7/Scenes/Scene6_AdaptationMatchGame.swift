@@ -45,8 +45,20 @@ struct Scene6_AdaptationMatchGame: View {
     private var isDone: Bool { matched.count == Self.pairs.count }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { _ in
+
+                    ZStack {
                 VStack(spacing: 14) {
                     HStack {
                         Spacer()
@@ -99,9 +111,15 @@ struct Scene6_AdaptationMatchGame: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
 
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label(isDone ? "Great matching!" : "Match Animals to Adaptations",
@@ -133,8 +151,10 @@ struct Scene6_AdaptationMatchGame: View {
                         GotItButton { onComplete(score) }
                             .padding(.bottom, 12)
                     }
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
 
                 if showConfetti {
@@ -142,7 +162,14 @@ struct Scene6_AdaptationMatchGame: View {
                         .allowsHitTesting(false)
                         .ignoresSafeArea()
                 }
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

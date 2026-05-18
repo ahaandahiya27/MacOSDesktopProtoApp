@@ -14,8 +14,20 @@ struct Scene5_SeaBreezeLandBreeze: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 16) {
                     Spacer()
 
@@ -118,8 +130,15 @@ struct Scene5_SeaBreezeLandBreeze: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Sea Breeze & Land Breeze", systemImage: "wind")
@@ -147,10 +166,19 @@ struct Scene5_SeaBreezeLandBreeze: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

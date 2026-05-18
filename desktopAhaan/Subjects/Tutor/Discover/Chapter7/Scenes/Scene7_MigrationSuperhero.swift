@@ -40,8 +40,20 @@ struct Scene7_MigrationSuperhero: View {
     private var allExplored: Bool { exploredFacts.count == facts.count }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 14) {
                     Text("Migration Superhero")
                         .font(.title2.bold())
@@ -68,9 +80,15 @@ struct Scene7_MigrationSuperhero: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
 
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedFact, let fact = facts.first(where: { $0.id == idx }) {
@@ -113,10 +131,19 @@ struct Scene7_MigrationSuperhero: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }

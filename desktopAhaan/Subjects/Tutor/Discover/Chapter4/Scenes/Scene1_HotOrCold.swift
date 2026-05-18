@@ -31,8 +31,20 @@ struct Scene1_HotOrCold: View {
     ]
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 HStack(spacing: 30) {
                     // Thermometer on the left
                     thermometerView
@@ -78,8 +90,15 @@ struct Scene1_HotOrCold: View {
                 .padding(.horizontal, 32)
 
                 // Caption + button
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Hot or Cold?", systemImage: SFSymbolCompat.name("hand.raised.fingers.spread"))
@@ -105,10 +124,19 @@ struct Scene1_HotOrCold: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

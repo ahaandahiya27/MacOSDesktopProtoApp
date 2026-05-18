@@ -44,8 +44,20 @@ struct Scene6_ConductorOrInsulator: View {
     private var isDone: Bool { remaining.isEmpty }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 12) {
                     // Score
                     HStack {
@@ -84,8 +96,15 @@ struct Scene6_ConductorOrInsulator: View {
                     Spacer()
                 }
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     if isDone {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
@@ -126,8 +145,10 @@ struct Scene6_ConductorOrInsulator: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .padding(.bottom, 12)
                     }
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
 
                 if showConfetti {
@@ -135,7 +156,14 @@ struct Scene6_ConductorOrInsulator: View {
                         .allowsHitTesting(false)
                         .ignoresSafeArea()
                 }
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

@@ -31,8 +31,20 @@ struct Scene1_PlantKitchen: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 // Ambient animation (sunlight rays, water drops, CO₂ wisps)
                 if !reduceMotion {
                     ZStack {
@@ -68,8 +80,15 @@ struct Scene1_PlantKitchen: View {
                 }
 
                 // Caption + got-it button
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("The Plant Kitchen", systemImage: "leaf.circle.fill")
@@ -121,10 +140,19 @@ struct Scene1_PlantKitchen: View {
                         onComplete()
                     }
                     .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }

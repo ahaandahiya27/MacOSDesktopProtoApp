@@ -43,8 +43,20 @@ struct Scene2_BuildYourpHStrip: View {
     }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { _ in
+
+                    ZStack {
                 VStack(spacing: 18) {
                     Text("Build Your pH Strip")
                         .font(.title2.bold())
@@ -81,8 +93,15 @@ struct Scene2_BuildYourpHStrip: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("The pH Scale", systemImage: "chart.bar.fill")
@@ -108,10 +127,19 @@ struct Scene2_BuildYourpHStrip: View {
 
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 

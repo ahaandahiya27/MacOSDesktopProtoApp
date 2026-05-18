@@ -28,8 +28,20 @@ struct Scene4_NeutralisationInAction: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
+
+        // Refactored ZStack-overlap pattern to ScrollView+VStack.
+
+        // Inner GeometryReader is preserved for size-relative
+
+        // interactive content; cards now sit as siblings below it.
+
+        ScrollView {
+
+            VStack(spacing: 14) {
+
+                GeometryReader { geo in
+
+                    ZStack {
                 VStack(spacing: 16) {
                     Text("Neutralisation in Action")
                         .font(.title2.bold())
@@ -101,8 +113,15 @@ struct Scene4_NeutralisationInAction: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                VStack(spacing: 14) {
-                    Spacer()
+                
+
+                    }
+
+                }
+
+                .frame(height: 320)
+
+                Group {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("Neutralisation", systemImage: SFSymbolCompat.name("flask.fill"))
@@ -150,10 +169,19 @@ struct Scene4_NeutralisationInAction: View {
                         GotItButton { onComplete() }
                             .padding(.bottom, 12)
                     }
+                
+
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+
                 .padding(.horizontal, 24)
+            
+
             }
+
+            .frame(maxWidth: .infinity)
+
+            .padding(.bottom, 12)
+
         }
     }
 
