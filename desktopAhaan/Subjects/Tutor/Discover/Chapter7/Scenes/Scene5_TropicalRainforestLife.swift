@@ -41,11 +41,15 @@ struct Scene5_TropicalRainforestLife: View {
     private var allExplored: Bool { exploredLayers.count == layers.count }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap to ScrollView+VStack so the bottom
+        // card stack doesn't overlay the rainforest-layer buttons.
+        ScrollView {
+            VStack(spacing: 14) {
                 mainColumn
                 bottomOverlay
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 
@@ -61,7 +65,6 @@ struct Scene5_TropicalRainforestLife: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             layersStack
-            Spacer()
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 24)
@@ -139,7 +142,6 @@ struct Scene5_TropicalRainforestLife: View {
     @ViewBuilder
     private var bottomOverlay: some View {
         VStack(spacing: 14) {
-            Spacer()
             detailCard
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
@@ -160,7 +162,6 @@ struct Scene5_TropicalRainforestLife: View {
                     .padding(.bottom, 12)
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .padding(.horizontal, 24)
     }
 

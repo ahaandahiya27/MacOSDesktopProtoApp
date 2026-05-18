@@ -47,11 +47,15 @@ struct Scene4_PolarBearSurvivalKit: View {
     private var allTapped: Bool { tappedAdaptations.count == adaptations.count }
 
     var body: some View {
-        GeometryReader { _ in
-            ZStack {
+        // Refactored ZStack-overlap pattern to ScrollView+VStack so the
+        // bottom card overlay doesn't cover the bear diagram.
+        ScrollView {
+            VStack(spacing: 14) {
                 mainColumn
                 bottomOverlay
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 
@@ -67,7 +71,6 @@ struct Scene4_PolarBearSurvivalKit: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             bearDiagram
-            Spacer()
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 24)
@@ -183,7 +186,6 @@ struct Scene4_PolarBearSurvivalKit: View {
     @ViewBuilder
     private var bottomOverlay: some View {
         VStack(spacing: 14) {
-            Spacer()
             detailCard
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
 
@@ -204,7 +206,6 @@ struct Scene4_PolarBearSurvivalKit: View {
                     .padding(.bottom, 12)
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .padding(.horizontal, 24)
     }
 
