@@ -17,6 +17,10 @@ struct CommandPalette: View {
     @EnvironmentObject private var appState: AppState
     @State private var query: String = ""
     @State private var selectedIndex: Int = 0
+    /// Cached on `.onAppear` so the ~1227-entry flat index isn't rebuilt
+    /// per body render (which previously happened twice per render via
+    /// `filtered.isEmpty` + `filtered`'s ForEach).
+    @State private var cachedAllEntries: [Entry] = []
 
     // MARK: - Entry types
 
@@ -33,8 +37,12 @@ struct CommandPalette: View {
 
     // MARK: - Index
 
-    /// Built once per palette open. Cheap: a few thousand entries at most.
-    private var allEntries: [Entry] {
+    /// Builds the flat entry index. Called once on `.onAppear` and the
+    /// result is stored in `cachedAllEntries`. Used to be a computed
+    /// property re-invoked per body render (and twice per render via
+    /// `filtered`'s two call sites), which rebuilt the ~1227-entry list
+    /// on every keystroke.
+    private func buildAllEntries() -> [Entry] {
         var out: [Entry] = []
         for pack in subjectRegistry.packs {
             for chapter in pack.chapters {
@@ -82,10 +90,10 @@ struct CommandPalette: View {
         guard !q.isEmpty else {
             // Empty query: show a small mix (top of each pack) so the
             // palette isn't blank on first open.
-            return Array(allEntries.prefix(40))
+            return Array(cachedAllEntries.prefix(40))
         }
         // Score by simple "contains" priority: title prefix > title contains > subtitle contains.
-        let scored: [(Entry, Int)] = allEntries.compactMap { e in
+        let scored: [(Entry, Int)] = cachedAllEntries.compactMap { e in
             let t = e.title.lowercased()
             let s = e.subtitle?.lowercased() ?? ""
             if t.hasPrefix(q) { return (e, 0) }
@@ -99,13 +107,17 @@ struct CommandPalette: View {
     // MARK: - Body
 
     var body: some View {
-        VStack(spacing: 0) {
+        // Compute `filtered` ONCE per body render (was called twice — once
+        // for `.isEmpty` check + once in `resultsList`'s ForEach).
+        let results = filtered
+
+        return VStack(spacing: 0) {
             queryField
             Divider()
-            if filtered.isEmpty {
+            if results.isEmpty {
                 emptyResults
             } else {
-                resultsList
+                resultsList(results)
             }
             Divider()
             footerHints
@@ -113,6 +125,12 @@ struct CommandPalette: View {
         .frame(minWidth: 580, idealWidth: 680, maxWidth: 820,
                minHeight: 440, idealHeight: 560, maxHeight: 720)
         .background(keyboardSink)
+        .onAppear {
+            // Build the flat entry index once per palette session.
+            if cachedAllEntries.isEmpty {
+                cachedAllEntries = buildAllEntries()
+            }
+        }
     }
 
     private var queryField: some View {
@@ -143,11 +161,11 @@ struct CommandPalette: View {
         .padding(.vertical, 14)
     }
 
-    private var resultsList: some View {
+    private func resultsList(_ results: [Entry]) -> some View {
         ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    ForEach(Array(filtered.enumerated()), id: \.element.id) { idx, entry in
+                    ForEach(Array(results.enumerated()), id: \.element.id) { idx, entry in
                         row(for: entry, isSelected: idx == selectedIndex)
                             .id(idx)
                             .onTapGesture { open(entry) }
