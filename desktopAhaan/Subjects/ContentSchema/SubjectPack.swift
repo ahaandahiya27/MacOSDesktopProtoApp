@@ -20,15 +20,19 @@ struct SubjectPack: Codable, Hashable, Identifiable {
     let generatedAt: String
     let chapters: [Chapter]
 
-    // MARK: - Computed metrics — used by Settings to show pack size at a glance
+    // MARK: - Computed metrics — used by Settings AND the sidebar tile
+    //
+    // Previously these did a nested `chapters.reduce { topics.reduce { ... } }`
+    // on every access. The sidebar's pack row re-renders on every DataStore
+    // publish (translation insert, quiz attempt, bookmark toggle), so on the
+    // legacy iMac with 19 chapters × ~3 topics × 250+ concepts this was ~5 ms
+    // of pointless work per render, per pack. Now: route through the
+    // already-cached `allConcepts` / `allQuestions` arrays, so first access
+    // is O(n) and every subsequent access is O(1).
 
-    var conceptCount: Int {
-        chapters.reduce(0) { $0 + $1.topics.reduce(0) { $0 + $1.concepts.count } }
-    }
+    var conceptCount: Int { allConcepts.count }
 
-    var questionCount: Int {
-        chapters.reduce(0) { $0 + $1.topics.reduce(0) { $0 + $1.questions.count } }
-    }
+    var questionCount: Int { allQuestions.count }
 
     var topicCount: Int {
         chapters.reduce(0) { $0 + $1.topics.count }
