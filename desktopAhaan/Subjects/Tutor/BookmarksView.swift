@@ -50,8 +50,17 @@ private struct BookmarksContent: View {
     }
 
     var body: some View {
-        Group {
-            if entries.isEmpty {
+        // Compute entries + grouped ONCE per body render — previously
+        // `entries.isEmpty` triggered one compute and `grouped` triggered
+        // another (which internally re-computed `entries`). On a kid with
+        // many bookmarks the sort+group ran twice per state change.
+        let allEntries = entries
+        let groupedEntries: [(String, [BookmarkEntry])] = Dictionary(grouping: allEntries, by: \.subjectPackId)
+            .map { ($0.key, $0.value) }
+            .sorted { $0.0 < $1.0 }
+
+        return Group {
+            if allEntries.isEmpty {
                 EmptyStateView(
                     icon: "bookmark",
                     title: "No bookmarks yet",
@@ -59,7 +68,7 @@ private struct BookmarksContent: View {
                 )
             } else {
                 List {
-                    ForEach(grouped, id: \.0) { (packId, items) in
+                    ForEach(groupedEntries, id: \.0) { (packId, items) in
                         Section(header: Text(packTitle(for: packId))) {
                             ForEach(items) { entry in
                                 entryRow(entry)
@@ -72,12 +81,6 @@ private struct BookmarksContent: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Bookmarks")
-    }
-
-    private var grouped: [(String, [BookmarkEntry])] {
-        Dictionary(grouping: entries, by: \.subjectPackId)
-            .map { ($0.key, $0.value) }
-            .sorted { $0.0 < $1.0 }
     }
 
     private func packTitle(for id: String) -> String {
