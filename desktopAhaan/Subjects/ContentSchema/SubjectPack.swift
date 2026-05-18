@@ -107,32 +107,67 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         Dictionary(uniqueKeysWithValues: chapters.map { ($0.id, $0) })
     }
 
+    // The three build functions below intentionally iterate `chapters`
+    // directly rather than going through `allConcepts` / `allQuestions`.
+    // **Why:** these are invoked by `SubjectPackIndexCache` from INSIDE a
+    // held NSLock. Re-entering the cache from inside the lock (which is
+    // what `allConcepts` / `allQuestions` do via the cache shim) deadlocks
+    // immediately on Big Sur — NSLock is non-recursive, so a same-thread
+    // re-acquisition blocks forever. This was the cause of the iMac
+    // launch-time freeze (Thread 1 stuck in `allQuestions(for:)` called
+    // from `buildAllNeedsHumanReviewIds`). DO NOT replace these with
+    // `allConcepts` / `allQuestions` calls — keep them self-contained.
+
     fileprivate func buildNeedsHumanReviewIds() -> Set<String> {
-        Set(allQuestions.lazy.filter { $0.needsHumanReview }.map { $0.id })
+        var ids: Set<String> = []
+        for chapter in chapters {
+            for topic in chapter.topics {
+                for question in topic.questions where question.needsHumanReview {
+                    ids.insert(question.id)
+                }
+            }
+        }
+        return ids
     }
 
     /// Builds the underlying concept dictionary. Only called by the cache
     /// on first access for a given pack.id.
     fileprivate func buildConceptIndex() -> [String: Concept] {
-        Dictionary(allConcepts.map { ($0.id, $0) },
-                   uniquingKeysWith: { first, _ in
-            CrashReporter.shared.logDataIssue(
-                "duplicate Concept.id '\(first.id)' in pack '\(self.id)'"
-            )
-            return first
-        })
+        var index: [String: Concept] = [:]
+        for chapter in chapters {
+            for topic in chapter.topics {
+                for concept in topic.concepts {
+                    if index[concept.id] != nil {
+                        CrashReporter.shared.logDataIssue(
+                            "duplicate Concept.id '\(concept.id)' in pack '\(self.id)'"
+                        )
+                        continue
+                    }
+                    index[concept.id] = concept
+                }
+            }
+        }
+        return index
     }
 
     /// Builds the underlying question dictionary. Only called by the cache
     /// on first access for a given pack.id.
     fileprivate func buildQuestionIndex() -> [String: Question] {
-        Dictionary(allQuestions.map { ($0.id, $0) },
-                   uniquingKeysWith: { first, _ in
-            CrashReporter.shared.logDataIssue(
-                "duplicate Question.id '\(first.id)' in pack '\(self.id)'"
-            )
-            return first
-        })
+        var index: [String: Question] = [:]
+        for chapter in chapters {
+            for topic in chapter.topics {
+                for question in topic.questions {
+                    if index[question.id] != nil {
+                        CrashReporter.shared.logDataIssue(
+                            "duplicate Question.id '\(question.id)' in pack '\(self.id)'"
+                        )
+                        continue
+                    }
+                    index[question.id] = question
+                }
+            }
+        }
+        return index
     }
 
     /// Walk every concept's `relatedConceptIds` and `relatedQuestionIds`
