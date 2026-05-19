@@ -40,7 +40,7 @@ struct Scene6_BuildElectromagnet: View {
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("Switchable magnet", systemImage: "powerplug")
+                        Label("Switchable magnet", systemImage: SFSymbolCompat.name("powerplug"))
                             .font(.title2.bold())
                         Text("Wrap insulated wire around an iron nail and connect a battery. The nail becomes a magnet — but only while the current flows. More turns, stronger field. Used in cranes to pick up cars.")
                             .font(.body).lineSpacing(4)
