@@ -68,16 +68,11 @@ struct Scene3_FiveSignsOfChemicalChange: View {
     ]
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; sign cards now lay
+        // out at their natural height inside the scrollable column.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 16) {
                     Text("Five Signs of Chemical Change")
                         .font(.largeTitle.bold())
@@ -91,24 +86,13 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                     // Five cards in a row
                     HStack(spacing: 12) {
                         ForEach(0..<5, id: \.self) { i in
-                            signCard(index: i, height: min(geo.size.height * 0.35, 240))
+                            signCard(index: i, height: 180)
                         }
                     }
                     .frame(maxWidth: 720)
                     .padding(.horizontal, 24)
-
-                    Spacer()
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     if let idx = activeSign {

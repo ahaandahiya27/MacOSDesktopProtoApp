@@ -46,16 +46,13 @@ struct Scene6_PhysicalOrChemicalSorting: View {
     private var isDone: Bool { remaining.isEmpty }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; drag chips + drop
+        // zones now lay out at their natural height. The dropZone
+        // helper's own GeometryReader still tracks each zone's global
+        // frame for hit testing.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 12) {
                     // Score
                     HStack {
@@ -94,17 +91,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                     }
                     .padding(.horizontal, 24)
                     .frame(maxHeight: 200)
-
-                    Spacer()
                 }
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     if isDone {
@@ -153,12 +140,6 @@ struct Scene6_PhysicalOrChemicalSorting: View {
 
                 .padding(.horizontal, 24)
 
-                if showConfetti {
-                    ParticleEmitter(isActive: true, particleCount: 40, duration: 1.5)
-                        .allowsHitTesting(false)
-                        .ignoresSafeArea()
-                }
-            
 
             }
 
@@ -167,6 +148,15 @@ struct Scene6_PhysicalOrChemicalSorting: View {
             .padding(.bottom, 12)
 
         }
+        .overlay(
+            Group {
+                if showConfetti {
+                    ParticleEmitter(isActive: true, particleCount: 40, duration: 1.5)
+                        .allowsHitTesting(false)
+                        .ignoresSafeArea()
+                }
+            }
+        )
     }
 
     // MARK: - Item chip with DragGesture

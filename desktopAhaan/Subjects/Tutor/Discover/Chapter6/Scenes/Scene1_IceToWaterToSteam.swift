@@ -45,16 +45,12 @@ struct Scene1_IceToWaterToSteam: View {
     }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; interactive content
+        // now flows naturally and the particleCanvas's own GeometryReader
+        // has a real bounded canvas via its fixed-size frame.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 16) {
                     Text("Ice to Water to Steam")
                         .font(.largeTitle.bold())
@@ -64,8 +60,6 @@ struct Scene1_IceToWaterToSteam: View {
                     Text("Slide the temperature to see H₂O change state.")
                         .font(.callout)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-                    Spacer()
 
                     // Phase display
                     ZStack {
@@ -119,19 +113,8 @@ struct Scene1_IceToWaterToSteam: View {
                         .frame(maxWidth: 460)
                     }
                     .padding(.horizontal, 24)
-
-                    Spacer()
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     SoftShadowCard(padding: 18) {

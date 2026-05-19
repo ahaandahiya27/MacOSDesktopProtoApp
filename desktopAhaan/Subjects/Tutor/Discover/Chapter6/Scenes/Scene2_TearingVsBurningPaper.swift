@@ -144,9 +144,6 @@ struct Scene2_TearingVsBurningPaper: View {
                         .frame(maxWidth: 240)
                     }
                     .padding(.top, 8)
-
-                    Spacer()
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
 

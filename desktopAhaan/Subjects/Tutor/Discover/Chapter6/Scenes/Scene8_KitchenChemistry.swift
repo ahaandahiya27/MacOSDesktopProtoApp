@@ -54,7 +54,11 @@ struct Scene8_KitchenChemistry: View {
     ]
 
     var body: some View {
-        VStack(spacing: 14) {
+        // ScrollView + LazyVStack: prevents greedy Spacer()s from
+        // pushing the callouts and GotItButton off-screen on the 5K
+        // canvas. Original Spacer()s dropped.
+        ScrollView {
+            LazyVStack(spacing: 14) {
             Text("Kitchen Chemistry")
                 .font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -63,8 +67,6 @@ struct Scene8_KitchenChemistry: View {
             Text("Tap an experiment to trigger the reaction")
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-            Spacer()
 
             HStack(spacing: 20) {
                 ForEach(experiments) { exp in
@@ -122,8 +124,6 @@ struct Scene8_KitchenChemistry: View {
                 )
             }
 
-            Spacer()
-
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
                     Label("Chemistry in your kitchen", systemImage: SFSymbolCompat.name("frying.pan.fill"))
@@ -158,8 +158,10 @@ struct Scene8_KitchenChemistry: View {
 
             GotItButton { onComplete() }
                 .padding(.bottom, 12)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private func experimentCard(_ exp: Experiment) -> some View {

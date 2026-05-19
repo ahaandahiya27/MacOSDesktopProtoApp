@@ -21,7 +21,11 @@ struct Scene7_CrystalGarden: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
+        // ScrollView + LazyVStack: prevents the greedy Spacers from
+        // pushing the callouts and GotItButton off-screen on the 5K
+        // canvas. Original Spacer()s dropped.
+        ScrollView {
+            LazyVStack(spacing: 14) {
             Text("Crystal Garden")
                 .font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -30,8 +34,6 @@ struct Scene7_CrystalGarden: View {
             Text("Grow crystals from a supersaturated solution")
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-            Spacer()
 
             // Beaker visual
             ZStack {
@@ -131,8 +133,6 @@ struct Scene7_CrystalGarden: View {
                 .frame(maxWidth: 500)
                 .padding(.horizontal)
 
-            Spacer()
-
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
                     Label("Crystallisation", systemImage: "diamond.fill")
@@ -167,8 +167,10 @@ struct Scene7_CrystalGarden: View {
 
             GotItButton { onComplete() }
                 .padding(.bottom, 12)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: - Visuals
