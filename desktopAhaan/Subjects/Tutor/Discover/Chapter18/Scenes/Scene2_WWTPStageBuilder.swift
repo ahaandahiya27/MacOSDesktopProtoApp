@@ -52,6 +52,27 @@ struct Scene2_WWTPStageBuilder: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                ProcessTimeline(
+                    title: "How a sewage-treatment plant works — start to finish",
+                    steps: [
+                        .init(title: "1. Bar screens",
+                              detail: "Wastewater enters and runs through a row of metal bars. Plastic bags, sticks, sanitary products, and large rags are caught and removed."),
+                        .init(title: "2. Grit chamber",
+                              detail: "Flow slows so heavier particles — sand, pebbles, broken glass — settle to the bottom and are scraped out."),
+                        .init(title: "3. Primary clarifier",
+                              detail: "Water moves into a calm tank. Lighter sludge (suspended solids) settles to the floor; oils and grease float to the top and are skimmed off."),
+                        .init(title: "4. Aeration tank",
+                              detail: "Air is pumped in. Aerobic bacteria multiply rapidly, eating the dissolved organic pollution. This is the biological heart of the plant."),
+                        .init(title: "5. Secondary clarifier",
+                              detail: "The bacteria-rich sludge settles. Clear water leaves the top; some of the settled sludge is pumped back to keep the aeration tank stocked with microbes."),
+                        .init(title: "6. Chlorination + discharge",
+                              detail: "A small dose of chlorine (or UV light) kills the remaining pathogens. The cleaned water is released back into a river or reused for irrigation. Removed sludge becomes biogas or fertiliser.")
+                    ],
+                    accent: Color.compatTeal
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 Biology 'Environmental Issues' covers the same treatment stages plus BOD (Biological Oxygen Demand) and COD (Chemical Oxygen Demand) — quantitative measures of water pollution that NEET tests every year. The aeration tank is where the microbes you saw here do the heavy lifting."

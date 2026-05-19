@@ -69,22 +69,46 @@ struct Scene5_CycloneEye: View {
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
 
-                LookingAheadCallout(
-                    title: "Class 11 Physics → JEE",
-                    detail: "In Class 11 Physics you'll meet the Coriolis force — the rotating-frame effect that decides which way a cyclone spins (counter-clockwise in the Northern Hemisphere, clockwise in the Southern). JEE rarely asks cyclones directly, but Coriolis problems on rotating reference frames are standard."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                // Grouped so the outer VStack stays within Swift 5.5's
+                // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
+                Group {
+                    HotspotDiagram(
+                        title: "Anatomy of a cyclone — tap each ring",
+                        baseSymbol: "hurricane",
+                        baseColor: Color.compatIndigo,
+                        hotspots: [
+                            .init(x: 0.50, y: 0.50, label: "The Eye",
+                                  detail: "30–60 km across in a big cyclone. Wind speeds drop to almost zero; clear skies. Air is sinking here, so clouds evaporate."),
+                            .init(x: 0.50, y: 0.30, label: "Eye Wall",
+                                  detail: "Just outside the eye — the most violent ring. Wall of tall thunderstorms with the cyclone's strongest winds and heaviest rain."),
+                            .init(x: 0.20, y: 0.50, label: "Rain Bands (outer)",
+                                  detail: "Spiral arms of rain extending hundreds of kilometres out. They carry the bulk of the cyclone's water, dropping it as you near the eye."),
+                            .init(x: 0.80, y: 0.50, label: "Inflow",
+                                  detail: "Warm, moist surface air is sucked inward toward the low-pressure centre, feeding the storm."),
+                            .init(x: 0.50, y: 0.85, label: "Outflow (top)",
+                                  detail: "At the cyclone's roof (~15 km up), the air spreads outward — the engine that lets new moist air keep flowing in below.")
+                        ]
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-                TryAtHomeCallout(
-                    title: "Glass-of-water cyclone",
-                    detail: "Stir a tall glass of water vigorously with a spoon, then pull the spoon out. A miniature 'eye' forms in the middle — the same low-pressure column that exists inside a real cyclone, just made of water instead of air."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                    LookingAheadCallout(
+                        title: "Class 11 Physics → JEE",
+                        detail: "In Class 11 Physics you'll meet the Coriolis force — the rotating-frame effect that decides which way a cyclone spins (counter-clockwise in the Northern Hemisphere, clockwise in the Southern). JEE rarely asks cyclones directly, but Coriolis problems on rotating reference frames are standard."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
+                    TryAtHomeCallout(
+                        title: "Glass-of-water cyclone",
+                        detail: "Stir a tall glass of water vigorously with a spoon, then pull the spoon out. A miniature 'eye' forms in the middle — the same low-pressure column that exists inside a real cyclone, just made of water instead of air."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    GotItButton { onComplete() }.padding(.bottom, 12)
+                    Spacer(minLength: 0)
+                }
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

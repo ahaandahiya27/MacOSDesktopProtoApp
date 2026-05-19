@@ -77,22 +77,45 @@ struct Scene1_BuildACircuit: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
-                LookingAheadCallout(
-                    title: "Class 10 / 12 Physics → JEE",
-                    detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                // Grouped so the outer VStack stays within Swift 5.5's
+                // 10-child ViewBuilder limit.
+                Group {
+                    ProcessTimeline(
+                        title: "How current flows when you close the switch",
+                        steps: [
+                            .init(title: "Cell pushes electrons",
+                                  detail: "The chemical reaction inside the cell creates a voltage — a 'push' that lifts electrons up to the negative terminal."),
+                            .init(title: "Electrons enter the wire",
+                                  detail: "Once the switch is closed, electrons flow from the negative terminal into the copper wire. Each electron nudges the next — like marbles in a tube."),
+                            .init(title: "Electrons reach the bulb",
+                                  detail: "The bulb's filament is a thin tungsten wire. Electrons squeezing through it bump into atoms — friction heats the metal until it glows."),
+                            .init(title: "Electrons return to the cell",
+                                  detail: "Electrons leaving the bulb travel back along the second wire to the cell's positive terminal — the loop is complete."),
+                            .init(title: "Open the switch → flow stops",
+                                  detail: "Break the loop anywhere — switch off, wire cut, bulb burnt — and the whole chain stops instantly. No closed path = no current.")
+                        ],
+                        accent: .yellow
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-                TryAtHomeCallout(
-                    title: "Smallest possible circuit",
-                    detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
-                )
-                .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                    LookingAheadCallout(
+                        title: "Class 10 / 12 Physics → JEE",
+                        detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
+                    TryAtHomeCallout(
+                        title: "Smallest possible circuit",
+                        detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    GotItButton { onComplete() }.padding(.bottom, 12)
+                    Spacer(minLength: 0)
+                }
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

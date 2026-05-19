@@ -60,6 +60,28 @@ struct Scene1_FlowerAnatomy: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                HotspotDiagram(
+                    title: "Parts of a flower — tap each number",
+                    baseSymbol: "leaf.fill",
+                    baseColor: .pink,
+                    hotspots: [
+                        .init(x: 0.50, y: 0.10, label: "Stigma",
+                              detail: "The sticky top of the pistil. Catches pollen grains that pollinators or wind deposit."),
+                        .init(x: 0.50, y: 0.30, label: "Style",
+                              detail: "The slender stalk between stigma and ovary. Pollen tubes grow down through it to reach the egg."),
+                        .init(x: 0.50, y: 0.55, label: "Ovary (with ovules inside)",
+                              detail: "Female part. Holds the ovules (future seeds). After fertilisation the ovary swells into a fruit."),
+                        .init(x: 0.25, y: 0.40, label: "Stamen — anther + filament",
+                              detail: "Male part. The anther produces pollen grains; the filament holds it up where pollinators can reach it."),
+                        .init(x: 0.75, y: 0.40, label: "Petals",
+                              detail: "Coloured, often scented. Their job is to attract pollinators (bees, butterflies, birds, beetles)."),
+                        .init(x: 0.50, y: 0.85, label: "Sepals",
+                              detail: "Usually green, leaf-like. Protect the flower bud while it grows; sit at the base of the open flower.")
+                    ]
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Sexual Reproduction in Flowering Plants' covers microsporogenesis (pollen formation in anther), megasporogenesis (egg formation in ovule), and the embryo-sac structure (8 nuclei / 7 cells)."

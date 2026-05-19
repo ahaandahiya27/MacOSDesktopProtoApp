@@ -145,6 +145,24 @@ struct Scene1_IceToWaterToSteam: View {
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    ProcessTimeline(
+                        title: "States of matter — heating water from ice to steam",
+                        steps: [
+                            .init(title: "Ice at −10 °C (solid)",
+                                  detail: "Molecules locked in a rigid crystal lattice — they only vibrate in place. Volume is fixed; shape is fixed."),
+                            .init(title: "Melting at 0 °C",
+                                  detail: "Latent heat of fusion: 334 J of energy per gram, used only to break the lattice bonds. Temperature does NOT rise until all ice has melted."),
+                            .init(title: "Liquid water 0 → 100 °C",
+                                  detail: "Molecules slide past each other but stay close. Volume is fixed; shape takes its container. Heating raises the temperature directly."),
+                            .init(title: "Boiling at 100 °C",
+                                  detail: "Latent heat of vaporisation: 2260 J per gram, used to break ALL intermolecular bonds. Again the temperature pauses until every drop has turned to gas."),
+                            .init(title: "Steam above 100 °C (gas)",
+                                  detail: "Molecules fly free, far apart. Volume + shape both take the container. Reversal: cool steam → it condenses back to water, then freezes to ice. Same H₂O the whole time.")
+                        ],
+                        accent: Color.compatCyan
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     LookingAheadCallout(
                         title: "Class 11 Chemistry → JEE (Phases of Matter)",
                         detail: "Ice → water → steam is *phase change* — JEE Thermodynamics asks for the latent heat: 334 J/g to melt ice (Lf), 2260 J/g to evaporate water (Lv). The amount needed to boil is 6× the amount to melt — because breaking ALL the bonds between molecules costs more than just loosening them. Same H₂O, dramatically different bond energy at each stage."

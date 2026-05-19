@@ -53,6 +53,27 @@ struct Scene2_DecomposerCycle: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                ProcessTimeline(
+                    title: "Forest decomposer chain — leaf to humus",
+                    steps: [
+                        .init(title: "Leaf falls to the ground",
+                              detail: "Autumn (or any season for evergreen forests). The leaf is still mostly cellulose, lignin, and a small amount of trapped sugars."),
+                        .init(title: "Termites + ants shred it",
+                              detail: "Within hours, insects begin chewing the leaf into smaller pieces — increasing surface area for the microbes that move in next."),
+                        .init(title: "Fungi colonise the fragments",
+                              detail: "White and grey threads of hyphae spread through the litter. Fungi secrete enzymes that crack cellulose and lignin — chemistry that bacteria alone can't do."),
+                        .init(title: "Bacteria finish the digestion",
+                              detail: "Bacterial colonies follow the fungi, mineralising the leaf into ammonia, sulfates, phosphates — soluble nutrients ready for roots."),
+                        .init(title: "Earthworms mix it into the soil",
+                              detail: "Worms eat the decomposing matter, pass it through their gut, and excrete it as worm castings — the richest, crumbliest topsoil."),
+                        .init(title: "Trees absorb the nutrients",
+                              detail: "Roots take the dissolved minerals back up. Same atoms, new leaf. The forest never throws anything away — it just recycles.")
+                    ],
+                    accent: Color(red: 0.40, green: 0.55, blue: 0.25)
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Ecosystem' formalises this as nutrient cycling — the carbon, nitrogen, phosphorus, sulphur cycles. Decomposers (bacteria, fungi) drive all of them. NEET asks ecological cycle questions every year."

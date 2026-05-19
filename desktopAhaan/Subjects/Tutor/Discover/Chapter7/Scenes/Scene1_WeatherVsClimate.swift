@@ -96,6 +96,19 @@ struct Scene1_WeatherVsClimate: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
+                    MnemonicCallout(
+                        hook: "TPHWP",
+                        meaning: "The five variables every weather report measures.",
+                        expansion: [
+                            ("T", "Temperature — how hot or cold the air is"),
+                            ("P", "Pressure — heavy or light air (millibars)"),
+                            ("H", "Humidity — how much moisture the air carries"),
+                            ("W", "Wind — direction and speed of the moving air"),
+                            ("P", "Precipitation — rain, snow, hail, sleet")
+                        ]
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+
                     LookingAheadCallout(
                         title: "Class 11 Geography + Statistics → JEE / NEET / UPSC",
                         detail: "Weather = today's measurement; Climate = 30-year average. JEE Stats asks the same question as standard deviation. NEET Ecology asks 'why does monsoon arrive in June every year?' (climate). UPSC asks 'why is climate change different from weather change?' Same data, three frames: instantaneous → trend → long-term mean."
