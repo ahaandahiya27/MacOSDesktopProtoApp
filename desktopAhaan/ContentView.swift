@@ -5,8 +5,25 @@ struct ContentView: View {
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var dataStore: DataStore
     @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
+    @AppStorage(AppStorageKeys.hasSeenAllChaptersCelebration) private var hasSeenAllChaptersCelebration: Bool = false
     @State private var showShortcutsSheet = false
     @State private var showCommandPalette = false
+    @State private var showAllChaptersCelebration = false
+
+    /// Sum of every Boss Quiz score the student has earned across the 19
+    /// chapters' Scene 9. nil-out when no Boss Quizzes have been completed
+    /// (avoids showing "0/0" in the celebration overlay).
+    private var bossQuizTotalScore: Int? {
+        let rows = dataStore.discoverProgress.filter { $0.sceneId == "scene9" && $0.score != nil }
+        guard !rows.isEmpty else { return nil }
+        return rows.reduce(0) { $0 + ($1.score ?? 0) }
+    }
+
+    private var bossQuizTotalMax: Int? {
+        let rows = dataStore.discoverProgress.filter { $0.sceneId == "scene9" && $0.maxScore != nil }
+        guard !rows.isEmpty else { return nil }
+        return rows.reduce(0) { $0 + ($1.maxScore ?? 0) }
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -33,6 +50,36 @@ struct ContentView: View {
         }
         .sheet(isPresented: Binding(get: { !hasSeenWelcome }, set: { if !$0 { hasSeenWelcome = true } })) {
             WelcomeSheet { hasSeenWelcome = true }
+        }
+        .overlay(
+            // All-19-chapters-complete celebration (DM7/EM4). Fires once
+            // when the student finishes the 171st scene and hasn't seen
+            // this overlay before. Setting hasSeenAllChaptersCelebration
+            // in onDisappear ensures it's persisted only after the user
+            // explicitly dismisses (or the overlay closes itself).
+            Group {
+                if showAllChaptersCelebration {
+                    AllChaptersCompleteOverlay(
+                        isVisible: $showAllChaptersCelebration,
+                        totalScenes: DataStore.totalDiscoverScenes,
+                        totalBossQuizScore: bossQuizTotalScore,
+                        totalBossQuizMax: bossQuizTotalMax
+                    )
+                    .transition(.opacity)
+                }
+            }
+        )
+        .onChange(of: dataStore.discoverProgress.count) { _ in
+            if dataStore.allDiscoverChaptersComplete && !hasSeenAllChaptersCelebration {
+                showAllChaptersCelebration = true
+            }
+        }
+        .onChange(of: showAllChaptersCelebration) { newValue in
+            // Persist the dismissal flag once the overlay closes — both
+            // for explicit user dismiss AND for any programmatic close.
+            if newValue == false && dataStore.allDiscoverChaptersComplete {
+                hasSeenAllChaptersCelebration = true
+            }
         }
         .sheet(isPresented: $showShortcutsSheet) {
             KeyboardShortcutsSheet { showShortcutsSheet = false }
@@ -329,5 +376,125 @@ private struct WelcomeSheet: View {
                 .frame(width: 0, height: 0)
                 .accessibilityHidden(true)
         )
+    }
+}
+
+// MARK: - All-chapters-complete celebration overlay (DM7 / EM4)
+
+/// One-time celebration shown when the student finishes every Discover
+/// scene across all 19 science chapters (171 scenes total). Triggered
+/// in ContentView's onChange on `dataStore.discoverProgress.count`; the
+/// `hasSeenAllChaptersCelebration` @AppStorage flag prevents reappearance.
+///
+/// Lives inline in ContentView.swift (not its own file) for the same
+/// reason WelcomeSheet + KeyboardShortcutsSheet do — avoids the
+/// Xcode-project add-file ceremony for these small companion views.
+///
+/// Big Sur compatible: pure SwiftUI, no `.foregroundStyle`, no
+/// `.symbolEffect`, no macOS 12+ APIs.
+private struct AllChaptersCompleteOverlay: View {
+    @Binding var isVisible: Bool
+    let totalScenes: Int
+    let totalBossQuizScore: Int?
+    let totalBossQuizMax: Int?
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var celebrate = false
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.55)
+                .ignoresSafeArea()
+                .onTapGesture { dismiss() }
+
+            cardBody
+                .frame(maxWidth: 520)
+                .padding(36)
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(LinearGradient(
+                            colors: [Color.compatIndigo, Color.purple],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .strokeBorder(Color.white.opacity(0.25), lineWidth: 1)
+                )
+                .shadow(color: .black.opacity(0.4), radius: 20, x: 0, y: 8)
+
+            if celebrate {
+                ParticleEmitter(isActive: true, particleCount: 80, duration: 4.0)
+                    .allowsHitTesting(false)
+                    .ignoresSafeArea()
+            }
+        }
+        .onAppear {
+            if reduceMotion {
+                celebrate = true
+            } else {
+                withAnimation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.1)) {
+                    celebrate = true
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var cardBody: some View {
+        VStack(spacing: 18) {
+            Text("🎉")
+                .font(.system(size: 96))
+                .scaleEffect(celebrate ? 1.0 : 0.5)
+                .opacity(celebrate ? 1.0 : 0.0)
+
+            Text("You finished Discover Mode!")
+                .font(.title.bold())
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+
+            Text("All 19 chapters · \(totalScenes) scenes explored")
+                .font(.title3)
+                .foregroundColor(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+
+            if let score = totalBossQuizScore, let maxScore = totalBossQuizMax, maxScore > 0 {
+                Text("Boss Quiz total: \(score) / \(maxScore)")
+                    .font(.title3.monospacedDigit())
+                    .foregroundColor(.yellow)
+                    .padding(.top, 4)
+            }
+
+            Text("From plants and digestion to light and the Moon — you've explored every chapter of Class 7 Science. Class 8 has more waiting.")
+                .font(.callout)
+                .foregroundColor(.white.opacity(0.85))
+                .multilineTextAlignment(.center)
+                .lineSpacing(3)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
+
+            Button(action: dismiss) {
+                Text("Continue")
+                    .font(.body.weight(.semibold))
+                    .padding(.horizontal, 32)
+                    .padding(.vertical, 10)
+                    .background(Capsule().fill(Color.white))
+                    .foregroundColor(.black)
+            }
+            .buttonStyle(.plain)
+            .padding(.top, 12)
+            .accessibilityLabel("Dismiss celebration")
+        }
+    }
+
+    private func dismiss() {
+        if reduceMotion {
+            isVisible = false
+        } else {
+            withAnimation(.easeOut(duration: 0.25)) {
+                isVisible = false
+            }
+        }
     }
 }

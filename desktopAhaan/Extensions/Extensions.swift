@@ -66,6 +66,11 @@ enum AppStorageKeys {
     /// One-time first-launch welcome overlay dismissal flag.
     static let hasSeenWelcome = "hasSeenWelcome"
 
+    /// Set to true after the student dismisses the "all 19 Discover
+    /// chapters complete" celebration overlay (DM7/EM4). Prevents the
+    /// overlay from reappearing on every launch once seen.
+    static let hasSeenAllChaptersCelebration = "hasSeenAllChaptersCelebration"
+
     /// Per-chapter Discover Mode scene cursor (0-indexed). `chapterNumber`
     /// is the integer chapter number (1, 2, ..., 19 in the current pack).
     static func discoverScene(_ chapterNumber: Int) -> String {

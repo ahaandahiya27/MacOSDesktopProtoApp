@@ -310,6 +310,22 @@ final class DataStore: ObservableObject {
         return _discoverCountByChapterCache?[chapterId] ?? 0
     }
 
+    // MARK: - Discover-mode all-chapters completion
+
+    /// Total number of Discover scenes across the science pack: 19
+    /// chapters × 9 scenes (Scene 1–8 + Boss Quiz) = 171. Hard-coded
+    /// rather than derived because the chapter dispatchers all declare
+    /// 9-entry sceneTitles arrays and changing scene counts is a
+    /// structural decision, not a routine pack edit.
+    static let totalDiscoverScenes = 171
+
+    /// True once every Discover scene across all 19 science chapters
+    /// has been marked complete. Used by the "you finished Discover
+    /// Mode!" celebration overlay (DM7/EM4 in the visual sweep).
+    var allDiscoverChaptersComplete: Bool {
+        discoverProgress.count >= Self.totalDiscoverScenes
+    }
+
     // MARK: - Review status
 
     /// True when the parent has flipped this question out of the
