@@ -54,14 +54,18 @@ struct Scene8_NitrogenCycle: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("The Nitrogen Cycle")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
-            Text("Tap each arrow to see what happens. Finish all four to unlock the question.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // ScrollView + LazyVStack: natural bounded height keeps shell
+        // chrome reachable; quiz card slides in from the bottom without
+        // pushing other content off-screen.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("The Nitrogen Cycle")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+                Text("Tap each arrow to see what happens. Finish all four to unlock the question.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // The diagram
             ZStack {
@@ -142,21 +146,21 @@ struct Scene8_NitrogenCycle: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-            VStack(spacing: 4) {
-                GotItButton(action: onComplete)
-                    .disabled(!allTapped)
-                    .opacity(allTapped ? 1 : 0.55)
-                if !allTapped {
-                    Text("Tap all steps to continue")
-                        .font(.caption2)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                VStack(spacing: 4) {
+                    GotItButton(action: onComplete)
+                        .disabled(!allTapped)
+                        .opacity(allTapped ? 1 : 0.55)
+                    if !allTapped {
+                        Text("Tap all steps to continue")
+                            .font(.caption2)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
                 }
+                .padding(.bottom, 12)
             }
+            .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
-
-            Spacer(minLength: 0)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: - Helpers

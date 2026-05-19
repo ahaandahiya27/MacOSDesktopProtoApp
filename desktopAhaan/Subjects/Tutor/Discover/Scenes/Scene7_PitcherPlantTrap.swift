@@ -23,11 +23,14 @@ struct Scene7_PitcherPlantTrap: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("The Pitcher Plant Trap")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
+        // ScrollView + LazyVStack: natural bounded height; shell footer
+        // stays reachable on shorter windows.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("The Pitcher Plant Trap")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
             ZStack {
                 // The pitcher body
@@ -126,12 +129,12 @@ struct Scene7_PitcherPlantTrap: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-            GotItButton(action: onComplete)
-                .padding(.bottom, 12)
-
-            Spacer(minLength: 0)
+                GotItButton(action: onComplete)
+                    .padding(.bottom, 12)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear { startSequenceIfNeeded() }
     }
 

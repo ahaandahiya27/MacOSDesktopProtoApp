@@ -58,15 +58,22 @@ struct Scene5_AutotrophHeterotroph: View {
     private var allPlaced: Bool { correctCount == 12 }
 
     var body: some View {
-        VStack(spacing: 12) {
-            headerSection
-            instructionLine
-            floatingCardsGrid
-            dropZonesRow
-            feedbackLine
-            forwardCallouts
-            actionsRow
-            Spacer(minLength: 0)
+        // ScrollView lets the drag-and-drop board breathe at its natural
+        // height without stretching the shell's scene slot. The drag
+        // gestures on the cards still take priority over the ScrollView's
+        // scroll (DragGesture wins by minimumDistance + .gesture priority).
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                headerSection
+                instructionLine
+                floatingCardsGrid
+                dropZonesRow
+                feedbackLine
+                forwardCallouts
+                actionsRow
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
         .overlay(celebrationOverlay)
         .onAppear {

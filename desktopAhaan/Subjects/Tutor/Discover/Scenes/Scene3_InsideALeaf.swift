@@ -44,14 +44,19 @@ struct Scene3_InsideALeaf: View {
     }
 
     var body: some View {
-        VStack(spacing: 12) {
-            Text("Inside a Leaf")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
-            Text("Tap each part to learn what it does.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        // ScrollView + LazyVStack lets the scene's content have a natural
+        // bounded height. Previously a `VStack { …; Spacer }` filled the
+        // shell's scene slot, pushing the shell's footer (Previous / Next)
+        // off-canvas on shorter windows.
+        ScrollView {
+            LazyVStack(spacing: 12) {
+                Text("Inside a Leaf")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+                Text("Tap each part to learn what it does.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             // The cross-section
             ZStack {
@@ -122,14 +127,14 @@ struct Scene3_InsideALeaf: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-            GotItButton(action: onComplete)
-                .padding(.bottom, 12)
-                .disabled(selectedPart == nil)
-                .opacity(selectedPart == nil ? 0.55 : 1)
-
-            Spacer(minLength: 0)
+                GotItButton(action: onComplete)
+                    .padding(.bottom, 12)
+                    .disabled(selectedPart == nil)
+                    .opacity(selectedPart == nil ? 0.55 : 1)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     @ViewBuilder

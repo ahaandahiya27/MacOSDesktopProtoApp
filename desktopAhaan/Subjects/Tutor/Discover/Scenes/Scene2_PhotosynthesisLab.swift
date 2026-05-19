@@ -29,18 +29,18 @@ struct Scene2_PhotosynthesisLab: View {
     }
 
     var body: some View {
-        VStack(spacing: 18) {
-            // Top spacer balances the trailing Spacer below so the lab
-            // content (title → fuel buttons → equation → leaf → cook →
-            // callouts → CTAs) centers vertically inside the scene canvas
-            // instead of stacking at the top with a large empty band
-            // beneath it on the 5K iMac.
-            Spacer(minLength: 0)
-
-            Text("Photosynthesis Lab")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
+        // Wrapped in ScrollView + LazyVStack so the scene content has a
+        // natural bounded height. The previous `VStack { Spacer; …; Spacer }`
+        // pattern stretched the scene to fill all available height inside
+        // DiscoverShell, which on shorter windows pushed the shell's footer
+        // (Previous/Next buttons) off the bottom of the visible canvas and
+        // on taller windows left a giant empty band above / below content.
+        ScrollView {
+            LazyVStack(spacing: 18) {
+                Text("Photosynthesis Lab")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
             // Fuel buttons
             HStack(spacing: 16) {
@@ -149,11 +149,11 @@ struct Scene2_PhotosynthesisLab: View {
                     }
                 }
                 .padding(.bottom, 12)
-
-                Spacer(minLength: 0)
             }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private func cookSequence() {

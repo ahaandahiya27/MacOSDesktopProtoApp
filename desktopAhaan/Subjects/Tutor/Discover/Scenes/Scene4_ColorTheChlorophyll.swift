@@ -39,15 +39,18 @@ struct Scene4_ColorTheChlorophyll: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Why are leaves green?")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
-            Text("White light is a rainbow. Tap each colour and see what chlorophyll does with it.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center)
+        // ScrollView + LazyVStack: bounded natural height keeps shell
+        // header & footer reachable; no more empty-middle stretching.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Why are leaves green?")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+                Text("White light is a rainbow. Tap each colour and see what chlorophyll does with it.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .multilineTextAlignment(.center)
 
             // Spectrum bar
             HStack(spacing: 0) {
@@ -154,14 +157,14 @@ struct Scene4_ColorTheChlorophyll: View {
                 .padding(.horizontal, 24)
             }
 
-            GotItButton(action: onComplete)
-                .padding(.bottom, 12)
-                .disabled(selectedBand == nil)
-                .opacity(selectedBand == nil ? 0.55 : 1)
-
-            Spacer(minLength: 0)
+                GotItButton(action: onComplete)
+                    .padding(.bottom, 12)
+                    .disabled(selectedBand == nil)
+                    .opacity(selectedBand == nil ? 0.55 : 1)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private func tapBand(_ i: Int) {

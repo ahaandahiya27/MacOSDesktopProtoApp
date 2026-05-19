@@ -9,15 +9,18 @@ struct Scene6_MeetTheSpecialPlants: View {
     let onComplete: () -> Void
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Meet the Special Plants")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
-            Text("Some plants don't make their own food. Tap each card to flip and meet them.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center)
+        // Outer ScrollView so vertical content fits any window size. The
+        // inner horizontal ScrollView (flip cards) still scrolls sideways.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Meet the Special Plants")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+                Text("Some plants don't make their own food. Tap each card to flip and meet them.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .multilineTextAlignment(.center)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 18) {
@@ -88,12 +91,12 @@ struct Scene6_MeetTheSpecialPlants: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-            GotItButton(action: onComplete)
-                .padding(.bottom, 12)
-
-            Spacer(minLength: 0)
+                GotItButton(action: onComplete)
+                    .padding(.bottom, 12)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     /// Renders 3 bullet points for a concept. Tries kidFriendly first; if it's
