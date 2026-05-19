@@ -620,6 +620,116 @@ final class ChapterContentTests: XCTestCase {
         )
     }
 
+    // MARK: - SM-2 spaced repetition (Option B of the audit closure)
+    //
+    // These tests validate the pure-function scheduler in isolation
+    // from DataStore so a regression to the scheduling logic doesn't
+    // require a full integration test to catch.
+
+    func testSM2_FreshReviewWithGoodAnswerScheduleOneDayOut() {
+        let now = Date()
+        let r = QuestionReview.newReview(for: "q1", at: now)
+        let next = SM2Scheduler.schedule(r, quality: .good, at: now)
+        XCTAssertEqual(next.bucket, 1)
+        XCTAssertEqual(next.intervalDays, SM2Scheduler.firstIntervalAfterLearn)
+        XCTAssertEqual(next.totalReviews, 1)
+        XCTAssertEqual(next.lapses, 0)
+        XCTAssertEqual(
+            Calendar.current.dateComponents([.day], from: now, to: next.nextDueAt).day,
+            SM2Scheduler.firstIntervalAfterLearn
+        )
+    }
+
+    func testSM2_ForgotAnswerResetsBucketAndSchedulesMinutesOut() {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q1", at: now)
+        // Drive the bucket up to 3 first.
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)  // → bucket 1
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)  // → bucket 2
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)  // → bucket 3
+        XCTAssertEqual(r.bucket, 3)
+        // Now forget — bucket should drop to 0 and re-schedule in minutes.
+        let next = SM2Scheduler.schedule(r, quality: .forgot, at: now)
+        XCTAssertEqual(next.bucket, 0)
+        XCTAssertEqual(next.intervalDays, 0)
+        XCTAssertEqual(next.lapses, 1)
+        // Within the same hour (10 minutes out).
+        XCTAssertLessThan(next.nextDueAt.timeIntervalSince(now), 60 * 60)
+        XCTAssertGreaterThan(next.nextDueAt.timeIntervalSince(now), 60 * 5)
+    }
+
+    func testSM2_EasyAnswerExtendsIntervalAndBoostsEase() {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q1", at: now)
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)   // bucket 1, 1d
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)   // bucket 2, 3d
+        let beforeEase = r.ease
+        let next = SM2Scheduler.schedule(r, quality: .easy, at: now)
+        XCTAssertEqual(next.bucket, 3)
+        XCTAssertGreaterThan(next.intervalDays, r.intervalDays,
+                              "Easy should extend interval beyond the prior")
+        XCTAssertEqual(next.ease, beforeEase + SM2Scheduler.easeDeltaEasy, accuracy: 0.001,
+                       "Easy should boost ease by the configured delta")
+    }
+
+    func testSM2_HardAnswerExtendsLessThanGood() {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q1", at: now)
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)  // bucket 3
+        let priorInterval = r.intervalDays
+        let hardNext = SM2Scheduler.schedule(r, quality: .hard, at: now)
+        let goodNext = SM2Scheduler.schedule(r, quality: .good, at: now)
+        XCTAssertGreaterThan(hardNext.intervalDays, priorInterval,
+                              "Hard should still extend, not reset")
+        XCTAssertLessThan(hardNext.intervalDays, goodNext.intervalDays,
+                          "Hard should extend by less than Good")
+    }
+
+    func testSM2_EaseHasFloorAtMin() {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q1", at: now)
+        // Hammer it with forgots — ease shouldn't drop below the floor.
+        for _ in 0..<20 {
+            r = SM2Scheduler.schedule(r, quality: .forgot, at: now)
+        }
+        XCTAssertEqual(r.ease, SM2Scheduler.minEase, accuracy: 0.001,
+                       "Ease should be clamped at the min ease floor")
+    }
+
+    func testSM2_RoundTripCodableSurvivesEncoding() throws {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q42", at: now)
+        r = SM2Scheduler.schedule(r, quality: .good, at: now)
+        r = SM2Scheduler.schedule(r, quality: .easy, at: now)
+        r = SM2Scheduler.schedule(r, quality: .hard, at: now)
+
+        let data = try JSONEncoder().encode(r)
+        let round = try JSONDecoder().decode(QuestionReview.self, from: data)
+        XCTAssertEqual(round.questionId, r.questionId)
+        XCTAssertEqual(round.bucket, r.bucket)
+        XCTAssertEqual(round.intervalDays, r.intervalDays)
+        XCTAssertEqual(round.totalReviews, r.totalReviews)
+        XCTAssertEqual(round.ease, r.ease, accuracy: 0.0001)
+    }
+
+    @MainActor func testDataStore_DueCountReflectsScheduledItems() {
+        let store = DataStore()
+        // Wipe any leftover state from another test.
+        store.questionReviews.removeAll()
+        let now = Date()
+        // Schedule three answers all "good" today — they'll be due 1+ days out.
+        store.recordReview(questionId: "q1", quality: .good, at: now)
+        store.recordReview(questionId: "q2", quality: .good, at: now)
+        store.recordReview(questionId: "q3", quality: .good, at: now)
+        // No items due "now".
+        XCTAssertEqual(store.dueQuestionCount(at: now), 0)
+        // Two days from now, all three should be due.
+        let inTwoDays = Calendar.current.date(byAdding: .day, value: 2, to: now)!
+        XCTAssertEqual(store.dueQuestionCount(at: inTwoDays), 3)
+    }
+
     @MainActor func testEveryScienceChapterHasAtLeastThreeL4AndThreeL5() {
         guard let url = Bundle.main.url(forResource: "science_class7",
                                          withExtension: "json"),

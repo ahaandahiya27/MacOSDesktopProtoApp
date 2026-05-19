@@ -392,14 +392,16 @@ struct DailyPracticeView: View {
     @EnvironmentObject private var subjectRegistry: SubjectRegistry
     @EnvironmentObject private var appState: AppState
 
-    private var toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
-        let toughIds = dataStore.toughQuestionIds
-        guard !toughIds.isEmpty else { return [] }
+    /// Flat lookup over the loaded packs. Built once per render so the
+    /// review-session sheet + the tough list both share the same source.
+    private func collectQuestions(matching ids: Set<String>)
+        -> [(pack: SubjectPack, chapter: Chapter, question: Question)] {
+        guard !ids.isEmpty else { return [] }
         var out: [(SubjectPack, Chapter, Question)] = []
         for pack in subjectRegistry.packs {
             for chapter in pack.chapters {
                 for topic in chapter.topics {
-                    for q in topic.questions where toughIds.contains(q.id) {
+                    for q in topic.questions where ids.contains(q.id) {
                         out.append((pack, chapter, q))
                     }
                 }
@@ -408,27 +410,45 @@ struct DailyPracticeView: View {
         return out
     }
 
+    private var toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
+        collectQuestions(matching: dataStore.toughQuestionIds)
+    }
+
+    private var dueEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
+        let dueIds = Set(dataStore.dueQuestionIds())
+        return collectQuestions(matching: dueIds)
+    }
+
     var body: some View {
         TutorNavigationContainer {
-            DailyPracticeContent(entries: toughEntries)
+            DailyPracticeContent(toughEntries: toughEntries, dueEntries: dueEntries)
         }
     }
 }
 
 private struct DailyPracticeContent: View {
-    let entries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
+    let toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
+    let dueEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
 
     @EnvironmentObject private var nav: TutorNavigationState
     @EnvironmentObject private var dataStore: DataStore
+
+    @State private var reviewSessionVisible = false
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 header
-                if entries.isEmpty {
+                if !dueEntries.isEmpty {
+                    reviewQueueCard
+                }
+                if toughEntries.isEmpty && dueEntries.isEmpty {
                     emptyState
-                } else {
-                    ForEach(entries, id: \.question.id) { entry in
+                } else if !toughEntries.isEmpty {
+                    Text("Flagged tough")
+                        .font(.headline)
+                        .padding(.top, 8)
+                    ForEach(toughEntries, id: \.question.id) { entry in
                         row(for: entry)
                     }
                 }
@@ -439,6 +459,12 @@ private struct DailyPracticeContent: View {
         }
         .background(Color.white)
         .navigationTitle("Daily Practice")
+        .sheet(isPresented: $reviewSessionVisible) {
+            ReviewSessionSheet(
+                queue: dueEntries,
+                isPresented: $reviewSessionVisible
+            )
+        }
     }
 
     private var header: some View {
@@ -450,7 +476,7 @@ private struct DailyPracticeContent: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Daily Practice")
                         .font(.largeTitle.bold())
-                    Text("\(entries.count) question\(entries.count == 1 ? "" : "s") flagged for review")
+                    Text(headerSubtitle)
                         .font(.subheadline.monospacedDigit())
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
@@ -463,11 +489,53 @@ private struct DailyPracticeContent: View {
         )
     }
 
+    private var headerSubtitle: String {
+        let due = dueEntries.count
+        let tough = toughEntries.count
+        if due == 0 && tough == 0 {
+            return "Nothing due today — answer questions to start your review stream."
+        }
+        let duePart = due == 0 ? "" : "\(due) due for review"
+        let toughPart = tough == 0 ? "" : "\(tough) flagged tough"
+        let separator = (due > 0 && tough > 0) ? " · " : ""
+        return duePart + separator + toughPart
+    }
+
+    private var reviewQueueCard: some View {
+        HStack(spacing: 14) {
+            Image(systemName: "rectangle.stack.fill")
+                .font(.title2)
+                .foregroundColor(.compatIndigo)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("\(dueEntries.count) question\(dueEntries.count == 1 ? "" : "s") due now")
+                    .font(.title3.weight(.semibold))
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                Text("Quick review — answer, see how you did, the scheduler does the rest.")
+                    .font(.caption)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+            }
+            Spacer(minLength: 8)
+            Button("Start Review") {
+                reviewSessionVisible = true
+            }
+            .keyboardShortcut(.defaultAction)
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.compatIndigo.opacity(0.10))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1)
+        )
+    }
+
     private var emptyState: some View {
         EmptyStateView(
             icon: "flame",
-            title: "No questions flagged yet",
-            subtitle: "When a question is hard, hit the 'Tough — review later' button in the question view. They'll show up here so you can review them in one place."
+            title: "Nothing to practice yet",
+            subtitle: "Answer some questions to start your spaced-review queue. Hit the 'Tough — review later' button on any question to flag it for repeat practice."
         )
     }
 
@@ -525,6 +593,157 @@ private struct DailyPracticeContent: View {
         .buttonStyle(.plain)
         .pointingCursor()
         .accessibilityLabel("Review tough question: \(entry.question.prompt)")
+    }
+}
+
+// MARK: - Review session sheet (Option B / SM-2 walk-through)
+//
+// Walks the kid through the due-now queue one question at a time.
+// Each card has two phases: prompt-only ("Show answer" button), then
+// prompt + answer ("Forgot / Hard / Good / Easy"). Buttons call
+// dataStore.recordReview, which updates the scheduler and persists.
+//
+// The sheet doesn't reach into the larger TutorNavigation stack — it's
+// self-contained so the kid can leave the review without disturbing
+// the previously-pushed screen behind it.
+//
+// Big Sur compatible: pure SwiftUI, no macOS 12+ APIs.
+private struct ReviewSessionSheet: View {
+    let queue: [(pack: SubjectPack, chapter: Chapter, question: Question)]
+    @Binding var isPresented: Bool
+
+    @EnvironmentObject private var dataStore: DataStore
+
+    @State private var cursor: Int = 0
+    @State private var answerRevealed: Bool = false
+
+    var body: some View {
+        VStack(spacing: 0) {
+            sessionHeader
+            Divider()
+            if cursor < queue.count {
+                card(for: queue[cursor])
+            } else {
+                completionState
+            }
+        }
+        .frame(minWidth: 560, minHeight: 460, idealHeight: 540)
+        .background(Color(NSColor.windowBackgroundColor))
+    }
+
+    private var sessionHeader: some View {
+        HStack(alignment: .firstTextBaseline) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Review session")
+                    .font(.headline)
+                Text(progressSubtitle)
+                    .font(.caption.monospacedDigit())
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            Button("Close") { isPresented = false }
+                .keyboardShortcut(.cancelAction)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 14)
+    }
+
+    private var progressSubtitle: String {
+        guard !queue.isEmpty else { return "" }
+        let position = min(cursor + 1, queue.count)
+        return "\(position) of \(queue.count)"
+    }
+
+    @ViewBuilder
+    private func card(for entry: (pack: SubjectPack, chapter: Chapter, question: Question)) -> some View {
+        VStack(alignment: .leading, spacing: 18) {
+            Text("\(entry.pack.coverEmoji) Ch.\(entry.chapter.number) — \(entry.chapter.title)")
+                .font(.caption)
+                .foregroundColor(.secondary)
+
+            Text(entry.question.prompt)
+                .font(.title3)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            if answerRevealed {
+                Divider()
+                Text("Answer")
+                    .font(.caption.bold())
+                    .foregroundColor(.secondary)
+                Text(entry.question.answer)
+                    .font(.body)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer(minLength: 8)
+                qualityButtons(for: entry)
+            } else {
+                Spacer(minLength: 8)
+                Button("Show answer") { answerRevealed = true }
+                    .keyboardShortcut(.space, modifiers: [])
+                    .controlSize(.large)
+                    .frame(maxWidth: .infinity)
+            }
+        }
+        .padding(24)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+
+    private func qualityButtons(
+        for entry: (pack: SubjectPack, chapter: Chapter, question: Question)
+    ) -> some View {
+        HStack(spacing: 10) {
+            qualityButton(label: "Forgot", color: .red, quality: .forgot, q: entry.question.id)
+            qualityButton(label: "Hard", color: .orange, quality: .hard, q: entry.question.id)
+            qualityButton(label: "Good", color: .compatIndigo, quality: .good, q: entry.question.id)
+            qualityButton(label: "Easy", color: .green, quality: .easy, q: entry.question.id)
+        }
+    }
+
+    private func qualityButton(label: String, color: Color,
+                                quality: ReviewQuality, q: String) -> some View {
+        Button {
+            dataStore.recordReview(questionId: q, quality: quality)
+            advance()
+        } label: {
+            Text(label)
+                .font(.body.weight(.semibold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(color.opacity(0.15))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(color.opacity(0.45), lineWidth: 1)
+                )
+                .foregroundColor(color)
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Mark answer as \(label)")
+    }
+
+    private func advance() {
+        answerRevealed = false
+        cursor += 1
+    }
+
+    private var completionState: some View {
+        VStack(spacing: 14) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 56))
+                .foregroundColor(.green)
+            Text("Review complete")
+                .font(.title2.bold())
+            Text("Great work. Come back tomorrow for the next batch.")
+                .foregroundColor(.secondary)
+            Button("Close") { isPresented = false }
+                .keyboardShortcut(.defaultAction)
+                .padding(.top, 8)
+        }
+        .padding(40)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

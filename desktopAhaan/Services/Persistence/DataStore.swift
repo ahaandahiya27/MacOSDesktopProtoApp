@@ -2,6 +2,136 @@ import Foundation
 import Combine
 import os.log
 
+// MARK: - SM-2 spaced repetition (Option B of the 2026-05-19 audit sweep)
+//
+// A lightweight SM-2 / Leitner-hybrid scheduler. Each question the kid
+// answers in Daily Practice gets a `QuestionReview` row; the scheduler
+// updates the row in place and DataStore persists the whole map to
+// `reviews.json`. No external dependencies; the algorithm is small
+// enough to live next to the storage it drives.
+//
+// Big Sur compatible: pure value types, no Combine, no macOS 12+ APIs.
+
+/// Per-question spaced-repetition state. Keyed by `questionId` inside
+/// DataStore's `questionReviews` dictionary.
+struct QuestionReview: Codable, Hashable {
+    let questionId: String
+    /// 0 = brand new (never answered) up to 5 = mastered. Resets to 0
+    /// on a `.forgot` answer so a forgotten question re-enters the
+    /// near-term review queue.
+    var bucket: Int
+    /// SM-2 ease factor. Starts at 2.5 per the canonical SM-2 paper.
+    /// Floor is 1.3 so a chronically-missed question still shows up.
+    var ease: Double
+    /// Days until the next review. 0 = today (re-shows in the same
+    /// session for `.forgot` answers; clamped to ≥1 for non-forgot).
+    var intervalDays: Int
+    var lastReviewedAt: Date
+    var nextDueAt: Date
+    var totalReviews: Int
+    /// Number of times this question has been answered `.forgot`.
+    /// Surfaces as a "you keep missing this one" hint in future UI.
+    var lapses: Int
+
+    static func newReview(for questionId: String, at date: Date) -> QuestionReview {
+        QuestionReview(
+            questionId: questionId,
+            bucket: 0, ease: 2.5, intervalDays: 0,
+            lastReviewedAt: date, nextDueAt: date,
+            totalReviews: 0, lapses: 0
+        )
+    }
+}
+
+/// What the kid says about how that review went. Maps to four buttons
+/// in the review UI ("Forgot / Hard / Good / Easy"). Reading order is
+/// "worse → better" so the rawValue can be used as a quality grade.
+enum ReviewQuality: Int, Codable, Hashable {
+    case forgot = 0
+    case hard = 1
+    case good = 2
+    case easy = 3
+}
+
+/// Pure-function scheduler. Given the previous review state + the kid's
+/// quality answer + the current time, returns the updated review row.
+/// Decoupled from DataStore so it's unit-testable without any FS I/O.
+enum SM2Scheduler {
+    /// Tunables. Kept here (not magic numbers in the switch) so a
+    /// future tweak ("first repeat should be 1 day, not 1 day after
+    /// 3") is a one-line change with the unit test catching regression.
+    static let minEase: Double = 1.3
+    static let easeDeltaForgot: Double = -0.20
+    static let easeDeltaHard: Double = -0.15
+    static let easeDeltaEasy: Double = 0.10
+    static let forgotRedoMinutes: Int = 10
+    static let firstIntervalAfterLearn: Int = 1
+    static let secondIntervalAfterLearn: Int = 3
+    static let easyBoostMultiplier: Double = 1.3
+
+    static func schedule(_ review: QuestionReview,
+                          quality: ReviewQuality,
+                          at now: Date,
+                          calendar: Calendar = .current) -> QuestionReview {
+        var r = review
+        r.lastReviewedAt = now
+        r.totalReviews += 1
+
+        switch quality {
+        case .forgot:
+            r.lapses += 1
+            r.bucket = 0
+            r.intervalDays = 0
+            r.ease = max(minEase, r.ease + easeDeltaForgot)
+            r.nextDueAt = calendar.date(
+                byAdding: .minute, value: forgotRedoMinutes, to: now
+            ) ?? now
+
+        case .hard:
+            r.bucket = max(1, r.bucket)
+            let prior = max(1, r.intervalDays)
+            let next = max(1, Int((Double(prior) * 1.2).rounded()))
+            r.intervalDays = next
+            r.ease = max(minEase, r.ease + easeDeltaHard)
+            r.nextDueAt = calendar.date(
+                byAdding: .day, value: next, to: now
+            ) ?? now
+
+        case .good:
+            r.bucket = min(5, r.bucket + 1)
+            let next: Int
+            if r.bucket == 1 {
+                next = firstIntervalAfterLearn
+            } else if r.bucket == 2 {
+                next = secondIntervalAfterLearn
+            } else {
+                next = max(1, Int((Double(r.intervalDays) * r.ease).rounded()))
+            }
+            r.intervalDays = next
+            r.nextDueAt = calendar.date(
+                byAdding: .day, value: next, to: now
+            ) ?? now
+
+        case .easy:
+            r.bucket = min(5, r.bucket + 1)
+            let next: Int
+            if r.bucket <= 1 {
+                next = max(firstIntervalAfterLearn,
+                           Int((Double(firstIntervalAfterLearn) * easyBoostMultiplier).rounded()))
+            } else {
+                next = max(1, Int((Double(r.intervalDays) * r.ease * easyBoostMultiplier).rounded()))
+            }
+            r.intervalDays = next
+            r.ease += easeDeltaEasy
+            r.nextDueAt = calendar.date(
+                byAdding: .day, value: next, to: now
+            ) ?? now
+        }
+
+        return r
+    }
+}
+
 @MainActor
 final class DataStore: ObservableObject {
 
@@ -47,6 +177,12 @@ final class DataStore: ObservableObject {
     /// from `needsHumanReview` (which is content-author-driven).
     /// Added 2026-05-19 (Option B of the audit sweep).
     @Published var toughQuestionIds: Set<String> = []
+
+    /// SM-2 spaced-repetition state, keyed by `questionId`. Added
+    /// 2026-05-19 (Option B of the final audit closure). Persisted to
+    /// `reviews.json`; algorithm lives in `SM2Scheduler` at the top of
+    /// this file.
+    @Published var questionReviews: [String: QuestionReview] = [:]
 
     @Published var lastSaveError: String?
 
@@ -325,13 +461,59 @@ final class DataStore: ObservableObject {
     }
 
     /// Toggle a question's tough flag. Persists immediately.
+    ///
+    /// As a side effect, flagging a question tough also seeds an SM-2
+    /// review row scheduled for "now" if none exists. Without that seed,
+    /// the Daily Practice review queue would stay empty until the kid
+    /// happened to answer a question inside the review sheet — which
+    /// is a chicken-and-egg problem (you can't start a session with
+    /// zero items). Tough-flagging is the kid's signal of "I want to
+    /// see this again", so we honour that immediately.
     func toggleToughQuestion(_ questionId: String) {
         if toughQuestionIds.contains(questionId) {
             toughQuestionIds.remove(questionId)
         } else {
             toughQuestionIds.insert(questionId)
+            if questionReviews[questionId] == nil {
+                let now = Date()
+                questionReviews[questionId] = QuestionReview.newReview(
+                    for: questionId, at: now)
+                save(Array(questionReviews.values), to: "reviews.json")
+            }
         }
         save(Array(toughQuestionIds), to: "toughQuestionIds.json")
+    }
+
+    // MARK: - Spaced-repetition reviews (Option B)
+
+    /// Record the kid's answer to a question, updating its scheduler
+    /// state (or creating it on first contact). Persists immediately.
+    func recordReview(questionId: String,
+                      quality: ReviewQuality,
+                      at now: Date = Date()) {
+        let prior = questionReviews[questionId]
+            ?? QuestionReview.newReview(for: questionId, at: now)
+        let updated = SM2Scheduler.schedule(prior, quality: quality, at: now)
+        questionReviews[questionId] = updated
+        save(Array(questionReviews.values), to: "reviews.json")
+    }
+
+    /// Questions that are due for review at or before `now`. Returns the
+    /// most-overdue questions first so the kid sees the items that have
+    /// been waiting longest. Items with no review row yet are NOT
+    /// included — they only enter the system once the kid answers them
+    /// once. This means Daily Practice grows as the kid uses the app
+    /// rather than dumping all 732 questions on day one.
+    func dueQuestionIds(at now: Date = Date()) -> [String] {
+        questionReviews.values
+            .filter { $0.nextDueAt <= now }
+            .sorted { $0.nextDueAt < $1.nextDueAt }
+            .map { $0.questionId }
+    }
+
+    /// Count of questions due now — cheap accessor for the sidebar/header.
+    func dueQuestionCount(at now: Date = Date()) -> Int {
+        questionReviews.values.filter { $0.nextDueAt <= now }.count
     }
 
     // MARK: - Discover-mode all-chapters completion
@@ -421,5 +603,18 @@ final class DataStore: ObservableObject {
         reviewedQuestionIds = Set(reviewedArray)
         let toughArray: [String] = load(from: "toughQuestionIds.json")
         toughQuestionIds = Set(toughArray)
+        let reviewsArray: [QuestionReview] = load(from: "reviews.json")
+        // Crash-safe merge: if a corrupt reviews.json ever has two rows
+        // for the same questionId, keep the newer one rather than calling
+        // `Dictionary(uniqueKeysWithValues:)` which would crash on the
+        // duplicate. CrashReporter.logDataIssue records the collision.
+        questionReviews = Dictionary(
+            reviewsArray.map { ($0.questionId, $0) },
+            uniquingKeysWith: { a, b in
+                CrashReporter.shared.logDataIssue(
+                    "reviews.json contained duplicate questionId=\(a.questionId); kept newer row.")
+                return a.lastReviewedAt >= b.lastReviewedAt ? a : b
+            }
+        )
     }
 }
