@@ -104,6 +104,7 @@ struct QuestionDetailView: View {
         .background(keyboardShortcutSink)
         .toolbar {
             bookmarkToolbarItem
+            toughToolbarItem
             reviewToolbarItem
         }
     }
@@ -134,6 +135,27 @@ struct QuestionDetailView: View {
             .help(isQuestionBookmarked
                   ? "Remove bookmark"
                   : "Bookmark this question to revisit it later")
+        }
+    }
+
+    /// Toolbar button: flag this question for Daily Practice (the
+    /// "review later" sidebar tool). Distinct from the parent-driven
+    /// review flag: this is the student saying "this was tough; show
+    /// me again". Persists in DataStore.toughQuestionIds.
+    @ToolbarContentBuilder
+    private var toughToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .automatic) {
+            Button {
+                dataStore.toggleToughQuestion(question.id)
+            } label: {
+                Label(
+                    dataStore.isToughQuestion(question.id) ? "Flagged tough" : "Tough",
+                    systemImage: dataStore.isToughQuestion(question.id) ? "flame.fill" : "flame"
+                )
+            }
+            .help(dataStore.isToughQuestion(question.id)
+                  ? "Remove from Daily Practice"
+                  : "Mark this question as tough — review later in Daily Practice")
         }
     }
 

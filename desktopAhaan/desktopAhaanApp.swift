@@ -147,6 +147,11 @@ struct SanskritKoshApp: App {
                 }
                 .keyboardShortcut("b", modifiers: .command)
 
+                Button("Show Daily Practice") {
+                    appState.sidebarSelection = .tool(.dailyPractice)
+                }
+                .keyboardShortcut("p", modifiers: [.command, .shift])
+
                 Button("Show Discover Progress") {
                     appState.sidebarSelection = .tool(.discover)
                 }

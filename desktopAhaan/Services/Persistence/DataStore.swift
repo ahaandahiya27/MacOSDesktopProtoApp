@@ -41,6 +41,13 @@ final class DataStore: ObservableObject {
     /// `Question.needsHumanReview` for auto-generated content (e.g. the 154
     /// Sanskrit MCQs) without having to edit the pack JSON.
     @Published var reviewedQuestionIds: Set<String> = []
+
+    /// Question IDs the student has flagged as "tough — review later".
+    /// Surfaces in the Daily Practice sidebar tool. User-driven, distinct
+    /// from `needsHumanReview` (which is content-author-driven).
+    /// Added 2026-05-19 (Option B of the audit sweep).
+    @Published var toughQuestionIds: Set<String> = []
+
     @Published var lastSaveError: String?
 
     private let storeDir: URL
@@ -310,6 +317,23 @@ final class DataStore: ObservableObject {
         return _discoverCountByChapterCache?[chapterId] ?? 0
     }
 
+    // MARK: - Tough-question flagging (Daily Practice)
+
+    /// True if this question has been flagged "review later" by the student.
+    func isToughQuestion(_ questionId: String) -> Bool {
+        toughQuestionIds.contains(questionId)
+    }
+
+    /// Toggle a question's tough flag. Persists immediately.
+    func toggleToughQuestion(_ questionId: String) {
+        if toughQuestionIds.contains(questionId) {
+            toughQuestionIds.remove(questionId)
+        } else {
+            toughQuestionIds.insert(questionId)
+        }
+        save(Array(toughQuestionIds), to: "toughQuestionIds.json")
+    }
+
     // MARK: - Discover-mode all-chapters completion
 
     /// Total number of Discover scenes across the science pack: 19
@@ -395,5 +419,7 @@ final class DataStore: ObservableObject {
         discoverProgress = load(from: "discover.json")
         let reviewedArray: [String] = load(from: "reviewedQuestionIds.json")
         reviewedQuestionIds = Set(reviewedArray)
+        let toughArray: [String] = load(from: "toughQuestionIds.json")
+        toughQuestionIds = Set(toughArray)
     }
 }

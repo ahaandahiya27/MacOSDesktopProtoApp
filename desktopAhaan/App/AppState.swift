@@ -222,6 +222,7 @@ enum SidebarSelection: Hashable {
 enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     case search
     case bookmarks
+    case dailyPractice
     case discover
     case settings
 
@@ -229,19 +230,21 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .search:    return "Search"
-        case .bookmarks: return "Bookmarks"
-        case .discover:  return "Discover Progress"
-        case .settings:  return "Settings"
+        case .search:        return "Search"
+        case .bookmarks:     return "Bookmarks"
+        case .dailyPractice: return "Daily Practice"
+        case .discover:      return "Discover Progress"
+        case .settings:      return "Settings"
         }
     }
 
     var systemImage: String {
         switch self {
-        case .search:    return "magnifyingglass"
-        case .bookmarks: return "bookmark.fill"
-        case .discover:  return "sparkles"
-        case .settings:  return "gearshape.fill"
+        case .search:        return "magnifyingglass"
+        case .bookmarks:     return "bookmark.fill"
+        case .dailyPractice: return "flame.fill"
+        case .discover:      return "sparkles"
+        case .settings:      return "gearshape.fill"
         }
     }
 
@@ -252,10 +255,11 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     /// just the visible affordance; the actual binding lives in the menu.
     var keyboardShortcut: String? {
         switch self {
-        case .search:    return "\u{2318}F"          // ⌘F
-        case .bookmarks: return "\u{2318}B"          // ⌘B
-        case .discover:  return "\u{2318}\u{21E7}D"  // ⌘⇧D
-        case .settings:  return "\u{2318}\u{21E7},"  // ⌘⇧,
+        case .search:        return "\u{2318}F"          // ⌘F
+        case .bookmarks:     return "\u{2318}B"          // ⌘B
+        case .dailyPractice: return "\u{2318}\u{21E7}P"  // ⌘⇧P
+        case .discover:      return "\u{2318}\u{21E7}D"  // ⌘⇧D
+        case .settings:      return "\u{2318}\u{21E7},"  // ⌘⇧,
         }
     }
 }

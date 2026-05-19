@@ -328,6 +328,8 @@ struct ContentView: View {
             SearchView()
         case .tool(.bookmarks):
             BookmarksView()
+        case .tool(.dailyPractice):
+            DailyPracticeView()
         case .tool(.discover):
             DiscoverProgressDashboard()
         case .tool(.settings):
@@ -376,6 +378,153 @@ private struct WelcomeSheet: View {
                 .frame(width: 0, height: 0)
                 .accessibilityHidden(true)
         )
+    }
+}
+
+// MARK: - Daily Practice (Option B of the 2026-05-19 audit sweep)
+
+/// Sidebar tool that surfaces every question the student has flagged
+/// "tough — review later" via the per-question Tough button in
+/// QuestionDetailView. Persistence lives in DataStore.toughQuestionIds;
+/// tapping a row jumps to that question.
+struct DailyPracticeView: View {
+    @EnvironmentObject private var dataStore: DataStore
+    @EnvironmentObject private var subjectRegistry: SubjectRegistry
+    @EnvironmentObject private var appState: AppState
+
+    private var toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
+        let toughIds = dataStore.toughQuestionIds
+        guard !toughIds.isEmpty else { return [] }
+        var out: [(SubjectPack, Chapter, Question)] = []
+        for pack in subjectRegistry.packs {
+            for chapter in pack.chapters {
+                for topic in chapter.topics {
+                    for q in topic.questions where toughIds.contains(q.id) {
+                        out.append((pack, chapter, q))
+                    }
+                }
+            }
+        }
+        return out
+    }
+
+    var body: some View {
+        TutorNavigationContainer {
+            DailyPracticeContent(entries: toughEntries)
+        }
+    }
+}
+
+private struct DailyPracticeContent: View {
+    let entries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
+
+    @EnvironmentObject private var nav: TutorNavigationState
+    @EnvironmentObject private var dataStore: DataStore
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                header
+                if entries.isEmpty {
+                    emptyState
+                } else {
+                    ForEach(entries, id: \.question.id) { entry in
+                        row(for: entry)
+                    }
+                }
+            }
+            .padding(20)
+            .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .background(Color.white)
+        .navigationTitle("Daily Practice")
+    }
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: 10) {
+                Image(systemName: "flame.fill")
+                    .foregroundColor(.orange)
+                    .font(.title)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Daily Practice")
+                        .font(.largeTitle.bold())
+                    Text("\(entries.count) question\(entries.count == 1 ? "" : "s") flagged for review")
+                        .font(.subheadline.monospacedDigit())
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                }
+            }
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.orange.opacity(0.08))
+        )
+    }
+
+    private var emptyState: some View {
+        EmptyStateView(
+            icon: "flame",
+            title: "No questions flagged yet",
+            subtitle: "When a question is hard, hit the 'Tough — review later' button in the question view. They'll show up here so you can review them in one place."
+        )
+    }
+
+    @ViewBuilder
+    private func row(for entry: (pack: SubjectPack, chapter: Chapter, question: Question)) -> some View {
+        Button {
+            nav.questionSiblings = [
+                QuestionRef(packId: entry.pack.id, questionId: entry.question.id)
+            ]
+            nav.push(.question(packId: entry.pack.id, questionId: entry.question.id))
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: "flame.fill")
+                    .font(.title3)
+                    .foregroundColor(.orange)
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(entry.question.prompt)
+                        .font(.body)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    HStack(spacing: 6) {
+                        Text("\(entry.pack.coverEmoji) Ch.\(entry.chapter.number) — \(entry.chapter.title)")
+                            .font(.caption2)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                            .lineLimit(1)
+                    }
+                }
+                Spacer(minLength: 8)
+                Button {
+                    dataStore.toggleToughQuestion(entry.question.id)
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.secondary)
+                }
+                .buttonStyle(.plain)
+                .help("Remove from Daily Practice")
+                .accessibilityLabel("Remove \(entry.question.id) from daily practice list")
+                Image(systemName: "chevron.right")
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .accessibilityHidden(true)
+            }
+            .padding(14)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color(NSColor.controlBackgroundColor))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Review tough question: \(entry.question.prompt)")
     }
 }
 
