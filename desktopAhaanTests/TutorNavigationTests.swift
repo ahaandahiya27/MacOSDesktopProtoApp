@@ -93,4 +93,30 @@ struct TutorNavigationTests {
         #expect(nav.questionSiblings.count == 3)
         #expect(nav.questionSiblings[1].questionId == "q2")
     }
+
+    @Test func pushIsIdempotentForSameRouteOnTop() {
+        // Regression: on the Late-2014 iMac, a fast double-click on a Quiz
+        // Bank row appended the same route twice during a single SwiftUI
+        // transition, corrupting the Attribute Graph and crashing in
+        // AG::Graph::remove_removed_output. The push() guard now drops a
+        // duplicate when the same route is already on top. This contract
+        // protects every caller (BookmarksView, ChapterListView, etc.).
+        let nav = TutorNavigationState()
+        nav.push(.question(packId: "p", questionId: "q1"))
+        nav.push(.question(packId: "p", questionId: "q1"))
+        #expect(nav.path.count == 1)
+        #expect(nav.currentRoute == .question(packId: "p", questionId: "q1"))
+    }
+
+    @Test func pushDistinguishesRoutesEvenAcrossSameCase() {
+        // Idempotency must NOT collapse a sibling-swap that happens to use
+        // the same case (e.g., .question → .question with a different id).
+        // Such a sequence is legitimate (Prev/Next walks siblings) and the
+        // path should grow normally.
+        let nav = TutorNavigationState()
+        nav.push(.question(packId: "p", questionId: "q1"))
+        nav.push(.question(packId: "p", questionId: "q2"))
+        #expect(nav.path.count == 2)
+        #expect(nav.currentRoute == .question(packId: "p", questionId: "q2"))
+    }
 }
