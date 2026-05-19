@@ -532,7 +532,7 @@ final class ChapterContentTests: XCTestCase {
     /// removing the commonMistakes (e.g., a copy-paste that drops the field).
     /// Add a chapter number to ZERO_MISSING_CMS once it's been backfilled.
     @MainActor func testCommonMistakesRatchet() {
-        let ZERO_MISSING_CMS: Set<Int> = [1, 2, 5, 11, 13, 14, 15, 19]
+        let ZERO_MISSING_CMS: Set<Int> = [1, 2, 3, 5, 11, 13, 14, 15, 19]
         guard let url = Bundle.main.url(forResource: "science_class7",
                                          withExtension: "json"),
               let data = try? Data(contentsOf: url),
