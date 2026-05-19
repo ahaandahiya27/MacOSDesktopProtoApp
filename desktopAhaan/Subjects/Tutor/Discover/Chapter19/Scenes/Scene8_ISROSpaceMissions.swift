@@ -145,7 +145,7 @@ struct Scene8_ISROSpaceMissions: View {
                                 }
                             } label: {
                                 VStack(spacing: 6) {
-                                    Image(systemName: mission.symbol)
+                                    Image(systemName: SFSymbolCompat.name(mission.symbol))
                                         .font(.title2)
                                         .foregroundColor(isSelected ? .white : mission.color)
                                     Text(mission.name)
@@ -187,7 +187,7 @@ struct Scene8_ISROSpaceMissions: View {
                             if let idx = selectedMission,
                                let mission = missions.first(where: { $0.id == idx }) {
                                 HStack(spacing: 8) {
-                                    Image(systemName: mission.symbol)
+                                    Image(systemName: SFSymbolCompat.name(mission.symbol))
                                         .font(.title2)
                                         .foregroundColor(mission.color)
                                     VStack(alignment: .leading, spacing: 2) {

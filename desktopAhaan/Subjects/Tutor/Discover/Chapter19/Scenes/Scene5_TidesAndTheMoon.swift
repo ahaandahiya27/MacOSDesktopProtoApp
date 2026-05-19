@@ -65,7 +65,7 @@ struct Scene5_TidesAndTheMoon: View {
                                 }
                             } label: {
                                 HStack(spacing: 6) {
-                                    Image(systemName: card.icon)
+                                    Image(systemName: SFSymbolCompat.name(card.icon))
                                         .foregroundColor(card.color)
                                     Text(card.title)
                                         .font(.caption.weight(.semibold))
@@ -99,7 +99,7 @@ struct Scene5_TidesAndTheMoon: View {
                     SoftShadowCard(padding: 18) {
                         VStack(alignment: .leading, spacing: 8) {
                             if let id = selectedCard, let card = cards.first(where: { $0.id == id }) {
-                                Label(card.title, systemImage: card.icon)
+                                Label(card.title, systemImage: SFSymbolCompat.name(card.icon))
                                     .font(.title2.bold())
                                     .foregroundColor(card.color)
                                 Text(card.explanation)

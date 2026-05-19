@@ -136,7 +136,7 @@ struct Scene7_ConstellationConnect: View {
                                 }
                             } label: {
                                 VStack(spacing: 6) {
-                                    Image(systemName: constellation.symbol)
+                                    Image(systemName: SFSymbolCompat.name(constellation.symbol))
                                         .font(.title2)
                                         .foregroundColor(isSelected ? .white : constellation.color)
                                     Text(constellation.name)
@@ -178,7 +178,7 @@ struct Scene7_ConstellationConnect: View {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedConstellation,
                                let constellation = constellations.first(where: { $0.id == idx }) {
-                                Label("\(constellation.name) (\(constellation.indianName))", systemImage: constellation.symbol)
+                                Label("\(constellation.name) (\(constellation.indianName))", systemImage: SFSymbolCompat.name(constellation.symbol))
                                     .font(.title2.bold())
                                     .foregroundColor(constellation.color)
 
