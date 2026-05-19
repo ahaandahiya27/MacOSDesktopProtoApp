@@ -179,9 +179,26 @@ private struct DiscoverProgressContent: View {
                     Text("Ch. \(chapter.number) \u{2014} \(chapter.title)")
                         .font(.headline)
                         .multilineTextAlignment(.leading)
-                    Text(isComplete ? "All scenes completed" : "\(total - done) scene\(total - done == 1 ? "" : "s") left")
-                        .font(.caption)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    HStack(spacing: 8) {
+                        Text(isComplete ? "All scenes completed" : "\(total - done) scene\(total - done == 1 ? "" : "s") left")
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        if let bq = bossQuizScore(for: chapter) {
+                            // Boss Quiz score badge — surfaces the per-chapter
+                            // performance number that was previously only visible
+                            // inside the chapter itself. Helps identify weak
+                            // topics from the sidebar at a glance.
+                            let perfect = bq.score == bq.max
+                            HStack(spacing: 4) {
+                                Image(systemName: perfect ? "checkmark.seal.fill" : "trophy.fill")
+                                    .font(.caption2)
+                                Text("\(bq.score)/\(bq.max)")
+                                    .font(.caption.monospacedDigit())
+                            }
+                            .foregroundColor(perfect ? .green : .orange)
+                            .accessibilityLabel("Boss Quiz score \(bq.score) out of \(bq.max)")
+                        }
+                    }
                 }
 
                 Spacer()
@@ -215,7 +232,20 @@ private struct DiscoverProgressContent: View {
         dataStore.discoverRowCount(for: chapter.id)
     }
 
-    private func openChapter(_ chapter: Chapter) {
+    /// Boss Quiz score (score, maxScore) for the chapter's Scene 9, or
+    /// nil if the student hasn't completed the Boss Quiz yet. Read once
+    /// per chapterCard render; uses the same discoverProgress data the
+    /// other counts derive from.
+    fileprivate func bossQuizScore(for chapter: Chapter) -> (score: Int, max: Int)? {
+        for row in dataStore.discoverRows(for: chapter.id) where row.sceneId == "scene9" {
+            if let s = row.score, let m = row.maxScore, m > 0 {
+                return (s, m)
+            }
+        }
+        return nil
+    }
+
+    fileprivate func openChapter(_ chapter: Chapter) {
         guard let pack = pack else { return }
         nav.push(.discover(packId: pack.id, chapterId: chapter.id))
     }
