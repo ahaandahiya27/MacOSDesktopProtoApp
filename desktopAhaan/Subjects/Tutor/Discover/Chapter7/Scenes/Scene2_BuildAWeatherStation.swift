@@ -62,7 +62,7 @@ struct Scene2_BuildAWeatherStation: View {
                                 }
                             } label: {
                                 VStack(spacing: 8) {
-                                    Image(systemName: inst.symbol)
+                                    Image(systemName: SFSymbolCompat.name(inst.symbol))
                                         .font(.title)
                                         .foregroundColor(isRevealed ? Color.compatIndigo : .gray.opacity(0.3))
                                     Text(inst.name)
@@ -125,7 +125,7 @@ struct Scene2_BuildAWeatherStation: View {
                         VStack(alignment: .leading, spacing: 8) {
                             if let idx = selectedInstrument, idx < instruments.count {
                                 let inst = instruments[idx]
-                                Label(inst.name, systemImage: inst.symbol)
+                                Label(inst.name, systemImage: SFSymbolCompat.name(inst.symbol))
                                     .font(.title2.bold())
                                 Text(inst.detail)
                                     .font(.body)

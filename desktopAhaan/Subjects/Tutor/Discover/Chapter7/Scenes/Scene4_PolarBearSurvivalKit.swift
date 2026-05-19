@@ -78,15 +78,19 @@ struct Scene4_PolarBearSurvivalKit: View {
 
     @ViewBuilder
     private var bearDiagram: some View {
+        // Fixed canvas size (was maxWidth/maxHeight on a GeometryReader-in-
+        // ScrollView, which collapses to ~0pt and reduced the bear ellipses
+        // to invisible dots). adaptationLabel positions assume exactly
+        // 400×280, so anchor the frame here.
         ZStack {
             bearCanvas
-                .frame(maxWidth: 400, maxHeight: 280)
+                .frame(width: 400, height: 280)
 
             ForEach(adaptations) { adapt in
                 adaptationLabel(adapt)
             }
         }
-        .frame(maxWidth: 400, maxHeight: 280)
+        .frame(width: 400, height: 280)
         .background(bearDiagramBackground)
         .overlay(bearDiagramBorder)
     }
@@ -168,7 +172,7 @@ struct Scene4_PolarBearSurvivalKit: View {
             }
         } label: {
             HStack(spacing: 4) {
-                Image(systemName: adapt.symbol)
+                Image(systemName: SFSymbolCompat.name(adapt.symbol))
                     .font(.caption)
                 Text(adapt.name)
                     .font(.caption2.weight(.semibold))
@@ -214,7 +218,7 @@ struct Scene4_PolarBearSurvivalKit: View {
         SoftShadowCard(padding: 18) {
             VStack(alignment: .leading, spacing: 8) {
                 if let idx = selectedAdaptation, let adapt = adaptations.first(where: { $0.id == idx }) {
-                    Label(adapt.name, systemImage: adapt.symbol)
+                    Label(adapt.name, systemImage: SFSymbolCompat.name(adapt.symbol))
                         .font(.title2.bold())
                     Text(adapt.detail)
                         .font(.body)
