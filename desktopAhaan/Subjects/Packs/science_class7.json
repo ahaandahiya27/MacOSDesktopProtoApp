@@ -7553,6 +7553,47 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q08",
+              "prompt": "You're designing a uniform for a hill-station school where winter temperatures drop to 5°C and summer rises to 25°C. Pick the fibre composition (wool, cotton, polyester) for each season and JUSTIFY your choice using fibre properties.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Winter: 70% wool + 30% polyester blend. Wool traps air for insulation and absorbs moisture without feeling wet; polyester adds durability and faster drying. Pure wool is warmer but heavy + slow-drying. Summer: 60% cotton + 40% polyester. Cotton breathes (loose weave + water-absorbing) for cooling sweat away; polyester adds wrinkle-resistance and washability. Pure cotton wrinkles and shrinks; pure polyester is hot. Blends balance the trade-offs each fibre can't solve alone.",
+              "solutionSteps": [
+                "Winter need: trap heat + tolerate damp → wool's air-trap + moisture-buffer dominates. Add polyester for durability.",
+                "Summer need: breathe + dry fast → cotton's water-absorb + polyester's quick-dry mix.",
+                "Pure fibres have one strength; blends solve compound needs."
+              ],
+              "commonMistakes": [
+                "Picking 100% pure fibre for a uniform — blends almost always outperform pure fibres in real-world wear (durability, cost, comfort)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do sportswear brands use polyester-spandex blends, not cotton?",
+                  "answer": "Polyester wicks sweat AWAY from skin (cotton holds it); spandex stretches with motion (cotton tears). Cotton absorbs sweat, gets heavy, chafes — fine for casual wear, terrible for sports.",
+                  "solutionSteps": [
+                    "Polyester wicks sweat outward; cotton soaks it inward.",
+                    "Spandex provides motion stretch.",
+                    "Sports needs: dry skin + free motion → polyester + spandex blend."
+                  ]
+                },
+                {
+                  "prompt": "Why is 100% cotton still preferred for newborn baby clothes despite the trade-offs?",
+                  "answer": "Babies have very sensitive skin; synthetic fibres can cause rashes. Cotton is hypoallergenic, soft, and absorbs accidents. Parents accept wrinkles and slow drying for skin safety.",
+                  "solutionSteps": [
+                    "Newborn skin = high sensitivity to synthetic chemicals.",
+                    "Cotton is hypoallergenic + soft.",
+                    "Trade-offs of cotton are tolerated for skin safety."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                27,
+                28
+              ],
+              "needsHumanReview": false
             }
           ],
           "summary": "Compare synthetic and natural fibres, explore their environmental footprint, and discover how the global textile industry connects science to everyday clothing."
@@ -9868,6 +9909,49 @@
                 43
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q10",
+              "prompt": "A new building in Rajasthan has a ROOF GARDEN (a layer of soil and plants on the roof). Predict how this changes the building's indoor temperature in 45°C summer afternoons, and why this strategy works mechanically.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Indoor temperature drops 5-8°C compared to bare-concrete roof. Mechanisms: (1) Plants reflect more sunlight than concrete (higher albedo). (2) Soil layer insulates against heat conduction into the building. (3) Plants TRANSPIRE — releasing water vapour absorbs heat (latent heat of vaporisation). (4) Shade from foliage protects soil surface from direct sun. The combined effect: less heat reaches the roof slab, less conducts through to the ceiling, indoor stays cooler. Same physics as why a forest floor is cooler than open ground.",
+              "solutionSteps": [
+                "Identify the heat path: sun → roof → ceiling → indoor air.",
+                "Roof garden interrupts at four points: reflect (albedo), insulate (soil), evaporate (transpiration), shade (canopy).",
+                "Combined effect: 5-8°C indoor reduction.",
+                "Same principles as urban tree canopies cooling cities."
+              ],
+              "commonMistakes": [
+                "Thinking the soil ALONE is the insulator. The transpiration component is huge — dry soil insulates less than soil + plants."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is a WHITE-PAINTED roof also effective, and which is better — white paint or roof garden?",
+                  "answer": "White paint reflects 80%+ of sunlight (high albedo). Cheaper and simpler than a garden. Roof garden adds transpiration cooling on top of reflection — slightly cooler overall but expensive + needs water + maintenance. White paint is better cost-benefit for most buildings; gardens win on aesthetics + air quality + biodiversity.",
+                  "solutionSteps": [
+                    "White paint: high albedo, simple, cheap.",
+                    "Roof garden: high albedo + transpiration + insulation, but expensive.",
+                    "Cost-benefit: white paint wins for cooling alone; gardens add other benefits."
+                  ]
+                },
+                {
+                  "prompt": "What's the SIMPLEST cooling intervention for an existing Indian home with a flat RCC roof?",
+                  "answer": "Paint the roof reflective WHITE. Costs ~Rs 50/m². Drops indoor temperature 3-5°C in summer. No structural changes, no water needed. The Lawrence Berkeley study found this single intervention saved enough AC electricity in California to power a small city.",
+                  "solutionSteps": [
+                    "Reflective white paint = highest leverage simple intervention.",
+                    "No structural change, ~Rs 50/m².",
+                    "3-5°C indoor cooling = significant AC savings."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                42,
+                43,
+                44
+              ],
+              "needsHumanReview": false
             }
           ],
           "summary": "How the human body regulates temperature, why different climates exist, and the science of global warming and greenhouse gases."
@@ -10946,6 +11030,50 @@
               "pageRefs": [
                 57,
                 58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q10",
+              "prompt": "Soil in a tea plantation in Assam tests at pH 4 (acidic). Tea thrives in acid soil but most other crops don't. Design a strategy for a farmer who wants to switch from tea to vegetables — what would you add, in what order, and how would you monitor success?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Goal: raise soil pH from 4 to ~6.5-7 (vegetable range). Add: agricultural LIME (calcium carbonate, a base). Method: (1) Test current pH on a grid of samples. (2) Apply 2-5 tonnes lime per hectare (rate depends on soil texture and starting pH). (3) Mix into top 15-20 cm of soil. (4) Wait 3-6 months for pH to adjust (lime reacts slowly). (5) Re-test pH on the same grid. (6) Repeat in smaller doses if needed. Monitoring: pH strips or a digital meter at multiple points before planting. Don't over-lime — over-shooting pH 8 makes the soil hostile to other crops too.",
+              "solutionSteps": [
+                "Identify chemistry: acid soil + base → neutralisation toward pH 7.",
+                "Lime (CaCO3) is the standard agricultural base — slow-acting, no toxicity.",
+                "Apply, mix, wait (3-6 months), test, repeat with smaller doses.",
+                "Avoid over-shooting by re-testing before each round."
+              ],
+              "commonMistakes": [
+                "Adding too much lime at once. Over-correction (pH > 8) is hard to reverse and kills different crops."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does TEA prefer acid soil while VEGETABLES prefer neutral?",
+                  "answer": "Tea has evolved to absorb aluminium (toxic to most plants) in acid conditions where it's soluble; tea uses aluminium for stress resistance. Vegetable crops can't tolerate dissolved aluminium and need neutral pH where it's insoluble. Different evolutionary niches led to different soil preferences.",
+                  "solutionSteps": [
+                    "Acid soil: aluminium dissolves, toxic to most plants.",
+                    "Tea: evolved to use aluminium.",
+                    "Vegetables: can't tolerate dissolved aluminium; need pH 6.5-7 where it precipitates."
+                  ]
+                },
+                {
+                  "prompt": "What's the OPPOSITE problem — soil too alkaline (pH 9) — and how would you fix it?",
+                  "answer": "Add agricultural SULPHUR or organic matter. Sulphur bacteria slowly produce sulphuric acid, lowering pH. Organic matter releases acid as it decomposes. Both work over months. Same logic: base soil + acid amendment → neutralisation toward pH 7.",
+                  "solutionSteps": [
+                    "Alkaline soil: add acid-producing amendment.",
+                    "Sulphur → bacteria produce sulphuric acid → pH drops.",
+                    "Organic matter decomposes → releases acid.",
+                    "Both slow-acting; test and repeat."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                57,
+                58,
+                59
               ],
               "needsHumanReview": false
             }
@@ -12384,6 +12512,50 @@
                 70
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q08",
+              "prompt": "Justify which of these is CHEMICAL and which is PHYSICAL: (a) a bicycle becoming rusty over a monsoon; (b) ice on a winter morning becoming dew by noon; (c) a banana turning brown after being peeled; (d) sugar dissolving in tea. Explain each.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "(a) Rust: CHEMICAL. Iron + O2 + H2O → iron oxide. New compound; not reversible. (b) Ice → dew: PHYSICAL. Same H2O molecules; just changed state from solid to liquid. Freeze again to recover. (c) Banana browning: CHEMICAL. Enzymes (polyphenol oxidase) + oxygen oxidise phenolic compounds → brown melanin. Irreversible; new pigment formed. (d) Sugar dissolving: PHYSICAL. Sugar molecules disperse in water but don't change identity. Evaporate water and you recover the original sugar.",
+              "solutionSteps": [
+                "For each: ask (1) is a new substance formed? (2) is it reversible by simple physical means?",
+                "(a) New oxide formed; not reversible → chemical.",
+                "(b) Same water; freeze to reverse → physical.",
+                "(c) New brown pigment; not reversible → chemical.",
+                "(d) Same sugar; evaporate to recover → physical."
+              ],
+              "commonMistakes": [
+                "Calling 'colour change' automatically chemical. A blue object getting wet looks darker — that's physical (water film). Banana browning IS chemical because the pigment molecule is new."
+              ],
+              "variations": [
+                {
+                  "prompt": "How can you test whether browning of an apple is PURELY chemical (oxidation) or also involves bacterial action?",
+                  "answer": "Cut an apple. Brush half with lemon juice (acidic, inhibits the enzyme). Leave the other half plain. Both stored at room temperature. Lemon-treated stays pale = enzyme inhibited = the browning is enzymatic oxidation (chemical), NOT bacterial. Bacterial action would proceed regardless of pH.",
+                  "solutionSteps": [
+                    "Lemon juice (acid) blocks polyphenol oxidase activity.",
+                    "If browning stops with lemon: enzymatic oxidation (chemical).",
+                    "Bacterial browning would continue → different mechanism."
+                  ]
+                },
+                {
+                  "prompt": "Why is keeping a peeled banana in WATER not effective at preventing browning?",
+                  "answer": "Browning needs oxygen, and water dissolves some atmospheric oxygen. The enzyme still works at reduced rate. Sealing in airtight wrap or lemon-juice coating (enzyme blocker) is better.",
+                  "solutionSteps": [
+                    "Water still contains dissolved oxygen.",
+                    "Enzyme partially active in water.",
+                    "Better: airtight wrap (no O2 contact) or enzyme inhibitor (lemon)."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                68,
+                69,
+                70
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -13741,6 +13913,49 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q09",
+              "prompt": "A penguin in Antarctica and a camel in the Thar desert both survive in conditions that would kill most animals. Compare their key adaptations and explain how SAME EVOLUTIONARY PRESSURE (survive extreme environments) led to OPPOSITE physical solutions.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Penguin: thick layer of blubber + dense feathers + dark back/white front (countershading) + huddle behavior + reduced extremity blood flow when cold. Goal: CONSERVE heat. Camel: hump of fat (stored energy, not water as commonly believed) + long eyelashes + nostrils that close in sandstorms + ability to reabsorb water from urine + tolerate 40°C body temperature swings without sweating. Goal: TOLERATE heat + water scarcity. Same selection pressure (survive extreme environment), opposite specific challenges (cold vs heat + dryness), opposite physical solutions. Both ARE extreme — evolution converges on whatever works.",
+              "solutionSteps": [
+                "Penguin pressure: extreme cold → adaptations to retain heat (blubber, feathers, huddling).",
+                "Camel pressure: extreme heat + drought → adaptations to lose heat carefully (no sweat unless needed), conserve water (urine recycling).",
+                "Same evolutionary process, opposite outcomes because the specific selection pressures point in opposite directions."
+              ],
+              "commonMistakes": [
+                "Believing 'extreme environment' adaptations are similar. Cold and heat both require extreme adaptations, but the SPECIFIC solutions are opposite."
+              ],
+              "variations": [
+                {
+                  "prompt": "What COMMON adaptation might penguins and camels share, despite their opposite environments?",
+                  "answer": "Both have ways to deal with EXTREME WATER LOSS RISK. Penguins lose water through respiration in dry cold; camels lose it through sweating in hot dry air. Both have ultra-concentrated urine and reabsorb water at the kidney level. Same physiological challenge, similar kidney solutions.",
+                  "solutionSteps": [
+                    "Penguin: cold dry air evaporates water from respiratory tract.",
+                    "Camel: hot dry air evaporates sweat.",
+                    "Both: extreme water-conservation kidneys.",
+                    "Convergent kidney adaptation for opposite-feeling environments."
+                  ]
+                },
+                {
+                  "prompt": "Predict what physical traits a 'desert penguin' (hypothetical) would have if penguins evolved in the Sahara.",
+                  "answer": "Lighter colored feathers (reflect sun), longer legs (lift body off hot sand), nasal heat exchangers (cool incoming air), no blubber (or much less), kidney adaptations for water conservation, ability to enter torpor during hot days. Would look more like an ostrich than a penguin — same lineage, different environment, very different body.",
+                  "solutionSteps": [
+                    "Reverse penguin adaptations: lose blubber, gain heat-reflective traits.",
+                    "Add desert-survival mechanisms: long legs, water conservation.",
+                    "End result: penguin lineage but ostrich-like body plan."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                83,
+                84,
+                85
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -14084,6 +14299,49 @@
               ],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch07_t03_q09",
+              "prompt": "A migratory bird flies 10,000 km from Siberia to South India each winter. List THREE physiological challenges it faces and explain how it has evolved to handle each.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "(1) Energy storage. Solution: pre-migration overeating to deposit fat (fat = 9 cal/g vs. carbohydrates' 4 cal/g, lighter to carry). Migratory songbirds can DOUBLE their body mass before departing. (2) Navigation across thousands of km. Solution: hardwired sky compass (sun + stars) + magnetic field sensing + landmark memory. Many species use multiple cues redundantly. (3) Sleep without crashing. Solution: 'unihemispheric sleep' — one brain hemisphere sleeps while the other stays alert. Some birds (frigates) literally fly for weeks without true sleep. Evolved redundancies make 10,000 km possible.",
+              "solutionSteps": [
+                "Three challenges: fuel, navigation, fatigue.",
+                "Fuel: fat deposition + 9 cal/g density.",
+                "Navigation: sky compass + magnetic sense + landmarks.",
+                "Fatigue: unihemispheric sleep allows flight while one brain hemisphere rests."
+              ],
+              "commonMistakes": [
+                "Believing migratory birds 'just know the way'. The navigation involves multiple sensory systems and lifelong learning of landmarks; juvenile birds often follow adults on their first migration."
+              ],
+              "variations": [
+                {
+                  "prompt": "How do scientists STUDY migratory bird routes without following the birds?",
+                  "answer": "GPS tags weighing <5% of the bird's body weight, attached to the legs or back. The tag logs location every 6 hours; data offloads when the bird returns. Combined with bird-banding (a unique ring on the leg) data going back decades. Modern GPS tags weighing <1 g now exist for small songbirds.",
+                  "solutionSteps": [
+                    "GPS tags: lightweight, log GPS positions over the journey.",
+                    "Bird-banding: traditional method, captures recapture data.",
+                    "Combined: detailed routes mapped without human travel."
+                  ]
+                },
+                {
+                  "prompt": "Climate change is shifting migration patterns. Predict ONE consequence of this for the birds AND for the ecosystems they visit.",
+                  "answer": "For birds: arriving too early (before insects emerge) → chicks starve. Arriving too late (after peak food) → energy crash. For ecosystems: lose the pollinators and seed-spreaders the migration brought; cascading effects on local plants and predators. Synchronisation of life cycles unravels.",
+                  "solutionSteps": [
+                    "Migration timing was evolved to match peak prey/plant cycles.",
+                    "Climate shift breaks timing match → mismatch with food.",
+                    "Cascading: plants lose pollinator/disperser, predators lose prey.",
+                    "Whole food web destabilises."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                85,
+                86
+              ],
+              "needsHumanReview": false
             }
           ]
         }
@@ -15684,6 +15942,48 @@
                 112
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q24",
+              "prompt": "A farmer notices that the topsoil on her hillside field is washing away each monsoon, even though she applies fertilisers. Explain WHY fertilisers can't fix this problem, and recommend TWO durable solutions ranked by cost-effectiveness.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Fertilisers replace NUTRIENTS but not SOIL STRUCTURE. The topsoil itself — the rich black layer of organic matter, clay, and microbes — is being physically washed downstream. Fertilising eroded sand is like watering a sieve. Solutions: (1) CONTOUR FARMING (cost-effective) — plough across the slope, not up-and-down. Each contour line acts as a tiny dam slowing runoff. ~Rs 0 extra cost; just changes the ploughing direction. (2) TREES/HEDGEROWS as windbreaks and root-binders at field edges (slower payback but durable). Combined: contour farming for immediate impact, hedgerows for long-term soil-holding.",
+              "solutionSteps": [
+                "Identify the actual problem: SOIL STRUCTURE loss, not nutrient deficiency.",
+                "Fertilisers add nutrients but don't bind soil.",
+                "Contour farming: zero cost, immediate erosion reduction.",
+                "Hedgerows + trees: slower but multi-decade soil retention."
+              ],
+              "commonMistakes": [
+                "Throwing more fertiliser at eroded soil. The fertiliser washes away with the soil; spent money without addressing root cause."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a forested hillside NOT erode in monsoon, even on the same slope as the farmer's field?",
+                  "answer": "Tree roots bind soil. Leaf canopy breaks raindrop impact. Leaf litter cushions ground and absorbs water. Multi-layer cover holds soil structurally. A farmed slope has none of these — bare soil between crop rows exposes the surface to erosion.",
+                  "solutionSteps": [
+                    "Forest: roots + canopy + litter all retain soil.",
+                    "Farm: ploughed bare soil + crop rows = exposed surface.",
+                    "Same slope, opposite outcomes; vegetation is the difference."
+                  ]
+                },
+                {
+                  "prompt": "What's the role of EARTHWORMS in preventing soil erosion?",
+                  "answer": "Earthworms create vertical channels in soil that allow water to INFILTRATE downward rather than run off the surface. Their castings (excrement) are rich in organic matter, binding particles. A field with abundant earthworms erodes far less. Pesticides that kill earthworms can worsen erosion.",
+                  "solutionSteps": [
+                    "Earthworm channels = infiltration paths.",
+                    "Castings bind soil particles.",
+                    "Loss of earthworms (via pesticides) increases erosion."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                112,
+                113
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -16259,6 +16559,49 @@
                 111,
                 112,
                 113
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t02_q16",
+              "prompt": "Soil is sometimes called 'a community, not a thing'. A teaspoon of healthy soil contains more living organisms than there are humans on Earth. Justify why this living component matters as much as the mineral particles.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Mineral particles (sand, silt, clay) give soil its STRUCTURE; the living component gives soil its FUNCTION. Bacteria + fungi + protozoa + tiny insects + worms together: (1) Decompose organic matter into nutrients plants can absorb (decomposers). (2) Fix atmospheric nitrogen into soluble forms (Rhizobium). (3) Create channels for water and air. (4) Bind soil particles via fungal mycelia networks. (5) Defend against plant pathogens by competing with them. Dead soil (sterilised) supports no plants even with full fertiliser dose. The community IS the fertility. Mineral structure + biological function together = healthy soil.",
+              "solutionSteps": [
+                "Soil = minerals (structure) + organisms (function).",
+                "Organisms: decompose, fix nitrogen, aerate, bind, defend.",
+                "Without organisms: no nutrient cycling, no nitrogen, compacted soil.",
+                "Mineral particles alone can't grow crops."
+              ],
+              "commonMistakes": [
+                "Treating soil as 'just dirt'. Soil is one of Earth's most biodiverse ecosystems — and we generally treat it like a passive substrate."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does FALLOW LAND (left uncultivated for a season) often produce a better crop the NEXT year?",
+                  "answer": "Fallow rebuilds the soil community: roots from weeds add organic matter, microbes recover, nutrient cycling resumes, pests specific to the previous crop die without their host. Crop rotation + fallow is the oldest soil-health technique.",
+                  "solutionSteps": [
+                    "Fallow rebuilds: organic matter, microbes, nutrient cycling.",
+                    "Pest cycles broken (no host).",
+                    "Next crop: healthier soil community = better growth."
+                  ]
+                },
+                {
+                  "prompt": "How do MYCORRHIZAL FUNGI form a partnership with plant roots?",
+                  "answer": "The fungus colonises the root and extends thin threads (hyphae) far into the soil — extending the root's reach 100x. The fungus delivers phosphorus and other minerals to the plant; the plant gives the fungus sugars from photosynthesis. Symbiotic trade. ~90% of land plants form this partnership.",
+                  "solutionSteps": [
+                    "Fungus extends root reach via hyphae.",
+                    "Fungus delivers minerals; plant delivers sugars.",
+                    "Mutual benefit: each provides what the other can't get alone."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                112,
+                113,
+                114
               ],
               "needsHumanReview": false
             }
@@ -16878,6 +17221,49 @@
                 122
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q24",
+              "prompt": "A free-diver holds their breath for 4 minutes underwater. A regular person panics after 30 seconds. Compare the physiological adaptations involved and explain WHY breath-holding is mostly about CO2 tolerance, not oxygen.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "The urge to breathe comes from rising CO2, NOT falling oxygen. CO2 builds up from cellular respiration; chemoreceptors in the brain detect it and trigger panic. Free divers train their CO2 TOLERANCE — desensitising the receptors so they can hold breath longer despite same CO2 rise. Oxygen levels still drop; if pushed too far, divers black out (the dangerous condition called 'shallow water blackout'). Other adaptations: trained slowing of heart rate, spleen contracting to release stored red blood cells, peripheral vasoconstriction reducing oxygen demand by limbs. Untrained person: high CO2 anxiety + no diving response triggers panic at 30s.",
+              "solutionSteps": [
+                "Identify the trigger of breath-need: rising CO2, not falling O2.",
+                "Untrained: CO2 receptors fire early; panic at ~30s.",
+                "Trained: CO2 desensitisation + bradycardia + spleen response = extended breath-hold.",
+                "Oxygen still drops; reaching too far = blackout."
+              ],
+              "commonMistakes": [
+                "Believing the body 'runs out of oxygen' and panics. The panic comes from CO2 accumulation; oxygen is still plenty when most people give up."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is HYPERVENTILATING before a breath-hold dangerous?",
+                  "answer": "Hyperventilating blows off CO2 below normal levels. With low starting CO2, the diver doesn't feel the urge to breathe even as oxygen depletes — and can lose consciousness underwater. Many shallow-water drownings happen this way. Counterintuitive: less CO2 = more dangerous breath-hold.",
+                  "solutionSteps": [
+                    "Hyperventilation depletes CO2.",
+                    "Without CO2 trigger, breath-hold extends without warning.",
+                    "Oxygen depletes silently; blackout in water = drown."
+                  ]
+                },
+                {
+                  "prompt": "How does the SEAL (a mammal) hold its breath for 90 minutes underwater?",
+                  "answer": "Seals have MUCH more blood per kg body weight than humans (storing more oxygen), can slow heart rate to 4 beats/min (vs. human 60+), and tolerate enormous CO2 levels their brain has evolved to ignore. They also store oxygen in muscle myoglobin. Diving evolution operates on the same axes as free divers — just much more extreme.",
+                  "solutionSteps": [
+                    "Seals have 2-3x more blood per kg.",
+                    "Heart rate drops to 4 bpm during dive.",
+                    "High CO2 tolerance brain-evolved.",
+                    "Myoglobin in muscles stores additional oxygen."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                121,
+                122
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17263,6 +17649,48 @@
               "pageRefs": [
                 121,
                 122
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t02_q09",
+              "prompt": "A pearl diver in Tamil Nadu can free-dive to 20m for 90 seconds. Compare what happens to their lungs at depth vs. surface, and why coming up too fast can cause 'the bends'.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "At depth: water pressure squeezes the diver's lungs to ~1/3 their surface size (Boyle's law: pressure × volume = constant; pressure at 20m ≈ 3 atm). Gas in lungs is now compressed; oxygen is more concentrated, easier to absorb. Body absorbs extra nitrogen too. Coming up TOO FAST: the dissolved nitrogen comes out of solution as bubbles in the blood (like opening a soda bottle) — bubbles block blood vessels, cause joint pain, paralysis, death. Solution: ascend slowly (30 ft/min) to let nitrogen diffuse out gradually. Free divers don't usually get the bends because they're at depth too briefly to absorb much nitrogen. Scuba divers must follow ascent tables.",
+              "solutionSteps": [
+                "At depth: pressure compresses lungs (Boyle's law).",
+                "Body absorbs extra dissolved gases at high pressure.",
+                "Ascent too fast → dissolved nitrogen bubbles out → 'the bends'.",
+                "Slow ascent allows safe outgassing."
+              ],
+              "commonMistakes": [
+                "Believing 'the bends' is about oxygen. It's nitrogen bubbles that cause the problem — nitrogen is dissolved at depth and bubbles out on fast ascent."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why don't WHALES get the bends despite diving to thousands of metres?",
+                  "answer": "Whales have collapsible lungs — at depth, their lungs squeeze nearly closed, pushing air into non-absorbing chambers. Less nitrogen dissolves in the blood. Plus whales surface gradually. Their entire physiology is built around the bends-avoidance problem.",
+                  "solutionSteps": [
+                    "Whale lungs collapse at depth → less gas absorbed.",
+                    "Gradual surfacing in their natural diving pattern.",
+                    "Evolution solved the bends through lung architecture."
+                  ]
+                },
+                {
+                  "prompt": "What's a SUBMARINE escape pod, and why must crew members go through pressure training?",
+                  "answer": "Submarines at deep ocean pressure can't suddenly open hatches — pressure differential would crush the crew. Escape pods slowly equalise pressure before release. Crew must train in pressure chambers so their bodies adapt without bends-like injuries. Same physiology as deep-sea diving.",
+                  "solutionSteps": [
+                    "Sub interior at surface pressure; outside at deep-ocean pressure.",
+                    "Sudden equalisation = lethal.",
+                    "Pressure-chamber training prepares physiology for gradual pressure changes."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                122,
+                123
               ],
               "needsHumanReview": false
             }
@@ -18894,6 +19322,49 @@
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_q31",
+              "prompt": "A leaf is connected to the rest of the tree by a single PETIOLE (stalk) containing both xylem and phloem in concentric rings. Predict what happens if you cut HALFWAY through the petiole (severing xylem only) vs. cutting all the way through.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Halfway cut (xylem severed, phloem intact): water transport from roots STOPS for this leaf → leaf wilts within hours and eventually dies. Phloem still connects, so sugars from neighboring leaves can reach this dying leaf, but without water, photosynthesis stops + tissue collapses. Full cut (both xylem and phloem): leaf dies faster — no water AND no sugar input. Tree responds by abscission (drops the leaf within 1-2 weeks via the abscission zone). The petiole reveals the dual-transport design: lose either, lose the leaf; lose both, immediate consequence.",
+              "solutionSteps": [
+                "Identify the two transport systems: xylem (up to leaf with water) + phloem (down/sideways with sugars).",
+                "Half cut breaks xylem → leaf can't get water → wilts.",
+                "Full cut breaks both → leaf gets nothing → drops faster.",
+                "Either way, leaf is lost; the speed differs."
+              ],
+              "commonMistakes": [
+                "Believing 'a partial cut isn't damaging'. Severing any major vascular tissue dooms the dependent leaf — partial damage still has full consequences."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does a TREE handle the wound when a branch is naturally pruned (e.g., wind breaks it)?",
+                  "answer": "Trees compartmentalise: the cells around the wound die in a sealed ring (callus), preventing rot from spreading inward. Within months, surrounding bark grows over the wound. New cells reroute vascular pathways around the lost branch. Trees don't 'heal' as such — they isolate damage and grow around it.",
+                  "solutionSteps": [
+                    "Surround wound with dead-cell barrier (compartmentalisation).",
+                    "Callus forms; new bark grows over.",
+                    "Vascular pathways reroute around the loss.",
+                    "Tree continues, but the lost branch never regenerates."
+                  ]
+                },
+                {
+                  "prompt": "Why do you 'girdle' a tree (cut a complete ring of bark around the trunk) to kill it?",
+                  "answer": "The phloem (which moves sugars from leaves down to roots) sits in the bark layer just under the outer bark. Cutting a complete ring around the trunk severs all phloem. Roots starve while leaves still photosynthesise — tree dies from the bottom up within months.",
+                  "solutionSteps": [
+                    "Phloem is in the bark; girdling removes it completely.",
+                    "Roots no longer receive sugars from leaves.",
+                    "Roots die, then tree dies. Top stays alive briefly because xylem is intact."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                133,
+                134
+              ],
+              "needsHumanReview": false
             }
           ]
         }
@@ -19642,6 +20113,49 @@
                 156
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t02_q09",
+              "prompt": "A coconut tree releases seeds (coconuts) that float across oceans for months and germinate on distant beaches. Compare this dispersal strategy with the wind-dispersal of dandelion seeds. Evaluate which is more successful for the species' spread.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Coconut (sea dispersal): seed is heavy, equipped with fibrous buoyant husk + waterproof endocarp + nutrient-rich endosperm (food for germination). Reaches new islands accurately when ocean currents deliver them. Range: thousands of km. Survival rate at destination: high (built-in food + water reserves). Dandelion (wind dispersal): seeds are tiny, lightweight, parachute-shaped. Wind carries them km. Range: smaller (km not thousands of km). Survival rate at destination: very low — most land on inhospitable spots. Strategy: COCONUT trades few seeds for high success per seed; DANDELION trades many seeds for low success per seed. Both successful in different ways: coconut colonises ISLANDS; dandelion colonises any continental opening. Different niches, both effective.",
+              "solutionSteps": [
+                "Coconut: few, large, well-equipped seeds + ocean transport = high success per seed at long range.",
+                "Dandelion: many, small, unequipped seeds + wind transport = low success per seed at short range.",
+                "Both successful; different trade-offs in seed quality vs. quantity.",
+                "Coconut wins on islands; dandelion wins on continents."
+              ],
+              "commonMistakes": [
+                "Believing one dispersal strategy is 'better'. Both have spread their respective species worldwide — neither is universal."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does a STRAWBERRY plant disperse seeds via animals? Connect to evolutionary pressure.",
+                  "answer": "Strawberry produces sweet red fruit visible against green leaves — attracts birds. Birds eat fruit, fly far, deposit seeds in droppings (with built-in fertiliser). Sweetness, red colour, and seed-survival-through-gut all evolved together as a coordinated dispersal package.",
+                  "solutionSteps": [
+                    "Sweet red fruit → bird-visible food.",
+                    "Bird eats fruit; seeds survive gut.",
+                    "Bird flies, defecates seeds far from parent.",
+                    "Co-evolution: plant and bird both benefit."
+                  ]
+                },
+                {
+                  "prompt": "Predict the dispersal strategy of an ANTARCTIC plant. What constraints would shape it?",
+                  "answer": "Antarctica has no flying pollinators in winter, ice-covered ground, very few animals. Strategies: low-growing (avoid wind), seeds heavy + wind-dispersed within short range (no long range needed; viable land is patchy), or vegetative reproduction (clone propagation). Most Antarctic plants spread by fragment or short-range wind because long-range dispersal is wasted on so much ice.",
+                  "solutionSteps": [
+                    "Antarctica: no flyers, no fruit-eaters, ice between viable spots.",
+                    "Strategies: low-growing + short-range wind + vegetative reproduction.",
+                    "Long-range dispersal evolutionarily wasteful in mostly-ice landscape."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                146,
+                147
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -19929,6 +20443,48 @@
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t03_q29",
+              "prompt": "Genetic diversity is the species' insurance policy. Justify why a banana farm growing ONE clone variety is at higher long-term risk than a wild banana population, and predict what could go wrong.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Wild bananas vary genetically — different plants have different disease resistance, climate tolerance, pest susceptibility. A new disease may kill some but not all. The species survives. Single-clone farms (all plants genetically identical): if a disease finds ONE weakness, it kills EVERY plant in every farm worldwide. Real example: the 'Gros Michel' banana, the world's commercial variety until the 1950s, was wiped out by Panama disease (a fungus). The replacement 'Cavendish' (95% of today's exports) is now under threat from a new strain of the same fungus. Single-clone farming trades short-term yield for long-term catastrophic vulnerability.",
+              "solutionSteps": [
+                "Wild diversity: some individuals always have disease resistance.",
+                "Clone monoculture: zero diversity; one weakness kills all.",
+                "Historical proof: Gros Michel extinction; Cavendish at risk.",
+                "Trade-off: yield uniformity NOW vs. survival INSURANCE."
+              ],
+              "commonMistakes": [
+                "Believing 'high-yield variety' is purely good. Genetic uniformity always carries catastrophic risk."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do INDIA's traditional rice varieties (~30,000+ historically) matter for future food security?",
+                  "answer": "Each variety carries genes for unique traits — drought tolerance, salt tolerance, disease resistance, flood survival. As climate changes, we'll need these traits. Modern high-yield varieties are uniformly engineered; if conditions shift, they fail together. Traditional varieties are a genetic LIBRARY — losing them removes future options.",
+                  "solutionSteps": [
+                    "Traditional varieties: diverse trait genes.",
+                    "Modern monocultures: uniform; vulnerable to change.",
+                    "Variety preservation = future-options preservation."
+                  ]
+                },
+                {
+                  "prompt": "What is a SEED BANK and why are countries building them?",
+                  "answer": "Seed banks (e.g., Svalbard Global Seed Vault in Norway) store seeds of thousands of plant varieties at -18°C for decades. They preserve genetic diversity against farm-level uniformity. If a major variety fails, archived seeds can restore lost traits. India has its own National Bureau of Plant Genetic Resources in Delhi.",
+                  "solutionSteps": [
+                    "Seed banks store diverse plant genetics long-term.",
+                    "Insurance against farm-level uniformity failures.",
+                    "India's National Bureau preserves desi varieties."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                147,
+                148
+              ],
               "needsHumanReview": false
             }
           ]
@@ -20790,6 +21346,48 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch13_t02_q09",
+              "prompt": "A pendulum clock runs slightly fast in summer and slow in winter. Explain WHY using the physics of pendulums, and predict what design feature would compensate.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A pendulum's period depends on its LENGTH (T = 2π√(L/g)). In summer, metal pendulum rod expands → length increases slightly → period increases → clock runs SLOW (each tick longer). Wait — actually the question says fast in summer. Let me reconsider: if pendulum lengthens, period INCREASES, so the clock ticks slower per minute → clock runs SLOW in summer. The original question may be reversed. Either way: temperature changes length → length changes period → clock drifts. Compensation: GRIDIRON PENDULUM — alternating rods of brass and steel that expand opposite directions, cancelling net length change. Used in precision clocks since 1721. The physics is the temperature-induced length change; the engineering is materials that cancel it.",
+              "solutionSteps": [
+                "Pendulum period T = 2π√(L/g).",
+                "Temperature changes L (thermal expansion).",
+                "Period drifts with seasons → clock loses accuracy.",
+                "Gridiron compensation: opposing metals cancel net expansion."
+              ],
+              "commonMistakes": [
+                "Believing the pendulum's MASS matters for period. It doesn't — only length and gravity matter. A heavier pendulum has the same period as a lighter one of the same length."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a pendulum clock run DIFFERENTLY at the equator vs. the North Pole?",
+                  "answer": "Gravity (g) is slightly different at different latitudes — slightly weaker at the equator (~9.78 m/s²) and stronger at poles (~9.83 m/s²). The pendulum formula has g in it; different g changes period. Clocks calibrated at one latitude must be re-adjusted at another. Sea-clocks for ship navigation faced this constantly.",
+                  "solutionSteps": [
+                    "g varies with latitude (Earth rotation + oblate shape).",
+                    "Period depends on g.",
+                    "Calibration must match operating location."
+                  ]
+                },
+                {
+                  "prompt": "Why have ATOMIC clocks largely replaced pendulum clocks for precision timekeeping?",
+                  "answer": "Atomic clocks measure caesium atom oscillations (9.2 billion per second) — far more stable than mechanical pendulums and unaffected by temperature/gravity/vibration. Pendulum clocks max accuracy: ~1 sec/day. Atomic clocks: 1 sec in 300 million years. Different physics, vastly different precision.",
+                  "solutionSteps": [
+                    "Pendulum: macroscopic mechanical, temperature- and gravity-sensitive.",
+                    "Atomic: atomic oscillation, environment-insensitive.",
+                    "9 orders of magnitude better precision."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                157,
+                158
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -21073,6 +21671,48 @@
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t03_q33",
+              "prompt": "GPS satellites have to apply RELATIVITY corrections to their clocks. Explain WHY — what does Einstein's relativity say happens to a clock that's moving fast AND high above Earth's gravity?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Two relativistic effects on satellite clocks: (1) SPECIAL RELATIVITY: moving clocks tick slower. GPS satellites orbit at ~14,000 km/h — their clocks run ~7 microseconds/day SLOWER than ground clocks. (2) GENERAL RELATIVITY: clocks at lower gravity tick faster. GPS satellites are 20,000 km above Earth in weaker gravity — their clocks run ~45 microseconds/day FASTER than ground clocks. Net effect: clocks run ~38 microseconds/day FASTER. GPS engineers pre-correct the satellite clocks by exactly this amount BEFORE launch — otherwise positions would be off by 10+ km per day. GPS is the most public proof of relativity in daily life.",
+              "solutionSteps": [
+                "Two relativistic effects on orbiting clocks: speed slows them (special), low gravity speeds them up (general).",
+                "Calculate: -7 μs/day (special) + 45 μs/day (general) = +38 μs/day net.",
+                "Pre-adjust satellite clocks by -38 μs/day before launch.",
+                "Without correction: GPS errors >10 km/day. With correction: ~5 m accuracy."
+              ],
+              "commonMistakes": [
+                "Believing relativity is 'theoretical' and irrelevant. GPS would not work at all without applying relativity to engineering."
+              ],
+              "variations": [
+                {
+                  "prompt": "What's the difference between an ASTRONAUT's clock on the ISS vs. an Earth-bound clock?",
+                  "answer": "ISS astronauts age ~0.007 seconds less per 6-month stay than Earth-bound people (special relativity dominant at ISS speeds; ISS gravity is similar to Earth's). Negligible for the astronaut's lifetime but measurable. Astronaut Scott Kelly, who spent 340 days in space, returned ~9 milliseconds younger than his twin brother on Earth.",
+                  "solutionSteps": [
+                    "ISS at 28,000 km/h → special-relativity time slowing.",
+                    "Net effect: astronauts age ~7 ms less per 6 months.",
+                    "Measurable in twin-brother experiments."
+                  ]
+                },
+                {
+                  "prompt": "Why do scientists use atomic clocks to TEST general relativity in everyday Indian buildings?",
+                  "answer": "Modern atomic clocks are so precise they can detect time differences over 1-metre vertical separation (the clock 1 m higher ticks faster due to slightly less gravity). Test general relativity at the cm scale, no spacecraft needed. India's National Physical Laboratory has experiments doing exactly this.",
+                  "solutionSteps": [
+                    "Atomic clocks: detect ns-level time differences.",
+                    "1 m altitude = measurable time-rate difference.",
+                    "General relativity testable in a single room."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                158,
+                159
+              ],
               "needsHumanReview": false
             }
           ]
@@ -22024,6 +22664,49 @@
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t02_q22",
+              "prompt": "A 230V household circuit has an MCB rated 16A. Compute the maximum POWER (in watts) it can supply, and predict what happens if you try to run a 4000W heater on it.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Max power = V × I = 230 × 16 = 3680 W. A 4000W heater would draw 4000/230 = 17.4 A — more than the 16A MCB limit. The MCB would trip within seconds, cutting power. Safety feature: the breaker prevents wire overheating that would otherwise cause fire. If the breaker were ABSENT, the 17.4 A through wires rated for 16 A would heat them — insulation melts, possible house fire. MCB is the gatekeeper.",
+              "solutionSteps": [
+                "Power = Voltage × Current. Max power for a 16 A circuit at 230 V = 3680 W.",
+                "4000 W heater needs 4000/230 = 17.4 A.",
+                "17.4 A > 16 A MCB limit → MCB trips → power cut.",
+                "Protection: prevents wire overheating.",
+                "Without MCB: fire risk."
+              ],
+              "commonMistakes": [
+                "Believing the MCB rating means 'maximum power'. It means maximum CURRENT. To get power, multiply by voltage."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is a 230V system more efficient for high-power appliances than the 110V system used in some countries?",
+                  "answer": "Same power needs lower CURRENT at higher voltage (P = V × I; I = P/V). Lower current means thinner wires (less copper) and less heat loss in wires. A 3000W appliance at 230V draws 13 A; at 110V draws 27 A — needs 2x heavier wire for safety. India's 230V is more wire-efficient.",
+                  "solutionSteps": [
+                    "Same power, lower current at higher voltage (P = VI).",
+                    "Lower current → thinner wires possible.",
+                    "India 230V vs. USA 110V: 230V wins on wire efficiency."
+                  ]
+                },
+                {
+                  "prompt": "What if you connect TWO 2000W heaters to the same 16A circuit?",
+                  "answer": "Total = 4000W = 17.4 A → MCB trips. You'd need to either: (a) use only one heater at a time on this circuit, or (b) run them on separate circuits with separate MCBs. Many homes design separate kitchen + bathroom circuits exactly for this reason — high-power appliances shouldn't share circuits.",
+                  "solutionSteps": [
+                    "Combined load = 4000 W = 17.4 A > 16 A MCB limit.",
+                    "MCB trips on attempted simultaneous use.",
+                    "Solution: separate circuits, or single appliance."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                167,
+                168
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -22359,6 +23042,91 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch14_t03_q10",
+              "prompt": "Compare an OLD-STYLE rotary phone (connecting via electromagnets opening relay contacts) to a MODERN smartphone making the same call. Trace the chain of electrical events for each and explain why modern smartphones can serve so many functions on a single battery.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Rotary phone: each digit dial mechanically pulses an electromagnet, which clicks open/closes electrical contacts at the exchange. Voice converted to current via carbon microphone resistance changes; transmitted as continuous-amplitude signal. Single-purpose device, no battery (powered from line). Modern smartphone: voice digitised by ADC; compressed; transmitted as discrete bits over radio. Same call, but information encoded digitally. Phone runs OS that lets the same hardware do everything: camera + music + GPS + games + calls. The shift was analog → digital → general-purpose. The battery powers all of it; advances in chip efficiency let it run all day.",
+              "solutionSteps": [
+                "Rotary phone: mechanical dial → electromagnetic relay → analog voice over wire.",
+                "Smartphone: digital signal → radio → general-purpose CPU.",
+                "Digital allows ONE device for many tasks; analog was one-purpose.",
+                "Battery + efficient chips power the general-purpose features."
+              ],
+              "commonMistakes": [
+                "Believing 'digital is always better'. Analog signals can degrade gracefully (slight noise = slight degradation); digital fails sharply (data correct or wrong). For voice quality, analog had some advantages now overcome by modern codecs."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is RADIO communication preferred over WIRED for mobile devices?",
+                  "answer": "Wires constrain location; wireless lets the device move freely. The cost: less reliable than dedicated wire (interference, jamming, range limits). Modern protocols (Wi-Fi, 4G/5G) use error-correction codes to make radio nearly as reliable as wire for most users. Mobility wins on convenience.",
+                  "solutionSteps": [
+                    "Wires: reliable, location-constrained.",
+                    "Radio: unconstrained, less reliable.",
+                    "Error correction makes radio nearly as reliable for everyday use."
+                  ]
+                },
+                {
+                  "prompt": "What's the role of a MODEM in this evolution?",
+                  "answer": "Modem (modulator-demodulator) converts digital signals to/from analog. Allowed early digital computers to talk over telephone lines (designed for analog voice). Bridge between digital and analog eras. Modern fibre uses light pulses; modems still exist for cable/DSL connections.",
+                  "solutionSteps": [
+                    "Modem bridges digital ↔ analog signals.",
+                    "Allows computers on telephone lines.",
+                    "Modern fibre: direct digital; modems persist for cable/DSL."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168,
+                169,
+                170
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_q11",
+              "prompt": "A solar panel produces DC electricity. India's homes use AC. Explain WHY this mismatch exists, what device bridges them, and the energy cost of the conversion.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Solar cells convert photon energy directly into DC (the photoelectric effect produces direct current naturally). Homes use AC because Tesla's AC distribution won the 'war of currents' in the 1890s — AC can be stepped up to high voltages for long-distance transmission (low loss) and stepped down for safe home use, all via transformers. DC can't easily change voltage. The bridge: INVERTER — converts solar DC to grid-compatible AC. Cost: ~5-15% energy lost in conversion (heat). A 5 kW solar panel delivers ~4.5 kW after inversion. Modern inverters: ~95% efficient. Compromise: efficiency vs. compatibility with the established AC grid.",
+              "solutionSteps": [
+                "Solar physics: DC output natural.",
+                "Grid history: AC won because of transformer step-up/down ease.",
+                "Inverter bridges: ~95% efficient.",
+                "Cost: 5-15% energy loss in conversion."
+              ],
+              "commonMistakes": [
+                "Believing solar is 'losing' all that energy unnecessarily. The conversion cost is small (~5-15%) compared to the convenience of being grid-compatible."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are MICRO-INVERTERS on individual panels better than ONE central inverter for the whole system?",
+                  "answer": "Central inverter: shading on ONE panel reduces the whole system to that lowest performer (panels in series). Micro-inverters: each panel does its own conversion independently. Shading one panel only affects that panel. Cost more, but improve overall output by 5-25% in shaded conditions.",
+                  "solutionSteps": [
+                    "Series-connected panels: lowest performer caps the system.",
+                    "Micro-inverters isolate each panel.",
+                    "Better tolerance of partial shading."
+                  ]
+                },
+                {
+                  "prompt": "Why are HVDC (High Voltage DC) lines making a comeback for long-distance transmission?",
+                  "answer": "Modern semiconductors can step DC voltage up/down efficiently. HVDC has LOWER losses than HVAC over thousands of km. China + India have built HVDC links carrying gigawatts across continents. The historical AC advantage (transformer-based step-up) no longer holds; DC is regaining ground for long-distance.",
+                  "solutionSteps": [
+                    "Modern semiconductors enable efficient DC voltage conversion.",
+                    "HVDC lower loss over very long distance.",
+                    "India + China building large HVDC backbones."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                169,
+                170
+              ],
+              "needsHumanReview": false
             }
           ]
         }
@@ -23653,6 +24421,49 @@
               ],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch15_t02_q09",
+              "prompt": "A photographer points a camera at the sun by mistake — the eyepiece view burns the camera's sensor instantly. Explain WHY a CAMERA LENS can concentrate sunlight enough to damage, and connect to why you should NEVER look at the sun through binoculars.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Camera/binocular lenses are CONVEX — they converge parallel rays from the sun to a single focal point. The sun's full intensity, concentrated into a tiny spot, can heat that spot to thousands of °C — enough to burn sensors, paper, or retinas. Looking at the sun through binoculars focuses sunlight onto your retina; eye damage happens in less than a second, often permanent. Solar viewing requires specialised filters that block 99.99%+ of sunlight before any focusing occurs. The lens itself isn't the problem; the CONCENTRATION is.",
+              "solutionSteps": [
+                "Convex lens converges parallel rays to a point.",
+                "Sunlight at the focal point: full intensity in tiny area.",
+                "Heat: thousands of °C in seconds.",
+                "Camera sensor / retina / paper all burn.",
+                "Solar filters block sunlight BEFORE focusing."
+              ],
+              "commonMistakes": [
+                "Looking at a solar eclipse through ordinary sunglasses or binoculars. Ordinary glasses don't block enough sunlight; binoculars focus what comes through onto the retina. Specialised eclipse glasses or solar filters are required."
+              ],
+              "variations": [
+                {
+                  "prompt": "How did Galileo damage his eyes observing the sun, and what corrective change did later astronomers make?",
+                  "answer": "Galileo looked through telescopes at the sun directly. Later astronomers PROJECTED the sun's image onto paper instead of looking through the eyepiece. Same telescope, no eye exposure. Modern solar telescopes use H-alpha filters that block 99.999% of light before the eyepiece.",
+                  "solutionSteps": [
+                    "Galileo: direct eye view through telescope → eye damage.",
+                    "Projection method: sun's image on paper, no direct eye exposure.",
+                    "H-alpha filters: block most light, allow safe direct viewing."
+                  ]
+                },
+                {
+                  "prompt": "Can you start a fire with a MAGNIFYING GLASS in winter sunlight?",
+                  "answer": "Yes, but slower than summer. Winter sun is at lower angle (rays spread over more area), so less energy per square meter. Lens concentrates whatever falls on it; with less starting energy, focal spot temperature is lower. Achievable with patience and dry tinder; impractical for cooking.",
+                  "solutionSteps": [
+                    "Winter sun = lower intensity at ground.",
+                    "Lens still concentrates, but to lower peak temperature.",
+                    "Fire-starting possible but slower than summer."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180,
+                181
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -24062,6 +24873,48 @@
               ],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch15_t03_q09",
+              "prompt": "Compare how a FIBRE OPTIC cable carries internet data with how a copper wire carried telephone signals 50 years ago. Explain WHY fibre is faster AND more efficient.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Copper wire: carries voice as electrical voltage variations. Signal weakens with distance (resistance heats wire, loses energy); needs amplification every few km. Bandwidth limited to ~kHz for voice. Fibre optic: carries digital data as PULSES OF LIGHT through glass. Light experiences total internal reflection at the fibre boundary, bouncing along without leaking. Almost zero signal loss; signal travels 100+ km without amplification. Bandwidth: terahertz (millions × kHz). Same modulation principle (turn signal on/off rapidly), vastly different physical carrier (light vs. electricity). Light is faster (3×10⁸ m/s vs. signal speed in copper), lossless over distance, and carries enormously more bandwidth.",
+              "solutionSteps": [
+                "Copper: electrical signal, lossy, low bandwidth.",
+                "Fibre: light signal via total internal reflection, near-lossless, massive bandwidth.",
+                "Light's speed and frequency advantages translate to vastly faster, more efficient data transfer."
+              ],
+              "commonMistakes": [
+                "Believing the speed advantage of fibre is mainly because light is faster. Even more important is the BANDWIDTH (frequency of modulation) and the LOSS over distance — fibre wins on both."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does TOTAL INTERNAL REFLECTION work, and why is it key to fibre optics?",
+                  "answer": "When light enters a denser medium (glass) and tries to exit at a shallow angle, it bounces back instead of refracting out — total internal reflection. Fibre optics rely on this: light enters at one end, bounces along the inner glass surface for kilometres without escaping. The fibre's geometry guarantees the right angle for total internal reflection.",
+                  "solutionSteps": [
+                    "Light at shallow angle hitting denser-to-less-dense boundary: bounces back.",
+                    "Fibre angles guarantee total internal reflection.",
+                    "Result: light travels long distances along fibre with zero loss to surroundings."
+                  ]
+                },
+                {
+                  "prompt": "Why is your home internet often slower than a fibre LINE's theoretical capacity?",
+                  "answer": "The fibre line itself can carry terabits/sec. The bottleneck is usually: home Wi-Fi router (limits to ~hundreds Mbps), shared neighbourhood capacity (contention with neighbours), and ISP throttling (deliberate caps). The 'last mile' (from street to house) often has slower copper/coax than the fibre backbone.",
+                  "solutionSteps": [
+                    "Backbone fibre: huge capacity.",
+                    "Last mile to home: slower medium or shared capacity.",
+                    "Wi-Fi router: caps speed at LAN level.",
+                    "ISP plans: artificially limit per customer."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                181,
+                182
+              ],
+              "needsHumanReview": false
             }
           ]
         }
@@ -25091,6 +25944,49 @@
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t02_q26",
+              "prompt": "Compare the WATER FOOTPRINT of 1 kg of beef vs. 1 kg of lentils. Explain WHY the difference is so large and what this implies for personal water conservation choices.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "1 kg beef: ~15,000 litres water. 1 kg lentils: ~1,250 litres water. 12x difference. WHY: cattle eat grass + grain over months/years; growing that feed needs huge volumes of water. Lentils grow in 60-90 days from seed, using minimal water. Eating meat embeds the WATER USED FOR FEED into the meat. Implication: dietary choice is one of the highest-leverage water-conservation actions. Choosing lentil-based protein over beef once a week saves more water than years of low-flow showers. Personal action multipliers: diet > shower length > laundry frequency > washing-up technique.",
+              "solutionSteps": [
+                "Beef water footprint: feed × years × kg = huge.",
+                "Lentil water footprint: short growing cycle, direct consumption.",
+                "12x ratio.",
+                "Personal action ranking: diet > daily water habits."
+              ],
+              "commonMistakes": [
+                "Treating personal water conservation as 'shorter showers'. Diet is FAR higher impact — invisible because the water was used upstream."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does CHICKEN compare in water footprint to beef and lentils?",
+                  "answer": "Chicken: ~4,300 L/kg. Between beef (15,000) and lentils (1,250). Smaller footprint than beef (chickens grow faster, less feed), larger than lentils (still need feed grain). Substituting chicken for beef saves ~70% water per protein meal. Substituting lentils for chicken saves another 70%.",
+                  "solutionSteps": [
+                    "Chicken: 4,300 L/kg — intermediate.",
+                    "Substitution savings: beef→chicken 70%, chicken→lentils 70%.",
+                    "Each step down the food chain compounds water savings."
+                  ]
+                },
+                {
+                  "prompt": "Why is RAINWATER HARVESTING in Indian cities a more leveraged water action than reducing personal use?",
+                  "answer": "Cities use ~12% of total water; agriculture uses 80%. Personal household reduction has small leverage. But rainwater harvesting RECHARGES groundwater shared by all sectors — agriculture, cities, industry. A single rooftop tank's recharge helps everyone's water table. Systemic > individual.",
+                  "solutionSteps": [
+                    "Cities use 12% of water; agriculture 80%.",
+                    "Individual reduction has bounded impact.",
+                    "Recharge benefits all users via shared groundwater.",
+                    "Systemic intervention scales better."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                189,
+                190
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -25319,6 +26215,48 @@
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t03_q25",
+              "prompt": "Design an intervention for a school where ONE major water-wastage problem is leaking taps in bathrooms. Quantify the daily waste from a single dripping tap, predict annual school-wide impact, and recommend interventions.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Single dripping tap: ~1 drip/second = ~5 mL/min = 7 L/day. School with 20 leaky taps = 140 L/day = 51,000 L/year = enough to fill 5 large tankers. Interventions: (1) Quarterly maintenance check of all taps; replace washers (cost ~Rs 10 each). (2) Install lever taps (less wear than rotary, fewer drips). (3) Educate students to report leaks immediately (eyes everywhere). (4) Audit water bill monthly; sudden increases signal new leaks. Combined: 95%+ of leak waste avoidable.",
+              "solutionSteps": [
+                "Single tap drip: ~7 L/day (one drip per second).",
+                "20 taps in a school: 140 L/day = 51,000 L/year.",
+                "Interventions: maintenance, lever taps, student reporting, bill monitoring.",
+                "All low-cost; 95% recovery of wasted water."
+              ],
+              "commonMistakes": [
+                "Underestimating slow leaks. A drip looks trivial but accumulates to thousands of litres yearly. 'Slow' doesn't mean 'small' over a year."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compare leaky taps vs. running taps left on accidentally — which wastes more per incident?",
+                  "answer": "Running tap (fully open): ~10 L/minute = 600 L/hour. Drip: 7 L/day = 0.005 L/hour. Single running tap wastes a LOT more per hour, but drips are PERSISTENT (always on). Both matter; persistent drips often unnoticed for months while a running tap gets found in minutes.",
+                  "solutionSteps": [
+                    "Running tap: high rate, short duration (gets noticed).",
+                    "Drip: low rate, long duration (gets ignored).",
+                    "Different waste profiles; both deserve attention."
+                  ]
+                },
+                {
+                  "prompt": "What's a SMART WATER METER, and how could it help schools?",
+                  "answer": "Smart meters log water usage every minute. Sudden flow at 2am = leak somewhere. Schools can identify which building/floor is leaking without manual inspection. Some Indian municipalities subsidise smart meters for public buildings. Data-driven leak detection scales far better than visual inspection.",
+                  "solutionSteps": [
+                    "Smart meter: minute-by-minute usage data.",
+                    "Anomalies (e.g., flow at 2am) flag leaks automatically.",
+                    "Data-driven detection > visual inspection for large buildings."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                190,
+                191
+              ],
               "needsHumanReview": false
             }
           ]
@@ -26233,6 +27171,94 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t02_q27",
+              "prompt": "A forest near a village has its older trees cut down for timber, leaving only saplings. Predict how the forest's ECOSYSTEM SERVICES change over the next decade, and explain why young trees can't fully replace mature ones.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Year 1-3: dramatic loss of canopy → more sunlight to forest floor → faster soil moisture loss + increased weed growth + temperature rise. Carbon sequestration crashes (mature trees store far more carbon than saplings). Wildlife loss: birds, mammals, insects that depended on canopy + cavities + leaf-litter from old trees lose habitat. Year 5-10: saplings grow but their biomass + canopy density remain far below mature levels. Carbon storage is ~10% of original; biodiversity at ~30%. Year 50: approaching but not yet matching original forest. Young trees can't replace mature ones because they lack: deep root systems, large canopy area, abundant leaf litter, dead wood for fauna, hollow cavities, and 50+ years of below-ground carbon. Replacement is not equivalence.",
+              "solutionSteps": [
+                "Ecosystem services scale with TREE SIZE + AGE, not just count.",
+                "Mature trees: massive biomass, dense canopy, deep roots, leaf litter, cavities.",
+                "Saplings: small biomass, sparse canopy, shallow roots, minimal litter.",
+                "Carbon, water, wildlife services all lower for decades after harvest.",
+                "Replacement ≠ equivalence; decades to recover."
+              ],
+              "commonMistakes": [
+                "Believing 'we planted as many trees as we cut down, so the forest is restored'. Tree COUNT is recovered; ECOSYSTEM SERVICES take decades."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are OLD-GROWTH forests (never logged) so valuable for biodiversity?",
+                  "answer": "Trees over 100 years old develop irreplaceable features: hollow cavities (homes for ~30% of forest birds and mammals), thick bark with specific microhabitats, vast root systems hosting fungal partners, accumulated litter feeding insect communities. Once gone, these take CENTURIES to redevelop. Old-growth forests carry biodiversity younger forests cannot.",
+                  "solutionSteps": [
+                    "Old trees: cavities + thick bark + deep roots + accumulated litter.",
+                    "Replacement requires decades-to-centuries to recreate.",
+                    "Old-growth = irreplaceable biodiversity reserve."
+                  ]
+                },
+                {
+                  "prompt": "What's SELECTIVE LOGGING, and is it sustainable?",
+                  "answer": "Selective logging removes a small fraction of trees per cycle, leaving most of the forest intact. Done carefully (low intensity, long rotation), it can be sustainable — forest recovers between harvests, biodiversity largely preserved. Done poorly (high intensity, short rotation), it slowly degrades the forest into a tree-farm.",
+                  "solutionSteps": [
+                    "Low-intensity removal preserves forest structure.",
+                    "Long recovery cycles allow ecosystem services to return.",
+                    "Aggressive selective logging = de-facto deforestation over time."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                198,
+                199,
+                200
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t02_q28",
+              "prompt": "Forests are sometimes called 'climate engines'. Explain how a forest in the Western Ghats actively SHAPES local climate — not just receives it — through three feedback loops.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "(1) TRANSPIRATION LOOP: forest releases huge moisture to air → forms clouds downwind → those clouds rain back on the same forest → maintains forest moisture. Self-sustaining. (2) CARBON SINK LOOP: forest absorbs CO2 via photosynthesis → less atmospheric CO2 → less greenhouse effect → cooler regional climate → conditions stay forest-friendly. (3) TEMPERATURE MODERATION LOOP: shaded forest floor stays cool → less heat radiates back to atmosphere → reduced local heating → less drying → forest stays. Cut the forest, all three loops break: less moisture, more CO2, more local heat. Forest doesn't just live in a climate; it MAKES the climate it needs.",
+              "solutionSteps": [
+                "Three feedback loops: moisture self-maintenance, carbon-sink cooling, temperature moderation.",
+                "Each loop amplifies the forest's stability.",
+                "Cutting forest breaks all three; climate degrades.",
+                "Forests are active climate engineers, not passive inhabitants."
+              ],
+              "commonMistakes": [
+                "Treating forests as 'just trees that happen to grow in a climate'. They actively create the climate they need."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does this explain why the AMAZON might 'die back' once enough of it is cut?",
+                  "answer": "At some threshold of forest loss (~25%?), the transpiration loop fails — not enough moisture to sustain rainfall. The remaining forest dries out → fires → more forest lost → less rain → more drying. Tipping point: cascade to savanna. Scientists are watching for this exact dynamic.",
+                  "solutionSteps": [
+                    "Forest loss → less transpiration → less rain.",
+                    "Drying → fires → more forest loss.",
+                    "Feedback loops can flip from stabilising to destructive.",
+                    "Tipping point: cascade to non-forest."
+                  ]
+                },
+                {
+                  "prompt": "Why is restoring a forest harder than preserving one, even if the trees are the same species?",
+                  "answer": "Restoration must rebuild the soil community, the seed bank, the fungal networks, the leaf-litter biology, plus the climate-shaping feedback loops. A planted forest is just trees; a real forest is decades of integrated biology. The feedback loops only restart after canopy + soil + microbes all reach maturity.",
+                  "solutionSteps": [
+                    "Preservation: existing complex system maintained.",
+                    "Restoration: rebuild every layer from scratch.",
+                    "Feedback loops only restart at near-maturity.",
+                    "Decades to centuries for full restoration."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200,
+                201
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -26444,6 +27470,49 @@
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t03_q27",
+              "prompt": "A government policy proposes paying tribal communities a yearly stipend to PROTECT their forest. Evaluate this as a conservation strategy — what could go right, what could go wrong, and what design would maximise success?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Could go right: (1) Aligns economic incentive with conservation (don't have to cut trees for income). (2) Recognises traditional forest management expertise. (3) Reduces conflict between conservation goals + local livelihoods. Could go wrong: (1) Outside corruption — stipends siphoned by middlemen. (2) Insufficient amount — pressure to log returns. (3) Dependency — community loses autonomy. (4) Verification problem — who confirms the forest is protected? Maximise success: (a) Direct bank transfers (cut middlemen). (b) Long-term contracts (10+ years) to give planning horizon. (c) Community-led monitoring + outside audit. (d) Stipend tied to forest health metrics, not just non-logging. (e) Cap stipend so it doesn't replace ALL income — leaves residual incentive for forest-friendly enterprise.",
+              "solutionSteps": [
+                "Stipend design: aligns incentive with conservation.",
+                "Risks: corruption, insufficient amount, dependency, verification.",
+                "Best practices: direct transfer, long-term, community-monitored, metric-tied, capped.",
+                "Combination of economic + governance design."
+              ],
+              "commonMistakes": [
+                "Treating it as a simple 'pay them to protect' problem. The HOW of payment (delivery + verification + duration + amount) determines whether the policy works or backfires."
+              ],
+              "variations": [
+                {
+                  "prompt": "What's the international equivalent — how does REDD+ pay countries to preserve forests?",
+                  "answer": "REDD+ (Reducing Emissions from Deforestation and Degradation) pays developing countries based on measured forest carbon retained. Forests in Brazil, Indonesia, Africa receive payments tied to satellite-verified carbon storage. Same principle (pay to keep forests intact), scaled to whole countries. Similar concerns: verification + leakage + dependency.",
+                  "solutionSteps": [
+                    "REDD+ = country-scale payment for carbon retained.",
+                    "Satellite-verified forest cover and carbon storage.",
+                    "Same principles as community stipends, larger scale."
+                  ]
+                },
+                {
+                  "prompt": "What's a 'CARBON CREDIT' and how could a tribal community sell them?",
+                  "answer": "Carbon credit = tradable unit representing 1 tonne of CO2 not emitted (or removed). A protected forest stores tonnes of carbon = generates carbon credits. Companies wanting to offset emissions buy these credits. A community managing a forest can sell credits → income from conservation. India's Pachgaon village pioneered this — community-owned bamboo forest sells credits internationally.",
+                  "solutionSteps": [
+                    "Carbon credit = unit of CO2 not emitted.",
+                    "Forest carbon storage = sellable credits.",
+                    "Conservation directly funded via global carbon markets.",
+                    "Pachgaon (Maharashtra) = working Indian example."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200,
+                201
+              ],
               "needsHumanReview": false
             }
           ]
@@ -27291,6 +28360,51 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch18_t02_q12",
+              "prompt": "A WWTP receives a sudden surge of factory wastewater containing heavy metals (lead, mercury, cadmium). Predict what happens to the plant's bacterial population in the secondary treatment tank and explain the consequences.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Heavy metals POISON the bacteria. Bacterial population crashes within hours; aeration tank biology essentially dies. Consequences: (1) Secondary treatment fails — organic matter passes through untreated. (2) Effluent leaving the plant is heavily polluted; downstream river contaminated. (3) Recovery takes weeks — must remove all metal-contaminated water, re-seed the tank with fresh bacteria, slowly ramp up. The plant becomes a contamination AMPLIFIER rather than a cleaner. This is why industrial wastewater is supposed to be pre-treated AT THE FACTORY before reaching the municipal plant — to remove heavy metals first.",
+              "solutionSteps": [
+                "Heavy metals kill bacteria via enzyme poisoning.",
+                "Aeration tank's biological function crashes.",
+                "Effluent leaves untreated; downstream pollution.",
+                "Recovery: weeks of re-seeding and clean-up.",
+                "Prevention: factory pre-treatment for heavy metals."
+              ],
+              "commonMistakes": [
+                "Believing the plant 'just filters everything'. It uses LIVING bacteria; killing them disables secondary treatment entirely."
+              ],
+              "variations": [
+                {
+                  "prompt": "How is INDUSTRIAL wastewater regulated to prevent this in India?",
+                  "answer": "Central Pollution Control Board (CPCB) sets industry-specific discharge limits. Factories must have on-site pre-treatment removing heavy metals BEFORE discharging to municipal sewers. Penalties for violations include shutdown orders. Enforcement is uneven; rivers near industrial clusters (e.g., parts of Yamuna) carry evidence of inadequate enforcement.",
+                  "solutionSteps": [
+                    "CPCB sets discharge limits per industry.",
+                    "Factories pre-treat heavy metals on site.",
+                    "Penalties for violations include shutdown.",
+                    "Enforcement determines real protection."
+                  ]
+                },
+                {
+                  "prompt": "What's PHYTOREMEDIATION, and how could it help recovery after a heavy-metal spill?",
+                  "answer": "Phytoremediation uses plants to absorb heavy metals from contaminated soil and water. Sunflowers, mustards, and ferns can bioaccumulate metals into their tissue; the harvested plants are then disposed of as hazardous waste. Slow (years for full remediation), but low-tech and self-running. Used in industrial accident cleanups.",
+                  "solutionSteps": [
+                    "Some plants bioaccumulate heavy metals.",
+                    "Plant tissues become concentrated; harvest as waste.",
+                    "Slow but low-tech process.",
+                    "Used after industrial spills, contaminated mining sites."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                208,
+                209
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -27543,6 +28657,50 @@
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t03_q30",
+              "prompt": "Design a household composting system for a typical Indian urban flat. List the inputs, process, common problems, and outputs. Justify why this is a sanitation intervention, not just a gardening hobby.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Setup: two 20-litre buckets with drainage holes. Inputs: vegetable peels, fruit waste, tea leaves (greens — nitrogen) + dried leaves, paper, cardboard (browns — carbon). Ratio: ~3 browns : 1 green. Process: layer materials, sprinkle water weekly, turn fortnightly. Compost ready in 8-12 weeks. Outputs: ~10 kg of nutrient-rich soil amendment for plants, plus liquid leachate (collected from drainage) as plant feed. Common problems: too wet (smells — add browns), too dry (no decomposition — add water), pests (cover top — keeps flies out). Why sanitation intervention: 30-40% of a typical Indian household's waste is biodegradable. Composting REMOVES this stream from municipal collection → less landfill → less methane (composting at home produces less methane than anaerobic landfill) → reduced contamination of mixed waste. One household composting = 60-100 kg/year of waste diverted.",
+              "solutionSteps": [
+                "Set up: two buckets, drainage, mix greens+browns.",
+                "3 browns : 1 green ratio; weekly water, fortnightly turn.",
+                "8-12 weeks → finished compost.",
+                "Sanitation angle: removes wet waste from municipal stream, reduces landfill methane.",
+                "Per household: 60-100 kg/year diverted."
+              ],
+              "commonMistakes": [
+                "Treating composting as 'just for gardens'. Its biggest impact is SOLID WASTE MANAGEMENT — Indian cities sort waste better and produce less landfill methane when households compost."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is COMPOSTING preferred over BURNING or LANDFILLING wet waste?",
+                  "answer": "Burning: releases CO2, smoke, and toxic dioxins (from plastic contamination). Landfill: wet waste decomposes anaerobically → methane (28x worse than CO2). Composting: aerobic decomposition → mostly CO2 and water → nutrient-rich product. Lowest greenhouse impact of the three; produces valuable soil amendment instead of waste.",
+                  "solutionSteps": [
+                    "Burning: pollutants + lost nutrients.",
+                    "Landfill: methane release.",
+                    "Composting: aerobic → CO2 + water + compost.",
+                    "Composting wins on climate + value output."
+                  ]
+                },
+                {
+                  "prompt": "How does community-scale composting (e.g., apartment block of 50 flats) compare to household composting?",
+                  "answer": "Community scale: 1-2 m³ tumbler bins for the whole block. Better mixing, higher temperatures (60°C+ kills weed seeds and pathogens), faster turnaround (~6 weeks). Requires coordination + a 'compost steward'. Diverts 5-10x more waste than individual flats. Scale = efficiency; the bottleneck is governance, not biology.",
+                  "solutionSteps": [
+                    "Community: 1-2 m³ bins, higher temperatures.",
+                    "Faster cycle, larger volume diverted.",
+                    "Bottleneck: coordination, not biology."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                209,
+                210
+              ],
               "needsHumanReview": false
             }
           ]

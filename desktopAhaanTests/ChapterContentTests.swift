@@ -513,4 +513,40 @@ final class ChapterContentTests: XCTestCase {
             }
         }
     }
+
+    // MARK: - Per-chapter difficulty-level coverage (Phase 2 audit floor)
+
+    /// Every science chapter must ship at least 3 L4 (analyse) AND at least
+    /// 3 L5 (evaluate / create) questions. The 2026-05-19 Phase 1 audit
+    /// found the pack severely top-heavy (L5 = 3 questions across 19
+    /// chapters). Phases 2 + the 3+3 floor push brought every chapter to
+    /// at-least-3 of each. This test locks that floor in — any future
+    /// content edit that drops a chapter below the threshold fails CI.
+    ///
+    /// Scope: science_class7 only. Sanskrit pack has different question-mix
+    /// expectations.
+    @MainActor func testEveryScienceChapterHasAtLeastThreeL4AndThreeL5() {
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        for chapter in pack.chapters {
+            let qs = chapter.topics.flatMap { $0.questions }
+            let l4 = qs.filter { $0.difficulty == 4 }.count
+            let l5 = qs.filter { $0.difficulty == 5 }.count
+            XCTAssertGreaterThanOrEqual(
+                l4, 3,
+                "Ch.\(chapter.number) (\(chapter.title)) has \(l4) L4 questions, below 3+3 floor. " +
+                "See docs/SCIENCE_CONTENT_AUDIT_2026-05-19.md for context."
+            )
+            XCTAssertGreaterThanOrEqual(
+                l5, 3,
+                "Ch.\(chapter.number) (\(chapter.title)) has \(l5) L5 questions, below 3+3 floor. " +
+                "See docs/SCIENCE_CONTENT_AUDIT_2026-05-19.md for context."
+            )
+        }
+    }
 }
