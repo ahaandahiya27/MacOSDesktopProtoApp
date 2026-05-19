@@ -141,6 +141,21 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .navigateBackCommand, object: nil)
                 }
                 .keyboardShortcut("[", modifiers: .command)
+
+                Button("Show Bookmarks") {
+                    appState.sidebarSelection = .tool(.bookmarks)
+                }
+                .keyboardShortcut("b", modifiers: .command)
+
+                Button("Show Discover Progress") {
+                    appState.sidebarSelection = .tool(.discover)
+                }
+                .keyboardShortcut("d", modifiers: [.command, .shift])
+
+                Button("Show Settings") {
+                    appState.sidebarSelection = .tool(.settings)
+                }
+                .keyboardShortcut(",", modifiers: [.command, .shift])
             }
 
             // Help menu additions:

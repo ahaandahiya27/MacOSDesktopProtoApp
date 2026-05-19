@@ -476,7 +476,7 @@ in the project memory.
 | SB5 | Subject badges inconsistent — dup of CL7 | ✅ dup of CL7 — conditional rendering is correct |
 | SB6 | Active subject / tool selection style varies | 🟡 sidebar uses native `List` `.tag()` selection — macOS system-blue fill on the selected row, consistent across Subject / QuizBank / Tool rows. Recent rows use Button (not `.tag()`) so they don't show the blue fill — by design, since recents aren't a "destination selection". Convention is consistent within the macOS NavigationView idiom |
 | SB7 | Sidebar width not resizable / persisted | 🟡 NavigationView's sidebar IS resizable (drag the divider) per macOS default. Persistence across launches requires wrapping NSSplitViewController to observe the user's drag — modest refactor. Defer until a user actually flags non-persistence as a problem |
-| SB8 | No keyboard shortcut hints next to tool labels | 🟡 `SidebarTool.keyboardShortcut` declared; sidebar Tool rows now show the shortcut as a monospaced trailing badge. Currently only `.search` has ⌘F. Bookmarks / Discover Progress / Settings still pending matching `.keyboardShortcut(...)` menu wiring |
+| SB8 | No keyboard shortcut hints next to tool labels | ✅ all four sidebar tools now have menu-bar bindings and matching trailing badges: Search ⌘F (Find menu), Bookmarks ⌘B, Discover Progress ⌘⇧D, Settings ⌘⇧, — all wired in `desktopAhaanApp.swift`'s `CommandGroup(after: .textEditing)` and declared in `SidebarTool.keyboardShortcut`. Used ⌘⇧, instead of the macOS-standard ⌘, to avoid colliding with the system Settings scene; used ⌘⇧D instead of ⌘D since dialogs reserve plain ⌘D for "Don't Save" |
 
 ### Z.ID — Iconography & imagery
 

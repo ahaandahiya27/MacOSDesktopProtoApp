@@ -246,16 +246,16 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     }
 
     /// Pretty-printed keyboard shortcut shown as a trailing badge in the
-    /// sidebar row, when this tool has a corresponding `Command` in the
-    /// menu bar (currently only Search has `⌘F` via `desktopAhaanApp.swift`).
-    /// Future tools that get a shortcut should declare it here AND wire the
-    /// `Command` next to the matching `.keyboardShortcut(...)` call.
+    /// sidebar row. Each shortcut here MUST have a matching
+    /// `Button { … }.keyboardShortcut(…)` declared in `desktopAhaanApp.swift`'s
+    /// `CommandGroup(after: .textEditing)` block — the sidebar badge is
+    /// just the visible affordance; the actual binding lives in the menu.
     var keyboardShortcut: String? {
         switch self {
-        case .search:    return "\u{2318}F"  // ⌘F
-        case .bookmarks: return nil
-        case .discover:  return nil
-        case .settings:  return nil
+        case .search:    return "\u{2318}F"          // ⌘F
+        case .bookmarks: return "\u{2318}B"          // ⌘B
+        case .discover:  return "\u{2318}\u{21E7}D"  // ⌘⇧D
+        case .settings:  return "\u{2318}\u{21E7},"  // ⌘⇧,
         }
     }
 }
