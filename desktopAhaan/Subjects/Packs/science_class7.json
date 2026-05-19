@@ -1278,6 +1278,74 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch01_t01_q17",
+              "prompt": "A scientist plants two identical money plants. One sits in a sunny window; the other is placed in a closed dark cupboard for two weeks. Both are watered the same amount. Compare what will happen to the leaves of each plant, and explain WHY in terms of photosynthesis and starch storage.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "The sunny plant keeps healthy green leaves and stores fresh starch; the dark plant turns its leaves pale yellow and uses up its starch. Photosynthesis needs light to make food (glucose, stored as starch). With no light, the dark plant can't make new food and lives off its stored starch until it runs out — chlorophyll also breaks down without light, so leaves yellow.",
+              "solutionSteps": [
+                "Identify the variable: only light differs; water, plant, soil are controlled.",
+                "Recall the photosynthesis equation: CO2 + H2O + light → glucose + O2. No light = no glucose.",
+                "Sunny plant: continues making glucose, stores it as starch in leaves, chlorophyll stays bright green.",
+                "Dark plant: uses up stored starch first, then chlorophyll breaks down (no light to maintain it) — leaves turn pale/yellow."
+              ],
+              "commonMistakes": [
+                "Saying the dark plant 'dies of thirst' — water is equal in both; the missing factor is LIGHT.",
+                "Forgetting that chlorophyll itself needs light to stay stable; the yellowing is not just lack of food, it's pigment breakdown."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compare a sunlit and a covered geranium leaf after a week — what will iodine test reveal?",
+                  "answer": "Sunlit leaf turns blue-black (starch present). Covered leaf stays brown (no starch — no photosynthesis without light)."
+                },
+                {
+                  "prompt": "Why do plants in deep caves never have green leaves?",
+                  "answer": "No light reaches them; without light, chlorophyll can't be maintained AND no photosynthesis happens — plants lose their green colour or never develop it."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                3,
+                4,
+                6
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q18",
+              "prompt": "Design an experiment to prove that 'green leaves need carbon dioxide for photosynthesis'. List your apparatus, the variable you control, and the control setup. Predict what you'll see and how it proves your claim.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Apparatus: two destarched potted plants, two large transparent bell jars, KOH solution (absorbs CO2), water (control), iodine test kit. Variable: CO2 availability. Setup A: plant under jar with KOH (no CO2). Setup B: plant under jar with water (CO2 normal). After 24 hours of light, do an iodine test on one leaf from each. Setup B leaf turns blue-black (starch made); Setup A leaf stays brown (no starch). This proves CO2 is required — both plants had identical light, water, chlorophyll; only CO2 differed.",
+              "solutionSteps": [
+                "Choose the single variable to isolate: CO2. Everything else (light, water, plant type, time) must be identical between setups.",
+                "Destarch both plants first by keeping them in the dark for 48 hours — guarantees any starch in a final test came from THIS experiment.",
+                "Use KOH (a known CO2 absorber) in jar A to remove CO2; use water in jar B as the control.",
+                "Test for starch with iodine after 24 hours of light: blue-black = starch present = photosynthesis happened."
+              ],
+              "commonMistakes": [
+                "Forgetting to destarch the plant first — pre-existing starch would give a false positive in BOTH setups.",
+                "Using two different plants or unequal light — that introduces a second variable, making the experiment uninterpretable."
+              ],
+              "variations": [
+                {
+                  "prompt": "How would you redesign this experiment to test for chlorophyll's role instead of CO2?",
+                  "answer": "Use a variegated leaf (part green, part white). After light exposure, iodine-test the whole leaf: only the green parts turn blue-black, proving chlorophyll is required."
+                },
+                {
+                  "prompt": "Why is destarching the plant 48 hours in advance a critical step?",
+                  "answer": "Plants store starch in leaves. Pre-existing starch would test positive with iodine even WITHOUT new photosynthesis. Destarching ensures any blue-black colour is from this experiment only."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                3,
+                4,
+                5
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -4018,6 +4086,73 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch02_t01_q17",
+              "prompt": "A cow and a tiger eat very different foods, yet both have 32 teeth. Compare the SHAPES and PROPORTIONS of their teeth, and explain how each set is adapted to the animal's diet.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A cow has small incisors (only on the lower jaw), no canines (or very small ones), and large flat molars/premolars for grinding plant fibre. A tiger has sharp pointed incisors, very long curved canines for stabbing and tearing prey, and pointed molars (carnassials) that scissor meat. Same total tooth count, but the PROPORTIONS reveal diet: cow's grinding surface dominates (herbivore — chew cellulose for hours); tiger's puncture-and-shear surface dominates (carnivore — kill, tear, swallow in chunks).",
+              "solutionSteps": [
+                "List the four tooth types (incisor, canine, premolar, molar) and their basic shapes/jobs.",
+                "Match the tooth shape to the food's mechanical challenge: cellulose plant cell walls need GRINDING; meat needs CUTTING and TEARING.",
+                "Note proportions in the cow: massive flat molars + tiny incisors + minimal canines = herbivore profile.",
+                "Note proportions in the tiger: long sharp canines + pointed carnassials + small incisors = carnivore profile.",
+                "Conclude: same count, opposite proportions — diet sculpted the dental formula."
+              ],
+              "commonMistakes": [
+                "Counting only the visible front teeth — molars at the back do most of the work for herbivores.",
+                "Assuming 'sharper = better'. For a cow, grinding flat surfaces ARE better; sharpness would shred its own cheek."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do human teeth show a 'mixed' profile — incisors, canines AND molars all developed?",
+                  "answer": "Humans are omnivores; we evolved to eat both plants and meat. Incisors cut fruit, canines tear (less prominent than in carnivores), molars grind grains and tubers — a tool kit for both diets."
+                },
+                {
+                  "prompt": "An elephant has only 4 working teeth at a time, all large molars, replaced 6 times in its life. Explain why.",
+                  "answer": "Elephants eat 150+ kg of rough plant matter daily; the molars wear flat from constant grinding. New molars rotate forward to replace worn ones — engineered for a herbivore's lifelong grinding workload."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                10,
+                11
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_q18",
+              "prompt": "A friend says: 'Brushing teeth twice a day is enough — sugar doesn't really cause cavities, bacteria do.' Evaluate this claim. Is your friend right, wrong, or partly correct? Justify with the biology of how cavities actually form.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Partly correct — bacteria are the proximate cause, sugar is the necessary fuel. Mouth bacteria (mainly Streptococcus mutans) feed on sugar leftovers and excrete acids. The acids dissolve tooth enamel, creating cavities. Without sugar, the bacteria starve and can't make enough acid; without bacteria, sugar alone wouldn't dissolve enamel. So 'sugar doesn't cause cavities, bacteria do' misses that sugar IS the trigger that lets bacteria be destructive. Brushing twice removes both bacteria AND sugar — that's why it works.",
+              "solutionSteps": [
+                "Name the actors: Streptococcus mutans bacteria + dietary sugar + tooth enamel.",
+                "Trace the chemistry: bacteria metabolise sugar → produce lactic acid → acid dissolves enamel (calcium phosphate).",
+                "Test the claim: remove sugar → no acid → no cavity. Remove bacteria → no metaboliser → no acid. BOTH are necessary.",
+                "Conclude: friend is partly right (bacteria are the direct cause) but wrong to dismiss sugar (sugar enables the bacteria's destructive output)."
+              ],
+              "commonMistakes": [
+                "Saying 'sugar is acidic and burns teeth' — sugar itself is not acidic; the ACID is bacterial metabolism's output.",
+                "Believing brushing 'kills' the cavity. Brushing removes bacteria + sugar BEFORE damage; it doesn't reverse an existing cavity (only a dentist's filling does)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is sleeping right after eating sweets especially bad for teeth?",
+                  "answer": "Saliva (which neutralises bacterial acid) flows much less during sleep. Sugar left on teeth lets bacteria produce acid for hours undisturbed — maximum enamel damage window."
+                },
+                {
+                  "prompt": "Mouthwash kills 99.9% of bacteria. Will it stop cavities entirely if used daily?",
+                  "answer": "No — within hours, new bacteria recolonise from saliva, food, air. Mouthwash helps but can't replace removing the SUGAR fuel (brushing/flossing) and starving bacteria of substrate."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                10,
+                11
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -6021,6 +6156,73 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch03_t01_q16",
+              "prompt": "A label says: '100% Merino wool. Made in Italy. Yarn spun in Australia. Wool sheared in New Zealand.' Trace the journey of one fibre from sheep to sweater, and at each stage explain which kind of processing happens.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Stage 1 — Shearing (New Zealand): wool clipped from the sheep in early summer; whole fleece comes off in one piece. Stage 2 — Scouring: fleece washed with detergent + water to remove grease (lanolin), sweat, dirt. Stage 3 — Sorting: fibres graded by length, fineness, colour. Stage 4 — Carding & combing: fibres aligned parallel. Stage 5 — Spinning (Australia): aligned fibres twisted into yarn — twisting holds them together. Stage 6 — Dyeing & weaving (Italy): yarn coloured, then woven or knitted into fabric, finally cut & sewn into the sweater.",
+              "solutionSteps": [
+                "Start at the source (the sheep) and end at the finished garment.",
+                "Recognise that wool is processed in DISCRETE stages — each adds a property: cleaning, alignment, twist, colour, shape.",
+                "Map each label clue to a stage: 'sheared in NZ' = stage 1; 'yarn spun in Australia' = stage 5 (spinning); 'made in Italy' = stages 6 onwards (dye, weave, sew).",
+                "Note this is a global supply chain: each country specialises in one transformation."
+              ],
+              "commonMistakes": [
+                "Confusing 'spinning' (twisting fibres into yarn) with 'weaving' (interlacing two sets of yarn into fabric). Spinning comes BEFORE weaving.",
+                "Skipping scouring — raw fleece is ~30% grease and dirt by weight; you can't spin it before cleaning."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is scouring (washing the fleece) done BEFORE sorting, not after?",
+                  "answer": "Dirt and grease hide the true fibre colour, length, and quality. Sorting clean fibres is far more accurate — graders can see fineness and uniformity."
+                },
+                {
+                  "prompt": "Compare the fibre journey for cotton (plant) vs. wool (animal). Which step is unique to wool?",
+                  "answer": "Scouring (to remove animal grease/lanolin) is unique to wool. Cotton has ginning instead (separating seed from fibre). Spinning, weaving, dyeing are shared."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                22,
+                23,
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t01_q17",
+              "prompt": "A clothing brand claims their new 'eco wool sweater' is more sustainable than cotton because 'sheep grow wool naturally, no pesticides needed'. Evaluate this claim by listing TWO environmental costs of wool the brand is hiding, and ONE genuine sustainability advantage.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Hidden costs: (1) Methane emissions — sheep are ruminants that belch methane, a greenhouse gas ~28x stronger than CO2 over 100 years. A flock of 1000 sheep emits the methane of ~100 cars. (2) Land + water — sheep need vast grazing pastures (often cleared forests) and one wool sweater uses ~1000 L of water for sheep drinking, washing, dyeing. Genuine advantage: wool is biodegradable. A wool sweater discarded in soil decomposes in 1-5 years vs. polyester which takes 200+ years AND sheds microplastics during washing.",
+              "solutionSteps": [
+                "Recognise the brand's framing: comparing only the 'pesticide' axis is incomplete. Sustainability has many axes.",
+                "Surface hidden costs: methane (climate), land+water (resource use). These are real and large for wool.",
+                "Surface genuine advantage: end-of-life impact. Natural fibres decompose; synthetics don't.",
+                "Conclude: 'eco' is a contested claim — wool wins some axes (biodegradability, renewable resource) and loses others (methane, land use). Cotton has its own profile (less methane, more pesticide). Honest comparison needs all axes."
+              ],
+              "commonMistakes": [
+                "Accepting one-axis claims at face value. Always ask: what are they NOT measuring?",
+                "Assuming 'natural' automatically means 'sustainable'. Methane from sheep is natural — and a major climate problem."
+              ],
+              "variations": [
+                {
+                  "prompt": "If both wool and cotton have hidden costs, what fibre is MOST sustainable for a school sweater?",
+                  "answer": "Recycled fibres (recycled cotton or recycled polyester) beat both virgin wool and virgin cotton on resource use. The most sustainable sweater is the one you already own — every new garment has a footprint."
+                },
+                {
+                  "prompt": "Design a label that gives an HONEST comparison of wool vs. cotton sustainability.",
+                  "answer": "Show 4 axes: water use (litres), land use (m²/sweater), greenhouse gas (kg CO2-equivalent), biodegradability (years to decompose). Two bar charts side by side. No marketing word like 'eco' — just numbers."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                22,
+                23
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -8767,6 +8969,74 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q09",
+              "prompt": "A copper pot and a clay pot, both at room temperature, are filled with the same volume of cold water and placed on identical stoves. After 2 minutes, the copper pot's water is warm and the clay pot's water is still cold. Explain WHY in terms of thermal conductivity, and predict what happens AFTER you remove both from the stove.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Copper is an excellent thermal conductor — heat from the flame travels rapidly through the metal walls into the water by conduction. Clay is a thermal insulator — heat barely passes through, so most of the flame's energy is lost to the air around the pot, not transferred to the water. After removal: the copper pot cools fast (conducts heat OUT to room air just as fast as it conducted heat IN). The clay pot's water stays warmer for longer because clay slows heat loss in BOTH directions — same insulating property that made heating slow now keeps the water warm.",
+              "solutionSteps": [
+                "Identify the property at play: thermal conductivity. Copper has high conductivity (~400 W/m·K); clay has low (~1 W/m·K) — 400x difference.",
+                "On the stove: high conductivity = fast heat IN through pot walls to water. Copper wins.",
+                "Off the stove: the SAME property now works in reverse. High conductivity = fast heat OUT to room air.",
+                "Conclude: conductivity is bidirectional. Good for fast cooking, bad for keeping food warm at the table."
+              ],
+              "commonMistakes": [
+                "Believing the clay pot 'wastes' fuel — actually, the heat goes into the air around it. The pot doesn't transfer that heat to the water efficiently, but the fuel is still being burnt.",
+                "Thinking 'metal cools faster' means metal is colder. Both eventually reach room temperature; the metal just gets there faster."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are restaurant kitchens equipped with copper-bottomed pans but tea is often served in clay cups (kulhads)?",
+                  "answer": "Cooking needs FAST and EVEN heat transfer — copper conducts heat from flame to food uniformly. Drinking tea is the opposite goal — you want the cup NOT to burn your hand and to keep the tea warm. Clay's poor conductivity is exactly right for the cup."
+                },
+                {
+                  "prompt": "Predict what happens if you put boiling water in a thermos flask (vacuum + reflective walls) vs. a clay pot.",
+                  "answer": "Thermos keeps water hot for hours — vacuum stops conduction AND convection; reflective walls stop radiation. Clay pot is good but only blocks conduction; some heat still escapes by convection and radiation, so it cools faster than a thermos but slower than a metal pot."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                40,
+                41,
+                42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q10",
+              "prompt": "Design an experiment to rank four kitchen materials — copper, glass, plastic, wood — by their thermal conductivity, using only items in a normal home. Specify your method, what you measure, and how you read the result.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Method: 'butter melt race'. Cut four equal-sized rods (or spoons) of copper, glass, plastic, wood. Stick a tiny pat of butter to the FAR end of each, equidistant from one tip. Place all four tips into the same bowl of just-boiled water at the same moment. Watch which butter melts first, second, etc. What I measure: time-to-melt for each rod. Result: copper's butter falls off in seconds, glass in a minute or two, plastic in many minutes, wood may never melt during the test. Ranking (high → low conductivity): copper > glass > plastic > wood. The butter is a temperature sensor — it can only melt if heat travelled through the rod to the far end.",
+              "solutionSteps": [
+                "Pick a single setup that exposes all four rods to the SAME heat source identically (same bowl, same depth, same start time).",
+                "Choose a sensitive end-of-rod indicator: butter melts at ~33°C, well below boiling water — visible and unambiguous.",
+                "Control rod dimensions: same length and cross-section so the comparison is fair (conductivity not confounded by thickness).",
+                "Rank by time-to-melt: shortest time = highest conductivity."
+              ],
+              "commonMistakes": [
+                "Using rods of different lengths — a shorter rod heats up faster regardless of material, ruining the comparison.",
+                "Putting all four rods in different bowls — water temperatures will drift; only ONE shared bowl makes the comparison fair."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is butter a better 'temperature sensor' for this experiment than just touching the rod with your finger?",
+                  "answer": "Butter has a sharp, repeatable melting point (~33°C) — same for every trial. Your finger's pain threshold varies with skin sensitivity, recent cold exposure, and adrenaline — too subjective to rank materials reliably."
+                },
+                {
+                  "prompt": "Modify the experiment to also rank metals — copper, iron, aluminium — among themselves.",
+                  "answer": "Same butter-melt-race method, but use three METAL rods of identical dimensions. Need a more sensitive timer (stopwatch in seconds) since all three metals conduct well and the differences are smaller. Result on this scale: copper > aluminium > iron."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                40,
+                41,
+                42
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -9774,6 +10044,74 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch05_t01_q18",
+              "prompt": "Three colourless solutions A, B, C are on a table. You drop blue litmus into each: A turns red, B stays blue, C stays blue. You drop red litmus into each: A stays red, B stays red, C turns blue. Identify the nature of A, B, and C, and explain how the TWO-litmus test rules out ambiguity that a single test would leave.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A is an ACID (only acids turn blue litmus red; red stays red — consistent). C is a BASE (only bases turn red litmus blue; blue stays blue — consistent). B is NEUTRAL (neither litmus changed colour — neither acid nor base). Why both tests matter: a single test is ambiguous. If only blue litmus were used, B and C would BOTH stay blue — you couldn't tell base from neutral. Red litmus distinguishes them: bases turn it blue, neutrals don't. Two tests give a unique fingerprint for each of the three categories.",
+              "solutionSteps": [
+                "Recall the rules: acids turn BLUE litmus red. Bases turn RED litmus blue. Neutrals leave both unchanged.",
+                "Read A: blue→red (acid signature) AND red→red (consistent). A is acidic.",
+                "Read C: blue→blue AND red→blue (base signature). C is basic.",
+                "Read B: blue→blue AND red→red. Neither signature triggered. B is neutral.",
+                "Explain redundancy: single tests have collisions (blue litmus can't distinguish base from neutral). Both tests together resolve all three categories uniquely."
+              ],
+              "commonMistakes": [
+                "Concluding B is 'a base' just because blue litmus stayed blue — you missed that red litmus also stayed red. Bases turn red litmus BLUE.",
+                "Reporting a single-litmus result as enough. You always need both — or a universal indicator that shows multiple colours on a pH scale."
+              ],
+              "variations": [
+                {
+                  "prompt": "If you only have red litmus, what categories CAN you distinguish?",
+                  "answer": "Only two: bases (paper turns blue) vs. not-base (acid or neutral, paper stays red). You CAN'T tell acid from neutral without blue litmus or another test."
+                },
+                {
+                  "prompt": "A solution turns blue litmus red AND red litmus blue. What's wrong with this report?",
+                  "answer": "Impossible for a real solution — a substance is either acidic, basic, or neutral; it can't be both. Likely a mistake: the strips were swapped, contaminated, or the 'solution' is actually a mixture of separate acid and base droplets. Re-do the test with fresh strips."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                54,
+                55
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t01_q19",
+              "prompt": "An ant has stung you. Two creams are in your medicine box: a calamine cream (mildly basic, contains zinc carbonate) and a vinegar-based liniment (acidic). Justify which one to apply, and predict what would happen if you applied the WRONG one.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Apply the calamine cream. An ant sting injects formic acid (an acidic compound). Calamine's zinc carbonate is basic; it neutralises the formic acid via an acid+base reaction, producing salt and water — pain stops because the irritating acid is gone. If you applied the vinegar-based liniment instead: vinegar is acetic acid, MORE acid on top of the formic acid already in your skin — burning sensation gets worse, redness intensifies, the body has to neutralise both acids itself (slower).",
+              "solutionSteps": [
+                "Identify the chemistry of the injury: ant venom = formic acid. The problem is excess acid in skin tissue.",
+                "Match the antidote: a base neutralises an acid. Calamine (zinc carbonate, basic) is the correct choice.",
+                "Predict the reaction: base + acid → salt + water (heat may be released but quantities are tiny here). Pain stops as acid concentration drops.",
+                "Predict the wrong choice: vinegar is acetic acid — adding more acid worsens the irritation. Body must work harder."
+              ],
+              "commonMistakes": [
+                "Confusing 'neutralise' with 'wash away'. Calamine doesn't just rinse the acid off — it chemically reacts and converts the acid into harmless salt + water.",
+                "Believing acidic and basic creams are 'opposites that cancel each other' regardless of which one is in your skin. The skin already has a specific irritant (acid from ant or base from bee — different stings need different antidotes)."
+              ],
+              "variations": [
+                {
+                  "prompt": "A bee sting is alkaline (basic) not acidic. What would you apply, and what would happen if you used calamine by mistake?",
+                  "answer": "For a bee sting (basic venom), apply something mildly ACIDIC — vinegar or lemon juice. Calamine (also basic) would NOT help — base + base doesn't neutralise, it just sits there while the original irritation continues."
+                },
+                {
+                  "prompt": "Why does antacid tablet help heartburn, and what's the chemistry similarity to the ant-sting case?",
+                  "answer": "Heartburn = excess stomach acid (HCl). Antacid contains a base (magnesium hydroxide / calcium carbonate). Same neutralisation reaction: base + acid → salt + water. The ant sting is the same chemistry on skin instead of stomach."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                56,
+                57,
+                58
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -11103,6 +11441,75 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch06_t01_q23",
+              "prompt": "A nail is left in the rain for a month and develops orange-brown rust. You hammer the rusted nail back into a flat sheet. Compare this transformation to crumpling an aluminium foil ball — which is a CHEMICAL change and which is PHYSICAL? Justify your classification using TWO criteria.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Rusting the nail = CHEMICAL change. Crumpling foil = PHYSICAL change. Criteria: (1) New substance formed? Rust is iron(III) oxide hydrate — a new substance with different colour, hardness, brittleness from iron. Crumpled foil is still aluminium — same metal, just folded. (2) Reversibility? Rust cannot be turned back into shiny iron by simple physical means (you'd need heat + carbon to reverse it chemically, losing material). Crumpled foil can be unfolded or melted+rolled back to its original sheet — same atoms, same arrangement at the molecular level.",
+              "solutionSteps": [
+                "Apply criterion 1 (new substance): rust looks/feels different from iron (orange, brittle, flakes); foil is still aluminium after crumpling.",
+                "Apply criterion 2 (reversibility): rust formation can't be undone with hammers/water/cold; crumpled foil can be unfolded or remelted.",
+                "Note that hammering the nail flat AFTER it rusted doesn't undo the rust — the iron is gone, replaced by oxide. The hammer changes the shape of the rust+remaining-iron, not the chemistry.",
+                "Conclude: rusting passes both chemical-change tests; crumpling fails both — it's physical."
+              ],
+              "commonMistakes": [
+                "Saying 'hammering the rusted nail back makes it iron again' — no, the rust is still rust; you've just spread it out. Iron atoms that became oxide stay as oxide.",
+                "Classifying 'shape change' as chemical. Shape is physical; chemical means atoms rearrange into different molecules."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is tearing paper a physical or chemical change? Justify.",
+                  "answer": "Physical. The torn pieces are still paper — same cellulose molecules, just separated mechanically. No new substance formed; tape or glue can 'reverse' it macroscopically; the cellulose itself is unchanged."
+                },
+                {
+                  "prompt": "Is burning paper a physical or chemical change? Justify.",
+                  "answer": "Chemical. Paper (cellulose) reacts with oxygen → carbon dioxide + water vapour + ash. NEW substances form. Irreversible — you cannot ungather the smoke and ash back into paper. Both criteria say chemical."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                65,
+                66,
+                67
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q24",
+              "prompt": "Design an experiment for the school science fair that PROVES rusting needs BOTH water and oxygen — not just one of them. List your three setups and predict the outcome of each.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Three identical iron nails in three test tubes. Setup A: nail + tap water (water + dissolved oxygen). Setup B: nail + boiled-and-cooled water sealed with a layer of oil on top (water but NO oxygen, since boiling drove out dissolved air and oil prevents new air entering). Setup C: nail + anhydrous calcium chloride (a drying agent, oxygen-rich air but NO water). Leave all three for 5-7 days. Predictions: A rusts (both required things present). B does NOT rust (no oxygen). C does NOT rust (no water). Only when BOTH are present does rust form — proving both are necessary.",
+              "solutionSteps": [
+                "Identify what you're testing: 'water AND oxygen are required'. The experiment must isolate each.",
+                "Setup A: BOTH present → expected to rust (positive control).",
+                "Setup B: water only, no oxygen (oil seal + boiled water) → no rust expected.",
+                "Setup C: oxygen only, no water (drying agent absorbs all moisture) → no rust expected.",
+                "If predictions hold, you've shown that EACH alone is insufficient — only TOGETHER does rusting happen. Conclusion: both are necessary."
+              ],
+              "commonMistakes": [
+                "Forgetting to BOIL the water in setup B — tap water has dissolved oxygen that would slowly rust the nail, ruining the experiment.",
+                "Using only two setups (with vs. without water) — you'd prove water matters, but not whether oxygen matters. Three setups are needed to isolate both variables."
+              ],
+              "variations": [
+                {
+                  "prompt": "Predict what would happen in setup A if you used SALT water instead of tap water.",
+                  "answer": "Rust appears MUCH faster. Salt water is a better electrolyte — it speeds up the electrochemical reactions that turn iron into iron oxide. This is why coastal cities have more car-rust problems than inland ones."
+                },
+                {
+                  "prompt": "What does this experiment imply for protecting bicycles from rust?",
+                  "answer": "Block at least one of the two ingredients. Paint or oil keeps WATER out. A galvanised coating (zinc layer) takes the OXYGEN reaction itself (zinc rusts preferentially, sacrificing itself to protect the iron beneath). Both strategies work for the same reason — denying one of the two required ingredients."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                65,
+                66,
+                67
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -12200,6 +12607,75 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch07_t01_q18",
+              "prompt": "Two cities are at the same latitude — Mumbai (coastal, Arabian Sea) and Nagpur (inland, central India). Both get the same direct sunlight, but Mumbai is more humid and has smaller temperature swings. Explain WHY using the properties of water vs. land.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Water has very high specific heat capacity — it absorbs a lot of energy with only a small temperature rise (and releases it slowly when cooling). Land (rock, soil) has low specific heat — heats up and cools down fast. Mumbai sits next to a huge thermal buffer (the sea). During the day, the sea absorbs sun's heat with only modest warming and releases moisture into the air (humidity). At night, the sea releases its stored heat to the air, keeping coastal nights warm. Nagpur has no such buffer — daytime land bakes (hot afternoons), nighttime land releases heat to space fast (cool nights). Same sun, opposite climate, because of WHAT is sitting beneath each city.",
+              "solutionSteps": [
+                "Identify the constant (latitude, sunlight) and the variable (proximity to sea).",
+                "Recall water's special property: ~4x the specific heat of dry soil. Water dampens temperature swings.",
+                "Apply to Mumbai: sea absorbs day heat, releases it at night — narrow temperature range, plus evaporation produces humidity.",
+                "Apply to Nagpur: only land. Fast heating during day → hot afternoons. Fast cooling at night → cooler nights. Big day-night swing, dry air.",
+                "Conclude: same latitude doesn't mean same climate — local water bodies are the dominant moderator."
+              ],
+              "commonMistakes": [
+                "Assuming 'same sun = same climate'. Climate depends on heat ABSORPTION + STORAGE, not just incoming sunlight.",
+                "Believing humidity is just 'how close water is'. Humidity needs water to evaporate INTO the air — temperature of the water + wind matter too."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are coastal cities everywhere on Earth (Lisbon, Sydney, Mumbai) cooler in summer and warmer in winter than inland cities at the same latitude?",
+                  "answer": "Universal pattern: oceans buffer temperature. In summer, the sea is cooler than land — coastal breezes cool the city. In winter, the sea is warmer than land — releases stored heat, keeping coastal cities mild. The same physics works everywhere."
+                },
+                {
+                  "prompt": "Predict what would happen to Mumbai's climate if the Arabian Sea suddenly disappeared (hypothetically).",
+                  "answer": "Climate would shift toward Nagpur's pattern: hotter summer afternoons, cooler winter nights, much drier air, monsoon weaker or gone (no sea = no large-scale evaporation source for clouds). A radical change driven entirely by removing the thermal buffer."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                82,
+                83,
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t01_q19",
+              "prompt": "A friend says: 'Weather and climate are the same thing — just one is short and the other is long.' Evaluate this claim. Is the only difference duration, or is there a deeper distinction?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Partly correct, but missing the deeper point. Weather IS short-term and climate IS long-term, but the distinction is also about VARIABILITY vs. AVERAGE. Weather is the instantaneous state — today it's 32°C and raining. Climate is the long-run statistical pattern — Delhi has hot dry May (avg 41°C) and cool dry January (avg 14°C), every year. A single hot day in January doesn't change Delhi's climate; it's just unusual weather. Climate tells you what to PACK for a trip (clothes for the season); weather tells you what to WEAR today (umbrella or not). The relationship: climate = average + range of weather over decades.",
+              "solutionSteps": [
+                "Identify the friend's framing: 'same thing, different duration'. Test it.",
+                "Weather = a snapshot. Climate = a pattern of snapshots. Both involve temperature, rain, wind — same VARIABLES.",
+                "Different USES: weather predicts the next 7 days; climate describes a 30-year average and its typical swings.",
+                "A single weird-weather day is normal — but if 30 years of weather data show rising averages, THAT is climate change.",
+                "Conclude: duration is one axis, but the deeper point is statistical (instant vs. distribution). Same atmospheric variables, different time scales of observation."
+              ],
+              "commonMistakes": [
+                "Confusing 'one hot day' with 'climate change'. A single anomaly is weather. Climate change is a sustained shift over decades.",
+                "Treating climate as 'never changes'. Climates DO change — over decades to millennia. The contrast is to daily weather, not to permanence."
+              ],
+              "variations": [
+                {
+                  "prompt": "If today is unusually cold in summer, does it disprove global warming?",
+                  "answer": "No — global warming is a CLIMATE pattern (multi-decade rise in averages). A single cold day is weather. You can't disprove a statistical trend with one data point. Climate scientists look at 30-year moving averages."
+                },
+                {
+                  "prompt": "Why do farmers care more about climate than weather, while pilots care more about weather than climate?",
+                  "answer": "Farmers plant for a SEASON — they need to know typical rainfall, frost dates, sunshine totals (climate). Pilots fly for HOURS — they need to know whether there's a thunderstorm on the route tomorrow afternoon (weather). Different time horizons → different data needs."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                82,
+                83
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -13322,6 +13798,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch08_t01_q21",
+              "prompt": "When you blow air across the top of a sheet of paper, the paper LIFTS instead of being pushed down. Explain why, and connect this same physics to how a hurricane's roof-tearing happens.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Bernoulli's principle: faster-moving air has LOWER pressure than slower-moving air. When you blow across the top of the paper, air above moves fast (low pressure) while air below is still (normal pressure). Higher pressure beneath pushes the paper UP into the lower-pressure region. Same physics in a hurricane: 200 km/h wind rushes across a roof. Air above the roof is moving very fast (very low pressure). Air inside the house is still (normal pressure). The pressure difference pushes the roof UP and off — the roof doesn't get 'blown down', it gets SUCKED UP. That's why hurricane safety advice is to OPEN one window on the leeward side: equalise pressure so the roof isn't lifted.",
+              "solutionSteps": [
+                "Recall Bernoulli's principle: fast air = low pressure (energy is in motion instead of pressing outward).",
+                "Apply to the paper: blow air ABOVE → fast air above → low pressure above → still air below pushes paper up.",
+                "Scale up to a hurricane: wind speed of 50 m/s across a roof creates massive low pressure above.",
+                "Inside the house, air is still at normal atmospheric pressure. The pressure DIFFERENCE acts on the roof's area (huge force = pressure × area).",
+                "Conclude: roofs are 'sucked off' by the pressure gap, not 'pushed off' by direct wind impact. Counterintuitive but real."
+              ],
+              "commonMistakes": [
+                "Picturing the hurricane wind 'punching' the roof down. The wind moves ACROSS the roof, parallel to it — it's the pressure gap, not direct impact, that lifts the roof.",
+                "Believing closing all windows protects a house from a tornado. Closed windows trap normal-pressure air inside, MAXIMISING the inside-vs-outside pressure gap. Equalising pressure (briefly opening one window) actually helps."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do aeroplanes fly? Connect to the same Bernoulli principle.",
+                  "answer": "Aircraft wings are shaped (cambered) so air flows FASTER over the curved top than under the flatter bottom. Fast air above = low pressure above. Slower air below = higher pressure below. The pressure difference times wing area = lift, holding the plane up. Same physics as the paper and the hurricane roof."
+                },
+                {
+                  "prompt": "Two ships sailing in parallel close to each other get pulled together. Why?",
+                  "answer": "Water rushing between the two ships moves fast (squeezed channel). Fast water = low pressure. Water on the outside of each ship is slow = higher pressure. Higher pressure pushes ships toward each other. Maritime law requires safe distance between ships partly because of this Bernoulli pull."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                95,
+                96,
+                97
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t01_q22",
+              "prompt": "You are a town's disaster-prep officer. A cyclone warning is issued. List THREE specific actions you'd take in the 24 hours before landfall, and justify each using what you know about the physics of strong winds and storm surge.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "(1) Evacuate low-lying coastal areas. Justification: cyclones push a 'storm surge' — sea water piled up by sustained wind plus low central pressure — that floods coastlines metres deep. Wind kills less than drowning does. (2) Order all boats off the water and into harbour pens, lash them down. Justification: even a moored boat becomes a projectile when storm surge floats it free. Lashing distributes force across many ropes. (3) Distribute sandbags and instruct residents to TAPE windows in an 'X' pattern (or shutter them) and leave one leeward window slightly open. Justification: taped windows resist shattering from flying debris; the open leeward window equalises pressure so roofs aren't lifted by Bernoulli effect (same physics as the paper lift).",
+              "solutionSteps": [
+                "List the THREE physical hazards of a cyclone: (a) sustained wind force, (b) storm surge / coastal flooding, (c) flying debris.",
+                "For each hazard, pick the highest-impact preventive action: evacuate flood zones (a+b), secure projectiles (c), reinforce buildings (a+c).",
+                "Justify each with the actual physics: surge = wind+pressure piling water; flying debris = wind kinetic energy on loose objects; roof loss = Bernoulli pressure gap.",
+                "Conclude: cyclone prep is about denying the storm its three weapons — flood path, projectiles, and pressure leverage on buildings."
+              ],
+              "commonMistakes": [
+                "Focusing only on wind speed and ignoring storm surge. Historically, surge causes most cyclone deaths — water moves people who could have survived the wind.",
+                "Boarding up ALL windows airtight. A small leeward opening equalises pressure and HELPS, while debris-proof shutters protect from impact. Both can coexist."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does the Indian Meteorological Department use COLOUR-coded cyclone warnings (yellow/orange/red) instead of just wind speed numbers?",
+                  "answer": "Colours communicate ACTION level to non-specialists at a glance. A fisherman doesn't need to know '160 km/h' — they need to know 'red = do not go to sea'. Colour codes map physical severity to citizen behaviour without requiring meteorological literacy."
+                },
+                {
+                  "prompt": "After the cyclone passes, what hidden danger remains for 1-2 days?",
+                  "answer": "Contaminated water and broken power lines. Storm surge mixes sea water, sewage, and chemicals — drinking it causes disease outbreaks. Snapped electrical lines in flooded streets electrify the water. Post-storm deaths often exceed during-storm deaths because of these slow hazards."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -14770,6 +15316,75 @@
                 112
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t02_q14",
+              "prompt": "A farmer has three fields with different soil: sandy, clayey, and loamy. He wants to plant rice (needs standing water), groundnut (needs well-drained soil), and wheat (needs moderate water retention). Match each crop to the right field, and justify each match using soil properties.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Rice → clayey field. Clay particles are tiny and pack tight — high water retention, very slow drainage. Standing water sits on top, exactly what paddy rice needs. Groundnut → sandy field. Sand particles are large with big gaps — water drains away fast, soil stays loose. Groundnut pods develop underground; they need loose, well-drained soil to grow and to avoid rot. Wheat → loamy field. Loam is a balanced mix of sand+silt+clay — holds enough water for steady wheat growth without waterlogging. Loam is the 'goldilocks' soil for most cereal crops.",
+              "solutionSteps": [
+                "List the three soil types and their key property: clay = retains water; sand = drains fast; loam = balanced.",
+                "List each crop's water need: rice = standing water; groundnut = well-drained; wheat = moderate.",
+                "Match opposite needs to opposite soils. Match the moderate need to the balanced soil.",
+                "Conclude: matching soil to crop is the foundation of agriculture — wrong match means poor yield even with good seeds and fertiliser."
+              ],
+              "commonMistakes": [
+                "Believing 'fertile soil' is one universal thing. Fertility depends on the CROP — sandy soil is fertile for groundnut, terrible for rice.",
+                "Confusing water retention with water content. Clay HOLDS water (retention) — that doesn't mean it always HAS water; it means once water is added, it stays."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is loam considered the 'best' soil for general farming?",
+                  "answer": "Loam combines clay's water-and-nutrient retention with sand's drainage and air access. Roots get moisture AND oxygen. Most vegetable, fruit, and grain crops do well in loam because their needs are 'middle of the road' — and loam IS the middle."
+                },
+                {
+                  "prompt": "A farmer's clay field gets waterlogged every monsoon, killing his groundnut crop. Suggest TWO interventions.",
+                  "answer": "(1) Add sand and organic matter to improve drainage — modifies the soil toward loam. (2) Build raised beds — physically elevates the root zone above the waterlogged base, draining downward. Often combined: amend AND raise."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                110,
+                111,
+                112
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t02_q15",
+              "prompt": "Design a simple experiment to compare the PERCOLATION RATE (how fast water drains) of three soil samples — sandy, clayey, loamy — using only items in a kitchen. Specify your method, what you measure, and rank the soils.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Method: Take three identical empty plastic bottles. Cut off the bottoms; flip them upside-down so the neck points down. Stuff a small piece of cotton in each neck (filter). Fill each with the SAME volume (e.g., 200 g) of one soil — bottle A sand, bottle B clay, bottle C loam. Hold each over a measuring cup. Pour the SAME volume of water (100 mL) into each at the same moment. Measure the TIME from pouring until the first drip stops, AND the volume collected. Result: bottle A (sand) drains in seconds, collects most of the water. Bottle B (clay) drips for many minutes, collects little (most water held in clay). Bottle C (loam) drains moderately. Ranking by percolation rate (fast → slow): sand > loam > clay.",
+              "solutionSteps": [
+                "Set up identical apparatus (same bottle, same cotton, same soil mass) so the only variable is soil type.",
+                "Pour same water volume at same time — controls input. Measure two outputs: time-to-drain and volume-collected.",
+                "Predict using particle size: large sand particles = big gaps = fast water flow. Small clay particles = tight pack = slow flow.",
+                "Loam should fall between the two — its mixed particle sizes give intermediate behaviour.",
+                "Conclude: rank by time (lowest = fastest percolation). Same ranking emerges from volume-collected."
+              ],
+              "commonMistakes": [
+                "Using different SOIL MASS in each bottle — more soil = more water held back, ruining the comparison.",
+                "Forgetting the cotton plug — soil falls through the neck and contaminates the collected water, making volume readings unreliable."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does this experiment predict about WATER LOGGING in clay fields?",
+                  "answer": "Clay's slow percolation means rain water sits on the surface (or in the topsoil) for a long time. Heavy monsoon rain on clay → waterlogged fields → drowned roots → crop death. This is why clay needs drainage channels and raised beds for many crops."
+                },
+                {
+                  "prompt": "If you added some sand to a clay sample, predict how the percolation rate changes.",
+                  "answer": "Increases — the sand particles introduce gaps between clay particles, opening flow paths. This is exactly how farmers improve heavy clay soils: amend with sand AND organic matter to shift toward loam-like behaviour."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                111,
+                112,
+                113
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -15304,6 +15919,75 @@
               "difficulty": 1,
               "pageRefs": [
                 129
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q22",
+              "prompt": "After running fast for 30 seconds, your legs feel sore the next morning, even though you've stopped running. Explain the chemistry behind this soreness — what your muscle cells did during the sprint and why the consequence shows up a day later.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "During the sprint, your muscle cells burned glucose faster than oxygen could be delivered. They switched to ANAEROBIC respiration — glucose → lactic acid + a little energy (instead of glucose + oxygen → CO2 + water + lots of energy). Lactic acid builds up in muscle tissue. After the run, the body slowly clears lactic acid by reconverting it (mainly in the liver) — but micro-tears in muscle fibres caused by overexertion + residual acidic environment cause inflammation. The full soreness peaks 24-48 hours later (called Delayed Onset Muscle Soreness). The 'lag' is the body's repair response, not the lactic acid itself (which clears within an hour).",
+              "solutionSteps": [
+                "Identify what changes during a sprint: oxygen demand exceeds supply.",
+                "Recall the two pathways: AEROBIC = glucose + oxygen → CO2 + water + 38 ATP. ANAEROBIC = glucose → lactic acid + 2 ATP.",
+                "During sprint: muscles use anaerobic pathway, lactic acid accumulates.",
+                "After sprint: lactic acid clears quickly (~1 hour), but micro-tears and inflammation take 24-48 hours to fully express.",
+                "Conclude: soreness IS related to anaerobic respiration but indirectly — through tissue damage that follows the metabolic overload."
+              ],
+              "commonMistakes": [
+                "Believing lactic acid 'stays in muscles for days'. It clears within an hour. The soreness is mostly inflammation from micro-damage.",
+                "Confusing the burning sensation DURING exercise (caused by lactic acid) with the soreness NEXT DAY (caused by tissue repair). Same root cause, different mechanisms."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does gentle walking the day after a hard workout actually REDUCE soreness?",
+                  "answer": "Increases blood flow to sore muscles, accelerating clearance of inflammatory byproducts and delivery of repair nutrients. The opposite of rest — gentle motion helps."
+                },
+                {
+                  "prompt": "Marathon runners train at SUSTAINED moderate pace, not max sprints. Explain why in terms of respiration.",
+                  "answer": "Sustainable distance running stays in AEROBIC respiration the whole time — oxygen meets glucose demand, almost no lactic acid builds up. The body uses fat as fuel efficiently. Anaerobic sprinting can't be sustained because lactic acid accumulates and forces you to slow."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                120,
+                121
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q23",
+              "prompt": "Yeast in dough makes bread rise; yeast in a sealed sugar-water bottle makes alcohol. Compare these two outcomes — same organism, same fuel (sugar) — and explain why the FINAL PRODUCTS differ. Then predict what would happen if you sealed the bread dough and left it for a week.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Same anaerobic respiration in yeast: glucose → ethanol + CO2 + a little energy. In BREAD dough: it's open to air; CO2 gas bubbles get trapped in the elastic gluten, lifting the dough. The small amount of ethanol evaporates during baking. We notice the RISE (CO2 effect). In SEALED sugar water: same chemistry, but ethanol accumulates and CO2 builds pressure. We notice the ALCOHOL (ethanol product). Sealed dough for a week: CO2 builds up but has nowhere to go; pressure pops the container. Ethanol accumulates and reaches toxic levels — kills the yeast. Result: a flat, alcoholic, dead-yeast lump. Same chemistry, different containers and timescales reveal different products.",
+              "solutionSteps": [
+                "Identify the single reaction: yeast does anaerobic respiration → glucose → ethanol + CO2.",
+                "In bread: open container + short time (~1 hr) + bake. We see CO2 trapped (rise), ethanol burns off.",
+                "In sugar water: closed container + long time (days). Ethanol builds up; this is brewing.",
+                "Sealed bread dough: combines worst of both — CO2 pressure builds, ethanol accumulates, yeast dies.",
+                "Conclude: same chemistry, different outcomes are entirely about container + time. This is the basis of both baking and brewing."
+              ],
+              "commonMistakes": [
+                "Believing yeast 'chooses' to make bread vs. alcohol. It does ONE reaction always — the conditions reveal one product or the other.",
+                "Forgetting that ethanol is TOXIC to yeast in high concentration. Brewers stop fermentation when ethanol reaches ~12-15% because the yeast literally poisons itself."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does bread dough's rise STOP when you bake it in the oven?",
+                  "answer": "Heat kills the yeast (cells denatured above ~60°C). No live yeast = no more CO2 produced = no further rise. Baking also sets the gluten structure, locking in the shape produced by the rise so far."
+                },
+                {
+                  "prompt": "Predict what happens if you put dough in a refrigerator overnight before baking.",
+                  "answer": "Slow rise. Yeast still does anaerobic respiration but at very reduced rate at 4°C. Some bakers use this 'cold proof' deliberately — slower fermentation builds more complex flavour compounds than a fast warm rise."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                120,
+                121,
+                122
               ],
               "needsHumanReview": false
             }
@@ -16430,6 +17114,75 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch11_t01_q22",
+              "prompt": "An adult's heart beats about 72 times per minute and pumps about 70 mL per beat. Calculate how much blood it pumps in 24 hours, and compare this to the volume of blood actually in the body (~5 L). Use the answer to explain what 'circulation' really means.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Volume per minute = 72 × 70 = 5040 mL ≈ 5 L. In 24 hours = 5 L × 60 × 24 = 7200 L. The body only has ~5 L of blood — so each litre is reused ~1440 times per day. 'Circulation' literally means the same blood is sent around and around, picking up oxygen, delivering it, picking up CO2, releasing it. The heart's job isn't to PUSH new blood through; it's to keep REPEATEDLY moving the same finite supply through every tissue, multiple times per minute.",
+              "solutionSteps": [
+                "Compute per-minute output: 72 beats/min × 70 mL/beat = 5040 mL ≈ 5 L per minute.",
+                "Scale to 24 hours: 5 L × 60 min × 24 hr = 7200 L per day.",
+                "Compare to body blood volume (5 L): 7200 / 5 ≈ 1440 cycles per day.",
+                "Interpret: 'circulation' is recycling — same blood, picked up and dropped off repeatedly. Not a one-way pipe but a continuous loop.",
+                "Note: at rest, the entire 5 L circulates roughly every minute."
+              ],
+              "commonMistakes": [
+                "Adding the numbers without checking units. 72 × 70 = 5040 — students sometimes report '5040 L per minute' (cm³ vs L confusion).",
+                "Forgetting that the body only has 5 L of blood. The 7200 L figure is RECIRCULATED volume, not produced volume. The body doesn't make 7200 L of fresh blood daily."
+              ],
+              "variations": [
+                {
+                  "prompt": "If your heart rate doubles to 144 bpm during exercise, how much more blood does it pump in an hour?",
+                  "answer": "Doubled output: 5 L/min × 2 = 10 L/min. In an hour: 600 L (vs. 300 L at rest). Exercise routes more oxygen to muscles AND clears CO2 faster — circulation is the throttle for energy delivery."
+                },
+                {
+                  "prompt": "A patient's heart pumps only 40 mL per beat instead of 70. To maintain normal output, what must happen to heart rate?",
+                  "answer": "To match 5 L/min: need 5040 mL ÷ 40 mL/beat = 126 beats/min. The body raises heart rate to compensate for weak pumping — explains why heart-failure patients have elevated resting heart rate (the body is trying to maintain delivery)."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                130,
+                131
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q23",
+              "prompt": "A patient's kidneys are failing and a doctor recommends dialysis 3 times a week. Explain what dialysis replaces, what would happen WITHOUT it, and design a thought-experiment that helps a Class 7 student understand WHY filtering blood is so essential.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Dialysis replaces the kidney's filtration job. Healthy kidneys filter ~180 L of blood per day, removing urea (toxic protein waste), excess water, excess salt. WITHOUT filtration: urea builds up in blood (uraemia) → nausea, confusion, organ failure, death within ~1-2 weeks. With dialysis 3x/week: a machine routes blood through a filter that does the same job — patient lives, though tied to a schedule. Thought experiment for a Class 7 student: imagine your house's dustbin can NEVER be emptied. After a day, smell. After a week, infestation. After a month, uninhabitable. The kidney is the body's dustbin emptier — running 24/7 to dispose of metabolic waste. Skip it, and the body 'fills up' with poison.",
+              "solutionSteps": [
+                "Identify the kidney's two jobs: (a) filter waste (urea, excess water/salt), (b) regulate fluid balance.",
+                "List what happens if (a) stops: urea accumulates, toxic to brain, heart, muscles — fatal within weeks.",
+                "Map dialysis to the missed function: external machine = artificial kidney, removes urea + excess fluid, returns clean blood.",
+                "Frame the analogy a young student grasps: dustbin / sink trap / car oil filter — all unglamorous, all life-critical, all run continuously.",
+                "Conclude: dialysis is one of the few medical interventions that can fully REPLACE a failed organ's job (most can only support). The patient lives because the engineering of the dialysis filter is remarkably close to nephron physiology."
+              ],
+              "commonMistakes": [
+                "Believing kidneys 'make urine' — kidneys make urine AS A BYPRODUCT of filtering blood. The blood-cleaning is the primary job; urine is just the disposal mechanism.",
+                "Underestimating how fast uraemia kills. Without ANY kidney function, death comes in days to weeks — faster than starvation, slower than asphyxiation."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is a kidney TRANSPLANT preferred over lifelong dialysis when possible?",
+                  "answer": "Transplanted kidney works 24/7, naturally regulates fluid and waste, no schedule constraint, better long-term survival rates. Dialysis is a part-time replacement (3 x 4 hours per week ≈ 12 hours of filtration vs. 168 hours of normal kidney work)."
+                },
+                {
+                  "prompt": "Design a simple model that demonstrates 'selective filtration' (kidney's key property) using paper and water.",
+                  "answer": "Mix sugar + small pebbles + water. Pour through a coffee filter — pebbles trapped, sugar+water pass through. Now improve: pass the filtrate through a second finer filter (membrane) that holds sugar back. Demonstrates that kidney uses LAYERS of progressively finer filtration — different things stopped at different stages. Real nephrons use 3 stages: glomerulus, tubule, collecting duct."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                134,
+                135,
+                136
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17339,6 +18092,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch12_t01_q19",
+              "prompt": "Compare a wind-pollinated flower (like wheat) and an insect-pollinated flower (like rose). Pick THREE physical features they will differ on, and explain how each feature is adapted to its pollination strategy.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "(1) Petals: wind-pollinated flowers have small, dull, often green or brown petals — petals serve no purpose for wind, which doesn't see colour, so the plant doesn't waste energy on them. Insect-pollinated flowers have large, bright, often patterned petals — billboards advertising to bees, butterflies, beetles. (2) Pollen: wind-pollinated pollen is light, dry, smooth, produced in massive quantities (millions per anther) — wind is a wasteful courier, so quantity compensates. Insect-pollinated pollen is sticky, heavier, produced in modest amounts — designed to cling to legs and bodies, delivered precisely. (3) Stigma and nectar: wind-pollinated has feathery, exposed stigmas to catch drifting pollen; no nectar (no rewards needed for wind). Insect-pollinated has compact stigmas tucked inside, with abundant nectar — bribes the insect to enter where the stigma waits.",
+              "solutionSteps": [
+                "Identify the pollination 'agent' and its capabilities/limits: wind is blind, random, abundant; insects can see, target, learn.",
+                "For each plant feature, ask: does this agent need it? Wind doesn't see → no need for showy petals. Insect needs guidance → big colourful petals.",
+                "Pollen quantity vs quality: wind = scattergun (mass), insect = precision delivery (sticky targeted).",
+                "Stigma architecture: catch drift (feathery, exposed) vs. position the visitor (compact, hidden, with nectar lure).",
+                "Conclude: morphology is downstream of strategy. The flower's body plan reveals its courier."
+              ],
+              "commonMistakes": [
+                "Believing 'big colourful flower = better flower'. Wheat's tiny green flower is NOT inferior; it's perfectly tuned to wind. Different solutions for different problems.",
+                "Assuming insects always work harder than wind. Wind moves trillions of pollen grains a day for free — but with terrible aim. Insects work less but with precision. Trade-off, not superiority."
+              ],
+              "variations": [
+                {
+                  "prompt": "Predict the features of a BAT-pollinated flower (some tropical flowers are pollinated by nectar-feeding bats).",
+                  "answer": "Bats fly at night and use echolocation more than vision: petals likely pale white or cream (visible in moonlight, not coloured), strong fragrance (echolocation augmented by smell), open from evening onward, large opening sized for a bat's snout, and very abundant nectar (bats are big, hungry visitors). Examples: agave, baobab."
+                },
+                {
+                  "prompt": "Why do hay-fever sufferers itch most in early summer?",
+                  "answer": "Wind-pollinated grasses release massive pollen clouds in early summer (peak grass growth). The lightweight grains float for kilometres and lodge in human nasal passages. Insect-pollinated flowers (the showy ones) cause far less hay fever — their sticky pollen doesn't waft into noses."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144,
+                145,
+                146
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_q20",
+              "prompt": "A scientist crosses a tall pea plant with a short pea plant. ALL the offspring are tall. When the offspring breed among themselves, ~3 of every 4 grandchildren are tall and ~1 is short. Use the idea of dominant and recessive traits to explain BOTH generations, and predict what would happen if you crossed two of the SHORT grandchildren together.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Each pea plant inherits two height alleles, one from each parent. 'Tall' (T) is DOMINANT; 'short' (t) is RECESSIVE. Cross 1: pure-tall (TT) × pure-short (tt) gives all Tt offspring — they show tall (dominance), but secretly carry one short allele. Cross 2 (Tt × Tt): the four equally-likely combinations are TT, Tt, Tt, tt. Three of these (TT, Tt, Tt) appear TALL because at least one T is present. Only tt is short. So 3:1 tall:short ratio in grandchildren matches what's observed. Prediction: crossing two SHORT grandchildren (both tt) gives only tt offspring — ALL short. No hidden tall allele exists in either parent.",
+              "solutionSteps": [
+                "Assign alleles: T = tall (dominant), t = short (recessive). Use uppercase/lowercase notation deliberately.",
+                "Cross 1: pure parents — TT × tt. Every offspring gets one T from one parent and one t from the other → all Tt → all appear tall.",
+                "Cross 2: Tt × Tt. Each parent gives T or t with equal chance → offspring genotypes TT, Tt, tT, tt in ratio 1:1:1:1.",
+                "Translate to phenotypes: TT/Tt/tT all show tall (3 of 4); tt shows short (1 of 4). Matches observed 3:1.",
+                "For the third cross (tt × tt): only t alleles available; every offspring is tt; all short. No tall can appear because no T is in the gene pool."
+              ],
+              "commonMistakes": [
+                "Confusing 'pure tall' (TT) with 'tall' (could be TT or Tt). Without a test cross, the two look identical but breed very differently.",
+                "Believing the 3:1 ratio happens for SMALL families. Mendel's ratio is statistical — needs hundreds of offspring to converge. In a 4-plant grandchild family, you might get 2:2 or 4:0 by chance."
+              ],
+              "variations": [
+                {
+                  "prompt": "How would you DESIGN a 'test cross' to distinguish a TT plant from a Tt plant if both look tall?",
+                  "answer": "Cross the unknown tall with a tt (short) plant. If unknown was TT: all offspring Tt → all tall. If unknown was Tt: half offspring Tt (tall), half tt (short) — 1:1 ratio reveals the hidden t. The short parent acts as a 'genetic probe' to expose hidden recessives."
+                },
+                {
+                  "prompt": "If 'short' were dominant and 'tall' recessive instead, predict the cross 1 outcome.",
+                  "answer": "Pure-short (SS) × pure-tall (ss) → all Ss offspring → all SHORT (since short would be dominant). The PHENOTYPE flips entirely. This shows that 'dominant' is a property of the allele relationship, not of the trait being 'better' or 'bigger'."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144,
+                145,
+                146
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -18345,6 +19168,75 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch13_t01_q23",
+              "prompt": "A car travels 100 km on a highway in 1 hour, then 20 km through city traffic in 1 hour. Calculate average speed for each segment AND for the whole trip. Explain why 'average speed for the whole trip' is NOT simply (highway speed + city speed) / 2.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Highway: 100 km / 1 hr = 100 km/h. City: 20 km / 1 hr = 20 km/h. Whole trip: total distance 120 km / total time 2 hr = 60 km/h. Naive average: (100 + 20) / 2 = 60 km/h — happens to match here ONLY because both segments took the same TIME (1 hour each). If segments had different times, the naive average would be wrong. Average speed is ALWAYS total distance over total time, never an arithmetic mean of segment speeds (unless times are equal). The trick: speed × time = distance, and the addition must happen in distance and time, not in speed.",
+              "solutionSteps": [
+                "For each segment: speed = distance / time. Highway 100/1 = 100, city 20/1 = 20.",
+                "For the whole trip: total distance = 100 + 20 = 120 km. Total time = 1 + 1 = 2 hr. Avg speed = 120/2 = 60 km/h.",
+                "Notice both segments are 1 hr — that's why arithmetic mean of speeds happens to equal weighted-by-time average.",
+                "Counterexample (mental check): 100 km/h for 3 hours + 20 km/h for 1 hour. Total = 300 + 20 = 320 km in 4 hr → 80 km/h. NOT (100+20)/2 = 60. Time-weighting matters.",
+                "Conclude: 'distance over time' is the only safe formula. Arithmetic means of speeds are an unsafe shortcut."
+              ],
+              "commonMistakes": [
+                "Using (speed1 + speed2) / 2 as average speed. Works only when the two TIMES are equal — a special case, not general.",
+                "Mixing up units. 100 km in 1 hr is 100 km/h. 100 km in 30 min must convert: 100/0.5 = 200 km/h. Time units matter."
+              ],
+              "variations": [
+                {
+                  "prompt": "A boy walks 1 km to school at 4 km/h, then rides his bike home 1 km at 16 km/h. What's his average speed over the round trip?",
+                  "answer": "Walk time = 1/4 = 0.25 hr. Bike time = 1/16 = 0.0625 hr. Total distance = 2 km. Total time = 0.3125 hr. Avg = 2 / 0.3125 = 6.4 km/h. NOT (4+16)/2 = 10. The bike segment was much faster but also much briefer — averaging speeds without time-weighting overstates the average."
+                },
+                {
+                  "prompt": "Why do average-speed cameras on highways measure average speed over a long stretch, not instantaneous speed?",
+                  "answer": "Because instantaneous-speed cameras can be cheated (slow down for 100m before the camera). Average over a long stretch forces sustained compliance — if you sped most of the time, the average exceeds the limit even if you braked briefly. Physics: distance/time over the whole stretch captures real behaviour."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                155,
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t01_q24",
+              "prompt": "Design a way to measure the AVERAGE SPEED of cars passing your school gate, using only a stopwatch, a measuring tape, and a notebook — no radar or police equipment. Predict possible sources of error and how you'd minimise them.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Method: mark two points 20 m apart along the road (use the measuring tape, mark with chalk). Stand near each point with one partner. As a car passes the first mark, start the stopwatch. Stop it when the car passes the second mark. Speed = 20 m ÷ time (in seconds). Record many cars in a notebook; compute the AVERAGE of these individual speeds. Errors and mitigations: (a) reaction time when starting/stopping stopwatch — averaging many cars cancels random reaction errors. (b) Hard to see the exact moment of crossing — use clear visual markers (chalk lines, traffic cones). (c) Different car sizes — measure from front bumper consistently. (d) Cars accelerating/decelerating in the 20m — pick a flat straight stretch with no junctions.",
+              "solutionSteps": [
+                "Identify the two measurements needed: distance and time. We have tools for both.",
+                "Pick a distance that's measurable accurately (20 m is achievable with a tape) AND long enough that human reaction time error (~0.3 s) is small relative to total time (~1 s at city speed) — error % = 0.3/1 = 30%, still high. Increasing to 50 m drops it to ~0.3/2.5 = 12%, much better.",
+                "Standardise the start/stop event (front bumper crosses the chalk line, observed by the partner standing right at the line).",
+                "Repeat for many cars and AVERAGE — random errors cancel; systematic errors (bias in chalk-line placement) do not, so check the tape twice.",
+                "Sources of systematic error to flag: ground slope, mid-stretch acceleration/braking, observer position relative to chalk line."
+              ],
+              "commonMistakes": [
+                "Using too short a stretch (5 m). Reaction time becomes a HUGE fraction of total elapsed time, drowning the actual measurement in error.",
+                "Trying to measure one car's speed exactly — high single-trial error. Many cars × average = much better."
+              ],
+              "variations": [
+                {
+                  "prompt": "How would you adapt this method to measure the speed of falling objects (e.g., a ball dropped from a tall window)?",
+                  "answer": "Mark two heights (say 1 m apart) on a wall. Drop the ball, time between passing first and second mark. Speed at that segment = 1 m / time. But falling objects ACCELERATE — speed at top of segment differs from bottom. Better: measure time from release to landing across a known height and use s = ½gt² formula."
+                },
+                {
+                  "prompt": "Could a smartphone replace the stopwatch in this experiment, and if so, what improvement does it offer?",
+                  "answer": "Yes — smartphone clocks measure milliseconds, while a human-controlled stopwatch is limited by ~0.3 s reaction time. Better still: video the car passing both marks and review frame-by-frame (60 fps = 0.017 s resolution). The tool that lets you measure smaller time intervals gives you smaller error."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                155,
+                156,
+                157
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -19491,6 +20383,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch14_t01_q28",
+              "prompt": "A circuit has a battery, switch, and three bulbs wired in series. One bulb burns out (filament breaks). What happens to the other two bulbs, and WHY? Compare this to the same three bulbs wired in PARALLEL — what happens there if one burns out, and why differently?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Series: current has only ONE path through all three bulbs. If any bulb's filament breaks, the path is broken — current = 0 for the entire circuit. ALL three bulbs go dark (even the working two). This is the 'old Christmas-light' problem — one bad bulb darkens the whole string. Parallel: each bulb has its OWN independent path to the battery. A break in one path doesn't affect the others. The two working bulbs stay LIT at their normal brightness. This is how house wiring works — fail of one fan/light doesn't kill the whole house. Why the difference: series = shared single path (one break = total break). Parallel = redundant paths (one break = isolated failure).",
+              "solutionSteps": [
+                "Visualise series: battery → bulb1 → bulb2 → bulb3 → back to battery. ONE loop. Any break stops everything.",
+                "Visualise parallel: each bulb on its own loop from battery and back. Three independent loops sharing only the battery.",
+                "Apply break logic: in series, break = open circuit = no current. In parallel, break of one branch only breaks THAT branch; others continue.",
+                "Connect to real-world: Christmas lights (older sets) wired series — one fail kills all. House wiring parallel — one appliance fail doesn't kill all.",
+                "Conclude: choose series for current-uniformity or simplicity; choose parallel for redundancy and independence."
+              ],
+              "commonMistakes": [
+                "Believing 'series is better because current is the same'. Same current is a feature for some applications (LED strips at low voltage) but a disaster for reliability.",
+                "Assuming parallel bulbs share the battery's energy equally. They share VOLTAGE (each gets the full battery voltage). Current splits between them based on resistance."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a house's wiring use parallel circuits for outlets, but series for a fuse/MCB?",
+                  "answer": "Outlets need redundancy (one device failure shouldn't kill the others) → parallel. The fuse needs to interrupt EVERYTHING on overload → it's placed in series with the whole circuit so when it blows, all downstream loads disconnect together. The roles are opposite — parallel for redundancy, series for emergency cutoff."
+                },
+                {
+                  "prompt": "Predict: if 3 identical bulbs in PARALLEL all drew 1A each, what's the total current from the battery? And in SERIES?",
+                  "answer": "Parallel: total = 1 + 1 + 1 = 3 A (sum of branch currents). Series: total = 1 A (same current through every bulb, since one path). The battery works harder in parallel (3x current) but each bulb gets full brightness; in series, each bulb gets reduced voltage so dimmer."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                165,
+                166,
+                167
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t01_q29",
+              "prompt": "Design a SAFE, simple way to detect whether a wall outlet in your home is 'live' (carrying current) without using a multimeter or any tool you might buy. Justify the safety of your method and the physics behind why it works.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Use a neon-bulb tester (sold cheaply as a flat-blade screwdriver with a neon lamp in the handle and a touch-plate at the end). To check: insert the metal blade into the outlet's LIVE slot (in India, usually the right slot of a 3-pin outlet) while resting your thumb on the touch-plate. If the outlet is live, the neon bulb glows. Physics: the neon bulb conducts at high voltage (~80 V minimum). With your body acting as a high-resistance path to ground, a tiny safe current (~microamps, harmless) flows through your body, through the bulb, and lights it. Safety: only microamps reach your body — far below the ~10 mA that's painful. NEVER use a bare wire or finger directly — that path is too conductive and could carry lethal current. The neon tester is the simplest safe option.",
+              "solutionSteps": [
+                "Identify the goal: detect AC voltage at the outlet WITHOUT bridging live-to-neutral with low resistance (which would cause shock or short).",
+                "Choose a method that is current-LIMITED by design. A neon bulb only conducts above ~80 V and even then requires very high resistance in series.",
+                "The user's body provides that high resistance to ground; the bulb completes the circuit; current stays at safe microamp levels.",
+                "Safety justification: the bulb itself is the current-limiter. Without it, a direct conductor would draw enough current to kill (~50-100 mA).",
+                "Conclude: a neon-bulb tester is the only safe 'no-meter' option. Anything cheaper or simpler (finger, wet finger, etc.) is dangerous."
+              ],
+              "commonMistakes": [
+                "'I'll just touch the wire with my finger to see if it tingles' — fatal mistake. The lethal current threshold (~50 mA) is below human sensitivity for the first instant; you may feel the shock only after it's already harmed you.",
+                "Confusing 'low voltage' with 'safe'. A 5 V USB-charger output is safe; mains 230 V is not. Voltage drives current through your body; the higher the voltage, the higher the current at the same body resistance."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a bird sitting on a high-voltage power line NOT get electrocuted, but a person on a ladder touching the same line would die?",
+                  "answer": "The bird's two feet sit on the SAME wire — no voltage difference between its feet → no current flows through it. The person on a ladder is connected to GROUND through the ladder. Touching the live line creates a voltage difference between line (~11 kV) and ground (0 V) → huge current through the person."
+                },
+                {
+                  "prompt": "Why does a 9 V battery feel safe to touch with both hands, but a 230 V outlet is dangerous, even though both involve 'voltage'?",
+                  "answer": "Body skin resistance is ~10,000-100,000 Ω. 9 V across 10,000 Ω = 0.9 mA — barely felt. 230 V across the same 10,000 Ω = 23 mA — painful and capable of stopping the heart. Voltage drives current through fixed resistance; the 25x voltage difference is the difference between 'harmless' and 'lethal'."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                167,
+                168,
+                169
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -20811,6 +21773,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch15_t01_q24",
+              "prompt": "You stand 2 m in front of a plane mirror. Where does your IMAGE appear to be, and how does its DISTANCE from the mirror change if you step backward 1 m more? What about the SIZE of the image — does it shrink because you're farther away?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Image is BEHIND the mirror at the same distance the object is in front. Initial: 2 m in front → image appears 2 m behind the mirror (4 m total apparent distance from you to image). After stepping back 1 m (now 3 m in front): image is 3 m behind the mirror (6 m apparent total distance). Size: the image is ALWAYS the same SIZE as the object — a plane mirror produces a 1:1 image. The image appears SMALLER VISUALLY because it's farther from your eye (just like a real person 6 m away looks smaller in your visual field than the same person 4 m away). Physical size unchanged; perceived size decreases with distance because of how your eye works, not how mirrors work.",
+              "solutionSteps": [
+                "Recall the plane-mirror rule: image distance behind = object distance in front. Always.",
+                "Compute initial: object 2 m in front → image 2 m behind. Distance object↔image = 4 m.",
+                "After step: object 3 m in front → image 3 m behind. Distance = 6 m.",
+                "Address size question: plane mirrors preserve size 1:1. Perceived size shrinks because visual angle shrinks with distance — same effect as looking at a person far away.",
+                "Conclude: distance changes; physical image size doesn't; visual experience of size does (because of perspective, not mirror physics)."
+              ],
+              "commonMistakes": [
+                "Saying 'the image is in the mirror'. The image is BEHIND the mirror — light reflects off the mirror surface but the brain interprets the rays as coming from a virtual point behind it.",
+                "Confusing visual angle with physical size. A coin at arm's length 'looks' bigger than the moon, but the moon is much larger physically. Mirror images obey the same perception rules."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does a plane-mirror image differ from a real photograph of yourself?",
+                  "answer": "Mirror image is LATERALLY INVERTED — left becomes right, right becomes left. A photograph is taken with light hitting a camera sensor — NO inversion (it shows you as others see you). That's why your face often looks 'wrong' to you in photos: you're used to your mirror-flipped self."
+                },
+                {
+                  "prompt": "Why is the minimum mirror height you need to see your full body equal to HALF your height, no matter how far you stand?",
+                  "answer": "Geometry: rays from your head to your eye and from your feet to your eye each bounce off the mirror midway between origin and eye (vertically). The mirror only needs to span from 'eye height' to 'foot to eye midpoint' — which is half your height. Distance from mirror doesn't matter; geometry stays the same."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                175,
+                176,
+                177
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_q25",
+              "prompt": "Design a periscope (a tool for seeing over a wall) using only TWO plane mirrors, a long cardboard tube, and tape. Specify the mirror angles, draw the light path in words, and predict what would happen if you accidentally set one mirror to 30° instead of 45°.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Setup: cut two openings in the tube — one at the top side, one at the bottom side, OPPOSITE each other. Fix the top mirror tilted at 45° so its reflective face points down-and-toward-the-side-opening. Fix the bottom mirror at 45° facing up-and-toward-the-opposite-side-opening. Light path: light enters the top opening horizontally → strikes top mirror at 45° → reflects downward through the tube → strikes bottom mirror at 45° → reflects horizontally out the bottom opening into the user's eye. Both 45° angles together total a 90° + 90° = 180° turn (full periscope offset). If one mirror were at 30°: angle of incidence ≠ angle of reflection-to-second-mirror — the light beam would miss the second mirror entirely (or strike it at a shallow angle). Image either not visible, or distorted/dim if a faint reflection still reaches the eye.",
+              "solutionSteps": [
+                "Recall the law of reflection: angle of incidence = angle of reflection (measured from the normal).",
+                "Pick 45° because incoming horizontal + outgoing vertical = 90° total turn at each mirror. Two such turns = 180° — image emerges parallel to its origin, offset by tube length.",
+                "Construct: top opening, top mirror at 45°, tube, bottom mirror at 45° (facing opposite direction), bottom opening at viewer's eye height.",
+                "Trace one light ray to verify alignment of both mirrors.",
+                "Predict 30° error: each mirror would reflect at a different angle; the geometry no longer chains to a vertical beam. Light from top would hit wrong spot at bottom — either escapes the tube wall or barely reaches viewer at distorted angle."
+              ],
+              "commonMistakes": [
+                "Putting both mirrors facing the SAME direction. They must face OPPOSITE directions — top scoops light in horizontally and sends it down; bottom catches it from above and sends it back out horizontally.",
+                "Using mirrors at 90° (flat in the tube). Light just passes through — no reflection toward viewer."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are real submarine periscopes built with PRISMS (using total internal reflection) instead of mirrors?",
+                  "answer": "Prisms don't lose brightness from a slightly tarnished back surface — total internal reflection at 45° in glass reflects ~100% of light. Mirror surfaces tarnish, scratch, and partially absorb light. Prisms also withstand pressure, temperature swings, and vibration better in a submarine."
+                },
+                {
+                  "prompt": "Modify the periscope design so that the user can see BEHIND themselves while facing forward.",
+                  "answer": "Use the same two-mirror principle, but arrange the second mirror so it points BACKWARD instead of forward. Light from behind enters one opening, bounces twice through 90° each = 180° turn, exits at the user's eye facing forward. Essentially a 'see-behind' rear-view mirror, common in trucks and tanks."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                177,
+                178,
+                179
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -22286,6 +23318,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch16_t01_q24",
+              "prompt": "Earth is 71% covered in water, yet less than 1% of it is usable for drinking. Explain WHY the apparent abundance is misleading — what kinds of water are NOT usable, and what does this mean for water-policy decisions in a city like Delhi?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Breakdown of Earth's water: ~97.5% is salt water in oceans — needs energy-intensive desalination to drink. Of the 2.5% freshwater, ~68.7% is locked in ice (glaciers, polar caps) — frozen, slow-melting, geographically remote. ~30.1% is groundwater (mostly deep, slow to recharge). Only ~0.3% is in lakes and rivers — surface water humans can easily access. So the ~99% 'unusable' breakdown is: salt + ice + deep groundwater. For Delhi: this means it cannot rely only on the Yamuna — surface water is a tiny fraction. Delhi must extract groundwater (depletes slowly), import from Tehri Dam (transports stored snow-melt), and increasingly invest in rainwater harvesting (catches the brief surface freshwater opportunity each monsoon). Policy: conserve, recharge, import — because the 'abundance' is geographic and chemical mirage.",
+              "solutionSteps": [
+                "Break down Earth's total water into its real fractions: salt vs. fresh; frozen vs. liquid; deep vs. surface.",
+                "Identify the truly accessible fraction: surface freshwater in lakes and rivers = ~0.3% of all water.",
+                "Apply to a city: a city draws from rivers, groundwater (slow), and reservoirs. None is unlimited.",
+                "Translate to policy: conservation (use less of the limited stock), recharge (replenish groundwater), import (move water from where it's available — Tehri Dam to Delhi).",
+                "Conclude: the 71% statistic is geographically true but chemically and accessibly misleading. Water policy must respect the much smaller usable fraction."
+              ],
+              "commonMistakes": [
+                "Quoting '71% water' as if it's all available. Most of it is ocean (salt) or ice (frozen). Saying 'water is abundant' is technically true but practically false.",
+                "Treating rainwater harvesting as a fringe activity. In a country where 30 days of monsoon delivers most annual freshwater, harvesting is THE most leveraged intervention — it converts brief surface availability into stored useable supply."
+              ],
+              "variations": [
+                {
+                  "prompt": "If desalination were free, would Delhi's water problem be solved?",
+                  "answer": "Partially. Delhi is 1000+ km from the sea — pumping desalinated water uphill across the Aravalli range is enormously energy-intensive. Coastal cities (Chennai, Mumbai) benefit much more from desalination. Inland Delhi's water solution must lean on groundwater recharge + import from upstream Himalayan reservoirs."
+                },
+                {
+                  "prompt": "Why are GLACIERS sometimes called 'water banks' of nations?",
+                  "answer": "Glaciers store frozen water over years/decades; release it slowly in summer when rivers depend on the melt. India's northern rivers (Ganga, Yamuna, Indus) depend on Himalayan glaciers for dry-season flow. Climate change shrinks these glaciers → less stored water for slow release → river flow becomes erratic. The 'bank' is being drawn down faster than it's being replenished."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                186,
+                187,
+                188
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t01_q25",
+              "prompt": "Design a rainwater harvesting system for your school's flat-roof building (say 500 m² of roof) that would supply water for the gardens through the summer. Specify components, capacity needed, and ONE pitfall you'd actively avoid.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Components: (1) Gutters along the roof edges to channel water. (2) Downpipes leading to a first-flush diverter (rejects the dirty first ~50 L of each storm so dust/bird-droppings don't enter the tank). (3) A coarse filter (sieve mesh) before the storage tank. (4) Storage tank — sized for the catchment: Delhi gets ~600 mm rain/year. 500 m² × 0.6 m = 300 m³ = 300,000 L total potential. Plan a 50,000 L underground tank (captures ~17% of total rain — practical given roof angle, evaporation, overflow). (5) Outlet tap + gravity-fed garden pipes; pump optional. (6) Overflow pipe routing excess to a recharge pit (refills groundwater). Pitfall avoided: forgetting the first-flush diverter. Without it, the first rain washes ALL roof dust + droppings into the tank, contaminating months of supply. The diverter is cheap (50 L bucket with auto-empty); skipping it ruins everything downstream.",
+              "solutionSteps": [
+                "List the chain: catch (gutter) → first-flush (reject dirty) → filter (remove leaves/grit) → store (tank) → use (gravity-fed taps) → overflow (recharge pit).",
+                "Size the tank: roof area × annual rainfall × realistic capture efficiency (15-25% accounting for losses).",
+                "For 500 m² × 600 mm × 17% ≈ 50,000 L. A buried RCC or HDPE tank works.",
+                "Pick one critical pitfall to call out — first-flush diversion — because skipping it makes the whole system worse than no system (concentrated contamination).",
+                "Conclude: rainwater harvesting is engineering + maintenance, not just a tank. Each component has a specific purpose; missing one breaks the chain."
+              ],
+              "commonMistakes": [
+                "Building only a tank without first-flush diversion or filter. The captured water becomes a microbial soup; storing it is worse than just letting rain flow away.",
+                "Oversizing the tank without considering monsoon concentration. Most rain in Delhi falls in ~30 days; the rest of the year supplies almost nothing. Tank must be sized to STORE the brief surge, not to be filled gradually."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the OVERFLOW pipe (routing excess water to a recharge pit) often more important than the tank itself in long-term water sustainability?",
+                  "answer": "Tank stores water for a few months. The recharge pit refills the GROUNDWATER — a resource shared by the whole neighbourhood, drawn down all year by everyone's borewells. Recharge pit's benefit compounds over decades; tank benefit ends at the next dry season. Long-term, the pit is the bigger lever."
+                },
+                {
+                  "prompt": "Could rainwater harvesting fully replace municipal water for the school's gardens?",
+                  "answer": "In Delhi: yes for the monsoon-fed months (July-Sept), partly for shoulder months, no for the long dry season. Hybrid system: gardens use harvested water in wet months, municipal water sparingly in dry months. Total municipal demand drops ~40-60%, a major saving."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                187,
+                188,
+                189
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -23246,6 +24348,76 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch17_t01_q23",
+              "prompt": "A forest is cut down to make farmland. Within a few years, the soil washes away in monsoon and the farmland's productivity collapses. Trace the chain of events from tree removal to soil erosion to crop failure, and explain why simply replanting a single crop won't recover the soil's lost properties.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Chain: (1) Trees removed → no more leaf canopy to break heavy rain → drops hit bare soil hard (splash erosion). (2) No tree roots holding soil → topsoil washes downhill in storms. (3) No leaf-litter decomposing → no replenishment of humus → soil loses organic matter and water-holding capacity. (4) Without humus, soil becomes hard-packed → infiltration drops → MORE runoff (vicious cycle). (5) After 2-3 monsoons, the original 30+ cm of fertile topsoil is reduced to a few cm of compacted subsoil. Crops fail because they can't reach down to nutrients. Why a single replacement crop doesn't recover the system: trees added MULTI-LAYER cover (canopy + understorey + leaf litter + root mass), continuous organic matter, deep root channels for water, and biodiversity that supported pollinators and pest control. A single-crop replant restores ONLY shallow root + small canopy — none of the deep architecture. Full recovery needs replanting a TREE community over 30+ years.",
+              "solutionSteps": [
+                "Identify the multiple roles a forest plays: rain interception, root binding, leaf litter input, water cycle moderation, biodiversity.",
+                "Trace what happens when each role is removed: rain hits bare → washes soil → no organic input → degraded → cropping fails.",
+                "Connect to crop failure: shallow-rooted crops can't access deep nutrients in a few cm of remaining soil.",
+                "Address replanting: a single crop replaces ONE role (vegetation cover). It doesn't restore canopy multi-layers, leaf-litter biology, mycorrhizal networks, root architecture.",
+                "Conclude: forests are SYSTEMS, not just lots of trees. Recovery requires re-establishing the system, which takes decades, not seasons."
+              ],
+              "commonMistakes": [
+                "Believing deforestation only affects 'wildlife'. Soil erosion AND watershed disruption AND climate microregulation also fail when trees go.",
+                "Thinking replanting any tree fixes the damage. Monoculture plantations (e.g., teak or eucalyptus) restore some cover but NOT biodiversity, soil chemistry, or water-cycle function."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the Western Ghats deforestation linked to flooding in Mumbai, even though Mumbai is on the coast?",
+                  "answer": "Forests in Western Ghats absorb monsoon rain over weeks; deforested slopes shed rain in hours. Excess runoff overwhelms urban drainage downstream. Mumbai's flooding is partly an upstream-forest-loss problem, not just local rain intensity."
+                },
+                {
+                  "prompt": "Predict what happens to a city's air quality when a nearby forest is cut down.",
+                  "answer": "Worsens significantly. Trees absorb CO2, particulate matter, and harmful gases (NO2, SO2) through their leaves. They also release moisture, cooling the air. Replacing forest with farmland or concrete: less CO2 absorbed, more dust, hotter surfaces, less humidity. Cities downwind of large forest losses see measurable air quality degradation within 5-10 years."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                195,
+                196,
+                197
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t01_q24",
+              "prompt": "Compare two reforestation strategies for a degraded hillside: (a) plant 1000 fast-growing eucalyptus saplings in straight rows, or (b) plant 200 mixed-species native saplings in irregular clusters with natural undergrowth. Which is BETTER for a long-term forest, and what does 'better' depend on?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Strategy (b) — mixed-species native cluster — is better for a long-term FOREST, though slower to look impressive. Why: (1) Biodiversity is recovered, not just tree cover. 200 native species support local pollinators, birds, mycorrhizae, and pest predators. (2) Multi-layer architecture (overstorey + understorey + ground cover) returns over decades, mimicking the original forest. (3) Native species are adapted to local soil and climate — survive without irrigation or fertiliser. (4) Soil chemistry recovers via diverse leaf-litter inputs. Strategy (a) — eucalyptus monoculture — looks better at year 2 (1000 vs. 200 saplings; eucalyptus grows fast) but: (1) eucalyptus depletes groundwater (high water use), (2) its leaf litter is allelopathic (suppresses undergrowth), (3) zero biodiversity recovery, (4) high fire risk. 'Better' depends on the goal: timber harvest in 7 years = (a) wins. Restored ecosystem in 50 years = (b) wins, by a huge margin.",
+              "solutionSteps": [
+                "Define 'better' — for forest restoration vs. timber harvest, the answer differs.",
+                "List the ECOLOGICAL functions a forest provides: biodiversity, soil, water cycle, climate, multi-layer canopy.",
+                "Evaluate each strategy against each function. Eucalyptus monoculture excels at biomass but fails on biodiversity, water, soil chemistry.",
+                "Evaluate native cluster: starts smaller, grows slower, but every other axis improves over decades.",
+                "Conclude: monocultures = timber plantations (industrial); native diverse plantings = forests (ecological). Different tools, different goals."
+              ],
+              "commonMistakes": [
+                "Equating 'more trees planted' with 'better reforestation'. A monoculture of 1000 trees is still a monoculture, NOT a forest.",
+                "Forgetting that fast-growing species often have hidden costs (water depletion, allelopathy, fire risk) that emerge over decades."
+              ],
+              "variations": [
+                {
+                  "prompt": "When IS a eucalyptus plantation the right choice?",
+                  "answer": "When the goal is timber/pulp production on degraded land that won't be a wild forest again anyway. Eucalyptus produces 5x the biomass per year of native species. As a TREE FARM (not a forest), it has a legitimate role — but it shouldn't be confused with forest restoration."
+                },
+                {
+                  "prompt": "Why is the Miyawaki method (dense, mixed native planting in small plots) considered a faster path to mature forest than spaced row planting?",
+                  "answer": "High density (3 saplings per m²) forces competition for light → trees grow UPWARD fast to reach canopy. Mixed species occupy different niches simultaneously. Within 10 years, a Miyawaki plot achieves canopy structure that would take a spaced plantation 30+ years. The method works because it MIMICS natural forest seedling competition."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                196,
+                197,
+                198
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -24053,6 +25225,77 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch18_t01_q21",
+              "prompt": "Trace the journey of the water that goes down your kitchen sink: from the drain to its eventual release back into a river. List the stages of a wastewater treatment plant, and explain what each stage removes and why that order matters.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Stages, in the order a WWTP uses them: (1) BAR SCREEN — large debris (plastic, rags, wood) removed mechanically. Done first because debris would clog later pumps and tanks. (2) GRIT CHAMBER — sand, gravel, coffee grounds settle out at slow flow. Done second because grit damages pumps and accumulates in tanks if not removed early. (3) PRIMARY CLARIFIER — slower flow lets oily fats float (skimmed) and heavy solids sink (raked out). Removes ~60% of suspended solids. (4) AERATION TANK — bacteria fed by air bubbles eat dissolved organic matter (this is the heart of secondary treatment). (5) SECONDARY CLARIFIER — settles out the bacteria that just ate the organics. (6) DISINFECTION — chlorine or UV kills surviving pathogens. (7) RELEASE to river — water now ~95% cleaned. Order matters because each stage handles a specific contaminant size/type, and removing larger stuff first PROTECTS the more delicate biological stages downstream.",
+              "solutionSteps": [
+                "Identify the four types of contaminants: large debris, grit, dissolved organics, pathogens.",
+                "Order treatment to remove LARGEST first (so they don't damage later stages), then progressively finer.",
+                "Primary stage = physical (settling + skimming). Secondary stage = biological (bacteria). Tertiary stage = chemical/UV.",
+                "Each stage feeds the next: primary's effluent is feedstock for secondary's bacteria.",
+                "Conclude: WWTP is a sequence of size/type filters, not a single magical step. The order is engineering — protect each stage from contaminants the previous stage couldn't catch."
+              ],
+              "commonMistakes": [
+                "Skipping the grit chamber in your mental model. Without it, sand wears out pumps within months — the most expensive equipment failure in a plant.",
+                "Believing chlorination 'cleans' the water. Chlorine only kills pathogens; it doesn't remove dissolved organic matter (bacteria did that earlier) or solids (clarifiers did that)."
+              ],
+              "variations": [
+                {
+                  "prompt": "What happens to the SOLIDS removed at each stage — where do they end up?",
+                  "answer": "Bar-screen debris → landfill. Grit → washed and landfilled. Primary sludge → digested (anaerobic bacteria break it down further, producing methane that powers the plant). Secondary sludge (the bacterial mass from the aeration tank) → also digested. Final digested sludge → dried and used as fertiliser (biosolids) or landfilled. Almost nothing goes to waste in a well-run plant."
+                },
+                {
+                  "prompt": "Why is COMBINED sewer systems (storm rain + sewage in one pipe) problematic during heavy rain?",
+                  "answer": "Heavy rain overwhelms the treatment plant's capacity. The plant must DUMP raw combined sewage into the river (a 'combined sewer overflow') because there's no time to treat it. Modern designs SEPARATE storm and sewage — storm goes to rivers directly (mostly clean), sewage to the plant (always treated). Old cities (Mumbai, parts of Delhi) still have combined systems and suffer this pollution event every monsoon."
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                205,
+                206,
+                207
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t01_q22",
+              "prompt": "Some old neighbourhoods use open drains for wastewater while modern parts use closed sewer pipes connected to a treatment plant. Compare these two systems on FOUR axes (health, smell, cost, maintenance) and recommend which to choose for a new city development.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Health: Open drains breed mosquitoes (dengue, malaria carriers), expose children to pathogens, and spread waterborne diseases during floods. Closed sewers: sealed from people and insects — drastically lower disease burden. Smell: Open drains stink, especially in summer; affect quality of life and property value. Closed sewers: contained, no smell at street level. Cost: Open drains are cheap to build (just dig a channel); closed sewers need pipes, pumps, manholes, and a connection to a treatment plant — 5-10x higher initial cost. Maintenance: Open drains clog with garbage and require weekly manual cleaning (often unsafe for workers); closed sewers require infrequent professional servicing but specialised equipment. Recommendation for a new city: closed sewers + treatment plant. The lifetime health and disease-prevention savings outweigh the upfront cost within 10-15 years. Retro-fitting later is much more expensive than building right the first time.",
+              "solutionSteps": [
+                "Evaluate each system on four explicit axes — not just one.",
+                "Health: count mosquito breeding + pathogen exposure + flood contamination.",
+                "Smell: a quality-of-life axis often dismissed but critical for residential acceptance.",
+                "Cost: upfront vs. lifetime cost — closed sewers have higher upfront but lower lifetime when health costs are included.",
+                "Maintenance: frequency × worker safety (manual scavenging of open drains is dangerous and stigmatised).",
+                "Conclude: closed sewer is the right choice for a NEW build. Retrofit is uneconomical; build it right initially."
+              ],
+              "commonMistakes": [
+                "Choosing the cheaper option (open drain) without counting public-health costs. Dengue/cholera outbreaks cost cities far more than the saved sewer construction.",
+                "Assuming closed sewers 'don't need maintenance'. They need less FREQUENT maintenance but more SPECIALISED — different workforce, not zero workforce."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does the Indian government specifically PROHIBIT manual cleaning of sewers (Prohibition of Employment as Manual Scavengers Act, 2013)?",
+                  "answer": "Manual scavenging is dangerous (toxic gases, drowning), demeaning, and historically tied to caste injustice. The law mandates mechanised cleaning (vacuum trucks, robotic cleaners) and protective equipment. Open drains, in particular, often shift this hazardous work to vulnerable communities — another reason to phase them out."
+                },
+                {
+                  "prompt": "Some communities use 'soak pits' instead of connecting to a sewer. When does this work, and when does it fail?",
+                  "answer": "Soak pits work when (a) population density is low, (b) groundwater is deep, (c) household wastewater volume is modest. They fail when density is high (pits overflow), groundwater is shallow (pits contaminate it), or wastewater contains synthetic chemicals (don't biodegrade in soil). A village can use soak pits; a city cannot."
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                206,
+                207,
+                208
+              ],
+              "needsHumanReview": false
             }
           ]
         },
