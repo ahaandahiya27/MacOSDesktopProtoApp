@@ -30,6 +30,15 @@ VALID_TYPES = {
     "trueFalse", "matchTheFollowing", "fillInBlank",
 }
 
+# QuestionVariation requires these per Subjects/ContentSchema/Question.swift
+# (struct QuestionVariation, lines 28-34). Missing solutionSteps on the
+# variations was the bug class that landed commit 6cdf722 broken before the
+# script grew this check.
+VARIATION_REQUIRED = {"prompt", "answer", "solutionSteps"}
+
+# MatchPair requires left/right per the same file (lines 38-42).
+MATCH_PAIR_REQUIRED = {"left", "right"}
+
 
 def validate(q, existing_ids):
     missing = REQUIRED - set(q.keys())
@@ -52,6 +61,40 @@ def validate(q, existing_ids):
         return "every authored question must ship >=2 variations"
     if not q.get("commonMistakes"):
         return "every authored question must ship >=1 commonMistake"
+
+    # Per-variation schema check. Without this, an authored variation
+    # missing `solutionSteps` decodes fine in Python (any dict accepted)
+    # but breaks Swift's Decodable conformance — the pack stops loading
+    # entirely on the iMac. The Phase 2 content commit on 2026-05-19
+    # landed broken because of this exact omission.
+    for i, v in enumerate(q["variations"]):
+        if not isinstance(v, dict):
+            return f"variations[{i}] must be a JSON object, got {type(v).__name__}"
+        v_missing = VARIATION_REQUIRED - set(v.keys())
+        if v_missing:
+            return f"variations[{i}] missing fields: {sorted(v_missing)} — Swift's QuestionVariation requires prompt, answer, solutionSteps"
+        if not isinstance(v["solutionSteps"], list):
+            return f"variations[{i}].solutionSteps must be a list (use [answer] as a one-step default if you don't have multi-step reasoning yet)"
+        for j, step in enumerate(v["solutionSteps"]):
+            if not isinstance(step, str):
+                return f"variations[{i}].solutionSteps[{j}] must be a string"
+        if not v["prompt"] or not v["answer"]:
+            return f"variations[{i}] prompt and answer must be non-empty"
+
+    # matchTheFollowing has its own dependent schema.
+    if q["questionType"] == "matchTheFollowing":
+        pairs = q.get("matchPairs") or []
+        if len(pairs) < 2:
+            return "matchTheFollowing requires >=2 matchPairs"
+        for i, pair in enumerate(pairs):
+            if not isinstance(pair, dict):
+                return f"matchPairs[{i}] must be a JSON object"
+            p_missing = MATCH_PAIR_REQUIRED - set(pair.keys())
+            if p_missing:
+                return f"matchPairs[{i}] missing fields: {sorted(p_missing)}"
+            if not pair["left"] or not pair["right"]:
+                return f"matchPairs[{i}] left and right must be non-empty"
+
     return None
 
 
