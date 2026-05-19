@@ -532,7 +532,11 @@ final class ChapterContentTests: XCTestCase {
     /// removing the commonMistakes (e.g., a copy-paste that drops the field).
     /// Add a chapter number to ZERO_MISSING_CMS once it's been backfilled.
     @MainActor func testCommonMistakesRatchet() {
-        let ZERO_MISSING_CMS: Set<Int> = [1, 2, 3, 5, 11, 13, 14, 15, 19]
+        // Every science chapter now ships zero-missing commonMistakes
+        // (closed 2026-05-19). New chapters added to the pack must be
+        // added here too, with their content scaffolded before merge.
+        let ZERO_MISSING_CMS: Set<Int> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                          11, 12, 13, 14, 15, 16, 17, 18, 19]
         guard let url = Bundle.main.url(forResource: "science_class7",
                                          withExtension: "json"),
               let data = try? Data(contentsOf: url),
@@ -550,6 +554,35 @@ final class ChapterContentTests: XCTestCase {
                 "commonMistakes; \(missing.count) question(s) now missing: \(missing). " +
                 "Either restore the missing entries, or (if the regression is intentional) " +
                 "remove this chapter from ZERO_MISSING_CMS in ChapterContentTests."
+            )
+        }
+    }
+
+    /// Per-chapter zero-missing-mnemonic ratchet — mirror of the
+    /// commonMistakes ratchet. The 2026-05-19 audit-pack-health
+    /// dashboard revealed all 190 concepts originally shipped with
+    /// empty `mnemonic` fields. Backfill in chapter-sized batches and
+    /// add each chapter number here once it reaches zero-missing.
+    /// Future content edits that drop a chapter below the floor fail CI.
+    @MainActor func testMnemonicsRatchet() {
+        let ZERO_MISSING_MNEMONICS: Set<Int> = [11, 15]
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        for chapter in pack.chapters where ZERO_MISSING_MNEMONICS.contains(chapter.number) {
+            let missing = chapter.topics.flatMap { $0.concepts }
+                .filter { ($0.mnemonic ?? "").trimmingCharacters(in: .whitespaces).isEmpty }
+                .map { $0.id }
+            XCTAssertEqual(
+                missing.count, 0,
+                "Ch.\(chapter.number) (\(chapter.title)) was previously at zero-missing " +
+                "mnemonics; \(missing.count) concept(s) now missing: \(missing). " +
+                "Either restore the missing entries, or (if intentional) remove this " +
+                "chapter from ZERO_MISSING_MNEMONICS in ChapterContentTests."
             )
         }
     }

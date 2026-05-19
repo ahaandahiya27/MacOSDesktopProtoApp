@@ -25,6 +25,14 @@ struct Concept: Codable, Hashable, Identifiable {
     let pageRefs: [Int]
     let needsHumanReview: Bool
 
+    /// Short memorable hook a 12-year-old can recall in an exam — usually
+    /// 1-2 sentences. Optional so older pack JSONs without this field
+    /// continue to decode unchanged. Added 2026-05-19 (Phase A of the
+    /// final-content sweep). The 2026-05-19 audit-pack-health.py dashboard
+    /// surfaced all 190 concepts shipping without this field; backfill
+    /// happens chapter-by-chapter with the testMnemonicsRatchet contract.
+    let mnemonic: String?
+
     // MARK: - Convenience
 
     /// Returns the explanation at the requested depth, or a sensible fallback

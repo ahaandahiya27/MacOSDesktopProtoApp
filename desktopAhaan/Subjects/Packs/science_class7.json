@@ -8461,7 +8461,9 @@
                 "Heat naturally flows from hot to cold until both reach the same temperature (thermal equilibrium).",
                 "This is the second law of thermodynamics in everyday language."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing heat 'rises' — it flows from HOT to COLD regardless of direction. A cold finger touching a hot pan: heat moves down into your finger."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8482,7 +8484,9 @@
                 "Mercury, alcohol, and digital thermometers all measure temperature.",
                 "Barometers measure air pressure."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing temperature with heat. Temperature = HOW HOT (degrees). Heat = ENERGY AMOUNT (joules). A tub of warm water has more heat than a candle flame even at lower temperature."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8503,7 +8507,9 @@
                 "The healthy normal is around 37 °C (98.6 °F).",
                 "Fever is anything above ~37.8 °C."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Reporting 36.5°C as 'normal'. The actual healthy range is 36.1-37.2°C; 37°C is the conventional reference. Anything >38°C is fever."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8524,7 +8530,9 @@
                 "In solids, vibrating particles pass energy to neighbouring particles.",
                 "No bulk movement of material — that's convection."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing conduction works in vacuum — it needs DIRECT CONTACT between particles. Empty space breaks the chain; that's why thermos flasks use vacuum."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8546,7 +8554,9 @@
                 "This bulk flow carries heat — convection currents.",
                 "Doesn't work in solids because particles aren't free to flow."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing convection with conduction. Convection = the FLUID ITSELF moves (hot air rises). Conduction = particles stay but heat passes along."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8567,7 +8577,9 @@
                 "The Sun heats Earth through 150 million km of vacuum — only radiation can do this.",
                 "Infrared radiation is the main heat-carrying type for everyday objects."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing radiation needs air. Sun's heat reaches Earth across 150 million km of vacuum via radiation — no medium needed."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8588,7 +8600,9 @@
                 "Metals (copper, aluminium) are great conductors.",
                 "Air, wood, plastic are insulators (poor conductors)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling water a 'good conductor'. Water conducts heat MUCH less efficiently than metals (water ~0.6 W/m·K, copper ~400 W/m·K). Water is a moderate conductor at best."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8609,7 +8623,9 @@
                 "Wool fibres trap millions of tiny air pockets.",
                 "Air conducts heat very poorly, so wool keeps body heat in (winter) and outside heat out (summer)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing wool itself is the insulator. Wool's FIBRES aren't special — the TRAPPED AIR between them is. Compress wool tightly and it loses most insulating value."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8630,7 +8646,9 @@
                 "Day: land hotter → air rises → sea breeze blows in from sea.",
                 "Night: land colder → air sinks → land breeze blows out to sea."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing land and sea heat the same. Land heats and cools ~5x faster than water (specific heat capacity difference). That difference DRIVES the breezes."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8651,7 +8669,9 @@
                 "Dark surfaces absorb most visible light, converting it to heat.",
                 "White / light colours reflect most light, staying cooler — better for hot climates."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'because dark colours look hot'. Real reason: dark surfaces ABSORB more sunlight (high absorptivity). Light surfaces reflect more, stay cooler."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -8671,7 +8691,9 @@
                 "The silvered inside walls reflect radiation back.",
                 "Together they keep contents hot or cold for hours."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing a thermos only stops one mode. It stops THREE: vacuum stops conduction + convection; reflective walls stop radiation. Multi-mode defense."
+              ],
               "difficulty": 4,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -9415,7 +9437,9 @@
                 "The metal spoon is a solid, so it's conduction.",
                 "No bulk movement of fluid (convection) and no radiation through vacuum here."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'convection' — convection needs fluid flow. The metal spoon is solid; heat moves by particle-to-particle contact = conduction."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -9456,7 +9480,9 @@
                 "Radiation does not need a medium.",
                 "Sun's heat travels as electromagnetic waves through space."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the Sun's heat 'travels in air'. There's no air between the Sun and Earth — radiation travels through space."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -9473,7 +9499,9 @@
                 "Wood and plastic conduct heat poorly — they are insulators.",
                 "Insulator handles keep your hand safe while metal walls do the cooking."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'wood is cheaper than metal'. The real reason is THERMAL CONDUCTIVITY: wood is a poor conductor (insulator), so handle stays cool while the pot conducts heat to the food."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -9817,7 +9845,9 @@
               "solutionSteps": [
                 "The hypothalamus in the brain keeps the core body temperature near 37 C through mechanisms like sweating and shivering."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Reporting normal body temp in Fahrenheit when asked for Celsius. 37°C = 98.6°F. The unit must match the question."
+              ],
               "variations": [
                 {
                   "prompt": "The normal human body temperature is maintained at about: (Variation)",
@@ -9840,7 +9870,9 @@
               "solutionSteps": [
                 "Q = m x c x delta-T = 2 x 4200 x (70-20) = 2 x 4200 x 50 = 420,000 J."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Forgetting the specific-heat-capacity step. Formula: Q = m·c·ΔT. c for water = 4200 J/kg/°C. So Q = 2 × 4200 × (70-20) = 420,000 J."
+              ],
               "variations": [
                 {
                   "prompt": "How much heat energy is needed to raise the temperature of 2 kg of water from 20 C to 70 C? (Specific heat capacity of water = 4,200 J/kg C) (Variation)",
@@ -9863,7 +9895,9 @@
               "solutionSteps": [
                 "The key link is between radiation (infrared heat from Earth), greenhouse gases (CO2 absorbs and re-emits this radiation), and the resulting temperature rise."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'fossil fuels are just fuels'. CO2 released traps heat radiation in atmosphere → greenhouse effect → global warming. The CO2 is the key intermediary."
+              ],
               "variations": [
                 {
                   "prompt": "Explain how the burning of fossil fuels contributes to climate change, using the concept of heat radiation. (Variation)",
@@ -9888,7 +9922,9 @@
                 "Black absorbs almost all wavelengths and converts them to heat.",
                 "In summer we want to reflect heat away → light/white clothes."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'light colours feel cooler psychologically'. The mechanism is PHYSICAL — light colours REFLECT sunlight, so less absorption, less heating."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -9954,7 +9990,9 @@
                 "It doesn't wet glass, so readings are clear.",
                 "It has a wide range (-39 °C to 357 °C) covering body and lab temperatures."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing mercury is used 'because it's silver and looks nice'. Real reasons: uniform thermal expansion + doesn't wet glass + wide liquid temperature range."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -9976,7 +10014,9 @@
                 "Above 38 °C is fever.",
                 "Below 35 °C is hypothermia."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Reporting 36°C (slightly low) or 37.5°C (slightly high). 37°C is the convention. Range is actually 36.1-37.2°C."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -11872,7 +11912,9 @@
                 "Physical changes don't create new substances, so the original can usually be recovered (ice → water → ice).",
                 "Some are not easily reversible (cutting paper) but the substance itself is unchanged."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'most physical changes' is wrong. Test: can you undo it with cooling/freezing/dissolving? Yes for most physical changes (melting, freezing, dissolving). No for chemical changes."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -11965,7 +12007,9 @@
                 "Heat/light, gas, permanent colour change, formation of a new solid — all signs of chemical change.",
                 "Just moving a substance doesn't change it chemically."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'colour change' as not-a-sign — colour CHANGE is a strong indicator of chemical reaction (e.g., banana browning). Moving to a new container is purely positional, no chemistry."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12078,7 +12122,9 @@
                 "Rust is iron oxide — formed by iron reacting with oxygen (and water).",
                 "Most of the air is nitrogen, but it's the small fraction of O₂ that does the rusting."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'nitrogen' — nitrogen makes up 78% of air but doesn't oxidise iron at normal conditions. Oxygen does."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12112,7 +12158,9 @@
               "solutionSteps": [
                 "Chemically, rust is hydrated iron(III) oxide."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling rust 'iron sulphate' (the blue compound for displacement experiments). Rust is specifically iron OXIDE (hydrated, Fe2O3·nH2O)."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12133,7 +12181,9 @@
                 "Slow cooling gives molecules time to arrange themselves into a clean lattice → bigger, well-formed crystals.",
                 "Fast cooling produces many small disorderly crystals."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing crystals form 'faster when cooled fast'. Opposite: SLOW cooling gives LARGER, more ordered crystals. Fast cooling gives many tiny crystals or amorphous solid."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12153,7 +12203,9 @@
                 "Some can be reversed under special conditions (electrolysis can split water back to H₂ + O₂).",
                 "In general, assume chemical changes are NOT easily reversible."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'chemical change' implies reversible. Chemical changes are NOT always reversible — burning paper can't be un-burned. Photosynthesis IS the slow biological reverse of burning, but no quick reversal."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12174,7 +12226,9 @@
                 "The defining test of a chemical change is the appearance of a new substance.",
                 "Property changes alone (colour, volume) can also occur in physical changes."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'heat released' — heat alone can be from physical processes (rubbing hands warm). The BEST single sign is a NEW SUBSTANCE with different properties."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -12537,7 +12591,9 @@
                 "Pure crystals of the solid form; impurities stay dissolved.",
                 "Examples: sugar from sugarcane juice, salt from sea water, copper sulphate."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing crystallization 'creates' the solid. The solid was always there (dissolved). Crystallization concentrates it by removing solvent slowly."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -12555,7 +12611,9 @@
                 "Heat gently and let water evaporate.",
                 "Pure salt crystallises out, leaving behind soluble impurities."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Skipping the FILTERING step — rock salt has insoluble impurities (dirt). Filter the dissolved solution FIRST, then crystallize the clean filtrate."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -12572,7 +12630,9 @@
                 "Crystallization: cool slowly → only pure solute forms crystals.",
                 "That's why factories use crystallization to make pure sugar and pharmaceuticals."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing crystallization is 'just evaporation'. Slow evaporation gives crystals; fast evaporation gives a powdery residue. The slowness IS the purification mechanism."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -12594,7 +12654,9 @@
                 "On slow cooling, pretty blue crystals form.",
                 "They have a tilted (triclinic) shape — easy to grow at home as a science project."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling copper sulphate 'green' or 'red'. The hydrated form (CuSO4·5H2O) is brilliant blue; anhydrous is white. The triclinic crystal shape gives them facets that catch light."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -12616,7 +12678,9 @@
                 "Snowflakes form when water vapour crystallises in cold air.",
                 "Boiling rice is just water absorbing into rice — no crystals form."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'salt manufacturing' or 'sugar manufacturing' — both ARE crystallization examples. Boiling rice involves NO crystallization (no dissolved solid coming out)."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -13284,7 +13348,9 @@
                 "Weather changes hourly / daily: today might be sunny, tomorrow rainy.",
                 "Climate is the long-term average of weather in a region (usually 30+ years)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing weather with climate. Weather = TODAY (short-term); climate = AVERAGE OVER YEARS (long-term pattern)."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13306,7 +13372,9 @@
                 "Today's Mumbai weather might be cloudy and rainy.",
                 "Climate = long-term; weather = short-term."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling climate 'today's weather pattern'. Climate is the 30-year average of weather, not a single day or season."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13328,7 +13396,9 @@
                 "Polar bears, seals, whales all rely on blubber.",
                 "Camels store fat in their hump for water and energy, but not for insulation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing blubber helps in TROPICAL animals. Blubber is specifically for COLD-environment animals (polar bears, whales, seals)."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13349,7 +13419,9 @@
                 "White fur blends with snow and ice — helps stalk seals.",
                 "Their fur is actually translucent; it scatters light, looking white."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing white fur is 'just for camouflage'. It's BOTH camouflage AND insulation — the hollow white hairs trap air for warmth."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13371,7 +13443,9 @@
                 "Long eyelashes keep sandstorms out of eyes.",
                 "Wide feet stop them sinking in sand."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing camels store WATER in their hump. They store FAT. Water is conserved separately via concentrated urine and dry dung."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13392,7 +13466,9 @@
                 "Tropical = near the equator → year-round warm.",
                 "Heavy rainfall = lush green forests, very high biodiversity."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling rainforests 'hot but dry'. They're hot AND humid — heavy rainfall is the defining feature."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13413,7 +13489,9 @@
                 "Migration is an annual cycle driven by food availability and breeding.",
                 "Arctic terns migrate the longest known route — Arctic to Antarctic and back."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing migration is 'random wandering'. Birds follow fixed routes, often the same individual returns year after year."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13434,7 +13512,9 @@
                 "Penguins can't fly but are great swimmers.",
                 "They huddle to share warmth, rotate the outer birds inward to stay equally warm."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'they fly south'. Penguins don't fly. They huddle for warmth and have multi-layer insulation."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13456,7 +13536,9 @@
                 "Example: owls, bats, leopards (often).",
                 "Diurnal = active during the day."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling night-active animals 'crepuscular' — that's twilight/dawn animals. NOCTURNAL = night."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13477,7 +13559,9 @@
                 "The beak is light but long — reach fruit branches that wouldn't hold the bird.",
                 "Recent research shows toucan beaks also act as heat radiators."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the beak is 'just for show'. It works as both: reaching distant fruit AND radiating excess body heat (large surface area)."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13498,7 +13582,9 @@
                 "Elephants in hot grasslands use their huge ears as radiators to dump body heat.",
                 "Forest cats live in shadier, cooler habitats — they don't need oversized ears."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing big ears 'hear better'. Elephant's massive ears are HEAT RADIATORS — vast surface area lets desert heat escape. Forest cats don't need that cooling."
+              ],
               "difficulty": 4,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13520,7 +13606,9 @@
                 "Body temperature, heart rate, breathing all drop — energy lasts much longer.",
                 "Aestivation is the same idea in summer (e.g. lungfish)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing hibernation is 'just sleeping'. Heart rate drops to ~5 bpm, body temperature near freezing, almost no breathing. Profound metabolic shutdown, not regular sleep."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13539,7 +13627,9 @@
                 "After days of dehydration, camels can rehydrate very rapidly.",
                 "Their red blood cells are uniquely shaped to handle the swelling without bursting."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing camels 'always need to drink a lot'. They can go WEEKS without drinking; they binge-drink when water IS available to top up stores."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13555,7 +13645,9 @@
                 "Diurnal animals sleep at night.",
                 "Nocturnal animals do the opposite."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing diurnal (day-active) with nocturnal (night-active). 'Diurnal' shares root with 'day' (Latin dies)."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -13975,7 +14067,9 @@
                 "White fur camouflages them when sneaking up on seals.",
                 "Also, the hollow hairs trap air and act as insulation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing white fur is 'just for camouflage'. White fur is BOTH camouflage (predators don't see them on snow) AND insulation (hollow hairs trap air)."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -13992,7 +14086,9 @@
                 "Their thick fat layer is an excellent insulator.",
                 "Blubber also stores energy when food is scarce."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling blubber 'just fat for energy'. Fat IS energy storage, but in cold environments it doubles as insulation due to low thermal conductivity."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -14034,7 +14130,9 @@
                 "Less heat is absorbed by the skin — important in hot regions.",
                 "Many desert and savanna animals share this adaptation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing tropical animals have 'thick black fur'. Light-coloured fur reflects sunlight, keeps body cooler. Tropical mammals: gazelles, deer, antelopes — often light brown/tan."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -14056,7 +14154,9 @@
                 "Penguins rotate so each gets a turn in the warm centre.",
                 "It is one of the most efficient natural heat-saving strategies."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing penguins huddle 'for social reasons'. Primary function is HEAT RETENTION — huddled penguins lose far less body heat to the air than solo ones."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -14713,7 +14813,9 @@
                 "Air has mass and weight; that weight pressing on surfaces is air pressure.",
                 "Measured with a barometer in units like millibar or Pascal."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'air weight'. Pressure is FORCE per AREA, not weight. Weight is force only; pressure depends on the area it acts over."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -14805,7 +14907,9 @@
                 "Tropical oceans (>26 °C) provide this fuel by evaporation.",
                 "Once over cold water or land, cyclones weaken quickly."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing cyclones can form 'anywhere with low pressure'. They specifically need warm tropical OCEANS (sea surface >26°C) for the energy and moisture supply."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -14827,7 +14931,9 @@
                 "Wind vane (arrow on a pivot) → wind direction.",
                 "Barometer measures air pressure; altimeter measures altitude."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing anemometer and barometer. Anemometer = WIND speed. Barometer = air PRESSURE. Both meteorological but different measurements."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -14846,7 +14952,9 @@
                 "The intense low pressure at the centre is what drives the surrounding winds inward.",
                 "Air rushes in to fill the low-pressure 'hole' — that's the cyclone wind."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the eye has 'higher' pressure. The eye is the LOWEST pressure point — air converges there from all sides because of the pressure gradient."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -14867,7 +14975,9 @@
                 "Earth spins eastward. As air moves from one latitude to another, its straight path appears to curve relative to the rotating surface.",
                 "This is the Coriolis effect; it makes cyclones rotate (anti-clockwise in the Northern Hemisphere)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing winds curve 'because Earth is round'. The shape matters but the mechanism is the CORIOLIS EFFECT from rotation. A static round Earth wouldn't have Coriolis."
+              ],
               "difficulty": 4,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15235,7 +15345,9 @@
                 "Hot air over land rises; cool sea air rushes in.",
                 "Direction: sea → land. Time: day."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'night' — sea breeze blows from sea to land DURING THE DAY (when land is hotter). Night reverses to land breeze (when land cools faster than sea)."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -15257,7 +15369,9 @@
                 "Water has very high specific heat — it heats up and cools down slowly.",
                 "Land changes temperature fast; sea lags behind — this drives the breeze cycle."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'salt content' or 'wind speed' — those don't drive breezes. Water's HIGH specific heat capacity (taking longer to warm/cool than land) is the cause."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -15274,7 +15388,9 @@
                 "Coastal places enjoy a steady sea breeze from cooler water.",
                 "That's why Mumbai (coastal) feels milder than Delhi (inland) in May."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing coastal cities are cooler 'because of altitude'. Most coasts are sea level; the difference is the SEA BREEZE moderation, not altitude."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -15296,7 +15412,9 @@
                 "This circular movement is convection.",
                 "Sea breeze and land breeze are both daily convection cycles."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing convection with conduction. Sea breeze involves AIR FLOW (hot air rises over land, cool sea air flows in to replace it) = convection."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -15432,7 +15550,9 @@
                 "When the voltage difference becomes huge, a lightning bolt jumps to neutralise it.",
                 "Thunder is the sound of air rapidly heated by the bolt."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing lightning is 'from above only'. Lightning is electrical discharge BETWEEN regions of different charge — cloud-to-ground, cloud-to-cloud, even ground-to-cloud."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15503,7 +15623,9 @@
                 "The IMD tracks cyclones with satellites + radar and issues alerts.",
                 "ISRO operates weather satellites that IMD uses, but IMD is the issuer."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Naming NASA or WMO — those are international. IMD (Indian Meteorological Department) issues India-specific cyclone warnings."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15518,7 +15640,9 @@
               "solutionSteps": [
                 "The eye is a region of clear skies and very low wind — surrounded by the violent eyewall."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling the eye 'the windiest part'. The eye is CALM. The EYE WALL (just around the eye) has the strongest winds."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15861,7 +15985,9 @@
                 "Big particles + big gaps → water flows through easily.",
                 "Clay is the slowest; loam and silt are in between."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'clayey' — clay has very tight packing, water drains slowly. Sandy soil has large gaps and percolates fastest."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15882,7 +16008,9 @@
                 "Humus is dead plant and animal matter that has been broken down by decomposers.",
                 "It is rich in nutrients and helps soil hold water and bind together."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling humus 'soil' — humus is the organic component of soil specifically, the decayed plant/animal matter. Soil includes mineral particles, air, water too."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15904,7 +16032,9 @@
                 "Repeated wet-dry cycles open up wide cracks in clay-rich soil.",
                 "Sandy soil doesn't form cracks like this."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'sandy' — sand particles don't bind together, so they don't crack. Clay shrinks dramatically when drying, creating the iconic cracks."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15926,7 +16056,9 @@
                 "Below topsoil is subsoil (less humus) and then weathered rock.",
                 "Topsoil takes centuries to form; losing it to erosion is a big problem."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing topsoil with subsoil. Topsoil (first ~30 cm) is dark, rich in humus. Subsoil is lighter, less organic matter, more mineral particles."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15941,7 +16073,9 @@
               "solutionSteps": [
                 "Humus is the dark, organic component that makes soil fertile."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling it 'compost' — compost is human-MADE decayed matter (often added TO soil). Humus is the naturally-decayed material already IN soil."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -15963,7 +16097,9 @@
                 "B horizon = subsoil. Lighter, contains minerals washed down from A.",
                 "C horizon = parent rock. Below that lies bedrock."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'subsoil' or 'parent rock' — those are deeper layers. Topsoil is the FIRST visible layer, where most plant life is."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -15985,7 +16121,9 @@
                 "These properties suit cotton perfectly.",
                 "Maharashtra, Gujarat and Madhya Pradesh are big cotton producers — they have black soil."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'rice' — rice needs CLAY soil for water retention. Black soil's mineral content (especially in central India) suits cotton specifically."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -16002,7 +16140,9 @@
                 "The dark crumbly residue is humus.",
                 "It supplies nitrogen, phosphorus and potassium and improves soil structure."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying humus 'adds water'. Humus IMPROVES water retention by binding clay particles into a sponge-like structure. It doesn't add water itself."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -16377,7 +16517,9 @@
                 "Soil isn't just dirt — it's an ecosystem.",
                 "Rock particles + water + air pockets + decaying matter + bacteria/worms/fungi all make up soil."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling soil 'just dirt and rocks'. Soil is also AIR (in pore spaces), WATER (capillary), ORGANIC MATTER (humus), and a microbial COMMUNITY. Five components, not two."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16399,7 +16541,9 @@
                 "Big particles → big gaps → water drains quickly → poor at holding water and nutrients.",
                 "Good drainage, poor fertility."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling sand 'fine'. Sand particles are 0.05-2 mm — clearly visible without magnification, definitely coarse vs. clay's <0.002 mm."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16421,7 +16565,9 @@
                 "They stick together when wet, retain water and nutrients, but are hard to till.",
                 "Pottery is made of clay because of this stickiness."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing clay 'drains well'. Opposite: clay's tightly packed particles slow drainage. Sticky when wet, hard when dry."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16442,7 +16588,9 @@
                 "Loam combines the drainage of sand and the nutrient-holding of clay.",
                 "It is the favourite soil of most crops."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling loam 'sandy-clay'. Loam is a BALANCED mix of all three (sand + clay + silt) — typically ~40-40-20. Just 'mixed sand and clay' would be a different soil type."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16464,7 +16612,9 @@
                 "Higher rate = more drainable soil (e.g. sandy).",
                 "Lower rate = water holds longer (e.g. clayey)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing percolation with absorption. Percolation = water DRAINING DOWN. Absorption = particles SOAKING UP. Different processes."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16486,7 +16636,9 @@
                 "Together they hugely reduce how much soil washes off.",
                 "Removing plants exposes bare soil to wind and rain."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'covering with plastic' — plastic blocks water entirely AND stops the soil's biological activity. Vegetation roots bind soil naturally."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16508,7 +16660,9 @@
                 "Groundnuts grow well in sandy soil because their pods develop underground in loose grains.",
                 "Rice and lotus need waterlogged conditions — clay soils."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Suggesting 'rice'. Rice needs water-retaining clay. Sandy soil's quick drainage suits drought-tolerant crops like cacti and groundnuts."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16530,7 +16684,9 @@
                 "Cereal crops then use that nitrogen.",
                 "Alternating crops keeps any one nutrient from being depleted."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing crop rotation is 'just for variety'. Different crops draw different nutrients; legumes (peas, beans) RESTORE nitrogen. Rotation maintains soil fertility."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16549,7 +16705,9 @@
                 "Clay particles are tiny and pack tightly — water seeps very slowly.",
                 "Sandy soil drains the fastest."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing clay drains faster than sand — opposite. Clay's small particles pack tightly; sand's large particles leave gaps for fast drainage."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16876,7 +17034,9 @@
                 "Cutting flat steps holds water and soil in place.",
                 "Each terrace holds a small field of crops that wouldn't grow on the slope itself."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing terraces are 'just for flat fields'. Their PURPOSE is on slopes: each terrace level catches water and topsoil that would otherwise wash downhill."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -16898,7 +17058,9 @@
                 "Terraces cut steps into the slope — flat fields that hold water.",
                 "Topsoil stays in place; water sinks instead of running off."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'flat farming' — flat works for flat land, doesn't help on slopes. Terracing specifically converts slope into stepped flat zones."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -16915,7 +17077,9 @@
                 "Trees planted as a 'shelter belt' break the wind's speed.",
                 "Behind the trees, soil stays in place — crops protected."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing tree rows 'just look nice'. They reduce wind speed by 50% behind them, cutting wind-erosion of topsoil dramatically."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -16937,7 +17101,9 @@
                 "Rotating with legumes (pulses) actually puts nitrogen back.",
                 "The soil stays balanced and productive year after year."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'rotation gives soil rest' — partly true but missing the chemistry. Different crops USE and ADD different nutrients (legumes add nitrogen)."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -16954,7 +17120,9 @@
                 "Heavy grazing strips the grass cover.",
                 "Bare exposed soil is washed away by rain or blown by wind — erosion accelerates."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing overgrazing 'just removes grass'. The grass roots that held soil also die. Without root binding, the next rain washes topsoil away."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -16977,7 +17145,9 @@
                 "Mulching covers bare soil with straw — reduces evaporation and erosion.",
                 "Excessive pesticides kill earthworms and microbes — they actually HARM soil."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'crop rotation' or 'terracing' — both ARE conservation methods. EXCESSIVE pesticide use damages soil microbes; that's the harmful practice."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -17114,7 +17284,9 @@
                 "Air comes in through the nostrils or mouth.",
                 "It then travels through the trachea (windpipe) into the lungs."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing air enters only through the mouth. Nose has filters (hairs) and warming systems; mouth is backup. Both routes meet in the throat."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17136,7 +17308,9 @@
                 "Their thin walls let O₂ pass into the blood and CO₂ pass out of it.",
                 "Aorta is the main artery; auricles are heart chambers."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing alveoli with bronchi. Bronchi are the LARGER tube branches; alveoli are the TINY balloon-like sacs at the very end. Gas exchange happens in alveoli."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17158,7 +17332,9 @@
                 "When it contracts and moves down, the chest cavity expands and air flows in (inhalation).",
                 "When it relaxes and moves up, air is pushed out (exhalation)."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling the diaphragm 'a bone'. It's a sheet of MUSCLE separating chest from abdomen. Contracts to inhale, relaxes to exhale."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17180,7 +17356,9 @@
                 "If it spasms (sudden involuntary contraction), air rushes in and the vocal cords snap shut — making the 'hic' sound.",
                 "Drinking water and breath-holding often calm the diaphragm."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing hiccups are 'caused by food'. They're caused by the diaphragm CRAMPING — irregular jerks. Eating fast or carbonated drinks can trigger it but the mechanism is the diaphragm."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17217,7 +17395,9 @@
               "solutionSteps": [
                 "Together they expand and contract the chest cavity, drawing air in and pushing it out."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Naming just the lungs — they're passive containers. The MUSCLES that pull air in/out are the diaphragm + intercostal (rib) muscles working together."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17235,7 +17415,9 @@
                 "Faster breathing supplies more O₂ and removes more CO₂.",
                 "Heart rate also rises to deliver the gases faster."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'we just need more oxygen'. We need more oxygen AND need to expel more CO2 (the actual breathing trigger). Running raises both demands."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17665,7 +17847,9 @@
                 "Cells respire to release the energy stored in food (mostly glucose).",
                 "That energy powers everything else — muscle contraction, heat, growth."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'energy is created'. Energy isn't created — it's RELEASED from chemical bonds in glucose. Conservation of energy: bound energy → kinetic + heat."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17687,7 +17871,9 @@
                 "Glucose + O₂ → CO₂ + H₂O + lots of energy.",
                 "This is the main respiration mode in most animals and plants under normal conditions."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling aerobic 'in air'. Specifically means USING OXYGEN. The cells care about O2 availability, not whether you're indoors or outdoors."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17709,7 +17895,9 @@
                 "By-products differ by organism: yeasts make ethanol + CO₂; muscle cells make lactic acid.",
                 "Energy yield is much smaller — only ~2 ATP per glucose vs ~38 ATP aerobically."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing anaerobic 'is bad'. It's just LOWER energy yield than aerobic — appropriate for situations where oxygen can't keep up (sprinting, yeast in dough)."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17731,7 +17919,9 @@
                 "Muscles switch to anaerobic respiration, producing lactic acid.",
                 "Lactic acid build-up is partly responsible for the burning feeling and cramps."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling lactic acid 'a poison'. It's a normal metabolic byproduct. The 'burn' is real but body clears it within an hour. Doesn't permanently damage muscles."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17752,7 +17942,9 @@
                 "This is the basis of bread baking, brewing, and wine making.",
                 "CO₂ makes bread rise; ethanol is the alcohol in beer/wine."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing yeast produces 'just alcohol'. Yeast produces BOTH ethanol and CO2 in equal moles. In bread, CO2 is the wanted product; in brewing, ethanol is wanted."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17947,7 +18139,9 @@
                 "Gases diffuse directly across their moist skin into and out of small blood vessels just below.",
                 "If they dry out, they suffocate."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing earthworms have lungs — they don't. Gas exchange happens through their MOIST SKIN by diffusion. Dry skin = suffocation."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17968,7 +18162,9 @@
                 "Gills extract dissolved O₂ from water.",
                 "Water flows over the gills' feathery filaments, where O₂ diffuses into the blood and CO₂ diffuses out."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing fish breathe 'through their mouth'. They take in water through the mouth but EXTRACT oxygen via gills (specialised feathery filaments)."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -17990,7 +18186,9 @@
                 "They lead into a network of tubes (tracheae) that deliver oxygen straight to body cells.",
                 "Most insects don't use blood to carry O₂."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing insects breathe through mouths. They don't — air enters through SPIRACLES (tiny pores on body sides) directly into tracheal tubes."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -18127,7 +18325,9 @@
                 "Water flows over gills — feather-like organs full of blood capillaries.",
                 "Oxygen dissolved in water passes into the blood; CO₂ moves out."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'mouths' or 'fins' — fish use specialised gas-exchange organs called gills."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -18149,7 +18349,9 @@
                 "Their skin is thin, moist, and rich in blood vessels.",
                 "Oxygen dissolves in the moisture and diffuses into blood — that's why earthworms die if their skin dries out."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing earthworms 'breathe through tail' or 'mouth'. The entire moist body surface absorbs oxygen."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -19707,7 +19909,9 @@
                 "Pollen lands on the stigma (top of the female part), grows down through the style, and reaches the egg in the ovule.",
                 "Fusion of pollen nucleus with egg = fertilisation. Result: seed."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing sexual reproduction 'requires two plants'. Self-pollination (same plant, sometimes same flower) IS still sexual reproduction — fusion of pollen + egg from same plant's parts."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -19730,7 +19934,9 @@
                 "Pistil is the female part (stigma + style + ovary).",
                 "Petals attract pollinators; sepals protect the bud."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing stamen with stigma. Stamen = MALE; stigma = top of female part. Anther sits on top of filament; together = stamen."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -19752,7 +19958,9 @@
                 "Style — the tube down which pollen tubes grow.",
                 "Ovary — contains the ovules (eggs) and becomes the fruit after fertilisation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling the female part 'stamen' — stamen is male. Pistil (or carpel) is female, made of stigma + style + ovary."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -19774,7 +19982,9 @@
                 "Anemophily = wind pollination (anemos = wind).",
                 "Hydrophily = water; Ornithophily = birds."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying 'anemophily' — that's WIND pollination. Entomophily = ENTomology (insects). Different agents, different terms."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -19816,7 +20026,9 @@
                 "Self-pollination keeps genes within one plant — less variety.",
                 "Cross-pollination (between different plants) mixes genes — more variety."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing self-pollination with self-fertilisation — the latter follows but isn't the SAME act. Self-pollination is just the pollen reaching the stigma; fertilisation is the gamete fusion afterwards."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -19831,7 +20043,9 @@
               "solutionSteps": [
                 "The anther sits on the filament; it is the part that releases pollen."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling pollen 'plant sperm' literally — pollen GRAINS contain the male gametes inside. The grain is the carrier, not the gamete itself."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20067,7 +20281,9 @@
                 "The ovules inside become seeds.",
                 "An apple's flesh is the developed ovary; the pips are the developed ovules."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the ovary stays unchanged. After fertilisation, the OVARY WALL ripens into the FRUIT, while the seeds inside come from the fertilised ovules."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20089,7 +20305,9 @@
                 "Examples: dandelion (parachute), maple (samara helicopter).",
                 "Spiky/sticky seeds use animal fur; fleshy fruits use animal stomachs."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing wind-dispersed seeds are 'just light'. They're light AND have specialised structures (wings on maple, parachutes on dandelion, hairs on cotton) to catch wind."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20111,7 +20329,9 @@
                 "Tides and currents can carry them thousands of km to new beaches.",
                 "Once washed up, they sprout into new palms."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing coconuts 'sprout in water'. They float in water but germinate after landing on a beach. Water is the transport, not the growing medium."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20133,7 +20353,9 @@
                 "Animals carry the seeds elsewhere before they drop off.",
                 "This was the inspiration for Velcro!"
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling hooked-seed dispersal 'wind dispersal' — hooks need an animal to carry them. Different mechanism entirely."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20154,7 +20376,9 @@
                 "The drying pod builds tension until it splits suddenly.",
                 "The split flings the seeds a short distance from the parent plant."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing explosion with mechanical. Both terms apply to seed-flinging plants. 'Explosion' is the dramatic version; 'mechanical' is the general category."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20171,7 +20395,9 @@
                 "Falling seeds would compete with the parent and each other.",
                 "Spreading further reduces competition AND lets the species expand its range."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'so seeds spread'. Mechanism is right; goal is to ESCAPE competition with the parent for the same resources. Distant seeds find their own light + water + nutrients."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20467,7 +20693,9 @@
                 "No mixing of genes → clones of the parent.",
                 "Useful for farmers: a desirable plant can be cloned reliably."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing asexual reproduction 'produces varied offspring'. Opposite: asexual = CLONES, identical to parent. Sexual reproduction produces variation."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20488,7 +20716,9 @@
                 "Pollination is part of sexual reproduction (it brings pollen from one flower to another).",
                 "Cuttings, runners, tubers (potato 'eyes'), bulbs, and grafting are all asexual."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'budding' or 'fragmentation' — both ARE asexual. Pollination involves pollen-egg fusion = sexual reproduction."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20510,7 +20740,9 @@
                 "Where it touches the soil it grows roots and a new plant.",
                 "Strawberries, mint and grasses all do this."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling strawberry runners 'underground stems'. They're ABOVE GROUND horizontal stems. Underground stems would be rhizomes (different plant type)."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20532,7 +20764,9 @@
                 "The new rose is an exact clone of the parent.",
                 "Faster and more reliable than growing from seeds for many ornamental plants."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing all rose propagation is 'from seeds'. Seeds give variable, often weaker offspring. Cuttings give exact-replica plants — the standard commercial method."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -20554,7 +20788,9 @@
                 "A part of the parent (potato 'eye') grows into a new plant.",
                 "This is asexual reproduction by vegetative propagation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling potato 'a root' — it's a TUBER (modified stem). The 'eyes' are nodes where new plants sprout."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -20576,7 +20812,9 @@
                 "It grows, then detaches as a new yeast cell.",
                 "This is why a single yeast cell can make millions overnight in dough."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing yeast undergoes mitosis 'normally'. Yeast specifically BUDS — a smaller daughter cell pinches off from a parent. It's asexual but not standard cell division."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -20593,7 +20831,9 @@
                 "Tiny buds with roots form at each notch.",
                 "These drop to the soil and grow into independent plants — a beautiful example of vegetative propagation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing Bryophyllum reproduces 'from seeds'. It primarily reproduces from leaf-edge notches (vegetative propagation) — that's its iconic feature."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -23355,7 +23595,8 @@
                 185,
                 192
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "The law of reflection: I = R (angle of Incidence = angle of Reflection), measured from the NORMAL (perpendicular). Mirror image rule: image is BEHIND the mirror, SAME distance as object in front. 'Behind the looking glass' — same depth, opposite hand (lateral inversion)."
             },
             {
               "id": "ch15_t01_c02",
@@ -23395,7 +23636,8 @@
               "pageRefs": [
                 200
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "CONCAVE = CAVE (curves inward, like a cave you can hide in) — converges parallel rays to a focal point in front. CONVEX = bulges OUTward — diverges parallel rays (image appears smaller). Spoon trick: inside of spoon = concave; back of spoon = convex."
             }
           ],
           "questions": [
@@ -24229,7 +24471,8 @@
                 194,
                 195
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "Light SLOWS DOWN entering denser media (water, glass) and bends TOWARD the normal. Coming out, it speeds up and bends AWAY. Pencil-in-water trick demonstrates this. Mnemonic: 'denser = slower = bend toward'."
             },
             {
               "id": "ch15_t02_c02",
@@ -24281,7 +24524,8 @@
                 195,
                 196
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "VIBGYOR — Violet, Indigo, Blue, Green, Yellow, Orange, Red. Order of wavelengths (violet shortest, red longest). Prism separates white light because each colour bends a different amount."
             },
             {
               "id": "ch15_t02_c03",
@@ -24334,7 +24578,8 @@
                 196,
                 197
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "Rainbows = prisms made of water droplets. Sun BEHIND you, raindrops in FRONT. Each drop refracts + reflects + refracts again, creating the 42° arc. Double rainbows = second internal reflection (fainter, reversed colours)."
             }
           ],
           "questions": [
@@ -24682,7 +24927,8 @@
               "pageRefs": [
                 200
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "Convex lens (thicker middle) = converging = MAGNIFYING glass effect when object inside focal length. Concave lens (thinner middle) = diverging = always makes images SMALLER. 'Conver-ges' and 'Conver-x' both start with C-O-N-V — bulged center, focuses light."
             },
             {
               "id": "ch15_t03_c02",
@@ -24735,7 +24981,8 @@
                 201,
                 202
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "Peri-scope = PERI (around) + SCOPE (see). Two mirrors at 45° each: top scoops light down, bottom sends it to eye. Used in submarines and behind-walls viewing. Both mirrors at 45° = total 90° turn at each = 180° offset, image right-side up."
             },
             {
               "id": "ch15_t03_c03",
@@ -24788,7 +25035,8 @@
                 202,
                 203
               ],
-              "needsHumanReview": false
+              "needsHumanReview": false,
+              "mnemonic": "Kalei-do-scope: 'beautiful shape see'. Three mirrors at 60° each form a triangle; objects between them reflect 6 times = symmetric patterns. Multiple of 60° matters: 60° gives 6-fold symmetry (3 mirrors × 2 reflections each)."
             }
           ],
           "questions": [
@@ -26014,7 +26262,9 @@
                 "Hardly any water is lost to evaporation or run-off.",
                 "It saves 30–70 % of water compared to flood irrigation — perfect for dry regions."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'wet, low-lying areas' — those have plenty of water. Drip is most useful where water is SCARCE and every drop must count."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -26031,7 +26281,9 @@
                 "Stored water can be used for gardening, washing or even drinking after filtering.",
                 "Recharge pits send rainwater underground, refilling the water table."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'rainwater harvesting' is just any water collection. Specifically refers to capturing rooftop or surface rainfall for storage/recharge."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26053,7 +26305,9 @@
                 "They collected monsoon rain and stored it for the dry season.",
                 "Many baolis are still functional today — e.g., Agrasen ki Baoli in Delhi."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'temple tank' or 'well' — wells are passive groundwater extraction. Baolis (stepwells) actively CAPTURE rain and recharge the table."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26075,7 +26329,9 @@
                 "Sprinklers spray a fine mist evenly — like rain.",
                 "Even uneven slopes get water without runoff."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'flat irrigation channels' — those are flood irrigation. Sprinklers specifically benefit uneven sandy land where channels can't form."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26093,7 +26349,9 @@
                 "Rooftop harvesting captures rain before it is wasted.",
                 "It can be stored for use or directed into recharge pits to refill the water table."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'rooftop harvest is cheaper than tap water'. The point is RECHARGE — recovering the rainwater that would otherwise be lost to concrete runoff."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -26263,7 +26521,9 @@
               "solutionSteps": [
                 "The UN designated 22 March as World Water Day to highlight the importance of fresh water and to advocate for sustainable management."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing World Water Day with World Earth Day (April 22) or World Environment Day (June 5). Water Day is March 22 specifically."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -26285,7 +26545,9 @@
                 "8th March is International Women's Day.",
                 "22nd March is World Water Day — focusing on freshwater issues globally."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing dates. World Water Day is 22 March; World Earth Day is 22 April. Easy mix-up by date confusion."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -26307,7 +26569,9 @@
                 "Less than 1 % of all water is easily usable (rivers, lakes, shallow groundwater).",
                 "That's why every drop matters."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing most freshwater is in 'rivers and lakes'. Surface water is ~1% of freshwater. Most (~68%) is locked in glaciers and ice caps."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26325,7 +26589,9 @@
                 "RO water purifiers reject ~3 L for every 1 L purified — collect and reuse it for plants and mopping.",
                 "Brushing with running tap wastes 4-6 L per minute."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Listing only one action. Multi-action answers expected: close taps, fix leaks, shorter showers, reuse water for plants, etc."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26347,7 +26613,9 @@
                 "Of the remaining 3 % freshwater, ~70 % is frozen in ice.",
                 "Less than 1 % of total water is available as accessible freshwater."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing freshwater is 'plentiful'. Only ~3% of Earth's water is freshwater; less than 1% is drinkable (rest is frozen or deep groundwater)."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -26365,7 +26633,9 @@
                 "The water table is falling by 0.5–1 metre per year.",
                 "Without crop diversification and drip irrigation, the region faces severe water stress."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing 'they should just stop farming'. Punjab/Haryana feed much of India. Real solutions: switch from rice to less water-intensive crops, use drip irrigation, recharge groundwater."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -26892,7 +27162,9 @@
                 "Afforestation = creating new forest cover.",
                 "Reforestation = replanting where forest was recently lost."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing afforestation with reforestation. AFforestation = NEW forest (land that wasn't forest before). REforestation = RESTORING a forest that was cut down."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -27303,7 +27575,9 @@
                 "They release nutrients back into the soil.",
                 "Without decomposers, the forest floor would be buried under unrotted matter."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing decomposers are 'insects only'. Bacteria + fungi do most of the breakdown; insects are secondary recyclers."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -27320,7 +27594,9 @@
                 "Their broad leaves intercept most sunlight for photosynthesis.",
                 "Only filtered light reaches the floor — perfect for shade-loving ferns and decomposers."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the floor is dark because 'forests are gloomy'. The canopy intercepts 95-99% of sunlight; only ~1-5% reaches the ground."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -27537,7 +27813,9 @@
                 "Forest animals lose their homes when trees are cut.",
                 "Local rainfall decreases and global CO₂ levels rise."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing deforestation 'only affects forests'. It causes SOIL EROSION (no roots), LOST HABITAT (animals displaced), AND climate disruption (water cycle broken)."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -27555,7 +27833,9 @@
                 "It led to a 15-year ban on commercial tree-felling in many Himalayan forests.",
                 "Inspired similar non-violent ecological movements worldwide."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing the Chipko Movement was 'just protests'. It was specifically VILLAGERS HUGGING TREES to prevent loggers from cutting them — direct physical action."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -27602,7 +27882,9 @@
                 "Hangul deer (Kashmir stag) is also critically endangered.",
                 "All three lose habitat when forests are cleared."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'tiger' as 'most endangered' — Bengal tigers ARE endangered but several species qualify. Hangul deer (Kashmir stag) is critically endangered specifically."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -27620,7 +27902,9 @@
                 "They are major sinks for CO₂ — clearing them releases stored carbon and worsens global warming.",
                 "Amazon and Western Ghats are two of the world's largest 'lungs'."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing forests 'only produce oxygen'. They ALSO absorb CO2 (storing carbon), regulate water cycles, host biodiversity. 'Lungs' is one of several roles."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -28705,7 +28989,9 @@
               "solutionSteps": [
                 "World Toilet Day (19 November) was declared by the UN to raise awareness about the 3.6 billion people who still lack safe sanitation."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing Toilet Day with Hand-Washing Day (October 15) or Water Day. World Toilet Day is 19 November specifically."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -28727,7 +29013,9 @@
                 "Flies pick up germs and land on food.",
                 "Cholera, typhoid, jaundice and diarrhoea spread rapidly — children are most vulnerable."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing open defecation only 'looks bad'. It contaminates groundwater + spreads diseases (typhoid, cholera) + attracts flies that spread infection further."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -28749,7 +29037,9 @@
                 "Aim: eliminate open defecation and improve sanitation across India.",
                 "Crores of household toilets have since been built."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Reporting 2010 or 2016 — Swachh Bharat Abhiyan launched 2 October 2014 (Gandhi Jayanti)."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -28767,7 +29057,9 @@
                 "No sewer pipes or treatment plants needed — perfect for villages.",
                 "Promoted heavily under Swachh Bharat Abhiyan."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Picking 'centralised sewer treatment' — too expensive for villages. Twin-pit toilets are appropriate for small populations + simple to maintain."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -28785,7 +29077,9 @@
                 "Untreated oil reaching rivers prevents oxygen from dissolving — kills fish.",
                 "Better: cool oil, soak with newspaper, and discard in waste bin."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing oil 'breaks down in water'. Oils SOLIDIFY in cold pipes (especially fats), creating 'fatbergs' that block municipal sewers."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -28807,7 +29101,9 @@
                 "Open burning releases toxic fumes.",
                 "Wrapped disposal in dustbin allows safe collection and incineration in proper facilities."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing sanitary waste should be 'flushed down toilet'. They DON'T biodegrade in sewage; they clog pipes and contaminate waterways. Wrap + bin is correct."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
