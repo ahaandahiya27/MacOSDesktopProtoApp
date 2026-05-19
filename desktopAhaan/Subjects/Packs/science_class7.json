@@ -1358,6 +1358,86 @@
                 5
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q19",
+              "prompt": "A plant kept in dim red light grows tall but pale. A second identical plant in full sunlight grows shorter and dark green. Use what you know about chlorophyll absorption to explain BOTH outcomes.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Chlorophyll absorbs blue and red strongly but reflects green. Dim red light gives just enough wavelength to make some food but not enough INTENSITY for full photosynthesis — plant 'stretches' (etiolation) toward light, growing leggy and pale because chlorophyll production drops. Full sunlight gives both red AND blue at high intensity → maximum chlorophyll synthesis (dark green) and balanced growth (shorter, sturdier).",
+              "solutionSteps": [
+                "Recall chlorophyll's absorption spectrum: red + blue YES, green NO.",
+                "Dim red = partial fuel + low intensity → plant compensates by elongating (etiolation) AND chlorophyll levels drop (pale).",
+                "Full sun = both wavelengths + high intensity → maximum chlorophyll (dark green), no elongation needed."
+              ],
+              "commonMistakes": [
+                "Believing 'red light only' is best for plants — red alone gives leggy weak growth. Blue is essential for compact stems and full chlorophyll."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do indoor grow-lights for plants use a mix of red AND blue LEDs, not white bulbs?",
+                  "answer": "Red + blue match chlorophyll's absorption peaks; white light wastes energy on wavelengths plants reflect (green) or barely use. Red+blue LEDs are more energy-efficient for the same growth.",
+                  "solutionSteps": [
+                    "Match light spectrum to chlorophyll's peaks (red + blue).",
+                    "White bulbs waste ~50% of energy in wavelengths plants don't absorb."
+                  ]
+                },
+                {
+                  "prompt": "Predict the leaf colour of a plant grown under GREEN light only.",
+                  "answer": "The plant grows poorly and pale — green light is mostly REFLECTED, not absorbed by chlorophyll. Without absorbed energy, photosynthesis stalls and the plant slowly starves.",
+                  "solutionSteps": [
+                    "Chlorophyll reflects green → almost no energy captured.",
+                    "Plant runs on stored starch until it depletes, then yellows and dies."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                3,
+                4,
+                5
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t01_q20",
+              "prompt": "A farmer can choose to grow either C3 plants (like wheat) or C4 plants (like sugarcane) on a hot tropical farm. Evaluate which choice is biologically smarter, knowing C4 plants are more efficient at photosynthesis in hot, sunny conditions.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "C4 plants are the smarter choice in hot tropical conditions. C3 plants suffer 'photorespiration' in heat — their enzyme Rubisco mistakenly binds oxygen instead of CO2, wasting energy. C4 plants concentrate CO2 internally using a separate enzyme (PEP carboxylase) so Rubisco only sees CO2, never oxygen. Result: higher yield per drop of water, per ray of sunlight. Sugarcane, maize, sorghum all C4 — and all thrive in hot India where wheat (C3) struggles.",
+              "solutionSteps": [
+                "Identify the hot-climate problem for C3 plants: photorespiration wastes 20-40% of fixed carbon.",
+                "C4 plants use a CO2-concentrating mechanism that eliminates this loss.",
+                "In hot tropical farms, C4 yields more biomass per litre of water and per sunny hour."
+              ],
+              "commonMistakes": [
+                "Believing 'all plants do photosynthesis the same way'. C3 and C4 evolved separately to solve the same problem under different climate constraints."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is rice (a C3 plant) still grown in hot tropical India despite C4 being more efficient?",
+                  "answer": "Rice is grown standing in water (paddy) — flooding reduces photorespiration by limiting oxygen near the leaves. Plus rice yields heavily under monsoon water surplus. Trade-off: water-intensive vs. heat-efficient.",
+                  "solutionSteps": [
+                    "Flooding limits oxygen at the leaf, reducing photorespiration losses.",
+                    "Rice's high yield + cultural preference outweigh C4 alternatives in monsoon zones."
+                  ]
+                },
+                {
+                  "prompt": "What climate change scenario would make C3 plants competitive again?",
+                  "answer": "Rising CO2 levels favour C3 plants. As atmospheric CO2 climbs, C3's Rubisco sees more CO2 vs. oxygen, reducing photorespiration. C4's CO2-concentrating advantage shrinks. Already observed: C3 weeds gain ground in CO2-enriched experiments.",
+                  "solutionSteps": [
+                    "Higher CO2 = more CO2 binding by Rubisco vs. oxygen = less photorespiration.",
+                    "C3 advantage grows; C4 advantage shrinks as ambient CO2 rises."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                3,
+                4,
+                6
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -4177,6 +4257,46 @@
                 11
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_q19",
+              "prompt": "Compare protein digestion in the stomach vs. starch digestion in the mouth. Which enzymes act where, what is the pH, and why doesn't stomach acid simply destroy the mouth enzymes when food is swallowed?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Mouth: salivary amylase breaks starch → maltose in NEUTRAL pH (~7). Stomach: pepsin breaks proteins → peptides in ACIDIC pH (~2). Salivary amylase IS destroyed in the stomach — its job ends quickly once food hits acid. The body doesn't 'protect' it; it simply does its short job in the mouth+early stomach, then is itself digested by pepsin. Each enzyme is tuned to its specific pH — moving them outside their range destroys them.",
+              "solutionSteps": [
+                "List the two stages: salivary amylase (mouth, pH 7) + pepsin (stomach, pH 2).",
+                "Enzymes have an optimal pH range; outside it, they denature and stop working.",
+                "Salivary amylase finishes its job before being destroyed by stomach acid — not protected, just timed."
+              ],
+              "commonMistakes": [
+                "Believing enzymes 'survive' in the wrong pH. They don't — they're consumed, replaced by the next enzyme in the chain."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is bile's job in the small intestine, and why is it not an enzyme?",
+                  "answer": "Bile (from the liver) emulsifies large fat droplets into tiny ones, vastly increasing surface area for fat-digesting enzymes (lipase) to work on. Bile is a detergent, not an enzyme — no chemical bonds broken, just physical fat-droplet dispersion.",
+                  "solutionSteps": [
+                    "Bile breaks big fat droplets into small ones (physical).",
+                    "Lipase then digests the small droplets (chemical). Bile assists, doesn't digest."
+                  ]
+                },
+                {
+                  "prompt": "If you swallow a spoonful of bicarbonate of soda before a meal, predict what happens to digestion in the stomach.",
+                  "answer": "Bicarbonate neutralises stomach acid → pH rises from ~2 toward 5-7. Pepsin (acid-loving) stops working. Protein digestion stalls in the stomach. The body responds by producing MORE acid — eventually restoring normal pH.",
+                  "solutionSteps": [
+                    "Bicarbonate is a base; reacts with stomach HCl → neutralisation.",
+                    "pH rises; pepsin denatures (it needs pH ~2).",
+                    "Body compensates by secreting more HCl until pH drops again."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12,
+                13
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -4745,6 +4865,45 @@
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q08",
+              "prompt": "Why must the small intestine be so long (~6 m in adults), and what would happen if it were only 1 m? Predict THREE physiological consequences.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Length × villi × microvilli give the small intestine its enormous absorption surface (~250 m² — about a tennis court). At only 1 m: (1) Massive nutrient loss — food passes through too fast for absorption; you'd be malnourished while eating adequately. (2) Diarrhoea — water and electrolytes also under-absorbed, leading to dehydration. (3) Calorie demand spikes — body needs more food to extract the same nutrients, with no end to the problem.",
+              "solutionSteps": [
+                "Identify the role of the small intestine: digest + absorb. Both need TIME and SURFACE.",
+                "Length × villi (folds) × microvilli (tiny brush projections) multiply surface ~600x.",
+                "Cutting length 6x cuts contact time and surface; predicted consequences cascade."
+              ],
+              "commonMistakes": [
+                "Thinking 'longer = more space for food'. The point is contact TIME and SURFACE — both matter for absorption."
+              ],
+              "variations": [
+                {
+                  "prompt": "How do bariatric (weight-loss) surgeries exploit small intestine length?",
+                  "answer": "Gastric bypass reroutes food to skip a portion of the small intestine — fewer calories absorbed, even at the same intake. Patients lose weight because their absorption surface is functionally shortened.",
+                  "solutionSteps": [
+                    "Surgery reduces effective intestinal length.",
+                    "Same food intake → fewer calories absorbed → weight loss."
+                  ]
+                },
+                {
+                  "prompt": "Why is the large intestine SHORTER than the small intestine, despite being called 'large'?",
+                  "answer": "'Large' refers to DIAMETER, not length. The large intestine (~1.5 m) is wider but shorter. Its job is water absorption from chyme into faeces — not nutrient absorption, which is finished upstream.",
+                  "solutionSteps": [
+                    "'Large' = wide diameter, not long.",
+                    "Different job (water reabsorption) needs less length, more diameter."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                14,
+                15
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -5147,6 +5306,45 @@
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q08",
+              "prompt": "An amoeba and a paramecium both ingest food by surrounding it. Compare HOW each one engulfs food and which method seems more efficient for a single-celled organism.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Amoeba: extends pseudopodia (false feet) — temporary projections of cytoplasm — around the food particle, eventually meeting on the far side to form a food vacuole. Slow, opportunistic, works for any food size up to the cell. Paramecium: has a fixed oral groove with cilia (tiny hairs) that beat to sweep food particles into a permanent cytostome (cell mouth). Fast, specialised, but only works for small particles. Paramecium is more efficient PER UNIT TIME for small food; amoeba is more flexible across food sizes. Different strategies for different niches.",
+              "solutionSteps": [
+                "Compare on TWO axes: speed (paramecium wins) and flexibility (amoeba wins).",
+                "Note structural difference: amoeba has no permanent feeding apparatus; paramecium does.",
+                "Conclude: each is tuned to its lifestyle — both successful."
+              ],
+              "commonMistakes": [
+                "Believing one method must be 'better' than the other. Different organisms in different environments evolved different feeding methods — both are evolutionary successes."
+              ],
+              "variations": [
+                {
+                  "prompt": "How do amoeba's pseudopodia also help in MOVEMENT, not just feeding?",
+                  "answer": "The same cytoplasmic flow that extends pseudopodia toward food pushes the entire amoeba forward — the cell crawls in the direction of pseudopod extension. Feeding and locomotion use the same machinery.",
+                  "solutionSteps": [
+                    "Pseudopod extension is cytoplasmic flow.",
+                    "The cell follows; movement and feeding share the mechanism."
+                  ]
+                },
+                {
+                  "prompt": "If you cut a paramecium in half experimentally, predict which half survives.",
+                  "answer": "The half containing the macronucleus survives (has the genetic info needed). The other half dies within hours. Paramecium has both micro- and macro-nuclei; macronucleus drives daily life.",
+                  "solutionSteps": [
+                    "Macronucleus controls daily metabolism and growth.",
+                    "Half without it can't make essential proteins → dies."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                16,
+                17
+              ],
               "needsHumanReview": false
             }
           ]
@@ -6259,6 +6457,46 @@
                 23
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t01_q18",
+              "prompt": "A textile lab measures fibre length under a microscope. Sample A: average 4 cm, uniform. Sample B: 2 cm with some 5 cm strays. Which sample makes BETTER yarn and why? Connect to spinning physics.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Sample A makes better yarn. Spinning relies on FRICTION between overlapping fibres twisted together. Uniform 4 cm fibres overlap consistently — every fibre in the yarn is held by many neighbours along its full length, giving smooth, strong yarn. Sample B's 2 cm fibres have shorter overlap per fibre = weaker holds; the stray 5 cm fibres create lumps where they protrude from the yarn surface. Uniformity matters as much as length — actually MORE, for industrial spinning.",
+              "solutionSteps": [
+                "Spinning = friction-locked fibre overlap.",
+                "Long fibres: many neighbours, strong yarn.",
+                "Uniform length: smooth surface, consistent strength.",
+                "Stray-long fibres make lumps and weak points."
+              ],
+              "commonMistakes": [
+                "Picking sample B because of the 5 cm fibres — those are outliers, not assets. Spinning prizes uniformity."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is Egyptian cotton famous for premium fabric?",
+                  "answer": "Its fibres are exceptionally long (35-45 mm) AND uniform — the textile gold standard. Yarn spun from these is thin, strong, and smooth. Used in 1000-thread-count sheets and luxury shirting.",
+                  "solutionSteps": [
+                    "Egyptian cotton = unusually long + uniform fibres.",
+                    "Long+uniform = thin strong yarn = premium fabric."
+                  ]
+                },
+                {
+                  "prompt": "How would a manufacturer 'upgrade' sample B (short with strays) for usable yarn?",
+                  "answer": "Combing — a stage that removes shorter fibres AND strays, leaving only the middle-length consistent fraction. Wastes ~30% of sample B's mass but produces usable yarn from what remains.",
+                  "solutionSteps": [
+                    "Combing rejects fibres above and below a target length.",
+                    "Sample B yields ~70% usable mass after combing."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24,
+                25
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -6823,6 +7061,46 @@
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q09",
+              "prompt": "Silk and wool both come from animals, but silk drapes smoothly while wool feels bouncy. Explain this difference in terms of fibre microscopy — what does silk look like vs. wool under a microscope, and how does that shape what they feel like?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Silk under a microscope: smooth, glossy, near-cylindrical filaments (single continuous fibres up to 1 km long from one cocoon). Wool: crimped, scaly, curly fibres (~5-10 cm each) with overlapping cuticle scales on the surface. Silk's smoothness = drape (slides easily, lays flat); wool's crimp + scales = bounciness (springs back, traps air for warmth). Microscale structure → macroscale feel.",
+              "solutionSteps": [
+                "Silk fibre = long, smooth, cylindrical (drape).",
+                "Wool fibre = short, crimped, scaly (bounce + warmth).",
+                "Macroscale fabric inherits microscale fibre properties."
+              ],
+              "commonMistakes": [
+                "Believing silk and wool are 'just different colours'. The structural differences run deep into the fibre microscopy."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is wool warmer than silk per unit thickness?",
+                  "answer": "Wool's crimped fibres trap air pockets — air is the insulator. Silk lies flat and traps almost no air. For winter, you want wool's air-trap geometry; for summer, silk's flow.",
+                  "solutionSteps": [
+                    "Wool crimp + scales trap air pockets.",
+                    "Air is the insulator (still air = poor heat conductor).",
+                    "Smooth silk traps almost no air → cooler."
+                  ]
+                },
+                {
+                  "prompt": "Why does silk shimmer (lustre) while wool looks matte?",
+                  "answer": "Silk's smooth cylindrical surface reflects light like tiny mirrors — coherent reflection gives shimmer. Wool's scales scatter light in many directions → diffuse reflection → matte.",
+                  "solutionSteps": [
+                    "Smooth silk → coherent reflection → shimmer.",
+                    "Wool scales → diffuse reflection → matte."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                26,
+                27
+              ],
               "needsHumanReview": false
             }
           ]
@@ -8245,6 +8523,48 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch04_t01_q14",
+              "prompt": "An ice cube placed on a wooden table at room temperature stays mostly intact for 10 minutes; the same ice cube on a metal table melts almost completely in 5 minutes. Both tables are at the same temperature. Why does this happen?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Both surfaces are at room temperature, but metal CONDUCTS heat from the room into the ice much faster than wood does. The metal table acts as a fast heat-pipe drawing energy from the entire room (and the metal mass itself) into the ice. Wood is an insulator — only the small contact patch above the ice can supply heat, and it does so slowly. Same temperature, vastly different heat-DELIVERY rates due to thermal conductivity.",
+              "solutionSteps": [
+                "Both surfaces are at the SAME starting temperature — heat flows because there's a difference vs. the ice (0°C), not vs. each other.",
+                "Metal: high conductivity → fast heat flow from room/metal-mass to ice.",
+                "Wood: low conductivity → slow heat flow.",
+                "Same temperature gap, different rate of supply → different melt times."
+              ],
+              "commonMistakes": [
+                "Assuming 'same temperature = same heat delivery'. Temperature is potential; conductivity is the rate at which that potential delivers energy."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does grabbing a metal door handle in winter feel painfully cold, but a wooden door handle feels mild?",
+                  "answer": "Both at room temperature (or slightly cooler in winter). Metal's high conductivity rapidly draws heat FROM your hand INTO the metal — your skin temperature drops fast, feels cold. Wood draws heat slowly — skin temperature barely drops, feels mild.",
+                  "solutionSteps": [
+                    "Both handles at same temp; difference is conductivity.",
+                    "Metal pulls heat out of skin fast → painful cold sensation.",
+                    "Wood pulls heat slowly → mild sensation."
+                  ]
+                },
+                {
+                  "prompt": "How does a thermos flask delay both heating AND cooling using insulation?",
+                  "answer": "A thermos has a vacuum between two walls (blocks conduction + convection) and reflective surfaces (block radiation). Heat flow is minimised in BOTH directions: hot tea cools slowly, ice water warms slowly. Insulation works symmetrically.",
+                  "solutionSteps": [
+                    "Vacuum blocks conduction + convection.",
+                    "Reflective walls block radiation.",
+                    "Heat flow is minimised regardless of direction."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                40,
+                41
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -9508,6 +9828,46 @@
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q09",
+              "prompt": "Two identical iron pans, one painted matte black, one shiny silver, are placed in direct sunlight for 30 minutes. Predict which one is HOTTER, why, and what would happen overnight when there's no sun.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Daytime: black pan is hotter. Black absorbs ~95% of incoming radiation; silver reflects ~85%. Same sunlight, vastly different energy intake → black hotter. Overnight: black pan also COOLS faster — good absorbers are good emitters (Kirchhoff's law). Black pan radiates heat away faster than silver, so overnight black drops to ambient first. Silver insulates against both absorption AND emission.",
+              "solutionSteps": [
+                "Black absorbs visible light → daytime hot.",
+                "Kirchhoff's law: good absorber = good emitter (in same wavelength range).",
+                "Overnight: black radiates infrared away fast → cools faster.",
+                "Silver: low absorption AND low emission → buffered both ways."
+              ],
+              "commonMistakes": [
+                "Thinking black is 'always hotter'. Black is hotter when there's an external heat source AND faster to cool when there isn't. Symmetric."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are solar water heaters painted black on the outside?",
+                  "answer": "Black coating maximises absorption of sunlight → fastest water heating. The same coating's high emissivity would lose heat at night, so well-designed heaters have an insulated jacket OUTSIDE the black absorber.",
+                  "solutionSteps": [
+                    "Black = maximum solar absorption.",
+                    "Insulated jacket prevents night-time heat loss back to air."
+                  ]
+                },
+                {
+                  "prompt": "Why do desert nomads wear WHITE robes in the day but cover themselves with DARKER blankets at night?",
+                  "answer": "Day: white reflects sun → less heat absorbed; cooler. Night: dark blanket emits body heat efficiently — wait, actually opposite. White also stays cooler at night; dark loses heat fast. Actual answer: at night, layers and blanket weight matter more than colour; dark fabric absorbs the small ambient warmth left over (campfire, body heat).",
+                  "solutionSteps": [
+                    "Day: white reflects sun, stays cool.",
+                    "Night: dark fabric absorbs residual warmth (campfire, body heat) more efficiently."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                42,
+                43
+              ],
+              "needsHumanReview": false
             }
           ],
           "summary": "How the human body regulates temperature, why different climates exist, and the science of global warming and greenhouse gases."
@@ -10172,6 +10532,46 @@
                 58
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t01_q20",
+              "prompt": "A student mixes equal volumes of lemon juice (pH 2) and baking soda solution (pH 9) and tests the result with universal indicator. Predict the final pH and explain why it's NOT (2+9)/2 = 5.5.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "The final pH depends on the AMOUNTS of acid and base (in moles of H⁺ and OH⁻), not the starting pHs. pH is logarithmic — pH 2 means 10⁻² M H⁺; pH 9 means 10⁻⁹ M H⁺ (or 10⁻⁵ M OH⁻). The lemon juice has FAR more reactive H⁺ than the baking soda has OH⁻. After neutralisation, excess acid remains → final pH stays low (around 3-4), not 5.5. Arithmetic averaging of pH values is meaningless — pH must be converted to ion concentrations, then averaged.",
+              "solutionSteps": [
+                "pH is LOG concentration; can't be averaged linearly.",
+                "Convert: pH 2 → 10⁻² M H⁺ = 0.01 M. pH 9 → 10⁻⁵ M OH⁻ = 0.00001 M. Acid is 1000x more concentrated.",
+                "Equal volumes: acid moles ≫ base moles → excess H⁺ → final pH still acidic (~3-4).",
+                "Conclusion: averaging pH numerically is wrong; must reason in terms of moles."
+              ],
+              "commonMistakes": [
+                "Averaging pH values arithmetically. pH is logarithmic — pH 2 is 10⁷ times more acidic than pH 9, not 'just a bit more acidic'."
+              ],
+              "variations": [
+                {
+                  "prompt": "How much MORE concentrated is pH 2 vs. pH 5 in H⁺ ions?",
+                  "answer": "1000x more concentrated. Each pH unit is a factor of 10. pH 2 → 10⁻²; pH 5 → 10⁻⁵; ratio = 10³ = 1000.",
+                  "solutionSteps": [
+                    "Each pH unit = factor of 10 in H⁺ concentration.",
+                    "pH 2 vs. pH 5 = 3 units = 10³ = 1000x."
+                  ]
+                },
+                {
+                  "prompt": "If the student wanted final pH ~7 (neutral), how should they adjust the mix?",
+                  "answer": "Add MUCH more baking soda solution — enough to provide OH⁻ equal to the H⁺ moles from lemon juice. Roughly 100,000x by volume if pH stayed at 9 — practically, they'd use a more concentrated base.",
+                  "solutionSteps": [
+                    "Need OH⁻ moles = H⁺ moles for neutralisation.",
+                    "Either increase base volume drastically, or use a stronger base (higher pH)."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                55,
+                56
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -10506,6 +10906,47 @@
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q09",
+              "prompt": "Compare common acids you'd find in a household kitchen with strong industrial acids like sulfuric acid. Why are the kitchen acids safe to eat but industrial acids would kill you?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Concentration + dissociation. Kitchen acids (citric in lemons ~1%, acetic in vinegar ~5%, lactic in yogurt) are DILUTE solutions of WEAK acids — they only partially dissociate into H⁺ ions, so the actual H⁺ concentration is moderate. Stomach acid (HCl) handles them easily. Sulfuric acid (98% concentrated) is a STRONG acid — fully dissociates, releasing massive H⁺. The combination of high concentration + full dissociation destroys protein, dissolves metal, burns tissue. 'Acid' alone isn't dangerous; concentration AND strength are.",
+              "solutionSteps": [
+                "Two axes of acid danger: concentration (% in water) and strength (degree of dissociation).",
+                "Kitchen acids: dilute + weak → safe.",
+                "Industrial acids: concentrated + strong → destructive.",
+                "'Acid' alone is meaningless; specify both axes."
+              ],
+              "commonMistakes": [
+                "Believing all acids are equally dangerous (or equally safe). Lemon juice and battery acid are at opposite ends of the danger scale."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is dilute sulfuric acid (e.g., car battery acid at 30%) still dangerous, while diluted vinegar (5% acetic acid) is safe to drink?",
+                  "answer": "Sulfuric acid is a STRONG acid — even at 30% it fully dissociates; H⁺ is concentrated enough to burn skin. Acetic acid is WEAK — only ~5% of its molecules dissociate. Same dilution, very different ion concentrations.",
+                  "solutionSteps": [
+                    "Strong acids fully dissociate even when diluted.",
+                    "Weak acids only partially dissociate; H⁺ stays low even when 'concentrated' as 5%."
+                  ]
+                },
+                {
+                  "prompt": "What would happen if you accidentally drank a cup of concentrated sulfuric acid?",
+                  "answer": "Massive tissue damage: instant burns to the mouth, throat, oesophagus, and stomach lining; chemical destruction of protein; possible perforation; medical emergency requiring hospitalisation. NEVER drink any concentrated acid. Treatment is large amounts of water + medical neutralisation, not vomiting (which re-burns the oesophagus).",
+                  "solutionSteps": [
+                    "Concentrated strong acid destroys protein on contact.",
+                    "Tissue from mouth to stomach burns; perforation possible.",
+                    "Treatment: dilute with water, urgent medical care; DO NOT induce vomiting."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                57,
+                58
+              ],
               "needsHumanReview": false
             }
           ]
@@ -11582,6 +12023,87 @@
                 67
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q25",
+              "prompt": "A candle burns — wax melts, then the liquid wax travels up the wick, vaporises, and burns. Identify the PHYSICAL and CHEMICAL changes in this single sequence, and predict what would happen if you cut the wick to half its length.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Physical changes: solid wax → liquid (melting), liquid → vapour (vaporisation). Chemical change: wax vapour + oxygen → CO2 + water + heat + light (combustion). Cutting wick to half: less fuel surface for vaporisation per second → smaller flame → less heat radiated back to melt solid wax → eventually the candle's burning rate drops or self-extinguishes. The wick isn't burning; it's TRANSPORTING melted wax.",
+              "solutionSteps": [
+                "Trace the sequence: solid → liquid → vapour (all physical) → combustion (chemical).",
+                "Wick role: capillary transport of liquid wax, NOT fuel itself.",
+                "Halved wick → halved transport rate → smaller flame → cooler → less melting → self-limiting."
+              ],
+              "commonMistakes": [
+                "Believing the wick burns. It chars slightly but isn't the fuel — wax vapour is. Trim a wick too short and the flame dies; trim too long and it smokes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a candle SMOKE when the wick is too long?",
+                  "answer": "Excess wick transports more wax than the flame can fully burn. Unburned wax particles escape as soot (smoke). Trimming the wick to ~5mm matches transport rate to burn rate → clean flame.",
+                  "solutionSteps": [
+                    "Long wick: too much wax delivered for flame's oxygen supply.",
+                    "Incomplete combustion → soot.",
+                    "Trim restores balance."
+                  ]
+                },
+                {
+                  "prompt": "What experiment would prove the wick doesn't burn, only the vapour does?",
+                  "answer": "Coat the wick with non-flammable wax-substitute (e.g., glass wool soaked in oil). Light it — flame appears just above. Then drain the oil while flame burns; flame goes out though wick still glows. Confirms vapour is fuel, wick is just a delivery system.",
+                  "solutionSteps": [
+                    "Replace wax with another fuel via the wick.",
+                    "Flame depends on fuel delivery, not wick material.",
+                    "Removing fuel kills flame even with wick intact."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                67,
+                68
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q26",
+              "prompt": "Justify why MELTING is reversible (physical) but BURNING is irreversible (chemical), using the language of molecules.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Melting: ice → water. Same H2O molecules, just less rigidly arranged. The molecules themselves don't break apart; they just gain enough kinetic energy to slide past each other. Freezing puts them back. Burning: wood + O2 → CO2 + H2O + ash + heat. The carbon-hydrogen bonds in wood are SEVERED; atoms re-organised into entirely new molecules (CO2, H2O). No simple cooling reverses this — the CO2 and H2O molecules don't know how to reassemble into wood. The atoms are still around; their MOLECULAR identity is permanently changed.",
+              "solutionSteps": [
+                "Physical change = molecules unchanged, arrangement changed → reversible by undoing the arrangement.",
+                "Chemical change = molecules transformed; atoms regrouped into new molecules → no spontaneous reversal.",
+                "Burning shatters and rebuilds molecules; melting just shuffles them."
+              ],
+              "commonMistakes": [
+                "Confusing 'irreversible' with 'impossible'. Photosynthesis IS the slow biological reverse of burning — but only living plants can do it, taking weeks/months. The point is that simple physical reversal doesn't work."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is BOILING reversible but BAKING irreversible, even though both use heat?",
+                  "answer": "Boiling water → steam → cool steam = water again. Same H2O molecules; same molecular identity. Baking a cake → proteins denature, sugars caramelise, water bonds reorganise. NEW molecular structures; cooling doesn't 'un-bake'. Heat is the trigger; what changes (or doesn't) is the molecular identity.",
+                  "solutionSteps": [
+                    "Boiling: same molecules, different state → reversible.",
+                    "Baking: molecules transformed → irreversible."
+                  ]
+                },
+                {
+                  "prompt": "How is photosynthesis the 'reverse' of burning, and why does it take a plant weeks to undo what a fire does in minutes?",
+                  "answer": "Burning: glucose + O2 → CO2 + H2O + ENERGY (released as heat). Photosynthesis: CO2 + H2O + ENERGY (from sunlight) → glucose + O2. Same atoms, opposite reaction. Burning is downhill in energy (fast, spontaneous); photosynthesis is uphill (slow, requires sunlight + enzymes).",
+                  "solutionSteps": [
+                    "Burning releases energy → spontaneous, fast.",
+                    "Photosynthesis stores energy → requires sunlight input, slow.",
+                    "Energy direction determines reaction speed."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                68,
+                69
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -11822,6 +12344,45 @@
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q07",
+              "prompt": "Why is dissolving salt in water classified as a PHYSICAL change but mixing baking soda with vinegar a CHEMICAL change, when both look like 'mixing two things'?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Salt in water: NaCl molecules separate into Na+ and Cl- ions surrounded by water — no new compound formed. Evaporate the water and you recover identical salt crystals. Physical. Baking soda + vinegar: NaHCO3 + CH3COOH → CO2 (gas) + H2O + sodium acetate. NEW substances form (carbon dioxide, sodium acetate); the reaction releases gas and heat. You cannot recover baking soda by evaporating the mix. Chemical. Test both: can you reverse it by a physical means? Salt yes, vinegar+soda no.",
+              "solutionSteps": [
+                "Salt + water: components separate but no new molecules formed → physical.",
+                "Vinegar + soda: new molecules (CO2, sodium acetate) form → chemical.",
+                "Reversibility test: evaporation recovers salt but not soda. Decisive."
+              ],
+              "commonMistakes": [
+                "Calling dissolving 'chemical' because the salt 'disappears'. Disappearance to the eye isn't the test — recovery is. Salt is fully recoverable."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is rusting of iron a 'mixing' too? Justify why it's chemical.",
+                  "answer": "Iron + oxygen + water → iron oxide hydrate (rust). The rust IS a new compound; iron atoms are now bonded to oxygen. You can't 'unmix' rust back into iron and air. Definitively chemical.",
+                  "solutionSteps": [
+                    "Rust = new compound (iron oxide hydrate).",
+                    "Atoms reorganised; not recoverable by physical means."
+                  ]
+                },
+                {
+                  "prompt": "Predict whether dissolving sugar in water is physical or chemical, and what test would confirm it.",
+                  "answer": "Physical. Sugar dissolves but molecules stay intact (taste-test the water — sweet). Evaporate the water and you get sugar crystals back unchanged. Same atoms, same molecules, just dispersed in liquid temporarily.",
+                  "solutionSteps": [
+                    "Sugar dissolves without bond-breaking.",
+                    "Evaporation recovers original sugar → physical change."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                69,
+                70
+              ],
               "needsHumanReview": false
             }
           ]
@@ -12758,6 +13319,48 @@
               "pageRefs": [
                 82,
                 83
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t01_q20",
+              "prompt": "A weather report says 'Chennai today: temperature 32°C, humidity 95%, feels like 42°C.' Why does humidity make 32°C feel hotter, biologically?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Your body cools itself by sweating — sweat evaporates from skin, absorbing heat. In DRY air, sweat evaporates fast = efficient cooling. In 95% humid air, the air is nearly saturated; sweat barely evaporates → cooling stalls. Your body keeps producing sweat but it just runs off, doing nothing. Effective body temperature stays elevated despite 32°C ambient → 'feels like' 42°C. The number on the thermometer didn't change; what changed is your body's cooling efficiency.",
+              "solutionSteps": [
+                "Body cooling = sweat evaporation rate.",
+                "Evaporation needs unsaturated air to absorb water vapour.",
+                "95% humidity = air near saturation = sweat can't evaporate.",
+                "Body temperature rises; 'feels hotter' than the actual reading."
+              ],
+              "commonMistakes": [
+                "Believing humidity makes the AIR hotter. The air is the same 32°C; what changes is your body's ability to cool itself by sweating."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does standing in front of a fan feel cooler even in 95% humidity?",
+                  "answer": "The fan blows air across your skin, REPLACING saturated air at your skin surface with fresh (slightly less saturated) air. Even tiny humidity differences let some sweat evaporate. The fan doesn't cool the air; it moves air to keep slightly drier air at your skin.",
+                  "solutionSteps": [
+                    "Fan replaces stagnant saturated air at skin.",
+                    "Even small humidity gradients allow sweat evaporation.",
+                    "Cooling sensation returns."
+                  ]
+                },
+                {
+                  "prompt": "Compare summer in Delhi (~45°C, dry) vs. Mumbai (~32°C, humid). Which feels worse to a human body?",
+                  "answer": "Mumbai (humid) often feels worse despite lower temperature. Delhi's dry heat allows efficient sweating cooling (sometimes uncomfortably efficient — risk of dehydration). Mumbai's humidity disables sweat cooling → body overheats internally. Heat-illness risk often peaks in humid-warm conditions, not dry-hot.",
+                  "solutionSteps": [
+                    "Delhi: hot air, efficient sweat → cooled.",
+                    "Mumbai: warm humid air, sweat stalls → body overheats.",
+                    "Humidity is the more dangerous variable for heat stress."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                83,
+                84
               ],
               "needsHumanReview": false
             }
@@ -13964,6 +14567,88 @@
                 98
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t01_q23",
+              "prompt": "In a cyclone, the EYE (centre) is calm and clear, while the EYE WALL just around it has the strongest winds. Explain this contradiction using the physics of low-pressure systems.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A cyclone is a giant rotating low-pressure system. Air rushes inward toward low pressure, speeding up as it converges (conservation of angular momentum — like a spinning skater pulling in arms). At the EYE WALL, this inward rush reaches maximum speed (180-300 km/h). At the EYE itself, air is so concentrated that it can't compress further — instead it rises (forming the calm core) or stays still. So the strongest winds (eye wall) and the calmest centre (eye) are both consequences of the same converging-spinning dynamic. Pass through the eye and you experience: roaring wind → calm → roaring wind again.",
+              "solutionSteps": [
+                "Cyclone = inward-rushing rotating air toward low pressure.",
+                "Speed increases as air converges (angular momentum).",
+                "At the eye, air must rise; cannot rush in further → calm.",
+                "Eye wall = maximum speed point; eye = calm point. Both from same physics."
+              ],
+              "commonMistakes": [
+                "Believing the cyclone has 'stopped' when you enter the eye. It's still raging just kilometres away. People who venture outside during the eye get caught when the back wall arrives."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do cyclones spin counterclockwise in the Northern Hemisphere and clockwise in the Southern?",
+                  "answer": "The Coriolis effect from Earth's rotation deflects moving air. In the Northern Hemisphere, air rushing toward a low-pressure centre is deflected RIGHT → counterclockwise rotation. Southern Hemisphere: deflected LEFT → clockwise. Same physics, opposite hemispheres.",
+                  "solutionSteps": [
+                    "Coriolis deflects moving air opposite directions in N vs. S hemispheres.",
+                    "Air rushing toward low pressure rotates counterclockwise (N) or clockwise (S)."
+                  ]
+                },
+                {
+                  "prompt": "Why does the eye of a strong cyclone often have CLEAR SKY directly overhead?",
+                  "answer": "At the eye, rising air cools and either condenses (forming clouds further up) or — in mature cyclones — descends from above. The descending air WARMS by compression and EVAPORATES clouds. Result: clear sky and calm winds in the eye, even surrounded by storm.",
+                  "solutionSteps": [
+                    "Eye = column of either rising-then-clear or descending air.",
+                    "Descending air warms by compression, dries.",
+                    "Clear sky overhead at the eye despite storm surrounding."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t01_q24",
+              "prompt": "Design a public-information leaflet for a coastal village that has NEVER experienced a cyclone before. Cover: what to expect, what to do BEFORE landfall, what to do DURING, and what to do AFTER. Keep it to 5 actions per section.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "WHAT TO EXPECT: 180-300 km/h winds; storm surge (sea piled 3-8m high); horizontal rain; debris missiles; eye-calm midway then storm resumes. BEFORE (24h): (1) Evacuate if you live within 2 km of coast. (2) Board windows; tape glass in X pattern. (3) Stockpile 3 days of water + non-perishables. (4) Charge phones; buy battery radio. (5) Tell neighbours; coordinate. DURING: (1) Stay AWAY from windows. (2) Shelter in the strongest interior room. (3) If eye passes, do NOT go outside — back wall is coming. (4) Listen to radio. (5) Do not use phone for non-emergency. AFTER: (1) Don't drink tap water (likely contaminated). (2) Don't touch downed power lines. (3) Check on neighbours, especially elderly. (4) Photograph damage for insurance. (5) Report to local authorities; help arrives in waves.",
+              "solutionSteps": [
+                "Structure: time-ordered (before / during / after).",
+                "Per section, prioritise the 5 highest-survival-impact actions.",
+                "Emphasise eye-calm danger and post-storm hazards — both kill more people than the wind itself."
+              ],
+              "commonMistakes": [
+                "Treating the cyclone as one event. Eye + back-wall is the most dangerous moment because people leave shelter. Post-cyclone disease and electrocution kill more than the storm itself."
+              ],
+              "variations": [
+                {
+                  "prompt": "How would the leaflet differ for an INLAND town vs. a COASTAL village?",
+                  "answer": "Inland: skip storm-surge warning (no sea), emphasise flying-debris and trees-down. Coastal: storm surge dominates the warning. Both share: power outage, water contamination, structural damage. Tailor the leaflet to the specific hazard profile.",
+                  "solutionSteps": [
+                    "Inland hazard mix: wind + debris + trees.",
+                    "Coastal hazard mix: wind + storm surge + sea-rescue gear.",
+                    "Same template, different hazard emphasis."
+                  ]
+                },
+                {
+                  "prompt": "What's the SINGLE most life-saving instruction on this leaflet?",
+                  "answer": "'If you live within 2 km of the coast, EVACUATE before landfall.' Storm surge — not wind — kills the most people in cyclones. Getting people out of the surge zone is the highest-impact intervention possible.",
+                  "solutionSteps": [
+                    "Surge causes most cyclone deaths historically.",
+                    "Evacuating the surge zone removes people from the lethal mechanism.",
+                    "Highest leverage of any single action."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                98,
+                99
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -14915,6 +15600,89 @@
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q22",
+              "prompt": "A 1-litre bottle of clayey soil from a riverbank, when shaken with water, takes hours to settle. The same bottle of sandy soil settles in seconds. Explain this using the physics of falling particles, and predict what happens with loamy soil.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Stokes' law: a particle falling through fluid reaches a terminal velocity proportional to (particle diameter)². Sand particles are ~100x larger in diameter than clay particles → ~10,000x the settling speed. Sand drops in seconds; clay drifts for hours, possibly days. Loam is a mix — sand fraction settles first (visible layer at bottom in minutes), silt next (10s of minutes), clay last (hours). You'd see DISTINCT LAYERS in a settled loam bottle, with sand at the bottom and clay on top.",
+              "solutionSteps": [
+                "Stokes' law: terminal velocity ∝ (diameter)².",
+                "Sand (~1 mm) vs. clay (~0.001 mm) → 1,000,000x diameter ratio² = vastly different settling.",
+                "Loam shows layered settling because each size component drops at its own rate."
+              ],
+              "commonMistakes": [
+                "Believing 'all soil settles at the same rate'. Particle size is the dominant factor; the same soil mix shows layered settling over time."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does this settling test help farmers IDENTIFY their soil type?",
+                  "answer": "Shake a known soil + water in a clear bottle and wait. The relative heights of settled sand / silt / clay layers reveal the soil composition. Equal layers ≈ loam. Mostly sand layer ≈ sandy soil. Mostly clay-on-top ≈ clayey soil. Cheap diagnostic for farm planning.",
+                  "solutionSteps": [
+                    "Settling time reveals particle size composition.",
+                    "Layer heights = ratios of sand/silt/clay in the soil.",
+                    "Identifies soil type without lab equipment."
+                  ]
+                },
+                {
+                  "prompt": "How does this same principle explain why river deltas form sandy banks NEAR the river mouth and clay-rich plains FURTHER OUT?",
+                  "answer": "Heavy sand particles settle close to where the river slows (just before the sea). Lighter silt drops further out. Clay stays suspended longest, deposited far from shore. Deltas show natural Stokes-sorted layers over geological time — sand near mouth, clay-rich plains downstream.",
+                  "solutionSteps": [
+                    "River slows entering sea; particles drop by size.",
+                    "Sand drops first (near mouth); clay drops last (far downstream).",
+                    "Delta geology reflects Stokes' law across kilometres."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                110,
+                111
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_t01_q23",
+              "prompt": "A village's farmland is becoming sandy and infertile over 20 years, despite using fertilisers. Diagnose ONE possible cause (related to soil dynamics) and recommend ONE intervention.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Likely cause: TOPSOIL EROSION. Topsoil (the rich black fertile layer) is being washed or blown away faster than it's regenerating. As topsoil thins, the lighter clay + organic matter washes downstream, leaving heavier sand. Fertilisers can't fix structural soil loss — they add nutrients but don't replace the physical clay+organic structure that holds water and roots. Intervention: planting cover crops (e.g., legumes) between main-crop seasons. Cover crops' roots hold topsoil in place; their leaf litter rebuilds organic matter over years. Combined with contour ploughing (across the slope, not up-down) and windbreak trees, this stops the loss.",
+              "solutionSteps": [
+                "Identify the soil dynamic: sandification = preferential loss of fine particles + organic matter.",
+                "Fertilisers ADD nutrients but don't STRUCTURE the soil.",
+                "Cover crops + contour ploughing + windbreaks ATTACK the loss mechanism (erosion).",
+                "Multi-year intervention needed; soil structure rebuilds slowly."
+              ],
+              "commonMistakes": [
+                "Reaching for more fertiliser when soil structure is the problem. Adding NPK to eroded sand is like watering a sieve."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are TREES at field edges often more important than fertiliser for long-term farm health?",
+                  "answer": "Tree roots bind soil → reduce erosion. Tree canopies break wind → reduce wind erosion. Falling leaves rebuild organic matter. Trees + windbreaks preserve the topsoil that fertilisers depend on. Lose your topsoil and no amount of fertiliser saves your yield.",
+                  "solutionSteps": [
+                    "Trees prevent loss (roots + windbreak + leaf litter).",
+                    "Fertilisers don't prevent loss; they assume soil exists.",
+                    "Long-term: trees > fertiliser for sustainability."
+                  ]
+                },
+                {
+                  "prompt": "How long does it typically take 1 cm of topsoil to form naturally?",
+                  "answer": "100-500 years, depending on climate, vegetation, and parent rock. Topsoil is essentially non-renewable on human timescales — losing 1 cm of it in a single storm represents centuries of natural buildup. This is why erosion is such a serious agricultural threat.",
+                  "solutionSteps": [
+                    "Topsoil forms by slow weathering + organic matter accumulation.",
+                    "Centuries per cm.",
+                    "Erosion can destroy in days what nature built in centuries."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                111,
+                112
+              ],
               "needsHumanReview": false
             }
           ]
@@ -16455,6 +17223,48 @@
               "pageRefs": [],
               "needsHumanReview": false,
               "variations": []
+            },
+            {
+              "id": "ch10_t02_q08",
+              "prompt": "Compare breathing in a healthy person vs. an asthmatic person during an attack. What physically changes in the airways, and why does an inhaler help?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Healthy: bronchi (airway tubes) are open; air flows easily in/out; oxygen reaches alveoli efficiently. Asthmatic attack: bronchi tighten (smooth muscle spasm) AND the bronchial lining swells. Cross-section of airway can shrink to 1/10th normal. Air flow becomes turbulent (the wheeze sound) and insufficient oxygen reaches alveoli. Inhaler delivers a fast-acting bronchodilator (e.g., salbutamol) that RELAXES bronchial smooth muscle within minutes — airways re-open; normal flow resumes. Some inhalers also contain steroids to reduce the swelling component over hours.",
+              "solutionSteps": [
+                "Healthy bronchi: open, smooth-walled, low resistance.",
+                "Asthma: smooth muscle spasm + lining swelling → cross-section drops, resistance soars.",
+                "Inhaler bronchodilator relaxes smooth muscle; steroids reduce swelling.",
+                "Result: airway re-opens, oxygen reaches alveoli."
+              ],
+              "commonMistakes": [
+                "Believing asthma is 'just nervousness about breathing'. It's a physiological smooth-muscle + inflammation response, often triggered by allergens or cold air."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is an asthma inhaler more effective than swallowing the same medicine as a pill?",
+                  "answer": "Inhaler delivers medicine DIRECTLY to the bronchial smooth muscle within seconds. A pill must be digested, absorbed, circulated — taking 30+ minutes. During an attack, time matters. Direct delivery also uses 1/100th the dose for the same local effect.",
+                  "solutionSteps": [
+                    "Inhaler: direct delivery → seconds to effect.",
+                    "Pill: digestion + circulation → 30+ minutes.",
+                    "Direct route is faster AND lower-dose for same effect."
+                  ]
+                },
+                {
+                  "prompt": "How does cold air trigger asthma in some people?",
+                  "answer": "Cold air causes bronchial smooth muscle to reflexively contract (a normal protective response in everyone — to slow heat loss). In asthmatics, the muscle is hypersensitive; the contraction goes too far and an attack starts. Warming inhaled air via a scarf over the mouth can prevent this trigger.",
+                  "solutionSteps": [
+                    "Cold air triggers protective bronchoconstriction in all humans.",
+                    "Asthmatic muscle over-reacts → attack.",
+                    "Scarf / warming air pre-empts the trigger."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                121,
+                122
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17339,6 +18149,90 @@
                 136
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q24",
+              "prompt": "Blood typing matters in transfusions — give a person the wrong blood type and they can die. Explain WHY in terms of antigens and antibodies, and predict what happens if you give a Type O person Type A blood by mistake.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Red blood cells carry surface markers called antigens (A, B, or none — type O). Plasma carries antibodies against the antigens the person LACKS. Type O person: cells have no A or B antigens; plasma carries anti-A AND anti-B antibodies. Give them Type A blood: incoming cells display A antigens; recipient's anti-A antibodies attack them → mass clotting and bursting of donor cells → kidney damage, shock, death within hours. Transfusions only work when donor's antigens don't match recipient's antibodies. Type O is the 'universal donor' (no antigens to attack); Type AB is the 'universal recipient' (no antibodies to attack).",
+              "solutionSteps": [
+                "Antigens on red cells: A, B, or neither.",
+                "Plasma antibodies: against the antigens you lack.",
+                "Mismatch: recipient antibodies attack donor cells → fatal reaction.",
+                "Type O is safe to give to anyone (no antigens to attack)."
+              ],
+              "commonMistakes": [
+                "Thinking 'all blood is the same'. Mismatched blood is a fatal medical error — every hospital cross-matches before transfusion."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is Type O called 'universal donor' but only Type AB called 'universal recipient'?",
+                  "answer": "Type O has NO antigens → no recipient's antibodies can attack the donated cells → safe for everyone. Type AB has BOTH antigens but NO antibodies in plasma → no donor's cells will be attacked by AB recipient → safe to receive any type.",
+                  "solutionSteps": [
+                    "O: no antigens → universal donor.",
+                    "AB: no antibodies → universal recipient.",
+                    "Opposite ends of the donor/recipient compatibility spectrum."
+                  ]
+                },
+                {
+                  "prompt": "What's the role of Rh factor (+ or −) on top of ABO typing?",
+                  "answer": "Rh+ has the Rh antigen; Rh− doesn't. Rh− recipients form anti-Rh antibodies if exposed to Rh+ blood, causing reactions in subsequent exposures. Most critical during pregnancy: an Rh− mother carrying an Rh+ baby may form antibodies that attack the baby's blood in future pregnancies (Rh disease).",
+                  "solutionSteps": [
+                    "Rh factor is an additional antigen layer.",
+                    "Rh− people form anti-Rh antibodies if exposed.",
+                    "Pregnancy implication: Rh disease in subsequent pregnancies."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                131,
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q25",
+              "prompt": "Compare a HEART ATTACK with a STROKE — both involve blood-supply failure, but to different organs and with different consequences. Explain the parallels and the differences.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Both: a blood vessel gets blocked (usually by a clot), starving downstream tissue of oxygen. Heart attack: blockage in a CORONARY artery (the heart's own blood supply) → heart muscle tissue dies. Symptoms: chest pain, shortness of breath. Damage: muscle scar reduces pumping capacity. Stroke: blockage in a BRAIN artery → brain tissue dies. Symptoms: sudden weakness on one side, slurred speech, vision loss. Damage: lost function depends on which brain region died (paralysis, language loss, etc.). Treatment for both: clot-busting drugs within ~3 hours, then surgery if needed. Speed matters in BOTH — every minute, more tissue dies.",
+              "solutionSteps": [
+                "Parallel: vessel blocked → downstream tissue starves.",
+                "Heart: coronary blockage → heart muscle dies → pumping weakens.",
+                "Brain: cerebral blockage → brain tissue dies → function lost.",
+                "Both: time-critical; tissue dies fast without oxygen."
+              ],
+              "commonMistakes": [
+                "Treating heart attacks and strokes as totally different. They're the same MECHANISM (vessel blockage) in different organs."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is aspirin sometimes given to a person who may be having a heart attack?",
+                  "answer": "Aspirin thins blood by reducing platelet stickiness. If the blockage involves a fresh clot, aspirin may prevent further clotting and partially dissolve what's there. Buys time for ambulance/treatment. Standard first-aid for suspected cardiac event.",
+                  "solutionSteps": [
+                    "Aspirin reduces platelet aggregation.",
+                    "Slows clot growth; may reduce blockage.",
+                    "Used as immediate first-aid for suspected heart attack."
+                  ]
+                },
+                {
+                  "prompt": "How does CPR (chest compressions) help during a heart attack?",
+                  "answer": "CPR doesn't restart the heart — it manually pumps blood to keep brain and organs oxygenated while the actual heart can't. Buys time until defibrillator + medical care arrives. Without CPR, brain death starts in ~4 minutes; with CPR, that window extends significantly.",
+                  "solutionSteps": [
+                    "CPR substitutes for failing heart pump.",
+                    "Manual chest compression circulates blood.",
+                    "Extends survival window from 4 min to many more."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132,
+                133
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -17637,6 +18531,49 @@
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q23",
+              "prompt": "Compare the SWEAT we produce on a hot day with URINE — both contain water and some salts. Why are these different, and what does each tell you about the body?",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Both: water + salts. Differences: Sweat contains mostly water + sodium chloride + a bit of urea — produced by sweat glands in skin for cooling. Urine contains water + urea + creatinine + much higher urea concentration + various filtered toxins — produced by kidneys for waste removal. Sweat: primary job is COOLING (urea is a side product). Urine: primary job is WASTE REMOVAL (cooling is incidental). On a hot day, sweat volume can exceed urine volume; kidneys reduce urine to conserve water. Both are excretory but with different priorities.",
+              "solutionSteps": [
+                "Both excretory; different organs and primary jobs.",
+                "Sweat: cooling-primary, waste-secondary. Sodium chloride + water + trace urea.",
+                "Urine: waste-primary, water-balance-secondary. Concentrated urea + creatinine + filtered toxins.",
+                "Kidneys reduce urine output when sweating; conservation of water."
+              ],
+              "commonMistakes": [
+                "Believing sweat and urine are 'just water'. Both carry filtered metabolic waste — but in different proportions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does urine become DARK YELLOW on a hot day?",
+                  "answer": "Body loses water through sweat → kidneys conserve water by concentrating urine. Same urea, less water → darker yellow. Dark urine is a dehydration warning. Drink more water to lighten the colour.",
+                  "solutionSteps": [
+                    "Water loss via sweat → less water for kidneys.",
+                    "Kidneys concentrate urine: same waste, less water.",
+                    "Result: darker urine. Dehydration indicator."
+                  ]
+                },
+                {
+                  "prompt": "What happens if you drink too much water (water intoxication)?",
+                  "answer": "Kidneys can only excrete ~1L of water per hour. Excess intake dilutes blood sodium → cells swell (especially brain) → confusion, seizures, even death in extreme cases. Marathon runners occasionally develop this if they over-hydrate while sweating salts away. Balance, not just volume, matters.",
+                  "solutionSteps": [
+                    "Kidney throughput limit: ~1 L/hour.",
+                    "Excess water dilutes blood sodium.",
+                    "Cells swell → neurological symptoms.",
+                    "Balance water with salt intake."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                133,
+                134
+              ],
               "needsHumanReview": false
             }
           ]
@@ -18352,6 +19289,47 @@
               "difficulty": 5,
               "pageRefs": [
                 144,
+                145,
+                146
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_q21",
+              "prompt": "Compare bisexual flowers (with both male and female parts) and unisexual flowers (separate male and female on different flowers). Give TWO advantages and TWO disadvantages of each strategy.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Bisexual (e.g., hibiscus, rose): Advantages — (1) Self-pollination is possible as backup, ensuring some seeds even without pollinators. (2) Single flower visit by an insect can pollinate both ways. Disadvantages — (1) Risk of self-pollination reducing genetic diversity. (2) Resources concentrated in fewer flowers; mass-flowering harder. Unisexual (e.g., papaya, cucumber): Advantages — (1) Forces cross-pollination → genetic diversity. (2) Specialised male vs. female flowers can be optimised differently. Disadvantages — (1) Pollinator must visit two flowers — failure of one type kills reproduction. (2) Wasted resources if male:female ratio is poor.",
+              "solutionSteps": [
+                "Bisexual: trade-off favours reliability over diversity.",
+                "Unisexual: trade-off favours diversity over reliability.",
+                "Each evolved as a different solution to the same problem (reproduction)."
+              ],
+              "commonMistakes": [
+                "Believing one strategy is 'better'. Both have evolved many times independently — they're equally successful in different niches."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do papaya plants come in 'male' and 'female' trees? What problem does this create for farmers?",
+                  "answer": "Papaya is dioecious — male trees produce only pollen, female trees produce fruit (after pollination). Farmer's problem: can't tell male from female until first flowering (1-2 years). May end up with 'wasted' male trees and not enough females. Modern hybrid papaya is mostly hermaphroditic to avoid this.",
+                  "solutionSteps": [
+                    "Dioecious species: male and female on separate plants.",
+                    "Sex isn't visible at seedling stage.",
+                    "Hybrid papaya engineered hermaphroditic to solve farmer's problem."
+                  ]
+                },
+                {
+                  "prompt": "Why is genetic diversity (from cross-pollination) worth the risk for some plants?",
+                  "answer": "Diverse offspring vary in disease resistance, climate tolerance, etc. When environment changes (disease, drought), some offspring survive while others don't. Self-pollination gives genetically uniform offspring — efficient short-term but fragile to change. Cross-pollination's diversity is insurance.",
+                  "solutionSteps": [
+                    "Diverse offspring = some survive any future change.",
+                    "Uniform offspring = efficient now, fragile to change.",
+                    "Long-term species survival favours cross-pollination."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
                 145,
                 146
               ],
@@ -19441,6 +20419,48 @@
               "difficulty": 5,
               "pageRefs": [
                 155,
+                156,
+                157
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t01_q25",
+              "prompt": "A car has GPS that updates its position every second. Explain how the GPS calculates SPEED from this, and what happens to the speed reading when the car is going around a sharp curve at constant pace.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "GPS computes speed = distance / time, using the straight-line distance between successive position updates divided by 1 second. On a STRAIGHT road, this matches the actual speedometer. On a SHARP CURVE, GPS calculates straight-line (chord) distance, which is SHORTER than the actual arc the car traveled. Result: GPS speed reading underestimates actual speed during sharp turns. The faster the car turns (smaller radius), the bigger the underestimate. Modern GPS uses curve-correction algorithms or higher sample rates to reduce this error.",
+              "solutionSteps": [
+                "GPS speed = chord (straight-line) distance / sample interval.",
+                "On a straight road, chord = actual distance, accurate.",
+                "On a curve, chord < actual arc → underestimates speed.",
+                "Faster turn = larger error."
+              ],
+              "commonMistakes": [
+                "Trusting GPS as the ground truth. Even GPS has systematic errors, especially during curves. Speedometers measure wheel rotation directly — better on curves."
+              ],
+              "variations": [
+                {
+                  "prompt": "How can you DESIGN a GPS algorithm to fix the curve-underestimate problem?",
+                  "answer": "Sample positions faster (10 Hz instead of 1 Hz) — chord becomes nearly equal to arc at small intervals. Or detect that the path is curved (using 3+ recent points), and fit a smooth curve through them, computing arc length instead of chord.",
+                  "solutionSteps": [
+                    "Higher sample rate shrinks chord error.",
+                    "Or fit curves through 3+ points to estimate arc length.",
+                    "Both reduce systematic underestimation on turns."
+                  ]
+                },
+                {
+                  "prompt": "Why doesn't a speedometer on the car's WHEEL have this problem?",
+                  "answer": "Wheel speedometer measures the number of wheel rotations per second × wheel circumference. This gives the TRUE distance the car traveled per second, regardless of straight or curved path. Wheel-based measurement is more accurate during turns than GPS chord-based.",
+                  "solutionSteps": [
+                    "Wheel speedometer counts actual rotations.",
+                    "Distance per rotation = circumference; constant.",
+                    "Independent of path shape; accurate on straight and curved roads."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
                 156,
                 157
               ],
@@ -20679,6 +21699,49 @@
                 167,
                 168,
                 169
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t01_q30",
+              "prompt": "A battery is rated '1.5V, 2000 mAh' (milliampere-hours). Compute how long it can supply 100 mA, and explain what 'mAh' actually MEANS as a capacity unit.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Time = capacity / current = 2000 mAh / 100 mA = 20 hours. mAh (milliampere-hour) is a CHARGE unit: 1 mAh = 1 mA flowing for 1 hour = 3.6 coulombs (since 1 A × 1 s = 1 C, and 1 mA × 1 hr = 0.001 A × 3600 s = 3.6 C). 'mAh' tells you how much total charge a battery can deliver. 2000 mAh = battery can deliver 2000 mA for 1 hour, or 100 mA for 20 hours, or 1000 mA for 2 hours — same total charge, different rates.",
+              "solutionSteps": [
+                "Capacity / current = time (where capacity is in same units as current × time).",
+                "2000 mAh / 100 mA = 20 hr.",
+                "mAh = charge unit; same total charge can be drawn at different rates.",
+                "Battery 'runs out' when all its charge has flowed."
+              ],
+              "commonMistakes": [
+                "Confusing mAh (capacity/charge) with mA (current). Capacity is total fuel; current is the rate of fuel consumption."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a phone battery die FASTER when you play games (high current) than when you read (low current)?",
+                  "answer": "Phone battery is rated in mAh — total charge. Gaming draws ~1000 mA, reading draws ~100 mA. Same battery: gaming uses fuel 10x faster. A 3000 mAh battery lasts 3 hours gaming, 30 hours reading. Use rate determines duration.",
+                  "solutionSteps": [
+                    "Same battery (fixed mAh).",
+                    "Gaming high current → quick drain.",
+                    "Reading low current → slow drain.",
+                    "Duration = mAh / current; current dominates."
+                  ]
+                },
+                {
+                  "prompt": "Two batteries are rated 1000 mAh at 1.5V and 1000 mAh at 9V. Which stores more ENERGY?",
+                  "answer": "The 9V battery — six times more energy. Energy = charge × voltage = mAh × V. 1000 mAh × 1.5V = 1500 mWh. 1000 mAh × 9V = 9000 mWh. Same mAh (same charge) but voltage multiplies energy. Energy, not just mAh, is the real fuel measure.",
+                  "solutionSteps": [
+                    "Energy = charge × voltage = mAh × V.",
+                    "Higher voltage at same mAh = more energy.",
+                    "9V battery stores 6x the energy of 1.5V battery at same mAh."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                166,
+                167
               ],
               "needsHumanReview": false
             }
@@ -22091,6 +23154,90 @@
                 177,
                 178,
                 179
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_q26",
+              "prompt": "A flat mirror produces a 1:1 image. A CONCAVE mirror (like a makeup mirror) can magnify — produce an image LARGER than the object. Explain HOW concave mirrors achieve this magnification using the focal point.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A concave mirror has a curved surface with a FOCAL POINT in front of it (where parallel rays converge after reflection). When you place an object BETWEEN the mirror and the focal point, reflected rays DIVERGE (not converge) and appear to come from a magnified virtual image behind the mirror. Closer to the mirror = larger magnification. Beyond the focal point, the rays converge to form a real (sometimes inverted) image. Makeup mirrors put your face inside the focal length → magnified virtual image of your face. The geometry of curvature creates magnification that flat mirrors physically cannot.",
+              "solutionSteps": [
+                "Concave mirror has a focal point in front.",
+                "Object inside focal length → diverging reflected rays → virtual magnified image.",
+                "Object beyond focal length → converging rays → real (inverted) image.",
+                "Flat mirrors lack a focal point → can't magnify."
+              ],
+              "commonMistakes": [
+                "Believing all mirrors can magnify by 'moving closer to them'. Flat mirrors don't magnify regardless of distance. Concave mirrors magnify only inside their focal length."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a SPOON serve as both a concave AND convex mirror?",
+                  "answer": "Inside of spoon = concave (curves toward you) → magnifies and inverts at certain distances. Back of spoon = convex (curves away) → always shrinks and shows wider field. Same metal, opposite curvatures → opposite optical behaviour.",
+                  "solutionSteps": [
+                    "Spoon inside = concave: magnifies when close; inverts when far.",
+                    "Spoon back = convex: shrinks, wider view always.",
+                    "Single object demonstrates both mirror types."
+                  ]
+                },
+                {
+                  "prompt": "How does a DENTIST'S mirror use concave geometry?",
+                  "answer": "Dentist's mirror is concave, very small. By holding it close to the tooth (well inside focal length), the dentist sees a magnified upright image of the tooth, even though it's pointing the wrong way to see directly. Magnification helps spot cavities; small size fits inside the mouth.",
+                  "solutionSteps": [
+                    "Concave mirror inside focal length → magnified upright image.",
+                    "Used at close range so magnification dominates.",
+                    "Compact size for in-mouth use."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                178,
+                179
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_q27",
+              "prompt": "Design an experiment with a candle, a CONVEX LENS, and a paper screen to measure the lens's focal length. Specify your method and what you'd see at different distances.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Setup: candle on one side of the lens, paper screen on the other side. Goal: find the position where parallel-ish light from the candle forms a sharp focused image on the screen. Method: (1) Light the candle in a dark room. (2) Place the lens ~1 m away pointing at the candle. (3) Move the screen behind the lens until you see a SHARP INVERTED image of the candle flame. (4) Measure the lens-to-screen distance — that's the image distance. (5) Now place the candle VERY FAR (across the room, ~5 m) — almost parallel rays. Refocus the screen; the lens-to-screen distance now equals the FOCAL LENGTH. The further the candle, the closer to focal length the image forms.",
+              "solutionSteps": [
+                "Parallel rays from infinity converge at the focal point.",
+                "Real object at finite distance focuses BEYOND focal point; convergence point depends on object distance via 1/u + 1/v = 1/f.",
+                "Put object far enough that 1/u ≈ 0, so image forms at f.",
+                "Measure that distance."
+              ],
+              "commonMistakes": [
+                "Trying to measure focal length with the candle close (~30 cm). The image then forms much further than f, giving a wrong reading. Must use distant source."
+              ],
+              "variations": [
+                {
+                  "prompt": "What changes if you replace the convex lens with a CONCAVE lens?",
+                  "answer": "Concave lens makes rays DIVERGE, not converge. No real image forms on a screen — only a virtual one visible through the lens. You can't measure focal length the same way; instead, image-by-image with a graduated optical bench gives the (negative) focal length.",
+                  "solutionSteps": [
+                    "Concave lens diverges rays; no real image on screen.",
+                    "Virtual image through the lens only.",
+                    "Different measurement technique required."
+                  ]
+                },
+                {
+                  "prompt": "How does this experiment relate to a camera's autofocus mechanism?",
+                  "answer": "Autofocus moves the lens forward/back until the image on the sensor is sharpest. Same physics as moving the screen in this experiment — the camera finds the distance where the image converges to a sharp focus, which depends on object distance. Modern cameras automate this with contrast detection or phase detection.",
+                  "solutionSteps": [
+                    "Camera lens moves to find sharpest image (autofocus).",
+                    "Sharpness = light converging to a point on sensor.",
+                    "Same physics; automated electronically."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180,
+                181
               ],
               "needsHumanReview": false
             }
@@ -23650,6 +24797,89 @@
                 189
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t01_q26",
+              "prompt": "Drip irrigation uses 30-50% less water than flood irrigation for the same crop yield. Explain WHY using the physics of how water is lost in each method.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Flood irrigation: water is dumped on the field; most flows over the surface. Losses: (1) EVAPORATION from the wet field surface — exposed water boils off in the sun. (2) RUNOFF to drainage channels. (3) DEEP PERCOLATION beyond root zone. Only ~50% of water actually reaches plant roots. Drip irrigation: water emerges drop-by-drop at the root zone via plastic tubes. Losses near zero: no surface exposed to evaporation, no runoff, water goes directly where roots need it. Result: same yield, 30-50% less water. The savings are because drip fixes the THREE main loss mechanisms.",
+              "solutionSteps": [
+                "Flood: ~50% loss to evaporation + runoff + percolation.",
+                "Drip: near-zero loss; water reaches roots directly.",
+                "Crop only uses what reaches roots; the rest is wasted.",
+                "Drip's efficiency = elimination of the loss paths."
+              ],
+              "commonMistakes": [
+                "Believing 'more water = better growth'. Once roots have enough, extra water either evaporates (wasted) or floods (drowns roots). Efficiency, not volume, matters."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is drip irrigation especially valuable in INDIA's water-stressed agriculture?",
+                  "answer": "India has 18% of world's population but only 4% of world's freshwater. Agriculture uses 80% of available water. Switching even 30% of fields to drip can free billions of litres annually — equivalent to building several large dams. High-leverage intervention.",
+                  "solutionSteps": [
+                    "India: heavy population, scarce water, agricultural-dominated water use.",
+                    "30% of fields on drip = massive water savings.",
+                    "Cheaper than building dams or desalination."
+                  ]
+                },
+                {
+                  "prompt": "What's the BIGGEST barrier to drip irrigation adoption?",
+                  "answer": "Upfront cost. Drip equipment costs ~Rs 30,000-50,000 per hectare to install. Small farmers can't afford the capital even though savings pay back in 2-3 years. Government subsidies (PMKSY scheme) bridge this gap; without subsidy, adoption is slow.",
+                  "solutionSteps": [
+                    "Drip installation has high upfront capital cost.",
+                    "Long-term water savings + yield improvements pay back in 2-3 years.",
+                    "Subsidies are needed to overcome small-farmer capital constraint."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                188,
+                189
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_t01_q27",
+              "prompt": "A traditional Indian baoli (stepwell) was used for centuries before piped water. Describe HOW it worked and explain WHY this design is being revived in some cities today as climate-smart architecture.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "A baoli is a deep vertical shaft with stone steps spiraling down, ending at the local groundwater table. As you descend, you reach the water level. The thick stone walls insulate water from heat and evaporation. Multiple landings provide gathering spaces. Climate-smart features: (1) Water stored UNDERGROUND in cool earth — evaporation loss near zero. (2) Recharges naturally with rain; functions as both reservoir AND storage. (3) Stone steps + landings double as cool gathering space in hot climate (15-20°C cooler than surface). Modern revival: rainwater-harvesting baolis are being built in Bengaluru, Delhi public buildings — combining heritage design with modern groundwater science.",
+              "solutionSteps": [
+                "Baoli structure: vertical shaft + descending steps to groundwater.",
+                "Climate features: underground storage (cool, no evaporation), natural recharge, cool gathering space.",
+                "Modern revival uses same principles + better engineering for sustainability."
+              ],
+              "commonMistakes": [
+                "Treating baolis as just 'old wells'. They were sophisticated multi-purpose infrastructure — water + cool space + community + spiritual."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are baolis cooler than the surface above on a hot day?",
+                  "answer": "Earth's temperature at 3-4 metres deep stays close to the annual average (~20°C in northern India), regardless of surface heat. Baoli levels at this depth stay cool year-round, providing thermal refuge from 45°C surface heat.",
+                  "solutionSteps": [
+                    "Underground temperature stabilises at depth.",
+                    "3-4 m deep = annual average temperature.",
+                    "Surface 45°C; baoli 20°C — natural air conditioning."
+                  ]
+                },
+                {
+                  "prompt": "What's the modern equivalent of a baoli for a high-rise apartment complex?",
+                  "answer": "Underground rainwater harvesting tanks beneath the courtyard, combined with shaded courtyards and ventilation shafts for cooling. Same principles (underground storage + cool gathering space) adapted to vertical living. Bengaluru's 'eco-housing' designs explicitly cite baolis as inspiration.",
+                  "solutionSteps": [
+                    "Underground rain tanks = baoli's storage function.",
+                    "Shaded ventilated courtyards = gathering space.",
+                    "Modern materials, ancient principles."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                189,
+                190
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -24692,6 +25922,48 @@
                 198
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch17_t01_q25",
+              "prompt": "A 100-hectare forest is cut down. Trace what happens to the LOCAL CLIMATE over 5 years (rainfall, temperature, humidity), and explain WHY each change occurs.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Year 1: Trees gone; ground exposed. Rain falls but no canopy to slow it — runoff increases dramatically. Year 1-2: Temperature rises 2-4°C locally because trees cooled by transpiration + shade are gone. Humidity drops because transpiration is the main local moisture source; rain becomes more erratic. Year 3-5: Reduced cloud formation downwind (transpiration was a major water-vapour source) → less rain. Soil erodes; albedo (reflectivity) shifts as bare earth vs. green canopy reflects differently. By year 5: hotter, drier, more erratic rainfall — a measurable LOCAL DROUGHT cycle, even though global climate hasn't changed.",
+              "solutionSteps": [
+                "Trees: shade + transpiration + canopy break of rain.",
+                "Removal: ground exposed → hotter, drier, more runoff.",
+                "Transpiration source gone → less cloud formation → less rain downwind.",
+                "Year 5: measurable local climate degradation."
+              ],
+              "commonMistakes": [
+                "Thinking 'deforestation only affects wildlife'. It changes the local water cycle, temperature, and rain patterns within years."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the Amazon called 'the lungs of the Earth' but ALSO 'the world's water pump'?",
+                  "answer": "Lungs: produces ~6% of global oxygen via photosynthesis. Water pump: 20 BILLION tonnes of water vapour transpired daily from Amazon trees — this water vapour falls as rain downwind in Brazil's agricultural zones. Lose the Amazon, lose much of South America's rainfall. The water cycle isn't just 'wet east coast, dry west' — trees ACTIVELY MOVE water.",
+                  "solutionSteps": [
+                    "Amazon transpires ~20 billion tonnes water/day.",
+                    "This vapour becomes rain downwind.",
+                    "Removing trees breaks the water-vapour transport system."
+                  ]
+                },
+                {
+                  "prompt": "How does deforestation in northern India affect monsoon patterns in southern India?",
+                  "answer": "Forests in Western Ghats and Northeast India contribute water vapour to the monsoon system. Loss of forest cover weakens the moisture supply; monsoons become more erratic. Recent monsoon failures in some regions correlate with upstream deforestation. Continent-scale effect of local action.",
+                  "solutionSteps": [
+                    "Forests are part of the monsoon's water source.",
+                    "Less forest = less vapour available = weaker/more erratic monsoon.",
+                    "Effects span hundreds of km."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                197,
+                198
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -25578,6 +26850,50 @@
               "difficulty": 5,
               "pageRefs": [
                 206,
+                207,
+                208
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_t01_q23",
+              "prompt": "A homeowner asks: 'Can I just dig a soak pit in my backyard for kitchen wastewater instead of connecting to the city sewer?' Evaluate this advice for two scenarios: a single house in a low-density rural area, AND a flat in a dense city apartment block.",
+              "questionType": "longAnswer",
+              "options": null,
+              "answer": "Rural single house, low-density: Soak pit can work IF (1) household wastewater volume is modest (<500 L/day), (2) groundwater table is deep (>3m), (3) soil percolates well, (4) no synthetic chemical waste. Bacteria in the pit naturally digest organic waste; effluent slowly soaks into soil. Sustainable. Dense city apartment: Soak pit fails because (1) wastewater volume exceeds local soil capacity, (2) groundwater is often shallow and contaminates nearby borewells, (3) flats produce shared waste that no single pit can handle, (4) regulations forbid it. City needs piped sewer + treatment plant — soak pit is rural-only. Same technology, very different fit by population density.",
+              "solutionSteps": [
+                "Identify soak pit's design assumption: low waste volume + soil capacity for biological digestion + groundwater depth.",
+                "Rural: meets all three; viable.",
+                "City: violates all three; sewer + treatment needed.",
+                "Same technology, different fit by density."
+              ],
+              "commonMistakes": [
+                "Treating soak pits as a 'natural alternative everywhere'. They're specific to LOW-density situations; high-density use creates groundwater contamination."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is GREYWATER (kitchen + bath water) separable from BLACKWATER (toilet waste), and what can you do with greywater?",
+                  "answer": "Greywater is much less contaminated than blackwater. Greywater can be lightly filtered and used for garden irrigation, toilet flushing — saves 30-40% of household water demand. Many homes now plumb separate systems for the two. Blackwater still needs full sewer treatment.",
+                  "solutionSteps": [
+                    "Greywater: cleaner waste from sinks/showers.",
+                    "Blackwater: toilet waste, heavily contaminated.",
+                    "Separate plumbing allows greywater reuse for gardens + flushing.",
+                    "Saves significant municipal water demand."
+                  ]
+                },
+                {
+                  "prompt": "What happens to the SLUDGE that accumulates at the bottom of a soak pit?",
+                  "answer": "Solid organic matter that bacteria can't fully digest accumulates over years. Eventually the pit fills and must be emptied (every 2-5 years typically). Mechanical pumping → sealed transport → treatment plant. Manual scavenging is illegal and dangerous; mechanised emptying is mandatory.",
+                  "solutionSteps": [
+                    "Bacterial digestion doesn't break down 100% — sludge accumulates.",
+                    "Pit fills over 2-5 years.",
+                    "Must be mechanically emptied (manual emptying illegal).",
+                    "Sludge goes to treatment plant for further processing."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
                 207,
                 208
               ],
