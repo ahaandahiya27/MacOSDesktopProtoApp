@@ -135,7 +135,7 @@ struct Scene7_CrystalGarden: View {
 
             SoftShadowCard(padding: 18) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Label("Crystallisation", systemImage: "diamond.fill")
+                    Label("Crystallisation", systemImage: SFSymbolCompat.name("diamond.fill"))
                         .font(.title2.bold())
                     Text("When a hot, saturated solution cools slowly, dissolved particles arrange themselves into a regular pattern \u{2014} a crystal. A tiny seed crystal gives molecules a template to latch onto, and the crystal grows layer by layer. This is a physical change because no new substance is formed.")
                         .font(.body)
