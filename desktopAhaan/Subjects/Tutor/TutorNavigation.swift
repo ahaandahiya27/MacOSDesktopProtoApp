@@ -37,6 +37,14 @@ final class TutorNavigationState: ObservableObject {
     }
 
     func push(_ route: TutorRoute) {
+        // Idempotency guard: a fast double-click on a list row would call
+        // push() twice during a single SwiftUI transition, appending the
+        // same route twice and corrupting the attribute graph
+        // (EXC_BAD_ACCESS in AG::Graph::remove_removed_output observed
+        // on the Late-2014 iMac, where the slow CPU widens the window
+        // between the two clicks). Drop the second call if the same
+        // route is already on top.
+        if path.last == route { return }
         withAnimation(.easeInOut(duration: 0.2)) {
             path.append(route)
         }

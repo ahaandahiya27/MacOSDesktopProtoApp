@@ -90,10 +90,13 @@ private struct QuizBankContent: View {
 
     /// Push a question detail view, also recording the current filtered list
     /// as the sibling set so Prev/Next inside the detail view can walk it.
-    private func openQuestion(_ entry: (pack: SubjectPack, chapter: Chapter, question: Question)) {
-        nav.questionSiblings = filteredEntries.map {
-            QuestionRef(packId: $0.pack.id, questionId: $0.question.id)
-        }
+    /// The `siblings` snapshot is passed in from `body` to avoid a second
+    /// ~791-entry filter pass on the main thread (the Late-2014 iMac CPU
+    /// couldn't absorb it — the hang widened the window for SwiftUI's
+    /// attribute graph to corrupt on a fast double-click).
+    private func openQuestion(_ entry: (pack: SubjectPack, chapter: Chapter, question: Question),
+                              siblings: [QuestionRef]) {
+        nav.questionSiblings = siblings
         nav.push(.question(packId: entry.pack.id, questionId: entry.question.id))
     }
 
@@ -110,8 +113,13 @@ private struct QuizBankContent: View {
     var body: some View {
         // Compute filteredEntries ONCE per body render — was called twice
         // (`.isEmpty` check + `List(...)` initializer) which doubled the
-        // ~791-entry filter cost on every render.
+        // ~791-entry filter cost on every render. Also derive the sibling
+        // refs once here so openQuestion() doesn't have to recompute the
+        // filter on click (see openQuestion docstring).
         let entries = filteredEntries
+        let siblingRefs = entries.map {
+            QuestionRef(packId: $0.pack.id, questionId: $0.question.id)
+        }
 
         return VStack(spacing: 0) {
             filterBar
@@ -130,7 +138,7 @@ private struct QuizBankContent: View {
             } else {
                 List(entries, id: \.question.id) { entry in
                     Button {
-                        openQuestion(entry)
+                        openQuestion(entry, siblings: siblingRefs)
                     } label: {
                         QuizBankRow(pack: entry.pack, chapter: entry.chapter, question: entry.question)
                             .contentShape(Rectangle())
@@ -138,7 +146,7 @@ private struct QuizBankContent: View {
                     .buttonStyle(.plain)
                     .pointingCursor()
                     .contextMenu {
-                        Button("Open") { openQuestion(entry) }
+                        Button("Open") { openQuestion(entry, siblings: siblingRefs) }
                     }
                 }
                 .listStyle(.inset)
