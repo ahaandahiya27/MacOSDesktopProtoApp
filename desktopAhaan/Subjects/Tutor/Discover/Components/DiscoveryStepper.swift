@@ -130,14 +130,27 @@ struct DiscoveryStepper: View {
                 .buttonStyle(PressableButtonStyle())
                 .pointingCursor()
                 .accessibilityLabel(options[i])
-                .accessibilityValue(currentOutput)
+                // VoiceOver: each pill previews its own output, not the
+                // currently-selected one. A user browsing the row hears
+                // "Sundial. Accurate to ~1 hour" then "Pendulum. Accurate
+                // to ~10 seconds/day" — they learn what each choice means
+                // before committing.
+                .accessibilityValue(outputAt(i))
                 .accessibilityAddTraits(selection == i ? [.isSelected, .isButton] : .isButton)
             }
         }
     }
 
     private var currentOutput: String {
-        let safe = max(0, min(selection, outputs.count - 1))
+        outputAt(selection)
+    }
+
+    /// Bounds-safe lookup into `outputs`. Used both for the displayed
+    /// `currentOutput` and for per-pill `.accessibilityValue` previews so
+    /// VoiceOver users hear each option's outcome before committing.
+    private func outputAt(_ index: Int) -> String {
+        guard !outputs.isEmpty else { return "" }
+        let safe = max(0, min(index, outputs.count - 1))
         return outputs[safe]
     }
 }

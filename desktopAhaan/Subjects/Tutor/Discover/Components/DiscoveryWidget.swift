@@ -104,8 +104,14 @@ struct DiscoveryWidget: View {
     }
 
     private var sliderRow: some View {
+        // VoiceOver: speak the title (instead of generic "slider"), then
+        // both the current numeric value AND the computed output so users
+        // who can't see the screen still get the educational payload as
+        // they drag (e.g., "Try a different tilt. Tilt: 15 degrees.
+        // Mild seasons — like Earth today.").
         Slider(value: $value, in: range, step: step)
             .accentColor(.green)
-            .accessibilityValue(valueLabel(value))
+            .accessibilityLabel(title)
+            .accessibilityValue("\(valueLabel(value)). \(output(value))")
     }
 }
