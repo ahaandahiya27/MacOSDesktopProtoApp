@@ -50,15 +50,10 @@ struct Scene3_ClimateZonesMap: View {
 
     var body: some View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
         // Inner GeometryReader is preserved for size-relative
-
         // interactive content; cards now sit as siblings below it.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 12) {
                     Text("Climate Zones of the World")
                         .font(.title2.bold())
@@ -107,7 +102,8 @@ struct Scene3_ClimateZonesMap: View {
                                     style: StrokeStyle(lineWidth: 1, dash: [6, 4]))
                         }
                     }
-                    .frame(maxWidth: 600, maxHeight: 260)
+                    .frame(maxWidth: 600)
+                    .frame(height: 260)
                     .clipShape(RoundedRectangle(cornerRadius: 14))
                     .overlay(
                         RoundedRectangle(cornerRadius: 14)
@@ -126,19 +122,9 @@ struct Scene3_ClimateZonesMap: View {
                     Text("\(exploredZones.count) / \(zones.count) zones explored")
                         .font(.caption.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     SoftShadowCard(padding: 18) {

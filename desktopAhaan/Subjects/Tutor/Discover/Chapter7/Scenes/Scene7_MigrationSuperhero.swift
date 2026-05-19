@@ -41,15 +41,10 @@ struct Scene7_MigrationSuperhero: View {
 
     var body: some View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // Inner GeometryReader inside globeView is preserved for size-relative
+        // shape rendering; cards now sit as siblings below it.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 14) {
                     Text("Migration Superhero")
                         .font(.title2.bold())
@@ -57,7 +52,8 @@ struct Scene7_MigrationSuperhero: View {
 
                     // Globe with flight path
                     globeView
-                        .frame(maxWidth: 500, maxHeight: 240)
+                        .frame(maxWidth: 500)
+                        .frame(height: 240)
                         .clipShape(RoundedRectangle(cornerRadius: 14))
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
@@ -70,19 +66,9 @@ struct Scene7_MigrationSuperhero: View {
                             factButton(fact: fact)
                         }
                     }
-
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     SoftShadowCard(padding: 18) {

@@ -46,15 +46,9 @@ struct Scene6_AdaptationMatchGame: View {
 
     var body: some View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // Drag-and-drop preserves global-coordinate hit testing.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { _ in
-
-                    ZStack {
                 VStack(spacing: 14) {
                     HStack {
                         Spacer()
@@ -101,19 +95,9 @@ struct Scene6_AdaptationMatchGame: View {
                             .foregroundColor(.green)
                             .padding(.top, 20)
                     }
-
-                    Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 24)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
 
                 Group {
                     SoftShadowCard(padding: 18) {

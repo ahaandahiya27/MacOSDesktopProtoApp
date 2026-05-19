@@ -56,64 +56,83 @@ struct Scene9_BossQuiz_Ch7: View {
     ]
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Boss Quiz")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
+        // ScrollView + LazyVStack: natural bounded height keeps the shell
+        // footer (Previous / Next) reachable even on shorter windows.
+        // Confetti emitter sits in an .overlay on the ScrollView so it
+        // covers the whole viewport during the celebration, not just the
+        // VStack region.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Boss Quiz")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-            ProgressView(value: Double(currentQ), total: 5)
-                .frame(maxWidth: 520)
+                ProgressView(value: Double(currentQ), total: 5)
+                    .frame(maxWidth: 520)
 
-            if !done {
-                let item = quiz[currentQ]
-                Text("Question \(currentQ + 1) of 5")
-                    .font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-
-                SoftShadowCard(padding: 18) {
-                    Text(item.prompt)
-                        .font(.title3.bold())
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                if !done {
+                    quizBody
+                } else {
+                    completionView
+                        .padding(.bottom, 12)
                 }
-                .frame(maxWidth: 600).offset(x: shake)
-
-                VStack(spacing: 10) {
-                    ForEach(item.options, id: \.self) { opt in
-                        Ch7AnswerButton(label: opt, state: state(for: opt, in: item)) {
-                            pick(opt, in: item)
-                        }
-                    }
-                }.frame(maxWidth: 600)
-
-                if revealed[currentQ] {
-                    SoftShadowCard(padding: 12) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: "lightbulb.fill").foregroundColor(.yellow)
-                            Text(item.explanation).font(.callout)
-                            Spacer(minLength: 0)
-                        }
-                    }.frame(maxWidth: 600)
-                }
-
-                if revealed[currentQ] {
-                    Button(currentQ < 4 ? "Next question" : "See my score") { advance() }
-                        .accentColor(Color.compatIndigo)
-                }
-            } else {
-                completionView
             }
-            Spacer(minLength: 0)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 24)
+            .padding(.bottom, 12)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay(
             Group {
                 if celebrate {
                     ParticleEmitter(isActive: true, particleCount: 100, duration: 3.0)
-                        .allowsHitTesting(false).ignoresSafeArea()
+                        .allowsHitTesting(false)
+                        .ignoresSafeArea()
                 }
             }
         )
+    }
+
+    @ViewBuilder
+    private var quizBody: some View {
+        let item = quiz[currentQ]
+        Text("Question \(currentQ + 1) of 5")
+            .font(.subheadline)
+            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+
+        SoftShadowCard(padding: 18) {
+            Text(item.prompt)
+                .font(.title3.bold())
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(maxWidth: 600)
+        .offset(x: shake)
+
+        VStack(spacing: 10) {
+            ForEach(item.options, id: \.self) { opt in
+                Ch7AnswerButton(label: opt, state: state(for: opt, in: item)) {
+                    pick(opt, in: item)
+                }
+            }
+        }
+        .frame(maxWidth: 600)
+
+        if revealed[currentQ] {
+            SoftShadowCard(padding: 12) {
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "lightbulb.fill").foregroundColor(.yellow)
+                    Text(item.explanation).font(.callout)
+                    Spacer(minLength: 0)
+                }
+            }
+            .frame(maxWidth: 600)
+        }
+
+        if revealed[currentQ] {
+            Button(currentQ < 4 ? "Next question" : "See my score") { advance() }
+                .accentColor(Color.compatIndigo)
+        }
     }
 
     // MARK: - Quiz mechanics
