@@ -85,13 +85,10 @@ struct Scene7_WaterAudit: View {
                 .padding(.horizontal, 24)
 
                 GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
-
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private func familyTotalExplanation(_ size: Double) -> String {
