@@ -53,6 +53,27 @@ struct Scene2_AerobicAnaerobic: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                ProcessTimeline(
+                    title: "Aerobic respiration in your cells — step by step",
+                    steps: [
+                        .init(title: "Glucose enters the cell",
+                              detail: "From the food you ate, dissolved in your blood, then pushed into a cell by insulin."),
+                        .init(title: "Glycolysis in the cytoplasm",
+                              detail: "Glucose (6 carbons) is split into two pyruvate molecules (3 carbons each). Net: 2 ATP made."),
+                        .init(title: "Pyruvate enters the mitochondrion",
+                              detail: "Mitochondria are the cell's tiny power stations. Pyruvate joins the Krebs cycle inside."),
+                        .init(title: "Krebs cycle releases CO₂",
+                              detail: "Carbon atoms are stripped off two at a time and combined with oxygen → CO₂ exhaled. Energy carriers (NADH, FADH₂) charge up."),
+                        .init(title: "Electron transport chain makes ATP",
+                              detail: "NADH and FADH₂ drop their electrons down a chain. Energy released pumps protons that spin an ATP-making turbine. ~34 ATP per glucose."),
+                        .init(title: "Water + CO₂ + 36-38 ATP",
+                              detail: "Final products: water (you'll pee or sweat it out), CO₂ (exhaled), and ATP — your cell's usable energy currency.")
+                    ],
+                    accent: .green
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 TryAtHomeCallout(
                     title: "Yogurt = bacterial respiration",
                     detail: "Mix a spoon of fresh dahi (curd) into warm milk in a covered bowl. Leave it overnight in a warm spot. The Lactobacillus bacteria respire anaerobically on milk sugars, producing lactic acid that curdles the milk — that's yogurt."

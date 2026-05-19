@@ -54,6 +54,28 @@ struct Scene1_HeartBeats: View {
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
                 Group {
+                    HotspotDiagram(
+                        title: "Heart parts — tap each chamber",
+                        baseSymbol: "heart.fill",
+                        baseColor: .red,
+                        hotspots: [
+                            .init(x: 0.30, y: 0.30, label: "Right atrium",
+                                  detail: "Receives oxygen-poor blood from the body via the vena cavae. Pushes it into the right ventricle."),
+                            .init(x: 0.70, y: 0.30, label: "Left atrium",
+                                  detail: "Receives oxygen-rich blood from the lungs via the pulmonary veins. Pushes it into the left ventricle."),
+                            .init(x: 0.30, y: 0.65, label: "Right ventricle",
+                                  detail: "Pumps oxygen-poor blood TO the lungs through the pulmonary artery. Thinner wall — short trip."),
+                            .init(x: 0.70, y: 0.65, label: "Left ventricle",
+                                  detail: "Pumps oxygen-rich blood to the WHOLE body through the aorta. Thickest wall — biggest job."),
+                            .init(x: 0.50, y: 0.15, label: "Aorta + Vena cavae",
+                                  detail: "The big pipes on top: aorta carries blood out to the body; vena cavae bring it back."),
+                            .init(x: 0.50, y: 0.50, label: "Septum",
+                                  detail: "The muscular wall between left and right sides. Stops oxygen-rich and oxygen-poor blood from mixing.")
+                        ]
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
                     LookingAheadCallout(
                         title: "Class 11 Biology → NEET",
                         detail: "In Class 11 \"Body Fluids and Circulation\", the same heart you played with here becomes the focus: SAN/AVN pacemaker cells, cardiac cycle, ECG reading, double circulation. A perennial NEET high-yield topic."

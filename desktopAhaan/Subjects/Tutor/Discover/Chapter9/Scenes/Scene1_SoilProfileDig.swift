@@ -70,6 +70,25 @@ struct Scene1_SoilProfileDig: View {
                     }
                 }
 
+                ProcessTimeline(
+                    title: "How soil forms — over thousands of years",
+                    steps: [
+                        .init(title: "Bedrock cracks",
+                              detail: "Solid rock at depth slowly fractures from temperature swings, ice wedging, and earthquakes."),
+                        .init(title: "Weathering breaks rock into pieces",
+                              detail: "Wind, rain and chemical reactions grind the fragments into smaller and smaller grains."),
+                        .init(title: "Pioneer plants colonise",
+                              detail: "Lichens and mosses grip the gravel, secrete acids, accelerate the breakdown. Their dead bodies add the first organic matter."),
+                        .init(title: "Worms and microbes move in",
+                              detail: "Bacteria, fungi, earthworms churn the mix. Air and water flow through. Topsoil starts to look dark and crumbly."),
+                        .init(title: "Layered profile emerges",
+                              detail: "Centuries later: distinct O → A → B → C horizons. A 1 cm-thick topsoil layer takes ~100-1000 years to form.")
+                    ],
+                    accent: Color(red: 0.45, green: 0.30, blue: 0.15)
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 LookingAheadCallout(
                     title: "Class 9 Geography",
                     detail: "Class 9 Geography studies Indian soil types in detail: alluvial (Indo-Gangetic plain), black (Deccan plateau — perfect for cotton), red (Tamil Nadu, Karnataka), laterite (Western Ghats), and arid (Rajasthan). Each one is the end of a different combination of parent rock, climate and biology working over thousands of years."

@@ -47,6 +47,27 @@ struct Scene5_RainwaterHarvesting: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                ProcessTimeline(
+                    title: "The water cycle — where rooftop water came from",
+                    steps: [
+                        .init(title: "Evaporation",
+                              detail: "Sun heats oceans, rivers and lakes. Liquid water turns into invisible vapour and rises."),
+                        .init(title: "Condensation",
+                              detail: "High in the cool atmosphere, vapour clusters around dust specks and turns back into tiny water droplets — that's a cloud."),
+                        .init(title: "Precipitation",
+                              detail: "When droplets collide and grow heavy enough, they fall as rain, snow, sleet or hail. India's monsoon = three months of this."),
+                        .init(title: "Surface runoff",
+                              detail: "Most rain hits roofs, roads, and bare ground and slides off into drains — the water you're catching with a harvester would otherwise leave."),
+                        .init(title: "Infiltration + groundwater",
+                              detail: "Some water seeps into soil, percolates down to the water table, joins underground aquifers. Soak-pits help this happen on purpose."),
+                        .init(title: "Back to ocean (or your tap)",
+                              detail: "Rivers, aquifers and tanks deliver the water to the sea — or via the city pipe to your kitchen — and the cycle starts again.")
+                    ],
+                    accent: Color.compatCyan
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
                 LookingAheadCallout(
                     title: "Class 10 Geography",
                     detail: "Class 10 covers rainwater-harvesting structures — khadins (Rajasthan), kuls (Himachal), zings (Ladakh), eris (Tamil Nadu), bhandaras (Maharashtra). CBSE asks regional water-harvesting techniques every year."
