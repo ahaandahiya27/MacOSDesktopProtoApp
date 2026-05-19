@@ -99,7 +99,6 @@ struct Scene1_HeartBeats: View {
                 }
 
                 GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

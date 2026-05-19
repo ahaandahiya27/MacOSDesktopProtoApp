@@ -76,7 +76,6 @@ struct Scene3_BloodSort: View {
                 .padding(.horizontal, 24)
 
                 if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

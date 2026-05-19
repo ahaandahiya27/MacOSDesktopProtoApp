@@ -36,6 +36,7 @@ struct Scene9_BossQuiz_Ch11: View {
     @State private var revealed = false
     @State private var score = 0
     @State private var done = false
+    @State private var celebrate = false
     @State private var shuffled: [String] = []
 
     var body: some View {
@@ -85,7 +86,7 @@ struct Scene9_BossQuiz_Ch11: View {
                         .frame(maxWidth: 600)
                         Button(i + 1 < qs.count ? "Next question" : "See score") {
                             if i + 1 < qs.count { i += 1; picked = nil; revealed = false }
-                            else { done = true }
+                            else { done = true; celebrate = true }
                         }
                         .accentColor(Color.compatIndigo)
                     }
@@ -103,12 +104,19 @@ struct Scene9_BossQuiz_Ch11: View {
                     }
                     .padding(.top, 8)
                 }
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
-
+        .overlay(
+            Group {
+                if celebrate {
+                    ParticleEmitter(isActive: true, particleCount: 100, duration: 3.0)
+                        .allowsHitTesting(false)
+                        .ignoresSafeArea()
+                }
+            }
+        )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
         .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }

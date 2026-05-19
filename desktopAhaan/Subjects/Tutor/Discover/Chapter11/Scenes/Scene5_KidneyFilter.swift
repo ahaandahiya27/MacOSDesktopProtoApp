@@ -77,7 +77,6 @@ struct Scene5_KidneyFilter: View {
                 .padding(.horizontal, 24)
 
                 GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
