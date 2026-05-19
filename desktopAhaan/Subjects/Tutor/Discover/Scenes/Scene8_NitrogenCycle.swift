@@ -90,7 +90,8 @@ struct Scene8_NitrogenCycle: View {
                     node(at: soil,   emoji: "🌍", label: "Soil")
                 }
             }
-            .frame(maxWidth: 560, maxHeight: 320)
+            .frame(maxWidth: 560)
+            .frame(height: 320)
 
             // Selected explanation
             SoftShadowCard(padding: 14) {
