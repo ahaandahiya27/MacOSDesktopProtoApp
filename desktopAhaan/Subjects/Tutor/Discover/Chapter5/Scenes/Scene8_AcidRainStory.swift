@@ -35,16 +35,12 @@ struct Scene8_AcidRainStory: View {
     private var allViewed: Bool { viewedPanels.count >= panels.count }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; panel + rain animation
+        // now flow naturally and rainView's own GeometryReader has a real
+        // bounded canvas via its fixed-height frame.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 14) {
                     Text("Acid Rain Story")
                         .font(.title2.bold())
@@ -96,7 +92,7 @@ struct Scene8_AcidRainStory: View {
                         } label: {
                             Label("Back", systemImage: "chevron.left")
                         }
-                        
+
                         .disabled(currentPanel == 0)
 
                         Spacer()
@@ -117,18 +113,8 @@ struct Scene8_AcidRainStory: View {
                         .disabled(currentPanel == panels.count - 1)
                     }
                     .frame(maxWidth: 500)
-
-                    Spacer(minLength: 0)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
+                .frame(maxWidth: .infinity)
 
                 Group {
                     if allViewed {

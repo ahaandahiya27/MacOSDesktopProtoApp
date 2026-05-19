@@ -44,16 +44,12 @@ struct Scene6_AcidOrBaseSortingLab: View {
     private var isDone: Bool { remaining.isEmpty }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; drag-and-drop chips
+        // and zones now flow naturally and dropZone's own GeometryReader
+        // (used for global frame tracking) has a real bounded canvas.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 12) {
                     // Score
                     HStack {
@@ -88,17 +84,8 @@ struct Scene6_AcidOrBaseSortingLab: View {
                     }
                     .padding(.horizontal, 24)
                     .frame(maxHeight: 200)
-
-                    Spacer()
                 }
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
+                .frame(maxWidth: .infinity)
 
                 Group {
                     if isDone {

@@ -28,16 +28,12 @@ struct Scene4_NeutralisationInAction: View {
     }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; interactive content
+        // (beakers, ion animation) now flows naturally and the inner
+        // ionAnimationView's own GeometryReader has a real bounded canvas.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-
-                    ZStack {
                 VStack(spacing: 16) {
                     Text("Neutralisation in Action")
                         .font(.title2.bold())
@@ -79,7 +75,7 @@ struct Scene4_NeutralisationInAction: View {
                             Label("Pour & Mix!", systemImage: "drop.triangle.fill")
                                 .font(.headline)
                         }
-                        
+
                         .accentColor(Color.compatIndigo)
                     }
 
@@ -104,18 +100,8 @@ struct Scene4_NeutralisationInAction: View {
                         .frame(maxWidth: 500)
                         .transition(.opacity.combined(with: .scale(scale: 0.9)))
                     }
-
-                    Spacer(minLength: 0)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
+                .frame(maxWidth: .infinity)
 
                 Group {
                     SoftShadowCard(padding: 18) {

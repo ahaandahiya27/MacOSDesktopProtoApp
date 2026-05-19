@@ -43,16 +43,12 @@ struct Scene2_BuildYourpHStrip: View {
     }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack.
-
-        // Inner GeometryReader is preserved for size-relative
-
-        // interactive content; cards now sit as siblings below it.
+        // ScrollView + LazyVStack: GeometryReader-collapse bug fixed by
+        // removing the unused outer GeometryReader; interactive content
+        // now flows naturally and the pHStrip's own GeometryReader has a
+        // real bounded canvas via its fixed-height frame.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { _ in
-
-                    ZStack {
                 VStack(spacing: 18) {
                     Text("Build Your pH Strip")
                         .font(.title2.bold())
@@ -84,18 +80,8 @@ struct Scene2_BuildYourpHStrip: View {
                     substancePinView
                         .frame(maxWidth: 700)
                         .padding(.horizontal, 24)
-
-                    Spacer(minLength: 0)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                
-
-                    }
-
-                }
-
-                .frame(height: 320)
+                .frame(maxWidth: .infinity)
 
                 Group {
                     SoftShadowCard(padding: 18) {
