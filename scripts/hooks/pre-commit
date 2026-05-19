@@ -38,4 +38,17 @@ if [ -f "scripts/check_viewbuilder_limit.py" ]; then
     fi
 fi
 
+# 3) SF Symbols 3+/4+ compat lint (deterministic — truth source is the
+#    SFSymbolCompat map in Extensions.swift). A flagged literal renders
+#    blank on the deploy iMac (Big Sur, SF Symbols 2). Hard gate.
+if [ -f "scripts/check_sf_symbols_compat.py" ]; then
+    if ! python3 scripts/check_sf_symbols_compat.py; then
+        echo
+        echo "pre-commit: SF Symbols compat check failed — these icons render blank on Big Sur."
+        echo "Fix: wrap the literal in SFSymbolCompat.name(\"...\"), or add a case to the compat map."
+        echo "If intentional (e.g., a Big Sur-safe glyph that shadows a 3+ name), bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 exit 0
