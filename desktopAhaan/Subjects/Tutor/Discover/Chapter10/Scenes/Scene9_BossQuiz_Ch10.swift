@@ -103,13 +103,10 @@ struct Scene9_BossQuiz_Ch10: View {
                     }
                     .padding(.top, 8)
                 }
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
-
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
         .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }
     }
