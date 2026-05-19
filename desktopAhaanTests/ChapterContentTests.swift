@@ -525,6 +525,35 @@ final class ChapterContentTests: XCTestCase {
     ///
     /// Scope: science_class7 only. Sanskrit pack has different question-mix
     /// expectations.
+    /// Per-chapter zero-missing-commonMistakes ratchet. As the 2026-05-19
+    /// audit identified, 253 questions originally shipped without
+    /// commonMistakes. We backfill chapter-by-chapter; once a chapter reaches
+    /// zero-missing, this test prevents future content edits from accidentally
+    /// removing the commonMistakes (e.g., a copy-paste that drops the field).
+    /// Add a chapter number to ZERO_MISSING_CMS once it's been backfilled.
+    @MainActor func testCommonMistakesRatchet() {
+        let ZERO_MISSING_CMS: Set<Int> = [1, 11, 13, 14, 15, 19]
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        for chapter in pack.chapters where ZERO_MISSING_CMS.contains(chapter.number) {
+            let missing = chapter.topics.flatMap { $0.questions }
+                .filter { $0.commonMistakes.isEmpty }
+                .map { $0.id }
+            XCTAssertEqual(
+                missing.count, 0,
+                "Ch.\(chapter.number) (\(chapter.title)) was previously at zero-missing " +
+                "commonMistakes; \(missing.count) question(s) now missing: \(missing). " +
+                "Either restore the missing entries, or (if the regression is intentional) " +
+                "remove this chapter from ZERO_MISSING_CMS in ChapterContentTests."
+            )
+        }
+    }
+
     @MainActor func testEveryScienceChapterHasAtLeastThreeL4AndThreeL5() {
         guard let url = Bundle.main.url(forResource: "science_class7",
                                          withExtension: "json"),

@@ -1049,7 +1049,9 @@
                 "Auto = self, troph = nourish.",
                 "Green plants make their own food via photosynthesis."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling autotrophs 'green plants only'. Many bacteria and algae are also autotrophs — they make their own food via photosynthesis or chemical reactions."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1070,7 +1072,9 @@
                 "Leaves contain chloroplasts with chlorophyll.",
                 "That's where photosynthesis happens."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying photosynthesis happens 'in roots'. Roots have no chlorophyll — no chlorophyll, no photosynthesis. Leaves dominate because they're optimised for light capture."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1091,7 +1095,9 @@
                 "Chlorophyll absorbs mostly red and blue light, reflects green (why leaves look green).",
                 "Absorbed energy powers the reactions of photosynthesis."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing chlorophyll 'gives plants their colour' as the main job. The colour is a side effect; chlorophyll's job is to ABSORB LIGHT ENERGY for photosynthesis."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1112,7 +1118,9 @@
                 "Mostly on the underside of leaves.",
                 "CO₂ goes in, O₂ and water vapour go out."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing stomata with 'tiny veins'. Stomata are pores — openings, not vessels. Veins (vascular bundles) carry water/sugar internally."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1133,7 +1141,9 @@
                 "Cuscuta lacks chlorophyll and roots in soil.",
                 "It wraps around a host plant and draws nutrients from it."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling Cuscuta a 'climber' — climbers (like pumpkin vine) still photosynthesise. Cuscuta has NO chlorophyll; it steals food from the host. Different relationship entirely."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1154,7 +1164,9 @@
                 "Pitcher plants grow in nitrogen-poor soils.",
                 "They trap and digest insects to get nitrogen."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing pitcher plants 'eat insects for energy'. They get ENERGY from photosynthesis (they're green!). They eat insects mainly for NITROGEN, since their boggy soil has almost none."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1175,7 +1187,9 @@
                 "Saprophytes (many fungi, some bacteria) break down dead material.",
                 "They are nature's recyclers."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling saprophytes 'parasites'. Parasites feed on LIVING hosts; saprophytes feed on DEAD matter. Mushrooms on a decaying log = saprophyte; mistletoe on a tree = parasite."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1196,7 +1210,9 @@
                 "The fungus provides shelter; the alga makes food via photosynthesis.",
                 "This is symbiosis (mutualism) — both partners benefit."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Saying lichens are 'a single organism'. They're a SYMBIOTIC PARTNERSHIP — fungus + alga (or cyanobacterium) living together so closely that early biologists thought they were one organism. Two species, one body."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1217,7 +1233,9 @@
                 "Rhizobium fixes atmospheric nitrogen into a form plants can use.",
                 "In return, the plant supplies it with sugars."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing Rhizobium 'lives anywhere'. Free-living Rhizobium in soil can't fix nitrogen — they need the ROOT NODULE environment of a legume plant to do the chemistry. Symbiotic, not free."
+              ],
               "difficulty": 3,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1236,7 +1254,9 @@
                 "Photosynthesis: CO₂ + H₂O + sunlight → glucose + O₂.",
                 "O₂ is the by-product released through stomata."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing photosynthesis releases CARBON DIOXIDE. It releases OXYGEN — CO2 is the INPUT. Photosynthesis is essentially the reverse of respiration in terms of gases."
+              ],
               "difficulty": 1,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -1273,7 +1293,9 @@
               "solutionSteps": [
                 "Match each by how it gets carbon / nitrogen."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Matching every plant to 'autotroph' by default. Some plants (Cuscuta, Indian pipe) lost the ability to photosynthesise during evolution; they ARE plants but NOT autotrophs."
+              ],
               "difficulty": 2,
               "pageRefs": [],
               "needsHumanReview": false,
@@ -2307,7 +2329,9 @@
                 "The alga photosynthesises and shares sugar; the fungus protects and holds water.",
                 "Both partners benefit — that is symbiosis."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Calling lichen a 'parasitic' relationship — it isn't. Both partners benefit: fungus gets sugar from alga, alga gets shelter + minerals from fungus. Mutualism, not parasitism."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
@@ -2753,7 +2777,9 @@
                 "Pulses (gram, peas) host Rhizobium in their roots, which replenishes soil nitrogen.",
                 "Rotating these crops keeps soil fertile without adding chemical fertilisers."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing crop rotation is 'just to give the soil rest'. It specifically REPLENISHES NITROGEN via the Rhizobium-legume partnership. A rotation of only cereals would deplete nitrogen even faster, no matter the rest period."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -2775,7 +2801,9 @@
                 "Bacteria convert N₂ → ammonia → nitrites → nitrates.",
                 "Only the nitrate form is taken up by roots."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing plants absorb 'nitrogen gas (N2) from air'. They CAN'T — atmospheric N2 has a triple bond too strong for plant uptake. Only nitrate (NO3-) and ammonium (NH4+) forms are absorbed via roots."
+              ],
               "variations": [],
               "difficulty": 2,
               "pageRefs": [],
@@ -2792,7 +2820,9 @@
                 "Bacteria and fungi (decomposers) break the proteins into ammonia (NH₃).",
                 "Nitrifying bacteria convert ammonia → nitrites → nitrates, completing the cycle."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Believing decomposers 'destroy' nutrients. They RECYCLE — breaking dead matter back into plant-usable nitrogen, phosphorus, etc. Without decomposers, dead matter would pile up and nutrients would be locked away forever."
+              ],
               "variations": [],
               "difficulty": 3,
               "pageRefs": [],
@@ -2814,7 +2844,9 @@
                 "Such soil is 'depleted' — like a battery that has been discharged.",
                 "Crop rotation and manures restore it."
               ],
-              "commonMistakes": [],
+              "commonMistakes": [
+                "Confusing depleted soil with infertile soil from birth. Depleted = WAS productive, lost nutrients via repeated harvesting. Infertile (e.g., desert sand) = NEVER had much. Different problems, different fixes."
+              ],
               "variations": [],
               "difficulty": 1,
               "pageRefs": [],
