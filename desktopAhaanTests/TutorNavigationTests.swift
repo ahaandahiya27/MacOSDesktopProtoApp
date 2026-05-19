@@ -119,4 +119,53 @@ struct TutorNavigationTests {
         #expect(nav.path.count == 2)
         #expect(nav.currentRoute == .question(packId: "p", questionId: "q2"))
     }
+
+    @Test func popPushPopPushRapidSequenceStaysCorrect() {
+        // The Late-2014 iMac crash class isn't just double-pushes — rapid
+        // pop+push sequences during the SwiftUI transition window can also
+        // corrupt the path. Verify the navigation stack stays consistent
+        // through an interleaved sequence.
+        let nav = TutorNavigationState()
+        nav.push(.chapter(packId: "p", chapterId: "ch01"))
+        nav.push(.topic(packId: "p", topicId: "t1"))
+        nav.pop()
+        nav.push(.topic(packId: "p", topicId: "t2"))
+        nav.pop()
+        nav.push(.topic(packId: "p", topicId: "t3"))
+        #expect(nav.path.count == 2)
+        #expect(nav.currentRoute == .topic(packId: "p", topicId: "t3"))
+    }
+
+    @Test func popToRootResetsQuestionSiblingsConsumerExpectsClean() {
+        // popToRoot returns to the chapter list. QuestionDetailView's
+        // sibling list belongs to the previous Quiz Bank visit; if we
+        // navigate to a completely different route, the stale sibling
+        // list shouldn't influence anything. Verify popToRoot clears the
+        // path; siblings are conceptually independent state (the consumer
+        // sets them on each push).
+        let nav = TutorNavigationState()
+        nav.questionSiblings = [
+            QuestionRef(packId: "p", questionId: "q1"),
+            QuestionRef(packId: "p", questionId: "q2"),
+        ]
+        nav.push(.question(packId: "p", questionId: "q1"))
+        nav.popToRoot()
+        #expect(nav.path.isEmpty)
+        // questionSiblings deliberately NOT cleared by popToRoot — that's
+        // the consumer's job. Documenting this invariant: nav owns the
+        // stack; the caller owns the siblings snapshot.
+        #expect(nav.questionSiblings.count == 2)
+    }
+
+    @Test func replaceTopOnEmptyPathPushesThenAdditionalPushesGrow() {
+        // Edge: replaceTop falls back to push when path is empty (already
+        // covered). Verify that AFTER such a fallback, normal push() on
+        // the now-non-empty stack works as expected.
+        let nav = TutorNavigationState()
+        nav.replaceTop(.chapter(packId: "p", chapterId: "ch01"))
+        nav.push(.topic(packId: "p", topicId: "t1"))
+        nav.push(.concept(packId: "p", conceptId: "c1"))
+        #expect(nav.path.count == 3)
+        #expect(nav.currentRoute == .concept(packId: "p", conceptId: "c1"))
+    }
 }
