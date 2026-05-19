@@ -24,67 +24,74 @@ struct Scene1_TheMouthLab: View {
     }
 
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                VStack(spacing: 16) {
-                    HStack {
-                        Toggle("Show animal teeth (Lion)", isOn: $showAnimalTeeth)
-                            .font(.body)
-                    }
-                    .padding(.horizontal, 24)
+        // ScrollView + LazyVStack: natural bounded height keeps shell
+        // chrome (stepper dots, Previous/Next) reachable on shorter windows.
+        // The previous GeometryReader + greedy Spacer pattern stretched
+        // the scene to fill all available height and pushed callouts +
+        // GotItButton below the visible canvas.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("The Mouth Lab")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-                    if showAnimalTeeth {
-                        LionJawDiagram()
-                            .frame(height: 200)
-                            .padding(.horizontal, 24)
-                        Text("A lion's teeth are sharp for tearing meat!")
-                            .font(.caption)
-                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    } else {
-                        HumanJawDiagram(selectedTooth: $selectedTooth)
-                            .frame(height: 200)
-                            .padding(.horizontal, 24)
-
-                        if let index = selectedTooth {
-                            ToothCallout(tooth: teethByType(from: index))
-                                .padding(.horizontal, 24)
-                        }
-                    }
-
-                    Spacer()
-
-                    SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
-                            Label("The Mouth Lab", systemImage: SFSymbolCompat.name("mouth.fill"))
-                                .font(.title2.bold())
-                                .foregroundColor(.orange)
-                            Text(teethExplanation)
-                                .font(.body)
-                                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                                .lineSpacing(4)
-                        }
-                    }
-                    .frame(maxWidth: DesignTokens.contentMaxWidth)
-
-                    LookingAheadCallout(
-                        title: "Class 11 Biology → NEET",
-                        detail: "The four tooth shapes you just clicked become a heteodont dental formula in Class 11 — 2-1-2-3 (per quadrant: incisors-canines-premolars-molars). NEET asks 'compare the formula of a herbivore vs a carnivore' — the difference is in the canines. And salivary amylase from this scene is the first digestive enzyme in a chain of 20+ you'll meet."
-                    )
-                    .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-
-                    TryAtHomeCallout(
-                        title: "Chew a cracker for 60 seconds",
-                        detail: "Take a plain cracker (no salt, no sugar). Chew slowly without swallowing for a full minute. After 30 seconds the bland taste turns slightly sweet. That's salivary amylase breaking starch (tasteless) into maltose (sweet). Your tongue is testing the enzyme reaction in real-time."
-                    )
-                    .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-
-                    GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                HStack {
+                    Toggle("Show animal teeth (Lion)", isOn: $showAnimalTeeth)
+                        .font(.body)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.horizontal, 24)
+
+                if showAnimalTeeth {
+                    LionJawDiagram()
+                        .frame(height: 200)
+                        .padding(.horizontal, 24)
+                    Text("A lion's teeth are sharp for tearing meat!")
+                        .font(.caption)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                } else {
+                    HumanJawDiagram(selectedTooth: $selectedTooth)
+                        .frame(height: 200)
+                        .padding(.horizontal, 24)
+
+                    if let index = selectedTooth {
+                        ToothCallout(tooth: teethByType(from: index))
+                            .padding(.horizontal, 24)
+                    }
+                }
+
+                SoftShadowCard(padding: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Label("The Mouth Lab", systemImage: SFSymbolCompat.name("mouth.fill"))
+                            .font(.title2.bold())
+                            .foregroundColor(.orange)
+                        Text(teethExplanation)
+                            .font(.body)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            .lineSpacing(4)
+                    }
+                }
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+
+                LookingAheadCallout(
+                    title: "Class 11 Biology → NEET",
+                    detail: "The four tooth shapes you just clicked become a heteodont dental formula in Class 11 — 2-1-2-3 (per quadrant: incisors-canines-premolars-molars). NEET asks 'compare the formula of a herbivore vs a carnivore' — the difference is in the canines. And salivary amylase from this scene is the first digestive enzyme in a chain of 20+ you'll meet."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Chew a cracker for 60 seconds",
+                    detail: "Take a plain cracker (no salt, no sugar). Chew slowly without swallowing for a full minute. After 30 seconds the bland taste turns slightly sweet. That's salivary amylase breaking starch (tasteless) into maltose (sweet). Your tongue is testing the enzyme reaction in real-time."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton { onComplete() }
+                    .padding(.bottom, 12)
             }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

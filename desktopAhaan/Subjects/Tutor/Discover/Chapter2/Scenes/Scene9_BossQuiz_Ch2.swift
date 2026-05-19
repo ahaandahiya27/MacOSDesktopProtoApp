@@ -61,97 +61,100 @@ struct Scene9_BossQuiz_Ch2: View {
     ]
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Boss Quiz")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
+        // ScrollView + LazyVStack: natural bounded height keeps the shell
+        // footer (Previous / Next) reachable even on shorter windows.
+        // Confetti emitter sits in an .overlay on the ScrollView so it
+        // covers the whole viewport during the celebration, not just the
+        // VStack region.
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Boss Quiz")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-            ProgressView(value: Double(currentQ), total: 5)
-                .frame(maxWidth: 520)
+                ProgressView(value: Double(currentQ), total: 5)
+                    .frame(maxWidth: 520)
 
-            if !done {
-                let item = quiz[currentQ]
-                Text("Question \(currentQ + 1) of 5")
-                    .font(.subheadline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                if !done {
+                    let item = quiz[currentQ]
+                    Text("Question \(currentQ + 1) of 5")
+                        .font(.subheadline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                SoftShadowCard(padding: 18) {
-                    Text(item.prompt)
-                        .font(.title3.bold())
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxWidth: 600)
-                .offset(x: shake)
+                    SoftShadowCard(padding: 18) {
+                        Text(item.prompt)
+                            .font(.title3.bold())
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .frame(maxWidth: 600)
+                    .offset(x: shake)
 
-                VStack(spacing: 10) {
-                    ForEach(item.options, id: \.self) { opt in
-                        AnswerButton(
-                            label: opt,
-                            state: state(for: opt, in: item)
-                        ) {
-                            pick(opt, in: item)
+                    VStack(spacing: 10) {
+                        ForEach(item.options, id: \.self) { opt in
+                            AnswerButton(
+                                label: opt,
+                                state: state(for: opt, in: item)
+                            ) {
+                                pick(opt, in: item)
+                            }
                         }
                     }
-                }
-                .frame(maxWidth: 600)
-            } else {
-                // Celebration view
-                VStack(spacing: 20) {
-                    ZStack {
+                    .frame(maxWidth: 600)
+                } else {
+                    VStack(spacing: 20) {
                         Text("🎉")
                             .font(.system(size: 80))
                             .opacity(celebrate ? 1 : 0)
                             .scaleEffect(celebrate ? 1.2 : 0.5)
+                            .frame(height: 120)
 
-                        if celebrate {
-                            ParticleEmitter(
-                                isActive: celebrate,
-                                particleCount: 40,
-                                duration: 2.0
-                            )
+                        Text("Quiz Complete!")
+                            .font(.title.bold())
+                            .foregroundColor(.green)
+
+                        HStack(spacing: 16) {
+                            Text("Score: \(score)/5")
+                                .font(.title2.bold())
+                                .padding(12)
+                                .background(Color.yellow.opacity(0.2))
+                                .cornerRadius(8)
+
+                            Text(badgeEmoji())
+                                .font(.system(size: 40))
+                        }
+
+                        Button(action: { downloadCertificate() }) {
+                            Label("🎓 Print my certificate", systemImage: "doc.text.fill")
+                                .padding(.vertical, 12)
+                                .padding(.horizontal, 20)
+                        }
+                        .accentColor(.blue)
+
+                        if let status = pdfStatus {
+                            Text(status)
+                                .font(.caption)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
-                    .frame(height: 120)
-
-                    Text("Quiz Complete!")
-                        .font(.title.bold())
-                        .foregroundColor(.green)
-
-                    HStack(spacing: 16) {
-                        Text("Score: \(score)/5")
-                            .font(.title2.bold())
-                            .padding(12)
-                            .background(Color.yellow.opacity(0.2))
-                            .cornerRadius(8)
-
-                        Text(badgeEmoji())
-                            .font(.system(size: 40))
-                    }
-
-                    Button(action: { downloadCertificate() }) {
-                        Label("🎓 Print my certificate", systemImage: "doc.text.fill")
-                            .padding(.vertical, 12)
-                            .padding(.horizontal, 20)
-                    }
-                    
-                    .accentColor(.blue)
-
-                    if let status = pdfStatus {
-                        Text(status)
-                            .font(.caption)
-                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    }
+                    .frame(maxWidth: 600)
+                    .padding(.bottom, 12)
                 }
-                .frame(maxWidth: 600)
-
-                Spacer()
             }
-
-            Spacer()
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 24)
+            .padding(.bottom, 12)
         }
-        .padding(.horizontal, 24)
+        .overlay(
+            Group {
+                if celebrate {
+                    ParticleEmitter(isActive: true, particleCount: 40, duration: 2.0)
+                        .allowsHitTesting(false)
+                        .ignoresSafeArea()
+                }
+            }
+        )
         .onAppear { if done { celebrate = true } }
     }
 
@@ -209,6 +212,7 @@ struct Scene9_BossQuiz_Ch2: View {
         } else {
             withAnimation(.easeInOut(duration: 0.4)) {
                 done = true
+                celebrate = true
             }
             onComplete(score)
         }
