@@ -70,4 +70,22 @@ if [ -n "$PACK_STAGED" ] && [ -f "scripts/check_pack_schema.py" ]; then
     fi
 fi
 
+# 5) WCAG contrast audit — runs only when the BrandColor source file or
+#    the audit script itself is staged. The script is deterministic so
+#    a fast no-arg invocation gives us instant feedback when someone
+#    edits a colour without re-checking contrast. Hard gate.
+WCAG_TOUCHED=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^(desktopAhaan/Extensions/Extensions\.swift|scripts/check_wcag_contrast\.py)$' \
+    || true)
+if [ -n "$WCAG_TOUCHED" ] && [ -f "scripts/check_wcag_contrast.py" ]; then
+    if ! python3 scripts/check_wcag_contrast.py > /dev/null; then
+        echo
+        echo "pre-commit: WCAG contrast audit failed — at least one BrandColor pair is below AA."
+        echo "Run scripts/check_wcag_contrast.py manually to see which pair, then deepen the colour"
+        echo "in DesignTokens.BrandColor and the matching BRAND_* constant in the script."
+        echo "If intentional (e.g., docs-only change), bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 exit 0

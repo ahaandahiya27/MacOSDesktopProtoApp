@@ -620,6 +620,96 @@ final class ChapterContentTests: XCTestCase {
         )
     }
 
+    // MARK: - WCAG contrast (Option C of the audit closure)
+    //
+    // These tests pin the BrandColor accent values against the WCAG 2.1
+    // AA contrast floor (4.5:1 normal text, 3.0:1 large) over the
+    // Discover-canvas gradient. The Python audit harness in
+    // `scripts/check_wcag_contrast.py` is the developer-facing tool;
+    // these Swift tests catch a regression where someone tweaks
+    // BrandColor without re-running the audit.
+
+    /// sRGB component → linear-RGB, matching the calculation in the
+    /// Python script's `_channel_linear`.
+    private func linearChannel(_ c: Double) -> Double {
+        c <= 0.03928 ? c / 12.92 : pow((c + 0.055) / 1.055, 2.4)
+    }
+
+    private func relativeLuminance(_ rgb: (Double, Double, Double)) -> Double {
+        let r = linearChannel(rgb.0)
+        let g = linearChannel(rgb.1)
+        let b = linearChannel(rgb.2)
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b
+    }
+
+    private func contrastRatio(_ a: (Double, Double, Double),
+                                _ b: (Double, Double, Double)) -> Double {
+        let la = relativeLuminance(a)
+        let lb = relativeLuminance(b)
+        let (lighter, darker) = la > lb ? (la, lb) : (lb, la)
+        return (lighter + 0.05) / (darker + 0.05)
+    }
+
+    /// Canvas gradient mid stop — the contrast-worst case the audit
+    /// harness measures against. If the BrandColor accents pass here,
+    /// they pass against TOP and BOTTOM too.
+    private let gradientMid: (Double, Double, Double) = (0.96, 1.0, 0.92)
+
+    /// BrandColor accents pinned in `desktopAhaan/Extensions/Extensions.swift`.
+    /// If you change one of these values, also update both the Swift
+    /// constant AND `scripts/check_wcag_contrast.py` BRAND_* tuples.
+    private let brandLookingAhead: (Double, Double, Double) = (0.42, 0.20, 0.65)
+    private let brandTryAtHome: (Double, Double, Double) = (0.65, 0.32, 0.0)
+    private let brandMnemonic: (Double, Double, Double) = (0.55, 0.42, 0.0)
+    private let brandRelatedConcepts: (Double, Double, Double) = (0.0, 0.45, 0.55)
+    private let brandDanger: (Double, Double, Double) = (0.72, 0.14, 0.10)
+    private let brandPrimaryAction: (Double, Double, Double) = (0.10, 0.52, 0.18)
+    private let canvasTextSecondary: (Double, Double, Double) = (0.36, 0.38, 0.42)
+
+    private let WCAG_AA_NORMAL: Double = 4.5
+
+    func testWCAG_LookingAheadMeetsAAOnCanvas() {
+        let r = contrastRatio(brandLookingAhead, gradientMid)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.lookingAhead at \(r) on canvas-mid; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_TryAtHomeMeetsAAOnCanvas() {
+        let r = contrastRatio(brandTryAtHome, gradientMid)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.tryAtHome at \(r) on canvas-mid; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_MnemonicMeetsAAOnCanvas() {
+        let r = contrastRatio(brandMnemonic, gradientMid)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.mnemonic at \(r) on canvas-mid; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_RelatedConceptsMeetsAAOnCanvas() {
+        let r = contrastRatio(brandRelatedConcepts, gradientMid)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.relatedConcepts at \(r) on canvas-mid; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_DangerMeetsAAOnWhite() {
+        let r = contrastRatio(brandDanger, (1.0, 1.0, 1.0))
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.danger at \(r) on white sheet; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_WhiteOnPrimaryActionMeetsAA() {
+        let r = contrastRatio((1.0, 1.0, 1.0), brandPrimaryAction)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "White text on BrandColor.primaryAction at \(r); AA floor is \(WCAG_AA_NORMAL).")
+    }
+
+    func testWCAG_CanvasTextSecondaryMeetsAAOnCanvas() {
+        let r = contrastRatio(canvasTextSecondary, gradientMid)
+        XCTAssertGreaterThanOrEqual(r, WCAG_AA_NORMAL,
+            "BrandColor.canvasTextSecondary at \(r) on canvas-mid; AA floor is \(WCAG_AA_NORMAL).")
+    }
+
     // MARK: - SM-2 spaced repetition (Option B of the audit closure)
     //
     // These tests validate the pure-function scheduler in isolation

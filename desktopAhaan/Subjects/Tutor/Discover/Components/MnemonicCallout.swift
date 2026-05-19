@@ -46,12 +46,12 @@ struct MnemonicCallout: View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "lightbulb.fill")
                 .font(.title3)
-                .foregroundColor(.yellow)
+                .foregroundColor(DesignTokens.BrandColor.mnemonic)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: 8) {
                 Text("Memory hook")
                     .font(.caption.weight(.semibold))
-                    .foregroundColor(.orange)
+                    .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
                     .textCase(.uppercase)
                 Text(hook)
                     // `.monospaced()` on Font requires macOS 12+. Use
@@ -92,7 +92,7 @@ struct MnemonicCallout: View {
                 HStack(alignment: .firstTextBaseline, spacing: 8) {
                     Text(row.letter)
                         .font(.system(.callout, design: .monospaced).weight(.bold))
-                        .foregroundColor(.orange)
+                        .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
                         .frame(width: 18, alignment: .leading)
                     Text(row.word)
                         .font(.callout)

@@ -274,17 +274,29 @@ enum DesignTokens {
     /// (further down) as a Big-Sur-safe fallback for system `.teal`.
     enum BrandColor {
         // Discover-Mode callout tints — semantic names, not hue names.
-        static let lookingAhead: Color = .purple
-        static let tryAtHome: Color = .orange
-        static let mnemonic: Color = .yellow
-        static let mnemonicAccent: Color = .orange
-        static let relatedConcepts: Color = Color.compatTeal
+        //
+        // Values are deepened from the bright system primaries so that any
+        // text rendered in these colours on the pale Discover-canvas
+        // gradient meets WCAG 2.1 §1.4.3 AA contrast (≥4.5:1 for body
+        // text). System primaries (`.yellow`, `.orange`, `.teal`) sit
+        // at 1.5–2:1 against the canvas which is unreadable for the kid.
+        // The new hues are calibrated so the icon's visual identity
+        // ("yellow lightbulb", "orange wrench") survives while the
+        // luminance lands in the AA zone. See
+        // `scripts/check_wcag_contrast.py` for the audit harness.
+        static let lookingAhead: Color = Color(red: 0.42, green: 0.20, blue: 0.65)   // deep violet
+        static let tryAtHome: Color = Color(red: 0.65, green: 0.32, blue: 0.0)        // burnt orange
+        static let mnemonic: Color = Color(red: 0.55, green: 0.42, blue: 0.0)         // deep gold
+        static let mnemonicAccent: Color = Color(red: 0.65, green: 0.32, blue: 0.0)
+        static let relatedConcepts: Color = Color(red: 0.0, green: 0.45, blue: 0.55)  // deep teal
 
-        // Action / state.
-        static let primaryAction: Color = .green
-        static let success: Color = .green
-        static let danger: Color = .red
-        static let warning: Color = .orange
+        // Action / state. The plain `.green` system colour is light enough
+        // that white text on top sits at 2.2:1 (below WCAG AA). The deep
+        // forest green below brings white-on-button to ~4.5:1.
+        static let primaryAction: Color = Color(red: 0.10, green: 0.52, blue: 0.18)   // deep forest green
+        static let success: Color = Color(red: 0.10, green: 0.52, blue: 0.18)
+        static let danger: Color = Color(red: 0.72, green: 0.14, blue: 0.10)          // deep red for body text use
+        static let warning: Color = Color(red: 0.65, green: 0.32, blue: 0.0)          // burnt orange
 
         // Neutral surfaces.
         static let mutedSurface: Color = Color.gray.opacity(0.25)
