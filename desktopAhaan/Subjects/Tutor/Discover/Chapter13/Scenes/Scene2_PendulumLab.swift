@@ -112,13 +112,10 @@ struct Scene2_PendulumLab: View {
                 }
 
                 GotItButton { onComplete() }.padding(.bottom, 12)
-                Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
-
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

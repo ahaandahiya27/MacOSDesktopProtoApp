@@ -33,7 +33,7 @@ struct Scene3_DistanceTimeGraph: View {
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("Shape tells the story", systemImage: "chart.line.uptrend.xyaxis")
+                        Label("Shape tells the story", systemImage: SFSymbolCompat.name("chart.line.uptrend.xyaxis"))
                             .font(.title2.bold())
                         Text("Flat line = standing still. Straight slanted line = uniform speed. Curve that gets steeper = speeding up. You can read distance, speed and motion type just from the shape.")
                             .font(.body).lineSpacing(4)
@@ -69,14 +69,11 @@ struct Scene3_DistanceTimeGraph: View {
                     .padding(.horizontal, 24)
 
                     GotItButton { onComplete() }.padding(.bottom, 12)
-                    Spacer(minLength: 0)
                 }
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
-
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
