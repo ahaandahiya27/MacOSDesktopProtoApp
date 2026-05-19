@@ -54,7 +54,7 @@ struct Scene4_TheRustingExperiment: View {
         // Refactored from ZStack-overlap to ScrollView+VStack so the cards
         // don't cover the test tubes.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("The Rusting Experiment")
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)

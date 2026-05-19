@@ -23,7 +23,7 @@ struct Scene4_PrismRainbow: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Prism & Rainbow").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Send white light through a glass prism. Out comes a rainbow.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

@@ -14,7 +14,7 @@ struct Scene7_PhloemSugarPipeline: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Phloem Sugar Pipeline").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Phloem carries sugar from where it's made to where it's needed.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

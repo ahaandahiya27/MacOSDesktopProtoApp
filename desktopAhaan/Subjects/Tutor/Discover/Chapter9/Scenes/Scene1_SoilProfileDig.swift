@@ -32,7 +32,7 @@ struct Scene1_SoilProfileDig: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Soil Profile Dig").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap a layer to learn what lives there.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

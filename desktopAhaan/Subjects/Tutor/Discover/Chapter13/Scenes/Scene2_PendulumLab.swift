@@ -20,7 +20,7 @@ struct Scene2_PendulumLab: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Pendulum Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Change the string length. The period changes too.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

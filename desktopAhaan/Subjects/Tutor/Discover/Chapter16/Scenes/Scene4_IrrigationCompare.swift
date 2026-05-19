@@ -22,7 +22,7 @@ struct Scene4_IrrigationCompare: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Drip, Sprinkler or Flood?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Rank these irrigation methods by water efficiency.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

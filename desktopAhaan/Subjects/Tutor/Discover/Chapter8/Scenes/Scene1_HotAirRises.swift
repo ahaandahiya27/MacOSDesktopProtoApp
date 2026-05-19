@@ -16,7 +16,7 @@ struct Scene1_HotAirRises: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Hot Air Rises").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap the flame to heat the air inside the balloon.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

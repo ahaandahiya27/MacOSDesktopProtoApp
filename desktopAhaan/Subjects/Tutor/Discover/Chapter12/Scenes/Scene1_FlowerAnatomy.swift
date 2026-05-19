@@ -28,7 +28,7 @@ struct Scene1_FlowerAnatomy: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Flower Anatomy").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap a part to find out what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

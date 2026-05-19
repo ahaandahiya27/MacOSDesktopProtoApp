@@ -25,7 +25,7 @@ struct Scene4_EclipseBuilder: View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack so
         // explanation cards don't cover the interactive content.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Eclipse Builder")
                         .font(.title2.bold())

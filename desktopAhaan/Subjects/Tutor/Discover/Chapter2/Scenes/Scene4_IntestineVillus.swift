@@ -29,7 +29,7 @@ struct Scene4_IntestineVillus: View {
     var body: some View {
         // Refactored GeometryReader+VStack+mid-Spacer to ScrollView+VStack.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text(zoomLevel == 0 ? "The Intestine Villus Tour" : zoomLevel == 1 ? "Inside the Villus" : "Microvilli Detail")
                     .font(.title.bold())
                     .foregroundColor(.blue)

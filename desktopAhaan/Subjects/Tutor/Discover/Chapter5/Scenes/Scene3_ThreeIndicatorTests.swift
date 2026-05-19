@@ -66,7 +66,7 @@ struct Scene3_ThreeIndicatorTests: View {
         // Test tubes stack above the explanation card instead of being
         // covered by it.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 HStack(spacing: 20) {
                     ForEach(Array(indicators.enumerated()), id: \.offset) { idx, ind in
                         testTubeView(index: idx, indicator: ind, height: 240)

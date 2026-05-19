@@ -37,7 +37,7 @@ struct Scene1_PlantKitchen: View {
         // (220×280, centered) AND the speech bubble (positioned ~170pt
         // above center) both fit without clipping.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 GeometryReader { geo in
                     ZStack {
                         // Ambient animation (sunlight rays, water drops, CO₂ wisps)

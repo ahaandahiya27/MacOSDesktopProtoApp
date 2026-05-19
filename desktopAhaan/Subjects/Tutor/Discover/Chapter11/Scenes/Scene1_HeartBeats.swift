@@ -16,7 +16,7 @@ struct Scene1_HeartBeats: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Heart Beats").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Set a heart rate. Watch the beat.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

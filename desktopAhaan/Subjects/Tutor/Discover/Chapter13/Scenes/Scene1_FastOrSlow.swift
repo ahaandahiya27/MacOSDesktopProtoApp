@@ -28,7 +28,7 @@ struct Scene1_FastOrSlow: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Drag/tap to order these from slowest → fastest.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

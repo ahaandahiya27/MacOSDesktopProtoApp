@@ -28,7 +28,7 @@ struct Scene3_TheStomachBath: View {
         // so cards flow naturally below the stomach diagram without an
         // empty band in the middle.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("The Stomach Bath")
                     .font(.title.bold())
                     .foregroundColor(.red)

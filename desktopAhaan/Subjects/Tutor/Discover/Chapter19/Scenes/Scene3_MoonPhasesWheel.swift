@@ -59,7 +59,7 @@ struct Scene3_MoonPhasesWheel: View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack so
         // explanation cards don't cover the interactive content.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 VStack(spacing: 12) {
                     Text("Moon Phases")
                         .font(.largeTitle.bold())

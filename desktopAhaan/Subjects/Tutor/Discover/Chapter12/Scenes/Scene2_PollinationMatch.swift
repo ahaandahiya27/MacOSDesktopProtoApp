@@ -24,7 +24,7 @@ struct Scene2_PollinationMatch: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

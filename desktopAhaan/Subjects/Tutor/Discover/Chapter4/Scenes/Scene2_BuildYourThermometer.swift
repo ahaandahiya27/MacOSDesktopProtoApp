@@ -22,7 +22,7 @@ struct Scene2_BuildYourThermometer: View {
 
         // interactive content; cards now sit as siblings below it.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 GeometryReader { geo in
 
                     ZStack {

@@ -51,7 +51,7 @@ struct Scene2_WhySeasonsHappen: View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack so
         // explanation cards don't cover the interactive content.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 VStack(spacing: 12) {
                     Text("Why Seasons Happen")
                         .font(.largeTitle.bold())

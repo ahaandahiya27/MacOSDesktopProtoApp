@@ -39,7 +39,7 @@ struct Scene1_WeatherVsClimate: View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack so the
         // comparison panels are not covered by the explanation card.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 HStack(spacing: 20) {
                     // Weather side
                     sideCard(

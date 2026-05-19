@@ -16,7 +16,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
         // Refactored ZStack-overlap pattern to ScrollView+VStack so
         // explanation cards don't cover the interactive content.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 HStack(spacing: 40) {
                     // Bird side
                     VStack(spacing: 14) {

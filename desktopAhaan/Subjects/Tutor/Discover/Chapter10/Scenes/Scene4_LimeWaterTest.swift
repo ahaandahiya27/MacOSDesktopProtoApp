@@ -13,7 +13,7 @@ struct Scene4_LimeWaterTest: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Lime Water Test").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Blow into clear limewater. It turns milky if your breath has CO₂.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

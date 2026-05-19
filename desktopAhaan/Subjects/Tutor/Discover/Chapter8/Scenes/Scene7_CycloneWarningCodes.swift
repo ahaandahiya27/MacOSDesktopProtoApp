@@ -29,7 +29,7 @@ struct Scene7_CycloneWarningCodes: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Cyclone Warning Codes").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Match each IMD warning stage to what it means.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

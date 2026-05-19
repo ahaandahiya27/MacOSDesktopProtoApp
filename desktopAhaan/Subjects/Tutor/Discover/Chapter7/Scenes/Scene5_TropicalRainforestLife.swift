@@ -44,7 +44,7 @@ struct Scene5_TropicalRainforestLife: View {
         // Refactored ZStack-overlap to ScrollView+VStack so the bottom
         // card stack doesn't overlay the rainforest-layer buttons.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 mainColumn
                 bottomOverlay
             }

@@ -41,7 +41,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
         // proper ScrollView+VStack: lanes at top, sized to a fixed band, then
         // cards as siblings below in natural stacking order.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 HStack(spacing: 16) {
                     ForEach(0..<3, id: \.self) { i in
                         laneView(index: i, height: 240)

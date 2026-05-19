@@ -14,7 +14,7 @@ struct Scene2_AirPressureDrop: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Air Pressure Drop").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Press & hold the button. Watch the two paper strips swing together.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

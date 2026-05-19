@@ -14,7 +14,7 @@ struct Scene1_MirrorMirror: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Mirror Mirror").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide the incoming ray. The reflected ray follows the law.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

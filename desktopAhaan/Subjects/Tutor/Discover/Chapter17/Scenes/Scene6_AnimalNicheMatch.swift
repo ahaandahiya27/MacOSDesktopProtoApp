@@ -23,7 +23,7 @@ struct Scene6_AnimalNicheMatch: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 12) {
+    LazyVStack(alignment: .center, spacing: 12) {
                 Text("Animal Niche Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Each animal calls a particular layer home.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

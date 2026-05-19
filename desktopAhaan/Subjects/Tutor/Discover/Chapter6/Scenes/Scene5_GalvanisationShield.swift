@@ -27,7 +27,7 @@ struct Scene5_GalvanisationShield: View {
         // Refactored ZStack-overlap to ScrollView+VStack so cards don't
         // cover the pipe animation.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Galvanisation Shield")
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)

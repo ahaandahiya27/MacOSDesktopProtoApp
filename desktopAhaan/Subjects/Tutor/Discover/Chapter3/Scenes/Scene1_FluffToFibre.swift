@@ -35,7 +35,7 @@ struct Scene1_FluffToFibre: View {
         // size-relative positioning; that lives in a fixed-height
         // wrapper at the top.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 GeometryReader { geo in
                     ZStack(alignment: .topLeading) {
                         // Drifting icons

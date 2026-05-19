@@ -44,7 +44,7 @@ struct Scene2_BuildAWeatherStation: View {
         // don't sit in a separate Z-plane with empty space between them
         // and the instrument row.
         ScrollView {
-            VStack(spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Build Your Weather Station")
                         .font(.title2.bold())
                         .padding(.top, 14)

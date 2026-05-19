@@ -22,7 +22,7 @@ struct Scene8_RestVsRun: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Rest vs Run").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide the activity level. Watch breathing speed up.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

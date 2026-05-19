@@ -14,7 +14,7 @@ struct Scene5_KidneyFilter: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Kidney Filter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap the button to push blood through the kidney.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

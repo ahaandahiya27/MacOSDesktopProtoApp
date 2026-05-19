@@ -21,21 +21,6 @@
   --radius: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1a1a;
-    --bg-soft: #232323;
-    --text: #e5e5e5;
-    --text-muted: #9ca3af;
-    --grey-soft: #333;
-    --accent-soft: #0a2540;
-    --indigo-soft: #1f1f4d;
-    --warn-soft: #3b1f0a;
-    --kid-soft: #062b1c;
-    --rw-soft: #0c1f4e;
-    --tt-soft: #2c1a4e;
-  }
-}
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 17px; }
@@ -133,4 +118,22 @@ code { background: var(--bg-soft); padding: 2px 6px; border-radius: 4px; font-fa
   h1, h2, h3 { page-break-after: avoid; }
   .fact-box, .callout, blockquote { page-break-inside: avoid; border-color: #888; }
   a { color: #000; text-decoration: underline; }
+}
+
+
+/* Narrow-window support — 13" MacBook split-screen / sidebar visible.
+   Tightens padding and font sizes so the article fits below ~760px
+   inner width without horizontal scroll. Added in the WKWebView audit
+   pass; affects only the article body via the WKWebView, not the
+   surrounding SwiftUI chrome. */
+@media (max-width: 760px) {
+  body { padding: 20px 16px 60px; }
+  article { max-width: 100%; }
+  .hero h1 { font-size: 30px; }
+  .hero .subtitle { font-size: 18px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+  .fact-box, .callout, blockquote { padding: 12px 14px; }
+  table { font-size: 14px; }
+  th, td { padding: 8px 10px; }
 }

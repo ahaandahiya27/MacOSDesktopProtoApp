@@ -12,7 +12,7 @@ struct Scene7_Budding: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    VStack(spacing: 14) {
+    LazyVStack(alignment: .center, spacing: 14) {
                 Text("Budding").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap to grow the bud. Watch it become a new yeast cell.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
