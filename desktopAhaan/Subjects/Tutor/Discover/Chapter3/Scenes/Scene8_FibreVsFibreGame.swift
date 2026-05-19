@@ -30,81 +30,83 @@ struct Scene8_FibreVsFibreGame: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
-            HStack {
-                Text("Fibre vs Fibre Game")
-                    .font(.largeTitle.bold())
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-                Spacer()
-                ScoreBadge(value: correctCount, total: 6)
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 18)
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                HStack {
+                    Text("Fibre vs Fibre Game")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    Spacer()
+                    ScoreBadge(value: correctCount, total: 6)
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 18)
 
-            Text("Drag each fibre to the correct category.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                Text("Drag each fibre to the correct category.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .padding(.horizontal, 24)
+
+                // Floating cards
+                ZStack {
+                    ForEach(fibres, id: \.id) { fibre in
+                        fiberCard(fibre)
+                            .offset(draggingId == fibre.id ? dragOffset : .zero)
+                            .zIndex(draggingId == fibre.id ? 100 : 0)
+                            .gesture(
+                                DragGesture(coordinateSpace: .named("fibreGame"))
+                                    .onChanged { value in
+                                        if draggingId == nil {
+                                            draggingId = fibre.id
+                                            dragOrigin = value.startLocation
+                                        }
+                                        dragOffset = CGSize(
+                                            width: value.location.x - dragOrigin.x,
+                                            height: value.location.y - dragOrigin.y
+                                        )
+                                    }
+                                    .onEnded { value in
+                                        handleDrop(fibre, at: value.location)
+                                    }
+                            )
+                    }
+                }
+                .frame(height: 200)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 24)
+                .background(Color.white.opacity(0.95))
+                .cornerRadius(8)
+
+                // Drop zones
+                HStack(spacing: 16) {
+                    dropZone("🌱 Plant", zone: "plant")
+                    dropZone("🐑 Animal", zone: "animal")
+                    dropZone("🛢 Synthetic", zone: "synthetic")
+                }
+                .padding(.horizontal, 24)
+                .frame(height: 120)
+
+                LookingAheadCallout(
+                    title: "Class 11 / 12 Polymer Chemistry → JEE",
+                    detail: "The cotton-vs-polyester-vs-silk sorting you just did becomes natural-polymers-vs-synthetic-polymers in Class 11 (cellulose vs PET nylon Kevlar). JEE Organic Chem asks 'what's the monomer of nylon-6?' (caprolactam) and 'why is Kevlar bullet-proof?' (rigid aromatic rings + hydrogen-bonded sheets — the same idea as silk, optimised industrially)."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
 
-            // Floating cards
-            ZStack {
-                ForEach(fibres, id: \.id) { fibre in
-                    fiberCard(fibre)
-                        .offset(draggingId == fibre.id ? dragOffset : .zero)
-                        .zIndex(draggingId == fibre.id ? 100 : 0)
-                        .gesture(
-                            DragGesture(coordinateSpace: .named("fibreGame"))
-                                .onChanged { value in
-                                    if draggingId == nil {
-                                        draggingId = fibre.id
-                                        dragOrigin = value.startLocation
-                                    }
-                                    dragOffset = CGSize(
-                                        width: value.location.x - dragOrigin.x,
-                                        height: value.location.y - dragOrigin.y
-                                    )
-                                }
-                                .onEnded { value in
-                                    handleDrop(fibre, at: value.location)
-                                }
-                        )
+                TryAtHomeCallout(
+                    title: "Build your own classification chart",
+                    detail: "Pick 10 items of clothing or fabric at home. Read each label. Classify into: (1) plant fibre (cotton / linen / jute / hemp), (2) animal fibre (wool / silk / cashmere), (3) synthetic (polyester / nylon / acrylic / rayon — actually semi-synthetic). You'll discover most modern clothes are blends — engineering trade-offs between softness, strength, and cost."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton(label: "Got It!") {
+                    onComplete(correctCount)
                 }
+                .padding(.bottom, 12)
             }
-            .frame(height: 200)
             .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-            .background(Color.white.opacity(0.95))
-            .cornerRadius(8)
-
-            // Drop zones
-            HStack(spacing: 16) {
-                dropZone("🌱 Plant", zone: "plant")
-                dropZone("🐑 Animal", zone: "animal")
-                dropZone("🛢 Synthetic", zone: "synthetic")
-            }
-            .padding(.horizontal, 24)
-            .frame(height: 120)
-
-            LookingAheadCallout(
-                title: "Class 11 / 12 Polymer Chemistry → JEE",
-                detail: "The cotton-vs-polyester-vs-silk sorting you just did becomes natural-polymers-vs-synthetic-polymers in Class 11 (cellulose vs PET nylon Kevlar). JEE Organic Chem asks 'what's the monomer of nylon-6?' (caprolactam) and 'why is Kevlar bullet-proof?' (rigid aromatic rings + hydrogen-bonded sheets — the same idea as silk, optimised industrially)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Build your own classification chart",
-                detail: "Pick 10 items of clothing or fabric at home. Read each label. Classify into: (1) plant fibre (cotton / linen / jute / hemp), (2) animal fibre (wool / silk / cashmere), (3) synthetic (polyester / nylon / acrylic / rayon — actually semi-synthetic). You'll discover most modern clothes are blends — engineering trade-offs between softness, strength, and cost."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            Spacer()
-
-            GotItButton(label: "Got It!") {
-                onComplete(correctCount)
-            }
-            .padding(.bottom, 20)
+            .padding(.bottom, 12)
         }
         .coordinateSpace(name: "fibreGame")
         .onAppear {

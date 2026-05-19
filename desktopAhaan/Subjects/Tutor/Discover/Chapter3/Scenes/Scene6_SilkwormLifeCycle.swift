@@ -22,99 +22,101 @@ struct Scene6_SilkwormLifeCycle: View {
     ]
 
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Text("Silkworm Life Cycle")
-                    .font(.largeTitle.bold())
-                    .foregroundColor(Color.compatIndigo)
-                Spacer()
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 20)
-
-            // Circular cycle
-            ZStack {
-                Circle()
-                    .stroke(Color.compatIndigo.opacity(0.2), lineWidth: 2)
-                    .padding(40)
-
-                // Arrows between stages (Shape, was Canvas)
-                SilkwormCycleArrowsShape()
-                    .stroke(Color.gray.opacity(0.4), lineWidth: 1.5)
-
-                // Stage nodes
-                ForEach(0..<4, id: \.self) { i in
-                    stageNode(stages[i], index: i)
+        ScrollView {
+            LazyVStack(spacing: 20) {
+                HStack {
+                    Text("Silkworm Life Cycle")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(Color.compatIndigo)
+                    Spacer()
                 }
-            }
-            .frame(height: 320)
-            .padding(.horizontal, 24)
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
 
-            // Detail panel
-            VStack(spacing: 12) {
+                // Circular cycle
+                ZStack {
+                    Circle()
+                        .stroke(Color.compatIndigo.opacity(0.2), lineWidth: 2)
+                        .padding(40)
+
+                    // Arrows between stages (Shape, was Canvas)
+                    SilkwormCycleArrowsShape()
+                        .stroke(Color.gray.opacity(0.4), lineWidth: 1.5)
+
+                    // Stage nodes
+                    ForEach(0..<4, id: \.self) { i in
+                        stageNode(stages[i], index: i)
+                    }
+                }
+                .frame(height: 320)
+                .padding(.horizontal, 24)
+
+                // Detail panel
+                VStack(spacing: 12) {
+                    HStack(spacing: 12) {
+                        Text(stages[currentStage].emoji)
+                            .font(.system(size: 48))
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(stages[currentStage].name)
+                                .font(.headline)
+                                .foregroundColor(Color.compatIndigo)
+                            Text(stages[currentStage].duration)
+                                .font(.caption.weight(.semibold))
+                                .foregroundColor(.green)
+                        }
+                    }
+                    Divider()
+                    Text(stages[currentStage].desc)
+                        .font(.body)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(16)
+                .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
+                .cornerRadius(12)
+                .padding(.horizontal, 24)
+
                 HStack(spacing: 12) {
-                    Text(stages[currentStage].emoji)
-                        .font(.system(size: 48))
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(stages[currentStage].name)
-                            .font(.headline)
-                            .foregroundColor(Color.compatIndigo)
-                        Text(stages[currentStage].duration)
-                            .font(.caption.weight(.semibold))
-                            .foregroundColor(.green)
-                    }
-                }
-                Divider()
-                Text(stages[currentStage].desc)
-                    .font(.body)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding(16)
-            .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
-            .cornerRadius(12)
-            .padding(.horizontal, 24)
-
-            HStack(spacing: 12) {
-                Button {
-                    advanceStage()
-                } label: {
-                    Label("Next Stage", systemImage: "arrow.right.circle")
-                }
-                
-                .accentColor(Color.compatIndigo)
-
-                if currentStage > 0 {
                     Button {
-                        previousStage()
+                        advanceStage()
                     } label: {
-                        Label("Previous", systemImage: "arrow.left.circle")
+                        Label("Next Stage", systemImage: "arrow.right.circle")
                     }
-                    
+
+                    .accentColor(Color.compatIndigo)
+
+                    if currentStage > 0 {
+                        Button {
+                            previousStage()
+                        } label: {
+                            Label("Previous", systemImage: "arrow.left.circle")
+                        }
+
+                    }
                 }
+                .padding(.horizontal, 24)
+
+                LookingAheadCallout(
+                    title: "Class 11 Biology → NEET (Holometabola)",
+                    detail: "Complete metamorphosis (egg → larva → pupa → adult) is called *holometaboly*. NEET asks 'why do butterflies and beetles develop this way?' — because larva and adult eat different food sources (caterpillar eats leaves, butterfly drinks nectar), so they don't compete. Same trick: silkworm caterpillar eats mulberry; the moth doesn't eat at all — it lives just to mate."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                TryAtHomeCallout(
+                    title: "Find a real silkworm",
+                    detail: "If you're in southern India or West Bengal, sericulture farms (Karnataka in particular) sell raw silkworm cocoons. Or visit a Khadi shop — they often display caterpillars, cocoons, and reeled silk side-by-side. Watching one cocoon unwind into 1,000+ metres of single continuous thread is a wow moment."
+                )
+                .frame(maxWidth: DesignTokens.contentMaxWidth)
+                .padding(.horizontal, 24)
+
+                GotItButton {
+                    onComplete()
+                }
+                .padding(.bottom, 12)
             }
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Biology → NEET (Holometabola)",
-                detail: "Complete metamorphosis (egg → larva → pupa → adult) is called *holometaboly*. NEET asks 'why do butterflies and beetles develop this way?' — because larva and adult eat different food sources (caterpillar eats leaves, butterfly drinks nectar), so they don't compete. Same trick: silkworm caterpillar eats mulberry; the moth doesn't eat at all — it lives just to mate."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Find a real silkworm",
-                detail: "If you're in southern India or West Bengal, sericulture farms (Karnataka in particular) sell raw silkworm cocoons. Or visit a Khadi shop — they often display caterpillars, cocoons, and reeled silk side-by-side. Watching one cocoon unwind into 1,000+ metres of single continuous thread is a wow moment."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            Spacer()
-
-            GotItButton {
-                onComplete()
-            }
-            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

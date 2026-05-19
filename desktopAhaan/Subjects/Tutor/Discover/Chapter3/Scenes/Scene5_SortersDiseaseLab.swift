@@ -25,95 +25,99 @@ struct Scene5_SortersDiseaseLab: View {
     ]
 
     var body: some View {
-        VStack(spacing: 18) {
-            HStack {
-                Text("Sorter's Disease Lab")
-                    .font(.largeTitle.bold())
-                    .foregroundColor(Color.compatIndigo)
-                Spacer()
-            }
-            .padding(.horizontal, 24)
-            .padding(.top, 20)
+        ScrollView {
+            LazyVStack(spacing: 18) {
+                HStack {
+                    Text("Sorter's Disease Lab")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(Color.compatIndigo)
+                    Spacer()
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
 
-            ZStack {
-                // Drawn microscope (Shapes, was Canvas)
-                MicroscopeDiagram()
-                    .frame(width: 400, height: 280)
+                ZStack {
+                    // Drawn microscope (Shapes, was Canvas)
+                    MicroscopeDiagram()
+                        .frame(width: 400, height: 280)
 
-                // Viewed through eyepiece
-                VStack {
-                    ZStack {
-                        Circle()
-                            .fill(Color.primary)
-                            .frame(width: 100, height: 100)
-                            .position(x: 200, y: 90)
+                    // Viewed through eyepiece
+                    VStack {
+                        ZStack {
+                            Circle()
+                                .fill(Color.primary)
+                                .frame(width: 100, height: 100)
+                                .position(x: 200, y: 90)
 
-                        if showSpores {
-                            ForEach(0..<12, id: \.self) { i in
-                                Circle()
-                                    .fill(Color.red.opacity(0.8))
-                                    .frame(width: 4, height: 4)
-                                    .position(
-                                        x: 200 + CGFloat.random(in: -30...30),
-                                        y: 90 + CGFloat.random(in: -30...30)
-                                    )
+                            if showSpores {
+                                ForEach(0..<12, id: \.self) { i in
+                                    Circle()
+                                        .fill(Color.red.opacity(0.8))
+                                        .frame(width: 4, height: 4)
+                                        .position(
+                                            x: 200 + CGFloat.random(in: -30...30),
+                                            y: 90 + CGFloat.random(in: -30...30)
+                                        )
+                                }
                             }
                         }
                     }
-                }
 
-                // Worker icon with PPE
-                if showPPE {
-                    VStack(spacing: 2) {
-                        Text("😷👤")
-                            .font(.system(size: 48))
+                    // Worker icon with PPE
+                    if showPPE {
+                        VStack(spacing: 2) {
+                            Text("😷👤")
+                                .font(.system(size: 48))
+                        }
+                        .position(x: 320, y: 180)
                     }
-                    .position(x: 320, y: 180)
+                }
+                .frame(height: 280)
+
+                // Slides
+                HStack(spacing: 16) {
+                    ForEach(slides, id: \.1) { slideLabel, slideIdx in
+                        slideButton(slideLabel, index: slideIdx)
+                    }
+                }
+                .padding(.horizontal, 24)
+
+                Group {
+                    SoftShadowCard(padding: 14) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Label("Anthrax Protection", systemImage: "shield.fill")
+                                .font(.caption.weight(.semibold))
+                                .foregroundColor(.orange)
+                            Text("Modern wool sorters wear N95 masks and gloves to prevent breathing spores. Raw fleece is disinfected before processing.")
+                                .font(.caption)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        }
+                    }
+                    .frame(maxWidth: 600)
+                    .padding(.horizontal, 24)
+
+                    LookingAheadCallout(
+                        title: "Class 12 Biology → NEET (Microbiology)",
+                        detail: "Sorter's disease is anthrax — caused by *Bacillus anthracis*, the same organism Robert Koch used in 1876 to prove a microbe could cause a disease. NEET asks the four steps of Koch's Postulates and 'why is anthrax such a stable spore?' (the spore coat is one of the toughest natural structures — survives years in soil)."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Safety-first reading",
+                        detail: "Read about Sorter's disease / Woolsorter's pneumonia online (any verified source — WHO, CDC, NCBI). Don't search images. The point isn't gore — it's that simple workplace safety (face masks, dust extraction) eliminated this disease in modern wool mills. Public health = engineering against biology."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    GotItButton {
+                        onComplete()
+                    }
+                    .padding(.bottom, 12)
                 }
             }
-            .frame(height: 280)
-
-            // Slides
-            HStack(spacing: 16) {
-                ForEach(slides, id: \.1) { slideLabel, slideIdx in
-                    slideButton(slideLabel, index: slideIdx)
-                }
-            }
-            .padding(.horizontal, 24)
-
-            Spacer()
-
-            SoftShadowCard(padding: 14) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Label("Anthrax Protection", systemImage: "shield.fill")
-                        .font(.caption.weight(.semibold))
-                        .foregroundColor(.orange)
-                    Text("Modern wool sorters wear N95 masks and gloves to prevent breathing spores. Raw fleece is disinfected before processing.")
-                        .font(.caption)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                }
-            }
-            .frame(maxWidth: 600)
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Biology → NEET (Microbiology)",
-                detail: "Sorter's disease is anthrax — caused by *Bacillus anthracis*, the same organism Robert Koch used in 1876 to prove a microbe could cause a disease. NEET asks the four steps of Koch's Postulates and 'why is anthrax such a stable spore?' (the spore coat is one of the toughest natural structures — survives years in soil)."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Safety-first reading",
-                detail: "Read about Sorter's disease / Woolsorter's pneumonia online (any verified source — WHO, CDC, NCBI). Don't search images. The point isn't gore — it's that simple workplace safety (face masks, dust extraction) eliminated this disease in modern wool mills. Public health = engineering against biology."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton {
-                onComplete()
-            }
-            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 

@@ -56,87 +56,87 @@ struct Scene9_BossQuiz_Ch3: View {
     }
 
     var body: some View {
-        VStack(spacing: 14) {
-            Text("Boss Quiz")
-                .font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.top, 18)
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Boss Quiz")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
 
-            ProgressView(value: Double(currentQ), total: 5)
-                .frame(maxWidth: 520)
+                ProgressView(value: Double(currentQ), total: 5)
+                    .frame(maxWidth: 520)
 
-            if !done {
-                let item = quiz[currentQ]
-                Text("Question \(currentQ + 1) of 5")
-                    .font(.subheadline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                if !done {
+                    let item = quiz[currentQ]
+                    Text("Question \(currentQ + 1) of 5")
+                        .font(.subheadline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                SoftShadowCard(padding: 18) {
-                    Text(item.prompt)
-                        .font(.title3.bold())
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxWidth: 600)
-                .offset(x: shake)
+                    SoftShadowCard(padding: 18) {
+                        Text(item.prompt)
+                            .font(.title3.bold())
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    .frame(maxWidth: 600)
+                    .offset(x: shake)
 
-                VStack(spacing: 10) {
-                    ForEach(item.options, id: \.self) { opt in
-                        Ch3AnswerButton(
-                            label: opt,
-                            state: state(for: opt, in: item)
-                        ) {
-                            pick(opt, in: item)
+                    VStack(spacing: 10) {
+                        ForEach(item.options, id: \.self) { opt in
+                            Ch3AnswerButton(
+                                label: opt,
+                                state: state(for: opt, in: item)
+                            ) {
+                                pick(opt, in: item)
+                            }
+                        }
+                    }
+                    .frame(maxWidth: 600)
+                } else {
+                    VStack(spacing: 20) {
+                        ZStack {
+                            Text("🎉")
+                                .font(.system(size: 80))
+                        }
+                        .frame(height: 120)
+
+                        VStack(spacing: 8) {
+                            Text("Quiz Complete!")
+                                .font(.headline)
+                                .foregroundColor(.green)
+                            Text("You scored \(score) / 5")
+                                .font(.title2.weight(.bold))
+                                .foregroundColor(Color.compatIndigo)
+                        }
+
+                        Button {
+                            generateCertificate()
+                        } label: {
+                            Label("🎓 Print my certificate", systemImage: "printer")
+                                .frame(maxWidth: .infinity)
+                        }
+
+                        .accentColor(.green)
+
+                        if let status = pdfStatus {
+                            Text(status)
+                                .font(.caption)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
                 }
-                .frame(maxWidth: 600)
 
-                Spacer()
-            } else {
-                VStack(spacing: 20) {
-                    ZStack {
-                        Text("🎉")
-                            .font(.system(size: 80))
-                    }
-                    .frame(height: 120)
-
-                    VStack(spacing: 8) {
-                        Text("Quiz Complete!")
-                            .font(.headline)
-                            .foregroundColor(.green)
-                        Text("You scored \(score) / 5")
-                            .font(.title2.weight(.bold))
-                            .foregroundColor(Color.compatIndigo)
-                    }
-
-                    Button {
-                        generateCertificate()
-                    } label: {
-                        Label("🎓 Print my certificate", systemImage: "printer")
-                            .frame(maxWidth: .infinity)
-                    }
-                    
-                    .accentColor(.green)
-
-                    if let status = pdfStatus {
-                        Text(status)
-                            .font(.caption)
-                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    }
-
-                    Spacer()
-                }
-            }
-
-            GotItButton {
-                if !done {
-                    Task { @MainActor in
-                        try? await Task.sleep(nanoseconds: 300_000_000)
-                        onComplete(score)
+                GotItButton {
+                    if !done {
+                        Task { @MainActor in
+                            try? await Task.sleep(nanoseconds: 300_000_000)
+                            onComplete(score)
+                        }
                     }
                 }
+                .padding(.bottom, 12)
             }
+            .frame(maxWidth: .infinity)
             .padding(.bottom, 12)
         }
     }

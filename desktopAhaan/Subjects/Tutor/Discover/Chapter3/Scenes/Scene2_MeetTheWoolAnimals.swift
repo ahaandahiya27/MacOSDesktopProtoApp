@@ -47,82 +47,86 @@ struct Scene2_MeetTheWoolAnimals: View {
     ]
 
     var body: some View {
-        VStack(spacing: 18) {
-            Text("Meet the Wool Animals")
-                .font(.largeTitle.bold())
-                .foregroundColor(Color.compatIndigo)
-                .padding(.top, 20)
+        ScrollView {
+            LazyVStack(spacing: 18) {
+                Text("Meet the Wool Animals")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(Color.compatIndigo)
+                    .padding(.top, 20)
 
-            Text("Tap any card to flip and learn!")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                Text("Tap any card to flip and learn!")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 16) {
-                    ForEach(animals, id: \.name) { animal in
-                        FlipCard(
-                            frontEmoji: animal.emoji,
-                            frontTitle: animal.name,
-                            frontSubtitle: "Wool Source",
-                            back: {
-                                VStack(alignment: .leading, spacing: 8) {
-                                    ForEach(animal.facts, id: \.self) { fact in
-                                        HStack(spacing: 8) {
-                                            Circle()
-                                                .fill(Color.compatIndigo)
-                                                .frame(width: 6, height: 6)
-                                            Text(fact)
-                                                .font(.caption)
-                                                .lineLimit(2)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 16) {
+                        ForEach(animals, id: \.name) { animal in
+                            FlipCard(
+                                frontEmoji: animal.emoji,
+                                frontTitle: animal.name,
+                                frontSubtitle: "Wool Source",
+                                back: {
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        ForEach(animal.facts, id: \.self) { fact in
+                                            HStack(spacing: 8) {
+                                                Circle()
+                                                    .fill(Color.compatIndigo)
+                                                    .frame(width: 6, height: 6)
+                                                Text(fact)
+                                                    .font(.caption)
+                                                    .lineLimit(2)
+                                            }
                                         }
                                     }
+                                    .padding(12)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                                    .background(LinearGradient(
+                                        colors: [.yellow.opacity(0.15), .orange.opacity(0.15)],
+                                        startPoint: .topLeading, endPoint: .bottomTrailing
+                                    ))
+                                    .cornerRadius(12)
                                 }
-                                .padding(12)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                                .background(LinearGradient(
-                                    colors: [.yellow.opacity(0.15), .orange.opacity(0.15)],
-                                    startPoint: .topLeading, endPoint: .bottomTrailing
-                                ))
-                                .cornerRadius(12)
-                            }
-                        )
-                        // FlipCard self-sizes to 220×300; explicit frame
-                        // here would override and crop subtitle (the "Wool
-                        // Source" + "Tap to flip" footer) — see FlipCard
-                        // doc-comment.
+                            )
+                            // FlipCard self-sizes to 220×300; explicit frame
+                            // here would override and crop subtitle (the "Wool
+                            // Source" + "Tap to flip" footer) — see FlipCard
+                            // doc-comment.
+                        }
                     }
+                    .padding(.horizontal, 24)
                 }
-                .padding(.horizontal, 24)
+
+                Group {
+                    SoftShadowCard(padding: 14) {
+                        Label("Tap any animal to learn its wool secrets", systemImage: "info.circle.fill")
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
+                    .frame(maxWidth: 600)
+                    .padding(.horizontal, 24)
+
+                    LookingAheadCallout(
+                        title: "Class 11 Biology → NEET",
+                        detail: "Different climates produced different wool textures — sheep at altitude grow thicker undercoats. NEET tests this as 'adaptive radiation' in Class 11 Evolution: same ancestor, multiple niches, multiple morphologies. The Pashmina goat (Chyangra) in Ladakh has the finest wool because cold + thin air = densest insulation needed."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Feel the difference",
+                        detail: "Find a Pashmina shawl, a Merino sweater, and a generic acrylic sweater (or compare labels at a clothing store). Pashmina feels almost weightless and warm; Merino feels soft and slightly springy; acrylic feels plasticky and conducts cold faster. Same job (insulation), three engineering grades — your fingers can tell the polymer apart."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    GotItButton {
+                        onComplete()
+                    }
+                    .padding(.bottom, 12)
+                }
             }
-
-            Spacer()
-
-            SoftShadowCard(padding: 14) {
-                Label("Tap any animal to learn its wool secrets", systemImage: "info.circle.fill")
-                    .font(.caption)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-            }
-            .frame(maxWidth: 600)
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 11 Biology → NEET",
-                detail: "Different climates produced different wool textures — sheep at altitude grow thicker undercoats. NEET tests this as 'adaptive radiation' in Class 11 Evolution: same ancestor, multiple niches, multiple morphologies. The Pashmina goat (Chyangra) in Ladakh has the finest wool because cold + thin air = densest insulation needed."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Feel the difference",
-                detail: "Find a Pashmina shawl, a Merino sweater, and a generic acrylic sweater (or compare labels at a clothing store). Pashmina feels almost weightless and warm; Merino feels soft and slightly springy; acrylic feels plasticky and conducts cold faster. Same job (insulation), three engineering grades — your fingers can tell the polymer apart."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton {
-                onComplete()
-            }
-            .padding(.bottom, 20)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
         }
     }
 }

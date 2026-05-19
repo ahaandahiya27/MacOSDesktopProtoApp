@@ -18,25 +18,70 @@ struct Scene3_TheShearingDay: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        VStack(spacing: 18) {
-            HStack {
-                Text("The Shearing Day")
-                    .font(.largeTitle.bold())
-                    .foregroundColor(Color.compatIndigo)
-                Spacer()
-                VStack(alignment: .trailing, spacing: 4) {
-                    Text("Harvested")
-                        .font(.caption.weight(.semibold))
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    Text("\(Int(harvestedKg)) kg")
-                        .font(.title3.weight(.bold))
-                        .foregroundColor(.green)
+        ScrollView {
+            LazyVStack(spacing: 18) {
+                HStack {
+                    Text("The Shearing Day")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(Color.compatIndigo)
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text("Harvested")
+                            .font(.caption.weight(.semibold))
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        Text("\(Int(harvestedKg)) kg")
+                            .font(.title3.weight(.bold))
+                            .foregroundColor(.green)
+                    }
+                }
+                .padding(.horizontal, 24)
+                .padding(.top, 20)
+
+                shearingDiagram
+
+                shearingControls
+
+                Group {
+                    SoftShadowCard(padding: 14) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Label("Don't worry, it doesn't hurt!", systemImage: "checkmark.circle.fill")
+                                .foregroundColor(.green)
+                            Text("Sheep are sheared once a year in spring. The fleece grows back quickly and the sheep feels cooler in summer.")
+                                .font(.caption)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        }
+                    }
+                    .frame(maxWidth: 600)
+                    .padding(.horizontal, 24)
+
+                    LookingAheadCallout(
+                        title: "Class 12 Economics + NEET ethics",
+                        detail: "Shearing season + 'sustainable wool' raise NEET / Class-12 ethics-style questions: cruelty-free certification (RWS standard), carbon cost (sheep methane vs synthetic-fibre fossil CO₂), and animal-welfare law. Whether wool is 'ethical' isn't a yes/no — it's a chain of choices from pasture to label."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    TryAtHomeCallout(
+                        title: "Read a wool label",
+                        detail: "Find a wool product (shawl, sweater, blanket). Look for these tags: 'RWS' (Responsible Wool Standard — cruelty-free), 'Merino' (breed name = fine wool), 'Pashmina / Cashmere' (goat undercoat from Ladakh / Mongolia). The label is a supply-chain map — country, breed, ethics certification, microns of fineness."
+                    )
+                    .frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, 24)
+
+                    GotItButton {
+                        onComplete()
+                    }
+                    .padding(.bottom, 12)
                 }
             }
-            .padding(.horizontal, 24)
-            .padding(.top, 20)
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
+        }
+    }
 
-            ZStack(alignment: .topLeading) {
+    @ViewBuilder
+    private var shearingDiagram: some View {
+        ZStack(alignment: .topLeading) {
                 // Drawn sheep (Shapes, was Canvas) — wrapped in a sized
                 // container so the inner .offset coordinates line up with
                 // the old Canvas (x, y) values.
@@ -88,63 +133,32 @@ struct Scene3_TheShearingDay: View {
                         .position(x: 80 + clipperPosition * 140, y: 120)
                         .frame(height: 280, alignment: .topLeading)
                 }
-            }
-            .frame(height: 280)
-            .padding(.horizontal, 24)
-
-            HStack(spacing: 12) {
-                Button {
-                    performShearing()
-                } label: {
-                    Label(isShearing ? "Shearing..." : "Start Shearing!", systemImage: "scissors")
-                }
-                
-                .disabled(isShearing)
-
-                if harvestedKg >= 12 {
-                    Button {
-                        resetShearing()
-                    } label: {
-                        Label("Watch Again", systemImage: "arrow.clockwise")
-                    }
-                    
-                }
-            }
-            .padding(.horizontal, 24)
-
-            Spacer()
-
-            SoftShadowCard(padding: 14) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Label("Don't worry, it doesn't hurt!", systemImage: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                    Text("Sheep are sheared once a year in spring. The fleece grows back quickly and the sheep feels cooler in summer.")
-                        .font(.caption)
-                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                }
-            }
-            .frame(maxWidth: 600)
-            .padding(.horizontal, 24)
-
-            LookingAheadCallout(
-                title: "Class 12 Economics + NEET ethics",
-                detail: "Shearing season + 'sustainable wool' raise NEET / Class-12 ethics-style questions: cruelty-free certification (RWS standard), carbon cost (sheep methane vs synthetic-fibre fossil CO₂), and animal-welfare law. Whether wool is 'ethical' isn't a yes/no — it's a chain of choices from pasture to label."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            TryAtHomeCallout(
-                title: "Read a wool label",
-                detail: "Find a wool product (shawl, sweater, blanket). Look for these tags: 'RWS' (Responsible Wool Standard — cruelty-free), 'Merino' (breed name = fine wool), 'Pashmina / Cashmere' (goat undercoat from Ladakh / Mongolia). The label is a supply-chain map — country, breed, ethics certification, microns of fineness."
-            )
-            .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
-
-            GotItButton {
-                onComplete()
-            }
-            .padding(.bottom, 20)
         }
+        .frame(height: 280)
+        .padding(.horizontal, 24)
+    }
+
+    @ViewBuilder
+    private var shearingControls: some View {
+        HStack(spacing: 12) {
+            Button {
+                performShearing()
+            } label: {
+                Label(isShearing ? "Shearing..." : "Start Shearing!", systemImage: "scissors")
+            }
+
+            .disabled(isShearing)
+
+            if harvestedKg >= 12 {
+                Button {
+                    resetShearing()
+                } label: {
+                    Label("Watch Again", systemImage: "arrow.clockwise")
+                }
+
+            }
+        }
+        .padding(.horizontal, 24)
     }
 
     private func performShearing() {
