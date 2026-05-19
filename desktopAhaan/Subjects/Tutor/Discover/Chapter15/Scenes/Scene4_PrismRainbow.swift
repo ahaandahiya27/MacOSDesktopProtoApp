@@ -58,7 +58,7 @@ struct Scene4_PrismRainbow: View {
 
                 SoftShadowCard(padding: 18) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Label("White light is many colours", systemImage: "rainbow")
+                        Label("White light is many colours", systemImage: SFSymbolCompat.name("rainbow"))
                             .font(.title2.bold())
                         Text("White light is a mix of seven colours: VIBGYOR. Each colour bends a different amount in glass, so a prism fans them out. The same thing happens in raindrops — that's a rainbow.")
                             .font(.body).lineSpacing(4)
@@ -66,6 +66,8 @@ struct Scene4_PrismRainbow: View {
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
 
+                // Grouped so the outer LazyVStack stays within Swift 5.5's
+                // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
                 Group {
                     MnemonicCallout(
                         hook: "VIBGYOR",
@@ -96,10 +98,9 @@ struct Scene4_PrismRainbow: View {
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)
-
-                    GotItButton { onComplete() }.padding(.bottom, 12)
-                    Spacer(minLength: 0)
                 }
+
+                GotItButton { onComplete() }.padding(.bottom, 12)
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

@@ -125,6 +125,10 @@ enum SFSymbolCompat {
         case "arrowshape.down.fill":       return "arrow.down.circle.fill" // SF Symbols 3+ — added 2026-05-18 after iMac runtime warning
         case "humidity.fill":              return "drop.fill"              // SF Symbols 4+ — added 2026-05-19 (Ch.7 Scene 2 weather station)
         case "circle.inset.filled":        return "circle.fill"            // SF Symbols 4+ — added 2026-05-19 (Ch.7 Scene 4 polar bear)
+        case "diamond.fill":               return "suit.diamond.fill"      // SF Symbols 3+ — added 2026-05-19 (Ch.15 Scene 8 kaleidoscope)
+        case "rainbow":                    return "sparkles"               // SF Symbols 4+ — added 2026-05-19 (Ch.15 Scene 4 prism)
+        case "powerplug":                  return "bolt.fill"              // SF Symbols 4+ — added 2026-05-19 (Ch.14 Scene 6 electromagnet)
+        case "chart.line.uptrend.xyaxis":  return "chart.bar.fill"         // SF Symbols 3+ — added 2026-05-19 (Ch.13 Scene 3 distance-time graph)
         default:                           return modern
         }
     }
