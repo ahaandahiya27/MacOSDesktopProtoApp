@@ -565,7 +565,10 @@ final class ChapterContentTests: XCTestCase {
     /// add each chapter number here once it reaches zero-missing.
     /// Future content edits that drop a chapter below the floor fail CI.
     @MainActor func testMnemonicsRatchet() {
-        let ZERO_MISSING_MNEMONICS: Set<Int> = [11, 15]
+        // All 19 science chapters now ship zero-missing mnemonics
+        // (closed 2026-05-19, Option A of the final audit closure).
+        let ZERO_MISSING_MNEMONICS: Set<Int> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                                11, 12, 13, 14, 15, 16, 17, 18, 19]
         guard let url = Bundle.main.url(forResource: "science_class7",
                                          withExtension: "json"),
               let data = try? Data(contentsOf: url),
@@ -585,6 +588,36 @@ final class ChapterContentTests: XCTestCase {
                 "chapter from ZERO_MISSING_MNEMONICS in ChapterContentTests."
             )
         }
+    }
+
+    /// L4 + L5 variations ratchet — every L4 and L5 question must ship
+    /// with at least 2 variations so spaced-repetition has fresh framings
+    /// to draw from. Lower-difficulty questions are exempt for now (a
+    /// future content pass can extend the floor downward). Closed
+    /// 2026-05-19 (Option A of the final audit closure).
+    @MainActor func testEveryL4AndL5QuestionHasAtLeastTwoVariations() {
+        guard let url = Bundle.main.url(forResource: "science_class7",
+                                         withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var thin: [(String, Int, Int)] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics {
+                for q in topic.questions where q.difficulty >= 4 {
+                    if q.variations.count < 2 {
+                        thin.append((q.id, q.difficulty, q.variations.count))
+                    }
+                }
+            }
+        }
+        XCTAssertTrue(
+            thin.isEmpty,
+            "L4/L5 questions with fewer than 2 variations: " +
+            thin.prefix(5).map { "\($0.0) (L\($0.1)=\($0.2))" }.joined(separator: ", ")
+        )
     }
 
     @MainActor func testEveryScienceChapterHasAtLeastThreeL4AndThreeL5() {
