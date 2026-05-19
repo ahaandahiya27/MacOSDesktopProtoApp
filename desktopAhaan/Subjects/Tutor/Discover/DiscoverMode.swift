@@ -191,6 +191,11 @@ struct DiscoverShell<SceneBody: View>: View {
     @EnvironmentObject private var dataStore: DataStore
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
+    /// Drives the scale-pop animation on the "X done" header counter
+    /// when the completed-scene count increases. Toggled briefly via
+    /// onChange in the header; honours Reduce Motion (MO1, closes 2026-05-19).
+    @State private var counterPopActive: Bool = false
+
     var totalScenes: Int { sceneTitles.count }
 
     private var completedSceneIds: Set<String> {
@@ -280,7 +285,9 @@ struct DiscoverShell<SceneBody: View>: View {
                     .truncationMode(.tail)
                 Spacer(minLength: 0)
                 // Scene counter — pill background so it reads as a single
-                // chip and never blends with the canvas hue.
+                // chip and never blends with the canvas hue. Scale-pops
+                // briefly when the completed-scene count increases (MO1
+                // closure 2026-05-19). Honours Reduce Motion.
                 Text("Scene \(currentScene + 1) of \(totalScenes) · \(completedIds.count) done")
                     .font(.monoDigitCaption)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -291,6 +298,19 @@ struct DiscoverShell<SceneBody: View>: View {
                             .fill(Color.white.opacity(0.85))
                             .overlay(Capsule().strokeBorder(Color.black.opacity(0.12), lineWidth: 0.5))
                     )
+                    .scaleEffect(counterPopActive ? 1.18 : 1.0)
+                    .onChange(of: completedIds.count) { newCount in
+                        guard !reduceMotion, newCount > 0 else { return }
+                        withAnimation(.spring(response: 0.32, dampingFraction: 0.55)) {
+                            counterPopActive = true
+                        }
+                        Task { @MainActor in
+                            try? await Task.sleep(nanoseconds: 350_000_000)
+                            withAnimation(.spring(response: 0.32, dampingFraction: 0.7)) {
+                                counterPopActive = false
+                            }
+                        }
+                    }
             }
             HStack(spacing: 8) {
                 ForEach(0..<totalScenes, id: \.self) { i in
