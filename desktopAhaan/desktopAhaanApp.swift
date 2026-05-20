@@ -83,11 +83,13 @@ struct SanskritKoshApp: App {
     init() {
         // Pre-warm the Sanskrit dictionary off the main thread so the
         // first translator open doesn't hit cold-decode of the bundled
-        // JSON. Wrapped defensively in case `SanskritDictionary.shared`
-        // ever fails to init — we don't want a swallow-no-warning silent
-        // miss, but we also don't want a single warming Task to crash the
-        // App's launch scene.
-        Task.detached(priority: .utility) {
+        // JSON. Bumped from .utility to .userInitiated so it competes
+        // for cores against the UI thread instead of waiting behind
+        // other background work — the dictionary is on the user's hot
+        // path within seconds of launch, so the brief priority bump is
+        // appropriate. After completion, `SanskritDictionary.isReady`
+        // reads true on any thread (atomic).
+        Task.detached(priority: .userInitiated) {
             let n = SanskritDictionary.shared.entries.count
             appLogger.info("SanskritDictionary pre-warmed (\(n, privacy: .public) entries).")
         }
