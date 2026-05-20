@@ -606,8 +606,8 @@ final class DataStore: ObservableObject {
 
     // MARK: - Discover-mode all-chapters completion
 
-    /// Total number of Discover scenes across the science pack: 15
-    /// chapters × 9 scenes + 4 chapters × 20 scenes = 215. Hard-coded
+    /// Total number of Discover scenes across the science pack: 14
+    /// chapters × 9 scenes + 5 chapters × 20 scenes = 226. Hard-coded
     /// rather than derived because the chapter dispatchers all declare
     /// their sceneTitles arrays inline; bump this when a chapter grows.
     /// Expansion log (2026-05-20):
@@ -615,7 +615,8 @@ final class DataStore: ObservableObject {
     ///   - Ch.2: 9 → 20 scenes
     ///   - Ch.3: 9 → 20 scenes
     ///   - Ch.4: 9 → 20 scenes
-    static let totalDiscoverScenes = 215
+    ///   - Ch.5: 9 → 20 scenes
+    static let totalDiscoverScenes = 226
 
     /// True once every Discover scene across all 19 science chapters
     /// has been marked complete. Used by the "you finished Discover
