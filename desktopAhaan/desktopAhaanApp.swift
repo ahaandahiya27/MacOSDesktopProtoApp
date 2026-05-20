@@ -39,6 +39,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     ///   - log the clean-quit so a future "did the app quit or did it
     ///     crash?" investigation is unambiguous against the crash log.
     func applicationWillTerminate(_ notification: Notification) {
+        // Drain any in-flight coalesced DataStore writes BEFORE marking a
+        // clean exit — otherwise a ⌘Q during the 250ms debounce window
+        // would silently drop the latest mutation. flushSavesBeforeQuit
+        // is synchronous on the main actor; AppKit guarantees this
+        // delegate method runs on main so the await completes inline.
+        let flushSema = DispatchSemaphore(value: 0)
+        Task { @MainActor in
+            DataStore.shared.flushSavesBeforeQuit()
+            flushSema.signal()
+        }
+        // Bounded wait: 1 second is generous — each pending write is one
+        // small JSON atomic-replace. If we somehow can't finish in 1s
+        // we proceed anyway rather than blocking a shutdown forever.
+        _ = flushSema.wait(timeout: .now() + 1.0)
         CrashReporter.shared.markCleanExit()
         UserDefaults.standard.synchronize()
         appLogger.info("applicationWillTerminate — clean quit.")

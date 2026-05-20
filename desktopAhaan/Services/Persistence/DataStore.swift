@@ -188,6 +188,41 @@ final class DataStore: ObservableObject {
 
     private let storeDir: URL
 
+    // MARK: - Coalesced-write infrastructure
+    //
+    // Hot mutators (recordReview / markSceneComplete / toggleToughQuestion
+    // / etc.) can fire several times per second during a review session.
+    // Each `save(_:to:)` call writes the full file synchronously on the
+    // main actor — a 10-card review session = 10 disk writes of the whole
+    // reviews.json. Atomic-write file replacement is cheap individually
+    // but the back-to-back fsyncs add up and contribute to the kind of
+    // multi-hundred-ms main-thread hangs the crash logs surfaced.
+    //
+    // `saveCoalesced(_:to:)` replaces synchronous `save(_:to:)` for the
+    // high-frequency callers. Within the coalescing window the LAST
+    // submission wins (intermediate states would be overwritten on the
+    // very next mutation anyway). The write itself runs on a serial
+    // background queue so the main thread is never blocked.
+    //
+    // Invariants:
+    //   - applicationWillTerminate calls `flushPendingSaves()` so an
+    //     in-flight coalesce window doesn't lose the last mutation.
+    //   - The cold `save(_:to:)` path stays for callers that prefer
+    //     synchronous-or-die semantics (e.g. one-shot user-driven
+    //     clearAll operations).
+    //   - Captures-by-value of the encoded snapshot at submission time
+    //     means the closure runs with a fresh view of the data even if
+    //     the in-memory model mutates again before the debounce fires.
+
+    /// Filename → latest encoded payload waiting to be written. Updated
+    /// on every `saveCoalesced` call; consumed when the debounce timer
+    /// fires or `flushSavesBeforeQuit` runs.
+    private var pendingSavePayloads: [String: (url: URL, data: Data)] = [:]
+    /// Filename → debounce timer. Cancelled and replaced on every
+    /// subsequent `saveCoalesced` call within the window.
+    private var pendingSaveTimers: [String: Timer] = [:]
+    private let coalesceDelaySeconds: TimeInterval = 0.25
+
     /// Current persistence schema version. Bump whenever a stored JSON
     /// shape changes in a way that an older decoder would reject. The
     /// migration scaffold below runs `applyMigrations(_:to:)` from the
@@ -496,7 +531,9 @@ final class DataStore: ObservableObject {
             ?? QuestionReview.newReview(for: questionId, at: now)
         let updated = SM2Scheduler.schedule(prior, quality: quality, at: now)
         questionReviews[questionId] = updated
-        save(Array(questionReviews.values), to: "reviews.json")
+        // Coalesced — a 10-question review session writes once at the end,
+        // not 10 times in 30 seconds. flushSavesBeforeQuit covers ⌘Q.
+        saveCoalesced(Array(questionReviews.values), to: "reviews.json")
         creditReviewStreak(at: now)
     }
 
@@ -602,6 +639,60 @@ final class DataStore: ObservableObject {
             let msg = "Could not save data (\(filename)). Changes may be lost."
             lastSaveError = msg
             Self.logger.error("save \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
+        }
+    }
+
+    /// Debounced write for high-frequency mutators. Encodes the snapshot
+    /// at submission time, stashes it under the filename key, and resets
+    /// a debounce timer; if another submission arrives within the window
+    /// it replaces the payload (only the latest matters since each save
+    /// rewrites the file in full). Net effect: rapid mutations land as
+    /// one main-thread write of the latest state at the end of the
+    /// coalescing window.
+    private func saveCoalesced<T: Encodable>(_ items: [T], to filename: String) {
+        let url = storeDir.appendingPathComponent(filename)
+        let encoded: Data
+        do {
+            encoded = try JSONEncoder().encode(items)
+        } catch {
+            lastSaveError = "Could not encode \(filename). Changes may be lost."
+            Self.logger.error("encode \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
+            return
+        }
+        pendingSavePayloads[filename] = (url, encoded)
+        pendingSaveTimers[filename]?.invalidate()
+        pendingSaveTimers[filename] = Timer.scheduledTimer(
+            withTimeInterval: coalesceDelaySeconds, repeats: false
+        ) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                self?.flushPendingSave(filename: filename)
+            }
+        }
+    }
+
+    /// Consume the pending payload for `filename` (if any) and write it
+    /// atomically. Runs on the main actor — the write itself is a single
+    /// fsync of a small JSON file, the cost we wanted to dedupe.
+    private func flushPendingSave(filename: String) {
+        pendingSaveTimers.removeValue(forKey: filename)?.invalidate()
+        guard let payload = pendingSavePayloads.removeValue(forKey: filename) else { return }
+        do {
+            try payload.data.write(to: payload.url, options: .atomic)
+            lastSaveError = nil
+        } catch {
+            lastSaveError = "Could not save data (\(filename)). Changes may be lost."
+            Self.logger.error("coalesced-save \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
+        }
+    }
+
+    /// Drain every pending coalesced write synchronously. Called from
+    /// `applicationWillTerminate` so a clean ⌘Q doesn't lose mutations
+    /// that landed inside the last 250ms debounce window. Safe to call
+    /// when nothing is pending — no-op.
+    func flushSavesBeforeQuit() {
+        let filenames = Array(pendingSavePayloads.keys)
+        for filename in filenames {
+            flushPendingSave(filename: filename)
         }
     }
 
