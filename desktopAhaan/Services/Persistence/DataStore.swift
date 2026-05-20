@@ -357,7 +357,10 @@ final class DataStore: ObservableObject {
         } else {
             practiceProgress.append(progress)
         }
-        save(practiceProgress, to: "practice.json")
+        // Coalesced — PracticeViewModel can fire several upserts per
+        // word during scoring, and the file is rewritten in full each
+        // time. Flushed at terminate.
+        saveCoalesced(practiceProgress, to: "practice.json")
     }
 
     func deleteAllProgress() {
@@ -437,14 +440,16 @@ final class DataStore: ObservableObject {
 
     func insertAttempt(_ attempt: QuestionAttempt) {
         questionAttempts.append(attempt)
-        save(questionAttempts, to: "attempts.json")
+        // Coalesced — every wrong-answer retry fires this, and a typical
+        // practice session writes dozens of attempts in seconds.
+        saveCoalesced(questionAttempts, to: "attempts.json")
     }
 
     // MARK: - StudySession
 
     func insertSession(_ session: StudySession) {
         studySessions.append(session)
-        save(studySessions, to: "sessions.json")
+        saveCoalesced(studySessions, to: "sessions.json")
     }
 
     // MARK: - DiscoverProgress
@@ -468,7 +473,10 @@ final class DataStore: ObservableObject {
             )
             discoverProgress.append(row)
         }
-        save(discoverProgress, to: "discover.json")
+        // Coalesced — completing a quick scene chain (Boss Quiz auto-
+        // advances on the final question) can mark several scenes in
+        // quick succession.
+        saveCoalesced(discoverProgress, to: "discover.json")
     }
 
     func discoverRows(for chapterId: String) -> [DiscoverProgress] {
