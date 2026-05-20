@@ -26,6 +26,10 @@ struct QuestionDetailView: View {
     /// so the choices don't reshuffle as the user picks. Reset on question
     /// change.
     @State private var shuffledRights: [String] = []
+    /// True once the user has tapped a quality button in the post-attempt
+    /// SM-2 picker. Swapped back to false on question change, so the
+    /// picker re-appears for the next question.
+    @State private var didRateThisVisit: Bool = false
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
@@ -91,6 +95,7 @@ struct QuestionDetailView: View {
                 selectedOptionIndex = nil
                 matchAssignment = [:]
                 shuffledRights = []
+                didRateThisVisit = false
                 resetMatchStateIfNeeded()
                 // Snap back to the top so the new prompt is visible.
                 withAnimation(.easeOut(duration: 0.2)) {
@@ -293,10 +298,105 @@ struct QuestionDetailView: View {
     private var postAttemptGroup: some View {
         solutionDisclosure
         commonMistakesCard
+        spacedReviewQualityCard
         variationsSection
         if currentSiblingIndex != nil {
             navigationFooter
         }
+    }
+
+    /// SM-2 quality picker — appears once the kid has either attempted the
+    /// question (any outcome) or revealed the worked solution. Tapping a
+    /// quality button records the answer into the spaced-repetition queue
+    /// via DataStore.recordReview, after which the picker is replaced by a
+    /// confirmation chip until the user navigates to the next question.
+    ///
+    /// Lives inline rather than as its own file so we avoid the Xcode
+    /// pbxproj add-ceremony for this small companion view, matching the
+    /// inline-in-ContentView pattern used by DailyPracticeView and friends.
+    @ViewBuilder
+    private var spacedReviewQualityCard: some View {
+        let shouldShow: Bool = {
+            if revealSolution { return true }
+            if attemptOutcome != .unchecked { return true }
+            return false
+        }()
+        if shouldShow {
+            if didRateThisVisit {
+                qualityRecordedConfirmation
+            } else {
+                qualityPickerCard
+            }
+        }
+    }
+
+    private var qualityPickerCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label("How did that go?", systemImage: "rectangle.stack.fill")
+                .font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            Text("Tap one — we'll schedule when to show this question again.")
+                .font(.caption)
+                .foregroundColor(.secondary)
+            HStack(spacing: 10) {
+                qualityButton(label: "Forgot", color: .red, quality: .forgot)
+                qualityButton(label: "Hard", color: .orange, quality: .hard)
+                qualityButton(label: "Good", color: .compatIndigo, quality: .good)
+                qualityButton(label: "Easy", color: .green, quality: .easy)
+            }
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.compatIndigo.opacity(0.06))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
+        )
+    }
+
+    private func qualityButton(label: String, color: Color,
+                                quality: ReviewQuality) -> some View {
+        Button {
+            dataStore.recordReview(questionId: question.id, quality: quality)
+            withAnimation(.easeOut(duration: 0.18)) { didRateThisVisit = true }
+        } label: {
+            Text(label)
+                .font(.body.weight(.semibold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 9)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(color.opacity(0.15))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .strokeBorder(color.opacity(0.45), lineWidth: 1)
+                )
+                .foregroundColor(color)
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Rate this answer as \(label) — feeds the spaced-repetition queue")
+    }
+
+    private var qualityRecordedConfirmation: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "checkmark.seal.fill")
+                .foregroundColor(.green)
+            Text("Recorded — see Daily Practice for what's due.")
+                .font(.callout)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            Spacer(minLength: 0)
+        }
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.green.opacity(0.08))
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Spaced-repetition answer recorded")
     }
 
     // MARK: - Sections
