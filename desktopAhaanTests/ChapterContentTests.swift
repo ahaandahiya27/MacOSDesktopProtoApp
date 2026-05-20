@@ -620,6 +620,44 @@ final class ChapterContentTests: XCTestCase {
         )
     }
 
+    // MARK: - Discover-scene-count ratchet (2026-05-21)
+    //
+    // Every science chapter shipped today at 20 scenes (380 total) via
+    // the inline-in-dispatcher pattern + AnyView lookup table. The
+    // `DataStore.totalDiscoverScenes` constant gates the "all chapters
+    // complete" celebration overlay — if a future content edit drops
+    // this below 380 silently, the kid would hit the celebration early
+    // (or never). Pin the number.
+
+    @MainActor func testTotalDiscoverScenesPinnedAt380() {
+        XCTAssertEqual(
+            DataStore.totalDiscoverScenes, 380,
+            "totalDiscoverScenes is the magic number the celebration overlay checks. " +
+            "If you intentionally added/removed scenes, update both the constant AND this test."
+        )
+    }
+
+    @MainActor func testAllDiscoverChaptersCompleteFlagFiresAtThreshold() {
+        let store = DataStore()
+        // No progress → flag false.
+        store.discoverProgress = []
+        XCTAssertFalse(store.allDiscoverChaptersComplete)
+
+        // One scene short of the threshold → still false.
+        store.discoverProgress = (0..<(DataStore.totalDiscoverScenes - 1)).map { i in
+            DiscoverProgress(chapterId: "ch_\(i)", sceneId: "s_\(i)", score: nil, maxScore: nil)
+        }
+        XCTAssertFalse(store.allDiscoverChaptersComplete,
+                       "Flag should not flip until we hit totalDiscoverScenes exactly.")
+
+        // At the threshold → true.
+        store.discoverProgress = (0..<DataStore.totalDiscoverScenes).map { i in
+            DiscoverProgress(chapterId: "ch_\(i)", sceneId: "s_\(i)", score: nil, maxScore: nil)
+        }
+        XCTAssertTrue(store.allDiscoverChaptersComplete,
+                      "Flag should flip the moment count reaches the threshold.")
+    }
+
     // MARK: - WCAG contrast (Option C of the audit closure)
     //
     // These tests pin the BrandColor accent values against the WCAG 2.1
