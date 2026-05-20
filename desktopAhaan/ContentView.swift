@@ -392,22 +392,14 @@ struct DailyPracticeView: View {
     @EnvironmentObject private var subjectRegistry: SubjectRegistry
     @EnvironmentObject private var appState: AppState
 
-    /// Flat lookup over the loaded packs. Built once per render so the
-    /// review-session sheet + the tough list both share the same source.
+    /// Flat lookup over the loaded packs. O(ids.count) lookups against
+    /// the precomputed SubjectRegistry.location(forQuestionId:) index —
+    /// previously O(packs × chapters × topics × questions) = ~4400
+    /// iterations per render across BOTH tough and due lists.
     private func collectQuestions(matching ids: Set<String>)
         -> [(pack: SubjectPack, chapter: Chapter, question: Question)] {
         guard !ids.isEmpty else { return [] }
-        var out: [(SubjectPack, Chapter, Question)] = []
-        for pack in subjectRegistry.packs {
-            for chapter in pack.chapters {
-                for topic in chapter.topics {
-                    for q in topic.questions where ids.contains(q.id) {
-                        out.append((pack, chapter, q))
-                    }
-                }
-            }
-        }
-        return out
+        return ids.compactMap { subjectRegistry.location(forQuestionId: $0) }
     }
 
     private var toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {

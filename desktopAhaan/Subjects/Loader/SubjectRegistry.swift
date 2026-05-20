@@ -27,7 +27,10 @@ private func debugLog(_ items: Any...) {
 final class SubjectRegistry: ObservableObject {
 
     @Published private(set) var packs: [SubjectPack] = [] {
-        didSet { _packsById = nil }
+        didSet {
+            _packsById = nil
+            _questionLocations = nil
+        }
     }
     @Published private(set) var loadErrors: [String] = []
 
@@ -37,6 +40,15 @@ final class SubjectRegistry: ObservableObject {
     /// every sidebar render, every dashboard. Tiny win at 2 packs but
     /// completes the index-cache pattern.
     private var _packsById: [String: SubjectPack]?
+
+    /// `question.id → (pack, chapter, question)` lookup, rebuilt on `packs`
+    /// change. Daily Practice (and any future view that resolves a set of
+    /// question ids to their pack/chapter location) was walking 2 × 19 × 3 ×
+    /// ~38 = ~4400 entries per render before this — once for tough, once
+    /// for due. After this cache: O(N) where N = the set size. Big win on
+    /// the launch-time DailyPracticeView render and on every dataStore
+    /// mutation that re-invalidates the body.
+    private var _questionLocations: [String: (pack: SubjectPack, chapter: Chapter, question: Question)]?
     /// True while the initial pack decode is running off-thread.
     /// UI can use this to render a placeholder instead of an empty sidebar.
     @Published private(set) var isLoading: Bool = true
@@ -160,6 +172,35 @@ final class SubjectRegistry: ObservableObject {
             _packsById = Dictionary(uniqueKeysWithValues: packs.map { ($0.id, $0) })
         }
         return _packsById?[id]
+    }
+
+    /// Returns the (pack, chapter, question) triple for a question id, or
+    /// nil if no pack contains it. O(1) after the first call per packs-
+    /// change. Built lazily so a transient empty-packs state at launch
+    /// doesn't populate a stale cache.
+    func location(forQuestionId id: String)
+        -> (pack: SubjectPack, chapter: Chapter, question: Question)? {
+        if _questionLocations == nil {
+            var built: [String: (SubjectPack, Chapter, Question)] = [:]
+            built.reserveCapacity(900)  // ~732 sci + 154 sa = 886 today
+            for pack in packs {
+                for chapter in pack.chapters {
+                    for topic in chapter.topics {
+                        for q in topic.questions {
+                            // First writer wins on collision. testNoCrossPack
+                            // CrossPackConceptIdCollision pins that this case
+                            // doesn't happen in practice but we don't crash
+                            // here if it ever does.
+                            if built[q.id] == nil {
+                                built[q.id] = (pack, chapter, q)
+                            }
+                        }
+                    }
+                }
+            }
+            _questionLocations = built
+        }
+        return _questionLocations?[id]
     }
 
     // MARK: - Bundle scanning
