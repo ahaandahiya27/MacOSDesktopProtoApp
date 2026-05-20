@@ -42,31 +42,39 @@ struct DiscoverChapter2View: View {
         )
     }
 
-    @ViewBuilder
-    private func sceneBody(_ index: Int) -> some View {
-        switch index {
-        case 0: Scene1_TheMouthLab(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
-        case 1: Scene2_TheSwallowWave(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2: Scene3_TheStomachBath(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3: Scene4_IntestineVillus(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-        case 4: Scene5_LiverPancreasBile(pack: pack, chapter: chapter, onComplete: { markComplete(4) })
-        case 5: Scene6_FourStomachsOfACow(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-        case 6: Scene7_AmoebaPseudopodHunt(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-        case 7: Scene8_TasteAndFlavour(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
-        case 8: ThreeJawsComparedScene(onComplete: { markComplete(8) })
-        case 9: TeethTypesSorterScene(onComplete: { markComplete(9) })
-        case 10: SalivaLabScene(onComplete: { markComplete(10) })
-        case 11: CardiacSphincterScene(onComplete: { markComplete(11) })
-        case 12: StomachPHSliderScene(onComplete: { markComplete(12) })
-        case 13: BileEmulsifiesFatScene(onComplete: { markComplete(13) })
-        case 14: VilliSurfaceAreaScene(onComplete: { markComplete(14) })
-        case 15: RuminationCycleScene(onComplete: { markComplete(15) })
-        case 16: CowGoatCamelScene(onComplete: { markComplete(16) })
-        case 17: FoodVacuoleFormationScene(onComplete: { markComplete(17) })
-        case 18: PseudopodCatchScene(onComplete: { score in markComplete(18, score: score, max: 5) })
-        case 19: Scene9_BossQuiz_Ch2(pack: pack, chapter: chapter, onComplete: { score in markComplete(19, score: score, max: 5) })
-        default: EmptyView()
+    /// Lookup-table dispatcher — see DiscoverChapter1View.swift for the
+    /// rationale. Big switch in @ViewBuilder + 20+ cases blew compile
+    /// time from ~5s to ~210s; AnyView lookup table fixes it.
+    private func sceneBody(_ index: Int) -> AnyView {
+        guard index >= 0 && index < sceneBuilders.count else {
+            return AnyView(EmptyView())
         }
+        return sceneBuilders[index]()
+    }
+
+    private var sceneBuilders: [() -> AnyView] {
+        [
+            { AnyView(Scene1_TheMouthLab(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(0) })) },
+            { AnyView(Scene2_TheSwallowWave(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(1) })) },
+            { AnyView(Scene3_TheStomachBath(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(2) })) },
+            { AnyView(Scene4_IntestineVillus(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(3) })) },
+            { AnyView(Scene5_LiverPancreasBile(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(4) })) },
+            { AnyView(Scene6_FourStomachsOfACow(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(5) })) },
+            { AnyView(Scene7_AmoebaPseudopodHunt(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(6) })) },
+            { AnyView(Scene8_TasteAndFlavour(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(7) })) },
+            { AnyView(ThreeJawsComparedScene(onComplete: { self.markComplete(8) })) },
+            { AnyView(TeethTypesSorterScene(onComplete: { self.markComplete(9) })) },
+            { AnyView(SalivaLabScene(onComplete: { self.markComplete(10) })) },
+            { AnyView(CardiacSphincterScene(onComplete: { self.markComplete(11) })) },
+            { AnyView(StomachPHSliderScene(onComplete: { self.markComplete(12) })) },
+            { AnyView(BileEmulsifiesFatScene(onComplete: { self.markComplete(13) })) },
+            { AnyView(VilliSurfaceAreaScene(onComplete: { self.markComplete(14) })) },
+            { AnyView(RuminationCycleScene(onComplete: { self.markComplete(15) })) },
+            { AnyView(CowGoatCamelScene(onComplete: { self.markComplete(16) })) },
+            { AnyView(FoodVacuoleFormationScene(onComplete: { self.markComplete(17) })) },
+            { AnyView(PseudopodCatchScene(onComplete: { score in self.markComplete(18, score: score, max: 5) })) },
+            { AnyView(Scene9_BossQuiz_Ch2(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+        ]
     }
 
     private func markComplete(_ index: Int, score: Int? = nil, max: Int? = nil) {

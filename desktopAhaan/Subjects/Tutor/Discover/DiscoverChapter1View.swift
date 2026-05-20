@@ -47,31 +47,44 @@ struct DiscoverChapter1View: View {
         )
     }
 
-    @ViewBuilder
-    private func sceneBody(_ index: Int) -> some View {
-        switch index {
-        case 0: Scene1_PlantKitchen(pack: pack, chapter: chapter, onComplete: { markComplete(0) })
-        case 1: Scene2_PhotosynthesisLab(pack: pack, chapter: chapter, onComplete: { markComplete(1) })
-        case 2: Scene3_InsideALeaf(pack: pack, chapter: chapter, onComplete: { markComplete(2) })
-        case 3: Scene4_ColorTheChlorophyll(pack: pack, chapter: chapter, onComplete: { markComplete(3) })
-        case 4: Scene5_AutotrophHeterotroph(pack: pack, chapter: chapter, onComplete: { score in markComplete(4, score: score, max: 12) })
-        case 5: Scene6_MeetTheSpecialPlants(pack: pack, chapter: chapter, onComplete: { markComplete(5) })
-        case 6: Scene7_PitcherPlantTrap(pack: pack, chapter: chapter, onComplete: { markComplete(6) })
-        case 7: Scene8_NitrogenCycle(pack: pack, chapter: chapter, onComplete: { markComplete(7) })
-        case 8: SymbiosisPartnershipsLabScene(onComplete: { markComplete(8) })
-        case 9: StomataOpenCloseScene(onComplete: { markComplete(9) })
-        case 10: LightAndRateScene(onComplete: { markComplete(10) })
-        case 11: WaterJourneyScene(onComplete: { markComplete(11) })
-        case 12: ParasitePartnerPredatorScene(onComplete: { score in markComplete(12, score: score, max: 3) })
-        case 13: VenusFlytrapReflexScene(onComplete: { score in markComplete(13, score: score, max: 5) })
-        case 14: SortTheFeedersScene(onComplete: { markComplete(14) })
-        case 15: SoilLayersLabScene(onComplete: { markComplete(15) })
-        case 16: RhizobiumNitrogenScene(onComplete: { markComplete(16) })
-        case 17: FoodChainBuilderScene(onComplete: { markComplete(17) })
-        case 18: CompostTimelineScene(onComplete: { markComplete(18) })
-        case 19: Scene9_BossQuiz(pack: pack, chapter: chapter, onComplete: { score in markComplete(19, score: score, max: 5) })
-        default: EmptyView()
+    /// Lookup-table dispatcher. The previous big switch over 20 cases
+    /// inside `@ViewBuilder` forced Swift to type-check 20-deep nested
+    /// `_ConditionalContent<…>` and pushed the Debug compile of this
+    /// file from ~5s to ~210s — risky for the Xcode 13.2.1 deploy
+    /// target. Returning AnyView via a closure array short-circuits the
+    /// type-inferencer and brings build time back to seconds. The tiny
+    /// AnyView type-erasure cost is irrelevant at the chapter-dispatch
+    /// level (one view per scene).
+    private func sceneBody(_ index: Int) -> AnyView {
+        guard index >= 0 && index < sceneBuilders.count else {
+            return AnyView(EmptyView())
         }
+        return sceneBuilders[index]()
+    }
+
+    private var sceneBuilders: [() -> AnyView] {
+        [
+            { AnyView(Scene1_PlantKitchen(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(0) })) },
+            { AnyView(Scene2_PhotosynthesisLab(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(1) })) },
+            { AnyView(Scene3_InsideALeaf(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(2) })) },
+            { AnyView(Scene4_ColorTheChlorophyll(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(3) })) },
+            { AnyView(Scene5_AutotrophHeterotroph(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(4, score: score, max: 12) })) },
+            { AnyView(Scene6_MeetTheSpecialPlants(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(5) })) },
+            { AnyView(Scene7_PitcherPlantTrap(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(6) })) },
+            { AnyView(Scene8_NitrogenCycle(pack: self.pack, chapter: self.chapter, onComplete: { self.markComplete(7) })) },
+            { AnyView(SymbiosisPartnershipsLabScene(onComplete: { self.markComplete(8) })) },
+            { AnyView(StomataOpenCloseScene(onComplete: { self.markComplete(9) })) },
+            { AnyView(LightAndRateScene(onComplete: { self.markComplete(10) })) },
+            { AnyView(WaterJourneyScene(onComplete: { self.markComplete(11) })) },
+            { AnyView(ParasitePartnerPredatorScene(onComplete: { score in self.markComplete(12, score: score, max: 3) })) },
+            { AnyView(VenusFlytrapReflexScene(onComplete: { score in self.markComplete(13, score: score, max: 5) })) },
+            { AnyView(SortTheFeedersScene(onComplete: { self.markComplete(14) })) },
+            { AnyView(SoilLayersLabScene(onComplete: { self.markComplete(15) })) },
+            { AnyView(RhizobiumNitrogenScene(onComplete: { self.markComplete(16) })) },
+            { AnyView(FoodChainBuilderScene(onComplete: { self.markComplete(17) })) },
+            { AnyView(CompostTimelineScene(onComplete: { self.markComplete(18) })) },
+            { AnyView(Scene9_BossQuiz(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+        ]
     }
 
     private func markComplete(_ index: Int, score: Int? = nil, max: Int? = nil) {
