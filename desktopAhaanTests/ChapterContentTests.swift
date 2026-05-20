@@ -804,6 +804,75 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertEqual(round.ease, r.ease, accuracy: 0.0001)
     }
 
+    // MARK: - Streak counter (Option C of the audit closure)
+    //
+    // creditReviewStreak() does yyyy-MM-dd date arithmetic against
+    // UserDefaults. The first user who travels through a timezone
+    // boundary or whose local clock rolls past midnight mid-session
+    // will hit any silent bugs in this math, so we pin the four
+    // canonical cases here.
+
+    private func clearStreakDefaults() {
+        UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakDays)
+        UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakLastDate)
+    }
+
+    @MainActor func testStreak_FirstEverReviewSetsToOne() {
+        clearStreakDefaults()
+        defer { clearStreakDefaults() }
+        let store = DataStore()
+        store.questionReviews.removeAll()
+        let now = Date()
+        store.recordReview(questionId: "q-streak-1", quality: .good, at: now)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1,
+                       "First-ever review should set streak to 1.")
+        XCTAssertNotNil(UserDefaults.standard.string(forKey: AppStorageKeys.reviewStreakLastDate))
+    }
+
+    @MainActor func testStreak_SameDayReviewIsIdempotent() {
+        clearStreakDefaults()
+        defer { clearStreakDefaults() }
+        let store = DataStore()
+        store.questionReviews.removeAll()
+        let now = Date()
+        store.recordReview(questionId: "q-streak-a", quality: .good, at: now)
+        store.recordReview(questionId: "q-streak-b", quality: .easy, at: now)
+        store.recordReview(questionId: "q-streak-c", quality: .hard, at: now)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1,
+                       "Multiple reviews on the same calendar day must not inflate the streak.")
+    }
+
+    @MainActor func testStreak_NextDayReviewIncrements() {
+        clearStreakDefaults()
+        defer { clearStreakDefaults() }
+        let store = DataStore()
+        store.questionReviews.removeAll()
+        let day1 = Date(timeIntervalSince1970: 1_700_000_000)  // 2023-11-14 22:13:20 UTC
+        let day2 = Calendar.current.date(byAdding: .day, value: 1, to: day1)!
+        store.recordReview(questionId: "q-streak-day1", quality: .good, at: day1)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1)
+        store.recordReview(questionId: "q-streak-day2", quality: .good, at: day2)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 2,
+                       "Review on the very next calendar day must increment by exactly 1.")
+    }
+
+    @MainActor func testStreak_MultiDayGapResetsToOne() {
+        clearStreakDefaults()
+        defer { clearStreakDefaults() }
+        let store = DataStore()
+        store.questionReviews.removeAll()
+        let day1 = Date(timeIntervalSince1970: 1_700_000_000)
+        let day5 = Calendar.current.date(byAdding: .day, value: 4, to: day1)!
+        store.recordReview(questionId: "q-streak-day1", quality: .good, at: day1)
+        store.recordReview(questionId: "q-streak-day1b", quality: .good,
+                            at: Calendar.current.date(byAdding: .day, value: 1, to: day1)!)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 2)
+        // Big gap — streak should reset to 1.
+        store.recordReview(questionId: "q-streak-day5", quality: .good, at: day5)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1,
+                       "A gap >1 day must reset the streak, not extend it.")
+    }
+
     @MainActor func testDataStore_DueCountReflectsScheduledItems() {
         let store = DataStore()
         // Wipe any leftover state from another test.
