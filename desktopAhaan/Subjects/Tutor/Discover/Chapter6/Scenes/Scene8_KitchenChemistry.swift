@@ -92,7 +92,7 @@ struct Scene8_KitchenChemistry: View {
                     if reacted.contains(exp.id) {
                         Text(exp.reaction)
                             .font(.title2.bold())
-                            .foregroundColor(.orange)
+                            .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                             .transition(.scale.combined(with: .opacity))
 
                         HStack(spacing: 6) {

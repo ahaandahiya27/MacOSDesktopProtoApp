@@ -89,7 +89,7 @@ private struct ConceptRow: View {
                     .lineLimit(2)
                 if concept.needsHumanReview {
                     Label("Needs review", systemImage: "exclamationmark.triangle.fill")
-                        .font(.caption).foregroundColor(.orange)
+                        .font(.caption).foregroundColor(DesignTokens.BrandColor.tryAtHome)
                 }
             }
         }
@@ -115,7 +115,7 @@ private struct QuestionRow: View {
                         .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
                     Text(String(repeating: "●", count: question.difficulty))
                         .font(.caption2)
-                        .foregroundColor(.orange)
+                        .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                 }
             }
         }

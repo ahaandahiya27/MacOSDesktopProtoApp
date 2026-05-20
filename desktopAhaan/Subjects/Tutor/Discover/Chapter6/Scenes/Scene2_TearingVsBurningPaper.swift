@@ -84,7 +84,7 @@ struct Scene2_TearingVsBurningPaper: View {
                         VStack(spacing: 12) {
                             Text("Burning Paper")
                                 .font(.headline)
-                                .foregroundColor(.orange)
+                                .foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 12)

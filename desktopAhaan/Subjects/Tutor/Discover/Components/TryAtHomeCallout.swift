@@ -23,7 +23,7 @@ struct TryAtHomeCallout: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundColor(.orange)
+                    .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                     .fixedSize(horizontal: false, vertical: true)
                 Text(detail)
                     .font(.callout)

@@ -133,7 +133,7 @@ private struct MirrorDiagram: View {
                 // Labels
                 Text("incident")
                     .font(.caption.bold())
-                    .foregroundColor(.orange)
+                    .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                     .position(x: CGFloat(inStartX) + 18, y: CGFloat(inStartY) + 10)
                 Text("reflected")
                     .font(.caption.bold())

@@ -65,7 +65,7 @@ struct Scene6_AdaptationMatchGame: View {
                             VStack(spacing: 10) {
                                 Text("Animals")
                                     .font(.headline)
-                                    .foregroundColor(.orange)
+                                    .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                                 ForEach(animalOrder) { pair in
                                     if matched.contains(pair.id) {
                                         matchedChip(pair.animal, color: .green)

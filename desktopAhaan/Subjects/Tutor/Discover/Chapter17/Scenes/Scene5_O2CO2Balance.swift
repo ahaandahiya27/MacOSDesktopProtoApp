@@ -29,7 +29,7 @@ struct Scene5_O2CO2Balance: View {
                         Text("\(o2)%").font(.headline.monospacedDigit())
                     }
                     VStack {
-                        Text("CO₂").font(.headline).foregroundColor(.orange)
+                        Text("CO₂").font(.headline).foregroundColor(DesignTokens.BrandColor.tryAtHome)
                         ProgressView(value: Double(co2) / 100)
                             .progressViewStyle(.linear).frame(width: 100, height: 12)
                             .accentColor(.orange)

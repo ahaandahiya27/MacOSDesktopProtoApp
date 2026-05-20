@@ -43,7 +43,7 @@ struct Scene8_TasteAndFlavour: View {
                     if nosePressed {
                         Text("Smell blocked!")
                             .font(.caption)
-                            .foregroundColor(.orange)
+                            .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                             .padding(.horizontal, 24)
                     }
                 }

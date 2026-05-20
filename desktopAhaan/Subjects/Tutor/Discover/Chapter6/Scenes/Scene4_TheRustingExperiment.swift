@@ -194,7 +194,7 @@ struct Scene4_TheRustingExperiment: View {
                 if !tube.hasWater && tube.hasAir {
                     Text("CaCl₂")
                         .font(.system(size: 9, weight: .bold))
-                        .foregroundColor(.orange)
+                        .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                         .padding(.bottom, 8)
                 }
             }

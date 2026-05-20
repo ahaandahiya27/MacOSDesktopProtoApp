@@ -61,7 +61,7 @@ struct Scene1_HotOrCold: View {
                                     if selectedIndex == idx {
                                         Text("\(obj.tempC)°C")
                                             .font(.caption2.bold())
-                                            .foregroundColor(.orange)
+                                            .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                                     }
                                 }
                                 .frame(width: 110, height: 100)

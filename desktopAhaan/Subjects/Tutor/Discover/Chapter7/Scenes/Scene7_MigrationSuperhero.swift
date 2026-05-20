@@ -257,7 +257,7 @@ private struct BirdMarker: View {
         let p = compute()
         return Text("V")
             .font(.title3.bold())
-            .foregroundColor(.orange)
+            .foregroundColor(DesignTokens.BrandColor.tryAtHome)
             .position(x: CGFloat(p.x), y: CGFloat(p.y))
     }
 

@@ -7,7 +7,7 @@ struct OfflineBanner: View {
             Text("You're offline. Some features need internet.")
                 .font(.caption)
         }
-        .foregroundColor(.orange)
+        .foregroundColor(DesignTokens.BrandColor.tryAtHome)
         .padding(10)
         .frame(maxWidth: .infinity)
         .background(Color.orange.opacity(0.1))

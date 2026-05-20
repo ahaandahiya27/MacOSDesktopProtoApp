@@ -70,7 +70,26 @@ if [ -n "$PACK_STAGED" ] && [ -f "scripts/check_pack_schema.py" ]; then
     fi
 fi
 
-# 5) WCAG contrast audit — runs only when the BrandColor source file or
+# 5a) Color-literal lint — flags Text widgets that use a system-primary
+#     foreground colour (.yellow/.orange/.teal) which fails WCAG AA on
+#     the canvas. Runs whenever a Swift file in desktopAhaan/ is staged.
+#     Hard gate — the migration to BrandColor.* is a one-shot fix per site.
+STAGED_DESKTOP_SWIFT=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^desktopAhaan/.*\.swift$' || true)
+if [ -n "$STAGED_DESKTOP_SWIFT" ] && [ -f "scripts/check_color_literals.py" ]; then
+    if ! python3 scripts/check_color_literals.py $STAGED_DESKTOP_SWIFT > /dev/null; then
+        # Re-run with output for the dev.
+        python3 scripts/check_color_literals.py $STAGED_DESKTOP_SWIFT
+        echo
+        echo "pre-commit: color-literal lint failed — a Text widget uses a system-primary fg colour."
+        echo "Fix: replace .foregroundColor(.yellow|.orange|.teal) with the matching"
+        echo "       DesignTokens.BrandColor.* deep hue."
+        echo "If intentional (e.g., proven icon-only context), bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
+# 5b) WCAG contrast audit — runs only when the BrandColor source file or
 #    the audit script itself is staged. The script is deterministic so
 #    a fast no-arg invocation gives us instant feedback when someone
 #    edits a colour without re-checking contrast. Hard gate.

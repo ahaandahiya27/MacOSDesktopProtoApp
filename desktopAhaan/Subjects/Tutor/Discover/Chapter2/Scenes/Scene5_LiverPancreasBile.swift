@@ -171,7 +171,7 @@ struct Scene5_LiverPancreasBile: View {
                 } else {
                     Text("Complete all organs first!")
                         .font(.caption)
-                        .foregroundColor(.orange)
+                        .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                         .padding(.bottom, 12)
                 }
             

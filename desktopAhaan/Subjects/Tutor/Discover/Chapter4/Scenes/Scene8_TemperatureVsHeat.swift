@@ -27,7 +27,7 @@ struct Scene8_TemperatureVsHeat: View {
                         // Glass A — small
                         VStack(spacing: 8) {
                             Text("Glass A").font(.headline)
-                            Text("50 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(.orange)
+                            Text("50 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 6)
@@ -56,7 +56,7 @@ struct Scene8_TemperatureVsHeat: View {
                         // Glass B — large
                         VStack(spacing: 8) {
                             Text("Glass B").font(.headline)
-                            Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(.orange)
+                            Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
                             ZStack {
                                 RoundedRectangle(cornerRadius: 8)

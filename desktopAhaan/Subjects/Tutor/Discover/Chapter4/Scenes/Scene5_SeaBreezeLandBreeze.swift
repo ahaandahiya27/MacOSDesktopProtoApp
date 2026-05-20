@@ -99,7 +99,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         } else {
                             Text("WARM")
                                 .font(.caption2.bold())
-                                .foregroundColor(.orange)
+                                .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                                 .offset(x: -80, y: 40)
                             Text("COOL")
                                 .font(.caption2.bold())

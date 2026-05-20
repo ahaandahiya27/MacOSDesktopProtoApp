@@ -106,7 +106,7 @@ struct Scene1_IceToWaterToSteam: View {
                             Spacer()
                             Text("0°C").font(.caption).foregroundColor(Color.compatCyan)
                             Spacer()
-                            Text("100°C").font(.caption).foregroundColor(.orange)
+                            Text("100°C").font(.caption).foregroundColor(DesignTokens.BrandColor.tryAtHome)
                             Spacer()
                             Text("120°C").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
