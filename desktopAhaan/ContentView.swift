@@ -435,6 +435,10 @@ private struct DailyPracticeContent: View {
 
     @State private var reviewSessionVisible = false
 
+    /// Persisted N-day review streak. Updated by DataStore.recordReview
+    /// each time a question is rated; idempotent within a calendar day.
+    @AppStorage(AppStorageKeys.reviewStreakDays) private var streakDays: Int = 0
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -480,6 +484,10 @@ private struct DailyPracticeContent: View {
                         .font(.subheadline.monospacedDigit())
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
+                Spacer(minLength: 0)
+                if streakDays > 0 {
+                    streakBadge
+                }
             }
         }
         .padding(16)
@@ -487,6 +495,30 @@ private struct DailyPracticeContent: View {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.orange.opacity(0.08))
         )
+    }
+
+    /// "🔥 N-day streak" chip on the right of the header. Only shows once
+    /// the kid has answered at least one question — a zero-streak chip
+    /// reads as nagging and we don't ship that vibe.
+    private var streakBadge: some View {
+        HStack(spacing: 6) {
+            Image(systemName: "flame.fill")
+                .foregroundColor(DesignTokens.BrandColor.tryAtHome)
+                .font(.callout)
+            Text("\(streakDays)-day streak")
+                .font(.callout.monospacedDigit().weight(.semibold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
+        .background(
+            Capsule().fill(Color.white)
+        )
+        .overlay(
+            Capsule().strokeBorder(DesignTokens.BrandColor.tryAtHome.opacity(0.35), lineWidth: 1)
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Current streak: \(streakDays) day\(streakDays == 1 ? "" : "s")")
     }
 
     private var headerSubtitle: String {
@@ -691,37 +723,51 @@ private struct ReviewSessionSheet: View {
     private func qualityButtons(
         for entry: (pack: SubjectPack, chapter: Chapter, question: Question)
     ) -> some View {
+        // ⌘1-⌘4 shortcuts on each button so a 20-card session takes a
+        // minute, not five. KeyEquivalent literals are macOS 10.15+ so
+        // Big Sur compatible.
         HStack(spacing: 10) {
-            qualityButton(label: "Forgot", color: .red, quality: .forgot, q: entry.question.id)
-            qualityButton(label: "Hard", color: .orange, quality: .hard, q: entry.question.id)
-            qualityButton(label: "Good", color: .compatIndigo, quality: .good, q: entry.question.id)
-            qualityButton(label: "Easy", color: .green, quality: .easy, q: entry.question.id)
+            qualityButton(label: "Forgot", color: .red, quality: .forgot,
+                          q: entry.question.id, shortcut: "1")
+            qualityButton(label: "Hard", color: .orange, quality: .hard,
+                          q: entry.question.id, shortcut: "2")
+            qualityButton(label: "Good", color: .compatIndigo, quality: .good,
+                          q: entry.question.id, shortcut: "3")
+            qualityButton(label: "Easy", color: .green, quality: .easy,
+                          q: entry.question.id, shortcut: "4")
         }
     }
 
     private func qualityButton(label: String, color: Color,
-                                quality: ReviewQuality, q: String) -> some View {
+                                quality: ReviewQuality, q: String,
+                                shortcut: KeyEquivalent) -> some View {
         Button {
             dataStore.recordReview(questionId: q, quality: quality)
             advance()
         } label: {
-            Text(label)
-                .font(.body.weight(.semibold))
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(color.opacity(0.15))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .strokeBorder(color.opacity(0.45), lineWidth: 1)
-                )
-                .foregroundColor(color)
+            VStack(spacing: 2) {
+                Text(label)
+                    .font(.body.weight(.semibold))
+                Text("⌘\(String(shortcut.character))")
+                    .font(.caption2.monospacedDigit())
+                    .foregroundColor(color.opacity(0.7))
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 8)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(color.opacity(0.15))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(color.opacity(0.45), lineWidth: 1)
+            )
+            .foregroundColor(color)
         }
         .buttonStyle(.plain)
         .pointingCursor()
-        .accessibilityLabel("Mark answer as \(label)")
+        .keyboardShortcut(shortcut, modifiers: .command)
+        .accessibilityLabel("Mark answer as \(label) (⌘\(String(shortcut.character)))")
     }
 
     private func advance() {

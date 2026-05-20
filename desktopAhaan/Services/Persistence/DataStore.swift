@@ -488,6 +488,7 @@ final class DataStore: ObservableObject {
 
     /// Record the kid's answer to a question, updating its scheduler
     /// state (or creating it on first contact). Persists immediately.
+    /// Also credits the streak — idempotent within a calendar day.
     func recordReview(questionId: String,
                       quality: ReviewQuality,
                       at now: Date = Date()) {
@@ -496,6 +497,40 @@ final class DataStore: ObservableObject {
         let updated = SM2Scheduler.schedule(prior, quality: quality, at: now)
         questionReviews[questionId] = updated
         save(Array(questionReviews.values), to: "reviews.json")
+        creditReviewStreak(at: now)
+    }
+
+    /// Streak rules — applied each time the kid records a review:
+    ///   - First-ever review: streak = 1, lastDate = today.
+    ///   - Same day as lastDate: no change (idempotent within the day).
+    ///   - Exactly one day after lastDate: streak += 1, lastDate = today.
+    ///   - More than one day gap: streak = 1, lastDate = today (reset).
+    private func creditReviewStreak(at now: Date) {
+        let defaults = UserDefaults.standard
+        let fmt = DateFormatter()
+        fmt.calendar = Calendar(identifier: .gregorian)
+        fmt.locale = Locale(identifier: "en_US_POSIX")
+        fmt.dateFormat = "yyyy-MM-dd"
+        let today = fmt.string(from: now)
+        let lastDate = defaults.string(forKey: AppStorageKeys.reviewStreakLastDate)
+        let current = defaults.integer(forKey: AppStorageKeys.reviewStreakDays)
+
+        guard lastDate != today else { return }   // already counted today
+
+        let calendar = Calendar(identifier: .gregorian)
+        let yesterday = calendar.date(byAdding: .day, value: -1, to: now)
+            .map { fmt.string(from: $0) }
+
+        let nextStreak: Int
+        if let last = lastDate, last == yesterday {
+            nextStreak = current + 1
+        } else {
+            // First ever (lastDate nil) or a multi-day gap — reset to 1.
+            nextStreak = 1
+        }
+
+        defaults.set(nextStreak, forKey: AppStorageKeys.reviewStreakDays)
+        defaults.set(today, forKey: AppStorageKeys.reviewStreakLastDate)
     }
 
     /// Questions that are due for review at or before `now`. Returns the

@@ -76,6 +76,17 @@ enum AppStorageKeys {
     static func discoverScene(_ chapterNumber: Int) -> String {
         String(format: "discover_scene_ch%02d", chapterNumber)
     }
+
+    /// Current consecutive-days review streak. Incremented when the kid
+    /// completes a review session and the previous credited day was
+    /// yesterday; reset to 1 if the gap is more than 1 day; left alone
+    /// if the streak already counts today. Stored as Int.
+    static let reviewStreakDays = "reviewStreakDays"
+
+    /// ISO-8601 date string (yyyy-MM-dd) of the last day the streak was
+    /// credited. Used to decide whether tonight's completion extends
+    /// (yesterday), keeps (today), or resets (>1 day gap) the streak.
+    static let reviewStreakLastDate = "reviewStreakLastDate"
 }
 
 // MARK: - SF Symbols backfill for Big Sur
