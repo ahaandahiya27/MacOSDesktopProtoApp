@@ -186,6 +186,19 @@ final class CrashReporter {
 
                 let ms = Int(elapsed * 1000)
                 logDataIssue("HANG: main thread blocked for ~\(ms) ms (threshold \(Int(hangThresholdSeconds * 1000))ms)")
+
+                // Capture a post-hang main-thread stack. The block runs as
+                // soon as the main thread unblocks, so the symbols are not
+                // the frames that WERE running during the hang — they're
+                // the frames immediately AFTER the hang resolves. In
+                // practice that's a useful breadcrumb anyway: the function
+                // that finally let main breathe is usually adjacent to the
+                // function that held it. DEBUG-only.
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    let frames = Thread.callStackSymbols.prefix(20).joined(separator: "\n  ")
+                    self.logDataIssue("HANG post-recovery main stack (top 20):\n  \(frames)")
+                }
             }
         } else if alreadyReporting {
             // Main woke up — clear the latch so we can log the next hang.
