@@ -192,6 +192,30 @@ final class ChapterContentTests: XCTestCase {
         }
     }
 
+    /// Strict ratchet for "Beyond the Book" enrichment articles. After
+    /// ch01_beyond + ch02_beyond were registered in the Xcode project
+    /// (commit 69fa396), the soft carve-out in the test above stopped
+    /// being needed for the live entries. This test pins them in by
+    /// requiring 100% of ArticleIndex entries whose id ends with
+    /// `_beyond` AND that are present in ArticleIndex to resolve to a
+    /// bundled HTML file. If a future Chapter N gets a `_beyond` entry
+    /// added but the HTML isn't bundled, this test fails immediately
+    /// instead of silently displaying nothing on the chapter card.
+    func testBeyondTheBookArticlesAreAllBundled() {
+        var missingBeyond: [String] = []
+        for (key, entry) in ArticleIndex.entries where key.hasSuffix("_beyond") {
+            let name = entry.filename.replacingOccurrences(of: ".html", with: "")
+            let url = Bundle.main.url(forResource: name, withExtension: "html",
+                                       subdirectory: entry.chapterFolder)
+                ?? Bundle.main.url(forResource: name, withExtension: "html")
+            if url == nil { missingBeyond.append(key) }
+        }
+        XCTAssertTrue(missingBeyond.isEmpty,
+                      "Beyond-the-Book article(s) not in bundle: \(missingBeyond.sorted().joined(separator: ", ")). " +
+                      "Use the xcode-tools MCP XcodeWrite tool (auto-adds to project), or drag-add via Xcode's " +
+                      "\"Add Files…\" dialog with the desktopAhaan target checked.")
+    }
+
     // MARK: - Content invariants (F7 / F8 / F9)
     //
     // These three tests cover the per-concept richness contract that

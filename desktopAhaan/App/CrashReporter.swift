@@ -148,7 +148,15 @@ final class CrashReporter {
     private var lastMainHeartbeat: Date = Date()
     private var hangCurrentlyReported: Bool = false
     private var hangsLoggedThisSession: Int = 0
-    private let hangThresholdSeconds: TimeInterval = 1.0
+    /// Raised from 1.0 → 1.5 s on 2026-05-21 after observing that
+    /// SwiftUI on Big Sur produces 1000–1400 ms main-thread blocks on
+    /// routine navigation transitions (entering a Discover scene,
+    /// opening an article browser window). At 1.0 s the signal was
+    /// noisy enough that the user couldn't tell threshold-edge layout
+    /// stalls from real misbehaviour. 1.5 s still flags genuine
+    /// pathology (e.g. the 1948 ms hang we hunted earlier today)
+    /// without lighting up on every navigation push.
+    private let hangThresholdSeconds: TimeInterval = 1.5
     private let hangCheckIntervalSeconds: TimeInterval = 0.25
     private let maxHangsPerSession: Int = 30
     #endif

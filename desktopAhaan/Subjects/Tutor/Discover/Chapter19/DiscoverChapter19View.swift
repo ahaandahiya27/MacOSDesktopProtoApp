@@ -40,8 +40,18 @@ struct DiscoverChapter19View: View {
             currentScene: $currentScene,
             scene: sceneBody
         )
+        // Defensive (2026-05-21): a stale @AppStorage value from before
+        // a scene-count change could point past sceneTitles.count - 1.
+        // sceneBody guards out-of-range by returning EmptyView, but a
+        // blank canvas reads as a crash to the kid. Force a valid index
+        // on every appearance.
+        .onAppear {
+            let maxIndex = sceneTitles.count - 1
+            if currentScene < 0 || currentScene > maxIndex {
+                currentScene = max(0, min(currentScene, maxIndex))
+            }
+        }
     }
-
     private func sceneBody(_ index: Int) -> AnyView {
         guard index >= 0 && index < sceneBuilders.count else { return AnyView(EmptyView()) }
         return sceneBuilders[index]()

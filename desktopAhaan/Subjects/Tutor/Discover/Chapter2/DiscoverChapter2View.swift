@@ -41,8 +41,18 @@ struct DiscoverChapter2View: View {
             currentScene: $currentScene,
             scene: sceneBody
         )
+        // Defensive (2026-05-21): a stale @AppStorage value from before
+        // a scene-count change could point past sceneTitles.count - 1.
+        // sceneBody guards out-of-range by returning EmptyView, but a
+        // blank canvas reads as a crash to the kid. Force a valid index
+        // on every appearance.
+        .onAppear {
+            let maxIndex = sceneTitles.count - 1
+            if currentScene < 0 || currentScene > maxIndex {
+                currentScene = max(0, min(currentScene, maxIndex))
+            }
+        }
     }
-
     /// Lookup-table dispatcher — see DiscoverChapter1View.swift for the
     /// rationale. Big switch in @ViewBuilder + 20+ cases blew compile
     /// time from ~5s to ~210s; AnyView lookup table fixes it.

@@ -49,7 +49,9 @@ struct ChapterDetailView: View {
                     Button {
                         nav.push(.discover(packId: pack.id, chapterId: chapter.id))
                     } label: {
-                        DiscoverEntryBanner()
+                        DiscoverEntryBanner(
+                            sceneCount: DataStore.discoverSceneCounts[chapter.number] ?? 9
+                        )
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
@@ -749,6 +751,13 @@ private struct HomeExperimentCard: View {
 }
 
 private struct DiscoverEntryBanner: View {
+    /// Live scene count for THIS chapter — was hard-coded "9 interactive
+    /// scenes" pre-2026-05-21, which lied to the kid once we expanded
+    /// every chapter to 20+. Reads through DataStore.discoverSceneCounts
+    /// keyed by chapter.number; defaults to 9 if not in the table (e.g.
+    /// content packs that never grew beyond the original 9).
+    let sceneCount: Int
+
     @State private var isHovered = false
 
     var body: some View {
@@ -759,7 +768,7 @@ private struct DiscoverEntryBanner: View {
                 Text("Try Discover Mode")
                     .font(.title3.bold())
                     .foregroundColor(.white)
-                Text("9 interactive scenes — animations, mini-games, and a final boss quiz.")
+                Text("\(sceneCount) interactive scenes — animations, mini-games, and a final boss quiz.")
                     .font(.callout)
                     .foregroundColor(.white.opacity(0.92))
             }

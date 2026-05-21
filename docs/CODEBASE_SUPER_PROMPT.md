@@ -214,9 +214,9 @@ data risk • 🟡 cosmetic / latent only • 🟢 cleanup / debt.
 
 | ID | Sev | Issue | Why | Mitigation today |
 |---|---|---|---|---|
-| A1 | 🟡 | Discover navigation transition was heavy (move-edge) → 1 s main-thread hangs | macOS 11 SwiftUI lays out outgoing + incoming subtrees together for move(edge:) | Replaced with .opacity in commit 3a2514b. Honours Reduce Motion. |
-| A2 | 🟡 | Stale `@AppStorage(discoverScene(N))` could index past array | Scene-count changes (20→21) leave old saved cursors briefly out of valid range | onAppear clamp in DiscoverChapter1View. **Other chapters still need the same clamp.** |
-| A3 | 🟡 | DiscoverEntryBanner hardcodes "9 interactive scenes" subtitle | Pre-dates expansion. Cosmetic only. | Could pass `sceneCount` in from chapter dispatcher. Not done. |
+| A1 | ✅ | Discover navigation transition was heavy (move-edge) → 1 s main-thread hangs | macOS 11 SwiftUI lays out outgoing + incoming subtrees together for move(edge:) | Replaced with .opacity in commit 3a2514b. Honours Reduce Motion. |
+| A2 | ✅ | Stale `@AppStorage(discoverScene(N))` could index past array | Scene-count changes (20→21) leave old saved cursors briefly out of valid range | onAppear clamp now applied to all 19 chapter dispatchers (Ch.1–19). |
+| A3 | ✅ | DiscoverEntryBanner hardcoded "9 interactive scenes" subtitle | Pre-dated the expansion. | Now reads `DataStore.discoverSceneCounts[chapter.number]` so it shows the live count per chapter. |
 | A4 | 🟢 | `DiscoverChapter1View.swift` is 1498 LOC | All 21 inline scenes in one file. Compile-time and readability cost. | Inline pattern is deliberate (pbxproj-free + AnyView lookup). Accept the LOC. |
 | A5 | 🟡 | Dynamic Type at xxxLarge not visually verified on any new inline scene | We never ran the app at AX5. Some Slider+Text rows may clip. | Defensive .minimumScaleFactor on tight labels would help. **Not done.** |
 
@@ -226,7 +226,7 @@ data risk • 🟡 cosmetic / latent only • 🟢 cleanup / debt.
 |---|---|---|---|
 | B1 | 🟡 | Two 1000–1900 ms launch HANGs in today's crashlog | One at app boot, one ~35 s in (Try Discover Mode tap). The render-loop hang IS now lighter post-3a2514b but still threshold-edge on Big Sur. |
 | B2 | 🟡 | No real EXCEPTION / SIGNAL entries — every "crash" today was a debugger-pause artifact at `_dyld_release` | Misread as crashes. The crashlog is the ground truth, not the Xcode debugger view. |
-| B3 | 🟢 | Hang threshold currently 1000 ms — borderline noisy on Big Sur during navigation | Could bump to 1500 ms with a comment. Trade-off: misses subtle hangs. Not done. |
+| B3 | ✅ | Hang threshold was 1000 ms — borderline noisy on Big Sur during navigation | Bumped to 1500 ms with a documented rationale. Trade-off: misses subtle layout stalls; accepts as the right cut for kid-facing signal. |
 
 ### C. Build / project / bundling
 
@@ -249,7 +249,7 @@ data risk • 🟡 cosmetic / latent only • 🟢 cleanup / debt.
 
 | ID | Sev | Issue | What test would catch it |
 |---|---|---|---|
-| E1 | 🟡 | `testAllArticleHTMLFilesExistInBundle` carve-out for `_beyond` entries means they could silently break | A separate enforce-strict test specifically for `_beyond` ids. Not done. |
+| E1 | ✅ | `testAllArticleHTMLFilesExistInBundle` carve-out for `_beyond` entries meant they could silently break | New `testBeyondTheBookArticlesAreAllBundled` requires 100% of `_beyond` entries to resolve in Bundle.main. |
 | E2 | 🟡 | No XCUIAutomation snapshot tests on Discover scenes | A scene that builds but renders blank passes today. |
 | E3 | 🟡 | No UI test exercises the new enrichment sheets (Try at Home, Notebook) | Would have caught the double-sheet bug. |
 | E4 | 🟢 | iMac (Big Sur 11.7.11 / Xcode 13.2.1) verification gap | None of today's 50+ commits has been run on the deploy iMac. Mitigations exist (lints, pre-push CI with deployment-target 11.0, AnyView dispatcher) but the real test is the actual run. |
