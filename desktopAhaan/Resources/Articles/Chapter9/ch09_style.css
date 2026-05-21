@@ -32,3 +32,35 @@ strong { color: #4a3415; }
   table { font-size: 14px; }
   th, td { padding: 8px 10px; }
 }
+
+/* ---- Dark mode (added 2026-05-21) ---- */
+/* Picks up automatically when the OS is in Dark Mode. WKWebView honours
+   `prefers-color-scheme` natively on macOS 11+. Overrides the same CSS
+   variables defined in :root above so the rest of the stylesheet adapts
+   without any other change. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #34d399;
+    --accent-soft: #064e3b;
+    --indigo: #818cf8;
+    --indigo-soft: #1e1b4b;
+    --grey: #9ca3af;
+    --grey-soft: #1f2937;
+    --bg: #0f1115;
+    --bg-soft: #1a1c22;
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+    --warn: #fb923c;
+    --warn-soft: #2a1a0a;
+    --kid: #6ee7b7;
+    --kid-soft: #052e22;
+    --rw: #93c5fd;
+    --rw-soft: #1e2a4a;
+    --tt: #c4b5fd;
+    --tt-soft: #2a1f4a;
+    --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 4px 18px rgba(0,0,0,0.25);
+  }
+  /* Code blocks + image borders need extra contrast in dark mode. */
+  pre, code { background: #1a1c22; border: 1px solid #2a2d33; }
+  img { opacity: 0.92; }
+}
