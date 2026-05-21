@@ -53,7 +53,7 @@ struct ExpandableCard<Content: View>: View {
                     .padding(.vertical, 12)
                     .padding(.horizontal, 16)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .transition(.opacity.combined(with: .move(edge: .top)))
+                    .transition(.opacity)  // Big Sur: combined-with-.move can render-loop
             }
         }
     }

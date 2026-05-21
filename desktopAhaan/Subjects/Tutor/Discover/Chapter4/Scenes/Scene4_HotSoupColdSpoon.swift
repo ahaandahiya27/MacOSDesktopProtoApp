@@ -90,7 +90,7 @@ struct Scene4_HotSoupColdSpoon: View {
                                 .font(.title.bold())
                                 .foregroundColor(.red)
                                 .offset(x: 80, y: -160)
-                                .transition(.scale.combined(with: .opacity))
+                                .transition(.opacity)  // Big Sur: combined transitions can render-loop
                         }
 
                         // Wooden spoon blocks heat

@@ -201,7 +201,7 @@ struct ToothCallout: View {
                 Spacer()
             }
         }
-        .transition(.scale.combined(with: .opacity))
+        .transition(.opacity)  // Big Sur: combined transitions can render-loop
     }
 }
 

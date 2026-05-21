@@ -130,7 +130,7 @@ struct Scene8_NitrogenCycle: View {
                     }
                 }
                 .frame(maxWidth: 560)
-                .transition(.opacity.combined(with: .move(edge: .bottom)))
+                .transition(.opacity)  // Big Sur: combined-with-.move can render-loop
             }
 
             LookingAheadCallout(

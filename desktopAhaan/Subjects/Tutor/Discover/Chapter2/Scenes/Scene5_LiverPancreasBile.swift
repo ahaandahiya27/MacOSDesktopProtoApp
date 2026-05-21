@@ -167,7 +167,7 @@ struct Scene5_LiverPancreasBile: View {
                 if allTapped {
                     GotItButton { onComplete() }
                         .padding(.bottom, 12)
-                        .transition(.scale.combined(with: .opacity))
+                        .transition(.opacity)  // Big Sur: combined transitions can render-loop
                 } else {
                     Text("Complete all organs first!")
                         .font(.caption)

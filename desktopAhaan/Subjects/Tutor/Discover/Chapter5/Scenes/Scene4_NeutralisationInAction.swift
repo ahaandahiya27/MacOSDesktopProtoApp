@@ -98,7 +98,7 @@ struct Scene4_NeutralisationInAction: View {
                             }
                         }
                         .frame(maxWidth: 500)
-                        .transition(.opacity.combined(with: .scale(scale: 0.9)))
+                        .transition(.opacity)  // Big Sur: combined transitions can render-loop
                     }
                 }
                 .frame(maxWidth: .infinity)

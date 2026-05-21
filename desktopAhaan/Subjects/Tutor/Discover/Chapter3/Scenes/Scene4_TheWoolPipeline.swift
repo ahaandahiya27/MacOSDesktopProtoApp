@@ -97,7 +97,7 @@ struct Scene4_TheWoolPipeline: View {
                     }
                     .frame(maxWidth: 600)
                     .padding(.horizontal, 24)
-                    .transition(.opacity.combined(with: .scale))
+                    .transition(.opacity)  // Big Sur: combined transitions can render-loop
                 }
 
                 LookingAheadCallout(

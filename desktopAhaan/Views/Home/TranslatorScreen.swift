@@ -66,7 +66,7 @@ struct TranslatorScreen: View {
                             color: .orange,
                             onDismiss: { vm.speechManager.clearError() }
                         )
-                        .transition(.move(edge: .top).combined(with: .opacity))
+                        .transition(.opacity)  // Big Sur: combined-with-.move can render-loop
                     }
 
                     if let result = vm.result, vm.showResult {

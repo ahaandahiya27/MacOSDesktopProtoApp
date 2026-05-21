@@ -91,7 +91,7 @@ struct Scene7_PitcherPlantTrap: View {
                 Label("Nitrogen absorbed: +1 🌱", systemImage: SFSymbolCompat.name("leaf.arrow.circlepath"))
                     .font(.headline)
                     .foregroundColor(.green)
-                    .transition(.opacity.combined(with: .scale))
+                    .transition(.opacity)  // Big Sur: combined-with-.scale can render-loop
             }
 
             HStack(spacing: 12) {

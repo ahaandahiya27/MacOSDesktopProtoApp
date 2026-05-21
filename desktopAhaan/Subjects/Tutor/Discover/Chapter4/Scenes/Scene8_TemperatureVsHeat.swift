@@ -85,7 +85,7 @@ struct Scene8_TemperatureVsHeat: View {
                             bathtubView(label: "Tub A", color: tubColorA, tempLabel: "~21°C")
                             bathtubView(label: "Tub B", color: tubColorB, tempLabel: "~28°C")
                         }
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                        .transition(.opacity)  // Big Sur: combined transitions can render-loop
                     }
 
                     if !poured {

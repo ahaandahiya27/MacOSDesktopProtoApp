@@ -241,6 +241,6 @@ struct ChamberCallout: View {
                 .lineSpacing(3)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .transition(.scale.combined(with: .opacity))
+        .transition(.opacity)  // Big Sur: combined transitions can render-loop
     }
 }

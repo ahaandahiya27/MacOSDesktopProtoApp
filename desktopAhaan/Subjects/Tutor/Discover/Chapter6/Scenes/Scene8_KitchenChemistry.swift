@@ -93,7 +93,7 @@ struct Scene8_KitchenChemistry: View {
                         Text(exp.reaction)
                             .font(.title2.bold())
                             .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                            .transition(.scale.combined(with: .opacity))
+                            .transition(.opacity)  // Big Sur: combined transitions can render-loop
 
                         HStack(spacing: 6) {
                             Image(systemName: SFSymbolCompat.name("flask.fill"))

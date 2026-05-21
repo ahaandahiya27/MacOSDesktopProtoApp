@@ -32,6 +32,18 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
     (re.compile(r"\.animation\s*\(.*\bvalue\s*:"),
      ".animation(_:value:)",
      "macOS 12.0+ — use .animation(_:) without value: on Big Sur; or wrap state changes in withAnimation."),
+    # Combined transitions involving .scale or .move on Big Sur AMD R9
+    # M290X are a documented render-loop trigger. They occasionally
+    # crash with the same Entangling-fence → EXC_BAD_ACCESS signature
+    # as the animation-value bug, especially when the transition is
+    # applied to a view that re-positions during the animation. Lighten
+    # to plain `.opacity` — the visual loss is barely perceptible.
+    # Found 10 such sites during the 2026-05-22 deep audit (Scene7_
+    # PitcherPlantTrap, Scene8_NitrogenCycle, plus 8 across Ch.2/3/4/5/6).
+    (re.compile(r"\.transition\(\.[a-zA-Z]+(?:\([^)]*\))?\.combined\(with:\s*\.[a-zA-Z]+"),
+     ".transition(...combined(with: ...))",
+     "Big Sur AMD R9 M290X — combined transitions involving .scale/.move can " +
+     "render-loop. Use plain `.transition(.opacity)` instead."),
     (re.compile(r"\.foregroundStyle\s*\("),
      ".foregroundStyle(...)",
      "macOS 12.0+ — use .foregroundColor(_:) on Big Sur."),
