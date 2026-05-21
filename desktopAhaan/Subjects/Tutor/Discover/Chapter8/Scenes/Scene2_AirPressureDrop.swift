@@ -28,7 +28,7 @@ struct Scene2_AirPressureDrop: View {
                         paper
                         paper
                     }
-                    .animation(reduceMotion ? .none : .easeInOut(duration: 0.5), value: blowing)
+                    .animation(reduceMotion ? .none : .easeInOut(duration: 0.5))
                 }
 
                 Button { } label: {

@@ -23,7 +23,7 @@ struct Scene6_XylemWaterClimb: View {
                         .frame(width: 38, height: 240)
                     RoundedRectangle(cornerRadius: 4).fill(Color.red.opacity(0.7))
                         .frame(width: 28, height: rise)
-                        .animation(reduceMotion ? .none : .easeInOut(duration: 2.4), value: rise)
+                        .animation(reduceMotion ? .none : .easeInOut(duration: 2.4))
                 }
                 .padding(.bottom, 6)
 

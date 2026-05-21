@@ -23,7 +23,7 @@ struct Scene1_InhaleExhale: View {
                         .frame(width: 280, height: 320)
                     VStack(spacing: 8) {
                         Text("🫁").font(.system(size: inhaling ? 120 : 70))
-                            .animation(reduceMotion ? .none : .easeInOut(duration: 0.7), value: inhaling)
+                            .animation(reduceMotion ? .none : .easeInOut(duration: 0.7))
                             .accessibilityLabel(inhaling ? "Lungs expanded, breathing in" : "Lungs relaxed, breathing out")
                         Text(inhaling ? "Lungs expand — air rushes IN" : "Lungs shrink — air pushes OUT")
                             .font(.callout)

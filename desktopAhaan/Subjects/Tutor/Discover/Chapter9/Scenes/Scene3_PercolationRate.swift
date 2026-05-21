@@ -49,7 +49,7 @@ struct Scene3_PercolationRate: View {
                         .frame(width: 200, height: 260)
                     Rectangle().fill(soil.color.opacity(0.55))
                         .frame(width: 200, height: fillFraction * 260)
-                        .animation(reduceMotion ? .none : .easeInOut(duration: animationDuration), value: fillFraction)
+                        .animation(reduceMotion ? .none : .easeInOut(duration: animationDuration))
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 

@@ -24,7 +24,7 @@ struct Scene4_LimeWaterTest: View {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(milky ? Color.white.opacity(0.95) : Color.compatCyan.opacity(0.25))
                         .frame(width: 136, height: 180)
-                        .animation(reduceMotion ? .none : .easeInOut(duration: 1.4), value: milky)
+                        .animation(reduceMotion ? .none : .easeInOut(duration: 1.4))
                 }
 
                 Button(milky ? "Reset" : "Blow into the tube") { milky.toggle() }

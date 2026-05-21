@@ -34,7 +34,7 @@ struct Scene3_FoodWebBuilder: View {
                         Text("🦅").font(.system(size: 38)).opacity(arrows.contains("🦊→🦅") ? 1.0 : 0.25)
                     }
                 }
-                .animation(.easeInOut(duration: 0.3), value: arrows)
+                .animation(.easeInOut(duration: 0.3))
 
                 VStack(spacing: 6) {
                     ForEach(edges, id: \.self) { e in

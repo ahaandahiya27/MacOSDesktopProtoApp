@@ -222,7 +222,7 @@ private struct CoconutWaterDispersalScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("🥥").font(.system(size: 100))
                 .offset(x: floating ? 80 : -80)
-                .animation(.linear(duration: 4).repeatForever(autoreverses: true), value: floating)
+                .animation(.linear(duration: 4).repeatForever(autoreverses: true))
             Button { floating.toggle() } label: {
                 Text(floating ? "Stop drift" : "Set adrift").font(.body.weight(.semibold))
                     .padding(.horizontal, 18).padding(.vertical, 9)
