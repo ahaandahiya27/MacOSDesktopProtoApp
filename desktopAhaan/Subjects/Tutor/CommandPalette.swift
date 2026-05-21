@@ -165,7 +165,12 @@ struct CommandPalette: View {
         ScrollViewReader { proxy in
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 0) {
-                    ForEach(Array(results.enumerated()), id: \.element.id) { idx, entry in
+                    // Swift 5.5 / Big Sur SwiftUI mis-handles tuple-keypath
+                    // ForEach even with `\.element.id` — the tuple identity
+                    // can flicker during scroll, occasionally landing in
+                    // objc_release. Use .indices + subscript instead.
+                    ForEach(results.indices, id: \.self) { idx in
+                        let entry = results[idx]
                         row(for: entry, isSelected: idx == selectedIndex)
                             .id(idx)
                             .onTapGesture { open(entry) }

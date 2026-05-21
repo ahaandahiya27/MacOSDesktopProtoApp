@@ -34,7 +34,10 @@ struct Scene1_FastOrSlow: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 VStack(spacing: 8) {
-                    ForEach(Array(current.enumerated()), id: \.element.id) { i, v in
+                    // .indices + subscript over Array(enumerated()) — Big Sur
+                    // SwiftUI mis-diffs tuple identity during swap animations.
+                    ForEach(current.indices, id: \.self) { i in
+                        let v = current[i]
                         HStack {
                             Text("\(i + 1).").font(.headline).frame(width: 30)
                             Text(v.name).font(.headline)

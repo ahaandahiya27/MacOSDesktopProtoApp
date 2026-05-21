@@ -130,6 +130,16 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
      "ForEach with tuple-keypath id: \\.offset",
      "Swift 5.5 / Big Sur SwiftUI fragility — unstable view identity. " +
      "Use ForEach(x.indices, id: \\.self) { i in let item = x[i]; ... }."),
+    # Same fragility class but with `\.element.id` instead of `\.offset`.
+    # On Swift 5.5 the tuple identity still flickers during scroll/swap
+    # because the (offset, element) tuple is rebuilt every render. Found
+    # in CommandPalette + Scene1_FastOrSlow during the 2026-05-21 audit;
+    # both converted to ForEach(x.indices, id: \.self) + subscript.
+    (re.compile(r"ForEach\(Array\([^)]*\.enumerated\(\)\)[^)]*id:\s*\\\.element"),
+     "ForEach with tuple-keypath id: \\.element.<...>",
+     "Swift 5.5 / Big Sur SwiftUI fragility — even with `\\.element.id` the " +
+     "tuple wrapper rebuilds on render. Use ForEach(x.indices, id: \\.self) " +
+     "{ i in let item = x[i]; ... }."),
 ]
 
 
