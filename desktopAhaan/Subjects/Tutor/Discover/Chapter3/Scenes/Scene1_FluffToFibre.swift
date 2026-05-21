@@ -36,6 +36,12 @@ struct Scene1_FluffToFibre: View {
         // wrapper at the top.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
+                // 2026-05-22 fix: same layout-recursion class as Scene1
+                // (Plant Kitchen). GeometryReader inside LazyVStack inside
+                // ScrollView with only height constrained → Big Sur
+                // _NSDetectedLayoutRecursion. Capping max-width forces a
+                // determinate proposal to GeometryReader, matching the
+                // safe pattern used by Scene8_NitrogenCycle.
                 GeometryReader { geo in
                     ZStack(alignment: .topLeading) {
                         // Drifting icons
@@ -53,6 +59,7 @@ struct Scene1_FluffToFibre: View {
                         fabricPanel(geoSize: geo.size)
                     }
                 }
+                .frame(maxWidth: 600)
                 .frame(height: 280)
 
                 // Caption + button

@@ -258,6 +258,66 @@ final class ChapterContentTests: XCTestCase {
                       "Every inline <svg> must contain a <title> element so VoiceOver reads it aloud.")
     }
 
+    /// Big Sur layout-recursion ratchet. Caused EXC_BAD_ACCESS at
+    /// objc_release on Try Discover Mode (Ch.1, 2026-05-22). Pattern:
+    /// `GeometryReader` inside `ScrollView` / `LazyVStack` whose own
+    /// modifier chain pins only height, leaving width unbounded. On
+    /// Big Sur, SwiftUI iterates layout to converge → AppKit fires
+    /// `_NSDetectedLayoutRecursion` → render-loop crash.
+    ///
+    /// This test scans every Discover scene file for the unsafe shape
+    /// (a GeometryReader followed within ~20 lines by `.frame(height:`
+    /// with no `.frame(width:` / `.frame(maxWidth:` in the same window)
+    /// and fails if any new ones appear.
+    func testNoUnboundedGeometryReaderInScrollingContainer() {
+        let repoRoot = URL(fileURLWithPath: #file)
+            .deletingLastPathComponent() // desktopAhaanTests/
+            .deletingLastPathComponent() // repo root
+        let discoverDir = repoRoot
+            .appendingPathComponent("desktopAhaan/Subjects/Tutor/Discover", isDirectory: true)
+        let fm = FileManager.default
+        guard let enumerator = fm.enumerator(at: discoverDir,
+                                             includingPropertiesForKeys: nil) else {
+            XCTFail("Could not enumerate Discover dir at \(discoverDir.path)")
+            return
+        }
+        var offenders: [String] = []
+        for case let url as URL in enumerator where url.pathExtension == "swift" {
+            guard let text = try? String(contentsOf: url) else { continue }
+            let lines = text.split(separator: "\n", omittingEmptySubsequences: false)
+                .map(String.init)
+            // Was there a ScrollView earlier in the file?
+            var sawScrollView = false
+            for (idx, line) in lines.enumerated() {
+                if line.contains("ScrollView") && !line.contains("GeometryReader") {
+                    sawScrollView = true
+                    continue
+                }
+                guard sawScrollView,
+                      line.contains("GeometryReader"),
+                      !line.trimmingCharacters(in: .whitespaces).hasPrefix("//")
+                else { continue }
+                // Look at the next 20 lines for the modifier chain.
+                let upper = min(lines.count, idx + 20)
+                let window = lines[idx..<upper].joined(separator: " ")
+                let hasHeightFrame = window.range(of: #"\.frame\([^)]*\bheight:"#,
+                                                  options: .regularExpression) != nil
+                let hasWidthFrame = window.range(of: #"\.frame\([^)]*(width:|maxWidth:)"#,
+                                                  options: .regularExpression) != nil
+                if hasHeightFrame && !hasWidthFrame {
+                    let rel = url.path.replacingOccurrences(of: repoRoot.path + "/", with: "")
+                    offenders.append("\(rel):\(idx + 1)")
+                    break
+                }
+            }
+        }
+        XCTAssertTrue(offenders.isEmpty,
+                      "Unbounded-width GeometryReader inside ScrollView/LazyVStack " +
+                      "found (Big Sur layout-recursion risk → EXC_BAD_ACCESS). Cap the " +
+                      "parent with .frame(maxWidth:) or use a fixed canvas: " +
+                      "\(offenders.sorted().joined(separator: "; "))")
+    }
+
     // MARK: - Content invariants (F7 / F8 / F9)
     //
     // These three tests cover the per-concept richness contract that
