@@ -222,6 +222,37 @@ enum ArticleIndex {
             estimatedMinutes: 12
         ),
 
+        // "Ways of Learning" — alternative content surfaces for Ch.1.
+        // Linked from a hub block at the bottom of ch01_beyond.html.
+        "ch01_scientists": ArticleEntry(
+            id: "ch01_scientists",
+            filename: "ch01_scientists.html",
+            title: "Famous Plant Scientists — A 400-Year Timeline",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 8
+        ),
+        "ch01_storymode": ArticleEntry(
+            id: "ch01_storymode",
+            filename: "ch01_storymode.html",
+            title: "A Day in the Life of a Leaf",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 7
+        ),
+        "ch01_whatif": ArticleEntry(
+            id: "ch01_whatif",
+            filename: "ch01_whatif.html",
+            title: "What If? — Five Plant Thought Experiments",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 8
+        ),
+        "ch01_glossary": ArticleEntry(
+            id: "ch01_glossary",
+            filename: "ch01_glossary.html",
+            title: "Kid's Plant Biology Dictionary (English · Hindi · Sanskrit)",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
+
         // ================================================================
         // CHAPTER 2 — Nutrition in Animals
         // ================================================================

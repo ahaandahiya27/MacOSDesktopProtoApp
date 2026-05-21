@@ -36,6 +36,10 @@
 		04C77ECE2FB9BFE30025F850 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */; };
 		04CD70ED2FBEC33700D71B32 /* ch01_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */; };
 		04CD70EF2FBEC36600D71B32 /* ch02_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70EE2FBEC36600D71B32 /* ch02_beyond.html */; };
+		04CD70F12FBF54E700D71B32 /* ch01_scientists.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70F02FBF54E700D71B32 /* ch01_scientists.html */; };
+		04CD70F32FBF550D00D71B32 /* ch01_storymode.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70F22FBF550D00D71B32 /* ch01_storymode.html */; };
+		04CD70F52FBF553400D71B32 /* ch01_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70F42FBF553400D71B32 /* ch01_whatif.html */; };
+		04CD70F72FBF556B00D71B32 /* ch01_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70F62FBF556B00D71B32 /* ch01_glossary.html */; };
 		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
 		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
 		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
@@ -644,6 +648,10 @@
 		04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReporter.swift; sourceTree = "<group>"; };
 		04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_beyond.html; sourceTree = "<group>"; };
 		04CD70EE2FBEC36600D71B32 /* ch02_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch02_beyond.html; sourceTree = "<group>"; };
+		04CD70F02FBF54E700D71B32 /* ch01_scientists.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_scientists.html; sourceTree = "<group>"; };
+		04CD70F22FBF550D00D71B32 /* ch01_storymode.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_storymode.html; sourceTree = "<group>"; };
+		04CD70F42FBF553400D71B32 /* ch01_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_whatif.html; sourceTree = "<group>"; };
+		04CD70F62FBF556B00D71B32 /* ch01_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_glossary.html; sourceTree = "<group>"; };
 		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
 		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
 		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
@@ -2210,6 +2218,10 @@
 				24764EC046AE23AEED800653 /* ch01_t03_c04.html */,
 				F0BDDF7A6A5E212A747845AA /* ch01_t03_overview.html */,
 				04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */,
+				04CD70F02FBF54E700D71B32 /* ch01_scientists.html */,
+				04CD70F22FBF550D00D71B32 /* ch01_storymode.html */,
+				04CD70F42FBF553400D71B32 /* ch01_whatif.html */,
+				04CD70F62FBF556B00D71B32 /* ch01_glossary.html */,
 			);
 			path = Chapter1;
 			sourceTree = "<group>";
@@ -2663,6 +2675,7 @@
 				AE5D62F43E9BED4532C7BDB7 /* ch12_t01_c02.html in Resources */,
 				76E5E27A25170EED563B5423 /* ch13_t01_c02.html in Resources */,
 				70C115B09A95B0F62B617420 /* ch16_t01_c02.html in Resources */,
+				04CD70F12FBF54E700D71B32 /* ch01_scientists.html in Resources */,
 				8D0B8AE3A097B6492C665818 /* ch17_t01_c02.html in Resources */,
 				793B094DFECF2AD469D24EDC /* ch18_t01_c02.html in Resources */,
 				F574B8FCB4243F1AA542D5BD /* ch08_t02_c01.html in Resources */,
@@ -2735,6 +2748,7 @@
 				04F59E062FB94EF900568BDE /* ch11_style.css in Resources */,
 				04F59E432FB9662B00568BDE /* ch15_t02_c03.html in Resources */,
 				02FF903720E65789B25CE7B1 /* ch01_t01_c06.html in Resources */,
+				04CD70F32FBF550D00D71B32 /* ch01_storymode.html in Resources */,
 				ED4C85FD348C854BAA290065 /* ch01_t01_c07.html in Resources */,
 				37212E609910F63EC3FD7B76 /* ch01_t01_c08.html in Resources */,
 				A1FDED2DD7D7821FF9810039 /* ch01_t01_c09.html in Resources */,
@@ -2827,6 +2841,7 @@
 				EF9293E33AA9550FFFF042CB /* ch05_style.css in Resources */,
 				E236CEBCC07DE47AF7FE3A6F /* ch05_t01_c01.html in Resources */,
 				4344F1460009568D22C3BB2D /* ch05_t01_c02.html in Resources */,
+				04CD70F52FBF553400D71B32 /* ch01_whatif.html in Resources */,
 				45B34F38D097CC87A14CFB67 /* ch05_t01_c03.html in Resources */,
 				78B82015704454E6E4BC2C60 /* ch05_t01_c04.html in Resources */,
 				04F59E292FB94F0400568BDE /* ch18_style.css in Resources */,
@@ -2922,6 +2937,7 @@
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */,
 				04F59E3F2FB9662A00568BDE /* ch15_t02_c01.html in Resources */,
+				04CD70F72FBF556B00D71B32 /* ch01_glossary.html in Resources */,
 				4D5743C43A54C95790C93C5E /* science_class7.json in Resources */,
 				A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */,
 				60E2234E45CD6FD67CD0426F /* ch08_t02_c02.html in Resources */,
