@@ -11,9 +11,9 @@ struct Scene9_BossQuiz_Ch5: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -52,7 +52,37 @@ struct Scene9_BossQuiz_Ch5: View {
             options: ["Oxygen", "Nitrogen", "Sulphur dioxide", "Carbon monoxide"],
             answer: "Sulphur dioxide",
             explanation: "Sulphur dioxide (SO\u{2082}) from burning fossil fuels dissolves in rain water to form sulphuric acid, causing acid rain."
-        )
+        ),
+            Ch5QuizItem(
+                prompt: "Litmus paper turns which colour in an acid?",
+                options: ["Blue", "Red", "Green", "Yellow"],
+                answer: "Red",
+                explanation: "Blue litmus → red in acid. Red litmus → blue in base. Remember: 'blue in base.'"
+            ),
+            Ch5QuizItem(
+                prompt: "Common table salt has the formula:",
+                options: ["NaOH", "HCl", "NaCl", "CaCO3"],
+                answer: "NaCl",
+                explanation: "Sodium chloride is formed by neutralisation of NaOH (base) and HCl (acid)."
+            ),
+            Ch5QuizItem(
+                prompt: "Antacid tablets work because they:",
+                options: ["Add more acid to the stomach", "Are basic and neutralise extra stomach acid", "Are sugars", "Coat the tongue"],
+                answer: "Are basic and neutralise extra stomach acid",
+                explanation: "Magnesium hydroxide or similar bases react with the excess HCl and relieve the burn."
+            ),
+            Ch5QuizItem(
+                prompt: "Curd tastes sour because it contains:",
+                options: ["Citric acid", "Lactic acid", "Sulphuric acid", "Hydrochloric acid"],
+                answer: "Lactic acid",
+                explanation: "Bacteria turn the sugar in milk (lactose) into lactic acid — that's the sour taste of curd."
+            ),
+            Ch5QuizItem(
+                prompt: "Vinegar gets its sourness from:",
+                options: ["Citric acid", "Acetic acid", "Tartaric acid", "Phosphoric acid"],
+                answer: "Acetic acid",
+                explanation: "Vinegar is about 5% acetic acid in water — strong enough to cook with, mild enough to drink in food."
+            ),
     ]
 
     var body: some View {
@@ -68,7 +98,7 @@ struct Scene9_BossQuiz_Ch5: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -96,7 +126,7 @@ struct Scene9_BossQuiz_Ch5: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 5")
+        Text("Question \(currentQ + 1) of 10")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -135,7 +165,7 @@ struct Scene9_BossQuiz_Ch5: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 4 ? "Next question" : "See my score") {
+            Button(currentQ < 9 ? "Next question" : "See my score") {
                 advance()
             }
             .accentColor(Color.compatIndigo)
@@ -175,7 +205,7 @@ struct Scene9_BossQuiz_Ch5: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -192,7 +222,7 @@ struct Scene9_BossQuiz_Ch5: View {
             Text("You finished Chapter 5 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -225,7 +255,7 @@ struct Scene9_BossQuiz_Ch5: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

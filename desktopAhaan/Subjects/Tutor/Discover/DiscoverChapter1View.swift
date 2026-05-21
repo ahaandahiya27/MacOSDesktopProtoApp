@@ -83,7 +83,7 @@ struct DiscoverChapter1View: View {
             { AnyView(RhizobiumNitrogenScene(onComplete: { self.markComplete(16) })) },
             { AnyView(FoodChainBuilderScene(onComplete: { self.markComplete(17) })) },
             { AnyView(CompostTimelineScene(onComplete: { self.markComplete(18) })) },
-            { AnyView(Scene9_BossQuiz(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

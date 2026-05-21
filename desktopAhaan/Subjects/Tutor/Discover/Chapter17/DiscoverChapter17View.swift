@@ -68,7 +68,7 @@ struct DiscoverChapter17View: View {
             { AnyView(SustainableLoggingScene(onComplete: { self.markComplete(16) })) },
             { AnyView(ChipkoMovementScene(onComplete: { self.markComplete(17) })) },
             { AnyView(ForestQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
-            { AnyView(Scene9_BossQuiz_Ch17(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch17(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

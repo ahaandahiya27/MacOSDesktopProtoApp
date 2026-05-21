@@ -11,9 +11,9 @@ struct Scene9_BossQuiz_Ch3: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -51,7 +51,37 @@ struct Scene9_BossQuiz_Ch3: View {
                 options: ["Measles", "Anthrax", "Polio", "Malaria"],
                 answer: "Anthrax",
                 explanation: "Sorter's disease (anthrax) is caused by spores in raw fleece. Modern safety prevents this."
-            )
+            ),
+            Ch3QuizItem(
+                prompt: "The process of pulling silk thread off the cocoon is called:",
+                options: ["Carding", "Reeling", "Weaving", "Spinning"],
+                answer: "Reeling",
+                explanation: "Cocoons are softened in hot water and the long single thread is unwound — that is reeling."
+            ),
+            Ch3QuizItem(
+                prompt: "Pashmina goats are famously reared in:",
+                options: ["Kerala backwaters", "Ladakh / Tibetan plateau", "Tamil Nadu coast", "Goa beaches"],
+                answer: "Ladakh / Tibetan plateau",
+                explanation: "The freezing high-altitude winters make Pashmina goats grow extra-fine warm wool."
+            ),
+            Ch3QuizItem(
+                prompt: "Carding wool means:",
+                options: ["Dyeing it", "Washing the grease out", "Straightening and combing the fibres", "Weaving it into cloth"],
+                answer: "Straightening and combing the fibres",
+                explanation: "After scouring, wool fibres are combed parallel so they can be spun into smooth yarn."
+            ),
+            Ch3QuizItem(
+                prompt: "Sericulture is the rearing of:",
+                options: ["Sheep", "Silkworms", "Bees", "Cocoons of cotton"],
+                answer: "Silkworms",
+                explanation: "Sericulture combines 'serikos' (silken) with 'culture' (rearing). India is a top sericulture nation."
+            ),
+            Ch3QuizItem(
+                prompt: "Silkworms are fed mainly on the leaves of the:",
+                options: ["Mango tree", "Mulberry tree", "Banana tree", "Coconut tree"],
+                answer: "Mulberry tree",
+                explanation: "Mulberry silkworms eat only fresh mulberry leaves — that is why mulberry trees are grown near silk farms."
+            ),
         ]
     }
 
@@ -63,12 +93,12 @@ struct Scene9_BossQuiz_Ch3: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 5")
+                    Text("Question \(currentQ + 1) of 10")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -104,7 +134,7 @@ struct Scene9_BossQuiz_Ch3: View {
                             Text("Quiz Complete!")
                                 .font(.headline)
                                 .foregroundColor(.green)
-                            Text("You scored \(score) / 5")
+                            Text("You scored \(score) / 10")
                                 .font(.title2.weight(.bold))
                                 .foregroundColor(Color.compatIndigo)
                         }
@@ -195,7 +225,7 @@ struct Scene9_BossQuiz_Ch3: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
@@ -240,7 +270,7 @@ struct Scene9_BossQuiz_Ch3: View {
                 .font(.body)
             Text("for completing the Discover Mode experience")
                 .font(.caption)
-            Text("and scoring \(score) / 5 on the Boss Quiz")
+            Text("and scoring \(score) / 10 on the Boss Quiz")
                 .font(.caption.weight(.semibold))
             Text(Date(), style: .date)
                 .font(.caption)

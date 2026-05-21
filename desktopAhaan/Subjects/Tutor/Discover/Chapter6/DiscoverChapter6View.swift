@@ -68,7 +68,7 @@ struct DiscoverChapter6View: View {
             { AnyView(ReactionSpeedSliderScene(onComplete: { self.markComplete(16) })) },
             { AnyView(EnergyOfChangeScene(onComplete: { self.markComplete(17) })) },
             { AnyView(ChemicalChangeAtlasScene(onComplete: { self.markComplete(18) })) },
-            { AnyView(Scene9_BossQuiz_Ch6(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch6(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

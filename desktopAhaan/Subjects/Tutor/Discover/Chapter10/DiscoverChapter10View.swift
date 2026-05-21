@@ -68,7 +68,7 @@ struct DiscoverChapter10View: View {
             { AnyView(MountainSicknessScene(onComplete: { self.markComplete(16) })) },
             { AnyView(CPRLifesaverScene(onComplete: { self.markComplete(17) })) },
             { AnyView(RespirationQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
-            { AnyView(Scene9_BossQuiz_Ch10(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch10(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

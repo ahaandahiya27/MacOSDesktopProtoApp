@@ -9,9 +9,9 @@ struct Scene9_BossQuiz_Ch6: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -51,6 +51,36 @@ struct Scene9_BossQuiz_Ch6: View {
             answer: "Change of colour and gas produced",
             explanation: "When a new colour appears and gas bubbles form, new substances are being created \u{2014} clear signs of a chemical reaction."
         ),
+            Ch6QuizItem(
+                prompt: "Melting of ice into water is a:",
+                options: ["Chemical change", "Physical change", "Nuclear change", "Magnetic change"],
+                answer: "Physical change",
+                explanation: "No new substance is made — water frozen again is still water. Reversible = physical change."
+            ),
+            Ch6QuizItem(
+                prompt: "Photosynthesis in a leaf is a:",
+                options: ["Physical change", "Chemical change", "Mechanical change", "Magnetic change"],
+                answer: "Chemical change",
+                explanation: "CO2 + H2O become glucose + O2 — completely new substances are made, so it's chemical."
+            ),
+            Ch6QuizItem(
+                prompt: "Burning of a magnesium ribbon produces:",
+                options: ["Black coal", "A white ash (magnesium oxide)", "Steam", "Rust"],
+                answer: "A white ash (magnesium oxide)",
+                explanation: "Mg + O2 → MgO. The dazzling white light helps you remember the white ash."
+            ),
+            Ch6QuizItem(
+                prompt: "Painting an iron gate helps prevent rust because the paint:",
+                options: ["Adds water to it", "Blocks oxygen and moisture from the iron", "Cools the gate", "Makes it taste salty"],
+                answer: "Blocks oxygen and moisture from the iron",
+                explanation: "No air + no water = no rust. A coating of paint, grease or zinc all work the same way."
+            ),
+            Ch6QuizItem(
+                prompt: "Rust is formed when iron reacts with:",
+                options: ["Oxygen and water", "Nitrogen alone", "Carbon dioxide", "Sunlight only"],
+                answer: "Oxygen and water",
+                explanation: "Hydrated iron oxide is the orange-brown flaky stuff we call rust."
+            ),
     ]
 
     var body: some View {
@@ -66,7 +96,7 @@ struct Scene9_BossQuiz_Ch6: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -94,7 +124,7 @@ struct Scene9_BossQuiz_Ch6: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 5")
+        Text("Question \(currentQ + 1) of 10")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -133,7 +163,7 @@ struct Scene9_BossQuiz_Ch6: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 4 ? "Next question" : "See my score") {
+            Button(currentQ < 9 ? "Next question" : "See my score") {
                 advance()
             }
             .accentColor(Color.compatIndigo)
@@ -173,7 +203,7 @@ struct Scene9_BossQuiz_Ch6: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -190,7 +220,7 @@ struct Scene9_BossQuiz_Ch6: View {
             Text("You finished Chapter 6 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -223,7 +253,7 @@ struct Scene9_BossQuiz_Ch6: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(Ch6CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(Ch6CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

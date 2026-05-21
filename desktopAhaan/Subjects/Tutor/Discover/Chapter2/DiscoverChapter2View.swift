@@ -73,7 +73,7 @@ struct DiscoverChapter2View: View {
             { AnyView(CowGoatCamelScene(onComplete: { self.markComplete(16) })) },
             { AnyView(FoodVacuoleFormationScene(onComplete: { self.markComplete(17) })) },
             { AnyView(PseudopodCatchScene(onComplete: { score in self.markComplete(18, score: score, max: 5) })) },
-            { AnyView(Scene9_BossQuiz_Ch2(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch2(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

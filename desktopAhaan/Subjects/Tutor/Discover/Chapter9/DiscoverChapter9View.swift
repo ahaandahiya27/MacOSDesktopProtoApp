@@ -68,7 +68,7 @@ struct DiscoverChapter9View: View {
             { AnyView(MicrobesInSoilScene(onComplete: { self.markComplete(16) })) },
             { AnyView(WaterHoldingCapacityScene(onComplete: { self.markComplete(17) })) },
             { AnyView(SoilQualityQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
-            { AnyView(Scene9_BossQuiz_Ch9(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch9(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

@@ -11,9 +11,9 @@ struct Scene9_BossQuiz_Ch19: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -52,7 +52,37 @@ struct Scene9_BossQuiz_Ch19: View {
             options: ["Equator", "Orbit", "Rotational axis", "Magnetic field"],
             answer: "Rotational axis",
             explanation: "The Pole Star (Dhruv Tara) is almost exactly aligned with Earth\u{2019}s rotational axis, so as Earth spins, it appears to stay fixed while all other stars circle around it."
-        )
+        ),
+            Ch19QuizItem(
+                prompt: "The star closest to Earth is the:",
+                options: ["Pole Star", "Sun", "Sirius", "Alpha Centauri"],
+                answer: "Sun",
+                explanation: "The Sun is just one of trillions of stars — but it is the only one close enough to feel warm."
+            ),
+            Ch19QuizItem(
+                prompt: "Which of these are the inner rocky planets?",
+                options: ["Jupiter, Saturn, Uranus, Neptune", "Mercury, Venus, Earth, Mars", "Sun, Earth, Moon, Mars", "Pluto, Ceres, Eris, Sedna"],
+                answer: "Mercury, Venus, Earth, Mars",
+                explanation: "The four small rocky planets nearest the Sun; the four gas/ice giants lie beyond."
+            ),
+            Ch19QuizItem(
+                prompt: "Saturn's beautiful rings are made of:",
+                options: ["Solid metal bands", "Tiny ice and rock particles", "A single sheet of cloud", "Liquid gold"],
+                answer: "Tiny ice and rock particles",
+                explanation: "Up close, the rings are millions of separate chunks of ice and dust orbiting Saturn."
+            ),
+            Ch19QuizItem(
+                prompt: "Our home galaxy is called the:",
+                options: ["Andromeda Galaxy", "Triangulum Galaxy", "Milky Way", "Whirlpool Galaxy"],
+                answer: "Milky Way",
+                explanation: "Our Sun is one star out of hundreds of billions in the spiral Milky Way galaxy."
+            ),
+            Ch19QuizItem(
+                prompt: "A light-year is a measure of:",
+                options: ["Time", "Mass", "Distance", "Temperature"],
+                answer: "Distance",
+                explanation: "It is the distance light travels in one year — about 9.46 trillion km."
+            ),
     ]
 
     var body: some View {
@@ -68,7 +98,7 @@ struct Scene9_BossQuiz_Ch19: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -96,7 +126,7 @@ struct Scene9_BossQuiz_Ch19: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 5")
+        Text("Question \(currentQ + 1) of 10")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -135,7 +165,7 @@ struct Scene9_BossQuiz_Ch19: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 4 ? "Next question" : "See my score") {
+            Button(currentQ < 9 ? "Next question" : "See my score") {
                 advance()
             }
             .accentColor(Color.compatIndigo)
@@ -175,7 +205,7 @@ struct Scene9_BossQuiz_Ch19: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -192,7 +222,7 @@ struct Scene9_BossQuiz_Ch19: View {
             Text("You finished Chapter 19 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -225,7 +255,7 @@ struct Scene9_BossQuiz_Ch19: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(Ch19CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(Ch19CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

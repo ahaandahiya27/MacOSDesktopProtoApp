@@ -68,7 +68,7 @@ struct DiscoverChapter3View: View {
             { AnyView(NaturalVsSyntheticSorterScene(onComplete: { self.markComplete(16) })) },
             { AnyView(FabricCareSymbolsQuizScene(onComplete: { score in self.markComplete(17, score: score, max: 4) })) },
             { AnyView(IndianTextileMapScene(onComplete: { self.markComplete(18) })) },
-            { AnyView(Scene9_BossQuiz_Ch3(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch3(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

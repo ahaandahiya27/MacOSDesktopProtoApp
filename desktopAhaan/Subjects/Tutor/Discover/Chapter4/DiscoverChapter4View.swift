@@ -68,7 +68,7 @@ struct DiscoverChapter4View: View {
             { AnyView(HeatWaveSurvivalScene(onComplete: { self.markComplete(16) })) },
             { AnyView(StatesOfMatterHeatLadderScene(onComplete: { self.markComplete(17) })) },
             { AnyView(SpecificHeatRaceScene(onComplete: { self.markComplete(18) })) },
-            { AnyView(Scene9_BossQuiz_Ch4(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch4(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

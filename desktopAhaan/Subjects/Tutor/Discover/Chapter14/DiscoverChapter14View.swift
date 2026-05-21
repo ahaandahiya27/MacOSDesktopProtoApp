@@ -68,7 +68,7 @@ struct DiscoverChapter14View: View {
             { AnyView(LiveNeutralEarthScene(onComplete: { self.markComplete(16) })) },
             { AnyView(PowerGenerationAtlasScene(onComplete: { self.markComplete(17) })) },
             { AnyView(ElectricCurrentQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
-            { AnyView(Scene9_BossQuiz_Ch14(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 5) })) }
+            { AnyView(Scene9_BossQuiz_Ch14(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
 

@@ -16,9 +16,9 @@ struct Scene9_BossQuiz_Ch2: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -57,7 +57,37 @@ struct Scene9_BossQuiz_Ch2: View {
             options: ["Abomasum", "Rumen", "Omasum", "Reticulum"],
             answer: "Rumen",
             explanation: "The rumen is where food is first stored and mixed with bacteria to soften grass."
-        )
+        ),
+            QuizItem(
+                prompt: "The largest gland in the human body is the:",
+                options: ["Pancreas", "Liver", "Salivary gland", "Adrenal gland"],
+                answer: "Liver",
+                explanation: "The liver makes bile, stores nutrients and detoxifies the blood. It is the biggest gland in the body."
+            ),
+            QuizItem(
+                prompt: "Pseudopodia in amoeba are used to:",
+                options: ["Reproduce", "Capture food", "Make oxygen", "Talk"],
+                answer: "Capture food",
+                explanation: "Amoeba pushes out finger-like extensions of its body to surround and engulf food particles."
+            ),
+            QuizItem(
+                prompt: "Grass-eating animals digest cellulose with the help of:",
+                options: ["Bile", "Sunlight", "Bacteria in their stomach", "Salt"],
+                answer: "Bacteria in their stomach",
+                explanation: "Cows, goats and buffalo host bacteria in their rumen that break down cellulose into nutrients."
+            ),
+            QuizItem(
+                prompt: "Villi line the small intestine to:",
+                options: ["Make blood", "Increase surface area for absorption", "Produce bile", "Filter air"],
+                answer: "Increase surface area for absorption",
+                explanation: "Millions of finger-like villi turn the small intestine into a giant absorbent surface."
+            ),
+            QuizItem(
+                prompt: "Tooth decay is caused mainly by:",
+                options: ["Drinking water", "Eating fruit", "Bacteria + sugar producing acid", "Brushing teeth"],
+                answer: "Bacteria + sugar producing acid",
+                explanation: "Sugar left on teeth feeds bacteria that release acid; the acid eats into tooth enamel."
+            ),
     ]
 
     var body: some View {
@@ -73,12 +103,12 @@ struct Scene9_BossQuiz_Ch2: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 5")
+                    Text("Question \(currentQ + 1) of 10")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -115,7 +145,7 @@ struct Scene9_BossQuiz_Ch2: View {
                             .foregroundColor(.green)
 
                         HStack(spacing: 16) {
-                            Text("Score: \(score)/5")
+                            Text("Score: \(score)/10")
                                 .font(.title2.bold())
                                 .padding(12)
                                 .background(Color.yellow.opacity(0.2))
@@ -205,7 +235,7 @@ struct Scene9_BossQuiz_Ch2: View {
     }
 
     private func advanceQuestion() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
@@ -268,7 +298,7 @@ struct Scene9_BossQuiz_Ch2: View {
         cert.draw(at: CGPoint(x: 100, y: 450))
 
         let score_str = NSAttributedString(
-            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/5",
+            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/10",
             attributes: [
                 .font: NSFont.systemFont(ofSize: 24),
                 .foregroundColor: NSColor.gray

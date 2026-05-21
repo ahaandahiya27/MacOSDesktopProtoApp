@@ -11,9 +11,9 @@ struct Scene9_BossQuiz_Ch7: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -53,6 +53,36 @@ struct Scene9_BossQuiz_Ch7: View {
             answer: "Hump",
             explanation: "A camel's hump stores fat (not water!). This fat is broken down for energy and metabolic water when food and water are scarce in the desert."
         ),
+            Ch7QuizItem(
+                prompt: "A maximum-minimum thermometer is used to measure:",
+                options: ["The current pressure", "Highest and lowest temperatures of the day", "Wind direction", "Humidity"],
+                answer: "Highest and lowest temperatures of the day",
+                explanation: "It uses two markers that get pushed by the mercury level and stay at the day's extremes."
+            ),
+            Ch7QuizItem(
+                prompt: "A tropical rainforest is characterised by:",
+                options: ["Very dry months and few plants", "Tall trees in dense layered canopies and frequent rain", "Year-round snow", "Only grasses"],
+                answer: "Tall trees in dense layered canopies and frequent rain",
+                explanation: "Constant warmth and rainfall let many tree species share space in distinct layers."
+            ),
+            Ch7QuizItem(
+                prompt: "Penguins survive Antarctica's cold by:",
+                options: ["Hibernating in caves", "Thick fat (blubber) under skin and huddling together", "Diving inland", "Growing wool"],
+                answer: "Thick fat (blubber) under skin and huddling together",
+                explanation: "A layer of blubber insulates them; huddling shares body heat across the colony."
+            ),
+            Ch7QuizItem(
+                prompt: "The red panda is found in:",
+                options: ["Sahara desert", "Eastern Himalayas / cool mountain forests", "Antarctica", "Amazon basin"],
+                answer: "Eastern Himalayas / cool mountain forests",
+                explanation: "Red pandas live in cool, bamboo-rich mountain forests of north-east India, Nepal and nearby."
+            ),
+            Ch7QuizItem(
+                prompt: "A toucan's huge beak is most useful for:",
+                options: ["Fighting predators", "Reaching distant fruit and shedding heat", "Digging holes", "Swimming"],
+                answer: "Reaching distant fruit and shedding heat",
+                explanation: "The big beak lets toucans grab fruit from thin branches; it also has many blood vessels that release heat."
+            ),
     ]
 
     var body: some View {
@@ -68,7 +98,7 @@ struct Scene9_BossQuiz_Ch7: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -96,7 +126,7 @@ struct Scene9_BossQuiz_Ch7: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 5")
+        Text("Question \(currentQ + 1) of 10")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -130,7 +160,7 @@ struct Scene9_BossQuiz_Ch7: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 4 ? "Next question" : "See my score") { advance() }
+            Button(currentQ < 9 ? "Next question" : "See my score") { advance() }
                 .accentColor(Color.compatIndigo)
         }
     }
@@ -167,7 +197,7 @@ struct Scene9_BossQuiz_Ch7: View {
     }
 
     private func advance() {
-        if currentQ < 4 { withAnimation(.easeInOut) { currentQ += 1 } }
+        if currentQ < 9 { withAnimation(.easeInOut) { currentQ += 1 } }
         else { withAnimation(.easeInOut) { done = true; celebrate = true } }
     }
 
@@ -181,7 +211,7 @@ struct Scene9_BossQuiz_Ch7: View {
             Text("You finished Chapter 7 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18).padding(.vertical, 8)
@@ -205,7 +235,7 @@ struct Scene9_BossQuiz_Ch7: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

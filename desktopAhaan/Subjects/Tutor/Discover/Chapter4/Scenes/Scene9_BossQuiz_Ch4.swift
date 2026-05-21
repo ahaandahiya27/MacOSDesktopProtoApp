@@ -11,9 +11,9 @@ struct Scene9_BossQuiz_Ch4: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -57,7 +57,37 @@ struct Scene9_BossQuiz_Ch4: View {
             options: ["Day", "Night", "Both day and night", "Neither"],
             answer: "Day",
             explanation: "During the day land heats faster, hot air rises, and cooler air rushes in from the sea."
-        )
+        ),
+            Ch4QuizItem(
+                prompt: "The SI unit of heat (energy) is the:",
+                options: ["Kelvin", "Joule", "Celsius", "Newton"],
+                answer: "Joule",
+                explanation: "Heat is a form of energy, so its unit is the joule. Kelvin and Celsius are units of temperature."
+            ),
+            Ch4QuizItem(
+                prompt: "In the daytime at the seaside, land heats up faster than the sea because:",
+                options: ["Land has lower specific heat capacity", "Land has more water", "The Sun ignores the sea", "Sea is closer to the Sun"],
+                answer: "Land has lower specific heat capacity",
+                explanation: "Land needs less energy to raise its temperature, so it gets hot sooner under the same sunlight."
+            ),
+            Ch4QuizItem(
+                prompt: "A thermos flask has double walls with a vacuum between them to:",
+                options: ["Look pretty", "Stop conduction and convection of heat", "Stop electricity", "Make the flask lighter"],
+                answer: "Stop conduction and convection of heat",
+                explanation: "No air means no conduction and no convection; silvered walls also reflect radiation back."
+            ),
+            Ch4QuizItem(
+                prompt: "On a sunny day, dark-coloured clothes feel hotter than light ones because dark colours:",
+                options: ["Reflect more heat", "Absorb more heat", "Cool the body", "Block all light"],
+                answer: "Absorb more heat",
+                explanation: "Dark surfaces absorb more of the Sun's radiation; light surfaces reflect more of it away."
+            ),
+            Ch4QuizItem(
+                prompt: "A bimetallic strip bends when heated because the two metals:",
+                options: ["Expand by different amounts", "Cool at different speeds", "Have different colours", "Conduct electricity"],
+                answer: "Expand by different amounts",
+                explanation: "One metal expands more than the other, so the joined strip curves to one side — used in thermostats."
+            ),
     ]
 
     var body: some View {
@@ -73,12 +103,12 @@ struct Scene9_BossQuiz_Ch4: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 5")
+                    Text("Question \(currentQ + 1) of 10")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -118,7 +148,7 @@ struct Scene9_BossQuiz_Ch4: View {
                         }
 
                         if revealed[currentQ] {
-                            Button(currentQ < 4 ? "Next question" : "See my score") {
+                            Button(currentQ < 9 ? "Next question" : "See my score") {
                                 advance()
                             }
 
@@ -178,7 +208,7 @@ struct Scene9_BossQuiz_Ch4: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -195,7 +225,7 @@ struct Scene9_BossQuiz_Ch4: View {
             Text("You finished Chapter 4 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -228,7 +258,7 @@ struct Scene9_BossQuiz_Ch4: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

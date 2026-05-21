@@ -13,9 +13,9 @@ struct Scene9_BossQuiz: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 5)
+    @State private var picks: [String?] = Array(repeating: nil, count: 10)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 5)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -61,7 +61,37 @@ struct Scene9_BossQuiz: View {
             options: ["Carbon", "Water", "Nitrogen", "Sunlight"],
             answer: "Nitrogen",
             explanation: "Pitcher plants grow in nitrogen-poor soil. Trapping insects supplies nitrogen for proteins."
-        )
+        ),
+            Ch1QuizItem(
+                prompt: "Photosynthesis needs water, sunlight, chlorophyll and which gas?",
+                options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"],
+                answer: "Carbon dioxide",
+                explanation: "Plants pull in CO₂ through stomata; with water and light energy they make glucose and release O₂."
+            ),
+            Ch1QuizItem(
+                prompt: "A mushroom growing on a rotting log is an example of a:",
+                options: ["Producer", "Saprotroph", "Parasite", "Carnivore"],
+                answer: "Saprotroph",
+                explanation: "Saprotrophs feed on dead and decaying matter — they help nature recycle."
+            ),
+            Ch1QuizItem(
+                prompt: "Leguminous plants like pea and gram enrich soil with nitrogen because:",
+                options: ["Their leaves smell of nitrogen", "Rhizobium bacteria in their root nodules fix nitrogen", "They drink nitrogen from clouds", "They are insectivorous"],
+                answer: "Rhizobium bacteria in their root nodules fix nitrogen",
+                explanation: "Farmers grow pulses between crops to put nitrogen back into the soil — a free fertiliser."
+            ),
+            Ch1QuizItem(
+                prompt: "A lichen is a partnership between:",
+                options: ["Two plants", "Two animals", "A fungus and an alga", "A fungus and a bacterium only"],
+                answer: "A fungus and an alga",
+                explanation: "The alga makes food by photosynthesis; the fungus gives shelter and water. Both gain — mutualism."
+            ),
+            Ch1QuizItem(
+                prompt: "Plants store excess food made in leaves mostly as:",
+                options: ["Salt", "Starch", "Sand", "Oxygen"],
+                answer: "Starch",
+                explanation: "Test a leaf with iodine — it turns blue-black where starch is stored."
+            ),
     ]
 
     var body: some View {
@@ -75,12 +105,12 @@ struct Scene9_BossQuiz: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 5)
+                ProgressView(value: Double(currentQ), total: 10)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 5")
+                    Text("Question \(currentQ + 1) of 10")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -119,7 +149,7 @@ struct Scene9_BossQuiz: View {
                     }
 
                     if revealed[currentQ] {
-                        Button(currentQ < 4 ? "Next question" : "See my score") {
+                        Button(currentQ < 9 ? "Next question" : "See my score") {
                             advance()
                         }
 
@@ -176,7 +206,7 @@ struct Scene9_BossQuiz: View {
     }
 
     private func advance() {
-        if currentQ < 4 {
+        if currentQ < 9 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -193,7 +223,7 @@ struct Scene9_BossQuiz: View {
             Text("You finished Chapter 1 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 5")
+            Text("Score: \(score) / 10")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -226,7 +256,7 @@ struct Scene9_BossQuiz: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 5), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return
