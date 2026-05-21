@@ -77,6 +77,17 @@ final class CrashReporter {
     /// Wires Objective-C exception handler + Unix signal handlers.
     /// Idempotent — calling twice replaces with the same handler.
     func install() {
+        // Skip the entire crash-reporting setup under XCTest. The test
+        // runner kills the host process between suites without going
+        // through applicationWillTerminate, so the cleanExit flag will
+        // always read false on the next test launch and we'd log a
+        // misleading "previous session crashed" RECOVERY breadcrumb on
+        // every CI run. Detect via XCTestConfigurationFilePath, the
+        // env var Xcode sets only inside the test runner.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            logger.info("CrashReporter install skipped (running under XCTest).")
+            return
+        }
         NSSetUncaughtExceptionHandler { exception in
             CrashReporter.shared.recordException(exception)
         }
@@ -149,6 +160,17 @@ final class CrashReporter {
     /// launch cascade).
     func startHangDetection() {
         #if DEBUG
+        // XCTest deliberately blocks the main thread with XCTWaiter
+        // while it ticks down async expectations — that's the test
+        // harness doing exactly what it's designed to do, not a real
+        // hang. Detected via XCTestConfigurationFilePath, the
+        // environment variable Xcode sets only inside the test runner.
+        // Suppress here so the crashlog stays focused on user-facing
+        // hangs and recovery breadcrumbs aren't polluted.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            logger.info("Hang detector skipped (running under XCTest).")
+            return
+        }
         guard hangTimer == nil else { return }
         let queue = DispatchQueue(
             label: "com.emoha.desktopAhaan.hang-detector",

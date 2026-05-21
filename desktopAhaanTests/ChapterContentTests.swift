@@ -947,6 +947,52 @@ final class ChapterContentTests: XCTestCase {
                        "A gap >1 day must reset the streak, not extend it.")
     }
 
+    // MARK: - Chapter notebook (2026-05-21)
+    //
+    // setChapterNote is a hot path — fires on every TextEditor keystroke
+    // via .onChange. Pin a few invariants so a future refactor doesn't
+    // silently break the user's saved notes (this is data the kid writes
+    // themselves — irreplaceable if lost).
+
+    @MainActor func testNotebook_SetAndReadBack() {
+        let store = DataStore()
+        store.chapterNotes.removeAll()
+        store.setChapterNote("Plants pull mass from air, not soil!", forChapterId: "ch01")
+        XCTAssertEqual(store.chapterNotes["ch01"], "Plants pull mass from air, not soil!")
+    }
+
+    @MainActor func testNotebook_EmptyOrWhitespaceTextRemovesEntry() {
+        let store = DataStore()
+        store.chapterNotes.removeAll()
+        store.setChapterNote("initial", forChapterId: "ch02")
+        XCTAssertNotNil(store.chapterNotes["ch02"])
+
+        store.setChapterNote("   \n\t  ", forChapterId: "ch02")
+        XCTAssertNil(store.chapterNotes["ch02"],
+                     "Whitespace-only text should clear the entry, not accumulate empty rows.")
+    }
+
+    @MainActor func testNotebook_DistinctChaptersHaveIndependentNotes() {
+        let store = DataStore()
+        store.chapterNotes.removeAll()
+        store.setChapterNote("Note for ch.1", forChapterId: "ch01")
+        store.setChapterNote("Note for ch.7", forChapterId: "ch07")
+        XCTAssertEqual(store.chapterNotes["ch01"], "Note for ch.1")
+        XCTAssertEqual(store.chapterNotes["ch07"], "Note for ch.7")
+        XCTAssertNil(store.chapterNotes["ch02"])
+    }
+
+    @MainActor func testNotebook_ChapterNoteRoundTripCodable() throws {
+        let note = ChapterNote(chapterId: "ch01", text: "Hello \u{2014} world",
+                               updatedAt: Date(timeIntervalSince1970: 1_700_000_000))
+        let data = try JSONEncoder().encode(note)
+        let decoded = try JSONDecoder().decode(ChapterNote.self, from: data)
+        XCTAssertEqual(decoded.chapterId, note.chapterId)
+        XCTAssertEqual(decoded.text, note.text)
+        XCTAssertEqual(decoded.updatedAt.timeIntervalSince1970,
+                       note.updatedAt.timeIntervalSince1970, accuracy: 0.001)
+    }
+
     @MainActor func testDataStore_DueCountReflectsScheduledItems() {
         let store = DataStore()
         // Wipe any leftover state from another test.
