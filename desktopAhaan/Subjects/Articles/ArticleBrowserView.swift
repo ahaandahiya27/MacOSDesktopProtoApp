@@ -127,6 +127,13 @@ struct ArticleBrowserView: View {
         }
         .onDisappear {
             speech.stop(owner: "article")
+            // Defensive: stop any in-flight WKWebView load and clear
+            // delegates BEFORE the SwiftUI @StateObject tears down the
+            // coordinator. Without this, a pending WebContent-subprocess
+            // callback (Big Sur AMD GPU is famously flaky here) can fire
+            // into a half-released coordinator → EXC_BAD_ACCESS in
+            // objc_release. cleanup() is idempotent.
+            coordinator.cleanup()
         }
     }
 
@@ -314,10 +321,24 @@ private class WebViewCoordinator: NSObject, ObservableObject, WKNavigationDelega
     }
 
     func cleanup() {
+        // Order matters: stop loading FIRST so no new KVO callbacks queue,
+        // THEN invalidate each observer (NSKeyValueObservation.invalidate()
+        // synchronously removes the observation — safer than relying on the
+        // array dealloc), THEN clear delegates so any already-in-flight
+        // delegate callbacks find a nil target and no-op.
+        webView.stopLoading()
+        for obs in observers { obs.invalidate() }
         observers.removeAll()
         webView.navigationDelegate = nil
         webView.uiDelegate = nil
     }
+
+    // No explicit deinit: WebViewCoordinator is @MainActor, which makes
+    // deinit nonisolated, which means we can't safely touch the
+    // @MainActor-isolated webView from here on Swift 5.5 (no
+    // MainActor.assumeIsolated until 5.10). cleanup() in .onDisappear
+    // is the cleanup path; releasing the WKWebView naturally kills
+    // its WebContent subprocess.
 
     func webView(
         _ webView: WKWebView,
