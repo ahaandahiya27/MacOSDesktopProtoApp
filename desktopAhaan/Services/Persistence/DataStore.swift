@@ -606,15 +606,28 @@ final class DataStore: ObservableObject {
 
     // MARK: - Discover-mode all-chapters completion
 
-    /// Total number of Discover scenes across the science pack: 19
-    /// chapters × 20 scenes = 380. Hard-coded rather than derived
-    /// because the chapter dispatchers all declare their sceneTitles
-    /// arrays inline; bump this when a chapter grows.
-    /// Expansion log:
-    ///   - Ch.1-5:  9 → 20 scenes each (2026-05-20)
-    ///   - Ch.6-19: 9 → 20 scenes each (2026-05-21)
-    /// All 19 science chapters now at full 20 scenes each.
-    static let totalDiscoverScenes = 380
+    /// Per-chapter Discover scene counts. Single source of truth — when
+    /// a chapter grows or shrinks, update this dictionary and the
+    /// `totalDiscoverScenes` computed sum re-derives automatically.
+    /// `testTotalDiscoverScenesPinnedAt380` in ChapterContentTests
+    /// fails if the sum drifts unintentionally.
+    ///
+    /// Expansion history:
+    ///   - Original (pre-2026-05-20): all 19 chapters at 9 scenes each = 171
+    ///   - 2026-05-20: Ch.1-5 expanded 9 → 20
+    ///   - 2026-05-21: Ch.6-19 expanded 9 → 20
+    /// Current: all 19 chapters at 20 scenes each = 380.
+    static let discoverSceneCounts: [Int: Int] = [
+        1: 20, 2: 20, 3: 20, 4: 20, 5: 20,
+        6: 20, 7: 20, 8: 20, 9: 20, 10: 20,
+        11: 20, 12: 20, 13: 20, 14: 20, 15: 20,
+        16: 20, 17: 20, 18: 20, 19: 20
+    ]
+
+    /// Total Discover scenes across the science pack — derived from
+    /// `discoverSceneCounts`. Gates the "all chapters complete"
+    /// celebration overlay.
+    static let totalDiscoverScenes: Int = discoverSceneCounts.values.reduce(0, +)
 
     /// True once every Discover scene across all 19 science chapters
     /// has been marked complete. Used by the "you finished Discover
