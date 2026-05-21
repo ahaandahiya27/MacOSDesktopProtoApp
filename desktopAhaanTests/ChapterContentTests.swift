@@ -10,8 +10,9 @@ final class ChapterContentTests: XCTestCase {
         let ch1Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch01") }
         // Ch1: 1 overview + 3 topic overviews + 10 + 7 + 4 concepts + 1 "Beyond the Book"
         // + 8 "Ways of Learning" enrichment articles (scientists, storymode, whatif,
-        //   glossary, plantoftheday, miniproject, selfcheck, bridge) = 34
-        XCTAssertEqual(ch1Ids.count, 34, "Chapter 1 should have 34 article entries")
+        //   glossary, plantoftheday, miniproject, selfcheck, bridge)
+        // + 3 exam-prep / visual articles (mistakes, ncert_qa, infographic) = 37
+        XCTAssertEqual(ch1Ids.count, 37, "Chapter 1 should have 37 article entries")
     }
 
     func testArticleIndexHasAllChapter2Entries() {

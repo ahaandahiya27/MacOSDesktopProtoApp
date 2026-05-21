@@ -280,6 +280,27 @@ enum ArticleIndex {
             chapterFolder: chapter1Folder,
             estimatedMinutes: 6
         ),
+        "ch01_mistakes": ArticleEntry(
+            id: "ch01_mistakes",
+            filename: "ch01_mistakes.html",
+            title: "Ten Wrong Answers Class 7 Students Give",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 10
+        ),
+        "ch01_ncert_qa": ArticleEntry(
+            id: "ch01_ncert_qa",
+            filename: "ch01_ncert_qa.html",
+            title: "NCERT Exercise Q&A — Chapter 1",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 14
+        ),
+        "ch01_infographic": ArticleEntry(
+            id: "ch01_infographic",
+            filename: "ch01_infographic.html",
+            title: "Chapter 1 Infographic — The Whole Chapter on One Page",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
 
         // ================================================================
         // CHAPTER 2 — Nutrition in Animals

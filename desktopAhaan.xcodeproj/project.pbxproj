@@ -44,6 +44,9 @@
 		04CD70FB2FBF59FB00D71B32 /* ch01_miniproject.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70FA2FBF59FB00D71B32 /* ch01_miniproject.html */; };
 		04CD70FD2FBF5A1F00D71B32 /* ch01_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70FC2FBF5A1F00D71B32 /* ch01_selfcheck.html */; };
 		04CD70FF2FBF5A4900D71B32 /* ch01_bridge.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70FE2FBF5A4900D71B32 /* ch01_bridge.html */; };
+		04CD71012FBF5DE400D71B32 /* ch01_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD71002FBF5DE400D71B32 /* ch01_mistakes.html */; };
+		04CD71032FBF5E2600D71B32 /* ch01_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD71022FBF5E2600D71B32 /* ch01_ncert_qa.html */; };
+		04CD71052FBF5F0600D71B32 /* ch01_infographic.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD71042FBF5F0600D71B32 /* ch01_infographic.html */; };
 		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
 		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
 		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
@@ -660,6 +663,9 @@
 		04CD70FA2FBF59FB00D71B32 /* ch01_miniproject.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_miniproject.html; sourceTree = "<group>"; };
 		04CD70FC2FBF5A1F00D71B32 /* ch01_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_selfcheck.html; sourceTree = "<group>"; };
 		04CD70FE2FBF5A4900D71B32 /* ch01_bridge.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_bridge.html; sourceTree = "<group>"; };
+		04CD71002FBF5DE400D71B32 /* ch01_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_mistakes.html; sourceTree = "<group>"; };
+		04CD71022FBF5E2600D71B32 /* ch01_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_ncert_qa.html; sourceTree = "<group>"; };
+		04CD71042FBF5F0600D71B32 /* ch01_infographic.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_infographic.html; sourceTree = "<group>"; };
 		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
 		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
 		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
@@ -2234,6 +2240,9 @@
 				04CD70FA2FBF59FB00D71B32 /* ch01_miniproject.html */,
 				04CD70FC2FBF5A1F00D71B32 /* ch01_selfcheck.html */,
 				04CD70FE2FBF5A4900D71B32 /* ch01_bridge.html */,
+				04CD71002FBF5DE400D71B32 /* ch01_mistakes.html */,
+				04CD71022FBF5E2600D71B32 /* ch01_ncert_qa.html */,
+				04CD71042FBF5F0600D71B32 /* ch01_infographic.html */,
 			);
 			path = Chapter1;
 			sourceTree = "<group>";
@@ -2753,6 +2762,7 @@
 				04F59E512FB9683000568BDE /* ch14_t01_c02.html in Resources */,
 				667795EE5245233B61AB1E12 /* ch01_t01_c02.html in Resources */,
 				A30E56AF3A2A452E91AB2C42 /* ch01_t01_c03.html in Resources */,
+				04CD71052FBF5F0600D71B32 /* ch01_infographic.html in Resources */,
 				2FF3961EEC3B9471C84D0298 /* ch01_t01_c04.html in Resources */,
 				1B01FC8866F170735B8AC12E /* ch01_t01_c05.html in Resources */,
 				04F59E1A2FB94EFF00568BDE /* ch15_style.css in Resources */,
@@ -2821,6 +2831,7 @@
 				016BFD7626F72F90A52CA07F /* ch19_t01_c02.html in Resources */,
 				F997E5782A868A788D77A26A /* ch19_t01_c03.html in Resources */,
 				04CD70EF2FBEC36600D71B32 /* ch02_beyond.html in Resources */,
+				04CD71012FBF5DE400D71B32 /* ch01_mistakes.html in Resources */,
 				31BDB159FF11E32A184CF791 /* ch19_t01_c04.html in Resources */,
 				04F59E0D2FB94EFB00568BDE /* ch12_overview.html in Resources */,
 				ED2BC3D39ED11DBE8B049F91 /* ch19_t01_c05.html in Resources */,
@@ -2979,6 +2990,7 @@
 				28BE822309374E3B93671A96 /* ch05_t02_c02.html in Resources */,
 				FE7147E862A040CE9568C91A /* ch05_t03_c01.html in Resources */,
 				60FE48FF67AC4F26940CDDE6 /* ch05_t03_c02.html in Resources */,
+				04CD71032FBF5E2600D71B32 /* ch01_ncert_qa.html in Resources */,
 				5E2766CBE5404699A55C74CD /* ch05_t03_c03.html in Resources */,
 				5FFA27605A194AC1A85D8938 /* ch06_t02_c01.html in Resources */,
 				04CD70F92FBF59D500D71B32 /* ch01_plantoftheday.html in Resources */,
