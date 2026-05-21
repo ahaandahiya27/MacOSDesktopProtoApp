@@ -32,7 +32,10 @@ final class TranslatorViewModel: ObservableObject {
             }
             .store(in: &cancellables)
 
-        speechManager.requestPermissions()
+        // Permission ask is deferred to startVoiceInput() — see comment
+        // there. Asking at init() fires the OS dialog at every cold start
+        // and on every TranslatorViewModel() in tests, which is what the
+        // user was seeing.
     }
 
     func swapLanguages() {
@@ -134,6 +137,11 @@ final class TranslatorViewModel: ObservableObject {
         if speechManager.isListening {
             speechManager.stopListening()
         } else {
+            // Ask the OS for permission only when the user actively wants
+            // to dictate. requestPermissions() self-throttles if the
+            // system already has an answer, so this is safe to call on
+            // every tap — the dialog only ever appears once per install.
+            speechManager.requestPermissions()
             speechManager.startListening(language: sourceLanguage)
         }
     }

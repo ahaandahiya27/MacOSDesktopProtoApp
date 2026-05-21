@@ -50,6 +50,13 @@ final class SpeechRecognitionManager: ObservableObject {
     /// answer (authorized / denied / restricted) we early-return without hitting
     /// the OS API, so the user never sees the dialog more than once per install.
     func requestPermissions() {
+        // Never fire the OS prompt under XCTest. ViewModelTests instantiates
+        // TranslatorViewModel ~20 times in fast succession; without this guard
+        // a fresh test run on a machine that hasn't yet answered the Speech
+        // Recognition prompt will throw a blocking dialog mid-test-run.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil {
+            return
+        }
         let cached = SFSpeechRecognizer.authorizationStatus()
         guard cached == .notDetermined else {
             // System already has an answer — mirror it and stop.
