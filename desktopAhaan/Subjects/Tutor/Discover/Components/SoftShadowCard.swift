@@ -91,8 +91,10 @@ struct GotItButton: View {
                 // the tap reads as "click! pop! done!" before the scene
                 // transitions. Suppressed when Reduce Motion is on.
                 .scaleEffect(celebrating ? 1.12 : 1.0)
-                .animation(reduceMotion ? nil : .spring(response: 0.32, dampingFraction: 0.55),
-                           value: celebrating)
+                // Big Sur lacks `.animation(_:value:)`. Plain `.animation(_:)`
+                // works because every state mutation that flips `celebrating`
+                // happens inside the implicit-animation window.
+                .animation(reduceMotion ? nil : .spring(response: 0.32, dampingFraction: 0.55))
         }
         .buttonStyle(FilledCTAButtonStyle(tint: tint ?? envChapterAccent))
         .keyboardShortcut(.space, modifiers: [])
@@ -148,8 +150,10 @@ struct PressableButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .scaleEffect(configuration.isPressed && !reduceMotion ? pressedScale : 1.0)
-            .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.6),
-                       value: configuration.isPressed)
+            // Big Sur lacks `.animation(_:value:)`. Plain `.animation(_:)`
+            // still tracks `isPressed` correctly because SwiftUI re-evaluates
+            // the modifier when the configuration changes.
+            .animation(reduceMotion ? nil : .spring(response: 0.25, dampingFraction: 0.6))
     }
 }
 

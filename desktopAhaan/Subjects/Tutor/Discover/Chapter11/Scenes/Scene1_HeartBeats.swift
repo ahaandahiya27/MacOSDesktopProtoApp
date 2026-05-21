@@ -23,12 +23,16 @@ struct Scene1_HeartBeats: View {
                 FourChamberHeart()
                     .frame(width: 220, height: 220)
                     .scaleEffect(pulse ? 1.10 : 1.0)
-                    .animation(
-                        reduceMotion ? .none
-                                      : .easeInOut(duration: 60.0 / bpm / 2.0).repeatForever(autoreverses: true),
-                        value: pulse
-                    )
-                    .onAppear { pulse = true }
+                    // Big Sur (macOS 11) lacks `.animation(_:value:)`; drive
+                    // the pulse via withAnimation around the state-flip in
+                    // .onAppear instead. Honors reduceMotion + HardwareTier.
+                    .onAppear {
+                        guard !reduceMotion else { return }
+                        let dur = HardwareTier.duration(ideal: 60.0 / bpm / 2.0)
+                        withAnimation(.easeInOut(duration: dur).repeatForever(autoreverses: true)) {
+                            pulse = true
+                        }
+                    }
                     .accessibilityLabel("Four-chamber heart, beating at \(Int(bpm)) BPM")
 
                 Text("\(Int(bpm)) BPM")

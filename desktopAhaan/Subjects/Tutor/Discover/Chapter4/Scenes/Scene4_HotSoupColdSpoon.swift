@@ -193,7 +193,7 @@ private struct SteamWisp: View {
             .offset(x: CGFloat(index - 1) * 30, y: -20 - offset)
             .onAppear {
                 guard !reduceMotion else { return }
-                withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true).delay(Double(index) * 0.3)) {
+                withAnimation(.easeInOut(duration: HardwareTier.duration(ideal: 2)).repeatForever(autoreverses: true).delay(Double(index) * 0.3)) {
                     offset = 30
                 }
             }

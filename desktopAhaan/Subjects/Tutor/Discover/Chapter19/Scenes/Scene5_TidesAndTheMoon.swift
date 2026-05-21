@@ -142,7 +142,7 @@ struct Scene5_TidesAndTheMoon: View {
         }
         .onAppear {
             guard !reduceMotion else { return }
-            withAnimation(.linear(duration: 12).repeatForever(autoreverses: false)) {
+            withAnimation(.linear(duration: HardwareTier.duration(ideal: 12)).repeatForever(autoreverses: false)) {
                 moonAngle = 360
             }
         }

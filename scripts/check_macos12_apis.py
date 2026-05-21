@@ -166,12 +166,26 @@ def strip_line_comments(line: str) -> str:
 
 
 def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
-    """Returns (line_no, rule_name, why, line) for each match."""
+    """Returns (line_no, rule_name, why, line) for each match.
+
+    Two-pass scan:
+    1. Per-line scan strips line comments and runs each rule against the
+       single line. Catches the common-case banned API calls.
+    2. Whole-file scan against a comment-stripped concatenated text with
+       newlines collapsed to single spaces, so a multi-line `.animation(
+           ..., value: x)` call is still caught. This second pass exists
+       because we missed a multi-line `.animation(_:value:)` in
+       Scene1_HeartBeats during the 2026-05-21 audit — Big Sur crash
+       class slipped through the per-line regex.
+    """
     hits: list[tuple[int, str, str, str]] = []
     try:
         text = path.read_text()
     except Exception:
         return hits
+
+    # Pass 1: per-line
+    matched_rules_perline: set[str] = set()
     for lineno, raw_line in enumerate(text.splitlines(), start=1):
         line = strip_line_comments(raw_line)
         if not line.strip():
@@ -179,6 +193,53 @@ def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
         for pat, name, why in RULES:
             if pat.search(line):
                 hits.append((lineno, name, why, raw_line.strip()))
+                matched_rules_perline.add(name)
+
+    # Pass 2: bounded multi-line scan. Only for rules where the banned
+    # API is plausibly typed across multiple lines (currently just
+    # `.animation(_:value:)`). For each line that starts a `.animation(`
+    # call but doesn't close its parens on the same line, collect the
+    # next-N lines until the parens balance, then test the rule.
+    cleaned_lines: list[str] = [strip_line_comments(r) for r in text.splitlines()]
+    multiline_rules = [
+        (pat, name, why) for (pat, name, why) in RULES
+        if name == ".animation(_:value:)"
+    ]
+    if multiline_rules:
+        for start_idx, line in enumerate(cleaned_lines):
+            if ".animation(" not in line:
+                continue
+            # Find the column of `.animation(`.
+            ani_col = line.find(".animation(")
+            # Walk forward to balance parens, up to 6 lines (typical
+            # multi-line `.animation(...)` calls span 2-4 lines; 6 is
+            # comfortable headroom without re-introducing the line-190
+            # false-positive class).
+            depth = 0
+            buf: list[str] = []
+            ended = False
+            for j in range(start_idx, min(len(cleaned_lines), start_idx + 6)):
+                seg = cleaned_lines[j] if j > start_idx else line[ani_col:]
+                buf.append(seg)
+                for ch in seg:
+                    if ch == "(":
+                        depth += 1
+                    elif ch == ")":
+                        depth -= 1
+                        if depth == 0:
+                            ended = True
+                            break
+                if ended:
+                    break
+            if not ended or len(buf) < 2:
+                # Either unbalanced (skip — likely a parse oddity)
+                # or single-line (already covered by pass 1).
+                continue
+            collapsed = " ".join(buf)
+            for pat, name, why in multiline_rules:
+                if pat.search(collapsed):
+                    hits.append((start_idx + 1, name, why,
+                                 "[multi-line match] " + collapsed[:80].strip()))
     return hits
 
 

@@ -232,7 +232,7 @@ private struct CoconutWaterDispersalScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("🥥").font(.system(size: 100))
                 .offset(x: floating ? 80 : -80)
-                .animation(.linear(duration: 4).repeatForever(autoreverses: true))
+                .animation(.linear(duration: HardwareTier.duration(ideal: 4)).repeatForever(autoreverses: true))
             Button { floating.toggle() } label: {
                 Text(floating ? "Stop drift" : "Set adrift").font(.body.weight(.semibold))
                     .padding(.horizontal, 18).padding(.vertical, 9)
@@ -291,7 +291,7 @@ private struct BeeWaggleDanceScene: View {
     }
     private func startDance() {
         if dance {
-            withAnimation(.easeInOut(duration: 0.6).repeatForever(autoreverses: true)) {
+            withAnimation(.easeInOut(duration: HardwareTier.duration(ideal: 0.6)).repeatForever(autoreverses: true)) {
                 angle = 35
             }
         } else { angle = 0 }

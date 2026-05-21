@@ -155,7 +155,7 @@ private struct TornadoTubeLabScene: View {
     }
     private func spin() {
         if spinning {
-            withAnimation(.linear(duration: 1).repeatForever(autoreverses: false)) {
+            withAnimation(.linear(duration: HardwareTier.duration(ideal: 1)).repeatForever(autoreverses: false)) {
                 rotation = 360
             }
         } else { rotation = 0 }

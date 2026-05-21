@@ -177,6 +177,20 @@ enum HardwareTier {
     static func interval(ideal: TimeInterval) -> TimeInterval {
         isLegacy ? max(ideal, animationInterval) : ideal
     }
+
+    /// Returns a `repeatForever`-friendly animation duration scaled for the
+    /// target machine. On the Big Sur AMD R9 M290X iMac we stretch the
+    /// duration by 1.5×, which halves the per-second redraw work without
+    /// killing the animation feel — a 0.6 s pulse becomes 0.9 s, a 4 s
+    /// drift becomes 6 s. Use this on any `.repeatForever` animation that
+    /// runs while the scene is on-screen to keep the GPU from cooking
+    /// during a 30-minute Ahaan session.
+    ///
+    ///     withAnimation(.easeInOut(duration: HardwareTier.duration(ideal: 0.6))
+    ///                      .repeatForever(autoreverses: true)) { ... }
+    static func duration(ideal: TimeInterval) -> TimeInterval {
+        isLegacy ? ideal * 1.5 : ideal
+    }
 }
 
 // MARK: - Design tokens
