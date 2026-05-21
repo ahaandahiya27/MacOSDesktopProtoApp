@@ -301,7 +301,7 @@ private struct LapTimerScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }.buttonStyle(.plain).pointingCursor().disabled(!running)
             }
-            ForEach(Array(laps.enumerated()), id: \.offset) { idx, lap in
+            ForEach(laps.indices, id: \.self) { idx in let lap = laps[idx];
                 Text("Lap \(idx + 1): \(String(format: "%.1f", lap)) s")
                     .font(.caption.monospacedDigit()).foregroundColor(.secondary)
             }

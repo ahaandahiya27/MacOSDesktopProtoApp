@@ -473,7 +473,7 @@ struct QuestionDetailView: View {
         let correctIdx = isMCQ ? correctOptionIndex(options) : nil
         VStack(alignment: .leading, spacing: 8) {
             Text("Options").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
-            ForEach(Array(options.enumerated()), id: \.offset) { idx, opt in
+            ForEach(options.indices, id: \.self) { idx in let opt = options[idx];
                 if isMCQ {
                     mcqOptionRow(idx: idx, opt: opt, correctIdx: correctIdx)
                 } else {
@@ -735,7 +735,7 @@ struct QuestionDetailView: View {
                     .padding(10)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
-                ForEach(Array(question.solutionSteps.enumerated()), id: \.offset) { idx, step in
+                ForEach(question.solutionSteps.indices, id: \.self) { idx in let step = question.solutionSteps[idx];
                     HStack(alignment: .top, spacing: 10) {
                         Text("\(idx + 1).")
                             .font(.body.bold())
@@ -764,7 +764,7 @@ struct QuestionDetailView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Label("Common mistakes", systemImage: "exclamationmark.triangle.fill")
                     .font(.headline)
-                ForEach(Array(question.commonMistakes.enumerated()), id: \.offset) { _, m in
+                ForEach(question.commonMistakes.indices, id: \.self) { idx in let m = question.commonMistakes[idx];
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundColor(.red)

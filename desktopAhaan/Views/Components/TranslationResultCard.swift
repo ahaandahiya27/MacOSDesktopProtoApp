@@ -79,7 +79,8 @@ struct TranslationResultCard: View {
                 VStack(alignment: .leading, spacing: 14) {
                     if let words = response.wordByWord, !words.isEmpty {
                         DetailSection(title: "Word by Word", icon: "text.word.spacing") {
-                            ForEach(Array(words.enumerated()), id: \.offset) { _, word in
+                            ForEach(words.indices, id: \.self) { idx in
+                                let word = words[idx]
                                 HStack(alignment: .top) {
                                     Text(word.source)
                                         .font(.subheadline.weight(.medium))
@@ -118,7 +119,8 @@ struct TranslationResultCard: View {
 
                     if let alts = response.alternatives, !alts.isEmpty {
                         DetailSection(title: "Alternatives", icon: "arrow.triangle.branch") {
-                            ForEach(Array(alts.enumerated()), id: \.offset) { _, alt in
+                            ForEach(alts.indices, id: \.self) { idx in
+                                let alt = alts[idx]
                                 Text("- \(alt)")
                                     .font(.subheadline)
                             }

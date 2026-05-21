@@ -19,7 +19,7 @@ struct QuestionVariationCard: View {
                     .padding(8)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 6).fill(Color.green.opacity(0.12)))
-                ForEach(Array(variation.solutionSteps.enumerated()), id: \.offset) { idx, step in
+                ForEach(variation.solutionSteps.indices, id: \.self) { idx in let step = variation.solutionSteps[idx];
                     HStack(alignment: .top, spacing: 8) {
                         Text("\(idx + 1).").font(.callout.bold()).foregroundColor(Color.compatIndigo)
                         Text(step).font(.callout).lineSpacing(3)

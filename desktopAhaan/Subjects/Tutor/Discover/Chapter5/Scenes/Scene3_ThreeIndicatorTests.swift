@@ -68,7 +68,7 @@ struct Scene3_ThreeIndicatorTests: View {
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
                 HStack(spacing: 20) {
-                    ForEach(Array(indicators.enumerated()), id: \.offset) { idx, ind in
+                    ForEach(indicators.indices, id: \.self) { idx in let ind = indicators[idx];
                         testTubeView(index: idx, indicator: ind, height: 240)
                     }
                 }

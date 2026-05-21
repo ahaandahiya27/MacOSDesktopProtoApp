@@ -694,7 +694,7 @@ private struct HomeExperimentCard: View {
                         Text("What you'll need")
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        ForEach(Array(experiment.needs.enumerated()), id: \.offset) { _, item in
+                        ForEach(experiment.needs.indices, id: \.self) { idx in let item = experiment.needs[idx];
                             HStack(alignment: .top, spacing: 8) {
                                 Text("•")
                                 Text(item).multilineTextAlignment(.leading)
@@ -708,7 +708,7 @@ private struct HomeExperimentCard: View {
                         Text("What you'll do")
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        ForEach(Array(experiment.steps.enumerated()), id: \.offset) { idx, step in
+                        ForEach(experiment.steps.indices, id: \.self) { idx in let step = experiment.steps[idx];
                             HStack(alignment: .top, spacing: 8) {
                                 Text("\(idx + 1).")
                                     .frame(width: 22, alignment: .trailing)

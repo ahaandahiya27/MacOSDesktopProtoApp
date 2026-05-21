@@ -80,7 +80,7 @@ struct ProcessTimeline: View {
 
     private var stepsList: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ForEach(Array(steps.enumerated()), id: \.offset) { (index, step) in
+            ForEach(steps.indices, id: \.self) { index in let step = steps[index];
                 StepRow(
                     index: index,
                     total: steps.count,

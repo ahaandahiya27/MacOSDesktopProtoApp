@@ -112,7 +112,7 @@ struct HotspotDiagram: View {
                 .foregroundColor(baseColor.opacity(0.30))
                 .frame(width: size * 0.75, height: size * 0.75)
                 .accessibilityHidden(true)
-            ForEach(Array(hotspots.enumerated()), id: \.offset) { (index, spot) in
+            ForEach(hotspots.indices, id: \.self) { index in let spot = hotspots[index];
                 hotspotDot(at: index, spot: spot)
             }
         }

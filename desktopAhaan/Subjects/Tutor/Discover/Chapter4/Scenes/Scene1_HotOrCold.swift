@@ -49,7 +49,7 @@ struct Scene1_HotOrCold: View {
 
                     // Object grid
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 16)], spacing: 16) {
-                        ForEach(Array(objects.enumerated()), id: \.offset) { idx, obj in
+                        ForEach(objects.indices, id: \.self) { idx in let obj = objects[idx];
                             Button {
                                 selectObject(idx)
                             } label: {

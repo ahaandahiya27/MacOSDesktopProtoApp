@@ -120,6 +120,16 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
     (re.compile(r"^import\s+Charts\b", re.MULTILINE),
      "import Charts",
      "macOS 13.0+ — framework unavailable on Big Sur."),
+    # Not a macOS-version API but the same Big Sur SwiftUI fragility
+    # class: `ForEach(Array(x.enumerated()), id: \.offset)` produces an
+    # unstable view identity on Swift 5.5 → "Entangling fence requested
+    # after pre-commit" → EXC_BAD_ACCESS. Same bug class that crashed
+    # Try-at-Home / Van Helmont. Use `ForEach(x.indices, id: \.self)`
+    # and subscript x[i] inside, OR a proper Identifiable model struct.
+    (re.compile(r"ForEach\(Array\([^)]*\.enumerated\(\)\)[^)]*id:\s*\\\.offset"),
+     "ForEach with tuple-keypath id: \\.offset",
+     "Swift 5.5 / Big Sur SwiftUI fragility — unstable view identity. " +
+     "Use ForEach(x.indices, id: \\.self) { i in let item = x[i]; ... }."),
 ]
 
 
