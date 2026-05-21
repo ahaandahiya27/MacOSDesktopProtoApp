@@ -252,6 +252,34 @@ enum ArticleIndex {
             chapterFolder: chapter1Folder,
             estimatedMinutes: 6
         ),
+        "ch01_plantoftheday": ArticleEntry(
+            id: "ch01_plantoftheday",
+            filename: "ch01_plantoftheday.html",
+            title: "Seven Plants You Should Know About",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 8
+        ),
+        "ch01_miniproject": ArticleEntry(
+            id: "ch01_miniproject",
+            filename: "ch01_miniproject.html",
+            title: "Mini Project — Grow a Chickpea, Build a Plant Diary",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 14
+        ),
+        "ch01_selfcheck": ArticleEntry(
+            id: "ch01_selfcheck",
+            filename: "ch01_selfcheck.html",
+            title: "Self-Check — Are You Ready for the Boss Quiz?",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 5
+        ),
+        "ch01_bridge": ArticleEntry(
+            id: "ch01_bridge",
+            filename: "ch01_bridge.html",
+            title: "What's Next — Where Chapter 1 Leads (Class 8 → NEET)",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 6
+        ),
 
         // ================================================================
         // CHAPTER 2 — Nutrition in Animals
