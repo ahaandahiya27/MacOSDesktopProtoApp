@@ -1318,6 +1318,18 @@ private struct VanHelmontWillowScene: View {
     @State private var guessRevealed = false
     @State private var pickedOption: String? = nil
 
+    /// Named option type so SwiftUI gets a stable Identifiable view of
+    /// the choices. Originally this was a tuple-array with
+    /// `ForEach(options, id: \.label)` — keypath-into-labeled-tuple is
+    /// fragile on Swift 5.5 (the Big Sur deploy compiler) and produced
+    /// "Entangling fence requested after pre-commit" SwiftUI warnings
+    /// plus an EXC_BAD_ACCESS during the transition into this scene.
+    private struct GuessOption: Identifiable {
+        let id: String       // also serves as the label
+        let isCorrect: Bool
+        let explanation: String
+    }
+
     // Tree mass grew roughly: 2.3 kg start → 76 kg at 5 years. Smooth a
     // curve through that. Soil drops by ~60 g over 5 years (barely
     // moves on the kid-facing dial — we round to one decimal kg).
@@ -1335,16 +1347,16 @@ private struct VanHelmontWillowScene: View {
         return 90.7 - 0.012 * t
     }
 
-    private let options: [(label: String, isCorrect: Bool, explanation: String)] = [
-        (label: "From the soil",
-         isCorrect: false,
-         explanation: "The soil weighed almost the same at the end — only ~60 g less. The tree did not eat the soil."),
-        (label: "From the rainwater",
-         isCorrect: false,
-         explanation: "Water gave the tree hydrogen and oxygen, but not most of the mass. Trees are mostly carbon."),
-        (label: "From CO₂ in the air",
-         isCorrect: true,
-         explanation: "Photosynthesis pulls CO₂ out of the air and locks the carbon into wood, leaves and bark. A tree is, mostly, captured sky.")
+    private let options: [GuessOption] = [
+        GuessOption(id: "From the soil",
+                    isCorrect: false,
+                    explanation: "The soil weighed almost the same at the end — only ~60 g less. The tree did not eat the soil."),
+        GuessOption(id: "From the rainwater",
+                    isCorrect: false,
+                    explanation: "Water gave the tree hydrogen and oxygen, but not most of the mass. Trees are mostly carbon."),
+        GuessOption(id: "From CO₂ in the air",
+                    isCorrect: true,
+                    explanation: "Photosynthesis pulls CO₂ out of the air and locks the carbon into wood, leaves and bark. A tree is, mostly, captured sky.")
     ]
 
     var body: some View {
@@ -1364,9 +1376,12 @@ private struct VanHelmontWillowScene: View {
                 // Visualisation
                 HStack(alignment: .bottom, spacing: 28) {
                     VStack(spacing: 6) {
+                        // No .animation(_:value:) — that's a macOS 12+
+                        // modifier (CLAUDE.md forbids macOS 12 APIs on
+                        // our Big Sur deploy target). Wrap the slider
+                        // change in withAnimation in the binding instead.
                         Text("🌳")
                             .font(.system(size: 18 + CGFloat(treeKg * 0.55)))
-                            .animation(.easeOut(duration: 0.2), value: years)
                         Text("Tree: \(String(format: "%.1f", treeKg)) kg")
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -1403,13 +1418,13 @@ private struct VanHelmontWillowScene: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .multilineTextAlignment(.center)
                         VStack(spacing: 8) {
-                            ForEach(options, id: \.label) { opt in
+                            ForEach(options) { opt in
                                 Button {
-                                    pickedOption = opt.label
+                                    pickedOption = opt.id
                                     guessRevealed = true
                                 } label: {
                                     HStack {
-                                        Text(opt.label)
+                                        Text(opt.id)
                                             .font(.body)
                                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                                         Spacer()
@@ -1435,7 +1450,7 @@ private struct VanHelmontWillowScene: View {
                 }
 
                 if guessRevealed, let picked = pickedOption,
-                   let chosen = options.first(where: { $0.label == picked }) {
+                   let chosen = options.first(where: { $0.id == picked }) {
                     SoftShadowCard(padding: 14) {
                         HStack(alignment: .top, spacing: 10) {
                             Image(systemName: chosen.isCorrect ? "checkmark.circle.fill" : "info.circle.fill")
