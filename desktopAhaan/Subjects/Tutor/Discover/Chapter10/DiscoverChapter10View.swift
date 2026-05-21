@@ -225,6 +225,11 @@ private struct HoldYourBreathTimerScene: View {
     @State private var seconds: Int = 0
     @State private var running: Bool = false
     @State private var bestSeconds: Int = 0
+    /// Generation counter — bumped on stop() and onDisappear so any
+    /// stale Task started by a previous start() exits its sleep loop
+    /// immediately instead of ticking on for up to 10 minutes after
+    /// the scene is dismissed.
+    @State private var generation: Int = 0
     var body: some View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Hold Your Breath").font(.largeTitle.bold())
@@ -259,18 +264,23 @@ private struct HoldYourBreathTimerScene: View {
                 .padding(.horizontal, 24).multilineTextAlignment(.center)
             GotItButton(action: onComplete).padding(.bottom, 12)
         }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+        .onDisappear { running = false; generation += 1 }
     }
     private func start() {
         seconds = 0; running = true
+        generation += 1
+        let myGen = generation
         Task { @MainActor in
-            while running && seconds < 600 {
+            while running && seconds < 600 && myGen == generation {
                 try? await Task.sleep(nanoseconds: 1_000_000_000)
+                if myGen != generation || !running { break }
                 seconds += 1
             }
         }
     }
     private func stop() {
         running = false
+        generation += 1
         if seconds > bestSeconds { bestSeconds = seconds }
     }
 }

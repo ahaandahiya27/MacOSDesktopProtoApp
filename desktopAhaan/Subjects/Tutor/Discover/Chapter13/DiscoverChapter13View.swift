@@ -264,6 +264,10 @@ private struct LapTimerScene: View {
     @State private var elapsed: Double = 0
     @State private var laps: [Double] = []
     @State private var running: Bool = false
+    /// Generation counter — bumped on stop() and onDisappear so any
+    /// stale Task started by a previous start() exits its loop instead
+    /// of ticking on after the scene is dismissed.
+    @State private var generation: Int = 0
     var body: some View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Lap Timer Mini-Game").font(.largeTitle.bold())
@@ -293,17 +297,21 @@ private struct LapTimerScene: View {
             }
             GotItButton(action: onComplete).padding(.bottom, 12)
         }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+        .onDisappear { running = false; generation += 1 }
     }
     private func start() {
         elapsed = 0; laps = []; running = true
+        generation += 1
+        let myGen = generation
         Task { @MainActor in
-            while running && elapsed < 600 {
+            while running && elapsed < 600 && myGen == generation {
                 try? await Task.sleep(nanoseconds: 100_000_000)
+                if myGen != generation || !running { break }
                 elapsed += 0.1
             }
         }
     }
-    private func stop() { running = false }
+    private func stop() { running = false; generation += 1 }
     private func lap() { laps.append(elapsed) }
 }
 
