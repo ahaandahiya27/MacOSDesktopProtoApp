@@ -146,20 +146,50 @@ final class ChapterContentTests: XCTestCase {
     /// them, we assert coverage stays at least at today's high-water-mark
     /// (≥ 90% of ArticleIndex entries have HTML) instead of demanding
     /// 100% which would block CI on a known content gap.
+    /// Every NON-enrichment article entry in `ArticleIndex.entries` must
+    /// resolve to an HTML file present in the app bundle. Previously this
+    /// only required a 90% pass rate, which let two newly-added
+    /// enrichment articles (`ch01_beyond`, `ch02_beyond`) slip through
+    /// silently when the files weren't added to the Xcode project
+    /// (`Articles/Chapter*` is a PBXGroup, not a folder reference —
+    /// every file must be individually added). The kid then saw an
+    /// "Article not found" dialog when tapping Beyond-the-Book.
+    ///
+    /// Now: tight 100% requirement for all non-enrichment entries.
+    /// `*_beyond` entries are allowed to be temporarily missing because
+    /// they require a manual Xcode "Add Files…" step that I as the
+    /// assistant cannot perform safely (CLAUDE.md forbids editing
+    /// pbxproj while Xcode is open). ChapterDetailView's
+    /// `beyondTheBookEntry` computed property gates the UI at runtime
+    /// so a missing enrichment file simply hides the card — no
+    /// dead-click. When the user adds the file via Xcode, the card
+    /// auto-appears and the test still passes.
     func testAllArticleHTMLFilesExistInBundle() {
         var missing: [String] = []
-        var total = 0
+        var pendingEnrichment: [String] = []
         for (key, entry) in ArticleIndex.entries {
-            total += 1
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
             let url = Bundle.main.url(forResource: name, withExtension: "html",
                                        subdirectory: entry.chapterFolder)
                 ?? Bundle.main.url(forResource: name, withExtension: "html")
-            if url == nil { missing.append(key) }
+            if url == nil {
+                if key.hasSuffix("_beyond") {
+                    pendingEnrichment.append(key)
+                } else {
+                    missing.append(key)
+                }
+            }
         }
-        let presentRatio = Double(total - missing.count) / Double(max(total, 1))
-        XCTAssertGreaterThanOrEqual(presentRatio, 0.90,
-                                    "HTML coverage dropped below 90% — \(missing.count)/\(total) entries missing: \(missing.prefix(8).joined(separator: ", "))")
+        XCTAssertTrue(missing.isEmpty,
+                      "\(missing.count) core article entries don't resolve to a bundled HTML file. " +
+                      "Most likely cause: file exists on disk but wasn't added to the Xcode project " +
+                      "(Articles/Chapter* is a PBXGroup, not a folder reference). " +
+                      "Missing: \(missing.sorted().joined(separator: ", "))")
+        if !pendingEnrichment.isEmpty {
+            // Don't fail — just announce. Once the file is added in
+            // Xcode this list goes empty by itself.
+            print("[ArticleBundleLint] pending enrichment articles awaiting Xcode-side add: \(pendingEnrichment.sorted().joined(separator: ", "))")
+        }
     }
 
     // MARK: - Content invariants (F7 / F8 / F9)

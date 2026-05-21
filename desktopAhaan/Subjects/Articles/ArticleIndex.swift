@@ -483,15 +483,10 @@ enum ArticleIndex {
         "ch05_t02_c02": ArticleEntry(id: "ch05_t02_c02", filename: "ch05_t02_c02.html",
             title: "Salts in Everyday Life",
             chapterFolder: chapter5Folder, estimatedMinutes: 5),
-        "ch05_t02_c03": ArticleEntry(id: "ch05_t02_c03", filename: "ch05_t02_c03.html",
-            title: "Acid Rain — When the Sky Turns Sour",
-            chapterFolder: chapter5Folder, estimatedMinutes: 6),
-        "ch05_t02_c04": ArticleEntry(id: "ch05_t02_c04", filename: "ch05_t02_c04.html",
-            title: "Antacids and Bee Stings — Neutralisation in Daily Life",
-            chapterFolder: chapter5Folder, estimatedMinutes: 5),
-        "ch05_t02_c05": ArticleEntry(id: "ch05_t02_c05", filename: "ch05_t02_c05.html",
-            title: "Soil pH and Farming — Why Farmers Add Lime",
-            chapterFolder: chapter5Folder, estimatedMinutes: 6),
+        // ch05_t02_c03..c05 — entries removed 2026-05-21: HTML files were
+        // never authored, so the kid was seeing "Article not found".
+        // Concept content still lives in the pack JSON; restore entries
+        // here once the HTML files are written and added to Xcode.
 
         // Topic 3: Acids and Bases in Industry and Nature
         "ch05_t03": ArticleEntry(id: "ch05_t03", filename: "ch05_t03_overview.html",
@@ -553,9 +548,8 @@ enum ArticleIndex {
         "ch06_t02_c02": ArticleEntry(id: "ch06_t02_c02", filename: "ch06_t02_c02.html",
             title: "Growing Crystals at Home — A Fun Experiment",
             chapterFolder: chapter6Folder, estimatedMinutes: 5),
-        "ch06_t02_c03": ArticleEntry(id: "ch06_t02_c03", filename: "ch06_t02_c03.html",
-            title: "Crystals in Nature and Industry",
-            chapterFolder: chapter6Folder, estimatedMinutes: 6),
+        // ch06_t02_c03 entry removed 2026-05-21: HTML file was never
+        // authored — restore once the file is written and added to Xcode.
 
         // Topic 3: Chemical Changes in Everyday Life
         "ch06_t03": ArticleEntry(id: "ch06_t03", filename: "ch06_t03_overview.html",
@@ -617,12 +611,9 @@ enum ArticleIndex {
         "ch07_t02_c03": ArticleEntry(id: "ch07_t02_c03", filename: "ch07_t02_c03.html",
             title: "Migration — The Long-Distance Solution",
             chapterFolder: chapter7Folder, estimatedMinutes: 6),
-        "ch07_t02_c04": ArticleEntry(id: "ch07_t02_c04", filename: "ch07_t02_c04.html",
-            title: "Desert Adaptations — Camels, Foxes, and Scorpions",
-            chapterFolder: chapter7Folder, estimatedMinutes: 6),
-        "ch07_t02_c05": ArticleEntry(id: "ch07_t02_c05", filename: "ch07_t02_c05.html",
-            title: "Hibernation and Aestivation — Sleeping Through Extremes",
-            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        // ch07_t02_c04..c05 — entries removed 2026-05-21: HTML files
+        // were never authored. Restore once the files are written and
+        // added to Xcode.
 
         // Topic 3: Climate Change and Animal Survival
         "ch07_t03": ArticleEntry(id: "ch07_t03", filename: "ch07_t03_overview.html",

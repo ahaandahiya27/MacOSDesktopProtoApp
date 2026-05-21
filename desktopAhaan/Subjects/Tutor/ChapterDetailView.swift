@@ -10,8 +10,20 @@ struct ChapterDetailView: View {
     @State private var showHomeExperiments = false
     @State private var showNotebook = false
 
+    /// Returns the chapter's "Beyond the Book" article entry ONLY when
+    /// the HTML file is actually findable in Bundle.main. Catches the
+    /// failure mode where someone (me!) adds a new HTML to disk but
+    /// forgets to add it to the Xcode project — without this gate, the
+    /// card opens an empty "Article not found" sheet on click.
     private var beyondTheBookEntry: ArticleEntry? {
-        ArticleIndex.entries["\(chapter.id)_beyond"]
+        guard let entry = ArticleIndex.entries["\(chapter.id)_beyond"] else {
+            return nil
+        }
+        let name = entry.filename.replacingOccurrences(of: ".html", with: "")
+        let resolved = Bundle.main.url(forResource: name, withExtension: "html",
+                                        subdirectory: entry.chapterFolder)
+            ?? Bundle.main.url(forResource: name, withExtension: "html")
+        return resolved != nil ? entry : nil
     }
 
     var body: some View {
