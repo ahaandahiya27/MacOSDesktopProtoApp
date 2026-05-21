@@ -169,7 +169,14 @@ final class SubjectRegistry: ObservableObject {
     /// Returns a pack by its id, or nil.
     func pack(withId id: String) -> SubjectPack? {
         if _packsById == nil {
-            _packsById = Dictionary(uniqueKeysWithValues: packs.map { ($0.id, $0) })
+            // Use uniquingKeysWith over uniqueKeysWithValues so a duplicate
+            // pack id (theoretically impossible — packs come from two named
+            // bundle files — but cheap to harden against) keeps the first
+            // entry and logs a data issue instead of fatally crashing.
+            _packsById = Dictionary(packs.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in
+                CrashReporter.shared.logDataIssue("Duplicate pack id at registry load: \(first.id) — keeping first, dropping later copy")
+                return first
+            })
         }
         return _packsById?[id]
     }

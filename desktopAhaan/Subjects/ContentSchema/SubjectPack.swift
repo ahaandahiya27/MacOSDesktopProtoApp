@@ -108,7 +108,16 @@ struct SubjectPack: Codable, Hashable, Identifiable {
     }
 
     fileprivate func buildChapterIndex() -> [String: Chapter] {
-        Dictionary(uniqueKeysWithValues: chapters.map { ($0.id, $0) })
+        // uniquingKeysWith over uniqueKeysWithValues — a duplicate chapter
+        // id in a hand-edited pack would fatally crash here otherwise.
+        // Test coverage exists (`testNoDuplicateChapterIdsInPack`), but the
+        // runtime path should be soft so a typo in content never wipes
+        // the morning's session.
+        let packId = id
+        return Dictionary(chapters.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in
+            CrashReporter.shared.logDataIssue("Duplicate chapter id in pack \(packId): \(first.id) — keeping first")
+            return first
+        })
     }
 
     // The three build functions below intentionally iterate `chapters`

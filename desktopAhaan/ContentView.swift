@@ -6,9 +6,21 @@ struct ContentView: View {
     @EnvironmentObject var dataStore: DataStore
     @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
     @AppStorage(AppStorageKeys.hasSeenAllChaptersCelebration) private var hasSeenAllChaptersCelebration: Bool = false
-    @State private var showShortcutsSheet = false
-    @State private var showCommandPalette = false
     @State private var showAllChaptersCelebration = false
+
+    /// Single source of truth for which sheet is on screen. Big Sur
+    /// SwiftUI silently no-ops all but the LAST `.sheet(isPresented:)`
+    /// modifier on a given view chain — so chaining `welcome + shortcuts
+    /// + commandPalette` left the welcome sheet silently broken AND
+    /// destabilised child sheet lifecycles (Try-at-Home dismiss was
+    /// landing in objc_release with EXC_BAD_ACCESS, same crash class
+    /// we fixed in ChapterDetailView commit 21f3d11). One `.sheet(item:)`
+    /// keyed on an Identifiable enum is the canonical Big Sur fix.
+    @State private var presentedSheet: ContentSheet?
+    private enum ContentSheet: String, Identifiable {
+        case welcome, shortcuts, commandPalette
+        var id: String { rawValue }
+    }
 
     /// Sum of every Boss Quiz score the student has earned across the 19
     /// chapters' Scene 9. nil-out when no Boss Quizzes have been completed
@@ -48,9 +60,6 @@ struct ContentView: View {
             }
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
-        .sheet(isPresented: Binding(get: { !hasSeenWelcome }, set: { if !$0 { hasSeenWelcome = true } })) {
-            WelcomeSheet { hasSeenWelcome = true }
-        }
         .overlay(
             // All-19-chapters-complete celebration (DM7/EM4). Fires once
             // when the student finishes the 171st scene and hasn't seen
@@ -81,14 +90,21 @@ struct ContentView: View {
                 hasSeenAllChaptersCelebration = true
             }
         }
-        .sheet(isPresented: $showShortcutsSheet) {
-            KeyboardShortcutsSheet { showShortcutsSheet = false }
-        }
-        .sheet(isPresented: $showCommandPalette) {
-            CommandPalette { showCommandPalette = false }
-                .environmentObject(subjectRegistry)
-                .environmentObject(appState)
-                .environmentObject(dataStore)
+        .sheet(item: $presentedSheet) { kind in
+            switch kind {
+            case .welcome:
+                WelcomeSheet {
+                    hasSeenWelcome = true
+                    presentedSheet = nil
+                }
+            case .shortcuts:
+                KeyboardShortcutsSheet { presentedSheet = nil }
+            case .commandPalette:
+                CommandPalette { presentedSheet = nil }
+                    .environmentObject(subjectRegistry)
+                    .environmentObject(appState)
+                    .environmentObject(dataStore)
+            }
         }
         .background(
             // Invisible buttons hosting global keyboard shortcuts.
@@ -97,12 +113,12 @@ struct ContentView: View {
             // a sheet-stacking glitch.
             ZStack {
                 Button("Show keyboard shortcuts") {
-                    if noOtherSheetOpen { showShortcutsSheet = true }
+                    if noOtherSheetOpen { presentedSheet = .shortcuts }
                 }
                 .keyboardShortcut("/", modifiers: .command)
 
                 Button("Open command palette") {
-                    if noOtherSheetOpen { showCommandPalette = true }
+                    if noOtherSheetOpen { presentedSheet = .commandPalette }
                 }
                 .keyboardShortcut("k", modifiers: .command)
             }
@@ -115,12 +131,21 @@ struct ContentView: View {
         // most useful in-app help we have today (shortcuts + a brief
         // overview header).
         .onReceive(NotificationCenter.default.publisher(for: .openInAppHelp)) { _ in
-            if noOtherSheetOpen { showShortcutsSheet = true }
+            if noOtherSheetOpen { presentedSheet = .shortcuts }
+        }
+        .onAppear {
+            // Drive the welcome sheet through the same single-sheet
+            // dispatcher rather than a stacked .sheet(isPresented:) with
+            // a synthetic Binding. Only fires once per install (gated by
+            // the @AppStorage flag) and only if no other sheet is up.
+            if !hasSeenWelcome && presentedSheet == nil {
+                presentedSheet = .welcome
+            }
         }
     }
 
     private var noOtherSheetOpen: Bool {
-        hasSeenWelcome && !showShortcutsSheet && !showCommandPalette
+        hasSeenWelcome && presentedSheet == nil
     }
 
     /// Count questions in a pack that the parent still needs to triage.
