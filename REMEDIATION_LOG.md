@@ -37,4 +37,20 @@
 - Findings closed (Top-10 audit): #2, #5, #6, #7, #10
 - Findings remaining (Top-10 audit): #1 partial (Ch1+ContentView splits done; ArticleIndex, DiscoverChapter2View, QuestionDetailView, ChapterDetailView, DataStore still pending), #3 (coverage matrix), #4 (snapshot tests), #8 (Color.compat migration), #9 (accessibilityHint sweep)
 - Build state: clean (all 311 tests pass)
-- Estimated time to zero findings at current rate: ~5–7 more hours of iterations (rate is ~15 min/iter for surgical changes, ~25 min/iter for split refactors with the XcodeWrite path-prefix workaround)
+
+## 12h-spec iterations (parallel track)
+
+[2026-05-22 01:40] iter 1 · docs · 5 log files + coverage scanner seeded · `1d43990` · pushed:y
+[2026-05-22 01:45] iter 2-4 · fix(crash) · C1+C2+C3+C4 deep scan returned zero hits; lint extended with 3 forward-prevention rules (unowned, var delegate, @unchecked Sendable); DEEP_SCAN_RESULTS.md snapshot · `882dcf2` · pushed:y
+
+## 12h-spec 2-hour checkpoint — 2026-05-22 01:50 +05:30
+
+- Iterations completed: 4 (12h-spec) + 8 (audit Top-10 from earlier in session) = 12 total today
+- Commits pushed: 10 since session start (995de21, ef1e867, 5457f2a, 11fd545, 9fd1e53, 0f2eecd, 47452c9, 36ad98b, a201939, 1d43990, 882dcf2)
+- Crashes captured this checkpoint: 0 new (all 4 classes already had mitigations from earlier session work)
+- C1/C2/C3/C4 status: 🟡 / 🟡 / ✅ / ✅ (C1+C2 awaiting locking XCUITest walker — out of scope for headless tool use)
+- Walker pass rate: N/A (XCUITest walker not yet built; requires Xcode-scheme modifications)
+- Sanitizer hits: N/A (ASan/TSan scheme variants not yet built)
+- Scale plan progress: 0 / 10 steps (SCALE_PLAN.md drafted; refactor steps not yet executed)
+- Ch.1 enrichment: ledger created (CH1_LEVEL_LOG.md); 8 open next-level items queued (CH1-L1..L8)
+- Build: clean, 311 tests green
