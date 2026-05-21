@@ -853,6 +853,41 @@ final class ChapterContentTests: XCTestCase {
     private func clearStreakDefaults() {
         UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakDays)
         UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakLastDate)
+        UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakBest)
+    }
+
+    @MainActor func testStreak_BestEverTracksHighWaterMark() {
+        clearStreakDefaults()
+        defer { clearStreakDefaults() }
+        let store = DataStore()
+        store.questionReviews.removeAll()
+        let day1 = Date(timeIntervalSince1970: 1_700_000_000)
+        let cal = Calendar.current
+
+        // Build a 4-day streak.
+        for offset in 0..<4 {
+            let d = cal.date(byAdding: .day, value: offset, to: day1)!
+            store.recordReview(questionId: "q\(offset)", quality: .good, at: d)
+        }
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 4)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakBest), 4,
+                       "Best should track the 4-day high.")
+
+        // Break the streak — 5-day gap → resets to 1.
+        let day10 = cal.date(byAdding: .day, value: 10, to: day1)!
+        store.recordReview(questionId: "q-gap", quality: .good, at: day10)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakBest), 4,
+                       "Best should stick at 4 even after current resets.")
+
+        // Rebuild higher — 6-day streak.
+        for offset in 1..<6 {
+            let d = cal.date(byAdding: .day, value: 10 + offset, to: day1)!
+            store.recordReview(questionId: "q-rebuild\(offset)", quality: .good, at: d)
+        }
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 6)
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakBest), 6,
+                       "Best should bump to the new high-water-mark.")
     }
 
     @MainActor func testStreak_FirstEverReviewSetsToOne() {

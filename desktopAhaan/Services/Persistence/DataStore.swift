@@ -584,6 +584,12 @@ final class DataStore: ObservableObject {
 
         defaults.set(nextStreak, forKey: AppStorageKeys.reviewStreakDays)
         defaults.set(today, forKey: AppStorageKeys.reviewStreakLastDate)
+
+        // Track all-time best for the Streak History display.
+        let priorBest = defaults.integer(forKey: AppStorageKeys.reviewStreakBest)
+        if nextStreak > priorBest {
+            defaults.set(nextStreak, forKey: AppStorageKeys.reviewStreakBest)
+        }
     }
 
     /// Questions that are due for review at or before `now`. Returns the

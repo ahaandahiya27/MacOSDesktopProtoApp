@@ -87,6 +87,12 @@ enum AppStorageKeys {
     /// credited. Used to decide whether tonight's completion extends
     /// (yesterday), keeps (today), or resets (>1 day gap) the streak.
     static let reviewStreakLastDate = "reviewStreakLastDate"
+
+    /// All-time longest streak achieved by the kid. Bumped whenever the
+    /// current streak exceeds the previous high-water-mark. Surfaces in
+    /// the Daily Practice header alongside the current streak so the
+    /// kid sees both: "you're on day 3 of a streak; your best ever is 14".
+    static let reviewStreakBest = "reviewStreakBest"
 }
 
 // MARK: - SF Symbols backfill for Big Sur

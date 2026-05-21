@@ -430,6 +430,8 @@ private struct DailyPracticeContent: View {
     /// Persisted N-day review streak. Updated by DataStore.recordReview
     /// each time a question is rated; idempotent within a calendar day.
     @AppStorage(AppStorageKeys.reviewStreakDays) private var streakDays: Int = 0
+    @AppStorage(AppStorageKeys.reviewStreakBest) private var streakBest: Int = 0
+    @AppStorage(AppStorageKeys.reviewStreakLastDate) private var streakLastDate: String = ""
 
     var body: some View {
         ScrollView {
@@ -437,6 +439,9 @@ private struct DailyPracticeContent: View {
                 header
                 if !dueEntries.isEmpty {
                     reviewQueueCard
+                }
+                if streakDays > 0 || streakBest > 0 {
+                    streakHistoryCard
                 }
                 if toughEntries.isEmpty && dueEntries.isEmpty {
                     emptyState
@@ -553,6 +558,50 @@ private struct DailyPracticeContent: View {
             RoundedRectangle(cornerRadius: 12)
                 .strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1)
         )
+    }
+
+    /// Streak history strip — surfaces the all-time best alongside the
+    /// current streak, plus a "last review" date readout so the kid
+    /// can see when they last practised. Only renders when there's
+    /// some streak history to show; suppressed entirely on day 0.
+    private var streakHistoryCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Label("Streak history", systemImage: "calendar")
+                    .font(.headline)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                Spacer()
+            }
+            HStack(spacing: 18) {
+                statBlock(value: "\(streakDays)", label: "Current",
+                          color: DesignTokens.BrandColor.tryAtHome)
+                statBlock(value: "\(streakBest)", label: "Best ever",
+                          color: DesignTokens.BrandColor.primaryAction)
+                statBlock(value: streakLastDate.isEmpty ? "—" : streakLastDate,
+                          label: "Last review",
+                          color: DesignTokens.BrandColor.canvasTextSecondary)
+            }
+            if streakDays == streakBest && streakBest > 1 {
+                Text("🏆 You're on your best-ever streak — keep going!")
+                    .font(.caption.italic())
+                    .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
+            }
+        }
+        .padding(14)
+        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white))
+        .overlay(RoundedRectangle(cornerRadius: 12)
+            .strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
+    }
+
+    private func statBlock(value: String, label: String, color: Color) -> some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text(value)
+                .font(.title3.weight(.bold).monospacedDigit())
+                .foregroundColor(color)
+            Text(label)
+                .font(.caption)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        }
     }
 
     private var emptyState: some View {
