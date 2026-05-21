@@ -31,52 +31,57 @@ struct Scene1_PlantKitchen: View {
     }
 
     var body: some View {
-        // Refactored ZStack-overlap pattern to ScrollView+VStack. The
-        // ambient particles + leaf + speech bubble all live in an inner
-        // GeometryReader-backed canvas sized to 420pt so the leaf
-        // (220×280, centered) AND the speech bubble (positioned ~170pt
-        // above center) both fit without clipping.
+        // 2026-05-22 fix: replaced inner `GeometryReader` with a fixed
+        // 600×420 canvas. The previous ScrollView { LazyVStack {
+        // GeometryReader { … } } } nesting triggered AppKit's
+        // `_NSDetectedLayoutRecursion` on Big Sur — GeometryReader's
+        // indeterminate width inside a vertical-scrolling container
+        // made SwiftUI's layout iteratively re-converge, occasionally
+        // landing in objc_release with EXC_BAD_ACCESS on the AMD R9
+        // M290X. Hardcoded canvas dimensions eliminate the layout
+        // ambiguity. Sizes chosen so leaf (220×280, centered) and
+        // speech bubble (right of leaf, ~75pt from top) both fit.
+        // Also lightened combined `.scale + .opacity` transitions to
+        // plain `.opacity` — combined transitions are the second-most
+        // common Big Sur render-loop trigger after the layout one.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                GeometryReader { geo in
-                    ZStack {
-                        // Ambient animation (sunlight rays, water drops, CO₂ wisps)
-                        if !reduceMotion {
-                            ZStack {
-                                sunRays(t: tick, in: geo.size)
-                                waterDrops(t: tick, in: geo.size)
-                                co2Wisps(t: tick, in: geo.size)
-                            }
-                        }
-
-                        // The central leaf
+                ZStack {
+                    // Ambient animation (sunlight rays, water drops, CO₂ wisps)
+                    if !reduceMotion {
                         ZStack {
-                            DrawnLeaf(pulse: pulse)
-                                .frame(width: 220, height: 280)
-                                .onTapGesture { tappedLeaf() }
-                                .accessibilityAddTraits(.isButton)
-                                .accessibilityLabel("Tap the leaf to make it cook food.")
-
-                            // Glucose molecule that emerges on tap
-                            if showGlucose {
-                                GlucoseHex()
-                                    .frame(width: 80, height: 80)
-                                    .offset(x: 140, y: -100)
-                                    .transition(.opacity.combined(with: .scale))
-                            }
-                        }
-                        .position(x: geo.size.width / 2, y: geo.size.height * 0.55)
-
-                        // Speech bubble — placed above the leaf, still inside
-                        // the 420pt canvas so it doesn't clip.
-                        if showBubble {
-                            SpeechBubble(text: "I just made my own food!")
-                                .position(x: geo.size.width / 2 + 160, y: geo.size.height * 0.18)
-                                .transition(.scale.combined(with: .opacity))
+                            sunRays(t: tick, in: CGSize(width: 600, height: 420))
+                            waterDrops(t: tick, in: CGSize(width: 600, height: 420))
+                            co2Wisps(t: tick, in: CGSize(width: 600, height: 420))
                         }
                     }
+
+                    // The central leaf
+                    ZStack {
+                        DrawnLeaf(pulse: pulse)
+                            .frame(width: 220, height: 280)
+                            .onTapGesture { tappedLeaf() }
+                            .accessibilityAddTraits(.isButton)
+                            .accessibilityLabel("Tap the leaf to make it cook food.")
+
+                        // Glucose molecule that emerges on tap
+                        if showGlucose {
+                            GlucoseHex()
+                                .frame(width: 80, height: 80)
+                                .offset(x: 140, y: -100)
+                                .transition(.opacity)
+                        }
+                    }
+                    .position(x: 300, y: 231)
+
+                    // Speech bubble — placed above the leaf.
+                    if showBubble {
+                        SpeechBubble(text: "I just made my own food!")
+                            .position(x: 460, y: 76)
+                            .transition(.opacity)
+                    }
                 }
-                .frame(height: 420)
+                .frame(width: 600, height: 420)
 
                 Group {
                     SoftShadowCard(padding: 18) {
