@@ -34,6 +34,8 @@
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
 		04C77ECE2FB9BFE30025F850 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */; };
+		04CD70ED2FBEC33700D71B32 /* ch01_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */; };
+		04CD70EF2FBEC36600D71B32 /* ch02_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 04CD70EE2FBEC36600D71B32 /* ch02_beyond.html */; };
 		04F59D052FB8EE4700568BDE /* DiscoverChapter8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */; };
 		04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */; };
 		04F59D0A2FB8EE4700568BDE /* Scene2_AirPressureDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */; };
@@ -640,6 +642,8 @@
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
 		04C77ECD2FB9BFE30025F850 /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReporter.swift; sourceTree = "<group>"; };
+		04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_beyond.html; sourceTree = "<group>"; };
+		04CD70EE2FBEC36600D71B32 /* ch02_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch02_beyond.html; sourceTree = "<group>"; };
 		04F59D042FB8EE4700568BDE /* DiscoverChapter8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverChapter8View.swift; sourceTree = "<group>"; };
 		04F59D072FB8EE4700568BDE /* Scene1_HotAirRises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene1_HotAirRises.swift; sourceTree = "<group>"; };
 		04F59D092FB8EE4700568BDE /* Scene2_AirPressureDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2_AirPressureDrop.swift; sourceTree = "<group>"; };
@@ -1824,6 +1828,7 @@
 				F074016753DCC7F1B0E558D8 /* ch02_t03_c02.html */,
 				451F978F5CD7A2968A524BB8 /* ch02_t03_c03.html */,
 				2480A85C734BCA393224E155 /* ch02_t03_overview.html */,
+				04CD70EE2FBEC36600D71B32 /* ch02_beyond.html */,
 			);
 			path = Chapter2;
 			sourceTree = "<group>";
@@ -2204,6 +2209,7 @@
 				2C5BB74B96C7E8C3F4BA2F05 /* ch01_t03_c03.html */,
 				24764EC046AE23AEED800653 /* ch01_t03_c04.html */,
 				F0BDDF7A6A5E212A747845AA /* ch01_t03_overview.html */,
+				04CD70EC2FBEC33600D71B32 /* ch01_beyond.html */,
 			);
 			path = Chapter1;
 			sourceTree = "<group>";
@@ -2769,6 +2775,7 @@
 				926AD2B02D28E3D5F3A89931 /* ch07_overview.html in Resources */,
 				FDE9308F876A5A17C976FDAC /* ch07_style.css in Resources */,
 				F2009982AE1F6793C04D12EF /* ch07_t01_c01.html in Resources */,
+				04CD70ED2FBEC33700D71B32 /* ch01_beyond.html in Resources */,
 				F681DA08BE644D4E73A93FC0 /* ch07_t01_c02.html in Resources */,
 				35393992B3343A7ECE1F00F3 /* ch07_t01_c03.html in Resources */,
 				4BA12482023B1A69E50EF7E2 /* ch07_t01_c04.html in Resources */,
@@ -2786,6 +2793,7 @@
 				235A6FF391E53481F06A394B /* ch19_t01_c01.html in Resources */,
 				016BFD7626F72F90A52CA07F /* ch19_t01_c02.html in Resources */,
 				F997E5782A868A788D77A26A /* ch19_t01_c03.html in Resources */,
+				04CD70EF2FBEC36600D71B32 /* ch02_beyond.html in Resources */,
 				31BDB159FF11E32A184CF791 /* ch19_t01_c04.html in Resources */,
 				04F59E0D2FB94EFB00568BDE /* ch12_overview.html in Resources */,
 				ED2BC3D39ED11DBE8B049F91 /* ch19_t01_c05.html in Resources */,
@@ -3405,11 +3413,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = desktopAhaan/desktopAhaan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -3437,11 +3444,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = desktopAhaan/desktopAhaan.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -3466,10 +3472,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanTests;
@@ -3485,10 +3491,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanTests;
