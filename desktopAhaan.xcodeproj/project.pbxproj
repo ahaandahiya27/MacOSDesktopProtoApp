@@ -31,6 +31,8 @@
 		04674C6C2FB8E0B4004A7D5C /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */; };
 		04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */; };
 		04B83C202FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */; };
+		04B83C242FBF969A005D3D07 /* DailyPracticeViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */; };
+		04B83C262FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */; };
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
@@ -651,6 +653,8 @@
 		04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverProgressDashboard.swift; sourceTree = "<group>"; };
 		04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_t01_c01.html; sourceTree = "<group>"; };
 		04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
+		04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeViewSheet.swift; sourceTree = "<group>"; };
+		04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChaptersCompleteOverlay.swift; sourceTree = "<group>"; };
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
@@ -1797,6 +1801,7 @@
 				693EC3C46A7D2D158F08A11E /* LanguageSelectorBar.swift */,
 				D5092715102BBAADC05DE2FF /* StatusCards.swift */,
 				D10A02E3F473B9504F1542EC /* TranslationResultCard.swift */,
+				04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -2131,6 +2136,7 @@
 			isa = PBXGroup;
 			children = (
 				199371C91C2B1D7B95F2F472 /* PracticeScreen.swift */,
+				04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */,
 			);
 			path = Practice;
 			sourceTree = "<group>";
@@ -3085,6 +3091,7 @@
 				04F59D082FB8EE4700568BDE /* Scene1_HotAirRises.swift in Sources */,
 				BA934CBAAF04DEEA41776185 /* AskFollowUpView.swift in Sources */,
 				04F59D7E2FB8F0CD00568BDE /* Scene5_UniformNonUniform.swift in Sources */,
+				04B83C262FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift in Sources */,
 				C5834237D6A667663DBB25D1 /* BookmarksView.swift in Sources */,
 				04F59E2D2FB95A6100568BDE /* ChapterTheme.swift in Sources */,
 				04F59D442FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift in Sources */,
@@ -3097,6 +3104,7 @@
 				5A91FBC7292A7B95172E5469 /* ConceptDetailView.swift in Sources */,
 				04F59D762FB8F0CA00568BDE /* Scene1_FastOrSlow.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,
+				04B83C242FBF969A005D3D07 /* DailyPracticeViewSheet.swift in Sources */,
 				8B35F409465BC5F103622B78 /* QuizBankView.swift in Sources */,
 				FD21543D866EBAF82E8DF6DA /* SanskritSubjectHomeView.swift in Sources */,
 				A5C9475A516F1D5E5EFD3A75 /* SearchView.swift in Sources */,
