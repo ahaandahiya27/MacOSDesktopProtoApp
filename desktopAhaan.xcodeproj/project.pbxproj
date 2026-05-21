@@ -30,6 +30,7 @@
 		04674C6A2FB8E09E004A7D5C /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C692FB8E09E004A7D5C /* SettingsManagerTests.swift */; };
 		04674C6C2FB8E0B4004A7D5C /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */; };
 		04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */; };
+		04B83C202FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */; };
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
@@ -649,6 +650,7 @@
 		04674C6B2FB8E0B4004A7D5C /* SubjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRegistryTests.swift; sourceTree = "<group>"; };
 		04674C6D2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverProgressDashboard.swift; sourceTree = "<group>"; };
 		04B039EF1B05703AADB8EF20 /* ch16_t01_c01.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch16_t01_c01.html; sourceTree = "<group>"; };
+		04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
@@ -2275,6 +2277,7 @@
 				04F59DC92FB8F2C300568BDE /* Chapter17 */,
 				04F59DDF2FB8F34100568BDE /* Chapter18 */,
 				04F59E2C2FB95A6100568BDE /* ChapterTheme.swift */,
+				04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -3053,6 +3056,7 @@
 				C705C4CCFC9FDE33025F1191 /* ModelContext+SafeSave.swift in Sources */,
 				04F59D3C2FB8EF4E00568BDE /* Scene5_FishGillFlow.swift in Sources */,
 				04F59D542FB8EFCE00568BDE /* Scene6_XylemWaterClimb.swift in Sources */,
+				04B83C202FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift in Sources */,
 				04F59D202FB8EED000568BDE /* Scene2_SandClayLoam.swift in Sources */,
 				0285215969F94AD942B6DD58 /* Chapter.swift in Sources */,
 				7BAF2E39EA259F6E783988C3 /* Concept.swift in Sources */,
