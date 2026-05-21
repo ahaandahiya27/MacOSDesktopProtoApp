@@ -13,9 +13,9 @@ struct Scene9_BossQuiz: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = Array(repeating: nil, count: 15)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 15)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -92,6 +92,36 @@ struct Scene9_BossQuiz: View {
                 answer: "Starch",
                 explanation: "Test a leaf with iodine — it turns blue-black where starch is stored."
             ),
+        Ch1QuizItem(
+            prompt: "Van Helmont grew a willow sapling from 2 kg to 76 kg over five years. The soil weighed almost the same at the end. Where did the extra mass come from?",
+            options: ["From the water alone", "From CO\u{2082} in the air", "From the pot itself", "From sunlight directly"],
+            answer: "From CO\u{2082} in the air",
+            explanation: "Trees pull carbon out of the air through photosynthesis. Most of the dry mass of a tree was once a gas."
+        ),
+        Ch1QuizItem(
+            prompt: "Jagdish Chandra Bose became famous for inventing the crescograph, which proved that:",
+            options: ["Plants make their own food", "Plants respond to stimuli like animals do", "Plants have DNA", "Plants are made of cells"],
+            answer: "Plants respond to stimuli like animals do",
+            explanation: "Bose's machine magnified plant movement 10,000\u{00D7}, showing that plants react to light, heat and touch."
+        ),
+        Ch1QuizItem(
+            prompt: "Chlorophyll (green pigment in plants) and haemoglobin (red pigment in blood) are almost the same molecule. They differ mainly in the metal at their centre. Chlorophyll has magnesium; haemoglobin has:",
+            options: ["Copper", "Zinc", "Iron", "Gold"],
+            answer: "Iron",
+            explanation: "The same ring of atoms with different metals: Mg in chlorophyll, Fe in haemoglobin. That tiny swap changes the colour and the job."
+        ),
+        Ch1QuizItem(
+            prompt: "The sea slug Elysia chlorotica is unusual because it eats algae and then:",
+            options: ["Spits the chloroplasts out", "Keeps the chloroplasts alive in its skin and makes its own food", "Turns into a plant", "Stops eating forever"],
+            answer: "Keeps the chloroplasts alive in its skin and makes its own food",
+            explanation: "It is one of the only animals that can photosynthesise \u{2014} the line between plant and animal blurs."
+        ),
+        Ch1QuizItem(
+            prompt: "Photosynthesis turns roughly what fraction of the sunlight that hits a leaf into stored food?",
+            options: ["Almost 100\u{0025}", "About 50\u{0025}", "About 20\u{0025}", "Only 3 to 6\u{0025}"],
+            answer: "Only 3 to 6\u{0025}",
+            explanation: "Solar panels can reach 20\u{0025}. Photosynthesis is much less efficient \u{2014} but plants do many other things at once."
+        )
     ]
 
     var body: some View {
@@ -105,12 +135,12 @@ struct Scene9_BossQuiz: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: 15)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 10")
+                    Text("Question \(currentQ + 1) of 15")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -149,7 +179,7 @@ struct Scene9_BossQuiz: View {
                     }
 
                     if revealed[currentQ] {
-                        Button(currentQ < 9 ? "Next question" : "See my score") {
+                        Button(currentQ < 14 ? "Next question" : "See my score") {
                             advance()
                         }
 
@@ -206,7 +236,7 @@ struct Scene9_BossQuiz: View {
     }
 
     private func advance() {
-        if currentQ < 9 {
+        if currentQ < 14 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -223,7 +253,7 @@ struct Scene9_BossQuiz: View {
             Text("You finished Chapter 1 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 10")
+            Text("Score: \(score) / 15")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -256,7 +286,7 @@ struct Scene9_BossQuiz: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 15), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return

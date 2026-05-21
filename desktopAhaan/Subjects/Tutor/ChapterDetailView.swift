@@ -6,6 +6,11 @@ struct ChapterDetailView: View {
     let chapter: Chapter
 
     @EnvironmentObject private var nav: TutorNavigationState
+    @State private var showHomeExperiments = false
+
+    private var beyondTheBookEntry: ArticleEntry? {
+        ArticleIndex.entries["\(chapter.id)_beyond"]
+    }
 
     var body: some View {
         ScrollView {
@@ -23,6 +28,21 @@ struct ChapterDetailView: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                }
+
+                // Enrichment surfaces: "Beyond the Book" article (long-form
+                // reading) and "Try at Home" sheet (hands-on experiments).
+                // Both only render for chapters that have content authored;
+                // the lookups gate visibility automatically.
+                if beyondTheBookEntry != nil || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                    HStack(spacing: 12) {
+                        if let entry = beyondTheBookEntry {
+                            BeyondTheBookCard(entry: entry)
+                        }
+                        if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                            TryAtHomeCard { showHomeExperiments = true }
+                        }
+                    }
                 }
 
                 ForEach(chapter.topics) { topic in
@@ -51,8 +71,400 @@ struct ChapterDetailView: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Ch. \(chapter.number) — \(chapter.title)")
+        .sheet(isPresented: $showHomeExperiments) {
+            HomeExperimentsSheet(
+                chapterId: chapter.id,
+                chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
+            )
+        }
     }
 
+}
+
+// MARK: - Beyond the Book card
+
+private struct BeyondTheBookCard: View {
+    let entry: ArticleEntry
+    @State private var isHovered = false
+
+    var body: some View {
+        Button {
+            ArticleWindowManager.shared.openArticle(
+                filename: entry.filename,
+                chapterFolder: entry.chapterFolder
+            )
+        } label: {
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 8) {
+                    Text("📖")
+                        .font(.system(size: 26))
+                    Text("Beyond the Book")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                Text(entry.title)
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.92))
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                Text("≈ \(entry.estimatedMinutes) min read")
+                    .font(.caption2)
+                    .foregroundColor(.white.opacity(0.85))
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.45, green: 0.30, blue: 0.65),
+                                Color(red: 0.25, green: 0.40, blue: 0.70)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
+            )
+            .scaleEffect(isHovered ? 1.01 : 1.0)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .onHover { isHovered = $0 }
+        .accessibilityLabel("Beyond the Book")
+        .accessibilityHint("Opens a long-form enrichment article for this chapter.")
+    }
+}
+
+// MARK: - Try at Home card
+
+private struct TryAtHomeCard: View {
+    let onTap: () -> Void
+    @State private var isHovered = false
+
+    var body: some View {
+        Button(action: onTap) {
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(spacing: 8) {
+                    Text("🧪")
+                        .font(.system(size: 26))
+                    Text("Try at Home")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                Text("Hands-on experiments you can do this weekend.")
+                    .font(.caption)
+                    .foregroundColor(.white.opacity(0.92))
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                Text("5 experiments")
+                    .font(.caption2)
+                    .foregroundColor(.white.opacity(0.85))
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.85, green: 0.45, blue: 0.25),
+                                Color(red: 0.65, green: 0.30, blue: 0.50)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
+            )
+            .scaleEffect(isHovered ? 1.01 : 1.0)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .onHover { isHovered = $0 }
+        .accessibilityLabel("Try at Home")
+        .accessibilityHint("Opens hands-on home experiments for this chapter.")
+    }
+}
+
+// MARK: - Home Experiments sheet
+//
+// A dedicated UI surface for hands-on experiments tied to a chapter.
+// Separate from Discover (interactive in-app) and Articles (long-form
+// reading) — these are real-world activities the kid can run with kitchen
+// or garden supplies. Big Sur compatible: no .foregroundStyle, no
+// .symbolEffect, no Color.brown.
+
+struct HomeExperiment: Identifiable {
+    let id: String
+    let emoji: String
+    let title: String
+    let needs: [String]
+    let steps: [String]
+    let whyItWorks: String
+    let estimatedMinutes: Int
+}
+
+enum HomeExperimentLibrary {
+    static let experiments: [String: [HomeExperiment]] = [
+        "ch01": [
+            HomeExperiment(
+                id: "ch01_exp_starch_map",
+                emoji: "🌿",
+                title: "Iodine starch map of a leaf",
+                needs: [
+                    "One healthy potted plant (mint, money plant or hibiscus all work)",
+                    "A small piece of black paper or cardboard",
+                    "Iodine solution from the chemist (or povidone-iodine in a pinch)",
+                    "Boiling water and warm alcohol (ask a grown-up)",
+                    "A white plate"
+                ],
+                steps: [
+                    "Cover a corner of one leaf (on the plant) with black paper. Tape it down so no light gets in.",
+                    "Leave the plant in bright sunlight for a full day.",
+                    "Pluck the leaf. Boil it for 1 minute in water to kill it.",
+                    "Move it to warm alcohol — the leaf turns pale as chlorophyll washes out.",
+                    "Rinse it. Drop iodine onto the leaf for 30 seconds, then rinse again.",
+                    "Look closely. The covered part stays pale; the rest turns blue-black."
+                ],
+                whyItWorks: "Iodine turns blue-black wherever starch is hiding. Sunlit parts of the leaf made starch by photosynthesis; the covered corner could not. You just photographed photosynthesis.",
+                estimatedMinutes: 60
+            ),
+            HomeExperiment(
+                id: "ch01_exp_celery_xylem",
+                emoji: "💧",
+                title: "Coloured-water celery — xylem in action",
+                needs: [
+                    "One stalk of fresh celery with leaves",
+                    "A glass of water",
+                    "A small bottle of red or blue food colour",
+                    "A sharp knife (use it with an adult)"
+                ],
+                steps: [
+                    "Trim 2 cm off the bottom of the celery stalk so the cut is fresh.",
+                    "Pour water into the glass and add 10 drops of food colour. Stir.",
+                    "Stand the celery in the coloured water with the cut end down.",
+                    "Wait 3–4 hours. Check the leaves and the stalk.",
+                    "Slice the stalk crossways. Count the coloured dots."
+                ],
+                whyItWorks: "The dots are the xylem — tiny straws that pull water up from roots to leaves using a force called capillary action plus the suction from leaves losing water. You can literally see the plant's plumbing.",
+                estimatedMinutes: 240
+            ),
+            HomeExperiment(
+                id: "ch01_exp_mimosa_clock",
+                emoji: "🤚",
+                title: "Mimosa pudica reaction time",
+                needs: [
+                    "A touch-me-not (Mimosa pudica) plant in a pot or in a garden",
+                    "A stopwatch or phone timer",
+                    "A pencil to gently poke"
+                ],
+                steps: [
+                    "Sit with the plant in a quiet spot in mid-morning.",
+                    "Start the timer and gently touch one leaflet with the pencil tip.",
+                    "Stop the timer the moment the whole leaf has folded.",
+                    "Wait 5 minutes for it to reopen, then repeat with a different leaf.",
+                    "Try at 9 a.m., noon, and 4 p.m. and compare times."
+                ],
+                whyItWorks: "Mimosa cells at the base of each leaflet lose water in a flash when poked. The leaf collapses, hiding it from imaginary herbivores. J. C. Bose's crescograph in Calcutta a hundred years ago first recorded responses like this and proved plants can react in seconds, not days.",
+                estimatedMinutes: 30
+            ),
+            HomeExperiment(
+                id: "ch01_exp_pondscope",
+                emoji: "🔬",
+                title: "Spirogyra oxygen bubbles",
+                needs: [
+                    "A pinch of bright-green pond scum (Spirogyra) from any clean pond or fish tank",
+                    "A small glass jar with water",
+                    "Sunlight from a window",
+                    "A magnifying glass (optional)"
+                ],
+                steps: [
+                    "Place the green algae in the jar of water.",
+                    "Stand the jar in bright direct sunlight.",
+                    "Watch closely for 15 minutes — tiny silver bubbles will start to rise from the algae.",
+                    "After an hour, gently push the green strands aside. The bubbles will keep coming."
+                ],
+                whyItWorks: "Each bubble is pure oxygen made by photosynthesis. The same gas you are breathing right now was made — over hundreds of millions of years — by green cells just like these. You are watching the air being born.",
+                estimatedMinutes: 60
+            ),
+            HomeExperiment(
+                id: "ch01_exp_root_nodules",
+                emoji: "🌱",
+                title: "Chickpea root nodules in a jar",
+                needs: [
+                    "A handful of dry kala chana or whole black gram (uncooked)",
+                    "A jar with garden soil",
+                    "Water",
+                    "Patience for 2–3 weeks"
+                ],
+                steps: [
+                    "Soak the chana in water overnight.",
+                    "Push 4 soaked seeds into the soil about 2 cm deep, water lightly.",
+                    "Keep the jar near a window. Water every 2 days.",
+                    "After 2–3 weeks, gently lift out one seedling with all its roots.",
+                    "Rinse the roots in a bowl. Look for tiny round bumps."
+                ],
+                whyItWorks: "Those bumps are root nodules. Inside each one lives a colony of Rhizobium bacteria pulling nitrogen straight out of the air and trading it to the plant for sugar. Farmers have used this trade for thousands of years — that's why crops are rotated with legumes.",
+                estimatedMinutes: 60
+            )
+        ]
+    ]
+
+    static func hasExperiments(for chapterId: String) -> Bool {
+        guard let list = experiments[chapterId] else { return false }
+        return !list.isEmpty
+    }
+}
+
+struct HomeExperimentsSheet: View {
+    let chapterId: String
+    let chapterTitle: String
+
+    @Environment(\.presentationMode) private var presentationMode
+
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .center) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Try at Home")
+                        .font(.title2.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    Text(chapterTitle)
+                        .font(.subheadline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                }
+                Spacer()
+                Button("Close") { presentationMode.wrappedValue.dismiss() }
+                    .keyboardShortcut(.cancelAction)
+            }
+            .padding(20)
+            .background(Color.white.opacity(0.5))
+
+            Divider()
+
+            ScrollView {
+                LazyVStack(spacing: 14) {
+                    if let list = HomeExperimentLibrary.experiments[chapterId] {
+                        ForEach(list) { exp in
+                            HomeExperimentCard(experiment: exp)
+                        }
+                    } else {
+                        VStack(spacing: 10) {
+                            Text("🧪").font(.system(size: 56))
+                            Text("No home experiments yet")
+                                .font(.title3.bold())
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            Text("We are adding hands-on activities chapter by chapter. Check back soon.")
+                                .font(.callout)
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                                .multilineTextAlignment(.center)
+                        }
+                        .padding(40)
+                    }
+                }
+                .padding(20)
+                .frame(maxWidth: 720)
+                .frame(maxWidth: .infinity, alignment: .center)
+            }
+        }
+        .frame(minWidth: 640, minHeight: 540)
+    }
+}
+
+private struct HomeExperimentCard: View {
+    let experiment: HomeExperiment
+    @State private var expanded: Bool = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) { expanded.toggle() }
+            } label: {
+                HStack(spacing: 12) {
+                    Text(experiment.emoji).font(.system(size: 28))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(experiment.title)
+                            .font(.headline)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            .multilineTextAlignment(.leading)
+                        Text("\u{2248} \(experiment.estimatedMinutes) min")
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
+                    Spacer()
+                    Image(systemName: expanded ? "chevron.up" : "chevron.down")
+                        .font(.callout)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                }
+                .padding(14)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+
+            if expanded {
+                VStack(alignment: .leading, spacing: 14) {
+                    Divider()
+
+                    Group {
+                        Text("What you'll need")
+                            .font(.subheadline.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        ForEach(Array(experiment.needs.enumerated()), id: \.offset) { _, item in
+                            HStack(alignment: .top, spacing: 8) {
+                                Text("•")
+                                Text(item).multilineTextAlignment(.leading)
+                            }
+                            .font(.callout)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        }
+                    }
+
+                    Group {
+                        Text("What you'll do")
+                            .font(.subheadline.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        ForEach(Array(experiment.steps.enumerated()), id: \.offset) { idx, step in
+                            HStack(alignment: .top, spacing: 8) {
+                                Text("\(idx + 1).")
+                                    .frame(width: 22, alignment: .trailing)
+                                Text(step).multilineTextAlignment(.leading)
+                            }
+                            .font(.callout)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        }
+                    }
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Why it works")
+                            .font(.subheadline.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        Text(experiment.whyItWorks)
+                            .font(.callout)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            .multilineTextAlignment(.leading)
+                    }
+                    .padding(10)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color.compatIndigo.opacity(0.10))
+                    )
+                }
+                .padding(.horizontal, 14)
+                .padding(.bottom, 14)
+            }
+        }
+        .background(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .fill(Color.white)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
+        )
+    }
 }
 
 private struct DiscoverEntryBanner: View {

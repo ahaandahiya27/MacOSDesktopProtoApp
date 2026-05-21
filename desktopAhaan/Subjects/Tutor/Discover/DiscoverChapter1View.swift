@@ -33,6 +33,7 @@ struct DiscoverChapter1View: View {
         "Rhizobium: Nitrogen Factory",
         "Food Chain Builder",
         "Compost Pit Timeline",
+        "Van Helmont's Willow",
         "Boss Quiz"
     ]
 
@@ -83,7 +84,8 @@ struct DiscoverChapter1View: View {
             { AnyView(RhizobiumNitrogenScene(onComplete: { self.markComplete(16) })) },
             { AnyView(FoodChainBuilderScene(onComplete: { self.markComplete(17) })) },
             { AnyView(CompostTimelineScene(onComplete: { self.markComplete(18) })) },
-            { AnyView(Scene9_BossQuiz(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
+            { AnyView(VanHelmontWillowScene(onComplete: { self.markComplete(19) })) },
+            { AnyView(Scene9_BossQuiz(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(20, score: score, max: 15) })) }
         ]
     }
 
@@ -1286,6 +1288,180 @@ private struct CompostTimelineScene: View {
                     .padding(.horizontal, 24)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                 GotItButton(action: onComplete).padding(.bottom, 12)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
+        }
+    }
+}
+
+// MARK: - Van Helmont's Willow (inline Scene 20)
+//
+// Goes beyond NCERT to plant the central "where does a tree's mass come
+// from?" question in the kid's mind. Belgian scientist Jan Baptista van
+// Helmont in the 1640s grew a willow from 2 kg to 76 kg over 5 years
+// using only rainwater — and the soil weight barely changed. Where did
+// the extra 74 kg come from? The answer (mostly CO₂ from air) blows
+// minds because it inverts intuition: a tree is, mostly, captured sky.
+//
+// Interaction: the kid moves a slider 0 → 5 years. Tree weight rises
+// non-linearly while soil weight stays nearly flat. A "Where did the
+// mass come from?" guessing step with three options reveals the
+// CO₂-from-air answer with a short explanation card.
+//
+// Big Sur compatible: no .symbolEffect, no .foregroundStyle, no
+// macOS 12+ APIs; body text routes through DesignTokens.BrandColor.
+private struct VanHelmontWillowScene: View {
+    let onComplete: () -> Void
+
+    @State private var years: Double = 0
+    @State private var guessRevealed = false
+    @State private var pickedOption: String? = nil
+
+    // Tree mass grew roughly: 2.3 kg start → 76 kg at 5 years. Smooth a
+    // curve through that. Soil drops by ~60 g over 5 years (barely
+    // moves on the kid-facing dial — we round to one decimal kg).
+    private var treeKg: Double {
+        // Polynomial fit close to 2.3 + (76 - 2.3) * (t/5)^1.5 — slow
+        // start, faster middle, levelling near end.
+        let t = max(0, min(5, years))
+        let frac = pow(t / 5.0, 1.5)
+        return 2.3 + (76.0 - 2.3) * frac
+    }
+    private var soilKg: Double {
+        // Started at 90.7 kg, ended ~90.64 kg. Treat as constant in
+        // display; show one decimal so the kid sees it doesn't move.
+        let t = max(0, min(5, years))
+        return 90.7 - 0.012 * t
+    }
+
+    private let options: [(label: String, isCorrect: Bool, explanation: String)] = [
+        (label: "From the soil",
+         isCorrect: false,
+         explanation: "The soil weighed almost the same at the end — only ~60 g less. The tree did not eat the soil."),
+        (label: "From the rainwater",
+         isCorrect: false,
+         explanation: "Water gave the tree hydrogen and oxygen, but not most of the mass. Trees are mostly carbon."),
+        (label: "From CO₂ in the air",
+         isCorrect: true,
+         explanation: "Photosynthesis pulls CO₂ out of the air and locks the carbon into wood, leaves and bark. A tree is, mostly, captured sky.")
+    ]
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 16) {
+                Text("Van Helmont's Willow")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+
+                Text("In the 1640s, Belgian scientist Jan Baptista van Helmont planted a 2 kg willow in 90 kg of dry soil. For 5 years he watered it with rainwater only. Move the slider and watch what happens.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: 600)
+
+                // Visualisation
+                HStack(alignment: .bottom, spacing: 28) {
+                    VStack(spacing: 6) {
+                        Text("🌳")
+                            .font(.system(size: 18 + CGFloat(treeKg * 0.55)))
+                            .animation(.easeOut(duration: 0.2), value: years)
+                        Text("Tree: \(String(format: "%.1f", treeKg)) kg")
+                            .font(.subheadline.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    }
+                    .frame(width: 160)
+
+                    VStack(spacing: 6) {
+                        Text("🟫")
+                            .font(.system(size: 56))
+                        Text("Soil: \(String(format: "%.2f", soilKg)) kg")
+                            .font(.subheadline.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    }
+                    .frame(width: 160)
+                }
+                .frame(maxWidth: 600)
+                .padding(.vertical, 8)
+
+                SoftShadowCard(padding: 14) {
+                    VStack(spacing: 8) {
+                        Text("Time: \(Int(years.rounded())) year\(Int(years.rounded()) == 1 ? "" : "s")")
+                            .font(.subheadline)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        Slider(value: $years, in: 0...5, step: 1)
+                            .frame(maxWidth: 340)
+                    }
+                }
+                .frame(maxWidth: 600)
+
+                if years >= 5 && !guessRevealed {
+                    VStack(spacing: 10) {
+                        Text("Where did the extra 74 kg come from?")
+                            .font(.title3.bold())
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            .multilineTextAlignment(.center)
+                        VStack(spacing: 8) {
+                            ForEach(options, id: \.label) { opt in
+                                Button {
+                                    pickedOption = opt.label
+                                    guessRevealed = true
+                                } label: {
+                                    HStack {
+                                        Text(opt.label)
+                                            .font(.body)
+                                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                                        Spacer()
+                                    }
+                                    .padding(.horizontal, 14)
+                                    .padding(.vertical, 10)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            .fill(Color.white)
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            .strokeBorder(Color.gray.opacity(0.25), lineWidth: 1.2)
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                        .frame(maxWidth: 520)
+                    }
+                    .padding(.top, 8)
+                }
+
+                if guessRevealed, let picked = pickedOption,
+                   let chosen = options.first(where: { $0.label == picked }) {
+                    SoftShadowCard(padding: 14) {
+                        HStack(alignment: .top, spacing: 10) {
+                            Image(systemName: chosen.isCorrect ? "checkmark.circle.fill" : "info.circle.fill")
+                                .foregroundColor(chosen.isCorrect ? .green : Color.compatIndigo)
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(chosen.isCorrect ? "Right!" : "Good guess, but not quite.")
+                                    .font(.headline)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                                Text(chosen.explanation)
+                                    .font(.callout)
+                                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                                    .multilineTextAlignment(.leading)
+                                if !chosen.isCorrect {
+                                    Text("The real answer: " + (options.first(where: { $0.isCorrect })?.explanation ?? ""))
+                                        .font(.callout)
+                                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                                        .padding(.top, 4)
+                                }
+                            }
+                        }
+                    }
+                    .frame(maxWidth: 600)
+
+                    GotItButton { onComplete() }
+                        .padding(.bottom, 12)
+                }
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 12)

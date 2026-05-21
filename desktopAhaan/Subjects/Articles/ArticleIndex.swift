@@ -213,6 +213,15 @@ enum ArticleIndex {
             estimatedMinutes: 6
         ),
 
+        // Beyond the Book — chapter-level enrichment
+        "ch01_beyond": ArticleEntry(
+            id: "ch01_beyond",
+            filename: "ch01_beyond.html",
+            title: "Beyond the Book — Ten Mind-Stretchers",
+            chapterFolder: chapter1Folder,
+            estimatedMinutes: 12
+        ),
+
         // ================================================================
         // CHAPTER 2 — Nutrition in Animals
         // ================================================================

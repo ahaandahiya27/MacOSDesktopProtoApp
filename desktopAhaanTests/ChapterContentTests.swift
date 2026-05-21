@@ -8,8 +8,8 @@ final class ChapterContentTests: XCTestCase {
 
     func testArticleIndexHasAllChapter1Entries() {
         let ch1Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch01") }
-        // Ch1: 1 overview + 3 topic overviews + 10 + 7 + 4 concepts = 25
-        XCTAssertEqual(ch1Ids.count, 25, "Chapter 1 should have 25 article entries")
+        // Ch1: 1 overview + 3 topic overviews + 10 + 7 + 4 concepts + 1 "Beyond the Book" enrichment = 26
+        XCTAssertEqual(ch1Ids.count, 26, "Chapter 1 should have 26 article entries")
     }
 
     func testArticleIndexHasAllChapter2Entries() {
@@ -623,15 +623,16 @@ final class ChapterContentTests: XCTestCase {
     // MARK: - Discover-scene-count ratchet (2026-05-21)
     //
     // Every science chapter shipped today at 20 scenes (380 total) via
-    // the inline-in-dispatcher pattern + AnyView lookup table. The
-    // `DataStore.totalDiscoverScenes` constant gates the "all chapters
-    // complete" celebration overlay — if a future content edit drops
-    // this below 380 silently, the kid would hit the celebration early
-    // (or never). Pin the number.
+    // the inline-in-dispatcher pattern + AnyView lookup table. Ch.1 then
+    // picked up the "Van Helmont's Willow" enrichment scene later the
+    // same day → 381. The `DataStore.totalDiscoverScenes` constant gates
+    // the "all chapters complete" celebration overlay — if a future
+    // content edit drops this below the pinned number silently, the kid
+    // would hit the celebration early (or never). Pin the number.
 
-    @MainActor func testTotalDiscoverScenesPinnedAt380() {
+    @MainActor func testTotalDiscoverScenesPinnedAt381() {
         XCTAssertEqual(
-            DataStore.totalDiscoverScenes, 380,
+            DataStore.totalDiscoverScenes, 381,
             "totalDiscoverScenes is the magic number the celebration overlay checks. " +
             "If you intentionally added/removed scenes, update both the constant AND this test."
         )

@@ -622,9 +622,10 @@ final class DataStore: ObservableObject {
     ///   - Original (pre-2026-05-20): all 19 chapters at 9 scenes each = 171
     ///   - 2026-05-20: Ch.1-5 expanded 9 → 20
     ///   - 2026-05-21: Ch.6-19 expanded 9 → 20
-    /// Current: all 19 chapters at 20 scenes each = 380.
+    ///   - 2026-05-21 (later): Ch.1 picks up Van Helmont enrichment scene → 21
+    /// Current: 18 chapters at 20 + Ch.1 at 21 = 381.
     static let discoverSceneCounts: [Int: Int] = [
-        1: 20, 2: 20, 3: 20, 4: 20, 5: 20,
+        1: 21, 2: 20, 3: 20, 4: 20, 5: 20,
         6: 20, 7: 20, 8: 20, 9: 20, 10: 20,
         11: 20, 12: 20, 13: 20, 14: 20, 15: 20,
         16: 20, 17: 20, 18: 20, 19: 20
