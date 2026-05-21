@@ -1047,6 +1047,74 @@ final class ChapterContentTests: XCTestCase {
                        note.updatedAt.timeIntervalSince1970, accuracy: 0.001)
     }
 
+    // MARK: - Chapter dispatcher invariants (2026-05-21)
+    //
+    // After fd20b07 added the defensive `.onAppear` clamp to every
+    // chapter dispatcher (so stale @AppStorage scene cursors can't
+    // index past sceneTitles.count - 1), pin that pattern so a future
+    // Ch.20 added without the clamp fails CI. Reads each source file
+    // directly and asserts the canonical clamp snippet exists.
+
+    func testEveryDiscoverChapterDispatcherHasCurrentSceneClamp() {
+        // Test bundle = host app bundle. Source files aren't in the
+        // bundle; they're checked in alongside the project. Walk the
+        // filesystem from the binary's source-root anchor.
+        //
+        // Find the repo root: the project is structured so that
+        // `desktopAhaan.xcodeproj` sits at the repo root. We walk up
+        // from `Bundle.main.bundleURL` until we find that marker.
+        var dir = Bundle.main.bundleURL
+        var repoRoot: URL? = nil
+        for _ in 0..<10 {
+            dir = dir.deletingLastPathComponent()
+            let projURL = dir.appendingPathComponent("desktopAhaan.xcodeproj")
+            if FileManager.default.fileExists(atPath: projURL.path) {
+                repoRoot = dir
+                break
+            }
+        }
+        guard let root = repoRoot else {
+            // Running outside a checked-in source tree (e.g. CI sandbox
+            // copying only the .app). Skip rather than false-fail.
+            print("[clamp-pin] repo root not found; skipping source-file inspection.")
+            return
+        }
+        let discoverDir = root.appendingPathComponent("desktopAhaan/Subjects/Tutor/Discover")
+
+        // Per-chapter dispatcher locations:
+        //   Ch.1  → DiscoverChapter1View.swift
+        //   Ch.N≥2 → Chapter<N>/DiscoverChapter<N>View.swift
+        var paths: [URL] = [discoverDir.appendingPathComponent("DiscoverChapter1View.swift")]
+        for n in 2...19 {
+            paths.append(
+                discoverDir
+                    .appendingPathComponent("Chapter\(n)")
+                    .appendingPathComponent("DiscoverChapter\(n)View.swift")
+            )
+        }
+
+        var missingClamp: [String] = []
+        for path in paths {
+            guard let text = try? String(contentsOf: path) else {
+                missingClamp.append("\(path.lastPathComponent) (unreadable)")
+                continue
+            }
+            // The clamp is identified by the canonical line — flexible
+            // about whitespace but exact about the substantive code.
+            let hasClamp = text.contains("let maxIndex = sceneTitles.count - 1")
+                && text.contains(".onAppear")
+            if !hasClamp {
+                missingClamp.append(path.lastPathComponent)
+            }
+        }
+        XCTAssertTrue(missingClamp.isEmpty,
+                      "Chapter dispatcher(s) missing the defensive currentScene clamp: " +
+                      "\(missingClamp.sorted().joined(separator: ", ")). " +
+                      "Add `.onAppear { let maxIndex = sceneTitles.count - 1; if currentScene < 0 || currentScene > maxIndex { currentScene = max(0, min(currentScene, maxIndex)) } }` " +
+                      "to the body after the DiscoverShell(...) call. " +
+                      "Without it, a stale @AppStorage value renders an EmptyView blank canvas to the kid.")
+    }
+
     @MainActor func testDataStore_DueCountReflectsScheduledItems() {
         let store = DataStore()
         // Wipe any leftover state from another test.
