@@ -33,6 +33,7 @@
 		04B83C202FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */; };
 		04B83C242FBF969A005D3D07 /* DailyPracticeViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */; };
 		04B83C262FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */; };
+		04B83C282FBF9A9B005D3D07 /* View+RespectReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C272FBF9A9B005D3D07 /* View+RespectReduceMotion.swift */; };
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
@@ -655,6 +656,7 @@
 		04B83C1F2FBF8F70005D3D07 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
 		04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeViewSheet.swift; sourceTree = "<group>"; };
 		04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChaptersCompleteOverlay.swift; sourceTree = "<group>"; };
+		04B83C272FBF9A9B005D3D07 /* View+RespectReduceMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+RespectReduceMotion.swift"; sourceTree = "<group>"; };
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
@@ -2162,6 +2164,7 @@
 			children = (
 				F340216B99162901CCDF50E6 /* Extensions.swift */,
 				095F0AA532A1B79DD38B9A2A /* ModelContext+SafeSave.swift */,
+				04B83C272FBF9A9B005D3D07 /* View+RespectReduceMotion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3210,6 +3213,7 @@
 				04F59D2A2FB8EED400568BDE /* Scene7_WormEngineer.swift in Sources */,
 				04F59D602FB8F04700568BDE /* Scene1_FlowerAnatomy.swift in Sources */,
 				44BA8C57E97836CB6A295843 /* Scene2_BuildYourpHStrip.swift in Sources */,
+				04B83C282FBF9A9B005D3D07 /* View+RespectReduceMotion.swift in Sources */,
 				04F59D942FB8F14700568BDE /* Scene5_MagneticEffect.swift in Sources */,
 				04F59DEC2FB8F34400568BDE /* Scene5_CompostPitBuilder.swift in Sources */,
 				04F59D682FB8F04A00568BDE /* Scene5_SeedDispersal.swift in Sources */,
