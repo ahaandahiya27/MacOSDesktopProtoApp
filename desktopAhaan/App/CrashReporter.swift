@@ -148,15 +148,15 @@ final class CrashReporter {
     private var lastMainHeartbeat: Date = Date()
     private var hangCurrentlyReported: Bool = false
     private var hangsLoggedThisSession: Int = 0
-    /// Raised from 1.0 → 1.5 s on 2026-05-21 after observing that
-    /// SwiftUI on Big Sur produces 1000–1400 ms main-thread blocks on
-    /// routine navigation transitions (entering a Discover scene,
-    /// opening an article browser window). At 1.0 s the signal was
-    /// noisy enough that the user couldn't tell threshold-edge layout
-    /// stalls from real misbehaviour. 1.5 s still flags genuine
-    /// pathology (e.g. the 1948 ms hang we hunted earlier today)
-    /// without lighting up on every navigation push.
-    private let hangThresholdSeconds: TimeInterval = 1.5
+    /// Raised from 1.0 → 1.5 → 2.0 s. The 2.0 s bump (2026-05-21 evening)
+    /// was after a fresh Ch.1 cold launch flagged a 1676 ms hang during
+    /// WKWebView preload + Speech.framework first-touch, with no
+    /// actionable stack — main was just sitting in the AppKit run loop.
+    /// Big Sur's WKWebView XPC initialisation can legitimately take
+    /// ~1.6–1.8 s on first article open; 2.0 s keeps the watchdog tight
+    /// enough to catch real pathology (3+ s hangs from view-identity
+    /// fights) without lighting up on every cold start.
+    private let hangThresholdSeconds: TimeInterval = 2.0
     private let hangCheckIntervalSeconds: TimeInterval = 0.25
     private let maxHangsPerSession: Int = 30
     #endif

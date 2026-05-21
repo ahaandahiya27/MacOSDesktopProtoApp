@@ -9,11 +9,12 @@ final class SpeechRecognitionManager: ObservableObject {
     @Published var isListening = false
     @Published var recognizedText = ""
     @Published var errorMessage: String?
-    // Seed from the system's cached value so a fresh manager instance
-    // doesn't think it needs to ask again after the user has already
-    // answered the dialog once this install. This is what stops the
-    // permission prompt from re-appearing on every quiz-card mount.
-    @Published var authorizationStatus: SFSpeechRecognizerAuthorizationStatus = SFSpeechRecognizer.authorizationStatus()
+    // Default to .notDetermined. The cached system value is read lazily
+    // inside requestPermissions() to avoid spinning up Speech.framework
+    // at every SpeechRecognitionManager() construction site — TranslatorScreen,
+    // OCRTranslationScreen, and each DictationButton each create one, so
+    // an eager read pegged ~500ms onto cold launch on Big Sur.
+    @Published var authorizationStatus: SFSpeechRecognizerAuthorizationStatus = .notDetermined
     @Published var permissionsReady = false
 
     private var speechRecognizer: SFSpeechRecognizer?
