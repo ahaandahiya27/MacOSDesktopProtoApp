@@ -219,6 +219,45 @@ final class ChapterContentTests: XCTestCase {
                       "\"Add Files…\" dialog with the desktopAhaan target checked.")
     }
 
+    /// Every inline `<svg>` in a Ch.1 article must carry a `<title>` element
+    /// so VoiceOver reads it aloud, and the diagram has a name when image
+    /// loading fails. We've been adding SVGs concept-by-concept; this test
+    /// ratchets the invariant so a future "quick add" can't silently ship
+    /// an unlabelled diagram. The cost is a tiny regex scan over Ch.1
+    /// resources — well under 10 ms in the suite.
+    func testEveryCh1InlineSVGHasAccessibilityTitle() {
+        let ch1Entries = ArticleIndex.entries.values.filter {
+            $0.chapterFolder == ArticleIndex.chapter1Folder
+        }
+        var offenders: [String] = []
+        for entry in ch1Entries {
+            let name = entry.filename.replacingOccurrences(of: ".html", with: "")
+            let url = Bundle.main.url(forResource: name, withExtension: "html",
+                                       subdirectory: entry.chapterFolder)
+                ?? Bundle.main.url(forResource: name, withExtension: "html")
+            guard let url = url, let html = try? String(contentsOf: url) else { continue }
+            // Count opening <svg ...> tags and matching <title ...> tags
+            // that appear inside an SVG. Heuristic but cheap: any SVG block
+            // must contain at least one <title> tag before its </svg>.
+            var search = html[...]
+            while let svgStart = search.range(of: "<svg") {
+                guard let svgEnd = search.range(of: "</svg>", range: svgStart.upperBound..<search.endIndex) else {
+                    offenders.append("\(entry.filename): unterminated <svg>")
+                    break
+                }
+                let block = search[svgStart.lowerBound..<svgEnd.upperBound]
+                if !block.contains("<title") {
+                    offenders.append("\(entry.filename): <svg> block missing <title>")
+                }
+                search = search[svgEnd.upperBound...]
+            }
+        }
+        XCTAssertTrue(offenders.isEmpty,
+                      "Ch.1 SVGs missing accessibility titles: " +
+                      "\(offenders.sorted().joined(separator: "; ")). " +
+                      "Every inline <svg> must contain a <title> element so VoiceOver reads it aloud.")
+    }
+
     // MARK: - Content invariants (F7 / F8 / F9)
     //
     // These three tests cover the per-concept richness contract that
