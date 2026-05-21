@@ -1,11 +1,35 @@
 import SwiftUI
 import AppKit
+import os.log
 
 final class ArticleWindowManager: NSObject, NSWindowDelegate {
     static let shared = ArticleWindowManager()
     private var windows: [NSWindow] = []
 
+    /// Cap on the simultaneously-open article windows. Picked so that
+    /// even an enthusiastic student opening every Beyond-the-Book entry
+    /// across multiple chapters can't grow the array without bound.
+    /// State restoration after a crash could otherwise replay every
+    /// previously-open window and pile up indefinitely.
+    private static let maxOpenWindows = 8
+
+    /// Logger used for FIFO-eviction telemetry. Survives across launches
+    /// in Console.app under subsystem "com.emoha.desktopAhaan".
+    private static let logger = Logger(subsystem: "com.emoha.desktopAhaan",
+                                       category: "ArticleWindowManager")
+
     func openArticle(filename: String, chapterFolder: String) {
+        // FIFO eviction: if at cap, close the oldest window first. We
+        // call close() rather than just removing from the array so the
+        // NSHostingView → @StateObject coordinator chain ALSO releases
+        // (cleanup() runs in onDisappear inside ArticleBrowserView), not
+        // just our reference to the NSWindow. Without the close() call
+        // the window stays on-screen but unreferenced — visible ghost.
+        if windows.count >= Self.maxOpenWindows, let oldest = windows.first {
+            Self.logger.info("FIFO eviction at cap=\(Self.maxOpenWindows, privacy: .public): closing oldest article window")
+            oldest.close()  // delegate fires windowWillClose → removes from array
+        }
+
         let browserView = ArticleBrowserView(
             initialFile: filename,
             chapterFolder: chapterFolder,
