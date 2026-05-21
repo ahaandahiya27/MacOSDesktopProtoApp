@@ -84,6 +84,28 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
     (re.compile(r"\.fontDesign\s*\("),
      ".fontDesign(...)",
      "macOS 13.0+ — use `.font(.system(size:weight:design:))` on Big Sur."),
+    # === Crash-class forward-prevention rules (12h-spec iter 4) ===
+    # C1: `unowned` produces objc_release EXC_BAD_ACCESS on Big Sur if the
+    # owning object outlives the unowned reference. Always use `weak` and
+    # nil-bind. The whole production codebase scanned clean during the
+    # 12h-spec iter 2 deep scan; this rule keeps it that way.
+    (re.compile(r"\bunowned\s+(let|var|self)\b"),
+     "unowned reference",
+     "C1 hazard — `unowned` over-releases on Big Sur when the owning " +
+     "object outlives the reference. Use `weak` + nil-bind."),
+    # C1: NSObject subclass with `var delegate:` (no `weak`). On Big Sur
+    # the AppKit runtime over-releases such delegates during view
+    # teardown. Match `var delegate:` not preceded by `weak`.
+    (re.compile(r"^\s*var\s+delegate\s*:"),
+     "var delegate: (must be weak var)",
+     "C1 hazard — delegates on NSObject-rooted classes must be `weak var`. " +
+     "Strong delegate pointers over-release on Big Sur teardown."),
+    # C1: @unchecked Sendable is by definition concurrency-unsafe. Use
+    # an actor or an internal NSLock instead.
+    (re.compile(r"@unchecked\s+Sendable\b"),
+     "@unchecked Sendable",
+     "C1/C5 hazard — concurrency-unsafe. Convert to an actor or wrap " +
+     "internal state in NSLock."),
     (re.compile(r"\.scrollDismissesKeyboard\s*\("),
      ".scrollDismissesKeyboard(...)",
      "macOS 13.0+ — no equivalent on Big Sur."),
