@@ -472,6 +472,99 @@ enum HomeExperimentLibrary {
                 whyItWorks: "Those bumps are root nodules. Inside each one lives a colony of Rhizobium bacteria pulling nitrogen straight out of the air and trading it to the plant for sugar. Farmers have used this trade for thousands of years — that's why crops are rotated with legumes.",
                 estimatedMinutes: 60
             )
+        ],
+        "ch02": [
+            HomeExperiment(
+                id: "ch02_exp_saliva_starch",
+                emoji: "🍞",
+                title: "Saliva digesting starch — taste it happen",
+                needs: [
+                    "A small bite of plain bread (no jam, no butter)",
+                    "A glass of water to rinse afterwards",
+                    "A working tongue and a quiet 5 minutes"
+                ],
+                steps: [
+                    "Take a small bite of plain bread. Don't swallow.",
+                    "Chew slowly for 1 full minute.",
+                    "Pay attention to the taste at 1 minute, 2 minutes, 3 minutes.",
+                    "By the 3rd minute the bread tastes noticeably sweeter."
+                ],
+                whyItWorks: "Saliva contains an enzyme called amylase that breaks starch into maltose, a sweet sugar. You are watching the very first step of digestion happen on your own tongue.",
+                estimatedMinutes: 5
+            ),
+            HomeExperiment(
+                id: "ch02_exp_eggshell_acid",
+                emoji: "🥚",
+                title: "Eggshell vs vinegar (stomach acid simulator)",
+                needs: [
+                    "A clean raw eggshell — wash it well",
+                    "A small bowl of white vinegar",
+                    "24 hours of patience"
+                ],
+                steps: [
+                    "Drop the eggshell into the bowl of vinegar.",
+                    "Watch — bubbles will start rising immediately.",
+                    "Leave it for 24 hours.",
+                    "Lift the shell out. It will be soft, bendy, or partly gone."
+                ],
+                whyItWorks: "Vinegar (acetic acid) is far weaker than stomach acid (hydrochloric acid), but it still dissolves the calcium carbonate in eggshell. Your stomach makes acid 1,000 times stronger — that's why a layer of fresh mucus matters.",
+                estimatedMinutes: 1440
+            ),
+            HomeExperiment(
+                id: "ch02_exp_tongue_map_myth",
+                emoji: "👅",
+                title: "Bust the tongue-map myth",
+                needs: [
+                    "Three small cups: salt water, sugar water, lemon juice",
+                    "Three cotton buds / earbuds",
+                    "A mirror or a curious partner"
+                ],
+                steps: [
+                    "Dab one bud in sugar water and touch it to the BACK of your tongue.",
+                    "Notice — you taste sweet, even though textbooks say the tip handles sweet.",
+                    "Repeat with salt water on the back and centre.",
+                    "Try lemon juice on the tip — you'll still taste sour."
+                ],
+                whyItWorks: "The old tongue map (sweet-tip / sour-sides / bitter-back) is a translation error from a 1901 paper. Every taste bud detects every taste. Science updates itself when better evidence shows up.",
+                estimatedMinutes: 10
+            ),
+            HomeExperiment(
+                id: "ch02_exp_curd_making",
+                emoji: "🥛",
+                title: "Make curd at home — see lactic acid in action",
+                needs: [
+                    "1 cup of warm milk (just-warm to the wrist, not hot)",
+                    "1 teaspoon of existing curd (the starter)",
+                    "A bowl with a lid",
+                    "A warm spot in the kitchen, overnight"
+                ],
+                steps: [
+                    "Pour the warm milk into the bowl.",
+                    "Add the spoonful of curd. Stir gently for 10 seconds.",
+                    "Cover the bowl. Leave it on the kitchen counter overnight.",
+                    "In the morning — solid curd."
+                ],
+                whyItWorks: "The bit of curd you added contained Lactobacillus bacteria. Overnight, those bacteria converted the sugar in milk (lactose) into lactic acid. Acid makes milk proteins clump — that's the solid curd you eat.",
+                estimatedMinutes: 720
+            ),
+            HomeExperiment(
+                id: "ch02_exp_stomach_rumble",
+                emoji: "🥁",
+                title: "Listen to your stomach's 90-minute clock",
+                needs: [
+                    "A quiet room, an empty stomach (2+ hours since last meal)",
+                    "Optional: an ear pressed to a clean drinking glass against your belly",
+                    "A notebook and a clock"
+                ],
+                steps: [
+                    "Sit quietly for 5 minutes after at least 2 hours of not eating.",
+                    "Listen for low gurgles or rumbles from your stomach.",
+                    "Note the time when you hear them.",
+                    "Wait. Listen again at 30 minutes, 60, and 90 minutes."
+                ],
+                whyItWorks: "When your stomach is empty, it contracts in waves about every 90 minutes — the Migrating Motor Complex. The waves sweep crumbs and bacteria through to the small intestine. Your gut has its own clock, all by itself.",
+                estimatedMinutes: 120
+            )
         ]
     ]
 

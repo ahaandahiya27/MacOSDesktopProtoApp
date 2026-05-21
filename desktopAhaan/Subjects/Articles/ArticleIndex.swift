@@ -301,6 +301,11 @@ enum ArticleIndex {
             title: "Smell, Taste and the Science of Flavour",
             chapterFolder: chapter2Folder, estimatedMinutes: 5),
 
+        // Beyond the Book — chapter-level enrichment
+        "ch02_beyond": ArticleEntry(id: "ch02_beyond", filename: "ch02_beyond.html",
+            title: "Beyond the Book — Ten Mind-Stretchers About How Animals Eat",
+            chapterFolder: chapter2Folder, estimatedMinutes: 12),
+
         // ================================================================
         // CHAPTER 3 — Fibre to Fabric
         // ================================================================

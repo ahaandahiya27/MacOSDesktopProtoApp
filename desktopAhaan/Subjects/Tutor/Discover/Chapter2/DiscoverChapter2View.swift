@@ -28,6 +28,7 @@ struct DiscoverChapter2View: View {
         "Cow vs Goat vs Camel",
         "Food Vacuole Formation",
         "Pseudopod Catch",
+        "Window in the Stomach",
         "Boss Quiz"
     ]
 
@@ -73,7 +74,8 @@ struct DiscoverChapter2View: View {
             { AnyView(CowGoatCamelScene(onComplete: { self.markComplete(16) })) },
             { AnyView(FoodVacuoleFormationScene(onComplete: { self.markComplete(17) })) },
             { AnyView(PseudopodCatchScene(onComplete: { score in self.markComplete(18, score: score, max: 5) })) },
-            { AnyView(Scene9_BossQuiz_Ch2(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
+            { AnyView(WindowInTheStomachScene(onComplete: { self.markComplete(19) })) },
+            { AnyView(Scene9_BossQuiz_Ch2(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(20, score: score, max: 15) })) }
         ]
     }
 
@@ -794,5 +796,160 @@ private struct PseudopodCatchScene: View {
         if abs(foodPosition) < 25 { caught += 1 }
         roundActive = false
         round += 1
+    }
+}
+
+// MARK: - Window in the Stomach (inline Scene 20)
+//
+// True story enrichment beyond NCERT: in 1822 a fur trader named Alexis
+// St Martin was shot in the side. The wound healed but a small hole into
+// his stomach refused to close — about the size of a 5-rupee coin. His
+// doctor, William Beaumont, dropped food on a string through the hole
+// and pulled it back out at intervals to time digestion. That gruesome
+// study is where the world's first digestion timetable came from.
+//
+// Interaction: kid taps food items, sees how long Beaumont measured
+// each one to digest. A short "What we owe him" reveal after all five
+// foods have been tried. Big Sur compatible.
+private struct WindowInTheStomachScene: View {
+    let onComplete: () -> Void
+
+    private struct FoodTiming: Identifiable {
+        let id: String
+        let emoji: String
+        let name: String
+        let minutes: Int
+        let why: String
+    }
+
+    private let foods: [FoodTiming] = [
+        FoodTiming(id: "apple",   emoji: "🍎", name: "Raw apple cubes",     minutes: 90,
+                   why: "Soft fruits digest fast — sugars and water are easy work."),
+        FoodTiming(id: "cabbage", emoji: "🥬", name: "Boiled cabbage",      minutes: 150,
+                   why: "Cooked vegetables sit in the stomach a bit longer. Fibre slows things down."),
+        FoodTiming(id: "beef",    emoji: "🥩", name: "Roast beef",          minutes: 210,
+                   why: "Protein and fat take more time. Acid and enzymes attack them slowly."),
+        FoodTiming(id: "potato",  emoji: "🍟", name: "Fried potatoes",      minutes: 270,
+                   why: "Fat from frying coats the food, blocking acid. Worst offender on Beaumont's list."),
+        FoodTiming(id: "milk",    emoji: "🥛", name: "Raw cow's milk",      minutes: 135,
+                   why: "Milk fat slows digestion a little; sugars and proteins do the rest of the work."),
+    ]
+
+    @State private var revealed: Set<String> = []
+    @State private var finishedShown: Bool = false
+
+    private var allRevealed: Bool { revealed.count == foods.count }
+
+    var body: some View {
+        ScrollView {
+            LazyVStack(spacing: 14) {
+                Text("Window in the Stomach")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .padding(.top, 18)
+
+                Text("In 1822 a fur trader called Alexis St Martin was shot in the side. The wound healed, but the hole into his stomach never closed. His doctor, William Beaumont, used that tiny opening to time how long different foods take to digest. Tap each food to see what Beaumont measured.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: 600)
+
+                VStack(spacing: 10) {
+                    ForEach(foods) { food in
+                        WindowFoodCard(emoji: food.emoji,
+                                       name: food.name,
+                                       minutes: food.minutes,
+                                       why: food.why,
+                                       revealed: revealed.contains(food.id)) {
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                _ = revealed.insert(food.id)
+                            }
+                        }
+                    }
+                }
+                .frame(maxWidth: 560)
+
+                if allRevealed {
+                    SoftShadowCard(padding: 14) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("What the world owes one tiny hole")
+                                .font(.headline)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            Text("Beaumont published his digestion times in 1833. They became the foundation of modern gastric physiology. Alexis St Martin lived to 86 — outliving Beaumont by 27 years — and is buried in a quiet cemetery in Quebec. One messy accident and one curious doctor gave us the first real timetable of how the human stomach works.")
+                                .font(.callout)
+                                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                                .multilineTextAlignment(.leading)
+                        }
+                    }
+                    .frame(maxWidth: 600)
+
+                    GotItButton { onComplete() }
+                        .padding(.bottom, 12)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.bottom, 12)
+        }
+    }
+}
+
+private struct WindowFoodCard: View {
+    let emoji: String
+    let name: String
+    let minutes: Int
+    let why: String
+    let revealed: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                Text(emoji).font(.system(size: 28))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(name)
+                        .font(.headline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    if revealed {
+                        Text(formatMinutes(minutes))
+                            .font(.subheadline.bold())
+                            .foregroundColor(Color.compatIndigo)
+                        Text(why)
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasText)
+                            .multilineTextAlignment(.leading)
+                    } else {
+                        Text("Tap to see digestion time")
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
+                }
+                Spacer()
+                Image(systemName: revealed ? "checkmark.circle.fill" : "questionmark.circle")
+                    .font(.title3)
+                    .foregroundColor(revealed ? .green : DesignTokens.BrandColor.canvasTextSecondary)
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(Color.white)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .strokeBorder(revealed ? Color.compatIndigo.opacity(0.45) : Color.gray.opacity(0.20),
+                                  lineWidth: 1.3)
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .disabled(revealed)
+    }
+
+    private func formatMinutes(_ m: Int) -> String {
+        let h = m / 60
+        let r = m % 60
+        if h == 0 { return "\(r) min" }
+        if r == 0 { return "\(h) h" }
+        return "\(h) h \(r) min"
     }
 }

@@ -15,7 +15,7 @@ final class ChapterContentTests: XCTestCase {
     func testArticleIndexHasAllChapter2Entries() {
         let ch2Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch02") }
         // Ch2: 1 overview + 3 topic overviews + 12 + 5 + 3 concepts = 24
-        XCTAssertEqual(ch2Ids.count, 24, "Chapter 2 should have 24 article entries")
+        XCTAssertEqual(ch2Ids.count, 25, "Chapter 2 should have 25 article entries")
     }
 
     func testArticleIndexHasAllChapter3Entries() {
@@ -630,9 +630,9 @@ final class ChapterContentTests: XCTestCase {
     // content edit drops this below the pinned number silently, the kid
     // would hit the celebration early (or never). Pin the number.
 
-    @MainActor func testTotalDiscoverScenesPinnedAt381() {
+    @MainActor func testTotalDiscoverScenesPinnedAt382() {
         XCTAssertEqual(
-            DataStore.totalDiscoverScenes, 381,
+            DataStore.totalDiscoverScenes, 382,
             "totalDiscoverScenes is the magic number the celebration overlay checks. " +
             "If you intentionally added/removed scenes, update both the constant AND this test."
         )

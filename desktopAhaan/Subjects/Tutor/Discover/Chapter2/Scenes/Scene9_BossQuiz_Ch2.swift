@@ -16,9 +16,9 @@ struct Scene9_BossQuiz_Ch2: View {
     let onComplete: (Int) -> Void
 
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = Array(repeating: nil, count: 15)
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = Array(repeating: false, count: 15)
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
@@ -88,6 +88,36 @@ struct Scene9_BossQuiz_Ch2: View {
                 answer: "Bacteria + sugar producing acid",
                 explanation: "Sugar left on teeth feeds bacteria that release acid; the acid eats into tooth enamel."
             ),
+        QuizItem(
+            prompt: "Your stomach makes hydrochloric acid strong enough to dissolve metal. Why doesn't it dissolve itself?",
+            options: ["The acid is fake", "A thick layer of mucus refreshes every few days and protects the wall", "The stomach has no walls", "The acid is colder than it looks"],
+            answer: "A thick layer of mucus refreshes every few days and protects the wall",
+            explanation: "Goblet cells in the stomach lining release fresh mucus every few days. Without it, the stomach would digest itself."
+        ),
+        QuizItem(
+            prompt: "About how much saliva does an adult human produce per day?",
+            options: ["A few drops", "Around 50 ml", "About 1 to 1.5 litres", "About 5 litres"],
+            answer: "About 1 to 1.5 litres",
+            explanation: "Six salivary glands work all day. Most of it gets swallowed without us noticing \u{2014} digestion starts in the mouth."
+        ),
+        QuizItem(
+            prompt: "Why is a cow\u{2019}s intestine roughly four times longer than yours?",
+            options: ["Cows are bigger", "Cows eat cellulose (grass) which needs more time and bacteria to break down", "Cows have no stomach", "Cows are slower"],
+            answer: "Cows eat cellulose (grass) which needs more time and bacteria to break down",
+            explanation: "Plant-eaters generally have longer guts than meat-eaters. More road = more time for stubborn cellulose."
+        ),
+        QuizItem(
+            prompt: "The old textbook \u{201C}tongue map\u{201D} (sweet at the tip, bitter at the back) is:",
+            options: ["Completely true", "Mostly correct", "A myth \u{2014} every taste bud detects every taste", "A British invention"],
+            answer: "A myth \u{2014} every taste bud detects every taste",
+            explanation: "The map came from a mistranslation a century ago. Modern research shows all taste zones do all jobs."
+        ),
+        QuizItem(
+            prompt: "About how many bacteria live inside your large intestine?",
+            options: ["None \u{2014} it would be unhygienic", "A few thousand", "About a million", "Around 100 trillion \u{2014} more cells than your own body has"],
+            answer: "Around 100 trillion \u{2014} more cells than your own body has",
+            explanation: "The gut microbiome. Many of these bacteria are friendly partners helping digest food and make vitamins."
+        )
     ]
 
     var body: some View {
@@ -103,12 +133,12 @@ struct Scene9_BossQuiz_Ch2: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: 15)
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 10")
+                    Text("Question \(currentQ + 1) of 15")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -145,7 +175,7 @@ struct Scene9_BossQuiz_Ch2: View {
                             .foregroundColor(.green)
 
                         HStack(spacing: 16) {
-                            Text("Score: \(score)/10")
+                            Text("Score: \(score)/15")
                                 .font(.title2.bold())
                                 .padding(12)
                                 .background(Color.yellow.opacity(0.2))
@@ -235,7 +265,7 @@ struct Scene9_BossQuiz_Ch2: View {
     }
 
     private func advanceQuestion() {
-        if currentQ < 9 {
+        if currentQ < 14 {
             withAnimation(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
@@ -298,7 +328,7 @@ struct Scene9_BossQuiz_Ch2: View {
         cert.draw(at: CGPoint(x: 100, y: 450))
 
         let score_str = NSAttributedString(
-            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/10",
+            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/15",
             attributes: [
                 .font: NSFont.systemFont(ofSize: 24),
                 .foregroundColor: NSColor.gray
