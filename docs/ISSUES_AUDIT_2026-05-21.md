@@ -13,7 +13,7 @@ declaring anything closed.
 | Active crashes | **0** (sandbox crash fixed by ad-hoc signing) |
 | Active HANG events under 2026-05-21 code | **1** (1305 ms — instrumented but root cause unknown) |
 | Pre-commit lint violations | **0** |
-| Tests passing | **239 / 239** |
+| Tests passing | **303 / 303** (post-B1 close) |
 | Build clean | **yes** (Big Sur target, 5-8s per build) |
 | Banned API leaks | **0** |
 | Working-tree dirty (excl. xcuserstate) | **clean** |
@@ -143,13 +143,11 @@ declaring anything closed.
 
 ## D. KNOWN BUGS DEFERRED — too large for safe single-session fix
 
-### D1. Boss Quiz 5→10 questions (B1 from pending list)
+### D1. Boss Quiz 5→10 questions (B1 from pending list) — **CLOSED 2026-05-21**
 
-- **Why deferred**: 95 new MCQs across 19 chapters require focused content authoring with consistent quality + difficulty curve. A rushed sweep here would ship uneven content — the opposite of what was asked.
-- **Surface area**: 19 Boss Quiz files in `desktopAhaan/Subjects/Tutor/Discover/Chapter*/Scenes/Scene9_BossQuiz_Ch*.swift` (+ one base file `desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene9_BossQuiz.swift`). Hardcoded `count: 5`, `total: 5`, `max: 5` literals in 8 of the 19. Other 11 use `.count` properly.
-- **Refactor needed first**: standardize on `quiz.count`/`questions.count` everywhere so bumping to 10 is just "add 5 items to the array."
-- **Estimated effort**: ~2-3 hours of careful authoring with subject-matter familiarity.
-- **Status**: ❌ deferred — needs dedicated session.
+- **What landed (commit `7fe73a2`)**: 95 new hand-authored MCQs across all 19 chapters — 5 new questions per chapter, each with 4 options, a correct answer and an explanation line targeted at Class 7. Modern-pattern files (Ch.8–18) gained 5 `Q()` entries each; old-pattern files (Ch.1–7, 19) also bumped the hardcoded `5` → `10` in array sizing, ProgressView totals, "Question N of M" labels, advance thresholds, score displays and `total:` in certificate views. Each of the 19 chapter dispatchers bumped `markComplete(19, ..., max: 5)` → `max: 10`.
+- **Tests**: 303 pass, no regressions; build green.
+- **Status**: ✅ shipped.
 
 ### D2. Pack JSON content for 209 new inline scenes (B6)
 
