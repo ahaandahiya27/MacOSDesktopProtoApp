@@ -212,10 +212,14 @@ struct DiscoverShell<SceneBody: View>: View {
                 Divider().opacity(0.3)
                 scene(currentScene)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .transition(.asymmetric(
-                        insertion: .move(edge: .trailing).combined(with: .opacity),
-                        removal: .move(edge: .leading).combined(with: .opacity)
-                    ))
+                    // Lightened transition (2026-05-21): asymmetric
+                    // move(edge:).combined(with:.opacity) triggered a
+                    // ~1 s main-thread hang on Big Sur when entering
+                    // Discover Mode — SwiftUI on macOS 11 lays out the
+                    // outgoing AND incoming subtree side-by-side during
+                    // the move animation. Plain .opacity is cheaper and
+                    // honours Reduce Motion gracefully.
+                    .transition(reduceMotion ? .identity : .opacity)
                     .id(currentScene)
                 Divider().opacity(0.3)
                 footer

@@ -46,6 +46,19 @@ struct DiscoverChapter1View: View {
             currentScene: $currentScene,
             scene: sceneBody
         )
+        // Defensive (2026-05-21): a stale @AppStorage value from before
+        // the Van Helmont scene was inserted could in theory point past
+        // sceneTitles.count - 1. Clamp on appear so the dispatcher
+        // never indexes into nothing. The guard inside sceneBody
+        // already returns EmptyView() for out-of-range indices, so this
+        // is belt-and-braces — but a visible blank canvas reads as a
+        // crash to the kid.
+        .onAppear {
+            let maxIndex = sceneTitles.count - 1
+            if currentScene < 0 || currentScene > maxIndex {
+                currentScene = max(0, min(currentScene, maxIndex))
+            }
+        }
     }
 
     /// Lookup-table dispatcher. The previous big switch over 20 cases
