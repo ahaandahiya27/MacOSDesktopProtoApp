@@ -7,8 +7,19 @@ struct ChapterDetailView: View {
 
     @EnvironmentObject private var nav: TutorNavigationState
     @EnvironmentObject private var dataStore: DataStore
-    @State private var showHomeExperiments = false
-    @State private var showNotebook = false
+    @State private var presentedSheet: SheetKind?
+
+    /// Single source of truth for which enrichment sheet is on screen.
+    /// SwiftUI on macOS Big Sur (11) silently drops all-but-the-last
+    /// `.sheet(isPresented:)` modifier on a given view, so we route
+    /// every sheet through one `.sheet(item:)`. Identifiable conformance
+    /// is required so the .sheet(item:) modifier can key the
+    /// re-presentation.
+    private enum SheetKind: String, Identifiable {
+        case homeExperiments
+        case notebook
+        var id: String { rawValue }
+    }
 
     /// Returns the chapter's "Beyond the Book" article entry ONLY when
     /// the HTML file is actually findable in Bundle.main. Catches the
@@ -55,13 +66,13 @@ struct ChapterDetailView: View {
                                 BeyondTheBookCard(entry: entry)
                             }
                             if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
-                                TryAtHomeCard { showHomeExperiments = true }
+                                TryAtHomeCard { presentedSheet = .homeExperiments }
                             }
                         }
                     }
                     NotebookCard(
                         hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true)
-                    ) { showNotebook = true }
+                    ) { presentedSheet = .notebook }
                 }
 
                 ForEach(chapter.topics) { topic in
@@ -90,18 +101,20 @@ struct ChapterDetailView: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Ch. \(chapter.number) — \(chapter.title)")
-        .sheet(isPresented: $showHomeExperiments) {
-            HomeExperimentsSheet(
-                chapterId: chapter.id,
-                chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
-            )
-        }
-        .sheet(isPresented: $showNotebook) {
-            ChapterNotebookSheet(
-                chapterId: chapter.id,
-                chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
-            )
-            .environmentObject(dataStore)
+        .sheet(item: $presentedSheet) { kind in
+            switch kind {
+            case .homeExperiments:
+                HomeExperimentsSheet(
+                    chapterId: chapter.id,
+                    chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
+                )
+            case .notebook:
+                ChapterNotebookSheet(
+                    chapterId: chapter.id,
+                    chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
+                )
+                .environmentObject(dataStore)
+            }
         }
     }
 
