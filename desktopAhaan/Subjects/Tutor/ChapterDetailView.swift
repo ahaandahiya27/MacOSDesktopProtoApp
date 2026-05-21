@@ -6,7 +6,9 @@ struct ChapterDetailView: View {
     let chapter: Chapter
 
     @EnvironmentObject private var nav: TutorNavigationState
+    @EnvironmentObject private var dataStore: DataStore
     @State private var showHomeExperiments = false
+    @State private var showNotebook = false
 
     private var beyondTheBookEntry: ArticleEntry? {
         ArticleIndex.entries["\(chapter.id)_beyond"]
@@ -31,18 +33,23 @@ struct ChapterDetailView: View {
                 }
 
                 // Enrichment surfaces: "Beyond the Book" article (long-form
-                // reading) and "Try at Home" sheet (hands-on experiments).
-                // Both only render for chapters that have content authored;
-                // the lookups gate visibility automatically.
-                if beyondTheBookEntry != nil || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
-                    HStack(spacing: 12) {
-                        if let entry = beyondTheBookEntry {
-                            BeyondTheBookCard(entry: entry)
-                        }
-                        if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
-                            TryAtHomeCard { showHomeExperiments = true }
+                // reading), "Try at Home" sheet (hands-on experiments), and
+                // "Notebook" sheet (free-form per-chapter writing).
+                // Beyond/Home are content-gated; Notebook is always shown.
+                VStack(spacing: 12) {
+                    if beyondTheBookEntry != nil || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                        HStack(spacing: 12) {
+                            if let entry = beyondTheBookEntry {
+                                BeyondTheBookCard(entry: entry)
+                            }
+                            if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                                TryAtHomeCard { showHomeExperiments = true }
+                            }
                         }
                     }
+                    NotebookCard(
+                        hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true)
+                    ) { showNotebook = true }
                 }
 
                 ForEach(chapter.topics) { topic in
@@ -77,8 +84,164 @@ struct ChapterDetailView: View {
                 chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
             )
         }
+        .sheet(isPresented: $showNotebook) {
+            ChapterNotebookSheet(
+                chapterId: chapter.id,
+                chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
+            )
+            .environmentObject(dataStore)
+        }
     }
 
+}
+
+// MARK: - Notebook card
+
+private struct NotebookCard: View {
+    let hasNotes: Bool
+    let onTap: () -> Void
+    @State private var isHovered = false
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                Text("📓")
+                    .font(.system(size: 26))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("My Notebook")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text(hasNotes ? "Pick up where you left off" : "Jot down questions, sketches in words, or aha moments")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.92))
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+                }
+                Spacer()
+                Image(systemName: "square.and.pencil")
+                    .font(.title3)
+                    .foregroundColor(.white.opacity(0.95))
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.25, green: 0.50, blue: 0.40),
+                                Color(red: 0.40, green: 0.60, blue: 0.30)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
+            )
+            .scaleEffect(isHovered ? 1.005 : 1.0)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .onHover { isHovered = $0 }
+        .accessibilityLabel("My Notebook")
+        .accessibilityHint("Opens the chapter notebook for your own notes.")
+    }
+}
+
+// MARK: - Notebook sheet
+//
+// A free-form per-chapter writing space. Big Sur compatible: uses
+// TextEditor (macOS 11+), not the macOS 12+ .scrollDismissesKeyboard
+// or .formStyle modifiers. Persists through DataStore.setChapterNote so
+// the save infrastructure is shared with all other user data.
+
+struct ChapterNotebookSheet: View {
+    let chapterId: String
+    let chapterTitle: String
+
+    @EnvironmentObject private var dataStore: DataStore
+    @Environment(\.presentationMode) private var presentationMode
+    @State private var draft: String = ""
+    @State private var didLoad: Bool = false
+
+    private var wordCount: Int {
+        draft.split(whereSeparator: \.isWhitespace).count
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .center) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("My Notebook")
+                        .font(.title2.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    Text(chapterTitle)
+                        .font(.subheadline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                }
+                Spacer()
+                Button("Done") {
+                    dataStore.setChapterNote(draft, forChapterId: chapterId)
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .keyboardShortcut(.defaultAction)
+            }
+            .padding(20)
+            .background(Color.white.opacity(0.5))
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Anything you noticed, wondered, or want to remember about this chapter goes here. The notebook saves automatically.")
+                    .font(.caption)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .padding(.horizontal, 4)
+
+                TextEditor(text: $draft)
+                    .font(.body)
+                    .frame(minHeight: 320)
+                    .padding(10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color.white)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .strokeBorder(Color.gray.opacity(0.20), lineWidth: 1)
+                    )
+
+                HStack {
+                    Text("\(wordCount) word\(wordCount == 1 ? "" : "s")")
+                        .font(.caption)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    Spacer()
+                    if !draft.isEmpty {
+                        Button {
+                            draft = ""
+                            dataStore.setChapterNote("", forChapterId: chapterId)
+                        } label: {
+                            Label("Clear", systemImage: "trash")
+                                .font(.caption)
+                        }
+                        .buttonStyle(.plain)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
+                }
+            }
+            .padding(20)
+        }
+        .frame(minWidth: 640, minHeight: 540)
+        .onAppear {
+            guard !didLoad else { return }
+            draft = dataStore.chapterNotes[chapterId] ?? ""
+            didLoad = true
+        }
+        .onChange(of: draft) { newValue in
+            // Persist on every keystroke. saveCoalesced inside
+            // setChapterNote debounces actual disk writes to 250ms.
+            dataStore.setChapterNote(newValue, forChapterId: chapterId)
+        }
+    }
 }
 
 // MARK: - Beyond the Book card

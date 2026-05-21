@@ -440,3 +440,29 @@ code {
   pre, code { background: #1a1c22; border: 1px solid #2a2d33; }
   img { opacity: 0.92; }
 }
+
+
+/* Enrichment asides (2026-05-21) — cross-chapter pointer + bilingual term tile */
+aside.connect-box {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+}
+aside.connect-box h3 { color: #047857; }
+aside.connect-box ul { margin: 0 0 0 18px; padding: 0; }
+aside.connect-box li { margin-bottom: 6px; }
+
+aside.lang-tile {
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+}
+aside.lang-tile h3 { color: #1d4ed8; }
+aside.lang-tile p { margin-bottom: 4px; }
+aside.lang-tile .meta { color: #6b7280; font-size: 0.92em; }
+
+/* Dark-mode override — keep contrast comfortable on dark background */
+@media (prefers-color-scheme: dark) {
+  aside.connect-box { background: rgba(16,185,129,0.10); }
+  aside.connect-box h3 { color: #34d399; }
+  aside.lang-tile { background: rgba(59,130,246,0.10); }
+  aside.lang-tile h3 { color: #60a5fa; }
+}

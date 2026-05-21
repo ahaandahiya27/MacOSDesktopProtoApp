@@ -43,6 +43,17 @@ struct QuestionReview: Codable, Hashable {
     }
 }
 
+/// One free-form notebook entry per chapter. Persisted as an array of
+/// these in `notes.json` so the existing `save`/`readFile` helpers
+/// (which both take `[T]`) can be reused without changing their
+/// signatures. The in-memory representation on DataStore is a dict
+/// keyed by chapterId for O(1) lookup from the notebook sheet.
+struct ChapterNote: Codable, Hashable {
+    let chapterId: String
+    var text: String
+    var updatedAt: Date
+}
+
 /// What the kid says about how that review went. Maps to four buttons
 /// in the review UI ("Forgot / Hard / Good / Easy"). Reading order is
 /// "worse → better" so the rawValue can be used as a quality grade.
@@ -183,6 +194,12 @@ final class DataStore: ObservableObject {
     /// `reviews.json`; algorithm lives in `SM2Scheduler` at the top of
     /// this file.
     @Published var questionReviews: [String: QuestionReview] = [:]
+
+    /// Chapter notebook — free-form text the kid jots while learning a
+    /// chapter. Keyed by `chapter.id` (e.g. "ch01"). Persisted to
+    /// `notes.json`. No size limit at this scale; written through
+    /// `saveCoalesced` since mid-typing fires every keystroke.
+    @Published var chapterNotes: [String: String] = [:]
 
     @Published var lastSaveError: String?
 
@@ -553,6 +570,21 @@ final class DataStore: ObservableObject {
         creditReviewStreak(at: now)
     }
 
+    /// Save (or clear) the notebook text for a chapter. Empty strings
+    /// remove the entry so the disk file doesn't accumulate empties.
+    func setChapterNote(_ text: String, forChapterId chapterId: String) {
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty {
+            chapterNotes.removeValue(forKey: chapterId)
+        } else {
+            chapterNotes[chapterId] = text
+        }
+        let rows = chapterNotes.map {
+            ChapterNote(chapterId: $0.key, text: $0.value, updatedAt: Date())
+        }
+        saveCoalesced(rows, to: "notes.json")
+    }
+
     /// Streak rules — applied each time the kid records a review:
     ///   - First-ever review: streak = 1, lastDate = today.
     ///   - Same day as lastDate: no change (idempotent within the day).
@@ -776,6 +808,7 @@ final class DataStore: ObservableObject {
         let reviewed = readFile(String.self, from: "reviewedQuestionIds.json", in: storeDir)
         let tough = readFile(String.self, from: "toughQuestionIds.json", in: storeDir)
         let reviews = readFile(QuestionReview.self, from: "reviews.json", in: storeDir)
+        let notes = readFile(ChapterNote.self, from: "notes.json", in: storeDir)
 
         // Crash-safe Dictionary build can stay on the background thread —
         // result is a value type, transferred to main below.
@@ -788,11 +821,21 @@ final class DataStore: ObservableObject {
             }
         )
 
+        let notesDict = Dictionary(
+            notes.items.map { ($0.chapterId, $0.text) },
+            uniquingKeysWith: { a, b in
+                CrashReporter.shared.logDataIssue(
+                    "notes.json contained duplicate chapterId; kept first row.")
+                return a
+            }
+        )
+
         let anyRescue = translations.didRescueCorruptFile || practice.didRescueCorruptFile
             || bookmarks.didRescueCorruptFile || qBookmarks.didRescueCorruptFile
             || attempts.didRescueCorruptFile || sessions.didRescueCorruptFile
             || discover.didRescueCorruptFile || reviewed.didRescueCorruptFile
             || tough.didRescueCorruptFile || reviews.didRescueCorruptFile
+            || notes.didRescueCorruptFile
 
         await MainActor.run {
             store.translationRecords = translations.items
@@ -805,6 +848,7 @@ final class DataStore: ObservableObject {
             store.reviewedQuestionIds = Set(reviewed.items)
             store.toughQuestionIds = Set(tough.items)
             store.questionReviews = reviewsDict
+            store.chapterNotes = notesDict
             if anyRescue {
                 store.lastSaveError = "Saved data couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
             }
