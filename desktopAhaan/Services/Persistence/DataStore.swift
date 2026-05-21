@@ -768,6 +768,12 @@ final class DataStore: ObservableObject {
         }
     }
 
+    /// Number of writes still queued in the coalesced-save buffer. Used
+    /// by `applicationWillTerminate` to detect a truncation event when
+    /// `flushSavesBeforeQuit`'s 1-second semaphore wait expires before
+    /// the drain finishes (audit Top-10 #6). Read on the main actor.
+    var pendingSaveCount: Int { pendingSavePayloads.count }
+
     /// Nonisolated file read — runs anywhere, touches no main-actor state.
     /// Returns the decoded array and a backup-rescue flag so the caller
     /// can surface the user-facing error message on the main thread.

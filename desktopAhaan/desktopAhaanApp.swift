@@ -52,7 +52,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Bounded wait: 1 second is generous — each pending write is one
         // small JSON atomic-replace. If we somehow can't finish in 1s
         // we proceed anyway rather than blocking a shutdown forever.
-        _ = flushSema.wait(timeout: .now() + 1.0)
+        let flushResult = flushSema.wait(timeout: .now() + 1.0)
+        if flushResult == .timedOut {
+            // Surface to crashlog so post-mortem can see how many writes
+            // were left in the queue (audit Top-10 #6). We're still on
+            // main here per AppKit's applicationWillTerminate contract,
+            // so reading pendingSaveCount is race-free.
+            let pending = DataStore.shared.pendingSaveCount
+            CrashReporter.shared.logDataIssue(
+                "flushSavesBeforeQuit timeout: \(pending) writes still queued at shutdown"
+            )
+        }
         CrashReporter.shared.markCleanExit()
         UserDefaults.standard.synchronize()
         appLogger.info("applicationWillTerminate — clean quit.")
