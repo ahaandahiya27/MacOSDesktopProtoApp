@@ -9,7 +9,11 @@ final class SpeechRecognitionManager: ObservableObject {
     @Published var isListening = false
     @Published var recognizedText = ""
     @Published var errorMessage: String?
-    @Published var authorizationStatus: SFSpeechRecognizerAuthorizationStatus = .notDetermined
+    // Seed from the system's cached value so a fresh manager instance
+    // doesn't think it needs to ask again after the user has already
+    // answered the dialog once this install. This is what stops the
+    // permission prompt from re-appearing on every quiz-card mount.
+    @Published var authorizationStatus: SFSpeechRecognizerAuthorizationStatus = SFSpeechRecognizer.authorizationStatus()
     @Published var permissionsReady = false
 
     private var speechRecognizer: SFSpeechRecognizer?
@@ -41,8 +45,19 @@ final class SpeechRecognitionManager: ObservableObject {
         #endif
     }
 
-    /// Request permissions for speech recognition and microphone — call once early
+    /// Request permissions for speech recognition and microphone — call once early.
+    /// Safe to call from multiple sites: if the system has already recorded an
+    /// answer (authorized / denied / restricted) we early-return without hitting
+    /// the OS API, so the user never sees the dialog more than once per install.
     func requestPermissions() {
+        let cached = SFSpeechRecognizer.authorizationStatus()
+        guard cached == .notDetermined else {
+            // System already has an answer — mirror it and stop.
+            if authorizationStatus != cached {
+                authorizationStatus = cached
+            }
+            return
+        }
         SFSpeechRecognizer.requestAuthorization { [weak self] status in
             Task { @MainActor [weak self] in
                 self?.authorizationStatus = status

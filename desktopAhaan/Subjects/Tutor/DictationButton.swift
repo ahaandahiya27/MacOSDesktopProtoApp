@@ -27,7 +27,6 @@ struct DictationButton: View {
         .buttonStyle(.plain)
         .help(speech.isListening ? "Stop dictation" : "Speak your answer — runs on this Mac, no internet needed")
         .accessibilityLabel(speech.isListening ? "Stop dictation" : "Start dictation")
-        .onAppear { speech.requestPermissions() }
         .onChange(of: speech.recognizedText) { newValue in
             // Only overwrite the field if the recognizer is actively
             // producing text. Append on top of whatever was already typed
@@ -43,6 +42,12 @@ struct DictationButton: View {
         if speech.isListening {
             speech.stopListening()
         } else {
+            // Defer the permission ask to the first time the user actually
+            // taps the mic. SpeechRecognitionManager.requestPermissions()
+            // self-throttles if the system already has an answer, so
+            // re-calling here on every tap is safe — the dialog only ever
+            // appears once per install.
+            speech.requestPermissions()
             lastTranscriptSeed = transcript.trimmingCharacters(in: .whitespacesAndNewlines)
             speech.startListening(language: .english)
         }
