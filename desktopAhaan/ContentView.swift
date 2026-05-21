@@ -707,6 +707,18 @@ private struct ReviewSessionSheet: View {
                     .controlSize(.large)
                     .frame(maxWidth: .infinity)
             }
+            // Skip card — bottom-right escape hatch. The kid hits this if
+            // the prompt is confusing, a typo slipped in, or they want to
+            // move past without scoring. Doesn't call recordReview so the
+            // SM-2 scheduler is unaffected.
+            HStack {
+                Spacer()
+                Button("Skip this card") { advance() }
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .keyboardShortcut("s", modifiers: [])
+                    .accessibilityLabel("Skip this card without scoring (press S)")
+            }
         }
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
