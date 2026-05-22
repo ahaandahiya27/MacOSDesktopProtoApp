@@ -18,16 +18,25 @@ import XCTest
 //      detaches documentView before the SwiftUI commit unwinds.
 //
 // Wiring: this file is the only member of the `desktopAhaanUITests`
-// target (`com.apple.product-type.bundle.ui-testing`), wired into
-// `desktopAhaan.xcscheme`'s TestAction so `xcodebuild test` runs it
-// alongside the unit-test bundle. The host app is desktopAhaan.app.
+// target (`com.apple.product-type.bundle.ui-testing`). It is added to
+// `desktopAhaan.xcscheme`'s TestAction with `skipped="YES"` so the
+// default `xcodebuild test` run (used by the pre-push hook and CI)
+// does not try to drive it. The host app is desktopAhaan.app.
 //
-// On the iMac (Big Sur — the actual deploy target where the crash
-// reproduces) the test runner needs Accessibility granted once at
-// System Settings → Privacy & Security → Accessibility before AX
-// driving works. Without that grant the click/keystroke calls below
-// silently no-op and the final assertion fails by timeout — which is
-// the correct failure mode (no false-confidence pass).
+// To run this test explicitly on the iMac (where the crash actually
+// reproduces and AX has been granted once to the runner):
+//
+//     xcodebuild test \
+//       -scheme desktopAhaan \
+//       -destination 'platform=macOS' \
+//       -only-testing:desktopAhaanUITests/Crash_BeyondThenDiscover
+//
+// First run on a fresh machine will prompt for Accessibility under
+// System Settings → Privacy & Security → Accessibility — grant it to
+// the test runner (`desktopAhaanUITests-Runner.app`). Without the
+// grant the click/keystroke calls below silently no-op and the final
+// assertion fails by timeout, which is the correct failure mode (no
+// false-confidence pass).
 //
 // Accessibility identifiers driven below are set on:
 //   - ChapterListView → "chapter-N" (the chapter row buttons)
