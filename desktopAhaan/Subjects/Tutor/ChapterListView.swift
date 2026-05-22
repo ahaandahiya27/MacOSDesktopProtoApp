@@ -64,6 +64,7 @@ struct ChapterListView: View {
                             }
                             .buttonStyle(.plain)
                             .pointingCursor()
+                            .accessibilityIdentifier("chapter-\(chapter.number)")
                             .contextMenu {
                                 Button("Open") { nav.push(.chapter(packId: pack.id, chapterId: chapter.id)) }
                                 Button("Copy title") {

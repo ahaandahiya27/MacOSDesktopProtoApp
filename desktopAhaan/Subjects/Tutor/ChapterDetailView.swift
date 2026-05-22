@@ -86,6 +86,7 @@ struct ChapterDetailView: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("try-discover-mode")
                 }
 
                 // Enrichment surfaces: "Beyond the Book" article (long-form
@@ -387,6 +388,7 @@ private struct BeyondTheBookCard: View {
         }
         .buttonStyle(.plain)
         .onHover { isHovered = $0 }
+        .accessibilityIdentifier("beyond-the-book")
         .accessibilityLabel("Beyond the Book")
         .accessibilityHint("Opens a long-form enrichment article for this chapter.")
     }
