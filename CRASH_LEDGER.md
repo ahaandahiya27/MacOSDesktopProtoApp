@@ -46,7 +46,8 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 **Mitigations already shipped**:
 - `178a113` `ArticleBrowserView.onDisappear → coordinator.cleanup()`; cleanup() now stops loading, invalidates each NSKeyValueObservation, clears navigation/UI delegates.
 - `9fd1e53` `ArticleWindowManager.windows` capped at 8 with FIFO eviction + os.Logger telemetry.
-**Status**: ✅ believed fixed; awaiting 100-iteration tear-down test.
+- **`69a1335` (2026-05-22 06:58) — `windowWillClose` now forces `window.contentView = nil` + `window.delegate = nil` BEFORE removing from the array. Triggers NSHostingView dealloc synchronously → SwiftUI .onDisappear runs → `coordinator.cleanup()` runs → zero zombie residue in the SwiftUI subscription graph by the time the next render pass starts. This closes the live repro Rohan captured at 2026-05-22 06:54: Beyond-the-Book → article opens → WebContent dies (Big Sur AMD R9 M290X shader-archive bug) → article closed → Try Discover Mode click → entangling fence → EXC_BAD_ACCESS.**
+**Status**: ✅ believed fixed including the live repro; awaiting iMac confirmation after the next pull.
 
 ---
 
