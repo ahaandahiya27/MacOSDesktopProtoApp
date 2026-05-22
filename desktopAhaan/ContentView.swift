@@ -265,6 +265,7 @@ struct ContentView: View {
                         }
                         .tag(SidebarSelection.subject(pack.id))
                         .help(pack.title)
+                        .accessibilityIdentifier("subject-row-\(pack.id)")
                     }
                 }
             }
@@ -389,6 +390,7 @@ private struct WelcomeSheet: View {
             .buttonStyle(.bordered)
             .accentColor(Color.compatIndigo)
             .keyboardShortcut(.defaultAction)
+            .accessibilityIdentifier("welcome-lets-go")
         }
         .padding(28)
         .frame(minWidth: 420, idealWidth: 480, maxWidth: 560,

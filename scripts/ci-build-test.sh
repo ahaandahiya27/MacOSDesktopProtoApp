@@ -123,12 +123,20 @@ run_xcodebuild "BUILD" \
     build
 
 echo "==> test"
+# Skip the UI-test bundle by default — its test runner needs an
+# Accessibility grant in System Settings → Privacy & Security →
+# Accessibility, which isn't present on dev Macs or CI runners. The
+# UI-test bundle is invoked explicitly on machines where the runner
+# has been AX-granted, via:
+#   xcodebuild test -scheme desktopAhaan -destination 'platform=macOS' \
+#     -only-testing:desktopAhaanUITests/Crash_BeyondThenDiscover
 run_xcodebuild "TESTS" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
     -configuration Debug \
     -derivedDataPath "$DERIVED" \
     -destination 'platform=macOS' \
+    -skip-testing:desktopAhaanUITests \
     "${SIGNING_FLAGS[@]}" \
     test
 

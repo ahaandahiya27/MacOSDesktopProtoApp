@@ -18,10 +18,12 @@ import XCTest
 //      detaches documentView before the SwiftUI commit unwinds.
 //
 // Wiring: this file is the only member of the `desktopAhaanUITests`
-// target (`com.apple.product-type.bundle.ui-testing`). It is added to
-// `desktopAhaan.xcscheme`'s TestAction with `skipped="YES"` so the
-// default `xcodebuild test` run (used by the pre-push hook and CI)
-// does not try to drive it. The host app is desktopAhaan.app.
+// target (`com.apple.product-type.bundle.ui-testing`), included in
+// `desktopAhaan.xcscheme`'s TestAction so `-only-testing` can find it.
+// `scripts/ci-build-test.sh` (called by the pre-push hook and CI)
+// passes `-skip-testing:desktopAhaanUITests` so the default test run
+// does not try to drive AX on machines without an Accessibility grant.
+// Host app is desktopAhaan.app.
 //
 // To run this test explicitly on the iMac (where the crash actually
 // reproduces and AX has been granted once to the runner):
@@ -38,10 +40,21 @@ import XCTest
 // assertion fails by timeout, which is the correct failure mode (no
 // false-confidence pass).
 //
-// Accessibility identifiers driven below are set on:
-//   - ChapterListView → "chapter-N" (the chapter row buttons)
+// Accessibility identifiers driven below:
+//   - ContentView welcome sheet → "welcome-lets-go"
+//   - ContentView sidebar Subject row → "subject-row-<pack.id>"
+//   - ChapterListView chapter row → "chapter-N"
 //   - ChapterDetailView Beyond-the-Book card → "beyond-the-book"
 //   - ChapterDetailView Discover banner → "try-discover-mode"
+//
+// Dev-Mac caveat: on macOS 15 (Apple Silicon dev box) the SwiftUI
+// `List` row wrapping around `Label { … }.accessibilityIdentifier(…)`
+// does not surface the identifier in the AX tree the same way macOS
+// 11 (Big Sur, the iMac) does. The selectors above are correct for
+// Big Sur; dev-Mac runs may fail at the sidebar step until macOS-15
+// SwiftUI List AX is revisited. The crash itself only reproduces on
+// Big Sur + AMD R9 M290X, so this test's only authoritative venue is
+// the iMac anyway.
 
 final class Crash_BeyondThenDiscover: XCTestCase {
     func testBeyondTheBookThenDiscoverMode() throws {
@@ -50,13 +63,12 @@ final class Crash_BeyondThenDiscover: XCTestCase {
 
         dismissWelcomeIfNeeded(in: app)
 
-        // Sidebar → Science. The row label varies by pack title, so we
-        // match by substring rather than full equality to stay robust
-        // against future renames.
-        let scienceRow = app.staticTexts.matching(
-            NSPredicate(format: "label CONTAINS %@", "Science")
-        ).firstMatch
-        XCTAssertTrue(scienceRow.waitForExistence(timeout: 3))
+        // Sidebar → Science. Stable identifier survives pack-title
+        // renames; matching by AX label doesn't see through SwiftUI
+        // Label wrapping on macOS reliably.
+        let scienceRow = app.descendants(matching: .any)["subject-row-science_class7"].firstMatch
+        XCTAssertTrue(scienceRow.waitForExistence(timeout: 5),
+                      "Sidebar row 'subject-row-science_class7' did not appear.")
         scienceRow.click()
 
         // First chapter row — stable identifier "chapter-1" added in
@@ -98,8 +110,8 @@ final class Crash_BeyondThenDiscover: XCTestCase {
     }
 
     private func dismissWelcomeIfNeeded(in app: XCUIApplication) {
-        let letsGo = app.buttons["Let's go"]
-        if letsGo.waitForExistence(timeout: 1) {
+        let letsGo = app.buttons["welcome-lets-go"]
+        if letsGo.waitForExistence(timeout: 2) {
             letsGo.click()
         }
     }
