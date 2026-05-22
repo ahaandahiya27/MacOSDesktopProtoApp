@@ -88,13 +88,23 @@ struct ChapterDetailView: View {
                                 BeyondTheBookCard(entry: entry)
                             }
                             if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
-                                TryAtHomeCard { presentedSheet = .homeExperiments }
+                                // Defer the sheet-present to the next runloop tick.
+                                // Same C2 cascade fix as the Try Discover Mode nav.push
+                                // — setting presentedSheet inside the Button action
+                                // can collide with the Button-press render commit on
+                                // ChapterDetailView, sometimes tripping "Entangling
+                                // fence requested after pre-commit" → EXC_BAD_ACCESS.
+                                TryAtHomeCard {
+                                    DispatchQueue.main.async { presentedSheet = .homeExperiments }
+                                }
                             }
                         }
                     }
                     NotebookCard(
                         hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true)
-                    ) { presentedSheet = .notebook }
+                    ) {
+                        DispatchQueue.main.async { presentedSheet = .notebook }
+                    }
                 }
 
                 ForEach(chapter.topics) { topic in
@@ -316,10 +326,19 @@ private struct BeyondTheBookCard: View {
 
     var body: some View {
         Button {
-            ArticleWindowManager.shared.openArticle(
-                filename: entry.filename,
-                chapterFolder: entry.chapterFolder
-            )
+            // Defer NSWindow creation to the next runloop tick. Same
+            // C2 cascade fix — synchronously creating an NSWindow +
+            // NSHostingView + @StateObject WebViewCoordinator inside
+            // the Button action collides with the Button-press render
+            // commit on ChapterDetailView. The deferral lets the
+            // current commit fully resolve before AppKit starts a new
+            // window's full lifecycle (which itself triggers AppKit
+            // notifications and SwiftUI re-renders on the main window).
+            let f = entry.filename
+            let cf = entry.chapterFolder
+            DispatchQueue.main.async {
+                ArticleWindowManager.shared.openArticle(filename: f, chapterFolder: cf)
+            }
         } label: {
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 8) {

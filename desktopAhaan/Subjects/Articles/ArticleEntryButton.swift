@@ -93,10 +93,13 @@ struct ArticleEntryButton: View {
     var body: some View {
         if let e = entry {
             Button {
-                ArticleWindowManager.shared.openArticle(
-                    filename: e.filename,
-                    chapterFolder: e.chapterFolder
-                )
+                // Same C2 cascade fix as BeyondTheBookCard — defer the
+                // NSWindow open to next runloop tick.
+                let f = e.filename
+                let cf = e.chapterFolder
+                DispatchQueue.main.async {
+                    ArticleWindowManager.shared.openArticle(filename: f, chapterFolder: cf)
+                }
             } label: {
                 HStack(spacing: 12) {
                     Image(systemName: "book.closed.fill")
