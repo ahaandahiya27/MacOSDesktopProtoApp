@@ -61,9 +61,9 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 
 ## Open work to lock the four fixes
 
-- [ ] XCUITest `desktopAhaanTests/CrashRepros/Crash1_TryDiscoverMode_Ch1.swift` — walks Sidebar → Science → Ch.1 → Try Discover Mode and asserts a known element renders.
-- [ ] Unit test that asserts `requestPermissions()` early-returns under `XCTestConfigurationFilePath`.
+- [x] XCUITest `desktopAhaanUITests/Crash1_TryDiscoverMode_Ch1.swift` (in UI-test bundle, not the unit-test bundle as originally written) — walks Sidebar → Science → Ch.1 → Try Discover Mode and asserts the Discover shell renders. Landed in `05b851c`.
+- [x] `desktopAhaanTests/CrashRepros/Speech_NoPromptUnderTest.swift` — two `@Test` cases assert `XCTestConfigurationFilePath` env var is set under test runs and `SpeechRecognitionManager.requestPermissions()` is a synchronous no-op (authorizationStatus stays `.notDetermined`, no SF Speech prompt fires). Landed in `6ae27a8`.
 - [x] ~~Unit test that creates+tears-down `ArticleBrowserView` 100 times and asserts `ArticleWindowManager.windows.count` ≤ 8 throughout.~~ **Retired by `f4ec573`** — ArticleWindowManager structurally no longer exists (the article is now a SwiftUI `.sheet(item:)` instead of an NSWindow). `ArticleBrowserView`'s teardown surface is covered end-to-end by `Crash_BeyondThenDiscover` at the UI level (it walks the full open→close→re-open path, and the dismantle-order fix in `ffd889c` is what would have broken under the 100× stress).
-- [ ] Lint addition: refuse `var delegate:` in any class that inherits from `NSObject` (must be `weak var`).
-- [ ] Lint addition: refuse `unowned` anywhere outside `@MainActor`-isolated init (use `weak`).
-- [ ] Lint addition: refuse `@unchecked Sendable` in new code.
+- [x] Lint addition: refuse `var delegate:` without `weak`. LH001 in `scripts/check_lifetime_hazards.py`. Pre-existing `TextToSpeechManager.swift:11` grandfathered via `scripts/lifetime_hazards_allowlist.txt` (TextToSpeechManager is @MainActor ObservableObject, not NSObject; AVSpeechSynthesizer.delegate is weak). Landed in `a7a7052`.
+- [x] Lint addition: refuse `unowned` (any use). LH002. Codebase has zero `unowned` references; lint catches new ones. Landed in `ffcb3c3`.
+- [x] Lint addition: refuse `@unchecked Sendable`. LH003. Codebase has zero such conformances; lint catches new ones. Landed in `eede939`.
