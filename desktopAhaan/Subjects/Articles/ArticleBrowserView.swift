@@ -229,6 +229,13 @@ private class ArticleCoordinator: NSObject, ObservableObject
     private weak var nativeTextView: NSTextView?
     private var nativeHistory: [URL] = []
     private var nativeHistoryIndex: Int?
+    /// Monotone counter so a stale background load can't overwrite a
+    /// newer one. Each call to `loadNativeArticle` bumps it and captures
+    /// the value; the completion only applies its result if the captured
+    /// value still matches. Pre-roll: a kid mashes Forward/Back fast and
+    /// the older read happens to finish last — without this gate, the
+    /// older article overwrites the newer view.
+    private var loadGeneration: UInt64 = 0
 
     func load(fileURL: URL, inFolder: String) {
         currentURL = fileURL
@@ -283,36 +290,72 @@ private class ArticleCoordinator: NSObject, ObservableObject
         textView.textStorage?.setAttributedString(nativeArticle)
     }
 
+    /// Loads `url` off the main thread. The synchronous version of this
+    /// method blocked `@MainActor` for the duration of `String(contentsOf:)`
+    /// + HTML strip; for a 50–100 KB article on the Big Sur iMac's spinning
+    /// disk path that's tens to hundreds of milliseconds of jank when the
+    /// Beyond-the-Book sheet opens. We now read + strip in a detached
+    /// task and post the parsed result back to the main actor.
+    ///
+    /// Race protection: `loadGeneration` guards against the race where a
+    /// fast Forward→Back→Forward cascade has three reads in flight and the
+    /// oldest happens to finish last. Each call captures its generation;
+    /// the apply step early-returns if a newer load has been kicked off.
     private func loadNativeArticle(_ url: URL, recordingHistory: Bool) {
-        do {
-            // Do not use NSAttributedString's HTML importer on Big Sur.
-            // It still goes through WebKit internally and launches the same
-            // WebContent subprocess this renderer exists to avoid.
-            let html = try String(contentsOf: url, encoding: .utf8)
-            let body = PlainTextArticleFallback.stripHTML(html)
-            nativeArticle = NSAttributedString(
-                string: body,
-                attributes: [
-                    .font: NSFont.systemFont(ofSize: NSFont.systemFontSize),
-                    .foregroundColor: NSColor.labelColor
-                ]
-            )
-            currentURL = url
-            pageTitle = nativeTitle(fromHTML: html, body: body, fallbackURL: url)
-            recordNativeHistory(for: url, shouldRecord: recordingHistory)
-            updateNativeNavigationState()
-            updateNativeTextView()
-        } catch {
-            pageTitle = url.deletingPathExtension().lastPathComponent
-            nativeArticle = NSAttributedString(
-                string: "Article could not be rendered.\n\n\(error.localizedDescription)",
-                attributes: [
-                    .font: NSFont.systemFont(ofSize: NSFont.systemFontSize),
-                    .foregroundColor: NSColor.labelColor
-                ]
-            )
-            updateNativeTextView()
+        loadGeneration &+= 1
+        let myGeneration = loadGeneration
+        Task { [weak self] in
+            let result = await Self.readParseAndExtractTitle(url: url)
+            guard let self = self else { return }
+            // Stale completion — a newer load() superseded this one.
+            guard self.loadGeneration == myGeneration else { return }
+            switch result {
+            case .success(let body, let title):
+                self.nativeArticle = NSAttributedString(
+                    string: body,
+                    attributes: [
+                        .font: NSFont.systemFont(ofSize: NSFont.systemFontSize),
+                        .foregroundColor: NSColor.labelColor
+                    ]
+                )
+                self.currentURL = url
+                self.pageTitle = title
+                self.recordNativeHistory(for: url, shouldRecord: recordingHistory)
+                self.updateNativeNavigationState()
+                self.updateNativeTextView()
+            case .failure(let message):
+                self.pageTitle = url.deletingPathExtension().lastPathComponent
+                self.nativeArticle = NSAttributedString(
+                    string: "Article could not be rendered.\n\n\(message)",
+                    attributes: [
+                        .font: NSFont.systemFont(ofSize: NSFont.systemFontSize),
+                        .foregroundColor: NSColor.labelColor
+                    ]
+                )
+                self.updateNativeTextView()
+            }
         }
+    }
+
+    /// Off-main file read + HTML strip + title extraction. Returns a
+    /// Sendable result (Strings only, no NSError refs) so the value can
+    /// cross the actor hop without `@unchecked Sendable` lies.
+    private nonisolated static func readParseAndExtractTitle(
+        url: URL
+    ) async -> ArticleLoadOutcome {
+        await Task.detached(priority: .userInitiated) {
+            do {
+                // Do not use NSAttributedString's HTML importer on Big Sur.
+                // It still goes through WebKit internally and launches the
+                // same WebContent subprocess this renderer exists to avoid.
+                let html = try String(contentsOf: url, encoding: .utf8)
+                let body = PlainTextArticleFallback.stripHTML(html)
+                let title = Self.titleFromHTML(html, body: body, fallbackURL: url)
+                return .success(body: body, title: title)
+            } catch {
+                return .failure(message: error.localizedDescription)
+            }
+        }.value
     }
 
     private func recordNativeHistory(for url: URL, shouldRecord: Bool) {
@@ -333,9 +376,14 @@ private class ArticleCoordinator: NSObject, ObservableObject
         canGoForward = index + 1 < nativeHistory.count
     }
 
-    private func nativeTitle(fromHTML html: String,
-                             body: String,
-                             fallbackURL: URL) -> String {
+    /// Pure (no instance state, no actor requirements) so it can run on
+    /// the detached read hop. Promoted from instance method to `nonisolated
+    /// static` as part of the off-main load refactor.
+    nonisolated static func titleFromHTML(
+        _ html: String,
+        body: String,
+        fallbackURL: URL
+    ) -> String {
         if let titleRange = html.range(
             of: "<title[^>]*>(.*?)</title>",
             options: [.caseInsensitive, .regularExpression]
@@ -353,6 +401,13 @@ private class ArticleCoordinator: NSObject, ObservableObject
         return firstLine.map { String($0) }
             ?? fallbackURL.deletingPathExtension().lastPathComponent
     }
+}
+
+/// Sendable carrier for the off-main article load. String payloads only —
+/// keeps NSError out of the actor-hop value.
+private enum ArticleLoadOutcome: Sendable {
+    case success(body: String, title: String)
+    case failure(message: String)
 }
 
 // MARK: - PlainTextArticleFallback
@@ -429,7 +484,12 @@ private struct PlainTextArticleFallback: View {
     /// Cheap HTML→text reducer. Not a real parser — just enough to make a
     /// concept article readable when WebKit is dead. Newlines after block
     /// tags, two newlines after headings/paragraphs/list items.
-    static func stripHTML(_ html: String) -> String {
+    ///
+    /// `nonisolated` so the off-main `ArticleCoordinator.readParseAndExtractTitle`
+    /// can call it from a `Task.detached` body. `PlainTextArticleFallback`
+    /// conforms to `View` (which is `@MainActor`-isolated), and without
+    /// this annotation Swift 6 would refuse the cross-actor call.
+    nonisolated static func stripHTML(_ html: String) -> String {
         var s = html
         let blockBreaks = ["</p>", "</h1>", "</h2>", "</h3>", "</h4>",
                            "</h5>", "</h6>", "</li>", "</div>", "</section>",
