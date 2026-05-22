@@ -47,7 +47,27 @@ struct ChapterDetailView: View {
 
                 if DiscoverMode.hasExperience(for: pack, chapter: chapter) {
                     Button {
-                        nav.push(.discover(packId: pack.id, chapterId: chapter.id))
+                        // CRITICAL (2026-05-22 07:35 fix): defer the
+                        // navigation push to the next runloop tick.
+                        // Rohan reported the crash pattern: open Try at
+                        // Home / Beyond the Book / My Notebook, dismiss,
+                        // THEN click Try Discover Mode → EXC_BAD_ACCESS
+                        // in objc_release. Cause: the sheet's dismiss
+                        // and the nav.push trigger overlapping re-renders
+                        // of ChapterDetailView in the same runloop tick.
+                        // SwiftUI's "Entangling fence requested after
+                        // pre-commit" warning fires when one render
+                        // commit hasn't finished before the next one
+                        // starts. DispatchQueue.main.async pushes the
+                        // navigation to the next tick so the sheet-
+                        // dismiss commit completes first. Same effect
+                        // when navigating directly (no prior sheet) —
+                        // the one-tick delay is imperceptible.
+                        let packId = pack.id
+                        let chapterId = chapter.id
+                        DispatchQueue.main.async {
+                            nav.push(.discover(packId: packId, chapterId: chapterId))
+                        }
                     } label: {
                         DiscoverEntryBanner(
                             sceneCount: DataStore.discoverSceneCounts[chapter.number] ?? 9
@@ -208,8 +228,25 @@ struct ChapterNotebookSheet: View {
                 }
                 Spacer()
                 Button("Done") {
-                    dataStore.setChapterNote(draft, forChapterId: chapterId)
+                    // 2026-05-22 fix: dismiss FIRST, then save in next
+                    // runloop tick. Doing both synchronously inside the
+                    // button action cascaded two `objectWillChange.send`
+                    // notifications (the @Published `chapterNotes` write
+                    // and the `presentationMode` binding flip) into the
+                    // same render commit, occasionally tripping the
+                    // "Entangling fence" warning on the parent
+                    // ChapterDetailView's next interaction (e.g. Try
+                    // Discover Mode click) → EXC_BAD_ACCESS in objc_release.
+                    // The .onChange(of: draft) save below already wrote
+                    // the value on every keystroke, so the captured copy
+                    // is just defence-in-depth.
+                    let captured = draft
+                    let cid = chapterId
+                    let ds = dataStore
                     presentationMode.wrappedValue.dismiss()
+                    DispatchQueue.main.async {
+                        ds.setChapterNote(captured, forChapterId: cid)
+                    }
                 }
                 .keyboardShortcut(.defaultAction)
             }
