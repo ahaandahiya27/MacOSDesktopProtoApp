@@ -38,6 +38,16 @@
                ReferencedContainer = "container:desktopAhaan.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0AAA000000000000000000A7"
+               BuildableName = "desktopAhaanUITests.xctest"
+               BlueprintName = "desktopAhaanUITests"
+               ReferencedContainer = "container:desktopAhaan.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

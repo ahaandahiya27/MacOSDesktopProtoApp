@@ -17,30 +17,22 @@ import XCTest
 //      by adding dismantleNSView that nils any delegate first then
 //      detaches documentView before the SwiftUI commit unwinds.
 //
-// IMPORTANT — wiring note before this test can actually drive UI:
+// Wiring: this file is the only member of the `desktopAhaanUITests`
+// target (`com.apple.product-type.bundle.ui-testing`), wired into
+// `desktopAhaan.xcscheme`'s TestAction so `xcodebuild test` runs it
+// alongside the unit-test bundle. The host app is desktopAhaan.app.
 //
-// This file currently lives in desktopAhaanTests (a unit-test bundle,
-// `com.apple.product-type.bundle.unit-test`). It is NOT yet referenced
-// from desktopAhaan.xcodeproj/project.pbxproj — search confirms zero
-// matches for `Crash_BeyondThenDiscover` / `CrashRepros` in the
-// project file. Two reasons it cannot be auto-enabled in this session:
+// On the iMac (Big Sur — the actual deploy target where the crash
+// reproduces) the test runner needs Accessibility granted once at
+// System Settings → Privacy & Security → Accessibility before AX
+// driving works. Without that grant the click/keystroke calls below
+// silently no-op and the final assertion fails by timeout — which is
+// the correct failure mode (no false-confidence pass).
 //
-//   a) XCUIApplication-driven tests want a UI-test bundle
-//      (`com.apple.product-type.bundle.ui-testing`) — that target
-//      doesn't exist in this project yet. From a unit-test bundle the
-//      XCUIApplication launch can succeed but AX driving is unsupported
-//      and frequently no-ops.
-//   b) Even with a UI-test target, on the dev Mac the test process
-//      needs Accessibility (AX) granted in System Settings → Privacy &
-//      Security → Accessibility. That's a manual user step.
-//
-// On the iMac (Big Sur, the actual deploy target where the crash
-// reproduces), once a UI-test target is added and the binary is
-// AX-granted once, this test becomes a permanent regression lock.
-// Accessibility identifiers wired below now match the buttons on
-// ChapterListView, ChapterDetailView (Discover banner), and the
-// Beyond-the-Book card in ChapterDetailView — see commits f4ec573
-// and the current commit.
+// Accessibility identifiers driven below are set on:
+//   - ChapterListView → "chapter-N" (the chapter row buttons)
+//   - ChapterDetailView Beyond-the-Book card → "beyond-the-book"
+//   - ChapterDetailView Discover banner → "try-discover-mode"
 
 final class Crash_BeyondThenDiscover: XCTestCase {
     func testBeyondTheBookThenDiscoverMode() throws {

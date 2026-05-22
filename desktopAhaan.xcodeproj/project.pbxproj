@@ -626,10 +626,18 @@
 		FDF6BA967AA03E261C22B88A /* Scene1_HotOrCold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351731F780C051542B5CCC9C /* Scene1_HotOrCold.swift */; };
 		FE7147E862A040CE9568C91A /* ch05_t03_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = E5C83C1815054732B2BDEFDC /* ch05_t03_c01.html */; };
 		FE7AA532DCB846B180F505B7 /* Scene9_BossQuiz_Ch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91807A2D4171E07C550B0E /* Scene9_BossQuiz_Ch3.swift */; };
+		0AAA000000000000000000A1 /* Crash_BeyondThenDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		043BC1072FA79A3E006D6000 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0434CE7F2FA733CD000C01F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0434CE862FA733CD000C01F2;
+			remoteInfo = desktopAhaan;
+		};
+		0AAA000000000000000000A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0434CE7F2FA733CD000C01F2 /* Project object */;
 			proxyType = 1;
@@ -643,6 +651,8 @@
 		0343FBC99494449AB5416D38 /* ch01_t02_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ch01_t02_c02.html; sourceTree = "<group>"; };
 		0434CE872FA733CD000C01F2 /* desktopAhaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktopAhaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAA000000000000000000A3 /* desktopAhaanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash_BeyondThenDiscover.swift; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -1278,6 +1288,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AAA000000000000000000A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1298,6 +1315,7 @@
 			children = (
 				9808FFCA4B5944FB954D6F23 /* desktopAhaan */,
 				5F438BDA49654B49D615D228 /* desktopAhaanTests */,
+				0AAA000000000000000000A6 /* desktopAhaanUITests */,
 				0434CE882FA733CD000C01F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1307,8 +1325,17 @@
 			children = (
 				0434CE872FA733CD000C01F2 /* desktopAhaan.app */,
 				043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */,
+				0AAA000000000000000000A3 /* desktopAhaanUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0AAA000000000000000000A6 /* desktopAhaanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */,
+			);
+			path = desktopAhaanUITests;
 			sourceTree = "<group>";
 		};
 		04B83C292FBFE979005D3D07 /* Plugins */ = {
@@ -2671,6 +2698,26 @@
 			productReference = 043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0AAA000000000000000000A7 /* desktopAhaanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAA000000000000000000AD /* Build configuration list for PBXNativeTarget "desktopAhaanUITests" */;
+			buildPhases = (
+				0AAA000000000000000000A9 /* Sources */,
+				0AAA000000000000000000A5 /* Frameworks */,
+				0AAA000000000000000000A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAA000000000000000000AA /* PBXTargetDependency */,
+			);
+			name = desktopAhaanUITests;
+			packageProductDependencies = (
+			);
+			productName = desktopAhaanUITests;
+			productReference = 0AAA000000000000000000A3 /* desktopAhaanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2685,6 +2732,10 @@
 						CreatedOnToolsVersion = 13.2;
 					};
 					043BC1022FA79A3E006D6000 = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 0434CE862FA733CD000C01F2;
+					};
+					0AAA000000000000000000A7 = {
 						CreatedOnToolsVersion = 13.2;
 						TestTargetID = 0434CE862FA733CD000C01F2;
 					};
@@ -2705,6 +2756,7 @@
 			targets = (
 				0434CE862FA733CD000C01F2 /* desktopAhaan */,
 				043BC1022FA79A3E006D6000 /* desktopAhaanTests */,
+				0AAA000000000000000000A7 /* desktopAhaanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -3044,6 +3096,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AAA000000000000000000A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3360,6 +3419,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0AAA000000000000000000A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAA000000000000000000A1 /* Crash_BeyondThenDiscover.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -3367,6 +3434,11 @@
 			isa = PBXTargetDependency;
 			target = 0434CE862FA733CD000C01F2 /* desktopAhaan */;
 			targetProxy = 043BC1072FA79A3E006D6000 /* PBXContainerItemProxy */;
+		};
+		0AAA000000000000000000AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0434CE862FA733CD000C01F2 /* desktopAhaan */;
+			targetProxy = 0AAA000000000000000000A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3586,6 +3658,44 @@
 			};
 			name = Release;
 		};
+		0AAA000000000000000000AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = desktopAhaan;
+			};
+			name = Debug;
+		};
+		0AAA000000000000000000AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 286U8ZS2U7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = desktopAhaan;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3612,6 +3722,15 @@
 			buildConfigurations = (
 				043BC10A2FA79A3E006D6000 /* Debug */,
 				043BC10B2FA79A3E006D6000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAA000000000000000000AD /* Build configuration list for PBXNativeTarget "desktopAhaanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAA000000000000000000AB /* Debug */,
+				0AAA000000000000000000AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
