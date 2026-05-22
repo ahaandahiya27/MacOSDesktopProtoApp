@@ -81,16 +81,27 @@ This file is a **current-state snapshot**, not a log. It is overwritten on every
 |---|---|---|
 | `Data(contentsOf:)` on `@MainActor` for non-trivial payload | **1** | `DataStore.swift:283` schema_version read — bytes-sized, accepted |
 | `JSONDecoder().decode(...)` on `@MainActor` | **0** | All pack decoding via `Task.detached` (commits in SubjectRegistry / DataStore) |
-| `try? write` swallowing errors | scan TBD | next iteration |
+| `try? write` swallowing errors | **3 — all intentional** | `CrashReporter.swift:384,395` inside the crash handler (must never throw); `DataStore.swift:296` is the schema-version stamp which is idempotent (next launch retries the migration if the stamp didn't land). No `lastSaveError` banner surfacing needed at any of the three. |
 
 ---
 
 ## Open items queued for fix (next iterations)
 
-- **High**: split DataStore (858 LOC), QuestionDetailView (929 LOC), ChapterDetailView (839 LOC), DiscoverChapter2View (965 LOC), ArticleIndex (1270 LOC) — all over the 600-line type-checker risk threshold.
+- **High**: split files > 600 LOC — current state as of 2026-05-22 21:45 IST:
+  - `ArticleIndex.swift` (1270) — article registry, splits by chapter natural
+  - `DiscoverChapter1View+InlineScenes.swift` (1399) — Ch.1 (in scope for the Phase 3 enrichment session)
+  - `DiscoverChapter2View.swift` (965) — Ch.2 frozen this session
+  - `QuestionDetailView.swift` (929) — chapter-agnostic, viable target
+  - `ChapterDetailView.swift` (906) — chapter-agnostic, viable target
+  - `DataStore.swift` (867) — pure infrastructure, viable target
+  - `DiscoverChapter3View.swift` (715) — Ch.3 frozen
+  - `DiscoverChapter5View.swift` (631) — Ch.5 frozen
+  - `DiscoverChapter4View.swift` (617) — Ch.4 frozen
 - **Medium**: re-scan `body` computed properties for > 80-line bodies in remaining mega-files after the splits.
-- **Medium**: scan `try? write` sites — should surface to `lastSaveError` banner pattern.
+- ~~scan `try? write` sites — should surface to `lastSaveError` banner pattern~~ — **done 2026-05-22 21:45 IST**, all three sites intentional. See §8.
 
 ## Verdict
 
-Each of the four crash classes (C1, C2, C3, C4) has **zero open static findings** at this scan. Remaining risk is dynamic (LLDB-only crash that never reaches the OS signal handler). To convert dynamic confidence to certainty we need the XCUITest walkers from §A of the 12-hour spec (CTA walker + sanitizer walker), which require modifying the Xcode scheme — out of scope for headless tool use here.
+Each of the four crash classes (C1, C2, C3, C4) has **zero open static findings** at this scan. Remaining risk is dynamic (LLDB-only crash that never reaches the OS signal handler). The XCUITest walkers required to convert dynamic confidence to certainty now exist as `desktopAhaanUITests/Crash_BeyondThenDiscover.swift` and `desktopAhaanUITests/Crash1_TryDiscoverMode_Ch1.swift`; both are wired into `desktopAhaan.xcscheme` with default-skip in `ci-build-test.sh` (`-skip-testing:desktopAhaanUITests`) and run explicitly on the iMac via `-only-testing:desktopAhaanUITests/...` once Accessibility is granted to `desktopAhaanUITests-Runner.app`.
+
+The new lifetime-hazards lint (`scripts/check_lifetime_hazards.py` rules LH001/LH002/LH003) makes future regressions in §1 patterns hard gates at commit + push time.
