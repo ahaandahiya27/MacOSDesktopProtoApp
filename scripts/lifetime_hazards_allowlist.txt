@@ -1,0 +1,19 @@
+# lifetime_hazards_allowlist.txt
+#
+# Grandfathered violations of scripts/check_lifetime_hazards.py rules.
+# Format:  <repo-relative path>:<line number>:<one-line reason>
+#
+# Empty lines and lines starting with `#` are ignored. Only the
+# `path:line` prefix is the lookup key; the trailing reason is human
+# prose for future readers.
+#
+# Add a row ONLY when:
+#   1. The violation already exists in main at the time the lint was
+#      introduced and removing it would be a separate refactor, OR
+#   2. The flagged pattern is a false positive (lint heuristic doesn't
+#      see the full picture).
+# Otherwise, fix the violation rather than allowlisting it.
+
+# --- LH001  var delegate:  --- (no weak modifier; should be weak var) ---
+
+desktopAhaan/Services/Speech/TextToSpeechManager.swift:11: TextToSpeechManager is @MainActor ObservableObject (not NSObject); the TTSDelegate it stores is its own owned helper (created in init), AVSpeechSynthesizer.delegate is weak per Apple SDK, no retain cycle possible. Pre-existing pattern from before the lint.

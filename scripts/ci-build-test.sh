@@ -112,6 +112,16 @@ run_xcodebuild() {
 }
 
 echo "==> build (Release, MACOSX_DEPLOYMENT_TARGET=11.0)"
+# Pre-build static lints. Cheap; surface failures before the slow
+# xcodebuild step so the dev gets feedback fast.
+if [ -f "scripts/check_lifetime_hazards.py" ]; then
+    echo "==> lifetime-hazards lint"
+    if ! python3 scripts/check_lifetime_hazards.py; then
+        echo "ci-build-test: lifetime-hazards lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 run_xcodebuild "BUILD" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \

@@ -123,4 +123,20 @@ if [ -n "$WCAG_TOUCHED" ] && [ -f "scripts/check_wcag_contrast.py" ]; then
     fi
 fi
 
+# 6) Lifetime-hazards lint — gates ownership patterns that cause
+#    EXC_BAD_ACCESS / retain cycles / sendable lies. Distinct from the
+#    SDK-compat lint (check_macos12_apis.py). Existing violations are
+#    grandfathered via scripts/lifetime_hazards_allowlist.txt; new ones
+#    are refused. Hard gate.
+if [ -f "scripts/check_lifetime_hazards.py" ]; then
+    if ! python3 scripts/check_lifetime_hazards.py; then
+        echo
+        echo "pre-commit: lifetime-hazards lint failed — a new ownership hazard would land."
+        echo "Fix the violation, or — if it's a confirmed false positive — add the"
+        echo "  file:line to scripts/lifetime_hazards_allowlist.txt with a short reason."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 exit 0
