@@ -26,7 +26,7 @@ struct Scene7_Budding: View {
                             .frame(width: CGFloat([0, 20, 50, 70][min(stage, 3)]),
                                    height: CGFloat([0, 20, 50, 70][min(stage, 3)]))
                     }
-                    .animation(.easeInOut(duration: 0.4))
+                    .respectReduceMotion(animation: .easeInOut(duration: 0.4))
                 }
 
                 Button("Next step") { stage = min(stage + 1, 3) }

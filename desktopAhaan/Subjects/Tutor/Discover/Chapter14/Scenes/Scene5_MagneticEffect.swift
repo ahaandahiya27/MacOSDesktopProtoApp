@@ -28,7 +28,7 @@ struct Scene5_MagneticEffect: View {
                             .font(.system(size: 32, weight: .bold))
                             .foregroundColor(.red)
                             .rotationEffect(.degrees(currentOn ? 90 : 0))
-                            .animation(.easeInOut(duration: 0.5))
+                            .respectReduceMotion(animation: .easeInOut(duration: 0.5))
                     }
                     .offset(y: 50)
                 }

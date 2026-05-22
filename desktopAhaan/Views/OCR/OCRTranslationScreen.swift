@@ -84,7 +84,7 @@ struct OCRTranslationScreen: View {
                         .font(.system(size: 48))
                         .foregroundColor(.purple)
                         .scaleEffect(isDropTargeted ? 1.08 : 1.0)
-                        .animation(.spring(response: 0.25, dampingFraction: 0.65))
+                        .respectReduceMotion(animation: .spring(response: 0.25, dampingFraction: 0.65))
 
                     Text(isDropTargeted ? "Drop to scan" : "Open or Drop an Image")
                         .font(.headline)

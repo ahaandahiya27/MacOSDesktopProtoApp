@@ -185,6 +185,6 @@ private struct FilledCTAButtonStyle: ButtonStyle {
             .shadow(color: tint.opacity(isEnabled ? 0.35 : 0), radius: 8, x: 0, y: 4)
             .opacity(isEnabled ? 1.0 : 0.42)
             .scaleEffect(configuration.isPressed ? 0.97 : 1.0)
-            .animation(.easeOut(duration: 0.12))
+            .respectReduceMotion(animation: .easeOut(duration: 0.12))
     }
 }

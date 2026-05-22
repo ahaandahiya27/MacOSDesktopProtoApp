@@ -63,7 +63,7 @@ struct Scene7_CrystalGarden: View {
                                 y: CGFloat([40, 50, 55, 45, 60, 35][i])
                             )
                             .opacity(stage == .heating ? 1 : 0)
-                            .animation(.easeInOut(duration: HardwareTier.duration(ideal: 0.8)).repeatForever(autoreverses: true).delay(Double(i) * 0.15))
+                            .respectReduceMotion(animation: .easeInOut(duration: HardwareTier.duration(ideal: 0.8)).repeatForever(autoreverses: true).delay(Double(i) * 0.15))
                     }
                 }
 

@@ -59,7 +59,7 @@ struct Scene7_PitcherPlantTrap: View {
                         .frame(width: 200, height: phase >= 4 ? 140 : 80)
                         .clipShape(PitcherShape())
                         .frame(width: 220, height: 320, alignment: .bottom)
-                        .animation(.easeInOut(duration: stepDuration))
+                        .respectReduceMotion(animation: .easeInOut(duration: stepDuration))
                 }
 
                 // Glow at the rim — attracts the fly
