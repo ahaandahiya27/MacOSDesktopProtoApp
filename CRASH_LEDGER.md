@@ -27,7 +27,8 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 - `49a7790` `SpeechRecognitionManager.authorizationStatus` reverted to `.notDetermined` default — was firing Speech.framework at every @StateObject construction.
 - `f108a05` Van Helmont scene multi-line `.animation(_:value:)` removed; `ed478dd` extended lint catches multi-line variants
 - 7 `.repeatForever` animations now honour `HardwareTier.duration(ideal:)`
-**Status**: 🟡 lint catches all known forms; deep scan TBD for `.onAppear { x = ... }` and `Task { @MainActor in ... } inside body`.
+- **`b086732` (2026-05-22 07:38) — defer `nav.push(.discover)` to next runloop tick via `DispatchQueue.main.async`. Also defer the `setChapterNote` save in `ChapterNotebookSheet`'s Done button until after `dismiss()`. Closes Rohan's "open Try at Home / Beyond the Book / My Notebook, close, THEN click Try Discover Mode → crash" repro from 2026-05-22 07:34. Two synchronous re-renders (sheet-dismiss flips `presentedSheet = nil`; nav-push mutates path) were colliding in the same render commit on ChapterDetailView.**
+**Status**: ✅ live-repro fix shipped; awaiting iMac confirmation.
 
 ### C3 — Speech-permission dialog re-prompts at cold start / test runs
 
