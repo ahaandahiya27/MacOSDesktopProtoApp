@@ -189,6 +189,28 @@ private struct NativeArticleRepresentable: NSViewRepresentable {
         coordinator.updateNativeTextView()
     }
 
+    // Dismantle ordering — the SwiftUI ↔ AppKit pinch-point on Big Sur.
+    //
+    // When the sheet hosting ArticleBrowserView dismisses (⌘W) and the
+    // user immediately clicks a CTA on the parent ChapterDetailView
+    // (Try Discover Mode), the sheet-dismount commit and the next render
+    // commit can interleave: SwiftUI tears this NSScrollView down, AppKit
+    // can still send one final NSTextViewDelegate / NSLayoutManager
+    // callback into a freed instance, and the parent commit pump trips on
+    // the resulting over-release as objc_release.
+    //
+    // Defensive ordering, applied synchronously here before the NSScrollView
+    // is released by SwiftUI's commit:
+    //   1. nil any NSTextView delegate first so AppKit cannot route another
+    //      callback (no-op in this build — we never assign one — but cheap
+    //      insurance against future code adding a delegate without thinking
+    //      about teardown).
+    //   2. detach documentView so the NSTextView's retain count drops in a
+    //      deterministic order before the SwiftUI commit unwinds.
+    static func dismantleNSView(_ nsView: NSScrollView, coordinator: ()) {
+        (nsView.documentView as? NSTextView)?.delegate = nil
+        nsView.documentView = nil
+    }
 }
 
 // MARK: - ArticleCoordinator
