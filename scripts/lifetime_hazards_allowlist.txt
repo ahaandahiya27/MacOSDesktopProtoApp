@@ -21,3 +21,7 @@ desktopAhaan/Services/Speech/TextToSpeechManager.swift:11: TextToSpeechManager i
 # --- LH002  unowned (any use)  --- (prefer weak unless immutable owned-by-parent)
 
 # (no grandfathered violations — the codebase has zero `unowned` references)
+
+# --- LH003  @unchecked Sendable  --- (prefer queue/lock/actor/nonisolated(unsafe))
+
+# (no grandfathered violations — the codebase has zero `@unchecked Sendable` types)

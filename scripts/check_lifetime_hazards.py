@@ -20,11 +20,10 @@ scripts/lifetime_hazards_allowlist.txt):
      immutable owned-by-parent relationship in a @MainActor init) —
      add the file:line to the allowlist with the proof.
 
-Pending rules (added in subsequent commits, this scaffolding stays):
-
   3. `@unchecked Sendable` — almost always a lie; converts a synchronization
      bug into a silent data race. Force the author to use a queue, lock,
-     or actor instead.
+     or actor instead. Allowlist with proof if a value type's invariants
+     genuinely satisfy Sendable (e.g. a wrapper around a private NSLock).
 
 Exit codes:
   0 — clean
@@ -90,6 +89,7 @@ def _read_allowlist() -> set[str]:
 
 _VAR_DELEGATE_RE = re.compile(r"(?<!\bweak\s)\bvar\s+delegate\s*:")
 _UNOWNED_RE = re.compile(r"\bunowned\b")
+_UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
 
 
 def _scan_var_delegate(swift_path: Path) -> list[Violation]:
@@ -155,6 +155,38 @@ def _scan_unowned(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_unchecked_sendable(swift_path: Path) -> list[Violation]:
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    findings: list[Violation] = []
+    for idx, line in enumerate(swift_path.read_text().splitlines(), start=1):
+        stripped = line.strip()
+        if stripped.startswith("//") or stripped.startswith("///"):
+            continue
+        if _UNCHECKED_SENDABLE_RE.search(line):
+            findings.append(
+                Violation(
+                    rule_id="LH003",
+                    rel_path=rel,
+                    line_no=idx,
+                    line=line.rstrip(),
+                    why=(
+                        "`@unchecked Sendable` disables the compiler's "
+                        "sendable check without proving safety. Almost "
+                        "always a lie that converts a synchronization bug "
+                        "into a silent data race. Use a queue, NSLock, "
+                        "actor, or `nonisolated(unsafe)` on a specific "
+                        "property instead. If the type genuinely satisfies "
+                        "Sendable's contract (e.g. immutable value type "
+                        "wrapping a private lock-guarded reference), add "
+                        "the file:line to "
+                        "scripts/lifetime_hazards_allowlist.txt with the "
+                        "proof."
+                    ),
+                )
+            )
+    return findings
+
+
 # --- Driver ---------------------------------------------------------------
 
 def _scan_repo() -> list[Violation]:
@@ -164,6 +196,7 @@ def _scan_repo() -> list[Violation]:
             continue
         findings.extend(_scan_var_delegate(swift_path))
         findings.extend(_scan_unowned(swift_path))
+        findings.extend(_scan_unchecked_sendable(swift_path))
     return findings
 
 
