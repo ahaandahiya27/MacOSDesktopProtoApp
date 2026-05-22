@@ -15,10 +15,21 @@ struct ChapterDetailView: View {
     /// every sheet through one `.sheet(item:)`. Identifiable conformance
     /// is required so the .sheet(item:) modifier can key the
     /// re-presentation.
-    private enum SheetKind: String, Identifiable {
+    private enum SheetKind: Identifiable {
         case homeExperiments
         case notebook
-        var id: String { rawValue }
+        case article(ArticleEntry)
+
+        var id: String {
+            switch self {
+            case .homeExperiments:
+                return "homeExperiments"
+            case .notebook:
+                return "notebook"
+            case .article(let entry):
+                return "article-\(entry.id)"
+            }
+        }
     }
 
     /// Returns the chapter's "Beyond the Book" article entry ONLY when
@@ -85,7 +96,11 @@ struct ChapterDetailView: View {
                     if beyondTheBookEntry != nil || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
                         HStack(spacing: 12) {
                             if let entry = beyondTheBookEntry {
-                                BeyondTheBookCard(entry: entry)
+                                BeyondTheBookCard(entry: entry) {
+                                    DispatchQueue.main.async {
+                                        presentedSheet = .article(entry)
+                                    }
+                                }
                             }
                             if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
                                 // Defer the sheet-present to the next runloop tick.
@@ -146,6 +161,13 @@ struct ChapterDetailView: View {
                     chapterTitle: "Ch. \(chapter.number) — \(chapter.title)"
                 )
                 .environmentObject(dataStore)
+            case .article(let entry):
+                ArticleBrowserView(
+                    initialFile: entry.filename,
+                    chapterFolder: entry.chapterFolder
+                )
+                .frame(minWidth: 720, idealWidth: 920,
+                       minHeight: 540, idealHeight: 680)
             }
         }
     }
@@ -322,24 +344,11 @@ struct ChapterNotebookSheet: View {
 
 private struct BeyondTheBookCard: View {
     let entry: ArticleEntry
+    let onTap: () -> Void
     @State private var isHovered = false
 
     var body: some View {
-        Button {
-            // Defer NSWindow creation to the next runloop tick. Same
-            // C2 cascade fix — synchronously creating an NSWindow +
-            // NSHostingView + @StateObject WebViewCoordinator inside
-            // the Button action collides with the Button-press render
-            // commit on ChapterDetailView. The deferral lets the
-            // current commit fully resolve before AppKit starts a new
-            // window's full lifecycle (which itself triggers AppKit
-            // notifications and SwiftUI re-renders on the main window).
-            let f = entry.filename
-            let cf = entry.chapterFolder
-            DispatchQueue.main.async {
-                ArticleWindowManager.shared.openArticle(filename: f, chapterFolder: cf)
-            }
-        } label: {
+        Button(action: onTap) {
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 8) {
                     Text("📖")

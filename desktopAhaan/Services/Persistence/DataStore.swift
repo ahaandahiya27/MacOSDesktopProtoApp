@@ -147,7 +147,10 @@ enum SM2Scheduler {
 final class DataStore: ObservableObject {
 
     static let shared = DataStore()
-    private static let logger = Logger(subsystem: "com.emoha.desktopAhaan", category: "DataStore")
+    nonisolated private static let logger = Logger(
+        subsystem: "com.emoha.desktopAhaan",
+        category: "DataStore"
+    )
 
     @Published var translationRecords: [TranslationRecord] = [] {
         didSet { _recordsByDateCache = nil }

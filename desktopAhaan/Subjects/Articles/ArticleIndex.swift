@@ -1,6 +1,6 @@
 import Foundation
 
-struct ArticleEntry: Hashable {
+struct ArticleEntry: Hashable, Identifiable {
     let id: String
     let filename: String
     let title: String

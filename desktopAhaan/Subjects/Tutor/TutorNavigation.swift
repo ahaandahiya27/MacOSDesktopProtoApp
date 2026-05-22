@@ -45,22 +45,19 @@ final class TutorNavigationState: ObservableObject {
         // between the two clicks). Drop the second call if the same
         // route is already on top.
         if path.last == route { return }
-        withAnimation(.easeInOut(duration: 0.2)) {
-            path.append(route)
-        }
+        // Keep route identity changes outside animated transactions. On
+        // macOS 11, replacing this detail subtree while another presentation
+        // is settling can trip SwiftUI's pre-commit fence path.
+        path.append(route)
     }
 
     func pop() {
-        withAnimation(.easeInOut(duration: 0.2)) {
-            guard !path.isEmpty else { return }
-            path.removeLast()
-        }
+        guard !path.isEmpty else { return }
+        path.removeLast()
     }
 
     func popToRoot() {
-        withAnimation(.easeInOut(duration: 0.2)) {
-            path.removeAll()
-        }
+        path.removeAll()
     }
 
     /// Replace the topmost route without pushing a new entry. Used by

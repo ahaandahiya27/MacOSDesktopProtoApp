@@ -2,7 +2,7 @@ import XCTest
 
 final class Crash_BeyondThenDiscover: XCTestCase {
     func testBeyondTheBookThenDiscoverMode() throws {
-        let app = XCUIApplication()
+        let app = XCUIApplication(bundleIdentifier: "com.emoha.desktopAhaan")
         app.launch()
 
         dismissWelcomeIfNeeded(in: app)
