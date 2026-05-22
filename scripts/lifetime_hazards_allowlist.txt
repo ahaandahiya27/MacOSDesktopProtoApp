@@ -17,3 +17,7 @@
 # --- LH001  var delegate:  --- (no weak modifier; should be weak var) ---
 
 desktopAhaan/Services/Speech/TextToSpeechManager.swift:11: TextToSpeechManager is @MainActor ObservableObject (not NSObject); the TTSDelegate it stores is its own owned helper (created in init), AVSpeechSynthesizer.delegate is weak per Apple SDK, no retain cycle possible. Pre-existing pattern from before the lint.
+
+# --- LH002  unowned (any use)  --- (prefer weak unless immutable owned-by-parent)
+
+# (no grandfathered violations — the codebase has zero `unowned` references)

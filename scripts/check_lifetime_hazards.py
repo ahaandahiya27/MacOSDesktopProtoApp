@@ -13,11 +13,14 @@ scripts/lifetime_hazards_allowlist.txt):
      produce zombies on subsequent delegate callbacks. Heuristic: any
      `var delegate:` declaration not on the same line as `weak`.
 
-Pending rules (added in subsequent commits, this scaffolding stays):
+  2. `\\bunowned\\b` (any use) — `unowned` makes a non-nillable assumption
+     about object lifetime that's hard to prove correct under SwiftUI's
+     commit model. The rule forces the author to either use `weak` (and
+     handle the nil case) or — if `unowned` is truly justified (e.g. an
+     immutable owned-by-parent relationship in a @MainActor init) —
+     add the file:line to the allowlist with the proof.
 
-  2. `\\bunowned\\b` outside @MainActor-isolated init — `unowned` requires
-     proof the referenced object outlives the holder, which is only true
-     on the main actor under SwiftUI's commit model.
+Pending rules (added in subsequent commits, this scaffolding stays):
 
   3. `@unchecked Sendable` — almost always a lie; converts a synchronization
      bug into a silent data race. Force the author to use a queue, lock,
@@ -86,6 +89,7 @@ def _read_allowlist() -> set[str]:
 # --- Rule implementations -------------------------------------------------
 
 _VAR_DELEGATE_RE = re.compile(r"(?<!\bweak\s)\bvar\s+delegate\s*:")
+_UNOWNED_RE = re.compile(r"\bunowned\b")
 
 
 def _scan_var_delegate(swift_path: Path) -> list[Violation]:
@@ -121,6 +125,36 @@ def _scan_var_delegate(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_unowned(swift_path: Path) -> list[Violation]:
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    findings: list[Violation] = []
+    for idx, line in enumerate(swift_path.read_text().splitlines(), start=1):
+        stripped = line.strip()
+        if stripped.startswith("//") or stripped.startswith("///"):
+            continue
+        if _UNOWNED_RE.search(line):
+            findings.append(
+                Violation(
+                    rule_id="LH002",
+                    rel_path=rel,
+                    line_no=idx,
+                    line=line.rstrip(),
+                    why=(
+                        "`unowned` assumes the referenced object outlives "
+                        "the holder. Under SwiftUI's commit model that is "
+                        "rarely provable; if the assumption is wrong the "
+                        "next access EXC_BAD_ACCESSes instead of returning "
+                        "nil. Prefer `weak` and handle the nil case. If "
+                        "`unowned` is genuinely justified (e.g. an immutable "
+                        "owned-by-parent relationship inside a @MainActor "
+                        "init), add the file:line to "
+                        "scripts/lifetime_hazards_allowlist.txt with proof."
+                    ),
+                )
+            )
+    return findings
+
+
 # --- Driver ---------------------------------------------------------------
 
 def _scan_repo() -> list[Violation]:
@@ -129,6 +163,7 @@ def _scan_repo() -> list[Violation]:
         if _is_exempt(swift_path):
             continue
         findings.extend(_scan_var_delegate(swift_path))
+        findings.extend(_scan_unowned(swift_path))
     return findings
 
 
