@@ -34,6 +34,9 @@
 		04B83C242FBF969A005D3D07 /* DailyPracticeViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */; };
 		04B83C262FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */; };
 		04B83C282FBF9A9B005D3D07 /* View+RespectReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C272FBF9A9B005D3D07 /* View+RespectReduceMotion.swift */; };
+		04B83C2B2FBFE97A005D3D07 /* SubjectPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C2A2FBFE97A005D3D07 /* SubjectPlugin.swift */; };
+		04B83C2D2FBFE991005D3D07 /* ChapterPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C2C2FBFE991005D3D07 /* ChapterPlugin.swift */; };
+		04B83C2F2FBFE9AA005D3D07 /* ChapterManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B83C2E2FBFE9AA005D3D07 /* ChapterManifest.swift */; };
 		04C77EC82FB9A2480025F850 /* DiscoveryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */; };
 		04C77ECA2FB9AF5A0025F850 /* DiscoveryToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */; };
 		04C77ECC2FB9AF6F0025F850 /* DiscoveryStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */; };
@@ -657,6 +660,9 @@
 		04B83C232FBF969A005D3D07 /* DailyPracticeViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeViewSheet.swift; sourceTree = "<group>"; };
 		04B83C252FBF969F005D3D07 /* AllChaptersCompleteOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChaptersCompleteOverlay.swift; sourceTree = "<group>"; };
 		04B83C272FBF9A9B005D3D07 /* View+RespectReduceMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+RespectReduceMotion.swift"; sourceTree = "<group>"; };
+		04B83C2A2FBFE97A005D3D07 /* SubjectPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectPlugin.swift; sourceTree = "<group>"; };
+		04B83C2C2FBFE991005D3D07 /* ChapterPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPlugin.swift; sourceTree = "<group>"; };
+		04B83C2E2FBFE9AA005D3D07 /* ChapterManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterManifest.swift; sourceTree = "<group>"; };
 		04C77EC72FB9A2480025F850 /* DiscoveryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryWidget.swift; sourceTree = "<group>"; };
 		04C77EC92FB9AF5A0025F850 /* DiscoveryToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryToggle.swift; sourceTree = "<group>"; };
 		04C77ECB2FB9AF6F0025F850 /* DiscoveryStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryStepper.swift; sourceTree = "<group>"; };
@@ -1303,6 +1309,16 @@
 				043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		04B83C292FBFE979005D3D07 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				04B83C2A2FBFE97A005D3D07 /* SubjectPlugin.swift */,
+				04B83C2C2FBFE991005D3D07 /* ChapterPlugin.swift */,
+				04B83C2E2FBFE9AA005D3D07 /* ChapterManifest.swift */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		04F59D032FB8EE4700568BDE /* Chapter8 */ = {
@@ -2420,6 +2436,7 @@
 				0CBCC4B6C038BC06E09FDE6D /* Loader */,
 				363B0237945792B675DB30B1 /* Tutor */,
 				DEA3BFAA0D7B719A17B7F549 /* AI */,
+				04B83C292FBFE979005D3D07 /* Plugins */,
 			);
 			path = Subjects;
 			sourceTree = "<group>";
@@ -3078,6 +3095,7 @@
 				04F59DC82FB8F24E00568BDE /* Scene9_BossQuiz_Ch16.swift in Sources */,
 				04F59DBC2FB8F24900568BDE /* Scene3_AquiferCrossSection.swift in Sources */,
 				8939D17295732CAC0ECEA0F3 /* Topic.swift in Sources */,
+				04B83C2F2FBFE9AA005D3D07 /* ChapterManifest.swift in Sources */,
 				04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */,
 				14C6ABB78456E298F0327C38 /* UseCase.swift in Sources */,
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
@@ -3111,6 +3129,7 @@
 				8B35F409465BC5F103622B78 /* QuizBankView.swift in Sources */,
 				FD21543D866EBAF82E8DF6DA /* SanskritSubjectHomeView.swift in Sources */,
 				A5C9475A516F1D5E5EFD3A75 /* SearchView.swift in Sources */,
+				04B83C2D2FBFE991005D3D07 /* ChapterPlugin.swift in Sources */,
 				04F59DB82FB8F24800568BDE /* Scene1_WaterPie.swift in Sources */,
 				D9626BC44EB672A378F5E8A9 /* SubjectHomeView.swift in Sources */,
 				5FDF23638A8DB4AD48194C98 /* TopicDetailView.swift in Sources */,
@@ -3231,6 +3250,7 @@
 				A307B2CCF29A3E54EAAD97CD /* Scene1_TheMouthLab.swift in Sources */,
 				3E651024C09E92CE7F1E7E3D /* Scene2_TheSwallowWave.swift in Sources */,
 				952C708691F02FF695AFAFAA /* Scene3_TheStomachBath.swift in Sources */,
+				04B83C2B2FBFE97A005D3D07 /* SubjectPlugin.swift in Sources */,
 				4999FE5C73B4FA964D07273E /* Scene4_IntestineVillus.swift in Sources */,
 				04674C622FB8C66D004A7D5C /* DictationButton.swift in Sources */,
 				B08B030F7BB1185AE46C6878 /* Scene5_LiverPancreasBile.swift in Sources */,

@@ -17,9 +17,9 @@ Every screen (sidebar, search, daily practice, discover-progress) iterates the r
 
 ## Steps (atomic, reversible, run one per iteration)
 
-- [ ] **S1**: Define `SubjectPlugin` protocol in `Subjects/Plugins/SubjectPlugin.swift`.
-- [ ] **S2**: Define `ChapterPlugin` protocol in `Subjects/Plugins/ChapterPlugin.swift`.
-- [ ] **S3**: Define `ChapterManifest` value-type declaring which of the 22 module types a chapter implements (per the parity prompt §C).
+- [x] **S1**: Define `SubjectPlugin` protocol in `Subjects/Plugins/SubjectPlugin.swift`. (2026-05-22, commit pending — pure addition, no call site touched.)
+- [x] **S2**: Define `ChapterPlugin` protocol in `Subjects/Plugins/ChapterPlugin.swift`. (2026-05-22, same commit.)
+- [x] **S3**: Define `ChapterManifest` + `ChapterModule` enum in `Subjects/Plugins/ChapterManifest.swift`. (2026-05-22, same commit.)
 - [ ] **S4**: Add `SubjectsRegistry` class. Register `SanskritKosh` + `ScienceClass7` from `desktopAhaanApp.init`.
 - [ ] **S5**: Wrap each existing chapter in a `ChapterPlugin` adapter (no behavior change — pure shim) — Ch.1 first, then Ch.2..Ch.19.
 - [ ] **S6**: Replace hard-coded `Chapter1View`, `Chapter2View`, … `Chapter19View` references with iteration over `subjectPlugin.allChapters()` in:
