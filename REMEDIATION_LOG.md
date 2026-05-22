@@ -17,7 +17,7 @@
 
 ## Open items (deferred, with reason)
 
-(none yet)
+[2026-05-22] **Article teardown 100× stress test** — Deferred as "retired by f4ec573" rather than written. The CRASH_LEDGER open item asks for a unit test that asserts `ArticleWindowManager.windows.count ≤ 8` across 100 create+tear-down cycles, but `ArticleWindowManager` no longer exists in the working tree — `f4ec573` replaced the NSWindow-managed article surface with a SwiftUI `.sheet(item:)` on `ArticleEntryButton`. Writing a substitute test that mounts ArticleBrowserView 100× via NSHostingView in a unit-test bundle was considered and rejected: SwiftUI's lifecycle is asynchronous and lazy, the runloop pumping needed for a meaningful teardown stress doesn't run reliably inside the test process, and the actual regression class (the dismantle-order race between `NativeArticleRepresentable` and SwiftUI's commit pump) is already locked at the UI level by `Crash_BeyondThenDiscover` walking the open→close→re-open path that triggered the original crash. CRASH_LEDGER updated to mark the open item retired.
 
 ## Stop-and-ask events
 

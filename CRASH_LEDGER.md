@@ -63,7 +63,7 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 
 - [ ] XCUITest `desktopAhaanTests/CrashRepros/Crash1_TryDiscoverMode_Ch1.swift` — walks Sidebar → Science → Ch.1 → Try Discover Mode and asserts a known element renders.
 - [ ] Unit test that asserts `requestPermissions()` early-returns under `XCTestConfigurationFilePath`.
-- [ ] Unit test that creates+tears-down `ArticleBrowserView` 100 times and asserts `ArticleWindowManager.windows.count` ≤ 8 throughout.
+- [x] ~~Unit test that creates+tears-down `ArticleBrowserView` 100 times and asserts `ArticleWindowManager.windows.count` ≤ 8 throughout.~~ **Retired by `f4ec573`** — ArticleWindowManager structurally no longer exists (the article is now a SwiftUI `.sheet(item:)` instead of an NSWindow). `ArticleBrowserView`'s teardown surface is covered end-to-end by `Crash_BeyondThenDiscover` at the UI level (it walks the full open→close→re-open path, and the dismantle-order fix in `ffd889c` is what would have broken under the 100× stress).
 - [ ] Lint addition: refuse `var delegate:` in any class that inherits from `NSObject` (must be `weak var`).
 - [ ] Lint addition: refuse `unowned` anywhere outside `@MainActor`-isolated init (use `weak`).
 - [ ] Lint addition: refuse `@unchecked Sendable` in new code.
