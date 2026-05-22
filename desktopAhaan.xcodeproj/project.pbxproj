@@ -627,6 +627,7 @@
 		FE7147E862A040CE9568C91A /* ch05_t03_c01.html in Resources */ = {isa = PBXBuildFile; fileRef = E5C83C1815054732B2BDEFDC /* ch05_t03_c01.html */; };
 		FE7AA532DCB846B180F505B7 /* Scene9_BossQuiz_Ch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91807A2D4171E07C550B0E /* Scene9_BossQuiz_Ch3.swift */; };
 		0AAA000000000000000000A1 /* Crash_BeyondThenDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */; };
+		0AAB000000000000000000B1 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB000000000000000000B2 /* Crash1_TryDiscoverMode_Ch1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -653,6 +654,7 @@
 		043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAA000000000000000000A3 /* desktopAhaanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash_BeyondThenDiscover.swift; sourceTree = "<group>"; };
+		0AAB000000000000000000B2 /* Crash1_TryDiscoverMode_Ch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash1_TryDiscoverMode_Ch1.swift; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -1334,6 +1336,7 @@
 			isa = PBXGroup;
 			children = (
 				0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */,
+				0AAB000000000000000000B2 /* Crash1_TryDiscoverMode_Ch1.swift */,
 			);
 			path = desktopAhaanUITests;
 			sourceTree = "<group>";
@@ -3424,6 +3427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAA000000000000000000A1 /* Crash_BeyondThenDiscover.swift in Sources */,
+				0AAB000000000000000000B1 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
