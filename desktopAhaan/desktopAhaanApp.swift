@@ -9,6 +9,7 @@ import os.log
 
 private let appLogger = Logger(subsystem: "com.emoha.desktopAhaan", category: "App")
 
+@MainActor
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillFinishLaunching(_ notification: Notification) {
         // Install crash capture before any UI runs so we catch even
@@ -41,28 +42,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ notification: Notification) {
         // Drain any in-flight coalesced DataStore writes BEFORE marking a
         // clean exit — otherwise a ⌘Q during the 250ms debounce window
-        // would silently drop the latest mutation. flushSavesBeforeQuit
-        // is synchronous on the main actor; AppKit guarantees this
-        // delegate method runs on main so the await completes inline.
-        let flushSema = DispatchSemaphore(value: 0)
-        Task { @MainActor in
-            DataStore.shared.flushSavesBeforeQuit()
-            flushSema.signal()
-        }
-        // Bounded wait: 1 second is generous — each pending write is one
-        // small JSON atomic-replace. If we somehow can't finish in 1s
-        // we proceed anyway rather than blocking a shutdown forever.
-        let flushResult = flushSema.wait(timeout: .now() + 1.0)
-        if flushResult == .timedOut {
-            // Surface to crashlog so post-mortem can see how many writes
-            // were left in the queue (audit Top-10 #6). We're still on
-            // main here per AppKit's applicationWillTerminate contract,
-            // so reading pendingSaveCount is race-free.
-            let pending = DataStore.shared.pendingSaveCount
-            CrashReporter.shared.logDataIssue(
-                "flushSavesBeforeQuit timeout: \(pending) writes still queued at shutdown"
-            )
-        }
+        // would silently drop the latest mutation. AppKit guarantees this
+        // delegate method runs on the main thread and AppDelegate is now
+        // @MainActor-isolated, so we can call DataStore directly.
+        //
+        // History: an earlier version used `Task { @MainActor in ... }`
+        // plus a `DispatchSemaphore.wait(timeout: 1.0)` as a watchdog.
+        // That pattern *deadlocked* — the Task scheduled work onto the
+        // main actor's queue, but the main thread was blocked on the
+        // semaphore, so the Task body never ran and the timeout fired on
+        // every quit (silently logging a spurious "flushSavesBeforeQuit
+        // timeout" DATA entry). Direct call is the simpler + correct
+        // version. The flush itself is bounded (one atomic write per
+        // pending file).
+        DataStore.shared.flushSavesBeforeQuit()
         CrashReporter.shared.markCleanExit()
         UserDefaults.standard.synchronize()
         appLogger.info("applicationWillTerminate — clean quit.")
