@@ -58,9 +58,32 @@ final class ArticleWindowManager: NSObject, NSWindowDelegate {
     }
 
     func windowWillClose(_ notification: Notification) {
-        if let window = notification.object as? NSWindow {
-            windows.removeAll { $0 === window }
-        }
+        guard let window = notification.object as? NSWindow else { return }
+        // Force the NSHostingView to release its rootView NOW, not on the
+        // next runloop. The Big Sur WKWebView WebContent subprocess often
+        // dies with XPC_ERROR_CONNECTION_INVALID (Metal/IconRendering
+        // shader-archive load fails on AMD R9 M290X) → its parent
+        // ArticleBrowserView still holds a coordinator pointing at a
+        // zombie WKWebView. If we just remove the NSWindow from our
+        // array, the SwiftUI .onDisappear (which calls
+        // `coordinator.cleanup()`) doesn't fire until the next render
+        // tick — and during that tick, ANY subsequent SwiftUI work on
+        // the parent (e.g. the user clicks Try Discover Mode) inherits
+        // a stale subscription graph → "Entangling fence requested
+        // after pre-commit" → EXC_BAD_ACCESS in objc_release.
+        //
+        // Setting `contentView = nil` triggers NSHostingView dealloc
+        // synchronously, which runs the SwiftUI .onDisappear chain
+        // before this delegate method returns. The coordinator's
+        // cleanup() (stopLoading + invalidate observers + clear
+        // delegates) runs before the WKWebView's WebContent subprocess
+        // can fire any more callbacks. Net effect: no zombie residue
+        // on the next render.
+        window.contentView = nil
+        // window.delegate = nil — prevents AppKit from sending a second
+        // round of delegate callbacks during teardown.
+        window.delegate = nil
+        windows.removeAll { $0 === window }
     }
 }
 
