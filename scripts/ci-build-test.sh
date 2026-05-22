@@ -34,7 +34,18 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PROJECT="$REPO_ROOT/desktopAhaan.xcodeproj"
 SCHEME="desktopAhaan"
-DERIVED="$REPO_ROOT/.ci-derived"
+# DerivedData lives outside the repo root because some dev Macs keep the
+# repo inside an iCloud / Files-app fileprovider tree (~/Documents/...),
+# which intermittently re-attaches com.apple.FinderInfo to outputs and
+# fails codesign with "resource fork, Finder information, or similar
+# detritus not allowed" — and intermittently corrupts the SwiftDriver
+# build.db with "disk I/O error". The iMac repo lives under ~/Downloads
+# (no fileprovider) so this is harmless there; on a dev Mac with
+# Documents-synced repos it's the only path that builds reliably.
+#
+# Override with CI_DERIVED_OVERRIDE=/path/to/dir if you want the old
+# in-repo .ci-derived/ behavior (e.g. to inspect build logs after a run).
+DERIVED="${CI_DERIVED_OVERRIDE:-${TMPDIR:-/tmp}/desktopAhaan-ci-derived}"
 LOG_DIR="$(mktemp -d -t ci-build-test.XXXXXX)"
 trap 'rm -rf "$LOG_DIR"' EXIT
 

@@ -28,7 +28,11 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 - `f108a05` Van Helmont scene multi-line `.animation(_:value:)` removed; `ed478dd` extended lint catches multi-line variants
 - 7 `.repeatForever` animations now honour `HardwareTier.duration(ideal:)`
 - **`b086732` (2026-05-22 07:38) — defer `nav.push(.discover)` to next runloop tick via `DispatchQueue.main.async`. Also defer the `setChapterNote` save in `ChapterNotebookSheet`'s Done button until after `dismiss()`. Closes Rohan's "open Try at Home / Beyond the Book / My Notebook, close, THEN click Try Discover Mode → crash" repro from 2026-05-22 07:34. Two synchronous re-renders (sheet-dismiss flips `presentedSheet = nil`; nav-push mutates path) were colliding in the same render commit on ChapterDetailView.**
-**Status**: ✅ live-repro fix shipped; awaiting iMac confirmation.
+- **`dfdbbb4` (2026-05-22) — extends the C2 defer to *all* CTA mutations on chapter detail page, not just nav.push.**
+- **`f4ec573` (2026-05-22) — refactor: replaces WKWebView with native NSTextView and routes the Beyond-the-Book article through a SwiftUI `.sheet(item:)` instead of an NSWindow. Structurally retires the C4 surface (no WKWebView means no WebContent subprocess and no NSHostingView/NSWindow teardown race) and centralises sheet presentation through one `.sheet(item: SheetKind)` on ChapterDetailView.**
+- **`ffd889c` (2026-05-22) — adds `NativeArticleRepresentable.dismantleNSView` to nil the NSTextView delegate then detach `documentView` *before* SwiftUI's commit unwinds, closing the second half of the Beyond→close→Discover race: AppKit can no longer route a final delegate / NSLayoutManager callback into a freed instance during the parent's next render commit. Pair-stable with `dfdbbb4`'s CTA defer.**
+- **`c816e46` (2026-05-22) — adds a11y identifiers `chapter-N` / `beyond-the-book` / `try-discover-mode` to the three CTAs and rewrites `desktopAhaanTests/CrashRepros/Crash_BeyondThenDiscover.swift` to lock the regression. File still needs to be wired into a UI-test target before it can actually drive AX — see top of the test file.**
+**Status**: ✅ live-repro fix shipped; awaiting iMac confirmation after the next pull (per `STOP_AND_ASK.md`). Lock test is staged but unwired pending a UI-test target.
 
 ### C3 — Speech-permission dialog re-prompts at cold start / test runs
 
@@ -48,7 +52,8 @@ Per the 12-hour spec, every crash captured during this session lands here with: 
 - `178a113` `ArticleBrowserView.onDisappear → coordinator.cleanup()`; cleanup() now stops loading, invalidates each NSKeyValueObservation, clears navigation/UI delegates.
 - `9fd1e53` `ArticleWindowManager.windows` capped at 8 with FIFO eviction + os.Logger telemetry.
 - **`69a1335` (2026-05-22 06:58) — `windowWillClose` now forces `window.contentView = nil` + `window.delegate = nil` BEFORE removing from the array. Triggers NSHostingView dealloc synchronously → SwiftUI .onDisappear runs → `coordinator.cleanup()` runs → zero zombie residue in the SwiftUI subscription graph by the time the next render pass starts. This closes the live repro Rohan captured at 2026-05-22 06:54: Beyond-the-Book → article opens → WebContent dies (Big Sur AMD R9 M290X shader-archive bug) → article closed → Try Discover Mode click → entangling fence → EXC_BAD_ACCESS.**
-**Status**: ✅ believed fixed including the live repro; awaiting iMac confirmation after the next pull.
+- **`f4ec573` (2026-05-22) — structural retirement: WKWebView removed from the article surface entirely. ArticleBrowserView now uses NSScrollView+NSTextView and a minimal HTML→text reducer (PlainTextArticleFallback.stripHTML). No WebContent subprocess, no IconRendering Metal shader cache, no XPC_ERROR_CONNECTION_INVALID, no ArticleWindowManager. The whole C4 class is now structurally absent rather than mitigated.**
+**Status**: ✅ structurally retired by `f4ec573`. The mitigation chain above is preserved for historical record; the cause itself can no longer occur.
 
 ---
 
