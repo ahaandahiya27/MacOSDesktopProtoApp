@@ -220,6 +220,63 @@ None. The 2026-05-22 iMac STOP_AND_ASK question stayed untouched per the brief's
 ### Wall clock + commit cadence
 Session started 2026-05-23 15:18 (the brief's 8-hour budget). Total wall clock ~1h 15min. The compression came from one-big-commit-per-phase rather than one-commit-per-surface — pre-push hook is a 5+ min serial cost on this dev Mac and shipping 12 surfaces in 12 commits would have burned over an hour just in push-hook waits. Each surface still verifies cleanly on its own; the atomic-commit-per-surface discipline was traded for shipping-time. Future sessions touching a single surface can land it as its own commit naturally.
 
+## CH.1 PILOT — FIVE NEW LEARNING METHODS — COMPLETE — 2026-05-23 18:31 +05:30
+
+### Commits landed (3, all on origin/main)
+- `82f84d0` feat(schema): predictQuestion + whyChain + ConceptMap (backwards-compatible)
+- `3071916` feat(ch1-pilot): BuildAPlantSandbox + InsideTheLeafTour (Phase 2A+2B)
+- `01617b6` feat(ch1-pilot): WhyChainView + InquiryFirstMode + Ch1ConceptMap (Phase 2C+2D+2E)
+- `<this commit>` docs(ch1-pilot): propagation playbook + session summary
+
+### Five new pedagogical surfaces shipped (Ch.1 only)
+
+| # | Surface | Lives in | Auto-hides when... |
+|---|---------|----------|---------------------|
+| 1 | **Inquiry-first mode** | Settings toggle + `ConceptDetailView` gate | toggle off OR `concept.predictQuestion == nil` |
+| 2 | **BuildAPlantSandbox** | `Subjects/Tutor/Surfaces/Ch1/` | `chapter.id != "ch01"` |
+| 3 | **InsideTheLeafTour** | `Subjects/Tutor/Surfaces/Ch1/` | `chapter.id != "ch01"` |
+| 4 | **WhyChainView** | `Subjects/Tutor/Components/` (reusable) | `concept.whyChain == nil` |
+| 5 | **Ch1ConceptMap** | `Subjects/Tutor/Surfaces/Ch1/` | `chapter.id != "ch01"` |
+
+### Schema seeds
+- `Concept.predictQuestion: String?` — inquiry-first prompt; backwards-compatible (nil on every chapter except ch01 today).
+- `Concept.whyChain: [String]?` — three-layer Socratic drill; backwards-compatible.
+- `Chapter.conceptMap: ConceptMap?` — pre-baked node-and-edge graph; backwards-compatible.
+- 14 nodes + 20 edges authored for Ch.1, including cross-chapter pointers to ch10 (respiration) and ch17 (forests).
+- 21 × 3 = 63 whyChain layers (~5500 words) + 21 predictQuestions authored for Ch.1.
+
+### Snapshot-ratchet substitute
+The brief asked for pixel-snapshot tests; the dev Mac has no AX for the UITest runner AND third-party snapshot libraries are forbidden by the no-new-package rule. Shipped `Ch2_19_StructuralRatchetTests` instead: locks topic / concept / question counts + all 13 content-expansion-field counts for every chapter except ch01. Any drift in a Ch.2..19 chapter trips the test with a side-by-side fingerprint comparison and a hint to find the leak in shared view / content code.
+
+The Optional Ch.1-pilot fields (predictQuestion / whyChain / conceptMap) are deliberately NOT in the fingerprint, so propagating them to Ch.2..19 in future sessions is invisible to the ratchet — exactly the right behaviour.
+
+### Verify
+- `xcodebuild build` Debug, MACOSX_DEPLOYMENT_TARGET = 11.0: clean, zero code warnings.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: **257/257 green** (was 253; +1 ratchet + 3 schema integrity tests).
+- `check_macos12_apis` / `check_lifetime_hazards` / `check_file_size` / `check_sf_symbols_compat` / `verify_pack_roundtrip`: all clean.
+- `git status`: clean. `origin/main`: synced.
+
+### Big-Sur-compatibility decisions worth remembering
+- Single-line `TextField` on the inquiry gate (the `axis: .vertical` initializer + `lineLimit(_, reservesSpace:)` modifier are macOS 13+). A 60-char input is plenty for a one-thought guess.
+- `Canvas`-based concept-map rendering would have been more elegant but `Canvas` is macOS 12+. Rolled with `ZStack` of `Path` shapes (for edges) and `Position`'d Buttons (for nodes) — works on macOS 11 with the same gesture wiring.
+- `withAnimationRespectingReduceMotion` everywhere (existing helper from a 2026-05-22 commit). All five new surfaces respect the Reduce Motion preference.
+- `LeafTourSilhouette` named with a prefix to avoid colliding with the existing `Discover/Components/DrawnLeaf.LeafShape` — Swift's redeclaration check fires even on `private` types with the same name (counter-intuitive but real).
+- `ChapterDetailView` crossed 600 LOC after the two Ch.1 pilot CTA cards were added inline. Lifted the shared CTA visual into `ChapterDetailView+Ch1Pilot.swift` as a reusable `Ch1PilotCTACard` View; the CTA buttons themselves stay inline because they need access to the private `presentedSheet` state. Final ChapterDetailView size: 576 LOC.
+
+### Propagation playbook
+`CH1_PILOT_PROPAGATION.md` shipped at repo root. Per-surface authoring rules, recommended chapter order (Ch.2 first to test the playbook, then Ch.10 to close the cross-chapter loop, then Ch.6 / Ch.7 for sandbox candidates), estimated total cost ~12–15 hours across 18 chapters.
+
+### Smoke walker (Phase 3)
+Static-only on this dev Mac (AX permission missing). The `Surface_AuditWalker` XCUITest at `desktopAhaanUITests/Surface_AuditWalker.swift` shipped in `3450824` is the iMac-side equivalent — on iMac with AX granted, it walks every chapter and asserts the AX labels for every shipped surface. Phase 3 verification on the iMac is the next-pull task; on this Mac, the 257/257 unit-test pass + clean structural ratchet is the proxy.
+
+### Exit-condition checklist
+1. All five new surfaces shipped on Ch.1 ✅
+2. Schema seeds shipped + all 3 integrity tests green ✅
+3. Ch.2..19 structural fingerprint unchanged (ratchet green) ✅
+4. CH1_PILOT_PROPAGATION.md shipped with effort estimates ✅
+5. Build clean, tests green, all lints clean ✅
+6. `git status` clean, `origin/main` synced ✅
+
 
 
 
