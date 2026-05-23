@@ -37,6 +37,50 @@ are per-chapter judgement calls — not every chapter has manipulable
 variables or microscopic structure worth touring; skip cleanly when
 the chapter doesn't fit.
 
+## Progress as of 2026-05-23 (live status)
+
+| Chapter | Content propagated? | Commit |
+|---------|---------------------|--------|
+| Ch.1 Nutrition in Plants | ✅ pilot (all 5 surfaces incl. sandbox + tour) | `01617b6` |
+| Ch.2 Nutrition in Animals | ✅ content-only (predict + whyChain + map) | `6728f99` |
+| Ch.3 Fibre to Fabric | ⏳ pending | — |
+| Ch.4 Heat | ⏳ pending | — |
+| Ch.5 Acids, Bases, Salts | ⏳ pending | — |
+| Ch.6 Physical / Chemical Changes | ⏳ pending — sandbox candidate | — |
+| Ch.7 Weather, Climate, Adaptations | ⏳ pending — sandbox candidate | — |
+| Ch.8 Winds, Storms, Cyclones | ⏳ pending | — |
+| Ch.9 Soil | ⏳ pending | — |
+| Ch.10 Respiration in Organisms | ✅ content-only | `6728f99` |
+| Ch.11 Transportation in Animals & Plants | ✅ content-only | `b9fdfc4` |
+| Ch.12 Reproduction in Plants | ⏳ pending | — |
+| Ch.13 Motion and Time | ✅ content-only | `ad6367c` |
+| Ch.14 Electric Current and its Effect | ✅ content-only | (next commit) |
+| Ch.15 Light | ✅ content-only | `ad6367c` |
+| Ch.16 Water: A Precious Resource | ✅ content-only | `b9fdfc4` |
+| Ch.17 Forest: Our Lifeline | ✅ content-only | `6728f99` |
+| Ch.18 Wastewater Story | ⏳ pending | — |
+| Ch.19 Solar System | ⏳ pending — biggest chapter (23 concepts) | — |
+
+**9 of 19 chapters complete.** Estimated remaining: ~7–9 hours
+across the 10 pending chapters.
+
+### Cross-chapter network so far
+Bi-directional concept-map loops:
+- ch01 ↔ ch02 (photosynthesis ↔ nutrition opposite)
+- ch01 ↔ ch10 (photosynthesis ↔ respiration reverse)
+- ch10 ↔ ch11 (haemoglobin ↔ heart transports)
+- ch17 ↔ ch16 (forests ↔ water cycle)
+
+One-way pointers:
+- ch11 → ch01 (transpiration via stomata)
+- ch16 → ch01 (stomata transpire into water cycle)
+- ch02 → ch10 (cells use nutrients ← fuelled by respiration)
+
+Physics cluster (ch13, ch14, ch15) is isolated so far — when Ch.4
+(Heat) is propagated, expect natural links to Ch.13 (motion-heat
+relation), Ch.14 (heating effect of current), Ch.15 (radiation /
+infrared dispersion).
+
 ## Recommended propagation order
 
 1. **Ch.2 Nutrition in Animals** — easiest first jump because the

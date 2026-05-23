@@ -32823,7 +32823,13 @@
                 178
               ],
               "needsHumanReview": false,
-              "mnemonic": "Current = FLOW of electrons through a conductor. Needs: battery (push), wire (path), bulb/device (load), switch (control). Circuit = closed loop. Open = no current."
+              "mnemonic": "Current = FLOW of electrons through a conductor. Needs: battery (push), wire (path), bulb/device (load), switch (control). Circuit = closed loop. Open = no current.",
+              "predictQuestion": "Why does a simple wire connected to a battery make the wire HOT, while the SAME wire just sitting on the table stays room temperature?",
+              "whyChain": [
+                "Electric current is the flow of charge (electrons in metals) through a conductor. A circuit is a closed loop containing a source (battery, mains) that pushes the charges, and components (bulbs, resistors, motors) that use the energy. Open the loop and the current stops.",
+                "Why does the wire heat only when current flows? Because moving electrons collide with the atoms in the wire, transferring energy as heat. No flow = no collisions = no heating. The amount of heat depends on the current AND the wire's resistance — thinner wire = more collisions = more heating.",
+                "And why does the battery need TWO terminals? Because charge has to flow FROM positive THROUGH the circuit TO negative (conventional current direction; electrons actually go the other way, but it doesn't matter for the physics). A one-terminal battery has nowhere for charge to return — no closed loop, no current. Class 11 physics formalises this with Kirchhoff's circuit laws."
+              ]
             },
             {
               "id": "ch14_t01_c02",
@@ -32865,7 +32871,13 @@
                 181
               ],
               "needsHumanReview": false,
-              "mnemonic": "Current makes wires HEAT UP (heating effect — used in toaster, iron). Current also creates a MAGNETIC FIELD around the wire (magnetic effect — Oersted 1820, basis of motors)."
+              "mnemonic": "Current makes wires HEAT UP (heating effect — used in toaster, iron). Current also creates a MAGNETIC FIELD around the wire (magnetic effect — Oersted 1820, basis of motors).",
+              "predictQuestion": "When you wrap a wire around a nail and pass current through it, the nail becomes a magnet. Why does the wire's electricity create magnetism in unrelated iron?",
+              "whyChain": [
+                "Electric current produces TWO observable effects: heating (the wire warms up due to electron-atom collisions) and magnetism (the wire produces a magnetic field around it). Ørsted discovered this in 1820 — a compass needle deflected near a current-carrying wire.",
+                "Why is heating + magnetism the same underlying physics? Because the moving electrons ARE both effects simultaneously. The collisions with atoms create the heat; the organised motion of negative charges creates a circulating magnetic field. They're two faces of one phenomenon: a current is just motion of charge, and motion of charge always produces a B-field.",
+                "And why was Ørsted's discovery one of the most important in physics history? Because it unified electricity and magnetism — previously thought to be separate phenomena. Maxwell formalised it in the 1860s; Einstein's relativity (1905) showed they're literally the same thing seen from different reference frames. Class 11+ physics traces this connection through Maxwell's equations, the foundation of all EM theory."
+              ]
             },
             {
               "id": "ch14_t01_c03",
@@ -32907,7 +32919,13 @@
                 188
               ],
               "needsHumanReview": false,
-              "mnemonic": "Electric hazards: short circuit (wire-wire contact bypassing load → huge current → fire), overload (too many devices), wet hands (low resistance through body). Fuse melts and breaks circuit to prevent fire."
+              "mnemonic": "Electric hazards: short circuit (wire-wire contact bypassing load → huge current → fire), overload (too many devices), wet hands (low resistance through body). Fuse melts and breaks circuit to prevent fire.",
+              "predictQuestion": "A fuse 'blows' to protect your house. But how does a tiny piece of metal know when to break before a fire starts — and why doesn't it blow during normal use?",
+              "whyChain": [
+                "A fuse is a deliberately weak link in the circuit — a thin wire that melts when current exceeds a designed limit (e.g., 13 A). Normal usage stays below the limit. A short circuit or appliance fault drives the current much higher; the fuse wire heats up so much it melts and breaks the loop, cutting current.",
+                "Why is fuse failure SAFER than no fuse? Because the alternative is the entire circuit's wires heating up and starting a fire inside walls. The fuse is a single, accessible, replaceable component designed to fail FIRST. Without it, the failure point would be inside hidden wiring — much worse.",
+                "And why do modern installations use circuit breakers instead of fuses? Because breakers detect over-current electronically, trip a switch in microseconds, and can be reset without replacement. Fuses must be replaced after each blow. Breakers are also faster at detecting GROUND FAULTS — current leaking to earth — which fuses don't catch reliably. Class 11+ electrical engineering covers fault detection in detail."
+              ]
             }
           ],
           "questions": [
@@ -33514,7 +33532,13 @@
                 171
               ],
               "needsHumanReview": false,
-              "mnemonic": "Heating effect: P = I²R. More current OR more resistance = more heat. Toaster nichrome wire has high R, gets red hot. Copper wire (low R) stays cool — that's why heater elements aren't copper."
+              "mnemonic": "Heating effect: P = I²R. More current OR more resistance = more heat. Toaster nichrome wire has high R, gets red hot. Copper wire (low R) stays cool — that's why heater elements aren't copper.",
+              "predictQuestion": "An electric kettle has a coiled wire inside. Why a coil specifically — wouldn't a straight wire heat the water just as well?",
+              "whyChain": [
+                "The heating effect of current depends on the wire's resistance and the current passing through. Heat produced per second = I² × R (Joule heating). The coil shape lets you pack a long high-resistance wire into a small space, near the water, for efficient heat transfer.",
+                "Why does the coil concentrate the heat? Because resistance accumulates with wire length. A coiled wire is long but compact — high total resistance in a small volume. Add water around the coil and the heat transfers fast to the water; without the coil, you'd need a much longer straight wire, hard to fit in an appliance.",
+                "And why does the kettle wire material matter so much? Because different metals have different resistivities. Nichrome (the standard heating-element alloy) has high resistance + high melting point + resists oxidation. Pure copper would be cheaper but it has low resistance (so produces little heat for the same current) AND melts at lower temperature. Material selection is an entire field — Class 11 chemistry meets metallurgy here."
+              ]
             },
             {
               "id": "ch14_t02_c02",
@@ -33554,7 +33578,13 @@
                 172
               ],
               "needsHumanReview": false,
-              "mnemonic": "Bulb: TUNGSTEN filament (very high R + high melting point 3422°C) glows white-hot. Fuse: low melting point alloy that breaks before wires overheat. Different jobs, different metals."
+              "mnemonic": "Bulb: TUNGSTEN filament (very high R + high melting point 3422°C) glows white-hot. Fuse: low melting point alloy that breaks before wires overheat. Different jobs, different metals.",
+              "predictQuestion": "An incandescent bulb has a tiny tungsten coil that glows at 3000°C. Why doesn't the bulb just melt — and what makes tungsten special?",
+              "whyChain": [
+                "An incandescent bulb passes current through a thin tungsten filament inside a glass bulb. Resistance heats the filament white-hot; the heat radiates as visible light. The bulb is filled with inert argon gas (no oxygen) so the filament doesn't burn — without that, tungsten would oxidise instantly at 3000°C.",
+                "Why tungsten specifically? Because tungsten has the highest melting point of any metal (3422°C) — barely above the operating temperature. Its tensile strength stays high even when red-hot, so the thin filament doesn't sag and snap. No other practical metal can do this.",
+                "And why are incandescent bulbs being phased out in 2026? Because they convert only 5% of electricity into light; 95% is wasted heat. LEDs convert ~40%, fluorescents ~20%. India banned 100W incandescent sales in 2021; the EU did the same. Class 11+ physics covers blackbody radiation laws (Stefan-Boltzmann, Wien) that explain why a glowing filament wastes so much energy as infrared."
+              ]
             },
             {
               "id": "ch14_t02_c03",
@@ -33591,7 +33621,13 @@
                 156
               ],
               "needsHumanReview": false,
-              "mnemonic": "Power (W) × time (h) = energy (kWh). 1 kWh = 1 unit on bill (₹7 in 2026). Geyser (1500 W) dominates — fan (75 W) is cheap."
+              "mnemonic": "Power (W) × time (h) = energy (kWh). 1 kWh = 1 unit on bill (₹7 in 2026). Geyser (1500 W) dominates — fan (75 W) is cheap.",
+              "predictQuestion": "A 100-watt bulb and a 1000-watt heater are both 'electrical appliances'. The bulb costs you a few rupees a month; the heater costs hundreds. Why such a wild difference?",
+              "whyChain": [
+                "Power rating (in watts) measures how fast an appliance consumes electrical energy. Electricity bills are based on TOTAL ENERGY consumed = power × time, in kilowatt-hours (kWh). 100W bulb for 10 hours = 1 kWh. 1000W heater for 10 hours = 10 kWh — 10× the cost.",
+                "Why is the kilowatt-HOUR the unit instead of just kilowatts? Because power tells you the RATE, not the total. To bill you, the meter needs cumulative usage = rate × time. Watt-hours and joules are convertible (1 kWh = 3.6 million joules) but kWh is the practical unit for monthly bills.",
+                "And why does the BEE star-rating on Indian appliances matter? Because two 200-litre refrigerators can have vastly different consumption — a 1-star uses 800 kWh/year, a 5-star uses 350. Over a 10-year fridge life, the 5-star saves enough money to pay its higher purchase price several times over. Class 11+ economics covers life-cycle cost analysis."
+              ]
             }
           ],
           "questions": [
@@ -33875,7 +33911,13 @@
                 177
               ],
               "needsHumanReview": false,
-              "mnemonic": "Oersted 1820: compass needle deflects near a current-carrying wire. PROOF that electricity creates magnetism. Foundation of every motor, generator, transformer ever built."
+              "mnemonic": "Oersted 1820: compass needle deflects near a current-carrying wire. PROOF that electricity creates magnetism. Foundation of every motor, generator, transformer ever built.",
+              "predictQuestion": "Hans Christian Ørsted accidentally discovered the link between electricity and magnetism in 1820 — what was he doing when the compass needle moved unexpectedly?",
+              "whyChain": [
+                "Ørsted was giving a lecture demonstration about heat in a current-carrying wire. He noticed a compass on the table swung to point toward the wire whenever he closed the circuit. Repeated experiments showed: a current-carrying wire produces a CIRCULAR magnetic field around itself.",
+                "Why is this a big deal? Because BEFORE 1820, electricity (Volta's batteries) and magnetism (lodestones, compasses) were thought to be unrelated. Ørsted's discovery united them. Within years Faraday discovered the reverse — moving magnets create currents — and the whole field of electromagnetism took off.",
+                "And why is the right-hand rule still taught? Because it elegantly captures the direction of the field. Point your right thumb in the current's direction; your fingers curl in the direction of the B-field. The same rule extends to motors, generators, and electromagnetic induction. Class 11+ physics formalises it via the cross product B = ∇ × A."
+              ]
             },
             {
               "id": "ch14_t03_c02",
@@ -33916,7 +33958,13 @@
                 179
               ],
               "needsHumanReview": false,
-              "mnemonic": "ELECTROMAGNET = iron core + insulated wire coil + current. Turn current on → magnet. Turn off → not magnet. Used in cranes (lifts iron), bells, relays, MRI machines."
+              "mnemonic": "ELECTROMAGNET = iron core + insulated wire coil + current. Turn current on → magnet. Turn off → not magnet. Used in cranes (lifts iron), bells, relays, MRI machines.",
+              "predictQuestion": "An ordinary nail wrapped with wire becomes a powerful magnet when current flows, then loses its magnetism when current stops. Why does this 'switchable magnet' have such broad uses?",
+              "whyChain": [
+                "An electromagnet is a coil of wire (usually around an iron core) that becomes magnetic when current flows. The advantage over permanent magnets: you can switch it on and off, vary its strength by changing current, and reverse its polarity by reversing current direction.",
+                "Why is the iron core so important? Because iron has high magnetic permeability — it amplifies the field produced by the coil by ~1000× or more. Without the core, the same coil would produce a much weaker field. The trick is using an iron that's 'soft' magnetically (loses magnetism easily when current stops) so the off-switch actually works.",
+                "And why is electromagnetism the foundation of nearly every modern technology? Because every motor (fan, washing machine, EV) is an electromagnet that converts current to motion. Every generator does the reverse (motion to current). Every speaker, microphone, hard drive, MRI scanner uses electromagnetism. Maglev trains float on electromagnets. Class 11+ physics covers motors and generators as the canonical applications."
+              ]
             }
           ],
           "questions": [
@@ -34959,7 +35007,129 @@
           "parentConceptId": "ch14_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch14_t01_c01",
+            "label": "Electric current + circuits",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.3
+          },
+          {
+            "id": "ch14_t01_c02",
+            "label": "Heating + magnetic effects",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.55
+          },
+          {
+            "id": "ch14_t01_c03",
+            "label": "Hazards + fuse",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.55
+          },
+          {
+            "id": "ch14_t02_c01",
+            "label": "Heating effect",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.78
+          },
+          {
+            "id": "ch14_t02_c02",
+            "label": "Bulb + fuse materials",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.85
+          },
+          {
+            "id": "ch14_t02_c03",
+            "label": "Power rating + bills",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.78
+          },
+          {
+            "id": "ch14_t03_c01",
+            "label": "Magnetic effect (Ørsted)",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.1
+          },
+          {
+            "id": "ch14_t03_c02",
+            "label": "Electromagnets",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.2
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch14_t01_c01",
+            "to": "ch14_t01_c02",
+            "label": "produces"
+          },
+          {
+            "id": "e02",
+            "from": "ch14_t01_c01",
+            "to": "ch14_t01_c03",
+            "label": "dangers of"
+          },
+          {
+            "id": "e03",
+            "from": "ch14_t01_c02",
+            "to": "ch14_t02_c01",
+            "label": "detail of"
+          },
+          {
+            "id": "e04",
+            "from": "ch14_t01_c02",
+            "to": "ch14_t03_c01",
+            "label": "detail of"
+          },
+          {
+            "id": "e05",
+            "from": "ch14_t02_c01",
+            "to": "ch14_t02_c02",
+            "label": "instance in"
+          },
+          {
+            "id": "e06",
+            "from": "ch14_t02_c02",
+            "to": "ch14_t01_c03",
+            "label": "fuse instance of"
+          },
+          {
+            "id": "e07",
+            "from": "ch14_t02_c03",
+            "to": "ch14_t02_c01",
+            "label": "measures"
+          },
+          {
+            "id": "e08",
+            "from": "ch14_t03_c01",
+            "to": "ch14_t03_c02",
+            "label": "exploited by"
+          },
+          {
+            "id": "e09",
+            "from": "ch14_t03_c02",
+            "to": "ch14_t02_c02",
+            "label": "uses fuse logic"
+          },
+          {
+            "id": "e10",
+            "from": "ch14_t01_c01",
+            "to": "ch14_t03_c01",
+            "label": "always produces"
+          }
+        ]
+      }
     },
     {
       "id": "ch15",
