@@ -121,8 +121,13 @@ _UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
 # TimelineView's `.animation(minimumInterval:)` factory is inline inside
 # `TimelineView(...)` parens, never line-leading, so it doesn't match.
 _ANIMATION_MODIFIER_RE = re.compile(r"^\s+\.animation\(")
-# Combine .sink trailing closure: `.sink {` or `.sink(...) {`.
-_SINK_RE = re.compile(r"(?<!\w)\.sink\s*(?:\([^)]*\))?\s*\{")
+# Combine .sink trailing closure: `.sink {` or `.sink(...) {`. Earlier
+# the regex had a `(?<!\w)` negative lookbehind on the dot, which was a
+# bug — the typical call site is `publisher.sink { ... }`, where the
+# char before `.` IS a word char (the trailing letter of the publisher
+# variable name). The lookbehind failed there and the lint missed every
+# real-world `.sink`. Caught by scripts/test_lints.py's LH004 fixture.
+_SINK_RE = re.compile(r"\.sink\s*(?:\([^)]*\))?\s*\{")
 _TIMER_SCHEDULED_RE = re.compile(r"\bTimer\.scheduledTimer\b")
 # Keypath form of .assign always captures `on:` strongly. Modern alt:
 # `.assign(to: &$x)` against an @Published.
@@ -213,6 +218,17 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
     .assign(to:on:self)."""
     rel = swift_path.relative_to(REPO_ROOT).as_posix()
     text = swift_path.read_text()
+    # Pre-compute per-line "is comment" so we can quickly skip matches
+    # whose source line is a doc comment. Without this the regex
+    # happily matches mentions of these APIs inside `// ...` blocks
+    # (e.g. fixture files, design comments) and double-counts violations.
+    lines = text.splitlines()
+    def _is_comment_line(line_no: int) -> bool:
+        if line_no - 1 < 0 or line_no - 1 >= len(lines):
+            return False
+        stripped = lines[line_no - 1].strip()
+        return stripped.startswith("//") or stripped.startswith("///")
+
     findings: list[Violation] = []
 
     # --- LH004a: .sink trailing closure ---
@@ -222,6 +238,8 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
         if _capture_list_has_weak_self(head):
             continue
         line_no = text[: m.start()].count("\n") + 1
+        if _is_comment_line(line_no):
+            continue
         # Best-effort line content for the report.
         line = text.splitlines()[line_no - 1].rstrip() if line_no - 1 < len(text.splitlines()) else ""
         findings.append(
@@ -245,6 +263,13 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
     # Find the call site, then walk forward to the first top-level `{` of
     # its closure body. We need to skip the call's parens.
     for m in _TIMER_SCHEDULED_RE.finditer(text):
+        # Skip if the match is inside a comment line. Without this the
+        # regex would happily fire on `// Timer.scheduledTimer` mentions
+        # in doc comments and then walk forward to find some unrelated
+        # `{` (e.g. the next class opening brace).
+        call_line_no = text[: m.start()].count("\n") + 1
+        if _is_comment_line(call_line_no):
+            continue
         # Find the next `{` after the call, tracking paren depth so we
         # don't fall into a string-literal or another call.
         i = m.end()
@@ -294,6 +319,8 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
     # --- LH004c: .assign(to: \..., on: self) keypath form ---
     for m in _ASSIGN_STRONG_SELF_RE.finditer(text):
         line_no = text[: m.start()].count("\n") + 1
+        if _is_comment_line(line_no):
+            continue
         line = text.splitlines()[line_no - 1].rstrip() if line_no - 1 < len(text.splitlines()) else ""
         findings.append(
             Violation(

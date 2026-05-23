@@ -130,6 +130,14 @@ if [ -f "scripts/check_file_size.py" ]; then
     fi
 fi
 
+if [ -f "scripts/test_lints.py" ]; then
+    echo "==> lint self-test"
+    if ! python3 scripts/test_lints.py; then
+        echo "ci-build-test: lint self-test failed — a regex changed and a rule no longer catches its fixture violation. See output." >&2
+        exit 1
+    fi
+fi
+
 run_xcodebuild "BUILD" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
