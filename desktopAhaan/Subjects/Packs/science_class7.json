@@ -25441,6 +25441,555 @@
         139,
         140,
         141
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch11_rw01",
+          "title": "Heart rate during a 100m sprint",
+          "body": "At rest, your heart beats ~72 times per minute. During a 100m sprint, it spikes to ~180+. Each beat pushes about 70 mL of blood; in a sprint that's 12+ litres per minute being pumped through your body. The heart is a fist-sized muscle doing the work of an industrial pump for the duration of the run. The dramatic recovery — heart returning to 72 in 5 minutes — is the cardiac system showing how robust it is.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_rw02",
+          "title": "Blood donation camps and the gift of red cells",
+          "body": "Every drop of donated blood gets used. A 350 mL bag from a donor in Bengaluru is separated into three parts: red blood cells (for accident victims and anaemia), plasma (for burn victims and clotting disorders), and platelets (for cancer patients). One donation can save up to 3 lives. India needs ~14 million units of blood per year — and currently collects only ~9 million. Indian Red Cross, RBC drives at colleges, and Rotary blood banks are the network keeping hospitals supplied.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_rw03",
+          "title": "Sweating on a Delhi May afternoon — kidney + skin teamwork",
+          "body": "On a 45°C day, you can lose 1–2 litres of sweat per hour. Your kidneys notice the drop in blood volume and produce concentrated urine (saving water). Your sweat glands pour water out of the skin to cool you. The body is constantly rebalancing — kidneys hold water in, skin lets water out — depending on temperature. Drink less water in heat, and the kidneys will eventually fail to keep up; that's heatstroke.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_rw04",
+          "title": "Why a Rajasthan keekar tree drinks 200 litres a day",
+          "body": "A mature mango or keekar (acacia) tree in Rajasthan loses ~200 litres of water through transpiration on a hot summer day. The water is sucked up from roots → trunk → branches → leaves → evaporates from stomata. This 'transpiration pull' is so strong it can lift water 100+ metres up a tall tree without any pump. The same physics: water column under tension acts like a stretched rope.",
+          "relatedConceptIds": [
+            "ch11_t03_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_rw05",
+          "title": "Mango grafting — joining two transport systems",
+          "body": "Indian mango farmers don't grow mangoes from seed (slow, unpredictable). They graft: a healthy alphonso branch (scion) is joined to a sturdy native mango rootstock. The cut surfaces are tied together with tape. Within weeks, the xylem and phloem of both halves fuse — sap can now flow continuously from root to leaf. One year later, the grafted tree fruits true alphonso despite having different roots. Plumbing engineering of plant transport.",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch11_xc01",
+          "title": "Class 10 — Life Processes (Transportation)",
+          "body": "Class 10 expands this chapter into detailed cardiac cycle (systole, diastole), blood components in detail (plasma, RBCs with haemoglobin, WBCs, platelets), and full kidney function (Bowman's capsule, glomerulus, loop of Henle). The Class 7 'kidney filters blood' becomes the molecular detail of selective reabsorption.",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01",
+            "ch11_t02_c02"
+          ]
+        },
+        {
+          "id": "ch11_xc02",
+          "title": "NEET — Cardiovascular and Excretory Physiology",
+          "body": "NEET tests cardiac output (heart rate × stroke volume = ~5 L/min at rest), blood pressure mechanics (systolic/diastolic), nephron filtration (~180 L/day filtered, 1.5 L excreted), and the renin-angiotensin system. The Class 7 chapter is one of NEET Biology's most question-heavy starting points.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_xc03",
+          "title": "Class 11 Biology — Body Fluids and Circulation",
+          "body": "Class 11 has a dedicated 4-chapter unit on human physiology, including 'Body Fluids and Circulation' (heart, blood, lymph) and 'Excretory Products and their Elimination' (kidney, dialysis, urine formation). The Class 7 chapter introduces every term these chapters expand on.",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch11_t01_c02",
+            "ch11_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch11_mn01",
+          "acronym": "AVAV",
+          "unpacking": "A-rteries Away from heart (carry oxygen-rich blood out). V-eins return to heart. A-trium (upper chamber, receives). V-entricle (lower chamber, pumps out). The four words that describe most of the heart.",
+          "context": "Heart and vessel basics.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_mn02",
+          "acronym": "XYLEM-UP",
+          "unpacking": "Xylem carries water UP (from roots to leaves). Phloem carries food (made by leaves) BOTH WAYS — up to growing shoots, down to storage roots. Two pipes, two directions.",
+          "context": "Plant's two transport tissues.",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_mn03",
+          "acronym": "BFU",
+          "unpacking": "Blood enters kidney → Filtered through ~1 million nephrons (each has a Bowman's capsule + tubule) → Useful stuff reabsorbed back → Urine (water + urea + salt) sent to bladder. Three-step filtration.",
+          "context": "Kidney function in one mnemonic.",
+          "relatedConceptIds": [
+            "ch11_t02_c01",
+            "ch11_t02_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch11_ms01",
+          "kidsThink": "All veins carry blue blood; all arteries carry red blood.",
+          "actually": "Veins are NOT blue — they only look blue through skin because of how light scatters. Inside, veins carry dark red deoxygenated blood; arteries carry bright red oxygenated blood. There's ONE exception: the pulmonary artery carries deoxygenated blood (lung to right ventricle) and pulmonary vein carries oxygenated (lung to left atrium). 'Arteries carry oxygenated blood' is mostly true except here.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        },
+        {
+          "id": "ch11_ms02",
+          "kidsThink": "The heart is on the left side of the chest.",
+          "actually": "Your heart is approximately in the MIDDLE of your chest, slightly behind the breastbone, tilted leftward. The 'left-side' feeling comes from the left ventricle (the most muscular pumping chamber) being on the left, and its strong contraction is what you feel as 'heart on the left'. The heart organ itself spans both sides.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms03",
+          "kidsThink": "Drinking lots of water flushes out toxins.",
+          "actually": "Kidneys filter blood and produce a constant amount of urine regardless of how much you drink, within reason. Drinking too much water just produces more dilute urine, not 'more toxin removal'. Kidneys excrete what your body has produced (urea, excess salts) — they don't pull random poisons from your body. Drink for thirst; over-drinking can dangerously dilute blood sodium.",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms04",
+          "kidsThink": "Plants drink water like animals.",
+          "actually": "Plants don't 'drink' actively. Water enters root hairs by osmosis, then climbs xylem because the leaves are LOSING water through transpiration. The lost water creates suction that pulls water up — like sipping through a straw. The plant doesn't consciously drink; transpiration evaporation passively powers the whole system.",
+          "relatedConceptIds": [
+            "ch11_t03_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_ms05",
+          "kidsThink": "Sweating is just water leaving the body.",
+          "actually": "Sweat is mostly water but also contains salts (sodium, potassium), urea, and trace amounts of other excretory products. Heavy sweating loses electrolytes — that's why ORS / nimbu-pani-with-salt is given after dehydration. Sweat also helps cool the body (evaporation removes heat) and lubricate skin. Sweat is part of the excretion system, not just air-conditioning.",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch11_nq01",
+          "question": "Match the structures given in Column I with functions given in Column II. (Stomata, xylem, root hairs, leaf veins).",
+          "modelAnswer": "Stomata — gas exchange and transpiration. Xylem — water transport from roots to leaves. Root hairs — absorption of water and minerals from soil. Leaf veins — distribution of water and food within the leaf. Each is a tube or pore engineered for one specific function in plant transport.",
+          "relatedConceptIds": [
+            "ch11_t03_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_nq02",
+          "question": "Fill in the blanks. (a) The blood from the heart is transported to all parts of the body by the ______. (b) Haemoglobin is present in ______ cells. (c) Arteries and veins are joined by a network of ______. (d) The rhythmic expansion and contraction of the heart is called ______. (e) The main excretory product in human beings is ______. (f) Sweat contains water and ______. (g) Kidneys eliminate the waste materials in the liquid form called ______. (h) Water reaches great heights in trees because of suction pull caused by ______.",
+          "modelAnswer": "(a) arteries (b) red blood (c) capillaries (d) heartbeat (e) urea (f) salts (g) urine (h) transpiration.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_nq03",
+          "question": "Why is transport of substances necessary in a plant or in an animal?",
+          "modelAnswer": "Living things are made of many cells, each of which needs nutrients, oxygen, and a way to remove waste. The mouth eats food but every cell in your big toe needs glucose. The lungs breathe but every cell of your brain needs oxygen. Without transport, only cells close to the food/air source could function. In animals, blood + heart carries it. In plants, xylem carries water + minerals upward; phloem carries glucose to roots and storage. Transport is what allows multicellular life.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02",
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_nq04",
+          "question": "What will happen if there are no platelets in the blood?",
+          "modelAnswer": "Platelets are blood cells that help blood clot at injuries. Without them, even a small cut wouldn't stop bleeding — you'd lose blood continuously. People with low platelet count (e.g., dengue fever patients in their critical stage) need platelet transfusions urgently. The platelet count drops below ~20,000 (normal: 150,000–400,000) raises serious bleeding risk. Without platelets, surgery would be impossible.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_nq05",
+          "question": "What are stomata? Give two functions of stomata.",
+          "modelAnswer": "Stomata (singular: stoma) are tiny mouth-shaped openings on the underside of leaves, surrounded by two specialised guard cells that open and close them. Two functions: (1) Gas exchange — CO₂ enters for photosynthesis, oxygen exits. (2) Transpiration — water vapour exits, which (a) cools the leaf and (b) creates suction that pulls water up from roots. Both functions are essential; without stomata a plant would suffocate AND wilt.",
+          "relatedConceptIds": [
+            "ch11_t03_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_nq06",
+          "question": "Does transpiration serve any useful function in the plants? Explain.",
+          "modelAnswer": "Yes — transpiration is essential, not just water loss. Three functions: (1) Suction pull — evaporation from leaves creates negative pressure that pulls water up xylem from roots. Without transpiration, water couldn't reach the top of tall trees. (2) Cooling — water evaporating from leaves absorbs heat, like sweat cooling skin. Leaves can be 5-10°C cooler than air. (3) Mineral transport — water carries dissolved minerals from roots upward; without water movement, leaves would starve of nutrients.",
+          "relatedConceptIds": [
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_nq07",
+          "question": "What are the components of blood?",
+          "modelAnswer": "Blood has four components. (1) Plasma — the pale yellow liquid (~55% of blood), mostly water with dissolved nutrients, hormones, waste, and proteins. (2) Red blood cells — biconcave discs containing haemoglobin to carry oxygen. (3) White blood cells — fight infection and produce antibodies. (4) Platelets — small fragments that form clots at injuries. Each component has a specific job: plasma transports, RBCs deliver oxygen, WBCs defend, platelets repair.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_nq08",
+          "question": "Why is blood needed by all the parts of a body?",
+          "modelAnswer": "Blood does several critical jobs: (1) Delivers oxygen from lungs to every cell. (2) Delivers glucose and other nutrients from digestion to every cell. (3) Removes CO₂ (waste from cell respiration) back to lungs. (4) Carries urea (protein breakdown waste) to kidneys. (5) Carries hormones from glands to target organs. (6) White blood cells reach infections; platelets reach wounds. (7) Distributes heat from body core to extremities. No single tissue can do its job without blood reaching it.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch11_gl01",
+          "term": "Heart",
+          "definition": "The muscular organ that pumps blood through the body; in humans, a four-chambered fist-sized muscle.",
+          "example": "An average human heart beats ~100,000 times per day, pumping ~7,500 litres of blood.",
+          "hindiTerm": "हृदय",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl02",
+          "term": "Artery",
+          "definition": "A blood vessel that carries blood AWAY from the heart, usually oxygenated.",
+          "example": "The aorta, the body's biggest artery, is as wide as a garden hose.",
+          "hindiTerm": "धमनी",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl03",
+          "term": "Vein",
+          "definition": "A blood vessel that carries blood BACK to the heart, usually deoxygenated.",
+          "example": "Veins have valves that prevent backflow against gravity.",
+          "hindiTerm": "शिरा",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl04",
+          "term": "Capillary",
+          "definition": "The smallest blood vessels — single cell thick — where actual exchange of nutrients/gases happens.",
+          "example": "An adult body has ~40 billion capillaries totalling ~80,000 km in length.",
+          "hindiTerm": "केशिका",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl05",
+          "term": "Haemoglobin",
+          "definition": "The iron-containing molecule in red blood cells that carries oxygen.",
+          "example": "Anaemia is low haemoglobin — common in India, often due to iron deficiency.",
+          "hindiTerm": "हीमोग्लोबिन",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl06",
+          "term": "Kidney",
+          "definition": "Two bean-shaped organs that filter blood and produce urine.",
+          "example": "Each kidney has ~1 million nephrons; together they filter ~180 litres of blood plasma per day.",
+          "hindiTerm": "गुर्दा",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl07",
+          "term": "Nephron",
+          "definition": "The microscopic filtering unit of the kidney.",
+          "example": "Each kidney has ~1 million nephrons, each like a tiny filter + selective re-absorption tube.",
+          "hindiTerm": "नेफ्रॉन",
+          "relatedConceptIds": [
+            "ch11_t02_c02"
+          ]
+        },
+        {
+          "id": "ch11_gl08",
+          "term": "Xylem",
+          "definition": "The plant tissue that carries water and minerals from roots to leaves.",
+          "example": "Cut a celery stalk in coloured water — the colour rises through xylem visibly.",
+          "hindiTerm": "जाइलम",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl09",
+          "term": "Phloem",
+          "definition": "The plant tissue that carries food (sugar) from leaves to roots and storage organs.",
+          "example": "Ringing a tree (cutting away a strip of bark, including phloem) eventually kills it because roots starve.",
+          "hindiTerm": "फ्लोएम",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl10",
+          "term": "Transpiration",
+          "definition": "The evaporation of water from plant leaves through stomata.",
+          "example": "A mature mango tree can transpire 200+ litres of water on a hot day — the equivalent of running a tap for hours.",
+          "hindiTerm": "वाष्पोत्सर्जन",
+          "relatedConceptIds": [
+            "ch11_t03_c02"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch11_mp01",
+          "emoji": "🥬",
+          "title": "Celery xylem in colour — see plant pipes work",
+          "needs": [
+            "A fresh celery stalk with leaves",
+            "A glass of water",
+            "Red or blue food colour",
+            "Knife (adult help)"
+          ],
+          "steps": [
+            "Pour water into the glass, add ~20 drops of food colour. Mix.",
+            "Trim 2 cm off the bottom of the celery for a fresh cut.",
+            "Place the stalk in the coloured water.",
+            "Leave for 2-4 hours.",
+            "Slice the stalk crossways. You'll see coloured dots — the xylem tubes that carried the dye up.",
+            "Cut the leaves — coloured veins are visible."
+          ],
+          "expectedObservation": "Coloured dots in the stalk cross-section and coloured veins in the leaves, all from water rising through xylem.",
+          "whyItWorks": "Transpiration from the leaves creates suction in the xylem tubes. The plant doesn't know the water is dyed; it just sucks. The dye rides along as a tracer, making the invisible xylem network visible. Same principle works for white roses dipped in coloured water — the petals colour.",
+          "estimatedMinutes": 240,
+          "relatedConceptIds": [
+            "ch11_t03_c01",
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_mp02",
+          "emoji": "❤️",
+          "title": "Find your pulse — count your own heart rate",
+          "needs": [
+            "A watch with a second hand or a stopwatch (phone is fine)",
+            "Your wrist or neck"
+          ],
+          "steps": [
+            "Sit quietly for 2 minutes (let your heart rate settle).",
+            "Place 2 fingers (not thumb — it has its own pulse) on your wrist (radial artery, just below thumb) OR neck (carotid, just below jaw).",
+            "Count beats for 60 seconds. That's your resting heart rate.",
+            "Now do 30 jumping jacks. Immediately count beats for 60 seconds — that's exercise rate.",
+            "Sit. Recount at 1 min, 2 min, 5 min. Watch recovery.",
+            "Plot your numbers — resting, peak, 1 min, 2 min, 5 min."
+          ],
+          "expectedObservation": "Resting: 70-90 bpm for a Class 7 student. Peak after exercise: 130-180. Recovery to within 20 of resting by 5 minutes.",
+          "whyItWorks": "You're feeling your heart's pulse wave travelling through arteries. Exercise demands more oxygen → muscles signal need → heart speeds up. Fast recovery (under 5 min) indicates good cardiovascular fitness. Athletes' resting rates can be 50 or below; sedentary people may have 90+ resting rates. Your own pulse is a window into your heart's efficiency.",
+          "estimatedMinutes": 15,
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch11_sci01",
+          "name": "Sushruta",
+          "lifespan": "circa 600 BCE",
+          "nationality": "Indian (Ancient)",
+          "oneLineLegacy": "Wrote the world's first systematic description of the circulatory system + the body's energy channels — and pioneered surgery 2500 years before modern medicine.",
+          "narrative": "Sushruta lived in Varanasi around 600 BCE. He compiled the Sushruta Samhita, a medical encyclopaedia of 184 chapters. It describes the human body as a network of marma points (vital energy centres, often near major blood vessels) and srotas (channels of fluid flow). Sushruta described 700 medicinal plants, 1100 conditions, 121 surgical instruments, and 300+ surgical procedures including cataract removal, plastic surgery (rhinoplasty — rebuilding a cut nose from forehead skin, still called the 'Indian method'), and the removal of bladder stones. He even described, in poetic terms, the rhythm of the pulse and what it could reveal about the body's state — a thousand years before William Harvey 'discovered' circulation in 1628 Europe. Sushruta's pulse diagnosis, modified, is still part of Ayurvedic practice in India today. He's the patron of Indian surgery; AIIMS Delhi's surgery department building is named after him.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch11_wi01",
+          "question": "What if your kidneys stopped working?",
+          "answer": "Within hours, urea and other wastes would build up in your blood — a condition called uraemia. Within days, you'd feel sick, weak, confused. Without treatment, death within ~2 weeks. Treatment: dialysis (artificial kidney machine that filters your blood 3 times a week) or kidney transplant. India has ~200,000 dialysis patients and ~5000 kidney transplants per year. Your kidneys are silent — you don't notice them until they're gone.",
+          "relatedConceptIds": [
+            "ch11_t02_c01",
+            "ch11_t02_c02"
+          ]
+        },
+        {
+          "id": "ch11_wi02",
+          "question": "What if humans had two-chambered hearts like fish?",
+          "answer": "We'd be much less active and probably cold-blooded. A two-chambered heart only pumps blood in one circuit (heart → gills → body → heart). This means oxygen-poor blood mixes with oxygen-rich blood, and the pump can't generate enough pressure to deliver oxygen at high rates. Fish work because they're slow-moving and in cool water. Humans need a 4-chambered heart with double circulation to support our high metabolic rate, large body, and warm-blooded existence. Heart evolution = activity level.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        },
+        {
+          "id": "ch11_wi03",
+          "question": "What if plants didn't transpire?",
+          "answer": "They wouldn't be able to grow tall. Transpiration is the only way water reaches the top of a tall tree — there's no pump. Without it, even a small mango tree (10 m) couldn't get water to the top leaves. Plants would all be ground-cover height. They'd also overheat — transpiration is plant's air-conditioning. The global water cycle would change: forests transpire ~25% of all rainfall back to atmosphere; without that, monsoons would weaken significantly. Tropical rainforests like Amazon are essentially giant water pumps.",
+          "relatedConceptIds": [
+            "ch11_t03_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch11_cx01",
+          "toChapterId": "ch10",
+          "topic": "Respiration in Organisms",
+          "pointer": "Ch.10's respiration delivers oxygen TO blood at the lungs; Ch.11's circulation carries that blood TO every cell. The two chapters are continuous: respiration is the source, circulation is the delivery.",
+          "relatedConceptIds": [
+            "ch11_t01_c02"
+          ]
+        },
+        {
+          "id": "ch11_cx02",
+          "toChapterId": "ch01",
+          "topic": "Nutrition in Plants",
+          "pointer": "Ch.1's leaves make glucose; Ch.11's phloem distributes it. Ch.1's roots absorb water; Ch.11's xylem carries it up. The plant chapters complete each other — making + moving.",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 doesn't have a dedicated transportation chapter, but Class 9 (Cell Tissues and Systems) introduces the formal study of vascular tissue (xylem, phloem in detail). Class 10's Life Processes chapter extends every organ system here.",
+        "forNeetJee": "Class 11 has 'Body Fluids and Circulation' (heart anatomy, cardiac cycle, blood pressure) and 'Excretory Products and their Elimination' (kidney, nephron, dialysis). NEET tests cardiac output, ECG interpretation, kidney filtration mechanics. Every page traces back to Class 7's basics here."
+      },
+      "gallery": [
+        {
+          "id": "ch11_gi01",
+          "caption": "Human heart — four chambers",
+          "detail": "Two atria (upper, receive blood) + two ventricles (lower, pump blood out). Left side handles oxygenated blood (lungs → body); right handles deoxygenated (body → lungs). Wall between them keeps them never mixing. A complete double-circulation pump in 250 g of muscle.",
+          "assetHint": "sfsymbol:heart.fill",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        },
+        {
+          "id": "ch11_gi02",
+          "caption": "Blood under microscope",
+          "detail": "Red blood cells (biconcave discs) dominate; white blood cells (irregular, much larger but rare); tiny disc-shaped platelets between. Plasma is the clear yellow liquid all of them swim in.",
+          "assetHint": "sfsymbol:circle.fill",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gi03",
+          "caption": "Nephron close-up",
+          "detail": "Each kidney has 1 million of these. A loop of capillary (glomerulus) inside a Bowman's cup, connected to a winding tube that selectively reabsorbs glucose, water, salts. What's left becomes urine. One nephron filters ~125 mL/min.",
+          "assetHint": "sfsymbol:tornado",
+          "relatedConceptIds": [
+            "ch11_t02_c02"
+          ]
+        },
+        {
+          "id": "ch11_gi04",
+          "caption": "Xylem cross-section",
+          "detail": "Dead empty tubes stacked end to end, like a water hose with valves removed. Water moves up by transpiration suction. Found in all vascular plants — herb, shrub, or 100m redwood.",
+          "assetHint": "sfsymbol:square.grid.3x3.fill",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_gi05",
+          "caption": "Stomata closing in dry weather",
+          "detail": "Two guard cells curve apart when water is plentiful (stoma open), curl back when water is scarce (stoma closed). Plants can lose 90% less water by partial closure — a survival adaptation for dry afternoons.",
+          "assetHint": "sfsymbol:leaf.fill",
+          "relatedConceptIds": [
+            "ch11_t03_c02"
+          ]
+        },
+        {
+          "id": "ch11_gi06",
+          "caption": "Mango graft union",
+          "detail": "Two cut surfaces — alphonso scion above, native rootstock below — joined with tape. Within weeks, xylem and phloem of both halves fuse. Sap flows through one continuous system. Indian mango orchards run on this technique.",
+          "assetHint": "sfsymbol:link",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch11_tl01",
+          "title": "Double circulation — blood's two laps through your body",
+          "intro": "Every drop of blood completes two loops every minute — one to the lungs, one to the rest of the body.",
+          "steps": [
+            {
+              "id": "ch11_tl01_s01",
+              "label": "Right atrium fills",
+              "body": "Deoxygenated blood from body veins enters the right atrium. The atrium contracts; blood drops into right ventricle below.",
+              "assetHint": "sfsymbol:arrow.down.circle"
+            },
+            {
+              "id": "ch11_tl01_s02",
+              "label": "Right ventricle pumps to lungs",
+              "body": "Right ventricle contracts powerfully; blood shoots through pulmonary artery to lungs. Picks up oxygen at alveoli, releases CO₂.",
+              "assetHint": "sfsymbol:lungs.fill"
+            },
+            {
+              "id": "ch11_tl01_s03",
+              "label": "Left atrium fills",
+              "body": "Oxygenated blood returns from lungs via pulmonary vein into left atrium. The atrium contracts; blood drops into left ventricle.",
+              "assetHint": "sfsymbol:arrow.down.circle"
+            },
+            {
+              "id": "ch11_tl01_s04",
+              "label": "Left ventricle blasts to body",
+              "body": "Left ventricle is the most muscular chamber. It pumps oxygenated blood through aorta to every organ — brain, gut, muscles, kidneys.",
+              "assetHint": "sfsymbol:bolt.fill"
+            },
+            {
+              "id": "ch11_tl01_s05",
+              "label": "Capillary exchange",
+              "body": "At every cell: oxygen + nutrients diffuse OUT of blood into the cell; CO₂ + urea diffuse IN from the cell into blood. Blood becomes deoxygenated.",
+              "assetHint": "sfsymbol:circle.grid.cross.fill"
+            },
+            {
+              "id": "ch11_tl01_s06",
+              "label": "Veins back to heart",
+              "body": "Deoxygenated blood collects into veins, returns to right atrium. Cycle restarts. Total time: ~60 seconds for a complete lap.",
+              "assetHint": "sfsymbol:arrow.triangle.2.circlepath"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t01_c02"
+          ]
+        }
       ]
     },
     {
