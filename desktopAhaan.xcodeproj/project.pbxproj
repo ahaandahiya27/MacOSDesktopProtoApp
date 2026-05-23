@@ -634,6 +634,19 @@
 		0AAE000000000000000000E1 /* ChapterDetailView+Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */; };
 		0AAE000000000000000000E3 /* ChapterDetailView+HomeExperiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */; };
 		0ABA000000000000000000A1 /* ArticleBrowserView+PlainTextFallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA000000000000000000A2 /* ArticleBrowserView+PlainTextFallback.swift */; };
+		0ACA00000000000000000002 /* RealWorldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000001 /* RealWorldExample.swift */; };
+		0ACA00000000000000000004 /* ExamConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000003 /* ExamConnection.swift */; };
+		0ACA00000000000000000006 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000005 /* Mnemonic.swift */; };
+		0ACA00000000000000000008 /* Misconception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000007 /* Misconception.swift */; };
+		0ACA0000000000000000000A /* NcertQAEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000009 /* NcertQAEntry.swift */; };
+		0ACA0000000000000000000C /* GlossaryTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA0000000000000000000B /* GlossaryTerm.swift */; };
+		0ACA0000000000000000000E /* MiniProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA0000000000000000000D /* MiniProject.swift */; };
+		0ACA00000000000000000010 /* ScientistProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA0000000000000000000F /* ScientistProfile.swift */; };
+		0ACA00000000000000000012 /* WhatIfScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000011 /* WhatIfScenario.swift */; };
+		0ACA00000000000000000014 /* CrossChapterRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000013 /* CrossChapterRef.swift */; };
+		0ACA00000000000000000016 /* CurriculumBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000015 /* CurriculumBridge.swift */; };
+		0ACA00000000000000000018 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000017 /* GalleryItem.swift */; };
+		0ACA0000000000000000001A /* ContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA00000000000000000019 /* ContentTimeline.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -667,6 +680,19 @@
 		0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+Notebook.swift"; sourceTree = "<group>"; };
 		0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+HomeExperiments.swift"; sourceTree = "<group>"; };
 		0ABA000000000000000000A2 /* ArticleBrowserView+PlainTextFallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleBrowserView+PlainTextFallback.swift"; sourceTree = "<group>"; };
+		0ACA00000000000000000001 /* RealWorldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealWorldExample.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000003 /* ExamConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamConnection.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000005 /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mnemonic.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000007 /* Misconception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misconception.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000009 /* NcertQAEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NcertQAEntry.swift; sourceTree = "<group>"; };
+		0ACA0000000000000000000B /* GlossaryTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTerm.swift; sourceTree = "<group>"; };
+		0ACA0000000000000000000D /* MiniProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniProject.swift; sourceTree = "<group>"; };
+		0ACA0000000000000000000F /* ScientistProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScientistProfile.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000011 /* WhatIfScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIfScenario.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000013 /* CrossChapterRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossChapterRef.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000015 /* CurriculumBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumBridge.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000017 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		0ACA00000000000000000019 /* ContentTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTimeline.swift; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -1878,6 +1904,19 @@
 				7E3B3FD381899541A3C84B2B /* SubjectPack.swift */,
 				728E9A7F2BFE701A53E226AE /* Topic.swift */,
 				ABD4B5A1363A46E65182E97D /* UseCase.swift */,
+				0ACA00000000000000000001 /* RealWorldExample.swift */,
+				0ACA00000000000000000003 /* ExamConnection.swift */,
+				0ACA00000000000000000005 /* Mnemonic.swift */,
+				0ACA00000000000000000007 /* Misconception.swift */,
+				0ACA00000000000000000009 /* NcertQAEntry.swift */,
+				0ACA0000000000000000000B /* GlossaryTerm.swift */,
+				0ACA0000000000000000000D /* MiniProject.swift */,
+				0ACA0000000000000000000F /* ScientistProfile.swift */,
+				0ACA00000000000000000011 /* WhatIfScenario.swift */,
+				0ACA00000000000000000013 /* CrossChapterRef.swift */,
+				0ACA00000000000000000015 /* CurriculumBridge.swift */,
+				0ACA00000000000000000017 /* GalleryItem.swift */,
+				0ACA00000000000000000019 /* ContentTimeline.swift */,
 			);
 			path = ContentSchema;
 			sourceTree = "<group>";
@@ -3166,6 +3205,19 @@
 				04F59D202FB8EED000568BDE /* Scene2_SandClayLoam.swift in Sources */,
 				0285215969F94AD942B6DD58 /* Chapter.swift in Sources */,
 				7BAF2E39EA259F6E783988C3 /* Concept.swift in Sources */,
+				0ACA00000000000000000002 /* RealWorldExample.swift in Sources */,
+				0ACA00000000000000000004 /* ExamConnection.swift in Sources */,
+				0ACA00000000000000000006 /* Mnemonic.swift in Sources */,
+				0ACA00000000000000000008 /* Misconception.swift in Sources */,
+				0ACA0000000000000000000A /* NcertQAEntry.swift in Sources */,
+				0ACA0000000000000000000C /* GlossaryTerm.swift in Sources */,
+				0ACA0000000000000000000E /* MiniProject.swift in Sources */,
+				0ACA00000000000000000010 /* ScientistProfile.swift in Sources */,
+				0ACA00000000000000000012 /* WhatIfScenario.swift in Sources */,
+				0ACA00000000000000000014 /* CrossChapterRef.swift in Sources */,
+				0ACA00000000000000000016 /* CurriculumBridge.swift in Sources */,
+				0ACA00000000000000000018 /* GalleryItem.swift in Sources */,
+				0ACA0000000000000000001A /* ContentTimeline.swift in Sources */,
 				04F59D4A2FB8EFCB00568BDE /* Scene1_HeartBeats.swift in Sources */,
 				FADE34B9C903710922C1D0DE /* ExplanationDepth.swift in Sources */,
 				C586C92D6CFBAA502A789BE3 /* Question.swift in Sources */,
