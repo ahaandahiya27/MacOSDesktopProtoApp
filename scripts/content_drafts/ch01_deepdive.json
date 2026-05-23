@@ -1,0 +1,47 @@
+{
+  "_meta": {"chapter_id": "ch01", "phase": "deepdive_media"},
+  "deepDive": [
+    {
+      "id": "ch01_dd01",
+      "title": "Limiting factors — why plants stop growing even when watered",
+      "gradeLevel": "class_8",
+      "parentConceptId": "ch01_t01_c07",
+      "body": "In Class 7 you learned that photosynthesis needs FOUR things: sunlight, chlorophyll, CO₂, and water. Class 8 introduces an important twist: at any moment, only ONE of these four is the bottleneck — and that's what controls the rate. Give a plant infinite water + sunlight, but starve it of CO₂, and photosynthesis stalls. The German plant physiologist Justus von Liebig called this 'the law of the minimum.' Modern greenhouse farmers in Pune use this to their advantage — they pump extra CO₂ into closed glasshouses (boosting concentration from atmospheric 0.04% to 0.1%) and see tomato yields jump 30%. They've identified CO₂ as the bottleneck and removed it. When you garden, watch for which factor is limiting yours — usually it's light in winter and water in summer.",
+      "prerequisite": "Tackle this after you're comfortable with the 4 conditions for photosynthesis (Class 7).",
+      "bonusQuestions": null,
+      "nextStepHint": "In Class 11 you'll see how each limiting factor affects a different enzyme in the Calvin cycle — that's why one limit slows the whole assembly line."
+    },
+    {
+      "id": "ch01_dd02",
+      "title": "Light reactions vs dark reactions — photosynthesis in two halves",
+      "gradeLevel": "class_9",
+      "parentConceptId": "ch01_t01_c02",
+      "body": "In Class 7 you wrote photosynthesis as: CO₂ + H₂O + light → glucose + O₂. Class 9 splits this single reaction into TWO stages happening in different parts of the chloroplast. STAGE 1 — light-dependent reactions: happen in the thylakoid membranes (those green stacks inside the chloroplast). Sunlight splits water into hydrogen + oxygen. The oxygen leaves; the hydrogen is captured in a molecule called NADPH. ATP is also made here. STAGE 2 — light-independent reactions (often misnamed 'dark reactions'): happen in the stroma (chloroplast's fluid). The captured hydrogen + ATP power a cycle that converts CO₂ into glucose. The first stage NEEDS light; the second only needs the products from the first stage. This is why a plant in darkness can briefly continue photosynthesis using stored NADPH — but only briefly.",
+      "prerequisite": "Tackle this after you're comfortable with the basic photosynthesis equation.",
+      "bonusQuestions": null,
+      "nextStepHint": "In Class 11 you'll meet the Calvin Cycle by name — three enzymes, three stages, the heart of the 'dark reactions'."
+    },
+    {
+      "id": "ch01_dd03",
+      "title": "C3 vs C4 vs CAM — three ways plants do photosynthesis",
+      "gradeLevel": "class_11",
+      "parentConceptId": "ch01_t01_c02",
+      "body": "In Class 7 photosynthesis was one process. In Class 11 you'll discover plants have evolved THREE different photosynthesis strategies. C3 plants (rice, wheat, most trees) — the original pathway. CO₂ is fixed into a 3-carbon molecule. Works great in moderate climates; loses ~30% of fixed CO₂ to a wasteful process called photorespiration in hot, dry conditions. C4 plants (sugarcane, maize, sorghum) — evolved 30 million years ago when atmospheric CO₂ dropped. They first concentrate CO₂ in special cells, THEN run C3. Twice as efficient in hot climates. That's why sugarcane outyields any other crop per hectare. CAM plants (pineapple, cactus, agave) — they open stomata only at night to grab CO₂, store it, then run photosynthesis with closed stomata in the day. Saves water dramatically. Indian farmers' choice of crop is, without knowing it, a choice between these three pathways.",
+      "prerequisite": "Tackle this after you're comfortable with light and dark reactions.",
+      "bonusQuestions": null,
+      "nextStepHint": "Modern agriculture is trying to engineer C4 traits into rice — a 'super rice' that could feed 50% more people from the same land."
+    }
+  ],
+  "mediaAssets": [
+    {"id": "ch01_ma01", "kind": "shapeDiagram", "resource": "ch01_chloroplast", "caption": "Chloroplast cross-section: outer membrane, thylakoid stacks, stroma", "altText": "Chloroplast cross-section showing thylakoid stacks inside the stroma where light and dark reactions happen.", "parentConceptId": "ch01_t01_c03", "durationSeconds": null},
+    {"id": "ch01_ma02", "kind": "shapeDiagram", "resource": "ch01_stomata", "caption": "Stomata open vs closed — guard cells regulate gas exchange", "altText": "Diagram of two guard cells forming a stoma pore, shown open during day and closed at night.", "parentConceptId": "ch01_t01_c04", "durationSeconds": null},
+    {"id": "ch01_ma03", "kind": "shapeDiagram", "resource": "ch01_photosynthesis_equation", "caption": "Photosynthesis equation diagrammed with inputs and outputs", "altText": "Arrow diagram showing CO2 plus H2O plus light arrows pointing to glucose plus O2 above a leaf.", "parentConceptId": "ch01_t01_c02", "durationSeconds": null},
+    {"id": "ch01_ma04", "kind": "shapeDiagram", "resource": "ch01_leaf_anatomy", "caption": "Leaf cross-section: epidermis, mesophyll, vascular bundle", "altText": "Cross-section of a leaf showing upper epidermis, palisade mesophyll, spongy mesophyll, and vascular bundle.", "parentConceptId": "ch01_t01_c04", "durationSeconds": null},
+    {"id": "ch01_ma05", "kind": "animatedSceneRef", "resource": "ch01_scene1_plantkitchen", "caption": "See it animated: the plant's kitchen", "altText": "Open the Discover scene showing photosynthesis as a kitchen analogy.", "parentConceptId": "ch01_t01_c02", "durationSeconds": null},
+    {"id": "ch01_ma06", "kind": "animatedSceneRef", "resource": "ch01_scene_iodine_test", "caption": "See it animated: iodine test for starch", "altText": "Open the Discover scene showing the iodine test turning starch blue-black.", "parentConceptId": "ch01_t01_c08", "durationSeconds": null},
+    {"id": "ch01_ma07", "kind": "animatedSceneRef", "resource": "ch01_scene_van_helmont", "caption": "See it animated: Van Helmont's willow experiment", "altText": "Open the Discover scene replaying Van Helmont's 5-year willow tree weighing experiment.", "parentConceptId": "ch01_t01_c06", "durationSeconds": null},
+    {"id": "ch01_ma08", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: photosynthesis process", "altText": "Listen as the photosynthesis process explanation is read aloud paragraph by paragraph.", "parentConceptId": "ch01_t01_c02", "durationSeconds": null},
+    {"id": "ch01_ma09", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: parasitic plant lifestyles", "altText": "Listen as the parasitic plant explanation is read aloud paragraph by paragraph.", "parentConceptId": "ch01_t02_c01", "durationSeconds": null},
+    {"id": "ch01_ma10", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: why plants need nitrogen", "altText": "Listen as the nitrogen role explanation is read aloud paragraph by paragraph.", "parentConceptId": "ch01_t03_c01", "durationSeconds": null}
+  ]
+}

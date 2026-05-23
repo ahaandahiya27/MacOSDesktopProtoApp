@@ -1,0 +1,47 @@
+{
+  "_meta": {"chapter_id": "ch07", "phase": "deepdive_media"},
+  "deepDive": [
+    {
+      "id": "ch07_dd01",
+      "title": "Atmosphere layers and the lapse rate — why mountains are colder",
+      "gradeLevel": "class_9",
+      "parentConceptId": "ch07_t01_c02",
+      "body": "In Class 7 you learned that mountains are colder because they're higher. Class 9 quantifies this. The atmosphere has FOUR layers — troposphere (0-12 km, where weather happens), stratosphere (12-50 km, where ozone lives), mesosphere, thermosphere. In the troposphere, temperature drops at a steady rate called the LAPSE RATE: about 6.5°C per kilometre of altitude. So at Manali (2050 m), it's roughly 6.5 × 2 = 13°C cooler than Delhi at sea level. At Mount Everest base camp (5400 m), 35°C cooler than coastal Mumbai. Why does this happen? As air rises, atmospheric pressure decreases, and rising air expands. Expansion costs energy — that energy comes from the air's own heat, so it cools. Same physics that makes a deodorant can feel cold when you press it (gas expanding rapidly).",
+      "prerequisite": "Tackle this after you're comfortable with how climate varies by location.",
+      "bonusQuestions": null,
+      "nextStepHint": "Class 11 explores why this lapse rate breaks down at high altitudes in the stratosphere — ozone heats the air, reversing the pattern."
+    },
+    {
+      "id": "ch07_dd02",
+      "title": "El Niño and La Niña — why India's monsoon failed in 2009 and again in 2015",
+      "gradeLevel": "class_11",
+      "parentConceptId": "ch07_t01_c02",
+      "body": "In Class 7 you learned that monsoons bring India's rain. Class 11 reveals that monsoons can FAIL — and the cause sits 12,000 km away in the Pacific Ocean. EL NIÑO: every 3-7 years, surface waters in the eastern Pacific (off Peru) warm dramatically (~2°C above normal). This shifts global wind patterns — including the jet stream that drives the Indian monsoon. Result: weaker monsoon over India, often a drought year. 2009 and 2015 were strong El Niño years; both saw deficient Indian rainfall and food price spikes. LA NIÑA is the opposite — cooler-than-normal Pacific waters, often stronger monsoon. Indian meteorologists at IMD Pune now forecast monsoons partly based on Pacific sea surface temperatures measured by satellite. Climate is a single global system — what happens in Lima can determine what happens in Lucknow.",
+      "prerequisite": "Tackle this after you're comfortable with monsoon basics.",
+      "bonusQuestions": null,
+      "nextStepHint": "NEET / climate science: El Niño is part of the ENSO (El Niño Southern Oscillation) — Earth's biggest year-to-year climate driver."
+    },
+    {
+      "id": "ch07_dd03",
+      "title": "Biomes — how Earth is divided into climate zones",
+      "gradeLevel": "neet_jee",
+      "parentConceptId": "ch07_t01_c02",
+      "body": "In Class 7 you saw climates differ (polar, tropical, etc.). NEET expects you to know the SIX major terrestrial biomes — large ecosystems defined by climate. (1) Tropical rainforest (Western Ghats, Amazon) — hot, wet, biodiverse. (2) Temperate deciduous forest (parts of Himachal) — moderate temperature, seasonal trees. (3) Grassland (savannas of Africa, Indian terai). (4) Desert (Thar, Sahara) — low rainfall, extreme temperature swings. (5) Tundra (Ladakh winter, Arctic) — frozen, treeless. (6) Taiga (boreal Russia, Canada) — coniferous forests. Each biome has signature animal and plant adaptations. The same RAINFALL + TEMPERATURE conditions create the same biome across continents — convergent evolution. Indian Western Ghats and South American Amazon look similar despite ZERO direct connection.",
+      "prerequisite": "Tackle this after you're comfortable with the polar/tropical adaptation examples in Class 7.",
+      "bonusQuestions": null,
+      "nextStepHint": "Marine biomes (coral reefs, deep sea, open ocean) parallel terrestrial ones — Class 12 ecology expands on this."
+    }
+  ],
+  "mediaAssets": [
+    {"id": "ch07_ma01", "kind": "shapeDiagram", "resource": "ch07_atmosphere_layers", "caption": "Four atmospheric layers — troposphere to thermosphere", "altText": "Stacked-layer diagram of Earth's atmosphere showing troposphere, stratosphere, mesosphere, thermosphere with altitudes.", "parentConceptId": "ch07_t01_c02", "durationSeconds": null},
+    {"id": "ch07_ma02", "kind": "shapeDiagram", "resource": "ch07_monsoon_winds", "caption": "Southwest monsoon over the Indian subcontinent", "altText": "Map of India showing southwest monsoon winds curving up from Arabian Sea and Bay of Bengal during June-September.", "parentConceptId": "ch07_t01_c02", "durationSeconds": null},
+    {"id": "ch07_ma03", "kind": "shapeDiagram", "resource": "ch07_polar_adapt", "caption": "Polar bear adaptations diagram", "altText": "Polar bear silhouette with annotated adaptations: white fur, blubber, large paws, small ears, black skin.", "parentConceptId": "ch07_t02_c01", "durationSeconds": null},
+    {"id": "ch07_ma04", "kind": "shapeDiagram", "resource": "ch07_climate_zones", "caption": "Six major terrestrial biomes mapped to Earth", "altText": "World map shaded into six climate zones — tropical, desert, temperate, grassland, taiga, tundra.", "parentConceptId": "ch07_t01_c02", "durationSeconds": null},
+    {"id": "ch07_ma05", "kind": "animatedSceneRef", "resource": "ch07_scene1_polarbear", "caption": "See it animated: polar bear hunts on Arctic ice", "altText": "Open the Discover scene showing polar bear adaptations in action.", "parentConceptId": "ch07_t02_c01", "durationSeconds": null},
+    {"id": "ch07_ma06", "kind": "animatedSceneRef", "resource": "ch07_scene_monsoon", "caption": "See it animated: monsoon arrival over Kerala", "altText": "Open the Discover scene showing the southwest monsoon hitting the Western Ghats.", "parentConceptId": "ch07_t01_c02", "durationSeconds": null},
+    {"id": "ch07_ma07", "kind": "animatedSceneRef", "resource": "ch07_scene_migration", "caption": "See it animated: Siberian crane migration route", "altText": "Open the Discover scene tracing Siberian crane migration from Siberia to Bharatpur.", "parentConceptId": "ch07_t02_c03", "durationSeconds": null},
+    {"id": "ch07_ma08", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: weather vs climate", "altText": "Listen as the weather-versus-climate distinction is read aloud paragraph by paragraph.", "parentConceptId": "ch07_t01_c01", "durationSeconds": null},
+    {"id": "ch07_ma09", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: tropical adaptations", "altText": "Listen as the tropical-adaptation examples are read aloud paragraph by paragraph.", "parentConceptId": "ch07_t02_c02", "durationSeconds": null},
+    {"id": "ch07_ma10", "kind": "narratedWalkthrough", "resource": null, "caption": "Read aloud: climate change and habitats", "altText": "Listen as the climate-change-and-habitats section is read aloud paragraph by paragraph.", "parentConceptId": "ch07_t03_c01", "durationSeconds": null}
+  ]
+}
