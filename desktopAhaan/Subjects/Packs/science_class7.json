@@ -21334,6 +21334,130 @@
             "ch08_t03_c02"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch08_dd01",
+          "title": "Coriolis effect — why cyclones spin (and why they spin opposite in two hemispheres)",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch08_t03_c02",
+          "body": "In Class 7 you saw cyclones spin. Class 9 reveals WHY — Earth is rotating beneath the moving air. The CORIOLIS EFFECT: any object moving over a rotating planet appears (to an observer on the surface) to curve. In the Northern Hemisphere, moving objects deflect RIGHT; in the Southern, LEFT. So Bay of Bengal cyclones rotate ANTICLOCKWISE; cyclones near Australia rotate CLOCKWISE. The effect is zero at the equator and strongest at the poles — that's why cyclones never form within ~5° of the equator (no Coriolis to start the spin). Indian Ocean cyclones always form north of ~10°N or south of ~10°S. Sub-tropical Indian states (Tamil Nadu, Odisha, West Bengal) are in the cyclone zone.",
+          "prerequisite": "Tackle after wind-formation basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 derives Coriolis force quantitatively: F = -2mΩ × v."
+        },
+        {
+          "id": "ch08_dd02",
+          "title": "Cyclone genesis — why warm ocean water is the fuel",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch08_t03_c02",
+          "body": "In Class 7 you saw cyclones form over warm seas. Class 11 details the mechanism. CYCLONE GENESIS requires: (1) sea surface temperature ≥ 26.5°C through 50+ m depth — provides moisture and energy. (2) Low vertical wind shear — winds blowing the same direction at different altitudes (no shear = vertical column intact). (3) Pre-existing low-pressure disturbance (e.g., monsoon trough). (4) At least ~5° from equator (Coriolis spin). (5) Moist mid-troposphere (no dry air to disrupt convection). The Bay of Bengal has all five most years — that's why ~80% of Indian cyclones form there, not in the Arabian Sea. Eye wall replacement: as a cyclone matures, the outer rain bands form a new wall, the old wall collapses — the storm 're-organises'. This is what makes intensity hard to forecast.",
+          "prerequisite": "Tackle after Class 9 Coriolis.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET / IIT-meteorology students study Saffir-Simpson scale and the role of CAPE (convective available potential energy)."
+        },
+        {
+          "id": "ch08_dd03",
+          "title": "Air pressure with altitude — why aircraft cabins are pressurised",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch08_t01_c01",
+          "body": "Class 7 says air pressure is the 'weight of air above'. Class 10 makes it quantitative. At sea level, atmospheric pressure ≈ 1013 hPa (or 1 atm). Every 10 m up, pressure drops by ~1 hPa initially. At Manali (2050 m): ~780 hPa (77% of sea-level). At Mount Everest base camp: ~500 hPa. At 10 km cruising altitude (where aircraft fly): only ~265 hPa — too low to breathe. So airplane cabins are pressurised to ~750 hPa (equivalent to ~2400 m altitude). When a plane suddenly depressurises (rare but happens), oxygen masks deploy automatically. The cabin doors are slightly inward-curved so cabin pressure pushes them shut tighter, never opens them in flight. Air pressure isn't optional engineering — it's life support.",
+          "prerequisite": "Tackle after Class 7 air pressure.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 introduces gas laws (PV=nRT) — the math behind altitude pressure equations."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch08_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch08_high_low_pressure",
+          "caption": "High vs low pressure systems on a weather map",
+          "altText": "Weather map showing H high-pressure area and L low-pressure with isobar lines.",
+          "parentConceptId": "ch08_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch08_cyclone_spiral",
+          "caption": "Cyclone spiral structure with eye, eye wall, rain bands",
+          "altText": "Top-down diagram of cyclone showing central eye, surrounding eye wall, and spiralling rain bands.",
+          "parentConceptId": "ch08_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch08_coriolis",
+          "caption": "Coriolis effect — clockwise vs anticlockwise rotation by hemisphere",
+          "altText": "Earth globe showing arrows curving right in Northern Hemisphere and left in Southern due to Coriolis.",
+          "parentConceptId": "ch08_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch08_thunderstorm",
+          "caption": "Thunderstorm anatomy — updraft, downdraft, lightning",
+          "altText": "Cross-section of thunderstorm showing rising warm air, descending cold air, and cloud-to-ground lightning.",
+          "parentConceptId": "ch08_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch08_scene1_pressure",
+          "caption": "See it animated: air pressure demonstration",
+          "altText": "Open the Discover scene showing how air pressure can crush a metal can.",
+          "parentConceptId": "ch08_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch08_scene_cyclone",
+          "caption": "See it animated: cyclone formation over warm sea",
+          "altText": "Open the Discover scene tracking a cyclone's formation and movement.",
+          "parentConceptId": "ch08_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch08_scene_landbreeze",
+          "caption": "See it animated: land breeze / sea breeze cycle",
+          "altText": "Open the Discover scene showing the diurnal land-sea breeze cycle.",
+          "parentConceptId": "ch08_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: how wind is born",
+          "altText": "Listen as the wind formation explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch08_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: cyclone anatomy",
+          "altText": "Listen as the cyclone structure explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch08_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch08_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: thunderstorms",
+          "altText": "Listen as the thunderstorm explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch08_t03_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -23189,6 +23313,130 @@
             "ch09_t03_c01"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch09_dd01",
+          "title": "NPK chemistry — what's actually in your bag of fertiliser",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch09_t01_c02",
+          "body": "Class 7 shows soil supports plants. Class 8 names the three macronutrients plants need most: NITROGEN (N), PHOSPHORUS (P), POTASSIUM (K). Every fertiliser bag in India shows three numbers like 20-20-0 — that's % N, % P, % K. Urea (most popular Indian fertiliser): 46-0-0, pure nitrogen. DAP (diammonium phosphate): 18-46-0, balanced N+P. MOP (potassium chloride): 0-0-60, pure potassium. Why three numbers? Nitrogen makes leaves green and lush. Phosphorus drives roots and flowers. Potassium builds disease resistance and water regulation. Different crops need different ratios — paddy needs more N, mangoes more K. Soil testing by Krishi Vigyan Kendras tells farmers which combination to use. Without this chemistry knowledge, fertilizers either under-feed (poor yield) or over-feed (water pollution).",
+          "prerequisite": "Tackle after sandy/clayey/loamy basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 covers micronutrients (iron, zinc, manganese) — needed in tiny amounts but equally critical."
+        },
+        {
+          "id": "ch09_dd02",
+          "title": "Erosion processes — water, wind, and the loss of Indian topsoil",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch09_t03_c01",
+          "body": "Class 7 says erosion strips soil. Class 10 names the processes. SHEET EROSION: thin layer of topsoil swept off by surface runoff. GULLY EROSION: deep channels cut by concentrated water flow. RILL EROSION: small channels, in between. WIND EROSION: dry, bare topsoil blown away by strong winds (worst in Rajasthan). Indian numbers are alarming: ~5300 million tonnes of topsoil lost annually. The Chambal ravines (MP) are textbook gully-eroded landscape — formed in decades from clearing forests. Solutions: terracing (cuts slope), contour ploughing (perpendicular to slope), cover crops (no bare soil), shelterbelts (trees blocking wind). Each works at a specific scale — terracing is village-level engineering; cover crops are individual-farm decisions.",
+          "prerequisite": "Tackle after Class 7 soil erosion basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE / Civil engineering students study soil mechanics — quantitative models of erosion rates."
+        },
+        {
+          "id": "ch09_dd03",
+          "title": "Pedogenesis — how soil ITSELF forms from rock",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch09_t02_c01",
+          "body": "Class 7 says soil is bits of rock + organic matter. Class 11 names the formation process: PEDOGENESIS — soil genesis. Five factors (CLORPT acronym): Climate (temperature, rainfall drive weathering rates); Organisms (lichens, then bacteria, then plants colonise rock); Relief (slope shapes soil depth); Parent material (the rock determines the chemistry); Time (millennia to form). A 30 cm soil profile typically takes 1000-10,000 years. The famous Indian black cotton soil (Deccan) formed from basalt + millennia of weathering — it's why Maharashtra grows cotton so well. Once eroded, you can't 'just regrow' soil — it's a geological-time resource. This is why every farmer protecting his soil today is gifting the next 5 generations.",
+          "prerequisite": "Tackle after Class 7 soil profile basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 environmental science quantifies soil loss in tonnes per hectare per year."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch09_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch09_soil_profile",
+          "caption": "Soil profile — O, A, B, C, R horizons",
+          "altText": "Vertical soil profile diagram showing organic, topsoil, subsoil, parent material, and bedrock horizons.",
+          "parentConceptId": "ch09_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch09_soil_types",
+          "caption": "Sandy, clayey, loamy soils compared",
+          "altText": "Three-panel diagram comparing particle size and water retention of sandy, clayey, loamy soils.",
+          "parentConceptId": "ch09_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch09_erosion",
+          "caption": "Sheet, rill, and gully erosion progression",
+          "altText": "Diagram showing erosion progressing from sheet wash to small rills to deep gullies on a hillside.",
+          "parentConceptId": "ch09_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch09_contour_terracing",
+          "caption": "Contour ploughing and terracing",
+          "altText": "Cross-section diagram of a hillside showing contour ploughing lines and stepped terraces to reduce erosion.",
+          "parentConceptId": "ch09_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch09_scene_percolation",
+          "caption": "See it animated: percolation rate measurement",
+          "altText": "Open the Discover scene showing water percolation through sandy vs clay soil.",
+          "parentConceptId": "ch09_t02_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch09_scene_erosion",
+          "caption": "See it animated: rain erodes bare slope",
+          "altText": "Open the Discover scene comparing erosion on bare slope vs grass-covered slope.",
+          "parentConceptId": "ch09_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch09_scene_terrace",
+          "caption": "See it animated: terracing built on Himalayan slope",
+          "altText": "Open the Discover scene showing terraced fields being constructed on a steep slope.",
+          "parentConceptId": "ch09_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: soil profile",
+          "altText": "Listen as the soil profile explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch09_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: sandy vs clayey soils",
+          "altText": "Listen as the soil type comparison is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch09_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch09_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: soil conservation",
+          "altText": "Listen as the soil conservation methods are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch09_t03_c02",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -24946,6 +25194,130 @@
             "ch10_t01_c02",
             "ch10_t02_c02"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch10_dd01",
+          "title": "Cellular respiration — the steps inside the mitochondrion",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch10_t02_c02",
+          "body": "Class 7 says aerobic respiration: glucose + O₂ → CO₂ + water + energy. Class 8 reveals this happens in stages, mostly inside MITOCHONDRIA (cell powerhouses). Stage 1 GLYCOLYSIS: in the cytoplasm, glucose (6-carbon) splits into 2 pyruvate (3-carbon) molecules + a little ATP energy. Stage 2 KREBS CYCLE: pyruvate enters mitochondria, gets stripped of CO₂ (the CO₂ you exhale!), produces NADH + a little more ATP. Stage 3 ELECTRON TRANSPORT CHAIN: NADH dumps electrons to oxygen — that's where most ATP (~34 per glucose) is made. Without oxygen for stage 3, only glycolysis runs — that's anaerobic respiration, with just 2 ATP. That's why aerobic is so much more efficient than anaerobic.",
+          "prerequisite": "Tackle after aerobic vs anaerobic basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 names each enzyme in the chain — pyruvate dehydrogenase, citrate synthase, NADH dehydrogenase."
+        },
+        {
+          "id": "ch10_dd02",
+          "title": "Glycolysis to ATP — the energy currency in detail",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch10_t02_c01",
+          "body": "Class 7 says respiration makes 'energy'. Class 11 specifies: ENERGY in cells = ATP (adenosine triphosphate). Each glucose makes ~38 ATP total via aerobic respiration. ATP stores energy in its third phosphate bond — when the cell uses energy (muscle contraction, nerve firing, building proteins), it 'cracks' ATP → ADP + Pi (inorganic phosphate) + energy. The whole human body 'turns over' your bodyweight worth of ATP per day — but only ~250g exists at any moment. ATP is constantly made and broken. Subbarao's 1929 discovery (Yellapragada Subbarao at Harvard — Chapter 10's scientist) was what ATP actually IS. Modern medicine — chemotherapy, antibiotics — often works by disrupting ATP production in fast-growing cells.",
+          "prerequisite": "Tackle after Class 7 respiration overview.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 covers ATP synthase — the molecular motor that makes ATP, one of the most elegant biological machines."
+        },
+        {
+          "id": "ch10_dd03",
+          "title": "Lung volumes and breathing efficiency — what fitness actually means",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch10_t01_c01",
+          "body": "Class 7 introduces the respiratory system. Class 10 quantifies lung function. TIDAL VOLUME (normal breath): ~500 mL in/out. VITAL CAPACITY (max forceful breath): ~4500 mL adult, can reach 7000+ in trained athletes. INSPIRATORY RESERVE (extra you can inhale above tidal): ~3000 mL. RESIDUAL VOLUME (always trapped): ~1200 mL — lungs never empty completely. Olympic swimmers like India's Sajan Prakash train to expand vital capacity — efficient breathing = better endurance. A fit Class 7 student already has vital capacity ~70-80% of adult range. As you age, vital capacity declines ~25 mL per year after age 25 — exercise slows this decline by half. Lung function is one of the few biomarkers you can directly improve with consistent training.",
+          "prerequisite": "Tackle after Class 7 lung basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET tests spirometer readings + how diseases (asthma, COPD) change each volume."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch10_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch10_lung_anatomy",
+          "caption": "Human respiratory system from nose to alveoli",
+          "altText": "Diagram of the human respiratory tract showing nose, trachea, bronchi, bronchioles, and alveoli.",
+          "parentConceptId": "ch10_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch10_alveolus",
+          "caption": "Alveolus close-up with capillary network",
+          "altText": "Diagram of a single alveolus surrounded by capillaries showing oxygen and CO2 gas exchange.",
+          "parentConceptId": "ch10_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch10_mitochondrion",
+          "caption": "Mitochondrion — site of aerobic respiration",
+          "altText": "Cross-section diagram of mitochondrion showing outer membrane, inner folded cristae, and matrix.",
+          "parentConceptId": "ch10_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch10_gas_exchange",
+          "caption": "Gas exchange at alveolus — O₂ in, CO₂ out",
+          "altText": "Arrow diagram showing oxygen moving from alveolus into capillary and CO2 moving the opposite way.",
+          "parentConceptId": "ch10_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch10_scene_breath",
+          "caption": "See it animated: diaphragm + breathing mechanism",
+          "altText": "Open the Discover scene showing diaphragm contracting and relaxing to drive inhalation and exhalation.",
+          "parentConceptId": "ch10_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch10_scene_oxygen_debt",
+          "caption": "See it animated: oxygen debt during sprint",
+          "altText": "Open the Discover scene showing muscle lactic acid build-up and post-sprint heavy breathing.",
+          "parentConceptId": "ch10_t02_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch10_scene_yeast",
+          "caption": "See it animated: yeast fermentation in idli batter",
+          "altText": "Open the Discover scene showing yeast producing CO2 bubbles in idli batter.",
+          "parentConceptId": "ch10_t02_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: aerobic vs anaerobic respiration",
+          "altText": "Listen as the aerobic-versus-anaerobic respiration explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch10_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: alveoli gas exchange",
+          "altText": "Listen as the alveoli gas exchange is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch10_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch10_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: respiration in other organisms",
+          "altText": "Listen as the respiration in other organisms section is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch10_t03_c01",
+          "durationSeconds": null
         }
       ]
     },
@@ -26858,6 +27230,130 @@
             "ch11_t01_c02"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch11_dd01",
+          "title": "Heart chambers + double circulation in detail",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch11_t01_c02",
+          "body": "Class 7 says heart has 4 chambers and 2 circulations. Class 9 details what each chamber does and WHY 4 chambers matter. RIGHT ATRIUM receives oxygen-poor blood from body veins. Contracts → blood drops to RIGHT VENTRICLE. Right ventricle pumps to lungs (low-pressure circuit — lungs are close). Lungs oxygenate, return blood to LEFT ATRIUM. Drops to LEFT VENTRICLE — the most muscular chamber. Left ventricle pumps to the WHOLE BODY (high-pressure — has to reach toes). Why 4 chambers? Fish (2 chambers) mix oxygenated + deoxygenated blood → inefficient. Amphibians (3 chambers) partially separate. Mammals/birds (4 chambers) — full separation, efficient, supports high metabolism. Why we're warm-blooded.",
+          "prerequisite": "Tackle after Class 7 heart basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 introduces cardiac cycle phases (systole/diastole) + valve operation timing."
+        },
+        {
+          "id": "ch11_dd02",
+          "title": "Transpiration pull — the physics of water rising 100 metres up a tree",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch11_t03_c02",
+          "body": "Class 7 says transpiration pulls water up plants. Class 11 reveals the physics. Water molecules cohere strongly (hydrogen bonds). When water evaporates from leaves' stomata, the water column in xylem behaves like a STRETCHED ROPE — every leaving molecule pulls up the column behind it. This is COHESION-TENSION THEORY. Negative pressure in xylem (yes, NEGATIVE — water under tension) can reach -2 MPa in tall trees. Atmospheric pressure can only push water up ~10 m (the pump physics) — but transpiration pull lifts redwoods 100+ m. Crucial: any AIR BUBBLE in xylem breaks the chain (embolism) — that branch dies. This is why drought stress is so dangerous; xylem embolisms are irreversible.",
+          "prerequisite": "Tackle after xylem/phloem basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET tests cohesion-tension, root pressure, and adhesion to xylem walls."
+        },
+        {
+          "id": "ch11_dd03",
+          "title": "Nephron filtration math — how kidneys filter 180 litres a day",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch11_t02_c02",
+          "body": "Class 7 says nephrons filter blood. Class 10 makes it quantitative. Each kidney has ~1 million nephrons. Each filters ~125 mL of plasma per minute. That's 180 LITRES per day total — equivalent to filtering your entire blood volume 60 times. But you don't urinate 180 L! In the LOOP OF HENLE and convoluted tubules, ~99% is REABSORBED back to blood — water, glucose, salts, amino acids. Final urine: just 1.5 L/day. The reabsorption is selective: 100% glucose (unless diabetic), 99% water, varies by need for salts. Diuretics work by blocking specific reabsorption channels — water exits as urine instead of being kept. Indian dialysis patients lose this filtration — machines replace it at ~25% the efficiency.",
+          "prerequisite": "Tackle after Class 7 kidney basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE/NEET cover specific transporters in each tubule segment."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch11_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch11_heart_4chambers",
+          "caption": "Heart four chambers with arrow paths",
+          "altText": "Cross-section diagram of human heart showing 4 chambers, valves, and arrows tracing blood flow paths.",
+          "parentConceptId": "ch11_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch11_nephron",
+          "caption": "Nephron structure — Bowman's capsule, tubules, collecting duct",
+          "altText": "Detailed nephron diagram with glomerulus, Bowman's capsule, proximal tubule, loop of Henle, distal tubule.",
+          "parentConceptId": "ch11_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch11_xylem_phloem",
+          "caption": "Xylem vs phloem — directions and contents",
+          "altText": "Cross-section of plant stem showing xylem carrying water up and phloem carrying sugars both ways.",
+          "parentConceptId": "ch11_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch11_blood_cells",
+          "caption": "Blood components — RBC, WBC, platelets, plasma",
+          "altText": "Diagram showing red blood cells, white blood cells, and platelets in plasma.",
+          "parentConceptId": "ch11_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch11_scene_heartbeat",
+          "caption": "See it animated: heartbeat cycle",
+          "altText": "Open the Discover scene showing one complete heartbeat with chambers filling and pumping.",
+          "parentConceptId": "ch11_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch11_scene_xylem",
+          "caption": "See it animated: water rising through xylem",
+          "altText": "Open the Discover scene showing water and dye rising through xylem driven by transpiration.",
+          "parentConceptId": "ch11_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch11_scene_transpiration",
+          "caption": "See it animated: leaf transpiration",
+          "altText": "Open the Discover scene showing water vapour leaving stomata during transpiration.",
+          "parentConceptId": "ch11_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: heart and circulation",
+          "altText": "Listen as the heart and circulation explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch11_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: kidneys and excretion",
+          "altText": "Listen as the kidney function explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch11_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch11_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: xylem and phloem",
+          "altText": "Listen as the plant transport explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch11_t03_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -28570,6 +29066,130 @@
             "ch12_t01_c01",
             "ch12_t02_c02"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch12_dd01",
+          "title": "Asexual vs sexual — when and why each strategy wins",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch12_t03_c01",
+          "body": "Class 7 introduces both reproduction modes. Class 8 explores the trade-offs. ASEXUAL: fast (no partner needed), cheap (no flowers/gametes to make), and OFFSPRING ARE CLONES — identical to parent. Great when conditions are favourable + stable. Risk: a disease that kills one kills ALL (Cavendish banana clone vulnerability). SEXUAL: slow, expensive (flowers, nectar to attract pollinators), and OFFSPRING ARE GENETICALLY MIXED — different from parents. Great when conditions are changing or pathogens are common — variation gives some offspring resistance. Most plants do BOTH — sexual in good times for variation, asexual in stress for rapid colonisation. Strawberries: produce both seeds AND runners. Indian agriculture exploits this — propagate desired cultivars asexually for predictability, breed new ones sexually for variation.",
+          "prerequisite": "Tackle after Class 7 sexual/asexual basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 10 covers Mendel's experiments — sexual reproduction's genetic mathematics."
+        },
+        {
+          "id": "ch12_dd02",
+          "title": "Mendel's laws — peas, ratios, and the birth of genetics",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch12_t01_c01",
+          "body": "Class 7 says sexual reproduction mixes parental traits. Class 10 reveals the MATH behind it. Gregor Mendel (1865, Austrian monk) bred pea plants — short × tall, yellow × green seeds — and noted exact RATIOS in offspring. His laws: (1) LAW OF SEGREGATION: each parent contributes one 'factor' (gene) per trait; the pair segregates in gametes. (2) LAW OF INDEPENDENT ASSORTMENT: different traits inherit independently (height doesn't drag along seed colour). (3) Dominance: in heterozygous offspring, one allele MASKS the other. The famous 3:1 ratio (tall : short in F2 generation) emerges from these. Mendel's work was ignored for 35 years, then rediscovered around 1900 — the foundation of all modern genetics. Indian Green Revolution wheat varieties were bred using Mendelian principles + statistics.",
+          "prerequisite": "Tackle after Class 8 sexual vs asexual.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11/12 expands Mendelian to Mendelian + chromosomal + molecular genetics."
+        },
+        {
+          "id": "ch12_dd03",
+          "title": "Double fertilisation — the unique flowering plant trick",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch12_t02_c02",
+          "body": "Class 7 says pollen fertilises egg → seed. Class 11 reveals flowering plants do TWO simultaneous fertilisations — unique in nature. Pollen tube delivers TWO male gametes. ONE fuses with the egg → makes the embryo (the actual baby plant). The OTHER fuses with TWO POLAR NUCLEI → makes the ENDOSPERM (food storage tissue in the seed). The endosperm is what you EAT in rice, wheat, maize — it's mostly endosperm! This DOUBLE FERTILISATION evolved ~130 million years ago, when flowering plants exploded across Earth. It's incredibly efficient: no resources wasted on endosperm if fertilisation fails. Only flowering plants (angiosperms) do this. Pine trees + ferns don't.",
+          "prerequisite": "Tackle after pollination/fertilisation basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET tests the embryo sac structure (7 cells, 8 nuclei) — site of double fertilisation."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch12_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch12_flower_anatomy",
+          "caption": "Flower anatomy — sepals, petals, stamens, pistil",
+          "altText": "Cross-section diagram of a flower showing sepals, petals, stamens with anthers, and pistil with stigma, style, ovary.",
+          "parentConceptId": "ch12_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch12_pollen_tube",
+          "caption": "Pollen tube growing down the style to the ovule",
+          "altText": "Diagram showing pollen grain germinating on stigma and tube growing down style to deliver gametes to ovule.",
+          "parentConceptId": "ch12_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch12_seed_dispersal",
+          "caption": "Four modes of seed dispersal compared",
+          "altText": "Four-panel diagram showing wind (dandelion), water (coconut), animal (mango), explosion (touch-me-not) dispersal.",
+          "parentConceptId": "ch12_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch12_vegetative",
+          "caption": "Vegetative propagation examples — runner, tuber, rhizome, cutting",
+          "altText": "Multi-panel diagram showing strawberry runners, potato tubers, ginger rhizome, and stem cuttings.",
+          "parentConceptId": "ch12_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch12_scene_pollination",
+          "caption": "See it animated: bee pollinates a flower",
+          "altText": "Open the Discover scene showing bee carrying pollen from one flower to another.",
+          "parentConceptId": "ch12_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch12_scene_seed_germinate",
+          "caption": "See it animated: bean seed germination",
+          "altText": "Open the Discover scene showing bean seed germinating with root and shoot emerging.",
+          "parentConceptId": "ch12_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch12_scene_bryophyllum",
+          "caption": "See it animated: bryophyllum leaf with baby plants",
+          "altText": "Open the Discover scene showing bryophyllum leaf edges sprouting tiny new plants.",
+          "parentConceptId": "ch12_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: pollination",
+          "altText": "Listen as the pollination explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch12_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: seed dispersal",
+          "altText": "Listen as the seed dispersal modes are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch12_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch12_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: vegetative propagation",
+          "altText": "Listen as the vegetative propagation methods are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch12_t03_c02",
+          "durationSeconds": null
         }
       ]
     },
@@ -30362,6 +30982,130 @@
             "ch13_t02_c02",
             "ch13_t03_c02"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch13_dd01",
+          "title": "Speed-time graphs — reading motion like a scientist",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch13_t01_c02",
+          "body": "Class 7 uses distance-time graphs. Class 8 introduces SPEED-TIME graphs — a more powerful tool. On a speed-time graph: x = time, y = speed. A FLAT horizontal line = constant speed (uniform motion). UPWARD slope = ACCELERATING (speed increasing). DOWNWARD slope = decelerating. The AREA UNDER THE LINE = distance travelled. So a cyclist at 15 km/h for 2 hours: rectangular area = 15 × 2 = 30 km distance. A train accelerating from 0 to 100 km/h over 1 hour: triangular area = ½ × 1 × 100 = 50 km. This is a tiny piece of integral calculus — areas under curves give totals. Vande Bharat's progress can be visualised as one zig-zag speed-time graph; engineers analyse it to find efficient speed profiles.",
+          "prerequisite": "Tackle after distance-time graph basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 9 introduces acceleration formula and three equations of motion."
+        },
+        {
+          "id": "ch13_dd02",
+          "title": "Three equations of motion — predicting where things end up",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch13_t01_c01",
+          "body": "Class 7 has v = d/t (speed = distance / time). Class 9 introduces THREE equations of motion for objects with constant acceleration: (1) v = u + at — final velocity from initial velocity, acceleration, time. (2) s = ut + ½at² — distance covered. (3) v² = u² + 2as — final velocity given distance covered. Where u = initial velocity, v = final, a = acceleration, t = time, s = distance. Practical: a sprinter accelerating at 5 m/s² from rest, after 2 seconds: v = 0 + 5 × 2 = 10 m/s. Distance: s = 0 + ½ × 5 × 4 = 10 m. These three equations predict every projectile, falling ball, accelerating car. Every JEE problem on motion uses these three. Indian Olympic sprinters' training is partly based on these equations + biomechanics.",
+          "prerequisite": "Tackle after Class 7 speed basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 extends to 2D motion (projectile, circular) with vector equations of motion."
+        },
+        {
+          "id": "ch13_dd03",
+          "title": "Pendulum SHM — the math of swing time",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch13_t02_c01",
+          "body": "Class 7 says pendulum period depends on length. Class 11 gives the formula: T = 2π√(L/g), where T = time period, L = length, g = gravity (9.8 m/s² on Earth). So 1m pendulum: T = 2π√(1/9.8) ≈ 2.0 seconds. Half the length: T = 2π√(0.5/9.8) ≈ 1.4 sec — NOT half, but √2 less. Quadrupling length doubles the period. Why depends on g? On the Moon (g = 1.6), same pendulum: T ≈ 5 sec — Moon clocks would tick slowly. SIMPLE HARMONIC MOTION (SHM): pendulum's swing pattern repeats sinusoidally. Same math describes vibrating springs, sound waves, AC current alternation. Even Indian classical music's tabla bols are described by SHM frequencies.",
+          "prerequisite": "Tackle after pendulum basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE tests SHM amplitude, frequency, phase + the energy oscillation between potential and kinetic."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch13_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch13_distance_time",
+          "caption": "Distance-time graph reading",
+          "altText": "Distance-time graph showing constant speed as straight diagonal and varying speed as curve.",
+          "parentConceptId": "ch13_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch13_pendulum",
+          "caption": "Simple pendulum at three positions during swing",
+          "altText": "Diagram showing a pendulum bob at extreme right, bottom, and extreme left of its swing.",
+          "parentConceptId": "ch13_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch13_clock_history",
+          "caption": "Time-keeping history — sundial to atomic clock",
+          "altText": "Timeline diagram showing sundial, water clock, mechanical, quartz, and atomic clocks across history.",
+          "parentConceptId": "ch13_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch13_speed_compare",
+          "caption": "Speed comparison — walk, cycle, train, plane, sound, light",
+          "altText": "Logarithmic scale showing speeds from walking to light in metres per second.",
+          "parentConceptId": "ch13_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch13_scene_pendulum",
+          "caption": "See it animated: pendulum swing + length effect",
+          "altText": "Open the Discover scene showing pendulums of different lengths swinging side by side.",
+          "parentConceptId": "ch13_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch13_scene_sundial",
+          "caption": "See it animated: sundial shadow through the day",
+          "altText": "Open the Discover scene showing sundial shadow rotating clockwise through daylight hours.",
+          "parentConceptId": "ch13_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch13_scene_motion_graph",
+          "caption": "See it animated: car's distance-time graph",
+          "altText": "Open the Discover scene showing a car's distance-time graph being plotted as the car moves.",
+          "parentConceptId": "ch13_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: speed and average speed",
+          "altText": "Listen as the speed concepts are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch13_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: simple pendulum",
+          "altText": "Listen as the pendulum explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch13_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch13_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: time-keeping history",
+          "altText": "Listen as the time-measurement history is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch13_t03_c02",
+          "durationSeconds": null
         }
       ]
     },
@@ -32392,6 +33136,130 @@
             "ch14_t01_c01",
             "ch14_t02_c01"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch14_dd01",
+          "title": "Ohm's law — the relationship between V, I, R",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch14_t01_c01",
+          "body": "Class 7 says current flows through circuits. Class 9 quantifies it with OHM'S LAW: V = I × R. Voltage (V, volts) = Current (I, amperes) × Resistance (R, ohms). Example: a 12V battery connected to a 4Ω resistor gives current I = V/R = 12/4 = 3 A. Double the voltage → double the current (for same R). Double the resistance → halve the current (for same V). This single formula governs every electrical device — phone charger, fan, fridge. Ohm's law isn't a 'law of nature' like gravity; some devices (diodes, bulbs at high power) deviate. But for resistors and most household wiring, it holds beautifully. Indian electricians use this to size wires — too-thin wire = too much resistance = wasted heat = fire risk.",
+          "prerequisite": "Tackle after Class 7 circuit basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 10 covers series and parallel circuits — how to combine multiple Ohm's-law components."
+        },
+        {
+          "id": "ch14_dd02",
+          "title": "Series vs parallel — why your house wiring is parallel",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch14_t01_c01",
+          "body": "Class 9 introduces V=IR for one resistor. Class 10 builds circuits with multiple. SERIES: resistors end-to-end. Same current through all. Total R = R₁ + R₂ + R₃. If one breaks, ALL stop (old Christmas lights). PARALLEL: resistors side-by-side, each with full voltage. Total R = 1 / (1/R₁ + 1/R₂ + ...) — always LESS than smallest. If one breaks, others keep working. Indian household wiring is PARALLEL — your fridge keeps running when you flip a light off. Each bulb gets full 230V; switches independently. The main fuse protects the whole house from total current exceeding safe limit. Why solar panels are wired in series (boost voltage) but inverters connect in parallel (boost current) — engineering trade-offs.",
+          "prerequisite": "Tackle after Class 9 Ohm's law.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE tests complex networks — Kirchhoff's laws extend Ohm's law to nodes and loops."
+        },
+        {
+          "id": "ch14_dd03",
+          "title": "Electromagnetic induction — how generators make all our electricity",
+          "gradeLevel": "class_12",
+          "parentConceptId": "ch14_t03_c02",
+          "body": "Class 7 says current → magnetism (Ørsted). Class 12 reveals the REVERSE: magnetism → current. ELECTROMAGNETIC INDUCTION (Faraday, 1831): moving a magnet through a coil INDUCES a current in the coil. Faster motion = stronger current. This is how EVERY GENERATOR works — a rotating magnet (or coil) inside a stationary coil (or magnet) creates current. The Tehri Hydroelectric Dam: water spins a turbine, which spins a magnet, which induces current in surrounding coils. Same in coal plants, nuclear plants, wind turbines. EVERY KILOWATT of Indian grid electricity is electromagnetic induction. Bicycle dynamo (dynamo light): tiny induction generator. LENZ'S LAW: induced current opposes the change that caused it — Newton's third law of electromagnetism.",
+          "prerequisite": "Tackle after Class 9 Ohm's law + Class 7 electromagnets.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE / Class 12 covers Faraday's law mathematically: EMF = -N(dΦ/dt)."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch14_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch14_simple_circuit",
+          "caption": "Simple circuit with battery, switch, bulb",
+          "altText": "Schematic diagram showing a battery connected to a switch and a bulb in a complete loop.",
+          "parentConceptId": "ch14_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch14_electromagnet",
+          "caption": "Electromagnet — coil + iron core + battery",
+          "altText": "Diagram of nail wrapped with copper wire connected to a battery showing magnetic field around the coil.",
+          "parentConceptId": "ch14_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch14_fuse_mcb",
+          "caption": "Fuse vs MCB comparison",
+          "altText": "Side-by-side diagram of old fuse with thin wire and modern MCB with switch + trip mechanism.",
+          "parentConceptId": "ch14_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch14_orsted",
+          "caption": "Ørsted's compass experiment",
+          "altText": "Diagram of current-carrying wire with compass needle below deflecting due to magnetic field.",
+          "parentConceptId": "ch14_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch14_scene_circuit",
+          "caption": "See it animated: building a complete circuit",
+          "altText": "Open the Discover scene showing how connecting components forms a complete circuit and lights a bulb.",
+          "parentConceptId": "ch14_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch14_scene_electromagnet",
+          "caption": "See it animated: electromagnet picking up nails",
+          "altText": "Open the Discover scene showing an electromagnet attracting nails when switched on.",
+          "parentConceptId": "ch14_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch14_scene_fuse",
+          "caption": "See it animated: fuse blowing on overcurrent",
+          "altText": "Open the Discover scene showing fuse wire melting when too much current flows.",
+          "parentConceptId": "ch14_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: electric current and circuits",
+          "altText": "Listen as the current and circuit explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch14_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: heating effect",
+          "altText": "Listen as the heating effect of current is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch14_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch14_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: magnetic effect",
+          "altText": "Listen as the magnetic effect of current is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch14_t03_c01",
+          "durationSeconds": null
         }
       ]
     },
@@ -34733,6 +35601,130 @@
             "ch15_t02_c01"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch15_dd01",
+          "title": "Lens formula — predicting where the image forms",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch15_t03_c01",
+          "body": "Class 7 says lenses converge or diverge light. Class 9 introduces the LENS FORMULA: 1/v - 1/u = 1/f. Where u = object distance from lens, v = image distance, f = focal length (a lens property). All distances signed (sign convention varies; here, object distances negative, image distances positive for real images). Example: object at 30 cm from a +10 cm convex lens. 1/v - 1/(-30) = 1/10. So 1/v = 1/10 - 1/30 = 2/30. v = 15 cm — image forms 15 cm beyond lens, REAL and inverted. The camera in your phone, the projector in your school auditorium, your eye's natural lens — all obey this formula. MAGNIFICATION m = v/u = h'/h tells you size + orientation.",
+          "prerequisite": "Tackle after Class 7 convex/concave basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 derives the formula from refraction at two spherical surfaces."
+        },
+        {
+          "id": "ch15_dd02",
+          "title": "Total internal reflection — the physics behind BharatNet's optical fibres",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch15_t02_c01",
+          "body": "Class 7 says light refracts at boundaries. Class 10 reveals a special case. When light travels from DENSE medium (water, glass) to LESS DENSE (air) at a steep angle, it can be TOTALLY REFLECTED back — no refraction at all. The threshold is called the CRITICAL ANGLE: for water-air, ~48.6°. For glass-air, ~42°. Above this angle, 100% internal reflection. This is the principle of OPTICAL FIBRES — light enters one end of a glass strand at a shallow angle; it hits the wall at ABOVE-critical angles, totally reflects, bounces along the fibre, exits the other end. India's BharatNet has laid 6 lakh km of these. ENT doctors use endoscopes (fibre bundles) to see inside your body via the throat. Same physics.",
+          "prerequisite": "Tackle after refraction basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE tests critical angle calculations + multi-medium refraction problems."
+        },
+        {
+          "id": "ch15_dd03",
+          "title": "Wave optics — why CDs make rainbows and Newton's rings",
+          "gradeLevel": "class_12",
+          "parentConceptId": "ch15_t02_c02",
+          "body": "Class 7 says white light splits into colours in a prism. Class 12 reveals light is a WAVE with specific wavelengths — red ~700 nm, violet ~400 nm. INTERFERENCE: when two wave-fronts overlap, they ADD or CANCEL — creating bright + dark bands. Why CDs show rainbows: the closely-spaced tracks (microscopic ridges) act as a 'diffraction grating' — they split white light into spectral colours. Same effect: oil films on water (the iridescent sheen), butterfly wings, the gem-like surfaces of beetles. Newton's rings: place a curved glass on a flat glass; the tiny air gap between them creates circular interference patterns. India's homegrown CSIR optics labs use these patterns to measure microscopic surface defects to a fraction of light wavelength.",
+          "prerequisite": "Tackle after Class 7 dispersion + Class 10 critical angle.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 covers Young's double-slit experiment — the keystone of wave-particle duality."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch15_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch15_reflection_law",
+          "caption": "Law of reflection — angle of incidence = angle of reflection",
+          "altText": "Ray diagram showing incident and reflected rays at equal angles from the normal on a mirror surface.",
+          "parentConceptId": "ch15_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch15_prism",
+          "caption": "White light split into 7 colours by a prism",
+          "altText": "Prism diagram showing white light entering and emerging as red, orange, yellow, green, blue, indigo, violet.",
+          "parentConceptId": "ch15_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch15_lens_types",
+          "caption": "Convex vs concave lens behaviour",
+          "altText": "Two-panel ray diagram showing convex lens converging parallel rays to focus, concave diverging rays.",
+          "parentConceptId": "ch15_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch15_periscope",
+          "caption": "Periscope using two 45° mirrors",
+          "altText": "Cross-section diagram of a periscope showing two mirrors at 45 degrees and the path of light through it.",
+          "parentConceptId": "ch15_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch15_scene_refraction",
+          "caption": "See it animated: pencil bent in water",
+          "altText": "Open the Discover scene showing refraction of light bending a pencil appearance at water surface.",
+          "parentConceptId": "ch15_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch15_scene_rainbow",
+          "caption": "See it animated: rainbow formation in raindrops",
+          "altText": "Open the Discover scene showing light refracting and reflecting inside raindrops to form a rainbow.",
+          "parentConceptId": "ch15_t02_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch15_scene_kaleidoscope",
+          "caption": "See it animated: kaleidoscope patterns",
+          "altText": "Open the Discover scene showing kaleidoscope mirrors producing symmetric patterns.",
+          "parentConceptId": "ch15_t03_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: reflection laws",
+          "altText": "Listen as the reflection laws are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch15_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: refraction and dispersion",
+          "altText": "Listen as the refraction and dispersion explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch15_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch15_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: lenses",
+          "altText": "Listen as the lens explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch15_t03_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -36640,6 +37632,130 @@
             "ch16_t01_c02"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch16_dd01",
+          "title": "Aquifer mechanics — how rocks store water",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch16_t01_c02",
+          "body": "Class 7 says groundwater lives in aquifers. Class 8 details how. AQUIFER = water-bearing rock. Two types: UNCONFINED (top layer porous, water table rises and falls with rain) and CONFINED (sandwiched between impermeable clay layers above and below — water is pressurised, sometimes flows out spontaneously when drilled = ARTESIAN well). POROSITY = % of rock that's empty space (sand: ~40%, granite: ~1%). PERMEABILITY = how easily water flows through (sand: high; clay: very low even though porous!). Indian Indo-Gangetic alluvial plain has the world's richest aquifer system — vast, deep, recharged by Himalayan snowmelt + monsoon. Rajasthan's hard-rock aquifers are tiny in comparison. Why Punjab can pump and Rajasthan can't — geology matters.",
+          "prerequisite": "Tackle after Class 7 groundwater basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 introduces Darcy's law for groundwater flow rates."
+        },
+        {
+          "id": "ch16_dd02",
+          "title": "Hydrological cycle math — quantifying India's water budget",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch16_t01_c01",
+          "body": "Class 7 traces the water cycle qualitatively. Class 11 puts numbers on it. India's average annual rainfall: ~1170 mm × land area = ~4000 billion cubic metres (4 trillion m³). Of this: ~700 BCM evaporates immediately, ~1900 BCM becomes surface runoff (rivers), ~700 BCM percolates to groundwater. India USES ~700 BCM per year — but unevenly. Punjab pumps 250% of its groundwater recharge (huge deficit). Bihar pumps only 30% (huge surplus, partly polluted from arsenic). National Water Mission's GROUNDWATER MAPPING program (CGWB) tracks this district-by-district. Modern hydrologists treat groundwater as a bank account — withdrawals must equal deposits long-term. Currently India is in deficit at -120 BCM per year. Unsustainable.",
+          "prerequisite": "Tackle after Class 8 aquifers.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE / UPSC tests groundwater balance equations and the National Water Policy."
+        },
+        {
+          "id": "ch16_dd03",
+          "title": "Drip vs flood irrigation — water efficiency engineering",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch16_t02_c01",
+          "body": "Class 7 introduces drip, sprinkler, flood. Class 10 quantifies efficiency. FLOOD irrigation: water spread over field, soaks in gradually. Efficiency: ~40% (rest evaporates, runs off, deep-percolates past root zone). Cheap to set up but wasteful. SPRINKLER: efficiency ~70-80%. Better. DRIP: thin pipes deliver water DROP BY DROP at plant roots, often buried slightly. Efficiency: ~95%. Negligible evaporation, no runoff. Result: same crop yield with HALF the water. Indian government's PMKSY scheme subsidises drip 80% for small farmers. Maharashtra grape farms running drip outproduce flood-irrigated farms 3:1 by yield per litre. The investment (₹50,000/acre) pays back in 2-3 years through water + labour savings.",
+          "prerequisite": "Tackle after Class 7 irrigation methods.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11/12 environmental engineering covers precision irrigation + IoT-controlled drip systems."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch16_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch16_water_cycle",
+          "caption": "Hydrological cycle — evaporation, condensation, precipitation, infiltration",
+          "altText": "Diagram of water cycle showing evaporation from sea, cloud formation, rain on land, infiltration to groundwater.",
+          "parentConceptId": "ch16_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch16_aquifer",
+          "caption": "Aquifer cross-section with water table",
+          "altText": "Underground cross-section showing soil, saturated zone, water table, and confining clay layer.",
+          "parentConceptId": "ch16_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch16_drip_system",
+          "caption": "Drip irrigation pipe network with emitters",
+          "altText": "Diagram of drip irrigation showing main pipe, sub-pipes with emitter holes near each plant.",
+          "parentConceptId": "ch16_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch16_baori",
+          "caption": "Stepwell (baori) cross-section",
+          "altText": "Cross-section of a Rajasthani stepwell showing steps descending to a deep water pool.",
+          "parentConceptId": "ch16_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch16_scene_watercycle",
+          "caption": "See it animated: water cycle in motion",
+          "altText": "Open the Discover scene showing the continuous water cycle from sea to sky to rain to river.",
+          "parentConceptId": "ch16_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch16_scene_rainwater",
+          "caption": "See it animated: rooftop rainwater harvesting",
+          "altText": "Open the Discover scene showing rainwater flowing from rooftop through pipes to storage tank.",
+          "parentConceptId": "ch16_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch16_scene_drip",
+          "caption": "See it animated: drip irrigation watering grapes",
+          "altText": "Open the Discover scene showing drip irrigation pipes delivering water to grape plants.",
+          "parentConceptId": "ch16_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: water cycle",
+          "altText": "Listen as the water cycle explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch16_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: irrigation methods",
+          "altText": "Listen as the irrigation methods are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch16_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch16_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: water scarcity",
+          "altText": "Listen as the water scarcity explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch16_t03_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -38466,6 +39582,130 @@
             "ch17_t02_c02"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch17_dd01",
+          "title": "Trophic levels and food pyramids — energy flow through ecosystems",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch17_t02_c02",
+          "body": "Class 7 introduces food chains. Class 8 stacks them into TROPHIC LEVELS — energy hierarchy. Level 1: PRODUCERS (plants, ~100% of sun's energy captured). Level 2: PRIMARY CONSUMERS (herbivores — deer, rabbits, grasshoppers). Level 3: SECONDARY CONSUMERS (carnivores eating herbivores — frogs, snakes). Level 4: TERTIARY CONSUMERS (top carnivores — tigers, eagles). 10% RULE: only ~10% of energy passes from one level to the next; 90% lost as heat / used by the organism. So 10,000 kg of grass → 1000 kg of deer → 100 kg of leopard → 10 kg of tiger. That's why top predators are rare — there's just not enough energy to support many of them. India's Western Ghats can support only ~50 tigers per 1000 sq km — the ecosystem's energy ceiling.",
+          "prerequisite": "Tackle after Class 7 food chain basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 introduces gross vs net primary productivity calculations."
+        },
+        {
+          "id": "ch17_dd02",
+          "title": "Ecological niche, succession, and biodiversity",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch17_t01_c01",
+          "body": "Class 7 describes forest layers and animals. Class 11 introduces ECOLOGICAL NICHE — the specific 'job' each species does in its ecosystem (food, shelter, role). Two species can't have identical niches — one outcompetes (Gause's principle). Indian tiger vs leopard: niche overlap, but leopard is smaller, climbs trees (different prey size, different microhabitat). SUCCESSION: how ecosystems change over time. PRIMARY SUCCESSION: bare rock → lichens → mosses → grasses → shrubs → trees (centuries to millennia). SECONDARY SUCCESSION: after disturbance (fire, clearing), faster (decades). BIODIVERSITY: species count + ecological diversity + genetic diversity. Western Ghats has high biodiversity (5000+ plant species, 1700 endemic). Higher biodiversity = more resilient ecosystem.",
+          "prerequisite": "Tackle after Class 7 forest biodiversity.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 covers in-situ vs ex-situ conservation and IUCN Red List criteria."
+        },
+        {
+          "id": "ch17_dd03",
+          "title": "Decomposer chemistry — what happens at molecular level",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch17_t02_c01",
+          "body": "Class 7 says decomposers break down dead matter. Class 10 names the chemistry. Major nutrients cycle: NITROGEN — dead organisms' proteins → bacteria break to amino acids → AMMONIFYING bacteria release ammonia (NH₃) → NITRIFYING bacteria oxidise to nitrate (NO₃⁻) → roots absorb. CARBON — dead matter's carbohydrates → fungi + bacteria break to CO₂ + small molecules → CO₂ enters atmosphere → photosynthesis pulls back. PHOSPHORUS — dead organisms' DNA + bone → bacteria release phosphate → roots absorb. Each cycle takes weeks (carbon) to centuries (phosphorus). Earthworms, dung beetles, fungi, bacteria — all play roles. Disrupting any one (e.g., by overusing chemical fungicides) breaks the chain. Forest soil's amazing fertility comes from decomposer chemistry running continuously, free.",
+          "prerequisite": "Tackle after Class 7 decomposer basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 BIOgeochemical cycles + composting industrial science."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch17_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch17_forest_layers",
+          "caption": "Forest layers — emergent, canopy, understory, ground",
+          "altText": "Vertical diagram showing tall emergent trees, main canopy, understory shrubs, and ground litter layer.",
+          "parentConceptId": "ch17_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch17_food_pyramid",
+          "caption": "Trophic pyramid with 10% rule",
+          "altText": "Pyramid diagram showing producers at base, primary, secondary, tertiary consumers with 10% energy at each level.",
+          "parentConceptId": "ch17_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch17_nutrient_cycle",
+          "caption": "Forest nutrient cycle",
+          "altText": "Diagram of forest nutrient cycle showing leaf fall, decomposer breakdown, soil uptake by roots, growth.",
+          "parentConceptId": "ch17_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch17_deforestation",
+          "caption": "Before vs after deforestation comparison",
+          "altText": "Two-panel diagram showing dense forest before and bare hillside after deforestation with annotation of effects.",
+          "parentConceptId": "ch17_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch17_scene_chipko",
+          "caption": "See it animated: Chipko movement tree-hugging",
+          "altText": "Open the Discover scene depicting the 1973 Chipko movement women protecting trees.",
+          "parentConceptId": "ch17_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch17_scene_decomposer",
+          "caption": "See it animated: decomposers at work on a log",
+          "altText": "Open the Discover scene showing fungi, beetles, and bacteria breaking down a fallen log.",
+          "parentConceptId": "ch17_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch17_scene_canopy",
+          "caption": "See it animated: rainforest canopy life",
+          "altText": "Open the Discover scene showing monkeys, birds, and insects living in different forest layers.",
+          "parentConceptId": "ch17_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: forest layers and biodiversity",
+          "altText": "Listen as the forest layers explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch17_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: why forests matter",
+          "altText": "Listen as the forest importance section is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch17_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch17_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: conservation efforts",
+          "altText": "Listen as the conservation section is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch17_t03_c02",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -40243,6 +41483,130 @@
             "ch18_t01_c02",
             "ch18_t02_c01"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch18_dd01",
+          "title": "Sewage chemistry — what's actually IN that grey water",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch18_t01_c01",
+          "body": "Class 7 says sewage is wastewater. Class 8 details what's in it. ORGANIC matter: faeces, urine, food bits (mostly carbohydrates, proteins, fats — biodegradable). INORGANIC: phosphates from detergents (cause algal blooms), nitrates from urine, salts. PATHOGENS: E. coli, salmonella, cholera vibrio, hepatitis A virus. HEAVY METALS from industrial sources: chromium, lead, mercury (don't biodegrade — accumulate in food chain). PERSISTENT ORGANICS: pesticides, pharmaceuticals (paracetamol traces, antibiotics — modern problem). A litre of Indian municipal sewage contains: ~250 mg organic load (BOD), ~10 mg nitrogen, ~2 mg phosphorus, billions of bacteria, hundreds of viruses. Treatment must remove ALL — different processes for each class of contaminant.",
+          "prerequisite": "Tackle after Class 7 sewage basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 10 introduces BOD and COD — quantitative measures of organic pollution."
+        },
+        {
+          "id": "ch18_dd02",
+          "title": "BOD — measuring water pollution numerically",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch18_t02_c01",
+          "body": "Class 7 says polluted water has lots of organic waste. Class 10 introduces BOD — BIOLOGICAL OXYGEN DEMAND. Definition: how much oxygen (in mg/L) bacteria need to digest all organic matter in 1 litre of water over 5 days. Clean water: BOD < 5 mg/L. Sewage: 200-400 mg/L. Industrial effluent: 1000+ mg/L. Yamuna in Delhi: 30-50 mg/L (6× the safe limit). High BOD means bacteria consume all dissolved oxygen → fish + aquatic life suffocate. Indian Pollution Control Boards monitor BOD daily at hundreds of river points. COD (Chemical Oxygen Demand) is similar but uses chemical oxidation — catches non-biodegradable pollutants BOD misses. WWTP success measured in BOD reduction: input 250 mg/L → output 10 mg/L = 96% treatment efficiency.",
+          "prerequisite": "Tackle after Class 8 sewage chemistry.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 environmental science compares Indian rivers' BOD levels with global standards."
+        },
+        {
+          "id": "ch18_dd03",
+          "title": "Anaerobic digesters — turning sewage into electricity",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch18_t02_c02",
+          "body": "Class 7 mentions sludge digesters. Class 11 reveals the biochemistry. ANAEROBIC DIGESTION: bacteria break down organic matter WITHOUT oxygen in 4 stages. Stage 1 HYDROLYSIS: enzymes break long molecules to monomers (proteins to amino acids, etc.). Stage 2 ACIDOGENESIS: monomers to organic acids + CO₂ + H₂. Stage 3 ACETOGENESIS: organic acids to acetic acid. Stage 4 METHANOGENESIS: acetic acid + CO₂ + H₂ → METHANE (CH₄) + water. The methane gas is BIOGAS — pure fuel! Indian biogas plants (~5 million installations) capture this, burn it for cooking or electricity. A single household digester (cow dung + food waste) produces 1-2 cubic metres of biogas daily — enough for 3-4 hours of cooking. Some Indian municipalities now run buses on biogas from sewage. Closed loop: sewage → biogas → energy → less reliance on imported fuel.",
+          "prerequisite": "Tackle after Class 10 BOD.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 / engineering covers biogas plant design + methane yield equations."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch18_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch18_wwtp_flow",
+          "caption": "WWTP flow diagram — screening to discharge",
+          "altText": "Process diagram of a wastewater treatment plant showing screening, grit removal, primary clarifier, aeration, secondary clarifier, disinfection.",
+          "parentConceptId": "ch18_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch18_sulabh_toilet",
+          "caption": "Sulabh twin-pit toilet design",
+          "altText": "Cross-section of Sulabh two-pit pour-flush toilet with one active pit and one composting pit.",
+          "parentConceptId": "ch18_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch18_biogas_plant",
+          "caption": "Biogas plant — digester + gas holder",
+          "altText": "Diagram of underground biogas plant showing inlet for waste, digester chamber, gas holder, and outlet for slurry.",
+          "parentConceptId": "ch18_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch18_septic_tank",
+          "caption": "Septic tank cross-section",
+          "altText": "Cross-section of household septic tank showing scum layer, water, sludge layer, and outflow pipe.",
+          "parentConceptId": "ch18_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch18_scene_wwtp",
+          "caption": "See it animated: sewage's journey through a plant",
+          "altText": "Open the Discover scene tracking sewage through each treatment stage to clean water.",
+          "parentConceptId": "ch18_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch18_scene_aeration",
+          "caption": "See it animated: aeration tank bacteria",
+          "altText": "Open the Discover scene showing bacteria multiplying in aerated sewage tank.",
+          "parentConceptId": "ch18_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch18_scene_swachh",
+          "caption": "See it animated: Swachh Bharat campaign",
+          "altText": "Open the Discover scene showing the Swachh Bharat sanitation mission's village transformations.",
+          "parentConceptId": "ch18_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: what is sewage",
+          "altText": "Listen as the sewage explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch18_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: WWTP stages",
+          "altText": "Listen as the WWTP stages are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch18_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch18_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: better sanitation",
+          "altText": "Listen as the better sanitation alternatives are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch18_t03_c01",
+          "durationSeconds": null
         }
       ]
     },
@@ -46790,6 +48154,130 @@
             "ch19_t02_c08",
             "ch19_t03_c05"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch19_dd01",
+          "title": "Time zones — why your phone changes time on flights",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch19_t01_c06",
+          "body": "Class 7 mentions time zones. Class 8 makes them precise. Earth rotates 360° per 24 hours = 15° per hour. So every 15° of longitude EAST = +1 hour ahead. India sits at 82.5°E (Mirzapur meridian), giving IST = UTC+5:30. London (Greenwich, 0°): UTC+0. New York (74°W): UTC-5. Tokyo (139°E): UTC+9. INTERNATIONAL DATE LINE (180°E/W): crossing eastward = lose a day, westward = gain a day. So if you fly Delhi to Sydney (eastward), you 'lose' Sunday and arrive Monday. Major economies like China (3000 km wide) use just one time zone for political unity — sunrise at 8 AM in eastern Shanghai but 10 AM in western Xinjiang. India's choice of single time zone is similar political simplification.",
+          "prerequisite": "Tackle after Class 7 rotation basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 covers solar time vs civil time + equation of time."
+        },
+        {
+          "id": "ch19_dd02",
+          "title": "Milankovitch cycles — why ice ages happen on schedule",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch19_t01_c04",
+          "body": "Class 7 says Earth's tilt causes seasons. Class 11 reveals THREE cycles vary over thousands of years — MILANKOVITCH CYCLES, named after Serbian mathematician Milutin Milanković (1920s). (1) AXIAL TILT varies between 22.1° and 24.5° over 41,000 years (today's 23.5° is mid-range). (2) ORBITAL ECCENTRICITY (orbit shape from nearly circular to mildly elliptical) varies over 100,000 years. (3) AXIAL PRECESSION (wobble of Earth's axis like a slowing top) over 26,000 years. Together these cycles affect HOW MUCH solar energy each hemisphere receives at each season. They're the master clock of ICE AGES — ice sheets advance and retreat with this rhythm over hundreds of thousands of years. Modern climate change is overlaid ON TOP of these natural cycles — much faster, human-caused.",
+          "prerequisite": "Tackle after Class 7 seasons.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET / Class 12 environmental science covers paleoclimatology and ice core data."
+        },
+        {
+          "id": "ch19_dd03",
+          "title": "Chronobiology — your body's circadian clock",
+          "gradeLevel": "neet_jee",
+          "parentConceptId": "ch19_t01_c02",
+          "body": "Class 7 says day-night affects life. CHRONOBIOLOGY (NEET-relevant) reveals every cell in your body has a 24-hour CIRCADIAN CLOCK — genes that turn on/off in a daily rhythm. The master clock sits in the SUPRACHIASMATIC NUCLEUS (SCN) of your brain — driven by light hitting your retina. SCN → controls melatonin (sleep hormone), cortisol (wake hormone), body temperature (~1°C swing), heart rate, gut motility. Disrupt the clock → jet lag, shift-worker disease, increased cancer risk. JEET LAG = clock misaligned with new sun. Melatonin supplements help reset. The 2017 Nobel Prize in Physiology went to Hall, Rosbash, Young for discovering the GENES that run this clock. Indian medical research studies pollution effects on circadian disruption — Delhi's evening light pollution shifts the clock backward.",
+          "prerequisite": "Tackle after Class 7 day-night.",
+          "bonusQuestions": null,
+          "nextStepHint": "Senior biology covers PERIOD and CLOCK genes — the molecular cogwheels of life's daily rhythm."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch19_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch19_earth_tilt",
+          "caption": "Earth's tilted axis causing seasons",
+          "altText": "Diagram showing Earth's axis tilted at 23.5 degrees and the resulting seasons in Northern and Southern hemispheres.",
+          "parentConceptId": "ch19_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch19_moon_phases",
+          "caption": "Eight moon phases in one cycle",
+          "altText": "Diagram showing moon phases from new through waxing crescent, first quarter, gibbous, full, waning, last quarter, back to new.",
+          "parentConceptId": "ch19_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch19_solar_system",
+          "caption": "Solar System layout — 8 planets + dwarf planets",
+          "altText": "Diagram of solar system showing Sun in centre and 8 planets orbiting at scaled distances.",
+          "parentConceptId": "ch19_t03_c05",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch19_eclipse",
+          "caption": "Solar vs lunar eclipse geometry",
+          "altText": "Two-panel diagram showing solar eclipse (Moon between Sun and Earth) vs lunar eclipse (Earth between Sun and Moon).",
+          "parentConceptId": "ch19_t02_c04",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch19_scene_seasons",
+          "caption": "See it animated: seasons due to Earth's tilt",
+          "altText": "Open the Discover scene showing Earth orbiting Sun and seasons changing due to axial tilt.",
+          "parentConceptId": "ch19_t01_c04",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch19_scene_moonphases",
+          "caption": "See it animated: moon phases over a month",
+          "altText": "Open the Discover scene showing moon orbiting Earth and phases changing across 29 days.",
+          "parentConceptId": "ch19_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch19_scene_chandrayaan",
+          "caption": "See it animated: Chandrayaan-3 lunar landing",
+          "altText": "Open the Discover scene recreating ISRO Chandrayaan-3 landing at the lunar south pole in August 2023.",
+          "parentConceptId": "ch19_t02_c08",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: Earth rotation and revolution",
+          "altText": "Listen as the Earth rotation explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch19_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: moon phases",
+          "altText": "Listen as the moon phases explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch19_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch19_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: solar system tour",
+          "altText": "Listen as the solar system overview is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch19_t03_c05",
+          "durationSeconds": null
         }
       ]
     }
