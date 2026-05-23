@@ -23534,6 +23534,551 @@
         128,
         129,
         130
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch10_rw01",
+          "title": "Why a cricketer pants after running between wickets",
+          "body": "Sprint two-runs and you're suddenly breathing hard. Your muscles needed a sudden burst of energy. The cells could only use the oxygen already in your blood — that ran out in 15 seconds. Now your muscles are doing anaerobic respiration: glucose → lactic acid + a little energy. The lactic acid builds up — that's the burning feeling. Your fast breathing afterwards is paying back the oxygen debt. Within 2 minutes you can sprint again.",
+          "relatedConceptIds": [
+            "ch10_t02_c02",
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_rw02",
+          "title": "Idli batter rises overnight — fermentation chemistry",
+          "body": "Mix rice and urad dal, soak, grind, leave overnight in a warm kitchen. By morning the batter has doubled in volume and smells slightly sour. What happened? Bacteria and yeast (already on the dal) ate the starch, performing anaerobic respiration: glucose → CO₂ + alcohol + lactic acid. The CO₂ bubbles raised the batter; the lactic acid gave the sour taste; the alcohol mostly cooked off when you steamed the idli. Indian fermented foods are a chemistry textbook.",
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_rw03",
+          "title": "Mountain climber gasping at Sandakphu summit",
+          "body": "Sandakphu (West Bengal, 3636 m) is the highest point in West Bengal. Climbers there breathe twice as fast as at sea level. Why? Air thins with altitude — at 3636 m there are only ~65% as many oxygen molecules per breath as at sea level. To get the same oxygen, you breathe faster and deeper. After weeks at altitude, the body adapts — more red blood cells, more capillaries. This is why Tibetan and Sherpa populations show genetic adaptations to high-altitude breathing.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_rw04",
+          "title": "Monsoon ponds and the fish that survive low oxygen",
+          "body": "After heavy rain, ponds and paddies fill with murky warm water. Oxygen dissolves poorly in warm water; algae bloom and crash, using up more oxygen. Fish gasp at the surface — they're trying to get to the thin layer of higher-oxygen water right at the air boundary. Some species (catfish, snakeheads) can actually gulp air through their swim bladders — accessory air-breathers. The walking catfish of Kerala can survive briefly out of water. Adaptation to monsoon hypoxia.",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_rw05",
+          "title": "Pranayama and the science of slow breathing",
+          "body": "Yogic pranayama techniques (anulom-vilom, bhastrika, kapalabhati) teach controlled slow breathing — 4-second inhale, 6-second exhale. Modern research has shown this increases parasympathetic tone (the rest-and-digest nervous system), reduces blood pressure, and improves oxygen utilisation. The same chemistry Class 7 introduces (oxygen + glucose → CO₂ + water + energy) happens more efficiently when you breathe slowly than when you pant. Ancient Indian breathing science meets modern Class 7 respiration.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t02_c01"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch10_xc01",
+          "title": "Class 10 — Life Processes (Respiration section)",
+          "body": "Class 10's 'Life Processes' chapter expands respiration into full molecular detail. You'll meet glycolysis (glucose to pyruvate, anaerobic), Krebs cycle (in mitochondria, releases CO₂), and electron transport chain (where ATP is made). The Class 7 'aerobic vs anaerobic' becomes specific biochemical pathways with named enzymes.",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch10_t02_c01",
+            "ch10_t02_c02",
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_xc02",
+          "title": "NEET — Respiratory volumes and gas exchange",
+          "body": "NEET asks about tidal volume (normal breath, ~500 mL), vital capacity (max breath, ~4.5 L), and the gas-exchange efficiency at alveoli (diffusion driven by partial pressure difference). The Class 7 idea 'alveoli are where oxygen enters blood' becomes a quantitative diffusion problem.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_xc03",
+          "title": "Class 11 Biology — Breathing and Exchange of Gases",
+          "body": "Class 11 has an entire chapter on respiration. You'll meet the Hering-Breuer reflex (lung stretch receptors that control breathing rate), Bohr effect (CO₂ shifts oxygen release), and human respiratory disorders (asthma, COPD, emphysema). The Class 7 chapter is the first sentence of a long chapter.",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch10_mn01",
+          "acronym": "GLUE",
+          "unpacking": "G-lucose + O₂ → CO₂ + Water + Energy. The aerobic respiration equation in one word. Energy stored as ATP molecules — the cellular battery.",
+          "context": "Aerobic respiration equation.",
+          "relatedConceptIds": [
+            "ch10_t02_c02"
+          ]
+        },
+        {
+          "id": "ch10_mn02",
+          "acronym": "LACT",
+          "unpacking": "L-ow oxygen, A-naerobic kicks in, C-yclonic burn (lactic acid builds up), T-ime to pant (oxygen debt to be paid).",
+          "context": "What happens during sprint exertion.",
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_mn03",
+          "acronym": "NOSE-LUNG-A",
+          "unpacking": "Air goes: N-ose → throat → windpipe → BRONCHI → lung BRONCHIOLES → ALVEOLI. Six tubes from outside to where oxygen meets blood.",
+          "context": "The respiratory pipeline.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t01_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch10_ms01",
+          "kidsThink": "Breathing and respiration are the same.",
+          "actually": "Breathing is the mechanical act of moving air in and out of lungs. Respiration is the chemical process happening in every cell where glucose is burned with oxygen to release energy. You breathe in your lungs; you respire in every cell. A plant that doesn't 'breathe' (in our sense) still respires — every cell uses oxygen to release energy.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_ms02",
+          "kidsThink": "Plants only photosynthesise, not respire.",
+          "actually": "Plants do BOTH. They photosynthesise during the day (sunlight + CO₂ + water → glucose + O₂). They respire 24/7 (glucose + O₂ → CO₂ + water + energy). In the day, photosynthesis greatly exceeds respiration, so plants are net oxygen producers. At night, only respiration happens — they are net CO₂ producers. This is why sleeping under a tree was traditionally discouraged in Indian villages.",
+          "relatedConceptIds": [
+            "ch10_t03_c02"
+          ]
+        },
+        {
+          "id": "ch10_ms03",
+          "kidsThink": "We only inhale oxygen.",
+          "actually": "We inhale air, which is ~78% nitrogen, 21% oxygen, 1% argon + traces. Of the 21% oxygen, our lungs extract only about 5%; we exhale air with ~16% oxygen still in it. That's why mouth-to-mouth resuscitation works — exhaled air still has plenty of oxygen for a non-breathing person.",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_ms04",
+          "kidsThink": "Lungs pump air in and out by themselves.",
+          "actually": "Lungs are passive — they don't pump. The diaphragm (a sheet of muscle below the lungs) and rib muscles do all the work. Diaphragm contracts → lungs expand → air flows in (inhalation). Diaphragm relaxes → lungs shrink → air flows out (exhalation). It's mechanical — like an accordion that breathes for you. Yogic pranayama practises conscious control of this mechanism.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_ms05",
+          "kidsThink": "Fish breathe water.",
+          "actually": "Fish don't breathe water — they extract dissolved oxygen from water using gills. Water passes over thin gill filaments rich in blood. Oxygen diffuses out of water, into the blood. The fish then exhales water out the back of the gills. Gills are like upside-down lungs — for water instead of air. Why don't gills work on land? Without water support, gill filaments collapse on each other, losing all the surface area that made them effective.",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch10_nq01",
+          "question": "Why does an athlete breathe faster and deeper than usual after finishing the race?",
+          "modelAnswer": "During a fast run, muscles need energy faster than oxygen can reach them. They temporarily switch to anaerobic respiration, producing lactic acid as a byproduct. After the race, the athlete must (1) supply enough oxygen to all muscle cells to switch back to aerobic respiration, and (2) clear the lactic acid that built up. Both require extra oxygen — hence the fast deep breathing for several minutes after stopping. This is called 'oxygen debt' and is paid back at rest.",
+          "relatedConceptIds": [
+            "ch10_t02_c02",
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_nq02",
+          "question": "List the similarities and differences between aerobic and anaerobic respiration.",
+          "modelAnswer": "Similarities: Both break down glucose to release energy. Both happen in living cells. Both produce some energy + a waste product. Differences: Aerobic uses oxygen, anaerobic doesn't. Aerobic happens in mitochondria; anaerobic happens in cytoplasm. Aerobic produces CO₂ + water + LOTS of energy (~38 ATP per glucose). Anaerobic produces lactic acid (in animals) OR alcohol + CO₂ (in yeast) + LITTLE energy (~2 ATP per glucose). Aerobic is the everyday process; anaerobic is the emergency backup.",
+          "relatedConceptIds": [
+            "ch10_t02_c02",
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_nq03",
+          "question": "Why does breathing rate increase when one does heavy exercise?",
+          "modelAnswer": "Heavy exercise means muscles work harder, demand more energy. To meet that demand, the muscles need more oxygen and produce more CO₂. The brain's breathing centre detects rising CO₂ in blood and signals the diaphragm to contract faster and deeper. Inhalation rate increases from ~16/minute (rest) to ~50/minute (exercise). Breath volume also increases. Together, these supply 6-10× more oxygen per minute. The body's hardware automatically scales to match the engine's demand.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t02_c02"
+          ]
+        },
+        {
+          "id": "ch10_nq04",
+          "question": "Take three test tubes. Fill 3/4 of each with water. Label them A, B, C. Keep a snail in A, a plant in B and both in C. Which test tube contains more amount of CO₂ in the air above water after a few hours?",
+          "modelAnswer": "Test tube A (snail only) accumulates the most CO₂ over a few hours. A snail respires continuously (producing CO₂) but doesn't photosynthesise. B has a plant in water — during the day, photosynthesis (using CO₂) dominates respiration; little net CO₂ output. C has both — the plant uses some of the snail's CO₂ for photosynthesis, balancing partially. So A > C > B in CO₂ accumulation. This demonstrates how plants and animals balance the atmosphere.",
+          "relatedConceptIds": [
+            "ch10_t02_c02",
+            "ch10_t03_c02"
+          ]
+        },
+        {
+          "id": "ch10_nq05",
+          "question": "Tick the correct answer: In cockroaches, air enters the body through (a) lungs (b) gills (c) spiracles (d) skin.",
+          "modelAnswer": "(c) spiracles. Cockroaches and other insects have spiracles — small holes along the sides of their bodies — connected to a network of tubes called trachea. Air enters through spiracles, flows through trachea, and reaches every cell directly. No lungs, no blood-carried oxygen. This works because insects are small enough that trachea can reach every cell. (Why insects can't be much bigger than your palm: trachea wouldn't reach distant cells fast enough.)",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_nq06",
+          "question": "During heavy exercise, we get cramps in the legs due to the accumulation of (a) carbon dioxide (b) lactic acid (c) alcohol (d) water.",
+          "modelAnswer": "(b) lactic acid. When muscle cells run short of oxygen during heavy exercise, they switch to anaerobic respiration: glucose → lactic acid + a little energy. Lactic acid builds up in the muscle tissue, interfering with muscle contraction and causing the burning + cramping feeling. Rest allows oxygen to return and the body to clear the lactic acid (it's converted back to glucose by the liver).",
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_nq07",
+          "question": "Take two glass jars and put equal amounts of fresh germinating seeds in both. Cover one jar tightly with a plastic sheet. Leave for 1 hour. Then add lime water to each jar. What do you observe?",
+          "modelAnswer": "The covered jar's lime water turns milky white; the uncovered jar's lime water stays mostly clear. The germinating seeds were respiring — using oxygen and releasing CO₂. In the covered jar, CO₂ accumulated; lime water (Ca(OH)₂) reacts with CO₂ to form chalky calcium carbonate (CaCO₃) — that's the milky white. In the uncovered jar, CO₂ dispersed into the air; less to react. This experiment proves seeds (plants) respire.",
+          "relatedConceptIds": [
+            "ch10_t02_c01",
+            "ch10_t03_c02"
+          ]
+        },
+        {
+          "id": "ch10_nq08",
+          "question": "Why is yawning natural and contagious?",
+          "modelAnswer": "Yawning is the body's way of taking a deeper-than-normal breath to refresh oxygen supply and possibly cool the brain. We yawn when tired, bored, or just after waking — all times when shallow breathing might leave the brain slightly under-oxygenated. Why contagious? Mirror neurons in the brain make us copy the behaviour of others we see. Seeing or even hearing a yawn triggers similar brain activity in observers. It's been observed in dogs and chimpanzees too — a primitive social-physiological behaviour.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch10_gl01",
+          "term": "Respiration",
+          "definition": "The chemical process inside cells where glucose is broken down to release energy.",
+          "example": "Every cell of your body respires every second to generate ATP — the energy currency.",
+          "hindiTerm": "श्वसन",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl02",
+          "term": "Breathing",
+          "definition": "The mechanical act of moving air in and out of the lungs.",
+          "example": "An adult breathes ~16 times per minute at rest.",
+          "hindiTerm": "साँस लेना",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl03",
+          "term": "Aerobic respiration",
+          "definition": "Respiration that uses oxygen; produces CO₂, water, and lots of energy.",
+          "example": "Your normal sitting / walking energy comes from aerobic respiration.",
+          "hindiTerm": "वायवीय श्वसन",
+          "relatedConceptIds": [
+            "ch10_t02_c02"
+          ]
+        },
+        {
+          "id": "ch10_gl04",
+          "term": "Anaerobic respiration",
+          "definition": "Respiration without oxygen; produces lactic acid (in animals) or alcohol (in yeast) and a little energy.",
+          "example": "Sprinting muscles when oxygen runs out; yeast in idli batter.",
+          "hindiTerm": "अवायवीय श्वसन",
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_gl05",
+          "term": "Alveoli",
+          "definition": "Microscopic balloon-like sacs at the end of bronchioles where gas exchange happens.",
+          "example": "Your two lungs contain ~600 million alveoli with total surface area of a tennis court.",
+          "hindiTerm": "वायुकोष्ठिका",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_gl06",
+          "term": "Diaphragm",
+          "definition": "A sheet of muscle below the lungs that contracts to expand the chest cavity and pull air in.",
+          "example": "Hiccups are spasms of the diaphragm.",
+          "hindiTerm": "मध्यपट",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl07",
+          "term": "Gills",
+          "definition": "Feathery structures that extract dissolved oxygen from water; the equivalent of lungs in fish.",
+          "example": "A fish gulps water; its gills filter oxygen and release CO₂ back into the water.",
+          "hindiTerm": "गलफड़े",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl08",
+          "term": "Spiracles",
+          "definition": "Small openings on the sides of insect bodies through which air enters their trachea network.",
+          "example": "A cockroach has 10 pairs of spiracles along its body.",
+          "hindiTerm": "श्वासरंध्र",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl09",
+          "term": "Oxygen debt",
+          "definition": "The extra oxygen needed after exercise to clear lactic acid and restore normal cell chemistry.",
+          "example": "A sprinter pants for 2 minutes after running 100m — that's paying back oxygen debt.",
+          "hindiTerm": "ऑक्सीजन ऋण",
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_gl10",
+          "term": "Stomata",
+          "definition": "Tiny pores on the underside of leaves through which plants exchange gases — the plant equivalent of mouth and lungs combined.",
+          "example": "Plant stomata open during the day for photosynthesis; partially close at night.",
+          "hindiTerm": "रंध्र",
+          "relatedConceptIds": [
+            "ch10_t03_c02"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch10_mp01",
+          "emoji": "🍞",
+          "title": "Yeast balloon — see anaerobic respiration",
+          "needs": [
+            "A packet of dry yeast (5 g)",
+            "A glass bottle with narrow neck",
+            "A balloon",
+            "2 tablespoons sugar",
+            "1 cup warm (not hot) water"
+          ],
+          "steps": [
+            "Pour warm water into the bottle.",
+            "Add the yeast and sugar. Shake gently.",
+            "Stretch the balloon over the bottle's mouth.",
+            "Place in a warm spot.",
+            "Wait 30 minutes — observe."
+          ],
+          "expectedObservation": "The balloon slowly inflates over 30-60 minutes. The bottle smells faintly of bread / beer.",
+          "whyItWorks": "Yeast is a single-celled fungus that performs anaerobic respiration. It eats sugar, producing CO₂ + alcohol + a little energy. The CO₂ gas can't escape through the balloon, so it inflates the balloon. The alcohol creates the smell. This is exactly what happens in idli batter, dosa fermentation, beer brewing, and bread rising. Anaerobic respiration in a balloon.",
+          "estimatedMinutes": 60,
+          "relatedConceptIds": [
+            "ch10_t02_c03"
+          ]
+        },
+        {
+          "id": "ch10_mp02",
+          "emoji": "🌱",
+          "title": "Germinating seed lime-water test",
+          "needs": [
+            "A glass jar with lid",
+            "A handful of moong / chana seeds soaked overnight",
+            "Lime water (calcium hydroxide solution from the chemist) OR fresh limewater (mix slaked lime with water, let settle, decant clear liquid)",
+            "An identical empty jar as control"
+          ],
+          "steps": [
+            "Place soaked seeds at the bottom of jar 1. Leave jar 2 empty.",
+            "Close lids on both jars tightly. Place in a warm dark spot.",
+            "After 4 hours, pour a small amount of lime water into each jar.",
+            "Shake gently and observe."
+          ],
+          "expectedObservation": "Lime water in jar 1 (seeds) turns milky white. Lime water in jar 2 (empty) stays clear.",
+          "whyItWorks": "Germinating seeds respire — using O₂ and releasing CO₂. The CO₂ accumulates in the closed jar. Lime water + CO₂ → calcium carbonate (CaCO₃) — chalky white precipitate. This is the classic 'plants respire' demonstration. Beauty of it: the seeds don't have green leaves yet (so not photosynthesising), so the CO₂ is unambiguously from respiration.",
+          "estimatedMinutes": 240,
+          "relatedConceptIds": [
+            "ch10_t02_c01",
+            "ch10_t03_c02"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch10_sci01",
+          "name": "Yellapragada Subbarao",
+          "lifespan": "1895–1948",
+          "nationality": "Indian (worked in USA)",
+          "oneLineLegacy": "Discovered ATP as the energy molecule of all life — the chemical respiration produces in every cell.",
+          "narrative": "Yellapragada Subbarao was born in Bhimavaram, Andhra Pradesh, in 1895. He almost didn't make it through medical school due to malnutrition and disease. In 1923 he sailed to Boston for graduate study at Harvard Medical School. There, in his 30s, he made discoveries that would feed the entire 20th-century revolution in biochemistry. In 1929, he and Cyrus Fiske isolated ADENOSINE TRIPHOSPHATE (ATP) — the small molecule that respiration produces and that all life uses as energy currency. Every contraction of your heart, every spark of your neuron, every step of muscle — runs on ATP. Without Subbarao's discovery, modern biology would be silent on the fundamental question: what IS energy in a cell? Yet because he wasn't an American citizen, Subbarao was denied tenure at Harvard. He moved to industry, where he then helped develop methotrexate (the first effective cancer chemotherapy), tetracycline (the antibiotic that saved millions), and aureomycin. He died at 53, largely unknown. Today the cellular respiration chapter you'll meet in Class 10 and 11 — its central character is ATP, and behind ATP stands a Telugu boy who made it visible.",
+          "relatedConceptIds": [
+            "ch10_t02_c01",
+            "ch10_t02_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch10_wi01",
+          "question": "What if you held your breath as long as you could?",
+          "answer": "Most people can hold their breath 30-60 seconds; trained free-divers reach 5+ minutes. As CO₂ builds up in your blood, your brain stem (which doesn't need conscious permission) sends emergency 'breathe NOW' signals. If you ignore them, you eventually pass out — at which point your body breathes automatically. You can't kill yourself by breath-holding alone — your unconscious nervous system overrides any voluntary refusal. Your conscious self has limited authority over your respiratory system.",
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_wi02",
+          "question": "What if there were no plants on Earth (just animals)?",
+          "answer": "Atmospheric oxygen would slowly decline (currently ~21%, would drop within centuries to mostly CO₂). Within a few generations after that, animal respiration would fail — not enough O₂. Even more immediately, without plants, there's no FOOD for herbivores, who feed carnivores. The food chain collapses. Even with all the oxygen in the world, you can't eat air. Plants are doubly essential: they made the oxygen AND the food. Earth without them is dead within decades.",
+          "relatedConceptIds": [
+            "ch10_t03_c02"
+          ]
+        },
+        {
+          "id": "ch10_wi03",
+          "question": "What if you could respire underwater like a fish?",
+          "answer": "You'd need gills with enough surface area to extract dissolved oxygen — water has only ~5% the oxygen of air per volume. So your gills would need to be ~10x larger surface area than your current lungs. You'd also need to expel CO₂ through them, which fish do automatically. The energy cost of pumping water through giant gills 24/7 would mean a much higher metabolic rate. Practical for a fish; awkward for a human-sized creature. Aquatic mammals (dolphins, whales) solved this differently — they kept lungs but learned to hold breath long.",
+          "relatedConceptIds": [
+            "ch10_t01_c02",
+            "ch10_t03_c01"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch10_cx01",
+          "toChapterId": "ch01",
+          "topic": "Nutrition in Plants",
+          "pointer": "Ch.1's photosynthesis produces the oxygen this chapter's respiration consumes. The two processes are mirror reactions: photosynthesis builds glucose from CO₂ + water with sunlight; respiration breaks glucose back to CO₂ + water releasing energy. Two halves of life's basic chemistry.",
+          "relatedConceptIds": [
+            "ch10_t02_c02"
+          ]
+        },
+        {
+          "id": "ch10_cx02",
+          "toChapterId": "ch11",
+          "topic": "Transportation in Animals and Plants",
+          "pointer": "Ch.10 ends at 'oxygen entering blood at alveoli.' Ch.11 picks up — how the heart and blood vessels carry that oxygen to every cell. Respiration + circulation is one continuous story.",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 doesn't have a dedicated respiration chapter, but the Cell-Structure-and-Functions chapter introduces mitochondria — the cellular respiration powerhouse where aerobic respiration actually happens.",
+        "forNeetJee": "Class 10's Life Processes chapter expands respiration with chemical equations. Class 11 has a full chapter 'Breathing and Exchange of Gases' with the physiology of inhalation, gas exchange, and respiratory disorders. Class 12 covers cellular respiration biochemistry — glycolysis, Krebs cycle, electron transport chain. ATP, which Subbarao discovered, is central to every page."
+      },
+      "gallery": [
+        {
+          "id": "ch10_gi01",
+          "caption": "Human respiratory system",
+          "detail": "Air pathway: nose → pharynx → larynx → trachea → bronchi → bronchioles → alveoli. Two lungs, ~600 million alveoli, ~70 m² total exchange surface — a tennis court folded into your chest.",
+          "assetHint": "sfsymbol:lungs.fill",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gi02",
+          "caption": "Alveolus close-up",
+          "detail": "A microscopic balloon (~0.2 mm) with extremely thin walls. Surrounded by capillaries thinner than a hair. Oxygen diffuses through the wall into red blood cells; CO₂ diffuses the other way. The whole exchange happens in less than 1 second per breath.",
+          "assetHint": "sfsymbol:circle.grid.cross.fill",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_gi03",
+          "caption": "Fish gills cross-section",
+          "detail": "Gill arches with feathery filaments, each filament covered in even finer lamellae. Water flows over them; blood inside the lamellae flows in the opposite direction (counter-current exchange) — maximises oxygen extraction.",
+          "assetHint": "sfsymbol:fish.fill",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_gi04",
+          "caption": "Cockroach trachea network",
+          "detail": "Spiracles on the sides connect to a branching network of trachea. Air reaches every cell directly — no blood needed for oxygen transport. Works for small bodies; size-limits insects.",
+          "assetHint": "sfsymbol:ant.fill",
+          "relatedConceptIds": [
+            "ch10_t03_c01"
+          ]
+        },
+        {
+          "id": "ch10_gi05",
+          "caption": "Mitochondrion — the respiration factory",
+          "detail": "Every cell has dozens to thousands of these bean-shaped organelles. Inside, glucose + oxygen produce ATP through the Krebs cycle and electron transport chain. Subbarao's molecule of life is made here.",
+          "assetHint": "sfsymbol:bolt.fill",
+          "relatedConceptIds": [
+            "ch10_t02_c02"
+          ]
+        },
+        {
+          "id": "ch10_gi06",
+          "caption": "Pranayama breathing diagram",
+          "detail": "Anulom-vilom: inhale through left nostril (close right with thumb), exhale through right (close left with ring finger). 5 minutes of this measurably slows heart rate, lowers blood pressure, increases focus. Ancient Indian respiration science still practised globally.",
+          "assetHint": "sfsymbol:figure.mind.and.body",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch10_tl01",
+          "title": "From the air you breathe to ATP in your cell — 30 seconds",
+          "intro": "One breath in to one heartbeat using its energy — the journey of a single oxygen molecule.",
+          "steps": [
+            {
+              "id": "ch10_tl01_s01",
+              "label": "Breath in",
+              "body": "Diaphragm contracts, chest expands, low pressure pulls air in through nose / mouth. Air filtered, warmed, humidified along the way.",
+              "assetHint": "sfsymbol:arrow.down.circle.fill"
+            },
+            {
+              "id": "ch10_tl01_s02",
+              "label": "Through trachea and bronchi",
+              "body": "Air rushes down windpipe (trachea), splits into two bronchi (one per lung), then thousands of smaller bronchioles.",
+              "assetHint": "sfsymbol:tree"
+            },
+            {
+              "id": "ch10_tl01_s03",
+              "label": "Reaches alveoli",
+              "body": "Air arrives at the 600 million alveoli. Oxygen molecules diffuse through the thin walls into the blood capillaries surrounding each alveolus.",
+              "assetHint": "sfsymbol:circle.grid.cross.fill"
+            },
+            {
+              "id": "ch10_tl01_s04",
+              "label": "Carried by red blood cells",
+              "body": "Each red blood cell holds 270 million haemoglobin molecules. Each haemoglobin grabs 4 oxygen molecules. The heart pumps them through arteries to every tissue.",
+              "assetHint": "sfsymbol:heart.fill"
+            },
+            {
+              "id": "ch10_tl01_s05",
+              "label": "Reaches a cell",
+              "body": "Oxygen diffuses out of capillary, through cell membrane, into a mitochondrion inside the cell. There it combines with glucose to make ATP.",
+              "assetHint": "sfsymbol:bolt.fill"
+            },
+            {
+              "id": "ch10_tl01_s06",
+              "label": "Energy released; CO₂ leaves",
+              "body": "ATP powers the cell (a muscle contraction, a neuron firing). CO₂ — the waste — diffuses back into blood, returns to lungs, gets exhaled. Cycle ready to repeat.",
+              "assetHint": "sfsymbol:arrow.up.circle.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t01_c02",
+            "ch10_t02_c02"
+          ]
+        }
       ]
     },
     {
