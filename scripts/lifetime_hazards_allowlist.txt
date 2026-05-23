@@ -38,3 +38,9 @@ desktopAhaan/Subjects/Tutor/Discover/Components/ParticleEmitter.swift:71: Inside
 # --- LH004c  .assign(to: \..., on: self)  --- (keypath form is always-strong)
 
 # (no grandfathered violations — codebase has zero such .assign keypath calls)
+
+# --- LH005  .animation(<X>) without Reduce-Motion gate  ---
+
+# (no grandfathered violations — the 8ae4af6 sweep routed every site
+#  through .respectReduceMotion or the manual reduceMotion ? .none : ...
+#  pattern; this lint locks the state)

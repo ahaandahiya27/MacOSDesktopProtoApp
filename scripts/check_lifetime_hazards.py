@@ -39,6 +39,19 @@ scripts/lifetime_hazards_allowlist.txt):
      Allowlist if the enclosing type is a value-type struct (no retain
      cycle possible) or the closure provably doesn't reference self.
 
+  5. Implicit `.animation(<X>)` view modifier without a Reduce-Motion
+     gate. Every `.animation(<X>)` must either contain the substring
+     `reduceMotion` on the same line (e.g.
+     `.animation(reduceMotion ? .none : .easeInOut(...))`) or be
+     replaced by the `.respectReduceMotion(animation: <X>)` helper.
+     Without the gate the animation still plays when the user has
+     enabled Reduce Motion — silent accessibility regression.
+     Heuristic: match indented `.animation(` modifier syntax (not the
+     TimelineView's `.animation(minimumInterval:)` factory, which lives
+     inline inside `TimelineView(...)` parens). The helper file
+     `View+RespectReduceMotion.swift` itself is exempt because it IS
+     the helper.
+
 Exit codes:
   0 — clean
   1 — at least one new violation (not in the allowlist)
@@ -104,6 +117,10 @@ def _read_allowlist() -> set[str]:
 _VAR_DELEGATE_RE = re.compile(r"(?<!\bweak\s)\bvar\s+delegate\s*:")
 _UNOWNED_RE = re.compile(r"\bunowned\b")
 _UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
+# Indented `.animation(` modifier (line starts with whitespace + the dot).
+# TimelineView's `.animation(minimumInterval:)` factory is inline inside
+# `TimelineView(...)` parens, never line-leading, so it doesn't match.
+_ANIMATION_MODIFIER_RE = re.compile(r"^\s+\.animation\(")
 # Combine .sink trailing closure: `.sink {` or `.sink(...) {`.
 _SINK_RE = re.compile(r"(?<!\w)\.sink\s*(?:\([^)]*\))?\s*\{")
 _TIMER_SCHEDULED_RE = re.compile(r"\bTimer\.scheduledTimer\b")
@@ -295,6 +312,44 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_animation_gate(swift_path: Path) -> list[Violation]:
+    """LH005 — every line-leading `.animation(<X>)` modifier must either
+    carry the substring `reduceMotion` (the manual gate) or be replaced
+    by the `.respectReduceMotion(animation: <X>)` helper. The helper file
+    itself is exempt."""
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    if rel.endswith("View+RespectReduceMotion.swift"):
+        return []
+    findings: list[Violation] = []
+    for idx, line in enumerate(swift_path.read_text().splitlines(), start=1):
+        stripped = line.strip()
+        if stripped.startswith("//") or stripped.startswith("///"):
+            continue
+        if not _ANIMATION_MODIFIER_RE.match(line):
+            continue
+        if "reduceMotion" in line:
+            continue
+        # Indented `.animation(...)` without `reduceMotion` on the same
+        # line — bypasses Reduce Motion.
+        findings.append(
+            Violation(
+                rule_id="LH005",
+                rel_path=rel,
+                line_no=idx,
+                line=line.rstrip(),
+                why=(
+                    "`.animation(<X>)` without a Reduce-Motion gate ignores "
+                    "the user's accessibility preference. Replace with "
+                    "`.respectReduceMotion(animation: <X>)` (preferred) "
+                    "or the explicit form "
+                    "`.animation(reduceMotion ? .none : <X>)`. The helper "
+                    "lives in desktopAhaan/Extensions/View+RespectReduceMotion.swift."
+                ),
+            )
+        )
+    return findings
+
+
 def _scan_unchecked_sendable(swift_path: Path) -> list[Violation]:
     rel = swift_path.relative_to(REPO_ROOT).as_posix()
     findings: list[Violation] = []
@@ -338,6 +393,7 @@ def _scan_repo() -> list[Violation]:
         findings.extend(_scan_unowned(swift_path))
         findings.extend(_scan_unchecked_sendable(swift_path))
         findings.extend(_scan_closure_captures(swift_path))
+        findings.extend(_scan_animation_gate(swift_path))
     return findings
 
 
