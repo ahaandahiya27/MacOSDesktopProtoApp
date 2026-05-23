@@ -10751,7 +10751,13 @@
                 47
               ],
               "needsHumanReview": false,
-              "mnemonic": "TEMPERATURE = HOW HOT (degrees). HEAT = TOTAL ENERGY (joules). Tub of warm water has MORE heat than a candle flame, even at lower temperature. Different things."
+              "mnemonic": "TEMPERATURE = HOW HOT (degrees). HEAT = TOTAL ENERGY (joules). Tub of warm water has MORE heat than a candle flame, even at lower temperature. Different things.",
+              "predictQuestion": "A cup of boiling tea and the ocean both have a temperature. Which one contains more HEAT — and why is that not the same question as which is hotter?",
+              "whyChain": [
+                "Heat is the total thermal energy of all the moving molecules in an object. Temperature is the AVERAGE energy per molecule. A swimming pool at 30°C has way more total heat than a teacup at 90°C — more molecules, even though each one is slower.",
+                "Why does this distinction matter? Because heat FLOWS based on temperature differences (always hot → cold), but the TOTAL energy transferred depends on how much mass + how big the temperature gap is. A tiny spark at 1500°C burns you less than a 60°C bath because of the heat content.",
+                "And why is this the basis of the modern definition of the joule and calorie? Because heat is just energy, measurable in joules like any other energy. The calorie (4.18 J) was historically the heat to warm 1 g of water by 1°C — defining heat through water's specific heat capacity. Class 11 thermodynamics builds the entire first law from this distinction."
+              ]
             },
             {
               "id": "ch04_t01_c02",
@@ -10831,7 +10837,13 @@
                 50
               ],
               "needsHumanReview": false,
-              "mnemonic": "Thermometer = mercury or alcohol that EXPANDS proportionally with heat. Thin glass tube amplifies tiny volume changes into visible length changes."
+              "mnemonic": "Thermometer = mercury or alcohol that EXPANDS proportionally with heat. Thin glass tube amplifies tiny volume changes into visible length changes.",
+              "predictQuestion": "A glass thermometer with mercury inside shows the temperature by a thin line rising. Why does a LIQUID get longer when heated — and why is it a thin tube?",
+              "whyChain": [
+                "A thermometer uses a fluid (mercury, alcohol) inside a thin sealed glass tube. When heated, the fluid expands and rises up the tube. The fixed glass scale lets you read the height as a temperature.",
+                "Why does the liquid expand? Because adding heat speeds up the molecules — they push each other apart more energetically, increasing the volume. The glass also expands, but much less, so the liquid pushes UP through the narrow tube where small volume changes become large height changes.",
+                "And why was mercury chosen historically? Because mercury expands very uniformly with temperature, is opaque (visible), stays liquid over a huge range (-39°C to 357°C), and doesn't wet glass. Class 11 physics covers the thermal expansion coefficient — a property unique to each material that thermometer designers exploited."
+              ]
             },
             {
               "id": "ch04_t01_c03",
@@ -10909,7 +10921,13 @@
                 48
               ],
               "needsHumanReview": false,
-              "mnemonic": "K = C + 273. Kelvin starts at absolute zero (–273°C); no negative Kelvin exists. Celsius is everyday; Kelvin is physics-rigorous."
+              "mnemonic": "K = C + 273. Kelvin starts at absolute zero (–273°C); no negative Kelvin exists. Celsius is everyday; Kelvin is physics-rigorous.",
+              "predictQuestion": "Why are there TWO common temperature scales (Celsius and Fahrenheit) that disagree by almost 60° at room temperature — what was the original reason for each?",
+              "whyChain": [
+                "Celsius is defined: 0°C = freezing point of water, 100°C = boiling point of water (at standard atmospheric pressure). Kelvin uses the same degree size but starts at absolute zero (-273.15°C = 0 K) — where all molecular motion stops.",
+                "Why two systems? Because Celsius is convenient for everyday weather and cooking; Kelvin is necessary for physics. You can't have NEGATIVE Kelvin (would imply less than no motion), so equations involving temperature (like the ideal gas law PV = nRT) only work in Kelvin.",
+                "And why has Fahrenheit survived in the US despite the world standardising on Celsius? Mostly historical inertia — converting all manufacturing, weather reporting, and medical equipment is expensive. Scientific work everywhere uses Kelvin / Celsius. Class 11 thermodynamics formally requires the Kelvin scale; you'll never see Fahrenheit in physics."
+              ]
             },
             {
               "id": "ch04_t01_c04",
@@ -10989,7 +11007,13 @@
                 35
               ],
               "needsHumanReview": false,
-              "mnemonic": "Newton's cooling: things cool FAST at first (big T difference with surroundings), then SLOWLY (small T difference). Cup of hot coffee = exponential cooling curve."
+              "mnemonic": "Newton's cooling: things cool FAST at first (big T difference with surroundings), then SLOWLY (small T difference). Cup of hot coffee = exponential cooling curve.",
+              "predictQuestion": "A cup of tea cools fast in the first 5 minutes but takes 30 more minutes to reach room temperature. Why doesn't it cool at the same speed throughout?",
+              "whyChain": [
+                "Newton's law of cooling says the rate of heat loss is proportional to the temperature difference between the object and its surroundings. A big difference = fast cooling; a small difference = slow cooling. So 90°C tea cools much faster than 35°C tea in a 25°C room.",
+                "Why this proportionality? Because heat transfer (by conduction, convection, radiation) all scale with the temperature gap. Doubling the gap doubles the driving force. As the tea cools, the gap shrinks, the driving force shrinks, the rate of cooling decreases.",
+                "And why does this lead to exponential decay? Because the rate of cooling depends on the current temperature, the math becomes dT/dt = -k(T-T₀) — a first-order ODE with exponential solution. Class 11 physics + Class 12 calculus derive the full curve. The exponential pattern shows up everywhere in nature: radioactive decay, drug clearance, RC circuits."
+              ]
             },
             {
               "id": "ch04_t01_c05",
@@ -11068,7 +11092,13 @@
                 37
               ],
               "needsHumanReview": false,
-              "mnemonic": "Heat ≠ temperature. Heat = ENERGY transferred. Temperature = AVERAGE molecular speed. Big tub of warm water > small cup of boiling water in TOTAL heat content."
+              "mnemonic": "Heat ≠ temperature. Heat = ENERGY transferred. Temperature = AVERAGE molecular speed. Big tub of warm water > small cup of boiling water in TOTAL heat content.",
+              "predictQuestion": "If you drop two iron balls — one tiny pebble, one giant cannonball — both at 100°C, into the SAME beaker of cold water, do they cool the water by the same amount?",
+              "whyChain": [
+                "Heat and temperature are different. Both balls have the same temperature (100°C) but the cannonball carries MUCH more heat because it has more mass. Dropping the cannonball into water warms the water dramatically; the pebble barely affects it.",
+                "Why does this trip people up so often? Because we use 'hot' and 'cold' loosely. We treat them as if hotter = more heat. In daily life that's usually true (a kettle has more heat than a glass of water at 80°C). But for the SAME temperature, mass decides total heat.",
+                "And why is this the foundational distinction in thermodynamics? Because temperature is an INTENSIVE property (doesn't depend on size) while heat is EXTENSIVE (does). Class 11 thermodynamics drills this distinction; mixing them up means failing every calorimetry problem on the page."
+              ]
             },
             {
               "id": "ch04_t01_c06",
@@ -11146,7 +11176,13 @@
                 39
               ],
               "needsHumanReview": false,
-              "mnemonic": "Mercury: uniform expansion + doesn't wet glass + wide liquid range (-39°C to +357°C). Health: mercury vapour toxic. Modern digital thermometers replacing it."
+              "mnemonic": "Mercury: uniform expansion + doesn't wet glass + wide liquid range (-39°C to +357°C). Health: mercury vapour toxic. Modern digital thermometers replacing it.",
+              "predictQuestion": "Mercury thermometers worked for 300 years. Why are they being phased out — and what replaced them?",
+              "whyChain": [
+                "Mercury was the gold-standard thermometer fluid: precise, fast-responding, easy to read. But mercury is toxic — a broken thermometer can release mercury vapour that damages nerves. Digital thermometers (using thermistors or infrared sensors) now cover most everyday uses.",
+                "Why was mercury phased out so slowly? Because for medical use, mercury's accuracy at small temperature differences (1°C between healthy and feverish) was hard to match electronically until the 1990s. Cheap accurate thermistors changed that.",
+                "And why are infrared thermometers (no-contact, forehead-style) now common? Because they measure the thermal radiation emitted by an object, no contact needed — fast, hygienic, ideal for crowds (COVID screening), babies, animals. Trade-off: less accurate than oral or rectal contact thermometers. Class 11 physics covers blackbody radiation laws that underpin IR thermometry."
+              ]
             },
             {
               "id": "ch04_t01_c07",
@@ -11226,7 +11262,13 @@
                 41
               ],
               "needsHumanReview": false,
-              "mnemonic": "WATER has very high specific heat (4200 J/kg/°C) — needs 4x more energy than rock to warm by 1°C. That's why coasts are mild and inland is extreme."
+              "mnemonic": "WATER has very high specific heat (4200 J/kg/°C) — needs 4x more energy than rock to warm by 1°C. That's why coasts are mild and inland is extreme.",
+              "predictQuestion": "Sand at a beach gets scorching hot in minutes; the seawater right next to it barely warms by a degree. Why such different behaviour from the same sunlight?",
+              "whyChain": [
+                "Specific heat capacity (c) is the heat needed to raise 1 kg of a substance by 1°C. Water has c = 4180 J/(kg·K) — 5× higher than sand (~830). Same sunlight + same time = water warms about 1/5 as much as sand.",
+                "Why does water have such high heat capacity? Because water's molecules are held together by strong hydrogen bonds. Heat first goes into wiggling those bonds before raising the temperature. So a lot of energy goes 'into' water before its temperature changes much.",
+                "And why does this shape Earth's climate? Because oceans store 1000× more heat than the atmosphere. They smooth temperature extremes (coastal climates are mild; continental interiors swing more). Without water's high heat capacity, Earth's day-night temperature swing would be 100°C+ like Mars. Class 11 physics covers oceanic heat-buffering as a planetary system stabiliser."
+              ]
             }
           ],
           "questions": [
@@ -11717,7 +11759,13 @@
                 54
               ],
               "needsHumanReview": false,
-              "mnemonic": "CONDUCTION = particle-to-particle contact. Solids best (lattice atoms pass energy along). Vacuum stops it. Spoon in hot tea: handle heats up by conduction."
+              "mnemonic": "CONDUCTION = particle-to-particle contact. Solids best (lattice atoms pass energy along). Vacuum stops it. Spoon in hot tea: handle heats up by conduction.",
+              "predictQuestion": "Touch a metal spoon and a wooden spoon both at the same room temperature. The metal feels much colder. Why does the SAME temperature feel different on different materials?",
+              "whyChain": [
+                "Conduction is heat transfer through direct contact within a solid (or between touching solids). Heat flows from hot to cold; metals conduct fast (electrons carry heat), wood conducts slowly (no free electrons). So your hand loses heat fast to metal, slow to wood — metal 'feels colder' even at the same temperature.",
+                "Why do metals conduct so well? Because metallic bonding gives them a 'sea' of free electrons that can carry both electrical current AND thermal energy. Insulators (wood, plastic) trap their electrons in fixed bonds — heat can only pass via slow molecular vibrations.",
+                "And why is this the principle of heatsinks in electronics? Because chips dump waste heat to a metal block (aluminium fins) that radiates it away. High-end CPUs use copper heatsinks because copper conducts ~60% better than aluminium. Class 11 physics covers thermal conductivity k in W/(m·K) — copper's is 400; air's is 0.025 — a factor of 16,000 difference."
+              ]
             },
             {
               "id": "ch04_t02_c02",
@@ -11798,7 +11846,13 @@
                 54
               ],
               "needsHumanReview": false,
-              "mnemonic": "CONVECTION = FLUID itself moves. Hot air rises (less dense), cool air sinks (more dense), creating cycles. How room heaters warm whole rooms."
+              "mnemonic": "CONVECTION = FLUID itself moves. Hot air rises (less dense), cool air sinks (more dense), creating cycles. How room heaters warm whole rooms.",
+              "predictQuestion": "Hot air rises. Cold air sinks. Why these directions specifically, and what does this have to do with how a room heater warms an entire room?",
+              "whyChain": [
+                "Convection is heat transfer by movement of a fluid (gas or liquid). When fluid is heated, it expands, becomes less dense, and rises. Cold fluid is denser and sinks. This creates a circulating current that distributes heat through the whole fluid.",
+                "Why does buoyancy do this? Because Archimedes' principle says less-dense fluid floats in denser surroundings. A bubble of hot air in cold air is exactly that — buoyant, so it rises. As it cools, it gets denser again, sinks back, restarts the cycle.",
+                "And why is this also the engine of weather? Because the sun heats different parts of the Earth unequally — equatorial air rises, polar air sinks, creating global wind patterns. Hadley cells, monsoons, hurricanes all run on the same hot-air-rises physics. Class 11 meteorology covers thermohaline ocean circulation as the watery cousin of atmospheric convection."
+              ]
             },
             {
               "id": "ch04_t02_c03",
@@ -11881,7 +11935,13 @@
                 54
               ],
               "needsHumanReview": false,
-              "mnemonic": "RADIATION = ELECTROMAGNETIC waves. Travels through VACUUM (sun's heat across space). Hot stove radiates infrared you feel from a distance without touching."
+              "mnemonic": "RADIATION = ELECTROMAGNETIC waves. Travels through VACUUM (sun's heat across space). Hot stove radiates infrared you feel from a distance without touching.",
+              "predictQuestion": "Sunlight warms your face on a winter day even though space between you and the sun is empty vacuum. How does heat travel without anything to travel through?",
+              "whyChain": [
+                "Radiation is heat transfer by electromagnetic waves — infrared, visible, ultraviolet, etc. Unlike conduction or convection, radiation needs NO medium. Sunlight crosses 150 million km of vacuum and warms Earth.",
+                "Why electromagnetic waves? Because they're the universe's only way of carrying energy without matter. Any object above absolute zero radiates thermal infrared light; hotter objects also radiate visible light (a red-hot poker glows). The wavelength depends on temperature.",
+                "And why is this the basis of climate science? Because Earth radiates infrared light back to space — and greenhouse gases trap some of that outgoing radiation, warming the planet. Without greenhouse gases, Earth would be -18°C and frozen. With too many, it overheats. Class 11+ physics covers Stefan-Boltzmann's law (E = σT⁴) governing all of this."
+              ]
             },
             {
               "id": "ch04_t02_c04",
@@ -11962,7 +12022,13 @@
                 43
               ],
               "needsHumanReview": false,
-              "mnemonic": "Thermos beats ALL three heat modes: VACUUM (no conduction, no convection) + REFLECTIVE WALLS (block radiation). Single bottle, three defences."
+              "mnemonic": "Thermos beats ALL three heat modes: VACUUM (no conduction, no convection) + REFLECTIVE WALLS (block radiation). Single bottle, three defences.",
+              "predictQuestion": "A thermos flask keeps tea hot for 8 hours. What clever physics — using ALL THREE heat-transfer modes — does it defeat?",
+              "whyChain": [
+                "A thermos has a double wall with a vacuum between. The vacuum kills CONDUCTION + CONVECTION (no matter to carry heat). The inner wall is silvered to reflect RADIATION back to the tea. So all three heat-transfer modes are individually blocked.",
+                "Why each fix matters: without the vacuum, hot tea would conduct heat through the wall to the outside. Without the silver coating, infrared radiation would slowly escape through the vacuum. The combination is what makes it work for 8 hours.",
+                "And why are vacuum-insulated bottles taking over from plastic? Because plastic only stops convection — it conducts heat slowly but unavoidably. Modern stainless-steel vacuum bottles last 12+ hours hot. The same principle scales up to cryogenic dewars holding liquid nitrogen at -196°C. Class 11+ engineering uses vacuum + reflective layers as the universal heat-isolation strategy."
+              ]
             },
             {
               "id": "ch04_t02_c05",
@@ -12040,7 +12106,13 @@
                 45
               ],
               "needsHumanReview": false,
-              "mnemonic": "Copper bottom = FAST heat in. Wooden handle = SLOW heat out (to your hand). One pot, two materials, exploiting their opposite conductivities."
+              "mnemonic": "Copper bottom = FAST heat in. Wooden handle = SLOW heat out (to your hand). One pot, two materials, exploiting their opposite conductivities.",
+              "predictQuestion": "Indian copper-bottom kitchen vessels have wooden or plastic handles. Why a mix — couldn't the whole vessel be metal, or the whole thing be wood?",
+              "whyChain": [
+                "Cooking vessels combine materials by function: copper bottom (high conductivity → fast even heating from the burner), stainless steel body (durable, easy to clean), wooden / plastic handle (low conductivity → safe to grip even when the vessel is hot).",
+                "Why not just copper everywhere? Because copper is soft, expensive, and reacts with acidic foods (tomato, lemon). Stainless steel handles the wear + chemistry; copper does the heat conduction; wood or plastic does the user-safety.",
+                "And why is induction cooking changing this? Because induction stoves use magnetic fields to heat the vessel directly (only iron-based metals work). No external flame, no copper bottom needed. Class 11+ physics covers induction heating; the engineering trade-off has shifted decisively toward induction in modern Indian kitchens."
+              ]
             },
             {
               "id": "ch04_t02_c06",
@@ -12118,7 +12190,13 @@
                 47
               ],
               "needsHumanReview": false,
-              "mnemonic": "Day: sea breeze (land hotter; cool sea air flows in). Night: land breeze (land cools faster; cool land air flows out). Convection at km scale."
+              "mnemonic": "Day: sea breeze (land hotter; cool sea air flows in). Night: land breeze (land cools faster; cool land air flows out). Convection at km scale.",
+              "predictQuestion": "Mumbai and Pune are 150 km apart. Mumbai has a sea breeze in summer that keeps it cool; Pune doesn't. Why does proximity to the sea matter so much?",
+              "whyChain": [
+                "Sea breeze = daytime convection on a coastal scale. Land heats faster than water (lower specific heat). Hot land air rises, cool sea air rushes in to replace it — that's the sea breeze. At night the reverse: land cools faster, sea-air rises, land-air rushes out. Land breeze.",
+                "Why does this only happen near the sea? Because the convection cell needs a large temperature contrast between two adjacent surfaces. Inland, all the land is heating uniformly — no horizontal temperature gradient = no wind. Coastal cities get the natural fan; inland cities don't.",
+                "And why is this the basis of monsoon? Because the same physics scales up: the entire Indian subcontinent heats up in summer (large land mass), drawing in cool moist air from the Indian Ocean as a season-long sea breeze. Class 11 meteorology covers the seasonal reversal and the role of Hadley/Walker circulations in modulating monsoon intensity."
+              ]
             }
           ],
           "questions": [
@@ -12569,7 +12647,13 @@
                 49
               ],
               "needsHumanReview": false,
-              "mnemonic": "37°C = body's target. Sweat = evaporative cooling. Shiver = muscle contraction = heat. Body is a temperature regulator (homeostasis). Fever = regulator reset by infection."
+              "mnemonic": "37°C = body's target. Sweat = evaporative cooling. Shiver = muscle contraction = heat. Body is a temperature regulator (homeostasis). Fever = regulator reset by infection.",
+              "predictQuestion": "Your normal body temperature is 37°C — the same year-round, even when you're in 5°C winter or 45°C heat wave. How does the body hold ONE temperature against such different challenges?",
+              "whyChain": [
+                "Humans are warm-blooded (endothermic) — we maintain ~37°C by burning food for heat and adjusting how fast we lose heat. Cold: shivering generates heat, blood vessels in skin contract to slow heat loss. Hot: sweating evaporates water to remove heat, blood vessels dilate.",
+                "Why 37°C specifically and not, say, 30°C? Because our enzymes evolved to work best around 37°C. Higher: proteins denature (fever above 41°C is dangerous). Lower: reactions run too slow (hypothermia at 35°C causes confusion). 37 is the sweet spot for our biochemistry.",
+                "And why does sweating cool us down? Because evaporating water requires energy (the latent heat of vaporisation), and that energy comes FROM the skin — cooling the skin in the process. Same principle as a wet cloth feeling cold on your forehead. Class 11+ biology covers thermoregulation as a master example of homeostasis."
+              ]
             },
             {
               "id": "ch04_t03_c02",
@@ -12648,7 +12732,13 @@
                 51
               ],
               "needsHumanReview": false,
-              "mnemonic": "Earth's average temperature has risen ~1.1°C since 1900. CO2 from burning fossil fuels traps infrared. Tiny number, huge effects: melting ice, shifting climates, extreme weather."
+              "mnemonic": "Earth's average temperature has risen ~1.1°C since 1900. CO2 from burning fossil fuels traps infrared. Tiny number, huge effects: melting ice, shifting climates, extreme weather.",
+              "predictQuestion": "Earth's average temperature has risen by ~1.2°C since 1880. Why does such a small number make scientists urgently worried about the entire planet?",
+              "whyChain": [
+                "Earth's global temperature is balanced by incoming solar radiation = outgoing infrared radiation. Greenhouse gases (CO₂, methane, water vapour) trap some of the outgoing infrared, slightly warming the planet. Pre-industrial CO₂ was 280 ppm; today it's 425 ppm.",
+                "Why is 1.2°C a big deal? Because the AVERAGE hides huge regional variation: poles have warmed 4°C, glaciers melt, sea level rises, ocean acidifies, weather extremes (cyclones, heatwaves) get worse. Even small averages mean massive system shifts.",
+                "And why is 'we need to stay below 1.5°C' the rallying cry? Because climate models show that beyond 1.5-2°C, feedback loops (permafrost methane release, Amazon dieback) take over — humans lose control of the warming. Class 11+ environmental science covers IPCC reports and the carbon budget in painful detail."
+              ]
             },
             {
               "id": "ch04_t03_c03",
@@ -12727,7 +12817,13 @@
                 53
               ],
               "needsHumanReview": false,
-              "mnemonic": "Cryogenics = below –150°C. Liquid nitrogen (–196°C), liquid helium (–269°C). Used to freeze tissues, run superconductors, cool MRI machines."
+              "mnemonic": "Cryogenics = below –150°C. Liquid nitrogen (–196°C), liquid helium (–269°C). Used to freeze tissues, run superconductors, cool MRI machines.",
+              "predictQuestion": "At -273.15°C (0 Kelvin) all molecular motion stops. Why can scientists go almost ALL THE WAY to that limit, but never quite reach it?",
+              "whyChain": [
+                "Cryogenics is the study and use of very low temperatures (below -150°C). Liquid nitrogen (-196°C), liquid helium (-269°C), and even colder. Used for MRI machines (superconducting magnets need <-269°C), preserving sperm/eggs for IVF, food freezing, quantum computers.",
+                "Why can't we reach exactly 0 K? Because the closer you get, the harder it is to extract any further heat. Each step closer requires exponentially more refrigeration energy. The third law of thermodynamics formalises this: 0 K is asymptotic, not achievable.",
+                "And why are weird quantum effects emerging at near-zero temperatures? Because as molecules slow, their quantum-mechanical wavefunctions overlap — bosons collapse into a single quantum state (Bose-Einstein condensate, achieved in 1995 at 170 nK). Class 11+ physics covers superfluidity, superconductivity, and BEC as the surprises that came from going colder than anyone thought matter could go."
+              ]
             }
           ],
           "questions": [
@@ -13698,7 +13794,194 @@
           "parentConceptId": "ch04_t02_c06",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch04_t01_c01",
+            "label": "Heat vs temperature",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.3
+          },
+          {
+            "id": "ch04_t01_c02",
+            "label": "Thermometer",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.2
+          },
+          {
+            "id": "ch04_t01_c03",
+            "label": "C / K scales",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.45
+          },
+          {
+            "id": "ch04_t01_c07",
+            "label": "Specific heat",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.3
+          },
+          {
+            "id": "ch04_t02_c01",
+            "label": "Conduction",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.75
+          },
+          {
+            "id": "ch04_t02_c02",
+            "label": "Convection",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.85
+          },
+          {
+            "id": "ch04_t02_c03",
+            "label": "Radiation",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.75
+          },
+          {
+            "id": "ch04_t02_c04",
+            "label": "Thermos flask (all 3)",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.6
+          },
+          {
+            "id": "ch04_t02_c06",
+            "label": "Sea / land breeze",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.55
+          },
+          {
+            "id": "ch04_t03_c02",
+            "label": "Climate change",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.85
+          },
+          {
+            "id": "ch14:ch14_t02_c01",
+            "label": "Heating effect of current (Ch.14)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.85
+          },
+          {
+            "id": "ch15:ch15_t02_c02",
+            "label": "Prism (Ch.15)",
+            "kind": "crossChapter",
+            "x": 0.93,
+            "y": 0.15
+          },
+          {
+            "id": "ch08:ch08_t02_c01",
+            "label": "Sea breeze (Ch.8)",
+            "kind": "crossChapter",
+            "x": 0.93,
+            "y": 0.45
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t01_c02",
+            "label": "measured by"
+          },
+          {
+            "id": "e02",
+            "from": "ch04_t01_c02",
+            "to": "ch04_t01_c03",
+            "label": "uses"
+          },
+          {
+            "id": "e03",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t01_c07",
+            "label": "modulated by"
+          },
+          {
+            "id": "e04",
+            "from": "ch04_t02_c01",
+            "to": "ch04_t02_c04",
+            "label": "blocked in"
+          },
+          {
+            "id": "e05",
+            "from": "ch04_t02_c02",
+            "to": "ch04_t02_c04",
+            "label": "blocked in"
+          },
+          {
+            "id": "e06",
+            "from": "ch04_t02_c03",
+            "to": "ch04_t02_c04",
+            "label": "blocked in"
+          },
+          {
+            "id": "e07",
+            "from": "ch04_t02_c02",
+            "to": "ch04_t02_c06",
+            "label": "scaled to"
+          },
+          {
+            "id": "e08",
+            "from": "ch04_t02_c06",
+            "to": "ch08:ch08_t02_c01",
+            "label": "same as"
+          },
+          {
+            "id": "e09",
+            "from": "ch04_t02_c01",
+            "to": "ch14:ch14_t02_c01",
+            "label": "explains"
+          },
+          {
+            "id": "e10",
+            "from": "ch04_t02_c03",
+            "to": "ch15:ch15_t02_c02",
+            "label": "is EM-wave detail of"
+          },
+          {
+            "id": "e11",
+            "from": "ch04_t02_c03",
+            "to": "ch04_t03_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e12",
+            "from": "ch04_t01_c07",
+            "to": "ch04_t03_c02",
+            "label": "buffers"
+          },
+          {
+            "id": "e13",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t02_c01",
+            "label": "transferred by"
+          },
+          {
+            "id": "e14",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t02_c02",
+            "label": "transferred by"
+          },
+          {
+            "id": "e15",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t02_c03",
+            "label": "transferred by"
+          }
+        ]
+      }
     },
     {
       "id": "ch05",
@@ -15888,7 +16171,13 @@
                 76
               ],
               "needsHumanReview": false,
-              "mnemonic": "PHYSICAL = same molecule, different state/shape. Ice→water→steam. Crumpling paper. Dissolving salt. REVERSIBLE by physical means."
+              "mnemonic": "PHYSICAL = same molecule, different state/shape. Ice→water→steam. Crumpling paper. Dissolving salt. REVERSIBLE by physical means.",
+              "predictQuestion": "If you crush a piece of paper into a ball, then unfold it back — is it the SAME paper or a different paper? Physical change or chemical change?",
+              "whyChain": [
+                "A physical change alters appearance (shape, size, phase) without making a NEW substance. Ice melting to water is physical: H₂O molecules unchanged. Cutting paper, bending wire, dissolving salt in water — all physical. The original material is recoverable.",
+                "Why is recoverability the test? Because physical changes can be UNDONE — refreeze the water, glue the paper, evaporate the salt water. Chemical changes can't. If you can in principle reverse it, you're looking at a physical change.",
+                "And why is the line sometimes fuzzy? Because some changes have BOTH — dissolving sugar in water seems physical (recover by evaporating), but at the molecular level sugar molecules disperse and form weak hydrogen bonds with water. Class 11 chemistry introduces phase diagrams and dissolution as more nuanced phenomena."
+              ]
             },
             {
               "id": "ch06_t01_c02",
@@ -15933,7 +16222,13 @@
                 78
               ],
               "needsHumanReview": false,
-              "mnemonic": "CHEMICAL = NEW substance formed. Iron rusting. Wood burning. Baking. NOT reversible by simple physical means."
+              "mnemonic": "CHEMICAL = NEW substance formed. Iron rusting. Wood burning. Baking. NOT reversible by simple physical means.",
+              "predictQuestion": "Burn a piece of paper. The ash that's left looks NOTHING like the paper. Where did the paper go — and what is the ash, really?",
+              "whyChain": [
+                "A chemical change makes a NEW substance with different properties. Burning paper produces CO₂, water vapour, and ash (mostly mineral oxides). The original cellulose molecules broke down and recombined with oxygen. The ash isn't 'paper' anymore — it's a different compound entirely.",
+                "Why are chemical changes irreversible (mostly)? Because they involve breaking and forming chemical bonds. Going back would require precisely undoing every bond rearrangement, which is thermodynamically very unfavourable. Burning paper releases energy; un-burning would require that exact energy + perfect bond-making.",
+                "And why do chemical changes drive everything from rusting to digestion to photosynthesis? Because they're how matter transforms. Class 11 chemistry's entire first half is about balancing chemical equations — every reaction is just a chemical change with conservation of atoms but rearrangement of bonds."
+              ]
             },
             {
               "id": "ch06_t01_c03",
@@ -15974,7 +16269,13 @@
                 81
               ],
               "needsHumanReview": false,
-              "mnemonic": "Rust = Fe + O2 + H2O → Fe2O3·H2O (iron oxide hydrate). Needs BOTH oxygen AND water. Paint blocks water, galvanisation (zinc) blocks oxygen reaching iron."
+              "mnemonic": "Rust = Fe + O2 + H2O → Fe2O3·H2O (iron oxide hydrate). Needs BOTH oxygen AND water. Paint blocks water, galvanisation (zinc) blocks oxygen reaching iron.",
+              "predictQuestion": "A shiny iron nail left in the rain turns reddish-brown in days. The iron weighs MORE after rusting than before. Where did the extra weight come from?",
+              "whyChain": [
+                "Rusting is iron + oxygen + water → iron(III) oxide hydrate (rust). The extra weight comes from oxygen atoms binding to iron — air's oxygen joins the metal. Rust weighs more than the original iron because of those added oxygen atoms.",
+                "Why does it need both oxygen AND water? Because rust formation is electrochemical — water acts as an electrolyte that lets electrons flow from iron (which loses electrons) to oxygen (which gains them). Without water, oxidation is much slower (which is why dry deserts rust iron slowly).",
+                "And why are stainless steel and galvanised iron rust-proof? Stainless steel contains chromium (forms a protective oxide layer that doesn't crumble). Galvanised iron is coated with zinc (zinc rusts first, sacrificially protecting the iron). Class 11 chemistry covers passivation and sacrificial protection."
+              ]
             }
           ],
           "questions": [
@@ -16742,7 +17043,13 @@
                 84
               ],
               "needsHumanReview": false,
-              "mnemonic": "Crystallisation = solute precipitating as ordered crystals from a saturated solution as it slowly cools. Slower cooling = larger, more ordered crystals."
+              "mnemonic": "Crystallisation = solute precipitating as ordered crystals from a saturated solution as it slowly cools. Slower cooling = larger, more ordered crystals.",
+              "predictQuestion": "Salt and sugar both dissolve in water. Boil the water away and you get sparkling regular cubes (sugar) or fine grains (salt). Why does each form perfect repeating shapes?",
+              "whyChain": [
+                "Crystallisation is the formation of a regular, repeating arrangement of atoms or ions from a solution as the solvent evaporates. Each substance has a characteristic crystal shape (sugar: monoclinic; salt: cubic) because of how its building blocks fit together.",
+                "Why repeating arrangement? Because at the molecular scale, every ion/molecule has a 'best' position to bond with its neighbours. Once the first few find their best fit, others stack on identically. The pattern propagates upward through millions of molecules into a visible crystal.",
+                "And why are crystals so useful in industry? Because crystallisation is a purification technique — impurities don't fit into the regular lattice and stay behind in the solvent. Sugar refineries, pharmaceutical companies, semiconductor manufacturers all rely on this. Class 11 chemistry covers crystal lattice structures in solid-state."
+              ]
             },
             {
               "id": "ch06_t02_c02",
@@ -16785,7 +17092,13 @@
                 72
               ],
               "needsHumanReview": false,
-              "mnemonic": "Home: copper sulphate, sugar crystals. Industry: salt from sea water (evaporation pans), purification of chemicals. Whenever you want pure ordered solid, crystallisation is the answer."
+              "mnemonic": "Home: copper sulphate, sugar crystals. Industry: salt from sea water (evaporation pans), purification of chemicals. Whenever you want pure ordered solid, crystallisation is the answer.",
+              "predictQuestion": "Drying salty water to get salt is something families do at home in coastal villages. Industrial salt comes from the same process at huge scales. What's different about the industrial version?",
+              "whyChain": [
+                "At home: pour saltwater in a shallow tray, let the sun evaporate water, scrape up the salt. Slow, low-purity. Industry: massive solar salt-pans (Sambhar Lake in Rajasthan) OR rapid evaporation in vacuum chambers (faster, purer). Both are crystallisation.",
+                "Why bother crystallising in industry? Because the resulting crystals are way purer than raw seawater — useful for chemical-grade salt, pharmaceutical-grade salt, or table-salt sodium chloride. Same idea also makes sugar, alum, copper sulphate.",
+                "And why is the protein crystallography lab — using the same physics on biomolecules — one of the most important tools in modern biology? Because crystallising a protein lets researchers shine X-rays through it and reconstruct its 3D atomic structure. This is how every drug target is mapped. Class 12 biology + medicinal chemistry build on this."
+              ]
             }
           ],
           "questions": [
@@ -17080,7 +17393,13 @@
                 74
               ],
               "needsHumanReview": false,
-              "mnemonic": "Vinegar (acetic acid) + baking soda (sodium bicarbonate) → CO2 (fizz!) + sodium acetate + water. Classroom volcano. Acid-base + gas-release in one reaction."
+              "mnemonic": "Vinegar (acetic acid) + baking soda (sodium bicarbonate) → CO2 (fizz!) + sodium acetate + water. Classroom volcano. Acid-base + gas-release in one reaction.",
+              "predictQuestion": "Mix baking soda and vinegar in a kitchen bowl — it fizzes violently. What's actually happening in that bowl, and why don't either ingredient fizz on its own?",
+              "whyChain": [
+                "Baking soda (NaHCO₃) reacts with vinegar (acetic acid, CH₃COOH) to produce sodium acetate, water, and CO₂ gas. The fizz is CO₂ bubbles escaping. Alone, neither reacts: it's the acid + base combination that triggers the chemical change.",
+                "Why does an acid + base produce gas? Because the H⁺ from the acid + the HCO₃⁻ from the base form unstable carbonic acid (H₂CO₃), which immediately decomposes into water + CO₂. The reaction is fast and visible.",
+                "And why is this the model for thousands of acid-base reactions? Because every acid-base reaction works the same way: acid donates H⁺, base accepts H⁺, salt + water (sometimes gas) form. Class 7 NCERT introduces this; Class 11 chemistry formalises it via Brønsted-Lowry and Lewis acid-base theories."
+              ]
             },
             {
               "id": "ch06_t03_c02",
@@ -17123,7 +17442,13 @@
                 75
               ],
               "needsHumanReview": false,
-              "mnemonic": "Fireworks colours = METAL SALTS burning. Sodium=yellow, copper=blue/green, strontium=red, barium=green. The BANG = rapid combustion releasing gas explosively."
+              "mnemonic": "Fireworks colours = METAL SALTS burning. Sodium=yellow, copper=blue/green, strontium=red, barium=green. The BANG = rapid combustion releasing gas explosively.",
+              "predictQuestion": "Fireworks burst in red, green, blue, gold. The chemistry behind each colour is precisely controlled. What makes copper give green sparks but iron give yellow?",
+              "whyChain": [
+                "Fireworks burn metal salts at high temperature. Each metal's electrons get excited and then emit light at characteristic wavelengths: sodium → yellow, copper → green/blue, strontium → red, barium → green. The colour is the metal's atomic fingerprint.",
+                "Why does each metal emit a unique colour? Because electrons in different atoms occupy different energy levels. When excited then dropping back, they release exactly the energy gap as a photon — and that gap is set by the atom's structure. Same physics that makes neon lights orange and helium-neon lasers red.",
+                "And why is this the basis of spectroscopy? Because every element has a unique emission spectrum. Astronomers use this to determine the composition of stars billions of light-years away. Class 11 chemistry derives the hydrogen emission spectrum from quantum mechanics; fireworks are just street-level spectroscopy with sparks instead of starlight."
+              ]
             },
             {
               "id": "ch06_t03_c03",
@@ -17166,7 +17491,13 @@
                 76
               ],
               "needsHumanReview": false,
-              "mnemonic": "Photosynthesis (CO2+H2O+sunlight → glucose+O2) is the REVERSE of cellular respiration (glucose+O2 → CO2+H2O+energy). Same atoms, opposite reactions. Life is balanced chemistry."
+              "mnemonic": "Photosynthesis (CO2+H2O+sunlight → glucose+O2) is the REVERSE of cellular respiration (glucose+O2 → CO2+H2O+energy). Same atoms, opposite reactions. Life is balanced chemistry.",
+              "predictQuestion": "Plants make their own food (photosynthesis); animals burn food (respiration). One absorbs CO₂, the other releases it. Are these opposite chemical changes — or really the same one running in opposite directions?",
+              "whyChain": [
+                "Photosynthesis: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂. Respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy. The two equations are MIRRORS — same atoms, opposite directions, opposite energy flow.",
+                "Why is this perfect reciprocity so important? Because life on Earth runs on this loop. Plants store the sun's energy in sugar bonds; animals (and plants at night) release that energy by breaking the same bonds. Every breath out exhales CO₂ that a plant somewhere will breathe in.",
+                "And why does this loop ALSO drive every other chemical cycle on Earth? Because the carbon, oxygen, hydrogen circulating between organisms is the same that's in the atmosphere, soil, oceans. Class 11+ environmental chemistry traces the global carbon cycle as the master version of this. Photosynthesis/respiration is just life's local subroutine."
+              ]
             }
           ],
           "questions": [
@@ -18019,7 +18350,156 @@
           "parentConceptId": "ch06_t02_c02",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch06_t01_c01",
+            "label": "Physical change",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.3
+          },
+          {
+            "id": "ch06_t01_c02",
+            "label": "Chemical change",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.3
+          },
+          {
+            "id": "ch06_t01_c03",
+            "label": "Rusting (chemical)",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.55
+          },
+          {
+            "id": "ch06_t02_c01",
+            "label": "Crystallisation (physical)",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.55
+          },
+          {
+            "id": "ch06_t02_c02",
+            "label": "Industrial crystallisation",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.8
+          },
+          {
+            "id": "ch06_t03_c01",
+            "label": "Baking soda + vinegar",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.65
+          },
+          {
+            "id": "ch06_t03_c02",
+            "label": "Fireworks colours",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.85
+          },
+          {
+            "id": "ch06_t03_c03",
+            "label": "Photosynthesis ↔ respiration",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.92
+          },
+          {
+            "id": "ch01:ch01_t01_c02",
+            "label": "Photosynthesis (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.92
+          },
+          {
+            "id": "ch10:ch10_t02_c02",
+            "label": "Aerobic respiration (Ch.10)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.92
+          },
+          {
+            "id": "ch04:ch04_t01_c01",
+            "label": "Heat (Ch.4)",
+            "kind": "crossChapter",
+            "x": 0.55,
+            "y": 0.1
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch06_t01_c01",
+            "to": "ch06_t01_c02",
+            "label": "contrasts with"
+          },
+          {
+            "id": "e02",
+            "from": "ch06_t01_c02",
+            "to": "ch06_t01_c03",
+            "label": "example"
+          },
+          {
+            "id": "e03",
+            "from": "ch06_t01_c01",
+            "to": "ch06_t02_c01",
+            "label": "example"
+          },
+          {
+            "id": "e04",
+            "from": "ch06_t02_c01",
+            "to": "ch06_t02_c02",
+            "label": "scaled in"
+          },
+          {
+            "id": "e05",
+            "from": "ch06_t01_c02",
+            "to": "ch06_t03_c01",
+            "label": "demonstrated by"
+          },
+          {
+            "id": "e06",
+            "from": "ch06_t01_c02",
+            "to": "ch06_t03_c02",
+            "label": "example"
+          },
+          {
+            "id": "e07",
+            "from": "ch06_t01_c02",
+            "to": "ch06_t03_c03",
+            "label": "biological example"
+          },
+          {
+            "id": "e08",
+            "from": "ch06_t03_c03",
+            "to": "ch01:ch01_t01_c02",
+            "label": "instance of"
+          },
+          {
+            "id": "e09",
+            "from": "ch06_t03_c03",
+            "to": "ch10:ch10_t02_c02",
+            "label": "instance of"
+          },
+          {
+            "id": "e10",
+            "from": "ch04:ch04_t01_c01",
+            "to": "ch06_t02_c01",
+            "label": "drives"
+          },
+          {
+            "id": "e11",
+            "from": "ch04:ch04_t01_c01",
+            "to": "ch06_t01_c01",
+            "label": "common cause of"
+          }
+        ]
+      }
     },
     {
       "id": "ch07",
