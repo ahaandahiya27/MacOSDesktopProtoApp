@@ -16021,6 +16021,545 @@
         83,
         84,
         85
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch06_rw01",
+          "title": "Ghee melting on a hot pan",
+          "body": "Solid ghee on a hot tava softens, melts, and pools into golden liquid. Take it off heat — it solidifies back. This is a physical change: the molecules haven't changed, only their arrangement (tight crystal lattice → loose liquid → back to crystal). The same ghee, taste unchanged, before and after. Compare with butter going RANCID over weeks — that's chemical: triglycerides oxidising into smelly molecules, and you can never get the fresh butter back.",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_rw02",
+          "title": "Milk to dahi — the chemistry of curdling",
+          "body": "Warm milk + a spoonful of dahi + 8 hours = solid yoghurt. What changed? The Lactobacillus bacteria in the starter culture ate the milk sugar (lactose) and produced lactic acid. The acid lowered the milk's pH, and the milk proteins (casein) clumped into a solid mesh. This is a chemical change — you can't undo it (try heating dahi and you don't get milk back). One of the oldest examples of fermentation in Indian kitchens.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_rw03",
+          "title": "Rusting railway tracks during the monsoon",
+          "body": "Walk along any Indian Railways track in July. The rails carrying trains are bright steel; the unused side tracks are coated in orange rust. Iron + oxygen + water → iron oxide (rust). The reaction is irreversible — once metal becomes rust, it has new chemical identity. Indian Railways spends thousands of crores per year fighting rust with paint, oil, and replacement. The monsoon multiplies the damage 5x because water is the catalyst.",
+          "relatedConceptIds": [
+            "ch06_t01_c02",
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_rw04",
+          "title": "Salt pans of Tamil Nadu's Marakkanam coast",
+          "body": "Seawater is allowed into shallow pans. Sun and wind evaporate the water over 25 days. Pure white salt crystals are left behind. This is crystallisation — a physical change driven by phase transition. Tamil Nadu produces ~30% of India's salt this way. The same chemistry scaled differently: when you make chai and the sugar at the bottom of the cup forms crystals as the water cools, you've done one-cup salt-pan engineering.",
+          "relatedConceptIds": [
+            "ch06_t02_c01",
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_rw05",
+          "title": "Diwali fireworks — the chemistry of colour",
+          "body": "Each colour in a Diwali phuljhari comes from a specific metal salt. Red = strontium. Green = barium. Yellow = sodium. Blue = copper. White = magnesium powder. When the metal heats in the flame, electrons jump to higher levels and fall back, releasing photons of a specific colour — exactly the same physics as a neon sign. Fireworks are chemistry's most spectacular demo of one rule: every chemical produces its own unique colour-fingerprint when burned.",
+          "relatedConceptIds": [
+            "ch06_t03_c02"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch06_xc01",
+          "title": "Class 10 — Chemical Reactions and Equations",
+          "body": "Class 10 opens with this chapter on a much deeper level. You'll meet five reaction types (combination, decomposition, displacement, double displacement, redox), balancing equations atom-by-atom, and rate of reaction concepts. The Class 7 distinction 'physical vs chemical' becomes a tight rule with chemical equations as proof.",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_xc02",
+          "title": "JEE — Rate of reaction and equilibrium",
+          "body": "JEE Chemistry Class 11 introduces the rate at which reactions happen (kinetics) and the balance reached when forward and reverse rates equalise (equilibrium). Rusting is a classic kinetics problem — slow at first, faster once started, and inhibited by paint. The Class 7 idea 'rusting takes time' becomes a quantitative rate equation.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_xc03",
+          "title": "NEET — Biochemistry of respiration and photosynthesis",
+          "body": "The Class 7 line 'photosynthesis and respiration are life's chemical engines' becomes a major NEET-level topic in Class 11–12 Biology. You'll meet glycolysis, the Krebs cycle, the electron transport chain — all chemical changes happening inside cells. Knowing that life IS chemistry (not just 'biological') is the leap this chapter sets up.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch06_t03_c03"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch06_mn01",
+          "acronym": "P-RIME",
+          "unpacking": "Physical changes are R-eversible, Identity-preserving, Molecular-arrangement-only, Energy-needed-but-no-new-substance. Chemical changes are NONE of those.",
+          "context": "How to spot a physical change.",
+          "relatedConceptIds": [
+            "ch06_t01_c01"
+          ]
+        },
+        {
+          "id": "ch06_mn02",
+          "acronym": "RUST",
+          "unpacking": "R-equires oxygen, U-nder humidity, S-low at room temp, T-otally irreversible without chemistry. The four conditions needed for rusting.",
+          "context": "When and why iron rusts.",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_mn03",
+          "acronym": "5 NEW",
+          "unpacking": "5 NEW signs of chemical change: NEW colour, NEW smell, NEW gas, NEW heat/light, NEW substance you can't undo. See any one and chemistry has happened.",
+          "context": "Telltale signs that something chemical (not physical) just happened.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch06_ms01",
+          "kidsThink": "Burning is a physical change because the substance just disappears.",
+          "actually": "Burning is the most dramatic chemical change. Wood + oxygen → CO₂ + water vapour + ash. The mass doesn't disappear — it just leaves as invisible gas. If you collected all the CO₂ and water vapour from burning 100 g of wood, you'd have ~150 g (the extra mass came from oxygen). The chemistry equation balances exactly; that's the law of mass conservation.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_ms02",
+          "kidsThink": "If you can see it change, it must be chemical.",
+          "actually": "Visible change tells you SOMETHING happened, but doesn't say what. Ice melting (visible) is physical — water unchanged. Bread mould growing (visible) is chemical — new substances. The test is: can you reverse it easily? Ice ↔ water = physical. Mould → bread = impossible = chemical.",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_ms03",
+          "kidsThink": "Crystallisation creates new substances.",
+          "actually": "Crystallisation only rearranges existing substances into orderly patterns. Salt dissolved in water IS salt; salt crystallised out IS still salt — same molecules, more orderly arrangement. No new compound formed. This is why crystallisation is a physical change, not chemical. Industrial use: purifying drugs, sugar, salt all rely on this clean physical-only step.",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_ms04",
+          "kidsThink": "Galvanised iron doesn't rust because it's a different metal.",
+          "actually": "Galvanised iron IS iron — just with a thin coating of zinc. The zinc is more reactive than iron. When water and oxygen attack, the zinc rusts FIRST (sacrificially), forming a protective oxide layer that stops further damage to the iron underneath. Once the zinc is gone, the iron rusts normally. The buckets, sheets, and tin-cans of India are mostly galvanised iron.",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_ms05",
+          "kidsThink": "Cooking is just heating food.",
+          "actually": "Cooking involves many chemical changes happening simultaneously. Maillard reaction (browning of roti or paneer) is sugars + amino acids forming new flavour molecules. Egg whites going from clear to opaque is proteins denaturing irreversibly. Starch gelatinising in rice is water + starch forming a new gel structure. All these are chemical changes — you can't 'uncook' them.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch06_nq01",
+          "question": "Classify the following as physical or chemical changes: tearing paper, ripening of fruit, cooking food, melting wax, burning candle, glowing electric bulb.",
+          "modelAnswer": "Physical: tearing paper (paper still paper), melting wax (wax still wax — can be re-frozen), glowing electric bulb (filament heats but doesn't change identity once cooled). Chemical: ripening fruit (new sugars and aroma compounds form), cooking food (Maillard + protein denaturation), burning candle (wax + O₂ → CO₂ + water — new substances, irreversible).",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_nq02",
+          "question": "State whether the following statements are True or False. In case a statement is false, write the corrected statement. (a) Cutting a log of wood into pieces is a chemical change. (b) Formation of manure from leaves is a physical change. (c) Iron pipes coated with zinc do not get rusted easily. (d) Iron and rust are the same substances.",
+          "modelAnswer": "(a) False — cutting wood is a physical change (smaller pieces, same wood). (b) False — composting leaves into manure involves bacterial breakdown into different substances, so it's a chemical change. (c) True — galvanising (zinc coating) protects iron from rusting (sacrificial protection). (d) False — iron is the metal element Fe; rust is iron oxide Fe₂O₃·H₂O, a different compound with different properties.",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02",
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_nq03",
+          "question": "Anaerobic bacteria digest animal waste and produce biogas (Change-A). The biogas is then burnt as fuel (Change-B). Which of these are chemical changes?",
+          "modelAnswer": "Both Change-A and Change-B are chemical changes. (A) Bacterial digestion converts complex organic waste (proteins, carbs) into methane + CO₂ — new substances, irreversible. (B) Burning biogas: methane + oxygen → CO₂ + water + heat — new substances, irreversible. Both involve new compounds, energy release, and cannot be reversed by simple physical means.",
+          "relatedConceptIds": [
+            "ch06_t01_c02",
+            "ch06_t03_c03"
+          ]
+        },
+        {
+          "id": "ch06_nq04",
+          "question": "Explain why burning of wood and cutting it into small pieces are considered as two different types of changes.",
+          "modelAnswer": "Cutting wood is a physical change — the smaller pieces are still wood, with the same colour, density, chemical composition. You could (in principle) glue them back. Burning wood is a chemical change — wood combines with oxygen to form CO₂, water vapour, and ash. The new substances have different colour, density, and composition. You cannot un-burn the wood to get the log back. New substances + irreversibility = chemical change.",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_nq05",
+          "question": "Describe how crystals of copper sulphate are prepared.",
+          "modelAnswer": "(1) Take warm distilled water in a beaker. (2) Dissolve copper sulphate powder into it, stirring, until no more dissolves (saturated solution). (3) Filter to remove any undissolved bits. (4) Cover the filtrate with paper (so dust doesn't fall in) and leave undisturbed for 1-2 days in a cool place. (5) As water slowly evaporates and the solution cools, blue copper sulphate crystals form on the bottom and sides. (6) The crystals are characteristic — five-sided blue crystals showing the regular shape of the molecule itself.",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_nq06",
+          "question": "Explain how painting an iron gate prevents it from rusting.",
+          "modelAnswer": "Rusting needs three things: iron, water, and oxygen. Paint forms a continuous physical barrier between the iron surface and the air + moisture around it. Without water and oxygen reaching the iron, the rusting reaction cannot start. As long as the paint stays intact, the gate stays rust-free. Where paint chips off, rusting begins immediately. This is why old iron gates need repainting every 2–3 years (or after monsoon damage).",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_nq07",
+          "question": "Explain why rusting of iron objects is faster in coastal areas than in deserts.",
+          "modelAnswer": "Three reasons all stronger near the coast. (1) Humidity is high — air carries lots of water vapour, the key reactant in rusting. (2) Salt particles in sea-air act as an electrolyte that speeds the rusting reaction many times. (3) Temperature is moderate-to-warm, the optimum range for the chemistry. In dry deserts, water is scarce — the reaction barely happens; metal artefacts found in Rajasthan deserts are often centuries old and barely rusted, while same-age objects in coastal Kerala are flakes.",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_nq08",
+          "question": "Give an example of a chemical reaction for each of the following situations: (a) A pleasant smell is produced. (b) A pleasant smell vanishes.",
+          "modelAnswer": "(a) Baking a cake — the Maillard reaction between sugars and amino acids in the batter, plus carbonisation of crust starch, releases the warm-buttery-sweet smell of fresh cake. (b) Curdling of milk — the fresh-milk aroma is replaced by the sharp lactic-acid smell of dahi. Both are chemical changes — neither aroma can be reversed.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch06_gl01",
+          "term": "Physical change",
+          "definition": "A change in form, shape, or state without altering the substance's chemical identity.",
+          "example": "Ice melting, water boiling, tearing paper, sugar dissolving in tea.",
+          "hindiTerm": "भौतिक परिवर्तन",
+          "relatedConceptIds": [
+            "ch06_t01_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl02",
+          "term": "Chemical change",
+          "definition": "A change that creates one or more new substances with new properties; usually irreversible.",
+          "example": "Burning wood, rusting iron, cooking egg, curdling milk.",
+          "hindiTerm": "रासायनिक परिवर्तन",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl03",
+          "term": "Rusting",
+          "definition": "The chemical change where iron combines with oxygen and water to form reddish-brown iron oxide.",
+          "example": "A nail left outside in the monsoon becomes covered with rust within a week.",
+          "hindiTerm": "जंग लगना",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_gl04",
+          "term": "Crystallisation",
+          "definition": "A purification process where dissolved solids reform into pure regular-shaped crystals as solvent evaporates or the solution cools.",
+          "example": "Tamil Nadu's salt pans produce edible salt by crystallisation of seawater.",
+          "hindiTerm": "क्रिस्टलीकरण",
+          "relatedConceptIds": [
+            "ch06_t02_c01",
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl05",
+          "term": "Galvanisation",
+          "definition": "Coating iron with a thin layer of zinc to protect it from rusting; the zinc rusts first, sacrificially.",
+          "example": "Galvanised iron sheets and buckets, common across rural India, last 5x longer than uncoated iron.",
+          "hindiTerm": "गैल्वेनीकरण",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_gl06",
+          "term": "Combustion",
+          "definition": "A chemical change where a substance reacts rapidly with oxygen, releasing heat and light.",
+          "example": "A burning candle, a phuljhari sparkler, the engine of an autorickshaw.",
+          "hindiTerm": "दहन",
+          "relatedConceptIds": [
+            "ch06_t01_c02",
+            "ch06_t03_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl07",
+          "term": "Reactant",
+          "definition": "A substance that takes part in (and is changed by) a chemical reaction.",
+          "example": "In rusting, iron and oxygen and water are the reactants.",
+          "hindiTerm": "अभिकारक",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl08",
+          "term": "Product",
+          "definition": "A substance formed by a chemical reaction.",
+          "example": "In rusting, the product is iron oxide (rust).",
+          "hindiTerm": "उत्पाद",
+          "relatedConceptIds": [
+            "ch06_t01_c02",
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_gl09",
+          "term": "Maillard reaction",
+          "definition": "A chemical reaction between sugars and amino acids during cooking, producing brown colour and savoury flavours.",
+          "example": "Tandoor roti turning golden-brown, paneer browning in a pan, dosa edges becoming crisp.",
+          "hindiTerm": "मेलार्ड अभिक्रिया",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl10",
+          "term": "Photosynthesis",
+          "definition": "The chemical reaction by which green plants combine CO₂ and water in sunlight to make glucose and release oxygen.",
+          "example": "Every leaf in your garden does this from sunrise to sunset.",
+          "hindiTerm": "प्रकाश संश्लेषण",
+          "relatedConceptIds": [
+            "ch06_t03_c03"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch06_mp01",
+          "emoji": "🔬",
+          "title": "Grow your own copper sulphate crystal",
+          "needs": [
+            "Copper sulphate powder (chemist shop)",
+            "A glass jar with warm water",
+            "A pencil and a piece of thread",
+            "A small paperweight",
+            "Adult supervision (CuSO₄ is poisonous if swallowed — wash hands after)"
+          ],
+          "steps": [
+            "Dissolve as much copper sulphate as the warm water will hold (saturated, bright blue).",
+            "Tie a thread to the middle of a pencil. Tie a small paperclip or weight to the loose end.",
+            "Lay the pencil across the jar mouth so the weighted thread hangs in the solution.",
+            "Cover loosely with paper. Leave undisturbed for 2-3 days in a cool place.",
+            "Crystals grow along the thread — first tiny seeds, then bigger five-sided blue crystals.",
+            "If you wait longer, a single large crystal can form (1-2 cm)."
+          ],
+          "expectedObservation": "Blue, five-sided crystals strung along the thread like a necklace.",
+          "whyItWorks": "As water evaporates and the solution cools, it becomes oversaturated. The dissolved copper sulphate molecules find each other, lock into their natural geometric shape (a five-sided crystal lattice), and stick together at the thread. Each molecule going from solution to crystal is a physical change — same compound, just orderly arrangement. The same process makes salt pans, sugar candy, and natural mineral crystals.",
+          "estimatedMinutes": 60,
+          "relatedConceptIds": [
+            "ch06_t02_c01",
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_mp02",
+          "emoji": "🔥",
+          "title": "Iron rusting in real time — a 3-day demo",
+          "needs": [
+            "3 clean iron nails (same kind)",
+            "3 small jars",
+            "Water, oil, vinegar",
+            "A magnifying glass (optional)"
+          ],
+          "steps": [
+            "Put one nail in a dry jar.",
+            "Put the second nail in a jar of fresh water (don't seal it).",
+            "Put the third in a sealed jar of cooking oil.",
+            "Leave all three on a windowsill for 3 days.",
+            "Each day, observe with magnifying glass. Photograph if you can."
+          ],
+          "expectedObservation": "Day 1: tiny brown specks appear on the wet nail. Day 3: the wet nail is partly orange. The dry nail and the oil-submerged nail are unchanged (no water and oxygen access).",
+          "whyItWorks": "The wet nail has all three conditions for rusting: iron, oxygen (dissolved in water), and water itself. The dry nail has only iron + oxygen (the air is dry indoors), too little water. The oil-submerged nail has iron + water (in the oil's trace moisture) but oxygen can't reach through the oil layer. Three jars, three conditions, one chemistry lesson.",
+          "estimatedMinutes": 4320,
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch06_sci01",
+          "name": "Antoine Lavoisier (with India context)",
+          "lifespan": "1743–1794",
+          "nationality": "French",
+          "oneLineLegacy": "Discovered that matter is neither created nor destroyed in any chemical reaction — the law of mass conservation, still the foundation of every chemistry chapter.",
+          "narrative": "In the 1770s, a French chemist named Antoine Lavoisier did something nobody had thought to do: he WEIGHED everything before and after a chemical reaction. He sealed iron filings in a glass container with measured air, heated the container, and then weighed it again. The total mass was unchanged. The iron had turned into rust (gained weight), but the air had lost weight by exactly the same amount. The conclusion: chemistry rearranges atoms, never creates or destroys them. This Law of Mass Conservation is the deepest rule in every chemistry chapter you'll ever read — Class 7, Class 10, Class 11, NEET, JEE. Lavoisier's work reached India through colonial-era science colleges (Calcutta in 1857, Bombay in 1854) and now sits as the silent foundation of every balanced equation in your Class 10 textbook.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch06_wi01",
+          "question": "What if iron didn't rust?",
+          "answer": "Roman aqueducts and Ashokan iron pillars would still be in pristine condition (the Iron Pillar of Delhi actually IS — its unique alloy resists rust). Bridges and ships would last centuries instead of decades. India's railways wouldn't spend ~₹10,000 crore yearly on rust repair. Architecture would change — taller, lighter structures because we wouldn't need to over-engineer for corrosion. Cars and motorbikes would last a generation. The downside: discarded iron would never return to soil (rust eventually breaks down) — the planet would have iron pollution where today rust returns iron to the earth.",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_wi02",
+          "question": "What if cooking didn't change food chemically?",
+          "answer": "Raw food only. No bread (yeast fermentation = chemical change), no roti (Maillard browning = chemical), no boiled rice (starch gelatinisation = chemical), no dahi (lactic fermentation = chemical), no chai (oxidation of tea leaves), no cooked dal (protein denaturation). We'd eat fruits, raw vegetables, some seeds, raw fish. Carnivores can do this; humans have shorter intestines specifically because cooking pre-digests food for us. Without chemical cooking, our entire diet and digestion biology would change.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_wi03",
+          "question": "What if you could SEE chemical reactions happening at atomic scale?",
+          "answer": "You'd see something like a dance: molecules approaching each other, bonds stretching, breaking, new bonds forming in different patterns. A burning match would look like billions of CO₂ and water molecules being assembled from carbon and oxygen, exhaling heat. Rusting iron would look like oxygen molecules attaching to surface iron atoms, slowly building up brownish iron oxide layer. You'd see WHY some reactions are fast (matches) and some slow (rusting) — it's just how often the right molecules meet at the right energy. This is exactly what Class 11 'kinetic theory' tries to give you with equations.",
+          "relatedConceptIds": [
+            "ch06_t01_c01",
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch06_cx01",
+          "toChapterId": "ch01",
+          "topic": "Nutrition in Plants",
+          "pointer": "Photosynthesis (Ch.1) is the most important chemical change on Earth — turning CO₂ and water into glucose with sunlight. Ch.6's framework lets you call it correctly: a chemical change, irreversible, producing new substances.",
+          "relatedConceptIds": [
+            "ch06_t03_c03"
+          ]
+        },
+        {
+          "id": "ch06_cx02",
+          "toChapterId": "ch05",
+          "topic": "Acids, Bases and Salts",
+          "pointer": "Neutralisation (Ch.5) is a chemical change — acid + base → salt + water. Both produce new substances. Ch.5's specific reactions are Ch.6's general principle in action.",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 Chapter 4 (Materials: Metals and Non-metals) extends the rusting theme into corrosion of other metals (copper turns green, silver tarnishes black). The Class 7 'iron + water + oxygen → rust' becomes a family of corrosion reactions.",
+        "forNeetJee": "Class 10 Chapter 1 (Chemical Reactions and Equations) is an immediate continuation. Class 11 introduces stoichiometry (mass calculations from balanced equations), thermodynamics (energy in reactions), and kinetics (rate of reactions). NEET and JEE both lean heavily on the physical-vs-chemical distinction as a foundation."
+      },
+      "gallery": [
+        {
+          "id": "ch06_gi01",
+          "caption": "Iron pillar of Delhi — 1600 years rust-free",
+          "detail": "The 7m iron pillar in Delhi's Qutub complex has stood since 4th-5th century CE with almost no rust. Its unique high-phosphorus composition forms a passive surface layer that prevents oxygen and water attack — ancient Indian metallurgy that modern engineers still study.",
+          "assetHint": "sfsymbol:building.columns.fill",
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        },
+        {
+          "id": "ch06_gi02",
+          "caption": "Salt pan crystals at Marakkanam, Tamil Nadu",
+          "detail": "Seawater is led into shallow ponds and left to evaporate over 25 days. Pure white salt crystals form on the bed. This is crystallisation at industrial scale — physical change purifying NaCl from a complex seawater mix.",
+          "assetHint": "shape:salt-pan",
+          "relatedConceptIds": [
+            "ch06_t02_c01",
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_gi03",
+          "caption": "Copper sulphate crystal close-up",
+          "detail": "Bright blue, five-sided crystals — each face perfectly flat, edges perfectly sharp. The geometry comes from how the molecule arranges itself in 3D. Different compounds give different crystal shapes; salt is cubic, copper sulphate is triclinic.",
+          "assetHint": "sfsymbol:diamond.fill",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_gi04",
+          "caption": "Diwali fireworks colour chart",
+          "detail": "Red = Strontium. Green = Barium. Yellow = Sodium. Blue = Copper. Orange = Calcium. Silver = Aluminium/Magnesium. Each metal salt heated to flame temperature produces its own specific colour. Chemistry on full visual display.",
+          "assetHint": "sfsymbol:sparkles",
+          "relatedConceptIds": [
+            "ch06_t03_c02"
+          ]
+        },
+        {
+          "id": "ch06_gi05",
+          "caption": "Maillard reaction in a tandoor",
+          "detail": "When wheat dough touches the hot tandoor wall (~480°C), surface sugars and amino acids react in milliseconds, forming hundreds of new flavour molecules. The golden-brown crust on naan/roti is Maillard chemistry made delicious.",
+          "assetHint": "sfsymbol:flame.fill",
+          "relatedConceptIds": [
+            "ch06_t01_c02"
+          ]
+        },
+        {
+          "id": "ch06_gi06",
+          "caption": "Photosynthesis equation visualised",
+          "detail": "6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂. Six small molecules from air and roots, sunlight powers it, one sugar molecule and six oxygens come out. Life's most important chemical change, happening in every green leaf right now.",
+          "assetHint": "sfsymbol:leaf.fill",
+          "relatedConceptIds": [
+            "ch06_t03_c03"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch06_tl01",
+          "title": "Three days in the life of a rusty nail",
+          "intro": "Drop a clean iron nail into a jar of water. Watch the chemistry over three days.",
+          "steps": [
+            {
+              "id": "ch06_tl01_s01",
+              "label": "Hour 0 — pristine",
+              "body": "The nail surface is shiny grey iron. Water touches it; oxygen dissolves in the water. No visible change yet.",
+              "assetHint": "sfsymbol:circle"
+            },
+            {
+              "id": "ch06_tl01_s02",
+              "label": "Hour 12 — first brown specks",
+              "body": "Iron atoms at the surface have begun reacting with oxygen and water, forming Fe(OH)₂ (iron hydroxide) — a pale greenish layer that turns brown on contact with more oxygen.",
+              "assetHint": "sfsymbol:circle.dotted"
+            },
+            {
+              "id": "ch06_tl01_s03",
+              "label": "Day 1 — orange streaks",
+              "body": "Iron hydroxide is converting to Fe₂O₃ — rust proper. Streaks of orange wash off the nail and stain the water orange-brown.",
+              "assetHint": "sfsymbol:circle.righthalf.filled"
+            },
+            {
+              "id": "ch06_tl01_s04",
+              "label": "Day 2 — visible coating",
+              "body": "The nail is now half-covered in flaky orange-brown rust. The metal is being eaten away from the surface inward. Mass is conserved — iron lost is oxygen + water gained.",
+              "assetHint": "sfsymbol:circle.fill"
+            },
+            {
+              "id": "ch06_tl01_s05",
+              "label": "Day 3 — fully rusted",
+              "body": "The nail has lost its shine. The water is dirty brown. If you waited months, the nail would dissolve completely into rust flakes at the bottom. Chemistry, slow but relentless.",
+              "assetHint": "sfsymbol:xmark.circle.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch06_t01_c03"
+          ]
+        }
       ]
     },
     {
