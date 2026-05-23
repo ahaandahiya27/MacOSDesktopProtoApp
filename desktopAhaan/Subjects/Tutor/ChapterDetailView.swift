@@ -20,6 +20,7 @@ struct ChapterDetailView: View {
         case notebook
         case article(ArticleEntry)
         case glossary
+        case insideTheLeafTour       // Ch.1 pilot — Phase 2B
 
         var id: String {
             switch self {
@@ -31,6 +32,8 @@ struct ChapterDetailView: View {
                 return "article-\(entry.id)"
             case .glossary:
                 return "glossary"
+            case .insideTheLeafTour:
+                return "insideTheLeafTour"
             }
         }
     }
@@ -69,6 +72,7 @@ struct ChapterDetailView: View {
     @ViewBuilder
     private var surfacesGroupTop: some View {
         Group {
+            ch1PilotInteractives  // empty unless chapter.id == "ch01"
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)
@@ -77,6 +81,70 @@ struct ChapterDetailView: View {
             MiniProjectsSectionView(chapter: chapter)
             TimelinesSectionView(chapter: chapter)
         }
+    }
+
+    /// Ch.1 pilot — five net-new pedagogical surfaces mount here. The
+    /// conditional `if chapter.id == "ch01"` is the leak-prevention
+    /// point: every other chapter sees an EmptyView for this slot, so
+    /// pixel + structural parity for Ch.2..19 is preserved. The
+    /// Ch2_19_StructuralRatchetTests guards against accidentally
+    /// editing JSON for those chapters; this conditional guards
+    /// against accidentally mounting Ch.1 views elsewhere.
+    @ViewBuilder
+    private var ch1PilotInteractives: some View {
+        if chapter.id == "ch01" {
+            BuildAPlantSandbox(chapterId: chapter.id)
+            insideTheLeafTourCTA
+        }
+    }
+
+    /// CTA card that opens the InsideTheLeafTour sheet. Ch.1 pilot only;
+    /// the parent gate (`chapter.id == "ch01"`) keeps this off Ch.2..19.
+    private var insideTheLeafTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheLeafTour }
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: SFSymbolCompat.name("magnifyingglass.circle.fill"))
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("Inside the Leaf")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text("Shrink yourself to a stoma, then to a chloroplast, then to a thylakoid — five-stop guided journey.")
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.92))
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.white.opacity(0.85))
+                    .accessibilityHidden(true)
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.18, green: 0.50, blue: 0.42),
+                                Color(red: 0.10, green: 0.30, blue: 0.55)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+            )
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Inside the Leaf — five-stop guided tour")
+        .accessibilityHint("Opens a sheet that walks you through a leaf from outside to inside a chloroplast.")
     }
 
     @ViewBuilder
@@ -273,6 +341,11 @@ struct ChapterDetailView: View {
             case .glossary:
                 GlossarySheet(
                     chapter: chapter,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheLeafTour:
+                InsideTheLeafTour(
+                    chapterId: chapter.id,
                     onDismiss: { presentedSheet = nil }
                 )
             }
