@@ -22,6 +22,8 @@ struct ChapterDetailView: View {
         case glossary
         case insideTheLeafTour       // Ch.1 pilot — Phase 2B
         case ch1ConceptMap           // Ch.1 pilot — Phase 2E
+        case insideTheWireTour       // Ch.14 propagation (2026-05-24)
+        case insideTheLensTour       // Ch.15 propagation (2026-05-24)
 
         var id: String {
             switch self {
@@ -37,6 +39,10 @@ struct ChapterDetailView: View {
                 return "insideTheLeafTour"
             case .ch1ConceptMap:
                 return "ch1ConceptMap"
+            case .insideTheWireTour:
+                return "insideTheWireTour"
+            case .insideTheLensTour:
+                return "insideTheLensTour"
             }
         }
     }
@@ -76,6 +82,7 @@ struct ChapterDetailView: View {
     private var surfacesGroupTop: some View {
         Group {
             ch1PilotInteractives  // empty unless chapter.id == "ch01"
+            propagatedPilotInteractives  // empty unless chapter.id ∈ {ch04,ch06,ch07,ch14,ch15}
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)
@@ -84,6 +91,70 @@ struct ChapterDetailView: View {
             MiniProjectsSectionView(chapter: chapter)
             TimelinesSectionView(chapter: chapter)
         }
+    }
+
+    /// Per-chapter Surface-2 / Surface-3 mounts propagated from the Ch.1
+    /// pilot (2026-05-24). Each entry is its own gate on chapter.id so
+    /// the wrong sandbox / tour never leaks into the wrong chapter. The
+    /// gates here are deliberately mutually exclusive — no chapter ships
+    /// more than one custom interactive in this round. This block is
+    /// one direct child of surfacesGroupTop so the @ViewBuilder 10-
+    /// child cap on that Group is preserved on Big Sur.
+    @ViewBuilder
+    private var propagatedPilotInteractives: some View {
+        if chapter.id == "ch04" {
+            BuildAHeatFlowSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch06" {
+            BuildAReactionSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch07" {
+            BuildAClimateSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch14" {
+            insideTheWireTourCTA
+        } else if chapter.id == "ch15" {
+            insideTheLensTourCTA
+        }
+    }
+
+    /// CTA card opening InsideTheWireTour sheet. Ch.14 only.
+    private var insideTheWireTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheWireTour }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "bolt.fill",
+                title: "Inside the wire",
+                subtitle: "Shrink to electron-size and trace the chain from battery to glowing filament — five-stop guided journey.",
+                gradient: [
+                    Color(red: 0.85, green: 0.65, blue: 0.10),
+                    Color(red: 0.60, green: 0.20, blue: 0.10)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Inside the wire — five-stop electron-flow tour")
+        .accessibilityHint("Opens a sheet that walks you from a battery's negative terminal through a copper lattice to a glowing bulb filament.")
+    }
+
+    /// CTA card opening InsideTheLensTour sheet. Ch.15 only.
+    private var insideTheLensTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheLensTour }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "eye.fill",
+                title: "Inside the lens",
+                subtitle: "Follow a ray of light from a distant star through a convex lens — when does it form a real image, when does it magnify?",
+                gradient: [
+                    Color(red: 0.45, green: 0.30, blue: 0.70),
+                    Color(red: 0.20, green: 0.45, blue: 0.75)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Inside the lens — five-stop refraction tour")
+        .accessibilityHint("Opens a sheet that walks you through how a convex lens refracts light, forms a real inverted image, and acts as a magnifying glass.")
     }
 
     /// Ch.1 pilot — five net-new pedagogical surfaces mount here. The
@@ -352,6 +423,16 @@ struct ChapterDetailView: View {
                 Ch1ConceptMap(
                     pack: pack,
                     chapter: chapter,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheWireTour:
+                InsideTheWireTour(
+                    chapterId: chapter.id,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheLensTour:
+                InsideTheLensTour(
+                    chapterId: chapter.id,
                     onDismiss: { presentedSheet = nil }
                 )
             }
