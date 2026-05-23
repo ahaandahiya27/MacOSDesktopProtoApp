@@ -30979,6 +30979,552 @@
         182,
         183,
         184
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch14_rw01",
+          "title": "How an LED bulb saves your family money",
+          "body": "An old incandescent bulb (60 W) and a modern LED (8 W) both produce the same light. The incandescent heats a wire until it glows — only 5% of the electricity becomes light; 95% becomes heat. The LED uses semiconductor physics — 40% of electricity becomes light. Over a year, replacing 5 incandescent bulbs with LEDs saves a Mumbai household ~₹2400 in electricity. Government's UJALA scheme distributed 36 crore LED bulbs at subsidised rates — collectively saving India 48 billion units of power per year.",
+          "relatedConceptIds": [
+            "ch14_t02_c01",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_rw02",
+          "title": "Indian Railways' 25 kV catenary wires overhead",
+          "body": "When you see a train with a pantograph touching wires above, that's the electric train collecting current. The overhead wires carry 25,000 volts AC (compared to your home's 230 V). High voltage = less current = less heat loss in wires. The pantograph slides along the wire as the train moves. A single Vande Bharat train pulls ~5000 kW of power — enough for ~25,000 homes. Indian Railways is the world's largest electric railway by track length.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_rw03",
+          "title": "Why your hair sticks up near a TV tube (legacy CRT)",
+          "body": "Old CRT TVs and computer monitors used a fast stream of electrons to paint the screen. As you sat close, some of those electrons leaked into the air around you. The air, your hair, your skin — all picked up extra negative charge. Hair strands all became negative → they repelled each other → stood on end. Modern LED TVs don't do this. But you can still see the effect by rubbing a plastic comb on your hair and holding it near small paper bits.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_rw04",
+          "title": "Indian junkyard cranes — electromagnets at work",
+          "body": "Walk into a scrap metal yard in Ludhiana or Jamshedpur — you'll see a crane with a huge disc on a chain, lifting tons of iron scrap. That disc is an electromagnet — wires wound around an iron core. When the crane operator presses a button, current flows → the disc becomes magnetic → it picks up all the iron pieces below. Release the button → no current → no magnetism → scrap falls into the truck. An electromagnet's power can be switched on and off — a permanent magnet can't.",
+          "relatedConceptIds": [
+            "ch14_t03_c01",
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_rw05",
+          "title": "Monsoon lightning kills more Indians than floods",
+          "body": "India sees ~2000 lightning deaths per year — more than from floods or cyclones. Why so many? Many rural workers are outdoors during monsoon, far from buildings, often holding metal tools. A lightning strike is electric current — 30,000 amperes (your home has ~16 A maximum) — at 100 million volts. Safety: get indoors during a thunderstorm. If outdoors, AVOID trees, water bodies, and metal objects. Crouch low if no shelter. The government's Lightning Resilient India campaign issues SMS warnings — saving lives.",
+          "relatedConceptIds": [
+            "ch14_t01_c03"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch14_xc01",
+          "title": "Class 10 — Electricity (Ohm's Law)",
+          "body": "Class 10 introduces Ohm's Law: V = I × R (voltage = current × resistance). The Class 7 'current heats a wire' becomes quantitative — heat = I² × R × t. You'll learn series vs parallel circuits, household wiring diagrams, and electric power (P = V × I).",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_xc02",
+          "title": "Class 10 — Magnetic Effects of Electric Current",
+          "body": "An entire Class 10 chapter expands Ørsted's discovery into the right-hand rule, solenoids, electric motors, generators, and household AC power. The Class 7 'current produces magnetism' becomes electromagnetic engineering.",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch14_t03_c01",
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_xc03",
+          "title": "JEE / Class 12 — Electromagnetic Induction",
+          "body": "JEE pushes deeper into electromagnetic induction (Faraday's law) — moving a wire in a magnetic field produces current. This is how every generator and electric motor in India works. The Class 7 chapter is the first hint of a vast engineering edifice.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch14_t03_c02"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch14_mn01",
+          "acronym": "VICR",
+          "unpacking": "V-oltage drives I (current) through R (resistance). Higher V → more I. Higher R → less I. V = I × R is the foundational electrical law.",
+          "context": "Ohm's law preview.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_mn02",
+          "acronym": "CHIRP",
+          "unpacking": "Current Heating effect: I² × R × t = heat. Loops to a single P (power) word: P = I²R. This is why thin wires get hot when too much current flows — the fuse principle.",
+          "context": "Heating effect of current.",
+          "relatedConceptIds": [
+            "ch14_t02_c01",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_mn03",
+          "acronym": "ORSTED",
+          "unpacking": "Ø-rsted in 1820: he placed a compass near a wire carrying current — the compass needle MOVED. He discovered electricity makes magnetism. Every modern motor, speaker, hard drive, MRI machine — they all owe their existence to this single observation.",
+          "context": "The magnetic effect of current — origin story.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch14_ms01",
+          "kidsThink": "Current is consumed in a bulb.",
+          "actually": "Current is NOT consumed. The same amount of current that enters the bulb leaves the bulb. What's consumed is ENERGY (electrons lose energy as they pass through the bulb filament, energy released as heat + light). Think of it like a water turbine — water that enters also exits; the WATER isn't consumed, the PRESSURE drop powers the turbine. Same with current and voltage.",
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms02",
+          "kidsThink": "AC and DC current are 'different kinds of electricity'.",
+          "actually": "Both are electric current — just different patterns. DC (Direct Current): electrons flow in one direction continuously. Batteries, USB chargers — DC. AC (Alternating Current): electrons reverse direction 50 times per second (in India). Power grids — AC. The reason for AC: it's easier to step up/down with transformers, so power can travel long distances at high voltage then be stepped down at homes. Same electrons, same physics — just flow patterns.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms03",
+          "kidsThink": "A fuse 'stops too much electricity'.",
+          "actually": "A fuse is a deliberately weak link — a thin wire that MELTS when too much current passes through. When it melts, the circuit breaks, stopping current entirely. The fuse SACRIFICES itself to save the rest of the wiring (which would otherwise overheat and start a fire). After a fuse blows, you replace it — and ideally find out WHY too much current flowed. Modern MCBs (Miniature Circuit Breakers) do the same job but reset instead of needing replacement.",
+          "relatedConceptIds": [
+            "ch14_t01_c03",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_ms04",
+          "kidsThink": "Magnets and electricity are separate things.",
+          "actually": "They're INTERTWINED — that's the deepest discovery in physics history. Moving electric charges create magnetic fields. Moving magnets create electric currents. These are TWO ASPECTS OF THE SAME THING — electromagnetism. Maxwell showed in 1865 that light itself is a wave of electromagnetism. Class 7 introduces the first link (Ørsted's compass). Class 12 reveals the full unity.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms05",
+          "kidsThink": "Rubber-soled shoes always protect you from electric shock.",
+          "actually": "Rubber soles add SOME resistance, but at high voltages (anything above 50 V) they can still allow current through. Genuine electrical work uses INSULATED tools and gloves rated for the voltage. The myth that 'rubber slippers protect you from anything' has killed people. Hospital corridors and electrical substations have dedicated insulating mats for a reason — chappals alone aren't safety equipment.",
+          "relatedConceptIds": [
+            "ch14_t01_c03"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch14_nq01",
+          "question": "Draw in your notebook the symbols to represent: electric cell, switch in OFF position, electric bulb, battery, switch in ON position, and wire.",
+          "modelAnswer": "Electric cell: longer line | shorter thick line. Battery: multiple cells joined ||||. Switch OFF: gap in line with arc above. Switch ON: line completed. Bulb: circle with X inside or ⊗. Wire: simple straight line ───. These are the standard symbols used in circuit diagrams worldwide.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq02",
+          "question": "Mark 'T' if the statement is true and 'F' if it is false: (a) To make a battery of two cells, the negative terminal of one cell is connected to the negative terminal of the other cell. (b) When current is switched on through a wire, a compass needle placed near it gets deflected. (c) An electromagnet does not attract a piece of iron. (d) An electric bell has an electromagnet.",
+          "modelAnswer": "(a) F — to make a battery, you connect POSITIVE of one cell to NEGATIVE of the next (in series). Negative-to-negative cancels and gives zero voltage. (b) T — Ørsted's discovery. The compass deflects because current creates a magnetic field. (c) F — an electromagnet (current-carrying coil with iron core) definitely attracts iron when current flows. (d) T — every electric bell has a small electromagnet that pulls the striker against the bell, then releases it, then pulls again — making the ringing.",
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t03_c01",
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_nq03",
+          "question": "Do you think an electric circuit can have more than one switch?",
+          "modelAnswer": "Yes — and most household circuits do. Your home's main switch can cut all power; individual room switches can cut their lights/fans only. Stair lighting often uses 'two-way switches' — one at top, one at bottom — so either can turn the same light on or off. Industrial circuits often have many switches, with safety logic ensuring no equipment runs without permission. The Class 7 single-switch circuit is the simplest case; real circuits scale up.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq04",
+          "question": "The bulb in the circuit shown in Figure does not glow. Can you identify the problem? Make necessary changes in the circuit to make the bulb glow.",
+          "modelAnswer": "Common reasons a bulb in a circuit doesn't glow: (1) Switch is OFF. (2) Cells (battery) are connected wrong way — same poles together cancel out. (3) Loose wire connection. (4) Bulb filament is broken (looks intact but no light). (5) Bulb's terminals aren't touching the circuit. To fix: check switch is ON; check cells connected positive-to-negative-to-positive; tighten all wire ends; test bulb in a known-working circuit.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq05",
+          "question": "Name any two effects of electric current.",
+          "modelAnswer": "(1) HEATING effect — current passing through a wire makes it hot. This is used in electric heaters, geysers, electric kettles, irons. The bulb filament glows because it's so hot. (2) MAGNETIC effect — current passing through a coil creates a magnetic field. Used in electric bells, doorbells, motors, electromagnets, MRI scanners, hard drives. Both effects together = vast modern technology. (A third effect: chemical, in batteries and electroplating.)",
+          "relatedConceptIds": [
+            "ch14_t02_c01",
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq06",
+          "question": "When the current is switched on through a wire, a compass needle kept nearby gets deflected from its north-south position. Explain.",
+          "modelAnswer": "This is Ørsted's 1820 discovery. A current-carrying wire creates a magnetic field around itself, perpendicular to the wire (forming circles around the wire). A compass needle aligns with any magnetic field. Normally, only Earth's magnetic field reaches it, so it points north-south. When current flows in the nearby wire, the wire's magnetic field adds to Earth's — strong enough nearby that the compass needle now points along the COMBINED field, deflected from true north. Turn off current → field disappears → needle returns to north-south.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq07",
+          "question": "Will the compass needle show deflection when the switch in the circuit shown by Figure is closed?",
+          "modelAnswer": "Yes. Closing the switch completes the circuit; current flows in the wire. By Ørsted's discovery, current creates a magnetic field; the compass needle responds to that field. The exact direction of deflection depends on the direction of current flow (rule: right-hand thumb in current direction, fingers curl in field direction). When switch opens → no current → no field → needle returns to north-south.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_nq08",
+          "question": "Name two safety measures commonly used in electric circuits and appliances.",
+          "modelAnswer": "(1) FUSE — a deliberately weak wire that melts when current exceeds safe limit, breaking the circuit before wires overheat or cause fire. (2) Earthing/Grounding — connecting metal cases of appliances to ground via a third wire. If a live wire accidentally touches the metal case, current flows safely to ground (not through a person touching the case). Modern homes also use MCBs (auto-resetting fuses) and ELCBs (Earth Leakage Circuit Breakers) that detect tiny leakage and trip instantly — saving lives.",
+          "relatedConceptIds": [
+            "ch14_t01_c03",
+            "ch14_t02_c02"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch14_gl01",
+          "term": "Electric current",
+          "definition": "The flow of electric charge (electrons) through a conductor.",
+          "example": "When you switch on a fan, current flows through its wires and motor.",
+          "hindiTerm": "विद्युत धारा",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl02",
+          "term": "Circuit",
+          "definition": "A closed path that allows electric current to flow.",
+          "example": "A torch with cell + bulb + switch makes a simple circuit.",
+          "hindiTerm": "परिपथ",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl03",
+          "term": "Voltage / Potential difference",
+          "definition": "The push that drives current through a circuit, measured in volts.",
+          "example": "An AA cell is 1.5 V; an Indian home socket is 230 V; a high-voltage line is 132 kV.",
+          "hindiTerm": "विभवांतर",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl04",
+          "term": "Resistance",
+          "definition": "How much a material resists the flow of current; measured in ohms (Ω).",
+          "example": "A tungsten bulb filament has high resistance — that's why it heats up and glows.",
+          "hindiTerm": "प्रतिरोध",
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl05",
+          "term": "Fuse",
+          "definition": "A thin wire that melts when current exceeds a safe limit, breaking the circuit.",
+          "example": "A 5 A fuse protects a circuit by melting if current exceeds 5 amperes.",
+          "hindiTerm": "फ्यूज़",
+          "relatedConceptIds": [
+            "ch14_t01_c03",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_gl06",
+          "term": "MCB (Miniature Circuit Breaker)",
+          "definition": "A modern auto-resetting safety device that trips when current exceeds limit.",
+          "example": "Modern Indian homes have an MCB panel near the meter — instead of fuses.",
+          "hindiTerm": "एमसीबी",
+          "relatedConceptIds": [
+            "ch14_t01_c03"
+          ]
+        },
+        {
+          "id": "ch14_gl07",
+          "term": "Electromagnet",
+          "definition": "A magnet created by passing current through a coil of wire wound around an iron core.",
+          "example": "Scrap yard cranes lift tonnes of iron with electromagnets.",
+          "hindiTerm": "विद्युत चुम्बक",
+          "relatedConceptIds": [
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_gl08",
+          "term": "Conductor",
+          "definition": "A material that allows current to flow easily — usually metals.",
+          "example": "Copper, aluminium, silver, iron — all are good conductors.",
+          "hindiTerm": "चालक",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl09",
+          "term": "Insulator",
+          "definition": "A material that resists current flow.",
+          "example": "Rubber, plastic, wood, glass, dry air — all are insulators.",
+          "hindiTerm": "विद्युतरोधी",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl10",
+          "term": "Battery",
+          "definition": "Two or more cells connected together to provide higher voltage.",
+          "example": "A car battery is six 2-volt cells in series, giving 12 V.",
+          "hindiTerm": "बैटरी",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch14_mp01",
+          "emoji": "🧲",
+          "title": "Build your own electromagnet with a battery and a nail",
+          "needs": [
+            "An iron nail (~10 cm)",
+            "1.5 m of thin insulated copper wire (24 gauge magnet wire)",
+            "A 1.5 V cell with holder (or two cells for a stronger magnet)",
+            "Some small iron objects: paper clips, pins, staples"
+          ],
+          "steps": [
+            "Strip 1 cm of insulation off both ends of the copper wire.",
+            "Wrap the wire tightly around the nail — 50+ turns. Leave 10 cm free at each end.",
+            "Connect the two free ends to the cell terminals (one to + and one to −).",
+            "Bring the nail tip near the paper clips.",
+            "Lift them! Now disconnect one wire — what happens?"
+          ],
+          "expectedObservation": "When connected, the nail picks up paper clips. When disconnected, they fall off. More turns of wire = stronger magnet. Two cells (3 V) = stronger magnet than one.",
+          "whyItWorks": "Current flowing through the coil creates a magnetic field. The iron nail (core) concentrates and amplifies the field. The result: an on-demand magnet. This is exactly how industrial cranes, MRI machines, doorbells, and electric motors are built — the principle scales from this nail to multi-tonne cranes.",
+          "estimatedMinutes": 20,
+          "relatedConceptIds": [
+            "ch14_t03_c01",
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_mp02",
+          "emoji": "🍋",
+          "title": "Lemon battery — make electricity from fruit",
+          "needs": [
+            "3 lemons (juicy, ripe)",
+            "3 copper coins or copper strips",
+            "3 zinc-coated (galvanised) nails or zinc strips",
+            "Insulated wires with clips on the ends",
+            "A small LED or a multimeter"
+          ],
+          "steps": [
+            "Roll each lemon to break the membranes inside.",
+            "Insert one copper coin and one zinc nail into each lemon, NOT touching each other.",
+            "Connect: zinc of lemon 1 → copper of lemon 2 (wire). Zinc of lemon 2 → copper of lemon 3 (wire). Now you have a series of 3 lemons.",
+            "Connect free zinc to one LED leg, free copper to the other.",
+            "Observe."
+          ],
+          "expectedObservation": "The LED glows dimly. One lemon alone gives ~0.9 V; three in series give ~2.7 V — enough to light a small LED. The lemons act as wet-cell batteries.",
+          "whyItWorks": "Lemon juice (citric acid) is an electrolyte — ions flow between the zinc and copper electrodes. The zinc loses electrons to the acid; the copper gains them. Electrons travel through the external wire (your LED) from zinc to copper. Same principle as a 9 V battery — different electrolyte and electrodes, but identical chemistry. Alessandro Volta's first battery (1800) used the same idea.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch14_sci01",
+          "name": "Mokshagundam Visvesvaraya",
+          "lifespan": "1861–1962",
+          "nationality": "Indian",
+          "oneLineLegacy": "Engineer who built India's first hydroelectric power station and modern dam — turning Ørsted's electromagnetism into electricity for villages.",
+          "narrative": "Visvesvaraya was born in 1861 in a poor Brahmin family in Chikkaballapur (Karnataka). He walked 6 km daily to school. Through scholarships he became an engineer, then Chief Engineer of Mysore state. In 1932 he completed the Krishna Raja Sagara dam on the Cauvery — its hydroelectric station was India's first major electric power supply, lighting Bengaluru and Mysore. He invented automatic flood gates (still used at Khadakwasla dam in Pune). He chaired the first nationally-funded engineering college (now IISc Bangalore). He was knighted (Sir M.V.) and given Bharat Ratna. He lived to be 101. Every September 15 — his birthday — is India's National Engineer's Day. Visvesvaraya didn't discover the equations; he TURNED them into infrastructure. The current flowing through your home tonight, the LED bulb that just clicked on, the rural village lit under Saubhagya Yojana — all run on the engineering tradition he founded. Ørsted's compass moved in Denmark in 1820; Visvesvaraya's turbines moved water in Karnataka in 1932 — same physics, civilization-scale impact.",
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t02_c01",
+            "ch14_t03_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch14_wi01",
+          "question": "What if all electrons stopped flowing for 1 minute on Earth?",
+          "answer": "Everything that uses electricity would simultaneously fail. Lights, computers, phones, fridges, hospitals (life-support, MRI), traffic signals, ATMs, internet — all dark. Cars with combustion engines would still run (mechanical spark from battery — but if battery electrons stop, spark plugs wouldn't fire either, so cars die too). Even your brain uses tiny electric currents in neurons — so YOU would be unconscious. After 60 seconds when electrons resume, hospitals would race to restart patients on life-support. Civilization is electron-flow dependent in ways we barely notice.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_wi02",
+          "question": "What if you could create a permanent electromagnet (no current needed)?",
+          "answer": "You CAN — kind of. By passing current through a coil around a piece of iron, the iron gets MAGNETISED. If the iron has enough 'magnetic memory' (high coercivity), it stays magnetised even after current stops — that's a permanent magnet. So electromagnets and permanent magnets aren't opposites; permanent magnets are 'fossilised electromagnets'. You can demagnetise them by heating (random thermal motion erases the alignment), hammering (mechanical shock disturbs alignment), or applying an opposing field.",
+          "relatedConceptIds": [
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_wi03",
+          "question": "What if your home's voltage was 24 V instead of 230 V?",
+          "answer": "Safer — you wouldn't die from touching wires. But: current needed would be 230/24 ≈ 10× larger for the same appliance. Wires would have to be 10× THICKER. Power loss in wires goes up by 100× (proportional to current squared). Indian homes would need bus-bar-sized wires. The reason for high voltage: thinner wires can carry the same power. Tradeoff: higher voltage = more dangerous but more efficient. Some countries DO use 110V (USA); India and Europe chose 230V for efficiency.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch14_cx01",
+          "toChapterId": "ch15",
+          "topic": "Light",
+          "pointer": "Ch.14's bulb produces light via heating. Ch.15 studies what light does after it leaves the bulb (reflection, refraction, dispersion).",
+          "relatedConceptIds": [
+            "ch14_t02_c01",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_cx02",
+          "toChapterId": "ch13",
+          "topic": "Motion and Time",
+          "pointer": "Ch.13's atomic clocks use the magnetic properties of cesium atoms — current and magnetism together. Modern time depends on Class 7's electromagnetism.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 doesn't have a dedicated electricity chapter, but 'Chemical Effects of Electric Current' covers electroplating and conductivity in liquids. Class 8 also has 'Some Natural Phenomena' covering lightning safety.",
+        "forNeetJee": "Class 10 has both 'Electricity' (Ohm's Law, V-I, series-parallel circuits) and 'Magnetic Effects of Electric Current' (right-hand rule, electromagnets, motors). Class 12 covers Electromagnetic Induction (Faraday) and AC circuits. JEE problems combine electrostatics with magnetism — full electromagnetic theory built on Class 7's foundation."
+      },
+      "gallery": [
+        {
+          "id": "ch14_gi01",
+          "caption": "Simple circuit with cell, switch, bulb",
+          "detail": "The simplest circuit: + terminal of cell → wire → switch → wire → bulb → wire back to − terminal of cell. Close switch, current flows, bulb lights. Every household circuit is this same loop scaled up.",
+          "assetHint": "sfsymbol:bolt.circle",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gi02",
+          "caption": "Bulb filament glowing",
+          "detail": "Inside the glass: a thin tungsten wire wound into a coil. Current passes through; resistance heats it to ~2500°C. White-hot tungsten radiates visible light. Vacuum or inert gas inside prevents the filament from burning. 95% of energy becomes heat, 5% light — why LEDs replaced it.",
+          "assetHint": "sfsymbol:lightbulb.fill",
+          "relatedConceptIds": [
+            "ch14_t02_c01",
+            "ch14_t02_c02"
+          ]
+        },
+        {
+          "id": "ch14_gi03",
+          "caption": "Fuse vs MCB",
+          "detail": "Old fuse: thin tin or lead wire in ceramic holder. Melts → replace whole fuse. MCB (modern): switch + thermal/magnetic trip mechanism. Overcurrent → switch trips. Flip it back up after fixing cause. Both protect against overcurrent.",
+          "assetHint": "sfsymbol:exclamationmark.triangle.fill",
+          "relatedConceptIds": [
+            "ch14_t01_c03"
+          ]
+        },
+        {
+          "id": "ch14_gi04",
+          "caption": "Compass needle near current wire",
+          "detail": "Ørsted's 1820 setup: wire carrying current laid horizontally, compass needle below it. With switch open, needle points north. Close switch → needle swings ~90° to point along the wire's magnetic field. The single experiment that linked electricity to magnetism.",
+          "assetHint": "sfsymbol:location.north.fill",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gi05",
+          "caption": "Electromagnet inside an electric bell",
+          "detail": "Bell mechanism: coil + iron core + striker. Press button → current flows → electromagnet pulls striker toward bell. As striker moves, it breaks the circuit → magnet loses power → spring pulls striker back → circuit closes again → repeat. Result: rapid clanging.",
+          "assetHint": "sfsymbol:bell.fill",
+          "relatedConceptIds": [
+            "ch14_t03_c02"
+          ]
+        },
+        {
+          "id": "ch14_gi06",
+          "caption": "Scrap yard crane electromagnet",
+          "detail": "A massive disc (1-2 m diameter) on a chain. Switch ON: picks up tons of iron scrap. Drive truck below. Switch OFF: scrap drops. Permanent magnets couldn't do this — you'd never get them to release.",
+          "assetHint": "sfsymbol:hammer.fill",
+          "relatedConceptIds": [
+            "ch14_t03_c02"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch14_tl01",
+          "title": "From battery to bulb — what happens in 1 millisecond",
+          "intro": "The instant you flip a switch, a chain of events propagates through your circuit.",
+          "steps": [
+            {
+              "id": "ch14_tl01_s01",
+              "label": "Switch closes",
+              "body": "The metal contacts of the switch touch. Suddenly there's a continuous metal path from one terminal of the cell, through the wire, through the bulb filament, back to the other terminal.",
+              "assetHint": "sfsymbol:switch.2"
+            },
+            {
+              "id": "ch14_tl01_s02",
+              "label": "Voltage applied",
+              "body": "The cell's chemical reaction creates a voltage difference (1.5 V for AA). This 'push' is felt across the entire circuit almost instantly — at the speed of light through wires.",
+              "assetHint": "sfsymbol:bolt.fill"
+            },
+            {
+              "id": "ch14_tl01_s03",
+              "label": "Electrons start drifting",
+              "body": "Free electrons in the wire start drifting from − terminal toward + terminal. Each electron moves slowly (~mm/sec) but trillions move at once.",
+              "assetHint": "sfsymbol:arrow.right.circle"
+            },
+            {
+              "id": "ch14_tl01_s04",
+              "label": "Filament heats up",
+              "body": "Electrons collide with tungsten atoms in the filament. Energy is dumped as heat. Within ~50 ms, filament reaches 2500°C.",
+              "assetHint": "sfsymbol:flame.fill"
+            },
+            {
+              "id": "ch14_tl01_s05",
+              "label": "Glow begins",
+              "body": "Hot tungsten radiates electromagnetic waves — initially infrared (heat), then visible light. Bulb appears to be glowing within ~100 ms of switch close.",
+              "assetHint": "sfsymbol:lightbulb.fill"
+            },
+            {
+              "id": "ch14_tl01_s06",
+              "label": "Steady state",
+              "body": "Heat lost to air = heat from current. Filament stabilises at full brightness. As long as switch stays closed, this loop continues — billions of electrons per second, sustaining the light.",
+              "assetHint": "sfsymbol:arrow.triangle.2.circlepath"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t02_c01"
+          ]
+        }
       ]
     },
     {
