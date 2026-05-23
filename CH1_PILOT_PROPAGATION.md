@@ -37,49 +37,86 @@ are per-chapter judgement calls — not every chapter has manipulable
 variables or microscopic structure worth touring; skip cleanly when
 the chapter doesn't fit.
 
-## Progress as of 2026-05-23 (live status)
+## Progress as of 2026-05-23 — propagation COMPLETE
 
-| Chapter | Content propagated? | Commit |
-|---------|---------------------|--------|
-| Ch.1 Nutrition in Plants | ✅ pilot (all 5 surfaces incl. sandbox + tour) | `01617b6` |
-| Ch.2 Nutrition in Animals | ✅ content-only (predict + whyChain + map) | `6728f99` |
-| Ch.3 Fibre to Fabric | ⏳ pending | — |
-| Ch.4 Heat | ⏳ pending | — |
-| Ch.5 Acids, Bases, Salts | ⏳ pending | — |
-| Ch.6 Physical / Chemical Changes | ⏳ pending — sandbox candidate | — |
-| Ch.7 Weather, Climate, Adaptations | ⏳ pending — sandbox candidate | — |
-| Ch.8 Winds, Storms, Cyclones | ⏳ pending | — |
-| Ch.9 Soil | ⏳ pending | — |
-| Ch.10 Respiration in Organisms | ✅ content-only | `6728f99` |
-| Ch.11 Transportation in Animals & Plants | ✅ content-only | `b9fdfc4` |
-| Ch.12 Reproduction in Plants | ⏳ pending | — |
-| Ch.13 Motion and Time | ✅ content-only | `ad6367c` |
-| Ch.14 Electric Current and its Effect | ✅ content-only | (next commit) |
-| Ch.15 Light | ✅ content-only | `ad6367c` |
-| Ch.16 Water: A Precious Resource | ✅ content-only | `b9fdfc4` |
-| Ch.17 Forest: Our Lifeline | ✅ content-only | `6728f99` |
-| Ch.18 Wastewater Story | ⏳ pending | — |
-| Ch.19 Solar System | ⏳ pending — biggest chapter (23 concepts) | — |
+| Chapter | Content propagated? | Round | Commit |
+|---------|---------------------|-------|--------|
+| Ch.1 Nutrition in Plants | ✅ pilot (all 5 surfaces incl. sandbox + tour) | 0 | `01617b6` |
+| Ch.2 Nutrition in Animals | ✅ content-only | 1 | `6728f99` |
+| Ch.3 Fibre to Fabric | ✅ content-only | 6 | `aac7c4f` (+`f34abe8` fix) |
+| Ch.4 Heat | ✅ content-only | 5 | `ac3944b` |
+| Ch.5 Acids, Bases, Salts | ✅ content-only | 6 | `aac7c4f` |
+| Ch.6 Physical / Chemical Changes | ✅ content-only | 5 | `ac3944b` |
+| Ch.7 Weather, Climate, Adaptations | ✅ content-only | 6 | `aac7c4f` |
+| Ch.8 Winds, Storms, Cyclones | ✅ content-only | 6 | `aac7c4f` |
+| Ch.9 Soil | ✅ content-only | 6 | `aac7c4f` |
+| Ch.10 Respiration in Organisms | ✅ content-only | 1 | `6728f99` |
+| Ch.11 Transportation in Animals & Plants | ✅ content-only | 2 | `b9fdfc4` |
+| Ch.12 Reproduction in Plants | ✅ content-only | 6 | `aac7c4f` |
+| Ch.13 Motion and Time | ✅ content-only | 3 | `ad6367c` |
+| Ch.14 Electric Current and its Effect | ✅ content-only | 4 | (chXX) |
+| Ch.15 Light | ✅ content-only | 3 | `ad6367c` |
+| Ch.16 Water: A Precious Resource | ✅ content-only | 2 | `b9fdfc4` |
+| Ch.17 Forest: Our Lifeline | ✅ content-only | 1 | `6728f99` |
+| Ch.18 Wastewater Story | ✅ content-only | 6 | `aac7c4f` |
+| Ch.19 Earth, Moon and the Sun | ✅ content-only (biggest — 23 concepts) | 7 | (this commit) |
 
-**9 of 19 chapters complete.** Estimated remaining: ~7–9 hours
-across the 10 pending chapters.
+**19 of 19 chapters complete.** Content-only propagation done. The
+five Ch.1 pilot surfaces (predict-before-reveal, WhyChainView,
+ConceptMap, BuildAPlantSandbox, InsideTheLeafTour) now have
+content authored across the entire NCERT Class 7 Science syllabus.
 
-### Cross-chapter network so far
-Bi-directional concept-map loops:
+Per-chapter custom interactives (Surface 2 BuildA{X}Sandbox / Surface
+3 InsideThe{X}Tour) remain a per-chapter judgement call — not every
+chapter has manipulable variables or microscopic structure worth
+touring. These are deliberately NOT propagated wholesale; they ship
+chapter by chapter as the right pattern emerges. Current state: only
+Ch.1 has both (the pilot). Future rounds may add them selectively.
+
+### Cross-chapter network — final shape
+
+After Ch.19 lands, the concept map graph spans all 19 chapters with
+the following clusters and bridges:
+
+**Bio cluster** (ch01, ch02, ch10, ch11, ch12, ch17):
 - ch01 ↔ ch02 (photosynthesis ↔ nutrition opposite)
 - ch01 ↔ ch10 (photosynthesis ↔ respiration reverse)
-- ch10 ↔ ch11 (haemoglobin ↔ heart transports)
-- ch17 ↔ ch16 (forests ↔ water cycle)
-
-One-way pointers:
+- ch10 ↔ ch11 (haemoglobin ↔ heart transports O₂)
 - ch11 → ch01 (transpiration via stomata)
-- ch16 → ch01 (stomata transpire into water cycle)
+- ch17 → ch01 (forests = mass photosynthesis)
+- ch12 → ch01 (parasitic plants exploit reproductive system)
 - ch02 → ch10 (cells use nutrients ← fuelled by respiration)
 
-Physics cluster (ch13, ch14, ch15) is isolated so far — when Ch.4
-(Heat) is propagated, expect natural links to Ch.13 (motion-heat
-relation), Ch.14 (heating effect of current), Ch.15 (radiation /
-infrared dispersion).
+**Env cluster** (ch07, ch09, ch16, ch17, ch18):
+- ch17 ↔ ch16 (forests ↔ water cycle)
+- ch09 ↔ ch17 (soil-forest cycle)
+- ch16 ↔ ch01 (stomata transpire into water cycle)
+- ch07 → ch04 (climate change is heat phenomenon)
+- ch07 → ch17 (forests preserve adaptation habitats)
+- ch18 → ch16 (WWTPs preserve water resources)
+- ch09 → ch01 (crop rotation refills nitrogen)
+
+**Physics cluster** (ch04, ch08, ch13, ch14, ch15):
+- ch13 ↔ ch14 (motion meets electric current)
+- ch15 → ch04 (radiation is heat, both wave-physics)
+- ch08 → ch04 (winds are convection, scaled up)
+- ch06 ↔ ch04 (chemical change releases / absorbs heat)
+
+**Chem cluster** (ch05, ch06):
+- ch05 → ch01 (ocean acidification ↔ photosynthesis CO₂)
+- ch06 → ch04 (chemical change is also heat change)
+- ch06 → ch10 (respiration is biological combustion)
+
+**Astro cluster** (ch19) — joins everything:
+- ch19 → ch04 (uneven heating drives convection)
+- ch19 → ch07 (axial tilt drives climate zones)
+- ch19 → ch08 (Coriolis effect shapes cyclones)
+- ch19 → ch16 (Moon's gravity moves oceans → tides)
+
+This produces a single connected graph: from Solar System (ch19) you
+can reach photosynthesis (ch01) via ch04 (Heat) → ch07 (Climate) →
+ch17 (Forests) → ch01 in 4 hops. Pedagogically, this is the prize:
+the kid never gets the impression that each chapter is an island.
 
 ## Recommended propagation order
 

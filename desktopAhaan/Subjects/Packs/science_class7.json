@@ -46099,7 +46099,13 @@
                 156
               ],
               "needsHumanReview": false,
-              "mnemonic": "Earth is an OBLATE SPHEROID — slightly flattened at the poles, bulging at the equator (rotation effect). Axis tilted 23.5° from orbital plane — that tilt CAUSES seasons."
+              "mnemonic": "Earth is an OBLATE SPHEROID — slightly flattened at the poles, bulging at the equator (rotation effect). Axis tilted 23.5° from orbital plane — that tilt CAUSES seasons.",
+              "predictQuestion": "Predict before reading: if Earth were a perfect sphere with no axial tilt, would we still have seasons, longer summer days, and an Antarctic winter night six months long?",
+              "whyChain": [
+                "Earth is not a perfect sphere. It bulges at the equator and flattens at the poles — an oblate spheroid. The bulge is roughly 43 kilometres of extra diameter at the equator compared to the pole-to-pole diameter. That bulge is real: aircraft GPS, ocean levels, and pendulum measurements all confirm it. Without the bulge, things at the equator would feel slightly heavier and gravity would point straight to the centre everywhere.",
+                "The bulge exists because Earth spins. Spinning matter in any liquid or semi-solid body throws material outward — the same reason a wet spinning ball throws droplets sideways. Earth's mantle is plastic over geological timescales; it has had 4.5 billion years to settle into the shape its own rotation demands. The bulge is the equilibrium between gravity pulling inward and centrifugal effects pushing outward at the equator.",
+                "The tilted axis — 23.5° off vertical with respect to the orbit — is a separate fact about Earth. It is permanently leaning toward Polaris and has been doing so since the giant impact that formed our Moon ~4.5 billion years ago. The tilt does not slosh seasonally; it stays pointed the same way as Earth orbits the Sun, which is the entire secret of why seasons exist (concept c04 unpacks this)."
+              ]
             },
             {
               "id": "ch19_t01_c02",
@@ -46167,7 +46173,13 @@
                 157
               ],
               "needsHumanReview": false,
-              "mnemonic": "Rotation = Earth spinning on its OWN axis (one rotation = 24 hrs = 1 day). Side facing sun = day; opposite side = night. From space, the terminator (day-night line) sweeps westward."
+              "mnemonic": "Rotation = Earth spinning on its OWN axis (one rotation = 24 hrs = 1 day). Side facing sun = day; opposite side = night. From space, the terminator (day-night line) sweeps westward.",
+              "predictQuestion": "Predict before reading: why don't we feel Earth spinning at over 1670 kilometres per hour at the equator — and yet we definitely notice when a car turns sharply at just 40 km/h?",
+              "whyChain": [
+                "Day and night happen because Earth rotates once on its axis every 24 hours (more precisely, 23h 56min if measured against the stars). Half of Earth always faces the Sun (day side); half faces away (night side). The boundary between the two is the terminator — sunrise on its eastern edge, sunset on its western. As Earth rotates west-to-east, the Sun appears to move east-to-west across our sky.",
+                "We don't feel the spin because every part of Earth, the air above us, and our bodies are all moving together at the same speed. Sensation of motion comes from CHANGE in speed (acceleration), not from constant motion. A car turning is an acceleration — your body resists the new direction — so you feel it. A train moving smoothly at 200 km/h on straight track feels no different from being parked, until it brakes.",
+                "Rotation speed depends on latitude. At the equator we move at 1670 km/h. At Delhi (~28°N) we move at about 1470 km/h. At the poles we are essentially standing still — spinning in place once per day. This latitude-dependent speed is why the Coriolis effect (c07) is strongest at the poles and zero at the equator: speed changes as you move north or south, and that change deflects winds and cyclones."
+              ]
             },
             {
               "id": "ch19_t01_c03",
@@ -46227,7 +46239,13 @@
                 158
               ],
               "needsHumanReview": false,
-              "mnemonic": "Revolution = Earth orbiting the SUN (one revolution = 365.25 days = 1 year). Combined with axial tilt, drives seasons. India's monsoon is timed to this orbital cycle."
+              "mnemonic": "Revolution = Earth orbiting the SUN (one revolution = 365.25 days = 1 year). Combined with axial tilt, drives seasons. India's monsoon is timed to this orbital cycle.",
+              "predictQuestion": "Predict before reading: Earth's orbit around the Sun is slightly elliptical — at one point in the year we are about 5 million kilometres closer to the Sun. Would you bet that closer-distance falls in the Northern Hemisphere's summer or winter?",
+              "whyChain": [
+                "Earth orbits the Sun once every 365.25 days, travelling about 940 million kilometres at an average speed of 107,000 km/h. The orbit is slightly elliptical — Earth is closest to the Sun (perihelion) in early January at ~147 million km, and farthest (aphelion) in early July at ~152 million km. The 5 million km difference is small compared to the average distance.",
+                "Surprisingly, perihelion (closest approach) falls during the Northern Hemisphere's WINTER. That tells you the distance to the Sun is NOT what makes seasons. If it were, January would be the hottest month everywhere — but it's the coldest for everyone north of the equator. The actual driver of seasons is axial tilt (concept c04), not orbital distance.",
+                "Earth speeds up at perihelion (about 110,000 km/h) and slows at aphelion (about 105,000 km/h) — Kepler's second law, the equal-areas rule. This is why Northern Hemisphere summer is about a week longer than winter: at aphelion Earth crawls more slowly through that half of the orbit. The seasons are not equal-length quarters of the year; they are slightly skewed by orbital geometry."
+              ]
             },
             {
               "id": "ch19_t01_c04",
@@ -46294,7 +46312,13 @@
                 160
               ],
               "needsHumanReview": false,
-              "mnemonic": "Seasons = TILT + REVOLUTION. When N hemisphere tilts toward sun → summer; tilts away → winter. June solstice: N summer, S winter. Earth's distance from sun barely matters compared to tilt."
+              "mnemonic": "Seasons = TILT + REVOLUTION. When N hemisphere tilts toward sun → summer; tilts away → winter. June solstice: N summer, S winter. Earth's distance from sun barely matters compared to tilt.",
+              "predictQuestion": "Predict before reading: if you blocked the Sun's rays with a piece of cardboard at noon in summer vs winter, which case would the cardboard cast a longer shadow on the ground — and which case would feel more heat through the cardboard?",
+              "whyChain": [
+                "Seasons happen because Earth's axis is tilted 23.5°. As Earth orbits the Sun, the same axis stays pointed at Polaris year-round. For half the year the Northern Hemisphere leans toward the Sun (June solstice — long days, high Sun, summer). For the other half it leans away (December solstice — short days, low Sun, winter). The Southern Hemisphere does the opposite, six months out of phase.",
+                "What matters is the ANGLE the sunlight hits the ground, not the distance. When the Sun is high in the sky (summer), its rays strike the ground nearly vertically — concentrated heat per square metre. When the Sun is low (winter), the same rays spread out over a larger area and pass through more atmosphere along the way — diluted heat per square metre. The tilt changes both the day-length AND the steepness of the angle.",
+                "On the equinoxes (March 21, September 23), Earth's axis points neither toward nor away from the Sun. The Sun rises exactly east, sets exactly west, day and night are equal-length everywhere, and the entire planet gets roughly equal sunlight. The two solstices and two equinoxes mark the four corners of the seasonal cycle. The 23.5° tilt is also why the Arctic Circle is at 66.5° (= 90° − 23.5°): poleward of that, the Sun never sets in summer and never rises in winter."
+              ]
             },
             {
               "id": "ch19_t01_c05",
@@ -46345,7 +46369,13 @@
                 158
               ],
               "needsHumanReview": false,
-              "mnemonic": "Year is 365.2422 days, not 365. Adding 1 day every 4 years (leap year) corrects most drift. Centuries divisible by 100 but not 400 are NOT leap (1900 wasn't, 2000 was). Fine-tuning."
+              "mnemonic": "Year is 365.2422 days, not 365. Adding 1 day every 4 years (leap year) corrects most drift. Centuries divisible by 100 but not 400 are NOT leap (1900 wasn't, 2000 was). Fine-tuning.",
+              "predictQuestion": "Predict before reading: 2026 is a leap year. So is 2024. But 1900 was NOT a leap year, and 2000 WAS. What rule could possibly produce this surprising pattern?",
+              "whyChain": [
+                "Earth takes 365.2422 days to orbit the Sun — not exactly 365. If we ignored the extra quarter day, calendars would drift by about a day every four years; in a century summer would arrive in February. To fix this, we add a leap day (February 29) every four years — 366 days that year. This brings the calendar back into alignment with the seasons.",
+                "But 365.25 is itself slightly off from 365.2422. Adding a full day every 4 years is overcorrecting by about 11 minutes per year. Over a century, that overcorrection adds up to about 3 extra days the calendar doesn't want. So the rule has a correction: years divisible by 100 are NOT leap years. That's why 1700, 1800, 1900 were 365-day years even though they were divisible by 4.",
+                "But THAT overcorrection is itself slight overcorrection. So one more rule: years divisible by 400 ARE leap years. 2000 was, 1600 was. 2100 will not be, 2400 will. This is the Gregorian calendar, designed by Pope Gregory XIII in 1582. After all three rules combined, the calendar drifts by less than half a day per century. Astronomers will need to add a single 'leap second' here and there to keep clocks in sync with the slowing rotation of Earth."
+              ]
             },
             {
               "id": "ch19_t01_c06",
@@ -46402,7 +46432,13 @@
                 160
               ],
               "needsHumanReview": false,
-              "mnemonic": "24 time zones around Earth, ~15° longitude per zone. Sun is overhead at noon in each zone separately. India uses ONE zone (IST = UTC+5:30) despite being 28° wide — political simplicity."
+              "mnemonic": "24 time zones around Earth, ~15° longitude per zone. Sun is overhead at noon in each zone separately. India uses ONE zone (IST = UTC+5:30) despite being 28° wide — political simplicity.",
+              "predictQuestion": "Predict before reading: when it is noon in Delhi, what time is it in New York — and would the answer change if Earth rotated the other way around?",
+              "whyChain": [
+                "Earth rotates once every 24 hours, sweeping the Sun across the sky from east to west. Two places at different longitudes see the Sun overhead at different moments. To keep clocks meaningful, the planet is divided into 24 time zones, each spanning about 15° of longitude (15° × 24 = 360°). When it's noon in Delhi (UTC+5:30), it's 6:30 AM in London (UTC+0) and 1:30 AM in New York (UTC−5).",
+                "Time zones are political, not purely geometric. India spans about 30° of longitude — geographically it 'should' have two time zones (like the USA has four) — but uses a single one centred on 82.5°E for administrative simplicity. China spans 60° but uses only Beijing time. Russia has 11. The International Date Line in the Pacific is intentionally bent around islands so they don't have different dates from their neighbours.",
+                "If Earth rotated west-to-east instead of east-to-west (which it does NOT), the Sun would rise in the west and set in the east — meaning eastern cities would see sunrise LATER than western cities. So the time-zone numbering would reverse: New York would be ahead of Delhi, not behind. The current convention (east is ahead) is a direct consequence of Earth's actual rotation direction."
+              ]
             },
             {
               "id": "ch19_t01_c07",
@@ -46454,7 +46490,13 @@
                 160
               ],
               "needsHumanReview": false,
-              "mnemonic": "Coriolis = Earth's rotation deflects moving air/water RIGHT in N hemisphere, LEFT in S. Causes cyclones to rotate counterclockwise (N) and clockwise (S). Without rotation, no Coriolis."
+              "mnemonic": "Coriolis = Earth's rotation deflects moving air/water RIGHT in N hemisphere, LEFT in S. Causes cyclones to rotate counterclockwise (N) and clockwise (S). Without rotation, no Coriolis.",
+              "predictQuestion": "Predict before reading: if you fired a missile due north from the equator, where would it land — exactly on its target, slightly east of target, or slightly west of target — and would the answer flip if you fired it from the South Pole?",
+              "whyChain": [
+                "The Coriolis effect deflects anything moving over Earth's surface — winds, cyclones, ocean currents, even long-range missiles. In the Northern Hemisphere, moving objects are deflected to their right. In the Southern Hemisphere, to their left. At the equator there is no Coriolis deflection at all; at the poles it is maximum.",
+                "The effect happens because Earth rotates faster at the equator than near the poles (concept c02). A missile fired north from the equator starts with the equator's eastward speed (1670 km/h) baked in. As it flies north over slower-spinning ground, it 'overshoots' to the east. From an observer's frame, this looks like the missile curved right. From a non-rotating space view, the missile flies straight; it's the ground that has moved out from under it.",
+                "The Coriolis effect is the reason cyclones spin anticlockwise in the Northern Hemisphere and clockwise in the Southern. It is why the Ganga's eastern bank erodes faster than the western. It is why Earth's prevailing winds (trade winds, westerlies) follow consistent diagonal patterns. Without rotation, weather would move only north-south; with rotation, it spirals and curves — making weather forecasting one of the hardest things human beings still try to do."
+              ]
             },
             {
               "id": "ch19_t01_c08",
@@ -46508,7 +46550,13 @@
                 161
               ],
               "needsHumanReview": false,
-              "mnemonic": "Polaris (North Star) sits almost exactly above Earth's North Pole — appears FIXED while other stars circle it. Navigation reference for sailors. Won't always be there: precession shifts pole star over 26,000 years."
+              "mnemonic": "Polaris (North Star) sits almost exactly above Earth's North Pole — appears FIXED while other stars circle it. Navigation reference for sailors. Won't always be there: precession shifts pole star over 26,000 years.",
+              "predictQuestion": "Predict before reading: every star in the night sky appears to move across the sky over hours — except one. Why does Polaris stay still while Sirius (the brightest star) sweeps across the sky like all the others?",
+              "whyChain": [
+                "Polaris (the North Star) sits almost exactly above Earth's North Pole. As Earth rotates, every other star appears to circle around Polaris from our point of view — but Polaris itself barely moves because the rotation axis passes through it. Long-exposure photos of the sky show all stars as curved trails; Polaris shows up as a single dot at the centre.",
+                "This makes Polaris extraordinarily useful for navigation. Its altitude above the horizon equals your latitude. At Delhi (28°N), Polaris sits 28° above the northern horizon. At the equator, it sits exactly on the horizon. At the North Pole, it's directly overhead. Sailors and explorers used this trick for centuries — no GPS, no compass, just a star.",
+                "Polaris hasn't always been the pole star and won't always be. Earth's axis wobbles slowly like a spinning top — a 26,000-year cycle called precession. About 5,000 years ago, the pole star was Thuban (in the constellation Draco). In 12,000 years, it will be Vega. The ancient Egyptians aligned their pyramids to Thuban; Polaris just happens to be our pole star for this geological moment in history."
+              ]
             }
           ],
           "questions": [
@@ -48242,7 +48290,13 @@
                 162
               ],
               "needsHumanReview": false,
-              "mnemonic": "Moon = Earth's only natural satellite. Diameter ~1/4 Earth's. Distance: ~384,000 km. Formed ~4.5 billion years ago, probably from Earth-Mars-sized-impactor collision (giant-impact theory)."
+              "mnemonic": "Moon = Earth's only natural satellite. Diameter ~1/4 Earth's. Distance: ~384,000 km. Formed ~4.5 billion years ago, probably from Earth-Mars-sized-impactor collision (giant-impact theory).",
+              "predictQuestion": "Predict before reading: the Moon's gravity is one-sixth of Earth's. If you weigh 36 kg on Earth, you'd weigh 6 kg on the Moon. Now predict: would your MASS also be one-sixth?",
+              "whyChain": [
+                "The Moon is Earth's only natural satellite. It is 3,474 km across (about one-quarter Earth's diameter) and orbits Earth at an average distance of 384,400 km. Light reflects from the Moon's surface to Earth in about 1.3 seconds. The Moon has no atmosphere, no liquid water on the surface, and no magnetic field — a barren rocky world.",
+                "It formed about 4.5 billion years ago when a Mars-sized body called Theia collided with the young Earth. The collision flung a ring of debris into orbit, which clumped together over a few million years to form the Moon. This is why the Moon's composition is similar to Earth's mantle — it's basically a piece of early Earth that splashed off.",
+                "The Moon's gravity is one-sixth of Earth's because it has less mass and is smaller. Weight is mass × local gravity, so on the Moon you'd weigh one-sixth as much. But your MASS — the actual stuff you're made of — is unchanged. Mass is intrinsic to your body; weight is how hard a planet pulls on it. This distinction is the key to why a heavy spacesuit (massing 90 kg) lets Apollo astronauts hop and bounce on the Moon (concept c08) — only their weight changed, not their inertia."
+              ]
             },
             {
               "id": "ch19_t02_c02",
@@ -48309,7 +48363,13 @@
                 163
               ],
               "needsHumanReview": false,
-              "mnemonic": "Phases: NEW → CRESCENT → FIRST QUARTER → GIBBOUS → FULL → GIBBOUS → LAST QUARTER → CRESCENT → NEW. 29.5 day cycle. Caused by changing sun-Earth-Moon geometry."
+              "mnemonic": "Phases: NEW → CRESCENT → FIRST QUARTER → GIBBOUS → FULL → GIBBOUS → LAST QUARTER → CRESCENT → NEW. 29.5 day cycle. Caused by changing sun-Earth-Moon geometry.",
+              "predictQuestion": "Predict before reading: the Moon cycles through New, Crescent, Half, Full, and back about every 29.5 days. Is the Moon's surface actually changing — or is something else changing about what we see?",
+              "whyChain": [
+                "The Moon doesn't make its own light. It only reflects sunlight. Half of the Moon is always sunlit (the half facing the Sun); the other half is in shadow. From Earth, we see only the portion of the sunlit half that happens to be facing us. As the Moon orbits Earth, the angle changes — and so does the slice of sunlit Moon we can see.",
+                "When the Moon is between Earth and the Sun, the sunlit side faces away from us — we see a New Moon (essentially nothing). When the Moon is on the far side of Earth from the Sun, the sunlit side faces toward us — Full Moon. In between we see crescents and half-moons. Waxing means growing fuller (after New Moon); waning means shrinking (after Full Moon).",
+                "The entire cycle takes 29.5 days — slightly longer than the Moon's actual orbital period of 27.3 days. Why? Because Earth has moved along its own orbit around the Sun during those 27.3 days, so the Moon needs an extra 2.2 days to 'catch up' to the same Sun-Earth-Moon geometry. The 29.5-day cycle is called the synodic period; the 27.3-day cycle is the sidereal period."
+              ]
             },
             {
               "id": "ch19_t02_c03",
@@ -48361,7 +48421,13 @@
                 163
               ],
               "needsHumanReview": false,
-              "mnemonic": "Tidal locking: Moon's rotation period = its revolution period around Earth. Same face always toward Earth. The 'dark side' isn't always dark — just always facing away from us."
+              "mnemonic": "Tidal locking: Moon's rotation period = its revolution period around Earth. Same face always toward Earth. The 'dark side' isn't always dark — just always facing away from us.",
+              "predictQuestion": "Predict before reading: humans have observed the Moon for thousands of years from every corner of Earth. Why has no one — not in ancient India, China, Greece, or anywhere else — ever reported a different face of the Moon than the one you see tonight?",
+              "whyChain": [
+                "The Moon is tidally locked to Earth. This means it rotates on its own axis in exactly the same time it takes to orbit Earth — 27.3 days. As a result, the same face of the Moon always points toward us. No matter where on Earth you stand, you see the same 'Man in the Moon' pattern. The far side ('dark side', though it gets just as much sunlight) was never seen by humans until the Soviet Luna 3 probe photographed it in 1959.",
+                "The lock happened because Earth's gravity pulled harder on the side of the Moon closest to us than on the far side. The differential pull deformed the early molten Moon into a slight egg shape — and then, over millions of years, slowly braked its rotation until the long axis pointed permanently toward Earth. This is the most stable configuration: the heavier end always points toward the bigger body.",
+                "Tidal locking happens everywhere in the Solar System where moons orbit close to their planets — most of Jupiter's and Saturn's moons are locked too. The Moon is slowly tidally locking Earth back; eventually (in tens of billions of years, longer than the Sun will live) Earth's rotation would slow to match the Moon's orbit and the Moon would appear stationary in the sky from one hemisphere only. The Sun will swallow Earth before that finishes happening."
+              ]
             },
             {
               "id": "ch19_t02_c04",
@@ -48415,7 +48481,13 @@
                 165
               ],
               "needsHumanReview": false,
-              "mnemonic": "Solar eclipse = Moon passes between Sun and Earth. Moon's shadow falls on Earth. Total eclipse: sun completely hidden along a narrow path; partial: only part hidden. Requires near-perfect alignment."
+              "mnemonic": "Solar eclipse = Moon passes between Sun and Earth. Moon's shadow falls on Earth. Total eclipse: sun completely hidden along a narrow path; partial: only part hidden. Requires near-perfect alignment.",
+              "predictQuestion": "Predict before reading: a solar eclipse can only happen during one specific Moon phase. Without looking it up — which phase do you think it is, and why?",
+              "whyChain": [
+                "A solar eclipse happens when the Moon passes directly between the Sun and Earth, blocking the Sun's light. The Moon's shadow falls on a narrow band of Earth's surface, plunging it into temporary darkness in the middle of the day. Because the Sun is hidden, this can only happen at New Moon — when the Moon is on the Sun-side of Earth.",
+                "Solar eclipses don't happen every New Moon, even though the Sun-Moon-Earth alignment seems like it should repeat every month. The Moon's orbit is tilted about 5° to Earth's orbital plane, so most New Moons the Moon's shadow misses Earth entirely (passes above or below). Only when the alignment is precise — Sun, Moon, Earth on one line in BOTH orbital planes — does the shadow actually fall on us. This happens about 2–5 times a year somewhere on Earth.",
+                "The Moon is 400 times smaller than the Sun — but also happens to be 400 times closer. So from our perspective, they appear roughly the same size in the sky. This is an extraordinary cosmic coincidence; it's why total solar eclipses are visually so striking (the Moon JUST covers the Sun, exposing the corona) and why they're so rare (any given location on Earth sees a total eclipse only once every ~400 years on average)."
+              ]
             },
             {
               "id": "ch19_t02_c05",
@@ -48470,7 +48542,13 @@
                 166
               ],
               "needsHumanReview": false,
-              "mnemonic": "Lunar eclipse = Earth between Sun and Moon. Earth's shadow falls on Moon. Moon turns reddish ('blood moon') because Earth's atmosphere bends red light onto the Moon. Visible to half the planet at once."
+              "mnemonic": "Lunar eclipse = Earth between Sun and Moon. Earth's shadow falls on Moon. Moon turns reddish ('blood moon') because Earth's atmosphere bends red light onto the Moon. Visible to half the planet at once.",
+              "predictQuestion": "Predict before reading: during a lunar eclipse the Moon turns a striking red-orange colour — even though it's entirely inside Earth's shadow. If the shadow is supposed to block sunlight, where is the red light coming from?",
+              "whyChain": [
+                "A lunar eclipse happens when Earth passes between the Sun and the Moon — Earth's shadow falls on the Moon, dimming it. This can only happen at Full Moon, when the Sun-Earth-Moon line-up has the Moon on the far side. Unlike solar eclipses (which only narrow bands of Earth see), a lunar eclipse is visible from the entire night-side of Earth simultaneously.",
+                "During a total lunar eclipse the Moon doesn't go black — it turns deep red or coppery orange. The reason: Earth's atmosphere bends and filters sunlight that passes through it from the sides. Blue and violet wavelengths scatter away (the same reason daytime sky is blue); red and orange wavelengths pass through and refract into Earth's shadow, painting the Moon. We are seeing the combined light of every sunrise and sunset on Earth, refracted onto the Moon at once.",
+                "Lunar eclipses happen about 2–4 times a year, and the same orbital tilt that limits solar eclipses limits these too. They're easier to observe than solar eclipses because they don't need protective glasses (Moon-light is safe; Sun-light is not) and last much longer — totality can extend to 100+ minutes. A 'blood moon' is just the colloquial name for a total lunar eclipse; nothing supernatural, just physics of refraction."
+              ]
             },
             {
               "id": "ch19_t02_c06",
@@ -48529,7 +48607,13 @@
                 167
               ],
               "needsHumanReview": false,
-              "mnemonic": "Tides = Moon's gravity pulls Earth's oceans (and Earth itself). High tide on side facing Moon AND opposite side (centrifugal bulge). Two high + two low tides per ~25 hours."
+              "mnemonic": "Tides = Moon's gravity pulls Earth's oceans (and Earth itself). High tide on side facing Moon AND opposite side (centrifugal bulge). Two high + two low tides per ~25 hours.",
+              "predictQuestion": "Predict before reading: tides cause sea levels to rise and fall about twice a day. If the Moon's gravity is what pulls the ocean up on the near side, why does the ocean ALSO bulge up on the FAR side of Earth from the Moon — where the pull should be weakest?",
+              "whyChain": [
+                "Tides are the rise and fall of ocean levels caused by the Moon's gravity (and to a smaller extent, the Sun's). The Moon pulls strongly on the near side of Earth's ocean, lifting it into a bulge. The same Moon pulls less strongly on the FAR side ocean — and even less on the centre of Earth — so the centre is pulled away from the far-side ocean, leaving a second bulge on the far side. Two bulges, one orbit.",
+                "As Earth rotates, any given coastline passes under both bulges in 24 hours — so most places experience two high tides and two low tides per day. The pattern lags slightly because water has mass and friction; tides don't arrive exactly when the Moon is overhead but a few hours later. The exact timing depends on coastline shape, ocean depth, and bay geometry.",
+                "The Sun's pull contributes about a third of tidal force, even though the Sun is far bigger — because the Sun is also far farther away, and tides depend on the DIFFERENCE in gravity across Earth, not the total amount. When Sun, Earth, and Moon line up (New or Full Moon) the two pulls reinforce → big tides (spring tides). When the Sun is at right angles (half moons), they partly cancel → weak tides (neap tides) — concept c07 explores this."
+              ]
             },
             {
               "id": "ch19_t02_c07",
@@ -48582,7 +48666,13 @@
                 167
               ],
               "needsHumanReview": false,
-              "mnemonic": "SPRING tide = sun + moon ALIGNED (new or full moon) → extra-high highs, extra-low lows. NEAP tide = sun and moon at right angles (quarter moon) → smaller tide range. Spring/neap unrelated to spring season."
+              "mnemonic": "SPRING tide = sun + moon ALIGNED (new or full moon) → extra-high highs, extra-low lows. NEAP tide = sun and moon at right angles (quarter moon) → smaller tide range. Spring/neap unrelated to spring season.",
+              "predictQuestion": "Predict before reading: 'spring tide' has nothing to do with the spring season. It happens twice every month, year-round. From what you know about Moon phases (c02) and tides (c06), which two phases produce spring tides?",
+              "whyChain": [
+                "Spring tides are extra-high high tides and extra-low low tides. They happen when the Sun, Earth, and Moon are aligned in a straight line — at New Moon and Full Moon. In both alignments the Sun's tidal pull and the Moon's tidal pull act along the same axis, reinforcing each other. The combined bulge is taller and the trough is deeper.",
+                "Neap tides are the opposite: relatively weak tides where the difference between high and low is smaller than average. They happen at the Half Moons, when the Sun is at a right angle to the Moon as seen from Earth. The Sun's pull is perpendicular to the Moon's, so each partly cancels the other's bulge. The result is muted tides — not flat, but reduced in range.",
+                "The word 'spring' here means 'to leap' or 'jump up', not the season. Spring tides happen twice every lunar month (29.5 days), at the New and Full Moons. Tidal range matters enormously to coastal life — for fishing boats, port operations, mangrove ecosystems, even submarine cables. Modern tide tables predict spring and neap tides years in advance using just the Sun-Earth-Moon geometry from concept c06."
+              ]
             },
             {
               "id": "ch19_t02_c08",
@@ -48633,7 +48723,13 @@
                 168
               ],
               "needsHumanReview": false,
-              "mnemonic": "Apollo 11, July 20, 1969. Neil Armstrong: 'One small step for [a] man, one giant leap for mankind.' Buzz Aldrin second. Michael Collins orbited above. 6 Apollo missions landed humans on Moon (1969-72)."
+              "mnemonic": "Apollo 11, July 20, 1969. Neil Armstrong: 'One small step for [a] man, one giant leap for mankind.' Buzz Aldrin second. Michael Collins orbited above. 6 Apollo missions landed humans on Moon (1969-72).",
+              "predictQuestion": "Predict before reading: Apollo 11 took 3 days to fly to the Moon in 1969 with chemical rockets. With everything our technology has gained since — phones, AI, computers — could we fly there faster today, the same speed, or slower than in 1969?",
+              "whyChain": [
+                "On July 20, 1969, Neil Armstrong became the first human to set foot on the Moon. The Apollo 11 mission, launched by NASA atop a Saturn V rocket, carried Armstrong, Buzz Aldrin, and Michael Collins to lunar orbit. Armstrong's first words on the Moon's surface — 'That's one small step for [a] man, one giant leap for mankind' — were heard live by an estimated 650 million people on Earth.",
+                "Apollo 11 took about 3 days to reach the Moon. Modern spacecraft could fly faster — but the fastest practical fuel-efficient trajectories haven't really improved, because chemical rockets remain the only proven way to get out of Earth's gravity well. NASA's Artemis program (relaunched in the 2020s) uses descendants of the same engine technology Apollo did. Speed isn't the bottleneck; cost and safety are.",
+                "Twelve humans have walked on the Moon, all between 1969 and 1972. No one has been back since Apollo 17. The Moon landings answered the question of whether humans could survive on another world (yes), demonstrated geological techniques in the field (Moon rocks brought back are still being studied 50+ years later), and inspired generations of scientists. India's Chandrayaan-3, in 2023, made India the fourth country to soft-land a probe on the Moon — and the first to land near the lunar south pole."
+              ]
             }
           ],
           "questions": [
@@ -50376,7 +50472,13 @@
                 169
               ],
               "needsHumanReview": false,
-              "mnemonic": "Stars = giant balls of plasma where NUCLEAR FUSION (H → He) releases enormous energy. Sun = a typical mid-life star. Bigger stars burn faster, end dramatically (supernova → neutron star or black hole)."
+              "mnemonic": "Stars = giant balls of plasma where NUCLEAR FUSION (H → He) releases enormous energy. Sun = a typical mid-life star. Bigger stars burn faster, end dramatically (supernova → neutron star or black hole).",
+              "predictQuestion": "Predict before reading: a campfire on Earth burns by combining wood with oxygen — a chemical reaction. The Sun is much hotter and much bigger. Does the Sun also burn by combining material with oxygen, or by something else?",
+              "whyChain": [
+                "Stars are giant balls of plasma — mostly hydrogen and helium — held together by their own gravity. The Sun is a star. So is every twinkling point of light you see at night, except for the planets. Each star produces its own light and heat through nuclear fusion at its core, where temperatures reach 15 million degrees Celsius and pressures crush hydrogen atoms together until they fuse into helium.",
+                "Fusion is fundamentally different from chemical burning (campfires, candles). Burning is a rearrangement of atoms — carbon combines with oxygen to form CO₂, releasing the small energy stored in chemical bonds. Fusion is a rearrangement of atomic NUCLEI — four hydrogen nuclei fuse into one helium nucleus, releasing a tiny bit of mass converted to energy via E = mc². The energy released per kilogram is millions of times greater than any chemical reaction.",
+                "Our Sun has been fusing hydrogen for about 4.6 billion years and will continue for about 5 billion more before it runs out of core hydrogen, swells into a red giant, and finally settles down as a white dwarf. Larger stars burn brighter and die faster (a few million years). Smaller stars burn dimmer and last hundreds of billions of years — longer than the universe has existed. The Sun is a middle-sized, middle-aged star — extremely ordinary by cosmic standards."
+              ]
             },
             {
               "id": "ch19_t03_c02",
@@ -50428,7 +50530,13 @@
                 169
               ],
               "needsHumanReview": false,
-              "mnemonic": "Stars twinkle because their light is a POINT source — Earth's atmosphere bends it constantly. Planets are NEAR sources (their image has finite size), so atmospheric bending averages out — they shine steadily."
+              "mnemonic": "Stars twinkle because their light is a POINT source — Earth's atmosphere bends it constantly. Planets are NEAR sources (their image has finite size), so atmospheric bending averages out — they shine steadily.",
+              "predictQuestion": "Predict before reading: at night, stars and planets are both points of light to the naked eye. Yet astronomers say stars 'twinkle' and planets don't. What makes the difference — the stars themselves or something else?",
+              "whyChain": [
+                "Stars twinkle because their light, after travelling many trillions of kilometres, arrives at Earth's atmosphere as an essentially perfect point. Air pockets of varying temperature and density in the atmosphere bend the path of that pinpoint of light slightly differently from moment to moment. The brightness appears to wobble — twinkle. The effect is called scintillation and it's stronger for stars near the horizon (more atmosphere to travel through).",
+                "Planets are also points to the naked eye, but they're actually small DISKS — Mars, Venus, Jupiter, Saturn all subtend a tiny but non-zero angular size. The atmosphere bends light from one edge of the disk one way and from the other edge another way — and the wobble AVERAGES OUT across the disk. A planet's light appears steady. The same air that makes stars twinkle leaves planets looking calm.",
+                "This is why one rule of thumb works for amateur astronomers: if a bright point in the sky is twinkling, it's almost certainly a star. If it's steady, it might be a planet — and a quick check against an astronomy app will tell you which one. Twinkling is also why ground-based telescopes use adaptive optics — mirrors that flex thousands of times per second to cancel out the wobble — and why the Hubble and James Webb space telescopes (above the atmosphere) can see so much more sharply than ground telescopes."
+              ]
             },
             {
               "id": "ch19_t03_c03",
@@ -50488,7 +50596,13 @@
                 170
               ],
               "needsHumanReview": false,
-              "mnemonic": "Constellations = star patterns named by ancient cultures. Orion (hunter), Ursa Major (Big Bear), Cassiopeia (W shape). Stars in a constellation aren't actually near each other — perspective from Earth groups them."
+              "mnemonic": "Constellations = star patterns named by ancient cultures. Orion (hunter), Ursa Major (Big Bear), Cassiopeia (W shape). Stars in a constellation aren't actually near each other — perspective from Earth groups them.",
+              "predictQuestion": "Predict before reading: the constellation Orion has the same shape today as it did 5,000 years ago when ancient astronomers first mapped it. If stars are moving through the galaxy at thousands of km/s, why doesn't Orion look different yet?",
+              "whyChain": [
+                "Constellations are patterns of bright stars that humans have grouped together for storytelling, navigation, and timekeeping. The International Astronomical Union officially recognises 88 constellations. Orion (the Hunter), Ursa Major (the Big Dipper / Saptarishi), Cassiopeia, and the Southern Cross are among the most recognisable. In Indian tradition, the same star patterns have parallel names — Saptarishi for Ursa Major's seven main stars.",
+                "Stars in a constellation are NOT physically grouped. They appear close together only because they happen to lie along similar lines of sight from Earth. The three stars of Orion's belt are actually at distances of 800, 1340, and 700 light-years — wildly different. Viewed from another star, the same stars would form a completely different shape. Constellations are an Earth-based illusion of perspective.",
+                "Stars do move — typically tens or hundreds of km/s relative to each other through the galaxy. But they are SO far away that this motion produces only tiny angular changes from our point of view. Over 5,000 years, Orion shifts by less than 1° — barely detectable without precision telescopes. Over 100,000 years, the Big Dipper will visibly distort. Our familiar constellations are temporary; they belong to this brief geological moment of human history."
+              ]
             },
             {
               "id": "ch19_t03_c04",
@@ -50540,7 +50654,13 @@
                 170
               ],
               "needsHumanReview": false,
-              "mnemonic": "Dhruv Tara (Polaris) = North Star, sits above Earth's North Pole. Find it via the Big Dipper's two pointer stars. North = wherever Polaris points. Ancient navigators' lifeline."
+              "mnemonic": "Dhruv Tara (Polaris) = North Star, sits above Earth's North Pole. Find it via the Big Dipper's two pointer stars. North = wherever Polaris points. Ancient navigators' lifeline.",
+              "predictQuestion": "Predict before reading: ancient Indian sailors and Polynesian navigators crossed entire oceans without compasses, GPS, or paper maps. From everything you know about Polaris (c08 of Topic 1), what single celestial trick made this possible?",
+              "whyChain": [
+                "The Pole Star — Polaris in English, Dhruv Tara in Sanskrit (named after the boy-king Dhruv from the Bhagavata Purana, who was granted an eternal, unwavering position in the sky) — sits almost directly above Earth's North Pole. As Earth rotates, all other stars appear to circle around it, but Polaris itself stays fixed. It is the only naked-eye star in the Northern Hemisphere with this property.",
+                "To find Polaris, locate the Saptarishi (Ursa Major / Big Dipper). The two stars at the far end of the dipper's 'bowl' point in a line — extend that line about five times the gap between them, and you arrive at Polaris. Anywhere in the Northern Hemisphere on a clear night, this trick works. The altitude of Polaris above the horizon in degrees is your LATITUDE — a direct measurement, no instruments needed beyond an outstretched fist (each fist held at arm's length spans about 10°).",
+                "The Pole Star is invisible in the Southern Hemisphere (Australia, southern Africa, South America). Southern navigators historically used the Southern Cross constellation instead, which points to a less-precise but workable south celestial pole. Polynesian wayfinders memorised hundreds of star paths and risings to cross thousands of kilometres of open Pacific. Modern GPS does the same job by triangulating four satellites — but the principle is the same: known fixed points, measured angles, computed position."
+              ]
             },
             {
               "id": "ch19_t03_c05",
@@ -50600,7 +50720,13 @@
                 171
               ],
               "needsHumanReview": false,
-              "mnemonic": "Solar System: SUN + 8 PLANETS (My Very Educated Mother Just Served Us Noodles = Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune) + asteroids + comets + dwarf planets (Pluto, Eris)."
+              "mnemonic": "Solar System: SUN + 8 PLANETS (My Very Educated Mother Just Served Us Noodles = Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune) + asteroids + comets + dwarf planets (Pluto, Eris).",
+              "predictQuestion": "Predict before reading: the Solar System contains the Sun, 8 planets, hundreds of moons, and millions of asteroids. What fraction of the Solar System's total MASS is the Sun alone?",
+              "whyChain": [
+                "The Solar System is the gravitationally bound family centred on the Sun. It includes 8 planets (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune), at least 5 confirmed dwarf planets (including Pluto, demoted from full planet status in 2006), about 200 known moons, millions of asteroids in the asteroid belt between Mars and Jupiter, and trillions of comets in the distant Kuiper Belt and Oort Cloud.",
+                "The Sun contains 99.8% of the Solar System's total mass. Everything else — Jupiter, Earth, every other planet, every moon, every asteroid combined — adds up to just 0.2%. Jupiter alone makes up about 70% of that 0.2%. This is why the Sun's gravity dominates: there is essentially nothing else for the planets to gravitate to. The planets orbit around the Sun in nearly the same plane (called the ecliptic) and in the same direction — clockwise as viewed from the north, the way a giant rotating disk of dust and gas would settle.",
+                "The Solar System formed about 4.6 billion years ago from a collapsing cloud of gas and dust. The cloud spun, flattened into a disk, and the centre became the Sun. The remaining material clumped into the planets — rocky planets close to the Sun (where heat boiled off light gases), gas giants far from the Sun (where gas stayed put). Every atom in your body — except hydrogen — was forged inside an earlier generation of stars and recycled into this system. We are literally made of stardust."
+              ]
             },
             {
               "id": "ch19_t03_c06",
@@ -50652,7 +50778,13 @@
                 171
               ],
               "needsHumanReview": false,
-              "mnemonic": "INNER 4 (rocky): Mercury, Venus, Earth, Mars — small, dense, close to sun. OUTER 4 (gas giants): Jupiter, Saturn, Uranus, Neptune — huge, low density, far from sun. Asteroid belt separates inner and outer."
+              "mnemonic": "INNER 4 (rocky): Mercury, Venus, Earth, Mars — small, dense, close to sun. OUTER 4 (gas giants): Jupiter, Saturn, Uranus, Neptune — huge, low density, far from sun. Asteroid belt separates inner and outer.",
+              "predictQuestion": "Predict before reading: the four inner planets are small and rocky; the four outer planets are huge gas giants with no solid surface. Is this difference random — or does it trace back to a single property of the early Solar System?",
+              "whyChain": [
+                "The Solar System has two families of planets. The inner four — Mercury, Venus, Earth, Mars — are rocky planets with solid surfaces, thin atmospheres, and small sizes (Earth, the biggest, is just 12,742 km across). The outer four — Jupiter, Saturn, Uranus, Neptune — are gas giants with thick atmospheres, no solid surface, and gigantic diameters (Jupiter is over 140,000 km across, eleven Earths wide). Saturn is famous for its rings; Jupiter has dozens of moons.",
+                "The split happened because of the SNOW LINE — a boundary in the early protoplanetary disk where it was cold enough for water, ammonia, and methane to freeze into ice. Inside the snow line (close to the Sun), only rock and metal could condense — so planets there are small and rocky. Outside the snow line, ices were abundant — protoplanets could grow large enough to capture lots of gas. This is why all four gas giants are beyond the asteroid belt.",
+                "Inner planets have only a few moons total (Earth has 1, Mars has 2, Mercury and Venus have none). Outer planets have dozens or hundreds — Jupiter alone has 95+ confirmed moons. Outer planets also have rings (Saturn's are spectacular; Jupiter, Uranus, and Neptune have fainter ones). Earth is the only planet known to have liquid surface water and life. Mars MIGHT have had microbial life once; current Mars missions (Perseverance, Curiosity) are looking for chemical traces in ancient riverbeds."
+              ]
             },
             {
               "id": "ch19_t03_c07",
@@ -50710,7 +50842,13 @@
                 172
               ],
               "needsHumanReview": false,
-              "mnemonic": "ASTEROIDS = rocky chunks in belt between Mars and Jupiter. COMETS = ice + dust 'dirty snowballs' from far solar system. METEORS = space dust burning up in Earth's atmosphere ('shooting stars')."
+              "mnemonic": "ASTEROIDS = rocky chunks in belt between Mars and Jupiter. COMETS = ice + dust 'dirty snowballs' from far solar system. METEORS = space dust burning up in Earth's atmosphere ('shooting stars').",
+              "predictQuestion": "Predict before reading: meteors (shooting stars), asteroids, and comets are all 'rocks in space' to a non-astronomer. What actually distinguishes each from the others?",
+              "whyChain": [
+                "Asteroids are rocky / metallic chunks of matter orbiting the Sun, mostly in the asteroid belt between Mars and Jupiter. The largest, Ceres, is about 940 km across (it's classified as a dwarf planet). Most asteroids are leftover building blocks from the Solar System's formation that never coalesced into a planet, partly because Jupiter's gravity kept stirring the belt and preventing accretion.",
+                "Comets are icy bodies that swing in from the outer Solar System on long elliptical orbits. As a comet approaches the Sun, its ices vaporise, forming a glowing coma (atmosphere) and one or two tails — a dust tail and a gas (ion) tail, both pointing AWAY from the Sun (pushed by the solar wind). Halley's Comet returns every 76 years; the last visit was 1986, the next is 2061. A comet is essentially a dirty snowball that briefly catches fire when it gets close to the heat.",
+                "Meteors are the streaks of light we call 'shooting stars'. They happen when small bits of cometary debris (or asteroid fragments) enter Earth's atmosphere at 11–72 km/s and burn up from friction with air. Most meteors are pebble-sized or smaller and burn up entirely high in the atmosphere. If a piece survives the descent and lands, the surviving rock is called a meteorite. Meteor showers (Perseids, Geminids, Leonids) happen when Earth crosses the dust trail of a known comet — predictable annual events that have been observed for millennia."
+              ]
             }
           ],
           "questions": [
@@ -52673,7 +52811,332 @@
           "parentConceptId": "ch19_t03_c05",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch19_t01_c01",
+            "label": "Earth — tilted oblate spheroid",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.15
+          },
+          {
+            "id": "ch19_t01_c02",
+            "label": "Rotation → day/night",
+            "kind": "concept",
+            "x": 0.22,
+            "y": 0.3
+          },
+          {
+            "id": "ch19_t01_c06",
+            "label": "Time zones",
+            "kind": "concept",
+            "x": 0.08,
+            "y": 0.42
+          },
+          {
+            "id": "ch19_t01_c07",
+            "label": "Coriolis effect",
+            "kind": "concept",
+            "x": 0.22,
+            "y": 0.5
+          },
+          {
+            "id": "ch19_t01_c08",
+            "label": "Polaris — fixed axis tip",
+            "kind": "concept",
+            "x": 0.08,
+            "y": 0.6
+          },
+          {
+            "id": "ch19_t01_c03",
+            "label": "Revolution — orbit",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.3
+          },
+          {
+            "id": "ch19_t01_c04",
+            "label": "Seasons (axial tilt)",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.5
+          },
+          {
+            "id": "ch19_t01_c05",
+            "label": "Leap year math",
+            "kind": "concept",
+            "x": 0.92,
+            "y": 0.42
+          },
+          {
+            "id": "ch19_t02_c01",
+            "label": "Moon — natural satellite",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.45
+          },
+          {
+            "id": "ch19_t02_c02",
+            "label": "Moon phases",
+            "kind": "concept",
+            "x": 0.42,
+            "y": 0.62
+          },
+          {
+            "id": "ch19_t02_c04",
+            "label": "Solar eclipse",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.72
+          },
+          {
+            "id": "ch19_t02_c05",
+            "label": "Lunar eclipse",
+            "kind": "concept",
+            "x": 0.58,
+            "y": 0.72
+          },
+          {
+            "id": "ch19_t02_c06",
+            "label": "Tides",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.62
+          },
+          {
+            "id": "ch19_t02_c07",
+            "label": "Spring vs neap tides",
+            "kind": "concept",
+            "x": 0.84,
+            "y": 0.68
+          },
+          {
+            "id": "ch19_t03_c01",
+            "label": "Stars — nuclear fusion",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.85
+          },
+          {
+            "id": "ch19_t03_c02",
+            "label": "Stars twinkle, planets don't",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.92
+          },
+          {
+            "id": "ch19_t03_c03",
+            "label": "Constellations",
+            "kind": "concept",
+            "x": 0.18,
+            "y": 0.82
+          },
+          {
+            "id": "ch19_t03_c04",
+            "label": "Pole Star (Dhruv Tara)",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.85
+          },
+          {
+            "id": "ch19_t03_c05",
+            "label": "Solar System — 8 planets",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.85
+          },
+          {
+            "id": "ch19_t03_c06",
+            "label": "Rocky vs gas giants",
+            "kind": "concept",
+            "x": 0.82,
+            "y": 0.92
+          },
+          {
+            "id": "ch19_t03_c07",
+            "label": "Asteroids, comets, meteors",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.95
+          },
+          {
+            "id": "ch04:ch04_t02_c02",
+            "label": "Convection (Ch.4)",
+            "kind": "crossChapter",
+            "x": 0.04,
+            "y": 0.25
+          },
+          {
+            "id": "ch08:ch08_t03_c02",
+            "label": "Cyclones (Ch.8)",
+            "kind": "crossChapter",
+            "x": 0.04,
+            "y": 0.5
+          },
+          {
+            "id": "ch07:ch07_t01_c02",
+            "label": "Climate shaping (Ch.7)",
+            "kind": "crossChapter",
+            "x": 0.96,
+            "y": 0.55
+          },
+          {
+            "id": "ch16:ch16_t01_c01",
+            "label": "Water cycle (Ch.16)",
+            "kind": "crossChapter",
+            "x": 0.96,
+            "y": 0.78
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch19_t01_c01",
+            "to": "ch19_t01_c02",
+            "label": "rotates → "
+          },
+          {
+            "id": "e02",
+            "from": "ch19_t01_c02",
+            "to": "ch19_t01_c06",
+            "label": "drives"
+          },
+          {
+            "id": "e03",
+            "from": "ch19_t01_c02",
+            "to": "ch19_t01_c07",
+            "label": "creates"
+          },
+          {
+            "id": "e04",
+            "from": "ch19_t01_c08",
+            "to": "ch19_t01_c01",
+            "label": "axis tip of"
+          },
+          {
+            "id": "e05",
+            "from": "ch19_t01_c01",
+            "to": "ch19_t01_c03",
+            "label": "orbits → "
+          },
+          {
+            "id": "e06",
+            "from": "ch19_t01_c03",
+            "to": "ch19_t01_c04",
+            "label": "+ tilt → "
+          },
+          {
+            "id": "e07",
+            "from": "ch19_t01_c03",
+            "to": "ch19_t01_c05",
+            "label": "non-integer days"
+          },
+          {
+            "id": "e08",
+            "from": "ch19_t01_c01",
+            "to": "ch19_t02_c01",
+            "label": "orbits with"
+          },
+          {
+            "id": "e09",
+            "from": "ch19_t02_c01",
+            "to": "ch19_t02_c02",
+            "label": "lit by Sun"
+          },
+          {
+            "id": "e10",
+            "from": "ch19_t02_c02",
+            "to": "ch19_t02_c04",
+            "label": "at New Moon"
+          },
+          {
+            "id": "e11",
+            "from": "ch19_t02_c02",
+            "to": "ch19_t02_c05",
+            "label": "at Full Moon"
+          },
+          {
+            "id": "e12",
+            "from": "ch19_t02_c01",
+            "to": "ch19_t02_c06",
+            "label": "pulls oceans"
+          },
+          {
+            "id": "e13",
+            "from": "ch19_t02_c06",
+            "to": "ch19_t02_c07",
+            "label": "+ Sun → "
+          },
+          {
+            "id": "e14",
+            "from": "ch19_t03_c01",
+            "to": "ch19_t03_c02",
+            "label": "behaviour from Earth"
+          },
+          {
+            "id": "e15",
+            "from": "ch19_t03_c01",
+            "to": "ch19_t03_c03",
+            "label": "grouped into"
+          },
+          {
+            "id": "e16",
+            "from": "ch19_t03_c03",
+            "to": "ch19_t03_c04",
+            "label": "navigation"
+          },
+          {
+            "id": "e17",
+            "from": "ch19_t01_c08",
+            "to": "ch19_t03_c04",
+            "label": "same star"
+          },
+          {
+            "id": "e18",
+            "from": "ch19_t03_c05",
+            "to": "ch19_t03_c06",
+            "label": "splits into"
+          },
+          {
+            "id": "e19",
+            "from": "ch19_t03_c05",
+            "to": "ch19_t03_c07",
+            "label": "also contains"
+          },
+          {
+            "id": "e20",
+            "from": "ch19_t03_c01",
+            "to": "ch19_t03_c05",
+            "label": "central to"
+          },
+          {
+            "id": "e21",
+            "from": "ch19_t01_c07",
+            "to": "ch08:ch08_t03_c02",
+            "label": "shapes"
+          },
+          {
+            "id": "e22",
+            "from": "ch19_t01_c04",
+            "to": "ch07:ch07_t01_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e23",
+            "from": "ch19_t01_c04",
+            "to": "ch04:ch04_t02_c02",
+            "label": "uneven heating"
+          },
+          {
+            "id": "e24",
+            "from": "ch19_t02_c06",
+            "to": "ch16:ch16_t01_c01",
+            "label": "moves water"
+          }
+        ]
+      }
     }
   ]
 }
