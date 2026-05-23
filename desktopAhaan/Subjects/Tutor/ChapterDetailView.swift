@@ -134,6 +134,11 @@ struct ChapterDetailView: View {
                     }
                     .buttonStyle(.plain)
                     .pointingCursor()
+                    // VoiceOver was hearing only the topic title. Adding
+                    // a hint so users know what the tap does and what's
+                    // behind it (concept / question counts).
+                    .accessibilityLabel(topic.title)
+                    .accessibilityHint("Opens topic — \(topic.concepts.count) concepts, \(topic.questions.count) questions.")
                     .contextMenu {
                         Button("Open") { nav.push(.topic(packId: pack.id, topicId: topic.id)) }
                         Button("Copy title") {
@@ -235,7 +240,12 @@ private struct BeyondTheBookCard: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .onHover { isHovered = $0 }
+        // Hover scale is a motion cue — gate it on Reduce Motion so
+        // accessibility users don't get the 1% pulse on every chapter
+        // detail card. The opacity-only TopicCard hover stays unchanged.
+        .onHover { hovering in
+            isHovered = hovering && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        }
         .accessibilityIdentifier("beyond-the-book")
         .accessibilityLabel("Beyond the Book")
         .accessibilityHint("Opens a long-form enrichment article for this chapter.")
@@ -287,7 +297,12 @@ private struct TryAtHomeCard: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .onHover { isHovered = $0 }
+        // Hover scale is a motion cue — gate it on Reduce Motion so
+        // accessibility users don't get the 1% pulse on every chapter
+        // detail card. The opacity-only TopicCard hover stays unchanged.
+        .onHover { hovering in
+            isHovered = hovering && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        }
         .accessibilityLabel("Try at Home")
         .accessibilityHint("Opens hands-on home experiments for this chapter.")
     }
@@ -342,7 +357,11 @@ private struct DiscoverEntryBanner: View {
                 .shadow(color: .black.opacity(0.18), radius: 12, x: 0, y: 6)
         )
         .scaleEffect(isHovered ? 1.01 : 1.0)
-        .onHover { hovering in isHovered = hovering }
+        // Same Reduce Motion gate as the two enrichment cards above —
+        // clamp the hover state to false so scaleEffect stays at 1.0.
+        .onHover { hovering in
+            isHovered = hovering && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        }
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)
         .accessibilityHint("Opens an illustrated, interactive learning experience for this chapter.")

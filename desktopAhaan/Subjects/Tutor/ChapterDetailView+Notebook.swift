@@ -54,7 +54,12 @@ struct NotebookCard: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .onHover { isHovered = $0 }
+        // Reduce Motion gate — see ChapterDetailView's enrichment cards.
+        // The 1.005 scale is small but still a motion cue; clamp it off
+        // for accessibility users.
+        .onHover { hovering in
+            isHovered = hovering && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        }
         .accessibilityLabel("My Notebook")
         .accessibilityHint("Opens the chapter notebook for your own notes.")
     }

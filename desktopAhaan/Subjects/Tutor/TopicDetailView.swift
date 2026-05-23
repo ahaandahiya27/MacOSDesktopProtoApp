@@ -16,7 +16,7 @@ struct TopicDetailView: View {
             .listRowBackground(Color.clear)
 
             if !topic.concepts.isEmpty {
-                Section(header: Text("Concepts")) {
+                Section(header: Text("Concepts").accessibilityAddTraits(.isHeader)) {
                     ForEach(topic.concepts) { c in
                         Button {
                             nav.push(.concept(packId: pack.id, conceptId: c.id))
@@ -37,7 +37,7 @@ struct TopicDetailView: View {
                 }
             }
             if !topic.questions.isEmpty {
-                Section(header: Text("Questions")) {
+                Section(header: Text("Questions").accessibilityAddTraits(.isHeader)) {
                     ForEach(topic.questions) { q in
                         Button {
                             nav.push(.question(packId: pack.id, questionId: q.id))

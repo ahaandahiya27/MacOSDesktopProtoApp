@@ -81,6 +81,18 @@ struct KeyboardShortcutsSheet: View {
                                         .font(.callout)
                                     Spacer(minLength: 0)
                                 }
+                                // VoiceOver default reads the chip as
+                                // verbatim characters ("command shift
+                                // left bracket"), which is noisy AND
+                                // loses the description's intent. Combine
+                                // the row into one element with the
+                                // description as the label and the chip
+                                // as the value — VoiceOver then says
+                                // "Jump to anything, Keyboard shortcut:
+                                // ⌘K." cleanly.
+                                .accessibilityElement(children: .ignore)
+                                .accessibilityLabel(sc.description)
+                                .accessibilityValue("Keyboard shortcut: \(sc.combo)")
                             }
                         }
                     }
