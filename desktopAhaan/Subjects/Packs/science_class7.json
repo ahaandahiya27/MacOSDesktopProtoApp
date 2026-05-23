@@ -30664,7 +30664,13 @@
                 171
               ],
               "needsHumanReview": false,
-              "mnemonic": "SPEED = distance / time. AVERAGE speed = total distance / total time (NOT mean of speeds). 100 km/h then 20 km/h for equal times = average 60 km/h, NOT 60."
+              "mnemonic": "SPEED = distance / time. AVERAGE speed = total distance / total time (NOT mean of speeds). 100 km/h then 20 km/h for equal times = average 60 km/h, NOT 60.",
+              "predictQuestion": "A snail crawls 1 metre in 10 minutes. A bullet train travels 300 km in 1 hour. Which has a higher SPEED — and how do you compare such different scales?",
+              "whyChain": [
+                "Speed is distance covered per unit time. Average speed = total distance ÷ total time, regardless of how the motion varied along the way. Both the snail and the train can be expressed in m/s: snail = 0.0017 m/s; bullet train = 83 m/s. Same unit, fair comparison.",
+                "Why average speed instead of just 'speed'? Because real motion is rarely constant. Your bus speeds up, slows for traffic, stops at signals. Average speed smooths over all that variation into one number — useful for trip planning but loses information about the journey's shape.",
+                "And why is the meter-per-second unit chosen as the SI base? Because the metre and the second are both rigorously defined (the second by caesium atomic transitions; the metre by the speed of light). Combining them gives a speed unit that's stable to one part in a billion. Class 11 mechanics builds on this foundation for kinematics."
+              ]
             },
             {
               "id": "ch13_t01_c02",
@@ -30707,7 +30713,13 @@
                 153
               ],
               "needsHumanReview": false,
-              "mnemonic": "UNIFORM motion = constant speed (straight line on distance-time graph). NON-UNIFORM = varying speed (curved line). Steeper slope = faster."
+              "mnemonic": "UNIFORM motion = constant speed (straight line on distance-time graph). NON-UNIFORM = varying speed (curved line). Steeper slope = faster.",
+              "predictQuestion": "Two cars cover the same distance in the same time. One drove smoothly the whole way; the other accelerated and braked constantly. Can a single number — average speed — tell them apart?",
+              "whyChain": [
+                "Uniform motion means equal distance in equal intervals (e.g., a car cruising at exact 60 km/h). Non-uniform motion means the distance per interval varies. A distance-time graph distinguishes them at a glance: a straight line = uniform; a curve = non-uniform.",
+                "Why does the SHAPE of the graph carry so much info? Because the slope of the graph IS the speed. A straight line has constant slope (constant speed). A curving line has changing slope (changing speed). The graph's curvature literally is the acceleration.",
+                "And why is the distance-time graph the foundation of all kinematics? Because it captures everything: position, speed (slope), acceleration (curvature), turning points (stationary points). Class 11 mechanics extends this to velocity-time graphs which reveal acceleration as their slope. The graph IS the motion."
+              ]
             },
             {
               "id": "ch13_t01_c03",
@@ -30744,7 +30756,13 @@
                 144
               ],
               "needsHumanReview": false,
-              "mnemonic": "Speed changes? Acceleration. = (v_final − v_initial) / t. Units: m/s². Free fall on Earth: g = 9.8 m/s². Negative = deceleration."
+              "mnemonic": "Speed changes? Acceleration. = (v_final − v_initial) / t. Units: m/s². Free fall on Earth: g = 9.8 m/s². Negative = deceleration.",
+              "predictQuestion": "On a roller-coaster you feel weightless at the top of a loop and heavy at the bottom. Your speed barely changes. So what's actually changing — and why does your body know?",
+              "whyChain": [
+                "Acceleration is the rate of change of velocity — speeding up, slowing down, OR changing direction. Even at constant speed, if direction changes (a curve, a loop), you're accelerating. Your body detects acceleration because the seat pushes on you with a different force.",
+                "Why doesn't speed alone tell the story? Because Newton's first law says objects keep moving in a straight line unless a force acts. Any deviation from a straight line = a force = an acceleration. The loop's curve constantly pulls you off the straight path; that's why you feel pushed into the seat.",
+                "And why is the difference between speed and velocity so emphasised in physics? Because velocity is a VECTOR (has direction); speed is its magnitude only. Centripetal acceleration in a circular orbit is the textbook case where speed stays constant but velocity (and hence acceleration) does not. Class 11 mechanics drills the vector formalism."
+              ]
             }
           ],
           "questions": [
@@ -31214,7 +31232,13 @@
                 151
               ],
               "needsHumanReview": false,
-              "mnemonic": "Pendulum period = 2π√(L/g). DEPENDS ON LENGTH AND GRAVITY ONLY — not mass, not amplitude (for small swings). Longer pendulum = slower tick. Galileo's discovery from a church chandelier."
+              "mnemonic": "Pendulum period = 2π√(L/g). DEPENDS ON LENGTH AND GRAVITY ONLY — not mass, not amplitude (for small swings). Longer pendulum = slower tick. Galileo's discovery from a church chandelier.",
+              "predictQuestion": "A pendulum 50 cm long swings at one rhythm. A 200 cm pendulum swings slower. Does mass matter, and does the height of the swing matter?",
+              "whyChain": [
+                "A simple pendulum is a bob (small mass) on a thin string. Its time period (one full back-and-forth swing) depends only on the LENGTH of the string and the local gravity — NOT on the mass or the swing height (for small swings).",
+                "Why doesn't mass matter? Because gravity pulls every mass equally (same acceleration g). Doubling the bob's mass doubles the pulling force AND the inertia. The two cancel out exactly. Galileo first noticed this; it's the same principle as 'all objects fall at the same rate in vacuum'.",
+                "And why does the pendulum's regularity matter historically? Because pendulum clocks (1656 onwards) were the first devices to measure time accurately enough for science to take off. A pendulum's period varies by less than 0.01% per swing — quartz watches still rely on this kind of regular oscillator, just at a much higher frequency. Class 11 mechanics derives T = 2π√(L/g) and the math is beautiful."
+              ]
             },
             {
               "id": "ch13_t02_c02",
@@ -31256,7 +31280,13 @@
                 154
               ],
               "needsHumanReview": false,
-              "mnemonic": "Time units: second (atomic standard) → minute (60s) → hour (60 min) → day (24 hr) → year (365.25 days). Sundials → water clocks → pendulum clocks → quartz → atomic."
+              "mnemonic": "Time units: second (atomic standard) → minute (60s) → hour (60 min) → day (24 hr) → year (365.25 days). Sundials → water clocks → pendulum clocks → quartz → atomic.",
+              "predictQuestion": "Why is the SECOND the SI unit of time and not the minute or the day — what would go wrong if we picked something bigger or smaller?",
+              "whyChain": [
+                "The second is the SI unit because it's small enough to capture rapid events (a heartbeat, the speed of light) yet large enough not to need fractions in everyday speech. Modern definition: 9,192,631,770 oscillations of a caesium-133 atom — unchanging anywhere in the universe.",
+                "Why not the day, which is closer to human experience? Because the Earth's rotation isn't quite constant (it slows by milliseconds per century due to tidal friction). The day drifts. The caesium atom does not. Anchoring to a constant-by-physics rather than a constant-by-tradition keeps the unit precise.",
+                "And why does GPS rely on this precision? Because GPS satellites broadcast timestamped signals; your phone trilaterates position from the differences in arrival times. A 1-microsecond timing error becomes a 300-metre position error. GPS exists only because we can measure the second to within billionths. Class 11 physics covers Einstein's relativity corrections to satellite clocks."
+              ]
             }
           ],
           "questions": [
@@ -31605,7 +31635,13 @@
                 169
               ],
               "needsHumanReview": false,
-              "mnemonic": "Time measurement evolution: SUNDIAL (~1500 BCE, ±1 hr), PENDULUM (1656, ±1 s/day), QUARTZ (1927, ±1 s/month), ATOMIC (1955, ±1 s/30M years). Each step 1000x better."
+              "mnemonic": "Time measurement evolution: SUNDIAL (~1500 BCE, ±1 hr), PENDULUM (1656, ±1 s/day), QUARTZ (1927, ±1 s/month), ATOMIC (1955, ±1 s/30M years). Each step 1000x better.",
+              "predictQuestion": "Modern atomic clocks are accurate to one second in 100 million years. Why was a simple pendulum, accurate to ~1 minute per day, considered revolutionary in its time?",
+              "whyChain": [
+                "Time-keeping evolved: sundials (varying with season, accuracy ±15 min), water clocks (drip + scale, ±5 min/day), sand timers (single-shot only), pendulum clocks (±10 sec/day in the 1700s), quartz watches (±5 sec/month from 1969), atomic clocks (±1 sec/100M years).",
+                "Why was each leap revolutionary? Because each enabled new science. Pendulum clocks made longitude calculation possible at sea (1707 Longitude Act). Quartz watches made consumer timekeeping cheap and accurate. Atomic clocks made GPS possible. Each clock generation unlocked the next layer of physics + technology.",
+                "And why does the current chip-scale atomic clock matter? Because a quantum-scale caesium clock now fits on a millimetre-square chip, costs ~$1000, and runs on a battery. It can navigate a submarine through 2 weeks of no-GPS underwater. Class 11+ physics labs are starting to keep one as a teaching aid — the size and price drop has been astonishing."
+              ]
             },
             {
               "id": "ch13_t03_c02",
@@ -31645,7 +31681,13 @@
                 155
               ],
               "needsHumanReview": false,
-              "mnemonic": "4000 years of time-keeping: sundial → water clock → hourglass → pendulum → mainspring → quartz crystal → atomic caesium → optical lattice. Civilisation tracked time better as technology advanced."
+              "mnemonic": "4000 years of time-keeping: sundial → water clock → hourglass → pendulum → mainspring → quartz crystal → atomic caesium → optical lattice. Civilisation tracked time better as technology advanced.",
+              "predictQuestion": "Sundials told us the time for 4000 years. What was so wrong with them that we kept inventing new clocks anyway?",
+              "whyChain": [
+                "Sundials use the sun's position to mark hours, but they fail at night, in cloudy weather, and shift seasonally (the sun's path varies). Water clocks work indoors but drift as water flow rate changes. Pendulum clocks fix both problems with a regular mechanical oscillator.",
+                "Why did pendulum clocks change civilisation? Because they allowed ACCURATE INDOOR TIMING for the first time. Trains could be scheduled to the minute, ships could navigate by longitude (which requires knowing the time at a reference port to within seconds), factories could synchronise shifts.",
+                "And why is the atomic clock so much more than 'just more accurate'? Because at 1 second in 100M years, the clock measures the gravitational redshift — Einstein's prediction that clocks run slower in stronger gravity. Atomic clocks on the ISS run faster than clocks on Earth's surface by 28 microseconds per day. Class 11+ physics calls this experimental general relativity, the only way most physicists have ever PROVEN Einstein right."
+              ]
             },
             {
               "id": "ch13_t03_c03",
@@ -31682,7 +31724,13 @@
                 149
               ],
               "needsHumanReview": false,
-              "mnemonic": "1 second = 9,192,631,770 caesium-133 vibrations. Once defined by Earth rotation (drifts). Now atomic → GPS-grade precise."
+              "mnemonic": "1 second = 9,192,631,770 caesium-133 vibrations. Once defined by Earth rotation (drifts). Now atomic → GPS-grade precise.",
+              "predictQuestion": "Why do we use ONE shared SECOND across the entire world — couldn't different cities just keep their own time?",
+              "whyChain": [
+                "Standardised seconds + time zones emerged from the railway era. Before 1850, every town kept its own local 'noon' (when sun crossed overhead). Trains needed schedules; schedules needed agreement; agreement needed a single shared time. By 1885 the world had 24 standard time zones.",
+                "Why is the unit itself universal even across cultures? Because international trade + science + travel only work if a 'meeting at 10:00 AM' means the same duration to both parties. The second is the atomic anchor; clocks display local time but underneath, everything is just a count of seconds since a shared epoch (Unix time: seconds since 1970).",
+                "And why are leap seconds added occasionally? Because the Earth's rotation slows by tiny amounts due to ocean tides + glacial rebound. Atomic time doesn't slow. To keep clock-time aligned with sunrise-time, the world inserts a 'leap second' every few years. The next one will probably be 2030 or later. Class 11 physics covers exactly this rotation-vs-atomic-time drift."
+              ]
             }
           ],
           "questions": [
@@ -32598,7 +32646,129 @@
           "parentConceptId": "ch13_t03_c02",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch13_t01_c01",
+            "label": "Speed",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.3
+          },
+          {
+            "id": "ch13_t01_c02",
+            "label": "Uniform vs non-uniform",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.5
+          },
+          {
+            "id": "ch13_t01_c03",
+            "label": "Acceleration",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.5
+          },
+          {
+            "id": "ch13_t02_c01",
+            "label": "Simple pendulum",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.8
+          },
+          {
+            "id": "ch13_t02_c02",
+            "label": "Measuring time",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.85
+          },
+          {
+            "id": "ch13_t03_c02",
+            "label": "Sundial → atomic clock",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.8
+          },
+          {
+            "id": "ch13_t03_c03",
+            "label": "The second",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.1
+          },
+          {
+            "id": "ch13_t03_c01",
+            "label": "Pendulum / sand / atomic",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.3
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch13_t01_c01",
+            "to": "ch13_t01_c02",
+            "label": "classified by"
+          },
+          {
+            "id": "e02",
+            "from": "ch13_t01_c01",
+            "to": "ch13_t01_c03",
+            "label": "rate of change of"
+          },
+          {
+            "id": "e03",
+            "from": "ch13_t01_c01",
+            "to": "ch13_t03_c03",
+            "label": "needs"
+          },
+          {
+            "id": "e04",
+            "from": "ch13_t02_c01",
+            "to": "ch13_t02_c02",
+            "label": "enabled"
+          },
+          {
+            "id": "e05",
+            "from": "ch13_t02_c02",
+            "to": "ch13_t03_c02",
+            "label": "evolved into"
+          },
+          {
+            "id": "e06",
+            "from": "ch13_t02_c02",
+            "to": "ch13_t03_c03",
+            "label": "anchored by"
+          },
+          {
+            "id": "e07",
+            "from": "ch13_t03_c02",
+            "to": "ch13_t03_c03",
+            "label": "defines"
+          },
+          {
+            "id": "e08",
+            "from": "ch13_t03_c01",
+            "to": "ch13_t03_c02",
+            "label": "instances of"
+          },
+          {
+            "id": "e09",
+            "from": "ch13_t01_c02",
+            "to": "ch13_t02_c02",
+            "label": "needs"
+          },
+          {
+            "id": "e10",
+            "from": "ch13_t01_c03",
+            "to": "ch13_t02_c01",
+            "label": "illustrated by"
+          }
+        ]
+      }
     },
     {
       "id": "ch14",
@@ -34846,7 +35016,13 @@
                 192
               ],
               "needsHumanReview": false,
-              "mnemonic": "The law of reflection: I = R (angle of Incidence = angle of Reflection), measured from the NORMAL (perpendicular). Mirror image rule: image is BEHIND the mirror, SAME distance as object in front. 'Behind the looking glass' — same depth, opposite hand (lateral inversion)."
+              "mnemonic": "The law of reflection: I = R (angle of Incidence = angle of Reflection), measured from the NORMAL (perpendicular). Mirror image rule: image is BEHIND the mirror, SAME distance as object in front. 'Behind the looking glass' — same depth, opposite hand (lateral inversion).",
+              "predictQuestion": "Hold a mirror in front of you. Your right hand becomes the left hand in the reflection. Why doesn't UP become DOWN at the same time?",
+              "whyChain": [
+                "Reflection from a plane mirror obeys two laws: (1) the angle of incidence equals the angle of reflection; (2) the incident ray, the reflected ray, and the normal all lie in the same plane. A plane mirror produces an image that's the same size, upright, laterally inverted, and virtual.",
+                "Why lateral inversion but not vertical? Because the mirror flips the depth axis (whatever points toward the mirror points away in the image). Your right hand is to the mirror's left, so its image appears to the left from your point of view, which you call 'right'. UP and DOWN are unaffected because they're perpendicular to the mirror plane.",
+                "And why is the image VIRTUAL? Because the light rays only appear to come from behind the mirror — they don't actually go there. If you put a screen behind the mirror, no image forms. Real images need actual light convergence; virtual images are reconstructions our brain does from the diverging reflected rays. Class 11 physics covers ray diagrams in detail."
+              ]
             },
             {
               "id": "ch15_t01_c02",
@@ -34887,7 +35063,13 @@
                 200
               ],
               "needsHumanReview": false,
-              "mnemonic": "CONCAVE = CAVE (curves inward, like a cave you can hide in) — converges parallel rays to a focal point in front. CONVEX = bulges OUTward — diverges parallel rays (image appears smaller). Spoon trick: inside of spoon = concave; back of spoon = convex."
+              "mnemonic": "CONCAVE = CAVE (curves inward, like a cave you can hide in) — converges parallel rays to a focal point in front. CONVEX = bulges OUTward — diverges parallel rays (image appears smaller). Spoon trick: inside of spoon = concave; back of spoon = convex.",
+              "predictQuestion": "Why is the inside of a car's rear-view mirror CURVED instead of flat — what does the curve buy you?",
+              "whyChain": [
+                "Spherical mirrors come in two kinds: CONCAVE (curved inward, like a bowl) and CONVEX (curved outward, like the back of a spoon). Concave mirrors converge light; convex mirrors diverge it. The shape determines image type, size, and orientation.",
+                "Why are car side-mirrors convex? Because convex mirrors give a wider field of view than flat ones — you see more of the road behind you, at the cost of objects appearing smaller and closer than they are (hence the 'objects in mirror are closer than they appear' label). Trade-off: wider view for image distortion.",
+                "And why are dentist's mirrors concave? Because concave mirrors MAGNIFY objects placed close to them. The dentist can see your back molars enlarged, which would be impossible with a flat mirror. Same physics — the curve determines whether the image grows or shrinks. Class 11 physics derives the mirror equation 1/v + 1/u = 1/f from these basics."
+              ]
             }
           ],
           "questions": [
@@ -35722,7 +35904,13 @@
                 195
               ],
               "needsHumanReview": false,
-              "mnemonic": "Light SLOWS DOWN entering denser media (water, glass) and bends TOWARD the normal. Coming out, it speeds up and bends AWAY. Pencil-in-water trick demonstrates this. Mnemonic: 'denser = slower = bend toward'."
+              "mnemonic": "Light SLOWS DOWN entering denser media (water, glass) and bends TOWARD the normal. Coming out, it speeds up and bends AWAY. Pencil-in-water trick demonstrates this. Mnemonic: 'denser = slower = bend toward'.",
+              "predictQuestion": "Put a straight pencil half into a glass of water. From the side it looks BROKEN. Why does water bend the pencil — or does it?",
+              "whyChain": [
+                "Refraction is the bending of light as it passes from one medium to another (e.g., air to water). The pencil isn't actually bent; the light traveling from the underwater part to your eye changes direction at the air-water boundary, fooling your brain about the pencil's underwater position.",
+                "Why does light change direction? Because light travels at different speeds in different media — faster in air (~300,000 km/s) than in water (~225,000 km/s). When the wave hits the boundary at an angle, one side of the wave slows before the other, swinging the whole wave's direction. Same effect as a tank rolling onto soft mud at an angle.",
+                "And why is this the basis of every lens, telescope, and microscope? Because controlled refraction lets us bend light precisely. Carefully shaped glass = controlled wave-front swerve. Galileo's first telescope was just two lenses; Newton built one with curved mirrors. Class 11 physics extends this to Snell's law (n₁sinθ₁ = n₂sinθ₂) — one equation governs every refraction event."
+              ]
             },
             {
               "id": "ch15_t02_c02",
@@ -35775,7 +35963,13 @@
                 196
               ],
               "needsHumanReview": false,
-              "mnemonic": "VIBGYOR — Violet, Indigo, Blue, Green, Yellow, Orange, Red. Order of wavelengths (violet shortest, red longest). Prism separates white light because each colour bends a different amount."
+              "mnemonic": "VIBGYOR — Violet, Indigo, Blue, Green, Yellow, Orange, Red. Order of wavelengths (violet shortest, red longest). Prism separates white light because each colour bends a different amount.",
+              "predictQuestion": "Newton famously passed sunlight through a glass prism and out came a rainbow. He then passed THE rainbow through another prism — what came out the other side?",
+              "whyChain": [
+                "A prism is a triangular glass block that bends light by refraction. White light contains all visible wavelengths; each wavelength bends by a slightly different angle through the prism, so they spread out into a spectrum (rainbow). The shorter wavelengths (violet, blue) bend more; longer wavelengths (red, orange) bend less.",
+                "Why does each wavelength bend by a different amount? Because the refractive index of glass varies slightly with wavelength (a phenomenon called dispersion). Violet light slows down more in glass than red light does, so the violet wave bends more at the air-glass boundary.",
+                "And why was Newton's REVERSE experiment so important? Because passing the rainbow back through a SECOND prism recombined it into white light. This proved that white light is genuinely a MIXTURE of colours — not a single thing that gets 'corrupted' by glass. Class 11 physics uses this to teach that white isn't a colour but a combination. Iconic demonstration."
+              ]
             },
             {
               "id": "ch15_t02_c03",
@@ -35829,7 +36023,13 @@
                 197
               ],
               "needsHumanReview": false,
-              "mnemonic": "Rainbows = prisms made of water droplets. Sun BEHIND you, raindrops in FRONT. Each drop refracts + reflects + refracts again, creating the 42° arc. Double rainbows = second internal reflection (fainter, reversed colours)."
+              "mnemonic": "Rainbows = prisms made of water droplets. Sun BEHIND you, raindrops in FRONT. Each drop refracts + reflects + refracts again, creating the 42° arc. Double rainbows = second internal reflection (fainter, reversed colours).",
+              "predictQuestion": "Rainbows always appear opposite the sun. Why do they form a CIRCLE (well, a half-circle from the ground), and why does the colour ORDER never change?",
+              "whyChain": [
+                "A rainbow forms when sunlight enters a raindrop, refracts on the way in, reflects off the back wall, and refracts on the way out. Each colour exits at a slightly different angle (~42° for red, ~40° for violet). Your eye sees the colour spread along an arc centered on the antisolar point.",
+                "Why is red on the outside and violet on the inside? Because red bends LESS through the raindrop, so it exits at the larger angle (~42°) — placing it on the outer edge of the bow. Violet bends MORE so it's at the inner edge. The order is set by physics; it never reverses.",
+                "And why do double rainbows have the colour order REVERSED? Because in the secondary bow, light reflects TWICE inside the raindrop before exiting. The extra reflection flips the colour order: red becomes inner, violet becomes outer. The double bow is fainter and at a wider radius (~50°). Class 11 physics has the full geometry in optics chapter."
+              ]
             }
           ],
           "questions": [
@@ -36178,7 +36378,13 @@
                 200
               ],
               "needsHumanReview": false,
-              "mnemonic": "Convex lens (thicker middle) = converging = MAGNIFYING glass effect when object inside focal length. Concave lens (thinner middle) = diverging = always makes images SMALLER. 'Conver-ges' and 'Conver-x' both start with C-O-N-V — bulged center, focuses light."
+              "mnemonic": "Convex lens (thicker middle) = converging = MAGNIFYING glass effect when object inside focal length. Concave lens (thinner middle) = diverging = always makes images SMALLER. 'Conver-ges' and 'Conver-x' both start with C-O-N-V — bulged center, focuses light.",
+              "predictQuestion": "A magnifying glass makes letters look BIGGER. A camera lens shrinks a whole landscape onto a tiny sensor. Why does the same kind of object (a convex lens) do opposite things?",
+              "whyChain": [
+                "Convex (converging) lenses bring parallel rays to a focus; concave (diverging) lenses spread them out. A convex lens can produce either a real and inverted image (when the object is far) or a virtual and upright magnified image (when the object is very close — inside the focal length).",
+                "Why two different image types from one lens? Because what matters is the object's DISTANCE relative to the lens's focal length. Object far away → rays converge AFTER the lens → real image (camera). Object very close → rays diverge through the lens → virtual upright image (magnifying glass).",
+                "And why do glasses use convex OR concave lenses depending on the eye? Long-sighted people (hyperopia) need convex lenses to converge incoming light onto the retina; near-sighted (myopia) need concave to diverge it before it hits the retina. Class 11+ physics derives 1/v + 1/u = 1/f and uses it for prescription strengths."
+              ]
             },
             {
               "id": "ch15_t03_c02",
@@ -36232,7 +36438,13 @@
                 202
               ],
               "needsHumanReview": false,
-              "mnemonic": "Peri-scope = PERI (around) + SCOPE (see). Two mirrors at 45° each: top scoops light down, bottom sends it to eye. Used in submarines and behind-walls viewing. Both mirrors at 45° = total 90° turn at each = 180° offset, image right-side up."
+              "mnemonic": "Peri-scope = PERI (around) + SCOPE (see). Two mirrors at 45° each: top scoops light down, bottom sends it to eye. Used in submarines and behind-walls viewing. Both mirrors at 45° = total 90° turn at each = 180° offset, image right-side up.",
+              "predictQuestion": "A submarine periscope lets you see above the surface from underwater. There's nothing electronic inside — just two mirrors. How does that work?",
+              "whyChain": [
+                "A periscope uses two plane mirrors set parallel at 45° angles inside a vertical tube. Light entering the top mirror is reflected straight down to the bottom mirror, which reflects it straight out to your eye. You see whatever's above without your eye being above.",
+                "Why does this work for a submarine but the SAME geometry works for a periscope used in a stadium crowd or behind a wall? Because plane mirrors don't change the size or quality of the image — they just relocate where the light reaches your eye. Submarines use it for invisibility; spectators use it for height; engineers use it to look around corners inside engines.",
+                "And why are modern periscopes much more sophisticated? Because real submarines need to see further, in low light, and at multiple wavelengths. They now use folded refractive optics with lenses and even electronic image sensors that transmit to a screen below. The mirror principle remains the foundation. Class 11 physics covers the basic geometric optics first; advanced lenses come in Class 12."
+              ]
             },
             {
               "id": "ch15_t03_c03",
@@ -36286,7 +36498,13 @@
                 203
               ],
               "needsHumanReview": false,
-              "mnemonic": "Kalei-do-scope: 'beautiful shape see'. Three mirrors at 60° each form a triangle; objects between them reflect 6 times = symmetric patterns. Multiple of 60° matters: 60° gives 6-fold symmetry (3 mirrors × 2 reflections each)."
+              "mnemonic": "Kalei-do-scope: 'beautiful shape see'. Three mirrors at 60° each form a triangle; objects between them reflect 6 times = symmetric patterns. Multiple of 60° matters: 60° gives 6-fold symmetry (3 mirrors × 2 reflections each).",
+              "predictQuestion": "A kaleidoscope shows endless symmetric patterns from just a few colour pieces. How can three flat mirrors create infinity?",
+              "whyChain": [
+                "A kaleidoscope is three plane mirrors arranged as a triangular tube, with coloured beads or paper at one end and an eye-hole at the other. Light bounces between the mirrors, creating multiple reflections of the beads at every angle.",
+                "Why is the pattern so symmetric? Because each pair of mirrors reflects the beads at exactly 60° apart (in a 3-mirror equilateral kaleidoscope). The reflections of reflections create a six-pointed snowflake symmetry. Move one bead a millimetre and ALL six echoes move in mirror-image lockstep.",
+                "And why does it seem to go on forever? Because each reflection produces another reflection at the same angle. In theory the reflections are infinite; in practice each reflection dims slightly (mirrors aren't 100% efficient), so the chain fades after 5-10 generations. Brewster invented the kaleidoscope in 1816 as a serious optical instrument. Class 11 physics + symmetry chapters in mathematics use kaleidoscopes as teaching tools."
+              ]
             }
           ],
           "questions": [
@@ -37253,7 +37471,123 @@
           "parentConceptId": "ch15_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch15_t01_c01",
+            "label": "Reflection (laws)",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.3
+          },
+          {
+            "id": "ch15_t01_c02",
+            "label": "Spherical mirrors",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.55
+          },
+          {
+            "id": "ch15_t02_c01",
+            "label": "Refraction",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.3
+          },
+          {
+            "id": "ch15_t02_c02",
+            "label": "Prism + dispersion",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.55
+          },
+          {
+            "id": "ch15_t02_c03",
+            "label": "Rainbow",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.8
+          },
+          {
+            "id": "ch15_t03_c01",
+            "label": "Convex + concave lenses",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.8
+          },
+          {
+            "id": "ch15_t03_c02",
+            "label": "Periscope (mirrors)",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.6
+          },
+          {
+            "id": "ch15_t03_c03",
+            "label": "Kaleidoscope",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.85
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch15_t01_c01",
+            "to": "ch15_t01_c02",
+            "label": "extended to"
+          },
+          {
+            "id": "e02",
+            "from": "ch15_t01_c01",
+            "to": "ch15_t03_c02",
+            "label": "applied in"
+          },
+          {
+            "id": "e03",
+            "from": "ch15_t01_c01",
+            "to": "ch15_t03_c03",
+            "label": "applied in"
+          },
+          {
+            "id": "e04",
+            "from": "ch15_t02_c01",
+            "to": "ch15_t02_c02",
+            "label": "splits via"
+          },
+          {
+            "id": "e05",
+            "from": "ch15_t02_c02",
+            "to": "ch15_t02_c03",
+            "label": "natural example"
+          },
+          {
+            "id": "e06",
+            "from": "ch15_t02_c01",
+            "to": "ch15_t03_c01",
+            "label": "shapes via"
+          },
+          {
+            "id": "e07",
+            "from": "ch15_t01_c02",
+            "to": "ch15_t03_c01",
+            "label": "twin of"
+          },
+          {
+            "id": "e08",
+            "from": "ch15_t03_c02",
+            "to": "ch15_t01_c02",
+            "label": "uses"
+          },
+          {
+            "id": "e09",
+            "from": "ch15_t03_c03",
+            "to": "ch15_t01_c01",
+            "label": "iterative"
+          }
+        ]
+      }
     },
     {
       "id": "ch16",
