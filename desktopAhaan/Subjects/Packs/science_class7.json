@@ -19931,6 +19931,541 @@
         103,
         104,
         105
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch08_rw01",
+          "title": "Cyclone Amphan crashes into Bengal coast, May 2020",
+          "body": "Amphan formed in the central Bay of Bengal, intensified within 36 hours into a super cyclone with winds of 240 km/h, and slammed the Sundarbans on 20 May 2020. Trees uprooted, electricity gone for weeks, mangroves destroyed across 1500 km². Death toll: ~100 (would have been thousands without IMD's 7-day advance warning). Damage: ₹1.02 lakh crore. Cyclones are the Bay of Bengal's defining feature — warm water + low wind shear = perfect formation zone. Every year, India watches this corner of the ocean.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_rw02",
+          "title": "Tauktae batters Mumbai and Gujarat, May 2021",
+          "body": "Most Indian cyclones hit the east coast. Tauktae was the rare one that formed in the Arabian Sea and tracked north along the west coast — Kerala, Karnataka, Maharashtra, Gujarat. Mumbai recorded 230 km/h gusts. The Tauktae oil-rig disaster cost 86 lives. The Arabian Sea has been warming faster than the global average; cyclones there are getting more frequent. Tauktae was a warning that the west coast can't relax.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_rw03",
+          "title": "Why the monsoon arrives every year (almost)",
+          "body": "Summer (March-May) heats the Indian subcontinent more than the Indian Ocean. Hot air rises over land; low pressure forms over north India. Cool moist air from the Indian Ocean rushes in to fill the gap, carrying water vapour. As it rises over land, it cools, condenses, and rains. The monsoon is just a giant sea breeze on a continental scale. The same physics as Mumbai's afternoon breeze, but across a whole subcontinent and four months.",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_rw04",
+          "title": "Why a balloon pops when you sit on it",
+          "body": "Inside the balloon, air is at higher pressure than outside. The rubber wall holds it in. When you push on it, you compress the inside air further; pressure climbs until the rubber can't take it and bursts. Same with cyclones at planetary scale — air pressure differences drive wind from high-pressure regions to low-pressure regions. The bigger the difference, the faster the wind. A cyclone's eye is the lowest-pressure spot on Earth at that moment.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_rw05",
+          "title": "A thunderstorm over Delhi in pre-monsoon May",
+          "body": "On a hot May afternoon in Delhi, air at ground level is 45°C. It rises rapidly as a tower of warm air. Higher up, it meets cold air, condenses, and forms cumulus clouds that stack 10 km high. Water droplets and ice crystals in the cloud rub against each other, building up electric charge. Eventually the charge difference between cloud and ground gets so big that lightning bridges it — a billion-volt arc. The thunder is the air superheated by the lightning expanding faster than the speed of sound.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch08_xc01",
+          "title": "Class 9 Geography — Drainage and Climate of India",
+          "body": "Class 9 Geography goes into the southwest monsoon and northeast monsoon in detail — onset dates, branches (Arabian Sea branch, Bay of Bengal branch), and how they shape every river system in India. The Class 7 idea 'monsoon is a continental sea breeze' becomes the formal mechanism behind India's water economy.",
+          "targetExam": "class9",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_xc02",
+          "title": "Class 11 Geography — Atmospheric Circulation",
+          "body": "Class 11 (Fundamentals of Physical Geography) explains the global pressure belts, Hadley/Ferrel/Polar cells, jet streams, and the Coriolis force that makes Northern-hemisphere cyclones spin anticlockwise. Every wind in this Class 7 chapter has a clean explanation in Class 11.",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch08_t01_c01",
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_xc03",
+          "title": "JEE Physics — Fluid dynamics and Bernoulli",
+          "body": "JEE Physics Class 11 covers fluid pressure and Bernoulli's principle — fast-moving air has lower pressure than slow-moving air. This is why cyclone winds rip roofs off: the high-speed wind ABOVE the roof has low pressure; the still air BELOW has normal pressure; the difference lifts the roof. The Class 7 'air pressure pushes' becomes a quantitative equation in JEE.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch08_t01_c01",
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch08_mn01",
+          "acronym": "HOT-LOW",
+          "unpacking": "Hot air rises (it's less dense). Cool air sinks (it's denser). Wind flows from HOT (rising) to areas of LOW pressure. Every wind in nature follows this rule.",
+          "context": "How wind is born.",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_mn02",
+          "acronym": "SEA-LAND-D-N",
+          "unpacking": "SEA breeze in the DAY (land heats first, sea air rushes in). LAND breeze at NIGHT (land cools first, land air flows seaward).",
+          "context": "The two-direction coastal wind cycle.",
+          "relatedConceptIds": [
+            "ch08_t02_c01",
+            "ch08_t02_c02"
+          ]
+        },
+        {
+          "id": "ch08_mn03",
+          "acronym": "EYE-WC",
+          "unpacking": "Cyclone's EYE is the calm centre. Around it: Wall of fierce wind and rain. C-irculating outward, the rain bands. Eye + wall + bands = a complete cyclone structure.",
+          "context": "Anatomy of a cyclone.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch08_ms01",
+          "kidsThink": "Air is empty — has no weight.",
+          "actually": "Air has weight. A 1 cubic metre of air at room temperature weighs about 1.2 kg. The atmospheric column above your shoulders pushes down with ~10,000 kg of force per square metre — but you don't feel it because the air inside your body pushes back equally. Sudden pressure changes (taking off in a plane, deep diving) are when you notice the air's weight on your eardrums.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms02",
+          "kidsThink": "Wind happens because air just decides to move.",
+          "actually": "Wind always has a cause — a pressure difference. Air moves FROM high pressure TO low pressure (just like water flowing from a high tap to a lower drain). No pressure difference = no wind. The bigger the difference, the faster the wind. That's why a low-pressure cyclone draws air in at 200+ km/h, and a calm day has no pressure gradient.",
+          "relatedConceptIds": [
+            "ch08_t01_c01",
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_ms03",
+          "kidsThink": "The eye of a cyclone is dangerous because it's the worst spot.",
+          "actually": "The eye is the CALMEST spot in a cyclone — winds drop to near zero, sky often clears, and people who survive the first wall sometimes step out thinking the storm is over. That's dangerous — the EYE WALL right behind it has the strongest winds. Cyclone survivors in coastal India are taught: when winds suddenly stop, the second half is coming. Stay indoors another 30 minutes.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_ms04",
+          "kidsThink": "Lightning hits the ground; thunder hits afterwards.",
+          "actually": "Lightning and thunder happen at exactly the same moment — they're two effects of the same bolt. Lightning is the visible electric arc; thunder is the sound of superheated air (~30,000°C) expanding explosively. You SEE lightning first because light travels million times faster than sound. Count seconds between flash and thunder; divide by 3 = km away. If less than 5 seconds, take shelter.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms05",
+          "kidsThink": "Cyclones happen randomly.",
+          "actually": "Cyclones need very specific conditions: warm sea surface (>26.5°C), low atmospheric wind shear, distance from the equator (Coriolis force), and a pre-existing weather disturbance. Without all four, no cyclone forms. The Bay of Bengal has all four most years; the Arabian Sea less so (which is why east coast gets more cyclones than west). They aren't random — they're highly predictable from the conditions.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch08_nq01",
+          "question": "Fill in the blanks: (a) Wind is moving ______. (b) Winds are generated due to ______ heating on the Earth. (c) Near the Earth's surface, ______ air rises up whereas ______ air comes down. (d) Air moves from a region of ______ pressure to a region of ______ pressure.",
+          "modelAnswer": "(a) air (b) uneven (c) warm; cool (d) high; low.",
+          "relatedConceptIds": [
+            "ch08_t01_c01",
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_nq02",
+          "question": "Suggest two methods to find out wind direction at a given place.",
+          "modelAnswer": "(1) Wet a finger and hold it up — the cool side is the windward side (wind is coming from there). (2) Watch smoke from a chimney or incense stick — it drifts in the direction the wind blows. More formal: a weathercock or wind vane rotates to point toward the source of the wind. Cricket boards' wind vanes do exactly this.",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_nq03",
+          "question": "State two experiences that made you think that air exerts pressure (other than those given in the text).",
+          "modelAnswer": "(1) When you ride a fast bike or stand outside a moving car, you feel air pushing against your face — that's air pressure becoming kinetic energy. (2) When you suck juice through a straw, air pressure outside the glass pushes the juice up into the low-pressure mouth you created. Other examples: a paper sticking to a windowpane during heavy wind (high-pressure air outside, low-pressure between paper and glass), a cyclist hanging on a windy day, the wind lifting a kite.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_nq04",
+          "question": "You want to buy a house. Would you like to buy a house having windows but no ventilators? Explain your answer.",
+          "modelAnswer": "No — a house needs ventilators (small openings high on the wall). Hot air rises and accumulates near the ceiling. Without ventilators, this hot stale air gets trapped, making the room hotter and stuffier. Ventilators let hot air escape and cool fresh air enter through lower windows — natural convection cooling. In Indian summers, ventilators can drop room temperature by 3-5°C versus closed rooms.",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_nq05",
+          "question": "Explain why holes are made in hanging banners and hoardings.",
+          "modelAnswer": "Holes let wind pass THROUGH the banner instead of pushing AGAINST it. Without holes, even a moderate wind exerts huge force on the banner (force = pressure × area). A solid 3m × 2m banner in 50 km/h wind faces ~150 kg of force — enough to rip the banner or pull down whatever it's tied to. The little holes you see in cricket-stadium banners and political hoardings are exactly this engineering trick.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_nq06",
+          "question": "How will you help your neighbours in case a cyclone approaches your village?",
+          "modelAnswer": "(1) Listen to IMD weather radio / TV warnings and pass them to neighbours. (2) Help elderly, sick, and disabled neighbours move to a designated cyclone shelter early. (3) Help secure houses — board up windows, tie down loose objects, store water and food. (4) Move livestock to higher ground. (5) Charge phones, keep flashlight and batteries ready. (6) After the storm: don't go out during the calm eye; help with rescue and first aid after winds fully subside. (7) Avoid downed electric wires and floodwater.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_nq07",
+          "question": "What planning is required in advance to deal with the situation created by a cyclone?",
+          "modelAnswer": "Planning at multiple levels. Individual: a 'go-bag' with food/water for 3 days, ID copies, money, torch, batteries, first aid kit. Family: knowing the nearest cyclone shelter (every coastal village has one), having transport plan, identifying vulnerable family members. Community: IMD warning subscriptions, evacuation drills, secure stockpiles. Government: storm warnings (IMD), cyclone shelters (NDMA built ~1500 since 2000), shelter signs, helpline 1078, NDRF teams pre-positioned. Without all four layers, deaths multiply.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_nq08",
+          "question": "Which of the statements given below is correct? (i) In winter the winds flow from the land to the ocean. (ii) In summer the winds flow from the land towards the ocean. (iii) A cyclone is formed by the very high pressure system with very high speed winds revolving around it. (iv) The coastline of India is not vulnerable to cyclones.",
+          "modelAnswer": "(i) is correct. In winter, the land is cooler than the ocean (the ocean retains its summer heat longer). So warm ocean air rises, and cool land air flows out to the ocean — that's the northeast monsoon / winter wind pattern. (ii) is wrong — it's reversed. (iii) is wrong — cyclones form around LOW pressure, not high. (iv) is dramatically wrong — India's east coast is one of the world's most cyclone-vulnerable coastlines.",
+          "relatedConceptIds": [
+            "ch08_t02_c02",
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch08_gl01",
+          "term": "Air pressure",
+          "definition": "The force that air exerts on a surface, caused by the weight of the column of air above it.",
+          "example": "At sea level, air pressure is 1 atmosphere (~10,000 kg per square metre).",
+          "hindiTerm": "वायुदाब",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl02",
+          "term": "Wind",
+          "definition": "Air moving from a region of higher pressure to a region of lower pressure.",
+          "example": "Coastal afternoon sea breeze, monsoon winds, cyclone gales — all driven by pressure differences.",
+          "hindiTerm": "हवा",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_gl03",
+          "term": "Sea breeze",
+          "definition": "Daytime wind from sea to land, caused by faster land heating.",
+          "example": "Marine Drive's afternoon breeze in Mumbai.",
+          "hindiTerm": "समुद्री हवा",
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl04",
+          "term": "Land breeze",
+          "definition": "Night-time wind from land to sea, caused by faster land cooling.",
+          "example": "Fishing boats often leave coastal villages at dusk with the land breeze.",
+          "hindiTerm": "स्थलीय हवा",
+          "relatedConceptIds": [
+            "ch08_t02_c02"
+          ]
+        },
+        {
+          "id": "ch08_gl05",
+          "term": "Monsoon",
+          "definition": "Large-scale seasonal wind pattern caused by differential heating of land and sea — India's summer rainfall maker.",
+          "example": "Onset of southwest monsoon over Kerala on ~1 June, reaches Delhi by 1 July.",
+          "hindiTerm": "मानसून",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl06",
+          "term": "Thunderstorm",
+          "definition": "A storm with rapid updraft of warm humid air producing tall clouds, lightning, thunder, and heavy rain.",
+          "example": "Delhi's pre-monsoon May thunderstorms, often called 'andhi'.",
+          "hindiTerm": "तूफान",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl07",
+          "term": "Cyclone",
+          "definition": "A large rotating storm system around a low-pressure centre, with winds 60+ km/h.",
+          "example": "Cyclone Amphan (May 2020) hit West Bengal with 240 km/h winds.",
+          "hindiTerm": "चक्रवात",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_gl08",
+          "term": "Eye of the cyclone",
+          "definition": "The calm low-pressure centre of a cyclone, surrounded by the strongest winds.",
+          "example": "Survivors of cyclones often mistake the eye's calm for the end of the storm.",
+          "hindiTerm": "चक्रवात की आँख",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_gl09",
+          "term": "Wind vane",
+          "definition": "A device with a pointer that rotates to show the direction the wind is blowing FROM.",
+          "example": "Cricket stadiums and weather stations use wind vanes to track wind direction.",
+          "hindiTerm": "वायु दिशा सूचक",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_gl10",
+          "term": "Storm surge",
+          "definition": "The rise in sea level along the coast during a cyclone, caused by low pressure and strong onshore winds.",
+          "example": "Cyclone Phailin's 2013 storm surge in Odisha was 3.5 metres above normal sea level.",
+          "hindiTerm": "तूफानी ज्वार",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch08_mp01",
+          "emoji": "🥤",
+          "title": "Can crusher — see air pressure in action",
+          "needs": [
+            "An empty aluminium soda can",
+            "A small amount of water (1 tablespoon)",
+            "A pair of tongs",
+            "A bowl of cold water",
+            "A stove or burner (adult help essential)"
+          ],
+          "steps": [
+            "Pour 1 tablespoon water into the empty can.",
+            "Place the can on the stove with tongs. Heat until water boils and steam rushes out of the top for 30 seconds.",
+            "Quickly invert the can into the bowl of cold water — opening down.",
+            "Watch what happens."
+          ],
+          "expectedObservation": "The can collapses inward with a sharp crack. Outside air pressure has crushed it instantly.",
+          "whyItWorks": "Boiling water filled the can with steam, pushing air out. When you inverted the can in cold water, the steam condensed back to liquid (which has much less volume). This created near-vacuum inside the can. Atmospheric pressure outside (~10,000 kg/m²) had nothing pushing back — so it crushed the can. The same principle works at planetary scale: any region with sudden pressure drop draws everything around it. Cyclones are exactly this effect.",
+          "estimatedMinutes": 15,
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_mp02",
+          "emoji": "🎈",
+          "title": "Convection chimney — bottle storm in a jar",
+          "needs": [
+            "A glass jar (mouth open)",
+            "Hot water",
+            "Cold blue food coloured ice cube",
+            "A pipette or small dropper"
+          ],
+          "steps": [
+            "Fill the jar 3/4 with hot tap water. Wait 30 seconds for it to settle.",
+            "Gently lower a blue food-coloured ice cube using tongs.",
+            "Watch what happens immediately — cold blue water sinks and spreads at the bottom, hot clear water above. Within 30 seconds, the blue rises in plumes.",
+            "Time the convection cycle — how long until the whole jar is uniformly mixed?"
+          ],
+          "expectedObservation": "Cold blue water sinks first (denser), then plumes rise back up as warm water carries the dye upward. The pattern visualises convection cells.",
+          "whyItWorks": "Hot water is less dense than cold water. As the ice melts, cold blue water sinks; that cold water displaces warm clear water upward. The warm water rises, cools, and sinks again — a convection cell. This is exactly how a thunderstorm cloud forms: hot ground air rises, cool upper air sinks, and a vertical circulation builds up. Replace 'cold water' with 'cold polar air' and 'hot water' with 'tropical air' and you have monsoon dynamics.",
+          "estimatedMinutes": 20,
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch08_sci01",
+          "name": "P. Koteswaram (with India context)",
+          "lifespan": "1915–2002",
+          "nationality": "Indian",
+          "oneLineLegacy": "First Indian Director-General of the Indian Meteorological Department; pioneered cyclone forecasting that saves thousands of lives every year.",
+          "narrative": "When P. Koteswaram joined the Indian Meteorological Department in 1939, India had almost no cyclone warning. Coastal communities heard nothing until the wind hit. The 1942 Midnapore cyclone killed ~10,000 people in Bengal — silent, sudden. Koteswaram spent his career changing that. He pioneered upper-air observations using radiosondes (instruments hung off helium balloons), connecting India to the global weather-data network. He led IMD's transition to satellite-based monitoring after India's INSAT satellites launched in the 1980s. He trained generations of Indian meteorologists. By the time of Cyclone Amphan in 2020, IMD's warning system gave 7 days' advance notice with track accuracy of better than 50 km. The 2013 Cyclone Phailin (Odisha) killed only 45 people — a similar 1999 cyclone had killed 10,000. The reduction is Koteswaram's invisible legacy: every coastal Indian who survives a cyclone today owes it to a forecasting system he built.",
+          "relatedConceptIds": [
+            "ch08_t03_c01",
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch08_wi01",
+          "question": "What if the Earth stopped rotating?",
+          "answer": "Wind patterns would collapse. The Coriolis effect (which makes cyclones spin) would vanish, so cyclones would lose their rotation and become weaker. The big jet streams that move weather across continents would slow down. Day-night temperature differences would become extreme — half the planet roasting, half freezing. Eventually a new wind system would emerge: hot equator-to-pole circulation, but with no daily cycle. Most life as we know it depends on Earth's rotation; weather is just one casualty of stopping it.",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_wi02",
+          "question": "What if a cyclone with the strength of Amphan hit Mumbai?",
+          "answer": "Mumbai is geographically less cyclone-prone than the east coast — the Arabian Sea is cooler and shears more wind. But warming oceans are changing this (Tauktae 2021 was a preview). If a 240 km/h cyclone hit Mumbai: skyscrapers would have ~half the wind stress they're rated for; old chawls and slums would be levelled; storm surge would flood coastal Mumbai (Marine Drive, BKC, Bandra reclamation) by 3-5 metres; the airport would be unusable for weeks. Mumbai's cyclone resilience is far below east-coast cities like Visakhapatnam.",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_wi03",
+          "question": "What if monsoon failed two years in a row?",
+          "answer": "This has happened — the back-to-back failures of 1965-66 and 1972-73 caused mass food shortages in India. Today, with greater rice and wheat stockpiles (Food Corporation of India holds ~50 million tonnes buffer), a single failed monsoon doesn't cause famine. But two failures: groundwater depletion accelerates, summer crops collapse, prices rise sharply, rural distress spreads, electricity (hydroelectric) declines. The Indus and Ganges rivers run very low. The 1965-66 failure pushed India to launch the Green Revolution. A repeat today would similarly force big policy shifts.",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch08_cx01",
+          "toChapterId": "ch04",
+          "topic": "Heat",
+          "pointer": "Ch.4 introduces convection (heat-driven fluid motion) — Ch.8 shows it scaled up: convection cells over a coastline give sea breezes, over a continent give monsoons, over a warm ocean give cyclones. Same physics, four orders of magnitude scale.",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_cx02",
+          "toChapterId": "ch07",
+          "topic": "Weather, Climate and Adaptations",
+          "pointer": "Ch.7's climate-shaping factors (sea proximity, mountains, latitude) drive the wind patterns Ch.8 explores. A cyclone is just a dramatic moment in a climate system.",
+          "relatedConceptIds": [
+            "ch08_t01_c02",
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 doesn't have a dedicated winds chapter, but Class 9 Geography's 'Climate' chapter formally explains monsoon mechanics, pressure belts, and India's seasons. Class 9 Physics introduces fluid mechanics with formal pressure calculations.",
+        "forNeetJee": "Class 11 Geography (Climatology unit) explains atmospheric circulation, Hadley/Ferrel/Polar cells, jet streams, Coriolis force. Class 11 Physics' Mechanical Properties of Fluids covers Bernoulli, fluid pressure, buoyancy — the equations behind why winds blow. NEET tests cyclone effects on coastal ecosystems."
+      },
+      "gallery": [
+        {
+          "id": "ch08_gi01",
+          "caption": "Satellite view of Cyclone Amphan, May 2020",
+          "detail": "INSAT-3D images showed Amphan's spiral structure: clear eye in the centre (~50 km wide), spinning wall of clouds around it, rain bands stretching 500 km outward. The whole system rotated anticlockwise (Northern Hemisphere). Onshore impact: Bengal coast, 20 May 2020, 240 km/h winds.",
+          "assetHint": "sfsymbol:tornado",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_gi02",
+          "caption": "Sea breeze / land breeze cycle",
+          "detail": "Day: sun heats land faster → hot land air rises → cool sea air rushes inland (sea breeze). Night: land cools faster than sea → cool land air sinks → warm sea air flows seaward (land breeze). Same coast, opposite winds, daily cycle.",
+          "assetHint": "sfsymbol:wind",
+          "relatedConceptIds": [
+            "ch08_t02_c01",
+            "ch08_t02_c02"
+          ]
+        },
+        {
+          "id": "ch08_gi03",
+          "caption": "Lightning strike anatomy",
+          "detail": "A bolt: cloud has accumulated negative charge at the base; ground gathers positive charge. When the voltage difference exceeds air's resistance (~3 million volts/m), a leader stroke connects them at near-light-speed. The return stroke superheats the channel to 30,000°C — five times the sun's surface temperature.",
+          "assetHint": "sfsymbol:bolt.fill",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_gi04",
+          "caption": "Wind vane design",
+          "detail": "Tail (large surface) catches the wind and is pushed downwind; pointer (small surface) faces the wind source. Mounted on a vertical pivot, the whole thing rotates until pointing into the wind. Every weather station, every cricket ground top has one.",
+          "assetHint": "sfsymbol:arrow.up.and.down.and.arrow.left.and.right",
+          "relatedConceptIds": [
+            "ch08_t01_c02"
+          ]
+        },
+        {
+          "id": "ch08_gi05",
+          "caption": "IMD Cyclone Warning Centre, New Delhi",
+          "detail": "Where India's cyclone forecasting happens. Banks of monitors show satellite imagery (INSAT, MetSat), Doppler radar from coastal stations, computer model output. Forecasters issue warnings via TV, radio, SMS, and cyclone-shelter sirens. 7-day track accuracy is now better than 50 km.",
+          "assetHint": "sfsymbol:tv.fill",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ch08_gi06",
+          "caption": "Cyclone shelter in coastal Odisha",
+          "detail": "Concrete elevated structure on stilts, designed to resist 250 km/h winds and 3 m storm surge. Holds 1000-2000 people per shelter. NDMA has built ~1500 of these since 2000; Odisha alone has 879. Their existence is why Cyclone Phailin (2013) killed 45 instead of 10,000.",
+          "assetHint": "sfsymbol:house.fill",
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch08_tl01",
+          "title": "Birth and death of a Bay of Bengal cyclone",
+          "intro": "From an ordinary low-pressure area to a 240 km/h super cyclone — the 5-day arc of an Indian cyclone.",
+          "steps": [
+            {
+              "id": "ch08_tl01_s01",
+              "label": "Day 1 — Low pressure forms",
+              "body": "A patch of warm Bay of Bengal water (>26.5°C) heats the air above it. The air rises, creating low pressure at the surface. IMD notes it.",
+              "assetHint": "sfsymbol:cloud.fill"
+            },
+            {
+              "id": "ch08_tl01_s02",
+              "label": "Day 2 — Depression",
+              "body": "Surrounding air rushes into the low pressure. Earth's rotation makes the air spiral anticlockwise. Winds reach 40 km/h. Named: depression.",
+              "assetHint": "sfsymbol:tornado"
+            },
+            {
+              "id": "ch08_tl01_s03",
+              "label": "Day 3 — Cyclonic storm",
+              "body": "More water evaporates, more heat released, more wind. Winds 60-90 km/h. IMD assigns a name (Amphan, Tauktae, Fani). Coastal evacuation begins.",
+              "assetHint": "sfsymbol:wind"
+            },
+            {
+              "id": "ch08_tl01_s04",
+              "label": "Day 4 — Severe / Very Severe / Super",
+              "body": "Continued intensification. Winds 90-220+ km/h. The eye forms — a calm low-pressure spot ~50 km wide. The eye wall around it has the fastest winds.",
+              "assetHint": "sfsymbol:eye.fill"
+            },
+            {
+              "id": "ch08_tl01_s05",
+              "label": "Day 5 — Landfall and decay",
+              "body": "Cyclone hits the coast. Cut off from warm ocean water (the energy source), it weakens within hours. Heavy rain continues for 24-48 hours inland. By Day 6, the cyclone has dissipated into a normal low-pressure rain system.",
+              "assetHint": "sfsymbol:cloud.heavyrain.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch08_t03_c02"
+          ]
+        }
       ]
     },
     {
