@@ -4,13 +4,19 @@ import AppKit
 struct ArticleBrowserView: View {
     let initialFile: String
     let chapterFolder: String
+    /// Short label for the article (typically `ArticleEntry.title`) —
+    /// used to enrich the Read-Aloud button's VoiceOver label so it
+    /// announces "Read Photosynthesis aloud" instead of the generic
+    /// "Read article aloud". Optional so old call sites stay clean.
+    let articleTitle: String?
     @Environment(\.presentationMode) private var presentationMode
     @StateObject private var coordinator: ArticleCoordinator
     @ObservedObject private var speech = SpeechReader.shared
 
-    init(initialFile: String, chapterFolder: String) {
+    init(initialFile: String, chapterFolder: String, articleTitle: String? = nil) {
         self.initialFile = initialFile
         self.chapterFolder = chapterFolder
+        self.articleTitle = articleTitle
         _coordinator = StateObject(wrappedValue: ArticleCoordinator())
     }
 
@@ -130,6 +136,18 @@ struct ArticleBrowserView: View {
                 } else {
                     NativeArticleRepresentable(coordinator: coordinator)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        // Surface narration progress as a VoiceOver
+                        // value on the article host. While narration is
+                        // active the rotor announces "Reading paragraph
+                        // 3 of 14" without the user having to navigate
+                        // to the toolbar's `¶ N / M` indicator.
+                        .accessibilityElement(children: .contain)
+                        .accessibilityLabel(articleTitle.map { "Article: \($0)" } ?? "Article")
+                        .accessibilityValue(
+                            speech.isParagraphMode
+                                ? "Reading paragraph \(speech.paragraphIndex + 1) of \(speech.paragraphCount)"
+                                : ""
+                        )
                 }
             }
             .navigationTitle("")
@@ -162,7 +180,15 @@ struct ArticleBrowserView: View {
     }
 
     private var readAloudButton: some View {
-        Button(action: handleReadAloudTapped) {
+        // Build a chapter-aware label so VoiceOver users hear the
+        // article context instead of the generic "Read article aloud".
+        let readAloudLabel: String = {
+            if let t = articleTitle, !t.isEmpty {
+                return "Read \(t) aloud"
+            }
+            return "Read article aloud"
+        }()
+        return Button(action: handleReadAloudTapped) {
             if speech.isSpeaking {
                 Image(systemName: "pause.fill")
                     .font(.body)
@@ -174,15 +200,15 @@ struct ArticleBrowserView: View {
                     .font(.body)
             }
         }
-        .accessibilityLabel(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read article aloud"))
+        .accessibilityLabel(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : readAloudLabel))
         .accessibilityHint(
             speech.isSpeaking
                 ? "Pauses narration mid-paragraph."
                 : (speech.isPaused
                     ? "Resumes narration from where it was paused."
-                    : "Starts reading the article paragraph-by-paragraph. Use the previous and next buttons to step.")
+                    : "Starts reading paragraph-by-paragraph. Use the previous and next buttons to step.")
         )
-        .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read article aloud"))
+        .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : readAloudLabel))
     }
 
     private func handleReadAloudTapped() {

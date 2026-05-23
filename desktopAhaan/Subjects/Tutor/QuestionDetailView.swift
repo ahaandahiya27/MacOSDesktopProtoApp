@@ -586,6 +586,8 @@ struct QuestionDetailView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .textCase(.uppercase)
+                .accessibilityAddTraits(.isHeader)
+                .accessibilityHint("For each left-side item, pick its matching right-side option from the Menu picker. Then tap Check.")
 
             ForEach(pairs) { pair in
                 matchRow(for: pair, allPairs: pairs)
@@ -596,6 +598,8 @@ struct QuestionDetailView: View {
                 Button("Check") { recordMatchAttempt(pairs: pairs) }
                     .disabled(matchAssignment.count != pairs.count
                               || attemptOutcome != .unchecked)
+                    .accessibilityLabel("Check matches")
+                    .accessibilityHint("Validates your pairings. Enabled once every left item has a chosen right.")
             }
             .padding(.top, 4)
         }

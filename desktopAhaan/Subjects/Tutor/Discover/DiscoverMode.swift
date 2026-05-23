@@ -351,6 +351,14 @@ struct DiscoverShell<SceneBody: View>: View {
                 }
                 Spacer(minLength: 0)
             }
+            // Expose the current position as a single VoiceOver value on
+            // the dot container so a screen-reader user hears
+            // "Scene-progress, Scene 3 of 9" without having to step
+            // through every dot. Per-dot labels above stay intact for
+            // users who DO want to navigate individually.
+            .accessibilityElement(children: .contain)
+            .accessibilityLabel("Scene progress")
+            .accessibilityValue("Scene \(currentScene + 1) of \(totalScenes)")
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)

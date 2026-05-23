@@ -180,7 +180,8 @@ struct ChapterDetailView: View {
             case .article(let entry):
                 ArticleBrowserView(
                     initialFile: entry.filename,
-                    chapterFolder: entry.chapterFolder
+                    chapterFolder: entry.chapterFolder,
+                    articleTitle: entry.title
                 )
                 .frame(minWidth: 720, idealWidth: 920,
                        minHeight: 540, idealHeight: 680)

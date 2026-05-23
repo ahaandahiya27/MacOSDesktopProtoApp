@@ -4,12 +4,12 @@ Living list of polish + UI gaps surfaced by `SURFACE_AUDIT.md`. Items move from 
 
 ## §1. Shipped surfaces — small polish gaps (Phase 3 candidates this session)
 
-- [ ] **P1 · Hover-scale Reduce Motion gate** — `ChapterDetailView.swift` `DiscoverEntryBanner`, `BeyondTheBookCard`, `TryAtHomeCard` all apply `scaleEffect(isHovered ? 1.01 : 1.0)` without a Reduce Motion gate. Fix: wrap the hovered-state mutation in `respectReduceMotion(animation:)` or read `NSWorkspace.shared.accessibilityDisplayShouldReduceMotion` and clamp `isHovered` to false. Same pattern in `TopicCard`.
-- [ ] **P2 · Topic card chevron a11y hint** — `ChapterDetailView.swift` `TopicCard` body has a trailing `Image(systemName: "chevron.right")` but the parent Button has no `.accessibilityHint`. VoiceOver currently reads only the topic title; users don't hear "Opens topic — X concepts, Y questions." Fix: add hint to the parent Button.
-- [ ] **P3 · Topic Detail section headers** — `TopicDetailView.swift` "Concepts" / "Questions" section labels are styled headers but lack `.accessibilityAddTraits(.isHeader)`, so VoiceOver users can't skip between sections with the rotor.
+- [x] **P1 · Hover-scale Reduce Motion gate** — shipped in `dbc565a`. The four ChapterDetail cards (Discover banner / Beyond / Try at Home / Notebook) clamp `isHovered` to false when `NSWorkspace.shared.accessibilityDisplayShouldReduceMotion` is true.
+- [x] **P2 · Topic card chevron a11y hint** — shipped in `dbc565a`. Parent Button now carries `.accessibilityLabel(topic.title)` + `.accessibilityHint("Opens topic — N concepts, M questions.")`.
+- [x] **P3 · Topic Detail section headers** — shipped in `dbc565a`. Both "Concepts" / "Questions" labels now carry `.accessibilityAddTraits(.isHeader)`.
 - [ ] **P4 · Question Detail match-pairs a11y hint** — `QuestionDetailView.swift` match-pairs sub-view has interactive cards with no `.accessibilityHint`. Add one: "Drag the left card onto its matching right card."
 - [ ] **P5 · Discover scene-progress dots** — `DiscoverMode.swift` scene dot container should expose `.accessibilityValue("Scene N of M")` so VoiceOver users hear their position.
-- [ ] **P6 · KeyboardShortcutsSheet chip a11y** — `KeyboardShortcutsSheet.swift` shortcut chips (`⌘K` etc.) read as "command K" to VoiceOver; the description text is what's meaningful. Wrap chips in `.accessibilityHidden(true)`.
+- [x] **P6 · KeyboardShortcutsSheet chip a11y** — shipped in `dbc565a`. Each chip row now combines via `.accessibilityElement(children: .ignore)` + label = description + value = "Keyboard shortcut: <combo>" so VoiceOver reads naturally instead of spelling out the modifier glyphs.
 - [ ] **P7 · Article Read-Aloud chapter context** — `ArticleBrowserView.swift` `readAloudButton` `.accessibilityLabel` could include the chapter title for richer context ("Read Ch.5 article aloud").
 - [ ] **P8 · Article paragraph index a11y value** — `NativeArticleRepresentable` host could carry `.accessibilityValue("Reading paragraph N of M")` so screen-reader users hear narration progress without leaving the article surface.
 
