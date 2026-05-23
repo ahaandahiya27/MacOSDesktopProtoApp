@@ -4024,7 +4024,13 @@
                 29
               ],
               "needsHumanReview": false,
-              "mnemonic": "I-DIG-ABS-AS-EG: Ingest, Digest, Absorb, Assimilate, Egest. Five sequential steps — food in, waste out."
+              "mnemonic": "I-DIG-ABS-AS-EG: Ingest, Digest, Absorb, Assimilate, Egest. Five sequential steps — food in, waste out.",
+              "predictQuestion": "If digestion stopped at the mouth and the food just went straight to your bloodstream, would your body even know what to do with it?",
+              "whyChain": [
+                "The five steps — ingestion, digestion, absorption, assimilation, egestion — happen in that exact order because each step REQUIRES the one before it. You can't absorb without first breaking food into small enough molecules to cross the gut wall.",
+                "Why five and not three? Because each transformation is chemically different. Mechanical breakup (teeth, churning) doesn't change the chemistry; enzymes do; absorption is physical transport; assimilation is incorporation into cells; egestion is removal of waste. Combining them into fewer steps loses the distinction.",
+                "And why is this ordering universal across animals, from amoeba to elephant? Because chemistry doesn't care about size — proteins must be cut to amino acids to be absorbed, sugars to monosaccharides. Larger animals just add specialised organs at each step; the steps themselves are the same."
+              ]
             },
             {
               "id": "ch02_t01_c02",
@@ -4098,7 +4104,13 @@
                 20
               ],
               "needsHumanReview": false,
-              "mnemonic": "Three intake modes: SUCK (mosquito, butterfly proboscis), CHEW (mammals, snails), ENGULF (amoeba pseudopodia, jellyfish tentacles). Method matches food shape."
+              "mnemonic": "Three intake modes: SUCK (mosquito, butterfly proboscis), CHEW (mammals, snails), ENGULF (amoeba pseudopodia, jellyfish tentacles). Method matches food shape.",
+              "predictQuestion": "Different animals eat in wildly different ways — spiders pre-digest, snakes swallow whole, cows graze. What's the common problem they're all solving?",
+              "whyChain": [
+                "Holozoic animals swallow whole pieces (humans, dogs, fish). Saprophytic feeders dissolve food outside the body and absorb it (fungi, some larvae). Parasites tap a host's nutrients directly (tapeworm). Each method matches the animal's body plan + the food's form.",
+                "Why so many different solutions? Because food comes in incompatible forms — grass, meat, blood, decaying wood. Each form needs different machinery to break down. A cow's gut is built for cellulose; a tiger's for protein and bone; an amoeba's for tiny particles.",
+                "And why don't humans adapt rapidly when we shift diets? Because gut architecture evolves over thousands of generations. Our intestines are still tuned for the omnivore mix our ancestors ate — heavy on plants, light on meat. Modern pure-meat or pure-grain diets stress that machinery."
+              ]
             },
             {
               "id": "ch02_t01_c03",
@@ -4176,7 +4188,13 @@
                 23
               ],
               "needsHumanReview": false,
-              "mnemonic": "32 ADULT teeth: 4 types × 4 quadrants (top-left, top-right, bot-left, bot-right). I-2 C-1 P-2 M-3 per quadrant = 8 × 4 = 32. Dental formula 2-1-2-3."
+              "mnemonic": "32 ADULT teeth: 4 types × 4 quadrants (top-left, top-right, bot-left, bot-right). I-2 C-1 P-2 M-3 per quadrant = 8 × 4 = 32. Dental formula 2-1-2-3.",
+              "predictQuestion": "A human has 32 teeth — incisors, canines, premolars, molars. Why not just one type of tooth that does everything?",
+              "whyChain": [
+                "Four tooth types do four jobs: incisors cut, canines tear, premolars grind, molars crush. The combination handles every food shape — fruit (cut), meat (tear), grains (grind), nuts (crush) — without any tooth needing to do something it's bad at.",
+                "Why have we kept this exact set of four? Because our ancestors were omnivores who needed every job done. Pure herbivores like cows lost canines (no tearing needed). Pure carnivores like cats reduced molars (no grinding needed). We kept all four — evolution doesn't waste tools that still work.",
+                "And why do humans get TWO sets in a lifetime? Because a child's small jaw can't fit 32 adult-size teeth. We get a smaller 20-tooth temporary set as babies, then replace them with the permanent 32 once the jaw grows. No other mammal goes through full replacement quite the same way."
+              ]
             },
             {
               "id": "ch02_t01_c04",
@@ -4254,7 +4272,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "Stomach = MUSCULAR BAG that churns + acid-bathes food. HCl + pepsin = protein-breakdown. Acidic pH ~2 also kills swallowed germs."
+              "mnemonic": "Stomach = MUSCULAR BAG that churns + acid-bathes food. HCl + pepsin = protein-breakdown. Acidic pH ~2 also kills swallowed germs.",
+              "predictQuestion": "Your stomach makes hydrochloric acid strong enough to dissolve metal. Why doesn't the stomach digest itself?",
+              "whyChain": [
+                "The stomach is a muscular bag that churns food + acid + enzymes for hours. The HCl (pH ~2) kills bacteria, activates pepsin, and starts breaking proteins into smaller peptides. The mechanical churning increases surface area for the enzymes.",
+                "Why doesn't the stomach lining dissolve? Because the lining secretes a thick mucus layer that's bicarbonate-rich (alkaline), forming a protective barrier between the acid and the cells. The lining cells also replace themselves every 3-4 days — faster than any other cells in your body.",
+                "And why do ulcers happen? Because if the mucus layer breaks down (often due to H. pylori bacteria or NSAID drugs), the acid contacts the cells directly and burns through. Treating ulcers with antacids only masks the symptom; antibiotics that kill H. pylori actually cure them. Class 11 microbiology drills this."
+              ]
             },
             {
               "id": "ch02_t01_c05",
@@ -4334,7 +4358,13 @@
                 27
               ],
               "needsHumanReview": false,
-              "mnemonic": "Small intestine = ~6m long for max surface area + time. Where digestion finishes (pancreas enzymes + bile) AND absorption begins via villi → blood."
+              "mnemonic": "Small intestine = ~6m long for max surface area + time. Where digestion finishes (pancreas enzymes + bile) AND absorption begins via villi → blood.",
+              "predictQuestion": "Why does the food spend so long in the small intestine — about 4 hours — when the stomach was already churning it?",
+              "whyChain": [
+                "The small intestine (~6 m long in adults) is where most digestion FINISHES and where almost all absorption happens. Enzymes from the pancreas and bile from the liver complete the breakdown; villi-covered walls absorb the nutrients into the bloodstream.",
+                "Why so long? Because there are still many bonds left to break. The stomach only started — peptides need to become amino acids, complex sugars need to become glucose, fats need to be emulsified by bile. And absorption is a slow physical process that needs every bit of surface area.",
+                "And why so many specialised regions (duodenum, jejunum, ileum)? Because different nutrients absorb best at different pH levels and locations. Iron and calcium prefer the duodenum's near-neutral pH; vitamin B12 absorbs only in the ileum. Removing any one section creates a specific deficiency."
+              ]
             },
             {
               "id": "ch02_t01_c06",
@@ -4410,7 +4440,13 @@
                 27
               ],
               "needsHumanReview": false,
-              "mnemonic": "Large intestine = ~1.5m, WIDER but shorter. Job: reabsorb water from leftover slurry. Faeces formed here. Length less, job different from small intestine."
+              "mnemonic": "Large intestine = ~1.5m, WIDER but shorter. Job: reabsorb water from leftover slurry. Faeces formed here. Length less, job different from small intestine.",
+              "predictQuestion": "If digestion is finished by the time food reaches the large intestine, what work is left for it to do?",
+              "whyChain": [
+                "The large intestine reclaims water from the indigestible leftovers and houses trillions of bacteria that produce vitamin K and B-vitamins. The remaining solid waste is compacted and stored until egestion.",
+                "Why is water recovery so important? Because you'd lose 5-10 litres of fluid per day if the large intestine didn't reabsorb it — diarrhoea is exactly this failure mode and was a major historical killer (cholera kills via dehydration, not toxin damage directly).",
+                "And why does antibiotic use mess up digestion? Because antibiotics kill the good gut bacteria along with the bad. The vitamin K supply drops, the immune system gets less training, opportunistic bacteria like C. diff can take over. Class 12 immunology covers the gut microbiome's role in the bigger picture."
+              ]
             },
             {
               "id": "ch02_t01_c07",
@@ -4486,7 +4522,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "Oesophagus = food PIPE from mouth to stomach. ~25cm in adults. Uses peristalsis (muscular squeeze waves) — you could swallow upside-down (don't try)."
+              "mnemonic": "Oesophagus = food PIPE from mouth to stomach. ~25cm in adults. Uses peristalsis (muscular squeeze waves) — you could swallow upside-down (don't try).",
+              "predictQuestion": "Why don't you choke every time you swallow — and how does the food go DOWN instead of into your lungs?",
+              "whyChain": [
+                "The oesophagus is a muscular tube connecting throat to stomach. When you swallow, the epiglottis (a flap of cartilage) closes off the windpipe and food slides into the oesophagus instead. Peristaltic muscle waves push it down — gravity isn't needed.",
+                "Why doesn't the epiglottis ever fail? It mostly doesn't, because the swallow reflex is fast (~1 second) and exquisitely coordinated by the brainstem. When it does fail — choking — it's usually because you were laughing or talking while swallowing and the timing slipped.",
+                "And why can astronauts swallow in zero-g? Because peristalsis is muscle-driven, not gravity-driven. You could swallow upside-down on Earth too (try it carefully). The food goes where the muscles push it, not where gravity pulls. This is why we evolved peristalsis at all — it works in any orientation."
+              ]
             },
             {
               "id": "ch02_t01_c08",
@@ -4561,7 +4603,13 @@
                 26
               ],
               "needsHumanReview": false,
-              "mnemonic": "Bile from LIVER, stored in GALLBLADDER. Job: EMULSIFY fats (break big drops into tiny ones). Without bile, fat digestion stalls — gallstones surgery removes the storage organ, liver still produces bile."
+              "mnemonic": "Bile from LIVER, stored in GALLBLADDER. Job: EMULSIFY fats (break big drops into tiny ones). Without bile, fat digestion stalls — gallstones surgery removes the storage organ, liver still produces bile.",
+              "predictQuestion": "The liver makes bile that breaks fats apart, but bile doesn't actually digest fat. So what does it do?",
+              "whyChain": [
+                "Bile EMULSIFIES fat — breaks large fat globules into tiny droplets — so the fat-digesting enzyme (lipase) can reach more surface area. Bile itself contains no enzymes. It's stored in the gall bladder between meals and squirted into the small intestine when fat arrives.",
+                "Why isn't lipase enough? Because fat doesn't mix with water-based digestive juice — it pools. Lipase can only work on the surface of a pool. Bile's job is to break that pool into a froth of droplets, multiplying the available surface area by thousands.",
+                "And why do gall bladder surgery patients have to avoid fatty meals? Because without the gall bladder's storage, bile drips continuously from the liver in small amounts. A sudden fatty meal can't be emulsified fast enough and the fat passes through undigested — causing diarrhoea. Slow fat intake works fine; sudden fat overload doesn't."
+              ]
             },
             {
               "id": "ch02_t01_c09",
@@ -4632,7 +4680,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "PANCREAS = 'sweet bread' (Latin). Releases: amylase (carbs), lipase (fats), trypsin (proteins). Triple-enzyme cocktail dumped into small intestine."
+              "mnemonic": "PANCREAS = 'sweet bread' (Latin). Releases: amylase (carbs), lipase (fats), trypsin (proteins). Triple-enzyme cocktail dumped into small intestine.",
+              "predictQuestion": "The pancreas is a small organ that doesn't even touch the food. Why is it so critical to digestion?",
+              "whyChain": [
+                "The pancreas secretes digestive enzymes (amylase, lipase, trypsin, chymotrypsin) into the small intestine via the pancreatic duct. These enzymes break down carbohydrates, fats, and proteins respectively. Without the pancreas, almost no digestion happens past the stomach.",
+                "Why does the pancreas need separate enzymes for each food type? Because each food type has a different chemical bond. Carbohydrates have glycosidic bonds; proteins have peptide bonds; fats have ester bonds. Each enzyme is shaped to fit ONE bond type — locks and keys.",
+                "And why does the pancreas also make insulin? Because it pulls double duty: digestive enzymes go to the gut (exocrine function); insulin and glucagon go to the bloodstream (endocrine function). Type 1 diabetes is the loss of the endocrine cells specifically; digestive function stays intact."
+              ]
             },
             {
               "id": "ch02_t01_c10",
@@ -4705,7 +4759,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "Saliva = AMYLASE + water + minerals. Amylase starts starch → sugar conversion IN THE MOUTH. Chew bread for a minute — it gets sweet (starch becoming maltose)."
+              "mnemonic": "Saliva = AMYLASE + water + minerals. Amylase starts starch → sugar conversion IN THE MOUTH. Chew bread for a minute — it gets sweet (starch becoming maltose).",
+              "predictQuestion": "Chew a piece of bread for a full minute and don't swallow. What starts to taste sweet — and why?",
+              "whyChain": [
+                "Saliva contains salivary amylase, an enzyme that breaks starch into maltose (a simple sugar). After a minute of chewing, enough starch has been converted that the bread literally tastes sweeter. This is digestion happening in your mouth.",
+                "Why start digestion in the mouth at all? Because the food spends only seconds in the mouth — but those seconds matter. Pre-digesting starch in the mouth means the stomach doesn't have to do all the work, AND your taste buds detect the sugar and trigger fuller digestive responses downstream.",
+                "And why is the human salivary amylase gene unusual? Because humans have many copies of it (most other primates have one). Anthropologists think this is an adaptation to starch-rich diets after agriculture — populations with starchy diets (Japanese, European) carry more copies on average than hunter-gatherer populations."
+              ]
             },
             {
               "id": "ch02_t01_c11",
@@ -4776,7 +4836,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "VILLI = visible finger-like projections. MICROVILLI = brush-like on EACH villus. Combined effect: small intestine surface ~250 m² (tennis court inside you)."
+              "mnemonic": "VILLI = visible finger-like projections. MICROVILLI = brush-like on EACH villus. Combined effect: small intestine surface ~250 m² (tennis court inside you).",
+              "predictQuestion": "If you flattened out the inside of your small intestine, how big would the absorbing surface be — a tennis court, a bathtub, or a postcard?",
+              "whyChain": [
+                "The small intestine has millions of finger-like villi on its inner wall, each villus covered in even smaller microvilli. Combined surface area is around 250 m² — about the size of a tennis court — packed into a 6-metre tube tucked inside your abdomen.",
+                "Why so much surface? Because absorption is rate-limited by area. Each nutrient molecule has to physically diffuse or be transported across a cell membrane; more area means more parallel transport happening at once.",
+                "And why do gluten-sensitive (coeliac) patients lose weight despite eating normally? Because gluten damages the villi, reducing the absorbing surface from a tennis court to something like a small carpet. The food is digested but the products can't be absorbed fast enough — they pass straight through. Eliminating gluten lets the villi regrow."
+              ]
             },
             {
               "id": "ch02_t01_c12",
@@ -4847,7 +4913,13 @@
                 25
               ],
               "needsHumanReview": false,
-              "mnemonic": "PERI-STAL-SIS = AROUND-CONTRACT-MOTION (Greek). Wave-like muscle squeezes push food along. Same mechanism if you ate upside-down (gravity isn't doing the work)."
+              "mnemonic": "PERI-STAL-SIS = AROUND-CONTRACT-MOTION (Greek). Wave-like muscle squeezes push food along. Same mechanism if you ate upside-down (gravity isn't doing the work).",
+              "predictQuestion": "If you tried to swallow water while standing on your head, would gravity beat your gut muscles — or would the water still reach your stomach?",
+              "whyChain": [
+                "Peristalsis is the wave of muscle contraction that pushes food forward through the digestive tract. A ring of muscle squeezes behind the food and relaxes in front of it, milking it along. It works in any orientation — gravity isn't required.",
+                "Why isn't peristalsis voluntary? Because the timing must be precise — too slow, food stagnates and ferments; too fast, food doesn't get fully digested. The enteric nervous system (a second brain in your gut, ~500 million neurons) manages it autonomously while your main brain handles other things.",
+                "And why does the gut sometimes 'forget' to peristalse? In conditions like ileus (after surgery or infection), the wave pattern collapses. Food sits, gas builds up, the abdomen distends painfully. Treatment is to wait, fast, and let the enteric nerves reboot — often a few days."
+              ]
             }
           ],
           "questions": [
@@ -5507,7 +5579,13 @@
                 28
               ],
               "needsHumanReview": false,
-              "mnemonic": "Cow has 4 stomach chambers: RUMEN, RETICULUM, OMASUM, ABOMASUM. Eats grass, regurgitates cud, re-chews. Microbes inside break cellulose (which cow can't directly)."
+              "mnemonic": "Cow has 4 stomach chambers: RUMEN, RETICULUM, OMASUM, ABOMASUM. Eats grass, regurgitates cud, re-chews. Microbes inside break cellulose (which cow can't directly).",
+              "predictQuestion": "Cows can digest grass, but humans can't. What did the cow evolve that we don't have?",
+              "whyChain": [
+                "A cow has four stomach chambers: rumen, reticulum, omasum, abomasum. The rumen is a giant fermentation tank where bacteria break down cellulose (which the cow can't digest itself). The cow regurgitates the partly-digested mass ('cud'), chews it again, and re-swallows.",
+                "Why bacteria, not enzymes? Because cellulose is too tough — only specific microbes have the enzyme cellulase that splits it. The cow rents these microbes a home (the rumen) and in return absorbs the fermentation products plus the microbes' bodies themselves.",
+                "And why doesn't this evolution work for humans? Because cellulose-fermenting bacteria need long retention times (~24 hours) and large fermentation vessels. We'd need a metabolism that ran half as fast and a body shape with a much bigger gut. Termites + some primates evolved separate solutions for the same problem — Class 11 biology covers the trade-offs."
+              ]
             },
             {
               "id": "ch02_t02_c02",
@@ -5583,7 +5661,13 @@
                 28
               ],
               "needsHumanReview": false,
-              "mnemonic": "Amoeba = ONE CELL eating. Pseudopodia surround food, form food vacuole INSIDE the cell, digest, absorb, expel waste. Whole digestive system in one cell."
+              "mnemonic": "Amoeba = ONE CELL eating. Pseudopodia surround food, form food vacuole INSIDE the cell, digest, absorb, expel waste. Whole digestive system in one cell.",
+              "predictQuestion": "An amoeba has no mouth, no stomach, and no intestines. Yet it eats. How?",
+              "whyChain": [
+                "The amoeba flows around its food (a smaller microbe) with pseudopodia and traps it inside a food vacuole. Digestive enzymes are released into the vacuole; the food breaks down; useful molecules are absorbed into the cytoplasm; waste is expelled.",
+                "Why no organs? Because the amoeba is a single cell. Everything happens inside one membrane-bound vesicle. The same machinery that lines your intestines is, at the molecular level, packed into the amoeba's vacuole — just at a vastly smaller scale.",
+                "And why is this evolutionarily important? Because the amoeba's strategy is what every cell in your body still does — phagocytosis. Your white blood cells engulf bacteria the exact same way an amoeba engulfs prey. The amoeba isn't primitive; it's preserved an ancient cellular technique we never lost."
+              ]
             },
             {
               "id": "ch02_t02_c03",
@@ -5655,7 +5739,13 @@
                 29
               ],
               "needsHumanReview": false,
-              "mnemonic": "HERBivore = HERB (plants) eater. CARNivore = CARNE (meat) eater. OMNI = ALL. Different teeth + gut lengths shape what each can eat."
+              "mnemonic": "HERBivore = HERB (plants) eater. CARNivore = CARNE (meat) eater. OMNI = ALL. Different teeth + gut lengths shape what each can eat.",
+              "predictQuestion": "Look at a tiger's mouth and a goat's mouth side by side. What can you guess about each animal just from the teeth and jaw?",
+              "whyChain": [
+                "Herbivores (goats, cows) have flat grinding molars and long guts to ferment cellulose. Carnivores (tigers, dogs) have sharp canines for tearing and short guts because meat is easy to digest. Omnivores (humans, bears, pigs) have a mix of both and a middling gut.",
+                "Why does diet shape teeth and gut so directly? Because food that isn't processable is food that doesn't fuel growth. An evolutionary mismatch (carnivore body, herbivore diet) means starvation in one generation. Selection is brutal here.",
+                "And why are humans 'omnivores' if our ancestors ate mostly plants? Because around 2 million years ago, hominins started using tools to process meat — cutting, cooking, mashing. Tools turned us into facultative carnivores without the body redesign. Cooking 'pre-digests' food, so we evolved smaller guts than our ape cousins."
+              ]
             },
             {
               "id": "ch02_t02_c04",
@@ -5727,7 +5817,13 @@
                 29
               ],
               "needsHumanReview": false,
-              "mnemonic": "Cow's rumen has TRILLIONS of bacteria breaking cellulose for it. Termites have similar gut microbes. Without these symbiotic microbes, herbivores starve on plants."
+              "mnemonic": "Cow's rumen has TRILLIONS of bacteria breaking cellulose for it. Termites have similar gut microbes. Without these symbiotic microbes, herbivores starve on plants.",
+              "predictQuestion": "A cow can't digest grass without help. Who's actually doing the digestion — and what does each side get out of the deal?",
+              "whyChain": [
+                "The cow's rumen hosts trillions of bacteria, fungi, and protozoa that ferment cellulose. The cow gets the products (fatty acids it can absorb); the microbes get a constant food supply, a warm dark stable home, and protection from predators. Both win.",
+                "Why is this called symbiosis specifically? Because both partners are necessary for survival. Remove the rumen microbes and the cow starves on grass. Remove the cow and the microbes can't live (they're not adapted to free air). Compare to parasitism, where one side LOSES.",
+                "And why does this matter for greenhouse gas accounting? Because rumen fermentation also produces methane — a potent greenhouse gas. A single cow burps out ~100 kg of methane per year. The global livestock count means cows now contribute ~14% of human-caused methane emissions. Class 11 environmental science unpacks the numbers."
+              ]
             },
             {
               "id": "ch02_t02_c05",
@@ -5799,7 +5895,13 @@
                 29
               ],
               "needsHumanReview": false,
-              "mnemonic": "Single-celled feeders: PARAMECIUM uses cilia (tiny hairs) to sweep food into a permanent oral groove. EUGLENA can photosynthesise OR engulf food — flexible."
+              "mnemonic": "Single-celled feeders: PARAMECIUM uses cilia (tiny hairs) to sweep food into a permanent oral groove. EUGLENA can photosynthesise OR engulf food — flexible.",
+              "predictQuestion": "A Paramecium has a 'mouth' that's just a groove in its skin. How does the food know which way to go?",
+              "whyChain": [
+                "Paramecium has a ciliated oral groove that sweeps water and food particles into a depression called the cytostome — its 'cell mouth'. A food vacuole forms at the base, then circulates through the cell while enzymes digest the contents.",
+                "Why a groove instead of just engulfing? Because the cilia create a directed water current — much faster and more selective than the amoeba's slow pseudopodia. Paramecium can sift through hundreds of food particles per second.",
+                "And why does Euglena confuse biologists? Because Euglena has chloroplasts (so it photosynthesises like a plant) AND can engulf food when light is dim (so it eats like an animal). Two metabolic strategies in one cell. Class 11 evolutionary biology uses Euglena to illustrate why the plant / animal split is more recent and less clean than it looks."
+              ]
             }
           ],
           "questions": [
@@ -6129,7 +6231,13 @@
                 31
               ],
               "needsHumanReview": false,
-              "mnemonic": "Mitochondria = the cell's power plants. Glucose + oxygen → energy (ATP) + CO2 + water. The reason you need air AND food: both feed the mitochondria."
+              "mnemonic": "Mitochondria = the cell's power plants. Glucose + oxygen → energy (ATP) + CO2 + water. The reason you need air AND food: both feed the mitochondria.",
+              "predictQuestion": "Once nutrients are absorbed into your blood, where does the energy actually come out — and what BURNS it?",
+              "whyChain": [
+                "Absorbed glucose, amino acids, and fats travel via the bloodstream to every cell. Inside each cell, the mitochondria use oxygen to burn glucose, releasing energy that's stored in ATP. ATP is the immediate fuel for muscle contraction, nerve signals, protein building.",
+                "Why mitochondria specifically? Because they have the enzyme machinery for cellular respiration laid out across two membranes — the inner one creates a proton gradient that drives ATP synthase, the smallest motor on Earth. Mitochondria are the size of bacteria because they originally WERE bacteria (endosymbiosis, 2 billion years ago).",
+                "And why does each cell need its own ATP supply instead of a central store? Because ATP can't be transported. It's a high-energy molecule that breaks down within minutes if not used. So every cell, even a fingertip cell, must make its own. Trillions of cells, each running their own mitochondrial power plants."
+              ]
             },
             {
               "id": "ch02_t03_c02",
@@ -6205,7 +6313,13 @@
                 32
               ],
               "needsHumanReview": false,
-              "mnemonic": "ASSIMILATION = building YOU from what you absorbed. Amino acids become YOUR proteins. Sugars become YOUR glycogen. The 'you are what you eat' line, literalised."
+              "mnemonic": "ASSIMILATION = building YOU from what you absorbed. Amino acids become YOUR proteins. Sugars become YOUR glycogen. The 'you are what you eat' line, literalised.",
+              "predictQuestion": "Your body uses food for energy. But it ALSO uses food to build new bone, muscle, and skin. How does it pick which molecules go where?",
+              "whyChain": [
+                "Assimilation is the use of absorbed nutrients to build and repair body tissues. Amino acids assemble into new proteins (muscle, enzymes, antibodies); calcium and phosphorus get deposited into bones; fats get incorporated into cell membranes and nerve sheaths.",
+                "Why doesn't the body just burn everything for energy? Because the body has constant turnover — every cell is wearing out and being replaced. Skin renews monthly, gut lining weekly, red blood cells every 4 months, bone takes years. Without raw materials from food, the renewal stops and you slowly fall apart.",
+                "And why is protein deficiency uniquely dangerous in growing kids? Because growth is mostly protein synthesis — muscle, brain, organs. Kids who don't eat enough protein develop kwashiorkor (swollen bellies, sparse hair, stunted growth). Carbohydrates can fuel energy but cannot substitute for the amino acids needed to BUILD."
+              ]
             },
             {
               "id": "ch02_t03_c03",
@@ -6280,7 +6394,13 @@
                 34
               ],
               "needsHumanReview": false,
-              "mnemonic": "TASTE has 5 categories (sweet, sour, salty, bitter, umami) but FLAVOUR = taste + SMELL + texture. Block your nose: chocolate tastes like sugary nothing."
+              "mnemonic": "TASTE has 5 categories (sweet, sour, salty, bitter, umami) but FLAVOUR = taste + SMELL + texture. Block your nose: chocolate tastes like sugary nothing.",
+              "predictQuestion": "If you hold your nose and eat an apple, then an onion — can you tell which is which? Why does losing smell affect taste so much?",
+              "whyChain": [
+                "The tongue detects only five basic tastes: sweet, sour, salty, bitter, umami. EVERY other flavour you experience comes from smell — volatile molecules drifting up from the food into your nasal cavity through the back of your throat (retronasal olfaction).",
+                "Why isn't the tongue enough? Because there are millions of possible smells but only five tastes. The discrimination of 'apple' vs 'pear' vs 'onion' lives entirely in your nose. The tongue tells you 'sweet'; the nose tells you 'sweet apple'.",
+                "And why does this matter clinically? COVID and other viral infections that damage smell receptors leave patients with 'food tastes like cardboard' — even though the tongue still works. Class 11 neuroscience traces this to the olfactory bulb's slow recovery; some patients regain smell only after a year, some never."
+              ]
             }
           ],
           "questions": [
@@ -7211,7 +7331,252 @@
           "parentConceptId": "ch02_t02_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch02_t01_c01",
+            "label": "Five steps",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_t01_c03",
+            "label": "Mouth + 32 teeth",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.18
+          },
+          {
+            "id": "ch02_t01_c10",
+            "label": "Saliva + amylase",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.1
+          },
+          {
+            "id": "ch02_t01_c07",
+            "label": "Oesophagus",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.18
+          },
+          {
+            "id": "ch02_t01_c12",
+            "label": "Peristalsis",
+            "kind": "concept",
+            "x": 0.62,
+            "y": 0.18
+          },
+          {
+            "id": "ch02_t01_c04",
+            "label": "Stomach + acid",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.3
+          },
+          {
+            "id": "ch02_t01_c05",
+            "label": "Small intestine",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.55
+          },
+          {
+            "id": "ch02_t01_c11",
+            "label": "Villi + microvilli",
+            "kind": "concept",
+            "x": 0.62,
+            "y": 0.65
+          },
+          {
+            "id": "ch02_t01_c08",
+            "label": "Liver + bile",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.55
+          },
+          {
+            "id": "ch02_t01_c09",
+            "label": "Pancreas + enzymes",
+            "kind": "concept",
+            "x": 0.35,
+            "y": 0.65
+          },
+          {
+            "id": "ch02_t01_c06",
+            "label": "Large intestine",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.8
+          },
+          {
+            "id": "ch02_t02_c01",
+            "label": "Rumination (cow)",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_t02_c04",
+            "label": "Gut microbiome",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.7
+          },
+          {
+            "id": "ch02_t02_c03",
+            "label": "Diet shapes anatomy",
+            "kind": "concept",
+            "x": 0.92,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_t03_c01",
+            "label": "Cells use nutrients",
+            "kind": "concept",
+            "x": 0.92,
+            "y": 0.78
+          },
+          {
+            "id": "ch01:ch01_t01_c02",
+            "label": "Photosynthesis (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.08,
+            "y": 0.92
+          },
+          {
+            "id": "ch10:ch10_t02_c02",
+            "label": "Aerobic respiration (Ch.10)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.92
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch02_t01_c01",
+            "to": "ch02_t01_c03",
+            "label": "begins at"
+          },
+          {
+            "id": "e02",
+            "from": "ch02_t01_c03",
+            "to": "ch02_t01_c10",
+            "label": "uses"
+          },
+          {
+            "id": "e03",
+            "from": "ch02_t01_c03",
+            "to": "ch02_t01_c07",
+            "label": "passes to"
+          },
+          {
+            "id": "e04",
+            "from": "ch02_t01_c07",
+            "to": "ch02_t01_c12",
+            "label": "driven by"
+          },
+          {
+            "id": "e05",
+            "from": "ch02_t01_c07",
+            "to": "ch02_t01_c04",
+            "label": "delivers to"
+          },
+          {
+            "id": "e06",
+            "from": "ch02_t01_c04",
+            "to": "ch02_t01_c05",
+            "label": "passes to"
+          },
+          {
+            "id": "e07",
+            "from": "ch02_t01_c05",
+            "to": "ch02_t01_c11",
+            "label": "absorbs via"
+          },
+          {
+            "id": "e08",
+            "from": "ch02_t01_c05",
+            "to": "ch02_t01_c08",
+            "label": "receives bile from"
+          },
+          {
+            "id": "e09",
+            "from": "ch02_t01_c05",
+            "to": "ch02_t01_c09",
+            "label": "receives enzymes from"
+          },
+          {
+            "id": "e10",
+            "from": "ch02_t01_c05",
+            "to": "ch02_t01_c06",
+            "label": "passes to"
+          },
+          {
+            "id": "e11",
+            "from": "ch02_t01_c06",
+            "to": "ch02_t02_c04",
+            "label": "hosts"
+          },
+          {
+            "id": "e12",
+            "from": "ch02_t02_c01",
+            "to": "ch02_t01_c01",
+            "label": "modifies"
+          },
+          {
+            "id": "e13",
+            "from": "ch02_t02_c01",
+            "to": "ch02_t02_c04",
+            "label": "depends on"
+          },
+          {
+            "id": "e14",
+            "from": "ch02_t02_c03",
+            "to": "ch02_t01_c03",
+            "label": "shapes"
+          },
+          {
+            "id": "e15",
+            "from": "ch02_t02_c03",
+            "to": "ch02_t01_c05",
+            "label": "shapes"
+          },
+          {
+            "id": "e16",
+            "from": "ch02_t01_c11",
+            "to": "ch02_t03_c01",
+            "label": "delivers to"
+          },
+          {
+            "id": "e17",
+            "from": "ch02_t03_c01",
+            "to": "ch10:ch10_t02_c02",
+            "label": "powered by"
+          },
+          {
+            "id": "e18",
+            "from": "ch02_t01_c01",
+            "to": "ch01:ch01_t01_c02",
+            "label": "opposite of"
+          },
+          {
+            "id": "e19",
+            "from": "ch02_t02_c01",
+            "to": "ch01:ch01_t01_c02",
+            "label": "consumes products of"
+          },
+          {
+            "id": "e20",
+            "from": "ch02_t02_c03",
+            "to": "ch02_t02_c01",
+            "label": "extreme example"
+          }
+        ]
+      }
     },
     {
       "id": "ch03",
@@ -23955,7 +24320,13 @@
                 125
               ],
               "needsHumanReview": false,
-              "mnemonic": "Breathing path: NOSE → PHARYNX → LARYNX → TRACHEA → BRONCHI → BRONCHIOLES → ALVEOLI. Diaphragm contracts pulls air in; relaxes pushes air out."
+              "mnemonic": "Breathing path: NOSE → PHARYNX → LARYNX → TRACHEA → BRONCHI → BRONCHIOLES → ALVEOLI. Diaphragm contracts pulls air in; relaxes pushes air out.",
+              "predictQuestion": "Why do we breathe IN and OUT instead of pumping air through one nostril and out the other, like a fish does with water through its gills?",
+              "whyChain": [
+                "Humans breathe via the diaphragm — a sheet of muscle below the lungs. It flattens when contracted (chest expands, air rushes in) and domes up when relaxed (chest shrinks, air pushed out). Inhalation is active; exhalation at rest is passive.",
+                "Why a two-way system instead of one-way like a fish's gills? Because air is much less dense than water — pumping fresh air past tissues with each breath uses less energy than continuous flow. Also, our lungs evolved from the simple in-out air bladders of ancient fish, not from streamlined gills.",
+                "And why does altitude make breathing feel different? Because at high altitude (like Leh, 3500 m), atmospheric pressure is 30% lower, so each breath delivers less oxygen. Your body responds by breathing faster — and over weeks, by making more haemoglobin. Acclimatisation takes 2-3 weeks; Class 11 physiology unpacks the mechanism in detail."
+              ]
             },
             {
               "id": "ch10_t01_c02",
@@ -23999,7 +24370,13 @@
                 121
               ],
               "needsHumanReview": false,
-              "mnemonic": "Alveoli = ~500 million tiny grape-cluster air sacs. Total surface ~70 m² (tennis court). Gas exchange: O2 in to blood, CO2 out from blood, all by diffusion."
+              "mnemonic": "Alveoli = ~500 million tiny grape-cluster air sacs. Total surface ~70 m² (tennis court). Gas exchange: O2 in to blood, CO2 out from blood, all by diffusion.",
+              "predictQuestion": "If you spread out the surface inside your lungs flat, would it cover a postcard, a tablecloth, or a tennis court?",
+              "whyChain": [
+                "Alveoli are tiny air sacs (about 0.2 mm wide) at the end of each bronchiole. There are ~500 million in adult lungs; combined surface area is around 70 m² — a quarter the size of a tennis court — folded into a fist-sized organ.",
+                "Why so much surface? Because oxygen has to diffuse across the alveolar wall into the blood, and diffusion is a slow process — more surface means more parallel transfer happening at once. Each alveolus is wrapped in capillaries with walls just one cell thick.",
+                "And why is alveolar damage so disabling? Once destroyed (smoking, COVID, pollution), alveoli don't regrow in adults. Emphysema patients lose tens of square metres of surface area and feel constantly short of breath. The lung structure is fragile in a way kidneys or liver aren't."
+              ]
             },
             {
               "id": "ch10_t01_c03",
@@ -24036,7 +24413,13 @@
                 120
               ],
               "needsHumanReview": false,
-              "mnemonic": "Haemoglobin = O₂ taxi. Iron in each molecule grabs O₂ at lungs, drops it at tissues. Low Hb → anaemia → tired."
+              "mnemonic": "Haemoglobin = O₂ taxi. Iron in each molecule grabs O₂ at lungs, drops it at tissues. Low Hb → anaemia → tired.",
+              "predictQuestion": "Oxygen barely dissolves in water (and your blood is mostly water). So how does enough O₂ reach your toes from your lungs?",
+              "whyChain": [
+                "Haemoglobin is a protein in red blood cells that binds oxygen reversibly. Each red cell carries ~280 million haemoglobin molecules; together they ferry ~70× more O₂ per litre of blood than plasma alone could dissolve.",
+                "Why does haemoglobin release oxygen at tissues but grab it at lungs? Because it 'reads' the local oxygen pressure — in oxygen-rich alveoli it saturates; in oxygen-poor tissues it lets go. The cooperative-binding curve is exquisitely tuned so almost no oxygen leaks out at the wrong place.",
+                "And why is carbon monoxide poisoning so deadly? Because CO binds haemoglobin 200× more strongly than O₂ — once bound, it doesn't release. Even a small CO concentration takes haemoglobin out of service for hours. Class 11 biochemistry uses this to teach allosteric inhibition."
+              ]
             }
           ],
           "questions": [
@@ -24414,7 +24797,13 @@
                 121
               ],
               "needsHumanReview": false,
-              "mnemonic": "RESPIRATION = chemical process inside cells that releases energy from food. Different from BREATHING (mechanical). Every living cell respires; breathing is just gas delivery."
+              "mnemonic": "RESPIRATION = chemical process inside cells that releases energy from food. Different from BREATHING (mechanical). Every living cell respires; breathing is just gas delivery.",
+              "predictQuestion": "Plants do photosynthesis to make food. Then they do RESPIRATION. Doesn't that just undo the photosynthesis? Why bother?",
+              "whyChain": [
+                "Respiration is the cellular process that releases the energy locked in food. Glucose + oxygen → CO₂ + water + energy (as ATP). Every living cell, plant or animal, runs this reaction continuously — that's how food becomes usable energy.",
+                "Why isn't this just the reverse of photosynthesis? Because the energy flow is reversed: photosynthesis stores energy from sunlight as glucose; respiration releases the stored energy as usable ATP. The chemistry is similar but the direction is opposite. Both must happen for life to keep moving.",
+                "And why don't plants make so much glucose during the day that they don't need to respire? Because energy is needed CONSTANTLY — at night, in storage tissues like seeds, in growing tips of roots. Glucose stored as starch sits inert; respiration is what unlocks it on demand. Class 11 biology covers the day-night flux balance."
+              ]
             },
             {
               "id": "ch10_t02_c02",
@@ -24457,7 +24846,13 @@
                 122
               ],
               "needsHumanReview": false,
-              "mnemonic": "AEROBIC: glucose + O2 → CO2 + H2O + LOTS of energy (38 ATP). Normal walking, normal everything. Most efficient pathway."
+              "mnemonic": "AEROBIC: glucose + O2 → CO2 + H2O + LOTS of energy (38 ATP). Normal walking, normal everything. Most efficient pathway.",
+              "predictQuestion": "Burning sugar in a furnace and breathing release the same chemical reaction. Why doesn't your body cell catch fire?",
+              "whyChain": [
+                "Aerobic respiration uses oxygen to break glucose all the way down to CO₂ and water, releasing maximum energy (~36 ATP per glucose). The reaction happens in mitochondria in many small enzyme-controlled steps, not in one explosive burn.",
+                "Why so many steps? Because if the energy released all at once, it would denature proteins (cooking the cell). Instead, the cell extracts energy in tiny packets, each just enough to drive an ATP-synthesis step. Bond by bond, layer by layer — a controlled cascade.",
+                "And why is this universal across life? Because mitochondria were ancient free-living bacteria that got swallowed by an ancestor of every eukaryotic cell 2 billion years ago. Every plant, animal, and fungus today carries the descendants of those bacteria, running the same reactions in the same way."
+              ]
             },
             {
               "id": "ch10_t02_c03",
@@ -24497,7 +24892,13 @@
                 123
               ],
               "needsHumanReview": false,
-              "mnemonic": "ANAEROBIC: glucose → lactic acid (in muscles) + SMALL energy (2 ATP), OR ethanol + CO2 + small energy (in yeast). When O2 can't keep up (sprinting), this kicks in."
+              "mnemonic": "ANAEROBIC: glucose → lactic acid (in muscles) + SMALL energy (2 ATP), OR ethanol + CO2 + small energy (in yeast). When O2 can't keep up (sprinting), this kicks in.",
+              "predictQuestion": "When you run hard, your muscles burn. What's actually happening to the sugar in your muscle cells in that moment?",
+              "whyChain": [
+                "Anaerobic respiration breaks glucose down WITHOUT oxygen — only partway, producing lactic acid in muscles (or ethanol + CO₂ in yeast). Less energy comes out (~2 ATP per glucose), but it can happen faster than aerobic respiration, so muscle cells use it for short bursts.",
+                "Why does the burning sensation come on? Because lactic acid is acidic — it lowers cellular pH, which interferes with muscle function and signals 'slow down' to the brain. After exercise, the body redirects extra oxygen to the muscle to clear the lactic acid (the 'oxygen debt').",
+                "And why is yeast's version useful to humans? Because yeast's anaerobic respiration produces ethanol — the basis of all alcoholic fermentation. Beer, wine, bread (the CO₂ raises the dough). Class 11 microbiology covers industrial fermentation, the world's oldest applied biotechnology."
+              ]
             }
           ],
           "questions": [
@@ -24854,7 +25255,13 @@
                 127
               ],
               "needsHumanReview": false,
-              "mnemonic": "EARTHWORMS: breathe through MOIST SKIN. FISH: through GILLS (filaments with thin walls — like inside-out lungs). INSECTS: through SPIRACLES (small body pores) into trachea tubes."
+              "mnemonic": "EARTHWORMS: breathe through MOIST SKIN. FISH: through GILLS (filaments with thin walls — like inside-out lungs). INSECTS: through SPIRACLES (small body pores) into trachea tubes.",
+              "predictQuestion": "Earthworms breathe through their skin. Fish breathe through gills. Insects have tiny pipes called tracheae. Why so many designs?",
+              "whyChain": [
+                "Earthworms exchange gases directly through their moist skin — works only because they're small and slow. Fish use gills — feathery surfaces that extract dissolved O₂ from water. Insects use tracheae — branching tubes that pipe air straight to each tissue, no blood needed.",
+                "Why didn't one design win? Because each is matched to body size and environment. Skin breathing fails over a centimetre or so of thickness — oxygen can't diffuse fast enough. Insects can stay small because tracheae work only at insect scales. Fish gills require water around them.",
+                "And why are there no truck-sized insects? Because tracheal breathing scales poorly. To deliver enough O₂ to a horse-sized insect, the tracheae would have to be so wide they'd crush the body. Carboniferous-era oxygen was 30% higher than today and allowed dragonflies with 70 cm wingspans — the upper limit of the design."
+              ]
             },
             {
               "id": "ch10_t03_c02",
@@ -24895,7 +25302,13 @@
                 125
               ],
               "needsHumanReview": false,
-              "mnemonic": "Plants respire 24/7 through STOMATA. Day: photosynthesis dominates (net O2 release). Night: only respiration (net CO2 release). That's why hospital wards avoid plants overnight (historically)."
+              "mnemonic": "Plants respire 24/7 through STOMATA. Day: photosynthesis dominates (net O2 release). Night: only respiration (net CO2 release). That's why hospital wards avoid plants overnight (historically).",
+              "predictQuestion": "Plants make their own food in the day but they also need to BREATHE. If a plant is sealed in a dark closet, what runs out first — food or oxygen?",
+              "whyChain": [
+                "Plants respire continuously — day AND night — using oxygen to release energy from stored starch. During the day photosynthesis runs in parallel and overall they release more O₂ than they consume. At night only respiration runs, so they consume oxygen.",
+                "Why don't plants asphyxiate at night? Because the air around them has so much oxygen that even continuous respiration barely dents it. Stomata stay partly open at night to let CO₂ out and O₂ in — the reverse of the daytime exchange.",
+                "And why is the 'don't put plants in your bedroom' folklore wrong? Because the O₂ they consume at night is tiny compared to what a sleeping human exhales. A single houseplant respires ~50 mg of O₂ per hour; you consume ~20 g. The myth confuses scale by a factor of a thousand."
+              ]
             }
           ],
           "questions": [
@@ -25817,7 +26230,168 @@
           "parentConceptId": "ch10_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch10_t02_c01",
+            "label": "What respiration is",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch10_t02_c02",
+            "label": "Aerobic (with O₂)",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.3
+          },
+          {
+            "id": "ch10_t02_c03",
+            "label": "Anaerobic (no O₂)",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.3
+          },
+          {
+            "id": "ch10_t01_c01",
+            "label": "Breathing mechanism",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.65
+          },
+          {
+            "id": "ch10_t01_c02",
+            "label": "Alveoli",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.75
+          },
+          {
+            "id": "ch10_t01_c03",
+            "label": "Haemoglobin",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.65
+          },
+          {
+            "id": "ch10_t03_c01",
+            "label": "Other animals' lungs",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.85
+          },
+          {
+            "id": "ch10_t03_c02",
+            "label": "Plants respire too",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.1
+          },
+          {
+            "id": "ch01:ch01_t01_c02",
+            "label": "Photosynthesis (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.9,
+            "y": 0.1
+          },
+          {
+            "id": "ch02:ch02_t03_c01",
+            "label": "Cells use nutrients (Ch.2)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.85
+          },
+          {
+            "id": "ch11:ch11_t01_c01",
+            "label": "Heart + blood vessels (Ch.11)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.5
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch10_t02_c01",
+            "to": "ch10_t02_c02",
+            "label": "preferred form"
+          },
+          {
+            "id": "e02",
+            "from": "ch10_t02_c01",
+            "to": "ch10_t02_c03",
+            "label": "backup form"
+          },
+          {
+            "id": "e03",
+            "from": "ch10_t01_c01",
+            "to": "ch10_t01_c02",
+            "label": "delivers air to"
+          },
+          {
+            "id": "e04",
+            "from": "ch10_t01_c02",
+            "to": "ch10_t01_c03",
+            "label": "loads O₂ onto"
+          },
+          {
+            "id": "e05",
+            "from": "ch10_t01_c03",
+            "to": "ch10_t02_c02",
+            "label": "supplies"
+          },
+          {
+            "id": "e06",
+            "from": "ch10_t03_c01",
+            "to": "ch10_t01_c01",
+            "label": "alternatives to"
+          },
+          {
+            "id": "e07",
+            "from": "ch10_t03_c02",
+            "to": "ch10_t02_c01",
+            "label": "instance of"
+          },
+          {
+            "id": "e08",
+            "from": "ch10_t02_c02",
+            "to": "ch01:ch01_t01_c02",
+            "label": "reverse of"
+          },
+          {
+            "id": "e09",
+            "from": "ch10_t03_c02",
+            "to": "ch01:ch01_t01_c02",
+            "label": "parallel to"
+          },
+          {
+            "id": "e10",
+            "from": "ch10_t02_c02",
+            "to": "ch02:ch02_t03_c01",
+            "label": "fuels"
+          },
+          {
+            "id": "e11",
+            "from": "ch10_t01_c03",
+            "to": "ch11:ch11_t01_c01",
+            "label": "transported by"
+          },
+          {
+            "id": "e12",
+            "from": "ch10_t02_c03",
+            "to": "ch10_t02_c02",
+            "label": "emergency fallback for"
+          },
+          {
+            "id": "e13",
+            "from": "ch10_t01_c02",
+            "to": "ch11:ch11_t01_c01",
+            "label": "served by"
+          }
+        ]
+      }
     },
     {
       "id": "ch11",
@@ -38641,7 +39215,13 @@
                 211
               ],
               "needsHumanReview": false,
-              "mnemonic": "Forest layers: EMERGENT (tallest trees), CANOPY (main roof), UNDERSTORY (shrubs), FOREST FLOOR (litter + decomposers). Each layer hosts different species — vertical biodiversity."
+              "mnemonic": "Forest layers: EMERGENT (tallest trees), CANOPY (main roof), UNDERSTORY (shrubs), FOREST FLOOR (litter + decomposers). Each layer hosts different species — vertical biodiversity.",
+              "predictQuestion": "If a forest is a 'community of plants', why isn't a wheat field with millions of plants considered a forest too?",
+              "whyChain": [
+                "A forest has distinct vertical layers — emergent canopy, main canopy, understorey, shrub layer, herb layer, forest floor. Each layer hosts different species. A wheat field has one layer, one species, and lasts one season; a forest is a stable community lasting decades to centuries.",
+                "Why does layering matter so much? Because layering creates dozens of microhabitats — bright canopy, dim midstorey, dark floor. Different plants, insects, birds, and mammals each occupy one niche. The forest's high BIODIVERSITY is a consequence of its layered architecture.",
+                "And why are tropical rainforests the most biodiverse? Because they combine year-round warm temperatures, abundant rainfall, and dense layering into the richest possible niche space. A single hectare of Amazon rainforest can host more tree species than all of Europe combined. Class 11 ecology unpacks why temperate forests can't match this."
+              ]
             },
             {
               "id": "ch17_t01_c02",
@@ -38683,7 +39263,13 @@
                 216
               ],
               "needsHumanReview": false,
-              "mnemonic": "Forests: produce O2, absorb CO2, hold soil, recharge groundwater, host wildlife, provide timber/fruits/medicines, regulate climate. Lose forests = lose ALL these services simultaneously."
+              "mnemonic": "Forests: produce O2, absorb CO2, hold soil, recharge groundwater, host wildlife, provide timber/fruits/medicines, regulate climate. Lose forests = lose ALL these services simultaneously.",
+              "predictQuestion": "If we cut down every forest on Earth tomorrow and replaced them with concrete, what would actually go wrong in the next 100 years?",
+              "whyChain": [
+                "Forests regulate the water cycle (slowing rain, recharging groundwater), the carbon cycle (sequestering CO₂), the soil (holding it against erosion), and the local climate (cooling via transpiration). They also host ~70% of land biodiversity.",
+                "Why is each of those a big deal? Without forests, rainfall runs off rapidly causing floods + dry seasons; CO₂ rises faster (accelerating climate change); topsoil washes away in a few decades (taking thousands of years to rebuild); local temperatures rise 2-4°C; biodiversity collapses irreversibly.",
+                "And why is the Amazon called 'lungs of the Earth' even though oceans produce more O₂? Because the Amazon's net CO₂ absorption (storing 1 billion tonnes of carbon every year) is uniquely large for a land system. Losing it would push atmospheric CO₂ up by years' worth of human emissions. The 'lungs' name is a metaphor for that climate role."
+              ]
             },
             {
               "id": "ch17_t01_c03",
@@ -38720,7 +39306,13 @@
                 172
               ],
               "needsHumanReview": false,
-              "mnemonic": "Food chain: plants → herbivore → carnivore. 10% rule: only 10% of energy passes up per step. Why apex predators are RARE."
+              "mnemonic": "Food chain: plants → herbivore → carnivore. 10% rule: only 10% of energy passes up per step. Why apex predators are RARE.",
+              "predictQuestion": "A tiger sits at the top of a forest food chain. How many trees does the tiger depend on, indirectly?",
+              "whyChain": [
+                "Energy flows through a forest: plants → herbivores (deer, monkeys) → small carnivores (jackals, snakes) → apex predators (tigers, leopards). About 10% of energy transfers up each level — so a tiger depends on the productivity of ~100,000 trees indirectly.",
+                "Why 10% per level? Because each organism uses ~90% of its food for its own metabolism (breathing, moving, warmth) and stores only ~10% as body mass. The next level up can only access that 10%. Class 11 ecology calls this the trophic-level efficiency.",
+                "And why are apex predators so rare? Because the math is brutal — by the time you reach level 4, only 0.1% of the original plant energy is available. A forest must produce massive plant biomass to support even a handful of tigers. That's why losing forest area always shrinks predator populations FIRST."
+              ]
             }
           ],
           "questions": [
@@ -39306,7 +39898,13 @@
                 221
               ],
               "needsHumanReview": false,
-              "mnemonic": "Decomposers = nature's recyclers. Fungi + bacteria + earthworms + insects break dead matter into nutrient-rich soil. Without them, dead matter would pile up and nutrients would lock away."
+              "mnemonic": "Decomposers = nature's recyclers. Fungi + bacteria + earthworms + insects break dead matter into nutrient-rich soil. Without them, dead matter would pile up and nutrients would lock away.",
+              "predictQuestion": "When a tree falls in the forest, it disappears within a few years. Where did the mass go — and who ate it?",
+              "whyChain": [
+                "Decomposers — fungi, bacteria, termites, worms — break down dead organic matter (leaves, logs, dead animals) and release the locked nutrients back into the soil. Without them, dead matter would pile up and the soil would run out of nutrients in a few decades.",
+                "Why fungi specifically? Because most plant matter is cellulose and lignin, and fungi are the only organisms with the enzymes to crack lignin (the woody polymer). Even most bacteria can't. Lignin is one of nature's hardest molecules — fungal evolution to break it down made forests possible.",
+                "And why is the carboniferous-coal era a clue here? In the Carboniferous period (~350 million years ago), trees evolved lignin before fungi evolved the enzyme to digest it. Trees fell, didn't rot, and got buried — that's the coal we burn today. Once fungi caught up, no new coal formed. We're literally burning a 100-million-year window of evolution."
+              ]
             },
             {
               "id": "ch17_t02_c02",
@@ -39348,7 +39946,13 @@
                 222
               ],
               "needsHumanReview": false,
-              "mnemonic": "Forest nutrient cycle: trees pull minerals from soil → make leaves → leaves fall → decomposers break down → minerals back to soil. Closed loop. Cutting trees breaks the cycle."
+              "mnemonic": "Forest nutrient cycle: trees pull minerals from soil → make leaves → leaves fall → decomposers break down → minerals back to soil. Closed loop. Cutting trees breaks the cycle.",
+              "predictQuestion": "Forests grow on the same patch of soil for centuries without anyone fertilising them. Where do the nutrients keep coming from?",
+              "whyChain": [
+                "The soil-forest cycle is closed: trees pull nutrients from soil, build them into leaves and wood, drop them as litter, decomposers break the litter back into nutrients, the soil receives them, trees pull them up again. The forest is its own fertiliser factory.",
+                "Why doesn't this work for farmland? Because we HARVEST the crop — taking the nutrients OFF the field. Each year a field loses minerals to the truck that carries away the wheat. Forests keep their nutrients on-site; farms ship them away. That's why farming needs fertilisers and forests don't.",
+                "And why does deforested soil become barren so fast? Because cutting down the trees removes the litter-fall + nutrient-recycling loop. The remaining soil leaches its minerals into rivers within a few rains. A tropical-rainforest-cleared plot can lose its fertility in a single growing season — and it takes centuries to rebuild."
+              ]
             }
           ],
           "questions": [
@@ -39670,7 +40274,13 @@
                 226
               ],
               "needsHumanReview": false,
-              "mnemonic": "Deforestation causes: AGRICULTURE expansion, LOGGING, MINING, ROADS. Consequences: SOIL erosion, LOST HABITAT, CLIMATE disruption, INDIGENOUS displacement. Multi-cause, multi-effect."
+              "mnemonic": "Deforestation causes: AGRICULTURE expansion, LOGGING, MINING, ROADS. Consequences: SOIL erosion, LOST HABITAT, CLIMATE disruption, INDIGENOUS displacement. Multi-cause, multi-effect.",
+              "predictQuestion": "Deforestation is bad for the planet — yet it keeps happening. What does the person cutting down the forest actually GET that makes it worth the loss?",
+              "whyChain": [
+                "Deforestation happens because the IMMEDIATE benefit (timber sales, farmland, urban land) goes to ONE person, while the LONG-TERM costs (carbon, biodiversity, water cycle) are spread across millions of people who don't pay the cutter. This is a 'tragedy of the commons' — private gain, public loss.",
+                "Why don't laws stop it? Because forests cross borders (Amazon spans 9 countries), local governments often benefit from logging revenue, and enforcement is patchy. Even in protected zones, illegal logging persists when timber prices are high enough.",
+                "And why are forests still being lost despite global awareness? Because the population needs land for food and the climate cost is hidden — felt by future generations, not the cutter. Class 11 economics calls this an externality. Policies like REDD+ try to internalise the cost by paying countries to keep forests standing."
+              ]
             },
             {
               "id": "ch17_t03_c02",
@@ -39711,7 +40321,13 @@
                 227
               ],
               "needsHumanReview": false,
-              "mnemonic": "Conservation tools: CHIPKO movement (hug trees), national PARKS/RESERVES, REFORESTATION (planting), JOINT FOREST MANAGEMENT (community-led). Active vs passive protection."
+              "mnemonic": "Conservation tools: CHIPKO movement (hug trees), national PARKS/RESERVES, REFORESTATION (planting), JOINT FOREST MANAGEMENT (community-led). Active vs passive protection.",
+              "predictQuestion": "Why was the Chipko movement — village women literally hugging trees — more effective than guards with rifles guarding the same forest?",
+              "whyChain": [
+                "Chipko (1973, Uttarakhand) succeeded because it made the COMMUNITY the protector — not a distant government. When local women treat the forest as theirs, every cut is socially policed, not just legally. Forest cover in the Chipko regions stayed stable while neighbouring zones were stripped.",
+                "Why don't rifle-armed guards work as well? Because guards can be bought off, intimidated, or transferred — and they cover huge areas alone. Community vigilance is harder to corrupt and covers every metre. Indigenous-managed forests in the Amazon have lower deforestation rates than government reserves.",
+                "And why has India scaled this idea to other movements? Because Chipko showed a model: link forest to livelihood + cultural identity + female empowerment. Appiko (Karnataka 1983), Save Aarey (Mumbai 2019), Nagri (Jharkhand) all borrowed the pattern. Class 11 sociology uses Chipko as a case study in commons-management."
+              ]
             },
             {
               "id": "ch17_t03_c03",
@@ -39748,7 +40364,13 @@
                 177
               ],
               "needsHumanReview": false,
-              "mnemonic": "Afforestation = planting new forests. CO₂ → wood → carbon sink. ~150 t C / hectare in Indian forest. Carbon credit traded ~$10-50/t."
+              "mnemonic": "Afforestation = planting new forests. CO₂ → wood → carbon sink. ~150 t C / hectare in Indian forest. Carbon credit traded ~$10-50/t.",
+              "predictQuestion": "If India planted a billion trees tomorrow, would it actually offset our CO₂ emissions — or is the maths smaller than we think?",
+              "whyChain": [
+                "Afforestation = planting new forests; reforestation = replanting cleared forests. A young tree absorbs ~25 kg CO₂ per year for 20+ years before slowing. India's 'Compensatory Afforestation' programme aims to add 50,000 km² of new forest by 2030 — should absorb ~50 million tonnes of CO₂ annually at maturity.",
+                "Why isn't this a complete solution? Because India emits ~3 billion tonnes of CO₂ a year. 50 million tonnes is ~1.5% offset. Trees alone can't carry the climate fight — they buy time, not solve the problem. Combined with reduced emissions, they help. Alone, they don't.",
+                "And why does WHICH tree matter? Because eucalyptus and acacia plantations sequester carbon fast but suck water tables dry; native mixed forests sequester slower but build durable soil carbon and biodiversity. Class 11 environmental science teaches that 'plant more trees' is the right slogan only if the species and the place are right."
+              ]
             }
           ],
           "questions": [
@@ -40611,7 +41233,174 @@
           "parentConceptId": "ch17_t03_c02",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch17_t01_c02",
+            "label": "Why forests matter",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch17_t01_c01",
+            "label": "Forest layers + biodiversity",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.2
+          },
+          {
+            "id": "ch17_t01_c03",
+            "label": "Food chain + energy flow",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.2
+          },
+          {
+            "id": "ch17_t02_c01",
+            "label": "Decomposers",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.65
+          },
+          {
+            "id": "ch17_t02_c02",
+            "label": "Soil-forest cycle",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.7
+          },
+          {
+            "id": "ch17_t03_c01",
+            "label": "Deforestation",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.55
+          },
+          {
+            "id": "ch17_t03_c02",
+            "label": "Conservation (Chipko)",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.75
+          },
+          {
+            "id": "ch17_t03_c03",
+            "label": "Afforestation",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.9
+          },
+          {
+            "id": "ch01:ch01_t01_c02",
+            "label": "Photosynthesis (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.4
+          },
+          {
+            "id": "ch01:ch01_t03_c03",
+            "label": "Plants = food chain base (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.85
+          },
+          {
+            "id": "ch16:ch16_t01_c01",
+            "label": "Water cycle (Ch.16)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.4
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch17_t01_c01",
+            "to": "ch17_t01_c02",
+            "label": "creates"
+          },
+          {
+            "id": "e02",
+            "from": "ch17_t01_c03",
+            "to": "ch17_t01_c02",
+            "label": "embedded in"
+          },
+          {
+            "id": "e03",
+            "from": "ch17_t02_c01",
+            "to": "ch17_t02_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e04",
+            "from": "ch17_t02_c02",
+            "to": "ch17_t01_c01",
+            "label": "sustains"
+          },
+          {
+            "id": "e05",
+            "from": "ch17_t01_c02",
+            "to": "ch16:ch16_t01_c01",
+            "label": "regulates"
+          },
+          {
+            "id": "e06",
+            "from": "ch17_t01_c03",
+            "to": "ch01:ch01_t03_c03",
+            "label": "extends"
+          },
+          {
+            "id": "e07",
+            "from": "ch17_t01_c02",
+            "to": "ch01:ch01_t01_c02",
+            "label": "amplifies"
+          },
+          {
+            "id": "e08",
+            "from": "ch17_t03_c01",
+            "to": "ch17_t01_c02",
+            "label": "destroys"
+          },
+          {
+            "id": "e09",
+            "from": "ch17_t03_c01",
+            "to": "ch17_t02_c02",
+            "label": "breaks"
+          },
+          {
+            "id": "e10",
+            "from": "ch17_t03_c02",
+            "to": "ch17_t03_c01",
+            "label": "resists"
+          },
+          {
+            "id": "e11",
+            "from": "ch17_t03_c03",
+            "to": "ch17_t03_c01",
+            "label": "reverses"
+          },
+          {
+            "id": "e12",
+            "from": "ch17_t03_c03",
+            "to": "ch01:ch01_t01_c02",
+            "label": "expands"
+          },
+          {
+            "id": "e13",
+            "from": "ch17_t02_c01",
+            "to": "ch17_t01_c01",
+            "label": "closes loop with"
+          },
+          {
+            "id": "e14",
+            "from": "ch17_t01_c02",
+            "to": "ch17_t03_c02",
+            "label": "motivates"
+          }
+        ]
+      }
     },
     {
       "id": "ch18",
