@@ -52,6 +52,12 @@ scripts/lifetime_hazards_allowlist.txt):
      `View+RespectReduceMotion.swift` itself is exempt because it IS
      the helper.
 
+  6. `print(` outside a `#if DEBUG ... #endif` block. Release builds
+     should not emit stdout noise; use os.Logger (per-subsystem,
+     filterable in Console.app) instead. The codebase has one existing
+     site (SubjectRegistry's debugLog helper) and that one IS already
+     gated by `#if DEBUG`. The rule keeps it that way.
+
 Exit codes:
   0 — clean
   1 — at least one new violation (not in the allowlist)
@@ -121,6 +127,10 @@ _UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
 # TimelineView's `.animation(minimumInterval:)` factory is inline inside
 # `TimelineView(...)` parens, never line-leading, so it doesn't match.
 _ANIMATION_MODIFIER_RE = re.compile(r"^\s+\.animation\(")
+# `print(` at the start of a line (after whitespace). The Swift method
+# `print(_:_:_:)` accessed as `Foo.print(...)` or `someObject.print(...)`
+# is fine and not what we're after; we only catch top-of-line calls.
+_PRINT_CALL_RE = re.compile(r"^\s*print\(")
 # Combine .sink trailing closure: `.sink {` or `.sink(...) {`. Earlier
 # the regex had a `(?<!\w)` negative lookbehind on the dot, which was a
 # bug — the typical call site is `publisher.sink { ... }`, where the
@@ -339,6 +349,51 @@ def _scan_closure_captures(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_print_call(swift_path: Path) -> list[Violation]:
+    """LH006 — `print(` outside `#if DEBUG ... #endif`. Release builds
+    should not emit stdout. Tracks DEBUG-block depth via a per-line
+    counter so prints inside debug-gated helpers are allowed."""
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    findings: list[Violation] = []
+    debug_depth = 0
+    for idx, line in enumerate(swift_path.read_text().splitlines(), start=1):
+        stripped = line.strip()
+        if stripped.startswith("//") or stripped.startswith("///"):
+            continue
+        # Open / close DEBUG block tracking. `#if DEBUG` opens, matching
+        # `#endif` closes (we only track DEBUG specifically, but
+        # decrement against any `#endif` so nested non-DEBUG `#if`s
+        # don't desync the counter).
+        if stripped.startswith("#if DEBUG"):
+            debug_depth += 1
+            continue
+        if stripped.startswith("#endif") and debug_depth > 0:
+            debug_depth -= 1
+            continue
+        if debug_depth > 0:
+            continue
+        if not _PRINT_CALL_RE.match(line):
+            continue
+        findings.append(
+            Violation(
+                rule_id="LH006",
+                rel_path=rel,
+                line_no=idx,
+                line=line.rstrip(),
+                why=(
+                    "Top-level `print(` in production code escapes to "
+                    "release-build stdout (and Console.app's main log). "
+                    "Use `os.Logger` instead — it has subsystem/category "
+                    "filtering, log-level promotion, and privacy "
+                    "specifiers. If the call is intentionally release-"
+                    "stripped, wrap it in `#if DEBUG ... #endif` (see "
+                    "SubjectRegistry's `debugLog` helper for the pattern)."
+                ),
+            )
+        )
+    return findings
+
+
 def _scan_animation_gate(swift_path: Path) -> list[Violation]:
     """LH005 — every line-leading `.animation(<X>)` modifier must either
     carry the substring `reduceMotion` (the manual gate) or be replaced
@@ -421,6 +476,7 @@ def _scan_repo() -> list[Violation]:
         findings.extend(_scan_unchecked_sendable(swift_path))
         findings.extend(_scan_closure_captures(swift_path))
         findings.extend(_scan_animation_gate(swift_path))
+        findings.extend(_scan_print_call(swift_path))
     return findings
 
 

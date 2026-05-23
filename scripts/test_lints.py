@@ -101,6 +101,14 @@ def main() -> int:
     if not _check("clean fixture flags 0", 0, _count(v, "LH005")):
         failures.append("LH005 clean")
 
+    print("== LH006 — print() outside #if DEBUG ==")
+    v = lh._scan_print_call(FIXTURES / "lh006_violation.swift")
+    if not _check("violation fixture flags exactly 1", 1, _count(v, "LH006")):
+        failures.append("LH006 violation")
+    v = lh._scan_print_call(FIXTURES / "lh006_clean.swift")
+    if not _check("clean fixture flags 0", 0, _count(v, "LH006")):
+        failures.append("LH006 clean")
+
     print()
     if failures:
         print(f"test_lints: FAIL — {len(failures)} broken rule(s):")

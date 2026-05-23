@@ -44,3 +44,9 @@ desktopAhaan/Subjects/Tutor/Discover/Components/ParticleEmitter.swift:71: Inside
 # (no grandfathered violations — the 8ae4af6 sweep routed every site
 #  through .respectReduceMotion or the manual reduceMotion ? .none : ...
 #  pattern; this lint locks the state)
+
+# --- LH006  print( outside #if DEBUG  ---
+
+# (no grandfathered violations — the only print() in the codebase lives
+#  inside SubjectRegistry's `debugLog` helper, which is already
+#  #if DEBUG-gated; this lint locks the state)
