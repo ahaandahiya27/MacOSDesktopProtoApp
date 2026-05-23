@@ -70,6 +70,7 @@
 		600CC2ED6DC665D2E3E6D931 /* DeepDiveDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F33E986BD963A403EC03D59 /* DeepDiveDetailSheet.swift */; };
 		3DEB7340975E285523BD358F /* DeepDiveSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C322134D5B7F2D9AFD7922 /* DeepDiveSection.swift */; };
 		758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B1477CD2734BCD16FB3FF /* DictationButton.swift */; };
+		579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */; };
 		43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */; };
 		D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */; };
 		22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */; };
@@ -80,6 +81,8 @@
 		D9626BC44EB672A378F5E8A9 /* SubjectHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1070AD61A01997953431CE33 /* SubjectHomeView.swift */; };
 		5FDF23638A8DB4AD48194C98 /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E064DB5E81A6338CC8CE23B3 /* TopicDetailView.swift */; };
 		F06D55CAD3C952B1A9EC7E82 /* TutorNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536B1A5799289CDCFF278E2A /* TutorNavigation.swift */; };
+		A8265C88F303811FC5965500 /* WelcomeTourSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A249DCF29E8E40DF2E9B05 /* WelcomeTourSheet.swift */; };
+		FA2743DE874F0C1FC03DDDA7 /* WhatsNewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DDF55F8AA820C9D66B40A /* WhatsNewSheet.swift */; };
 		6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */; };
 		F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */; };
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
@@ -1049,6 +1052,7 @@
 		8F33E986BD963A403EC03D59 /* DeepDiveDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepDiveDetailSheet.swift"; sourceTree = "<group>"; };
 		31C322134D5B7F2D9AFD7922 /* DeepDiveSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeepDiveSection.swift"; sourceTree = "<group>"; };
 		F06B1477CD2734BCD16FB3FF /* DictationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictationButton.swift"; sourceTree = "<group>"; };
+		74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureExplainerSheet.swift"; sourceTree = "<group>"; };
 		7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcutsSheet.swift"; sourceTree = "<group>"; };
 		64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDetailView.swift"; sourceTree = "<group>"; };
 		7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDifficultyBadge.swift"; sourceTree = "<group>"; };
@@ -1059,6 +1063,8 @@
 		1070AD61A01997953431CE33 /* SubjectHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectHomeView.swift"; sourceTree = "<group>"; };
 		E064DB5E81A6338CC8CE23B3 /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicDetailView.swift"; sourceTree = "<group>"; };
 		536B1A5799289CDCFF278E2A /* TutorNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorNavigation.swift"; sourceTree = "<group>"; };
+		C7A249DCF29E8E40DF2E9B05 /* WelcomeTourSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeTourSheet.swift"; sourceTree = "<group>"; };
+		812DDF55F8AA820C9D66B40A /* WhatsNewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatsNewSheet.swift"; sourceTree = "<group>"; };
 		5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterTheme.swift"; sourceTree = "<group>"; };
 		20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
@@ -2062,6 +2068,7 @@
 				8F33E986BD963A403EC03D59,
 				31C322134D5B7F2D9AFD7922,
 				F06B1477CD2734BCD16FB3FF,
+				74E3F56676403BBA10EF7D7C,
 				7FF40B16150449C49D0274EF,
 				64ECB36C86DEBF9385DDE68C,
 				7B4A273E6C781187B61951F9,
@@ -2072,6 +2079,8 @@
 				1070AD61A01997953431CE33,
 				E064DB5E81A6338CC8CE23B3,
 				536B1A5799289CDCFF278E2A,
+				C7A249DCF29E8E40DF2E9B05,
+				812DDF55F8AA820C9D66B40A,
 				7BBC28F09BA1320433B6B3D5,
 			);
 			path = "Tutor";
@@ -3197,6 +3206,7 @@
 				600CC2ED6DC665D2E3E6D931 /* DeepDiveDetailSheet.swift in Sources */,
 				3DEB7340975E285523BD358F /* DeepDiveSection.swift in Sources */,
 				758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */,
+				579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */,
 				43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,
 				22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */,
@@ -3207,6 +3217,8 @@
 				D9626BC44EB672A378F5E8A9 /* SubjectHomeView.swift in Sources */,
 				5FDF23638A8DB4AD48194C98 /* TopicDetailView.swift in Sources */,
 				F06D55CAD3C952B1A9EC7E82 /* TutorNavigation.swift in Sources */,
+				A8265C88F303811FC5965500 /* WelcomeTourSheet.swift in Sources */,
+				FA2743DE874F0C1FC03DDDA7 /* WhatsNewSheet.swift in Sources */,
 				6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */,
 				F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,

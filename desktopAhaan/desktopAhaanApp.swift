@@ -209,6 +209,27 @@ struct SanskritKoshApp: App {
                     alert.addButton(withTitle: "OK")
                     alert.runModal()
                 }
+
+                Divider()
+
+                // Discoverability layer (2026-05-23 polish session).
+                // Each posts a notification that ContentView listens
+                // for and routes through its single-sheet dispatcher.
+                Button("Show Welcome Tour") {
+                    NotificationCenter.default.post(name: .showWelcomeTour, object: nil)
+                }
+
+                Button("What's New") {
+                    NotificationCenter.default.post(name: .showWhatsNew, object: nil)
+                }
+
+                Button("About Deep Dive Mode") {
+                    NotificationCenter.default.post(name: .showAboutDeepDive, object: nil)
+                }
+
+                Button("About Audio Narration") {
+                    NotificationCenter.default.post(name: .showAboutAudio, object: nil)
+                }
             }
         }
     }
@@ -216,4 +237,12 @@ struct SanskritKoshApp: App {
 
 extension Notification.Name {
     static let openInAppHelp = Notification.Name("desktopAhaan.openInAppHelp")
+    /// Help → Show Welcome Tour (the 3-panel WelcomeTourSheet).
+    static let showWelcomeTour = Notification.Name("desktopAhaan.showWelcomeTour")
+    /// Help → What's New (WhatsNewSheet).
+    static let showWhatsNew = Notification.Name("desktopAhaan.showWhatsNew")
+    /// Help → About Deep Dive Mode (FeatureExplainerSheet.aboutDeepDive).
+    static let showAboutDeepDive = Notification.Name("desktopAhaan.showAboutDeepDive")
+    /// Help → About Audio Narration (FeatureExplainerSheet.aboutAudio).
+    static let showAboutAudio = Notification.Name("desktopAhaan.showAboutAudio")
 }

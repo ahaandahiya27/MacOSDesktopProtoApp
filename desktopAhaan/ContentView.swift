@@ -4,8 +4,9 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var dataStore: DataStore
-    @AppStorage(AppStorageKeys.hasSeenWelcome) private var hasSeenWelcome: Bool = false
+    @AppStorage(AppStorageKeys.hasSeenWelcomeTour) private var hasSeenWelcomeTour: Bool = false
     @AppStorage(AppStorageKeys.hasSeenAllChaptersCelebration) private var hasSeenAllChaptersCelebration: Bool = false
+    @AppStorage(AppStorageKeys.whatsNewLastSeenVersion) private var whatsNewLastSeenVersion: String = ""
     @State private var showAllChaptersCelebration = false
 
     /// Single source of truth for which sheet is on screen. Big Sur
@@ -18,7 +19,8 @@ struct ContentView: View {
     /// keyed on an Identifiable enum is the canonical Big Sur fix.
     @State private var presentedSheet: ContentSheet?
     private enum ContentSheet: String, Identifiable {
-        case welcome, shortcuts, commandPalette
+        case welcomeTour, whatsNew, shortcuts, commandPalette
+        case aboutDeepDive, aboutAudio
         var id: String { rawValue }
     }
 
@@ -92,9 +94,19 @@ struct ContentView: View {
         }
         .sheet(item: $presentedSheet) { kind in
             switch kind {
-            case .welcome:
-                WelcomeSheet {
-                    hasSeenWelcome = true
+            case .welcomeTour:
+                WelcomeTourSheet {
+                    hasSeenWelcomeTour = true
+                    presentedSheet = nil
+                    // After dismissing the welcome tour, also persist
+                    // the current app version as the last-seen What's
+                    // New version so a brand-new install doesn't see
+                    // both the tour and the release notes back-to-back.
+                    whatsNewLastSeenVersion = WhatsNewSheet.currentVersion
+                }
+            case .whatsNew:
+                WhatsNewSheet {
+                    whatsNewLastSeenVersion = WhatsNewSheet.currentVersion
                     presentedSheet = nil
                 }
             case .shortcuts:
@@ -104,6 +116,10 @@ struct ContentView: View {
                     .environmentObject(subjectRegistry)
                     .environmentObject(appState)
                     .environmentObject(dataStore)
+            case .aboutDeepDive:
+                FeatureExplainerSheet.aboutDeepDive { presentedSheet = nil }
+            case .aboutAudio:
+                FeatureExplainerSheet.aboutAudio { presentedSheet = nil }
             }
         }
         .background(
@@ -133,19 +149,39 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for: .openInAppHelp)) { _ in
             if noOtherSheetOpen { presentedSheet = .shortcuts }
         }
+        // Help → Show Welcome Tour
+        .onReceive(NotificationCenter.default.publisher(for: .showWelcomeTour)) { _ in
+            if presentedSheet == nil { presentedSheet = .welcomeTour }
+        }
+        // Help → What's New
+        .onReceive(NotificationCenter.default.publisher(for: .showWhatsNew)) { _ in
+            if presentedSheet == nil { presentedSheet = .whatsNew }
+        }
+        // Help → About Deep Dive Mode
+        .onReceive(NotificationCenter.default.publisher(for: .showAboutDeepDive)) { _ in
+            if presentedSheet == nil { presentedSheet = .aboutDeepDive }
+        }
+        // Help → About Audio Narration
+        .onReceive(NotificationCenter.default.publisher(for: .showAboutAudio)) { _ in
+            if presentedSheet == nil { presentedSheet = .aboutAudio }
+        }
         .onAppear {
-            // Drive the welcome sheet through the same single-sheet
-            // dispatcher rather than a stacked .sheet(isPresented:) with
-            // a synthetic Binding. Only fires once per install (gated by
-            // the @AppStorage flag) and only if no other sheet is up.
-            if !hasSeenWelcome && presentedSheet == nil {
-                presentedSheet = .welcome
+            // First-launch auto-present: show the welcome tour. Then,
+            // once the kid has seen it, on later version bumps surface
+            // What's New. Two-step gate keeps a brand-new install from
+            // seeing both back-to-back (the tour callback advances the
+            // What's New cursor to current version).
+            if presentedSheet != nil { return }
+            if !hasSeenWelcomeTour {
+                presentedSheet = .welcomeTour
+            } else if whatsNewLastSeenVersion != WhatsNewSheet.currentVersion {
+                presentedSheet = .whatsNew
             }
         }
     }
 
     private var noOtherSheetOpen: Bool {
-        hasSeenWelcome && presentedSheet == nil
+        hasSeenWelcomeTour && presentedSheet == nil
     }
 
     /// Count questions in a pack that the parent still needs to triage.
@@ -364,50 +400,22 @@ struct ContentView: View {
     }
 }
 
-/// One-time welcome sheet shown on first launch. Dismissed via the
-/// `hasSeenWelcome` AppStorage flag, so it never reappears for the same user.
-private struct WelcomeSheet: View {
-    var onDismiss: () -> Void
-
-    var body: some View {
-        VStack(spacing: 18) {
-            Text("\u{1F44B}")
-                .font(.system(size: 56))
-            Text("Welcome to Sanskrit Kosh")
-                .font(.title.bold())
-            Text("Pick a subject from the sidebar on the left to start. Use the Sanskrit translator, browse the Science tutor's chapters and topics, or jump into Discover Mode for interactive scenes.")
-                .font(.body)
-                .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
-                .lineSpacing(4)
-                .padding(.horizontal, 8)
-            Button(action: onDismiss) {
-                Text("Let's go")
-                    .font(.headline)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
-            }
-            .buttonStyle(.bordered)
-            .accentColor(Color.compatIndigo)
-            .keyboardShortcut(.defaultAction)
-            .accessibilityIdentifier("welcome-lets-go")
-            .accessibilityLabel("Let's go")
-            .accessibilityHint("Dismisses the welcome screen. You can replay it from Settings if you want it back.")
-        }
-        .padding(28)
-        .frame(minWidth: 420, idealWidth: 480, maxWidth: 560,
-               minHeight: 340, idealHeight: 380)
-        // Invisible Esc handler so the welcome sheet also responds to Esc
-        // (the "Let's go" button owns .defaultAction for ⏎; a Button can
-        // only carry one keyboardShortcut so we attach .cancelAction here).
-        .background(
-            Button("Dismiss", action: onDismiss)
-                .keyboardShortcut(.cancelAction)
-                .opacity(0)
-                .frame(width: 0, height: 0)
-                .accessibilityHidden(true)
-        )
-    }
-}
+// MARK: - WelcomeSheet retired 2026-05-23
+//
+// The single-panel WelcomeSheet was replaced by the 3-panel
+// `WelcomeTourSheet` (Subjects/Tutor/WelcomeTourSheet.swift), which
+// also points the kid at the Discover Mode banner, the Go Deeper
+// disclosure, and the article read-aloud feature. The
+// `hasSeenWelcome` AppStorage key is retained in AppStorageKeys.swift
+// for backwards compatibility with existing user defaults but is no
+// longer consumed by any view — the new gate is `hasSeenWelcomeTour`.
+//
+// The "welcome-lets-go" accessibility identifier the locking
+// XCUITest (`Crash1_TryDiscoverMode_Ch1.dismissWelcomeIfNeeded`) keys
+// on now lives on WelcomeTourSheet's primary button under
+// `welcome-tour-primary` — the test's `dismissWelcomeIfNeeded` helper
+// uses `.waitForExistence(timeout: 2)` so a missing identifier still
+// no-ops cleanly; iMac sessions running the locking test should
+// update that helper to look for `welcome-tour-primary` instead.
 
 // MARK: - Daily Practice (Option B of the 2026-05-19 audit sweep)
