@@ -33,7 +33,14 @@ import AppKit
 /// AppKit-side `NSWorkspace.shared.accessibilityDisplayShouldReduceMotion`
 /// flag which mirrors the SwiftUI environment value — same source of
 /// truth, no need for an `@Environment` capture.
-@MainActor
+//
+// Intentionally NOT `@MainActor`-isolated. Big Sur / Xcode 13.2.1 /
+// Swift 5.5 rejects calling a `@MainActor` global function from a
+// View's instance method (which is `nonisolated` under Swift 5.5 —
+// the implicit-MainActor inference for View bodies arrived later).
+// The function only reads NSWorkspace.shared (thread-safe accessor)
+// and forwards to `withAnimation` (no actor enforcement on Big Sur).
+// All call sites are SwiftUI view code that runs on main at runtime.
 public func withAnimationRespectingReduceMotion<Result>(
     _ animation: Animation? = .default,
     _ body: () throws -> Result

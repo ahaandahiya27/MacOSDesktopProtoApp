@@ -22,46 +22,47 @@ struct ArticleBrowserView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-                // Toolbar with controls
                 HStack(spacing: 12) {
-                    Button(action: { presentationMode.wrappedValue.dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.title3)
-                    }
-                    .keyboardShortcut("w", modifiers: .command)
-                    .accessibilityLabel("Close article")
-                    .help("Close article")
+                    // Group keeps the outer HStack ≤10 direct children (Swift 5.5 @ViewBuilder cap; CLAUDE.md).
+                    Group {
+                        Button(action: { presentationMode.wrappedValue.dismiss() }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.title3)
+                        }
+                        .keyboardShortcut("w", modifiers: .command)
+                        .accessibilityLabel("Close article")
+                        .help("Close article")
 
-                    Button(action: coordinator.goBack) {
-                        Image(systemName: "chevron.left")
-                            .font(.body)
-                    }
-                    .disabled(!coordinator.canGoBack)
-                    .accessibilityLabel("Back")
-                    .help("Back")
+                        Button(action: { coordinator.goBack() }) {
+                            Image(systemName: "chevron.left")
+                                .font(.body)
+                        }
+                        .disabled(!coordinator.canGoBack)
+                        .accessibilityLabel("Back")
+                        .help("Back")
 
-                    Button(action: coordinator.goForward) {
-                        Image(systemName: "chevron.right")
-                            .font(.body)
-                    }
-                    .disabled(!coordinator.canGoForward)
-                    .accessibilityLabel("Forward")
-                    .help("Forward")
+                        Button(action: { coordinator.goForward() }) {
+                            Image(systemName: "chevron.right")
+                                .font(.body)
+                        }
+                        .disabled(!coordinator.canGoForward)
+                        .accessibilityLabel("Forward")
+                        .help("Forward")
 
-                    Button(action: coordinator.reload) {
-                        Image(systemName: "arrow.clockwise")
-                            .font(.body)
-                    }
-                    .accessibilityLabel("Reload")
-                    .help("Reload")
+                        Button(action: { coordinator.reload() }) {
+                            Image(systemName: "arrow.clockwise")
+                                .font(.body)
+                        }
+                        .accessibilityLabel("Reload")
+                        .help("Reload")
 
-                    Button(action: coordinator.openCurrentURL) {
-                        Image(systemName: "safari")
-                            .font(.body)
+                        Button(action: { coordinator.openCurrentURL() }) {
+                            Image(systemName: "safari")
+                                .font(.body)
+                        }
+                        .accessibilityLabel("Open in Safari")
+                        .help("Open in Safari")
                     }
-                    .accessibilityLabel("Open in Safari")
-                    .help("Open in Safari")
-
                     Spacer()
 
                     Text(coordinator.pageTitle)

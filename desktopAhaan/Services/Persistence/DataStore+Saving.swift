@@ -97,9 +97,14 @@ extension DataStore {
         completion: @escaping (String?) -> Void
     ) {
         saveQueue.async {
-            var errorDescription: String? = nil
+            // Use a single-assignment `let` so the value crossing the
+            // queue hop is captured immutably. Big Sur / Swift 5.5
+            // diagnoses a `var` captured into a concurrently-executing
+            // `DispatchQueue.main.async` closure as a concurrency error.
+            let errorDescription: String?
             do {
                 try data.write(to: url, options: .atomic)
+                errorDescription = nil
             } catch {
                 errorDescription = error.localizedDescription
             }
