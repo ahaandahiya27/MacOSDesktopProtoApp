@@ -13945,6 +13945,556 @@
         71,
         72,
         73
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch05_rw01",
+          "title": "Nimbu pani — acid you actually want to drink",
+          "body": "Lemon juice contains citric acid — the same compound that makes oranges, mosambi, and amla sour. It's a weak acid (pH ~2.3 in pure juice, ~4 once diluted in water). The acid stimulates your taste buds for sourness, activates saliva, and helps absorb iron from the meal you're drinking it with. Add sugar to balance the sour; add a pinch of salt and you have a quick electrolyte drink — exactly why nimbu pani is the summer cure for dehydration.",
+          "relatedConceptIds": [
+            "ch05_t01_c01"
+          ]
+        },
+        {
+          "id": "ch05_rw02",
+          "title": "Why ENO fizzes in water",
+          "body": "Drop an ENO sachet into water and it foams violently. Inside the sachet: citric acid (the acid part) and sodium bicarbonate (a base). When they meet water, they react: acid + base → salt + water + CO₂. The fizz is CO₂ gas escaping. That same reaction in your stomach neutralises excess hydrochloric acid — which is what relieves the burning feeling of acidity. Two-rupee acid-base chemistry doing real medical work.",
+          "relatedConceptIds": [
+            "ch05_t02_c01",
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_rw03",
+          "title": "Curing tamarind-stained brass with lemon",
+          "body": "When you cook sambhar in a brass kadhai, tamarind acid reacts with the brass and forms a dull green coating (copper acetate-tartrate complex). Wipe it with more lemon juice and salt — the citric acid dissolves the green layer right off. This kitchen trick is identical to the chemistry of cleaning ancient brass artefacts in museums (using milder acids), and a junior version of how the Statue of Liberty turned green over a century.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_rw04",
+          "title": "Why an ant bite stings",
+          "body": "Red ants inject formic acid when they bite. Your nerve endings detect the sudden pH drop in the tissue — that's the sharp burn you feel. The classic remedy is to rub baking soda paste on the bite. Baking soda is a base (sodium bicarbonate), it neutralises the formic acid → salt + water + CO₂, and the pain stops. Same principle as ENO, just on your skin.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02",
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_rw05",
+          "title": "Paan and slaked lime — chuna in disguise",
+          "body": "The smear of white paste on a betel leaf is chuna — slaked lime, calcium hydroxide, Ca(OH)₂. It's a base. When chewed with the acidic betel-nut paste, it neutralises just enough to release the alkaloids in the nuts. The slight red colour comes from the acid-base indicator pigment in the leaf reacting with the lime. Centuries-old desi chemistry, sitting on every paanwallah's tray.",
+          "relatedConceptIds": [
+            "ch05_t01_c02",
+            "ch05_t01_c03",
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch05_xc01",
+          "title": "Class 10 — Acids, Bases and Salts (full chapter)",
+          "body": "Class 10 has an entire chapter on this topic. You'll meet pH (a 0–14 scale where 7 is neutral, below is acid, above is base), the colour gradient of universal indicator, strength vs concentration of acids, and detailed properties of salts (acidic, basic, neutral). The Class 7 idea 'acids turn blue litmus red' becomes the molecular detail of H⁺ ions in solution.",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02",
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_xc02",
+          "title": "NEET — Biology meets pH",
+          "body": "NEET asks pH-of-body-fluids questions constantly: blood is pH 7.4 (slightly basic), stomach is pH 1.5 (very acidic), urine is 4.5–8 (variable). Why? Each fluid is engineered for its job. Enzymes work in narrow pH ranges — your stomach's pepsin needs acid; your intestine's trypsin needs base. The Class 7 idea 'acids and bases neutralise' becomes Class 11's enzyme-environment specificity.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch05_t02_c01",
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_xc03",
+          "title": "JEE — Equilibrium and Ionic Chemistry",
+          "body": "JEE Main asks 'how much HCl is needed to neutralise 50 mL of 0.1 M NaOH?' — direct application of acid-base stoichiometry. Class 11 introduces the Ka/Kb concepts (strength as a numerical constant), buffer solutions, and titration curves. Every NaOH-vs-HCl problem in JEE traces back to the Class 7 neutralisation idea, just with numbers attached.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch05_mn01",
+          "acronym": "BAR",
+          "unpacking": "B-lue litmus turns red in acid. (And R-ed turns blue in base — the reverse.) The litmus colour rule that saves you in every exam.",
+          "context": "Litmus colour change.",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_mn02",
+          "acronym": "SOAR",
+          "unpacking": "S-our taste, O-xidiser potential, A-cids of nature (citric, lactic, acetic), R-eacts with bases. The four big-picture properties of acids.",
+          "context": "Acid properties summary.",
+          "relatedConceptIds": [
+            "ch05_t01_c01"
+          ]
+        },
+        {
+          "id": "ch05_mn03",
+          "acronym": "BSST",
+          "unpacking": "B-itter taste, S-oapy feel, S-trong cleaners (lye, ammonia), T-urns red litmus blue. The four properties of bases.",
+          "context": "Base properties summary.",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch05_ms01",
+          "kidsThink": "All acids are dangerous and burn.",
+          "actually": "Strong acids like sulphuric and hydrochloric burn skin, but most household acids are weak and safe to consume: citric (lemons), acetic (vinegar), lactic (curd), tartaric (tamarind), malic (apples), ascorbic (vitamin C in oranges). Your stomach makes HCl — a strong acid — but a thick mucus layer protects your stomach lining. Strength and concentration both matter; pH 6 lemonade and pH 1 pool acid are both 'acidic' but vastly different.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_ms02",
+          "kidsThink": "Lemons are basic because they're alkaline forming.",
+          "actually": "Some health blogs claim lemons are 'alkaline' because they leave an alkaline ash after digestion. That's misleading — in your mouth and stomach, lemon juice is acidic (pH ~2-3). What the body does with the remnants AFTER metabolism is a different story; calling lemons 'alkaline foods' confuses chemistry with biology. The chemistry test (litmus) is unambiguous: lemon juice turns blue litmus red.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_ms03",
+          "kidsThink": "Soap is a base because it's alkaline.",
+          "actually": "Soap is a salt — sodium stearate, made by neutralising fatty acid (from oil) with sodium hydroxide (a strong base). The reaction is called saponification. The final soap is technically neutral-to-mildly basic, but it cleans by emulsifying oil, not by being a base. The 'soapy feel' that bases share with soap is because both contain similar molecules.",
+          "relatedConceptIds": [
+            "ch05_t01_c02",
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_ms04",
+          "kidsThink": "Indicators only work for acids and bases.",
+          "actually": "Indicators detect any pH change. Universal indicator (Class 10) shows a full rainbow from red (very acidic) through yellow (slightly acidic) through green (neutral) to blue (basic) to purple (very basic). Even your eyes have a sort of indicator: anthocyanin pigments in red cabbage and turmeric extract are natural indicators that some Indian dyers used for centuries.",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_ms05",
+          "kidsThink": "Antacid medicines completely neutralise stomach acid.",
+          "actually": "Antacids only neutralise EXCESS acid that's causing burning. Your stomach immediately replenishes the missing acid (within an hour). Too much antacid use can leave your stomach unable to kill ingested bacteria or digest protein. Doctors recommend lifestyle changes (smaller meals, fewer fried foods) over chronic antacid use — the body's acid is there for a reason.",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch05_nq01",
+          "question": "State differences between acids and bases.",
+          "modelAnswer": "Acids: sour to taste, turn blue litmus red, often react with metals to release hydrogen, examples are citric acid (lemon), acetic acid (vinegar), HCl (stomach). Bases: bitter to taste, soapy feel, turn red litmus blue, examples are baking soda, soap, milk of magnesia, lime. Acids and bases neutralise each other to form salt + water.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_nq02",
+          "question": "Ammonia is found in many household products such as window cleaners. It turns red litmus blue. What is its nature?",
+          "modelAnswer": "Ammonia turns red litmus blue, which is the characteristic behaviour of a base. So ammonia is basic in nature (technically a weak base in water — it dissolves to form ammonium hydroxide).",
+          "relatedConceptIds": [
+            "ch05_t01_c02",
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_nq03",
+          "question": "Name the source from which litmus solution is obtained. What is the use of this solution?",
+          "modelAnswer": "Litmus is extracted from a type of lichen — a partnership between fungi and algae that grows on rocks in cool, damp environments. The blue and red varieties are used as indicators: blue litmus turns red in acid, red litmus turns blue in base. It's the simplest acid-base test in the lab.",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_nq04",
+          "question": "Is the distilled water acidic, basic, or neutral? How would you verify it?",
+          "modelAnswer": "Distilled water is neutral — neither acidic nor basic. To verify: dip blue litmus into it (no colour change) and red litmus (no colour change). With universal indicator, distilled water shows green (the neutral colour). The chemistry of neutrality: equal numbers of H⁺ and OH⁻ ions (which you'll learn at Class 10).",
+          "relatedConceptIds": [
+            "ch05_t01_c03",
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_nq05",
+          "question": "Describe the process of neutralisation with the help of an example.",
+          "modelAnswer": "Neutralisation is the reaction between an acid and a base to form a salt and water. Example: HCl (acid) + NaOH (base) → NaCl (salt) + H₂O (water). The acid's sour properties and the base's bitter properties cancel each other. Indicators show this directly — adding base to acid bit by bit changes the colour to neutral green, then to base-blue. Everyday example: ENO neutralising stomach acidity.",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_nq06",
+          "question": "Mark T or F. (i) Nitric acid turns red litmus blue. (ii) Sodium hydroxide turns blue litmus red. (iii) Sodium hydroxide and HCl neutralise each other to form salt + water.",
+          "modelAnswer": "(i) False — nitric acid is an acid; it turns BLUE litmus RED. (ii) False — sodium hydroxide is a base; it turns RED litmus BLUE. (iii) True — HCl + NaOH → NaCl + H₂O, classic neutralisation.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02",
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_nq07",
+          "question": "Dorji has a few bottles of soft drinks. He should not drink them because they (i) taste sweet. (ii) are acidic. (iii) have CO₂ in them. (iv) all of the above.",
+          "modelAnswer": "(iv) all of the above — but the main concern is (ii): they are acidic (carbonic acid + phosphoric acid + citric acid combined, pH 2.5-3.5, comparable to vinegar). Frequent acid exposure dissolves tooth enamel. Sugar (sweet) feeds the cavity-causing bacteria. Dissolved CO₂ makes the acid stronger. All three reasons together damage teeth.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_nq08",
+          "question": "Explain why chalk powder is sprinkled in some places like museums where antique items are kept.",
+          "modelAnswer": "Air pollution sometimes contains sulphur dioxide and nitrogen oxides — both acid-forming. These gases can settle on old artefacts (especially marble and limestone), slowly dissolving them. Chalk (calcium carbonate) is a mild base; sprinkled in the museum it reacts with traces of these gaseous acids before they reach the artefact, sacrificing itself to protect the antiques. This is acid-base chemistry as a preservation technique.",
+          "relatedConceptIds": [
+            "ch05_t02_c01",
+            "ch05_t03_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch05_gl01",
+          "term": "Acid",
+          "definition": "A substance that tastes sour, turns blue litmus red, and releases H⁺ ions in water.",
+          "example": "Lemon juice (citric acid), curd (lactic acid), vinegar (acetic acid).",
+          "hindiTerm": "अम्ल",
+          "relatedConceptIds": [
+            "ch05_t01_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl02",
+          "term": "Base",
+          "definition": "A substance that tastes bitter, feels soapy, turns red litmus blue, and releases OH⁻ ions in water.",
+          "example": "Soap, baking soda, antacid tablets, milk of magnesia.",
+          "hindiTerm": "क्षार",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl03",
+          "term": "Indicator",
+          "definition": "A substance that changes colour to tell whether a solution is acidic, basic, or neutral.",
+          "example": "Litmus, methyl orange, phenolphthalein, red cabbage extract, turmeric.",
+          "hindiTerm": "सूचक",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_gl04",
+          "term": "Litmus",
+          "definition": "A natural dye from lichens, used as a simple acid-base indicator (blue → red in acid, red → blue in base).",
+          "example": "Litmus paper strips are the lab's quickest pH check.",
+          "hindiTerm": "लिटमस",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_gl05",
+          "term": "Neutralisation",
+          "definition": "The reaction between an acid and a base producing salt and water.",
+          "example": "Antacid + stomach acid → salt + water + CO₂; the burn stops.",
+          "hindiTerm": "उदासीनीकरण",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl06",
+          "term": "Salt",
+          "definition": "An ionic compound formed when an acid neutralises a base.",
+          "example": "Common salt (NaCl) is formed by neutralising HCl with NaOH.",
+          "hindiTerm": "लवण",
+          "relatedConceptIds": [
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl07",
+          "term": "Sulphuric acid (H₂SO₄)",
+          "definition": "The most important industrial acid, used in fertilisers, batteries, dyes, and detergents.",
+          "example": "India produces ~6 million tonnes of H₂SO₄ per year — used mostly in DAP fertiliser.",
+          "hindiTerm": "गंधक का अम्ल",
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl08",
+          "term": "Hydrochloric acid (HCl)",
+          "definition": "The acid in your stomach — kills germs in food and helps digest protein.",
+          "example": "Stomach pH is ~1.5; this acid would dissolve metal but is contained safely by mucus.",
+          "hindiTerm": "हाइड्रोक्लोरिक अम्ल",
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl09",
+          "term": "Slaked lime",
+          "definition": "Calcium hydroxide, Ca(OH)₂ — the base in chuna paste in paan and in whitewash.",
+          "example": "Whitewashing walls uses slaked lime; over weeks it absorbs CO₂ and hardens into calcium carbonate (chalk).",
+          "hindiTerm": "बुझा हुआ चूना",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl10",
+          "term": "pH (preview)",
+          "definition": "A 0-14 scale measuring how acidic or basic a solution is — 7 is neutral, below is acidic, above is basic. (You'll meet this formally in Class 10.)",
+          "example": "Lemon juice pH ~2; pure water pH 7; soap pH ~10; oven cleaner pH ~13.",
+          "hindiTerm": "पी एच",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch05_mp01",
+          "emoji": "🥬",
+          "title": "Red cabbage rainbow — a natural pH indicator",
+          "needs": [
+            "Half a red cabbage",
+            "A pot of water",
+            "A small grater or knife (adult help)",
+            "Six clear glasses",
+            "Test liquids: lemon juice, vinegar, soap water, baking soda solution, water, milk"
+          ],
+          "steps": [
+            "Chop the red cabbage finely.",
+            "Boil it in water for 10 minutes — the water turns deep purple.",
+            "Strain and cool the purple liquid; this is your indicator.",
+            "Pour a little indicator into each of six glasses.",
+            "Add one test substance to each glass and watch the colour change.",
+            "Lemon and vinegar → pink/red. Baking soda and soap → green/blue. Milk and water → stay purple (~neutral)."
+          ],
+          "expectedObservation": "A rainbow of colours across the six glasses, with strong acids (lemon) at red-pink and strong bases (soap) at green-blue.",
+          "whyItWorks": "Red cabbage contains anthocyanin pigments that change colour depending on H⁺ concentration in solution. In acid, the anthocyanin's structure flips to absorb green light (you see pink/red). In base, it flips again to absorb red light (you see green/blue). This is exactly how universal indicators work in chemistry labs, just from your vegetable shelf.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_mp02",
+          "emoji": "🌋",
+          "title": "Vinegar volcano — acid-base reaction in motion",
+          "needs": [
+            "A plastic bottle (small)",
+            "A few drops of dishwashing liquid",
+            "A few drops of red food colour",
+            "2-3 tablespoons baking soda",
+            "1 cup vinegar",
+            "A tray to contain the mess"
+          ],
+          "steps": [
+            "Put the bottle on the tray. Add baking soda, food colour, and dishwashing liquid into the bottle.",
+            "Stand back.",
+            "Pour the vinegar in quickly.",
+            "Watch the foamy red 'lava' erupt out of the bottle."
+          ],
+          "expectedObservation": "A frothy red fountain erupting from the bottle as the reaction proceeds.",
+          "whyItWorks": "Vinegar (acetic acid) + baking soda (sodium bicarbonate) → sodium acetate + water + CO₂. The CO₂ gas escapes from the liquid as bubbles. The dishwashing liquid traps the bubbles into foam (otherwise CO₂ would just escape as gas). The food colour makes the foam visible. It's a controlled, harmless display of neutralisation — same chemistry as ENO in water.",
+          "estimatedMinutes": 15,
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch05_sci01",
+          "name": "Svante Arrhenius (with India context)",
+          "lifespan": "1859–1927",
+          "nationality": "Swedish",
+          "oneLineLegacy": "Defined acids and bases by what they release in water — the modern definition every Class 10 student in India still learns.",
+          "narrative": "In the 1880s, a young Swedish chemist named Svante Arrhenius proposed a strange idea: when salt or acid dissolves in water, it BREAKS APART into smaller charged particles called ions. His PhD examiners almost failed him — the idea sounded crazy. But Arrhenius pushed on. He defined acids as substances that release H⁺ ions in water, bases as substances that release OH⁻ ions. Neutralisation became elegant chemistry: H⁺ + OH⁻ → H₂O. In 1903 he won the Nobel Prize for this theory. The 1903 Nobel arrived in India through college chemistry textbooks within years; by the time independence-era scientists at IISc Bangalore and IIT-affiliated institutions started research, every Indian chemistry student learned 'acids release H+, bases release OH-'. That one-line definition still anchors the Class 10 acids/bases chapter you'll meet next year.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02",
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch05_wi01",
+          "question": "What if your saliva were as acidic as lemon juice?",
+          "answer": "Your teeth would dissolve within months. Tooth enamel is calcium phosphate — acid attacks it, dissolving the surface and exposing the softer dentin underneath. Real example: people who chronically vomit (eating disorders, severe pregnancy nausea) DO get enamel damage from repeated stomach acid contact. Normal saliva is slightly basic (pH 6.7–7.4) precisely because saliva needs to NEUTRALISE the food acids you eat — it's your tooth's first defender.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_wi02",
+          "question": "What if the ocean became as acidic as soda (pH 4)?",
+          "answer": "The shells of every shellfish, coral, and plankton would dissolve. Coral reefs would vanish in a year. Fish that depend on those food chains would collapse. Mumbai's Arabian Sea fishing industry — which feeds millions — would face mass die-off. We're already partway: human CO₂ emissions have lowered ocean pH from 8.2 (pre-industrial) to 8.1 today — small but measurable, and shellfish farms in Goa are already noticing thinner shells. Acidification is a slow planetary crisis.",
+          "relatedConceptIds": [
+            "ch05_t03_c03"
+          ]
+        },
+        {
+          "id": "ch05_wi03",
+          "question": "What if you could make a battery out of a lemon?",
+          "answer": "You can! Push a copper coin and a zinc nail into a lemon. The citric acid acts as electrolyte. Copper attracts electrons, zinc donates them — current flows through the lemon. A single lemon gives ~0.7 volts; connect 3 in series and you can light a tiny LED. This is exactly how every commercial battery works — two metals + an electrolyte (acid or base). Alessandro Volta invented the first battery in 1800 with the same principle but using brine-soaked paper.",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t03_c01"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch05_cx01",
+          "toChapterId": "ch02",
+          "topic": "Nutrition in Animals",
+          "pointer": "Your stomach's HCl (introduced in Ch.5 industry section) is the centre of digestion in Ch.2. Pepsin needs pH 1.5–2 to work — same acid chemistry, different lens.",
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_cx02",
+          "toChapterId": "ch09",
+          "topic": "Soil",
+          "pointer": "Some soils are naturally acidic (tea estates in Assam) or basic (saline soils in Rajasthan). Farmers adjust them — adding lime to acidic soil, gypsum to basic soil — using exactly the neutralisation chemistry from this chapter.",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 Chapter 5 (Coal and Petroleum) doesn't directly continue acids/bases, but Chapter 6 (Combustion and Flame) uses the acid-base + oxidation framework. The deeper continuation is in Class 10 Chapter 2 (Acids, Bases and Salts) — an entire chapter expanding everything you saw here with pH, dilution, strength, and salt families.",
+        "forNeetJee": "Class 11 chemistry introduces Equilibrium and Ionic Equilibrium — Ka/Kb constants, buffer chemistry, titration curves. Class 12 adds electrochemistry where pH determines cell potential. NEET asks pH-of-body-fluids questions every year. JEE asks quantitative titration calculations. This Class 7 chapter is the first rung of a tall ladder."
+      },
+      "gallery": [
+        {
+          "id": "ch05_gi01",
+          "caption": "Litmus paper showing acid vs base",
+          "detail": "Two strips: blue litmus dipped in lemon juice turns red. Red litmus dipped in soap water turns blue. The cleanest test in chemistry — works in 5 seconds.",
+          "assetHint": "sfsymbol:square.fill.on.square.fill",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_gi02",
+          "caption": "Red cabbage indicator scale",
+          "detail": "Anthocyanin from red cabbage shows a full rainbow across pH — red/pink (acid), purple (neutral), blue/green (base). A vegetable that becomes a universal indicator.",
+          "assetHint": "sfsymbol:circle.hexagongrid.fill",
+          "relatedConceptIds": [
+            "ch05_t01_c03"
+          ]
+        },
+        {
+          "id": "ch05_gi03",
+          "caption": "Common acids and bases at home",
+          "detail": "Acids: lemon, vinegar, curd, tamarind, ENO crystals. Bases: soap, baking soda, milk of magnesia, ammonia cleaner, slaked lime in paan. Every kitchen IS a chemistry lab.",
+          "assetHint": "sfsymbol:house.fill",
+          "relatedConceptIds": [
+            "ch05_t01_c01",
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_gi04",
+          "caption": "Neutralisation reaction step by step",
+          "detail": "HCl + NaOH → NaCl + H₂O. Drop by drop a base is added to an acid; the indicator changes from acid-red to neutral-green at the exact stoichiometric point. The basis of titration.",
+          "assetHint": "shape:beaker",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_gi05",
+          "caption": "Tooth enamel attack by acid",
+          "detail": "Cavity-causing bacteria on plaque produce lactic acid. Lactic acid dissolves the calcium phosphate enamel. Brushing with fluoride toothpaste raises the local pH and rebuilds enamel.",
+          "assetHint": "sfsymbol:mouth.fill",
+          "relatedConceptIds": [
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_gi06",
+          "caption": "Industrial sulphuric acid plant",
+          "detail": "Hazira, Gujarat hosts one of India's largest H₂SO₄ plants. Sulphur (S) → SO₂ → SO₃ → H₂SO₄. Used in DAP/SSP fertiliser, textile dyes, car batteries, detergents.",
+          "assetHint": "sfsymbol:building.2.fill",
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch05_tl01",
+          "title": "Neutralisation in action — acid meets base in a glass",
+          "intro": "Watch hydrochloric acid meet sodium hydroxide drop by drop. Indicator colour tells you exactly when the fight ends.",
+          "steps": [
+            {
+              "id": "ch05_tl01_s01",
+              "label": "Acid alone",
+              "body": "Start with 50 mL of dilute HCl in a beaker. Add 3 drops of phenolphthalein indicator — solution stays colourless. The H⁺ ions dominate.",
+              "assetHint": "sfsymbol:drop.fill"
+            },
+            {
+              "id": "ch05_tl01_s02",
+              "label": "Base added — drop by drop",
+              "body": "Slowly drip in NaOH. Each drop produces a transient pink spot (base touching acid → momentary neutral) that disappears as you stir.",
+              "assetHint": "sfsymbol:eyedropper.halffull"
+            },
+            {
+              "id": "ch05_tl01_s03",
+              "label": "Approaching equivalence",
+              "body": "As more base is added, the pink spots take longer to disappear. The solution is becoming less acidic — H⁺ concentration is falling.",
+              "assetHint": "sfsymbol:circle.lefthalf.filled"
+            },
+            {
+              "id": "ch05_tl01_s04",
+              "label": "Equivalence — the colour holds",
+              "body": "One precise drop more, and the entire solution holds a pale pink colour. Acid and base have exactly cancelled. Total H⁺ = total OH⁻.",
+              "assetHint": "sfsymbol:checkmark.circle.fill"
+            },
+            {
+              "id": "ch05_tl01_s05",
+              "label": "The salt remains",
+              "body": "Evaporate the water and small white crystals remain — sodium chloride, the salt produced. Acid + base → salt + water, and you've watched it happen in real time.",
+              "assetHint": "sfsymbol:cube.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch05_t01_c03",
+            "ch05_t02_c01"
+          ]
+        }
       ]
     },
     {
