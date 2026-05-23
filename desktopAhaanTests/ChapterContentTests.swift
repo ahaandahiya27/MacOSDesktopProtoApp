@@ -1376,4 +1376,114 @@ final class ChapterContentTests: XCTestCase {
         }
         XCTAssertTrue(dupes.isEmpty, "Duplicate media-asset ids: \(dupes.prefix(5).joined(separator: ", "))")
     }
+
+    // MARK: - Ch.1 pilot schema integrity (2026-05-23)
+
+    @MainActor func testPredictQuestionEndsInQuestionMarkWhenPresent() {
+        let pack = Self.loadCh1PilotPack()
+        var bad: [String] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics {
+                for concept in topic.concepts {
+                    guard let q = concept.predictQuestion else { continue }
+                    if !q.trimmingCharacters(in: .whitespacesAndNewlines).hasSuffix("?") {
+                        bad.append(concept.id)
+                    }
+                }
+            }
+        }
+        XCTAssertTrue(
+            bad.isEmpty,
+            "Concept(s) carry a non-nil predictQuestion that doesn't end in '?': \(bad.prefix(5).joined(separator: ", "))"
+        )
+    }
+
+    @MainActor func testWhyChainShapeWhenPresent() {
+        let pack = Self.loadCh1PilotPack()
+        var bad: [String] = []
+        for chapter in pack.chapters {
+            for topic in chapter.topics {
+                for concept in topic.concepts {
+                    guard let chain = concept.whyChain else { continue }
+                    if chain.count != 3 {
+                        bad.append("\(concept.id) count=\(chain.count)")
+                        continue
+                    }
+                    if let short = chain.first(where: { $0.trimmingCharacters(in: .whitespacesAndNewlines).count < 40 }) {
+                        bad.append("\(concept.id) short=\(short.count)")
+                    }
+                }
+            }
+        }
+        XCTAssertTrue(
+            bad.isEmpty,
+            "WhyChain must be exactly 3 entries, each ≥ 40 chars when present: \(bad.prefix(5).joined(separator: ", "))"
+        )
+    }
+
+    @MainActor func testConceptMapNodesResolveWithinChapterOrToCrossChapterRef() {
+        let pack = Self.loadCh1PilotPack()
+        // Build a lookup of every chapter's concept ids for fast resolution.
+        var conceptIdsByChapter: [String: Set<String>] = [:]
+        for chapter in pack.chapters {
+            var set: Set<String> = []
+            for topic in chapter.topics {
+                for concept in topic.concepts {
+                    set.insert(concept.id)
+                }
+            }
+            conceptIdsByChapter[chapter.id] = set
+        }
+
+        var unresolved: [String] = []
+        for chapter in pack.chapters {
+            guard let map = chapter.conceptMap else { continue }
+            let ownIds = conceptIdsByChapter[chapter.id] ?? []
+            for node in map.nodes {
+                switch node.kind {
+                case .concept:
+                    if !ownIds.contains(node.id) {
+                        unresolved.append("\(chapter.id):\(node.id) [.concept not in chapter]")
+                    }
+                case .crossChapter:
+                    // Cross-chapter ids are "chXX:<concept_id>".
+                    let parts = node.id.split(separator: ":", maxSplits: 1)
+                    guard parts.count == 2,
+                          let other = conceptIdsByChapter[String(parts[0])] else {
+                        unresolved.append("\(chapter.id):\(node.id) [malformed cross-chapter id]")
+                        continue
+                    }
+                    if !other.contains(String(parts[1])) {
+                        unresolved.append("\(chapter.id):\(node.id) [.crossChapter target missing]")
+                    }
+                case .pivot:
+                    // Pivots are synthesised; no resolution required.
+                    break
+                }
+            }
+            // Edges must reference real nodes within the same map.
+            let nodeIds = Set(map.nodes.map(\.id))
+            for edge in map.edges {
+                if !nodeIds.contains(edge.from) {
+                    unresolved.append("\(chapter.id):edge \(edge.id) — from=\(edge.from) missing")
+                }
+                if !nodeIds.contains(edge.to) {
+                    unresolved.append("\(chapter.id):edge \(edge.id) — to=\(edge.to) missing")
+                }
+            }
+        }
+        XCTAssertTrue(
+            unresolved.isEmpty,
+            "ConceptMap references unresolved: \(unresolved.prefix(8).joined(separator: " | "))"
+        )
+    }
+
+    private static func loadCh1PilotPack() -> SubjectPack {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            preconditionFailure("science_class7.json missing — test bundle resource lookup failed")
+        }
+        return pack
+    }
 }

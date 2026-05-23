@@ -30,6 +30,7 @@
 		23611D30E638548923D4B49D /* SubjectPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C5CC7512F77D37EA5D042 /* SubjectPlugin.swift */; };
 		0285215969F94AD942B6DD58 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260BF9D568AC5E4718E7D25 /* Chapter.swift */; };
 		7BAF2E39EA259F6E783988C3 /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90B69C785A427D236D48A67 /* Concept.swift */; };
+		57B490F8643A88D2125E9CD8 /* ConceptMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C0B26EE113D9C5EB76EDA2 /* ConceptMap.swift */; };
 		55BB7C93BF515F7EA4706460 /* ContentTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABCAB43ADEACD1FF57CACEC /* ContentTimeline.swift */; };
 		180196F517212B82ED98F63B /* CrossChapterRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313576C4810BDE40FA3B1553 /* CrossChapterRef.swift */; };
 		F627F9953611F5BDC9EB6ECF /* CurriculumBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B171F1C261C241C51E0E9454 /* CurriculumBridge.swift */; };
@@ -660,6 +661,7 @@
 		4D5743C43A54C95790C93C5E /* science_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D4EA3E7B426792E40B381DA /* science_class7.json */; };
 		A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE2F98A2DF77A5876B26B1C /* Assets.xcassets */; };
 		820B9073B763352750D5EA90 /* AnswerValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93430F2F8BA0B80E235F2994 /* AnswerValidatorTests.swift */; };
+		34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */; };
 		3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */; };
@@ -1040,6 +1042,7 @@
 		713C5CC7512F77D37EA5D042 /* SubjectPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectPlugin.swift"; sourceTree = "<group>"; };
 		D260BF9D568AC5E4718E7D25 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter.swift"; sourceTree = "<group>"; };
 		A90B69C785A427D236D48A67 /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Concept.swift"; sourceTree = "<group>"; };
+		13C0B26EE113D9C5EB76EDA2 /* ConceptMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConceptMap.swift"; sourceTree = "<group>"; };
 		6ABCAB43ADEACD1FF57CACEC /* ContentTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentTimeline.swift"; sourceTree = "<group>"; };
 		313576C4810BDE40FA3B1553 /* CrossChapterRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossChapterRef.swift"; sourceTree = "<group>"; };
 		B171F1C261C241C51E0E9454 /* CurriculumBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurriculumBridge.swift"; sourceTree = "<group>"; };
@@ -1353,6 +1356,7 @@
 		A1B83DC010D591E079B2D2FC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManager.swift"; sourceTree = "<group>"; };
 		0CE2F98A2DF77A5876B26B1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93430F2F8BA0B80E235F2994 /* AnswerValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnswerValidatorTests.swift"; sourceTree = "<group>"; };
+		192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ch2_19_StructuralRatchetTests.swift"; sourceTree = "<group>"; };
 		9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterContentTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageModelTests.swift"; sourceTree = "<group>"; };
@@ -2063,6 +2067,7 @@
 			children = (
 				D260BF9D568AC5E4718E7D25,
 				A90B69C785A427D236D48A67,
+				13C0B26EE113D9C5EB76EDA2,
 				6ABCAB43ADEACD1FF57CACEC,
 				313576C4810BDE40FA3B1553,
 				B171F1C261C241C51E0E9454,
@@ -2794,6 +2799,7 @@
 			isa = PBXGroup;
 			children = (
 				93430F2F8BA0B80E235F2994,
+				192F570A0F0B902A0BD9210D,
 				9AA33BC827B658DD27418AD8,
 				8C883748B706BDB46E529043,
 				9BCBDD7642E6B995F329206B,
@@ -3307,6 +3313,7 @@
 				23611D30E638548923D4B49D /* SubjectPlugin.swift in Sources */,
 				0285215969F94AD942B6DD58 /* Chapter.swift in Sources */,
 				7BAF2E39EA259F6E783988C3 /* Concept.swift in Sources */,
+				57B490F8643A88D2125E9CD8 /* ConceptMap.swift in Sources */,
 				55BB7C93BF515F7EA4706460 /* ContentTimeline.swift in Sources */,
 				180196F517212B82ED98F63B /* CrossChapterRef.swift in Sources */,
 				F627F9953611F5BDC9EB6ECF /* CurriculumBridge.swift in Sources */,
@@ -3624,6 +3631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				820B9073B763352750D5EA90 /* AnswerValidatorTests.swift in Sources */,
+				34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */,
 				3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */,

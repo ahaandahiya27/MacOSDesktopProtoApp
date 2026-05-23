@@ -33,6 +33,25 @@ struct Concept: Codable, Hashable, Identifiable {
     /// happens chapter-by-chapter with the testMnemonicsRatchet contract.
     let mnemonic: String?
 
+    /// Inquiry-first prompt shown BEFORE the body when the user has the
+    /// "predict-first" Settings toggle on. Single sentence ending in `?`,
+    /// designed to make the kid hypothesise before reading the answer.
+    /// Backwards-compatible: when absent (most chapters today), the
+    /// concept card behaves exactly as it did before — body shows
+    /// immediately. Added 2026-05-23 as part of the Ch.1 pilot.
+    let predictQuestion: String?
+
+    /// Three-layer Socratic drill, surfaced via WhyChainView's "Why?" pill.
+    /// Layer 0 is the existing concept body; whyChain[0] = layer 1,
+    /// whyChain[1] = layer 2, whyChain[2] = layer 3. Each layer is
+    /// 60–100 words and goes one level deeper into causes / mechanism /
+    /// edge cases.
+    ///
+    /// Backwards-compatible: absent on every chapter except ch01 today.
+    /// The integrity test in `ChapterContentTests` rejects entries whose
+    /// count != 3 or whose layers are too short.
+    let whyChain: [String]?
+
     // MARK: - Convenience
 
     /// Returns the explanation at the requested depth, or a sensible fallback

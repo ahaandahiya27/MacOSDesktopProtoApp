@@ -45,6 +45,15 @@ struct Chapter: Codable, Hashable, Identifiable {
     /// (illustrations, shape diagrams, scene refs, bundled videos,
     /// narration flags). Rendered by `MediaAssetView`.
     let mediaAssets: [MediaAsset]?
+
+    /// Node-and-edge graph describing how this chapter's concepts
+    /// connect — and how they reach across to other chapters. Pre-baked
+    /// in JSON so layout stays editorially-controlled; the renderer
+    /// (`Ch1ConceptMap` for the pilot, later per-chapter views) just
+    /// draws it. Backwards-compatible: nil for every chapter without
+    /// an authored concept map. Added 2026-05-23 as part of the Ch.1
+    /// pilot.
+    let conceptMap: ConceptMap?
 }
 
 // MARK: - Empty-list accessors
