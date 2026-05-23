@@ -299,6 +299,7 @@
 		3508B5B9E40D8002BF0F2E6B /* CrossChapterRefsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB276AC9B28489B5A4B1538 /* CrossChapterRefsFooter.swift */; };
 		2C599B67B29CC7ED1E52AD8B /* CurriculumBridgeChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0475CEE3FD8EF6F305166 /* CurriculumBridgeChip.swift */; };
 		761C89224B67C5142EA03B9A /* ExamConnectionCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B62FF76712F81E4132C623 /* ExamConnectionCalloutView.swift */; };
+		9212AFED00C1368B0B628FBD /* GallerySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959DE170BB6A49D05E220876 /* GallerySectionView.swift */; };
 		5633D0F1140E67B345FBD00B /* GlossarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A58B088401594A8D1A17EF /* GlossarySheet.swift */; };
 		28E18B27620620F4F94ACAD3 /* MediaAssetGallerySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC25C5CD5DBDBFC6D90C263 /* MediaAssetGallerySectionView.swift */; };
 		47C3CAB482880621352E0719 /* MediaAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D7847A45BB7ADA8654E95 /* MediaAssetView.swift */; };
@@ -307,6 +308,7 @@
 		8280C67AE0523776BE3EEA09 /* MnemonicsStripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70E51FDD4D621373978F6 /* MnemonicsStripView.swift */; };
 		CBC71DE629C3BA7431FB5C2C /* NcertQASectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B47A0BD27088B30727875 /* NcertQASectionView.swift */; };
 		B4697C65FA71D1E633EB190F /* RealWorldExamplesStripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A54AA746A0F74D6F38366 /* RealWorldExamplesStripView.swift */; };
+		03B5E21661CEC8049C0CDE12 /* ScientistsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D898DD276D23296A7C5223 /* ScientistsSectionView.swift */; };
 		3863B78CD6BDFB721C67D408 /* ShapeDiagramRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EDAEED4269B6AAD4A8EC9 /* ShapeDiagramRegistry.swift */; };
 		226D6C5CB697A4F2A403AC32 /* TimelinesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A035E8A0812E3A5116B82FF /* TimelinesSectionView.swift */; };
 		D5B456DC36375B55B8FA92DC /* WhatIfsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AFBCF0D2593C7CA8076821 /* WhatIfsSectionView.swift */; };
@@ -1298,6 +1300,7 @@
 		0BB276AC9B28489B5A4B1538 /* CrossChapterRefsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossChapterRefsFooter.swift"; sourceTree = "<group>"; };
 		87B0475CEE3FD8EF6F305166 /* CurriculumBridgeChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurriculumBridgeChip.swift"; sourceTree = "<group>"; };
 		E0B62FF76712F81E4132C623 /* ExamConnectionCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExamConnectionCalloutView.swift"; sourceTree = "<group>"; };
+		959DE170BB6A49D05E220876 /* GallerySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GallerySectionView.swift"; sourceTree = "<group>"; };
 		E1A58B088401594A8D1A17EF /* GlossarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlossarySheet.swift"; sourceTree = "<group>"; };
 		2EC25C5CD5DBDBFC6D90C263 /* MediaAssetGallerySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaAssetGallerySectionView.swift"; sourceTree = "<group>"; };
 		748D7847A45BB7ADA8654E95 /* MediaAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaAssetView.swift"; sourceTree = "<group>"; };
@@ -1306,6 +1309,7 @@
 		78F70E51FDD4D621373978F6 /* MnemonicsStripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MnemonicsStripView.swift"; sourceTree = "<group>"; };
 		EC7B47A0BD27088B30727875 /* NcertQASectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQASectionView.swift"; sourceTree = "<group>"; };
 		179A54AA746A0F74D6F38366 /* RealWorldExamplesStripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealWorldExamplesStripView.swift"; sourceTree = "<group>"; };
+		A9D898DD276D23296A7C5223 /* ScientistsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScientistsSectionView.swift"; sourceTree = "<group>"; };
 		F69EDAEED4269B6AAD4A8EC9 /* ShapeDiagramRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramRegistry.swift"; sourceTree = "<group>"; };
 		4A035E8A0812E3A5116B82FF /* TimelinesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimelinesSectionView.swift"; sourceTree = "<group>"; };
 		94AFBCF0D2593C7CA8076821 /* WhatIfsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatIfsSectionView.swift"; sourceTree = "<group>"; };
@@ -2659,6 +2663,7 @@
 				0BB276AC9B28489B5A4B1538,
 				87B0475CEE3FD8EF6F305166,
 				E0B62FF76712F81E4132C623,
+				959DE170BB6A49D05E220876,
 				E1A58B088401594A8D1A17EF,
 				2EC25C5CD5DBDBFC6D90C263,
 				748D7847A45BB7ADA8654E95,
@@ -2667,6 +2672,7 @@
 				78F70E51FDD4D621373978F6,
 				EC7B47A0BD27088B30727875,
 				179A54AA746A0F74D6F38366,
+				A9D898DD276D23296A7C5223,
 				F69EDAEED4269B6AAD4A8EC9,
 				4A035E8A0812E3A5116B82FF,
 				94AFBCF0D2593C7CA8076821,
@@ -3502,6 +3508,7 @@
 				3508B5B9E40D8002BF0F2E6B /* CrossChapterRefsFooter.swift in Sources */,
 				2C599B67B29CC7ED1E52AD8B /* CurriculumBridgeChip.swift in Sources */,
 				761C89224B67C5142EA03B9A /* ExamConnectionCalloutView.swift in Sources */,
+				9212AFED00C1368B0B628FBD /* GallerySectionView.swift in Sources */,
 				5633D0F1140E67B345FBD00B /* GlossarySheet.swift in Sources */,
 				28E18B27620620F4F94ACAD3 /* MediaAssetGallerySectionView.swift in Sources */,
 				47C3CAB482880621352E0719 /* MediaAssetView.swift in Sources */,
@@ -3510,6 +3517,7 @@
 				8280C67AE0523776BE3EEA09 /* MnemonicsStripView.swift in Sources */,
 				CBC71DE629C3BA7431FB5C2C /* NcertQASectionView.swift in Sources */,
 				B4697C65FA71D1E633EB190F /* RealWorldExamplesStripView.swift in Sources */,
+				03B5E21661CEC8049C0CDE12 /* ScientistsSectionView.swift in Sources */,
 				3863B78CD6BDFB721C67D408 /* ShapeDiagramRegistry.swift in Sources */,
 				226D6C5CB697A4F2A403AC32 /* TimelinesSectionView.swift in Sources */,
 				D5B456DC36375B55B8FA92DC /* WhatIfsSectionView.swift in Sources */,

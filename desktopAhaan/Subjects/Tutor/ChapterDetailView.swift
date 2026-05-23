@@ -57,6 +57,17 @@ struct ChapterDetailView: View {
     /// 5 direct children (under the @ViewBuilder cap on Big Sur).
     @ViewBuilder
     private var contentSurfacesGroup: some View {
+        // Split into two inner Groups so each stays under the
+        // @ViewBuilder 10-child cap on Big Sur. Adding Gallery +
+        // Scientists pushed the original Group from 10 to 12.
+        Group {
+            surfacesGroupTop
+            surfacesGroupBottom
+        }
+    }
+
+    @ViewBuilder
+    private var surfacesGroupTop: some View {
         Group {
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
@@ -65,8 +76,16 @@ struct ChapterDetailView: View {
             WhatIfsSectionView(chapter: chapter)
             MiniProjectsSectionView(chapter: chapter)
             TimelinesSectionView(chapter: chapter)
+        }
+    }
+
+    @ViewBuilder
+    private var surfacesGroupBottom: some View {
+        Group {
             CurriculumBridgeChip(chapter: chapter)
             glossaryButton
+            GallerySectionView(chapter: chapter)
+            ScientistsSectionView(chapter: chapter)
             CrossChapterRefsFooter(pack: pack, chapter: chapter)
         }
     }

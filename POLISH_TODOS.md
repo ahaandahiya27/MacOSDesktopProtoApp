@@ -28,10 +28,10 @@ The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity c
 - [x] **Exam connections** — shipped 069a559. `ExamConnectionCalloutView.swift` inline beneath the post-attempt block in QuestionDetailView.
 - [x] **Cross-chapter refs** — shipped 069a559. `CrossChapterRefsFooter.swift` at the bottom of ChapterDetailView. Tap a row → nav.push the referenced chapter.
 - [x] **Curriculum bridge** — shipped 069a559. `CurriculumBridgeChip.swift` near the DeepDive disclosure. Tap → sheet with Class 8 + NEET / JEE previews.
-- [ ] **Gallery** — `chapter.gallery: [GalleryItem]?`. Deferred — overlaps in spirit with MediaAssetView. Next session can fold GalleryItem entries through `MediaAssetView` (treat them as `.illustration` equivalents).
+- [x] **Gallery** — shipped. `GallerySectionView.swift` collapsible on ChapterDetailView. Asset hint routes "sfsymbol:" / "asset:" / "shape:" prefixes; falls back to a placeholder glyph for unrecognized or empty hints.
 - [x] **Timelines** — shipped 069a559. `TimelinesSectionView.swift` on ChapterDetailView. Horizontal scroll of numbered step cards.
 - [x] **Mini-projects** — shipped 069a559. `MiniProjectsSectionView.swift` collapsible on ChapterDetailView. Card per project + detail sheet with materials, steps, observation, why-it-works.
-- [ ] **Scientist profiles** — `chapter.scientists: [ScientistProfile]?`. Deferred — lowest user-value of the deferred lot. Would surface as a small avatar carousel; can ship next session.
+- [x] **Scientist profiles** — shipped. `ScientistsSectionView.swift` on ChapterDetailView. Compact card per scientist (initials avatar + name + one-line legacy); tap → sheet with the full 120–200 word narrative.
 
 ## §3. Misc / latent
 
