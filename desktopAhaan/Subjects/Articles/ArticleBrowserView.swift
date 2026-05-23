@@ -67,7 +67,35 @@ struct ArticleBrowserView: View {
 
                     Spacer()
 
-                    // Read aloud button
+                    // Per-paragraph stepping (shown only in paragraph mode)
+                    if speech.isParagraphMode {
+                        Button(action: { speech.skipParagraph(forward: false) }) {
+                            Image(systemName: "backward.fill")
+                                .font(.body)
+                        }
+                        .disabled(speech.paragraphIndex == 0)
+                        .accessibilityLabel("Previous paragraph")
+                        .accessibilityHint("Restarts reading from the previous paragraph.")
+                        .help("Previous paragraph")
+
+                        Button(action: { speech.skipParagraph(forward: true) }) {
+                            Image(systemName: "forward.fill")
+                                .font(.body)
+                        }
+                        .disabled(speech.paragraphIndex >= speech.paragraphCount - 1)
+                        .accessibilityLabel("Next paragraph")
+                        .accessibilityHint("Skips ahead to the next paragraph.")
+                        .help("Next paragraph")
+
+                        Text("¶ \(speech.paragraphIndex + 1) / \(speech.paragraphCount)")
+                            .font(.caption.monospacedDigit())
+                            .foregroundColor(.secondary)
+                            .accessibilityLabel(
+                                "Paragraph \(speech.paragraphIndex + 1) of \(speech.paragraphCount)"
+                            )
+                    }
+
+                    // Read aloud button (toggles play / pause / resume)
                     readAloudButton
 
                     // Stop button (shown only when speaking/paused)
@@ -77,6 +105,7 @@ struct ArticleBrowserView: View {
                                 .font(.body)
                         }
                         .accessibilityLabel("Stop reading")
+                        .accessibilityHint("Stops narration and returns the article to the start.")
                         .help("Stop reading")
                     }
                 }
@@ -127,6 +156,13 @@ struct ArticleBrowserView: View {
             }
         }
         .accessibilityLabel(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read article aloud"))
+        .accessibilityHint(
+            speech.isSpeaking
+                ? "Pauses narration mid-paragraph."
+                : (speech.isPaused
+                    ? "Resumes narration from where it was paused."
+                    : "Starts reading the article paragraph-by-paragraph. Use the previous and next buttons to step.")
+        )
         .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : "Read article aloud"))
     }
 
@@ -136,9 +172,9 @@ struct ArticleBrowserView: View {
         } else if speech.isPaused {
             speech.resume()
         } else {
-            coordinator.readArticleText { text in
-                guard !text.isEmpty else { return }
-                speech.speak(text, owner: "article")
+            coordinator.readArticleParagraphs { paragraphs in
+                guard !paragraphs.isEmpty else { return }
+                speech.speakParagraphs(paragraphs, owner: "article")
             }
         }
     }
@@ -269,6 +305,21 @@ private class ArticleCoordinator: NSObject, ObservableObject
 
     func readArticleText(completion: @escaping (String) -> Void) {
         completion(nativeArticle.string)
+    }
+
+    /// Split the rendered article body into paragraphs for the
+    /// per-paragraph read-aloud flow. The HTML→text reducer in
+    /// `PlainTextArticleFallback.stripHTML` inserts `\n\n` between
+    /// block tags (headings, paragraphs, list items), so a simple
+    /// double-newline split is the natural paragraph boundary.
+    /// Blank/whitespace-only paragraphs are filtered out so the
+    /// "¶ N / M" counter matches what the user actually hears.
+    func readArticleParagraphs(completion: @escaping ([String]) -> Void) {
+        let paragraphs = nativeArticle.string
+            .components(separatedBy: "\n\n")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+        completion(paragraphs)
     }
 
     func cleanup() {
