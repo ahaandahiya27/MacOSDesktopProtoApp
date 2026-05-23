@@ -1257,4 +1257,123 @@ final class ChapterContentTests: XCTestCase {
             )
         }
     }
+
+    // MARK: - Deep Dive schema integrity (Phase 0 of the deep-dive arc)
+
+    @MainActor func testDeepDiveParentConceptIdsResolveWithinChapter() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var offenders: [String] = []
+        for chapter in pack.chapters {
+            let chapterConceptIds = Set(chapter.topics.flatMap { $0.concepts.map { $0.id } })
+            for stretch in chapter.deepDiveList where !chapterConceptIds.contains(stretch.parentConceptId) {
+                offenders.append("\(stretch.id) → \(stretch.parentConceptId) (not in \(chapter.id))")
+            }
+        }
+        XCTAssertTrue(
+            offenders.isEmpty,
+            "Stretch topics whose parentConceptId doesn't resolve to a same-chapter concept: " +
+            offenders.prefix(5).joined(separator: ", ")
+        )
+    }
+
+    @MainActor func testDeepDiveIdsAreGloballyUnique() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var seen: Set<String> = []
+        var dupes: [String] = []
+        for chapter in pack.chapters {
+            for stretch in chapter.deepDiveList where !seen.insert(stretch.id).inserted {
+                dupes.append(stretch.id)
+            }
+        }
+        XCTAssertTrue(dupes.isEmpty, "Duplicate stretch-topic ids: \(dupes.prefix(5).joined(separator: ", "))")
+    }
+
+    @MainActor func testDeepDiveBodiesAtLeast100Words() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var thin: [(String, Int)] = []
+        for chapter in pack.chapters {
+            for stretch in chapter.deepDiveList {
+                let wc = stretch.body.split { $0.isWhitespace }.count
+                if wc < 100 { thin.append((stretch.id, wc)) }
+            }
+        }
+        XCTAssertTrue(
+            thin.isEmpty,
+            "Stretch bodies under 100 words: " + thin.prefix(5).map { "\($0.0)=\($0.1)" }.joined(separator: ", ")
+        )
+    }
+
+    // MARK: - MediaAsset schema integrity (Phase 0 of the media arc)
+
+    @MainActor func testMediaAssetAltTextAtLeast10Chars() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var offenders: [String] = []
+        for chapter in pack.chapters {
+            for asset in chapter.mediaAssetsList
+                where asset.altText.trimmingCharacters(in: .whitespaces).count < 10 {
+                offenders.append("\(asset.id) altText=\"\(asset.altText)\"")
+            }
+        }
+        XCTAssertTrue(
+            offenders.isEmpty,
+            "Media assets with alt text < 10 chars: " + offenders.prefix(5).joined(separator: ", ")
+        )
+    }
+
+    @MainActor func testMediaAssetVideoDurationUnder20s() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var offenders: [String] = []
+        for chapter in pack.chapters {
+            for asset in chapter.mediaAssetsList where asset.kind == .bundledVideo {
+                let d = asset.durationSeconds ?? 0
+                if d <= 0 || d > 20 { offenders.append("\(asset.id) d=\(d)s") }
+            }
+        }
+        XCTAssertTrue(
+            offenders.isEmpty,
+            "Bundled-video assets outside (0, 20]s: " + offenders.prefix(5).joined(separator: ", ")
+        )
+    }
+
+    @MainActor func testMediaAssetIdsAreGloballyUnique() {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let pack = try? JSONDecoder().decode(SubjectPack.self, from: data) else {
+            XCTFail("Could not load pack")
+            return
+        }
+        var seen: Set<String> = []
+        var dupes: [String] = []
+        for chapter in pack.chapters {
+            for asset in chapter.mediaAssetsList where !seen.insert(asset.id).inserted {
+                dupes.append(asset.id)
+            }
+        }
+        XCTAssertTrue(dupes.isEmpty, "Duplicate media-asset ids: \(dupes.prefix(5).joined(separator: ", "))")
+    }
 }

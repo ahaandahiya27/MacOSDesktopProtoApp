@@ -35,6 +35,16 @@ struct Chapter: Codable, Hashable, Identifiable {
     let curriculumBridge: CurriculumBridge?
     let gallery: [GalleryItem]?
     let timelines: [ContentTimeline]?
+
+    /// Grade-tagged stretch topics for fast learners. Hidden behind a
+    /// "Go deeper" disclosure on the chapter detail page; every entry's
+    /// `parentConceptId` MUST resolve to a concept id in the same chapter.
+    let deepDive: [StretchTopic]?
+
+    /// Visual & multimedia learning assets attached to this chapter
+    /// (illustrations, shape diagrams, scene refs, bundled videos,
+    /// narration flags). Rendered by `MediaAssetView`.
+    let mediaAssets: [MediaAsset]?
 }
 
 // MARK: - Empty-list accessors
@@ -57,4 +67,6 @@ extension Chapter {
     var crossChapterRefsList: [CrossChapterRef] { crossChapterRefs ?? [] }
     var galleryList: [GalleryItem] { gallery ?? [] }
     var timelinesList: [ContentTimeline] { timelines ?? [] }
+    var deepDiveList: [StretchTopic] { deepDive ?? [] }
+    var mediaAssetsList: [MediaAsset] { mediaAssets ?? [] }
 }
