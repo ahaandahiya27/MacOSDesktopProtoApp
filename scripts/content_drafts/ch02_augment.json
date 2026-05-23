@@ -1,0 +1,444 @@
+{
+  "_meta": {
+    "chapter_id": "ch02",
+    "chapter_title": "Nutrition in Animals",
+    "baseline": "PW Class 7 — 20 concepts across alimentary canal, ruminants, Amoeba",
+    "depth_target": "Class 7 fast-learner — out-of-box extensions (microbiome, enzyme specificity, gut–brain axis) + Class 8 / 11 / NEET bridges grounded in Class 7 concepts",
+    "author_notes": "Every item below cross-links via relatedConceptIds to one of the existing 20 concepts. Out-of-box content is explicitly tied to a Class 7 anchor (e.g. enzyme specificity → saliva amylase concept, microbiome → ruminant cud concept)."
+  },
+
+  "realWorldExamples": [
+    {
+      "id": "ch02_rw01",
+      "title": "Chewing roti — the first 30 seconds of digestion",
+      "body": "Take a small bite of plain roti — no sabzi, no ghee. Chew it for 30 seconds. Notice anything? It starts to taste sweeter. That's not your imagination. Saliva carries an enzyme called amylase that breaks the long starch chains in wheat into small sugar molecules called maltose, which your tongue can taste. Digestion has already begun in your mouth. This is also why doctors say chew each bite 20–30 times — give amylase enough time to work.",
+      "relatedConceptIds": ["ch02_t01_c03", "ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_rw02",
+      "title": "Cow chewing cud in a Punjab field",
+      "body": "Watch a buffalo in a Punjab village after sunset — its jaw moves rhythmically even though there's no grass in its mouth. It's chewing cud. The buffalo swallowed grass quickly during the day; that grass sits in the first stomach chamber (rumen), gets softened by water and bacteria, then comes back up in small balls when the cow rests. The buffalo re-chews each ball thoroughly to break the tough cellulose, then swallows it for real. Two stomach trips per meal — that's what makes a grass-only diet workable.",
+      "relatedConceptIds": ["ch02_t02_c01", "ch02_t02_c04"]
+    },
+    {
+      "id": "ch02_rw03",
+      "title": "Why a heavy lunch makes you sleepy",
+      "body": "After a big dabba lunch — paratha, dal, sabzi — you feel a strong urge to nap. The reason: digestion is energy-expensive work. Your body redirects extra blood to your stomach and intestines to power churning, enzyme secretion, and absorption. Less blood reaches the brain temporarily, and you feel drowsy. This is called postprandial somnolence — the same reason a python that swallowed a goat sleeps for days. Lighter meals digest faster and dodge the slump.",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c05"]
+    },
+    {
+      "id": "ch02_rw04",
+      "title": "Eggshell in vinegar — your stomach in a bowl",
+      "body": "Drop a clean eggshell into a bowl of white vinegar. Within seconds bubbles rise. Within 24 hours the shell is partly dissolved — the vinegar's acetic acid ate through the calcium carbonate. Your stomach's hydrochloric acid is about 1000 times stronger than vinegar. So why doesn't it digest YOU? Because the stomach lining secretes a thick mucus layer that's replaced every 2–3 days. When that layer fails (stress, medicines, infection), you get an ulcer.",
+      "relatedConceptIds": ["ch02_t01_c04"]
+    },
+    {
+      "id": "ch02_rw05",
+      "title": "Curd and the bacteria in your gut",
+      "body": "When you eat curd, you're swallowing live Lactobacillus bacteria. They survive the stomach acid (just barely) and settle in your intestines, joining a community of trillions of bacteria — the gut microbiome — that helps you digest fibre, makes some vitamins (like B12 and K), and trains your immune system. People who eat fermented foods regularly (curd, idli batter, achar) have measurably more diverse microbiomes than those who don't.",
+      "relatedConceptIds": ["ch02_t01_c05", "ch02_t02_c04"]
+    }
+  ],
+
+  "examConnections": [
+    {
+      "id": "ch02_xc01",
+      "title": "Class 11 Biology — Digestion and Absorption",
+      "body": "In Class 11 the digestive system gets a full chapter. The five-step model you learned here unpacks into precise enzymes (amylase, pepsin, trypsin, lipase), hormones that regulate them (gastrin, secretin, cholecystokinin), and the microscopic anatomy of villi (with their own absorption mechanisms — diffusion, facilitated diffusion, active transport). The Class 7 idea of 'bile breaks fats' becomes the molecular detail of micelle formation and fat-soluble vitamin absorption.",
+      "targetExam": "class11",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c08"]
+    },
+    {
+      "id": "ch02_xc02",
+      "title": "NEET — Digestive enzyme matching questions",
+      "body": "NEET biology nearly always carries a 'match the enzyme to its substrate' question — amylase ↔ starch, pepsin ↔ protein, trypsin ↔ protein, lipase ↔ fat, lactase ↔ lactose. The Class 7 chapter introduces you to a few; by Class 11 you'll know two dozen. Knowing WHICH enzyme works WHERE (mouth, stomach, small intestine) is half the question — the other half is knowing the optimal pH (acidic for pepsin, alkaline for trypsin).",
+      "targetExam": "neet",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c08", "ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_xc03",
+      "title": "Class 8 — From digestion to cell respiration",
+      "body": "Next year you'll meet the other half of nutrition: what happens to the glucose AFTER it's absorbed. Class 8 introduces cellular respiration — the glucose enters every cell of your body, combines with oxygen inside tiny structures called mitochondria, and releases the energy that runs your muscles, brain, and heartbeat. The Class 7 chapter ends at 'glucose in the blood'; Class 8 takes it from there.",
+      "targetExam": "class8",
+      "relatedConceptIds": ["ch02_t03_c01", "ch02_t03_c02"]
+    }
+  ],
+
+  "mnemonics": [
+    {
+      "id": "ch02_mn01",
+      "acronym": "IDAAE",
+      "unpacking": "I-ngestion (taking food in), D-igestion (breaking it down), A-bsorption (entering blood), A-ssimilation (building body parts), E-gestion (removing waste). Every animal nutrition story has these five steps in order.",
+      "context": "The five-step model of animal nutrition.",
+      "relatedConceptIds": ["ch02_t01_c01"]
+    },
+    {
+      "id": "ch02_mn02",
+      "acronym": "ICPM",
+      "unpacking": "I-ncisors (cutting — front teeth), C-anines (tearing — pointed ones next), P-remolars (light grinding), M-olars (heavy grinding — back teeth). Adults have 8 incisors, 4 canines, 8 premolars, 12 molars = 32 teeth total.",
+      "context": "The four types of teeth in order from front to back.",
+      "relatedConceptIds": ["ch02_t01_c03", "ch02_t02_c03"]
+    },
+    {
+      "id": "ch02_mn03",
+      "acronym": "SLP",
+      "unpacking": "S-aliva (amylase — starch to sugar), Liver (bile — breaks fats), P-ancreas (insulin + multiple enzymes — backup for everything). The three glands feeding the digestive tract without being part of the tube itself.",
+      "context": "The three accessory digestive glands.",
+      "relatedConceptIds": ["ch02_t01_c08", "ch02_t01_c09", "ch02_t01_c10"]
+    }
+  ],
+
+  "misconceptions": [
+    {
+      "id": "ch02_ms01",
+      "kidsThink": "Most digestion happens in the stomach.",
+      "actually": "The stomach does about 30% of digestion — it churns food, kills germs with acid, and starts protein digestion with pepsin. The real heavy lifting happens in the small intestine, where bile, pancreatic enzymes, and intestinal enzymes finish digesting carbohydrates, proteins, and fats. The small intestine is also where 95% of absorption happens.",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c05"]
+    },
+    {
+      "id": "ch02_ms02",
+      "kidsThink": "Saliva is just for moistening food.",
+      "actually": "Saliva does moisten food, but it ALSO contains an enzyme called amylase that begins digesting starch right in your mouth. Try chewing plain roti for 30 seconds — it starts to taste sweet because amylase has converted some starch into maltose. So digestion really begins before you swallow.",
+      "relatedConceptIds": ["ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_ms03",
+      "kidsThink": "Longer intestines mean better digestion.",
+      "actually": "Length depends on diet, not 'better'. Herbivores like cows have very long intestines (cow's small intestine is ~40 metres) because grass cellulose is tough and slow to digest. Carnivores like cats and tigers have short intestines (a tiger's is just ~5 metres) because meat is easy to digest. Humans, being omnivores, are in between — about 6–7 metres.",
+      "relatedConceptIds": ["ch02_t01_c05", "ch02_t02_c01", "ch02_t02_c03"]
+    },
+    {
+      "id": "ch02_ms04",
+      "kidsThink": "We absorb nutrients in the stomach.",
+      "actually": "The stomach is a digestion + storage organ; it absorbs almost nothing (only some water, alcohol, and certain medicines). Almost all nutrient absorption happens in the small intestine, where the inner wall has billions of finger-like villi and microvilli that multiply the absorption surface to the size of a tennis court folded inside you.",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c05", "ch02_t01_c11"]
+    },
+    {
+      "id": "ch02_ms05",
+      "kidsThink": "The appendix is a useless organ.",
+      "actually": "For a long time doctors thought so. Current research shows the appendix probably acts as a 'safe house' for the helpful gut bacteria — when you get severe diarrhoea and lose your gut microbiome, the appendix re-seeds it. People who've had their appendix removed are slightly more prone to certain gut infections, supporting this idea.",
+      "relatedConceptIds": ["ch02_t01_c06"]
+    }
+  ],
+
+  "ncertQA": [
+    {
+      "id": "ch02_nq01",
+      "question": "Fill in the blanks: (a) The main steps of nutrition in humans are ______. (b) The largest gland in the human body is ______. (c) The stomach releases hydrochloric acid and ______ juices, which act on food. (d) The inner wall of the small intestine has many finger-like outgrowths called ______. (e) Amoeba digests its food in the ______.",
+      "modelAnswer": "(a) ingestion, digestion, absorption, assimilation, egestion (b) liver (c) digestive (or pepsin) (d) villi (e) food vacuole.",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c04", "ch02_t01_c05", "ch02_t01_c08", "ch02_t02_c02"]
+    },
+    {
+      "id": "ch02_nq02",
+      "question": "Mark true or false: (a) Digestion of starch starts in the stomach. (b) The tongue helps in mixing food with saliva. (c) The gall bladder temporarily stores bile. (d) The ruminants bring back swallowed grass into their mouth and chew it for some time.",
+      "modelAnswer": "(a) False — digestion of starch starts in the mouth with salivary amylase. (b) True. (c) True. (d) True — this is called rumination.",
+      "relatedConceptIds": ["ch02_t01_c08", "ch02_t01_c10", "ch02_t02_c01"]
+    },
+    {
+      "id": "ch02_nq03",
+      "question": "Why do we need to chew food?",
+      "modelAnswer": "Chewing has three purposes. (1) It breaks food into smaller pieces so digestive enzymes can reach more surface area. (2) It mixes food with saliva, which both moistens it for swallowing and begins starch digestion (amylase). (3) It signals the rest of the digestive tract to prepare — stomach starts releasing acid, intestines start releasing enzymes. Eating without chewing properly means more work for the stomach and slower, less efficient digestion.",
+      "relatedConceptIds": ["ch02_t01_c03", "ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_nq04",
+      "question": "Why do you think buffaloes and cows graze grass and return to chew it later?",
+      "modelAnswer": "Grass is mostly cellulose — a tough fibre that's hard to break down. Cows have evolved a four-chambered stomach to handle it. They graze quickly during the day to fill the first chamber (rumen), where bacteria begin softening the cellulose. Later, while resting safely, they bring small balls of partly-digested grass (cud) back to the mouth, chew them thoroughly, and re-swallow. This two-step process maximises cellulose breakdown that one chewing couldn't achieve.",
+      "relatedConceptIds": ["ch02_t02_c01", "ch02_t02_c04"]
+    },
+    {
+      "id": "ch02_nq05",
+      "question": "What is the function of the digestive enzymes?",
+      "modelAnswer": "Digestive enzymes break large food molecules into small ones that can be absorbed into the blood. They act like specialised scissors — each enzyme cuts only one kind of food: amylase cuts starch into sugar, pepsin and trypsin cut proteins into amino acids, lipase cuts fats into fatty acids and glycerol. Without enzymes, food would pass through the body undigested and unused.",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c08", "ch02_t01_c09", "ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_nq06",
+      "question": "How is the small intestine designed to absorb digested food?",
+      "modelAnswer": "The small intestine has three design features that maximise absorption. (1) It is very long (~6 metres in an adult), giving food a long contact time. (2) Its inner wall is covered with millions of tiny finger-like projections called villi, and each villus has even tinier projections (microvilli) on its surface. Together they multiply the absorption surface to roughly the size of a tennis court. (3) Each villus has a rich blood supply, so absorbed nutrients are quickly carried away.",
+      "relatedConceptIds": ["ch02_t01_c05", "ch02_t01_c11"]
+    },
+    {
+      "id": "ch02_nq07",
+      "question": "Match the items of Column I with those of Column II. (food → primary organ of digestion)",
+      "modelAnswer": "Starch → mouth (saliva amylase) and small intestine. Protein → stomach (pepsin) and small intestine (trypsin). Fat → small intestine (bile + lipase). Water → large intestine (re-absorption). Glucose / amino acids → small intestine (villi absorption).",
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c05", "ch02_t01_c08", "ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_nq08",
+      "question": "Write one similarity and one difference between the nutrition in Amoeba and human beings.",
+      "modelAnswer": "Similarity: Both are heterotrophs that follow the basic steps of ingestion → digestion → absorption → assimilation → egestion; both digest food using enzymes. Difference: Amoeba is a single cell — it engulfs food with pseudopodia (fake feet) and digests it inside a food vacuole; humans are multicellular and have a dedicated digestive system with many specialised organs (mouth, stomach, intestines).",
+      "relatedConceptIds": ["ch02_t01_c02", "ch02_t02_c02"]
+    }
+  ],
+
+  "glossary": [
+    {
+      "id": "ch02_gl01",
+      "term": "Ingestion",
+      "definition": "The first step of nutrition: taking food into the body through the mouth.",
+      "example": "When you bite into a roti, ingestion has begun.",
+      "hindiTerm": "अंतर्ग्रहण",
+      "relatedConceptIds": ["ch02_t01_c01"]
+    },
+    {
+      "id": "ch02_gl02",
+      "term": "Digestion",
+      "definition": "The breaking down of complex food into simpler molecules the body can absorb.",
+      "example": "Saliva digesting starch into maltose is the first step of digestion.",
+      "hindiTerm": "पाचन",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c04"]
+    },
+    {
+      "id": "ch02_gl03",
+      "term": "Absorption",
+      "definition": "The movement of digested nutrients from the small intestine into the blood.",
+      "example": "Glucose passing through the villi wall into a blood capillary is absorption.",
+      "hindiTerm": "अवशोषण",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c05", "ch02_t01_c11"]
+    },
+    {
+      "id": "ch02_gl04",
+      "term": "Assimilation",
+      "definition": "Using absorbed nutrients to build new tissue, repair damage, and store energy.",
+      "example": "Amino acids becoming muscle proteins after a workout is assimilation.",
+      "hindiTerm": "स्वांगीकरण",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t03_c02"]
+    },
+    {
+      "id": "ch02_gl05",
+      "term": "Egestion",
+      "definition": "Removing undigested food from the body as solid waste.",
+      "example": "Going to the toilet is the egestion step.",
+      "hindiTerm": "बहिःक्षेपण",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c06"]
+    },
+    {
+      "id": "ch02_gl06",
+      "term": "Pepsin",
+      "definition": "A protein-digesting enzyme released by the stomach lining; works best in acid.",
+      "example": "Pepsin breaks the protein in your egg-and-cheese sandwich into smaller chains called peptides.",
+      "hindiTerm": "पेप्सिन",
+      "relatedConceptIds": ["ch02_t01_c04"]
+    },
+    {
+      "id": "ch02_gl07",
+      "term": "Bile",
+      "definition": "A greenish fluid made by the liver and stored in the gall bladder; breaks fats into tiny droplets so enzymes can digest them.",
+      "example": "After a ghee-rich meal, bile flows from the gall bladder into the small intestine.",
+      "hindiTerm": "पित्त",
+      "relatedConceptIds": ["ch02_t01_c08"]
+    },
+    {
+      "id": "ch02_gl08",
+      "term": "Villi",
+      "definition": "Millions of tiny finger-like projections lining the inner wall of the small intestine; they multiply the absorption surface.",
+      "example": "Each villus is less than a millimetre long but absorbs nutrients into a network of blood capillaries inside it.",
+      "hindiTerm": "रसांकुर",
+      "relatedConceptIds": ["ch02_t01_c05", "ch02_t01_c11"]
+    },
+    {
+      "id": "ch02_gl09",
+      "term": "Peristalsis",
+      "definition": "Wave-like muscular contractions that push food along the digestive tract.",
+      "example": "Peristalsis is why you can swallow even when standing upside down — it doesn't need gravity.",
+      "hindiTerm": "क्रमाकुंचन",
+      "relatedConceptIds": ["ch02_t01_c07", "ch02_t01_c12"]
+    },
+    {
+      "id": "ch02_gl10",
+      "term": "Pseudopodia",
+      "definition": "Temporary 'fake feet' that single-celled organisms like Amoeba extend to engulf food or move.",
+      "example": "An Amoeba spotting a smaller microbe extends pseudopodia around it, surrounding it like a bag.",
+      "hindiTerm": "कूटपाद",
+      "relatedConceptIds": ["ch02_t02_c02"]
+    }
+  ],
+
+  "miniProjects": [
+    {
+      "id": "ch02_mp01",
+      "emoji": "🍞",
+      "title": "Saliva amylase — taste it work",
+      "needs": [
+        "A small bite of plain roti or white bread (no jam, no butter)",
+        "A working tongue, a quiet 3 minutes",
+        "Water to rinse afterwards"
+      ],
+      "steps": [
+        "Take one small bite of plain roti — keep it on your tongue.",
+        "Don't swallow yet. Just chew slowly.",
+        "At the 30-second mark, notice the taste.",
+        "At 1 minute, notice again.",
+        "At 2 minutes, the bread tastes noticeably sweet."
+      ],
+      "expectedObservation": "By 2 minutes the plain starchy bread tastes sweet.",
+      "whyItWorks": "Saliva contains an enzyme called amylase. Amylase breaks the long starch chains in wheat into a sweet sugar called maltose. You're watching digestion happen on your own tongue. The starch was tasteless; the maltose is sweet — and the change is literally enzyme-driven chemistry, no cooking required.",
+      "estimatedMinutes": 5,
+      "relatedConceptIds": ["ch02_t01_c10"]
+    },
+    {
+      "id": "ch02_mp02",
+      "emoji": "🍍",
+      "title": "Pineapple enzyme — see protein digestion in a glass",
+      "needs": [
+        "A small bowl of cooled, just-set unflavoured jelly / gelatin (or sweet plain dahi)",
+        "A piece of fresh raw pineapple",
+        "A piece of canned (cooked) pineapple",
+        "Two saucers and an hour"
+      ],
+      "steps": [
+        "Spoon a small heap of jelly onto each saucer.",
+        "Place a slice of raw pineapple on top of one saucer's jelly.",
+        "Place a slice of canned pineapple on top of the other.",
+        "Wait 30–60 minutes.",
+        "Look at both: under the RAW pineapple the jelly has melted into a puddle. Under the canned pineapple it's still firm."
+      ],
+      "expectedObservation": "Raw pineapple breaks down the jelly. Canned pineapple doesn't.",
+      "whyItWorks": "Raw pineapple contains a protein-digesting enzyme called bromelain. It breaks the protein gelatin into liquid — exactly the same way pepsin in your stomach breaks meat protein. Canned pineapple has been cooked, which destroys (denatures) the enzyme. This is also why fresh pineapple makes your tongue tingle — bromelain is mildly digesting the cells of your tongue.",
+      "estimatedMinutes": 60,
+      "relatedConceptIds": ["ch02_t01_c04", "ch02_t01_c09"]
+    }
+  ],
+
+  "scientists": [
+    {
+      "id": "ch02_sci01",
+      "name": "Charaka",
+      "lifespan": "circa 100 BCE – 200 CE",
+      "nationality": "Indian (Ancient)",
+      "oneLineLegacy": "Wrote the first systematic Indian account of digestion as fire — and described what we now call enzymes, hormones, and the gut microbiome two thousand years before modern medicine.",
+      "narrative": "Long before microscopes, an Indian physician named Charaka was already writing about how the body turned food into life. His treatise, the Charaka Samhita, treats digestion as a fire (agni) burning inside the body — different agnis in different organs, each transforming food into the body's seven essential tissues. Charaka described why food stays in the stomach for a fixed time, why some people digest dairy easily and others don't, and why the same meal causes different effects in different bodies. He described the consequences of weak digestive fire (today: low stomach acid, poor enzymes), gas formation (today: gut microbiome imbalance), and even prescribed buttermilk and certain spices as digestive aids — exactly the kind of fermented + carminative food modern nutritionists still recommend. The Sushruta Samhita, written around the same time, complemented Charaka's internal-medicine view with detailed anatomy of the digestive organs. India had a model of digestion that worked, in practical terms, for two millennia before Beaumont's gastric experiments in 1822.",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c04", "ch02_t02_c04"]
+    }
+  ],
+
+  "whatIfs": [
+    {
+      "id": "ch02_wi01",
+      "question": "What if you had only molars and no incisors or canines?",
+      "answer": "You could still grind food, but biting off chunks of an apple or roti would be impossible. You'd have to pre-cut everything with a knife. Worse, your jaw alignment would change because incisors and canines act as guides during chewing. Animals show this clearly: cows have no upper front teeth (they tear grass with a horny pad against lower incisors), and they get away with it because they live on soft pre-chewed grass. A human on a chana-and-roti diet without front teeth would lose efficiency fast.",
+      "relatedConceptIds": ["ch02_t01_c03", "ch02_t02_c03"]
+    },
+    {
+      "id": "ch02_wi02",
+      "question": "What if your stomach acid was 10 times stronger?",
+      "answer": "Your stomach already produces hydrochloric acid at a pH of around 1.5 — strong enough to dissolve metal. Multiplying that by ten would mean pH ~0.5, the strength of car battery acid. The mucus barrier protecting your stomach lining would fail; you'd develop ulcers within hours. The acid would damage your oesophagus when burping. On the upside, you'd digest food faster and be virtually immune to most foodborne infections (bacteria can't survive that pH). Wild animals like vultures have stomach pH around 1.0 — they can safely eat rotten meat that would kill any human.",
+      "relatedConceptIds": ["ch02_t01_c04"]
+    },
+    {
+      "id": "ch02_wi03",
+      "question": "What if humans could digest cellulose like cows?",
+      "answer": "Grass, leaves, dry hay — all of that would become food. We could live on lawn clippings the way cows do. But there's a cost: we'd need a much longer intestine (cows are roughly 8–10 times our gut length per body size), or extra stomach chambers, or both. Our body shape and lifestyle would change. We'd also lose protein density per kilogram of food — cellulose is mostly carbohydrate, so we'd need to eat HUGE amounts daily. A cow eats 30+ kg of grass per day. Termites get around this with help: they don't digest cellulose themselves — bacteria and protists in their gut do it for them. So even 'digesting cellulose' is mostly symbiosis, not a personal superpower.",
+      "relatedConceptIds": ["ch02_t02_c01", "ch02_t02_c03", "ch02_t02_c04"]
+    }
+  ],
+
+  "crossChapterRefs": [
+    {
+      "id": "ch02_cx01",
+      "toChapterId": "ch10",
+      "topic": "Respiration in Organisms",
+      "pointer": "The glucose absorbed by the villi in this chapter is what's burned with oxygen in Ch.10 to release energy. Digestion is half the story; cellular respiration is the other half — together they explain how food becomes a heartbeat.",
+      "relatedConceptIds": ["ch02_t03_c01"]
+    },
+    {
+      "id": "ch02_cx02",
+      "toChapterId": "ch11",
+      "topic": "Transportation in Animals and Plants",
+      "pointer": "Once glucose and amino acids enter the bloodstream via the villi, the heart and circulatory system (Ch.11) carry them to every cell. Without transport, absorption is pointless. Each villus has its own micro-circulation, which Ch.11 explains at the macro level.",
+      "relatedConceptIds": ["ch02_t01_c11", "ch02_t03_c02"]
+    }
+  ],
+
+  "curriculumBridge": {
+    "nextYearClass8": "Class 8 doesn't have a digestion-specific chapter, but the cell-and-microorganism chapters build on this work — you'll learn HOW bacteria help (or harm) digestion, and how the food you absorbed becomes energy in mitochondria. The 'glucose enters cells' line at the end of this chapter is where Class 8 picks up.",
+    "forNeetJee": "Class 11's 'Digestion and Absorption' chapter is one of the highest-yield NEET topics. You'll go from 5 steps to ~20 enzymes, 4 hormones (gastrin, secretin, cholecystokinin, ghrelin), the histology of villi (with brush borders and lacteal vessels), and the biochemistry of carb/protein/fat breakdown. Several NEET questions every year are direct expansions of Class 7 ideas like 'where does bile work' and 'what does the small intestine absorb'."
+  },
+
+  "gallery": [
+    {
+      "id": "ch02_gi01",
+      "caption": "Human alimentary canal — 9 metres folded inside",
+      "detail": "From mouth to anus, the digestive tube is roughly 9 metres long if stretched. Inside you it's coiled into a 30-cm length of belly. Every organ has a specific role — mouth chops, stomach churns, small intestine absorbs, large intestine reclaims water.",
+      "assetHint": "sfsymbol:figure.stand",
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c05"]
+    },
+    {
+      "id": "ch02_gi02",
+      "caption": "Villi — a tennis court inside your belly",
+      "detail": "Each tiny villus is less than 1 mm long, but billions of them line the small intestine. Each has its own blood capillary and lymph vessel. Together they create an absorption surface roughly the size of a tennis court — folded inside a 6-metre tube.",
+      "assetHint": "shape:villi",
+      "relatedConceptIds": ["ch02_t01_c11"]
+    },
+    {
+      "id": "ch02_gi03",
+      "caption": "The four kinds of teeth",
+      "detail": "Incisors (8) for cutting, canines (4) for tearing, premolars (8) for first grinding, molars (12) for final grinding. A complete adult set is 32 teeth — your dental design tells the story of millions of years of mixed (omnivorous) diet.",
+      "assetHint": "sfsymbol:mouth.fill",
+      "relatedConceptIds": ["ch02_t01_c03", "ch02_t02_c03"]
+    },
+    {
+      "id": "ch02_gi04",
+      "caption": "Cow's four-chambered stomach",
+      "detail": "Rumen (largest — fermentation tank with bacteria) → Reticulum (filters and forms cud balls) → Omasum (water and small particles absorbed) → Abomasum (the 'true' stomach with acid + pepsin). Two trips through this system unlock the nutrition locked in tough grass cellulose.",
+      "assetHint": "sfsymbol:hare.fill",
+      "relatedConceptIds": ["ch02_t02_c01", "ch02_t02_c04"]
+    },
+    {
+      "id": "ch02_gi05",
+      "caption": "Amoeba engulfing food",
+      "detail": "A single-celled hunter extends two pseudopodia around a smaller microbe, wraps it in a temporary bubble called a food vacuole, then secretes enzymes into the vacuole to digest the prey. All five steps of nutrition happen inside one cell.",
+      "assetHint": "shape:amoeba",
+      "relatedConceptIds": ["ch02_t02_c02"]
+    },
+    {
+      "id": "ch02_gi06",
+      "caption": "Stomach lining under microscope",
+      "detail": "Specialised cells secrete two opposing things: HCl (strongly acidic, kills germs, activates pepsin) and a thick alkaline mucus (protects the stomach wall from its own acid). The mucus is renewed every 2–3 days. When it fails, ulcers form.",
+      "assetHint": "sfsymbol:waveform.path.ecg",
+      "relatedConceptIds": ["ch02_t01_c04"]
+    }
+  ],
+
+  "timelines": [
+    {
+      "id": "ch02_tl01",
+      "title": "From bite to energy — the 5-step journey of a meal",
+      "intro": "Follow a piece of roti through every step from mouth to muscles — the same five steps every animal nutrition story follows.",
+      "steps": [
+        {
+          "id": "ch02_tl01_s01",
+          "label": "Ingestion — bite and chew",
+          "body": "Teeth cut and grind, tongue mixes with saliva, amylase starts breaking starch. Swallow starts a peristaltic wave.",
+          "assetHint": "sfsymbol:mouth.fill"
+        },
+        {
+          "id": "ch02_tl01_s02",
+          "label": "Stomach — acid bath",
+          "body": "HCl kills germs and activates pepsin; pepsin starts protein digestion. The food becomes a paste called chyme. Stays here 2–4 hours.",
+          "assetHint": "sfsymbol:flame.fill"
+        },
+        {
+          "id": "ch02_tl01_s03",
+          "label": "Small intestine — the absorption highway",
+          "body": "Bile from the liver + enzymes from the pancreas finish digestion. Glucose, amino acids, and fatty acids pass through villi into blood. 95% of absorption happens here.",
+          "assetHint": "sfsymbol:tortoise.fill"
+        },
+        {
+          "id": "ch02_tl01_s04",
+          "label": "Bloodstream — delivery",
+          "body": "Nutrients ride the bloodstream to every cell of the body. The liver gets first dibs — it processes most nutrients before sending them onward.",
+          "assetHint": "sfsymbol:drop.fill"
+        },
+        {
+          "id": "ch02_tl01_s05",
+          "label": "Large intestine — water and goodbye",
+          "body": "Undigested food (mostly fibre) moves into the large intestine. Water and salts are reabsorbed; solid waste forms. Bacteria here also make a few vitamins. Egestion completes the cycle.",
+          "assetHint": "sfsymbol:arrow.triangle.2.circlepath"
+        }
+      ],
+      "relatedConceptIds": ["ch02_t01_c01", "ch02_t01_c04", "ch02_t01_c05", "ch02_t01_c06"]
+    }
+  ]
+}
