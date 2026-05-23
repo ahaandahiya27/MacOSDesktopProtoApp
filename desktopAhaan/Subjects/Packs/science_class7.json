@@ -28958,6 +28958,543 @@
         169,
         170,
         171
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch13_rw01",
+          "title": "Vande Bharat vs Rajdhani — when speed matters",
+          "body": "Vande Bharat Express tops out at 180 km/h; the average speed Delhi to Varanasi is ~95 km/h (stops + slow zones bring the average down). Rajdhani Express averages ~85 km/h. Maximum speed and AVERAGE speed are very different — average accounts for stops, slowdowns, sections of bad track. When you ask 'how long will the journey take?' average speed is what matters, not the headline maximum.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_rw02",
+          "title": "Cricket bowling speeds — how fast is a Yorker?",
+          "body": "A medium-pace bowler delivers at ~130 km/h. A fast bowler like Jasprit Bumrah hits 145 km/h regularly, and 150+ on his fastest days. The ball travels 22 yards (~20 m) from bowler's hand to batsman in about 0.5 seconds at 145 km/h. The batsman has less than half a second to decide where to play. That's why reflex training matters: at this speed, the batsman is reacting before the ball has finished travelling.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_rw03",
+          "title": "Mumbai local trains and the stop-go cycle",
+          "body": "A Mumbai Western Local stops at 36 stations on the Churchgate to Virar route. Each stop adds ~25 seconds to the journey. Maximum speed between stations: 110 km/h. But average speed end-to-end: ~38 km/h — barely cycling speed. Why? The stops dominate the timeline. This is a perfect example of NON-UNIFORM motion — repeated acceleration, cruising, deceleration. The distance-time graph for a local train zigzags up; it doesn't go straight up like a non-stop express.",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_rw04",
+          "title": "Jantar Mantar — measuring time with shadow",
+          "body": "Delhi's Jantar Mantar (built 1724 by Sawai Jai Singh II of Jaipur) is a giant outdoor sundial. The 27-metre tall Samrat Yantra (Supreme Instrument) is the largest sundial in the world — its shadow moves 1 mm per second, so you can literally watch time pass. By measuring shadow length and angle, observers calculated time of day, day of year, and even predicted eclipses — all without a modern clock. India had precise time-keeping for centuries before mechanical clocks reached Indian shores.",
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        },
+        {
+          "id": "ch13_rw05",
+          "title": "Your phone's GPS uses Einstein's clock corrections",
+          "body": "When Google Maps tells you 'turn left in 200m,' it's reading signals from satellites whose clocks have been corrected for Einstein's relativity (clocks at altitude tick faster than at ground level). Without these corrections, GPS would drift by ~10 km per day. Each satellite carries an atomic clock accurate to billionths of a second. Class 7 measures time with stopwatches; modern navigation relies on time accuracy that breaks classical physics. India's NavIC (regional GPS) satellites also use atomic clocks.",
+          "relatedConceptIds": [
+            "ch13_t03_c02"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch13_xc01",
+          "title": "Class 9 — Motion (kinematics)",
+          "body": "Class 9 introduces FULL kinematics: distance vs displacement (vector vs scalar), speed vs velocity, acceleration. You'll meet the three equations of motion (v = u + at, etc.). The Class 7 distance-time graph becomes velocity-time graphs and area-under-curve = distance.",
+          "targetExam": "class9",
+          "relatedConceptIds": [
+            "ch13_t01_c01",
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_xc02",
+          "title": "JEE — Kinematics in 2D + Relative Motion",
+          "body": "JEE expects mastery of projectile motion (cricket ball trajectory), circular motion (Earth's spin = uniform circular), and relative velocity (train passing train). The simple pendulum becomes Simple Harmonic Motion with formulas. The basic Class 7 'speed and time' becomes calculus-level kinematics.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch13_t01_c01",
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_xc03",
+          "title": "Class 11 Physics — Motion in a Straight Line + Oscillations",
+          "body": "Class 11 has two chapters covering Class 7's material: 'Motion in a Straight Line' (full kinematics) and 'Oscillations' (pendulum, SHM, time period formulas). The pendulum becomes T = 2π√(L/g) — derived rigorously.",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch13_mn01",
+          "acronym": "DST",
+          "unpacking": "D-istance = S-peed × T-ime. Rearranges to S = D/T and T = D/S. The Class 7 motion formula triangle. Cover what you want; the other two multiply/divide.",
+          "context": "Speed-distance-time formula.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_mn02",
+          "acronym": "PEND",
+          "unpacking": "P-eriod depends only on the pENDulum's length (and gravity). Heavier bob? Same period. Bigger swing? Same period (for small swings). Only LENGTH matters.",
+          "context": "Simple pendulum surprising fact.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_mn03",
+          "acronym": "SCMQA",
+          "unpacking": "Time evolution: S-undial → Candle clock → M-echanical (1600s) → Q-uartz watch (1969 Seiko) → A-tomic clock (1955, now in GPS). Five generations from shadow to billionth-of-a-second precision.",
+          "context": "History of time-keeping.",
+          "relatedConceptIds": [
+            "ch13_t03_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch13_ms01",
+          "kidsThink": "If something isn't moving, its speed is zero.",
+          "actually": "Speed is zero at THIS INSTANT, yes. But things that aren't moving can still have momentum stored (a child holding the swing in air before letting go), and can start moving the next instant. Also: 'not moving' depends on reference. You sitting on a bus going 60 km/h: your speed relative to bus = 0; your speed relative to road = 60. Speed always needs a reference frame.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms02",
+          "kidsThink": "A heavier pendulum bob takes longer to swing.",
+          "actually": "Surprisingly, NO. The period of a simple pendulum depends ONLY on its LENGTH and the strength of gravity. A 10g bob and a 1kg bob on the same string swing with the same period. This was Galileo's discovery in 1602 — he timed a chandelier's swing with his pulse during a church service.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms03",
+          "kidsThink": "All clocks measure 'real' time the same way.",
+          "actually": "Different clocks measure different things. A sundial measures the Sun's position (solar time). A pendulum clock measures swings (mechanical time). An atomic clock measures cesium atom vibrations (atomic time). These don't perfectly agree! Earth's spin is slightly irregular; we add 'leap seconds' to atomic clocks every few years to keep them aligned with solar time. There's no single 'real' time — there are several agreed conventions.",
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        },
+        {
+          "id": "ch13_ms04",
+          "kidsThink": "A distance-time graph going up means moving faster.",
+          "actually": "A STEEPER line means faster (slope = speed). A higher line doesn't necessarily mean faster — it just means farther from start. A line going UP means moving AWAY. A line going DOWN means moving BACK toward start. A FLAT line means stationary. Pay attention to slope, not height.",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_ms05",
+          "kidsThink": "Speed and velocity are the same.",
+          "actually": "In Class 7 they're treated as same, but later you'll learn: SPEED is just a number (50 km/h). VELOCITY is speed + direction (50 km/h NORTH). Two cars at 50 km/h in opposite directions have same speed but opposite velocities. This matters when they collide.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch13_nq01",
+          "question": "The basic unit of speed is (a) km/min (b) m/min (c) km/h (d) m/s.",
+          "modelAnswer": "(d) m/s. The metre is the SI unit of distance; the second is the SI unit of time. SI unit of speed is metres per second. Other units (km/h, mph) are common in daily life but the scientific 'basic' unit is m/s. Conversion: 1 m/s = 3.6 km/h.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_nq02",
+          "question": "A car moves with a speed of 40 km/h for 15 minutes and then with a speed of 60 km/h for the next 15 minutes. The total distance covered by the car is (a) 100 km (b) 25 km (c) 15 km (d) 10 km.",
+          "modelAnswer": "(b) 25 km. First leg: 40 km/h × 15 min = 40 × 0.25 = 10 km. Second leg: 60 km/h × 15 min = 60 × 0.25 = 15 km. Total = 10 + 15 = 25 km.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_nq03",
+          "question": "Suppose the two figures (graph A: straight diagonal line; graph B: stepped non-uniform) represent motion of two cars. Which one represents (a) uniform motion (b) non-uniform motion?",
+          "modelAnswer": "(a) Uniform motion = straight line on a distance-time graph (constant slope = constant speed). The diagonal line in graph A. (b) Non-uniform motion = curve or steps (slope changes over time). The stepped graph B. A train cruising at constant speed produces a straight line; a Mumbai local with stops produces steps and curves.",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_nq04",
+          "question": "Distance between two stations is 240 km. A train takes 4 hours to cover this distance. Calculate the speed of the train.",
+          "modelAnswer": "Speed = Distance ÷ Time = 240 ÷ 4 = 60 km/h. In SI units, this is 60 × (1000 m / 3600 s) = ~16.67 m/s. This is a typical Indian passenger train average — much slower than max because of stops.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_nq05",
+          "question": "The odometer of a car reads 57,321 km at the start of a trip and 57,605 km at the end of the trip. If the trip took 8 hours, calculate the average speed of the car in km/h and m/s.",
+          "modelAnswer": "Distance = 57605 − 57321 = 284 km. Time = 8 hours. Average speed = 284 / 8 = 35.5 km/h. In m/s: 35.5 × (1000/3600) = 35.5/3.6 ≈ 9.86 m/s. Note this is AVERAGE — the car might have driven 100 km/h on highway and 0 km/h at restaurant stops, but averaged 35.5 km/h.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_nq06",
+          "question": "Salma takes 15 minutes from her house to reach her school on a bicycle. If the bicycle has a speed of 2 m/s, calculate the distance between her house and the school.",
+          "modelAnswer": "Time = 15 minutes = 15 × 60 = 900 s. Speed = 2 m/s. Distance = Speed × Time = 2 × 900 = 1800 m = 1.8 km. So the school is 1.8 km from her house.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_nq07",
+          "question": "Show the shape of the distance-time graph for the motion in the following cases: (i) A car moving with a constant speed. (ii) A car parked on a side road.",
+          "modelAnswer": "(i) Straight diagonal line from bottom-left rising upward at constant slope. Constant speed = constant slope. (ii) Horizontal flat line — the car isn't moving, so distance from a fixed reference point doesn't change with time. The line is at some height (its position) but parallel to time axis.",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_nq08",
+          "question": "Which of the following relations is correct? (a) Speed = Distance × Time (b) Speed = Distance/Time (c) Speed = Time/Distance (d) Speed = 1/(Distance × Time).",
+          "modelAnswer": "(b) Speed = Distance ÷ Time. A car covers 60 km in 1 hour means its speed is 60 km/h, which is 60 km ÷ 1 h. Speed always has units of distance over time (m/s, km/h, etc.). Option (a) would have units of (distance × time), which is meaningless physically.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch13_gl01",
+          "term": "Speed",
+          "definition": "The distance covered per unit time.",
+          "example": "A cyclist covering 20 km in 1 hour has speed 20 km/h.",
+          "hindiTerm": "चाल",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl02",
+          "term": "Average speed",
+          "definition": "Total distance covered divided by total time taken, accounting for stops and varying speed.",
+          "example": "A train averages 60 km/h over a 240 km journey even though it touched 110 km/h between stations.",
+          "hindiTerm": "औसत चाल",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl03",
+          "term": "Uniform motion",
+          "definition": "Motion in which speed remains constant — equal distances in equal time intervals.",
+          "example": "A satellite orbiting Earth at constant speed.",
+          "hindiTerm": "एकसमान गति",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_gl04",
+          "term": "Non-uniform motion",
+          "definition": "Motion in which speed changes over time.",
+          "example": "A car in city traffic — speeding up, slowing down, stopping.",
+          "hindiTerm": "असमान गति",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_gl05",
+          "term": "Distance-time graph",
+          "definition": "A graph with time on the x-axis and distance from start on the y-axis; the slope at any point equals the speed at that instant.",
+          "example": "A straight diagonal line indicates uniform motion; a curve indicates non-uniform motion.",
+          "hindiTerm": "दूरी-समय ग्राफ",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_gl06",
+          "term": "Simple pendulum",
+          "definition": "A mass hung on a string, swinging back and forth under gravity.",
+          "example": "The chandelier in a Goan church; the bob of a wall clock.",
+          "hindiTerm": "सरल लोलक",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl07",
+          "term": "Time period (of a pendulum)",
+          "definition": "The time taken for one complete oscillation (one back-and-forth).",
+          "example": "A 1-metre pendulum on Earth has a time period of ~2 seconds.",
+          "hindiTerm": "आवर्तकाल",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl08",
+          "term": "Sundial",
+          "definition": "An ancient time-measuring device that uses the position of the Sun's shadow.",
+          "example": "Jantar Mantar in Delhi and Jaipur contains the world's largest sundials.",
+          "hindiTerm": "धूप घड़ी",
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        },
+        {
+          "id": "ch13_gl09",
+          "term": "Atomic clock",
+          "definition": "An extremely precise clock that uses vibrations of atoms (like cesium) to measure time.",
+          "example": "The atomic clocks in GPS satellites are accurate to one second in 30 million years.",
+          "hindiTerm": "परमाणु घड़ी",
+          "relatedConceptIds": [
+            "ch13_t03_c02"
+          ]
+        },
+        {
+          "id": "ch13_gl10",
+          "term": "Odometer",
+          "definition": "An instrument in vehicles that measures total distance travelled.",
+          "example": "A car's odometer might read 57,321 km after 5 years of use.",
+          "hindiTerm": "ओडोमीटर",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch13_mp01",
+          "emoji": "⏱️",
+          "title": "Build a simple pendulum and find what affects time period",
+          "needs": [
+            "A heavy bob (a small stone, ball, or nut)",
+            "A 1-metre piece of string",
+            "A stand or hook (a doorknob works)",
+            "A stopwatch (phone is fine)"
+          ],
+          "steps": [
+            "Tie the bob to the string; hang the string from a fixed point. The bob should hang freely.",
+            "Measure the string length carefully (top of bob to the hook).",
+            "Pull the bob to one side by ~10 cm. Let go.",
+            "Count 20 complete oscillations (one back-and-forth = 1 oscillation). Time it.",
+            "Time period = total time ÷ 20.",
+            "Now CHANGE one thing at a time: (a) Make the string half as long. Re-measure. (b) Use a heavier bob. Re-measure. (c) Pull the bob 20 cm instead of 10. Re-measure.",
+            "Compare all four time periods."
+          ],
+          "expectedObservation": "Shorter string: shorter period (about √2 less for half length). Heavier bob: SAME period (surprising!). Bigger swing: ~same period (for small swings). Conclusion: only LENGTH matters significantly.",
+          "whyItWorks": "The math: T = 2π√(L/g). Length is the only variable; gravity (g) is constant on Earth. Bob mass cancels out. Galileo found this in 1602; this experiment reproduces his discovery. It's the basis of every pendulum clock — make the pendulum 0.994 m long and one half-swing = 1 second.",
+          "estimatedMinutes": 20,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_mp02",
+          "emoji": "🚲",
+          "title": "Measure your own walking + cycling + running speeds",
+          "needs": [
+            "A measuring tape or known distance (e.g., a 100m school track lane)",
+            "A stopwatch (phone)",
+            "Yourself, a friend to time you, or both"
+          ],
+          "steps": [
+            "Measure or use a known 100m straight stretch.",
+            "Walk at normal pace for 100m. Have friend time it. Calculate speed = 100 / time.",
+            "Repeat at brisk walking pace, then jogging, then sprinting.",
+            "Optionally: do it on a cycle too.",
+            "Plot a bar chart of your speeds in m/s and km/h.",
+            "Compare with: Usain Bolt's 100m record (~10.4 m/s), an Olympic cyclist (~16 m/s), a Mumbai local train (~10 m/s avg)."
+          ],
+          "expectedObservation": "Walk: ~1.4 m/s = 5 km/h. Jog: ~2.5 m/s = 9 km/h. Sprint: ~6 m/s = 21.6 km/h. Cycle: ~5 m/s = 18 km/h. (Your numbers will vary.)",
+          "whyItWorks": "You're literally computing speed = distance/time with real measurements. The exercise makes the formula physical — you experience what a different m/s value FEELS like. Then comparing to known speeds (Bolt, trains) gives intuition for what 'fast' means.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch13_sci01",
+          "name": "Aryabhata",
+          "lifespan": "476–550 CE",
+          "nationality": "Indian (Ancient)",
+          "oneLineLegacy": "Indian astronomer-mathematician who calculated Earth's rotation, the length of the year, and the value of π — fifteen centuries before modern instruments.",
+          "narrative": "Aryabhata was born in 476 CE, probably in Patna (then Pataliputra). At age 23 he wrote the Aryabhatiya — a treatise that proposed: Earth rotates on its axis (heretical at the time — most thought the sky rotated and Earth was still); the length of a sidereal year is 365.25858 days (modern value: 365.25636 — off by less than 1 minute!); the value of π is approximately 3.1416 (correct to 4 decimals); and the diameter of Earth is ~12500 km (modern value: 12742 — under 2% off). All this without telescopes, computers, or anything beyond geometry and patient observation of the sky. He understood eclipses as shadows, not as demons swallowing the Sun. He invented the concept of place-value notation that later traveled to Arab mathematicians and then to Europe — the foundation of the decimal system. Class 7 measures time with stopwatches; Aryabhata measured it with the spinning Earth. India's first satellite (1975) is named after him. His treatise predicts the day length to better than 1 minute — a precision achieved by patience, not technology.",
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch13_wi01",
+          "question": "What if time ran backward — could you predict it?",
+          "answer": "Newton's laws of motion are time-reversible — if you film a billiard ball collision and play it in reverse, it looks like a valid collision. But on a larger scale, time has a DIRECTION (entropy increases — shattered glass doesn't reassemble). A movie of a glass shattering, played backward, looks impossible. Time-reversal symmetry holds at microscopic scales but breaks at large scales. This is one of the great open questions in physics: why does time have a direction? Class 11's thermodynamics chapter has the start of an answer.",
+          "relatedConceptIds": [
+            "ch13_t02_c02"
+          ]
+        },
+        {
+          "id": "ch13_wi02",
+          "question": "What if a pendulum's length was 1 km?",
+          "answer": "Time period T = 2π√(L/g) = 2π√(1000/9.8) ≈ 63 seconds. A complete swing would take a minute. The largest practical pendulum on Earth was Foucault's pendulum (1851, Paris), 67m long, period ~16 seconds — used to demonstrate Earth's rotation visibly. A pendulum 1 km long is impractical (couldn't build a stand tall enough), but the math says it would tick once per minute. A weather-balloon-mounted pendulum could probably work in principle.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_wi03",
+          "question": "What if all clocks on Earth stopped at the same instant?",
+          "answer": "GPS would fail (it depends on atomic clock signals). Stock markets would freeze (they rely on millisecond-accurate timestamps). Phones, internet, and aircraft navigation would error. The financial system would collapse within hours. But Earth would keep rotating and the Sun would keep rising — natural time wouldn't stop. We'd revert to sundials, water clocks, and lunar observation, like Aryabhata. Within months, civilization would re-bootstrap with mechanical clocks. The fragility is on the precision side, not the existence side.",
+          "relatedConceptIds": [
+            "ch13_t03_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch13_cx01",
+          "toChapterId": "ch15",
+          "topic": "Light",
+          "pointer": "Ch.15's light has a SPEED — 3×10⁸ m/s, fastest thing known. This chapter's speed concept extends to wave propagation.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_cx02",
+          "toChapterId": "ch19",
+          "topic": "Earth, Moon and the Sun",
+          "pointer": "Ch.19's day-night cycle (Earth rotating once per 24 hours) and year cycle (Earth orbiting Sun in 365 days) — Aryabhata's calculations made these PERIODS quantitative.",
+          "relatedConceptIds": [
+            "ch13_t02_c02"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 introduces 'Force and Pressure' + 'Friction' — concepts that EXPLAIN motion. Class 7 describes motion (what is speed?); Class 8 explains why motion changes (forces).",
+        "forNeetJee": "Class 9 introduces full kinematics: distance, displacement, velocity, acceleration, three equations of motion. Class 11's 'Oscillations' chapter expands the pendulum into SHM, T = 2π√(L/g) derived. JEE problems combine these — projectile in moving frame, pendulum in accelerating lift."
+      },
+      "gallery": [
+        {
+          "id": "ch13_gi01",
+          "caption": "Cyclist on Mumbai-Pune Expressway",
+          "detail": "A cyclist holds steady ~20 km/h (5.5 m/s) on flat road. Cars next to him at 100 km/h (28 m/s) appear blur-fast in comparison. SAME road, SAME time, but speed difference is 5×. Speed is always relative to reference.",
+          "assetHint": "sfsymbol:bicycle",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_gi02",
+          "caption": "Distance-time graph of three cars",
+          "detail": "Three lines on a graph: (1) car A — straight diagonal (uniform 60 km/h), (2) car B — steeper straight (uniform 100 km/h), (3) car C — curves up then flattens (sped up then stopped). Graph speaks the motion story instantly.",
+          "assetHint": "sfsymbol:chart.line.uptrend.xyaxis",
+          "relatedConceptIds": [
+            "ch13_t01_c02"
+          ]
+        },
+        {
+          "id": "ch13_gi03",
+          "caption": "Simple pendulum mid-swing",
+          "detail": "Bob at extreme right, ball swung through bottom, bob at extreme left — three positions captured. Time at each extreme = T/4. One complete to-and-fro = period T. T depends ONLY on length L.",
+          "assetHint": "sfsymbol:metronome",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gi04",
+          "caption": "Jantar Mantar Samrat Yantra — Delhi",
+          "detail": "Built 1724. The massive triangular structure is the gnomon (shadow caster); the curved walls on either side are the dial. As the Sun moves across the sky, the gnomon's shadow sweeps across the dial. Time read to within 2 seconds.",
+          "assetHint": "sfsymbol:sun.max.fill",
+          "relatedConceptIds": [
+            "ch13_t02_c02"
+          ]
+        },
+        {
+          "id": "ch13_gi05",
+          "caption": "Quartz watch movement open",
+          "detail": "A tiny vibrating quartz crystal (32,768 Hz exactly) drives stepper motor that moves the second hand. Quartz crystal vibration is so precise that a wristwatch is accurate to 15 seconds per month — better than pendulum clocks could ever be.",
+          "assetHint": "sfsymbol:applewatch",
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        },
+        {
+          "id": "ch13_gi06",
+          "caption": "GPS atomic clock satellite",
+          "detail": "A GPS satellite carries an atomic clock the size of a microwave. It broadcasts a 'this is time T' signal continuously. Your phone receives signals from 4+ satellites, compares the tiny time differences, and triangulates your position to ±3 metres. Precision time → precision navigation.",
+          "assetHint": "sfsymbol:dot.radiowaves.up.forward",
+          "relatedConceptIds": [
+            "ch13_t03_c02"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch13_tl01",
+          "title": "Time measurement — 4000 years of getting more precise",
+          "intro": "From shadows on stones to billionths of a second in your pocket.",
+          "steps": [
+            {
+              "id": "ch13_tl01_s01",
+              "label": "Sundial (~2000 BCE)",
+              "body": "Ancient Egypt, India, China: a stick in the ground; shadow length and angle tell time of day. Accurate to ~15 minutes. India's Jantar Mantar (1724) made these to extraordinary precision.",
+              "assetHint": "sfsymbol:sun.max.fill"
+            },
+            {
+              "id": "ch13_tl01_s02",
+              "label": "Water clock (~1500 BCE)",
+              "body": "A pot with a small hole, slowly draining. Water level marks time. Worked at night and on cloudy days too. Used in ancient India, Egypt, Greece.",
+              "assetHint": "sfsymbol:drop.fill"
+            },
+            {
+              "id": "ch13_tl01_s03",
+              "label": "Mechanical clock (1300s)",
+              "body": "European monasteries built escapement-driven clocks for prayer times. Pendulum clocks (Huygens, 1656) brought accuracy to ~10 seconds per day. The first standardised TIME OF DAY.",
+              "assetHint": "sfsymbol:clock"
+            },
+            {
+              "id": "ch13_tl01_s04",
+              "label": "Quartz clock (1927)",
+              "body": "Vibrating quartz crystal: 32,768 times per second. Wristwatches (Seiko, 1969) made quartz pocket-sized. Accuracy: ~15 seconds per month.",
+              "assetHint": "sfsymbol:applewatch"
+            },
+            {
+              "id": "ch13_tl01_s05",
+              "label": "Atomic clock (1955)",
+              "body": "Cesium-133 atoms vibrate 9,192,631,770 times per second. Defines the SECOND officially since 1967. Accuracy: 1 second in 30 million years.",
+              "assetHint": "sfsymbol:atom"
+            },
+            {
+              "id": "ch13_tl01_s06",
+              "label": "GPS in your pocket (today)",
+              "body": "Your phone reads atomic clock signals from satellites continuously. Time accuracy: nanoseconds. Position accuracy: ±3 metres. Class 7's stopwatch and Einstein-corrected satellites — separated by 4000 years of progress.",
+              "assetHint": "sfsymbol:location.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch13_t02_c02",
+            "ch13_t03_c02"
+          ]
+        }
       ]
     },
     {
