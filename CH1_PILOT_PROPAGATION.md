@@ -77,26 +77,48 @@ chapter by chapter as the right pattern emerges.
 | Chapter | Sandbox (S2) | Tour (S3) | Commit |
 |---------|--------------|-----------|--------|
 | Ch.1 Nutrition in Plants | ✅ BuildAPlantSandbox | ✅ InsideTheLeafTour | pilot `01617b6` |
+| Ch.2 Nutrition in Animals | — | ✅ InsideTheDigestiveTour | `40e4a46` |
 | Ch.4 Heat | ✅ BuildAHeatFlowSandbox | — | `599f0f8` |
+| Ch.5 Acids, Bases, Salts | ✅ BuildAPHSandbox | — | `40e4a46` |
 | Ch.6 Physical/Chemical Changes | ✅ BuildAReactionSandbox | — | `599f0f8` |
 | Ch.7 Weather + Climate | ✅ BuildAClimateSandbox | — | `599f0f8` |
 | Ch.8 Winds, Storms, Cyclones | ✅ BuildAWindSandbox | — | `4373a9f` |
+| Ch.9 Soil | ✅ BuildASoilSandbox | — | `40e4a46` |
 | Ch.10 Respiration in Organisms | — | ✅ InsideTheAlveolusTour | `4373a9f` |
 | Ch.11 Transportation A&P | — | ✅ InsideTheXylemAscentTour | `4373a9f` |
 | Ch.13 Motion and Time | ✅ BuildAMotionSandbox | — | `4373a9f` |
 | Ch.14 Electric Current | — | ✅ InsideTheWireTour | `599f0f8` |
 | Ch.15 Light | — | ✅ InsideTheLensTour | `599f0f8` |
-| (all others) | — | — | — |
+| Ch.16 Water: A Precious Resource | ✅ BuildAWaterCycleSandbox | — | `40e4a46` |
+| Ch.3, Ch.12, Ch.17, Ch.18, Ch.19 | — | — | not yet — see below |
 
-**10 of 19 chapters carry a custom interactive** (6 sandboxes +
-5 tours; Ch.1 has both). Next-round candidates:
-- Ch.5 BuildAPHSandbox (acid × base × volume → pH bar)
-- Ch.9 BuildASoilSandbox (sand / clay / silt mix → percolation
-  rate, water retention, fertility score)
-- Ch.16 BuildAWaterCycleSandbox (rainfall, evaporation, runoff,
-  usage → groundwater level)
-- Ch.2 InsideTheDigestiveTour (mouth → stomach → small intestine
-  → liver → colon, mirroring InsideTheAlveolusTour pattern)
+**14 of 19 chapters carry a custom interactive** (9 sandboxes +
+6 tours; Ch.1 has both). Total: 15 custom interactives across the
+syllabus.
+
+### Why some chapters don't have an interactive yet
+
+These 5 chapters were deliberately skipped this round — each is
+a per-chapter judgement call:
+
+- **Ch.3 Fibre to Fabric** — no honest slider model (you can't
+  meaningfully slider "cotton vs wool"), and there's no
+  microscopic structure worth touring (a fibre cross-section is
+  one stop, not five). Skip.
+- **Ch.12 Reproduction in Plants** — the life-cycle is already
+  linear in the chapter text; a tour would duplicate content
+  rather than reveal hidden structure. Skip.
+- **Ch.17 Forest: Our Lifeline** — the variables that matter
+  (rainfall, biodiversity, deforestation rate) overlap with Ch.16
+  BuildAWaterCycleSandbox enough that a separate forest sandbox
+  would add little. Defer.
+- **Ch.18 Wastewater Story** — a WWTP sandbox (flow rate × stage
+  count → cleanliness) would model the right thing but feels
+  contrived compared to a tour. Plausible future work.
+- **Ch.19 Solar System** — almost entirely static geometric
+  content. A Build-a-Planet sandbox (mass × distance → orbit) is
+  out of NCERT Class 7 scope; an Inside-a-Star tour would need
+  scenes the kid isn't ready for. Skip.
 
 ### Cross-chapter network — final shape
 

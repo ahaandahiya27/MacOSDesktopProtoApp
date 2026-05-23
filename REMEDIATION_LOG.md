@@ -464,6 +464,86 @@ The propagation is content-only (JSON edits). No new Swift code in any of the ro
 
 Content propagation is done. The remaining propagation cost is in Surface 2 (BuildA{X}Sandbox) and Surface 3 (InsideThe{X}Tour) — per-chapter custom interactives. Only Ch.1 has both today. Those are deliberately per-chapter judgement calls, not wholesale rollouts. Likely next high-value targets: Ch.6 (chemical reaction sandbox), Ch.7 (climate classifier sandbox), Ch.14 (electron-flow tour), Ch.15 (lens refraction tour). Out of scope for this session.
 
+---
+
+## Session resume 2026-05-24 (Surfaces 2/3 — 11 new chapter interactives)
+
+User left another autonomous 5-hour budget. Goal: ship custom S2/S3 surfaces to as many chapters as fit honestly, with the same Big-Sur vigilance as before.
+
+### Three rounds delivered
+
+**Round A** — `599f0f8` (3 sandboxes + 2 tours):
+- Ch.4 BuildAHeatFlowSandbox (Fourier's-law cartoon)
+- Ch.6 BuildAReactionSandbox (collision theory)
+- Ch.7 BuildAClimateSandbox (latitude × altitude × season × humidity → climate type)
+- Ch.14 InsideTheWireTour (5 stops, battery → bulb filament)
+- Ch.15 InsideTheLensTour (5 stops, distant source → magnifying glass)
+
+**Round B** — `4373a9f` (2 sandboxes + 2 tours):
+- Ch.8 BuildAWindSandbox (pressure gradient + Coriolis → wind compass)
+- Ch.10 InsideTheAlveolusTour (5 stops, nostril → red blood cell)
+- Ch.11 InsideTheXylemAscentTour (5 stops, root hair → stoma transpiration)
+- Ch.13 BuildAMotionSandbox (u, a, t → v, s with live runner figure)
+
+**Round C** — `40e4a46` (3 sandboxes + 1 tour):
+- Ch.5 BuildAPHSandbox (acid × base × strength → pH bar + litmus)
+- Ch.9 BuildASoilSandbox (sand/clay/silt → texture + percolation + fertility)
+- Ch.16 BuildAWaterCycleSandbox (rainfall × evap × usage → 12-month groundwater chart)
+- Ch.2 InsideTheDigestiveTour (5 stops, mouth → large intestine)
+
+### Coverage after the day
+
+| Surface | Chapters |
+|---------|----------|
+| S2 sandboxes | Ch.1, 4, 5, 6, 7, 8, 9, 13, 16 — **9 chapters** |
+| S3 tours | Ch.1, 2, 10, 11, 14, 15 — **6 chapters** |
+| Either or both | **14 of 19 chapters** |
+
+5 chapters deliberately skipped with documented rationale in CH1_PILOT_PROPAGATION.md (Ch.3, 12, 17, 18, 19 — each lacks an honest slider model or microscopic-journey shape).
+
+### Authoring stats (this 5h block)
+
+- 11 new Swift surface files, ~3500 LOC total (~320 LOC per surface average).
+- 6 new SheetKind cases in ChapterDetailView (one per tour).
+- 11 new chapter dispatch arms in propagatedPilotInteractives.
+- ChapterDetailView grew to ~770 LOC; allowlisted with rationale.
+- ~12000 words of narration content across the 6 new tours.
+
+### Big Sur catches this block
+
+The pre-commit linters caught two violations the first time. Both were fixed within the same session without ever pushing red state:
+
+1. **Color.brown is macOS 12+** — caught by xcodebuild compile, replaced with `Color.compatBrown` (already in Extensions.swift). 5 sites across 3 files.
+2. **`.foregroundColor(.orange)` on Text fails WCAG AA** — caught by `check_wcag_contrast.py`. Replaced with `DesignTokens.BrandColor.tryAtHome` (deepened burnt orange that meets 4.5:1 on canvas). 2 sites.
+3. **`ForEach(Array(.enumerated()), id: \.offset)`** — caught by `check_macos12_apis.py`. This pattern produces unstable view identity that Big Sur SwiftUI silently drops. Replaced with `ForEach(arr.indices, id: \.self)` + indexed access. 1 site in BuildAWaterCycleSandbox.
+
+All three pre-commit lints earned their cost in this block alone — without them at least one of those bugs would have shipped silently to the iMac.
+
+### Lessons captured
+
+- **Big Sur Color literals to avoid**: `.brown`, `.mint`, `.indigo`, `.teal`, `.cyan` — all macOS 12+. The compat tokens (`Color.compatBrown`, etc.) are in `Extensions.swift` for a reason. Default to those for any new code.
+- **WCAG gate is real**: `.foregroundColor(.orange|.yellow|.teal)` on Text widgets is not allowed against the canvas. Use `DesignTokens.BrandColor.tryAtHome` (burnt orange), `.mnemonic` (deep gold), `.relatedConcepts` (deep teal) instead. The lint only flags Text — Images with `.accessibilityHidden(true)` get a pass.
+- **`ForEach(...enumerated()...)` is a trap on Big Sur** — silently produces unstable view IDs. Always `ForEach(collection.indices, id: \.self)` + indexed access for synced arrays.
+- **SourceKit's diagnostics lie persistently** when new files are added — pbxproj regeneration is the real fix, but SourceKit caches don't pick it up for minutes. **Trust xcodebuild, not SourceKit.** This was the second session where SourceKit kept yelling about missing symbols that the actual compile resolved cleanly.
+- **The @ViewBuilder 10-child cap is a real architectural constraint** — when `propagatedPilotInteractives` had to dispatch to 13 chapters, I had to split it into A/B sub-groups. Bigger else-if chains hit the cap silently. The compiler doesn't always say so.
+
+### Verify (final, end of 5h block)
+
+- `xcodebuild build` Debug, MACOSX_DEPLOYMENT_TARGET = 11.0: clean.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: 66/66 green (3 commits, 3 hook runs, no flake).
+- All 5 lints clean across all commits (2 lint catches fixed before commit).
+- `git status` clean. `origin/main` at `40e4a46`.
+
+### What's left (post Surface-2/3 round)
+
+Five chapters deliberately don't have a custom interactive (rationale in playbook). Future high-value work is now in three classes:
+
+1. **Generalise Ch1ConceptMap into a reusable ConceptMapView** — every chapter has JSON-authored conceptMap data, but only Ch.1 has the visual renderer. Promoting `Ch1ConceptMap.swift` to take any Chapter would unlock the visual graph for all 19 chapters in one PR.
+2. **PilotInteractiveSheetCoordinator refactor** — extract `presentedSheet` into an `ObservableObject` so the CTA blocks can move out of ChapterDetailView.swift into per-chapter sister files. Currently 770 LOC; this would bring it under 600 again.
+3. **Surface 4 ideas** — beyond the three pilot surfaces, there's an obvious gap around cross-chapter recommendation chips ("you're at Ch.7 climate but Ch.4 heat is one click away"). The concept-map graph from the morning's propagation already encodes this; a small UI surface could expose it.
+
+Each of these is a multi-hour refactor in its own right. Out of scope for this 5h block.
+
 
 
 
