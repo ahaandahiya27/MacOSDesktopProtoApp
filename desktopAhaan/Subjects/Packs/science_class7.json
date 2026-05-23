@@ -26448,7 +26448,13 @@
                 138
               ],
               "needsHumanReview": false,
-              "mnemonic": "Arteries → Away from heart, Veins → towards (Vein and Visit both start with V — visiting the heart). The 4-chamber heart: 2 atria up top (Arrival), 2 ventricles below (Vamoose)."
+              "mnemonic": "Arteries → Away from heart, Veins → towards (Vein and Visit both start with V — visiting the heart). The 4-chamber heart: 2 atria up top (Arrival), 2 ventricles below (Vamoose).",
+              "predictQuestion": "If your heart stopped for a single minute, you would be in serious trouble. Why is the heart's pumping so much more critical than a single skipped breath?",
+              "whyChain": [
+                "The heart is a muscular pump that pushes blood through arteries (carrying oxygen + nutrients away from the heart) and veins (returning depleted blood back). Capillaries — one-cell-thick vessels — are where the exchange actually happens with tissues.",
+                "Why two separate vessel types? Because blood under pressure (arterial) needs thick elastic walls; returning blood at low pressure (venous) needs valves to stop backflow against gravity. Different jobs, different vessel architecture.",
+                "And why does the heart never stop, even when you sleep? Because every cell in your body needs continuous oxygen — neurons die in 4 minutes without it. The heart's own electrical pacemaker (SA node) keeps the rhythm running autonomously, ~100,000 beats per day, ~3 billion in a lifetime."
+              ]
             },
             {
               "id": "ch11_t01_c02",
@@ -26491,7 +26497,13 @@
                 132
               ],
               "needsHumanReview": false,
-              "mnemonic": "Double circulation = TWO loops. Loop 1 = lungs (Pulmonary = Plumbing for oxygen). Loop 2 = body (Systemic = Sending blood to all systems). Right heart → lungs, Left heart → body. Left does Less work? No, Left is the strong one — pumps the WHOLE body's worth."
+              "mnemonic": "Double circulation = TWO loops. Loop 1 = lungs (Pulmonary = Plumbing for oxygen). Loop 2 = body (Systemic = Sending blood to all systems). Right heart → lungs, Left heart → body. Left does Less work? No, Left is the strong one — pumps the WHOLE body's worth.",
+              "predictQuestion": "A fish's heart has 2 chambers. A frog's has 3. Humans have 4. Why did evolution keep adding more?",
+              "whyChain": [
+                "Humans have a double-circulation system: blood goes heart → lungs → heart → body → heart. The right side pumps deoxygenated blood to lungs; the left side pumps oxygenated blood to the body. Two parallel loops, separated by the wall of the heart.",
+                "Why two loops? Because mixing oxygenated and deoxygenated blood (as happens in 3-chambered amphibian hearts) means lower efficiency — the body gets blood that's only partly oxygen-rich. Four-chambered hearts (mammals + birds) keep the two streams strictly separate; they can support higher metabolism and warm-bloodedness.",
+                "And why didn't fish need this? Because fish gills extract oxygen from water (less efficient than air) and fish are cold-blooded (lower metabolic demand). Single-loop circulation is enough. Class 11 evolutionary biology traces the chamber count evolution from fish → amphibian → reptile → mammal as a step-by-step optimisation."
+              ]
             },
             {
               "id": "ch11_t01_c03",
@@ -26528,7 +26540,13 @@
                 125
               ],
               "needsHumanReview": false,
-              "mnemonic": "Heart rate = beats / min (70-90 kid). Pulse = wave at wrist. BP = 120/80 (sys/dia). Sustained >140/90 = hypertension."
+              "mnemonic": "Heart rate = beats / min (70-90 kid). Pulse = wave at wrist. BP = 120/80 (sys/dia). Sustained >140/90 = hypertension.",
+              "predictQuestion": "A trained marathon runner has a resting heart rate around 45 beats per minute. A normal adult has ~75. How does the runner survive on half the heartbeats?",
+              "whyChain": [
+                "Heart rate is how often the heart beats per minute. Pulse is the rhythmic pressure wave you can feel in arteries. Blood pressure has two numbers — systolic (peak, ~120) and diastolic (trough, ~80) mmHg — that measure arterial pressure during the cycle.",
+                "Why does a trained athlete's resting rate fall? Because their left ventricle has grown stronger and pumps more blood per beat (higher stroke volume). Total cardiac output stays the same; the heart just works less often. Slower resting rate is a sign of cardiac fitness, not weakness.",
+                "And why is hypertension (chronically high BP) so dangerous? Because the heart works against higher resistance for years, eventually wearing out. High pressure also damages arterial walls and kidney filters. By Class 11 biology you'll meet the renin-angiotensin system that connects hypertension to kidney function in a fascinating feedback loop."
+              ]
             }
           ],
           "questions": [
@@ -27115,7 +27133,13 @@
                 139
               ],
               "needsHumanReview": false,
-              "mnemonic": "K-U-V: Kidneys → Ureters → Urinary bladder. \"Kids Use Ureters\" to remember the order from filter to exit. Urea is the toxic ammonia derivative your body has to evict."
+              "mnemonic": "K-U-V: Kidneys → Ureters → Urinary bladder. \"Kids Use Ureters\" to remember the order from filter to exit. Urea is the toxic ammonia derivative your body has to evict.",
+              "predictQuestion": "Your body makes urea (a toxic by-product of protein digestion) every day. Where does it go — and what would happen if it didn't?",
+              "whyChain": [
+                "Excretion removes nitrogenous waste (urea, uric acid) and excess water from the body. The kidneys filter the blood, retain useful molecules, and concentrate the waste into urine, which is stored in the bladder and released through the urethra.",
+                "Why nitrogenous waste specifically? Because protein metabolism produces ammonia (NH₃), which is highly toxic. The liver converts ammonia into urea — less toxic but still needs removal. Without that removal, urea accumulates in blood (uraemia) and the kidneys themselves shut down within days.",
+                "And why don't all animals make urea? Fish excrete ammonia directly into water (cheap because water is plentiful). Birds excrete uric acid as a paste (water-saving for flight). Mammals excrete urea (a middle ground — needs water but less than ammonia). The metabolic choice depends on the animal's habitat. Class 11 biology dives into this."
+              ]
             },
             {
               "id": "ch11_t02_c02",
@@ -27155,7 +27179,13 @@
                 136
               ],
               "needsHumanReview": false,
-              "mnemonic": "Nephron = NEPHrology = NPH = filtering Network of Plumbing Hairpins. Each kidney has ~1 million nephrons; each does the SAME job: filter blood, reabsorb water + good stuff, dump urea + excess into urine."
+              "mnemonic": "Nephron = NEPHrology = NPH = filtering Network of Plumbing Hairpins. Each kidney has ~1 million nephrons; each does the SAME job: filter blood, reabsorb water + good stuff, dump urea + excess into urine.",
+              "predictQuestion": "Your kidneys filter your entire blood supply ~50 times per day. How can such a small organ do that much work?",
+              "whyChain": [
+                "Each kidney has ~1 million nephrons — microscopic filtering units. Each nephron has a glomerulus (filtering tuft) and a long tubule that selectively reabsorbs water and useful molecules while letting waste continue toward the bladder.",
+                "Why so many tiny units? Because filtering is a surface-area problem. A single big filter would clog quickly. A million small parallel filters each handle a tiny stream, can self-repair, and individual failures don't take the whole system down.",
+                "And why is the nephron's design considered an evolutionary masterpiece? Because every step is optimised: the glomerulus pushes filtrate out under blood pressure (no ATP cost), the proximal tubule reabsorbs ~70% of water + electrolytes, the loop of Henle creates a salt gradient that lets the body concentrate urine. Class 11 biology spends a whole chapter on the loop of Henle's countercurrent multiplication trick."
+              ]
             },
             {
               "id": "ch11_t02_c03",
@@ -27192,7 +27222,13 @@
                 128
               ],
               "needsHumanReview": false,
-              "mnemonic": "Dialysis = artificial kidney. Blood across thin membrane → urea diffuses out. Done 3×/week, 4 hrs each, until transplant."
+              "mnemonic": "Dialysis = artificial kidney. Blood across thin membrane → urea diffuses out. Done 3×/week, 4 hrs each, until transplant.",
+              "predictQuestion": "Some people need a dialysis machine 3 times a week to survive. Why can't a smaller pill or injection do the same job?",
+              "whyChain": [
+                "Dialysis filters waste from the blood when the kidneys can't. Blood is pumped out of the body through tubing, across a semipermeable membrane, where waste molecules diffuse out into a dialysate solution while useful proteins stay in. Cleaned blood returns to the patient.",
+                "Why isn't there a pill substitute? Because the kidneys do MECHANICAL filtration — moving waste molecules across a membrane requires either pressure or chemical concentration gradients, not a drug. No pill can substitute for the kinetic filtering process.",
+                "And why is each session 4 hours, 3 times a week? Because the dialyser flows blood across the membrane at a fixed rate; total blood-cleaning takes those hours. Patients on dialysis cannot eat freely (potassium, phosphorus, fluid all build up between sessions). Class 11 biology + Class 12 ethics often discuss dialysis as a classic case study in scarce medical resources."
+              ]
             }
           ],
           "questions": [
@@ -27499,7 +27535,13 @@
                 141
               ],
               "needsHumanReview": false,
-              "mnemonic": "Xylem = X marks the spot UP (X has an UP-arrow shape) — carries water UP from roots. Phloem = sounds like FLOW — carries food (sugars) BOTH ways. Xylem one-way up, Phloem two-way."
+              "mnemonic": "Xylem = X marks the spot UP (X has an UP-arrow shape) — carries water UP from roots. Phloem = sounds like FLOW — carries food (sugars) BOTH ways. Xylem one-way up, Phloem two-way.",
+              "predictQuestion": "Trees pull water from soil and lift it 100 m to the canopy. With no heart pumping, where does the pressure come from?",
+              "whyChain": [
+                "Plants have two transport systems: xylem (carries water + minerals UP from roots) and phloem (carries sugar DOWN from leaves to roots and storage). Xylem is dead, hollow tubes; phloem is living cells with sugar-pumps.",
+                "Why two separate pipes? Because water + sugar travel in opposite directions, and the pressure gradients are completely different. Xylem is under TENSION (the water column is being pulled up like a straw); phloem is under PRESSURE (sugar pumps push solution forward).",
+                "And why does cutting a tree's bark in a ring kill it? Because the bark contains the phloem. Sugar from leaves can't reach the roots; the roots starve; the tree dies within months. This 'ringbarking' or 'girdling' is sometimes used to control invasive trees. Class 11 biology unpacks the elegant pressure-flow mechanism in detail."
+              ]
             },
             {
               "id": "ch11_t03_c02",
@@ -27538,7 +27580,13 @@
                 139
               ],
               "needsHumanReview": false,
-              "mnemonic": "TransPiration = TRANS (across) + sPIRation (breathing-like). Plants \"breathe out\" water through leaf pores (stomata). The evaporation pulls more water up — like sipping through a long straw. Sun + dry air = stronger pull."
+              "mnemonic": "TransPiration = TRANS (across) + sPIRation (breathing-like). Plants \"breathe out\" water through leaf pores (stomata). The evaporation pulls more water up — like sipping through a long straw. Sun + dry air = stronger pull.",
+              "predictQuestion": "A tall tree loses gallons of water per day through its leaves. Why doesn't it just close its stomata and save the water?",
+              "whyChain": [
+                "Transpiration is the loss of water vapour from leaves through stomata. Most water absorbed by roots is lost this way (>95%). But the transpiration stream is what PULLS the water column up the tree — without it, water transport stops.",
+                "Why this design? Because plants need open stomata to take in CO₂ for photosynthesis. As long as the stomata are open for CO₂, water vapour also escapes. The plant accepts water loss as the unavoidable cost of photosynthesis.",
+                "And why are drought-adapted plants able to survive on so little water? Because they reduce transpiration with thick waxy cuticles, sunken stomata that trap humid air, and the CAM trick of opening stomata only at night when transpiration is lower. Class 11 plant physiology unpacks CAM and C4 photosynthesis as solutions to the same water-vs-CO₂ trade-off."
+              ]
             }
           ],
           "questions": [
@@ -28500,7 +28548,156 @@
           "parentConceptId": "ch11_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch11_t01_c01",
+            "label": "Heart + vessels",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.3
+          },
+          {
+            "id": "ch11_t01_c02",
+            "label": "Double circulation",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.5
+          },
+          {
+            "id": "ch11_t01_c03",
+            "label": "Heart rate / BP",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.5
+          },
+          {
+            "id": "ch11_t02_c01",
+            "label": "Excretion + urine",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.78
+          },
+          {
+            "id": "ch11_t02_c02",
+            "label": "Nephron filters",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.88
+          },
+          {
+            "id": "ch11_t02_c03",
+            "label": "Dialysis",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.78
+          },
+          {
+            "id": "ch11_t03_c01",
+            "label": "Xylem + phloem",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.18
+          },
+          {
+            "id": "ch11_t03_c02",
+            "label": "Transpiration",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.4
+          },
+          {
+            "id": "ch10:ch10_t01_c03",
+            "label": "Haemoglobin (Ch.10)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.22
+          },
+          {
+            "id": "ch10:ch10_t02_c02",
+            "label": "Aerobic respiration (Ch.10)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.45
+          },
+          {
+            "id": "ch01:ch01_t01_c04",
+            "label": "Stomata (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.65
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch11_t01_c01",
+            "to": "ch11_t01_c02",
+            "label": "implements"
+          },
+          {
+            "id": "e02",
+            "from": "ch11_t01_c01",
+            "to": "ch11_t01_c03",
+            "label": "measured by"
+          },
+          {
+            "id": "e03",
+            "from": "ch11_t01_c01",
+            "to": "ch11_t02_c01",
+            "label": "delivers blood to"
+          },
+          {
+            "id": "e04",
+            "from": "ch11_t02_c01",
+            "to": "ch11_t02_c02",
+            "label": "uses"
+          },
+          {
+            "id": "e05",
+            "from": "ch11_t02_c03",
+            "to": "ch11_t02_c02",
+            "label": "substitutes for"
+          },
+          {
+            "id": "e06",
+            "from": "ch11_t03_c01",
+            "to": "ch11_t03_c02",
+            "label": "powered by"
+          },
+          {
+            "id": "e07",
+            "from": "ch11_t03_c02",
+            "to": "ch01:ch01_t01_c04",
+            "label": "happens via"
+          },
+          {
+            "id": "e08",
+            "from": "ch11_t01_c01",
+            "to": "ch10:ch10_t01_c03",
+            "label": "carries"
+          },
+          {
+            "id": "e09",
+            "from": "ch11_t01_c02",
+            "to": "ch10:ch10_t02_c02",
+            "label": "supplies"
+          },
+          {
+            "id": "e10",
+            "from": "ch11_t01_c01",
+            "to": "ch11_t03_c01",
+            "label": "animal analog of"
+          },
+          {
+            "id": "e11",
+            "from": "ch11_t03_c02",
+            "to": "ch11_t03_c01",
+            "label": "drives flow in"
+          }
+        ]
+      }
     },
     {
       "id": "ch12",
@@ -37109,7 +37306,13 @@
                 202
               ],
               "needsHumanReview": false,
-              "mnemonic": "Water cycle: EVAPORATION (sun heats water → vapour) → CONDENSATION (vapour cools → clouds) → PRECIPITATION (rain/snow) → COLLECTION (rivers, oceans) → repeat. Earth's water never disappears, just moves."
+              "mnemonic": "Water cycle: EVAPORATION (sun heats water → vapour) → CONDENSATION (vapour cools → clouds) → PRECIPITATION (rain/snow) → COLLECTION (rivers, oceans) → repeat. Earth's water never disappears, just moves.",
+              "predictQuestion": "Every drop of water you drink today has been around for billions of years and has been everything from dinosaur urine to a glacier. How?",
+              "whyChain": [
+                "The water cycle is the continuous movement of water between oceans, atmosphere, and land: evaporation from oceans → condensation into clouds → precipitation onto land → runoff back to oceans (or infiltration into soil and groundwater).",
+                "Why is the total water on Earth roughly fixed? Because water can't escape Earth's gravity easily — the atmosphere holds it in. New water arrives only via rare comet impacts or hydrogen leaking out of the upper atmosphere; the loss is glacially slow. So the water moving through the cycle today is mostly the same water that was here when Earth formed.",
+                "And why is fresh water scarce despite the abundance? Because 97% of Earth's water is salt water; of the 3% fresh water, most is locked in polar ice. Less than 1% is in liquid form and accessible. Class 11 hydrology charts the actual numbers — humanity is drawing from the smallest slice of the smallest slice."
+              ]
             },
             {
               "id": "ch16_t01_c02",
@@ -37153,7 +37356,13 @@
                 207
               ],
               "needsHumanReview": false,
-              "mnemonic": "WATER TABLE = top of underground water saturation. Drops in dry seasons. GROUNDWATER = water held in soil/rock pores. Conservation: drip irrigation, rainwater harvesting, recharge wells."
+              "mnemonic": "WATER TABLE = top of underground water saturation. Drops in dry seasons. GROUNDWATER = water held in soil/rock pores. Conservation: drip irrigation, rainwater harvesting, recharge wells.",
+              "predictQuestion": "If groundwater is hidden underground, how does anyone know when it's running out — and why are some regions of India losing it so fast?",
+              "whyChain": [
+                "The water table is the upper surface of groundwater — the depth at which soil pores are saturated. Wells reach it by drilling down. Groundwater is replenished by rainwater that infiltrates downward through the soil over months or years.",
+                "Why does the water table fall? Because over-extraction (irrigation pumps running 24/7 in Punjab, urban supply in Delhi) drains the groundwater faster than rain refills it. Sensors in monitoring wells track depth weekly; in many Indian districts the table has dropped 1-2 m per year since 1990.",
+                "And why is depletion in granite-bedrock areas (Karnataka, Tamil Nadu) particularly painful? Because granite is impermeable — the underground 'tank' is small and refills only through narrow fractures. Once depleted, no amount of rain refills it within a generation. Class 11 environmental science tracks the looming Indian water crisis in detail."
+              ]
             },
             {
               "id": "ch16_t01_c03",
@@ -37190,7 +37399,13 @@
                 162
               ],
               "needsHumanReview": false,
-              "mnemonic": "Aquifer = underground porous-rock sponge. Refilled by rain percolation. Pump faster than recharge → water table drops (Punjab now)."
+              "mnemonic": "Aquifer = underground porous-rock sponge. Refilled by rain percolation. Pump faster than recharge → water table drops (Punjab now).",
+              "predictQuestion": "An aquifer is just an underground layer of porous rock. Why do tube-wells suddenly run dry one summer when they had worked for years?",
+              "whyChain": [
+                "An aquifer is a layer of porous rock that holds groundwater in its pore spaces. It refills slowly — months to years — as rainwater percolates down. Pump faster than it refills and the water level drops below the pump intake.",
+                "Why does it work for years then fail abruptly? Because aquifers behave like a slowly-draining bathtub. As long as the rate of withdrawal matches the rate of inflow, the level stays steady. Push the withdrawal slightly higher and the level falls a little each year — until it crosses below the pump's intake depth and the pump goes dry overnight.",
+                "And why has Punjab's water table dropped 0.7 m per year for decades? Because free electricity for farmers + paddy cultivation (which needs flooded fields) created a perfect storm of over-extraction. Switching to less water-intensive crops + meter-based electricity is the only fix; both are politically hard. Class 11 environmental science covers the policy side."
+              ]
             }
           ],
           "questions": [
@@ -37938,7 +38153,13 @@
                 211
               ],
               "needsHumanReview": false,
-              "mnemonic": "Irrigation: FLOOD (cheap, wasteful), SPRINKLER (medium efficient, for uneven land), DRIP (most efficient, drop-by-drop at roots, saves 30-50% water). Method matches crop + soil."
+              "mnemonic": "Irrigation: FLOOD (cheap, wasteful), SPRINKLER (medium efficient, for uneven land), DRIP (most efficient, drop-by-drop at roots, saves 30-50% water). Method matches crop + soil.",
+              "predictQuestion": "Why would a farmer pay extra for a sprinkler system or drip kit when flooding the field with canal water is free?",
+              "whyChain": [
+                "Irrigation methods vary by efficiency: flood irrigation (cheapest, ~40% loss to evaporation + runoff), sprinkler irrigation (medium, ~25% loss), drip irrigation (most efficient, <10% loss). Drip delivers water directly to roots through perforated pipes.",
+                "Why pay extra for drip? Because in groundwater-stressed regions the water itself is the scarce input, not the equipment. A drip kit costs ~₹50,000 per acre but saves 50-60% of water + 30% of fertiliser. Pays back in 1-2 seasons on water and fertiliser savings.",
+                "And why isn't drip universal in India? Because the cost is upfront and the savings are diffuse. Many smallholder farmers can't afford the kit. Government subsidies (PM Krishi Sinchai Yojana) cover up to 80% but adoption is uneven. Class 11 economics covers exactly this kind of capital-vs-recurring-cost barrier."
+              ]
             },
             {
               "id": "ch16_t02_c02",
@@ -37978,7 +38199,13 @@
                 212
               ],
               "needsHumanReview": false,
-              "mnemonic": "Rainwater harvesting structures: ROOFTOP tanks (catch monsoon), BAWRI/BAOLI (stepwells, traditional), TANKA (Rajasthani underground), CHECK DAMS. Each suits a different geography."
+              "mnemonic": "Rainwater harvesting structures: ROOFTOP tanks (catch monsoon), BAWRI/BAOLI (stepwells, traditional), TANKA (Rajasthani underground), CHECK DAMS. Each suits a different geography.",
+              "predictQuestion": "Rajasthan gets ~250 mm of rain a year and has survived in deserts for centuries. What clever water tricks did villagers invent before modern dams?",
+              "whyChain": [
+                "Rainwater harvesting collects and stores rain at the point where it falls: rooftop tanks for drinking, bawris (step-wells) for community supply, tankas (underground cisterns) for arid regions. Modern roof-rainwater systems can capture ~50,000 litres per house per year.",
+                "Why so many regional designs? Because each region's geology + rainfall + cultural needs led to different solutions. Step-wells suit Rajasthan's deep water table. Surangam tunnels suit Kerala's hillside rains. Bambooo aqueducts (Meghalaya) suit forested slopes. India has dozens of indigenous techniques, each tuned to its environment.",
+                "And why are these systems being revived in the 2020s? Because municipal water supply is unreliable + groundwater is depleting. Bengaluru, Chennai, Delhi all now mandate rooftop rainwater harvesting on new buildings. The old systems weren't primitive — they were post-modern in their localism."
+              ]
             },
             {
               "id": "ch16_t02_c03",
@@ -38015,7 +38242,13 @@
                 165
               ],
               "needsHumanReview": false,
-              "mnemonic": "Drip irrigation = tiny pipes, drop-by-drop at roots. 30-60% water savings vs flood. Israeli invention (Simcha Blass)."
+              "mnemonic": "Drip irrigation = tiny pipes, drop-by-drop at roots. 30-60% water savings vs flood. Israeli invention (Simcha Blass).",
+              "predictQuestion": "Drip irrigation uses 60% less water than flooding a field. So why doesn't every farmer just switch tomorrow?",
+              "whyChain": [
+                "Drip irrigation delivers small amounts of water directly to each plant's root zone through narrow perforated pipes (drippers). Compared to flood irrigation, drip saves 30-60% of water and reduces weed growth (only the crop's root zone gets watered).",
+                "Why so much more efficient? Because water goes EXACTLY where it's needed — into the root zone, not the surrounding bare soil or the air above. Evaporation losses drop from ~40% to near-zero. And the slow drip rate matches a plant's actual uptake speed, reducing waste.",
+                "And why is drip irrigation a global standard now? Because Israel pioneered it in the 1960s for desert farming and proved it. Now ~95% of Israeli crops are drip-irrigated. India is at ~10% but rising fast. The Maharashtra grape belt is fully drip; Punjab is starting to adopt. Class 11 economics meets agronomy here."
+              ]
             }
           ],
           "questions": [
@@ -38241,7 +38474,13 @@
                 215
               ],
               "needsHumanReview": false,
-              "mnemonic": "Earth: 71% water, but <1% drinkable (rest is ocean salt + frozen ice). Demand rising; supply fixed. Wasted water (leaks, overuse) is the easiest gain."
+              "mnemonic": "Earth: 71% water, but <1% drinkable (rest is ocean salt + frozen ice). Demand rising; supply fixed. Wasted water (leaks, overuse) is the easiest gain.",
+              "predictQuestion": "Cape Town nearly ran out of water in 2018. Chennai did in 2019. Why do entire cities suddenly hit zero — and could your city be next?",
+              "whyChain": [
+                "Water scarcity happens when annual demand exceeds annual replenishment. Cities especially are vulnerable because they pull from a fixed catchment area but their populations grow. When rainfall fails for two consecutive years + groundwater is over-extracted + reservoirs aren't refilled — the water runs out.",
+                "Why have we always wasted water historically? Because in most centuries fresh water was practically free and unlimited compared to demand. Behaviour formed around abundance — 30-litre toilet flushes, hour-long showers, decorative fountains in deserts. Now demand has caught up with supply in many places.",
+                "And why is fixing this 'just price water properly' politically impossible? Because water is treated as a right in most countries. Charging market prices would price the poor out. The fix is more like California's 2014 mandate: cap usage per person, fine excess, invest in recycling. Class 12 economics covers tragedy-of-the-commons dynamics here."
+              ]
             },
             {
               "id": "ch16_t03_c02",
@@ -38282,7 +38521,13 @@
                 216
               ],
               "needsHumanReview": false,
-              "mnemonic": "Home: close taps, fix leaks, take shorter showers, reuse RO reject water for plants. Farm: drip irrigation, mulching, crop rotation. Lots of small actions compound."
+              "mnemonic": "Home: close taps, fix leaks, take shorter showers, reuse RO reject water for plants. Farm: drip irrigation, mulching, crop rotation. Lots of small actions compound.",
+              "predictQuestion": "If everyone in India just took 5-minute showers instead of 20-minute showers, would that actually move the needle on the water crisis?",
+              "whyChain": [
+                "Domestic water use (showers, toilets, drinking, cooking) is only ~8% of India's water consumption. Industry uses ~5%. Agriculture uses ~85% — most of which goes to flood-irrigation of water-thirsty crops like rice and sugarcane.",
+                "Why is the at-home advice still worth doing? Because every saved litre matters, AND household behaviour shapes attitudes that scale up. A family used to short showers becomes a voter who supports water-pricing reform.",
+                "And why is the REAL fix changing what we grow, where? Because India grows 25% of the world's rice on land that has no business growing it (Punjab and Haryana are water-stressed but produce paddy on subsidies). Shifting to millet and pulses in those zones would cut national water use by ~30% — far more than any household-level conservation. Class 12 environmental science covers crop-pattern policy."
+              ]
             }
           ],
           "questions": [
@@ -39161,7 +39406,149 @@
           "parentConceptId": "ch16_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch16_t01_c01",
+            "label": "Water cycle",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.25
+          },
+          {
+            "id": "ch16_t01_c02",
+            "label": "Water table + groundwater",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.45
+          },
+          {
+            "id": "ch16_t01_c03",
+            "label": "Aquifers + recharge",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.65
+          },
+          {
+            "id": "ch16_t02_c01",
+            "label": "Irrigation methods",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.65
+          },
+          {
+            "id": "ch16_t02_c02",
+            "label": "Rainwater harvesting",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.45
+          },
+          {
+            "id": "ch16_t02_c03",
+            "label": "Drip irrigation",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.78
+          },
+          {
+            "id": "ch16_t03_c01",
+            "label": "Why conservation matters",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.65
+          },
+          {
+            "id": "ch16_t03_c02",
+            "label": "Saving at home + farm",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.85
+          },
+          {
+            "id": "ch17:ch17_t01_c02",
+            "label": "Why forests matter (Ch.17)",
+            "kind": "crossChapter",
+            "x": 0.5,
+            "y": 0.08
+          },
+          {
+            "id": "ch01:ch01_t01_c04",
+            "label": "Stomata (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.2,
+            "y": 0.85
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch17:ch17_t01_c02",
+            "to": "ch16_t01_c01",
+            "label": "regulates"
+          },
+          {
+            "id": "e02",
+            "from": "ch16_t01_c01",
+            "to": "ch16_t01_c02",
+            "label": "feeds"
+          },
+          {
+            "id": "e03",
+            "from": "ch16_t01_c02",
+            "to": "ch16_t01_c03",
+            "label": "is detail of"
+          },
+          {
+            "id": "e04",
+            "from": "ch16_t02_c02",
+            "to": "ch16_t01_c02",
+            "label": "recharges"
+          },
+          {
+            "id": "e05",
+            "from": "ch16_t02_c01",
+            "to": "ch16_t01_c02",
+            "label": "draws from"
+          },
+          {
+            "id": "e06",
+            "from": "ch16_t02_c03",
+            "to": "ch16_t02_c01",
+            "label": "best variant of"
+          },
+          {
+            "id": "e07",
+            "from": "ch16_t03_c01",
+            "to": "ch16_t01_c03",
+            "label": "motivated by"
+          },
+          {
+            "id": "e08",
+            "from": "ch16_t03_c02",
+            "to": "ch16_t03_c01",
+            "label": "implements"
+          },
+          {
+            "id": "e09",
+            "from": "ch16_t02_c03",
+            "to": "ch16_t03_c01",
+            "label": "addresses"
+          },
+          {
+            "id": "e10",
+            "from": "ch01:ch01_t01_c04",
+            "to": "ch16_t01_c01",
+            "label": "transpires into"
+          },
+          {
+            "id": "e11",
+            "from": "ch16_t01_c01",
+            "to": "ch17:ch17_t01_c02",
+            "label": "sustains"
+          }
+        ]
+      }
     },
     {
       "id": "ch17",
