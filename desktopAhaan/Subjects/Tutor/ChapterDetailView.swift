@@ -24,6 +24,8 @@ struct ChapterDetailView: View {
         case ch1ConceptMap           // Ch.1 pilot — Phase 2E
         case insideTheWireTour       // Ch.14 propagation (2026-05-24)
         case insideTheLensTour       // Ch.15 propagation (2026-05-24)
+        case insideTheAlveolusTour   // Ch.10 propagation (2026-05-24)
+        case insideTheXylemTour      // Ch.11 propagation (2026-05-24)
 
         var id: String {
             switch self {
@@ -43,6 +45,10 @@ struct ChapterDetailView: View {
                 return "insideTheWireTour"
             case .insideTheLensTour:
                 return "insideTheLensTour"
+            case .insideTheAlveolusTour:
+                return "insideTheAlveolusTour"
+            case .insideTheXylemTour:
+                return "insideTheXylemTour"
             }
         }
     }
@@ -108,11 +114,61 @@ struct ChapterDetailView: View {
             BuildAReactionSandbox(chapterId: chapter.id)
         } else if chapter.id == "ch07" {
             BuildAClimateSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch08" {
+            BuildAWindSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch10" {
+            insideTheAlveolusTourCTA
+        } else if chapter.id == "ch11" {
+            insideTheXylemTourCTA
+        } else if chapter.id == "ch13" {
+            BuildAMotionSandbox(chapterId: chapter.id)
         } else if chapter.id == "ch14" {
             insideTheWireTourCTA
         } else if chapter.id == "ch15" {
             insideTheLensTourCTA
         }
+    }
+
+    /// CTA card opening InsideTheAlveolusTour sheet. Ch.10 only.
+    private var insideTheAlveolusTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheAlveolusTour }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "lungs.fill",
+                title: "Inside an alveolus",
+                subtitle: "From nostril to red blood cell — five-stop walk through the respiratory pipeline that loads O₂ onto haemoglobin.",
+                gradient: [
+                    Color(red: 0.20, green: 0.55, blue: 0.55),
+                    Color(red: 0.80, green: 0.30, blue: 0.35)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Inside an alveolus — five-stop respiratory tour")
+        .accessibilityHint("Opens a sheet that walks you from the nostril through the trachea, bronchi, and into an alveolus where oxygen loads onto a red blood cell.")
+    }
+
+    /// CTA card opening InsideTheXylemAscentTour sheet. Ch.11 only.
+    private var insideTheXylemTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheXylemTour }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "drop.fill",
+                title: "The xylem ascent",
+                subtitle: "Follow one water molecule from a root hair, up a 100-metre tree, through a leaf vein, and out a stoma — no pump, just physics.",
+                gradient: [
+                    Color(red: 0.20, green: 0.50, blue: 0.70),
+                    Color(red: 0.10, green: 0.65, blue: 0.55)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("The xylem ascent — five-stop tour of water rising up a plant")
+        .accessibilityHint("Opens a sheet that walks one water molecule from a root hair, up the xylem, through a stem, into leaf veins, and out a stoma.")
     }
 
     /// CTA card opening InsideTheWireTour sheet. Ch.14 only.
@@ -432,6 +488,16 @@ struct ChapterDetailView: View {
                 )
             case .insideTheLensTour:
                 InsideTheLensTour(
+                    chapterId: chapter.id,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheAlveolusTour:
+                InsideTheAlveolusTour(
+                    chapterId: chapter.id,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheXylemTour:
+                InsideTheXylemAscentTour(
                     chapterId: chapter.id,
                     onDismiss: { presentedSheet = nil }
                 )

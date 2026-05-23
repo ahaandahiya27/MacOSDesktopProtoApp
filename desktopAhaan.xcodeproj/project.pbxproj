@@ -320,9 +320,13 @@
 		8894D68F961D660C1499C1CD /* Ch1ConceptMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E54083443491C91C7FF1B1 /* Ch1ConceptMap.swift */; };
 		0700EC8AEE339641188C377E /* InsideTheLeafTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289A43CF71149014B5B044B /* InsideTheLeafTour.swift */; };
 		FB3944523DC88A8E20235E86 /* BuildAReactionSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0435F8D3B7C75F28D05731F /* BuildAReactionSandbox.swift */; };
+		8DEB6B2CD7D2CDD2F5DBC7CE /* BuildAWindSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E98FD8C84CCDDF761FFEF /* BuildAWindSandbox.swift */; };
 		89E90A5B50E9A7CA3ED31851 /* InsideTheLensTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128D7B5DA498294DBF6048D7 /* InsideTheLensTour.swift */; };
 		871D105707BE87F7B4C7CB7D /* InsideTheWireTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EEF4482A98A2121B17DE1 /* InsideTheWireTour.swift */; };
+		08D5ED112D93488138FF44DD /* BuildAMotionSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668BBC3E3455581D2677FE4 /* BuildAMotionSandbox.swift */; };
 		00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */; };
+		E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */; };
+		436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */; };
 		E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FB9E28D230C2430A2803 /* FoundationTutor.swift */; };
 		1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */; };
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
@@ -1344,9 +1348,13 @@
 		51E54083443491C91C7FF1B1 /* Ch1ConceptMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ch1ConceptMap.swift"; sourceTree = "<group>"; };
 		E289A43CF71149014B5B044B /* InsideTheLeafTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheLeafTour.swift"; sourceTree = "<group>"; };
 		C0435F8D3B7C75F28D05731F /* BuildAReactionSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAReactionSandbox.swift"; sourceTree = "<group>"; };
+		1B4E98FD8C84CCDDF761FFEF /* BuildAWindSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAWindSandbox.swift"; sourceTree = "<group>"; };
 		128D7B5DA498294DBF6048D7 /* InsideTheLensTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheLensTour.swift"; sourceTree = "<group>"; };
 		F03EEF4482A98A2121B17DE1 /* InsideTheWireTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheWireTour.swift"; sourceTree = "<group>"; };
+		3668BBC3E3455581D2677FE4 /* BuildAMotionSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAMotionSandbox.swift"; sourceTree = "<group>"; };
 		DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAHeatFlowSandbox.swift"; sourceTree = "<group>"; };
+		0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheXylemAscentTour.swift"; sourceTree = "<group>"; };
+		819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheAlveolusTour.swift"; sourceTree = "<group>"; };
 		9944FB9E28D230C2430A2803 /* FoundationTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoundationTutor.swift"; sourceTree = "<group>"; };
 		7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsScreen.swift"; sourceTree = "<group>"; };
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
@@ -2731,9 +2739,13 @@
 				AEC8EA2EB56C39C80FAC9EDA,
 				25264C5AE1FCC07AE4A28E5C,
 				EA8FE4966FEFF0F038B5E68E,
+				8695FD6372AE21AB1A2E5F03,
 				B4D93240794E0417D76365D2,
 				BB4921CF0873B452D75B78B5,
+				0576D988C3A1E59644A74BA8,
 				2A81135762A70E69344D8FF7,
+				D5D70429EC9E4522C2122DC5,
+				D2E4DCA1540A6930C17FF25B,
 			);
 			path = "Surfaces";
 			sourceTree = "<group>";
@@ -2746,6 +2758,30 @@
 				E289A43CF71149014B5B044B,
 			);
 			path = "Ch1";
+			sourceTree = "<group>";
+		};
+		D2E4DCA1540A6930C17FF25B /* Ch10 */ = {
+			isa = PBXGroup;
+			children = (
+				819089DC485FCC6907D1F804,
+			);
+			path = "Ch10";
+			sourceTree = "<group>";
+		};
+		D5D70429EC9E4522C2122DC5 /* Ch11 */ = {
+			isa = PBXGroup;
+			children = (
+				0C332B3ABA91CC2B63F7B757,
+			);
+			path = "Ch11";
+			sourceTree = "<group>";
+		};
+		0576D988C3A1E59644A74BA8 /* Ch13 */ = {
+			isa = PBXGroup;
+			children = (
+				3668BBC3E3455581D2677FE4,
+			);
+			path = "Ch13";
 			sourceTree = "<group>";
 		};
 		BB4921CF0873B452D75B78B5 /* Ch14 */ = {
@@ -2786,6 +2822,14 @@
 				E20F436CDF8E1797C72274E5,
 			);
 			path = "Ch7";
+			sourceTree = "<group>";
+		};
+		8695FD6372AE21AB1A2E5F03 /* Ch8 */ = {
+			isa = PBXGroup;
+			children = (
+				1B4E98FD8C84CCDDF761FFEF,
+			);
+			path = "Ch8";
 			sourceTree = "<group>";
 		};
 		7436892BB2C7986362C3401F /* ViewModels */ = {
@@ -3681,9 +3725,13 @@
 				8894D68F961D660C1499C1CD /* Ch1ConceptMap.swift in Sources */,
 				0700EC8AEE339641188C377E /* InsideTheLeafTour.swift in Sources */,
 				FB3944523DC88A8E20235E86 /* BuildAReactionSandbox.swift in Sources */,
+				8DEB6B2CD7D2CDD2F5DBC7CE /* BuildAWindSandbox.swift in Sources */,
 				89E90A5B50E9A7CA3ED31851 /* InsideTheLensTour.swift in Sources */,
 				871D105707BE87F7B4C7CB7D /* InsideTheWireTour.swift in Sources */,
+				08D5ED112D93488138FF44DD /* BuildAMotionSandbox.swift in Sources */,
 				00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */,
+				E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */,
+				436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */,
 				E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */,
 				1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */,
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
