@@ -296,6 +296,20 @@
 		C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */; };
 		139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */; };
 		1B1E0385C22EF2B8E913AF77 /* InlineContentCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1EFADA4FAE9502471B7862 /* InlineContentCallout.swift */; };
+		3508B5B9E40D8002BF0F2E6B /* CrossChapterRefsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB276AC9B28489B5A4B1538 /* CrossChapterRefsFooter.swift */; };
+		2C599B67B29CC7ED1E52AD8B /* CurriculumBridgeChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B0475CEE3FD8EF6F305166 /* CurriculumBridgeChip.swift */; };
+		761C89224B67C5142EA03B9A /* ExamConnectionCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B62FF76712F81E4132C623 /* ExamConnectionCalloutView.swift */; };
+		5633D0F1140E67B345FBD00B /* GlossarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A58B088401594A8D1A17EF /* GlossarySheet.swift */; };
+		28E18B27620620F4F94ACAD3 /* MediaAssetGallerySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC25C5CD5DBDBFC6D90C263 /* MediaAssetGallerySectionView.swift */; };
+		47C3CAB482880621352E0719 /* MediaAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748D7847A45BB7ADA8654E95 /* MediaAssetView.swift */; };
+		5502919F609DCC0055D84510 /* MiniProjectsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB95B965C7445D6E42E4EFF /* MiniProjectsSectionView.swift */; };
+		187A6504ED61BFA6B7046A16 /* MisconceptionsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF176D92505E7ACF49B897 /* MisconceptionsSectionView.swift */; };
+		8280C67AE0523776BE3EEA09 /* MnemonicsStripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70E51FDD4D621373978F6 /* MnemonicsStripView.swift */; };
+		CBC71DE629C3BA7431FB5C2C /* NcertQASectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B47A0BD27088B30727875 /* NcertQASectionView.swift */; };
+		B4697C65FA71D1E633EB190F /* RealWorldExamplesStripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A54AA746A0F74D6F38366 /* RealWorldExamplesStripView.swift */; };
+		3863B78CD6BDFB721C67D408 /* ShapeDiagramRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EDAEED4269B6AAD4A8EC9 /* ShapeDiagramRegistry.swift */; };
+		226D6C5CB697A4F2A403AC32 /* TimelinesSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A035E8A0812E3A5116B82FF /* TimelinesSectionView.swift */; };
+		D5B456DC36375B55B8FA92DC /* WhatIfsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AFBCF0D2593C7CA8076821 /* WhatIfsSectionView.swift */; };
 		E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FB9E28D230C2430A2803 /* FoundationTutor.swift */; };
 		1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */; };
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
@@ -1281,6 +1295,20 @@
 		A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollapsibleContentSection.swift"; sourceTree = "<group>"; };
 		348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentChipStrip.swift"; sourceTree = "<group>"; };
 		5F1EFADA4FAE9502471B7862 /* InlineContentCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InlineContentCallout.swift"; sourceTree = "<group>"; };
+		0BB276AC9B28489B5A4B1538 /* CrossChapterRefsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossChapterRefsFooter.swift"; sourceTree = "<group>"; };
+		87B0475CEE3FD8EF6F305166 /* CurriculumBridgeChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurriculumBridgeChip.swift"; sourceTree = "<group>"; };
+		E0B62FF76712F81E4132C623 /* ExamConnectionCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExamConnectionCalloutView.swift"; sourceTree = "<group>"; };
+		E1A58B088401594A8D1A17EF /* GlossarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlossarySheet.swift"; sourceTree = "<group>"; };
+		2EC25C5CD5DBDBFC6D90C263 /* MediaAssetGallerySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaAssetGallerySectionView.swift"; sourceTree = "<group>"; };
+		748D7847A45BB7ADA8654E95 /* MediaAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaAssetView.swift"; sourceTree = "<group>"; };
+		2CB95B965C7445D6E42E4EFF /* MiniProjectsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectsSectionView.swift"; sourceTree = "<group>"; };
+		59EF176D92505E7ACF49B897 /* MisconceptionsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MisconceptionsSectionView.swift"; sourceTree = "<group>"; };
+		78F70E51FDD4D621373978F6 /* MnemonicsStripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MnemonicsStripView.swift"; sourceTree = "<group>"; };
+		EC7B47A0BD27088B30727875 /* NcertQASectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQASectionView.swift"; sourceTree = "<group>"; };
+		179A54AA746A0F74D6F38366 /* RealWorldExamplesStripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealWorldExamplesStripView.swift"; sourceTree = "<group>"; };
+		F69EDAEED4269B6AAD4A8EC9 /* ShapeDiagramRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramRegistry.swift"; sourceTree = "<group>"; };
+		4A035E8A0812E3A5116B82FF /* TimelinesSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimelinesSectionView.swift"; sourceTree = "<group>"; };
+		94AFBCF0D2593C7CA8076821 /* WhatIfsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatIfsSectionView.swift"; sourceTree = "<group>"; };
 		9944FB9E28D230C2430A2803 /* FoundationTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoundationTutor.swift"; sourceTree = "<group>"; };
 		7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsScreen.swift"; sourceTree = "<group>"; };
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
@@ -2089,6 +2117,7 @@
 				812DDF55F8AA820C9D66B40A,
 				7BBC28F09BA1320433B6B3D5,
 				06B6AEA61665FFC065417DFB,
+				C7B186D5E1B555E80F157C9A,
 			);
 			path = "Tutor";
 			sourceTree = "<group>";
@@ -2622,6 +2651,27 @@
 				C945A5DFD75ED48E57DC428F,
 			);
 			path = "Scenes";
+			sourceTree = "<group>";
+		};
+		C7B186D5E1B555E80F157C9A /* Surfaces */ = {
+			isa = PBXGroup;
+			children = (
+				0BB276AC9B28489B5A4B1538,
+				87B0475CEE3FD8EF6F305166,
+				E0B62FF76712F81E4132C623,
+				E1A58B088401594A8D1A17EF,
+				2EC25C5CD5DBDBFC6D90C263,
+				748D7847A45BB7ADA8654E95,
+				2CB95B965C7445D6E42E4EFF,
+				59EF176D92505E7ACF49B897,
+				78F70E51FDD4D621373978F6,
+				EC7B47A0BD27088B30727875,
+				179A54AA746A0F74D6F38366,
+				F69EDAEED4269B6AAD4A8EC9,
+				4A035E8A0812E3A5116B82FF,
+				94AFBCF0D2593C7CA8076821,
+			);
+			path = "Surfaces";
 			sourceTree = "<group>";
 		};
 		7436892BB2C7986362C3401F /* ViewModels */ = {
@@ -3449,6 +3499,20 @@
 				C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */,
 				139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */,
 				1B1E0385C22EF2B8E913AF77 /* InlineContentCallout.swift in Sources */,
+				3508B5B9E40D8002BF0F2E6B /* CrossChapterRefsFooter.swift in Sources */,
+				2C599B67B29CC7ED1E52AD8B /* CurriculumBridgeChip.swift in Sources */,
+				761C89224B67C5142EA03B9A /* ExamConnectionCalloutView.swift in Sources */,
+				5633D0F1140E67B345FBD00B /* GlossarySheet.swift in Sources */,
+				28E18B27620620F4F94ACAD3 /* MediaAssetGallerySectionView.swift in Sources */,
+				47C3CAB482880621352E0719 /* MediaAssetView.swift in Sources */,
+				5502919F609DCC0055D84510 /* MiniProjectsSectionView.swift in Sources */,
+				187A6504ED61BFA6B7046A16 /* MisconceptionsSectionView.swift in Sources */,
+				8280C67AE0523776BE3EEA09 /* MnemonicsStripView.swift in Sources */,
+				CBC71DE629C3BA7431FB5C2C /* NcertQASectionView.swift in Sources */,
+				B4697C65FA71D1E633EB190F /* RealWorldExamplesStripView.swift in Sources */,
+				3863B78CD6BDFB721C67D408 /* ShapeDiagramRegistry.swift in Sources */,
+				226D6C5CB697A4F2A403AC32 /* TimelinesSectionView.swift in Sources */,
+				D5B456DC36375B55B8FA92DC /* WhatIfsSectionView.swift in Sources */,
 				E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */,
 				1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */,
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,

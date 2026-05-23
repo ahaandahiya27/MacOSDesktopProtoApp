@@ -19,6 +19,7 @@ struct ChapterDetailView: View {
         case homeExperiments
         case notebook
         case article(ArticleEntry)
+        case glossary
 
         var id: String {
             switch self {
@@ -28,6 +29,8 @@ struct ChapterDetailView: View {
                 return "notebook"
             case .article(let entry):
                 return "article-\(entry.id)"
+            case .glossary:
+                return "glossary"
             }
         }
     }
@@ -46,6 +49,68 @@ struct ChapterDetailView: View {
                                         subdirectory: entry.chapterFolder)
             ?? Bundle.main.url(forResource: name, withExtension: "html")
         return resolved != nil ? entry : nil
+    }
+
+    /// Container for the 12 content-surface widgets that sit beneath
+    /// the topic cards. Each auto-hides when its backing JSON field is
+    /// nil/empty. Lifted out of `body` so the parent VStack stays at
+    /// 5 direct children (under the @ViewBuilder cap on Big Sur).
+    @ViewBuilder
+    private var contentSurfacesGroup: some View {
+        Group {
+            DeepDiveSection(chapter: chapter)
+            NcertQASectionView(chapter: chapter)
+            MisconceptionsSectionView(chapter: chapter)
+            MediaAssetGallerySectionView(pack: pack, chapter: chapter)
+            WhatIfsSectionView(chapter: chapter)
+            MiniProjectsSectionView(chapter: chapter)
+            TimelinesSectionView(chapter: chapter)
+            CurriculumBridgeChip(chapter: chapter)
+            glossaryButton
+            CrossChapterRefsFooter(pack: pack, chapter: chapter)
+        }
+    }
+
+    /// Lightweight "Glossary" launcher chip — sits among the content
+    /// surfaces. Auto-hides when `chapter.glossary` is empty so we
+    /// don't show a button to nothing.
+    @ViewBuilder
+    private var glossaryButton: some View {
+        if !chapter.glossaryList.isEmpty {
+            Button {
+                DispatchQueue.main.async { presentedSheet = .glossary }
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: SFSymbolCompat.name("character.book.closed"))
+                        .font(.body)
+                        .foregroundColor(Color.compatIndigo)
+                        .accessibilityHidden(true)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Glossary")
+                            .font(.callout.weight(.semibold))
+                        Text("\(chapter.glossaryList.count) term\(chapter.glossaryList.count == 1 ? "" : "s") for this chapter")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer(minLength: 0)
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.bold))
+                        .foregroundColor(.secondary)
+                        .accessibilityHidden(true)
+                }
+                .padding(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.compatIndigo.opacity(0.08))
+                )
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .pointingCursor()
+            .accessibilityLabel("Glossary — \(chapter.glossaryList.count) terms")
+            .accessibilityHint("Opens the chapter's glossary in a sheet.")
+        }
     }
 
     var body: some View {
@@ -148,13 +213,14 @@ struct ChapterDetailView: View {
                     }
                 }
 
-                // "Go deeper" disclosure — grade-tagged stretch topics for
-                // fast learners (`chapter.deepDive`). The widget hides
-                // itself when the chapter has no stretch topics, so packs
-                // that haven't been authored yet stay visually unchanged.
-                // See `DeepDiveSection.swift` for the disclosure body +
-                // detail sheet wiring.
-                DeepDiveSection(chapter: chapter)
+                // 12 content surfaces for the previously-unrendered
+                // Chapter content types. Each auto-hides when its
+                // backing JSON field is nil/empty. Grouped to stay
+                // under the SwiftUI @ViewBuilder direct-child cap of
+                // 10 — `Group { ... }` wraps don't change rendering,
+                // they just let buildBlock fold them into one child
+                // of the parent VStack.
+                contentSurfacesGroup
             }
             .padding(20)
             // Center the bounded-width column inside the full-width
@@ -185,6 +251,11 @@ struct ChapterDetailView: View {
                 )
                 .frame(minWidth: 720, idealWidth: 920,
                        minHeight: 540, idealHeight: 680)
+            case .glossary:
+                GlossarySheet(
+                    chapter: chapter,
+                    onDismiss: { presentedSheet = nil }
+                )
             }
         }
     }

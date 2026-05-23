@@ -6,6 +6,13 @@ struct TopicDetailView: View {
     let topic: Topic
     @EnvironmentObject private var nav: TutorNavigationState
 
+    /// The chapter that owns this topic — looked up once for the
+    /// real-world examples / mnemonic chip strips (which read from
+    /// `chapter.realWorldExamples` / `chapter.mnemonics`).
+    private var owningChapter: Chapter? {
+        pack.chapters.first { $0.topics.contains(where: { $0.id == topic.id }) }
+    }
+
     var body: some View {
         List {
             Section {
@@ -14,6 +21,24 @@ struct TopicDetailView: View {
             }
             .listRowInsets(EdgeInsets())
             .listRowBackground(Color.clear)
+
+            // Real-world examples + mnemonics chip strips. These are
+            // owned by the chapter, not the topic — so they appear on
+            // every topic page in the chapter. Auto-hide when the
+            // chapter has none authored. Wrapped in a Section to play
+            // nicely with the List layout (the chip strip uses its own
+            // horizontal ScrollView internally).
+            if let chapter = owningChapter {
+                Section {
+                    VStack(alignment: .leading, spacing: 12) {
+                        RealWorldExamplesStripView(chapter: chapter)
+                        MnemonicsStripView(chapter: chapter)
+                    }
+                    .padding(.vertical, 4)
+                }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+            }
 
             if !topic.concepts.isEmpty {
                 Section(header: Text("Concepts").accessibilityAddTraits(.isHeader)) {

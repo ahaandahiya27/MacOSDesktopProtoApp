@@ -298,10 +298,26 @@ struct QuestionDetailView: View {
     private var postAttemptGroup: some View {
         solutionDisclosure
         commonMistakesCard
+        examConnectionCallout
         spacedReviewQualityCard
         variationsSection
         if currentSiblingIndex != nil {
             navigationFooter
+        }
+    }
+
+    /// Exam-connection callout — shows where this idea reappears in
+    /// a later class or competitive exam. Pulls from
+    /// `chapter.examConnections[]` using the owning chapter discovered
+    /// through `location`. Auto-hides when the chapter has no
+    /// examConnections authored.
+    @ViewBuilder
+    private var examConnectionCallout: some View {
+        if let chapter = location?.chapter {
+            ExamConnectionCalloutView(
+                chapter: chapter,
+                relatedConceptIds: []
+            )
         }
     }
 
