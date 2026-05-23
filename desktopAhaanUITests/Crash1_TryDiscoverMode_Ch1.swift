@@ -37,7 +37,11 @@ final class Crash1_TryDiscoverMode_Ch1: XCTestCase {
         let app = XCUIApplication(bundleIdentifier: "com.emoha.desktopAhaan")
         app.launch()
 
-        dismissWelcomeIfNeeded(in: app)
+        // Shared helper — handles legacy WelcomeSheet, current
+        // 3-panel WelcomeTourSheet, and post-version-bump
+        // WhatsNewSheet. The previous in-file helper only knew
+        // `welcome-lets-go`, retired with 0e8acbf.
+        AXHelpers.dismissWelcomeUI(in: app)
 
         let scienceRow = app.descendants(matching: .any)["subject-row-science_class7"].firstMatch
         XCTAssertTrue(scienceRow.waitForExistence(timeout: 5),
@@ -66,10 +70,5 @@ final class Crash1_TryDiscoverMode_Ch1: XCTestCase {
                       "Discover shell did not render after Try Discover Mode click — C1 over-release likely returned.")
     }
 
-    private func dismissWelcomeIfNeeded(in app: XCUIApplication) {
-        let letsGo = app.buttons["welcome-lets-go"]
-        if letsGo.waitForExistence(timeout: 2) {
-            letsGo.click()
-        }
-    }
+    // dismissWelcomeIfNeeded retired — see AXHelpers.dismissWelcomeUI.
 }

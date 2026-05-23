@@ -61,7 +61,12 @@ final class Crash_BeyondThenDiscover: XCTestCase {
         let app = XCUIApplication(bundleIdentifier: "com.emoha.desktopAhaan")
         app.launch()
 
-        dismissWelcomeIfNeeded(in: app)
+        // Shared helper — handles legacy WelcomeSheet, current
+        // 3-panel WelcomeTourSheet, and post-version-bump
+        // WhatsNewSheet. The previous in-file helper only knew
+        // `welcome-lets-go`, which retired with the tour shipping in
+        // 0e8acbf.
+        AXHelpers.dismissWelcomeUI(in: app)
 
         // Sidebar → Science. Stable identifier survives pack-title
         // renames; matching by AX label doesn't see through SwiftUI
@@ -109,10 +114,5 @@ final class Crash_BeyondThenDiscover: XCTestCase {
         )
     }
 
-    private func dismissWelcomeIfNeeded(in app: XCUIApplication) {
-        let letsGo = app.buttons["welcome-lets-go"]
-        if letsGo.waitForExistence(timeout: 2) {
-            letsGo.click()
-        }
-    }
+    // dismissWelcomeIfNeeded retired — see AXHelpers.dismissWelcomeUI.
 }

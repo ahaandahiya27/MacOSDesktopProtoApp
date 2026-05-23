@@ -17,6 +17,7 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE_DIR = os.path.join(PROJECT_ROOT, "desktopAhaan")
 TEST_DIR = os.path.join(PROJECT_ROOT, "desktopAhaanTests")
+UITEST_DIR = os.path.join(PROJECT_ROOT, "desktopAhaanUITests")
 OUTPUT = os.path.join(PROJECT_ROOT, "desktopAhaan.xcodeproj", "project.pbxproj")
 
 # Existing UUIDs from the original project (preserve for stability)
@@ -29,6 +30,27 @@ APP_PRODUCT_REF     = "0434CE872FA733CD000C01F2"
 TEST_PRODUCT_REF    = "043BC1032FA79A3E006D6000"
 PROXY_ID            = "043BC1072FA79A3E006D6000"
 DEPENDENCY_ID       = "043BC1082FA79A3E006D6000"
+
+# UITests target — these UUIDs were hand-assigned in the original
+# project AND are baked into `desktopAhaan.xcscheme`'s TestAction
+# (BlueprintIdentifier = "0AAA000000000000000000A7"). Don't change
+# them or `xcodebuild test` will silently drop the UI test bundle.
+# Restored 2026-05-23 — the generator was previously emitting the
+# pbxproj without this target, which caused both crash repro tests
+# to stop running on dev Macs (the scheme's TestableReference
+# pointed at a non-existent BlueprintIdentifier and xcodebuild
+# skipped it without complaint).
+UITEST_TARGET_ID       = "0AAA000000000000000000A7"
+UITEST_PRODUCT_REF     = "0AAA000000000000000000A3"
+UITEST_PROXY_ID        = "0AAA000000000000000000A2"
+UITEST_DEPENDENCY_ID   = "0AAA000000000000000000AA"
+UITEST_SOURCES_PHASE   = "0AAA000000000000000000A9"
+UITEST_FRAMEWORKS_PHASE= "0AAA000000000000000000A5"
+UITEST_RESOURCES_PHASE = "0AAA000000000000000000A8"
+UITEST_BCL             = "0AAA000000000000000000AD"
+UITEST_DEBUG_ID        = "0AAA000000000000000000AB"
+UITEST_RELEASE_ID      = "0AAA000000000000000000AC"
+UITEST_SOURCE_GROUP_ID = "0AAA000000000000000000A6"
 
 # Build configuration list IDs
 PROJECT_BCL         = "0434CE822FA733CD000C01F2"
@@ -144,6 +166,20 @@ def collect_test_files():
                 files.append(FileEntry(rel_path, abs_path))
     return files
 
+def collect_uitest_files():
+    files = []
+    if not os.path.isdir(UITEST_DIR):
+        return files
+    for root, dirs, filenames in os.walk(UITEST_DIR):
+        for fname in sorted(filenames):
+            if fname.startswith("."):
+                continue
+            abs_path = os.path.join(root, fname)
+            rel_path = os.path.relpath(abs_path, PROJECT_ROOT)
+            if is_source(rel_path):
+                files.append(FileEntry(rel_path, abs_path))
+    return files
+
 def build_groups(files, base_dir, root_group_id):
     """Build PBXGroup tree from file list."""
     groups = {}  # rel_dir -> GroupEntry
@@ -183,6 +219,7 @@ def build_groups(files, base_dir, root_group_id):
 def generate():
     app_files = collect_app_files()
     test_files = collect_test_files()
+    uitest_files = collect_uitest_files()
 
     # Asset catalog entry (treated as a single folder reference)
     xcassets_rel = "desktopAhaan/Assets.xcassets"
@@ -192,9 +229,14 @@ def generate():
     # Groups
     APP_SOURCE_GROUP_ID = make_id("group:desktopAhaan")
     TEST_SOURCE_GROUP_ID = make_id("group:desktopAhaanTests")
+    # UITests group uses the original hand-assigned ID so the scheme's
+    # group-relative references (if any) resolve. Build groups uses
+    # this id for the root.
+    UITEST_SOURCE_GROUP_ID_LOCAL = UITEST_SOURCE_GROUP_ID
 
     app_groups = build_groups(app_files, SOURCE_DIR, APP_SOURCE_GROUP_ID)
     test_groups = build_groups(test_files, TEST_DIR, TEST_SOURCE_GROUP_ID)
+    uitest_groups = build_groups(uitest_files, UITEST_DIR, UITEST_SOURCE_GROUP_ID_LOCAL) if uitest_files else {}
 
     # Add xcassets to the app root group
     app_root_group = app_groups["desktopAhaan"]
@@ -205,6 +247,7 @@ def generate():
     app_resources = [f for f in app_files if is_resource(f.rel_path)]
     app_entitlements = [f for f in app_files if f.rel_path.endswith(".entitlements")]
     test_sources = test_files
+    uitest_sources = uitest_files
 
     lines = []
     def w(s=""):
@@ -229,6 +272,8 @@ def generate():
     w(f'\t\t{xcassets_build_id} /* Assets.xcassets in Resources */ = {{isa = PBXBuildFile; fileRef = {xcassets_ref_id} /* Assets.xcassets */; }};')
     for f in test_sources:
         w(f'\t\t{f.build_file_id} /* {f.name} in Sources */ = {{isa = PBXBuildFile; fileRef = {f.file_ref_id} /* {f.name} */; }};')
+    for f in uitest_sources:
+        w(f'\t\t{f.build_file_id} /* {f.name} in Sources */ = {{isa = PBXBuildFile; fileRef = {f.file_ref_id} /* {f.name} */; }};')
     w("/* End PBXBuildFile section */")
     w("")
 
@@ -241,6 +286,18 @@ def generate():
     w(f"\t\t\tremoteGlobalIDString = {APP_TARGET_ID};")
     w(f"\t\t\tremoteInfo = desktopAhaan;")
     w(f"\t\t}};")
+    # UI test target depends on the app target — emit a second proxy
+    # so each test target has its own dependency wiring. Without this
+    # the UITests target compiles but xcodebuild can't infer the host
+    # app at test time.
+    if uitest_sources:
+        w(f"\t\t{UITEST_PROXY_ID} /* PBXContainerItemProxy */ = {{")
+        w(f"\t\t\tisa = PBXContainerItemProxy;")
+        w(f"\t\t\tcontainerPortal = {PROJECT_ID} /* Project object */;")
+        w(f"\t\t\tproxyType = 1;")
+        w(f"\t\t\tremoteGlobalIDString = {APP_TARGET_ID};")
+        w(f"\t\t\tremoteInfo = desktopAhaan;")
+        w(f"\t\t}};")
     w("/* End PBXContainerItemProxy section */")
     w("")
 
@@ -257,6 +314,11 @@ def generate():
     # Test files
     for f in test_files:
         w(f'\t\t{f.file_ref_id} /* {f.name} */ = {{isa = PBXFileReference; lastKnownFileType = {f.ftype}; path = "{f.name}"; sourceTree = "<group>"; }};')
+    # UITest product + sources
+    if uitest_sources:
+        w(f'\t\t{UITEST_PRODUCT_REF} /* desktopAhaanUITests.xctest */ = {{isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; }};')
+        for f in uitest_files:
+            w(f'\t\t{f.file_ref_id} /* {f.name} */ = {{isa = PBXFileReference; lastKnownFileType = {f.ftype}; path = "{f.name}"; sourceTree = "<group>"; }};')
     w("/* End PBXFileReference section */")
     w("")
 
@@ -276,6 +338,14 @@ def generate():
     w(f"\t\t\t);")
     w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
     w(f"\t\t}};")
+    if uitest_sources:
+        w(f"\t\t{UITEST_FRAMEWORKS_PHASE} /* Frameworks */ = {{")
+        w(f"\t\t\tisa = PBXFrameworksBuildPhase;")
+        w(f"\t\t\tbuildActionMask = 2147483647;")
+        w(f"\t\t\tfiles = (")
+        w(f"\t\t\t);")
+        w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
+        w(f"\t\t}};")
     w("/* End PBXFrameworksBuildPhase section */")
     w("")
 
@@ -288,6 +358,8 @@ def generate():
     w(f"\t\t\tchildren = (")
     w(f"\t\t\t\t{APP_SOURCE_GROUP_ID} /* desktopAhaan */,")
     w(f"\t\t\t\t{TEST_SOURCE_GROUP_ID} /* desktopAhaanTests */,")
+    if uitest_sources:
+        w(f"\t\t\t\t{UITEST_SOURCE_GROUP_ID} /* desktopAhaanUITests */,")
     w(f"\t\t\t\t{PRODUCTS_GROUP_ID} /* Products */,")
     w(f"\t\t\t);")
     w(f'\t\t\tsourceTree = "<group>";')
@@ -299,6 +371,8 @@ def generate():
     w(f"\t\t\tchildren = (")
     w(f"\t\t\t\t{APP_PRODUCT_REF} /* desktopAhaan.app */,")
     w(f"\t\t\t\t{TEST_PRODUCT_REF} /* desktopAhaanTests.xctest */,")
+    if uitest_sources:
+        w(f"\t\t\t\t{UITEST_PRODUCT_REF} /* desktopAhaanUITests.xctest */,")
     w(f"\t\t\t);")
     w(f"\t\t\tname = Products;")
     w(f'\t\t\tsourceTree = "<group>";')
@@ -333,6 +407,24 @@ def generate():
             w(f'\t\t\tpath = desktopAhaanTests;')
         w(f'\t\t\tsourceTree = "<group>";')
         w(f"\t\t}};")
+
+    # UITest groups (same shape as Test groups; only emitted if there
+    # are UITests on disk so projects that haven't built a UI test
+    # bundle yet stay unchanged).
+    if uitest_groups:
+        for rel_path, g in sorted(uitest_groups.items()):
+            w(f"\t\t{g.group_id} /* {g.name} */ = {{")
+            w(f"\t\t\tisa = PBXGroup;")
+            w(f"\t\t\tchildren = (")
+            for child_id in g.children_ids:
+                w(f"\t\t\t\t{child_id},")
+            w(f"\t\t\t);")
+            if g.group_id != UITEST_SOURCE_GROUP_ID:
+                w(f'\t\t\tpath = "{g.name}";')
+            else:
+                w(f'\t\t\tpath = desktopAhaanUITests;')
+            w(f'\t\t\tsourceTree = "<group>";')
+            w(f"\t\t}};")
 
     w("/* End PBXGroup section */")
     w("")
@@ -380,6 +472,30 @@ def generate():
     w(f"\t\t\tproductReference = {TEST_PRODUCT_REF} /* desktopAhaanTests.xctest */;")
     w(f'\t\t\tproductType = "com.apple.product-type.bundle.unit-test";')
     w(f"\t\t}};")
+    # UITest target — distinct product type
+    # `com.apple.product-type.bundle.ui-testing`; xcodebuild routes
+    # it to the XCTestPlanService that drives Accessibility events.
+    if uitest_sources:
+        w(f"\t\t{UITEST_TARGET_ID} /* desktopAhaanUITests */ = {{")
+        w(f"\t\t\tisa = PBXNativeTarget;")
+        w(f"\t\t\tbuildConfigurationList = {UITEST_BCL} /* Build configuration list for PBXNativeTarget \"desktopAhaanUITests\" */;")
+        w(f"\t\t\tbuildPhases = (")
+        w(f"\t\t\t\t{UITEST_SOURCES_PHASE} /* Sources */,")
+        w(f"\t\t\t\t{UITEST_FRAMEWORKS_PHASE} /* Frameworks */,")
+        w(f"\t\t\t\t{UITEST_RESOURCES_PHASE} /* Resources */,")
+        w(f"\t\t\t);")
+        w(f"\t\t\tbuildRules = (")
+        w(f"\t\t\t);")
+        w(f"\t\t\tdependencies = (")
+        w(f"\t\t\t\t{UITEST_DEPENDENCY_ID} /* PBXTargetDependency */,")
+        w(f"\t\t\t);")
+        w(f"\t\t\tname = desktopAhaanUITests;")
+        w(f"\t\t\tpackageProductDependencies = (")
+        w(f"\t\t\t);")
+        w(f"\t\t\tproductName = desktopAhaanUITests;")
+        w(f"\t\t\tproductReference = {UITEST_PRODUCT_REF} /* desktopAhaanUITests.xctest */;")
+        w(f'\t\t\tproductType = "com.apple.product-type.bundle.ui-testing";')
+        w(f"\t\t}};")
     w("/* End PBXNativeTarget section */")
     w("")
 
@@ -399,6 +515,11 @@ def generate():
     w(f"\t\t\t\t\t\tCreatedOnToolsVersion = 13.2;")
     w(f"\t\t\t\t\t\tTestTargetID = {APP_TARGET_ID};")
     w(f"\t\t\t\t\t}};")
+    if uitest_sources:
+        w(f"\t\t\t\t\t{UITEST_TARGET_ID} = {{")
+        w(f"\t\t\t\t\t\tCreatedOnToolsVersion = 13.2;")
+        w(f"\t\t\t\t\t\tTestTargetID = {APP_TARGET_ID};")
+        w(f"\t\t\t\t\t}};")
     w(f"\t\t\t\t}};")
     w(f"\t\t\t}};")
     w(f"\t\t\tbuildConfigurationList = {PROJECT_BCL} /* Build configuration list for PBXProject \"desktopAhaan\" */;")
@@ -416,6 +537,8 @@ def generate():
     w(f"\t\t\ttargets = (")
     w(f"\t\t\t\t{APP_TARGET_ID} /* desktopAhaan */,")
     w(f"\t\t\t\t{TEST_TARGET_ID} /* desktopAhaanTests */,")
+    if uitest_sources:
+        w(f"\t\t\t\t{UITEST_TARGET_ID} /* desktopAhaanUITests */,")
     w(f"\t\t\t);")
     w(f"\t\t}};")
     w("/* End PBXProject section */")
@@ -440,6 +563,14 @@ def generate():
     w(f"\t\t\t);")
     w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
     w(f"\t\t}};")
+    if uitest_sources:
+        w(f"\t\t{UITEST_RESOURCES_PHASE} /* Resources */ = {{")
+        w(f"\t\t\tisa = PBXResourcesBuildPhase;")
+        w(f"\t\t\tbuildActionMask = 2147483647;")
+        w(f"\t\t\tfiles = (")
+        w(f"\t\t\t);")
+        w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
+        w(f"\t\t}};")
     w("/* End PBXResourcesBuildPhase section */")
     w("")
 
@@ -463,6 +594,16 @@ def generate():
     w(f"\t\t\t);")
     w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
     w(f"\t\t}};")
+    if uitest_sources:
+        w(f"\t\t{UITEST_SOURCES_PHASE} /* Sources */ = {{")
+        w(f"\t\t\tisa = PBXSourcesBuildPhase;")
+        w(f"\t\t\tbuildActionMask = 2147483647;")
+        w(f"\t\t\tfiles = (")
+        for f in uitest_sources:
+            w(f"\t\t\t\t{f.build_file_id} /* {f.name} in Sources */,")
+        w(f"\t\t\t);")
+        w(f"\t\t\trunOnlyForDeploymentPostprocessing = 0;")
+        w(f"\t\t}};")
     w("/* End PBXSourcesBuildPhase section */")
     w("")
 
@@ -473,6 +614,12 @@ def generate():
     w(f"\t\t\ttarget = {APP_TARGET_ID} /* desktopAhaan */;")
     w(f"\t\t\ttargetProxy = {PROXY_ID} /* PBXContainerItemProxy */;")
     w(f"\t\t}};")
+    if uitest_sources:
+        w(f"\t\t{UITEST_DEPENDENCY_ID} /* PBXTargetDependency */ = {{")
+        w(f"\t\t\tisa = PBXTargetDependency;")
+        w(f"\t\t\ttarget = {APP_TARGET_ID} /* desktopAhaan */;")
+        w(f"\t\t\ttargetProxy = {UITEST_PROXY_ID} /* PBXContainerItemProxy */;")
+        w(f"\t\t}};")
     w("/* End PBXTargetDependency section */")
     w("")
 
@@ -700,6 +847,46 @@ def generate():
     w(f"\t\t\tname = Release;")
     w(f"\t\t}};")
 
+    # UITest target Debug — same shape as unit-test Debug but with
+    # ui-testing TEST_TARGET_NAME (not TEST_HOST/BUNDLE_LOADER which
+    # are unit-test-only). xcodebuild routes UI tests via a
+    # XCTestPlanService that uses TEST_TARGET_NAME to find the host.
+    if uitest_sources:
+        w(f"\t\t{UITEST_DEBUG_ID} /* Debug */ = {{")
+        w(f"\t\t\tisa = XCBuildConfiguration;")
+        w(f"\t\t\tbuildSettings = {{")
+        w(f"\t\t\t\tCODE_SIGN_STYLE = Automatic;")
+        w(f"\t\t\t\tCURRENT_PROJECT_VERSION = 1;")
+        w(f"\t\t\t\tDEVELOPMENT_TEAM = {DEV_TEAM};")
+        w(f"\t\t\t\tGENERATE_INFOPLIST_FILE = YES;")
+        w(f"\t\t\t\tMARKETING_VERSION = 1.0;")
+        w(f"\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanUITests;")
+        w(f'\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";')
+        w(f"\t\t\t\tSWIFT_EMIT_LOC_STRINGS = NO;")
+        w(f"\t\t\t\tSWIFT_VERSION = 5.0;")
+        w(f"\t\t\t\tTEST_TARGET_NAME = desktopAhaan;")
+        w(f"\t\t\t}};")
+        w(f"\t\t\tname = Debug;")
+        w(f"\t\t}};")
+
+        # UITest target Release
+        w(f"\t\t{UITEST_RELEASE_ID} /* Release */ = {{")
+        w(f"\t\t\tisa = XCBuildConfiguration;")
+        w(f"\t\t\tbuildSettings = {{")
+        w(f"\t\t\t\tCODE_SIGN_STYLE = Automatic;")
+        w(f"\t\t\t\tCURRENT_PROJECT_VERSION = 1;")
+        w(f"\t\t\t\tDEVELOPMENT_TEAM = {DEV_TEAM};")
+        w(f"\t\t\t\tGENERATE_INFOPLIST_FILE = YES;")
+        w(f"\t\t\t\tMARKETING_VERSION = 1.0;")
+        w(f"\t\t\t\tPRODUCT_BUNDLE_IDENTIFIER = com.emoha.desktopAhaanUITests;")
+        w(f'\t\t\t\tPRODUCT_NAME = "$(TARGET_NAME)";')
+        w(f"\t\t\t\tSWIFT_EMIT_LOC_STRINGS = NO;")
+        w(f"\t\t\t\tSWIFT_VERSION = 5.0;")
+        w(f"\t\t\t\tTEST_TARGET_NAME = desktopAhaan;")
+        w(f"\t\t\t}};")
+        w(f"\t\t\tname = Release;")
+        w(f"\t\t}};")
+
     w("/* End XCBuildConfiguration section */")
     w("")
 
@@ -732,6 +919,16 @@ def generate():
     w(f"\t\t\tdefaultConfigurationIsVisible = 0;")
     w(f"\t\t\tdefaultConfigurationName = Release;")
     w(f"\t\t}};")
+    if uitest_sources:
+        w(f"\t\t{UITEST_BCL} /* Build configuration list for PBXNativeTarget \"desktopAhaanUITests\" */ = {{")
+        w(f"\t\t\tisa = XCConfigurationList;")
+        w(f"\t\t\tbuildConfigurations = (")
+        w(f"\t\t\t\t{UITEST_DEBUG_ID} /* Debug */,")
+        w(f"\t\t\t\t{UITEST_RELEASE_ID} /* Release */,")
+        w(f"\t\t\t);")
+        w(f"\t\t\tdefaultConfigurationIsVisible = 0;")
+        w(f"\t\t\tdefaultConfigurationName = Release;")
+        w(f"\t\t}};")
     w("/* End XCConfigurationList section */")
 
     w("\t};")
@@ -742,13 +939,15 @@ def generate():
     content = "\n".join(lines)
 
     # Summary
-    print(f"App sources:   {len(app_sources)}")
-    print(f"App resources: {len(app_resources)} + 1 xcassets")
-    print(f"Test sources:  {len(test_sources)}")
-    print(f"App groups:    {len(app_groups)}")
-    print(f"Test groups:   {len(test_groups)}")
-    print(f"Total lines:   {len(lines)}")
-    print(f"Output:        {OUTPUT}")
+    print(f"App sources:    {len(app_sources)}")
+    print(f"App resources:  {len(app_resources)} + 1 xcassets")
+    print(f"Test sources:   {len(test_sources)}")
+    print(f"UITest sources: {len(uitest_sources)}")
+    print(f"App groups:     {len(app_groups)}")
+    print(f"Test groups:    {len(test_groups)}")
+    print(f"UITest groups:  {len(uitest_groups)}")
+    print(f"Total lines:    {len(lines)}")
+    print(f"Output:         {OUTPUT}")
 
     return content
 
