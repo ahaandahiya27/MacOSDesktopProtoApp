@@ -87,6 +87,8 @@ struct ChapterDetailView: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityIdentifier("try-discover-mode")
+                    .accessibilityLabel("Try Discover Mode")
+                    .accessibilityHint("Opens an interactive scene-based version of this chapter — drag, tap, and explore concepts.")
                 }
 
                 // Enrichment surfaces: "Beyond the Book" article (long-form

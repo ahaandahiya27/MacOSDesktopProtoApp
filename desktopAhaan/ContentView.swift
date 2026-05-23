@@ -391,6 +391,8 @@ private struct WelcomeSheet: View {
             .accentColor(Color.compatIndigo)
             .keyboardShortcut(.defaultAction)
             .accessibilityIdentifier("welcome-lets-go")
+            .accessibilityLabel("Let's go")
+            .accessibilityHint("Dismisses the welcome screen. You can replay it from Settings if you want it back.")
         }
         .padding(28)
         .frame(minWidth: 420, idealWidth: 480, maxWidth: 560,
