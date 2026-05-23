@@ -99,7 +99,11 @@ def _article_words(chapter_id: str) -> int:
         n = int(chapter_id[2:])
     except ValueError:
         return 0
+    # Folder naming is inconsistent: Ch.1-9 are "Chapter1".."Chapter9"
+    # (no zero-pad), Ch.10-19 are "Chapter10".."Chapter19". Try both.
     folder = ARTICLE_DIR / f"Chapter{n:02d}"
+    if not folder.exists():
+        folder = ARTICLE_DIR / f"Chapter{n}"
     total = 0
     if not folder.exists():
         return 0
