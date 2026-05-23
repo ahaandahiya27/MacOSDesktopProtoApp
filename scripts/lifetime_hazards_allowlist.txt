@@ -25,3 +25,16 @@ desktopAhaan/Services/Speech/TextToSpeechManager.swift:11: TextToSpeechManager i
 # --- LH003  @unchecked Sendable  --- (prefer queue/lock/actor/nonisolated(unsafe))
 
 # (no grandfathered violations — the codebase has zero `@unchecked Sendable` types)
+
+# --- LH004a  .sink without [weak self]  --- (Combine subscription pins owner)
+
+# (no grandfathered violations — only `.sink` site is TranslatorViewModel which uses [weak self])
+
+# --- LH004b  Timer.scheduledTimer block without [weak self]  --- (timer pins owner)
+
+desktopAhaan/Extensions/Extensions.swift:488: Inside `private struct TimedSceneModifier: ViewModifier` (Extensions.swift:467). ViewModifier is a value-type struct so `self` capture has value semantics — no retain cycle is reachable. The closure uses `{ _ in }` and writes a `@Binding var tick` which is captured by binding-storage (not strong-self). Safe by design.
+desktopAhaan/Subjects/Tutor/Discover/Components/ParticleEmitter.swift:71: Inside `struct ParticleEmitter: View` (ParticleEmitter.swift:16). View is a value-type struct so `self` capture has value semantics — no retain cycle is reachable. The closure uses `{ _ in }` and writes a `@Binding var tick`. Safe by design.
+
+# --- LH004c  .assign(to: \..., on: self)  --- (keypath form is always-strong)
+
+# (no grandfathered violations — codebase has zero such .assign keypath calls)

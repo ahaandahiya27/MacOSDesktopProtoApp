@@ -25,6 +25,20 @@ scripts/lifetime_hazards_allowlist.txt):
      or actor instead. Allowlist with proof if a value type's invariants
      genuinely satisfy Sendable (e.g. a wrapper around a private NSLock).
 
+  4. Escaping closure capture without `[weak self]` on three patterns the
+     C1 over-release lineage taught us are dangerous:
+       a. `.sink { ... }` (Combine) — owner stays alive until the
+          Cancellable is released; the closure pins `self` past view
+          dismount.
+       b. `Timer.scheduledTimer(...) { ... }` — repeating timer keeps
+          firing into a freed holder.
+       c. `.assign(to: \\.x, on: self)` — keypath form is always-strong;
+          prefer `.assign(to: &$x)`.
+     Heuristic: look at the closure-capture span (the chars after `{`
+     until the next ` in `) for `[weak self]` or `[unowned self]`.
+     Allowlist if the enclosing type is a value-type struct (no retain
+     cycle possible) or the closure provably doesn't reference self.
+
 Exit codes:
   0 — clean
   1 — at least one new violation (not in the allowlist)
@@ -90,6 +104,27 @@ def _read_allowlist() -> set[str]:
 _VAR_DELEGATE_RE = re.compile(r"(?<!\bweak\s)\bvar\s+delegate\s*:")
 _UNOWNED_RE = re.compile(r"\bunowned\b")
 _UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
+# Combine .sink trailing closure: `.sink {` or `.sink(...) {`.
+_SINK_RE = re.compile(r"(?<!\w)\.sink\s*(?:\([^)]*\))?\s*\{")
+_TIMER_SCHEDULED_RE = re.compile(r"\bTimer\.scheduledTimer\b")
+# Keypath form of .assign always captures `on:` strongly. Modern alt:
+# `.assign(to: &$x)` against an @Published.
+_ASSIGN_STRONG_SELF_RE = re.compile(
+    r"\.assign\(\s*to:\s*\\\.[\w.]+\s*,\s*on:\s*self\b"
+)
+
+
+def _capture_list_has_weak_self(text_after_brace: str) -> bool:
+    """True if the closure's capture list contains `[weak self]` or
+    `[unowned self]`. Scans up to the first ` in ` (which marks the end
+    of the capture list / parameter list), capped at 300 chars."""
+    # Cap the search window so we don't accidentally pick up `[weak self]`
+    # from way deeper in the closure body.
+    end = text_after_brace.find(" in ")
+    if end == -1 or end > 300:
+        end = 300
+    head = text_after_brace[:end]
+    return "[weak self]" in head or "[unowned self]" in head
 
 
 def _scan_var_delegate(swift_path: Path) -> list[Violation]:
@@ -155,6 +190,111 @@ def _scan_unowned(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_closure_captures(swift_path: Path) -> list[Violation]:
+    """LH004 — flag escaping closures that capture `self` without
+    `[weak self]`. Three sub-rules: .sink, Timer.scheduledTimer, and
+    .assign(to:on:self)."""
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    text = swift_path.read_text()
+    findings: list[Violation] = []
+
+    # --- LH004a: .sink trailing closure ---
+    for m in _SINK_RE.finditer(text):
+        brace_pos = m.end() - 1  # `.sink {` — m.end() points just past `{`
+        head = text[brace_pos + 1 : brace_pos + 1 + 400]
+        if _capture_list_has_weak_self(head):
+            continue
+        line_no = text[: m.start()].count("\n") + 1
+        # Best-effort line content for the report.
+        line = text.splitlines()[line_no - 1].rstrip() if line_no - 1 < len(text.splitlines()) else ""
+        findings.append(
+            Violation(
+                rule_id="LH004a",
+                rel_path=rel,
+                line_no=line_no,
+                line=line,
+                why=(
+                    "Combine `.sink {}` closure must capture `[weak self]`. "
+                    "Without it the publisher keeps the owner alive past view "
+                    "dismount and the closure fires into stale state. If the "
+                    "owner is a value-type struct (e.g. ViewModifier) and the "
+                    "lack of cycle is provable, add the file:line to "
+                    "scripts/lifetime_hazards_allowlist.txt with the reason."
+                ),
+            )
+        )
+
+    # --- LH004b: Timer.scheduledTimer block ---
+    # Find the call site, then walk forward to the first top-level `{` of
+    # its closure body. We need to skip the call's parens.
+    for m in _TIMER_SCHEDULED_RE.finditer(text):
+        # Find the next `{` after the call, tracking paren depth so we
+        # don't fall into a string-literal or another call.
+        i = m.end()
+        depth = 0
+        brace_pos = -1
+        scan_limit = i + 800  # bail on pathological lines
+        while i < min(len(text), scan_limit):
+            ch = text[i]
+            if ch == "(":
+                depth += 1
+            elif ch == ")":
+                depth -= 1
+            elif ch == "{":
+                # Either trailing closure (depth == 0) or `block:{...}`
+                # parameter (depth >= 1). Both are the closure we want.
+                brace_pos = i
+                break
+            elif ch == "\n" and depth == 0:
+                # Line ended without `{` and no open paren — bail.
+                pass
+            i += 1
+        if brace_pos == -1:
+            continue
+        head = text[brace_pos + 1 : brace_pos + 1 + 400]
+        if _capture_list_has_weak_self(head):
+            continue
+        line_no = text[:brace_pos].count("\n") + 1
+        line = text.splitlines()[line_no - 1].rstrip() if line_no - 1 < len(text.splitlines()) else ""
+        findings.append(
+            Violation(
+                rule_id="LH004b",
+                rel_path=rel,
+                line_no=line_no,
+                line=line,
+                why=(
+                    "`Timer.scheduledTimer` block must capture `[weak self]`. "
+                    "A repeating timer pins the owner forever; a one-shot "
+                    "timer still fires after the owner should be gone if the "
+                    "owner dismounts between schedule and fire. If the "
+                    "enclosing type is a value-type struct (no retain cycle "
+                    "possible) or the closure provably doesn't reference "
+                    "self, allowlist with the reason."
+                ),
+            )
+        )
+
+    # --- LH004c: .assign(to: \..., on: self) keypath form ---
+    for m in _ASSIGN_STRONG_SELF_RE.finditer(text):
+        line_no = text[: m.start()].count("\n") + 1
+        line = text.splitlines()[line_no - 1].rstrip() if line_no - 1 < len(text.splitlines()) else ""
+        findings.append(
+            Violation(
+                rule_id="LH004c",
+                rel_path=rel,
+                line_no=line_no,
+                line=line,
+                why=(
+                    "`.assign(to: \\.x, on: self)` always captures `self` "
+                    "strongly. Prefer `.assign(to: &$x)` against an "
+                    "@Published, or `.sink { [weak self] in self?.x = $0 }`."
+                ),
+            )
+        )
+
+    return findings
+
+
 def _scan_unchecked_sendable(swift_path: Path) -> list[Violation]:
     rel = swift_path.relative_to(REPO_ROOT).as_posix()
     findings: list[Violation] = []
@@ -197,6 +337,7 @@ def _scan_repo() -> list[Violation]:
         findings.extend(_scan_var_delegate(swift_path))
         findings.extend(_scan_unowned(swift_path))
         findings.extend(_scan_unchecked_sendable(swift_path))
+        findings.extend(_scan_closure_captures(swift_path))
     return findings
 
 
