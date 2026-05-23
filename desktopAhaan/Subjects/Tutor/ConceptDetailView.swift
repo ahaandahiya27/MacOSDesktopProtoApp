@@ -13,6 +13,13 @@ struct ConceptDetailView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var appState: AppState
 
+    // MARK: - Inquiry-first mode (Ch.1 pilot)
+    @AppStorage(AppStorageKeys.inquiryFirstMode) private var inquiryFirstMode: Bool = false
+    /// Per-concept reveal flag (not persisted — the predict-first
+    /// experience is per-visit, intentionally low-stakes).
+    @State private var predictRevealed: Bool = false
+    @State private var predictGuess: String = ""
+
     private var conceptIndex: [String: Concept] { pack.conceptIndex }
     private var questionIndex: [String: Question] { pack.questionIndex }
 
@@ -50,6 +57,11 @@ struct ConceptDetailView: View {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
                 recordRecent()
+                // Reset the predict-first state when the kid navigates
+                // to a different concept — each concept gets its own
+                // fresh hypothesise-first experience.
+                predictRevealed = false
+                predictGuess = ""
             }
         }
         .background(Color(NSColor.windowBackgroundColor))
@@ -83,9 +95,128 @@ struct ConceptDetailView: View {
 
     @ViewBuilder
     private var explanationGroup: some View {
-        explanationCard
-        reasoningCard
-        useCasesSection
+        if shouldGateForInquiry {
+            inquiryGate
+        } else {
+            postInquiryRibbon
+            explanationCard
+            reasoningCard
+            whyChainPill
+            useCasesSection
+        }
+    }
+
+    /// True when the Settings toggle is on AND this concept has a
+    /// non-nil predictQuestion AND the user hasn't tapped "Show me the
+    /// answer" yet on this visit. When true the explanationCard / etc.
+    /// stay hidden behind the inquiryGate.
+    private var shouldGateForInquiry: Bool {
+        inquiryFirstMode && !predictRevealed && (concept.predictQuestion?.isEmpty == false)
+    }
+
+    /// The predict-before-reveal prompt + guess field + reveal button.
+    @ViewBuilder
+    private var inquiryGate: some View {
+        if let question = concept.predictQuestion {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 8) {
+                    Image(systemName: SFSymbolCompat.name("lightbulb.fill"))
+                        .font(.body)
+                        .foregroundColor(Color.compatIndigo)
+                        .accessibilityHidden(true)
+                    Text("Predict first")
+                        .font(.caption.weight(.bold))
+                        .foregroundColor(Color.compatIndigo)
+                        .textCase(.uppercase)
+                        .accessibilityAddTraits(.isHeader)
+                    Spacer(minLength: 0)
+                }
+                Text(question)
+                    .font(.body)
+                    .lineSpacing(3)
+                    .fixedSize(horizontal: false, vertical: true)
+                // Single-line TextField on Big Sur — the multi-line
+                // `axis: .vertical` parameter and `lineLimit(_, reservesSpace:)`
+                // overload are macOS 13+. A 60-char input is plenty for a
+                // one-thought guess.
+                TextField("Your best guess…", text: $predictGuess)
+                    .textFieldStyle(.roundedBorder)
+                    .accessibilityHint("Type your guess. It isn't graded or saved; just thinking it through.")
+                HStack {
+                    Spacer()
+                    Button("Show me the answer") {
+                        withAnimationRespectingReduceMotion(.easeOut(duration: 0.22)) {
+                            predictRevealed = true
+                        }
+                    }
+                    .keyboardShortcut(.defaultAction)
+                    .accessibilityHint("Reveals the concept explanation alongside a brief comparison to your guess.")
+                }
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.compatIndigo.opacity(0.10))
+            )
+            .accessibilityElement(children: .contain)
+            .accessibilityLabel("Predict-first prompt")
+        }
+    }
+
+    /// Small ribbon shown after the kid has revealed the explanation.
+    /// Echoes their guess back so they can compare to the textbook
+    /// answer. Skipped when inquiry-first is off or no guess was typed.
+    @ViewBuilder
+    private var postInquiryRibbon: some View {
+        if inquiryFirstMode,
+           predictRevealed,
+           let guess = nonEmpty(predictGuess) {
+            HStack(alignment: .top, spacing: 8) {
+                Image(systemName: SFSymbolCompat.name("quote.bubble.fill"))
+                    .font(.caption)
+                    .foregroundColor(Color.compatIndigo)
+                    .accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Your guess")
+                        .font(.caption2.weight(.bold))
+                        .foregroundColor(Color.compatIndigo)
+                        .textCase(.uppercase)
+                    Text(guess)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                        .italic()
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("Here's the actual idea. Notice where it overlaps with what you guessed.")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                        .padding(.top, 2)
+                }
+                Spacer(minLength: 0)
+            }
+            .padding(10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.compatIndigo.opacity(0.06))
+            )
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Your guess: \(guess). The actual idea follows below.")
+        }
+    }
+
+    private func nonEmpty(_ s: String) -> String? {
+        let t = s.trimmingCharacters(in: .whitespacesAndNewlines)
+        return t.isEmpty ? nil : t
+    }
+
+    /// Three-layer Socratic drill (Ch.1 pilot). Auto-hides when the
+    /// concept has no authored whyChain. Once propagated to ch.2..19,
+    /// every concept with a non-nil whyChain shows the pill — no further
+    /// wiring needed in this file.
+    @ViewBuilder
+    private var whyChainPill: some View {
+        WhyChainView(conceptId: concept.id, chain: concept.whyChain)
     }
 
     @ViewBuilder

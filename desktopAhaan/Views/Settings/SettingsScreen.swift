@@ -99,6 +99,8 @@ struct SettingsScreen: View {
 
     // MARK: - Settings form
 
+    @AppStorage(AppStorageKeys.inquiryFirstMode) private var inquiryFirstMode: Bool = false
+
     private var settingsForm: some View {
         Form {
             Section(header: Text("Status")) {
@@ -115,6 +117,14 @@ struct SettingsScreen: View {
                 }
                 Toggle("Dictionary Only (Offline Mode)", isOn: $settings.preferOffline)
                 Text("When on, the app only uses the built-in dictionary — no internet requests at all. History, favorites, flashcards, and quizzes always work offline.")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Section(header: Text("Learning")) {
+                Toggle("Inquiry-first mode (predict before reading)", isOn: $inquiryFirstMode)
+                Text("When on, every concept card in a chapter that has authored a prediction question shows the question BEFORE the explanation — your kid hypothesises first, then reads. The guess isn't graded or saved; the goal is to engage active recall before exposure. Off by default. Today only Chapter 1 (Nutrition in Plants) has prediction questions; more chapters will follow.")
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)

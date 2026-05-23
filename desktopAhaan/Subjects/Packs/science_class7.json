@@ -98,7 +98,13 @@
                 8
               ],
               "needsHumanReview": false,
-              "mnemonic": "AUTO = self (Greek autos = self), HETERO = other. Autotrophs make own food (plants). Heterotrophs eat others' food (animals, fungi)."
+              "mnemonic": "AUTO = self (Greek autos = self), HETERO = other. Autotrophs make own food (plants). Heterotrophs eat others' food (animals, fungi).",
+              "predictQuestion": "If a cow eats grass and a tiger eats the cow, where did the energy in the tiger's muscles ORIGINALLY come from?",
+              "whyChain": [
+                "Plants are called autotrophs because they make their own food — they can build sugar from sunlight, air, and water alone. Animals can't do that, so we're heterotrophs: we have to eat something else that already trapped that energy.",
+                "Why can plants do it but we can't? Because plants carry chlorophyll, a molecule we don't have. Chlorophyll catches photons and uses their energy to power a reaction that pulls carbon out of the air and locks it into a sugar molecule. No chlorophyll, no kitchen.",
+                "And why does this matter at the planet scale? Every calorie of food on Earth — wheat, rice, lamb, milk, sushi — traces back to a plant or alga doing this trick. Even oil and coal are old fossilised plants. Photosynthesis is the only meaningful energy door from sunlight into life."
+              ]
             },
             {
               "id": "ch01_t01_c02",
@@ -187,7 +193,13 @@
                 11
               ],
               "needsHumanReview": false,
-              "mnemonic": "PHOTO + SYNTHESIS = LIGHT + PUTTING TOGETHER. Recipe: CO2 + H2O + LIGHT → Glucose + O2. The four ingredients: chlorophyll, sunlight, water, CO2."
+              "mnemonic": "PHOTO + SYNTHESIS = LIGHT + PUTTING TOGETHER. Recipe: CO2 + H2O + LIGHT → Glucose + O2. The four ingredients: chlorophyll, sunlight, water, CO2.",
+              "predictQuestion": "If you put a plant in a perfectly dark closet for two weeks with plenty of water and air, would it die, sleep, or stay the same?",
+              "whyChain": [
+                "Photosynthesis converts carbon dioxide and water into glucose using the energy in sunlight. The leaf collects light through chlorophyll, splits water molecules, and uses the freed electrons to build sugar from CO₂. Oxygen is released as a by-product.",
+                "Why can the plant do this only in the light? Sunlight provides the activation energy to crack a water molecule — without that initial kick, the rest of the chemistry can't proceed. In the dark a plant survives briefly on stored starch but starts to starve once the reserves run out.",
+                "And why is this the most important reaction on the planet? Every breath of oxygen you take traces back to a chloroplast doing photosynthesis. The reaction has been running on Earth for 2.4 billion years and is what created our oxygen atmosphere in the first place."
+              ]
             },
             {
               "id": "ch01_t01_c03",
@@ -264,7 +276,13 @@
                 9
               ],
               "needsHumanReview": false,
-              "mnemonic": "CHLORO = GREEN (Greek khloros). Chlorophyll = green pigment. Why green? Absorbs red+blue, REFLECTS green back to your eye."
+              "mnemonic": "CHLORO = GREEN (Greek khloros). Chlorophyll = green pigment. Why green? Absorbs red+blue, REFLECTS green back to your eye.",
+              "predictQuestion": "Chlorophyll absorbs red and blue light. What colour does it then look to your eye, and why?",
+              "whyChain": [
+                "Chlorophyll is a pigment that absorbs red and blue wavelengths of sunlight and reflects green ones — so leaves look green to us. The absorbed energy drives the light-dependent reactions that crack water molecules.",
+                "Why green and not some other colour? Because chlorophyll's molecular structure has bond lengths tuned to the energy of red and blue photons. Green photons don't match — they bounce. There's nothing intrinsically pretty about green; it's just the colour leftover after the useful colours are caught.",
+                "And why don't plants use ALL colours of sunlight? Some do — accessory pigments like carotenoids extend the absorbed range a bit. But the plants that dominate land won the evolutionary lottery with chlorophyll a + b at red and blue, and the green-leaf body plan stuck. Class 11 Biology you'll meet C4 and CAM plants that tweak this further."
+              ]
             },
             {
               "id": "ch01_t01_c04",
@@ -345,7 +363,13 @@
                 10
               ],
               "needsHumanReview": false,
-              "mnemonic": "STOMATA = STOMACH-like mouths on leaves. Open during day for CO2, close at night to save water. XYLEM = X-marks-the-spot UP arrow (water UP)."
+              "mnemonic": "STOMATA = STOMACH-like mouths on leaves. Open during day for CO2, close at night to save water. XYLEM = X-marks-the-spot UP arrow (water UP).",
+              "predictQuestion": "Plants need to let air in but also keep water locked in. How could one structure do both at the same time?",
+              "whyChain": [
+                "Stomata are pores on the underside of a leaf, each flanked by two bean-shaped guard cells. The pore opens when the guard cells swell with water and bow apart, letting CO₂ in. Xylem and phloem are the plant's plumbing — xylem carries water UP from roots; phloem carries sugar DOWN from leaves.",
+                "Why two systems instead of one? Because water and sugar travel in opposite directions. Xylem cells are dead, hollow pipes — fine for a one-way water highway. Phloem cells are living, with companion cells that pump sugar molecules in and out actively.",
+                "And why does the stoma close at night? Plants don't need to let air in when they aren't photosynthesising. Keeping the pore shut conserves water. Cacti go one step further — they keep stomata closed all day and open only at night (CAM photosynthesis), trading efficiency for desert survival."
+              ]
             },
             {
               "id": "ch01_t01_c05",
@@ -425,7 +449,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "AHM-T-H: Auto-Hetero. Auto-Made (Plants), Hetero-Eaten (Animals). Two big nutrition camps."
+              "mnemonic": "AHM-T-H: Auto-Hetero. Auto-Made (Plants), Hetero-Eaten (Animals). Two big nutrition camps.",
+              "predictQuestion": "Why is the distinction between 'making your own food' and 'eating someone else's' a deeper categorisation than 'plant vs animal'?",
+              "whyChain": [
+                "Autotrophic nutrition means an organism builds its food from non-living raw materials (air, water, minerals, light). Heterotrophic nutrition means feeding on already-built molecules from other living things.",
+                "Why is this distinction sharper than 'plant vs animal'? Because some plants — Cuscuta, Rafflesia — are actually heterotrophs (they steal food). And some non-plants — algae, photosynthetic bacteria — are autotrophs. The mode of nutrition, not the appearance, is what separates them.",
+                "And why does this matter for an ecosystem? Every food web has an autotroph at the base; everything else funnels through it. If a forest's autotrophs (trees + understory plants) collapse, every animal collapses within months. Class 12 Biology drills this as the 'producer-consumer' pyramid."
+              ]
             },
             {
               "id": "ch01_t01_c06",
@@ -503,7 +533,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Plants need food = plants need ENERGY (for growth, repair, reproduction). They make it themselves; that's the whole point of photosynthesis."
+              "mnemonic": "Plants need food = plants need ENERGY (for growth, repair, reproduction). They make it themselves; that's the whole point of photosynthesis.",
+              "predictQuestion": "If a plant just sits there in the sun, why does it need food at all — what does the food DO inside the plant?",
+              "whyChain": [
+                "Even a still plant is doing work: growing new cells, repairing damaged ones, transporting water against gravity, opening and closing stomata. All of that costs energy, and the energy comes from the sugar made by photosynthesis.",
+                "Why can't the plant just keep absorbing sunlight forever, on demand? Because sunlight is intermittent — clouds, night, winter. The plant stores excess sugar as starch in roots, stems and seeds so it has reserves for darkness and dormant seasons. That's literally why we eat potatoes — we're stealing the plant's energy stash.",
+                "And why is the chemistry the same in plants and humans? Respiration — burning sugar for energy — is identical across both kingdoms. Mitochondria in your cells and mitochondria in a leaf cell run the same reactions. The difference is photosynthesis: only plants can SOURCE the sugar themselves."
+              ]
             },
             {
               "id": "ch01_t01_c07",
@@ -582,7 +618,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Four-Condition checklist for photosynthesis: SOLAR (light) + AGUA (water) + CARBON (CO2) + CHLOROPHYLL (green pigment). Drop any one → process stops."
+              "mnemonic": "Four-Condition checklist for photosynthesis: SOLAR (light) + AGUA (water) + CARBON (CO2) + CHLOROPHYLL (green pigment). Drop any one → process stops.",
+              "predictQuestion": "If you give a plant unlimited sunlight, unlimited water and unlimited CO₂, would its photosynthesis rate keep climbing forever?",
+              "whyChain": [
+                "Photosynthesis needs four things together: sunlight, carbon dioxide, water, and chlorophyll. Take any one to zero and the rate drops to zero — Liebig's law of the minimum.",
+                "Why does the slowest input set the rate, not the average? Because photosynthesis is a chain reaction. Each step uses what the previous step produced. If you starve any step, the products of that step bottleneck everything downstream — extra inputs upstream just pile up.",
+                "And why don't plants get faster forever as you keep raising inputs? Because at saturation, the enzymes themselves become the bottleneck. RuBisCO — the enzyme that fixes CO₂ — runs at a maximum per-second turnover and that's a hard ceiling. Even tropical greenhouses with CO₂ enrichment hit this. Class 11 Biology unpacks the kinetics."
+              ]
             },
             {
               "id": "ch01_t01_c08",
@@ -660,7 +702,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Iodine = brown drop. Starch in leaf = BLUE-BLACK reaction. No starch = stays brown. The colour-change reveals where photosynthesis happened."
+              "mnemonic": "Iodine = brown drop. Starch in leaf = BLUE-BLACK reaction. No starch = stays brown. The colour-change reveals where photosynthesis happened.",
+              "predictQuestion": "A green leaf and a leaf kept in darkness both look the same in white light. How can iodine tell them apart?",
+              "whyChain": [
+                "Iodine turns deep blue-black when it touches starch, and stays yellow-brown when it doesn't. A leaf that's been photosynthesising has stored some sugar as starch in its cells; a leaf that hasn't, has not.",
+                "Why iodine? Iodine molecules slip inside the helical coils of starch (a polymer of glucose) and form a coloured complex. Free glucose doesn't have those coils, so iodine doesn't change colour for simple sugars.",
+                "And why do we boil and alcohol-bleach the leaf before the test? Boiling breaks the cells open so iodine can reach the starch inside. Alcohol strips out the chlorophyll so the blue-black colour shows up clearly against a pale background — otherwise the leaf's green hides the colour change."
+              ]
             },
             {
               "id": "ch01_t01_c09",
@@ -738,7 +786,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Broad = catch more sunlight. Thin = light penetrates all the way through to all chloroplasts. Broad+thin = solar-panel design optimised by evolution."
+              "mnemonic": "Broad = catch more sunlight. Thin = light penetrates all the way through to all chloroplasts. Broad+thin = solar-panel design optimised by evolution.",
+              "predictQuestion": "Why does evolution favour flat, paper-thin leaves instead of thick, cube-shaped ones?",
+              "whyChain": [
+                "Leaves are flat and thin to maximise the surface area exposed to sunlight while minimising the distance gases (CO₂, O₂, water vapour) have to travel between the air and the photosynthetic cells.",
+                "Why does shape matter for a chemical process? Because photosynthesis happens at the cellular interface. The more cells exposed to sun and air per gram of leaf, the more reactions per second. A thick cube of plant tissue would have most of its cells in the dark, wasted.",
+                "And why do some plants break this rule? Desert plants like cacti have THICK, fat leaves (or no leaves at all — the stem photosynthesises) because water loss matters more than maximising photosynthesis. Pine needles are tubular for the same reason: surviving freezing winters trumps optimising light capture."
+              ]
             },
             {
               "id": "ch01_t01_c10",
@@ -817,7 +871,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Green ANYWHERE = photosynthesis happening there. Cactus stems (no leaves), algae mats, even leafy moss. Wherever chlorophyll lives, food gets made."
+              "mnemonic": "Green ANYWHERE = photosynthesis happening there. Cactus stems (no leaves), algae mats, even leafy moss. Wherever chlorophyll lives, food gets made.",
+              "predictQuestion": "Photosynthesis is famous for happening in leaves. Where ELSE on a plant could it happen — and what would that look like?",
+              "whyChain": [
+                "Photosynthesis can happen anywhere chlorophyll is present. Young green stems, cactus pads, even the green husks of unripe fruit photosynthesise. Algae do it in water without leaves at all. So do photosynthetic bacteria.",
+                "Why don't plants just do everything in stems? Because leaves are optimised for the job — flat, large surface area, lots of stomata. Stems are optimised for support and transport. Plants evolved a division of labour: stems hold up the leaves, leaves do the photosynthesis.",
+                "And why does the planet's biggest photosynthesiser have no leaves at all? Phytoplankton — microscopic algae in the ocean — does ~50% of all photosynthesis on Earth. Each one is a single cell with chlorophyll. There are so many of them that despite their tiny size they outproduce all the world's forests."
+              ]
             }
           ],
           "questions": [
@@ -1556,7 +1616,13 @@
                 12
               ],
               "needsHumanReview": false,
-              "mnemonic": "PARA = beside (Greek), SITE = food. PARASITE = lives BESIDE its food. Cuscuta = orange thread wrapping the host. No chlorophyll, no honesty."
+              "mnemonic": "PARA = beside (Greek), SITE = food. PARASITE = lives BESIDE its food. Cuscuta = orange thread wrapping the host. No chlorophyll, no honesty.",
+              "predictQuestion": "Why would a plant that has perfectly good chlorophyll choose to steal food from another plant?",
+              "whyChain": [
+                "Parasitic plants like Cuscuta (amarbel, dodder) attach themselves to a host plant and grow special suckers called haustoria into the host's xylem and phloem. They drain water, minerals, and pre-made sugar — without making any of their own.",
+                "Why give up photosynthesis after evolving it? Because stealing is cheaper. A parasitic plant doesn't need to grow leaves, doesn't need chlorophyll, doesn't need to compete for light. It just needs to find a host. Cuscuta even sniffs the air for chemicals released by its preferred host (tomato plants emit a scent it follows).",
+                "And why doesn't the host kill it? Because the haustoria pierce the host's tissue without triggering a defensive cascade — they mimic the host's own chemistry. Some hosts do fight back with chemical warfare (mustard plants produce chemicals that kill Cuscuta), but most are slow learners and just lose water all season."
+              ]
             },
             {
               "id": "ch01_t02_c02",
@@ -1638,7 +1704,13 @@
                 13
               ],
               "needsHumanReview": false,
-              "mnemonic": "Insect-EATING plants live in NITROGEN-POOR soil. Pitcher plant = jug-trap. Venus flytrap = jaw-trap. Sundew = sticky-trap. All hunt for nitrogen."
+              "mnemonic": "Insect-EATING plants live in NITROGEN-POOR soil. Pitcher plant = jug-trap. Venus flytrap = jaw-trap. Sundew = sticky-trap. All hunt for nitrogen.",
+              "predictQuestion": "Insectivorous plants do photosynthesise. Why would they bother trapping insects on top of that?",
+              "whyChain": [
+                "Pitcher plants, Venus flytraps, and sundews catch insects in cleverly modified leaves. They digest the trapped insect with enzymes and absorb the released nutrients — especially nitrogen, which they can't get enough of from their habitat.",
+                "Why nitrogen specifically? Because they live in bogs, swamps, and acidic soils where nitrogen-fixing bacteria barely work. Without insect prey, an insectivorous plant would starve for nitrogen even with full sun. The insects are a protein supplement, not a meal.",
+                "And why doesn't every plant in a nitrogen-poor swamp do this? Because building elaborate traps costs a lot of energy and water. Most plants in such habitats survive by being slow and modest. Insectivorous plants are the gamble — invest in trapping gear and hope for high yield."
+              ]
             },
             {
               "id": "ch01_t02_c03",
@@ -1717,7 +1789,13 @@
                 13
               ],
               "needsHumanReview": false,
-              "mnemonic": "SAPRO = rotten/dead (Greek sapros). Saprophytes EAT DEATH — fungi on logs, mushrooms in forest litter. The clean-up crew of nature."
+              "mnemonic": "SAPRO = rotten/dead (Greek sapros). Saprophytes EAT DEATH — fungi on logs, mushrooms in forest litter. The clean-up crew of nature.",
+              "predictQuestion": "Mushrooms grow without sunlight. Where could they possibly be getting energy from?",
+              "whyChain": [
+                "Saprophytes — most fungi and many bacteria — feed on dead and decaying organic matter. They secrete digestive enzymes onto the substrate, breaking down complex molecules into simple ones they can absorb.",
+                "Why aren't they autotrophs? They don't have chlorophyll, so they can't tap sunlight. But the chemical energy locked in a fallen log is enormous — every cellulose molecule is a stored sugar polymer. A saprophyte that can break cellulose down has a calorie buffet at its doorstep.",
+                "And why don't they need to bother HUNTING like animals? Because the food is already dead and staying still. The fungal body — a hidden network of hyphae — spreads through the substrate and digests it from inside. Mushrooms (the visible part) are just the reproductive organ, like fruit on a hidden tree."
+              ]
             },
             {
               "id": "ch01_t02_c04",
@@ -1798,7 +1876,13 @@
                 16
               ],
               "needsHumanReview": false,
-              "mnemonic": "SYM = together (Greek syn), BIO = life. SYMBIOSIS = living together. Win-win partnership: lichen (fungus+alga), Rhizobium-plant, clownfish-anemone."
+              "mnemonic": "SYM = together (Greek syn), BIO = life. SYMBIOSIS = living together. Win-win partnership: lichen (fungus+alga), Rhizobium-plant, clownfish-anemone.",
+              "predictQuestion": "A lichen is two organisms living as one. Why doesn't one of them just take advantage of the other?",
+              "whyChain": [
+                "Symbiotic nutrition is when two organisms live together and both benefit. A lichen is the classic example — an alga (photosynthesises, gives sugar to the fungus) plus a fungus (holds water, gives shelter to the alga). Neither survives alone in harsh conditions.",
+                "Why doesn't one cheat? Because cheating breaks the partnership and both die. Evolution selects strongly against defectors when survival depends on cooperation. The fungus literally builds a protective shell around the alga; the alga gives the fungus a steady food supply. Both win, neither can leave.",
+                "And why is symbiosis common in extreme environments? In rich environments, organisms can go solo. In deserts, frozen tundra, and bare rock, the only way to survive is to combine specialisations. That's why lichens colonise the harshest rock faces on Earth — they're the joint venture of two organisms specialised for different parts of an impossible job."
+              ]
             },
             {
               "id": "ch01_t02_c05",
@@ -1878,7 +1962,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Symbiosis = BOTH benefit. Parasitism = ONE benefits, ONE loses. Same proximity, opposite outcomes."
+              "mnemonic": "Symbiosis = BOTH benefit. Parasitism = ONE benefits, ONE loses. Same proximity, opposite outcomes.",
+              "predictQuestion": "Both symbiosis and parasitism are about two organisms living closely together. What's the deep difference between them?",
+              "whyChain": [
+                "Symbiosis is a partnership where both organisms benefit; parasitism is a one-way relationship where one benefits and the other is harmed. The biology is similar at first — close physical contact, exchange of substances — but the accounting is opposite.",
+                "Why is the line sometimes blurry? Because some relationships shift over evolutionary time. The mitochondria in your cells started as free-living bacteria, became parasites, then became permanent symbionts. The same lineage can flip the relationship if conditions change.",
+                "And why does this matter for medicine? Many human diseases are parasites — malaria, hookworm, tapeworm. Many human friends are symbionts — gut bacteria that make vitamin K, skin bacteria that fight off infections. Both groups live INSIDE us; the difference is whether the accounting is mutual or zero-sum."
+              ]
             },
             {
               "id": "ch01_t02_c06",
@@ -1956,7 +2046,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Three insect-trap designs: PITCHER (slip-and-drown), VENUS FLYTRAP (snap-shut), SUNDEW (sticky tentacles). Convergent evolution — same goal, different traps."
+              "mnemonic": "Three insect-trap designs: PITCHER (slip-and-drown), VENUS FLYTRAP (snap-shut), SUNDEW (sticky tentacles). Convergent evolution — same goal, different traps.",
+              "predictQuestion": "Why have so many different plants — pitcher plants, Venus flytraps, sundews, bladderworts — all independently evolved to eat insects?",
+              "whyChain": [
+                "There are at least five distinct designs of insectivorous plant traps: pitfall (pitcher), snap (Venus flytrap), sticky (sundew), suction (bladderwort), and lobster-pot (Genlisea). Each one evolved separately, in different plant families, on different continents.",
+                "Why so many INDEPENDENT solutions? Because nitrogen-poor swamps are a recurring environment — and any plant that can supplement nitrogen wins. Evolution finds the same problem and the same answer over and over, even if the mechanics differ.",
+                "And why are most insectivorous plants small? Because the energy gained from insects is modest — supplementing nitrogen, not powering growth. A massive tree can't survive on bugs; it would need millions per day. The economics work out for small plants in poor soils, not big plants anywhere."
+              ]
             },
             {
               "id": "ch01_t02_c07",
@@ -2033,7 +2129,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Saprotrophs = nature's recyclers. Fungi + bacteria turn dead bodies into soil nutrients. Without them, dead matter would pile up and nutrients would lock away forever."
+              "mnemonic": "Saprotrophs = nature's recyclers. Fungi + bacteria turn dead bodies into soil nutrients. Without them, dead matter would pile up and nutrients would lock away forever.",
+              "predictQuestion": "If saprotrophs only eat dead things, why are they critical for keeping ecosystems alive?",
+              "whyChain": [
+                "Saprotrophs — fungi and decomposer bacteria — break down dead plants and animals, releasing the locked nutrients (nitrogen, phosphorus, carbon) back into the soil where new plants can use them. Without them, dead matter would pile up forever.",
+                "Why doesn't dead matter just dissolve on its own? Because the molecules (cellulose, lignin, proteins) are too stable. They need enzymes to crack open, and those enzymes are expensive to make. Saprotrophs have specialised over millions of years to be the planet's recycling crew.",
+                "And why is the nitrogen cycle the most critical part? Because plants can't fix nitrogen from the air themselves (only certain bacteria can). They need it returned to the soil from dead organisms. Take saprotrophs away and within a few decades every ecosystem collapses for lack of nitrogen, even if soil minerals stay intact."
+              ]
             }
           ],
           "questions": [
@@ -2440,7 +2542,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Nitrogen builds PROTEINS and DNA — the structural + genetic stuff of life. Plants can't get N from air (N2 too inert); they need it from soil as nitrate."
+              "mnemonic": "Nitrogen builds PROTEINS and DNA — the structural + genetic stuff of life. Plants can't get N from air (N2 too inert); they need it from soil as nitrate.",
+              "predictQuestion": "Plants are full of carbon, oxygen, and hydrogen — but they also crave nitrogen. Why nitrogen, not something else?",
+              "whyChain": [
+                "Plants need nitrogen to build proteins, DNA, RNA, and chlorophyll itself. Every amino acid contains a nitrogen atom; every nucleotide has multiple. Without nitrogen, no protein synthesis, no growth, no genetic copying — and no chlorophyll, ironically.",
+                "Why isn't there enough in the air? The air is 78% nitrogen (N₂), but plants can't break the strong triple bond in N₂ molecules. They need nitrogen in a 'fixed' form — ammonia (NH₃), nitrate (NO₃⁻), or nitrite (NO₂⁻). Only certain bacteria can do the fixing.",
+                "And why is this the rate-limiting nutrient for farming worldwide? Because nitrogen-fixing bacteria run slowly. The Green Revolution's success rested on industrial nitrogen fixation — the Haber-Bosch process turning N₂ into ammonia in factories. Class 11 chemistry unpacks how Haber-Bosch makes most of the world's fertiliser today."
+              ]
             },
             {
               "id": "ch01_t03_c02",
@@ -2519,7 +2627,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "Soil renews via: (1) decomposers recycling dead matter, (2) Rhizobium fixing N from air, (3) lightning fixing N to nitrate, (4) farmer adding fertiliser."
+              "mnemonic": "Soil renews via: (1) decomposers recycling dead matter, (2) Rhizobium fixing N from air, (3) lightning fixing N to nitrate, (4) farmer adding fertiliser.",
+              "predictQuestion": "Farmers grow the same crop year after year. What happens to the soil — and what tricks bring it back to life?",
+              "whyChain": [
+                "Each crop removes specific nutrients from the soil. Wheat takes lots of nitrogen, potatoes take potassium, sugarcane takes phosphorus. Year after year of the same crop on the same field strips one mineral and the yield collapses.",
+                "Why do farmers rotate crops then? Because different crops take different nutrients AND legumes (peas, beans, gram) host nitrogen-fixing bacteria in their root nodules that REPLENISH soil nitrogen. Wheat → moong → wheat → moong stays in balance forever; wheat → wheat → wheat depletes soil within five years.",
+                "And why is chemical fertiliser controversial? It works fast but doesn't replace organic matter — the dead-plant-and-bug debris that holds soil together. Decades of pure NPK fertiliser without compost or rotation turn soil into chemical-dependent dust. Sustainable farming combines both: rotation + occasional compost + targeted fertiliser."
+              ]
             },
             {
               "id": "ch01_t03_c03",
@@ -2598,7 +2712,13 @@
                 3
               ],
               "needsHumanReview": false,
-              "mnemonic": "FOOD CHAIN START = autotrophs (plants). Energy enters at producers; everything else (herbivores, carnivores, decomposers) is downstream. No plants → no food chain."
+              "mnemonic": "FOOD CHAIN START = autotrophs (plants). Energy enters at producers; everything else (herbivores, carnivores, decomposers) is downstream. No plants → no food chain.",
+              "predictQuestion": "Why are plants ALWAYS at the bottom of every food web on Earth — never the top?",
+              "whyChain": [
+                "Plants are the first link in every food chain because only they (and algae and some bacteria) can convert sunlight into chemical energy. Every other organism — grasshopper, deer, tiger, eagle — is consuming energy that a plant captured first.",
+                "Why does the 10% rule from Class 7 Ecology lock plants to the base? Because each step up the chain loses ~90% of the energy as heat. Plants capture solar energy; herbivores get 10% of that; carnivores get 10% of THAT. A tiger lives on the energy of thousands of plants indirectly. Plants must outnumber everything else.",
+                "And why has this never been broken in 3.5 billion years of life? Because thermodynamics forbids it. The second law: energy disperses. The only meaningful energy input to a biosphere is sunlight (plus tiny amounts from geothermal vents). Whoever captures sunlight first sits at the base; whoever's at the top survives only as long as the bottom holds."
+              ]
             },
             {
               "id": "ch01_t03_c04",
@@ -2673,7 +2793,13 @@
                 15
               ],
               "needsHumanReview": false,
-              "mnemonic": "Plants release CHEMICAL signals via roots + leaves — distress hormones when attacked, marker chemicals to attract pollinators. Silent green chemical web."
+              "mnemonic": "Plants release CHEMICAL signals via roots + leaves — distress hormones when attacked, marker chemicals to attract pollinators. Silent green chemical web.",
+              "predictQuestion": "Plants can't move or talk. Yet a tree under attack can warn its neighbours. How is that even possible?",
+              "whyChain": [
+                "Plants release airborne chemicals — volatile organic compounds — when attacked by herbivores. Nearby plants of the same species detect these chemicals and prepare their own chemical defences in advance. It's a real, measurable warning system, just one we can't smell.",
+                "Why would plants help their neighbours? Because in a stand of the same species (a forest, a maize field, a tomato patch), the neighbours are often kin. Helping them survive helps your own genes propagate. Some species are also literally connected underground through fungal mycorrhizal networks that pass nutrients and signals plant-to-plant.",
+                "And why didn't humans notice this until the 1980s? Because the chemicals are released in tiny quantities and we lacked the equipment to detect them. Once gas chromatography got cheap, biologists started finding 'plant talk' everywhere. Class 11 Biology now treats it as standard plant physiology. The forest is gossiping; we just couldn't hear it before."
+              ]
             }
           ],
           "questions": [
@@ -3584,7 +3710,231 @@
           "parentConceptId": "ch01_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch01_t01_c02",
+            "label": "Photosynthesis",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.42
+          },
+          {
+            "id": "ch01_t01_c03",
+            "label": "Chlorophyll",
+            "kind": "concept",
+            "x": 0.22,
+            "y": 0.3
+          },
+          {
+            "id": "ch01_t01_c04",
+            "label": "Stomata + plumbing",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.62
+          },
+          {
+            "id": "ch01_t01_c07",
+            "label": "Four conditions",
+            "kind": "concept",
+            "x": 0.68,
+            "y": 0.3
+          },
+          {
+            "id": "ch01_t01_c09",
+            "label": "Broad-and-thin leaves",
+            "kind": "concept",
+            "x": 0.78,
+            "y": 0.45
+          },
+          {
+            "id": "ch01_t01_c01",
+            "label": "Autotrophs vs heterotrophs",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.1
+          },
+          {
+            "id": "ch01_t03_c03",
+            "label": "First link in food chain",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.62
+          },
+          {
+            "id": "ch01_t02_c01",
+            "label": "Parasites (Cuscuta)",
+            "kind": "concept",
+            "x": 0.12,
+            "y": 0.55
+          },
+          {
+            "id": "ch01_t02_c02",
+            "label": "Insectivores",
+            "kind": "concept",
+            "x": 0.08,
+            "y": 0.78
+          },
+          {
+            "id": "ch01_t02_c03",
+            "label": "Saprophytes",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.88
+          },
+          {
+            "id": "ch01_t02_c04",
+            "label": "Symbiosis",
+            "kind": "concept",
+            "x": 0.42,
+            "y": 0.85
+          },
+          {
+            "id": "ch01_t03_c01",
+            "label": "Plants need nitrogen",
+            "kind": "concept",
+            "x": 0.65,
+            "y": 0.78
+          },
+          {
+            "id": "ch10:ch10_t02_c02",
+            "label": "Respiration (Ch.10)",
+            "kind": "crossChapter",
+            "x": 0.88,
+            "y": 0.18
+          },
+          {
+            "id": "ch17:ch17_t01_c02",
+            "label": "Why forests matter (Ch.17)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.82
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch01_t01_c03",
+            "to": "ch01_t01_c02",
+            "label": "absorbs light for"
+          },
+          {
+            "id": "e02",
+            "from": "ch01_t01_c04",
+            "to": "ch01_t01_c02",
+            "label": "transports inputs"
+          },
+          {
+            "id": "e03",
+            "from": "ch01_t01_c07",
+            "to": "ch01_t01_c02",
+            "label": "required for"
+          },
+          {
+            "id": "e04",
+            "from": "ch01_t01_c09",
+            "to": "ch01_t01_c02",
+            "label": "optimised for"
+          },
+          {
+            "id": "e05",
+            "from": "ch01_t01_c01",
+            "to": "ch01_t01_c02",
+            "label": "defines"
+          },
+          {
+            "id": "e06",
+            "from": "ch01_t01_c02",
+            "to": "ch01_t03_c03",
+            "label": "powers"
+          },
+          {
+            "id": "e07",
+            "from": "ch01_t01_c02",
+            "to": "ch10:ch10_t02_c02",
+            "label": "reverse of"
+          },
+          {
+            "id": "e08",
+            "from": "ch01_t03_c01",
+            "to": "ch01_t01_c03",
+            "label": "builds"
+          },
+          {
+            "id": "e09",
+            "from": "ch01_t03_c01",
+            "to": "ch01_t01_c02",
+            "label": "needed for"
+          },
+          {
+            "id": "e10",
+            "from": "ch01_t02_c03",
+            "to": "ch01_t03_c01",
+            "label": "recycles"
+          },
+          {
+            "id": "e11",
+            "from": "ch01_t02_c01",
+            "to": "ch01_t01_c01",
+            "label": "exception to"
+          },
+          {
+            "id": "e12",
+            "from": "ch01_t02_c02",
+            "to": "ch01_t03_c01",
+            "label": "supplements"
+          },
+          {
+            "id": "e13",
+            "from": "ch01_t02_c04",
+            "to": "ch01_t02_c01",
+            "label": "contrast with"
+          },
+          {
+            "id": "e14",
+            "from": "ch01_t02_c04",
+            "to": "ch01_t01_c02",
+            "label": "extends"
+          },
+          {
+            "id": "e15",
+            "from": "ch01_t03_c03",
+            "to": "ch17:ch17_t01_c02",
+            "label": "scales to"
+          },
+          {
+            "id": "e16",
+            "from": "ch01_t01_c02",
+            "to": "ch10:ch10_t02_c02",
+            "label": null
+          },
+          {
+            "id": "e17",
+            "from": "ch01_t02_c03",
+            "to": "ch01_t03_c03",
+            "label": "closes"
+          },
+          {
+            "id": "e18",
+            "from": "ch01_t02_c02",
+            "to": "ch01_t01_c01",
+            "label": "hybrid of"
+          },
+          {
+            "id": "e19",
+            "from": "ch01_t01_c04",
+            "to": "ch01_t03_c01",
+            "label": "absorbs from soil"
+          },
+          {
+            "id": "e20",
+            "from": "ch01_t01_c01",
+            "to": "ch01_t02_c01",
+            "label": "vs"
+          }
+        ]
+      }
     },
     {
       "id": "ch02",

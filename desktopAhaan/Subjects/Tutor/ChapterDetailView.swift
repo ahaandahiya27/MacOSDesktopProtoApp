@@ -21,6 +21,7 @@ struct ChapterDetailView: View {
         case article(ArticleEntry)
         case glossary
         case insideTheLeafTour       // Ch.1 pilot — Phase 2B
+        case ch1ConceptMap           // Ch.1 pilot — Phase 2E
 
         var id: String {
             switch self {
@@ -34,6 +35,8 @@ struct ChapterDetailView: View {
                 return "glossary"
             case .insideTheLeafTour:
                 return "insideTheLeafTour"
+            case .ch1ConceptMap:
+                return "ch1ConceptMap"
             }
         }
     }
@@ -95,51 +98,48 @@ struct ChapterDetailView: View {
         if chapter.id == "ch01" {
             BuildAPlantSandbox(chapterId: chapter.id)
             insideTheLeafTourCTA
+            ch1ConceptMapCTA
         }
+    }
+
+    /// CTA card that opens Ch1ConceptMap as a sheet (Phase 2E).
+    private var ch1ConceptMapCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .ch1ConceptMap }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "point.3.connected.trianglepath.dotted",
+                title: "See the connections",
+                subtitle: "Visualise how this chapter's ideas link together — and where they reach into Ch.10 and Ch.17.",
+                gradient: [
+                    Color(red: 0.40, green: 0.30, blue: 0.70),
+                    Color(red: 0.20, green: 0.45, blue: 0.65)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("See the connections — concept map for this chapter")
+        .accessibilityHint("Opens a sheet showing how the chapter's concepts link to each other and to other chapters.")
     }
 
     /// CTA card that opens the InsideTheLeafTour sheet. Ch.1 pilot only;
     /// the parent gate (`chapter.id == "ch01"`) keeps this off Ch.2..19.
+    /// Visual built from `Ch1PilotCTACard` (sister file) so the LOC
+    /// stays under the 600 ceiling here.
     private var insideTheLeafTourCTA: some View {
         Button {
             DispatchQueue.main.async { presentedSheet = .insideTheLeafTour }
         } label: {
-            HStack(spacing: 14) {
-                Image(systemName: SFSymbolCompat.name("magnifyingglass.circle.fill"))
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-                    .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Inside the Leaf")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                    Text("Shrink yourself to a stoma, then to a chloroplast, then to a thylakoid — five-stop guided journey.")
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.92))
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 0)
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.white.opacity(0.85))
-                    .accessibilityHidden(true)
-            }
-            .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.18, green: 0.50, blue: 0.42),
-                                Color(red: 0.10, green: 0.30, blue: 0.55)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
+            Ch1PilotCTACard(
+                symbol: "magnifyingglass.circle.fill",
+                title: "Inside the Leaf",
+                subtitle: "Shrink yourself to a stoma, then to a chloroplast, then to a thylakoid — five-stop guided journey.",
+                gradient: [
+                    Color(red: 0.18, green: 0.50, blue: 0.42),
+                    Color(red: 0.10, green: 0.30, blue: 0.55)
+                ]
             )
-            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .pointingCursor()
@@ -346,6 +346,12 @@ struct ChapterDetailView: View {
             case .insideTheLeafTour:
                 InsideTheLeafTour(
                     chapterId: chapter.id,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .ch1ConceptMap:
+                Ch1ConceptMap(
+                    pack: pack,
+                    chapter: chapter,
                     onDismiss: { presentedSheet = nil }
                 )
             }

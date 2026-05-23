@@ -60,4 +60,12 @@ enum AppStorageKeys {
     /// on the Go Deeper disclosure has been visible. Hits 3 → badge stops
     /// showing on next chapter open. Stored as Int.
     static let goDeeperNewBadgeShownCount = "goDeeperNewBadgeShownCount"
+
+    // MARK: - Ch.1 pilot (added 2026-05-23)
+
+    /// "Inquiry-first" learning mode. When on, concept cards show a
+    /// `predictQuestion` prompt + a guess field BEFORE the body. The
+    /// kid hypothesises before reading. Default: off. Persisted globally
+    /// because the kid's learning preference shouldn't reset per session.
+    static let inquiryFirstMode = "inquiryFirstMode"
 }
