@@ -27157,6 +27157,552 @@
         154,
         155,
         156
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch12_rw01",
+          "title": "Mango blossoms and the honey bee economy",
+          "body": "Every March-April, mango trees across India erupt with tiny cream-coloured flowers. Each flower lasts a day. Honey bees, hover flies, and beetles visit them to drink nectar — and unknowingly carry pollen from flower to flower. A single mango tree can have 5000+ flowers; only ~1% of these become fruit (the rest fall off un-pollinated). Indian beekeepers truck their hives to mango orchards in season — paid by farmers because bees double the fruit set. Mango productivity literally depends on bees being healthy.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_rw02",
+          "title": "Coconut — the seed that crosses oceans",
+          "body": "A coconut is a single giant seed wrapped in a thick fibrous husk + waterproof shell. It can float in seawater for months without rotting. This is why coconut palms naturally line tropical coasts worldwide — including the entire Kerala and Andhra coastline. The coconut that fell off a tree in Sri Lanka could wash up in Lakshadweep, germinate where it lands, and start a new tree. Seed dispersal by ocean current.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_rw03",
+          "title": "Banana — the fruit with no seeds (and why)",
+          "body": "Slice a banana. You see tiny dark dots — vestigial seeds, non-functional. Wild bananas have hard seeds the size of peppercorns, totally inedible. Modern cultivated banana (the Cavendish you buy) was bred over centuries to have no functional seeds — sweeter, easier to eat. But this means bananas can't reproduce sexually. Every banana tree on Earth comes from cutting and replanting a SUCKER (an underground side-shoot). Every Cavendish banana is genetically identical to every other — a single clone, vulnerable to one disease taking out all bananas worldwide.",
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        },
+        {
+          "id": "ch12_rw04",
+          "title": "Touch-me-not plant — explosive seed pods",
+          "body": "Mimosa pudica (chui-mui in Hindi) grows wild across India. Touch its leaves and they fold (a different defence). But its pea-pod-like seed pods do something even better: when they dry, they suddenly POP open with enough force to fling seeds 1-2 metres. The pod walls coil under tension while drying; one disturbance triggers release. Seed dispersal by explosion. The wild balsam (gulmehndi) does the same — touch its ripe pod and it bursts.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_rw05",
+          "title": "Potato 'eyes' — vegetative propagation in your kitchen",
+          "body": "Leave a potato in a cupboard for a week. You'll see small bumps on it sprout — those are the 'eyes', and each one is a tiny new plant. Cut a potato so each piece has at least one eye, plant the piece in soil, water it — within weeks, leaves emerge. A full potato plant from one piece. Every potato dish you eat traces back to a clone of a previous potato. Indian potato cultivars (Kufri Jyoti, Kufri Pukhraj) are propagated this way at Indian Agricultural Research Institute.",
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch12_xc01",
+          "title": "Class 10 — How Do Organisms Reproduce?",
+          "body": "Class 10 expands on this chapter with: gamete formation in detail, double fertilisation in flowering plants (one pollen tube delivers two sperm cells — one fertilises egg, another forms food storage), and the difference between gymnosperms (no flowers, naked seeds) and angiosperms (flowers).",
+          "targetExam": "class10",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_xc02",
+          "title": "NEET — Sexual Reproduction in Flowering Plants",
+          "body": "An entire NEET Biology chapter is devoted to this. You'll meet: microsporogenesis (pollen formation), megasporogenesis (egg formation), the embryo sac structure (8 nuclei), and hybridisation techniques used in agriculture. The Class 7 'flower has stamens and pistil' becomes a 30-page chapter.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_xc03",
+          "title": "Class 11 Biology — Sexual Reproduction in Plants",
+          "body": "Class 11 starts with the same basics (Class 7 is the seed). Then it expands into pre-fertilisation events (gamete formation, transfer), fertilisation, and post-fertilisation (embryo development, fruit/seed formation, dispersal mechanisms). Plus apomixis, polyembryony, and the genetics behind heterosis (hybrid vigour).",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c02"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch12_mn01",
+          "acronym": "PSPC",
+          "unpacking": "P-ollen lands on Stigma → grows a tube down Style → reaches Carpel/ovary → fertilises egg. Four-step trip from anther to ovary.",
+          "context": "Pollination to fertilisation.",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_mn02",
+          "acronym": "WWAE",
+          "unpacking": "Seed dispersal modes: W-ind (dandelion, drumstick), W-ater (coconut, lotus), A-nimal (mango, berries), E-xplosion (balsam, touch-me-not). Four ways for a seed to leave home.",
+          "context": "Seed dispersal methods.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_mn03",
+          "acronym": "BCG",
+          "unpacking": "Asexual reproduction modes in plants: B-udding (in hydra animals), Cuttings (rose, sugarcane), G-rafting (mango, rose). Animal asexual: also Fragmentation (planaria), Binary fission (amoeba).",
+          "context": "Asexual reproduction types.",
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch12_ms01",
+          "kidsThink": "All seeds need soil to grow.",
+          "actually": "Seeds need water + warmth + (eventually) light. Soil is just convenient. A bean seed germinates fine on a wet cotton ball on a plate. Even desert seeds wait years for rain — soil's role is mostly to anchor and supply minerals AFTER germination. The seed itself contains all the energy and minerals needed for the first few days. Indian agricultural laboratories grow plants in HYDROPONICS — no soil at all, just nutrient-rich water.",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_ms02",
+          "kidsThink": "Fruits and vegetables are biologically different.",
+          "actually": "Botanically, a 'fruit' is what develops from the ovary of a flower after fertilisation — so it always contains seeds. By that strict definition: tomato, brinjal, capsicum, cucumber, pumpkin, lady's finger — all FRUITS. 'Vegetable' is a kitchen category, not a botanical one. 'Vegetables' are typically leaves (palak), roots (carrot), stems (potato is actually a stem), flowers (cauliflower). The mango and the tomato are botanically the same category.",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_ms03",
+          "kidsThink": "All flowers are colourful and have nectar.",
+          "actually": "Many flowers are tiny, green, and smelly — wind-pollinated flowers like grasses, rice, wheat, maize. They don't NEED bright colours because they're not attracting animals; wind doesn't care about colour. Maize tassels at the top of the plant ARE flowers — many people don't recognise them. India's rice and wheat fields are full of flowers nobody photographs.",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_ms04",
+          "kidsThink": "Sexual reproduction requires two parents (male + female animals).",
+          "actually": "In plants, ONE flower can have BOTH male (stamens) and female (pistil) parts. This is called a 'bisexual flower' — hibiscus, mustard, mango are examples. Some flowers can even self-pollinate. Some plants are 'monoecious' — male and female flowers on the same plant (maize). Sex in plants is much more flexible than in animals.",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_ms05",
+          "kidsThink": "Asexual reproduction in plants means no parents.",
+          "actually": "Asexual reproduction = ONE parent, not zero. The new plant is a genetic copy (clone) of that one parent. Sexual reproduction needs TWO parents (or two halves of one bisexual parent). The advantage of asexual: fast, no need to find a partner. The disadvantage: no variation — a disease that kills one kills the whole clone population. This is why a banana disease threatens all bananas; they're clones.",
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch12_nq01",
+          "question": "Fill in the blanks: (a) Production of new individuals from the vegetative part of a parent is called ______. (b) A flower may have either the male or the female reproductive parts. Such a flower is called ______. (c) The transfer of pollen grains from the anther to the stigma of the same or another flower is called ______. (d) The fusion of male and female gametes is termed as ______. (e) Seed dispersal takes place by means of ______, ______, and ______.",
+          "modelAnswer": "(a) vegetative propagation (b) unisexual (c) pollination (d) fertilisation (e) wind, water, and animals (some also accept explosion).",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c01",
+            "ch12_t03_c02"
+          ]
+        },
+        {
+          "id": "ch12_nq02",
+          "question": "Describe the different methods of asexual reproduction. Give examples.",
+          "modelAnswer": "Five main asexual methods. (1) Budding — a small bud grows on parent, separates as new individual. Example: yeast, hydra. (2) Fragmentation — body breaks into pieces; each piece grows into a new individual. Example: spirogyra. (3) Vegetative propagation — new plants from roots/stem/leaves of parent. Examples: potato (tuber), onion (bulb), bryophyllum (leaf), ginger (rhizome), sugarcane (stem cuttings). (4) Spore formation — parent produces spores in tough containers; each spore can grow into new individual. Example: bread mould (rhizopus), fern. (5) Binary fission — single cell splits into two. Example: amoeba.",
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        },
+        {
+          "id": "ch12_nq03",
+          "question": "Explain what you understand by sexual reproduction.",
+          "modelAnswer": "Sexual reproduction is when TWO gametes (sex cells) fuse to produce a new individual. In plants, the male gamete is inside the pollen grain (produced in anthers); the female gamete is the egg (inside the ovule in the ovary). Pollination transfers pollen to stigma; the pollen grows a tube down through the style to reach the ovary; the male and female gametes fuse — that's fertilisation. The fertilised egg becomes a seed. The seed contains genetic material from BOTH parents — so the offspring is similar but not identical to either parent. This genetic mixing is the great advantage of sexual reproduction.",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_nq04",
+          "question": "State the main difference between sexual and asexual reproduction.",
+          "modelAnswer": "Sexual reproduction needs TWO parents (or two sex cells). Asexual needs only ONE. Sexual produces offspring that are GENETICALLY DIFFERENT from either parent (mix of both). Asexual produces clones — exact copies of the parent. Sexual is slow and energetically expensive; asexual is fast and cheap. Sexual generates variation (helps species adapt to change); asexual maintains a successful blueprint exactly. Most plants and animals use BOTH, depending on conditions.",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t03_c01"
+          ]
+        },
+        {
+          "id": "ch12_nq05",
+          "question": "Sketch the reproductive parts of a flower.",
+          "modelAnswer": "A typical flower has: (1) Petals — coloured, attract pollinators. (2) Sepals — green, protect bud. (3) Stamens (male) — each has a stalk (filament) topped by an anther where pollen forms. (4) Pistil/Carpel (female) — has stigma (sticky top), style (stalk), ovary (base, containing ovules with female gametes). A bisexual flower has both stamens and pistil. After pollination and fertilisation, the ovary swells into a fruit and ovules become seeds.",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_nq06",
+          "question": "Explain the difference between self-pollination and cross-pollination.",
+          "modelAnswer": "Self-pollination: pollen from a flower's own anther lands on its own stigma (or another flower of the same plant). The offspring is genetically very similar to the parent. Found in peas, wheat, rice. Cross-pollination: pollen from one plant's anther reaches another (genetically different) plant's stigma. The offspring has mixed genes from two different parents — more variation. Found in mango, papaya, cucumber. Cross-pollination requires a vector (insect, bird, wind, water); self-pollination doesn't. Most cultivated cereal crops self-pollinate (predictable yield); fruit trees cross-pollinate (better fruit set).",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_nq07",
+          "question": "How does the process of fertilisation take place in flowers?",
+          "modelAnswer": "After pollen reaches the stigma, it absorbs sticky stigma fluid and germinates: a long thin pollen tube grows down through the style toward the ovary. The pollen tube carries two male gametes inside it. When it reaches an ovule, it releases the gametes. One male gamete fuses with the egg cell — that's fertilisation. The fertilised egg (zygote) divides repeatedly to form the embryo of a new plant, which is packaged into a seed. The other male gamete fuses with two female cells to form the food storage tissue (endosperm) inside the seed. Both fusions together: 'double fertilisation' — unique to flowering plants.",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_nq08",
+          "question": "Discuss how seeds get dispersed by wind, water, and animals.",
+          "modelAnswer": "WIND: lightweight, often with wings or parachutes. Drumstick seeds have papery wings; dandelion seeds have fluffy parachutes; cotton seeds have cotton fibres. Wind carries them far. WATER: floating seeds with waterproof coats. Coconut floats in seawater; lotus seeds float on ponds. They can travel rivers, oceans, then germinate where they land. ANIMALS: some seeds are STICKY or have hooks (e.g., the Xanthium 'cocklebur') and cling to animal fur. Others are inside FRUITS that animals eat — animal digests the fruit but the seed passes through intact, gets deposited elsewhere with natural manure. Mango seeds eaten by elephants this way travel kilometres.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch12_gl01",
+          "term": "Pollination",
+          "definition": "The transfer of pollen from anther to stigma.",
+          "example": "Mango flowers are bee-pollinated; rice flowers are wind-pollinated.",
+          "hindiTerm": "परागण",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl02",
+          "term": "Fertilisation",
+          "definition": "The fusion of male and female gametes to form a zygote.",
+          "example": "After pollen tube reaches the ovule, the male gamete fuses with the egg.",
+          "hindiTerm": "निषेचन",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl03",
+          "term": "Stamen",
+          "definition": "The male part of a flower, with filament and anther; produces pollen.",
+          "example": "A hibiscus flower has 5 stamens visible inside.",
+          "hindiTerm": "पुंकेसर",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl04",
+          "term": "Pistil / Carpel",
+          "definition": "The female part of a flower — stigma, style, and ovary together.",
+          "example": "A mustard flower's pistil sits in the centre, with stamens around it.",
+          "hindiTerm": "स्त्रीकेसर",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl05",
+          "term": "Ovule",
+          "definition": "The structure inside an ovary that contains the female gamete; becomes a seed after fertilisation.",
+          "example": "A pea pod is a fruit; the peas inside are seeds, each from one ovule.",
+          "hindiTerm": "बीजांड",
+          "relatedConceptIds": [
+            "ch12_t01_c02",
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl06",
+          "term": "Vegetative propagation",
+          "definition": "Production of new plants from vegetative parts (root, stem, leaf) without seeds.",
+          "example": "Banana, potato, sugarcane, and rose are all grown this way commercially.",
+          "hindiTerm": "कायिक प्रवर्धन",
+          "relatedConceptIds": [
+            "ch12_t03_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl07",
+          "term": "Asexual reproduction",
+          "definition": "Reproduction involving only one parent; offspring are clones.",
+          "example": "Amoeba splits in two; yeast buds off; bryophyllum grows new plantlets on leaf edges.",
+          "hindiTerm": "अलैंगिक प्रजनन",
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl08",
+          "term": "Pollen tube",
+          "definition": "A long tube that grows from a pollen grain, through the style, to deliver the male gamete to the ovule.",
+          "example": "A pollen tube can be many times longer than the pollen grain itself.",
+          "hindiTerm": "परागनली",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl09",
+          "term": "Seed dispersal",
+          "definition": "Movement of seeds away from the parent plant by wind, water, animals, or explosion.",
+          "example": "A coconut floats across the Indian Ocean to start a new tree.",
+          "hindiTerm": "बीज प्रकीर्णन",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl10",
+          "term": "Hybridisation",
+          "definition": "Cross-pollination of two different varieties to produce offspring with combined traits.",
+          "example": "The Green Revolution wheat varieties were hybrids of Indian and Mexican wheat strains.",
+          "hindiTerm": "संकरण",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch12_mp01",
+          "emoji": "🌱",
+          "title": "Bean seed time-lapse — germination day by day",
+          "needs": [
+            "A handful of moong / rajma beans soaked overnight",
+            "2 plastic cups",
+            "Cotton wool or tissue paper",
+            "Water"
+          ],
+          "steps": [
+            "Line the cups with damp cotton.",
+            "Place 4-5 beans in each, between cotton and the cup wall (visible from outside).",
+            "Keep moist — sprinkle water every day, never let dry.",
+            "Place one cup in light, one in a dark cupboard.",
+            "Observe and draw what you see every morning for 7 days.",
+            "Compare: which grew faster? Which is greener?"
+          ],
+          "expectedObservation": "Day 1: nothing visible. Day 2: tiny root pokes out. Day 3: shoot emerges; root branches. Day 4-5: shoot up, first leaves opening. Day 7: small plant! Cup in dark grows TALLER (looking for light) but is pale yellow — no chlorophyll without light.",
+          "whyItWorks": "Seeds contain everything to start a new plant — embryo + food reserve. Water triggers germination. Roots grow toward gravity (geotropism); shoots grow against gravity. Leaves develop chlorophyll only with light. The dark experiment shows light is essential for chlorophyll, not for growth itself.",
+          "estimatedMinutes": 10080,
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_mp02",
+          "emoji": "🌿",
+          "title": "Money plant cuttings — see vegetative propagation in action",
+          "needs": [
+            "A money plant (devil's ivy) in your house or neighbour's house",
+            "Scissors",
+            "A clear bottle of water",
+            "Sunny window"
+          ],
+          "steps": [
+            "Cut a 15 cm stem section with at least 2 leaves and 2 'nodes' (the bumps where leaves attach).",
+            "Remove the lower leaf; the bare node should go underwater.",
+            "Put the cutting in the bottle of water — node submerged, leaves above.",
+            "Place on a sunny window (indirect light is fine).",
+            "Change water every 3 days.",
+            "Watch nodes for 2-3 weeks."
+          ],
+          "expectedObservation": "Within 1-2 weeks, white roots emerge from the submerged node. The plant is now technically a new individual — a clone of the parent. After 4-5 weeks, you can transplant to soil.",
+          "whyItWorks": "Money plant stems have stored growth signals at nodes. Submerge a node in water → it forms ROOTS at that spot. The same node above water would have formed a side-shoot. A small environmental change (water vs air) triggers different organs to form from the same cells. This is exactly how rose, sugarcane, and bougainvillea are propagated commercially.",
+          "estimatedMinutes": 30240,
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch12_sci01",
+          "name": "Edavaleth Kakkat Janaki Ammal",
+          "lifespan": "1897–1984",
+          "nationality": "Indian",
+          "oneLineLegacy": "First Indian woman to receive a PhD in Botany; pioneered sugarcane hybridisation that made India self-sufficient in sugar.",
+          "narrative": "E.K. Janaki Ammal was born in Tellicherry, Kerala, in 1897. She studied botany at Presidency College Madras, then went to the University of Michigan in 1925 — at a time when Indian women rarely studied abroad. She returned to India and joined the Sugarcane Breeding Station in Coimbatore. In the 1930s, Indian sugarcane gave low yields and was dependent on Java imports. Janaki Ammal cross-bred Indian sugarcane (high sugar but low yield) with wild Saccharum spontaneum (low sugar but disease-resistant). Her hybrid varieties tripled India's sugar yields and ended import dependence. She also did pioneering work on chromosomes of magnolia plants (her cytology textbook is still cited). When Prime Minister Nehru asked her to help build Indian science, she returned from England to lead the Botanical Survey of India. She lived simply in a small house in Madras, growing magnolias she'd bred herself. She used cross-pollination — Class 7's sexual reproduction — to literally re-engineer Indian sugar supply. The Janaki Ammal National Award for Plant Taxonomy is given in her honour every year.",
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t01_c02"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch12_wi01",
+          "question": "What if all bees disappeared from Earth?",
+          "answer": "About 1/3 of all human food (by weight) depends on bee pollination — apples, mangoes, almonds, cucumber, coffee, cocoa, watermelon. Without bees, these crops would fail. Wind-pollinated cereals (wheat, rice, maize) would survive. We'd be left with bread and rice but no fruit. Wild flowering plants (millions of species) would also collapse, taking down the animals that feed on them. Albert Einstein supposedly said 'if bees disappear, humans have 4 years left.' Whether or not he said it, the ecological collapse would be severe. India has lost ~30% of its honey bee population to pesticides in the last decade — a quiet crisis.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_wi02",
+          "question": "What if a flower had no petals?",
+          "answer": "Many flowers DO lack petals — and they're all wind-pollinated. Petals exist to attract animal pollinators; without animals, they're wasted energy. Grasses, oaks, willows, rice, wheat, maize — no petals (or tiny green ones). Such flowers must produce HUGE amounts of pollen, because wind dispersal is wasteful (most pollen lands on the wrong place). One maize tassel releases millions of pollen grains; only a few hundred actually reach a silk. Petals are an investment in efficiency — fewer pollen grains, but each one delivered.",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_wi03",
+          "question": "What if a banana could reproduce sexually?",
+          "answer": "It would have hard seeds you'd have to spit out (like wild bananas still do). But: genetic variation. Cultivated banana right now is a single clone (Cavendish variety, replaced Gros Michel after a fungus wiped Gros Michel out in the 1960s). If a new fungus attacked the Cavendish (and one is currently spreading — Panama Tropical Race 4), every banana on Earth could disappear. Sexual reproduction = different genes = different vulnerabilities = species survival. Cloned crops are a hidden agricultural risk. India is breeding new banana varieties at IIHR Bangalore for exactly this reason.",
+          "relatedConceptIds": [
+            "ch12_t03_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch12_cx01",
+          "toChapterId": "ch01",
+          "topic": "Nutrition in Plants",
+          "pointer": "Ch.1's photosynthesis produces glucose; Ch.12's flowers, fruits, and seeds are all built from that glucose. Reproduction is photosynthesis's pay-off.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_cx02",
+          "toChapterId": "ch07",
+          "topic": "Weather, Climate and Adaptations",
+          "pointer": "Ch.7's climate-driven flowering seasons (monsoon for mango blossoms, winter for mustard, spring for almonds) — climate is what triggers each plant to reproduce.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8's 'Reproduction in Animals' is the parallel chapter — same concepts, applied to humans and other animals (sexual/asexual, gametes, fertilisation). The plant story you learn here is the easier mirror of the animal story next year.",
+        "forNeetJee": "Class 10's 'How Do Organisms Reproduce?' merges plant + animal reproduction. Class 11 has a whole unit on 'Sexual Reproduction in Flowering Plants' with microscopic detail of gamete formation, pollination biology, embryo development. NEET tests this chapter heavily — every detail of double fertilisation, embryo sac structure."
+      },
+      "gallery": [
+        {
+          "id": "ch12_gi01",
+          "caption": "Hibiscus flower dissected",
+          "detail": "Outermost: green sepals (protect bud). Then 5 large red petals (attract bees). 5 yellow stamens (male) clustered in the centre. One green pistil (female) in the very middle with 5-lobed stigma at the top.",
+          "assetHint": "sfsymbol:laurel.leading",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_gi02",
+          "caption": "Pollen tube growing down style",
+          "detail": "A pollen grain that landed on stigma germinates a long thin tube that grows through the style toward the ovary. The tube can be 10-100× longer than the pollen grain. Inside, two male gametes travel down to fuse with the egg.",
+          "assetHint": "sfsymbol:arrow.down",
+          "relatedConceptIds": [
+            "ch12_t02_c02"
+          ]
+        },
+        {
+          "id": "ch12_gi03",
+          "caption": "Drumstick seed with wings",
+          "detail": "A drumstick (sahjan, Moringa oleifera) pod opens to release flat triangular seeds, each with three papery wings. Wind catches the wings; seeds spin slowly to the ground like helicopter blades, dispersing far from the parent.",
+          "assetHint": "sfsymbol:wind",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gi04",
+          "caption": "Coconut washed up on Lakshadweep beach",
+          "detail": "Outer green husk (now brown) is fibrous and air-filled — that's why it floats. Inside the husk: hard brown shell, then white flesh + 'water' (food and water for the embryo). One sprout-eye on the shell. Drops on a beach, germinates where it lands.",
+          "assetHint": "sfsymbol:circle.fill",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gi05",
+          "caption": "Bryophyllum leaf with baby plants",
+          "detail": "Edges of the bryophyllum (also called 'Mother of Thousands' or 'patharchatta') leaf have tiny notches. From each notch, a complete miniature plant — leaves + roots — emerges directly from the leaf tissue. A leaf full of babies, ready to fall and root. Vegetative propagation made visible.",
+          "assetHint": "sfsymbol:leaf.fill",
+          "relatedConceptIds": [
+            "ch12_t03_c01",
+            "ch12_t03_c02"
+          ]
+        },
+        {
+          "id": "ch12_gi06",
+          "caption": "Mango cross-pollination by honey bee",
+          "detail": "A honey bee lands on a mango flower for nectar. As it crawls, pollen from anthers sticks to its hairy legs and body. It flies to the next flower; some pollen brushes off onto that flower's stigma. The bee gets nectar; the plants get fertilised. Mutualism in action.",
+          "assetHint": "sfsymbol:ant.fill",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch12_tl01",
+          "title": "From flower bud to mature fruit — one mango's journey",
+          "intro": "Six months from the first hint of a mango flower to a fruit ripe enough to eat.",
+          "steps": [
+            {
+              "id": "ch12_tl01_s01",
+              "label": "Bud emerges (January)",
+              "body": "Tiny green flower buds appear at branch tips. Each panicle (flower cluster) will have 500-5000 individual flowers.",
+              "assetHint": "sfsymbol:seedling"
+            },
+            {
+              "id": "ch12_tl01_s02",
+              "label": "Bloom (March-April)",
+              "body": "Flowers open — cream-coloured, tiny (5 mm). Each has 5 petals, 5 stamens, 1 pistil. Smell attracts bees, flies, beetles.",
+              "assetHint": "sfsymbol:laurel.leading"
+            },
+            {
+              "id": "ch12_tl01_s03",
+              "label": "Pollination",
+              "body": "Honey bees visit flowers, drink nectar, carry pollen from anther of one flower to stigma of another. Cross-pollination.",
+              "assetHint": "sfsymbol:ant.fill"
+            },
+            {
+              "id": "ch12_tl01_s04",
+              "label": "Fertilisation",
+              "body": "On stigma, pollen germinates. Tube grows down to ovule. Male gamete fuses with egg. Zygote forms.",
+              "assetHint": "sfsymbol:link"
+            },
+            {
+              "id": "ch12_tl01_s05",
+              "label": "Tiny fruit (April-May)",
+              "body": "Petals drop. Ovary swells into a tiny green mango (~5 mm). Most fall off; only ~1% mature. Zygote inside develops into embryo.",
+              "assetHint": "sfsymbol:circle.fill"
+            },
+            {
+              "id": "ch12_tl01_s06",
+              "label": "Ripe mango (May-July)",
+              "body": "Fruit grows to full size, changes from green to yellow/red. Inside, the seed has a fully formed embryo + food reserve. Eaten by animals or harvested.",
+              "assetHint": "sfsymbol:applelogo"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t02_c02"
+          ]
+        }
       ]
     },
     {
