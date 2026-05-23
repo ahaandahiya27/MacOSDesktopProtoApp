@@ -70,8 +70,24 @@ Per-chapter custom interactives (Surface 2 BuildA{X}Sandbox / Surface
 3 InsideThe{X}Tour) remain a per-chapter judgement call — not every
 chapter has manipulable variables or microscopic structure worth
 touring. These are deliberately NOT propagated wholesale; they ship
-chapter by chapter as the right pattern emerges. Current state: only
-Ch.1 has both (the pilot). Future rounds may add them selectively.
+chapter by chapter as the right pattern emerges.
+
+### Surface 2 / Surface 3 coverage (live)
+
+| Chapter | Sandbox (S2) | Tour (S3) | Commit |
+|---------|--------------|-----------|--------|
+| Ch.1 Nutrition in Plants | ✅ BuildAPlantSandbox | ✅ InsideTheLeafTour | pilot `01617b6` |
+| Ch.4 Heat | ✅ BuildAHeatFlowSandbox | — | `599f0f8` |
+| Ch.6 Physical/Chemical Changes | ✅ BuildAReactionSandbox | — | `599f0f8` |
+| Ch.7 Weather + Climate | ✅ BuildAClimateSandbox | — | `599f0f8` |
+| Ch.14 Electric Current | — | ✅ InsideTheWireTour | `599f0f8` |
+| Ch.15 Light | — | ✅ InsideTheLensTour | `599f0f8` |
+| (all others) | — | — | — |
+
+**6 of 19 chapters carry a custom interactive.** 4 sandboxes total
+(Ch.1, 4, 6, 7) and 3 tours total (Ch.1, 14, 15). Next-round
+candidates: Ch.8 (wind-pattern sandbox), Ch.10 (alveolus tour),
+Ch.11 (xylem-ascent tour), Ch.13 (motion-time sandbox).
 
 ### Cross-chapter network — final shape
 
