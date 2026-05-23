@@ -147,7 +147,10 @@ enum SM2Scheduler {
 final class DataStore: ObservableObject {
 
     static let shared = DataStore()
-    nonisolated private static let logger = Logger(
+    // `internal` (default) so DataStore+Loading.swift and
+    // DataStore+Saving.swift can reach the same logger from their
+    // extension-defined static helpers.
+    nonisolated static let logger = Logger(
         subsystem: "com.emoha.desktopAhaan",
         category: "DataStore"
     )
@@ -206,65 +209,28 @@ final class DataStore: ObservableObject {
 
     @Published var lastSaveError: String?
 
-    private let storeDir: URL
+    // `internal` (default) so save/load helpers in the extension files
+    // (`DataStore+Saving.swift`, `DataStore+Loading.swift`) can reach
+    // `storeDir` without crossing the file-private boundary.
+    let storeDir: URL
 
-    // MARK: - Coalesced-write infrastructure
+    // MARK: - Coalesced-write infrastructure (storage)
     //
-    // Hot mutators (recordReview / markSceneComplete / toggleToughQuestion
-    // / etc.) can fire several times per second during a review session.
-    // The full-file rewrite-on-every-change pattern was producing back-to-
-    // back fsyncs that contributed to multi-hundred-ms main-thread hangs
-    // on the Big Sur iMac's spinning disk.
-    //
-    // Two layers of mitigation:
-    //
-    //   1. Coalescing (`saveCoalesced(_:to:)`): within the 250 ms debounce
-    //      window the LAST submission wins. Intermediate states would be
-    //      overwritten on the very next mutation anyway, so dropping them
-    //      is safe. Encoding happens on main at submission time so the
-    //      payload reflects the model snapshot exactly when the user
-    //      acted.
-    //
-    //   2. Off-main writes (`performAtomicWrite`): the `Data.write(to:
-    //      options:.atomic)` call — which does the fsync — runs on the
-    //      shared `saveQueue` (serial, .userInitiated background). The
-    //      main thread is never blocked by the disk fsync at runtime.
-    //      Error reports hop back via `DispatchQueue.main.async` to
-    //      mutate the @Published `lastSaveError` banner.
-    //
-    // Invariants:
-    //   - `applicationWillTerminate` calls `flushSavesBeforeQuit()` which
-    //     dispatches all pending writes and then `saveQueue.sync { }`s to
-    //     block main until they land — accepting the brief stall at quit
-    //     time so data is durable.
-    //   - The cold `save(_:to:)` path stays for one-shot user-driven
-    //     operations (e.g. clearAll). It also encodes on main and writes
-    //     off main, same pattern as the coalesced path.
-    //   - Captures-by-value of the encoded snapshot at submission time
-    //     means the off-main write sees a frozen copy of the data even
-    //     if the in-memory model mutates again before the write lands.
+    // Stored properties for the coalesced-write design. The methods that
+    // operate on these (`save`, `saveCoalesced`, `flushPendingSave`,
+    // `flushSavesBeforeQuit`, `performAtomicWrite`) live in
+    // `DataStore+Saving.swift` along with the design comment block. The
+    // dicts and timer stay here because Swift doesn't allow stored
+    // properties in extensions.
 
     /// Filename → latest encoded payload waiting to be written. Updated
     /// on every `saveCoalesced` call; consumed when the debounce timer
     /// fires or `flushSavesBeforeQuit` runs.
-    private var pendingSavePayloads: [String: (url: URL, data: Data)] = [:]
+    var pendingSavePayloads: [String: (url: URL, data: Data)] = [:]
     /// Filename → debounce timer. Cancelled and replaced on every
     /// subsequent `saveCoalesced` call within the window.
-    private var pendingSaveTimers: [String: Timer] = [:]
-    private let coalesceDelaySeconds: TimeInterval = 0.25
-
-    /// Serial background queue for the actual `Data.write(to:options:.atomic)`
-    /// calls. Encoding happens on main (cheap; ms for the largest files we
-    /// store), but the fsync inside the atomic write is the part that
-    /// stalls — single-digit ms on SSD, tens to a couple hundred ms on the
-    /// Big Sur iMac's spinning disk. Per-instance would lock us into one
-    /// DataStore so I keep it `static`; serial ordering across all callers
-    /// is exactly what we want for atomicity (different files don't
-    /// interleave; same file's later writes overwrite earlier ones).
-    nonisolated static let saveQueue = DispatchQueue(
-        label: "com.emoha.desktopAhaan.DataStore.save",
-        qos: .userInitiated
-    )
+    var pendingSaveTimers: [String: Timer] = [:]
+    let coalesceDelaySeconds: TimeInterval = 0.25
 
     /// Current persistence schema version. Bump whenever a stored JSON
     /// shape changes in a way that an older decoder would reject. The
@@ -726,222 +692,7 @@ final class DataStore: ObservableObject {
     }
 
     // MARK: - Persistence helpers
-
-    /// Cold-path save: encode on main, atomic-write off main. Error path
-    /// reports back to the @MainActor `lastSaveError` banner via a
-    /// `DispatchQueue.main.async` hop. The hop converts the Cocoa error
-    /// into its `localizedDescription` String on the background side so
-    /// the cross-thread value stays Sendable (NSError isn't).
-    private func save<T: Encodable>(_ items: [T], to filename: String) {
-        let url = storeDir.appendingPathComponent(filename)
-        let data: Data
-        do {
-            data = try JSONEncoder().encode(items)
-        } catch {
-            // Encode failure is on main and rare (only happens if a
-            // Codable conformance is broken). Surface immediately.
-            lastSaveError = "Could not save data (\(filename)). Changes may be lost."
-            Self.logger.error("encode \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
-            return
-        }
-        Self.performAtomicWrite(data: data, to: url, filename: filename) { [weak self] errorDescription in
-            // Always on main via DispatchQueue.main.async hop.
-            guard let self = self else { return }
-            if let errorDescription = errorDescription {
-                self.lastSaveError = "Could not save data (\(filename)). Changes may be lost."
-                Self.logger.error("save \(filename, privacy: .public) failed: \(errorDescription, privacy: .public)")
-            } else {
-                self.lastSaveError = nil
-            }
-        }
-    }
-
-    /// Off-main atomic-write helper. Schedules the write on `saveQueue`,
-    /// converts any error to its String description on the background
-    /// side, and hops back to main via `DispatchQueue.main.async` to
-    /// invoke `completion`. Sendable-clean (String only) — no NSError
-    /// crosses the actor hop.
-    nonisolated private static func performAtomicWrite(
-        data: Data,
-        to url: URL,
-        filename: String,
-        completion: @escaping (String?) -> Void
-    ) {
-        saveQueue.async {
-            var errorDescription: String? = nil
-            do {
-                try data.write(to: url, options: .atomic)
-            } catch {
-                errorDescription = error.localizedDescription
-            }
-            // Hop back to main for the completion. The completion mutates
-            // @Published `lastSaveError` which must be on the main actor.
-            DispatchQueue.main.async {
-                completion(errorDescription)
-            }
-        }
-    }
-
-    /// Debounced write for high-frequency mutators. Encodes the snapshot
-    /// at submission time, stashes it under the filename key, and resets
-    /// a debounce timer; if another submission arrives within the window
-    /// it replaces the payload (only the latest matters since each save
-    /// rewrites the file in full). Net effect: rapid mutations land as
-    /// one main-thread write of the latest state at the end of the
-    /// coalescing window.
-    private func saveCoalesced<T: Encodable>(_ items: [T], to filename: String) {
-        let url = storeDir.appendingPathComponent(filename)
-        let encoded: Data
-        do {
-            encoded = try JSONEncoder().encode(items)
-        } catch {
-            lastSaveError = "Could not encode \(filename). Changes may be lost."
-            Self.logger.error("encode \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
-            return
-        }
-        pendingSavePayloads[filename] = (url, encoded)
-        pendingSaveTimers[filename]?.invalidate()
-        pendingSaveTimers[filename] = Timer.scheduledTimer(
-            withTimeInterval: coalesceDelaySeconds, repeats: false
-        ) { [weak self] _ in
-            Task { @MainActor [weak self] in
-                self?.flushPendingSave(filename: filename)
-            }
-        }
-    }
-
-    /// Consume the pending payload for `filename` (if any) and dispatch
-    /// it to the off-main saveQueue for an atomic write. The dequeue
-    /// happens on main (so two main-actor calls for the same filename
-    /// can't double-dispatch the same payload); the actual write runs
-    /// in the background.
-    private func flushPendingSave(filename: String) {
-        pendingSaveTimers.removeValue(forKey: filename)?.invalidate()
-        guard let payload = pendingSavePayloads.removeValue(forKey: filename) else { return }
-        Self.performAtomicWrite(data: payload.data, to: payload.url, filename: filename) { [weak self] errorDescription in
-            guard let self = self else { return }
-            if let errorDescription = errorDescription {
-                self.lastSaveError = "Could not save data (\(filename)). Changes may be lost."
-                Self.logger.error("coalesced-save \(filename, privacy: .public) failed: \(errorDescription, privacy: .public)")
-            } else {
-                self.lastSaveError = nil
-            }
-        }
-    }
-
-    /// Drain every pending coalesced write synchronously. Called from
-    /// `applicationWillTerminate` so a clean ⌘Q doesn't lose mutations
-    /// that landed inside the last 250ms debounce window. Safe to call
-    /// when nothing is pending — no-op.
-    ///
-    /// `saveQueue.sync { }` after dispatching all pending writes blocks
-    /// the calling thread (main) until the serial queue has drained.
-    /// Standard pattern — saveQueue runs on a background thread and
-    /// doesn't need main to make progress, so no deadlock. We accept
-    /// some main-thread block at quit time because the alternative
-    /// (returning before writes land) defeats the purpose. Bounded by
-    /// the size of `pendingSavePayloads`, which today is ≤ 11 files of
-    /// kilobytes each.
-    func flushSavesBeforeQuit() {
-        let filenames = Array(pendingSavePayloads.keys)
-        for filename in filenames {
-            flushPendingSave(filename: filename)
-        }
-        // Wait for every write we just dispatched to land on disk.
-        Self.saveQueue.sync { }
-    }
-
-    /// Number of writes still queued in the coalesced-save buffer. Used
-    /// by `applicationWillTerminate` to detect a truncation event when
-    /// `flushSavesBeforeQuit`'s 1-second semaphore wait expires before
-    /// the drain finishes (audit Top-10 #6). Read on the main actor.
-    var pendingSaveCount: Int { pendingSavePayloads.count }
-
-    /// Nonisolated file read — runs anywhere, touches no main-actor state.
-    /// Returns the decoded array and a backup-rescue flag so the caller
-    /// can surface the user-facing error message on the main thread.
-    nonisolated private static func readFile<T: Decodable>(
-        _ type: T.Type, from filename: String, in storeDir: URL
-    ) -> (items: [T], didRescueCorruptFile: Bool) {
-        let url = storeDir.appendingPathComponent(filename)
-        guard FileManager.default.fileExists(atPath: url.path) else {
-            return ([], false)
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            return (try JSONDecoder().decode([T].self, from: data), false)
-        } catch {
-            let stamp = ISO8601DateFormatter().string(from: Date())
-                .replacingOccurrences(of: ":", with: "-")
-            let rescue = url.deletingPathExtension()
-                .appendingPathExtension("corrupt.\(stamp).json")
-            try? FileManager.default.moveItem(at: url, to: rescue)
-            logger.error("load \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public); preserved as \(rescue.lastPathComponent, privacy: .public)")
-            return ([], true)
-        }
-    }
-
-    /// Off-thread loader. Runs all 11 file reads on a background task,
-    /// then hops back to the main actor to assign every @Published
-    /// property in one batched update so SwiftUI sees a single
-    /// pre-coalesced re-render rather than 11 cascading ones.
-    nonisolated private static func loadAllOffThread(
-        into store: DataStore, from storeDir: URL
-    ) async {
-        let translations = readFile(TranslationRecord.self, from: "translations.json", in: storeDir)
-        let practice = readFile(PracticeProgress.self, from: "practice.json", in: storeDir)
-        let bookmarks = readFile(StudyBookmark.self, from: "bookmarks.json", in: storeDir)
-        let qBookmarks = readFile(QuestionBookmark.self, from: "questionBookmarks.json", in: storeDir)
-        let attempts = readFile(QuestionAttempt.self, from: "attempts.json", in: storeDir)
-        let sessions = readFile(StudySession.self, from: "sessions.json", in: storeDir)
-        let discover = readFile(DiscoverProgress.self, from: "discover.json", in: storeDir)
-        let reviewed = readFile(String.self, from: "reviewedQuestionIds.json", in: storeDir)
-        let tough = readFile(String.self, from: "toughQuestionIds.json", in: storeDir)
-        let reviews = readFile(QuestionReview.self, from: "reviews.json", in: storeDir)
-        let notes = readFile(ChapterNote.self, from: "notes.json", in: storeDir)
-
-        // Crash-safe Dictionary build can stay on the background thread —
-        // result is a value type, transferred to main below.
-        let reviewsDict = Dictionary(
-            reviews.items.map { ($0.questionId, $0) },
-            uniquingKeysWith: { a, b in
-                CrashReporter.shared.logDataIssue(
-                    "reviews.json contained duplicate questionId=\(a.questionId); kept newer row.")
-                return a.lastReviewedAt >= b.lastReviewedAt ? a : b
-            }
-        )
-
-        let notesDict = Dictionary(
-            notes.items.map { ($0.chapterId, $0.text) },
-            uniquingKeysWith: { a, b in
-                CrashReporter.shared.logDataIssue(
-                    "notes.json contained duplicate chapterId; kept first row.")
-                return a
-            }
-        )
-
-        let anyRescue = translations.didRescueCorruptFile || practice.didRescueCorruptFile
-            || bookmarks.didRescueCorruptFile || qBookmarks.didRescueCorruptFile
-            || attempts.didRescueCorruptFile || sessions.didRescueCorruptFile
-            || discover.didRescueCorruptFile || reviewed.didRescueCorruptFile
-            || tough.didRescueCorruptFile || reviews.didRescueCorruptFile
-            || notes.didRescueCorruptFile
-
-        await MainActor.run {
-            store.translationRecords = translations.items
-            store.practiceProgress = practice.items
-            store.studyBookmarks = bookmarks.items
-            store.questionBookmarks = qBookmarks.items
-            store.questionAttempts = attempts.items
-            store.studySessions = sessions.items
-            store.discoverProgress = discover.items
-            store.reviewedQuestionIds = Set(reviewed.items)
-            store.toughQuestionIds = Set(tough.items)
-            store.questionReviews = reviewsDict
-            store.chapterNotes = notesDict
-            if anyRescue {
-                store.lastSaveError = "Saved data couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
-            }
-        }
-    }
+    //
+    // Save helpers live in `DataStore+Saving.swift`.
+    // Load helpers live in `DataStore+Loading.swift`.
 }

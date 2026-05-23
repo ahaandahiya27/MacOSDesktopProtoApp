@@ -629,6 +629,8 @@
 		0AAA000000000000000000A1 /* Crash_BeyondThenDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */; };
 		0AAB000000000000000000B1 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAB000000000000000000B2 /* Crash1_TryDiscoverMode_Ch1.swift */; };
 		0AAC000000000000000000C1 /* Speech_NoPromptUnderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC000000000000000000C2 /* Speech_NoPromptUnderTest.swift */; };
+		0AAD000000000000000000D1 /* DataStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD000000000000000000D2 /* DataStore+Saving.swift */; };
+		0AAD000000000000000000D3 /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD000000000000000000D4 /* DataStore+Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -657,6 +659,8 @@
 		0AAA000000000000000000A4 /* Crash_BeyondThenDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash_BeyondThenDiscover.swift; sourceTree = "<group>"; };
 		0AAB000000000000000000B2 /* Crash1_TryDiscoverMode_Ch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash1_TryDiscoverMode_Ch1.swift; sourceTree = "<group>"; };
 		0AAC000000000000000000C2 /* Speech_NoPromptUnderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Speech_NoPromptUnderTest.swift; path = CrashRepros/Speech_NoPromptUnderTest.swift; sourceTree = "<group>"; };
+		0AAD000000000000000000D2 /* DataStore+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Saving.swift"; sourceTree = "<group>"; };
+		0AAD000000000000000000D4 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -1838,6 +1842,8 @@
 			isa = PBXGroup;
 			children = (
 				2F2898E1F6693A8D631B6B65 /* DataStore.swift */,
+				0AAD000000000000000000D2 /* DataStore+Saving.swift */,
+				0AAD000000000000000000D4 /* DataStore+Loading.swift */,
 				A1B83DC010D591E079B2D2FC /* SettingsManager.swift */,
 			);
 			path = Persistence;
@@ -3396,6 +3402,8 @@
 				04F59DEA2FB8F34400568BDE /* Scene4_OpenDrainHazards.swift in Sources */,
 				04F59D962FB8F14800568BDE /* Scene6_BuildElectromagnet.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
+				0AAD000000000000000000D1 /* DataStore+Saving.swift in Sources */,
+				0AAD000000000000000000D3 /* DataStore+Loading.swift in Sources */,
 				C5A96ABF47DC77F8082F8495 /* SettingsManager.swift in Sources */,
 				04F59D222FB8EED000568BDE /* Scene3_PercolationRate.swift in Sources */,
 				04F59DBE2FB8F24A00568BDE /* Scene4_IrrigationCompare.swift in Sources */,
