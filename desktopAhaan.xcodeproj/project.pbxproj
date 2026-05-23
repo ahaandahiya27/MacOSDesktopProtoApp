@@ -633,6 +633,7 @@
 		0AAD000000000000000000D3 /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD000000000000000000D4 /* DataStore+Loading.swift */; };
 		0AAE000000000000000000E1 /* ChapterDetailView+Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */; };
 		0AAE000000000000000000E3 /* ChapterDetailView+HomeExperiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */; };
+		0ABA000000000000000000A1 /* ArticleBrowserView+PlainTextFallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA000000000000000000A2 /* ArticleBrowserView+PlainTextFallback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -665,6 +666,7 @@
 		0AAD000000000000000000D4 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
 		0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+Notebook.swift"; sourceTree = "<group>"; };
 		0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+HomeExperiments.swift"; sourceTree = "<group>"; };
+		0ABA000000000000000000A2 /* ArticleBrowserView+PlainTextFallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleBrowserView+PlainTextFallback.swift"; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -2668,6 +2670,7 @@
 			isa = PBXGroup;
 			children = (
 				5DAD8EF41DB6ABC6718947F5 /* ArticleBrowserView.swift */,
+				0ABA000000000000000000A2 /* ArticleBrowserView+PlainTextFallback.swift */,
 				4FFC01B7346C3FE70B57E15F /* ArticleEntryButton.swift */,
 				379A428C6AF78EC774AF8D89 /* ArticleIndex.swift */,
 			);
@@ -3176,6 +3179,7 @@
 				04674C6E2FB8E4E6004A7D5C /* DiscoverProgressDashboard.swift in Sources */,
 				14C6ABB78456E298F0327C38 /* UseCase.swift in Sources */,
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
+				0ABA000000000000000000A1 /* ArticleBrowserView+PlainTextFallback.swift in Sources */,
 				F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */,
 				04F59DDC2FB8F2C800568BDE /* Scene8_ReforestationPlan.swift in Sources */,
 				04F59D522FB8EFCE00568BDE /* Scene5_KidneyFilter.swift in Sources */,

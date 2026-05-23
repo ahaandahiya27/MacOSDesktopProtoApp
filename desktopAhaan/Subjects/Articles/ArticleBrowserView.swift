@@ -140,6 +140,25 @@ struct ArticleBrowserView: View {
             speech.stop(owner: "article")
             coordinator.cleanup()
         }
+        // Visual sync: highlight the paragraph currently being read aloud
+        // and scroll it into view. Driven by SpeechReader.paragraphIndex
+        // (which advances per-utterance via the didFinish delegate).
+        .onChange(of: speech.paragraphIndex) { newIndex in
+            guard speech.isParagraphMode else { return }
+            coordinator.highlightParagraph(at: newIndex)
+        }
+        // When paragraph mode ends (stop, last paragraph finished, or
+        // article changed mid-narration) drop the highlight.
+        .onChange(of: speech.isParagraphMode) { isActive in
+            if isActive {
+                // Mode just started — highlight the starting paragraph
+                // (usually 0) so the first utterance has visual sync
+                // from frame one, not after the first didFinish.
+                coordinator.highlightParagraph(at: speech.paragraphIndex)
+            } else {
+                coordinator.clearHighlight()
+            }
+        }
     }
 
     private var readAloudButton: some View {
@@ -273,6 +292,17 @@ private class ArticleCoordinator: NSObject, ObservableObject
     /// older article overwrites the newer view.
     private var loadGeneration: UInt64 = 0
 
+    /// NSRanges of the current article body's paragraphs in the same
+    /// order — and with the same empty-paragraph filter — as
+    /// `readArticleParagraphs`. Used by `highlightParagraph(at:)` to
+    /// sync the visual highlight with `SpeechReader.paragraphIndex`.
+    /// Rebuilt on every successful load.
+    private var paragraphRanges: [NSRange] = []
+    /// Index of the currently-highlighted paragraph, or nil if no
+    /// highlight is on screen. Tracked so the next highlight call can
+    /// remove the previous one without re-scanning the whole storage.
+    private var currentHighlightedParagraphIndex: Int?
+
     func load(fileURL: URL, inFolder: String) {
         currentURL = fileURL
         loadNativeArticle(fileURL, recordingHistory: true)
@@ -339,6 +369,80 @@ private class ArticleCoordinator: NSObject, ObservableObject
         }
 
         textView.textStorage?.setAttributedString(nativeArticle)
+        // After the storage is replaced the previous highlight (if any)
+        // is gone with it; reset the tracked index so the next
+        // highlightParagraph call doesn't try to clear a stale range.
+        currentHighlightedParagraphIndex = nil
+    }
+
+    /// Recompute `paragraphRanges` from the current `nativeArticle`.
+    /// Must match the same split + filter as `readArticleParagraphs`
+    /// so SpeechReader's `paragraphIndex` (which indexes into the
+    /// filtered list) lines up with these NSRanges 1:1.
+    private func recomputeParagraphRanges() {
+        var ranges: [NSRange] = []
+        let full = nativeArticle.string as NSString
+        let separator = "\n\n"
+        var searchStart = 0
+        let total = full.length
+        while searchStart <= total {
+            let remaining = NSRange(location: searchStart, length: total - searchStart)
+            let sepRange = full.range(of: separator, options: [], range: remaining)
+            let paragraphEnd = sepRange.location == NSNotFound ? total : sepRange.location
+            let paragraphRange = NSRange(location: searchStart, length: paragraphEnd - searchStart)
+            let candidate = full.substring(with: paragraphRange)
+                .trimmingCharacters(in: .whitespacesAndNewlines)
+            if !candidate.isEmpty {
+                ranges.append(paragraphRange)
+            }
+            if sepRange.location == NSNotFound {
+                break
+            }
+            searchStart = sepRange.location + sepRange.length
+        }
+        paragraphRanges = ranges
+    }
+
+    /// Highlight paragraph `idx` with a yellow tint and scroll it
+    /// into view. Called by the parent `ArticleBrowserView` from
+    /// `.onChange(of: speech.paragraphIndex)` so the visual sync is
+    /// driven by SpeechReader's playback state.
+    func highlightParagraph(at idx: Int) {
+        guard idx >= 0, idx < paragraphRanges.count,
+              let textView = nativeTextView,
+              let storage = textView.textStorage else {
+            return
+        }
+        storage.beginEditing()
+        if let prev = currentHighlightedParagraphIndex,
+           prev >= 0, prev < paragraphRanges.count {
+            storage.removeAttribute(.backgroundColor, range: paragraphRanges[prev])
+        }
+        let range = paragraphRanges[idx]
+        storage.addAttribute(
+            .backgroundColor,
+            value: NSColor.systemYellow.withAlphaComponent(0.25),
+            range: range
+        )
+        storage.endEditing()
+        currentHighlightedParagraphIndex = idx
+        // scrollRangeToVisible is instantaneous on NSTextView (not an
+        // animated scroll) so no Reduce-Motion concern.
+        textView.scrollRangeToVisible(range)
+    }
+
+    /// Remove any active highlight. Called when speech stops or
+    /// paragraph mode ends.
+    func clearHighlight() {
+        guard let textView = nativeTextView,
+              let storage = textView.textStorage else { return }
+        if let prev = currentHighlightedParagraphIndex,
+           prev >= 0, prev < paragraphRanges.count {
+            storage.beginEditing()
+            storage.removeAttribute(.backgroundColor, range: paragraphRanges[prev])
+            storage.endEditing()
+        }
+        currentHighlightedParagraphIndex = nil
     }
 
     /// Loads `url` off the main thread. The synchronous version of this
@@ -374,6 +478,7 @@ private class ArticleCoordinator: NSObject, ObservableObject
                 self.recordNativeHistory(for: url, shouldRecord: recordingHistory)
                 self.updateNativeNavigationState()
                 self.updateNativeTextView()
+                self.recomputeParagraphRanges()
             case .failure(let message):
                 self.pageTitle = url.deletingPathExtension().lastPathComponent
                 self.nativeArticle = NSAttributedString(
@@ -384,6 +489,7 @@ private class ArticleCoordinator: NSObject, ObservableObject
                     ]
                 )
                 self.updateNativeTextView()
+                self.paragraphRanges = []
             }
         }
     }
@@ -461,108 +567,7 @@ private enum ArticleLoadOutcome: Sendable {
     case failure(message: String)
 }
 
-// MARK: - PlainTextArticleFallback
-//
-// Shown when WKWebView's WebContent process crashes (common on Big Sur
-// with legacy AMD GPUs — the IconRendering Metal shader cache fails).
-// Reads the same HTML file, strips tags with a minimal parser, and shows
-// the result in a ScrollView so the kid can still read the article even
-// when WebKit can't render it. Also offers an "Open in Safari" recovery.
 
-private struct PlainTextArticleFallback: View {
-    let url: URL?
-    let errorMessage: String?
-    @State private var bodyText: String = ""
-    @State private var loadError: String? = nil
-
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 14) {
-                HStack(spacing: 8) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .foregroundColor(.orange)
-                    Text("Showing simplified view")
-                        .font(.callout.weight(.semibold))
-                    Spacer()
-                    if let url = url {
-                        Button("Open in Safari") {
-                            NSWorkspace.shared.open(url)
-                        }
-                        .controlSize(.small)
-                    }
-                }
-                .padding(10)
-                .background(
-                    RoundedRectangle(cornerRadius: 8)
-                        .fill(Color.orange.opacity(0.12))
-                )
-
-                if let err = errorMessage ?? loadError {
-                    Text(err)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-
-                if bodyText.isEmpty && loadError == nil {
-                    Text("Loading…")
-                        .foregroundColor(.secondary)
-                } else {
-                    // Note: textSelection requires macOS 12 — omit on Big Sur.
-                    Text(bodyText)
-                        .font(.body)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-            }
-            .padding(20)
-        }
-        .background(Color(NSColor.windowBackgroundColor))
-        .onAppear(perform: load)
-    }
-
-    private func load() {
-        guard let url = url else {
-            loadError = "Article location is unknown."
-            return
-        }
-        do {
-            let raw = try String(contentsOf: url, encoding: .utf8)
-            bodyText = Self.stripHTML(raw)
-        } catch {
-            loadError = error.localizedDescription
-        }
-    }
-
-    /// Cheap HTML→text reducer. Not a real parser — just enough to make a
-    /// concept article readable when WebKit is dead. Newlines after block
-    /// tags, two newlines after headings/paragraphs/list items.
-    ///
-    /// `nonisolated` so the off-main `ArticleCoordinator.readParseAndExtractTitle`
-    /// can call it from a `Task.detached` body. `PlainTextArticleFallback`
-    /// conforms to `View` (which is `@MainActor`-isolated), and without
-    /// this annotation Swift 6 would refuse the cross-actor call.
-    nonisolated static func stripHTML(_ html: String) -> String {
-        var s = html
-        let blockBreaks = ["</p>", "</h1>", "</h2>", "</h3>", "</h4>",
-                           "</h5>", "</h6>", "</li>", "</div>", "</section>",
-                           "</article>", "<br>", "<br/>", "<br />"]
-        for tag in blockBreaks {
-            s = s.replacingOccurrences(of: tag, with: "\n\n", options: .caseInsensitive)
-        }
-        // Strip all remaining tags.
-        s = s.replacingOccurrences(of: "<[^>]+>", with: "",
-                                   options: .regularExpression)
-        // Decode the few entities we expect from authored HTML.
-        let entities: [(String, String)] = [
-            ("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"),
-            ("&quot;", "\""), ("&apos;", "'"), ("&nbsp;", " "),
-            ("&mdash;", "—"), ("&ndash;", "–"), ("&hellip;", "…")
-        ]
-        for (e, r) in entities {
-            s = s.replacingOccurrences(of: e, with: r)
-        }
-        // Collapse runs of 3+ newlines down to exactly 2.
-        s = s.replacingOccurrences(of: "\n{3,}", with: "\n\n",
-                                   options: .regularExpression)
-        return s.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-}
+// MARK: - PlainTextArticleFallback — moved to
+//        ArticleBrowserView+PlainTextFallback.swift
+//        (Big Sur LOC ceiling)
