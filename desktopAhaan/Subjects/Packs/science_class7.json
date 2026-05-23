@@ -7670,7 +7670,13 @@
                 34
               ],
               "needsHumanReview": false,
-              "mnemonic": "ANIMAL fibres (wool, silk) = PROTEIN. PLANT fibres (cotton, jute) = CELLULOSE. Burn test: protein smells like burning hair; cellulose smells like burning paper."
+              "mnemonic": "ANIMAL fibres (wool, silk) = PROTEIN. PLANT fibres (cotton, jute) = CELLULOSE. Burn test: protein smells like burning hair; cellulose smells like burning paper.",
+              "predictQuestion": "Cotton and wool feel completely different on your skin, yet both are 'natural fibres'. What's structurally so different about them that they behave so differently?",
+              "whyChain": [
+                "Animal fibres (wool, silk) are made of protein (keratin or fibroin). Plant fibres (cotton, jute, flax) are made of cellulose. Different molecules → different feel, strength, warmth, water absorption.",
+                "Why such different behaviour from different polymers? Because protein chains coil into elastic spirals (wool springs back when crushed); cellulose chains stack rigidly (cotton folds and creases). Each shape suits the original biological function — wool insulates a sheep, cotton protects seeds.",
+                "And why does this matter for the textile economy? Because animal fibres need animal welfare + grazing land; plant fibres need cropland + water. India dominates cotton; Australia dominates wool. Trade patterns trace back to which climate suits which fibre. Class 11 economics covers comparative advantage with textiles as the textbook case."
+              ]
             },
             {
               "id": "ch03_t01_c02",
@@ -7749,7 +7755,13 @@
                 36
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wool comes from: sheep, goats (cashmere, mohair), yaks, camels, alpacas, llamas, rabbits (angora). The fleece = ALL the wool from one animal in one shearing."
+              "mnemonic": "Wool comes from: sheep, goats (cashmere, mohair), yaks, camels, alpacas, llamas, rabbits (angora). The fleece = ALL the wool from one animal in one shearing.",
+              "predictQuestion": "Sheep evolved their woolly coat for warmth, not for sweaters. Why does the SAME wool work so well for human clothing in cold mountains?",
+              "whyChain": [
+                "Wool grows from follicles in a sheep's skin as a soft undercoat + tougher guard hair. Marino sheep (most common for wool) produce especially fine, crimpy fibres. The crimp traps tiny air pockets — air is what actually insulates, the wool just holds it in place.",
+                "Why does the same physics work for humans? Because warmth depends on trapping warm air against the body, regardless of who's wearing it. The crimp + scaly surface of wool fibres is a near-perfect air-trapping geometry — even Arctic explorers still rely on it.",
+                "And why has synthetic fleece replaced wool in many uses? Because polyester fleece is lighter, dries faster, and is cheaper. But wool still beats it for fire resistance, moisture management, and biodegradability. Class 11+ materials science covers the trade-offs in synthetic vs natural insulators."
+              ]
             },
             {
               "id": "ch03_t01_c03",
@@ -7829,7 +7841,13 @@
                 38
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wool's 6 steps: SHEARING → SCOURING (wash) → SORTING → DYEING → ROLLING → COMBING. Sheep to sweater takes weeks. Each step adds a property."
+              "mnemonic": "Wool's 6 steps: SHEARING → SCOURING (wash) → SORTING → DYEING → ROLLING → COMBING. Sheep to sweater takes weeks. Each step adds a property.",
+              "predictQuestion": "A sheep is shorn once a year, but raw wool takes WEEKS of processing before becoming yarn. What are the steps doing — and why so many?",
+              "whyChain": [
+                "Six steps: shearing (cutting off fleece), scouring (washing out grease and dirt), sorting (separating by quality), dyeing (colouring), carding/combing (aligning fibres), spinning (twisting into yarn). Each step prepares the fibre for the next.",
+                "Why scour + sort? Because raw wool is 30-50% grease (lanolin) and varies wildly in quality even from one fleece. Without scouring the dye won't penetrate; without sorting, premium fibres get wasted in low-grade products.",
+                "And why hasn't full automation taken over? Because each sheep's fleece varies slightly — automated sorting is hard. Some premium woollen mills in Italy still sort by hand. India's Pashmina industry still hand-grades fibres. Class 11+ materials science covers automation limits in inhomogeneous biological materials."
+              ]
             },
             {
               "id": "ch03_t01_c04",
@@ -7903,7 +7921,13 @@
                 38
               ],
               "needsHumanReview": false,
-              "mnemonic": "SORTER'S DISEASE = anthrax from sheep fleece. Workers handling raw fleece risk spore inhalation. Modern industrial scouring kills spores; the historical hazard was manual sorting."
+              "mnemonic": "SORTER'S DISEASE = anthrax from sheep fleece. Workers handling raw fleece risk spore inhalation. Modern industrial scouring kills spores; the historical hazard was manual sorting.",
+              "predictQuestion": "Wool processing workers in the 19th century suffered a deadly disease called 'sorter's disease'. What was actually killing them — and is it gone today?",
+              "whyChain": [
+                "Sorter's disease was anthrax — a bacterial infection from spores in raw wool (especially from sheep / goat carcasses). Sorters inhaled spores during sorting; the bacteria multiplied in the lungs; mortality was 50-80% before antibiotics.",
+                "Why is wool so risky historically? Because the spores survive for decades in dried hair and hides, and sorting kicks them into the air. Tanneries and brush-making factories had similar outbreaks. The 1880s discovery of anthrax (by Pasteur) eventually led to vaccine + protective equipment.",
+                "And why does anthrax remain a bioterrorism concern today? Because spores are so durable. Class 11+ microbiology covers anthrax as a model for spore-forming pathogens; modern wool processing scours under hot acid to kill spores + workers wear masks."
+              ]
             },
             {
               "id": "ch03_t01_c05",
@@ -7979,7 +8003,13 @@
                 46
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wool grades by fibre fineness: Pashmina (~14 microns) > Merino (~17) > regular sheep (~25-30). Finer = softer, warmer, more expensive."
+              "mnemonic": "Wool grades by fibre fineness: Pashmina (~14 microns) > Merino (~17) > regular sheep (~25-30). Finer = softer, warmer, more expensive.",
+              "predictQuestion": "Wool is sorted into grades like 'merino', 'mohair', 'cashmere'. Each has a wildly different price. What makes one wool worth 50× another?",
+              "whyChain": [
+                "Wool grades depend on fibre diameter (thinner = softer = pricier), staple length (longer = stronger), and crimp count. Merino fibre is ~17 µm thick; Cashmere is ~15 µm. Coarser carpet wool is 40+ µm — same fibre type but very different feel and value.",
+                "Why is fineness so prized? Because thin fibres feel softer against skin (no 'prickle'), drape better, and let dyes penetrate evenly. The same physics that makes a thin paintbrush feel different from a stiff one.",
+                "And why are pashmina goats so rare and valuable? Because pashmina (from Changthangi goats in Ladakh, 12-13 µm fibre) only grows in extreme cold — the goat needs sub-freezing winters to produce the protective undercoat. Climate change is shrinking the high-altitude habitat. Class 11+ environmental + economics covers the looming pashmina crisis."
+              ]
             },
             {
               "id": "ch03_t01_c06",
@@ -8055,7 +8085,13 @@
                 47
               ],
               "needsHumanReview": false,
-              "mnemonic": "Sheep have TWO coats: GUARD HAIRS (coarse, outer, water-shedding) + UNDERCOAT (fine, soft, insulating). Premium wool comes from the undercoat fraction."
+              "mnemonic": "Sheep have TWO coats: GUARD HAIRS (coarse, outer, water-shedding) + UNDERCOAT (fine, soft, insulating). Premium wool comes from the undercoat fraction.",
+              "predictQuestion": "A sheep has TWO kinds of hair on its body — soft underneath, coarse on top. Why two, and which one ends up in your sweater?",
+              "whyChain": [
+                "A sheep's coat has an OUTER guard hair (long, coarse, waterproof) and an UNDER coat (soft, crimpy, insulating). Sweaters and fine wool come from the undercoat; the guard hair goes into carpets or rougher textiles.",
+                "Why this division of labour? Because the guard hair sheds rain and resists abrasion; the undercoat traps air for warmth. Same dual structure as wolves, bears, otters. It's a robust mammalian design.",
+                "And why are some sheep breeds being engineered to lose the guard hair entirely? Because shearers can sort fibre faster if it's uniform — and pure-underfur breeds produce premium wool with no separation step. Trade-off: the sheep is more vulnerable to rain and parasites. Class 11+ animal breeding covers the welfare debates around this."
+              ]
             },
             {
               "id": "ch03_t01_c07",
@@ -8130,7 +8166,13 @@
                 51
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wool washing: COLD water + mild soap, NEVER hot (felts the wool — scales lock together permanently). Air dry flat. Hot wash = sweater for a doll."
+              "mnemonic": "Wool washing: COLD water + mild soap, NEVER hot (felts the wool — scales lock together permanently). Air dry flat. Hot wash = sweater for a doll.",
+              "predictQuestion": "Wool shrinks dramatically if you wash it in hot water. Cotton can be boiled with no problem. What's different about wool that makes hot water its enemy?",
+              "whyChain": [
+                "Wool fibres have microscopic scales on their surface (like roof tiles). Heat + agitation + moisture causes these scales to interlock and ratchet inward, permanently shrinking the garment. Cold-water + minimal motion preserves the size.",
+                "Why doesn't this happen to cotton or silk? Because cotton fibres have a smooth surface; silk's scales lie flatter. Wool's particularly scaly architecture is what gives it the trap-air insulation AND makes it shrink-prone — same physics, different consequence.",
+                "And why is dry-cleaning the standard for wool suits? Because dry-cleaning uses non-aqueous solvents (perchloroethylene) that dissolve dirt without water — no scale interlocking, no shrinkage. Class 11 chemistry covers the solvent properties that make dry-cleaning work."
+              ]
             },
             {
               "id": "ch03_t01_c08",
@@ -8205,7 +8247,13 @@
                 39
               ],
               "needsHumanReview": false,
-              "mnemonic": "PLANT fibres: cotton (seed hair), jute (stem), flax (stem→linen). ANIMAL fibres: wool, silk, fur. Source organ tells you a lot about the fibre's properties."
+              "mnemonic": "PLANT fibres: cotton (seed hair), jute (stem), flax (stem→linen). ANIMAL fibres: wool, silk, fur. Source organ tells you a lot about the fibre's properties.",
+              "predictQuestion": "Cotton vs wool — both natural, both used in clothing. Why do hot countries love cotton and cold countries love wool? Predict the physics behind each.",
+              "whyChain": [
+                "Plant fibres (cotton, linen, jute) are cellulose-based: absorbent, cool, breathable, weak insulators. Animal fibres (wool, silk, cashmere) are protein-based: warm, water-resistant, elastic. The molecular shape of each polymer drives the difference.",
+                "Why is cotton so good at absorbing sweat? Because cellulose has many -OH groups that hydrogen-bond with water. Cotton can absorb 25% of its weight in water without feeling wet. Wool can hold 30% but feels different — it traps water vapor rather than liquid, keeping skin drier.",
+                "And why do mixed-fibre fabrics exist? Because each fibre's weakness can be patched by another's strength. Cotton + polyester is wrinkle-free + breathable. Wool + nylon is warm + durable. The textile industry blends ~70% of all modern fabrics for performance reasons. Class 11+ materials engineering covers the math of fibre blending."
+              ]
             }
           ],
           "questions": [
@@ -8849,7 +8897,13 @@
                 44
               ],
               "needsHumanReview": false,
-              "mnemonic": "Silkworm life: EGG → LARVA (eats mulberry) → COCOON (spins silk around itself) → MOTH. Sericulture stops the cycle at cocoon stage to harvest unbroken silk."
+              "mnemonic": "Silkworm life: EGG → LARVA (eats mulberry) → COCOON (spins silk around itself) → MOTH. Sericulture stops the cycle at cocoon stage to harvest unbroken silk.",
+              "predictQuestion": "A silkworm spins ONE continuous thread up to 900 metres long from its own body. How does an insect that small produce that much fibre — and what's the thread chemically?",
+              "whyChain": [
+                "The silkworm Bombyx mori secretes silk protein (fibroin) as a liquid from glands and extrudes it through a spinneret. The protein hardens into a thread as it touches air. The worm spins itself into a cocoon over 2-3 days; one cocoon = one thread (~900 m typical).",
+                "Why one continuous thread? Because the silkworm needs a SEALED COCOON — any break would let predators in. Evolution selected for uninterrupted spinning. Convenient for humans: we can unwind the whole thread by softening the cocoon in hot water.",
+                "And why is silk so historically valuable? Because of that long single thread (no joins = strong, lustrous fabric), the lustre comes from the smooth triangular cross-section that reflects light. China kept silk-production secret for ~2500 years; the Silk Road was named after it. Class 11+ history covers sericulture's role in trade."
+              ]
             },
             {
               "id": "ch03_t02_c02",
@@ -8929,7 +8983,13 @@
                 43
               ],
               "needsHumanReview": false,
-              "mnemonic": "REEL = unwind silk from cocoon. WEAVE = interlace yarn into fabric. SAREE journey: silkworm cocoon → reeling → degumming → dyeing → weaving on loom → 6 metres of saree."
+              "mnemonic": "REEL = unwind silk from cocoon. WEAVE = interlace yarn into fabric. SAREE journey: silkworm cocoon → reeling → degumming → dyeing → weaving on loom → 6 metres of saree.",
+              "predictQuestion": "A silk saree weighs ~500 g and contains kilometres of silk thread. How do you go from cocoons to saree — and why are some sarees still hand-woven?",
+              "whyChain": [
+                "Reeling: softening cocoons in hot water + unwinding the threads together (3-8 threads = one yarn). Weaving: setting up a warp (long threads) and pulling a weft (cross threads) through. Hand-looms use a foot pedal + shuttle; power-looms automate the same motions.",
+                "Why do hand-loom sarees still command premium prices? Because of the brocade work — intricate patterns from individually-placed threads. Kanjeevaram, Banarasi, Patola sarees have complex designs that mechanised weaving can't match in subtlety. Each can take a master weaver 2-6 months.",
+                "And why is the Indian handloom sector politically protected? Because it employs ~4 million weavers, mostly in rural areas. The Handloom Reservation Act 1985 reserves certain saree types for hand-weaving. Class 12 economics covers protective trade and the ethics of replacing skilled craft with mechanisation."
+              ]
             },
             {
               "id": "ch03_t02_c03",
@@ -9006,7 +9066,13 @@
                 58
               ],
               "needsHumanReview": false,
-              "mnemonic": "Silk varieties: MULBERRY silk (most common, Karnataka/West Bengal), MUGA (golden, Assam, only place in world), TASAR (wild, Jharkhand), ERI (peaceful, no killing)."
+              "mnemonic": "Silk varieties: MULBERRY silk (most common, Karnataka/West Bengal), MUGA (golden, Assam, only place in world), TASAR (wild, Jharkhand), ERI (peaceful, no killing).",
+              "predictQuestion": "There's mulberry silk, tussar silk, eri silk, muga silk. Why so many — and why do some come from worms that DON'T eat mulberry leaves?",
+              "whyChain": [
+                "Different silk types come from different silkworm species. Mulberry (B. mori) eats only mulberry leaves; tussar silkworms eat oak / sal leaves; muga (Antheraea assamensis, Assam-only) eats som and sualu leaves. Each species produces silk of slightly different colour, strength, texture.",
+                "Why have humans bothered with so many species? Because each silk has different aesthetic properties. Muga is naturally golden, never needs dyeing — prized in Assamese wedding mekhalas. Tussar has a rich tan colour. Eri silk is matt rather than glossy. Markets exist for each.",
+                "And why is wild silk (tussar, muga, eri) called 'ahimsa silk'? Because in mulberry sericulture, the pupa is killed inside the cocoon to preserve the unbroken thread. Wild silks are usually harvested after the moth emerges — leaving a broken cocoon but a living moth. Class 11 ethics covers this; Indian Buddhists championed ahimsa silk historically."
+              ]
             },
             {
               "id": "ch03_t02_c04",
@@ -9082,7 +9148,13 @@
                 61
               ],
               "needsHumanReview": false,
-              "mnemonic": "Ethical concern: silkworms are killed in their cocoons (boiled). AHIMSA SILK lets moths emerge first — breaks the fibre into pieces, costs 5x more, valuable as 'peace silk'."
+              "mnemonic": "Ethical concern: silkworms are killed in their cocoons (boiled). AHIMSA SILK lets moths emerge first — breaks the fibre into pieces, costs 5x more, valuable as 'peace silk'.",
+              "predictQuestion": "Most silk requires KILLING the silkworm before it can hatch. Is there an ethical alternative — and what does that cost the silk?",
+              "whyChain": [
+                "In conventional sericulture, cocoons are boiled with the live pupa inside — this preserves the unbroken thread for high-quality reeling. Pupae are killed by the heat. About 2,500 cocoons (and pupae) make one saree.",
+                "Why kill them? Because once the moth emerges, it dissolves a hole through the cocoon, breaking the thread into shorter fragments. Broken threads can still be spun into 'spun silk' — but it's coarser, less lustrous, and cheaper.",
+                "And why is 'peace silk' / ahimsa silk gaining popularity? Because of welfare concerns + religious / philosophical alignment (Jain, Buddhist communities). The trade-off: ahimsa silk costs 30-50% more for visibly lower lustre. Class 11+ ethics + economics meet in this market: the willingness-to-pay for animal welfare has become a real market force."
+              ]
             }
           ],
           "questions": [
@@ -9462,7 +9534,13 @@
                 64
               ],
               "needsHumanReview": false,
-              "mnemonic": "NATURAL: biodegradable, breathable, costly. SYNTHETIC: durable, cheap, NON-biodegradable (microplastics). Trade-offs along multiple axes — neither universally 'better'."
+              "mnemonic": "NATURAL: biodegradable, breathable, costly. SYNTHETIC: durable, cheap, NON-biodegradable (microplastics). Trade-offs along multiple axes — neither universally 'better'.",
+              "predictQuestion": "Polyester (synthetic) and cotton (natural) cost about the same to buy. Why do environmentalists prefer cotton even though cotton needs more water to grow?",
+              "whyChain": [
+                "Synthetic fibres (polyester, nylon, acrylic) are petroleum-based polymers — cheap, strong, durable, but persistent in landfills (~200 years to decompose) and release microplastics with every wash. Natural fibres (cotton, wool, silk) biodegrade in months.",
+                "Why is cotton's water use a smaller problem than polyester's persistence? Because water is renewable (cycles back via rainfall in a growing season). Microplastics, once in the ocean, stay forever. They're now found in every fish, every drinking water sample, even rain. Trade-off: visible local impact vs invisible global impact.",
+                "And why is the fashion industry the second-largest polluter on Earth? Because fast fashion + cheap synthetics + 4-6 'micro-seasons' per year = ~92 million tonnes of textile waste annually. The shift back to natural fibres + repair + secondhand is happening but slowly. Class 11+ environmental science covers the textile-pollution numbers in detail."
+              ]
             },
             {
               "id": "ch03_t03_c02",
@@ -9539,7 +9617,13 @@
                 66
               ],
               "needsHumanReview": false,
-              "mnemonic": "Global textile = 2nd most polluting industry after oil. India: world's 2nd-largest textile producer. Cotton supply chain spans countries — fast fashion's hidden cost."
+              "mnemonic": "Global textile = 2nd most polluting industry after oil. India: world's 2nd-largest textile producer. Cotton supply chain spans countries — fast fashion's hidden cost.",
+              "predictQuestion": "The clothes you're wearing right now were probably made in another country. Why is textile manufacturing so concentrated in certain countries — and why did jobs shift from one country to another?",
+              "whyChain": [
+                "The global textile industry is structured around comparative advantage: cotton grows where there's land + water (India, USA, China); cheap labour for sewing concentrates in lower-wage economies (Bangladesh, Vietnam). Brands in rich countries design + sell; production happens elsewhere.",
+                "Why has the production map shifted so much over 60 years? Because labour costs rise as countries develop. Britain led textile manufacturing in 1850; Japan in 1950; Korea + Taiwan in 1980; China in 2000; Bangladesh + Vietnam today. As wages rise in any country, the industry migrates to cheaper labour.",
+                "And why is the Rana Plaza factory collapse (2013, Bangladesh, 1138 dead) a touchstone for textile ethics? Because it exposed the brutal cost-cutting on safety. Brands moved fast-fashion production to factories with poor regulation. Class 11 economics + ethics covers the supply-chain transparency movement that emerged after Rana Plaza."
+              ]
             },
             {
               "id": "ch03_t03_c03",
@@ -9615,7 +9699,13 @@
                 68
               ],
               "needsHumanReview": false,
-              "mnemonic": "Spider silk = STRONGER THAN STEEL per weight + ELASTIC like rubber. Engineers can't farm spiders (cannibalistic) — they engineer goats to produce spider silk in milk."
+              "mnemonic": "Spider silk = STRONGER THAN STEEL per weight + ELASTIC like rubber. Engineers can't farm spiders (cannibalistic) — they engineer goats to produce spider silk in milk.",
+              "predictQuestion": "Spider silk is stronger than steel by weight, more elastic than rubber, and biodegradable. Why don't we use spider silk for everything — and why are scientists obsessed with reverse-engineering it?",
+              "whyChain": [
+                "Spider silk is a protein fibre with tensile strength of ~1.3 GPa (5x stronger than steel by weight), elongation up to 35%, and self-healing properties. Spiders use it for webs, egg sacs, lifelines. The chemistry is well-understood; mass production is the bottleneck.",
+                "Why can't we farm spiders for silk? Because spiders are cannibalistic and territorial — keeping them in dense colonies fails. Each spider produces only milligrams of silk. The solution: transgenic goats whose milk contains spider-silk proteins, then extract and spin them. Companies like Spiber and Bolt Threads have done this commercially.",
+                "And why is spider silk the holy grail of materials science? Because no synthetic fibre matches its combination of strength + elasticity + biodegradability + biocompatibility. Applications: bulletproof vests, surgical sutures, artificial ligaments. Class 11+ biology + materials science covers transgenic spider silk as one of the most ambitious biotech projects of the 2020s."
+              ]
             }
           ],
           "questions": [
@@ -10656,7 +10746,150 @@
           "parentConceptId": "ch03_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch03_t01_c08",
+            "label": "Animal vs plant fibres",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.2
+          },
+          {
+            "id": "ch03_t01_c02",
+            "label": "Wool-yielding animals",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.4
+          },
+          {
+            "id": "ch03_t01_c03",
+            "label": "Wool processing (6 steps)",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.6
+          },
+          {
+            "id": "ch03_t01_c05",
+            "label": "Wool grades",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.55
+          },
+          {
+            "id": "ch03_t01_c07",
+            "label": "Wool care",
+            "kind": "concept",
+            "x": 0.1,
+            "y": 0.8
+          },
+          {
+            "id": "ch03_t02_c01",
+            "label": "Sericulture + silkworm",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.4
+          },
+          {
+            "id": "ch03_t02_c02",
+            "label": "Reeling to saree",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.6
+          },
+          {
+            "id": "ch03_t02_c04",
+            "label": "Ahimsa silk ethics",
+            "kind": "concept",
+            "x": 0.9,
+            "y": 0.8
+          },
+          {
+            "id": "ch03_t03_c01",
+            "label": "Synthetic vs natural",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.78
+          },
+          {
+            "id": "ch03_t03_c02",
+            "label": "Global textile industry",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.92
+          },
+          {
+            "id": "ch03_t03_c03",
+            "label": "Spider silk",
+            "kind": "concept",
+            "x": 0.9,
+            "y": 0.25
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch03_t01_c08",
+            "to": "ch03_t01_c02",
+            "label": "animal example"
+          },
+          {
+            "id": "e02",
+            "from": "ch03_t01_c02",
+            "to": "ch03_t01_c03",
+            "label": "processed via"
+          },
+          {
+            "id": "e03",
+            "from": "ch03_t01_c03",
+            "to": "ch03_t01_c05",
+            "label": "produces"
+          },
+          {
+            "id": "e04",
+            "from": "ch03_t01_c05",
+            "to": "ch03_t01_c07",
+            "label": "shapes"
+          },
+          {
+            "id": "e05",
+            "from": "ch03_t02_c01",
+            "to": "ch03_t02_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e06",
+            "from": "ch03_t02_c01",
+            "to": "ch03_t02_c04",
+            "label": "raises"
+          },
+          {
+            "id": "e07",
+            "from": "ch03_t01_c08",
+            "to": "ch03_t02_c01",
+            "label": "animal example"
+          },
+          {
+            "id": "e08",
+            "from": "ch03_t01_c08",
+            "to": "ch03_t03_c01",
+            "label": "contrasts with"
+          },
+          {
+            "id": "e09",
+            "from": "ch03_t03_c01",
+            "to": "ch03_t03_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e10",
+            "from": "ch03_t03_c03",
+            "to": "ch03_t02_c01",
+            "label": "next-gen of"
+          }
+        ]
+      }
     },
     {
       "id": "ch04",
@@ -14039,7 +14272,13 @@
                 62
               ],
               "needsHumanReview": false,
-              "mnemonic": "SOUR = ACID. Vinegar (acetic), lemon (citric), curd (lactic), ant sting (formic). Acids turn BLUE litmus RED. pH < 7."
+              "mnemonic": "SOUR = ACID. Vinegar (acetic), lemon (citric), curd (lactic), ant sting (formic). Acids turn BLUE litmus RED. pH < 7.",
+              "predictQuestion": "Lemon juice is acidic. So is vinegar, tamarind, and your stomach. Why do completely different sources all share the SAME 'acidic' character?",
+              "whyChain": [
+                "Acids are compounds that release H⁺ ions in water. All acidic-tasting things (lemon → citric acid, vinegar → acetic acid, stomach → hydrochloric acid) share that H⁺ release. The sour taste is your tongue detecting H⁺.",
+                "Why does H⁺ taste sour specifically? Because tongue receptors have evolved to detect strong-acid signals — historically warning of unripe fruit + spoiled food. Class 7 NCERT introduces this; Class 11+ chemistry formalises with Brønsted-Lowry theory (acid = proton donor).",
+                "And why do strong acids burn while weak acids just taste sour? Because the amount of H⁺ released matters. Lemon is 5% citric acid, ~pH 2. Pure sulphuric acid (98%) is ~pH 0 — 100× stronger. Chemistry's pH scale is logarithmic; each unit is 10× the H⁺ concentration. Class 11 chemistry derives pH = -log[H⁺]."
+              ]
             },
             {
               "id": "ch05_t01_c02",
@@ -14082,7 +14321,13 @@
                 65
               ],
               "needsHumanReview": false,
-              "mnemonic": "BITTER/SOAPY = BASE. Soap, baking soda, antacid, lime water. Bases turn RED litmus BLUE. pH > 7. Bee sting is basic — counter with vinegar (acid)."
+              "mnemonic": "BITTER/SOAPY = BASE. Soap, baking soda, antacid, lime water. Bases turn RED litmus BLUE. pH > 7. Bee sting is basic — counter with vinegar (acid).",
+              "predictQuestion": "Soap feels slippery. Baking soda tastes bitter. Lye burns your skin. What single chemical property unites these wildly different materials?",
+              "whyChain": [
+                "Bases (alkalis) release OH⁻ ions in water. Soap is sodium stearate; baking soda is sodium bicarbonate; lye is sodium hydroxide. All produce OH⁻. The slippery feel comes from OH⁻ + skin oils forming soap on contact.",
+                "Why bitter taste + slippery feel + burn-on-strong? Because OH⁻ ions are strong nucleophiles — they react with proteins (your skin, your tongue receptors) to form soap-like compounds. Weak base = mild slippery; strong base = chemical burn.",
+                "And why are bases not as common in food as acids? Because most plants accumulate weak acids (citric, malic, oxalic) for defence + flavour. Bases come from mineral sources (ash, limestone) or industrial production. Class 11 chemistry's acid-base chapter covers the asymmetry in natural occurrence."
+              ]
             },
             {
               "id": "ch05_t01_c03",
@@ -14122,7 +14367,13 @@
                 67
               ],
               "needsHumanReview": false,
-              "mnemonic": "Indicators = colour-changing dyes. LITMUS (red↔blue), PHENOLPHTHALEIN (colourless→pink in base), TURMERIC (yellow→red in base). Universal indicator gives a full pH scale colour."
+              "mnemonic": "Indicators = colour-changing dyes. LITMUS (red↔blue), PHENOLPHTHALEIN (colourless→pink in base), TURMERIC (yellow→red in base). Universal indicator gives a full pH scale colour.",
+              "predictQuestion": "Predict before reading: how can a single drop of liquid (called an 'indicator') tell you whether a sample is acidic or basic?",
+              "whyChain": [
+                "Indicators are compounds whose colour depends on H⁺ vs OH⁻ in solution. Litmus turns red in acid, blue in base. Phenolphthalein is colourless in acid, pink in base. The H⁺ ions attach to the indicator molecule, changing its structure and absorbing different light frequencies.",
+                "Why does H⁺ attaching cause a colour shift? Because the indicator's electrons re-arrange when protonated. The new electron arrangement absorbs different wavelengths of light, so a different colour reflects back. Class 11+ chemistry covers conjugated pi-electron systems that absorb specific wavelengths.",
+                "And why is pH paper (universal indicator) such an elegant invention? Because it's a mixture of several indicators that together give a colour gradient from red (pH 0) to violet (pH 14). One paper strip tells you the exact pH. Class 11 chemistry uses pH paper in every titration experiment."
+              ]
             }
           ],
           "questions": [
@@ -14747,7 +14998,13 @@
                 68
               ],
               "needsHumanReview": false,
-              "mnemonic": "Acid + Base → SALT + WATER. The H+ from acid pairs with OH- from base to make water; remaining ions form salt. Heat is often released (exothermic)."
+              "mnemonic": "Acid + Base → SALT + WATER. The H+ from acid pairs with OH- from base to make water; remaining ions form salt. Heat is often released (exothermic).",
+              "predictQuestion": "If you mixed equal amounts of stomach acid and household lye, what would the outcome be?",
+              "whyChain": [
+                "Acid + base → water + salt. The H⁺ from acid combines with the OH⁻ from base to make H₂O (neutralisation), and the leftover ions form a salt. HCl + NaOH → H₂O + NaCl (common table salt!).",
+                "Why does this always work? Because H⁺ + OH⁻ → H₂O is a very thermodynamically favourable reaction (releases heat — 'enthalpy of neutralisation' ~56 kJ/mol). Any acid + any base will neutralise; the only variable is the leftover salt.",
+                "And why is this the basis of antacids? Because indigestion is excess stomach acid; chewable antacids contain bases (calcium carbonate, magnesium hydroxide) that neutralise the acid. The salt produced (calcium chloride etc.) is harmless. Class 11+ chemistry has neutralisation as the foundational reaction type."
+              ]
             },
             {
               "id": "ch05_t02_c02",
@@ -14788,7 +15045,13 @@
                 69
               ],
               "needsHumanReview": false,
-              "mnemonic": "Salts: NaCl (table), KCl (low-sodium), CaCO3 (chalk), CuSO4 (blue vitriol), NaHCO3 (baking soda). All formed from acid+base reactions."
+              "mnemonic": "Salts: NaCl (table), KCl (low-sodium), CaCO3 (chalk), CuSO4 (blue vitriol), NaHCO3 (baking soda). All formed from acid+base reactions.",
+              "predictQuestion": "Table salt, plaster of Paris, baking soda, alum — all are SALTS chemically, but they look and behave nothing alike. Why are they grouped together?",
+              "whyChain": [
+                "A salt is the ionic compound left after an acid + base neutralise. The variety comes from the original acid + base. HCl + NaOH → NaCl (table salt). H₂SO₄ + Ca(OH)₂ → CaSO₄ (plaster). Each combination produces a different salt with different properties.",
+                "Why so many salts in daily life? Because acids and bases are everywhere in chemistry — neutralisation is one of the most common reactions. Soil chemistry, water treatment, food preservation, fertiliser production — all involve salts.",
+                "And why does the human body have its own salt balance to maintain? Because electrolytes (Na⁺, K⁺, Ca²⁺, Cl⁻) regulate cell function. Too much salt → dehydration; too little → cramps + confusion. Class 11+ biology covers electrolyte physiology; oral rehydration salts (ORS) are basically a precise mix that mimics body fluids."
+              ]
             }
           ],
           "questions": [
@@ -15177,7 +15440,13 @@
                 66
               ],
               "needsHumanReview": false,
-              "mnemonic": "Three industrial acids: SULPHURIC (battery acid, fertiliser, refining), HYDROCHLORIC (pickling steel, gut acid), NITRIC (fertiliser, explosives). All STRONG, concentrated forms dangerous."
+              "mnemonic": "Three industrial acids: SULPHURIC (battery acid, fertiliser, refining), HYDROCHLORIC (pickling steel, gut acid), NITRIC (fertiliser, explosives). All STRONG, concentrated forms dangerous.",
+              "predictQuestion": "Sulphuric acid is the world's most-produced industrial chemical (180+ million tonnes a year). What is it actually FOR — what does sulphuric acid make that we can't live without?",
+              "whyChain": [
+                "Sulphuric acid (H₂SO₄) is used in fertiliser manufacture (most: ~50% of production), petroleum refining, metal processing, battery acid (lead-acid car batteries). Hydrochloric acid is used in pickling steel, swimming-pool maintenance. Nitric acid is in fertilisers + explosives.",
+                "Why is so much sulphuric acid needed for fertiliser? Because superphosphate fertiliser is made by treating rock phosphate with H₂SO₄ — converting insoluble phosphate to a plant-available form. Without this reaction, the Green Revolution wouldn't have happened. Sulphuric acid feeds the planet.",
+                "And why are industrial acid spills so devastating? Because at the scales used, even a small leak creates a corrosive cloud or river. The Bhopal disaster (1984) was methyl isocyanate (different chemistry), but acid spills from chemical plants — sulphuric, hydrochloric — happen regularly in poorly-regulated regions. Class 11+ chemistry + ethics + safety engineering cover acid handling."
+              ]
             },
             {
               "id": "ch05_t03_c02",
@@ -15220,7 +15489,13 @@
                 67
               ],
               "needsHumanReview": false,
-              "mnemonic": "Tooth decay = bacteria + sugar → ACID → enamel dissolved. Saliva neutralises some acid. Brushing removes both bacteria AND food. Acid + bacteria together cause cavities; neither alone is enough."
+              "mnemonic": "Tooth decay = bacteria + sugar → ACID → enamel dissolved. Saliva neutralises some acid. Brushing removes both bacteria AND food. Acid + bacteria together cause cavities; neither alone is enough.",
+              "predictQuestion": "Your teeth are some of the hardest material in your body. Yet sugar in your mouth slowly drills holes in them. How does sugar destroy something harder than bone?",
+              "whyChain": [
+                "Tooth decay is acid attack on enamel. Bacteria (Streptococcus mutans) live on your teeth and metabolise sugar into lactic acid. The acid dissolves the calcium phosphate that makes enamel. A cavity is the visible hole left after enough enamel is gone.",
+                "Why don't your teeth heal themselves? Because enamel has NO blood supply (it's the only tissue in the body that doesn't) — no cells, no regeneration. Once eroded, it stays eroded. Dentin underneath can be slightly regrown, but enamel is one-way.",
+                "And why does fluoride toothpaste help? Because fluoride ions replace some of the hydroxyl groups in enamel, making the new material (fluorapatite) ~10× more acid-resistant than the original. Toothpaste fluoride hardens enamel slowly over years. Class 11+ chemistry + dentistry cover this in detail."
+              ]
             },
             {
               "id": "ch05_t03_c03",
@@ -15264,7 +15539,13 @@
                 68
               ],
               "needsHumanReview": false,
-              "mnemonic": "Ocean acidification = atmospheric CO2 dissolves in seawater forming carbonic acid. Oceans now 30% more acidic than pre-industrial. Coral and shellfish dissolve in lower pH."
+              "mnemonic": "Ocean acidification = atmospheric CO2 dissolves in seawater forming carbonic acid. Oceans now 30% more acidic than pre-industrial. Coral and shellfish dissolve in lower pH.",
+              "predictQuestion": "Atmospheric CO₂ is rising. We worry about climate, but there's a SECOND problem — the oceans are becoming acidic. What does CO₂ have to do with seawater chemistry?",
+              "whyChain": [
+                "Ocean acidification: CO₂ from the air dissolves into seawater, forming carbonic acid (H₂CO₃). About 30% of human CO₂ emissions are absorbed by oceans, dropping seawater pH from 8.2 (pre-industrial) to ~8.1 today. The lower pH dissolves the calcium carbonate that builds shells + coral reefs.",
+                "Why is a 0.1-pH change a big deal? Because pH is logarithmic — 0.1 units = 30% more H⁺ ions. Shellfish larvae can't build their first shell in this water and die. Coral reefs erode faster than they grow. Whole marine food chains are at risk.",
+                "And why is this the 'evil twin' of climate change? Because while warming gets headlines, acidification is just as serious. Coral reefs (which support 25% of marine species) may be functionally extinct by 2050 if both trends continue. Class 11+ environmental + marine science covers ocean chemistry in detail."
+              ]
             }
           ],
           "questions": [
@@ -16113,7 +16394,130 @@
           "parentConceptId": "ch05_t03_c03",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch05_t01_c01",
+            "label": "Acids (H⁺)",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.3
+          },
+          {
+            "id": "ch05_t01_c02",
+            "label": "Bases (OH⁻)",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.3
+          },
+          {
+            "id": "ch05_t01_c03",
+            "label": "Indicators",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.15
+          },
+          {
+            "id": "ch05_t02_c01",
+            "label": "Neutralisation",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.5
+          },
+          {
+            "id": "ch05_t02_c02",
+            "label": "Salts",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.7
+          },
+          {
+            "id": "ch05_t03_c01",
+            "label": "Industrial acids",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.6
+          },
+          {
+            "id": "ch05_t03_c02",
+            "label": "Tooth decay (acid attack)",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.85
+          },
+          {
+            "id": "ch05_t03_c03",
+            "label": "Ocean acidification",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.85
+          },
+          {
+            "id": "ch01:ch01_t01_c02",
+            "label": "Photosynthesis (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.95,
+            "y": 0.6
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch05_t01_c01",
+            "to": "ch05_t02_c01",
+            "label": "reacts in"
+          },
+          {
+            "id": "e02",
+            "from": "ch05_t01_c02",
+            "to": "ch05_t02_c01",
+            "label": "reacts in"
+          },
+          {
+            "id": "e03",
+            "from": "ch05_t01_c03",
+            "to": "ch05_t01_c01",
+            "label": "detects"
+          },
+          {
+            "id": "e04",
+            "from": "ch05_t01_c03",
+            "to": "ch05_t01_c02",
+            "label": "detects"
+          },
+          {
+            "id": "e05",
+            "from": "ch05_t02_c01",
+            "to": "ch05_t02_c02",
+            "label": "produces"
+          },
+          {
+            "id": "e06",
+            "from": "ch05_t03_c01",
+            "to": "ch05_t01_c01",
+            "label": "examples of"
+          },
+          {
+            "id": "e07",
+            "from": "ch05_t03_c02",
+            "to": "ch05_t01_c01",
+            "label": "caused by"
+          },
+          {
+            "id": "e08",
+            "from": "ch05_t03_c03",
+            "to": "ch05_t01_c01",
+            "label": "scaled up"
+          },
+          {
+            "id": "e09",
+            "from": "ch05_t03_c03",
+            "to": "ch01:ch01_t01_c02",
+            "label": "CO₂ from / to"
+          }
+        ]
+      }
     },
     {
       "id": "ch06",
@@ -18557,7 +18961,13 @@
                 88
               ],
               "needsHumanReview": false,
-              "mnemonic": "WEATHER = TODAY (short-term, hours-days). CLIMATE = AVERAGE (long-term, 30+ years). A single cold day is weather; a decade-long warming trend is climate change."
+              "mnemonic": "WEATHER = TODAY (short-term, hours-days). CLIMATE = AVERAGE (long-term, 30+ years). A single cold day is weather; a decade-long warming trend is climate change.",
+              "predictQuestion": "It snowed yesterday in Delhi. Does that prove the climate is changing — or does one weather event tell us nothing about climate?",
+              "whyChain": [
+                "Weather is the day-to-day state of the atmosphere (temperature, rain, wind). Climate is the long-term AVERAGE — typically 30+ years of weather data — for a region. Today's snow is weather; how often Delhi sees snow on average is climate.",
+                "Why is this distinction so important? Because climate change is statistical — it shifts the AVERAGES and INCREASES VARIANCE. So you'll see more extreme events (heat + cold), but pointing to any one event doesn't prove the trend. Only averages over decades do.",
+                "And why is the public confusion harmful for policy? Because 'it's snowing, so global warming is fake' is a tempting but wrong inference. Class 11+ environmental science teaches the statistical foundations of climate science — and IPCC reports are based on multi-decade averages, not yearly weather."
+              ]
             },
             {
               "id": "ch07_t01_c02",
@@ -18599,7 +19009,13 @@
                 90
               ],
               "needsHumanReview": false,
-              "mnemonic": "Climate shaped by: LATITUDE (sun angle), ALTITUDE (cooler higher up), PROXIMITY to OCEAN (moderates extremes), wind patterns, mountain barriers. Each factor stacks."
+              "mnemonic": "Climate shaped by: LATITUDE (sun angle), ALTITUDE (cooler higher up), PROXIMITY to OCEAN (moderates extremes), wind patterns, mountain barriers. Each factor stacks.",
+              "predictQuestion": "Bengaluru is hot in May; Shimla is cool. Both are in India at similar latitudes. What's making the climates different?",
+              "whyChain": [
+                "A region's climate depends on latitude (more sun near equator), altitude (cooler at higher elevations), proximity to sea (moderates extremes), wind patterns (carry moisture), and ocean currents (warm or cool nearby coasts). Each factor independently shapes the average.",
+                "Why does altitude matter so much? Because air gets ~1°C cooler per 100 m of elevation. Shimla at 2200 m is ~22°C colder on average than sea-level Bengaluru, even though they share similar latitudes. Mt Everest's summit is -36°C average year-round.",
+                "And why does this give the Indian subcontinent such varied climates? Because India has 4000 m altitude variation (Kanyakumari sea-level to Ladakh + Himalayas), 30° of latitude, two long coastlines, and the Himalayan rain shadow. Class 11+ geography covers the climate-zone map; few places on Earth have so many in one country."
+              ]
             }
           ],
           "questions": [
@@ -19257,7 +19673,13 @@
                 92
               ],
               "needsHumanReview": false,
-              "mnemonic": "Polar adaptations: BLUBBER (fat insulation), THICK FUR + air-trapping hollow hairs, WHITE CAMOUFLAGE, SMALL EARS (less heat loss), behaviour (huddling). Layered defences against cold."
+              "mnemonic": "Polar adaptations: BLUBBER (fat insulation), THICK FUR + air-trapping hollow hairs, WHITE CAMOUFLAGE, SMALL EARS (less heat loss), behaviour (huddling). Layered defences against cold.",
+              "predictQuestion": "Polar bears live where it's -40°C. How does a mammal — which needs 37°C internal temperature — survive that constant freezing cold?",
+              "whyChain": [
+                "Polar animals have thick fur or feathers (insulation), thick fat layers (insulation + energy reserves), small extremities (less surface area to lose heat), and specialised circulation (counter-current heat exchange in legs and beaks). Each adaptation reduces heat loss.",
+                "Why specifically counter-current heat exchange? Because blood flowing INTO a cold extremity (like a polar bear's paws) passes RIGHT NEXT TO blood flowing OUT — heat transfers from the outgoing warm blood to the incoming cold blood. The paw stays cold (~10°C) but the body core doesn't lose its heat.",
+                "And why don't polar bears just hibernate? Because they actively hunt — pregnant females do enter a dormant state, but most polar bears stay awake hunting seals year-round. Hibernation suits animals that can't find food in winter (bears in temperate zones); polar bears can. Class 11+ biology covers ectotherm vs endotherm metabolism trade-offs."
+              ]
             },
             {
               "id": "ch07_t02_c02",
@@ -19299,7 +19721,13 @@
                 93
               ],
               "needsHumanReview": false,
-              "mnemonic": "Tropical adaptations: LIGHT colours (reflect sun), LARGE EARS (lose heat), SLEEKER fur (no insulation needed), nocturnal habits (active at cooler times). Opposite-of-polar package."
+              "mnemonic": "Tropical adaptations: LIGHT colours (reflect sun), LARGE EARS (lose heat), SLEEKER fur (no insulation needed), nocturnal habits (active at cooler times). Opposite-of-polar package.",
+              "predictQuestion": "Tropical rainforest animals don't need warm fur — they need to LOSE heat. How does evolution solve the opposite problem from polar adaptation?",
+              "whyChain": [
+                "Tropical adaptations: thin coats (or no fur), large ears + extremities (more surface area to lose heat), bright camouflage (greenery), specialised diets (cellulose-rich leaves, year-round fruit), and water-conservation strategies (drinking dew, eating water-rich foods).",
+                "Why are large ears (like an African elephant's) a cooling trick? Because the ears are full of blood vessels close to the skin. Flapping them dissipates body heat into the air. An elephant's ears are essentially built-in radiators — the polar bear's smaller ears are the opposite design.",
+                "And why do tropical species have such different camouflage from polar species? Because the dominant colours of the habitat differ — green leaves vs white snow. Camouflage evolves to match the local visual background. Class 11+ ecology covers convergent vs divergent evolution; the same problem (don't be eaten) has hundreds of locally-optimised solutions."
+              ]
             },
             {
               "id": "ch07_t02_c03",
@@ -19341,7 +19769,13 @@
                 93
               ],
               "needsHumanReview": false,
-              "mnemonic": "Migration = LONG-DISTANCE annual movement following food/temperature. Birds (Siberia→India in winter), whales, monarch butterflies. Hardwired in genes + learned from elders."
+              "mnemonic": "Migration = LONG-DISTANCE annual movement following food/temperature. Birds (Siberia→India in winter), whales, monarch butterflies. Hardwired in genes + learned from elders.",
+              "predictQuestion": "Some birds fly thousands of kilometres twice a year, every year, to escape winter. Why migrate instead of just adapting where you are?",
+              "whyChain": [
+                "Migration is the long-distance movement of animals between seasons — usually to follow food + climate. Arctic terns fly 70,000 km/year (longest known migration). Indian whistling teals migrate from Siberia to Indian wetlands. Each journey trades risk for resource access.",
+                "Why migrate instead of adapt locally? Because some climates have NO food in winter (Arctic tundra has nothing for insectivorous birds). Migration is an adaptation by avoidance — go somewhere with food. The trade-off: thousands of km of flying, navigation challenges, predator exposure.",
+                "And why is climate change disrupting migration patterns? Because timing matters — birds arriving at breeding grounds find food not yet available (insects haven't emerged), nests fail. Class 11+ ecology covers phenological mismatch as one of the most damaging consequences of climate shift."
+              ]
             }
           ],
           "questions": [
@@ -19688,7 +20122,13 @@
                 82
               ],
               "needsHumanReview": false,
-              "mnemonic": "Climate change forces species to move poleward (cooler) or higher (cooler). Some can; many can't (habitat fragmented). Coral, polar bears, tropical mountain frogs face hard limits."
+              "mnemonic": "Climate change forces species to move poleward (cooler) or higher (cooler). Some can; many can't (habitat fragmented). Coral, polar bears, tropical mountain frogs face hard limits.",
+              "predictQuestion": "Animals that lived in one place for thousands of years are now showing up where they shouldn't be. What's driving the redistribution — and what happens to the species left behind?",
+              "whyChain": [
+                "Climate change shifts habitats by altering temperature, rainfall, and seasonality. Species respond by moving to higher latitudes or altitudes — tracking the climate they evolved for. Birds, butterflies, and trees are all migrating poleward + uphill at measurable rates.",
+                "Why is this dangerous despite seeming like an adaptation? Because not all species can move fast enough (slow trees, isolated populations). And new habitats may already be full or lack required food. Some species shrink to mountain peaks (nowhere higher to go) and go extinct.",
+                "And why is biodiversity loss accelerating? Because climate is just one of many pressures (habitat loss, hunting, pollution). Combined, species are being lost ~1000× faster than the natural background rate. Class 11+ environmental science covers the Sixth Mass Extinction with climate as one major driver."
+              ]
             },
             {
               "id": "ch07_t03_c02",
@@ -19731,7 +20171,13 @@
                 83
               ],
               "needsHumanReview": false,
-              "mnemonic": "Coral BLEACHING = corals expel their symbiotic algae when water gets too warm. Without algae, coral turns white and starves. Reefs dying globally as oceans warm."
+              "mnemonic": "Coral BLEACHING = corals expel their symbiotic algae when water gets too warm. Without algae, coral turns white and starves. Reefs dying globally as oceans warm.",
+              "predictQuestion": "Coral reefs are turning white worldwide. White SOUNDS pretty. Why is it actually a sign that they're dying?",
+              "whyChain": [
+                "Coral bleaching: corals host tiny algae (zooxanthellae) that give them colour AND most of their food via photosynthesis. When water gets too warm (~1-2°C above normal max), corals expel the algae as a stress response. Without algae, coral starves and dies — leaving white skeleton.",
+                "Why warm water? Because the algae's photosynthesis efficiency drops at high temperatures; they generate harmful oxygen radicals. The coral evicts them in self-defence but then starves. Cooler water would let them re-host the algae.",
+                "And why are reefs the canary in the coal mine of climate change? Because they show stress fast (within weeks of warming events), they're easy to see (from boats / drones), and they support 25% of marine biodiversity. Lose reefs = lose huge fraction of ocean life. The Great Barrier Reef has bleached massively in 2016, 2017, 2020, 2022. Class 11+ environmental science covers this."
+              ]
             },
             {
               "id": "ch07_t03_c03",
@@ -19774,7 +20220,13 @@
                 84
               ],
               "needsHumanReview": false,
-              "mnemonic": "Conservation = (1) PROTECT habitats (national parks), (2) SLOW climate change (cut emissions), (3) ASSIST adaptation (corridors, breeding programmes), (4) RESTORE damaged ecosystems."
+              "mnemonic": "Conservation = (1) PROTECT habitats (national parks), (2) SLOW climate change (cut emissions), (3) ASSIST adaptation (corridors, breeding programmes), (4) RESTORE damaged ecosystems.",
+              "predictQuestion": "Climate change feels like a problem only governments can fix. Can individual actions actually matter — or is that a comforting myth?",
+              "whyChain": [
+                "Conservation involves protecting species + habitats + reducing human impact. Individual actions (less meat, public transport, recycling, supporting protected areas) add up across billions of people. But systemic change (renewable energy, urban planning, deforestation policy) is needed for the big shifts.",
+                "Why is BOTH important? Because individual changes shape culture, voting patterns, and consumer markets. Without individual demand for change, governments don't act. Without government action, individual changes can't scale. Both feedback loops drive each other.",
+                "And why are global compacts like the Paris Agreement so important despite being non-binding? Because they coordinate national commitments. Each country sets a target; comparison + peer pressure drives ambition upward. Class 11+ policy + environmental ethics covers the agreements, their failures, and the path to climate action that's working in some places (EU, parts of US, India's solar push)."
+              ]
             }
           ],
           "questions": [
@@ -20703,7 +21155,137 @@
           "parentConceptId": "ch07_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch07_t01_c01",
+            "label": "Weather vs climate",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.2
+          },
+          {
+            "id": "ch07_t01_c02",
+            "label": "What shapes climate",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch07_t02_c01",
+            "label": "Polar adaptations",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.6
+          },
+          {
+            "id": "ch07_t02_c02",
+            "label": "Tropical adaptations",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.6
+          },
+          {
+            "id": "ch07_t02_c03",
+            "label": "Migration",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.65
+          },
+          {
+            "id": "ch07_t03_c01",
+            "label": "Climate change → shifting habitats",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.85
+          },
+          {
+            "id": "ch07_t03_c02",
+            "label": "Coral bleaching",
+            "kind": "concept",
+            "x": 0.65,
+            "y": 0.85
+          },
+          {
+            "id": "ch07_t03_c03",
+            "label": "Conservation actions",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.95
+          },
+          {
+            "id": "ch04:ch04_t03_c02",
+            "label": "Climate change (Ch.4)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.3
+          },
+          {
+            "id": "ch17:ch17_t01_c02",
+            "label": "Why forests matter (Ch.17)",
+            "kind": "crossChapter",
+            "x": 0.08,
+            "y": 0.3
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch07_t01_c01",
+            "to": "ch07_t01_c02",
+            "label": "shaped by"
+          },
+          {
+            "id": "e02",
+            "from": "ch07_t01_c02",
+            "to": "ch07_t02_c01",
+            "label": "selects for"
+          },
+          {
+            "id": "e03",
+            "from": "ch07_t01_c02",
+            "to": "ch07_t02_c02",
+            "label": "selects for"
+          },
+          {
+            "id": "e04",
+            "from": "ch07_t02_c03",
+            "to": "ch07_t01_c02",
+            "label": "avoids"
+          },
+          {
+            "id": "e05",
+            "from": "ch07_t03_c01",
+            "to": "ch07_t02_c01",
+            "label": "disrupts"
+          },
+          {
+            "id": "e06",
+            "from": "ch07_t03_c02",
+            "to": "ch07_t03_c01",
+            "label": "marine example of"
+          },
+          {
+            "id": "e07",
+            "from": "ch07_t03_c03",
+            "to": "ch07_t03_c01",
+            "label": "addresses"
+          },
+          {
+            "id": "e08",
+            "from": "ch07_t03_c01",
+            "to": "ch04:ch04_t03_c02",
+            "label": "instance of"
+          },
+          {
+            "id": "e09",
+            "from": "ch07_t03_c03",
+            "to": "ch17:ch17_t01_c02",
+            "label": "preserves"
+          }
+        ]
+      }
     },
     {
       "id": "ch08",
@@ -20758,7 +21340,13 @@
                 98
               ],
               "needsHumanReview": false,
-              "mnemonic": "Air pressure = WEIGHT of atmosphere pressing on a surface (force per area). Sea level: ~101 kPa. Drops with altitude. Used to forecast weather (low = storm coming)."
+              "mnemonic": "Air pressure = WEIGHT of atmosphere pressing on a surface (force per area). Sea level: ~101 kPa. Drops with altitude. Used to forecast weather (low = storm coming).",
+              "predictQuestion": "You can't see air. You can't feel it pressing on you in everyday life. So how does science know that air has 'pressure' at all?",
+              "whyChain": [
+                "Air pressure is the weight of the column of atmosphere above any point on Earth's surface. At sea level it's ~1.03 kg per cm² (the weight of a 100 km vertical column of air). You don't feel it because the same pressure pushes from all sides — your inside-out matches it.",
+                "How do scientists measure it? With a barometer (mercury column or aneroid bellows). Torricelli's first mercury barometer (1643) measured atmospheric pressure for the first time — opening up weather science. Without that experiment we wouldn't have weather forecasting.",
+                "And why does pressure change with altitude or weather? Because less air above = less weight = lower pressure. Mountain tops have ~70% of sea-level pressure. Weather systems shift pressure regionally — low-pressure systems suck air in (storms), high-pressure systems push it out (clear weather). Class 11+ physics derives the barometric formula."
+              ]
             },
             {
               "id": "ch08_t01_c02",
@@ -20800,7 +21388,13 @@
                 99
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wind = AIR FLOWING from high pressure to low pressure. Heated air rises (low pressure left behind); cool dense air rushes in to fill. That rushing IS wind."
+              "mnemonic": "Wind = AIR FLOWING from high pressure to low pressure. Heated air rises (low pressure left behind); cool dense air rushes in to fill. That rushing IS wind.",
+              "predictQuestion": "Wind moves from one place to another. But it doesn't just decide on its own to blow. What chemistry or physics makes air pick a direction?",
+              "whyChain": [
+                "Wind is air moving from high pressure to low pressure. Differential heating (sun warming some areas more than others) creates pressure differences. Air rushes to equalise — that's wind. No pressure difference = no wind.",
+                "Why does heated air rise + create low pressure? Because heated molecules move faster, push apart, density drops. Light air rises; the column above shrinks; the surface pressure falls. Below, the lower-pressure spot pulls in air from surrounding higher-pressure regions — voila, wind.",
+                "And why does this scale up to global patterns? Because the equator gets more sun than the poles, creating massive pressure differences. Tropical air rises, polar air sinks, the global pattern of Hadley cells + jet streams emerges. Class 11+ meteorology covers global circulation; everything from monsoons to hurricanes runs on the same pressure-difference engine."
+              ]
             },
             {
               "id": "ch08_t01_c03",
@@ -20837,7 +21431,13 @@
                 100
               ],
               "needsHumanReview": false,
-              "mnemonic": "Earth spins → moving air curves RIGHT in north, LEFT in south. Coriolis effect. Drives monsoons + trade winds. Zero at equator (no cyclones in equatorial band)."
+              "mnemonic": "Earth spins → moving air curves RIGHT in north, LEFT in south. Coriolis effect. Drives monsoons + trade winds. Zero at equator (no cyclones in equatorial band).",
+              "predictQuestion": "Earth spins. Trade winds blow consistently east-to-west across the tropics. What's the connection between rotation and wind direction?",
+              "whyChain": [
+                "Wind belts (trade winds, westerlies, polar easterlies) are shaped by Earth's rotation via the Coriolis effect. Air moving north or south is deflected east or west because Earth's surface speed varies by latitude (faster at equator, slower at poles).",
+                "Why does this happen? Because conservation of angular momentum. Air starting at the equator (rotating with Earth at 1670 km/h) keeps that speed as it moves toward higher latitudes, where the ground is rotating slower. The air appears to lurch eastward relative to the ground. Same physics is why pitchers throw curveballs.",
+                "And why does the monsoon's direction reverse twice a year? Because the inter-tropical convergence zone (where rising air meets) shifts north and south with the seasons. India's southwest monsoon (June-Sept) and the retreating northeast monsoon (Oct-Dec) are just the same Coriolis-deflected air following the seasonal sun. Class 11+ atmospheric science unpacks this in detail."
+              ]
             }
           ],
           "questions": [
@@ -21373,7 +21973,13 @@
                 92
               ],
               "needsHumanReview": false,
-              "mnemonic": "DAY: land heats faster → air rises over land → cool sea air flows IN to fill the gap = SEA BREEZE (from sea to land)."
+              "mnemonic": "DAY: land heats faster → air rises over land → cool sea air flows IN to fill the gap = SEA BREEZE (from sea to land).",
+              "predictQuestion": "Coastal towns are famously breezy. Why does the breeze always seem to come from the SEA during the day?",
+              "whyChain": [
+                "A sea breeze is daytime wind from the sea toward the land. Land heats faster than water in sunlight (water has higher specific heat capacity), so land air rises and sea air rushes in to replace it. The breeze is always cooler than the inland air.",
+                "Why does land heat faster? Because soil + rock have ~5× lower heat capacity than water. Same sunlight = land warms 5× as much as water in the same time. The temperature contrast drives the convection cell.",
+                "And why does the breeze switch direction at night? Because land also COOLS faster than water. After sunset, land air is cooler than sea air. The sea air now rises, the land air rushes seaward — a 'land breeze'. Class 11+ meteorology covers diurnal convection on every scale from a small lake to the Indian Ocean."
+              ]
             },
             {
               "id": "ch08_t02_c02",
@@ -21417,7 +22023,13 @@
                 92
               ],
               "needsHumanReview": false,
-              "mnemonic": "NIGHT: land cools faster → air sinks over land → flows OUT to sea where air is still warm and rising = LAND BREEZE (from land to sea). Opposite of day."
+              "mnemonic": "NIGHT: land cools faster → air sinks over land → flows OUT to sea where air is still warm and rising = LAND BREEZE (from land to sea). Opposite of day.",
+              "predictQuestion": "Sea breezes blow inland during the day; the opposite direction blows at night. The same patch of beach feels these reversals daily. What's driving the reversal?",
+              "whyChain": [
+                "Land breeze is the night-time counterpart of sea breeze: now LAND has cooled faster than water, so sea air is warmer + rises, land air rushes seaward to replace it. The breeze blows from land to sea — opposite of daytime.",
+                "Why isn't the land breeze as strong as the sea breeze? Because the night-time temperature gap is smaller (water cools slowly, land cools to maybe 5°C below water vs day-time's 10°C contrast). Smaller pressure difference = weaker wind.",
+                "And why do fishermen in coastal villages use these breezes to time their trips? Because traditionally, fishing boats sail out on the land breeze (predawn, blowing seaward) and return on the sea breeze (afternoon, blowing landward). Free propulsion for sailing craft. Class 11+ Indian coastal geography covers the cultural-economic patterns this created over centuries."
+              ]
             },
             {
               "id": "ch08_t02_c03",
@@ -21454,7 +22066,13 @@
                 102
               ],
               "needsHumanReview": false,
-              "mnemonic": "Water heats slow (~5× soil). Land hot, sea cool → cool sea breeze blows inland. Coastal cities = cooler. Mumbai 33°C vs Delhi 40°C in May."
+              "mnemonic": "Water heats slow (~5× soil). Land hot, sea cool → cool sea breeze blows inland. Coastal cities = cooler. Mumbai 33°C vs Delhi 40°C in May.",
+              "predictQuestion": "Mumbai and Pune are 150 km apart. In May, Mumbai stays cool (~33°C) while Pune bakes (~38°C). Why such different temperatures so close together?",
+              "whyChain": [
+                "Coastal cities are cooler because of the sea breeze daily cooling. The sea breeze can travel 30-60 km inland, so cities near the coast (Mumbai, Chennai) get cooler afternoons; cities 100+ km inland (Pune, Bengaluru — well, Bengaluru benefits from altitude) get the full continental heating.",
+                "Why doesn't the breeze travel further? Because as it goes inland it warms up (mixes with hot inland air) and weakens. The cooling effect drops off with distance. After ~60 km it's barely detectable.",
+                "And why are coastal real-estate prices so high (Mumbai, Goa, Kerala) partly for climate reasons? Because the sea-breeze effect makes coastal living more pleasant 9 months a year. It's not just the ocean view — it's the daily AC for free. Class 12 economics covers this as 'amenity pricing' in real-estate."
+              ]
             }
           ],
           "questions": [
@@ -21663,7 +22281,13 @@
                 100
               ],
               "needsHumanReview": false,
-              "mnemonic": "Thunderstorm = updraft of warm moist air + freezing droplets at altitude + electrical charge separation → lightning + thunder + rain. Three weather phenomena in one."
+              "mnemonic": "Thunderstorm = updraft of warm moist air + freezing droplets at altitude + electrical charge separation → lightning + thunder + rain. Three weather phenomena in one.",
+              "predictQuestion": "A thunderstorm makes wind, rain, and lightning — three different phenomena. What single underlying process creates ALL THREE at once?",
+              "whyChain": [
+                "Thunderstorms form when warm moist air rises rapidly, cooling and condensing. Water droplets and ice crystals collide in the storm clouds, building electrical charge. When the charge is large enough, lightning discharges to Earth. The same updrafts create wind + rain.",
+                "Why does charge build up? Because ice crystals colliding with super-cooled water transfer charge — heavier ice particles fall, lighter water droplets rise, separating + into the cloud top, - into the cloud bottom. The cloud becomes a giant capacitor.",
+                "And why is lightning straight from cloud to Earth most common? Because the Earth is grounded (huge charge reservoir). The negatively-charged cloud bottom attracts positive charge on the ground surface; eventually the air can't insulate, and lightning bridges the gap. Class 11+ physics covers electrostatic breakdown of air."
+              ]
             },
             {
               "id": "ch08_t03_c02",
@@ -21705,7 +22329,13 @@
                 102
               ],
               "needsHumanReview": false,
-              "mnemonic": "Cyclone = giant rotating LOW PRESSURE system. Eye = calm center; eye wall = strongest winds (200-300 km/h). Counterclockwise in N hemisphere (Coriolis), clockwise in S."
+              "mnemonic": "Cyclone = giant rotating LOW PRESSURE system. Eye = calm center; eye wall = strongest winds (200-300 km/h). Counterclockwise in N hemisphere (Coriolis), clockwise in S.",
+              "predictQuestion": "A cyclone is a huge rotating storm. It's the largest weather pattern on Earth. What makes a regular thunderstorm SCALE UP to a 1000-km hurricane?",
+              "whyChain": [
+                "Cyclones (hurricanes / typhoons / cyclones — same thing in different oceans) form when warm ocean water (>26°C) evaporates rapidly, feeding upward convection. The Coriolis effect spins the rising air; the spin organises the storm into the characteristic spiral with an eye at the centre.",
+                "Why specifically warm water? Because evaporation releases huge latent heat as water vapour condenses higher in the cloud. This heat drives more updrafts in a positive feedback loop. Below 26°C water there's not enough evaporation; above 30°C, storms can become catastrophic.",
+                "And why is climate change making cyclones more intense? Because warmer oceans = more energy available. The number of cyclones may not increase, but the maximum intensity does. Cyclone Amphan (May 2020, ~₹130k crore damage in West Bengal + Bangladesh) was Category 5 — the worst pre-monsoon cyclone in the Bay of Bengal in 20 years. Class 11+ meteorology + climate science covers the trend in detail."
+              ]
             }
           ],
           "questions": [
@@ -22727,7 +23357,124 @@
           "parentConceptId": "ch08_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch08_t01_c01",
+            "label": "Air pressure",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.2
+          },
+          {
+            "id": "ch08_t01_c02",
+            "label": "How wind is born",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch08_t01_c03",
+            "label": "Wind belts + Coriolis",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.6
+          },
+          {
+            "id": "ch08_t02_c01",
+            "label": "Sea breeze",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.7
+          },
+          {
+            "id": "ch08_t02_c02",
+            "label": "Land breeze",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.7
+          },
+          {
+            "id": "ch08_t02_c03",
+            "label": "Coastal cities cooler",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.88
+          },
+          {
+            "id": "ch08_t03_c01",
+            "label": "Thunderstorms",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.88
+          },
+          {
+            "id": "ch08_t03_c02",
+            "label": "Cyclones",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.95
+          },
+          {
+            "id": "ch04:ch04_t02_c02",
+            "label": "Convection (Ch.4)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.4
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch08_t01_c01",
+            "to": "ch08_t01_c02",
+            "label": "drives"
+          },
+          {
+            "id": "e02",
+            "from": "ch08_t01_c02",
+            "to": "ch08_t01_c03",
+            "label": "deflected by"
+          },
+          {
+            "id": "e03",
+            "from": "ch08_t01_c02",
+            "to": "ch08_t02_c01",
+            "label": "local form"
+          },
+          {
+            "id": "e04",
+            "from": "ch08_t01_c02",
+            "to": "ch08_t02_c02",
+            "label": "reverse local form"
+          },
+          {
+            "id": "e05",
+            "from": "ch08_t02_c01",
+            "to": "ch08_t02_c03",
+            "label": "produces"
+          },
+          {
+            "id": "e06",
+            "from": "ch08_t01_c02",
+            "to": "ch08_t03_c01",
+            "label": "scaled up"
+          },
+          {
+            "id": "e07",
+            "from": "ch08_t03_c01",
+            "to": "ch08_t03_c02",
+            "label": "scaled up further"
+          },
+          {
+            "id": "e08",
+            "from": "ch08_t01_c02",
+            "to": "ch04:ch04_t02_c02",
+            "label": "is"
+          }
+        ]
+      }
     },
     {
       "id": "ch09",
@@ -22783,7 +23530,13 @@
                 101
               ],
               "needsHumanReview": false,
-              "mnemonic": "Soil layers (top to bottom): O (organic litter), A (topsoil — rich, dark), B (subsoil — clay/iron), C (parent rock fragments), R (bedrock). O-A-B-C-R from sky to stone."
+              "mnemonic": "Soil layers (top to bottom): O (organic litter), A (topsoil — rich, dark), B (subsoil — clay/iron), C (parent rock fragments), R (bedrock). O-A-B-C-R from sky to stone.",
+              "predictQuestion": "Dig down 1 metre in any forest. What do you find — and why are the colours and textures so different at different depths?",
+              "whyChain": [
+                "Soil has horizons (layers): O (organic litter on top), A (topsoil — rich in humus + microbes), B (subsoil — minerals washed down from above), C (broken rock parent material), R (bedrock). Each layer has different age, composition, water content.",
+                "Why this exact layering? Because of weathering + downward water movement over centuries. Rain dissolves minerals in upper layers + carries them down. Plants grow in O+A; their roots and decomposing bodies enrich those layers; minerals concentrate in B.",
+                "And why does this take so long to form? Because building a centimetre of new topsoil takes 100-1000 years. Soil is essentially a non-renewable resource on human timescales. That's why erosion is so devastating — what's lost in one heavy rain takes centuries to rebuild. Class 11+ environmental science covers soil formation rates and the global topsoil crisis."
+              ]
             },
             {
               "id": "ch09_t01_c02",
@@ -22826,7 +23579,13 @@
                 102
               ],
               "needsHumanReview": false,
-              "mnemonic": "SANDY = LARGE particles, drains FAST, low fertility (cacti, groundnut). CLAYEY = TINY particles, holds water, sticky (rice). LOAMY = balanced mix, best for most crops."
+              "mnemonic": "SANDY = LARGE particles, drains FAST, low fertility (cacti, groundnut). CLAYEY = TINY particles, holds water, sticky (rice). LOAMY = balanced mix, best for most crops.",
+              "predictQuestion": "Sandy soil drains fast and dries out quickly. Clay soil holds water and gets sticky. Loam soil seems perfect for most plants. Why are different soils so different in feel — and why do plants care?",
+              "whyChain": [
+                "Sandy soil has large grains (>0.05 mm) and big pores — water drains fast, plants get little water but lots of air to roots. Clay has tiny grains (<0.002 mm) and small pores — holds water tightly, hard for roots to penetrate. Loam is a balanced mix of both + organic matter.",
+                "Why does grain size matter so much? Because surface area + pore size determine water/air balance. Small grains have huge surface area (hold water tightly) but tiny pores (slow drainage). Big grains pack loosely with large pores (fast drainage but low water retention).",
+                "And why is loam the gardener's gold standard? Because the balance of sand + silt + clay + organic matter holds water like a sponge while still draining excess. Roots get water AND air. Class 11+ agronomy covers loam as the universal good growing medium; most fertile farmland is loam."
+              ]
             }
           ],
           "questions": [
@@ -23179,7 +23938,13 @@
                 109
               ],
               "needsHumanReview": false,
-              "mnemonic": "Soil = MINERAL particles (sand/silt/clay) + ORGANIC matter (humus) + WATER + AIR + LIVING ORGANISMS. Five components, not just dirt. A teaspoon of soil has billions of microbes."
+              "mnemonic": "Soil = MINERAL particles (sand/silt/clay) + ORGANIC matter (humus) + WATER + AIR + LIVING ORGANISMS. Five components, not just dirt. A teaspoon of soil has billions of microbes.",
+              "predictQuestion": "Soil looks like dirt to most people, but it's a chemical / biological / mineral STORE. What ingredients add up to what we call 'soil'?",
+              "whyChain": [
+                "Soil is a mixture of weathered rock minerals (~45%), water (~25%), air (~25%), and organic matter (~5%, including humus + living organisms). The mineral fraction provides nutrients; the organic matter holds water + feeds microbes; water + air supply roots.",
+                "Why these specific proportions? Because plant roots need air just as much as water — too much water displaces air, roots suffocate. The ~50% pore space (filled equally with water + air on average) is what makes soil 'workable' for plants.",
+                "And why does compaction (heavy machinery, foot traffic) damage soil? Because it crushes the pore space. Water + air can't move; roots can't grow. Once compacted, soil takes years to recover. Class 11+ agronomy + civil engineering both care about this (agronomy wants productive soil; engineering wants stable foundations)."
+              ]
             },
             {
               "id": "ch09_t02_c02",
@@ -23223,7 +23988,13 @@
                 114
               ],
               "needsHumanReview": false,
-              "mnemonic": "Three soils: SANDY (drains fast, dry), CLAY (holds water, sticky), LOAM (mix — Goldilocks zone). Particle size determines everything else."
+              "mnemonic": "Three soils: SANDY (drains fast, dry), CLAY (holds water, sticky), LOAM (mix — Goldilocks zone). Particle size determines everything else.",
+              "predictQuestion": "Why do entire regions have one dominant soil type (sandy, clay, or loam) and not just random mixtures everywhere?",
+              "whyChain": [
+                "Soil type at any place reflects the LOCAL bedrock + climate + history. Sandy soils form in dry regions or where the parent rock is sandstone / weathered granite. Clay soils form in wet regions on basalt or shale. Loam forms where erosion deposits a mix.",
+                "Why is Punjab famous for fertile alluvial soil? Because the Indus + Sutlej + other rivers carry soil downstream from the Himalayas and deposit it across the Punjab plain. Fresh sediment + organic matter = fertile soil. Same for the Gangetic plain in UP + Bihar.",
+                "And why are Deccan plateau soils black (regur)? Because they form on basalt (volcanic rock) under semi-arid climate. The dark colour and clay-rich texture retain moisture — ideal for cotton cultivation. Different parent rock + different climate gives Maharashtra fundamentally different soil from Punjab. Class 11+ geography covers India's soil-map in detail."
+              ]
             },
             {
               "id": "ch09_t02_c03",
@@ -23267,7 +24038,13 @@
                 113
               ],
               "needsHumanReview": false,
-              "mnemonic": "PERCOLATION = water seeping DOWN through soil. Measure: pour water into a soil-filled tube, time how long to drain through. Sandy fastest, clay slowest."
+              "mnemonic": "PERCOLATION = water seeping DOWN through soil. Measure: pour water into a soil-filled tube, time how long to drain through. Sandy fastest, clay slowest.",
+              "predictQuestion": "If you pour 1 litre of water on a square metre of sand vs clay vs loam — which absorbs it fastest? How could you measure that at home?",
+              "whyChain": [
+                "Percolation rate is how fast water moves through soil. You can measure it by: pouring known water on a fixed soil area + timing how long it takes to disappear. Sandy soil: seconds. Clay: hours. Loam: minutes. Each soil has a characteristic infiltration speed.",
+                "Why is this number useful? Because farmers use it to decide irrigation methods — sandy soil needs frequent watering (water leaves quickly); clay needs less but more careful (water-logging risk). Civil engineers use it for drainage design.",
+                "And why is fast percolation BOTH good and bad? Good: oxygen reaches roots quickly. Bad: nutrients wash away fast (leaching). Plants need a Goldilocks zone — slow enough to retain water + nutrients, fast enough to drain after rain. That's why loam wins. Class 11+ agronomy covers soil-water dynamics in detail."
+              ]
             }
           ],
           "questions": [
@@ -23821,7 +24598,13 @@
                 109
               ],
               "needsHumanReview": false,
-              "mnemonic": "Soil EROSION = topsoil washing/blowing away. Causes: deforestation, ploughing on slopes, overgrazing. Effect: lose fertile A horizon (centuries to rebuild)."
+              "mnemonic": "Soil EROSION = topsoil washing/blowing away. Causes: deforestation, ploughing on slopes, overgrazing. Effect: lose fertile A horizon (centuries to rebuild).",
+              "predictQuestion": "The Aral Sea shrank 90% in 50 years because we diverted its water for cotton fields. Now those fields are blowing away as dust storms. Why is soil so vulnerable to disappearing?",
+              "whyChain": [
+                "Soil erosion is the loss of topsoil by wind or water. It happens fast when soil is bare (no plant roots holding it), sloped (water runs off carrying soil), or exposed (drought + wind). Africa, central Asia, India's Deccan, US dust bowl — all examples of bad erosion.",
+                "Why is this so urgent? Because it takes 100-1000 years to build a centimetre of topsoil but a single storm can strip it. Once gone, the land can't grow food. The UN estimates we're losing topsoil 10-40× faster than it forms — globally critical.",
+                "And why did the Dust Bowl of the 1930s in the US happen? Because farmers ploughed up native prairie grass to plant wheat — wheat roots didn't hold soil through drought. When the rains stopped, the topsoil literally blew away. The lesson reshaped modern soil-conservation policy. Class 11+ environmental + agricultural history covers this."
+              ]
             },
             {
               "id": "ch09_t03_c02",
@@ -23861,7 +24644,13 @@
                 110
               ],
               "needsHumanReview": false,
-              "mnemonic": "Conservation: TERRACING (steps cut into slopes), CONTOUR ploughing (across slope, not up-down), COVER CROPS (legumes between main crops), WINDBREAK trees. Each blocks one erosion path."
+              "mnemonic": "Conservation: TERRACING (steps cut into slopes), CONTOUR ploughing (across slope, not up-down), COVER CROPS (legumes between main crops), WINDBREAK trees. Each blocks one erosion path.",
+              "predictQuestion": "Indian farmers in the hills carve terraces into the slopes; farmers on plains plant trees in shelterbelts. Both are about soil. What's each technique solving?",
+              "whyChain": [
+                "Soil conservation techniques: terracing (steps cut into hillsides to slow water + hold soil), contour ploughing (ploughing along slope contours not down them), shelterbelts (trees as windbreaks), cover crops (keeping soil planted year-round instead of bare in winter), and mulching (litter on top).",
+                "Why does each technique work? They all reduce soil exposure to wind or water. Terraces slow water down so it sinks in instead of running off. Shelterbelts block wind. Cover crops keep roots in place. The principle: keep soil covered + structured.",
+                "And why are these techniques being lost in modern agriculture? Because they're labour-intensive and reduce short-term yields. Industrial farming favours large-scale monoculture which abandons these. The result: ~30% of US farmland has been degraded since 1950. Class 11+ environmental + agricultural science covers this trade-off."
+              ]
             },
             {
               "id": "ch09_t03_c03",
@@ -23898,7 +24687,13 @@
                 115
               ],
               "needsHumanReview": false,
-              "mnemonic": "Cereal takes N out, legume puts N back (via Rhizobium). Rotate them → soil stays fertile, less urea needed."
+              "mnemonic": "Cereal takes N out, legume puts N back (via Rhizobium). Rotate them → soil stays fertile, less urea needed.",
+              "predictQuestion": "Punjab grows wheat year after year on the same fields. Why does this slowly destroy the soil — and what trick do organic farmers use to keep their soil healthy?",
+              "whyChain": [
+                "Crop rotation = growing different crops in the same field in different seasons. A legume (peas, gram) fixes nitrogen via Rhizobium bacteria — refilling the soil. The next year a cereal (wheat) draws on that nitrogen + leaves residue for soil organic matter.",
+                "Why does the rotation work? Because different crops draw different nutrients. Continuous wheat depletes nitrogen + leaves bare soil. Legume + cereal alternation refills + protects soil. Indian traditional crop systems (kharif rice → rabi mustard or chickpea) rotate this way naturally.",
+                "And why has the Green Revolution moved farmers AWAY from rotation? Because chemical fertilisers compensate for nitrogen loss + irrigation lets you grow rice year-round. But monocropping with chemicals depletes soil organic matter, encourages pests, and reduces biodiversity. Class 11+ environmental + agricultural economics covers the post-Green-Revolution rethinking of crop rotation."
+              ]
             }
           ],
           "questions": [
@@ -24743,7 +25538,137 @@
           "parentConceptId": "ch09_t03_c02",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch09_t02_c01",
+            "label": "Soil composition",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.2
+          },
+          {
+            "id": "ch09_t01_c01",
+            "label": "Soil profile (layers)",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.4
+          },
+          {
+            "id": "ch09_t01_c02",
+            "label": "Sandy / clay / loam",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.4
+          },
+          {
+            "id": "ch09_t02_c02",
+            "label": "Soil types regionally",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.6
+          },
+          {
+            "id": "ch09_t02_c03",
+            "label": "Percolation rate",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.5
+          },
+          {
+            "id": "ch09_t03_c01",
+            "label": "Soil erosion",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.7
+          },
+          {
+            "id": "ch09_t03_c02",
+            "label": "Soil conservation",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.85
+          },
+          {
+            "id": "ch09_t03_c03",
+            "label": "Crop rotation",
+            "kind": "concept",
+            "x": 0.75,
+            "y": 0.85
+          },
+          {
+            "id": "ch17:ch17_t02_c02",
+            "label": "Soil-forest cycle (Ch.17)",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.85
+          },
+          {
+            "id": "ch01:ch01_t03_c01",
+            "label": "Plants need nitrogen (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.85
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch09_t02_c01",
+            "to": "ch09_t01_c01",
+            "label": "structures"
+          },
+          {
+            "id": "e02",
+            "from": "ch09_t02_c01",
+            "to": "ch09_t01_c02",
+            "label": "categorises"
+          },
+          {
+            "id": "e03",
+            "from": "ch09_t01_c02",
+            "to": "ch09_t02_c02",
+            "label": "varies by region"
+          },
+          {
+            "id": "e04",
+            "from": "ch09_t01_c02",
+            "to": "ch09_t02_c03",
+            "label": "measured by"
+          },
+          {
+            "id": "e05",
+            "from": "ch09_t01_c01",
+            "to": "ch09_t03_c01",
+            "label": "vulnerable to"
+          },
+          {
+            "id": "e06",
+            "from": "ch09_t03_c01",
+            "to": "ch09_t03_c02",
+            "label": "fought by"
+          },
+          {
+            "id": "e07",
+            "from": "ch09_t03_c02",
+            "to": "ch09_t03_c03",
+            "label": "includes"
+          },
+          {
+            "id": "e08",
+            "from": "ch09_t03_c03",
+            "to": "ch01:ch01_t03_c01",
+            "label": "refills"
+          },
+          {
+            "id": "e09",
+            "from": "ch09_t01_c01",
+            "to": "ch17:ch17_t02_c02",
+            "label": "scaled in"
+          }
+        ]
+      }
     },
     {
       "id": "ch10",
@@ -29234,7 +30159,13 @@
                 154
               ],
               "needsHumanReview": false,
-              "mnemonic": "Sexual reproduction needs TWO gametes meeting. Pollen (male) lands on stigma (female), travels down style to ovary, fuses with egg = fertilisation. Then seed forms."
+              "mnemonic": "Sexual reproduction needs TWO gametes meeting. Pollen (male) lands on stigma (female), travels down style to ovary, fuses with egg = fertilisation. Then seed forms.",
+              "predictQuestion": "Why do flowers exist at all? They use a lot of plant energy. What problem does a flower solve that the plant couldn't solve cheaper?",
+              "whyChain": [
+                "Sexual reproduction in flowering plants happens through flowers. The flower has male parts (stamens producing pollen) and female parts (pistil with ovary). Pollination + fertilisation produce seeds inside fruits — each seed is a potential new plant with mixed parental genes.",
+                "Why bother with two parents? Because mixing genes from two individuals produces offspring with new gene combinations — useful for adapting to changing environments, diseases, predators. Asexual reproduction (cloning) is faster but produces genetically identical offspring that are all equally vulnerable.",
+                "And why such varied flower shapes + colours? Because they coevolved with pollinators. Tubular red flowers + hummingbirds; flat purple flowers + bees; smelly white flowers + bats. Each shape evolved for a specific pollinator. Class 11+ biology covers coevolution in detail."
+              ]
             },
             {
               "id": "ch12_t01_c02",
@@ -29276,7 +30207,13 @@
                 143
               ],
               "needsHumanReview": false,
-              "mnemonic": "Flower parts: PETALS (attract pollinator) + STAMENS (male, with anther making pollen) + PISTIL (female: stigma-style-ovary). Petals are billboards; stamens and pistil are the reproductive organs."
+              "mnemonic": "Flower parts: PETALS (attract pollinator) + STAMENS (male, with anther making pollen) + PISTIL (female: stigma-style-ovary). Petals are billboards; stamens and pistil are the reproductive organs.",
+              "predictQuestion": "Pull apart a flower and you see petals, stamens, a pistil, an ovary. Each has a specific job. What's each part actually FOR?",
+              "whyChain": [
+                "Flower anatomy: PETALS (colour + scent → attract pollinators), STAMENS (male — anther produces pollen, filament holds it up), PISTIL (female — stigma catches pollen, style guides it down, ovary holds ovules), SEPALS (green outer protective leaves before bloom). Each part is functional, not decorative.",
+                "Why this exact division of labour? Because the four parts each solve a different problem. Attraction (petals), gamete production (anther), gamete reception (stigma), protection (sepals). Each evolved through natural selection to serve its role.",
+                "And why are some flowers male-only or female-only? Because cross-pollination requires gametes to travel between individuals. Separate-sex flowers (papaya, some palms) prevent self-pollination entirely. Same-sex flowers on different plants of one species → mandatory outbreeding → more genetic mixing. Class 11+ botany covers monoecious vs dioecious plants."
+              ]
             },
             {
               "id": "ch12_t01_c03",
@@ -29313,7 +30250,13 @@
                 134
               ],
               "needsHumanReview": false,
-              "mnemonic": "Self-poll = same flower (cloning, e.g. peas). Cross-poll = different plant via bee/wind/bird → genetic variety. Cross-poll → 'hybrid vigour'."
+              "mnemonic": "Self-poll = same flower (cloning, e.g. peas). Cross-poll = different plant via bee/wind/bird → genetic variety. Cross-poll → 'hybrid vigour'.",
+              "predictQuestion": "A flower can pollinate itself OR be pollinated by another flower. Each is biologically very different. Why is the distinction important — and why do most plants avoid self-pollination?",
+              "whyChain": [
+                "Self-pollination = pollen from a flower lands on its own (or another flower of same plant) stigma. Cross-pollination = pollen travels from one plant to another. Cross is genetically richer; self is faster + guaranteed.",
+                "Why do plants avoid self-pollination? Because it produces inbred offspring — same genes from both parents, no genetic variation, and damaging recessive traits become visible. Cross-pollination keeps the gene pool diverse. Many plants have mechanisms to PREVENT self-pollination (separate sexes, timing of flower opening, self-incompatibility genes).",
+                "And why do some plants DELIBERATELY self-pollinate? Because if no pollinator is around, self is better than no offspring at all. Annual weedy plants often self-pollinate as a backup. Genetic diversity drops but the species survives. Class 11+ ecology covers reproductive strategies as a trade-off."
+              ]
             }
           ],
           "questions": [
@@ -29703,7 +30646,13 @@
                 156
               ],
               "needsHumanReview": false,
-              "mnemonic": "Dispersal mechanisms: WIND (parachute seeds), WATER (floating coconuts), ANIMALS (hooks, sweet fruits), EXPLOSION (balsam pods). Each shape matches its courier."
+              "mnemonic": "Dispersal mechanisms: WIND (parachute seeds), WATER (floating coconuts), ANIMALS (hooks, sweet fruits), EXPLOSION (balsam pods). Each shape matches its courier.",
+              "predictQuestion": "A coconut washes ashore on an island and sprouts. A dandelion seed flies on the breeze. A mango seed sits in a monkey's belly until pooped out. Each is a different SEED DISPERSAL strategy. Why does the plant care WHERE its seeds go?",
+              "whyChain": [
+                "Seed dispersal moves seeds away from the parent plant. Wind (dandelion, maple), water (coconut, lotus), animals (mango via stomach, burdock via fur), or explosion (cucumber, balsam) each move seeds different distances.",
+                "Why disperse at all? Because seeds that land RIGHT NEXT to the parent compete with it for water + light. Distant seeds find new territory. Better chance of survival = better chance of perpetuating genes.",
+                "And why do plants 'pay' animals to carry seeds? Because fruit (mango, apple, berry) is essentially a sugary wrapper for the seed — the plant invests in attractive flesh so animals eat the fruit, walk away, then poop the seed somewhere far. Coevolution: plants evolved fruits, animals evolved to eat them. Class 11+ ecology covers this mutualism."
+              ]
             },
             {
               "id": "ch12_t02_c02",
@@ -29745,7 +30694,13 @@
                 147
               ],
               "needsHumanReview": false,
-              "mnemonic": "After pollen reaches stigma, it grows a tube down to the ovary, fertilises the ovule = embryo seed. Ovary wall ripens into FRUIT around the seed."
+              "mnemonic": "After pollen reaches stigma, it grows a tube down to the ovary, fertilises the ovule = embryo seed. Ovary wall ripens into FRUIT around the seed.",
+              "predictQuestion": "Pollen lands on a flower's stigma. Two weeks later there's a fruit. What CHEMISTRY happens inside that flower to turn pollen into fruit?",
+              "whyChain": [
+                "Fertilisation: pollen germinates on stigma → grows pollen tube down through style → reaches ovule in ovary → sperm cells fuse with egg → embryo + endosperm form → ovule becomes seed → surrounding tissue becomes fruit. The whole process can take days to weeks.",
+                "Why does the ovary become a fruit? Because the seeds inside need protection + a way to be dispersed. Evolution turned ovary walls into nutritious flesh (mango pulp) or papery shells (pea pod) — each shape supports a different dispersal method.",
+                "And why are some 'fruits' technically not fruits? Because culinary 'fruit' = sweet + soft (apples, mangoes), but botanical 'fruit' = ovary + seeds (tomatoes, cucumbers, squashes are ALL botanically fruits!). Class 11+ botany covers the technical definition; the culinary one is just convention."
+              ]
             },
             {
               "id": "ch12_t02_c03",
@@ -29782,7 +30737,13 @@
                 138
               ],
               "needsHumanReview": false,
-              "mnemonic": "Germination needs: WATER + OXYGEN + warmth. Radicle (root) emerges first (down), plumule (shoot) next (up). Stored food fuels seedling."
+              "mnemonic": "Germination needs: WATER + OXYGEN + warmth. Radicle (root) emerges first (down), plumule (shoot) next (up). Stored food fuels seedling.",
+              "predictQuestion": "A seed can sit dormant for YEARS, then suddenly sprout the right week. How does a tiny seed sense the right time — and what wakes it up?",
+              "whyChain": [
+                "Germination needs: water (rehydrates the seed), oxygen (for respiration), warmth (activates enzymes), and sometimes light or specific cues (varies by species). Internal stored food powers the first growth before photosynthesis starts.",
+                "Why does dormancy exist? Because seeds need to survive bad seasons. A summer-dropped seed should wait through autumn + winter and sprout in spring. Mechanisms include hard seed coats (cracked by frost), chemical inhibitors (washed away by rain), or temperature requirements (vernalisation).",
+                "And why is seed dormancy critical for desert plants? Because rain is rare and unpredictable — seeds might wait years for a single good downpour. Some Sahara seeds can sit 50+ years before germinating. Class 11+ botany covers the molecular triggers of dormancy + germination as one of plant biology's elegant problems."
+              ]
             }
           ],
           "questions": [
@@ -30105,7 +31066,13 @@
                 149
               ],
               "needsHumanReview": false,
-              "mnemonic": "Asexual = ONE parent, IDENTICAL offspring (clones). No genetic mixing. Useful for plants in stable environments — efficient but vulnerable to disease."
+              "mnemonic": "Asexual = ONE parent, IDENTICAL offspring (clones). No genetic mixing. Useful for plants in stable environments — efficient but vulnerable to disease.",
+              "predictQuestion": "Some plants can make NEW PLANTS without flowers or seeds — from a leaf cutting, a piece of stem, even a tuber. Why bother with flowers at all if cloning works?",
+              "whyChain": [
+                "Asexual reproduction: one parent produces offspring genetically identical to itself. In plants, this happens via fragmentation (broken pieces grow), budding (small outgrowth becomes new plant), vegetative propagation (cuttings, runners, tubers). No flowers or seeds needed.",
+                "Why bother with sexual reproduction then? Because asexual offspring are clones — all equally vulnerable to a single disease or pest. Sexual reproduction mixes genes = some offspring resist new threats. Both strategies have value; many plants use BOTH (potato grows from seed AND from tuber).",
+                "And why do farmers preferentially use asexual propagation for fruit trees? Because seed-grown apple trees might not produce the same kind of apple as the parent (genetic mixing!). Grafting + cuttings PRESERVE the desired variety perfectly. Every Granny Smith apple tree in the world is a clone of one original. Class 11+ agronomy covers grafting + tissue culture."
+              ]
             },
             {
               "id": "ch12_t03_c02",
@@ -30144,7 +31111,13 @@
                 149
               ],
               "needsHumanReview": false,
-              "mnemonic": "Asexual modes: VEGETATIVE (potato eyes, rose cuttings), BUDDING (yeast), FRAGMENTATION (algae break into pieces). All bypass seed + sex."
+              "mnemonic": "Asexual modes: VEGETATIVE (potato eyes, rose cuttings), BUDDING (yeast), FRAGMENTATION (algae break into pieces). All bypass seed + sex.",
+              "predictQuestion": "A strawberry plant sends out 'runners' that grow new strawberry plants without flowers. A potato sprouts new shoots from its eyes. Why so many DIFFERENT cloning tricks in plants?",
+              "whyChain": [
+                "Vegetative propagation forms: cuttings (root from stem fragment — roses, hibiscus), runners (above-ground horizontal stems — strawberry, mint), tubers (underground stems with eyes — potato), bulbs (layered leaves underground — onion, garlic), rhizomes (underground stems — ginger), grafting (joining two plants). Each suits different species + farming methods.",
+                "Why so many methods? Because plants have many tissues that can regenerate into whole plants (totipotency). Each species evolved whichever method worked best in its environment. Strawberry's runners spread across open ground; potato's tubers survive winter underground.",
+                "And why is this used everywhere from kitchen gardens to plantations? Because cuttings + tubers grow much faster than seeds AND preserve desired traits exactly. India's coconut, mango, banana plantations are all vegetatively propagated. Class 11+ agronomy + Class 12 biotech build on this — tissue culture is industrial-scale vegetative propagation in a lab."
+              ]
             }
           ],
           "questions": [
@@ -31088,7 +32061,124 @@
           "parentConceptId": "ch12_t03_c02",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch12_t01_c01",
+            "label": "Sexual reproduction (flowers)",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.3
+          },
+          {
+            "id": "ch12_t03_c01",
+            "label": "Asexual reproduction (clones)",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.3
+          },
+          {
+            "id": "ch12_t01_c02",
+            "label": "Flower anatomy",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.55
+          },
+          {
+            "id": "ch12_t01_c03",
+            "label": "Self vs cross-pollination",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.55
+          },
+          {
+            "id": "ch12_t02_c02",
+            "label": "Fertilisation + fruit",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.78
+          },
+          {
+            "id": "ch12_t02_c01",
+            "label": "Seed dispersal",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.92
+          },
+          {
+            "id": "ch12_t02_c03",
+            "label": "Germination",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.78
+          },
+          {
+            "id": "ch12_t03_c02",
+            "label": "Vegetative propagation",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.55
+          },
+          {
+            "id": "ch01:ch01_t02_c01",
+            "label": "Parasitic plants (Ch.1)",
+            "kind": "crossChapter",
+            "x": 0.05,
+            "y": 0.4
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch12_t01_c01",
+            "to": "ch12_t01_c02",
+            "label": "uses"
+          },
+          {
+            "id": "e02",
+            "from": "ch12_t01_c02",
+            "to": "ch12_t01_c03",
+            "label": "enables"
+          },
+          {
+            "id": "e03",
+            "from": "ch12_t01_c03",
+            "to": "ch12_t02_c02",
+            "label": "leads to"
+          },
+          {
+            "id": "e04",
+            "from": "ch12_t02_c02",
+            "to": "ch12_t02_c01",
+            "label": "leads to"
+          },
+          {
+            "id": "e05",
+            "from": "ch12_t02_c01",
+            "to": "ch12_t02_c03",
+            "label": "ends in"
+          },
+          {
+            "id": "e06",
+            "from": "ch12_t03_c01",
+            "to": "ch12_t03_c02",
+            "label": "instance of"
+          },
+          {
+            "id": "e07",
+            "from": "ch12_t01_c01",
+            "to": "ch12_t03_c01",
+            "label": "contrasts with"
+          },
+          {
+            "id": "e08",
+            "from": "ch12_t01_c01",
+            "to": "ch01:ch01_t02_c01",
+            "label": "exploited by"
+          }
+        ]
+      }
     },
     {
       "id": "ch13",
@@ -42826,7 +43916,13 @@
                 221
               ],
               "needsHumanReview": false,
-              "mnemonic": "Sewage = wastewater (from toilets, kitchens, baths, industries). Contains: water + organic waste + microbes + chemicals + suspended solids. Treatment removes the harmful, returns the safe."
+              "mnemonic": "Sewage = wastewater (from toilets, kitchens, baths, industries). Contains: water + organic waste + microbes + chemicals + suspended solids. Treatment removes the harmful, returns the safe.",
+              "predictQuestion": "Your toilet, kitchen sink, and shower all drain into the same pipe. Where does that water actually go — and what's in it that needs treatment?",
+              "whyChain": [
+                "Sewage = wastewater from homes, schools, hospitals, factories. It contains human waste (urine, faeces with pathogens), food waste, soap + detergents, cleaning chemicals, sometimes industrial pollutants. About 99% is water; the remaining 1% must be removed before the water can be released.",
+                "Why must the 1% be removed? Because untreated sewage contains pathogens (cholera, typhoid, hepatitis) that cause epidemics, organic matter that consumes oxygen in rivers (killing fish), and chemicals that poison plants + animals. Dumping sewage in rivers used to be standard — and used to cause millions of deaths annually.",
+                "And why is sewage treatment one of the great public-health victories of the 20th century? Because cities that built treatment plants saw cholera + typhoid mortality drop 90%+. India's Swachh Bharat aims to extend this to every village. Class 11+ public health covers the relationship between sanitation infrastructure + life expectancy."
+              ]
             },
             {
               "id": "ch18_t01_c02",
@@ -42870,7 +43966,13 @@
                 231
               ],
               "needsHumanReview": false,
-              "mnemonic": "Wastewater journey: HOUSEHOLD drains → sewer pipes → TREATMENT plant (multi-stage cleanup) → RIVER/SEA. Without treatment, untreated sewage poisons water bodies + spreads disease."
+              "mnemonic": "Wastewater journey: HOUSEHOLD drains → sewer pipes → TREATMENT plant (multi-stage cleanup) → RIVER/SEA. Without treatment, untreated sewage poisons water bodies + spreads disease.",
+              "predictQuestion": "From the moment you flush a toilet to the moment water re-enters a river, what's the journey — and how does it stay manageable for a city of 20 million?",
+              "whyChain": [
+                "Household drains → street sewers → trunk sewers → wastewater treatment plant (WWTP) → treated water released to river or reused. The whole network spans hundreds of km in a city, gravity-driven mostly, with pumping stations where needed.",
+                "Why such elaborate infrastructure? Because urban populations produce enormous wastewater (150-200 litres per person per day). Without networks + treatment, the streets fill with sewage (like 19th-century London). Modern systems make the problem invisible.",
+                "And why are old Indian cities (Mumbai, Delhi) overwhelmed today? Because populations doubled while sewers grew slowly. Mumbai sewers are mostly British-era. New developments outstrip the network. The result: untreated sewage flows into rivers + sea. Class 12 environmental + civil engineering covers India's looming infrastructure crisis."
+              ]
             },
             {
               "id": "ch18_t01_c03",
@@ -42907,7 +44009,13 @@
                 182
               ],
               "needsHumanReview": false,
-              "mnemonic": "Two pipes: storm drain (rain → river) + sanitary sewer (waste → WWTP). Mix them = overflow during monsoon → untreated waste in river."
+              "mnemonic": "Two pipes: storm drain (rain → river) + sanitary sewer (waste → WWTP). Mix them = overflow during monsoon → untreated waste in river.",
+              "predictQuestion": "Rain falls on city streets; sewage drains into household pipes. Some cities have ONE pipe for both; some have TWO separate pipes. Why is the choice important?",
+              "whyChain": [
+                "Separate sewer systems use one pipe for stormwater (rain), one for sanitary sewage. Combined sewer systems use one pipe for both — cheaper to build but causes problems in heavy rain (storm + sewage overwhelms the treatment plant; raw sewage spills into rivers).",
+                "Why is the combined system problematic? Because during monsoon, the volume of water exceeds the plant capacity 100×. The plant can't treat it; it bypasses to overflow. Untreated waste into rivers + lakes. Mumbai's old combined sewers cause exactly this every monsoon.",
+                "And why are new developments mandated to separate? Because separation is cheaper to operate long-term. Stormwater can drain straight to rivers (it's mostly clean); only sewage needs treatment. Class 12+ urban planning covers this trade-off; many old cities are slowly rebuilding."
+              ]
             }
           ],
           "questions": [
@@ -43299,7 +44407,13 @@
                 225
               ],
               "needsHumanReview": false,
-              "mnemonic": "WWTP stages: BAR SCREEN (rags removed) → GRIT CHAMBER (sand settles) → PRIMARY CLARIFIER (solids settle, oil skimmed) → AERATION TANK (microbes eat organics) → SECONDARY CLARIFIER (microbes settle) → CHLORINATION/UV (kill germs) → release."
+              "mnemonic": "WWTP stages: BAR SCREEN (rags removed) → GRIT CHAMBER (sand settles) → PRIMARY CLARIFIER (solids settle, oil skimmed) → AERATION TANK (microbes eat organics) → SECONDARY CLARIFIER (microbes settle) → CHLORINATION/UV (kill germs) → release.",
+              "predictQuestion": "A wastewater treatment plant looks like a maze of tanks. What is each tank doing that the others don't?",
+              "whyChain": [
+                "WWTP stages: PRIMARY (settling — solids sink, scum rises), SECONDARY (biological — bacteria eat dissolved organic matter in aeration tanks), TERTIARY (chemical / filter — removes remaining nutrients + microbes), DISINFECTION (chlorine / UV). Each stage removes a different fraction of pollutants.",
+                "Why so many stages? Because no single process removes everything. Primary catches the solids. Secondary biological needs already-clarified water (otherwise the bacteria can't access it). Tertiary catches what biology missed. Each stage is optimised for its job.",
+                "And why don't sewage plants smell as bad as you'd expect? Because well-designed plants enclose the early stages (where smells originate) + use scrubbers + biological filters. The treated water released downstream often smells like nothing. Class 11+ environmental engineering covers WWTP design."
+              ]
             },
             {
               "id": "ch18_t02_c02",
@@ -43339,7 +44453,13 @@
                 236
               ],
               "needsHumanReview": false,
-              "mnemonic": "AERATION TANK = bacteria eat dissolved organics (with bubbled oxygen). SLUDGE DIGESTER = anaerobic bacteria break solid sludge into methane + dry biosolids. Biological treatment of two waste streams."
+              "mnemonic": "AERATION TANK = bacteria eat dissolved organics (with bubbled oxygen). SLUDGE DIGESTER = anaerobic bacteria break solid sludge into methane + dry biosolids. Biological treatment of two waste streams.",
+              "predictQuestion": "An aeration tank looks like a pool of brown water with bubbles. Why are we bubbling air through SEWAGE — and what's actually eating the waste?",
+              "whyChain": [
+                "The aeration tank is where aerobic bacteria break down dissolved organic matter. Pumping air keeps the water oxygenated; bacteria use the oxygen to digest the waste, producing CO₂ + water + more bacteria. After hours, the water is much cleaner.",
+                "Why must the bacteria have oxygen? Because aerobic respiration breaks down organics ~10× faster than anaerobic. Without bubbling, the tank would go anaerobic, smell like sulphur + ammonia, work much slower. The bubblers are the engine.",
+                "And why does the leftover sludge go into a sludge digester? Because the dead bacteria + remaining solids contain more organic matter. Anaerobic digestion (no oxygen, different bacteria) breaks them down further — producing methane gas (captured for energy) + a stable solid (used as fertiliser). Class 11+ environmental + bioengineering covers the full WWTP loop."
+              ]
             },
             {
               "id": "ch18_t02_c03",
@@ -43376,7 +44496,13 @@
                 185
               ],
               "needsHumanReview": false,
-              "mnemonic": "Sludge in anaerobic tank → bacteria → biogas (~65% methane). Powers the plant itself. Same biology as cow gobar gas."
+              "mnemonic": "Sludge in anaerobic tank → bacteria → biogas (~65% methane). Powers the plant itself. Same biology as cow gobar gas.",
+              "predictQuestion": "Sewage treatment produces tonnes of leftover sludge. What can you do with sludge — and how have engineers found a way to turn it into ENERGY?",
+              "whyChain": [
+                "Sludge digesters use anaerobic bacteria to break down the leftover solid waste from WWTPs. The bacteria produce methane (biogas) + CO₂. The methane can be captured + burned for electricity / heating; the remaining solid is stabilised + can be used as fertiliser.",
+                "Why methane specifically? Because anaerobic decomposition naturally produces methane (you've seen the bubbles in swamps). Engineers harness this by sealing the digester + collecting the gas. A well-run sewage plant can produce enough biogas to RUN ITSELF — a closed energy loop.",
+                "And why is this a model for circular sanitation? Because traditional waste treatment = energy IN, waste OUT. Sludge digestion makes treatment energy-positive + creates valuable fertiliser. India has ~1000 biogas-equipped WWTPs; the EU mandates this for new construction. Class 12 environmental engineering + Class 12 economics cover the economics."
+              ]
             }
           ],
           "questions": [
@@ -43792,7 +44918,13 @@
                 240
               ],
               "needsHumanReview": false,
-              "mnemonic": "Better sanitation: PIT LATRINES (rural, low cost), SEPTIC TANKS (suburban, on-site treatment), COMPOSTING TOILETS (no water needed). Density determines which is appropriate."
+              "mnemonic": "Better sanitation: PIT LATRINES (rural, low cost), SEPTIC TANKS (suburban, on-site treatment), COMPOSTING TOILETS (no water needed). Density determines which is appropriate.",
+              "predictQuestion": "Most Indian villages still don't have piped sewage. So what works there — pit latrines, septic tanks, bio-toilets? Which makes sense where?",
+              "whyChain": [
+                "Sanitation alternatives: PIT LATRINE (simple covered pit, anaerobic decomposition over months), SEPTIC TANK (sealed tank — settling + bacterial digestion, requires periodic emptying), BIO-TOILET (compact, contains bacteria that break down waste fast — used in trains), COMPOST TOILET (separates urine + faeces, breaks down faeces into compost). Each suits different settings.",
+                "Why so many designs? Because villages lack the water for full flush systems + don't have sewer connections. The choice depends on water availability, population density, soil type. Septic tanks work where there's space; bio-toilets work in dense or water-scarce areas.",
+                "And why is the Indian Railways' bio-toilet rollout a sanitation milestone? Because 2014-2019 saw 60,000+ train coaches converted to bio-toilets — eliminating ~700 km of railway-track sewage daily. The bacteria break waste down on board; treated effluent is released safely. Class 11+ Indian governance covers Swachh Bharat's infrastructure scale."
+              ]
             },
             {
               "id": "ch18_t03_c02",
@@ -43832,7 +44964,13 @@
                 241
               ],
               "needsHumanReview": false,
-              "mnemonic": "Open drains = mosquito breeding + disease spread + smell. Swachh Bharat Abhiyan (launched 2014) targets toilet access + open-defecation-free villages + waste management. Behaviour change + infrastructure."
+              "mnemonic": "Open drains = mosquito breeding + disease spread + smell. Swachh Bharat Abhiyan (launched 2014) targets toilet access + open-defecation-free villages + waste management. Behaviour change + infrastructure.",
+              "predictQuestion": "Open drains run through many Indian neighbourhoods — visible, smelly, unhealthy. Why are they STILL the most common sanitation in some areas, decades after Swachh Bharat?",
+              "whyChain": [
+                "Open drains carry household water (kitchen, washing) + sometimes sewage directly through streets to nearby fields or rivers. They breed mosquitoes (malaria, dengue), spread waterborne disease, and degrade water bodies. Better sanitation requires closed drains + treatment — both costly.",
+                "Why hasn't full coverage happened despite Swachh Bharat? Because building closed drains + WWTPs needs investment + land + skilled labour. Toilets came first (cheaper, more visible). Drainage networks are the next phase. Many cities are mid-transition.",
+                "And why is community ownership critical? Because even built infrastructure fails without maintenance + culture. Swachh Bharat's biggest insight: behaviour change matters as much as toilet construction. Villages that took collective ownership of sanitation (open-defecation-free declarations) sustained the change better than those where toilets were built without that. Class 12 public-policy covers this."
+              ]
             }
           ],
           "questions": [
@@ -44747,7 +45885,124 @@
           "parentConceptId": "ch18_t03_c01",
           "durationSeconds": null
         }
-      ]
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch18_t01_c01",
+            "label": "What is sewage",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.2
+          },
+          {
+            "id": "ch18_t01_c02",
+            "label": "Sewage journey",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.38
+          },
+          {
+            "id": "ch18_t01_c03",
+            "label": "Storm vs sanitary sewers",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.45
+          },
+          {
+            "id": "ch18_t02_c01",
+            "label": "WWTP stages",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.55
+          },
+          {
+            "id": "ch18_t02_c02",
+            "label": "Aeration + sludge digester",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.75
+          },
+          {
+            "id": "ch18_t02_c03",
+            "label": "Biogas from sludge",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.75
+          },
+          {
+            "id": "ch18_t03_c01",
+            "label": "Sanitation alternatives",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.92
+          },
+          {
+            "id": "ch18_t03_c02",
+            "label": "Open drains + Swachh Bharat",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.92
+          },
+          {
+            "id": "ch16:ch16_t03_c01",
+            "label": "Water scarcity (Ch.16)",
+            "kind": "crossChapter",
+            "x": 0.92,
+            "y": 0.55
+          }
+        ],
+        "edges": [
+          {
+            "id": "e01",
+            "from": "ch18_t01_c01",
+            "to": "ch18_t01_c02",
+            "label": "journey"
+          },
+          {
+            "id": "e02",
+            "from": "ch18_t01_c02",
+            "to": "ch18_t01_c03",
+            "label": "uses"
+          },
+          {
+            "id": "e03",
+            "from": "ch18_t01_c02",
+            "to": "ch18_t02_c01",
+            "label": "ends at"
+          },
+          {
+            "id": "e04",
+            "from": "ch18_t02_c01",
+            "to": "ch18_t02_c02",
+            "label": "core stage"
+          },
+          {
+            "id": "e05",
+            "from": "ch18_t02_c02",
+            "to": "ch18_t02_c03",
+            "label": "produces"
+          },
+          {
+            "id": "e06",
+            "from": "ch18_t03_c01",
+            "to": "ch18_t01_c02",
+            "label": "alternative to"
+          },
+          {
+            "id": "e07",
+            "from": "ch18_t03_c02",
+            "to": "ch18_t03_c01",
+            "label": "improved by"
+          },
+          {
+            "id": "e08",
+            "from": "ch18_t02_c01",
+            "to": "ch16:ch16_t03_c01",
+            "label": "preserves"
+          }
+        ]
+      }
     },
     {
       "id": "ch19",
