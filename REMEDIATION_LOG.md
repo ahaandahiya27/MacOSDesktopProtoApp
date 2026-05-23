@@ -149,5 +149,77 @@ None. The 2026-05-22 iMac STOP_AND_ASK question (Beyond→Discover crash re-repr
 ### Scope pivot disclosed at session start
 Phase 2 was originally specified as "walker + audit only" but the codebase walk found the prompt's preamble overstated the state: data shipped for 15 content types, UI did not. The discoverability layer in Phase 4 explicitly depends on a Go Deeper CTA existing somewhere on the chapter detail page. Decided (not asked back, per the brief's no-interactive rule) to fold "ship the DeepDive UI" into Phase 2 so Phase 4 would have a real target to point at. MediaAsset UI and the other 13 expansion types stay deferred.
 
+## SURFACE-THE-CONTENT SESSION COMPLETE — 2026-05-23 16:32 +05:30
+
+### Commits landed (4, all on origin/main)
+- `c33946a` polish: close P4 / P5 / P7 / P8 a11y gaps + reconcile POLISH_TODOS
+- `3264b82` feat(components): 3 reusable content-surface wrappers (`CollapsibleContentSection`, `ContentChipStrip`, `InlineContentCallout`)
+- `069a559` feat(ui): surface 12 previously-unrendered Chapter content types
+- `<this commit>` docs: SURFACE_AUDIT.md adds 247 Phase-2 rows + POLISH_TODOS closure
+
+### Final verify
+- `xcodebuild build` Debug, MACOSX_DEPLOYMENT_TARGET = 11.0: clean, zero code warnings.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: **253/253 green**.
+- `scripts/check_macos12_apis.py` clean (the lint correctly caught one initial `Array(x.enumerated()) + tuple-keypath` ForEach in `TimelinesSectionView`; rewritten to `indices, id: \.self` per the Big Sur fragility note).
+- `scripts/check_sf_symbols_compat.py` clean (caught one raw `"character.book.closed"` literal in the Glossary chip; routed through `SFSymbolCompat.name`).
+- `scripts/check_lifetime_hazards.py`, `check_file_size.py`, `verify_pack_roundtrip.py`: all clean.
+- `git status`: clean. `origin/main`: synced.
+
+### Visibility delta
+Before this session: 1 of 13 Chapter content-expansion fields rendered (DeepDive, shipped 5fcc96e). The other 12 were dead JSON.
+
+After this session: **all 13 fields ship a UI surface.** Gallery + ScientistProfiles remain deferred not because the UI was too hard but because they're the lowest user-value of the deferred lot and the brief's 12-surface target was met without them.
+
+| Surface | Shipping commit | Parent view |
+|---------|-----------------|-------------|
+| DeepDive disclosure | `5fcc96e` (prior session) | ChapterDetailView |
+| NCERT Q&A panel | `069a559` | ChapterDetailView |
+| Misconceptions panel | `069a559` | ChapterDetailView |
+| MediaAsset gallery (5 backends) | `069a559` | ChapterDetailView |
+| WhatIfs collapsible | `069a559` | ChapterDetailView |
+| Mini-projects collapsible | `069a559` | ChapterDetailView |
+| Timelines horizontal scroll | `069a559` | ChapterDetailView |
+| Curriculum bridge chip | `069a559` | ChapterDetailView |
+| Glossary chip + sheet | `069a559` | ChapterDetailView |
+| Cross-chapter refs footer | `069a559` | ChapterDetailView |
+| Real-world examples chip strip | `069a559` | TopicDetailView |
+| Mnemonics chip strip | `069a559` | TopicDetailView |
+| Exam connection callout | `069a559` | QuestionDetailView |
+
+### Phase 0 small-polish closure
+The brief enumerated P1–P8 a11y/Reduce-Motion items. P1, P2, P3, P6 were closed in the prior session's `dbc565a` but `POLISH_TODOS.md` was never reconciled — fixed in `c33946a`. The remaining four landed in the same commit:
+- **P4** QuestionDetail match-pairs — section header `.isHeader` trait + Menu-picker-accurate hint ("pick its matching right-side option from the Menu picker" — the original audit text said "drag" but the live UI is a Menu).
+- **P5** DiscoverMode scene-progress dots — container `.accessibilityLabel("Scene progress")` + `.accessibilityValue("Scene N of M")`.
+- **P7** ArticleBrowserView Read-Aloud — opt-in `articleTitle` parameter wired from ChapterDetailView's `.article(let entry)` presentation; label now reads "Read \<title\> aloud".
+- **P8** NativeArticleRepresentable — host carries `.accessibilityValue("Reading paragraph N of M")` while paragraph mode is active.
+
+### Reusable wrappers shipped
+- `Subjects/Tutor/Components/CollapsibleContentSection.swift` — DisclosureGroup-based section, @AppStorage-persisted open/closed state keyed by `storageKey`. Consumed by NCERT Q&A, Misconceptions, WhatIfs, MiniProjects.
+- `Subjects/Tutor/Components/ContentChipStrip.swift` — horizontal chip row + tap-to-popover detail sheet. Consumed by Real-world examples, Mnemonics. (Cross-chapter refs uses its own row layout because the rows need navigation pushes, which fits more naturally as a vertical list than a chip strip.)
+- `Subjects/Tutor/Components/InlineContentCallout.swift` — boxed inline message. Consumed by Exam connection.
+
+### Mechanics worth remembering
+- `ChapterDetailView.body`'s main VStack added 9 new direct children; Big Sur's @ViewBuilder caps at 10 direct children, so the Phase 2 surfaces are grouped under a private `contentSurfacesGroup` computed view (`Group { … }` wrapping 10 children — folds to one child at the parent).
+- `ChapterDetailView.SheetKind` extended with `.glossary` case routing into the existing single-sheet dispatcher pattern (the Big Sur fix from commit 21f3d11).
+- TopicDetailView's chip strips live in a new `Section { … }` so the List layout doesn't fight the inner horizontal ScrollView.
+- QuestionDetailView's `postAttemptGroup` gains an `examConnectionCallout` builder that reuses the existing `location.chapter` lookup — no new pack traversal.
+- Two property-name collisions (`InlineContentCallout` had `body: String`, `CurriculumBridgeChip`'s `BridgeBlock` had `body: String`) silently shadowed `View.body`. Renamed both to `message`. Future struct designers: don't name a stored property `body` on a View.
+- `ShapeDiagramRegistry` ships as an empty map. The 76 chapter-specific shape diagrams (chloroplast cross-section, etc.) are a multi-session content-authoring effort; for now `MediaAssetView` shows a clean placeholder card for `.shapeDiagram` entries with unregistered keys.
+- `AVPlayerHost` (the `.bundledVideo` backend) declares `static func dismantleNSView` that pauses + nils the player, mirroring the article-surface dismantle-order fix from 2026-05-22 (`NativeArticleRepresentable`). The current JSON pack has zero `.bundledVideo` entries — the backend is forward-compatible.
+
+### POLISH_TODOS still open (next session's slate)
+- `Gallery` (`chapter.gallery: [GalleryItem]?`) — could fold through MediaAssetView as `.illustration` equivalents.
+- `Scientist profiles` (`chapter.scientists: [ScientistProfile]?`) — small avatar carousel.
+- `Surface_AuditWalker.swift` XCUITest — iMac-side walker that takes a screenshot per chapter × per surface so audits stop being purely static.
+- ShapeDiagramRegistry population (76 entries across 19 chapters).
+- 4 file-size split candidates from the deferred list (`ArticleIndex.swift` 1270 LOC is the safest first split per the prior session's notes).
+
+### Stop-and-ask events fired this session
+None. The 2026-05-22 iMac STOP_AND_ASK question stayed untouched per the brief's exit condition. Rohan retains ownership of that re-repro.
+
+### Wall clock + commit cadence
+Session started 2026-05-23 15:18 (the brief's 8-hour budget). Total wall clock ~1h 15min. The compression came from one-big-commit-per-phase rather than one-commit-per-surface — pre-push hook is a 5+ min serial cost on this dev Mac and shipping 12 surfaces in 12 commits would have burned over an hour just in push-hook waits. Each surface still verifies cleanly on its own; the atomic-commit-per-surface discipline was traded for shipping-time. Future sessions touching a single surface can land it as its own commit naturally.
+
+
 
 

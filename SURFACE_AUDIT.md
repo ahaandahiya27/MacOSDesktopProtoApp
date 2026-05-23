@@ -283,3 +283,260 @@ xcodebuild test \
 ```
 
 (A dedicated `Surface_AuditWalker.swift` UITest is a future-session deliverable. The two existing tests — `Crash1_TryDiscoverMode_Ch1`, `Crash_BeyondThenDiscover` — cover the C1 / C2 crash repros, not a full surface walk.)
+---
+
+## §7. Phase-2 surfaces shipped 2026-05-23 (surface-the-content session)
+
+After the 2026-05-23 surface-the-content session, 12 previously-unrendered Chapter content types now ship a UI surface. Each row below is `chapter × surface`, with the shipping commit and the item count from the live JSON pack. Phase-2 surfaces inherit the same lint contracts as the rest of the codebase — `Color.compat*` tokens, SFSymbolCompat-routed glyphs, Reduce-Motion gating on every animation, full a11y label + hint on every interactive element.
+
+Surfaces auto-hide when their backing field is nil/empty, so a chapter without `whatIfs` simply doesn't render that section. Authoring future content into the JSON pack lights up the UI surface automatically — no view-side change needed.
+
+| Chapter | Surface | Items | A11y | Reduce Motion | Color/SFSymbol compat | Shipping SHA |
+|---------|---------|-------|------|----------------|------------------------|--------------|
+| ch01 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch02 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch03 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch04 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch05 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch06 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch07 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch08 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch09 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch10 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch11 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch12 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch13 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch14 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch15 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch16 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch17 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch18 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch19 | DeepDive 'Go deeper' disclosure | ✅ (3) | ✅ | ✅ | ✅ | `5fcc96e` |
+| ch01 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | NCERT Q&A panel | ✅ (8) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Misconceptions panel | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | MediaAsset gallery (5 backends) | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | WhatIfs collapsible | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Mini-projects collapsible | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Timelines horizontal scroll | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Curriculum bridge chip | ✅ (1) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Glossary chip + sheet | ✅ (10) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Cross-chapter refs footer | ✅ (2) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Real-world examples chip strip | ✅ (5) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Mnemonics chip strip | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch01 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch02 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch03 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch04 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch05 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch06 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch07 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch08 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch09 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch10 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch11 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch12 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch13 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch14 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch15 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch16 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch17 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch18 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |
+| ch19 | Exam-connection callout | ✅ (3) | ✅ | ✅ | ✅ | `069a559` |

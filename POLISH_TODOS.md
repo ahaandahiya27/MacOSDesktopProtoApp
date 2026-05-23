@@ -17,21 +17,21 @@ Living list of polish + UI gaps surfaced by `SURFACE_AUDIT.md`. Items move from 
 
 The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity cells ✅) but no view renders them. Each entry below is a discrete UI ship.
 
-- [x] **DeepDive · 'Go deeper' disclosure** — `chapter.deepDive: [StretchTopic]?`. **SHIPPED in this session** as `DeepDiveSection.swift` + `DeepDiveDetailSheet.swift`, wired into `ChapterDetailView`.
-- [ ] **MediaAssetView · chapter visual library** — `chapter.mediaAssets: [MediaAsset]?`. Five backends: illustration (asset-catalog image), shapeDiagram (registered SwiftUI Shape), animatedSceneRef (jump to existing Discover scene), bundledVideo (AVPlayerView), narratedWalkthrough (TTS over text). Estimate 1 full session.
-- [ ] **Misconceptions · 'Common mistakes' panel** — `chapter.misconceptions: [Misconception]?`. Surface as a collapsible card on ChapterDetailView below DeepDive. High pedagogical ROI.
-- [ ] **NCERT Q&A · canonical textbook questions** — `chapter.ncertQA: [NcertQAEntry]?`. Surface as a sheet from ChapterDetailView OR as a section inside QuizBankView. Highest user-value of the deferred lot (matches exact textbook prompts).
-- [ ] **Glossary · per-chapter terms** — `chapter.glossary: [GlossaryTerm]?`. Could appear as a Help-menu-accessible sheet OR as inline tap-to-define on terms inside concept body text.
-- [ ] **Mnemonics · memorization aids** — `chapter.mnemonics: [Mnemonic]?`. Note: `MnemonicCallout.swift` exists for use INSIDE Discover scenes but does not pull from `chapter.mnemonics`. Surface as chips under each Topic Detail.
-- [ ] **WhatIfs · counterfactual scenarios** — `chapter.whatIfs: [WhatIfScenario]?`. Surface as a sheet or collapsible.
-- [ ] **Real-world examples** — `chapter.realWorldExamples: [RealWorldExample]?`. Surface as a chip strip under each Topic.
-- [ ] **Exam connections** — `chapter.examConnections: [ExamConnection]?`. Surface inside QuestionDetailView next to each question.
-- [ ] **Cross-chapter refs** — `chapter.crossChapterRefs: [CrossChapterRef]?`. Surface as a "Connected ideas" footer on ChapterDetailView.
-- [ ] **Curriculum bridge** — `chapter.curriculumBridge: CurriculumBridge?`. Surface as a chip near the DeepDive disclosure ("In Class 8 this becomes…").
-- [ ] **Gallery** — `chapter.gallery: [GalleryItem]?`. Possibly merge with MediaAssetView when that lands.
-- [ ] **Timelines** — `chapter.timelines: [ContentTimeline]?`. Surface as a horizontal scroll inside ChapterDetailView for chapters that have one.
-- [ ] **Mini-projects** — `chapter.miniProjects: [MiniProject]?`. Surface inside the existing "Try at Home" sheet OR as a separate "Build something" card.
-- [ ] **Scientist profiles** — `chapter.scientists: [ScientistProfile]?`. Surface as a small avatar carousel.
+- [x] **DeepDive · 'Go deeper' disclosure** — shipped 5fcc96e. DeepDiveSection.swift + DeepDiveDetailSheet.swift on ChapterDetailView.
+- [x] **MediaAssetView · chapter visual library** — shipped 069a559. `MediaAssetView.swift` (5 backends: illustration / shapeDiagram / animatedSceneRef / bundledVideo / narratedWalkthrough) + `MediaAssetGallerySectionView.swift` on ChapterDetailView. ShapeDiagramRegistry is an empty stub — registering 76 chapter-specific diagrams is its own session; placeholder card renders cleanly for unregistered keys.
+- [x] **Misconceptions · 'Common mistakes' panel** — shipped 069a559. `MisconceptionsSectionView.swift` on ChapterDetailView. Visually distinguishes "kids often think" from "actually".
+- [x] **NCERT Q&A · canonical textbook questions** — shipped 069a559. `NcertQASectionView.swift` on ChapterDetailView. Per-question tap-to-reveal model answer with textbook page reference chip.
+- [x] **Glossary · per-chapter terms** — shipped 069a559. `GlossarySheet.swift` accessed via `glossaryButton` chip on ChapterDetailView. Alphabetical scroll, tap term to expand example + Hindi.
+- [x] **Mnemonics · memorization aids** — shipped 069a559. `MnemonicsStripView.swift` chip strip on TopicDetailView. Tap-to-popover unpacking + context.
+- [x] **WhatIfs · counterfactual scenarios** — shipped 069a559. `WhatIfsSectionView.swift` collapsible on ChapterDetailView. Reveal-on-tap guided answers.
+- [x] **Real-world examples** — shipped 069a559. `RealWorldExamplesStripView.swift` chip strip on TopicDetailView. Tap-to-popover 60–100-word bodies.
+- [x] **Exam connections** — shipped 069a559. `ExamConnectionCalloutView.swift` inline beneath the post-attempt block in QuestionDetailView.
+- [x] **Cross-chapter refs** — shipped 069a559. `CrossChapterRefsFooter.swift` at the bottom of ChapterDetailView. Tap a row → nav.push the referenced chapter.
+- [x] **Curriculum bridge** — shipped 069a559. `CurriculumBridgeChip.swift` near the DeepDive disclosure. Tap → sheet with Class 8 + NEET / JEE previews.
+- [ ] **Gallery** — `chapter.gallery: [GalleryItem]?`. Deferred — overlaps in spirit with MediaAssetView. Next session can fold GalleryItem entries through `MediaAssetView` (treat them as `.illustration` equivalents).
+- [x] **Timelines** — shipped 069a559. `TimelinesSectionView.swift` on ChapterDetailView. Horizontal scroll of numbered step cards.
+- [x] **Mini-projects** — shipped 069a559. `MiniProjectsSectionView.swift` collapsible on ChapterDetailView. Card per project + detail sheet with materials, steps, observation, why-it-works.
+- [ ] **Scientist profiles** — `chapter.scientists: [ScientistProfile]?`. Deferred — lowest user-value of the deferred lot. Would surface as a small avatar carousel; can ship next session.
 
 ## §3. Misc / latent
 
