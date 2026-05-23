@@ -122,6 +122,14 @@ if [ -f "scripts/check_lifetime_hazards.py" ]; then
     fi
 fi
 
+if [ -f "scripts/check_file_size.py" ]; then
+    echo "==> file-size lint"
+    if ! python3 scripts/check_file_size.py; then
+        echo "ci-build-test: file-size lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 run_xcodebuild "BUILD" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
