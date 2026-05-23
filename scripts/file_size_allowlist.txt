@@ -28,7 +28,7 @@ desktopAhaan/Subjects/Articles/ArticleIndex.swift: Article registry across 19 ch
 
 # Chapter-agnostic detail views — planned splits this session.
 desktopAhaan/Subjects/Tutor/QuestionDetailView.swift: Planned split this session.
-desktopAhaan/Subjects/Tutor/ChapterDetailView.swift: Planned split this session.
+# ChapterDetailView removed — split into +Notebook.swift + +HomeExperiments.swift
 
 # DataStore — split once in commit bad0cde from 947→698 LOC. Further
 # split would require lifting domain mutators (TranslationRecord,

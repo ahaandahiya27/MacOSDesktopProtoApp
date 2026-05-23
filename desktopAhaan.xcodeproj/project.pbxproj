@@ -631,6 +631,8 @@
 		0AAC000000000000000000C1 /* Speech_NoPromptUnderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC000000000000000000C2 /* Speech_NoPromptUnderTest.swift */; };
 		0AAD000000000000000000D1 /* DataStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD000000000000000000D2 /* DataStore+Saving.swift */; };
 		0AAD000000000000000000D3 /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAD000000000000000000D4 /* DataStore+Loading.swift */; };
+		0AAE000000000000000000E1 /* ChapterDetailView+Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */; };
+		0AAE000000000000000000E3 /* ChapterDetailView+HomeExperiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -661,6 +663,8 @@
 		0AAC000000000000000000C2 /* Speech_NoPromptUnderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Speech_NoPromptUnderTest.swift; path = CrashRepros/Speech_NoPromptUnderTest.swift; sourceTree = "<group>"; };
 		0AAD000000000000000000D2 /* DataStore+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Saving.swift"; sourceTree = "<group>"; };
 		0AAD000000000000000000D4 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
+		0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+Notebook.swift"; sourceTree = "<group>"; };
+		0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+HomeExperiments.swift"; sourceTree = "<group>"; };
 		04674C572FB8B99F004A7D5C /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 		04674C592FB8B9A7004A7D5C /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDifficultyBadge.swift; sourceTree = "<group>"; };
 		04674C5B2FB8B9B0004A7D5C /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVariationCard.swift; sourceTree = "<group>"; };
@@ -2072,6 +2076,8 @@
 				199A8B621B02B8E3CB9449A5 /* AskFollowUpView.swift */,
 				5B57ECC29EDEA32CA8FE99D6 /* BookmarksView.swift */,
 				510ACDECDFA4E524F7F7F2A2 /* ChapterDetailView.swift */,
+				0AAE000000000000000000E2 /* ChapterDetailView+Notebook.swift */,
+				0AAE000000000000000000E4 /* ChapterDetailView+HomeExperiments.swift */,
 				F94F70D063700082D93582FA /* ChapterListView.swift */,
 				11027470BD8C0FE9E6112308 /* ConceptDetailView.swift */,
 				64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */,
@@ -3188,6 +3194,8 @@
 				04F59E2D2FB95A6100568BDE /* ChapterTheme.swift in Sources */,
 				04F59D442FB8EF5000568BDE /* Scene9_BossQuiz_Ch10.swift in Sources */,
 				C36EAE42C2EBF7A5207F18DB /* ChapterDetailView.swift in Sources */,
+				0AAE000000000000000000E1 /* ChapterDetailView+Notebook.swift in Sources */,
+				0AAE000000000000000000E3 /* ChapterDetailView+HomeExperiments.swift in Sources */,
 				04674C662FB8D97D004A7D5C /* CommandPalette.swift in Sources */,
 				04F59DC22FB8F24B00568BDE /* Scene6_BawdiStepwell.swift in Sources */,
 				04F59DF42FB8F34700568BDE /* Scene9_BossQuiz_Ch18.swift in Sources */,
