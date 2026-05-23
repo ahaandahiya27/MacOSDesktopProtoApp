@@ -19606,6 +19606,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Wind = AIR FLOWING from high pressure to low pressure. Heated air rises (low pressure left behind); cool dense air rushes in to fill. That rushing IS wind."
+            },
+            {
+              "id": "ch08_t01_c03",
+              "title": "Wind belts and the Coriolis effect — why monsoons flow the way they do",
+              "explanations": {
+                "oneLine": "Earth's spinning deflects moving air, organising the planet's winds into stable belts that drive the monsoon and trade winds.",
+                "kidFriendly": "Imagine throwing a ball from one merry-go-round seat to another while the ride is spinning. The ball seems to curve — even though it went straight. That's exactly what happens to winds on a spinning Earth. The Indian monsoon is just one of these huge deflected wind belts: warm sea air gets pushed inland from June to September, dumping the rain our farmers wait for.",
+                "textbook": "The Earth rotates west-to-east on its axis. Any large mass of air moving over the surface — winds, ocean currents — appears (from the ground) to curve to the right in the Northern Hemisphere and to the left in the Southern Hemisphere. This apparent deflection is called the Coriolis effect. It organises planetary wind into bands: trade winds (0–30°), westerlies (30–60°), polar easterlies (60–90°). India's monsoon is the seasonal flip of one such band when the inland landmass heats up faster than the Indian Ocean.",
+                "expert": "The Coriolis parameter f = 2Ω sinφ (Ω = Earth's angular velocity, φ = latitude) is zero at the equator and maximal at the poles. That's why cyclones almost never form within 5° of the equator — there's no Coriolis to organise the spin. In Class 11 you'll derive f from rotating-frame mechanics; the same maths predicts ocean gyres and even ballistic missile drift."
+              },
+              "reasoning": "A point near the equator travels eastward at ~1670 km/h; a point at 60° latitude only ~840 km/h. Air masses moving north from the equator carry the equator's higher eastward speed and end up curving east relative to the slower ground beneath them.",
+              "useCases": [
+                {
+                  "title": "Indian summer monsoon",
+                  "description": "From June to September, the Indian sub-continent heats faster than the Indian Ocean. Low pressure pulls in moist sea air, which the Coriolis effect curves into a south-westerly current — the monsoon.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Trade winds and sail routes",
+                  "description": "European explorers used the steady NE trade winds to sail westward to the Americas. Christopher Columbus's 1492 route is the same trade-wind belt Class 7 sailors had been mapping for centuries.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Hurricane vs cyclone tracking",
+                  "description": "Cyclones in the Bay of Bengal often curve westward toward Odisha because of the Coriolis effect — IMD forecasters use it to predict landfall 48 hrs in advance.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "In 1835 Gaspard-Gustave de Coriolis derived the deflection mathematically for industrial machinery — not weather. Meteorologists picked up his work decades later. Today, every cyclone forecast in Vidhi's IMD bulletin is built on the same equations.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                99,
+                100
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Earth spins → moving air curves RIGHT in north, LEFT in south. Coriolis effect. Drives monsoons + trade winds. Zero at equator (no cyclones in equatorial band)."
             }
           ],
           "questions": [
@@ -20186,6 +20223,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "NIGHT: land cools faster → air sinks over land → flows OUT to sea where air is still warm and rising = LAND BREEZE (from land to sea). Opposite of day."
+            },
+            {
+              "id": "ch08_t02_c03",
+              "title": "Why coastal cities are cooler — sea breeze magnitude",
+              "explanations": {
+                "oneLine": "Sea breezes can be 5-10°C cooler than inland air, which is why Mumbai and Chennai never get as scorching as Delhi in May.",
+                "kidFriendly": "Stand on a Goa beach at 3 PM in summer. The sand feels like a frying pan but the breeze from the sea feels surprisingly cool. That's because water heats up much slower than sand or soil. The sea acts like a giant heat sponge — it stays at 28°C while the land soars to 38°C. The breeze that blows from the cooler sea to the hotter land takes the edge off the afternoon.",
+                "textbook": "The specific heat capacity of water (4.18 J/g·K) is ~5× that of dry soil (~0.84 J/g·K). For the same input of sunlight, the sea warms about a fifth as much as the land. By mid-afternoon a 10°C temperature gap can develop between land and sea. The pressure-driven sea breeze pulls cool, dense ocean air inland to fill the low-pressure column over the hot land. Coastal cities benefit from this every clear sunny day.",
+                "expert": "The sea breeze front can travel up to 50 km inland by sunset and is a known driver of thunderstorm initiation in cities like Chennai. Models like WRF and HRRR forecast its exact timing and depth. The mirror-image land breeze at night is weaker (only 2–3°C gap) because soil cools faster than water — but the air column over land is also thinner without solar heating."
+              },
+              "reasoning": "Water's high specific heat capacity → it stores far more thermal energy per kg than soil. Same sunlight on each → land heats faster by day, cools faster by night. Pressure gradient drives breeze.",
+              "useCases": [
+                {
+                  "title": "Why coastal cities have less air conditioning",
+                  "description": "Mumbai's average May high (33°C) is 7°C below Delhi's (40°C) despite both being at similar latitudes. The sea breeze is the difference — ACs in Mumbai often don't get used.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Coastal sailing regattas",
+                  "description": "Sailors plan races around the sea-breeze 'switch-on' time (~11 AM in summer). The wind is reliable, perpendicular to the coast, and lasts until sunset.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Wind farms on the coast",
+                  "description": "Tamil Nadu's coastal wind farms (like Kayathar) tap the daily sea-breeze cycle. Turbines spin reliably every afternoon as the breeze switches on.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "In Doha, Qatar, the sea-breeze front actually pushes humid Gulf air over the desert, creating a sharp humidity boundary you can taste. NOAA satellite imagery shows it clearly every summer afternoon — a thin line marching inland.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                101,
+                102
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Water heats slow (~5× soil). Land hot, sea cool → cool sea breeze blows inland. Coastal cities = cooler. Mumbai 33°C vs Delhi 40°C in May."
             }
           ],
           "questions": [
@@ -22593,6 +22667,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Conservation: TERRACING (steps cut into slopes), CONTOUR ploughing (across slope, not up-down), COVER CROPS (legumes between main crops), WINDBREAK trees. Each blocks one erosion path."
+            },
+            {
+              "id": "ch09_t03_c03",
+              "title": "Crop rotation — keeping soil fertile without chemicals",
+              "explanations": {
+                "oneLine": "Growing different crops in sequence on the same plot replenishes the nutrients each crop takes out, preventing the soil from getting tired.",
+                "kidFriendly": "If you ate only rice for a year, your body would start missing things — protein, vitamins. Soil is exactly the same. Wheat takes nitrogen out; pulses (like moong, urad, chana) put it back. Smart farmers rotate them: wheat one season, pulses the next. The soil stays balanced and the farmer doesn't need as much chemical fertiliser.",
+                "textbook": "Crop rotation is the practice of growing dissimilar crops in successive seasons on the same field. Cereals (wheat, rice, maize) are heavy nitrogen feeders. Legumes (peas, gram, soybean) host symbiotic Rhizobium bacteria in their root nodules — these bacteria pull nitrogen from the air and fix it as nitrates in the soil. Rotating cereal-legume-cereal restores nitrogen biologically and reduces the need for urea or DAP fertilisers by ~30%.",
+                "expert": "A standard four-year rotation in Punjab: rice → wheat → mustard → moong. Each crop targets a different soil depth (rice surface, wheat 15 cm, mustard 40 cm tap-root) and feeds on different nutrients, so the same plot stays productive year after year. The Green Revolution actually broke this rhythm — monoculture rice-wheat over 50 years has depleted Punjab's groundwater AND its soil organic carbon, which is now one of India's biggest agronomy debates."
+              },
+              "reasoning": "Different crops have different root depths and nutrient needs. Rotating them spreads the demand evenly. Legumes uniquely add nitrogen via Rhizobium bacteria — a free fertiliser the next crop benefits from.",
+              "useCases": [
+                {
+                  "title": "Rajasthan smallholder farms",
+                  "description": "Two-acre farmers in Rajasthan rotate bajra (millet) with moong (mung bean). The moong fixes ~50 kg N/ha, so the next bajra crop doesn't need urea.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Norfolk four-field system (1700s)",
+                  "description": "England's famous Norfolk rotation (wheat → turnip → barley → clover) doubled crop yields in the 18th century. Same biology applies in India today.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Intercropping at the kitchen garden scale",
+                  "description": "A home gardener growing tomatoes with basil between the rows is doing micro-scale crop rotation — basil deters tomato pests while loaning back trace minerals.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "In Class 9 Biology you'll meet the nitrogen cycle: atmospheric N₂ is inert, but Rhizobium bacteria in legume root nodules use the nitrogenase enzyme to convert it into ammonia. Without nitrogenase, agriculture would collapse — humans haven't engineered it cheaply yet.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                114,
+                115
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Cereal takes N out, legume puts N back (via Rhizobium). Rotate them → soil stays fertile, less urea needed."
             }
           ],
           "questions": [
@@ -23539,6 +23650,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Alveoli = ~500 million tiny grape-cluster air sacs. Total surface ~70 m² (tennis court). Gas exchange: O2 in to blood, CO2 out from blood, all by diffusion."
+            },
+            {
+              "id": "ch10_t01_c03",
+              "title": "Haemoglobin — the oxygen taxi of the blood",
+              "explanations": {
+                "oneLine": "Haemoglobin is the protein in red blood cells that picks up oxygen at the lungs and delivers it to every tissue.",
+                "kidFriendly": "If alveoli are loading docks where oxygen gets into your blood, haemoglobin is the delivery van. Each red blood cell is packed with about 280 million haemoglobin molecules; together they ferry oxygen from your lungs to your fingers, toes, brain — everywhere. Without enough haemoglobin (a condition called anaemia), you feel tired all the time because your cells are starved.",
+                "textbook": "Haemoglobin is a globular protein composed of four subunits, each with an iron-containing haem group. Each haem can bind one O₂ molecule reversibly. In the alveoli (high O₂ partial pressure), haemoglobin saturates with oxygen, turning bright red. In tissues (low O₂), it releases the oxygen. A healthy boy of Ahaan's age has 13–16 g of haemoglobin per 100 mL of blood. Below 11 g/dL is anaemia — fatigue, pale skin, breathlessness.",
+                "expert": "Haemoglobin's S-shaped O₂ binding curve is the elegant part: binding the first O₂ molecule changes the protein's shape, making the other three sites bind more readily. This 'cooperative binding' explains why haemoglobin can be 98% saturated in the lungs (high pO₂) but 25% in tissues — exactly when O₂ release is needed. In Class 11 Biology you'll graph this and meet the Bohr effect, where CO₂ helps haemoglobin release O₂ in active muscles."
+              },
+              "reasoning": "Oxygen has limited solubility in plasma — only ~3 mL per litre. But haemoglobin can carry ~200 mL of O₂ per litre of blood by binding it reversibly to its iron. That's a 70× capacity boost — without haemoglobin, you'd need 70 litres of blood to deliver enough O₂.",
+              "useCases": [
+                {
+                  "title": "Why iron-rich foods matter",
+                  "description": "Spinach, jaggery, dates, and red meat supply iron — the metal at haemoglobin's core. Iron-deficient kids develop anaemia and fall behind in school.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "High-altitude trekkers",
+                  "description": "Climbers in Leh produce extra red blood cells over 2 weeks to compensate for the thin air. The body senses low blood-oxygen and triggers erythropoietin in the kidneys.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Blood-donation testing",
+                  "description": "Before donating blood, your haemoglobin is finger-pricked and measured. Below 12.5 g/dL (women) or 13.5 g/dL (men) and you're turned away — donating low-Hb blood would deplete you.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "Carbon monoxide poisoning is so lethal because CO binds haemoglobin 200× more strongly than O₂ — the taxi gets stuck with the wrong passenger and can't pick up oxygen anymore. That's why faulty gas heaters kill people in their sleep.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                119,
+                120
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Haemoglobin = O₂ taxi. Iron in each molecule grabs O₂ at lungs, drops it at tissues. Low Hb → anaemia → tired."
             }
           ],
           "questions": [
@@ -25420,6 +25568,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Double circulation = TWO loops. Loop 1 = lungs (Pulmonary = Plumbing for oxygen). Loop 2 = body (Systemic = Sending blood to all systems). Right heart → lungs, Left heart → body. Left does Less work? No, Left is the strong one — pumps the WHOLE body's worth."
+            },
+            {
+              "id": "ch11_t01_c03",
+              "title": "Heart rate, pulse, and blood pressure",
+              "explanations": {
+                "oneLine": "Heart rate is how often the heart beats per minute, the pulse is the wave you can feel at your wrist, and blood pressure is the force the blood exerts on artery walls.",
+                "kidFriendly": "Press two fingers gently on the inside of your wrist. Feel that bouncing? Every bounce is one heartbeat sending a fresh wave of blood through the artery. A kid Ahaan's age has 70–90 beats a minute at rest. When you run, the heart pumps faster — your muscles need more oxygen — and the pulse races to 150+. Doctors measure blood pressure (the squeeze inside the arteries) because too-high pressure damages the heart and brain over time.",
+                "textbook": "Heart rate = number of cardiac contractions per minute, typically 70–80 in adults at rest. The pulse is the rhythmic expansion of an artery wall produced by the wave of blood ejected at each ventricular contraction. You can palpate it at the radial artery (wrist), carotid (neck), or temporal (side of head). Blood pressure is reported as two numbers: systolic / diastolic. Healthy adults: ~120/80 mmHg. Class-7-aged children: ~105/65. Hypertension (sustained >140/90) damages arteries, kidneys, and the heart muscle itself.",
+                "expert": "Each cardiac cycle has two phases — systole (ventricles contract, blood ejected, ~0.3 s) and diastole (ventricles relax, refill, ~0.5 s). The 120/80 ratio is the peak (systolic) and trough (diastolic) of arterial pressure during one cycle. In Class 12 you'll meet stroke volume × heart rate = cardiac output, and trace the autonomic nerves (sympathetic / parasympathetic) that tune both."
+              },
+              "reasoning": "Each ventricular contraction pushes blood into the aorta. The aorta is elastic — it stretches with each ejection, then snaps back, sending a pressure wave down every artery. That wave is the pulse.",
+              "useCases": [
+                {
+                  "title": "Athletes' resting heart rate",
+                  "description": "A trained cyclist's resting pulse can be 45 bpm — half of an untrained person's. Their heart is stronger, so each beat pumps more blood; fewer beats are needed.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Smart watches",
+                  "description": "Fitbits and Apple Watches shine green LED light through the wrist and detect the pulse from blood-volume changes (photoplethysmography). Same biology, optical sensor.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Stethoscope rhythm",
+                  "description": "The 'lub-dub' you hear through a stethoscope is the heart valves snapping shut twice per cycle. Doctors count beats over 30 s and double it to get heart rate per minute.",
+                  "domain": "human body"
+                }
+              ],
+              "beyondTheBook": "William Harvey, an English doctor, was the first to prove (1628) that blood circulates in a closed loop — pumping out of the heart, returning via veins. Before Harvey, doctors thought the liver made fresh blood every day. His pulse measurements were the smoking gun.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                124,
+                125
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Heart rate = beats / min (70-90 kid). Pulse = wave at wrist. BP = 120/80 (sys/dia). Sustained >140/90 = hypertension."
             }
           ],
           "questions": [
@@ -26047,6 +26232,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Nephron = NEPHrology = NPH = filtering Network of Plumbing Hairpins. Each kidney has ~1 million nephrons; each does the SAME job: filter blood, reabsorb water + good stuff, dump urea + excess into urine."
+            },
+            {
+              "id": "ch11_t02_c03",
+              "title": "Dialysis — the machine that does the kidneys' job",
+              "explanations": {
+                "oneLine": "When kidneys fail, a dialysis machine filters waste and excess water out of the blood by passing it across a selective membrane.",
+                "kidFriendly": "Kidneys are picky filters: they let water and dissolved waste leave the body but keep the proteins. When kidneys stop working, waste piles up and the person gets sick fast. A dialysis machine is an artificial kidney — blood is pulled from a vein, passed across a thin plastic membrane, and the waste leaves through tiny pores while the blood goes back in. A patient might do this 3 times a week for 4 hours each session.",
+                "textbook": "Dialysis is the artificial removal of urea, creatinine, excess potassium, and water from the blood. Haemodialysis (the common form) uses a semipermeable membrane inside a 'dialyser' cartridge: blood flows on one side, a sterile salt solution (dialysate) on the other. Small molecules (urea, creatinine) diffuse from blood → dialysate down their concentration gradient. Proteins and red cells are too big to pass through — they stay in the blood. A typical session removes 200 g of urea over 4 hours.",
+                "expert": "The dialysate is engineered: it has normal blood levels of Na⁺, K⁺, Ca²⁺, HCO₃⁻ but zero urea. The concentration gradient does the work — no metabolic energy required, unlike a real nephron which uses ATP for active transport. Peritoneal dialysis uses the patient's own peritoneum as the membrane — fluid is poured into the belly cavity and drained 4 hours later. Cheaper, no machine needed, but more infection risk."
+              },
+              "reasoning": "A semipermeable membrane has pore sizes small enough to block proteins (60 kDa+) but large enough to let urea (0.06 kDa) through. Pure diffusion across that membrane is enough to clean the blood — the body's normal heart pressure drives the flow.",
+              "useCases": [
+                {
+                  "title": "Kidney transplant waitlist",
+                  "description": "Most dialysis patients are waiting for a transplant. Until a matching donor kidney is found, dialysis is the only way to stay alive. India does ~10,000 kidney transplants a year; the waitlist has 200,000+ on it.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Diabetes complications",
+                  "description": "Long-term uncontrolled diabetes is the leading cause of kidney failure in India. Sugar damages the glomeruli over decades. That's why diabetic patients get an annual kidney check.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Travel water + kidney health",
+                  "description": "When you travel and don't drink enough water, urine concentrates and kidney stones can form. Hydration is the simplest insurance against losing those filters.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "The first successful dialysis was in 1945 in the Netherlands during WWII — Willem Kolff built the machine from sausage-casing membrane and washing-machine parts because medical supplies were rationed. His patient was a 67-year-old woman in kidney failure; she lived for years afterwards.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                127,
+                128
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Dialysis = artificial kidney. Blood across thin membrane → urea diffuses out. Done 3×/week, 4 hrs each, until transplant."
             }
           ],
           "questions": [
@@ -27454,6 +27676,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Flower parts: PETALS (attract pollinator) + STAMENS (male, with anther making pollen) + PISTIL (female: stigma-style-ovary). Petals are billboards; stamens and pistil are the reproductive organs."
+            },
+            {
+              "id": "ch12_t01_c03",
+              "title": "Self-pollination vs cross-pollination",
+              "explanations": {
+                "oneLine": "Self-pollination is a flower fertilising itself; cross-pollination is pollen from one flower fertilising a different plant — the second route mixes genes.",
+                "kidFriendly": "Some flowers do everything themselves: the anther brushes pollen onto its own stigma — done. That's self-pollination, like a peas plant or a wheat stalk. Other flowers refuse to fertilise themselves; their pollen has to be carried (by bees, wind, or water) to a totally different flower. This is cross-pollination, and it's how new varieties of mango, apple, and rose are born — by mixing genes.",
+                "textbook": "Self-pollination occurs when pollen is transferred from the anther to the stigma of the same flower or another flower on the same plant. Plants like peas, beans, wheat, and tomato self-pollinate readily. Cross-pollination requires an agent — bees (most flowers), wind (grasses), water (waterweed), birds (pomegranate, hibiscus) — to carry pollen between two different individuals. The benefit of cross-pollination is genetic variation: the offspring carry traits from both parents and can adapt to changing conditions better.",
+                "expert": "Many plants prevent self-pollination with elegant tricks: dichogamy (anthers and stigma mature at different times), heterostyly (long-styled and short-styled forms — only mating between forms is possible), self-incompatibility (chemical recognition rejects own pollen). Gregor Mendel's famous pea experiments worked precisely because peas self-pollinate by default — every plant is a clone of itself, so he could control which parent crossed with which."
+              },
+              "reasoning": "Self-pollination is reliable (no agent needed) but produces clones — no genetic mixing. Cross-pollination is risky (pollen might never arrive) but produces variation, which is the raw material for adaptation and evolution.",
+              "useCases": [
+                {
+                  "title": "Apple orchards",
+                  "description": "Most apple varieties are self-incompatible — a Granny Smith tree can't pollinate itself. Orchards plant 'pollinator' varieties between the rows and rent honeybee hives in flowering season.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Hybrid seeds",
+                  "description": "When agronomists want a new tomato variety, they hand-pollinate flower A with pollen from flower B (cross-pollination). The seeds that come out are hybrids with traits of both parents — F1 hybrids that are sold to farmers.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Why home grown vegetables are sometimes seedless",
+                  "description": "Tomatoes are self-pollinating but need a vibration to release pollen. Indoor plants sometimes set no fruit — gently shaking the flowers (or a small fan) restores the cross-pollination effect.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "Charles Darwin spent decades on cross-pollination experiments. He noticed that cross-pollinated plants almost always grew taller and produced more seed than self-pollinated ones. He called this 'hybrid vigour' — the engine behind modern crop breeding.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                133,
+                134
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Self-poll = same flower (cloning, e.g. peas). Cross-poll = different plant via bee/wind/bird → genetic variety. Cross-poll → 'hybrid vigour'."
             }
           ],
           "questions": [
@@ -27886,6 +28145,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "After pollen reaches stigma, it grows a tube down to the ovary, fertilises the ovule = embryo seed. Ovary wall ripens into FRUIT around the seed."
+            },
+            {
+              "id": "ch12_t02_c03",
+              "title": "Germination — what wakes a seed up",
+              "explanations": {
+                "oneLine": "Germination is the process by which a dormant seed soaks up water, ruptures its coat, and grows the first root and shoot.",
+                "kidFriendly": "A seed sitting on a shelf can stay dormant for years — even centuries. Once it gets water, oxygen, and warmth, something amazing happens: the seed soaks up water, swells, splits open, and pushes out its first root (downward) and shoot (upward). All the food the baby plant needs for these first days is already stored inside the seed.",
+                "textbook": "Germination requires three external conditions: water (rehydrates the seed and activates enzymes), oxygen (cellular respiration to release energy from stored food), and a suitable temperature (typically 20–30°C for most Indian crops). Internally the embryo has a radicle (future root) and a plumule (future shoot). The radicle emerges first — gravitropic, it always heads down. The plumule follows — phototropic, it heads up toward light. Stored food (starch in cereals, oil in mustard) fuels the seedling until it can photosynthesise on its own.",
+                "expert": "Seed dormancy is a survival strategy. Some seeds (jute, neem) germinate days after dispersal; others (date palm, lotus) can wait centuries — in 2005 a 2,000-year-old date seed from King Herod's palace was successfully germinated in Israel. Dormancy is broken by specific cues: cold winters (oak), forest fire (eucalyptus), passage through a bird's gut (chilli). Each cue tells the seed 'now's a good time to grow.'"
+              },
+              "reasoning": "A dry seed is metabolically near-frozen — only 5–10% water. Water imbibition swells the embryo and dissolves enzymes that hydrolyse starch into sugar. Sugar + oxygen = ATP → growth.",
+              "useCases": [
+                {
+                  "title": "Sprouting moong at home",
+                  "description": "Soak moong beans overnight, drain, wrap in a moist cloth, leave 24 hours. The little white 'tail' that emerges is the radicle. Drain twice a day; in 3 days you have sprouts ready to eat.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Why farmers sow before monsoon",
+                  "description": "Indian kharif crops (rice, maize, cotton) are sown in June so the monsoon rain triggers germination. Sown too early — no water, seeds rot. Too late — short growing season.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Pre-monsoon kitchen experiments",
+                  "description": "Soaking 5-6 dry seeds in different conditions (water only, no water, fridge, on the windowsill) over a week is a textbook home science project — only one combination germinates.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "The world's oldest viable seed germinated to date is a 32,000-year-old narrow-leafed campion (Silene stenophylla) from Siberian permafrost — Russian scientists grew it in 2012 from tissue inside the ancient seed. Life is patient.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                137,
+                138
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Germination needs: WATER + OXYGEN + warmth. Radicle (root) emerges first (down), plumule (shoot) next (up). Stored food fuels seedling."
             }
           ],
           "questions": [
@@ -29291,6 +29587,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "UNIFORM motion = constant speed (straight line on distance-time graph). NON-UNIFORM = varying speed (curved line). Steeper slope = faster."
+            },
+            {
+              "id": "ch13_t01_c03",
+              "title": "Acceleration — when speed itself changes",
+              "explanations": {
+                "oneLine": "Acceleration is the rate at which speed changes — how quickly an object speeds up, slows down, or changes direction.",
+                "kidFriendly": "Constant speed is boring — a train cruising at 100 km/h. But what about a car that goes from 0 to 60 km/h in 5 seconds? That's acceleration. The faster the speed builds up, the higher the acceleration. Brake hard and you feel a backward push — that's deceleration (negative acceleration). Even a car taking a turn at constant speed is accelerating, because direction is changing.",
+                "textbook": "Acceleration = (final speed − initial speed) ÷ time taken. SI unit: m/s² (metres per second per second). A car going from 0 to 20 m/s in 4 seconds has acceleration 5 m/s². On a distance-time graph, uniform motion is a straight line; accelerating motion is a curve. On a speed-time graph, acceleration is the slope. Free-falling objects on Earth accelerate at 9.8 m/s² downward — that's the 'g' you'll meet in higher classes.",
+                "expert": "In Class 9 you'll meet vector acceleration — the FULL definition includes direction. A planet in circular orbit has zero change in speed but is always accelerating toward the centre (centripetal). Newton's second law F = ma quantifies how force produces acceleration: 1 newton of force gives 1 kg an acceleration of 1 m/s². That single equation runs all of classical mechanics."
+              },
+              "reasoning": "Speed describes 'how fast'; acceleration describes 'how fast the speed is changing'. Two different rates of change.",
+              "useCases": [
+                {
+                  "title": "Cars and crash tests",
+                  "description": "Crash tests measure deceleration when a car hits a wall — typically 30g (294 m/s²) for the dummy at 50 km/h. Higher decelerations mean more severe injury — that's why crumple zones and airbags exist.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Elevator feel",
+                  "description": "When the elevator starts moving up, you feel pressed into the floor — that's upward acceleration adding to gravity. When it stops near the top, you feel slightly lighter — that's deceleration.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Roller-coaster physics",
+                  "description": "The 'butterflies in the stomach' feeling on a roller-coaster drop is your inner ear sensing a sudden acceleration. Your body is briefly weightless — gravity hasn't pulled you back yet.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Galileo's inclined-plane experiments (1604) measured acceleration of rolling balls. He timed them by water-clock drips — surprisingly accurate. His insight that acceleration under gravity is constant (and the same for all masses in vacuum) overturned 2,000 years of Aristotle.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                143,
+                144
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Speed changes? Acceleration. = (v_final − v_initial) / t. Units: m/s². Free fall on Earth: g = 9.8 m/s². Negative = deceleration."
             }
           ],
           "questions": [
@@ -30192,6 +30525,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "4000 years of time-keeping: sundial → water clock → hourglass → pendulum → mainspring → quartz crystal → atomic caesium → optical lattice. Civilisation tracked time better as technology advanced."
+            },
+            {
+              "id": "ch13_t03_c03",
+              "title": "Why we needed a unit of time — the second",
+              "explanations": {
+                "oneLine": "The second is humanity's agreed-upon unit of time — once defined by Earth's rotation, now by the vibrations of a caesium atom.",
+                "kidFriendly": "How do you measure time? You need a unit. The Egyptians divided day and night into 12 hours each (so a daytime hour was longer in summer than winter — confusing!). Eventually everyone agreed on 24 equal hours per day, 60 minutes per hour, 60 seconds per minute. But what IS one second? Today scientists define it as 9,192,631,770 vibrations of a caesium-133 atom. Sounds weird, but it's the most accurate clock ever built.",
+                "textbook": "From 1750 to 1956 the second was defined as 1/86,400 of a mean solar day — the time Earth takes to rotate once relative to the Sun. But Earth's rotation slows by ~2 milliseconds per century, so this drifted. In 1967 the second was redefined as the duration of 9,192,631,770 cycles of the radiation emitted by a caesium-133 atom transitioning between two hyperfine states. Caesium atomic clocks are accurate to 1 second in 100 million years.",
+                "expert": "GPS works only because of atomic clocks — each satellite carries one, and the receiver compares signal-arrival times from four satellites to pin down your position. A 1 microsecond error in the clock = 300 m error on the ground. Einstein's relativity also enters here: GPS satellites' clocks tick slightly faster than yours (less gravity, slower orbit) by 38 microseconds a day — the system has to correct for that or your maps would drift by 10 km in a day."
+              },
+              "reasoning": "Time, like length or mass, needs a universal unit so two scientists in different countries can compare measurements. Anchor it to something stable (atomic vibrations) and you get a unit that doesn't drift.",
+              "useCases": [
+                {
+                  "title": "Olympic 100m sprint",
+                  "description": "Olympic photo-finish cameras detect first-leg-across-line to 1/10,000th of a second. Without precise time, Usain Bolt and the second-place runner could be 'tied' when they really weren't.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Stock-market trading",
+                  "description": "High-frequency trading firms execute deals in microseconds. They co-locate their servers next to the exchange so light-speed delay over fibre optic isn't a factor.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Phone clocks vs wristwatch",
+                  "description": "Your phone clock is synced via NTP (Network Time Protocol) to an atomic-clock-backed server. That's why phones don't drift even after months. A mechanical wristwatch can drift seconds per day.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "The world's most accurate clock today is an optical lattice clock at NIST (USA) — it would not gain or lose a second over the entire age of the universe (13.8 billion years). The next redefinition of the second will likely use one of these.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "1 second = 9,192,631,770 caesium-133 vibrations. Once defined by Earth rotation (drifts). Now atomic → GPS-grade precise."
             }
           ],
           "questions": [
@@ -31894,6 +32264,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Bulb: TUNGSTEN filament (very high R + high melting point 3422°C) glows white-hot. Fuse: low melting point alloy that breaks before wires overheat. Different jobs, different metals."
+            },
+            {
+              "id": "ch14_t02_c03",
+              "title": "Power rating and electricity bills",
+              "explanations": {
+                "oneLine": "An appliance's power rating in watts tells you how fast it uses electrical energy; multiply by hours used and you get the units on your electricity bill.",
+                "kidFriendly": "Every appliance has a sticker — '60 W' on a bulb, '1500 W' on a geyser, '2000 W' on an iron. That's its power rating: how fast it gulps electricity. A 1500 W geyser running for 2 hours uses 3 kilowatt-hours (kWh). At ₹7 per kWh, that's ₹21 for one bath. The bill at month-end is just total kWh × rate.",
+                "textbook": "Electrical power P (in watts) = current × voltage (P = I × V). Energy consumed = power × time. The electricity board bills you in kilowatt-hours (kWh, also called 'units'): 1 kWh = 1000 watts × 1 hour = 3,600,000 joules. A 60 W LED bulb on for 10 hours uses 0.6 kWh; a 1500 W geyser on for 1 hour uses 1.5 kWh — that's why the geyser dominates the bill even though it's not on for long.",
+                "expert": "Power factor matters in higher classes — the W on the appliance is REAL power, but currents and voltages in AC circuits can be slightly out of phase, so the apparent power (in VA) is sometimes higher. Industrial bills have a power-factor penalty. India's domestic electricity tariff is structured in 'slabs': 0–100 kWh cheap, 101–300 expensive, 301+ premium. So a careless month with the AC pushes you into a punitive slab."
+              },
+              "reasoning": "Power is energy-per-time (watts = joules/second). Multiply by time used to get total energy. Kilowatt-hour is just a more convenient unit (the joule is too small for household bills).",
+              "useCases": [
+                {
+                  "title": "Choosing a LED bulb",
+                  "description": "A 9 W LED bulb gives the same light as a 60 W incandescent — that's why LEDs cut your lighting bill by 85%. Same brightness, much less power.",
+                  "domain": "building"
+                },
+                {
+                  "title": "AC vs ceiling fan",
+                  "description": "A ceiling fan runs at ~75 W; a window AC at ~1500 W. Run the fan all night for the cost of running the AC for 1 hour. Hence the old adage 'fan first, AC if you must'.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Star labels on appliances",
+                  "description": "Indian appliances carry a 5-star BEE rating — a 5-star fridge uses about half the energy of a 1-star one. Over a fridge's 10-year life, that's tens of thousands of rupees saved.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "James Watt (1736–1819) didn't invent the steam engine but made it 4× more fuel-efficient. The 'horsepower' he coined (1 HP = 746 W) let mill owners compare his engines to real horses. The watt is named after him.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                155,
+                156
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Power (W) × time (h) = energy (kWh). 1 kWh = 1 unit on bill (₹7 in 2026). Geyser (1500 W) dominates — fan (75 W) is cheap."
             }
           ],
           "questions": [
@@ -35823,6 +36230,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "WATER TABLE = top of underground water saturation. Drops in dry seasons. GROUNDWATER = water held in soil/rock pores. Conservation: drip irrigation, rainwater harvesting, recharge wells."
+            },
+            {
+              "id": "ch16_t01_c03",
+              "title": "Aquifers and groundwater recharge",
+              "explanations": {
+                "oneLine": "An aquifer is an underground layer of porous rock or gravel that stores water; recharge is rain percolating down to refill it.",
+                "kidFriendly": "Imagine a giant sponge buried 30 metres under the ground — that's an aquifer. Rain trickles through the soil for weeks or months until it reaches that sponge and fills it. Tube wells pump water out of this sponge. If you pump faster than rain refills, the sponge dries up — exactly what's happening in Punjab and parts of Tamil Nadu today.",
+                "textbook": "An aquifer is a layer of permeable rock (sandstone, gravel, fractured limestone) that holds water in its pore spaces. The water enters by infiltration — rain seeping through unsaturated soil downward until it hits the impermeable layer above the aquifer. Groundwater recharge rates vary: tens of mm/year in arid zones, hundreds in Gangetic plains. India draws ~250 km³ of groundwater per year (the world's largest user), but recharge is only ~430 km³ — and in over-exploited blocks (Punjab, Haryana, western UP), pumping exceeds recharge so the water table drops 0.5–1 m every year.",
+                "expert": "Aquifers come in two types: unconfined (water table is the upper boundary, recharge happens directly above) and confined (sandwiched between impermeable layers, recharged only at distant outcrops). Hyderabad's deep aquifer is confined — water has been there for centuries. Once depleted it doesn't refill in human timescales. The Ogallala aquifer in the US Great Plains is the world's most famous case — at the current pumping rate, it'll be dry by 2070."
+              },
+              "reasoning": "Soil and rock have pore spaces. Rainwater fills them, gravity pulls it down, and an impermeable layer below stops it from sinking further. The result is a saturated zone — the aquifer.",
+              "useCases": [
+                {
+                  "title": "Punjab's falling water table",
+                  "description": "Free electricity for farmers + tube wells running 24/7 = 0.7 m drop per year in central Punjab's water table. Some districts now need 200-m-deep borewells where 50 m sufficed in 1985.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Borewell drilling logic",
+                  "description": "Hydro-geologists scan rock formations to predict where an aquifer is. Drill in shale (impermeable) and you get a dry well; drill in fractured granite (permeable) and you hit water.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Why some borewells run dry by April",
+                  "description": "Borewells tapping the upper unconfined aquifer drop with each pumping season. By April, water levels have fallen below the pump intake — until June rain refills the aquifer.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "Mosul, Iraq's ancient qanat system tapped aquifers via gently sloping tunnels — gravity-fed, no pumping, sustainable. Some have run for 2,500 years. Modern unsustainable pumping replaced them in the 1960s and the region has paid the price ever since.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                161,
+                162
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Aquifer = underground porous-rock sponge. Refilled by rain percolation. Pump faster than recharge → water table drops (Punjab now)."
             }
           ],
           "questions": [
@@ -36611,6 +37055,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Rainwater harvesting structures: ROOFTOP tanks (catch monsoon), BAWRI/BAOLI (stepwells, traditional), TANKA (Rajasthani underground), CHECK DAMS. Each suits a different geography."
+            },
+            {
+              "id": "ch16_t02_c03",
+              "title": "Drip irrigation — water at the root, not on the leaves",
+              "explanations": {
+                "oneLine": "Drip irrigation delivers water through a network of small pipes directly to each plant's root zone, saving 30–60% over flood irrigation.",
+                "kidFriendly": "Watering a field by flooding it is wasteful — half the water evaporates or seeps past the roots. Drip irrigation is smarter: a network of thin pipes runs along each row, each pipe with tiny holes (drippers) that release water drop-by-drop right where the roots are. The plants get exactly what they need; almost nothing is wasted. Israeli farmers grow tomatoes in the desert this way.",
+                "textbook": "Drip irrigation (also called trickle irrigation) consists of a main pipeline, sub-mains, lateral pipes, and emitters that drip water onto the soil at 1–4 litres per hour per plant. Compared to flood irrigation, drip cuts water use by 30–60%, eliminates surface runoff, and reduces weed growth (only the crop's root zone is moist). The system is more expensive upfront (~₹50,000 per acre for the pipes and emitters) but pays back in 1–2 seasons on water and fertiliser savings. Government subsidies cover up to 90% of the cost.",
+                "expert": "Drip-irrigated crops also support 'fertigation' — fertilisers dissolved in the drip water are delivered directly to roots, so less fertiliser is needed (savings 30–40%) and zero leaches into groundwater. Israel pioneered the technology in the 1960s for desert agriculture. Their cotton yield using drip is twice that of flood-irrigated Indian cotton, using a third of the water."
+              },
+              "reasoning": "Plant roots only absorb water in a narrow zone around the stem. Flooding wets the whole field including bare soil where roots can't reach. Drip irrigation matches water delivery to the root pattern.",
+              "useCases": [
+                {
+                  "title": "Maharashtra grape growers",
+                  "description": "Maharashtra's grape belt is now 95% drip-irrigated. A single 1-hectare vineyard uses 4,000 litres/day on drip vs 12,000 litres/day on furrow irrigation.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Greenhouse tomato yards",
+                  "description": "Indoor greenhouse production in Pune, Nashik, and Bengaluru relies on automated drip with fertigation. Plants get exactly what's needed — yields are 4-5× field cultivation.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Drip kit for a balcony garden",
+                  "description": "A 2,000-rupee drip kit from a hardware store can water 10 balcony pots automatically when you're on vacation. Tiny pumps + tiny tubing — same Israeli technology, miniaturised.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Simcha Blass, the engineer who invented drip irrigation, got the idea from watching a tree in the Negev desert that was thriving while its neighbours were stressed. Investigating, he found a leaking water pipe slowly dripping at its roots. The accidental experiment became a technology that fed Israel.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                164,
+                165
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Drip irrigation = tiny pipes, drop-by-drop at roots. 30-60% water savings vs flood. Israeli invention (Simcha Blass)."
             }
           ],
           "questions": [
@@ -37853,6 +38334,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Forests: produce O2, absorb CO2, hold soil, recharge groundwater, host wildlife, provide timber/fruits/medicines, regulate climate. Lose forests = lose ALL these services simultaneously."
+            },
+            {
+              "id": "ch17_t01_c03",
+              "title": "Food chains and energy flow in a forest",
+              "explanations": {
+                "oneLine": "A food chain is who eats whom — each level passing about a tenth of its energy up the line, from plant to herbivore to predator.",
+                "kidFriendly": "In a forest the Sun's energy enters through leaves. A deer eats those leaves and stores some of the energy as muscle. A tiger eats the deer and gets a tiny fraction of that energy. About 90% is lost as heat at each step. That's why one tiger needs hundreds of deer to live on, and the forest needs thousands of trees to feed those deer.",
+                "textbook": "A food chain is a linear sequence: producers (green plants) → primary consumers (herbivores) → secondary consumers (small carnivores) → tertiary consumers (apex predators). Energy enters as sunlight, is fixed into glucose by photosynthesis, and flows up. The 10% rule: roughly 10% of the energy at one level transfers to the next; 90% is lost as metabolic heat or in undigested waste. That's why apex predators are so rare — a leopard needs the productivity of square kilometres of forest to survive.",
+                "expert": "Real ecosystems aren't linear chains but webs — a tiger may eat deer, wild boar, and monkeys; deer eat dozens of plant species. Class 9 Biology introduces the trophic-pyramid concept, where biomass at each level is plotted as a stacked bar. The pyramid's shape (broad base, narrow top) is what limits how many lions or tigers a forest can support — and why losing 1% of producers can crash the whole food web."
+              },
+              "reasoning": "Energy obeys the second law of thermodynamics — every conversion (sunlight → glucose → muscle) loses some as heat. With only 10% efficiency per step, four-step food chains are about the maximum the laws of physics allow.",
+              "useCases": [
+                {
+                  "title": "Project Tiger reserves",
+                  "description": "Each tiger reserve in India is sized so the prey-base (deer, sambhar, wild boar) is large enough to feed a target tiger population. Without enough prey, tigers stray into villages.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Why eating lower in the food chain is greener",
+                  "description": "Vegetarian food chains are 1 step shorter than meat-based ones. Calorie for calorie, growing rice uses ~1/10 the energy of growing chicken (which has to be fed grain).",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Why over-fishing crashes seabird populations",
+                  "description": "Over-fish the small fish that seabirds eat, and the seabird population crashes years later — the food-chain link breaks at the bottom. The Atlantic puffin colonies in Iceland are a current example.",
+                  "domain": "animals"
+                }
+              ],
+              "beyondTheBook": "British ecologist Charles Elton wrote the founding text 'Animal Ecology' in 1927, introducing the food-chain idea after a year studying Arctic tundra. He noticed every level had distinctly fewer species than the level below — the trophic pyramid was born.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                171,
+                172
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Food chain: plants → herbivore → carnivore. 10% rule: only 10% of energy passes up per step. Why apex predators are RARE."
             }
           ],
           "questions": [
@@ -38844,6 +39362,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Conservation tools: CHIPKO movement (hug trees), national PARKS/RESERVES, REFORESTATION (planting), JOINT FOREST MANAGEMENT (community-led). Active vs passive protection."
+            },
+            {
+              "id": "ch17_t03_c03",
+              "title": "Afforestation projects and the carbon budget",
+              "explanations": {
+                "oneLine": "Planting new forests pulls carbon dioxide out of the air and locks it in wood — a slow but powerful tool against climate change.",
+                "kidFriendly": "Trees breathe in carbon dioxide and breathe out oxygen. As they grow, the carbon ends up locked in their wood, bark, and roots. A single mature teak tree stores about 100 kg of carbon. Plant ten thousand trees and you've removed a thousand tonnes of CO₂ from the atmosphere. India's National Mission for a Green India aims to plant trees on 10 million hectares — a country-scale carbon sponge.",
+                "textbook": "Afforestation is the planting of trees on land that wasn't recently forested; reforestation is replanting where forests have been cleared. Both increase the carbon sink — carbon stored in biomass and soil. A typical Indian tropical-mixed forest stores ~150 tonnes of carbon per hectare. India has pledged (under the Paris Agreement) to create an additional 2.5–3 billion tonnes of CO₂-equivalent sink by 2030. Project Green India and Compensatory Afforestation are the main vehicles.",
+                "expert": "Not all afforestation is equal. Monoculture eucalyptus or acacia plantations sequester carbon but offer poor biodiversity and often deplete the water table. Mixed-species native forests sequester less per year initially but build deeper soil carbon and support more wildlife. The current policy debate in India is exactly this tension — fast carbon vs lasting biodiversity. Class 11 Biology will introduce the global carbon cycle and the Kyoto/Paris frameworks that fund afforestation worldwide."
+              },
+              "reasoning": "Photosynthesis: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. Every gram of glucose produced removes 1.47 g of CO₂ from the atmosphere. Multiply by the millions of grams of wood in a forest and you have a serious carbon sink.",
+              "useCases": [
+                {
+                  "title": "Karnataka eucalyptus plantations",
+                  "description": "Eucalyptus grows fast (10 m in 4 years) and stores ~50 t C/ha — but uses 4× the water of native trees. The state's 1990s plantation push dropped some water tables 30 m.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Carbon credits",
+                  "description": "A landowner who plants 100 ha of forest can sell the avoided CO₂ as carbon credits on international markets (~$10-50 per tonne). Class 12 commerce students will meet the trading mechanism.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Home plantation drives",
+                  "description": "Cubbon Park (Bengaluru) and Aravali Biodiversity Park (Delhi) both grew on what was barren or quarried land. Decades of focused planting turned them into urban carbon sinks and bird sanctuaries.",
+                  "domain": "plants"
+                }
+              ],
+              "beyondTheBook": "China's Three-North Shelterbelt project — a 4,500 km tree-belt across the country's arid north — has been ongoing since 1978. It's the largest afforestation effort in human history, with the goal of halting the Gobi Desert's southward march.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                176,
+                177
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Afforestation = planting new forests. CO₂ → wood → carbon sink. ~150 t C / hectare in Indian forest. Carbon credit traded ~$10-50/t."
             }
           ],
           "questions": [
@@ -39806,6 +40361,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "Wastewater journey: HOUSEHOLD drains → sewer pipes → TREATMENT plant (multi-stage cleanup) → RIVER/SEA. Without treatment, untreated sewage poisons water bodies + spreads disease."
+            },
+            {
+              "id": "ch18_t01_c03",
+              "title": "Stormwater drains — why mixing rain and sewage is a bad idea",
+              "explanations": {
+                "oneLine": "Cities use two separate networks — one for stormwater (rain runoff), one for sewage — because mixing them overwhelms treatment plants every monsoon.",
+                "kidFriendly": "Two pipes run under a modern city street: a fat one for rainwater (clean enough to drain straight into a river) and a smaller one for sewage (which goes to a treatment plant). If both share one pipe, the rainwater dilutes the sewage so much that the treatment plant can't catch up — raw waste spills directly into rivers during heavy rain. Mumbai's monsoon flooding partly comes from old combined sewers.",
+                "textbook": "Separate sewer systems use parallel pipelines: stormwater drains carry rain to natural water bodies, and sanitary sewers carry domestic and industrial wastewater to treatment plants. Combined sewer systems (the older Victorian model) merge both into one pipe — economical to build but problematic in heavy rain, when 'combined sewer overflows' send untreated mixture straight to rivers. India's National River Conservation Plan now mandates separate systems in all new construction.",
+                "expert": "London, New York, and Mumbai all started with combined sewers in the 19th century — the cheapest design at the time. London's 2025 Thames Tideway Tunnel (a 25 km super-sewer below the city) is the £4 billion fix: it captures combined sewage during storms and holds it until the treatment plant catches up. India's smart cities mission funds parallel-pipe retrofits in 100 cities."
+              },
+              "reasoning": "Rain on a clean city street is ~1000× cleaner than sewage. Mixing the two doesn't 'clean' the sewage — it just spreads pollution to a larger volume of water, which then overwhelms the treatment plant's capacity.",
+              "useCases": [
+                {
+                  "title": "Mumbai's BRIMSTOWAD project",
+                  "description": "Brihanmumbai Storm Water Disposal System aims to replace 80-year-old combined sewers with separate drains. Slow progress but every new arterial road gets two parallel pipes.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Bengaluru's lake pollution",
+                  "description": "Bengaluru's lakes (Bellandur, Varthur) catch fire periodically because untreated sewage flows in through old combined drains. Detergents foam, methane builds up, and the surface ignites — a sign the sewer architecture has failed.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Why basements flood in monsoon",
+                  "description": "Old apartments in Mumbai with combined sewers see basement floods when heavy rain backs up the shared pipe. Separating storm and sanitary drains during a building's renovation prevents this.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "London's Great Stink of 1858 — when raw sewage in the Thames smelled so bad that Parliament couldn't sit — finally forced engineer Joseph Bazalgette to build the city's first sewer system. His combined design served for 150 years and is the model for many Indian cities today.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                181,
+                182
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Two pipes: storm drain (rain → river) + sanitary sewer (waste → WWTP). Mix them = overflow during monsoon → untreated waste in river."
             }
           ],
           "questions": [
@@ -40238,6 +40830,43 @@
               ],
               "needsHumanReview": false,
               "mnemonic": "AERATION TANK = bacteria eat dissolved organics (with bubbled oxygen). SLUDGE DIGESTER = anaerobic bacteria break solid sludge into methane + dry biosolids. Biological treatment of two waste streams."
+            },
+            {
+              "id": "ch18_t02_c03",
+              "title": "Biogas from sludge — energy out of waste",
+              "explanations": {
+                "oneLine": "The sludge left over from wastewater treatment is fermented in airless digesters to produce biogas — mostly methane, which can power the plant itself.",
+                "kidFriendly": "After a treatment plant cleans wastewater, what's left is a smelly grey solid called sludge. Instead of throwing it away, modern plants seal it inside a giant tank with no oxygen. Special bacteria love that environment — they eat the sludge and burp out methane gas. That methane is piped to a generator and turned into electricity that runs the plant. Waste becomes fuel.",
+                "textbook": "Anaerobic digestion is the breakdown of organic matter by bacteria in the absence of oxygen, producing biogas (60–70% methane CH₄, 30–40% CO₂). At a wastewater treatment plant, sludge from the primary and secondary settling tanks is pumped into a sealed digester at 35–55°C and retained for 20–30 days. The methane drives a combined heat-and-power engine; many plants meet 30–60% of their own electricity needs this way. The leftover 'digestate' is a stable, nutrient-rich solid that can be used as compost or fertiliser.",
+                "expert": "Anaerobic digestion has three sequential bacterial steps: hydrolysis (complex molecules → simple sugars / amino acids), acidogenesis (→ volatile fatty acids), and methanogenesis (→ methane + CO₂). The slowest step is methanogenesis, which is why the process needs 3–4 weeks. Class 11 Biology unpacks the same biochemistry: methanogenic archaea in cattle stomachs do the identical reaction. Hence the methane in cow burps — same biology, different host."
+              },
+              "reasoning": "Sludge is mostly carbon-rich organic matter. Without oxygen, bacteria can't burn it to CO₂; they must instead disproportionate it to CH₄ + CO₂. The methane is energy-dense (~36 MJ/m³) and easily captured.",
+              "useCases": [
+                {
+                  "title": "Patiala STP biogas plant",
+                  "description": "Patiala's 30 MLD sewage treatment plant generates ~1 MW of electricity from biogas — enough to run its own pumps and aerators. Net energy cost: roughly zero.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Cow-dung gobar gas plants",
+                  "description": "Rural Indian gobar gas plants use the same anaerobic digestion on cow manure. A 4-cow plant produces enough biogas for one family's cooking — 90% of the energy budget for a poor household.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Indian metro-station urinals + biogas",
+                  "description": "Some metro stations in Delhi capture urinal waste into mini anaerobic digesters; the biogas runs the station's lights. Demonstration units are at Dwarka Sector 21.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Volta noticed flammable 'marsh gas' bubbling out of stagnant lakes in 1776 — the first observation of biogenic methane. His insight that swamps make their own fuel later became the basis of every wastewater treatment plant's energy recovery.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                184,
+                185
+              ],
+              "needsHumanReview": false,
+              "mnemonic": "Sludge in anaerobic tank → bacteria → biogas (~65% methane). Powers the plant itself. Same biology as cow gobar gas."
             }
           ],
           "questions": [
