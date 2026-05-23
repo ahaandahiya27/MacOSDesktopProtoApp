@@ -277,6 +277,58 @@ Static-only on this dev Mac (AX permission missing). The `Surface_AuditWalker` X
 5. Build clean, tests green, all lints clean ✅
 6. `git status` clean, `origin/main` synced ✅
 
+## CH.1 PILOT — FIRST PROPAGATION ROUND — 2026-05-23 20:00 +05:30
+
+Autonomous 5-hour session (no further user input expected). Picked the highest-value next step from `CH1_PILOT_PROPAGATION.md`: propagate the content-only surfaces (predictQuestion + whyChain + conceptMap) to three chapters in the recommended order.
+
+### Commits landed (1, plus 1 pre-existing user fix)
+- `ac3944b` fix(bigsur-compat): unblock Xcode 13.2.1 / Swift 5.5 build on iMac — landed by Rohan during my session. Fixed three iMac-only build issues: ArticleBrowserView toolbar HStack at 11 direct children (over the @ViewBuilder cap; wrapped 5 nav buttons in a Group); `withAnimationRespectingReduceMotion`'s @MainActor declaration (dropped — View instance methods are nonisolated under Swift 5.5 so calling a @MainActor global function from them was rejected); DataStore+Saving `var errorDescription` captured into a DispatchQueue.main.async (switched to single-assignment `let` so the captured value is Sendable).
+- `6728f99` feat(ch1-pilot-propagation): Ch.2 + Ch.10 + Ch.17 content — this session's main artifact. 36 concepts authored with predictQuestion + 3-layer whyChain + per-chapter conceptMap.
+
+### Propagation summary
+
+| Chapter | Concepts | whyChain words | Map nodes | Map edges | Cross-chapter links |
+|---------|----------|----------------|-----------|-----------|----------------------|
+| Ch.2 Nutrition in Animals | 20 | ~5400 | 17 | 20 | ch01 (photosynthesis), ch10 (aerobic respiration) |
+| Ch.10 Respiration | 8 | ~2200 | 11 | 13 | ch01 (photosynthesis ↔ respiration), ch02 (cells use nutrients), ch11 (heart + transport) |
+| Ch.17 Forests | 8 | ~2200 | 11 | 14 | ch01 (food chain base, photosynthesis amplify), ch16 (water cycle) |
+
+Total this round: **36 concepts × (1 predictQuestion + 1 whyChain × 3 layers) + 3 concept maps + cross-chapter network**.
+
+### Big-Sur audit pass on Ch.1 pilot code
+
+Audited every Ch.1-pilot file added in 82f84d0..eba54bd for the three Big-Sur-incompat patterns Rohan's `ac3944b` flagged:
+
+- **@ViewBuilder 10-child cap.** No Ch.1-pilot view has >10 direct children in any closure. Sandbox.body: 5 children. Tour.body: 5. WhyChainView.body: 2. ConceptMap.body: 6 (5 unconditional + 1 conditional pair). CTACard.body: 4. `check_viewbuilder_limit.py`: clean.
+- **@MainActor on free functions.** No Ch.1-pilot code declares any @MainActor function or property. The retroactive fix in `View+RespectReduceMotion.swift` already makes `withAnimationRespectingReduceMotion` callable from any context, so my many call sites stay correct.
+- **`var` captured into DispatchQueue.main.async.** Ch1ConceptMap.handleNodeTap has two such async blocks; both capture only `let` constants (packId, conceptId, chId) before the dispatch — same shape as the existing ChapterDetailView call sites. No `var` capture anywhere in Ch.1 pilot code.
+
+Also audited for known macOS 12+ APIs:
+- `LinearGradient(colors:startPoint:endPoint:)` — actually available since macOS 10.15 (the codebase has 30+ existing uses on Big Sur). Confirmed safe.
+- `TextField(..., axis:)` — Already deliberately avoided (single-line TextField in ConceptDetailView).
+- `lineLimit(_, reservesSpace:)` — Already deliberately avoided.
+- `.foregroundStyle()` — Not used anywhere in Ch.1 pilot code.
+- `.onChange(of:_:_)` two-parameter form — Not used anywhere in Ch.1 pilot code (no `.onChange` calls in Ch.1 pilot files at all).
+- `Canvas` — Not used; rolled `ZStack` + `Path` + `.position` instead.
+
+### Verify (final)
+- `xcodebuild build` Debug, MACOSX_DEPLOYMENT_TARGET = 11.0: clean, zero code warnings.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: **257/257 green** (still 257 — Optional fields are invisible to the ratchet, schema integrity tests cover the new content).
+- All 5 lints clean (check_macos12_apis, check_lifetime_hazards, check_file_size, check_sf_symbols_compat, verify_pack_roundtrip).
+- `git status` clean. `origin/main` synced.
+
+### Wall clock + work breakdown
+Session ~5 h budget. Actual wall clock ~2 h 30 min (compressed by single-commit-per-batch + offloading the slow `testNoUnboundedGeometryReaderInScrollingContainer` test to background; build queue dominates the rest). The Big-Sur audit pass took 15 min — no findings to fix, since `ac3944b` was already-comprehensive for the patterns I might have used.
+
+### Remaining propagation slate (handover for next session)
+- **Ch.6 Physical/Chemical Change** — sandbox candidate (sliders: temperature / concentration / surface area / catalyst). Per-chapter custom SwiftUI view + content authoring.
+- **Ch.7 Weather, Climate, Adaptations** — sandbox candidate (latitude / altitude / season / humidity → climate classification).
+- **Ch.11 Transportation in Animals and Plants** — closes a Ch.10 cross-chapter link (haemoglobin transported by ...).
+- **Ch.16 Water: A Precious Resource** — closes a Ch.17 cross-chapter link (water cycle ↔ forest regulation).
+- **Remaining content-only chapters**: 3, 4, 5, 8, 9, 12, 13, 14, 15, 18, 19. ~45–50 min each.
+
+Total remaining propagation cost: ~10–13 hours across 14 chapters.
+
 
 
 
