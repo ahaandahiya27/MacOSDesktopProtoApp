@@ -6737,6 +6737,130 @@
             "ch02_t01_c06"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch02_dd01",
+          "title": "Enzyme specificity and pH optima — why pepsin only works in your stomach",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch02_t01_c04",
+          "body": "In Class 7 you learned the stomach makes acid + enzymes. Class 8 introduces a crucial idea: each enzyme works at a SPECIFIC pH. Pepsin (stomach enzyme) works only in strong acid (pH 1.5-2.5). Pancreatic trypsin (small intestine) works only in mild alkali (pH 8). If you put pepsin in your small intestine, it would be inactive — wrong pH. This is why your digestive system is a SEQUENCE of distinct pH environments: mouth (pH 6.8), stomach (pH 2), small intestine (pH 8). Each region tuned for its specific enzymes. Drinking too much milk during indigestion — neutralises stomach acid, briefly disabling pepsin so the burning sensation fades. The enzymes resume working as acidity returns.",
+          "prerequisite": "Tackle after you're comfortable with stomach acid + digestive enzymes.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 introduces the active-site lock-and-key model — why an enzyme has ONE pH optimum."
+        },
+        {
+          "id": "ch02_dd02",
+          "title": "Villi math — why your small intestine is the size of a tennis court",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch02_t01_c11",
+          "body": "In Class 7 you learned villi are tiny finger-like projections in the small intestine. Class 10 makes the math concrete. Your small intestine is ~6 m long with diameter ~2.5 cm — surface area as a smooth tube would be only ~0.5 m². But the inside has CIRCULAR FOLDS (3× area = ~1.5 m²), each fold covered in VILLI 1 mm tall (10× = ~15 m²), each villus covered in MICROVILLI (20× = ~300 m²). Total absorptive surface: ~300 sq metres — the size of a tennis court folded into your abdomen. Why so much area? Speed: glucose, amino acids, fats need to be absorbed before food moves on. Surface area × diffusion rate = absorption capacity. Same math your skin avoids (which is why you can't absorb food through your hand — way too little surface area).",
+          "prerequisite": "Tackle after the basic small-intestine concept.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 connects this to membrane biology — each microvillus is a tiny absorption machine."
+        },
+        {
+          "id": "ch02_dd03",
+          "title": "Hormonal control — gastrin, CCK, secretin",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch02_t01_c04",
+          "body": "Class 7 says: stomach makes acid 'when food arrives'. Class 11 reveals the messenger system. When you SEE/SMELL food, the brain signals vagus nerve → stomach starts releasing acid (yes, before any food arrives — that's why your mouth waters). When food TOUCHES the stomach lining, gastrin hormone is released → MORE acid + pepsin. When acid + food enter the duodenum, CCK (cholecystokinin) is released → gallbladder squeezes bile, pancreas releases enzymes. Simultaneously, SECRETIN tells the pancreas to release alkaline bicarbonate to neutralise stomach acid. The digestive system is a chemically-coordinated assembly line driven by hormones, not just nerve signals.",
+          "prerequisite": "Tackle after stomach + intestine basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET tests every gut hormone, source, target, and effect — this Class 7 chapter is the entry point."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch02_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch02_digestive_system",
+          "caption": "Human digestive system — mouth to anus",
+          "altText": "Diagram of the human digestive tract from mouth through oesophagus, stomach, small intestine, large intestine, to anus.",
+          "parentConceptId": "ch02_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch02_villi",
+          "caption": "Villi and microvilli at three magnifications",
+          "altText": "Three-panel diagram showing intestinal wall, single villus, and microvilli at increasing magnification.",
+          "parentConceptId": "ch02_t01_c11",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch02_tooth_types",
+          "caption": "32 adult teeth: incisors, canines, premolars, molars",
+          "altText": "Diagram of upper and lower jaw with 32 teeth labelled by type and position.",
+          "parentConceptId": "ch02_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch02_rumen",
+          "caption": "Cow's four-chambered stomach — rumen, reticulum, omasum, abomasum",
+          "altText": "Diagram of cow's compound stomach showing four chambers and food flow path.",
+          "parentConceptId": "ch02_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch02_scene_swallow",
+          "caption": "See it animated: swallowing and peristalsis",
+          "altText": "Open the Discover scene showing food swallowed and pushed by peristaltic waves.",
+          "parentConceptId": "ch02_t01_c12",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch02_scene_amoeba_eats",
+          "caption": "See it animated: amoeba engulfs food",
+          "altText": "Open the Discover scene showing amoeba forming pseudopodia and engulfing food particle.",
+          "parentConceptId": "ch02_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch02_scene_rumination",
+          "caption": "See it animated: cow chews cud",
+          "altText": "Open the Discover scene showing cow regurgitating and re-chewing food (rumination).",
+          "parentConceptId": "ch02_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: five steps of nutrition",
+          "altText": "Listen as the five-step nutrition process is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch02_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: villi and microvilli",
+          "altText": "Listen as the villi absorption explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch02_t01_c11",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch02_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: rumination",
+          "altText": "Listen as the rumination process is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch02_t02_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -9693,6 +9817,130 @@
             "ch03_t01_c03"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch03_dd01",
+          "title": "Synthetic polymers — how nylon and polyester replaced wool and silk",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch03_t03_c01",
+          "body": "In Class 7 you compared natural fibres (wool, silk) vs synthetic (nylon, polyester). Class 8 explains the chemistry. SYNTHETIC fibres are POLYMERS — long chains made by linking thousands of small molecules called monomers. Nylon was invented at DuPont in 1935 — its monomers are diamine + dicarboxylic acid. Polyester (Indian Reliance produces millions of tonnes) is made from terephthalic acid + ethylene glycol. The chains are spun while molten, drawn into threads, and cooled. Result: a fibre 5× stronger than wool, water-resistant, cheap to make. But — petroleum-derived (non-renewable), microplastic shedding (every wash pollutes water), 200+ year decomposition. Indian textile mills now mix natural + synthetic (poly-cotton) to balance the trade-offs.",
+          "prerequisite": "Tackle after natural vs synthetic fibre comparison.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 9 introduces polymerisation reactions — addition vs condensation polymers."
+        },
+        {
+          "id": "ch03_dd02",
+          "title": "Polymerisation reactions — how monomers become fibres",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch03_t03_c01",
+          "body": "Class 8 shows that synthetic fibres are polymers. Class 9 reveals HOW the polymerisation happens. TWO main reaction types. ADDITION polymerisation: ethylene (C₂H₄) units add to each other in a chain, no byproducts. Polyethylene (plastic bags, water bottles) is made this way. CONDENSATION polymerisation: two different monomers join, releasing a small molecule (usually water) per link. Nylon-6,6 is condensation — adipic acid + hexamethylenediamine releases water. The Indian textile industry's polyester is also condensation polymerisation. WHY this matters: addition polymers can't be easily depolymerised (recycled); condensation polymers CAN be hydrolysed back to monomers. That's why nylon recycling is growing in Mumbai's textile circular economy.",
+          "prerequisite": "Tackle after the synthetic polymer Class 8 stretch.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 explores reaction kinetics — how temperature controls polymer chain length, which controls fabric strength."
+        },
+        {
+          "id": "ch03_dd03",
+          "title": "Keratin and fibroin — the proteins behind wool and silk",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch03_t01_c02",
+          "body": "In Class 7 you learned wool comes from sheep, silk from silkworms. Class 11 reveals these aren't just 'animal fibres' — they're SPECIFIC PROTEINS with very different structures. KERATIN (wool, hair, nails) — packed with sulphur bonds that give it strength + crimp. Wool's natural curl comes from disulphide bridges. Perms in salons CHEMICALLY break and re-form these bonds. FIBROIN (silk) — a much simpler protein, mostly glycine + alanine, with VERY LONG straight chains. The straightness is why silk reflects light beautifully (regular surface = mirror-like reflection). Why silk feels cool and wool feels warm: keratin's spiral structure traps air (insulator); fibroin's straight chains transfer heat away from skin. Two animals, two protein architectures, two completely different fabric properties.",
+          "prerequisite": "Tackle after wool and silk basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "NEET tests protein quaternary structure — keratin and fibroin are textbook examples of structural proteins."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch03_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch03_wool_process",
+          "caption": "Six steps from sheep to wool fabric",
+          "altText": "Process diagram showing shearing, scouring, sorting, dyeing, carding, spinning, weaving.",
+          "parentConceptId": "ch03_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch03_silkworm_lifecycle",
+          "caption": "Silkworm life cycle — egg to moth",
+          "altText": "Four-stage diagram showing silkworm egg, larva, pupa in cocoon, adult moth.",
+          "parentConceptId": "ch03_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch03_polymer_chain",
+          "caption": "Polymer chain visualised — monomers linking up",
+          "altText": "Diagram of monomer units joining to form a long polymer chain like beads on a string.",
+          "parentConceptId": "ch03_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch03_fibre_compare",
+          "caption": "Natural vs synthetic fibres compared",
+          "altText": "Two-column comparison: natural fibres (cotton, wool, silk) vs synthetic (nylon, polyester, rayon).",
+          "parentConceptId": "ch03_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch03_scene_reeling",
+          "caption": "See it animated: silk reeling from cocoon",
+          "altText": "Open the Discover scene showing silk filaments unwound from a cocoon in warm water.",
+          "parentConceptId": "ch03_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch03_scene_shearing",
+          "caption": "See it animated: sheep shearing",
+          "altText": "Open the Discover scene showing wool being sheared from a sheep with electric shears.",
+          "parentConceptId": "ch03_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch03_scene_loom",
+          "caption": "See it animated: handloom weaving",
+          "altText": "Open the Discover scene showing warp and weft threads interlacing on a handloom.",
+          "parentConceptId": "ch03_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: wool processing steps",
+          "altText": "Listen as the wool processing explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch03_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: silkworm life cycle",
+          "altText": "Listen as the silkworm life cycle is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch03_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch03_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: synthetic vs natural fibres",
+          "altText": "Listen as the synthetic-vs-natural comparison is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch03_t03_c01",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -12611,6 +12859,130 @@
             "ch04_t02_c05"
           ]
         }
+      ],
+      "deepDive": [
+        {
+          "id": "ch04_dd01",
+          "title": "Thermal expansion — why railway tracks have gaps and bridges have rollers",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch04_t01_c02",
+          "body": "In Class 7 you saw thermometers use thermal expansion of mercury. Class 8 quantifies the same effect for solids. Every solid has a LINEAR EXPANSION COEFFICIENT — how much its length grows per °C of warming. Steel: 12 × 10⁻⁶ per °C. So a 100-metre steel railway track at 20°C, on a 45°C summer day, grows by 100 × 12 × 10⁻⁶ × 25 = 0.030 m = 3 cm. Without expansion gaps, the track would BUCKLE — bend sideways in deadly waves. Indian Railways inserts ~20 mm gaps every 30 m for exactly this reason. The Howrah Bridge in Kolkata sits on giant ROLLERS that let it slide a few cm in summer (and back in winter). Engineers don't fight expansion; they design for it.",
+          "prerequisite": "Tackle after thermometer basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 derives ΔL = αLΔT and uses it for bimetallic strips in thermostats."
+        },
+        {
+          "id": "ch04_dd02",
+          "title": "Specific heat capacity — why water saves your city from the heat",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch04_t01_c07",
+          "body": "In Class 7 you saw water has special properties. Class 10 names the property: SPECIFIC HEAT CAPACITY — how much energy (joules) it takes to raise 1 kg by 1°C. Water's value: 4186 J/kg/°C. Sand's: ~830. So water heats up 5× SLOWER than sand for the same energy input. This is why Mumbai (surrounded by Arabian Sea) has milder summers than Delhi (inland) — even though both at same latitude. The sea acts as a giant thermal buffer. Same physics in reverse during winter: the sea stays warm longer, so coastal Goa is milder than inland Madhya Pradesh. Indian coastal cities thank water's specific heat for ~10°C less extreme weather than their inland counterparts.",
+          "prerequisite": "Tackle after heat vs temperature basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE / Class 11 introduces calorimetry — measuring specific heat experimentally."
+        },
+        {
+          "id": "ch04_dd03",
+          "title": "Kinetic theory of gases — heat is just movement",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch04_t01_c01",
+          "body": "Class 7 said heat is the energy of warm things. Class 11 reveals what HEAT actually is at atomic scale: heat is the average KINETIC ENERGY (motion energy) of the atoms or molecules. A hot gas = molecules bouncing fast (~500 m/s at room temperature for air). Cold gas = molecules bouncing slowly. Temperature is proportional to this average speed squared: T ∝ v². When you touch a hot stove, fast-moving stove atoms collide with your skin's atoms, transferring kinetic energy. There's no 'heat substance' — just motion. Indian physicist S.N. Bose's 1924 work was about gases of indistinguishable particles — that's how he and Einstein found the Bose-Einstein statistics. The whole field of statistical mechanics traces back to this insight: heat = motion.",
+          "prerequisite": "Tackle after heat vs temperature.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 covers Maxwell-Boltzmann distribution — the curve of molecular speeds at a given temperature."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch04_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch04_thermometer",
+          "caption": "Mercury thermometer cross-section",
+          "altText": "Diagram of a clinical thermometer showing bulb, capillary, scale, and mercury column.",
+          "parentConceptId": "ch04_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch04_three_modes",
+          "caption": "Conduction, convection, radiation compared",
+          "altText": "Three-panel diagram showing heat transfer by conduction in metal rod, convection in heated water, radiation from a fire.",
+          "parentConceptId": "ch04_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch04_thermos_flask",
+          "caption": "Thermos flask cutaway — how it beats all three heat modes",
+          "altText": "Cross-section of a thermos showing vacuum gap and silvered walls that block conduction, convection, and radiation.",
+          "parentConceptId": "ch04_t02_c04",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch04_sea_breeze",
+          "caption": "Sea breeze and land breeze convection patterns",
+          "altText": "Day-night diagram showing sea breeze blowing inland during day, land breeze blowing seaward at night.",
+          "parentConceptId": "ch04_t02_c06",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch04_scene_convection",
+          "caption": "See it animated: convection currents in heated water",
+          "altText": "Open the Discover scene showing convection currents circulating in a beaker being heated.",
+          "parentConceptId": "ch04_t02_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch04_scene_uneven_heat",
+          "caption": "See it animated: uneven heating drives wind",
+          "altText": "Open the Discover scene showing how uneven heating creates pressure differences and wind.",
+          "parentConceptId": "ch04_t02_c06",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch04_scene_radiation",
+          "caption": "See it animated: heat radiation from a fire",
+          "altText": "Open the Discover scene showing radiation reaching observers without heating intermediate air.",
+          "parentConceptId": "ch04_t02_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: heat vs temperature",
+          "altText": "Listen as the heat-versus-temperature distinction is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch04_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: three modes of heat transfer",
+          "altText": "Listen as the three heat-transfer modes are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch04_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch04_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: sea and land breezes",
+          "altText": "Listen as the sea-breeze and land-breeze explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch04_t02_c06",
+          "durationSeconds": null
+        }
       ]
     },
     {
@@ -14618,6 +14990,130 @@
             "ch05_t01_c03",
             "ch05_t02_c01"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch05_dd01",
+          "title": "The pH scale — measuring how acidic something is",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch05_t01_c03",
+          "body": "In Class 7 you saw indicators tell us acid/base. Class 8 introduces the pH SCALE — 0 to 14. pH 0-6: acidic (lower = more acidic). pH 7: neutral (pure water). pH 8-14: basic. Each unit is 10× — pH 3 is 100× more acidic than pH 5. Common Indian-context values: lemon juice pH 2, vinegar pH 3, tomato pH 4, rain pH 5.6, milk pH 6.7, blood pH 7.4, soap pH 9, ammonia pH 11, drain cleaner pH 14. Your stomach holds the strongest natural acid on Earth (pH 2). Your blood is maintained at exactly 7.4 — outside this narrow range, you die. The whole biochemistry of life depends on pH precision. Indian agricultural soils are pH-tested before fertiliser choice.",
+          "prerequisite": "Tackle after indicators basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 10 uses logarithms to compute pH from H⁺ concentration."
+        },
+        {
+          "id": "ch05_dd02",
+          "title": "Salt hydrolysis — why some salts are acidic and others basic",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ch05_t02_c02",
+          "body": "Class 7 says salt = acid + base. Class 10 reveals a twist — not all salts dissolve to give NEUTRAL water. Salt from STRONG acid + STRONG base (NaCl from HCl + NaOH): dissolves neutral, pH 7. Salt from WEAK acid + strong base (sodium acetate from acetic acid + NaOH): dissolves BASIC, pH ~8 (the base is more dominant). Salt from strong acid + WEAK base (ammonium chloride from HCl + NH₃): dissolves ACIDIC, pH ~5. This is HYDROLYSIS — water molecules react with salt ions. Practical Indian context: alum (potash alum, used in water purification) dissolves slightly acidic — kills some bacteria. Sodium bicarbonate (baking soda) dissolves slightly basic — neutralises stomach acid in indigestion remedies.",
+          "prerequisite": "Tackle after neutralisation basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 introduces buffer solutions — special mixtures of salts and weak acids that resist pH changes."
+        },
+        {
+          "id": "ch05_dd03",
+          "title": "Brønsted-Lowry vs Lewis — three acid-base theories",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch05_t01_c01",
+          "body": "Class 7's acid-base definition (Arrhenius) is the simplest: acids release H⁺ in water, bases release OH⁻. Class 11 expands to BRØNSTED-LOWRY: acids DONATE H⁺ (proton); bases ACCEPT H⁺. This broader definition includes ammonia (NH₃ accepts H⁺ from water, forming NH₄⁺ — basic) which Arrhenius couldn't explain. Then LEWIS theory generalises further: acids ACCEPT an electron pair; bases DONATE one. Now even substances without H⁺ can be acids (BF₃, AlCl₃) — used in industrial chemistry. Each theory is more general. NEET tests all three. Lewis theory underpins modern catalysis, biology (enzyme-substrate binding), and even photosynthesis machinery — all involve Lewis acid-base interactions.",
+          "prerequisite": "Tackle after Class 7 acid-base basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 12 covers complex chemistry — almost entirely Lewis acid-base reactions."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch05_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch05_ph_scale",
+          "caption": "pH scale from 0 to 14 with common substances",
+          "altText": "Linear pH scale showing lemon juice, vinegar, water, blood, baking soda, ammonia placed at appropriate values.",
+          "parentConceptId": "ch05_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch05_neutralisation",
+          "caption": "Acid + base → salt + water reaction diagram",
+          "altText": "Reaction diagram showing acid plus base arrow salt plus water with HCl plus NaOH yielding NaCl plus H2O example.",
+          "parentConceptId": "ch05_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch05_indicators",
+          "caption": "Litmus and other indicators colour-coded",
+          "altText": "Colour chart showing litmus, methyl orange, phenolphthalein, turmeric, red cabbage and their colours in acid vs base.",
+          "parentConceptId": "ch05_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch05_tooth_decay",
+          "caption": "Tooth decay — acid attacks enamel",
+          "altText": "Diagram showing tooth cross-section with bacteria producing acid that dissolves enamel layer.",
+          "parentConceptId": "ch05_t03_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch05_scene_neutralise",
+          "caption": "See it animated: acid meets base",
+          "altText": "Open the Discover scene showing acid and base mixing and indicator changing colour at neutral.",
+          "parentConceptId": "ch05_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch05_scene_litmus",
+          "caption": "See it animated: litmus paper test",
+          "altText": "Open the Discover scene showing blue and red litmus papers reacting with different solutions.",
+          "parentConceptId": "ch05_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch05_scene_acid_rain",
+          "caption": "See it animated: acid rain effects",
+          "altText": "Open the Discover scene showing acid rain dissolving statues and damaging buildings.",
+          "parentConceptId": "ch05_t03_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: acids and their properties",
+          "altText": "Listen as the acids explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch05_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: neutralisation in everyday life",
+          "altText": "Listen as the neutralisation examples are read aloud paragraph by paragraph.",
+          "parentConceptId": "ch05_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch05_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: ocean acidification",
+          "altText": "Listen as the ocean acidification section is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch05_t03_c03",
+          "durationSeconds": null
         }
       ]
     },
@@ -16683,6 +17179,130 @@
           "relatedConceptIds": [
             "ch06_t01_c03"
           ]
+        }
+      ],
+      "deepDive": [
+        {
+          "id": "ch06_dd01",
+          "title": "Word equations to symbolic — speaking the language of chemistry",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ch06_t01_c02",
+          "body": "In Class 7 you described chemical changes in WORDS: 'iron + oxygen → rust'. Class 8 teaches you to write the same idea in SYMBOLS. Each element has a symbol: iron = Fe, oxygen = O, hydrogen = H, carbon = C. Compounds are made of symbols + subscripts: water = H₂O (2 hydrogens, 1 oxygen), CO₂ = 1 carbon + 2 oxygens. So 'iron + oxygen → iron oxide (rust)' becomes 4Fe + 3O₂ → 2Fe₂O₃. The numbers in front (4, 3, 2) are COEFFICIENTS — count of each molecule. Balancing equations means: count of each atom on left = count on right. (4 Fe atoms on left, 4 in 2Fe₂O₃ on right.) Symbolic equations are chemistry's universal language — chemists in Pune and Cambridge read the same equation identically.",
+          "prerequisite": "Tackle after physical-vs-chemical change basics.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 9 dedicates a whole chapter to balancing equations systematically."
+        },
+        {
+          "id": "ch06_dd02",
+          "title": "Balancing equations — the conservation rule made practical",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ch06_t01_c03",
+          "body": "Class 8 introduces symbolic equations. Class 9 makes balancing them systematic. Rule: atoms can't appear or disappear in a chemical reaction — the SAME atoms just rearrange. So count of each element on LEFT = count on RIGHT. Example: methane burning. Unbalanced: CH₄ + O₂ → CO₂ + H₂O. Count: 1 C left, 1 C right ✓; 4 H left, 2 H right ✗; 2 O left, 3 O right ✗. Multiply H₂O by 2: CH₄ + O₂ → CO₂ + 2H₂O. Now H balanced. O count: 2 left, 4 right (2 from CO₂ + 2 from 2H₂O). Multiply O₂ by 2: CH₄ + 2O₂ → CO₂ + 2H₂O. ✓ all balanced. India's MS-Chemistry students train hundreds of these — it's the foundation of every chemistry calculation, including the chemistry behind Bhopal gas tragedy investigations.",
+          "prerequisite": "Tackle after symbolic equations.",
+          "bonusQuestions": null,
+          "nextStepHint": "Class 11 introduces stoichiometry — calculating exact masses needed for a reaction using balanced equations."
+        },
+        {
+          "id": "ch06_dd03",
+          "title": "Enthalpy of reaction — does it RELEASE heat or ABSORB it?",
+          "gradeLevel": "class_11",
+          "parentConceptId": "ch06_t01_c02",
+          "body": "Class 7 says chemical changes often release heat (fireworks, burning). Class 11 quantifies this as ENTHALPY OF REACTION (ΔH). Exothermic reactions: ΔH negative (releases heat). Combustion of methane: ΔH = -890 kJ/mol — that's a LOT. Endothermic: ΔH positive (absorbs heat). Photosynthesis: ΔH = +2870 kJ/mol of glucose (absorbs energy from sunlight). Sodium thiosulphate dissolving in water: endothermic — instant cold pack! Calcium chloride dissolving: exothermic — instant heat pack! Indian industries use these in different products. The whole chemical industry is built on managing reaction enthalpies — controlling whether energy is released or required. Saving and using that energy is the engineering art.",
+          "prerequisite": "Tackle after Class 9 balancing.",
+          "bonusQuestions": null,
+          "nextStepHint": "JEE and Class 12 explore Hess's Law — calculating ΔH from a series of steps."
+        }
+      ],
+      "mediaAssets": [
+        {
+          "id": "ch06_ma01",
+          "kind": "shapeDiagram",
+          "resource": "ch06_physical_vs_chemical",
+          "caption": "Physical change vs chemical change — side-by-side examples",
+          "altText": "Two-column comparison: physical (ice melting, paper folding) vs chemical (iron rusting, candle burning).",
+          "parentConceptId": "ch06_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma02",
+          "kind": "shapeDiagram",
+          "resource": "ch06_rust_formation",
+          "caption": "Rust formation — iron + oxygen + water = rust",
+          "altText": "Diagram of iron surface with oxygen and water arrows producing reddish-brown iron oxide layer.",
+          "parentConceptId": "ch06_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma03",
+          "kind": "shapeDiagram",
+          "resource": "ch06_crystallization",
+          "caption": "Salt crystallization from solution",
+          "altText": "Diagram showing dissolved salt ions in solution arranging into a regular crystal lattice as water evaporates.",
+          "parentConceptId": "ch06_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma04",
+          "kind": "shapeDiagram",
+          "resource": "ch06_balanced_equation",
+          "caption": "Balanced equation visualised — count atoms on both sides",
+          "altText": "Visual of methane combustion equation with atom counts highlighted on both sides showing conservation.",
+          "parentConceptId": "ch06_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma05",
+          "kind": "animatedSceneRef",
+          "resource": "ch06_scene_burn_mg",
+          "caption": "See it animated: magnesium burns brightly",
+          "altText": "Open the Discover scene showing magnesium ribbon burning with intense white flame producing magnesium oxide.",
+          "parentConceptId": "ch06_t01_c02",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma06",
+          "kind": "animatedSceneRef",
+          "resource": "ch06_scene_crystal_grow",
+          "caption": "See it animated: crystal growing in solution",
+          "altText": "Open the Discover scene showing a copper sulphate crystal growing over days in saturated solution.",
+          "parentConceptId": "ch06_t02_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma07",
+          "kind": "animatedSceneRef",
+          "resource": "ch06_scene_baking_soda",
+          "caption": "See it animated: baking soda + vinegar foam",
+          "altText": "Open the Discover scene showing baking soda reacting with vinegar producing CO2 bubbles.",
+          "parentConceptId": "ch06_t03_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma08",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: physical vs chemical change",
+          "altText": "Listen as the physical-versus-chemical change explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch06_t01_c01",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma09",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: rust formation chemistry",
+          "altText": "Listen as the rust formation explanation is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch06_t01_c03",
+          "durationSeconds": null
+        },
+        {
+          "id": "ch06_ma10",
+          "kind": "narratedWalkthrough",
+          "resource": null,
+          "caption": "Read aloud: crystallization in industry",
+          "altText": "Listen as the crystallization process is read aloud paragraph by paragraph.",
+          "parentConceptId": "ch06_t02_c02",
+          "durationSeconds": null
         }
       ]
     },
