@@ -1,0 +1,455 @@
+{
+  "_meta": {
+    "chapter_id": "ch01",
+    "chapter_title": "Nutrition in Plants",
+    "baseline": "PW Class 7 Science Era — existing 21 concepts in topics ch01_t01/t02/t03",
+    "depth_target": "Class 7 fast-learner — bridges to Class 8 (Crop Production), Class 11 (Plant Physiology), NEET photosynthesis topic family",
+    "author_notes": "Every item below is grounded in an existing concept card; ids cross-link via relatedConceptIds. Authored 2026-05-23 for Ahaan."
+  },
+
+  "realWorldExamples": [
+    {
+      "id": "ch01_rw01",
+      "title": "Tulsi on the kitchen windowsill",
+      "body": "The tulsi pot on your kitchen windowsill is an autotroph at full work. From sunrise to sunset its broad leaves swallow sunlight, its roots pull water from the wet soil, and tiny pores on the leaf underside breathe in carbon dioxide. By evening every leaf has quietly made and stored a little glucose — the same sugar your dadi makes by reducing jaggery. You can't see the cooking, but you can taste the result: that sharp lemony oil tulsi releases is built from the sugar it just made.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_rw02",
+      "title": "Pitcher plants of the Khasi Hills, Meghalaya",
+      "body": "In the wet hills of Meghalaya grows Nepenthes khasiana — India's own pitcher plant. The soil there is so washed-out by rain that nitrogen barely lingers in it. So the plant grows hollow leaves shaped like jugs, filled with a slippery digestive liquid. An ant slips in, drowns, and is broken down by enzymes the plant secretes. The pitcher absorbs the nitrogen-rich soup. The plant still photosynthesises for its energy — it eats insects only because the soil won't give it nitrogen.",
+      "relatedConceptIds": ["ch01_t02_c02", "ch01_t02_c06", "ch01_t03_c01"]
+    },
+    {
+      "id": "ch01_rw03",
+      "title": "Monsoon mushrooms on a damp log",
+      "body": "Walk past a fallen tree the day after a heavy monsoon downpour and you'll see small white-and-grey mushrooms erupting along its bark. These are not plants — they are fungi, and they have no chlorophyll to make their own food. They thread invisible white roots called hyphae deep into the dead wood and pour out enzymes that break the wood's cellulose into sugar, which they then absorb. Without these saprotrophs, India's forests would be drowning in undigested deadwood within a single decade.",
+      "relatedConceptIds": ["ch01_t02_c03", "ch01_t02_c07"]
+    },
+    {
+      "id": "ch01_rw04",
+      "title": "Dal khichdi and the nitrogen secret",
+      "body": "The chana (chickpea) and moong dal in your khichdi are members of the legume family. Pull up a chana plant and rinse its roots — you'll see small pink-tinged bumps the size of pearls. Each bump is a colony of Rhizobium bacteria. The plant feeds the bacteria sugar; the bacteria pull nitrogen straight out of the air and hand it to the plant. That's why farmers in Punjab and Haryana grow chana between wheat seasons — the soil refills its own nitrogen for free.",
+      "relatedConceptIds": ["ch01_t03_c01", "ch01_t03_c02"]
+    },
+    {
+      "id": "ch01_rw05",
+      "title": "Iodine on a money plant leaf",
+      "body": "Take one leaf from the money plant on your shelf and boil it for a minute in water. Then drop it into warm spirit (kindly ask an adult) — watch the green wash out as the alcohol dissolves the chlorophyll. The leaf turns pale yellow. Now drop a few drops of household iodine on it. Wherever the leaf was making starch by daylight, it now turns blue-black. You have just photographed photosynthesis happening on your shelf.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c08"]
+    }
+  ],
+
+  "examConnections": [
+    {
+      "id": "ch01_xc01",
+      "title": "Photosynthesis returns — Class 11 Biology",
+      "body": "In Class 11 you'll meet photosynthesis again, this time inside the chloroplast itself. The 'light reaction' splits water and releases the oxygen you breathe. The 'Calvin cycle' (dark reaction) takes that hydrogen and CO₂ from the air and stitches them into sugar in tiny circular machines called Rubisco. Rubisco is the single most abundant protein on Earth — there's more of it in the forests around you than any other protein in any other living thing.",
+      "targetExam": "class11",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c07"]
+    },
+    {
+      "id": "ch01_xc02",
+      "title": "NEET — the photosynthesis question family",
+      "body": "Every NEET Biology paper since 1991 has carried at least one photosynthesis question. The classic patterns: which wavelength of light is best absorbed by chlorophyll-a (answer: red ~660 nm and blue ~430 nm — green is reflected, that's why leaves look green), what is the Hill reaction, where does the Calvin cycle happen (stroma), what are C3 vs C4 plants. The Class 7 idea you just learned — that chlorophyll absorbs sunlight to make sugar — becomes the spine of half a hundred NEET questions in the years ahead.",
+      "targetExam": "neet",
+      "relatedConceptIds": ["ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_xc03",
+      "title": "Class 8 — Crop Production picks this up",
+      "body": "Next year, Class 8's first chapter is Crop Production. There you'll meet the legume–Rhizobium partnership again, and farmers' practices like crop rotation, manuring, and biofertilisers. The chana root nodules you saw in this chapter become a real agricultural lever — Punjab's wheat–chana rotation is built on it. The Green Revolution of the 1960s and the organic-farming movement of the 2010s both start from this one trick the plants worked out millions of years ago.",
+      "targetExam": "class8",
+      "relatedConceptIds": ["ch01_t03_c01", "ch01_t03_c02"]
+    }
+  ],
+
+  "mnemonics": [
+    {
+      "id": "ch01_mn01",
+      "acronym": "CASH",
+      "unpacking": "C-hlorophyll, A-ir (carbon dioxide), S-unlight, H₂O. Photosynthesis needs all four together — miss any one and no sugar is made.",
+      "context": "Remembering the four conditions for photosynthesis.",
+      "relatedConceptIds": ["ch01_t01_c07"]
+    },
+    {
+      "id": "ch01_mn02",
+      "acronym": "PSI",
+      "unpacking": "P-arasitic (Cuscuta steals food), S-aprotrophic (mushrooms eat dead matter), I-nsectivorous (pitcher plant traps insects). The three ways a plant can skip photosynthesis.",
+      "context": "Sorting plants that don't make their own food.",
+      "relatedConceptIds": ["ch01_t02_c01", "ch01_t02_c02", "ch01_t02_c03"]
+    },
+    {
+      "id": "ch01_mn03",
+      "acronym": "NPK",
+      "unpacking": "N-itrogen (leaves and proteins), P-hosphorus (roots and flowers), K-Potassium (fruit and disease resistance). Every fertiliser sack you'll ever see has these three numbers printed on it.",
+      "context": "The three soil nutrients plants demand most. Same letters appear on every bag of urea / DAP at the agri shop.",
+      "relatedConceptIds": ["ch01_t03_c01", "ch01_t03_c02"]
+    }
+  ],
+
+  "misconceptions": [
+    {
+      "id": "ch01_ms01",
+      "kidsThink": "Plants only release oxygen, never use it.",
+      "actually": "Plants release oxygen during the day as a side-effect of photosynthesis, but they also respire — taking in oxygen and giving out CO₂ — every hour of every day, just like you. At night, with no sunlight, they only respire. The net release of oxygen during the day is much larger than what they use, which is why forests still cool the air.",
+      "relatedConceptIds": ["ch01_t01_c02"]
+    },
+    {
+      "id": "ch01_ms02",
+      "kidsThink": "Plants get their food from the soil.",
+      "actually": "Plants make their food themselves — from sunlight, water, and air. The soil only gives them water and minerals (like nitrogen). If food came from soil, hydroponically grown lettuce in water-only nutrient baths couldn't exist — but it does, on rooftops all over Mumbai.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c06"]
+    },
+    {
+      "id": "ch01_ms03",
+      "kidsThink": "All plants are green because they all have chlorophyll.",
+      "actually": "Most plants are green because their chlorophyll reflects green light. But Cuscuta (the yellow-orange thread parasite) lacks chlorophyll entirely — it steals food from a host plant. Red cabbages and copper beech trees have other pigments (anthocyanins) that mask the green. The colour tells you something real about how the plant feeds itself.",
+      "relatedConceptIds": ["ch01_t01_c03", "ch01_t02_c01"]
+    },
+    {
+      "id": "ch01_ms04",
+      "kidsThink": "Mushrooms are plants because they grow from the ground.",
+      "actually": "Mushrooms are fungi, not plants. They have no chlorophyll and cannot make their own food. They eat dead matter (saprotrophs) by spreading invisible thread-like hyphae through it and pouring digestive juices outside their body. Fungi are in their own kingdom, separate from plants and animals.",
+      "relatedConceptIds": ["ch01_t02_c03", "ch01_t02_c07"]
+    },
+    {
+      "id": "ch01_ms05",
+      "kidsThink": "Insectivorous plants eat insects because they need energy.",
+      "actually": "Pitcher plants and Venus flytraps still photosynthesise — they make their energy from sunlight just like every other green plant. They catch insects only for nitrogen, which the wet soil they grow in cannot supply. Take a pitcher plant, feed it nitrogen fertiliser, and it stops catching insects.",
+      "relatedConceptIds": ["ch01_t02_c02", "ch01_t02_c06"]
+    }
+  ],
+
+  "ncertQA": [
+    {
+      "id": "ch01_nq01",
+      "question": "Why do organisms need to take food?",
+      "modelAnswer": "Organisms need food for three reasons: (1) for energy to run every life process — moving, growing, breathing, thinking; (2) for raw materials to build new cells and repair damaged ones; and (3) to fight illness and grow stronger. Without food the body cannot release energy or rebuild itself, and eventually stops working.",
+      "relatedConceptIds": ["ch01_t01_c06"]
+    },
+    {
+      "id": "ch01_nq02",
+      "question": "Distinguish between a parasite and a saprotroph.",
+      "modelAnswer": "A parasite (like Cuscuta) attaches to a living host plant or animal and steals nutrients from it, often weakening the host. A saprotroph (like a mushroom or bread mould) feeds on dead and decaying matter — it secretes enzymes onto the dead body, breaks it down into a soup, and absorbs the result. Parasites need a living source; saprotrophs need a dead one.",
+      "relatedConceptIds": ["ch01_t02_c01", "ch01_t02_c03"]
+    },
+    {
+      "id": "ch01_nq03",
+      "question": "How would you test the presence of starch in leaves?",
+      "modelAnswer": "Boil the leaf in water for 1 minute to kill it. Move it to warm alcohol (with an adult's help) for 5 minutes — the chlorophyll washes out and the leaf turns pale. Rinse the leaf in water, then add iodine solution. Wherever starch is present, the leaf turns blue-black. Starch in a leaf is direct proof that photosynthesis happened there.",
+      "relatedConceptIds": ["ch01_t01_c08"]
+    },
+    {
+      "id": "ch01_nq04",
+      "question": "Give a brief description of the process of synthesis of food in green plants.",
+      "modelAnswer": "Green plants make their food through photosynthesis. Chlorophyll in their leaves absorbs sunlight. Tiny pores called stomata let CO₂ in. Roots pull water up through tubes called xylem. The light energy splits water and combines its hydrogen with CO₂ to make glucose, releasing oxygen as a by-product. The glucose is stored in the plant as starch — the same starch you eat in a potato or rice grain.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c04", "ch01_t01_c07"]
+    },
+    {
+      "id": "ch01_nq05",
+      "question": "Show with a sketch description how plants are the ultimate source of food.",
+      "modelAnswer": "Every food chain begins with a plant. A sketch would show: SUN → PLANT (produces glucose by photosynthesis) → HERBIVORE (rabbit, cow) → CARNIVORE (fox, tiger). Even when you eat chicken, the chicken ate grain made by a plant; that plant made glucose from sunlight. Tracing any food backwards always lands you at a plant — the only group that can build food from non-food.",
+      "relatedConceptIds": ["ch01_t03_c03"]
+    },
+    {
+      "id": "ch01_nq06",
+      "question": "Fill in the blanks: (a) Green plants are called ______ since they synthesise their own food. (b) The food synthesised by plants is stored as ______. (c) In photosynthesis solar energy is absorbed by the pigment called ______. (d) During photosynthesis plants take in ______ and release ______.",
+      "modelAnswer": "(a) autotrophs (b) starch (c) chlorophyll (d) carbon dioxide; oxygen.",
+      "relatedConceptIds": ["ch01_t01_c01", "ch01_t01_c02", "ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_nq07",
+      "question": "Why do farmers grow many fruit and vegetable crops inside polyhouses?",
+      "modelAnswer": "A polyhouse traps warm air, keeps humidity high, and shields the crop from heavy rain and harsh sun. Inside, the farmer can control temperature, CO₂ level and water — the same four conditions photosynthesis needs. Growth is faster, harvests are larger, and crops can be grown out of season. Polyhouses also keep pests and disease out, reducing pesticide use.",
+      "relatedConceptIds": ["ch01_t01_c07"]
+    },
+    {
+      "id": "ch01_nq08",
+      "question": "Why is photosynthesis called the ultimate food-making process for life on Earth?",
+      "modelAnswer": "Only plants (and algae, and some bacteria) can convert non-food — sunlight, water, CO₂ — into food. Every other living thing depends on this single process to eat. Without photosynthesis the entire food chain collapses within months: herbivores starve first, then carnivores, then us. Even the oxygen we breathe was made by photosynthesis, mostly by ocean algae over hundreds of millions of years.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t03_c03"]
+    }
+  ],
+
+  "glossary": [
+    {
+      "id": "ch01_gl01",
+      "term": "Autotroph",
+      "definition": "An organism that makes its own food from simple inorganic materials, using an outside energy source.",
+      "example": "Green plants are autotrophs — they make glucose from CO₂ and water using sunlight.",
+      "hindiTerm": "स्वपोषी",
+      "relatedConceptIds": ["ch01_t01_c01", "ch01_t01_c05"]
+    },
+    {
+      "id": "ch01_gl02",
+      "term": "Heterotroph",
+      "definition": "An organism that cannot make its own food and depends on other organisms for nutrition.",
+      "example": "Animals (including you), fungi, and most bacteria are heterotrophs.",
+      "hindiTerm": "परपोषी",
+      "relatedConceptIds": ["ch01_t01_c01", "ch01_t01_c05"]
+    },
+    {
+      "id": "ch01_gl03",
+      "term": "Photosynthesis",
+      "definition": "The process by which green plants use sunlight to make glucose from CO₂ and water, releasing oxygen.",
+      "example": "Every leaf in your garden is doing photosynthesis right now if the sun is up.",
+      "hindiTerm": "प्रकाश-संश्लेषण",
+      "relatedConceptIds": ["ch01_t01_c02"]
+    },
+    {
+      "id": "ch01_gl04",
+      "term": "Chlorophyll",
+      "definition": "The green pigment in plant leaves that absorbs sunlight to power photosynthesis.",
+      "example": "Chlorophyll absorbs red and blue light and reflects green — that's why leaves look green.",
+      "hindiTerm": "क्लोरोफिल",
+      "relatedConceptIds": ["ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_gl05",
+      "term": "Stomata",
+      "definition": "Tiny mouth-shaped pores on the underside of a leaf that let CO₂ in and oxygen out.",
+      "example": "A single tomato leaf can have hundreds of thousands of stomata, each smaller than a full stop.",
+      "hindiTerm": "रंध्र",
+      "relatedConceptIds": ["ch01_t01_c04"]
+    },
+    {
+      "id": "ch01_gl06",
+      "term": "Xylem",
+      "definition": "The tube-like tissue inside a plant that carries water up from the roots to the leaves.",
+      "example": "Cut a celery stalk in coloured water and you'll see the xylem stained red within hours.",
+      "hindiTerm": "जाइलम",
+      "relatedConceptIds": ["ch01_t01_c04"]
+    },
+    {
+      "id": "ch01_gl07",
+      "term": "Saprotroph",
+      "definition": "An organism that feeds on dead and decaying matter by secreting digestive enzymes outside its body and absorbing the result.",
+      "example": "Mushrooms on a rotting log are saprotrophs; without them dead matter would never decompose.",
+      "hindiTerm": "मृतजीवी",
+      "relatedConceptIds": ["ch01_t02_c03", "ch01_t02_c07"]
+    },
+    {
+      "id": "ch01_gl08",
+      "term": "Parasite",
+      "definition": "An organism that lives on or in another living organism (the host) and obtains food from it, usually harming the host.",
+      "example": "Cuscuta (amarbel) is a parasitic plant that steals food from a host like a hibiscus or tomato.",
+      "hindiTerm": "परजीवी",
+      "relatedConceptIds": ["ch01_t02_c01"]
+    },
+    {
+      "id": "ch01_gl09",
+      "term": "Symbiosis",
+      "definition": "A close partnership between two different organisms where at least one benefits — often both.",
+      "example": "A lichen is a partnership of a fungus (housing) and an alga (food-making) — neither could survive alone where they live.",
+      "hindiTerm": "सहजीविता",
+      "relatedConceptIds": ["ch01_t02_c04", "ch01_t02_c05"]
+    },
+    {
+      "id": "ch01_gl10",
+      "term": "Insectivorous plant",
+      "definition": "A plant that catches and digests insects to obtain nitrogen that its soil cannot supply.",
+      "example": "Pitcher plant, Venus flytrap, and sundew — all live in nitrogen-poor soils.",
+      "hindiTerm": "कीटभक्षी पौधा",
+      "relatedConceptIds": ["ch01_t02_c02", "ch01_t02_c06"]
+    }
+  ],
+
+  "miniProjects": [
+    {
+      "id": "ch01_mp01",
+      "emoji": "🌿",
+      "title": "Variegated leaf — partial photosynthesis test",
+      "needs": [
+        "One variegated leaf (croton, money plant, or any plant with white-and-green patches)",
+        "Boiling water (with adult help)",
+        "Warm alcohol / methylated spirit",
+        "Iodine solution",
+        "A white plate"
+      ],
+      "steps": [
+        "Sketch the leaf showing which parts are green and which are white. Save the sketch.",
+        "Pluck the leaf and boil it in water for one minute to kill it.",
+        "Move it into warm alcohol for 4–5 minutes — the green colour washes out into the alcohol.",
+        "Rinse the leaf in water; now it should be pale white-yellow.",
+        "Drop iodine onto the leaf for 30 seconds, then rinse.",
+        "Compare with your sketch: only the parts that WERE green turn blue-black."
+      ],
+      "expectedObservation": "The previously-green areas turn blue-black (starch present). The white areas stay pale (no starch).",
+      "whyItWorks": "Only the green parts had chlorophyll, so only those parts could photosynthesise and make starch. The white parts can't make food on their own — they depend on the green parts of the same leaf. This is the simplest experiment proving that chlorophyll is necessary for photosynthesis.",
+      "estimatedMinutes": 45,
+      "relatedConceptIds": ["ch01_t01_c03", "ch01_t01_c07", "ch01_t01_c08"]
+    },
+    {
+      "id": "ch01_mp02",
+      "emoji": "💧",
+      "title": "Hydroponic moong — plants without soil",
+      "needs": [
+        "A handful of moong (green gram) seeds — soaked overnight",
+        "A jar or small bowl",
+        "Cotton wool (a thick layer)",
+        "Water (clean)",
+        "Sunlight from a window"
+      ],
+      "steps": [
+        "Wet the cotton wool thoroughly and squeeze out excess water — it should be damp but not dripping.",
+        "Spread the cotton in the bottom of the jar.",
+        "Scatter the soaked moong seeds on top of the cotton, evenly spaced.",
+        "Place the jar near a window (but not in direct hot sun).",
+        "Top up water every 2 days — keep the cotton damp.",
+        "Within a week the seeds sprout, grow roots into the cotton, and push up green leaves."
+      ],
+      "expectedObservation": "Within 7–10 days you have a small moong forest growing on cotton wool, with no soil.",
+      "whyItWorks": "This proves a key idea: plants don't get FOOD from soil. They make their own food by photosynthesis as soon as their leaves see sunlight. The soil only provides water and minerals; both can be supplied other ways. Commercial farmers use hydroponic setups like this (much fancier) to grow lettuce and herbs on Mumbai rooftops.",
+      "estimatedMinutes": 600,
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c06"]
+    }
+  ],
+
+  "scientists": [
+    {
+      "id": "ch01_sci01",
+      "name": "Jagadish Chandra Bose",
+      "lifespan": "1858–1937",
+      "nationality": "Indian",
+      "oneLineLegacy": "Proved that plants feel, respond, and grow in measurable ways — and built the instruments to record it.",
+      "narrative": "In Calcutta in the early 1900s, a physicist-turned-biologist named Jagadish Chandra Bose did something nobody had dared try: he wired up plants. He invented an instrument called the crescograph that could magnify a plant's tiny movements ten million times and write them on smoked paper. He poked a touch-me-not (Mimosa pudica) and recorded the millisecond by which the leaf collapsed. He shocked a stem with mild electricity and showed it wilted exactly like a wounded animal. He played different temperatures, gases, and chemicals on plant tissues and proved they had nervous-system-like responses — long before anyone had any idea how plant cells communicated. The Royal Society in London was so startled by his results that they delayed publishing them. Today, when biologists talk about plant 'signalling,' calcium waves moving through leaves, or roots warning their neighbours of insect attack, they are walking on a road Bose laid down with a crescograph in a humid Calcutta laboratory more than a hundred years ago.",
+      "relatedConceptIds": ["ch01_t03_c04"]
+    }
+  ],
+
+  "whatIfs": [
+    {
+      "id": "ch01_wi01",
+      "question": "What if photosynthesis stopped worldwide for 24 hours?",
+      "answer": "Oxygen levels in air would dip by a tiny but measurable fraction — plants and oceans together produce roughly half the oxygen you breathe, and 24 hours is enough to notice. CO₂ would rise as animals (and plants themselves) kept exhaling. Most leaves would stay green — chlorophyll doesn't vanish — but no starch would form. Crops in greenhouses would lose a day of growth. The biggest hit would be to ocean algae, which are responsible for over half the planet's photosynthesis; their tiny sugar production stops, and the food chain for fish stutters first.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t03_c03"]
+    },
+    {
+      "id": "ch01_wi02",
+      "question": "What if all plants on Earth were red instead of green?",
+      "answer": "Their pigment would absorb green light and reflect red. Green light from the sun is actually the most abundant wavelength reaching Earth's surface — so red-pigmented plants might in principle photosynthesise more efficiently! But chlorophyll evolved billions of years ago in oceans where blue and red light dominate; the surface dominance of green came later. Some red algae and the inside of variegated leaves already use other pigments. If a single mutation made all plants red, forests would look like a permanent autumn — and they might actually grow faster.",
+      "relatedConceptIds": ["ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_wi03",
+      "question": "What if you tried to live on only autotrophic food (plants, no animal products)?",
+      "answer": "You'd be fine, with care. A diet of dal, sabzi, roti, fruit and milk-substitutes (like soy or coconut milk) supplies almost everything a Class 7 body needs. The two tricky nutrients are vitamin B12 (made by bacteria, harvested mostly via animal products — vegans take supplements) and certain proteins. Almost a quarter of India already lives this way for religious reasons and stays healthy. The reason humans CAN choose this is that we're heterotrophs flexible enough to eat any producer — that flexibility is itself a gift from photosynthesis everywhere on Earth.",
+      "relatedConceptIds": ["ch01_t01_c01", "ch01_t03_c03"]
+    }
+  ],
+
+  "crossChapterRefs": [
+    {
+      "id": "ch01_cx01",
+      "toChapterId": "ch10",
+      "topic": "Respiration in Organisms",
+      "pointer": "The oxygen that leaves the stomata during photosynthesis is the same oxygen you breathe in. Ch.10 picks up the other half of the cycle — how every cell (in plants AND animals) burns sugar with that oxygen to release energy.",
+      "relatedConceptIds": ["ch01_t01_c02"]
+    },
+    {
+      "id": "ch01_cx02",
+      "toChapterId": "ch17",
+      "topic": "Forest: Our Lifeline",
+      "pointer": "Forests are photosynthesis at a planetary scale — billions of leaves making food, releasing oxygen, and feeding every other organism in the food chain. Ch.17 zooms out from a single plant to the whole forest as one giant autotroph.",
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t03_c03"]
+    }
+  ],
+
+  "curriculumBridge": {
+    "nextYearClass8": "Class 8 Chapter 1 (Crop Production and Management) picks up where this one ends. The legume–Rhizobium partnership you met here becomes a real farmer's tool: crop rotation, manuring, biofertilisers. Punjab's wheat-and-chana rotation is built on this single idea.",
+    "forNeetJee": "By Class 11 you'll dive inside the chloroplast: light reaction (Z-scheme, photolysis of water, ATP and NADPH production) and the Calvin cycle (CO₂ fixation by Rubisco). C3, C4, and CAM plants. Every NEET paper since 1991 has had at least one photosynthesis question; many JEE Advanced papers carry one too. This Class 7 chapter is the spine."
+  },
+
+  "gallery": [
+    {
+      "id": "ch01_gi01",
+      "caption": "Stomata under microscope",
+      "detail": "Each leaf carries millions of these mouth-shaped pores on its underside. They open in daylight to let CO₂ in and oxygen out, and close at night to conserve water.",
+      "assetHint": "sfsymbol:leaf",
+      "relatedConceptIds": ["ch01_t01_c04"]
+    },
+    {
+      "id": "ch01_gi02",
+      "caption": "Chloroplast — the photosynthesis factory",
+      "detail": "Every green cell has dozens of chloroplasts, each packed with chlorophyll and tiny stacks of membranes (thylakoids) where the light reaction happens. You'll meet these by name in Class 9.",
+      "assetHint": "shape:chloroplast",
+      "relatedConceptIds": ["ch01_t01_c03"]
+    },
+    {
+      "id": "ch01_gi03",
+      "caption": "Pitcher plant trap interior",
+      "detail": "The smooth waxy walls inside a Nepenthes pitcher are nearly impossible for an ant to climb. Once an insect slips in, digestive enzymes break it down within days, freeing nitrogen for the plant.",
+      "assetHint": "sfsymbol:drop.triangle",
+      "relatedConceptIds": ["ch01_t02_c02"]
+    },
+    {
+      "id": "ch01_gi04",
+      "caption": "Lichen — fungus and alga as one",
+      "detail": "Look at any old stone wall or bark and you'll see lichen patches — papery grey, green or yellow. Each patch is two organisms living as one: a fungus that provides housing and water, and an alga that photosynthesises sugar.",
+      "assetHint": "shape:lichen",
+      "relatedConceptIds": ["ch01_t02_c04"]
+    },
+    {
+      "id": "ch01_gi05",
+      "caption": "Root nodules on chickpea",
+      "detail": "Pink-tinged bumps the size of pearls. Inside each lives a colony of Rhizobium bacteria pulling nitrogen out of the air. This is the secret of every legume crop in Indian agriculture.",
+      "assetHint": "sfsymbol:circle.hexagongrid.fill",
+      "relatedConceptIds": ["ch01_t03_c01"]
+    },
+    {
+      "id": "ch01_gi06",
+      "caption": "Photosynthesis equation",
+      "detail": "6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂. Read in words: six molecules of CO₂ from the air plus six molecules of water from the roots, powered by sunlight, become one molecule of glucose plus six oxygen molecules.",
+      "assetHint": "sfsymbol:function",
+      "relatedConceptIds": ["ch01_t01_c02"]
+    }
+  ],
+
+  "timelines": [
+    {
+      "id": "ch01_tl01",
+      "title": "The photosynthesis pipeline",
+      "intro": "From sunlight outside to sugar inside — six steps that happen continuously in every green leaf during daylight.",
+      "steps": [
+        {
+          "id": "ch01_tl01_s01",
+          "label": "Sunlight strikes the leaf",
+          "body": "Photons of red and blue light pass through the upper transparent layer and reach the chloroplasts in the middle of the leaf.",
+          "assetHint": "sfsymbol:sun.max.fill"
+        },
+        {
+          "id": "ch01_tl01_s02",
+          "label": "CO₂ enters through stomata",
+          "body": "The pores on the leaf's underside open and CO₂ from the air diffuses inward, reaching the inner cells.",
+          "assetHint": "sfsymbol:wind"
+        },
+        {
+          "id": "ch01_tl01_s03",
+          "label": "Roots pull water up",
+          "body": "Xylem tubes act like straws, pulled by the suction of water evaporating from the leaves themselves.",
+          "assetHint": "sfsymbol:drop.fill"
+        },
+        {
+          "id": "ch01_tl01_s04",
+          "label": "Chlorophyll absorbs energy",
+          "body": "Inside each chloroplast, chlorophyll molecules catch the light's energy and use it to split water into hydrogen and oxygen.",
+          "assetHint": "sfsymbol:bolt.fill"
+        },
+        {
+          "id": "ch01_tl01_s05",
+          "label": "Glucose is built",
+          "body": "Hydrogen from water and carbon from CO₂ are stitched together by enzymes into a six-carbon glucose molecule — the plant's food.",
+          "assetHint": "sfsymbol:hexagon.fill"
+        },
+        {
+          "id": "ch01_tl01_s06",
+          "label": "Oxygen leaves; starch stays",
+          "body": "Oxygen, the by-product, escapes through stomata into the air you breathe. The glucose is stored in the leaf as starch — the same starch you'd find in a potato.",
+          "assetHint": "sfsymbol:leaf.arrow.circlepath"
+        }
+      ],
+      "relatedConceptIds": ["ch01_t01_c02", "ch01_t01_c04", "ch01_t01_c07"]
+    }
+  ]
+}
