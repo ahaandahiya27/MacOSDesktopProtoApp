@@ -142,6 +142,14 @@ struct ChapterDetailView: View {
                         }
                     }
                 }
+
+                // "Go deeper" disclosure — grade-tagged stretch topics for
+                // fast learners (`chapter.deepDive`). The widget hides
+                // itself when the chapter has no stretch topics, so packs
+                // that haven't been authored yet stay visually unchanged.
+                // See `DeepDiveSection.swift` for the disclosure body +
+                // detail sheet wiring.
+                DeepDiveSection(chapter: chapter)
             }
             .padding(20)
             // Center the bounded-width column inside the full-width

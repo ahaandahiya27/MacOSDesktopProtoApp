@@ -32,7 +32,7 @@ desktopAhaan/Services/Speech/TextToSpeechManager.swift:11: TextToSpeechManager i
 
 # --- LH004b  Timer.scheduledTimer block without [weak self]  --- (timer pins owner)
 
-desktopAhaan/Extensions/Extensions.swift:488: Inside `private struct TimedSceneModifier: ViewModifier` (Extensions.swift:467). ViewModifier is a value-type struct so `self` capture has value semantics — no retain cycle is reachable. The closure uses `{ _ in }` and writes a `@Binding var tick` which is captured by binding-storage (not strong-self). Safe by design.
+desktopAhaan/Extensions/Extensions.swift:475: Inside `private struct TimedSceneModifier: ViewModifier`. ViewModifier is a value-type struct so `self` capture has value semantics — no retain cycle is reachable. The closure uses `{ _ in }` and writes a `@Binding var tick` which is captured by binding-storage (not strong-self). Safe by design. (Line number went 488 → 475 in 2026-05-23 polish session — AppStorageKeys was lifted to a sister file Extensions/AppStorageKeys.swift to keep Extensions.swift under the 600 LOC ceiling, which shifted this site UP.)
 desktopAhaan/Subjects/Tutor/Discover/Components/ParticleEmitter.swift:71: Inside `struct ParticleEmitter: View` (ParticleEmitter.swift:16). View is a value-type struct so `self` capture has value semantics — no retain cycle is reachable. The closure uses `{ _ in }` and writes a `@Binding var tick`. Safe by design.
 
 # --- LH004c  .assign(to: \..., on: self)  --- (keypath form is always-strong)

@@ -51,49 +51,36 @@ extension Color {
         }
     }
 
+    /// Both .blue and .purple have been in the SwiftUI Color enum since
+    /// macOS 10.15, so unlike compatIndigo/Teal/Cyan these don't strictly
+    /// need a shim. They exist as compat* tokens only because
+    /// `GradeLevel.badgeTint` (in StretchTopic / DeepDive UI) returns
+    /// string-keyed tokens — keeping every entry's resolution path uniform
+    /// avoids a fork at the call site.
+    static var compatBlue: Color {
+        if #available(macOS 12, *) {
+            return .blue
+        } else {
+            return Color(red: 0.0, green: 0.48, blue: 1.0)
+        }
+    }
+
+    static var compatPurple: Color {
+        if #available(macOS 12, *) {
+            return .purple
+        } else {
+            return Color(red: 0.69, green: 0.32, blue: 0.87)
+        }
+    }
+
     static var sanskritPrimary: Color { compatIndigo }
     static let sanskritAccent = Color.orange
     static let sanskritBackground = Color(NSColor.windowBackgroundColor)
 }
 
-// MARK: - AppStorage keys
-
-/// Central registry for every `@AppStorage` key the app uses. Routing every
-/// key through this enum prevents typo-driven progress loss across the eight
-/// Discover chapter dispatchers (a single misspelled key silently forks a
-/// fresh cursor on next launch).
-enum AppStorageKeys {
-    /// One-time first-launch welcome overlay dismissal flag.
-    static let hasSeenWelcome = "hasSeenWelcome"
-
-    /// Set to true after the student dismisses the "all 19 Discover
-    /// chapters complete" celebration overlay (DM7/EM4). Prevents the
-    /// overlay from reappearing on every launch once seen.
-    static let hasSeenAllChaptersCelebration = "hasSeenAllChaptersCelebration"
-
-    /// Per-chapter Discover Mode scene cursor (0-indexed). `chapterNumber`
-    /// is the integer chapter number (1, 2, ..., 19 in the current pack).
-    static func discoverScene(_ chapterNumber: Int) -> String {
-        String(format: "discover_scene_ch%02d", chapterNumber)
-    }
-
-    /// Current consecutive-days review streak. Incremented when the kid
-    /// completes a review session and the previous credited day was
-    /// yesterday; reset to 1 if the gap is more than 1 day; left alone
-    /// if the streak already counts today. Stored as Int.
-    static let reviewStreakDays = "reviewStreakDays"
-
-    /// ISO-8601 date string (yyyy-MM-dd) of the last day the streak was
-    /// credited. Used to decide whether tonight's completion extends
-    /// (yesterday), keeps (today), or resets (>1 day gap) the streak.
-    static let reviewStreakLastDate = "reviewStreakLastDate"
-
-    /// All-time longest streak achieved by the kid. Bumped whenever the
-    /// current streak exceeds the previous high-water-mark. Surfaces in
-    /// the Daily Practice header alongside the current streak so the
-    /// kid sees both: "you're on day 3 of a streak; your best ever is 14".
-    static let reviewStreakBest = "reviewStreakBest"
-}
+// MARK: - AppStorage keys — lifted to Extensions/AppStorageKeys.swift
+// (split out 2026-05-23 to keep this file under the 600 LOC Big Sur
+// type-checker ceiling).
 
 // MARK: - SF Symbols backfill for Big Sur
 
