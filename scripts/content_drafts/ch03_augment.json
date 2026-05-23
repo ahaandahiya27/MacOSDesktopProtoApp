@@ -1,0 +1,424 @@
+{
+  "_meta": {
+    "chapter_id": "ch03",
+    "chapter_title": "Fibre to Fabric",
+    "baseline": "PW Class 7 — 15 concepts across wool, silk, synthetic fibres",
+    "depth_target": "Class 7 fast-learner — out-of-box extensions (spider silk biomimicry, microplastics, fibre molecular structure) + Class 8/10/11 bridges tied to chapter base",
+    "author_notes": "Grounded in the 15 PW concepts. India context throughout: Pashmina from Ladakh, Banarasi silk, Tussar muga in Assam, sheep-shearing in Rajasthan."
+  },
+
+  "realWorldExamples": [
+    {
+      "id": "ch03_rw01",
+      "title": "Pashmina shawls from Ladakh's Changthangi goats",
+      "body": "The pashmina shawl wrapped around your grandmother's shoulders started on a goat in Ladakh's Changthang plateau at -30°C. The Changthangi goat grows TWO coats: tough outer guard hairs and an incredibly fine inner fleece (less than 16 microns thick — a human hair is 70). Each goat produces only ~100 grams of pashmina per year. Pashmina is hand-combed (not shorn) during the spring moult, sorted, and woven in Kashmir. One shawl takes months and the wool of 3-5 goats.",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c06", "ch03_t01_c05"]
+    },
+    {
+      "id": "ch03_rw02",
+      "title": "Banarasi silk saree — six months of weaving",
+      "body": "A heavy Banarasi silk saree is woven on a hand loom by three weavers working together for 15 days to six months, depending on design complexity. The base is pure mulberry silk reeled from cocoons in West Bengal or Karnataka. The gold-and-silver zari is real metal thread wrapped around silk core. The motifs — bel buti, jhallar, kalga — date back to the Mughal era. One saree can use 5500 individual threads in the warp alone.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_rw03",
+      "title": "Polyester t-shirt and microplastics in your washing machine",
+      "body": "Every time you wash a polyester or nylon t-shirt, it sheds tens of thousands of microscopic plastic fibres into the rinse water. These microplastics flow through household drains, sewage plants (most can't filter them out), into rivers, and finally the ocean. They've been found in salt, fish, drinking water, and even human blood. A single 6-kg wash of synthetic clothes releases about 700,000 microfibres — that's part of why cotton and natural fibres are coming back in favour.",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_rw04",
+      "title": "Tasar silk weaving in Jharkhand's tribal villages",
+      "body": "Mulberry silk is famous, but India also produces tasar, eri, and muga silk — none of which need mulberry trees. Tasar silkworms feed on sal and arjun trees that grow wild in Jharkhand and Chhattisgarh's forests. Tribal women have been rearing them for centuries. The cocoons are oval and golden-tan, the fabric has a coarser, more rustic texture than mulberry silk, and it's much cooler in summer. Muga silk from Assam is even rarer — its natural golden colour brightens with every wash.",
+      "relatedConceptIds": ["ch03_t02_c03"]
+    },
+    {
+      "id": "ch03_rw05",
+      "title": "Why your wool sweater shrinks if you wash it hot",
+      "body": "Wool fibres are covered in tiny overlapping scales — like roof tiles. When you wash wool in hot water and agitate it, the scales catch on each other and lock together permanently. The whole garment contracts: your sweater that fit yesterday is now child-sized. This irreversible felting is what wool felt is made from on purpose. To prevent it, wool needs cool water, mild detergent, and a flat-drying surface — no spinning, no wringing.",
+      "relatedConceptIds": ["ch03_t01_c07"]
+    }
+  ],
+
+  "examConnections": [
+    {
+      "id": "ch03_xc01",
+      "title": "Class 8 — Synthetic Fibres and Plastics",
+      "body": "Class 8 picks up exactly where the synthetic-fibre section of this chapter ends. You'll meet the four major synthetics in detail — rayon, nylon, polyester, acrylic — and learn how they're made from coal, petroleum, and natural gas (polymerisation). The Class 7 idea of 'polyester is plastic' deepens into the chemistry of monomers linking into long chains.",
+      "targetExam": "class8",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_xc02",
+      "title": "Class 12 Biology — Sericulture as Applied Biology",
+      "body": "In Class 12 'Strategies for Enhancement in Food Production', sericulture appears as one of three pillars (along with apiculture and pisciculture) of applied animal biology. You'll learn the species details (Bombyx mori, Antheraea mylitta), economic significance, and biotechnological improvements like disease-resistant silkworm strains. The Class 7 silkworm life cycle becomes a real industry case study.",
+      "targetExam": "class12",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c03"]
+    },
+    {
+      "id": "ch03_xc03",
+      "title": "NEET — Biomaterial questions",
+      "body": "NEET Biology includes biomaterials and biomolecules questions where natural fibres appear. Wool and silk are made of protein (keratin and fibroin respectively); cotton is cellulose. Knowing which fibre is which protein/polymer becomes a one-line shortcut for a whole class of questions on the protein chapter of Class 11.",
+      "targetExam": "neet",
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08", "ch03_t02_c01"]
+    }
+  ],
+
+  "mnemonics": [
+    {
+      "id": "ch03_mn01",
+      "acronym": "SSSPDR",
+      "unpacking": "S-hearing (remove fleece), S-couring (wash off grease), S-orting (separate hair types), P-icking burrs, D-yeing, R-olling/spinning into yarn. The six steps of wool processing in order.",
+      "context": "The wool-processing pipeline.",
+      "relatedConceptIds": ["ch03_t01_c03"]
+    },
+    {
+      "id": "ch03_mn02",
+      "acronym": "ELMP",
+      "unpacking": "E-gg, L-arva (caterpillar / silkworm), Moth, P-upa (cocoon stage). The four stages of silk moth life — between L and P is when the silk is harvested.",
+      "context": "Silk moth (Bombyx mori) life cycle.",
+      "relatedConceptIds": ["ch03_t02_c01"]
+    },
+    {
+      "id": "ch03_mn03",
+      "acronym": "PWS",
+      "unpacking": "P-rotein (wool = keratin, silk = fibroin), W-ater-loving cellulose (cotton, jute, linen), S-ynthetic (polyester, nylon, acrylic = plastic). Three families of fibre based on chemistry.",
+      "context": "The three big fibre families and what they're chemically made of.",
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08", "ch03_t03_c01"]
+    }
+  ],
+
+  "misconceptions": [
+    {
+      "id": "ch03_ms01",
+      "kidsThink": "Wool is the same thing as fur.",
+      "actually": "Both come from animal hair, but wool specifically refers to the curly, scaled, often crimped fibre that can be spun into yarn — found on sheep, goats, camels, alpacas, llamas. Dog fur, cat fur, and human hair are straight and smooth — they don't spin into yarn easily. The scales on wool are what let it lock together when spun, which is also why it can felt.",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c07"]
+    },
+    {
+      "id": "ch03_ms02",
+      "kidsThink": "Cotton and silk are both plants.",
+      "actually": "Cotton is a plant fibre (cellulose, from the cotton plant boll). Silk is an animal fibre (protein, from a caterpillar's cocoon). They feel similar but are chemically very different — cotton burns to ash, silk burns smelling like burnt hair (because of the protein), and that smell test alone can tell them apart.",
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08", "ch03_t02_c01"]
+    },
+    {
+      "id": "ch03_ms03",
+      "kidsThink": "Synthetic fibres are entirely new — natural fibres can't compete.",
+      "actually": "Synthetic fibres are durable and cheap, but they don't breathe (sweaty in summer), don't biodegrade, and shed microplastics in every wash. Natural fibres (cotton, wool, silk, linen) breathe, regulate temperature, biodegrade, and feel better on skin. The trend in recent years has reversed — premium clothing is moving BACK to natural fibres for both comfort and environmental reasons.",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_ms04",
+      "kidsThink": "Silk is only made by silkworms.",
+      "actually": "The silkworm (Bombyx mori) makes commercial mulberry silk, but other species produce other silks: tasar moth, eri moth, muga moth — all different species. Spiders also make silk, in seven different kinds for different uses (web frame, sticky capture, egg sac, etc.). Spider silk is the strongest natural fibre known.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c03", "ch03_t03_c03"]
+    },
+    {
+      "id": "ch03_ms05",
+      "kidsThink": "Anthrax is just a wartime weapon.",
+      "actually": "Anthrax (sorter's disease) is naturally caused by spores of Bacillus anthracis that live on raw fleece. Before modern hygiene, wool sorters in India and Europe regularly inhaled the spores while combing dirty fleece and got severe lung infections. Today, sterilisation and protective masks make the risk near-zero — but the bacterium is the same one studied for biological weapons.",
+      "relatedConceptIds": ["ch03_t01_c04"]
+    }
+  ],
+
+  "ncertQA": [
+    {
+      "id": "ch03_nq01",
+      "question": "You must be familiar with the following nursery rhyme: 'Baa Baa, black sheep, have you any wool?' (a) Which parts of the black sheep have wool? (b) What is meant by the white fleece of the lamb?",
+      "modelAnswer": "(a) Wool comes from the fleece — the thick, curly hair covering the sheep's whole body, especially the back, sides, and belly. (b) White fleece means the lamb's hair is naturally white in colour. White wool is the most prized because it can be dyed any colour; black or grey wool can only be dyed to darker shades.",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c03", "ch03_t01_c05"]
+    },
+    {
+      "id": "ch03_nq02",
+      "question": "The silkworm is (a) a caterpillar (b) a larva. Choose the correct option: (i) only a (ii) only b (iii) both a and b (iv) neither a nor b.",
+      "modelAnswer": "(iii) Both a and b. 'Caterpillar' is the everyday name for the larva of any moth or butterfly — so a silkworm IS a caterpillar AND it is a larva. The two words describe the same stage of the silk-moth life cycle.",
+      "relatedConceptIds": ["ch03_t02_c01"]
+    },
+    {
+      "id": "ch03_nq03",
+      "question": "Which of the following does not yield wool? (i) Yak (ii) Camel (iii) Goat (iv) Woolly dog. Why?",
+      "modelAnswer": "(iv) Woolly dog. Dogs have fur, but their hair lacks the scales and crimp that make wool spinnable; their fibre doesn't lock into yarn. The other three — yak (Himalayan plateaus), camel (Rajasthan, Central Asia), goat (pashmina, mohair, cashmere) — all produce real wool.",
+      "relatedConceptIds": ["ch03_t01_c02"]
+    },
+    {
+      "id": "ch03_nq04",
+      "question": "What is meant by the following terms? (i) Rearing (ii) Shearing (iii) Sericulture",
+      "modelAnswer": "(i) Rearing — taking care of animals to grow them up; sheep, silkworms, cattle are all reared on farms. (ii) Shearing — removing the fleece (wool-covered skin layer) from the sheep using clippers, usually once a year in spring; the sheep is not hurt because the wool is dead tissue, like cutting your hair. (iii) Sericulture — the practice of rearing silkworms specifically to produce silk fibre.",
+      "relatedConceptIds": ["ch03_t01_c03", "ch03_t02_c01"]
+    },
+    {
+      "id": "ch03_nq05",
+      "question": "Given below is a sequence of steps in the processing of wool. Which are the missing steps? Shearing, ______, sorting, ______, ______, ______.",
+      "modelAnswer": "Shearing → Scouring → Sorting → Picking burrs (removing burs and dirt) → Dyeing → Rolling and spinning into yarn. Six steps total.",
+      "relatedConceptIds": ["ch03_t01_c03"]
+    },
+    {
+      "id": "ch03_nq06",
+      "question": "Make sketches of the two stages in the life history of the silk moth which are directly related to the production of silk.",
+      "modelAnswer": "The two stages directly involved are: (1) the larva / silkworm (the caterpillar that eats mulberry leaves for ~25 days then begins spinning a silk cocoon around itself), and (2) the pupa inside the cocoon (the silk thread surrounding the pupa is what's reeled to make silk). The cocoon is boiled (with the pupa inside) to soften the gum holding the silk threads together, then the single long thread is unwound — one cocoon yields about 600–900 metres of silk.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_nq07",
+      "question": "Out of the following, which are the two terms related to silk production? Sericulture, floriculture, moriculture, apiculture, silviculture. (Hint: tasar silk is obtained from a silkworm that feeds on arjun leaves.)",
+      "modelAnswer": "Sericulture (rearing silkworms) and moriculture (growing mulberry trees, since mulberry silkworms feed only on mulberry leaves). Floriculture is flower growing, apiculture is beekeeping, and silviculture is forest growing — none of these are silk.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c03"]
+    },
+    {
+      "id": "ch03_nq08",
+      "question": "What is the difference between natural and synthetic fibres? Give an example of each.",
+      "modelAnswer": "Natural fibres come from plants or animals and biodegrade easily — examples: cotton (from cotton plant), wool (from sheep), silk (from silkworms). Synthetic fibres are made from petroleum-based chemicals in factories — examples: polyester, nylon, acrylic. Natural fibres breathe better, regulate temperature, and decompose naturally; synthetic fibres are cheaper, stronger, wrinkle-resistant but don't biodegrade and shed microplastics in every wash.",
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08", "ch03_t03_c01"]
+    }
+  ],
+
+  "glossary": [
+    {
+      "id": "ch03_gl01",
+      "term": "Fleece",
+      "definition": "The whole coat of wool covering a sheep, removed in one piece during shearing.",
+      "example": "A single sheep's annual fleece can weigh 4–5 kg.",
+      "hindiTerm": "ऊन का बाल",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c03"]
+    },
+    {
+      "id": "ch03_gl02",
+      "term": "Shearing",
+      "definition": "The process of cutting off the wool fleece from a sheep, painlessly, using clippers.",
+      "example": "Sheep are shorn once a year in early summer; the wool grows back over the next 12 months.",
+      "hindiTerm": "ऊन कतरना",
+      "relatedConceptIds": ["ch03_t01_c03"]
+    },
+    {
+      "id": "ch03_gl03",
+      "term": "Scouring",
+      "definition": "Washing the sheared wool to remove grease, dust, and dirt — the second step of wool processing.",
+      "example": "Scouring uses hot water and detergent in big tanks; the recovered grease becomes lanolin (used in lotions).",
+      "hindiTerm": "धुलाई",
+      "relatedConceptIds": ["ch03_t01_c03"]
+    },
+    {
+      "id": "ch03_gl04",
+      "term": "Sericulture",
+      "definition": "The rearing of silkworms for the production of silk fibre.",
+      "example": "Karnataka and West Bengal are India's largest mulberry-sericulture states.",
+      "hindiTerm": "रेशम कीट पालन",
+      "relatedConceptIds": ["ch03_t02_c01"]
+    },
+    {
+      "id": "ch03_gl05",
+      "term": "Cocoon",
+      "definition": "The silk casing a silkworm caterpillar spins around itself before transforming into a pupa.",
+      "example": "One cocoon yields a continuous thread 600–900 metres long when reeled.",
+      "hindiTerm": "कोकून",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_gl06",
+      "term": "Reeling",
+      "definition": "Unwinding the silk thread from a softened cocoon onto a reel.",
+      "example": "Reeling is done in hot water that dissolves the sticky sericin holding the cocoon threads together.",
+      "hindiTerm": "रीलिंग",
+      "relatedConceptIds": ["ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_gl07",
+      "term": "Sorter's disease (Anthrax)",
+      "definition": "A serious lung infection from inhaling Bacillus anthracis spores in raw wool — historically common among wool sorters.",
+      "example": "Modern wool processing sterilises raw fleece, making sorter's disease nearly extinct in the industry.",
+      "hindiTerm": "वूल सॉर्टर रोग",
+      "relatedConceptIds": ["ch03_t01_c04"]
+    },
+    {
+      "id": "ch03_gl08",
+      "term": "Pashmina",
+      "definition": "The fine inner wool of the Changthangi goat from Ladakh, used in luxurious shawls.",
+      "example": "Pashmina fibre is under 16 microns thick — the human eye can barely see a single strand.",
+      "hindiTerm": "पश्मीना",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c05"]
+    },
+    {
+      "id": "ch03_gl09",
+      "term": "Synthetic fibre",
+      "definition": "A man-made fibre produced from petroleum-based chemicals through polymerisation.",
+      "example": "Polyester, nylon, and acrylic are the three most common synthetic fibres in clothing today.",
+      "hindiTerm": "कृत्रिम रेशा",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_gl10",
+      "term": "Microplastic",
+      "definition": "Tiny plastic fragments (less than 5 mm) shed from synthetic clothing in every wash, polluting water and soil.",
+      "example": "A single 6 kg load of polyester clothes can release 700,000 microfibres into the wash water.",
+      "hindiTerm": "सूक्ष्म प्लास्टिक",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    }
+  ],
+
+  "miniProjects": [
+    {
+      "id": "ch03_mp01",
+      "emoji": "🔥",
+      "title": "Burn test — identify the fibre in your t-shirt",
+      "needs": [
+        "Small samples (1 cm each) of cotton t-shirt, polyester t-shirt, wool sweater, and silk fabric if possible",
+        "A safe surface (ceramic plate or aluminium foil)",
+        "A matchstick or lighter (with adult supervision)",
+        "Pinching tweezers"
+      ],
+      "steps": [
+        "Lay the samples on the ceramic plate, well apart.",
+        "Hold one sample with tweezers above the plate. Touch the corner with the flame for one second.",
+        "Pull back. Observe how it burns and what it leaves behind.",
+        "Notice the SMELL — cotton smells like burning paper. Wool and silk smell like burning hair. Polyester smells chemical and beads into hard plastic.",
+        "Repeat for each sample, comparing flame colour, smoke, ash, and smell."
+      ],
+      "expectedObservation": "Cotton: yellow flame, burns to soft ash, paper smell. Wool/silk: small flame, beads into crumbly black, hair smell. Polyester: melts before burning, drips, hard plastic bead remains.",
+      "whyItWorks": "Each fibre family has a different chemistry. Cotton is cellulose (plant carb — burns clean). Wool and silk are protein (sulphur-containing amino acids — smell like burning hair). Polyester is plastic (a long carbon-hydrogen chain — melts first, then burns). The burn test is so reliable that costume designers and textile inspectors still use it to spot-check fibre content.",
+      "estimatedMinutes": 20,
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08", "ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_mp02",
+      "emoji": "🐛",
+      "title": "Mini sericulture — raise a silkworm at home",
+      "needs": [
+        "A box of silkworm eggs (sericulture suppliers in Mysore / Bangalore sell starter packs)",
+        "Fresh mulberry leaves (one tree near your house, or order)",
+        "A clean cardboard tray with a lid (paper-towel-lined)",
+        "A cool dry spot, ~25°C",
+        "Three weeks of patience"
+      ],
+      "steps": [
+        "Place the eggs on the tray. They hatch in 7–10 days into tiny black caterpillars.",
+        "From day 1, feed mulberry leaves daily — chop fresh leaves for the first week.",
+        "Clean the tray daily — remove old leaves and droppings.",
+        "The caterpillars grow for ~25 days, shedding skin 4 times and getting much bigger.",
+        "When they stop eating and turn translucent, provide a brush of small twigs.",
+        "They spin a cocoon around themselves in 2–3 days.",
+        "If you want to harvest silk: dip the cocoon in hot water briefly and unwind. If you want to see the moth: wait 14 days; the moth emerges (and your silk thread becomes broken pieces)."
+      ],
+      "expectedObservation": "Egg → caterpillar (silkworm) → cocoon → moth, the full life cycle in your bedroom over ~6 weeks.",
+      "whyItWorks": "This is the only project where you can watch the whole insect metamorphosis up close — and it's the same species (Bombyx mori) on which the entire silk industry runs. The ethical question (kill the pupa to get whole silk, or let the moth emerge?) is also live: 'ahimsa silk' lets the moth emerge first and gathers the broken cocoons. The fibre is coarser, but no insect dies.",
+      "estimatedMinutes": 60,
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c04"]
+    }
+  ],
+
+  "scientists": [
+    {
+      "id": "ch03_sci01",
+      "name": "Tiruvallur Subramanya Sadasivan",
+      "lifespan": "1913–2001",
+      "nationality": "Indian",
+      "oneLineLegacy": "Built India's modern sericulture and silkworm-disease research; brought scientific rigour to a 4000-year-old industry.",
+      "narrative": "When India became independent in 1947, sericulture was a craft industry — millions of rural families rearing silkworms with practices passed down for generations, often losing entire batches to disease without knowing why. T. S. Sadasivan, working from his lab in Madras and later at the Central Sericultural Research and Training Institute in Mysore, brought microbiology to the silk world. He identified the bacterial and viral diseases that wiped out silkworm crops, developed sterilisation methods that any village could use, and trained a generation of scientists who scaled silkworm yields several-fold. Today India is the world's second-largest silk producer (after China), and Karnataka's mulberry farms support over a million families. The silk saree your mother wears is downstream of his microscope.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c03"]
+    }
+  ],
+
+  "whatIfs": [
+    {
+      "id": "ch03_wi01",
+      "question": "What if humans had built clothing out of spider silk instead of silkworm silk?",
+      "answer": "Spider silk is several times stronger than steel by weight and stretches like rubber. A spider-silk bulletproof vest, ropes that don't break under tonnes, surgical sutures that dissolve and heal — all real possibilities. The problem: spiders are territorial cannibals. You can't farm them in dense colonies the way silkworms are farmed. Scientists have engineered goats, bacteria, and yeasts to produce spider silk proteins, but at industrial scale this remains expensive. India's silk industry could leap to a new century if the spider problem is solved.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t03_c03"]
+    },
+    {
+      "id": "ch03_wi02",
+      "question": "What if synthetic fibres had never been invented?",
+      "answer": "Your wardrobe would be heavier, more wrinkly, more expensive, and slower-drying. Sports — especially marathons, climbing, surfing — would be much harder without quick-dry fabrics. Parachutes would still be silk (which is what they were until nylon was invented during WWII). On the positive side: no microplastics in oceans, no fossil-fuel input into clothing, no fashion-cycle waste because clothes would last longer and be valued more. Mid-20th-century textile science gave us comfort at the cost of pollution; rolling it back would reverse both.",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    },
+    {
+      "id": "ch03_wi03",
+      "question": "What if you tried to make silk yourself from a silkworm in your garden?",
+      "answer": "You'd need a mulberry tree (silkworms eat almost nothing else), the right silkworm eggs (Bombyx mori or one of the wild Indian species), a clean dry rearing tray, and 6 weeks of daily care. Each caterpillar makes ~600 metres of thread in its cocoon — enough to wrap your room a couple of times. To weave even a small handkerchief, you'd need 30+ cocoons. The math is why silk has been a luxury good for 4000 years.",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c02"]
+    }
+  ],
+
+  "crossChapterRefs": [
+    {
+      "id": "ch03_cx01",
+      "toChapterId": "ch07",
+      "topic": "Weather, Climate and Adaptations",
+      "pointer": "Why does wool come from cold-climate animals (sheep, yak, Changthangi goat)? Because they evolved thick coats to survive sub-zero winters. Ch.7's adaptation theme connects directly to where wool-yielding animals are found — and why no one farms sheep in tropical Kerala.",
+      "relatedConceptIds": ["ch03_t01_c02"]
+    },
+    {
+      "id": "ch03_cx02",
+      "toChapterId": "ch12",
+      "topic": "Reproduction in Plants",
+      "pointer": "The silk industry depends on mulberry trees being well-grown (moriculture). Ch.12 explains how mulberry reproduces — through cuttings and grafting in commercial nurseries — so a mulberry farm can be expanded in a single season. The textile economy literally hangs off plant reproduction.",
+      "relatedConceptIds": ["ch03_t02_c01"]
+    }
+  ],
+
+  "curriculumBridge": {
+    "nextYearClass8": "Class 8 Chapter 3 (Synthetic Fibres and Plastics) picks up where this chapter's synthetic-fibres section ends. You'll learn the chemistry of rayon, nylon, polyester, acrylic — how monomers link into polymer chains, and why plastics decompose so slowly.",
+    "forNeetJee": "By Class 11 / 12 you'll meet polymers chemically in detail — addition vs condensation polymers, thermosetting vs thermoplastics. Silk's fibroin and wool's keratin become NEET questions on protein structure (primary, secondary, tertiary). Even Class 12 Biology's sericulture topic is rooted in this Class 7 chapter."
+  },
+
+  "gallery": [
+    {
+      "id": "ch03_gi01",
+      "caption": "Wool fibre under microscope — the scaly tile",
+      "detail": "Wool fibres are covered in overlapping scales like roof tiles. The scales catch on each other when twisted, locking fibres into yarn — and irreversibly into felt when wet and agitated.",
+      "assetHint": "shape:scale",
+      "relatedConceptIds": ["ch03_t01_c07"]
+    },
+    {
+      "id": "ch03_gi02",
+      "caption": "Silkworm spinning its cocoon",
+      "detail": "A silkworm caterpillar moves its head in a figure-of-eight pattern, secreting a continuous silk thread from glands near its mouth. In 2–3 days it spins a cocoon roughly 600–900 metres long around itself, getting ready to become a pupa.",
+      "assetHint": "sfsymbol:tornado",
+      "relatedConceptIds": ["ch03_t02_c01", "ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_gi03",
+      "caption": "The Changthangi pashmina goat — Ladakh",
+      "detail": "Lives at -30°C on the Changthang plateau. The fine inner undercoat (less than 16 microns) becomes pashmina. Each goat gives ~100 g per year — a single shawl needs the fleece of 3-5 goats.",
+      "assetHint": "sfsymbol:mountain.2",
+      "relatedConceptIds": ["ch03_t01_c02", "ch03_t01_c06"]
+    },
+    {
+      "id": "ch03_gi04",
+      "caption": "Banarasi silk loom",
+      "detail": "Hand-loomed in Varanasi for centuries. Each saree uses 5,500+ warp threads and weaves real gold/silver zari into silk. Designs are still made on paper graphs and translated to the loom thread-by-thread.",
+      "assetHint": "shape:loom",
+      "relatedConceptIds": ["ch03_t02_c02"]
+    },
+    {
+      "id": "ch03_gi05",
+      "caption": "Cotton boll on the plant",
+      "detail": "The fluffy white tuft you see in cotton fields is the cotton boll — a protective casing around the seeds. The fibres are pure cellulose. India produces ~5.5 million tonnes of cotton per year, making it one of the top three producers worldwide.",
+      "assetHint": "sfsymbol:cloud.fill",
+      "relatedConceptIds": ["ch03_t01_c01", "ch03_t01_c08"]
+    },
+    {
+      "id": "ch03_gi06",
+      "caption": "Microplastic fibres in ocean water",
+      "detail": "Every polyester wash releases hundreds of thousands of microfibres. Most sewage treatment can't filter them; they accumulate in rivers, oceans, and inside marine animals. They've now been found in salt, fish, and human blood.",
+      "assetHint": "sfsymbol:drop.triangle.fill",
+      "relatedConceptIds": ["ch03_t03_c01"]
+    }
+  ],
+
+  "timelines": [
+    {
+      "id": "ch03_tl01",
+      "title": "From wool on a sheep to yarn on a spinning wheel",
+      "intro": "Six steps turn a year's growth of dirty fleece into clean spun wool ready to knit.",
+      "steps": [
+        {"id": "ch03_tl01_s01", "label": "Shearing", "body": "Once a year (usually spring), all of the sheep's fleece is clipped off in one piece — like a thick blanket of curly hair. The sheep is unhurt; the fleece is dead tissue.", "assetHint": "sfsymbol:scissors"},
+        {"id": "ch03_tl01_s02", "label": "Scouring", "body": "The raw fleece is washed in hot water with detergent. Grease (lanolin), sweat, and dirt are removed. The lanolin is recovered and sold separately to the cosmetics industry.", "assetHint": "sfsymbol:bubbles.and.sparkles"},
+        {"id": "ch03_tl01_s03", "label": "Sorting", "body": "Different parts of one fleece have different fibre quality — the back is the finest, the legs are coarsest. Workers sort the wool by quality and colour.", "assetHint": "sfsymbol:tray.2"},
+        {"id": "ch03_tl01_s04", "label": "Picking burrs", "body": "Tiny dried plant parts (burrs, seeds, twigs) stuck in the fleece are removed by hand or machine. This step decides whether the final fabric is rough or smooth.", "assetHint": "sfsymbol:leaf.fill"},
+        {"id": "ch03_tl01_s05", "label": "Dyeing", "body": "Sorted wool is dyed in big vats. White wool can take any colour; coloured wool only takes darker shades. India's traditional dyes (indigo, madder, turmeric) compete with synthetic chemical dyes.", "assetHint": "sfsymbol:paintpalette.fill"},
+        {"id": "ch03_tl01_s06", "label": "Rolling and spinning", "body": "Fibres are pulled into a continuous strand and twisted into yarn. The yarn is the raw material for knitters and weavers. Traditional spinning was done on a charkha; today it's mostly machines.", "assetHint": "sfsymbol:tornado"}
+      ],
+      "relatedConceptIds": ["ch03_t01_c03"]
+    }
+  ]
+}
