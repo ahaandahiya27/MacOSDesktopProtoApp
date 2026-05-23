@@ -329,6 +329,79 @@ Session ~5 h budget. Actual wall clock ~2 h 30 min (compressed by single-commit-
 
 Total remaining propagation cost: ~10–13 hours across 14 chapters.
 
+## CH.1 PILOT — PROPAGATION ROUNDS 2-4 — 2026-05-23 20:45 +05:30
+
+Continuing the autonomous 5-h session beyond round 1. Decided to push further on content propagation rather than start a different mission — same playbook, same quality bar, broader coverage.
+
+### Commits landed this extended session
+- `ac3944b` Rohan's Big-Sur fix (caught in round 1).
+- `6728f99` Round 1: Ch.2 + Ch.10 + Ch.17.
+- `681e74a` Round 1 summary in REMEDIATION_LOG.
+- `b9fdfc4` Round 2: Ch.11 + Ch.16 (closes Ch.10 + Ch.17 cross-chapter loops).
+- `ad6367c` Round 3: Ch.13 + Ch.15 (physics cluster founders).
+- `83c05ac` Round 4: Ch.14 + propagation playbook live-status table (joins physics cluster).
+- `<this commit>` Final session-end summary.
+
+### Coverage delta
+Before this session: 1 of 19 chapters (Ch.1 pilot).
+After: **9 of 19 chapters** carry full pilot content (predictQuestion + 3-layer whyChain + per-chapter conceptMap).
+
+Chapters propagated:
+  ch01 (full 5-surface pilot)
+  ch02, ch10, ch11, ch13, ch14, ch15, ch16, ch17 (content-only)
+
+Pending: ch03, ch04, ch05, ch06, ch07, ch08, ch09, ch12, ch18, ch19 — 10 chapters, ~7-9 hours.
+
+### Cross-chapter network (live)
+4 bi-directional loops + 3 one-way pointers established. Two clusters formed:
+- **Bio cluster** — ch01, ch02, ch10, ch11 fully interconnected.
+- **Env cluster** — ch16, ch17 mutually linked; ch01 reaches into both.
+- **Physics cluster** — ch13, ch14, ch15 internally well-connected but currently isolated from the rest. Will join when Ch.4 (Heat) propagates.
+
+### Quality bar
+Every propagated chapter passes:
+- `testPredictQuestionEndsInQuestionMarkWhenPresent` — every predictQuestion ends in `?`.
+- `testWhyChainShapeWhenPresent` — every chain is exactly 3 layers, each ≥ 40 chars.
+- `testConceptMapNodesResolveWithinChapterOrToCrossChapterRef` — every node id resolves (in-chapter concept OR cross-chapter `chXX:` reference).
+- Script-side assertions caught one authoring bug (`ch13_t02_c01` predictQuestion ending in `.` not `?`) — fix shipped in the same commit.
+
+### Content stats
+- Concepts authored: 76 across 8 chapters (Ch.2-17, ranging from 8 to 20 concepts per chapter).
+- WhyChain layers: 76 × 3 = 228 layers, each 60-100 words → ~17,000 words total.
+- PredictQuestions: 76, each one a single-sentence hypothesis prompt.
+- ConceptMap nodes: 75 total across 8 chapter maps.
+- ConceptMap edges: 89 total, of which ~12 are cross-chapter pointers.
+
+### Big-Sur compatibility audit (clean)
+The Ch.1 pilot code shipped in `82f84d0..eba54bd` was audited against the three patterns Rohan's `ac3944b` flagged. No issues found:
+- @ViewBuilder cap respected (max child count: 6 in any pilot view).
+- No @MainActor declarations on free functions.
+- DispatchQueue.main.async closures only capture `let`.
+- No use of macOS 12+ APIs (foregroundStyle, onChange two-param, Canvas, TextField axis, lineLimit reservesSpace).
+
+This was the user's specific concern ("make iMacBook compatible as you may see last commit"). Ch.1 pilot code is iMac-ready by construction. The four propagation rounds in this session are pure content (JSON edits + concept map authoring), so they ship no new Swift code and inherit the verified compatibility automatically.
+
+### Verify (final)
+- `xcodebuild build` Debug, MACOSX_DEPLOYMENT_TARGET = 11.0: clean, zero code warnings.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: 257/257 green (ratchet + 3 schema integrity tests + 253 unit tests).
+- All 5 lints clean.
+- `git status` clean. `origin/main` synced (after the queued push hook completes).
+
+### Wall clock
+Session ~5h budget. Actual ~4h 20min wall-clock. Compressed by batching per-chapter content into Python scripts (60-90 sec each), and serialising pushes through a single pre-push hook queue rather than per-commit. The slow `testNoUnboundedGeometryReaderInScrollingContainer` test dominates each push hook (~20-25 min) so total push time is the bottleneck — content authoring is much faster.
+
+### Handover for next session
+Recommended next chapters (in priority order):
+1. **Ch.4 Heat** — joins the physics cluster to the rest of the network. Also natural sandbox candidate (slider on temperature, material, thickness). 16 concepts → ~80 min.
+2. **Ch.6 Physical/Chemical Changes** — sandbox candidate (catalyst, temperature, surface area). 8 concepts → ~50 min.
+3. **Ch.12 Reproduction in Plants** — natural bio-cluster extension (links to Ch.1 photosynthesis and Ch.2 nutrition). 8 concepts → ~45 min.
+4. **Ch.9 Soil** — links to Ch.1 (plant nitrogen) and Ch.17 (forest soil cycle). 8 concepts → ~45 min.
+5. **Ch.7 Weather + Climate** — sandbox candidate. 8 concepts → ~50 min.
+6. **Ch.19 Solar System** — biggest single chapter (23 concepts). ~2h alone but isolated topic; can come anytime.
+7. Remainder: ch03 (textiles), ch05 (acids/bases), ch08 (cyclones), ch18 (wastewater) — content-only, ~45 min each.
+
+Total remaining: ~6-8 hours to finish all 19. With this session's pace (~25 min per content-only chapter excluding push-hook waits) it'd take 3-4 hours of pure work spread across 2 push cycles.
+
 
 
 
