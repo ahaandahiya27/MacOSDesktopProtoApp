@@ -80,14 +80,23 @@ chapter by chapter as the right pattern emerges.
 | Ch.4 Heat | ✅ BuildAHeatFlowSandbox | — | `599f0f8` |
 | Ch.6 Physical/Chemical Changes | ✅ BuildAReactionSandbox | — | `599f0f8` |
 | Ch.7 Weather + Climate | ✅ BuildAClimateSandbox | — | `599f0f8` |
+| Ch.8 Winds, Storms, Cyclones | ✅ BuildAWindSandbox | — | `4373a9f` |
+| Ch.10 Respiration in Organisms | — | ✅ InsideTheAlveolusTour | `4373a9f` |
+| Ch.11 Transportation A&P | — | ✅ InsideTheXylemAscentTour | `4373a9f` |
+| Ch.13 Motion and Time | ✅ BuildAMotionSandbox | — | `4373a9f` |
 | Ch.14 Electric Current | — | ✅ InsideTheWireTour | `599f0f8` |
 | Ch.15 Light | — | ✅ InsideTheLensTour | `599f0f8` |
 | (all others) | — | — | — |
 
-**6 of 19 chapters carry a custom interactive.** 4 sandboxes total
-(Ch.1, 4, 6, 7) and 3 tours total (Ch.1, 14, 15). Next-round
-candidates: Ch.8 (wind-pattern sandbox), Ch.10 (alveolus tour),
-Ch.11 (xylem-ascent tour), Ch.13 (motion-time sandbox).
+**10 of 19 chapters carry a custom interactive** (6 sandboxes +
+5 tours; Ch.1 has both). Next-round candidates:
+- Ch.5 BuildAPHSandbox (acid × base × volume → pH bar)
+- Ch.9 BuildASoilSandbox (sand / clay / silt mix → percolation
+  rate, water retention, fertility score)
+- Ch.16 BuildAWaterCycleSandbox (rainfall, evaporation, runoff,
+  usage → groundwater level)
+- Ch.2 InsideTheDigestiveTour (mouth → stomach → small intestine
+  → liver → colon, mirroring InsideTheAlveolusTour pattern)
 
 ### Cross-chapter network — final shape
 

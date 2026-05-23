@@ -26,6 +26,7 @@ struct ChapterDetailView: View {
         case insideTheLensTour       // Ch.15 propagation (2026-05-24)
         case insideTheAlveolusTour   // Ch.10 propagation (2026-05-24)
         case insideTheXylemTour      // Ch.11 propagation (2026-05-24)
+        case insideTheDigestiveTour  // Ch.2 propagation (2026-05-24)
 
         var id: String {
             switch self {
@@ -49,6 +50,8 @@ struct ChapterDetailView: View {
                 return "insideTheAlveolusTour"
             case .insideTheXylemTour:
                 return "insideTheXylemTour"
+            case .insideTheDigestiveTour:
+                return "insideTheDigestiveTour"
             }
         }
     }
@@ -108,15 +111,37 @@ struct ChapterDetailView: View {
     /// child cap on that Group is preserved on Big Sur.
     @ViewBuilder
     private var propagatedPilotInteractives: some View {
-        if chapter.id == "ch04" {
+        // Split the dispatch into two sub-groups so each Group stays
+        // under the 10-child @ViewBuilder cap on Big Sur. We now have
+        // 13 chapter mounts (the Group itself counts only as 1 child
+        // of surfacesGroupTop, but the if/else-if chain compiles as
+        // separate ViewBuilder children inside).
+        propagatedPilotInteractivesA
+        propagatedPilotInteractivesB
+    }
+
+    @ViewBuilder
+    private var propagatedPilotInteractivesA: some View {
+        if chapter.id == "ch02" {
+            insideTheDigestiveTourCTA
+        } else if chapter.id == "ch04" {
             BuildAHeatFlowSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch05" {
+            BuildAPHSandbox(chapterId: chapter.id)
         } else if chapter.id == "ch06" {
             BuildAReactionSandbox(chapterId: chapter.id)
         } else if chapter.id == "ch07" {
             BuildAClimateSandbox(chapterId: chapter.id)
         } else if chapter.id == "ch08" {
             BuildAWindSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch10" {
+        } else if chapter.id == "ch09" {
+            BuildASoilSandbox(chapterId: chapter.id)
+        }
+    }
+
+    @ViewBuilder
+    private var propagatedPilotInteractivesB: some View {
+        if chapter.id == "ch10" {
             insideTheAlveolusTourCTA
         } else if chapter.id == "ch11" {
             insideTheXylemTourCTA
@@ -126,7 +151,30 @@ struct ChapterDetailView: View {
             insideTheWireTourCTA
         } else if chapter.id == "ch15" {
             insideTheLensTourCTA
+        } else if chapter.id == "ch16" {
+            BuildAWaterCycleSandbox(chapterId: chapter.id)
         }
+    }
+
+    /// CTA card opening InsideTheDigestiveTour sheet. Ch.2 only.
+    private var insideTheDigestiveTourCTA: some View {
+        Button {
+            DispatchQueue.main.async { presentedSheet = .insideTheDigestiveTour }
+        } label: {
+            Ch1PilotCTACard(
+                symbol: "fork.knife",
+                title: "Inside the digestive system",
+                subtitle: "Follow a piece of chapati from mouth to colon — 24-hour journey, 5 organs, dozens of enzymes.",
+                gradient: [
+                    Color(red: 0.65, green: 0.32, blue: 0.10),
+                    Color(red: 0.80, green: 0.45, blue: 0.20)
+                ]
+            )
+        }
+        .buttonStyle(.plain)
+        .pointingCursor()
+        .accessibilityLabel("Inside the digestive system — five-stop tour")
+        .accessibilityHint("Opens a sheet that walks a piece of food from mouth through stomach, small intestine, liver, and large intestine.")
     }
 
     /// CTA card opening InsideTheAlveolusTour sheet. Ch.10 only.
@@ -498,6 +546,11 @@ struct ChapterDetailView: View {
                 )
             case .insideTheXylemTour:
                 InsideTheXylemAscentTour(
+                    chapterId: chapter.id,
+                    onDismiss: { presentedSheet = nil }
+                )
+            case .insideTheDigestiveTour:
+                InsideTheDigestiveTour(
                     chapterId: chapter.id,
                     onDismiss: { presentedSheet = nil }
                 )
