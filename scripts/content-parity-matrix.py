@@ -45,6 +45,15 @@ COLUMN_SPECS: list[tuple[str, str, int]] = [
     ("gallery", "Gal", 6),
     ("timelines", "TL", 1),
     ("__article_words", "Art", 600),
+    # Deep Dive + Visual Media columns added 2026-05-23.
+    # DeepDive floor = ≥3 stretch topics per chapter. Visual floor
+    # rolls up the achievable media types (M2 ≥4 shape diagrams, M3
+    # ≥3 scene refs, M5 ≥3 narration flags) into one ✅/❌; M1
+    # (bundled PNG/PDF) and M4 (bundled video) are deferred with
+    # FACT_CHECK_TODOS entries since fresh-asset creation is outside
+    # this session's scope.
+    ("__deep_dive_count", "Deep", 3),
+    ("__visual_media_rollup", "Vis", 10),
 ]
 
 
@@ -58,6 +67,18 @@ def _count_for(chapter: dict, key: str) -> int:
     if key == "__article_words":
         # Sum word counts across all article files for this chapter.
         return _article_words(chapter.get("id", ""))
+    if key == "__deep_dive_count":
+        items = chapter.get("deepDive", []) or []
+        return len(items)
+    if key == "__visual_media_rollup":
+        # Sum of M2 (shapeDiagram) + M3 (animatedSceneRef) + M5
+        # (narratedWalkthrough) counts. Floor is 4 + 3 + 3 = 10 so a
+        # chapter that meets all three sub-floors gets ✅.
+        media = chapter.get("mediaAssets", []) or []
+        m2 = sum(1 for a in media if a.get("kind") == "shapeDiagram")
+        m3 = sum(1 for a in media if a.get("kind") == "animatedSceneRef")
+        m5 = sum(1 for a in media if a.get("kind") == "narratedWalkthrough")
+        return m2 + m3 + m5
     value = chapter.get(key, [])
     if value is None:
         return 0

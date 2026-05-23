@@ -35,6 +35,7 @@ LIST_KEYS = {
     "realWorldExamples", "examConnections", "mnemonics", "misconceptions",
     "ncertQA", "glossary", "miniProjects", "scientists", "whatIfs",
     "crossChapterRefs", "gallery", "timelines",
+    "deepDive", "mediaAssets",
 }
 SINGLE_KEYS = {"curriculumBridge"}
 
