@@ -26,9 +26,9 @@ desktopAhaan/Subjects/Tutor/Discover/DiscoverChapter1View+InlineScenes.swift: Al
 # chapter but a refactor target rather than a hard gate.
 desktopAhaan/Subjects/Articles/ArticleIndex.swift: Article registry across 19 chapters; planned split by chapter when content stabilises.
 
-# Chapter-agnostic detail views — planned splits this session.
-desktopAhaan/Subjects/Tutor/QuestionDetailView.swift: Planned split this session.
-# ChapterDetailView removed — split into +Notebook.swift + +HomeExperiments.swift
+# Chapter-agnostic detail views.
+# ChapterDetailView removed — split into +Notebook.swift + +HomeExperiments.swift (commit 8972dfe).
+desktopAhaan/Subjects/Tutor/QuestionDetailView.swift: Split attempted 2026-05-23 (see REMEDIATION_LOG). Cross-extension type-inference produced a 60s body type-checker timeout — Swift 5.5 on Big Sur can't infer the body's compound expressions when many helper methods live in sister-file extensions. Reverted; the single-file form type-checks cleanly. Future split would require flattening the body into named sub-views inside the same file first.
 
 # DataStore — split once in commit bad0cde from 947→698 LOC. Further
 # split would require lifting domain mutators (TranslationRecord,
