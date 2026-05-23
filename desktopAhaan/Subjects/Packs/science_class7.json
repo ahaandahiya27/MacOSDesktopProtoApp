@@ -11936,6 +11936,557 @@
         56,
         57,
         58
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch04_rw01",
+          "title": "Sea breeze on the Mumbai shore",
+          "body": "Stand on Marine Drive at 3 pm — a strong breeze blows from the sea onto the city. At 3 am the same breeze blows from the city out to sea. The reason is heat capacity: water takes much longer to heat and cool than land. By afternoon the land is roasting, the sea is mild — hot air rises off the land, cool sea air rushes in to replace it. At night the land cools faster, the sea stays warm, and the breeze reverses. This is convection on a city-wide scale.",
+          "relatedConceptIds": [
+            "ch04_t02_c02",
+            "ch04_t02_c06",
+            "ch04_t01_c07"
+          ]
+        },
+        {
+          "id": "ch04_rw02",
+          "title": "Copper-bottom kadhai with wooden handle",
+          "body": "Pick up any traditional Indian kadhai. The base is copper or aluminium (great heat conductors — they let heat flow into the food fast). The handle is wood or plastic (poor conductors — they keep the heat from your hand). One pot, two materials, chosen because of how heat moves. The same logic governs your laptop's design — metal heatsink near the chip, plastic outer shell.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c05"
+          ]
+        },
+        {
+          "id": "ch04_rw03",
+          "title": "White summer clothes in a Rajasthan village",
+          "body": "Walk through any Rajasthan village in May and you'll see almost everyone in white cotton. Dark colours absorb sunlight and re-radiate it as heat into your skin; white reflects most of the sunlight before it can warm you. The 5–10°C difference between a white shirt and a black shirt under midday sun is real and measurable. The same physics is why ISRO's PSLV rockets are painted white for the long countdown wait in the sun.",
+          "relatedConceptIds": [
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_rw04",
+          "title": "Thermos flask on a school picnic",
+          "body": "The chai thermos in your dabba bag at school keeps tea hot for 5 hours. How? It defeats all three heat-transfer modes at once. The double-walled glass with vacuum between (no air means no convection or conduction). The silver coating (reflects radiation). The tight cap (stops convection through the top). Removing any one of those layers cuts performance by half. It's the cleanest engineered application of this whole chapter.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c02",
+            "ch04_t02_c03",
+            "ch04_t02_c04"
+          ]
+        },
+        {
+          "id": "ch04_rw05",
+          "title": "Why Kerala stays cooler than Nagpur",
+          "body": "Both Kerala and Nagpur are at roughly the same latitude. So why is Kerala in May at 32°C while Nagpur is at 45°C? Water's huge specific heat capacity. Kerala is surrounded by sea on three sides — the ocean absorbs heat slowly and stays cool, the sea breeze blows that coolness onto land. Nagpur is in the middle of the Deccan plateau with no big water body to buffer the heat. Same sun, different geography, very different temperatures.",
+          "relatedConceptIds": [
+            "ch04_t01_c07",
+            "ch04_t02_c06",
+            "ch04_t03_c02"
+          ]
+        }
+      ],
+      "examConnections": [
+        {
+          "id": "ch04_xc01",
+          "title": "Class 11 Physics — Thermodynamics",
+          "body": "Class 11 transforms 'heat' from a feeling into a formal science. You'll meet the four laws of thermodynamics (energy conservation, entropy increase, etc.), the difference between heat and internal energy at the molecular level, and equations connecting heat to work. The Class 7 idea 'heat is fast-moving atoms' becomes the kinetic theory of gases with hard equations.",
+          "targetExam": "class11",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t01_c07"
+          ]
+        },
+        {
+          "id": "ch04_xc02",
+          "title": "NEET — Thermoregulation in the body",
+          "body": "NEET biology asks about how the body keeps a constant 37°C. The mechanisms you saw in this chapter — sweating (evaporation cooling), shivering (convection from muscle motion), vasoconstriction (less blood near skin) — all get NEET questions. Class 7's 'why we sweat' becomes Class 11's hypothalamus + skin-receptor feedback loop.",
+          "targetExam": "neet",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_xc03",
+          "title": "JEE — Calorimetry numericals",
+          "body": "JEE Main and Advanced both carry calorimetry problems: 'how much heat to raise 5 kg of water from 20°C to 80°C?' The answer uses Q = mcΔT, where c is the specific heat capacity you saw here — for water, c = 4186 J/kg/K, much higher than most materials. Knowing WHY water is special (hydrogen bonds breaking and reforming absorb energy) is a Class 7 idea that pays JEE dividends.",
+          "targetExam": "jee",
+          "relatedConceptIds": [
+            "ch04_t01_c07"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch04_mn01",
+          "acronym": "CCR",
+          "unpacking": "C-onduction (through solids — touching), C-onvection (through fluids — flowing), R-adiation (through empty space — beaming). The three ways heat moves.",
+          "context": "The three modes of heat transfer.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c02",
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_mn02",
+          "acronym": "HOT-WC",
+          "unpacking": "HOT things have higher temperature. Heat flows from HOT to cold. Wear White Clothes in summer (reflect heat) and dark in winter (absorb heat). Heat transfer + colour choice in one phrase.",
+          "context": "Two everyday consequences of the heat-flow direction rule.",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_mn03",
+          "acronym": "KC",
+          "unpacking": "K = C + 273 (kelvin equals Celsius plus 273). To convert from Celsius to Kelvin add 273; from Kelvin to Celsius subtract 273. Water freezes at 0°C = 273 K; boils at 100°C = 373 K.",
+          "context": "The Celsius-to-Kelvin conversion.",
+          "relatedConceptIds": [
+            "ch04_t01_c03"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch04_ms01",
+          "kidsThink": "Heat and temperature are the same thing.",
+          "actually": "Heat is the total energy of all the moving atoms in an object — it depends on size. Temperature is the average speed of those atoms — it doesn't depend on size. A bathtub of warm water has WAY more heat than a teaspoon of boiling water, even though the teaspoon is at a higher temperature. The bathtub will boil an egg if you pour it on the egg; the teaspoon won't even cook the surface.",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t01_c05"
+          ]
+        },
+        {
+          "id": "ch04_ms02",
+          "kidsThink": "Wool fabric is hot, so it gives off heat.",
+          "actually": "Wool doesn't produce heat — it TRAPS heat. The fibre has tiny air pockets that act as insulators, slowing the heat from leaving your body. Your body is the actual heat source. That's why wool works to keep you warm in winter (traps your body heat) but you'd freeze in a wool sweater in Antarctica if your body wasn't producing heat to trap.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms03",
+          "kidsThink": "Sweating wets you so you get cold.",
+          "actually": "Sweat doesn't cool you by being wet — it cools you when it EVAPORATES. Liquid water needs a lot of energy to become vapour, and it takes that energy from your skin. Just being wet (think of sitting in a wet swimsuit in still air) doesn't cool you much. What cools is the moment droplets evaporate. That's why fans help — they speed evaporation.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms04",
+          "kidsThink": "The sun heats Earth by conduction (because space is connected).",
+          "actually": "Conduction needs material to carry heat. Space between sun and Earth is empty — no air, no molecules. Sun's heat reaches Earth ONLY by radiation: electromagnetic waves that travel through vacuum. Once those waves hit Earth, they convert to heat in soil, water, our skin. That's also how a microwave heats your roti — radiation, then conversion to heat in water molecules.",
+          "relatedConceptIds": [
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_ms05",
+          "kidsThink": "Cold flows into things, like a flu virus.",
+          "actually": "There's no such thing as 'cold' moving anywhere. Heat flows from hot to cold; what feels like cold entering you is actually heat leaving you. Touching ice doesn't mean cold goes into your hand — heat goes from your hand to the ice. Your brain interprets the loss as 'cold'. Cold is the ABSENCE of heat, not a separate substance.",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t01_c05"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch04_nq01",
+          "question": "Differentiate between conduction, convection, and radiation.",
+          "modelAnswer": "All three transfer heat from hot to cold, but differently. Conduction needs a solid medium — heat passes by atoms bumping their neighbours (e.g., spoon in hot tea). Convection needs a fluid (liquid or gas) — heated fluid expands, rises, and cooler fluid replaces it (e.g., water boiling in a pot). Radiation needs no medium at all — heat travels as electromagnetic waves through empty space (e.g., the sun heating Earth, a bonfire warming your face). Conduction and convection move heat through material; radiation moves heat through nothing.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c02",
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_nq02",
+          "question": "Why does sea breeze flow during the day and land breeze at night?",
+          "modelAnswer": "Land heats up faster than the sea during the day because water has a much higher specific heat capacity. As land air heats, it expands and rises; cooler sea air rushes in to replace it — that's the sea breeze, blowing inland. At night the land cools faster than the sea (which retains its heat). Now the sea is warmer, the land cooler. Warm sea air rises, cool land air flows out to replace it — the land breeze. The whole pattern is convection driven by the heat-capacity difference between land and water.",
+          "relatedConceptIds": [
+            "ch04_t01_c07",
+            "ch04_t02_c02",
+            "ch04_t02_c06"
+          ]
+        },
+        {
+          "id": "ch04_nq03",
+          "question": "Why do we wear cotton clothes in summer?",
+          "modelAnswer": "Two reasons. (1) Cotton has tiny pores that let air pass — sweat from your skin evaporates faster, taking heat with it. (2) Cotton absorbs sweat and holds it close to the skin where it can keep evaporating. Synthetic clothes (polyester) don't absorb sweat, so it stays on your skin without evaporating — you feel sticky and hot. Wool is too thick and traps heat — bad in summer.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_nq04",
+          "question": "A thermos flask works by minimizing the three modes of heat transfer. How does it do this?",
+          "modelAnswer": "A thermos has three smart features. (1) Double glass walls with vacuum between them — vacuum has no atoms to carry heat, so conduction and convection are nearly zero. (2) Silver coating on the inner glass surface — silver reflects radiation back into the flask instead of letting it escape. (3) A tight insulated cap — prevents convection of warm air out the top. Defeating all three modes is what lets your tea stay hot for 5+ hours.",
+          "relatedConceptIds": [
+            "ch04_t02_c04"
+          ]
+        },
+        {
+          "id": "ch04_nq05",
+          "question": "Look at the figure of a kitchen vessel. Why is the handle made of plastic but the bottom made of copper?",
+          "modelAnswer": "Different jobs need different materials. The bottom faces the flame — needs to conduct heat efficiently into the food. Copper is one of the best conductors of heat (almost as good as silver, much cheaper). The handle needs to NOT conduct heat — plastic is a poor conductor (insulator), so heat from the cooking bottom doesn't reach the cook's hand. Two opposite needs, two opposite materials, one vessel.",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c05"
+          ]
+        },
+        {
+          "id": "ch04_nq06",
+          "question": "In places of hot climate, why is it advised that the outer walls of houses be painted white?",
+          "modelAnswer": "White paint reflects most of the incoming sunlight before it can be absorbed and converted to heat. A dark wall absorbs sunlight, gets hot, and slowly transfers that heat through the wall into the room. A white wall stays cooler, and the room behind it stays cooler — sometimes by 5°C or more. In a Rajasthan summer this is the difference between sleeping comfortably and not sleeping at all.",
+          "relatedConceptIds": [
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_nq07",
+          "question": "One litre of water at 30°C is mixed with one litre of water at 50°C. The temperature of the mixture will be (i) 80°C (ii) more than 50°C but less than 80°C (iii) 20°C (iv) between 30°C and 50°C.",
+          "modelAnswer": "(iv) between 30°C and 50°C — specifically, exactly 40°C. When equal masses at different temperatures mix, the final temperature is the average. The hotter water loses heat; the cooler water gains heat; they meet in the middle. Total heat is conserved, not temperature.",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t01_c05"
+          ]
+        },
+        {
+          "id": "ch04_nq08",
+          "question": "An iron ball at 40°C is dropped in a mug containing water at 40°C. The heat will (i) flow from iron ball to water (ii) not flow from iron ball to water or from water to iron ball (iii) flow from water to iron ball (iv) increase the temperature of both.",
+          "modelAnswer": "(ii) Heat will not flow. Heat flows ONLY when there's a temperature difference — from hot to cold. Both objects are at 40°C; they're in thermal equilibrium. The iron ball doesn't 'feel' hot to the water (or vice versa) because there's no temperature gradient. The whole system stays at 40°C indefinitely (assuming no loss to surroundings).",
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "id": "ch04_gl01",
+          "term": "Heat",
+          "definition": "The total energy of vibrating atoms inside an object. Heat flows from a hotter object to a colder one.",
+          "example": "When you boil water, heat from the stove flows into the water.",
+          "hindiTerm": "ऊष्मा",
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl02",
+          "term": "Temperature",
+          "definition": "A measure of how fast the atoms of an object are vibrating on average; not the same as heat.",
+          "example": "Your body temperature is normally about 37°C.",
+          "hindiTerm": "तापमान",
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t01_c02"
+          ]
+        },
+        {
+          "id": "ch04_gl03",
+          "term": "Conduction",
+          "definition": "Heat transfer through a solid material by direct contact, atom to atom.",
+          "example": "A metal spoon left in hot tea soon feels hot at the handle.",
+          "hindiTerm": "चालन",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl04",
+          "term": "Convection",
+          "definition": "Heat transfer through a fluid (liquid or gas) by the fluid itself moving — hot rising, cool falling.",
+          "example": "Hot air above a candle rises straight up because of convection.",
+          "hindiTerm": "संवहन",
+          "relatedConceptIds": [
+            "ch04_t02_c02"
+          ]
+        },
+        {
+          "id": "ch04_gl05",
+          "term": "Radiation",
+          "definition": "Heat transfer by electromagnetic waves; needs no material between source and receiver.",
+          "example": "The Sun heats Earth through 150 million km of empty space — only radiation can cross that gap.",
+          "hindiTerm": "विकिरण",
+          "relatedConceptIds": [
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_gl06",
+          "term": "Conductor (thermal)",
+          "definition": "A material that allows heat to flow through it easily.",
+          "example": "Copper, aluminium, and silver are good thermal conductors.",
+          "hindiTerm": "ऊष्मा चालक",
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c05"
+          ]
+        },
+        {
+          "id": "ch04_gl07",
+          "term": "Insulator (thermal)",
+          "definition": "A material that resists heat flow.",
+          "example": "Wood, plastic, wool, and air are good insulators.",
+          "hindiTerm": "ऊष्मा रोधक",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl08",
+          "term": "Specific heat capacity",
+          "definition": "The amount of heat needed to raise 1 kg of a substance by 1°C; the property that makes water special.",
+          "example": "Water's specific heat is ~5 times higher than air's — that's why oceans warm and cool slowly.",
+          "hindiTerm": "विशिष्ट ऊष्मा धारिता",
+          "relatedConceptIds": [
+            "ch04_t01_c07"
+          ]
+        },
+        {
+          "id": "ch04_gl09",
+          "term": "Sea breeze",
+          "definition": "Wind blowing from sea to land during the day, due to faster heating of land.",
+          "example": "Marine Drive's afternoon breeze is a textbook sea breeze.",
+          "hindiTerm": "समुद्री हवा",
+          "relatedConceptIds": [
+            "ch04_t02_c06"
+          ]
+        },
+        {
+          "id": "ch04_gl10",
+          "term": "Cryogenics",
+          "definition": "The science of materials and processes at extremely low temperatures, usually below -150°C.",
+          "example": "Liquid nitrogen used in ISRO's launches is at -196°C — cryogenic fuel.",
+          "hindiTerm": "हिमनशास्त्र",
+          "relatedConceptIds": [
+            "ch04_t03_c03"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch04_mp01",
+          "emoji": "🥄",
+          "title": "Spoons in hot water — race the conductors",
+          "needs": [
+            "A wooden spoon, plastic spoon, steel spoon, and copper spoon (or any small piece of copper wire)",
+            "A heatproof mug of hot water (just boiled)",
+            "A small dab of butter on each handle"
+          ],
+          "steps": [
+            "Stand all spoons upright in the hot water — handles up, bowl ends in the water.",
+            "Quickly stick a small dab of butter at the top of each handle (just below the upper edge).",
+            "Watch which butter dab slides or drops first.",
+            "Order from fastest to slowest: copper, steel, plastic, wood."
+          ],
+          "expectedObservation": "Copper handle's butter melts first, then steel's, then plastic's stays solid the longest (and wood's barely warms).",
+          "whyItWorks": "Each material has a different thermal conductivity. Copper conducts heat ~400 W/m/K, steel ~50, plastic and wood under 0.2. The heat racing up the copper handle melts the butter quickly; the wooden handle barely warms even after 5 minutes. This is why every Indian kitchen has copper-bottom pans with wooden handles — chosen for the same physics you just demonstrated.",
+          "estimatedMinutes": 10,
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c05"
+          ]
+        },
+        {
+          "id": "ch04_mp02",
+          "emoji": "🌬️",
+          "title": "Convection chimney — see hot air rise",
+          "needs": [
+            "A clean glass jar (mouth open)",
+            "Two short candles",
+            "A thin strip of newspaper (~10 cm × 2 cm)",
+            "Matches (adult supervision)"
+          ],
+          "steps": [
+            "Place the two candles side by side. Light them.",
+            "Hold the jar upside down over them — the candles should burn for a moment, then start flickering.",
+            "Twist the newspaper strip and light one end. As it gives smoke, hold the smoking end near the jar's mouth.",
+            "Watch the smoke: it spirals around the rim, gets sucked into the jar, then puffs out as the candles run out of fresh air."
+          ],
+          "expectedObservation": "Smoke shows a clear circulation: cold smoke pushed down into the jar at one side, hot air rising out the other side.",
+          "whyItWorks": "Burning candles heat the air above them. Hot air expands and rises, leaving low pressure behind. Cool air from outside the jar rushes down to fill the gap, and the cycle continues — this is convection in motion. The smoke just makes the invisible air movement visible. The same convection drives sea breezes, monsoons, and the air-conditioning in your home.",
+          "estimatedMinutes": 15,
+          "relatedConceptIds": [
+            "ch04_t02_c02",
+            "ch04_t02_c06"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch04_sci01",
+          "name": "Anders Celsius (with India context)",
+          "lifespan": "1701–1744",
+          "nationality": "Swedish",
+          "oneLineLegacy": "Defined the temperature scale that every Indian weather forecast and laboratory still uses 280 years later.",
+          "narrative": "In 1742, the Swedish astronomer Anders Celsius proposed a temperature scale where water froze at 0 and boiled at 100. He chose 100 divisions because the decimal system was easier than the Fahrenheit scale used elsewhere. The Celsius scale spread worldwide because of its simplicity — pick any two stable points in nature, divide by 100, and you have a usable thermometer. India officially adopted Celsius after independence (the colonial Fahrenheit lingered briefly in railway timetables). Every IMD weather report, every WHO fever guideline, every Class 7 textbook in India uses his scale. His insight wasn't just a number system — it was the decision to anchor measurement on universal natural events (water phase changes) rather than human bodies (Fahrenheit was originally tied to brine and body heat).",
+          "relatedConceptIds": [
+            "ch04_t01_c02",
+            "ch04_t01_c03"
+          ]
+        }
+      ],
+      "whatIfs": [
+        {
+          "id": "ch04_wi01",
+          "question": "What if water had a low specific heat capacity like sand?",
+          "answer": "Oceans would heat up to over 60°C every summer and freeze every winter. Coastal cities would have insane temperature swings between day and night. Marine life would die — fish, coral, plankton all require stable temperatures. Monsoons depend on the slow ocean warming/cooling; without it, India might never get a regular rainy season. Water's high heat capacity is what makes life-friendly weather possible — a chemistry quirk we owe everything to.",
+          "relatedConceptIds": [
+            "ch04_t01_c07",
+            "ch04_t02_c06"
+          ]
+        },
+        {
+          "id": "ch04_wi02",
+          "question": "What if you tried to fry an egg on the bonnet of a car parked in the Delhi sun?",
+          "answer": "Egg whites need 60°C to start cooking. A black car bonnet under direct Delhi summer sun (45°C air) hits 75–80°C in 30 minutes. So yes, the egg WILL slowly cook — at the edges first, then the centre — over maybe 30–45 minutes. White cars stay closer to 50–55°C; the egg barely warms. This is also why never leave kids or pets in a parked car: the interior can exceed 70°C in 30 minutes, an oven-grade environment.",
+          "relatedConceptIds": [
+            "ch04_t02_c03"
+          ]
+        },
+        {
+          "id": "ch04_wi03",
+          "question": "What if Earth was 5°C hotter on average?",
+          "answer": "This is close to the worst-case climate-change projection for 2100. The Arctic and Antarctic would mostly melt — sea levels rise 60+ metres, drowning Kolkata, Mumbai, Chennai. Many heat-sensitive crops fail; wheat yields drop in the northern plains. The monsoon pattern shifts unpredictably. Diseases spread to higher altitudes. We'd need cooling-the-house-just-to-survive infrastructure even in cities that don't currently use AC. Five degrees doesn't sound like much but at planetary scale it reshapes everything.",
+          "relatedConceptIds": [
+            "ch04_t03_c02"
+          ]
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch04_cx01",
+          "toChapterId": "ch08",
+          "topic": "Winds, Storms and Cyclones",
+          "pointer": "Convection on a city scale is the sea/land breeze in this chapter; convection on a planetary scale becomes the monsoon and the cyclone in Ch.8. Same physics, different scale.",
+          "relatedConceptIds": [
+            "ch04_t02_c02",
+            "ch04_t02_c06"
+          ]
+        },
+        {
+          "id": "ch04_cx02",
+          "toChapterId": "ch07",
+          "topic": "Weather and Climate",
+          "pointer": "Heat distribution by air and water (this chapter) is what creates regional climates. Ch.7 zooms out to show why Mumbai, Delhi, Kashmir and Chennai have such different weather despite similar latitudes.",
+          "relatedConceptIds": [
+            "ch04_t02_c06",
+            "ch04_t03_c02"
+          ]
+        }
+      ],
+      "curriculumBridge": {
+        "nextYearClass8": "Class 8 doesn't have a 'heat' chapter, but reaches into the Chemical Effects of Electric Current (Joule heating) and Light reflection (linked physics). Heat reappears in Class 9 (matter, fluids), then deeply in Class 11.",
+        "forNeetJee": "Class 11 Physics has TWO heat chapters: Thermal Properties of Matter (specific heat, latent heat, thermal expansion, conduction equations) and Thermodynamics (first/second laws, entropy). NEET tests calorimetry, thermoregulation, and kinetic theory. JEE adds quantitative differential equations for heat flow. Every concept here is the seed of an equation later."
+      },
+      "gallery": [
+        {
+          "id": "ch04_gi01",
+          "caption": "Mercury thermometer scale",
+          "detail": "Mercury expands ~5x more than steel for the same temperature rise. The thin glass column amplifies that expansion into a readable jump — the classic instrument before digital sensors.",
+          "assetHint": "sfsymbol:thermometer",
+          "relatedConceptIds": [
+            "ch04_t01_c02",
+            "ch04_t01_c06"
+          ]
+        },
+        {
+          "id": "ch04_gi02",
+          "caption": "Convection cell in boiling water",
+          "detail": "Heat enters from the bottom of the pot. Water at the bottom expands, rises in plumes; cool water sinks down the sides to replace it. This circular flow is convection made visible in the kitchen.",
+          "assetHint": "sfsymbol:flame.fill",
+          "relatedConceptIds": [
+            "ch04_t02_c02"
+          ]
+        },
+        {
+          "id": "ch04_gi03",
+          "caption": "Sea breeze diagram",
+          "detail": "Day: sun heats land faster than sea → hot land air rises → cool sea air rushes inland (sea breeze). Night: land cools faster → cool land air sinks → warm sea air flows seaward (land breeze).",
+          "assetHint": "sfsymbol:wind",
+          "relatedConceptIds": [
+            "ch04_t02_c06"
+          ]
+        },
+        {
+          "id": "ch04_gi04",
+          "caption": "Thermos flask cutaway",
+          "detail": "Inner glass, vacuum gap, silver coating, outer glass, tight cap. Each layer defeats one mode of heat transfer. Together they keep tea hot from morning bus to lunch break.",
+          "assetHint": "shape:thermos",
+          "relatedConceptIds": [
+            "ch04_t02_c04"
+          ]
+        },
+        {
+          "id": "ch04_gi05",
+          "caption": "Earth's heat balance",
+          "detail": "Sun pours ~340 W/m² of radiation onto Earth. About 30% reflects back to space (clouds, ice, deserts). 70% absorbs into land, ocean, atmosphere. Earth re-radiates an equal amount of infrared back to space — balancing the books. Greenhouse gases trap part of the outgoing infrared, warming the planet.",
+          "assetHint": "sfsymbol:globe.asia.australia.fill",
+          "relatedConceptIds": [
+            "ch04_t03_c02"
+          ]
+        },
+        {
+          "id": "ch04_gi06",
+          "caption": "Liquid nitrogen demo",
+          "detail": "Pouring liquid nitrogen (-196°C) onto a flower freezes it instantly into glass-like brittleness. ISRO uses cryogenic liquid oxygen and hydrogen as rocket fuel because the cold-stored liquids pack vastly more mass per litre than gases would.",
+          "assetHint": "sfsymbol:snowflake",
+          "relatedConceptIds": [
+            "ch04_t03_c03"
+          ]
+        }
+      ],
+      "timelines": [
+        {
+          "id": "ch04_tl01",
+          "title": "How heat moves from a flame to your morning chai",
+          "intro": "Light the stove. Heat travels through three different modes before you take the first sip.",
+          "steps": [
+            {
+              "id": "ch04_tl01_s01",
+              "label": "Flame",
+              "body": "The gas flame is at ~1000°C. The hot combustion gases rise by convection and lick the bottom of the pot.",
+              "assetHint": "sfsymbol:flame.fill"
+            },
+            {
+              "id": "ch04_tl01_s02",
+              "label": "Pot bottom — conduction",
+              "body": "Heat enters the copper / aluminium bottom and races up through the metal by conduction. Within seconds the whole pot interior is hot.",
+              "assetHint": "sfsymbol:square.fill"
+            },
+            {
+              "id": "ch04_tl01_s03",
+              "label": "Water — convection",
+              "body": "Water at the bottom heats up, expands, rises in a plume. Cooler water sinks down the sides to replace it. The whole pot churns — convection mixes the heat evenly.",
+              "assetHint": "sfsymbol:wind"
+            },
+            {
+              "id": "ch04_tl01_s04",
+              "label": "Steam radiates",
+              "body": "Hot steam above the pot radiates infrared to your face. You feel warm even without touching anything — pure radiation, no air or contact needed.",
+              "assetHint": "sfsymbol:waveform"
+            },
+            {
+              "id": "ch04_tl01_s05",
+              "label": "Cup — conduction again",
+              "body": "Pour the chai. Heat conducts into the cup wall, then to your fingers. The wooden / ceramic handle protects you from full conductivity.",
+              "assetHint": "sfsymbol:cup.and.saucer.fill"
+            }
+          ],
+          "relatedConceptIds": [
+            "ch04_t02_c01",
+            "ch04_t02_c02",
+            "ch04_t02_c03",
+            "ch04_t02_c05"
+          ]
+        }
       ]
     },
     {
