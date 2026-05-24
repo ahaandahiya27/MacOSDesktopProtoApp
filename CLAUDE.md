@@ -105,9 +105,10 @@ didn't go through `applicationWillTerminate` — i.e. it crashed.
 scripts/ci-build-test.sh         # Release build + Debug test suite
 ```
 
-254 tests across 13 files. Keep them green. When you change a model's
-encoder or a content pack's schema, the matching test in
-`desktopAhaanTests/` is the canary.
+~335 tests across 16 files (269 XCTest + 66 swift-testing as of
+2026-05-24). Keep them green. When you change a model's encoder or a
+content pack's schema, the matching test in `desktopAhaanTests/` is
+the canary.
 
 ## Conventional commits
 

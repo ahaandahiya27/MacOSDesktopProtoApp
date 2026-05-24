@@ -76,7 +76,7 @@ desktopAhaan/
     ViewModels/                     # TranslatorViewModel, PracticeViewModel
     Views/                          # Home, Settings, History, Favorites
 
-desktopAhaanTests/                  # 254 XCTest tests across 13 files
+desktopAhaanTests/                  # ~335 tests across 16 files (269 XCTest + 66 swift-testing)
 
 docs/
     ISSUE_CATEGORIES.md             # the audit taxonomy — what's done, what's not
