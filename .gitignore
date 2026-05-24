@@ -34,3 +34,10 @@ Pods/
 
 # Carthage
 Carthage/Build/
+
+# Python (helper scripts in scripts/ generate __pycache__)
+__pycache__/
+*.pyc
+
+# Local scratch / unrelated test outputs
+hrone_test/

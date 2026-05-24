@@ -222,4 +222,163 @@ final class GoldenPathUITests: XCTestCase {
         XCTAssertTrue(ch4Title.waitForExistence(timeout: 3),
                       "Ch.4 'Heat' chapter title not in the AX tree after navigation.")
     }
+
+    // MARK: - 6. Notebook sheet — open + persist + dismiss + re-open
+
+    /// The kid's notebook is the only surface where they create
+    /// irreplaceable data. If a refactor ever silently breaks the
+    /// write path, the kid loses their notes with no recovery. This
+    /// test does a full round-trip: open the sheet, type a unique
+    /// sentinel string, dismiss, re-open, assert the sentinel is
+    /// still in the editor.
+    ///
+    /// Persistence happens via `.onChange(of: draft)` on every
+    /// keystroke (DataStore.setChapterNote is sync + atomic), so by
+    /// the time the close happens the data is already on disk. The
+    /// re-open verifies the read-back path matches.
+    func testNotebookSheet_OpenWritePersistAndReopen() throws {
+        let app = launchedApp()
+        XCTAssertTrue(openChapter(1, in: app))
+
+        // Sentinel includes a timestamp so consecutive runs of the
+        // test on the same chapter don't collide on assertion. A
+        // previous test's note that survived in DataStore would
+        // otherwise show up in the editor and mask a true write
+        // failure.
+        let sentinel = "ui-test sentinel \(Int(Date().timeIntervalSince1970))"
+
+        // Open the notebook via the "My Notebook" hero card. The
+        // accessibilityLabel is set in NotebookCard (see
+        // ChapterDetailView+Notebook.swift).
+        let notebookBtn = app.buttons["My Notebook"].firstMatch
+        XCTAssertTrue(notebookBtn.waitForExistence(timeout: 3),
+                      "Notebook CTA missing on Ch.1 — chapter detail mount changed.")
+        notebookBtn.click()
+
+        // Sheet present — assert the title text is visible.
+        let sheetTitle = app.staticTexts["My Notebook"].firstMatch
+        XCTAssertTrue(sheetTitle.waitForExistence(timeout: 5),
+                      "Notebook sheet did not present.")
+
+        // The TextEditor is the only text input in the sheet; type
+        // into it. Click first to focus, then typeText. usleep gives
+        // the .onChange persistence cycle one runloop to commit.
+        let editor = app.textViews.firstMatch
+        XCTAssertTrue(editor.waitForExistence(timeout: 2),
+                      "Notebook TextEditor not in AX tree.")
+        editor.click()
+        editor.typeText(sentinel)
+        usleep(500_000) // 0.5s — covers DataStore.setChapterNote atomic write
+
+        // Done button has .keyboardShortcut(.defaultAction), so
+        // pressing Return is the most reliable way to dismiss. The
+        // sheet's dismiss closure also runs the "captured" defensive
+        // write through DispatchQueue.main.async — by the time the
+        // sheet dismounts, the value is on disk.
+        app.typeKey(.return, modifierFlags: [])
+        usleep(500_000) // 0.5s — sheet dismount + deferred write commit
+
+        // Re-open. The same DataStore instance + chapter id should
+        // produce the same draft string.
+        XCTAssertTrue(notebookBtn.waitForExistence(timeout: 3),
+                      "Notebook button missing after sheet dismissed.")
+        notebookBtn.click()
+        XCTAssertTrue(sheetTitle.waitForExistence(timeout: 5),
+                      "Notebook sheet did not re-present.")
+
+        // The sentinel should be in the TextEditor's value.
+        // textViews on macOS surface their content via .value.
+        let reopenedEditor = app.textViews.firstMatch
+        XCTAssertTrue(reopenedEditor.waitForExistence(timeout: 2),
+                      "Re-opened notebook TextEditor not in AX tree.")
+        let editorValue = (reopenedEditor.value as? String) ?? ""
+        XCTAssertTrue(editorValue.contains(sentinel),
+                      "Notebook persistence regressed — sentinel '\(sentinel)' not in re-opened editor (saw: '\(editorValue.prefix(120))').")
+
+        // Cleanup: clear the editor + close so we don't leave junk
+        // in the user's actual chapter notes on the test machine.
+        reopenedEditor.click()
+        app.typeKey("a", modifierFlags: .command)
+        app.typeKey(.delete, modifierFlags: [])
+        app.typeKey(.return, modifierFlags: [])
+    }
+
+    // MARK: - 7. Glossary sheet — open + dismiss
+
+    /// Glossary is chapter-scoped; the code path is identical across
+    /// every chapter that has a non-empty glossary. One test on Ch.1
+    /// (10 glossary terms as of 2026-05-24) covers the whole class.
+    /// Auto-hides when chapter.glossary is empty, so the assertion
+    /// "the button exists" doubles as "Ch.1 still has terms in JSON".
+    func testGlossarySheet_OpenAndDismiss() throws {
+        let app = launchedApp()
+        XCTAssertTrue(openChapter(1, in: app))
+
+        // Glossary button accessibilityLabel format is
+        // "Glossary — N terms". Ch.1 currently has 10 terms; if a
+        // content edit changes the count, this needs updating.
+        // Using BEGINSWITH on the label predicate would be more
+        // resilient — but pinning the exact count also catches an
+        // accidental drop in glossary content.
+        let glossaryBtn = app.buttons["Glossary — 10 terms"].firstMatch
+        XCTAssertTrue(glossaryBtn.waitForExistence(timeout: 3),
+                      "Ch.1 glossary button missing or term count drifted from 10 — check chapter.glossary in science_class7.json.")
+        glossaryBtn.click()
+
+        // GlossarySheet's body renders "Glossary" as its title and
+        // has a close action (.cancelAction). Assert the title text
+        // appears so we know the sheet mounted (the button label
+        // "Glossary — 10 terms" only exists on the chapter detail,
+        // not in the sheet itself).
+        let sheetTitle = app.staticTexts["Glossary"].firstMatch
+        XCTAssertTrue(sheetTitle.waitForExistence(timeout: 5),
+                      "Glossary sheet did not present within 5s of the CTA tap.")
+
+        // Dismiss via Escape (.cancelAction is wired on the close
+        // button inside GlossarySheet) — the most portable dismiss
+        // path across SwiftUI sheet implementations.
+        app.typeKey(.escape, modifierFlags: [])
+        usleep(300_000)
+
+        // Back to chapter detail.
+        XCTAssertTrue(glossaryBtn.waitForExistence(timeout: 5),
+                      "Chapter detail did not re-mount after glossary dismissed.")
+    }
+
+    // MARK: - 8. InsideTheWireTour — propagated-tour smoke test
+
+    /// The leaf tour (test #3) covers Ch.1 — but Ch.1 is the pilot,
+    /// not a propagated mount. The propagated tours live in
+    /// `propagatedPilotInteractivesB` (commit 599f0f8 + 84eed29).
+    /// Pinning ONE propagated tour proves the coordinator's
+    /// `presentDeferred(.insideTheWireTour)` path works and that the
+    /// sister-file `insideTheWireTourCTA(coordinator:)` function
+    /// wiring is intact. Picking Wire (Ch.14) over Lens (Ch.15)
+    /// because Ch.14 is in the physics cluster — different chapter
+    /// cohort, different `else-if` arm in the dispatcher, more
+    /// representative of "did the propagation pattern survive."
+    func testInsideTheWireTour_OpenAndDismiss() throws {
+        let app = launchedApp()
+        XCTAssertTrue(openChapter(14, in: app),
+                      "Ch.14 chapter detail did not render — propagated mount unreachable.")
+
+        let cta = app.buttons["Inside the wire — five-stop electron-flow tour"].firstMatch
+        XCTAssertTrue(cta.waitForExistence(timeout: 3),
+                      "Inside the Wire CTA missing on Ch.14 — propagatedPilotInteractivesB ch14 mount likely regressed.")
+        cta.click()
+
+        // First stop title from WireTourStop.battery.title.
+        let firstStopTitle = app.staticTexts["At the battery's negative terminal"].firstMatch
+        XCTAssertTrue(firstStopTitle.waitForExistence(timeout: 5),
+                      "InsideTheWireTour did not present — coordinator's presentDeferred(.insideTheWireTour) may have regressed.")
+
+        // Close button accessibilityLabel set in
+        // InsideTheWireTour.swift's header bar.
+        let closeBtn = app.buttons["Close wire tour"].firstMatch
+        XCTAssertTrue(closeBtn.waitForExistence(timeout: 2))
+        closeBtn.click()
+
+        XCTAssertTrue(cta.waitForExistence(timeout: 5),
+                      "Ch.14 chapter detail did not re-mount after wire tour dismissed.")
+    }
 }
