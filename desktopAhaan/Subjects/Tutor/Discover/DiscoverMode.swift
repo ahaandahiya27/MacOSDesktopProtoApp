@@ -252,6 +252,10 @@ struct DiscoverShell<SceneBody: View>: View {
         }
         .frame(width: 0, height: 0)
         .opacity(0)
+        // VoiceOver should NOT walk through the scene-jump shortcuts —
+        // they're a keyboard-only convenience. Without this, focus
+        // jumps off-screen as VO sweeps the zero-frame buttons.
+        .accessibilityHidden(true)
     }
 
     private func jumpToScene(_ index: Int) {
