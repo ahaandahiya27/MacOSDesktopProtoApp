@@ -676,6 +676,16 @@ struct QuestionDetailView: View {
             .menuStyle(.borderlessButton)
             .frame(maxWidth: .infinity, alignment: .leading)
             .disabled(attemptOutcome != .unchecked)
+            // P4 from POLISH_TODOS — per-row a11y so VoiceOver users
+            // hear which left item they're pairing and what the picker
+            // does. Without this they hear only the chosen-text or
+            // "Choose…", which is ambiguous when several rows are open.
+            .accessibilityLabel("Match for \(pair.left)")
+            .accessibilityHint(
+                chosen == nil
+                    ? "Pick the right-side option that matches \(pair.left)."
+                    : "Currently matched to \(chosen ?? ""). Open to change or clear."
+            )
 
             // After Check, show ✓ or ✗ so the user sees per-row correctness
             // even without re-reading the whole worked solution.
