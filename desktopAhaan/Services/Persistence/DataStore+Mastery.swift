@@ -9,6 +9,39 @@ import Foundation
 // next to the storage but the main `DataStore.swift` stays focused
 // on its existing mutators.
 
+/// Per-topic mastery counts inside a chapter. D6 drill-down on
+/// the mastery dashboard renders one row per topic — same
+/// segmented-bar shape as the chapter card. Topics with zero
+/// reviewed questions are omitted (the dashboard auto-hides the
+/// expanded section when the topicSummaries list is empty).
+struct TopicMasterySummary: Hashable, Identifiable {
+    let chapterId: String
+    let topicId: String
+    let topicTitle: String
+    /// Stable display order inside the chapter — derived from the
+    /// chapter's `topics` array index. Lets the dashboard render
+    /// topics in the textbook's authored order regardless of how
+    /// the kid first answered.
+    let displayOrder: Int
+    let counts: [MasteryLevel: Int]
+
+    var id: String { "\(chapterId)::\(topicId)" }
+
+    var totalReviewed: Int {
+        counts.values.reduce(0, +)
+    }
+
+    var masteryFraction: Double {
+        guard totalReviewed > 0 else { return 0 }
+        let weighted =
+            Double(counts[.mastered]  ?? 0) * 1.00 +
+            Double(counts[.confident] ?? 0) * 0.66 +
+            Double(counts[.familiar]  ?? 0) * 0.33 +
+            Double(counts[.learning]  ?? 0) * 0.00
+        return weighted / Double(totalReviewed)
+    }
+}
+
 /// Per-chapter mastery counts. One row per chapter that has at least
 /// one reviewed question; chapters without any review history are
 /// omitted (the dashboard renders an empty-state cell for them via
@@ -22,6 +55,10 @@ struct ChapterMasterySummary: Hashable, Identifiable {
     /// Missing keys read as 0; the dashboard treats the dict as
     /// dense for layout.
     let counts: [MasteryLevel: Int]
+    /// Per-topic drill-down (D6). Empty when the aggregator wasn't
+    /// given a topic locator — backwards-compat with pre-D6
+    /// callers / tests. Sorted by `displayOrder`.
+    let topicSummaries: [TopicMasterySummary]
 
     var id: String { "\(subjectPackId)::\(chapterId)" }
 
@@ -98,36 +135,63 @@ extension DataStore {
         forPackId packId: String,
         chapters: [Chapter],
         locator: (String) -> (chapterId: String, chapterTitle: String, chapterNumber: Int)?,
+        topicLocator: ((String) -> TopicLocation?)? = nil,
         now: Date = Date()
     ) -> MasterySummary {
-        // chapterId → (numeric ordering, title, MasteryLevel → count)
-        var byChapter: [String: (number: Int, title: String, counts: [MasteryLevel: Int])] = [:]
+        // chapterId → (numeric ordering, title, MasteryLevel → count,
+        //               topicId → (topicTitle, displayOrder, counts))
+        var byChapter: [String: (
+            number: Int,
+            title: String,
+            counts: [MasteryLevel: Int],
+            topics: [String: TopicAggregate]
+        )] = [:]
         var totalReviewed = 0
 
         for (questionId, review) in questionReviews {
-            guard let loc = locator(questionId) else {
-                // Review row points at a question that no longer
-                // exists in the pack (content removed). Skip it
-                // rather than dropping a sentinel chapter into the
-                // grid — the file stays on disk, harmless.
-                continue
-            }
+            guard let loc = locator(questionId) else { continue }
             let level = MasteryLevel.from(review: review)
             var entry = byChapter[loc.chapterId]
-                ?? (number: loc.chapterNumber, title: loc.chapterTitle, counts: [:])
+                ?? (number: loc.chapterNumber, title: loc.chapterTitle,
+                    counts: [:], topics: [:])
             entry.counts[level, default: 0] += 1
+            // Per-topic bucketing — only when the caller supplied a
+            // topic locator. Skipping leaves topicSummaries empty,
+            // which is the pre-D6 behaviour.
+            if let topicLoc = topicLocator?(questionId) {
+                var topicAgg = entry.topics[topicLoc.topicId]
+                    ?? TopicAggregate(
+                        title: topicLoc.topicTitle,
+                        displayOrder: topicLoc.displayOrder,
+                        counts: [:]
+                    )
+                topicAgg.counts[level, default: 0] += 1
+                entry.topics[topicLoc.topicId] = topicAgg
+            }
             byChapter[loc.chapterId] = entry
             totalReviewed += 1
         }
 
         let chapterRows: [ChapterMasterySummary] = byChapter
             .map { (chapterId, entry) in
-                ChapterMasterySummary(
+                let topicRows = entry.topics
+                    .map { (topicId, agg) in
+                        TopicMasterySummary(
+                            chapterId: chapterId,
+                            topicId: topicId,
+                            topicTitle: agg.title,
+                            displayOrder: agg.displayOrder,
+                            counts: agg.counts
+                        )
+                    }
+                    .sorted { $0.displayOrder < $1.displayOrder }
+                return ChapterMasterySummary(
                     subjectPackId: packId,
                     chapterId: chapterId,
                     chapterNumber: entry.number,
                     chapterTitle: entry.title,
-                    counts: entry.counts
+                    counts: entry.counts,
+                    topicSummaries: topicRows
                 )
             }
             .sorted { $0.chapterNumber < $1.chapterNumber }
@@ -141,4 +205,25 @@ extension DataStore {
             totalReviewed: totalReviewed
         )
     }
+}
+
+// MARK: - Topic locator support
+
+/// Carrier for `topicLocator` callers — same role as the existing
+/// inline-tuple `locator`, but a struct so the call site documents
+/// the parameter order.
+struct TopicLocation: Hashable {
+    let topicId: String
+    let topicTitle: String
+    /// Index in the chapter's `topics` array, used to keep the
+    /// dashboard row order stable across re-renders.
+    let displayOrder: Int
+}
+
+/// Internal aggregator state — value-type so `byChapter[...]` reads
+/// `Optional<TopicAggregate>` consistently.
+private struct TopicAggregate {
+    let title: String
+    let displayOrder: Int
+    var counts: [MasteryLevel: Int]
 }

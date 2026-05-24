@@ -65,9 +65,31 @@ private struct MasteryDashboardContent: View {
                     chapterTitle: loc.chapter.title,
                     chapterNumber: loc.chapter.number
                 )
+            },
+            topicLocator: { id in
+                guard let loc = subjectRegistry.location(forQuestionId: id),
+                      loc.pack.id == pack.id else { return nil }
+                // Find the question's owning topic. Walk the chapter
+                // topics linearly — typical chapter has 3-5 topics
+                // so this is cheap (≤ 5 hash lookups via prefix-check).
+                for (idx, topic) in loc.chapter.topics.enumerated() {
+                    if topic.questions.contains(where: { $0.id == id }) {
+                        return TopicLocation(
+                            topicId: topic.id,
+                            topicTitle: topic.title,
+                            displayOrder: idx
+                        )
+                    }
+                }
+                return nil
             }
         )
     }
+
+    /// Expanded chapter ids (D6 drill-down). Tap a chapter card →
+    /// the per-topic rows slide in beneath. Closed by default so the
+    /// dashboard isn't a wall of topic rows for a kid mid-review.
+    @State private var expandedChapterIds: Set<String> = []
 
     var body: some View {
         ScrollView {
@@ -274,42 +296,105 @@ private struct MasteryDashboardContent: View {
 
     @ViewBuilder
     private func chapterCard(_ row: ChapterMasterySummary) -> some View {
-        Button {
-            openChapter(row)
-        } label: {
-            HStack(spacing: 14) {
-                VStack(alignment: .leading, spacing: 6) {
-                    HStack(spacing: 6) {
-                        Text("Ch. \(row.chapterNumber) — \(row.chapterTitle)")
-                            .font(.headline)
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(2)
-                        Spacer(minLength: 0)
-                        Text("\(row.totalReviewed)")
-                            .font(.caption.weight(.semibold).monospacedDigit())
-                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        let isExpanded = expandedChapterIds.contains(row.chapterId)
+        VStack(alignment: .leading, spacing: 10) {
+            Button {
+                if row.topicSummaries.isEmpty {
+                    openChapter(row)
+                } else {
+                    if isExpanded {
+                        expandedChapterIds.remove(row.chapterId)
+                    } else {
+                        expandedChapterIds.insert(row.chapterId)
                     }
-                    masteryBar(for: row)
-                    levelChips(for: row)
                 }
-                Image(systemName: "chevron.right")
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .accessibilityHidden(true)
+            } label: {
+                HStack(spacing: 14) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack(spacing: 6) {
+                            Text("Ch. \(row.chapterNumber) — \(row.chapterTitle)")
+                                .font(.headline)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(2)
+                            Spacer(minLength: 0)
+                            Text("\(row.totalReviewed)")
+                                .font(.caption.weight(.semibold).monospacedDigit())
+                                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        }
+                        masteryBar(for: row)
+                        levelChips(for: row)
+                    }
+                    Image(systemName: row.topicSummaries.isEmpty
+                          ? "chevron.right"
+                          : (isExpanded ? "chevron.down" : "chevron.right"))
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        .accessibilityHidden(true)
+                }
+                .padding(14)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(NSColor.controlBackgroundColor))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
+                )
+                .contentShape(Rectangle())
             }
-            .padding(14)
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(NSColor.controlBackgroundColor))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
-            )
-            .contentShape(Rectangle())
+            .buttonStyle(.plain)
+            .pointingCursor()
+            .accessibilityLabel(a11yLabel(for: row))
+
+            // D6 — per-topic drill-down. Renders only when the chapter
+            // card is expanded AND the aggregator gave us topic data.
+            if isExpanded {
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(row.topicSummaries) { topic in
+                        topicRow(topic)
+                    }
+                    Button("Open chapter") { openChapter(row) }
+                        .font(.caption)
+                        .padding(.top, 4)
+                }
+                .padding(.leading, 18)
+            }
         }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel(a11yLabel(for: row))
+    }
+
+    private func topicRow(_ topic: TopicMasterySummary) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text(topic.topicTitle)
+                    .font(.callout.weight(.medium))
+                    .lineLimit(2)
+                Spacer(minLength: 0)
+                Text("\(topic.totalReviewed)")
+                    .font(.caption2.monospacedDigit())
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+            }
+            // Same segmented-bar shape as the chapter card; smaller height.
+            GeometryReader { geo in
+                let total = max(1, topic.totalReviewed)
+                HStack(spacing: 0) {
+                    ForEach(MasteryLevel.allCases) { level in
+                        let count = topic.counts[level] ?? 0
+                        let fraction = Double(count) / Double(total)
+                        Rectangle()
+                            .fill(level.tint)
+                            .frame(width: geo.size.width * CGFloat(fraction))
+                            .accessibilityHidden(true)
+                    }
+                }
+            }
+            .frame(height: 6)
+            .clipShape(RoundedRectangle(cornerRadius: 3))
+        }
+        .padding(10)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.gray.opacity(0.06))
+        )
+        .accessibilityLabel("Topic \(topic.topicTitle): \(topic.totalReviewed) tracked")
     }
 
     private func masteryBar(for row: ChapterMasterySummary) -> some View {

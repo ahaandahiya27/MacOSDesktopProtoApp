@@ -713,6 +713,7 @@
 		A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
 		DDE458CA82ED8EC0011208D6 /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F3B61779C768EADF883456 /* SubjectRegistryTests.swift */; };
+		5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */; };
 		2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */; };
 		2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */; };
 		843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */; };
@@ -1454,6 +1455,7 @@
 		BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewFlagTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
 		19F3B61779C768EADF883456 /* SubjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectRegistryTests.swift"; sourceTree = "<group>"; };
+		3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicMasteryTests.swift"; sourceTree = "<group>"; };
 		91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationServiceTests.swift"; sourceTree = "<group>"; };
 		3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorNavigationTests.swift"; sourceTree = "<group>"; };
 		6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelTests.swift"; sourceTree = "<group>"; };
@@ -3055,6 +3057,7 @@
 				BE95DD4D15D17D6931C1D0F4,
 				ECC6A95CD9ABF9B8C9017257,
 				19F3B61779C768EADF883456,
+				3309464A84A6E3CF62A1EE49,
 				91B26F6ED1B552B74EDB1D5E,
 				3436224B3C9552AEB42BB80D,
 				6E9E6049C67F2B64BD6D4A51,
@@ -3933,6 +3936,7 @@
 				A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
 				DDE458CA82ED8EC0011208D6 /* SubjectRegistryTests.swift in Sources */,
+				5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */,
 				2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */,
 				2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */,
 				843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */,
