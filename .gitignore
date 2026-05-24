@@ -3,6 +3,8 @@ build/
 DerivedData/
 .ci-derived/
 .dd/
+.dd-*/
+*.backup_xcode26
 *.xcuserstate
 *.xcuserdatad
 xcuserdata/
@@ -41,3 +43,6 @@ __pycache__/
 
 # Local scratch / unrelated test outputs
 hrone_test/
+
+# Claude Code local session settings (per-machine; never tracked)
+.claude/
