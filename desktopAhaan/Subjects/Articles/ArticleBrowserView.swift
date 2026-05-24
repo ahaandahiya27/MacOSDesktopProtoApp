@@ -298,8 +298,7 @@ private struct NativeArticleRepresentable: NSViewRepresentable {
 // MARK: - ArticleCoordinator
 
 @MainActor
-private class ArticleCoordinator: NSObject, ObservableObject
-{
+class ArticleCoordinator: NSObject, ObservableObject, NSTextViewDelegate {
     @Published var canGoBack = false
     @Published var canGoForward = false
     @Published var pageTitle = ""
@@ -386,6 +385,8 @@ private class ArticleCoordinator: NSObject, ObservableObject
 
     func attachNativeTextView(_ textView: NSTextView) {
         nativeTextView = textView
+        // Relative-href routing — see +LinkRouting.swift.
+        textView.delegate = self
         updateNativeTextView()
     }
 
