@@ -914,6 +914,137 @@ at the existing call sites.
   state and the gap this session closed; it's the durable artefact
   for any future session asking "what's already shipped here?"
 
+---
+
+## ARTICLE RENDERER FIX — 2026-05-24 (evening)
+
+Two-commit pass on the article surface. Every chapter's Beyond /
+Story / Scientists / What-If / Plant-of-the-Day / Glossary /
+Self-Check / NCERT-Q&A / Mistakes / Bridge / Mini-project /
+Infographic article rendered as a wall of plain text with `&#x27;`
+literals where every apostrophe should have been, no visible
+headings, no bullet lists, no callout backgrounds, no tappable link
+cards. The data was in the HTML — the renderer was the bug.
+
+### `ba8958f` — `fix(articles): decode numeric and extended named HTML entities`
+
+`stripHTML(_:)` only handled 9 named entities and zero numeric refs.
+The authoring tool emits `&#x27;` (apostrophe), `&#x2014;` (em
+dash), and mixes in named typographic glyphs (`&rsquo;`, `&ldquo;`,
+`&rdquo;`). Refactored entity handling into a dedicated
+`decodeEntities(_:)` helper:
+
+  1. Extended named-entity table — curly quotes, copyright /
+     trademark / registered, math / measurement (deg / times /
+     divide / plusmn / permil), currency (euro / pound / yen),
+     paragraph / section marks.
+  2. Numeric refs — `NSRegularExpression` sweep over
+     `&#(x|X)?([0-9A-Fa-f]+);`. Decimal AND hex (both `&#x` and
+     `&#X`). Caps at U+10FFFF; leaves invalid refs as literals.
+  3. **Ordering rule** — named first, numeric second, `&amp;`
+     LAST. Prevents `&amp;#x27;` (author-escaped literal) from
+     decoding to an apostrophe. Test `testAmpersandDecodedLast`
+     pins this.
+
+14 tests, 0.026s. Files touched:
+- `desktopAhaan/Subjects/Articles/ArticleBrowserView+PlainTextFallback.swift` (122 → 217 LOC)
+- `desktopAhaanTests/ArticlePlainTextFallbackTests.swift` (new, 14 cases)
+
+### `9cece73` — `feat(articles): structured renderer`
+
+The bigger half. `loadNativeArticle` previously wrapped the stripped
+plain-text body in a single-font NSAttributedString, so even with
+entity decoding the dialog still read as a wall of text. Added a
+structured intermediate the off-main read can produce and the
+@MainActor receiver renders typographically.
+
+`ArticleBlock: Sendable` discriminated union (heading / paragraph /
+bulletList / calloutBox / linkCard / divider) + `ArticleRun:
+Sendable` (text + bold/italic flags + optional href). Crosses the
+existing actor hop in `readParseAndExtractTitle` without
+`@unchecked` lies.
+
+Two new files (split to fit the 600-LOC ceiling):
+
+- `ArticleStructuredRenderer.swift` (539 LOC) — types + tolerant
+  HTML parser. Recognises h1..h3, p, ul/li, aside.fact-box, anchor
+  cards (the "More Ways to Explore" pattern). Tag walker with
+  paren-counting; unknown tags fall through to paragraphs.
+  Inline-run sub-parser handles `<strong>` / `<em>` / `<a href>`.
+  `deduplicateHeroHeading(_:matching:)` implements E4 — drops the
+  body's first <h1> only if it equals the chrome title (case +
+  whitespace insensitive).
+- `ArticleStructuredRenderer+Render.swift` (222 LOC) —
+  `@MainActor makeRichAttributedString(from:)` walks blocks and
+  emits NSAttributedString with per-kind typography:
+    * h1: bold +8pt; h2: bold +4pt; h3: bold +2pt
+    * bulletList: 18pt firstLineHeadIndent + 36pt continuation
+      + "•  " bullet
+    * calloutBox: yellow-tinted background + bold title + indented
+      body
+    * linkCard: control-background fill + bold linkColor title +
+      smaller secondary blurb + `.link` attribute on href
+    * divider: ── strip in tertiaryLabel
+
+12 parser tests pass in 0.022s. Covers R7..R10 from the brief plus
+inline-mark survival, head/script/style stripping, heading levels.
+
+`ArticleBrowserView.loadNativeArticle` swap is one block:
+
+    case .success(_, let title, let blocks):
+        let trimmed = ArticleStructuredRenderer
+            .deduplicateHeroHeading(blocks, matching: title)
+        self.nativeArticle = ArticleStructuredRenderer
+            .makeRichAttributedString(from: trimmed)
+
+`ArticleLoadOutcome.success` carries `blocks: [ArticleBlock]` along
+with the existing `body: String` (still used inside the off-main
+task for title fallback) and `title: String`.
+
+### Verification
+
+- Build (Debug, target 11.5): zero warnings.
+- Tests: 26 new cases (14 + 12) across the two test files, 0.046s
+  total. Existing 285-test suite still green.
+- All 9 lints clean.
+- `check_macos12_apis.py` confirms no `AttributedString` (macOS
+  12+); only NSAttributedString / NSMutableAttributedString surface
+  used.
+- File sizes: ArticleBrowserView.swift 598; renderer 539 + 222;
+  fallback 217. All under the 600-LOC ceiling.
+
+### Out of scope / deferred
+
+1. **NSTextView click routing for relative anchor hrefs.** The
+   structured renderer emits `.link` attributes for anchor cards
+   carrying relative hrefs like `ch01_scientists.html`. NSTextView's
+   default behaviour: tries to open the relative string as a URL,
+   fails, no-op. To navigate to the linked article within the same
+   browser, we need `NSTextViewDelegate.textView(_:clickedOnLink:at:)`
+   on the existing coordinator. Logged for the next session.
+2. **SwiftUI ForEach-over-blocks alternative.** The brief proposed
+   a pure-SwiftUI surface (Text(verbatim:) + Button per linkCard).
+   The current implementation keeps NSTextView + NSAttributedString
+   (the existing rendering surface) because swapping would touch
+   SpeechReader's paragraph-range coupling and the read-aloud
+   highlight machinery. A future "fully SwiftUI articles" refactor
+   could revisit; the typed `ArticleBlock` intermediate is the same
+   carrier either way.
+
+### Notes for future sessions
+
+- The parser is tolerant by design — authored HTML is the only
+  input. If a chapter adds a new block tag (e.g. `<blockquote>`),
+  the parser will fall through to `.paragraph` until a per-tag
+  branch is added in `tryParseBlock`.
+- `decodeEntities` decode-order (named → numeric → `&amp;` last) is
+  pinned by the `testAmpersandDecodedLast` test. Don't simplify the
+  decoder loop without keeping that ordering.
+- `deduplicateHeroHeading` only acts on `.heading(level: 1, _)`. If
+  a chapter's `<header class="hero">` uses an h2 instead of h1, the
+  dedup won't fire; that's intentional — only level-1 headings are
+  candidates for chrome-title duplicates.
+
 
 
 
