@@ -743,4 +743,87 @@ drift) — and that's where every commit in this session sits.
   is moot in practice — but a fresh check still surfaced J1's
   hardcoded-path fragility.
 
+---
+
+## CLOSE-AUDIT + LINT-EXTENSION + APPICON SESSION COMPLETE — 2026-05-24 (afternoon)
+
+Follow-up session to the morning's iMac-readiness pass. The morning
+closed every 🔴 high and most 🟡 mediums; this session extended the
+LH005 lint to prevent recurrence, generated the missing AppIcon
+PNGs, enriched the Surface_AuditWalker with an interaction smoke
+walk, and reconciled DEEP_AUDIT_2026.md's inline row state with the
+close-out matrix.
+
+### What landed
+
+- `4ff5cf5` — `chore(lint): LH005b — refuse unguarded withAnimation
+  imperative wraps`. New rule, dedicated allowlist
+  (`scripts/lh005_withanimation_allowlist.txt`), self-test fixture
+  pair. 66 pre-existing sites grandfathered with per-site reasons.
+- `316213e` — `docs(audit): reconcile inline row status with the
+  close-out block`. Every G/D/J/K/L row in DEEP_AUDIT_2026.md now
+  carries `✅ closed <sha>` or `⚠️ false positive` matching the
+  bottom-of-file matrix.
+- `c5ca9f9` — `fix(a11y): per-row label + hint on match-pairs picker
+  (P4)`. The match-the-following Menu picker had no per-row
+  VoiceOver context; added `.accessibilityLabel("Match for <left>")`
+  + a contextual hint.
+- `af367bf` — `fix(a11y): pass articleTitle through ArticleEntryButton
+  (P7)`. Both call paths now produce "Read <Title> aloud" on the
+  read-aloud button.
+- `e4f4a1b` — `feat(branding): generate AppIcon PNGs via SwiftUI
+  composition (10 slots)`. Bold "A" monogram on indigo→purple
+  gradient, pixel-exact via `NSBitmapImageRep(pixelsWide:...)`.
+  actool now emplaces a real `AppIcon.icns` (84 KB).
+- `6565ad2` — `test(ui): Surface_AuditWalker — interaction smoke per
+  2026-05-24 brief`. Adds `test_surfaceAuditWalker_allChapters_smoke`
+  that drives Try Discover Mode / article + Read Aloud / My Notebook
+  per chapter and attaches a screenshot.
+
+### Build / lints / tests
+
+- Build (Debug + Release at `MACOSX_DEPLOYMENT_TARGET=11.5`): zero
+  code warnings, no actool warnings.
+- All 9 lint scripts clean. LH005b adds 66 grandfathered allowlist
+  rows; lifetime_hazards_allowlist keeps its 3.
+- POLISH_TODOS §1: P4/P5/P7/P8 all closed (P5 + P8 were already
+  shipped — verified in this session).
+- POLISH_TODOS §3: Surface audit walker ✅, AppIcon PNGs ✅,
+  withAnimation lint extension ✅.
+- DEEP_AUDIT_2026.md inline row state matches the close-out matrix.
+
+### Why this session was shorter than the brief estimated
+
+The 6-hour budget assumed every Phase-2 finding (G1..G13 + G15..G22
++ D1..D4) was still open. They weren't — the morning session's
+close-out block already showed every one closed (or marked false-
+positive). The inline "Status" column on each row hadn't been
+synced to match, which produced a misleading "open" signal at the
+top of the file.
+
+Real work this session was therefore Phase 1 (LH005 extension),
+Phase 5 (P4 + P7 actually-new fixes; P5 + P8 verified already-
+shipped), Phase 6A (AppIcon PNG generation — genuinely new), Phase
+6B (Surface_AuditWalker interaction smoke — extension of an existing
+test class), plus the row-state reconciliation. About 2 hours of
+clock time.
+
+### Notes for future sessions
+
+- `scripts/render-app-icon.swift` is the durable artefact for icon
+  regen. If the brand colours or monogram letter ever change, edit
+  `AppIconArtwork` and re-run `swift scripts/render-app-icon.swift`.
+- LH005b's 8-line lookback is the right compromise — wider lookback
+  pulled in false positives (e.g. a `reduceMotion`-mentioning
+  doc-comment 20 lines up); narrower missed real outer-block gates.
+  If a polish session decides to drive the 66 allowlisted sites
+  toward zero, the migration pattern is documented in the allowlist
+  header.
+- The Surface_AuditWalker now has two methods. The structural one
+  (`testWalkAllScienceChapters`) is a presence check; the new
+  interaction one (`test_surfaceAuditWalker_allChapters_smoke`) is
+  a crash smoke. Both stay opt-in via `-only-testing` because the
+  dev mac doesn't grant AX to the test runner; the iMac does.
+
+
 
