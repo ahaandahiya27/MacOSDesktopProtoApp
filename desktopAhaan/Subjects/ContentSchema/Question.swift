@@ -59,10 +59,29 @@ struct Question: Codable, Hashable, Identifiable {
     /// pack JSON files without this field continue to decode unchanged.
     let matchPairs: [MatchPair]?
 
+    /// Where this Question originated. Optional so the existing 732
+    /// textbook questions in `science_class7.json` decode unchanged
+    /// (nil → `.bookEnd` semantically). Boss-quiz and scene-quick-check
+    /// items synthesised in Swift literals pass `.bossQuiz` /
+    /// `.sceneQuickCheck` via the memberwise init.
+    let source: QuestionSource?
+
+    /// Optional progressive hints. When nil, the hint ladder UI in
+    /// `QuestionDetailView` derives hints from `solutionSteps.prefix(2)`
+    /// so authored content keeps working without a per-question hints
+    /// authoring pass. Existing pack JSON omits this field — the
+    /// `decodeIfPresent` call below keeps that path clean.
+    let hints: [String]?
+
+    /// Resolved source — never nil. Use this everywhere the view code
+    /// needs a concrete case; falls back to the schema-level default
+    /// when the JSON field was absent.
+    var effectiveSource: QuestionSource { source ?? QuestionSource.default }
+
     private enum CodingKeys: String, CodingKey {
         case id, prompt, questionType, options, answer, solutionSteps,
              commonMistakes, variations, difficulty, pageRefs, needsHumanReview,
-             matchPairs
+             matchPairs, source, hints
     }
 
     init(from decoder: Decoder) throws {
@@ -79,6 +98,8 @@ struct Question: Codable, Hashable, Identifiable {
         pageRefs = try c.decode([Int].self, forKey: .pageRefs)
         needsHumanReview = try c.decode(Bool.self, forKey: .needsHumanReview)
         matchPairs = try c.decodeIfPresent([MatchPair].self, forKey: .matchPairs)
+        source = try c.decodeIfPresent(QuestionSource.self, forKey: .source)
+        hints = try c.decodeIfPresent([String].self, forKey: .hints)
     }
 
     /// Memberwise init for any in-code synthesis (e.g. tests, defaults).
@@ -86,7 +107,9 @@ struct Question: Codable, Hashable, Identifiable {
          options: [String]?, answer: String, solutionSteps: [String],
          commonMistakes: [String], variations: [QuestionVariation],
          difficulty: Int, pageRefs: [Int], needsHumanReview: Bool,
-         matchPairs: [MatchPair]? = nil) {
+         matchPairs: [MatchPair]? = nil,
+         source: QuestionSource? = nil,
+         hints: [String]? = nil) {
         self.id = id
         self.prompt = prompt
         self.questionType = questionType
@@ -99,5 +122,7 @@ struct Question: Codable, Hashable, Identifiable {
         self.pageRefs = pageRefs
         self.needsHumanReview = needsHumanReview
         self.matchPairs = matchPairs
+        self.source = source
+        self.hints = hints
     }
 }

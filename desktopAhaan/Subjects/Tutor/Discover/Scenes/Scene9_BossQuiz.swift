@@ -218,6 +218,20 @@ struct Scene9_BossQuiz: View {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
         let isRight = option == item.answer
+        // SRS write-through: capture the answer at the same instant
+        // we record it for the score. Format pinned by
+        // BossQuizSRSWiringTests; `bossquiz_chNN_qII` is the stable
+        // id every chapter's wiring emits. First-try correct → .good,
+        // wrong → .forgot; the kid can't reattempt within one Boss
+        // Quiz session so .hard never fires here. The hint-ladder
+        // path (D5) is where .hard lives.
+        let ephemeralId = String(
+            format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ
+        )
+        DataStore.shared.recordEphemeralReview(
+            ephemeralId: ephemeralId,
+            quality: isRight ? .good : .forgot
+        )
         if isRight {
             score += 1
             withAnimation(reduceMotion ? nil : .spring()) { revealed[currentQ] = true }
