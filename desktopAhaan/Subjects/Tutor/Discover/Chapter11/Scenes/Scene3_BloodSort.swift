@@ -31,7 +31,10 @@ struct Scene3_BloodSort: View {
                 VStack(spacing: 10) {
                     ForEach(pairs) { p in
                         HStack {
-                            Text(p.part).font(.headline).frame(width: 240, alignment: .leading)
+                            Text(p.part).font(.headline)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
+                                .frame(width: 240, alignment: .leading)
                             Picker("", selection: Binding(
                                 get: { picks[p.id] ?? "" },
                                 set: { picks[p.id] = $0 }

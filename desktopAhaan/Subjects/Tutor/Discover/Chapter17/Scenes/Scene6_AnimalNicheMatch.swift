@@ -30,7 +30,10 @@ struct Scene6_AnimalNicheMatch: View {
                 VStack(spacing: 10) {
                     ForEach(pairs) { p in
                         HStack {
-                            Text(p.animal).font(.headline).frame(width: 140, alignment: .leading)
+                            Text(p.animal).font(.headline)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
+                                .frame(width: 140, alignment: .leading)
                             Picker("", selection: Binding(
                                 get: { picks[p.id] ?? "" }, set: { picks[p.id] = $0 }
                             )) {

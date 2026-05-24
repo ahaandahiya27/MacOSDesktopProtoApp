@@ -37,7 +37,10 @@ struct Scene7_CycloneWarningCodes: View {
                 VStack(spacing: 10) {
                     ForEach(codes) { item in
                         HStack {
-                            Text(item.code).font(.headline).frame(width: 240, alignment: .leading)
+                            Text(item.code).font(.headline)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.8)
+                                .frame(width: 240, alignment: .leading)
                             Picker("", selection: Binding(
                                 get: { picks[item.id] ?? "" },
                                 set: { picks[item.id] = $0 }
