@@ -333,6 +333,7 @@ struct ChapterDetailView: View {
     private var surfacesGroupBottom: some View {
         Group {
             conceptMapCTA
+            RelatedChaptersStrip(pack: pack, chapter: chapter)
             CurriculumBridgeChip(chapter: chapter)
             glossaryButton
             GallerySectionView(chapter: chapter)

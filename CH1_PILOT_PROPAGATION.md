@@ -10,6 +10,7 @@ on Chapter 1 (Nutrition in Plants) only:
 | 3 | **InsideTheLeafTour** | Five-stop SwiftUI walkthrough | `Subjects/Tutor/Surfaces/Ch1/` |
 | 4 | **WhyChainView** | Three-layer Socratic drill | `Subjects/Tutor/Components/` (reusable) |
 | 5 | **ConceptMapView** (was Ch1ConceptMap) | Node-and-edge SwiftUI graph | `Subjects/Tutor/Components/` (chapter-agnostic since 2026-05-24) |
+| 6 | **RelatedChaptersStrip** | Horizontal pill strip of cross-chapter pointers derived from `conceptMap` | `Subjects/Tutor/Components/` (chapter-agnostic, zero authoring cost — added 2026-05-24) |
 
 Ch.2..19 are protected by `Ch2_19_StructuralRatchetTests`: any
 content-array drift in those chapters fails CI immediately. Adding
