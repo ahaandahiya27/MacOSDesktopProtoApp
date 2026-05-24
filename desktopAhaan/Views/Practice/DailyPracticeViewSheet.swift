@@ -35,9 +35,22 @@ struct DailyPracticeView: View {
         return collectQuestions(matching: dueIds)
     }
 
+    /// Ordered recently-missed entries. Order preserved from
+    /// `recentlyMissedQuestionIds` (most-recent first) — that's why
+    /// this isn't a Set / collectQuestions(matching:) routing.
+    private var recentlyMissedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
+        dataStore.recentlyMissedQuestionIds().compactMap {
+            subjectRegistry.location(forQuestionId: $0)
+        }
+    }
+
     var body: some View {
         TutorNavigationContainer {
-            DailyPracticeContent(toughEntries: toughEntries, dueEntries: dueEntries)
+            DailyPracticeContent(
+                toughEntries: toughEntries,
+                dueEntries: dueEntries,
+                recentlyMissedEntries: recentlyMissedEntries
+            )
         }
     }
 }
@@ -45,6 +58,10 @@ struct DailyPracticeView: View {
 private struct DailyPracticeContent: View {
     let toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
     let dueEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
+    /// Resolved recently-missed canonical questions (ephemerals are
+    /// silently dropped — the subjectRegistry resolver returns nil
+    /// for `bossquiz_*` ids). Order preserved most-recent-first.
+    let recentlyMissedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)]
 
     @EnvironmentObject private var nav: TutorNavigationState
     @EnvironmentObject private var dataStore: DataStore
@@ -67,14 +84,24 @@ private struct DailyPracticeContent: View {
                 if streakDays > 0 || streakBest > 0 {
                     streakHistoryCard
                 }
-                if toughEntries.isEmpty && dueEntries.isEmpty {
+                if toughEntries.isEmpty && dueEntries.isEmpty && recentlyMissedEntries.isEmpty {
                     emptyState
-                } else if !toughEntries.isEmpty {
-                    Text("Flagged tough")
-                        .font(.headline)
-                        .padding(.top, 8)
-                    ForEach(toughEntries, id: \.question.id) { entry in
-                        row(for: entry)
+                } else {
+                    if !recentlyMissedEntries.isEmpty {
+                        Text("Recently missed")
+                            .font(.headline)
+                            .padding(.top, 8)
+                        ForEach(recentlyMissedEntries, id: \.question.id) { entry in
+                            row(for: entry)
+                        }
+                    }
+                    if !toughEntries.isEmpty {
+                        Text("Flagged tough")
+                            .font(.headline)
+                            .padding(.top, 8)
+                        ForEach(toughEntries, id: \.question.id) { entry in
+                            row(for: entry)
+                        }
                     }
                 }
             }

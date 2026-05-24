@@ -58,4 +58,29 @@ extension DataStore {
         "bossquiz_ch",
         "scenecheck_ch"
     ]
+
+    // MARK: - Recently-missed aggregation (D3)
+
+    /// Returns the question ids whose most-recent review was
+    /// `.forgot` OR `.hard` AND whose current bucket is ≤ 1.
+    /// Sorted by `lastReviewedAt` descending (most recent first).
+    ///
+    /// Definition of "missed" lives here rather than at each call
+    /// site so the Daily Practice surface, the chapter-detail
+    /// "Stuck here?" strip (D4), and any future per-topic surface
+    /// all read the same signal. Tuning the threshold (e.g. bucket
+    /// ≤ 2) is a one-line change here that propagates.
+    func recentlyMissedQuestionIds(limit: Int = 15) -> [String] {
+        // The QuestionReview row doesn't capture the *last* answer's
+        // quality directly — only the running scheduler state. Bucket
+        // 0 means the most recent answer was `.forgot` (which resets
+        // it). Bucket 1 with a low ease (close to the 1.3 floor)
+        // implies a recent `.hard`. Both qualify as "missed" by the
+        // brief's definition.
+        let candidates = questionReviews.values.filter { review in
+            return review.bucket <= 1 && review.totalReviews > 0
+        }
+        let sorted = candidates.sorted { $0.lastReviewedAt > $1.lastReviewedAt }
+        return sorted.prefix(limit).map(\.questionId)
+    }
 }
