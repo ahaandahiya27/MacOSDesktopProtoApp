@@ -64,11 +64,25 @@ struct PlainTextArticleFallback: View {
             loadError = "Article location is unknown."
             return
         }
-        do {
-            let raw = try String(contentsOf: url, encoding: .utf8)
-            bodyText = Self.stripHTML(raw)
-        } catch {
-            loadError = error.localizedDescription
+        // The fallback runs after WebKit has already crashed, so the kid is
+        // staring at a half-broken window. Reading + stripping the HTML on
+        // main worked in practice (most articles are 30–200 KB) but blocked
+        // the run loop for 50–200ms — enough to spin the wheel on the iMac.
+        // Hand off to a detached task; the @MainActor hop on completion
+        // keeps @State mutations on the right actor.
+        Task.detached(priority: .userInitiated) {
+            do {
+                let raw = try String(contentsOf: url, encoding: .utf8)
+                let stripped = Self.stripHTML(raw)
+                await MainActor.run {
+                    bodyText = stripped
+                }
+            } catch {
+                let message = error.localizedDescription
+                await MainActor.run {
+                    loadError = message
+                }
+            }
         }
     }
 
