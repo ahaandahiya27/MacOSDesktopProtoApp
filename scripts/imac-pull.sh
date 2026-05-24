@@ -19,7 +19,21 @@
 set -u   # not -e — we INTENTIONALLY continue past benign errors like
          # "Directory not empty" so the build flow doesn't abort.
 
+# Default to the iMac's known repo location; fall back to the script's
+# own directory if that path doesn't exist (handles the case where the
+# repo got relocated, or someone runs the script from a clone elsewhere
+# without editing this constant). Bash 3.2 compatible: no readlink -f,
+# no realpath, just two cd-and-pwd hops.
 REPO_ROOT="/Users/ahaandahiya/Downloads/DesktopAhaan 4/desktopAhaan"
+if [ ! -d "${REPO_ROOT}" ]; then
+    SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+    FALLBACK_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+    if [ -d "${FALLBACK_ROOT}/desktopAhaan.xcodeproj" ]; then
+        echo "▶ iMac path not found — falling back to script-relative repo root:"
+        echo "    ${FALLBACK_ROOT}"
+        REPO_ROOT="${FALLBACK_ROOT}"
+    fi
+fi
 XCODE_PROJECT="${REPO_ROOT}/desktopAhaan.xcodeproj"
 
 echo "▶ 1. Quitting Xcode (graceful, then force if needed)…"
