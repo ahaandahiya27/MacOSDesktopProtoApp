@@ -32,9 +32,13 @@ struct ArticleEntryButton: View {
             }
             .accentColor(Color.compatIndigo)
             .sheet(item: $presentedArticle) { article in
+                // P7: pass the article title through so the read-aloud
+                // button's a11y label says "Read <Title> aloud" instead
+                // of the generic "Read article aloud".
                 ArticleBrowserView(
                     initialFile: article.filename,
-                    chapterFolder: article.chapterFolder
+                    chapterFolder: article.chapterFolder,
+                    articleTitle: article.title
                 )
                 .frame(minWidth: 720, idealWidth: 920,
                        minHeight: 540, idealHeight: 680)
