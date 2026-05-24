@@ -102,3 +102,27 @@ script, 1 GitHub Actions workflow, 1 xcodeproj.
 - 🟢 low + advisory: ~14 rows logged for `POLISH_TODOS.md` if time permits or deferred entirely.
 
 **Strategy**: handle K1/K2/G14 first (fast, high-impact), then the 13 reduce-motion gates as one batched sweep (LH005 lint should grow a `withAnimation` rule too — that prevents recurrence), then D1/D2/J1/L1/L2/G15-G17/G20-G22 individually.
+
+## Status — 2026-05-24 close-out
+
+| ID | Status | Commit | Notes |
+|----|--------|--------|-------|
+| K1 / K2 | ✅ closed | e440637 | xcuserdata untracked; `**/xcuserdata/` glob added |
+| G14    | ✅ closed | af84581 | DictationButton hit area expanded to 44×44 via .contentShape |
+| G1 / G2 / G12 / G13 | ✅ closed | bbca346 | Chrome RM gate via withAnimationRespectingReduceMotion |
+| G3..G11 (real subset) | ✅ closed | 997724c | 11 real RM violations across Scenes 2/3/4/5/9; Scene7 + Scene4 shake + Scene4 grow were false positives (already gated) |
+| G15 | ⚠️ false positive | n/a | Already had `.accessibilityHidden(true)` at the time of the audit (subagent missed it) |
+| G16 / G17 | ✅ closed | cb4fad5 | `.accessibilityHidden(true)` added to zero-frame keyboard-sink ZStacks |
+| G20 / G21 / G22 | ✅ closed | 084093a | `.lineLimit(2)` + `.minimumScaleFactor(0.8)` on three fixed-width match rows |
+| D1 | ✅ closed | b93bfa2 | PlainTextArticleFallback hands off HTML read + strip to Task.detached |
+| D2 / D3 / D4 | ⚠️ false positive | n/a | SanskritDictionary already pre-warmed via Task.detached in `desktopAhaanApp.init()`; DataStore `diskSchemaVersion` only read during one-shot migration scaffold (also off-main); AppState recents decode handles tiny payloads. None are render-hot. |
+| J1 | ✅ closed | 2ab6faa | imac-pull.sh now falls back to script-relative repo root when the iMac path is missing |
+| L1 / L2 | ✅ closed | ef99648 | Stale "254 tests" count refreshed in CLAUDE.md + README.md |
+| B1 / B2 | 🟢 accepted advisory | — | GPU notes only; no fix needed |
+| D5..D8 | 🟢 accepted advisory | — | Off-main pattern already in place; shutdown sync() acceptable |
+| G18 / G19 | 🟢 accepted advisory | — | Tap-only scenes; keyboard equivalents exist elsewhere |
+| G23 / G24 | 🟢 accepted advisory | — | Mild transition; `.secondary` on light canvas is correct |
+| J2 | 🟢 accepted advisory | — | Existing glob `\|\| true` handles empty match |
+| L3..L6 | 🟢 accepted advisory | — | Open polish items + STOP_AND_ASK awaiting user actions |
+
+**Roll-up**: 23 actionable findings closed (10 commits between e440637 → ef99648), 4 false positives noted, 11 accepted-as-advisory. Zero remaining open 🔴/🟠. The `withAnimation` lint gap should be the next session's first task — every fix here was reactive; an LH005-style ratchet would lock the state.
