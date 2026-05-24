@@ -10,10 +10,29 @@
 # deploy iMac.
 #
 # Usage:
-#   bash scripts/ci-build-test.sh
+#   bash scripts/ci-build-test.sh           # default — unit + chrome, no UI tests
+#   bash scripts/ci-build-test.sh --ui      # also runs GoldenPathUITests
 #
-# Exit code is 0 only when both build and tests succeed. Hooked into the
-# pre-push hook or GitHub Actions workflow as the gate.
+# The `--ui` flag adds a third xcodebuild test invocation that runs
+# `-only-testing:desktopAhaanUITests/GoldenPathUITests`. This is opt-in
+# because XCUIAutomation needs an Accessibility grant under System
+# Settings → Privacy & Security → Accessibility for the test runner
+# (`desktopAhaanUITests-Runner.app`). Default off so dev Macs and CI
+# runners that haven't granted AX still get a clean ci-build-test pass
+# without the UI tests silently no-op'ing. The iMac's pre-push hook
+# should use `--ui` since AX is granted there and the GoldenPathUITests
+# cover the surfaces most likely to regress between sessions.
+#
+# Crash-regression UI tests (`Crash1_TryDiscoverMode_Ch1`,
+# `Crash_BeyondThenDiscover`) intentionally remain skipped even under
+# `--ui` because they only reproduce on the iMac's AMD R9 M290X / Big
+# Sur combo — running them on a dev Mac just consumes wall-clock and
+# produces no signal. Invoke them explicitly via the documented
+# `-only-testing:desktopAhaanUITests/CrashN_*` recipe in their headers.
+#
+# Exit code is 0 only when build + unit tests + (optionally) UI tests
+# all succeed. Hooked into the pre-push hook or GitHub Actions workflow
+# as the gate.
 #
 # Critical: xcodebuild's exit code is UNRELIABLE.
 #   - When the .xcodeproj doesn't exist, xcodebuild prints "error: ..."
@@ -30,6 +49,30 @@
 # uses those markers only on real failure).
 
 set -euo pipefail
+
+# --- Flag parsing -----------------------------------------------------
+# bash 3.2 compatible (default shell on Big Sur). Simple while-case
+# parser; only `--ui` is supported today. Unknown flags fail loudly so
+# typos don't silently degrade to default behaviour.
+RUN_UI_TESTS=0
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --ui)
+            RUN_UI_TESTS=1
+            shift
+            ;;
+        --help|-h)
+            sed -n '2,40p' "$0"
+            exit 0
+            ;;
+        *)
+            echo "ci-build-test: unknown flag '$1'." >&2
+            echo "Usage: bash scripts/ci-build-test.sh [--ui]" >&2
+            exit 2
+            ;;
+    esac
+done
+# ---------------------------------------------------------------------
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 PROJECT="$REPO_ROOT/desktopAhaan.xcodeproj"
@@ -148,14 +191,13 @@ run_xcodebuild "BUILD" \
     "${SIGNING_FLAGS[@]}" \
     build
 
-echo "==> test"
-# Skip the UI-test bundle by default — its test runner needs an
+echo "==> test (unit, skipping UI bundle)"
+# Skip the UI-test bundle here unconditionally — even with `--ui` set,
+# the UI tests run as a *separate* xcodebuild invocation below so a
+# failure in either suite produces a focused error message rather than
+# a mixed test output. The UI-test bundle's test runner needs an
 # Accessibility grant in System Settings → Privacy & Security →
-# Accessibility, which isn't present on dev Macs or CI runners. The
-# UI-test bundle is invoked explicitly on machines where the runner
-# has been AX-granted, via:
-#   xcodebuild test -scheme desktopAhaan -destination 'platform=macOS' \
-#     -only-testing:desktopAhaanUITests/Crash_BeyondThenDiscover
+# Accessibility, which isn't present on dev Macs or CI runners.
 run_xcodebuild "TESTS" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
@@ -165,5 +207,24 @@ run_xcodebuild "TESTS" \
     -skip-testing:desktopAhaanUITests \
     "${SIGNING_FLAGS[@]}" \
     test
+
+if [ "$RUN_UI_TESTS" -eq 1 ]; then
+    echo "==> ui-test (GoldenPathUITests only — Crash* tests are iMac-only)"
+    # Crash-regression locks (Crash1_TryDiscoverMode_Ch1 /
+    # Crash_BeyondThenDiscover) only reproduce on the iMac's AMD R9
+    # M290X + Big Sur combo. Running them on a dev Mac eats wall-clock
+    # without signal. Surface_AuditWalker is a one-off walker, not a
+    # pass/fail gate. GoldenPathUITests covers the new chapter-detail
+    # surfaces and SHOULD run anywhere AX is granted.
+    run_xcodebuild "UI-TESTS" \
+        -project "$PROJECT" \
+        -scheme "$SCHEME" \
+        -configuration Debug \
+        -derivedDataPath "$DERIVED" \
+        -destination 'platform=macOS' \
+        -only-testing:desktopAhaanUITests/GoldenPathUITests \
+        "${SIGNING_FLAGS[@]}" \
+        test
+fi
 
 echo "==> ci-build-test PASSED"

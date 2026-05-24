@@ -25,5 +25,19 @@ if [ -x "scripts/verify_pack_roundtrip.py" ]; then
     python3 scripts/verify_pack_roundtrip.py || exit 1
 fi
 
-echo "pre-push: running scripts/ci-build-test.sh"
-bash scripts/ci-build-test.sh
+# Honour CI_BUILD_TEST_FLAGS for opt-in UI tests. Set in your shell
+# profile if this machine has granted Accessibility to the UI-test
+# runner (typically: the iMac):
+#   export CI_BUILD_TEST_FLAGS=--ui
+# Dev Macs and CI runners without an AX grant leave it unset and get
+# the default unit-only path. See scripts/install-git-hooks.sh for
+# the install-time hint.
+EXTRA_FLAGS="${CI_BUILD_TEST_FLAGS:-}"
+
+if [ -n "$EXTRA_FLAGS" ]; then
+    echo "pre-push: running scripts/ci-build-test.sh $EXTRA_FLAGS"
+    bash scripts/ci-build-test.sh $EXTRA_FLAGS
+else
+    echo "pre-push: running scripts/ci-build-test.sh"
+    bash scripts/ci-build-test.sh
+fi

@@ -27,3 +27,17 @@ for hook in pre-commit pre-push; do
     fi
 done
 echo "git hooks installed under $DST_DIR"
+echo ""
+echo "Optional: opt-in to UI tests in the pre-push gate."
+echo "If THIS machine has granted Accessibility to the test runner"
+echo "(System Settings → Privacy & Security → Accessibility → toggle"
+echo "desktopAhaanUITests-Runner.app on), add this line to your shell"
+echo "profile (~/.zshrc on zsh, ~/.bash_profile on bash):"
+echo ""
+echo "    export CI_BUILD_TEST_FLAGS=--ui"
+echo ""
+echo "The pre-push hook will then also run GoldenPathUITests on every"
+echo "push, catching surface regressions before they land on origin/main."
+echo "The iMac (where AX is granted) is the canonical venue for this."
+echo "Dev Macs and CI runners without an AX grant should leave the var"
+echo "unset — the default unit-only path stays clean for them."
