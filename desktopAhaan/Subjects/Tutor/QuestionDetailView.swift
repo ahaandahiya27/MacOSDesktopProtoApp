@@ -98,6 +98,7 @@ struct QuestionDetailView: View {
             .onChange(of: question.id) { _ in
                 // Reset per-question state when Prev/Next swaps the question.
                 revealSolution = false
+                hintTier = 0
                 typedAnswer = ""
                 attemptOutcome = .unchecked
                 selectedOptionIndex = nil

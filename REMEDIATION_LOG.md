@@ -1015,13 +1015,12 @@ task for title fallback) and `title: String`.
 
 ### Out of scope / deferred
 
-1. **NSTextView click routing for relative anchor hrefs.** The
-   structured renderer emits `.link` attributes for anchor cards
-   carrying relative hrefs like `ch01_scientists.html`. NSTextView's
-   default behaviour: tries to open the relative string as a URL,
-   fails, no-op. To navigate to the linked article within the same
-   browser, we need `NSTextViewDelegate.textView(_:clickedOnLink:at:)`
-   on the existing coordinator. Logged for the next session.
+1. **NSTextView click routing for relative anchor hrefs.** [Closed in
+   the next session — commit 4bec75d adds an `NSTextViewDelegate`
+   conformance on `ArticleCoordinator` plus an
+   `ArticleBrowserView+LinkRouting.swift` sister file with the pure
+   `linkAction(for:relativeTo:fileExists:)` routing helper and 12
+   tests.]
 2. **SwiftUI ForEach-over-blocks alternative.** The brief proposed
    a pure-SwiftUI surface (Text(verbatim:) + Button per linkCard).
    The current implementation keeps NSTextView + NSAttributedString
@@ -1044,6 +1043,173 @@ task for title fallback) and `title: String`.
   a chapter's `<header class="hero">` uses an h2 instead of h1, the
   dedup won't fire; that's intentional — only level-1 headings are
   candidates for chrome-title duplicates.
+
+---
+
+## 10-HOUR LEARNING-LOOP SESSION COMPLETE — 2026-05-24 (evening)
+
+The build-out side of Science has been done for a while: 19/19
+chapters at full content parity, 13 schema surfaces rendering, 15
+interactive sandboxes/tours, MasteryDashboard + Daily Practice
+shipping. The kid's hardest work — the 15-question Boss Quiz at the
+end of each chapter — wasn't compounding into the SRS scheduler.
+Every miss evaporated when the celebration overlay closed.
+
+Six commits close that loop and add the surfaces the kid needs to
+see their own progress:
+
+### `9e674cf` — D1. `Question.source` enum + ephemeral review write path
+
+- New `QuestionSource` enum (`.bookEnd` / `.bossQuiz` /
+  `.sceneQuickCheck`), String-backed, Codable, Hashable, CaseIterable.
+- `Question.source: QuestionSource?` and
+  `Question.hints: [String]?` added as Optional fields (D5 prep).
+  Existing science_class7.json's 732 questions decode unchanged.
+- `DataStore+EphemeralReviews.swift` partial keeping the main
+  DataStore.swift under its allowlisted size. Exposes
+  `recordEphemeralReview(ephemeralId:quality:at:)` which delegates
+  to `recordReview` so scheduler state + coalesced save + streak
+  credit all stay in one place.
+- `DataStore.isEphemeralReviewId(_:)` prefix sniff lets the
+  recently-missed router pick the right "Retry" navigation target
+  (D3 prep).
+- Ch.1 boss quiz pilot wiring — `Scene9_BossQuiz.pick(_:in:)`
+  emits `bossquiz_ch01_qII` per item answered.
+- 18 tests covering source decode (8) + ephemeral persistence + due
+  queue + prefix sniff + SubjectRegistry resolver tolerance (10).
+
+### `1a55916` — D2. Boss-quiz wiring across all 19 chapters
+
+- Pattern A (Ch.2/3/4/5/6/7/19): SRS hook inside the existing
+  `pick(_:in:)` private function. 7 files.
+- Pattern B (Ch.8-Ch.18): SRS hook alongside the existing inline
+  `if opt == q.answer { score += 1 }` at the button closure.
+  11 files.
+- Stable id format pinned: `bossquiz_ch%02d_q%02d`.
+- `BossQuizSRSWiringTests` manifest test walks the source tree,
+  asserts all 19 boss-quiz files exist + call recordEphemeralReview
+  + use the canonical id format. Catches new chapter omissions at
+  test time.
+- LH005b allowlist re-synced: line shifts from the 4-5 line hook
+  insertion broke pre-existing entries; removed 30 stale + added
+  30 fresh, net unchanged.
+
+### `fb49a32` — D3. Recently-missed surface in Daily Practice
+
+- `DataStore.recentlyMissedQuestionIds(limit:)` returns ids whose
+  `bucket <= 1 && totalReviews > 0`, sorted by lastReviewedAt
+  descending. Single source of truth for the "missed" signal.
+- `DailyPracticeView` gains a 2nd sectioned list above the existing
+  "Flagged tough" section. Resolves ephemeral-tolerant ids
+  through SubjectRegistry; boss-quiz ephemerals silently drop
+  because they're chapter-scoped signals, not single-question
+  navigation targets.
+- 5 tests covering filtering, ordering, limit, empty case, and
+  ephemeral participation.
+
+### `60ec162` — D4. Chapter "Stuck here?" strip
+
+- New `ChapterStuckHereStrip` widget at the top of
+  `ChapterDetailView` (auto-hides when all 3 signal intersections
+  are empty).
+- Three chip rows: ⚠️ Tough flagged questions, ❌ Recently missed
+  questions, 🔖 Bookmarked concepts — each chapter-scoped via the
+  same intersection pattern.
+- Pure-function derivation `signals(chapter:toughQuestionIds:
+  recentlyMissedIds:bookmarkedConceptIds:)` — unit-testable without
+  EnvironmentObject (RelatedChaptersStrip pattern).
+- New `Chapter.allQuestionIds` + `Chapter.allConceptIds`
+  computed properties — flat traversal of chapter → topic →
+  question/concept.
+- 7 tests covering chapter-scoped filtering, empty-payload
+  auto-hide, two ordering invariants (recently-missed preserves
+  aggregator order; tough follows chapter.allQuestionIds order),
+  and the new computed properties.
+
+### `33f72c5` — D5. Progressive hint ladder on Questions
+
+- Replaces the binary `solutionDisclosure` ExpandableCard with a
+  three-tier hint ladder. Tier 1 = first hint; Tier 2 = next clue;
+  Tier 3 = full worked solution. Each tier is a Button; tapping a
+  higher tier reveals all lower tiers.
+- `Question.derivedHints` returns up to 2 hints — authored
+  `hints` if non-nil, else `solutionSteps.prefix(2)`. No content
+  authoring required to ship — every existing question gets two
+  free hints.
+- `Question.defaultQualityForHintTier(_:)` maps the highest revealed
+  tier to a default SRS quality (0|1 → .good; 2 → .hard; 3 →
+  .forgot). Pre-selection-wiring at the picker call site is deferred
+  (small follow-up — needs deeper QuestionDetailView surgery; the
+  pure function is in place + tested for that follow-up to consume).
+- 13 tests covering hint derivation, the 4 tier→quality mappings,
+  JSON round-trip, and the nil-hints decode-as-nil contract.
+
+### `7b37437` — D6. Per-topic drill-down on MasteryDashboard
+
+- New `TopicMasterySummary` mirrors the chapter shape but at topic
+  granularity. New `TopicLocation` carrier for the topicLocator
+  callback (topicId / topicTitle / displayOrder).
+- `masterySummary(forPackId:chapters:locator:topicLocator:now:)`
+  extends the aggregator with an optional topicLocator. When nil
+  (existing tests + pre-D6 callers), `topicSummaries` is empty —
+  backwards compat preserved.
+- MasteryDashboard chapter cards now toggle expanded/collapsed on
+  tap (chevron flips ↓/→) when the chapter has topic data. Expanded
+  state renders per-topic rows with a slimmer segmented bar plus a
+  bottom-aligned "Open chapter" button to preserve the original
+  navigation path.
+- 5 new tests covering topic partition, displayOrder sort,
+  topicLocator-nil / topicLocator-returns-nil paths, and chapter-
+  total = sum-of-topic-totals identity. The 5 pre-D6
+  MasterySummaryTests still pass unchanged (the new parameter is
+  opt-in).
+
+### Out-of-scope (logged for next session)
+
+- **Quality-picker pre-selection from `defaultQualityForHintTier`.**
+  D5 ships the mapping function + tests but the picker call site
+  still defaults to `.good`. Wiring needs QuestionDetailView
+  surgery around the per-question reset state — a small focused
+  follow-up.
+- **Boss-quiz content migration to pack JSON.** The session's brief
+  flagged this; the SRS hook (D1+D2) captures answers regardless of
+  where the content lives, so the migration can ship later without
+  blocking the learning loop.
+- **ShapeDiagramRegistry diagram authoring.** Pure cosmetic;
+  placeholder cards render cleanly.
+- **POLISH_TODOS §3** items (Notebook last-edited badge, Try-at-Home
+  per-chapter copy) — small enough that next session can grab one
+  cold.
+
+### Build / tests / lints
+
+- Build (Debug, target 11.5): zero code warnings.
+- New tests: 18 (D1) + 1 (D2) + 5 (D3) + 7 (D4) + 13 (D5) + 5 (D6)
+  = 49 new cases across six commits, all passing.
+- All 9 lints clean. LH005b allowlist re-synced once after D2's
+  +4-line insertion shifted Boss-quiz `withAnimation` sites; net
+  size unchanged at 66.
+
+### Notes for future sessions
+
+- `recordEphemeralReview` deliberately delegates to `recordReview`.
+  If the SRS scheduler grows a different write path (e.g. a
+  "no-streak-credit" variant for low-stakes surfaces), do it via a
+  new method, NOT a flag on the existing one — the call sites have
+  19 boss-quiz wirings now.
+- `Chapter.allQuestionIds` walks all topics each access. Typical
+  chapter has ~40 questions; cost is negligible. If a future
+  surface hits this in a hot render path, cache on the chapter
+  instance.
+- The mastery aggregator's `topicLocator` is opt-in (`nil` default).
+  Don't make it required — `MasterySummaryTests` already exercises
+  the non-topic path and adding a required parameter would break
+  every existing test without value.
+- D5's hint-ladder state lives in `QuestionDetailView`'s `hintTier`
+  state. If a kid revisits a question (Prev / Next sibling), the
+  `.onChange(of: question.id)` reset block clears `revealSolution`
+  but NOT `hintTier`. Tomorrow's polish: add `hintTier = 0` to the
+  reset block.
 
 
 
