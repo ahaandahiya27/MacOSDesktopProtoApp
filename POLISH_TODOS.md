@@ -35,7 +35,7 @@ The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity c
 
 ## §3. Misc / latent
 
-- [ ] **First-launch window-frame guard** — `desktopAhaanApp.swift` `WindowGroup.frame` idealWidth 2200 / idealHeight 1380 is tuned for the 5K iMac and on a 13" MBP opens at ~95% of screen height. Big Sur clips correctly so it's not a bug — polish would clamp to ~85% of available height when bounds are smaller.
+- [x] **First-launch window-frame guard** — shipped `eaf15ee`. `clampWindowIdeal(design:visible:comfortableFraction:)` returns the design size unchanged when both axes fit inside `NSScreen.main.visibleFrame`, otherwise scales both to 85% of visible. Wired through a new `firstLaunchFrame` static on the App struct. 6 unit tests in `WindowClampTests`.
 - [ ] **Notebook card "last edited" badge** — `ChapterDetailView+Notebook.swift` `NotebookCard` shows just `hasNotes: Bool`. Could surface "Last edited N days ago" for a small recency cue.
 - [ ] **Try-at-Home per-chapter copy** — `TryAtHomeCard` hard-codes "Hands-on experiments you can do this weekend." Could use per-chapter copy from `HomeExperimentLibrary`.
 - [x] **Surface audit walker (UITest)** — shipped `6565ad2`. `Surface_AuditWalker.swift` already had a structural walker (`testWalkAllScienceChapters`); now also carries `test_surfaceAuditWalker_allChapters_smoke` that drives Try Discover Mode / Beyond the Book / Read Aloud / My Notebook clicks per chapter and attaches a screenshot. Opt-in via `-only-testing:desktopAhaanUITests/Surface_AuditWalker`.
