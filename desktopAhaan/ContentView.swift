@@ -339,6 +339,22 @@ struct ContentView: View {
                 ForEach(SidebarTool.allCases) { tool in
                     HStack {
                         Label(tool.title, systemImage: tool.systemImage)
+                        // Due-count badge on the Daily Practice row.
+                        // Updates whenever dataStore.questionReviews
+                        // mutates because dueQuestionCount(at:) reads
+                        // the published map. Capped visually at 99+
+                        // to avoid a wide sidebar column on a long
+                        // back-from-vacation day.
+                        if tool == .dailyPractice {
+                            let due = dataStore.dueQuestionCount()
+                            if due > 0 {
+                                BadgePill(
+                                    count: min(due, 99),
+                                    tint: .orange,
+                                    accessibilityText: "\(due) question\(due == 1 ? "" : "s") due for review"
+                                )
+                            }
+                        }
                         Spacer(minLength: 6)
                         if let shortcut = tool.keyboardShortcut {
                             Text(shortcut)
@@ -392,6 +408,8 @@ struct ContentView: View {
             BookmarksView()
         case .tool(.dailyPractice):
             DailyPracticeView()
+        case .tool(.mastery):
+            MasteryDashboard()
         case .tool(.discover):
             DiscoverProgressDashboard()
         case .tool(.settings):

@@ -76,6 +76,7 @@
 		758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B1477CD2734BCD16FB3FF /* DictationButton.swift */; };
 		579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */; };
 		43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */; };
+		685A0089486E88379DAA5E7A /* MasteryDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B77B95D12C4B5978E800C /* MasteryDashboard.swift */; };
 		129596FFE7CEE4F17CA1AFCB /* PilotInteractiveSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3DB2E01BD3D051799E463 /* PilotInteractiveSheetCoordinator.swift */; };
 		D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */; };
 		22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */; };
@@ -1118,6 +1119,7 @@
 		F06B1477CD2734BCD16FB3FF /* DictationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictationButton.swift"; sourceTree = "<group>"; };
 		74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureExplainerSheet.swift"; sourceTree = "<group>"; };
 		7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcutsSheet.swift"; sourceTree = "<group>"; };
+		8E3B77B95D12C4B5978E800C /* MasteryDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryDashboard.swift"; sourceTree = "<group>"; };
 		A6F3DB2E01BD3D051799E463 /* PilotInteractiveSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinator.swift"; sourceTree = "<group>"; };
 		64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDetailView.swift"; sourceTree = "<group>"; };
 		7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDifficultyBadge.swift"; sourceTree = "<group>"; };
@@ -2198,6 +2200,7 @@
 				F06B1477CD2734BCD16FB3FF,
 				74E3F56676403BBA10EF7D7C,
 				7FF40B16150449C49D0274EF,
+				8E3B77B95D12C4B5978E800C,
 				A6F3DB2E01BD3D051799E463,
 				64ECB36C86DEBF9385DDE68C,
 				7B4A273E6C781187B61951F9,
@@ -3555,6 +3558,7 @@
 				758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */,
 				579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */,
 				43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */,
+				685A0089486E88379DAA5E7A /* MasteryDashboard.swift in Sources */,
 				129596FFE7CEE4F17CA1AFCB /* PilotInteractiveSheetCoordinator.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,
 				22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */,

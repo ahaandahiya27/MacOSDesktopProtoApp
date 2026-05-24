@@ -223,6 +223,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     case search
     case bookmarks
     case dailyPractice
+    case mastery
     case discover
     case settings
 
@@ -233,6 +234,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .search:        return "Search"
         case .bookmarks:     return "Bookmarks"
         case .dailyPractice: return "Daily Practice"
+        case .mastery:       return "My Progress"
         case .discover:      return "Discover Progress"
         case .settings:      return "Settings"
         }
@@ -243,6 +245,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .search:        return "magnifyingglass"
         case .bookmarks:     return "bookmark.fill"
         case .dailyPractice: return "flame.fill"
+        case .mastery:       return SFSymbolCompat.name("chart.bar.xaxis")
         case .discover:      return "sparkles"
         case .settings:      return "gearshape.fill"
         }
@@ -258,6 +261,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .search:        return "\u{2318}F"          // ⌘F
         case .bookmarks:     return "\u{2318}B"          // ⌘B
         case .dailyPractice: return "\u{2318}\u{21E7}P"  // ⌘⇧P
+        case .mastery:       return "\u{2318}\u{21E7}M"  // ⌘⇧M
         case .discover:      return "\u{2318}\u{21E7}D"  // ⌘⇧D
         case .settings:      return "\u{2318}\u{21E7},"  // ⌘⇧,
         }
