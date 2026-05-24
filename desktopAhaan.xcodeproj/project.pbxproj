@@ -296,6 +296,7 @@
 		6ABA1ED7FA2E69C710A01145 /* Scene8_Fragmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7141632E27D6B245E391297 /* Scene8_Fragmentation.swift */; };
 		F14826E462D653B641C85830 /* Scene9_BossQuiz_Ch12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A55FCC76C5547A3FA48B1 /* Scene9_BossQuiz_Ch12.swift */; };
 		C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */; };
+		5B78E5BE81B03EFC327D5A40 /* ConceptMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361C8F9BD45D24D23BEBF2B /* ConceptMapView.swift */; };
 		139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */; };
 		1B1E0385C22EF2B8E913AF77 /* InlineContentCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1EFADA4FAE9502471B7862 /* InlineContentCallout.swift */; };
 		BF0D98B29E9553F8141DBFA7 /* WhyChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9399F90E12C615E11B2107E /* WhyChainView.swift */; };
@@ -318,7 +319,6 @@
 		C0C7FAA9EFECF0AC97D59308 /* BuildASoilSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7785179460AA6BA2BE048918 /* BuildASoilSandbox.swift */; };
 		FA52CEFD3EF2470DDD259954 /* BuildAClimateSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F436CDF8E1797C72274E5 /* BuildAClimateSandbox.swift */; };
 		AA98D31FA6276FA281A7C991 /* BuildAPlantSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A23BB7737E3489FA7CDC09B /* BuildAPlantSandbox.swift */; };
-		8894D68F961D660C1499C1CD /* Ch1ConceptMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E54083443491C91C7FF1B1 /* Ch1ConceptMap.swift */; };
 		0700EC8AEE339641188C377E /* InsideTheLeafTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = E289A43CF71149014B5B044B /* InsideTheLeafTour.swift */; };
 		FB3944523DC88A8E20235E86 /* BuildAReactionSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0435F8D3B7C75F28D05731F /* BuildAReactionSandbox.swift */; };
 		8DEB6B2CD7D2CDD2F5DBC7CE /* BuildAWindSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E98FD8C84CCDDF761FFEF /* BuildAWindSandbox.swift */; };
@@ -1328,6 +1328,7 @@
 		F7141632E27D6B245E391297 /* Scene8_Fragmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene8_Fragmentation.swift"; sourceTree = "<group>"; };
 		5D1A55FCC76C5547A3FA48B1 /* Scene9_BossQuiz_Ch12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene9_BossQuiz_Ch12.swift"; sourceTree = "<group>"; };
 		A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollapsibleContentSection.swift"; sourceTree = "<group>"; };
+		E361C8F9BD45D24D23BEBF2B /* ConceptMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConceptMapView.swift"; sourceTree = "<group>"; };
 		348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentChipStrip.swift"; sourceTree = "<group>"; };
 		5F1EFADA4FAE9502471B7862 /* InlineContentCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InlineContentCallout.swift"; sourceTree = "<group>"; };
 		A9399F90E12C615E11B2107E /* WhyChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhyChainView.swift"; sourceTree = "<group>"; };
@@ -1350,7 +1351,6 @@
 		7785179460AA6BA2BE048918 /* BuildASoilSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildASoilSandbox.swift"; sourceTree = "<group>"; };
 		E20F436CDF8E1797C72274E5 /* BuildAClimateSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAClimateSandbox.swift"; sourceTree = "<group>"; };
 		8A23BB7737E3489FA7CDC09B /* BuildAPlantSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAPlantSandbox.swift"; sourceTree = "<group>"; };
-		51E54083443491C91C7FF1B1 /* Ch1ConceptMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ch1ConceptMap.swift"; sourceTree = "<group>"; };
 		E289A43CF71149014B5B044B /* InsideTheLeafTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheLeafTour.swift"; sourceTree = "<group>"; };
 		C0435F8D3B7C75F28D05731F /* BuildAReactionSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAReactionSandbox.swift"; sourceTree = "<group>"; };
 		1B4E98FD8C84CCDDF761FFEF /* BuildAWindSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAWindSandbox.swift"; sourceTree = "<group>"; };
@@ -2197,6 +2197,7 @@
 			isa = PBXGroup;
 			children = (
 				A9275C811B5F93B6FF38A9B7,
+				E361C8F9BD45D24D23BEBF2B,
 				348962B08D0E8D37B39470F6,
 				5F1EFADA4FAE9502471B7862,
 				A9399F90E12C615E11B2107E,
@@ -2766,7 +2767,6 @@
 			isa = PBXGroup;
 			children = (
 				8A23BB7737E3489FA7CDC09B,
-				51E54083443491C91C7FF1B1,
 				E289A43CF71149014B5B044B,
 			);
 			path = "Ch1";
@@ -3745,6 +3745,7 @@
 				6ABA1ED7FA2E69C710A01145 /* Scene8_Fragmentation.swift in Sources */,
 				F14826E462D653B641C85830 /* Scene9_BossQuiz_Ch12.swift in Sources */,
 				C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */,
+				5B78E5BE81B03EFC327D5A40 /* ConceptMapView.swift in Sources */,
 				139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */,
 				1B1E0385C22EF2B8E913AF77 /* InlineContentCallout.swift in Sources */,
 				BF0D98B29E9553F8141DBFA7 /* WhyChainView.swift in Sources */,
@@ -3767,7 +3768,6 @@
 				C0C7FAA9EFECF0AC97D59308 /* BuildASoilSandbox.swift in Sources */,
 				FA52CEFD3EF2470DDD259954 /* BuildAClimateSandbox.swift in Sources */,
 				AA98D31FA6276FA281A7C991 /* BuildAPlantSandbox.swift in Sources */,
-				8894D68F961D660C1499C1CD /* Ch1ConceptMap.swift in Sources */,
 				0700EC8AEE339641188C377E /* InsideTheLeafTour.swift in Sources */,
 				FB3944523DC88A8E20235E86 /* BuildAReactionSandbox.swift in Sources */,
 				8DEB6B2CD7D2CDD2F5DBC7CE /* BuildAWindSandbox.swift in Sources */,

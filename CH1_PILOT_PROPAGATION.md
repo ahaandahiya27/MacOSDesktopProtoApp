@@ -9,7 +9,7 @@ on Chapter 1 (Nutrition in Plants) only:
 | 2 | **BuildAPlantSandbox** | 4-slider live interactive (Liebig's-law-of-the-minimum) | `Subjects/Tutor/Surfaces/Ch1/` |
 | 3 | **InsideTheLeafTour** | Five-stop SwiftUI walkthrough | `Subjects/Tutor/Surfaces/Ch1/` |
 | 4 | **WhyChainView** | Three-layer Socratic drill | `Subjects/Tutor/Components/` (reusable) |
-| 5 | **Ch1ConceptMap** | Node-and-edge SwiftUI graph | `Subjects/Tutor/Surfaces/Ch1/` |
+| 5 | **ConceptMapView** (was Ch1ConceptMap) | Node-and-edge SwiftUI graph | `Subjects/Tutor/Components/` (chapter-agnostic since 2026-05-24) |
 
 Ch.2..19 are protected by `Ch2_19_StructuralRatchetTests`: any
 content-array drift in those chapters fails CI immediately. Adding

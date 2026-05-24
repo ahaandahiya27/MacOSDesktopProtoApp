@@ -4,8 +4,9 @@ import Foundation
 //
 // Per-chapter node-and-edge graph describing how the chapter's
 // concepts connect — and how they reach across to other chapters.
-// Rendered by `Ch1ConceptMap` (and, in future sessions, per-chapter
-// concept-map surfaces propagated through the pilot playbook).
+// Rendered by `ConceptMapView` (chapter-agnostic Component, promoted
+// from the Ch.1 pilot's `Ch1ConceptMap` once all 19 chapters had
+// authored conceptMap data).
 //
 // Backwards-compatible: `Chapter.conceptMap` is Optional and defaults
 // to nil. When absent, the concept-map surface auto-hides and a

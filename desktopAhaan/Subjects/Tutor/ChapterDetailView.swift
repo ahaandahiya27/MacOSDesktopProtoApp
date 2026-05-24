@@ -21,7 +21,7 @@ struct ChapterDetailView: View {
         case article(ArticleEntry)
         case glossary
         case insideTheLeafTour       // Ch.1 pilot — Phase 2B
-        case ch1ConceptMap           // Ch.1 pilot — Phase 2E
+        case conceptMap              // All-chapter generalisation (2026-05-24)
         case insideTheWireTour       // Ch.14 propagation (2026-05-24)
         case insideTheLensTour       // Ch.15 propagation (2026-05-24)
         case insideTheAlveolusTour   // Ch.10 propagation (2026-05-24)
@@ -40,8 +40,8 @@ struct ChapterDetailView: View {
                 return "glossary"
             case .insideTheLeafTour:
                 return "insideTheLeafTour"
-            case .ch1ConceptMap:
-                return "ch1ConceptMap"
+            case .conceptMap:
+                return "conceptMap"
             case .insideTheWireTour:
                 return "insideTheWireTour"
             case .insideTheLensTour:
@@ -273,29 +273,36 @@ struct ChapterDetailView: View {
         if chapter.id == "ch01" {
             BuildAPlantSandbox(chapterId: chapter.id)
             insideTheLeafTourCTA
-            ch1ConceptMapCTA
         }
     }
 
-    /// CTA card that opens Ch1ConceptMap as a sheet (Phase 2E).
-    private var ch1ConceptMapCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .ch1ConceptMap }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "point.3.connected.trianglepath.dotted",
-                title: "See the connections",
-                subtitle: "Visualise how this chapter's ideas link together — and where they reach into Ch.10 and Ch.17.",
-                gradient: [
-                    Color(red: 0.40, green: 0.30, blue: 0.70),
-                    Color(red: 0.20, green: 0.45, blue: 0.65)
-                ]
-            )
+    /// Chapter-agnostic CTA card that opens ConceptMapView as a sheet.
+    /// Auto-hides when the chapter has no conceptMap authored. After the
+    /// 2026-05-24 content propagation every NCERT Class 7 chapter has
+    /// a concept map, so this CTA shows on all 19 chapters. Each chapter's
+    /// summary text reports the concrete node + edge count so the kid
+    /// knows what to expect before tapping in.
+    @ViewBuilder
+    private var conceptMapCTA: some View {
+        if let map = chapter.conceptMap, !map.nodes.isEmpty {
+            Button {
+                DispatchQueue.main.async { presentedSheet = .conceptMap }
+            } label: {
+                Ch1PilotCTACard(
+                    symbol: "point.3.connected.trianglepath.dotted",
+                    title: "See the connections",
+                    subtitle: "\(map.nodes.count) ideas, \(map.edges.count) links — visualise how this chapter's concepts connect, and where they reach into other chapters.",
+                    gradient: [
+                        Color(red: 0.40, green: 0.30, blue: 0.70),
+                        Color(red: 0.20, green: 0.45, blue: 0.65)
+                    ]
+                )
+            }
+            .buttonStyle(.plain)
+            .pointingCursor()
+            .accessibilityLabel("See the connections — concept map for this chapter")
+            .accessibilityHint("Opens a sheet showing how the chapter's concepts link to each other and to other chapters.")
         }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("See the connections — concept map for this chapter")
-        .accessibilityHint("Opens a sheet showing how the chapter's concepts link to each other and to other chapters.")
     }
 
     /// CTA card that opens the InsideTheLeafTour sheet. Ch.1 pilot only;
@@ -325,6 +332,7 @@ struct ChapterDetailView: View {
     @ViewBuilder
     private var surfacesGroupBottom: some View {
         Group {
+            conceptMapCTA
             CurriculumBridgeChip(chapter: chapter)
             glossaryButton
             GallerySectionView(chapter: chapter)
@@ -523,8 +531,8 @@ struct ChapterDetailView: View {
                     chapterId: chapter.id,
                     onDismiss: { presentedSheet = nil }
                 )
-            case .ch1ConceptMap:
-                Ch1ConceptMap(
+            case .conceptMap:
+                ConceptMapView(
                     pack: pack,
                     chapter: chapter,
                     onDismiss: { presentedSheet = nil }

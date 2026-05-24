@@ -1,15 +1,27 @@
 import SwiftUI
 import AppKit
 
-// MARK: - Ch1ConceptMap
+// MARK: - ConceptMapView
 //
-// Visual node-and-edge graph of how a chapter's concepts connect,
-// plus cross-chapter pointers. Renders chapter.conceptMap; auto-hides
-// behind the CTA if the chapter has no conceptMap authored.
+// Chapter-agnostic visual node-and-edge graph of how a chapter's
+// concepts connect, plus cross-chapter pointers. Renders
+// `chapter.conceptMap`; auto-hides behind the CTA if the chapter has
+// no conceptMap authored.
 //
 // Pan + zoom via DragGesture + MagnificationGesture. Tap a concept
 // node → opens the concept detail. Tap a cross-chapter node → opens
 // the linked chapter.
+//
+// Lineage:
+//   - 2026-05-23 — shipped as `Ch1ConceptMap` in the Ch.1 pilot at
+//                  `Subjects/Tutor/Surfaces/Ch1/`. Single-chapter
+//                  scope at the time because only Ch.1 had authored
+//                  conceptMap data.
+//   - 2026-05-24 — content propagation populated `chapter.conceptMap`
+//                  for all 19 chapters. The renderer was generic-by-
+//                  construction; only the name and home directory
+//                  were chapter-pinned. Promoted to a shared
+//                  Component this commit. Old file deleted.
 //
 // Accessibility: the visual canvas is `.accessibilityHidden(true)`
 // (lines + offsets aren't VoiceOver-meaningful). A semantic List of
@@ -22,7 +34,7 @@ import AppKit
 //   - DragGesture / MagnificationGesture: macOS 10.15+.
 //   - All animations gated by .respectReduceMotion(animation:).
 
-struct Ch1ConceptMap: View {
+struct ConceptMapView: View {
     let pack: SubjectPack
     let chapter: Chapter
     var onDismiss: () -> Void
