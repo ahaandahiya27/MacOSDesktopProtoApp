@@ -53,7 +53,7 @@ struct ConceptDetailView: View {
                 recordRecent()
             }
             .onChange(of: concept.id) { _ in
-                withAnimation(.easeOut(duration: 0.2)) {
+                withAnimationRespectingReduceMotion(.easeOut(duration: 0.2)) {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
                 recordRecent()

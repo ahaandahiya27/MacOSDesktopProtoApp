@@ -98,7 +98,7 @@ struct QuestionDetailView: View {
                 didRateThisVisit = false
                 resetMatchStateIfNeeded()
                 // Snap back to the top so the new prompt is visible.
-                withAnimation(.easeOut(duration: 0.2)) {
+                withAnimationRespectingReduceMotion(.easeOut(duration: 0.2)) {
                     proxy.scrollTo("__top__", anchor: .top)
                 }
                 recordRecent()

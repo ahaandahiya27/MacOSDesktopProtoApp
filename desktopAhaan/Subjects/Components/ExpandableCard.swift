@@ -13,7 +13,7 @@ struct ExpandableCard<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
-                withAnimation(.easeInOut(duration: 0.22)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.22)) {
                     isExpanded.toggle()
                 }
             } label: {

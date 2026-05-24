@@ -180,7 +180,7 @@ struct CommandPalette: View {
                 .padding(.vertical, 6)
             }
             .onChange(of: selectedIndex) { idx in
-                withAnimation(.easeOut(duration: 0.12)) {
+                withAnimationRespectingReduceMotion(.easeOut(duration: 0.12)) {
                     proxy.scrollTo(idx, anchor: .center)
                 }
             }
