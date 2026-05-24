@@ -83,6 +83,19 @@ struct SanskritKoshApp: App {
     @StateObject private var subjectRegistry = SubjectRegistry()
     @StateObject private var dataStore = DataStore()
 
+    /// First-launch window ideal size. Design target is 2200×1380 (tuned
+    /// for the 5K iMac at 2560×1440 logical, where `visibleFrame.height`
+    /// runs ~1417pt after the menu bar). On a 13" MBP at 1440×900 with
+    /// `visibleFrame.height` ~841pt, the unclamped 1380 ideal opened the
+    /// window at ~95% of screen height — uncomfortably close to the edge.
+    /// `clampWindowIdeal` returns the design size unchanged when both
+    /// dimensions fit; otherwise it scales to ~85% of the visible area
+    /// so the window opens with breathing room.
+    static let firstLaunchFrame: CGSize = clampWindowIdeal(
+        design: CGSize(width: 2200, height: 1380),
+        visible: NSScreen.main?.visibleFrame.size
+    )
+
     init() {
         // Pre-warm the Sanskrit dictionary off the main thread so the
         // first translator open doesn't hit cold-decode of the bundled
@@ -99,6 +112,7 @@ struct SanskritKoshApp: App {
     }
 
     var body: some Scene {
+        let frame = Self.firstLaunchFrame
         WindowGroup {
             ContentView()
                 .environmentObject(appState)
@@ -107,15 +121,14 @@ struct SanskritKoshApp: App {
                 // Min 1024×640 honours macOS's split-screen tile half-width
                 // on the deploy iMac's 5K @1×.
                 //
-                // Ideal size bumped to 2200×1380 so the first-launch window
-                // fills more of the iMac 5K display (2560×1440 logical) —
-                // previously the 1500pt ideal left ~1060pt of desktop
-                // visible on the right, which read as "half-screen" /
-                // "distorted" rendering. Smaller-screen Macs will still
-                // clip to the available area automatically.
+                // Ideal sized via `firstLaunchFrame` below — clamps to ~85%
+                // of `NSScreen.main.visibleFrame` on smaller displays so the
+                // window doesn't open at ~95% of screen height on a 13" MBP
+                // (where the auto-clip from the 2200×1380 design landed
+                // before this guard).
                 .frame(
-                    minWidth: 1024, idealWidth: 2200,
-                    minHeight: 640, idealHeight: 1380
+                    minWidth: 1024, idealWidth: frame.width,
+                    minHeight: 640, idealHeight: frame.height
                 )
         }
         .commands {
@@ -237,6 +250,32 @@ struct SanskritKoshApp: App {
             }
         }
     }
+}
+
+// MARK: - First-launch window clamp
+//
+// Pure function so the policy is unit-testable without spinning up an
+// NSScreen / app target. `visible` is `NSScreen.main?.visibleFrame.size`
+// at call time; pass nil to model the "no screen attached" path (e.g.
+// during headless test runs). Returns the design size unchanged when
+// both dimensions fit; otherwise scales to `comfortableFraction` of the
+// visible area so the window has off-edge breathing room.
+//
+// `comfortableFraction = 0.85` per the POLISH_TODOS guidance — at 0.95
+// the window opened uncomfortably close to the screen edges on a 13"
+// MBP; at 0.85 it lands with ~7.5% margin on each side.
+func clampWindowIdeal(
+    design: CGSize,
+    visible: CGSize?,
+    comfortableFraction: CGFloat = 0.85
+) -> CGSize {
+    guard let visible = visible else { return design }
+    let fits = design.width <= visible.width && design.height <= visible.height
+    if fits { return design }
+    return CGSize(
+        width: visible.width * comfortableFraction,
+        height: visible.height * comfortableFraction
+    )
 }
 
 extension Notification.Name {

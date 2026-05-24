@@ -701,6 +701,7 @@
 		2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */; };
 		2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */; };
 		843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */; };
+		087EBCF2017B896B0923DE05 /* WindowClampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B86531B99756A66FB29635 /* WindowClampTests.swift */; };
 		9FD7FB85F4C180213D0C3A03 /* desktopAhaanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD5BE1DA9EE24EC53BDA92 /* desktopAhaanTests.swift */; };
 		F70198453C17DB88FA44F825 /* Speech_NoPromptUnderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1AE031AFE14000BAE34911 /* Speech_NoPromptUnderTest.swift */; };
 		656E3907AFDF2EFB318899BA /* AXHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773304C26586D6C207F0C081 /* AXHelpers.swift */; };
@@ -1426,6 +1427,7 @@
 		91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationServiceTests.swift"; sourceTree = "<group>"; };
 		3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorNavigationTests.swift"; sourceTree = "<group>"; };
 		6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelTests.swift"; sourceTree = "<group>"; };
+		C0B86531B99756A66FB29635 /* WindowClampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WindowClampTests.swift"; sourceTree = "<group>"; };
 		F3FD5BE1DA9EE24EC53BDA92 /* desktopAhaanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "desktopAhaanTests.swift"; sourceTree = "<group>"; };
 		5B1AE031AFE14000BAE34911 /* Speech_NoPromptUnderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Speech_NoPromptUnderTest.swift"; sourceTree = "<group>"; };
 		0AAA000000000000000000A3 /* desktopAhaanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3011,6 +3013,7 @@
 				91B26F6ED1B552B74EDB1D5E,
 				3436224B3C9552AEB42BB80D,
 				6E9E6049C67F2B64BD6D4A51,
+				C0B86531B99756A66FB29635,
 				F3FD5BE1DA9EE24EC53BDA92,
 				A161D77FBB3288F5C449A818,
 			);
@@ -3873,6 +3876,7 @@
 				2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */,
 				2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */,
 				843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */,
+				087EBCF2017B896B0923DE05 /* WindowClampTests.swift in Sources */,
 				9FD7FB85F4C180213D0C3A03 /* desktopAhaanTests.swift in Sources */,
 				F70198453C17DB88FA44F825 /* Speech_NoPromptUnderTest.swift in Sources */,
 			);
