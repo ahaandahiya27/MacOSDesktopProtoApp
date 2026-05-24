@@ -195,8 +195,13 @@ struct Scene9_BossQuiz_Ch3: View {
         guard picks[currentQ] == nil else { return }
 
         picks[currentQ] = option
+        let isCorrect = option == item.answer
+        DataStore.shared.recordEphemeralReview(
+            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+            quality: isCorrect ? .good : .forgot
+        )
 
-        if option == item.answer {
+        if isCorrect {
             score += 1
             withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.5)) {
                 // Correct

@@ -81,7 +81,12 @@ struct Scene9_BossQuiz_Ch18: View {
                                 guard !revealed else { return }
                                 picked = opt
                                 revealed = true
-                                if opt == q.answer { score += 1 }
+                                let isCorrect = opt == q.answer
+                                DataStore.shared.recordEphemeralReview(
+                                    ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, i),
+                                    quality: isCorrect ? .good : .forgot
+                                )
+                                if isCorrect { score += 1 }
                             } label: {
                                 HStack {
                                     Text(opt).frame(maxWidth: .infinity, alignment: .leading)

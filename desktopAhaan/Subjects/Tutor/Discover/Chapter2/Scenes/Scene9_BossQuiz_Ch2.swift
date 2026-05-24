@@ -236,6 +236,10 @@ struct Scene9_BossQuiz_Ch2: View {
 
         picks[currentQ] = option
         let isCorrect = option == item.answer
+        DataStore.shared.recordEphemeralReview(
+            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+            quality: isCorrect ? .good : .forgot
+        )
 
         if isCorrect {
             score += 1

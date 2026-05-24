@@ -190,6 +190,10 @@ struct Scene9_BossQuiz_Ch4: View {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
         let isRight = option == item.answer
+        DataStore.shared.recordEphemeralReview(
+            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+            quality: isRight ? .good : .forgot
+        )
         if isRight {
             score += 1
             withAnimation(.spring()) { revealed[currentQ] = true }
