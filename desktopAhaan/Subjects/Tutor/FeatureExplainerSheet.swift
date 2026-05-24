@@ -145,6 +145,26 @@ extension FeatureExplainerSheet {
         )
     }
 
+    /// "About Daily Practice" — what spaced repetition is, how the
+    /// queue grows, and where mastery shows up. Kid-friendly framing
+    /// (no "SuperMemo / SM-2" jargon).
+    static func aboutDailyPractice(onDismiss: @escaping () -> Void) -> FeatureExplainerSheet {
+        FeatureExplainerSheet(
+            title: "About Daily Practice",
+            subtitle: "How the app remembers what you're about to forget.",
+            symbol: "flame.fill",
+            tint: .orange,
+            paragraphs: [
+                "Every time you answer a practice question — or hit the 'Tough — review later' button on one — the app schedules that question for a future review. Get it right and the gap widens (1 day → 3 days → 7 → 14 → 21+). Get it wrong and it bounces back inside 10 minutes so the right answer sinks in.",
+                "Daily Practice in the sidebar shows what's due today. A 5-minute session is usually enough — answer each card, hit Forgot / Hard / Good / Easy, and the scheduler does the rest. The orange badge tells you how many cards are waiting; when there are none, you're all caught up.",
+                "My Progress in the sidebar shows where each chapter sits — how many questions are still in Learning, Familiar, Confident, or Mastered. A question only counts as Mastered once its review gap has stretched to 21 days or more, so you can't fake it by clicking Easy a few times in a row.",
+                "Practising a little every day is how brains actually learn. The streak counter is a nudge, not a grade — it resets if you skip a day, but the underlying mastery state never resets. You won't lose progress by missing a day; you just won't gain a new one."
+            ],
+            howToFindIt: "Open the sidebar. Daily Practice (⌘⇧P) sits between Bookmarks and My Progress; My Progress (⌘⇧M) is right below it.",
+            onDismiss: onDismiss
+        )
+    }
+
     /// "About Audio Narration" — what paragraph-highlight does, how
     /// to start / pause / step through, and the Reduce-Motion note.
     static func aboutAudio(onDismiss: @escaping () -> Void) -> FeatureExplainerSheet {

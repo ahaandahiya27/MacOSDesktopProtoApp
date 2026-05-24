@@ -223,6 +223,10 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .showWhatsNew, object: nil)
                 }
 
+                Button("About Daily Practice") {
+                    NotificationCenter.default.post(name: .showAboutDailyPractice, object: nil)
+                }
+
                 Button("About Deep Dive Mode") {
                     NotificationCenter.default.post(name: .showAboutDeepDive, object: nil)
                 }
@@ -245,4 +249,6 @@ extension Notification.Name {
     static let showAboutDeepDive = Notification.Name("desktopAhaan.showAboutDeepDive")
     /// Help → About Audio Narration (FeatureExplainerSheet.aboutAudio).
     static let showAboutAudio = Notification.Name("desktopAhaan.showAboutAudio")
+    /// Help → About Daily Practice (FeatureExplainerSheet.aboutDailyPractice).
+    static let showAboutDailyPractice = Notification.Name("desktopAhaan.showAboutDailyPractice")
 }

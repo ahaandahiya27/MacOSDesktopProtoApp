@@ -20,7 +20,7 @@ struct ContentView: View {
     @State private var presentedSheet: ContentSheet?
     private enum ContentSheet: String, Identifiable {
         case welcomeTour, whatsNew, shortcuts, commandPalette
-        case aboutDeepDive, aboutAudio
+        case aboutDeepDive, aboutAudio, aboutDailyPractice
         var id: String { rawValue }
     }
 
@@ -120,6 +120,8 @@ struct ContentView: View {
                 FeatureExplainerSheet.aboutDeepDive { presentedSheet = nil }
             case .aboutAudio:
                 FeatureExplainerSheet.aboutAudio { presentedSheet = nil }
+            case .aboutDailyPractice:
+                FeatureExplainerSheet.aboutDailyPractice { presentedSheet = nil }
             }
         }
         .background(
@@ -164,6 +166,9 @@ struct ContentView: View {
         // Help → About Audio Narration
         .onReceive(NotificationCenter.default.publisher(for: .showAboutAudio)) { _ in
             if presentedSheet == nil { presentedSheet = .aboutAudio }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .showAboutDailyPractice)) { _ in
+            if presentedSheet == nil { presentedSheet = .aboutDailyPractice }
         }
         .onAppear {
             // First-launch auto-present: show the welcome tour. Then,

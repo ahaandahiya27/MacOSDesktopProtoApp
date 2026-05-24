@@ -107,6 +107,13 @@ struct WhatsNewSheet: View {
     /// while the app is on 1.x and shipping a feature a month).
     static let entries: [WhatsNewEntry] = [
         WhatsNewEntry(
+            id: "1.0-mastery-dashboard",
+            heading: "My Progress — per-chapter mastery dashboard",
+            body: "A new sidebar tool (⌘⇧M) showing which chapters you're learning, familiar with, confident on, or have mastered. Builds on the spaced-review scheduler that's already been running quietly under Daily Practice; the orange badge on the Daily Practice sidebar row now also tells you when reviews are waiting.",
+            symbol: "chart.bar.xaxis",
+            tint: .compatIndigo
+        ),
+        WhatsNewEntry(
             id: "1.0-deep-dive",
             heading: "Go deeper — grade-tagged stretch topics",
             body: "Every chapter detail page now has a Go deeper disclosure at the bottom. Three stretch topics per chapter, each tagged Class 8 through NEET / JEE, with worked bonus questions and a next-step hint.",

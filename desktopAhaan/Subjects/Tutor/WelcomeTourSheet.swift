@@ -25,7 +25,7 @@ struct WelcomeTourSheet: View {
 
     @State private var panelIndex: Int = 0
 
-    private static let panelCount = 3
+    private static let panelCount = 4
 
     var body: some View {
         VStack(spacing: 0) {
@@ -54,7 +54,8 @@ struct WelcomeTourSheet: View {
         switch panelIndex {
         case 0: panelDiscover
         case 1: panelDeepDive
-        default: panelReadAloud
+        case 2: panelReadAloud
+        default: panelDailyPractice
         }
     }
 
@@ -105,6 +106,27 @@ struct WelcomeTourSheet: View {
                 "Tap the speaker icon to start. Tap again to pause; tap once more to resume.",
                 "The highlight follows the audio in real time so you can read along.",
                 "Use Reduce Motion in System Settings if the highlight transition feels distracting — the app respects that."
+            ]
+        )
+    }
+
+    // MARK: - Panel 4: Daily Practice + My Progress
+
+    /// Spaced-repetition + mastery dashboard surfaces. Pointed out
+    /// last because by the time the kid has answered any practice
+    /// questions, Daily Practice has something to show — earlier in
+    /// the tour it'd land on an empty queue.
+    private var panelDailyPractice: some View {
+        WelcomeTourPanel(
+            stepNumber: 4,
+            heroSymbol: "flame.fill",
+            heroTint: .orange,
+            title: "Daily Practice queues up what you're about to forget",
+            subtitle: "The app remembers every question you answer and shows you each one again just before you'd forget it. A few minutes a day beats an hour the night before.",
+            bullets: [
+                "**Daily Practice** in the sidebar shows the questions due for review today.",
+                "**My Progress** in the sidebar shows per-chapter mastery — how many questions you're learning, familiar with, confident on, or have mastered.",
+                "The orange badge on Daily Practice tells you when reviews are waiting."
             ]
         )
     }
