@@ -26,19 +26,11 @@ desktopAhaan/Subjects/Tutor/Discover/DiscoverChapter1View+InlineScenes.swift: Al
 # chapter but a refactor target rather than a hard gate.
 desktopAhaan/Subjects/Articles/ArticleIndex.swift: Article registry across 19 chapters; planned split by chapter when content stabilises.
 
-# Chapter-agnostic detail views.
-# ChapterDetailView — split once into +Notebook.swift + +HomeExperiments.swift
-# (commit 8972dfe) and again into +Ch1Pilot.swift (Phase 2E). The 2026-05-24
-# propagation round added 5 per-chapter mounts (Ch.4/6/7 sandboxes + Ch.14/15
-# tour CTAs) and 2 new SheetKind cases — pushing the file from ~600 to ~660.
-# The two new CTAs (insideTheWireTourCTA, insideTheLensTourCTA) need access
-# to the private @State presentedSheet, so they MUST stay inline; lifting
-# them to a sister file would require either making the state internal
-# (encapsulation hit) or threading a Binding through (verbose churn).
-# A future round could lift the CTAs by introducing a shared
-# `PilotInteractiveSheetCoordinator` ObservableObject that owns
-# presentedSheet — but that's a separate refactor, not a propagation step.
-desktopAhaan/Subjects/Tutor/ChapterDetailView.swift: Already split twice (+Notebook, +Ch1Pilot). 2026-05-24 propagation added 5 chapter pilot mounts + 2 SheetKind cases. Further inline-CTA splitting blocked by private @State presentedSheet access.
+# ChapterDetailView removed from allowlist 2026-05-24 — the
+# PilotInteractiveSheetCoordinator refactor finally extracted
+# presentedSheet into an ObservableObject, which unblocked lifting
+# every per-chapter CTA into ChapterDetailView+PropagatedCTAs.swift.
+# The file landed at ~525 LOC, comfortably under the 600 ceiling.
 
 desktopAhaan/Subjects/Tutor/QuestionDetailView.swift: Split attempted 2026-05-23 (see REMEDIATION_LOG). Cross-extension type-inference produced a 60s body type-checker timeout — Swift 5.5 on Big Sur can't infer the body's compound expressions when many helper methods live in sister-file extensions. Reverted; the single-file form type-checks cleanly. Future split would require flattening the body into named sub-views inside the same file first.
 

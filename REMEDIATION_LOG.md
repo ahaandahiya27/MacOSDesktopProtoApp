@@ -544,6 +544,136 @@ Five chapters deliberately don't have a custom interactive (rationale in playboo
 
 Each of these is a multi-hour refactor in its own right. Out of scope for this 5h block.
 
+---
+
+## Session resume 2026-05-24 (evening — ConceptMapView + Surface 4 + Coordinator refactor)
+
+User asked autonomously for the three handover items in turn. All three landed cleanly within ~2.5 hours.
+
+### Three landings
+
+**`21d4d42` — ConceptMapView generalisation**
+- Renamed `Ch1ConceptMap` → `ConceptMapView`, moved
+  `Surfaces/Ch1/` → `Components/`. Git detected the rename at 93%
+  similarity — pure move + name swap.
+- `ch1ConceptMapCTA` (private to ChapterDetailView) replaced with
+  chapter-agnostic `conceptMapCTA` (Optional-gated on
+  `chapter.conceptMap != nil`).
+- Visual concept-map graph went from 1/19 chapters to 19/19 in a
+  single commit — biggest visible-to-the-kid win for the least
+  code in the project so far.
+- Mid-session blocker: macOS TCC briefly revoked Claude Code's
+  Files & Folders access to the Documents-folder repo. The whole
+  working directory became unreadable for ~10 minutes. User
+  re-granted Full Disk Access in Settings → Privacy & Security; the
+  remaining edit went through cleanly. Future Claude Code runs on
+  Documents-folder repos should expect this — the recovery is just
+  toggling the access permission back on.
+
+**`011cfac` — RelatedChaptersStrip (Surface 4)**
+- New chapter-agnostic Component that reads each chapter's
+  `conceptMap` for `.crossChapter` nodes, groups by target chapter,
+  and renders one chip per resolved target. Tap → push to that
+  chapter. Auto-hides when no targets resolve.
+- The cross-chapter pointers authored during the morning's content
+  rounds — pedagogically the entire prize of the propagation — were
+  previously only discoverable from inside the ConceptMapView
+  sheet. This commit surfaces them at the chapter-detail level so
+  the kid sees "Ch.4 is one click away" without having to open
+  the graph first.
+- Currently shows on 15 of 19 chapters (the 4 holdouts have no
+  cross-chapter pointers yet; the strip will auto-appear when
+  anyone adds one — no code change needed).
+- 7 new unit tests covering the static derivation directly: real-
+  pack data assertions (Ch.19 = {ch04, ch07, ch08, ch16}), self-ref
+  filtering, unresolved-target filtering, count rollup, sort order.
+- The strip extracts its derivation as a `static func`
+  (`RelatedChaptersStrip.targetCounts(in:hostChapterId:validTargetIds:)`)
+  so tests don't have to construct fake Chapter/SubjectPack
+  instances. Cleaner test surface; also cleaner separation between
+  view and pure-data derivation.
+- All 5 Big-Sur lints clean on first attempt. The post-mortem
+  culture from yesterday's catches is paying off — caught `.brown`,
+  `.orange`-on-Text, and `enumerated()` mentally before writing
+  them.
+
+**`<this commit>` — PilotInteractiveSheetCoordinator refactor**
+- The `@State private var presentedSheet: SheetKind?` in
+  ChapterDetailView was the only thing keeping 6 propagated CTA
+  blocks + the SheetKind enum inside the parent file (private state
+  can't be touched from a sister file). Extracting state into an
+  ObservableObject coordinator unblocked the lift.
+- New `PilotInteractiveSheetCoordinator.swift` (~110 LOC) hosts
+  the SheetKind enum (promoted from private nested) + the @Published
+  presented binding + a `presentDeferred(_:)` helper that bakes in
+  the documented runloop-defer pattern.
+- New `ChapterDetailView+PropagatedCTAs.swift` (~270 LOC) hosts
+  every propagated CTA (`insideTheLeafTourCTA`,
+  `insideTheDigestiveTourCTA`, `insideTheAlveolusTourCTA`,
+  `insideTheXylemTourCTA`, `insideTheWireTourCTA`,
+  `insideTheLensTourCTA`, `conceptMapCTA`, and the
+  `ch1PilotInteractives` + `propagatedPilotInteractives` dispatch
+  ViewBuilders). Each CTA is a free function taking
+  `(chapter, coordinator)`.
+- ChapterDetailView went **786 LOC → 525 LOC** (33% smaller) and
+  came off the file-size allowlist after 1 day of being on it.
+- 5 new unit tests covering the coordinator: default state nil,
+  direct assignment publishes, presentDeferred defers to next
+  runloop tick (the critical property — synchronous check that it
+  does NOT assign immediately + async check that it does land), and
+  the SheetKind id format pinned for `.sheet(item:)` keying.
+
+### Coverage after this evening
+
+| Metric | Before today | After |
+|--------|--------------|-------|
+| Chapters with visual concept map | 1 / 19 | 19 / 19 |
+| Chapters with cross-chapter rec chips | 0 / 19 | 15 / 19 |
+| ChapterDetailView LOC | 786 (allowlisted) | 525 |
+| Total tests | 257 | 269 (+12) |
+
+### Lessons captured
+
+- **Generalising the visible surface IS often a one-commit win** —
+  the ConceptMapView promotion was the highest-leverage commit in
+  the project to date (light up 18 chapters, ~60 LOC of net new
+  code). When a renderer takes its inputs from JSON, the only
+  thing keeping it chapter-pinned is usually a name and a directory.
+- **ObservableObject coordinator is the right escape hatch when
+  CTAs want to extract** — the friction wasn't the CTAs; it was
+  the single shared piece of state they all needed to write to.
+  Extracting the state via @StateObject + @Published lets CTAs
+  cross file boundaries cleanly. This pattern will scale to N more
+  CTAs without churning the parent file.
+- **macOS TCC can revoke Files & Folders access mid-session** for
+  repos in the Documents folder. If a tool starts returning EPERM
+  for a working directory that was readable seconds ago, ask the
+  user to re-grant access in Privacy & Security → Full Disk
+  Access. Not a bug in any tool — system-level access control.
+- **Static-method derivation > constructor-fakery for tests** —
+  RelatedChaptersStrip's test file would have been ~200 LOC of
+  brittle Chapter/SubjectPack constructors (each has 25+ Optional
+  fields) if I'd tested through the view. Exposing the derivation
+  as a static method on the View type itself made the test surface
+  trivially exercisable with synthetic ConceptMap instances. Worth
+  doing for any future view with non-trivial logic.
+
+### What's left (post-evening block)
+
+The original 3-item handover is now fully resolved. Future
+candidates (in rough leverage order):
+1. **PersistenceTests warning fix** (`'is' test is always true` at
+   line 420) — 10-minute lint hygiene.
+2. **`testStreak_*` date-sensitive flake** — refactor the date
+   axis to inject a Clock so the test is deterministic across all
+   timezones. Documented as known-flake; root-cause fix is ~1h.
+3. **`docs/ISSUE_CATEGORIES.md` walk** — sweep all 🟡 / ❌ rows for
+   items that are now addressable given the past 2 days' work.
+4. **Surface 5 ideas** — e.g., a "spaced-repetition prompt strip"
+   at the top of each chapter detail page that uses the existing
+   DataStore tough-question + chapter-notebook signals to surface
+   what the kid struggled with last time.
+
 
 
 

@@ -65,6 +65,7 @@
 		081C1BA24F2140CDAB6F01D9 /* ChapterDetailView+Ch1Pilot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A75780CAF57C7217C18ACD /* ChapterDetailView+Ch1Pilot.swift */; };
 		7871865D4422CE05100D0072 /* ChapterDetailView+HomeExperiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00336B2021881B623D3D88FD /* ChapterDetailView+HomeExperiments.swift */; };
 		EC3D0B5E631BF67A888CB6B2 /* ChapterDetailView+Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6316EEC2F43B85F898847F4 /* ChapterDetailView+Notebook.swift */; };
+		110A9C0784A3FAB87237DD4A /* ChapterDetailView+PropagatedCTAs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AD02D77FF4178C3EF2B1D /* ChapterDetailView+PropagatedCTAs.swift */; };
 		C36EAE42C2EBF7A5207F18DB /* ChapterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510ACDECDFA4E524F7F7F2A2 /* ChapterDetailView.swift */; };
 		7068B3ECF23DC8D53DF28044 /* ChapterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F70D063700082D93582FA /* ChapterListView.swift */; };
 		7D9A9623F56DD9A433C440D2 /* CommandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADAE47CDD65296C02DFA35 /* CommandPalette.swift */; };
@@ -74,6 +75,7 @@
 		758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B1477CD2734BCD16FB3FF /* DictationButton.swift */; };
 		579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */; };
 		43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */; };
+		129596FFE7CEE4F17CA1AFCB /* PilotInteractiveSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3DB2E01BD3D051799E463 /* PilotInteractiveSheetCoordinator.swift */; };
 		D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */; };
 		22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */; };
 		A60BB1AE6D6479D15975A6CC /* QuestionVariationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C59CE51511B3A06E5CB2FA /* QuestionVariationCard.swift */; };
@@ -686,6 +688,7 @@
 		2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */; };
 		692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */; };
 		BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */; };
+		1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */; };
 		C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */; };
 		A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
@@ -1099,6 +1102,7 @@
 		47A75780CAF57C7217C18ACD /* ChapterDetailView+Ch1Pilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+Ch1Pilot.swift"; sourceTree = "<group>"; };
 		00336B2021881B623D3D88FD /* ChapterDetailView+HomeExperiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+HomeExperiments.swift"; sourceTree = "<group>"; };
 		A6316EEC2F43B85F898847F4 /* ChapterDetailView+Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+Notebook.swift"; sourceTree = "<group>"; };
+		DC1AD02D77FF4178C3EF2B1D /* ChapterDetailView+PropagatedCTAs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView+PropagatedCTAs.swift"; sourceTree = "<group>"; };
 		510ACDECDFA4E524F7F7F2A2 /* ChapterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterDetailView.swift"; sourceTree = "<group>"; };
 		F94F70D063700082D93582FA /* ChapterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterListView.swift"; sourceTree = "<group>"; };
 		84ADAE47CDD65296C02DFA35 /* CommandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommandPalette.swift"; sourceTree = "<group>"; };
@@ -1108,6 +1112,7 @@
 		F06B1477CD2734BCD16FB3FF /* DictationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictationButton.swift"; sourceTree = "<group>"; };
 		74E3F56676403BBA10EF7D7C /* FeatureExplainerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureExplainerSheet.swift"; sourceTree = "<group>"; };
 		7FF40B16150449C49D0274EF /* KeyboardShortcutsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcutsSheet.swift"; sourceTree = "<group>"; };
+		A6F3DB2E01BD3D051799E463 /* PilotInteractiveSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinator.swift"; sourceTree = "<group>"; };
 		64ECB36C86DEBF9385DDE68C /* QuestionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDetailView.swift"; sourceTree = "<group>"; };
 		7B4A273E6C781187B61951F9 /* QuestionDifficultyBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionDifficultyBadge.swift"; sourceTree = "<group>"; };
 		18C59CE51511B3A06E5CB2FA /* QuestionVariationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionVariationCard.swift"; sourceTree = "<group>"; };
@@ -1401,6 +1406,7 @@
 		9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageModelTests.swift"; sourceTree = "<group>"; };
 		6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRServiceTests.swift"; sourceTree = "<group>"; };
 		9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceTests.swift"; sourceTree = "<group>"; };
+		4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinatorTests.swift"; sourceTree = "<group>"; };
 		00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelatedChaptersStripTests.swift"; sourceTree = "<group>"; };
 		BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewFlagTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
@@ -2170,6 +2176,7 @@
 				47A75780CAF57C7217C18ACD,
 				00336B2021881B623D3D88FD,
 				A6316EEC2F43B85F898847F4,
+				DC1AD02D77FF4178C3EF2B1D,
 				510ACDECDFA4E524F7F7F2A2,
 				F94F70D063700082D93582FA,
 				84ADAE47CDD65296C02DFA35,
@@ -2179,6 +2186,7 @@
 				F06B1477CD2734BCD16FB3FF,
 				74E3F56676403BBA10EF7D7C,
 				7FF40B16150449C49D0274EF,
+				A6F3DB2E01BD3D051799E463,
 				64ECB36C86DEBF9385DDE68C,
 				7B4A273E6C781187B61951F9,
 				18C59CE51511B3A06E5CB2FA,
@@ -2976,6 +2984,7 @@
 				9BCBDD7642E6B995F329206B,
 				6A9E76C7A79EA22389275391,
 				9AA1C3F53E9C14BC7C4B5C91,
+				4F40F36BE5B49DE983D407DA,
 				00406863F2097E0853ACE132,
 				BE95DD4D15D17D6931C1D0F4,
 				ECC6A95CD9ABF9B8C9017257,
@@ -3520,6 +3529,7 @@
 				081C1BA24F2140CDAB6F01D9 /* ChapterDetailView+Ch1Pilot.swift in Sources */,
 				7871865D4422CE05100D0072 /* ChapterDetailView+HomeExperiments.swift in Sources */,
 				EC3D0B5E631BF67A888CB6B2 /* ChapterDetailView+Notebook.swift in Sources */,
+				110A9C0784A3FAB87237DD4A /* ChapterDetailView+PropagatedCTAs.swift in Sources */,
 				C36EAE42C2EBF7A5207F18DB /* ChapterDetailView.swift in Sources */,
 				7068B3ECF23DC8D53DF28044 /* ChapterListView.swift in Sources */,
 				7D9A9623F56DD9A433C440D2 /* CommandPalette.swift in Sources */,
@@ -3529,6 +3539,7 @@
 				758B2AD2B2A3779625D14052 /* DictationButton.swift in Sources */,
 				579B80A0A2AA95D74BE2C8D4 /* FeatureExplainerSheet.swift in Sources */,
 				43DE00EA4AFD3CE166DEDED1 /* KeyboardShortcutsSheet.swift in Sources */,
+				129596FFE7CEE4F17CA1AFCB /* PilotInteractiveSheetCoordinator.swift in Sources */,
 				D2B3DCBD455D1360DBDEE1AD /* QuestionDetailView.swift in Sources */,
 				22BBDB2C48C56FA0FAFB848B /* QuestionDifficultyBadge.swift in Sources */,
 				A60BB1AE6D6479D15975A6CC /* QuestionVariationCard.swift in Sources */,
@@ -3828,6 +3839,7 @@
 				2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */,
 				692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */,
 				BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */,
+				1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */,
 				C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */,
 				A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,

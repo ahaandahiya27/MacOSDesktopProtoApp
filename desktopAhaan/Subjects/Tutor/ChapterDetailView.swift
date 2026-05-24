@@ -7,54 +7,21 @@ struct ChapterDetailView: View {
 
     @EnvironmentObject private var nav: TutorNavigationState
     @EnvironmentObject private var dataStore: DataStore
-    @State private var presentedSheet: SheetKind?
 
-    /// Single source of truth for which enrichment sheet is on screen.
-    /// SwiftUI on macOS Big Sur (11) silently drops all-but-the-last
-    /// `.sheet(isPresented:)` modifier on a given view, so we route
-    /// every sheet through one `.sheet(item:)`. Identifiable conformance
-    /// is required so the .sheet(item:) modifier can key the
-    /// re-presentation.
-    private enum SheetKind: Identifiable {
-        case homeExperiments
-        case notebook
-        case article(ArticleEntry)
-        case glossary
-        case insideTheLeafTour       // Ch.1 pilot — Phase 2B
-        case conceptMap              // All-chapter generalisation (2026-05-24)
-        case insideTheWireTour       // Ch.14 propagation (2026-05-24)
-        case insideTheLensTour       // Ch.15 propagation (2026-05-24)
-        case insideTheAlveolusTour   // Ch.10 propagation (2026-05-24)
-        case insideTheXylemTour      // Ch.11 propagation (2026-05-24)
-        case insideTheDigestiveTour  // Ch.2 propagation (2026-05-24)
-
-        var id: String {
-            switch self {
-            case .homeExperiments:
-                return "homeExperiments"
-            case .notebook:
-                return "notebook"
-            case .article(let entry):
-                return "article-\(entry.id)"
-            case .glossary:
-                return "glossary"
-            case .insideTheLeafTour:
-                return "insideTheLeafTour"
-            case .conceptMap:
-                return "conceptMap"
-            case .insideTheWireTour:
-                return "insideTheWireTour"
-            case .insideTheLensTour:
-                return "insideTheLensTour"
-            case .insideTheAlveolusTour:
-                return "insideTheAlveolusTour"
-            case .insideTheXylemTour:
-                return "insideTheXylemTour"
-            case .insideTheDigestiveTour:
-                return "insideTheDigestiveTour"
-            }
-        }
-    }
+    /// Owns the `presented: SheetKind?` state that ChapterDetailView
+    /// previously held as `@State`. Extracting this lets the pilot
+    /// CTAs live in `ChapterDetailView+PropagatedCTAs.swift` and the
+    /// SheetKind enum live with the coordinator — they all need to
+    /// touch the same Identifiable binding, and private @State can't
+    /// cross file boundaries. See PilotInteractiveSheetCoordinator
+    /// for the full lineage + rationale.
+    ///
+    /// Single source of truth for which enrichment sheet is on
+    /// screen. SwiftUI on macOS Big Sur (11) silently drops all-but-
+    /// the-last `.sheet(isPresented:)` modifier on a given view, so
+    /// we route every sheet through one `.sheet(item:)` bound to
+    /// `$sheetCoordinator.presented`.
+    @StateObject private var sheetCoordinator = PilotInteractiveSheetCoordinator()
 
     /// Returns the chapter's "Beyond the Book" article entry ONLY when
     /// the HTML file is actually findable in Bundle.main. Catches the
@@ -90,8 +57,8 @@ struct ChapterDetailView: View {
     @ViewBuilder
     private var surfacesGroupTop: some View {
         Group {
-            ch1PilotInteractives  // empty unless chapter.id == "ch01"
-            propagatedPilotInteractives  // empty unless chapter.id ∈ {ch04,ch06,ch07,ch14,ch15}
+            ch1PilotInteractives(chapter: chapter, coordinator: sheetCoordinator)
+            propagatedPilotInteractives(chapter: chapter, coordinator: sheetCoordinator)
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)
@@ -102,237 +69,10 @@ struct ChapterDetailView: View {
         }
     }
 
-    /// Per-chapter Surface-2 / Surface-3 mounts propagated from the Ch.1
-    /// pilot (2026-05-24). Each entry is its own gate on chapter.id so
-    /// the wrong sandbox / tour never leaks into the wrong chapter. The
-    /// gates here are deliberately mutually exclusive — no chapter ships
-    /// more than one custom interactive in this round. This block is
-    /// one direct child of surfacesGroupTop so the @ViewBuilder 10-
-    /// child cap on that Group is preserved on Big Sur.
-    @ViewBuilder
-    private var propagatedPilotInteractives: some View {
-        // Split the dispatch into two sub-groups so each Group stays
-        // under the 10-child @ViewBuilder cap on Big Sur. We now have
-        // 13 chapter mounts (the Group itself counts only as 1 child
-        // of surfacesGroupTop, but the if/else-if chain compiles as
-        // separate ViewBuilder children inside).
-        propagatedPilotInteractivesA
-        propagatedPilotInteractivesB
-    }
-
-    @ViewBuilder
-    private var propagatedPilotInteractivesA: some View {
-        if chapter.id == "ch02" {
-            insideTheDigestiveTourCTA
-        } else if chapter.id == "ch04" {
-            BuildAHeatFlowSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch05" {
-            BuildAPHSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch06" {
-            BuildAReactionSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch07" {
-            BuildAClimateSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch08" {
-            BuildAWindSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch09" {
-            BuildASoilSandbox(chapterId: chapter.id)
-        }
-    }
-
-    @ViewBuilder
-    private var propagatedPilotInteractivesB: some View {
-        if chapter.id == "ch10" {
-            insideTheAlveolusTourCTA
-        } else if chapter.id == "ch11" {
-            insideTheXylemTourCTA
-        } else if chapter.id == "ch13" {
-            BuildAMotionSandbox(chapterId: chapter.id)
-        } else if chapter.id == "ch14" {
-            insideTheWireTourCTA
-        } else if chapter.id == "ch15" {
-            insideTheLensTourCTA
-        } else if chapter.id == "ch16" {
-            BuildAWaterCycleSandbox(chapterId: chapter.id)
-        }
-    }
-
-    /// CTA card opening InsideTheDigestiveTour sheet. Ch.2 only.
-    private var insideTheDigestiveTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheDigestiveTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "fork.knife",
-                title: "Inside the digestive system",
-                subtitle: "Follow a piece of chapati from mouth to colon — 24-hour journey, 5 organs, dozens of enzymes.",
-                gradient: [
-                    Color(red: 0.65, green: 0.32, blue: 0.10),
-                    Color(red: 0.80, green: 0.45, blue: 0.20)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("Inside the digestive system — five-stop tour")
-        .accessibilityHint("Opens a sheet that walks a piece of food from mouth through stomach, small intestine, liver, and large intestine.")
-    }
-
-    /// CTA card opening InsideTheAlveolusTour sheet. Ch.10 only.
-    private var insideTheAlveolusTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheAlveolusTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "lungs.fill",
-                title: "Inside an alveolus",
-                subtitle: "From nostril to red blood cell — five-stop walk through the respiratory pipeline that loads O₂ onto haemoglobin.",
-                gradient: [
-                    Color(red: 0.20, green: 0.55, blue: 0.55),
-                    Color(red: 0.80, green: 0.30, blue: 0.35)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("Inside an alveolus — five-stop respiratory tour")
-        .accessibilityHint("Opens a sheet that walks you from the nostril through the trachea, bronchi, and into an alveolus where oxygen loads onto a red blood cell.")
-    }
-
-    /// CTA card opening InsideTheXylemAscentTour sheet. Ch.11 only.
-    private var insideTheXylemTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheXylemTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "drop.fill",
-                title: "The xylem ascent",
-                subtitle: "Follow one water molecule from a root hair, up a 100-metre tree, through a leaf vein, and out a stoma — no pump, just physics.",
-                gradient: [
-                    Color(red: 0.20, green: 0.50, blue: 0.70),
-                    Color(red: 0.10, green: 0.65, blue: 0.55)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("The xylem ascent — five-stop tour of water rising up a plant")
-        .accessibilityHint("Opens a sheet that walks one water molecule from a root hair, up the xylem, through a stem, into leaf veins, and out a stoma.")
-    }
-
-    /// CTA card opening InsideTheWireTour sheet. Ch.14 only.
-    private var insideTheWireTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheWireTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "bolt.fill",
-                title: "Inside the wire",
-                subtitle: "Shrink to electron-size and trace the chain from battery to glowing filament — five-stop guided journey.",
-                gradient: [
-                    Color(red: 0.85, green: 0.65, blue: 0.10),
-                    Color(red: 0.60, green: 0.20, blue: 0.10)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("Inside the wire — five-stop electron-flow tour")
-        .accessibilityHint("Opens a sheet that walks you from a battery's negative terminal through a copper lattice to a glowing bulb filament.")
-    }
-
-    /// CTA card opening InsideTheLensTour sheet. Ch.15 only.
-    private var insideTheLensTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheLensTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "eye.fill",
-                title: "Inside the lens",
-                subtitle: "Follow a ray of light from a distant star through a convex lens — when does it form a real image, when does it magnify?",
-                gradient: [
-                    Color(red: 0.45, green: 0.30, blue: 0.70),
-                    Color(red: 0.20, green: 0.45, blue: 0.75)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("Inside the lens — five-stop refraction tour")
-        .accessibilityHint("Opens a sheet that walks you through how a convex lens refracts light, forms a real inverted image, and acts as a magnifying glass.")
-    }
-
-    /// Ch.1 pilot — five net-new pedagogical surfaces mount here. The
-    /// conditional `if chapter.id == "ch01"` is the leak-prevention
-    /// point: every other chapter sees an EmptyView for this slot, so
-    /// pixel + structural parity for Ch.2..19 is preserved. The
-    /// Ch2_19_StructuralRatchetTests guards against accidentally
-    /// editing JSON for those chapters; this conditional guards
-    /// against accidentally mounting Ch.1 views elsewhere.
-    @ViewBuilder
-    private var ch1PilotInteractives: some View {
-        if chapter.id == "ch01" {
-            BuildAPlantSandbox(chapterId: chapter.id)
-            insideTheLeafTourCTA
-        }
-    }
-
-    /// Chapter-agnostic CTA card that opens ConceptMapView as a sheet.
-    /// Auto-hides when the chapter has no conceptMap authored. After the
-    /// 2026-05-24 content propagation every NCERT Class 7 chapter has
-    /// a concept map, so this CTA shows on all 19 chapters. Each chapter's
-    /// summary text reports the concrete node + edge count so the kid
-    /// knows what to expect before tapping in.
-    @ViewBuilder
-    private var conceptMapCTA: some View {
-        if let map = chapter.conceptMap, !map.nodes.isEmpty {
-            Button {
-                DispatchQueue.main.async { presentedSheet = .conceptMap }
-            } label: {
-                Ch1PilotCTACard(
-                    symbol: "point.3.connected.trianglepath.dotted",
-                    title: "See the connections",
-                    subtitle: "\(map.nodes.count) ideas, \(map.edges.count) links — visualise how this chapter's concepts connect, and where they reach into other chapters.",
-                    gradient: [
-                        Color(red: 0.40, green: 0.30, blue: 0.70),
-                        Color(red: 0.20, green: 0.45, blue: 0.65)
-                    ]
-                )
-            }
-            .buttonStyle(.plain)
-            .pointingCursor()
-            .accessibilityLabel("See the connections — concept map for this chapter")
-            .accessibilityHint("Opens a sheet showing how the chapter's concepts link to each other and to other chapters.")
-        }
-    }
-
-    /// CTA card that opens the InsideTheLeafTour sheet. Ch.1 pilot only;
-    /// the parent gate (`chapter.id == "ch01"`) keeps this off Ch.2..19.
-    /// Visual built from `Ch1PilotCTACard` (sister file) so the LOC
-    /// stays under the 600 ceiling here.
-    private var insideTheLeafTourCTA: some View {
-        Button {
-            DispatchQueue.main.async { presentedSheet = .insideTheLeafTour }
-        } label: {
-            Ch1PilotCTACard(
-                symbol: "magnifyingglass.circle.fill",
-                title: "Inside the Leaf",
-                subtitle: "Shrink yourself to a stoma, then to a chloroplast, then to a thylakoid — five-stop guided journey.",
-                gradient: [
-                    Color(red: 0.18, green: 0.50, blue: 0.42),
-                    Color(red: 0.10, green: 0.30, blue: 0.55)
-                ]
-            )
-        }
-        .buttonStyle(.plain)
-        .pointingCursor()
-        .accessibilityLabel("Inside the Leaf — five-stop guided tour")
-        .accessibilityHint("Opens a sheet that walks you through a leaf from outside to inside a chloroplast.")
-    }
-
     @ViewBuilder
     private var surfacesGroupBottom: some View {
         Group {
-            conceptMapCTA
+            conceptMapCTA(chapter: chapter, coordinator: sheetCoordinator)
             RelatedChaptersStrip(pack: pack, chapter: chapter)
             CurriculumBridgeChip(chapter: chapter)
             glossaryButton
@@ -349,7 +89,7 @@ struct ChapterDetailView: View {
     private var glossaryButton: some View {
         if !chapter.glossaryList.isEmpty {
             Button {
-                DispatchQueue.main.async { presentedSheet = .glossary }
+                DispatchQueue.main.async { sheetCoordinator.presented = .glossary }
             } label: {
                 HStack(spacing: 10) {
                     Image(systemName: SFSymbolCompat.name("character.book.closed"))
@@ -437,19 +177,19 @@ struct ChapterDetailView: View {
                             if let entry = beyondTheBookEntry {
                                 BeyondTheBookCard(entry: entry) {
                                     DispatchQueue.main.async {
-                                        presentedSheet = .article(entry)
+                                        sheetCoordinator.presented = .article(entry)
                                     }
                                 }
                             }
                             if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
                                 // Defer the sheet-present to the next runloop tick.
                                 // Same C2 cascade fix as the Try Discover Mode nav.push
-                                // — setting presentedSheet inside the Button action
+                                // — setting sheetCoordinator.presented inside the Button action
                                 // can collide with the Button-press render commit on
                                 // ChapterDetailView, sometimes tripping "Entangling
                                 // fence requested after pre-commit" → EXC_BAD_ACCESS.
                                 TryAtHomeCard {
-                                    DispatchQueue.main.async { presentedSheet = .homeExperiments }
+                                    DispatchQueue.main.async { sheetCoordinator.presented = .homeExperiments }
                                 }
                             }
                         }
@@ -457,7 +197,7 @@ struct ChapterDetailView: View {
                     NotebookCard(
                         hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true)
                     ) {
-                        DispatchQueue.main.async { presentedSheet = .notebook }
+                        DispatchQueue.main.async { sheetCoordinator.presented = .notebook }
                     }
                 }
 
@@ -501,7 +241,7 @@ struct ChapterDetailView: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Ch. \(chapter.number) — \(chapter.title)")
-        .sheet(item: $presentedSheet) { kind in
+        .sheet(item: $sheetCoordinator.presented) { kind in
             switch kind {
             case .homeExperiments:
                 HomeExperimentsSheet(
@@ -525,43 +265,43 @@ struct ChapterDetailView: View {
             case .glossary:
                 GlossarySheet(
                     chapter: chapter,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheLeafTour:
                 InsideTheLeafTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .conceptMap:
                 ConceptMapView(
                     pack: pack,
                     chapter: chapter,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheWireTour:
                 InsideTheWireTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheLensTour:
                 InsideTheLensTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheAlveolusTour:
                 InsideTheAlveolusTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheXylemTour:
                 InsideTheXylemAscentTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             case .insideTheDigestiveTour:
                 InsideTheDigestiveTour(
                     chapterId: chapter.id,
-                    onDismiss: { presentedSheet = nil }
+                    onDismiss: { sheetCoordinator.presented = nil }
                 )
             }
         }
