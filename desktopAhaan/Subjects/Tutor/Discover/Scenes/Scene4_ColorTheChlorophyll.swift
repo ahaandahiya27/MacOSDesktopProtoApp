@@ -168,7 +168,7 @@ struct Scene4_ColorTheChlorophyll: View {
     }
 
     private func tapBand(_ i: Int) {
-        withAnimation(.easeInOut) { selectedBand = i }
+        withAnimation(reduceMotion ? nil : .easeInOut) { selectedBand = i }
         if !isAbsorbed(i) && !reduceMotion {
             // Quick shake for "rejected"
             withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 12 }

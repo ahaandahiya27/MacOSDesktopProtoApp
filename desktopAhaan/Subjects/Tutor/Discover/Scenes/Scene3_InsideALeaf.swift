@@ -82,7 +82,7 @@ struct Scene3_InsideALeaf: View {
 
             HStack(spacing: 12) {
                 Button {
-                    withAnimation(.spring()) { zoomed.toggle() }
+                    withAnimation(reduceMotion ? nil : .spring()) { zoomed.toggle() }
                 } label: {
                     Label(zoomed ? "Zoom out" : "🔍 Zoom in",
                           systemImage: zoomed ? "minus.magnifyingglass" : "plus.magnifyingglass")
@@ -140,7 +140,7 @@ struct Scene3_InsideALeaf: View {
     @ViewBuilder
     private func partHotspot(_ part: LeafPart, at position: CGPoint) -> some View {
         Button {
-            withAnimation(.easeInOut) {
+            withAnimation(reduceMotion ? nil : .easeInOut) {
                 selectedPart = part
             }
         } label: {

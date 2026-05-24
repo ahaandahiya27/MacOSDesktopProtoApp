@@ -220,7 +220,7 @@ struct Scene9_BossQuiz: View {
         let isRight = option == item.answer
         if isRight {
             score += 1
-            withAnimation(.spring()) { revealed[currentQ] = true }
+            withAnimation(reduceMotion ? nil : .spring()) { revealed[currentQ] = true }
         } else {
             if !reduceMotion {
                 withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 14 }
@@ -231,15 +231,15 @@ struct Scene9_BossQuiz: View {
                     withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shake = 0 }
                 }
             }
-            withAnimation(.easeInOut.delay(0.4)) { revealed[currentQ] = true }
+            withAnimation(reduceMotion ? nil : .easeInOut.delay(0.4)) { revealed[currentQ] = true }
         }
     }
 
     private func advance() {
         if currentQ < 14 {
-            withAnimation(.easeInOut) { currentQ += 1 }
+            withAnimation(reduceMotion ? nil : .easeInOut) { currentQ += 1 }
         } else {
-            withAnimation(.easeInOut) { done = true; celebrate = true }
+            withAnimation(reduceMotion ? nil : .easeInOut) { done = true; celebrate = true }
         }
     }
 

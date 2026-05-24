@@ -278,7 +278,7 @@ struct Scene5_AutotrophHeterotroph: View {
                     decideDrop(token: token, droppedAsAutotroph: false)
                 } else {
                     // Released outside any zone — just snap back.
-                    withAnimation(.spring()) {
+                    withAnimation(reduceMotion ? nil : .spring()) {
                         dragOffset = .zero
                     }
                 }
@@ -295,15 +295,15 @@ struct Scene5_AutotrophHeterotroph: View {
     private func decideDrop(token: OrganismToken, droppedAsAutotroph: Bool) {
         let correct = (token.isAutotroph == droppedAsAutotroph)
         if correct {
-            withAnimation(.spring()) {
+            withAnimation(reduceMotion ? nil : .spring()) {
                 placed[token.id] = true
             }
             feedback = "✓ Right! \(token.label) — \(token.isAutotroph ? "makes its own food" : "eats other things")."
             if correctCount == 12 && !celebrate {
-                withAnimation(.easeInOut) { celebrate = true }
+                withAnimation(reduceMotion ? nil : .easeInOut) { celebrate = true }
             }
-        } else {
-            // Shake the card
+        } else if !reduceMotion {
+            // Shake the card — skip entirely when Reduce Motion is on.
             shakeMap[token.id] = 12
             withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shakeMap[token.id] = -10 }
             Task { @MainActor in
@@ -311,11 +311,14 @@ struct Scene5_AutotrophHeterotroph: View {
                 withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeMap[token.id] = 0 }
             }
             feedback = "Try again — \(token.label) is a \(token.isAutotroph ? "🌱 autotroph" : "🐯 heterotroph")."
+        } else {
+            // Reduce Motion on — just text feedback, no shake.
+            feedback = "Try again — \(token.label) is a \(token.isAutotroph ? "🌱 autotroph" : "🐯 heterotroph")."
         }
     }
 
     private func skipAndShow() {
-        withAnimation(.easeInOut) {
+        withAnimation(reduceMotion ? nil : .easeInOut) {
             for t in tokens { placed[t.id] = true }
             celebrate = true
         }

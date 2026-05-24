@@ -175,7 +175,7 @@ struct Scene2_PhotosynthesisLab: View {
     }
 
     private func resetEverything() {
-        withAnimation(.easeInOut) {
+        withAnimation(reduceMotion ? nil : .easeInOut) {
             hasWater = false
             hasCO2 = false
             hasSun = false
@@ -194,7 +194,7 @@ private struct FuelButton: View {
 
     var body: some View {
         Button {
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) { on = true }
+            withAnimationRespectingReduceMotion(.spring(response: 0.4, dampingFraction: 0.7)) { on = true }
         } label: {
             VStack(spacing: 4) {
                 Text(emoji).font(.system(size: 28))
