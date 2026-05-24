@@ -701,6 +701,7 @@
 		656E3907AFDF2EFB318899BA /* AXHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773304C26586D6C207F0C081 /* AXHelpers.swift */; };
 		528B7A7644B56295FC19BA15 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBAA37F0DBA8A0610013437 /* Crash1_TryDiscoverMode_Ch1.swift */; };
 		7FC03FB7E1E6DEB0FF75C8AF /* Crash_BeyondThenDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60091D6C7364D788BE717EB9 /* Crash_BeyondThenDiscover.swift */; };
+		8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */; };
 		DDB015C8D62C992B762151A6 /* Surface_AuditWalker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */; };
 /* End PBXBuildFile section */
 
@@ -1420,6 +1421,7 @@
 		773304C26586D6C207F0C081 /* AXHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXHelpers.swift"; sourceTree = "<group>"; };
 		1EBAA37F0DBA8A0610013437 /* Crash1_TryDiscoverMode_Ch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crash1_TryDiscoverMode_Ch1.swift"; sourceTree = "<group>"; };
 		60091D6C7364D788BE717EB9 /* Crash_BeyondThenDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crash_BeyondThenDiscover.swift"; sourceTree = "<group>"; };
+		EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoldenPathUITests.swift"; sourceTree = "<group>"; };
 		31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Surface_AuditWalker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -3012,6 +3014,7 @@
 				773304C26586D6C207F0C081,
 				1EBAA37F0DBA8A0610013437,
 				60091D6C7364D788BE717EB9,
+				EB156BF5302D75DBA4A0B186,
 				31D8B5E1A41E3A1401C4C16B,
 			);
 			path = desktopAhaanUITests;
@@ -3859,6 +3862,7 @@
 				656E3907AFDF2EFB318899BA /* AXHelpers.swift in Sources */,
 				528B7A7644B56295FC19BA15 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */,
 				7FC03FB7E1E6DEB0FF75C8AF /* Crash_BeyondThenDiscover.swift in Sources */,
+				8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */,
 				DDB015C8D62C992B762151A6 /* Surface_AuditWalker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
