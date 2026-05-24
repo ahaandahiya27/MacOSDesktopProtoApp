@@ -825,5 +825,95 @@ clock time.
   a crash smoke. Both stay opt-in via `-only-testing` because the
   dev mac doesn't grant AX to the test runner; the iMac does.
 
+---
+
+## SPACED REPETITION + PROGRESS DASHBOARD SESSION COMPLETE — 2026-05-24 (afternoon → evening)
+
+Read-before-writing audit found that the SRS layer the brief asked
+for had largely shipped already in the 2026-05-19 audit close-out:
+`QuestionReview` Codable, `SM2Scheduler`, `DataStore.recordReview /
+dueQuestionIds / dueQuestionCount`, a calendar-injected streak
+engine, AND a full `DailyPracticeView` + `ReviewSessionSheet` with
+four-quality buttons + ⌘1..⌘4 shortcuts. Even the
+`QuestionDetailView.swift:378` write hook on the canonical Practice
+Question path was already in place.
+
+The session's real value-add was the **mastery aggregation layer**
+that turns the existing per-question state into a visible learning
+loop:
+
+- `19cc568` — `feat(srs): MasteryLevel enum + DataStore+Mastery
+  aggregation`. View-only `MasteryLevel` (Learning / Familiar /
+  Confident / Mastered, derived from `QuestionReview.bucket /
+  ease / intervalDays` with a 21-day floor on Mastered so five
+  Easy taps in one session don't fake it). New
+  `DataStore+Mastery.swift` partial with
+  `masterySummary(forPackId:chapters:locator:)` — decoupled from
+  `SubjectRegistry` via a closure injection so it's unit-testable.
+  16 new tests pass in 0.024s.
+- `6d08c2a` — `feat(srs): MasteryDashboard — per-chapter mastery
+  grid + due badge`. New sidebar tool (⌘⇧M), per-chapter
+  segmented mastery bar, level-count chips, subject filter tabs,
+  legend explaining each level, "Start Daily Practice" CTA wired
+  to flip `appState.sidebarSelection`. Daily Practice sidebar row
+  picks up an orange `BadgePill` showing `dueQuestionCount` capped
+  at 99.
+- `91e3573` — `feat(srs): discoverability`. Help menu "About Daily
+  Practice" entry → new `FeatureExplainerSheet.aboutDailyPractice`
+  factory (four kid-friendly paragraphs, no SM-2 jargon).
+  `WelcomeTourSheet` panel count 3 → 4 with a new panelDailyPractice
+  pointing at the sidebar entries. `WhatsNewSheet` gets a top entry
+  for the mastery dashboard. New opt-in `SRS_Smoke.swift` XCUITest
+  walks sidebar → Daily Practice → My Progress.
+
+### What we deliberately did NOT do
+
+The brief asked for write hooks at four sites: Practice Questions
+(already done), Boss Quiz, Discover Quizzes, Flashcards. The latter
+three use **hand-authored inline `Ch1QuizItem` structs** that don't
+carry canonical `Question.id` values — recording reviews against
+synthetic boss-quiz ids would populate the review queue with items
+the `SubjectRegistry.location` resolver can't render. The Tough
+button's seed-an-SRS-row side-effect already lets the kid mark any
+real question for review; canonical Practice Questions write
+review rows on every answer. The review queue grows organically
+from those two sources, which is the right design.
+
+If a future session migrates boss-quiz / scene-quiz content into
+the pack JSON with stable ids, the write hook becomes a one-liner
+at the existing call sites.
+
+### Build / lints / tests
+
+- Build (Debug, target 11.5): zero code warnings.
+- Tests (full suite, 285 cases): green in 703s. 16 of those are
+  new (MasteryLevelTests + MasterySummaryTests).
+- All 9 lint scripts clean — LH005b still holds at zero new
+  violations on top of the 66-row allowlist.
+
+### Notes for future sessions
+
+- `DataStore+Mastery.masterySummary` takes a `locator` closure
+  rather than reaching directly into `SubjectRegistry`. That's the
+  testability seam — pass a fake locator that returns
+  `(chapterId, chapterTitle, chapterNumber)` triples for any
+  test-controlled questionId and the aggregation tests run without
+  loading a pack. The production caller in `MasteryDashboard`
+  routes through `subjectRegistry.location(forQuestionId:)`.
+- `MasteryLevel` is intentionally **view-only**. No persistence,
+  no Codable file. Every dashboard render recomputes from the
+  authoritative `QuestionReview` state. If we ever want
+  per-question history (graph of mastery over time), that needs a
+  new `MasteryHistory` Codable — out of scope here.
+- The mastery aggregation skips unresolvable questionIds silently
+  (e.g. a review row for a question that was removed from the
+  pack). The row stays on disk — harmless — and the dashboard
+  just doesn't count it. A future "garbage-collect orphan reviews"
+  pass could prune them.
+- `SPACED_REP_DESIGN.md` at repo root documents the full SRS
+  state and the gap this session closed; it's the durable artefact
+  for any future session asking "what's already shipped here?"
+
+
 
 
