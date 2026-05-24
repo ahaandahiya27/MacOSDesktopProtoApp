@@ -78,4 +78,21 @@ extension Chapter {
     var timelinesList: [ContentTimeline] { timelines ?? [] }
     var deepDiveList: [StretchTopic] { deepDive ?? [] }
     var mediaAssetsList: [MediaAsset] { mediaAssets ?? [] }
+
+    /// Flat list of every Question id in this chapter, walking the
+    /// chapter → topic → question tree. Used by D4's "Stuck here?"
+    /// strip to intersect chapter scope with the tough-flagged and
+    /// recently-missed signals. Computed each access — typical
+    /// chapter has ~40 questions, well under any noticeable cost.
+    var allQuestionIds: [String] {
+        topics.flatMap { $0.questions.map(\.id) }
+    }
+
+    /// Flat list of every Concept id in this chapter — same shape as
+    /// `allQuestionIds`. The "Stuck here?" strip intersects this with
+    /// the user's bookmarked concept set to surface chapter-scoped
+    /// bookmarks.
+    var allConceptIds: [String] {
+        topics.flatMap { $0.concepts.map(\.id) }
+    }
 }

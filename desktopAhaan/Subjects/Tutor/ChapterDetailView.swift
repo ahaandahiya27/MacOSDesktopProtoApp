@@ -124,6 +124,21 @@ struct ChapterDetailView: View {
         }
     }
 
+    /// Chapter-scoped "Stuck here?" signals — derived per-render so
+    /// new tough flags / missed reviews / bookmarks land immediately.
+    private var stuckSignals: StuckSignals {
+        ChapterStuckHereStrip.signals(
+            chapter: chapter,
+            toughQuestionIds: dataStore.toughQuestionIds,
+            recentlyMissedIds: dataStore.recentlyMissedQuestionIds(),
+            bookmarkedConceptIds: Set(
+                dataStore.studyBookmarks
+                    .filter { $0.subjectPackId == pack.id }
+                    .map(\.conceptId)
+            )
+        )
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -131,6 +146,22 @@ struct ChapterDetailView: View {
                     .font(.callout)
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 4)
+
+                // "Stuck here?" — auto-hides on empty signal set.
+                ChapterStuckHereStrip(
+                    pack: pack,
+                    chapter: chapter,
+                    signals: stuckSignals,
+                    onTapQuestion: { qid in
+                        nav.questionSiblings = [
+                            QuestionRef(packId: pack.id, questionId: qid)
+                        ]
+                        nav.push(.question(packId: pack.id, questionId: qid))
+                    },
+                    onTapConcept: { cid in
+                        nav.push(.concept(packId: pack.id, conceptId: cid))
+                    }
+                )
 
                 if DiscoverMode.hasExperience(for: pack, chapter: chapter) {
                     Button {

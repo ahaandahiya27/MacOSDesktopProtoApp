@@ -303,6 +303,7 @@
 		BE64BB0D497A0F0579C9202D /* Scene7_Budding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2748EDD87E89DC9900595B8 /* Scene7_Budding.swift */; };
 		6ABA1ED7FA2E69C710A01145 /* Scene8_Fragmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7141632E27D6B245E391297 /* Scene8_Fragmentation.swift */; };
 		F14826E462D653B641C85830 /* Scene9_BossQuiz_Ch12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1A55FCC76C5547A3FA48B1 /* Scene9_BossQuiz_Ch12.swift */; };
+		F70B92F667607D514495070A /* ChapterStuckHereStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F4692F2AE51609D0227A1 /* ChapterStuckHereStrip.swift */; };
 		C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */; };
 		5B78E5BE81B03EFC327D5A40 /* ConceptMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E361C8F9BD45D24D23BEBF2B /* ConceptMapView.swift */; };
 		139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */; };
@@ -696,6 +697,7 @@
 		1E001F5E3AEC3F39504B5E27 /* BossQuizSRSWiringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F995D583179480596084E5C9 /* BossQuizSRSWiringTests.swift */; };
 		34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */; };
 		3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */; };
+		983812D78D1D4CCD0F633AD6 /* ChapterStuckSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C882C5EBB432B235F23514 /* ChapterStuckSignalsTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
 		2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */; };
@@ -1360,6 +1362,7 @@
 		C2748EDD87E89DC9900595B8 /* Scene7_Budding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene7_Budding.swift"; sourceTree = "<group>"; };
 		F7141632E27D6B245E391297 /* Scene8_Fragmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene8_Fragmentation.swift"; sourceTree = "<group>"; };
 		5D1A55FCC76C5547A3FA48B1 /* Scene9_BossQuiz_Ch12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene9_BossQuiz_Ch12.swift"; sourceTree = "<group>"; };
+		C75F4692F2AE51609D0227A1 /* ChapterStuckHereStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterStuckHereStrip.swift"; sourceTree = "<group>"; };
 		A9275C811B5F93B6FF38A9B7 /* CollapsibleContentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollapsibleContentSection.swift"; sourceTree = "<group>"; };
 		E361C8F9BD45D24D23BEBF2B /* ConceptMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConceptMapView.swift"; sourceTree = "<group>"; };
 		348962B08D0E8D37B39470F6 /* ContentChipStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentChipStrip.swift"; sourceTree = "<group>"; };
@@ -1434,6 +1437,7 @@
 		F995D583179480596084E5C9 /* BossQuizSRSWiringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizSRSWiringTests.swift"; sourceTree = "<group>"; };
 		192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ch2_19_StructuralRatchetTests.swift"; sourceTree = "<group>"; };
 		9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterContentTests.swift"; sourceTree = "<group>"; };
+		C5C882C5EBB432B235F23514 /* ChapterStuckSignalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterStuckSignalsTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
 		9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageModelTests.swift"; sourceTree = "<group>"; };
@@ -2256,6 +2260,7 @@
 		06B6AEA61665FFC065417DFB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C75F4692F2AE51609D0227A1,
 				A9275C811B5F93B6FF38A9B7,
 				E361C8F9BD45D24D23BEBF2B,
 				348962B08D0E8D37B39470F6,
@@ -3032,6 +3037,7 @@
 				F995D583179480596084E5C9,
 				192F570A0F0B902A0BD9210D,
 				9AA33BC827B658DD27418AD8,
+				C5C882C5EBB432B235F23514,
 				8C883748B706BDB46E529043,
 				33A3949D07E1B3CA2F232114,
 				9BCBDD7642E6B995F329206B,
@@ -3827,6 +3833,7 @@
 				BE64BB0D497A0F0579C9202D /* Scene7_Budding.swift in Sources */,
 				6ABA1ED7FA2E69C710A01145 /* Scene8_Fragmentation.swift in Sources */,
 				F14826E462D653B641C85830 /* Scene9_BossQuiz_Ch12.swift in Sources */,
+				F70B92F667607D514495070A /* ChapterStuckHereStrip.swift in Sources */,
 				C4D1638B070B0712838BC63F /* CollapsibleContentSection.swift in Sources */,
 				5B78E5BE81B03EFC327D5A40 /* ConceptMapView.swift in Sources */,
 				139C5B3F2C1935C95FA95B36 /* ContentChipStrip.swift in Sources */,
@@ -3907,6 +3914,7 @@
 				1E001F5E3AEC3F39504B5E27 /* BossQuizSRSWiringTests.swift in Sources */,
 				34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */,
 				3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */,
+				983812D78D1D4CCD0F633AD6 /* ChapterStuckSignalsTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
 				2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */,
