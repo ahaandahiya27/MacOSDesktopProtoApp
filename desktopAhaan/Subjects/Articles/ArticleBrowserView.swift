@@ -492,14 +492,13 @@ private class ArticleCoordinator: NSObject, ObservableObject
             // Stale completion — a newer load() superseded this one.
             guard self.loadGeneration == myGeneration else { return }
             switch result {
-            case .success(let body, let title):
-                self.nativeArticle = NSAttributedString(
-                    string: body,
-                    attributes: [
-                        .font: NSFont.systemFont(ofSize: NSFont.systemFontSize),
-                        .foregroundColor: NSColor.labelColor
-                    ]
-                )
+            case .success(_, let title, let blocks):
+                // E4 — drop the body's first <h1> only if it matches
+                // the chrome title (case + whitespace insensitive).
+                let trimmed = ArticleStructuredRenderer
+                    .deduplicateHeroHeading(blocks, matching: title)
+                self.nativeArticle = ArticleStructuredRenderer
+                    .makeRichAttributedString(from: trimmed)
                 self.currentURL = url
                 self.pageTitle = title
                 self.recordNativeHistory(for: url, shouldRecord: recordingHistory)
@@ -521,9 +520,10 @@ private class ArticleCoordinator: NSObject, ObservableObject
         }
     }
 
-    /// Off-main file read + HTML strip + title extraction. Returns a
-    /// Sendable result (Strings only, no NSError refs) so the value can
-    /// cross the actor hop without `@unchecked Sendable` lies.
+    /// Off-main file read + HTML strip + structured-block parse +
+    /// title extraction. Returns a Sendable carrier (String body +
+    /// String title + `[ArticleBlock]` value-type list) so the value
+    /// crosses the actor hop without `@unchecked Sendable` lies.
     private nonisolated static func readParseAndExtractTitle(
         url: URL
     ) async -> ArticleLoadOutcome {
@@ -535,7 +535,8 @@ private class ArticleCoordinator: NSObject, ObservableObject
                 let html = try String(contentsOf: url, encoding: .utf8)
                 let body = PlainTextArticleFallback.stripHTML(html)
                 let title = Self.titleFromHTML(html, body: body, fallbackURL: url)
-                return .success(body: body, title: title)
+                let blocks = ArticleStructuredRenderer.parseBlocks(html)
+                return .success(body: body, title: title, blocks: blocks)
             } catch {
                 return .failure(message: error.localizedDescription)
             }
@@ -587,14 +588,11 @@ private class ArticleCoordinator: NSObject, ObservableObject
     }
 }
 
-/// Sendable carrier for the off-main article load. String payloads only —
-/// keeps NSError out of the actor-hop value.
+/// Sendable carrier for the off-main article load. Strings + an
+/// `[ArticleBlock]` value-type tree — keeps NSError + AppKit types
+/// out of the actor-hop value.
 private enum ArticleLoadOutcome: Sendable {
-    case success(body: String, title: String)
+    case success(body: String, title: String, blocks: [ArticleBlock])
     case failure(message: String)
 }
-
-
-// MARK: - PlainTextArticleFallback — moved to
-//        ArticleBrowserView+PlainTextFallback.swift
-//        (Big Sur LOC ceiling)
+// PlainTextArticleFallback lives in ArticleBrowserView+PlainTextFallback.swift
