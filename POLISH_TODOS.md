@@ -39,6 +39,8 @@ The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity c
 - [ ] **Notebook card "last edited" badge** — `ChapterDetailView+Notebook.swift` `NotebookCard` shows just `hasNotes: Bool`. Could surface "Last edited N days ago" for a small recency cue.
 - [ ] **Try-at-Home per-chapter copy** — `TryAtHomeCard` hard-codes "Hands-on experiments you can do this weekend." Could use per-chapter copy from `HomeExperimentLibrary`.
 - [ ] **Surface audit walker (UITest)** — Build `desktopAhaanUITests/Surface_AuditWalker.swift` so the iMac (with AX granted) can mechanise the static audit into a runtime walk + screenshot pass.
+- [ ] **AppIcon PNG assets missing** — `desktopAhaan/Assets.xcassets/AppIcon.appiconset/Contents.json` declares ten icon slots (16/32/128/256/512 @1x and @2x) but zero PNG files are present. App ships with a generic Finder icon in the Dock. Generate source artwork + the ten PNGs in a future polish pass. Not a launch blocker.
+- [ ] **withAnimation Reduce-Motion lint** — `scripts/check_lifetime_hazards.py` rule LH005 catches `.animation(<X>)` modifiers but not `withAnimation(<X>) { … }` imperative wraps. The 2026-05-24 audit closed 15 sites by hand; a lint extension would prevent recurrence project-wide (currently 220+ unguarded sites remain in low-visibility spots).
 
 ## §4. Resolved (archive)
 
