@@ -86,8 +86,8 @@ struct AllChaptersCompleteOverlay: View {
 
             if let score = totalBossQuizScore, let maxScore = totalBossQuizMax, maxScore > 0 {
                 Text("Boss Quiz total: \(score) / \(maxScore)")
-                    .font(.title3.monospacedDigit())
-                    .foregroundColor(.yellow)
+                    .font(.title3.monospacedDigit().bold())
+                    .foregroundColor(.white)
                     .padding(.top, 4)
             }
 
