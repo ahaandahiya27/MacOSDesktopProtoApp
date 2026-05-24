@@ -23,6 +23,12 @@ struct DictationButton: View {
                     RoundedRectangle(cornerRadius: 6, style: .continuous)
                         .fill((speech.isListening ? Color.red : Color.compatIndigo).opacity(0.12))
                 )
+                // Inner chip stays 28×24 visually; outer hit target meets
+                // the 44×44 a11y minimum so the kid (or a stylus user) can
+                // tap reliably. .contentShape makes the whole 44×44 zone
+                // hit-testable, not just the chip.
+                .frame(width: 44, height: 44)
+                .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
         .help(speech.isListening ? "Stop dictation" : "Speak your answer — runs on this Mac, no internet needed")
