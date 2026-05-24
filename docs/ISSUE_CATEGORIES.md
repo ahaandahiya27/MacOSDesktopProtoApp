@@ -10,6 +10,8 @@ concrete instances, fix them, mark the category done. Status legend:
 
 Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to completion + new PE block (Performance & responsiveness) seeded. Major perf wins this round: SubjectPack index cache (process-wide, replaces per-render `Dictionary(uniquingKeysWith:)` rebuild), QuizBank filter hot-path memoisation, sidebar `needsReviewCount` via cached `needsHumanReviewIds` set, DiscoverProgressDashboard cached `discoverRowCount(for:)`, DiscoverShell `completedSceneIds` captured once per body, `SubjectRegistry.reload()` re-entrancy guard. Plus: `arrowshape.down.fill` SF Symbol routed, FlipCard cropping fixed (Wool Animals scene), Phase 1-3 visual work + 40+ commits.).
 
+2026-05-24 walk — flipped rows updated to reflect the past 48 hours: test count bumped (T1), warning sweep noted (S1). Not flipped because they're scoped to chrome/content work that's outside this doc's taxonomy: Ch.1 pilot content propagation to all 19 chapters (REMEDIATION_LOG), ConceptMapView generalisation (21d4d42), RelatedChaptersStrip Surface 4 (011cfac), PilotInteractiveSheetCoordinator refactor (84eed29), streak-flake fix (cb615c2). Three remaining 🟡 rows that recent work made smaller (H4 / O4 / GFX5) still need iMac-eyeball verification before they can be flipped to ✅.
+
 ---
 
 ## A. Platform compatibility (Big Sur 11.7.11 / Xcode 13.2.1 / Swift 5.5)
@@ -261,7 +263,7 @@ Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to c
 
 | ID | Category | Status |
 |----|----------|--------|
-| S1 | Build with zero warnings | ✅ zero Swift-compiler warnings (one Swift-6 Sendable warning in Scene3_DistanceTimeGraph fixed via enum-driven CurveShape) |
+| S1 | Build with zero warnings | ✅ zero Swift-compiler warnings (one Swift-6 Sendable warning in Scene3_DistanceTimeGraph fixed via enum-driven CurveShape). 2026-05-24 follow-up: cleared 3 always-true tautology warnings (`PersistenceTests:420 preferOffline is Bool`, `TranslationServiceTests:225,246 provider as? TranslationProvider`). Each rewritten as a behaviour / typed-let assertion stricter than the runtime nil-check the compiler proved couldn't fail. Commit `e7195e1`. The remaining ld warnings are Xcode 16 SDK linker noise against the Big Sur deploy target — infrastructural, not source-code |
 | S2 | Resources copied (HTML / CSS / JSON) | ✅ |
 | S3 | Asset catalog usage | ✅ `Assets.xcassets` exists with AppIcon + AccentColor; all in-app colour usage routes through SF Symbols + Color.compat* (semantic), which is the right call for an SF-Symbols-first offline education app |
 | S4 | Single-scheme build | ✅ |
@@ -272,7 +274,7 @@ Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to c
 
 | ID | Category | Status |
 |----|----------|--------|
-| T1 | Unit tests (`Testing` framework) | ✅ 254 tests across 13 files, all green |
+| T1 | Unit tests (`Testing` framework) | ✅ 269 tests across 16 top-level files (+ CrashRepros subdir), all green. 2026-05-24 additions: `RelatedChaptersStripTests` (7 tests covering Surface 4's static derivation — real-pack pin for Ch.19 cross-chapter targets, self-ref/unresolved filtering, count rollup, sort order), `PilotInteractiveSheetCoordinatorTests` (5 tests pinning the coordinator's defer behaviour and SheetKind id stability). Also: the Date-sensitive `testStreak_*` flake (the "retry the push once" rule that lived in CLAUDE.md / REMEDIATION_LOG) is now permanently fixed via `DataStore(streakCalendar:)` injection — commit `cb615c2` |
 | T2 | UI tests (XCUIAutomation) | ❌ none |
 | T3 | Smoke test for navigation | 🟡 covered indirectly by TutorNavigationTests, no end-to-end click test |
 | T4 | Snapshot tests | ❌ |
