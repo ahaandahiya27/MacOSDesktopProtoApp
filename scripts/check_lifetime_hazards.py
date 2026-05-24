@@ -39,7 +39,7 @@ scripts/lifetime_hazards_allowlist.txt):
      Allowlist if the enclosing type is a value-type struct (no retain
      cycle possible) or the closure provably doesn't reference self.
 
-  5. Implicit `.animation(<X>)` view modifier without a Reduce-Motion
+  5a. Implicit `.animation(<X>)` view modifier without a Reduce-Motion
      gate. Every `.animation(<X>)` must either contain the substring
      `reduceMotion` on the same line (e.g.
      `.animation(reduceMotion ? .none : .easeInOut(...))`) or be
@@ -51,6 +51,24 @@ scripts/lifetime_hazards_allowlist.txt):
      inline inside `TimelineView(...)` parens). The helper file
      `View+RespectReduceMotion.swift` itself is exempt because it IS
      the helper.
+
+  5b. Imperative `withAnimation(<X>) { ... }` wrap without a Reduce-
+     Motion gate. The 2026-05-24 audit closed 15 hand-picked sites
+     because LH005a only caught the declarative `.animation()` form.
+     This sibling rule fires on the imperative call. Gated iff any of:
+       - the `<X>` argument expression contains `reduceMotion` (e.g.
+         `withAnimation(reduceMotion ? nil : .easeInOut(...))`),
+       - the same line carries an end-of-line `// lh005-ok: <reason>`
+         escape comment,
+       - any of the 8 preceding non-blank lines contains the token
+         `reduceMotion` (covers outer-block `if !reduceMotion { ... }`
+         and `if reduceMotion { return }` early-exit patterns).
+     The call to `withAnimationRespectingReduceMotion(...)` is the
+     project's preferred helper and is never matched (the regex uses
+     a negative lookahead to ensure `withAnimation` is a standalone
+     identifier, not the helper's prefix).
+     Grandfathered sites live in
+     `scripts/lh005_withanimation_allowlist.txt`.
 
   6. `print(` outside a `#if DEBUG ... #endif` block. Release builds
      should not emit stdout noise; use os.Logger (per-subsystem,
@@ -76,6 +94,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = REPO_ROOT / "desktopAhaan"
 ALLOWLIST_PATH = REPO_ROOT / "scripts" / "lifetime_hazards_allowlist.txt"
+# Dedicated allowlist for LH005b. The withAnimation rule lights up
+# ~250 grandfathered sites — keeping them in their own file means a
+# future "deprecate the rule" pass touches one file, not the shared
+# lifetime hazards allowlist that's already crowded with proofs.
+WITH_ANIMATION_ALLOWLIST_PATH = (
+    REPO_ROOT / "scripts" / "lh005_withanimation_allowlist.txt"
+)
 
 # Files that are exempt from these rules. FoundationTutor is the AI shim
 # carve-out documented in CLAUDE.md; tests are scanned separately if at all.
@@ -118,6 +143,24 @@ def _read_allowlist() -> set[str]:
     return keys
 
 
+def _read_withanimation_allowlist() -> set[str]:
+    """Same format as `_read_allowlist`, but reads the dedicated LH005b
+    file. Returning an empty set when the file is missing keeps the
+    bootstrap path working — the lint just reports every site as new."""
+    if not WITH_ANIMATION_ALLOWLIST_PATH.exists():
+        return set()
+    keys = set()
+    for raw in WITH_ANIMATION_ALLOWLIST_PATH.read_text().splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split(":", 2)
+        if len(parts) < 2:
+            continue
+        keys.add(f"{parts[0]}:{parts[1]}")
+    return keys
+
+
 # --- Rule implementations -------------------------------------------------
 
 _VAR_DELEGATE_RE = re.compile(r"(?<!\bweak\s)\bvar\s+delegate\s*:")
@@ -127,6 +170,21 @@ _UNCHECKED_SENDABLE_RE = re.compile(r"@unchecked\s+Sendable\b")
 # TimelineView's `.animation(minimumInterval:)` factory is inline inside
 # `TimelineView(...)` parens, never line-leading, so it doesn't match.
 _ANIMATION_MODIFIER_RE = re.compile(r"^\s+\.animation\(")
+# Imperative `withAnimation(<X>) { ... }` — matches `withAnimation` only
+# when it is a standalone identifier (not the prefix of
+# `withAnimationRespectingReduceMotion`). The negative lookahead requires
+# the next char after `withAnimation` to NOT be an identifier char (so
+# the helper, which has `R` after, never matches). The negative
+# lookbehind ensures we don't pick up substrings like `notWithAnimation`.
+_WITH_ANIMATION_RE = re.compile(
+    r"(?<![A-Za-z0-9_])withAnimation(?![A-Za-z0-9_])\s*\("
+)
+# LH005b's per-line escape valve. End-of-line comment of the form
+# `// lh005-ok: <reason>` marks the site as intentional.
+_LH005B_ESCAPE_RE = re.compile(r"//\s*lh005-ok\b", re.IGNORECASE)
+# Number of preceding lines to scan when looking for an outer-block
+# Reduce-Motion gate ahead of a `withAnimation` call.
+_LH005B_LOOKBACK = 8
 # `print(` at the start of a line (after whitespace). The Swift method
 # `print(_:_:_:)` accessed as `Foo.print(...)` or `someObject.print(...)`
 # is fine and not what we're after; we only catch top-of-line calls.
@@ -432,6 +490,114 @@ def _scan_animation_gate(swift_path: Path) -> list[Violation]:
     return findings
 
 
+def _scan_withanimation_gate(swift_path: Path) -> list[Violation]:
+    """LH005b — every imperative `withAnimation(<X>) { ... }` must carry
+    a Reduce-Motion gate. Gated iff any of:
+
+      - the `<X>` expression contains the token `reduceMotion`
+      - the line carries `// lh005-ok` (any trailing reason)
+      - any of the 8 preceding non-blank lines contains `reduceMotion`
+        (covers outer-block `if !reduceMotion { ... }` and early-exit
+        `if reduceMotion { return }` patterns common in scenes)
+
+    The helper `withAnimationRespectingReduceMotion` is never matched
+    because the regex requires `withAnimation` to be a standalone
+    identifier (negative lookahead on the next char).
+
+    `View+RespectReduceMotion.swift` is exempt — it's where the helper
+    itself is defined.
+    """
+    rel = swift_path.relative_to(REPO_ROOT).as_posix()
+    if rel.endswith("View+RespectReduceMotion.swift"):
+        return []
+    text = swift_path.read_text()
+    lines = text.splitlines()
+    findings: list[Violation] = []
+
+    for m in _WITH_ANIMATION_RE.finditer(text):
+        # Line on which the call site lives.
+        line_no = text[: m.start()].count("\n") + 1
+        line = lines[line_no - 1] if line_no - 1 < len(lines) else ""
+
+        # Skip comment lines.
+        stripped = line.strip()
+        if stripped.startswith("//") or stripped.startswith("///"):
+            continue
+
+        # Per-line escape valve.
+        if _LH005B_ESCAPE_RE.search(line):
+            continue
+
+        # Extract the `<X>` expression up to the matching close-paren.
+        # `m.end() - 1` points at the `(` we matched; walk forward
+        # tracking depth.
+        paren_start = m.end() - 1
+        depth = 0
+        end = -1
+        i = paren_start
+        scan_limit = i + 1200
+        while i < min(len(text), scan_limit):
+            ch = text[i]
+            if ch == "(":
+                depth += 1
+            elif ch == ")":
+                depth -= 1
+                if depth == 0:
+                    end = i
+                    break
+            i += 1
+        # If the close-paren doesn't appear within scan_limit, treat
+        # the site as ungated (still flag it) — the expression is
+        # pathologically long, which itself wants attention.
+        argument_expr = text[paren_start + 1 : end] if end >= 0 else text[paren_start + 1 : scan_limit]
+        if "reduceMotion" in argument_expr:
+            continue
+
+        # Look back up to LH005B_LOOKBACK non-blank, non-comment lines.
+        lookback_hit = False
+        scanned = 0
+        idx = line_no - 2  # 0-indexed line above current
+        while idx >= 0 and scanned < _LH005B_LOOKBACK:
+            prev = lines[idx].strip()
+            if not prev or prev.startswith("//") or prev.startswith("///"):
+                idx -= 1
+                continue
+            if "reduceMotion" in prev:
+                lookback_hit = True
+                break
+            scanned += 1
+            idx -= 1
+        if lookback_hit:
+            continue
+
+        findings.append(
+            Violation(
+                rule_id="LH005b",
+                rel_path=rel,
+                line_no=line_no,
+                line=line.rstrip(),
+                why=(
+                    "`withAnimation(<X>) { ... }` without a Reduce-Motion "
+                    "gate ignores the user's accessibility preference. "
+                    "Pick one: (a) inline gate "
+                    "`withAnimation(reduceMotion ? nil : <X>) { ... }`; "
+                    "(b) route through the helper "
+                    "`withAnimationRespectingReduceMotion(<X>) { ... }` "
+                    "in desktopAhaan/Extensions/View+RespectReduceMotion.swift; "
+                    "(c) wrap the call site in an `if !reduceMotion { ... }` "
+                    "block (the rule scans 8 preceding lines for the gate). "
+                    "Last resort: tag the line with "
+                    "`// lh005-ok: <reason>` if the call is provably "
+                    "unreachable under Reduce Motion (e.g. an early "
+                    "`if reduceMotion { return }` further up than the "
+                    "lookback window)."
+                ),
+            )
+        )
+
+    return findings
+
+
 def _scan_unchecked_sendable(swift_path: Path) -> list[Violation]:
     rel = swift_path.relative_to(REPO_ROOT).as_posix()
     findings: list[Violation] = []
@@ -476,6 +642,7 @@ def _scan_repo() -> list[Violation]:
         findings.extend(_scan_unchecked_sendable(swift_path))
         findings.extend(_scan_closure_captures(swift_path))
         findings.extend(_scan_animation_gate(swift_path))
+        findings.extend(_scan_withanimation_gate(swift_path))
         findings.extend(_scan_print_call(swift_path))
     return findings
 
@@ -489,15 +656,30 @@ def main() -> int:
         return 2
 
     allow = _read_allowlist()
+    wa_allow = _read_withanimation_allowlist()
     findings = _scan_repo()
-    new_findings = [v for v in findings if v.allowlist_key() not in allow]
+    # LH005b uses its own dedicated allowlist; every other rule shares
+    # the original lifetime_hazards_allowlist.txt.
+    new_findings: list[Violation] = []
+    for v in findings:
+        key = v.allowlist_key()
+        if v.rule_id == "LH005b":
+            if key in wa_allow:
+                continue
+        else:
+            if key in allow:
+                continue
+        new_findings.append(v)
 
     if not new_findings:
         total = len(findings)
+        grandfathered = len(allow) + len(wa_allow)
         if total:
             print(
                 f"check_lifetime_hazards: clean — {total} pre-existing "
-                f"violation(s) grandfathered via allowlist."
+                f"violation(s) grandfathered "
+                f"({len(allow)} via lifetime_hazards_allowlist, "
+                f"{len(wa_allow)} via lh005_withanimation_allowlist)."
             )
         else:
             print("check_lifetime_hazards: clean — no violations.")

@@ -1,0 +1,93 @@
+# lh005_withanimation_allowlist.txt
+#
+# Grandfathered sites for LH005b — imperative `withAnimation(<X>) { ... }`
+# wraps without a Reduce-Motion gate.
+#
+# Format:  <repo-relative path>:<line number>:<one-line reason>
+#
+# Empty lines and lines starting with `#` are ignored. Only the
+# `path:line` prefix is the lookup key.
+#
+# This file was bootstrapped 2026-05-24 when LH005b landed. The 66
+# entries below are pre-existing call sites that ship in main; new
+# violations are NOT allowed to be added here without a per-line
+# reason that survives a code review.
+#
+# Preferred fixes — in order:
+#   1. Inline gate:  withAnimation(reduceMotion ? nil : .easeInOut)
+#   2. Helper:       withAnimationRespectingReduceMotion(.easeInOut)
+#   3. Outer block:  wrap the call site in `if !reduceMotion { ... }`
+#   4. Per-line escape:  `// lh005-ok: <reason>` on the same line
+#      (last resort, used when the gate is provably elsewhere)
+#
+# Migration pattern for future polish sessions: walk a chapter's scene
+# files, replace each `withAnimation` with the helper, and remove the
+# matching rows below. LH005b stays clean because the migrated sites
+# no longer trigger.
+
+desktopAhaan/Subjects/Tutor/ChapterDetailView+HomeExperiments.swift:293: ChapterDetail sub-section — pre-existing site, audit close-out deferred.
+desktopAhaan/Subjects/Tutor/Discover/Chapter12/DiscoverChapter12View.swift:294: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:192: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:203: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:209: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:211: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:323: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:503: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:582: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:676: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:795: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:874: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene4_IntestineVillus.swift:145: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene4_IntestineVillus.swift:151: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:242: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:251: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:255: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:259: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:269: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:273: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/DiscoverChapter3View.swift:227: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene1_FluffToFibre.swift:174: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene3_TheShearingDay.swift:178: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene3_TheShearingDay.swift:184: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene8_FibreVsFibreGame.swift:212: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene8_FibreVsFibreGame.swift:216: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:214: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:218: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:229: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:233: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/DiscoverChapter4View.swift:609: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene6_ConductorOrInsulator.swift:266: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:195: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:206: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:212: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:214: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene6_AcidOrBaseSortingLab.swift:254: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:192: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:203: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:209: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:211: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene6_PhysicalOrChemicalSorting.swift:270: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:190: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:201: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:207: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:209: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene6_AdaptationMatchGame.swift:248: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:184: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:195: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:200: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:201: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter8/DiscoverChapter8View.swift:158: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/Chapter9/DiscoverChapter9View.swift:460: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
+desktopAhaan/Subjects/Tutor/Discover/DiscoverChapter1View+InlineScenes.swift:984: Ch.1 inline scene file — grandfathered with the file-size allowlist; sweep when split.
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:179: Pre-existing site grandfathered when LH005b landed (2026-05-24).
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:181: Pre-existing site grandfathered when LH005b landed (2026-05-24).
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:183: Pre-existing site grandfathered when LH005b landed (2026-05-24).
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:184: Pre-existing site grandfathered when LH005b landed (2026-05-24).
+desktopAhaan/Subjects/Tutor/QuestionDetailView.swift:379: Pre-existing site grandfathered when LH005b landed (2026-05-24).
+desktopAhaan/Views/Favorites/FavoritesScreen.swift:18: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/Favorites/FavoritesScreen.swift:45: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/Favorites/FavoritesScreen.swift:64: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/History/HistoryScreen.swift:26: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/History/HistoryScreen.swift:53: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/History/HistoryScreen.swift:82: Top-level view — pre-existing site, audit close-out deferred.
+desktopAhaan/Views/Practice/PracticeScreen.swift:235: Top-level view — pre-existing site, audit close-out deferred.

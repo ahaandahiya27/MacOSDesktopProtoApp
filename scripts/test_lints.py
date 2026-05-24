@@ -101,6 +101,14 @@ def main() -> int:
     if not _check("clean fixture flags 0", 0, _count(v, "LH005")):
         failures.append("LH005 clean")
 
+    print("== LH005b — withAnimation imperative wrap without Reduce-Motion gate ==")
+    v = lh._scan_withanimation_gate(FIXTURES / "lh005b_violation.swift")
+    if not _check("violation fixture flags exactly 2", 2, _count(v, "LH005b")):
+        failures.append("LH005b violation")
+    v = lh._scan_withanimation_gate(FIXTURES / "lh005b_clean.swift")
+    if not _check("clean fixture flags 0", 0, _count(v, "LH005b")):
+        failures.append("LH005b clean")
+
     print("== LH006 — print() outside #if DEBUG ==")
     v = lh._scan_print_call(FIXTURES / "lh006_violation.swift")
     if not _check("violation fixture flags exactly 1", 1, _count(v, "LH006")):
