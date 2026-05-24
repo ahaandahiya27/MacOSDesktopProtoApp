@@ -1001,11 +1001,27 @@ final class ChapterContentTests: XCTestCase {
 
     // MARK: - Streak counter (Option C of the audit closure)
     //
-    // creditReviewStreak() does yyyy-MM-dd date arithmetic against
-    // UserDefaults. The first user who travels through a timezone
-    // boundary or whose local clock rolls past midnight mid-session
-    // will hit any silent bugs in this math, so we pin the four
-    // canonical cases here.
+    // creditReviewStreak() does yyyy-MM-dd date arithmetic. Before
+    // 2026-05-24 the engine constructed a fresh `Calendar` per call
+    // using the system timezone, while these tests used
+    // `Calendar.current` (autoupdating) to build day1+N. On most
+    // machines the two agreed, but on machines where `NSLocale.current`
+    // returned a non-Gregorian default identifier the two disagreed,
+    // producing the documented "retry the push once" flake.
+    //
+    // The fix: DataStore now accepts a `streakCalendar:` init
+    // parameter. These tests construct a store with a UTC Gregorian
+    // calendar AND use that same calendar to build their day fixtures
+    // — so the engine and the test see identical "today" strings
+    // regardless of the runner's machine timezone, locale, or
+    // calendar identifier. The tests are now deterministic across
+    // every CI environment.
+
+    private static let utcGregorian: Calendar = {
+        var c = Calendar(identifier: .gregorian)
+        c.timeZone = TimeZone(identifier: "UTC")!
+        return c
+    }()
 
     private func clearStreakDefaults() {
         UserDefaults.standard.removeObject(forKey: AppStorageKeys.reviewStreakDays)
@@ -1016,10 +1032,10 @@ final class ChapterContentTests: XCTestCase {
     @MainActor func testStreak_BestEverTracksHighWaterMark() {
         clearStreakDefaults()
         defer { clearStreakDefaults() }
-        let store = DataStore()
+        let store = DataStore(streakCalendar: Self.utcGregorian)
         store.questionReviews.removeAll()
         let day1 = Date(timeIntervalSince1970: 1_700_000_000)
-        let cal = Calendar.current
+        let cal = Self.utcGregorian
 
         // Build a 4-day streak.
         for offset in 0..<4 {
@@ -1050,9 +1066,10 @@ final class ChapterContentTests: XCTestCase {
     @MainActor func testStreak_FirstEverReviewSetsToOne() {
         clearStreakDefaults()
         defer { clearStreakDefaults() }
-        let store = DataStore()
+        let store = DataStore(streakCalendar: Self.utcGregorian)
         store.questionReviews.removeAll()
-        let now = Date()
+        // Fixed reference date — independent of when the test runs.
+        let now = Date(timeIntervalSince1970: 1_700_000_000)
         store.recordReview(questionId: "q-streak-1", quality: .good, at: now)
         XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1,
                        "First-ever review should set streak to 1.")
@@ -1062,9 +1079,10 @@ final class ChapterContentTests: XCTestCase {
     @MainActor func testStreak_SameDayReviewIsIdempotent() {
         clearStreakDefaults()
         defer { clearStreakDefaults() }
-        let store = DataStore()
+        let store = DataStore(streakCalendar: Self.utcGregorian)
         store.questionReviews.removeAll()
-        let now = Date()
+        // Fixed reference date — three reviews at the same instant.
+        let now = Date(timeIntervalSince1970: 1_700_000_000)
         store.recordReview(questionId: "q-streak-a", quality: .good, at: now)
         store.recordReview(questionId: "q-streak-b", quality: .easy, at: now)
         store.recordReview(questionId: "q-streak-c", quality: .hard, at: now)
@@ -1075,10 +1093,10 @@ final class ChapterContentTests: XCTestCase {
     @MainActor func testStreak_NextDayReviewIncrements() {
         clearStreakDefaults()
         defer { clearStreakDefaults() }
-        let store = DataStore()
+        let store = DataStore(streakCalendar: Self.utcGregorian)
         store.questionReviews.removeAll()
         let day1 = Date(timeIntervalSince1970: 1_700_000_000)  // 2023-11-14 22:13:20 UTC
-        let day2 = Calendar.current.date(byAdding: .day, value: 1, to: day1)!
+        let day2 = Self.utcGregorian.date(byAdding: .day, value: 1, to: day1)!
         store.recordReview(questionId: "q-streak-day1", quality: .good, at: day1)
         XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 1)
         store.recordReview(questionId: "q-streak-day2", quality: .good, at: day2)
@@ -1089,13 +1107,13 @@ final class ChapterContentTests: XCTestCase {
     @MainActor func testStreak_MultiDayGapResetsToOne() {
         clearStreakDefaults()
         defer { clearStreakDefaults() }
-        let store = DataStore()
+        let store = DataStore(streakCalendar: Self.utcGregorian)
         store.questionReviews.removeAll()
         let day1 = Date(timeIntervalSince1970: 1_700_000_000)
-        let day5 = Calendar.current.date(byAdding: .day, value: 4, to: day1)!
+        let day5 = Self.utcGregorian.date(byAdding: .day, value: 4, to: day1)!
         store.recordReview(questionId: "q-streak-day1", quality: .good, at: day1)
         store.recordReview(questionId: "q-streak-day1b", quality: .good,
-                            at: Calendar.current.date(byAdding: .day, value: 1, to: day1)!)
+                            at: Self.utcGregorian.date(byAdding: .day, value: 1, to: day1)!)
         XCTAssertEqual(UserDefaults.standard.integer(forKey: AppStorageKeys.reviewStreakDays), 2)
         // Big gap — streak should reset to 1.
         store.recordReview(questionId: "q-streak-day5", quality: .good, at: day5)

@@ -239,7 +239,48 @@ final class DataStore: ObservableObject {
     /// reads any file.
     static let currentSchemaVersion: Int = 1
 
-    init() {
+    /// Calendar used by the streak engine for yyyy-MM-dd day-boundary
+    /// math. In production this is a fresh Gregorian calendar using the
+    /// system timezone (default — i.e. "today" matches the kid's wall-
+    /// clock). In tests this can be overridden with a UTC calendar so
+    /// the streak assertions are deterministic across any CI machine's
+    /// timezone.
+    ///
+    /// Why this matters: before this injection point, the engine
+    /// constructed a fresh `Calendar(identifier: .gregorian)` per call
+    /// (system TZ) while tests used `Calendar.current` (autoupdating).
+    /// On most machines they agreed, but on machines where
+    /// `NSLocale.current` returned a non-Gregorian default identifier
+    /// (e.g. ja_JP with Japanese calendar), the two could disagree and
+    /// the test would flake. The CLAUDE.md "retry the push once before
+    /// assuming a real failure" rule existed to ride out this exact
+    /// class of flake — and is now obsolete with this commit.
+    let streakCalendar: Calendar
+
+    /// Lazily-built formatter that uses `streakCalendar`. Kept as a
+    /// stored property so we don't re-build it on every recordReview
+    /// call (DateFormatter init is relatively expensive).
+    private let streakDayFormatter: DateFormatter
+
+    init(streakCalendar: Calendar? = nil) {
+        // Default to a fresh Gregorian calendar in the system timezone
+        // — equivalent to the pre-refactor inline calendar. Tests pass
+        // a UTC Gregorian to make their day math deterministic.
+        // Default is materialised inside the init body rather than the
+        // signature because (a) `Self.defaultStreakCalendar` can't
+        // appear in a covariant-Self default arg, and (b) the static
+        // is MainActor-isolated and default args evaluate in a
+        // nonisolated context — both errors caught by Swift 5.5 on
+        // Big Sur and worth keeping the workaround documented.
+        let resolvedCalendar = streakCalendar ?? Calendar(identifier: .gregorian)
+        self.streakCalendar = resolvedCalendar
+        let fmt = DateFormatter()
+        fmt.calendar = resolvedCalendar
+        fmt.timeZone = resolvedCalendar.timeZone
+        fmt.locale = Locale(identifier: "en_US_POSIX")
+        fmt.dateFormat = "yyyy-MM-dd"
+        self.streakDayFormatter = fmt
+
         let appSupport = FileManager.default.urls(
             for: .applicationSupportDirectory, in: .userDomainMask
         ).first ?? FileManager.default.temporaryDirectory
@@ -582,21 +623,21 @@ final class DataStore: ObservableObject {
     ///   - Same day as lastDate: no change (idempotent within the day).
     ///   - Exactly one day after lastDate: streak += 1, lastDate = today.
     ///   - More than one day gap: streak = 1, lastDate = today (reset).
+    ///
+    /// Uses the injected `streakCalendar` + `streakDayFormatter` so
+    /// the day-boundary math is deterministic across machine
+    /// timezones. Tests override `streakCalendar` with UTC; production
+    /// gets the system default (so "today" matches the kid's clock).
     private func creditReviewStreak(at now: Date) {
         let defaults = UserDefaults.standard
-        let fmt = DateFormatter()
-        fmt.calendar = Calendar(identifier: .gregorian)
-        fmt.locale = Locale(identifier: "en_US_POSIX")
-        fmt.dateFormat = "yyyy-MM-dd"
-        let today = fmt.string(from: now)
+        let today = streakDayFormatter.string(from: now)
         let lastDate = defaults.string(forKey: AppStorageKeys.reviewStreakLastDate)
         let current = defaults.integer(forKey: AppStorageKeys.reviewStreakDays)
 
         guard lastDate != today else { return }   // already counted today
 
-        let calendar = Calendar(identifier: .gregorian)
-        let yesterday = calendar.date(byAdding: .day, value: -1, to: now)
-            .map { fmt.string(from: $0) }
+        let yesterday = streakCalendar.date(byAdding: .day, value: -1, to: now)
+            .map { streakDayFormatter.string(from: $0) }
 
         let nextStreak: Int
         if let last = lastDate, last == yesterday {
@@ -615,6 +656,7 @@ final class DataStore: ObservableObject {
             defaults.set(nextStreak, forKey: AppStorageKeys.reviewStreakBest)
         }
     }
+
 
     /// Questions that are due for review at or before `now`. Returns the
     /// most-overdue questions first so the kid sees the items that have

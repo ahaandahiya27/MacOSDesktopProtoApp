@@ -13,7 +13,7 @@
 ## Lessons captured this run
 
 - **XcodeWrite path quirk**: when the `filePath` is `desktopAhaan/<file>` (one level deep), the MCP creates only the `PBXFileReference` entry and the file lands at the *workspace root* (not inside the target's group), so it doesn't compile. Workaround: place new sister files in a SUBDIRECTORY (`desktopAhaan/Views/Foo/Bar.swift`, `desktopAhaan/Subjects/X/Y.swift`) — those get both `PBXFileReference` AND `PBXBuildFile` and compile cleanly. Iter 3 cost one full retry to discover this.
-- **Pre-push hook test flake**: `testStreak_*` in `ChapterContentTests.swift` is Date-sensitive and occasionally fails under the CI script's process order. Always retry the push once before assuming a real failure. Catalogued in `CRASH_DEEP_RESEARCH.md` row 11D.
+- **~~Pre-push hook test flake~~** (RESOLVED 2026-05-24): `testStreak_*` in `ChapterContentTests.swift` was Date-sensitive — the engine constructed a fresh `Calendar(identifier: .gregorian)` per call using system timezone, while tests used `Calendar.current` (autoupdating). On machines where `NSLocale.current` returned a non-Gregorian default identifier, the two could disagree and the assertions flaked. Fixed by injecting `streakCalendar:` into `DataStore.init`, defaulted to system Gregorian in production and overridden with UTC Gregorian in tests. Tests now compute day1+N using the SAME calendar the engine uses → deterministic across every CI environment. The "retry the push once" rule is now obsolete.
 
 ## Open items (deferred, with reason)
 
