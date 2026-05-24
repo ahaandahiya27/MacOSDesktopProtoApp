@@ -14,6 +14,14 @@ struct QuestionDetailView: View {
     let question: Question
 
     @State private var revealSolution = false
+    /// Highest revealed hint tier (D5):
+    ///   0 = nothing revealed yet
+    ///   1 = first hint visible
+    ///   2 = second clue visible
+    ///   3 = full worked solution visible (also sets revealSolution = true
+    ///       so the existing "common mistakes" reveal trigger stays
+    ///       intact).
+    @State private var hintTier: Int = 0
     @State private var typedAnswer = ""
     @State private var attemptOutcome: AttemptOutcome = .unchecked
     @State private var selectedOptionIndex: Int? = nil
@@ -753,28 +761,88 @@ struct QuestionDetailView: View {
         }
     }
 
+    /// Progressive hint ladder (D5). Three buttons; tapping a higher
+    /// tier auto-reveals every lower tier. Tier 3 = "Show full
+    /// solution" sets `revealSolution = true` so the downstream
+    /// "common mistakes" panel still appears.
+    ///
+    /// Hint derivation lives on `Question.derivedHints` so the
+    /// view doesn't carry derivation logic the unit tests would
+    /// have to replicate.
     private var solutionDisclosure: some View {
-        ExpandableCard(
-            isExpanded: $revealSolution,
-            systemImage: "lightbulb.fill",
-            title: "Show worked solution"
-        ) {
-            VStack(alignment: .leading, spacing: 10) {
-                Text(question.answer)
-                    .font(.body.bold())
-                    .padding(10)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
-                ForEach(question.solutionSteps.indices, id: \.self) { idx in let step = question.solutionSteps[idx];
-                    HStack(alignment: .top, spacing: 10) {
-                        Text("\(idx + 1).")
-                            .font(.body.bold())
-                            .foregroundColor(Color.compatIndigo)
-                            .frame(width: 22, alignment: .trailing)
-                        Text(step)
-                            .font(.body)
-                            .lineSpacing(3)
-                    }
+        let hints = question.derivedHints
+        return VStack(alignment: .leading, spacing: 8) {
+            // Tier 1
+            if hintTier >= 1, hints.indices.contains(0) {
+                hintBlock(label: "First hint", body: hints[0])
+            } else if !hints.isEmpty {
+                Button("Show first hint") {
+                    if hintTier < 1 { hintTier = 1 }
+                }
+                .controlSize(.large)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            // Tier 2
+            if hintTier >= 2, hints.indices.contains(1) {
+                hintBlock(label: "Next clue", body: hints[1])
+            } else if hintTier >= 1, hints.count >= 2 {
+                Button("Show next clue") {
+                    if hintTier < 2 { hintTier = 2 }
+                }
+                .controlSize(.large)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            // Tier 3 — full worked solution
+            if hintTier >= 3 || revealSolution {
+                fullSolutionBlock
+            } else {
+                Button("Show full solution") {
+                    if hintTier < 3 { hintTier = 3 }
+                    revealSolution = true
+                }
+                .controlSize(.large)
+                .keyboardShortcut(.defaultAction)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+
+    private func hintBlock(label: String, body: String) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.caption.weight(.semibold))
+                .foregroundColor(.secondary)
+                .textCase(.uppercase)
+            Text(body)
+                .font(.body)
+                .lineSpacing(3)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.08))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
+        )
+    }
+
+    private var fullSolutionBlock: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(question.answer)
+                .font(.body.bold())
+                .padding(10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
+            ForEach(question.solutionSteps.indices, id: \.self) { idx in let step = question.solutionSteps[idx];
+                HStack(alignment: .top, spacing: 10) {
+                    Text("\(idx + 1).")
+                        .font(.body.bold())
+                        .foregroundColor(Color.compatIndigo)
+                        .frame(width: 22, alignment: .trailing)
+                    Text(step)
+                        .font(.body)
+                        .lineSpacing(3)
                 }
             }
         }

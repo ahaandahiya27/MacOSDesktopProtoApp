@@ -78,6 +78,39 @@ struct Question: Codable, Hashable, Identifiable {
     /// when the JSON field was absent.
     var effectiveSource: QuestionSource { source ?? QuestionSource.default }
 
+    /// Up to 2 progressive hints for the hint ladder (D5). Uses the
+    /// authored `hints` if present; otherwise derives from the first
+    /// 2 entries of `solutionSteps`. Shorter than 2 when the
+    /// question has fewer solution steps. Returned in display order
+    /// (first hint first).
+    ///
+    /// The view code reads this and renders Tier 1 / Tier 2 buttons;
+    /// Tier 3 is always "Show full solution" (answer + every step).
+    var derivedHints: [String] {
+        if let hints = hints, !hints.isEmpty {
+            return Array(hints.prefix(2))
+        }
+        return Array(solutionSteps.prefix(2))
+    }
+
+    /// Map the highest revealed hint tier (0 = none, 1 = first hint,
+    /// 2 = second hint, 3 = full solution) to a default SRS quality
+    /// for a correct answer. The kid still chooses; this is the
+    /// pre-selected default so a hint-using kid doesn't have to
+    /// re-grade themselves on every question. Tunable in one place.
+    ///
+    ///   tier 0 (no hint)        → .good   (vanilla correct)
+    ///   tier 1 (first hint)     → .good   (a nudge isn't a fail)
+    ///   tier 2 (second clue)    → .hard
+    ///   tier 3 (full solution)  → .forgot
+    static func defaultQualityForHintTier(_ tier: Int) -> ReviewQuality {
+        switch tier {
+        case 0, 1: return .good
+        case 2:    return .hard
+        default:   return .forgot
+        }
+    }
+
     private enum CodingKeys: String, CodingKey {
         case id, prompt, questionType, options, answer, solutionSteps,
              commonMistakes, variations, difficulty, pageRefs, needsHumanReview,

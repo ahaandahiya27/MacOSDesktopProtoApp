@@ -700,6 +700,7 @@
 		983812D78D1D4CCD0F633AD6 /* ChapterStuckSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C882C5EBB432B235F23514 /* ChapterStuckSignalsTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
+		CDB50BF0ABA8037F555EC44B /* HintLadderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBEDBBEAE6F4D95156F20EB /* HintLadderTests.swift */; };
 		2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */; };
 		6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */; };
 		C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */; };
@@ -1440,6 +1441,7 @@
 		C5C882C5EBB432B235F23514 /* ChapterStuckSignalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterStuckSignalsTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
+		EDBEDBBEAE6F4D95156F20EB /* HintLadderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HintLadderTests.swift"; sourceTree = "<group>"; };
 		9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageModelTests.swift"; sourceTree = "<group>"; };
 		751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryLevelTests.swift"; sourceTree = "<group>"; };
 		AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterySummaryTests.swift"; sourceTree = "<group>"; };
@@ -3040,6 +3042,7 @@
 				C5C882C5EBB432B235F23514,
 				8C883748B706BDB46E529043,
 				33A3949D07E1B3CA2F232114,
+				EDBEDBBEAE6F4D95156F20EB,
 				9BCBDD7642E6B995F329206B,
 				751F0165CD3FAFE33996869B,
 				AA6ED7B9AC11073DDDBC610E,
@@ -3917,6 +3920,7 @@
 				983812D78D1D4CCD0F633AD6 /* ChapterStuckSignalsTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
+				CDB50BF0ABA8037F555EC44B /* HintLadderTests.swift in Sources */,
 				2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */,
 				6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */,
 				C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */,
