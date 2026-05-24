@@ -221,8 +221,17 @@ final class TranslationServiceTests: XCTestCase {
     // MARK: - T-SVC-013: LocalTranslationProvider conforms to TranslationProvider protocol
 
     func testLocalTranslationProviderConformsToProtocol() {
-        let provider = LocalTranslationProvider()
-        XCTAssertNotNil(provider as? TranslationProvider)
+        // The runtime `as?` cast against a statically-conforming type
+        // was a compile-time tautology (the warning Swift emitted
+        // confirmed it always succeeds). Replaced with a compile-
+        // time conformance check via the typed-let pattern: the
+        // assignment only compiles if LocalTranslationProvider
+        // conforms to TranslationProvider. If a future refactor
+        // removes the conformance, the line stops compiling — a
+        // stricter signal than a runtime nil check.
+        let provider: TranslationProvider = LocalTranslationProvider()
+        XCTAssertTrue(provider.isAvailableOffline,
+                      "Local providers are by definition available offline — pinning the trait the protocol exists for.")
     }
 
     // MARK: - T-SVC-014: LocalTranslationProvider.isAvailableOffline is true
@@ -242,8 +251,15 @@ final class TranslationServiceTests: XCTestCase {
     // MARK: - T-SVC-016: FreeOnlineTranslationProvider conforms to TranslationProvider protocol
 
     func testFreeOnlineTranslationProviderConformsToProtocol() {
-        let provider = FreeOnlineTranslationProvider()
-        XCTAssertNotNil(provider as? TranslationProvider)
+        // Same pattern as T-SVC-013: typed-let for the compile-time
+        // conformance check; pin a behaviour assertion the protocol
+        // exists for. Online providers are by definition NOT
+        // available offline — the inverse of the local provider's
+        // trait, which catches a future refactor accidentally
+        // flipping the bool.
+        let provider: TranslationProvider = FreeOnlineTranslationProvider()
+        XCTAssertFalse(provider.isAvailableOffline,
+                       "Free online providers are by definition NOT available offline.")
     }
 
     // MARK: - T-SVC-017: FreeOnlineTranslationProvider.isAvailableOffline is false

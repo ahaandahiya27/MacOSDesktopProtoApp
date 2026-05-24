@@ -414,10 +414,20 @@ final class PersistenceTests: XCTestCase {
     /// T-PERS-020: preferOffline is a Bool
     @MainActor
     func testPreferOfflineIsABool() {
+        // `preferOffline` is typed `Bool` at the property level, so
+        // the `is Bool` test the original version of this test ran
+        // was a compile-time tautology (the warning Swift emitted
+        // confirms this). Replaced with a behaviour assertion: the
+        // property reads stably within a single test process — same
+        // value on two consecutive reads with no writes in between.
+        // If a future refactor switches `preferOffline` to compute
+        // its value lazily from a clock or a network state, this
+        // test will start failing and catch the regression.
         let settingsManager = SettingsManager.shared
-        let preferOffline = settingsManager.preferOffline
-
-        XCTAssertTrue(preferOffline is Bool)
+        let firstRead = settingsManager.preferOffline
+        let secondRead = settingsManager.preferOffline
+        XCTAssertEqual(firstRead, secondRead,
+                       "preferOffline must be stable across reads without intervening writes.")
     }
 
     // MARK: - L1 — atomic-write invariants
