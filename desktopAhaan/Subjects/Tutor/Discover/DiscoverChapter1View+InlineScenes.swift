@@ -153,7 +153,7 @@ struct SymbiosisPartnershipsLabScene: View {
                     let animation = reduceMotion
                         ? Animation.linear(duration: 0.0)
                         : Animation.easeInOut(duration: 0.25)
-                    withAnimation(animation) { _ = revealed.insert(p.id) }
+                    withAnimationRespectingReduceMotion(animation) { _ = revealed.insert(p.id) }
                 } label: {
                     Text("Reveal the trade")
                         .font(.body.weight(.semibold))
@@ -282,7 +282,7 @@ struct StomataOpenCloseScene: View {
                     .frame(width: 320, height: 220)
                 Button {
                     let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeInOut(duration: 0.3)
-                    withAnimation(a) { isOpen.toggle() }
+                    withAnimationRespectingReduceMotion(a) { isOpen.toggle() }
                 } label: {
                     Text(isOpen ? "Close the pore" : "Open the pore")
                         .font(.body.weight(.semibold))
@@ -446,7 +446,7 @@ struct WaterJourneyScene: View {
                     .frame(width: 220, height: 280)
                 Button {
                     let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeOut(duration: 0.3)
-                    withAnimation(a) {
+                    withAnimationRespectingReduceMotion(a) {
                         if stage >= 4 { stage = 0 } else { stage += 1 }
                     }
                 } label: {
@@ -733,7 +733,7 @@ struct VenusFlytrapReflexScene: View {
     private func snap() {
         if flyOnTrap && !trapClosed {
             let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeIn(duration: 0.15)
-            withAnimation(a) {
+            withAnimationRespectingReduceMotion(a) {
                 trapClosed = true; flyOnTrap = false
             }
             caught += 1
@@ -981,7 +981,7 @@ struct RhizobiumNitrogenScene: View {
                     .padding(.horizontal, 24)
                 rootDiagram.frame(width: 220, height: 200)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) { noduleOpen.toggle() }
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) { noduleOpen.toggle() }
                 } label: {
                     Text(noduleOpen ? "Hide the bacteria" : "Magnify a nodule")
                         .font(.body.weight(.semibold))

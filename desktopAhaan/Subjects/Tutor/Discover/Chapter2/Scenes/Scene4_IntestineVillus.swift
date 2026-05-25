@@ -142,13 +142,13 @@ struct Scene4_IntestineVillus: View {
     }
 
     private func zoomIn() {
-        withAnimation(.easeInOut(duration: 0.4)) {
+        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.4)) {
             zoomLevel = min(2, zoomLevel + 1)
         }
     }
 
     private func zoomOut() {
-        withAnimation(.easeInOut(duration: 0.4)) {
+        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.4)) {
             zoomLevel = max(0, zoomLevel - 1)
         }
     }
@@ -175,7 +175,7 @@ struct Scene4_IntestineVillus: View {
             for i in 0..<count {
                 try? await Task.sleep(nanoseconds: 300_000_000)
                 guard sceneActive else { return }
-                withAnimation(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
+                withAnimationRespectingReduceMotion(reduceMotion ? .none : .easeInOut(duration: 1.5)) {
                     if i < glucoseParticles.count {
                         glucoseParticles[i].x = 280
                         glucoseParticles[i].y = 180

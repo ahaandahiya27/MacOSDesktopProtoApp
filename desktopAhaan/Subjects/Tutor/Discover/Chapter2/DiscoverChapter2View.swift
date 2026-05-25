@@ -320,7 +320,7 @@ private struct CardiacSphincterScene: View {
                     .padding(.horizontal, 24)
                 gateVisual.frame(width: 220, height: 200)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) { open.toggle() }
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) { open.toggle() }
                 } label: {
                     Text(open ? "Close the gate" : "Open the gate")
                         .font(.body.weight(.semibold))
@@ -444,7 +444,7 @@ private struct BileEmulsifiesFatScene: View {
                 emulsionVisual.frame(width: 260, height: 200)
                 Button {
                     let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeInOut(duration: 0.5)
-                    withAnimation(a) { emulsified.toggle() }
+                    withAnimationRespectingReduceMotion(a) { emulsified.toggle() }
                 } label: {
                     Text(emulsified ? "Reset" : "Add bile")
                         .font(.body.weight(.semibold))
@@ -500,7 +500,7 @@ private struct VilliSurfaceAreaScene: View {
                     .padding(.top, 18)
                 zoomVisual.frame(width: 280, height: 160)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) {
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         zoom = zoom >= 3 ? 0 : zoom + 1
                     }
                 } label: {
@@ -579,7 +579,7 @@ private struct RuminationCycleScene: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) {
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
                     }
                 } label: {
@@ -673,7 +673,7 @@ private struct FoodVacuoleFormationScene: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) {
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
                     }
                 } label: {
@@ -792,7 +792,7 @@ private struct PseudopodCatchScene: View {
         foodPosition = -120
         Task { @MainActor in
             // Animate food across 280pt in ~1.8s
-            withAnimation(.linear(duration: 1.8)) { foodPosition = 120 }
+            withAnimationRespectingReduceMotion(.linear(duration: 1.8)) { foodPosition = 120 }
             try? await Task.sleep(nanoseconds: 1_800_000_000)
             if roundActive {
                 roundActive = false
@@ -871,7 +871,7 @@ private struct WindowInTheStomachScene: View {
                                        minutes: food.minutes,
                                        why: food.why,
                                        revealed: revealed.contains(food.id)) {
-                            withAnimation(.easeInOut(duration: 0.2)) {
+                            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                                 _ = revealed.insert(food.id)
                             }
                         }

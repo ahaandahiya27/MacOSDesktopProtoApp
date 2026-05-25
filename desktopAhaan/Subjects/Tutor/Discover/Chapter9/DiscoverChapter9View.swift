@@ -457,7 +457,7 @@ private struct WaterHoldingCapacityScene: View {
         running = true
         sandWater = 1; loamWater = 1; clayWater = 1
         Task { @MainActor in
-            withAnimation(.linear(duration: 2.0)) {
+            withAnimationRespectingReduceMotion(.linear(duration: 2.0)) {
                 sandWater = 0.1; loamWater = 0.5; clayWater = 0.85
             }
             try? await Task.sleep(nanoseconds: 2_000_000_000)

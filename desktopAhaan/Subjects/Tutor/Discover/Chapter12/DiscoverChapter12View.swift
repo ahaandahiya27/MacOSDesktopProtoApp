@@ -291,7 +291,7 @@ private struct BeeWaggleDanceScene: View {
     }
     private func startDance() {
         if dance {
-            withAnimation(.easeInOut(duration: HardwareTier.duration(ideal: 0.6)).repeatForever(autoreverses: true)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: HardwareTier.duration(ideal: 0.6)).repeatForever(autoreverses: true)) {
                 angle = 35
             }
         } else { angle = 0 }

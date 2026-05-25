@@ -182,7 +182,7 @@ struct Scene8_FibreVsFibreGame: View {
             }
         }
 
-        withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.7)) {
+        withAnimationRespectingReduceMotion(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.7)) {
             dragOffset = .zero
         }
 
@@ -201,26 +201,26 @@ struct Scene8_FibreVsFibreGame: View {
     private func shakeCard(_ id: String) {
         guard !reduceMotion else { return }
         Task { @MainActor in
-            withAnimation(.easeInOut(duration: 0.08)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.08)) {
                 shakeMap[id] = 12
             }
             try? await Task.sleep(nanoseconds: 80_000_000)
-            withAnimation(.easeInOut(duration: 0.08)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.08)) {
                 shakeMap[id] = -12
             }
             try? await Task.sleep(nanoseconds: 80_000_000)
-            withAnimation(.easeInOut(duration: 0.08)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.08)) {
                 shakeMap[id] = 8
             }
             try? await Task.sleep(nanoseconds: 80_000_000)
-            withAnimation(.easeInOut(duration: 0.08)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.08)) {
                 shakeMap[id] = 0
             }
         }
     }
 
     private func markPlaced(_ fibre: FibreCard, correct: Bool) {
-        withAnimation(reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
+        withAnimationRespectingReduceMotion(reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
             placed[fibre.id] = correct
         }
 

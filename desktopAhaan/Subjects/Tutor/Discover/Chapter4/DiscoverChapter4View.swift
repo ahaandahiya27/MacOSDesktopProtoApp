@@ -201,7 +201,7 @@ private struct ExpansionContractionLabScene: View {
                     .frame(width: heated ? 180 : 120, height: heated ? 180 : 120)
                 Button {
                     let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeInOut(duration: 0.4)
-                    withAnimation(a) { heated.toggle() }
+                    withAnimationRespectingReduceMotion(a) { heated.toggle() }
                 } label: {
                     Text(heated ? "Cool it back" : "Heat the ring").font(.body.weight(.semibold))
                         .padding(.horizontal, 18).padding(.vertical, 9)
@@ -606,7 +606,7 @@ private struct SpecificHeatRaceScene: View {
         waterTemp = 20; sandTemp = 20
         running = true
         Task { @MainActor in
-            withAnimation(.linear(duration: 3.0)) {
+            withAnimationRespectingReduceMotion(.linear(duration: 3.0)) {
                 sandTemp = 90
                 waterTemp = 35
             }

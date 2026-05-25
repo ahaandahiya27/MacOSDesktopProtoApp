@@ -174,14 +174,14 @@ struct Scene7_PitcherPlantTrap: View {
         Task { @MainActor in
             let step = stepDuration
             try? await Task.sleep(nanoseconds: UInt64(step * 0.6 * 1_000_000_000))
-            withAnimation(.easeInOut(duration: step)) { phase = 1 }
+            withAnimationRespectingReduceMotion(.easeInOut(duration: step)) { phase = 1 }
             try? await Task.sleep(nanoseconds: UInt64(step * 1.0 * 1_000_000_000))
-            withAnimation(.easeInOut(duration: step)) { phase = 2 }
+            withAnimationRespectingReduceMotion(.easeInOut(duration: step)) { phase = 2 }
             try? await Task.sleep(nanoseconds: UInt64(step * 1.0 * 1_000_000_000))
-            withAnimation(.easeIn(duration: step)) { phase = 3 }
+            withAnimationRespectingReduceMotion(.easeIn(duration: step)) { phase = 3 }
             try? await Task.sleep(nanoseconds: UInt64(step * 1.4 * 1_000_000_000))
-            withAnimation(.easeOut(duration: step)) { phase = 4 }
-            withAnimation(.spring().delay(0.2)) { nitrogenAdded = true }
+            withAnimationRespectingReduceMotion(.easeOut(duration: step)) { phase = 4 }
+            withAnimationRespectingReduceMotion(.spring().delay(0.2)) { nitrogenAdded = true }
         }
     }
 

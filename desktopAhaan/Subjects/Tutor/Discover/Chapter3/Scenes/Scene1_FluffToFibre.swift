@@ -158,7 +158,7 @@ struct Scene1_FluffToFibre: View {
     }
 
     private func tapIcon(_ emoji: String) {
-        withAnimation(reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
+        withAnimationRespectingReduceMotion(reduceMotion ? .none : .spring(response: 0.4, dampingFraction: 0.6)) {
             switch emoji {
             case "🐑": showSheep = true
             case "🐛": showSilkworm = true
@@ -171,7 +171,7 @@ struct Scene1_FluffToFibre: View {
         }
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 600_000_000)
-            withAnimation(.easeOut(duration: 0.4)) {
+            withAnimationRespectingReduceMotion(.easeOut(duration: 0.4)) {
                 switch emoji {
                 case "🐑": showSheep = false
                 case "🐛": showSilkworm = false

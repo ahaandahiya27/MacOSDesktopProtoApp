@@ -251,7 +251,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
 
         if correct {
             score += 1
-            withAnimation(.easeInOut(duration: 0.25)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                 remaining.removeAll { $0.id == sub.id }
                 if sub.isAcid { acidBin.append(sub) }
                 else { baseBin.append(sub) }
@@ -264,7 +264,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
         } else {
             shakeId = sub.id
             if !reduceMotion {
-                withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) {
+                withAnimationRespectingReduceMotion(.spring(response: 0.15, dampingFraction: 0.3)) {
                     shakeId = sub.id
                 }
             }

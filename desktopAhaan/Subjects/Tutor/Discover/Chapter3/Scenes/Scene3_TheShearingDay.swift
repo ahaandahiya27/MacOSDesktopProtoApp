@@ -162,7 +162,7 @@ struct Scene3_TheShearingDay: View {
     }
 
     private func performShearing() {
-        withAnimation(reduceMotion ? .none : .linear(duration: 2)) {
+        withAnimationRespectingReduceMotion(reduceMotion ? .none : .linear(duration: 2)) {
             isShearing = true
             clipperPosition = 1
         }
@@ -175,13 +175,13 @@ struct Scene3_TheShearingDay: View {
                     y: CGFloat.random(in: 150...200),
                     opacity: 1.0
                 )
-                withAnimation(.easeOut(duration: 1.2)) {
+                withAnimationRespectingReduceMotion(.easeOut(duration: 1.2)) {
                     fleecePiles.append(puff)
                     harvestedKg += 1.5
                 }
             }
             try? await Task.sleep(nanoseconds: 1_900_000_000)
-            withAnimation(.easeOut(duration: 1)) {
+            withAnimationRespectingReduceMotion(.easeOut(duration: 1)) {
                 for i in fleecePiles.indices {
                     fleecePiles[i].opacity = 0
                 }

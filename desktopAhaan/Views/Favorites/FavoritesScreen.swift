@@ -15,7 +15,7 @@ struct FavoritesScreen: View {
             if selectedRecordId != nil {
                 HStack {
                     Button {
-                        withAnimation(.easeInOut(duration: 0.2)) {
+                        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                             selectedRecordId = nil
                         }
                     } label: {
@@ -42,7 +42,7 @@ struct FavoritesScreen: View {
         .navigationTitle(selectedRecordId == nil ? "Favorites" : "Translation Detail")
         .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
             if selectedRecordId != nil {
-                withAnimation(.easeInOut(duration: 0.2)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                     selectedRecordId = nil
                 }
             }
@@ -61,7 +61,7 @@ struct FavoritesScreen: View {
             List {
                 ForEach(favorites) { record in
                     Button {
-                        withAnimation(.easeInOut(duration: 0.2)) {
+                        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                             selectedRecordId = record.id
                         }
                     } label: {

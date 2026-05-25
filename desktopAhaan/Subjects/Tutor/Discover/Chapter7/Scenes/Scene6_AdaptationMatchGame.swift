@@ -245,7 +245,7 @@ struct Scene6_AdaptationMatchGame: View {
             if adaptId == animalPair.id {
                 // Correct match
                 score += 2
-                _ = withAnimation(.easeInOut(duration: 0.25)) {
+                _ = withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                     matched.insert(animalPair.id)
                 }
                 showConfetti = true
@@ -257,7 +257,7 @@ struct Scene6_AdaptationMatchGame: View {
                 // Wrong match — shake
                 shakeId = animalPair.id
                 if !reduceMotion {
-                    withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) {
+                    withAnimationRespectingReduceMotion(.spring(response: 0.15, dampingFraction: 0.3)) {
                         shakeId = animalPair.id
                     }
                 }

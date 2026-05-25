@@ -290,7 +290,7 @@ struct HomeExperimentCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Button {
-                withAnimation(.easeInOut(duration: 0.2)) { expanded.toggle() }
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { expanded.toggle() }
             } label: {
                 HStack(spacing: 12) {
                     Text(experiment.emoji).font(.system(size: 28))

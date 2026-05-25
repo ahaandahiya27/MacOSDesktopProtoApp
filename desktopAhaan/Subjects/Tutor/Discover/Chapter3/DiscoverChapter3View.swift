@@ -224,7 +224,7 @@ private struct CardingSpinningLabScene: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
-                    withAnimation(.easeInOut(duration: 0.25)) {
+                    withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
                     }
                 } label: {

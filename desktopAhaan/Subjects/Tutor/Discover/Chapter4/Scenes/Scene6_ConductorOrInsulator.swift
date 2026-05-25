@@ -263,7 +263,7 @@ struct Scene6_ConductorOrInsulator: View {
 
         if correct {
             score += 1
-            withAnimation(.easeInOut(duration: 0.25)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                 remaining.removeAll { $0.id == mat.id }
                 if mat.isConductor { conductorBin.append(mat) }
                 else { insulatorBin.append(mat) }
@@ -277,7 +277,7 @@ struct Scene6_ConductorOrInsulator: View {
             // Wrong — shake
             shakeId = mat.id
             if !reduceMotion {
-                withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) {
+                withAnimationRespectingReduceMotion(.spring(response: 0.15, dampingFraction: 0.3)) {
                     shakeId = mat.id
                 }
             }

@@ -440,7 +440,7 @@ struct QuestionDetailView: View {
                 manualOverride = true
             }
             dataStore.recordReview(questionId: question.id, quality: quality)
-            withAnimation(.easeOut(duration: 0.18)) { didRateThisVisit = true }
+            withAnimationRespectingReduceMotion(.easeOut(duration: 0.18)) { didRateThisVisit = true }
         } label: {
             VStack(spacing: 3) {
                 if isSuggested {

@@ -23,7 +23,7 @@ struct HistoryScreen: View {
             if selectedRecordId != nil {
                 HStack {
                     Button {
-                        withAnimation(.easeInOut(duration: 0.2)) {
+                        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                             selectedRecordId = nil
                         }
                     } label: {
@@ -50,7 +50,7 @@ struct HistoryScreen: View {
         .navigationTitle(selectedRecordId == nil ? "History" : "Translation Detail")
         .onReceive(NotificationCenter.default.publisher(for: .navigateBackCommand)) { _ in
             if selectedRecordId != nil {
-                withAnimation(.easeInOut(duration: 0.2)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                     selectedRecordId = nil
                 }
             }
@@ -79,7 +79,7 @@ struct HistoryScreen: View {
                 List {
                     ForEach(filteredRecords) { record in
                         Button {
-                            withAnimation(.easeInOut(duration: 0.2)) {
+                            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) {
                                 selectedRecordId = record.id
                             }
                         } label: {

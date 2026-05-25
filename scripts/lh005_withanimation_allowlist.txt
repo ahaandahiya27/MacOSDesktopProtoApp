@@ -8,10 +8,20 @@
 # Empty lines and lines starting with `#` are ignored. Only the
 # `path:line` prefix is the lookup key.
 #
-# This file was bootstrapped 2026-05-24 when LH005b landed. The 66
-# entries below are pre-existing call sites that ship in main; new
-# violations are NOT allowed to be added here without a per-line
-# reason that survives a code review.
+# This file was bootstrapped 2026-05-24 when LH005b landed. As of
+# 2026-05-26 the allowlist is EMPTY — every grandfathered site has
+# been migrated to `withAnimationRespectingReduceMotion(<X>) { ... }`
+# in two sweeps:
+#   - Round 1 (2026-05-26, b7de18f) — 54 sites across 8 Scene9 boss-quiz files
+#   - Round 2 (2026-05-26, this commit) — 54 sites across 21 files
+#     (DiscoverChapter* dispatchers, inline Discover scenes, Scene7
+#     PitcherPlantTrap, top-level Favorites/History/Practice, plus
+#     ChapterDetailView+HomeExperiments and QuestionDetailView)
+#
+# = 108 call sites migrated. The lint stays clean because the
+# migrated sites no longer trigger LH005b. New violations are NOT
+# allowed to be added here without a per-line reason that survives
+# a code review.
 #
 # Preferred fixes — in order:
 #   1. Inline gate:  withAnimation(reduceMotion ? nil : .easeInOut)
@@ -19,50 +29,5 @@
 #   3. Outer block:  wrap the call site in `if !reduceMotion { ... }`
 #   4. Per-line escape:  `// lh005-ok: <reason>` on the same line
 #      (last resort, used when the gate is provably elsewhere)
-#
-# Migration pattern for future polish sessions: walk a chapter's scene
-# files, replace each `withAnimation` with the helper, and remove the
-# matching rows below. LH005b stays clean because the migrated sites
-# no longer trigger.
 
-desktopAhaan/Subjects/Tutor/ChapterDetailView+HomeExperiments.swift:293: ChapterDetail sub-section — pre-existing site, audit close-out deferred.
-desktopAhaan/Subjects/Tutor/Discover/Chapter12/DiscoverChapter12View.swift:294: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:323: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:503: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:582: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:676: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:795: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/DiscoverChapter2View.swift:874: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene4_IntestineVillus.swift:145: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene4_IntestineVillus.swift:151: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/DiscoverChapter3View.swift:227: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene1_FluffToFibre.swift:174: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene3_TheShearingDay.swift:178: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene3_TheShearingDay.swift:184: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene8_FibreVsFibreGame.swift:212: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene8_FibreVsFibreGame.swift:216: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/DiscoverChapter4View.swift:609: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene6_ConductorOrInsulator.swift:266: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene6_AcidOrBaseSortingLab.swift:254: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene6_PhysicalOrChemicalSorting.swift:270: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene6_AdaptationMatchGame.swift:248: Discover scene interaction — reduce-motion sweep deferred to a per-scene polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter8/DiscoverChapter8View.swift:158: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter9/DiscoverChapter9View.swift:460: Discover chapter dispatcher — reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/DiscoverChapter1View+InlineScenes.swift:984: Ch.1 inline scene file — grandfathered with the file-size allowlist; sweep when split.
-desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:179: Pre-existing site grandfathered when LH005b landed (2026-05-24).
-desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:181: Pre-existing site grandfathered when LH005b landed (2026-05-24).
-desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:183: Pre-existing site grandfathered when LH005b landed (2026-05-24).
-desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:184: Pre-existing site grandfathered when LH005b landed (2026-05-24).
-desktopAhaan/Subjects/Tutor/QuestionDetailView.swift:443: Pre-existing site grandfathered when LH005b landed (2026-05-24); line shifted from 388 over time (hint ladder + D7 hintTier reset + picker-suggestion VStack + 2026-05-25 manual-override branching into baseQualityButton helper).
-desktopAhaan/Views/Favorites/FavoritesScreen.swift:18: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/Favorites/FavoritesScreen.swift:45: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/Favorites/FavoritesScreen.swift:64: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/History/HistoryScreen.swift:26: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/History/HistoryScreen.swift:53: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/History/HistoryScreen.swift:82: Top-level view — pre-existing site, audit close-out deferred.
-desktopAhaan/Views/Practice/PracticeScreen.swift:235: Top-level view — pre-existing site, audit close-out deferred.
-
-
-
-
-
+# (no grandfathered sites — the codebase is fully migrated)

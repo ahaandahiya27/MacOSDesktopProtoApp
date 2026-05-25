@@ -267,7 +267,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
 
         if correct {
             score += 1
-            withAnimation(.easeInOut(duration: 0.25)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                 remaining.removeAll { $0.id == item.id }
                 if item.isChemical { chemicalBin.append(item) }
                 else { physicalBin.append(item) }
@@ -280,7 +280,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         } else {
             shakeId = item.id
             if !reduceMotion {
-                withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) {
+                withAnimationRespectingReduceMotion(.spring(response: 0.15, dampingFraction: 0.3)) {
                     shakeId = item.id
                 }
             }
