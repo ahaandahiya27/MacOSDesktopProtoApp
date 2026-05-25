@@ -1598,6 +1598,72 @@ enum ArticleIndex {
             title: "What If? — Chapter 18", chapterFolder: chapter18Folder, estimatedMinutes: 7),
         "ch19_whatif": ArticleEntry(id: "ch19_whatif", filename: "ch19_whatif.html",
             title: "What If? — Chapter 19", chapterFolder: chapter19Folder, estimatedMinutes: 7),
+
+        // Mini Projects (hands-on activities) — Ch.2-19 generated
+        // 2026-05-26 by scripts/generate_miniproject_articles.py from
+        // chapter.miniProjects JSON (2 entries per chapter; 36 total).
+        "ch02_miniproject": ArticleEntry(id: "ch02_miniproject", filename: "ch02_miniproject.html", title: "Mini Projects — Chapter 2", chapterFolder: chapter2Folder, estimatedMinutes: 60),
+        "ch03_miniproject": ArticleEntry(id: "ch03_miniproject", filename: "ch03_miniproject.html", title: "Mini Projects — Chapter 3", chapterFolder: chapter3Folder, estimatedMinutes: 60),
+        "ch04_miniproject": ArticleEntry(id: "ch04_miniproject", filename: "ch04_miniproject.html", title: "Mini Projects — Chapter 4", chapterFolder: chapter4Folder, estimatedMinutes: 60),
+        "ch05_miniproject": ArticleEntry(id: "ch05_miniproject", filename: "ch05_miniproject.html", title: "Mini Projects — Chapter 5", chapterFolder: chapter5Folder, estimatedMinutes: 60),
+        "ch06_miniproject": ArticleEntry(id: "ch06_miniproject", filename: "ch06_miniproject.html", title: "Mini Projects — Chapter 6", chapterFolder: chapter6Folder, estimatedMinutes: 60),
+        "ch07_miniproject": ArticleEntry(id: "ch07_miniproject", filename: "ch07_miniproject.html", title: "Mini Projects — Chapter 7", chapterFolder: chapter7Folder, estimatedMinutes: 60),
+        "ch08_miniproject": ArticleEntry(id: "ch08_miniproject", filename: "ch08_miniproject.html", title: "Mini Projects — Chapter 8", chapterFolder: chapter8Folder, estimatedMinutes: 60),
+        "ch09_miniproject": ArticleEntry(id: "ch09_miniproject", filename: "ch09_miniproject.html", title: "Mini Projects — Chapter 9", chapterFolder: chapter9Folder, estimatedMinutes: 60),
+        "ch10_miniproject": ArticleEntry(id: "ch10_miniproject", filename: "ch10_miniproject.html", title: "Mini Projects — Chapter 10", chapterFolder: chapter10Folder, estimatedMinutes: 60),
+        "ch11_miniproject": ArticleEntry(id: "ch11_miniproject", filename: "ch11_miniproject.html", title: "Mini Projects — Chapter 11", chapterFolder: chapter11Folder, estimatedMinutes: 60),
+        "ch12_miniproject": ArticleEntry(id: "ch12_miniproject", filename: "ch12_miniproject.html", title: "Mini Projects — Chapter 12", chapterFolder: chapter12Folder, estimatedMinutes: 60),
+        "ch13_miniproject": ArticleEntry(id: "ch13_miniproject", filename: "ch13_miniproject.html", title: "Mini Projects — Chapter 13", chapterFolder: chapter13Folder, estimatedMinutes: 60),
+        "ch14_miniproject": ArticleEntry(id: "ch14_miniproject", filename: "ch14_miniproject.html", title: "Mini Projects — Chapter 14", chapterFolder: chapter14Folder, estimatedMinutes: 60),
+        "ch15_miniproject": ArticleEntry(id: "ch15_miniproject", filename: "ch15_miniproject.html", title: "Mini Projects — Chapter 15", chapterFolder: chapter15Folder, estimatedMinutes: 60),
+        "ch16_miniproject": ArticleEntry(id: "ch16_miniproject", filename: "ch16_miniproject.html", title: "Mini Projects — Chapter 16", chapterFolder: chapter16Folder, estimatedMinutes: 60),
+        "ch17_miniproject": ArticleEntry(id: "ch17_miniproject", filename: "ch17_miniproject.html", title: "Mini Projects — Chapter 17", chapterFolder: chapter17Folder, estimatedMinutes: 60),
+        "ch18_miniproject": ArticleEntry(id: "ch18_miniproject", filename: "ch18_miniproject.html", title: "Mini Projects — Chapter 18", chapterFolder: chapter18Folder, estimatedMinutes: 60),
+        "ch19_miniproject": ArticleEntry(id: "ch19_miniproject", filename: "ch19_miniproject.html", title: "Mini Projects — Chapter 19", chapterFolder: chapter19Folder, estimatedMinutes: 60),
+
+        // Self-Check (5-question revision quiz) — Ch.2-19 generated
+        // 2026-05-26 by scripts/generate_selfcheck_articles.py
+        // sampling chapter.topics[].questions (5 representatives).
+        "ch02_selfcheck": ArticleEntry(id: "ch02_selfcheck", filename: "ch02_selfcheck.html", title: "Self-Check — Chapter 2", chapterFolder: chapter2Folder, estimatedMinutes: 7),
+        "ch03_selfcheck": ArticleEntry(id: "ch03_selfcheck", filename: "ch03_selfcheck.html", title: "Self-Check — Chapter 3", chapterFolder: chapter3Folder, estimatedMinutes: 7),
+        "ch04_selfcheck": ArticleEntry(id: "ch04_selfcheck", filename: "ch04_selfcheck.html", title: "Self-Check — Chapter 4", chapterFolder: chapter4Folder, estimatedMinutes: 7),
+        "ch05_selfcheck": ArticleEntry(id: "ch05_selfcheck", filename: "ch05_selfcheck.html", title: "Self-Check — Chapter 5", chapterFolder: chapter5Folder, estimatedMinutes: 7),
+        "ch06_selfcheck": ArticleEntry(id: "ch06_selfcheck", filename: "ch06_selfcheck.html", title: "Self-Check — Chapter 6", chapterFolder: chapter6Folder, estimatedMinutes: 7),
+        "ch07_selfcheck": ArticleEntry(id: "ch07_selfcheck", filename: "ch07_selfcheck.html", title: "Self-Check — Chapter 7", chapterFolder: chapter7Folder, estimatedMinutes: 7),
+        "ch08_selfcheck": ArticleEntry(id: "ch08_selfcheck", filename: "ch08_selfcheck.html", title: "Self-Check — Chapter 8", chapterFolder: chapter8Folder, estimatedMinutes: 7),
+        "ch09_selfcheck": ArticleEntry(id: "ch09_selfcheck", filename: "ch09_selfcheck.html", title: "Self-Check — Chapter 9", chapterFolder: chapter9Folder, estimatedMinutes: 7),
+        "ch10_selfcheck": ArticleEntry(id: "ch10_selfcheck", filename: "ch10_selfcheck.html", title: "Self-Check — Chapter 10", chapterFolder: chapter10Folder, estimatedMinutes: 7),
+        "ch11_selfcheck": ArticleEntry(id: "ch11_selfcheck", filename: "ch11_selfcheck.html", title: "Self-Check — Chapter 11", chapterFolder: chapter11Folder, estimatedMinutes: 7),
+        "ch12_selfcheck": ArticleEntry(id: "ch12_selfcheck", filename: "ch12_selfcheck.html", title: "Self-Check — Chapter 12", chapterFolder: chapter12Folder, estimatedMinutes: 7),
+        "ch13_selfcheck": ArticleEntry(id: "ch13_selfcheck", filename: "ch13_selfcheck.html", title: "Self-Check — Chapter 13", chapterFolder: chapter13Folder, estimatedMinutes: 7),
+        "ch14_selfcheck": ArticleEntry(id: "ch14_selfcheck", filename: "ch14_selfcheck.html", title: "Self-Check — Chapter 14", chapterFolder: chapter14Folder, estimatedMinutes: 7),
+        "ch15_selfcheck": ArticleEntry(id: "ch15_selfcheck", filename: "ch15_selfcheck.html", title: "Self-Check — Chapter 15", chapterFolder: chapter15Folder, estimatedMinutes: 7),
+        "ch16_selfcheck": ArticleEntry(id: "ch16_selfcheck", filename: "ch16_selfcheck.html", title: "Self-Check — Chapter 16", chapterFolder: chapter16Folder, estimatedMinutes: 7),
+        "ch17_selfcheck": ArticleEntry(id: "ch17_selfcheck", filename: "ch17_selfcheck.html", title: "Self-Check — Chapter 17", chapterFolder: chapter17Folder, estimatedMinutes: 7),
+        "ch18_selfcheck": ArticleEntry(id: "ch18_selfcheck", filename: "ch18_selfcheck.html", title: "Self-Check — Chapter 18", chapterFolder: chapter18Folder, estimatedMinutes: 7),
+        "ch19_selfcheck": ArticleEntry(id: "ch19_selfcheck", filename: "ch19_selfcheck.html", title: "Self-Check — Chapter 19", chapterFolder: chapter19Folder, estimatedMinutes: 7),
+
+        // Story Mode (narrative scenes from real life) — Ch.2-19
+        // generated 2026-05-26 by scripts/generate_storymode_articles.py
+        // weaving chapter.realWorldExamples into vignettes.
+        "ch02_storymode": ArticleEntry(id: "ch02_storymode", filename: "ch02_storymode.html", title: "Story Mode — Chapter 2", chapterFolder: chapter2Folder, estimatedMinutes: 10),
+        "ch03_storymode": ArticleEntry(id: "ch03_storymode", filename: "ch03_storymode.html", title: "Story Mode — Chapter 3", chapterFolder: chapter3Folder, estimatedMinutes: 10),
+        "ch04_storymode": ArticleEntry(id: "ch04_storymode", filename: "ch04_storymode.html", title: "Story Mode — Chapter 4", chapterFolder: chapter4Folder, estimatedMinutes: 10),
+        "ch05_storymode": ArticleEntry(id: "ch05_storymode", filename: "ch05_storymode.html", title: "Story Mode — Chapter 5", chapterFolder: chapter5Folder, estimatedMinutes: 10),
+        "ch06_storymode": ArticleEntry(id: "ch06_storymode", filename: "ch06_storymode.html", title: "Story Mode — Chapter 6", chapterFolder: chapter6Folder, estimatedMinutes: 10),
+        "ch07_storymode": ArticleEntry(id: "ch07_storymode", filename: "ch07_storymode.html", title: "Story Mode — Chapter 7", chapterFolder: chapter7Folder, estimatedMinutes: 10),
+        "ch08_storymode": ArticleEntry(id: "ch08_storymode", filename: "ch08_storymode.html", title: "Story Mode — Chapter 8", chapterFolder: chapter8Folder, estimatedMinutes: 10),
+        "ch09_storymode": ArticleEntry(id: "ch09_storymode", filename: "ch09_storymode.html", title: "Story Mode — Chapter 9", chapterFolder: chapter9Folder, estimatedMinutes: 10),
+        "ch10_storymode": ArticleEntry(id: "ch10_storymode", filename: "ch10_storymode.html", title: "Story Mode — Chapter 10", chapterFolder: chapter10Folder, estimatedMinutes: 10),
+        "ch11_storymode": ArticleEntry(id: "ch11_storymode", filename: "ch11_storymode.html", title: "Story Mode — Chapter 11", chapterFolder: chapter11Folder, estimatedMinutes: 10),
+        "ch12_storymode": ArticleEntry(id: "ch12_storymode", filename: "ch12_storymode.html", title: "Story Mode — Chapter 12", chapterFolder: chapter12Folder, estimatedMinutes: 10),
+        "ch13_storymode": ArticleEntry(id: "ch13_storymode", filename: "ch13_storymode.html", title: "Story Mode — Chapter 13", chapterFolder: chapter13Folder, estimatedMinutes: 10),
+        "ch14_storymode": ArticleEntry(id: "ch14_storymode", filename: "ch14_storymode.html", title: "Story Mode — Chapter 14", chapterFolder: chapter14Folder, estimatedMinutes: 10),
+        "ch15_storymode": ArticleEntry(id: "ch15_storymode", filename: "ch15_storymode.html", title: "Story Mode — Chapter 15", chapterFolder: chapter15Folder, estimatedMinutes: 10),
+        "ch16_storymode": ArticleEntry(id: "ch16_storymode", filename: "ch16_storymode.html", title: "Story Mode — Chapter 16", chapterFolder: chapter16Folder, estimatedMinutes: 10),
+        "ch17_storymode": ArticleEntry(id: "ch17_storymode", filename: "ch17_storymode.html", title: "Story Mode — Chapter 17", chapterFolder: chapter17Folder, estimatedMinutes: 10),
+        "ch18_storymode": ArticleEntry(id: "ch18_storymode", filename: "ch18_storymode.html", title: "Story Mode — Chapter 18", chapterFolder: chapter18Folder, estimatedMinutes: 10),
+        "ch19_storymode": ArticleEntry(id: "ch19_storymode", filename: "ch19_storymode.html", title: "Story Mode — Chapter 19", chapterFolder: chapter19Folder, estimatedMinutes: 10),
     ]
 
     static func entry(forConceptId id: String) -> ArticleEntry? {
