@@ -94,6 +94,14 @@ struct ChapterDetailView: View {
             RelatedChaptersStrip(pack: pack, chapter: chapter)
             CurriculumBridgeChip(chapter: chapter)
             glossaryButton
+            // Extra-reading chips for the 4 templated enrichment
+            // articles shipped 2026-05-26 (Vocabulary Deck, NCERT Q&A,
+            // Scientist Spotlight, What If?). Each chip auto-hides
+            // when its article isn't bundled; the whole row hides
+            // when none are bundled.
+            ExtraReadingRow(chapter: chapter) { entry in
+                sheetCoordinator.presented = .article(entry)
+            }
             GallerySectionView(chapter: chapter)
             ScientistsSectionView(chapter: chapter)
             CrossChapterRefsFooter(pack: pack, chapter: chapter)
