@@ -355,12 +355,29 @@ struct QuestionDetailView: View {
         }
     }
 
+    /// Quality nudged by hint usage. nil before any hint is revealed (so
+    /// the picker shows no "Suggested" badge and the kid picks freely).
+    /// Once `hintTier > 0`, this returns the value
+    /// `Question.defaultQualityForHintTier(_:)` recommends:
+    ///   tier 1 → .good   (a nudge isn't a fail)
+    ///   tier 2 → .hard
+    ///   tier 3 → .forgot (or revealSolution)
+    /// The kid still actively taps a button; this is a soft default,
+    /// not a forced selection. Wires up the D5-shipped pure function
+    /// that previously had no caller in the view layer.
+    private var suggestedQuality: ReviewQuality? {
+        guard hintTier > 0 else { return nil }
+        return Question.defaultQualityForHintTier(hintTier)
+    }
+
     private var qualityPickerCard: some View {
         VStack(alignment: .leading, spacing: 10) {
             Label("How did that go?", systemImage: "rectangle.stack.fill")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Text("Tap one — we'll schedule when to show this question again.")
+            Text(suggestedQuality == nil
+                 ? "Tap one — we'll schedule when to show this question again."
+                 : "Tap one — we suggested a default based on how many hints you used.")
                 .font(.caption)
                 .foregroundColor(.secondary)
             HStack(spacing: 10) {
@@ -383,27 +400,41 @@ struct QuestionDetailView: View {
 
     private func qualityButton(label: String, color: Color,
                                 quality: ReviewQuality) -> some View {
-        Button {
+        let isSuggested = suggestedQuality == quality
+        return Button {
             dataStore.recordReview(questionId: question.id, quality: quality)
             withAnimation(.easeOut(duration: 0.18)) { didRateThisVisit = true }
         } label: {
-            Text(label)
-                .font(.body.weight(.semibold))
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 9)
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(color.opacity(0.15))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .strokeBorder(color.opacity(0.45), lineWidth: 1)
-                )
-                .foregroundColor(color)
+            VStack(spacing: 3) {
+                if isSuggested {
+                    Text("Suggested")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundColor(color)
+                        .accessibilityHidden(true)
+                }
+                Text(label)
+                    .font(.body.weight(.semibold))
+                    .frame(maxWidth: .infinity)
+            }
+            .padding(.vertical, 9)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(color.opacity(isSuggested ? 0.22 : 0.15))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(color.opacity(isSuggested ? 0.85 : 0.45),
+                                  lineWidth: isSuggested ? 2 : 1)
+            )
+            .foregroundColor(color)
         }
         .buttonStyle(.plain)
         .pointingCursor()
-        .accessibilityLabel("Rate this answer as \(label) — feeds the spaced-repetition queue")
+        .accessibilityLabel(
+            isSuggested
+            ? "Rate this answer as \(label) — suggested based on hints used"
+            : "Rate this answer as \(label) — feeds the spaced-repetition queue"
+        )
     }
 
     private var qualityRecordedConfirmation: some View {

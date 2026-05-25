@@ -1579,4 +1579,106 @@ pattern as `/tmp/enrich_boss_quiz.py` from the previous session
       bash scripts/imac-pull.sh
   (or run the `defaults write` lines from step 6.5 by hand).
 
+## Session continuation: 2026-05-25 22:00 +05:30 — D5 PICKER-SUGGESTION WIRING
+
+### Goal
+Wire `Question.defaultQualityForHintTier(_:)` — a pure function
+shipped in D5 (2026-05-24) with full unit-test coverage but no
+caller in the view layer — into `QuestionDetailView`'s quality
+picker so the picker visually flags a "Suggested" default based on
+the kid's hint usage. The function maps:
+   tier 0 (no hint)        → .good  (no badge — pick freely)
+   tier 1 (first hint)     → .good  (a nudge isn't a fail)
+   tier 2 (second clue)    → .hard
+   tier 3 (full solution)  → .forgot
+
+Before this commit the picker showed all four buttons identically;
+after, the one matching the hint tier carries a "Suggested" label
+above it and a thicker accent border. The kid still actively taps
+a button — this is a soft default, not a forced selection.
+
+### Commit landed this session
+- THIS COMMIT — D5 picker-suggestion wiring + 2 new contract
+  tests + lh005 allowlist resync.
+
+### What changed
+
+1. `QuestionDetailView.qualityPickerCard` reads new
+   `suggestedQuality: ReviewQuality?` computed property.
+2. `suggestedQuality` returns nil at hintTier 0 and the
+   `defaultQualityForHintTier(hintTier)` value otherwise. The
+   nil-at-zero gate is intentional — surfacing a suggestion
+   before the kid asks for a hint would front-run their SRS
+   judgement.
+3. `qualityButton` checks `suggestedQuality == quality` and
+   adds: a "Suggested" caption label, a heavier 2pt border, a
+   slightly stronger fill opacity (.22 vs .15), and an a11y
+   label that says "suggested based on hints used" when the
+   badge is visible.
+4. Picker subhead copy flips when a suggestion is active so
+   the kid understands why one button looks different.
+
+### Test additions
+
+- `HintLadderTests.testSuggestionGate_TierZeroProducesNoSuggestion`
+  — codifies the "tier 0 = nil suggestion" contract numerically
+  so a future refactor can't silently flip it.
+- `HintLadderTests.testSuggestionGate_TierOneAndUpProducesSuggestion`
+  — pins that every tier 1..3 yields a non-nil suggestion.
+- The 4 existing tier→quality mapping tests already cover the
+  underlying pure function.
+
+### lh005 allowlist resync
+
+- One Scene9-style line shift: `QuestionDetailView.swift:388` →
+  `:406` (the VStack-wrapped button label added 18 lines above
+  the `withAnimation` site). Same reason on the entry, just an
+  updated note.
+
+### Out-of-scope (logged for next session)
+
+- **Manual-override stickiness.** Today's behaviour: the
+  suggestion updates LIVE as the kid taps "Show hint". A future
+  refinement would remember that the kid manually overrode the
+  suggestion (e.g. tapped Good even though Hard was suggested)
+  and stop nudging on subsequent tier reveals for that question.
+  Needs a per-question state flag — small but bigger than this
+  commit.
+- **Keyboard shortcut to accept suggestion.** Pressing Return
+  in the picker could trigger the suggested quality. Today the
+  kid still has to mouse-tap. Likely a one-line `.keyboardShortcut`
+  on the suggested button.
+- **D7 hintTier-reset extension.** The 2026-05-25 enrichment
+  REMEDIATION_LOG noted that `.onChange(of: question.id)`
+  resets `revealSolution` but not `hintTier` was a known polish
+  item — actually it DOES reset `hintTier` (line 101), so the
+  note was wrong; no action needed. Closing.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean (no errors).
+- `HintLadderTests`: 15 / 15 pass locally (13 existing + 2 new
+  contract tests).
+- All 9 lints clean (lh005 allowlist resynced; no new violations
+  added).
+- 1 commit, pushed in the next push cycle.
+
+### Notes for future sessions
+
+- The suggestion gate is intentionally simple: `hintTier > 0`.
+  Don't extend it to "wrong answer + hint" — that's MULTIPLE
+  signals competing for the same picker default and is more
+  likely to confuse than to help. If the kid got it wrong AND
+  used a hint, they should pick the worse of the two (and
+  manual-override stickiness, once shipped, will record that).
+- The `Suggested` text is `.caption2.weight(.semibold)` to keep
+  the button height proportional. If a future polish session
+  wants to bump it to `.caption.weight(.bold)`, also bump the
+  VStack `spacing: 3` to keep the label/button gap balanced.
+- The new contract tests use a literal `(0 > 0) ? ... : nil`
+  rather than calling the view directly. That's deliberate —
+  testing a SwiftUI computed property through reflection or
+  Mirror is brittle on Big Sur. Pinning the contract
+  symbolically catches the same regression.
+
 

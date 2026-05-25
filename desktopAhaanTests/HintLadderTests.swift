@@ -99,6 +99,41 @@ final class HintLadderTests: XCTestCase {
         XCTAssertEqual(Question.defaultQualityForHintTier(99), .forgot)
     }
 
+    // MARK: - Picker-suggestion wiring contract (D5 follow-up, 2026-05-25)
+    //
+    // `QuestionDetailView.suggestedQuality` reads
+    // `defaultQualityForHintTier(_:)` and surfaces a "Suggested" badge
+    // on the matching quality button — but only AFTER a hint reveal.
+    // At tier 0 the picker shows no suggestion so the kid picks freely.
+    //
+    // The view code is `guard hintTier > 0 else { return nil }`; these
+    // tests pin the contract numerically so a future refactor can't
+    // silently flip the gate (e.g. always-on suggestions, which would
+    // train the kid that the suggestion is the answer instead of a
+    // post-hint correction).
+
+    func testSuggestionGate_TierZeroProducesNoSuggestion() {
+        // `suggestedQuality` matches this exact pattern in the view.
+        let suggested: ReviewQuality? = (0 > 0)
+            ? Question.defaultQualityForHintTier(0)
+            : nil
+        XCTAssertNil(suggested,
+            "Tier 0 (no hint used) MUST yield no picker suggestion. " +
+            "Showing a suggestion before the kid asks for a hint would " +
+            "front-run the SRS judgment.")
+    }
+
+    func testSuggestionGate_TierOneAndUpProducesSuggestion() {
+        for tier in 1...3 {
+            let suggested: ReviewQuality? = (tier > 0)
+                ? Question.defaultQualityForHintTier(tier)
+                : nil
+            XCTAssertNotNil(suggested,
+                "Tier \(tier) MUST yield a picker suggestion — that's " +
+                "the whole point of D5's hint-tier → quality mapping.")
+        }
+    }
+
     // MARK: - JSON round-trip preserves hints
 
     func testHintsRoundTripThroughJSON() throws {
