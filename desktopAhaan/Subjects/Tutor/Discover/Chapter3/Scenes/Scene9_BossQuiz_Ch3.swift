@@ -10,80 +10,30 @@ struct Scene9_BossQuiz_Ch3: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        let n = chapter.bossQuestions?.count ?? 0
+        self._picks = State(initialValue: Array(repeating: nil, count: n))
+        self._revealed = State(initialValue: Array(repeating: false, count: n))
+    }
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = []
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = []
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
     @State private var pdfStatus: String? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    private var quiz: [Ch3QuizItem] {
-        [
-            Ch3QuizItem(
-                prompt: "Which animal gives us cashmere wool?",
-                options: ["Sheep", "Goat", "Alpaca", "Camel"],
-                answer: "Goat",
-                explanation: "Cashmere goats produce the most luxurious wool, especially those in the Himalayas."
-            ),
-            Ch3QuizItem(
-                prompt: "What process removes grease from raw fleece?",
-                options: ["Dyeing", "Scouring", "Carding", "Spinning"],
-                answer: "Scouring",
-                explanation: "Scouring uses warm water and detergent to wash out grease, dirt, and debris."
-            ),
-            Ch3QuizItem(
-                prompt: "How many days does a silkworm spend as a larva?",
-                options: ["10", "15", "25", "35"],
-                answer: "25",
-                explanation: "A silkworm caterpillar eats mulberry leaves for about 25-28 days before spinning its cocoon."
-            ),
-            Ch3QuizItem(
-                prompt: "Which is a synthetic fibre?",
-                options: ["Cotton", "Wool", "Polyester", "Silk"],
-                answer: "Polyester",
-                explanation: "Polyester is made from petroleum. Cotton, wool, and silk are natural fibres."
-            ),
-            Ch3QuizItem(
-                prompt: "Wool sorters used to catch what disease from infected fleece?",
-                options: ["Measles", "Anthrax", "Polio", "Malaria"],
-                answer: "Anthrax",
-                explanation: "Sorter's disease (anthrax) is caused by spores in raw fleece. Modern safety prevents this."
-            ),
-            Ch3QuizItem(
-                prompt: "The process of pulling silk thread off the cocoon is called:",
-                options: ["Carding", "Reeling", "Weaving", "Spinning"],
-                answer: "Reeling",
-                explanation: "Cocoons are softened in hot water and the long single thread is unwound — that is reeling."
-            ),
-            Ch3QuizItem(
-                prompt: "Pashmina goats are famously reared in:",
-                options: ["Kerala backwaters", "Ladakh / Tibetan plateau", "Tamil Nadu coast", "Goa beaches"],
-                answer: "Ladakh / Tibetan plateau",
-                explanation: "The freezing high-altitude winters make Pashmina goats grow extra-fine warm wool."
-            ),
-            Ch3QuizItem(
-                prompt: "Carding wool means:",
-                options: ["Dyeing it", "Washing the grease out", "Straightening and combing the fibres", "Weaving it into cloth"],
-                answer: "Straightening and combing the fibres",
-                explanation: "After scouring, wool fibres are combed parallel so they can be spun into smooth yarn."
-            ),
-            Ch3QuizItem(
-                prompt: "Sericulture is the rearing of:",
-                options: ["Sheep", "Silkworms", "Bees", "Cocoons of cotton"],
-                answer: "Silkworms",
-                explanation: "Sericulture combines 'serikos' (silken) with 'culture' (rearing). India is a top sericulture nation."
-            ),
-            Ch3QuizItem(
-                prompt: "Silkworms are fed mainly on the leaves of the:",
-                options: ["Mango tree", "Mulberry tree", "Banana tree", "Coconut tree"],
-                answer: "Mulberry tree",
-                explanation: "Mulberry silkworms eat only fresh mulberry leaves — that is why mulberry trees are grown near silk farms."
-            ),
-        ]
-    }
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
 
     var body: some View {
         ScrollView {
@@ -93,12 +43,12 @@ struct Scene9_BossQuiz_Ch3: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: Double(quiz.count))
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 10")
+                    Text("Question \(currentQ + 1) of \(quiz.count)")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -112,7 +62,7 @@ struct Scene9_BossQuiz_Ch3: View {
                     .offset(x: shake)
 
                     VStack(spacing: 10) {
-                        ForEach(item.options, id: \.self) { opt in
+                        ForEach(item.options ?? [], id: \.self) { opt in
                             Ch3AnswerButton(
                                 label: opt,
                                 state: state(for: opt, in: item)
@@ -134,7 +84,7 @@ struct Scene9_BossQuiz_Ch3: View {
                             Text("Quiz Complete!")
                                 .font(.headline)
                                 .foregroundColor(.green)
-                            Text("You scored \(score) / 10")
+                            Text("You scored \(score) / \(quiz.count)")
                                 .font(.title2.weight(.bold))
                                 .foregroundColor(Color.compatIndigo)
                         }
@@ -173,7 +123,7 @@ struct Scene9_BossQuiz_Ch3: View {
 
     // MARK: - Quiz Logic
 
-    private func state(for option: String, in item: Ch3QuizItem) -> Ch3AnswerButtonState {
+    private func state(for option: String, in item: Question) -> Ch3AnswerButtonState {
         guard let picked = picks[currentQ] else { return .normal }
 
         if picked == option {
@@ -191,13 +141,13 @@ struct Scene9_BossQuiz_Ch3: View {
         return .normal
     }
 
-    private func pick(_ option: String, in item: Ch3QuizItem) {
+    private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
 
         picks[currentQ] = option
         let isCorrect = option == item.answer
-        DataStore.shared.recordEphemeralReview(
-            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+        DataStore.shared.recordReview(
+            questionId: item.id,
             quality: isCorrect ? .good : .forgot
         )
 
@@ -230,7 +180,7 @@ struct Scene9_BossQuiz_Ch3: View {
     }
 
     private func advance() {
-        if currentQ < 9 {
+        if currentQ < quiz.count - 1 {
             withAnimation(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
@@ -291,6 +241,13 @@ struct Scene9_BossQuiz_Ch3: View {
         )
         .border(Color.compatIndigo, width: 3)
     }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
+    }
 }
 
 // MARK: - Answer Button
@@ -341,14 +298,6 @@ enum Ch3AnswerButtonState {
 }
 
 // MARK: - Quiz Item
-
-private struct Ch3QuizItem {
-    let prompt: String
-    let options: [String]
-    let answer: String
-    let explanation: String
-}
-
 // MARK: - Helpers
 
 extension DateFormatter {

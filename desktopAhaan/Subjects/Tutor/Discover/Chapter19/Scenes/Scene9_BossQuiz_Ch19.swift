@@ -10,81 +10,31 @@ struct Scene9_BossQuiz_Ch19: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        let n = chapter.bossQuestions?.count ?? 0
+        self._picks = State(initialValue: Array(repeating: nil, count: n))
+        self._revealed = State(initialValue: Array(repeating: false, count: n))
+    }
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = []
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = []
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
     @State private var pdfStatus: String? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var quiz: [Ch19QuizItem] { Self.items }
-
-    private static let items: [Ch19QuizItem] = [
-        Ch19QuizItem(
-            prompt: "What causes day and night on Earth?",
-            options: ["Earth's revolution around the Sun", "Earth's rotation on its axis", "The Moon blocking sunlight", "Clouds covering the Sun"],
-            answer: "Earth's rotation on its axis",
-            explanation: "Earth spins on its axis once every 24 hours. The side facing the Sun has day, the opposite side has night."
-        ),
-        Ch19QuizItem(
-            prompt: "What causes the seasons on Earth?",
-            options: ["Distance from the Sun", "The tilt of Earth's axis", "The Moon's gravity", "Speed of Earth's rotation"],
-            answer: "The tilt of Earth's axis",
-            explanation: "Earth\u{2019}s axis is tilted at 23.5 degrees. As Earth orbits the Sun, different hemispheres tilt toward or away from the Sun, creating seasons."
-        ),
-        Ch19QuizItem(
-            prompt: "During a solar eclipse, what comes between the Sun and Earth?",
-            options: ["Mars", "A comet", "The Moon", "A satellite"],
-            answer: "The Moon",
-            explanation: "In a solar eclipse, the Moon passes between the Sun and Earth, blocking sunlight and casting a shadow on Earth."
-        ),
-        Ch19QuizItem(
-            prompt: "Which Indian mission discovered water on the Moon?",
-            options: ["Mangalyaan", "Chandrayaan-1", "Aditya-L1", "Chandrayaan-3"],
-            answer: "Chandrayaan-1",
-            explanation: "Chandrayaan-1 (2008) carried the Moon Impact Probe that confirmed the presence of water molecules on the lunar surface."
-        ),
-        Ch19QuizItem(
-            prompt: "The Pole Star appears stationary because it is aligned with Earth\u{2019}s ___.",
-            options: ["Equator", "Orbit", "Rotational axis", "Magnetic field"],
-            answer: "Rotational axis",
-            explanation: "The Pole Star (Dhruv Tara) is almost exactly aligned with Earth\u{2019}s rotational axis, so as Earth spins, it appears to stay fixed while all other stars circle around it."
-        ),
-            Ch19QuizItem(
-                prompt: "The star closest to Earth is the:",
-                options: ["Pole Star", "Sun", "Sirius", "Alpha Centauri"],
-                answer: "Sun",
-                explanation: "The Sun is just one of trillions of stars — but it is the only one close enough to feel warm."
-            ),
-            Ch19QuizItem(
-                prompt: "Which of these are the inner rocky planets?",
-                options: ["Jupiter, Saturn, Uranus, Neptune", "Mercury, Venus, Earth, Mars", "Sun, Earth, Moon, Mars", "Pluto, Ceres, Eris, Sedna"],
-                answer: "Mercury, Venus, Earth, Mars",
-                explanation: "The four small rocky planets nearest the Sun; the four gas/ice giants lie beyond."
-            ),
-            Ch19QuizItem(
-                prompt: "Saturn's beautiful rings are made of:",
-                options: ["Solid metal bands", "Tiny ice and rock particles", "A single sheet of cloud", "Liquid gold"],
-                answer: "Tiny ice and rock particles",
-                explanation: "Up close, the rings are millions of separate chunks of ice and dust orbiting Saturn."
-            ),
-            Ch19QuizItem(
-                prompt: "Our home galaxy is called the:",
-                options: ["Andromeda Galaxy", "Triangulum Galaxy", "Milky Way", "Whirlpool Galaxy"],
-                answer: "Milky Way",
-                explanation: "Our Sun is one star out of hundreds of billions in the spiral Milky Way galaxy."
-            ),
-            Ch19QuizItem(
-                prompt: "A light-year is a measure of:",
-                options: ["Time", "Mass", "Distance", "Temperature"],
-                answer: "Distance",
-                explanation: "It is the distance light travels in one year — about 9.46 trillion km."
-            ),
-    ]
-
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
     var body: some View {
         // ScrollView + LazyVStack: natural bounded height keeps the shell
         // footer (Previous / Next) reachable even on shorter windows.
@@ -98,7 +48,7 @@ struct Scene9_BossQuiz_Ch19: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: Double(quiz.count))
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -126,7 +76,7 @@ struct Scene9_BossQuiz_Ch19: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 10")
+        Text("Question \(currentQ + 1) of \(quiz.count)")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -140,7 +90,7 @@ struct Scene9_BossQuiz_Ch19: View {
         .offset(x: shake)
 
         VStack(spacing: 10) {
-            ForEach(item.options, id: \.self) { opt in
+            ForEach(item.options ?? [], id: \.self) { opt in
                 Ch19AnswerButton(
                     label: opt,
                     state: state(for: opt, in: item)
@@ -156,7 +106,7 @@ struct Scene9_BossQuiz_Ch19: View {
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb.fill")
                         .foregroundColor(.yellow)
-                    Text(item.explanation)
+                    Text(bossExplanation(item))
                         .font(.callout)
                     Spacer(minLength: 0)
                 }
@@ -165,30 +115,37 @@ struct Scene9_BossQuiz_Ch19: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 9 ? "Next question" : "See my score") {
+            Button(currentQ < quiz.count - 1 ? "Next question" : "See my score") {
                 advance()
             }
             .accentColor(Color.compatIndigo)
         }
     }
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
+    }
+
 
     // MARK: - Quiz mechanics
 
     fileprivate enum AnswerState { case neutral, picked, correct, wrong }
 
-    fileprivate func state(for option: String, in item: Ch19QuizItem) -> AnswerState {
+    fileprivate func state(for option: String, in item: Question) -> AnswerState {
         guard let p = picks[currentQ] else { return .neutral }
         if option == item.answer { return .correct }
         if option == p { return .wrong }
         return .neutral
     }
 
-    private func pick(_ option: String, in item: Ch19QuizItem) {
+    private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
         let isRight = option == item.answer
-        DataStore.shared.recordEphemeralReview(
-            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+        DataStore.shared.recordReview(
+            questionId: item.id,
             quality: isRight ? .good : .forgot
         )
         if isRight {
@@ -209,7 +166,7 @@ struct Scene9_BossQuiz_Ch19: View {
     }
 
     private func advance() {
-        if currentQ < 9 {
+        if currentQ < quiz.count - 1 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -226,7 +183,7 @@ struct Scene9_BossQuiz_Ch19: View {
             Text("You finished Chapter 19 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 10")
+            Text("Score: \(score) / \(quiz.count)")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -259,7 +216,7 @@ struct Scene9_BossQuiz_Ch19: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(Ch19CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(Ch19CertificateView(score: score, total: quiz.count), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return
@@ -286,14 +243,6 @@ struct Scene9_BossQuiz_Ch19: View {
 }
 
 // MARK: - Local types
-
-private struct Ch19QuizItem {
-    let prompt: String
-    let options: [String]
-    let answer: String
-    let explanation: String
-}
-
 private struct Ch19AnswerButton: View {
     let label: String
     let state: Scene9_BossQuiz_Ch19.AnswerState

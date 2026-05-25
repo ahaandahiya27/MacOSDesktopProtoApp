@@ -6,50 +6,12 @@ struct Scene9_BossQuiz_Ch8: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
-    struct Q { let prompt: String; let options: [String]; let answer: String; let explain: String }
-
-    private let qs: [Q] = [
-        Q(prompt: "Wind is caused by:",
-          options: ["Birds flapping", "Uneven heating of air", "The Earth's gravity", "The Moon's pull"],
-          answer: "Uneven heating of air",
-          explain: "Warm air rises; cool air rushes in to replace it. That moving air is wind."),
-        Q(prompt: "On a sunny day at the coast, the breeze blows from:",
-          options: ["Land to sea", "Sea to land", "Sky to ground", "It doesn't blow"],
-          answer: "Sea to land",
-          explain: "Daytime: land heats faster, hot air rises, cooler sea air flows in — a sea breeze."),
-        Q(prompt: "The calm centre of a cyclone is called the:",
-          options: ["Pupil", "Eye", "Heart", "Core"],
-          answer: "Eye",
-          explain: "The eye is a low-pressure column where air sinks; the violent winds are in the wall around it."),
-        Q(prompt: "Faster-moving air has:",
-          options: ["Higher pressure", "Lower pressure", "Same pressure", "Zero pressure"],
-          answer: "Lower pressure",
-          explain: "Bernoulli's principle. That's why two paper strips swing together when you blow between them."),
-        Q(prompt: "Which instrument measures wind speed?",
-          options: ["Barometer", "Thermometer", "Anemometer", "Hygrometer"],
-          answer: "Anemometer",
-          explain: "An anemometer's spinning cups convert wind to a speed reading in km/h."),
-        Q(prompt: "The Southwest monsoon brings rain to most of India during:",
-          options: ["December–February", "March–May", "June–September", "October–November"],
-          answer: "June–September",
-          explain: "Warm winds from the Indian Ocean pick up moisture and pour it over the subcontinent each summer."),
-        Q(prompt: "A tornado differs from a cyclone because a tornado:",
-          options: ["Forms over oceans", "Is much larger", "Forms over land and is narrower", "Has no wind"],
-          answer: "Forms over land and is narrower",
-          explain: "Tornadoes are funnel-shaped windstorms over land; cyclones are huge low-pressure systems over warm seas."),
-        Q(prompt: "Lightning is best described as:",
-          options: ["Hot air rising", "A giant electric spark in the sky", "Sound waves", "Wind friction"],
-          answer: "A giant electric spark in the sky",
-          explain: "Clouds build up huge electrical charges; the spark that jumps to balance them is lightning."),
-        Q(prompt: "During a thunderstorm the safest place is:",
-          options: ["Under a tall tree", "In an open field", "Inside a building", "On a metal roof"],
-          answer: "Inside a building",
-          explain: "A building shields you from rain, wind and lightning. Open fields and tall trees attract strikes."),
-        Q(prompt: "In the Atlantic Ocean a tropical cyclone is called a:",
-          options: ["Typhoon", "Hurricane", "Willy-willy", "Blizzard"],
-          answer: "Hurricane",
-          explain: "Same storm, different name by region: hurricane (Atlantic), typhoon (NW Pacific), cyclone (Indian Ocean)."),
-    ]
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
 
     @State private var i = 0
     @State private var picked: String? = nil
@@ -64,11 +26,11 @@ struct Scene9_BossQuiz_Ch8: View {
         ScrollView {
     LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-                ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
+                ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 
                 if !done {
-                    let q = qs[i]
-                    Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    let q = quiz[i]
+                    Text("Question \(i + 1) of \(quiz.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     SoftShadowCard(padding: 18) {
                         Text(q.prompt).font(.title3.bold()).frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -81,8 +43,8 @@ struct Scene9_BossQuiz_Ch8: View {
                                 picked = opt
                                 revealed = true
                                 let isCorrect = opt == q.answer
-                                DataStore.shared.recordEphemeralReview(
-                                    ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, i),
+                                DataStore.shared.recordReview(
+                                    questionId: q.id,
                                     quality: isCorrect ? .good : .forgot
                                 )
                                 if isCorrect { score += 1 }
@@ -105,11 +67,11 @@ struct Scene9_BossQuiz_Ch8: View {
 
                     if revealed {
                         SoftShadowCard(padding: 12) {
-                            Label(q.explain, systemImage: "lightbulb.fill").font(.callout)
+                            Label(bossExplanation(q), systemImage: "lightbulb.fill").font(.callout)
                         }
                         .frame(maxWidth: 600)
-                        Button(i + 1 < qs.count ? "Next question" : "See score") {
-                            if i + 1 < qs.count { i += 1; picked = nil; revealed = false }
+                        Button(i + 1 < quiz.count ? "Next question" : "See score") {
+                            if i + 1 < quiz.count { i += 1; picked = nil; revealed = false }
                             else { done = true }
                         }
                         .accentColor(Color.compatIndigo)
@@ -123,7 +85,7 @@ struct Scene9_BossQuiz_Ch8: View {
                                 .accessibilityHidden(true)
                             Text("Great job!").font(.title2.bold()).foregroundColor(.green)
                         }
-                        Text("Score: \(score) / \(qs.count)").font(.system(size: 36, weight: .bold))
+                        Text("Score: \(score) / \(quiz.count)").font(.system(size: 36, weight: .bold))
                         GotItButton(label: "Finish chapter") { onComplete(score) }
                     }
                     .padding(.top, 8)
@@ -133,7 +95,14 @@ struct Scene9_BossQuiz_Ch8: View {
             .padding(.bottom, 12)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
-        .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }
+        .onAppear { if shuffled.isEmpty { shuffled = (quiz[i].options ?? []).shuffled() } }
+        .onChange(of: i) { newI in shuffled = (quiz[newI].options ?? []).shuffled() }
+    }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
     }
 }

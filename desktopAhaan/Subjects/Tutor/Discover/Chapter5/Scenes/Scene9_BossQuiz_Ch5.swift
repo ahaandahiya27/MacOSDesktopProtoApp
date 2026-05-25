@@ -10,81 +10,31 @@ struct Scene9_BossQuiz_Ch5: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        let n = chapter.bossQuestions?.count ?? 0
+        self._picks = State(initialValue: Array(repeating: nil, count: n))
+        self._revealed = State(initialValue: Array(repeating: false, count: n))
+    }
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = []
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = []
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
     @State private var pdfStatus: String? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var quiz: [Ch5QuizItem] { Self.items }
-
-    private static let items: [Ch5QuizItem] = [
-        Ch5QuizItem(
-            prompt: "Which of these is a natural indicator?",
-            options: ["Turmeric", "Phenolphthalein", "Hydrochloric acid", "Sodium chloride"],
-            answer: "Turmeric",
-            explanation: "Turmeric is a natural indicator \u{2014} it stays yellow in acid but turns red/brown in a base."
-        ),
-        Ch5QuizItem(
-            prompt: "What is the pH of pure water?",
-            options: ["0", "5", "7", "14"],
-            answer: "7",
-            explanation: "Pure water is neutral with a pH of exactly 7 \u{2014} neither acidic nor basic."
-        ),
-        Ch5QuizItem(
-            prompt: "A bee sting injects acid. What should you apply?",
-            options: ["Lemon juice", "Vinegar", "Baking soda solution", "More honey"],
-            answer: "Baking soda solution",
-            explanation: "Baking soda is a mild base. It neutralises the acid from the bee sting, giving relief."
-        ),
-        Ch5QuizItem(
-            prompt: "Acid + Base \u{2192} ?",
-            options: ["Acid + Gas", "Salt + Water", "Base + Gas", "Only Water"],
-            answer: "Salt + Water",
-            explanation: "When an acid reacts with a base, they neutralise each other to produce a salt and water."
-        ),
-        Ch5QuizItem(
-            prompt: "Which gas is a major cause of acid rain?",
-            options: ["Oxygen", "Nitrogen", "Sulphur dioxide", "Carbon monoxide"],
-            answer: "Sulphur dioxide",
-            explanation: "Sulphur dioxide (SO\u{2082}) from burning fossil fuels dissolves in rain water to form sulphuric acid, causing acid rain."
-        ),
-            Ch5QuizItem(
-                prompt: "Litmus paper turns which colour in an acid?",
-                options: ["Blue", "Red", "Green", "Yellow"],
-                answer: "Red",
-                explanation: "Blue litmus → red in acid. Red litmus → blue in base. Remember: 'blue in base.'"
-            ),
-            Ch5QuizItem(
-                prompt: "Common table salt has the formula:",
-                options: ["NaOH", "HCl", "NaCl", "CaCO3"],
-                answer: "NaCl",
-                explanation: "Sodium chloride is formed by neutralisation of NaOH (base) and HCl (acid)."
-            ),
-            Ch5QuizItem(
-                prompt: "Antacid tablets work because they:",
-                options: ["Add more acid to the stomach", "Are basic and neutralise extra stomach acid", "Are sugars", "Coat the tongue"],
-                answer: "Are basic and neutralise extra stomach acid",
-                explanation: "Magnesium hydroxide or similar bases react with the excess HCl and relieve the burn."
-            ),
-            Ch5QuizItem(
-                prompt: "Curd tastes sour because it contains:",
-                options: ["Citric acid", "Lactic acid", "Sulphuric acid", "Hydrochloric acid"],
-                answer: "Lactic acid",
-                explanation: "Bacteria turn the sugar in milk (lactose) into lactic acid — that's the sour taste of curd."
-            ),
-            Ch5QuizItem(
-                prompt: "Vinegar gets its sourness from:",
-                options: ["Citric acid", "Acetic acid", "Tartaric acid", "Phosphoric acid"],
-                answer: "Acetic acid",
-                explanation: "Vinegar is about 5% acetic acid in water — strong enough to cook with, mild enough to drink in food."
-            ),
-    ]
-
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
     var body: some View {
         // ScrollView + LazyVStack: natural bounded height keeps the shell
         // footer (Previous / Next) reachable even on shorter windows.
@@ -98,7 +48,7 @@ struct Scene9_BossQuiz_Ch5: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: Double(quiz.count))
                     .frame(maxWidth: 520)
 
                 if !done {
@@ -126,7 +76,7 @@ struct Scene9_BossQuiz_Ch5: View {
     @ViewBuilder
     private var quizBody: some View {
         let item = quiz[currentQ]
-        Text("Question \(currentQ + 1) of 10")
+        Text("Question \(currentQ + 1) of \(quiz.count)")
             .font(.subheadline)
             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -140,7 +90,7 @@ struct Scene9_BossQuiz_Ch5: View {
         .offset(x: shake)
 
         VStack(spacing: 10) {
-            ForEach(item.options, id: \.self) { opt in
+            ForEach(item.options ?? [], id: \.self) { opt in
                 Ch5AnswerButton(
                     label: opt,
                     state: state(for: opt, in: item)
@@ -156,7 +106,7 @@ struct Scene9_BossQuiz_Ch5: View {
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb.fill")
                         .foregroundColor(.yellow)
-                    Text(item.explanation)
+                    Text(bossExplanation(item))
                         .font(.callout)
                     Spacer(minLength: 0)
                 }
@@ -165,30 +115,37 @@ struct Scene9_BossQuiz_Ch5: View {
         }
 
         if revealed[currentQ] {
-            Button(currentQ < 9 ? "Next question" : "See my score") {
+            Button(currentQ < quiz.count - 1 ? "Next question" : "See my score") {
                 advance()
             }
             .accentColor(Color.compatIndigo)
         }
     }
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
+    }
+
 
     // MARK: - Quiz mechanics
 
     fileprivate enum AnswerState { case neutral, picked, correct, wrong }
 
-    fileprivate func state(for option: String, in item: Ch5QuizItem) -> AnswerState {
+    fileprivate func state(for option: String, in item: Question) -> AnswerState {
         guard let p = picks[currentQ] else { return .neutral }
         if option == item.answer { return .correct }
         if option == p { return .wrong }
         return .neutral
     }
 
-    private func pick(_ option: String, in item: Ch5QuizItem) {
+    private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
         let isRight = option == item.answer
-        DataStore.shared.recordEphemeralReview(
-            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+        DataStore.shared.recordReview(
+            questionId: item.id,
             quality: isRight ? .good : .forgot
         )
         if isRight {
@@ -209,7 +166,7 @@ struct Scene9_BossQuiz_Ch5: View {
     }
 
     private func advance() {
-        if currentQ < 9 {
+        if currentQ < quiz.count - 1 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -226,7 +183,7 @@ struct Scene9_BossQuiz_Ch5: View {
             Text("You finished Chapter 5 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 10")
+            Text("Score: \(score) / \(quiz.count)")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -259,7 +216,7 @@ struct Scene9_BossQuiz_Ch5: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: quiz.count), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return
@@ -286,14 +243,6 @@ struct Scene9_BossQuiz_Ch5: View {
 }
 
 // MARK: - Local types
-
-private struct Ch5QuizItem {
-    let prompt: String
-    let options: [String]
-    let answer: String
-    let explanation: String
-}
-
 private struct Ch5AnswerButton: View {
     let label: String
     let state: Scene9_BossQuiz_Ch5.AnswerState

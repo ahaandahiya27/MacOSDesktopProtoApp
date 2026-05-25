@@ -6,50 +6,12 @@ struct Scene9_BossQuiz_Ch11: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
-    struct Q { let prompt: String; let options: [String]; let answer: String; let explain: String }
-
-    private let qs: [Q] = [
-        Q(prompt: "How many chambers does a human heart have?",
-          options: ["2", "3", "4", "5"],
-          answer: "4",
-          explain: "Two atria on top, two ventricles below — a double pump."),
-        Q(prompt: "Which carries oxygen in blood?",
-          options: ["WBC", "RBC", "Platelets", "Plasma"],
-          answer: "RBC",
-          explain: "Red blood cells contain haemoglobin, which binds oxygen."),
-        Q(prompt: "Veins have valves to:",
-          options: ["Make blood faster", "Prevent backflow", "Store sugar", "Add oxygen"],
-          answer: "Prevent backflow",
-          explain: "Veins return blood at low pressure; valves stop it from flowing the wrong way."),
-        Q(prompt: "Water moves up a plant through:",
-          options: ["Phloem", "Xylem", "Stomata", "Cambium"],
-          answer: "Xylem",
-          explain: "Xylem is the upward water pipeline; phloem moves sugar in both directions."),
-        Q(prompt: "Loss of water vapour from leaves is called:",
-          options: ["Respiration", "Transpiration", "Photosynthesis", "Translocation"],
-          answer: "Transpiration",
-          explain: "Transpiration pulls more water up — like sipping through a straw."),
-        Q(prompt: "Arteries usually carry:",
-          options: ["Deoxygenated blood", "Oxygenated blood", "Lymph", "Plasma only"],
-          answer: "Oxygenated blood",
-          explain: "Arteries carry oxygen-rich blood away from the heart. The pulmonary artery is the one exception."),
-        Q(prompt: "Excess water and salts leave the body through sweat from:",
-          options: ["Lungs", "Kidneys", "Skin", "Intestines"],
-          answer: "Skin",
-          explain: "Sweat glands push water plus salts onto the skin where they evaporate, cooling the body."),
-        Q(prompt: "The kidneys make:",
-          options: ["Bile", "Urine", "Sweat", "Saliva"],
-          answer: "Urine",
-          explain: "Kidneys filter blood to remove urea and excess salts and water as urine."),
-        Q(prompt: "Phloem in plants transports:",
-          options: ["Water from roots", "Food made in leaves", "Oxygen", "Soil"],
-          answer: "Food made in leaves",
-          explain: "Xylem carries water upward; phloem carries sugars from leaves to all parts of the plant."),
-        Q(prompt: "A typical resting human heart beats about how many times per minute?",
-          options: ["About 20", "About 72", "About 200", "About 500"],
-          answer: "About 72",
-          explain: "A relaxed adult heart beats roughly 60–80 times per minute. Kids beat a little faster."),
-    ]
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
 
     @State private var i = 0
     @State private var picked: String? = nil
@@ -65,11 +27,11 @@ struct Scene9_BossQuiz_Ch11: View {
         ScrollView {
     LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-                ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
+                ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 
                 if !done {
-                    let q = qs[i]
-                    Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    let q = quiz[i]
+                    Text("Question \(i + 1) of \(quiz.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     SoftShadowCard(padding: 18) {
                         Text(q.prompt).font(.title3.bold()).frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -82,8 +44,8 @@ struct Scene9_BossQuiz_Ch11: View {
                                 picked = opt
                                 revealed = true
                                 let isCorrect = opt == q.answer
-                                DataStore.shared.recordEphemeralReview(
-                                    ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, i),
+                                DataStore.shared.recordReview(
+                                    questionId: q.id,
                                     quality: isCorrect ? .good : .forgot
                                 )
                                 if isCorrect { score += 1 }
@@ -106,11 +68,11 @@ struct Scene9_BossQuiz_Ch11: View {
 
                     if revealed {
                         SoftShadowCard(padding: 12) {
-                            Label(q.explain, systemImage: "lightbulb.fill").font(.callout)
+                            Label(bossExplanation(q), systemImage: "lightbulb.fill").font(.callout)
                         }
                         .frame(maxWidth: 600)
-                        Button(i + 1 < qs.count ? "Next question" : "See score") {
-                            if i + 1 < qs.count { i += 1; picked = nil; revealed = false }
+                        Button(i + 1 < quiz.count ? "Next question" : "See score") {
+                            if i + 1 < quiz.count { i += 1; picked = nil; revealed = false }
                             else { done = true; celebrate = true }
                         }
                         .accentColor(Color.compatIndigo)
@@ -124,7 +86,7 @@ struct Scene9_BossQuiz_Ch11: View {
                                 .accessibilityHidden(true)
                             Text("Great job!").font(.title2.bold()).foregroundColor(.green)
                         }
-                        Text("Score: \(score) / \(qs.count)").font(.system(size: 36, weight: .bold))
+                        Text("Score: \(score) / \(quiz.count)").font(.system(size: 36, weight: .bold))
                         GotItButton(label: "Finish chapter") { onComplete(score) }
                     }
                     .padding(.top, 8)
@@ -143,7 +105,14 @@ struct Scene9_BossQuiz_Ch11: View {
             }
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
-        .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }
+        .onAppear { if shuffled.isEmpty { shuffled = (quiz[i].options ?? []).shuffled() } }
+        .onChange(of: i) { newI in shuffled = (quiz[newI].options ?? []).shuffled() }
+    }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
     }
 }

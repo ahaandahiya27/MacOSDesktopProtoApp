@@ -6,50 +6,12 @@ struct Scene9_BossQuiz_Ch9: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
-    struct Q { let prompt: String; let options: [String]; let answer: String; let explain: String }
-
-    private let qs: [Q] = [
-        Q(prompt: "The topmost layer of soil, rich in humus, is called:",
-          options: ["Bedrock", "Subsoil", "Topsoil", "Weathered rock"],
-          answer: "Topsoil",
-          explain: "Topsoil (A horizon) is dark, soft and where most plant roots grow."),
-        Q(prompt: "Paddy grows best in which soil?",
-          options: ["Sandy", "Loamy", "Clayey", "Black"],
-          answer: "Clayey",
-          explain: "Paddy needs standing water; clay holds water → perfect for rice."),
-        Q(prompt: "Soil erosion is mainly caused by:",
-          options: ["Earthworms", "Removal of plants", "Sunlight", "Cool wind"],
-          answer: "Removal of plants",
-          explain: "When roots are gone, rain and wind carry away the loose topsoil."),
-        Q(prompt: "Which soil drains water fastest?",
-          options: ["Sandy", "Loamy", "Clayey", "Black"],
-          answer: "Sandy",
-          explain: "Sand grains are large → water slips through easily."),
-        Q(prompt: "Earthworms help soil by:",
-          options: ["Eating plants", "Making tunnels and castings", "Drinking all the water", "Cooling it"],
-          answer: "Making tunnels and castings",
-          explain: "Their tunnels aerate soil and their castings add nutrients — they're called nature's ploughs."),
-        Q(prompt: "In a soil profile, the layer just below topsoil is called:",
-          options: ["Bedrock", "Subsoil (B-horizon)", "Humus", "Litter"],
-          answer: "Subsoil (B-horizon)",
-          explain: "A is topsoil, B is subsoil (less humus, more minerals), C is weathered rock above bedrock."),
-        Q(prompt: "A tube well draws water from:",
-          options: ["Rivers", "Lakes", "Groundwater under the soil", "Rainwater on the surface"],
-          answer: "Groundwater under the soil",
-          explain: "A pipe goes deep enough to reach the saturated layer below the water table."),
-        Q(prompt: "Loamy soil is ideal for most crops because it:",
-          options: ["Holds water but also drains well", "Is pure sand", "Is pure clay", "Has no nutrients"],
-          answer: "Holds water but also drains well",
-          explain: "Loam is a balanced mix of sand, silt and clay — wheat, gram and many vegetables grow well in it."),
-        Q(prompt: "Which of these causes soil pollution?",
-          options: ["Earthworm burrows", "Plastic and pesticides", "Falling leaves", "Rainwater"],
-          answer: "Plastic and pesticides",
-          explain: "Synthetic chemicals and plastics don't break down naturally and they harm soil life."),
-        Q(prompt: "Clayey soil drains water:",
-          options: ["Very fast", "Slowly", "Instantly", "Never holds it"],
-          answer: "Slowly",
-          explain: "Clay particles are tiny and pack tightly, leaving very small gaps — water seeps through slowly."),
-    ]
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
 
     @State private var i = 0
     @State private var picked: String? = nil
@@ -64,11 +26,11 @@ struct Scene9_BossQuiz_Ch9: View {
         ScrollView {
     LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-                ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
+                ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 
                 if !done {
-                    let q = qs[i]
-                    Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    let q = quiz[i]
+                    Text("Question \(i + 1) of \(quiz.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     SoftShadowCard(padding: 18) {
                         Text(q.prompt).font(.title3.bold()).frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -81,8 +43,8 @@ struct Scene9_BossQuiz_Ch9: View {
                                 picked = opt
                                 revealed = true
                                 let isCorrect = opt == q.answer
-                                DataStore.shared.recordEphemeralReview(
-                                    ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, i),
+                                DataStore.shared.recordReview(
+                                    questionId: q.id,
                                     quality: isCorrect ? .good : .forgot
                                 )
                                 if isCorrect { score += 1 }
@@ -105,11 +67,11 @@ struct Scene9_BossQuiz_Ch9: View {
 
                     if revealed {
                         SoftShadowCard(padding: 12) {
-                            Label(q.explain, systemImage: "lightbulb.fill").font(.callout)
+                            Label(bossExplanation(q), systemImage: "lightbulb.fill").font(.callout)
                         }
                         .frame(maxWidth: 600)
-                        Button(i + 1 < qs.count ? "Next question" : "See score") {
-                            if i + 1 < qs.count { i += 1; picked = nil; revealed = false }
+                        Button(i + 1 < quiz.count ? "Next question" : "See score") {
+                            if i + 1 < quiz.count { i += 1; picked = nil; revealed = false }
                             else { done = true }
                         }
                         .accentColor(Color.compatIndigo)
@@ -123,7 +85,7 @@ struct Scene9_BossQuiz_Ch9: View {
                                 .accessibilityHidden(true)
                             Text("Great job!").font(.title2.bold()).foregroundColor(.green)
                         }
-                        Text("Score: \(score) / \(qs.count)").font(.system(size: 36, weight: .bold))
+                        Text("Score: \(score) / \(quiz.count)").font(.system(size: 36, weight: .bold))
                         GotItButton(label: "Finish chapter") { onComplete(score) }
                     }
                     .padding(.top, 8)
@@ -135,7 +97,14 @@ struct Scene9_BossQuiz_Ch9: View {
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
-        .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }
+        .onAppear { if shuffled.isEmpty { shuffled = (quiz[i].options ?? []).shuffled() } }
+        .onChange(of: i) { newI in shuffled = (quiz[newI].options ?? []).shuffled() }
+    }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
     }
 }

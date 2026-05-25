@@ -15,111 +15,31 @@ struct Scene9_BossQuiz_Ch2: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        let n = chapter.bossQuestions?.count ?? 0
+        self._picks = State(initialValue: Array(repeating: nil, count: n))
+        self._revealed = State(initialValue: Array(repeating: false, count: n))
+    }
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 15)
+    @State private var picks: [String?] = []
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 15)
+    @State private var revealed: [Bool] = []
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
     @State private var pdfStatus: String? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var quiz: [QuizItem] { Self.quizzes }
-
-    private static let quizzes: [QuizItem] = [
-        QuizItem(
-            prompt: "How many teeth does an adult human have?",
-            options: ["28", "30", "32", "36"],
-            answer: "32",
-            explanation: "An adult human has 32 teeth: 8 incisors, 4 canines, 8 premolars, and 12 molars."
-        ),
-        QuizItem(
-            prompt: "Which digestive juice digests fats?",
-            options: ["Pepsin", "Bile", "Trypsin", "Amylase"],
-            answer: "Bile",
-            explanation: "Bile is produced by the liver and emulsifies fats into smaller droplets for digestion."
-        ),
-        QuizItem(
-            prompt: "Which mode of nutrition does an Amoeba use?",
-            options: ["Autotrophic", "Saprophytic", "Holozoic", "Parasitic"],
-            answer: "Holozoic",
-            explanation: "Holozoic nutrition means taking in whole organic food particles — exactly how amoebas eat."
-        ),
-        QuizItem(
-            prompt: "Where does most nutrient absorption occur?",
-            options: ["Stomach", "Small intestine", "Large intestine", "Mouth"],
-            answer: "Small intestine",
-            explanation: "The small intestine has villi and microvilli that absorb 90% of nutrients into the blood."
-        ),
-        QuizItem(
-            prompt: "What is the first chamber of a cow's stomach called?",
-            options: ["Abomasum", "Rumen", "Omasum", "Reticulum"],
-            answer: "Rumen",
-            explanation: "The rumen is where food is first stored and mixed with bacteria to soften grass."
-        ),
-            QuizItem(
-                prompt: "The largest gland in the human body is the:",
-                options: ["Pancreas", "Liver", "Salivary gland", "Adrenal gland"],
-                answer: "Liver",
-                explanation: "The liver makes bile, stores nutrients and detoxifies the blood. It is the biggest gland in the body."
-            ),
-            QuizItem(
-                prompt: "Pseudopodia in amoeba are used to:",
-                options: ["Reproduce", "Capture food", "Make oxygen", "Talk"],
-                answer: "Capture food",
-                explanation: "Amoeba pushes out finger-like extensions of its body to surround and engulf food particles."
-            ),
-            QuizItem(
-                prompt: "Grass-eating animals digest cellulose with the help of:",
-                options: ["Bile", "Sunlight", "Bacteria in their stomach", "Salt"],
-                answer: "Bacteria in their stomach",
-                explanation: "Cows, goats and buffalo host bacteria in their rumen that break down cellulose into nutrients."
-            ),
-            QuizItem(
-                prompt: "Villi line the small intestine to:",
-                options: ["Make blood", "Increase surface area for absorption", "Produce bile", "Filter air"],
-                answer: "Increase surface area for absorption",
-                explanation: "Millions of finger-like villi turn the small intestine into a giant absorbent surface."
-            ),
-            QuizItem(
-                prompt: "Tooth decay is caused mainly by:",
-                options: ["Drinking water", "Eating fruit", "Bacteria + sugar producing acid", "Brushing teeth"],
-                answer: "Bacteria + sugar producing acid",
-                explanation: "Sugar left on teeth feeds bacteria that release acid; the acid eats into tooth enamel."
-            ),
-        QuizItem(
-            prompt: "Your stomach makes hydrochloric acid strong enough to dissolve metal. Why doesn't it dissolve itself?",
-            options: ["The acid is fake", "A thick layer of mucus refreshes every few days and protects the wall", "The stomach has no walls", "The acid is colder than it looks"],
-            answer: "A thick layer of mucus refreshes every few days and protects the wall",
-            explanation: "Goblet cells in the stomach lining release fresh mucus every few days. Without it, the stomach would digest itself."
-        ),
-        QuizItem(
-            prompt: "About how much saliva does an adult human produce per day?",
-            options: ["A few drops", "Around 50 ml", "About 1 to 1.5 litres", "About 5 litres"],
-            answer: "About 1 to 1.5 litres",
-            explanation: "Six salivary glands work all day. Most of it gets swallowed without us noticing \u{2014} digestion starts in the mouth."
-        ),
-        QuizItem(
-            prompt: "Why is a cow\u{2019}s intestine roughly four times longer than yours?",
-            options: ["Cows are bigger", "Cows eat cellulose (grass) which needs more time and bacteria to break down", "Cows have no stomach", "Cows are slower"],
-            answer: "Cows eat cellulose (grass) which needs more time and bacteria to break down",
-            explanation: "Plant-eaters generally have longer guts than meat-eaters. More road = more time for stubborn cellulose."
-        ),
-        QuizItem(
-            prompt: "The old textbook \u{201C}tongue map\u{201D} (sweet at the tip, bitter at the back) is:",
-            options: ["Completely true", "Mostly correct", "A myth \u{2014} every taste bud detects every taste", "A British invention"],
-            answer: "A myth \u{2014} every taste bud detects every taste",
-            explanation: "The map came from a mistranslation a century ago. Modern research shows all taste zones do all jobs."
-        ),
-        QuizItem(
-            prompt: "About how many bacteria live inside your large intestine?",
-            options: ["None \u{2014} it would be unhygienic", "A few thousand", "About a million", "Around 100 trillion \u{2014} more cells than your own body has"],
-            answer: "Around 100 trillion \u{2014} more cells than your own body has",
-            explanation: "The gut microbiome. Many of these bacteria are friendly partners helping digest food and make vitamins."
-        )
-    ]
-
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
     var body: some View {
         // ScrollView + LazyVStack: natural bounded height keeps the shell
         // footer (Previous / Next) reachable even on shorter windows.
@@ -133,12 +53,12 @@ struct Scene9_BossQuiz_Ch2: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 15)
+                ProgressView(value: Double(currentQ), total: Double(quiz.count))
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 15")
+                    Text("Question \(currentQ + 1) of \(quiz.count)")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -152,7 +72,7 @@ struct Scene9_BossQuiz_Ch2: View {
                     .offset(x: shake)
 
                     VStack(spacing: 10) {
-                        ForEach(item.options, id: \.self) { opt in
+                        ForEach(item.options ?? [], id: \.self) { opt in
                             AnswerButton(
                                 label: opt,
                                 state: state(for: opt, in: item)
@@ -175,7 +95,7 @@ struct Scene9_BossQuiz_Ch2: View {
                             .foregroundColor(.green)
 
                         HStack(spacing: 16) {
-                            Text("Score: \(score)/15")
+                            Text("Score: \(score)/\(quiz.count)")
                                 .font(.title2.bold())
                                 .padding(12)
                                 .background(Color.yellow.opacity(0.2))
@@ -220,7 +140,7 @@ struct Scene9_BossQuiz_Ch2: View {
 
     // MARK: - Helpers
 
-    private func state(for option: String, in item: QuizItem) -> AnswerButton.State {
+    private func state(for option: String, in item: Question) -> AnswerButton.State {
         guard let pick = picks[currentQ] else { return .neutral }
         guard revealed[currentQ] else { return .neutral }
 
@@ -231,13 +151,13 @@ struct Scene9_BossQuiz_Ch2: View {
         }
     }
 
-    private func pick(_ option: String, in item: QuizItem) {
+    private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
 
         picks[currentQ] = option
         let isCorrect = option == item.answer
-        DataStore.shared.recordEphemeralReview(
-            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+        DataStore.shared.recordReview(
+            questionId: item.id,
             quality: isCorrect ? .good : .forgot
         )
 
@@ -269,7 +189,7 @@ struct Scene9_BossQuiz_Ch2: View {
     }
 
     private func advanceQuestion() {
-        if currentQ < 14 {
+        if currentQ < quiz.count - 1 {
             withAnimation(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
@@ -332,7 +252,7 @@ struct Scene9_BossQuiz_Ch2: View {
         cert.draw(at: CGPoint(x: 100, y: 450))
 
         let score_str = NSAttributedString(
-            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/15",
+            string: "Chapter 2 — Nutrition in Animals Quiz\nScore: \(score)/\(quiz.count)",
             attributes: [
                 .font: NSFont.systemFont(ofSize: 24),
                 .foregroundColor: NSColor.gray
@@ -351,6 +271,13 @@ struct Scene9_BossQuiz_Ch2: View {
 
         image.unlockFocus()
         return image
+    }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
     }
 }
 
@@ -407,11 +334,3 @@ struct AnswerButton: View {
     }
 }
 
-// MARK: - Model
-
-struct QuizItem {
-    let prompt: String
-    let options: [String]
-    let answer: String
-    let explanation: String
-}

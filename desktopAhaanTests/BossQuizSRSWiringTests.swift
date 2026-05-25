@@ -1,35 +1,27 @@
 import XCTest
 @testable import desktopAhaan
 
-/// Locks the boss-quiz SRS wiring across all 19 chapters. The Boss
-/// Quiz is the kid's most-played answer surface in Science; every
-/// chapter ships a `Scene9_BossQuiz*` view that — as of the
-/// 2026-05-24 learning-loop session — writes through to the SRS
-/// scheduler via `DataStore.recordEphemeralReview`. This test pins
-/// two contracts:
+/// Locks the boss-quiz SRS wiring across all 19 chapters. As of the
+/// 2026-05-25 content migration, each `Scene9_BossQuiz*` view loads
+/// its MCQ items from `chapter.bossQuestions` in the pack and writes
+/// the answer through to the SRS scheduler via
+/// `DataStore.recordReview(questionId:quality:)` using the canonical
+/// pack id. This test pins three contracts:
 ///
 ///   1. **Manifest** — exactly 19 boss-quiz files exist (one per
-///      chapter); each one carries the `recordEphemeralReview`
-///      call site. If a new chapter ships without the wiring, this
-///      test fails so the omission can't slip past code review.
-///   2. **Id shape** — every wired site emits a stable id of the
-///      form `bossquiz_ch%02d_q%02d`. The Daily Practice resolver
-///      and the recently-missed router both branch on this prefix
-///      via `DataStore.isEphemeralReviewId(_:)`; pinning the
-///      format here means a careless rename in any one chapter is
-///      caught by this test rather than by a kid's empty review
-///      queue.
+///      chapter).
+///   2. **Wiring** — each file contains a `recordReview` call site.
+///      A new chapter that forgets the wiring fails this test rather
+///      than silently dropping wrong answers from "Recently Missed".
+///   3. **No legacy `recordEphemeralReview`** — the pre-migration
+///      ephemeral path is gone; any chapter still calling the old
+///      API is using an id that won't resolve through
+///      `SubjectRegistry.location(forQuestionId:)`. (The legacy
+///      `DataStore.recordEphemeralReview` API itself is still kept
+///      for the hint-ladder path in QuestionDetailView; this test
+///      only forbids it inside `Scene9_BossQuiz*` files.)
 final class BossQuizSRSWiringTests: XCTestCase {
 
-    /// Scan every `Scene9_BossQuiz*.swift` source under the repo
-    /// and assert two invariants:
-    ///   - File count == 19
-    ///   - Each file contains a `recordEphemeralReview` call site
-    ///   - Each file's call site uses the canonical id format
-    ///
-    /// The scan looks at the project tree rather than the running
-    /// bundle so a brand-new chapter's wiring is caught at compile
-    /// time of the test, not at the first kid who plays it.
     func testEvery19ChaptersHasBossQuizSRSWiring() throws {
         let bossQuizFiles = try Self.discoverBossQuizFiles()
         XCTAssertEqual(
@@ -38,39 +30,41 @@ final class BossQuizSRSWiringTests: XCTestCase {
                 bossQuizFiles.map { "  - \($0.lastPathComponent)" }.joined(separator: "\n")
         )
 
-        var missing: [String] = []
-        var badFormat: [(String, String)] = []
-        let idPattern = #"bossquiz_ch%02d_q%02d"#
+        var missingRecordReview: [String] = []
+        var carriesLegacyEphemeral: [String] = []
+        var carriesLegacyFormatString: [String] = []
 
         for file in bossQuizFiles {
             let body = try String(contentsOf: file, encoding: .utf8)
-            guard body.contains("recordEphemeralReview") else {
-                missing.append(file.lastPathComponent)
-                continue
+            if !body.contains("DataStore.shared.recordReview(") {
+                missingRecordReview.append(file.lastPathComponent)
             }
-            if !body.contains(idPattern) {
-                badFormat.append((file.lastPathComponent, body))
+            if body.contains("recordEphemeralReview") {
+                carriesLegacyEphemeral.append(file.lastPathComponent)
+            }
+            if body.contains("bossquiz_ch%02d_q%02d") {
+                carriesLegacyFormatString.append(file.lastPathComponent)
             }
         }
 
-        XCTAssertTrue(missing.isEmpty,
-            "These boss-quiz files don't call recordEphemeralReview:\n" +
-            missing.map { "  - \($0)" }.joined(separator: "\n")
+        XCTAssertTrue(missingRecordReview.isEmpty,
+            "These boss-quiz files don't call DataStore.shared.recordReview(...):\n" +
+            missingRecordReview.map { "  - \($0)" }.joined(separator: "\n")
         )
-        XCTAssertTrue(badFormat.isEmpty,
-            "These boss-quiz files emit a non-canonical ephemeral id format:\n" +
-            badFormat.map { "  - \($0.0)" }.joined(separator: "\n") +
-            "\nExpected substring: \(idPattern)"
+        XCTAssertTrue(carriesLegacyEphemeral.isEmpty,
+            "These boss-quiz files still use the pre-migration recordEphemeralReview API:\n" +
+            carriesLegacyEphemeral.map { "  - \($0)" }.joined(separator: "\n") +
+            "\nSwitch to DataStore.shared.recordReview(questionId:quality:) using the pack Question.id."
+        )
+        XCTAssertTrue(carriesLegacyFormatString.isEmpty,
+            "These boss-quiz files still build the id via String(format: \"bossquiz_ch%02d_q%02d\", ...):\n" +
+            carriesLegacyFormatString.map { "  - \($0)" }.joined(separator: "\n") +
+            "\nPass the pack Question.id directly — the JSON-authored id IS the canonical id."
         )
     }
 
     // MARK: - File discovery
 
-    /// Walk the source tree from this test file's location, looking
-    /// for any `Scene9_BossQuiz*.swift`. The walk starts from the
-    /// repo root (resolved from the build product's path), so it
-    /// works whether the test runs from Xcode or a `xcodebuild test`
-    /// command line.
     private static func discoverBossQuizFiles() throws -> [URL] {
         let repoRoot = locateRepoRoot()
         let discoverRoot = repoRoot
@@ -95,9 +89,6 @@ final class BossQuizSRSWiringTests: XCTestCase {
         return found.sorted { $0.lastPathComponent < $1.lastPathComponent }
     }
 
-    /// Best-effort repo-root finder for use from a test runner.
-    /// Walks up from the test bundle until it finds a directory
-    /// containing both `desktopAhaan.xcodeproj` and `scripts/`.
     private static func locateRepoRoot() -> URL {
         var url = Bundle(for: BossQuizSRSWiringTests.self).bundleURL
         for _ in 0..<8 {
@@ -107,9 +98,6 @@ final class BossQuizSRSWiringTests: XCTestCase {
             }
             url.deleteLastPathComponent()
         }
-        // Hardcoded fallback for the dev mac; the iMac path is the
-        // other half of the cross-machine workflow and resolves
-        // through the dev-mac path during CI.
         return URL(fileURLWithPath: "/Users/mac/Documents/Claude/Projects/DesktopAhaan/DesktopAhaan/desktopAhaan")
     }
 }

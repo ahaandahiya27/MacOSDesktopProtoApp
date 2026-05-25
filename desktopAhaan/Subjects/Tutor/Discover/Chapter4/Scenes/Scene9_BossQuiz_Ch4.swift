@@ -10,86 +10,31 @@ struct Scene9_BossQuiz_Ch4: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
+
+    init(pack: SubjectPack, chapter: Chapter, onComplete: @escaping (Int) -> Void) {
+        self.pack = pack
+        self.chapter = chapter
+        self.onComplete = onComplete
+        let n = chapter.bossQuestions?.count ?? 0
+        self._picks = State(initialValue: Array(repeating: nil, count: n))
+        self._revealed = State(initialValue: Array(repeating: false, count: n))
+    }
     @State private var currentQ: Int = 0
-    @State private var picks: [String?] = Array(repeating: nil, count: 10)
+    @State private var picks: [String?] = []
     @State private var score: Int = 0
-    @State private var revealed: [Bool] = Array(repeating: false, count: 10)
+    @State private var revealed: [Bool] = []
     @State private var done: Bool = false
     @State private var shake: CGFloat = 0
     @State private var celebrate = false
     @State private var pdfStatus: String? = nil
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var quiz: [Ch4QuizItem] { Self.items }
-
-    private static let items: [Ch4QuizItem] = [
-        Ch4QuizItem(
-            prompt: "Which of these is the best conductor of heat?",
-            options: ["Wood", "Copper", "Wool", "Plastic"],
-            answer: "Copper",
-            explanation: "Copper is a metal and metals are excellent conductors of heat."
-        ),
-        Ch4QuizItem(
-            prompt: "Heat from the Sun reaches us mainly by:",
-            options: ["Conduction", "Convection", "Radiation", "All three equally"],
-            answer: "Radiation",
-            explanation: "Space is a vacuum — heat can only travel through it as radiation (infrared waves)."
-        ),
-        Ch4QuizItem(
-            prompt: "A fluffed-up bird stays warm because:",
-            options: [
-                "Air trapped between feathers insulates",
-                "Feathers are hot by themselves",
-                "Blood flows faster in cold weather",
-                "Skin becomes thick"
-            ],
-            answer: "Air trapped between feathers insulates",
-            explanation: "Air is a poor conductor. Trapped air between fluffed feathers stops body heat escaping."
-        ),
-        Ch4QuizItem(
-            prompt: "Cup A has 100 ml of water at 80°C. Cup B has 500 ml at 80°C. Which has more heat?",
-            options: ["Cup A", "Cup B", "Both equal", "Cannot tell"],
-            answer: "Cup B",
-            explanation: "Same temperature, but Cup B has 5 times more water so it stores 5 times more heat energy."
-        ),
-        Ch4QuizItem(
-            prompt: "A sea breeze blows from sea to land during the:",
-            options: ["Day", "Night", "Both day and night", "Neither"],
-            answer: "Day",
-            explanation: "During the day land heats faster, hot air rises, and cooler air rushes in from the sea."
-        ),
-            Ch4QuizItem(
-                prompt: "The SI unit of heat (energy) is the:",
-                options: ["Kelvin", "Joule", "Celsius", "Newton"],
-                answer: "Joule",
-                explanation: "Heat is a form of energy, so its unit is the joule. Kelvin and Celsius are units of temperature."
-            ),
-            Ch4QuizItem(
-                prompt: "In the daytime at the seaside, land heats up faster than the sea because:",
-                options: ["Land has lower specific heat capacity", "Land has more water", "The Sun ignores the sea", "Sea is closer to the Sun"],
-                answer: "Land has lower specific heat capacity",
-                explanation: "Land needs less energy to raise its temperature, so it gets hot sooner under the same sunlight."
-            ),
-            Ch4QuizItem(
-                prompt: "A thermos flask has double walls with a vacuum between them to:",
-                options: ["Look pretty", "Stop conduction and convection of heat", "Stop electricity", "Make the flask lighter"],
-                answer: "Stop conduction and convection of heat",
-                explanation: "No air means no conduction and no convection; silvered walls also reflect radiation back."
-            ),
-            Ch4QuizItem(
-                prompt: "On a sunny day, dark-coloured clothes feel hotter than light ones because dark colours:",
-                options: ["Reflect more heat", "Absorb more heat", "Cool the body", "Block all light"],
-                answer: "Absorb more heat",
-                explanation: "Dark surfaces absorb more of the Sun's radiation; light surfaces reflect more of it away."
-            ),
-            Ch4QuizItem(
-                prompt: "A bimetallic strip bends when heated because the two metals:",
-                options: ["Expand by different amounts", "Cool at different speeds", "Have different colours", "Conduct electricity"],
-                answer: "Expand by different amounts",
-                explanation: "One metal expands more than the other, so the joined strip curves to one side — used in thermostats."
-            ),
-    ]
-
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
     var body: some View {
         // ScrollView + LazyVStack: natural bounded height keeps the shell
         // footer (Previous / Next) reachable even on shorter windows.
@@ -103,12 +48,12 @@ struct Scene9_BossQuiz_Ch4: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.top, 18)
 
-                ProgressView(value: Double(currentQ), total: 10)
+                ProgressView(value: Double(currentQ), total: Double(quiz.count))
                     .frame(maxWidth: 520)
 
                 if !done {
                     let item = quiz[currentQ]
-                    Text("Question \(currentQ + 1) of 10")
+                    Text("Question \(currentQ + 1) of \(quiz.count)")
                         .font(.subheadline)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -122,7 +67,7 @@ struct Scene9_BossQuiz_Ch4: View {
                     .offset(x: shake)
 
                     VStack(spacing: 10) {
-                        ForEach(item.options, id: \.self) { opt in
+                        ForEach(item.options ?? [], id: \.self) { opt in
                             Ch4AnswerButton(
                                 label: opt,
                                 state: state(for: opt, in: item)
@@ -139,7 +84,7 @@ struct Scene9_BossQuiz_Ch4: View {
                                 HStack(alignment: .top, spacing: 8) {
                                     Image(systemName: "lightbulb.fill")
                                         .foregroundColor(.yellow)
-                                    Text(item.explanation)
+                                    Text(bossExplanation(item))
                                         .font(.callout)
                                     Spacer(minLength: 0)
                                 }
@@ -148,7 +93,7 @@ struct Scene9_BossQuiz_Ch4: View {
                         }
 
                         if revealed[currentQ] {
-                            Button(currentQ < 9 ? "Next question" : "See my score") {
+                            Button(currentQ < quiz.count - 1 ? "Next question" : "See my score") {
                                 advance()
                             }
 
@@ -174,24 +119,31 @@ struct Scene9_BossQuiz_Ch4: View {
             }
         )
     }
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
+    }
+
 
     // MARK: - Quiz mechanics
 
     fileprivate enum AnswerState { case neutral, picked, correct, wrong }
 
-    fileprivate func state(for option: String, in item: Ch4QuizItem) -> AnswerState {
+    fileprivate func state(for option: String, in item: Question) -> AnswerState {
         guard let p = picks[currentQ] else { return .neutral }
         if option == item.answer { return .correct }
         if option == p { return .wrong }
         return .neutral
     }
 
-    private func pick(_ option: String, in item: Ch4QuizItem) {
+    private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
         let isRight = option == item.answer
-        DataStore.shared.recordEphemeralReview(
-            ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, currentQ),
+        DataStore.shared.recordReview(
+            questionId: item.id,
             quality: isRight ? .good : .forgot
         )
         if isRight {
@@ -212,7 +164,7 @@ struct Scene9_BossQuiz_Ch4: View {
     }
 
     private func advance() {
-        if currentQ < 9 {
+        if currentQ < quiz.count - 1 {
             withAnimation(.easeInOut) { currentQ += 1 }
         } else {
             withAnimation(.easeInOut) { done = true; celebrate = true }
@@ -229,7 +181,7 @@ struct Scene9_BossQuiz_Ch4: View {
             Text("You finished Chapter 4 Discover Mode!")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
-            Text("Score: \(score) / 10")
+            Text("Score: \(score) / \(quiz.count)")
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
@@ -262,7 +214,7 @@ struct Scene9_BossQuiz_Ch4: View {
     }
 
     private func saveCertificate() {
-        guard let nsImage = renderViewToImage(CertificateView(score: score, total: 10), size: CGSize(width: 600, height: 400)),
+        guard let nsImage = renderViewToImage(CertificateView(score: score, total: quiz.count), size: CGSize(width: 600, height: 400)),
               let page = PDFPage(image: nsImage) else {
             pdfStatus = "Couldn't render certificate."
             return
@@ -289,14 +241,6 @@ struct Scene9_BossQuiz_Ch4: View {
 }
 
 // MARK: - Local types
-
-private struct Ch4QuizItem {
-    let prompt: String
-    let options: [String]
-    let answer: String
-    let explanation: String
-}
-
 private struct Ch4AnswerButton: View {
     let label: String
     let state: Scene9_BossQuiz_Ch4.AnswerState

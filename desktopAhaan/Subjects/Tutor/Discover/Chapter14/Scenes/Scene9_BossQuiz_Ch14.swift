@@ -6,50 +6,12 @@ struct Scene9_BossQuiz_Ch14: View {
     let chapter: Chapter
     let onComplete: (Int) -> Void
 
-    struct Q { let prompt: String; let options: [String]; let answer: String; let explain: String }
-
-    private let qs: [Q] = [
-        Q(prompt: "An electric current can flow only when the circuit is:",
-          options: ["Open", "Closed", "Hot", "Cold"],
-          answer: "Closed",
-          explain: "Current needs an unbroken loop from + terminal back to − terminal."),
-        Q(prompt: "In a series circuit, if one bulb fuses, the others will:",
-          options: ["Stay lit", "Get brighter", "Go off", "Spark"],
-          answer: "Go off",
-          explain: "One break stops all current. That's why house wiring is parallel, not series."),
-        Q(prompt: "An electric bell uses which effect of current?",
-          options: ["Heating", "Magnetic", "Chemical", "Light"],
-          answer: "Magnetic",
-          explain: "An electromagnet pulls the hammer; spring brings it back; it strikes the bell."),
-        Q(prompt: "A fuse is made of a:",
-          options: ["Thick copper wire", "Thin wire that melts easily", "Glass tube", "Plastic strip"],
-          answer: "Thin wire that melts easily",
-          explain: "When too much current flows, the thin wire heats up and melts — breaking the circuit safely."),
-        Q(prompt: "Wrapping more turns of wire around a nail makes the electromagnet:",
-          options: ["Weaker", "Stronger", "Hotter only", "Smaller"],
-          answer: "Stronger",
-          explain: "Each loop adds to the magnetic field. More turns = bigger pull."),
-        Q(prompt: "Which of these uses the heating effect of electric current?",
-          options: ["A magnetic compass", "An electric iron", "A solar panel", "A microphone"],
-          answer: "An electric iron",
-          explain: "Toasters, irons and bulbs all work because current heats a high-resistance wire."),
-        Q(prompt: "In a circuit diagram, the longer line of the cell symbol stands for:",
-          options: ["Negative terminal", "Switch", "Bulb", "Positive terminal"],
-          answer: "Positive terminal",
-          explain: "Long line +, short line −. Memorise this for every circuit you draw."),
-        Q(prompt: "MCB in a house circuit stands for:",
-          options: ["Main Cable Box", "Miniature Circuit Breaker", "Multi Current Bypass", "Magnetic Cell Battery"],
-          answer: "Miniature Circuit Breaker",
-          explain: "An MCB trips and cuts the current automatically if too much flows — safer than replaceable fuses."),
-        Q(prompt: "The earth wire in Indian household wiring is coloured:",
-          options: ["Red", "Black", "Blue", "Green (or green/yellow)"],
-          answer: "Green (or green/yellow)",
-          explain: "Live = red/brown, neutral = black/blue, earth = green or green/yellow striped."),
-        Q(prompt: "Compared with an old filament bulb, a CFL of the same brightness uses:",
-          options: ["More electricity", "About the same", "Much less electricity", "No electricity"],
-          answer: "Much less electricity",
-          explain: "CFLs and LEDs convert more of their input into light and less into wasted heat."),
-    ]
+    /// Boss-quiz MCQs sourced from the science pack
+    /// (`chapter.bossQuestions`). Authored in `science_class7.json`
+    /// and loaded via SubjectRegistry. Daily Practice "Recently
+    /// Missed" picks up wrong-answer ids from the same SM-2 store
+    /// once `recordReview(questionId:quality:)` fires below.
+    private var quiz: [Question] { chapter.bossQuestionsList }
 
     @State private var i = 0
     @State private var picked: String? = nil
@@ -65,11 +27,11 @@ struct Scene9_BossQuiz_Ch14: View {
         ScrollView {
     LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-                ProgressView(value: Double(i), total: Double(qs.count)).frame(maxWidth: 520)
+                ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 
                 if !done {
-                    let q = qs[i]
-                    Text("Question \(i + 1) of \(qs.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    let q = quiz[i]
+                    Text("Question \(i + 1) of \(quiz.count)").font(.subheadline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     SoftShadowCard(padding: 18) {
                         Text(q.prompt).font(.title3.bold()).frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -82,8 +44,8 @@ struct Scene9_BossQuiz_Ch14: View {
                                 picked = opt
                                 revealed = true
                                 let isCorrect = opt == q.answer
-                                DataStore.shared.recordEphemeralReview(
-                                    ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number, i),
+                                DataStore.shared.recordReview(
+                                    questionId: q.id,
                                     quality: isCorrect ? .good : .forgot
                                 )
                                 if isCorrect { score += 1 }
@@ -106,11 +68,11 @@ struct Scene9_BossQuiz_Ch14: View {
 
                     if revealed {
                         SoftShadowCard(padding: 12) {
-                            Label(q.explain, systemImage: "lightbulb.fill").font(.callout)
+                            Label(bossExplanation(q), systemImage: "lightbulb.fill").font(.callout)
                         }
                         .frame(maxWidth: 600)
-                        Button(i + 1 < qs.count ? "Next question" : "See score") {
-                            if i + 1 < qs.count { i += 1; picked = nil; revealed = false }
+                        Button(i + 1 < quiz.count ? "Next question" : "See score") {
+                            if i + 1 < quiz.count { i += 1; picked = nil; revealed = false }
                             else { done = true; celebrate = true }
                         }
                         .accentColor(Color.compatIndigo)
@@ -124,7 +86,7 @@ struct Scene9_BossQuiz_Ch14: View {
                                 .accessibilityHidden(true)
                             Text("Great job!").font(.title2.bold()).foregroundColor(.green)
                         }
-                        Text("Score: \(score) / \(qs.count)").font(.system(size: 36, weight: .bold))
+                        Text("Score: \(score) / \(quiz.count)").font(.system(size: 36, weight: .bold))
                         GotItButton(label: "Finish chapter") { onComplete(score) }
                     }
                     .padding(.top, 8)
@@ -144,7 +106,14 @@ struct Scene9_BossQuiz_Ch14: View {
             }
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear { if shuffled.isEmpty { shuffled = qs[i].options.shuffled() } }
-        .onChange(of: i) { newI in shuffled = qs[newI].options.shuffled() }
+        .onAppear { if shuffled.isEmpty { shuffled = (quiz[i].options ?? []).shuffled() } }
+        .onChange(of: i) { newI in shuffled = (quiz[newI].options ?? []).shuffled() }
+    }
+
+    /// First solution step is the boss-quiz "explanation" by
+    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
+    private func bossExplanation(_ q: Question) -> String {
+        let step = q.solutionSteps.first ?? ""
+        return step.isEmpty ? "Got it!" : step
     }
 }
