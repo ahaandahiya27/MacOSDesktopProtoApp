@@ -1211,6 +1211,165 @@ see their own progress:
   but NOT `hintTier`. Tomorrow's polish: add `hintTier = 0` to the
   reset block.
 
+## Session start: 2026-05-25 10:30 +05:30 — BOSS-QUIZ CONTENT MIGRATION
 
+### Goal
+Move the 200 hand-authored Boss Quiz MCQs from Swift literals into
+`science_class7.json` so every learning-loop surface
+(DailyPracticeView "Recently Missed", MasteryDashboard,
+ChapterStuckHereStrip) treats them as first-class pack questions.
+
+Pre-migration the boss quizzes wrote answers to the SRS scheduler
+under an "ephemeral" id format that `SubjectRegistry.location(forQuestionId:)`
+couldn't resolve — so wrong answers silently disappeared from the
+recently-missed surface even though the SM-2 row existed on disk.
+After this migration the ids are real pack `Question.id`s and the
+resolver returns the chapter context cleanly.
+
+### `ad09c6e` — Hour 1. Schema + registry boss-lookup
+
+- `Chapter.bossQuestions: [Question]?` — Optional field; auto-
+  synthesised Codable handles the absence so any pre-migration
+  pack snapshot still decodes.
+- `Chapter.bossQuestionsList` — nil-flattening accessor.
+- `Chapter.allQuestionIds` — extended to walk boss questions in
+  addition to topic questions.
+- `SubjectRegistry.location(forQuestionId:)` — second loop indexing
+  `chapter.bossQuestionsList`. Capacity bumped 900→1200 to fit the
+  added ~200 ids without re-grow.
+- 7 tests across 2 new files: `BossQuestionsSchemaTests` (5 cases —
+  JSON round-trip, backwards-compat decode of the missing field,
+  allQuestionIds inclusion, real-pack invariant) and
+  `SubjectRegistryBossLookupTests` (2 cases — unknown id returns
+  nil; migrated id resolves with `source == .bossQuiz`).
+- Tests gate on `chapter.bossQuestions != nil` so the schema commit
+  ships green WITHOUT the data commit landing — the data commit
+  flips the assertion the right way.
+
+### `fcbf7c6` — Hour 2-3. Migration script + content + ratchet
+
+- `scripts/migrate_boss_quiz_to_pack.py` — regex-based one-shot
+  parser handling all four observed Scene9 structural shapes:
+  Shape A (stored `static let fallbacks/items/quizzes` + alias),
+  Shape B (inner `struct Q` + `let qs`), Shape C (computed
+  property), and the no-`Ch{N}`-prefix variant (Ch.2). Default
+  dry-run; `--write` applies in place; `--write --force` overrides
+  existing arrays. Verified idempotent — a second `--write` run
+  produces byte-identical output (cp/diff round-trip).
+- `science_class7.json` — bossQuestions arrays for ch01..ch19
+  (15+15+10×17 = **200 items**). Stable ids `bossquiz_chNN_qII`
+  match the existing ephemeral SM-2 ids verbatim, so prior review
+  state survives the migration with no data migration needed.
+- `BossQuizMigrationRatchetTests` — 5 cases freezing the per-chapter
+  count + total (200), id format (`^bossquiz_ch\d{2}_q\d{2}$`),
+  pack-wide id uniqueness, and the 4-option MCQ + valid-answer
+  invariant. Drift in any of these surfaces as an intentional
+  re-baseline.
+
+### `1ec5ea6` — Hour 4-5. Scene9 views + recordReview wiring
+
+- 19 Scene9_BossQuiz files refactored. The `Ch{N}QuizItem` /
+  `struct Q` local types are gone; `private var quiz: [Question]
+  { chapter.bossQuestionsList }` is the single source of truth.
+- Shape A/C files (Ch.1-7, 19) get a custom `init(pack:chapter:onComplete:)`
+  that pre-sizes `picks` / `revealed` from `chapter.bossQuestions?.count`,
+  so there's no first-frame flicker (an earlier `.onAppear`-based
+  attempt put completion UI on screen for one frame on Ch.2 et al
+  because the `else` branch fired before picks was sized).
+- Shape B files (Ch.8-18) needed no init — those use scalar
+  `picked` / `revealed` and an `i` index rather than per-question
+  arrays, so the dimension question never arises.
+- SRS write swap: every `DataStore.shared.recordEphemeralReview(
+  ephemeralId: String(format: "bossquiz_ch%02d_q%02d", chapter.number,
+  i_or_currentQ), ...)` site now reads `DataStore.shared.recordReview(
+  questionId: item.id, ...)` — the canonical pack id IS the
+  ephemeral id verbatim, so no on-disk SM-2 state is invalidated.
+- `BossQuizSRSWiringTests` rewritten. Now pins three contracts:
+  (1) 19 boss-quiz files exist; (2) each contains a `recordReview(`
+  call site; (3) NONE still contain `recordEphemeralReview` or the
+  `bossquiz_ch%02d_q%02d` format string. Regressions to the legacy
+  ephemeral path fail the test rather than silently dropping rows
+  from "Recently Missed".
+- `RecentlyMissedBossQuizTests` (new, 3 cases): end-to-end proof
+  that a `.forgot` boss-quiz answer (a) lands in
+  `DataStore.recentlyMissedQuestionIds()` AND (b) resolves through
+  `SubjectRegistry.location(forQuestionId:)` to the right
+  (pack, chapter, question) triple. This is the test that proves
+  the whole migration accomplished its goal.
+- `lh005_withanimation_allowlist.txt` re-synced. Content-migration
+  + custom-init injection shifted line numbers across the Scene9
+  files; the 30 boss-quiz `withAnimation` sites are now anchored at
+  their new lines. Net allowlist size: 66 (unchanged from
+  pre-session — the same sites are grandfathered, just renumbered).
+
+### Out-of-scope (logged for next session)
+
+- **Reduce-motion sweep for boss-quiz `withAnimation` sites.** All
+  30 sites remain grandfathered. They're visual flair (reveal
+  + shake + advance); the SRS write happens regardless of whether
+  the animation runs. Per-chapter polish pass when someone has
+  time.
+- **`bossExplanation(_:)` helper deduplication.** Each Shape A/C
+  Scene9 file ships an identical private helper. A future
+  refactor could lift it to `Question+BossQuiz.swift` so it's
+  written once. Cosmetic.
+- **Boss-quiz `commonMistakes` / `variations` authoring.** Migrated
+  items ship `commonMistakes: []` and `variations: []` since the
+  Swift literals never carried those fields. A later content pass
+  could enrich the items to match the textbook-question shape.
+
+### Manual walk verification
+
+- Launch the app.
+- Open Science → Chapter 1 → Discover Mode → reach Scene 9 (Boss
+  Quiz).
+- Deliberately pick a WRONG option on the first question (e.g.
+  "Cytoplasm" instead of "Chlorophyll").
+- Tap "See my score" through to the end.
+- Return to the main view → Daily Practice (the practice sheet).
+- Expected: a "Recently Missed" row for the wrong question is
+  rendered with the correct chapter label
+  ("Chapter 1 — Nutrition in Plants"). Pre-migration this row
+  would have been dropped silently because the resolver returned
+  nil for `bossquiz_ch01_q00`.
+
+### Build / tests / lints
+
+- Build (Debug, target 11.5): zero code warnings.
+- New tests this session: 5 (BossQuestionsSchemaTests) + 2
+  (SubjectRegistryBossLookupTests) + 5 (BossQuizMigrationRatchet)
+  + 3 (RecentlyMissedBossQuiz) = **15 new cases**, plus 1
+  rewritten file (BossQuizSRSWiringTests).
+- All 9 lints clean. LH005b allowlist re-synced once after the
+  Scene9 refactor; net grandfathered count unchanged.
+- Three commits pushed individually to origin/main with full
+  pre-push CI passing each time: `ad09c6e`, `fcbf7c6`, `1ec5ea6`.
+  Total LOC change: +5,794 / −1,480 (≈+4.3 K net; almost all of
+  the addition is the migrated JSON content).
+
+### Notes for future sessions
+
+- `bossquiz_chNN_qII` ids are now part of the on-disk content
+  contract. Don't rename the format without a data migration plan
+  — every kid's SM-2 review row for boss-quiz answers is keyed
+  by this string, and the `BossQuizMigrationRatchetTests`
+  explicitly fails the build if the format drifts.
+- The pre-migration `recordEphemeralReview` API still exists in
+  DataStore for the hint-ladder path in QuestionDetailView (D5).
+  It now delegates to `recordReview` under the hood, so the
+  ephemeral / canonical distinction is purely a call-site
+  convention. Watch for confusion: new boss-quiz-shaped surfaces
+  should use `recordReview` directly with a pack `Question.id`.
+- `BossQuizSRSWiringTests` enforces the "no `recordEphemeralReview`
+  in Scene9 files" rule. If a future session needs a temporary
+  ephemeral path for a Scene9 surface (e.g. a tutorial overlay
+  that shouldn't credit the streak), the test guard would need
+  loosening — but that's also a signal that the path is wrong.
+- The migration script `scripts/migrate_boss_quiz_to_pack.py`
+  stays in the repo as a historical artefact. It's not run on a
+  schedule; if you re-run it after the Scene9 refactor (which
+  deleted the source Swift literals), it'll just regenerate the
+  same JSON from… nothing. Safe but useless. Delete in a future
+  cleanup pass if it becomes confusing.
 
 
