@@ -146,26 +146,26 @@ struct Scene9_BossQuiz: View {
         )
         if isRight {
             score += 1
-            withAnimation(reduceMotion ? nil : .spring()) { revealed[currentQ] = true }
+            withAnimationRespectingReduceMotion(reduceMotion ? nil : .spring()) { revealed[currentQ] = true }
         } else {
             if !reduceMotion {
-                withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 14 }
+                withAnimationRespectingReduceMotion(.spring(response: 0.18, dampingFraction: 0.4)) { shake = 14 }
                 Task { @MainActor in
                     try? await Task.sleep(nanoseconds: 180_000_000)
-                    withAnimation(.spring(response: 0.18, dampingFraction: 0.4)) { shake = -10 }
+                    withAnimationRespectingReduceMotion(.spring(response: 0.18, dampingFraction: 0.4)) { shake = -10 }
                     try? await Task.sleep(nanoseconds: 180_000_000)
-                    withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shake = 0 }
+                    withAnimationRespectingReduceMotion(.spring(response: 0.2, dampingFraction: 0.5)) { shake = 0 }
                 }
             }
-            withAnimation(reduceMotion ? nil : .easeInOut.delay(0.4)) { revealed[currentQ] = true }
+            withAnimationRespectingReduceMotion(reduceMotion ? nil : .easeInOut.delay(0.4)) { revealed[currentQ] = true }
         }
     }
 
     private func advance() {
         if currentQ < quiz.count - 1 {
-            withAnimation(reduceMotion ? nil : .easeInOut) { currentQ += 1 }
+            withAnimationRespectingReduceMotion(reduceMotion ? nil : .easeInOut) { currentQ += 1 }
         } else {
-            withAnimation(reduceMotion ? nil : .easeInOut) { done = true; celebrate = true }
+            withAnimationRespectingReduceMotion(reduceMotion ? nil : .easeInOut) { done = true; celebrate = true }
         }
     }
 

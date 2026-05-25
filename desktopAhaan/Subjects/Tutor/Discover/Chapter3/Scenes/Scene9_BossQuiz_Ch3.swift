@@ -153,7 +153,7 @@ struct Scene9_BossQuiz_Ch3: View {
 
         if isCorrect {
             score += 1
-            withAnimation(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.5)) {
+            withAnimationRespectingReduceMotion(reduceMotion ? .none : .spring(response: 0.3, dampingFraction: 0.5)) {
                 // Correct
             }
             Task { @MainActor in
@@ -162,15 +162,15 @@ struct Scene9_BossQuiz_Ch3: View {
             }
         } else {
             Task { @MainActor in
-                withAnimation(.easeInOut(duration: 0.3)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.3)) {
                     shake = -6
                 }
                 try? await Task.sleep(nanoseconds: 150_000_000)
-                withAnimation(.easeInOut(duration: 0.3)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.3)) {
                     shake = 6
                 }
                 try? await Task.sleep(nanoseconds: 150_000_000)
-                withAnimation(.easeInOut(duration: 0.3)) {
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.3)) {
                     shake = 0
                 }
                 try? await Task.sleep(nanoseconds: 500_000_000)
@@ -181,11 +181,11 @@ struct Scene9_BossQuiz_Ch3: View {
 
     private func advance() {
         if currentQ < quiz.count - 1 {
-            withAnimation(.easeInOut(duration: 0.3)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.3)) {
                 currentQ += 1
             }
         } else {
-            withAnimation(.easeInOut(duration: 0.4)) {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.4)) {
                 done = true
                 celebrate = true
             }

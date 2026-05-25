@@ -62,44 +62,7 @@ desktopAhaan/Views/History/HistoryScreen.swift:53: Top-level view — pre-existi
 desktopAhaan/Views/History/HistoryScreen.swift:82: Top-level view — pre-existing site, audit close-out deferred.
 desktopAhaan/Views/Practice/PracticeScreen.swift:235: Top-level view — pre-existing site, audit close-out deferred.
 
-# Re-synced 2026-05-24 after D2 boss-quiz wiring shifted line numbers
-# in the 19 Scene9_BossQuiz* files. All Boss-quiz withAnimation calls
-# remain deferred polish — visual flair only, the kid sees them after
-# each answer and the SRS hook now captures the answer regardless.
 
 
 
 
-# Re-synced 2026-05-25 after bossExplanation helper deletion shifted
-# Scene9 line numbers ~8 up. All boss-quiz withAnimation calls remain
-# deferred polish — visual flair only.
-desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:145: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:156: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:162: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter19/Scenes/Scene9_BossQuiz_Ch19.swift:164: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:166: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:175: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:179: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:183: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:193: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene9_BossQuiz_Ch2.swift:197: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:169: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:173: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:184: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene9_BossQuiz_Ch3.swift:188: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:143: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:154: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:160: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene9_BossQuiz_Ch4.swift:162: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:145: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:156: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:162: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene9_BossQuiz_Ch5.swift:164: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:143: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:154: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:160: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene9_BossQuiz_Ch6.swift:162: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:138: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:149: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:154: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
-desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene9_BossQuiz_Ch7.swift:155: Boss-quiz reveal/advance — visual flair; reduce-motion sweep deferred to a per-chapter polish pass.
