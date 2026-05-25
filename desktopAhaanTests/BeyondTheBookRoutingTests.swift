@@ -54,13 +54,15 @@ final class BeyondTheBookRoutingTests: XCTestCase {
     /// disk HTML data-article-id attribute.
     func testChapterIdMatchesBeyondArticleAcrossPack() throws {
         let pack = try loadSciencePack()
+        var missing: [String] = []
         for chapter in pack.chapters {
             let key = "\(chapter.id)_beyond"
             guard let entry = ArticleIndex.entries[key] else {
-                // Chapters 3-19 don't publish a Beyond article yet
-                // (POLISH_TODOS §2 lists the gap). Skip — the
-                // beyondTheBookEntry guard returns nil and the card
-                // doesn't render. That's intentional, not a bug.
+                // 2026-05-26 follow-up: 17 generated beyond articles
+                // brought this surface to 19/19. We now require EVERY
+                // chapter to publish a Beyond article. Missing entries
+                // are a regression.
+                missing.append(chapter.id)
                 continue
             }
             // Same chapter prefix on key + entry + filename — guards
@@ -75,6 +77,10 @@ final class BeyondTheBookRoutingTests: XCTestCase {
                 "Chapter '\(chapter.id)' (Ch.\(chapter.number)) has Beyond entry " +
                 "in folder '\(entry.chapterFolder)' — must be 'Articles/Chapter\(chapter.number)'.")
         }
+        XCTAssertTrue(missing.isEmpty,
+            "Chapters missing a `_beyond` entry — 19/19 coverage broken " +
+            "(generated 2026-05-26 to bring the surface to full coverage):\n" +
+            missing.map { "  - \($0)" }.joined(separator: "\n"))
     }
 
     /// Sanity: the HTML file each Beyond entry references actually

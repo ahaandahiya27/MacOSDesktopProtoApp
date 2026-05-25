@@ -27,8 +27,8 @@ final class ChapterContentTests: XCTestCase {
         let ch3Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch03") }
         // Ch3: 1 overview + 3 topic overviews + 8 + 4 + 3 concepts
         //      + 1 mistakes + 1 glossary + 1 ncert_qa + 1 scientists
-        //      + 1 whatif (all added 2026-05-26) = 24
-        XCTAssertEqual(ch3Ids.count, 24, "Chapter 3 should have 24 article entries")
+        //      + 1 whatif + 1 beyond (all added 2026-05-26) = 25
+        XCTAssertEqual(ch3Ids.count, 25, "Chapter 3 should have 25 article entries")
     }
 
     func testEveryArticleEntryHasNonEmptyFields() {
