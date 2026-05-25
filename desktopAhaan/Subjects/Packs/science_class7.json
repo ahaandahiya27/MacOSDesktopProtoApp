@@ -4311,7 +4311,18 @@
             "Picking Copper — copper carries oxygen in blue-blooded creatures like horseshoe crabs and squids. Human blood is RED because of iron, not copper.",
             "Forgetting that chlorophyll and haemoglobin are structurally cousins — both use a 'porphyrin ring' but with different metals. Magnesium green, iron red."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "If chlorophyll and haemoglobin are structurally similar, why are leaves green and blood red?",
+              "answer": "Different central metals absorb different colours: magnesium (in chlorophyll) reflects green; iron (in haemoglobin) reflects red.",
+              "solutionSteps": [
+                "Both molecules use a 'porphyrin ring' — a flat ring of carbon and nitrogen.",
+                "Swap the metal in the middle and you change which colours of light it absorbs.",
+                "Magnesium: absorbs red+blue, reflects green → leaves green.",
+                "Iron: absorbs blue+green, reflects red → blood red."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             14
@@ -25983,7 +25994,17 @@
             "Picking 'December–February' — that's WINTER in north India, mostly dry. The southwest monsoon is summer-driven, June to September.",
             "Picking 'October–November' — that's the retreating northeast monsoon (rains in Tamil Nadu mostly). The big SW monsoon is June through September."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What drives the southwest monsoon — i.e. why does it always come in June?",
+              "answer": "The land of India heats up in summer; hot air rises; moist sea air flows in to replace it, bringing rain.",
+              "solutionSteps": [
+                "By May, the Thar desert and central India are burning hot.",
+                "Hot air rises, creating low pressure over land.",
+                "Cooler, moist air from the Indian Ocean rushes in to fill the gap — that's the southwest monsoon."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             98,
@@ -38141,7 +38162,17 @@
             "Picking 'distance × time' — that gives the wrong units (m·s instead of m/s) and doesn't reflect how fast you cover ground. Speed is distance DIVIDED by time.",
             "Picking 'time ÷ distance' — that's the INVERSE of speed (gives pace, like 'minutes per kilometre'). For speed itself: distance ÷ time."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What's the difference between speed and velocity?",
+              "answer": "Speed is just how fast (a number). Velocity is how fast AND in what direction.",
+              "solutionSteps": [
+                "A car at 60 km/h going north has speed = 60 km/h, velocity = 60 km/h NORTH.",
+                "A car going round a circular track at 60 km/h has constant speed but changing velocity (direction keeps changing).",
+                "Class 8+ physics uses velocity for that reason; Class 7 mostly uses speed."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             156,
@@ -38205,7 +38236,17 @@
             "Picking Mass — surprisingly, the bob's mass doesn't change the swing time. A heavy and light pendulum of the same length swing at the same rate.",
             "Picking Amplitude — small amplitude doesn't change the period much. The pendulum's swing time depends almost entirely on its LENGTH."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Does a heavier pendulum bob swing slower than a light one?",
+              "answer": "No — surprisingly, mass doesn't affect the swing time. Only the length matters.",
+              "solutionSteps": [
+                "Galileo first noticed this watching a swinging church chandelier.",
+                "Gravity pulls heavy and light bobs equally hard per gram of mass.",
+                "So both fall through the same arc in the same time — independent of weight."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             170,
@@ -38392,7 +38433,17 @@
             "Picking 'the Moon' — Moon-based time is hard to read in daylight. Sundials need the SUN, casting a shadow whose position shifts as the Sun moves.",
             "Picking 'sound waves' — sound isn't part of any time-of-day measurement. Sundials read the angle of the shadow cast by sunlight."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why can't a sundial tell time at night?",
+              "answer": "It needs a shadow, and shadows need sunlight.",
+              "solutionSteps": [
+                "Sundials work by tracking how the Sun's position moves across the sky.",
+                "The Sun casts a shadow from a fixed pointer (gnomon); the shadow's angle tells the hour.",
+                "At night there's no Sun → no shadow → no reading."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             158,
@@ -40873,7 +40924,17 @@
             "Picking 'thick copper wire' — thick wire can carry LOTS of current without melting; that's the opposite of a fuse's job. A fuse is THIN so it melts first when current is too high.",
             "Picking 'plastic strip' — plastic doesn't conduct. A fuse must conduct normally but BREAK (melt) under excessive current."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why doesn't a fuse melt during normal use, but melts when there's a short circuit?",
+              "answer": "Normal current heats the thin wire only slightly; a sudden surge from a short circuit heats it past its melting point.",
+              "solutionSteps": [
+                "Fuse wire is chosen to melt at a specific current (e.g. 5 amps).",
+                "Normal appliances draw less than that — gentle warmth only, no melting.",
+                "A short circuit lets current spike massively → wire melts within milliseconds → circuit broken → fire prevented."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             167,
@@ -40900,7 +40961,18 @@
             "Picking 'weaker' — more turns CONCENTRATE the magnetic field. The strength climbs with both current and turns of wire.",
             "Picking 'hotter only' — more turns DO heat the wire a bit (more resistance), but the headline effect is a stronger magnetic field."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Besides more turns of wire, what else makes an electromagnet stronger?",
+              "answer": "Bigger current through the coil, and using a soft-iron core (not just air).",
+              "solutionSteps": [
+                "Three knobs control electromagnet strength: number of turns, current, core material.",
+                "More turns → field concentrates more.",
+                "More current → each turn contributes more field.",
+                "Iron core → magnetises along with the field, multiplying strength ~100×."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             169,
@@ -51250,7 +51322,17 @@
             "Picking Bacteria — bacteria are TINY (microscopic). Bar screens have gaps of centimetres — they catch big solids like rags, sticks, plastic.",
             "Picking 'dissolved salts' — dissolved means molecule-level. Screens stop physical, visible-sized items. Salts are removed only in later treatment steps."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What comes AFTER the bar screen in a wastewater treatment plant?",
+              "answer": "A grit chamber — slow-moving water lets sand, gravel and grit settle out before biological treatment.",
+              "solutionSteps": [
+                "Bar screen removes BIG stuff (rags, plastics, sticks).",
+                "Grit chamber lets HEAVY-but-small stuff (sand, gravel) sink to the bottom.",
+                "Then the cleaner water goes to aerator tanks where microbes digest the dissolved organic matter."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             222,
@@ -51277,7 +51359,17 @@
             "Picking 'cooling sewage' — aeration doesn't cool; it pumps in oxygen so AEROBIC microbes can thrive and digest organic waste faster.",
             "Picking 'adding chlorine' — chlorine is a disinfectant added at the very end. Aerator tanks specifically deliver oxygen for microbial breakdown."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What would happen if a treatment plant skipped the aerator stage?",
+              "answer": "Anaerobic bacteria would take over — producing methane and hydrogen sulfide (rotten-egg smell) instead of cleanly digesting the sewage.",
+              "solutionSteps": [
+                "Aerators pump O₂ into the sewage tank.",
+                "Aerobic microbes thrive in O₂, eating organic waste and producing CO₂ + water.",
+                "Without O₂, anaerobic microbes take over — slower, smellier, and they produce gas (methane) that's dangerous to handle."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             222,
@@ -51412,7 +51504,17 @@
             "Picking 'touching pets' — cholera doesn't transmit by touch. The classic spread is faecal-oral via contaminated drinking water.",
             "Picking 'breathing dust' — cholera bacteria don't survive in dry air. The disease specifically spreads through dirty water in unsanitary conditions."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why is cholera mostly a disease of unsafe drinking water?",
+              "answer": "The cholera bacterium spreads through contaminated water — drinking it puts the bacteria right where they can grow.",
+              "solutionSteps": [
+                "An infected person's intestines shed Vibrio cholerae in stools.",
+                "Stools leaking into drinking-water sources contaminate the water.",
+                "People drink the water → bacteria reach the intestine → fresh infection → cycle continues. Chlorine + clean piping breaks it."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             209,
