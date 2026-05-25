@@ -110,6 +110,41 @@ final class BossQuizMigrationRatchetTests: XCTestCase {
         }
     }
 
+    /// Per-chapter variation floor (added 2026-05-25 second
+    /// enrichment session):
+    /// every chapter MUST ship with at least one boss-quiz Q that
+    /// carries a non-empty `variations` array. We deliberately don't
+    /// ratchet variations per-Q (many boss Qs are pure-recall and
+    /// don't benefit from a re-test angle), but every chapter
+    /// deserves at least one Q where `QuestionDetailView.variationsSection`
+    /// has something to render — otherwise the section never appears
+    /// for that chapter's boss quiz and the kid loses the
+    /// "Now try these variations" follow-up entirely.
+    ///
+    /// If a future content edit empties variations across every Q
+    /// in a chapter, this test fails with the chapter number so the
+    /// gap can be re-authored.
+    func testEveryChapterHasAtLeastOneBossQuizVariation() throws {
+        let pack = try loadSciencePack()
+        var chaptersWithoutAnyVariation: [Int] = []
+        for chapter in pack.chapters {
+            let bossQs = chapter.bossQuestionsList
+            guard !bossQs.isEmpty else { continue }
+            let hasAny = bossQs.contains { !$0.variations.isEmpty }
+            if !hasAny {
+                chaptersWithoutAnyVariation.append(chapter.number)
+            }
+        }
+        XCTAssertTrue(
+            chaptersWithoutAnyVariation.isEmpty,
+            "These chapters have boss-quiz Qs but none carry a variation:\n" +
+            chaptersWithoutAnyVariation.map { "  - ch\(String(format: "%02d", $0))" }.joined(separator: "\n") +
+            "\nEvery chapter must have at least one boss Q with a " +
+            "variation so QuestionDetailView's 'Now try these " +
+            "variations' section appears for at least one Q per chapter."
+        )
+    }
+
     /// Page-reference floor (added 2026-05-25 enrichment session):
     /// every boss-quiz item MUST ship with at least one entry in
     /// `pageRefs`. QuestionDetailView's "📖 p.N" chip renders blank

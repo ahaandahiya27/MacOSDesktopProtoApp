@@ -1792,4 +1792,137 @@ view in lockstep, which is what we want.
   `.keyboardShortcut(_:modifiers:)`. The split-into-helper
   approach is shorter and easier to follow.
 
+## Session continuation: 2026-05-25 22:45 +05:30 — DEDUP + VARIATIONS PUSH
+
+### Goal
+Two follow-ups from the prior REMEDIATION_LOG block (auto-driven
+during the user's "go for next 2 hours without stop" window):
+
+1. Retire the 19-way `bossExplanation(_:)` helper duplication
+   noted in the 2026-05-25 22:00 close-out. Lift into a single
+   `Question.bossExplanation` instance accessor.
+
+2. Push boss-quiz `variations` coverage past the prior 7.5%
+   floor toward a quality-targeted ~22%. Same selectivity rule
+   as the original enrichment session (ship a variation only
+   when there's a meaningfully different angle on the same
+   concept — not padding).
+
+### Commits landed this session
+
+- `63f5334` refactor: bossExplanation dedup (Question extension
+  + 19 Scene9 edits + pbxproj regen + lh005 allowlist resync)
+- `781658d` content: variations push 7.5% → 17.5% (20 new)
+- `ebcd3d3` content: variations push 17.5% → 22.5% (10 new)
+- THIS COMMIT — per-chapter variation ratchet floor + log
+  close-out.
+
+### bossExplanation dedup (commit 63f5334)
+
+Every Scene9_BossQuiz view shipped an identical
+`private func bossExplanation(_ q: Question) -> String { ... }`
+helper — fallback "Got it!" when solutionSteps is empty,
+otherwise return `solutionSteps.first`. Lifted to a single
+`var bossExplanation: String` instance accessor in
+`Subjects/ContentSchema/Question+BossQuiz.swift`.
+
+Call-site changes: `bossExplanation(item)` → `item.bossExplanation`
+and `bossExplanation(q)` → `q.bossExplanation`. Total: 17 call
+sites updated (Ch.2 and Ch.3 carried the helper but had no
+call site — they got the helper deletion without any rewrite).
+
+The deletion shifted Scene9 line numbers ~8 up across Shape A/C
+files; the `lh005_withanimation_allowlist` was resynced for 30
+boss-quiz entries (same `withAnimation` sites at new line
+offsets, no new violations added).
+
+pbxproj regenerated via `scripts/generate_compat_pbxproj.py` to
+register the new file on the app target.
+
+### Variations push (commits 781658d, ebcd3d3)
+
+Total: 30 new variations across 19 chapters. Coverage moves
+7.5% → 22.5% (15/200 → 45/200). Every chapter now has at least
+one boss-quiz Q with a variation; previously Ch.3, Ch.7, Ch.12,
+Ch.13, Ch.14, Ch.15, Ch.16, Ch.17, Ch.18 had 0% coverage.
+
+Voice anchor: each variation follows the
+`QuestionVariation { prompt, answer, solutionSteps[] }` shape
+identical to the 297 textbook-Q variations in the pack. Examples:
+
+  - Ch.1 q12 (chlorophyll vs haemoglobin):
+      "If chlorophyll and haemoglobin are structurally similar,
+       why are leaves green and blood red?"
+      → "Different central metals absorb different colours: …"
+
+  - Ch.13 q02 (pendulum length):
+      "Does a heavier pendulum bob swing slower than a light one?"
+      → "No — surprisingly, mass doesn't affect the swing time.
+         Only the length matters."
+
+The remaining 155 boss Qs without variations are pure-recall
+single-fact prompts (e.g. "1 hour = 3600 sec", "Saturn rings =
+ice + rock") where a variation would be padding rather than a
+fresh learning angle. The SUPERPROMPT §7 "ship only when
+meaningfully different" rule is preserved.
+
+### Test addition (THIS COMMIT)
+
+`BossQuizMigrationRatchetTests.testEveryChapterHasAtLeastOneBossQuizVariation`
+— per-chapter floor: every chapter must have ≥1 boss-quiz Q
+that carries a non-empty `variations` array. We deliberately
+DON'T ratchet per-Q (many boss Qs are pure-recall) — but each
+chapter deserves at least one rendering of the "Now try these
+variations" section.
+
+If a future content edit empties variations across every Q in
+a chapter, the test fails with the chapter number so the gap
+can be re-authored without delay.
+
+Local: 8 / 8 ratchet cases pass (7 existing + 1 new).
+
+### Out-of-scope (logged for next session)
+
+- **Variations push to 50%.** Today's 22.5% is the quality
+  ceiling. To go further, future sessions would need to either
+  (a) lower the bar from "meaningfully different" to "any extra
+  Q on the same concept", or (b) inject 30-40 ratchet-style
+  variations into pure-recall Qs which we judged would dilute
+  quality. Recommend deferring beyond this.
+- **Sanskrit pack chapter expansion** — still a multi-session
+  content gap. The Sanskrit pack has 1 chapter; science has 19.
+- **Snapshot test scaffold (T4)** — still ❌ in ISSUE_CATEGORIES;
+  custom no-dep helper would need design pass.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean.
+- `BossQuizMigrationRatchetTests`: 8 / 8 pass locally (the 7
+  existing + 1 new per-chapter variation floor).
+- All 9 lints clean (lh005 allowlist resynced for the Scene9
+  shift caused by helper deletion).
+- 4 commits, pushed in 2 CI cycles (git push batched 3 commits
+  in the first cycle, this commit in the second).
+
+### Notes for future sessions
+
+- The `Question+BossQuiz.swift` extension is named for the
+  current consumer (boss-quiz views) but the `bossExplanation`
+  accessor itself is a generic post-answer-card helper. If
+  another surface adopts the "first solution step as reveal
+  body" convention, the helper can be renamed or moved without
+  semantic change.
+- The variation floor is per-chapter (≥1), NOT per-Q (≥1).
+  Don't tighten to per-Q without a content audit — many Qs
+  legitimately don't need a variation, and a false floor
+  forces padding.
+- Three new pure-Python authoring scripts lived in /tmp during
+  this session (`dedupe_bossExplanation.py`,
+  `add_variations_v2.py`, `add_variations_v3.py`). They're not
+  in the repo — same pattern as the earlier `enrich_boss_quiz.py`
+  and `backfill_pagerefs.py` historical artefacts. If a future
+  session wants to bulk-add content again, the playbook is the
+  same: dict keyed by `bossquiz_chNN_qII`, validate with the
+  pack lints, ratchet test pins the floor.
+
 
