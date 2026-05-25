@@ -82,6 +82,11 @@
             value = "1"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "IDEPrefersOSLogging"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
       <BuildableProductRunnable
          reparseForDestinationChange = "YES"

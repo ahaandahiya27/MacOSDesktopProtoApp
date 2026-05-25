@@ -45,9 +45,26 @@ dev Mac  ─ git push ─►  GitHub origin/main  ◄─ git pull ─  iMac
 
 The iMac has its own bulletproof pull script — `scripts/imac-pull.sh`
 — that quits Xcode, stashes pbxproj auto-edits, pulls, wipes
-DerivedData, and re-opens the project. Always **push** your fix
-before telling the user to pull — a commit that never reaches origin
-might as well not exist.
+DerivedData, redirects interactive Xcode's DerivedData off any
+fileprovider path (idempotently, the first time it runs), and
+re-opens the project. Always **push** your fix before telling the
+user to pull — a commit that never reaches origin might as well
+not exist.
+
+### iMac "code 9: Killed" mitigations (already in place)
+The Late-2014 iMac (8 GB RAM, AMD R9 M290X) sometimes OOMs the
+Swift compiler during a clean rebuild after a big content pull.
+Two mitigations ship at the repo level so the kid never sees the
+dialog:
+1. `IDEPrefersOSLogging=YES` in the shared `desktopAhaan.xcscheme`
+   (keeps the logging subsystem from timing out under pressure).
+2. `scripts/imac-pull.sh` step 6.5 — sets Xcode's interactive
+   DerivedData to `/tmp/desktopAhaan-imac-derived` (off any
+   FileProvider tree) on first run; a deliberate manual setting
+   is preserved.
+If the kid still hits OOMs, options that don't need a code change:
+   - Quit Safari / Mail before building.
+   - Re-run `scripts/imac-pull.sh` (it wipes DerivedData).
 
 Repo layout on the iMac:
 ```

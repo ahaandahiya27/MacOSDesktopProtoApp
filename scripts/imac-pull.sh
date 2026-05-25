@@ -99,6 +99,35 @@ else
     echo "   ✓ DerivedData wiped."
 fi
 
+# Step 6.5 — Redirect interactive Xcode's DerivedData OFF the fileprovider
+# tree. The iMac's "code 9: Killed" build failures correlate with memory
+# pressure during large rebuilds when DerivedData lives under iCloud-
+# tracked paths (extended attributes + sync churn). CI already redirects
+# via CI_DERIVED_OVERRIDE / TMPDIR (commit 2831646 / 2026-05-22).
+# This block does the same for the kid's interactive Xcode session — but
+# ONLY if it isn't already configured to a custom location, so a
+# deliberate manual setting is preserved.
+#
+# Idempotent: re-running this script after the redirect is in place is a
+# no-op (the "Custom" branch short-circuits below). Big Sur 11.7 +
+# Xcode 13.2.1 compatible — the `defaults` keys are unchanged since
+# Xcode 11.
+echo "▶ 6.5 Routing interactive Xcode DerivedData off the fileprovider tree…"
+CURRENT_STYLE="$(defaults read com.apple.dt.Xcode IDEDerivedDataLocationStyle 2>/dev/null || echo 'Default')"
+if [ "${CURRENT_STYLE}" = "Custom" ]; then
+    CURRENT_LOC="$(defaults read com.apple.dt.Xcode IDECustomDerivedDataLocation 2>/dev/null || echo '(unset)')"
+    echo "   ✓ already custom — leaving alone: ${CURRENT_LOC}"
+else
+    # /tmp is local-disk and not under FileProvider. A stable subdir
+    # keeps the location predictable across reboots.
+    XCODE_DD_TARGET="/tmp/desktopAhaan-imac-derived"
+    mkdir -p "${XCODE_DD_TARGET}"
+    defaults write com.apple.dt.Xcode IDEDerivedDataLocationStyle -string "Custom" 2>/dev/null || true
+    defaults write com.apple.dt.Xcode IDECustomDerivedDataLocation -string "${XCODE_DD_TARGET}" 2>/dev/null || true
+    echo "   ✓ routed to: ${XCODE_DD_TARGET}"
+    echo "     (revert via: defaults write com.apple.dt.Xcode IDEDerivedDataLocationStyle Default)"
+fi
+
 echo "▶ 7. Verifying expected source files are present after pull…"
 for must_exist in \
     "desktopAhaan/App/CrashReporter.swift" \
