@@ -32888,7 +32888,10 @@
           "solutionSteps": [
             "Two atria on top, two ventricles below — a double pump."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 2 — fish hearts have 2 chambers; humans have 4. The extra two let us cleanly separate oxygen-poor blood from oxygen-rich blood.",
+            "Picking 3 — amphibian hearts have 3 chambers (some mixing of blood). Mammals and birds evolved a fully separated 4-chamber design."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -32909,7 +32912,10 @@
           "solutionSteps": [
             "Red blood cells contain haemoglobin, which binds oxygen."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking WBC — WBCs are the IMMUNE cells (defend against infection). Oxygen is carried by RBCs because they contain haemoglobin.",
+            "Picking Plasma — plasma is the liquid blood floats in. It carries dissolved nutrients and waste, but oxygen rides on haemoglobin inside RBCs."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -32930,7 +32936,10 @@
           "solutionSteps": [
             "Veins return blood at low pressure; valves stop it from flowing the wrong way."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'make blood faster' — veins don't speed blood; they direct it. Their valves are tiny one-way flaps that stop blood from sliding back down.",
+            "Picking 'add oxygen' — veins don't add oxygen (most carry low-oxygen blood). They have valves because they return blood AGAINST gravity from feet to heart."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -32951,7 +32960,10 @@
           "solutionSteps": [
             "Xylem is the upward water pipeline; phloem moves sugar in both directions."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Phloem — phloem transports FOOD (sugars) made in leaves DOWN to the rest of the plant. Water travels UP through xylem.",
+            "Picking Stomata — stomata are PORES on the leaf surface for gas exchange. Water is pulled up the stem by the xylem tubes."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -32972,7 +32984,10 @@
           "solutionSteps": [
             "Transpiration pulls more water up — like sipping through a straw."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Respiration — respiration is gas exchange (O₂ in, CO₂ out). Transpiration is specifically water VAPOUR leaving leaves through stomata.",
+            "Picking Translocation — translocation is movement of FOOD in phloem. Transpiration is water LOSS from leaves, which actually pulls more water up the xylem."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -32993,7 +33008,10 @@
           "solutionSteps": [
             "Arteries carry oxygen-rich blood away from the heart. The pulmonary artery is the one exception."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'deoxygenated blood' — that's what VEINS carry. Arteries carry FRESH oxygen-rich blood pumped out by the heart (with one exception: the pulmonary artery).",
+            "Picking 'lymph' — lymph is a separate clear fluid in lymph vessels. Arteries carry blood, and that blood is usually oxygenated."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -33014,7 +33032,10 @@
           "solutionSteps": [
             "Sweat glands push water plus salts onto the skin where they evaporate, cooling the body."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Lungs — lungs exhale water vapour and CO₂ but the SWEAT path is from the skin. Lots of salt + water leaves through skin pores in heat.",
+            "Picking Kidneys — kidneys filter blood and make URINE. Sweat is a different excretion pathway, handled by sweat glands in the skin."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -33035,7 +33056,10 @@
           "solutionSteps": [
             "Kidneys filter blood to remove urea and excess salts and water as urine."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Bile — bile is made by the LIVER (helps digest fat). Kidneys' job is filtering blood; their product is urine.",
+            "Picking Sweat — sweat comes from SKIN glands. The kidneys filter waste from blood into urine, which is stored in the bladder."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -33056,8 +33080,21 @@
           "solutionSteps": [
             "Xylem carries water upward; phloem carries sugars from leaves to all parts of the plant."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'water from roots' — that's xylem's job. Phloem carries food (sugars) DOWNWARDS (and sideways) from photosynthesising leaves.",
+            "Picking Oxygen — plants don't transport oxygen through phloem. Phloem is the 'food highway'; xylem is the 'water highway'."
+          ],
+          "variations": [
+            {
+              "prompt": "If you cut a ring around a tree trunk (removing the phloem), why does the tree slowly die?",
+              "answer": "The leaves can't send food down to the roots, so the roots starve and stop pulling up water.",
+              "solutionSteps": [
+                "Phloem is the pipe that carries sugar from leaves DOWN to roots and stems.",
+                "Cutting a ring kills the phloem at that ring; xylem (water up) still works.",
+                "Roots can't get food, so they starve. With no roots, no water, and the tree dies."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -33077,7 +33114,10 @@
           "solutionSteps": [
             "A relaxed adult heart beats roughly 60–80 times per minute. Kids beat a little faster."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'about 20' — too slow; that's a hibernating animal's rate. A resting human heart beats around 72 times per minute.",
+            "Picking 'about 200' — too fast; that would only happen during intense exercise or panic. A typical resting rate is 60-80 bpm, averaging 72."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35176,7 +35216,10 @@
           "solutionSteps": [
             "Stamen = anther + filament. The anther makes pollen."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Pistil — pistil is the FEMALE part (stigma + style + ovary). Stamen (filament + anther) is the male part that makes pollen.",
+            "Picking Sepal — sepals are the green leaf-like parts that protect the bud. Stamens and pistils are the reproductive parts INSIDE."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35197,7 +35240,10 @@
           "solutionSteps": [
             "Pollination is just delivery. Fertilisation happens later inside the ovary."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Fertilisation — fertilisation happens AFTER pollination, when pollen tube reaches the ovule. Pollination is just the pollen ARRIVING on the stigma.",
+            "Picking Germination — germination is when a SEED sprouts into a seedling. Pollination is the earlier step: pollen meeting stigma."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35218,7 +35264,10 @@
           "solutionSteps": [
             "Coconuts float and can drift across oceans to new shores."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Wind — coconuts are too heavy for wind. Their thick fibrous husk traps air and lets them float across oceans for thousands of kilometres.",
+            "Picking Animals — most animals can't crack open a coconut. Water dispersal explains why coconut palms line tropical coasts worldwide."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35239,7 +35288,10 @@
           "solutionSteps": [
             "A small bud grows on the parent and breaks off as a new cell."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Seeds — yeast is a single-celled fungus; it has no flowers or seeds. It reproduces by BUDDING — a tiny bulge breaks off to become a new cell.",
+            "Picking Pollination — pollination is a plant thing. Yeast (fungus) reproduces asexually by budding most of the time."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35260,7 +35312,10 @@
           "solutionSteps": [
             "Potatoes are underground stems. The 'eyes' sprout into new plants."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Roots — the part you plant is the underground STEM (tuber), not the root. Tubers carry tiny 'eyes' that sprout into new plants.",
+            "Picking Leaves — that's how Bryophyllum reproduces. Potatoes use a swollen underground stem (the tuber) instead."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35281,7 +35336,10 @@
           "solutionSteps": [
             "Tiny plantlets grow on Bryophyllum leaf margins, fall off and root into new plants."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Stems — bryophyllum's trick is its LEAVES, not stems. Tiny plantlets grow on the notches of the leaf edge.",
+            "Picking 'seeds only' — bryophyllum can reproduce via seeds too, but its famous trick is vegetative — leaf-edge plantlets that drop off and root."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35302,7 +35360,10 @@
           "solutionSteps": [
             "The filament holds the anther up; the anther's sacs burst open and release pollen grains."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Filament — filament is the long stalk that HOLDS the anther up. The anther is the bag at the top that actually produces pollen.",
+            "Picking Stigma — stigma is part of the FEMALE pistil where pollen lands. Pollen is MADE in the male anther."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35323,7 +35384,10 @@
           "solutionSteps": [
             "The filament breaks into pieces and each piece grows into a new individual."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Seeds — spirogyra is an alga, not a flowering plant. It has no seeds. It reproduces mainly by fragmentation — a filament breaks and each piece grows.",
+            "Picking Pollination — pollination needs flowers. Spirogyra is just a green thread of cells, multiplying by breaking apart."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35344,7 +35408,10 @@
           "solutionSteps": [
             "These seeds have papery wings that let them spin and drift on the breeze."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Animals — maple seeds spin like helicopters specifically to RIDE the wind. Animals don't eat or carry them efficiently.",
+            "Picking Water — these light winged seeds aren't built for floating. The 'wing' is a wind-catching device, not a buoyancy aid."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -35365,7 +35432,10 @@
           "solutionSteps": [
             "The ovule ripens into a seed and the ovary around it ripens into the fruit."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Fruit — the OVARY (the part holding the ovule) becomes the fruit; the OVULE inside becomes the seed.",
+            "Picking Petal — petals fall off after pollination. Inside the ovary, each ovule becomes a seed, ready to grow a new plant."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37548,7 +37618,10 @@
           "solutionSteps": [
             "If a car covers 80 km in 1 hour, its speed is 80 km/h."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'distance × time' — that gives the wrong units (m·s instead of m/s) and doesn't reflect how fast you cover ground. Speed is distance DIVIDED by time.",
+            "Picking 'time ÷ distance' — that's the INVERSE of speed (gives pace, like 'minutes per kilometre'). For speed itself: distance ÷ time."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37569,8 +37642,21 @@
           "solutionSteps": [
             "Equal distance covered in equal time — that's uniform motion."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'at rest' — at rest the line is FLAT (horizontal). A slanted straight line means distance grows steadily over time = uniform speed.",
+            "Picking 'speeding up' — a CURVING line that gets steeper means speeding up. A STRAIGHT slanted line keeps the same slope, which means constant speed."
+          ],
+          "variations": [
+            {
+              "prompt": "On a distance–time graph, what does a horizontal line mean?",
+              "answer": "The object is at rest — time keeps moving but distance doesn't change.",
+              "solutionSteps": [
+                "Distance is on the y-axis; time on the x-axis.",
+                "Flat (horizontal) line = same distance at every time → not moving.",
+                "Steeper slopes mean faster motion; vertical would be infinite speed (impossible)."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -37590,7 +37676,10 @@
           "solutionSteps": [
             "Longer string → slower swing. Galileo's classic discovery."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Mass — surprisingly, the bob's mass doesn't change the swing time. A heavy and light pendulum of the same length swing at the same rate.",
+            "Picking Amplitude — small amplitude doesn't change the period much. The pendulum's swing time depends almost entirely on its LENGTH."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37611,7 +37700,10 @@
           "solutionSteps": [
             "Speedometer = current speed; odometer = running total of distance."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Speedometer — speedometer measures INSTANTANEOUS SPEED (km/h right now). Odometer measures TOTAL DISTANCE travelled over time.",
+            "Picking Stopwatch — stopwatch measures TIME, not distance. The odometer ticks up kilometres travelled."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37632,7 +37724,10 @@
           "solutionSteps": [
             "60 minutes × 60 seconds = 3,600 seconds in an hour."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 60 — 60 seconds make a MINUTE. An hour is 60 minutes × 60 seconds = 3,600 seconds.",
+            "Picking 600 — 600 seconds is 10 minutes, not an hour. The full hour is 3,600 seconds."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37653,7 +37748,10 @@
           "solutionSteps": [
             "All other time units are defined in terms of seconds in the SI system."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Minute — minute is a unit of time, but SI (international system) uses the SECOND as the base unit. Minutes, hours, days are larger or derived.",
+            "Picking Hour — hour is convenient but not SI. The official SI unit of time is the second, defined precisely by atomic clocks."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37674,7 +37772,10 @@
           "solutionSteps": [
             "Average speed smooths out faster and slower bits of a journey into one number."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'total time × total distance' — multiplying time and distance gives nonsense units (m·s). Speed is per-unit-time, so divide.",
+            "Picking 'total distance + total time' — adding distance and time mixes incompatible units. Average speed = total distance / total time."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37695,7 +37796,10 @@
           "solutionSteps": [
             "From the mean position out to one side, back through, out to the other side, and back — that's one oscillation."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'a vibration' — vibration is more general (rapid back-and-forth, like a guitar string). For a pendulum, one full A→B→A swing is called an oscillation.",
+            "Picking 'a rotation' — rotation is spinning ON an axis (like Earth). A pendulum SWINGS through an arc, which is oscillation."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37716,7 +37820,10 @@
           "solutionSteps": [
             "Distance = speed × time = 60 × 2 = 120 km."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 30 km — that's 0.5 hours of travel, not 2. Distance = speed × time = 60 × 2 = 120 km.",
+            "Picking 60 km — that's only 1 hour of travel. Two hours at 60 km/h covers 120 km."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -37737,7 +37844,10 @@
           "solutionSteps": [
             "The Sun moves across the sky and the gnomon's shadow points to different hour marks."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'the Moon' — Moon-based time is hard to read in daylight. Sundials need the SUN, casting a shadow whose position shifts as the Sun moves.",
+            "Picking 'sound waves' — sound isn't part of any time-of-day measurement. Sundials read the angle of the shadow cast by sunlight."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40121,7 +40231,10 @@
           "solutionSteps": [
             "Current needs an unbroken loop from + terminal back to − terminal."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Open — an OPEN circuit has a gap; current can't cross a gap. A CLOSED circuit forms a complete loop for current to flow around.",
+            "Picking Hot — circuits can heat up when current flows, but heat isn't what enables flow. The key is having a continuous, unbroken loop."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40142,8 +40255,21 @@
           "solutionSteps": [
             "One break stops all current. That's why house wiring is parallel, not series."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'stay lit' — that's PARALLEL behaviour. In SERIES, the bulbs share one path; break the path and ALL bulbs go off.",
+            "Picking 'get brighter' — brightness in series can't increase from a fault. Breaking the loop stops current entirely; every bulb in the chain goes dark."
+          ],
+          "variations": [
+            {
+              "prompt": "Why do Christmas lights now use parallel wiring instead of series like old strings?",
+              "answer": "In parallel, if one bulb fuses the others stay lit — much easier to maintain.",
+              "solutionSteps": [
+                "Series wiring shares one path: any break and ALL bulbs go off.",
+                "Parallel wiring gives each bulb its own loop back to the source.",
+                "One bulb failing in parallel doesn't affect the others, so finding the dud is easy."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -40163,7 +40289,10 @@
           "solutionSteps": [
             "An electromagnet pulls the hammer; spring brings it back; it strikes the bell."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Heating — electric bells don't ring because of heat. The clapper hits the bell because an ELECTROMAGNET pulls it; that's the magnetic effect.",
+            "Picking Chemical — chemical effects involve substances reacting (batteries, electroplating). A bell uses the magnetic effect of current."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40184,7 +40313,10 @@
           "solutionSteps": [
             "When too much current flows, the thin wire heats up and melts — breaking the circuit safely."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'thick copper wire' — thick wire can carry LOTS of current without melting; that's the opposite of a fuse's job. A fuse is THIN so it melts first when current is too high.",
+            "Picking 'plastic strip' — plastic doesn't conduct. A fuse must conduct normally but BREAK (melt) under excessive current."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40205,7 +40337,10 @@
           "solutionSteps": [
             "Each loop adds to the magnetic field. More turns = bigger pull."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'weaker' — more turns CONCENTRATE the magnetic field. The strength climbs with both current and turns of wire.",
+            "Picking 'hotter only' — more turns DO heat the wire a bit (more resistance), but the headline effect is a stronger magnetic field."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40226,7 +40361,10 @@
           "solutionSteps": [
             "Toasters, irons and bulbs all work because current heats a high-resistance wire."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'magnetic compass' — compasses USE magnetism, not the heating effect. An iron has a coil that heats up when current flows.",
+            "Picking 'solar panel' — solar panels CONVERT light to current, no heating effect of current involved. The iron is the classic heat application."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40247,7 +40385,10 @@
           "solutionSteps": [
             "Long line +, short line −. Memorise this for every circuit you draw."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'negative terminal' — the conventional cell symbol has SHORTER line = negative, LONGER line = positive. Don't flip them.",
+            "Picking Switch — switch has a different symbol (a hinged break in the line). The cell symbol is two parallel lines of unequal length."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40268,7 +40409,10 @@
           "solutionSteps": [
             "An MCB trips and cuts the current automatically if too much flows — safer than replaceable fuses."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Main Cable Box' — sounds plausible but wrong. MCB stands for Miniature Circuit Breaker, a switch that flips off automatically under overload.",
+            "Picking 'Magnetic Cell Battery' — MCBs use a magnetic and thermal trip mechanism but they're not batteries. They protect circuits by breaking the loop."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40289,7 +40433,10 @@
           "solutionSteps": [
             "Live = red/brown, neutral = black/blue, earth = green or green/yellow striped."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Red — RED is the LIVE wire in Indian wiring (carrying current). Green or green/yellow is reserved for earth (safety ground).",
+            "Picking Black — BLACK is the NEUTRAL wire in Indian wiring. The safety-earth wire is always green or green/yellow striped."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -40310,7 +40457,10 @@
           "solutionSteps": [
             "CFLs and LEDs convert more of their input into light and less into wasted heat."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'more electricity' — old filament bulbs waste ~95% of their energy as HEAT. CFLs make the same light using a quarter the energy.",
+            "Picking 'about the same' — that misses the whole point of CFLs and LEDs. They produce the same brightness for far less electricity."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -42961,7 +43111,10 @@
           "solutionSteps": [
             "Both angles are measured from the normal (perpendicular to the mirror)."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Refraction — refraction is the BENDING of light passing from one medium to another. The 'angle of reflection' equals the 'angle of incidence' — that's the rule.",
+            "Picking Dispersion — dispersion is splitting white light into colours (prism). Reflection law equates incidence and REFLECTION angles."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -42982,7 +43135,10 @@
           "solutionSteps": [
             "Convex mirrors give a smaller, upright image with a wider field of view."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'plane mirror' — flat mirrors give a same-size image. Car side mirrors curve OUTWARD (convex) to fit a wider field of view into a small mirror.",
+            "Picking 'concave mirror' — concave mirrors magnify and can flip images. Convex mirrors shrink images but show a wider area — perfect for side mirrors."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43003,7 +43159,10 @@
           "solutionSteps": [
             "Light slows in denser media — that's why it bends (refracts)."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'speeds up' — light goes FASTER in less-dense media (vacuum). When it enters denser water, it SLOWS DOWN and bends towards the normal.",
+            "Picking 'stops' — light doesn't stop in transparent media; it travels slower. (It only stops if it hits something opaque that absorbs it.)"
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43024,7 +43183,10 @@
           "solutionSteps": [
             "Violet to Red — each colour bends a different amount."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'two colours' — too few; a prism spreads white light into a full rainbow. The 7-colour memory is VIBGYOR — Violet, Indigo, Blue, Green, Yellow, Orange, Red.",
+            "Picking 'black & white' — black and white aren't part of the visible spectrum. White light contains all 7 rainbow colours overlapping."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43045,7 +43207,10 @@
           "solutionSteps": [
             "Convex lenses converge light and can produce a magnified, upright virtual image."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'plane mirror' — flat mirrors don't magnify (they reflect 1:1). Magnification needs a CURVED surface; a magnifying glass uses a convex LENS.",
+            "Picking 'concave lens' — concave lenses MINIFY (make things look smaller). Convex lenses (thicker in the middle) magnify."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43066,7 +43231,10 @@
           "solutionSteps": [
             "Raise your right hand — your mirror image raises its left. That's lateral inversion."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'upside-down' — plane mirrors don't flip top-to-bottom. They flip LEFT-RIGHT (lateral inversion), which is why your watch reads backwards.",
+            "Picking 'smaller' — plane mirror images are the SAME size as the object. They look smaller only at a distance, like everything else."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43087,7 +43255,10 @@
           "solutionSteps": [
             "The eye lens focuses light onto the retina by converging it like any convex lens does."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'concave lens' — concave lenses are diverging; they're used for short-sighted vision correction. The eye's natural lens is convex (converging).",
+            "Picking 'plane lens' — there's no such thing as a 'plane lens'. Flat glass doesn't focus. The eye lens is convex and flexes shape to focus."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43108,7 +43279,10 @@
           "solutionSteps": [
             "Placed correctly at the focus, the bulb's light reflects off the concave surface as a narrow beam."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'spreads light in all directions' — that would WASTE the bulb's energy. The concave mirror in a torch reflects light into a tight parallel beam.",
+            "Picking 'inverts the light' — the torch isn't trying to flip images; it's trying to direct light forward as a beam. Concave mirror at the right focal point does that."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43129,7 +43303,10 @@
           "solutionSteps": [
             "Our eyes blend the seven colours into white — the reverse of a prism's splitting."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Black — black is the ABSENCE of light; spinning colours can't make light disappear. When all 7 mix at speed, your eye blends them into white.",
+            "Picking 'each colour in turn' — your eye is too slow to see individual colours past ~30 Hz. Spinning fast enough, all 7 blur together into white."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -43150,7 +43327,10 @@
           "solutionSteps": [
             "Stand 50 cm from a mirror — your image is 50 cm 'inside' the mirror, same size, virtual."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'at the mirror surface' — the image is BEHIND the mirror, in the world we see 'through' the glass. The distance behind equals the object's distance in front.",
+            "Picking 'half the distance behind' — the geometry is exact: distance behind = distance in front. That's why you back away to centre yourself in a mirror."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
