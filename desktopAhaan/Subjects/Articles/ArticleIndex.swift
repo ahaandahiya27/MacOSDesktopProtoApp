@@ -1499,6 +1499,47 @@ enum ArticleIndex {
         "ch19_scientists": ArticleEntry(id: "ch19_scientists", filename: "ch19_scientists.html",
             title: "Scientist Spotlight — Chapter 19",
             chapterFolder: chapter19Folder, estimatedMinutes: 4),
+
+        // What If? (thought-experiment articles) — Ch.2-19 generated
+        // 2026-05-26 by scripts/generate_whatif_articles.py from
+        // chapter.whatIfs JSON (3 entries per chapter; 54 total).
+        // Ch.1 has a bespoke 5-scenario anchor entry above.
+        "ch02_whatif": ArticleEntry(id: "ch02_whatif", filename: "ch02_whatif.html",
+            title: "What If? — Chapter 2", chapterFolder: chapter2Folder, estimatedMinutes: 7),
+        "ch03_whatif": ArticleEntry(id: "ch03_whatif", filename: "ch03_whatif.html",
+            title: "What If? — Chapter 3", chapterFolder: chapter3Folder, estimatedMinutes: 7),
+        "ch04_whatif": ArticleEntry(id: "ch04_whatif", filename: "ch04_whatif.html",
+            title: "What If? — Chapter 4", chapterFolder: chapter4Folder, estimatedMinutes: 7),
+        "ch05_whatif": ArticleEntry(id: "ch05_whatif", filename: "ch05_whatif.html",
+            title: "What If? — Chapter 5", chapterFolder: chapter5Folder, estimatedMinutes: 7),
+        "ch06_whatif": ArticleEntry(id: "ch06_whatif", filename: "ch06_whatif.html",
+            title: "What If? — Chapter 6", chapterFolder: chapter6Folder, estimatedMinutes: 7),
+        "ch07_whatif": ArticleEntry(id: "ch07_whatif", filename: "ch07_whatif.html",
+            title: "What If? — Chapter 7", chapterFolder: chapter7Folder, estimatedMinutes: 7),
+        "ch08_whatif": ArticleEntry(id: "ch08_whatif", filename: "ch08_whatif.html",
+            title: "What If? — Chapter 8", chapterFolder: chapter8Folder, estimatedMinutes: 7),
+        "ch09_whatif": ArticleEntry(id: "ch09_whatif", filename: "ch09_whatif.html",
+            title: "What If? — Chapter 9", chapterFolder: chapter9Folder, estimatedMinutes: 7),
+        "ch10_whatif": ArticleEntry(id: "ch10_whatif", filename: "ch10_whatif.html",
+            title: "What If? — Chapter 10", chapterFolder: chapter10Folder, estimatedMinutes: 7),
+        "ch11_whatif": ArticleEntry(id: "ch11_whatif", filename: "ch11_whatif.html",
+            title: "What If? — Chapter 11", chapterFolder: chapter11Folder, estimatedMinutes: 7),
+        "ch12_whatif": ArticleEntry(id: "ch12_whatif", filename: "ch12_whatif.html",
+            title: "What If? — Chapter 12", chapterFolder: chapter12Folder, estimatedMinutes: 7),
+        "ch13_whatif": ArticleEntry(id: "ch13_whatif", filename: "ch13_whatif.html",
+            title: "What If? — Chapter 13", chapterFolder: chapter13Folder, estimatedMinutes: 7),
+        "ch14_whatif": ArticleEntry(id: "ch14_whatif", filename: "ch14_whatif.html",
+            title: "What If? — Chapter 14", chapterFolder: chapter14Folder, estimatedMinutes: 7),
+        "ch15_whatif": ArticleEntry(id: "ch15_whatif", filename: "ch15_whatif.html",
+            title: "What If? — Chapter 15", chapterFolder: chapter15Folder, estimatedMinutes: 7),
+        "ch16_whatif": ArticleEntry(id: "ch16_whatif", filename: "ch16_whatif.html",
+            title: "What If? — Chapter 16", chapterFolder: chapter16Folder, estimatedMinutes: 7),
+        "ch17_whatif": ArticleEntry(id: "ch17_whatif", filename: "ch17_whatif.html",
+            title: "What If? — Chapter 17", chapterFolder: chapter17Folder, estimatedMinutes: 7),
+        "ch18_whatif": ArticleEntry(id: "ch18_whatif", filename: "ch18_whatif.html",
+            title: "What If? — Chapter 18", chapterFolder: chapter18Folder, estimatedMinutes: 7),
+        "ch19_whatif": ArticleEntry(id: "ch19_whatif", filename: "ch19_whatif.html",
+            title: "What If? — Chapter 19", chapterFolder: chapter19Folder, estimatedMinutes: 7),
     ]
 
     static func entry(forConceptId id: String) -> ArticleEntry? {
