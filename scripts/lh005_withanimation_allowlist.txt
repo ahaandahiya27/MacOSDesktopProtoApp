@@ -53,7 +53,7 @@ desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:179: P
 desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:181: Pre-existing site grandfathered when LH005b landed (2026-05-24).
 desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:183: Pre-existing site grandfathered when LH005b landed (2026-05-24).
 desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene7_PitcherPlantTrap.swift:184: Pre-existing site grandfathered when LH005b landed (2026-05-24).
-desktopAhaan/Subjects/Tutor/QuestionDetailView.swift:406: Pre-existing site grandfathered when LH005b landed (2026-05-24); line shifted +18 from 388 (hint ladder + D7 hintTier reset + 2026-05-25 picker-suggestion VStack wrapper).
+desktopAhaan/Subjects/Tutor/QuestionDetailView.swift:443: Pre-existing site grandfathered when LH005b landed (2026-05-24); line shifted from 388 over time (hint ladder + D7 hintTier reset + picker-suggestion VStack + 2026-05-25 manual-override branching into baseQualityButton helper).
 desktopAhaan/Views/Favorites/FavoritesScreen.swift:18: Top-level view — pre-existing site, audit close-out deferred.
 desktopAhaan/Views/Favorites/FavoritesScreen.swift:45: Top-level view — pre-existing site, audit close-out deferred.
 desktopAhaan/Views/Favorites/FavoritesScreen.swift:64: Top-level view — pre-existing site, audit close-out deferred.

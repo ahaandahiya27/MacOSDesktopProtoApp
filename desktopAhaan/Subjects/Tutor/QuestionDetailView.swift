@@ -38,6 +38,12 @@ struct QuestionDetailView: View {
     /// SM-2 picker. Swapped back to false on question change, so the
     /// picker re-appears for the next question.
     @State private var didRateThisVisit: Bool = false
+    /// True once the kid has TAPPED a non-suggested quality button on
+    /// this question. When latched, `suggestedQuality` returns nil so
+    /// the picker stops re-nudging — even if the kid then reveals more
+    /// hints. Reset per question. Closes the manual-override stickiness
+    /// follow-up logged in the 2026-05-25 22:00 REMEDIATION_LOG block.
+    @State private var manualOverride: Bool = false
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var subjectRegistry: SubjectRegistry
     @EnvironmentObject var nav: TutorNavigationState
@@ -105,6 +111,7 @@ struct QuestionDetailView: View {
                 matchAssignment = [:]
                 shuffledRights = []
                 didRateThisVisit = false
+                manualOverride = false
                 resetMatchStateIfNeeded()
                 // Snap back to the top so the new prompt is visible.
                 withAnimationRespectingReduceMotion(.easeOut(duration: 0.2)) {
@@ -356,17 +363,19 @@ struct QuestionDetailView: View {
     }
 
     /// Quality nudged by hint usage. nil before any hint is revealed (so
-    /// the picker shows no "Suggested" badge and the kid picks freely).
-    /// Once `hintTier > 0`, this returns the value
+    /// the picker shows no "Suggested" badge and the kid picks freely),
+    /// AND nil once the kid has manually overridden the suggestion on
+    /// this question (sticky — don't keep re-nudging once they've
+    /// expressed a preference). Otherwise returns the value
     /// `Question.defaultQualityForHintTier(_:)` recommends:
     ///   tier 1 → .good   (a nudge isn't a fail)
     ///   tier 2 → .hard
     ///   tier 3 → .forgot (or revealSolution)
     /// The kid still actively taps a button; this is a soft default,
-    /// not a forced selection. Wires up the D5-shipped pure function
-    /// that previously had no caller in the view layer.
+    /// not a forced selection.
     private var suggestedQuality: ReviewQuality? {
         guard hintTier > 0 else { return nil }
+        guard !manualOverride else { return nil }
         return Question.defaultQualityForHintTier(hintTier)
     }
 
@@ -398,16 +407,44 @@ struct QuestionDetailView: View {
         )
     }
 
+    @ViewBuilder
     private func qualityButton(label: String, color: Color,
                                 quality: ReviewQuality) -> some View {
         let isSuggested = suggestedQuality == quality
-        return Button {
+        // The base button is identical in both branches; only the
+        // .keyboardShortcut modifier differs. Branching at the SwiftUI
+        // level (rather than passing an optional KeyboardShortcut) is
+        // the Big-Sur-safe pattern — the `keyboardShortcut(_:?)`
+        // overload that accepts nil only landed in macOS 12.
+        if isSuggested {
+            baseQualityButton(label: label, color: color,
+                              quality: quality, isSuggested: true)
+                .keyboardShortcut(.return, modifiers: [])
+        } else {
+            baseQualityButton(label: label, color: color,
+                              quality: quality, isSuggested: false)
+        }
+    }
+
+    private func baseQualityButton(label: String, color: Color,
+                                    quality: ReviewQuality,
+                                    isSuggested: Bool) -> some View {
+        Button {
+            // Manual-override latch: the moment the kid taps a button
+            // that ISN'T the current suggestion, stop re-nudging on
+            // this question. If they tapped the suggestion itself (or
+            // there's no active suggestion), don't latch — pressing
+            // Return on the suggested option shouldn't change future
+            // behaviour on Prev/Next traversal.
+            if let suggested = suggestedQuality, suggested != quality {
+                manualOverride = true
+            }
             dataStore.recordReview(questionId: question.id, quality: quality)
             withAnimation(.easeOut(duration: 0.18)) { didRateThisVisit = true }
         } label: {
             VStack(spacing: 3) {
                 if isSuggested {
-                    Text("Suggested")
+                    Text("Suggested · Return ⏎")
                         .font(.caption2.weight(.semibold))
                         .foregroundColor(color)
                         .accessibilityHidden(true)
@@ -432,7 +469,7 @@ struct QuestionDetailView: View {
         .pointingCursor()
         .accessibilityLabel(
             isSuggested
-            ? "Rate this answer as \(label) — suggested based on hints used"
+            ? "Rate this answer as \(label) — suggested based on hints used, press Return to accept"
             : "Rate this answer as \(label) — feeds the spaced-repetition queue"
         )
     }

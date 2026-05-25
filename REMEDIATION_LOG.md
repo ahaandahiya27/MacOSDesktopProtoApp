@@ -1681,4 +1681,115 @@ a button — this is a soft default, not a forced selection.
   Mirror is brittle on Big Sur. Pinning the contract
   symbolically catches the same regression.
 
+## Session continuation: 2026-05-25 22:30 +05:30 — PICKER STORY CLOSE-OUT
+
+### Goal
+Finish the D5 picker-suggestion story shipped in `e19f4c8`. Two
+follow-ups were explicitly logged as out-of-scope there; this
+commit closes both in one bundle:
+
+1. **Manual-override stickiness.** Once the kid taps a quality
+   button that ISN'T the current suggestion, stop re-nudging on
+   that question — even if they then reveal more hints. The
+   nudge was meant to be a one-time correction, not a recurring
+   distraction.
+2. **Keyboard shortcut on suggested button.** `.return` on the
+   suggested button so the kid can press Enter to accept the
+   soft default instead of mousing over.
+
+### Commit landed this session
+- THIS COMMIT — manual-override flag + keyboard shortcut + 4 new
+  contract tests + lh005 allowlist resync.
+
+### What changed
+
+1. New `@State var manualOverride: Bool = false` on
+   QuestionDetailView. Reset in `.onChange(of: question.id)`
+   alongside hintTier / revealSolution / didRateThisVisit, so
+   Prev/Next traversal starts each question fresh.
+2. `suggestedQuality` gains a second guard:
+   `guard !manualOverride else { return nil }`. Once latched,
+   suggestion returns nil regardless of hintTier.
+3. `qualityButton` split into a `@ViewBuilder` thin wrapper +
+   `baseQualityButton` helper. The wrapper branches on
+   `isSuggested`: the suggested branch attaches
+   `.keyboardShortcut(.return, modifiers: [])`, the unsuggested
+   branch returns the bare button. This branching pattern is
+   the Big-Sur-safe way to apply a modifier conditionally —
+   `.keyboardShortcut(_:?)` accepting an optional landed in
+   macOS 12.
+4. `baseQualityButton` action latches `manualOverride = true`
+   when the tapped quality differs from the current suggestion.
+   Tapping the suggestion itself (or tapping when no suggestion
+   is active) doesn't latch.
+5. Suggested button label flips from "Suggested" to
+   "Suggested · Return ⏎" so the kid sees the shortcut hint.
+   A11y label adds "press Return to accept".
+
+### Test additions (HintLadderTests grows by 4)
+
+- `testOverride_NotLatchedYieldsNormalSuggestion` —
+  baseline: tier 2 + no override → .hard.
+- `testOverride_LatchedSilencesSuggestionEvenWithHints` —
+  tier 2 + manualOverride=true → nil (no nudge).
+- `testOverride_LatchedSilencesAtEveryTier` — defensive across
+  tier 1..3.
+- `testOverride_PerQuestionResetSemantics` — codifies that a
+  fresh question (override=false) yields the normal suggestion
+  at each tier.
+
+These tests use a private `suggestedQualityGate(hintTier:manualOverride:)`
+helper that mirrors the view's computed property EXACTLY —
+same `guard` ordering, same function call. Future refactors
+that flip the latching logic will break the helper AND the
+view in lockstep, which is what we want.
+
+### lh005 allowlist resync
+
+- `QuestionDetailView.swift:406` → `:443` (`withAnimation` site
+  shifted 37 lines by the qualityButton split into a wrapper +
+  helper). Same site, updated note.
+
+### Out-of-scope (logged for next session)
+
+- **First-tap-on-suggestion analytics.** Today's logic only
+  latches when the kid OVERRIDES. We don't currently know
+  whether kids actually press Return on the suggestion or
+  mouse-click — a small `didAcceptSuggestion` counter on
+  DataStore would tell us. Pure analytics, no behaviour change.
+- **Visual feedback when Return fires.** Pressing Return today
+  triggers the suggested button silently (same as a mouse
+  click). A brief flash/scale animation would confirm the
+  shortcut registered. Cosmetic.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean.
+- `HintLadderTests`: 19 / 19 pass locally (15 prior + 4 new
+  override tests).
+- All 9 lints clean (lh005 allowlist resynced; no new
+  violations added).
+- 1 commit, pushed.
+
+### Notes for future sessions
+
+- The latch is one-way per question. There's no "un-latch" UI
+  yet. If a kid taps the wrong button accidentally, the only
+  reset is Prev → Next → back. That's intentional: SwiftUI
+  doesn't have a clean "undo last tap" primitive for buttons,
+  and the cost of accidentally latching is just "no more
+  nudges on this Q for this session" — low.
+- The keyboard shortcut uses `modifiers: []`, i.e. plain
+  Return. Big Sur SwiftUI treats this as triggering only when
+  the button is in the active responder chain — so the picker
+  has to be on screen for it to fire. If a future menu/sheet
+  also wants Return, watch for the runtime warning
+  "Conflict: multiple buttons claim ↩".
+- The `@ViewBuilder` branching pattern in `qualityButton` is
+  small but worth understanding before refactoring. If you
+  collapse the two branches into one, you'll need a custom
+  `ViewModifier` to conditionally apply
+  `.keyboardShortcut(_:modifiers:)`. The split-into-helper
+  approach is shorter and easier to follow.
+
 

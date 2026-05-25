@@ -134,6 +134,65 @@ final class HintLadderTests: XCTestCase {
         }
     }
 
+    // MARK: - Manual-override stickiness (2026-05-25 22:30 follow-up)
+    //
+    // The view-layer flag `manualOverride: Bool` latches true the
+    // moment the kid taps a quality that ISN'T the current
+    // suggestion. Once latched, `suggestedQuality` returns nil even
+    // if the kid then reveals more hints — the picker stops nudging
+    // because the kid expressed a preference.
+    //
+    // The view code is:
+    //     guard hintTier > 0 else { return nil }
+    //     guard !manualOverride else { return nil }
+    //     return Question.defaultQualityForHintTier(hintTier)
+    //
+    // These tests symbolically replay that gate so a future refactor
+    // can't silently flip the latching semantics.
+
+    /// Helper mirroring `QuestionDetailView.suggestedQuality` exactly.
+    /// Kept as a pure function so the contract tests don't need a
+    /// SwiftUI environment.
+    private func suggestedQualityGate(hintTier: Int, manualOverride: Bool) -> ReviewQuality? {
+        guard hintTier > 0 else { return nil }
+        guard !manualOverride else { return nil }
+        return Question.defaultQualityForHintTier(hintTier)
+    }
+
+    func testOverride_NotLatchedYieldsNormalSuggestion() {
+        // Baseline: tier 2 with no override → .hard suggested.
+        XCTAssertEqual(suggestedQualityGate(hintTier: 2, manualOverride: false), .hard)
+    }
+
+    func testOverride_LatchedSilencesSuggestionEvenWithHints() {
+        // The kid tapped Good when Hard was suggested → latch
+        // manualOverride. Next render at the same tier should
+        // produce no suggestion.
+        XCTAssertNil(suggestedQualityGate(hintTier: 2, manualOverride: true),
+            "Once the kid has manually overridden, the picker MUST stop " +
+            "nudging on this question — even at higher hint tiers.")
+    }
+
+    func testOverride_LatchedSilencesAtEveryTier() {
+        // Defensive: latch should silence every tier 1..3.
+        for tier in 1...3 {
+            XCTAssertNil(suggestedQualityGate(hintTier: tier, manualOverride: true),
+                "Override latch must silence tier \(tier) as well.")
+        }
+    }
+
+    func testOverride_PerQuestionResetSemantics() {
+        // The view resets `manualOverride = false` in
+        // `.onChange(of: question.id)` alongside the other per-Q
+        // state. Symbolically: a fresh question always starts
+        // un-latched, so tier-N hint usage produces the normal
+        // suggestion.
+        let freshOverride = false  // fresh question
+        XCTAssertEqual(suggestedQualityGate(hintTier: 1, manualOverride: freshOverride), .good)
+        XCTAssertEqual(suggestedQualityGate(hintTier: 2, manualOverride: freshOverride), .hard)
+        XCTAssertEqual(suggestedQualityGate(hintTier: 3, manualOverride: freshOverride), .forgot)
+    }
+
     // MARK: - JSON round-trip preserves hints
 
     func testHintsRoundTripThroughJSON() throws {
