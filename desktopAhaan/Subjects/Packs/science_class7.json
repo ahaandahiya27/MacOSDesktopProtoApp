@@ -8059,7 +8059,17 @@
             "Picking Pepsin — pepsin breaks down PROTEINS in the stomach, not fats. Bile (from the liver) handles fats in the small intestine.",
             "Picking Amylase — amylase tackles STARCHES (in saliva and pancreas juice). Fat needs bile to be emulsified before enzymes can break it."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Where in the digestive tract does fat actually get broken down?",
+              "answer": "In the small intestine — after bile has emulsified it into tiny droplets.",
+              "solutionSteps": [
+                "Bile is made in the liver, stored in the gallbladder.",
+                "It enters the small intestine when fatty food arrives.",
+                "Bile breaks the fat into droplets; lipase enzymes then digest them."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             30,
@@ -11809,7 +11819,17 @@
             "Picking 10 — too short. The silkworm needs about 25 days of constant eating to build enough body mass to spin a cocoon.",
             "Picking 35 — too long. The silkworm pupates inside its cocoon around day 25; if it took 35, the cocoon would unravel before harvest."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "After ~25 days as a larva, what does the silkworm become?",
+              "answer": "A pupa wrapped in a cocoon of silk thread.",
+              "solutionSteps": [
+                "The larva eats mulberry leaves for ~25 days, growing 10000× heavier.",
+                "It then spins a cocoon of one continuous silk thread (300-900 m).",
+                "Inside, it changes into a pupa, then a moth — but silk-farms harvest the cocoon before that."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             44,
@@ -11889,7 +11909,17 @@
             "Picking Carding — carding is a WOOL step (combing fibres straight). Reeling is silk-specific: unwinding one continuous thread off a softened cocoon.",
             "Picking Weaving — weaving turns thread into fabric. Reeling produces the raw silk thread in the first place."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Before reeling can start, what's done to the cocoon?",
+              "answer": "It's softened in hot water so the silk thread can be unwound.",
+              "solutionSteps": [
+                "The cocoon is one continuous thread glued together with sericin (a protein).",
+                "Hot water dissolves the glue without breaking the thread.",
+                "Reels then unwind the single thread, which can be hundreds of metres long."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             44,
@@ -11970,7 +12000,17 @@
             "Picking Sheep — that's sheep farming, not sericulture. Sericulture is specifically the rearing of silkworms for their cocoons.",
             "Picking 'cocoons of cotton' — cotton comes from a plant; no cocoons involved. Silkworm cocoons are what sericulture harvests."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Sericulture vs apiculture — what's the difference?",
+              "answer": "Sericulture rears silkworms for silk; apiculture rears bees for honey.",
+              "solutionSteps": [
+                "Both are types of insect farming for human use.",
+                "Sericulture: silkworms → cocoons → silk thread.",
+                "Apiculture: bees → hives → honey + beeswax."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             44,
@@ -15378,7 +15418,17 @@
             "Picking Conduction — conduction needs touching solids. Sun-to-Earth crosses 150 million km of vacuum; only radiation works across nothing.",
             "Picking Convection — convection needs a fluid (air, water) to carry heat. Space has no fluid, so convection can't bridge the gap."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "If radiation can travel through vacuum, why can't conduction?",
+              "answer": "Conduction needs touching atoms to pass on energy; vacuum has no atoms.",
+              "solutionSteps": [
+                "Conduction = neighbouring atoms vibrating each other faster.",
+                "Without matter in between, there's nothing to vibrate.",
+                "Radiation travels as waves, which need no medium — so the Sun's heat reaches us."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             56,
@@ -15522,7 +15572,17 @@
             "Picking 'land has more water' — it's the OPPOSITE. Sea is mostly water; water needs lots of heat to warm. Land (rock, soil) heats faster per gram.",
             "Picking 'sea is closer to the Sun' — both are hit by the same Sun. The difference is what happens after the heat arrives."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "At night, the wind reverses direction near the coast. Why?",
+              "answer": "Land cools faster than sea after sunset, so warmer sea air rises and cooler land air flows toward the sea.",
+              "solutionSteps": [
+                "By day, land heats faster (lower specific heat) — breeze blows sea-to-land.",
+                "At night, land cools faster too — now the sea is the warmer side.",
+                "Warm air over the sea rises; cooler land air flows out to replace it (land-to-sea)."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             42,
@@ -17962,7 +18022,17 @@
             "Picking 0 — pH 0 is extremely acidic (battery acid territory). Pure water sits right in the middle of the 0-14 scale.",
             "Picking 14 — pH 14 is extremely basic (drain cleaner). Pure water is neutral, neither acidic nor basic, so pH = 7."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Which pH is more acidic — pH 3 or pH 6?",
+              "answer": "pH 3 is more acidic. Lower number = stronger acid.",
+              "solutionSteps": [
+                "The pH scale runs 0 (very acidic) → 7 (neutral) → 14 (very basic).",
+                "Each step is 10× stronger or weaker (logarithmic).",
+                "So pH 3 is 1000× more acidic than pH 6 — not just 'twice'."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             55,
@@ -18026,7 +18096,17 @@
             "Picking 'Acid + Gas' — gas can be released in some acid reactions (with metals or carbonates), but not in basic neutralisation. The pair is salt + water.",
             "Picking 'Only Water' — water is one product but the acid's negative ion plus the base's positive ion combine into a salt. That salt is the OTHER product."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "When stomach acid meets antacid (a base), what's actually happening?",
+              "answer": "A neutralisation reaction — acid + base → salt + water — that brings pH closer to neutral.",
+              "solutionSteps": [
+                "Stomach acid is HCl (pH ~1.5); antacid contains a mild base.",
+                "The two react: the H⁺ from acid joins OH⁻ from base to make H₂O.",
+                "The leftover ions form a harmless salt. Heartburn fades."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             57,
@@ -20694,7 +20774,17 @@
             "Picking 'chemical change' — when sugar crystallises from a syrup, the sugar is still sugar. No new substance is born; it's the same molecule arranging into a solid.",
             "Picking 'biological change' — crystallisation doesn't involve life. It's the geometric ordering of molecules as a liquid loses energy."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why is crystallisation NOT a chemical change, even though it looks dramatic?",
+              "answer": "No new substance is made — the dissolved salt just rearranges into ordered solid form. Same molecule throughout.",
+              "solutionSteps": [
+                "Dissolve salt in water: salt is in tiny invisible particles.",
+                "Slowly evaporate the water: the salt particles come together in a geometric pattern.",
+                "Both before and after, it's the SAME compound (NaCl). No new chemical formed → physical change."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             69,
@@ -23294,7 +23384,17 @@
             "Picking Thermometer — thermometer measures TEMPERATURE, not wind speed. Anemometer (with spinning cups) catches wind speed.",
             "Picking Hygrometer — hygrometer measures HUMIDITY (moisture in air). Different instrument, different job from wind-speed measurement."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What does a barometer measure (not an anemometer)?",
+              "answer": "Atmospheric pressure — useful for predicting weather.",
+              "solutionSteps": [
+                "Anemometer (spinning cups) → wind speed.",
+                "Barometer → atmospheric pressure.",
+                "Falling barometer often warns of bad weather; rising = clear skies coming."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             83,
@@ -23348,7 +23448,17 @@
             "Picking 'Siberian crane' — Siberian cranes do migrate, but their journey is much shorter. Arctic terns fly pole-to-pole, ~70,000 km per year.",
             "Picking 'Emperor penguin' — penguins waddle and swim but don't migrate continents. Arctic terns hold the record for the longest annual migration."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why does the Arctic tern migrate pole-to-pole rather than staying put?",
+              "answer": "It chases summer — never wintering, always finding daylight and food.",
+              "solutionSteps": [
+                "Arctic summer (June): tern breeds near the North Pole.",
+                "Antarctic summer (December): tern flies 35,000 km south.",
+                "It experiences more daylight per year than any other animal — about 8 months of summer."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             92,
@@ -28231,7 +28341,17 @@
             "Picking Sandy — sandy soil drains too fast for paddy, which needs standing water. Clayey soil holds water, perfect for rice fields.",
             "Picking Loamy — loamy is great for most crops but TOO well-drained for paddy. Paddy specifically wants clay's water retention."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why doesn't paddy grow well in sandy soil?",
+              "answer": "Sandy soil drains too fast — paddy roots need standing water to grow rice grains.",
+              "solutionSteps": [
+                "Sand grains are big, with lots of space between them.",
+                "Water rushes through without being held back.",
+                "Paddy fields are flooded for weeks; only clayey soil holds that water in."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             112,
@@ -30641,7 +30761,17 @@
             "Picking 'aerobic' — aerobic means WITH oxygen (most of our cells, most of the time). Anaerobic means WITHOUT oxygen (yeast in dough, muscles in a sprint).",
             "Picking 'atmospheric' — atmospheric just means 'of the atmosphere'. Respiration types are aerobic (with O₂) or anaerobic (without O₂)."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What does yeast convert sugar into during anaerobic respiration?",
+              "answer": "Carbon dioxide and alcohol (ethanol).",
+              "solutionSteps": [
+                "Yeast is a fungus that can live with or without oxygen.",
+                "Without O₂: sugar → CO₂ + ethanol + a small amount of energy.",
+                "Bread baking uses the CO₂; brewing uses both."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             122,
@@ -33282,7 +33412,17 @@
             "Picking Phloem — phloem transports FOOD (sugars) made in leaves DOWN to the rest of the plant. Water travels UP through xylem.",
             "Picking Stomata — stomata are PORES on the leaf surface for gas exchange. Water is pulled up the stem by the xylem tubes."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What pulls water up the xylem against gravity in a 20m-tall tree?",
+              "answer": "Transpiration — water evaporating from leaves creates suction that pulls the column up.",
+              "solutionSteps": [
+                "Water molecules cling to each other (cohesion) — they form a continuous column.",
+                "When water evaporates from leaf stomata, it pulls on the column.",
+                "The pull at the top lifts new water in at the roots, against gravity."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             140,
@@ -35586,7 +35726,17 @@
             "Picking Fertilisation — fertilisation happens AFTER pollination, when pollen tube reaches the ovule. Pollination is just the pollen ARRIVING on the stigma.",
             "Picking Germination — germination is when a SEED sprouts into a seedling. Pollination is the earlier step: pollen meeting stigma."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "What's the difference between pollination and fertilisation?",
+              "answer": "Pollination delivers pollen to the stigma; fertilisation is the actual fusion of pollen and ovule inside the ovary.",
+              "solutionSteps": [
+                "Step 1 (pollination): pollen lands on stigma, perhaps via bee or wind.",
+                "Step 2 (germination of pollen): a tube grows down through the style to the ovule.",
+                "Step 3 (fertilisation): pollen nucleus fuses with the ovule nucleus → seed begins to form."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             145,
@@ -43596,7 +43746,17 @@
             "Picking 'speeds up' — light goes FASTER in less-dense media (vacuum). When it enters denser water, it SLOWS DOWN and bends towards the normal.",
             "Picking 'stops' — light doesn't stop in transparent media; it travels slower. (It only stops if it hits something opaque that absorbs it.)"
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why does a straw look bent when half-dipped in water?",
+              "answer": "Refraction — light from the underwater part bends as it leaves the water, so the brain sees the straw 'kinked' at the surface.",
+              "solutionSteps": [
+                "Light travels slower in water than in air.",
+                "Slowing makes the light ray bend at the water-air boundary.",
+                "Our brain assumes light travels straight, so the straw looks displaced."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             194,
@@ -43677,7 +43837,17 @@
             "Picking 'upside-down' — plane mirrors don't flip top-to-bottom. They flip LEFT-RIGHT (lateral inversion), which is why your watch reads backwards.",
             "Picking 'smaller' — plane mirror images are the SAME size as the object. They look smaller only at a distance, like everything else."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "If a plane mirror flips left and right, why doesn't it also flip up and down?",
+              "answer": "Mirrors flip the axis perpendicular to their face — for a vertical mirror that's left/right, not up/down.",
+              "solutionSteps": [
+                "Stand in front of a mirror: your nose points TOWARD the mirror.",
+                "The mirror only swaps front-and-back — it doesn't really flip 'left'.",
+                "What looks like a swap is your brain comparing your face to the reversed-front image."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             177,
@@ -46190,7 +46360,17 @@
             "Picking 'cooling roofs' — a side effect at best. The point of rainwater harvesting is to GUIDE rain into the ground or storage, replenishing groundwater.",
             "Picking 'stopping rain' — you can't stop rain. Harvesting catches and saves it: directed into recharge pits, tanks, or aquifers."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "How does rooftop rainwater actually reach groundwater?",
+              "answer": "Pipes route the rooftop water to a soak pit or recharge well that lets it seep down through soil.",
+              "solutionSteps": [
+                "Rain hits rooftop → flows through gutters → into a pipe.",
+                "The pipe leads to a soak pit dug into the ground.",
+                "Water gradually percolates down through soil layers, joining the aquifer."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             189,
@@ -48647,7 +48827,17 @@
             "Picking 'eating animals' — that's CARNIVORE behaviour, not decomposition. Decomposers break down DEAD matter (leaves, logs, corpses) and recycle nutrients.",
             "Picking 'producing oxygen' — that's photosynthesisers (green plants). Decomposers don't photosynthesise; they consume dead organic matter."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "Why are forests called 'self-renewing' even though leaves and trees die?",
+              "answer": "Decomposers break down the dead matter back into nutrients, which feed new trees — a closed loop.",
+              "solutionSteps": [
+                "Dead leaves and wood fall to the forest floor.",
+                "Fungi and bacteria break them down into simple nutrients.",
+                "Tree roots absorb those nutrients to grow — closing the cycle. No external fertiliser needed."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             200,
@@ -58466,7 +58656,17 @@
             "Picking 'distance from the Sun' — Earth's orbit is almost a circle; distance barely changes. The TILT of Earth's axis is what gives us seasons.",
             "Picking \"the Moon's gravity\" — the Moon causes tides, not seasons. Seasons come from the 23.5° tilt of Earth's spin axis relative to its orbit."
           ],
-          "variations": [],
+          "variations": [
+            {
+              "prompt": "If Earth's axis was straight up (no tilt), what would happen to seasons?",
+              "answer": "There would be no seasons — every place would have the same weather year-round.",
+              "solutionSteps": [
+                "Seasons come from the 23.5° tilt: when one hemisphere leans toward the Sun, it gets summer.",
+                "Without tilt, both hemispheres would always face the Sun equally.",
+                "Equatorial regions would stay hot, polar regions cold — but no winter-summer swing anywhere."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [
             157,
