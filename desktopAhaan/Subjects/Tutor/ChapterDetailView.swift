@@ -29,7 +29,25 @@ struct ChapterDetailView: View {
     /// forgets to add it to the Xcode project — without this gate, the
     /// card opens an empty "Article not found" sheet on click.
     private var beyondTheBookEntry: ArticleEntry? {
-        guard let entry = ArticleIndex.entries["\(chapter.id)_beyond"] else {
+        return resolvedArticleEntry(forKey: "\(chapter.id)_beyond")
+    }
+
+    /// Returns the chapter's "Common Mistakes" article entry ONLY when
+    /// the HTML file is findable in Bundle.main — same gate as
+    /// `beyondTheBookEntry`. Surfaces on ChapterDetailView via the
+    /// `CommonMistakesCard` alongside Beyond-the-Book. Wired up
+    /// 2026-05-26 with the enrichment-consistency push that brought
+    /// `ch{NN}_mistakes` coverage to 19/19 chapters.
+    private var commonMistakesEntry: ArticleEntry? {
+        return resolvedArticleEntry(forKey: "\(chapter.id)_mistakes")
+    }
+
+    /// Shared resolver — looks up the entry by key and confirms the
+    /// HTML file exists in Bundle.main (subdirectory-aware with flat-
+    /// bundle fallback). Returns nil when the entry is missing OR the
+    /// file isn't bundled — either way the card auto-hides.
+    private func resolvedArticleEntry(forKey key: String) -> ArticleEntry? {
+        guard let entry = ArticleIndex.entries[key] else {
             return nil
         }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -199,14 +217,26 @@ struct ChapterDetailView: View {
                 }
 
                 // Enrichment surfaces: "Beyond the Book" article (long-form
-                // reading), "Try at Home" sheet (hands-on experiments), and
-                // "Notebook" sheet (free-form per-chapter writing).
-                // Beyond/Home are content-gated; Notebook is always shown.
+                // reading), "Common Mistakes" article (revision-tier
+                // wrong-answer review — added 2026-05-26 to bring the
+                // surface to 19/19 chapter coverage), "Try at Home" sheet
+                // (hands-on experiments), and "Notebook" sheet (free-form
+                // per-chapter writing). Beyond/Mistakes/Home are
+                // content-gated; Notebook is always shown.
                 VStack(spacing: 12) {
-                    if beyondTheBookEntry != nil || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                    if beyondTheBookEntry != nil
+                        || commonMistakesEntry != nil
+                        || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
                         HStack(spacing: 12) {
                             if let entry = beyondTheBookEntry {
                                 BeyondTheBookCard(entry: entry) {
+                                    DispatchQueue.main.async {
+                                        sheetCoordinator.presented = .article(entry)
+                                    }
+                                }
+                            }
+                            if let entry = commonMistakesEntry {
+                                CommonMistakesCard(entry: entry) {
                                     DispatchQueue.main.async {
                                         sheetCoordinator.presented = .article(entry)
                                     }
@@ -401,6 +431,9 @@ private struct BeyondTheBookCard: View {
         .accessibilityHint("Opens a long-form enrichment article for this chapter.")
     }
 }
+
+// (CommonMistakesCard lives in ChapterDetailView+CommonMistakesCard.swift —
+// lifted out 2026-05-26 to keep this file under the 600-LOC Big Sur ceiling.)
 
 // MARK: - Try at Home card
 
