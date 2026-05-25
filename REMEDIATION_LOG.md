@@ -2535,4 +2535,129 @@ free space above a threshold.
   rule. Don't accidentally schedule another snapshot session
   expecting it's needed.
 
+## Session: 2026-05-26 (10-hour autonomous block round 2) — RM finish + UI feature + indentation polish
+
+### Goal
+
+Bring closure to the deferred lh005 grandfathered sites, surface a
+real concept-level discoverability improvement, pin the new chip
+matrix with a ratchet test, and clean up a long-standing scene
+indentation oddity. Net: shipped 5 commits with progressive scope.
+
+### Commits this 10-hour block
+
+- `0d2c5a9` Block A — **Reduce-Motion sweep round 2** finished
+  the LH005b migration. 54 sites across 21 files
+  (DiscoverChapter* dispatchers Ch.2/3/4/8/9/12, inline
+  Discover scenes Ch.2/3/4/5/6/7, Scene7 PitcherPlantTrap,
+  top-level Favorites/History/Practice, plus
+  ChapterDetailView+HomeExperiments and QuestionDetailView).
+  Across both RM sweeps (round 1 boss-quiz + round 2 today):
+  108 call sites routed through `withAnimationRespectingReduceMotion`.
+  `lh005_withanimation_allowlist.txt` is now header-only.
+  LH lint grandfather count dropped 39 → 3 (3 LH004b entries
+  remain, no LH005b).
+- `a933384` Block B — **ExtraReadingRow ratchet** pins the
+  7 × 19 = 133 chip-key matrix with a 4-case test class.
+  Routing-test class count: 9 → 10. Catches future regressions
+  where a chip's ArticleIndex entry disappears or a chapter
+  loses an article surface.
+- `496a566` Block C — **ChapterGlossaryCTA on ConceptDetailView**:
+  new compact secondary CTA that opens the owning chapter's
+  `_glossary` HTML article. Lives in sister file
+  `ConceptDetailView+ChapterGlossaryCTA.swift` (parent stays
+  well under 600 LOC). Wired between `articleButton` and
+  `explanationGroup` in the concept body. New routing class
+  `ChapterGlossaryCTARoutingTests` (3 cases) walks all 207
+  concepts and verifies the chapter-glossary lookup succeeds.
+- `aa2fb9d` Block D — **Indentation cleanup** across 99
+  Discover scene files. The scene generator had emitted
+  `LazyVStack(` at column 5 while its parent ScrollView was at
+  column 9 and children at column 17 — Swift parses fine, but
+  visually broken. Mechanical migration (`/tmp/fix_scene_indentation.py`)
+  re-aligned 99 sites to column 13. No behavioural change.
+- THIS COMMIT (Block E) — **ISSUE_CATEGORIES sweep + final
+  consolidation**. Flip H5 + O4 ❌🟡 → ✅ (Reduce-Motion
+  fully shipped). Append this entry to REMEDIATION_LOG.
+
+### Final state at the end of this block
+
+| Metric | Block start | Block end |
+|---|---|---|
+| `lh005_withanimation_allowlist.txt` size | 36 entries | **0 entries** (-36) |
+| Total `withAnimation` call sites routed through RM helper | 54 | **108** (+54) |
+| LH grandfather count (lint output line) | 39 | **3** (-36) |
+| Routing-ratchet test classes | 9 | **11** (+ExtraReadingRow, +ChapterGlossaryCTA) |
+| Total ratchet test cases | 36 | **43** (+7) |
+| ISSUE_CATEGORIES rows ❌🟡 → ✅ this block | 0 | **2** (H5, O4) |
+| ConceptDetailView reachable enrichment surfaces (per concept) | 1 (per-concept article) | **2** (per-concept article + chapter glossary CTA) |
+| Discover scene files with consistent indentation | 0 / 99 outdented | **99 / 99 aligned** |
+
+### Refused / deliberately not shipped
+
+- **Per-concept `pageRefs` precision tightening** — audit showed
+  only 13/207 concepts with ranges > 4 pages. Most of these
+  span genuinely-multi-page topics in the NCERT textbook
+  (e.g., `ch13_t01_c01` "Speed and average speed" pages 161-171
+  covers the section that does span those pages). Tightening
+  without the textbook open in front of me would be guesswork.
+  Y3 remains 🟡.
+- **LazyVStack → VStack swap** on the 99 scene files — the
+  inner content is short (≤ 7 children per scene) so VStack
+  would be marginally correct, but the swap is a functional
+  change (LazyVStack defers off-screen rendering). Risk-reward
+  on a 99-file mechanical change with unclear payoff: not
+  worth it. Kept LazyVStack.
+- **Image-pixel snapshot tests** (T4 fully closing to ✅) —
+  still needs either a 3rd-party dep (forbidden) or a custom
+  NSHostingView → CGImage helper (~200 LOC + per-chapter
+  golden PNGs committed). Routing ratchet matrix now covers
+  9 article surfaces × 19 chapters + 7 chip surfaces × 19
+  chapters + 1 concept-glossary surface × 207 concepts — the
+  structural fingerprint is comprehensive. T4 stays 🟡.
+
+### Reusable patterns this block proved
+
+- **Mechanical Swift edits via Python file-wide regex** worked
+  cleanly for both the RM-helper rename (Block A) and the
+  indentation realignment (Block D). 99 + 21 file edits across
+  the two blocks, zero functional regressions. Pattern:
+    1. Define a precise regex with explicit anchors.
+    2. Apply via `re.sub` line-by-line.
+    3. Print per-file site count.
+    4. Run ci-build-test BEFORE committing — catches any
+       accidental over-match.
+- **Sister-file extraction** for UI sub-views keeps parent
+  files lean. Both `ChapterDetailView+ExtraReadingRow.swift`
+  (last block) and `ConceptDetailView+ChapterGlossaryCTA.swift`
+  (this block) ship as ~80 LOC standalone files, leaving the
+  parent at 570-572 LOC.
+- **Ratchet-test pattern for UI matrices** generalizes. The
+  4-case structure (suffix sentinel + chapter coverage +
+  exact-count sentinel + folder/HTML resolution) catches the
+  same family of regressions across 11 routing classes now.
+
+### Build / tests / lints
+
+- All 5 commits pushed cleanly to origin (`aa2fb9d` was the
+  last test-block-before-this-doc-commit).
+- CI: green on every push.
+- All 9 lints clean.
+- 36 ratchet test cases (previous) + 7 new (ExtraReadingRow + 3
+  ChapterGlossaryCTA) = 43 cases pinning UI invariants.
+
+### Notes for future sessions
+
+- The atomic-commit rule held throughout this block — no
+  sentinel-drift races, no working-tree-drift CI failures.
+- Adding new test files to the project requires running
+  `python3 scripts/generate_compat_pbxproj.py` to register
+  them in the pbxproj. The script auto-includes everything
+  under desktopAhaanTests/ — no manual UUID assignment needed.
+- `ExtraReadingRowTests` and `ChapterGlossaryCTARoutingTests`
+  use the same `loadSciencePack()` helper as the older
+  `*RoutingTests` classes — keep that helper local to each
+  test class (cheap copy, ~7 LOC) until 3 or more classes need
+  to share state, then lift to a shared test-utility file.
+
 

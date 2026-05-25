@@ -133,7 +133,7 @@ Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to c
 | H2 | `.accessibilityHint` where non-obvious | 🟡 used sparingly; SwiftUI's `Button("Label")` auto-narrates label as VoiceOver hint, so most controls don't need explicit hints |
 | H3 | `.accessibilityValue` for stateful controls (sliders, pickers) | ✅ DiscoveryWidget slider now speaks `title` as label + both `valueLabel(value)` and the computed `output(value)` as value — VoiceOver users hear the educational payload as they drag, not just the number. DiscoveryStepper pills now preview `outputAt(i)` (per-pill outcome) instead of the currently-selected `currentOutput`, so browsing the row teaches what each choice means before committing. Settings sliders continue to rely on default SwiftUI accessibility (`Slider` auto-provides accessibilityValue) — that path remains correct |
 | H4 | Dynamic Type Large / xLarge no clipping | 🟡 `testConceptTitlesStayShortEnoughForDynamicType` asserts no concept title > 90 chars (proxy for xLarge fit in card headers); full visual verification still needs a UI test |
-| H5 | Reduce Motion respected on animations | 🟡 TimedSceneModifier + ParticleEmitter (the heavy animations) honour `@Environment(\.accessibilityReduceMotion)`; spot `.animation(...)` on tap feedback in Scene buttons does not — visual only, no time-critical info lost |
+| H5 | Reduce Motion respected on animations | ✅ TimedSceneModifier + ParticleEmitter honour `@Environment(\.accessibilityReduceMotion)`; AND every `withAnimation(<X>) { ... }` call site (108 across the codebase) is now routed through `withAnimationRespectingReduceMotion(<X>) { ... }` — two RM-migration sweeps (Scene9 boss-quiz round 1 + DiscoverChapter / inline Scenes / top-level views round 2, both 2026-05-26) closed the long tail. `scripts/lh005_withanimation_allowlist.txt` is empty; the LH005b lint locks the state |
 | H6 | Color-contrast both Light / Dark | 🟡 SwiftUI semantic colours (.orange, .secondary, NSColor.*) auto-adapt; explicit `Color(red:green:blue:)` literals live only in `ChapterTheme.swift` (per-chapter brand identity, intentionally consistent across modes) — pixel-perfect contrast not measured |
 | H7 | Keyboard-only navigation full coverage | 🟡 every action has a menu Command (with shortcut) or a focused Button; full coverage relies on SwiftUI's default focus traversal |
 | H8 | Focus management across views | 🟡 SwiftUI defaults used; not manually overridden |
@@ -221,7 +221,7 @@ Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to c
 | O1 | Scene1–8 completion tracking + Got-It button | ✅ |
 | O2 | Boss Quiz scoring | ✅ |
 | O3 | Animation timers cleanup on scene leave | ✅ `.timedScene` lifecycle |
-| O4 | ReduceMotion fallback per scene | 🟡 — see H5 (TimedSceneModifier + ParticleEmitter honour the env value; spot animations are visual-only) |
+| O4 | ReduceMotion fallback per scene | ✅ — see H5. After the 2026-05-26 RM-migration sweeps, every per-scene `withAnimation(<X>) { ... }` site routes through `withAnimationRespectingReduceMotion`, including the Scene9 boss-quiz files (8 chapters), DiscoverChapter dispatchers (Ch.2/3/4/8/9/12), inline scene interactions (Ch.2/3/4/5/6/7 various), and Scene7 PitcherPlantTrap. The lh005 allowlist is empty |
 | O5 | ViewBuilder ≤10 per scene closure | ✅ |
 | O6 | DiscoveryWidget injection per chapter | ✅ 18/18 chapters |
 | O7 | DiscoveryToggle / DiscoveryStepper rollout (M2 variety) | 🟡 demo injections only — broader content rollout is a content-pass, not a code-change |
