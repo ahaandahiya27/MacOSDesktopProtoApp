@@ -110,6 +110,31 @@ final class BossQuizMigrationRatchetTests: XCTestCase {
         }
     }
 
+    /// Pedagogical-content floor (added 2026-05-25 enrichment session):
+    /// every boss-quiz item MUST ship with at least one entry in
+    /// `commonMistakes`. If a future content edit empties the array
+    /// for any boss Q, the kid who lands on it from Daily Practice
+    /// would see the misconception card render blank — and we'd
+    /// silently lose the corrective payload the migration was for.
+    func testEveryBossQuizHasCommonMistakes() throws {
+        let pack = try loadSciencePack()
+        var emptyIds: [String] = []
+        for chapter in pack.chapters {
+            for q in chapter.bossQuestionsList {
+                if q.commonMistakes.isEmpty {
+                    emptyIds.append(q.id)
+                }
+            }
+        }
+        XCTAssertTrue(
+            emptyIds.isEmpty,
+            "These boss-quiz items ship with empty commonMistakes:\n" +
+            emptyIds.map { "  - \($0)" }.joined(separator: "\n") +
+            "\nEvery boss Q must carry ≥ 1 commonMistake so the post-answer " +
+            "card has something to teach the kid who got it wrong."
+        )
+    }
+
     // MARK: - Helpers
 
     private func loadSciencePack() throws -> SubjectPack {

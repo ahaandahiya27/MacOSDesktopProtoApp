@@ -1372,4 +1372,108 @@ resolver returns the chapter context cleanly.
   same JSON from… nothing. Safe but useless. Delete in a future
   cleanup pass if it becomes confusing.
 
+## Session start: 2026-05-25 20:30 +05:30 — BOSS-QUIZ PEDAGOGICAL ENRICHMENT
+
+### Goal
+Convert the 200 migrated boss-quiz Questions from "id + prompt +
+answer + solutionSteps" to first-class pack Questions with
+populated `commonMistakes` and selective `variations`. The prior
+session's migration shipped the wiring (Daily Practice → Recently
+Missed → QuestionDetailView for boss ids) but left the
+pedagogical payload empty — the two surfaces
+`QuestionDetailView.commonMistakesCard` (line 853) and
+`variationsSection` (line 880) rendered nothing for the 200 boss
+items because their JSON arrays were `[]`.
+
+This session's job: fill them.
+
+### Commits landed this session
+
+- `4ea621d` Ch.1 boss-quiz commonMistakes pilot (15 Qs · 30 entries · 4 variations)
+- `254ece1` Ch.2-5 enrichment (45 Qs · 90 entries · 3 variations)
+- `f0dd9b4` Ch.6-10 enrichment (50 Qs · 100 entries · 4 variations)
+- `f4ad26e` Ch.11-15 enrichment (50 Qs · 100 entries · 3 variations)
+- THIS COMMIT — Ch.16-19 enrichment + ratchet + log close-out
+  (40 Qs · 80 entries · 1 variation)
+
+### Final coverage
+
+  200 / 200 boss Qs carry ≥ 1 commonMistake (target met — 2 each).
+   15 / 200 boss Qs carry 1 variation (~7.5%; under the 50% target
+            in the SUPERPROMPT but applied selectively — only when
+            there was a meaningfully different angle on the same
+            concept, per §7. Force-shipping 100 variations would
+            have been padding).
+
+### Authoring voice (anchor: Ch.1, matches textbook-Q style)
+
+Each commonMistake names the tempting wrong option from the MCQ,
+explains why it tempts (or what mental model produces it), and
+states the corrective framing. ≤ 35 words per entry. Voice is
+12-year-old reading level — declarative, no "famously" or
+"importantly" filler, mild humour where it lands.
+
+Examples from Ch.1 q03 (Cuscuta):
+  - "Picking Saprotroph — saprotrophs feed on DEAD matter (like a
+    mushroom on a log). Cuscuta wraps around a LIVING host plant,
+    so it's a parasite."
+  - "Calling Cuscuta 'just a plant' — it looks like yellow twine
+    because it has no chlorophyll. It can't make food, so it has
+    to steal it."
+
+Variations follow QuestionVariation's `prompt / answer /
+solutionSteps` schema, identical to the 297 textbook-Q variations
+that already ship in the pack.
+
+### Test additions
+
+- `BossQuizMigrationRatchetTests.testEveryBossQuizHasCommonMistakes`
+  — pins the floor at ≥ 1 per Q. If any future content edit
+  empties the array for any boss Q, the test fails loudly with the
+  id of the offender. Local run: 6 / 6 ratchet cases pass
+  (including the new one).
+
+### Out-of-scope (logged for next session)
+
+- **Variation coverage push to 50%**. Today's 7.5% prioritises
+  quality. Bringing more boss Qs to a meaningful variation is a
+  pure-content session — open candidates: Ch.11 (transport),
+  Ch.15 (light optics), Ch.19 (astronomy distances).
+- **`bossExplanation(_:)` helper deduplication** (carried over
+  from the 2026-05-25 migration close-out — still in scope, still
+  cosmetic).
+- **Boss-quiz `pageRefs` backfill** (Y3 in ISSUE_CATEGORIES). Each
+  boss Q currently ships `pageRefs: []`; mapping each item to its
+  textbook page would close the "📖 p.N" chip gap.
+
+### Build / tests / lints
+
+- `check_pack_schema.py`: clean (sci 207 concepts / 732 questions;
+  sanskrit 246 / 154).
+- `verify_pack_roundtrip.py`: clean both packs.
+- 6 BossQuizMigrationRatchetTests pass locally (incl. the new
+  `testEveryBossQuizHasCommonMistakes`).
+- All 9 lints clean (no allowlist edits this session — content
+  only, no line numbers shifted in lh005-tracked files).
+- 5 commits, pushed individually (one per chapter batch).
+
+### Notes for future sessions
+
+- The enrichment script `/tmp/enrich_boss_quiz.py` is intentionally
+  NOT in the repo. If you want to bulk-edit boss-quiz content
+  again, the pattern is straightforward: dict keyed by
+  `bossquiz_chNN_qII`, run with `--chapter N --write`, validate
+  with `verify_pack_roundtrip.py` + `check_pack_schema.py`. The
+  pack JSON is the canonical store; no Swift literals to keep in
+  sync after the migration.
+- The new `testEveryBossQuizHasCommonMistakes` deliberately checks
+  `>= 1`, NOT `== 2`. A future author may have good reason to
+  drop one entry on a specific Q; we don't want CI to block
+  that. The contract is "the card has SOMETHING to render."
+- QuestionDetailView's `commonMistakesCard` is gated behind a
+  `shouldShow` flag (line 862). The eyeball walk recipe to verify
+  end-to-end: miss Ch.1 Boss Q3 (Cuscuta), open Daily Practice,
+  tap the Recently-Missed row, confirm the commonMistakes card
+  renders with the new "Picking Saprotroph…" text.
+
 

@@ -44,4 +44,5 @@ The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity c
 
 ## §4. Resolved (archive)
 
-(none yet)
+- [x] **Boss-quiz content migration** (2026-05-25, commits `ad09c6e`/`fcbf7c6`/`1ec5ea6`/`464ff10`/`71068ac`/`0fad80b`) — moved 200 hand-authored Boss Quiz MCQs from Swift literals across 19 Scene9 files into `science_class7.json` so wrong answers resolve through `SubjectRegistry.location(forQuestionId:)` and surface in Daily Practice's Recently-Missed row.
+- [x] **Boss-quiz pedagogical enrichment** (2026-05-25, commits `4ea621d`/`254ece1`/`f0dd9b4`/`f4ad26e` + this one) — authored 2 commonMistakes per boss Q (400 entries) + 15 selective variations so `QuestionDetailView.commonMistakesCard` + `variationsSection` render real content when a kid taps in from Recently-Missed. `BossQuizMigrationRatchetTests.testEveryBossQuizHasCommonMistakes` floors the contract at ≥ 1 per Q so the gap can't silently re-open.
