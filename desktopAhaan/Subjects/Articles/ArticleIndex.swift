@@ -1315,6 +1315,71 @@ enum ArticleIndex {
         "ch19_mistakes": ArticleEntry(id: "ch19_mistakes", filename: "ch19_mistakes.html",
             title: "Five Wrong Answers Class 7 Students Give",
             chapterFolder: chapter19Folder, estimatedMinutes: 5),
+
+        // Vocabulary-deck articles (chapter-level enrichment) —
+        // Ch.2-19 generated 2026-05-26 by
+        // scripts/generate_glossary_articles.py from each chapter's
+        // `glossary` JSON. Ch.1 has the bespoke 30-term entry above
+        // (line 248). The existing `glossaryButton` on
+        // ChapterDetailView still opens GlossarySheet (a sheet
+        // surface keyed to the same JSON); these HTML articles are
+        // the deeper read-mode surface, linked from Beyond articles
+        // and surfaced via a Vocabulary Deck card in a follow-up
+        // session.
+        "ch02_glossary": ArticleEntry(id: "ch02_glossary", filename: "ch02_glossary.html",
+            title: "A Class 7 Nutrition in Animals Dictionary",
+            chapterFolder: chapter2Folder, estimatedMinutes: 5),
+        "ch03_glossary": ArticleEntry(id: "ch03_glossary", filename: "ch03_glossary.html",
+            title: "A Class 7 Fibre to Fabric Dictionary",
+            chapterFolder: chapter3Folder, estimatedMinutes: 5),
+        "ch04_glossary": ArticleEntry(id: "ch04_glossary", filename: "ch04_glossary.html",
+            title: "A Class 7 Heat Dictionary",
+            chapterFolder: chapter4Folder, estimatedMinutes: 5),
+        "ch05_glossary": ArticleEntry(id: "ch05_glossary", filename: "ch05_glossary.html",
+            title: "A Class 7 Acids, Bases and Salts Dictionary",
+            chapterFolder: chapter5Folder, estimatedMinutes: 5),
+        "ch06_glossary": ArticleEntry(id: "ch06_glossary", filename: "ch06_glossary.html",
+            title: "A Class 7 Physical and Chemical Changes Dictionary",
+            chapterFolder: chapter6Folder, estimatedMinutes: 5),
+        "ch07_glossary": ArticleEntry(id: "ch07_glossary", filename: "ch07_glossary.html",
+            title: "A Class 7 Weather, Climate and Adaptations Dictionary",
+            chapterFolder: chapter7Folder, estimatedMinutes: 5),
+        "ch08_glossary": ArticleEntry(id: "ch08_glossary", filename: "ch08_glossary.html",
+            title: "A Class 7 Winds, Storms and Cyclones Dictionary",
+            chapterFolder: chapter8Folder, estimatedMinutes: 5),
+        "ch09_glossary": ArticleEntry(id: "ch09_glossary", filename: "ch09_glossary.html",
+            title: "A Class 7 Soil Dictionary",
+            chapterFolder: chapter9Folder, estimatedMinutes: 5),
+        "ch10_glossary": ArticleEntry(id: "ch10_glossary", filename: "ch10_glossary.html",
+            title: "A Class 7 Respiration in Organisms Dictionary",
+            chapterFolder: chapter10Folder, estimatedMinutes: 5),
+        "ch11_glossary": ArticleEntry(id: "ch11_glossary", filename: "ch11_glossary.html",
+            title: "A Class 7 Transportation in Animals and Plants Dictionary",
+            chapterFolder: chapter11Folder, estimatedMinutes: 5),
+        "ch12_glossary": ArticleEntry(id: "ch12_glossary", filename: "ch12_glossary.html",
+            title: "A Class 7 Reproduction in Plants Dictionary",
+            chapterFolder: chapter12Folder, estimatedMinutes: 5),
+        "ch13_glossary": ArticleEntry(id: "ch13_glossary", filename: "ch13_glossary.html",
+            title: "A Class 7 Motion and Time Dictionary",
+            chapterFolder: chapter13Folder, estimatedMinutes: 5),
+        "ch14_glossary": ArticleEntry(id: "ch14_glossary", filename: "ch14_glossary.html",
+            title: "A Class 7 Electric Current and its Effect Dictionary",
+            chapterFolder: chapter14Folder, estimatedMinutes: 5),
+        "ch15_glossary": ArticleEntry(id: "ch15_glossary", filename: "ch15_glossary.html",
+            title: "A Class 7 Light Dictionary",
+            chapterFolder: chapter15Folder, estimatedMinutes: 5),
+        "ch16_glossary": ArticleEntry(id: "ch16_glossary", filename: "ch16_glossary.html",
+            title: "A Class 7 Water: A Precious Resource Dictionary",
+            chapterFolder: chapter16Folder, estimatedMinutes: 5),
+        "ch17_glossary": ArticleEntry(id: "ch17_glossary", filename: "ch17_glossary.html",
+            title: "A Class 7 Forest: Our Lifeline Dictionary",
+            chapterFolder: chapter17Folder, estimatedMinutes: 5),
+        "ch18_glossary": ArticleEntry(id: "ch18_glossary", filename: "ch18_glossary.html",
+            title: "A Class 7 Wastewater Story Dictionary",
+            chapterFolder: chapter18Folder, estimatedMinutes: 5),
+        "ch19_glossary": ArticleEntry(id: "ch19_glossary", filename: "ch19_glossary.html",
+            title: "A Class 7 Earth, Moon and the Sun Dictionary",
+            chapterFolder: chapter19Folder, estimatedMinutes: 5),
     ]
 
     static func entry(forConceptId id: String) -> ArticleEntry? {
