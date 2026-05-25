@@ -2052,4 +2052,146 @@ correct end-to-end.
   Big-Sur SwiftUI tests sometimes hit slower regex paths on
   cold runs; the string split is the lightweight choice.
 
+## Session: 2026-05-26 — SCIENCE CONSISTENCY: Common-Mistakes article at 19/19
+
+### Goal
+Bring the per-chapter "Common Mistakes" enrichment article to 100%
+coverage. Pre-session: Ch.1 shipped a bespoke 10-entry hand-authored
+`ch01_mistakes.html`; Ch.2-19 shipped nothing. The
+`chapter.misconceptions` field in `science_class7.json` was already
+populated (5 entries × 19 = 95) — the gap was purely article
+authoring + wiring.
+
+### Commits this session
+
+- `abb899f` chore(scripts): `generate_mistakes_articles.py` — JSON-
+  driven template generator, dry-run prints Ch.2 output for
+  verification.
+- `9ee728c` fix(content): 18 generated `ch{02..19}_mistakes.html`
+  files + 18 new `ArticleIndex.entries` + pbxproj regen.
+- `7b9782f` feat(ui): `CommonMistakesCard` on `ChapterDetailView`
+  + `commonMistakesEntry` accessor + sister file
+  `ChapterDetailView+CommonMistakesCard.swift` to keep the parent
+  view file under the 600-LOC Big Sur ceiling.
+- THIS COMMIT — `CommonMistakesRoutingTests` (4 ratchet cases) +
+  REMEDIATION_LOG close-out + POLISH_TODOS row flip.
+
+### Generator behaviour
+
+`scripts/generate_mistakes_articles.py` consumes each chapter's
+`misconceptions: [Misconception]` array and emits HTML matching
+the `ch01_mistakes.html` structural template:
+
+   <header class="hero">    breadcrumb / h1 / subtitle / meta
+   <section class="lede">   common opening prose
+   <section>...</section>   one per misconception:
+                              h2 = "{N}. \"{kidsThink}\""
+                              warning-box = uniform framing line
+                              fix paragraph = `actually` content
+   <aside class="fact-box"> common stretch-your-thinking prompt
+   <footer class="returns"> back-link to chapter overview
+
+CSS classes (`hero`, `warning-box`, `lede`, `fact-box`) inherit
+from each chapter's existing `ch{NN}_style.css` — no new CSS
+needed, no per-chapter stylesheet duplication.
+
+Skips Ch.1 (bespoke anchor stays); skips any chapter with < 3
+misconceptions (stop-and-ask threshold from SUPERPROMPT §10).
+Output: 18/18 chapters generated cleanly, average ~4800 bytes /
+~120 lines each, 5 sections per article.
+
+### UI wiring
+
+ChapterDetailView grows:
+1. `commonMistakesEntry` computed property (Bundle-file gate,
+   identical shape to `beyondTheBookEntry`).
+2. A shared `resolvedArticleEntry(forKey:)` helper that both
+   accessors call — retires the duplication that would have
+   appeared otherwise.
+3. `CommonMistakesCard` view rendered in the enrichment HStack
+   between BeyondTheBookCard and TryAtHomeCard. Orange/red
+   gradient (`#E07347 → C84D59`) distinguishes it visually from
+   the indigo Beyond card.
+4. Tap routes through the existing `.article(entry)` sheet path —
+   inherits off-main loading (b93bfa2) and Identifiable re-key
+   semantics (cb39f8d) for free.
+
+`CommonMistakesCard` lives in a sister file
+`ChapterDetailView+CommonMistakesCard.swift` to keep the parent
+under the 600-LOC ceiling. Matches the existing pattern used by
+`ChapterDetailView+HomeExperiments.swift` and
+`ChapterDetailView+PropagatedCTAs.swift`.
+
+### Test additions (THIS COMMIT)
+
+`CommonMistakesRoutingTests` — 4 parameterised cases pinning the
+wiring contract across all 19 chapters:
+
+1. `testEveryMistakesEntryIsInternallyConsistent` —
+   key prefix == id == filename prefix == chapterFolder number.
+
+2. `testEveryChapterHasMistakesArticleEntry` — locks the 19/19
+   coverage assertion. Any future regression where a chapter
+   loses its entry fails with the offending chapter id.
+
+3. `testMistakesHtmlFilesExistAndTitleMatchesChapter` — each
+   HTML resolves in Bundle.main AND its title/breadcrumb says
+   "Chapter N" matching the entry key. Catches content-author
+   copy-paste errors at test time (the exact failure shape the
+   2026-05-25 Beyond bug report described).
+
+4. `testGeneratedMistakesArticlesHaveAtLeastThreeSections` —
+   pins the SUPERPROMPT §10 minimum-3-sections threshold. Ch.1's
+   bespoke article is exempt (it has 10 sections, but the
+   generator skips it).
+
+Local 4/4 pass; expected on CI.
+
+### Out-of-scope (logged for next session)
+
+- **11 remaining Ch.1-only article surfaces.** Ch.1 publishes 13
+  enrichment HTMLs; we just shipped 1 across all 19. The remaining
+  11 are: `scientists`, `storymode`, `whatif`, `glossary`,
+  `infographic`, `miniproject`, `ncert_qa`, `plantoftheday`,
+  `selfcheck`, `beyond`, `bridge`. Each is its own ~4-hour
+  generator session — the pattern from this session is the
+  template: walk JSON → template HTML → wire ArticleIndex entries
+  → add chapter-detail card → ratchet test.
+
+- **Voice enrichment for the 18 generated articles.** Today's
+  voice is intentionally uniform (the win is consistency, not
+  bespoke richness). A future content session could hand-tighten
+  individual chapter articles where the auto-template prose
+  reads stiff — but this is a polish pass, not a coverage gap.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean.
+- `CommonMistakesRoutingTests` — 4/4 pass locally.
+- All 9 lints clean (file_size dipped over 600 after the inline
+  card was added; resolved by lifting `CommonMistakesCard` into
+  its sister file).
+- 4 commits, push-after-each per the SUPERPROMPT §11. Disk-full
+  recovery during Commit 1's first push (Yarn cache + DerivedData
+  wiped to free 4.5 GB before retry).
+
+### Notes for future sessions
+
+- The SUPERPROMPT pattern from this session is the model for the
+  remaining 11 surfaces. The Python generator
+  (`scripts/generate_mistakes_articles.py`) plus the
+  CommonMistakesRoutingTests template are the two reusable
+  pieces.
+- The ratchet `testEveryChapterHasMistakesArticleEntry` is
+  STRICTER than the Beyond ratchet — Beyond allowed Ch.3-19 to
+  be missing entries (those chapters didn't publish a Beyond
+  article). Mistakes locks 19/19 because we just brought it to
+  19/19. Don't relax this without a follow-up session that
+  intentionally drops a chapter.
+- If a future generator session needs to ship 11 more surfaces,
+  consider promoting the template HTML to a single
+  `scripts/article_templates/` directory so generators share
+  the hero/lede/footer fragments. Today's generator inlines them
+  (good for one-off; gets repetitive at scale).
+
 
