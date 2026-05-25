@@ -20439,8 +20439,21 @@
           "solutionSteps": [
             "Burning wood produces ash, COu{2082}, and water vapour u{2014} all new substances. That makes it a chemical change."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'melting ice' — ice melting is just water changing state. The H₂O is unchanged; freeze it again and you get ice back. That's physical.",
+            "Picking 'tearing paper' — torn paper is still paper, just in smaller pieces. No new substance is formed, so it's a physical change."
+          ],
+          "variations": [
+            {
+              "prompt": "Why is burning wood a chemical change but melting wax is only a physical one?",
+              "answer": "Burning makes new substances (ash, smoke, gases); melting just turns wax from solid to liquid — same substance.",
+              "solutionSteps": [
+                "Burning wood combines carbon with oxygen, producing ash and gases that didn't exist before.",
+                "Melting wax just changes its state; freeze it again and you get the same wax back.",
+                "A new substance = chemical change. Same substance, new form = physical change."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -20460,7 +20473,10 @@
           "solutionSteps": [
             "Iron reacts with both water (moisture) and oxygen from the air to form iron oxide (rust). Remove either and rusting stops."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'only water' — clean iron underwater (with no oxygen) doesn't rust. Both water AND oxygen are needed; that's why oiled metal stays shiny.",
+            "Picking 'only oxygen' — iron in dry air rusts very slowly. Damp air speeds it up dramatically because water is the second ingredient."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20481,7 +20497,10 @@
           "solutionSteps": [
             "Galvanisation coats iron with a layer of zinc. Zinc reacts first with moisture and oxygen, protecting the iron underneath."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'painting' — painting works, but it's not the SPECIFIC method that adds zinc. Galvanisation coats iron with zinc, which sacrifices itself before the iron rusts.",
+            "Picking 'oiling' — oil blocks moisture short-term but wears off. Galvanisation is the LONG-LASTING zinc coating used on roof sheets, buckets, nails."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20502,7 +20521,10 @@
           "solutionSteps": [
             "In crystallisation, dissolved particles simply rearrange into a crystal pattern. No new substance is formed, so it is a physical change."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'chemical change' — when sugar crystallises from a syrup, the sugar is still sugar. No new substance is born; it's the same molecule arranging into a solid.",
+            "Picking 'biological change' — crystallisation doesn't involve life. It's the geometric ordering of molecules as a liquid loses energy."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20523,7 +20545,10 @@
           "solutionSteps": [
             "When a new colour appears and gas bubbles form, new substances are being created u{2014} clear signs of a chemical reaction."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'change of shape' — bending a wire changes shape but produces no new substance. Chemical changes leave behind something with new properties.",
+            "Picking 'change of state' — ice → water → vapour is all H₂O changing state. Chemical change means a NEW substance, not just a new phase."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20544,7 +20569,10 @@
           "solutionSteps": [
             "No new substance is made — water frozen again is still water. Reversible = physical change."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'chemical change' — melting ice doesn't make a new substance. Freeze the puddle and you have ice again — same H₂O throughout. Physical only.",
+            "Picking 'nuclear change' — nuclear changes involve atomic nuclei (radioactivity, fission). Melting only loosens the bonds between water molecules; the molecules are unchanged."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20565,7 +20593,10 @@
           "solutionSteps": [
             "CO2 + H2O become glucose + O2 — completely new substances are made, so it's chemical."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'physical change' — physical changes are reversible and produce no new substance. Photosynthesis turns CO₂ and water into glucose — totally different molecules. Chemical.",
+            "Picking 'mechanical change' — mechanical implies physical motion. Photosynthesis rearranges atoms via chemical bonds, which makes it chemical."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20586,7 +20617,10 @@
           "solutionSteps": [
             "Mg + O2 → MgO. The dazzling white light helps you remember the white ash."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'black coal' — coal would form from incomplete burning of carbon. Magnesium isn't carbon; when it burns it forms a WHITE ash (magnesium oxide).",
+            "Picking 'steam' — steam might escape if the air is humid, but the burning product itself is solid magnesium oxide, a brilliant white powder."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20607,7 +20641,10 @@
           "solutionSteps": [
             "No air + no water = no rust. A coating of paint, grease or zinc all work the same way."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'adds water to it' — paint is the opposite of water; it BLOCKS moisture from reaching the iron underneath. That's why painted iron lasts decades.",
+            "Picking 'cools the gate' — paint colour can affect temperature slightly but cooling isn't the protection mechanism. The barrier against oxygen/water is."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -20628,7 +20665,10 @@
           "solutionSteps": [
             "Hydrated iron oxide is the orange-brown flaky stuff we call rust."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'nitrogen alone' — nitrogen is mostly inert; that's why air is 78% nitrogen with no rust storm. The reactive gas for rust is oxygen.",
+            "Picking 'carbon dioxide' — CO₂ doesn't react with iron under everyday conditions. Rust is specifically iron + oxygen + water."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23033,7 +23073,10 @@
           "solutionSteps": [
             "Weather is the day-to-day condition of the atmosphere. Climate is the average weather pattern measured over at least 25 years."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'hourly; months' — weather can change in an hour, but climate isn't measured in months. Climate is the AVERAGE over decades.",
+            "Picking 'monthly; centuries' — weather changes much faster than monthly. The right pair is daily (weather) and years/decades (climate)."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23054,7 +23097,10 @@
           "solutionSteps": [
             "An anemometer has spinning cups that catch the wind. The faster they spin, the higher the wind speed."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Thermometer — thermometer measures TEMPERATURE, not wind speed. Anemometer (with spinning cups) catches wind speed.",
+            "Picking Hygrometer — hygrometer measures HUMIDITY (moisture in air). Different instrument, different job from wind-speed measurement."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23075,7 +23121,10 @@
           "solutionSteps": [
             "Small ears have less surface area, so less body heat escapes to the cold air. This is the opposite of elephants, whose large ears help radiate heat."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'hear better in snow' — large ears would hear better, not small. Small ears expose less surface area to icy air, reducing heat loss.",
+            "Picking 'swim faster' — ear size doesn't affect swimming. The Arctic priority is to keep body heat in; small ears + tiny tail help."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23096,7 +23145,10 @@
           "solutionSteps": [
             "The Arctic tern migrates from the Arctic to the Antarctic and back — about 70,000 km every year, the longest migration of any animal."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Siberian crane' — Siberian cranes do migrate, but their journey is much shorter. Arctic terns fly pole-to-pole, ~70,000 km per year.",
+            "Picking 'Emperor penguin' — penguins waddle and swim but don't migrate continents. Arctic terns hold the record for the longest annual migration."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23117,7 +23169,10 @@
           "solutionSteps": [
             "A camel's hump stores fat (not water!). This fat is broken down for energy and metabolic water when food and water are scarce in the desert."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'stomach' — camels don't store fat in their stomach. The hump is essentially a backpack of fat that doubles as a water-producing fuel reserve.",
+            "Thinking the hump stores WATER — it stores FAT. When the fat is metabolised it releases some water, but the hump itself isn't a water tank."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23138,7 +23193,10 @@
           "solutionSteps": [
             "It uses two markers that get pushed by the mercury level and stay at the day's extremes."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'the current pressure' — that's a barometer's job. A max-min thermometer specifically records the HOTTEST and COLDEST temperatures of the day.",
+            "Picking 'wind direction' — that's a wind vane. The maximum-minimum thermometer keeps two indicators showing the day's temperature range."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23159,7 +23217,10 @@
           "solutionSteps": [
             "Constant warmth and rainfall let many tree species share space in distinct layers."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'very dry months and few plants' — that's a desert. Tropical rainforests get rain almost daily and host the densest plant life on Earth.",
+            "Picking 'year-round snow' — that's tundra. Tropical rainforests are warm all year, with tall layered canopies and high rainfall."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23180,7 +23241,10 @@
           "solutionSteps": [
             "A layer of blubber insulates them; huddling shares body heat across the colony."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'hibernating in caves' — Antarctica has no caves, and penguins don't hibernate. They huddle in tight groups, rotating positions to share warmth.",
+            "Picking 'growing wool' — wool is a mammal thing. Penguins use feathers and a thick fat layer (blubber) plus huddling behaviour."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23201,7 +23265,10 @@
           "solutionSteps": [
             "Red pandas live in cool, bamboo-rich mountain forests of north-east India, Nepal and nearby."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Sahara desert' — the red panda needs COOL, moist mountain forests. Deserts are far too hot and dry for its bamboo-rich diet.",
+            "Picking 'Amazon basin' — the Amazon is tropical rainforest, not the red panda's habitat. Eastern Himalayas and southern China cool forests are home."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -23222,7 +23289,10 @@
           "solutionSteps": [
             "The big beak lets toucans grab fruit from thin branches; it also has many blood vessels that release heat."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'fighting predators' — the toucan's big beak looks weapon-like but it's thin and not very strong. It's mostly for reach and cooling.",
+            "Picking 'digging holes' — the beak is too soft for digging. Its huge surface helps shed body heat AND reach fruit on thin branches."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25434,7 +25504,10 @@
           "solutionSteps": [
             "Warm air rises; cool air rushes in to replace it. That moving air is wind."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'birds flapping' — birds disturb air locally, not globally. Wind is air moving in bulk because some patches of air get warmer (and rise) than others.",
+            "Picking \"the Earth's gravity\" — gravity pulls air DOWN; that's why we have atmosphere at all. Wind is the SIDEWAYS movement caused by uneven heating."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25455,7 +25528,10 @@
           "solutionSteps": [
             "Daytime: land heats faster, hot air rises, cooler sea air flows in — a sea breeze."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'land to sea' — that's the reverse, the NIGHT breeze. In the day, land heats faster and hot air rises; cooler sea air rushes in.",
+            "Picking \"it doesn't blow\" — coastal breezes are predictable enough that sailing schedules are built around them. The day breeze is from the sea."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25476,8 +25552,21 @@
           "solutionSteps": [
             "The eye is a low-pressure column where air sinks; the violent winds are in the wall around it."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'pupil' — pupils are in eyes; cyclones are storms. The calm centre is just called the 'eye'.",
+            "Picking 'core' — sounds like the centre but isn't the name. The technical term is the eye, surrounded by the violent eye wall."
+          ],
+          "variations": [
+            {
+              "prompt": "Why is the eye of a cyclone calm even though the wall around it has 200 km/h winds?",
+              "answer": "Air sinks gently in the eye; the violent winds are circling AROUND it, not through it.",
+              "solutionSteps": [
+                "A cyclone's air spirals inward toward a low-pressure centre.",
+                "At the centre, air can't spiral further so it sinks instead — calm and dry.",
+                "Just outside, where air is still spiralling in, winds are fastest. That's the eye wall."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -25497,7 +25586,10 @@
           "solutionSteps": [
             "Bernoulli's principle. That's why two paper strips swing together when you blow between them."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'higher pressure' — counter-intuitive but it's the OPPOSITE. Bernoulli's principle: where air moves fast, its pressure drops.",
+            "Picking 'same pressure' — fast and slow air have different pressures by design. Aeroplane wings work on exactly this difference."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25518,7 +25610,10 @@
           "solutionSteps": [
             "An anemometer's spinning cups convert wind to a speed reading in km/h."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Barometer — barometer measures atmospheric PRESSURE. Anemometer measures wind speed; their names start with the same A but the jobs differ.",
+            "Picking Thermometer — thermometer measures TEMPERATURE. Wind speed needs cups or blades that spin in the breeze (anemometer)."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25539,7 +25634,10 @@
           "solutionSteps": [
             "Warm winds from the Indian Ocean pick up moisture and pour it over the subcontinent each summer."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'December–February' — that's WINTER in north India, mostly dry. The southwest monsoon is summer-driven, June to September.",
+            "Picking 'October–November' — that's the retreating northeast monsoon (rains in Tamil Nadu mostly). The big SW monsoon is June through September."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25560,7 +25658,10 @@
           "solutionSteps": [
             "Tornadoes are funnel-shaped windstorms over land; cyclones are huge low-pressure systems over warm seas."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'forms over oceans' — that's a cyclone. Tornadoes form over LAND, when fast winds aloft and slow winds below twist into a narrow funnel.",
+            "Picking 'is much larger' — cyclones are huge (hundreds of km wide); tornadoes are tiny by comparison (often less than 1 km wide) but spin much faster."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25581,7 +25682,10 @@
           "solutionSteps": [
             "Clouds build up huge electrical charges; the spark that jumps to balance them is lightning."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'hot air rising' — hot air rises silently. Lightning is dramatic and visible because it's electricity, not air motion.",
+            "Picking 'sound waves' — thunder is the sound; lightning is the FLASH that comes first. Light travels faster than sound, so you see it before you hear it."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25602,7 +25706,10 @@
           "solutionSteps": [
             "A building shields you from rain, wind and lightning. Open fields and tall trees attract strikes."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'under a tall tree' — tall trees ATTRACT lightning strikes. Standing under one is dangerous, not safe.",
+            "Picking 'on a metal roof' — metal conducts electricity. Stay indoors AWAY from metal pipes, taps and electrical wiring during a thunderstorm."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -25623,7 +25730,10 @@
           "solutionSteps": [
             "Same storm, different name by region: hurricane (Atlantic), typhoon (NW Pacific), cyclone (Indian Ocean)."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Typhoon — typhoon is the same kind of storm but in the WEST PACIFIC (Japan, Philippines). In the Atlantic the local name is hurricane.",
+            "Picking Blizzard — a blizzard is a heavy SNOWSTORM, not a tropical cyclone. The Atlantic warm-water storm is called a hurricane."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27840,7 +27950,10 @@
           "solutionSteps": [
             "Topsoil (A horizon) is dark, soft and where most plant roots grow."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Bedrock — bedrock is the SOLID ROCK at the bottom of the soil profile. Topsoil is the top layer, full of humus and roots.",
+            "Picking Subsoil — subsoil sits BELOW topsoil. The dark, humus-rich layer plants grow in is the topsoil (the A-horizon)."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27861,7 +27974,10 @@
           "solutionSteps": [
             "Paddy needs standing water; clay holds water → perfect for rice."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Sandy — sandy soil drains too fast for paddy, which needs standing water. Clayey soil holds water, perfect for rice fields.",
+            "Picking Loamy — loamy is great for most crops but TOO well-drained for paddy. Paddy specifically wants clay's water retention."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27882,7 +27998,10 @@
           "solutionSteps": [
             "When roots are gone, rain and wind carry away the loose topsoil."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Earthworms — earthworms IMPROVE soil (mixing, aerating). Erosion is mostly caused by removing the plant cover that holds soil in place.",
+            "Picking 'cool wind' — gentle wind doesn't erode soil much. Major causes are flowing water and wind on BARE (unplanted) ground."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27903,7 +28022,10 @@
           "solutionSteps": [
             "Sand grains are large → water slips through easily."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Loamy — loamy DRAINS well but also holds some water (best of both worlds). Sand grains are bigger so water rushes through fastest.",
+            "Picking Clayey — clay particles are tiny and pack tightly; water barely seeps through. Sand is the fast drainer."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27924,8 +28046,21 @@
           "solutionSteps": [
             "Their tunnels aerate soil and their castings add nutrients — they're called nature's ploughs."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'eating plants' — earthworms eat dead organic matter and soil, not living plants. Their tunnels and droppings (castings) are the gift.",
+            "Picking 'cooling it' — earthworms aren't cold-blooded heat sinks. Their value is mixing soil layers and aerating, which makes soil fertile."
+          ],
+          "variations": [
+            {
+              "prompt": "Why are earthworms sometimes called 'nature's ploughs'?",
+              "answer": "They tunnel through soil mixing layers, and their castings add nutrients — exactly what a plough does, but biologically.",
+              "solutionSteps": [
+                "Earthworms eat dead leaves and soil, digesting nutrients and excreting castings.",
+                "Their tunnels let air and water reach deeper, which roots love.",
+                "Charles Darwin called them 'nature's ploughs' for exactly this reason."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -27945,7 +28080,10 @@
           "solutionSteps": [
             "A is topsoil, B is subsoil (less humus, more minerals), C is weathered rock above bedrock."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Bedrock — bedrock is the bottom layer (solid rock). Subsoil (B-horizon) is the middle layer, between topsoil and bedrock.",
+            "Picking Humus — humus is the RICH ORGANIC matter in topsoil. Subsoil has less organic matter but more clay and minerals."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27966,7 +28104,10 @@
           "solutionSteps": [
             "A pipe goes deep enough to reach the saturated layer below the water table."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Rivers — tube wells are dug, not pulled from rivers. They tap into groundwater (water filling tiny gaps in rock and soil).",
+            "Picking 'rainwater on the surface' — surface rainwater fills puddles and rivers. Tube wells reach DEEPER, into the saturated layer below."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -27987,7 +28128,10 @@
           "solutionSteps": [
             "Loam is a balanced mix of sand, silt and clay — wheat, gram and many vegetables grow well in it."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'is pure sand' — pure sand drains too fast; plants dry out. Loamy soil is a mixture: sand for drainage, clay for water retention.",
+            "Picking 'has no nutrients' — loamy is rich in humus AND has the perfect texture. That combination is why it's the gold standard for most crops."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -28008,7 +28152,10 @@
           "solutionSteps": [
             "Synthetic chemicals and plastics don't break down naturally and they harm soil life."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'earthworm burrows' — earthworm burrows are HELPFUL, not pollution. Plastic and pesticides poison soil and don't break down naturally.",
+            "Picking 'falling leaves' — falling leaves become humus (nutrient-rich). Plastic is the opposite — it sits there for hundreds of years harming soil life."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -28029,7 +28176,10 @@
           "solutionSteps": [
             "Clay particles are tiny and pack tightly, leaving very small gaps — water seeps through slowly."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'very fast' — that's sandy soil. Clay particles are tiny and pack tightly, so water moves through clay very SLOWLY.",
+            "Picking 'never holds it' — clay holds water TOO well, which is why paddy fields use it. It just drains slowly."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30180,7 +30330,10 @@
           "solutionSteps": [
             "Exhaled breath has about 4% CO₂ (vs 0.04% inhaled). That's why limewater turns milky."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Oxygen — we INHALE oxygen and use it; we exhale mostly CO₂. (Exhaled air still has some O₂, which is why mouth-to-mouth resuscitation works.)",
+            "Picking Nitrogen — air is 78% nitrogen but we don't use it; nitrogen goes in and out unchanged. The gas we ADD by breathing is CO₂."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30201,7 +30354,10 @@
           "solutionSteps": [
             "Yeast and tired muscle cells use anaerobic respiration when oxygen runs low."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'aerobic' — aerobic means WITH oxygen (most of our cells, most of the time). Anaerobic means WITHOUT oxygen (yeast in dough, muscles in a sprint).",
+            "Picking 'atmospheric' — atmospheric just means 'of the atmosphere'. Respiration types are aerobic (with O₂) or anaerobic (without O₂)."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30222,7 +30378,10 @@
           "solutionSteps": [
             "Gills extract dissolved oxygen from water as it flows over them."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Lungs — fish don't have lungs. They pull dissolved oxygen out of water using gills, which are feathery and full of blood vessels.",
+            "Picking Skin — some animals (frogs partly) breathe through skin, but fish primarily use gills. Skin breathing is the earthworm's trick."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30243,7 +30402,10 @@
           "solutionSteps": [
             "Stomata on the underside of leaves regulate gas exchange."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Spiracles — spiracles are an INSECT thing (cockroaches breathe through them). Plant gas exchange happens at stomata on leaves.",
+            "Picking Tracheae — tracheae are the air tubes INSIDE insects (connected to spiracles). Plants use stomata, not tracheae."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30264,7 +30426,10 @@
           "solutionSteps": [
             "Muscles ran low on oxygen and switched to anaerobic respiration → lactic acid → cramps."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Glucose — glucose is the FUEL for muscles, not the cause of cramps. When oxygen runs low, glucose is broken into lactic acid (which hurts).",
+            "Picking Oxygen — oxygen is what muscles RUN OUT OF in a hard sprint. The cramp-causing product of low-oxygen muscle work is lactic acid."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30285,7 +30450,10 @@
           "solutionSteps": [
             "The diaphragm pulls down to enlarge the chest cavity, so air rushes into the lungs."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'moves up and curls' — that's exhaling. When you breathe IN, the diaphragm flattens downward, expanding chest volume so air rushes in.",
+            "Picking 'becomes the lungs' — the diaphragm is BELOW the lungs (a muscle sheet). It pumps air into the lungs by changing chest volume."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30306,7 +30474,10 @@
           "solutionSteps": [
             "Air enters through spiracles on the body sides and travels through tracheal tubes to cells."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Pores — 'pores' is too general. Insects breathe through specific holes on each body segment called SPIRACLES, connected to tracheae inside.",
+            "Picking Stomata — stomata are on plant leaves. Cockroaches and other insects use spiracles on their abdomen."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30327,7 +30498,10 @@
           "solutionSteps": [
             "Oxygen dissolves in the thin film of moisture on the earthworm's skin and diffuses inwards."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Lungs — earthworms don't have lungs at all. Oxygen dissolves through the thin film of mucus on their MOIST SKIN directly into blood.",
+            "Picking Gills — gills are for water animals (fish). Earthworms live in damp soil; their entire skin is the breathing surface."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -30348,8 +30522,21 @@
           "solutionSteps": [
             "Bakers use the CO₂ to make bread rise; brewers use the alcohol."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'carbon dioxide + water' — that's AEROBIC respiration's output (what we do). Yeast without oxygen makes alcohol plus CO₂ instead of water.",
+            "Picking 'oxygen + glucose' — those are INPUTS for aerobic respiration. Yeast in anaerobic conditions outputs CO₂ + ethanol (alcohol)."
+          ],
+          "variations": [
+            {
+              "prompt": "How is dough leavened by yeast — what gas makes the bread rise?",
+              "answer": "Yeast cells eat sugar in the dough and release carbon dioxide, which puffs up the bread.",
+              "solutionSteps": [
+                "Bakers mix yeast with flour and sugar to start anaerobic respiration.",
+                "Yeast produces CO₂ gas + alcohol from the sugar.",
+                "Trapped CO₂ bubbles make the dough rise. Baking evaporates the alcohol."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -30369,7 +30556,10 @@
           "solutionSteps": [
             "ATP is the energy currency of cells — broken down whenever cells need power."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Glucose — glucose is the food cells BURN. The energy released is captured in molecules called ATP, the cell's energy currency.",
+            "Picking Oxygen — oxygen is needed for aerobic respiration but doesn't STORE the energy itself. ATP is the actual stored-energy molecule."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
