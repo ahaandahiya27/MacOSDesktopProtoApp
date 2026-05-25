@@ -28,8 +28,11 @@ struct ExtraReadingRow: View {
     /// already use.
     let onTap: (ArticleEntry) -> Void
 
-    // 4 article-surface suffixes shipped 2026-05-26 with the
-    // enrichment-consistency arc. Listed in display order.
+    // 7 article-surface suffixes shipped through 2026-05-26 with the
+    // enrichment-consistency arc. Listed in display order — the 4
+    // original templated surfaces (glossary, ncert_qa, scientists,
+    // whatif) followed by the 3 added 2026-05-26 in Blocks 3-5
+    // (miniproject, selfcheck, storymode).
     private var rows: [(label: String, suffix: String, systemImage: String, accentColor: Color, hint: String)] {
         return [
             (label: "Vocabulary Deck",
@@ -54,6 +57,21 @@ struct ExtraReadingRow: View {
              systemImage: SFSymbolCompat.name("lightbulb.fill"),
              accentColor: Color.compatPurple,
              hint: "Thought-experiment questions with discussion paths."),
+            (label: "Mini Project",
+             suffix: "_miniproject",
+             systemImage: SFSymbolCompat.name("wrench.and.screwdriver.fill"),
+             accentColor: Color.compatTeal,
+             hint: "Hands-on activity with materials, steps, and a follow-up question."),
+            (label: "Quick Self-Check",
+             suffix: "_selfcheck",
+             systemImage: SFSymbolCompat.name("checkmark.circle.fill"),
+             accentColor: Color.compatIndigo,
+             hint: "Five questions sampled from the chapter to test understanding."),
+            (label: "Story Mode",
+             suffix: "_storymode",
+             systemImage: SFSymbolCompat.name("book.fill"),
+             accentColor: Color.compatPurple,
+             hint: "Real-world scenarios woven into a short narrative."),
         ]
     }
 

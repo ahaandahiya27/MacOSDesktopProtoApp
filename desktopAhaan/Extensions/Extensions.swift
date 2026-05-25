@@ -139,6 +139,7 @@ enum SFSymbolCompat {
         case "powerplug":                  return "bolt.fill"              // SF Symbols 4+ — added 2026-05-19 (Ch.14 Scene 6 electromagnet)
         case "chart.line.uptrend.xyaxis":  return "chart.bar.fill"         // SF Symbols 3+ — added 2026-05-19 (Ch.13 Scene 3 distance-time graph)
         case "sun.and.horizon.fill":       return "sunrise.fill"           // SF Symbols 3+ — added 2026-05-19 (Ch.19 Scene 5 spring/neap tides)
+        case "wrench.and.screwdriver.fill": return "wrench.fill"           // SF Symbols 3+ — added 2026-05-26 (ExtraReadingRow MiniProject chip)
         default:                           return modern
         }
     }
