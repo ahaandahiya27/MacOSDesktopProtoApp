@@ -2252,4 +2252,113 @@ Ch.4-19 don't have analogous tests, so no further updates needed.
   output, 4th in the suite per the file structure).
 - All 9 lints clean.
 
+## Session continuation: 2026-05-26 (3-hour block) — Scientists + WhatIf + UI surfacing
+
+### Goal
+Continue the enrichment-consistency arc. Bring 2 more article
+surfaces (`_scientists`, `_whatif`) from 1/19 to 19/19 using the
+same JSON-driven template generator pattern, then ship the UI
+that lets kids actually find them.
+
+### Commits this 3-hour block
+
+- `111ddc3` Hour 1 — Scientist Spotlight at 19/19. Generator
+  `scripts/generate_scientists_articles.py` + 18 articles
+  (~2800 bytes each, biography format) + 18 ArticleIndex entries
+  + 4-case `ScientistsArticleRoutingTests` + Ch.2/Ch.3 sentinel
+  bumps to 29/23.
+- `290ac77` Hour 2 — What If? at 19/19. Generator
+  `scripts/generate_whatif_articles.py` + 18 articles
+  (~4000 bytes each, 3 thought-experiment scenarios each) + 18
+  ArticleIndex entries + 4-case `WhatIfArticleRoutingTests` +
+  Ch.2/Ch.3 sentinel bumps to 30/24.
+- `577a31e` Hour 3 — UI surfacing.
+  `ChapterDetailView+ExtraReadingRow.swift` surfaces the four
+  templated article surfaces shipped 2026-05-26 (Vocabulary
+  Deck, NCERT Q&A, Scientist Spotlight, What If?) as a compact
+  chip row in `surfacesGroupBottom`. Each chip auto-hides
+  when its article isn't bundled; the whole row hides on
+  chapters that haven't shipped any of the four. Sister-file
+  pattern keeps the parent under the 600-LOC ceiling.
+
+### Surfacing model
+
+Two complementary patterns now coexist on ChapterDetailView:
+- **Full-width cards** in the enrichment HStack (Beyond,
+  CommonMistakes) — for the chapter's two top-priority surfaces.
+- **Compact chips** in `ExtraReadingRow` (Vocabulary Deck,
+  NCERT Q&A, Scientist Spotlight, What If?) — for secondary
+  read-mode articles that benefit from being available but
+  shouldn't compete for HStack real estate.
+
+This avoids the 4-card HStack crowding problem on narrower
+windows while still surfacing every shipped article surface
+on every chapter where it exists.
+
+### Pattern proven (5 surfaces × 18 chapters = 90 articles)
+
+The JSON-driven generator pattern works. Each surface follows
+the same shape:
+1. ~150-LOC Python generator consuming `chapter.<field>` from
+   `science_class7.json`.
+2. 18 templated HTMLs (one per non-Ch.1 chapter) with uniform
+   voice, hero/lede/sections/footer structure.
+3. 18 entries in `ArticleIndex.entries`.
+4. Sentinel bump in `ChapterContentTests` (Ch.2 + Ch.3 only —
+   the only chapters with parity sentinels).
+5. 4-case routing ratchet in a parallel `*RoutingTests` class.
+6. pbxproj regen for the new files.
+
+The atomic-commit rule (all 5 of these in ONE commit per surface)
+matters: working-tree drift while CI runs breaks pushes. Hit this
+twice in the 3-hour block; both resolved by re-pushing the
+atomic version. (See `47db592`, the count-fix that landed
+between mistakes+glossary and ncert_qa atomic commits, and the
+abandoned b8578sovz push that had uncommitted ncert_qa changes
+in the working tree.)
+
+### Coverage delta this session
+
+| Surface | Before this block | After this block |
+|---|---|---|
+| Scientist Spotlight | 1 / 19 | **19 / 19** ✅ |
+| What If? | 1 / 19 | **19 / 19** ✅ |
+| UI surfacing of glossary / ncert_qa | Bundled but unsurfaced | Chip in `ExtraReadingRow` ✅ |
+| UI surfacing of scientists / whatif | (didn't exist) | Chip in `ExtraReadingRow` ✅ |
+
+### Cumulative state (across the two 2026-05-26 sessions)
+
+5 enrichment surfaces now at 19/19 chapter coverage:
+- `_mistakes` · `_glossary` · `_ncert_qa` · `_scientists` · `_whatif`
+
+CI ratchet test classes: 5 (Beyond + 4 new). Routing cases: 17.
+ChapterContentTests sentinels accurate at Ch.2 = 30, Ch.3 = 24.
+
+### Out-of-scope (logged for next session)
+
+- **6 remaining Ch.1-only article surfaces**: `infographic`,
+  `miniproject`, `plantoftheday`, `selfcheck`, `storymode`,
+  `beyond`. Each is its own ~45-min generator session using the
+  established pattern. `beyond` is the most-valuable next ship
+  (Ch.2 already has a beyond article; only 17 chapters left to
+  reach 19/19 on that surface too).
+- **Visual polish on ExtraReadingRow.** Today the row is
+  utilitarian — accent colors only. A future polish session
+  could shade each chip's left edge to match the article
+  category (revision-tier orange, exam-prep teal, etc.).
+- **POLISH_TODOS Resolved-archive entry** for this block. Logged
+  separately in a small commit alongside this REMEDIATION_LOG
+  entry; flips the "all enrichment surfaces at 19/19" goal
+  from the original SUPERPROMPT brief to ✅ for the 5 surfaces
+  shipped so far.
+
+### Build / tests / lints (final state)
+
+- All commits pushed cleanly to origin (`577a31e`).
+- CI: full green on every push (last suite passed before this
+  REMEDIATION_LOG commit went out).
+- All 9 lints clean across the 3 commits.
+- File-size lint stays clean — ExtraReadingRow's sister-file
+  split keeps ChapterDetailView well under 600 LOC.
+
 
