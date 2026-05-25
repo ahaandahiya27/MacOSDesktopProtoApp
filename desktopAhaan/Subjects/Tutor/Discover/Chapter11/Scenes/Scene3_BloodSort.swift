@@ -23,7 +23,7 @@ struct Scene3_BloodSort: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Blood Components").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Each component has a different job. Match them up.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

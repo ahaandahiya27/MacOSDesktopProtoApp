@@ -29,7 +29,7 @@ struct Scene6_InsectsWorms: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("How Insects & Worms Breathe").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Each species solved \"how to get oxygen\" differently.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

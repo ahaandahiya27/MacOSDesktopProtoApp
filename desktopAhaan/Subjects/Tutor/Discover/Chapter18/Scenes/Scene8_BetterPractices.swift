@@ -23,7 +23,7 @@ struct Scene8_BetterPractices: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Better Practices").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

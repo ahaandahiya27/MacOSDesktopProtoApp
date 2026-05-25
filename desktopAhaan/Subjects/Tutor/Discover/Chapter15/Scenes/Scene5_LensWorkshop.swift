@@ -23,7 +23,7 @@ struct Scene5_LensWorkshop: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Lens Workshop").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("A lens bends light to form an image. Pick a lens, move the object.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

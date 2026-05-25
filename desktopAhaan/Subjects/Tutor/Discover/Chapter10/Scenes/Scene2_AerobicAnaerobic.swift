@@ -22,7 +22,7 @@ struct Scene2_AerobicAnaerobic: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Aerobic vs Anaerobic").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap whether each happens WITH or WITHOUT oxygen.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

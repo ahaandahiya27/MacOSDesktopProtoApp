@@ -24,7 +24,7 @@ struct Scene1_ForestLayers: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Forest Layers").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("A forest is built like a 4-storey building. Tap each floor.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

@@ -22,7 +22,7 @@ struct Scene5_UniformNonUniform: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Uniform vs Non-Uniform").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Same speed throughout, or changing speed?")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

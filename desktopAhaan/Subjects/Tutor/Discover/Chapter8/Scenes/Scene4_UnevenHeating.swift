@@ -22,7 +22,7 @@ struct Scene4_UnevenHeating: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Uneven Heating Builds Wind").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("The Sun heats the equator more than the poles. The bigger the gap, the stronger the wind.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)

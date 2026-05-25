@@ -13,7 +13,7 @@ struct Scene3_RefractionPool: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Refraction Pool").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Dip a pencil into water. Notice how it appears to break at the surface.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

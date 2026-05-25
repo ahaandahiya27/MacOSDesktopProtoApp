@@ -13,7 +13,7 @@ struct Scene6_XylemWaterClimb: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Xylem Water Climb").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Put celery in coloured water. Watch the dye climb the stem.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

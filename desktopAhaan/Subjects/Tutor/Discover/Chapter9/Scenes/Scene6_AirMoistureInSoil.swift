@@ -18,7 +18,7 @@ struct Scene6_AirMoistureInSoil: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Air & Moisture in Soil").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Two simple home experiments prove soil has both air and water.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

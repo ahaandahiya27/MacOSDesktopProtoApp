@@ -23,7 +23,7 @@ struct Scene5_SeedDispersal: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Seed Dispersal").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("How does each seed travel away from its parent?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

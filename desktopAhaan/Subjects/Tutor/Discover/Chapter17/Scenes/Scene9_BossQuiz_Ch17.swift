@@ -24,7 +24,7 @@ struct Scene9_BossQuiz_Ch17: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 

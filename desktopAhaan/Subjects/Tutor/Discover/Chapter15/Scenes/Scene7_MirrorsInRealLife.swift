@@ -22,7 +22,7 @@ struct Scene7_MirrorsInRealLife: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Mirrors in Real Life").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Which type of mirror is used in each case?")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

@@ -14,7 +14,7 @@ struct Scene6_Sundial: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Sundial").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide through the day. Watch the shadow swing.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

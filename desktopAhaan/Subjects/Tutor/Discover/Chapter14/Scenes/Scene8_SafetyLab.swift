@@ -23,7 +23,7 @@ struct Scene8_SafetyLab: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: 12) {
                 Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap Safe or Unsafe for each action.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

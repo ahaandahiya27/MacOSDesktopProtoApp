@@ -13,7 +13,7 @@ struct Scene1_InhaleExhale: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Inhale, Exhale").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap the chest to breathe in. Tap again to breathe out.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

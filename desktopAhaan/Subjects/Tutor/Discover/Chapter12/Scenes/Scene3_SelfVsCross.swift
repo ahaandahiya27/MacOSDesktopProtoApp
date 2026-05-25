@@ -13,7 +13,7 @@ struct Scene3_SelfVsCross: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Self vs Cross Pollination").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Same flower or two different ones?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

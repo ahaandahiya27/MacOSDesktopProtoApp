@@ -27,7 +27,7 @@ struct Scene2_SandClayLoam: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

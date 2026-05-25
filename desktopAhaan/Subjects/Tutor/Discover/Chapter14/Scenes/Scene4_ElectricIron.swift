@@ -26,7 +26,7 @@ struct Scene4_ElectricIron: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Inside an Electric Iron").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap any part to see what it does.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

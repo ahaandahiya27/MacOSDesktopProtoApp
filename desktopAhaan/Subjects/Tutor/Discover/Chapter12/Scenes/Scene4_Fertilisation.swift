@@ -21,7 +21,7 @@ struct Scene4_Fertilisation: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Fertilisation").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide forward to see how a seed is formed.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

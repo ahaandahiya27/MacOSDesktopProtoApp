@@ -36,7 +36,7 @@ struct Scene3_PercolationRate: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Percolation Rate").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pour the same amount of water. How fast does it sink through?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

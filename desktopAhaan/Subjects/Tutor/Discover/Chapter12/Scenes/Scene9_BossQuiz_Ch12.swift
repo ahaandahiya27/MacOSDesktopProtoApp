@@ -28,7 +28,7 @@ struct Scene9_BossQuiz_Ch12: View {
         // covers the whole viewport during the celebration, not just the
         // VStack region.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Boss Quiz").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ProgressView(value: Double(i), total: Double(quiz.count)).frame(maxWidth: 520)
 

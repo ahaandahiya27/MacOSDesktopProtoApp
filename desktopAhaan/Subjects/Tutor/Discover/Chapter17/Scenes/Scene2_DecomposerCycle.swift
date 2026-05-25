@@ -21,7 +21,7 @@ struct Scene2_DecomposerCycle: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Decomposer Cycle").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide forward in time. Watch a leaf become new soil.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

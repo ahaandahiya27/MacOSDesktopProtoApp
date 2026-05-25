@@ -25,7 +25,7 @@ struct Scene2_WWTPStageBuilder: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("WWTP Stage Builder").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap each stage. See what it cleans out.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 

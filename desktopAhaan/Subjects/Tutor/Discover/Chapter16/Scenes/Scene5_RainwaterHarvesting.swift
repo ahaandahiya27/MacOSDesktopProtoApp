@@ -15,7 +15,7 @@ struct Scene5_RainwaterHarvesting: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Rainwater Harvesting").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Add gutters and a tank to your roof. Catch the rain.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

@@ -15,7 +15,7 @@ struct Scene5_FishGillFlow: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Fish Gill Flow").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Watch how a fish pulls oxygen out of water using its gills.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

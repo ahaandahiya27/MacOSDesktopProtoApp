@@ -19,7 +19,7 @@ struct Scene7_StopwatchRace: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Stopwatch Race").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Can you stop the watch at exactly 5.00 seconds?")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

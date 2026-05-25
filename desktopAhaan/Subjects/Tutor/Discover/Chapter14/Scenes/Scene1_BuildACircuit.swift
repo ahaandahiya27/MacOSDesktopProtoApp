@@ -17,7 +17,7 @@ struct Scene1_BuildACircuit: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Build a Circuit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Connect a cell, close the switch, and watch the bulb glow.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

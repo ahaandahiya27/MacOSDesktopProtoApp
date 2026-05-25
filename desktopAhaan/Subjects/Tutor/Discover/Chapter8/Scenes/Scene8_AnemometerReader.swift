@@ -17,7 +17,7 @@ struct Scene8_AnemometerReader: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-    LazyVStack(alignment: .center, spacing: 14) {
+            LazyVStack(alignment: .center, spacing: 14) {
                 Text("Anemometer Reader").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Slide to spin the cups. Faster spin = stronger wind.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
