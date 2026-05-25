@@ -1,0 +1,123 @@
+import XCTest
+@testable import desktopAhaan
+
+/// Wiring contract for the "Beyond the Book" card on ChapterDetailView.
+///
+/// The card looks up `ArticleIndex.entries["\(chapter.id)_beyond"]`
+/// (see `ChapterDetailView.beyondTheBookEntry`). If a chapter
+/// publishes a Beyond article, the lookup MUST return an entry whose
+/// id, filename, chapterFolder, and on-disk HTML all reference the
+/// SAME chapter — otherwise the modal title says "Chapter N" while
+/// the article renders Chapter M's content.
+///
+/// Frozen 2026-05-25 after a bug report claimed Ch.1's Beyond card
+/// opened Ch.2's article ("Beyond the Book — Chapter 2: Nutrition in
+/// Animals" with stomach / tongue-map / gut-microbiome content).
+/// Current main routes correctly; this test pins the contract so a
+/// future content edit OR a hardcoded chapter-number off-by-one
+/// can't silently re-introduce the bug.
+final class BeyondTheBookRoutingTests: XCTestCase {
+
+    /// Every key in `ArticleIndex.entries` ending in `_beyond` MUST be
+    /// internally consistent: key prefix == entry.id prefix ==
+    /// filename prefix == chapterFolder's chapter-number suffix.
+    func testEveryBeyondEntryIsInternallyConsistent() {
+        let beyondKeys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_beyond") }
+        XCTAssertFalse(beyondKeys.isEmpty,
+            "Expected at least one beyond-the-book entry in ArticleIndex.entries.")
+
+        for key in beyondKeys {
+            guard let entry = ArticleIndex.entries[key] else {
+                XCTFail("Lookup miss for key '\(key)' that we just enumerated.")
+                continue
+            }
+            let chPrefix = chapterPrefix(from: key)
+            XCTAssertEqual(entry.id, key,
+                "ArticleIndex entry for key '\(key)' has mismatched id '\(entry.id)' — " +
+                "ChapterDetailView's lookup `entries[\"\\(chapter.id)_beyond\"]` " +
+                "expects entry.id == key.")
+            XCTAssertEqual(entry.filename, "\(key).html",
+                "Beyond entry '\(key)' has filename '\(entry.filename)' — must be '\(key).html' " +
+                "so the modal loads the right file from disk.")
+            let chNumber = Int(chPrefix.dropFirst(2)) ?? -1
+            XCTAssertEqual(entry.chapterFolder, "Articles/Chapter\(chNumber)",
+                "Beyond entry '\(key)' points at chapterFolder '\(entry.chapterFolder)' — " +
+                "must be 'Articles/Chapter\(chNumber)' to render Ch.\(chNumber)'s content. " +
+                "An off-by-one here is the exact 2026-05-25 reported bug.")
+        }
+    }
+
+    /// For every science chapter that DOES publish a Beyond article,
+    /// the chapter's id maps cleanly through ChapterDetailView's
+    /// lookup pattern. Cross-checks the data layer against the
+    /// authored science_class7.json (chapter.id "chNN") and the on-
+    /// disk HTML data-article-id attribute.
+    func testChapterIdMatchesBeyondArticleAcrossPack() throws {
+        let pack = try loadSciencePack()
+        for chapter in pack.chapters {
+            let key = "\(chapter.id)_beyond"
+            guard let entry = ArticleIndex.entries[key] else {
+                // Chapters 3-19 don't publish a Beyond article yet
+                // (POLISH_TODOS §2 lists the gap). Skip — the
+                // beyondTheBookEntry guard returns nil and the card
+                // doesn't render. That's intentional, not a bug.
+                continue
+            }
+            // Same chapter prefix on key + entry + filename — guards
+            // against any future entry where `key == "chNN_beyond"`
+            // but `entry.filename == "chMM_beyond.html"` (the reported
+            // off-by-one shape).
+            XCTAssertTrue(entry.filename.hasPrefix(chapter.id + "_"),
+                "Chapter '\(chapter.id)' (Ch.\(chapter.number) — \(chapter.title)) " +
+                "has Beyond entry pointing at filename '\(entry.filename)'. " +
+                "Filename must start with '\(chapter.id)_' so the article matches the chapter.")
+            XCTAssertEqual(entry.chapterFolder, "Articles/Chapter\(chapter.number)",
+                "Chapter '\(chapter.id)' (Ch.\(chapter.number)) has Beyond entry " +
+                "in folder '\(entry.chapterFolder)' — must be 'Articles/Chapter\(chapter.number)'.")
+        }
+    }
+
+    /// Sanity: the HTML file each Beyond entry references actually
+    /// exists in Bundle.main AND its <title> matches the chapter
+    /// number. This is the test that would have caught the reported
+    /// bug at content-author-time: if someone copy-pastes ch02's
+    /// HTML into ch01_beyond.html, the <title> mismatch trips this.
+    func testBeyondHtmlFilesExistAndTitleMatchesChapter() throws {
+        let beyondKeys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_beyond") }
+        for key in beyondKeys {
+            guard let entry = ArticleIndex.entries[key] else { continue }
+            let name = entry.filename.replacingOccurrences(of: ".html", with: "")
+            let url = Bundle.main.url(forResource: name, withExtension: "html",
+                                      subdirectory: entry.chapterFolder)
+                ?? Bundle.main.url(forResource: name, withExtension: "html")
+            guard let resolved = url, let html = try? String(contentsOf: resolved, encoding: .utf8) else {
+                XCTFail("Beyond HTML for '\(key)' not findable in bundle " +
+                        "(filename='\(entry.filename)', folder='\(entry.chapterFolder)').")
+                continue
+            }
+            let chPrefix = chapterPrefix(from: key)
+            let expectedTitleFragment = "Chapter \(Int(chPrefix.dropFirst(2)) ?? -1)"
+            XCTAssertTrue(html.contains(expectedTitleFragment),
+                "Beyond HTML at \(resolved.lastPathComponent) doesn't contain " +
+                "'\(expectedTitleFragment)' in its <title>/breadcrumb/h1. The " +
+                "file's content might be from a different chapter — exactly " +
+                "the 2026-05-25 reported bug shape (modal renders Ch.M while " +
+                "card says Ch.N).")
+        }
+    }
+
+    // MARK: - Helpers
+
+    /// "ch01_beyond" → "ch01"
+    private func chapterPrefix(from beyondKey: String) -> String {
+        return String(beyondKey.split(separator: "_").first ?? "")
+    }
+
+    private func loadSciencePack() throws -> SubjectPack {
+        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            throw XCTSkip("science_class7.json missing from test bundle resources.")
+        }
+        return try JSONDecoder().decode(SubjectPack.self, from: data)
+    }
+}

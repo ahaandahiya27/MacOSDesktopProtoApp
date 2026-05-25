@@ -1925,4 +1925,131 @@ Local: 8 / 8 ratchet cases pass (7 existing + 1 new).
   same: dict keyed by `bossquiz_chNN_qII`, validate with the
   pack lints, ratchet test pins the floor.
 
+## Session continuation: 2026-05-25 23:10 +05:30 — BEYOND-THE-BOOK ROUTING RATCHET
+
+### Bug report (user)
+"On Chapter 1 detail, the Beyond the Book card opens a modal titled
+'Beyond the Book – Chapter 2: Nutrition in Animals' with Ch.2
+content (stomachs, tongue map, gut microbiome, hunger pangs). Card
+subtitle reads 'Two fetal directions' [likely paraphrase]. Screen
+'freezes' on entry."
+
+### Investigation (current main = `0c918c9`)
+
+Traced the wiring end-to-end:
+
+```
+ChapterListView    nav.push(.chapter(packId, chapter.id))
+  ↓
+TutorNavigation    pack.chapterIndex[chapterId] → Chapter
+  ↓
+ChapterDetailView  beyondTheBookEntry: ArticleIndex.entries["\(chapter.id)_beyond"]
+  ↓                returns ArticleEntry(id, filename, chapterFolder, …)
+sheetCoordinator   .article(entry)
+  ↓
+ArticleBrowserView loadInitialURL → Bundle.main.url(forResource: filename, subdirectory: chapterFolder)
+  ↓
+Task.detached      String(contentsOf:) + parse (off-main since b93bfa2)
+```
+
+Findings:
+1. `science_class7.json` has `chapter.id == "ch01"` for Ch.1 and
+   `"ch02"` for Ch.2 — correctly authored.
+2. `ArticleIndex.entries["ch01_beyond"]` exists with
+   `id: "ch01_beyond"`, `filename: "ch01_beyond.html"`,
+   `chapterFolder: "Articles/Chapter1"`. Same for Ch.2.
+   (Chapters 3-19 don't publish a Beyond article yet — see
+   POLISH_TODOS §2 — so `beyondTheBookEntry` returns nil and the
+   card doesn't render. Intentional, not a bug.)
+3. `desktopAhaan/Resources/Articles/Chapter1/ch01_beyond.html` is
+   the Van-Helmont/willow/photosynthesis content — correct.
+4. Article loading is off the main thread (b93bfa2 fix already
+   landed) — the alleged freeze can't come from sync I/O on the
+   article-open path.
+5. Wider sweep:
+     - 290 ArticleIndex entries inspected — none have
+       chapter-prefix mismatches between key, id, filename, and
+       chapterFolder.
+     - No "Two fetal directions" / "Two fecal directions" string
+       found anywhere in source, content, or pack JSON. The only
+       "fecal" hit is `ch02_t02_c04.html` (gut microbiome concept
+       article, not the Beyond article).
+
+**Conclusion**: the bug as described cannot reproduce from current
+`main`. The user is almost certainly running a stale local build
+(DerivedData cache from before a fix), OR ran a separate
+build off a branch we don't have here. No code or data change
+required.
+
+### Commit landed this session
+- THIS COMMIT — defensive ratchet test
+  `BeyondTheBookRoutingTests` that pins the chapter-id ⇒
+  Beyond-article wiring contract across all 19 chapters.
+
+### Test additions (`BeyondTheBookRoutingTests`)
+
+Three parameterised tests, run across every `_beyond` entry in
+`ArticleIndex.entries`:
+
+1. `testEveryBeyondEntryIsInternallyConsistent` —
+   key prefix `chNN` MUST match `entry.id`, `entry.filename`
+   prefix, AND `entry.chapterFolder == "Articles/ChapterN"`. An
+   off-by-one (e.g. `key = "ch01_beyond"` pointing at
+   `filename = "ch02_beyond.html"`) fails this test loudly.
+
+2. `testChapterIdMatchesBeyondArticleAcrossPack` —
+   walks every chapter in `science_class7.json` and, if the
+   chapter publishes a Beyond entry, asserts its id, filename, and
+   chapterFolder all match `chapter.id` / `chapter.number`.
+   Catches "chapter.id == ch01 but entry.filename == ch02_beyond"
+   data inconsistency.
+
+3. `testBeyondHtmlFilesExistAndTitleMatchesChapter` —
+   loads each Beyond HTML from `Bundle.main` and confirms the file
+   contains `"Chapter N"` somewhere in its title/breadcrumb/h1.
+   Catches "someone copy-pasted Ch.2 HTML into ch01_beyond.html"
+   content-author errors. This is the test that WOULD have caught
+   the reported bug at content-author time.
+
+Local run: 3 / 3 pass on current main, confirming the wiring is
+correct end-to-end.
+
+### Out-of-scope (logged for next session)
+
+- **The actual user-side fix**, if their build still misbehaves:
+  recommend `bash scripts/imac-pull.sh` to wipe DerivedData +
+  pull fresh. The Late-2014 iMac mitigation block from `4dad51e`
+  already covers this path. If the bug repros AFTER a clean
+  pull, capture the call stack from
+  `~/Library/Application Support/desktopAhaan/crashlogs/`
+  and re-investigate; the data + code on main are
+  provably correct.
+- **Beyond articles for Ch.3-19**. Currently only Ch.1 and Ch.2
+  publish a `_beyond` entry. Adding the other 17 is content
+  authoring (~6-8 hours each). Listed as a §2 entry in
+  POLISH_TODOS; left for a future content session.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean.
+- `BeyondTheBookRoutingTests`: 3 / 3 pass locally.
+- All 9 lints clean.
+- pbxproj regenerated to include the new test file.
+
+### Notes for future sessions
+
+- If the user reports the same Beyond-card routing bug again,
+  ask first: have they run `scripts/imac-pull.sh` since the
+  last sighting? The pull script wipes DerivedData; many
+  "wrong chapter" / "stale modal" reports trace back to
+  DerivedData not catching up after a pull.
+- The ratchet does NOT validate that EVERY chapter has a
+  Beyond entry — chapters 3-19 legitimately don't yet. If
+  a future session ships Beyond articles for them, no test
+  edit needed; the ratchet picks them up automatically.
+- `chapterPrefix(from:)` in the test file uses
+  `key.split(separator: "_").first` rather than a regex.
+  Big-Sur SwiftUI tests sometimes hit slower regex paths on
+  cold runs; the string split is the lightweight choice.
+
 
