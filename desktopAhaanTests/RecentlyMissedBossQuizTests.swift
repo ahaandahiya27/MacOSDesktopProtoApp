@@ -80,17 +80,27 @@ final class RecentlyMissedBossQuizTests: XCTestCase {
         }
     }
 
-    /// A correct answer DOESN'T land in recently-missed.
-    /// Guards against a regression that would noise up the surface.
-    func testCorrectAnswerDoesNotSurfaceInRecentlyMissed() {
-        DataStore.shared.recordReview(
-            questionId: "bossquiz_ch07_q00",
-            quality: .good,
-            at: Date(timeIntervalSince1970: 1_700_000_000)
-        )
+    /// A question answered correctly enough times to graduate past
+    /// the "learning" bucket (≤1) MUST drop out of recently-missed.
+    /// `recentlyMissedQuestionIds()` filters by `bucket <= 1`, so a
+    /// single `.good` keeps it at bucket 1 (still learning); two
+    /// good answers spaced a day apart promote it to bucket 2 and
+    /// it should disappear from the surface.
+    func testTwoCorrectAnswersGraduateOutOfRecentlyMissed() {
+        let id = "bossquiz_ch07_q00"
+        let day1 = Date(timeIntervalSince1970: 1_700_000_000)
+        let day2 = day1.addingTimeInterval(86_400)
+        DataStore.shared.recordReview(questionId: id, quality: .good, at: day1)
+        DataStore.shared.recordReview(questionId: id, quality: .good, at: day2)
+
+        let row = DataStore.shared.questionReviews[id]
+        XCTAssertNotNil(row, "Two good answers should have created a review row.")
+        XCTAssertGreaterThan(row?.bucket ?? 0, 1,
+            "Two consecutive `.good` answers should promote bucket above 1. " +
+            "Got bucket: \(row?.bucket ?? -1).")
         let missed = DataStore.shared.recentlyMissedQuestionIds()
-        XCTAssertFalse(missed.contains("bossquiz_ch07_q00"),
-            ".good answers shouldn't surface in recently-missed.")
+        XCTAssertFalse(missed.contains(id),
+            "A question with bucket > 1 should not surface as recently-missed.")
     }
 
     // MARK: - Helpers
