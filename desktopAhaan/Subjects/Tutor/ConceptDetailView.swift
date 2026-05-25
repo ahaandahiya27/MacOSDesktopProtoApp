@@ -35,6 +35,9 @@ struct ConceptDetailView: View {
                     header
                     depthPicker
                     articleButton
+                    if let loc = location {
+                        ChapterGlossaryCTA(chapter: loc.chapter)
+                    }
                     explanationGroup
                     followOnGroup
                 }
