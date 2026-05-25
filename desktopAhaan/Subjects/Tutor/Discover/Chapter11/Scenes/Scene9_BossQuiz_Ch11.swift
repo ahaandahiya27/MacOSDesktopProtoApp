@@ -68,7 +68,7 @@ struct Scene9_BossQuiz_Ch11: View {
 
                     if revealed {
                         SoftShadowCard(padding: 12) {
-                            Label(bossExplanation(q), systemImage: "lightbulb.fill").font(.callout)
+                            Label(q.bossExplanation, systemImage: "lightbulb.fill").font(.callout)
                         }
                         .frame(maxWidth: 600)
                         Button(i + 1 < quiz.count ? "Next question" : "See score") {
@@ -107,12 +107,5 @@ struct Scene9_BossQuiz_Ch11: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear { if shuffled.isEmpty { shuffled = (quiz[i].options ?? []).shuffled() } }
         .onChange(of: i) { newI in shuffled = (quiz[newI].options ?? []).shuffled() }
-    }
-
-    /// First solution step is the boss-quiz "explanation" by
-    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
-    private func bossExplanation(_ q: Question) -> String {
-        let step = q.solutionSteps.first ?? ""
-        return step.isEmpty ? "Got it!" : step
     }
 }

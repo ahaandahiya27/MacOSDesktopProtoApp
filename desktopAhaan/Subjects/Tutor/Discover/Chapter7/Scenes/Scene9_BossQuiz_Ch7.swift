@@ -102,7 +102,7 @@ struct Scene9_BossQuiz_Ch7: View {
             SoftShadowCard(padding: 12) {
                 HStack(alignment: .top, spacing: 8) {
                     Image(systemName: "lightbulb.fill").foregroundColor(.yellow)
-                    Text(bossExplanation(item)).font(.callout)
+                    Text(item.bossExplanation).font(.callout)
                     Spacer(minLength: 0)
                 }
             }
@@ -114,14 +114,6 @@ struct Scene9_BossQuiz_Ch7: View {
                 .accentColor(Color.compatIndigo)
         }
     }
-    /// First solution step is the boss-quiz "explanation" by
-    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
-    private func bossExplanation(_ q: Question) -> String {
-        let step = q.solutionSteps.first ?? ""
-        return step.isEmpty ? "Got it!" : step
-    }
-
-
     // MARK: - Quiz mechanics
 
     fileprivate enum AnswerState { case neutral, picked, correct, wrong }

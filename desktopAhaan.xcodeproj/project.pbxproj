@@ -45,6 +45,7 @@
 		06CCD8F040609582D81F0D64 /* Misconception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4406362078319D236CC51F /* Misconception.swift */; };
 		B707D25D3906F28C9E8B0713 /* Mnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB42DFC20DF7FC073443DC /* Mnemonic.swift */; };
 		11AF3CA58240F8F79ABE979C /* NcertQAEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0962813F9E8812B864B7DA /* NcertQAEntry.swift */; };
+		73A0770B3E11AEC2CBD2DC7E /* Question+BossQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A79921427F950E86E8CE95 /* Question+BossQuiz.swift */; };
 		C586C92D6CFBAA502A789BE3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4EF10AB54BFA0CB54807D9 /* Question.swift */; };
 		320421F9B1EAC5C6AB4C58D5 /* QuestionSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C13F3C2D9C044924B3A119E /* QuestionSource.swift */; };
 		27B360669AA8D1E7094059FF /* RealWorldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D728E2AD98E7D7C43D8FFF1 /* RealWorldExample.swift */; };
@@ -1108,6 +1109,7 @@
 		0C4406362078319D236CC51F /* Misconception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Misconception.swift"; sourceTree = "<group>"; };
 		17CB42DFC20DF7FC073443DC /* Mnemonic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mnemonic.swift"; sourceTree = "<group>"; };
 		EE0962813F9E8812B864B7DA /* NcertQAEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQAEntry.swift"; sourceTree = "<group>"; };
+		72A79921427F950E86E8CE95 /* Question+BossQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+BossQuiz.swift"; sourceTree = "<group>"; };
 		CE4EF10AB54BFA0CB54807D9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question.swift"; sourceTree = "<group>"; };
 		8C13F3C2D9C044924B3A119E /* QuestionSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionSource.swift"; sourceTree = "<group>"; };
 		3D728E2AD98E7D7C43D8FFF1 /* RealWorldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealWorldExample.swift"; sourceTree = "<group>"; };
@@ -2189,6 +2191,7 @@
 				0C4406362078319D236CC51F,
 				17CB42DFC20DF7FC073443DC,
 				EE0962813F9E8812B864B7DA,
+				72A79921427F950E86E8CE95,
 				CE4EF10AB54BFA0CB54807D9,
 				8C13F3C2D9C044924B3A119E,
 				3D728E2AD98E7D7C43D8FFF1,
@@ -3593,6 +3596,7 @@
 				06CCD8F040609582D81F0D64 /* Misconception.swift in Sources */,
 				B707D25D3906F28C9E8B0713 /* Mnemonic.swift in Sources */,
 				11AF3CA58240F8F79ABE979C /* NcertQAEntry.swift in Sources */,
+				73A0770B3E11AEC2CBD2DC7E /* Question+BossQuiz.swift in Sources */,
 				C586C92D6CFBAA502A789BE3 /* Question.swift in Sources */,
 				320421F9B1EAC5C6AB4C58D5 /* QuestionSource.swift in Sources */,
 				27B360669AA8D1E7094059FF /* RealWorldExample.swift in Sources */,

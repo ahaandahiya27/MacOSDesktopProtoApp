@@ -272,13 +272,6 @@ struct Scene9_BossQuiz_Ch2: View {
         image.unlockFocus()
         return image
     }
-
-    /// First solution step is the boss-quiz "explanation" by
-    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
-    private func bossExplanation(_ q: Question) -> String {
-        let step = q.solutionSteps.first ?? ""
-        return step.isEmpty ? "Got it!" : step
-    }
 }
 
 // MARK: - Answer Button

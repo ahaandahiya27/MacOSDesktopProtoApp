@@ -241,13 +241,6 @@ struct Scene9_BossQuiz_Ch3: View {
         )
         .border(Color.compatIndigo, width: 3)
     }
-
-    /// First solution step is the boss-quiz "explanation" by
-    /// convention pinned in `scripts/migrate_boss_quiz_to_pack.py`.
-    private func bossExplanation(_ q: Question) -> String {
-        let step = q.solutionSteps.first ?? ""
-        return step.isEmpty ? "Got it!" : step
-    }
 }
 
 // MARK: - Answer Button
