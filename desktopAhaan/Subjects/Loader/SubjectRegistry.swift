@@ -189,7 +189,7 @@ final class SubjectRegistry: ObservableObject {
         -> (pack: SubjectPack, chapter: Chapter, question: Question)? {
         if _questionLocations == nil {
             var built: [String: (SubjectPack, Chapter, Question)] = [:]
-            built.reserveCapacity(900)  // ~732 sci + 154 sa = 886 today
+            built.reserveCapacity(1200)  // ~732 sci + 154 sa + ~285 boss = 1171 after 2026-05-25 migration
             for pack in packs {
                 for chapter in pack.chapters {
                     for topic in chapter.topics {
@@ -201,6 +201,17 @@ final class SubjectRegistry: ObservableObject {
                             if built[q.id] == nil {
                                 built[q.id] = (pack, chapter, q)
                             }
+                        }
+                    }
+                    // Boss-quiz questions live at chapter level (not inside
+                    // a topic) — see Chapter.bossQuestions. Index them in
+                    // the same lookup table so DailyPracticeView / the
+                    // recently-missed surface / ChapterStuckHereStrip all
+                    // resolve `bossquiz_chNN_qII` ids cleanly. Added
+                    // 2026-05-25 with the boss-quiz migration.
+                    for q in chapter.bossQuestionsList {
+                        if built[q.id] == nil {
+                            built[q.id] = (pack, chapter, q)
                         }
                     }
                 }

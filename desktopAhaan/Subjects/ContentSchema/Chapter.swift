@@ -54,6 +54,19 @@ struct Chapter: Codable, Hashable, Identifiable {
     /// concept map. Added 2026-05-23 (Ch.1 pilot); renderer
     /// generalised 2026-05-24.
     let conceptMap: ConceptMap?
+
+    /// MCQ items used by `Scene9_BossQuiz*` to celebrate chapter
+    /// completion. Migrated from hand-authored Swift literals on
+    /// 2026-05-25 — see `scripts/migrate_boss_quiz_to_pack.py`.
+    ///
+    /// Stable ids match the SM-2 ephemeral ids the prior
+    /// `recordEphemeralReview` call sites used (`bossquiz_chNN_qII`),
+    /// so on-disk review state stays valid through the migration.
+    ///
+    /// Optional so any older `science_class7.json` snapshot continues
+    /// to decode unchanged. Always carries `Question.source ==
+    /// .bossQuiz` when populated.
+    let bossQuestions: [Question]?
 }
 
 // MARK: - Empty-list accessors
@@ -79,13 +92,20 @@ extension Chapter {
     var deepDiveList: [StretchTopic] { deepDive ?? [] }
     var mediaAssetsList: [MediaAsset] { mediaAssets ?? [] }
 
+    /// Empty-list accessor for `bossQuestions` so callers don't have
+    /// to nil-check the Optional. Mirrors the *List pattern used by
+    /// the other Optional list fields on Chapter.
+    var bossQuestionsList: [Question] { bossQuestions ?? [] }
+
     /// Flat list of every Question id in this chapter, walking the
-    /// chapter → topic → question tree. Used by D4's "Stuck here?"
+    /// chapter → topic → question tree PLUS the chapter-scoped Boss
+    /// Quiz questions migrated 2026-05-25. Used by D4's "Stuck here?"
     /// strip to intersect chapter scope with the tough-flagged and
     /// recently-missed signals. Computed each access — typical
-    /// chapter has ~40 questions, well under any noticeable cost.
+    /// chapter has ~40 topic questions + 15 boss questions = ~55
+    /// ids, well under any noticeable cost.
     var allQuestionIds: [String] {
-        topics.flatMap { $0.questions.map(\.id) }
+        topics.flatMap { $0.questions.map(\.id) } + bossQuestionsList.map(\.id)
     }
 
     /// Flat list of every Concept id in this chapter — same shape as
