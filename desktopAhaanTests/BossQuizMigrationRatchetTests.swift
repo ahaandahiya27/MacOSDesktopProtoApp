@@ -110,6 +110,30 @@ final class BossQuizMigrationRatchetTests: XCTestCase {
         }
     }
 
+    /// Page-reference floor (added 2026-05-25 enrichment session):
+    /// every boss-quiz item MUST ship with at least one entry in
+    /// `pageRefs`. QuestionDetailView's "📖 p.N" chip renders blank
+    /// when the array is empty — the kid loses the textbook
+    /// breadcrumb that points them at the relevant page to read.
+    func testEveryBossQuizHasPageRefs() throws {
+        let pack = try loadSciencePack()
+        var emptyIds: [String] = []
+        for chapter in pack.chapters {
+            for q in chapter.bossQuestionsList {
+                if q.pageRefs.isEmpty {
+                    emptyIds.append(q.id)
+                }
+            }
+        }
+        XCTAssertTrue(
+            emptyIds.isEmpty,
+            "These boss-quiz items ship with empty pageRefs:\n" +
+            emptyIds.map { "  - \($0)" }.joined(separator: "\n") +
+            "\nEvery boss Q must carry ≥ 1 pageRef so the 📖 p.N " +
+            "chip in QuestionDetailView points at a real textbook page."
+        )
+    }
+
     /// Pedagogical-content floor (added 2026-05-25 enrichment session):
     /// every boss-quiz item MUST ship with at least one entry in
     /// `commonMistakes`. If a future content edit empties the array

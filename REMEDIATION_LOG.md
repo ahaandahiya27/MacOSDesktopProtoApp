@@ -1476,4 +1476,107 @@ that already ship in the pack.
   tap the Recently-Missed row, confirm the commonMistakes card
   renders with the new "Picking Saprotroph…" text.
 
+## Session continuation: 2026-05-25 21:30 +05:30 — iMac OOM MITIGATIONS + pageRefs BACKFILL (Y3)
+
+### Goal
+Two follow-ups bundled into one push because both arose from the
+boss-quiz enrichment work landing:
+1. iMac "code 9: Killed" build dialog (memory pressure on the
+   Late-2014 8 GB iMac after a large content pull). User's Xcode
+   surfaced the dialog with concrete mitigation suggestions; ship
+   the repo-side ones.
+2. Boss-quiz `pageRefs` backfill (ISSUE_CATEGORIES.md row Y3 —
+   the only `❌ not yet audited` row left in the doc that's a
+   straight content gap). Each of the 200 boss Qs shipped with
+   empty `pageRefs`, so `QuestionDetailView`'s "📖 p.N" chip
+   rendered blank when the kid tapped in from Daily Practice.
+
+### Commits landed this session
+
+- `4dad51e` chore(imac): IDEPrefersOSLogging in scheme +
+  imac-pull.sh step 6.5 (idempotent DerivedData redirect) +
+  CLAUDE.md note. No source change; no schema or pack edit.
+- THIS COMMIT — pageRefs backfill (200 Qs · 1-2 pages each) +
+  ratchet floor `testEveryBossQuizHasPageRefs` + REMEDIATION_LOG.
+
+### iMac mitigations shipped (commit `4dad51e`)
+
+1. `desktopAhaan.xcscheme` — added `IDEPrefersOSLogging=YES` to
+   LaunchAction env so the logging subsystem doesn't time out
+   under memory pressure. The Xcode dialog's own mitigation
+   suggestion. Key has shipped unchanged since Xcode 11, so
+   Big Sur 11.7 + Xcode 13.2.1 read it cleanly.
+2. `scripts/imac-pull.sh` step 6.5 — runs `defaults write
+   com.apple.dt.Xcode IDEDerivedDataLocationStyle Custom` +
+   `IDECustomDerivedDataLocation /tmp/desktopAhaan-imac-derived`
+   on first run. Reads the current style first; if already
+   Custom, leaves it alone (preserves any deliberate manual
+   setting). Idempotent.
+3. `CLAUDE.md` "Cross-machine workflow" section grows a
+   "Common iMac OOM mitigations" subsection documenting both.
+
+The CI redirect from `2831646` (TMPDIR-based DerivedData for
+`ci-build-test.sh`) is now matched on the interactive Xcode
+session.
+
+### pageRefs backfill (THIS COMMIT)
+
+Authoring strategy: for each of the 200 boss Qs, pick 1-2 pages
+matching the chapter topic that covers the Q's concept. Pages
+drawn from the dominant-page map of each topic's existing
+textbook-Q `pageRefs` (so the boss Qs' references stay
+consistent with the rest of the pack).
+
+Examples:
+- `bossquiz_ch01_q00` (chlorophyll) → [14]  (photosynthesis page)
+- `bossquiz_ch01_q03` (Cuscuta parasite) → [16, 18]  (non-green plants)
+- `bossquiz_ch08_q02` (cyclone eye) → [104, 99]  (cyclones topic)
+
+Authoring script `/tmp/backfill_pagerefs.py` not checked in — same
+pattern as `/tmp/enrich_boss_quiz.py` from the previous session
+(historical artefact, lives in /tmp).
+
+### Test additions
+
+- `BossQuizMigrationRatchetTests.testEveryBossQuizHasPageRefs`
+  pins the floor at ≥ 1 pageRef per boss Q. If a future content
+  edit empties the array, the test fails loudly with the
+  offending id. Local run: 7 / 7 ratchet cases pass (including
+  the new one alongside `testEveryBossQuizHasCommonMistakes`).
+
+### Out-of-scope (logged for next session)
+
+- **Variation coverage push to 50%** (carried over from prior
+  enrichment close-out).
+- **`bossExplanation(_:)` helper deduplication** (carried over).
+- **Sanskrit pack expansion** — only 1 chapter currently vs 19
+  for science. Probably needs a content-author rather than this
+  loop.
+- **ISSUE_CATEGORIES.md row Y3 flip** — after this commit lands,
+  the pageRefs gap is closed; the row can flip from ❌ to ✅
+  on the next status-pass session.
+
+### Build / tests / lints
+
+- `check_pack_schema.py` + `verify_pack_roundtrip.py` — clean
+  both packs.
+- 7 / 7 `BossQuizMigrationRatchetTests` pass locally (incl. the
+  new `testEveryBossQuizHasPageRefs`).
+- All 9 lints clean.
+- 2 commits this continuation, pushed individually.
+
+### Notes for future sessions
+
+- The pageRefs ratchet `testEveryBossQuizHasPageRefs` checks
+  `≥ 1`, NOT `== 2`. Some boss Qs only have one clean page to
+  point at (single-concept Qs); a future audit might want to
+  audit which Qs deserve a second page reference.
+- The iMac DerivedData redirect runs ONLY through
+  `scripts/imac-pull.sh`. If the kid opens Xcode without running
+  the pull script first, they'll continue to use the default
+  `~/Library/Developer/Xcode/DerivedData/` location. To force
+  the redirect immediately on the iMac:
+      bash scripts/imac-pull.sh
+  (or run the `defaults write` lines from step 6.5 by hand).
+
 
