@@ -42,10 +42,14 @@ struct ChapterDetailView: View {
         return resolvedArticleEntry(forKey: "\(chapter.id)_mistakes")
     }
 
-    /// Shared resolver — looks up the entry by key and confirms the
-    /// HTML file exists in Bundle.main (subdirectory-aware with flat-
-    /// bundle fallback). Returns nil when the entry is missing OR the
-    /// file isn't bundled — either way the card auto-hides.
+    /// GlossarySheet → article handoff (defer one tick — Big Sur drops sheet-from-sheet).
+    private func openGlossaryArticleFromSheet() {
+        guard let entry = resolvedArticleEntry(forKey: "\(chapter.id)_glossary") else { return }
+        sheetCoordinator.presented = nil
+        DispatchQueue.main.async { sheetCoordinator.presented = .article(entry) }
+    }
+
+    /// Bundle-existence-gated entry lookup. Returns nil if missing/unbundled (card auto-hides).
     private func resolvedArticleEntry(forKey key: String) -> ArticleEntry? {
         guard let entry = ArticleIndex.entries[key] else {
             return nil
@@ -332,10 +336,9 @@ struct ChapterDetailView: View {
                 .frame(minWidth: 720, idealWidth: 920,
                        minHeight: 540, idealHeight: 680)
             case .glossary:
-                GlossarySheet(
-                    chapter: chapter,
-                    onDismiss: { sheetCoordinator.presented = nil }
-                )
+                GlossarySheet(chapter: chapter,
+                              onDismiss: { sheetCoordinator.presented = nil },
+                              onOpenFullArticle: openGlossaryArticleFromSheet)
             case .insideTheLeafTour:
                 InsideTheLeafTour(
                     chapterId: chapter.id,

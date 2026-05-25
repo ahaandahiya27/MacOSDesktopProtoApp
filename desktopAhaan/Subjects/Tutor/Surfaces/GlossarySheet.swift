@@ -12,6 +12,14 @@ import AppKit
 struct GlossarySheet: View {
     let chapter: Chapter
     var onDismiss: () -> Void
+    /// Optional callback to open the per-chapter long-form
+    /// vocabulary-deck HTML article (the `ch{NN}_glossary` article
+    /// shipped 2026-05-26 for every chapter). When non-nil and the
+    /// article is bundled, a "Read full vocabulary deck" footer
+    /// link is shown. Parent is responsible for dismissing this
+    /// sheet first and presenting the article sheet on the next
+    /// runloop tick.
+    var onOpenFullArticle: (() -> Void)? = nil
 
     private var sortedTerms: [GlossaryTerm] {
         chapter.glossaryList.sorted { $0.term.localizedCaseInsensitiveCompare($1.term) == .orderedAscending }
@@ -91,11 +99,38 @@ struct GlossarySheet: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             Spacer()
+            if let openArticle = onOpenFullArticle, hasFullArticleBundled {
+                Button {
+                    openArticle()
+                } label: {
+                    Label("Read full deck", systemImage: SFSymbolCompat.name("book.closed"))
+                        .font(.callout)
+                }
+                .buttonStyle(.plain)
+                .pointingCursor()
+                .accessibilityLabel("Read full vocabulary deck article")
+                .accessibilityHint("Closes this sheet and opens the chapter's long-form vocabulary deck article.")
+            }
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
+    }
+
+    /// True if the chapter's `_glossary` HTML article is bundled.
+    /// Same bundle-existence gate ChapterDetailView's enrichment
+    /// surfaces use — keeps the footer button from appearing on
+    /// chapters whose article never got shipped (none today, but
+    /// defensive against future regressions).
+    private var hasFullArticleBundled: Bool {
+        let key = "\(chapter.id)_glossary"
+        guard let entry = ArticleIndex.entries[key] else { return false }
+        let name = entry.filename.replacingOccurrences(of: ".html", with: "")
+        let resolved = Bundle.main.url(forResource: name, withExtension: "html",
+                                       subdirectory: entry.chapterFolder)
+            ?? Bundle.main.url(forResource: name, withExtension: "html")
+        return resolved != nil
     }
 
     private var emptyState: some View {
