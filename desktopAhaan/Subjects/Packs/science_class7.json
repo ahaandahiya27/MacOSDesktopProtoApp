@@ -7994,7 +7994,10 @@
           "solutionSteps": [
             "An adult human has 32 teeth: 8 incisors, 4 canines, 8 premolars, and 12 molars."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 28 — that's the count before wisdom teeth come in (most adults get 4 of them between ages 17-25). The full adult set is 32.",
+            "Picking 36 — humans top out at 32. Some other mammals (dogs have 42) carry more, but a human jaw can't fit 36 cleanly."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8015,7 +8018,10 @@
           "solutionSteps": [
             "Bile is produced by the liver and emulsifies fats into smaller droplets for digestion."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Pepsin — pepsin breaks down PROTEINS in the stomach, not fats. Bile (from the liver) handles fats in the small intestine.",
+            "Picking Amylase — amylase tackles STARCHES (in saliva and pancreas juice). Fat needs bile to be emulsified before enzymes can break it."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8036,7 +8042,10 @@
           "solutionSteps": [
             "Holozoic nutrition means taking in whole organic food particles — exactly how amoebas eat."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Autotrophic — autotrophs make their own food (plants). Amoeba captures other tiny organisms whole, so it's holozoic, not autotrophic.",
+            "Picking Saprophytic — saprophytes feed on dead matter (like fungi). Amoeba prefers LIVING prey such as bacteria, scooped up with pseudopodia."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8057,7 +8066,10 @@
           "solutionSteps": [
             "The small intestine has villi and microvilli that absorb 90% of nutrients into the blood."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Stomach — the stomach mostly DIGESTS (acid + enzymes). Most absorption happens in the small intestine, which is 6 metres long for a reason.",
+            "Picking Large intestine — the large intestine absorbs water and some salts. Nutrients (sugars, amino acids, fats) cross into blood in the small intestine."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8078,7 +8090,10 @@
           "solutionSteps": [
             "The rumen is where food is first stored and mixed with bacteria to soften grass."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Abomasum — the abomasum is the cow's TRUE stomach (digests like ours). The first chamber, where grass arrives, is the rumen.",
+            "Thinking cows have one stomach like us — they have four chambers. Grass enters the rumen first, where bacteria start breaking down cellulose."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8099,7 +8114,10 @@
           "solutionSteps": [
             "The liver makes bile, stores nutrients and detoxifies the blood. It is the biggest gland in the body."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Pancreas — the pancreas IS a major gland (insulin + digestive enzymes), but the liver is roughly 10× heavier. Liver wins on size.",
+            "Picking Salivary gland — the three pairs of salivary glands together weigh only a few grams. The liver weighs about 1.5 kg."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8120,8 +8138,21 @@
           "solutionSteps": [
             "Amoeba pushes out finger-like extensions of its body to surround and engulf food particles."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'Reproduce' — amoeba reproduces by splitting in two (binary fission), not via pseudopodia. Pseudopodia are flexible 'false feet' for moving and grabbing food.",
+            "Picking 'Make oxygen' — amoeba is a single-celled animal; it doesn't photosynthesise. Pseudopodia are about locomotion and capture, not gas exchange."
+          ],
+          "variations": [
+            {
+              "prompt": "How does an amoeba 'swallow' a food particle without a mouth?",
+              "answer": "It surrounds the particle with pseudopodia, sealing it inside a food vacuole.",
+              "solutionSteps": [
+                "Pseudopodia stretch around the prey from two sides.",
+                "When the tips meet they fuse, trapping the prey in a sealed bubble inside the cell.",
+                "Enzymes then digest the prey inside this food vacuole."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -8141,7 +8172,10 @@
           "solutionSteps": [
             "Cows, goats and buffalo host bacteria in their rumen that break down cellulose into nutrients."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Bile — bile breaks fats, not plant cell walls. Cellulose is dismantled by bacteria in the rumen, which mammals can't do alone.",
+            "Thinking the cow's own enzymes digest grass — they can't. No mammal makes the enzyme that cuts cellulose; bacterial tenants do the work."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8162,7 +8196,10 @@
           "solutionSteps": [
             "Millions of finger-like villi turn the small intestine into a giant absorbent surface."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Make blood' — blood is made in bone marrow, not the intestine. Villi exist to ABSORB nutrients, not to manufacture blood cells.",
+            "Thinking the intestine is just a smooth tube — its inner wall is folded into millions of villi, giving surface area roughly the size of a tennis court."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8183,7 +8220,10 @@
           "solutionSteps": [
             "Sugar left on teeth feeds bacteria that release acid; the acid eats into tooth enamel."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'drinking water' — water actually rinses sugars off teeth. The acid that erodes enamel comes from mouth bacteria feasting on sugar.",
+            "Picking 'eating fruit' — fruit has natural sugar but the whole-fruit fibre helps clean teeth. Sticky processed sugar (toffees, biscuits) is the worst."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8204,7 +8244,10 @@
           "solutionSteps": [
             "Goblet cells in the stomach lining release fresh mucus every few days. Without it, the stomach would digest itself."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'the acid is fake' — it's real and strong (pH around 1.5). The trick is the mucus lining that replaces itself faster than acid can eat through.",
+            "Thinking the stomach has no protection — without mucus, the stomach would digest itself overnight. Every few days the lining is fully replaced."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8225,7 +8268,10 @@
           "solutionSteps": [
             "Six salivary glands work all day. Most of it gets swallowed without us noticing u{2014} digestion starts in the mouth."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'a few drops' — saliva flows continuously, especially when you eat. Total daily output is over a litre.",
+            "Picking 'about 5 litres' — your whole body holds about 5 L of blood. Saliva isn't anywhere near that; the right ballpark is 1-1.5 L."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8246,7 +8292,10 @@
           "solutionSteps": [
             "Plant-eaters generally have longer guts than meat-eaters. More road = more time for stubborn cellulose."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'cows are bigger' — partly true, but the real reason is cellulose is HARD to digest. More gut length = more time for bacteria to break it down.",
+            "Picking 'cows have no stomach' — they have FOUR chambers. The long intestine PLUS the multi-chamber stomach is built for tough plant food."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8267,7 +8316,10 @@
           "solutionSteps": [
             "The map came from a mistranslation a century ago. Modern research shows all taste zones do all jobs."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'completely true' — it was in textbooks for a century, but research showed every taste bud detects every taste. The tongue map is folklore.",
+            "Thinking taste buds live only on the tongue — they're also on the roof of the mouth, the back of the throat, even the upper oesophagus."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -8288,7 +8340,10 @@
           "solutionSteps": [
             "The gut microbiome. Many of these bacteria are friendly partners helping digest food and make vitamins."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'none — it would be unhygienic' — they're essential, not harmful. Most digest things our enzymes can't and produce vitamins like K and B12.",
+            "Picking 'about a million' — undershoots by ten million-fold. Your gut is one of the densest microbial communities on Earth."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11624,7 +11679,10 @@
           "solutionSteps": [
             "Cashmere goats produce the most luxurious wool, especially those in the Himalayas."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Sheep — sheep give regular wool (merino, etc.). Cashmere is from a specific goat breed that grows an ultra-fine undercoat in cold mountains.",
+            "Picking Alpaca — alpacas give alpaca wool, also luxurious but a different fibre. Cashmere is specifically goat undercoat."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11645,7 +11703,10 @@
           "solutionSteps": [
             "Scouring uses warm water and detergent to wash out grease, dirt, and debris."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Dyeing — dyeing adds colour; it doesn't remove grease. Scouring (warm water + detergent) is the cleaning step that comes first.",
+            "Picking Carding — carding combs the fibres straight; the fleece must already be CLEAN. Scouring is the wash that precedes carding."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11666,7 +11727,10 @@
           "solutionSteps": [
             "A silkworm caterpillar eats mulberry leaves for about 25-28 days before spinning its cocoon."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 10 — too short. The silkworm needs about 25 days of constant eating to build enough body mass to spin a cocoon.",
+            "Picking 35 — too long. The silkworm pupates inside its cocoon around day 25; if it took 35, the cocoon would unravel before harvest."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11687,7 +11751,10 @@
           "solutionSteps": [
             "Polyester is made from petroleum. Cotton, wool, and silk are natural fibres."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Cotton — cotton is a natural plant fibre. Synthetic means man-made from chemicals, like polyester from petroleum.",
+            "Picking Silk — silk is natural (from silkworm cocoons). Synthetic fibres are factory-made: polyester, nylon, acrylic."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11708,7 +11775,10 @@
           "solutionSteps": [
             "Sorter's disease (anthrax) is caused by spores in raw fleece. Modern safety prevents this."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Measles — measles is a virus spread between people, not from fleece. Anthrax bacteria can hide in raw wool and infect wool sorters.",
+            "Picking Polio — polio spreads via contaminated water. The 'wool-sorter's disease' is anthrax."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11729,7 +11799,10 @@
           "solutionSteps": [
             "Cocoons are softened in hot water and the long single thread is unwound — that is reeling."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Carding — carding is a WOOL step (combing fibres straight). Reeling is silk-specific: unwinding one continuous thread off a softened cocoon.",
+            "Picking Weaving — weaving turns thread into fabric. Reeling produces the raw silk thread in the first place."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11750,7 +11823,10 @@
           "solutionSteps": [
             "The freezing high-altitude winters make Pashmina goats grow extra-fine warm wool."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Kerala backwaters' — Kerala is hot and humid; cashmere goats need COLD, high altitude. Ladakh and the Tibetan plateau are the homeland.",
+            "Picking 'Tamil Nadu coast' — coastal regions are too warm. Pashmina goats grow their fine undercoat in response to bitter mountain winters."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11771,7 +11847,10 @@
           "solutionSteps": [
             "After scouring, wool fibres are combed parallel so they can be spun into smooth yarn."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'dyeing it' — dyeing colours the fibres; it's a later step. Carding mechanically straightens and aligns the cleaned fibres.",
+            "Picking 'washing the grease out' — that's scouring, which comes BEFORE carding. Carding handles already-clean wool."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11792,7 +11871,10 @@
           "solutionSteps": [
             "Sericulture combines 'serikos' (silken) with 'culture' (rearing). India is a top sericulture nation."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Sheep — that's sheep farming, not sericulture. Sericulture is specifically the rearing of silkworms for their cocoons.",
+            "Picking 'cocoons of cotton' — cotton comes from a plant; no cocoons involved. Silkworm cocoons are what sericulture harvests."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -11813,7 +11895,10 @@
           "solutionSteps": [
             "Mulberry silkworms eat only fresh mulberry leaves — that is why mulberry trees are grown near silk farms."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'mango tree' — silkworms are picky eaters. Mulberry leaves contain compounds silkworms tolerate while most other caterpillars cannot.",
+            "Picking 'coconut tree' — coconut palms are tall and tropical. Mulberry is a small tree grown near silk farms because silkworms refuse other leaves."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15161,7 +15246,10 @@
           "solutionSteps": [
             "Copper is a metal and metals are excellent conductors of heat."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Wood — wood is a great INSULATOR (think wooden cooking spoons). Metals like copper conduct heat fastest.",
+            "Picking Wool — wool traps air, which is why blankets keep you warm. Trapped air is an insulator, the opposite of a conductor."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15182,7 +15270,10 @@
           "solutionSteps": [
             "Space is a vacuum — heat can only travel through it as radiation (infrared waves)."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Conduction — conduction needs touching solids. Sun-to-Earth crosses 150 million km of vacuum; only radiation works across nothing.",
+            "Picking Convection — convection needs a fluid (air, water) to carry heat. Space has no fluid, so convection can't bridge the gap."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15203,7 +15294,10 @@
           "solutionSteps": [
             "Air is a poor conductor. Trapped air between fluffed feathers stops body heat escaping."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'feathers are hot by themselves' — feathers aren't biologically warm; they're dead structures. The warmth comes from trapped air between fluffed feathers.",
+            "Picking 'blood flows faster' — extra surface blood flow actually LOSES heat. Birds REDUCE blood flow to exposed parts in cold weather."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15224,8 +15318,21 @@
           "solutionSteps": [
             "Same temperature, but Cup B has 5 times more water so it stores 5 times more heat energy."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking Cup A — both cups are at the SAME temperature (80°C), but Cup B has 5× more water. Heat is total energy, which scales with mass.",
+            "Picking 'both equal' — temperature is equal but HEAT (total energy) is not. Same height ≠ same volume."
+          ],
+          "variations": [
+            {
+              "prompt": "Two pots of water are both boiling. The bigger pot takes longer to cool. Why?",
+              "answer": "It holds more total heat energy because it has more mass at the same temperature.",
+              "solutionSteps": [
+                "At 100°C both pots are at the same temperature.",
+                "But the big pot has many more grams of hot water, so it carries more total heat.",
+                "Both lose heat at a similar rate per square centimetre, so the big pot takes longer to cool down."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -15245,7 +15352,10 @@
           "solutionSteps": [
             "During the day land heats faster, hot air rises, and cooler air rushes in from the sea."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'night' — at night the LAND cools faster than the sea, so the breeze reverses (land to sea). Sea-to-land happens in the day.",
+            "Thinking the breeze is constant — coastal breezes flip direction every day-night cycle as land and sea swap which is warmer."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15266,7 +15376,10 @@
           "solutionSteps": [
             "Heat is a form of energy, so its unit is the joule. Kelvin and Celsius are units of temperature."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Kelvin — Kelvin measures TEMPERATURE, not heat. Heat is energy, and energy's SI unit is the joule.",
+            "Picking Celsius — Celsius is another temperature scale. The unit for heat (energy) is the joule, same as for any other kind of energy."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15287,7 +15400,10 @@
           "solutionSteps": [
             "Land needs less energy to raise its temperature, so it gets hot sooner under the same sunlight."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'land has more water' — it's the OPPOSITE. Sea is mostly water; water needs lots of heat to warm. Land (rock, soil) heats faster per gram.",
+            "Picking 'sea is closer to the Sun' — both are hit by the same Sun. The difference is what happens after the heat arrives."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15308,7 +15424,10 @@
           "solutionSteps": [
             "No air means no conduction and no convection; silvered walls also reflect radiation back."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'look pretty' — the double-walled vacuum is an engineering choice, not cosmetic. With no air between walls, conduction AND convection are blocked.",
+            "Picking 'stop electricity' — thermos flasks aren't about electricity. The vacuum stops the two heat-transfer modes that need matter to travel through."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15329,7 +15448,10 @@
           "solutionSteps": [
             "Dark surfaces absorb more of the Sun's radiation; light surfaces reflect more of it away."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'reflect more heat' — light colours do that. Dark colours absorb most of the light hitting them, including infrared, and convert it to heat.",
+            "Picking 'cool the body' — dark clothes do the opposite outdoors. In sunny weather, light cotton lets the body cool by reflecting sunlight."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -15350,7 +15472,10 @@
           "solutionSteps": [
             "One metal expands more than the other, so the joined strip curves to one side — used in thermostats."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'cool at different speeds' — cooling rates aren't the design point. The bend comes from different EXPANSION amounts when heated.",
+            "Picking 'have different colours' — colour doesn't bend metal. The two metals are chosen specifically because they expand by different amounts per °C."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17676,7 +17801,10 @@
           "solutionSteps": [
             "Turmeric is a natural indicator u{2014} it stays yellow in acid but turns red/brown in a base."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Phenolphthalein — phenolphthalein IS an indicator, but it's a lab chemical, not a natural kitchen ingredient. Turmeric is the natural one.",
+            "Picking Hydrochloric acid — HCl is an ACID, not an indicator. Indicators CHANGE COLOUR when they meet acid or base; HCl is the thing being tested."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17697,7 +17825,10 @@
           "solutionSteps": [
             "Pure water is neutral with a pH of exactly 7 u{2014} neither acidic nor basic."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 0 — pH 0 is extremely acidic (battery acid territory). Pure water sits right in the middle of the 0-14 scale.",
+            "Picking 14 — pH 14 is extremely basic (drain cleaner). Pure water is neutral, neither acidic nor basic, so pH = 7."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17718,8 +17849,21 @@
           "solutionSteps": [
             "Baking soda is a mild base. It neutralises the acid from the bee sting, giving relief."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'lemon juice' — lemon juice is ACIDIC, which would make an acidic bee sting MORE painful. You need a BASE to neutralise the acid.",
+            "Picking 'vinegar' — vinegar is dilute acetic acid; it'd worsen a bee sting. Vinegar IS the right answer for a WASP sting (which is alkaline)."
+          ],
+          "variations": [
+            {
+              "prompt": "Why do you use vinegar (not baking soda) for a wasp sting?",
+              "answer": "Wasp venom is alkaline, so the acidic vinegar neutralises it.",
+              "solutionSteps": [
+                "Bee venom is acidic — needs a base to neutralise (baking soda).",
+                "Wasp venom is alkaline — needs an acid to neutralise (vinegar).",
+                "Memory trick: BEE = Baking soda; Wasp = Vinegar."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -17739,7 +17883,10 @@
           "solutionSteps": [
             "When an acid reacts with a base, they neutralise each other to produce a salt and water."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'Acid + Gas' — gas can be released in some acid reactions (with metals or carbonates), but not in basic neutralisation. The pair is salt + water.",
+            "Picking 'Only Water' — water is one product but the acid's negative ion plus the base's positive ion combine into a salt. That salt is the OTHER product."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17760,7 +17907,10 @@
           "solutionSteps": [
             "Sulphur dioxide (SOu{2082}) from burning fossil fuels dissolves in rain water to form sulphuric acid, causing acid rain."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Oxygen — oxygen makes up about 21% of the air harmlessly. Sulphur dioxide from burning fossil fuels is what dissolves in rain and turns it acidic.",
+            "Picking Nitrogen — nitrogen dominates the atmosphere harmlessly. Sulphur (and nitrogen OXIDES) are what produce acid rain."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17781,7 +17931,10 @@
           "solutionSteps": [
             "Blue litmus → red in acid. Red litmus → blue in base. Remember: 'blue in base.'"
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Blue — blue litmus turns RED in acid, not the other way around. Memory tip: ACID = bRAd, BASE = BLue.",
+            "Picking Green — litmus only does red/blue. Green is for the universal indicator at neutral pH 7."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17802,7 +17955,10 @@
           "solutionSteps": [
             "Sodium chloride is formed by neutralisation of NaOH (base) and HCl (acid)."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking NaOH — that's sodium HYDROXIDE (a strong base, like caustic soda). Table salt is sodium chloride: NaCl.",
+            "Picking HCl — that's hydrochloric ACID (the strong acid in your stomach). Salt is NaCl: sodium PLUS chlorine, not hydrogen."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17823,7 +17979,10 @@
           "solutionSteps": [
             "Magnesium hydroxide or similar bases react with the excess HCl and relieve the burn."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'add more acid' — that would make heartburn worse. Antacids are BASES that neutralise the extra acid causing pain.",
+            "Picking 'coat the tongue' — antacids work in the STOMACH, not the mouth. They react with stomach acid and bring pH back toward neutral."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17844,7 +18003,10 @@
           "solutionSteps": [
             "Bacteria turn the sugar in milk (lactose) into lactic acid — that's the sour taste of curd."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'citric acid' — citric is in citrus fruits (lemon, orange). Curd's sourness comes from lactic acid produced by bacteria from milk sugar.",
+            "Picking 'hydrochloric acid' — HCl belongs in the stomach. Curd contains lactic acid (organic, mild, kid-safe)."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -17865,7 +18027,10 @@
           "solutionSteps": [
             "Vinegar is about 5% acetic acid in water — strong enough to cook with, mild enough to drink in food."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'citric acid' — citric is for citrus fruits. Vinegar is fermented alcohol, and its sour compound is acetic acid.",
+            "Picking 'tartaric acid' — tartaric is found in grapes and tamarind. Vinegar's specific sour compound is acetic acid."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
