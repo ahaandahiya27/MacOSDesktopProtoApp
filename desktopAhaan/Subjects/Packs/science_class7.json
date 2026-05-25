@@ -3934,7 +3934,324 @@
             "label": "vs"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch01_q00",
+          "prompt": "What is the green pigment in leaves that captures sunlight called?",
+          "questionType": "mcq",
+          "options": [
+            "Chlorophyll",
+            "Cytoplasm",
+            "Cellulose",
+            "Carotene"
+          ],
+          "answer": "Chlorophyll",
+          "solutionSteps": [
+            "Chlorophyll is the green pigment inside chloroplasts that absorbs light energy for photosynthesis."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q01",
+          "prompt": "Photosynthesis releases which gas as a by-product?",
+          "questionType": "mcq",
+          "options": [
+            "Carbon dioxide",
+            "Nitrogen",
+            "Oxygen",
+            "Hydrogen"
+          ],
+          "answer": "Oxygen",
+          "solutionSteps": [
+            "Plants split water during photosynthesis and release oxygen into the air."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q02",
+          "prompt": "Tiny pores on the underside of a leaf are called:",
+          "questionType": "mcq",
+          "options": [
+            "Stomata",
+            "Stamen",
+            "Sepals",
+            "Septa"
+          ],
+          "answer": "Stomata",
+          "solutionSteps": [
+            "Stomata are tiny mouths that take in CO₂ and release O₂ during photosynthesis."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q03",
+          "prompt": "Cuscuta is a:",
+          "questionType": "mcq",
+          "options": [
+            "Saprotroph",
+            "Parasite",
+            "Insectivore",
+            "Symbiont"
+          ],
+          "answer": "Parasite",
+          "solutionSteps": [
+            "Cuscuta has no chlorophyll. It wraps around host plants and steals their food — a parasite."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q04",
+          "prompt": "Pitcher plants eat insects mainly to get:",
+          "questionType": "mcq",
+          "options": [
+            "Carbon",
+            "Water",
+            "Nitrogen",
+            "Sunlight"
+          ],
+          "answer": "Nitrogen",
+          "solutionSteps": [
+            "Pitcher plants grow in nitrogen-poor soil. Trapping insects supplies nitrogen for proteins."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q05",
+          "prompt": "Photosynthesis needs water, sunlight, chlorophyll and which gas?",
+          "questionType": "mcq",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon dioxide",
+            "Helium"
+          ],
+          "answer": "Carbon dioxide",
+          "solutionSteps": [
+            "Plants pull in CO₂ through stomata; with water and light energy they make glucose and release O₂."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q06",
+          "prompt": "A mushroom growing on a rotting log is an example of a:",
+          "questionType": "mcq",
+          "options": [
+            "Producer",
+            "Saprotroph",
+            "Parasite",
+            "Carnivore"
+          ],
+          "answer": "Saprotroph",
+          "solutionSteps": [
+            "Saprotrophs feed on dead and decaying matter — they help nature recycle."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q07",
+          "prompt": "Leguminous plants like pea and gram enrich soil with nitrogen because:",
+          "questionType": "mcq",
+          "options": [
+            "Their leaves smell of nitrogen",
+            "Rhizobium bacteria in their root nodules fix nitrogen",
+            "They drink nitrogen from clouds",
+            "They are insectivorous"
+          ],
+          "answer": "Rhizobium bacteria in their root nodules fix nitrogen",
+          "solutionSteps": [
+            "Farmers grow pulses between crops to put nitrogen back into the soil — a free fertiliser."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q08",
+          "prompt": "A lichen is a partnership between:",
+          "questionType": "mcq",
+          "options": [
+            "Two plants",
+            "Two animals",
+            "A fungus and an alga",
+            "A fungus and a bacterium only"
+          ],
+          "answer": "A fungus and an alga",
+          "solutionSteps": [
+            "The alga makes food by photosynthesis; the fungus gives shelter and water. Both gain — mutualism."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q09",
+          "prompt": "Plants store excess food made in leaves mostly as:",
+          "questionType": "mcq",
+          "options": [
+            "Salt",
+            "Starch",
+            "Sand",
+            "Oxygen"
+          ],
+          "answer": "Starch",
+          "solutionSteps": [
+            "Test a leaf with iodine — it turns blue-black where starch is stored."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q10",
+          "prompt": "Van Helmont grew a willow sapling from 2 kg to 76 kg over five years. The soil weighed almost the same at the end. Where did the extra mass come from?",
+          "questionType": "mcq",
+          "options": [
+            "From the water alone",
+            "From COu{2082} in the air",
+            "From the pot itself",
+            "From sunlight directly"
+          ],
+          "answer": "From COu{2082} in the air",
+          "solutionSteps": [
+            "Trees pull carbon out of the air through photosynthesis. Most of the dry mass of a tree was once a gas."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q11",
+          "prompt": "Jagdish Chandra Bose became famous for inventing the crescograph, which proved that:",
+          "questionType": "mcq",
+          "options": [
+            "Plants make their own food",
+            "Plants respond to stimuli like animals do",
+            "Plants have DNA",
+            "Plants are made of cells"
+          ],
+          "answer": "Plants respond to stimuli like animals do",
+          "solutionSteps": [
+            "Bose's machine magnified plant movement 10,000u{00D7}, showing that plants react to light, heat and touch."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q12",
+          "prompt": "Chlorophyll (green pigment in plants) and haemoglobin (red pigment in blood) are almost the same molecule. They differ mainly in the metal at their centre. Chlorophyll has magnesium; haemoglobin has:",
+          "questionType": "mcq",
+          "options": [
+            "Copper",
+            "Zinc",
+            "Iron",
+            "Gold"
+          ],
+          "answer": "Iron",
+          "solutionSteps": [
+            "The same ring of atoms with different metals: Mg in chlorophyll, Fe in haemoglobin. That tiny swap changes the colour and the job."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q13",
+          "prompt": "The sea slug Elysia chlorotica is unusual because it eats algae and then:",
+          "questionType": "mcq",
+          "options": [
+            "Spits the chloroplasts out",
+            "Keeps the chloroplasts alive in its skin and makes its own food",
+            "Turns into a plant",
+            "Stops eating forever"
+          ],
+          "answer": "Keeps the chloroplasts alive in its skin and makes its own food",
+          "solutionSteps": [
+            "It is one of the only animals that can photosynthesise u{2014} the line between plant and animal blurs."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch01_q14",
+          "prompt": "Photosynthesis turns roughly what fraction of the sunlight that hits a leaf into stored food?",
+          "questionType": "mcq",
+          "options": [
+            "Almost 100u{0025}",
+            "About 50u{0025}",
+            "About 20u{0025}",
+            "Only 3 to 6u{0025}"
+          ],
+          "answer": "Only 3 to 6u{0025}",
+          "solutionSteps": [
+            "Solar panels can reach 20u{0025}. Photosynthesis is much less efficient u{2014} but plants do many other things at once."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch02",
@@ -7576,7 +7893,324 @@
             "label": "extreme example"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch02_q00",
+          "prompt": "How many teeth does an adult human have?",
+          "questionType": "mcq",
+          "options": [
+            "28",
+            "30",
+            "32",
+            "36"
+          ],
+          "answer": "32",
+          "solutionSteps": [
+            "An adult human has 32 teeth: 8 incisors, 4 canines, 8 premolars, and 12 molars."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q01",
+          "prompt": "Which digestive juice digests fats?",
+          "questionType": "mcq",
+          "options": [
+            "Pepsin",
+            "Bile",
+            "Trypsin",
+            "Amylase"
+          ],
+          "answer": "Bile",
+          "solutionSteps": [
+            "Bile is produced by the liver and emulsifies fats into smaller droplets for digestion."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q02",
+          "prompt": "Which mode of nutrition does an Amoeba use?",
+          "questionType": "mcq",
+          "options": [
+            "Autotrophic",
+            "Saprophytic",
+            "Holozoic",
+            "Parasitic"
+          ],
+          "answer": "Holozoic",
+          "solutionSteps": [
+            "Holozoic nutrition means taking in whole organic food particles — exactly how amoebas eat."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q03",
+          "prompt": "Where does most nutrient absorption occur?",
+          "questionType": "mcq",
+          "options": [
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Mouth"
+          ],
+          "answer": "Small intestine",
+          "solutionSteps": [
+            "The small intestine has villi and microvilli that absorb 90% of nutrients into the blood."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q04",
+          "prompt": "What is the first chamber of a cow's stomach called?",
+          "questionType": "mcq",
+          "options": [
+            "Abomasum",
+            "Rumen",
+            "Omasum",
+            "Reticulum"
+          ],
+          "answer": "Rumen",
+          "solutionSteps": [
+            "The rumen is where food is first stored and mixed with bacteria to soften grass."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q05",
+          "prompt": "The largest gland in the human body is the:",
+          "questionType": "mcq",
+          "options": [
+            "Pancreas",
+            "Liver",
+            "Salivary gland",
+            "Adrenal gland"
+          ],
+          "answer": "Liver",
+          "solutionSteps": [
+            "The liver makes bile, stores nutrients and detoxifies the blood. It is the biggest gland in the body."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q06",
+          "prompt": "Pseudopodia in amoeba are used to:",
+          "questionType": "mcq",
+          "options": [
+            "Reproduce",
+            "Capture food",
+            "Make oxygen",
+            "Talk"
+          ],
+          "answer": "Capture food",
+          "solutionSteps": [
+            "Amoeba pushes out finger-like extensions of its body to surround and engulf food particles."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q07",
+          "prompt": "Grass-eating animals digest cellulose with the help of:",
+          "questionType": "mcq",
+          "options": [
+            "Bile",
+            "Sunlight",
+            "Bacteria in their stomach",
+            "Salt"
+          ],
+          "answer": "Bacteria in their stomach",
+          "solutionSteps": [
+            "Cows, goats and buffalo host bacteria in their rumen that break down cellulose into nutrients."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q08",
+          "prompt": "Villi line the small intestine to:",
+          "questionType": "mcq",
+          "options": [
+            "Make blood",
+            "Increase surface area for absorption",
+            "Produce bile",
+            "Filter air"
+          ],
+          "answer": "Increase surface area for absorption",
+          "solutionSteps": [
+            "Millions of finger-like villi turn the small intestine into a giant absorbent surface."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q09",
+          "prompt": "Tooth decay is caused mainly by:",
+          "questionType": "mcq",
+          "options": [
+            "Drinking water",
+            "Eating fruit",
+            "Bacteria + sugar producing acid",
+            "Brushing teeth"
+          ],
+          "answer": "Bacteria + sugar producing acid",
+          "solutionSteps": [
+            "Sugar left on teeth feeds bacteria that release acid; the acid eats into tooth enamel."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q10",
+          "prompt": "Your stomach makes hydrochloric acid strong enough to dissolve metal. Why doesn't it dissolve itself?",
+          "questionType": "mcq",
+          "options": [
+            "The acid is fake",
+            "A thick layer of mucus refreshes every few days and protects the wall",
+            "The stomach has no walls",
+            "The acid is colder than it looks"
+          ],
+          "answer": "A thick layer of mucus refreshes every few days and protects the wall",
+          "solutionSteps": [
+            "Goblet cells in the stomach lining release fresh mucus every few days. Without it, the stomach would digest itself."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q11",
+          "prompt": "About how much saliva does an adult human produce per day?",
+          "questionType": "mcq",
+          "options": [
+            "A few drops",
+            "Around 50 ml",
+            "About 1 to 1.5 litres",
+            "About 5 litres"
+          ],
+          "answer": "About 1 to 1.5 litres",
+          "solutionSteps": [
+            "Six salivary glands work all day. Most of it gets swallowed without us noticing u{2014} digestion starts in the mouth."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q12",
+          "prompt": "Why is a cowu{2019}s intestine roughly four times longer than yours?",
+          "questionType": "mcq",
+          "options": [
+            "Cows are bigger",
+            "Cows eat cellulose (grass) which needs more time and bacteria to break down",
+            "Cows have no stomach",
+            "Cows are slower"
+          ],
+          "answer": "Cows eat cellulose (grass) which needs more time and bacteria to break down",
+          "solutionSteps": [
+            "Plant-eaters generally have longer guts than meat-eaters. More road = more time for stubborn cellulose."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q13",
+          "prompt": "The old textbook u{201C}tongue mapu{201D} (sweet at the tip, bitter at the back) is:",
+          "questionType": "mcq",
+          "options": [
+            "Completely true",
+            "Mostly correct",
+            "A myth u{2014} every taste bud detects every taste",
+            "A British invention"
+          ],
+          "answer": "A myth u{2014} every taste bud detects every taste",
+          "solutionSteps": [
+            "The map came from a mistranslation a century ago. Modern research shows all taste zones do all jobs."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch02_q14",
+          "prompt": "About how many bacteria live inside your large intestine?",
+          "questionType": "mcq",
+          "options": [
+            "None u{2014} it would be unhygienic",
+            "A few thousand",
+            "About a million",
+            "Around 100 trillion u{2014} more cells than your own body has"
+          ],
+          "answer": "Around 100 trillion u{2014} more cells than your own body has",
+          "solutionSteps": [
+            "The gut microbiome. Many of these bacteria are friendly partners helping digest food and make vitamins."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch03",
@@ -10889,7 +11523,219 @@
             "label": "next-gen of"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch03_q00",
+          "prompt": "Which animal gives us cashmere wool?",
+          "questionType": "mcq",
+          "options": [
+            "Sheep",
+            "Goat",
+            "Alpaca",
+            "Camel"
+          ],
+          "answer": "Goat",
+          "solutionSteps": [
+            "Cashmere goats produce the most luxurious wool, especially those in the Himalayas."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q01",
+          "prompt": "What process removes grease from raw fleece?",
+          "questionType": "mcq",
+          "options": [
+            "Dyeing",
+            "Scouring",
+            "Carding",
+            "Spinning"
+          ],
+          "answer": "Scouring",
+          "solutionSteps": [
+            "Scouring uses warm water and detergent to wash out grease, dirt, and debris."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q02",
+          "prompt": "How many days does a silkworm spend as a larva?",
+          "questionType": "mcq",
+          "options": [
+            "10",
+            "15",
+            "25",
+            "35"
+          ],
+          "answer": "25",
+          "solutionSteps": [
+            "A silkworm caterpillar eats mulberry leaves for about 25-28 days before spinning its cocoon."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q03",
+          "prompt": "Which is a synthetic fibre?",
+          "questionType": "mcq",
+          "options": [
+            "Cotton",
+            "Wool",
+            "Polyester",
+            "Silk"
+          ],
+          "answer": "Polyester",
+          "solutionSteps": [
+            "Polyester is made from petroleum. Cotton, wool, and silk are natural fibres."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q04",
+          "prompt": "Wool sorters used to catch what disease from infected fleece?",
+          "questionType": "mcq",
+          "options": [
+            "Measles",
+            "Anthrax",
+            "Polio",
+            "Malaria"
+          ],
+          "answer": "Anthrax",
+          "solutionSteps": [
+            "Sorter's disease (anthrax) is caused by spores in raw fleece. Modern safety prevents this."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q05",
+          "prompt": "The process of pulling silk thread off the cocoon is called:",
+          "questionType": "mcq",
+          "options": [
+            "Carding",
+            "Reeling",
+            "Weaving",
+            "Spinning"
+          ],
+          "answer": "Reeling",
+          "solutionSteps": [
+            "Cocoons are softened in hot water and the long single thread is unwound — that is reeling."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q06",
+          "prompt": "Pashmina goats are famously reared in:",
+          "questionType": "mcq",
+          "options": [
+            "Kerala backwaters",
+            "Ladakh / Tibetan plateau",
+            "Tamil Nadu coast",
+            "Goa beaches"
+          ],
+          "answer": "Ladakh / Tibetan plateau",
+          "solutionSteps": [
+            "The freezing high-altitude winters make Pashmina goats grow extra-fine warm wool."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q07",
+          "prompt": "Carding wool means:",
+          "questionType": "mcq",
+          "options": [
+            "Dyeing it",
+            "Washing the grease out",
+            "Straightening and combing the fibres",
+            "Weaving it into cloth"
+          ],
+          "answer": "Straightening and combing the fibres",
+          "solutionSteps": [
+            "After scouring, wool fibres are combed parallel so they can be spun into smooth yarn."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q08",
+          "prompt": "Sericulture is the rearing of:",
+          "questionType": "mcq",
+          "options": [
+            "Sheep",
+            "Silkworms",
+            "Bees",
+            "Cocoons of cotton"
+          ],
+          "answer": "Silkworms",
+          "solutionSteps": [
+            "Sericulture combines 'serikos' (silken) with 'culture' (rearing). India is a top sericulture nation."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch03_q09",
+          "prompt": "Silkworms are fed mainly on the leaves of the:",
+          "questionType": "mcq",
+          "options": [
+            "Mango tree",
+            "Mulberry tree",
+            "Banana tree",
+            "Coconut tree"
+          ],
+          "answer": "Mulberry tree",
+          "solutionSteps": [
+            "Mulberry silkworms eat only fresh mulberry leaves — that is why mulberry trees are grown near silk farms."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch04",
@@ -14214,7 +15060,219 @@
             "label": "transferred by"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch04_q00",
+          "prompt": "Which of these is the best conductor of heat?",
+          "questionType": "mcq",
+          "options": [
+            "Wood",
+            "Copper",
+            "Wool",
+            "Plastic"
+          ],
+          "answer": "Copper",
+          "solutionSteps": [
+            "Copper is a metal and metals are excellent conductors of heat."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q01",
+          "prompt": "Heat from the Sun reaches us mainly by:",
+          "questionType": "mcq",
+          "options": [
+            "Conduction",
+            "Convection",
+            "Radiation",
+            "All three equally"
+          ],
+          "answer": "Radiation",
+          "solutionSteps": [
+            "Space is a vacuum — heat can only travel through it as radiation (infrared waves)."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q02",
+          "prompt": "A fluffed-up bird stays warm because:",
+          "questionType": "mcq",
+          "options": [
+            "Air trapped between feathers insulates",
+            "Feathers are hot by themselves",
+            "Blood flows faster in cold weather",
+            "Skin becomes thick"
+          ],
+          "answer": "Air trapped between feathers insulates",
+          "solutionSteps": [
+            "Air is a poor conductor. Trapped air between fluffed feathers stops body heat escaping."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q03",
+          "prompt": "Cup A has 100 ml of water at 80°C. Cup B has 500 ml at 80°C. Which has more heat?",
+          "questionType": "mcq",
+          "options": [
+            "Cup A",
+            "Cup B",
+            "Both equal",
+            "Cannot tell"
+          ],
+          "answer": "Cup B",
+          "solutionSteps": [
+            "Same temperature, but Cup B has 5 times more water so it stores 5 times more heat energy."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q04",
+          "prompt": "A sea breeze blows from sea to land during the:",
+          "questionType": "mcq",
+          "options": [
+            "Day",
+            "Night",
+            "Both day and night",
+            "Neither"
+          ],
+          "answer": "Day",
+          "solutionSteps": [
+            "During the day land heats faster, hot air rises, and cooler air rushes in from the sea."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q05",
+          "prompt": "The SI unit of heat (energy) is the:",
+          "questionType": "mcq",
+          "options": [
+            "Kelvin",
+            "Joule",
+            "Celsius",
+            "Newton"
+          ],
+          "answer": "Joule",
+          "solutionSteps": [
+            "Heat is a form of energy, so its unit is the joule. Kelvin and Celsius are units of temperature."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q06",
+          "prompt": "In the daytime at the seaside, land heats up faster than the sea because:",
+          "questionType": "mcq",
+          "options": [
+            "Land has lower specific heat capacity",
+            "Land has more water",
+            "The Sun ignores the sea",
+            "Sea is closer to the Sun"
+          ],
+          "answer": "Land has lower specific heat capacity",
+          "solutionSteps": [
+            "Land needs less energy to raise its temperature, so it gets hot sooner under the same sunlight."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q07",
+          "prompt": "A thermos flask has double walls with a vacuum between them to:",
+          "questionType": "mcq",
+          "options": [
+            "Look pretty",
+            "Stop conduction and convection of heat",
+            "Stop electricity",
+            "Make the flask lighter"
+          ],
+          "answer": "Stop conduction and convection of heat",
+          "solutionSteps": [
+            "No air means no conduction and no convection; silvered walls also reflect radiation back."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q08",
+          "prompt": "On a sunny day, dark-coloured clothes feel hotter than light ones because dark colours:",
+          "questionType": "mcq",
+          "options": [
+            "Reflect more heat",
+            "Absorb more heat",
+            "Cool the body",
+            "Block all light"
+          ],
+          "answer": "Absorb more heat",
+          "solutionSteps": [
+            "Dark surfaces absorb more of the Sun's radiation; light surfaces reflect more of it away."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch04_q09",
+          "prompt": "A bimetallic strip bends when heated because the two metals:",
+          "questionType": "mcq",
+          "options": [
+            "Expand by different amounts",
+            "Cool at different speeds",
+            "Have different colours",
+            "Conduct electricity"
+          ],
+          "answer": "Expand by different amounts",
+          "solutionSteps": [
+            "One metal expands more than the other, so the joined strip curves to one side — used in thermostats."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch05",
@@ -16517,7 +17575,219 @@
             "label": "CO₂ from / to"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch05_q00",
+          "prompt": "Which of these is a natural indicator?",
+          "questionType": "mcq",
+          "options": [
+            "Turmeric",
+            "Phenolphthalein",
+            "Hydrochloric acid",
+            "Sodium chloride"
+          ],
+          "answer": "Turmeric",
+          "solutionSteps": [
+            "Turmeric is a natural indicator u{2014} it stays yellow in acid but turns red/brown in a base."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q01",
+          "prompt": "What is the pH of pure water?",
+          "questionType": "mcq",
+          "options": [
+            "0",
+            "5",
+            "7",
+            "14"
+          ],
+          "answer": "7",
+          "solutionSteps": [
+            "Pure water is neutral with a pH of exactly 7 u{2014} neither acidic nor basic."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q02",
+          "prompt": "A bee sting injects acid. What should you apply?",
+          "questionType": "mcq",
+          "options": [
+            "Lemon juice",
+            "Vinegar",
+            "Baking soda solution",
+            "More honey"
+          ],
+          "answer": "Baking soda solution",
+          "solutionSteps": [
+            "Baking soda is a mild base. It neutralises the acid from the bee sting, giving relief."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q03",
+          "prompt": "Acid + Base u{2192} ?",
+          "questionType": "mcq",
+          "options": [
+            "Acid + Gas",
+            "Salt + Water",
+            "Base + Gas",
+            "Only Water"
+          ],
+          "answer": "Salt + Water",
+          "solutionSteps": [
+            "When an acid reacts with a base, they neutralise each other to produce a salt and water."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q04",
+          "prompt": "Which gas is a major cause of acid rain?",
+          "questionType": "mcq",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Sulphur dioxide",
+            "Carbon monoxide"
+          ],
+          "answer": "Sulphur dioxide",
+          "solutionSteps": [
+            "Sulphur dioxide (SOu{2082}) from burning fossil fuels dissolves in rain water to form sulphuric acid, causing acid rain."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q05",
+          "prompt": "Litmus paper turns which colour in an acid?",
+          "questionType": "mcq",
+          "options": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+          ],
+          "answer": "Red",
+          "solutionSteps": [
+            "Blue litmus → red in acid. Red litmus → blue in base. Remember: 'blue in base.'"
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q06",
+          "prompt": "Common table salt has the formula:",
+          "questionType": "mcq",
+          "options": [
+            "NaOH",
+            "HCl",
+            "NaCl",
+            "CaCO3"
+          ],
+          "answer": "NaCl",
+          "solutionSteps": [
+            "Sodium chloride is formed by neutralisation of NaOH (base) and HCl (acid)."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q07",
+          "prompt": "Antacid tablets work because they:",
+          "questionType": "mcq",
+          "options": [
+            "Add more acid to the stomach",
+            "Are basic and neutralise extra stomach acid",
+            "Are sugars",
+            "Coat the tongue"
+          ],
+          "answer": "Are basic and neutralise extra stomach acid",
+          "solutionSteps": [
+            "Magnesium hydroxide or similar bases react with the excess HCl and relieve the burn."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q08",
+          "prompt": "Curd tastes sour because it contains:",
+          "questionType": "mcq",
+          "options": [
+            "Citric acid",
+            "Lactic acid",
+            "Sulphuric acid",
+            "Hydrochloric acid"
+          ],
+          "answer": "Lactic acid",
+          "solutionSteps": [
+            "Bacteria turn the sugar in milk (lactose) into lactic acid — that's the sour taste of curd."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch05_q09",
+          "prompt": "Vinegar gets its sourness from:",
+          "questionType": "mcq",
+          "options": [
+            "Citric acid",
+            "Acetic acid",
+            "Tartaric acid",
+            "Phosphoric acid"
+          ],
+          "answer": "Acetic acid",
+          "solutionSteps": [
+            "Vinegar is about 5% acetic acid in water — strong enough to cook with, mild enough to drink in food."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch06",
@@ -18903,7 +20173,219 @@
             "label": "common cause of"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch06_q00",
+          "prompt": "Which of these is a chemical change?",
+          "questionType": "mcq",
+          "options": [
+            "Melting ice",
+            "Tearing paper",
+            "Burning wood",
+            "Dissolving sugar"
+          ],
+          "answer": "Burning wood",
+          "solutionSteps": [
+            "Burning wood produces ash, COu{2082}, and water vapour u{2014} all new substances. That makes it a chemical change."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q01",
+          "prompt": "Rusting of iron requires:",
+          "questionType": "mcq",
+          "options": [
+            "Only water",
+            "Only oxygen",
+            "Both water and oxygen",
+            "Neither"
+          ],
+          "answer": "Both water and oxygen",
+          "solutionSteps": [
+            "Iron reacts with both water (moisture) and oxygen from the air to form iron oxide (rust). Remove either and rusting stops."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q02",
+          "prompt": "Which method prevents rusting by coating iron with zinc?",
+          "questionType": "mcq",
+          "options": [
+            "Painting",
+            "Oiling",
+            "Galvanisation",
+            "Alloying"
+          ],
+          "answer": "Galvanisation",
+          "solutionSteps": [
+            "Galvanisation coats iron with a layer of zinc. Zinc reacts first with moisture and oxygen, protecting the iron underneath."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q03",
+          "prompt": "Crystallisation is an example of a:",
+          "questionType": "mcq",
+          "options": [
+            "Chemical change",
+            "Physical change",
+            "Nuclear change",
+            "Biological change"
+          ],
+          "answer": "Physical change",
+          "solutionSteps": [
+            "In crystallisation, dissolved particles simply rearrange into a crystal pattern. No new substance is formed, so it is a physical change."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q04",
+          "prompt": "Which is a sign of a chemical change?",
+          "questionType": "mcq",
+          "options": [
+            "Change of shape",
+            "Change of size",
+            "Change of colour and gas produced",
+            "Change of state"
+          ],
+          "answer": "Change of colour and gas produced",
+          "solutionSteps": [
+            "When a new colour appears and gas bubbles form, new substances are being created u{2014} clear signs of a chemical reaction."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q05",
+          "prompt": "Melting of ice into water is a:",
+          "questionType": "mcq",
+          "options": [
+            "Chemical change",
+            "Physical change",
+            "Nuclear change",
+            "Magnetic change"
+          ],
+          "answer": "Physical change",
+          "solutionSteps": [
+            "No new substance is made — water frozen again is still water. Reversible = physical change."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q06",
+          "prompt": "Photosynthesis in a leaf is a:",
+          "questionType": "mcq",
+          "options": [
+            "Physical change",
+            "Chemical change",
+            "Mechanical change",
+            "Magnetic change"
+          ],
+          "answer": "Chemical change",
+          "solutionSteps": [
+            "CO2 + H2O become glucose + O2 — completely new substances are made, so it's chemical."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q07",
+          "prompt": "Burning of a magnesium ribbon produces:",
+          "questionType": "mcq",
+          "options": [
+            "Black coal",
+            "A white ash (magnesium oxide)",
+            "Steam",
+            "Rust"
+          ],
+          "answer": "A white ash (magnesium oxide)",
+          "solutionSteps": [
+            "Mg + O2 → MgO. The dazzling white light helps you remember the white ash."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q08",
+          "prompt": "Painting an iron gate helps prevent rust because the paint:",
+          "questionType": "mcq",
+          "options": [
+            "Adds water to it",
+            "Blocks oxygen and moisture from the iron",
+            "Cools the gate",
+            "Makes it taste salty"
+          ],
+          "answer": "Blocks oxygen and moisture from the iron",
+          "solutionSteps": [
+            "No air + no water = no rust. A coating of paint, grease or zinc all work the same way."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch06_q09",
+          "prompt": "Rust is formed when iron reacts with:",
+          "questionType": "mcq",
+          "options": [
+            "Oxygen and water",
+            "Nitrogen alone",
+            "Carbon dioxide",
+            "Sunlight only"
+          ],
+          "answer": "Oxygen and water",
+          "solutionSteps": [
+            "Hydrated iron oxide is the orange-brown flaky stuff we call rust."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch07",
@@ -21285,7 +22767,219 @@
             "label": "preserves"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch07_q00",
+          "prompt": "Weather changes ___; climate is measured over ___.",
+          "questionType": "mcq",
+          "options": [
+            "Hourly; months",
+            "Daily; years",
+            "Weekly; decades",
+            "Monthly; centuries"
+          ],
+          "answer": "Daily; years",
+          "solutionSteps": [
+            "Weather is the day-to-day condition of the atmosphere. Climate is the average weather pattern measured over at least 25 years."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q01",
+          "prompt": "Which instrument measures wind speed?",
+          "questionType": "mcq",
+          "options": [
+            "Thermometer",
+            "Hygrometer",
+            "Anemometer",
+            "Rain gauge"
+          ],
+          "answer": "Anemometer",
+          "solutionSteps": [
+            "An anemometer has spinning cups that catch the wind. The faster they spin, the higher the wind speed."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q02",
+          "prompt": "Polar bears have small ears to:",
+          "questionType": "mcq",
+          "options": [
+            "Hear better in snow",
+            "Reduce heat loss",
+            "Swim faster",
+            "Hide from prey"
+          ],
+          "answer": "Reduce heat loss",
+          "solutionSteps": [
+            "Small ears have less surface area, so less body heat escapes to the cold air. This is the opposite of elephants, whose large ears help radiate heat."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q03",
+          "prompt": "The longest migration is made by:",
+          "questionType": "mcq",
+          "options": [
+            "Siberian crane",
+            "Bar-headed goose",
+            "Arctic tern",
+            "Emperor penguin"
+          ],
+          "answer": "Arctic tern",
+          "solutionSteps": [
+            "The Arctic tern migrates from the Arctic to the Antarctic and back — about 70,000 km every year, the longest migration of any animal."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q04",
+          "prompt": "Camels store fat in their:",
+          "questionType": "mcq",
+          "options": [
+            "Stomach",
+            "Hump",
+            "Legs",
+            "Skin"
+          ],
+          "answer": "Hump",
+          "solutionSteps": [
+            "A camel's hump stores fat (not water!). This fat is broken down for energy and metabolic water when food and water are scarce in the desert."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q05",
+          "prompt": "A maximum-minimum thermometer is used to measure:",
+          "questionType": "mcq",
+          "options": [
+            "The current pressure",
+            "Highest and lowest temperatures of the day",
+            "Wind direction",
+            "Humidity"
+          ],
+          "answer": "Highest and lowest temperatures of the day",
+          "solutionSteps": [
+            "It uses two markers that get pushed by the mercury level and stay at the day's extremes."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q06",
+          "prompt": "A tropical rainforest is characterised by:",
+          "questionType": "mcq",
+          "options": [
+            "Very dry months and few plants",
+            "Tall trees in dense layered canopies and frequent rain",
+            "Year-round snow",
+            "Only grasses"
+          ],
+          "answer": "Tall trees in dense layered canopies and frequent rain",
+          "solutionSteps": [
+            "Constant warmth and rainfall let many tree species share space in distinct layers."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q07",
+          "prompt": "Penguins survive Antarctica's cold by:",
+          "questionType": "mcq",
+          "options": [
+            "Hibernating in caves",
+            "Thick fat (blubber) under skin and huddling together",
+            "Diving inland",
+            "Growing wool"
+          ],
+          "answer": "Thick fat (blubber) under skin and huddling together",
+          "solutionSteps": [
+            "A layer of blubber insulates them; huddling shares body heat across the colony."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q08",
+          "prompt": "The red panda is found in:",
+          "questionType": "mcq",
+          "options": [
+            "Sahara desert",
+            "Eastern Himalayas / cool mountain forests",
+            "Antarctica",
+            "Amazon basin"
+          ],
+          "answer": "Eastern Himalayas / cool mountain forests",
+          "solutionSteps": [
+            "Red pandas live in cool, bamboo-rich mountain forests of north-east India, Nepal and nearby."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch07_q09",
+          "prompt": "A toucan's huge beak is most useful for:",
+          "questionType": "mcq",
+          "options": [
+            "Fighting predators",
+            "Reaching distant fruit and shedding heat",
+            "Digging holes",
+            "Swimming"
+          ],
+          "answer": "Reaching distant fruit and shedding heat",
+          "solutionSteps": [
+            "The big beak lets toucans grab fruit from thin branches; it also has many blood vessels that release heat."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch08",
@@ -23474,7 +25168,219 @@
             "label": "is"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch08_q00",
+          "prompt": "Wind is caused by:",
+          "questionType": "mcq",
+          "options": [
+            "Birds flapping",
+            "Uneven heating of air",
+            "The Earth's gravity",
+            "The Moon's pull"
+          ],
+          "answer": "Uneven heating of air",
+          "solutionSteps": [
+            "Warm air rises; cool air rushes in to replace it. That moving air is wind."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q01",
+          "prompt": "On a sunny day at the coast, the breeze blows from:",
+          "questionType": "mcq",
+          "options": [
+            "Land to sea",
+            "Sea to land",
+            "Sky to ground",
+            "It doesn't blow"
+          ],
+          "answer": "Sea to land",
+          "solutionSteps": [
+            "Daytime: land heats faster, hot air rises, cooler sea air flows in — a sea breeze."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q02",
+          "prompt": "The calm centre of a cyclone is called the:",
+          "questionType": "mcq",
+          "options": [
+            "Pupil",
+            "Eye",
+            "Heart",
+            "Core"
+          ],
+          "answer": "Eye",
+          "solutionSteps": [
+            "The eye is a low-pressure column where air sinks; the violent winds are in the wall around it."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q03",
+          "prompt": "Faster-moving air has:",
+          "questionType": "mcq",
+          "options": [
+            "Higher pressure",
+            "Lower pressure",
+            "Same pressure",
+            "Zero pressure"
+          ],
+          "answer": "Lower pressure",
+          "solutionSteps": [
+            "Bernoulli's principle. That's why two paper strips swing together when you blow between them."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q04",
+          "prompt": "Which instrument measures wind speed?",
+          "questionType": "mcq",
+          "options": [
+            "Barometer",
+            "Thermometer",
+            "Anemometer",
+            "Hygrometer"
+          ],
+          "answer": "Anemometer",
+          "solutionSteps": [
+            "An anemometer's spinning cups convert wind to a speed reading in km/h."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q05",
+          "prompt": "The Southwest monsoon brings rain to most of India during:",
+          "questionType": "mcq",
+          "options": [
+            "December–February",
+            "March–May",
+            "June–September",
+            "October–November"
+          ],
+          "answer": "June–September",
+          "solutionSteps": [
+            "Warm winds from the Indian Ocean pick up moisture and pour it over the subcontinent each summer."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q06",
+          "prompt": "A tornado differs from a cyclone because a tornado:",
+          "questionType": "mcq",
+          "options": [
+            "Forms over oceans",
+            "Is much larger",
+            "Forms over land and is narrower",
+            "Has no wind"
+          ],
+          "answer": "Forms over land and is narrower",
+          "solutionSteps": [
+            "Tornadoes are funnel-shaped windstorms over land; cyclones are huge low-pressure systems over warm seas."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q07",
+          "prompt": "Lightning is best described as:",
+          "questionType": "mcq",
+          "options": [
+            "Hot air rising",
+            "A giant electric spark in the sky",
+            "Sound waves",
+            "Wind friction"
+          ],
+          "answer": "A giant electric spark in the sky",
+          "solutionSteps": [
+            "Clouds build up huge electrical charges; the spark that jumps to balance them is lightning."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q08",
+          "prompt": "During a thunderstorm the safest place is:",
+          "questionType": "mcq",
+          "options": [
+            "Under a tall tree",
+            "In an open field",
+            "Inside a building",
+            "On a metal roof"
+          ],
+          "answer": "Inside a building",
+          "solutionSteps": [
+            "A building shields you from rain, wind and lightning. Open fields and tall trees attract strikes."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch08_q09",
+          "prompt": "In the Atlantic Ocean a tropical cyclone is called a:",
+          "questionType": "mcq",
+          "options": [
+            "Typhoon",
+            "Hurricane",
+            "Willy-willy",
+            "Blizzard"
+          ],
+          "answer": "Hurricane",
+          "solutionSteps": [
+            "Same storm, different name by region: hurricane (Atlantic), typhoon (NW Pacific), cyclone (Indian Ocean)."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch09",
@@ -25668,7 +27574,219 @@
             "label": "scaled in"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch09_q00",
+          "prompt": "The topmost layer of soil, rich in humus, is called:",
+          "questionType": "mcq",
+          "options": [
+            "Bedrock",
+            "Subsoil",
+            "Topsoil",
+            "Weathered rock"
+          ],
+          "answer": "Topsoil",
+          "solutionSteps": [
+            "Topsoil (A horizon) is dark, soft and where most plant roots grow."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q01",
+          "prompt": "Paddy grows best in which soil?",
+          "questionType": "mcq",
+          "options": [
+            "Sandy",
+            "Loamy",
+            "Clayey",
+            "Black"
+          ],
+          "answer": "Clayey",
+          "solutionSteps": [
+            "Paddy needs standing water; clay holds water → perfect for rice."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q02",
+          "prompt": "Soil erosion is mainly caused by:",
+          "questionType": "mcq",
+          "options": [
+            "Earthworms",
+            "Removal of plants",
+            "Sunlight",
+            "Cool wind"
+          ],
+          "answer": "Removal of plants",
+          "solutionSteps": [
+            "When roots are gone, rain and wind carry away the loose topsoil."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q03",
+          "prompt": "Which soil drains water fastest?",
+          "questionType": "mcq",
+          "options": [
+            "Sandy",
+            "Loamy",
+            "Clayey",
+            "Black"
+          ],
+          "answer": "Sandy",
+          "solutionSteps": [
+            "Sand grains are large → water slips through easily."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q04",
+          "prompt": "Earthworms help soil by:",
+          "questionType": "mcq",
+          "options": [
+            "Eating plants",
+            "Making tunnels and castings",
+            "Drinking all the water",
+            "Cooling it"
+          ],
+          "answer": "Making tunnels and castings",
+          "solutionSteps": [
+            "Their tunnels aerate soil and their castings add nutrients — they're called nature's ploughs."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q05",
+          "prompt": "In a soil profile, the layer just below topsoil is called:",
+          "questionType": "mcq",
+          "options": [
+            "Bedrock",
+            "Subsoil (B-horizon)",
+            "Humus",
+            "Litter"
+          ],
+          "answer": "Subsoil (B-horizon)",
+          "solutionSteps": [
+            "A is topsoil, B is subsoil (less humus, more minerals), C is weathered rock above bedrock."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q06",
+          "prompt": "A tube well draws water from:",
+          "questionType": "mcq",
+          "options": [
+            "Rivers",
+            "Lakes",
+            "Groundwater under the soil",
+            "Rainwater on the surface"
+          ],
+          "answer": "Groundwater under the soil",
+          "solutionSteps": [
+            "A pipe goes deep enough to reach the saturated layer below the water table."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q07",
+          "prompt": "Loamy soil is ideal for most crops because it:",
+          "questionType": "mcq",
+          "options": [
+            "Holds water but also drains well",
+            "Is pure sand",
+            "Is pure clay",
+            "Has no nutrients"
+          ],
+          "answer": "Holds water but also drains well",
+          "solutionSteps": [
+            "Loam is a balanced mix of sand, silt and clay — wheat, gram and many vegetables grow well in it."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q08",
+          "prompt": "Which of these causes soil pollution?",
+          "questionType": "mcq",
+          "options": [
+            "Earthworm burrows",
+            "Plastic and pesticides",
+            "Falling leaves",
+            "Rainwater"
+          ],
+          "answer": "Plastic and pesticides",
+          "solutionSteps": [
+            "Synthetic chemicals and plastics don't break down naturally and they harm soil life."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch09_q09",
+          "prompt": "Clayey soil drains water:",
+          "questionType": "mcq",
+          "options": [
+            "Very fast",
+            "Slowly",
+            "Instantly",
+            "Never holds it"
+          ],
+          "answer": "Slowly",
+          "solutionSteps": [
+            "Clay particles are tiny and pack tightly, leaving very small gaps — water seeps through slowly."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch10",
@@ -27796,7 +29914,219 @@
             "label": "served by"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch10_q00",
+          "prompt": "We exhale mostly:",
+          "questionType": "mcq",
+          "options": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Nitrogen",
+            "Hydrogen"
+          ],
+          "answer": "Carbon dioxide",
+          "solutionSteps": [
+            "Exhaled breath has about 4% CO₂ (vs 0.04% inhaled). That's why limewater turns milky."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q01",
+          "prompt": "Respiration without oxygen is called:",
+          "questionType": "mcq",
+          "options": [
+            "Aerobic",
+            "Anaerobic",
+            "Atmospheric",
+            "Aerial"
+          ],
+          "answer": "Anaerobic",
+          "solutionSteps": [
+            "Yeast and tired muscle cells use anaerobic respiration when oxygen runs low."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q02",
+          "prompt": "Fish breathe through:",
+          "questionType": "mcq",
+          "options": [
+            "Lungs",
+            "Skin",
+            "Gills",
+            "Stomata"
+          ],
+          "answer": "Gills",
+          "solutionSteps": [
+            "Gills extract dissolved oxygen from water as it flows over them."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q03",
+          "prompt": "Plants release O₂ and absorb CO₂ at tiny pores called:",
+          "questionType": "mcq",
+          "options": [
+            "Spiracles",
+            "Stomata",
+            "Tracheae",
+            "Pores"
+          ],
+          "answer": "Stomata",
+          "solutionSteps": [
+            "Stomata on the underside of leaves regulate gas exchange."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q04",
+          "prompt": "Cramps after a hard run are because muscles produced:",
+          "questionType": "mcq",
+          "options": [
+            "Glucose",
+            "Lactic acid",
+            "Oxygen",
+            "Water"
+          ],
+          "answer": "Lactic acid",
+          "solutionSteps": [
+            "Muscles ran low on oxygen and switched to anaerobic respiration → lactic acid → cramps."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q05",
+          "prompt": "When we inhale, the diaphragm:",
+          "questionType": "mcq",
+          "options": [
+            "Moves up and curls",
+            "Moves down and flattens",
+            "Stays still",
+            "Becomes the lungs"
+          ],
+          "answer": "Moves down and flattens",
+          "solutionSteps": [
+            "The diaphragm pulls down to enlarge the chest cavity, so air rushes into the lungs."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q06",
+          "prompt": "Cockroaches breathe through tiny holes called:",
+          "questionType": "mcq",
+          "options": [
+            "Pores",
+            "Spiracles",
+            "Stomata",
+            "Gills"
+          ],
+          "answer": "Spiracles",
+          "solutionSteps": [
+            "Air enters through spiracles on the body sides and travels through tracheal tubes to cells."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q07",
+          "prompt": "An earthworm breathes through its:",
+          "questionType": "mcq",
+          "options": [
+            "Lungs",
+            "Mouth",
+            "Moist skin",
+            "Gills"
+          ],
+          "answer": "Moist skin",
+          "solutionSteps": [
+            "Oxygen dissolves in the thin film of moisture on the earthworm's skin and diffuses inwards."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q08",
+          "prompt": "Yeast carries out anaerobic respiration to give:",
+          "questionType": "mcq",
+          "options": [
+            "Carbon dioxide + water",
+            "Carbon dioxide + alcohol",
+            "Oxygen + glucose",
+            "Just oxygen"
+          ],
+          "answer": "Carbon dioxide + alcohol",
+          "solutionSteps": [
+            "Bakers use the CO₂ to make bread rise; brewers use the alcohol."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch10_q09",
+          "prompt": "The energy released in cells during respiration is stored as:",
+          "questionType": "mcq",
+          "options": [
+            "Glucose",
+            "Oxygen",
+            "ATP",
+            "Carbon dioxide"
+          ],
+          "answer": "ATP",
+          "solutionSteps": [
+            "ATP is the energy currency of cells — broken down whenever cells need power."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch11",
@@ -30102,7 +32432,219 @@
             "label": "drives flow in"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch11_q00",
+          "prompt": "How many chambers does a human heart have?",
+          "questionType": "mcq",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answer": "4",
+          "solutionSteps": [
+            "Two atria on top, two ventricles below — a double pump."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q01",
+          "prompt": "Which carries oxygen in blood?",
+          "questionType": "mcq",
+          "options": [
+            "WBC",
+            "RBC",
+            "Platelets",
+            "Plasma"
+          ],
+          "answer": "RBC",
+          "solutionSteps": [
+            "Red blood cells contain haemoglobin, which binds oxygen."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q02",
+          "prompt": "Veins have valves to:",
+          "questionType": "mcq",
+          "options": [
+            "Make blood faster",
+            "Prevent backflow",
+            "Store sugar",
+            "Add oxygen"
+          ],
+          "answer": "Prevent backflow",
+          "solutionSteps": [
+            "Veins return blood at low pressure; valves stop it from flowing the wrong way."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q03",
+          "prompt": "Water moves up a plant through:",
+          "questionType": "mcq",
+          "options": [
+            "Phloem",
+            "Xylem",
+            "Stomata",
+            "Cambium"
+          ],
+          "answer": "Xylem",
+          "solutionSteps": [
+            "Xylem is the upward water pipeline; phloem moves sugar in both directions."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q04",
+          "prompt": "Loss of water vapour from leaves is called:",
+          "questionType": "mcq",
+          "options": [
+            "Respiration",
+            "Transpiration",
+            "Photosynthesis",
+            "Translocation"
+          ],
+          "answer": "Transpiration",
+          "solutionSteps": [
+            "Transpiration pulls more water up — like sipping through a straw."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q05",
+          "prompt": "Arteries usually carry:",
+          "questionType": "mcq",
+          "options": [
+            "Deoxygenated blood",
+            "Oxygenated blood",
+            "Lymph",
+            "Plasma only"
+          ],
+          "answer": "Oxygenated blood",
+          "solutionSteps": [
+            "Arteries carry oxygen-rich blood away from the heart. The pulmonary artery is the one exception."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q06",
+          "prompt": "Excess water and salts leave the body through sweat from:",
+          "questionType": "mcq",
+          "options": [
+            "Lungs",
+            "Kidneys",
+            "Skin",
+            "Intestines"
+          ],
+          "answer": "Skin",
+          "solutionSteps": [
+            "Sweat glands push water plus salts onto the skin where they evaporate, cooling the body."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q07",
+          "prompt": "The kidneys make:",
+          "questionType": "mcq",
+          "options": [
+            "Bile",
+            "Urine",
+            "Sweat",
+            "Saliva"
+          ],
+          "answer": "Urine",
+          "solutionSteps": [
+            "Kidneys filter blood to remove urea and excess salts and water as urine."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q08",
+          "prompt": "Phloem in plants transports:",
+          "questionType": "mcq",
+          "options": [
+            "Water from roots",
+            "Food made in leaves",
+            "Oxygen",
+            "Soil"
+          ],
+          "answer": "Food made in leaves",
+          "solutionSteps": [
+            "Xylem carries water upward; phloem carries sugars from leaves to all parts of the plant."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch11_q09",
+          "prompt": "A typical resting human heart beats about how many times per minute?",
+          "questionType": "mcq",
+          "options": [
+            "About 20",
+            "About 72",
+            "About 200",
+            "About 500"
+          ],
+          "answer": "About 72",
+          "solutionSteps": [
+            "A relaxed adult heart beats roughly 60–80 times per minute. Kids beat a little faster."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch12",
@@ -32178,7 +34720,219 @@
             "label": "exploited by"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch12_q00",
+          "prompt": "The male reproductive part of a flower is the:",
+          "questionType": "mcq",
+          "options": [
+            "Pistil",
+            "Stamen",
+            "Sepal",
+            "Petal"
+          ],
+          "answer": "Stamen",
+          "solutionSteps": [
+            "Stamen = anther + filament. The anther makes pollen."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q01",
+          "prompt": "Pollen lands on the stigma — this is called:",
+          "questionType": "mcq",
+          "options": [
+            "Fertilisation",
+            "Pollination",
+            "Germination",
+            "Dispersal"
+          ],
+          "answer": "Pollination",
+          "solutionSteps": [
+            "Pollination is just delivery. Fertilisation happens later inside the ovary."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q02",
+          "prompt": "A coconut is mainly dispersed by:",
+          "questionType": "mcq",
+          "options": [
+            "Wind",
+            "Water",
+            "Animals",
+            "Explosion"
+          ],
+          "answer": "Water",
+          "solutionSteps": [
+            "Coconuts float and can drift across oceans to new shores."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q03",
+          "prompt": "Yeast reproduces by:",
+          "questionType": "mcq",
+          "options": [
+            "Seeds",
+            "Spores",
+            "Budding",
+            "Pollination"
+          ],
+          "answer": "Budding",
+          "solutionSteps": [
+            "A small bud grows on the parent and breaks off as a new cell."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q04",
+          "prompt": "Potato plants reproduce vegetatively from their:",
+          "questionType": "mcq",
+          "options": [
+            "Roots",
+            "Leaves",
+            "Stem (tuber)",
+            "Flowers"
+          ],
+          "answer": "Stem (tuber)",
+          "solutionSteps": [
+            "Potatoes are underground stems. The 'eyes' sprout into new plants."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q05",
+          "prompt": "Bryophyllum plants reproduce vegetatively from:",
+          "questionType": "mcq",
+          "options": [
+            "Stems",
+            "Roots",
+            "Buds on the leaf edges",
+            "Seeds only"
+          ],
+          "answer": "Buds on the leaf edges",
+          "solutionSteps": [
+            "Tiny plantlets grow on Bryophyllum leaf margins, fall off and root into new plants."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q06",
+          "prompt": "The part of the stamen that produces pollen is the:",
+          "questionType": "mcq",
+          "options": [
+            "Filament",
+            "Anther",
+            "Stigma",
+            "Ovary"
+          ],
+          "answer": "Anther",
+          "solutionSteps": [
+            "The filament holds the anther up; the anther's sacs burst open and release pollen grains."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q07",
+          "prompt": "Spirogyra (a green alga) reproduces mainly by:",
+          "questionType": "mcq",
+          "options": [
+            "Seeds",
+            "Spores",
+            "Fragmentation",
+            "Pollination"
+          ],
+          "answer": "Fragmentation",
+          "solutionSteps": [
+            "The filament breaks into pieces and each piece grows into a new individual."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q08",
+          "prompt": "Maple and drumstick seeds are dispersed mainly by:",
+          "questionType": "mcq",
+          "options": [
+            "Animals",
+            "Water",
+            "Wind",
+            "Explosion"
+          ],
+          "answer": "Wind",
+          "solutionSteps": [
+            "These seeds have papery wings that let them spin and drift on the breeze."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch12_q09",
+          "prompt": "After fertilisation in a flower, the ovule becomes the:",
+          "questionType": "mcq",
+          "options": [
+            "Fruit",
+            "Petal",
+            "Seed",
+            "Pollen"
+          ],
+          "answer": "Seed",
+          "solutionSteps": [
+            "The ovule ripens into a seed and the ovary around it ripens into the fruit."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch13",
@@ -34338,7 +37092,219 @@
             "label": "illustrated by"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch13_q00",
+          "prompt": "Speed = ?",
+          "questionType": "mcq",
+          "options": [
+            "Distance × Time",
+            "Distance ÷ Time",
+            "Time ÷ Distance",
+            "Distance + Time"
+          ],
+          "answer": "Distance ÷ Time",
+          "solutionSteps": [
+            "If a car covers 80 km in 1 hour, its speed is 80 km/h."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q01",
+          "prompt": "On a distance–time graph, a straight slanted line means:",
+          "questionType": "mcq",
+          "options": [
+            "At rest",
+            "Uniform speed",
+            "Slowing down",
+            "Speeding up"
+          ],
+          "answer": "Uniform speed",
+          "solutionSteps": [
+            "Equal distance covered in equal time — that's uniform motion."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q02",
+          "prompt": "Time for one swing of a pendulum depends on:",
+          "questionType": "mcq",
+          "options": [
+            "Mass",
+            "Amplitude",
+            "Length",
+            "Colour"
+          ],
+          "answer": "Length",
+          "solutionSteps": [
+            "Longer string → slower swing. Galileo's classic discovery."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q03",
+          "prompt": "Which instrument measures total distance travelled?",
+          "questionType": "mcq",
+          "options": [
+            "Speedometer",
+            "Odometer",
+            "Stopwatch",
+            "Sundial"
+          ],
+          "answer": "Odometer",
+          "solutionSteps": [
+            "Speedometer = current speed; odometer = running total of distance."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q04",
+          "prompt": "1 hour = how many seconds?",
+          "questionType": "mcq",
+          "options": [
+            "60",
+            "600",
+            "3,600",
+            "60,000"
+          ],
+          "answer": "3,600",
+          "solutionSteps": [
+            "60 minutes × 60 seconds = 3,600 seconds in an hour."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q05",
+          "prompt": "The SI unit of time is the:",
+          "questionType": "mcq",
+          "options": [
+            "Minute",
+            "Hour",
+            "Second",
+            "Day"
+          ],
+          "answer": "Second",
+          "solutionSteps": [
+            "All other time units are defined in terms of seconds in the SI system."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q06",
+          "prompt": "Average speed is calculated as:",
+          "questionType": "mcq",
+          "options": [
+            "Total time × total distance",
+            "Total distance ÷ total time",
+            "Total distance + total time",
+            "Total distance − total time"
+          ],
+          "answer": "Total distance ÷ total time",
+          "solutionSteps": [
+            "Average speed smooths out faster and slower bits of a journey into one number."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q07",
+          "prompt": "One complete to-and-fro swing of a pendulum is called:",
+          "questionType": "mcq",
+          "options": [
+            "A vibration",
+            "An oscillation",
+            "A revolution",
+            "A rotation"
+          ],
+          "answer": "An oscillation",
+          "solutionSteps": [
+            "From the mean position out to one side, back through, out to the other side, and back — that's one oscillation."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q08",
+          "prompt": "A motorbike travels at 60 km/h for 2 hours. The distance covered is:",
+          "questionType": "mcq",
+          "options": [
+            "30 km",
+            "60 km",
+            "90 km",
+            "120 km"
+          ],
+          "answer": "120 km",
+          "solutionSteps": [
+            "Distance = speed × time = 60 × 2 = 120 km."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch13_q09",
+          "prompt": "A sundial tells time using the position of:",
+          "questionType": "mcq",
+          "options": [
+            "The Moon",
+            "Sound waves",
+            "A shadow",
+            "Water"
+          ],
+          "answer": "A shadow",
+          "solutionSteps": [
+            "The Sun moves across the sky and the gnomon's shadow points to different hour marks."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch14",
@@ -36699,7 +39665,219 @@
             "label": "always produces"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch14_q00",
+          "prompt": "An electric current can flow only when the circuit is:",
+          "questionType": "mcq",
+          "options": [
+            "Open",
+            "Closed",
+            "Hot",
+            "Cold"
+          ],
+          "answer": "Closed",
+          "solutionSteps": [
+            "Current needs an unbroken loop from + terminal back to − terminal."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q01",
+          "prompt": "In a series circuit, if one bulb fuses, the others will:",
+          "questionType": "mcq",
+          "options": [
+            "Stay lit",
+            "Get brighter",
+            "Go off",
+            "Spark"
+          ],
+          "answer": "Go off",
+          "solutionSteps": [
+            "One break stops all current. That's why house wiring is parallel, not series."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q02",
+          "prompt": "An electric bell uses which effect of current?",
+          "questionType": "mcq",
+          "options": [
+            "Heating",
+            "Magnetic",
+            "Chemical",
+            "Light"
+          ],
+          "answer": "Magnetic",
+          "solutionSteps": [
+            "An electromagnet pulls the hammer; spring brings it back; it strikes the bell."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q03",
+          "prompt": "A fuse is made of a:",
+          "questionType": "mcq",
+          "options": [
+            "Thick copper wire",
+            "Thin wire that melts easily",
+            "Glass tube",
+            "Plastic strip"
+          ],
+          "answer": "Thin wire that melts easily",
+          "solutionSteps": [
+            "When too much current flows, the thin wire heats up and melts — breaking the circuit safely."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q04",
+          "prompt": "Wrapping more turns of wire around a nail makes the electromagnet:",
+          "questionType": "mcq",
+          "options": [
+            "Weaker",
+            "Stronger",
+            "Hotter only",
+            "Smaller"
+          ],
+          "answer": "Stronger",
+          "solutionSteps": [
+            "Each loop adds to the magnetic field. More turns = bigger pull."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q05",
+          "prompt": "Which of these uses the heating effect of electric current?",
+          "questionType": "mcq",
+          "options": [
+            "A magnetic compass",
+            "An electric iron",
+            "A solar panel",
+            "A microphone"
+          ],
+          "answer": "An electric iron",
+          "solutionSteps": [
+            "Toasters, irons and bulbs all work because current heats a high-resistance wire."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q06",
+          "prompt": "In a circuit diagram, the longer line of the cell symbol stands for:",
+          "questionType": "mcq",
+          "options": [
+            "Negative terminal",
+            "Switch",
+            "Bulb",
+            "Positive terminal"
+          ],
+          "answer": "Positive terminal",
+          "solutionSteps": [
+            "Long line +, short line −. Memorise this for every circuit you draw."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q07",
+          "prompt": "MCB in a house circuit stands for:",
+          "questionType": "mcq",
+          "options": [
+            "Main Cable Box",
+            "Miniature Circuit Breaker",
+            "Multi Current Bypass",
+            "Magnetic Cell Battery"
+          ],
+          "answer": "Miniature Circuit Breaker",
+          "solutionSteps": [
+            "An MCB trips and cuts the current automatically if too much flows — safer than replaceable fuses."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q08",
+          "prompt": "The earth wire in Indian household wiring is coloured:",
+          "questionType": "mcq",
+          "options": [
+            "Red",
+            "Black",
+            "Blue",
+            "Green (or green/yellow)"
+          ],
+          "answer": "Green (or green/yellow)",
+          "solutionSteps": [
+            "Live = red/brown, neutral = black/blue, earth = green or green/yellow striped."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch14_q09",
+          "prompt": "Compared with an old filament bulb, a CFL of the same brightness uses:",
+          "questionType": "mcq",
+          "options": [
+            "More electricity",
+            "About the same",
+            "Much less electricity",
+            "No electricity"
+          ],
+          "answer": "Much less electricity",
+          "solutionSteps": [
+            "CFLs and LEDs convert more of their input into light and less into wasted heat."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch15",
@@ -39327,7 +42505,219 @@
             "label": "iterative"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch15_q00",
+          "prompt": "Law of reflection: angle of incidence equals angle of:",
+          "questionType": "mcq",
+          "options": [
+            "Refraction",
+            "Reflection",
+            "Deviation",
+            "Dispersion"
+          ],
+          "answer": "Reflection",
+          "solutionSteps": [
+            "Both angles are measured from the normal (perpendicular to the mirror)."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q01",
+          "prompt": "A car side mirror is usually a:",
+          "questionType": "mcq",
+          "options": [
+            "Plane mirror",
+            "Concave mirror",
+            "Convex mirror",
+            "Spherical lens"
+          ],
+          "answer": "Convex mirror",
+          "solutionSteps": [
+            "Convex mirrors give a smaller, upright image with a wider field of view."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q02",
+          "prompt": "When light goes from air to water, it:",
+          "questionType": "mcq",
+          "options": [
+            "Speeds up",
+            "Slows down",
+            "Stops",
+            "Vanishes"
+          ],
+          "answer": "Slows down",
+          "solutionSteps": [
+            "Light slows in denser media — that's why it bends (refracts)."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q03",
+          "prompt": "A glass prism splits white light into:",
+          "questionType": "mcq",
+          "options": [
+            "Two colours",
+            "Three colours",
+            "Seven colours (VIBGYOR)",
+            "Black & white"
+          ],
+          "answer": "Seven colours (VIBGYOR)",
+          "solutionSteps": [
+            "Violet to Red — each colour bends a different amount."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q04",
+          "prompt": "A magnifying glass is a:",
+          "questionType": "mcq",
+          "options": [
+            "Plane mirror",
+            "Convex lens",
+            "Concave lens",
+            "Concave mirror"
+          ],
+          "answer": "Convex lens",
+          "solutionSteps": [
+            "Convex lenses converge light and can produce a magnified, upright virtual image."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q05",
+          "prompt": "The image in a plane mirror is:",
+          "questionType": "mcq",
+          "options": [
+            "Upside-down",
+            "Laterally inverted (left becomes right)",
+            "Smaller",
+            "Coloured differently"
+          ],
+          "answer": "Laterally inverted (left becomes right)",
+          "solutionSteps": [
+            "Raise your right hand — your mirror image raises its left. That's lateral inversion."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q06",
+          "prompt": "The lens inside the human eye is a:",
+          "questionType": "mcq",
+          "options": [
+            "Concave lens",
+            "Convex lens",
+            "Plane lens",
+            "Prism"
+          ],
+          "answer": "Convex lens",
+          "solutionSteps": [
+            "The eye lens focuses light onto the retina by converging it like any convex lens does."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q07",
+          "prompt": "A concave mirror is used in a torch because it:",
+          "questionType": "mcq",
+          "options": [
+            "Spreads light in all directions",
+            "Forms a parallel beam from the bulb",
+            "Inverts the light",
+            "Blocks the light"
+          ],
+          "answer": "Forms a parallel beam from the bulb",
+          "solutionSteps": [
+            "Placed correctly at the focus, the bulb's light reflects off the concave surface as a narrow beam."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q08",
+          "prompt": "When Newton's disc (with the seven rainbow colours) spins fast, we see:",
+          "questionType": "mcq",
+          "options": [
+            "Black",
+            "Each colour in turn",
+            "White (roughly)",
+            "Only red"
+          ],
+          "answer": "White (roughly)",
+          "solutionSteps": [
+            "Our eyes blend the seven colours into white — the reverse of a prism's splitting."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch15_q09",
+          "prompt": "An image in a plane mirror is at:",
+          "questionType": "mcq",
+          "options": [
+            "The mirror surface",
+            "Half the distance behind",
+            "The same distance behind as the object is in front",
+            "Twice the distance behind"
+          ],
+          "answer": "The same distance behind as the object is in front",
+          "solutionSteps": [
+            "Stand 50 cm from a mirror — your image is 50 cm 'inside' the mirror, same size, virtual."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch16",
@@ -41622,7 +45012,219 @@
             "label": "sustains"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch16_q00",
+          "prompt": "Most of Earth's water is:",
+          "questionType": "mcq",
+          "options": [
+            "Frozen as ice",
+            "In rivers",
+            "In oceans (salty)",
+            "Underground"
+          ],
+          "answer": "In oceans (salty)",
+          "solutionSteps": [
+            "About 97% of Earth's water is in the salty oceans."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q01",
+          "prompt": "The water table is:",
+          "questionType": "mcq",
+          "options": [
+            "The roof of a tank",
+            "Level of underground water",
+            "A type of well",
+            "A river"
+          ],
+          "answer": "Level of underground water",
+          "solutionSteps": [
+            "Above the table the soil has air; below it the soil is saturated."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q02",
+          "prompt": "Which irrigation method wastes the least water?",
+          "questionType": "mcq",
+          "options": [
+            "Drip",
+            "Sprinkler",
+            "Flood",
+            "Canal"
+          ],
+          "answer": "Drip",
+          "solutionSteps": [
+            "Drip places water right at the roots — almost no evaporation."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q03",
+          "prompt": "Rainwater harvesting helps by:",
+          "questionType": "mcq",
+          "options": [
+            "Cooling roofs",
+            "Recharging groundwater",
+            "Stopping rain",
+            "Making oceans"
+          ],
+          "answer": "Recharging groundwater",
+          "solutionSteps": [
+            "Collected rain can be stored or sent into the soil to refill aquifers."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q04",
+          "prompt": "An aquifer is:",
+          "questionType": "mcq",
+          "options": [
+            "A type of glass",
+            "A water-saturated rock layer",
+            "A fish",
+            "A canal"
+          ],
+          "answer": "A water-saturated rock layer",
+          "solutionSteps": [
+            "Wells tap aquifers; aquifers refill when rain seeps through the soil above."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q05",
+          "prompt": "World Water Day is observed every year on:",
+          "questionType": "mcq",
+          "options": [
+            "22 March",
+            "5 June",
+            "2 October",
+            "1 January"
+          ],
+          "answer": "22 March",
+          "solutionSteps": [
+            "The UN marks World Water Day each March 22 to remind us how precious fresh water is."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q06",
+          "prompt": "The three forms of water on Earth are:",
+          "questionType": "mcq",
+          "options": [
+            "Salty, fresh and frozen",
+            "Ice (solid), water (liquid) and vapour (gas)",
+            "River, lake and ocean",
+            "Acid, base and neutral"
+          ],
+          "answer": "Ice (solid), water (liquid) and vapour (gas)",
+          "solutionSteps": [
+            "Water is the only common substance found in all three states naturally on Earth."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q07",
+          "prompt": "The 3 R's for water (and the environment) are:",
+          "questionType": "mcq",
+          "options": [
+            "Reduce, Reuse, Recycle",
+            "Run, Rest, Repeat",
+            "Rain, River, Reservoir",
+            "Roots, Rocks, Rivers"
+          ],
+          "answer": "Reduce, Reuse, Recycle",
+          "solutionSteps": [
+            "Reduce first (use less), then reuse, then recycle what's left."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q08",
+          "prompt": "Stepwells (baoris/bawris) are a traditional rainwater harvesting feature of:",
+          "questionType": "mcq",
+          "options": [
+            "Kerala",
+            "Rajasthan",
+            "Assam",
+            "Kashmir"
+          ],
+          "answer": "Rajasthan",
+          "solutionSteps": [
+            "In dry Rajasthan, stepwells stored monsoon water so villages had water through the dry season."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch16_q09",
+          "prompt": "Groundwater is naturally replenished by:",
+          "questionType": "mcq",
+          "options": [
+            "Cooling of clouds",
+            "Percolation of rainwater into the soil",
+            "Sea waves",
+            "Roots of trees"
+          ],
+          "answer": "Percolation of rainwater into the soil",
+          "solutionSteps": [
+            "Rain soaks down through soil pores and rock cracks until it reaches the saturated layer."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch17",
@@ -43861,7 +47463,219 @@
             "label": "motivates"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch17_q00",
+          "prompt": "The top layer of a forest is called the:",
+          "questionType": "mcq",
+          "options": [
+            "Floor",
+            "Shrub",
+            "Canopy",
+            "Soil"
+          ],
+          "answer": "Canopy",
+          "solutionSteps": [
+            "Tall trees form the canopy — most sunlight is captured here."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q01",
+          "prompt": "Decomposers like fungi help by:",
+          "questionType": "mcq",
+          "options": [
+            "Eating animals",
+            "Producing oxygen",
+            "Breaking down dead matter",
+            "Carrying seeds"
+          ],
+          "answer": "Breaking down dead matter",
+          "solutionSteps": [
+            "They turn dead leaves and wood into humus — nutrients for new plants."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q02",
+          "prompt": "Forests absorb _____ and release _____.",
+          "questionType": "mcq",
+          "options": [
+            "O₂ / CO₂",
+            "CO₂ / O₂",
+            "N₂ / O₂",
+            "Water / Oxygen"
+          ],
+          "answer": "CO₂ / O₂",
+          "solutionSteps": [
+            "Photosynthesis uses CO₂ + water + sunlight to make food + O₂."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q03",
+          "prompt": "Cutting down forests is called:",
+          "questionType": "mcq",
+          "options": [
+            "Afforestation",
+            "Photosynthesis",
+            "Deforestation",
+            "Conservation"
+          ],
+          "answer": "Deforestation",
+          "solutionSteps": [
+            "Deforestation triggers erosion, floods and biodiversity loss."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q04",
+          "prompt": "Van Mahotsav is celebrated to:",
+          "questionType": "mcq",
+          "options": [
+            "Eat vegetables",
+            "Plant trees",
+            "Climb mountains",
+            "Cut wood"
+          ],
+          "answer": "Plant trees",
+          "solutionSteps": [
+            "India's annual tree-planting festival, every July first week."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q05",
+          "prompt": "In a forest food chain, the producers are:",
+          "questionType": "mcq",
+          "options": [
+            "Tigers",
+            "Mushrooms",
+            "Green plants",
+            "Snakes"
+          ],
+          "answer": "Green plants",
+          "solutionSteps": [
+            "Producers make their own food by photosynthesis. Every animal in the forest eats them directly or indirectly."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q06",
+          "prompt": "A typical tropical deciduous forest in India is the:",
+          "questionType": "mcq",
+          "options": [
+            "Sundarbans mangrove",
+            "Sal and teak forest",
+            "Pine forest of Himalayas",
+            "Thar shrubs"
+          ],
+          "answer": "Sal and teak forest",
+          "solutionSteps": [
+            "Central India has large sal and teak forests that shed leaves during the dry season."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q07",
+          "prompt": "Bamboo grows fastest in:",
+          "questionType": "mcq",
+          "options": [
+            "Dark cave floors",
+            "Sunlit gaps in the forest",
+            "Rocks with no soil",
+            "Salty water"
+          ],
+          "answer": "Sunlit gaps in the forest",
+          "solutionSteps": [
+            "Bamboos shoot up wherever a tree falls and lets sunlight reach the forest floor."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q08",
+          "prompt": "The leafy crowns of the tallest trees together form the:",
+          "questionType": "mcq",
+          "options": [
+            "Litter",
+            "Understorey",
+            "Canopy",
+            "Root zone"
+          ],
+          "answer": "Canopy",
+          "solutionSteps": [
+            "The canopy catches most of the sunlight. Below it are smaller layers down to the leaf-litter floor."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch17_q09",
+          "prompt": "Forests are called the lungs of the planet because they:",
+          "questionType": "mcq",
+          "options": [
+            "Make noise like wind",
+            "Take in CO₂ and release O₂",
+            "Filter saltwater",
+            "Generate electricity"
+          ],
+          "answer": "Take in CO₂ and release O₂",
+          "solutionSteps": [
+            "Through photosynthesis, forest plants pull CO₂ from the air and release the oxygen we breathe."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch18",
@@ -46002,7 +49816,219 @@
             "label": "preserves"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch18_q00",
+          "prompt": "Wastewater is also called:",
+          "questionType": "mcq",
+          "options": [
+            "Drinking water",
+            "Sewage",
+            "Rainwater",
+            "Glacial water"
+          ],
+          "answer": "Sewage",
+          "solutionSteps": [
+            "Sewage = used water from homes and industries, plus its contaminants."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q01",
+          "prompt": "In a treatment plant, the bar screen removes:",
+          "questionType": "mcq",
+          "options": [
+            "Bacteria",
+            "Dissolved salts",
+            "Large solids like rags & plastics",
+            "Dissolved oxygen"
+          ],
+          "answer": "Large solids like rags & plastics",
+          "solutionSteps": [
+            "Bars catch big items before pumps get clogged."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q02",
+          "prompt": "Aerator tanks help by:",
+          "questionType": "mcq",
+          "options": [
+            "Cooling sewage",
+            "Adding chlorine",
+            "Feeding microbes with oxygen",
+            "Removing colour"
+          ],
+          "answer": "Feeding microbes with oxygen",
+          "solutionSteps": [
+            "Aerobic bacteria eat dissolved organic waste — they need oxygen to work."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q03",
+          "prompt": "Open drains are a problem because they:",
+          "questionType": "mcq",
+          "options": [
+            "Cool the streets",
+            "Breed mosquitoes & spread disease",
+            "Save water",
+            "Make houses clean"
+          ],
+          "answer": "Breed mosquitoes & spread disease",
+          "solutionSteps": [
+            "Stagnant sewage = perfect breeding ground for malaria and cholera vectors."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q04",
+          "prompt": "Composting kitchen waste at home:",
+          "questionType": "mcq",
+          "options": [
+            "Wastes water",
+            "Reduces load on sewers and produces fertiliser",
+            "Spreads disease",
+            "Is illegal"
+          ],
+          "answer": "Reduces load on sewers and produces fertiliser",
+          "solutionSteps": [
+            "Half of household waste is organic. Composting keeps it out of pipes and turns it into soil."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q05",
+          "prompt": "The sludge left over after treating wastewater is often used to:",
+          "questionType": "mcq",
+          "options": [
+            "Make biogas or manure",
+            "Make plastic bags",
+            "Make drinking water",
+            "Build houses"
+          ],
+          "answer": "Make biogas or manure",
+          "solutionSteps": [
+            "Bacteria break down dried sludge into useful manure or biogas — nothing is wasted."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q06",
+          "prompt": "A septic tank is most useful in:",
+          "questionType": "mcq",
+          "options": [
+            "Crowded cities with sewers",
+            "Areas without a sewer network",
+            "Inside a pond",
+            "On a rooftop"
+          ],
+          "answer": "Areas without a sewer network",
+          "solutionSteps": [
+            "Septic tanks hold and partly treat household sewage on the spot — good for villages and rural homes."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q07",
+          "prompt": "Cholera spreads mainly through:",
+          "questionType": "mcq",
+          "options": [
+            "Touching pets",
+            "Eating fruit",
+            "Contaminated water",
+            "Breathing dust"
+          ],
+          "answer": "Contaminated water",
+          "solutionSteps": [
+            "Drinking water mixed with sewage carries cholera bacteria into the gut."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q08",
+          "prompt": "A sewer is:",
+          "questionType": "mcq",
+          "options": [
+            "An overflow tank",
+            "An underground pipe that carries sewage",
+            "A rooftop water tank",
+            "A storm cloud"
+          ],
+          "answer": "An underground pipe that carries sewage",
+          "solutionSteps": [
+            "Many small sewers feed into bigger ones and finally reach a treatment plant."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch18_q09",
+          "prompt": "Treated wastewater is most commonly reused for:",
+          "questionType": "mcq",
+          "options": [
+            "Drinking",
+            "Irrigation and cleaning",
+            "Cooking",
+            "Bottling and selling"
+          ],
+          "answer": "Irrigation and cleaning",
+          "solutionSteps": [
+            "Treated water is good enough to water plants and wash streets but not always to drink."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     },
     {
       "id": "ch19",
@@ -53136,7 +57162,219 @@
             "label": "moves water"
           }
         ]
-      }
+      },
+      "bossQuestions": [
+        {
+          "id": "bossquiz_ch19_q00",
+          "prompt": "What causes day and night on Earth?",
+          "questionType": "mcq",
+          "options": [
+            "Earth's revolution around the Sun",
+            "Earth's rotation on its axis",
+            "The Moon blocking sunlight",
+            "Clouds covering the Sun"
+          ],
+          "answer": "Earth's rotation on its axis",
+          "solutionSteps": [
+            "Earth spins on its axis once every 24 hours. The side facing the Sun has day, the opposite side has night."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q01",
+          "prompt": "What causes the seasons on Earth?",
+          "questionType": "mcq",
+          "options": [
+            "Distance from the Sun",
+            "The tilt of Earth's axis",
+            "The Moon's gravity",
+            "Speed of Earth's rotation"
+          ],
+          "answer": "The tilt of Earth's axis",
+          "solutionSteps": [
+            "Earthu{2019}s axis is tilted at 23.5 degrees. As Earth orbits the Sun, different hemispheres tilt toward or away from the Sun, creating seasons."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q02",
+          "prompt": "During a solar eclipse, what comes between the Sun and Earth?",
+          "questionType": "mcq",
+          "options": [
+            "Mars",
+            "A comet",
+            "The Moon",
+            "A satellite"
+          ],
+          "answer": "The Moon",
+          "solutionSteps": [
+            "In a solar eclipse, the Moon passes between the Sun and Earth, blocking sunlight and casting a shadow on Earth."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q03",
+          "prompt": "Which Indian mission discovered water on the Moon?",
+          "questionType": "mcq",
+          "options": [
+            "Mangalyaan",
+            "Chandrayaan-1",
+            "Aditya-L1",
+            "Chandrayaan-3"
+          ],
+          "answer": "Chandrayaan-1",
+          "solutionSteps": [
+            "Chandrayaan-1 (2008) carried the Moon Impact Probe that confirmed the presence of water molecules on the lunar surface."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q04",
+          "prompt": "The Pole Star appears stationary because it is aligned with Earthu{2019}s ___.",
+          "questionType": "mcq",
+          "options": [
+            "Equator",
+            "Orbit",
+            "Rotational axis",
+            "Magnetic field"
+          ],
+          "answer": "Rotational axis",
+          "solutionSteps": [
+            "The Pole Star (Dhruv Tara) is almost exactly aligned with Earthu{2019}s rotational axis, so as Earth spins, it appears to stay fixed while all other stars circle around it."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q05",
+          "prompt": "The star closest to Earth is the:",
+          "questionType": "mcq",
+          "options": [
+            "Pole Star",
+            "Sun",
+            "Sirius",
+            "Alpha Centauri"
+          ],
+          "answer": "Sun",
+          "solutionSteps": [
+            "The Sun is just one of trillions of stars — but it is the only one close enough to feel warm."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q06",
+          "prompt": "Which of these are the inner rocky planets?",
+          "questionType": "mcq",
+          "options": [
+            "Jupiter, Saturn, Uranus, Neptune",
+            "Mercury, Venus, Earth, Mars",
+            "Sun, Earth, Moon, Mars",
+            "Pluto, Ceres, Eris, Sedna"
+          ],
+          "answer": "Mercury, Venus, Earth, Mars",
+          "solutionSteps": [
+            "The four small rocky planets nearest the Sun; the four gas/ice giants lie beyond."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q07",
+          "prompt": "Saturn's beautiful rings are made of:",
+          "questionType": "mcq",
+          "options": [
+            "Solid metal bands",
+            "Tiny ice and rock particles",
+            "A single sheet of cloud",
+            "Liquid gold"
+          ],
+          "answer": "Tiny ice and rock particles",
+          "solutionSteps": [
+            "Up close, the rings are millions of separate chunks of ice and dust orbiting Saturn."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q08",
+          "prompt": "Our home galaxy is called the:",
+          "questionType": "mcq",
+          "options": [
+            "Andromeda Galaxy",
+            "Triangulum Galaxy",
+            "Milky Way",
+            "Whirlpool Galaxy"
+          ],
+          "answer": "Milky Way",
+          "solutionSteps": [
+            "Our Sun is one star out of hundreds of billions in the spiral Milky Way galaxy."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ch19_q09",
+          "prompt": "A light-year is a measure of:",
+          "questionType": "mcq",
+          "options": [
+            "Time",
+            "Mass",
+            "Distance",
+            "Temperature"
+          ],
+          "answer": "Distance",
+          "solutionSteps": [
+            "It is the distance light travels in one year — about 9.46 trillion km."
+          ],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
+      ]
     }
   ]
 }
