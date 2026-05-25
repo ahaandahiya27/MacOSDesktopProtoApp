@@ -17,14 +17,16 @@ final class ChapterContentTests: XCTestCase {
 
     func testArticleIndexHasAllChapter2Entries() {
         let ch2Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch02") }
-        // Ch2: 1 overview + 3 topic overviews + 12 + 5 + 3 concepts = 24
-        XCTAssertEqual(ch2Ids.count, 25, "Chapter 2 should have 25 article entries")
+        // Ch2: 1 overview + 1 beyond + 3 topic overviews + 12 + 5 + 3 concepts
+        //      + 1 mistakes (added 2026-05-26) + 1 glossary (added 2026-05-26) = 27
+        XCTAssertEqual(ch2Ids.count, 27, "Chapter 2 should have 27 article entries")
     }
 
     func testArticleIndexHasAllChapter3Entries() {
         let ch3Ids = ArticleIndex.entries.keys.filter { $0.hasPrefix("ch03") }
-        // Ch3: 1 overview + 3 topic overviews + 8 + 4 + 3 concepts = 19
-        XCTAssertEqual(ch3Ids.count, 19, "Chapter 3 should have 19 article entries")
+        // Ch3: 1 overview + 3 topic overviews + 8 + 4 + 3 concepts
+        //      + 1 mistakes (added 2026-05-26) + 1 glossary (added 2026-05-26) = 21
+        XCTAssertEqual(ch3Ids.count, 21, "Chapter 3 should have 21 article entries")
     }
 
     func testEveryArticleEntryHasNonEmptyFields() {

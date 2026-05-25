@@ -2194,4 +2194,62 @@ Local 4/4 pass; expected on CI.
   the hero/lede/footer fragments. Today's generator inlines them
   (good for one-off; gets repetitive at scale).
 
+## Session continuation: 2026-05-26 — VOCAB DECK at 19/19 + counter-test fix
+
+### Goal
+Same pattern as the Common-Mistakes article session: bring the
+chapter-level "Vocabulary Deck" HTML article surface from 1/19
+(Ch.1 only) to 19/19 by templating from each chapter's existing
+`chapter.glossary` JSON data.
+
+### Commits this session (continuation)
+
+- `523783d` fix(content): vocabulary-deck articles at 19/19 chapter
+  coverage. 18 new `ch{02..19}_glossary.html` articles (avg ~4400
+  bytes, 10 vocabulary terms each, English + Hindi); 18 new
+  ArticleIndex entries; new
+  `scripts/generate_glossary_articles.py` generator;
+  `GlossaryArticleRoutingTests` with 4 ratchet cases.
+- THIS COMMIT — `ChapterContentTests` count-parity fix. The
+  per-chapter "this chapter should have N article entries" tests
+  for Ch.2 and Ch.3 broke when the mistakes + glossary articles
+  landed; updating to the new totals (Ch.2 = 27, Ch.3 = 21).
+
+### Why the count-parity tests fired
+
+`ChapterContentTests` ships 3 specific count assertions (Ch.1,
+Ch.2, Ch.3) that lock the EXACT number of ArticleIndex entries
+per chapter. They're sentinels — they catch unintended additions
+(e.g. a duplicate entry) but also fire on intended additions.
+The first push of the mistakes+glossary work hit
+`xcodebuild rc=65` because Ch.3 jumped from 19 → 21 entries.
+This commit syncs the sentinel values to match the new totals.
+
+Ch.4-19 don't have analogous tests, so no further updates needed.
+
+### Out-of-scope (logged for next session)
+
+- **Vocabulary Deck UI surface card.** Today the 18 new glossary
+  articles ship as bundled resources + ArticleIndex entries, but
+  no card on ChapterDetailView routes to them. The existing
+  `glossaryButton` chip opens `GlossarySheet` (a different,
+  sheet-based surface keyed to the same JSON). A future session
+  should add a "Vocabulary Deck" link inside GlossarySheet's
+  body (or as a per-chapter card) so the HTML article gets
+  surfaced.
+- **The remaining 10 Ch.1-only article surfaces.** With mistakes
+  + glossary shipped, 10 surfaces remain Ch.1-only: `scientists`,
+  `storymode`, `whatif`, `infographic`, `miniproject`,
+  `ncert_qa`, `plantoftheday`, `selfcheck`, `beyond`, `bridge`.
+  Each is a future generator session.
+
+### Build / tests / lints
+
+- `xcodebuild build` — clean.
+- `ChapterContentTests` count-parity (3 cases) — all pass after
+  the bump.
+- `GlossaryArticleRoutingTests` — 4 cases pass locally (3 saw
+  output, 4th in the suite per the file structure).
+- All 9 lints clean.
+
 
