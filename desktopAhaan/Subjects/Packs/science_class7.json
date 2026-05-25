@@ -3950,8 +3950,21 @@
           "solutionSteps": [
             "Chlorophyll is the green pigment inside chloroplasts that absorbs light energy for photosynthesis."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking Carotene — it IS a pigment in leaves but it's orange/yellow (you see it in autumn). Chlorophyll is the green one that drives photosynthesis.",
+            "Picking Cellulose — cellulose makes plant cell walls strong; it doesn't catch sunlight. That's chlorophyll's job, packed into chloroplasts."
+          ],
+          "variations": [
+            {
+              "prompt": "Why do plant leaves look green and not red or purple?",
+              "answer": "Chlorophyll absorbs red and blue light and reflects green — what bounces back is what we see.",
+              "solutionSteps": [
+                "Sunlight contains every colour of the rainbow.",
+                "Chlorophyll absorbs red and blue strongly to power photosynthesis.",
+                "It bounces green light back to our eyes, so leaves look green."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -3971,7 +3984,10 @@
           "solutionSteps": [
             "Plants split water during photosynthesis and release oxygen into the air."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Carbon dioxide — CO₂ is the gas plants TAKE IN for photosynthesis, not what they release. The output is oxygen.",
+            "Forgetting that plants release oxygen at all — every breath you take depends on this. Forests are the planet's main oxygen source."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -3992,7 +4008,10 @@
           "solutionSteps": [
             "Stomata are tiny mouths that take in CO₂ and release O₂ during photosynthesis."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Stamen — sounds similar but stamens are the MALE part of a flower, not pores on a leaf. Stomata are the leaf's breathing pores.",
+            "Thinking stomata sit on top of the leaf — most plants put them underneath so less water escapes in the Sun."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4013,8 +4032,21 @@
           "solutionSteps": [
             "Cuscuta has no chlorophyll. It wraps around host plants and steals their food — a parasite."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking Saprotroph — saprotrophs feed on DEAD matter (like a mushroom on a log). Cuscuta wraps around a LIVING host plant, so it's a parasite.",
+            "Calling Cuscuta 'just a plant' — it looks like yellow twine because it has no chlorophyll. It can't make food, so it has to steal it."
+          ],
+          "variations": [
+            {
+              "prompt": "Why does Cuscuta look yellow-orange instead of green?",
+              "answer": "It has no chlorophyll, so the green colour is missing.",
+              "solutionSteps": [
+                "Cuscuta is a parasite — it steals ready-made food from its host plant.",
+                "No food-making means no need for chlorophyll, the green pigment.",
+                "Without chlorophyll, the only colour left is from carotenoids — yellow and orange."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -4034,7 +4066,10 @@
           "solutionSteps": [
             "Pitcher plants grow in nitrogen-poor soil. Trapping insects supplies nitrogen for proteins."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Carbon — pitcher plants get plenty of carbon from CO₂ in the air, like any plant. Insects give them what the soil can't: nitrogen.",
+            "Thinking they eat insects to fill their stomach — they're not animals. They digest insects to harvest the protein-building element, nitrogen."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4055,7 +4090,10 @@
           "solutionSteps": [
             "Plants pull in CO₂ through stomata; with water and light energy they make glucose and release O₂."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Oxygen — oxygen is the OUTPUT of photosynthesis, not an input. The plant takes in CO₂ and gives out O₂, opposite to us.",
+            "Picking Nitrogen — plants need nitrogen, but not for photosynthesis. Nitrogen builds proteins; CO₂ is what photosynthesis turns into sugar."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4076,7 +4114,10 @@
           "solutionSteps": [
             "Saprotrophs feed on dead and decaying matter — they help nature recycle."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Parasite — a parasite needs a LIVING host. A mushroom on a rotting log feeds on DEAD wood, which makes it a saprotroph.",
+            "Calling mushrooms 'plants' — fungi aren't plants. They have no chlorophyll and don't photosynthesise; they're their own kingdom of life."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4097,7 +4138,10 @@
           "solutionSteps": [
             "Farmers grow pulses between crops to put nitrogen back into the soil — a free fertiliser."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Thinking the plant itself fixes nitrogen — it doesn't. The bacteria living inside root nodules do the chemistry; the plant just provides a home.",
+            "Thinking nitrogen mostly comes from rain — rain brings a trace. Legume + Rhizobium add far more, which is why farmers rotate pulses with other crops."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4118,8 +4162,21 @@
           "solutionSteps": [
             "The alga makes food by photosynthesis; the fungus gives shelter and water. Both gain — mutualism."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking 'two plants' — neither half of a lichen is a plant. The fungus is a fungus; the green partner is an alga (sometimes a cyanobacterium).",
+            "Thinking the fungus alone is the lichen — it's the visible body, but without the alga inside it has no food. Each NEEDS the other; that's mutualism."
+          ],
+          "variations": [
+            {
+              "prompt": "What does each partner in a lichen give the other?",
+              "answer": "The alga makes food by photosynthesis; the fungus gives shelter and water.",
+              "solutionSteps": [
+                "The alga has chlorophyll and can make sugar from sunlight.",
+                "The fungus can't photosynthesise but it can absorb water and grip onto rocks.",
+                "Both win — neither could live in such harsh places on its own."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -4139,8 +4196,21 @@
           "solutionSteps": [
             "Test a leaf with iodine — it turns blue-black where starch is stored."
           ],
-          "commonMistakes": [],
-          "variations": [],
+          "commonMistakes": [
+            "Picking Salt — salt is sodium chloride, a mineral. Plants don't store salt as food; they store starch made of carbon and hydrogen.",
+            "Picking Oxygen — oxygen is a gas the plant releases; it isn't stored. Food is starch, packed tightly as grains inside cells."
+          ],
+          "variations": [
+            {
+              "prompt": "How would you test a leaf to show it has been photosynthesising?",
+              "answer": "Drop iodine on it — blue-black colour means starch is present, which means photosynthesis happened.",
+              "solutionSteps": [
+                "Boil the leaf to soften it, then dip in alcohol to remove chlorophyll.",
+                "Spread the pale leaf out and drop iodine solution on it.",
+                "Blue-black wherever starch sits → photosynthesis was happening there."
+              ]
+            }
+          ],
           "difficulty": 2,
           "pageRefs": [],
           "needsHumanReview": false,
@@ -4160,7 +4230,10 @@
           "solutionSteps": [
             "Trees pull carbon out of the air through photosynthesis. Most of the dry mass of a tree was once a gas."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'from the water alone' — Van Helmont WATERED the willow but the soil weighed almost the same at the end. Water alone can't account for 74 kg of new tree.",
+            "Picking 'from the pot itself' — Van Helmont was careful: the soil didn't lose mass. The pot didn't either. The mass came from something invisible — the air."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4181,7 +4254,10 @@
           "solutionSteps": [
             "Bose's machine magnified plant movement 10,000u{00D7}, showing that plants react to light, heat and touch."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'plants make their own food' — Joseph Priestley showed that a century before Bose. Bose's invention measured plant MOVEMENT, not food production.",
+            "Picking 'plants are made of cells' — that was Robert Hooke and Schleiden. Bose's contribution was specifically about plants responding to light, heat and touch."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4202,7 +4278,10 @@
           "solutionSteps": [
             "The same ring of atoms with different metals: Mg in chlorophyll, Fe in haemoglobin. That tiny swap changes the colour and the job."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking Copper — copper carries oxygen in blue-blooded creatures like horseshoe crabs and squids. Human blood is RED because of iron, not copper.",
+            "Forgetting that chlorophyll and haemoglobin are structurally cousins — both use a 'porphyrin ring' but with different metals. Magnesium green, iron red."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4223,7 +4302,10 @@
           "solutionSteps": [
             "It is one of the only animals that can photosynthesise u{2014} the line between plant and animal blurs."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'turns into a plant' — Elysia is still an animal; it just BORROWS the chloroplasts from the algae it eats. It doesn't grow roots or leaves.",
+            "Thinking all animals must hunt for food — Elysia steals plant machinery and runs it inside its own skin, blurring the plant/animal line."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
@@ -4244,7 +4326,10 @@
           "solutionSteps": [
             "Solar panels can reach 20u{0025}. Photosynthesis is much less efficient u{2014} but plants do many other things at once."
           ],
-          "commonMistakes": [],
+          "commonMistakes": [
+            "Picking 'almost 100%' — if leaves caught every photon they'd be black. They're green because they bounce back the colours photosynthesis can't use.",
+            "Picking '50%' — even the best human-made solar panels only hit 20-25%. A leaf is a chemical factory AND power station, so it costs efficiency."
+          ],
           "variations": [],
           "difficulty": 2,
           "pageRefs": [],
