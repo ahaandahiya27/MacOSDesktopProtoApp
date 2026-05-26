@@ -5384,6 +5384,952 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch04",
+      "number": 4,
+      "title": "Expressions Using Letter-Numbers",
+      "summary": "Shabnam is always 3 years older than Aftab — whatever Aftab's age, hers is 'his age + 3'. Replacing the unknown age with a letter (a) gives the algebraic expression a + 3. This chapter introduces letter-numbers (variables), shows how dropping the × sign turns 4 × n into 4n, how to substitute values, and how to simplify expressions like l + b + l + b into 2l + 2b. It is the doorway into algebra.",
+      "topics": [
+        {
+          "id": "ch04_t01",
+          "title": "The Notion of Letter-Numbers",
+          "summary": "A letter can stand for a number we don't yet know or that can change. Shabnam's age is always Aftab's age + 3, written s = a + 3. Such expressions with letters are algebraic expressions, and a relation like this is a formula.",
+          "concepts": [
+            {
+              "id": "ch04_t01_c01",
+              "title": "Letter-numbers and algebraic expressions",
+              "explanations": {
+                "oneLine": "A letter-number is a letter that stands for a number; an expression containing one (like a + 3) is an algebraic expression.",
+                "kidFriendly": "Shabnam is always 3 years older than Aftab. When Aftab is 10, Shabnam is 13; when Aftab is 18, Shabnam is 21. The rule never changes: Shabnam's age = Aftab's age + 3. Instead of writing 'Aftab's age' every time, we use a letter — say a. Then Shabnam's age is just a + 3, written s = a + 3. The letters a and s are called letter-numbers because they stand for numbers, and a + 3 is an algebraic expression. To find Shabnam's age for any Aftab's age, just replace a with that number.",
+                "textbook": "A letter-number (variable) is a symbol that represents a number, used to express relationships that hold for many values. An expression built from letter-numbers and operations, such as a + 3, is an algebraic expression. Substituting a specific number for the letter yields the corresponding value: when a = 23, a + 3 = 26. Letter-numbers let a single expression capture an entire pattern of relationships.",
+                "expert": "A variable ranges over a domain of values; an algebraic expression is a function of its variables, and evaluation is function application via substitution. The power of the notation is generality: a + 3 denotes the successor-by-three map on whatever domain a inhabits, encoding infinitely many arithmetic facts (4+3, 10+3, 23+3, …) in one finite symbol string. This is the conceptual leap from arithmetic (specific numbers) to algebra (relationships among numbers)."
+              },
+              "reasoning": "When a relationship holds for ALL values (Shabnam is always 3 more than Aftab), writing out specific cases forever is impossible. A letter captures 'whatever the number is' in one symbol, so a + 3 says the whole pattern at once.",
+              "useCases": [
+                {
+                  "title": "Age differences",
+                  "description": "Shabnam = Aftab + 3 for every age: a + 3.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Shopping cost",
+                  "description": "Total for c coconuts at ₹35 and j kg jaggery at ₹60 is c×35 + j×60.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Matchstick patterns",
+                  "description": "n L-shapes need 2 × n matchsticks — one expression for any number of Ls.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The idea of a symbol standing for 'any number' took mathematicians centuries to formalise — early algebra was written entirely in words. The leap to letters (by mathematicians like Viète and Descartes) made it possible to state general laws compactly, and is arguably what made modern science's mathematical formulas possible.",
+              "mnemonic": "A letter holds a number's place. a + 3 means 'three more than whatever a is'.",
+              "predictQuestion": "Shabnam is always 3 years older than Aftab. If we call Aftab's age a, how would you write Shabnam's age in one short expression?",
+              "whyChain": [
+                "Some relationships hold no matter what the numbers are — Shabnam is 3 years older than Aftab whether he's 4, 10, or 100. Writing out '4+3, 10+3, 100+3, …' can never finish. We need a way to say the relationship ONCE, for all cases.",
+                "A letter does exactly that. Let a stand for Aftab's age — any value it might take. Then 'three more than Aftab's age' is simply a + 3. One expression now encodes infinitely many specific facts; to get any particular case, you substitute a number for a.",
+                "This is the entire leap from arithmetic to algebra. Arithmetic computes with specific numbers; algebra reasons about relationships that hold across all numbers, using letters as placeholders. Once you can write a + 3, you can write formulas for perimeters, costs, patterns — capturing general truths that no list of examples could."
+              ],
+              "relatedConceptIds": [
+                "ch04_t01_c02",
+                "ch04_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch04_t01_q01",
+                "ch04_t01_q02"
+              ],
+              "pageRefs": [
+                81,
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t01_c02",
+              "title": "Formulas — general relationships as expressions",
+              "explanations": {
+                "oneLine": "A formula is an algebraic expression that captures a general rule, like the perimeter of a square being 4 × q for side length q.",
+                "kidFriendly": "The perimeter of a square is 4 times its side. Call the side q; the perimeter is 4 × q. That's a formula — it works for ANY square. Side 7 cm? Perimeter 4 × 7 = 28 cm. Side 100 m? 4 × 100 = 400 m. A formula is just an algebraic expression that states a general relationship once and for all. Ketaki's laddu cost (c coconuts at ₹35, j kg jaggery at ₹60) is the formula c×35 + j×60. Formulas turn 'how do I work this out each time?' into 'plug the numbers into this expression'.",
+                "textbook": "A formula is an algebraic expression (or equation relating expressions) that encodes a general relationship applicable to a whole class of cases. Examples: perimeter of a square = 4q; perimeter of a rectangle = 2l + 2b; total cost = c×35 + j×60. Evaluating a formula for specific inputs is done by substitution. Formulas are the compact, reusable form of repeated calculations.",
+                "expert": "Formulas are the lingua franca of quantitative science: a formula is a closed-form expression of a functional relationship between quantities, valid across its domain. The shift from computing case-by-case to deriving and applying formulas is what lets mathematics scale — one perimeter formula replaces measuring every square individually. Dimensional consistency and domain of validity are the formal caveats attached to any formula."
+              },
+              "reasoning": "Doing the same kind of calculation repeatedly is wasteful. A formula captures the METHOD once, as an expression. Then any specific case is just a substitution — no re-deriving the logic each time.",
+              "useCases": [
+                {
+                  "title": "Square perimeter",
+                  "description": "Perimeter = 4q for side q; side 7 → 28 cm.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Rectangle perimeter",
+                  "description": "Perimeter = 2l + 2b; length 5, breadth 3 → 16.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Combined pipe length",
+                  "description": "A 20 m pipe joined to one of length k metres: total 20 + k.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Every formula you'll meet in physics (speed = distance ÷ time), geometry (area = length × breadth), and finance (interest formulas) is this same idea: a general relationship frozen into an algebraic expression. Learning to read and build formulas now is learning the language those subjects are written in.",
+              "mnemonic": "A formula = a method frozen into an expression. Substitute to use it.",
+              "predictQuestion": "The perimeter of a square with side q is 4 × q. What is the perimeter of a square with side 7 cm — and why does one formula work for every square?",
+              "whyChain": [
+                "A square's perimeter is always its side counted four times — that's true for every square, regardless of size. Rather than measure and add four sides each time, we capture the rule once: perimeter = 4 × side.",
+                "Using a letter q for the side turns the rule into a reusable expression, 4q. Now any specific square is one substitution away: side 7 cm gives 4 × 7 = 28 cm; side 100 m gives 400 m. The formula does the thinking once; you just supply the number.",
+                "This is why formulas are everywhere in maths and science. A single formula — perimeter = 4q, area = l×b, speed = distance÷time — replaces endless individual calculations and states a general law compactly. Building and reading formulas is the core skill algebra exists to give you."
+              ],
+              "relatedConceptIds": [
+                "ch04_t01_c01",
+                "ch04_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch04_t01_q03"
+              ],
+              "pageRefs": [
+                83
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch04_t01_q01",
+              "prompt": "Shabnam is 3 years older than Aftab. Using a for Aftab's age, write an expression for Shabnam's age, then find it when Aftab is 23.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "s = a + 3; when a = 23, s = 26.",
+              "solutionSteps": [
+                "Shabnam's age = Aftab's age + 3 = a + 3.",
+                "Substitute a = 23: 23 + 3 = 26.",
+                "Shabnam is 26."
+              ],
+              "commonMistakes": [
+                "Writing a − 3 (Aftab is younger, so SHABNAM is age + 3).",
+                "Forgetting to substitute and leaving the answer as a + 3."
+              ],
+              "variations": [
+                {
+                  "prompt": "If Shabnam's age is s, write Aftab's age and find it when s = 20.",
+                  "answer": "a = s − 3 = 17",
+                  "solutionSteps": [
+                    "Aftab is 3 less: 20 − 3 = 17."
+                  ]
+                },
+                {
+                  "prompt": "Find Shabnam's age when Aftab is 45.",
+                  "answer": "48",
+                  "solutionSteps": [
+                    "45 + 3 = 48."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                81,
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t01_q02",
+              "prompt": "Parthiv makes L-shapes from matchsticks, 2 sticks per L. Write an expression for the sticks needed for n Ls, and find it for 45 Ls.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "2 × n (or 2n); for 45 Ls, 90 sticks.",
+              "solutionSteps": [
+                "Each L = 2 sticks. n Ls = 2 × n sticks.",
+                "Substitute n = 45: 2 × 45 = 90.",
+                "90 matchsticks."
+              ],
+              "commonMistakes": [
+                "Writing n + 2 instead of 2 × n.",
+                "Computing 2 + 45 = 47 instead of 2 × 45."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sticks for 7 Ls?",
+                  "answer": "14",
+                  "solutionSteps": [
+                    "2 × 7 = 14."
+                  ]
+                },
+                {
+                  "prompt": "If each shape needs 3 sticks, expression for n shapes?",
+                  "answer": "3n",
+                  "solutionSteps": [
+                    "3 × n = 3n."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t01_q03",
+              "prompt": "Write a formula for the perimeter of a regular pentagon with side q, and use it for q = 6 cm.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Perimeter = 5q; for q = 6, perimeter = 30 cm.",
+              "solutionSteps": [
+                "A regular pentagon has 5 equal sides.",
+                "Perimeter = 5 × side = 5q.",
+                "Substitute q = 6: 5 × 6 = 30 cm."
+              ],
+              "commonMistakes": [
+                "Using 4q (that's a square) instead of 5q.",
+                "Adding instead of multiplying: 5 + 6 = 11."
+              ],
+              "variations": [
+                {
+                  "prompt": "Formula for an equilateral triangle's perimeter (side q)?",
+                  "answer": "3q",
+                  "solutionSteps": [
+                    "3 equal sides → 3 × q."
+                  ]
+                },
+                {
+                  "prompt": "Regular hexagon perimeter for side 5?",
+                  "answer": "30",
+                  "solutionSteps": [
+                    "6q = 6 × 5 = 30."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                83
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch04_t02",
+          "title": "Omitting × and Substituting Values",
+          "summary": "By convention we write 4 × n as just 4n — number first, then letter, no multiplication sign. To evaluate an expression like 5m + 3, substitute the value (m = 2 gives 5×2 + 3 = 13). Watch the signs carefully when the letter stands for a negative number.",
+          "concepts": [
+            {
+              "id": "ch04_t02_c01",
+              "title": "Dropping the multiplication sign; substituting values",
+              "explanations": {
+                "oneLine": "We write 4 × n as 4n (number first, letter after, no × sign), and we evaluate an algebraic expression by substituting the letter's value.",
+                "kidFriendly": "The sequence 4, 8, 12, 16, … is the multiples of 4; its nth term is 4 × n. By standard practice we shorten 4 × n to 4n — drop the × sign, write the number first then the letter. So 7 × k becomes 7k, and 5 × m + 3 becomes 5m + 3. To find a value, SUBSTITUTE: 5m + 3 when m = 2 is 5 × 2 + 3 = 13 (the 5m means 5 × m, so multiply first). Be careful with negatives: if a = −4, then 10 − a = 10 − (−4) = 14, not 6. Substitution is where most algebra slips happen — replace the letter, keep its sign, then follow order of operations.",
+                "textbook": "Conventionally the multiplication sign between a numeral and a letter-number is omitted: 4 × n is written 4n, with the numeral (coefficient) preceding the letter. To evaluate an algebraic expression, each letter-number is replaced by its given value (substitution), and the resulting arithmetic expression is computed using the order of operations. Care is required with signs: substituting a negative value preserves its sign, e.g. a = −4 gives 10 − a = 10 − (−4) = 14.",
+                "expert": "The juxtaposition convention (4n ≡ 4·n) is standard notation that disambiguates because variables are single symbols; it generalises to coefficient·monomial in polynomial algebra. Substitution is the evaluation homomorphism from the polynomial ring to the coefficient ring. Sign errors on substitution of negatives are failures to treat the substituted value as a single signed object — formally, replacing the indeterminate by the ring element −4, not by the syntactic tokens '− 4'."
+              },
+              "reasoning": "Writing 4n instead of 4×n is just shorthand that's unambiguous because a letter is a single symbol. Substituting means putting the number where the letter was — and the number keeps whatever sign it has, which is exactly where care is needed.",
+              "useCases": [
+                {
+                  "title": "nth term of a pattern",
+                  "description": "Multiples of 4: nth term 4n; 29th term 4 × 29 = 116.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Evaluating a cost formula",
+                  "description": "Cost 7k for k kg at ₹7: k = 4 gives ₹28.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Signed substitution",
+                  "description": "Temperature drop a = −4 °C into 10 − a gives 10 − (−4) = 14.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "The 'mind the mistake' habit — checking a substitution, especially with negatives — is one of the highest-value skills in early algebra. Expressions like 3(m+1) with m = −6 trip up huge numbers of students who forget the bracket: 3(−6+1) = 3(−5) = −15, not 19. Slowing down on substitution prevents a cascade of later errors.",
+              "mnemonic": "4 × n = 4n (number then letter). Substitute carefully — keep the sign of negatives!",
+              "predictQuestion": "Write 4 × n in short form, then find the value of 5m + 3 when m = 2.",
+              "whyChain": [
+                "When a numeral multiplies a letter, the × sign is redundant — a letter is a single symbol, so 4n can only mean 4 × n. Dropping the sign (number first, then letter) is a clean convention that makes longer expressions far easier to read: 5m + 3 instead of 5 × m + 3.",
+                "To find an expression's value, substitute: replace each letter with its given number, then compute using order of operations. 5m + 3 with m = 2 means 5 × 2 + 3 = 13 — the 5m is a multiplication done before the +3, exactly as the terms rule demands.",
+                "The danger zone is negative values. The letter keeps the full signed number when substituted: if a = −4, then 10 − a is 10 − (−4) = 14, and 3(m+1) with m = −6 is 3(−5) = −15. Treating the substituted value as one signed object — and respecting brackets — is what separates correct algebra from the most common slips."
+              ],
+              "relatedConceptIds": [
+                "ch04_t01_c01",
+                "ch04_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch04_t02_q01",
+                "ch04_t02_q02",
+                "ch04_t02_q03"
+              ],
+              "pageRefs": [
+                86,
+                87
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch04_t02_q01",
+              "prompt": "Find the value of 5m + 3 when m = 2.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "13",
+              "solutionSteps": [
+                "5m means 5 × m.",
+                "Substitute m = 2: 5 × 2 + 3.",
+                "= 10 + 3 = 13."
+              ],
+              "commonMistakes": [
+                "Computing 5 + 2 + 3 = 10 (forgetting 5m is multiplication).",
+                "Doing (5×2+3) wrong by adding before multiplying."
+              ],
+              "variations": [
+                {
+                  "prompt": "Value of 7k when k = 4?",
+                  "answer": "28",
+                  "solutionSteps": [
+                    "7 × 4 = 28."
+                  ]
+                },
+                {
+                  "prompt": "Value of 3p − 1 when p = 5?",
+                  "answer": "14",
+                  "solutionSteps": [
+                    "3×5 − 1 = 15 − 1 = 14."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                86
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q02",
+              "prompt": "If a = −4, find the value of 10 − a.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "14",
+              "solutionSteps": [
+                "Substitute a = −4: 10 − (−4).",
+                "Subtracting a negative adds: 10 + 4.",
+                "= 14."
+              ],
+              "commonMistakes": [
+                "Writing 10 − 4 = 6 (dropping the negative sign of a).",
+                "Thinking −a means 'negative' rather than 'the opposite of a'."
+              ],
+              "variations": [
+                {
+                  "prompt": "If d = 6, find 3d.",
+                  "answer": "18",
+                  "solutionSteps": [
+                    "3 × 6 = 18 (not 36)."
+                  ]
+                },
+                {
+                  "prompt": "If m = −6, find 3(m + 1).",
+                  "answer": "−15",
+                  "solutionSteps": [
+                    "3(−6+1) = 3(−5) = −15."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                86,
+                87
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t02_q03",
+              "prompt": "Find the nth-term expression for the sequence 4, 8, 12, 16, 20, … and use it to find the 29th term.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "nth term = 4n; 29th term = 4 × 29 = 116.",
+              "solutionSteps": [
+                "The sequence is the multiples of 4.",
+                "nth term = 4 × n = 4n.",
+                "29th term: 4 × 29 = 116."
+              ],
+              "commonMistakes": [
+                "Writing n + 4 instead of 4n.",
+                "Using 4n + 4 (off by one position)."
+              ],
+              "variations": [
+                {
+                  "prompt": "nth term of 5, 10, 15, 20, …?",
+                  "answer": "5n",
+                  "solutionSteps": [
+                    "Multiples of 5 → 5n."
+                  ]
+                },
+                {
+                  "prompt": "10th term of the sequence 4, 8, 12, …?",
+                  "answer": "40",
+                  "solutionSteps": [
+                    "4 × 10 = 40."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                86
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch04_t03",
+          "title": "Simplifying Algebraic Expressions",
+          "summary": "l + b + l + b can be tidied to 2l + 2b by collecting like terms — because l + l = 2l. Two expressions are equal if they give the same value for every substitution. Simplification rewrites an expression in a shorter equivalent form using the same rules that govern numbers.",
+          "concepts": [
+            {
+              "id": "ch04_t03_c01",
+              "title": "Collecting like terms to simplify",
+              "explanations": {
+                "oneLine": "Like terms (same letter) can be combined: l + l = 2l, so l + b + l + b simplifies to 2l + 2b; the simplified form has the same value for every substitution.",
+                "kidFriendly": "A rectangle's perimeter is length + breadth + length + breadth = l + b + l + b. Since terms can be added in any order (commutativity), regroup as l + l + b + b. Now l + l = 2 × l = 2l and b + b = 2b, so the perimeter is 2l + 2b. The long form (l + b + l + b) and the short form (2l + 2b) are EQUAL — they give the same value for every l and b (try l = 3, b = 4: both give 14). Combining 'like terms' (same letter) into one is called simplification. You can only combine like with like: 2l + 3l = 5l, but 2l + 3b stays as is.",
+                "textbook": "Like terms are terms with the same letter-number part; they may be combined by adding coefficients: l + l = 2l, 2l + 3l = 5l. Unlike terms (different letters) cannot be combined. Simplification rewrites an expression in an equivalent shorter form using commutativity, associativity, and the distributive property. Two algebraic expressions are equal when they yield equal values for all substitutions, e.g. l + b + l + b = 2l + 2b.",
+                "expert": "Combining like terms is addition within each monomial class: the coefficient ring acts on basis monomials, and like terms are scalar multiples of the same monomial, summed by coefficient addition (al + bl = (a+b)l by distributivity). Expression equality is identity in the polynomial ring — equal as functions over the coefficient domain. Simplification is computing a canonical (collected) representative of the equivalence class."
+              },
+              "reasoning": "Adding the same thing repeatedly is multiplication: l + l is two ls, i.e. 2l. So a sum with repeated letters collapses by counting how many of each letter there are. Different letters can't merge because they stand for possibly-different numbers.",
+              "useCases": [
+                {
+                  "title": "Rectangle perimeter",
+                  "description": "l + b + l + b = 2l + 2b; both give 14 when l=3, b=4.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Shop earnings",
+                  "description": "5c + 3c + 10c pencils over 3 days = 18c; collect the c-terms.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Counting coins",
+                  "description": "2 ten-rupee + 3 ten-rupee coins = 5 ten-rupee = 5×10; like terms add.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "Collecting like terms is the workhorse of all later algebra — solving equations, simplifying polynomials, and combining algebraic fractions all start with it. The rule 'only combine like with like' echoes the 'add tenths to tenths' rule from decimals: you can only directly combine quantities of the same kind.",
+              "mnemonic": "Same letter → add the counts (2l + 3l = 5l). Different letters → leave them apart.",
+              "predictQuestion": "Why can l + b + l + b be rewritten as 2l + 2b, and how would you check the two are really equal?",
+              "whyChain": [
+                "Because the terms of a sum can be added in any order (commutativity), l + b + l + b can be regrouped as l + l + b + b. Now the repeated letters sit together, ready to be collected.",
+                "Adding a letter to itself is just multiplying: l + l is two of l, written 2l, and b + b = 2b. So the whole thing collapses to 2l + 2b. This is 'collecting like terms' — terms with the SAME letter merge by counting how many there are; terms with different letters (l and b) can't merge because they may stand for different numbers.",
+                "The long form and short form are equal in the strongest sense: they produce the same value for EVERY substitution. Check with l = 3, b = 4 — l+b+l+b = 14 and 2l+2b = 14; this holds for any values because we only used the same rules numbers obey. Simplification is rewriting an expression in its tidiest equivalent form, and it's the foundation of solving equations later."
+              ],
+              "relatedConceptIds": [
+                "ch04_t01_c02",
+                "ch04_t02_c01",
+                "ch02_t04_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch04_t03_q01",
+                "ch04_t03_q02"
+              ],
+              "pageRefs": [
+                87,
+                88
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch04_t03_q01",
+              "prompt": "Simplify l + b + l + b and check your answer with l = 3, b = 4.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "2l + 2b; check: both give 14.",
+              "solutionSteps": [
+                "Reorder: l + l + b + b.",
+                "l + l = 2l and b + b = 2b → 2l + 2b.",
+                "Check: l+b+l+b = 3+4+3+4 = 14; 2l+2b = 6+8 = 14. Equal. ✓"
+              ],
+              "commonMistakes": [
+                "Combining l and b together (they're unlike terms).",
+                "Writing 2lb instead of 2l + 2b."
+              ],
+              "variations": [
+                {
+                  "prompt": "Simplify 2l + 3l.",
+                  "answer": "5l",
+                  "solutionSteps": [
+                    "Same letter: 2+3 = 5 → 5l."
+                  ]
+                },
+                {
+                  "prompt": "Simplify 5c + 3c + 10c.",
+                  "answer": "18c",
+                  "solutionSteps": [
+                    "5+3+10 = 18 → 18c."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                87,
+                88
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q02",
+              "prompt": "A shop sells pencils (price c) and erasers (price d): Day1 5 pencils 4 erasers, Day2 3 pencils 6 erasers, Day3 10 pencils 1 eraser. Write the total earnings and simplify.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "18c + 11d",
+              "solutionSteps": [
+                "Pencil earnings: 5c + 3c + 10c = 18c.",
+                "Eraser earnings: 4d + 6d + 1d = 11d.",
+                "Total = 18c + 11d (unlike terms, cannot combine further)."
+              ],
+              "commonMistakes": [
+                "Combining the c-terms and d-terms into one (they're unlike).",
+                "Adding 18 + 11 = 29 of one thing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Simplify 4x + 7y + 2x.",
+                  "answer": "6x + 7y",
+                  "solutionSteps": [
+                    "x-terms: 4x+2x=6x; y-term stays 7y."
+                  ]
+                },
+                {
+                  "prompt": "If c = 5 and d = 3, value of 18c + 11d?",
+                  "answer": "123",
+                  "solutionSteps": [
+                    "18×5 + 11×3 = 90 + 33 = 123."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "glossary": [
+        {
+          "id": "ch04_gl01",
+          "term": "Letter-number (variable)",
+          "definition": "A letter used to represent a number that is unknown or can change.",
+          "example": "In a + 3, the letter a is a letter-number.",
+          "hindiTerm": "चर",
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl02",
+          "term": "Algebraic expression",
+          "definition": "An expression containing one or more letter-numbers.",
+          "example": "5m + 3 is an algebraic expression.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl03",
+          "term": "Formula",
+          "definition": "An algebraic expression or equation stating a general relationship.",
+          "example": "Perimeter of a square = 4q.",
+          "hindiTerm": "सूत्र",
+          "relatedConceptIds": [
+            "ch04_t01_c02"
+          ]
+        },
+        {
+          "id": "ch04_gl04",
+          "term": "Coefficient",
+          "definition": "The number multiplying a letter-number in a term.",
+          "example": "In 5m, the coefficient is 5.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl05",
+          "term": "Substitution",
+          "definition": "Replacing a letter-number with a specific value to evaluate an expression.",
+          "example": "5m + 3 with m = 2 gives 13.",
+          "hindiTerm": "प्रतिस्थापन",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl06",
+          "term": "Like terms",
+          "definition": "Terms with the same letter-number part, which can be combined by adding coefficients.",
+          "example": "2l and 3l are like terms; 2l + 3l = 5l.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl07",
+          "term": "Unlike terms",
+          "definition": "Terms with different letter parts, which cannot be combined.",
+          "example": "2l and 3b cannot be added into one term.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl08",
+          "term": "Simplify",
+          "definition": "To rewrite an expression in a shorter equivalent form by collecting like terms.",
+          "example": "l + b + l + b simplifies to 2l + 2b.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl09",
+          "term": "Equal expressions",
+          "definition": "Two expressions that give the same value for every substitution.",
+          "example": "l + b + l + b = 2l + 2b for all l, b.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_gl10",
+          "term": "nth term",
+          "definition": "An expression giving any term of a sequence from its position number n.",
+          "example": "For 4, 8, 12, …, the nth term is 4n.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch04_mn01",
+          "acronym": "Number then letter",
+          "unpacking": "Write 4 × n as 4n — coefficient first, letter after, no multiplication sign.",
+          "context": "Use when writing algebraic terms.",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_mn02",
+          "acronym": "Keep the sign",
+          "unpacking": "When substituting a negative value, keep its sign as one object: a = −4 → 10 − a = 10 − (−4) = 14.",
+          "context": "Use during substitution to avoid sign errors.",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_mn03",
+          "acronym": "Like with like",
+          "unpacking": "Only combine terms with the same letter: 2l + 3l = 5l, but 2l + 3b stays apart.",
+          "context": "Use when simplifying expressions.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch04_ms01",
+          "kidsThink": "4n means 4 + n.",
+          "actually": "4n means 4 × n (the multiplication sign is just omitted). So 4n with n = 5 is 20, not 9.",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms02",
+          "kidsThink": "When you substitute a negative value, you can ignore its sign.",
+          "actually": "Keep the sign: if a = −4, then 10 − a = 10 − (−4) = 14, not 6. The letter stands for the whole signed number.",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms03",
+          "kidsThink": "Any two terms can be added into one (2l + 3b = 5lb).",
+          "actually": "Only LIKE terms (same letter) combine: 2l + 3l = 5l. Unlike terms (2l + 3b) cannot be merged.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms04",
+          "kidsThink": "l + l = l² (or 2l means l × l).",
+          "actually": "l + l = 2l (two of them added). l × l would be l², a different thing entirely.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_ms05",
+          "kidsThink": "A simplified expression like 2l + 2b is a different value from l + b + l + b.",
+          "actually": "They are EQUAL — same value for every l and b. Simplification only changes the form, never the value.",
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch04_rw01",
+          "title": "One formula, every square",
+          "body": "A carpenter who knows 'perimeter = 4 × side' never has to re-derive how much edging a square table needs — whether the side is 60 cm or 1.2 m, it's just 4 times the side. That single formula, 4q, replaces measuring and adding four edges every single time. Formulas are labour-saving devices made of letters.",
+          "relatedConceptIds": [
+            "ch04_t01_c02"
+          ]
+        },
+        {
+          "id": "ch04_rw02",
+          "title": "Ketaki's laddu costs",
+          "body": "Ketaki sells coconut-jaggery laddus. With coconuts at ₹35 and jaggery at ₹60 per kg, her cost for c coconuts and j kg jaggery is always 35c + 60j. She plugs in today's quantities and gets the bill instantly — no fresh arithmetic logic needed, just substitution.",
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_rw03",
+          "title": "Patterns in matchsticks and tiles",
+          "body": "Builders and designers describe repeating patterns with letter-numbers: n repeats of an L-shape need 2n sticks; a border of n tiles needs a predictable count. Capturing the pattern as an expression lets them order exactly the right quantity for any size job.",
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch04_qa01",
+          "question": "Shabnam is 3 years older than Aftab. Write an expression for Shabnam's age in terms of Aftab's age a, and find it when a = 23.",
+          "modelAnswer": "Shabnam's age = a + 3. When a = 23, Shabnam's age = 23 + 3 = 26 years.",
+          "textbookPage": 81,
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa02",
+          "question": "Parthiv makes L-shapes using 2 matchsticks each. Write an expression for the matchsticks needed for n Ls.",
+          "modelAnswer": "Number of matchsticks = 2 × n = 2n. For example, 45 Ls need 2 × 45 = 90 matchsticks.",
+          "textbookPage": 82,
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa03",
+          "question": "Write formulas for the perimeter of (a) an equilateral triangle, (b) a regular pentagon, (c) a regular hexagon, with side q.",
+          "modelAnswer": "(a) 3q (three equal sides), (b) 5q (five equal sides), (c) 6q (six equal sides). Each is the number of sides times the side length q.",
+          "textbookPage": 83,
+          "relatedConceptIds": [
+            "ch04_t01_c02"
+          ]
+        },
+        {
+          "id": "ch04_qa04",
+          "question": "Find the value of 5m + 3 when m = 2.",
+          "modelAnswer": "5m means 5 × m. When m = 2: 5 × 2 + 3 = 10 + 3 = 13.",
+          "textbookPage": 86,
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa05",
+          "question": "Mind the mistake: someone wrote 'If a = −4, then 10 − a = 6.' Is it correct?",
+          "modelAnswer": "No. Substituting a = −4: 10 − a = 10 − (−4) = 10 + 4 = 14, not 6. The error is dropping the negative sign of a.",
+          "textbookPage": 86,
+          "relatedConceptIds": [
+            "ch04_t02_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa06",
+          "question": "Simplify the perimeter expression l + b + l + b for a rectangle.",
+          "modelAnswer": "Reorder to l + l + b + b, then collect like terms: l + l = 2l and b + b = 2b, giving 2l + 2b. This equals the original for all l, b.",
+          "textbookPage": 87,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa07",
+          "question": "A shop sells pencils at price c and erasers at price d. Over 3 days it sells 5+3+10 pencils and 4+6+1 erasers. Write the simplified total earnings.",
+          "modelAnswer": "Pencil earnings 5c + 3c + 10c = 18c; eraser earnings 4d + 6d + 1d = 11d. Total = 18c + 11d (unlike terms, left separate).",
+          "textbookPage": 87,
+          "relatedConceptIds": [
+            "ch04_t03_c01"
+          ]
+        },
+        {
+          "id": "ch04_qa08",
+          "question": "Krithika has 3 notes of ₹100, 5 of ₹20 and 6 of ₹5. Write an expression and find her total.",
+          "modelAnswer": "3 × 100 + 5 × 20 + 6 × 5 = 300 + 100 + 30 = ₹430.",
+          "textbookPage": 83,
+          "relatedConceptIds": [
+            "ch04_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch04_mp01",
+          "emoji": "🔤",
+          "title": "Letter-Number Detective",
+          "needs": [
+            "A notebook",
+            "A pen",
+            "Everyday situations from home"
+          ],
+          "steps": [
+            "Find three situations at home where one quantity always relates to another by a fixed rule (e.g. 'total legs = 4 × number of chairs', 'cost = 12 × number of eggs').",
+            "For each, choose a letter for the changing quantity and write the algebraic expression.",
+            "Make a small table: try three different values of the letter and compute the result each time.",
+            "Write the relationship as a 'formula' sentence too (e.g. 'total cost = 12 × number of eggs').",
+            "Challenge a family member: give them your formula and a value, and check they get the same answer you did."
+          ],
+          "expectedObservation": "You'll see that one expression with a letter captures a whole table of cases — change the letter's value and the result follows the same rule every time.",
+          "whyItWorks": "A letter-number stands for 'any value' of a changing quantity, so an expression built from it encodes the general relationship. Substituting different values just reads off different rows of the same underlying pattern — which is exactly what algebra is for.",
+          "estimatedMinutes": 35,
+          "relatedConceptIds": [
+            "ch04_t01_c01",
+            "ch04_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch04_t01_c01",
+            "label": "Letter-numbers",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.15
+          },
+          {
+            "id": "ch04_t01_c02",
+            "label": "Formulas",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.15
+          },
+          {
+            "id": "ch04_t02_c01",
+            "label": "Drop × / substitute",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.45
+          },
+          {
+            "id": "ch04_t03_c01",
+            "label": "Collect like terms",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.72
+          },
+          {
+            "id": "ch04_pivot_algebra",
+            "label": "Arithmetic → Algebra",
+            "kind": "pivot",
+            "x": 0.2,
+            "y": 0.45
+          },
+          {
+            "id": "ch02:ch02_t04_c02",
+            "label": "Ch.2 Distributive",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.72
+          },
+          {
+            "id": "ch01:ch01_t02_c01",
+            "label": "Ch.1 Decomposition",
+            "kind": "crossChapter",
+            "x": 0.05,
+            "y": 0.72
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch04_e01",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t01_c02",
+            "label": "build"
+          },
+          {
+            "id": "ch04_e02",
+            "from": "ch04_t01_c01",
+            "to": "ch04_pivot_algebra",
+            "label": "is the leap"
+          },
+          {
+            "id": "ch04_e03",
+            "from": "ch04_t01_c01",
+            "to": "ch04_t02_c01",
+            "label": "notation"
+          },
+          {
+            "id": "ch04_e04",
+            "from": "ch04_t02_c01",
+            "to": "ch04_t03_c01",
+            "label": "enables"
+          },
+          {
+            "id": "ch04_e05",
+            "from": "ch04_t01_c02",
+            "to": "ch04_t03_c01",
+            "label": "simplified by"
+          },
+          {
+            "id": "ch04_e06",
+            "from": "ch02:ch02_t04_c02",
+            "to": "ch04_t03_c01",
+            "label": "underlies"
+          },
+          {
+            "id": "ch04_e07",
+            "from": "ch01:ch01_t02_c01",
+            "to": "ch04_pivot_algebra",
+            "label": "generalises"
+          }
+        ]
+      }
     }
   ]
 }
