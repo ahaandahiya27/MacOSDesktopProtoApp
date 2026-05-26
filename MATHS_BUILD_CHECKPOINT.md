@@ -60,7 +60,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 
 | Ch# | Schema | Content | Articles | Discover | Notes |
 |-----|--------|---------|----------|----------|-------|
-| 1   | 🟡 stub | ⚪      | ⚪       | ⚪       | pilot — in progress |
+| 1   | ✅     | ✅ 6/6 topics | ⚪    | ⚪       | pilot complete — 17 concepts, 26 Q, full enrichment |
 | 2   | ⚪     | ⚪      | ⚪       | ⚪       |       |
 | 3   | ⚪     | ⚪      | ⚪       | ⚪       |       |
 | 4   | ⚪     | ⚪      | ⚪       | ⚪       |       |

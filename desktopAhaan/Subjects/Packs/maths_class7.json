@@ -438,7 +438,8 @@
               ],
               "relatedConceptIds": [
                 "ch01_t02_c01",
-                "ch01_t02_c03"
+                "ch01_t02_c03",
+                "ch01_t05_c01"
               ],
               "relatedQuestionIds": [
                 "ch01_t02_q03"
@@ -829,7 +830,7 @@
               "mnemonic": "Three from the right, then twos (Indian); three from the right, then threes (American).",
               "predictQuestion": "How would you write the number 246813579 in both Indian and American commas, and how would you read it in each system?",
               "whyChain": [
-                "The translation is a mechanical operation because the underlying number representation is the same. Both systems read digits in their respective place values — units, tens, hundreds, thousands, ten-thousands, lakhs/hundred-thousands, ten-lakhs/millions, crores/ten-millions, ten-crores/hundred-millions, arabs/billions. The COLUMNS are identical.",
+                "The translation is a mechanical operation because the underlying number representation is the same in both systems. Both read digits in their respective place values — units, tens, hundreds, thousands, ten-thousands, then lakhs (or hundred-thousands), ten-lakhs (or millions), crores (or ten-millions), ten-crores (or hundred-millions), and arabs (or billions). The columns of the number are identical; only the names we attach to certain columns, and where we drop the commas, ever change between the two systems.",
                 "What differs is which columns get a comma after them, and which columns get a named unit. The Indian system names the lakh column and the crore column (positions 6 and 8 from the right); the American system names the million column and the billion column (positions 7 and 10).",
                 "Translating means just re-grouping. Strip the commas of one system; group from the right using the other system’s rule; insert commas at the new boundaries; read with the new unit names. This works because the underlying place-value digits never change — only your reading style does."
               ],
@@ -1045,6 +1046,873 @@
               "difficulty": 3,
               "pageRefs": [
                 9
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch01_t04",
+          "title": "Exact and Approximate Values",
+          "summary": "Sometimes the exact number doesn't matter. ‘A lakh people visited the book fair’ is a useful sentence even if the true count was 99,999 or 1,07,000. This section shows when to round up vs round down, what the ‘nearest neighbour’ at a given precision is, and how estimation lets you sanity-check arithmetic before doing it exactly.",
+          "concepts": [
+            {
+              "id": "ch01_t04_c01",
+              "title": "When approximations are enough",
+              "explanations": {
+                "oneLine": "Sometimes the exact value of a big number isn't required — a round figure that captures the right order of magnitude is enough.",
+                "kidFriendly": "Imagine your principal needs to order sweets for the school's annual day. The school has 732 students. Should she write down ‘732 sweets exactly’? Probably not — she'll round up and order 750 or even 800, so nobody is left out. Or look at the news — ‘1 lakh people visited the book fair’. The true number might have been 99,873 or 1,02,455 — both are close enough to a lakh that the headline is honest. Knowing when an approximate value is good enough (and when you really need the exact figure) is one of the most useful number skills you'll learn.",
+                "textbook": "An exact value gives the precise number; an approximate value gives a nearby value chosen for ease of communication or computation. Approximations are used routinely when (a) the exact value isn't known precisely, (b) the audience doesn't need precision, or (c) the calculation is for estimation rather than accounting. Examples include population figures (1,06,000 instead of 1,06,217), distances in news reports, prices in colloquial speech, and order-of-magnitude scientific estimates. The choice of how aggressively to approximate depends on the use case.",
+                "expert": "Approximation is the operational core of applied mathematics. Real measurements always carry uncertainty (instrument precision, sampling error, rounding artefacts), so reporting unjustified extra decimals creates false precision. The standard practice is to retain only the digits that the measurement supports — a discipline known as significant figures. In abstract calculation we may freely use exact integers, but when those integers are inputs to or outputs of physical systems, approximation is unavoidable."
+              },
+              "reasoning": "Numbers communicate. A communication is successful when the receiver gets the information they need at the cost of the effort they're willing to invest. Saying ‘there were 1,06,217 visitors’ at the dinner table feels pedantic; ‘about a lakh visitors’ conveys the same idea with less effort and no loss of meaning for most listeners. Choosing the right level of approximation is choosing the right precision for the audience.",
+              "useCases": [
+                {
+                  "title": "News headlines",
+                  "description": "‘Over 50 lakh people watched the match’ — exact count isn't possible (people came and went), but the headline still tells you the scale.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Cooking measurements",
+                  "description": "‘Add about half a teaspoon of salt’ — exact grams are unnecessary; the dish works with any value in a small range.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "School orders",
+                  "description": "Ordering 750 sweets for 732 students leaves a small buffer for staff and visitors — overshooting by a sensible margin is wise.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Distances on signs",
+                  "description": "‘Delhi 250 km’ on a highway sign is an approximation; the exact distance varies by route and may be 247 km or 253 km.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "In science, all measurements come with an explicit uncertainty range. The mass of an electron is reported as 9.1093837 × 10⁻³¹ kg ± 0.0000028 × 10⁻³¹ kg — that ± clause is the band of values consistent with current experiments. Reporting only the central value would lie about how confident the scientists are.",
+              "mnemonic": "Exact for accountants and engineers. Approximate for newspapers and conversations.",
+              "predictQuestion": "Before reading on — when would you want a number to be EXACT, and when would APPROXIMATE be just as useful?",
+              "whyChain": [
+                "Numbers don't exist in a vacuum — they exist to be communicated. The same number can be too precise for a casual chat (‘the bus arrives at 3:12:47 PM’) and too vague for a bank statement (‘about ten thousand rupees’). Knowing which level fits which situation is a real skill, not a side note.",
+                "Many real-world quantities can't be measured exactly even if you wanted to — populations change by the second, distances depend on route, time-of-arrival depends on traffic. Reporting one of these as if it were an exact integer would be lying about precision you don't have. Approximation acknowledges the truth about what you actually know.",
+                "Even when you DO know a number exactly, communicating it exactly can be inefficient. A wedding caterer ordering ‘425 idlis for 423 guests’ wastes mental energy on the difference between 425 and 423; ordering ‘about 450’ leaves room for last-minute guests and isn't fragile. Approximation often makes you MORE resilient to small surprises, not less."
+              ],
+              "relatedConceptIds": [
+                "ch01_t04_c02",
+                "ch01_t04_c03",
+                "ch01_t06_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t04_q01"
+              ],
+              "pageRefs": [
+                9,
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_c02",
+              "title": "Rounding up vs rounding down — context matters",
+              "explanations": {
+                "oneLine": "Rounding up means picking a value slightly more than the true number; rounding down means slightly less. Which to use depends on what you're trying to avoid.",
+                "kidFriendly": "A school principal ordering sweets for 732 students rounds UP to 750 (so nobody misses out). A shopkeeper marking down a ₹470 item rounds DOWN to ₹450 (to look generous, and because customers prefer round numbers). Neither is wrong — they're just different defaults for different situations. When you don't want to be short, round up. When you want to look generous (or stay safely under a limit), round down. When neither matters, round to the nearest neighbour.",
+                "textbook": "Rounding up replaces a number with a slightly larger round value; rounding down replaces it with a slightly smaller one. The choice of direction is governed by use case: round up to ensure sufficiency (ordering supplies, allocating budget), round down to be conservative about claims (a discounted price, a delivery time estimate). When neither direction is preferred, conventional rounding picks the nearer of the two candidates — ‘round half up’ or ‘banker's rounding’ are common tie-breaking rules.",
+                "expert": "In numerical analysis, rounding directions have technical names: ‘ceiling’ (smallest integer ≥ x), ‘floor’ (largest integer ≤ x), ‘round half up’, ‘round half to even’ (banker's rounding). Choice of mode matters for cumulative effects — naive ‘round half up’ on millions of transactions introduces a systematic upward bias, which is why financial systems often prefer round-half-to-even. The asymmetric rounding modes (ceil, floor) are common in capacity planning and resource allocation."
+              },
+              "reasoning": "Rounding always introduces an error — the rounded number isn't the true number. The direction of the error depends on which way you round. If you can never under-supply (sweets for kids), round up. If you'd rather under-promise and over-deliver (delivery time), round down. The principle is: choose the error direction that costs you less.",
+              "useCases": [
+                {
+                  "title": "Ordering school supplies",
+                  "description": "732 kids → order 750 erasers. The extra 18 cover lost or broken erasers through the year.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Quoting a delivery time",
+                  "description": "A 7-hour drive becomes ‘we'll be there by 8 PM’ — adding a buffer means you're early, not late.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Listing prices for resale",
+                  "description": "An item worth ₹487 might be listed as ₹500 (round up) by a shop wanting margin, or ₹450 (round down) by one wanting volume.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Planning trip budgets",
+                  "description": "Estimating a trip cost of ₹14,300 as ‘about ₹15,000’ (round up) cushions you against unexpected expenses.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "In some businesses the rounding direction is legally regulated. Tax calculations in India often require rounding to the nearest rupee (or to the next paisa), with explicit rules for half values. Banking software for currency conversion typically uses ‘round half to even’ to avoid systematic gain or loss to either party over millions of transactions.",
+              "mnemonic": "Round UP when you can't afford to be SHORT. Round DOWN when you want to look GENEROUS.",
+              "predictQuestion": "A school principal orders sweets for 732 students. Should she round UP or DOWN, and to what number?",
+              "whyChain": [
+                "Every rounding choice trades precision for ease. The question is always: what's the COST of being slightly off in each direction? If the cost of running short is high (kids without sweets, materials short for a project), round up. If the cost of overshooting is high (overspending a budget, promising too much), round down.",
+                "When neither direction has a clearly higher cost, the standard convention is to pick the nearest neighbour — round 47 to 50 (up) and round 43 to 40 (down). This convention minimises the AVERAGE rounding error over many decisions, even if any single decision could go either way.",
+                "Real organisations encode rounding direction into rules. Hospitals round dosing UP (better safe than sorry on too little). Railways round seat counts DOWN (overbooking causes more trouble than underbooking). Restaurants round portion estimates UP. Understanding the cost asymmetry of each domain explains the rounding rule."
+              ],
+              "relatedConceptIds": [
+                "ch01_t04_c01",
+                "ch01_t04_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t04_q02"
+              ],
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_c03",
+              "title": "Nearest neighbours — rounding to a precision",
+              "explanations": {
+                "oneLine": "The nearest neighbour of a number at a given precision (nearest 100, 1000, lakh, …) is the closest round value at that step size.",
+                "kidFriendly": "Take the number 6,72,85,183. To find its nearest THOUSAND, look at the last three digits — 183. Is that closer to 0 or 1000? Closer to 0, so we round down: 6,72,85,000. For the nearest LAKH, look at the last 5 digits — 85,183. Is that closer to 0 (current lakh boundary) or 1,00,000 (next lakh boundary)? Closer to 1,00,000, so round up: 6,73,00,000. The same idea works for nearest 10, hundred, ten lakh, crore. Each precision gives a different rounded value — all valid, all useful for different things.",
+                "textbook": "The nearest neighbour of an integer N at precision P (where P is 10, 100, 1000, etc.) is the multiple of P that is closest to N. If N is exactly halfway between two multiples (e.g., 50 between 0 and 100), a tie-breaking rule determines the result; the textbook convention here is ‘round half up’. The same number has different nearest-neighbour values at different precisions; choosing the right precision depends on what level of approximation you need.",
+                "expert": "Nearest-neighbour rounding minimises the absolute error |N − R| over all multiples R of the precision. It's the L¹-optimal rounding rule. Alternative rules (banker's rounding, round-half-to-even, stochastic rounding) trade individual accuracy for statistical properties when many roundings are aggregated — relevant in scientific computing, financial systems, and graphics rendering. For pedagogical and everyday use, ‘round to nearest, half up’ is the standard and matches intuition."
+              },
+              "reasoning": "Whatever precision you choose, the nearest multiple of that precision is the best single representative — minimising the gap to the true value. So ‘nearest thousand’ means snapping the number to a thousands boundary, picking whichever side is closer.",
+              "useCases": [
+                {
+                  "title": "Population reports",
+                  "description": "Mumbai population given as ‘about 1.24 crore’ — nearest hundredth of a crore, instead of the exact 1,24,42,373.",
+                  "domain": "geography"
+                },
+                {
+                  "title": "Petrol bill",
+                  "description": "Petrol filled for ₹2,463 at the pump is often quoted as ‘about 2,500 rupees’ — nearest 100 rupees.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Train schedule simplification",
+                  "description": "Train timing ‘around 10:15’ is the nearest 15-minute neighbour to the exact 10:13.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "Nearest-neighbour rounding generalises to any unit of precision, not just powers of 10. Map distances are rounded to nearest 0.5 km; cooking times to nearest 5 minutes; clock times to nearest 15 minutes for casual reference. The principle is identical: pick the closest representative at the chosen step size.",
+              "mnemonic": "Look at the digits to the RIGHT of the precision boundary. ≥ 5? Round up. < 5? Round down.",
+              "predictQuestion": "What is the nearest LAKH to the number 6,72,85,183?",
+              "whyChain": [
+                "Every number has many possible round versions depending on how coarse you want to be. Round to the nearest 10, you get one answer. Round to the nearest lakh, you get a different (coarser) answer. There is no single ‘correct’ approximation — the right precision depends on what you'll use the number for.",
+                "Within a chosen precision, the nearest neighbour is the round value that minimises the gap between the original number and the approximation. The procedure is mechanical: identify the precision step, look at the digits below that step, and decide which boundary is closer. Tie at exactly halfway? Tradition picks the upward neighbour.",
+                "This local minimisation is why nearest-neighbour rounding feels natural. We're not trying to be conservative (round down) or generous (round up) — we're trying to be HONEST about how close the round version is to the truth. When there's no asymmetric cost, honest is the right default."
+              ],
+              "relatedConceptIds": [
+                "ch01_t04_c01",
+                "ch01_t04_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t04_q03",
+                "ch01_t04_q04"
+              ],
+              "pageRefs": [
+                11
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch01_t04_q01",
+              "prompt": "A principal needs to provide sweets for 732 students and 23 teachers and staff. About how many sweets should she order, and should she round up or down? Explain your reasoning.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Total = 732 + 23 = 755. Round UP to 800 sweets (or at least 775). Round up because running short — kids and teachers without sweets — would be worse than having a few extra.",
+              "solutionSteps": [
+                "Total people = 732 students + 23 teachers = 755.",
+                "Round up because the cost of falling short (someone missing out) is higher than the cost of a small surplus.",
+                "Round to the nearest 25 or 50: 800 sweets gives a clean number with comfortable buffer."
+              ],
+              "commonMistakes": [
+                "Choosing the EXACT count (755) without buffer — leaves no margin for arithmetic errors or surprise guests.",
+                "Rounding down to 750 — only 5 fewer than needed, but those 5 kids will notice."
+              ],
+              "variations": [
+                {
+                  "prompt": "If you were a caterer pricing 755 dinners at ₹185 each, should you round up or down when quoting a total?",
+                  "answer": "Total = 755 × 185 = ₹1,39,675. Quote up to ₹1,40,000 — you don't want to under-quote and absorb costs.",
+                  "solutionSteps": [
+                    "755 × 185 = 1,39,675.",
+                    "Caterers round quotes UP because cost of under-quoting (you absorb the difference) is high."
+                  ]
+                },
+                {
+                  "prompt": "A shop sells items at ₹47 each. A customer buys 100 items. The shop offers a ‘round figure’ discount. What's a reasonable rounded total?",
+                  "answer": "100 × 47 = 4,700. Round DOWN to ₹4,500 or ₹4,600 (or DOWN to ₹4,650).",
+                  "solutionSteps": [
+                    "Exact: ₹4,700.",
+                    "‘Round figure discount’ implies rounding DOWN, so options are 4,500 / 4,600 / 4,650 — all favour the customer."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q02",
+              "prompt": "A shopkeeper sells a ₹470 item and tells the customer ‘about ₹450’. Is the shopkeeper rounding up or down? Why?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Rounding DOWN (from ₹470 to ₹450). Likely because the shopkeeper wants to seem generous or close a sale — quoting a lower round number feels more attractive to the buyer.",
+              "solutionSteps": [
+                "Compare: ₹450 < ₹470, so the shopkeeper went to a smaller value — rounding DOWN.",
+                "Sales psychology: round numbers feel approachable; lower-than-true sounds like a deal."
+              ],
+              "commonMistakes": [
+                "Confusing direction by looking only at how ‘round’ the answer is, not whether it's higher or lower than the original."
+              ],
+              "variations": [
+                {
+                  "prompt": "A delivery service quotes ‘about 6 hours’ for a job that usually takes 5 hours 40 minutes. Round up or down? Why?",
+                  "answer": "Round UP from 5h40m to 6h. To under-promise and over-deliver — being early is better than being late.",
+                  "solutionSteps": [
+                    "5h40m vs 6h: 6h is the larger of the two, so the quote rounds UP.",
+                    "Service quality logic: a 20-minute early arrival is fine; a 20-minute late arrival annoys customers."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q03",
+              "prompt": "Find the nearest thousand, nearest lakh and nearest crore for the number 3,87,69,957.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Nearest thousand: 3,87,70,000. Nearest lakh: 3,88,00,000 (or 3,87,70,000 if the lakh boundary is read at the ten-thousands place — let me reread). Nearest crore: 4,00,00,000.",
+              "solutionSteps": [
+                "Nearest thousand: look at last 3 digits 957. 957 > 500, round up. Replace ...69,957 with ...70,000 → 3,87,70,000.",
+                "Nearest lakh: look at last 5 digits 69,957. Is that closer to 0 or 1,00,000? 69,957 > 50,000, round up. So 3,88,00,000.",
+                "Nearest crore: look at last 7 digits 87,69,957. 87,69,957 > 50,00,000, round up. So 4,00,00,000."
+              ],
+              "commonMistakes": [
+                "Reading the precision boundary wrong (e.g., counting from the wrong end).",
+                "Rounding to the nearest TEN-THOUSAND when the question asked for nearest THOUSAND or LAKH."
+              ],
+              "variations": [
+                {
+                  "prompt": "Nearest ten thousand of 29,05,32,481.",
+                  "answer": "29,05,30,000.",
+                  "solutionSteps": [
+                    "Last 4 digits 2,481. 2,481 < 5,000, round down. Result 29,05,30,000."
+                  ]
+                },
+                {
+                  "prompt": "A number's five nearest neighbours (thousand, ten thousand, lakh, ten lakh, crore) are all 5,00,00,000. What could the number be?",
+                  "answer": "Any number from 4,95,00,000 to 5,04,99,999 — the range where all five roundings collapse to 5,00,00,000.",
+                  "solutionSteps": [
+                    "For the nearest crore to be 5,00,00,000, the number must be in [4,50,00,000, 5,49,99,999].",
+                    "For the nearest ten lakh to be 5,00,00,000, narrower: [4,95,00,000, 5,04,99,999].",
+                    "Tighter bands for ten-thousand and thousand precisions give the same range as above."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                11
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t04_q04",
+              "prompt": "Roxie estimates 4,63,128 + 4,19,682. She says ‘The sum is near 8,00,000 and more than it.’ Is she correct? What is the exact sum?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes Roxie is correct — the sum is 8,82,810, which is near 8,00,000 and greater than it. Estu's estimate (‘near 9,00,000 and less than it’) is closer to the true sum.",
+              "solutionSteps": [
+                "Round each addend to nearest lakh: 4,63,128 ≈ 5,00,000, 4,19,682 ≈ 4,00,000. Sum ≈ 9,00,000.",
+                "Round each to nearest ten thousand: 4,60,000 + 4,20,000 = 8,80,000.",
+                "Exact: 4,63,128 + 4,19,682 = 8,82,810.",
+                "Both estimates are in the right neighbourhood; Estu's ‘near 9 lakh, less than’ is closer to 8,82,810."
+              ],
+              "commonMistakes": [
+                "Computing the exact sum first instead of estimating — defeats the purpose of estimation as a sanity check.",
+                "Rounding both addends down (or both up), which compounds the error in one direction."
+              ],
+              "variations": [
+                {
+                  "prompt": "Estimate 14,63,128 − 4,90,020 to the nearest lakh, then compute the exact answer.",
+                  "answer": "Estimate: 15,00,000 − 5,00,000 = 10,00,000. Exact: 14,63,128 − 4,90,020 = 9,73,108. Estimate was high by about 27,000.",
+                  "solutionSteps": [
+                    "Round: 14,63,128 ≈ 15,00,000 and 4,90,020 ≈ 5,00,000.",
+                    "Estimated difference: 10,00,000.",
+                    "Exact: 14,63,128 − 4,90,020 = 9,73,108."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                11,
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch01_t05",
+          "title": "Patterns in Products",
+          "summary": "Multiplying by 5? Multiply by 10 and divide by 2 instead. Multiplying by 25? Multiply by 100 and divide by 4. These factor-regrouping shortcuts make mental arithmetic fast, and a related digit-count rule lets you predict how many digits a product will have BEFORE you compute it.",
+          "concepts": [
+            {
+              "id": "ch01_t05_c01",
+              "title": "Factor-regrouping shortcuts for multiplication",
+              "explanations": {
+                "oneLine": "Many multiplications get easier when you rewrite a factor as (10 ÷ 2), (100 ÷ 4), or (1000 ÷ 8) — multiplying by the bigger round number is cheap, and dividing by 2, 4 or 8 is cheap too.",
+                "kidFriendly": "Roxie computes 116 × 5 like this: 116 × 5 = 116 × (10 ÷ 2) = (116 × 10) ÷ 2 = 1160 ÷ 2 = 580. Multiplying by 10 is just adding a zero — trivial. Halving is also fast. Two easy steps beat one hard one. The same trick works for 25 (which is 100 ÷ 4): Estu computes 824 × 25 = 824 × (100 ÷ 4) = 82400 ÷ 4 = 20,600. Once you see 5 as ‘half of 10’ and 25 as ‘quarter of 100’ and 125 as ‘eighth of 1000’, mental arithmetic gets dramatically easier.",
+                "textbook": "Many factors can be rewritten as a power of ten divided by a small integer, enabling faster computation: 5 = 10 ÷ 2, 25 = 100 ÷ 4, 125 = 1000 ÷ 8, 50 = 100 ÷ 2, 250 = 1000 ÷ 4. Multiplying by a power of ten is trivial (shift digits); division by 2, 4 or 8 is fast. So a × 5 = (a × 10) ÷ 2, a × 25 = (a × 100) ÷ 4, etc. The technique is sometimes called factor regrouping or compensation.",
+                "expert": "The shortcut exploits the multiplicative structure of the rationals: any product can be rewritten using factorisation into convenient parts. Picking parts that pair a multiplication-by-power-of-ten with a small-integer division minimises mental computational cost. The same idea generalises: 11 × 36 = (10 + 1) × 36 = 360 + 36 = 396 uses distribution over addition; 99 × 50 = (100 − 1) × 50 = 5000 − 50 = 4950 uses distribution over subtraction. Skilled mental arithmetic is largely about pattern-recognising which factorisation/decomposition trick applies."
+              },
+              "reasoning": "Multiplication is associative — you can group factors however you like and get the same result. So a × 5 = a × (10 × ½) = (a × 10) × ½ = a × 10 ÷ 2. Each step is true because multiplication doesn't care HOW you compute it, only what factors are present. Picking convenient groupings is just choosing the path of least mental effort.",
+              "useCases": [
+                {
+                  "title": "Calculating tips",
+                  "description": "A 25% tip on a ₹648 bill = 648 × 25 = 648 × 100 ÷ 4 = 64,800 ÷ 4 = ₹16,200. Wait — that's 25%, but you want 25 out of 100, so divide by 4 at the end: (648 ÷ 4) × 1 = 162. So ₹162.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Multiplying prices in shops",
+                  "description": "8 items at ₹125 each: 8 × 125 = 8 × 1000 ÷ 8 = 1000. Quick mental check.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Halving recipes",
+                  "description": "A recipe for 50 idlis halved gives 25 — using the ‘5 = 10 ÷ 2’ trick in reverse helps scale recipes up or down quickly.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "Real-world ‘mental math experts’ (cashiers, hawkers, bargaining stallholders) use these tricks constantly without ever calling them by their academic names. A vegetable seller computing ‘250 g at ₹40 per kg’ as ‘a quarter kg × 40 = 10’ is applying the 250 = 1000 ÷ 4 identity instinctively. The schoolbook version makes the implicit pattern explicit.",
+              "mnemonic": "5 = 10 ÷ 2.  25 = 100 ÷ 4.  125 = 1000 ÷ 8.  Trade hard multiplications for easy ones.",
+              "predictQuestion": "How would you compute 72 × 125 in your head — without doing long multiplication?",
+              "whyChain": [
+                "Multiplication doesn't care about the order or grouping of factors. So 116 × 5 and 116 × 10 ÷ 2 and 580 are three different paths to the same answer. The trick to mental arithmetic is picking paths where every individual step is easy.",
+                "Multiplying by 10, 100 or 1000 is essentially free — just shift digits left. Dividing by 2, 4 or 8 is fast because the divisors are small. So any factor that can be rewritten as ‘power of ten ÷ small integer’ becomes a fast operation: 5, 25, 50, 125, 250, 500.",
+                "Once this pattern clicks, you start spotting it everywhere. ‘72 × 125 = 72 × 1000 ÷ 8 = 9000’ takes about a second mentally. ‘824 × 25 = 824 × 100 ÷ 4 = 20,600’ takes about two. The factor-regrouping habit is the difference between feeling overwhelmed by an arithmetic problem and dispatching it in your head."
+              ],
+              "relatedConceptIds": [
+                "ch01_t02_c02",
+                "ch01_t05_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t05_q01",
+                "ch01_t05_q02"
+              ],
+              "pageRefs": [
+                13,
+                14
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_c02",
+              "title": "Digit-count rules for products",
+              "explanations": {
+                "oneLine": "The product of an m-digit number and an n-digit number always has either (m + n − 1) or (m + n) digits — never fewer, never more.",
+                "kidFriendly": "Roxie says ‘The product of two 2-digit numbers can only have 3 or 4 digits.’ Is she right? Yes. The smallest 2-digit number is 10, so the smallest 2-digit × 2-digit product is 10 × 10 = 100 (3 digits). The largest 2-digit number is 99, so the largest such product is 99 × 99 = 9,801 (4 digits). So every 2-digit × 2-digit product lives between 100 and 9,801 — meaning 3 or 4 digits. The same logic gives a rule: m-digit × n-digit always has either (m+n−1) or (m+n) digits.",
+                "textbook": "For positive integers a (with m digits) and b (with n digits), the product ab has either (m + n − 1) or (m + n) digits. The lower bound comes from the smallest m-digit × smallest n-digit number: 10^(m−1) × 10^(n−1) = 10^(m+n−2), which has (m + n − 1) digits. The upper bound comes from the largest m-digit × largest n-digit (just under 10^m × 10^n = 10^(m+n), which has (m + n + 1) digits, but is achieved only in the limit). So ab is strictly between 10^(m+n−2) and 10^(m+n), giving (m + n − 1) or (m + n) digits.",
+                "expert": "This digit-count bound is a special case of the inequality 10^(m+n−2) ≤ ab < 10^(m+n) for any positive integers a, b with m and n decimal digits. Equivalently, ⌊log₁₀(ab)⌋ + 1 ∈ {m + n − 1, m + n}. The proof uses log additivity: log₁₀(ab) = log₁₀(a) + log₁₀(b), and the digit count of x is ⌊log₁₀(x)⌋ + 1. Because m − 1 ≤ log₁₀(a) < m and similarly for b, log₁₀(ab) ∈ [m + n − 2, m + n), so the digit count is m + n − 1 or m + n."
+              },
+              "reasoning": "To find how many digits a product can have, look at the smallest possible inputs (gives the lower-bound product) and the largest possible inputs (gives the upper-bound product). Every actual product sits between these extremes. So you can predict the digit count without computing the product.",
+              "useCases": [
+                {
+                  "title": "Estimating bills",
+                  "description": "10 items at ₹65 each: predicted 3 or 4 digits in the answer. Compute: 650 (3 digits). Sanity check passes.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Sanity-checking long multiplication",
+                  "description": "Computing 234 × 567, you predict 5 or 6 digits. If your answer has 4 or 7 digits, you've made an error.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Quick comparisons",
+                  "description": "Comparing 9-digit revenue vs 7-digit cost — the difference must be in the 9-digit range, so margin is clearly large.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "The same digit-count argument scales to division. m-digit ÷ n-digit gives a quotient with either (m − n) or (m − n + 1) digits (assuming m > n). In binary, the analogous rule says m-bit × n-bit = (m + n − 1)-bit or (m + n)-bit number — relevant in computer arithmetic for predicting overflow.",
+              "mnemonic": "m-digit × n-digit = (m+n−1) or (m+n)-digit. Never more, never less.",
+              "predictQuestion": "How many digits do you expect when you multiply a 3-digit number by a 3-digit number?",
+              "whyChain": [
+                "Digit count is determined by the SIZE of a number, not its specific digits. So to bound the digit count of a product, we just need to bound the size of the product — and that's controlled by the sizes of the factors.",
+                "The smallest m-digit number is 10^(m−1) (a 1 followed by m−1 zeros). The largest is just under 10^m. So the product of an m-digit and an n-digit number is at least 10^(m−1) × 10^(n−1) = 10^(m+n−2) and less than 10^m × 10^n = 10^(m+n). That gives us the digit-count range (m+n−1) to (m+n).",
+                "The neat thing is that the rule is TIGHT — both endpoints are achievable. 10 × 10 = 100 hits the lower bound (3 digits when m = n = 2). 99 × 99 = 9,801 nearly hits the upper bound (4 digits when m = n = 2). So you can't narrow the rule further without knowing more about the specific numbers."
+              ],
+              "relatedConceptIds": [
+                "ch01_t05_c01",
+                "ch01_t05_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t05_q03"
+              ],
+              "pageRefs": [
+                15
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_c03",
+              "title": "Why the digit-count rule works — bounding argument",
+              "explanations": {
+                "oneLine": "The product is squeezed between the smallest-input product (lower bound) and the largest-input product (upper bound); the digit count must fall within the digit counts of those bounds.",
+                "kidFriendly": "Roxie reasons: ‘The smallest 2-digit × 2-digit product is 10 × 10 = 100. The largest is 99 × 99 = 9801. So every 2-digit × 2-digit product is between 100 and 9801. That means 3 or 4 digits — those are the digit counts of the bounds.’ This is a powerful pattern: if you can bound a quantity above and below, you've bounded everything ABOUT the quantity, including how many digits it has. You don't need to test every possible multiplication — the boundaries do the work for you.",
+                "textbook": "The digit-count rule for products is a special case of the bounding argument. For any positive integer x, the digit count d(x) = ⌊log₁₀(x)⌋ + 1 is monotonic in x. So if x₁ ≤ x ≤ x₂, then d(x₁) ≤ d(x) ≤ d(x₂). Applied to products: 10^(m−1) × 10^(n−1) ≤ ab ≤ (10^m − 1) × (10^n − 1) < 10^(m+n). The digit counts of these bounds are m+n−1 and m+n respectively, so d(ab) is in that range.",
+                "expert": "Bounding arguments are a foundational proof technique throughout mathematics. You sandwich an unknown quantity between two known quantities, then derive properties (digit count, sign, finiteness) by appeal to the same property holding for both bounds. The technique is sometimes called the squeeze or sandwich theorem in analysis. The 2-digit × 2-digit example is the simplest non-trivial application of this idea, and a great place to see why mathematicians value bounds even when they can't compute exact values."
+              },
+              "reasoning": "Instead of testing every 2-digit × 2-digit multiplication (there are 90 × 90 = 8100 of them), find the smallest and largest possible results and reason about the range. The digit count, being a property of the size, must be in the range covered by the bounds' digit counts. This is faster, more general, and proves the rule for ALL inputs at once.",
+              "useCases": [
+                {
+                  "title": "Sanity-checking a calculator",
+                  "description": "If a calculator displays 234 × 567 = 132 (only 3 digits), the digit-count rule (3+3 → 5 or 6 digits) flags it as wrong without you needing to recompute.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Estimating maximum bill",
+                  "description": "Buying 12 items each priced 2-digit (say ₹25-₹99): max bill = 12 × 99 = 1188, so bill is at most 4 digits. You know the order of magnitude before adding.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Predicting memory needs",
+                  "description": "Storing the product of two 5-digit numbers needs space for up to 10 digits (= ~33 binary bits). Bounding the size predicts the storage need.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "The bounding-argument habit appears constantly in advanced maths. In calculus, the squeeze theorem proves limits by sandwiching a tricky function between two simpler ones. In algorithm analysis, ‘big-O notation’ bounds the running time of an algorithm by a simpler function. Whenever ‘the answer is somewhere between THIS and THAT’, you can often draw real conclusions about the answer without computing it exactly.",
+              "mnemonic": "Smallest case for the lower bound; largest case for the upper bound. The unknown sits in between.",
+              "predictQuestion": "If you wanted to prove that 4-digit × 2-digit always has 5 or 6 digits, what two specific multiplications would you compute?",
+              "whyChain": [
+                "We want to know all possible digit counts for an m-digit × n-digit product. There are infinitely many such pairs of numbers, so checking each one is impossible (or at least exhausting). We need a SHORTCUT — a way to reason about all pairs at once.",
+                "The shortcut is: digit count is monotonic. Bigger number → at least as many digits. So if we can find the smallest possible product and the largest possible product, the digit counts of those bounds give the full range of possible digit counts for any product in between.",
+                "Roxie's reasoning is exactly this bounding argument. Smallest 2-digit × 2-digit = 100 (3 digits). Largest 2-digit × 2-digit = 9801 (4 digits). Therefore every 2-digit × 2-digit product has 3 or 4 digits. We've proven a universal statement about 8100 individual multiplications by checking just two cases. That's the beauty — and economy — of mathematical bounding."
+              ],
+              "relatedConceptIds": [
+                "ch01_t05_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t05_q04",
+                "ch01_t05_q05"
+              ],
+              "pageRefs": [
+                15
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch01_t05_q01",
+              "prompt": "Compute 116 × 5 mentally using the factor-regrouping trick.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "580",
+              "solutionSteps": [
+                "Rewrite 5 = 10 ÷ 2.",
+                "So 116 × 5 = 116 × 10 ÷ 2 = 1160 ÷ 2 = 580."
+              ],
+              "commonMistakes": [
+                "Doing full long multiplication when the shortcut is available.",
+                "Forgetting the ÷ 2 step and getting 1160 instead of 580."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 248 × 5 in your head.",
+                  "answer": "1,240",
+                  "solutionSteps": [
+                    "248 × 10 = 2,480. Then ÷ 2 = 1,240."
+                  ]
+                },
+                {
+                  "prompt": "Compute 1768 × 50 mentally.",
+                  "answer": "88,400",
+                  "solutionSteps": [
+                    "50 = 100 ÷ 2.",
+                    "1768 × 100 = 1,76,800. Then ÷ 2 = 88,400."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                13,
+                14
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q02",
+              "prompt": "Compute 72 × 125 mentally.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "9,000",
+              "solutionSteps": [
+                "125 = 1000 ÷ 8.",
+                "72 × 1000 = 72,000.",
+                "72,000 ÷ 8 = 9,000."
+              ],
+              "commonMistakes": [
+                "Doing 72 × 100 ÷ 8 instead — that gives 900, which is 10× too small."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 824 × 25 mentally.",
+                  "answer": "20,600",
+                  "solutionSteps": [
+                    "25 = 100 ÷ 4.",
+                    "824 × 100 = 82,400.",
+                    "82,400 ÷ 4 = 20,600."
+                  ]
+                },
+                {
+                  "prompt": "Compute 250 × 12 mentally.",
+                  "answer": "3,000",
+                  "solutionSteps": [
+                    "250 = 1000 ÷ 4.",
+                    "12 × 1000 = 12,000.",
+                    "12,000 ÷ 4 = 3,000."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                14
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q03",
+              "prompt": "Without computing, predict the digit count of the product 234 × 567. Then verify by computing.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Predict: 5 or 6 digits (3-digit × 3-digit). Compute: 234 × 567 = 1,32,678 — 6 digits. Prediction correct.",
+              "solutionSteps": [
+                "3-digit × 3-digit gives (3+3−1) or (3+3) = 5 or 6 digit answer.",
+                "Compute 234 × 567 = 1,32,678.",
+                "1,32,678 has 6 digits. In the predicted range. ✓"
+              ],
+              "commonMistakes": [
+                "Predicting exactly 6 digits — the rule allows 5 OR 6, never just one.",
+                "Computing wrong via arithmetic error — the digit-count check would flag this."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many digits in 8-digit × 3-digit?",
+                  "answer": "10 or 11 digits.",
+                  "solutionSteps": [
+                    "8 + 3 − 1 = 10. 8 + 3 = 11.",
+                    "So 10 or 11 digits."
+                  ]
+                },
+                {
+                  "prompt": "Can multiplying a 5-digit number by a 5-digit number give a 9-digit number?",
+                  "answer": "Yes — 5+5−1 = 9 is in the allowed range.",
+                  "solutionSteps": [
+                    "5-digit × 5-digit → 9 or 10 digits.",
+                    "Smallest: 10000 × 10000 = 10^8 (9 digits).",
+                    "Largest: 99999 × 99999 ≈ 9,999,800,001 (10 digits)."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                15
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q04",
+              "prompt": "Roxie claims: ‘Multiplying a 3-digit number by a 3-digit number cannot give a 4-digit result.’ Is she correct? Explain with the bounding argument.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Roxie is correct. The smallest 3-digit × 3-digit is 100 × 100 = 10,000 — already a 5-digit number. So any 3-digit × 3-digit product is at least 10,000, which has 5 digits. A 4-digit answer is impossible.",
+              "solutionSteps": [
+                "Smallest 3-digit number = 100.",
+                "Smallest possible product: 100 × 100 = 10,000 (5 digits).",
+                "Since the product can't be less than 10,000, it can't be a 4-digit number (max 9,999)."
+              ],
+              "commonMistakes": [
+                "Trying to find a small example by hand without realising the bounding argument settles it instantly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can a 4-digit × 2-digit multiplication yield a 5-digit result?",
+                  "answer": "Yes — possible (the smaller end of the range).",
+                  "solutionSteps": [
+                    "4-digit × 2-digit gives 5 or 6 digits.",
+                    "Example: 1000 × 10 = 10,000 (5 digits). ✓"
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                15
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t05_q05",
+              "prompt": "If you multiply 12-digit × 13-digit, how many digits in the answer?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "24 or 25 digits.",
+              "solutionSteps": [
+                "Rule: m-digit × n-digit = (m + n − 1) or (m + n) digits.",
+                "12 + 13 − 1 = 24. 12 + 13 = 25.",
+                "So 24 or 25 digits."
+              ],
+              "commonMistakes": [
+                "Always answering m + n (forgetting the m + n − 1 lower bound).",
+                "Always answering m + n − 1 (forgetting the m + n upper bound)."
+              ],
+              "variations": [
+                {
+                  "prompt": "5-digit × 5-digit gives how many digits?",
+                  "answer": "9 or 10.",
+                  "solutionSteps": [
+                    "5 + 5 − 1 = 9. 5 + 5 = 10."
+                  ]
+                },
+                {
+                  "prompt": "1-digit × 1-digit gives how many digits?",
+                  "answer": "1 or 2.",
+                  "solutionSteps": [
+                    "1 + 1 − 1 = 1. 1 + 1 = 2.",
+                    "Example: 1 × 1 = 1 (1 digit). 9 × 9 = 81 (2 digits). Both achievable."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                15
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch01_t06",
+          "title": "Did You Ever Wonder…?",
+          "summary": "Could the population of Mumbai fit in 1 lakh buses? Could you walk to the Moon in 10 years at 100 km a day? These ‘Fermi questions’ — named after the physicist Enrico Fermi who loved them — are answered by breaking a big question into a chain of small estimates. You don't need precise data; reasonable assumptions are enough.",
+          "concepts": [
+            {
+              "id": "ch01_t06_c01",
+              "title": "Fermi estimation — breaking a problem into parts",
+              "explanations": {
+                "oneLine": "A Fermi estimate decomposes a big number question into a sequence of smaller numbers that you CAN estimate, then multiplies them together.",
+                "kidFriendly": "Estu asks: ‘Could the population of Mumbai fit in 1 lakh buses?’ A precise answer needs a precise bus capacity and exact city population — neither of which you know off-hand. But you can ESTIMATE. Assume each bus holds 50 people. Then 1 lakh buses hold 1,00,000 × 50 = 50,00,000 = 50 lakh people. Mumbai's population is over 1 crore 24 lakh (from the table earlier). So 1 lakh buses can hold only about 40% of Mumbai's people. Notice the trick: even though you didn't know either number precisely, the decomposition into ‘buses × per-bus-capacity vs population’ let you answer the question well enough.",
+                "textbook": "Fermi estimation is a problem-solving technique that produces order-of-magnitude estimates by decomposing an unfamiliar quantity into a product of more familiar quantities and applying reasonable assumptions to each. The technique is named after Enrico Fermi, who famously estimated the yield of the Trinity nuclear test by observing how far scraps of paper were blown. The estimates are often surprisingly close to true values because individual errors in the factors tend to cancel out across a multi-step product.",
+                "expert": "Fermi estimation relies on three robustness properties. First, multiplicative error tends to be log-normally distributed when factors are estimated independently, so the product's expected error is bounded by the geometric mean of factor errors rather than the worst factor. Second, an order-of-magnitude answer is usually enough for decision making — knowing ‘around 10⁹’ vs ‘around 10⁷’ matters more than knowing the exact value. Third, breaking a vague question into a structured estimate forces you to articulate what you ARE confident about, often revealing that ‘I have no idea’ is overstated."
+              },
+              "reasoning": "Big questions feel impossible because they ask for a single big number. But big numbers are products of smaller ones. If you can estimate the smaller numbers, you can multiply them to get the big answer. The art is choosing the right decomposition — one where each smaller piece is something you actually have intuition about.",
+              "useCases": [
+                {
+                  "title": "How much rice does an Indian family eat in a year?",
+                  "description": "Estimate: 5 people × 100 g per person per day × 365 days = ~180 kg per year. You didn't need exact data — just three reasonable inputs.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Could you read every book in a library in your lifetime?",
+                  "description": "Decompose: library has ~50,000 books × 3 hours per book = 1,50,000 hours. Lifetime reading hours (2 hours/day × 365 × 60 years) = ~44,000. No — you'd read about 30%.",
+                  "domain": "other"
+                },
+                {
+                  "title": "How many haircuts in a city per day?",
+                  "description": "City population × fraction needing a haircut today × proportion of barbers who serve. Build the chain, then multiply rough numbers.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Fermi questions are used in physics interviews, consulting interviews, and tech-company interviews — not because the interviewer wants the exact answer, but because they want to see HOW the candidate reasons. A good Fermi answer reveals which assumptions you're aware of, where uncertainty lives, and whether you can hold many numbers in your head at once. It's a transparent window into mathematical thinking.",
+              "mnemonic": "Decompose. Estimate each piece. Multiply. Sanity-check the order of magnitude.",
+              "predictQuestion": "Could you count to one lakh in a single day if you said one number every second?",
+              "whyChain": [
+                "Big numbers in real-world questions usually aren't fundamental — they're products of smaller, more comprehensible numbers. ‘Population of Mumbai in buses’ decomposes into ‘population’ × ‘people per bus’. ‘Steps to the Moon’ decomposes into ‘distance to Moon’ ÷ ‘step length’. Knowing how to find the right decomposition is the entire art.",
+                "Once you've decomposed, each factor is something you can estimate from everyday experience or general knowledge. ‘About 50 people per bus.’ ‘About a metre per step.’ ‘About 8 hours a day available.’ These are NOT precise — they're CALIBRATED. Within a factor of 2 or so. That's enough.",
+                "When you multiply approximate factors, errors don't add linearly — they multiply. Surprisingly, this often makes the final answer MORE accurate than you'd expect, because some factors are over-estimates and others under-estimates, and they partially cancel. So a Fermi estimate built from three or four reasonable assumptions can land within an order of magnitude of the true answer even when no single assumption is closer than ±50%."
+              ],
+              "relatedConceptIds": [
+                "ch01_t04_c01",
+                "ch01_t06_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t06_q01",
+                "ch01_t06_q02"
+              ],
+              "pageRefs": [
+                18,
+                19,
+                20
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_c02",
+              "title": "Reasonable assumptions in estimation",
+              "explanations": {
+                "oneLine": "Good Fermi estimates use assumptions that are honest about what you know — defending each one with general experience rather than guessing wildly.",
+                "kidFriendly": "If you're asked ‘How many barbershops does Mumbai need?’, an assumption like ‘1 barbershop per 5,000 people’ is reasonable (close to what you'd see walking around). An assumption like ‘every barbershop does 1,000 haircuts a day’ is NOT reasonable (each haircut takes 30 minutes — even with two barbers and a 10-hour day, you'd cap out at ~40). Reasonable assumptions come from sanity checks against everyday observation. Unreasonable ones come from guessing without checking. Always ask yourself: would I bet ₹100 that my assumption is within a factor of 2?",
+                "textbook": "Reasonable Fermi assumptions are calibrated against everyday experience or basic physical/social constants: a person walks at ~5 km/h, sleeps 8 hours a night, eats ~500 g of food per meal, lives ~70 years. Bus seats ~50 passengers, school class ~40 students, India's population is ~140 crore. Anchoring on such standard numbers (and adjusting up/down as the situation warrants) yields estimates that are often within a factor of 2 of the true value. Conversely, wild assumptions (each barbershop sees 1000 customers a day) immediately produce errors of 10× or more.",
+                "expert": "Calibration is the core discipline of forecasting and estimation. A calibrated forecaster gives 90% confidence intervals that actually contain the true value 90% of the time. Becoming calibrated requires feedback: make predictions, then compare to actuals, and adjust your sense of uncertainty. Fermi estimation is a low-stakes practice ground for this skill, and habitual practitioners (scientists, intelligence analysts, weather forecasters) develop dramatically better calibration than untrained novices."
+              },
+              "reasoning": "Estimates are only as good as the assumptions feeding them. An assumption is reasonable if a reasonable person — with general knowledge and a moment of reflection — would agree it's in the right ballpark. Testing your assumption by asking ‘could this be off by 10×?’ is a quick reality check.",
+              "useCases": [
+                {
+                  "title": "Estimating audience size at an event",
+                  "description": "Reasonable: ‘the stadium holds 20,000 and looked about 60% full, so ~12,000.’ Unreasonable: ‘felt like a lot of people — maybe a million?’",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Estimating cost of a daily commute",
+                  "description": "Reasonable: ‘bus fare ₹15 each way × 22 working days × 12 months = ~₹8000/year.’ Unreasonable: skipping a factor like ‘two-way’.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Estimating annual cricket viewing",
+                  "description": "Reasonable: 30 IPL matches × 4 hrs × 50 crore concurrent viewers ≈ 6,000 crore viewer-hours. Most factors are ballpark-able from common knowledge.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Doctors estimating dosages, engineers estimating safety margins, businesspeople estimating market sizes — all do calibrated Fermi-style reasoning under different names. Improving calibration is a meta-skill: it makes every other estimation skill better. Forecasting platforms like Metaculus and Good Judgment Project show that calibration is trainable; a few months of forecasting practice can dramatically improve accuracy.",
+              "mnemonic": "Anchor on common knowledge. Cross-check with a different decomposition. Verify against intuition.",
+              "predictQuestion": "Before computing — how would you estimate whether 5000 ships (each like the RMS Titanic, ~2,500 passengers) could hold Mumbai's population?",
+              "whyChain": [
+                "Every step of a Fermi estimate involves choosing a number — bus capacity, walking speed, hours per day, items per minute. The quality of the final answer depends on the quality of these intermediate numbers, so picking them carefully matters.",
+                "Reasonable assumptions come from triangulating against everyday observation: how many people fit in a bus you've actually ridden? How fast do you actually walk? How many hours a day do you actually study? Numbers grounded in real experience are much more likely to be within a factor of 2 of the truth than numbers pulled from thin air.",
+                "Once you build the habit of grounding assumptions, you can audit each one before multiplying. Ask: ‘would I bet ₹100 that this is within a factor of 2?’ If not, refine. The result is a final estimate you can defend — not just a number, but a structured argument with each piece traceable to a reasonable belief."
+              ],
+              "relatedConceptIds": [
+                "ch01_t06_c01",
+                "ch01_t04_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch01_t06_q03"
+              ],
+              "pageRefs": [
+                19,
+                20
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch01_t06_q01",
+              "prompt": "Could the population of Mumbai (over 1 crore 24 lakh) fit in 5000 ships, each like the RMS Titanic (carrying about 2,500 passengers)?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes — 5000 × 2,500 = 1,25,00,000 (1 crore 25 lakh), which slightly exceeds Mumbai's population. So it would just fit.",
+              "solutionSteps": [
+                "5000 ships × 2,500 passengers = 12,500,000 = 1,25,00,000.",
+                "Mumbai population (rounded) ≈ 1,24,42,373 ≈ 1.24 crore.",
+                "1.25 crore > 1.24 crore, so yes — with a small margin."
+              ],
+              "commonMistakes": [
+                "Missing a zero in either factor — gets you 10× wrong.",
+                "Forgetting to express both answers in the same unit (crore vs lakhs)."
+              ],
+              "variations": [
+                {
+                  "prompt": "If a bus holds 50 people, how many buses would Mumbai's 1.24 crore population need?",
+                  "answer": "About 2,48,000 buses.",
+                  "solutionSteps": [
+                    "1,24,00,000 ÷ 50 = 2,48,000 buses."
+                  ]
+                },
+                {
+                  "prompt": "Could 1 lakh autorickshaws (each holding 3 people) hold Mumbai's population?",
+                  "answer": "No — only 3 lakh people would fit. Mumbai is 40× bigger.",
+                  "solutionSteps": [
+                    "1,00,000 × 3 = 3,00,000 = 3 lakh.",
+                    "Mumbai 1.24 crore = 124 lakh. 124 / 3 ≈ 41× shortfall."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q02",
+              "prompt": "Roxie wonders if she could reach the Moon in 10 years by walking 100 km every day. The Moon is 3,84,400 km from Earth. Could she?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes — 100 × 365 × 10 = 3,65,000 km, just less than the 3,84,400 km to the Moon. She'd be about 19,400 km short — close, but not quite.",
+              "solutionSteps": [
+                "Walk 100 km/day × 365 days/year = 36,500 km/year.",
+                "Over 10 years: 36,500 × 10 = 3,65,000 km.",
+                "Distance to Moon: 3,84,400 km.",
+                "3,84,400 − 3,65,000 = 19,400 km short. So 10 years isn't enough — she'd need about 10.5 years."
+              ],
+              "commonMistakes": [
+                "Forgetting that walking 100 km a day is itself unrealistic — Fermi answers should also pass a reality check.",
+                "Computing 100 × 10 = 1000 instead of 100 × 365 × 10 = 3,65,000 — losing the days-per-year factor."
+              ],
+              "variations": [
+                {
+                  "prompt": "If a person can walk 100 km in a day, how long would it take to walk 1000 km without resting?",
+                  "answer": "10 days (assuming nonstop walking — unrealistic; real expedition would take longer with rest).",
+                  "solutionSteps": [
+                    "1000 ÷ 100 = 10 days of walking."
+                  ]
+                },
+                {
+                  "prompt": "If you travel 1000 km every day, can you reach the Sun (about 15 crore km away) in a lifetime?",
+                  "answer": "No — 1000 × 365 × 80 (lifetime) = 2.92 crore km, still much less than 15 crore km. You'd need about 400+ years.",
+                  "solutionSteps": [
+                    "1000 × 365 × 80 = 2,92,00,000 km = 2.92 crore km.",
+                    "Sun is 15 crore km. 15 / 2.92 ≈ 5.1×.",
+                    "So actually 5× a normal lifetime, ~400 years."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                19
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_t06_q03",
+              "prompt": "Can you count to one million in a single day if you say one number every second?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No. There are 24 × 60 × 60 = 86,400 seconds in a day. You'd count to about 86,400 — far short of a million. You'd need about 11.6 days of non-stop counting (with no sleep, food or breaks).",
+              "solutionSteps": [
+                "Seconds in a day: 24 hr × 60 min × 60 sec = 86,400.",
+                "If 1 number per second: max count per day = 86,400.",
+                "10,00,000 ÷ 86,400 ≈ 11.6 days."
+              ],
+              "commonMistakes": [
+                "Computing only 60 × 60 = 3,600 (just an hour) instead of 24 × 60 × 60.",
+                "Forgetting to account for sleep — realistically you can count for ~12 hours, doubling the days needed."
+              ],
+              "variations": [
+                {
+                  "prompt": "If 250 babies are born every minute worldwide, will a million be born in a day?",
+                  "answer": "No. 250 × 60 × 24 = 3,60,000 — about a third of a million.",
+                  "solutionSteps": [
+                    "Minutes in a day: 60 × 24 = 1,440.",
+                    "Babies per day: 250 × 1,440 = 3,60,000.",
+                    "10,00,000 ÷ 3,60,000 ≈ 2.78 days to reach a million."
+                  ]
+                },
+                {
+                  "prompt": "How long does it take to count to a CRORE (1,00,00,000) at 1 number per second?",
+                  "answer": "About 116 days (continuous) or 232 days at 12 hours/day.",
+                  "solutionSteps": [
+                    "1 crore = 1,00,00,000 seconds.",
+                    "÷ 86,400 sec/day = 115.7 days."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                20
               ],
               "needsHumanReview": false
             }
