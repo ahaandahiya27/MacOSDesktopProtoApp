@@ -2455,6 +2455,1580 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch02",
+      "number": 2,
+      "title": "Arithmetic Expressions",
+      "summary": "What does 30 + 5 × 4 actually equal — 50 or 140? This chapter builds the grammar of arithmetic: expressions and their values, comparing expressions without computing them, why brackets and 'terms' resolve ambiguity, and how the commutative, associative and distributive properties let you rearrange expressions safely. It is the bridge from arithmetic to algebra.",
+      "topics": [
+        {
+          "id": "ch02_t01",
+          "title": "Simple Expressions",
+          "summary": "An arithmetic expression like 13 + 2 or 5 × 25 is a mathematical phrase with a value. Different expressions can share a value, and — with a little cleverness — you can compare two expressions without ever computing them.",
+          "concepts": [
+            {
+              "id": "ch02_t01_c01",
+              "title": "What is an arithmetic expression",
+              "explanations": {
+                "oneLine": "An arithmetic expression is a mathematical phrase made of numbers and operations (+, −, ×, ÷) that evaluates to a single value.",
+                "kidFriendly": "When Mallika spends ₹25 every day for lunch from Monday to Friday, the total is 5 × 25. That phrase — 5 × 25 — is an arithmetic expression, and its value is 125. Expressions are like phrases in a language: 13 + 2 reads as 'thirteen plus two' or 'the sum of 13 and 2', and it has a value, 15. The equals sign connects an expression to its value: 13 + 2 = 15. Every expression you write is a recipe that cooks down to one number.",
+                "textbook": "An arithmetic expression is a combination of numbers connected by the operations of addition, subtraction, multiplication, and division. Every arithmetic expression has a value — the single number it evaluates to. The equality sign '=' denotes the relationship between an expression and its value, e.g. 13 + 2 = 15. Expressions can be read in words ('the sum of 13 and 2', 'the product of 5 and 25').",
+                "expert": "An arithmetic expression is a well-formed term in the algebra of rational numbers under the four field operations. Evaluation is the homomorphism from the syntactic expression to its numeric value. The same value has infinitely many expression preimages — this many-to-one structure is precisely what makes algebraic manipulation (rewriting an expression into an equivalent but more useful form) both possible and powerful."
+              },
+              "reasoning": "Expressions let us describe a calculation before performing it. Writing '5 × 25' captures Mallika's weekly lunch cost as a structure (5 days, ₹25 each) rather than just the answer 125 — and the structure is what lets us adapt it (what if lunch costs ₹30? what about 6 days?).",
+              "useCases": [
+                {
+                  "title": "Weekly lunch cost",
+                  "description": "₹25/day × 5 days = the expression 5 × 25, value ₹125.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Cricket over runs",
+                  "description": "6 balls × 4 runs each = 6 × 4, the expression for a boundary-only over.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Recipe scaling",
+                  "description": "2 cups rice × 3 batches = 2 × 3, the expression for total rice needed.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "The distinction between an expression and its value mirrors the distinction between a question and its answer. In computer science this is the difference between code (the expression) and its evaluation (running it). Spreadsheets show this beautifully — a cell holds a formula (expression) but displays its value.",
+              "mnemonic": "Expression = recipe. Value = the dish it cooks down to.",
+              "predictQuestion": "Mallika spends ₹25 a day on lunch for 5 school days. What single expression captures her weekly lunch cost, and what is its value?",
+              "whyChain": [
+                "An expression is a way of writing down a calculation without yet doing it. '5 × 25' records the STRUCTURE of Mallika's weekly cost — five days, twenty-five rupees each — separately from the final number. This separation is the whole point: the structure carries meaning the bare answer 125 does not.",
+                "Keeping expression and value distinct lets us reason about and change a calculation. If lunch rises to ₹30, we change one number in the expression (5 × 30) rather than recomputing from scratch. If she eats lunch 6 days, we change the other (6 × 25). The expression is a reusable template; the value is one instance of it.",
+                "This is exactly the leap from arithmetic to algebra. Arithmetic asks 'what is 5 × 25?'. Algebra asks 'what is d × c, where d is days and c is cost?'. Treating expressions as objects you can manipulate — not just answers to be computed — is the single most important habit this whole chapter is building toward."
+              ],
+              "relatedConceptIds": [
+                "ch02_t01_c02",
+                "ch02_t01_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t01_q01"
+              ],
+              "pageRefs": [
+                24,
+                25
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_c02",
+              "title": "Different expressions, same value",
+              "explanations": {
+                "oneLine": "Many different expressions can evaluate to the same number — 12 = 10 + 2 = 15 − 3 = 3 × 4 = 24 ÷ 2.",
+                "kidFriendly": "Pick your favourite number — say 12. How many ways can you write it using two numbers and one operation? 10 + 2, 15 − 3, 3 × 4, 24 ÷ 2 … the list goes on. All these expressions are different phrases, but they all have the same value, 12. This is like how 'half a dozen' and 'six' and '3 + 3' all name the same number. Knowing that many expressions share one value is what lets you swap a hard expression for an easier one with the same answer.",
+                "textbook": "A single numerical value can be the value of infinitely many distinct expressions. For instance, 12 = 10 + 2 = 15 − 3 = 3 × 4 = 24 ÷ 2. Recognising that expressions with the same value are interchangeable (they may be substituted for one another without changing the value of a larger expression containing them) is the foundation of simplification and of solving equations.",
+                "expert": "The set of expressions evaluating to a given value v forms the fibre of the evaluation map over v. Equivalence of expressions (same value) is the coarsest equivalence relation respected by all the field operations — substituting one expression for an equal one inside any larger expression preserves the larger expression's value. This substitution principle (Leibniz's law for equality) underlies every algebraic manipulation."
+              },
+              "reasoning": "If two expressions have the same value, you can replace one with the other anywhere without changing anything. This is why simplification works: you trade a complicated expression for a simpler one with the same value, confident the answer is unchanged.",
+              "useCases": [
+                {
+                  "title": "Making change",
+                  "description": "₹12 = one ₹10 + one ₹2 coin, or one ₹5 + seven ₹1 — same value, different make-up.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Scoring options",
+                  "description": "12 runs = three 4s, or two 6s, or four 3s — different deliveries, same total.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Splitting work",
+                  "description": "12 tasks = 3 people × 4 tasks, or 2 people × 6 tasks — same workload, different teams.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Mathematicians prize 'canonical forms' — one standard expression chosen to represent a whole family of equal-valued ones. Fractions reduced to lowest terms (6/8 → 3/4) and numbers in standard place-value notation are canonical forms you already use. Choosing the right representative of an equivalence class is a recurring theme in all of mathematics.",
+              "mnemonic": "Same value, many disguises. Swap freely between equal-valued expressions.",
+              "predictQuestion": "How many different two-number expressions can you write whose value is exactly 12?",
+              "whyChain": [
+                "A number doesn't record how it was made. The value 12 is just 12 — whether you reached it by 10 + 2, by 3 × 4, or by 24 ÷ 2. So many different expressions necessarily collapse to the same value, because there are far more ways to combine numbers than there are resulting values.",
+                "This many-to-one relationship is useful precisely because it gives you choices. When one expression is awkward to compute or work with, you can replace it with an equal-valued one that's easier. '99 × 4' is awkward; the equal expression '(100 − 1) × 4 = 400 − 4 = 396' is easy. The freedom to swap equal expressions is the engine of mental arithmetic and algebra alike.",
+                "The deeper principle is substitution: if A and B have the same value, then any expression containing A has the same value when A is replaced by B. This sounds obvious, but it is the formal justification for every single step of simplifying or solving — each step replaces a sub-expression with an equal one, preserving the overall value while moving toward a simpler form."
+              ],
+              "relatedConceptIds": [
+                "ch02_t01_c01",
+                "ch02_t01_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t01_q02"
+              ],
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_c03",
+              "title": "Comparing expressions without computing",
+              "explanations": {
+                "oneLine": "You can often tell which of two expressions is larger by reasoning about how they differ — without evaluating either one.",
+                "kidFriendly": "Which is greater: 1023 + 125 or 1022 + 128? You COULD add both, but there's a cleverer way. Raja had 1023 marbles and got 125 more. Joy had 1022 (one fewer than Raja) but got 128 (three more than Raja). So Joy started 1 behind but gained 3 ahead — Joy ends up 2 marbles ahead. So 1023 + 125 < 1022 + 128, and you never computed either sum! Comparing by reasoning about the DIFFERENCES is faster and shows you understand WHY, not just WHAT.",
+                "textbook": "Two expressions can be compared by their values using <, > or =. Often the comparison can be made by reasoning about the structural differences between the expressions rather than computing both values. For example, 1023 + 125 vs 1022 + 128: the first term is 1 larger in the left expression, but the second term is 3 larger in the right; net, the right expression is 2 greater, so 1023 + 125 < 1022 + 128.",
+                "expert": "Comparison-by-perturbation analyses how each expression changes relative to a common baseline. Writing A = base + δ_A and B = base + δ_B, the sign of (A − B) equals the sign of (δ_A − δ_B), computable without evaluating A or B fully. This local-difference reasoning is the discrete analogue of differentiation and a foundational skill for estimation, inequality proofs, and sensitivity analysis."
+              },
+              "reasoning": "Two expressions differ only in specific places. If you track just those differences — how much bigger or smaller each part is — you can determine which total is larger without computing either total. The differences are smaller, simpler numbers to reason about.",
+              "useCases": [
+                {
+                  "title": "Comparing shopping carts",
+                  "description": "Cart A has 1 more apple but 3 fewer bananas than Cart B — compare by the difference, not by re-totalling.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Race standings",
+                  "description": "Runner A ran 1 m more in the first lap but 3 m less in the second — net 2 m behind, no need to sum every lap.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Marble games",
+                  "description": "Raja vs Joy: track who gained/lost relative to the other rather than counting every marble.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "This perturbation thinking scales to algebra and calculus. 'If x increases by 1, how does x² + 3x change?' is answered by looking at the change, not recomputing. Economists call it marginal analysis; physicists call it a first-order approximation. The marble comparison is your first encounter with one of the most powerful ideas in mathematics.",
+              "mnemonic": "Don't compute both — compare the differences. Who gained more relative to the other?",
+              "predictQuestion": "Which is greater, 1023 + 125 or 1022 + 128 — and can you decide WITHOUT adding either?",
+              "whyChain": [
+                "Computing both expressions fully is often wasteful when they're nearly identical. Two expressions like 1023 + 125 and 1022 + 128 share almost all their structure; only the specific numbers differ slightly. The smart move is to focus on JUST the differences.",
+                "Track each difference with its direction. The left expression's first number is 1 bigger (+1 advantage left); its second number is 3 smaller (−3 disadvantage left). Net: the left is 1 − 3 = 2 smaller. So the right expression wins by 2, and we never added 1023 + 125 at all.",
+                "This habit — reasoning about CHANGES rather than recomputing TOTALS — is one of the most transferable ideas in mathematics. It's how you compare without calculating, estimate without exact data, and (later) how calculus measures rates of change. The humble marble comparison is training the exact mental muscle you'll use for years."
+              ],
+              "relatedConceptIds": [
+                "ch02_t01_c01",
+                "ch02_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t01_q03",
+                "ch02_t01_q04"
+              ],
+              "pageRefs": [
+                25,
+                26
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch02_t01_q01",
+              "prompt": "Mallika spends ₹25 each school day (Mon–Fri). Write an expression for her weekly lunch cost and find its value.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "5 × 25 = ₹125",
+              "solutionSteps": [
+                "5 school days, ₹25 each.",
+                "Expression: 5 × 25.",
+                "Value: 5 × 25 = 125. So ₹125 per week."
+              ],
+              "commonMistakes": [
+                "Adding instead of multiplying (5 + 25 = 30) — 'every day' means repeated cost, i.e. multiplication.",
+                "Counting 7 days instead of 5 (Mon–Fri is 5 school days)."
+              ],
+              "variations": [
+                {
+                  "prompt": "If lunch costs ₹30/day, what's the weekly cost?",
+                  "answer": "₹150",
+                  "solutionSteps": [
+                    "5 × 30 = 150."
+                  ]
+                },
+                {
+                  "prompt": "If she also eats lunch on Saturday (6 days) at ₹25, weekly cost?",
+                  "answer": "₹150",
+                  "solutionSteps": [
+                    "6 × 25 = 150."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_q02",
+              "prompt": "Write four different expressions, each using two numbers and one operation, whose value is 20.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "For example: 10 + 10, 25 − 5, 4 × 5, 40 ÷ 2.",
+              "solutionSteps": [
+                "Addition: 10 + 10 = 20.",
+                "Subtraction: 25 − 5 = 20.",
+                "Multiplication: 4 × 5 = 20.",
+                "Division: 40 ÷ 2 = 20."
+              ],
+              "commonMistakes": [
+                "Reusing the same operation for all four (the question asks for variety).",
+                "Writing expressions that don't actually equal 20 — always check the value."
+              ],
+              "variations": [
+                {
+                  "prompt": "Write four expressions for the value 100.",
+                  "answer": "E.g. 90 + 10, 110 − 10, 10 × 10, 500 ÷ 5.",
+                  "solutionSteps": [
+                    "Each evaluates to 100."
+                  ]
+                },
+                {
+                  "prompt": "Write three expressions for 0 using two numbers.",
+                  "answer": "E.g. 5 − 5, 0 × 9, 0 ÷ 4.",
+                  "solutionSteps": [
+                    "Each evaluates to 0."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_q03",
+              "prompt": "Which is greater: 1023 + 125 or 1022 + 128? Answer WITHOUT computing either sum.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "1023 + 125 < 1022 + 128. The right side wins by 2.",
+              "solutionSteps": [
+                "Compare the first numbers: 1023 is 1 more than 1022 (left +1).",
+                "Compare the second numbers: 125 is 3 less than 128 (left −3).",
+                "Net for the left side: +1 − 3 = −2, so the left is 2 smaller.",
+                "Therefore 1023 + 125 < 1022 + 128."
+              ],
+              "commonMistakes": [
+                "Computing both sums — defeats the point of comparison reasoning.",
+                "Getting the direction of a difference backwards (saying 128 is less than 125)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compare 245 + 289 vs 246 + 285 without computing.",
+                  "answer": "245 + 289 > 246 + 285 (left wins by 3).",
+                  "solutionSteps": [
+                    "Left first number −1, left second number +4. Net +3. Left is greater."
+                  ]
+                },
+                {
+                  "prompt": "Compare 364 + 587 vs 363 + 589.",
+                  "answer": "364 + 587 < 363 + 589 (right wins by 1).",
+                  "solutionSteps": [
+                    "Left first +1, left second −2. Net −1. Right is greater."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                25,
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t01_q04",
+              "prompt": "Which is greater: 113 − 25 or 112 − 24? Explain by reasoning about the differences.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "They are equal. 113 − 25 = 112 − 24 = 88.",
+              "solutionSteps": [
+                "Left starts 1 higher (113 vs 112): +1 advantage left.",
+                "But left subtracts 1 more (25 vs 24): −1 for the left.",
+                "Net: +1 − 1 = 0. The two are equal.",
+                "Check: 113 − 25 = 88 and 112 − 24 = 88. Equal. ✓"
+              ],
+              "commonMistakes": [
+                "Forgetting that subtracting MORE pulls the value DOWN.",
+                "Assuming a bigger starting number always means a bigger result — the subtraction matters too."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compare 273 − 145 vs 272 − 144.",
+                  "answer": "Equal (both 128).",
+                  "solutionSteps": [
+                    "Left +1 to start, but subtracts +1 more. Net 0."
+                  ]
+                },
+                {
+                  "prompt": "Compare 213 − 77 vs 214 − 76.",
+                  "answer": "213 − 77 < 214 − 76 (right wins by 2).",
+                  "solutionSteps": [
+                    "Right starts +1 AND subtracts 1 less (+1). Net +2 for the right."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch02_t02",
+          "title": "Brackets and Terms",
+          "summary": "Without rules, 30 + 5 × 4 is ambiguous — is it 50 or 140? Brackets remove the ambiguity by forcing an order, and the idea of 'terms' (parts separated by +, with every subtraction turned into adding the inverse) gives a default order when no brackets are present.",
+          "concepts": [
+            {
+              "id": "ch02_t02_c01",
+              "title": "Why order of operations matters",
+              "explanations": {
+                "oneLine": "An expression like 30 + 5 × 4 is ambiguous without a rule — you get 50 or 140 depending on whether you multiply or add first.",
+                "kidFriendly": "Mallesh brought 30 marbles. Arun brought 5 bags with 4 marbles each. How many in total? Mallesh writes 30 + 5 × 4. Purna adds 30 + 5 = 35 first, then × 4 = 140. Mallesh multiplies 5 × 4 = 20 first, then + 30 = 50. Both can't be right! The real answer is 50 (Arun's bags hold 5 × 4 = 20 marbles, plus Mallesh's 30). The expression LOOKS ambiguous, and that's the problem this whole section solves — just like a missing comma can change a sentence's meaning.",
+                "textbook": "When an expression contains more than one kind of operation and the order isn't specified, it can be evaluated in more than one way, giving different values. The expression 30 + 5 × 4 yields 140 if addition is done first but 50 if multiplication is done first. Mathematics resolves this ambiguity with conventions (the role of brackets and terms), analogous to how punctuation resolves ambiguity in language.",
+                "expert": "Operator precedence ambiguity is a genuine problem in formal notation, resolved by precedence and associativity rules that define a unique parse tree for every well-formed expression. Multiplication and division bind tighter than addition and subtraction; this convention is universal across mathematics and programming languages. Without it, expressions would be ill-defined, and the same string of symbols could denote different numbers."
+              },
+              "reasoning": "When two readers can interpret the same expression differently and get different answers, the expression is broken as a means of communication. We need shared conventions — like grammar in language — so that 30 + 5 × 4 means exactly one thing to everyone.",
+              "useCases": [
+                {
+                  "title": "Shopping totals",
+                  "description": "'30 rupees plus 5 packs at 4 rupees' must mean 30 + (5×4) = 50, not (30+5)×4 = 140.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Punctuation parallel",
+                  "description": "'a friend with toys' vs 'a friend, with toys' — a comma changes the meaning, like brackets in maths.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Spreadsheet formulas",
+                  "description": "A spreadsheet evaluates =30+5*4 as 50, applying multiplication-first precedence automatically.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Programming languages take operator precedence extremely seriously — a misunderstanding can cause real bugs. Some languages even let you redefine operators, and getting precedence wrong is a classic source of errors. The convention you learn here (×, ÷ before +, −) is the same one Python, C, and your calculator all use.",
+              "mnemonic": "Same expression, two answers = a broken expression. We need a rule.",
+              "predictQuestion": "Mallesh brought 30 marbles; Arun brought 5 bags of 4 marbles each. Is 30 + 5 × 4 equal to 50 or 140 — and which is the real number of marbles?",
+              "whyChain": [
+                "An expression is only useful if everyone who reads it computes the same value. When 30 + 5 × 4 can be read as 50 OR 140, it fails that basic test — it's ambiguous, like a sentence whose meaning flips depending on where you imagine a comma.",
+                "The ambiguity comes from mixing operations of different 'strength'. Addition and multiplication aren't interchangeable, and when both appear without grouping, there's no obvious which-first. The real-world context (Arun's bags genuinely hold 5 × 4 = 20 marbles) tells us multiplication should happen first here — but the bare symbols don't say that on their own.",
+                "Mathematics fixes this the same way language fixes ambiguous sentences: with shared conventions. Brackets force an explicit order; the notion of 'terms' provides a default order when brackets are absent. Once everyone agrees on these rules, 30 + 5 × 4 has exactly one correct value (50), and expressions become a reliable language again."
+              ],
+              "relatedConceptIds": [
+                "ch02_t02_c02",
+                "ch02_t02_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t02_q01"
+              ],
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_c02",
+              "title": "Brackets specify the order",
+              "explanations": {
+                "oneLine": "Brackets tell you to evaluate what's inside them first — 30 + (5 × 4) and (30 + 5) × 4 are different expressions with different values.",
+                "kidFriendly": "Brackets are like punctuation that removes all doubt. Write 30 + (5 × 4) and everyone knows: do 5 × 4 = 20 first, then add 30 to get 50. Write (30 + 5) × 4 and everyone knows: do 30 + 5 = 35 first, then × 4 = 140. The brackets pin down exactly what you mean. When Irfan buys a ₹15 biscuit and ₹56 dal and pays ₹100, his change is 100 − (15 + 56) — the brackets ensure you total the purchases first (₹71), THEN subtract, giving ₹29. Without brackets, 100 − 15 + 56 = 141, which absurdly says he gets MORE than he paid!",
+                "textbook": "Brackets explicitly specify which sub-expression must be evaluated first. The expression inside the innermost brackets is computed before any operation outside them. Thus 30 + (5 × 4) = 50, while (30 + 5) × 4 = 140 — the same numbers and operations give different values depending on bracket placement. Brackets always take highest priority in evaluation.",
+                "expert": "Brackets impose explicit grouping that overrides default precedence, fully determining the parse tree of the expression. Nested brackets are evaluated inside-out. In formal grammar, parentheses are the mechanism that makes the expression language context-free yet unambiguous; they let any desired evaluation order be expressed regardless of the default precedence of the operators involved."
+              },
+              "reasoning": "Brackets are a direct instruction: 'compute me first'. They let the writer of an expression force any order they want, overriding the default. This makes the writer's intention unambiguous to every reader.",
+              "useCases": [
+                {
+                  "title": "Calculating change",
+                  "description": "Irfan's change = 100 − (15 + 56) = ₹29; brackets ensure purchases are totalled before subtracting.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Group discounts",
+                  "description": "Total = (price − discount) × quantity needs brackets so the discount applies per item before multiplying.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Recipe batches",
+                  "description": "(2 cups flour + 1 cup sugar) × 3 batches — brackets group one batch before scaling up.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "Calculators and programming languages evaluate brackets first, then ×/÷, then +/−. The mnemonic BODMAS/BIDMAS/PEMDAS encodes this: Brackets, Orders/Indices, Division/Multiplication, Addition/Subtraction. Brackets always come first — they're the writer's override switch on the default rules.",
+              "mnemonic": "Brackets mean 'do me first'. They override every other rule.",
+              "predictQuestion": "Irfan pays ₹100 for a ₹15 biscuit and ₹56 dal. Why must his change be written 100 − (15 + 56) and not 100 − 15 + 56?",
+              "whyChain": [
+                "Brackets exist to let the writer force a specific order, overriding whatever the default would be. By wrapping 5 × 4 — or 15 + 56 — in brackets, you guarantee that part is computed first, no matter what operations surround it.",
+                "This matters enormously when the default order would give the wrong real-world answer. Irfan's change is 'one hundred minus (the total he spent)'. The total he spent is 15 + 56 = 71, and that must be computed as a unit before subtracting. Brackets — 100 − (15 + 56) — capture exactly that, giving ₹29. Drop the brackets and the default left-to-right reading gives 100 − 15 + 56 = 141, which nonsensically returns more money than he paid.",
+                "So brackets aren't decoration — they're how you encode real-world structure into an expression. The grouping in 100 − (15 + 56) literally says 'these two purchases belong together as one cost'. Reading and writing brackets correctly is reading and writing the meaning of the situation, not just following a symbol rule."
+              ],
+              "relatedConceptIds": [
+                "ch02_t02_c01",
+                "ch02_t02_c03",
+                "ch02_t04_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t02_q02"
+              ],
+              "pageRefs": [
+                26,
+                27
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_c03",
+              "title": "Terms — the default grouping",
+              "explanations": {
+                "oneLine": "Terms are the parts of an expression separated by + signs; every subtraction is first rewritten as adding the inverse, and each multiplication/division stays as one whole term.",
+                "kidFriendly": "Suppose there are no brackets: 30 + 5 × 4. Does it have no meaning? No — we use TERMS. Terms are the parts separated by + signs. First, turn every subtraction into adding the inverse: 83 − 14 becomes 83 + (−14), so its terms are 83 and −14. In 30 + 5 × 4, the terms are 30 and (5 × 4) — because 5 × 4 has no + sign inside it, it's a single term. You evaluate each term first (5 × 4 = 20), THEN add the terms (30 + 20 = 50). The 'terms' idea gives a default order when no brackets are present — and it always agrees with multiply-before-add.",
+                "textbook": "When an expression has multiple operations and no brackets, the notion of terms determines evaluation order. Terms are the parts of an expression separated by '+' signs. All subtractions are first converted to additions of the inverse (e.g. 83 − 14 = 83 + (−14)), so the terms of 83 − 14 are 83 and −14. A product or quotient with no internal '+' (like 5 × 4) is a single term. To evaluate, compute each term, then add all the terms.",
+                "expert": "Decomposing an expression into additive terms (after rewriting subtraction as addition of the additive inverse) reveals its top-level structure as a sum. Because addition is commutative and associative, the terms may be evaluated and summed in any order — which is why 'evaluate each term, then add' is well-defined. This decomposition is the additive analogue of factoring and is the standard pre-processing step before applying commutativity/associativity."
+              },
+              "reasoning": "Turning every subtraction into 'adding the inverse' makes the whole expression one big sum of terms. Sums are easy: order doesn't matter, grouping doesn't matter. So identifying terms reduces a messy mixed expression to a tidy addition, with each multiplication/division handled inside its own term first.",
+              "useCases": [
+                {
+                  "title": "Restaurant bill",
+                  "description": "4 dosas at ₹23 plus ₹5 tip = (4 × 23) + 5; the terms are 4×23 and 5.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Rice packets",
+                  "description": "Raghu's packets = 4 + 100÷2; the terms are 4 and 100÷2, each computed before adding.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Game groupings",
+                  "description": "'Fire in the mountain' with 33 students in groups of 5: 6 × 5 + 3, terms 6×5 and 3.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Treating subtraction as 'adding a negative' is a conceptual unification that pays off hugely later. In algebra, an expression like 3x − 5y + 2 is handled as 3x + (−5y) + 2 — three terms that can be rearranged freely. The 'terms' idea you learn here is exactly how you'll group 'like terms' in algebra next year.",
+              "mnemonic": "Terms split at + signs. Turn every − into + (inverse). Evaluate each term, then add.",
+              "predictQuestion": "What are the terms of the expression 23 − 2 × 4 + 16, and what is its value?",
+              "whyChain": [
+                "Addition is the friendliest operation — its order and grouping never matter. So the smartest way to handle a mixed expression is to turn it entirely into a sum. Rewriting every subtraction as 'adding the inverse' (83 − 14 → 83 + (−14)) does exactly that, converting the whole expression into one big addition of terms.",
+                "Once it's a pure sum, the parts being added are the 'terms', split wherever a + sign appears. A chunk like 5 × 4 has no + inside it, so it stays as one term — and you compute it (= 20) before adding it to the others. This gives a clear, unambiguous procedure: find the terms, evaluate each, add them all.",
+                "Crucially, this default order always agrees with 'multiplication before addition'. The terms idea isn't a separate competing rule — it's the same precedence rule, seen from the angle of 'what are the things being added?'. And it sets up algebra perfectly: next year, '3x − 5y + 2' will be handled as three terms 3x, −5y, 2, rearranged and combined exactly as you're learning now."
+              ],
+              "relatedConceptIds": [
+                "ch02_t02_c01",
+                "ch02_t02_c02",
+                "ch02_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t02_q03",
+                "ch02_t02_q04"
+              ],
+              "pageRefs": [
+                28,
+                29,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch02_t02_q01",
+              "prompt": "Mallesh brought 30 marbles; Arun brought 5 bags of 4 marbles each. Purna computed 30 + 5 × 4 = 140; Mallesh got 50. Who is right and why?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Mallesh is right (50). Arun's bags hold 5 × 4 = 20 marbles; adding Mallesh's 30 gives 50. Multiplication must be done before addition.",
+              "solutionSteps": [
+                "Arun's marbles: 5 bags × 4 each = 20.",
+                "Mallesh's marbles: 30.",
+                "Total: 30 + 20 = 50.",
+                "Purna added 30 + 5 first (wrong) — multiplication of the bags must come first."
+              ],
+              "commonMistakes": [
+                "Evaluating strictly left to right (30 + 5 then × 4) — ignores that ×/÷ bind tighter than +/−.",
+                "Thinking both answers are 'valid interpretations' — context and convention give exactly one: 50."
+              ],
+              "variations": [
+                {
+                  "prompt": "If Arun brought 6 bags of 4 and Mallesh 30, total marbles?",
+                  "answer": "54",
+                  "solutionSteps": [
+                    "6 × 4 = 24, + 30 = 54."
+                  ]
+                },
+                {
+                  "prompt": "Compute 20 + 3 × 6 correctly.",
+                  "answer": "38",
+                  "solutionSteps": [
+                    "3 × 6 = 18 first, then + 20 = 38."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q02",
+              "prompt": "Irfan buys a ₹15 biscuit packet and ₹56 toor dal, pays ₹100. Write a correct bracketed expression for his change and evaluate it.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "100 − (15 + 56) = ₹29",
+              "solutionSteps": [
+                "Total spent: 15 + 56 = 71.",
+                "Change: 100 − 71 = 29.",
+                "With brackets: 100 − (15 + 56) = 100 − 71 = 29. So ₹29."
+              ],
+              "commonMistakes": [
+                "Writing 100 − 15 + 56 = 141 — absurd, returns more than he paid.",
+                "Forgetting the brackets so the +56 wrongly adds to the change."
+              ],
+              "variations": [
+                {
+                  "prompt": "She buys items worth ₹40 and ₹35, pays ₹100. Change?",
+                  "answer": "₹25",
+                  "solutionSteps": [
+                    "100 − (40 + 35) = 100 − 75 = 25."
+                  ]
+                },
+                {
+                  "prompt": "Buy ₹120 and ₹65 items, pay ₹200. Change?",
+                  "answer": "₹15",
+                  "solutionSteps": [
+                    "200 − (120 + 65) = 200 − 185 = 15."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                27
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q03",
+              "prompt": "Write 23 − 2 × 4 + 16 as a sum of its terms, then find its value.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Terms: 23, −(2×4), 16. Value = 23 − 8 + 16 = 31.",
+              "solutionSteps": [
+                "Convert subtraction to adding the inverse: 23 + (−2×4) + 16.",
+                "Terms: 23, −(2 × 4) = −8, and 16.",
+                "Evaluate each term: 23, −8, 16.",
+                "Add: 23 + (−8) + 16 = 31."
+              ],
+              "commonMistakes": [
+                "Computing 23 − 2 = 21 first, then × 4 — multiplication binds tighter than subtraction.",
+                "Treating −2 × 4 as +8 — the term is negative eight."
+              ],
+              "variations": [
+                {
+                  "prompt": "Evaluate 39 − 2 × 6 + 11.",
+                  "answer": "38",
+                  "solutionSteps": [
+                    "Terms 39, −(2×6)=−12, 11. Sum: 39 − 12 + 11 = 38."
+                  ]
+                },
+                {
+                  "prompt": "Evaluate 48 − 10 × 2 + 16 ÷ 2.",
+                  "answer": "36",
+                  "solutionSteps": [
+                    "Terms 48, −(10×2)=−20, (16÷2)=8. Sum: 48 − 20 + 8 = 36."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                28,
+                29
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t02_q04",
+              "prompt": "Find the value of 6 × 3 − 4 × 8 × 5 by identifying terms.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "6 × 3 − 4 × 8 × 5 = 18 − 160 = −142.",
+              "solutionSteps": [
+                "Terms (split at + after converting −): (6 × 3) and −(4 × 8 × 5).",
+                "First term: 6 × 3 = 18.",
+                "Second term: 4 × 8 × 5 = 160, with a minus sign → −160.",
+                "Add the terms: 18 + (−160) = −142."
+              ],
+              "commonMistakes": [
+                "Stopping at 4 × 8 = 32 and forgetting the × 5.",
+                "Getting the sign wrong on the second term."
+              ],
+              "variations": [
+                {
+                  "prompt": "Evaluate 40 − 10 + 10 + 10.",
+                  "answer": "50",
+                  "solutionSteps": [
+                    "Terms 40, −10, 10, 10. Sum = 50."
+                  ]
+                },
+                {
+                  "prompt": "Evaluate 5 × 2 + 3 × 4.",
+                  "answer": "22",
+                  "solutionSteps": [
+                    "Terms 5×2=10 and 3×4=12. Sum 22."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch02_t03",
+          "title": "Swapping and Grouping",
+          "summary": "In a sum of terms, you can swap the order (commutative property) and regroup which ones you add first (associative property) without changing the value. Manasa doesn't have to restart her long addition just because she forgot one number — she can add it in at the end.",
+          "concepts": [
+            {
+              "id": "ch02_t03_c01",
+              "title": "The commutative property — swapping terms",
+              "explanations": {
+                "oneLine": "Swapping the order of terms in a sum never changes the value: Term1 + Term2 = Term2 + Term1, even with negative terms.",
+                "kidFriendly": "Madhu flies a drone 6 m up then 4 m down. Final height: 6 + (−4) = 2 m. Swap the terms: (−4) + 6 = 2 m. Same answer! This works for any terms, positive or negative. Mathematicians call it the commutative property of addition — a fancy name for 'swapping terms doesn't change the sum'. It's why you can add a column of numbers top-to-bottom or bottom-to-top and get the same total. The order you add in is your choice.",
+                "textbook": "The commutative property of addition states that for any two terms a and b, a + b = b + a. This holds for all integers (and rationals), including negative terms: 6 + (−4) = (−4) + 6 = 2. Once subtractions are rewritten as additions of inverses, the terms of any expression may be freely reordered without affecting the value.",
+                "expert": "Commutativity of addition is one of the defining axioms of an abelian group (and of a commutative ring/field). It is not automatic — subtraction and division are NOT commutative (6 − 4 ≠ 4 − 6), which is precisely why we convert subtractions to additions of inverses before reordering. The abelian structure of (ℤ, +) is what licenses free reordering of terms."
+              },
+              "reasoning": "Addition combines quantities into a total, and a total doesn't care about the order things were combined. Six up and four down nets two up, whether you account for the up-move or the down-move first. So swapping terms leaves the sum untouched.",
+              "useCases": [
+                {
+                  "title": "Adding a bill column",
+                  "description": "Add prices top-down or bottom-up — the total is identical.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Drone height",
+                  "description": "6 m up then 4 m down = 4 m down then 6 m up = 2 m above start.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Combining scores",
+                  "description": "Two innings of 40 and 35 runs total 75 regardless of which inning you count first.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Commutativity feels obvious for addition but fails for many operations — subtraction, division, and (later) matrix multiplication are all non-commutative. Knowing WHICH operations commute is essential: you can reorder a sum freely, but '6 − 4' and '4 − 6' are genuinely different. The conversion-to-terms trick exists precisely so you only ever reorder additions.",
+              "mnemonic": "Swapping added terms is free. (But you may only swap once everything is a sum!)",
+              "predictQuestion": "Madhu's drone goes 6 m up then 4 m down. Is the final height the same if you compute (−4) + 6 instead of 6 + (−4)?",
+              "whyChain": [
+                "Addition produces a total, and a total is a property of the whole collection, not of the order in which you assembled it. Whether the drone's 6-up is accounted before or after its 4-down, the net displacement is the same 2 m. So reordering the terms of a sum cannot change the result.",
+                "This is why we bother converting every subtraction into 'adding the inverse' first. Subtraction is NOT commutative — 6 − 4 ≠ 4 − 6 — so you can't safely reorder an expression that still contains minus signs. But once 6 − 4 becomes 6 + (−4), it's a pure sum, and the terms 6 and −4 can be swapped freely.",
+                "The commutative property is what makes long additions forgiving. You can add a list in any order, group convenient pairs first (like pairing numbers that make round tens), or — like Manasa — slot in a forgotten number at the end. The freedom to reorder is a direct consequence of addition combining quantities into an order-independent total."
+              ],
+              "relatedConceptIds": [
+                "ch02_t02_c03",
+                "ch02_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t03_q01"
+              ],
+              "pageRefs": [
+                29,
+                30,
+                31
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_c02",
+              "title": "The associative property — grouping terms",
+              "explanations": {
+                "oneLine": "In a sum of three or more terms, it doesn't matter which terms you group and add first — the total is the same.",
+                "kidFriendly": "Add (−7) + 10 + (−11). Group the first two: (−7 + 10) + (−11) = 3 + (−11) = −8. Group the last two: (−7) + (10 + (−11)) = (−7) + (−1) = −8. Same answer, −8! This is the associative property: how you GROUP terms in a sum doesn't change the total. Combined with swapping, it means Manasa — who added a long list, then realised she forgot the number 9055 — does NOT have to start over. She just adds 9055 to her existing total. Grouping and order are both free for addition.",
+                "textbook": "The associative property of addition states that for any terms a, b, c: (a + b) + c = a + (b + c). The grouping of terms in a sum does not affect the value. Combined with commutativity, it means the terms of any sum may be added in any order and any grouping. This is why a forgotten addend can simply be added to a running total rather than requiring the whole sum to be recomputed.",
+                "expert": "Associativity (a + b) + c = a + (b + c) is the second defining axiom of a semigroup/group under addition. Together with commutativity it yields the general result that any finite sum is independent of the order and bracketing of its terms (provable by induction). This is what makes 'sum of a set of numbers' a well-defined notion at all, independent of how the summation is sequenced — crucial for parallel and incremental computation."
+              },
+              "reasoning": "Adding is combining into a pile. If you have three piles to merge, it makes no difference whether you merge the first two and then the third, or the last two and then the first — you end with the same combined pile. So grouping is free.",
+              "useCases": [
+                {
+                  "title": "Running totals",
+                  "description": "A cashier adds items as they're scanned; a forgotten item is just added to the running total, not recomputed.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Manasa's long sum",
+                  "description": "She forgot 9055 in a list; she adds it to her total of 11749 rather than restarting.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Team aggregate scores",
+                  "description": "Add three players' scores in any grouping — the team total is unchanged.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Associativity underlies parallel computation: to add a million numbers fast, split them into groups, add each group on a separate processor, then add the group-totals. This only works because grouping doesn't change the sum. The property you're learning is what lets supercomputers and spreadsheets add huge lists efficiently.",
+              "mnemonic": "Group added terms however you like — the total holds. So a forgotten number just gets added in.",
+              "predictQuestion": "Manasa added a long list to get 11749, then realised she forgot to include 9055. Must she start over?",
+              "whyChain": [
+                "Addition merges quantities into a single total, and merging is indifferent to grouping — combining piles A and B first, then C, ends with the same heap as combining B and C first, then A. So (a + b) + c always equals a + (b + c).",
+                "This grouping freedom, together with the swapping freedom of commutativity, means a sum of many terms has ONE well-defined value no matter the order or bracketing you use to compute it. You're free to pair up convenient terms, compute partial sums, and combine them however is easiest.",
+                "The practical payoff is incremental and forgiving arithmetic. Manasa needn't redo her entire five-minute addition — her 11749 is a valid partial sum, and the forgotten 9055 simply adds onto it: 11749 + 9055 = 20804. The same principle lets cashiers keep running totals and lets computers split giant sums across many processors. Associativity is what makes a 'total' a stable, reusable object rather than something fragile that must be built in one exact sequence."
+              ],
+              "relatedConceptIds": [
+                "ch02_t03_c01",
+                "ch02_t02_c03"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t03_q02",
+                "ch02_t03_q03"
+              ],
+              "pageRefs": [
+                30,
+                31
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch02_t03_q01",
+              "prompt": "Madhu's drone goes 6 m up then 4 m down. Show that 6 + (−4) and (−4) + 6 give the same final height.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Both equal 2 m above the terrace.",
+              "solutionSteps": [
+                "6 + (−4) = 2.",
+                "(−4) + 6 = 2.",
+                "Same value — swapping the terms didn't change the sum (commutative property)."
+              ],
+              "commonMistakes": [
+                "Thinking order matters for addition — it doesn't, once subtraction is written as adding the inverse.",
+                "Writing the drone as 6 − 4 and then claiming 4 − 6 is the same (it isn't — that's why we use +(−4))."
+              ],
+              "variations": [
+                {
+                  "prompt": "Show 8 + (−3) = (−3) + 8.",
+                  "answer": "Both equal 5.",
+                  "solutionSteps": [
+                    "8 + (−3) = 5; (−3) + 8 = 5."
+                  ]
+                },
+                {
+                  "prompt": "Does 6 − 4 equal 4 − 6?",
+                  "answer": "No: 6 − 4 = 2 but 4 − 6 = −2. Subtraction is NOT commutative.",
+                  "solutionSteps": [
+                    "6 − 4 = 2; 4 − 6 = −2; different."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                29,
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q02",
+              "prompt": "Evaluate (−7) + 10 + (−11) by grouping the first two terms first, then by grouping the last two. Show both give the same result.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Both give −8.",
+              "solutionSteps": [
+                "Group first two: (−7 + 10) + (−11) = 3 + (−11) = −8.",
+                "Group last two: (−7) + (10 + (−11)) = (−7) + (−1) = −8.",
+                "Both equal −8 — grouping doesn't change the sum (associative property)."
+              ],
+              "commonMistakes": [
+                "Mishandling the signs when adding negatives.",
+                "Believing the grouping affects the answer — it doesn't for addition."
+              ],
+              "variations": [
+                {
+                  "prompt": "Evaluate (−5) + 8 + (−6) two different groupings.",
+                  "answer": "Both −3.",
+                  "solutionSteps": [
+                    "(−5+8)+(−6)=3+(−6)=−3; (−5)+(8−6)=(−5)+2=−3."
+                  ]
+                },
+                {
+                  "prompt": "Add 12 + (−4) + (−8) in two groupings.",
+                  "answer": "Both 0.",
+                  "solutionSteps": [
+                    "(12−4)+(−8)=8−8=0; 12+(−4−8)=12−12=0."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t03_q03",
+              "prompt": "Manasa added a long list and got 11749, then realised she forgot the number 9055. Does she have to redo the whole addition? What is the corrected total?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No — she just adds 9055 to her total. Corrected total: 11749 + 9055 = 20804.",
+              "solutionSteps": [
+                "By the associative and commutative properties, the forgotten number can be added at the end.",
+                "11749 + 9055 = 20804.",
+                "Her earlier work isn't wasted — 11749 was a valid partial sum."
+              ],
+              "commonMistakes": [
+                "Assuming she must restart — the properties of addition make that unnecessary.",
+                "Arithmetic slip in 11749 + 9055."
+              ],
+              "variations": [
+                {
+                  "prompt": "A cashier's running total is ₹3,420 when a ₹780 item is found unscanned. New total?",
+                  "answer": "₹4,200",
+                  "solutionSteps": [
+                    "3420 + 780 = 4200."
+                  ]
+                },
+                {
+                  "prompt": "You summed marks as 285 but forgot a 47-mark paper. Correct total?",
+                  "answer": "332",
+                  "solutionSteps": [
+                    "285 + 47 = 332."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                30,
+                31
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch02_t04",
+          "title": "Removing Brackets",
+          "summary": "Brackets can often be removed to simplify a calculation — but a minus sign in front of a bracket flips the signs of everything inside. And the distributive property explains why 2 × (5 + 3) equals 5 × 2 + 3 × 2.",
+          "concepts": [
+            {
+              "id": "ch02_t04_c01",
+              "title": "Removing brackets after a minus sign",
+              "explanations": {
+                "oneLine": "When a bracket is preceded by a minus sign, removing the brackets flips the sign of every term inside: 100 − (15 + 56) = 100 − 15 − 56.",
+                "kidFriendly": "To find Irfan's change, 100 − (15 + 56), you could total the bracket first (71) then subtract. But it's often simpler to remove the brackets: 100 − 15 − 56. Watch the signs! The minus in front of the bracket flips BOTH the +15 and the +56 to subtractions. So 100 − (15 + 56) = 100 − 15 − 56 = 29. Similarly, 500 − (250 − 100) = 500 − 250 + 100 = 350 — the −100 inside became +100 when the brackets came off. Removing a bracket after a minus sign is powerful but you MUST flip every inside sign.",
+                "textbook": "When a bracket is preceded by a subtraction, removing the bracket changes the sign of each term inside it: a − (b + c) = a − b − c, and a − (b − c) = a − b + c. This follows because subtracting a sum means subtracting each part, and subtracting a difference means subtracting the first part and adding back the second. Failing to flip every inner sign is a common error.",
+                "expert": "Sign distribution over brackets is the statement −(b + c) = −b − c, i.e. multiplication by −1 distributes over addition. More generally a − (b − c) = a − b + c because −(−c) = +c (double negation). These are instances of the distributive law combined with the additive-inverse axiom; they are the bracket-manipulation rules that all later algebraic simplification relies on."
+              },
+              "reasoning": "Subtracting a whole bracket means subtracting everything in it. So each item inside, whatever its sign, gets subtracted — which flips its sign. A minus inside becomes a plus because subtracting a subtraction adds back.",
+              "useCases": [
+                {
+                  "title": "Calculating change two ways",
+                  "description": "Irfan's change: 100 − (15+56) = 100 − 15 − 56 = 29; subtract each purchase in turn.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Net bank movement",
+                  "description": "Balance − (fee + tax) = balance − fee − tax; both deductions come off.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Adjusting a refund",
+                  "description": "Paid − (cost − refund) = paid − cost + refund; the refund is added back.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "This sign-flip rule is the single most error-prone step in early algebra. Expressions like 7 − (x − 3) trip up countless students who write 7 − x − 3 instead of the correct 7 − x + 3. Mastering it now, with concrete money examples, builds the instinct you'll rely on through all of algebra.",
+              "mnemonic": "Minus in front of a bracket? Flip EVERY sign inside when you remove it.",
+              "predictQuestion": "Remove the brackets from 500 − (250 − 100) correctly. What happens to the −100?",
+              "whyChain": [
+                "Subtracting a bracketed quantity means subtracting the WHOLE thing inside. If the bracket contains 15 + 56, you're removing both the 15 and the 56 from your starting amount — so each becomes a subtraction when the bracket comes off: 100 − (15 + 56) = 100 − 15 − 56.",
+                "The trickier case is a minus INSIDE the bracket, like 500 − (250 − 100). Here you're subtracting 'the result of 250 − 100'. Subtracting 250 lowers your total, but the −100 inside means you over-subtracted by 100, so it must be added back: 500 − (250 − 100) = 500 − 250 + 100 = 350. The inner minus becomes a plus.",
+                "The rule 'flip every sign inside' captures both cases at once, and it's really multiplication by −1 distributed across the bracket. It's also the most error-prone step in early algebra — '7 − (x − 3)' becomes '7 − x + 3', not '7 − x − 3'. Building the sign-flip instinct now, with concrete money, is exactly the habit that prevents a flood of algebra mistakes later."
+              ],
+              "relatedConceptIds": [
+                "ch02_t02_c02",
+                "ch02_t04_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t04_q01",
+                "ch02_t04_q02"
+              ],
+              "pageRefs": [
+                35
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t04_c02",
+              "title": "The distributive property",
+              "explanations": {
+                "oneLine": "Multiplying a bracket by a number means multiplying each term inside: 2 × (5 + 3) = 2 × 5 + 2 × 3.",
+                "kidFriendly": "Look at an arrangement of squares: 2 rows of (5 + 3) squares. You can count it as 2 × (5 + 3) = 2 × 8 = 16. Or count the yellows and blues separately: 5 × 2 + 3 × 2 = 10 + 6 = 16. Same answer! This is the distributive property: multiplying a bracket by a number is the same as multiplying each term inside and adding. So 2 × (5 + 3) = 2 × 5 + 2 × 3. It works both ways — you can 'distribute' the multiplication in, or 'factor' the common multiplier out. This is one of the most useful rules in all of mathematics.",
+                "textbook": "The distributive property states that a × (b + c) = a × b + a × c. Multiplication distributes over addition: multiplying a sum by a number equals the sum of the individual products. The property runs both directions — expanding a × (b + c) into a × b + a × c, or factoring a × b + a × c back into a × (b + c). It also holds over subtraction: a × (b − c) = a × b − a × c.",
+                "expert": "Distributivity a(b + c) = ab + ac is the axiom linking the two operations of a ring; it is what makes (ℤ, +, ×) a ring rather than two unrelated structures. The bidirectional reading — expansion versus factoring — is the basis of polynomial arithmetic, the FOIL method, common-factor extraction, and ultimately the entire machinery of algebraic manipulation. Geometrically it is the area-of-a-rectangle decomposition."
+              },
+              "reasoning": "Multiplying by a number means taking that many copies. Two copies of (5 + 3) is two copies of 5 plus two copies of 3. So the multiplier spreads — distributes — across each term in the bracket.",
+              "useCases": [
+                {
+                  "title": "Buying mixed items",
+                  "description": "2 thalis, each a ₹5 rice + ₹3 dal combo: 2 × (5+3) = 2×5 + 2×3 = ₹16.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Tiling a wall",
+                  "description": "A wall of 2 rows × (5 red + 3 blue) tiles = 10 red + 6 blue = 16 tiles.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Mental multiplication",
+                  "description": "7 × 103 = 7 × (100 + 3) = 700 + 21 = 721, using distribution to simplify.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The distributive property is the workhorse of algebra. Expanding (x + 2)(x + 3) uses it twice; factoring x² + 5x + 6 back into (x + 2)(x + 3) reverses it. Every time you 'multiply out brackets' or 'take out a common factor' in later years, you are using this exact rule. It also explains the column-multiplication algorithm you learned for multi-digit numbers.",
+              "mnemonic": "Multiply the bracket = multiply EACH term inside, then add. Works in reverse too (factoring).",
+              "predictQuestion": "An arrangement has 2 rows of (5 yellow + 3 blue) squares. Write the count two ways and show they're equal.",
+              "whyChain": [
+                "Multiplying by a whole number means taking that many copies of something. '2 × (5 + 3)' means two copies of the quantity (5 + 3). Two copies of '5 things and 3 things' is naturally '5 things twice and 3 things twice' — that is, 2 × 5 plus 2 × 3. The multiplier spreads across each part of the sum.",
+                "You can see it physically as a rectangle: 2 rows of (5 + 3) squares. Count the whole thing (2 × 8 = 16) or count the 5-block and the 3-block separately (5 × 2 + 3 × 2 = 10 + 6 = 16). Same 16 squares, two ways of grouping — which is exactly a × (b + c) = a × b + a × c.",
+                "This single rule, the distributive property, is the bridge between addition and multiplication and the backbone of all algebra to come. Read left-to-right it 'expands brackets'; read right-to-left it 'factors out a common multiplier'. Every 'multiply out the brackets', every 'take out the common factor', and even the long-multiplication algorithm for big numbers is this one property, applied over and over."
+              ],
+              "relatedConceptIds": [
+                "ch02_t04_c01",
+                "ch02_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch02_t04_q03",
+                "ch02_t04_q04"
+              ],
+              "pageRefs": [
+                33
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch02_t04_q01",
+              "prompt": "Remove the brackets and evaluate 200 − (40 + 3).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "200 − 40 − 3 = 157",
+              "solutionSteps": [
+                "The bracket is preceded by a minus, so flip the signs inside.",
+                "200 − (40 + 3) = 200 − 40 − 3.",
+                "= 160 − 3 = 157."
+              ],
+              "commonMistakes": [
+                "Writing 200 − 40 + 3 = 163 — forgot to flip the +3 to −3.",
+                "Computing the bracket as 40 − 3 by mistake."
+              ],
+              "variations": [
+                {
+                  "prompt": "Remove brackets: 300 − (50 + 20).",
+                  "answer": "230",
+                  "solutionSteps": [
+                    "300 − 50 − 20 = 230."
+                  ]
+                },
+                {
+                  "prompt": "Remove brackets: 1000 − (250 + 125).",
+                  "answer": "625",
+                  "solutionSteps": [
+                    "1000 − 250 − 125 = 625."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                35
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t04_q02",
+              "prompt": "Remove the brackets and evaluate 500 − (250 − 100).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "500 − 250 + 100 = 350",
+              "solutionSteps": [
+                "Minus before the bracket flips both inner signs.",
+                "500 − (250 − 100) = 500 − 250 + 100.",
+                "The inner −100 becomes +100.",
+                "= 250 + 100 = 350."
+              ],
+              "commonMistakes": [
+                "Writing 500 − 250 − 100 = 150 — failed to flip the inner minus to plus.",
+                "Evaluating the bracket as 250 + 100."
+              ],
+              "variations": [
+                {
+                  "prompt": "Remove brackets: 80 − (30 − 12).",
+                  "answer": "62",
+                  "solutionSteps": [
+                    "80 − 30 + 12 = 62."
+                  ]
+                },
+                {
+                  "prompt": "Remove brackets: 7 − (x − 3) in algebra form.",
+                  "answer": "7 − x + 3 = 10 − x",
+                  "solutionSteps": [
+                    "Flip both inner signs: 7 − x + 3."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                35
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t04_q03",
+              "prompt": "Show that 2 × (5 + 3) equals 2 × 5 + 2 × 3.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Both equal 16.",
+              "solutionSteps": [
+                "Left: 2 × (5 + 3) = 2 × 8 = 16.",
+                "Right: 2 × 5 + 2 × 3 = 10 + 6 = 16.",
+                "Equal — the multiplier 2 distributes over the sum."
+              ],
+              "commonMistakes": [
+                "Multiplying only the first term: 2 × 5 + 3 = 13 — must multiply BOTH terms.",
+                "Adding before distributing isn't wrong here, but forgetting to double the 3 is."
+              ],
+              "variations": [
+                {
+                  "prompt": "Expand 3 × (4 + 6).",
+                  "answer": "30",
+                  "solutionSteps": [
+                    "3 × 4 + 3 × 6 = 12 + 18 = 30."
+                  ]
+                },
+                {
+                  "prompt": "Expand 5 × (10 − 2).",
+                  "answer": "40",
+                  "solutionSteps": [
+                    "5 × 10 − 5 × 2 = 50 − 10 = 40."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                33
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_t04_q04",
+              "prompt": "Use the distributive property to compute 7 × 103 mentally.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "721",
+              "solutionSteps": [
+                "Rewrite 103 = 100 + 3.",
+                "7 × 103 = 7 × (100 + 3) = 7 × 100 + 7 × 3.",
+                "= 700 + 21 = 721."
+              ],
+              "commonMistakes": [
+                "Multiplying only by 100 and forgetting the × 3.",
+                "Arithmetic slip in 7 × 3."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 6 × 99 using distribution.",
+                  "answer": "594",
+                  "solutionSteps": [
+                    "6 × (100 − 1) = 600 − 6 = 594."
+                  ]
+                },
+                {
+                  "prompt": "Compute 8 × 12 by splitting 12 = 10 + 2.",
+                  "answer": "96",
+                  "solutionSteps": [
+                    "8 × 10 + 8 × 2 = 80 + 16 = 96."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                33
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "glossary": [
+        {
+          "id": "ch02_gl01",
+          "term": "Arithmetic expression",
+          "definition": "A mathematical phrase combining numbers with operations (+, −, ×, ÷) that evaluates to a single value.",
+          "example": "5 × 25 is an expression with value 125.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t01_c01"
+          ]
+        },
+        {
+          "id": "ch02_gl02",
+          "term": "Value (of an expression)",
+          "definition": "The single number an expression evaluates to.",
+          "example": "The value of 13 + 2 is 15.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t01_c01"
+          ]
+        },
+        {
+          "id": "ch02_gl03",
+          "term": "Term",
+          "definition": "A part of an expression separated by + signs (after converting subtractions to adding the inverse).",
+          "example": "In 30 + 5 × 4, the terms are 30 and 5×4.",
+          "hindiTerm": "पद",
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_gl04",
+          "term": "Brackets",
+          "definition": "Symbols ( ) that force the enclosed expression to be evaluated first.",
+          "example": "30 + (5 × 4) = 50, but (30 + 5) × 4 = 140.",
+          "hindiTerm": "कोष्ठक",
+          "relatedConceptIds": [
+            "ch02_t02_c02"
+          ]
+        },
+        {
+          "id": "ch02_gl05",
+          "term": "Additive inverse",
+          "definition": "The number that, added to a given number, gives 0; it has the opposite sign.",
+          "example": "The inverse of 14 is −14.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_gl06",
+          "term": "Commutative property",
+          "definition": "Swapping the order of added terms does not change the sum: a + b = b + a.",
+          "example": "6 + (−4) = (−4) + 6 = 2.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t03_c01"
+          ]
+        },
+        {
+          "id": "ch02_gl07",
+          "term": "Associative property",
+          "definition": "Regrouping added terms does not change the sum: (a + b) + c = a + (b + c).",
+          "example": "(−7 + 10) + (−11) = −7 + (10 + (−11)) = −8.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t03_c02"
+          ]
+        },
+        {
+          "id": "ch02_gl08",
+          "term": "Distributive property",
+          "definition": "Multiplying a sum by a number equals the sum of the individual products: a × (b + c) = a × b + a × c.",
+          "example": "2 × (5 + 3) = 2×5 + 2×3 = 16.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t04_c02"
+          ]
+        },
+        {
+          "id": "ch02_gl09",
+          "term": "Evaluate",
+          "definition": "To compute the value of an expression by carrying out its operations in the correct order.",
+          "example": "Evaluating 6 × 3 − 4 gives 14.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_gl10",
+          "term": "Order of operations",
+          "definition": "The convention that brackets come first, then ×/÷, then +/−.",
+          "example": "In 30 + 5 × 4, multiply before adding → 50.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch02_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch02_mn01",
+          "acronym": "BODMAS",
+          "unpacking": "Brackets, Orders (powers), Division, Multiplication, Addition, Subtraction — the order to evaluate an expression.",
+          "context": "Use whenever an expression mixes operations without full bracketing.",
+          "relatedConceptIds": [
+            "ch02_t02_c01",
+            "ch02_t02_c02"
+          ]
+        },
+        {
+          "id": "ch02_mn02",
+          "acronym": "Terms split at +",
+          "unpacking": "Turn every − into +(inverse), then the parts between + signs are the terms. Evaluate each term, then add.",
+          "context": "Use to evaluate a bracket-free mixed expression.",
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_mn03",
+          "acronym": "Minus-bracket FLIPS",
+          "unpacking": "A minus sign in front of a bracket flips the sign of every term inside when you remove it.",
+          "context": "Use when removing brackets preceded by subtraction.",
+          "relatedConceptIds": [
+            "ch02_t04_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch02_ms01",
+          "kidsThink": "You always evaluate an expression strictly left to right.",
+          "actually": "Multiplication and division are done before addition and subtraction (unless brackets say otherwise). 30 + 5 × 4 = 50, not 140.",
+          "relatedConceptIds": [
+            "ch02_t02_c01"
+          ]
+        },
+        {
+          "id": "ch02_ms02",
+          "kidsThink": "Removing a bracket after a minus sign just drops the bracket.",
+          "actually": "The minus flips EVERY inner sign: 100 − (15 + 56) = 100 − 15 − 56, and 500 − (250 − 100) = 500 − 250 + 100.",
+          "relatedConceptIds": [
+            "ch02_t04_c01"
+          ]
+        },
+        {
+          "id": "ch02_ms03",
+          "kidsThink": "Distributing means multiplying only the first term in the bracket.",
+          "actually": "You must multiply EVERY term inside: 2 × (5 + 3) = 2×5 + 2×3, not 2×5 + 3.",
+          "relatedConceptIds": [
+            "ch02_t04_c02"
+          ]
+        },
+        {
+          "id": "ch02_ms04",
+          "kidsThink": "Subtraction is commutative like addition.",
+          "actually": "It is not: 6 − 4 = 2 but 4 − 6 = −2. Only after rewriting as adding the inverse can you reorder safely.",
+          "relatedConceptIds": [
+            "ch02_t03_c01"
+          ]
+        },
+        {
+          "id": "ch02_ms05",
+          "kidsThink": "If you forget a number in a long sum, you must restart.",
+          "actually": "By the associative and commutative properties, you can just add the forgotten number to your running total.",
+          "relatedConceptIds": [
+            "ch02_t03_c02"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch02_rw01",
+          "title": "The shopkeeper's change",
+          "body": "When Irfan pays ₹100 for a ₹15 biscuit and ₹56 dal, the change 100 − (15 + 56) = ₹29 only comes out right if the purchases are bracketed together first. Drop the brackets carelessly and you get ₹141 — more than he paid. Order of operations is not abstract; it's the difference between correct and absurd change.",
+          "relatedConceptIds": [
+            "ch02_t02_c02"
+          ]
+        },
+        {
+          "id": "ch02_rw02",
+          "title": "Socks before shoes",
+          "body": "Manasa's mother says 'wear your hat and shoes' — order doesn't matter, she looks the same either way (like commutative addition). But 'wear your socks and shoes' — order matters! Shoes-then-socks is uncomfortable and wrong. Some real-world operations commute, some don't, exactly like maths operations.",
+          "relatedConceptIds": [
+            "ch02_t03_c01"
+          ]
+        },
+        {
+          "id": "ch02_rw03",
+          "title": "Paying ₹432 with mixed notes",
+          "body": "Kannan can pay ₹432 as 4×100 + 1×20 + 1×10 + 2×1, or as 8×50 + 1×10 + 4×5 + 2×1. Each way is an expression whose terms describe a different bundle of notes and coins — and all of them have the same value, ₹432.",
+          "relatedConceptIds": [
+            "ch02_t01_c02"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch02_qa01",
+          "question": "Fill in the blank to make both sides equal: 13 + 4 = ____ + 6.",
+          "modelAnswer": "11. Since 13 + 4 = 17 and the right side is ? + 6, we need ? = 17 − 6 = 11.",
+          "textbookPage": 25,
+          "relatedConceptIds": [
+            "ch02_t01_c01"
+          ]
+        },
+        {
+          "id": "ch02_qa02",
+          "question": "Arrange in ascending order of value: 67 − 19, 67 − 20, 35 + 25, 5 × 11, 120 ÷ 3.",
+          "modelAnswer": "Values: 48, 47, 60, 55, 40. Ascending: 120÷3 (40) < 67−20 (47) < 67−19 (48) < 5×11 (55) < 35+25 (60).",
+          "textbookPage": 25,
+          "relatedConceptIds": [
+            "ch02_t01_c01"
+          ]
+        },
+        {
+          "id": "ch02_qa03",
+          "question": "Find the value of 28 − 7 + 8 by writing the terms.",
+          "modelAnswer": "Terms: 28, −7, 8. Sum = 28 − 7 + 8 = 29.",
+          "textbookPage": 34,
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_qa04",
+          "question": "A metro ticket is ₹40 for an adult and ₹20 for a child. Write and evaluate the cost for four adults and three children.",
+          "modelAnswer": "Expression: 4 × 40 + 3 × 20. Terms: 4×40 = 160 and 3×20 = 60. Total = 160 + 60 = ₹220.",
+          "textbookPage": 34,
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_qa05",
+          "question": "Queen Alia gave 100 gold coins each to Elsa and Anna. Elsa doubled hers; Anna has half left. Write an expression for their combined coins and evaluate.",
+          "modelAnswer": "Expression: 2 × 100 + 100 ÷ 2 = 200 + 50 = 250 gold coins together.",
+          "textbookPage": 34,
+          "relatedConceptIds": [
+            "ch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ch02_qa06",
+          "question": "Is 1023 + 125 greater or less than 1022 + 128?",
+          "modelAnswer": "Less. The left first number is 1 more, but its second number is 3 less, so the left side is 2 smaller: 1023 + 125 < 1022 + 128.",
+          "textbookPage": 25,
+          "relatedConceptIds": [
+            "ch02_t01_c03"
+          ]
+        },
+        {
+          "id": "ch02_qa07",
+          "question": "Remove the brackets: 100 − (15 + 56).",
+          "modelAnswer": "100 − 15 − 56 = 29. The minus before the bracket flips both inner signs.",
+          "textbookPage": 35,
+          "relatedConceptIds": [
+            "ch02_t04_c01"
+          ]
+        },
+        {
+          "id": "ch02_qa08",
+          "question": "Write the arrangement described by both 2 × (5 + 3) and 5 × 2 + 3 × 2, and give the value.",
+          "modelAnswer": "Both describe 2 rows of (5 + 3) squares = 16 squares. 2 × (5+3) = 16 and 5×2 + 3×2 = 10 + 6 = 16 — equal by the distributive property.",
+          "textbookPage": 33,
+          "relatedConceptIds": [
+            "ch02_t04_c02"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch02_mp01",
+          "emoji": "🧮",
+          "title": "Expression Storyteller",
+          "needs": [
+            "A notebook",
+            "A pen",
+            "A willing family member"
+          ],
+          "steps": [
+            "Pick three everyday situations involving money or counting (a shopping trip, a cricket score, sharing sweets).",
+            "For each, write an arithmetic expression that captures it — using at least one multiplication and one addition.",
+            "Identify the terms of each expression.",
+            "Evaluate each, then ask a family member to evaluate it too.",
+            "Compare answers — if they differ, find out whether someone broke the order-of-operations rule."
+          ],
+          "expectedObservation": "You'll find that people who evaluate left-to-right (ignoring multiply-before-add) get different answers — exactly the ambiguity brackets and terms are designed to fix.",
+          "whyItWorks": "Real situations have an inherent structure (bags of marbles, groups of tickets) that maps onto multiplication-before-addition. Writing the expression and identifying its terms forces that structure to be explicit, which is why everyone who follows the rules agrees on the value.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch02_t02_c01",
+            "ch02_t02_c03"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch02_t01_c01",
+            "label": "Expression & value",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.15
+          },
+          {
+            "id": "ch02_t01_c02",
+            "label": "Same value, many forms",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.15
+          },
+          {
+            "id": "ch02_t01_c03",
+            "label": "Compare w/o computing",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.15
+          },
+          {
+            "id": "ch02_t02_c01",
+            "label": "Why order matters",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_t02_c02",
+            "label": "Brackets",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_t02_c03",
+            "label": "Terms",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.4
+          },
+          {
+            "id": "ch02_pivot_props",
+            "label": "Properties of +/×",
+            "kind": "pivot",
+            "x": 0.5,
+            "y": 0.62
+          },
+          {
+            "id": "ch02_t03_c01",
+            "label": "Commutative",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.82
+          },
+          {
+            "id": "ch02_t03_c02",
+            "label": "Associative",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.82
+          },
+          {
+            "id": "ch02_t04_c01",
+            "label": "Removing brackets",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.82
+          },
+          {
+            "id": "ch02_t04_c02",
+            "label": "Distributive",
+            "kind": "concept",
+            "x": 0.9,
+            "y": 0.82
+          },
+          {
+            "id": "ch01:ch01_t02_c01",
+            "label": "Ch.1 Decomposition",
+            "kind": "crossChapter",
+            "x": 0.05,
+            "y": 0.62
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch02_e01",
+            "from": "ch02_t01_c01",
+            "to": "ch02_t01_c02",
+            "label": "leads to"
+          },
+          {
+            "id": "ch02_e02",
+            "from": "ch02_t01_c02",
+            "to": "ch02_t01_c03",
+            "label": "enables"
+          },
+          {
+            "id": "ch02_e03",
+            "from": "ch02_t01_c01",
+            "to": "ch02_t02_c01",
+            "label": "raises"
+          },
+          {
+            "id": "ch02_e04",
+            "from": "ch02_t02_c01",
+            "to": "ch02_t02_c02",
+            "label": "solved by"
+          },
+          {
+            "id": "ch02_e05",
+            "from": "ch02_t02_c01",
+            "to": "ch02_t02_c03",
+            "label": "solved by"
+          },
+          {
+            "id": "ch02_e06",
+            "from": "ch02_t02_c03",
+            "to": "ch02_pivot_props",
+            "label": "enables"
+          },
+          {
+            "id": "ch02_e07",
+            "from": "ch02_pivot_props",
+            "to": "ch02_t03_c01",
+            "label": "includes"
+          },
+          {
+            "id": "ch02_e08",
+            "from": "ch02_pivot_props",
+            "to": "ch02_t03_c02",
+            "label": "includes"
+          },
+          {
+            "id": "ch02_e09",
+            "from": "ch02_t02_c02",
+            "to": "ch02_t04_c01",
+            "label": "manipulated by"
+          },
+          {
+            "id": "ch02_e10",
+            "from": "ch02_pivot_props",
+            "to": "ch02_t04_c02",
+            "label": "includes"
+          },
+          {
+            "id": "ch02_e11",
+            "from": "ch01:ch01_t02_c01",
+            "to": "ch02_t01_c02",
+            "label": "place-value sums"
+          }
+        ]
+      }
     }
   ]
 }
