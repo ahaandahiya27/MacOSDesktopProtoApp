@@ -2856,4 +2856,102 @@ All checks pass cleanly:
 
 Nothing else needed. Stopping here.
 
+## Session: 2026-05-26 (10-hour autonomous block round 4) — Test infra + visible UX adds + Ch.2 split
+
+### Goal
+
+Four blocks targeting four different value categories: close a
+test-isolation gap, ship two visible UX adds the kid will see
+the moment they enter the science subject, and do the largest
+file-size split yet (Ch.2 dispatcher).
+
+### Commits this 10-hour block
+
+- `cef9a50` Block A — **DataStore.init injection**. Adds
+  `storeDir: URL? = nil` and `autoLoad: Bool = true` parameters
+  to `DataStore.init`. Closes the test-coverage gap from commit
+  173f9e7 — `ArticleReadStateTests` restored with 4 cases, each
+  using a UUID-suffixed temp directory + autoLoad: false so the
+  off-thread JSON load can't race setUp(). Ship-code defaults
+  unchanged.
+- `cdadca7` Block B — **StreakBadge on ChapterListView**.
+  "🔥 N-day streak" chip surfaced above the Daily Question card,
+  reading the streak state already tracked by
+  `DataStore.creditReviewStreak`. Visibility predicate
+  (`shouldShow`) is a pure static function tested across 6
+  cases. Kid sees streak the moment they enter Science, no
+  drill into Mastery needed.
+- `5f83b8a` Block C — **"I understand this" concept tracking**.
+  New `DataStore.understoodConceptIds` set + four helpers in a
+  sister file (`+ConceptUnderstood.swift`). ⌘U toolbar button
+  on `ConceptDetailView`; `ChapterRow` swaps the "N concepts"
+  pill for "N/M understood" (green thumbs-up) when the count
+  is > 0. Tested with 5 cases, including a prefix-guard test
+  that catches the `ch01_` vs `ch10_`/`ch11_` overlap.
+- `844d6ec` Block D — **DiscoverChapter2View split**. Largest
+  scene-split yet (965 → 600 LOC parent, 372 LOC sister). 4
+  scenes + WindowFoodCard lifted. File-size allowlist shrinks
+  5 → 4.
+- THIS COMMIT (Block E) — final consolidation entry.
+
+### Final state at the end of this block
+
+| Metric | Block start | Block end |
+|---|---|---|
+| Test classes (matrix/ratchet) | 14 | **17** (+ArticleReadState, +StreakBadge, +ConceptUnderstood) |
+| Total ratchet test cases | 52 | **67** (+15) |
+| User-facing chapter-list surfaces | 3 (Continue + Daily + All) | **4** (+ Streak badge) |
+| ConceptDetailView toolbar items | 3 (Bookmark + Prev + Next) | **4** (+ Understood) |
+| Per-concept state surfaces | 0 | **1** (understood count in ChapterRow) |
+| File-size allowlist entries | 5 | **4** (-1, Ch.2 split) |
+| DataStore inject points | streakCalendar only | **+storeDir + autoLoad** (test isolation) |
+
+### Reusable patterns this block proved
+
+- **`autoLoad: Bool` flag for racy initializers** — the
+  off-thread `loadAllOffThread` was poisoning any test that
+  reset @Published state in setUp(). The 3-line change to
+  guard `Task.detached` behind a default-true flag unblocked
+  a whole class of unit tests. Same pattern applies to any
+  init that kicks off async work on init.
+- **`@AppStorage` reading via static predicate** — `StreakBadge`
+  hides itself when the streak state is "stale" (lastDate too
+  old). The `shouldShow(streakDays:lastDate:today:)` static
+  helper lets tests pin the predicate without mounting SwiftUI.
+  Same shape as `DailyQuestionPicker.pick(for:on:)` from the
+  previous block — pure data → bool/value.
+- **Chapter-prefix tracking for per-chapter aggregates** —
+  `understoodCount(forChapterId:)` filters by
+  `"\(chapterId)_"` prefix (including the underscore to avoid
+  `ch01_` matching `ch10_`). The prefix guard is testable
+  explicitly. Future per-chapter signals (e.g. per-chapter
+  read-article count) should follow this shape.
+
+### Build / tests / lints
+
+- All 5 commits pushed cleanly. CI green on every push.
+- All 9 lints clean.
+- LH grandfather count steady at 3 (3 LH004b lifetime, 0 lh005
+  withAnimation).
+- file_size_allowlist: 4 grandfathered (was 5 at block start).
+
+### Notes for future sessions
+
+- The 4 remaining file-size-grandfathered files (DataStore.swift
+  at 760, QuestionDetailView at 1096, DiscoverChapter1View+InlineScenes
+  at 1399, ArticleIndex.swift at 1680) all need either
+  multi-section lifts or careful body-flattening. None can be
+  closed with a single 2-scene scene-lift.
+- The new `understoodConceptIds` set is independent from SM-2
+  reviews and bookmarks — three orthogonal user-progress
+  signals now coexist. If a future "Reset progress" command is
+  added, it must clear all three.
+- The Ch.2 split was the riskiest scene-lift so far (4 scenes
+  + a helper). It worked because the lifted scenes had no
+  references back to the parent dispatcher beyond the same
+  `DesignTokens` / `GotItButton` / `SoftShadowCard` that
+  module-internal sister files already have access to. Other
+  similarly-large dispatchers (Ch.4 inline scenes file at
+  1399 LOC) might not have such clean cut-lines.
+
 
