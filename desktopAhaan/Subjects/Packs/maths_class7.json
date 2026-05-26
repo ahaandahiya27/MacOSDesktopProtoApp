@@ -6330,6 +6330,1151 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch05",
+      "number": 5,
+      "title": "Parallel and Intersecting Lines",
+      "summary": "Fold a sheet of paper and the creases make lines — some cross, some never will. This chapter studies lines on a flat surface: when two lines intersect they make four angles (with vertically-opposite ones equal); perpendicular lines cross at 90°; parallel lines never meet; and a transversal crossing two parallel lines creates equal corresponding and alternate angles. These angle facts are the toolkit for all of geometry.",
+      "topics": [
+        {
+          "id": "ch05_t01",
+          "title": "Intersecting Lines & Vertically Opposite Angles",
+          "summary": "When two lines cross at a point, four angles form. Opposite angles (vertically opposite) are always equal, and angles side by side on a straight line (a linear pair) add to 180°.",
+          "concepts": [
+            {
+              "id": "ch05_t01_c01",
+              "title": "Intersecting lines and the four angles",
+              "explanations": {
+                "oneLine": "Two lines that meet at a point intersect there, forming four angles around the crossing point.",
+                "kidFriendly": "Draw two straight lines that cross. They meet at exactly one point — that's what 'intersect' means. Around that crossing point, four angles appear, like four slices of a pie. Label them a, b, c, d going round. Two straight lines can only ever cross at ONE point (if they crossed at two, they'd have to be the same line). The four angles aren't independent: opposite ones are equal, and neighbours add up along the straight line. Understanding these four angles is the starting point for all line geometry.",
+                "textbook": "When two distinct straight lines meet, they intersect at exactly one point, forming four angles around that point. Two distinct lines cannot intersect at more than one point. The four angles come in two pairs of vertically opposite (equal) angles, and adjacent angles form linear pairs summing to 180°.",
+                "expert": "Two distinct lines in the Euclidean plane intersect in at most one point (a consequence of the axiom that two points determine a unique line). At an intersection, the four angles partition the 360° around the point; opposite angles are congruent and adjacent angles are supplementary, properties that follow directly from the straight-angle (180°) measure of each line through the point."
+              },
+              "reasoning": "Two straight lines are each perfectly straight, so once they touch at a point they immediately separate — they can't bend back to touch again. At that single meeting point, the two lines cut the full turn (360°) around it into four angles.",
+              "useCases": [
+                {
+                  "title": "Scissors",
+                  "description": "The two blades of open scissors are intersecting lines; the angle between them is one of the four.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Road crossing",
+                  "description": "Two straight roads meeting form a crossroads with four corner angles.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Clock hands",
+                  "description": "At most times the hour and minute hands intersect at the centre, forming four angles.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The fact that two straight lines meet at most once is so basic it's almost invisible — but it's a defining property of 'straight' and of flat (Euclidean) space. On a curved surface like a globe, two 'straight' lines (great circles) can meet at TWO points, which is why spherical geometry behaves so differently.",
+              "mnemonic": "Two straight lines cross at one point and make four angles around it.",
+              "predictQuestion": "When two straight lines cross, how many angles are formed at the crossing point, and can the lines cross at more than one point?",
+              "whyChain": [
+                "A straight line never bends. So once two straight lines touch at a point, they each continue straight onward and apart — there's no way for them to curve back and meet a second time. Two distinct straight lines therefore intersect at exactly one point (or never, if parallel).",
+                "At that single crossing point, the two lines slice the full 360° turn around the point into four angles. Going around, you meet them in order — call them a, b, c, d. They sit in two opposite pairs.",
+                "These four angles are the atoms of line geometry. Every later fact — vertically opposite angles being equal, linear pairs summing to 180°, the angle rules for parallel lines and transversals — is built on understanding this simple four-angle crossing. Get this picture firm and the rest follows."
+              ],
+              "relatedConceptIds": [
+                "ch05_t01_c02",
+                "ch05_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t01_q01"
+              ],
+              "pageRefs": [
+                107
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t01_c02",
+              "title": "Vertically opposite angles and linear pairs",
+              "explanations": {
+                "oneLine": "When two lines cross, the angles directly opposite each other are equal (vertically opposite), and any two adjacent angles add up to 180° (a linear pair).",
+                "kidFriendly": "At a crossing, label the four angles a, b, c, d in order around the point. Angle a and angle c sit directly across from each other — they're vertically opposite, and they're ALWAYS equal. Same for b and d. Why? Because a and b together lie along one straight line, so a + b = 180° (a 'linear pair'). And b + c = 180° too. If a + b = 180° and b + c = 180°, then a = c. So if ∠a = 120°, then ∠c = 120°, and ∠b = ∠d = 60°. Two facts: vertically opposite angles equal; linear pairs sum to 180°.",
+                "textbook": "Vertically opposite angles (the two angles in each opposite pair at an intersection) are equal. Adjacent angles on a straight line form a linear pair and sum to 180° (supplementary). The equality of vertically opposite angles is proved from the linear-pair relation: if ∠a + ∠b = 180° and ∠b + ∠c = 180°, then ∠a = ∠c. Knowing one of the four angles determines all four.",
+                "expert": "The straight angle along each line measures 180°, making adjacent angles supplementary; subtracting the shared adjacent angle from both straight angles yields congruence of the opposite pair. This is the prototypical 'angle chase' — deducing unknown angles from a small set of equalities and supplementary relations — and underlies all Euclidean angle reasoning."
+              },
+              "reasoning": "Each line is a straight angle of 180°, so the two angles sitting on one side of it must add to 180°. Two different linear pairs share a common angle; cancelling it forces the opposite angles to be equal.",
+              "useCases": [
+                {
+                  "title": "Railway crossing",
+                  "description": "An X-shaped level crossing: the two 'across' angles are equal, the two 'up-down' angles are equal.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Open scissors",
+                  "description": "Tightening scissors changes one angle but the opposite angle changes identically.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Folding chair X-frame",
+                  "description": "The X-brace of a folding chair shows vertically opposite angles staying equal as it folds.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "The vertically-opposite-angles proof is many students' first taste of a real geometric ARGUMENT — deriving a fact (a = c) from other facts, rather than measuring. This 'angle chasing' skill is exactly what's needed for the parallel-line rules later in this chapter and for triangle proofs in the next.",
+              "mnemonic": "Opposite angles equal; neighbours add to 180°. One angle fixes all four.",
+              "predictQuestion": "Two lines cross and one of the four angles is 120°. What are the other three angles?",
+              "whyChain": [
+                "Each straight line is a 180° straight angle. So two angles sitting next to each other along one line — a 'linear pair' — must add to 180°. If one is 120°, its neighbour is 60°.",
+                "Now look at the opposite angle. It forms a linear pair with that same 60° neighbour, so it too must be 180° − 60° = 120°. The two opposite angles are both 120°; the other two are both 60°. In general, vertically opposite angles are always equal.",
+                "This is a tiny proof, not a measurement: from 'each line is 180°' we DEDUCED that opposite angles match and one known angle fixes all four. That deductive move — chaining linear-pair and equality facts to find unknown angles — is the core skill of geometry, and you'll use it for transversals, triangles, and beyond."
+              ],
+              "relatedConceptIds": [
+                "ch05_t01_c01",
+                "ch05_t03_c02",
+                "ch05_t04_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t01_q02",
+                "ch05_t01_q03"
+              ],
+              "pageRefs": [
+                107,
+                108
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch05_t01_q01",
+              "prompt": "Can two distinct straight lines intersect at more than one point? Explain.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No — two distinct straight lines intersect at most at one point.",
+              "solutionSteps": [
+                "A straight line doesn't bend.",
+                "If two straight lines met at two points, both points would lie on both lines — but only one straight line passes through two given points.",
+                "So they'd have to be the same line. Distinct lines meet at most once."
+              ],
+              "commonMistakes": [
+                "Confusing with curves, which can cross multiple times.",
+                "Forgetting that 'two points determine a line'."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many angles form when two lines intersect?",
+                  "answer": "Four.",
+                  "solutionSteps": [
+                    "The crossing splits the 360° around the point into 4 angles."
+                  ]
+                },
+                {
+                  "prompt": "Can two distinct lines fail to meet at all?",
+                  "answer": "Yes — if they are parallel.",
+                  "solutionSteps": [
+                    "Parallel lines never intersect."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                107
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t01_q02",
+              "prompt": "Two lines intersect and one angle measures 120°. Find the other three angles.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "120°, 60°, 60°.",
+              "solutionSteps": [
+                "The vertically opposite angle to the 120° angle is also 120°.",
+                "Each adjacent angle forms a linear pair: 180° − 120° = 60°.",
+                "So the angles are 120°, 60°, 120°, 60°."
+              ],
+              "commonMistakes": [
+                "Saying all four are 120°.",
+                "Computing 360 − 120 = 240 for a single neighbour instead of 180 − 120."
+              ],
+              "variations": [
+                {
+                  "prompt": "One angle is 90°. The others?",
+                  "answer": "All 90° (perpendicular lines).",
+                  "solutionSteps": [
+                    "90° → opposite 90°, linear pairs 180−90 = 90 each."
+                  ]
+                },
+                {
+                  "prompt": "One angle is 35°. The others?",
+                  "answer": "35°, 145°, 145°.",
+                  "solutionSteps": [
+                    "Opposite 35°; linear pairs 180−35 = 145°."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                108
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t01_q03",
+              "prompt": "Prove that vertically opposite angles are equal, using the linear-pair idea.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Let the four angles in order be a, b, c, d. a + b = 180° (linear pair) and b + c = 180° (linear pair). Subtracting, a = c. Similarly b = d.",
+              "solutionSteps": [
+                "a and b lie on one straight line: a + b = 180°.",
+                "b and c lie on the other straight line: b + c = 180°.",
+                "Both equal 180°, so a + b = b + c.",
+                "Subtract b from both sides: a = c. The opposite angles are equal."
+              ],
+              "commonMistakes": [
+                "Measuring instead of arguing.",
+                "Mixing up which pairs are linear pairs."
+              ],
+              "variations": [
+                {
+                  "prompt": "If a + b = 180 and b = 70, find a.",
+                  "answer": "110°",
+                  "solutionSteps": [
+                    "a = 180 − 70 = 110."
+                  ]
+                },
+                {
+                  "prompt": "Why must b = d as well?",
+                  "answer": "Same argument: a+b=180 and a+d=180 give b=d.",
+                  "solutionSteps": [
+                    "Both linear pairs with a, so b = d."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                108
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch05_t02",
+          "title": "Perpendicular and Parallel Lines",
+          "summary": "If two crossing lines make all four angles equal, each must be 90° — the lines are perpendicular. Lines that never meet, no matter how far extended, are parallel. The opposite edges of a sheet of paper are parallel; adjacent edges are perpendicular.",
+          "concepts": [
+            {
+              "id": "ch05_t02_c01",
+              "title": "Perpendicular lines",
+              "explanations": {
+                "oneLine": "Perpendicular lines intersect at right angles — all four angles at the crossing are 90°.",
+                "kidFriendly": "Can two crossing lines make all four angles equal? If they do, the four must add to 360° and be equal, so each is 360 ÷ 4 = 90°. Lines that cross at 90° are perpendicular. The corner of a page, the meeting of a wall and floor, the cross of a plus sign — all perpendicular. We write l ⊥ m. Perpendicularity is the special, most-balanced way two lines can cross: every one of the four angles is a right angle.",
+                "textbook": "Perpendicular lines are two lines that intersect at right angles (90°). If two intersecting lines form four equal angles, each angle is 90° (since the four angles sum to 360° and 360 ÷ 4 = 90). The relation is written l ⊥ m. Adjacent edges of a rectangle and the axes of a coordinate grid are perpendicular.",
+                "expert": "Perpendicularity is orthogonality in the Euclidean plane: two lines whose direction vectors have zero dot product. The right angle (90°) is the unique angle equal to its own supplement's complement structure, making it the natural reference for measuring inclination. Orthogonal frames underpin Cartesian coordinates, distance (Pythagoras), and projection."
+              },
+              "reasoning": "If all four angles at a crossing are equal, they must each be a quarter of the full 360° turn, which is 90°. That balanced crossing is what 'perpendicular' means.",
+              "useCases": [
+                {
+                  "title": "Page corner",
+                  "description": "The two edges meeting at a page corner are perpendicular — a right angle.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Wall and floor",
+                  "description": "A wall meets the floor at 90° — perpendicular surfaces.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Plus sign / graph axes",
+                  "description": "The x and y axes of a graph cross perpendicularly.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "The right angle is so fundamental that builders use the '3-4-5 rule' (a triangle with sides 3, 4, 5 has a right angle) to lay out perpendicular walls without a protractor. Perpendicularity is the basis of the entire coordinate-geometry system you'll use in later grades.",
+              "mnemonic": "All four angles equal ⇒ each is 90° ⇒ the lines are perpendicular.",
+              "predictQuestion": "If two intersecting lines make all four angles equal, what is each angle — and what do we call such lines?",
+              "whyChain": [
+                "The four angles at any crossing always add up to 360° (a full turn). If the problem also says all four are EQUAL, then each must be exactly one quarter of 360°.",
+                "360 ÷ 4 = 90°. So every one of the four angles is a right angle, and lines that meet this way are called perpendicular (written l ⊥ m). It's the most symmetric possible crossing — no angle is bigger or smaller than another.",
+                "Perpendicularity is everywhere and deeply useful: page corners, wall-floor joins, the x–y axes of graphs. Builders even check it with the 3-4-5 triangle trick. The right angle is the reference against which all other angles (acute, obtuse) are measured, which is why this special crossing gets its own name and symbol."
+              ],
+              "relatedConceptIds": [
+                "ch05_t01_c02",
+                "ch05_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t02_q01"
+              ],
+              "pageRefs": [
+                108
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_c02",
+              "title": "Parallel lines",
+              "explanations": {
+                "oneLine": "Parallel lines are lines in the same plane that never meet, no matter how far they are extended.",
+                "kidFriendly": "Fold a sheet of paper in half and the crease runs parallel to the opposite edge — they'd never touch even if extended forever. Parallel lines are lines on the same flat surface that never meet. Railway tracks, opposite edges of a ruler, the lines of a notebook — all parallel. We write l ∥ m. The opposite edges of a square sheet are parallel; the adjacent edges are perpendicular. Parallel lines stay exactly the same distance apart everywhere along their length.",
+                "textbook": "Parallel lines are coplanar lines that do not intersect however far extended; equivalently, they maintain a constant perpendicular distance. The relation is written l ∥ m. In paper folding, repeated halving folds create families of parallel creases. Opposite edges of a rectangle are parallel; adjacent edges are perpendicular.",
+                "expert": "Parallelism is the equivalence relation 'same direction' on lines in the affine plane; parallel lines have equal slope and never meet (their intersection is the point at infinity in projective terms). Euclid's parallel postulate — that through a point not on a line there is exactly one parallel — distinguishes Euclidean geometry from non-Euclidean geometries where this fails."
+              },
+              "reasoning": "If two lines point in exactly the same direction and start apart, they stay apart forever — neither ever turns toward the other, so they never close the gap. That 'never meeting' is parallelism.",
+              "useCases": [
+                {
+                  "title": "Railway tracks",
+                  "description": "The two rails stay a fixed distance apart and never meet — parallel.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Notebook lines",
+                  "description": "Ruled lines on a page are parallel, keeping writing straight.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Opposite edges of a ruler",
+                  "description": "A ruler's two long edges are parallel; you can draw parallel lines with them.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Whether parallel lines truly never meet was one of the deepest questions in mathematics. Euclid assumed it (the 'parallel postulate'); 2000 years later, mathematicians discovered consistent geometries where it FAILS — on a sphere, all 'straight lines' eventually meet. Einstein's relativity even uses such curved geometry for space-time. Parallelism is far more profound than it first appears.",
+              "mnemonic": "Same direction, always apart, never meet. That's parallel (l ∥ m).",
+              "predictQuestion": "The opposite edges of a square sheet of paper — do they ever meet if extended forever? What is this relationship called?",
+              "whyChain": [
+                "The opposite edges of a square sheet point in exactly the same direction and start a fixed distance apart. Since neither edge ever turns toward the other, the gap between them never shrinks — extended forever, they would still never touch.",
+                "Lines that behave this way — coplanar and never meeting — are called parallel (written l ∥ m). They stay the same distance apart everywhere. (The ADJACENT edges of the sheet, by contrast, meet at the corners at 90°, so they're perpendicular, not parallel.)",
+                "Parallelism looks obvious but hides one of mathematics' deepest ideas. Euclid had to ASSUME parallel lines never meet (the parallel postulate); centuries later, mathematicians found valid geometries — like the surface of a sphere — where 'straight lines' always eventually cross. So 'never meeting' is a special feature of flat space, not a universal truth."
+              ],
+              "relatedConceptIds": [
+                "ch05_t02_c01",
+                "ch05_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t02_q02"
+              ],
+              "pageRefs": [
+                110,
+                111
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch05_t02_q01",
+              "prompt": "Two lines intersect so that all four angles are equal. What is each angle, and what are such lines called?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Each angle is 90°; the lines are perpendicular.",
+              "solutionSteps": [
+                "The four angles sum to 360°.",
+                "If all equal: each = 360 ÷ 4 = 90°.",
+                "Lines meeting at 90° are perpendicular."
+              ],
+              "commonMistakes": [
+                "Saying each is 360° or 180°.",
+                "Calling them parallel (parallel lines don't intersect at all)."
+              ],
+              "variations": [
+                {
+                  "prompt": "If two lines are perpendicular, what is the angle between them?",
+                  "answer": "90°",
+                  "solutionSteps": [
+                    "Perpendicular means right-angled."
+                  ]
+                },
+                {
+                  "prompt": "Are the adjacent edges of a notebook perpendicular or parallel?",
+                  "answer": "Perpendicular",
+                  "solutionSteps": [
+                    "They meet at a right-angled corner."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                108
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t02_q02",
+              "prompt": "Describe the relationship between (a) opposite edges and (b) adjacent edges of a rectangular sheet of paper.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "(a) Opposite edges are parallel (never meet). (b) Adjacent edges are perpendicular (meet at 90°).",
+              "solutionSteps": [
+                "Opposite edges run the same direction, fixed distance apart → parallel.",
+                "Adjacent edges meet at the corner at a right angle → perpendicular."
+              ],
+              "commonMistakes": [
+                "Calling opposite edges perpendicular.",
+                "Thinking adjacent edges are parallel."
+              ],
+              "variations": [
+                {
+                  "prompt": "Are railway tracks parallel or perpendicular?",
+                  "answer": "Parallel",
+                  "solutionSteps": [
+                    "They never meet."
+                  ]
+                },
+                {
+                  "prompt": "The x-axis and y-axis of a graph are…?",
+                  "answer": "Perpendicular",
+                  "solutionSteps": [
+                    "They cross at 90°."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                110,
+                111
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch05_t03",
+          "title": "Transversals & Corresponding Angles",
+          "summary": "A transversal is one line that crosses two others, forming 8 angles. When the two lines are parallel, the transversal creates equal corresponding angles — angles in matching positions at each crossing (like ∠1 and ∠5).",
+          "concepts": [
+            {
+              "id": "ch05_t03_c01",
+              "title": "Transversals — one line crossing two",
+              "explanations": {
+                "oneLine": "A transversal is a line that crosses two (or more) other lines, forming 8 angles in total.",
+                "kidFriendly": "We've seen two lines crossing. Now let one line cut across TWO other lines — that crossing line is a transversal. Where the transversal meets each of the two lines, 4 angles form, so 8 angles in total. Even though there are 8 angles, there aren't 8 different sizes: vertically-opposite pairs at each crossing cut it down to at most 4 distinct measures. The transversal sets up a rich pattern of angle relationships — and when the two crossed lines are parallel, that pattern becomes especially neat.",
+                "textbook": "A transversal is a line intersecting two or more lines at distinct points. Crossing two lines, it forms 8 angles (4 at each intersection). Because vertically opposite angles are equal at each crossing, there are at most 4 distinct angle measures among the 8. The configuration is the basis for corresponding-angle and alternate-angle relationships.",
+                "expert": "A transversal of two lines induces two local angle systems linked by the transversal's direction. With 8 angles constrained by 2 sets of vertical-angle equalities (and linear pairs), the degrees of freedom collapse: generically 2 distinct values, and exactly 2 when the cut lines are parallel. This configuration is the engine of the parallel-postulate-equivalent angle theorems."
+              },
+              "reasoning": "Each place the transversal crosses a line makes 4 angles, and there are two crossings, so 8 angles. But opposite angles at each crossing are equal, so the 8 angles really only take a few distinct sizes.",
+              "useCases": [
+                {
+                  "title": "Ladder against rungs",
+                  "description": "A ladder's side rail crossing its rungs acts like a transversal across parallel rungs.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Zebra crossing",
+                  "description": "A road edge crossing the parallel white stripes is a transversal.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Railway sleepers",
+                  "description": "A rail (transversal) crosses the parallel wooden sleepers, making equal angles.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "The word 'transversal' literally means 'crossing over'. This single configuration — one line cutting two parallel lines — is the source of nearly every angle theorem in school geometry, and the reason you can determine many unknown angles in a figure from just one given angle.",
+              "mnemonic": "Transversal = one line crossing two. It makes 8 angles, at most 4 distinct sizes.",
+              "predictQuestion": "When one line (a transversal) crosses two other lines, how many angles are formed in total?",
+              "whyChain": [
+                "Each time the transversal crosses one of the two lines, it creates a four-angle intersection — exactly like any two lines crossing. There are two such crossings (one per line), so 4 + 4 = 8 angles in all.",
+                "But these 8 angles aren't 8 independent sizes. At each crossing, vertically opposite angles are equal and adjacent ones are supplementary, so each crossing really has only two distinct sizes. Across both crossings, that's at most 4 distinct measures among the 8 angles.",
+                "This constrained pattern is the whole point of studying transversals. When the two crossed lines happen to be parallel, the pattern tightens even further — corresponding angles become equal, alternate angles become equal — letting you find every one of the 8 angles from a single given one."
+              ],
+              "relatedConceptIds": [
+                "ch05_t01_c02",
+                "ch05_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t03_q01"
+              ],
+              "pageRefs": [
+                112
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t03_c02",
+              "title": "Corresponding angles",
+              "explanations": {
+                "oneLine": "Corresponding angles sit in matching positions at the two crossings of a transversal; when the two lines are parallel, corresponding angles are equal.",
+                "kidFriendly": "When a transversal cuts two lines, each crossing has angles in the same four positions (top-left, top-right, etc.). An angle at the first crossing and the angle in the SAME position at the second crossing are corresponding angles — like ∠1 and ∠5. The big fact: when the two crossed lines are PARALLEL, corresponding angles are equal. So if ∠1 = 70° and the lines are parallel, ∠5 = 70° too. This is the key that unlocks every other parallel-line angle relationship.",
+                "textbook": "Corresponding angles are pairs of angles occupying the same relative position at each of the two intersections made by a transversal (e.g., ∠1 & ∠5, ∠2 & ∠6, ∠3 & ∠7, ∠4 & ∠8). When the two lines cut by the transversal are parallel, each pair of corresponding angles is equal. This corresponding-angles postulate (equivalent to Euclid's parallel postulate) is the foundation for deriving alternate-angle and co-interior-angle results.",
+                "expert": "The equality of corresponding angles under parallelism is logically equivalent to Euclid's parallel postulate; it cannot be proved from the other axioms and serves as the geometric definition of parallel-preserving angle structure. All other transversal-angle theorems (alternate, co-interior) are derived from it together with vertical-angle equality."
+              },
+              "reasoning": "If two lines are parallel, they have the same direction, so the transversal meets each at the same inclination. Same inclination means the angle in each matching position is the same — corresponding angles are equal.",
+              "useCases": [
+                {
+                  "title": "Zebra-crossing stripes",
+                  "description": "A road edge crossing parallel stripes makes equal corresponding angles at each stripe.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Railing balusters",
+                  "description": "A sloped handrail crossing vertical balusters makes equal corresponding angles.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Map grid",
+                  "description": "A diagonal road crossing parallel grid lines cuts equal corresponding angles.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "The corresponding-angles fact is what lets surveyors and builders check that two lines are parallel WITHOUT extending them to infinity: just cross them with a transversal and measure two corresponding angles. If equal, the lines are parallel. It turns an impossible test (do they meet at infinity?) into a simple local measurement.",
+              "mnemonic": "Same position at each crossing = corresponding. Parallel lines ⇒ corresponding angles equal.",
+              "predictQuestion": "A transversal cuts two parallel lines, and ∠1 (at the first crossing) is 70°. What is the corresponding angle ∠5 at the second crossing?",
+              "whyChain": [
+                "Corresponding angles are the ones in matching positions at the two crossings — ∠1 at the first line and ∠5 in the exact same spot at the second line. They're defined purely by position.",
+                "When the two crossed lines are parallel, they share the same direction, so the transversal meets each line at the same tilt. That identical tilt forces the matching-position angles to be equal: ∠5 = ∠1 = 70°.",
+                "This corresponding-angles fact is the master key of parallel-line geometry — it's actually equivalent to Euclid's famous parallel postulate. Every other rule (alternate angles equal, co-interior angles summing to 180°) is derived from it plus the vertically-opposite-angles fact. It even gives builders a practical parallelism test: cross two lines with a transversal, measure two corresponding angles, and if they're equal the lines are parallel."
+              ],
+              "relatedConceptIds": [
+                "ch05_t03_c01",
+                "ch05_t04_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t03_q02"
+              ],
+              "pageRefs": [
+                112,
+                113
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch05_t03_q01",
+              "prompt": "A transversal crosses two lines. How many angles are formed, and how many distinct measures can there be at most?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "8 angles; at most 4 distinct measures.",
+              "solutionSteps": [
+                "Each crossing forms 4 angles; two crossings → 8 angles.",
+                "Vertically opposite angles are equal at each crossing, halving the distinct sizes per crossing to 2.",
+                "So at most 2 + 2 = 4 distinct measures overall."
+              ],
+              "commonMistakes": [
+                "Saying 8 distinct measures (ignores vertical-angle equality).",
+                "Saying only 4 angles (forgetting the second crossing)."
+              ],
+              "variations": [
+                {
+                  "prompt": "If the two lines are parallel, how many distinct angle measures appear?",
+                  "answer": "Exactly 2.",
+                  "solutionSteps": [
+                    "Corresponding/alternate equalities collapse the 4 to 2."
+                  ]
+                },
+                {
+                  "prompt": "How many pairs of vertically opposite angles among the 8?",
+                  "answer": "Four pairs.",
+                  "solutionSteps": [
+                    "Two pairs at each of the two crossings."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                112
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t03_q02",
+              "prompt": "A transversal cuts two parallel lines. If a corresponding angle at the first line is 70°, what is the matching corresponding angle at the second line? Why?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "70°, because corresponding angles are equal when the lines are parallel.",
+              "solutionSteps": [
+                "Corresponding angles are in matching positions at the two crossings.",
+                "Parallel lines + transversal ⇒ corresponding angles equal.",
+                "So the matching angle is also 70°."
+              ],
+              "commonMistakes": [
+                "Computing 180 − 70 = 110 (that would be a co-interior or linear-pair angle, not corresponding).",
+                "Assuming equality even when the lines aren't parallel."
+              ],
+              "variations": [
+                {
+                  "prompt": "Corresponding angle of a 125° angle across parallel lines?",
+                  "answer": "125°",
+                  "solutionSteps": [
+                    "Corresponding angles equal."
+                  ]
+                },
+                {
+                  "prompt": "If corresponding angles measured 60° and 70°, are the lines parallel?",
+                  "answer": "No — unequal corresponding angles mean the lines are not parallel.",
+                  "solutionSteps": [
+                    "Equality is required for parallelism."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                113
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch05_t04",
+          "title": "Alternate Angles",
+          "summary": "Alternate angles sit on opposite sides of the transversal, between the two lines. They're equal when the lines are parallel — and you can prove it by combining the corresponding-angle fact with the vertically-opposite-angle fact, no measuring needed.",
+          "concepts": [
+            {
+              "id": "ch05_t04_c01",
+              "title": "Alternate angles and their justification",
+              "explanations": {
+                "oneLine": "Alternate angles lie on opposite sides of the transversal between the two lines; when the lines are parallel they are equal, provable from corresponding + vertically-opposite angles.",
+                "kidFriendly": "When a transversal crosses two parallel lines, alternate angles are the ones on OPPOSITE sides of the transversal, in the space between the two lines (like ∠d and ∠f). They're equal — and the beautiful part is we can PROVE it without measuring. Take ∠f. Its corresponding angle is ∠b (equal, because the lines are parallel). And ∠b's vertically opposite angle is ∠d (equal, always). So ∠f = ∠b = ∠d. Therefore alternate angles ∠f and ∠d are equal. Two known facts chained together prove a new one — that's geometry.",
+                "textbook": "Alternate angles are pairs on opposite sides of the transversal and between the two lines. When the lines are parallel, alternate angles are equal. Proof: for alternate angles ∠f and ∠d, the corresponding angle of ∠f is ∠b (equal, by the corresponding-angles property for parallel lines), and ∠b is vertically opposite ∠d (hence equal). Therefore ∠f = ∠b = ∠d, so ∠f = ∠d, independent of the actual measure.",
+                "expert": "The alternate-angles theorem is derived, not postulated: it follows from the corresponding-angles postulate composed with the vertical-angles theorem. This derivation is the canonical example of a two-step deductive proof in school geometry and demonstrates the logical architecture — a small set of postulates generating a web of theorems via angle chasing."
+              },
+              "reasoning": "An alternate angle equals a corresponding angle (because the lines are parallel) which equals a vertically-opposite angle (always). Chaining 'equal to' twice means the two ends are equal — so alternate angles match, with no ruler required.",
+              "useCases": [
+                {
+                  "title": "Z-shape in letters",
+                  "description": "Alternate angles form the matching corners of a 'Z' — the parallel strokes cut by the diagonal.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Staircase stringers",
+                  "description": "A diagonal stair stringer crossing parallel steps makes equal alternate angles.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Folded ribbon",
+                  "description": "A ribbon folded over itself shows equal alternate angles at the fold.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Spotting alternate angles as the 'Z' pattern (and corresponding angles as the 'F' pattern) is a classic memory aid. But the real lesson is the PROOF: deriving ∠f = ∠d by chaining two known equalities is your first multi-step geometric argument — the same reasoning style used throughout the triangle chapter and all later geometry.",
+              "mnemonic": "Alternate angles = the 'Z' pattern. Equal because corresponding-angle = vertically-opposite-angle, chained.",
+              "predictQuestion": "A transversal crosses two parallel lines. Alternate angle ∠f is 120°. Using corresponding and vertically-opposite angles (no protractor), find its alternate angle ∠d.",
+              "whyChain": [
+                "Start with ∠f = 120°. Its corresponding angle ∠b is equal to it, because the two lines are parallel — that's the corresponding-angles fact. So ∠b = 120°.",
+                "Now ∠b and ∠d are vertically opposite angles at the same crossing, so they're equal regardless of anything — ∠d = ∠b = 120°.",
+                "Chaining the two equalities: ∠f = ∠b = ∠d, therefore ∠f = ∠d = 120°. We've shown alternate angles are equal WITHOUT measuring ∠d — purely by combining the corresponding-angles fact with the vertically-opposite-angles fact. That two-step deduction is exactly how geometry builds new truths from old ones."
+              ],
+              "relatedConceptIds": [
+                "ch05_t03_c02",
+                "ch05_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t04_q01",
+                "ch05_t04_q02"
+              ],
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch05_t04_q01",
+              "prompt": "A transversal cuts two parallel lines. Alternate angle ∠f = 120°. Find the alternate angle ∠d, justifying each step.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "120°. ∠f = ∠b (corresponding, parallel lines) and ∠b = ∠d (vertically opposite), so ∠f = ∠d = 120°.",
+              "solutionSteps": [
+                "∠b is the corresponding angle of ∠f → ∠b = 120° (lines parallel).",
+                "∠d is vertically opposite ∠b → ∠d = 120°.",
+                "Therefore ∠f = ∠d = 120°."
+              ],
+              "commonMistakes": [
+                "Computing 180 − 120 = 60 (that's a co-interior angle, not alternate).",
+                "Asserting equality without the parallel condition."
+              ],
+              "variations": [
+                {
+                  "prompt": "Alternate angle of a 75° angle across parallel lines?",
+                  "answer": "75°",
+                  "solutionSteps": [
+                    "Alternate angles equal when parallel."
+                  ]
+                },
+                {
+                  "prompt": "If alternate angles are 50° and 130°, are the lines parallel?",
+                  "answer": "No.",
+                  "solutionSteps": [
+                    "Alternate angles must be equal for parallelism."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t04_q02",
+              "prompt": "A transversal cuts two parallel lines. One angle is 65°. Find a corresponding angle, an alternate angle, and a co-interior (same-side interior) angle to it.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Corresponding: 65°. Alternate: 65°. Co-interior: 180 − 65 = 115°.",
+              "solutionSteps": [
+                "Corresponding angles are equal: 65°.",
+                "Alternate angles are equal: 65°.",
+                "Co-interior (same-side interior) angles are supplementary: 180 − 65 = 115°."
+              ],
+              "commonMistakes": [
+                "Treating co-interior angles as equal (they're supplementary, summing to 180°).",
+                "Mixing up which pairs are equal vs supplementary."
+              ],
+              "variations": [
+                {
+                  "prompt": "Co-interior angle to a 110° angle across parallel lines?",
+                  "answer": "70°",
+                  "solutionSteps": [
+                    "180 − 110 = 70."
+                  ]
+                },
+                {
+                  "prompt": "Corresponding angle to a 90° angle across parallel lines?",
+                  "answer": "90°",
+                  "solutionSteps": [
+                    "Corresponding angles equal."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "glossary": [
+        {
+          "id": "ch05_gl01",
+          "term": "Intersecting lines",
+          "definition": "Two lines that meet at a point.",
+          "example": "An X shape is made of two intersecting lines.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t01_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl02",
+          "term": "Vertically opposite angles",
+          "definition": "The pair of equal angles directly across from each other at an intersection.",
+          "example": "At an X, the two 'across' angles are equal.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl03",
+          "term": "Linear pair",
+          "definition": "Two adjacent angles on a straight line; they sum to 180°.",
+          "example": "120° and 60° on a straight line.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl04",
+          "term": "Perpendicular lines",
+          "definition": "Two lines that intersect at right angles (90°).",
+          "example": "The corner of a page; written l ⊥ m.",
+          "hindiTerm": "लंब रेखाएँ",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl05",
+          "term": "Parallel lines",
+          "definition": "Coplanar lines that never meet, however far extended.",
+          "example": "Railway tracks; written l ∥ m.",
+          "hindiTerm": "समांतर रेखाएँ",
+          "relatedConceptIds": [
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl06",
+          "term": "Transversal",
+          "definition": "A line that crosses two or more other lines at distinct points.",
+          "example": "A rail crossing parallel sleepers.",
+          "hindiTerm": "तिर्यक रेखा",
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl07",
+          "term": "Corresponding angles",
+          "definition": "Angles in matching positions at the two crossings of a transversal; equal when the lines are parallel.",
+          "example": "∠1 and ∠5 in the F-pattern.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_gl08",
+          "term": "Alternate angles",
+          "definition": "Angles on opposite sides of the transversal, between the lines; equal when the lines are parallel.",
+          "example": "∠d and ∠f in the Z-pattern.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl09",
+          "term": "Co-interior angles",
+          "definition": "Same-side interior angles between two lines cut by a transversal; sum to 180° when the lines are parallel.",
+          "example": "65° and 115° on the same side.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_gl10",
+          "term": "Right angle",
+          "definition": "An angle of exactly 90°, a quarter of a full turn.",
+          "example": "The corner of a square.",
+          "hindiTerm": "समकोण",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch05_mn01",
+          "acronym": "X = opposite equal",
+          "unpacking": "At an X-crossing, the angles directly opposite each other (vertically opposite) are equal.",
+          "context": "Use to find unknown angles at an intersection.",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_mn02",
+          "acronym": "F = corresponding, Z = alternate",
+          "unpacking": "Corresponding angles trace an F-shape; alternate angles trace a Z-shape. Both are equal when the lines are parallel.",
+          "context": "Use to spot angle pairs across a transversal.",
+          "relatedConceptIds": [
+            "ch05_t03_c02",
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_mn03",
+          "acronym": "Linear pair = 180",
+          "unpacking": "Two angles sitting next to each other on a straight line always add to 180°.",
+          "context": "Use to find an angle's neighbour.",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch05_ms01",
+          "kidsThink": "All four angles at a crossing are equal.",
+          "actually": "Only if the lines are perpendicular. In general there are two pairs: vertically opposite angles are equal, and adjacent angles sum to 180°.",
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_ms02",
+          "kidsThink": "Corresponding/alternate angles are always equal, even for non-parallel lines.",
+          "actually": "They are equal ONLY when the two crossed lines are parallel. For non-parallel lines they differ.",
+          "relatedConceptIds": [
+            "ch05_t03_c02",
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_ms03",
+          "kidsThink": "Co-interior (same-side interior) angles are equal.",
+          "actually": "They are SUPPLEMENTARY — they sum to 180° (when lines are parallel), not equal.",
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_ms04",
+          "kidsThink": "Parallel lines must be horizontal or vertical.",
+          "actually": "Parallel lines can run in any direction — they just need the same direction and never meet. Two slanted lines can be parallel.",
+          "relatedConceptIds": [
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_ms05",
+          "kidsThink": "You must measure with a protractor to find unknown angles.",
+          "actually": "You can DEDUCE them: vertically opposite, corresponding and alternate equalities plus linear pairs let you find every angle from one given angle.",
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch05_re01",
+          "title": "Checking walls are parallel without a giant ruler",
+          "body": "A mason can't extend two walls to infinity to check if they're parallel. Instead they lay a straight plank across both (a transversal) and measure the corresponding angles. If the two angles are equal, the walls are parallel. The corresponding-angles fact turns an impossible test into a quick local measurement.",
+          "relatedConceptIds": [
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_re02",
+          "title": "Zebra crossings and Z-angles",
+          "body": "The white stripes of a zebra crossing are parallel. The kerb line cuts across them as a transversal, and the equal angles it makes at each stripe are corresponding and alternate angles in action — the same geometry that keeps the stripes looking evenly slanted.",
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_re03",
+          "title": "The right angle in construction",
+          "body": "Builders lay out perpendicular walls using a 3-4-5 triangle: a triangle with sides 3, 4 and 5 units always has a right angle. It's a protractor-free way to guarantee 90°, used on building sites for thousands of years — perpendicularity made practical.",
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch05_qa01",
+          "question": "Two lines intersect and ∠a = 120°. Find ∠b, ∠c and ∠d.",
+          "modelAnswer": "∠c (vertically opposite a) = 120°. ∠b and ∠d each form a linear pair with a: 180 − 120 = 60°. So ∠b = ∠d = 60°, ∠c = 120°.",
+          "textbookPage": 108,
+          "relatedConceptIds": [
+            "ch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_qa02",
+          "question": "If two intersecting lines form four equal angles, what is each angle?",
+          "modelAnswer": "Each is 90°. The four angles sum to 360°, and being equal, each is 360 ÷ 4 = 90°. The lines are perpendicular.",
+          "textbookPage": 108,
+          "relatedConceptIds": [
+            "ch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_qa03",
+          "question": "How would you describe the opposite edges and adjacent edges of a square sheet of paper?",
+          "modelAnswer": "Opposite edges are parallel (never meet); adjacent edges are perpendicular (meet at 90° at the corners).",
+          "textbookPage": 111,
+          "relatedConceptIds": [
+            "ch05_t02_c02"
+          ]
+        },
+        {
+          "id": "ch05_qa04",
+          "question": "When a transversal crosses two lines, how many angles form, and how many distinct measures are possible?",
+          "modelAnswer": "8 angles form (4 at each crossing). Because vertically opposite angles are equal, there are at most 4 distinct measures — and exactly 2 when the two lines are parallel.",
+          "textbookPage": 112,
+          "relatedConceptIds": [
+            "ch05_t03_c01"
+          ]
+        },
+        {
+          "id": "ch05_qa05",
+          "question": "In Fig. 5.14, ∠1 and ∠5 are corresponding angles. If the lines are parallel and ∠1 = 70°, what is ∠5?",
+          "modelAnswer": "∠5 = 70°. Corresponding angles are equal when the two lines cut by the transversal are parallel.",
+          "textbookPage": 113,
+          "relatedConceptIds": [
+            "ch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_qa06",
+          "question": "In Fig. 5.25, if ∠f = 120°, find its alternate angle ∠d, justifying without measuring.",
+          "modelAnswer": "∠f = ∠b = 120° (corresponding angles, parallel lines). ∠b = ∠d = 120° (vertically opposite). Therefore ∠f = ∠d = 120°. Alternate angles are equal.",
+          "textbookPage": 114,
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_qa07",
+          "question": "Why are alternate angles equal when lines are parallel? Give the two-step reason.",
+          "modelAnswer": "An alternate angle equals a corresponding angle (equal because the lines are parallel), which equals its vertically opposite angle (always equal). Chaining the two equalities shows the alternate angles are equal.",
+          "textbookPage": 114,
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        },
+        {
+          "id": "ch05_qa08",
+          "question": "A transversal cuts two parallel lines. One angle is 65°. Give a corresponding, an alternate, and a co-interior angle to it.",
+          "modelAnswer": "Corresponding = 65° (equal), alternate = 65° (equal), co-interior = 115° (supplementary, 180 − 65).",
+          "textbookPage": 114,
+          "relatedConceptIds": [
+            "ch05_t04_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch05_mp01",
+          "emoji": "📐",
+          "title": "Paper-Fold Parallel & Perpendicular Hunt",
+          "needs": [
+            "A square sheet of paper (or newspaper)",
+            "A pencil and a scale",
+            "A protractor (optional)"
+          ],
+          "steps": [
+            "Fold the sheet in half horizontally and draw a line along the crease.",
+            "Fold again and draw another crease-line. How many parallel lines do you have now?",
+            "Make a vertical fold and draw it — how does it relate to the horizontal lines?",
+            "Now draw any slanted line right across all your parallel lines (a transversal).",
+            "Mark and measure a pair of corresponding angles and a pair of alternate angles. Are they equal?"
+          ],
+          "expectedObservation": "All the horizontal creases are parallel; the vertical crease is perpendicular to them; and the slanted transversal makes equal corresponding angles and equal alternate angles at every parallel line.",
+          "whyItWorks": "Folding produces creases in fixed directions: repeated parallel folds stay the same direction (parallel), and a perpendicular fold turns 90°. A transversal meets equally-directed (parallel) lines at the same tilt, so corresponding and alternate angles come out equal — exactly the chapter's theorems, seen by hand.",
+          "estimatedMinutes": 40,
+          "relatedConceptIds": [
+            "ch05_t02_c02",
+            "ch05_t03_c02",
+            "ch05_t04_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch05_t01_c01",
+            "label": "Intersecting lines",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.12
+          },
+          {
+            "id": "ch05_t01_c02",
+            "label": "Vert. opposite & linear pair",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.12
+          },
+          {
+            "id": "ch05_t02_c01",
+            "label": "Perpendicular",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.38
+          },
+          {
+            "id": "ch05_t02_c02",
+            "label": "Parallel",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.38
+          },
+          {
+            "id": "ch05_t03_c01",
+            "label": "Transversal",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.62
+          },
+          {
+            "id": "ch05_t03_c02",
+            "label": "Corresponding angles",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.85
+          },
+          {
+            "id": "ch05_t04_c01",
+            "label": "Alternate angles",
+            "kind": "concept",
+            "x": 0.7,
+            "y": 0.85
+          },
+          {
+            "id": "ch05_pivot_anglechase",
+            "label": "Angle chasing",
+            "kind": "pivot",
+            "x": 0.8,
+            "y": 0.62
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch05_e01",
+            "from": "ch05_t01_c01",
+            "to": "ch05_t01_c02",
+            "label": "forms"
+          },
+          {
+            "id": "ch05_e02",
+            "from": "ch05_t01_c01",
+            "to": "ch05_t02_c01",
+            "label": "special case"
+          },
+          {
+            "id": "ch05_e03",
+            "from": "ch05_t02_c01",
+            "to": "ch05_t02_c02",
+            "label": "contrast"
+          },
+          {
+            "id": "ch05_e04",
+            "from": "ch05_t02_c02",
+            "to": "ch05_t03_c01",
+            "label": "crossed by"
+          },
+          {
+            "id": "ch05_e05",
+            "from": "ch05_t03_c01",
+            "to": "ch05_t03_c02",
+            "label": "forms"
+          },
+          {
+            "id": "ch05_e06",
+            "from": "ch05_t03_c02",
+            "to": "ch05_t04_c01",
+            "label": "+ vert. opp. proves"
+          },
+          {
+            "id": "ch05_e07",
+            "from": "ch05_t01_c02",
+            "to": "ch05_t04_c01",
+            "label": "used in"
+          },
+          {
+            "id": "ch05_e08",
+            "from": "ch05_t04_c01",
+            "to": "ch05_pivot_anglechase",
+            "label": "trains"
+          }
+        ]
+      }
     }
   ]
 }

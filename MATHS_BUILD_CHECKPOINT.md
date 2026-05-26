@@ -2,9 +2,9 @@
 
 **Last updated:** 2026-05-27 01:10 +05:30
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
-**Last good commit SHA:** f39766a (Ch.2 Arithmetic Expressions, pushed to origin/main)
-**Current phase:** Phase 2 — chapter content (Ch.1 + Ch.2 done; Ch.3 next)
-**Current chapter under construction:** ch03 — A Peek Beyond the Point (decimals) — NOT STARTED
+**Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
+**Current phase:** Phase 2 — chapter content (Ch.1-5 done; Ch.6 next)
+**Current chapter under construction:** ch06 — Number Play (gegp106.txt) — NOT STARTED
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -97,7 +97,10 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 |-----|--------|---------|----------|----------|-------|
 | 1   | ✅     | ✅ 6/6 topics | ⚪    | ⚪       | pilot complete — 17 concepts, 26 Q, full enrichment |
 | 2   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Arithmetic Expressions — 10 concepts, 15 Q, full enrichment |
-| 3   | ⚪     | ⚪      | ⚪       | ⚪       | A Peek Beyond the Point (decimals) — RESUME HERE, src gegp103.txt |
+| 3   | ✅     | ✅ 5/5 topics | ⚪    | ⚪       | A Peek Beyond the Point (decimals) — 7 concepts, 13 Q |
+| 4   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Expressions Using Letter-Numbers — 4 concepts, 8 Q |
+| 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 7 concepts, 9 Q |
+| 6   | ⚪     | ⚪      | ⚪       | ⚪       | Number Play — RESUME HERE, src gegp106.txt |
 | 4   | ⚪     | ⚪      | ⚪       | ⚪       |       |
 | 5   | ⚪     | ⚪      | ⚪       | ⚪       |       |
 | 6   | ⚪     | ⚪      | ⚪       | ⚪       |       |
