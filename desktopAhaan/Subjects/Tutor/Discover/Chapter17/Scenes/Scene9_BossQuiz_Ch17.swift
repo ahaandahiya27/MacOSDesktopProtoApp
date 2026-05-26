@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Scene 9 — Boss Quiz Ch17. Five MCQs on forests.
+@MainActor
 struct Scene9_BossQuiz_Ch17: View {
     let pack: SubjectPack
     let chapter: Chapter

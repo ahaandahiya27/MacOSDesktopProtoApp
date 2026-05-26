@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Scene 9 — Boss Quiz Ch13. Five MCQs on motion & time.
+@MainActor
 struct Scene9_BossQuiz_Ch13: View {
     let pack: SubjectPack
     let chapter: Chapter

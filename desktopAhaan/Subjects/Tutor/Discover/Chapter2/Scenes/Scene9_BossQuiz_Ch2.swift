@@ -10,6 +10,7 @@ import PDFKit
 /// 5. What's the first chamber of a cow's stomach? (Rumen)
 ///
 /// On finish: confetti via ParticleEmitter, score badge, "Print my certificate" button.
+@MainActor
 struct Scene9_BossQuiz_Ch2: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -151,7 +152,6 @@ struct Scene9_BossQuiz_Ch2: View {
         }
     }
 
-    @MainActor
     private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
 

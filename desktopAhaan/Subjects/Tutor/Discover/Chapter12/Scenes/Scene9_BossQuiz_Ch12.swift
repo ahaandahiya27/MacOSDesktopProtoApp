@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Scene 9 — Boss Quiz Ch12. Five MCQs on plant reproduction.
+@MainActor
 struct Scene9_BossQuiz_Ch12: View {
     let pack: SubjectPack
     let chapter: Chapter

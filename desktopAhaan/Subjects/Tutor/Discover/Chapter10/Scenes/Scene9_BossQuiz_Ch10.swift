@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Scene 9 — Boss Quiz Ch10. Five MCQs on respiration.
+@MainActor
 struct Scene9_BossQuiz_Ch10: View {
     let pack: SubjectPack
     let chapter: Chapter

@@ -7,6 +7,7 @@ import PDFKit
 /// reveals the correct one. After all 5, a celebration overlay with confetti,
 /// a score badge, and a "Print my certificate" button that saves a PDF to
 /// `~/Downloads`.
+@MainActor
 struct Scene9_BossQuiz: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -128,7 +129,6 @@ struct Scene9_BossQuiz: View {
         return .neutral
     }
 
-    @MainActor
     private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option

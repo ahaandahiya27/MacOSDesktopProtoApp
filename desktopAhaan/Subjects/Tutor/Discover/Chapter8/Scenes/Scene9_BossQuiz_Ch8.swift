@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Scene 9 — Boss Quiz Ch8. Five MCQs on winds, storms and cyclones.
+@MainActor
 struct Scene9_BossQuiz_Ch8: View {
     let pack: SubjectPack
     let chapter: Chapter

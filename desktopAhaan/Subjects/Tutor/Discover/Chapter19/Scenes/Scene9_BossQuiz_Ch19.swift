@@ -5,6 +5,7 @@ import PDFKit
 /// Scene 9 — Boss Quiz Ch19. Five hand-authored MCQs on Earth, Moon and the Sun.
 /// Right answer flashes green + sparkles; wrong answer red-shakes.
 /// After all 5, confetti + score + "Print my certificate" (PDF to ~/Downloads).
+@MainActor
 struct Scene9_BossQuiz_Ch19: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -132,7 +133,6 @@ struct Scene9_BossQuiz_Ch19: View {
         return .neutral
     }
 
-    @MainActor
     private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option

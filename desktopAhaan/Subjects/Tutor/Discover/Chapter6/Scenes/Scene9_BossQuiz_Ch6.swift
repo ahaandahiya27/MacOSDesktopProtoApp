@@ -3,6 +3,7 @@ import AppKit
 import PDFKit
 
 /// Scene 9 — Boss Quiz Ch6. Five hand-authored MCQs on Physical and Chemical Changes.
+@MainActor
 struct Scene9_BossQuiz_Ch6: View {
     let pack: SubjectPack
     let chapter: Chapter
@@ -130,7 +131,6 @@ struct Scene9_BossQuiz_Ch6: View {
         return .neutral
     }
 
-    @MainActor
     private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
