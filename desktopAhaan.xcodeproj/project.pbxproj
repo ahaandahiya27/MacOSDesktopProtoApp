@@ -260,6 +260,7 @@
 		D9B04A98A2D43AB4C09617F6 /* Scene7_TheCocoonReel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8094D37F45CE827FCC5ECF2D /* Scene7_TheCocoonReel.swift */; };
 		680E0A1A2E478F91AB42573A /* Scene8_FibreVsFibreGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F7D98FEE638DCE67BC69ED /* Scene8_FibreVsFibreGame.swift */; };
 		FE7AA532DCB846B180F505B7 /* Scene9_BossQuiz_Ch3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91807A2D4171E07C550B0E /* Scene9_BossQuiz_Ch3.swift */; };
+		30B72DAD843B345346FA0420 /* DiscoverChapter4View+InlineScenesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE0F762D7CDFB5242809F8 /* DiscoverChapter4View+InlineScenesB.swift */; };
 		CB6E371F2AD11FCD60C8D162 /* DiscoverChapter4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735258D3FDD62E6552157CA1 /* DiscoverChapter4View.swift */; };
 		FDF6BA967AA03E261C22B88A /* Scene1_HotOrCold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351731F780C051542B5CCC9C /* Scene1_HotOrCold.swift */; };
 		65D1A21C7591134D7726D67B /* Scene2_BuildYourThermometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30679CCDA515047D75CD9765 /* Scene2_BuildYourThermometer.swift */; };
@@ -1667,6 +1668,7 @@
 		8094D37F45CE827FCC5ECF2D /* Scene7_TheCocoonReel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene7_TheCocoonReel.swift"; sourceTree = "<group>"; };
 		77F7D98FEE638DCE67BC69ED /* Scene8_FibreVsFibreGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene8_FibreVsFibreGame.swift"; sourceTree = "<group>"; };
 		9C91807A2D4171E07C550B0E /* Scene9_BossQuiz_Ch3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene9_BossQuiz_Ch3.swift"; sourceTree = "<group>"; };
+		C0BE0F762D7CDFB5242809F8 /* DiscoverChapter4View+InlineScenesB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter4View+InlineScenesB.swift"; sourceTree = "<group>"; };
 		735258D3FDD62E6552157CA1 /* DiscoverChapter4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter4View.swift"; sourceTree = "<group>"; };
 		351731F780C051542B5CCC9C /* Scene1_HotOrCold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_HotOrCold.swift"; sourceTree = "<group>"; };
 		30679CCDA515047D75CD9765 /* Scene2_BuildYourThermometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_BuildYourThermometer.swift"; sourceTree = "<group>"; };
@@ -3149,6 +3151,7 @@
 		A10D48F41E16E3B32C117E95 /* Chapter4 */ = {
 			isa = PBXGroup;
 			children = (
+				C0BE0F762D7CDFB5242809F8,
 				735258D3FDD62E6552157CA1,
 				5B9575D7F628B669B87606FD,
 			);
@@ -4512,6 +4515,7 @@
 				D9B04A98A2D43AB4C09617F6 /* Scene7_TheCocoonReel.swift in Sources */,
 				680E0A1A2E478F91AB42573A /* Scene8_FibreVsFibreGame.swift in Sources */,
 				FE7AA532DCB846B180F505B7 /* Scene9_BossQuiz_Ch3.swift in Sources */,
+				30B72DAD843B345346FA0420 /* DiscoverChapter4View+InlineScenesB.swift in Sources */,
 				CB6E371F2AD11FCD60C8D162 /* DiscoverChapter4View.swift in Sources */,
 				FDF6BA967AA03E261C22B88A /* Scene1_HotOrCold.swift in Sources */,
 				65D1A21C7591134D7726D67B /* Scene2_BuildYourThermometer.swift in Sources */,
