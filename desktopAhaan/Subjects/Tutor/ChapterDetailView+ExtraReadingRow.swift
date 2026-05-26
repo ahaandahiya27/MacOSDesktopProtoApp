@@ -28,6 +28,8 @@ struct ExtraReadingRow: View {
     /// already use.
     let onTap: (ArticleEntry) -> Void
 
+    @EnvironmentObject private var dataStore: DataStore
+
     // 7 article-surface suffixes shipped through 2026-05-26 with the
     // enrichment-consistency arc. Listed in display order — the 4
     // original templated surfaces (glossary, ncert_qa, scientists,
@@ -128,6 +130,12 @@ struct ExtraReadingRow: View {
                         .multilineTextAlignment(.leading)
                 }
                 Spacer(minLength: 0)
+                if dataStore.isArticleRead(entry.id) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.body)
+                        .foregroundColor(.green)
+                        .accessibilityLabel("Marked as read")
+                }
                 Image(systemName: SFSymbolCompat.name("chevron.right"))
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary.opacity(0.6))
@@ -148,6 +156,11 @@ struct ExtraReadingRow: View {
         .pointingCursor()
         .accessibilityLabel(label)
         .accessibilityHint(hint)
+        .contextMenu {
+            Button(dataStore.isArticleRead(entry.id) ? "Mark as unread" : "Mark as read") {
+                dataStore.toggleArticleRead(entry.id)
+            }
+        }
     }
 
     /// Bundle-file gate — same shape as

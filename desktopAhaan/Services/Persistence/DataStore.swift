@@ -207,6 +207,13 @@ final class DataStore: ObservableObject {
     /// `saveCoalesced` since mid-typing fires every keystroke.
     @Published var chapterNotes: [String: String] = [:]
 
+    /// Article IDs the kid has marked as "read" — surfaces a small
+    /// checkmark badge on `ExtraReadingRow` chips and the primary
+    /// `ArticleEntryButton`. User-driven (a button in `ArticleBrowserView`'s
+    /// footer toggles the flag). Persisted to `readArticleIds.json`.
+    /// Added 2026-05-26.
+    @Published var readArticleIds: Set<String> = []
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files

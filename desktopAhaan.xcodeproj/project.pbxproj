@@ -372,6 +372,7 @@
 		9A2B23A41660E505C18B6D3A /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32AEC823D37C1F6B30FF69 /* OCRService.swift */; };
 		9AA602BE5DDA32C1FAFE975E /* SpeechRecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB563894749B9B32CA589EB /* SpeechRecognitionManager.swift */; };
 		F823C6C991599668F1A04663 /* TextToSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EB5B2F464F1E8570165BF /* TextToSpeechManager.swift */; };
+		074A4EC65F6F0F44F15BAA8F /* DataStore+ArticleReads.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2015A5183FC8126783EB6C4 /* DataStore+ArticleReads.swift */; };
 		3AD37F567F5C665EDF3BBD30 /* DataStore+EphemeralReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FF858CA042A1615CA6732 /* DataStore+EphemeralReviews.swift */; };
 		D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */; };
 		7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */; };
@@ -1780,6 +1781,7 @@
 		8D32AEC823D37C1F6B30FF69 /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRService.swift"; sourceTree = "<group>"; };
 		CAB563894749B9B32CA589EB /* SpeechRecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechRecognitionManager.swift"; sourceTree = "<group>"; };
 		AB7EB5B2F464F1E8570165BF /* TextToSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextToSpeechManager.swift"; sourceTree = "<group>"; };
+		A2015A5183FC8126783EB6C4 /* DataStore+ArticleReads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+ArticleReads.swift"; sourceTree = "<group>"; };
 		CE4FF858CA042A1615CA6732 /* DataStore+EphemeralReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+EphemeralReviews.swift"; sourceTree = "<group>"; };
 		39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
 		CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Mastery.swift"; sourceTree = "<group>"; };
@@ -2618,6 +2620,7 @@
 		05FC7786B19C98F3028BF947 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				A2015A5183FC8126783EB6C4,
 				CE4FF858CA042A1615CA6732,
 				39E9CF5DC39A7FFFD8240C41,
 				CC3B495C017114FD927D3AD1,
@@ -4627,6 +4630,7 @@
 				9A2B23A41660E505C18B6D3A /* OCRService.swift in Sources */,
 				9AA602BE5DDA32C1FAFE975E /* SpeechRecognitionManager.swift in Sources */,
 				F823C6C991599668F1A04663 /* TextToSpeechManager.swift in Sources */,
+				074A4EC65F6F0F44F15BAA8F /* DataStore+ArticleReads.swift in Sources */,
 				3AD37F567F5C665EDF3BBD30 /* DataStore+EphemeralReviews.swift in Sources */,
 				D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */,
 				7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */,
