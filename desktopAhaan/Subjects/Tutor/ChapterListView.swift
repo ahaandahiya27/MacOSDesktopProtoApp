@@ -54,6 +54,11 @@ struct ChapterListView: View {
                         .listRowBackground(Color.clear)
                     }
 
+                    Section {
+                        DailyQuestionCard(pack: pack)
+                    }
+                    .listRowBackground(Color.clear)
+
                     Section(header: mostRecent != nil ? Text("All chapters") : nil) {
                         ForEach(pack.chapters) { chapter in
                             Button {
