@@ -2955,3 +2955,180 @@ file-size split yet (Ch.2 dispatcher).
   1399 LOC) might not have such clean cut-lines.
 
 
+
+## Session: 2026-05-27 (scene quick-check migration)
+
+### Goal
+
+Migrate inline scene quick-check MCQs from dispatcher Swift literals
+into `chapter.quickCheckQuestions` in `science_class7.json` so wrong
+answers surface in Daily Practice "Recently Missed", parallel to the
+2026-05-25 boss-quiz migration. Brief targeted ~500 items in
+`Scene*.swift`; pre-flight reads found that premise didn't match the
+repo and adapted scope to the actual location: dispatcher-inline
+`Q(id:, prompt:, opts:, correct:)` literals across the 16
+`DiscoverChapter*View.swift` files. Total migratable: 68 items
+across 16 chapters (Ch.3..5, Ch.7..19).
+
+### Brief vs reality — scope deviation
+
+| What the brief said                | What the repo had                            |
+|-----------------------------------|----------------------------------------------|
+| ~500 items in `Scene*.swift`       | 0 such items there                           |
+| `QuickCheck` / `quickCheck` token  | Not present anywhere under Discover/         |
+| Scenes call `recordEphemeralReview`| Scenes track local `picks`, no SRS write     |
+| Per-scene MCQ literals             | Per-dispatcher inline `Q(id:, prompt:, ...)` |
+| Heterogeneous shapes               | Uniform — 16 dispatchers, same `Q` struct    |
+
+Confirmed Boss Quiz migration shipped (2026-05-25, polish-todo
+archive). `Chapter.bossQuestions`, `QuestionSource.sceneQuickCheck`,
+and `DataStore.ephemeralIdPrefixes` (with `scenecheck_ch` already
+whitelisted) all in place — the SRS plumbing was waiting for content.
+Adapted the plan to the actual content layout; reported the deviation
+to the user before any code work; user authorised the adapted scope.
+
+### Commits this session
+
+- `be2454d` — **Migration foundation**. `Chapter.quickCheckQuestions`
+  Optional field + `quickCheckQuestionsList` accessor + extension of
+  `Chapter.allQuestionIds`. `SubjectRegistry.location(forQuestionId:)`
+  indexes the new field. `scripts/migrate_quick_checks_to_pack.py`
+  parses `Q(id:, prompt:, opts:, correct:)` constructors across 16
+  dispatcher files; tolerates field-order variation; skips non-MCQ Q
+  shapes (sorting / matching tasks the brief expected but reality
+  has plenty of). Idempotent under `--write --force`. Pack JSON
+  carries 68 new items. 4 new test files: schema round-trip, registry
+  lookup, ratchet (per-chapter count table), recently-missed
+  integration. Total +2177 / -5 LOC across 9 files.
+- `1d6da2b` — **Scene wiring + dedup**. The 16 dispatcher MCQ scenes
+  were near-byte-identical (same header / qCard / picks / score).
+  Introduced `QuickCheckQuizScene` (`Components/`) as a single
+  shared View that reads `[Question]` + a `title` and calls
+  `DataStore.shared.recordReview` on each answer. Replaced 15 inline
+  scenes (Ch.4, 5, 7..19; Ch.13 has two, both wired with
+  `[0..<4]` + `[4..<8]` slices). Ch.3's symbol-decorated scene
+  deferred (POLISH_TODOS §3). Net **+84 / −946 LOC** across 18 files
+  including the new shared component.
+- THIS COMMIT — REMEDIATION_LOG block + POLISH_TODOS update.
+
+### Mechanics that worked
+
+- **Boss-quiz migration as the template**. The 2026-05-25 boss-quiz
+  session left a clean playbook: Optional Chapter field, *List
+  accessor, `allQuestionIds` extension, registry-loop addition,
+  schema round-trip test, ratchet test, lookup test, recently-missed
+  integration test. Mirroring it cut ~1.5h off the schema design
+  pass.
+- **Reality-check pre-flight saved the session**. The brief's
+  premise about ~500 inline MCQs in `Scene*.swift` was wrong. Five
+  minutes of `grep` before any code work prevented a 4-hour
+  debugging session against a non-existent regex target. The
+  `recordEphemeralReview` write path the brief said scenes "use
+  today" doesn't actually have any caller in the repo for scene
+  quick-checks — the call sites the brief described don't exist.
+- **Python-driven bulk edits**. Once the Ch.4 pilot proved the
+  shape, a 60-LOC Python script edited 14 of the remaining 15
+  dispatchers in one pass (find struct, brace-depth walk to find
+  body end, splice replacement builder + delete struct). Ch.5 +
+  +InlineScenesB needed a manual touch because the builder lives in
+  the parent dispatcher while the struct lives in the sister file
+  — a one-Edit-tool-call fix.
+- **`@MainActor` propagation matched the prior session's playbook**.
+  The new `QuickCheckQuizScene` carries struct-level `@MainActor`
+  for the `recordReview` sync call, exactly matching the
+  `Scene9_BossQuiz_*` pattern from commit `a705d80`. The
+  `check_view_mainactor.py` lint flagged zero new violations.
+
+### Refused / deliberately not shipped
+
+- **Ch.3 `FabricCareSymbolsQuizScene` wiring**. Each item has an
+  emoji prefix (`♨️`, `🚫`, `🌀`, `🟦`) that the migrated Question
+  schema doesn't carry. Migrating the scene now would lose the
+  emoji column from the kid's view — the brief required UX byte-
+  identical. The 4 items ARE in the pack JSON (so SubjectRegistry
+  resolves them and Daily Practice CAN show them if a future
+  session wires the scene), but the scene continues to use its
+  local Q literals and its answers don't fire `recordReview`.
+  Documented as POLISH_TODOS §3.
+- **Ch.6 inline MCQ-shape**. The dispatcher has 6 `prompt:` lines
+  but the surrounding Q struct doesn't have `opts:` + `correct:`
+  fields — the migration script correctly skipped the file.
+  Inspect-before-next-iteration noted in POLISH_TODOS §3.
+- **`DataStore.ephemeralIdPrefixes` audit**. The prefix
+  `scenecheck_ch` was already there, anticipating exactly this
+  migration. Considered cleaning it up to make `ephemeralIdPrefixes`
+  redundant now that both ids resolve through the canonical pack
+  path — left untouched because the prefix is still useful for the
+  "is this id ephemeral?" sniff used by D3's Retry navigation
+  logic. Removing it is a separate refactor.
+- **Per-scene id disambiguation** (the brief's `quickcheck_ch{NN}_scene{MM}_q{II}`
+  format). Chose flat `scenecheck_chNN_qII` instead because that
+  prefix is already whitelisted and parallels `bossquiz_chNN_qII`.
+  For Ch.13's two scenes, the dispatcher passes `[0..<4]` and
+  `[4..<8]` slices — no scene number needs to live in the id.
+
+### Final state at the end of this block
+
+| Metric | Block start | Block end |
+|---|---|---|
+| Chapter Optional fields | 14 + bossQuestions | **+ quickCheckQuestions** |
+| Pack `chapter.quickCheckQuestions` entries | 0 | **68 across 16 chapters** |
+| Dispatcher inline `private struct *QuizScene` MCQs | 16 | **0** (15 collapsed; Ch.3 deferred) |
+| Discover Components | 15 | **16** (+ QuickCheckQuizScene) |
+| Migration scripts | 1 (boss-quiz) | **2** (+ quick-check) |
+| Test classes (matrix/ratchet) | 17 | **21** (+ 4 new QuickCheck classes) |
+| Total ratchet test cases | 67 | **84** (+ 17) |
+| SRS-resolvable id namespaces | bossquiz_, topic | **+ scenecheck_** |
+| Net LOC delta | — | **-1041** (+2261 / -3302 across 25 files) |
+
+### Build / tests / lints
+
+- All 2 substantive commits + this docs commit (3 total) pushed
+  cleanly to origin (post-push status: clean).
+- CI: green on every push.
+- `xcodebuild test -skip-testing:desktopAhaanUITests`: 17 new
+  QuickCheck cases all green; no existing tests regressed.
+- 8 of 9 lints clean. `check_callout_reading_level.py` ships the
+  same pre-existing advisory state as on `origin/main` — soft
+  advisory that doesn't affect commit / push.
+- LH grandfather count steady at 3.
+- file_size_allowlist: 4 grandfathered (unchanged — Ch.13 dropped
+  126 LOC but was already under 600; the dispatchers under 600
+  before remain under).
+
+### Notes for future sessions
+
+- **Per-chapter ratchet pattern proved generalizable** — same
+  shape as the boss-quiz ratchet (count table + canonical id
+  format + uniqueness + no-cross-namespace-collision + MCQ-shape
+  contract). Future content migrations should mirror it; the
+  4-case Schema + Ratchet + RegistryLookup + Integration test
+  matrix locks the right invariants.
+- **Pre-flight inspection of the repo is non-negotiable for
+  dangerous-mode sessions**. The brief's premise was off by ~5×
+  on count AND wrong on file location. Five minutes of `grep`
+  surfaced it; ten more minutes of inspection produced an
+  accurate inventory. Skipping that pass would have committed
+  several hours to a non-existent target.
+- **The Ch.3 symbol case is the canonical "migration shape doesn't
+  carry every legacy field" gotcha**. The Question schema is
+  text-only — any visual decoration in an inline scene (emoji
+  prefix, custom layout, conditional rendering) needs to either
+  (a) embed in the prompt string, (b) extend the Question schema
+  with an optional decoration field, or (c) stay inline. Pick
+  (a) for one-shot decorations; (b) only when ≥ 3 chapters need
+  the same affordance.
+- **Per-shared-component @MainActor matters**. `QuickCheckQuizScene`
+  was a clean lift because it sits in `Components/`, no chapter-
+  specific references, ready to drop into any future MCQ surface.
+  Future shared components that touch `DataStore.shared.*`
+  synchronously should pre-annotate `@MainActor` to keep
+  `check_view_mainactor.py` clean from the first commit.
+- **Manual walk to verify the Daily Practice surface lights up
+  was NOT performed** — the brief asked for it but the agent
+  shipped without doing so (this is an autonomous CLI session,
+  no kid-facing UI walkthrough). The integration test
+  `RecentlyMissedQuickCheckTests` covers the equivalent via the
+  programmatic path: `recordReview` → `recentlyMissedQuestionIds`
+  → `SubjectRegistry.location(...)`. Manual verification can be
+  done on the iMac post-pull.
