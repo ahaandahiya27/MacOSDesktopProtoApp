@@ -12057,6 +12057,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch03_q00",
+          "prompt": "What does the wash-tub symbol with a number inside mean?",
+          "questionType": "mcq",
+          "options": [
+            "Dry clean only",
+            "Wash up to that temperature",
+            "Cannot wash"
+          ],
+          "answer": "Wash up to that temperature",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch03_q01",
+          "prompt": "Triangle crossed out — what's banned?",
+          "questionType": "mcq",
+          "options": [
+            "Bleach",
+            "Ironing",
+            "Tumble dry"
+          ],
+          "answer": "Bleach",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch03_q02",
+          "prompt": "Circle inside a square — what does it mean?",
+          "questionType": "mcq",
+          "options": [
+            "Hand wash",
+            "Tumble dry",
+            "Dry clean"
+          ],
+          "answer": "Tumble dry",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch03_q03",
+          "prompt": "An iron with dots — what do the dots indicate?",
+          "questionType": "mcq",
+          "options": [
+            "How many shirts to do",
+            "Iron heat level",
+            "How wet it should be"
+          ],
+          "answer": "Iron heat level",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -15683,6 +15757,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch04_q00",
+          "prompt": "Which heat path does the vacuum block?",
+          "questionType": "mcq",
+          "options": [
+            "Conduction + convection",
+            "Radiation only",
+            "Nothing — it's just decorative"
+          ],
+          "answer": "Conduction + convection",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch04_q01",
+          "prompt": "Why is the inner wall silvered?",
+          "questionType": "mcq",
+          "options": [
+            "For style",
+            "To reflect radiation back inside",
+            "To make it heavier"
+          ],
+          "answer": "To reflect radiation back inside",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch04_q02",
+          "prompt": "If the vacuum was filled with air, would it still keep heat?",
+          "questionType": "mcq",
+          "options": [
+            "Yes, just as well",
+            "No, heat would escape much faster",
+            "Only in winter"
+          ],
+          "answer": "No, heat would escape much faster",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch04_q03",
+          "prompt": "Cork stopper at the top stops which heat path most?",
+          "questionType": "mcq",
+          "options": [
+            "Conduction through the lid",
+            "Cooking the tea",
+            "Adding flavour"
+          ],
+          "answer": "Conduction through the lid",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -18287,6 +18435,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch05_q00",
+          "prompt": "Which gases mix with rainwater to make acid rain?",
+          "questionType": "mcq",
+          "options": [
+            "O₂ and N₂",
+            "SO₂ and NO₂",
+            "CO₂ and CH₄"
+          ],
+          "answer": "SO₂ and NO₂",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch05_q01",
+          "prompt": "What pH does normal rain have, and acid rain?",
+          "questionType": "mcq",
+          "options": [
+            "~5.6 → drops below 5",
+            "~7 → stays 7",
+            "~9 → drops to 6"
+          ],
+          "answer": "~5.6 → drops below 5",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch05_q02",
+          "prompt": "What's the biggest source of SO₂ in the atmosphere?",
+          "questionType": "mcq",
+          "options": [
+            "Cars",
+            "Burning coal in power plants",
+            "Cooking with LPG"
+          ],
+          "answer": "Burning coal in power plants",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch05_q03",
+          "prompt": "Acid rain damages limestone monuments because…",
+          "questionType": "mcq",
+          "options": [
+            "limestone is base; acid eats it",
+            "limestone is acid",
+            "limestone reflects sunlight"
+          ],
+          "answer": "limestone is base; acid eats it",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -23640,6 +23862,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch07_q00",
+          "prompt": "What does ☀️ mean on a forecast?",
+          "questionType": "mcq",
+          "options": [
+            "Sunny / clear",
+            "Cloudy",
+            "Foggy"
+          ],
+          "answer": "Sunny / clear",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch07_q01",
+          "prompt": "What does 🌧 mean?",
+          "questionType": "mcq",
+          "options": [
+            "Snow",
+            "Rain",
+            "Drizzle only"
+          ],
+          "answer": "Rain",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch07_q02",
+          "prompt": "What does ⛈ mean?",
+          "questionType": "mcq",
+          "options": [
+            "Heat wave",
+            "Thunderstorm",
+            "Wind"
+          ],
+          "answer": "Thunderstorm",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch07_q03",
+          "prompt": "What does 🌫 mean?",
+          "questionType": "mcq",
+          "options": [
+            "Fog / mist",
+            "Smoke",
+            "Pollen"
+          ],
+          "answer": "Fog / mist",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -26120,6 +26416,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch08_q00",
+          "prompt": "Heard a cyclone warning. First action?",
+          "questionType": "mcq",
+          "options": [
+            "Take photos of clouds",
+            "Move to designated shelter",
+            "Wait and watch"
+          ],
+          "answer": "Move to designated shelter",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch08_q01",
+          "prompt": "Storing emergency food + water for how many days?",
+          "questionType": "mcq",
+          "options": [
+            "12 hours",
+            "1 day",
+            "3+ days"
+          ],
+          "answer": "3+ days",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch08_q02",
+          "prompt": "During the cyclone, where is safest indoors?",
+          "questionType": "mcq",
+          "options": [
+            "Near windows",
+            "Innermost room, away from glass",
+            "On the roof"
+          ],
+          "answer": "Innermost room, away from glass",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch08_q03",
+          "prompt": "After the eye passes, what happens?",
+          "questionType": "mcq",
+          "options": [
+            "It's over",
+            "Winds return from opposite direction — still danger",
+            "Sunshine"
+          ],
+          "answer": "Winds return from opposite direction — still danger",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -28607,6 +28977,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch09_q00",
+          "prompt": "Best soil for growing rice?",
+          "questionType": "mcq",
+          "options": [
+            "Sandy",
+            "Clay-heavy with water",
+            "Desert"
+          ],
+          "answer": "Clay-heavy with water",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch09_q01",
+          "prompt": "What turns dead leaves into humus?",
+          "questionType": "mcq",
+          "options": [
+            "Sunlight",
+            "Decomposer microbes",
+            "Rain only"
+          ],
+          "answer": "Decomposer microbes",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch09_q02",
+          "prompt": "Heavy rain on bare slopes does what?",
+          "questionType": "mcq",
+          "options": [
+            "Improves soil",
+            "Erodes topsoil away",
+            "Adds nutrients"
+          ],
+          "answer": "Erodes topsoil away",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch09_q03",
+          "prompt": "Loam soil is best because…",
+          "questionType": "mcq",
+          "options": [
+            "it's pretty",
+            "it balances drainage + nutrients",
+            "it's expensive"
+          ],
+          "answer": "it balances drainage + nutrients",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -31025,6 +31469,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch10_q00",
+          "prompt": "Which gas do we breathe IN, and which do we breathe OUT?",
+          "questionType": "mcq",
+          "options": [
+            "O₂ in, CO₂ out",
+            "CO₂ in, O₂ out",
+            "Both N₂"
+          ],
+          "answer": "O₂ in, CO₂ out",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch10_q01",
+          "prompt": "Where in your cells does respiration happen?",
+          "questionType": "mcq",
+          "options": [
+            "Nucleus",
+            "Mitochondria",
+            "Cell wall"
+          ],
+          "answer": "Mitochondria",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch10_q02",
+          "prompt": "Why do fish die out of water?",
+          "questionType": "mcq",
+          "options": [
+            "Too warm",
+            "Gills can't extract O₂ from air",
+            "Too bright"
+          ],
+          "answer": "Gills can't extract O₂ from air",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch10_q03",
+          "prompt": "How many alveoli does an adult lung have?",
+          "questionType": "mcq",
+          "options": [
+            "~3,000",
+            "~300 million",
+            "~30 billion"
+          ],
+          "answer": "~300 million",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -33624,6 +34142,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch11_q00",
+          "prompt": "What carries O₂-rich blood AWAY from the heart?",
+          "questionType": "mcq",
+          "options": [
+            "Veins",
+            "Arteries",
+            "Lymph"
+          ],
+          "answer": "Arteries",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch11_q01",
+          "prompt": "Where in a plant does sugar travel from leaves to roots?",
+          "questionType": "mcq",
+          "options": [
+            "Xylem",
+            "Phloem",
+            "Stomata"
+          ],
+          "answer": "Phloem",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch11_q02",
+          "prompt": "Universal blood donor type?",
+          "questionType": "mcq",
+          "options": [
+            "A",
+            "AB",
+            "O"
+          ],
+          "answer": "O",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch11_q03",
+          "prompt": "Kidneys filter how much blood per day?",
+          "questionType": "mcq",
+          "options": [
+            "~5 L",
+            "~180 L",
+            "~1500 L"
+          ],
+          "answer": "~180 L",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -35981,6 +36573,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch12_q00",
+          "prompt": "Pollen lands on which part of the flower?",
+          "questionType": "mcq",
+          "options": [
+            "Petal",
+            "Stigma",
+            "Sepal"
+          ],
+          "answer": "Stigma",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch12_q01",
+          "prompt": "Coconuts disperse mainly by…",
+          "questionType": "mcq",
+          "options": [
+            "Wind",
+            "Water",
+            "Insects"
+          ],
+          "answer": "Water",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch12_q02",
+          "prompt": "Eyes on a potato are…",
+          "questionType": "mcq",
+          "options": [
+            "Holes for breathing",
+            "Buds that can grow new plants",
+            "Where roots come out"
+          ],
+          "answer": "Buds that can grow new plants",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch12_q03",
+          "prompt": "Asexual reproduction means…",
+          "questionType": "mcq",
+          "options": [
+            "Two parents needed",
+            "Only one parent — clones",
+            "Always two-step process"
+          ],
+          "answer": "Only one parent — clones",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -38451,6 +39117,152 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch13_q00",
+          "prompt": "Typical speed limit on an Indian city road?",
+          "questionType": "mcq",
+          "options": [
+            "10 km/h",
+            "50 km/h",
+            "200 km/h"
+          ],
+          "answer": "50 km/h",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q01",
+          "prompt": "On a national highway, India allows up to:",
+          "questionType": "mcq",
+          "options": [
+            "20 km/h",
+            "100 km/h",
+            "500 km/h"
+          ],
+          "answer": "100 km/h",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q02",
+          "prompt": "Speed in school zones is typically capped at:",
+          "questionType": "mcq",
+          "options": [
+            "25 km/h",
+            "100 km/h",
+            "150 km/h"
+          ],
+          "answer": "25 km/h",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q03",
+          "prompt": "Vande Bharat express train top speed?",
+          "questionType": "mcq",
+          "options": [
+            "50 km/h",
+            "180 km/h",
+            "1000 km/h"
+          ],
+          "answer": "180 km/h",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q04",
+          "prompt": "If a car goes 60 km in 2 hours, speed is:",
+          "questionType": "mcq",
+          "options": [
+            "30 km/h",
+            "60 km/h",
+            "120 km/h"
+          ],
+          "answer": "30 km/h",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q05",
+          "prompt": "What instrument measures total distance driven?",
+          "questionType": "mcq",
+          "options": [
+            "Speedometer",
+            "Odometer",
+            "Pedometer"
+          ],
+          "answer": "Odometer",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q06",
+          "prompt": "Pendulum period depends MOST on:",
+          "questionType": "mcq",
+          "options": [
+            "Mass of bob",
+            "Length of string",
+            "Colour of string"
+          ],
+          "answer": "Length of string",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch13_q07",
+          "prompt": "1 minute = how many seconds?",
+          "questionType": "mcq",
+          "options": [
+            "10",
+            "60",
+            "100"
+          ],
+          "answer": "60",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -41115,6 +41927,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch14_q00",
+          "prompt": "In a series circuit, if one bulb fuses…",
+          "questionType": "mcq",
+          "options": [
+            "Others stay on",
+            "All others go off",
+            "Only adjacent goes off"
+          ],
+          "answer": "All others go off",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch14_q01",
+          "prompt": "What does a fuse do?",
+          "questionType": "mcq",
+          "options": [
+            "Decorate the box",
+            "Break the circuit when current is too high",
+            "Increase voltage"
+          ],
+          "answer": "Break the circuit when current is too high",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch14_q02",
+          "prompt": "Electromagnet's poles swap if you:",
+          "questionType": "mcq",
+          "options": [
+            "Add more turns",
+            "Reverse the battery",
+            "Cool the wire"
+          ],
+          "answer": "Reverse the battery",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch14_q03",
+          "prompt": "Indian household supply is:",
+          "questionType": "mcq",
+          "options": [
+            "12 V DC",
+            "230 V AC 50 Hz",
+            "1000 V DC"
+          ],
+          "answer": "230 V AC 50 Hz",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -44036,6 +44922,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch15_q00",
+          "prompt": "Image in a plane mirror is:",
+          "questionType": "mcq",
+          "options": [
+            "Upside down",
+            "Left-right swapped",
+            "Same as original"
+          ],
+          "answer": "Left-right swapped",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch15_q01",
+          "prompt": "Sunlight passing through a prism makes:",
+          "questionType": "mcq",
+          "options": [
+            "White stays white",
+            "Rainbow (7 colours)",
+            "Only red"
+          ],
+          "answer": "Rainbow (7 colours)",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch15_q02",
+          "prompt": "Concave lens (caves IN):",
+          "questionType": "mcq",
+          "options": [
+            "Magnifies",
+            "Reduces — used in -ve glasses",
+            "Burns paper"
+          ],
+          "answer": "Reduces — used in -ve glasses",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch15_q03",
+          "prompt": "Sky looks blue because:",
+          "questionType": "mcq",
+          "options": [
+            "Air is blue",
+            "Blue light scatters most",
+            "Earth reflects sea"
+          ],
+          "answer": "Blue light scatters most",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -46613,6 +47573,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch16_q00",
+          "prompt": "What % of Earth's water is FRESH water humans can use?",
+          "questionType": "mcq",
+          "options": [
+            "50%",
+            "<1%",
+            "97%"
+          ],
+          "answer": "<1%",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch16_q01",
+          "prompt": "Most water-saving irrigation method?",
+          "questionType": "mcq",
+          "options": [
+            "Flood",
+            "Drip",
+            "Sprinkler"
+          ],
+          "answer": "Drip",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch16_q02",
+          "prompt": "Rainwater harvesting means…",
+          "questionType": "mcq",
+          "options": [
+            "Buying water",
+            "Collecting + storing rainwater",
+            "Stealing rivers"
+          ],
+          "answer": "Collecting + storing rainwater",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch16_q03",
+          "prompt": "What kills germs in dirty water?",
+          "questionType": "mcq",
+          "options": [
+            "Adding sugar",
+            "Boiling for 5+ min",
+            "Storing in plastic"
+          ],
+          "answer": "Boiling for 5+ min",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -49134,6 +50168,80 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch17_q00",
+          "prompt": "Forests act like a giant sponge because they:",
+          "questionType": "mcq",
+          "options": [
+            "Look soft",
+            "Absorb rainwater + release slowly",
+            "Have moss"
+          ],
+          "answer": "Absorb rainwater + release slowly",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch17_q01",
+          "prompt": "Decomposers turn dead matter into:",
+          "questionType": "mcq",
+          "options": [
+            "Stone",
+            "Humus + nutrients in soil",
+            "Plastic"
+          ],
+          "answer": "Humus + nutrients in soil",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch17_q02",
+          "prompt": "India's national tree?",
+          "questionType": "mcq",
+          "options": [
+            "Mango",
+            "Banyan",
+            "Neem"
+          ],
+          "answer": "Banyan",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch17_q03",
+          "prompt": "Chipko movement was about:",
+          "questionType": "mcq",
+          "options": [
+            "Saving rivers",
+            "Hugging trees to stop felling",
+            "Building dams"
+          ],
+          "answer": "Hugging trees to stop felling",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        }
       ]
     },
     {
@@ -51576,6 +52684,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch18_q00",
+          "prompt": "What's in wastewater?",
+          "questionType": "mcq",
+          "options": [
+            "Just water",
+            "Water + dissolved + suspended waste",
+            "Only soap"
+          ],
+          "answer": "Water + dissolved + suspended waste",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch18_q01",
+          "prompt": "What does anaerobic digestion of sludge produce?",
+          "questionType": "mcq",
+          "options": [
+            "Pure water",
+            "Biogas (methane)",
+            "Salt"
+          ],
+          "answer": "Biogas (methane)",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch18_q02",
+          "prompt": "Greywater is from:",
+          "questionType": "mcq",
+          "options": [
+            "Toilets only",
+            "Sinks + showers + washing",
+            "Mixed with rain"
+          ],
+          "answer": "Sinks + showers + washing",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch18_q03",
+          "prompt": "Indus Valley civilisation was famous for:",
+          "questionType": "mcq",
+          "options": [
+            "No sanitation",
+            "Brick-lined sewers",
+            "Cars"
+          ],
+          "answer": "Brick-lined sewers",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     },
@@ -59002,6 +60184,80 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "quickCheckQuestions": [
+        {
+          "id": "scenecheck_ch19_q00",
+          "prompt": "How many planets in the Solar System?",
+          "questionType": "mcq",
+          "options": [
+            "7",
+            "8",
+            "9"
+          ],
+          "answer": "8",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch19_q01",
+          "prompt": "Why do we have seasons?",
+          "questionType": "mcq",
+          "options": [
+            "Distance from Sun",
+            "Earth's axis is tilted 23.5°",
+            "Moon's phases"
+          ],
+          "answer": "Earth's axis is tilted 23.5°",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch19_q02",
+          "prompt": "What's at the centre of the Solar System?",
+          "questionType": "mcq",
+          "options": [
+            "Earth",
+            "Sun",
+            "Moon"
+          ],
+          "answer": "Sun",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ch19_q03",
+          "prompt": "India's first Mars mission?",
+          "questionType": "mcq",
+          "options": [
+            "Chandrayaan",
+            "Mangalyaan",
+            "Aditya"
+          ],
+          "answer": "Mangalyaan",
+          "solutionSteps": [],
+          "commonMistakes": [],
+          "variations": [],
+          "difficulty": 1,
+          "pageRefs": [],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
         }
       ]
     }

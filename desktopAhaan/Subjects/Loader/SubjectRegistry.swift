@@ -214,6 +214,16 @@ final class SubjectRegistry: ObservableObject {
                             built[q.id] = (pack, chapter, q)
                         }
                     }
+                    // Scene quick-check questions — same shape, same
+                    // surface set. Added 2026-05-26 with the scene
+                    // quick-check migration. Stable ids carry the
+                    // `scenecheck_chNN_qII` prefix already whitelisted
+                    // in DataStore.ephemeralIdPrefixes.
+                    for q in chapter.quickCheckQuestionsList {
+                        if built[q.id] == nil {
+                            built[q.id] = (pack, chapter, q)
+                        }
+                    }
                 }
             }
             _questionLocations = built

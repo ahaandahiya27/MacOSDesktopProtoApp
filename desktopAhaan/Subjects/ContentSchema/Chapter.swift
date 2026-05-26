@@ -67,6 +67,23 @@ struct Chapter: Codable, Hashable, Identifiable {
     /// to decode unchanged. Always carries `Question.source ==
     /// .bossQuiz` when populated.
     let bossQuestions: [Question]?
+
+    /// Quick-check MCQs surfaced mid-Discover-scene by inline scenes
+    /// inside `DiscoverChapterNView.swift` dispatchers (e.g. the
+    /// CycloneSurvivalQuiz, BossPreview, etc.). Migrated from
+    /// hand-authored Swift literals on 2026-05-26 — see
+    /// `scripts/migrate_quick_checks_to_pack.py`.
+    ///
+    /// Stable ids match the `scenecheck_chNN_qII` prefix already
+    /// whitelisted in `DataStore.ephemeralIdPrefixes`. II is the
+    /// zero-padded position of the item within the chapter, walking
+    /// the dispatcher file (and any +InlineScenesB sister) in
+    /// declaration order.
+    ///
+    /// Optional so any older `science_class7.json` snapshot continues
+    /// to decode unchanged. Always carries `Question.source ==
+    /// .sceneQuickCheck` when populated.
+    let quickCheckQuestions: [Question]?
 }
 
 // MARK: - Empty-list accessors
@@ -97,15 +114,22 @@ extension Chapter {
     /// the other Optional list fields on Chapter.
     var bossQuestionsList: [Question] { bossQuestions ?? [] }
 
+    /// Empty-list accessor for `quickCheckQuestions`. Same shape as
+    /// `bossQuestionsList`.
+    var quickCheckQuestionsList: [Question] { quickCheckQuestions ?? [] }
+
     /// Flat list of every Question id in this chapter, walking the
     /// chapter → topic → question tree PLUS the chapter-scoped Boss
-    /// Quiz questions migrated 2026-05-25. Used by D4's "Stuck here?"
-    /// strip to intersect chapter scope with the tough-flagged and
+    /// Quiz questions migrated 2026-05-25 and the scene quick-check
+    /// items migrated 2026-05-26. Used by D4's "Stuck here?" strip to
+    /// intersect chapter scope with the tough-flagged and
     /// recently-missed signals. Computed each access — typical
-    /// chapter has ~40 topic questions + 15 boss questions = ~55
-    /// ids, well under any noticeable cost.
+    /// chapter has ~40 topic questions + 15 boss + ~4 quick-check =
+    /// ~60 ids, well under any noticeable cost.
     var allQuestionIds: [String] {
-        topics.flatMap { $0.questions.map(\.id) } + bossQuestionsList.map(\.id)
+        topics.flatMap { $0.questions.map(\.id) }
+            + bossQuestionsList.map(\.id)
+            + quickCheckQuestionsList.map(\.id)
     }
 
     /// Flat list of every Concept id in this chapter — same shape as
