@@ -251,6 +251,7 @@
 		8205FFB62EB179A062B49C4E /* Scene7_AmoebaPseudopodHunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA2E73B098B8ABC5AE71644 /* Scene7_AmoebaPseudopodHunt.swift */; };
 		AC4AD8FDADA437441B9DEC55 /* Scene8_TasteAndFlavour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD717148F7F69BE435DC193 /* Scene8_TasteAndFlavour.swift */; };
 		2341864DD7A15D069B62CB93 /* Scene9_BossQuiz_Ch2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F567493922428E56C2C135E /* Scene9_BossQuiz_Ch2.swift */; };
+		94DB8BFD2A1F210DA8992308 /* DiscoverChapter3View+InlineScenesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B7BB1965890A814780427F /* DiscoverChapter3View+InlineScenesB.swift */; };
 		E00188A6EF25CFCACF6125E6 /* DiscoverChapter3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D5DDE6E52113C281AACDF /* DiscoverChapter3View.swift */; };
 		82BAFD25C82EE82CBF69A42A /* Scene1_FluffToFibre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897D3278A275C41A42763407 /* Scene1_FluffToFibre.swift */; };
 		BCCC1CDD8765101D08581EDD /* Scene2_MeetTheWoolAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2862F2A247687041D5EB80 /* Scene2_MeetTheWoolAnimals.swift */; };
@@ -1661,6 +1662,7 @@
 		0EA2E73B098B8ABC5AE71644 /* Scene7_AmoebaPseudopodHunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene7_AmoebaPseudopodHunt.swift"; sourceTree = "<group>"; };
 		FDD717148F7F69BE435DC193 /* Scene8_TasteAndFlavour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene8_TasteAndFlavour.swift"; sourceTree = "<group>"; };
 		8F567493922428E56C2C135E /* Scene9_BossQuiz_Ch2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene9_BossQuiz_Ch2.swift"; sourceTree = "<group>"; };
+		C1B7BB1965890A814780427F /* DiscoverChapter3View+InlineScenesB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter3View+InlineScenesB.swift"; sourceTree = "<group>"; };
 		151D5DDE6E52113C281AACDF /* DiscoverChapter3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter3View.swift"; sourceTree = "<group>"; };
 		897D3278A275C41A42763407 /* Scene1_FluffToFibre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_FluffToFibre.swift"; sourceTree = "<group>"; };
 		6E2862F2A247687041D5EB80 /* Scene2_MeetTheWoolAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_MeetTheWoolAnimals.swift"; sourceTree = "<group>"; };
@@ -3131,6 +3133,7 @@
 		FB1C25E11CB4A77B395A4C80 /* Chapter3 */ = {
 			isa = PBXGroup;
 			children = (
+				C1B7BB1965890A814780427F,
 				151D5DDE6E52113C281AACDF,
 				2C3A75EFC05025B0651D4E1C,
 			);
@@ -4512,6 +4515,7 @@
 				8205FFB62EB179A062B49C4E /* Scene7_AmoebaPseudopodHunt.swift in Sources */,
 				AC4AD8FDADA437441B9DEC55 /* Scene8_TasteAndFlavour.swift in Sources */,
 				2341864DD7A15D069B62CB93 /* Scene9_BossQuiz_Ch2.swift in Sources */,
+				94DB8BFD2A1F210DA8992308 /* DiscoverChapter3View+InlineScenesB.swift in Sources */,
 				E00188A6EF25CFCACF6125E6 /* DiscoverChapter3View.swift in Sources */,
 				82BAFD25C82EE82CBF69A42A /* Scene1_FluffToFibre.swift in Sources */,
 				BCCC1CDD8765101D08581EDD /* Scene2_MeetTheWoolAnimals.swift in Sources */,
