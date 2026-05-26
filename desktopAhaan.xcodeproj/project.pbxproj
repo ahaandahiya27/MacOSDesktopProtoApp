@@ -230,6 +230,7 @@
 		524CE3310FE961E4720E579F /* RelatedConceptsCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709519430D93C2B1B53BF912 /* RelatedConceptsCallout.swift */; };
 		F6B9C2085C935808C13ABCB7 /* SoftShadowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F206790DC21AEDF5DAAAF /* SoftShadowCard.swift */; };
 		106A7124064AFF60BCC0E1FD /* TryAtHomeCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E637F0F42E18FF3748132494 /* TryAtHomeCallout.swift */; };
+		574502DCDC3599C8E274C332 /* DiscoverChapter5View+InlineScenesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC5C8A46F48F44972244A0E /* DiscoverChapter5View+InlineScenesB.swift */; };
 		43D34BC2DFA97058A12AC907 /* DiscoverChapter5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C553ED822751C2B95B8971 /* DiscoverChapter5View.swift */; };
 		CCE0DE71AAF55D36681A8CDA /* Scene1_SourOrBitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635363112A21EEAC5E2C685D /* Scene1_SourOrBitter.swift */; };
 		44BA8C57E97836CB6A295843 /* Scene2_BuildYourpHStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B8968FB16399BDF100460 /* Scene2_BuildYourpHStrip.swift */; };
@@ -1639,6 +1640,7 @@
 		709519430D93C2B1B53BF912 /* RelatedConceptsCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelatedConceptsCallout.swift"; sourceTree = "<group>"; };
 		305F206790DC21AEDF5DAAAF /* SoftShadowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SoftShadowCard.swift"; sourceTree = "<group>"; };
 		E637F0F42E18FF3748132494 /* TryAtHomeCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TryAtHomeCallout.swift"; sourceTree = "<group>"; };
+		8EC5C8A46F48F44972244A0E /* DiscoverChapter5View+InlineScenesB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter5View+InlineScenesB.swift"; sourceTree = "<group>"; };
 		08C553ED822751C2B95B8971 /* DiscoverChapter5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter5View.swift"; sourceTree = "<group>"; };
 		635363112A21EEAC5E2C685D /* Scene1_SourOrBitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_SourOrBitter.swift"; sourceTree = "<group>"; };
 		668B8968FB16399BDF100460 /* Scene2_BuildYourpHStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_BuildYourpHStrip.swift"; sourceTree = "<group>"; };
@@ -3180,6 +3182,7 @@
 		17EE126619C392D665FFE356 /* Chapter5 */ = {
 			isa = PBXGroup;
 			children = (
+				8EC5C8A46F48F44972244A0E,
 				08C553ED822751C2B95B8971,
 				F1413C5C1BDCDAC2B9078066,
 			);
@@ -4488,6 +4491,7 @@
 				524CE3310FE961E4720E579F /* RelatedConceptsCallout.swift in Sources */,
 				F6B9C2085C935808C13ABCB7 /* SoftShadowCard.swift in Sources */,
 				106A7124064AFF60BCC0E1FD /* TryAtHomeCallout.swift in Sources */,
+				574502DCDC3599C8E274C332 /* DiscoverChapter5View+InlineScenesB.swift in Sources */,
 				43D34BC2DFA97058A12AC907 /* DiscoverChapter5View.swift in Sources */,
 				CCE0DE71AAF55D36681A8CDA /* Scene1_SourOrBitter.swift in Sources */,
 				44BA8C57E97836CB6A295843 /* Scene2_BuildYourpHStrip.swift in Sources */,
