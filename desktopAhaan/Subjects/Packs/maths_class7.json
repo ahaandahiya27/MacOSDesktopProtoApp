@@ -4029,6 +4029,1361 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch03",
+      "number": 3,
+      "title": "A Peek Beyond the Point",
+      "summary": "When a screw is 'between 2 cm and 3 cm', whole numbers aren't enough. This chapter extends the Indian place-value system to the right of the units place: splitting a unit into ten tenths, each tenth into ten hundredths, and so on, gives us decimals. You'll read and write decimals, place them on a number line, see why 0.2 = 0.20, compare them, and add and subtract them using the same column method you already know.",
+      "topics": [
+        {
+          "id": "ch03_t01",
+          "title": "The Need for Smaller Units & Tenths",
+          "summary": "Sonu's screws look identical but differ by a sliver. Whole centimetres can't capture the difference, so we split each unit into 10 equal parts — tenths. A length of 2 and 7 tenths cm is written 2 7/10, and ten tenths rebuild one whole unit.",
+          "concepts": [
+            {
+              "id": "ch03_t01_c01",
+              "title": "Why we need units smaller than one",
+              "explanations": {
+                "oneLine": "When a measurement falls between two whole numbers, we need smaller units to describe it precisely.",
+                "kidFriendly": "Sonu watched his mother struggle to fix a toy because a screw was the wrong size — by a tiny amount. The two screws looked identical, but one was a sliver longer. On a centimetre ruler, both were 'between 2 cm and 3 cm' — whole centimetres couldn't tell them apart. To capture that small difference, we need a unit SMALLER than one centimetre. Splitting each centimetre into 10 equal parts gives us tenths, and suddenly we can say one screw is 2 and 7 tenths, the other 2 and 8 tenths. Smaller units let us measure more precisely.",
+                "textbook": "Whole-number units are insufficient when a quantity lies strictly between two consecutive whole numbers. To measure such quantities precisely, the unit is subdivided into smaller equal parts. Dividing one unit into ten equal parts produces tenths; a length of two units and seven tenths is written 2 7/10. This subdivision is the conceptual origin of decimal fractions.",
+                "expert": "The need for sub-unit precision is the practical driver behind the extension of positional notation below the units place. Any measurement is an approximation bounded by the resolution of the instrument; finer units (tenths, hundredths) increase resolution. Choosing base-ten subdivisions (rather than halves or quarters) keeps the representation consistent with the existing place-value system, enabling a single uniform algorithm for all arithmetic."
+              },
+              "reasoning": "Reality rarely lands exactly on whole numbers. Lengths, weights, temperatures and prices fall between the marks. To describe an in-between quantity, you need a finer ruler — units smaller than one — and dividing into ten parts keeps everything compatible with how we already write numbers.",
+              "useCases": [
+                {
+                  "title": "Screw lengths",
+                  "description": "Two screws both 'between 2 and 3 cm' but a tenth apart — only smaller units reveal the difference.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Body temperature",
+                  "description": "37.0 °C is healthy, 37.8 °C is a mild fever — the tenths digit carries medical meaning.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Cloth for stitching",
+                  "description": "A tailor needs 2.7 m of cloth, not '2 or 3 m' — the tenths decide whether the kurti fits.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Different cultures and trades historically chose different sub-units — inches split into halves, quarters, eighths; the old Indian system had units like the 'ratti' for weighing gold. The decimal (tenths) choice won out globally because it meshes seamlessly with base-ten place value, so the same arithmetic rules work above and below the point.",
+              "mnemonic": "Between two whole numbers lies a finer ruler. Split the unit into ten to read it.",
+              "predictQuestion": "Two screws both measure 'between 2 cm and 3 cm' but aren't the same length — what kind of unit do you need to tell them apart?",
+              "whyChain": [
+                "Whole-number units are coarse. When a real length, weight or price lands between two whole marks — like a screw between 2 and 3 cm — whole numbers simply can't say WHERE between them it sits. We need a finer scale.",
+                "Splitting one unit into ten equal parts creates a new, smaller unit: the tenth. Now the gap between 2 and 3 has nine intermediate marks (2.1, 2.2, …, 2.9), and a screw can be pinned to 2 and 7 tenths. Each tenth is exactly 1/10 of a unit, and ten of them rebuild one whole unit.",
+                "Choosing TEN parts (rather than, say, four or eight) is deliberate: it keeps the new sub-units consistent with the base-ten place-value system we already use for whole numbers. That consistency means every rule you know for whole-number arithmetic will extend, unchanged, to these smaller units — which is the whole reason decimals are so powerful."
+              ],
+              "relatedConceptIds": [
+                "ch03_t01_c02",
+                "ch03_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t01_q01"
+              ],
+              "pageRefs": [
+                46,
+                47
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t01_c02",
+              "title": "Tenths — splitting a unit into ten",
+              "explanations": {
+                "oneLine": "One unit split into ten equal parts gives tenths; a length of 2 units and 7 tenths is 2 7/10, and 10 tenths make one whole unit.",
+                "kidFriendly": "On the ruler, the space between 2 and 3 is divided into 10 equal parts. Each part is one-tenth (1/10). To reach the first screw's length, go from 0 to 2, then take 7 more of these tenths: that's 2 and 7/10 cm, read 'two and seven-tenths centimetres'. The key fact: ten one-tenths make one whole — 1/10 + 1/10 + … (ten times) = 10/10 = 1. So 34 tenths is the same as 3 wholes and 4 tenths (because 30 tenths = 3 wholes). Tenths are a new place, just to the right of ones.",
+                "textbook": "A tenth is one of ten equal parts of a unit, written 1/10. A quantity of n tenths equals n/10; when n ≥ 10, it can be regrouped into wholes and tenths (e.g., 34/10 = 3 + 4/10). Ten tenths equal one unit: 10 × 1/10 = 1. Reading conventions: 4/10 is 'four-tenths', 41/10 is 'forty-one tenths' or 'four and one-tenth' depending on grouping.",
+                "expert": "The tenth is the first negative power of ten, 10⁻¹, in the positional expansion of a real number. Regrouping n/10 into ⌊n/10⌋ units and (n mod 10) tenths is the carry mechanism operating below the units place, identical in structure to the carry between any adjacent place values. The reading ambiguity ('forty-one tenths' vs 'four and one-tenth') disappears once the value is fixed; both name 41/10."
+              },
+              "reasoning": "Ten equal parts of a whole, by definition, reassemble into the whole — that's what 'ten equal parts' means. So 10 tenths = 1 unit, and any pile of tenths beyond ten can be traded up: 13 tenths becomes 1 unit and 3 tenths, exactly like 13 ones becoming 1 ten and 3 ones.",
+              "useCases": [
+                {
+                  "title": "Measuring arm length",
+                  "description": "Sonu's lower arm is 2 7/10 units, upper arm 3 6/10; together 5 units and 13 tenths = 6 3/10.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "USB cable",
+                  "description": "A cable 4 and 8 tenths units long is 48 tenths — two ways to say the same length.",
+                  "domain": "technology"
+                },
+                {
+                  "title": "Fuel gauge",
+                  "description": "A tank '7 tenths full' is 0.7 of capacity — tenths describe partial amounts.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "The regrouping '13 tenths = 1 unit + 3 tenths' is the same carrying you do when adding whole numbers, just one place to the right. This uniformity is the whole point of decimals: the carry rule never changes, no matter how far below the point you go.",
+              "mnemonic": "Ten tenths rebuild one whole. Extra tenths carry up into units.",
+              "predictQuestion": "If 10 tenths make one whole unit, how many wholes and tenths is '34 tenths'?",
+              "whyChain": [
+                "A tenth is defined as one of ten equal pieces of a unit. By that definition, collecting all ten pieces back together gives exactly one whole unit: 10 × (1/10) = 1. This is the anchor fact for everything about tenths.",
+                "Because ten tenths make a whole, any count of tenths of ten or more can be regrouped. 34 tenths contains three full groups of ten tenths (= 3 wholes) with 4 tenths left over, so 34/10 = 3 and 4/10. This is identical to regrouping 34 ones into 3 tens and 4 ones — same carry, one place to the right.",
+                "Treating tenths as just another place value — sitting immediately right of the ones — is what lets the entire whole-number machinery extend downward. Adding, comparing, and carrying all behave the same; we've simply added a new column. That seamless extension is why the decimal system, built on tenths, became the universal way to write fractional quantities."
+              ],
+              "relatedConceptIds": [
+                "ch03_t01_c01",
+                "ch03_t02_c01",
+                "ch03_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t01_q02",
+                "ch03_t01_q03"
+              ],
+              "pageRefs": [
+                48,
+                49,
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch03_t01_q01",
+              "prompt": "A screw measures between 2 cm and 3 cm. On a ruler whose centimetres are each split into 10 equal parts, the screw reaches the 7th mark past 2. Write its length in tenths form.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "2 7/10 cm (two and seven-tenths cm)",
+              "solutionSteps": [
+                "The unit between 2 and 3 is split into 10 equal parts (tenths).",
+                "Going 7 parts past the 2 mark adds 7/10.",
+                "Length = 2 + 7/10 = 2 7/10 cm."
+              ],
+              "commonMistakes": [
+                "Reading the 7th mark as 7 cm rather than 7 tenths.",
+                "Writing 2.7 as 27 by dropping the place distinction."
+              ],
+              "variations": [
+                {
+                  "prompt": "A pencil reaches the 4th tenth-mark past 3. Its length?",
+                  "answer": "3 4/10 units",
+                  "solutionSteps": [
+                    "3 + 4/10 = 3 4/10."
+                  ]
+                },
+                {
+                  "prompt": "An eraser reaches the 9th tenth-mark past 1. Length?",
+                  "answer": "1 9/10 units",
+                  "solutionSteps": [
+                    "1 + 9/10 = 1 9/10."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                47,
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t01_q02",
+              "prompt": "How many wholes and tenths is '34 tenths' (34/10)?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "3 wholes and 4 tenths (3 4/10)",
+              "solutionSteps": [
+                "10 tenths = 1 whole.",
+                "34 tenths = 30 tenths + 4 tenths = 3 wholes + 4 tenths.",
+                "So 34/10 = 3 4/10."
+              ],
+              "commonMistakes": [
+                "Saying 34 tenths = 34 wholes (forgetting that 10 tenths make only 1 whole).",
+                "Stopping at 3 wholes and forgetting the 4 leftover tenths."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many wholes and tenths is 57 tenths?",
+                  "answer": "5 wholes 7 tenths",
+                  "solutionSteps": [
+                    "50 tenths = 5 wholes, plus 7 tenths."
+                  ]
+                },
+                {
+                  "prompt": "How many tenths in 6 wholes 3 tenths?",
+                  "answer": "63 tenths",
+                  "solutionSteps": [
+                    "6 wholes = 60 tenths, + 3 = 63 tenths."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t01_q03",
+              "prompt": "Sonu's lower arm is 2 7/10 units and his upper arm is 3 6/10 units. What is the total length of his arm?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "6 3/10 units",
+              "solutionSteps": [
+                "Add wholes: 2 + 3 = 5 units.",
+                "Add tenths: 7/10 + 6/10 = 13/10.",
+                "13 tenths = 1 whole + 3 tenths, so regroup: 5 + 1 = 6 wholes, 3 tenths left.",
+                "Total = 6 3/10 units."
+              ],
+              "commonMistakes": [
+                "Adding to get 5 13/10 and leaving it un-regrouped.",
+                "Adding tenths as 7 + 6 = 13 wholes instead of tenths."
+              ],
+              "variations": [
+                {
+                  "prompt": "Add 4 8/10 and 2 5/10.",
+                  "answer": "7 3/10",
+                  "solutionSteps": [
+                    "Wholes 6, tenths 13/10 = 1 3/10, total 7 3/10."
+                  ]
+                },
+                {
+                  "prompt": "Add 1 9/10 and 3 9/10.",
+                  "answer": "5 8/10",
+                  "solutionSteps": [
+                    "Wholes 4, tenths 18/10 = 1 8/10, total 5 8/10."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch03_t02",
+          "title": "A Hundredth Part",
+          "summary": "Fold a tenth into ten again and each piece is a hundredth — 1/100 of a unit. There are 100 hundredths in a whole and 10 hundredths in a tenth. Hundredths let us measure even finer, like the half-fold of an 8.9-unit sheet landing between 4.4 and 4.5.",
+          "concepts": [
+            {
+              "id": "ch03_t02_c01",
+              "title": "Hundredths — splitting a tenth into ten",
+              "explanations": {
+                "oneLine": "Dividing each tenth into ten equal parts gives hundredths; 100 hundredths make one whole and 10 hundredths make one tenth.",
+                "kidFriendly": "An 8 9/10-unit sheet folded in half is 'between 4 4/10 and 4 5/10' — but with no marks in between, we can't say exactly. Just as we split a unit into ten tenths, we split each tenth into ten smaller parts. Each is one-hundredth (1/100). Since each tenth holds 10 hundredths and a unit holds 10 tenths, a unit holds 10 × 10 = 100 hundredths. Now we can measure to 4 and 45 hundredths. Each time we need more precision, we split by ten again — tenths, hundredths, thousandths, forever.",
+                "textbook": "A hundredth is one of one hundred equal parts of a unit, written 1/100, obtained by dividing a tenth into ten equal parts. Therefore 10 hundredths = 1 tenth and 100 hundredths = 1 unit. This recursive tenfold subdivision can continue indefinitely (thousandths, ten-thousandths), each new place being one-tenth of the previous, mirroring how whole-number places are each ten times the previous.",
+                "expert": "The hundredth is 10⁻², the second negative power of ten. The recursive subdivision generates the full sequence of negative powers 10⁻ⁿ, giving the positional representation of real numbers to arbitrary precision. The choice of repeated tenfold division (rather than mixed radices) is what makes the resulting numeral system a clean base-ten positional system extending symmetrically about the units place."
+              },
+              "reasoning": "When tenths still aren't fine enough, we split again by ten — the same move that created tenths from units. A tenth split into ten gives hundredths. Repeating one operation (divide by ten) generates every smaller place, keeping the whole system uniform.",
+              "useCases": [
+                {
+                  "title": "Money",
+                  "description": "₹4.45 is 4 rupees, 4 ten-paise and 5 paise — hundredths of a rupee are paise.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Folding paper",
+                  "description": "An 8.9-unit sheet folded in half is 4.45 units — needs hundredths to state exactly.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Cricket averages",
+                  "description": "A batting average of 52.75 uses hundredths to rank players precisely.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "The metric system is built entirely on this tenfold subdivision: 1 metre = 10 decimetres = 100 centimetres = 1000 millimetres. Each step is another decimal place. That's why metric measurements convert just by moving the decimal point, while inches-and-feet require awkward multiplication.",
+              "mnemonic": "Split a tenth by ten → hundredths. 100 hundredths = 1 whole; 10 hundredths = 1 tenth.",
+              "predictQuestion": "If you split each tenth of a unit into ten equal parts, how many of these smallest parts fit in one whole unit?",
+              "whyChain": [
+                "When tenths are too coarse to capture a measurement — like the exact length of a folded sheet sitting between 4.4 and 4.5 — we reach for the same tool that made tenths in the first place: divide by ten again. Splitting one tenth into ten equal parts produces a finer unit, the hundredth.",
+                "Counting up the structure: each tenth now holds 10 hundredths, and a whole unit holds 10 tenths, so a whole holds 10 × 10 = 100 hundredths. Equivalently, 100 hundredths = 1 unit and 10 hundredths = 1 tenth. The hundredth is exactly 1/100 of a unit.",
+                "Crucially, this process never has to stop. Need more precision than hundredths? Split each hundredth into ten thousandths. Because every step is the identical 'divide by ten' operation, the places extend infinitely to the right — tenths, hundredths, thousandths — each one-tenth of the place to its left, perfectly mirroring how whole-number places grow tenfold to the left."
+              ],
+              "relatedConceptIds": [
+                "ch03_t01_c02",
+                "ch03_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t02_q01",
+                "ch03_t02_q02"
+              ],
+              "pageRefs": [
+                52,
+                53,
+                54
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch03_t02_q01",
+              "prompt": "How many hundredths are there in one whole unit? How many hundredths in one tenth?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "100 hundredths in a whole; 10 hundredths in a tenth.",
+              "solutionSteps": [
+                "A unit splits into 10 tenths; each tenth splits into 10 hundredths.",
+                "So a unit holds 10 × 10 = 100 hundredths.",
+                "And each single tenth holds 10 hundredths."
+              ],
+              "commonMistakes": [
+                "Saying 10 hundredths make a whole (confusing hundredths with tenths).",
+                "Saying 100 hundredths make a tenth (off by a factor of 10)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many thousandths in one hundredth?",
+                  "answer": "10",
+                  "solutionSteps": [
+                    "Each hundredth splits into 10 thousandths."
+                  ]
+                },
+                {
+                  "prompt": "How many hundredths in 3 tenths?",
+                  "answer": "30",
+                  "solutionSteps": [
+                    "3 tenths × 10 hundredths each = 30 hundredths."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                53,
+                54
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t02_q02",
+              "prompt": "An 8 9/10-unit sheet of paper is folded exactly in half along its length. Between which two tenth-marks does its new length fall, and what is the exact length in hundredths?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Between 4 4/10 and 4 5/10; exactly 4 45/100 units.",
+              "solutionSteps": [
+                "Half of 8 9/10 = half of 8.9 = 4.45 units.",
+                "4.45 is between 4.4 (4 4/10) and 4.5 (4 5/10).",
+                "Exactly, it is 4 and 45 hundredths = 4 45/100."
+              ],
+              "commonMistakes": [
+                "Halving only the whole part (4) and forgetting to halve the 9/10.",
+                "Writing 4.45 as 4 45/10 instead of 4 45/100."
+              ],
+              "variations": [
+                {
+                  "prompt": "Half of 6 4/10 units?",
+                  "answer": "3 2/10 (= 3.2)",
+                  "solutionSteps": [
+                    "6.4 ÷ 2 = 3.2."
+                  ]
+                },
+                {
+                  "prompt": "Half of 5 unit 3 tenths (5.3)?",
+                  "answer": "2.65 = 2 65/100",
+                  "solutionSteps": [
+                    "5.3 ÷ 2 = 2.65."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                52,
+                53
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch03_t03",
+          "title": "Decimal Place Value & the Point",
+          "summary": "Why split by ten every time, not four or eight? Because ten is the base of our whole place-value system. Extending it rightward with a decimal point gives tenths, hundredths, thousandths — each place one-tenth of the one to its left. 2.7 means 2 ones and 7 tenths.",
+          "concepts": [
+            {
+              "id": "ch03_t03_c01",
+              "title": "The decimal point and decimal place value",
+              "explanations": {
+                "oneLine": "The decimal point separates whole units from fractional parts; places to its right are tenths, hundredths, thousandths — each one-tenth of the place to its left.",
+                "kidFriendly": "We write '2 and 7 tenths' compactly as 2.7 — the dot is the decimal point, separating the whole part (2) from the fractional part (7 tenths). To its right come tenths, then hundredths, then thousandths. Just as each whole-number place is 10 times the one to its right (ones, tens, hundreds), each place is also 10 times SMALLER than the one to its left — and that pattern simply continues past the point: 1 → 1/10 → 1/100 → 1/1000. So 2.745 means 2 ones + 7 tenths + 4 hundredths + 5 thousandths. The decimal point is the mirror line of the place-value system.",
+                "textbook": "The decimal point is the separator between the integer part and the fractional part of a number. Place values to the right of the point are successive negative powers of ten: tenths (1/10), hundredths (1/100), thousandths (1/1000). Each place value is one-tenth of the place immediately to its left, extending the ×10/÷10 relationship of whole-number places continuously across the point. Thus 2.745 = 2 + 7/10 + 4/100 + 5/1000.",
+                "expert": "The radix point marks the boundary between non-negative and negative powers of the base in positional notation. For base ten, digit d_k at position k (k < 0 to the right of the point) contributes d_k × 10^k. The symmetric ×10/÷10 structure across the point is what unifies integer and fractional representation into a single system, and is the reason the four arithmetic algorithms are radix-point-agnostic. Base ten is chosen for cultural-historical reasons; base two (binary point) and base sixteen behave identically."
+              },
+              "reasoning": "Ten is special because our entire number system is built on it — each whole place is ten times the next. Extending the same ×10/÷10 ladder past the units place is the most natural thing to do, and the decimal point just marks where the whole part ends and the fractional part begins.",
+              "useCases": [
+                {
+                  "title": "Reading prices",
+                  "description": "₹2.75 = 2 rupees + 7 ten-paise + 5 paise; the point separates rupees from paise.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Metric lengths",
+                  "description": "1.25 m = 1 metre + 2 decimetres + 5 centimetres — places mirror metric sub-units.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Stopwatch times",
+                  "description": "A 9.58-second sprint reads 9 seconds + 5 tenths + 8 hundredths.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "Why ten and not four or eight? You COULD split a unit into 4 or 8 parts (and people do — inches, halves, quarters). But only base-ten subdivisions mesh with the place-value system we use for whole numbers, so that a single uniform algorithm handles everything. Computers, by contrast, use a 'binary point' in base two for the same reason — it matches their base.",
+              "mnemonic": "The point is the mirror. Left of it: ones, tens, hundreds. Right of it: tenths, hundredths, thousandths.",
+              "predictQuestion": "Why do we always split a unit into TEN smaller parts to make decimals, rather than into 4 or 8 parts?",
+              "whyChain": [
+                "Our whole-number system is base ten: each place (ones, tens, hundreds) is exactly ten times the place to its right. This tenfold ladder is the structure that makes carrying, comparing and the standard algorithms work.",
+                "Decimals extend that exact same ladder to the right of the units place. We could split a unit into four or eight parts — and for some tasks (cutting a cake, measuring in inches) people do — but those sub-units wouldn't line up with the base-ten places of the whole-number part, so we'd need different arithmetic rules above and below the split.",
+                "By splitting into ten every time, the place to the right is always one-tenth of the place to its left, continuously across the decimal point. That single uniform ×10/÷10 structure means every algorithm you know for whole numbers — addition, subtraction, comparison, carrying — works unchanged on decimals. The decimal point is just a marker showing where the whole part ends; the system itself never breaks stride."
+              ],
+              "relatedConceptIds": [
+                "ch03_t02_c01",
+                "ch03_t04_c01",
+                "ch03_t05_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t03_q01",
+                "ch03_t03_q02"
+              ],
+              "pageRefs": [
+                58,
+                59,
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch03_t03_q01",
+              "prompt": "Write the place value of each digit in 2.745.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "2 = 2 ones; 7 = 7 tenths (7/10); 4 = 4 hundredths (4/100); 5 = 5 thousandths (5/1000).",
+              "solutionSteps": [
+                "The digit left of the point is the ones place: 2 ones.",
+                "First digit right of point = tenths: 7/10.",
+                "Second = hundredths: 4/100.",
+                "Third = thousandths: 5/1000."
+              ],
+              "commonMistakes": [
+                "Calling the first decimal place 'oneths' — it's tenths.",
+                "Reversing the order (thinking the rightmost decimal is the biggest)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Place values in 13.06?",
+                  "answer": "1 ten, 3 ones, 0 tenths, 6 hundredths.",
+                  "solutionSteps": [
+                    "Tens 1, ones 3, tenths 0, hundredths 6."
+                  ]
+                },
+                {
+                  "prompt": "Place value of the 8 in 5.108?",
+                  "answer": "8 thousandths (8/1000).",
+                  "solutionSteps": [
+                    "Third decimal place = thousandths."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                59,
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t03_q02",
+              "prompt": "Express 2.745 as a sum of its place values (in fraction form).",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "2 + 7/10 + 4/100 + 5/1000",
+              "solutionSteps": [
+                "Ones: 2.",
+                "Tenths: 7/10.",
+                "Hundredths: 4/100.",
+                "Thousandths: 5/1000.",
+                "Sum: 2 + 7/10 + 4/100 + 5/1000 = 2.745."
+              ],
+              "commonMistakes": [
+                "Writing 7/100 instead of 7/10 for the tenths digit.",
+                "Forgetting that the places get smaller (÷10) to the right."
+              ],
+              "variations": [
+                {
+                  "prompt": "Write 0.63 as a sum of place values.",
+                  "answer": "6/10 + 3/100",
+                  "solutionSteps": [
+                    "Tenths 6/10, hundredths 3/100."
+                  ]
+                },
+                {
+                  "prompt": "Write 12.5 as a sum of place values.",
+                  "answer": "10 + 2 + 5/10",
+                  "solutionSteps": [
+                    "Ten, two ones, five tenths."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                59,
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch03_t04",
+          "title": "Comparing & Locating Decimals",
+          "summary": "Every decimal has a home on the number line: 1.4 sits four tenths past 1. Magnify a segment and you can locate 1.04 or 4.185. And the 'zero dilemma' — 0.2 = 0.20 = 0.200, because trailing zeros add nothing, but 0.2, 0.02, 0.002 are all different.",
+          "concepts": [
+            {
+              "id": "ch03_t04_c01",
+              "title": "Locating decimals on the number line",
+              "explanations": {
+                "oneLine": "Any decimal can be placed on the number line by repeatedly dividing a segment into ten and zooming in: 1.4 is 4 tenths past 1; 1.04 is 4 hundredths past 1.",
+                "kidFriendly": "The number 1.4 means 1 unit and 4 tenths. So divide the segment from 1 to 2 into 10 equal parts and take the 4th — that's where 1.4 lives. Want 1.04? Zoom into the segment from 1 to 1.1, divide THAT into 10 parts, and take the 4th: that's 1.04. To find 4.185, keep zooming — 4 to 5, then 4.1 to 4.2, then 4.18 to 4.19, take the 5th mark. Every decimal, no matter how many places, has an exact home on the number line, found by repeated tenfold zooming.",
+                "textbook": "Each decimal corresponds to a unique point on the number line, located by successive tenfold subdivision: the integer part fixes the unit interval, the tenths digit selects one of ten sub-intervals, the hundredths digit selects one of ten sub-sub-intervals, and so on. This nested-interval process converges to the exact point. Magnifying a segment between consecutive marks reveals the next decimal place's ten divisions.",
+                "expert": "Locating a decimal is an instance of the nested interval property of the reals: a decimal expansion specifies a nested sequence of closed intervals of lengths 10⁻ⁿ whose intersection is a single point. For terminating decimals the process halts; for non-terminating ones it continues indefinitely, which is precisely how the reals are constructed as limits of such Cauchy sequences. The number line picture is the geometric face of this construction."
+              },
+              "reasoning": "A decimal's digits are directions for a treasure hunt on the number line: the whole part says which unit interval, the tenths digit says which tenth of it, the hundredths digit says which tenth of THAT, and so on. Each digit zooms you in tenfold to a more precise location.",
+              "useCases": [
+                {
+                  "title": "Ruler reading",
+                  "description": "Finding 4.185 cm on a fine ruler means zooming past 4 cm, then 4.1, then 4.18.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Number-line games",
+                  "description": "Placing 1.04 vs 1.4 teaches that more decimal places mean finer positions, not bigger numbers.",
+                  "domain": "other"
+                },
+                {
+                  "title": "GPS coordinates",
+                  "description": "Each extra decimal in a latitude zooms the location ten times closer — 0.0001° is about 11 metres.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "This zoom-in process is exactly how digital instruments display ever-finer readings, and how map apps let you keep zooming. It's also the geometric picture behind the idea that there are infinitely many decimals between any two numbers — you can always zoom in and find more.",
+              "mnemonic": "Each decimal digit zooms you in tenfold. Divide the segment by ten, take the digit-th part, repeat.",
+              "predictQuestion": "Where on the number line does 1.04 sit, and how is that different from where 1.4 sits?",
+              "whyChain": [
+                "A decimal expansion is a set of zoom-in instructions. The integer part tells you which whole-number interval to stand in (1.4 and 1.04 are both between 1 and 2). The tenths digit then divides that interval into ten and picks one slice.",
+                "For 1.4, the tenths digit is 4, so you take the 4th of ten slices between 1 and 2 — landing well along toward 2. For 1.04, the tenths digit is 0, so you take the 0th slice (staying right next to 1); only at the hundredths step do you move, taking 4 of the ten hundredth-slices between 1.0 and 1.1. So 1.04 sits much closer to 1 than 1.4 does.",
+                "This nested zooming pins every decimal to one exact point, and it reveals a deep truth: between any two decimals you can always zoom in and find more. The number line isn't a row of separate dots — it's infinitely divisible, and decimals are the addresses that let you name any point on it to whatever precision you need."
+              ],
+              "relatedConceptIds": [
+                "ch03_t03_c01",
+                "ch03_t04_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t04_q01"
+              ],
+              "pageRefs": [
+                69,
+                70,
+                71
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t04_c02",
+              "title": "The zero dilemma — trailing zeros and comparing decimals",
+              "explanations": {
+                "oneLine": "Trailing zeros after a decimal don't change its value (0.2 = 0.20 = 0.200), but zeros that shift digits rightward do (0.2 ≠ 0.02 ≠ 0.002).",
+                "kidFriendly": "Sonu says 0.2 = 0.20 = 0.200. Zara worries the extra zeros change the value. Who's right? Sonu. 0.2 is 2 tenths; 0.20 is 2 tenths and 0 hundredths — still 2 tenths; 0.200 is 2 tenths, 0 hundredths, 0 thousandths — still 2 tenths. Trailing zeros on the right just say 'and nothing more', so they don't change the value. BUT 0.2, 0.02, 0.002 are all different: the 2 moves from tenths to hundredths to thousandths, getting ten times smaller each time. To compare decimals, line up the points and compare place by place from the left — and you can pad with trailing zeros to make them the same length safely.",
+                "textbook": "Appending zeros to the right end of a decimal's fractional part does not change its value, because each appended zero contributes zero to a smaller place (0.2 = 0.20 = 0.200 = 2/10). However, inserting zeros that shift non-zero digits into smaller places does change the value (0.2 = 2/10, 0.02 = 2/100, 0.002 = 2/1000). To compare decimals, align decimal points and compare digits place by place from the highest place; trailing zeros may be added freely to equalise lengths.",
+                "expert": "Trailing-zero invariance reflects that d × 10⁻ⁿ = 0 when d = 0, so appended zero-digits add nothing. This makes the decimal representation of a terminating rational non-unique only up to trailing zeros (a mild non-uniqueness, distinct from the 0.999… = 1 case). Place-by-place lexicographic comparison of equal-length aligned expansions correctly orders the reals because the positional weights are strictly decreasing."
+              },
+              "reasoning": "A zero in a place means 'none of this size'. Adding zeros at the very end adds 'none of these tiny sizes' — which changes nothing. But a zero that pushes a real digit into a smaller place genuinely shrinks that digit's contribution tenfold.",
+              "useCases": [
+                {
+                  "title": "Money equivalence",
+                  "description": "₹5 = ₹5.00 = ₹5.000 — trailing zeros are just bookkeeping; the rupees are the same.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Comparing race times",
+                  "description": "9.58 vs 9.6: pad to 9.58 vs 9.60; compare hundredths — 8 < 0? No, compare tenths first: 5 = 6? 5<6, so 9.58 < 9.60.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Lab measurements",
+                  "description": "Writing 2.50 g instead of 2.5 g signals precision to hundredths, though the value is identical.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Scientists use trailing zeros deliberately to show PRECISION even though they don't change the value: '2.50 cm' claims accuracy to the hundredth, while '2.5 cm' only to the tenth. So in science the zeros carry information about the measurement even when they don't change the number — a subtle but important distinction.",
+              "mnemonic": "Trailing zeros: free, no change. Zeros that shove digits right: ten-times smaller each shove.",
+              "predictQuestion": "Is 0.2 equal to 0.20? Is 0.2 equal to 0.02? Decide both by thinking about place value.",
+              "whyChain": [
+                "A digit's contribution is digit × place-value. A zero contributes zero no matter its place. So appending zeros to the far right of a decimal — 0.2 → 0.20 → 0.200 — just adds 'zero hundredths', 'zero thousandths', which contribute nothing. The value stays exactly 2 tenths.",
+                "But a zero placed so that it SHIFTS a non-zero digit into a smaller place is a completely different move. Going from 0.2 to 0.02 pushes the 2 from the tenths place to the hundredths place, making it ten times smaller (2/10 vs 2/100). 0.002 pushes it smaller still. These are genuinely different numbers.",
+                "This is why comparing decimals safely means aligning the decimal points and comparing place by place from the left — and why you can pad with trailing zeros to equalise lengths without cheating. 9.6 vs 9.58 becomes 9.60 vs 9.58; same tenths-then-hundredths comparison, no value changed. Understanding which zeros matter and which don't is the key to never mis-ordering decimals."
+              ],
+              "relatedConceptIds": [
+                "ch03_t04_c01",
+                "ch03_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t04_q02",
+                "ch03_t04_q03"
+              ],
+              "pageRefs": [
+                70,
+                71
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch03_t04_q01",
+              "prompt": "On a number line, where does 1.4 lie, and where does 1.04 lie? Which is closer to 1?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "1.4 is the 4th tenth-mark between 1 and 2. 1.04 is the 4th hundredth-mark between 1.0 and 1.1. 1.04 is much closer to 1.",
+              "solutionSteps": [
+                "1.4 = 1 + 4 tenths → divide 1-to-2 into ten, take the 4th part.",
+                "1.04 = 1 + 0 tenths + 4 hundredths → stay near 1, then take 4 of the hundredth-marks past 1.0.",
+                "1.04 is far closer to 1 (only 4 hundredths away) than 1.4 (4 tenths away)."
+              ],
+              "commonMistakes": [
+                "Treating 1.04 as bigger than 1.4 because it has more digits.",
+                "Placing 1.04 at the 4-tenths mark."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which is bigger, 2.3 or 2.30?",
+                  "answer": "Equal.",
+                  "solutionSteps": [
+                    "Trailing zero adds nothing: 2.3 = 2.30."
+                  ]
+                },
+                {
+                  "prompt": "Which is closer to 5: 5.2 or 5.02?",
+                  "answer": "5.02",
+                  "solutionSteps": [
+                    "5.02 is only 2 hundredths from 5; 5.2 is 2 tenths."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                69,
+                70
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t04_q02",
+              "prompt": "Which of these are equal: 4.5, 4.05, 0.405, 4.050, 4.50, 4.005, 04.50?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "4.5 = 4.50 = 4.050 = 04.50 (all equal four and five tenths). The others (4.05, 0.405, 4.005) are different.",
+              "solutionSteps": [
+                "4.5 = four and 5 tenths.",
+                "4.50 and 4.050 add only trailing zeros → still 4.5.",
+                "04.50 has a harmless leading zero too → still 4.5.",
+                "4.05 = four and 5 hundredths (different); 0.405 (different); 4.005 = four and 5 thousandths (different)."
+              ],
+              "commonMistakes": [
+                "Thinking 4.05 equals 4.5 (the 5 is in different places — hundredths vs tenths).",
+                "Thinking the leading zero in 04.50 changes the value."
+              ],
+              "variations": [
+                {
+                  "prompt": "Are 0.3, 0.30, 0.03 all equal?",
+                  "answer": "No — 0.3 = 0.30 but 0.03 is ten times smaller.",
+                  "solutionSteps": [
+                    "0.3 = 0.30 (trailing zero); 0.03 = 3 hundredths, different."
+                  ]
+                },
+                {
+                  "prompt": "Is 7 equal to 7.0 and 7.00?",
+                  "answer": "Yes, all equal.",
+                  "solutionSteps": [
+                    "Trailing zeros after the point add nothing."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                70
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t04_q03",
+              "prompt": "Order these from smallest to largest: 0.2, 0.02, 0.002, 0.22.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "0.002 < 0.02 < 0.2 < 0.22",
+              "solutionSteps": [
+                "Align points and pad: 0.200, 0.020, 0.002, 0.220.",
+                "Compare place by place from tenths: 0.002 has 0 tenths and 0 hundredths → smallest.",
+                "0.020 next, then 0.200, then 0.220 (which has an extra 2 hundredths over 0.2).",
+                "Order: 0.002 < 0.02 < 0.2 < 0.22."
+              ],
+              "commonMistakes": [
+                "Ordering by number of digits rather than place value.",
+                "Forgetting to align decimal points before comparing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Order 1.5, 1.05, 1.55, 1.005.",
+                  "answer": "1.005 < 1.05 < 1.5 < 1.55",
+                  "solutionSteps": [
+                    "Pad to thousandths and compare from tenths."
+                  ]
+                },
+                {
+                  "prompt": "Which is largest: 0.9, 0.09, 0.99?",
+                  "answer": "0.99",
+                  "solutionSteps": [
+                    "0.99 > 0.9 > 0.09."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                70,
+                71
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch03_t05",
+          "title": "Adding and Subtracting Decimals",
+          "summary": "The same column method you use for whole numbers works for decimals — just line up the decimal points so each place sits under its match. Priya's 2.7 m plus Shylaja's 3.5 m makes 6.2 m, with a carry from the tenths, exactly like whole-number carrying.",
+          "concepts": [
+            {
+              "id": "ch03_t05_c01",
+              "title": "Adding and subtracting decimals by aligning the point",
+              "explanations": {
+                "oneLine": "To add or subtract decimals, line up the decimal points (so tenths sit under tenths, hundredths under hundredths) and use the ordinary column method with carrying and borrowing.",
+                "kidFriendly": "Priya needs 2.7 m of cloth, Shylaja needs 3.5 m. Total? Write them with points aligned, one above the other, and add column by column: tenths first, 7 + 5 = 12 tenths = 1 unit and 2 tenths (carry the 1, just like whole-number carrying), then ones: 2 + 3 + 1 = 6. Total 6.2 m. Subtraction works the same with borrowing: 3.5 − 2.7, the tenths 5 − 7 needs a borrow, giving 0.8. The golden rule: ALIGN THE DECIMAL POINTS. Once aligned, decimals add and subtract exactly like whole numbers — because each place is just another place value.",
+                "textbook": "Decimal addition and subtraction use the standard column algorithms for whole numbers, with the prerequisite that the decimal points (and hence all corresponding place values) are vertically aligned. Carrying and borrowing operate identically: a sum of ten or more in any place carries one to the next-higher place; a borrow takes one from the next-higher place as ten of the current place. Padding with trailing zeros equalises the number of decimal places before computing.",
+                "expert": "Because positional notation places digits by powers of ten on both sides of the point, the addition algorithm — digit-wise sum with carry propagation — is invariant to the position of the radix point provided like places are aligned. Aligning the points is exactly aligning equal powers of ten. This is why no new algorithm is needed: decimal arithmetic is integer arithmetic on aligned place values, a direct consequence of the distributive law over the place-value expansion."
+              },
+              "reasoning": "Adding means combining like with like: tenths with tenths, ones with ones. Lining up the decimal points stacks each place over its match, so the familiar column-addition (with carrying) just works. Misaligning the points would add tenths to ones — nonsense.",
+              "useCases": [
+                {
+                  "title": "Buying cloth",
+                  "description": "Priya 2.7 m + Shylaja 3.5 m = 6.2 m total — align points, carry the tenths.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Adding money",
+                  "description": "₹125.50 + ₹89.75 = ₹215.25 — align the rupee points, carry paise to rupees.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Race split times",
+                  "description": "Lap times 58.34 s + 61.29 s = 119.63 s — align and add as usual.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "The 'line up the decimal points' rule is the single most important habit for decimal arithmetic, and the most common place students slip. It's why money is always written with two decimal places (₹5.00, not ₹5) on bills — the alignment is built into the format so columns add cleanly.",
+              "mnemonic": "Line up the points! Then add or subtract column by column, carrying and borrowing as usual.",
+              "predictQuestion": "Priya needs 2.7 m of cloth and Shylaja needs 3.5 m. How do you add these — and what is the total?",
+              "whyChain": [
+                "Addition only makes sense between like quantities — you add tenths to tenths and ones to ones, never tenths to ones. The decimal point marks where each place sits, so lining up the points vertically stacks every place directly over its match.",
+                "Once aligned, the calculation is ordinary column addition. 2.7 + 3.5: the tenths column is 7 + 5 = 12 tenths, which is 1 whole and 2 tenths — write 2, carry 1 (exactly the whole-number carry, one place over). The ones column is then 2 + 3 + 1 = 6. Total: 6.2 m. Subtraction mirrors this with borrowing.",
+                "The deep reason no new method is needed: decimals are just place values extended past the point, and the column algorithm works on ANY aligned place values. Aligning the decimal points IS aligning equal powers of ten. So 'line up the points and compute as usual' isn't a special trick — it's the same arithmetic you already know, applied to a system that was designed from the start to make it work."
+              ],
+              "relatedConceptIds": [
+                "ch03_t03_c01",
+                "ch03_t04_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch03_t05_q01",
+                "ch03_t05_q02",
+                "ch03_t05_q03"
+              ],
+              "pageRefs": [
+                73,
+                74
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch03_t05_q01",
+              "prompt": "Priya needs 2.7 m of cloth and Shylaja needs 3.5 m. What is the total?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "6.2 m",
+              "solutionSteps": [
+                "Align points: 2.7 + 3.5.",
+                "Tenths: 7 + 5 = 12 tenths = 1 whole + 2 tenths. Write 2, carry 1.",
+                "Ones: 2 + 3 + 1(carry) = 6.",
+                "Total = 6.2 m."
+              ],
+              "commonMistakes": [
+                "Adding without aligning points (e.g. 27 + 35 = 62, losing the decimal).",
+                "Forgetting to carry the extra whole from 12 tenths."
+              ],
+              "variations": [
+                {
+                  "prompt": "Add 4.6 m and 2.8 m.",
+                  "answer": "7.4 m",
+                  "solutionSteps": [
+                    "Tenths 6+8=14 → carry 1, ones 4+2+1=7. Total 7.4."
+                  ]
+                },
+                {
+                  "prompt": "Add 12.45 and 7.8.",
+                  "answer": "20.25",
+                  "solutionSteps": [
+                    "Pad: 12.45 + 7.80. Hundredths 5, tenths 4+8=12 carry 1, ones 2+7+1=10 carry 1, tens 1+1=2. = 20.25."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                73,
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t05_q02",
+              "prompt": "How much longer is Shylaja's 3.5 m cloth than Priya's 2.7 m?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "0.8 m",
+              "solutionSteps": [
+                "Align points: 3.5 − 2.7.",
+                "Tenths: 5 − 7 needs a borrow. Borrow 1 whole (= 10 tenths): 15 − 7 = 8 tenths.",
+                "Ones: after borrowing, 2 − 2 = 0.",
+                "Difference = 0.8 m."
+              ],
+              "commonMistakes": [
+                "Computing 7 − 5 = 2 in the tenths instead of borrowing (gives wrong 0.2 or 1.2).",
+                "Forgetting to reduce the ones digit after borrowing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Subtract 5.2 − 1.7.",
+                  "answer": "3.5",
+                  "solutionSteps": [
+                    "Borrow: 12−7=5 tenths; ones 4−1=3. = 3.5."
+                  ]
+                },
+                {
+                  "prompt": "Subtract 10.0 − 3.45.",
+                  "answer": "6.55",
+                  "solutionSteps": [
+                    "Pad 10.00 − 3.45 = 6.55."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_t05_q03",
+              "prompt": "Compute 75.345 + 86.691, lining up the decimal points.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "162.036",
+              "solutionSteps": [
+                "Align points and add column by column from the right.",
+                "Thousandths: 5+1=6. Hundredths: 4+9=13 → 3 carry 1. Tenths: 3+6+1=10 → 0 carry 1.",
+                "Ones: 5+6+1=12 → 2 carry 1. Tens: 7+8+1=16 → 6 carry 1. Hundreds: 0+0+1=1.",
+                "Total = 162.036."
+              ],
+              "commonMistakes": [
+                "Misaligning the points so place values don't match.",
+                "Dropping a carry between columns."
+              ],
+              "variations": [
+                {
+                  "prompt": "Add 9.99 + 0.01.",
+                  "answer": "10.00",
+                  "solutionSteps": [
+                    "Hundredths 9+1=10 carry, cascades to 10.00."
+                  ]
+                },
+                {
+                  "prompt": "Add 123.4 + 56.78.",
+                  "answer": "180.18",
+                  "solutionSteps": [
+                    "Pad 123.40 + 56.78 = 180.18."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "glossary": [
+        {
+          "id": "ch03_gl01",
+          "term": "Decimal",
+          "definition": "A number written with a decimal point to show parts smaller than one.",
+          "example": "2.7 means 2 ones and 7 tenths.",
+          "hindiTerm": "दशमलव",
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl02",
+          "term": "Decimal point",
+          "definition": "The dot that separates the whole part of a number from its fractional part.",
+          "example": "In 2.7 the dot is the decimal point.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl03",
+          "term": "Tenth",
+          "definition": "One of ten equal parts of a unit; 1/10. Ten tenths make one whole.",
+          "example": "0.7 = 7 tenths = 7/10.",
+          "hindiTerm": "दशांश",
+          "relatedConceptIds": [
+            "ch03_t01_c02"
+          ]
+        },
+        {
+          "id": "ch03_gl04",
+          "term": "Hundredth",
+          "definition": "One of a hundred equal parts of a unit; 1/100. Ten hundredths make a tenth.",
+          "example": "0.05 = 5 hundredths = 5/100.",
+          "hindiTerm": "शतांश",
+          "relatedConceptIds": [
+            "ch03_t02_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl05",
+          "term": "Thousandth",
+          "definition": "One of a thousand equal parts of a unit; 1/1000.",
+          "example": "0.008 = 8 thousandths.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl06",
+          "term": "Decimal place value",
+          "definition": "The value of a digit based on its position right of the decimal point.",
+          "example": "In 0.45, the 4 is 4 tenths and the 5 is 5 hundredths.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl07",
+          "term": "Trailing zero",
+          "definition": "A zero at the right-hand end of a decimal's fractional part; it does not change the value.",
+          "example": "0.2 = 0.20 = 0.200.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t04_c02"
+          ]
+        },
+        {
+          "id": "ch03_gl08",
+          "term": "Regrouping (carry/borrow)",
+          "definition": "Trading 10 of one place for 1 of the next-higher place (carry) or the reverse (borrow).",
+          "example": "13 tenths = 1 whole and 3 tenths.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t01_c02",
+            "ch03_t05_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl09",
+          "term": "Number line",
+          "definition": "A straight line on which every number, including decimals, has an exact position.",
+          "example": "1.4 sits 4 tenths past 1.",
+          "hindiTerm": "संख्या रेखा",
+          "relatedConceptIds": [
+            "ch03_t04_c01"
+          ]
+        },
+        {
+          "id": "ch03_gl10",
+          "term": "Place value ladder",
+          "definition": "The pattern that each place is 10× the place to its right and 1/10 of the place to its left, continuing past the decimal point.",
+          "example": "… 100, 10, 1, 1/10, 1/100 …",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch03_mn01",
+          "acronym": "Ten makes one",
+          "unpacking": "10 tenths = 1 whole; 10 hundredths = 1 tenth; 10 thousandths = 1 hundredth. Always ten of a place makes one of the next.",
+          "context": "Use when regrouping or converting between decimal places.",
+          "relatedConceptIds": [
+            "ch03_t01_c02",
+            "ch03_t02_c01"
+          ]
+        },
+        {
+          "id": "ch03_mn02",
+          "acronym": "Point is the mirror",
+          "unpacking": "Left of the point: ones, tens, hundreds. Right of the point: tenths, hundredths, thousandths. The decimal point is the mirror line.",
+          "context": "Use to remember decimal place names.",
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_mn03",
+          "acronym": "Line up the points",
+          "unpacking": "Before adding or subtracting decimals, stack them so the decimal points align — then compute column by column.",
+          "context": "Use for every decimal addition or subtraction.",
+          "relatedConceptIds": [
+            "ch03_t05_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch03_ms01",
+          "kidsThink": "A decimal with more digits is always bigger (so 1.04 > 1.4).",
+          "actually": "Compare place by place from the left: 1.4 has 4 tenths, 1.04 has 0 tenths, so 1.4 > 1.04. More digits does NOT mean bigger.",
+          "relatedConceptIds": [
+            "ch03_t04_c01"
+          ]
+        },
+        {
+          "id": "ch03_ms02",
+          "kidsThink": "Adding a zero after a decimal changes its value (0.2 → 0.20).",
+          "actually": "Trailing zeros add nothing: 0.2 = 0.20 = 0.200. But 0.2, 0.02, 0.002 ARE different — those zeros shift the digit into smaller places.",
+          "relatedConceptIds": [
+            "ch03_t04_c02"
+          ]
+        },
+        {
+          "id": "ch03_ms03",
+          "kidsThink": "You can add decimals by lining up the right-hand ends (like whole numbers).",
+          "actually": "You must line up the DECIMAL POINTS, not the ends. 2.7 + 3.5 needs tenths under tenths; aligning the ends would add tenths to ones.",
+          "relatedConceptIds": [
+            "ch03_t05_c01"
+          ]
+        },
+        {
+          "id": "ch03_ms04",
+          "kidsThink": "The first place after the point is 'oneths'.",
+          "actually": "There is no 'oneths' place. The first place right of the point is TENTHS (1/10), then hundredths, then thousandths.",
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_ms05",
+          "kidsThink": "You must split a unit into 10 parts; no other split is allowed.",
+          "actually": "You CAN split into 4, 8, or any number of parts — people do (quarters, eighths). We choose 10 because it matches the base-ten place value system, so one uniform arithmetic works everywhere.",
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch03_re01",
+          "title": "Paise are hundredths of a rupee",
+          "body": "₹4.45 means 4 rupees and 45 paise — and a paisa is exactly one hundredth of a rupee. The two-decimal format of money is the decimal system made concrete: the first place after the point is ten-paise, the second is single paise. Every price tag you read is a decimal place-value lesson.",
+          "relatedConceptIds": [
+            "ch03_t02_c01"
+          ]
+        },
+        {
+          "id": "ch03_re02",
+          "title": "The metric system is decimals all the way down",
+          "body": "1 metre = 10 decimetres = 100 centimetres = 1000 millimetres. Each step down is one more decimal place, which is why 1.25 m is simply 125 cm — you just move the point. The whole metric system was designed around tenfold subdivision so conversions never need awkward multiplication.",
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_re03",
+          "title": "Sprint times decided by hundredths",
+          "body": "Usain Bolt's 100 m world record is 9.58 seconds. The difference between gold and silver in a sprint is often a few hundredths of a second — 9.58 vs 9.63. Hundredths aren't abstract here; they're the margin of an Olympic medal.",
+          "relatedConceptIds": [
+            "ch03_t04_c02"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch03_qa01",
+          "question": "What is the meaning of the length 2 7/10 cm?",
+          "modelAnswer": "It means 2 whole centimetres plus 7 tenths of a centimetre. The unit between consecutive whole numbers is divided into 10 equal parts, and 7 of those parts are taken beyond the 2-cm mark. It is read 'two and seven-tenth centimetres' and written 2.7 cm.",
+          "textbookPage": 47,
+          "relatedConceptIds": [
+            "ch03_t01_c02"
+          ]
+        },
+        {
+          "id": "ch03_qa02",
+          "question": "How many one-hundredths make one unit, and how many make one tenth?",
+          "modelAnswer": "100 hundredths make one unit (since a unit is 10 tenths and each tenth is 10 hundredths, 10 × 10 = 100). 10 hundredths make one tenth.",
+          "textbookPage": 53,
+          "relatedConceptIds": [
+            "ch03_t02_c01"
+          ]
+        },
+        {
+          "id": "ch03_qa03",
+          "question": "Why do we split a unit into 10 parts every time to make decimals, rather than 4 or 8 parts?",
+          "modelAnswer": "Because 10 is the base of the Indian place value system: each whole-number place is 10 times the one to its right. Splitting by 10 below the units place keeps the same ×10/÷10 ladder going, so one uniform set of arithmetic rules works for both whole numbers and decimals. We could split into 4 or 8, but then the sub-units wouldn't match the place-value system.",
+          "textbookPage": 58,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_qa04",
+          "question": "Sonu says 0.2 = 0.20 = 0.200. Zara thinks the extra zeros change the value. Who is right?",
+          "modelAnswer": "Sonu is right. 0.2, 0.20 and 0.200 all represent 2 tenths — the trailing zeros only add 0 hundredths and 0 thousandths, contributing nothing. However, 0.2, 0.02 and 0.002 are all different, because there the 2 moves into smaller places (tenths, hundredths, thousandths).",
+          "textbookPage": 70,
+          "relatedConceptIds": [
+            "ch03_t04_c02"
+          ]
+        },
+        {
+          "id": "ch03_qa05",
+          "question": "Which of these are equal: 4.5, 4.05, 0.405, 4.050, 4.50, 4.005, 04.50?",
+          "modelAnswer": "4.5 = 4.050 = 4.50 = 04.50 (all four and five tenths). The rest are different: 4.05 (four and 5 hundredths), 0.405 (zero point four-oh-five), and 4.005 (four and 5 thousandths).",
+          "textbookPage": 70,
+          "relatedConceptIds": [
+            "ch03_t04_c02"
+          ]
+        },
+        {
+          "id": "ch03_qa06",
+          "question": "Priya needs 2.7 m of cloth and Shylaja 3.5 m. Find the total and the difference.",
+          "modelAnswer": "Total: 2.7 + 3.5 = 6.2 m (the tenths 7+5=12 carry one whole). Difference: 3.5 − 2.7 = 0.8 m (borrow in the tenths: 15−7=8).",
+          "textbookPage": 73,
+          "relatedConceptIds": [
+            "ch03_t05_c01"
+          ]
+        },
+        {
+          "id": "ch03_qa07",
+          "question": "Arrange in increasing order: 9/10, 1 7/10, 130/10, 13 1/10, 10 5/10, 7 6/10, 6 7/10, 4/10.",
+          "modelAnswer": "As decimals: 0.9, 1.7, 13.0, 13.1, 10.5, 7.6, 6.7, 0.4. Increasing: 0.4 < 0.9 < 1.7 < 6.7 < 7.6 < 10.5 < 13.0 < 13.1.",
+          "textbookPage": 49,
+          "relatedConceptIds": [
+            "ch03_t04_c01"
+          ]
+        },
+        {
+          "id": "ch03_qa08",
+          "question": "Write the place value of each digit in 2.745.",
+          "modelAnswer": "2 is in the ones place (value 2); 7 is in the tenths place (7/10); 4 is in the hundredths place (4/100); 5 is in the thousandths place (5/1000). So 2.745 = 2 + 7/10 + 4/100 + 5/1000.",
+          "textbookPage": 59,
+          "relatedConceptIds": [
+            "ch03_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch03_mp01",
+          "emoji": "📏",
+          "title": "Make Your Own Tenths Ruler",
+          "needs": [
+            "A strip of stiff paper or card about 20 cm long",
+            "A pen and a normal ruler",
+            "Scissors (optional)"
+          ],
+          "steps": [
+            "Mark a 1-unit length anywhere on your strip (say, 10 cm = 1 unit).",
+            "Divide that unit into 10 equal parts using your ruler — each part is one tenth.",
+            "Label the marks 0.1, 0.2, 0.3, … 1.0.",
+            "Now pick small objects (an eraser, a coin, a key) and measure each in your tenths.",
+            "Challenge: pick one tenth-interval and divide IT into ten — you've just made hundredths. Measure something to a hundredth."
+          ],
+          "expectedObservation": "You'll find most objects don't land on a whole mark — they sit between tenths, which is exactly why hundredths (and finer) are needed for precise measurement.",
+          "whyItWorks": "Splitting a unit into ten equal parts is the physical act behind decimal tenths; splitting a tenth into ten again makes hundredths. Building the ruler by hand shows that decimals are just finer and finer rulers, each made by the same 'divide by ten' step.",
+          "estimatedMinutes": 40,
+          "relatedConceptIds": [
+            "ch03_t01_c02",
+            "ch03_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch03_t01_c01",
+            "label": "Need smaller units",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.12
+          },
+          {
+            "id": "ch03_t01_c02",
+            "label": "Tenths",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.12
+          },
+          {
+            "id": "ch03_t02_c01",
+            "label": "Hundredths",
+            "kind": "concept",
+            "x": 0.8,
+            "y": 0.12
+          },
+          {
+            "id": "ch03_pivot_pv",
+            "label": "Place-value ×10/÷10",
+            "kind": "pivot",
+            "x": 0.5,
+            "y": 0.38
+          },
+          {
+            "id": "ch03_t03_c01",
+            "label": "Decimal point & place value",
+            "kind": "concept",
+            "x": 0.5,
+            "y": 0.6
+          },
+          {
+            "id": "ch03_t04_c01",
+            "label": "Locate on number line",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.82
+          },
+          {
+            "id": "ch03_t04_c02",
+            "label": "Trailing zeros / compare",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.82
+          },
+          {
+            "id": "ch03_t05_c01",
+            "label": "Add & subtract",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.82
+          },
+          {
+            "id": "ch01:ch01_t01_c03",
+            "label": "Ch.1 Indian place value",
+            "kind": "crossChapter",
+            "x": 0.05,
+            "y": 0.38
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch03_e01",
+            "from": "ch03_t01_c01",
+            "to": "ch03_t01_c02",
+            "label": "motivates"
+          },
+          {
+            "id": "ch03_e02",
+            "from": "ch03_t01_c02",
+            "to": "ch03_t02_c01",
+            "label": "split again"
+          },
+          {
+            "id": "ch03_e03",
+            "from": "ch03_t01_c02",
+            "to": "ch03_pivot_pv",
+            "label": "part of"
+          },
+          {
+            "id": "ch03_e04",
+            "from": "ch03_t02_c01",
+            "to": "ch03_pivot_pv",
+            "label": "part of"
+          },
+          {
+            "id": "ch03_e05",
+            "from": "ch03_pivot_pv",
+            "to": "ch03_t03_c01",
+            "label": "formalised as"
+          },
+          {
+            "id": "ch03_e06",
+            "from": "ch03_t03_c01",
+            "to": "ch03_t04_c01",
+            "label": "enables"
+          },
+          {
+            "id": "ch03_e07",
+            "from": "ch03_t03_c01",
+            "to": "ch03_t04_c02",
+            "label": "enables"
+          },
+          {
+            "id": "ch03_e08",
+            "from": "ch03_t03_c01",
+            "to": "ch03_t05_c01",
+            "label": "enables"
+          },
+          {
+            "id": "ch01:ch01_t01_c03",
+            "label": "extends",
+            "from": "ch01:ch01_t01_c03",
+            "to": "ch03_pivot_pv"
+          }
+        ]
+      }
     }
   ]
 }
