@@ -269,7 +269,9 @@ final class DataStore: ObservableObject {
     /// call (DateFormatter init is relatively expensive).
     private let streakDayFormatter: DateFormatter
 
-    init(streakCalendar: Calendar? = nil) {
+    init(streakCalendar: Calendar? = nil,
+         storeDir overrideStoreDir: URL? = nil,
+         autoLoad: Bool = true) {
         // Default to a fresh Gregorian calendar in the system timezone
         // — equivalent to the pre-refactor inline calendar. Tests pass
         // a UTC Gregorian to make their day math deterministic.
@@ -288,12 +290,21 @@ final class DataStore: ObservableObject {
         fmt.dateFormat = "yyyy-MM-dd"
         self.streakDayFormatter = fmt
 
-        let appSupport = FileManager.default.urls(
-            for: .applicationSupportDirectory, in: .userDomainMask
-        ).first ?? FileManager.default.temporaryDirectory
-        storeDir = appSupport
-            .appendingPathComponent("com.emoha.desktopAhaan")
-            .appendingPathComponent("data")
+        // `storeDir` defaults to the user's Application Support directory
+        // for ship code; tests pass a temp directory to keep their state
+        // isolated. `autoLoad` exists so tests can skip the off-thread
+        // load that would otherwise race against test setUp() resetting
+        // `@Published` state.
+        if let override = overrideStoreDir {
+            storeDir = override
+        } else {
+            let appSupport = FileManager.default.urls(
+                for: .applicationSupportDirectory, in: .userDomainMask
+            ).first ?? FileManager.default.temporaryDirectory
+            storeDir = appSupport
+                .appendingPathComponent("com.emoha.desktopAhaan")
+                .appendingPathComponent("data")
+        }
         do {
             try FileManager.default.createDirectory(
                 at: storeDir, withIntermediateDirectories: true
@@ -309,8 +320,10 @@ final class DataStore: ObservableObject {
         // any growth (e.g. attempts.json after a year of practice) would
         // start to show up in the cold-launch hang detector. Move all
         // reads off-thread, hop back to main to assign @Published.
-        Task.detached(priority: .userInitiated) { [storeDir] in
-            await Self.loadAllOffThread(into: self, from: storeDir)
+        if autoLoad {
+            Task.detached(priority: .userInitiated) { [storeDir] in
+                await Self.loadAllOffThread(into: self, from: storeDir)
+            }
         }
     }
 
