@@ -85,6 +85,18 @@ struct ConceptDetailView: View {
             }
             ToolbarItem(placement: .automatic) {
                 Button {
+                    dataStore.toggleConceptUnderstood(concept.id)
+                } label: {
+                    Label(
+                        dataStore.isConceptUnderstood(concept.id) ? "Understood" : "Mark as understood",
+                        systemImage: dataStore.isConceptUnderstood(concept.id) ? "hand.thumbsup.fill" : "hand.thumbsup"
+                    )
+                }
+                .keyboardShortcut("u", modifiers: .command)
+                .help(dataStore.isConceptUnderstood(concept.id) ? "Unmark as understood" : "Mark this concept as understood")
+            }
+            ToolbarItem(placement: .automatic) {
+                Button {
                     if let prevId = siblings?.prevId {
                         nav.push(.concept(packId: pack.id, conceptId: prevId))
                     }

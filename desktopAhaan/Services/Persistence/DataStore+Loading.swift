@@ -60,6 +60,7 @@ extension DataStore {
         let reviews = readFile(QuestionReview.self, from: "reviews.json", in: storeDir)
         let notes = readFile(ChapterNote.self, from: "notes.json", in: storeDir)
         let readArticles = readFile(String.self, from: "readArticleIds.json", in: storeDir)
+        let understood = readFile(String.self, from: "understoodConceptIds.json", in: storeDir)
 
         // Crash-safe Dictionary build can stay on the background thread —
         // result is a value type, transferred to main below.
@@ -87,6 +88,7 @@ extension DataStore {
             || discover.didRescueCorruptFile || reviewed.didRescueCorruptFile
             || tough.didRescueCorruptFile || reviews.didRescueCorruptFile
             || notes.didRescueCorruptFile || readArticles.didRescueCorruptFile
+            || understood.didRescueCorruptFile
 
         await MainActor.run {
             store.translationRecords = translations.items
@@ -101,6 +103,7 @@ extension DataStore {
             store.questionReviews = reviewsDict
             store.chapterNotes = notesDict
             store.readArticleIds = Set(readArticles.items)
+            store.understoodConceptIds = Set(understood.items)
             if anyRescue {
                 store.lastSaveError = "Saved data couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
             }

@@ -101,6 +101,15 @@ struct ChapterListView: View {
 
 private struct ChapterRow: View {
     let chapter: Chapter
+    @EnvironmentObject private var dataStore: DataStore
+
+    private var totalConcepts: Int {
+        chapter.topics.reduce(0) { $0 + $1.concepts.count }
+    }
+
+    private var understoodCount: Int {
+        dataStore.understoodCount(forChapterId: chapter.id)
+    }
 
     var body: some View {
         HStack(alignment: .top, spacing: 14) {
@@ -123,8 +132,13 @@ private struct ChapterRow: View {
                     .lineLimit(2)
                 HStack(spacing: 12) {
                     Label("\(chapter.topics.count) topics", systemImage: "list.bullet")
-                    Label("\(chapter.topics.reduce(0) { $0 + $1.concepts.count }) concepts",
-                          systemImage: "lightbulb")
+                    if understoodCount > 0 {
+                        Label("\(understoodCount)/\(totalConcepts) understood",
+                              systemImage: "hand.thumbsup.fill")
+                            .foregroundColor(.green)
+                    } else {
+                        Label("\(totalConcepts) concepts", systemImage: "lightbulb")
+                    }
                     Label("\(chapter.topics.reduce(0) { $0 + $1.questions.count }) questions",
                           systemImage: "questionmark.circle")
                 }

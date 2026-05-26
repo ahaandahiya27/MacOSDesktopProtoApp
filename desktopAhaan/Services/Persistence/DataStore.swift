@@ -214,6 +214,14 @@ final class DataStore: ObservableObject {
     /// Added 2026-05-26.
     @Published var readArticleIds: Set<String> = []
 
+    /// Concept IDs the kid has marked as "I understand this" via the
+    /// thumbs-up toggle on `ConceptDetailView`. Surfaces a "5/8
+    /// understood" count on each `ChapterRow`. Distinct from
+    /// `studyBookmarks` (bookmark = "come back to this") and from
+    /// `questionReviews` (SM-2 = "what's due next"). Persisted to
+    /// `understoodConceptIds.json`. Added 2026-05-26.
+    @Published var understoodConceptIds: Set<String> = []
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files
