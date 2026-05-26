@@ -83,6 +83,30 @@ struct ConceptDetailView: View {
                 .keyboardShortcut("b", modifiers: .command)
                 .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept")
             }
+            ToolbarItem(placement: .automatic) {
+                Button {
+                    if let prevId = siblings?.prevId {
+                        nav.push(.concept(packId: pack.id, conceptId: prevId))
+                    }
+                } label: {
+                    Label("Previous concept", systemImage: "arrow.left")
+                }
+                .disabled(siblings?.prevId == nil)
+                .keyboardShortcut("[", modifiers: .command)
+                .help(siblingHelpText(direction: "Previous"))
+            }
+            ToolbarItem(placement: .automatic) {
+                Button {
+                    if let nextId = siblings?.nextId {
+                        nav.push(.concept(packId: pack.id, conceptId: nextId))
+                    }
+                } label: {
+                    Label("Next concept", systemImage: "arrow.right")
+                }
+                .disabled(siblings?.nextId == nil)
+                .keyboardShortcut("]", modifiers: .command)
+                .help(siblingHelpText(direction: "Next"))
+            }
         }
         .onDisappear {
             speech.stop(owner: "concept_\(concept.id)")
@@ -230,6 +254,18 @@ struct ConceptDetailView: View {
     }
 
     // MARK: - Sections
+
+    /// Cached sibling resolution for the toolbar prev/next buttons.
+    /// Returns nil for orphan concepts (shouldn't happen in shipped
+    /// content but the toolbar gracefully disables both buttons).
+    private var siblings: ConceptSiblings.Resolved? {
+        ConceptSiblings.resolve(conceptId: concept.id, in: pack)
+    }
+
+    private func siblingHelpText(direction: String) -> String {
+        guard let s = siblings else { return "\(direction) concept" }
+        return "\(direction) concept (concept \(s.index + 1) of \(s.total) in this topic)"
+    }
 
     /// Walks the pack to find which chapter+topic owns this concept.
     private var location: (chapter: Chapter, topic: Topic)? {
@@ -529,36 +565,6 @@ struct ConceptDetailView: View {
             title: concept.title,
             subtitle: chapterLabel
         ))
-    }
-}
-
-// MARK: - UseCaseCard
-
-private struct UseCaseCard: View {
-    let useCase: UseCase
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(useCase.domain.uppercased())
-                .font(.caption).bold()
-                .foregroundColor(.secondary)
-            Text(useCase.title)
-                .font(.subheadline).bold()
-            Text(useCase.description)
-                .font(.callout)
-                .foregroundColor(.primary)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .padding(DesignTokens.cornerRadiusCard)
-        .frame(width: 280, alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
-                .fill(Color.gray.opacity(0.1))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
-                .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
-        )
     }
 }
 
