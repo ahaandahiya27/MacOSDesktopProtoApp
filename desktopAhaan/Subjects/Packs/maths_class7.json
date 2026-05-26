@@ -7475,6 +7475,1001 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch06",
+      "number": 6,
+      "title": "Number Play",
+      "summary": "Numbers can encode information (how many taller children stand in front of you), reveal hidden rules (why no 5 odd cards can sum to 30), and even come from poetry — the Virahāṅka–Fibonacci sequence was discovered by Indian poets counting rhythms centuries before Fibonacci. This chapter plays with parity, patterns, that famous sequence, and digit puzzles where letters stand for digits.",
+      "topics": [
+        {
+          "id": "ch06_t01",
+          "title": "Numbers Tell Us Things",
+          "summary": "A single number can carry information about an arrangement. If each child says how many taller children stand in front of them, the sequence of numbers encodes the whole line-up — and some sequences are possible while others never are.",
+          "concepts": [
+            {
+              "id": "ch06_t01_c01",
+              "title": "Numbers as encoded information",
+              "explanations": {
+                "oneLine": "A number can summarise a situation: e.g., each child stating how many taller children stand ahead of them turns an arrangement into a sequence of numbers.",
+                "kidFriendly": "Imagine children standing in a line. Each one calls out the number of children IN FRONT of them who are TALLER. The shortest-at-front might say 0; someone with three taller kids ahead says 3. The whole line becomes a sequence of numbers like 0, 1, 1, 2, 4, 1, 5. That sequence ENCODES information about the arrangement. Interestingly, not every sequence is possible: the first child always says 0 (no one is in front), and a child can't say a number bigger than how many people are actually ahead of them. Numbers don't just count — they can capture and reveal the structure of a situation.",
+                "textbook": "Numbers can serve as encodings of structural information about a configuration. In the height example, position i's value equals the count of taller individuals among positions 1..i−1. Such an encoding has constraints: the first value is 0, and each value is bounded by its position index minus one. Some target sequences are realisable by an arrangement, others are not — determining realisability is itself a mathematical question.",
+                "expert": "Encoding arrangements as integer sequences is a combinatorial representation; the height-count is closely related to the inversion table of a permutation. The constraint 0 ≤ a_i ≤ i−1 characterises exactly the valid inversion tables, giving a bijection between such sequences and permutations — which is why n! arrangements correspond to ∏(i) valid sequences. Reasoning about which sequences are achievable is reasoning about this bijection's image."
+              },
+              "reasoning": "A number attached to each position records a fact about that position relative to the others. Reading the numbers back lets you reconstruct (or test) the arrangement. Constraints arise because a position can only 'see' the people actually ahead of it.",
+              "useCases": [
+                {
+                  "title": "Queue positions",
+                  "description": "Each person noting how many taller people are ahead encodes the whole queue's height order.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Sports rankings",
+                  "description": "A player's 'number of higher-ranked opponents beaten' summarises their season.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Exam ranks",
+                  "description": "Your rank encodes how many students scored higher — a number carrying comparative info.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Encoding information as numbers is the foundation of all of computer science — text, images and sound are stored as numbers. The idea that a sequence of numbers can faithfully capture a structure (and that some sequences are 'impossible') is exactly the kind of reasoning behind error-checking codes and data validation.",
+              "mnemonic": "A number per position records a relationship. Read them back to test the arrangement.",
+              "predictQuestion": "If each child in a line says how many TALLER children stand in front of them, what number must the very first child in the line always say?",
+              "whyChain": [
+                "The rule attaches a number to each child: the count of taller children standing ahead of them. So the sequence of numbers isn't random — it's a faithful record of the height arrangement, position by position.",
+                "This immediately creates constraints. The first child has nobody in front, so they can only ever say 0. A child in position 3 has just two people ahead, so they can say at most 2. In general, the number a child says can't exceed how many people actually stand before them.",
+                "That's why some target sequences are achievable and others are impossible. Numbers here aren't merely counting — they encode the structure of the line, and the rules of the encoding tell us which sequences could ever occur. This 'numbers as information, with built-in constraints' idea is the same principle behind data validation and codes in computing."
+              ],
+              "relatedConceptIds": [
+                "ch06_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t01_q01"
+              ],
+              "pageRefs": [
+                125,
+                126
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch06_t01_q01",
+              "prompt": "In the 'taller children in front' game, decide for each statement whether it is Always True, Sometimes True, or Never True: (a) If a child says 0, they are the tallest in the group. (b) The first child in the line always says 0.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "(a) Sometimes True. (b) Always True.",
+              "solutionSteps": [
+                "(a) Saying 0 means no one taller is IN FRONT — but a taller child could be BEHIND. So they needn't be the tallest. Sometimes True.",
+                "(b) The first child has no one in front, so the count of taller children ahead is always 0. Always True."
+              ],
+              "commonMistakes": [
+                "Assuming 'says 0' means tallest overall (ignores people behind).",
+                "Thinking the first child's value depends on the arrangement."
+              ],
+              "variations": [
+                {
+                  "prompt": "Statement: 'A child can say a number larger than the number of people in front of them.'",
+                  "answer": "Never True.",
+                  "solutionSteps": [
+                    "You can't have more taller people ahead than people ahead."
+                  ]
+                },
+                {
+                  "prompt": "Statement: 'The last child says the largest number.'",
+                  "answer": "Sometimes True.",
+                  "solutionSteps": [
+                    "Only if they happen to be the shortest with everyone taller ahead."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                126
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch06_t02",
+          "title": "Picking Parity",
+          "summary": "Even numbers pair up perfectly; odd numbers always have one left over. From this, even+even=even, odd+odd=even, and an odd count of odd numbers is odd. That's why no five number-cards (all odd) can ever sum to 30 — a parity argument settles it without trying every case.",
+          "concepts": [
+            {
+              "id": "ch06_t02_c01",
+              "title": "Parity — even and odd, and their sums",
+              "explanations": {
+                "oneLine": "Even numbers pair up with nothing left over; odd numbers leave one over. Even+even=even, odd+odd=even, and adding an odd count of odd numbers gives an odd total.",
+                "kidFriendly": "Kishor wants 5 number cards (all odd) to sum to 30. Possible? Parity answers it instantly. An even number can be split into pairs with nothing left over; an odd number always has one left over. Add two odds: their two 'leftovers' pair up, so the sum is even. Add five odds: that's two pairs of odds (each summing to even) plus one leftover odd — so the total is ODD. But 30 is EVEN. So five odd cards can NEVER sum to 30! Parity (the even/odd nature of a number) lets you rule out whole classes of possibilities without checking a single case.",
+                "textbook": "Parity is whether a number is even (divisible by 2, expressible as pairs with no remainder) or odd (one more than a multiple of 2). Key facts: even + even = even; odd + odd = even; even + odd = odd. Generalising, the sum of k odd numbers is even when k is even and odd when k is odd. Hence the sum of five odd numbers is odd and can never equal the even number 30.",
+                "expert": "Parity is the residue class of an integer modulo 2; addition of parities is addition in ℤ/2ℤ where odd = 1, even = 0. Thus the parity of a sum is the sum (mod 2) of the parities: five odds give 1+1+1+1+1 = 5 ≡ 1 (mod 2) = odd. Parity arguments are the simplest invariant proofs — an invariant (parity) is preserved or predictably changed, ruling out impossible configurations regardless of specifics."
+              },
+              "reasoning": "Pairing is the heart of it. Evens are all pairs; odds are pairs-plus-one. When you add numbers, the leftover ones combine: two leftovers make a pair (even), but an odd number of leftovers leaves one stranded (odd). So counting the leftovers (the odds) decides the sum's parity.",
+              "useCases": [
+                {
+                  "title": "The 5-cards puzzle",
+                  "description": "Five odd cards can't sum to 30 — five odds make an odd total, but 30 is even.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Splitting a bill evenly",
+                  "description": "An odd total rupees can't split into two equal whole-rupee shares — parity blocks it.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Light-switch toggles",
+                  "description": "After an even number of flips a switch returns to start; odd flips reverse it — pure parity.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Parity arguments are a favourite tool of mathematicians because they prove impossibility cheaply: you don't search, you reason. Famous puzzles (the mutilated chessboard, the 15-puzzle's unsolvable positions) are settled by parity. It's the gateway to 'invariant' reasoning, one of the most powerful proof techniques in all of mathematics.",
+              "mnemonic": "Evens pair up; odds leave one over. Count the odds: even count → even sum, odd count → odd sum.",
+              "predictQuestion": "Kishor wants five number-cards (all odd) to add up to 30. Using even/odd reasoning, is this possible?",
+              "whyChain": [
+                "Every even number splits cleanly into pairs; every odd number is a bunch of pairs with exactly one left over. When you add numbers together, the only thing that can spoil 'all pairs' is those leftover ones from the odd numbers.",
+                "Two odd numbers contribute two leftovers, which themselves pair up — so odd + odd = even. Extend this: with five odd numbers you get five leftovers. Four of them form two pairs (even), but the fifth is stranded with no partner — so the total is ODD.",
+                "Now the puzzle is settled without trying a single combination: five odd cards always sum to an ODD number, but 30 is EVEN. Impossible. This is the power of a parity argument — by tracking just one feature (even-or-odd), you rule out an entire infinite class of attempts at once. It's the simplest example of proving something can't happen by finding an invariant."
+              ],
+              "relatedConceptIds": [
+                "ch06_t01_c01",
+                "ch06_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t02_q01",
+                "ch06_t02_q02"
+              ],
+              "pageRefs": [
+                129,
+                130
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_c02",
+              "title": "Parity as a proof tool",
+              "explanations": {
+                "oneLine": "Because parity behaves predictably under addition, it can PROVE that certain results are impossible — a genuine mathematical proof, not just an example.",
+                "kidFriendly": "The book points out that the pairing pictures are 'more examples of a proof'. That's a big idea: showing two odd numbers always pair up isn't checking a few cases — it's a general argument that works for EVERY pair of odds. Parity reasoning proves universal statements: 'the sum of two odds is always even', 'an odd number of odds always sums to odd'. You never need to test specific numbers, because the pairing argument covers all of them at once. This is the difference between noticing a pattern and PROVING it must always hold.",
+                "textbook": "Parity provides a basis for impossibility proofs and universal claims. A parity argument establishes a statement for all integers simultaneously by reasoning about the even/odd structure rather than specific values. Example proof: any two odd numbers, written as (2m+1) and (2n+1), sum to 2m+2n+2 = 2(m+n+1), which is even — a complete proof for all odd pairs, not a sample.",
+                "expert": "Parity is an invariant under the monoid of additions mod 2; proving a property via parity amounts to verifying it in ℤ/2ℤ, which has only two elements, making the proof finite and total. This exemplifies the invariant method: replace an infinite search over integers with a finite check over residue classes. The same idea scales to mod-n invariants and colouring arguments across combinatorics."
+              },
+              "reasoning": "A pattern you notice in a few cases might break later. But a parity argument explains WHY the pattern must hold — by tracking the leftover-after-pairing, which behaves the same for every number. Explaining the why turns a guess into a proof.",
+              "useCases": [
+                {
+                  "title": "Algebraic proof",
+                  "description": "(2m+1)+(2n+1) = 2(m+n+1): two odds always sum to even, proven for all.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Chessboard puzzles",
+                  "description": "Parity proves a knight can't return home in an odd number of moves.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Checking impossible totals",
+                  "description": "Any claim that an odd count of odd prices totals an even amount is provably false.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "The leap from 'I tried it and it worked' to 'it must always work, here's why' is the leap into real mathematics. Parity proofs are often a student's first genuine proof. Mathematicians prize them because a single short argument settles infinitely many cases — the hallmark of mathematical power.",
+              "mnemonic": "A parity argument proves ALL cases at once — it explains why, not just that.",
+              "predictQuestion": "Why does showing 'two odd numbers always pair up to make an even number' count as a PROOF, not just an example?",
+              "whyChain": [
+                "An example checks one case: 3 + 5 = 8 is even, sure. But maybe some other pair of odds breaks the rule? An example can never rule that out — there are infinitely many pairs to try.",
+                "A parity argument works differently. Every odd number is 'some pairs, plus one left over'. Add two odds and their two leftovers pair with each other — so the result is all pairs, i.e. even. This reasoning never mentions specific numbers, so it covers EVERY pair of odd numbers simultaneously. Algebraically: (2m+1)+(2n+1) = 2(m+n+1), visibly even for all m, n.",
+                "That's exactly what a proof is — an argument that settles infinitely many cases at once by reasoning about structure rather than testing instances. Moving from 'it worked when I tried it' to 'it must always work, and here's why' is the leap into genuine mathematics, and parity gives you one of its cleanest first examples."
+              ],
+              "relatedConceptIds": [
+                "ch06_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t02_q03"
+              ],
+              "pageRefs": [
+                130
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch06_t02_q01",
+              "prompt": "Can five number-cards, each showing an odd number, add up to 30? Explain using parity.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No. Five odd numbers always sum to an odd number, but 30 is even — so it's impossible.",
+              "solutionSteps": [
+                "odd + odd = even (two leftovers pair up).",
+                "Five odds = two pairs of odds (even + even = even) plus one leftover odd → odd total.",
+                "30 is even. An odd total can never equal an even number. Impossible."
+              ],
+              "commonMistakes": [
+                "Trying random combinations and giving up instead of using parity.",
+                "Thinking an odd count of odds can be even."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can four odd cards sum to 30?",
+                  "answer": "Yes — four odds give an even total, and 30 is even (e.g. 7+9+5+9 = 30).",
+                  "solutionSteps": [
+                    "Even count of odds → even sum; 30 achievable."
+                  ]
+                },
+                {
+                  "prompt": "Can three odd cards sum to 21?",
+                  "answer": "Yes — three odds sum to odd, and 21 is odd (e.g. 5+7+9 = 21).",
+                  "solutionSteps": [
+                    "Odd count of odds → odd sum; 21 achievable."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                129,
+                130
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q02",
+              "prompt": "What is the parity (even or odd) of the sum of: (a) two even numbers, (b) an even and an odd number, (c) three odd numbers?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "(a) even, (b) odd, (c) odd.",
+              "solutionSteps": [
+                "(a) even + even = even (all pairs).",
+                "(b) even + odd = odd (one leftover survives).",
+                "(c) odd + odd + odd: first two make even, plus one more odd = odd."
+              ],
+              "commonMistakes": [
+                "Thinking even + odd could be even.",
+                "Thinking three odds make even (only an EVEN count of odds does)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Parity of the sum of six odd numbers?",
+                  "answer": "Even.",
+                  "solutionSteps": [
+                    "Even count of odds → even."
+                  ]
+                },
+                {
+                  "prompt": "Parity of sum of 100 even numbers + 1 odd?",
+                  "answer": "Odd.",
+                  "solutionSteps": [
+                    "All evens sum even; one odd makes it odd."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                129,
+                130
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t02_q03",
+              "prompt": "Show, for all odd numbers, that the sum of two odd numbers is even (a proof, not an example).",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Write the odds as 2m+1 and 2n+1. Their sum is 2m+2n+2 = 2(m+n+1), which is a multiple of 2 — hence even, for ALL m and n.",
+              "solutionSteps": [
+                "Any odd number can be written 2k+1 for some whole number k.",
+                "Two odds: (2m+1) + (2n+1) = 2m + 2n + 2.",
+                "Factor out 2: 2(m + n + 1).",
+                "A multiple of 2 is even. True for every m, n — so it's a proof, not just an example."
+              ],
+              "commonMistakes": [
+                "Giving one numerical example and calling it a proof.",
+                "Forgetting to factor out the 2 to show evenness."
+              ],
+              "variations": [
+                {
+                  "prompt": "Prove the sum of two even numbers is even.",
+                  "answer": "(2m)+(2n) = 2(m+n), even.",
+                  "solutionSteps": [
+                    "Factor 2 → multiple of 2."
+                  ]
+                },
+                {
+                  "prompt": "Prove even + odd is odd.",
+                  "answer": "2m + (2n+1) = 2(m+n)+1, which is odd.",
+                  "solutionSteps": [
+                    "One more than a multiple of 2."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                130
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch06_t03",
+          "title": "The Virahāṅka–Fibonacci Sequence",
+          "summary": "The sequence 1, 2, 3, 5, 8, 13, 21, … — each term the sum of the two before — was discovered by Indian poets centuries before Fibonacci, while counting how many rhythms of short (1-beat) and long (2-beat) syllables fit a given number of beats. It appears throughout art, nature and mathematics.",
+          "concepts": [
+            {
+              "id": "ch06_t03_c01",
+              "title": "The Virahāṅka–Fibonacci numbers from poetry",
+              "explanations": {
+                "oneLine": "Counting the rhythms of n beats made from short (1-beat) and long (2-beat) syllables gives 1, 2, 3, 5, 8, 13, … — each number the sum of the previous two.",
+                "kidFriendly": "Ancient Indian poets in Sanskrit, Prakrit, Tamil and other languages classified each syllable as short (1 beat) or long (2 beats). They asked: how many different rhythms fill exactly n beats? For 1 beat: just 'short' — 1 way. For 2 beats: 'short-short' or 'long' — 2 ways. For 3 beats: 3 ways. For 4: 5 ways. The counts go 1, 2, 3, 5, 8, 13, 21, … — and each is the SUM of the two before it (3+5=8, 5+8=13). This is the Virahāṅka–Fibonacci sequence, discovered in India centuries before Fibonacci, from POETRY. The same numbers turn up in sunflowers, pinecones and art.",
+                "textbook": "The number of rhythmic patterns of n beats using short (1-beat) and long (2-beat) syllables follows the recurrence F(n) = F(n−1) + F(n−2), giving 1, 2, 3, 5, 8, 13, 21, …. The recurrence arises because any n-beat rhythm either ends in a short syllable (preceded by an (n−1)-beat rhythm) or a long syllable (preceded by an (n−2)-beat rhythm). These are the Virahāṅka numbers, studied by Indian prosodists long before Fibonacci (1202 CE).",
+                "expert": "The Virahāṅka–Fibonacci sequence satisfies the linear recurrence F_n = F_{n−1} + F_{n−2}; the count of compositions of n into parts {1,2} is exactly F_{n+1}. Its closed form (Binet) involves the golden ratio φ = (1+√5)/2, and the ratio of consecutive terms converges to φ. The combinatorial derivation (condition on the last part) is a canonical example of setting up a recurrence from a counting argument."
+              },
+              "reasoning": "Each rhythm of n beats must end in either a short syllable or a long one. Chop off that last syllable: a short leaves a valid (n−1)-beat rhythm, a long leaves a valid (n−2)-beat rhythm. So the n-beat count is the (n−1)-count plus the (n−2)-count — the sum of the previous two.",
+              "useCases": [
+                {
+                  "title": "Sunflower seeds",
+                  "description": "Seed spirals in sunflowers come in Fibonacci counts (34, 55, 89).",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Pinecones and pineapples",
+                  "description": "Their spiral rows are consecutive Fibonacci numbers.",
+                  "domain": "plants"
+                },
+                {
+                  "title": "Poetry rhythms",
+                  "description": "Counting short/long syllable rhythms of n beats gives the sequence — its original home.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "It's a point of pride that this 'Fibonacci' sequence was discovered in India by Virahāṅka (and earlier Pingala) studying poetic metre, centuries before Fibonacci wrote about breeding rabbits. The golden ratio that consecutive terms approach appears in art and architecture worldwide — a stunning bridge between poetry, nature and mathematics.",
+              "mnemonic": "Each term = sum of the two before. 1, 2, 3, 5, 8, 13, 21 … From poetry, found in nature.",
+              "predictQuestion": "The number of n-beat rhythms (short = 1 beat, long = 2 beats) goes 1, 2, 3, 5, 8, … How do you get the next term, and what is it after 8?",
+              "whyChain": [
+                "To count rhythms of n beats, look at the LAST syllable. It's either short (1 beat) or long (2 beats). If it's short, the rest is a complete rhythm of n−1 beats; if it's long, the rest is a rhythm of n−2 beats. Every n-beat rhythm falls into exactly one of these two cases.",
+                "So the count for n beats = (count for n−1 beats) + (count for n−2 beats). That's why each term is the sum of the two before it: 1, 2, then 1+2=3, 2+3=5, 3+5=8, 5+8=13, 8+13=21, …. After 8 comes 13.",
+                "This is the Virahāṅka–Fibonacci sequence — discovered by Indian poets studying metre long before Fibonacci. The very same numbers count sunflower-seed spirals and pinecone rows, and the ratio of neighbouring terms approaches the golden ratio found in art. One counting question about poetry rhythms opens a door connecting mathematics, nature, and beauty."
+              ],
+              "relatedConceptIds": [
+                "ch06_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t03_q01",
+                "ch06_t03_q02"
+              ],
+              "pageRefs": [
+                139,
+                140
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch06_t03_q01",
+              "prompt": "The Virahāṅka–Fibonacci sequence begins 1, 2, 3, 5, 8, 13, 21. Write the next three terms.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "34, 55, 89",
+              "solutionSteps": [
+                "Each term is the sum of the two before it.",
+                "13 + 21 = 34.",
+                "21 + 34 = 55.",
+                "34 + 55 = 89."
+              ],
+              "commonMistakes": [
+                "Adding a constant difference instead of the previous two terms.",
+                "Starting the addition from the wrong pair."
+              ],
+              "variations": [
+                {
+                  "prompt": "Next two terms after 89?",
+                  "answer": "144, 233",
+                  "solutionSteps": [
+                    "55+89=144; 89+144=233."
+                  ]
+                },
+                {
+                  "prompt": "If a Fibonacci-like sequence starts 2, 5, what are the next three terms?",
+                  "answer": "7, 12, 19",
+                  "solutionSteps": [
+                    "2+5=7, 5+7=12, 7+12=19."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                139,
+                140
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t03_q02",
+              "prompt": "How many rhythms of 4 beats can be made from short (1-beat) and long (2-beat) syllables? Use the recurrence.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "5",
+              "solutionSteps": [
+                "1-beat rhythms: 1 way (S).",
+                "2-beat: 2 ways (SS, L).",
+                "3-beat = 1+2 = 3 ways.",
+                "4-beat = (3-beat count) + (2-beat count) = 3 + 2 = 5 ways."
+              ],
+              "commonMistakes": [
+                "Listing and miscounting instead of using the recurrence.",
+                "Adding the wrong two previous counts."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many 5-beat rhythms?",
+                  "answer": "8",
+                  "solutionSteps": [
+                    "4-beat (5) + 3-beat (3) = 8."
+                  ]
+                },
+                {
+                  "prompt": "How many 6-beat rhythms?",
+                  "answer": "13",
+                  "solutionSteps": [
+                    "5-beat (8) + 4-beat (5) = 13."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                139,
+                140
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch06_t04",
+          "title": "Digits in Disguise",
+          "summary": "In a cryptarithm, letters stand for digits and you deduce which. From T+T+T = UT you can reason out that T must be 5 (giving 15). These puzzles train careful digit-by-digit logic — the same place-value and carrying reasoning, run in reverse.",
+          "concepts": [
+            {
+              "id": "ch06_t04_c01",
+              "title": "Cryptarithms — letters standing for digits",
+              "explanations": {
+                "oneLine": "In a digit puzzle, each letter is a hidden digit (0–9); you deduce them using place value, carrying, and logical elimination.",
+                "kidFriendly": "Here's a puzzle: T + T + T = UT, where UT is a two-digit number whose units digit is the SAME T. So three copies of a digit T add to a two-digit number ending in T. Try T = 5: 5+5+5 = 15, and 15 ends in 5 = T, with U = 1. It works! Could T be 2? 2+2+2 = 6, a one-digit number — no U. So T = 5 is forced. Cryptarithms like this hide digits behind letters; you crack them with place-value logic, carrying, and elimination — the same arithmetic you know, run backwards to find the digits.",
+                "textbook": "A cryptarithm is an arithmetic puzzle in which digits are replaced by letters (each letter a distinct digit 0–9, unless stated otherwise); the solver deduces the digit assignment using place-value structure, carry constraints, and logical elimination. Example: T+T+T = UT forces 3T to be a two-digit number ending in T, i.e. 3T ≡ T (mod 10) and 10 ≤ 3T < 100, giving T = 5, U = 1.",
+                "expert": "Cryptarithm solving is constraint satisfaction over digit variables with place-value linear relations and carry variables in {0,1,2,…}. The condition 3T ≡ T (mod 10) reduces to 2T ≡ 0 (mod 10), so T ∈ {0,5}; the two-digit-sum constraint eliminates 0, leaving T = 5. This blend of modular reasoning and bounding is exactly the inverse of the addition algorithm, illuminating place value from the solver's side."
+              },
+              "reasoning": "Each column of an addition obeys place-value and carrying rules. A cryptarithm gives you the answer's shape and asks for the digits — so you run those same rules in reverse, using each constraint to pin down or eliminate possibilities until only consistent digits remain.",
+              "useCases": [
+                {
+                  "title": "Newspaper puzzles",
+                  "description": "SEND + MORE = MONEY is the classic cryptarithm solved by digit logic.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Checking arithmetic",
+                  "description": "Spotting that a units digit can't be right is cryptarithm-style reasoning applied to real sums.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Coding/logic games",
+                  "description": "Deduction puzzles in apps use the same constrain-and-eliminate thinking.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Cryptarithms were popularised in puzzle magazines and are a staple of logic-puzzle culture, but they're also genuine training for the constraint-and-elimination reasoning used in computer science and codebreaking. Solving T+T+T=UT by forcing T=5 is a miniature version of how solvers crack far harder systems.",
+              "mnemonic": "Letters hide digits. Use place value + carrying + elimination to force each one.",
+              "predictQuestion": "In the puzzle T + T + T = UT (a two-digit answer ending in the same digit T), what digit must T be?",
+              "whyChain": [
+                "The puzzle says three copies of the digit T add up to a two-digit number UT whose UNITS digit is also T. So 3 × T must end in T. That's a modular clue: 3T and T leave the same remainder when divided by 10, meaning 2T is a multiple of 10, so T is 0 or 5.",
+                "Now use the 'two-digit answer' constraint. If T = 0, then 3T = 0 — not a two-digit number, so there's no U. That leaves T = 5: 5 + 5 + 5 = 15, which ends in 5 (= T) and has U = 1. Everything checks.",
+                "This is cryptarithm reasoning in miniature: combine a place-value/units-digit condition with a size (carry) condition, eliminate the impossible option, and the answer is forced. It's the ordinary addition algorithm run in reverse — and the same constrain-then-eliminate logic scales up to famous puzzles like SEND + MORE = MONEY and to real constraint-solving in computing."
+              ],
+              "relatedConceptIds": [
+                "ch06_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t04_q01",
+                "ch06_t04_q02"
+              ],
+              "pageRefs": [
+                142,
+                143
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch06_t04_q01",
+              "prompt": "Solve the cryptarithm T + T + T = UT, where UT is a two-digit number whose units digit equals T.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "T = 5, U = 1 (since 5 + 5 + 5 = 15).",
+              "solutionSteps": [
+                "3 × T must end in the digit T, so 3T ≡ T (mod 10), i.e. 2T is a multiple of 10 → T = 0 or 5.",
+                "T = 0 gives 0, not two digits. Reject.",
+                "T = 5: 5+5+5 = 15, ends in 5 = T, with U = 1. ✓"
+              ],
+              "commonMistakes": [
+                "Guessing without using the units-digit constraint.",
+                "Forgetting that the answer must be two digits (eliminates T = 0)."
+              ],
+              "variations": [
+                {
+                  "prompt": "In K2 + K2 = HMM, the answer's tens and units digits are equal. What is M?",
+                  "answer": "M = 4 (e.g. 72 + 72 = 144).",
+                  "solutionSteps": [
+                    "K2 + K2 ends in 4 (2+2); for a 3-digit answer with equal last two digits, 72+72=144 gives M=4."
+                  ]
+                },
+                {
+                  "prompt": "Solve A + A = 8 (one digit A).",
+                  "answer": "A = 4",
+                  "solutionSteps": [
+                    "2A = 8 → A = 4."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                142,
+                143
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t04_q02",
+              "prompt": "Why can T not equal 2 in the puzzle T + T + T = UT?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Because 2 + 2 + 2 = 6, a single-digit number — there is no tens digit U, so it cannot be a two-digit number UT.",
+              "solutionSteps": [
+                "Substitute T = 2: 2 + 2 + 2 = 6.",
+                "6 is a one-digit number; UT requires two digits.",
+                "So T = 2 fails the two-digit condition."
+              ],
+              "commonMistakes": [
+                "Only checking the units digit and ignoring the two-digit requirement."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can T = 4 work in T+T+T=UT?",
+                  "answer": "No — 4+4+4 = 12, which ends in 2, not 4.",
+                  "solutionSteps": [
+                    "Units digit must equal T; 12 ends in 2 ≠ 4."
+                  ]
+                },
+                {
+                  "prompt": "Can T = 5 work?",
+                  "answer": "Yes — 15 ends in 5 = T.",
+                  "solutionSteps": [
+                    "5+5+5=15, units 5 = T."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                142
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ],
+      "glossary": [
+        {
+          "id": "ch06_gl01",
+          "term": "Parity",
+          "definition": "Whether a whole number is even or odd.",
+          "example": "6 has even parity; 7 has odd parity.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl02",
+          "term": "Even number",
+          "definition": "A number that can be split into pairs with nothing left over; a multiple of 2.",
+          "example": "8 = 4 pairs.",
+          "hindiTerm": "सम संख्या",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl03",
+          "term": "Odd number",
+          "definition": "A number that is one more than a multiple of 2; leaves one over when paired.",
+          "example": "7 = 3 pairs + 1.",
+          "hindiTerm": "विषम संख्या",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl04",
+          "term": "Proof",
+          "definition": "A general argument showing a statement is true for all cases, not just examples.",
+          "example": "(2m+1)+(2n+1)=2(m+n+1) proves two odds sum to even.",
+          "hindiTerm": "उपपत्ति",
+          "relatedConceptIds": [
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl05",
+          "term": "Virahāṅka–Fibonacci sequence",
+          "definition": "The sequence 1, 2, 3, 5, 8, 13, … where each term is the sum of the previous two.",
+          "example": "5 + 8 = 13.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl06",
+          "term": "Recurrence",
+          "definition": "A rule that gives each term of a sequence from earlier terms.",
+          "example": "F(n) = F(n−1) + F(n−2).",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl07",
+          "term": "Cryptarithm",
+          "definition": "A puzzle where letters stand for digits and you deduce which digit each letter is.",
+          "example": "T+T+T = UT gives T = 5.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t04_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl08",
+          "term": "Sequence",
+          "definition": "An ordered list of numbers following a rule.",
+          "example": "0, 1, 1, 2, 4, 1, 5 from the height game.",
+          "hindiTerm": "अनुक्रम",
+          "relatedConceptIds": [
+            "ch06_t01_c01"
+          ]
+        },
+        {
+          "id": "ch06_gl09",
+          "term": "Invariant",
+          "definition": "A feature (like parity) that stays predictable and lets you rule out impossibilities.",
+          "example": "The parity of a sum of odds depends only on how many odds.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_gl10",
+          "term": "Golden ratio",
+          "definition": "The number (about 1.618) that consecutive Virahāṅka–Fibonacci terms approach in ratio.",
+          "example": "13/8 ≈ 1.625, 21/13 ≈ 1.615.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch06_mn01",
+          "acronym": "Count the odds",
+          "unpacking": "A sum is odd only when an ODD number of odd terms are added. Even count of odds (and any evens) → even sum.",
+          "context": "Use to find the parity of any sum quickly.",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_mn02",
+          "acronym": "Add the last two",
+          "unpacking": "Each Virahāṅka–Fibonacci term is the sum of the two before it: …8, 13, 21 (8+13=21).",
+          "context": "Use to extend the sequence.",
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_mn03",
+          "acronym": "Units digit first",
+          "unpacking": "In a cryptarithm, start from the units column and use carrying + elimination to pin down each letter.",
+          "context": "Use when solving digit puzzles.",
+          "relatedConceptIds": [
+            "ch06_t04_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch06_ms01",
+          "kidsThink": "Adding any number of odd numbers gives an even result.",
+          "actually": "Only an EVEN count of odds gives even; an ODD count of odds gives odd. Five odds sum to odd.",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_ms02",
+          "kidsThink": "Checking a few examples proves a statement.",
+          "actually": "Examples can only DISPROVE (one counterexample) or suggest. A proof needs a general argument (like 2m+1 + 2n+1 = even) covering all cases.",
+          "relatedConceptIds": [
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_ms03",
+          "kidsThink": "The Fibonacci sequence was invented by Fibonacci.",
+          "actually": "Indian scholars (Pingala, Virahāṅka) described it centuries earlier while studying poetic metre — hence Virahāṅka–Fibonacci.",
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_ms04",
+          "kidsThink": "In a Virahāṅka–Fibonacci sequence you add a fixed number each time.",
+          "actually": "You add the TWO PREVIOUS terms, not a constant. The gaps grow: +1, +2, +3, +5, …",
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_ms05",
+          "kidsThink": "In a cryptarithm any letter can be any digit independently.",
+          "actually": "The digits are constrained by place value and carrying — usually only one assignment is consistent, found by elimination.",
+          "relatedConceptIds": [
+            "ch06_t04_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch06_re01",
+          "title": "Splitting an odd bill in two",
+          "body": "Three friends each chip in an odd number of rupees and wonder if the total can split evenly between two people. Parity answers instantly: three odds sum to an odd total, and an odd number of rupees can't divide into two equal whole-rupee shares. No arithmetic needed — just parity.",
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_re02",
+          "title": "Fibonacci in a sunflower",
+          "body": "Count the spirals on a sunflower head and you'll almost always get Virahāṅka–Fibonacci numbers — 34 one way, 55 the other. The same sequence Indian poets found counting syllable rhythms governs how a plant packs seeds most efficiently. Mathematics, poetry and biology meeting in one flower.",
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_re03",
+          "title": "Codebreaking by elimination",
+          "body": "Cracking a cryptarithm like SEND + MORE = MONEY uses the same constrain-and-eliminate logic that codebreakers and puzzle apps rely on: each column gives a clue, carries link the columns, and impossible digits get ruled out until one solution remains.",
+          "relatedConceptIds": [
+            "ch06_t04_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch06_qa01",
+          "question": "In the 'taller children in front' game, is the statement 'If a person says 0, then they are the tallest in the group' always, sometimes, or never true?",
+          "modelAnswer": "Sometimes true. Saying 0 only means no TALLER child stands IN FRONT; a taller child could stand behind them. So they may or may not be the tallest.",
+          "textbookPage": 126,
+          "relatedConceptIds": [
+            "ch06_t01_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa02",
+          "question": "Can five number-cards, each odd, sum to 30? Why or why not?",
+          "modelAnswer": "No. The sum of five odd numbers is odd (an odd count of odds gives an odd total), but 30 is even. So it is impossible.",
+          "textbookPage": 129,
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa03",
+          "question": "What kind of number do you get when you add several even numbers? Several odd numbers?",
+          "modelAnswer": "Adding even numbers always gives an even number. Adding odd numbers gives an even number if there is an even count of them, and an odd number if there is an odd count.",
+          "textbookPage": 129,
+          "relatedConceptIds": [
+            "ch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa04",
+          "question": "Show that the sum of two odd numbers is always even.",
+          "modelAnswer": "Write the odds as 2m+1 and 2n+1. Their sum is 2m+2n+2 = 2(m+n+1), a multiple of 2, hence even. This holds for all m, n, so it is a proof.",
+          "textbookPage": 130,
+          "relatedConceptIds": [
+            "ch06_t02_c02"
+          ]
+        },
+        {
+          "id": "ch06_qa05",
+          "question": "Write the next three terms of 1, 2, 3, 5, 8, 13, 21.",
+          "modelAnswer": "Each term is the sum of the previous two: 13+21=34, 21+34=55, 34+55=89. So the next three terms are 34, 55, 89.",
+          "textbookPage": 139,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa06",
+          "question": "In how many ways can 4 beats be filled with short (1-beat) and long (2-beat) syllables?",
+          "modelAnswer": "5 ways. The count satisfies F(n)=F(n−1)+F(n−2): F(3)=3, F(2)=2, so F(4)=3+2=5. (The rhythms are SSSS, SSL, SLS, LSS, LL.)",
+          "textbookPage": 139,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa07",
+          "question": "Solve T + T + T = UT, where the answer's units digit equals T.",
+          "modelAnswer": "3T must end in T, so 2T is a multiple of 10, giving T = 0 or 5. T = 0 gives a one-digit sum, so T = 5: 5+5+5 = 15, with U = 1.",
+          "textbookPage": 142,
+          "relatedConceptIds": [
+            "ch06_t04_c01"
+          ]
+        },
+        {
+          "id": "ch06_qa08",
+          "question": "Who first discovered the sequence 1, 2, 3, 5, 8, 13, … and in what context?",
+          "modelAnswer": "Indian scholars such as Pingala and later Virahāṅka described it centuries before Fibonacci, while studying the rhythms of poetry — counting how many arrangements of short and long syllables fill a given number of beats. Hence it is called the Virahāṅka–Fibonacci sequence.",
+          "textbookPage": 139,
+          "relatedConceptIds": [
+            "ch06_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch06_mp01",
+          "emoji": "🪙",
+          "title": "Parity Detective",
+          "needs": [
+            "A handful of coins or counters",
+            "Paper and pen"
+          ],
+          "steps": [
+            "Grab any handful of coins and split them into pairs. If none are left over, the count is even; if one is left over, it's odd.",
+            "Take two odd handfuls, combine them, and pair again — record whether the total is even or odd.",
+            "Repeat with three odd handfuls, then four. Note the pattern.",
+            "Now predict, WITHOUT counting, the parity of a sum of seven odd handfuls. Then check.",
+            "Try to write the reason as a sentence: 'An odd number of odd groups gives a ___ total because ___.'"
+          ],
+          "expectedObservation": "You'll find an even count of odd handfuls always pairs up perfectly (even total), while an odd count always leaves one stranded (odd total) — and you can predict it before counting.",
+          "whyItWorks": "Each odd group is 'pairs plus one leftover'. When you combine groups, the leftovers try to pair with each other; an even number of leftovers pairs perfectly, an odd number strands one. So the parity of the total depends only on how many odd groups there are — a parity argument, made with coins.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch06_t02_c01",
+            "ch06_t02_c02"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch06_t01_c01",
+            "label": "Numbers encode info",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.15
+          },
+          {
+            "id": "ch06_t02_c01",
+            "label": "Parity of sums",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.15
+          },
+          {
+            "id": "ch06_t02_c02",
+            "label": "Parity as proof",
+            "kind": "concept",
+            "x": 0.85,
+            "y": 0.35
+          },
+          {
+            "id": "ch06_pivot_reasoning",
+            "label": "Proof & reasoning",
+            "kind": "pivot",
+            "x": 0.55,
+            "y": 0.45
+          },
+          {
+            "id": "ch06_t03_c01",
+            "label": "Virahāṅka–Fibonacci",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.7
+          },
+          {
+            "id": "ch06_t04_c01",
+            "label": "Cryptarithms",
+            "kind": "concept",
+            "x": 0.65,
+            "y": 0.7
+          },
+          {
+            "id": "ch01:ch01_t01_c03",
+            "label": "Ch.1 place value",
+            "kind": "crossChapter",
+            "x": 0.9,
+            "y": 0.7
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch06_e01",
+            "from": "ch06_t01_c01",
+            "to": "ch06_t02_c01",
+            "label": "leads to"
+          },
+          {
+            "id": "ch06_e02",
+            "from": "ch06_t02_c01",
+            "to": "ch06_t02_c02",
+            "label": "becomes"
+          },
+          {
+            "id": "ch06_e03",
+            "from": "ch06_t02_c02",
+            "to": "ch06_pivot_reasoning",
+            "label": "is"
+          },
+          {
+            "id": "ch06_e04",
+            "from": "ch06_t03_c01",
+            "to": "ch06_pivot_reasoning",
+            "label": "recurrence reasoning"
+          },
+          {
+            "id": "ch06_e05",
+            "from": "ch06_t04_c01",
+            "to": "ch06_pivot_reasoning",
+            "label": "deduction"
+          },
+          {
+            "id": "ch06_e06",
+            "from": "ch01:ch01_t01_c03",
+            "to": "ch06_t04_c01",
+            "label": "underlies"
+          }
+        ]
+      }
     }
   ]
 }

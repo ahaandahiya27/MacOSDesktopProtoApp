@@ -3,8 +3,8 @@
 **Last updated:** 2026-05-27 01:10 +05:30
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
-**Current phase:** Phase 2 — chapter content (Ch.1-5 done; Ch.6 next)
-**Current chapter under construction:** ch06 — Number Play (gegp106.txt) — NOT STARTED
+**Current phase:** Phase 2 — chapter content (Ch.1-6 done; Ch.7 next)
+**Current chapter under construction:** ch07 — A Tale of Three Intersecting Lines / triangles (gegp107.txt) — NOT STARTED
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -95,24 +95,22 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 
 | Ch# | Schema | Content | Articles | Discover | Notes |
 |-----|--------|---------|----------|----------|-------|
-| 1   | ✅     | ✅ 6/6 topics | ⚪    | ⚪       | pilot complete — 17 concepts, 26 Q, full enrichment |
-| 2   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Arithmetic Expressions — 10 concepts, 15 Q, full enrichment |
+| 1   | ✅     | ✅ 6/6 topics | ⚪    | ⚪       | Large Numbers Around Us — 17 concepts, 26 Q |
+| 2   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Arithmetic Expressions — 10 concepts, 15 Q |
 | 3   | ✅     | ✅ 5/5 topics | ⚪    | ⚪       | A Peek Beyond the Point (decimals) — 7 concepts, 13 Q |
 | 4   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Expressions Using Letter-Numbers — 4 concepts, 8 Q |
 | 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 7 concepts, 9 Q |
-| 6   | ⚪     | ⚪      | ⚪       | ⚪       | Number Play — RESUME HERE, src gegp106.txt |
-| 4   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 5   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 6   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 7   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 8   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 9   | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 10  | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 11  | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 12  | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 13  | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 14  | ⚪     | ⚪      | ⚪       | ⚪       |       |
-| 15  | ⚪     | ⚪      | ⚪       | ⚪       |       |
+| 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 5 concepts, 8 Q |
+| 7   | ⚪     | ⚪      | ⚪       | ⚪       | A Tale of Three Intersecting Lines (triangles) — RESUME HERE, src gegp107.txt |
+| 8   | ⚪     | ⚪      | ⚪       | ⚪       | Working with Fractions — src gegp108.txt |
+| 9   | ⚪     | ⚪      | ⚪       | ⚪       | Geometric Twins — src gegp201.txt |
+| 10  | ⚪     | ⚪      | ⚪       | ⚪       | Operations with Integers — src gegp202.txt |
+| 11  | ⚪     | ⚪      | ⚪       | ⚪       | Finding Common Ground — src gegp203.txt |
+| 12  | ⚪     | ⚪      | ⚪       | ⚪       | Another Peek Beyond the Point — src gegp204.txt |
+| 13  | ⚪     | ⚪      | ⚪       | ⚪       | Connecting the Dots — src gegp205.txt |
+| 14  | ⚪     | ⚪      | ⚪       | ⚪       | Constructions and Tilings — src gegp206.txt |
+| 15  | ⚪     | ⚪      | ⚪       | ⚪       | Finding the Unknown — src gegp207.txt |
+
 
 ---
 
