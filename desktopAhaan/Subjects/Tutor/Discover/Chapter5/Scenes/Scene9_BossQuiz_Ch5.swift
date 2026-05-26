@@ -132,6 +132,7 @@ struct Scene9_BossQuiz_Ch5: View {
         return .neutral
     }
 
+    @MainActor
     private func pick(_ option: String, in item: Question) {
         guard picks[currentQ] == nil else { return }
         picks[currentQ] = option
