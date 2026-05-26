@@ -2719,7 +2719,7 @@ self-contained features that improve daily UX:
 |---|---|---|
 | User-facing chapter-list surfaces | 2 (Continue + All) | **3** (+ Today's question) |
 | ConceptDetailView toolbar items | 1 (Bookmark) | **3** (+ Prev + Next) |
-| Routing-ratchet test classes | 11 | **13** (+DailyQuestionPicker, +ConceptSiblings) |
+| Ratchet/matrix test classes | 12 | **14** (+DailyQuestionPicker, +ConceptSiblings) |
 | Total ratchet test cases | 43 | **52** (+4 DailyQuestion, +5 ConceptSiblings) |
 | File-size allowlist entries | 8 | **7** (-1 Ch.4) |
 | Per-article state tracked | 0 (only bookmarks) | **1** (+ readArticleIds set) |
@@ -2777,5 +2777,60 @@ self-contained features that improve daily UX:
   but ~5ms on the iMac. If the toolbar ever feels sluggish,
   precompute a `[String: Int]` index in `SubjectPack` and
   switch to O(1) lookup. Not needed today.
+
+## Final consolidation — verified state at 2026-05-26 (post-round-3)
+
+End-of-block audit run to verify nothing drifted between commits.
+All checks pass cleanly:
+
+### Coverage matrices
+
+- 9 templated article surfaces × 19 chapters = **171 templated
+  articles** all shipping, all ratcheted. HTMLs count and
+  `ArticleIndex` entries agree per surface (19 each):
+  beyond, mistakes, glossary, ncert_qa, scientists, whatif,
+  miniproject, selfcheck, storymode.
+- Per-chapter article totals match `ChapterContentTests`
+  sentinels: Ch.1 = 37, Ch.2 = 33, Ch.3 = 28.
+- 14 ratchet-style test classes (11 `*RoutingTests` +
+  ExtraReadingRow + DailyQuestionPicker + ConceptSiblings)
+  pinning 52+ invariants total.
+
+### Pack integrity
+
+- **207 concepts**, **732 questions** across **19 chapters** —
+  unchanged from the pack's authored state.
+- **0 orphan** `relatedConceptIds` across all 207 concepts.
+- **0 orphan** `relatedQuestionIds` across all 207 concepts.
+
+### Lint state
+
+- `lh005_withanimation_allowlist.txt`: **0 grandfathered**
+  (was 66 at session start, two RM sweeps closed it).
+- `lifetime_hazards_allowlist.txt`: **3 grandfathered**
+  (TimedSceneModifier + ParticleEmitter + TextToSpeechManager —
+  all marked as false-positive value-types).
+- `file_size_allowlist.txt`: **7 grandfathered**
+  (down from 8 — Ch.4 dispatcher split out this block).
+
+### Feature wiring spot-check
+
+- `ChapterListView` body references `DailyQuestionCard(pack:)` ✓
+- `ConceptDetailView` body references
+  `ChapterGlossaryCTA(chapter:)` ✓
+- `ConceptDetailView` toolbar uses `ConceptSiblings.resolve` ✓
+- `ExtraReadingRow` chip calls `dataStore.isArticleRead` +
+  `toggleArticleRead` ✓
+- `DataStore+Loading` reads `readArticleIds.json` ✓
+
+### Build / tests
+
+- Final `scripts/ci-build-test.sh` run: green
+  (`** TEST SUCCEEDED **`, `==> ci-build-test PASSED`).
+- All 9 lints clean.
+- Git tree clean. Local `HEAD` == `origin/main` at this
+  consolidation commit.
+
+Nothing else needed. Stopping here.
 
 
