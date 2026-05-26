@@ -8470,6 +8470,978 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch07",
+      "number": 7,
+      "title": "A Tale of Three Intersecting Lines",
+      "summary": "A triangle is the simplest closed shape — three corners (vertices), three sides, three angles. This chapter explores what side lengths can actually form a triangle (the triangle inequality: any two sides must together exceed the third), how to construct triangles with a compass and ruler, what an altitude is, and how triangles are classified — by sides (equilateral, isosceles, scalene) and by angles (acute, right, obtuse).",
+      "topics": [
+        {
+          "id": "ch07_t01",
+          "title": "Triangle Basics",
+          "summary": "A triangle ∆ABC has three vertices (A, B, C), three sides joining them, and three angles (∠A, ∠B, ∠C). Vertices can be named in any order. If the three points lie on a straight line, no triangle forms.",
+          "concepts": [
+            {
+              "id": "ch07_t01_c01",
+              "title": "Vertices, sides and angles of a triangle",
+              "explanations": {
+                "oneLine": "A triangle is a closed shape with three vertices (corner points), three sides (segments joining them), and three angles.",
+                "kidFriendly": "A triangle is the most basic closed shape. It has three corner points called vertices (like A, B, C), three sides — line segments joining the pairs of vertices (AB, BC, CA), and three angles where the sides meet (∠A, ∠B, ∠C). We write it with a small triangle symbol: ∆ABC. You can name the vertices in any order — ∆ABC, ∆BCA, ∆CAB all mean the same triangle. One catch: if the three points happen to lie on a single straight line, the 'sides' flatten out and you get no triangle at all — you need three points NOT in a line.",
+                "textbook": "A triangle consists of three non-collinear vertices, three sides (the segments joining each pair of vertices), and three interior angles formed where pairs of sides meet at the vertices. It is denoted ∆ABC, with the vertices nameable in any order. The angles ∠CAB, ∠ABC, ∠BCA are abbreviated ∠A, ∠B, ∠C. Three collinear points do not form a triangle (degenerate case).",
+                "expert": "A triangle is the 2-simplex: the convex hull of three affinely independent (non-collinear) points in the plane. Affine independence is exactly the non-collinearity condition; collinear points give a degenerate simplex of lower dimension. The triangle is the foundational polygon — every polygon triangulates into triangles, making the triangle the basic unit of planar geometry and computer graphics meshes."
+              },
+              "reasoning": "Three points, if not in a straight line, are joined by three segments enclosing a region — that's a triangle. The corners are vertices, the segments are sides, and the openings between sides at each corner are the angles. Collinear points can't enclose anything, so they make no triangle.",
+              "useCases": [
+                {
+                  "title": "Roof truss",
+                  "description": "A triangular truss has three vertices and three rigid sides — strong and stable.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Traffic 'yield' sign",
+                  "description": "A triangle with three vertices and three sides — the basic warning shape.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Samosa",
+                  "description": "A samosa's outline is roughly a triangle: three corners, three edges.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "The triangle is special because it's RIGID — fix the three side lengths and the shape can't flex, unlike a four-sided frame which can collapse into a parallelogram. That's why bridges, cranes, and roof trusses are built from triangles: three sides lock the shape. This rigidity is also why triangles are the building block of all computer-graphics 3D models.",
+              "mnemonic": "Three non-line points → three sides → a triangle ∆ABC with three angles.",
+              "predictQuestion": "What three things make up a triangle, and what happens if the three corner points lie on one straight line?",
+              "whyChain": [
+                "A triangle is built from three points that are NOT in a straight line. Join each pair of points with a segment and you get three sides; the corners where they meet are the three vertices; the openings at each corner are the three angles. Written ∆ABC.",
+                "The non-collinear condition is essential. If the three points DO lie on a single straight line, the would-be sides collapse onto that line and enclose no region — there's no triangle, just a flat segment. You need the three points spread out, not in a row.",
+                "This humble shape is the foundation of geometry. The triangle is RIGID — its three fixed sides lock the shape so it can't flex, which is why trusses, bridges and cranes are full of triangles. And because every polygon can be cut into triangles, the triangle is the basic unit from which all planar shapes — and all 3D computer-graphics models — are built."
+              ],
+              "relatedConceptIds": [
+                "ch07_t02_c01",
+                "ch07_t04_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t01_q01"
+              ],
+              "pageRefs": [
+                145
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch07_t01_q01",
+              "prompt": "Name the three vertices, three sides and three angles of triangle ∆ABC. Can the three vertices lie on a straight line?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Vertices: A, B, C. Sides: AB, BC, CA. Angles: ∠A, ∠B, ∠C. No — three collinear points cannot form a triangle.",
+              "solutionSteps": [
+                "Vertices are the three corner points: A, B, C.",
+                "Sides are the segments joining pairs: AB, BC, CA.",
+                "Angles are at the corners: ∠A, ∠B, ∠C.",
+                "If A, B, C lie on one line, the sides flatten and enclose no area — no triangle."
+              ],
+              "commonMistakes": [
+                "Listing only two sides or angles.",
+                "Thinking any three points form a triangle (collinear ones don't)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many sides and angles does any triangle have?",
+                  "answer": "Three of each.",
+                  "solutionSteps": [
+                    "By definition a triangle has 3 sides and 3 angles."
+                  ]
+                },
+                {
+                  "prompt": "Is ∆ABC the same triangle as ∆CBA?",
+                  "answer": "Yes — vertices can be named in any order.",
+                  "solutionSteps": [
+                    "Order of naming doesn't change the triangle."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                145
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch07_t02",
+          "title": "The Triangle Inequality",
+          "summary": "Not every set of three lengths can form a triangle. The triangle inequality says: the sum of any two sides must be greater than the third. So 3, 4, 5 works, but 10, 15, 30 does not — because 10 + 15 = 25 is less than 30, and the two short sides can't reach across.",
+          "concepts": [
+            {
+              "id": "ch07_t02_c01",
+              "title": "The triangle inequality",
+              "explanations": {
+                "oneLine": "Three lengths form a triangle only if the sum of every two of them is greater than the third — the triangle inequality.",
+                "kidFriendly": "Can any three lengths make a triangle? No! Try 10, 15, 30. The two shorter sides (10 and 15) add to 25 — but the third side is 30. The short sides aren't long enough to reach across and meet; they fall short by 5. The rule, called the triangle inequality, says: for a triangle to exist, the sum of any two sides must be GREATER than the third side. 3, 4, 5 works (3+4 = 7 > 5, and the others too). 10, 15, 30 fails (10+15 = 25 < 30). It's enough to check that the two SHORTEST sides together beat the longest one.",
+                "textbook": "The triangle inequality states that three positive lengths a, b, c can be the sides of a triangle if and only if the sum of every pair exceeds the third: a+b>c, b+c>a, and c+a>b. Equivalently, it suffices that the sum of the two smallest exceeds the largest. Lengths failing this (e.g., 10, 15, 30 since 10+15<30) cannot form a triangle; the two shorter sides cannot meet.",
+                "expert": "The triangle inequality |a−b| < c < a+b is the metric-space axiom d(x,z) ≤ d(x,y)+d(y,z) realised geometrically: the straight path (one side) is never longer than a detour through a third vertex (the other two sides). It characterises realisable Euclidean triangles and underlies the definition of any metric/norm; equality a+b=c corresponds to the degenerate collinear case."
+              },
+              "reasoning": "To close up into a triangle, the two shorter sides, swung down from the ends of the longest side, must actually reach each other and overlap. If together they're shorter than the longest side, they can't span the gap, so no triangle closes.",
+              "useCases": [
+                {
+                  "title": "Choosing sticks for a frame",
+                  "description": "Sticks 10, 15, 30 cm won't form a triangular frame — the short two can't span the long one.",
+                  "domain": "building"
+                },
+                {
+                  "title": "GPS shortest path",
+                  "description": "Going direct (one side) is always shorter than detouring via a third point (two sides).",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Compass construction",
+                  "description": "Two arcs from the ends of the base only intersect when the inequality holds.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The triangle inequality is one of the most important facts in all of mathematics — it defines what 'distance' means in every space, from flat geometry to the abstract spaces used in machine learning. 'The shortest distance between two points is a straight line' is just the triangle inequality in disguise.",
+              "mnemonic": "Sum of any two sides > the third. Check: do the two shortest beat the longest?",
+              "predictQuestion": "Can the lengths 10, 15 and 30 form a triangle? Test them with the triangle inequality.",
+              "whyChain": [
+                "For three lengths to close into a triangle, the two shorter sides — swung down from the ends of the longest side — must actually reach across and meet. If they're too short combined, they never touch and no triangle forms.",
+                "That's the triangle inequality: the sum of any two sides must exceed the third. The decisive check is the two SHORTEST against the longest. For 10, 15, 30: the short sides sum to 10 + 15 = 25, which is LESS than 30. They fall 5 short of spanning the long side, so they can never meet — no triangle. (Compare 3, 4, 5: 3+4 = 7 > 5, so it works.)",
+                "This rule is far bigger than triangles. It's the formal definition of 'distance' in every mathematical space: a direct path between two points is never longer than a detour through a third. 'The shortest distance between two points is a straight line' is exactly the triangle inequality — making this one of the most fundamental facts in all of mathematics."
+              ],
+              "relatedConceptIds": [
+                "ch07_t01_c01",
+                "ch07_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t02_q01",
+                "ch07_t02_q02"
+              ],
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch07_t02_q01",
+              "prompt": "Do the lengths 10, 15, 30 satisfy the triangle inequality? Can they form a triangle?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No. 10 + 15 = 25, which is less than 30, so the inequality fails and no triangle can be formed.",
+              "solutionSteps": [
+                "Check the two shortest against the longest: 10 + 15 = 25.",
+                "Compare with the longest side, 30: 25 < 30.",
+                "Since the sum of the two shorter sides is NOT greater than the third, the inequality fails.",
+                "No triangle is possible."
+              ],
+              "commonMistakes": [
+                "Only checking one pair that happens to work (e.g. 15+30 > 10) and ignoring the failing pair.",
+                "Allowing equality (sum = third) as a triangle — it gives a flat, degenerate line."
+              ],
+              "variations": [
+                {
+                  "prompt": "Do 3, 4, 5 form a triangle?",
+                  "answer": "Yes.",
+                  "solutionSteps": [
+                    "3+4=7>5, 4+5>3, 3+5>4 — all hold."
+                  ]
+                },
+                {
+                  "prompt": "Do 7, 7, 15 form a triangle?",
+                  "answer": "No — 7+7=14 < 15.",
+                  "solutionSteps": [
+                    "Two shorter sides sum to 14, less than 15."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t02_q02",
+              "prompt": "A triangle has two sides of length 8 cm and 5 cm. Between what values must the third side lie?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Greater than 3 cm and less than 13 cm (i.e. 3 < third side < 13).",
+              "solutionSteps": [
+                "Sum condition: third side < 8 + 5 = 13.",
+                "Difference condition: third side > 8 − 5 = 3 (so the other pairs' inequalities hold).",
+                "So the third side must satisfy 3 cm < side < 13 cm."
+              ],
+              "commonMistakes": [
+                "Only applying the sum rule and forgetting the lower bound from the difference.",
+                "Including the endpoints 3 and 13 (those give degenerate flat triangles)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two sides are 6 and 6. Range for the third?",
+                  "answer": "Between 0 and 12 (0 < side < 12).",
+                  "solutionSteps": [
+                    "Sum 6+6=12 upper; difference 0 lower."
+                  ]
+                },
+                {
+                  "prompt": "Two sides are 10 and 4. Range for the third?",
+                  "answer": "Between 6 and 14.",
+                  "solutionSteps": [
+                    "10−4=6 lower; 10+4=14 upper."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch07_t03",
+          "title": "Constructing Triangles & Altitudes",
+          "summary": "Given three valid side lengths, you can construct the triangle with a compass: draw the base, then swing an arc of each remaining side-length from each base endpoint — where the arcs cross is the third vertex. An altitude is the perpendicular dropped from a vertex to the opposite side.",
+          "concepts": [
+            {
+              "id": "ch07_t03_c01",
+              "title": "Constructing a triangle from its sides",
+              "explanations": {
+                "oneLine": "To construct a triangle from three side lengths, draw one side as a base, then swing an arc of each other length from each end; the arcs cross at the third vertex.",
+                "kidFriendly": "Say you want ∆ABC with AB = 4 cm, AC = 5 cm, BC = 6 cm. Step 1: draw the base AB = 4 cm. Step 2: from A, open the compass to 5 cm and draw an arc. Step 3: from B, open to 6 cm and draw an arc crossing the first. Step 4: where the arcs meet is C — join AC and BC. Why does the crossing point work? Any point on the arc from A is exactly 5 cm from A; any point on the arc from B is exactly 6 cm from B. The crossing point is BOTH — so it's exactly the right distances from A and B. This only works if the lengths satisfy the triangle inequality (otherwise the arcs never meet).",
+                "textbook": "Triangle construction from three sides (SSS) uses compass arcs: draw the base of one given length, then from each endpoint draw an arc of radius equal to one of the remaining sides; their intersection is the third vertex. A point on an arc centred at A with radius r is exactly distance r from A, so the intersection simultaneously satisfies both distance requirements. The construction succeeds iff the lengths satisfy the triangle inequality (arcs intersect).",
+                "expert": "The SSS construction realises the fact that three side lengths satisfying the triangle inequality determine a triangle uniquely up to congruence (the SSS congruence criterion). Each arc is a circle (locus of points at fixed distance from a centre); two circles intersect in 0, 1, or 2 points, and intersection in 2 points (reflections across the base) occurs precisely when |r₁−r₂| < AB < r₁+r₂ — the triangle inequality again."
+              },
+              "reasoning": "An arc drawn from a point with the compass marks every spot at exactly that distance from the point. Drawing two such arcs — one for each remaining side — finds the spot that is simultaneously the right distance from both base ends. That spot must be the third vertex.",
+              "useCases": [
+                {
+                  "title": "Carpentry layout",
+                  "description": "A carpenter marks a triangular brace by swinging two tape-measure arcs to fix the apex.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Garden design",
+                  "description": "Laying out a triangular flowerbed with string arcs from two pegs finds the third corner.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Compass geometry",
+                  "description": "Classic ruler-and-compass construction of any triangle from three sides.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Ruler-and-compass construction is an ancient Greek art with deep limits — some constructions (like trisecting an arbitrary angle, or 'squaring the circle') were proven IMPOSSIBLE with only these tools, two thousand years after the questions were first asked. The humble compass arc you use here connects to some of the deepest results in mathematics.",
+              "mnemonic": "Two arcs, one per remaining side, swung from the base ends. Where they cross = third vertex.",
+              "predictQuestion": "To construct ∆ABC with AB = 4 cm, AC = 5 cm, BC = 6 cm, where does the third vertex C come from?",
+              "whyChain": [
+                "Start by drawing the base, AB = 4 cm. Now you need point C, which must be exactly 5 cm from A and exactly 6 cm from B at the same time. How do you find a point meeting both conditions?",
+                "Use arcs. Every point on an arc drawn from A with radius 5 cm is exactly 5 cm from A; every point on an arc from B with radius 6 cm is exactly 6 cm from B. The point where the two arcs CROSS satisfies both distances simultaneously — so it must be vertex C. Join AC and BC and the triangle is done.",
+                "This only works when the side lengths obey the triangle inequality — otherwise the two arcs are too far apart to ever meet, and (just as the inequality predicts) no triangle exists. The construction also shows that three side lengths fix a triangle's shape completely, which is the SSS congruence idea: same three sides, same triangle."
+              ],
+              "relatedConceptIds": [
+                "ch07_t02_c01",
+                "ch07_t03_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t03_q01"
+              ],
+              "pageRefs": [
+                148,
+                149,
+                150
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t03_c02",
+              "title": "Altitudes of a triangle",
+              "explanations": {
+                "oneLine": "An altitude is the perpendicular segment from a vertex straight down to the opposite side (or its extension).",
+                "kidFriendly": "An altitude of a triangle is the straight, perpendicular drop from a vertex to the opposite side. Stand at vertex A and drop a line straight down (at 90°) to side BC — that perpendicular segment is the altitude from A. Every triangle has three altitudes, one from each vertex. The altitude is the 'height' of the triangle when the opposite side is the 'base' — which is why the area of a triangle is ½ × base × height. To construct it, you make a perpendicular from the vertex to the opposite side using compass-and-ruler perpendicular construction.",
+                "textbook": "An altitude of a triangle is the perpendicular segment from a vertex to the line containing the opposite side. Each triangle has three altitudes (one per vertex). The length of an altitude is the height corresponding to the chosen base, used in the area formula Area = ½ × base × height. For obtuse triangles, an altitude may meet the extension of the opposite side outside the triangle.",
+                "expert": "The three altitudes of a triangle are concurrent at the orthocentre. An altitude is the perpendicular from a vertex to the opposite side's supporting line; its foot is the orthogonal projection of the vertex onto that line. Altitude length h_a relates to area S by S = ½ a·h_a, so h_a = 2S/a — the basis of the area formula and of many metric relations in triangle geometry."
+              },
+              "reasoning": "The altitude is how 'tall' the triangle stands above a chosen base. Measuring height means measuring straight up at a right angle to the base — so the altitude is the perpendicular from the opposite vertex to that base.",
+              "useCases": [
+                {
+                  "title": "Area of a triangular plot",
+                  "description": "Area = ½ × base × height needs the altitude (height) perpendicular to the base.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Roof pitch",
+                  "description": "The altitude of a triangular roof cross-section is its peak height above the span.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Triangle height in design",
+                  "description": "Designers use the altitude to centre text or motifs inside a triangular logo.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "The three altitudes of any triangle always meet at a single point — the orthocentre — one of several remarkable 'centres' a triangle has (along with the centroid, incentre, and circumcentre). That three lines defined separately always pass through one point is a beautiful, non-obvious fact discovered by the ancient Greeks.",
+              "mnemonic": "Altitude = perpendicular drop from a vertex to the opposite side. It's the triangle's height.",
+              "predictQuestion": "What is an altitude of a triangle, and how would you construct the altitude from vertex A to side BC?",
+              "whyChain": [
+                "An altitude measures how tall a triangle stands above a chosen base. 'Height' always means measured straight up — at a right angle — to the base. So the altitude from vertex A is the perpendicular segment dropped from A straight down to the opposite side BC.",
+                "To construct it, you drop a perpendicular from A to line BC using the standard compass-and-ruler perpendicular construction: the foot of that perpendicular on BC, joined to A, is the altitude. Every triangle has three such altitudes, one from each vertex.",
+                "Altitudes matter because they're the 'height' in Area = ½ × base × height — choose any side as base and its altitude gives the matching height. And remarkably, all three altitudes of any triangle pass through a single point, the orthocentre — one of the elegant hidden 'centres' the Greeks discovered lurking in every triangle."
+              ],
+              "relatedConceptIds": [
+                "ch07_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t03_q02"
+              ],
+              "pageRefs": [
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch07_t03_q01",
+              "prompt": "Describe the compass steps to construct ∆ABC with AB = 4 cm, AC = 5 cm, BC = 6 cm.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Draw AB = 4 cm; from A draw an arc of radius 5 cm; from B draw an arc of radius 6 cm; their intersection is C; join AC and BC.",
+              "solutionSteps": [
+                "Step 1: Draw the base AB = 4 cm.",
+                "Step 2: From A, draw an arc of radius 5 cm (all points 5 cm from A).",
+                "Step 3: From B, draw an arc of radius 6 cm crossing the first arc.",
+                "Step 4: The intersection is C (exactly 5 cm from A and 6 cm from B). Join AC and BC."
+              ],
+              "commonMistakes": [
+                "Swinging the arcs with the wrong radii (mixing up which side goes where).",
+                "Forgetting that the arcs only meet if the triangle inequality holds."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the arc-intersection the correct vertex?",
+                  "answer": "Because it is simultaneously 5 cm from A and 6 cm from B, the required distances.",
+                  "solutionSteps": [
+                    "Each arc is the set of points at a fixed distance from its centre."
+                  ]
+                },
+                {
+                  "prompt": "Construct an equilateral triangle of side 4 cm — what radius for both arcs?",
+                  "answer": "4 cm for both arcs.",
+                  "solutionSteps": [
+                    "All sides equal, so both arcs use radius 4 cm."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                148,
+                149,
+                150
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t03_q02",
+              "prompt": "What is an altitude of a triangle, and how is it related to the triangle's area?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "An altitude is the perpendicular segment from a vertex to the opposite side; it is the height in Area = ½ × base × height.",
+              "solutionSteps": [
+                "An altitude drops perpendicularly from a vertex to the opposite side.",
+                "Taking that side as the base, the altitude is the corresponding height.",
+                "Area of the triangle = ½ × base × height = ½ × base × altitude."
+              ],
+              "commonMistakes": [
+                "Confusing the altitude with a side of the triangle.",
+                "Forgetting the ½ in the area formula."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many altitudes does a triangle have?",
+                  "answer": "Three — one from each vertex.",
+                  "solutionSteps": [
+                    "Each vertex has a perpendicular to its opposite side."
+                  ]
+                },
+                {
+                  "prompt": "Area of a triangle with base 10 cm and altitude 6 cm?",
+                  "answer": "30 cm²",
+                  "solutionSteps": [
+                    "½ × 10 × 6 = 30."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch07_t04",
+          "title": "Types of Triangles",
+          "summary": "Triangles are sorted two ways. By sides: equilateral (all three equal), isosceles (two equal), scalene (all different). By angles: acute (all angles < 90°), right (one 90° angle), obtuse (one angle > 90°). A triangle has a name in each system.",
+          "concepts": [
+            {
+              "id": "ch07_t04_c01",
+              "title": "Classifying triangles by sides and by angles",
+              "explanations": {
+                "oneLine": "By sides: equilateral (3 equal), isosceles (2 equal), scalene (all different). By angles: acute (all < 90°), right (one = 90°), obtuse (one > 90°).",
+                "kidFriendly": "Triangles come in families, sorted two different ways. By their SIDES: equilateral has all three sides equal, isosceles has exactly two equal, scalene has all three different. By their ANGLES: acute has all three angles less than 90°, right has exactly one 90° angle, obtuse has one angle bigger than 90°. Note the angle rule is about ALL angles for 'acute' — you can't call a triangle acute just because it has one acute angle (every triangle has at least two!). A triangle gets a name in each system, e.g. 'a right isosceles triangle'.",
+                "textbook": "Triangles are classified by side lengths — equilateral (all three sides equal), isosceles (at least two equal), scalene (all three unequal) — and independently by angle measures — acute (all three angles less than 90°), right (exactly one angle of 90°), obtuse (one angle greater than 90°). A triangle can be at most one type in each scheme; an acute triangle requires ALL angles acute, since every triangle already has at least two acute angles.",
+                "expert": "The two classifications partition the space of triangle shapes along orthogonal axes (side-equality structure and angle-magnitude structure). They are linked: equilateral ⟹ equiangular (all 60°), hence acute; a right or obtuse triangle cannot be equilateral. The full relationship between side-equality and angle-equality (e.g., isosceles ⟺ two equal base angles) is the subject of later congruence theory."
+              },
+              "reasoning": "There are two independent things you can compare: how the sides relate (equal or not) and how big the angles are (under, at, or over 90°). Each gives a way to sort triangles, so every triangle has one label from each scheme.",
+              "useCases": [
+                {
+                  "title": "Set squares",
+                  "description": "The two drafting set-squares are right triangles: one 45-45-90 (isosceles right), one 30-60-90 (scalene right).",
+                  "domain": "building"
+                },
+                {
+                  "title": "Yield sign",
+                  "description": "A traffic yield sign is an equilateral (and therefore acute, all-60°) triangle.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Roof gables",
+                  "description": "Many roof gables are isosceles triangles — two equal slopes meeting at a peak.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "The classifications connect deeply: an equilateral triangle is automatically equiangular (all angles 60°) and therefore acute — one shape, names in both systems. The link between equal sides and equal angles (isosceles triangles have equal 'base angles') is one of the oldest theorems in geometry, called the 'pons asinorum' (bridge of asses) in Euclid.",
+              "mnemonic": "Two rulers: SIDES (equilateral/isosceles/scalene) and ANGLES (acute/right/obtuse). Every triangle gets one label from each.",
+              "predictQuestion": "What is the difference between classifying a triangle by its sides and by its angles, and why can't 'acute' mean 'has one acute angle'?",
+              "whyChain": [
+                "There are two independent features of a triangle you can sort by. One is the SIDES: are all three equal (equilateral), exactly two equal (isosceles), or all different (scalene)? The other is the ANGLES: are all under 90° (acute), is one exactly 90° (right), or is one over 90° (obtuse)? Each scheme gives every triangle a label.",
+                "The schemes are independent, so a triangle has a name in each — 'right scalene', 'acute isosceles', and so on. They also interlock: an equilateral triangle has all angles 60°, so it's automatically acute; a right or obtuse triangle can never be equilateral.",
+                "The 'acute' definition is subtle: it requires ALL THREE angles to be acute, not just one. Why? Because EVERY triangle has at least two acute angles already (a triangle can have at most one angle that is right or obtuse). So 'has an acute angle' would describe every triangle and tell you nothing — only 'all three acute' carves out a meaningful class."
+              ],
+              "relatedConceptIds": [
+                "ch07_t01_c01",
+                "ch07_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch07_t04_q01",
+                "ch07_t04_q02"
+              ],
+              "pageRefs": [
+                170,
+                171
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch07_t04_q01",
+              "prompt": "Classify a triangle with sides 5 cm, 5 cm, 8 cm by its sides. Classify a triangle with angles 40°, 60°, 80° by its angles.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "The 5-5-8 triangle is isosceles (two equal sides). The 40-60-80 triangle is acute (all angles < 90°).",
+              "solutionSteps": [
+                "5, 5, 8: two sides equal (5 and 5) → isosceles.",
+                "40°, 60°, 80°: all three angles are less than 90° → acute."
+              ],
+              "commonMistakes": [
+                "Calling 5-5-8 equilateral (only two sides are equal, not all three).",
+                "Calling the 40-60-80 triangle right or obtuse (none of its angles reaches 90°)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Classify a 3-4-5 triangle by sides.",
+                  "answer": "Scalene (all sides different).",
+                  "solutionSteps": [
+                    "3, 4, 5 are all different."
+                  ]
+                },
+                {
+                  "prompt": "Classify a triangle with a 90° angle.",
+                  "answer": "Right-angled.",
+                  "solutionSteps": [
+                    "Exactly one angle is 90°."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                170,
+                171
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_t04_q02",
+              "prompt": "Why must every triangle have at least two acute angles?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Because a triangle can have at most one angle that is 90° or more — two such angles would already total 180° or more, leaving nothing for the third angle. So at least two angles must be acute.",
+              "solutionSteps": [
+                "The three angles of a triangle sum to 180°.",
+                "If two angles were each 90° or more, their sum alone would be ≥ 180°, leaving 0° or less for the third — impossible.",
+                "So at most one angle can be right or obtuse; the other two must be acute.",
+                "Hence every triangle has at least two acute angles."
+              ],
+              "commonMistakes": [
+                "Thinking a triangle could have two right angles.",
+                "Forgetting the angle-sum is exactly 180°."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can a triangle have two obtuse angles?",
+                  "answer": "No — two angles over 90° would exceed 180° on their own.",
+                  "solutionSteps": [
+                    "Their sum alone would be > 180°."
+                  ]
+                },
+                {
+                  "prompt": "Can a triangle be both right-angled and obtuse?",
+                  "answer": "No — that would need two angles ≥ 90°, impossible.",
+                  "solutionSteps": [
+                    "At most one angle can reach or exceed 90°."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                171
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171
+      ],
+      "glossary": [
+        {
+          "id": "ch07_gl01",
+          "term": "Triangle",
+          "definition": "A closed shape with three vertices, three sides and three angles.",
+          "example": "∆ABC.",
+          "hindiTerm": "त्रिभुज",
+          "relatedConceptIds": [
+            "ch07_t01_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl02",
+          "term": "Vertex",
+          "definition": "A corner point of a triangle where two sides meet.",
+          "example": "A, B and C in ∆ABC.",
+          "hindiTerm": "शीर्ष",
+          "relatedConceptIds": [
+            "ch07_t01_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl03",
+          "term": "Triangle inequality",
+          "definition": "The rule that the sum of any two sides of a triangle must exceed the third side.",
+          "example": "3+4>5 holds; 10+15>30 fails.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl04",
+          "term": "Altitude",
+          "definition": "The perpendicular segment from a vertex to the opposite side (the triangle's height).",
+          "example": "The drop from A to side BC.",
+          "hindiTerm": "शीर्षलंब",
+          "relatedConceptIds": [
+            "ch07_t03_c02"
+          ]
+        },
+        {
+          "id": "ch07_gl05",
+          "term": "Equilateral triangle",
+          "definition": "A triangle with all three sides (and all three angles) equal.",
+          "example": "A 6-6-6 triangle, all angles 60°.",
+          "hindiTerm": "समबाहु त्रिभुज",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl06",
+          "term": "Isosceles triangle",
+          "definition": "A triangle with exactly two sides equal.",
+          "example": "A 5-5-8 triangle.",
+          "hindiTerm": "समद्विबाहु त्रिभुज",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl07",
+          "term": "Scalene triangle",
+          "definition": "A triangle with all three sides of different lengths.",
+          "example": "A 3-4-5 triangle.",
+          "hindiTerm": "विषमबाहु त्रिभुज",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl08",
+          "term": "Acute triangle",
+          "definition": "A triangle in which all three angles are less than 90°.",
+          "example": "A 40-60-80 triangle.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl09",
+          "term": "Right triangle",
+          "definition": "A triangle with exactly one 90° angle.",
+          "example": "A 3-4-5 triangle has a right angle.",
+          "hindiTerm": "समकोण त्रिभुज",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_gl10",
+          "term": "Obtuse triangle",
+          "definition": "A triangle with one angle greater than 90°.",
+          "example": "A triangle with a 120° angle.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch07_mn01",
+          "acronym": "Two short beat the long",
+          "unpacking": "A triangle exists only if the two shortest sides together are longer than the longest side (the triangle inequality).",
+          "context": "Use to test whether three lengths can form a triangle.",
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        },
+        {
+          "id": "ch07_mn02",
+          "acronym": "Equal sides: 3-2-0",
+          "unpacking": "Equilateral = 3 equal sides, Isosceles = 2 equal sides, Scalene = 0 equal sides (all different).",
+          "context": "Use to classify triangles by sides.",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_mn03",
+          "acronym": "Acute = ALL under 90",
+          "unpacking": "A triangle is acute only if ALL three angles are under 90°, not just one (every triangle has at least two acute angles).",
+          "context": "Use to classify triangles by angles.",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch07_ms01",
+          "kidsThink": "Any three lengths can form a triangle.",
+          "actually": "Only if the sum of every two exceeds the third (triangle inequality). 10, 15, 30 cannot, since 10+15 < 30.",
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        },
+        {
+          "id": "ch07_ms02",
+          "kidsThink": "An altitude is one of the sides of the triangle.",
+          "actually": "An altitude is the PERPENDICULAR from a vertex to the opposite side — usually not a side itself (except in a right triangle).",
+          "relatedConceptIds": [
+            "ch07_t03_c02"
+          ]
+        },
+        {
+          "id": "ch07_ms03",
+          "kidsThink": "A triangle is acute if it has an acute angle.",
+          "actually": "Every triangle has at least two acute angles. 'Acute' means ALL THREE angles are under 90°.",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_ms04",
+          "kidsThink": "A triangle can have two right angles.",
+          "actually": "Impossible — two 90° angles already total 180°, leaving nothing for the third. At most one angle can be 90° or more.",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_ms05",
+          "kidsThink": "Three points always make a triangle.",
+          "actually": "Three points that lie on one straight line (collinear) do NOT form a triangle — the sides flatten and enclose no area.",
+          "relatedConceptIds": [
+            "ch07_t01_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch07_re01",
+          "title": "Why bridges are full of triangles",
+          "body": "A triangle is the only polygon that can't flex: fix its three sides and the shape is locked. A four-sided frame can collapse into a slanted parallelogram, but a triangle holds firm. That's why bridges, cranes, electricity pylons and roof trusses are packed with triangles — the triangle inequality and rigidity together make them the strongest simple shape.",
+          "relatedConceptIds": [
+            "ch07_t01_c01"
+          ]
+        },
+        {
+          "id": "ch07_re02",
+          "title": "The two set-squares",
+          "body": "Every geometry box has two set-squares: a 45-45-90 (isosceles right triangle) and a 30-60-90 (scalene right triangle). They're shaped to give exactly those angles for drawing — a direct everyday use of triangle classification by both sides and angles.",
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_re03",
+          "title": "Shortest path is a straight line",
+          "body": "When you cut across a park instead of walking two sides of it, you're using the triangle inequality: the direct side is shorter than the detour through a corner. This same rule defines 'distance' in everything from maps to the abstract spaces used in artificial intelligence.",
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch07_qa01",
+          "question": "What are the vertices, sides and angles of triangle ∆ABC?",
+          "modelAnswer": "Vertices: the corner points A, B, C. Sides: the segments AB, BC, CA joining them. Angles: ∠A, ∠B, ∠C (i.e. ∠CAB, ∠ABC, ∠BCA) at the vertices.",
+          "textbookPage": 145,
+          "relatedConceptIds": [
+            "ch07_t01_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa02",
+          "question": "Does the set of lengths 10, 15, 30 satisfy the triangle inequality?",
+          "modelAnswer": "No. 10 + 15 = 25, which is less than 30, so the sum of the two shorter sides does not exceed the longest. The inequality fails and no triangle can be formed.",
+          "textbookPage": 148,
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa03",
+          "question": "State the triangle inequality and give one example that satisfies it and one that does not.",
+          "modelAnswer": "The sum of any two sides of a triangle must be greater than the third side. 3, 4, 5 satisfies it (3+4>5, etc.). 10, 15, 30 does not (10+15 < 30).",
+          "textbookPage": 148,
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa04",
+          "question": "Describe the construction of ∆ABC given AB = 4 cm, AC = 5 cm, BC = 6 cm.",
+          "modelAnswer": "Draw base AB = 4 cm. From A, draw an arc of radius 5 cm. From B, draw an arc of radius 6 cm intersecting the first. The intersection point is C (it is 5 cm from A and 6 cm from B). Join AC and BC.",
+          "textbookPage": 149,
+          "relatedConceptIds": [
+            "ch07_t03_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa05",
+          "question": "What is an altitude of a triangle?",
+          "modelAnswer": "An altitude is the perpendicular segment drawn from a vertex to the opposite side (or its extension). It is the triangle's height relative to that side, and there are three altitudes, one from each vertex.",
+          "textbookPage": 152,
+          "relatedConceptIds": [
+            "ch07_t03_c02"
+          ]
+        },
+        {
+          "id": "ch07_qa06",
+          "question": "Name the three types of triangle classified by sides, and by angles.",
+          "modelAnswer": "By sides: equilateral (all sides equal), isosceles (two equal), scalene (all different). By angles: acute (all angles < 90°), right (one 90° angle), obtuse (one angle > 90°).",
+          "textbookPage": 170,
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa07",
+          "question": "Why can an acute triangle not be defined as a triangle with one acute angle?",
+          "modelAnswer": "Because every triangle already has at least two acute angles (at most one angle can be 90° or more). So 'has one acute angle' is true of all triangles. An acute triangle is defined as having ALL three angles acute.",
+          "textbookPage": 171,
+          "relatedConceptIds": [
+            "ch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_qa08",
+          "question": "Two sides of a triangle are 8 cm and 5 cm. What are the possible lengths of the third side?",
+          "modelAnswer": "The third side must be greater than 8 − 5 = 3 cm and less than 8 + 5 = 13 cm. So 3 cm < third side < 13 cm.",
+          "textbookPage": 148,
+          "relatedConceptIds": [
+            "ch07_t02_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch07_mp01",
+          "emoji": "📐",
+          "title": "Triangle or Not? The Straw Test",
+          "needs": [
+            "Drinking straws or sticks",
+            "Scissors",
+            "A ruler"
+          ],
+          "steps": [
+            "Cut straws to these length-sets (in cm): {3,4,5}, {10,15,30}, {6,6,6}, {2,2,5}, {7,8,9}.",
+            "For each set, predict using the triangle inequality whether a triangle can be made (do the two shortest beat the longest?).",
+            "Now actually try to join each set end-to-end into a triangle.",
+            "Record which sets close into a triangle and which collapse flat or won't meet.",
+            "For the ones that work, classify each triangle by sides (equilateral / isosceles / scalene)."
+          ],
+          "expectedObservation": "The sets that satisfy the triangle inequality ({3,4,5}, {6,6,6}, {7,8,9}) close into triangles; {10,15,30} and {2,2,5} fail because the two short sides can't span the long one — matching your predictions exactly.",
+          "whyItWorks": "A triangle closes only when the two shorter sides, swung from the ends of the longest, can reach each other — which is precisely the triangle inequality. The straws make the abstract rule physical: too-short sides simply can't meet.",
+          "estimatedMinutes": 40,
+          "relatedConceptIds": [
+            "ch07_t02_c01",
+            "ch07_t04_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch07_t01_c01",
+            "label": "Triangle basics",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.15
+          },
+          {
+            "id": "ch07_t02_c01",
+            "label": "Triangle inequality",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.15
+          },
+          {
+            "id": "ch07_t03_c01",
+            "label": "Construct from sides",
+            "kind": "concept",
+            "x": 0.3,
+            "y": 0.45
+          },
+          {
+            "id": "ch07_t03_c02",
+            "label": "Altitudes",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.45
+          },
+          {
+            "id": "ch07_t04_c01",
+            "label": "Types of triangles",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.72
+          },
+          {
+            "id": "ch07_pivot_rigid",
+            "label": "Triangle rigidity",
+            "kind": "pivot",
+            "x": 0.8,
+            "y": 0.3
+          },
+          {
+            "id": "ch05:ch05_t02_c01",
+            "label": "Ch.5 Perpendicular",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.6
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch07_e01",
+            "from": "ch07_t01_c01",
+            "to": "ch07_t02_c01",
+            "label": "raises"
+          },
+          {
+            "id": "ch07_e02",
+            "from": "ch07_t02_c01",
+            "to": "ch07_t03_c01",
+            "label": "enables"
+          },
+          {
+            "id": "ch07_e03",
+            "from": "ch07_t03_c01",
+            "to": "ch07_t03_c02",
+            "label": "then build"
+          },
+          {
+            "id": "ch07_e04",
+            "from": "ch07_t01_c01",
+            "to": "ch07_t04_c01",
+            "label": "classified"
+          },
+          {
+            "id": "ch07_e05",
+            "from": "ch07_t01_c01",
+            "to": "ch07_pivot_rigid",
+            "label": "explains"
+          },
+          {
+            "id": "ch07_e06",
+            "from": "ch05:ch05_t02_c01",
+            "to": "ch07_t03_c02",
+            "label": "used for altitude"
+          }
+        ]
+      }
     }
   ]
 }
