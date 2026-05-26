@@ -77,7 +77,11 @@ struct DiscoverChapter5View: View {
             { AnyView(AntacidStomachScene(onComplete: { self.markComplete(15) })) },
             { AnyView(ToothDecayScene(onComplete: { self.markComplete(16) })) },
             { AnyView(StrongVsWeakAcidScene(onComplete: { self.markComplete(17) })) },
-            { AnyView(AcidRainQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
+            { AnyView(QuickCheckQuizScene(
+                title: "Acid Rain Quiz",
+                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                onComplete: { score in self.markComplete(18, score: score, max: 4) }
+            )) },
             { AnyView(Scene9_BossQuiz_Ch5(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }

@@ -228,6 +228,7 @@
 		1F13677268BFA69B26C94E2C /* MnemonicCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280A349A9F05F8A26D771D14 /* MnemonicCallout.swift */; };
 		0C38CAE0B73E5E47536DC57E /* ParticleEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E83FC5E5BF42D31B8747C3 /* ParticleEmitter.swift */; };
 		DC725065045A24E67B1342E7 /* ProcessTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E979760C3096BD962A01B955 /* ProcessTimeline.swift */; };
+		5F5CF0291BCC679335670605 /* QuickCheckQuizScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838A5A6D3039D45BB414ED3 /* QuickCheckQuizScene.swift */; };
 		524CE3310FE961E4720E579F /* RelatedConceptsCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709519430D93C2B1B53BF912 /* RelatedConceptsCallout.swift */; };
 		F6B9C2085C935808C13ABCB7 /* SoftShadowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F206790DC21AEDF5DAAAF /* SoftShadowCard.swift */; };
 		106A7124064AFF60BCC0E1FD /* TryAtHomeCallout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E637F0F42E18FF3748132494 /* TryAtHomeCallout.swift */; };
@@ -1650,6 +1651,7 @@
 		280A349A9F05F8A26D771D14 /* MnemonicCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MnemonicCallout.swift"; sourceTree = "<group>"; };
 		80E83FC5E5BF42D31B8747C3 /* ParticleEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParticleEmitter.swift"; sourceTree = "<group>"; };
 		E979760C3096BD962A01B955 /* ProcessTimeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProcessTimeline.swift"; sourceTree = "<group>"; };
+		7838A5A6D3039D45BB414ED3 /* QuickCheckQuizScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckQuizScene.swift"; sourceTree = "<group>"; };
 		709519430D93C2B1B53BF912 /* RelatedConceptsCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelatedConceptsCallout.swift"; sourceTree = "<group>"; };
 		305F206790DC21AEDF5DAAAF /* SoftShadowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SoftShadowCard.swift"; sourceTree = "<group>"; };
 		E637F0F42E18FF3748132494 /* TryAtHomeCallout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TryAtHomeCallout.swift"; sourceTree = "<group>"; };
@@ -3348,6 +3350,7 @@
 				280A349A9F05F8A26D771D14,
 				80E83FC5E5BF42D31B8747C3,
 				E979760C3096BD962A01B955,
+				7838A5A6D3039D45BB414ED3,
 				709519430D93C2B1B53BF912,
 				305F206790DC21AEDF5DAAAF,
 				E637F0F42E18FF3748132494,
@@ -4525,6 +4528,7 @@
 				1F13677268BFA69B26C94E2C /* MnemonicCallout.swift in Sources */,
 				0C38CAE0B73E5E47536DC57E /* ParticleEmitter.swift in Sources */,
 				DC725065045A24E67B1342E7 /* ProcessTimeline.swift in Sources */,
+				5F5CF0291BCC679335670605 /* QuickCheckQuizScene.swift in Sources */,
 				524CE3310FE961E4720E579F /* RelatedConceptsCallout.swift in Sources */,
 				F6B9C2085C935808C13ABCB7 /* SoftShadowCard.swift in Sources */,
 				106A7124064AFF60BCC0E1FD /* TryAtHomeCallout.swift in Sources */,

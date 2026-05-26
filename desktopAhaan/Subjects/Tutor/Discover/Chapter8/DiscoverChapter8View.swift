@@ -74,7 +74,11 @@ struct DiscoverChapter8View: View {
             { AnyView(CycloneNamesAtlasScene(onComplete: { self.markComplete(12) })) },
             { AnyView(WindCompassScene(onComplete: { self.markComplete(13) })) },
             { AnyView(PressureBeltScene(onComplete: { self.markComplete(14) })) },
-            { AnyView(CycloneSurvivalQuizScene(onComplete: { score in self.markComplete(15, score: score, max: 4) })) },
+            { AnyView(QuickCheckQuizScene(
+                title: "Cyclone Survival Quiz",
+                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                onComplete: { score in self.markComplete(15, score: score, max: 4) }
+            )) },
             { AnyView(TradeWindsMapScene(onComplete: { self.markComplete(16) })) },
             { AnyView(TropicalVsTemperateScene(onComplete: { self.markComplete(17) })) },
             { AnyView(DopplerRadarScene(onComplete: { self.markComplete(18) })) },
@@ -337,63 +341,6 @@ private struct PressureBeltScene: View {
     }
 }
 
-private struct CycloneSurvivalQuizScene: View {
-    let onComplete: (Int) -> Void
-    private struct Q: Identifiable {
-        let id: String; let prompt: String; let opts: [String]; let correct: Int
-    }
-    private let qs: [Q] = [
-        Q(id: "q1", prompt: "Heard a cyclone warning. First action?",
-          opts: ["Take photos of clouds", "Move to designated shelter", "Wait and watch"], correct: 1),
-        Q(id: "q2", prompt: "Storing emergency food + water for how many days?",
-          opts: ["12 hours", "1 day", "3+ days"], correct: 2),
-        Q(id: "q3", prompt: "During the cyclone, where is safest indoors?",
-          opts: ["Near windows", "Innermost room, away from glass", "On the roof"], correct: 1),
-        Q(id: "q4", prompt: "After the eye passes, what happens?",
-          opts: ["It's over", "Winds return from opposite direction — still danger", "Sunshine"], correct: 1)
-    ]
-    @State private var picks: [String: Int] = [:]
-    private var score: Int { qs.reduce(0) { $0 + ((picks[$1.id] == $1.correct) ? 1 : 0) } }
-    var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
-            Text("Cyclone Survival Quiz").font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            ForEach(qs) { q in qCard(q) }
-            if picks.count == qs.count {
-                Text("Score: \(score) / \(qs.count)").font(.headline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-            }
-            GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
-    }
-    @ViewBuilder
-    private func qCard(_ q: Q) -> some View {
-        let pick = picks[q.id]
-        VStack(alignment: .leading, spacing: 8) {
-            Text(q.prompt).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .fixedSize(horizontal: false, vertical: true)
-            ForEach(0..<q.opts.count, id: \.self) { i in
-                let isPicked = pick == i
-                let tint: Color = pick == nil
-                    ? Color.compatIndigo
-                    : (isPicked ? (i == q.correct ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.danger) : Color.gray)
-                Button {
-                    if picks[q.id] == nil { picks[q.id] = i }
-                } label: {
-                    Text(q.opts[i]).font(.caption.weight(.semibold))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
-                        .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
-                        .foregroundColor(tint)
-                }.buttonStyle(.plain).pointingCursor().disabled(pick != nil)
-            }
-        }
-        .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
-        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
-    }
-}
 
 private struct TradeWindsMapScene: View {
     let onComplete: () -> Void

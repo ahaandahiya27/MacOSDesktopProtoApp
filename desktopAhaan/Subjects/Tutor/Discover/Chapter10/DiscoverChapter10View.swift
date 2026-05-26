@@ -77,7 +77,11 @@ struct DiscoverChapter10View: View {
             { AnyView(AnimalRespirationAtlasScene(onComplete: { self.markComplete(15) })) },
             { AnyView(MountainSicknessScene(onComplete: { self.markComplete(16) })) },
             { AnyView(CPRLifesaverScene(onComplete: { self.markComplete(17) })) },
-            { AnyView(RespirationQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
+            { AnyView(QuickCheckQuizScene(
+                title: "Respiration Quiz",
+                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                onComplete: { score in self.markComplete(18, score: score, max: 4) }
+            )) },
             { AnyView(Scene9_BossQuiz_Ch10(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
@@ -456,60 +460,3 @@ private struct CPRLifesaverScene: View {
     }
 }
 
-private struct RespirationQuizScene: View {
-    let onComplete: (Int) -> Void
-    private struct Q: Identifiable {
-        let id: String; let prompt: String; let opts: [String]; let correct: Int
-    }
-    private let qs: [Q] = [
-        Q(id: "q1", prompt: "Which gas do we breathe IN, and which do we breathe OUT?",
-          opts: ["O₂ in, CO₂ out", "CO₂ in, O₂ out", "Both N₂"], correct: 0),
-        Q(id: "q2", prompt: "Where in your cells does respiration happen?",
-          opts: ["Nucleus", "Mitochondria", "Cell wall"], correct: 1),
-        Q(id: "q3", prompt: "Why do fish die out of water?",
-          opts: ["Too warm", "Gills can't extract O₂ from air", "Too bright"], correct: 1),
-        Q(id: "q4", prompt: "How many alveoli does an adult lung have?",
-          opts: ["~3,000", "~300 million", "~30 billion"], correct: 1)
-    ]
-    @State private var picks: [String: Int] = [:]
-    private var score: Int { qs.reduce(0) { $0 + ((picks[$1.id] == $1.correct) ? 1 : 0) } }
-    var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
-            Text("Respiration Quiz").font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            ForEach(qs) { q in qCard(q) }
-            if picks.count == qs.count {
-                Text("Score: \(score) / \(qs.count)").font(.headline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-            }
-            GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
-    }
-    @ViewBuilder
-    private func qCard(_ q: Q) -> some View {
-        let pick = picks[q.id]
-        VStack(alignment: .leading, spacing: 8) {
-            Text(q.prompt).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .fixedSize(horizontal: false, vertical: true)
-            ForEach(0..<q.opts.count, id: \.self) { i in
-                let isPicked = pick == i
-                let tint: Color = pick == nil
-                    ? Color.compatIndigo
-                    : (isPicked ? (i == q.correct ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.danger) : Color.gray)
-                Button {
-                    if picks[q.id] == nil { picks[q.id] = i }
-                } label: {
-                    Text(q.opts[i]).font(.caption.weight(.semibold))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
-                        .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
-                        .foregroundColor(tint)
-                }.buttonStyle(.plain).pointingCursor().disabled(pick != nil)
-            }
-        }
-        .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
-        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
-    }
-}

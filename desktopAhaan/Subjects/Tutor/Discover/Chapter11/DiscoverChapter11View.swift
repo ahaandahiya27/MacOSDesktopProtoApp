@@ -77,7 +77,11 @@ struct DiscoverChapter11View: View {
             { AnyView(RootHairSurfaceAreaScene(onComplete: { self.markComplete(15) })) },
             { AnyView(GuttationVsTranspirationScene(onComplete: { self.markComplete(16) })) },
             { AnyView(InsectOpenCirculationScene(onComplete: { self.markComplete(17) })) },
-            { AnyView(TransportationQuizScene(onComplete: { score in self.markComplete(18, score: score, max: 4) })) },
+            { AnyView(QuickCheckQuizScene(
+                title: "Transportation Quiz",
+                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                onComplete: { score in self.markComplete(18, score: score, max: 4) }
+            )) },
             { AnyView(Scene9_BossQuiz_Ch11(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }
         ]
     }
@@ -411,60 +415,3 @@ private struct InsectOpenCirculationScene: View {
     }
 }
 
-private struct TransportationQuizScene: View {
-    let onComplete: (Int) -> Void
-    private struct Q: Identifiable {
-        let id: String; let prompt: String; let opts: [String]; let correct: Int
-    }
-    private let qs: [Q] = [
-        Q(id: "q1", prompt: "What carries O₂-rich blood AWAY from the heart?",
-          opts: ["Veins", "Arteries", "Lymph"], correct: 1),
-        Q(id: "q2", prompt: "Where in a plant does sugar travel from leaves to roots?",
-          opts: ["Xylem", "Phloem", "Stomata"], correct: 1),
-        Q(id: "q3", prompt: "Universal blood donor type?",
-          opts: ["A", "AB", "O"], correct: 2),
-        Q(id: "q4", prompt: "Kidneys filter how much blood per day?",
-          opts: ["~5 L", "~180 L", "~1500 L"], correct: 1)
-    ]
-    @State private var picks: [String: Int] = [:]
-    private var score: Int { qs.reduce(0) { $0 + ((picks[$1.id] == $1.correct) ? 1 : 0) } }
-    var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
-            Text("Transportation Quiz").font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            ForEach(qs) { q in qCard(q) }
-            if picks.count == qs.count {
-                Text("Score: \(score) / \(qs.count)").font(.headline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-            }
-            GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
-    }
-    @ViewBuilder
-    private func qCard(_ q: Q) -> some View {
-        let pick = picks[q.id]
-        VStack(alignment: .leading, spacing: 8) {
-            Text(q.prompt).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .fixedSize(horizontal: false, vertical: true)
-            ForEach(0..<q.opts.count, id: \.self) { i in
-                let isPicked = pick == i
-                let tint: Color = pick == nil
-                    ? Color.compatIndigo
-                    : (isPicked ? (i == q.correct ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.danger) : Color.gray)
-                Button {
-                    if picks[q.id] == nil { picks[q.id] = i }
-                } label: {
-                    Text(q.opts[i]).font(.caption.weight(.semibold))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
-                        .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
-                        .foregroundColor(tint)
-                }.buttonStyle(.plain).pointingCursor().disabled(pick != nil)
-            }
-        }
-        .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
-        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
-    }
-}

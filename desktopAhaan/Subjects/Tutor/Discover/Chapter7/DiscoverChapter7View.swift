@@ -73,7 +73,11 @@ struct DiscoverChapter7View: View {
             { AnyView(PenguinPolarScene(onComplete: { self.markComplete(11) })) },
             { AnyView(MountainGoatToolkitScene(onComplete: { self.markComplete(12) })) },
             { AnyView(MonsoonMapScene(onComplete: { self.markComplete(13) })) },
-            { AnyView(WeatherSymbolsQuizScene(onComplete: { score in self.markComplete(14, score: score, max: 4) })) },
+            { AnyView(QuickCheckQuizScene(
+                title: "Weather Symbols Quiz",
+                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                onComplete: { score in self.markComplete(14, score: score, max: 4) }
+            )) },
             { AnyView(ClimateChangeStoryScene(onComplete: { self.markComplete(15) })) },
             { AnyView(IndianClimateZonesScene(onComplete: { self.markComplete(16) })) },
             { AnyView(AnimalHabitatMatcherScene(onComplete: { self.markComplete(17) })) },
@@ -282,63 +286,6 @@ private struct MonsoonMapScene: View {
     }
 }
 
-private struct WeatherSymbolsQuizScene: View {
-    let onComplete: (Int) -> Void
-    private struct Q: Identifiable {
-        let id: String; let prompt: String; let opts: [String]; let correct: Int
-    }
-    private let qs: [Q] = [
-        Q(id: "q1", prompt: "What does ☀️ mean on a forecast?",
-          opts: ["Sunny / clear", "Cloudy", "Foggy"], correct: 0),
-        Q(id: "q2", prompt: "What does 🌧 mean?",
-          opts: ["Snow", "Rain", "Drizzle only"], correct: 1),
-        Q(id: "q3", prompt: "What does ⛈ mean?",
-          opts: ["Heat wave", "Thunderstorm", "Wind"], correct: 1),
-        Q(id: "q4", prompt: "What does 🌫 mean?",
-          opts: ["Fog / mist", "Smoke", "Pollen"], correct: 0)
-    ]
-    @State private var picks: [String: Int] = [:]
-    private var score: Int { qs.reduce(0) { $0 + ((picks[$1.id] == $1.correct) ? 1 : 0) } }
-    var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
-            Text("Weather Symbols Quiz").font(.largeTitle.bold())
-                .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            ForEach(qs) { q in qCard(q) }
-            if picks.count == qs.count {
-                Text("Score: \(score) / \(qs.count)").font(.headline)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-            }
-            GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
-    }
-    @ViewBuilder
-    private func qCard(_ q: Q) -> some View {
-        let pick = picks[q.id]
-        VStack(alignment: .leading, spacing: 8) {
-            Text(q.prompt).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .fixedSize(horizontal: false, vertical: true)
-            ForEach(0..<q.opts.count, id: \.self) { i in
-                let isPicked = pick == i
-                let tint: Color = pick == nil
-                    ? Color.compatIndigo
-                    : (isPicked ? (i == q.correct ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.danger) : Color.gray)
-                Button {
-                    if picks[q.id] == nil { picks[q.id] = i }
-                } label: {
-                    Text(q.opts[i]).font(.caption.weight(.semibold))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
-                        .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
-                        .foregroundColor(tint)
-                }.buttonStyle(.plain).pointingCursor().disabled(pick != nil)
-            }
-        }
-        .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
-        .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
-    }
-}
 
 private struct ClimateChangeStoryScene: View {
     let onComplete: () -> Void
