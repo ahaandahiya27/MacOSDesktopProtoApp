@@ -4,6 +4,29 @@
 
 ## Audit reference: ISSUES_AUDIT.md @ 18cac57 (now superseded by 8cfb6e7)
 
+## Current state pointer (2026-05-26)
+
+This file is append-only and now exceeds 2800 lines. To find the
+latest work without scrolling, search for the most recent
+`## Session: 2026-05-26` heading — sessions are chronological,
+the last one is the current one. Block-by-block summaries appear
+under each session heading.
+
+Top-line state as of the latest commit:
+
+- 9 templated article surfaces × 19 chapters at 19/19 (171
+  articles total).
+- 14 ratchet/matrix test classes pinning UI + content invariants.
+- `lh005_withanimation_allowlist.txt` is empty (108 sites
+  migrated across two RM sweeps).
+- `lifetime_hazards_allowlist.txt` has 3 entries (all marked
+  false-positive value-type closures).
+- `file_size_allowlist.txt` has 5 entries (3 Discover dispatchers
+  split out across the 2026-05-26 consolidation pass; remaining
+  files need multi-section lifts).
+- ISSUE_CATEGORIES rows that flipped to ✅ this round: H5, O4
+  (Reduce-Motion finish).
+
 ## Iterations
 
 [2026-05-22 00:35] iter 1 · chore · `.gitignore`/pbxproj · untrack `.DS_Store` + xcuserstate · `995de21` · pushed:y
