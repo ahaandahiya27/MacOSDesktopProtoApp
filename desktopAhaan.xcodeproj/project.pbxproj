@@ -863,6 +863,7 @@
 		11874BB6A07334AC7EE65142 /* ch12_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = 96A29CA919632B2E420E4C14 /* ch12_t03_overview.html */; };
 		D8BE09F64F8FB91A8C42C22D /* ch12_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = BF759BB1B72E6C4A18E6BF60 /* ch12_whatif.html */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
+		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
 		9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 307FB7481238DF1F6D61235B /* sanskrit_class7.json */; };
 		4D5743C43A54C95790C93C5E /* science_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D4EA3E7B426792E40B381DA /* science_class7.json */; };
 		A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE2F98A2DF77A5876B26B1C /* Assets.xcassets */; };
@@ -1483,6 +1484,7 @@
 		379A428C6AF78EC774AF8D89 /* ArticleIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex.swift"; sourceTree = "<group>"; };
 		2E21C42F959052403DD42AA8 /* ArticleStructuredRenderer+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleStructuredRenderer+Render.swift"; sourceTree = "<group>"; };
 		CE3BF665B7FD5620FB8105EC /* ArticleStructuredRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleStructuredRenderer.swift"; sourceTree = "<group>"; };
+		4E448E6E8BEEB87620A8C798 /* maths_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "maths_class7.json"; sourceTree = "<group>"; };
 		307FB7481238DF1F6D61235B /* sanskrit_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sanskrit_class7.json"; sourceTree = "<group>"; };
 		8D4EA3E7B426792E40B381DA /* science_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "science_class7.json"; sourceTree = "<group>"; };
 		FEEBCF376934C802AAE157FF /* ExpandableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpandableCard.swift"; sourceTree = "<group>"; };
@@ -2772,6 +2774,7 @@
 		BDF68C17E597FE8960DE3182 /* Packs */ = {
 			isa = PBXGroup;
 			children = (
+				4E448E6E8BEEB87620A8C798,
 				307FB7481238DF1F6D61235B,
 				8D4EA3E7B426792E40B381DA,
 			);
@@ -4280,6 +4283,7 @@
 				11874BB6A07334AC7EE65142 /* ch12_t03_overview.html in Resources */,
 				D8BE09F64F8FB91A8C42C22D /* ch12_whatif.html in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
+				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
 				9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */,
 				4D5743C43A54C95790C93C5E /* science_class7.json in Resources */,
 				A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */,

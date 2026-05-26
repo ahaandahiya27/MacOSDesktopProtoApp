@@ -46,6 +46,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PACKS = [
     REPO_ROOT / "desktopAhaan/Subjects/Packs/science_class7.json",
     REPO_ROOT / "desktopAhaan/Subjects/Packs/sanskrit_class7.json",
+    REPO_ROOT / "desktopAhaan/Subjects/Packs/maths_class7.json",
 ]
 
 VALID_TYPES = {
