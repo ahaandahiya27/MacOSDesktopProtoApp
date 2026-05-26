@@ -74,7 +74,7 @@ struct Scene9_BossQuiz: View {
                                 label: opt,
                                 state: state(for: opt, in: item)
                             ) {
-                                pick(opt, in: item)
+                                Task { @MainActor in pick(opt, in: item) }
                             }
                         }
                     }

@@ -92,7 +92,7 @@ struct Scene9_BossQuiz_Ch7: View {
         VStack(spacing: 10) {
             ForEach(item.options ?? [], id: \.self) { opt in
                 Ch7AnswerButton(label: opt, state: state(for: opt, in: item)) {
-                    pick(opt, in: item)
+                    Task { @MainActor in pick(opt, in: item) }
                 }
             }
         }
