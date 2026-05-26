@@ -9442,6 +9442,821 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch08",
+      "number": 8,
+      "title": "Working with Fractions",
+      "summary": "Aaron's tortoise walks 1/4 km an hour — how far in 3 hours? This chapter handles multiplication and division of fractions. Multiplying a fraction by a whole number is repeated addition; multiplying a fraction by a fraction means taking a part 'of' a part (numerators times numerators, denominators times denominators); and dividing by a fraction means multiplying by its reciprocal — which is why dividing by a number less than 1 makes the answer bigger.",
+      "topics": [
+        {
+          "id": "ch08_t01",
+          "title": "Multiplying a Fraction by a Whole Number",
+          "summary": "3 × 1/4 is just 1/4 + 1/4 + 1/4 = 3/4 — repeated addition, exactly as with whole numbers. To multiply a whole number by a fraction, multiply the whole number by the numerator and keep the denominator.",
+          "concepts": [
+            {
+              "id": "ch08_t01_c01",
+              "title": "Multiplying a fraction by a whole number",
+              "explanations": {
+                "oneLine": "A whole number times a fraction is repeated addition: 3 × 1/4 = 1/4 + 1/4 + 1/4 = 3/4. Multiply the whole number by the numerator, keep the denominator.",
+                "kidFriendly": "Aaron's tortoise walks 1/4 km in one hour. How far in 3 hours? Just like 5 × 3 means 3+3+3+3+3, here 3 × 1/4 means 1/4 + 1/4 + 1/4 = 3/4 km. Multiplying a fraction by a whole number is repeated addition — nothing new! The shortcut: multiply the whole number by the numerator and leave the denominator alone. So 3 × 1/4 = 3/4; 7 × 3/5 = 21/5 (which is 4 1/5 as a mixed number). The denominator (the size of each piece) doesn't change — you're just counting more of the same-sized pieces.",
+                "textbook": "Multiplying a whole number by a fraction is repeated addition of the fraction: n × (a/b) = (a/b) + … (n times) = (n×a)/b. The whole number multiplies the numerator while the denominator is unchanged, since the piece size (1/b) stays fixed and only the count of pieces increases. The result may be converted to a mixed number when improper.",
+                "expert": "Scalar multiplication of a rational by a natural number is iterated addition in the additive group of ℚ: n·(a/b) = (na)/b. The denominator is invariant because it indexes the unit fraction 1/b being accumulated; only the multiplicity (numerator) scales. This is the b-fold-refined number line with step 1/b, traversed n×a steps."
+              },
+              "reasoning": "Each hour adds another 1/4 km. Three hours stacks three quarter-kilometres: 1/4 + 1/4 + 1/4. The pieces are all the same size (quarters), so you just count how many — three — giving 3/4. The denominator names the piece size and stays put.",
+              "useCases": [
+                {
+                  "title": "Tortoise distance",
+                  "description": "1/4 km per hour × 3 hours = 3/4 km.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Milk per day",
+                  "description": "1/2 glass a day × 7 days = 7/2 = 3½ glasses a week.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Recipe scaling",
+                  "description": "3/5 cup per batch × 4 batches = 12/5 = 2 2/5 cups.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "This 'multiply the numerator, keep the denominator' rule is the foundation for the harder fraction×fraction rule next. It also explains improper fractions naturally: 7 × 3/5 = 21/5 is more than a whole because you've stacked 21 fifths, and 5 fifths make 1.",
+              "mnemonic": "Whole × fraction: multiply the top, keep the bottom. It's just repeated addition.",
+              "predictQuestion": "Aaron's tortoise walks 1/4 km each hour. How far does it walk in 3 hours, and why doesn't the denominator change?",
+              "whyChain": [
+                "Multiplying by a whole number is repeated addition — that's true for fractions too. Three hours at 1/4 km each is 1/4 + 1/4 + 1/4, three quarter-kilometres stacked together.",
+                "All the pieces are the same size: quarters. Adding them just counts how many quarters you have — three — giving 3/4. The denominator (4) names the SIZE of each piece, and that size never changes; only the COUNT (the numerator) grows. So the rule is: multiply the whole number by the numerator, keep the denominator.",
+                "This naturally produces improper fractions when the count passes a whole: 7 × 3/5 = 21/5, because you've stacked 21 fifths and every 5 fifths make a whole (= 4 1/5). Understanding 'multiply the top, keep the bottom' as counting same-sized pieces is the launchpad for the trickier fraction-times-fraction rule that follows."
+              ],
+              "relatedConceptIds": [
+                "ch08_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t01_q01",
+                "ch08_t01_q02"
+              ],
+              "pageRefs": [
+                173,
+                174,
+                175
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch08_t01_q01",
+              "prompt": "Aaron's tortoise walks 1/4 km per hour. How far does it walk in 3 hours?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "3/4 km",
+              "solutionSteps": [
+                "3 × 1/4 = 1/4 + 1/4 + 1/4.",
+                "Multiply numerator by 3, keep denominator: (3×1)/4 = 3/4.",
+                "So 3/4 km."
+              ],
+              "commonMistakes": [
+                "Multiplying the denominator too: 3/12 (wrong — the piece size doesn't change).",
+                "Adding 3 + 1/4 instead of multiplying."
+              ],
+              "variations": [
+                {
+                  "prompt": "How far in 5 hours?",
+                  "answer": "5/4 km = 1 1/4 km",
+                  "solutionSteps": [
+                    "5 × 1/4 = 5/4 = 1¼."
+                  ]
+                },
+                {
+                  "prompt": "Tenzin drinks 1/2 glass of milk daily. How much in a week?",
+                  "answer": "7/2 = 3½ glasses",
+                  "solutionSteps": [
+                    "7 × 1/2 = 7/2."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                173,
+                174
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t01_q02",
+              "prompt": "Multiply 7 × 3/5 and write the answer as a mixed number.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "21/5 = 4 1/5",
+              "solutionSteps": [
+                "Multiply the whole number by the numerator: 7 × 3 = 21. Keep denominator 5 → 21/5.",
+                "Convert: 21 ÷ 5 = 4 remainder 1 → 4 1/5."
+              ],
+              "commonMistakes": [
+                "Multiplying 7 by both 3 and 5.",
+                "Forgetting to convert the improper fraction to a mixed number when asked."
+              ],
+              "variations": [
+                {
+                  "prompt": "Multiply 4 × 1/3.",
+                  "answer": "4/3 = 1 1/3",
+                  "solutionSteps": [
+                    "4 × 1 = 4 over 3 → 1⅓."
+                  ]
+                },
+                {
+                  "prompt": "Multiply 9 × 6/7.",
+                  "answer": "54/7 = 7 5/7",
+                  "solutionSteps": [
+                    "9 × 6 = 54 over 7."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                176
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch08_t02",
+          "title": "Multiplying a Fraction by a Fraction",
+          "summary": "Half OF a third is a sixth: 'of' means multiply. To multiply two fractions, multiply the numerators together and the denominators together: (a/b) × (c/d) = ac/bd. Multiplying by a fraction less than 1 makes things smaller — a part of a part.",
+          "concepts": [
+            {
+              "id": "ch08_t02_c01",
+              "title": "Fraction times fraction — 'of' means multiply",
+              "explanations": {
+                "oneLine": "To multiply two fractions, multiply the numerators and multiply the denominators: (a/b) × (c/d) = (a×c)/(b×d). The word 'of' means multiply: 1/2 of 1/3 = 1/6.",
+                "kidFriendly": "What is half OF a third? Take a chocolate bar, cut it into 3 equal parts (each 1/3), then halve one of those parts. That little piece is 1/6 of the whole bar. So 1/2 of 1/3 = 1/6 — and 'of' means multiply! The rule: multiply the tops, multiply the bottoms. (1/2) × (1/3) = (1×1)/(2×3) = 1/6. For (2/3) × (4/5) = (2×4)/(3×5) = 8/15. Notice: multiplying by a fraction LESS than 1 makes the result SMALLER — because you're taking only a PART of something.",
+                "textbook": "The product of two fractions is (a/b)×(c/d) = (a·c)/(b·d): numerators multiply to give the numerator, denominators multiply to give the denominator. The operator 'of' denotes multiplication (a fraction of a quantity). Multiplying by a proper fraction (value < 1) yields a result smaller than the multiplicand, since one takes a part of it.",
+                "expert": "Fraction multiplication is multiplication in the field ℚ: (a/b)(c/d) = ac/bd, well-defined on equivalence classes of integer pairs. Geometrically (a/b)×(c/d) is the area of an (a/b)×(c/d) sub-rectangle of the unit square, partitioned into b·d congruent cells of which a·c are shaded. Multiplication by a value in (0,1) is a contraction, explaining why the product shrinks."
+              },
+              "reasoning": "Taking a fraction OF something means cutting it down to a part. A third of the bar, then half of THAT, is a smaller piece still — one of six equal pieces of the whole. Counting the grid of pieces (b across, d down) gives b×d small cells, and you keep a×c of them.",
+              "useCases": [
+                {
+                  "title": "Half of a third of a cake",
+                  "description": "Cutting a third of a cake in half gives 1/6 of the whole cake.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Discount on a discount",
+                  "description": "3/4 of a 1/2-price item costs 3/8 of the original.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Area of a strip",
+                  "description": "A 2/3 m by 4/5 m mat has area 8/15 m².",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "The 'of means multiply' rule unlocks percentages (next chapter): '20% of 150' is just (20/100) × 150. It's also the reason multiplication doesn't always 'make bigger' — a fact that surprises many students. Multiplying by a fraction below 1 shrinks; only multiplying by something above 1 grows.",
+              "mnemonic": "'Of' = multiply. Tops × tops, bottoms × bottoms. A part of a part is smaller.",
+              "predictQuestion": "What is 1/2 of 1/3 — and does multiplying by 1/2 make the answer bigger or smaller?",
+              "whyChain": [
+                "The word 'of' in maths means multiply. '1/2 of 1/3' is (1/2) × (1/3). Picture a bar cut into three equal thirds, then one third cut in half — that sliver is one of six equal pieces of the whole bar, i.e. 1/6.",
+                "The rule that produces this: multiply the numerators (1×1 = 1) and multiply the denominators (2×3 = 6), giving 1/6. For any two fractions, (a/b) × (c/d) = (a×c)/(b×d). The grid picture explains why: splitting into b parts one way and d parts the other makes b×d little cells, and you keep a×c of them.",
+                "Crucially, the answer 1/6 is SMALLER than 1/3 — because taking 'half OF' something gives less than you started with. Multiplying by a fraction below 1 always shrinks. This overturns the early intuition that 'multiplying makes bigger', and it's exactly the mechanism behind percentages: '20% of 150' is just (20/100) × 150."
+              ],
+              "relatedConceptIds": [
+                "ch08_t01_c01",
+                "ch08_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t02_q01",
+                "ch08_t02_q02"
+              ],
+              "pageRefs": [
+                178,
+                179,
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch08_t02_q01",
+              "prompt": "Find 1/2 of 1/3.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "1/6",
+              "solutionSteps": [
+                "'of' means multiply: 1/2 × 1/3.",
+                "Multiply numerators: 1 × 1 = 1. Multiply denominators: 2 × 3 = 6.",
+                "= 1/6."
+              ],
+              "commonMistakes": [
+                "Adding the fractions instead of multiplying.",
+                "Multiplying tops and adding bottoms."
+              ],
+              "variations": [
+                {
+                  "prompt": "Find 2/3 × 4/5.",
+                  "answer": "8/15",
+                  "solutionSteps": [
+                    "(2×4)/(3×5) = 8/15."
+                  ]
+                },
+                {
+                  "prompt": "Find 3/4 of 1/2.",
+                  "answer": "3/8",
+                  "solutionSteps": [
+                    "3/4 × 1/2 = 3/8."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                178,
+                179
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q02",
+              "prompt": "A shop offers 3/4 of the price on an item already at 1/2 price. What fraction of the ORIGINAL price do you pay?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "3/8 of the original price.",
+              "solutionSteps": [
+                "Half price = 1/2 of original.",
+                "Then pay 3/4 of that: 3/4 × 1/2.",
+                "= (3×1)/(4×2) = 3/8 of the original."
+              ],
+              "commonMistakes": [
+                "Adding 3/4 + 1/2 instead of multiplying.",
+                "Thinking the answer is bigger than 1/2 (taking 3/4 OF it makes it smaller)."
+              ],
+              "variations": [
+                {
+                  "prompt": "2/3 of 3/5?",
+                  "answer": "2/5",
+                  "solutionSteps": [
+                    "(2×3)/(3×5) = 6/15 = 2/5."
+                  ]
+                },
+                {
+                  "prompt": "Is 1/2 × 1/2 bigger or smaller than 1/2?",
+                  "answer": "Smaller — it's 1/4.",
+                  "solutionSteps": [
+                    "Multiplying by a fraction < 1 shrinks the value."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                179,
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch08_t03",
+          "title": "Division of Fractions",
+          "summary": "Dividing means asking 'what times the divisor gives the dividend?'. For fractions, dividing by a/b is the same as multiplying by its reciprocal b/a. So 1 ÷ 2/3 = 1 × 3/2 = 3/2. Dividing by a number less than 1 gives a BIGGER answer.",
+          "concepts": [
+            {
+              "id": "ch08_t03_c01",
+              "title": "Dividing by a fraction — multiply by the reciprocal",
+              "explanations": {
+                "oneLine": "Dividing by a fraction means multiplying by its reciprocal (flip it): a ÷ (c/d) = a × (d/c). Dividing by a number less than 1 makes the answer larger.",
+                "kidFriendly": "12 ÷ 4 = 3 because 4 × 3 = 12. Division asks 'what times the divisor gives the dividend?'. Same for fractions. What is 1 ÷ 2/3? We need '2/3 × ? = 1'. The answer is 3/2, because (2/3) × (3/2) = 1 — the 2s and 3s cancel. So dividing by 2/3 is the same as MULTIPLYING by its reciprocal 3/2 (just flip the fraction). Rule: to divide by a fraction, flip it and multiply. And here's the surprise: 1 ÷ 2/3 = 3/2 is BIGGER than 1 — dividing by a number less than 1 grows the result, because you're asking 'how many two-thirds fit into 1?' and more than one does.",
+                "textbook": "Division by a fraction equals multiplication by its reciprocal: a ÷ (c/d) = a × (d/c). This follows because division is the inverse of multiplication: a ÷ (c/d) is the number that, multiplied by c/d, gives a, namely a·(d/c). The reciprocal of c/d is d/c (their product is 1). Dividing by a proper fraction (< 1) yields a quotient larger than the dividend.",
+                "expert": "In the field ℚ, division is multiplication by the multiplicative inverse: a/(c/d) = a·(c/d)⁻¹ = a·(d/c), where (c/d)⁻¹ = d/c since (c/d)(d/c) = 1. Division by an element of (0,1) is multiplication by its inverse in (1,∞), hence an expansion. The 'invert and multiply' rule is precisely the existence of multiplicative inverses for all nonzero rationals."
+              },
+              "reasoning": "Division undoes multiplication. 'a ÷ (c/d)' asks which number times c/d gives a. Since (c/d) × (d/c) = 1, multiplying a by the flipped fraction d/c lands you exactly there. And because fitting small pieces (less than 1) into a quantity takes many of them, the count comes out large.",
+              "useCases": [
+                {
+                  "title": "Sharing oil",
+                  "description": "5 litres shared so each gets 1/3 litre: 5 ÷ 1/3 = 15 portions.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Cutting ribbon",
+                  "description": "How many 1/4 m pieces from 2 m? 2 ÷ 1/4 = 8 pieces.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Cooking servings",
+                  "description": "3 cups of rice in 1/2-cup servings: 3 ÷ 1/2 = 6 servings.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "'Dividing makes smaller' is another early intuition this chapter overturns: 2 ÷ 1/4 = 8 is much bigger than 2, because you're counting how many quarter-pieces fit. Together with 'multiplying can make smaller', fractions force a more honest understanding of what multiplication and division really mean.",
+              "mnemonic": "To divide by a fraction, flip it and multiply. Dividing by < 1 makes BIGGER.",
+              "predictQuestion": "What is 1 ÷ 2/3, and why is the answer bigger than 1?",
+              "whyChain": [
+                "Division asks: what number times the divisor gives the dividend? '1 ÷ 2/3' asks '2/3 times what equals 1?'. The answer is 3/2, because (2/3) × (3/2) = 1 — the 2s and 3s cancel. So dividing by 2/3 is the same as multiplying by its flipped form, the reciprocal 3/2.",
+                "That's the general rule: to divide by a fraction, flip it (swap numerator and denominator) and multiply. It works because a fraction times its reciprocal is 1, so multiplying by the reciprocal exactly undoes the divisor — which is what division means.",
+                "The answer 3/2 is BIGGER than the 1 we started with, which feels strange until you read the division as 'how many two-thirds fit into 1?' — and one-and-a-half of them do. Dividing by any number less than 1 makes the result larger. This (with 'multiplying by a fraction shrinks') replaces the naive 'multiply-bigger, divide-smaller' rule with what those operations truly do."
+              ],
+              "relatedConceptIds": [
+                "ch08_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t03_q01",
+                "ch08_t03_q02"
+              ],
+              "pageRefs": [
+                186,
+                187
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch08_t03_q01",
+              "prompt": "Compute 1 ÷ 2/3 by multiplying by the reciprocal.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "3/2 (= 1 1/2)",
+              "solutionSteps": [
+                "Dividing by 2/3 = multiplying by its reciprocal 3/2.",
+                "1 × 3/2 = 3/2.",
+                "Check: 2/3 × 3/2 = 1. ✓"
+              ],
+              "commonMistakes": [
+                "Flipping the dividend instead of the divisor.",
+                "Multiplying by 2/3 instead of its reciprocal."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 3 ÷ 2/3.",
+                  "answer": "9/2 = 4 1/2",
+                  "solutionSteps": [
+                    "3 × 3/2 = 9/2."
+                  ]
+                },
+                {
+                  "prompt": "Compute 2 ÷ 1/4.",
+                  "answer": "8",
+                  "solutionSteps": [
+                    "2 × 4/1 = 8 (eight quarter-pieces fit in 2)."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                186,
+                187
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t03_q02",
+              "prompt": "How many 1/2-cup servings can be made from 3 cups of rice? Does the answer being bigger than 3 make sense?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "6 servings. Yes — dividing by a number less than 1 (1/2) gives a result bigger than the dividend, because many small servings fit into 3 cups.",
+              "solutionSteps": [
+                "3 ÷ 1/2 = 3 × 2/1 = 6.",
+                "Six half-cup servings fit into 3 cups.",
+                "Bigger than 3 makes sense: each serving is small, so there are more of them than there are whole cups."
+              ],
+              "commonMistakes": [
+                "Computing 3 × 1/2 = 1.5 (multiplying instead of dividing).",
+                "Expecting the answer to be smaller than 3."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many 1/4 m ribbons from 2 m?",
+                  "answer": "8",
+                  "solutionSteps": [
+                    "2 ÷ 1/4 = 2 × 4 = 8."
+                  ]
+                },
+                {
+                  "prompt": "How many 2/3 portions in 4?",
+                  "answer": "6",
+                  "solutionSteps": [
+                    "4 ÷ 2/3 = 4 × 3/2 = 6."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                187
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195
+      ],
+      "glossary": [
+        {
+          "id": "ch08_gl01",
+          "term": "Fraction",
+          "definition": "A number written a/b representing a parts out of b equal parts of a whole.",
+          "example": "3/4 is three quarters.",
+          "hindiTerm": "भिन्न",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl02",
+          "term": "Numerator",
+          "definition": "The top number of a fraction; how many parts are taken.",
+          "example": "In 3/4, the numerator is 3.",
+          "hindiTerm": "अंश",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl03",
+          "term": "Denominator",
+          "definition": "The bottom number of a fraction; how many equal parts the whole is divided into.",
+          "example": "In 3/4, the denominator is 4.",
+          "hindiTerm": "हर",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl04",
+          "term": "Of (as multiplication)",
+          "definition": "In fraction problems, 'of' means multiply.",
+          "example": "1/2 of 1/3 = 1/2 × 1/3 = 1/6.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl05",
+          "term": "Improper fraction",
+          "definition": "A fraction whose numerator is greater than or equal to its denominator.",
+          "example": "21/5 is improper (= 4 1/5).",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl06",
+          "term": "Mixed number",
+          "definition": "A whole number together with a proper fraction.",
+          "example": "4 1/5.",
+          "hindiTerm": "मिश्र संख्या",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl07",
+          "term": "Reciprocal",
+          "definition": "The fraction obtained by swapping numerator and denominator; a number times its reciprocal is 1.",
+          "example": "The reciprocal of 2/3 is 3/2.",
+          "hindiTerm": "व्युत्क्रम",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl08",
+          "term": "Dividend / Divisor / Quotient",
+          "definition": "In a ÷ b = c, a is the dividend, b the divisor, c the quotient.",
+          "example": "12 ÷ 4 = 3: dividend 12, divisor 4, quotient 3.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl09",
+          "term": "Proper fraction",
+          "definition": "A fraction less than 1 (numerator smaller than denominator).",
+          "example": "2/3 is a proper fraction.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_gl10",
+          "term": "Product of fractions",
+          "definition": "The result of multiplying fractions: tops multiply, bottoms multiply.",
+          "example": "2/3 × 4/5 = 8/15.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch08_mn01",
+          "acronym": "Top times whole, bottom stays",
+          "unpacking": "Whole × fraction: multiply the numerator by the whole number, keep the denominator (3 × 1/4 = 3/4).",
+          "context": "Use for whole-number times a fraction.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_mn02",
+          "acronym": "Of means times",
+          "unpacking": "In fraction problems, 'of' means multiply: tops × tops, bottoms × bottoms.",
+          "context": "Use for a fraction of a fraction (or of a quantity).",
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_mn03",
+          "acronym": "Flip and multiply",
+          "unpacking": "To divide by a fraction, flip it to its reciprocal and multiply: 1 ÷ 2/3 = 1 × 3/2.",
+          "context": "Use for dividing by a fraction.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch08_ms01",
+          "kidsThink": "To multiply a whole number by a fraction, multiply both the numerator and denominator.",
+          "actually": "Only multiply the numerator; keep the denominator. 3 × 1/4 = 3/4, not 3/12. The piece size doesn't change.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms02",
+          "kidsThink": "Multiplying always makes a number bigger.",
+          "actually": "Multiplying by a fraction LESS than 1 makes it smaller. 1/2 × 1/3 = 1/6, smaller than both.",
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms03",
+          "kidsThink": "Dividing always makes a number smaller.",
+          "actually": "Dividing by a number less than 1 makes it BIGGER. 2 ÷ 1/4 = 8, because eight quarter-pieces fit in 2.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms04",
+          "kidsThink": "To divide by a fraction, flip the first fraction (the dividend).",
+          "actually": "You flip the DIVISOR (the one you're dividing BY) and multiply: 1 ÷ 2/3 = 1 × 3/2.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_ms05",
+          "kidsThink": "'Half of a third' means 1/2 + 1/3.",
+          "actually": "'Of' means multiply: 1/2 of 1/3 = 1/2 × 1/3 = 1/6, not 1/2 + 1/3.",
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch08_re01",
+          "title": "Sharing oil among families",
+          "body": "Manju and two neighbours share 5 litres of oil equally among 3 families: each gets 5 ÷ 3 = 5/3 litres a week. Over 4 weeks one family gets 4 × 5/3 = 20/3 = 6 2/3 litres. Real sharing problems are fraction multiplication and division in disguise.",
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_re02",
+          "title": "Discount on a discount",
+          "body": "A jacket at half price, with a further 'pay 3/4' festive offer, costs 3/4 × 1/2 = 3/8 of the original. Shoppers who think the discounts 'add up' are surprised — fractions of fractions multiply, and the result is a smaller fraction of the original.",
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_re03",
+          "title": "How many servings?",
+          "body": "A cook with 3 cups of batter making 1/2-cup idlis gets 3 ÷ 1/2 = 6 idlis. Dividing by a small fraction gives a big count — the everyday meaning of 'how many small pieces fit'.",
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch08_qa01",
+          "question": "Aaron's tortoise walks 1/4 km in an hour. How far in 3 hours?",
+          "modelAnswer": "3 × 1/4 = 1/4 + 1/4 + 1/4 = 3/4 km. Multiply the whole number by the numerator and keep the denominator.",
+          "textbookPage": 173,
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa02",
+          "question": "Tenzin drinks 1/2 glass of milk every day. How many glasses in a week, and in the month of January (31 days)?",
+          "modelAnswer": "Week: 7 × 1/2 = 7/2 = 3 1/2 glasses. January: 31 × 1/2 = 31/2 = 15 1/2 glasses.",
+          "textbookPage": 175,
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa03",
+          "question": "Multiply 7 × 3/5 and convert to a mixed number.",
+          "modelAnswer": "7 × 3/5 = 21/5. As a mixed number, 21 ÷ 5 = 4 remainder 1, so 21/5 = 4 1/5.",
+          "textbookPage": 176,
+          "relatedConceptIds": [
+            "ch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa04",
+          "question": "What is 1/2 of 1/3?",
+          "modelAnswer": "'Of' means multiply: 1/2 × 1/3 = (1×1)/(2×3) = 1/6.",
+          "textbookPage": 178,
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa05",
+          "question": "Compute 2/3 × 4/5.",
+          "modelAnswer": "Multiply numerators and denominators: (2×4)/(3×5) = 8/15.",
+          "textbookPage": 179,
+          "relatedConceptIds": [
+            "ch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa06",
+          "question": "What is 1 ÷ 2/3? Restate it as a multiplication.",
+          "modelAnswer": "1 ÷ 2/3 asks '2/3 × ? = 1'. Since 2/3 × 3/2 = 1, the answer is 3/2. Dividing by a fraction means multiplying by its reciprocal.",
+          "textbookPage": 186,
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa07",
+          "question": "Manju shares 5 litres of oil equally among 3 families. How much per family in a week, and over 4 weeks?",
+          "modelAnswer": "Per week: 5 ÷ 3 = 5/3 litres. Over 4 weeks: 4 × 5/3 = 20/3 = 6 2/3 litres.",
+          "textbookPage": 175,
+          "relatedConceptIds": [
+            "ch08_t01_c01",
+            "ch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_qa08",
+          "question": "How many 1/2-cup servings are there in 3 cups?",
+          "modelAnswer": "3 ÷ 1/2 = 3 × 2 = 6 servings. Dividing by a fraction less than 1 gives a larger number.",
+          "textbookPage": 187,
+          "relatedConceptIds": [
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch08_mp01",
+          "emoji": "🍫",
+          "title": "Chocolate-Bar Fraction Lab",
+          "needs": [
+            "A bar of chocolate or a sheet of paper marked in a grid",
+            "A ruler"
+          ],
+          "steps": [
+            "Take one whole bar (or paper rectangle). Cut/mark it into 3 equal parts — each is 1/3.",
+            "Now halve ONE of those thirds. What fraction of the whole is that small piece? Confirm it is 1/6.",
+            "Write the multiplication: 1/2 of 1/3 = 1/2 × 1/3 = 1/6.",
+            "Now take a whole bar and see how many 1/4-pieces it gives: that's 1 ÷ 1/4 = 4.",
+            "Predict, then check: how many 1/2-pieces are in 3 bars? (3 ÷ 1/2 = 6.)"
+          ],
+          "expectedObservation": "Taking a part OF a part gives a smaller piece (multiplying by a fraction < 1 shrinks), while cutting a whole into small pieces gives MANY of them (dividing by a fraction < 1 grows the count).",
+          "whyItWorks": "Multiplying fractions partitions the whole into a grid of (bottom×bottom) pieces and keeps (top×top) of them — a part of a part. Dividing asks how many divisor-pieces fit into the dividend, so small pieces yield a large count. The chocolate makes both rules tangible.",
+          "estimatedMinutes": 35,
+          "relatedConceptIds": [
+            "ch08_t02_c01",
+            "ch08_t03_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch08_t01_c01",
+            "label": "Whole × fraction",
+            "kind": "concept",
+            "x": 0.2,
+            "y": 0.18
+          },
+          {
+            "id": "ch08_t02_c01",
+            "label": "Fraction × fraction ('of')",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.18
+          },
+          {
+            "id": "ch08_t03_c01",
+            "label": "Divide by reciprocal",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.5
+          },
+          {
+            "id": "ch08_pivot_meaning",
+            "label": "What ×/÷ really mean",
+            "kind": "pivot",
+            "x": 0.85,
+            "y": 0.34
+          },
+          {
+            "id": "ch08:ch08_t02_c01",
+            "label": "of → percentages (Ch.11)",
+            "kind": "pivot",
+            "x": 0.3,
+            "y": 0.78
+          },
+          {
+            "id": "ch03:ch03_t05_c01",
+            "label": "Ch.3 decimal ops",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.7
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch08_e01",
+            "from": "ch08_t01_c01",
+            "to": "ch08_t02_c01",
+            "label": "extends to"
+          },
+          {
+            "id": "ch08_e02",
+            "from": "ch08_t02_c01",
+            "to": "ch08_t03_c01",
+            "label": "inverse of"
+          },
+          {
+            "id": "ch08_e03",
+            "from": "ch08_t02_c01",
+            "to": "ch08_pivot_meaning",
+            "label": "× can shrink"
+          },
+          {
+            "id": "ch08_e04",
+            "from": "ch08_t03_c01",
+            "to": "ch08_pivot_meaning",
+            "label": "÷ can grow"
+          },
+          {
+            "id": "ch08_e05",
+            "from": "ch08_t02_c01",
+            "to": "ch08:ch08_t02_c01",
+            "label": "leads to"
+          },
+          {
+            "id": "ch08_e06",
+            "from": "ch03:ch03_t05_c01",
+            "to": "ch08_t01_c01",
+            "label": "parallels"
+          }
+        ]
+      }
     }
   ]
 }

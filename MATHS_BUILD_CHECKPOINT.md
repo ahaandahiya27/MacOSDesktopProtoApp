@@ -3,8 +3,8 @@
 **Last updated:** 2026-05-27 01:10 +05:30
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
-**Current phase:** Phase 2 — chapter content (Ch.1-7 done; Ch.8 next)
-**Current chapter under construction:** ch08 — Working with Fractions (gegp108.txt) — NOT STARTED
+**Current phase:** Phase 2 — chapter content (Ch.1-8 done; Ch.9 next)
+**Current chapter under construction:** ch09 — Geometric Twins / symmetry (gegp201.txt) — NOT STARTED
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -102,8 +102,8 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 7 concepts, 9 Q |
 | 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 5 concepts, 8 Q |
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
-| 8   | ⚪     | ⚪      | ⚪       | ⚪       | Working with Fractions — RESUME HERE, src gegp108.txt |
-| 9   | ⚪     | ⚪      | ⚪       | ⚪       | Geometric Twins — src gegp201.txt |
+| 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 3 concepts, 6 Q |
+| 9   | ⚪     | ⚪      | ⚪       | ⚪       | Geometric Twins (symmetry) — RESUME HERE, src gegp201.txt |
 | 10  | ⚪     | ⚪      | ⚪       | ⚪       | Operations with Integers — src gegp202.txt |
 | 11  | ⚪     | ⚪      | ⚪       | ⚪       | Finding Common Ground — src gegp203.txt |
 | 12  | ⚪     | ⚪      | ⚪       | ⚪       | Another Peek Beyond the Point — src gegp204.txt |
