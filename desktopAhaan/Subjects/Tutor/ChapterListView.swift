@@ -55,6 +55,11 @@ struct ChapterListView: View {
                     }
 
                     Section {
+                        StreakBadge()
+                    }
+                    .listRowBackground(Color.clear)
+
+                    Section {
                         DailyQuestionCard(pack: pack)
                     }
                     .listRowBackground(Color.clear)
