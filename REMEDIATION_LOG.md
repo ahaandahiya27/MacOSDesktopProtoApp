@@ -3177,3 +3177,51 @@ Lessons:
   coverColorHex), the quickcheck→scenecheck id format, the 11.5→11.0
   deployment target in the gate, and added a pgrep guard so the wrapper
   waits for any existing --dangerously-skip-permissions agent.
+
+## Session: 2026-05-27 (scene quick-check pedagogical enrichment)
+
+Sibling of the 2026-05-25 boss-quiz enrichment, scoped to the 68 scene
+quick-checks that the morning's migration moved into
+`chapters[].quickCheckQuestions`. The migration carried each Q's id,
+prompt, options, and answer but left `commonMistakes` and `solutionSteps`
+empty — so `QuestionDetailView.commonMistakesCard` rendered blank and the
+hint ladder (`Question.derivedHints` → `solutionSteps.prefix(2)`) had
+nothing to reveal when the kid landed on a missed quick-check.
+
+What landed:
+
+- **Authored content** for all 68 quick-checks (Ch.3-5, 7-19): 1
+  `solutionStep` (the WHY of the correct answer, ≥ 50 chars) + 2
+  `commonMistakes` (one per wrong option, quoting the option verbatim,
+  ≥ 30 chars each). 68 solutionSteps + 136 commonMistakes total.
+- **`scripts/enrich_quick_checks.py`** — one-shot authoring tool, per-Q
+  table hard-coded, dry-run by default, `--write`/`--force`, idempotent
+  (double `--write --force` is byte-identical), length floors enforced
+  before any write, logs pack-vs-table id mismatches. Historical artefact.
+- **`QuickCheckPedagogicalContentTests`** (3 cases) — floors the contract:
+  every quick-check ≥ 1 commonMistake, ≥ 1 solutionStep, no commonMistake
+  under 30 chars (placeholder catcher). Mirrors
+  `BossQuizMigrationRatchetTests.testEveryBossQuizHasCommonMistakes`.
+- **`StuckHereStripQuickCheckTests`** (1 case) — proves the D4 "Stuck
+  here?" strip surfaces a recently-missed quick-check end-to-end
+  (`chapter.allQuestionIds` ∩ `recentlyMissedQuestionIds()`). The
+  migration added quick-check ids to `allQuestionIds`; this verifies the
+  strip actually picks them up instead of inferring it.
+- **`RecentlyMissedQuickCheckTests`** strengthened — golden-path test now
+  also asserts the resolved Question carries non-empty commonMistakes.
+
+Gate: Debug build clean (0 source warnings), full test suite green
+including the 4 new cases, all hard lints + `check_pack_schema.py` clean
+(`check_callout_reading_level.py` advisory unchanged — flags only
+pre-existing LookingAheadCallout strings, 0 quick-check hits).
+
+Deferred (unchanged in POLISH_TODOS §3): Ch.3 `FabricCareSymbolsQuizScene`
+scene rewiring — its 4 quick-checks are now content-enriched, but the
+scene still renders from local literals because of the emoji-prefix
+column. Authoring is done; only the scene-consumption wiring remains.
+
+Concurrency note: the Maths third-subject session was committing to the
+same repo during this session. Its `generate_compat_pbxproj.py` run
+(commit `9cc4806`) baked references to this session's still-untracked test
+files into project.pbxproj; committing the test sources here resolves that
+dangling reference. The science pack was untouched by the Maths commits.
