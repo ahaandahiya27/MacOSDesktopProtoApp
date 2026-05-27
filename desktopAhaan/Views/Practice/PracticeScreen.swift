@@ -237,9 +237,23 @@ struct FlashcardView: View {
                     }
                 }
 
-                Text("Tap card to \(vm.showFlashcardAnswer ? "hide" : "reveal") answer")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                // A real Button (not just the card's tap gesture) so the
+                // answer can be revealed by keyboard (Tab + Space/Return) and
+                // VoiceOver. The card itself stays tappable for trackpad, and
+                // its nested "Listen" button is untouched (which is why the
+                // card can't itself be a Button).
+                Button {
+                    withAnimationRespectingReduceMotion(.spring()) {
+                        vm.showFlashcardAnswer.toggle()
+                    }
+                } label: {
+                    Text(vm.showFlashcardAnswer ? "Hide answer" : "Reveal answer")
+                        .font(.caption.weight(.semibold))
+                        .foregroundColor(Color.compatIndigo)
+                }
+                .buttonStyle(.plain)
+                .pointingCursor()
+                .accessibilityHint("Shows or hides the answer on the flashcard.")
 
                 HStack(spacing: 20) {
                     Button(action: { vm.previousFlashcard() }) {
