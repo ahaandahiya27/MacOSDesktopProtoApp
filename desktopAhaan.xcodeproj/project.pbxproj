@@ -637,10 +637,12 @@
 		1BD3F80A23B2071B09B29D20 /* mch05_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = 52F7E6182364DF2C465CCD6A /* mch05_mistakes.html */; };
 		F5748FC5DB0D5F8A19034492 /* mch05_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = 54B360A25A6B8C0D9DE2CAB3 /* mch05_ncert_qa.html */; };
 		133DBFB94ADCCB2A4ABA298F /* mch05_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 4406A2E6C2406E4D663A96D3 /* mch05_style.css */; };
+		EE134B9B029F439D6DED1A57 /* mch02_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = C47D9D00FC1D8FDAD1590C52 /* mch02_beyond.html */; };
 		E6ECCC828A0D5DD2DD240884 /* mch02_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 940CB8B5ABFF4BADD3334F3F /* mch02_glossary.html */; };
 		50BAE6671419874E18EA3F01 /* mch02_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = 3F4311159071C180207A7582 /* mch02_mistakes.html */; };
 		871F10DFFF2A4D871E077F99 /* mch02_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = E21667069960C84914423A06 /* mch02_ncert_qa.html */; };
 		4CA1A0BA9FB0C775D34BCD3A /* mch02_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 85A59D80938C86A32D0D743B /* mch02_style.css */; };
+		138D8BAB037BCA8756B30C37 /* mch03_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = C649329A40FCE759C5DC6655 /* mch03_beyond.html */; };
 		F1F7B651CA770D8EBB4DD37C /* mch03_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = E58F4B50DB2C8A56C0583F4C /* mch03_glossary.html */; };
 		55F802D7D36A721B01BEFB9F /* mch03_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = DBC5A69914C1DBCE0DDCE100 /* mch03_mistakes.html */; };
 		27125D05642BD4F47165DE69 /* mch03_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = DA50F23177FB8FC015963E10 /* mch03_ncert_qa.html */; };
@@ -709,6 +711,7 @@
 		4A5AC52B2D994A7618D730D6 /* ch16_t03_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 06E07C92501F1DFEEEB8B09F /* ch16_t03_c02.html */; };
 		B135238FC2AE3AF6F7B89E3B /* ch16_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = B76B1E1048E63D6608313422 /* ch16_t03_overview.html */; };
 		902C808EEE2E5F8BD4D75795 /* ch16_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 4014B39DB90DD6BCAB6EC753 /* ch16_whatif.html */; };
+		EA6E488DA6A4A5DFB1D68407 /* mch10_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F2FA7C4435E3082E32278C9 /* mch10_beyond.html */; };
 		487EBE806095F54395898EFA /* mch10_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = F6CEC4D1D0CDCEE673FFF9DD /* mch10_glossary.html */; };
 		9F8619AD5016EAAB3F120AF7 /* mch10_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = B5161FB29922345CF2CBDF24 /* mch10_mistakes.html */; };
 		9F6FA252CAA03C002F9EF3AD /* mch10_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A14A934E0819ADF6DF978C2 /* mch10_ncert_qa.html */; };
@@ -1279,10 +1282,12 @@
 		52F7E6182364DF2C465CCD6A /* mch05_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch05_mistakes.html"; sourceTree = "<group>"; };
 		54B360A25A6B8C0D9DE2CAB3 /* mch05_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch05_ncert_qa.html"; sourceTree = "<group>"; };
 		4406A2E6C2406E4D663A96D3 /* mch05_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "mch05_style.css"; sourceTree = "<group>"; };
+		C47D9D00FC1D8FDAD1590C52 /* mch02_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch02_beyond.html"; sourceTree = "<group>"; };
 		940CB8B5ABFF4BADD3334F3F /* mch02_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch02_glossary.html"; sourceTree = "<group>"; };
 		3F4311159071C180207A7582 /* mch02_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch02_mistakes.html"; sourceTree = "<group>"; };
 		E21667069960C84914423A06 /* mch02_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch02_ncert_qa.html"; sourceTree = "<group>"; };
 		85A59D80938C86A32D0D743B /* mch02_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "mch02_style.css"; sourceTree = "<group>"; };
+		C649329A40FCE759C5DC6655 /* mch03_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch03_beyond.html"; sourceTree = "<group>"; };
 		E58F4B50DB2C8A56C0583F4C /* mch03_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch03_glossary.html"; sourceTree = "<group>"; };
 		DBC5A69914C1DBCE0DDCE100 /* mch03_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch03_mistakes.html"; sourceTree = "<group>"; };
 		DA50F23177FB8FC015963E10 /* mch03_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch03_ncert_qa.html"; sourceTree = "<group>"; };
@@ -1351,6 +1356,7 @@
 		06E07C92501F1DFEEEB8B09F /* ch16_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch16_t03_c02.html"; sourceTree = "<group>"; };
 		B76B1E1048E63D6608313422 /* ch16_t03_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch16_t03_overview.html"; sourceTree = "<group>"; };
 		4014B39DB90DD6BCAB6EC753 /* ch16_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch16_whatif.html"; sourceTree = "<group>"; };
+		5F2FA7C4435E3082E32278C9 /* mch10_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_beyond.html"; sourceTree = "<group>"; };
 		F6CEC4D1D0CDCEE673FFF9DD /* mch10_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_glossary.html"; sourceTree = "<group>"; };
 		B5161FB29922345CF2CBDF24 /* mch10_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_mistakes.html"; sourceTree = "<group>"; };
 		0A14A934E0819ADF6DF978C2 /* mch10_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_ncert_qa.html"; sourceTree = "<group>"; };
@@ -2833,6 +2839,7 @@
 		57C6028568C35FF389129B3B /* MathsChapter10 */ = {
 			isa = PBXGroup;
 			children = (
+				5F2FA7C4435E3082E32278C9,
 				F6CEC4D1D0CDCEE673FFF9DD,
 				B5161FB29922345CF2CBDF24,
 				0A14A934E0819ADF6DF978C2,
@@ -2899,6 +2906,7 @@
 		B3E1929A78A222125C878AA7 /* MathsChapter2 */ = {
 			isa = PBXGroup;
 			children = (
+				C47D9D00FC1D8FDAD1590C52,
 				940CB8B5ABFF4BADD3334F3F,
 				3F4311159071C180207A7582,
 				E21667069960C84914423A06,
@@ -2910,6 +2918,7 @@
 		F08A2BA2AE677A951B0CD921 /* MathsChapter3 */ = {
 			isa = PBXGroup;
 			children = (
+				C649329A40FCE759C5DC6655,
 				E58F4B50DB2C8A56C0583F4C,
 				DBC5A69914C1DBCE0DDCE100,
 				DA50F23177FB8FC015963E10,
@@ -4421,10 +4430,12 @@
 				1BD3F80A23B2071B09B29D20 /* mch05_mistakes.html in Resources */,
 				F5748FC5DB0D5F8A19034492 /* mch05_ncert_qa.html in Resources */,
 				133DBFB94ADCCB2A4ABA298F /* mch05_style.css in Resources */,
+				EE134B9B029F439D6DED1A57 /* mch02_beyond.html in Resources */,
 				E6ECCC828A0D5DD2DD240884 /* mch02_glossary.html in Resources */,
 				50BAE6671419874E18EA3F01 /* mch02_mistakes.html in Resources */,
 				871F10DFFF2A4D871E077F99 /* mch02_ncert_qa.html in Resources */,
 				4CA1A0BA9FB0C775D34BCD3A /* mch02_style.css in Resources */,
+				138D8BAB037BCA8756B30C37 /* mch03_beyond.html in Resources */,
 				F1F7B651CA770D8EBB4DD37C /* mch03_glossary.html in Resources */,
 				55F802D7D36A721B01BEFB9F /* mch03_mistakes.html in Resources */,
 				27125D05642BD4F47165DE69 /* mch03_ncert_qa.html in Resources */,
@@ -4493,6 +4504,7 @@
 				4A5AC52B2D994A7618D730D6 /* ch16_t03_c02.html in Resources */,
 				B135238FC2AE3AF6F7B89E3B /* ch16_t03_overview.html in Resources */,
 				902C808EEE2E5F8BD4D75795 /* ch16_whatif.html in Resources */,
+				EA6E488DA6A4A5DFB1D68407 /* mch10_beyond.html in Resources */,
 				487EBE806095F54395898EFA /* mch10_glossary.html in Resources */,
 				9F8619AD5016EAAB3F120AF7 /* mch10_mistakes.html in Resources */,
 				9F6FA252CAA03C002F9EF3AD /* mch10_ncert_qa.html in Resources */,
