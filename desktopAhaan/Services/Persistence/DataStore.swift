@@ -243,6 +243,13 @@ final class DataStore: ObservableObject {
     /// `saveCoalesced` since mid-typing fires every keystroke.
     @Published var chapterNotes: [String: String] = [:]
 
+    /// Per-chapter last-edited timestamp, parallel to `chapterNotes`. Lets the
+    /// NotebookCard show a "Last edited N days ago" recency cue. Sourced from
+    /// the persisted `ChapterNote.updatedAt` on load and refreshed only for the
+    /// edited chapter on save (so editing one note no longer resets every
+    /// note's timestamp).
+    @Published var chapterNoteEditedAt: [String: Date] = [:]
+
     /// Article IDs the kid has marked as "read" — surfaces a small
     /// checkmark badge on `ExtraReadingRow` chips and the primary
     /// `ArticleEntryButton`. User-driven (a button in `ArticleBrowserView`'s
@@ -678,11 +685,17 @@ final class DataStore: ObservableObject {
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
         if trimmed.isEmpty {
             chapterNotes.removeValue(forKey: chapterId)
+            chapterNoteEditedAt.removeValue(forKey: chapterId)
         } else {
             chapterNotes[chapterId] = text
+            chapterNoteEditedAt[chapterId] = Date()
         }
+        // Preserve each note's OWN last-edited time (only the edited chapter's
+        // was just bumped above) — the previous code stamped every row with a
+        // fresh Date() on every keystroke, resetting unrelated notes' times.
         let rows = chapterNotes.map {
-            ChapterNote(chapterId: $0.key, text: $0.value, updatedAt: Date())
+            ChapterNote(chapterId: $0.key, text: $0.value,
+                        updatedAt: chapterNoteEditedAt[$0.key] ?? Date())
         }
         saveCoalesced(rows, to: "notes.json")
     }

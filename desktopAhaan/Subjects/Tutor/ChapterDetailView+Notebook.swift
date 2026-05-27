@@ -11,8 +11,24 @@ import SwiftUI
 
 struct NotebookCard: View {
     let hasNotes: Bool
+    /// When the chapter's note was last edited — drives the recency badge.
+    var lastEdited: Date? = nil
     let onTap: () -> Void
     @State private var isHovered = false
+
+    /// "Last edited N days ago" when a note exists with a known timestamp,
+    /// else the existing prompt copy. RelativeDateTimeFormatter is macOS
+    /// 10.15+ (Big Sur safe).
+    private var subtitleText: String {
+        if hasNotes, let edited = lastEdited {
+            let fmt = RelativeDateTimeFormatter()
+            fmt.unitsStyle = .full
+            return "Last edited " + fmt.localizedString(for: edited, relativeTo: Date())
+        }
+        return hasNotes
+            ? "Pick up where you left off"
+            : "Jot down questions, sketches in words, or aha moments"
+    }
 
     var body: some View {
         Button(action: onTap) {
@@ -23,7 +39,7 @@ struct NotebookCard: View {
                     Text("My Notebook")
                         .font(.headline)
                         .foregroundColor(.white)
-                    Text(hasNotes ? "Pick up where you left off" : "Jot down questions, sketches in words, or aha moments")
+                    Text(subtitleText)
                         .font(.caption)
                         .foregroundColor(.white.opacity(0.92))
                         .lineLimit(2)

@@ -81,6 +81,10 @@ extension DataStore {
                 return a
             }
         )
+        let notesEditedAt = Dictionary(
+            notes.items.map { ($0.chapterId, $0.updatedAt) },
+            uniquingKeysWith: { a, _ in a }
+        )
 
         let anyRescue = translations.didRescueCorruptFile || practice.didRescueCorruptFile
             || bookmarks.didRescueCorruptFile || qBookmarks.didRescueCorruptFile
@@ -102,6 +106,7 @@ extension DataStore {
             store.toughQuestionIds = Set(tough.items)
             store.questionReviews = reviewsDict
             store.chapterNotes = notesDict
+            store.chapterNoteEditedAt = notesEditedAt
             store.readArticleIds = Set(readArticles.items)
             store.understoodConceptIds = Set(understood.items)
             if anyRescue {

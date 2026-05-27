@@ -271,7 +271,8 @@ struct ChapterDetailView: View {
                         }
                     }
                     NotebookCard(
-                        hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true)
+                        hasNotes: !(dataStore.chapterNotes[chapter.id]?.isEmpty ?? true),
+                        lastEdited: dataStore.chapterNoteEditedAt[chapter.id]
                     ) {
                         DispatchQueue.main.async { sheetCoordinator.presented = .notebook }
                     }
