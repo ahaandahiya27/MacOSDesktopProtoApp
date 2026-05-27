@@ -108,6 +108,7 @@
 		0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */; };
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
 		D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */; };
+		636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
@@ -960,6 +961,7 @@
 		6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */; };
 		C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */; };
 		F3FE58600BFE6584F9DCD654 /* MathsChapterContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C7A565D28F9C9208D5B3B /* MathsChapterContentTests.swift */; };
+		EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */; };
 		66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
@@ -1664,6 +1666,7 @@
 		5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenesC.swift"; sourceTree = "<group>"; };
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
 		D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath10View.swift"; sourceTree = "<group>"; };
+		9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath1View.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
@@ -1975,6 +1978,7 @@
 		751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryLevelTests.swift"; sourceTree = "<group>"; };
 		AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterySummaryTests.swift"; sourceTree = "<group>"; };
 		861C7A565D28F9C9208D5B3B /* MathsChapterContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsChapterContentTests.swift"; sourceTree = "<group>"; };
+		9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
@@ -3183,6 +3187,7 @@
 				5B6231A6A482DE634DDD57EA,
 				2053E9FDDD0F4B95051B4417,
 				D189C00586C239E2BB42ACDB,
+				9D0958A2CA52EBA00D1A7E54,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
@@ -3970,6 +3975,7 @@
 				751F0165CD3FAFE33996869B,
 				AA6ED7B9AC11073DDDBC610E,
 				861C7A565D28F9C9208D5B3B,
+				9E02387D41DE96B17A2C1779,
 				55AB731CAC2EE3D7C53517B9,
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
@@ -4805,6 +4811,7 @@
 				0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
 				D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */,
+				636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,
@@ -5122,6 +5129,7 @@
 				6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */,
 				C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */,
 				F3FE58600BFE6584F9DCD654 /* MathsChapterContentTests.swift in Sources */,
+				EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */,
 				66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,
