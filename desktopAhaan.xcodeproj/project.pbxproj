@@ -109,6 +109,7 @@
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
 		D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */; };
 		636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */; };
+		A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
@@ -1667,6 +1668,7 @@
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
 		D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath10View.swift"; sourceTree = "<group>"; };
 		9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath1View.swift"; sourceTree = "<group>"; };
+		28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath8View.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
@@ -3188,6 +3190,7 @@
 				2053E9FDDD0F4B95051B4417,
 				D189C00586C239E2BB42ACDB,
 				9D0958A2CA52EBA00D1A7E54,
+				28E0FABBE207C13F43D6D255,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
@@ -4812,6 +4815,7 @@
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
 				D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */,
 				636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */,
+				A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,

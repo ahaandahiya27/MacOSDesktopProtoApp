@@ -47,7 +47,7 @@ enum DiscoverMode {
     }
 
     /// Maths chapters with hand-built Discover experiences (pilot).
-    static let mathsSupportedChapterIds: Set<String> = ["ch01", "ch10"]
+    static let mathsSupportedChapterIds: Set<String> = ["ch01", "ch08", "ch10"]
 
     /// Pack id every Discover experience belongs to today. Hardcoded because
     /// Discover Mode is Science-only for now.
@@ -102,6 +102,8 @@ enum DiscoverMode {
             switch chapter.id {
             case "ch01":
                 DiscoverChapterMath1View(pack: pack, chapter: chapter)
+            case "ch08":
+                DiscoverChapterMath8View(pack: pack, chapter: chapter)
             case "ch10":
                 DiscoverChapterMath10View(pack: pack, chapter: chapter)
             default:

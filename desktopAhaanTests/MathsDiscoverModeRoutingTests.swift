@@ -14,13 +14,13 @@ import XCTest
 @MainActor
 final class MathsDiscoverModeRoutingTests: XCTestCase {
 
-    func testMathsCh1AndCh10HaveDiscover() throws {
+    func testMathsDiscoverChaptersHaveExperience() throws {
         let maths = try loadPack("maths_class7")
-        XCTAssertTrue(DiscoverMode.hasExperience(for: maths, chapter: chapter(maths, "ch01")),
-            "Maths Ch.1 should now have a Discover experience.")
-        XCTAssertTrue(DiscoverMode.hasExperience(for: maths, chapter: chapter(maths, "ch10")),
-            "Maths Ch.10 (pilot) should still have a Discover experience.")
-        XCTAssertTrue(DiscoverMode.mathsSupportedChapterIds.contains("ch01"))
+        for id in ["ch01", "ch08", "ch10"] {
+            XCTAssertTrue(DiscoverMode.hasExperience(for: maths, chapter: chapter(maths, id)),
+                "Maths \(id) should have a Discover experience.")
+            XCTAssertTrue(DiscoverMode.mathsSupportedChapterIds.contains(id))
+        }
     }
 
     /// Subject gate: a chapter id that has Discover in SCIENCE must NOT light up
