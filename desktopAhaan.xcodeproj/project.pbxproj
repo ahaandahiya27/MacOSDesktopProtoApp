@@ -59,6 +59,11 @@
 		67481F45A79A8288A106AFDD /* ArticleBrowserView+PlainTextFallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A7BC69C9292CD2DBF1CB9 /* ArticleBrowserView+PlainTextFallback.swift */; };
 		8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD8EF41DB6ABC6718947F5 /* ArticleBrowserView.swift */; };
 		F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC01B7346C3FE70B57E15F /* ArticleEntryButton.swift */; };
+		8F85FD80EEAD3A43DA5F46C7 /* ArticleIndex+MathsEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF114FE32F21BC5BA5EADC1 /* ArticleIndex+MathsEntries.swift */; };
+		3EC9DC1AC7685F3C45471C5D /* ArticleIndex+ScienceEntries1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4158426550D53A08CB57EA /* ArticleIndex+ScienceEntries1.swift */; };
+		4E5A816222DAA1C9157D4079 /* ArticleIndex+ScienceEntries2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AA33C9A685D8FCB784A7 /* ArticleIndex+ScienceEntries2.swift */; };
+		7706AA5A667CCDDAFE86E527 /* ArticleIndex+ScienceEntries3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F16E6CFF71A62AF0DB65F6 /* ArticleIndex+ScienceEntries3.swift */; };
+		D0AB42D7B8DAEEE467BAD8E8 /* ArticleIndex+ScienceEntries4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8A8C2C254EA71B9C3723E /* ArticleIndex+ScienceEntries4.swift */; };
 		D44E3B389CACA7470A4DC680 /* ArticleIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A428C6AF78EC774AF8D89 /* ArticleIndex.swift */; };
 		82A95A52977BABEC41D6ADFA /* ArticleStructuredRenderer+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21C42F959052403DD42AA8 /* ArticleStructuredRenderer+Render.swift */; };
 		2D63024FA82224304BC49AF6 /* ArticleStructuredRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BF665B7FD5620FB8105EC /* ArticleStructuredRenderer.swift */; };
@@ -1808,6 +1813,11 @@
 		3A4A7BC69C9292CD2DBF1CB9 /* ArticleBrowserView+PlainTextFallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleBrowserView+PlainTextFallback.swift"; sourceTree = "<group>"; };
 		5DAD8EF41DB6ABC6718947F5 /* ArticleBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleBrowserView.swift"; sourceTree = "<group>"; };
 		4FFC01B7346C3FE70B57E15F /* ArticleEntryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleEntryButton.swift"; sourceTree = "<group>"; };
+		FFF114FE32F21BC5BA5EADC1 /* ArticleIndex+MathsEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+MathsEntries.swift"; sourceTree = "<group>"; };
+		8F4158426550D53A08CB57EA /* ArticleIndex+ScienceEntries1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries1.swift"; sourceTree = "<group>"; };
+		2BB1AA33C9A685D8FCB784A7 /* ArticleIndex+ScienceEntries2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries2.swift"; sourceTree = "<group>"; };
+		A6F16E6CFF71A62AF0DB65F6 /* ArticleIndex+ScienceEntries3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries3.swift"; sourceTree = "<group>"; };
+		B8F8A8C2C254EA71B9C3723E /* ArticleIndex+ScienceEntries4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries4.swift"; sourceTree = "<group>"; };
 		379A428C6AF78EC774AF8D89 /* ArticleIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex.swift"; sourceTree = "<group>"; };
 		2E21C42F959052403DD42AA8 /* ArticleStructuredRenderer+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleStructuredRenderer+Render.swift"; sourceTree = "<group>"; };
 		CE3BF665B7FD5620FB8105EC /* ArticleStructuredRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleStructuredRenderer.swift"; sourceTree = "<group>"; };
@@ -3337,6 +3347,11 @@
 				3A4A7BC69C9292CD2DBF1CB9,
 				5DAD8EF41DB6ABC6718947F5,
 				4FFC01B7346C3FE70B57E15F,
+				FFF114FE32F21BC5BA5EADC1,
+				8F4158426550D53A08CB57EA,
+				2BB1AA33C9A685D8FCB784A7,
+				A6F16E6CFF71A62AF0DB65F6,
+				B8F8A8C2C254EA71B9C3723E,
 				379A428C6AF78EC774AF8D89,
 				2E21C42F959052403DD42AA8,
 				CE3BF665B7FD5620FB8105EC,
@@ -5164,6 +5179,11 @@
 				67481F45A79A8288A106AFDD /* ArticleBrowserView+PlainTextFallback.swift in Sources */,
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
 				F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */,
+				8F85FD80EEAD3A43DA5F46C7 /* ArticleIndex+MathsEntries.swift in Sources */,
+				3EC9DC1AC7685F3C45471C5D /* ArticleIndex+ScienceEntries1.swift in Sources */,
+				4E5A816222DAA1C9157D4079 /* ArticleIndex+ScienceEntries2.swift in Sources */,
+				7706AA5A667CCDDAFE86E527 /* ArticleIndex+ScienceEntries3.swift in Sources */,
+				D0AB42D7B8DAEEE467BAD8E8 /* ArticleIndex+ScienceEntries4.swift in Sources */,
 				D44E3B389CACA7470A4DC680 /* ArticleIndex.swift in Sources */,
 				82A95A52977BABEC41D6ADFA /* ArticleStructuredRenderer+Render.swift in Sources */,
 				2D63024FA82224304BC49AF6 /* ArticleStructuredRenderer.swift in Sources */,

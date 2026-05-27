@@ -19,9 +19,10 @@
 #  / +InlineScenesB / +InlineScenesC on 2026-05-27 — all now < 600 LOC, so it
 #  no longer needs an allowlist entry.)
 
-# Content registry file — articles indexed by chapter, splittable by
-# chapter but a refactor target rather than a hard gate.
-desktopAhaan/Subjects/Articles/ArticleIndex.swift: Article registry across 19 chapters; planned split by chapter when content stabilises.
+# ArticleIndex.swift removed from allowlist 2026-05-28 — the planned
+# split landed: entries are now per-domain partials (ArticleIndex+ScienceEntries{1..4},
+# ArticleIndex+MathsEntries), each under the 600-LOC ceiling, merged in the
+# 68-LOC core file. No allowlist entry needed.
 
 # ChapterDetailView removed from allowlist 2026-05-24 — the
 # PilotInteractiveSheetCoordinator refactor finally extracted
