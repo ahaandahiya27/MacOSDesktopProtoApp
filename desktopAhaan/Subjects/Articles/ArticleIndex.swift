@@ -1685,6 +1685,7 @@ enum ArticleIndex {
         "mch01_mistakes": ArticleEntry(id: "mch01_mistakes", filename: "mch01_mistakes.html", title: "Common Mistakes — Large Numbers Around Us", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 5),
         "mch01_glossary": ArticleEntry(id: "mch01_glossary", filename: "mch01_glossary.html", title: "Vocabulary Deck — Large Numbers Around Us", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 4),
         "mch01_ncert_qa": ArticleEntry(id: "mch01_ncert_qa", filename: "mch01_ncert_qa.html", title: "NCERT Q&A — Large Numbers Around Us", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 6),
+        "mch01_beyond": ArticleEntry(id: "mch01_beyond", filename: "mch01_beyond.html", title: "Beyond the Book — How Big Is Big?", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 6),
         "mch02_mistakes": ArticleEntry(id: "mch02_mistakes", filename: "mch02_mistakes.html", title: "Common Mistakes — Arithmetic Expressions", chapterFolder: "Articles/MathsChapter2", estimatedMinutes: 5),
         "mch02_glossary": ArticleEntry(id: "mch02_glossary", filename: "mch02_glossary.html", title: "Vocabulary Deck — Arithmetic Expressions", chapterFolder: "Articles/MathsChapter2", estimatedMinutes: 4),
         "mch02_ncert_qa": ArticleEntry(id: "mch02_ncert_qa", filename: "mch02_ncert_qa.html", title: "NCERT Q&A — Arithmetic Expressions", chapterFolder: "Articles/MathsChapter2", estimatedMinutes: 6),

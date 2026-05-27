@@ -39,10 +39,10 @@ final class BeyondTheBookRoutingTests: XCTestCase {
             XCTAssertEqual(entry.filename, "\(key).html",
                 "Beyond entry '\(key)' has filename '\(entry.filename)' — must be '\(key).html' " +
                 "so the modal loads the right file from disk.")
-            let chNumber = Int(chPrefix.dropFirst(2)) ?? -1
-            XCTAssertEqual(entry.chapterFolder, "Articles/Chapter\(chNumber)",
+            let (chNumber, expectedFolder) = chapterNumberAndFolder(fromPrefix: chPrefix)
+            XCTAssertEqual(entry.chapterFolder, expectedFolder,
                 "Beyond entry '\(key)' points at chapterFolder '\(entry.chapterFolder)' — " +
-                "must be 'Articles/Chapter\(chNumber)' to render Ch.\(chNumber)'s content. " +
+                "must be '\(expectedFolder)' to render Ch.\(chNumber)'s content. " +
                 "An off-by-one here is the exact 2026-05-25 reported bug.")
         }
     }
@@ -102,13 +102,26 @@ final class BeyondTheBookRoutingTests: XCTestCase {
                 continue
             }
             let chPrefix = chapterPrefix(from: key)
-            let expectedTitleFragment = "Chapter \(Int(chPrefix.dropFirst(2)) ?? -1)"
-            XCTAssertTrue(html.contains(expectedTitleFragment),
-                "Beyond HTML at \(resolved.lastPathComponent) doesn't contain " +
-                "'\(expectedTitleFragment)' in its <title>/breadcrumb/h1. The " +
-                "file's content might be from a different chapter — exactly " +
-                "the 2026-05-25 reported bug shape (modal renders Ch.M while " +
-                "card says Ch.N).")
+            if chPrefix.hasPrefix("mch") {
+                // Maths Beyond articles are titled by chapter NAME, not
+                // "Chapter N", so the file-identity invariant is the
+                // anti-bug guarantee here: the on-disk HTML's
+                // data-article-id MUST equal the entry key. A copy-paste
+                // from another chapter trips this exactly like the
+                // "Chapter N" substring trips it for Science.
+                XCTAssertTrue(html.contains("data-article-id=\"\(key)\""),
+                    "Beyond HTML at \(resolved.lastPathComponent) doesn't declare " +
+                    "data-article-id=\"\(key)\" — the file's content might be from a " +
+                    "different chapter (the 2026-05-25 reported bug shape).")
+            } else {
+                let expectedTitleFragment = "Chapter \(Int(chPrefix.dropFirst(2)) ?? -1)"
+                XCTAssertTrue(html.contains(expectedTitleFragment),
+                    "Beyond HTML at \(resolved.lastPathComponent) doesn't contain " +
+                    "'\(expectedTitleFragment)' in its <title>/breadcrumb/h1. The " +
+                    "file's content might be from a different chapter — exactly " +
+                    "the 2026-05-25 reported bug shape (modal renders Ch.M while " +
+                    "card says Ch.N).")
+            }
         }
     }
 
@@ -117,6 +130,18 @@ final class BeyondTheBookRoutingTests: XCTestCase {
     /// "ch01_beyond" → "ch01"
     private func chapterPrefix(from beyondKey: String) -> String {
         return String(beyondKey.split(separator: "_").first ?? "")
+    }
+
+    /// Maps a chapter prefix to its number and on-disk folder, honouring the
+    /// per-pack naming convention: Science uses `chNN` → `Articles/ChapterN`,
+    /// Maths uses `mchNN` → `Articles/MathsChapterN`.
+    private func chapterNumberAndFolder(fromPrefix prefix: String) -> (Int, String) {
+        if prefix.hasPrefix("mch") {
+            let n = Int(prefix.dropFirst(3)) ?? -1
+            return (n, "Articles/MathsChapter\(n)")
+        }
+        let n = Int(prefix.dropFirst(2)) ?? -1
+        return (n, "Articles/Chapter\(n)")
     }
 
     private func loadSciencePack() throws -> SubjectPack {

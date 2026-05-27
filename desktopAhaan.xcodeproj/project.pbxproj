@@ -882,6 +882,7 @@
 		863C82AF4FC13FE70BBBBB42 /* ch14_t03_c02.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CB7E62FB2A8C5112A4E3733 /* ch14_t03_c02.html */; };
 		9925C9E910035D830A6AC9D5 /* ch14_t03_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = D7E79D339BD6949C4BDC4AE2 /* ch14_t03_overview.html */; };
 		C7865E4584506997F82454E3 /* ch14_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = D7E674773779B4E48D87204D /* ch14_whatif.html */; };
+		7211A231ED8E0C649BBD99BE /* mch01_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 4053FE06A112F3B1EA85A8B4 /* mch01_beyond.html */; };
 		A9D8682BAAB05BFD6D669742 /* mch01_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = D851014EAA496FDA5158CEAE /* mch01_glossary.html */; };
 		228102FDB67D33E474670C28 /* mch01_mistakes.html in Resources */ = {isa = PBXBuildFile; fileRef = EFCCD850B9739FB4D22AD736 /* mch01_mistakes.html */; };
 		1AB647DF46933F7DF43C403E /* mch01_ncert_qa.html in Resources */ = {isa = PBXBuildFile; fileRef = 0D00615998CEC971A58FF084 /* mch01_ncert_qa.html */; };
@@ -1523,6 +1524,7 @@
 		2CB7E62FB2A8C5112A4E3733 /* ch14_t03_c02.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch14_t03_c02.html"; sourceTree = "<group>"; };
 		D7E79D339BD6949C4BDC4AE2 /* ch14_t03_overview.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch14_t03_overview.html"; sourceTree = "<group>"; };
 		D7E674773779B4E48D87204D /* ch14_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch14_whatif.html"; sourceTree = "<group>"; };
+		4053FE06A112F3B1EA85A8B4 /* mch01_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch01_beyond.html"; sourceTree = "<group>"; };
 		D851014EAA496FDA5158CEAE /* mch01_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch01_glossary.html"; sourceTree = "<group>"; };
 		EFCCD850B9739FB4D22AD736 /* mch01_mistakes.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch01_mistakes.html"; sourceTree = "<group>"; };
 		0D00615998CEC971A58FF084 /* mch01_ncert_qa.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch01_ncert_qa.html"; sourceTree = "<group>"; };
@@ -2819,6 +2821,7 @@
 		3D5F69E4D500B133BFE98FF8 /* MathsChapter1 */ = {
 			isa = PBXGroup;
 			children = (
+				4053FE06A112F3B1EA85A8B4,
 				D851014EAA496FDA5158CEAE,
 				EFCCD850B9739FB4D22AD736,
 				0D00615998CEC971A58FF084,
@@ -4663,6 +4666,7 @@
 				863C82AF4FC13FE70BBBBB42 /* ch14_t03_c02.html in Resources */,
 				9925C9E910035D830A6AC9D5 /* ch14_t03_overview.html in Resources */,
 				C7865E4584506997F82454E3 /* ch14_whatif.html in Resources */,
+				7211A231ED8E0C649BBD99BE /* mch01_beyond.html in Resources */,
 				A9D8682BAAB05BFD6D669742 /* mch01_glossary.html in Resources */,
 				228102FDB67D33E474670C28 /* mch01_mistakes.html in Resources */,
 				1AB647DF46933F7DF43C403E /* mch01_ncert_qa.html in Resources */,
