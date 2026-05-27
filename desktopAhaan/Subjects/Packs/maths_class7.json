@@ -15128,6 +15128,937 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch15",
+      "number": 15,
+      "title": "Finding the Unknown",
+      "summary": "This capstone chapter solves equations — statements that two sides are equal, like a balanced weighing scale. You meet equations through balance puzzles, then learn the systematic method: do the same operation to both sides, using inverse operations to peel away everything around the unknown until it stands alone. Always check by substituting back — equations are self-verifying, which is part of what makes algebra so powerful.",
+      "topics": [
+        {
+          "id": "ch15_t01",
+          "title": "Equations as a Balance",
+          "summary": "An equation says two sides are equal, like a balanced weighing scale. Finding the unknown weight means working out what value keeps the scale level. The golden rule: whatever you do to one pan you must do to the other, or the balance breaks.",
+          "concepts": [
+            {
+              "id": "ch15_t01_c01",
+              "title": "An equation is a balance",
+              "explanations": {
+                "oneLine": "An equation states that its two sides are equal, like a balanced scale; solving it means finding the unknown value that keeps both sides equal.",
+                "kidFriendly": "Picture a weighing scale, balanced. On the left pan: a sack of unknown weight plus some known weights; on the right: known weights. Because it balances, left = right — that's an EQUATION. Finding the sack's weight means finding what keeps the scale level. The key insight from the scale: if you remove the SAME weight from BOTH pans, it stays balanced. Equations work identically: 2n + 1 = 99 means 'twice the unknown, plus 1, equals 99'. To find n, you keep both sides equal while peeling away everything around the n — just like removing equal weights to leave the mystery sack alone on one pan.",
+                "textbook": "An equation asserts the equality of two expressions (LHS = RHS), with an unknown represented by a letter-number. It models a balanced weighing scale: the two sides have equal value. Solving means finding the value of the unknown that makes LHS = RHS true. The defining property — performing the same operation on both sides preserves equality — mirrors removing equal weights from a balanced scale.",
+                "expert": "An equation is a proposition LHS = RHS over a variable; its solution set consists of values making it true. The balance metaphor encodes the equivalence-preserving operations: adding, subtracting, multiplying or dividing both sides by the same (nonzero) quantity yields an equivalent equation (same solution set). This is the algebraic field structure applied to maintain a logical equality."
+              },
+              "reasoning": "A balanced scale means the two pans weigh the same. An equation is the same statement in symbols: the two sides are equal. And the rule that keeps a scale balanced — change both pans identically — is exactly the rule that keeps an equation true.",
+              "useCases": [
+                {
+                  "title": "Balancing a scale",
+                  "description": "A sack + 5 kg balances 12 kg: the equation sack + 5 = 12.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Pocket money",
+                  "description": "If 2 weeks' allowance plus ₹10 is ₹90, that's 2w + 10 = 90.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Age puzzles",
+                  "description": "'In 5 years I'll be 18' is the equation a + 5 = 18.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The balance metaphor is so powerful that the equals sign '=' itself was invented (by Robert Recorde in 1557) using two parallel lines 'because no two things can be more equal'. Seeing an equation as a balance — not as 'a sum to do' — is the single biggest mental shift from arithmetic to algebra.",
+              "mnemonic": "An equation = a balanced scale. Solving = finding the unknown that keeps both sides equal.",
+              "predictQuestion": "What does the equation 2n + 1 = 99 mean as a 'balance', and what does solving it ask for?",
+              "whyChain": [
+                "An equation is like a balanced weighing scale: whatever is written on the left has exactly the same value as what's on the right. So 2n + 1 = 99 means the left pan — twice the unknown number n, plus 1 — weighs the same as the right pan, 99.",
+                "Solving the equation means finding the value of n that keeps the scale balanced — the number that makes the left side genuinely equal 99. Here that value turns out to be 49, since 2 × 49 + 1 = 99.",
+                "The balance picture also hands you the method. Just as you can remove equal weights from both pans and stay balanced, you can do the same operation to both sides of an equation and keep it true — peeling away the +1 and the ×2 around n until n sits alone. Seeing an equation as a balance to keep, rather than 'a sum to do', is the central mental shift from arithmetic into algebra."
+              ],
+              "relatedConceptIds": [
+                "ch15_t02_c01",
+                "ch04_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t01_q01"
+              ],
+              "pageRefs": [
+                166,
+                167
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_c02",
+              "title": "What counts as a solution",
+              "explanations": {
+                "oneLine": "A solution is a value of the unknown that makes the two sides genuinely equal; you can confirm it by substituting it back in.",
+                "kidFriendly": "A solution to an equation is the value of the unknown that makes the left side actually equal the right. For 2n + 1 = 99, n = 49 is the solution because putting 49 in gives 2 × 49 + 1 = 99 — both sides match. n = 50 is NOT a solution: 2 × 50 + 1 = 101 ≠ 99. The beautiful thing: you can always CHECK a proposed solution by substituting it and seeing if the sides balance. This means you never have to wonder if you're right — plug it in. Most simple equations have exactly one solution, but checking is how you know for sure.",
+                "textbook": "A solution (or root) of an equation is a value of the unknown for which LHS = RHS holds. It is verified by substitution: replacing the unknown with the candidate value and confirming both sides evaluate equally. A linear equation in one unknown typically has exactly one solution. Substitution-checking provides an independent confirmation of correctness.",
+                "expert": "A solution lies in the solution set {x : LHS(x) = RHS(x)}. For a linear equation ax + b = c with a ≠ 0, the set is the singleton {(c−b)/a}. Verification by substitution evaluates the predicate at the candidate — a decision procedure independent of the solving method, hence a reliable check against algebraic slips."
+              },
+              "reasoning": "An equation is a claim that two sides are equal. The solution is whatever value of the unknown makes that claim TRUE. Since you can test any value by putting it in and comparing the sides, you can always confirm a solution for yourself.",
+              "useCases": [
+                {
+                  "title": "Verifying a bill",
+                  "description": "Check a claimed unknown cost by plugging it back into the total.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Testing a guess",
+                  "description": "Trial-and-error checks values one by one until both sides match.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Confirming an answer",
+                  "description": "After solving, substitute to be certain the sides balance.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The habit of CHECKING by substitution is one of the most valuable in all of mathematics — it means you carry your own answer key. Many exam marks are lost to errors that a ten-second substitution check would have caught. An equation's honesty (you can always verify) is part of what makes algebra trustworthy.",
+              "mnemonic": "A solution makes both sides equal — and you can always check by substituting it back.",
+              "predictQuestion": "Is n = 50 a solution of 2n + 1 = 99? How can you be sure without anyone telling you?",
+              "whyChain": [
+                "A solution is a value that makes the equation's two sides genuinely equal. To test n = 50, substitute it into the left side: 2 × 50 + 1 = 101. The right side is 99. Since 101 ≠ 99, the scale doesn't balance — so n = 50 is NOT a solution.",
+                "Trying n = 49 instead: 2 × 49 + 1 = 99, which equals the right side exactly. So n = 49 IS the solution — and you confirmed it yourself, with no need for an answer key.",
+                "That's the quiet power of equations: you can always CHECK a candidate by substituting it and comparing the two sides. It makes algebra self-verifying — a ten-second substitution catches errors that would otherwise cost marks. Most simple (linear) equations have exactly one solution, and substitution is how you know for certain you've found it."
+              ],
+              "relatedConceptIds": [
+                "ch15_t01_c01",
+                "ch15_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t01_q02"
+              ],
+              "pageRefs": [
+                167,
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch15_t01_q01",
+              "prompt": "A balanced scale has a sack of unknown weight w plus a 5 kg weight on the left, and 12 kg on the right. Write the equation and find w by removing equal weights.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "w + 5 = 12; remove 5 kg from both sides → w = 7 kg.",
+              "solutionSteps": [
+                "Balanced scale: left = right, so w + 5 = 12.",
+                "Remove 5 kg from BOTH pans (keeps balance): w + 5 − 5 = 12 − 5.",
+                "w = 7 kg."
+              ],
+              "commonMistakes": [
+                "Removing 5 from only one side (breaks the balance).",
+                "Adding instead of removing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Scale: w + 8 = 20. Find w.",
+                  "answer": "12",
+                  "solutionSteps": [
+                    "20 − 8 = 12."
+                  ]
+                },
+                {
+                  "prompt": "Two equal sacks balance 18 kg: 2w = 18. Find w.",
+                  "answer": "9",
+                  "solutionSteps": [
+                    "18 ÷ 2 = 9."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                166,
+                167
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t01_q02",
+              "prompt": "Is n = 49 the solution of 2n + 1 = 99? Verify by substitution.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes. Substituting n = 49: 2 × 49 + 1 = 98 + 1 = 99, which equals the right side. So n = 49 is the solution.",
+              "solutionSteps": [
+                "Substitute n = 49 into the left side: 2 × 49 + 1.",
+                "2 × 49 = 98; 98 + 1 = 99.",
+                "Left = 99 = right side. The equation balances, so n = 49 is correct."
+              ],
+              "commonMistakes": [
+                "Forgetting to multiply before adding (order of operations).",
+                "Not actually substituting to check."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is n = 50 a solution of 2n+1 = 99?",
+                  "answer": "No — 2×50+1 = 101 ≠ 99.",
+                  "solutionSteps": [
+                    "LHS 101, RHS 99, not equal."
+                  ]
+                },
+                {
+                  "prompt": "Check x = 3 in 5x − 4 = 11.",
+                  "answer": "Yes — 5×3−4 = 11.",
+                  "solutionSteps": [
+                    "15−4 = 11 = RHS."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                167,
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch15_t02",
+          "title": "Solving Equations Systematically",
+          "summary": "Trial and error works but is slow. The systematic method uses the balance rule: do the same operation to both sides to peel away everything around the unknown, using inverse operations (subtract to undo +, divide to undo ×) until the unknown stands alone.",
+          "concepts": [
+            {
+              "id": "ch15_t02_c01",
+              "title": "Doing the same to both sides; inverse operations",
+              "explanations": {
+                "oneLine": "Solve an equation by doing the same operation to both sides — using inverse operations to undo what surrounds the unknown until it stands alone.",
+                "kidFriendly": "Trial and error (guess values till the sides match) works but is slow. The systematic way uses the balance rule: keep both sides equal by doing the SAME thing to each. To solve 2n + 1 = 99: the n has a '+1' and a '×2' wrapped around it. Undo them with INVERSE operations, in reverse order. First subtract 1 from both sides: 2n = 98. Then divide both sides by 2: n = 49. Each step keeps the balance and strips away one layer. Subtraction undoes addition; division undoes multiplication. Peel away the outermost operation first, always doing it to BOTH sides, until the unknown is alone — that's the solution.",
+                "textbook": "The systematic method solves an equation by applying inverse operations to both sides, preserving equality, to isolate the unknown. Addition and subtraction are inverses, as are multiplication and division. For 2n + 1 = 99: subtract 1 (inverse of +1) from both sides → 2n = 98; divide by 2 (inverse of ×2) → n = 49. Operations are undone in reverse order of how they were applied to the unknown.",
+                "expert": "Solving a linear equation is composing inverse field operations to isolate the variable: from ax + b = c, apply −b then ·a⁻¹ to both sides, yielding x = (c−b)/a. Each step is an equivalence transformation (bijective on the solution set). This is Gaussian elimination in one variable; the same principle scales to systems and to symbolic algebra."
+              },
+              "reasoning": "Everything done to the unknown can be undone by its opposite operation. Since the scale stays balanced when you treat both sides alike, you reverse each operation on both sides — strip off the +1 by subtracting 1, strip off the ×2 by dividing by 2 — until only the unknown remains.",
+              "useCases": [
+                {
+                  "title": "Working back a price",
+                  "description": "If 3 items plus ₹20 delivery cost ₹110, solve 3x + 20 = 110 → x = 30.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Age problems",
+                  "description": "'In 7 years I'll be 25': a + 7 = 25 → subtract 7 → a = 18.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Splitting a bill",
+                  "description": "'4 equal shares make ₹360': 4s = 360 → divide by 4 → s = 90.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "This 'inverse operations, both sides' method is the heart of all equation-solving you'll do for years — through linear equations, simultaneous equations, and beyond. The same logic (undo operations in reverse, keep both sides equal) drives the algebra behind physics formulas, computer algorithms, and engineering. Master it here and it pays off everywhere.",
+              "mnemonic": "Undo each operation with its inverse, on BOTH sides, until the unknown is alone.",
+              "predictQuestion": "Solve 2n + 1 = 99 systematically. Which operations do you undo, and in what order?",
+              "whyChain": [
+                "The unknown n has two operations wrapped around it: it's multiplied by 2, then 1 is added. To free n, undo these with INVERSE operations, peeling from the outside in — and to keep the equation true, do each step to BOTH sides (the balance rule).",
+                "The outermost operation is '+1', so undo it first: subtract 1 from both sides, giving 2n = 98. Now only the '×2' remains; undo it with its inverse, division: divide both sides by 2, giving n = 49.",
+                "Subtraction undid the addition, and division undid the multiplication — each inverse applied to both sides so the scale never tipped. This 'inverse operations on both sides, outermost first' method replaces slow trial-and-error and is the backbone of all equation-solving to come, from physics formulas to computer algorithms. A quick check (2×49+1 = 99 ✓) confirms it."
+              ],
+              "relatedConceptIds": [
+                "ch15_t01_c01",
+                "ch15_t03_c01",
+                "ch04_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t02_q01",
+                "ch15_t02_q02",
+                "ch15_t02_q03"
+              ],
+              "pageRefs": [
+                168,
+                169,
+                170
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch15_t02_q01",
+              "prompt": "Solve 2n + 1 = 99 systematically.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "n = 49",
+              "solutionSteps": [
+                "Subtract 1 from both sides (undo +1): 2n = 98.",
+                "Divide both sides by 2 (undo ×2): n = 49.",
+                "Check: 2 × 49 + 1 = 99. ✓"
+              ],
+              "commonMistakes": [
+                "Dividing by 2 before subtracting 1 (wrong order — peel the outermost first).",
+                "Doing the operation to only one side."
+              ],
+              "variations": [
+                {
+                  "prompt": "Solve 5x − 4 = 11.",
+                  "answer": "x = 3",
+                  "solutionSteps": [
+                    "+4: 5x=15; ÷5: x=3."
+                  ]
+                },
+                {
+                  "prompt": "Solve 3x + 20 = 110.",
+                  "answer": "x = 30",
+                  "solutionSteps": [
+                    "−20: 3x=90; ÷3: x=30."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                168,
+                169
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_q02",
+              "prompt": "Solve 5x − 4 = 7 (compare with how slow trial and error would be).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "x = 2.2 (or 11/5). Add 4: 5x = 11; divide by 5: x = 11/5 = 2.2.",
+              "solutionSteps": [
+                "Add 4 to both sides (undo −4): 5x = 11.",
+                "Divide both sides by 5 (undo ×5): x = 11/5 = 2.2.",
+                "Check: 5 × 2.2 − 4 = 11 − 4 = 7. ✓ Trial and error with whole numbers would have missed this non-whole answer."
+              ],
+              "commonMistakes": [
+                "Subtracting 4 instead of adding (the inverse of −4 is +4).",
+                "Stopping at 5x = 11 without dividing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Solve 4y + 3 = 19.",
+                  "answer": "y = 4",
+                  "solutionSteps": [
+                    "−3: 4y=16; ÷4: y=4."
+                  ]
+                },
+                {
+                  "prompt": "Solve 7m − 2 = 19.",
+                  "answer": "m = 3",
+                  "solutionSteps": [
+                    "+2: 7m=21; ÷7: m=3."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                169,
+                170
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t02_q03",
+              "prompt": "Why is doing the same operation to both sides allowed when solving an equation?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Because the two sides are equal (a balanced scale). Performing the same operation on equal quantities keeps them equal, just as removing equal weights from both pans keeps the scale balanced.",
+              "solutionSteps": [
+                "An equation means LHS = RHS — the two sides have the same value.",
+                "If two quantities are equal and you do the same thing to both, they stay equal.",
+                "This mirrors a balanced scale staying balanced when equal weights are removed from both pans.",
+                "So same-operation-both-sides preserves the solution."
+              ],
+              "commonMistakes": [
+                "Thinking you can operate on just one side.",
+                "Forgetting that the sides start out equal."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can you add 10 to only the left side?",
+                  "answer": "No — that breaks the balance; add to both.",
+                  "solutionSteps": [
+                    "Both sides must change identically."
+                  ]
+                },
+                {
+                  "prompt": "Does dividing both sides by 2 keep 8 = 8 true?",
+                  "answer": "Yes — 4 = 4.",
+                  "solutionSteps": [
+                    "Same operation preserves equality."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch15_t03",
+          "title": "Checking Solutions & Common Mistakes",
+          "summary": "Always substitute your answer back to confirm the sides balance — it catches almost every slip. The usual mistakes: doing an operation to only one side, undoing operations in the wrong order, or mishandling a sign. A quick check turns a guess into a certainty.",
+          "concepts": [
+            {
+              "id": "ch15_t03_c01",
+              "title": "Verify by substitution; mend common mistakes",
+              "explanations": {
+                "oneLine": "Substituting the solution back confirms it; the common slips are operating on one side only, wrong order of inverses, and sign errors.",
+                "kidFriendly": "Once you've solved an equation, CHECK it: put your answer back in and see if both sides match. Solve 3x − 5 = 16 → x = 7? Check: 3 × 7 − 5 = 21 − 5 = 16. ✓ It works. This catches almost every mistake. The usual slips: (1) doing an operation to only ONE side (breaks the balance) — always do it to BOTH; (2) undoing operations in the wrong ORDER — peel the outermost first (undo +/− before ×/÷ that wraps the variable); (3) SIGN errors — the inverse of −5 is +5, not −5. 'Mind the mistake, mend the mistake': a ten-second substitution check is the cheapest insurance in all of maths.",
+                "textbook": "Every solution should be verified by substituting it into the original equation and confirming LHS = RHS. Common errors: (1) applying an operation to only one side, destroying the equality; (2) undoing operations in the wrong order (the inverse operations should reverse the order of application); (3) sign errors when moving terms. Substitution-checking detects all of these reliably.",
+                "expert": "Verification evaluates the original predicate at the computed root, independent of the solution path — catching transcription, order, and sign errors. The common faults correspond to applying a non-equivalence transformation (one-sided op), composing inverses out of order, or sign mismanagement in additive inverses. Checking restores soundness against these procedural lapses."
+              },
+              "reasoning": "Because solving is a chain of steps, a slip anywhere gives a wrong answer — but the original equation is the ultimate judge. Putting your answer back in tests it against that judge directly, exposing any error regardless of where it crept in.",
+              "useCases": [
+                {
+                  "title": "Exam self-check",
+                  "description": "Substituting your answer back catches errors before you lose marks.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Balancing accounts",
+                  "description": "Verify a computed unknown by plugging it into the original total.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Debugging a formula",
+                  "description": "Engineers substitute test values to check a rearranged formula is correct.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "'Mind the mistake, mend the mistake' is a recurring NEP theme precisely because LEARNING to spot and fix your own errors is more valuable than never making them. The substitution check makes equations self-correcting — a habit that, carried into all of algebra and science, prevents a lifetime of avoidable errors.",
+              "mnemonic": "Always substitute back to check. Watch for: one-sided ops, wrong order, sign slips.",
+              "predictQuestion": "You solve 3x − 5 = 16 and get x = 7. How do you confirm it, and what are the three most common mistakes to watch for?",
+              "whyChain": [
+                "Confirm by substitution: put x = 7 back into the ORIGINAL equation. The left side becomes 3 × 7 − 5 = 21 − 5 = 16, which equals the right side. The scale balances, so x = 7 is correct — verified independently of how you solved it.",
+                "The three classic slips a check catches: (1) operating on only ONE side — every operation must hit both sides or the balance breaks; (2) undoing operations in the WRONG ORDER — peel the outermost first, undoing +/− before the ×/÷ that wraps the variable; (3) SIGN errors — the inverse of −5 is +5, and dropping that sign is a frequent trap.",
+                "Because solving is a chain of steps, an error anywhere produces a wrong answer — but the original equation is the final judge, and substitution puts your answer straight in front of it. This 'mind the mistake, mend the mistake' habit makes equations self-correcting and is the cheapest insurance in all of mathematics."
+              ],
+              "relatedConceptIds": [
+                "ch15_t01_c02",
+                "ch15_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch15_t03_q01",
+                "ch15_t03_q02"
+              ],
+              "pageRefs": [
+                169,
+                170,
+                171
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch15_t03_q01",
+              "prompt": "Solve 3x − 5 = 16 and verify your answer by substitution.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "x = 7. Check: 3 × 7 − 5 = 16. ✓",
+              "solutionSteps": [
+                "Add 5 to both sides: 3x = 21.",
+                "Divide both sides by 3: x = 7.",
+                "Verify: 3 × 7 − 5 = 21 − 5 = 16 = RHS. ✓"
+              ],
+              "commonMistakes": [
+                "Subtracting 5 (the inverse of −5 is +5).",
+                "Forgetting to verify."
+              ],
+              "variations": [
+                {
+                  "prompt": "Solve 4x + 7 = 31 and check.",
+                  "answer": "x = 6; 4×6+7 = 31 ✓",
+                  "solutionSteps": [
+                    "−7: 4x=24; ÷4: x=6."
+                  ]
+                },
+                {
+                  "prompt": "Solve 2x − 9 = 1 and check.",
+                  "answer": "x = 5; 2×5−9 = 1 ✓",
+                  "solutionSteps": [
+                    "+9: 2x=10; ÷2: x=5."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                169,
+                170
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_t03_q02",
+              "prompt": "A student solves x + 8 = 20 by writing 'x = 20 + 8 = 28'. Find and mend the mistake.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Mistake: they ADDED 8 instead of subtracting it. To undo '+8' you subtract 8 from both sides: x = 20 − 8 = 12. Check: 12 + 8 = 20. ✓",
+              "solutionSteps": [
+                "The equation is x + 8 = 20. To isolate x, undo the +8 with its inverse: subtract 8.",
+                "Both sides: x = 20 − 8 = 12.",
+                "The student added 8 (wrong inverse). Correct answer x = 12.",
+                "Check: 12 + 8 = 20. ✓"
+              ],
+              "commonMistakes": [
+                "Using the same operation instead of the inverse.",
+                "Skipping the check that would have caught it (28 + 8 = 36 ≠ 20)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mend: 'x − 4 = 10, so x = 10 − 4 = 6.'",
+                  "answer": "Wrong inverse: x = 10 + 4 = 14. Check 14−4 = 10 ✓.",
+                  "solutionSteps": [
+                    "Undo −4 by adding 4."
+                  ]
+                },
+                {
+                  "prompt": "Mend: '3x = 12, so x = 12 × 3 = 36.'",
+                  "answer": "Wrong inverse: x = 12 ÷ 3 = 4.",
+                  "solutionSteps": [
+                    "Undo ×3 by dividing by 3."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                170,
+                171
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ],
+      "glossary": [
+        {
+          "id": "ch15_gl01",
+          "term": "Equation",
+          "definition": "A statement that two expressions are equal, usually containing an unknown.",
+          "example": "2n + 1 = 99.",
+          "hindiTerm": "समीकरण",
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl02",
+          "term": "Unknown (variable)",
+          "definition": "The letter-number whose value you are trying to find.",
+          "example": "n in 2n + 1 = 99.",
+          "hindiTerm": "अज्ञात",
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl03",
+          "term": "LHS / RHS",
+          "definition": "Left-Hand Side and Right-Hand Side of an equation.",
+          "example": "In 2n+1 = 99, LHS = 2n+1, RHS = 99.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl04",
+          "term": "Solution (root)",
+          "definition": "The value of the unknown that makes both sides equal.",
+          "example": "n = 49 solves 2n+1 = 99.",
+          "hindiTerm": "हल",
+          "relatedConceptIds": [
+            "ch15_t01_c02"
+          ]
+        },
+        {
+          "id": "ch15_gl05",
+          "term": "Inverse operation",
+          "definition": "The operation that undoes another: subtraction undoes addition, division undoes multiplication.",
+          "example": "To undo +1, subtract 1.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl06",
+          "term": "Balance rule",
+          "definition": "Doing the same operation to both sides of an equation keeps it true.",
+          "example": "Subtract 1 from both sides of 2n+1 = 99.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl07",
+          "term": "Trial and error",
+          "definition": "Finding a solution by testing values until both sides match.",
+          "example": "Trying n = 40, 49 for 2n+1 = 99.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl08",
+          "term": "Substitution (checking)",
+          "definition": "Putting the solution back into the equation to confirm both sides are equal.",
+          "example": "2×49+1 = 99 confirms n = 49.",
+          "hindiTerm": "प्रतिस्थापन",
+          "relatedConceptIds": [
+            "ch15_t01_c02",
+            "ch15_t03_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl09",
+          "term": "Isolate the unknown",
+          "definition": "To get the unknown alone on one side of the equation.",
+          "example": "From 2n+1 = 99 to n = 49.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_gl10",
+          "term": "Linear equation",
+          "definition": "An equation where the unknown appears only to the first power.",
+          "example": "3x − 5 = 16.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch15_mn01",
+          "acronym": "Equation = balance",
+          "unpacking": "An equation is a balanced scale: LHS = RHS. Keep it balanced by doing the same to both sides.",
+          "context": "Use to picture and reason about any equation.",
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_mn02",
+          "acronym": "Inverse, both sides, outermost first",
+          "unpacking": "To isolate the unknown, undo operations with their inverses, applied to both sides, peeling the outermost operation first.",
+          "context": "Use to solve equations systematically.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_mn03",
+          "acronym": "Always substitute back",
+          "unpacking": "Check every solution by putting it into the original equation and confirming both sides match.",
+          "context": "Use after solving any equation.",
+          "relatedConceptIds": [
+            "ch15_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch15_ms01",
+          "kidsThink": "You can change just one side of an equation.",
+          "actually": "You must do the SAME operation to BOTH sides, or the balance (equality) breaks.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_ms02",
+          "kidsThink": "To undo '+8' you add 8.",
+          "actually": "You SUBTRACT 8 — the inverse of addition is subtraction. To undo +8, subtract 8 from both sides.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_ms03",
+          "kidsThink": "The order of undoing operations doesn't matter.",
+          "actually": "Peel the OUTERMOST operation first: undo the +/− around the variable before the ×/÷ that multiplies it.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_ms04",
+          "kidsThink": "Trial and error is the best way to solve equations.",
+          "actually": "It works but is slow and can miss non-whole answers (like x = 2.2). The systematic inverse-operations method is reliable and fast.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_ms05",
+          "kidsThink": "Once you get an answer you're done.",
+          "actually": "Always SUBSTITUTE it back to check both sides match — it catches almost every mistake.",
+          "relatedConceptIds": [
+            "ch15_t03_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch15_re01",
+          "title": "Working back from a total",
+          "body": "If 3 identical items plus ₹20 delivery cost ₹110, the equation 3x + 20 = 110 finds each item's price: subtract 20 (3x = 90), divide by 3 (x = ₹30). Every 'I know the total, what was each part?' question is an equation waiting to be solved.",
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_re02",
+          "title": "The balance scale of algebra",
+          "body": "The equals sign was invented in 1557 by Robert Recorde, who chose two parallel lines 'because no two things can be more equal'. Seeing an equation as a balanced scale — keep both sides equal — is the mental shift that turns arithmetic into algebra.",
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_re03",
+          "title": "Self-checking with substitution",
+          "body": "Engineers and scientists rearrange formulas constantly, then plug in test values to confirm the rearrangement is correct. The same substitution check you use on 3x − 5 = 16 guards multi-step calculations in the real world against costly errors.",
+          "relatedConceptIds": [
+            "ch15_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch15_qa01",
+          "question": "A balanced scale has a sack of weight w plus 5 kg on the left and 12 kg on the right. Write and solve the equation.",
+          "modelAnswer": "w + 5 = 12. Remove 5 kg from both pans (subtract 5 from both sides): w = 7 kg.",
+          "textbookPage": 166,
+          "relatedConceptIds": [
+            "ch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa02",
+          "question": "Solve 2n + 1 = 99 by trial and error, then check.",
+          "modelAnswer": "Testing values: n=40 gives 81, n=50 gives 101, n=49 gives 99. So n = 49. Trial and error works but is slow.",
+          "textbookPage": 168,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa03",
+          "question": "If LHS = RHS, will the equation still hold after adding the same number to both sides?",
+          "modelAnswer": "Yes. Since both sides have the same value, performing the same operation (adding, subtracting, multiplying, or dividing by the same number) on both keeps them equal.",
+          "textbookPage": 168,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa04",
+          "question": "Solve 2n + 1 = 99 systematically.",
+          "modelAnswer": "Subtract 1 from both sides: 2n = 98. Divide both sides by 2: n = 49. Check: 2×49+1 = 99.",
+          "textbookPage": 169,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa05",
+          "question": "Solve 5x − 4 = 7.",
+          "modelAnswer": "Add 4 to both sides: 5x = 11. Divide by 5: x = 11/5 = 2.2. Check: 5×2.2 − 4 = 7.",
+          "textbookPage": 169,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa06",
+          "question": "Why is doing the same operation to both sides justified?",
+          "modelAnswer": "Because the two sides are equal (like a balanced scale). Doing the same thing to equal quantities keeps them equal — exactly like removing equal weights from both pans of a balanced scale.",
+          "textbookPage": 168,
+          "relatedConceptIds": [
+            "ch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa07",
+          "question": "A student writes 'x + 8 = 20, so x = 20 + 8 = 28.' Mend the mistake.",
+          "modelAnswer": "To undo +8, you SUBTRACT 8, not add it: x = 20 − 8 = 12. Check: 12 + 8 = 20. The error was using the wrong inverse operation.",
+          "textbookPage": 170,
+          "relatedConceptIds": [
+            "ch15_t03_c01"
+          ]
+        },
+        {
+          "id": "ch15_qa08",
+          "question": "Solve 3x − 5 = 16 and verify your answer.",
+          "modelAnswer": "Add 5: 3x = 21. Divide by 3: x = 7. Verify: 3×7 − 5 = 21 − 5 = 16 = RHS. ✓",
+          "textbookPage": 170,
+          "relatedConceptIds": [
+            "ch15_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch15_mp01",
+          "emoji": "⚖️",
+          "title": "Build a Balance, Solve an Equation",
+          "needs": [
+            "A ruler balanced on a pencil (a simple see-saw), or a drawing of a balance scale",
+            "Small identical coins/weights",
+            "A mystery item (e.g. a sealed envelope with hidden coins)"
+          ],
+          "steps": [
+            "Set up the balance with a mystery item plus some known coins on one side, and known coins on the other, so it balances.",
+            "Write the equation: mystery + (known) = (known), e.g. m + 3 = 8.",
+            "Remove the SAME number of coins from both sides and watch it stay balanced — until the mystery item is alone.",
+            "Read off the mystery weight (the solution), e.g. m = 5.",
+            "Now write a 'two-step' equation like 2m + 1 = 11, and solve it systematically (subtract 1 from both sides, then divide by 2), checking by substitution."
+          ],
+          "expectedObservation": "Removing equal amounts from both sides keeps the balance level, and peeling them away leaves the mystery weight alone — exactly mirroring how subtracting and dividing both sides of an equation isolates the unknown.",
+          "whyItWorks": "An equation is a balanced scale: both sides are equal. Any operation done equally to both sides preserves that equality, so inverse operations (subtract to undo add, divide to undo multiply) strip away everything around the unknown without ever tipping the balance — leaving the solution.",
+          "estimatedMinutes": 40,
+          "relatedConceptIds": [
+            "ch15_t01_c01",
+            "ch15_t02_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch15_sci01",
+          "name": "Brahmagupta",
+          "lifespan": "598 – 668 CE",
+          "nationality": "Indian",
+          "oneLineLegacy": "Gave the first general method for solving linear and quadratic equations, and rules for zero and negative numbers.",
+          "narrative": "Brahmagupta, working in 7th-century Rajasthan, was among the first mathematicians anywhere to treat equations with general methods rather than case-by-case tricks. In his Brāhmasphuṭasiddhānta he stated rules for solving linear equations, handled negative quantities (debts) and zero as numbers, and gave a general solution to quadratic equations centuries before such methods reached Europe. The very idea of an 'unknown' to be found by systematic operations — the heart of this chapter — owes much to the Indian algebraic tradition he helped found. The word 'algebra' itself comes later from the Arabic al-jabr, but its roots reach back to scholars like Brahmagupta and, later, Bhāskara.",
+          "relatedConceptIds": [
+            "ch15_t01_c01",
+            "ch15_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch15_t01_c01",
+            "label": "Equation as balance",
+            "kind": "concept",
+            "x": 0.22,
+            "y": 0.15
+          },
+          {
+            "id": "ch15_t01_c02",
+            "label": "What is a solution",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.15
+          },
+          {
+            "id": "ch15_t02_c01",
+            "label": "Inverse ops, both sides",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.48
+          },
+          {
+            "id": "ch15_t03_c01",
+            "label": "Check & mend mistakes",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.78
+          },
+          {
+            "id": "ch15_pivot_algebra",
+            "label": "Algebra: solve for unknowns",
+            "kind": "pivot",
+            "x": 0.8,
+            "y": 0.45
+          },
+          {
+            "id": "ch04:ch04_t01_c01",
+            "label": "Ch.4 letter-numbers",
+            "kind": "crossChapter",
+            "x": 0.12,
+            "y": 0.48
+          },
+          {
+            "id": "ch10:ch10_t01_c02",
+            "label": "Ch.10 inverses",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.78
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch15_e01",
+            "from": "ch15_t01_c01",
+            "to": "ch15_t01_c02",
+            "label": "defines"
+          },
+          {
+            "id": "ch15_e02",
+            "from": "ch15_t01_c01",
+            "to": "ch15_t02_c01",
+            "label": "balance rule"
+          },
+          {
+            "id": "ch15_e03",
+            "from": "ch15_t02_c01",
+            "to": "ch15_t03_c01",
+            "label": "then check"
+          },
+          {
+            "id": "ch15_e04",
+            "from": "ch15_t02_c01",
+            "to": "ch15_pivot_algebra",
+            "label": "is"
+          },
+          {
+            "id": "ch04:ch04_t01_c01",
+            "label": "unknowns from",
+            "from": "ch04:ch04_t01_c01",
+            "to": "ch15_t01_c01"
+          },
+          {
+            "id": "ch15_e06",
+            "from": "ch10:ch10_t01_c02",
+            "to": "ch15_t02_c01",
+            "label": "inverse idea"
+          }
+        ]
+      }
     }
   ]
 }
