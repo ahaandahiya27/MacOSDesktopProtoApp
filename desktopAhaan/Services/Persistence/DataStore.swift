@@ -141,7 +141,12 @@ enum SM2Scheduler {
             r.bucket = min(5, r.bucket + 1)
             let next: Int
             if r.bucket <= 1 {
-                next = max(firstIntervalAfterLearn,
+                // Easy on first learn must out-space Good (which gives
+                // firstIntervalAfterLearn = 1). round(1 * 1.3) = 1 collapsed
+                // the boost to the same 1-day interval, so Easy gave no
+                // advantage. Floor at secondIntervalAfterLearn so Easy
+                // genuinely skips a card ahead.
+                next = max(secondIntervalAfterLearn,
                            Int((Double(firstIntervalAfterLearn) * easyBoostMultiplier).rounded()))
             } else {
                 next = max(1, Int((Double(r.intervalDays) * r.ease * easyBoostMultiplier).rounded()))

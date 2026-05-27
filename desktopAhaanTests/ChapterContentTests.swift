@@ -967,6 +967,19 @@ final class ChapterContentTests: XCTestCase {
         XCTAssertGreaterThan(next.nextDueAt.timeIntervalSince(now), 60 * 5)
     }
 
+    func testSM2_EasyOnFirstLearnOutspacesGood() {
+        let now = Date()
+        let fresh = QuestionReview.newReview(for: "q1", at: now)
+        let good = SM2Scheduler.schedule(fresh, quality: .good, at: now)
+        let easy = SM2Scheduler.schedule(fresh, quality: .easy, at: now)
+        XCTAssertGreaterThan(
+            easy.intervalDays, good.intervalDays,
+            "Easy on a brand-new card must schedule further out than Good — " +
+            "the easyBoostMultiplier was previously defeated by rounding 1.3 → 1, " +
+            "so both collapsed to a 1-day interval."
+        )
+    }
+
     func testSM2_EasyAnswerExtendsIntervalAndBoostsEase() {
         let now = Date()
         var r = QuestionReview.newReview(for: "q1", at: now)
