@@ -5858,6 +5858,56 @@
                 88
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_c02",
+              "title": "Using letter-numbers to express and justify patterns",
+              "explanations": {
+                "oneLine": "Letter-numbers let you state a number pattern in general and PROVE it always holds, not just check examples — e.g. the sum of three consecutive numbers is always 3 times the middle one.",
+                "kidFriendly": "Notice a pattern: 4 + 5 + 6 = 15 = 3 × 5; 9 + 10 + 11 = 30 = 3 × 10. The sum of three consecutive numbers seems to always be 3 times the middle one. Checking examples HINTS it's true — but algebra PROVES it. Call the middle number n. Then the three consecutive numbers are (n − 1), n, (n + 1). Add them: (n − 1) + n + (n + 1) = 3n. The −1 and +1 cancel, leaving 3n — exactly 3 times the middle number, for ANY n. That's the power of letter-numbers: they turn 'it works in my examples' into 'it must always work, here's why'.",
+                "textbook": "Letter-numbers allow general statements about patterns to be expressed and proved. Representing the varying quantity by a letter and simplifying the resulting expression establishes the pattern for all values at once, rather than for specific instances. Example: three consecutive integers can be written (n − 1), n, (n + 1); their sum simplifies to 3n, proving the sum equals three times the middle integer universally. This is generalisation followed by algebraic justification.",
+                "expert": "Expressing a family of cases with a parameter and simplifying yields a proof by direct algebraic manipulation, quantified over the parameter's domain. The consecutive-integers identity (n−1)+n+(n+1) = 3n is a degree-1 polynomial identity in ℤ[n]; its truth as a polynomial identity is equivalent to its truth for all integer n. This is the elementary template for the generalise-then-prove method that scales to induction, invariants, and symbolic algebra."
+              },
+              "reasoning": "Examples can only suggest a pattern — there might be a case you didn't try where it fails. A letter stands for EVERY value at once, so simplifying an expression built from it settles the pattern for all cases in one stroke. Cancellation (the −1 and +1) reveals why the pattern holds.",
+              "useCases": [
+                {
+                  "title": "Sum of consecutive numbers",
+                  "description": "(n−1)+n+(n+1) = 3n proves the sum of three consecutive numbers is 3× the middle, always.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Even-number test",
+                  "description": "Any even number is 2k, so adding two evens 2a+2b = 2(a+b) proves the result is always even.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Quick mental sums",
+                  "description": "To add 19+20+21 fast, recognise it as 3×20 = 60 using the pattern.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "This 'generalise with a letter, then simplify to prove' move is the engine of algebra and the gateway to formal proof. The same idea, pushed further, becomes mathematical induction and the polynomial-identity reasoning used throughout higher mathematics. It's also exactly the parity-proof idea from Ch.6 (Number Play), now written with letter-numbers.",
+              "mnemonic": "Name the varying number with a letter, simplify, and the pattern proves itself for ALL cases.",
+              "predictQuestion": "Why does writing three consecutive numbers as (n − 1), n, (n + 1) prove their sum is always 3 times the middle number?",
+              "whyChain": [
+                "A pattern spotted in examples — like 4+5+6 = 3×5 — is only a guess until proven. No matter how many examples you check, you can't be sure some untested case doesn't break it. To be certain, you need a single argument that covers EVERY case.",
+                "A letter-number does exactly that, because it stands for any value at once. Write three consecutive numbers around a middle value n as (n − 1), n, (n + 1). Now simplify their sum: (n − 1) + n + (n + 1). The −1 and +1 cancel, leaving 3n.",
+                "Since this used only n (not any specific number), 3n holds for EVERY n: the sum of three consecutive numbers is always three times the middle. That's a proof, not a sample. This 'name it with a letter, simplify, and the pattern proves itself' move is the heart of algebra and the same generalise-then-prove idea behind parity proofs in Ch.6 — it scales all the way to induction and the symbolic reasoning of higher mathematics."
+              ],
+              "relatedConceptIds": [
+                "ch04_t03_c01",
+                "ch04_t01_c01",
+                "ch06_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch04_t03_q03",
+                "ch04_t03_q04"
+              ],
+              "pageRefs": [
+                90,
+                91
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -5933,6 +5983,84 @@
               "difficulty": 2,
               "pageRefs": [
                 88
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q03",
+              "prompt": "Using n for the middle number, prove that the sum of three consecutive numbers is always 3 times the middle number.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Write them as (n−1), n, (n+1). Sum = (n−1) + n + (n+1) = 3n. The −1 and +1 cancel, so the sum is 3n = 3 × the middle number, for every n.",
+              "solutionSteps": [
+                "Let the middle number be n; the three consecutive numbers are (n−1), n, (n+1).",
+                "Add them: (n−1) + n + (n+1).",
+                "Combine like terms: the −1 and +1 cancel, leaving n + n + n = 3n.",
+                "3n is exactly 3 times the middle number — true for all n, so it is proved."
+              ],
+              "commonMistakes": [
+                "Only checking examples and calling it a proof — examples suggest, algebra proves.",
+                "Forgetting that the ±1 cancel, or writing the consecutive numbers wrongly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Prove the sum of two consecutive numbers is always odd.",
+                  "answer": "n + (n+1) = 2n + 1, which is one more than an even number, hence odd — for all n.",
+                  "solutionSteps": [
+                    "Write them as n and n+1; sum = 2n+1; 2n is even so 2n+1 is odd."
+                  ]
+                },
+                {
+                  "prompt": "What is 49 + 50 + 51 using the pattern?",
+                  "answer": "150 (= 3 × 50)",
+                  "solutionSteps": [
+                    "Middle is 50, sum = 3 × 50 = 150."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                90,
+                91
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_t03_q04",
+              "prompt": "Use a letter-number to show that the sum of any two even numbers is even.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Any even number can be written 2a and 2b. Their sum is 2a + 2b = 2(a + b), a multiple of 2 — hence even, for all a, b.",
+              "solutionSteps": [
+                "Write the two even numbers as 2a and 2b (every even number is 2 times something).",
+                "Add: 2a + 2b.",
+                "Factor out 2: 2(a + b).",
+                "A multiple of 2 is even, so the sum is always even."
+              ],
+              "commonMistakes": [
+                "Testing a few examples instead of giving the general argument.",
+                "Not factoring out the 2 to show the result is a multiple of 2."
+              ],
+              "variations": [
+                {
+                  "prompt": "Show that an even number plus an odd number is odd.",
+                  "answer": "2a + (2b+1) = 2(a+b) + 1, which is odd for all a, b.",
+                  "solutionSteps": [
+                    "Even 2a + odd 2b+1 = 2(a+b)+1, one more than a multiple of 2."
+                  ]
+                },
+                {
+                  "prompt": "Show 4 times any number is even.",
+                  "answer": "4n = 2(2n), a multiple of 2, so even.",
+                  "solutionSteps": [
+                    "4n = 2 × 2n, a multiple of 2."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                90,
+                91
               ],
               "needsHumanReview": false
             }
