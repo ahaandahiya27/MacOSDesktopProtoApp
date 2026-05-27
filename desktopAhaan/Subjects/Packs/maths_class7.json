@@ -9660,6 +9660,56 @@
                 180
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_c02",
+              "title": "Multiplying and dividing mixed numbers",
+              "explanations": {
+                "oneLine": "To multiply or divide mixed numbers, first convert each to an improper fraction, then apply the usual fraction rules.",
+                "kidFriendly": "A mixed number like 2½ is part-whole, part-fraction — awkward to multiply directly. The trick: turn it into an improper fraction first. 2½ = (2×2 + 1)/2 = 5/2. So 2½ × 1⅓ becomes 5/2 × 4/3 = 20/6 = 10/3 = 3⅓. For division, convert both and then multiply by the reciprocal. The golden rule for ANY mixed-number multiplication or division: convert to improper fractions FIRST, then it's just the fraction rules you already know. Never multiply the whole parts and fraction parts separately — that gives the wrong answer.",
+                "textbook": "A mixed number is converted to an improper fraction by multiplying the whole-number part by the denominator and adding the numerator, keeping the same denominator: a b/c = (a×c + b)/c. Once both factors are improper fractions, multiplication and division proceed by the standard rules (multiply numerators and denominators; for division, multiply by the reciprocal). For example, 2½ × 1⅓ = 5/2 × 4/3 = 20/6 = 10/3 = 3⅓.",
+                "expert": "Mixed-number notation a b/c denotes a + b/c, a sum, not a product — which is exactly why naive part-wise multiplication fails (it ignores the cross terms of (a + b/c)(d + e/f)). Converting to a single improper fraction collapses the sum into one rational p/q, after which the field operations of ℚ apply directly. This is a worked instance of normalising to a canonical form before computing."
+              },
+              "reasoning": "A mixed number is secretly an addition (2½ means 2 + ½), and you can't multiply two sums by just multiplying their matching parts. Rewriting each mixed number as a single improper fraction turns it into one number, so the ordinary multiply/divide rules apply cleanly.",
+              "useCases": [
+                {
+                  "title": "Scaling a recipe",
+                  "description": "1½ cups of rice × 2½ batches = 3/2 × 5/2 = 15/4 = 3¾ cups.",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Cloth lengths",
+                  "description": "2¼ m of cloth for each of 1⅓ curtains needs 9/4 × 4/3 = 3 m.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Sharing land",
+                  "description": "A 4½-acre plot split into ¾-acre shares: 9/2 ÷ 3/4 = 9/2 × 4/3 = 6 shares.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Calculators and computers store mixed numbers internally as single fractions (or decimals) for exactly this reason — a sum-form like 2½ is ambiguous to operate on until normalised. The habit of converting to a canonical single value before computing recurs throughout algebra (improper fractions, single powers, combined logarithms).",
+              "mnemonic": "Mixed number? Make it improper FIRST. (whole × denominator + numerator) over the denominator.",
+              "predictQuestion": "How would you compute 2½ × 1⅓ — and why can't you just multiply the whole parts and the fraction parts separately?",
+              "whyChain": [
+                "A mixed number is really a hidden addition: 2½ means 2 + ½, not 2 times ½. That single fact is the root of every mixed-number mistake — you can't multiply two sums by pairing up their matching pieces, because that drops the cross-terms.",
+                "So we normalise first: convert each mixed number to a single improper fraction using (whole × denominator + numerator) over the denominator. 2½ becomes 5/2; 1⅓ becomes 4/3. Now each is ONE number, not a sum, and the ordinary fraction rules apply without any cross-term trouble.",
+                "From there it's the rules you already know: multiply numerators and denominators (5/2 × 4/3 = 20/6 = 10/3 = 3⅓), or for division multiply by the reciprocal. Convert back to a mixed number at the end if you like. 'Make it improper first' is a specific case of a deep habit — put a quantity in a single canonical form before operating on it, a move you'll use throughout algebra."
+              ],
+              "relatedConceptIds": [
+                "ch08_t02_c01",
+                "ch08_t01_c01",
+                "ch08_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch08_t02_q03",
+                "ch08_t02_q04"
+              ],
+              "pageRefs": [
+                180,
+                181
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -9736,6 +9786,82 @@
               "pageRefs": [
                 179,
                 180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q03",
+              "prompt": "Compute 2½ × 1⅓ by converting to improper fractions first.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "10/3 = 3⅓",
+              "solutionSteps": [
+                "Convert: 2½ = (2×2+1)/2 = 5/2; 1⅓ = (1×3+1)/3 = 4/3.",
+                "Multiply: 5/2 × 4/3 = 20/6.",
+                "Simplify: 20/6 = 10/3 = 3⅓."
+              ],
+              "commonMistakes": [
+                "Multiplying whole parts and fraction parts separately (2×1 and ½×⅓) — wrong, because a mixed number is a sum.",
+                "Forgetting to convert to improper fractions before multiplying."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 1½ × 2½.",
+                  "answer": "15/4 = 3¾",
+                  "solutionSteps": [
+                    "3/2 × 5/2 = 15/4 = 3¾."
+                  ]
+                },
+                {
+                  "prompt": "Compute 2¼ × 1⅓.",
+                  "answer": "3",
+                  "solutionSteps": [
+                    "9/4 × 4/3 = 36/12 = 3."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                180,
+                181
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_t02_q04",
+              "prompt": "A 4½-acre plot is divided into ¾-acre shares. How many shares are there?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "6 shares",
+              "solutionSteps": [
+                "Convert the mixed number: 4½ = 9/2.",
+                "Divide by the share size: 9/2 ÷ 3/4.",
+                "Multiply by the reciprocal: 9/2 × 4/3 = 36/6 = 6.",
+                "So there are 6 shares."
+              ],
+              "commonMistakes": [
+                "Dividing 4½ by ¾ without converting to improper fractions.",
+                "Multiplying instead of dividing (the question asks how many shares fit)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many ½-cup servings are in 3½ cups?",
+                  "answer": "7",
+                  "solutionSteps": [
+                    "7/2 ÷ 1/2 = 7/2 × 2 = 7."
+                  ]
+                },
+                {
+                  "prompt": "How many ⅔-m pieces from 4 m?",
+                  "answer": "6",
+                  "solutionSteps": [
+                    "4 ÷ 2/3 = 4 × 3/2 = 6."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                181
               ],
               "needsHumanReview": false
             }

@@ -102,7 +102,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 7 concepts, 9 Q |
 | 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 5 concepts, 8 Q |
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
-| 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 3 concepts, 6 Q |
+| 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 4 concepts, 8 Q (added mixed numbers) |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
 | 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 4 concepts, 8 Q (added subtraction) |
 | 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 3 concepts, 6 Q |
