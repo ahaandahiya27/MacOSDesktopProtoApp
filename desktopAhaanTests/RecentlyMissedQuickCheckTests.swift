@@ -45,6 +45,10 @@ final class RecentlyMissedQuickCheckTests: XCTestCase {
         XCTAssertEqual(location?.chapter.number, 7)
         XCTAssertEqual(location?.question.id, qcId)
         XCTAssertEqual(location?.question.effectiveSource, .sceneQuickCheck)
+        XCTAssertFalse(location?.question.commonMistakes.isEmpty ?? true,
+            "Post-enrichment, every quick-check must carry commonMistakes — " +
+            "QuestionDetailView's commonMistakesCard otherwise renders blank " +
+            "when the kid lands on it from Recently Missed.")
     }
 
     /// Multiple wrong answers across chapters all show up, in
