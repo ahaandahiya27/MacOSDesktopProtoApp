@@ -34,9 +34,10 @@ extension DataStore {
     func recordEphemeralReview(
         ephemeralId: String,
         quality: ReviewQuality,
-        at now: Date = Date()
+        at now: Date = Date(),
+        packId: String? = nil
     ) {
-        recordReview(questionId: ephemeralId, quality: quality, at: now)
+        recordReview(questionId: ephemeralId, quality: quality, at: now, packId: packId)
     }
 
     /// True if `id` looks like an ephemeral synthetic id. Used by the
@@ -82,5 +83,21 @@ extension DataStore {
         }
         let sorted = candidates.sorted { $0.lastReviewedAt > $1.lastReviewedAt }
         return sorted.prefix(limit).map(\.questionId)
+    }
+
+    /// Keep only the ids whose review was recorded in `packId` — or that
+    /// carry no pack tag (legacy `reviews.json` rows + globally-unique
+    /// ephemeral ids, which can't collide and so resolve unambiguously).
+    ///
+    /// Bare topic-question ids (`chNN_tNN_qNN`) are shared across subjects,
+    /// so the chapter-scoped "Stuck here?" strip — which only checks
+    /// `chapter.allQuestionIds` membership — would otherwise surface a
+    /// question missed in Science inside the matching Maths chapter. This
+    /// filters by the pack the review was actually recorded in.
+    func questionIdsScoped(_ ids: [String], toPackId packId: String) -> [String] {
+        ids.filter { id in
+            guard let recorded = questionReviews[id]?.packId else { return true }
+            return recorded == packId
+        }
     }
 }

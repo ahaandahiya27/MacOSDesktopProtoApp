@@ -30,6 +30,7 @@ final class SubjectRegistry: ObservableObject {
         didSet {
             _packsById = nil
             _questionLocations = nil
+            _questionLocationsByPack = nil
         }
     }
     @Published private(set) var loadErrors: [String] = []
@@ -49,6 +50,14 @@ final class SubjectRegistry: ObservableObject {
     /// the launch-time DailyPracticeView render and on every dataStore
     /// mutation that re-invalidates the body.
     private var _questionLocations: [String: (pack: SubjectPack, chapter: Chapter, question: Question)]?
+
+    /// `packId → (question.id → (pack, chapter, question))`. Disambiguates
+    /// bare topic-question ids that collide across packs: `location(
+    /// forQuestionId:preferredPackId:)` consults the owning pack's slice
+    /// first so a review recorded in Science resolves to Science even
+    /// though Maths also has a `chNN_tNN_qNN` with the same id. Built in
+    /// the same lazy pass as `_questionLocations`.
+    private var _questionLocationsByPack: [String: [String: (pack: SubjectPack, chapter: Chapter, question: Question)]]?
     /// True while the initial pack decode is running off-thread.
     /// UI can use this to render a placeholder instead of an empty sidebar.
     @Published private(set) var isLoading: Bool = true
@@ -187,48 +196,64 @@ final class SubjectRegistry: ObservableObject {
     /// doesn't populate a stale cache.
     func location(forQuestionId id: String)
         -> (pack: SubjectPack, chapter: Chapter, question: Question)? {
-        if _questionLocations == nil {
-            var built: [String: (SubjectPack, Chapter, Question)] = [:]
-            built.reserveCapacity(1200)  // ~732 sci + 154 sa + ~285 boss = 1171 after 2026-05-25 migration
-            for pack in packs {
-                for chapter in pack.chapters {
-                    for topic in chapter.topics {
-                        for q in topic.questions {
-                            // First writer wins on collision. testNoCrossPack
-                            // CrossPackConceptIdCollision pins that this case
-                            // doesn't happen in practice but we don't crash
-                            // here if it ever does.
-                            if built[q.id] == nil {
-                                built[q.id] = (pack, chapter, q)
-                            }
-                        }
-                    }
-                    // Boss-quiz questions live at chapter level (not inside
-                    // a topic) — see Chapter.bossQuestions. Index them in
-                    // the same lookup table so DailyPracticeView / the
-                    // recently-missed surface / ChapterStuckHereStrip all
-                    // resolve `bossquiz_chNN_qII` ids cleanly. Added
-                    // 2026-05-25 with the boss-quiz migration.
-                    for q in chapter.bossQuestionsList {
-                        if built[q.id] == nil {
-                            built[q.id] = (pack, chapter, q)
-                        }
-                    }
-                    // Scene quick-check questions — same shape, same
-                    // surface set. Added 2026-05-26 with the scene
-                    // quick-check migration. Stable ids carry the
-                    // `scenecheck_chNN_qII` prefix already whitelisted
-                    // in DataStore.ephemeralIdPrefixes.
-                    for q in chapter.quickCheckQuestionsList {
-                        if built[q.id] == nil {
-                            built[q.id] = (pack, chapter, q)
-                        }
-                    }
-                }
-            }
-            _questionLocations = built
+        buildQuestionIndexesIfNeeded()
+        return _questionLocations?[id]
+    }
+
+    /// Like `location(forQuestionId:)` but resolves WITHIN `preferredPackId`
+    /// first, falling back to the global (first-writer-wins) index when the
+    /// id isn't in that pack or no preference is given.
+    ///
+    /// Bare topic-question ids (`chNN_tNN_qNN`) are allowed to collide across
+    /// packs, so the global index would mis-resolve a Science review to Maths
+    /// (Maths sorts first). Callers that know the owning pack — e.g. a
+    /// `QuestionReview.packId` captured at answer time — pass it here so the
+    /// review resolves to the subject the kid actually answered it in.
+    func location(forQuestionId id: String, preferredPackId: String?)
+        -> (pack: SubjectPack, chapter: Chapter, question: Question)? {
+        buildQuestionIndexesIfNeeded()
+        if let pid = preferredPackId,
+           let scoped = _questionLocationsByPack?[pid]?[id] {
+            return scoped
         }
         return _questionLocations?[id]
+    }
+
+    /// Builds both the flat `_questionLocations` index and the per-pack
+    /// `_questionLocationsByPack` index in one pass. Lazy so a transient
+    /// empty-packs state at launch doesn't populate a stale cache.
+    private func buildQuestionIndexesIfNeeded() {
+        guard _questionLocations == nil else { return }
+        var flat: [String: (SubjectPack, Chapter, Question)] = [:]
+        flat.reserveCapacity(1200)  // ~732 sci + 154 sa + ~285 boss + 148 maths
+        var byPack: [String: [String: (SubjectPack, Chapter, Question)]] = [:]
+        for pack in packs {
+            var packIndex: [String: (SubjectPack, Chapter, Question)] = [:]
+            func record(_ q: Question, _ chapter: Chapter) {
+                // First writer wins in the FLAT index on collision (the
+                // collision is allowed for question ids — see
+                // ChapterContentTests.testNoCrossPackConceptIdCollision).
+                if flat[q.id] == nil { flat[q.id] = (pack, chapter, q) }
+                // The per-pack index never collides within a pack
+                // (MathsChapterContentTests / boss + quick-check ratchets
+                // pin per-pack id uniqueness).
+                packIndex[q.id] = (pack, chapter, q)
+            }
+            for chapter in pack.chapters {
+                for topic in chapter.topics {
+                    for q in topic.questions { record(q, chapter) }
+                }
+                // Boss-quiz + scene-quick-check questions live at chapter
+                // level (not inside a topic) and carry globally-unique
+                // prefixed ids, but indexing them here keeps every
+                // recently-missed / Stuck-here resolver on one path.
+                for q in chapter.bossQuestionsList { record(q, chapter) }
+                for q in chapter.quickCheckQuestionsList { record(q, chapter) }
+            }
+            byPack[pack.id] = packIndex
+        }
+        _questionLocations = flat
+        _questionLocationsByPack = byPack
     }
 
     // MARK: - Bundle scanning

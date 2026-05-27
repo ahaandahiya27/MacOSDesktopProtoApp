@@ -23,7 +23,17 @@ struct DailyPracticeView: View {
     private func collectQuestions(matching ids: Set<String>)
         -> [(pack: SubjectPack, chapter: Chapter, question: Question)] {
         guard !ids.isEmpty else { return [] }
-        return ids.compactMap { subjectRegistry.location(forQuestionId: $0) }
+        // Resolve within the pack the review was recorded in, so a bare
+        // topic-question id that collides across subjects (e.g. a Science
+        // `chNN_tNN_qNN` that Maths also defines) maps back to the subject
+        // the kid actually answered it in instead of whichever pack sorts
+        // first. Falls back to the global index when packId is unknown.
+        return ids.compactMap {
+            subjectRegistry.location(
+                forQuestionId: $0,
+                preferredPackId: dataStore.questionReviews[$0]?.packId
+            )
+        }
     }
 
     private var toughEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
@@ -40,7 +50,10 @@ struct DailyPracticeView: View {
     /// this isn't a Set / collectQuestions(matching:) routing.
     private var recentlyMissedEntries: [(pack: SubjectPack, chapter: Chapter, question: Question)] {
         dataStore.recentlyMissedQuestionIds().compactMap {
-            subjectRegistry.location(forQuestionId: $0)
+            subjectRegistry.location(
+                forQuestionId: $0,
+                preferredPackId: dataStore.questionReviews[$0]?.packId
+            )
         }
     }
 

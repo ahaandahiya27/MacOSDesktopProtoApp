@@ -439,7 +439,7 @@ struct QuestionDetailView: View {
             if let suggested = suggestedQuality, suggested != quality {
                 manualOverride = true
             }
-            dataStore.recordReview(questionId: question.id, quality: quality)
+            dataStore.recordReview(questionId: question.id, quality: quality, packId: pack.id)
             withAnimationRespectingReduceMotion(.easeOut(duration: 0.18)) { didRateThisVisit = true }
         } label: {
             VStack(spacing: 3) {

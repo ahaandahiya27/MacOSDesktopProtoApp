@@ -32,13 +32,27 @@ struct QuestionReview: Codable, Hashable {
     /// Number of times this question has been answered `.forgot`.
     /// Surfaces as a "you keep missing this one" hint in future UI.
     var lapses: Int
+    /// The id of the subject pack this review belongs to, captured at
+    /// record time. Optional because (a) `reviews.json` rows written
+    /// before this field existed decode it as nil, and (b) ephemeral
+    /// surfaces with globally-unique prefixed ids don't need it.
+    ///
+    /// Why it matters: bare topic-question ids (`chNN_tNN_qNN`) are
+    /// ALLOWED to collide across packs (Science/Sanskrit/Maths share
+    /// the scheme), so resolving a review by id alone is ambiguous —
+    /// `SubjectRegistry.location(forQuestionId:)` would pick whichever
+    /// pack sorts first (Maths). Storing the pack here lets every
+    /// surface (Recently-Missed, Mastery, Daily Practice) resolve the
+    /// review back to the subject the kid actually answered it in.
+    var packId: String? = nil
 
-    static func newReview(for questionId: String, at date: Date) -> QuestionReview {
+    static func newReview(for questionId: String, at date: Date,
+                          packId: String? = nil) -> QuestionReview {
         QuestionReview(
             questionId: questionId,
             bucket: 0, ease: 2.5, intervalDays: 0,
             lastReviewedAt: date, nextDueAt: date,
-            totalReviews: 0, lapses: 0
+            totalReviews: 0, lapses: 0, packId: packId
         )
     }
 }
@@ -620,10 +634,15 @@ final class DataStore: ObservableObject {
     /// Also credits the streak — idempotent within a calendar day.
     func recordReview(questionId: String,
                       quality: ReviewQuality,
-                      at now: Date = Date()) {
+                      at now: Date = Date(),
+                      packId: String? = nil) {
         let prior = questionReviews[questionId]
-            ?? QuestionReview.newReview(for: questionId, at: now)
-        let updated = SM2Scheduler.schedule(prior, quality: quality, at: now)
+            ?? QuestionReview.newReview(for: questionId, at: now, packId: packId)
+        var updated = SM2Scheduler.schedule(prior, quality: quality, at: now)
+        // Backfill/refresh the owning pack when the caller knows it.
+        // `schedule` already preserves a previously-stored packId via its
+        // `var r = review` copy, so a nil here never clears a known value.
+        if let packId { updated.packId = packId }
         questionReviews[questionId] = updated
         // Coalesced — a 10-question review session writes once at the end,
         // not 10 times in 30 seconds. flushSavesBeforeQuit covers ⌘Q.

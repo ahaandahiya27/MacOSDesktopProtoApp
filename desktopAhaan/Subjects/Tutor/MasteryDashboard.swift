@@ -58,7 +58,13 @@ private struct MasteryDashboardContent: View {
             forPackId: pack.id,
             chapters: pack.chapters,
             locator: { id in
-                guard let loc = subjectRegistry.location(forQuestionId: id),
+                // Resolve within the review's recorded pack so a bare
+                // topic-question id that collides across subjects is
+                // attributed to the subject it was actually answered in
+                // (not whichever pack sorts first in the flat index).
+                guard let loc = subjectRegistry.location(
+                        forQuestionId: id,
+                        preferredPackId: dataStore.questionReviews[id]?.packId),
                       loc.pack.id == pack.id else { return nil }
                 return (
                     chapterId: loc.chapter.id,
@@ -67,7 +73,9 @@ private struct MasteryDashboardContent: View {
                 )
             },
             topicLocator: { id in
-                guard let loc = subjectRegistry.location(forQuestionId: id),
+                guard let loc = subjectRegistry.location(
+                        forQuestionId: id,
+                        preferredPackId: dataStore.questionReviews[id]?.packId),
                       loc.pack.id == pack.id else { return nil }
                 // Find the question's owning topic. Walk the chapter
                 // topics linearly — typical chapter has 3-5 topics

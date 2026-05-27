@@ -159,8 +159,8 @@ struct ChapterDetailView: View {
     private var stuckSignals: StuckSignals {
         ChapterStuckHereStrip.signals(
             chapter: chapter,
-            toughQuestionIds: dataStore.toughQuestionIds,
-            recentlyMissedIds: dataStore.recentlyMissedQuestionIds(),
+            toughQuestionIds: Set(dataStore.questionIdsScoped(Array(dataStore.toughQuestionIds), toPackId: pack.id)),
+            recentlyMissedIds: dataStore.questionIdsScoped(dataStore.recentlyMissedQuestionIds(), toPackId: pack.id),
             bookmarkedConceptIds: Set(
                 dataStore.studyBookmarks
                     .filter { $0.subjectPackId == pack.id }
