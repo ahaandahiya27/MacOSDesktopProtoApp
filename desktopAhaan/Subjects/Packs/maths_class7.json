@@ -15169,6 +15169,55 @@
                 158
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_c02",
+              "title": "Tangrams and conservation of area",
+              "explanations": {
+                "oneLine": "A tangram cuts a square into 7 pieces that can be rearranged into many shapes — and however you arrange them, the total area never changes.",
+                "kidFriendly": "A tangram is an old Chinese puzzle: a square is cut into 7 flat pieces (triangles, a square, a parallelogram). You can slide and turn those pieces to make an arrow, a cat, a person — all sorts of shapes. Here's the key maths idea: no matter what shape you build, the total area stays exactly the same, because you're using the very same 7 pieces — you've only moved them, not added or removed any. Rearranging pieces conserves area. This is why two shapes can look totally different yet cover the same amount of surface: same pieces, same total area.",
+                "textbook": "A tangram is a dissection puzzle formed by cutting a square into seven pieces (five triangles, one square, one parallelogram). These pieces can be rearranged — by translation, rotation, and reflection (rigid motions) — into a vast number of silhouettes. Because rigid motions preserve area and no pieces are added or removed, every figure formed from the full set has exactly the same total area as the original square. This illustrates the principle of conservation of area under rearrangement.",
+                "expert": "Tangram rearrangement is an instance of equidecomposability (scissors-congruence): two planar figures composed of the same finite set of pieces have equal area because area is additive over a partition and invariant under isometries. The Bolyai–Gerwien theorem generalises this — any two polygons of equal area are scissors-congruent. Conservation of area under dissection-and-rearrangement is the elementary kernel of that deep result."
+              },
+              "reasoning": "Moving a piece (sliding, turning, or flipping it) doesn't change its size — only its position. So when you rearrange a fixed set of pieces into a new shape, you've added nothing and removed nothing; the areas simply re-add to the same total. Different-looking shapes from the same pieces must have equal area.",
+              "useCases": [
+                {
+                  "title": "Tangram silhouettes",
+                  "description": "The same 7 tangram pieces form an arrow, a swan, or a running figure — each with the area of the original square.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Cutting and rearranging cloth",
+                  "description": "Re-cutting a fabric square into pieces and laying them out differently doesn't change how much cloth you have.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Comparing areas by dissection",
+                  "description": "To show two shapes have equal area, cut one into pieces that reassemble into the other.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "This simple 'rearranging keeps area the same' idea grows into a beautiful theorem: the Bolyai–Gerwien theorem says ANY two polygons with the same area can be cut into pieces that rearrange into each other. (Surprisingly, the analogous claim FAILS in 3D for solids — proved as Hilbert's third problem — so area-by-dissection is special to the plane.)",
+              "mnemonic": "Move pieces, don't add or remove them → total area is conserved.",
+              "predictQuestion": "If you rearrange all 7 tangram pieces from a square into the shape of an arrow, how does the arrow's area compare with the original square's?",
+              "whyChain": [
+                "A tangram is a fixed set of 7 flat pieces cut from one square. To make a new shape you slide, turn, or flip those pieces into new positions — but moving a piece changes only WHERE it is, never how big it is. A rigid motion preserves a piece's area.",
+                "Since you build the new figure from exactly those same 7 pieces — adding none, removing none — the total area is just the sum of the unchanged piece-areas. That sum is the same no matter how the pieces are arranged. So every tangram figure has exactly the area of the original square.",
+                "This is the principle of conservation of area under rearrangement, and it's the elementary seed of a deep theorem (Bolyai–Gerwien): ANY two polygons of equal area can be dissected into pieces that rearrange into one another. Two shapes can look utterly different yet cover the same surface — because area depends only on the pieces, not their arrangement."
+              ],
+              "relatedConceptIds": [
+                "ch14_t03_c01",
+                "ch11_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t03_q03",
+                "ch14_t03_q04"
+              ],
+              "pageRefs": [
+                155,
+                156
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -15244,6 +15293,83 @@
               "difficulty": 3,
               "pageRefs": [
                 158
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_q03",
+              "prompt": "You rearrange all 7 tangram pieces (cut from a square) into the shape of a swan. How does the swan's total area compare with the original square's, and why?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "They are equal. Rearranging the same 7 pieces (only moving them) neither adds nor removes area, so the total is conserved.",
+              "solutionSteps": [
+                "The swan is built from exactly the same 7 pieces as the square.",
+                "Sliding, turning, or flipping a piece doesn't change its area — only its position.",
+                "No pieces are added or removed, so the areas re-add to the same total.",
+                "Therefore the swan has the same area as the original square."
+              ],
+              "commonMistakes": [
+                "Thinking a more 'spread out' shape has more area.",
+                "Assuming the area changes because the shape looks different."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two different tangram figures are each made from the full set of 7 pieces. Do they have equal area?",
+                  "answer": "Yes — both equal the original square's area.",
+                  "solutionSteps": [
+                    "Same pieces → same total area regardless of arrangement."
+                  ]
+                },
+                {
+                  "prompt": "If you use only 5 of the 7 tangram pieces to make a shape, is its area equal to the square's?",
+                  "answer": "No — it's less, because two pieces (their area) are missing.",
+                  "solutionSteps": [
+                    "Fewer pieces means less total area."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                155,
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_q04",
+              "prompt": "A rectangle is cut along a diagonal into two pieces, which are then rearranged into a different shape. Has the total area changed? State the principle involved.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No — the area is unchanged. By conservation of area under rearrangement (the pieces are only moved, not added to or removed), the total area stays the same.",
+              "solutionSteps": [
+                "Cutting splits the rectangle into pieces whose areas sum to the rectangle's area.",
+                "Rearranging moves the pieces (rigid motions) without changing their sizes.",
+                "No piece is added or removed, so the total area is conserved.",
+                "Principle: conservation of area under dissection and rearrangement."
+              ],
+              "commonMistakes": [
+                "Believing the new shape's different outline means a different area.",
+                "Confusing area (conserved) with perimeter (which CAN change when pieces are rearranged)."
+              ],
+              "variations": [
+                {
+                  "prompt": "When you rearrange pieces, does the PERIMETER also stay the same?",
+                  "answer": "Not necessarily — perimeter can change even though area is conserved.",
+                  "solutionSteps": [
+                    "Rearranging can expose different edges, changing perimeter while area stays fixed."
+                  ]
+                },
+                {
+                  "prompt": "Two pieces of a cut square reassemble into a triangle of the same area — what theorem generalises this?",
+                  "answer": "The Bolyai–Gerwien theorem (equal-area polygons are scissors-congruent).",
+                  "solutionSteps": [
+                    "Any two equal-area polygons can be dissected into matching pieces."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                156
               ],
               "needsHumanReview": false
             }

@@ -131,6 +131,31 @@ final class MathsChapterContentTests: XCTestCase {
         }
     }
 
+    // MARK: - Unique ids
+
+    func testNoDuplicateConceptOrQuestionIds() throws {
+        let pack = try loadMathsPack()
+        var conceptIds: [String] = []
+        var questionIds: [String] = []
+        for ch in pack.chapters {
+            for t in ch.topics {
+                conceptIds.append(contentsOf: t.concepts.map(\.id))
+                questionIds.append(contentsOf: t.questions.map(\.id))
+            }
+        }
+        XCTAssertEqual(conceptIds.count, Set(conceptIds).count,
+            "Duplicate concept id(s) in the Maths pack: \(duplicates(conceptIds)).")
+        XCTAssertEqual(questionIds.count, Set(questionIds).count,
+            "Duplicate question id(s) in the Maths pack: \(duplicates(questionIds)).")
+    }
+
+    private func duplicates(_ ids: [String]) -> [String] {
+        var seen: Set<String> = []
+        var dups: Set<String> = []
+        for id in ids { if !seen.insert(id).inserted { dups.insert(id) } }
+        return dups.sorted()
+    }
+
     // MARK: - Chapter enrichment floors
 
     func testEveryChapterMeetsEnrichmentFloors() throws {
