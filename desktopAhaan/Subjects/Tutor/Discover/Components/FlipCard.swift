@@ -27,34 +27,39 @@ struct FlipCard<Front: View, Back: View>: View {
     }
 
     var body: some View {
-        ZStack {
-            frontFace
-                .opacity(isFlipped ? 0 : 1)
-                .rotation3DEffect(
-                    .degrees(isFlipped ? 180 : 0),
-                    axis: (x: 0, y: 1, z: 0)
-                )
-            backFace
-                .opacity(isFlipped ? 1 : 0)
-                .rotation3DEffect(
-                    .degrees(isFlipped ? 0 : -180),
-                    axis: (x: 0, y: 1, z: 0)
-                )
-        }
-        // Default sized to fit emoji + title + subtitle + "Tap to flip" hint
-        // on the front, and 3-4 facts on the back. Callers can override
-        // with their own `.frame(...)` but smaller than ~220×280 will crop
-        // (Scene2_MeetTheWoolAnimals previously used 200×220 → "Wool Source"
-        // subtitle got cropped; now matches 220×300).
-        .frame(width: 220, height: 300)
-        .contentShape(Rectangle())
-        .onTapGesture {
+        // A real Button (plain style preserves the card's appearance) so the
+        // card is flippable by keyboard (Tab + Space/Return) and VoiceOver,
+        // not just by tap. Safe because every FlipCard call site supplies a
+        // non-interactive `back()` (Text/bullets) — no nested controls that a
+        // Button wrap would shadow.
+        Button {
             withAnimation(reduceMotion ? .none : .spring(response: 0.55, dampingFraction: 0.78)) {
                 isFlipped.toggle()
             }
+        } label: {
+            ZStack {
+                frontFace
+                    .opacity(isFlipped ? 0 : 1)
+                    .rotation3DEffect(
+                        .degrees(isFlipped ? 180 : 0),
+                        axis: (x: 0, y: 1, z: 0)
+                    )
+                backFace
+                    .opacity(isFlipped ? 1 : 0)
+                    .rotation3DEffect(
+                        .degrees(isFlipped ? 0 : -180),
+                        axis: (x: 0, y: 1, z: 0)
+                    )
+            }
+            // Default sized to fit emoji + title + subtitle + "Tap to flip"
+            // hint on the front, and 3-4 facts on the back. Callers can
+            // override with their own `.frame(...)` but smaller than ~220×280
+            // will crop (Scene2_MeetTheWoolAnimals previously used 200×220 →
+            // "Wool Source" subtitle got cropped; now matches 220×300).
+            .frame(width: 220, height: 300)
+            .contentShape(Rectangle())
         }
-        .accessibilityElement(children: .contain)
-        .accessibilityAddTraits(.isButton)
+        .buttonStyle(.plain)
         .accessibilityLabel("\(frontTitle). \(frontSubtitle). Activate to flip.")
     }
 
