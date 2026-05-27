@@ -4,6 +4,23 @@ Per §E of the 12-hour spec, this file is only written for the six exception con
 
 ## Open questions
 
+### 2026-05-27 — RESOLVED: Maths articles now ship via subject-aware (mch-prefix) keying
+
+**Resolution (implemented):** chose option (b) — Maths article ids are namespaced
+with an `m` prefix (`mch01_mistakes`, `mch01_glossary`, `mch01_ncert_qa`). The
+key derivation now lives in ONE place: `ChapterDetailView.resolvedArticleEntry`
+and `ExtraReadingRow.resolvedEntry` prepend `"m"` to the lookup key when
+`pack.id == "maths_class7"`, so the existing card logic (`{chapter.id}_mistakes`
+etc.) resolves to `mch…` for Maths and `ch…` for Science with no collision and
+no call-site changes. 45 Maths article HTML files (mistakes/glossary/ncert_qa
+× 15 chapters) were generated from the pack via `/tmp/gen_maths_articles.py`,
+registered in `ArticleIndex.entries`, and bundled (verified in the built app).
+Every Maths chapter now shows a Common-Mistakes card + Vocabulary-Deck and
+NCERT-Q&A reading chips. The two deeper glossary resolvers (GlossarySheet,
+ChapterGlossaryCTA) still lack `pack` and remain Science-gated (minor, noted).
+
+--- original entry (kept for history) ---
+
 ### 2026-05-27 — Article system is not subject-aware (Maths reuses ch01… ids); design decision needed for Maths articles
 
 `ArticleIndex.entries` is keyed by bare chapter/topic/concept id (`ch01`,

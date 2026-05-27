@@ -169,9 +169,9 @@ struct ExtraReadingRow: View {
     /// reimplemented here so this sister file stays self-contained.
     /// Subdirectory lookup with flat-bundle fallback.
     private func resolvedEntry(forKey key: String) -> ArticleEntry? {
-        // Science-only article keys (Maths reuses ch01… ids — see STOP_AND_ASK 2026-05-27).
-        guard pack.id == "science_class7",
-              let entry = ArticleIndex.entries[key] else { return nil }
+        guard pack.id == "science_class7" || pack.id == "maths_class7" else { return nil }
+        let lookup = pack.id == "maths_class7" ? "m" + key : key   // Maths keys are mch01_…
+        guard let entry = ArticleIndex.entries[lookup] else { return nil }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
         let resolved = Bundle.main.url(forResource: name, withExtension: "html",
                                        subdirectory: entry.chapterFolder)
