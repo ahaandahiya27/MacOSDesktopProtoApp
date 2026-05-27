@@ -1787,6 +1787,21 @@ enum ArticleIndex {
         "mch15_miniproject": ArticleEntry(id: "mch15_miniproject", filename: "mch15_miniproject.html", title: "Mini Project — Build a Balance, Solve an Equation", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 40),
         "mch15_selfcheck": ArticleEntry(id: "mch15_selfcheck", filename: "mch15_selfcheck.html", title: "Self-Check — Finding the Unknown", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 5),
         "mch15_storymode": ArticleEntry(id: "mch15_storymode", filename: "mch15_storymode.html", title: "Story Mode — Finding the Unknown", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 6),
+        "mch01_scientists": ArticleEntry(id: "mch01_scientists", filename: "mch01_scientists.html", title: "Scientist Spotlight — Large Numbers Around Us", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 7),
+        "mch02_scientists": ArticleEntry(id: "mch02_scientists", filename: "mch02_scientists.html", title: "Scientist Spotlight — Arithmetic Expressions", chapterFolder: "Articles/MathsChapter2", estimatedMinutes: 7),
+        "mch03_scientists": ArticleEntry(id: "mch03_scientists", filename: "mch03_scientists.html", title: "Scientist Spotlight — A Peek Beyond the Point", chapterFolder: "Articles/MathsChapter3", estimatedMinutes: 7),
+        "mch04_scientists": ArticleEntry(id: "mch04_scientists", filename: "mch04_scientists.html", title: "Scientist Spotlight — Expressions Using Letter-Numbers", chapterFolder: "Articles/MathsChapter4", estimatedMinutes: 7),
+        "mch05_scientists": ArticleEntry(id: "mch05_scientists", filename: "mch05_scientists.html", title: "Scientist Spotlight — Parallel and Intersecting Lines", chapterFolder: "Articles/MathsChapter5", estimatedMinutes: 7),
+        "mch06_scientists": ArticleEntry(id: "mch06_scientists", filename: "mch06_scientists.html", title: "Scientist Spotlight — Number Play", chapterFolder: "Articles/MathsChapter6", estimatedMinutes: 7),
+        "mch07_scientists": ArticleEntry(id: "mch07_scientists", filename: "mch07_scientists.html", title: "Scientist Spotlight — A Tale of Three Intersecting Lines", chapterFolder: "Articles/MathsChapter7", estimatedMinutes: 7),
+        "mch08_scientists": ArticleEntry(id: "mch08_scientists", filename: "mch08_scientists.html", title: "Scientist Spotlight — Working with Fractions", chapterFolder: "Articles/MathsChapter8", estimatedMinutes: 7),
+        "mch09_scientists": ArticleEntry(id: "mch09_scientists", filename: "mch09_scientists.html", title: "Scientist Spotlight — Geometric Twins", chapterFolder: "Articles/MathsChapter9", estimatedMinutes: 7),
+        "mch10_scientists": ArticleEntry(id: "mch10_scientists", filename: "mch10_scientists.html", title: "Scientist Spotlight — Operations with Integers", chapterFolder: "Articles/MathsChapter10", estimatedMinutes: 7),
+        "mch11_scientists": ArticleEntry(id: "mch11_scientists", filename: "mch11_scientists.html", title: "Scientist Spotlight — Finding Common Ground", chapterFolder: "Articles/MathsChapter11", estimatedMinutes: 7),
+        "mch12_scientists": ArticleEntry(id: "mch12_scientists", filename: "mch12_scientists.html", title: "Scientist Spotlight — Another Peek Beyond the Point", chapterFolder: "Articles/MathsChapter12", estimatedMinutes: 7),
+        "mch13_scientists": ArticleEntry(id: "mch13_scientists", filename: "mch13_scientists.html", title: "Scientist Spotlight — Connecting the Dots", chapterFolder: "Articles/MathsChapter13", estimatedMinutes: 7),
+        "mch14_scientists": ArticleEntry(id: "mch14_scientists", filename: "mch14_scientists.html", title: "Scientist Spotlight — Constructions and Tilings", chapterFolder: "Articles/MathsChapter14", estimatedMinutes: 7),
+        "mch15_scientists": ArticleEntry(id: "mch15_scientists", filename: "mch15_scientists.html", title: "Scientist Spotlight — Finding the Unknown", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 7),
     ]
 
     static func entry(forConceptId id: String) -> ArticleEntry? {
