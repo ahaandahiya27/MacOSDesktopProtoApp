@@ -1802,6 +1802,21 @@ enum ArticleIndex {
         "mch13_scientists": ArticleEntry(id: "mch13_scientists", filename: "mch13_scientists.html", title: "Scientist Spotlight — Connecting the Dots", chapterFolder: "Articles/MathsChapter13", estimatedMinutes: 7),
         "mch14_scientists": ArticleEntry(id: "mch14_scientists", filename: "mch14_scientists.html", title: "Scientist Spotlight — Constructions and Tilings", chapterFolder: "Articles/MathsChapter14", estimatedMinutes: 7),
         "mch15_scientists": ArticleEntry(id: "mch15_scientists", filename: "mch15_scientists.html", title: "Scientist Spotlight — Finding the Unknown", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 7),
+        "mch01_whatif": ArticleEntry(id: "mch01_whatif", filename: "mch01_whatif.html", title: "What If? — Large Numbers Around Us", chapterFolder: "Articles/MathsChapter1", estimatedMinutes: 7),
+        "mch02_whatif": ArticleEntry(id: "mch02_whatif", filename: "mch02_whatif.html", title: "What If? — Arithmetic Expressions", chapterFolder: "Articles/MathsChapter2", estimatedMinutes: 7),
+        "mch03_whatif": ArticleEntry(id: "mch03_whatif", filename: "mch03_whatif.html", title: "What If? — A Peek Beyond the Point", chapterFolder: "Articles/MathsChapter3", estimatedMinutes: 7),
+        "mch04_whatif": ArticleEntry(id: "mch04_whatif", filename: "mch04_whatif.html", title: "What If? — Expressions Using Letter-Numbers", chapterFolder: "Articles/MathsChapter4", estimatedMinutes: 7),
+        "mch05_whatif": ArticleEntry(id: "mch05_whatif", filename: "mch05_whatif.html", title: "What If? — Parallel and Intersecting Lines", chapterFolder: "Articles/MathsChapter5", estimatedMinutes: 7),
+        "mch06_whatif": ArticleEntry(id: "mch06_whatif", filename: "mch06_whatif.html", title: "What If? — Number Play", chapterFolder: "Articles/MathsChapter6", estimatedMinutes: 7),
+        "mch07_whatif": ArticleEntry(id: "mch07_whatif", filename: "mch07_whatif.html", title: "What If? — A Tale of Three Intersecting Lines", chapterFolder: "Articles/MathsChapter7", estimatedMinutes: 7),
+        "mch08_whatif": ArticleEntry(id: "mch08_whatif", filename: "mch08_whatif.html", title: "What If? — Working with Fractions", chapterFolder: "Articles/MathsChapter8", estimatedMinutes: 7),
+        "mch09_whatif": ArticleEntry(id: "mch09_whatif", filename: "mch09_whatif.html", title: "What If? — Geometric Twins", chapterFolder: "Articles/MathsChapter9", estimatedMinutes: 7),
+        "mch10_whatif": ArticleEntry(id: "mch10_whatif", filename: "mch10_whatif.html", title: "What If? — Operations with Integers", chapterFolder: "Articles/MathsChapter10", estimatedMinutes: 7),
+        "mch11_whatif": ArticleEntry(id: "mch11_whatif", filename: "mch11_whatif.html", title: "What If? — Finding Common Ground", chapterFolder: "Articles/MathsChapter11", estimatedMinutes: 7),
+        "mch12_whatif": ArticleEntry(id: "mch12_whatif", filename: "mch12_whatif.html", title: "What If? — Another Peek Beyond the Point", chapterFolder: "Articles/MathsChapter12", estimatedMinutes: 7),
+        "mch13_whatif": ArticleEntry(id: "mch13_whatif", filename: "mch13_whatif.html", title: "What If? — Connecting the Dots", chapterFolder: "Articles/MathsChapter13", estimatedMinutes: 7),
+        "mch14_whatif": ArticleEntry(id: "mch14_whatif", filename: "mch14_whatif.html", title: "What If? — Constructions and Tilings", chapterFolder: "Articles/MathsChapter14", estimatedMinutes: 7),
+        "mch15_whatif": ArticleEntry(id: "mch15_whatif", filename: "mch15_whatif.html", title: "What If? — Finding the Unknown", chapterFolder: "Articles/MathsChapter15", estimatedMinutes: 7),
     ]
 
     static func entry(forConceptId id: String) -> ArticleEntry? {
