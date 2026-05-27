@@ -334,6 +334,9 @@ extension ArticleIndex {
         "ch09_t02_c02": ArticleEntry(id: "ch09_t02_c02", filename: "ch09_t02_c02.html",
             title: "Why Healthy Soil Is Alive",
             chapterFolder: chapter9Folder, estimatedMinutes: 7),
+        "ch09_t02_c03": ArticleEntry(id: "ch09_t02_c03", filename: "ch09_t02_c03.html",
+            title: "Percolation Rate and How to Measure It",
+            chapterFolder: chapter9Folder, estimatedMinutes: 6),
 
         "ch09_t03": ArticleEntry(id: "ch09_t03", filename: "ch09_t03_overview.html",
             title: "Soil Conservation — Topic Overview",
@@ -374,6 +377,9 @@ extension ArticleIndex {
         "ch10_t02_c02": ArticleEntry(id: "ch10_t02_c02", filename: "ch10_t02_c02.html",
             title: "Glucose to ATP — The Energy Coin of Life",
             chapterFolder: chapter10Folder, estimatedMinutes: 7),
+        "ch10_t02_c03": ArticleEntry(id: "ch10_t02_c03", filename: "ch10_t02_c03.html",
+            title: "Anaerobic Respiration — Without Oxygen",
+            chapterFolder: chapter10Folder, estimatedMinutes: 6),
 
         "ch10_t03": ArticleEntry(id: "ch10_t03", filename: "ch10_t03_overview.html",
             title: "Respiration Across Species — Topic Overview",
