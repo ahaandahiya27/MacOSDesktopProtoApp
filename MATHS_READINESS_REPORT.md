@@ -114,8 +114,8 @@ These were out of scope for the content build and are clean follow-ups:
 - [x] Schema + roundtrip + Swift Decodable + full gate green.
 - [x] All commits pushed to origin/main; pre-push gate green every time.
 - [x] `MATHS_READINESS_REPORT.md` shipped at repo root.
-- [ ] ≥5 chapters with articles (deferred — see above).
-- [ ] ≥1 chapter with Discover Mode (deferred — Swift workstream).
+- [x] Articles: all 15 chapters (mistakes/glossary/ncert_qa) via subject-aware mch-prefix keying.
+- [x] Discover Mode: Ch.10 (Operations with Integers) pilot — 4 scenes (number line, adding integers, sign rules, boss quiz).
 - [ ] iMac end-to-end walk (deferred — needs the deploy device).
 
 **Bottom line:** the Maths subject is content-complete and shippable today —

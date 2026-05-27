@@ -104,6 +104,7 @@
 		6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */; };
 		F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */; };
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
+		D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
@@ -961,6 +962,7 @@
 		1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */; };
 		78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */; };
 		8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */; };
+		6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */; };
 		2A8C187935DCEB515F6F302F /* QuickCheckSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E463B0BFB780A040722A2F /* QuickCheckSchemaTests.swift */; };
 		DC5F3F1B94F553098F2BEF6C /* RecentlyMissedBossQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5646EA33D31AC41565A329 /* RecentlyMissedBossQuizTests.swift */; };
 		A98202793C232A4B87293D96 /* RecentlyMissedQuickCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3BA43B3BFDBEB2081F342 /* RecentlyMissedQuickCheckTests.swift */; };
@@ -972,6 +974,7 @@
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
 		DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */; };
 		9651D940B237F2BB6D2EE9BA /* StreakBadgeVisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067FE30947A929F9D63049D /* StreakBadgeVisibilityTests.swift */; };
+		3FBE8BD2ADC7C3CFC836A1E3 /* StuckHereStripQuickCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA26C87E98C92438A0A2FF8 /* StuckHereStripQuickCheckTests.swift */; };
 		A03B28780DB8706DC5C3C68D /* SubjectRegistryBossLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7672B0C13B4D7AE56EDB34 /* SubjectRegistryBossLookupTests.swift */; };
 		D94C3FD7FB9B2FD05CBCD340 /* SubjectRegistryQuickCheckLookupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38913614691B15CD045749 /* SubjectRegistryQuickCheckLookupTests.swift */; };
 		DDE458CA82ED8EC0011208D6 /* SubjectRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F3B61779C768EADF883456 /* SubjectRegistryTests.swift */; };
@@ -1650,6 +1653,7 @@
 		5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterTheme.swift"; sourceTree = "<group>"; };
 		20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
+		D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath10View.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
@@ -1966,6 +1970,7 @@
 		4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinatorTests.swift"; sourceTree = "<group>"; };
 		4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionSourceTests.swift"; sourceTree = "<group>"; };
 		843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckMigrationRatchetTests.swift"; sourceTree = "<group>"; };
+		3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckPedagogicalContentTests.swift"; sourceTree = "<group>"; };
 		38E463B0BFB780A040722A2F /* QuickCheckSchemaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckSchemaTests.swift"; sourceTree = "<group>"; };
 		4A5646EA33D31AC41565A329 /* RecentlyMissedBossQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyMissedBossQuizTests.swift"; sourceTree = "<group>"; };
 		45F3BA43B3BFDBEB2081F342 /* RecentlyMissedQuickCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyMissedQuickCheckTests.swift"; sourceTree = "<group>"; };
@@ -1977,6 +1982,7 @@
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
 		99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryModeArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		6067FE30947A929F9D63049D /* StreakBadgeVisibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreakBadgeVisibilityTests.swift"; sourceTree = "<group>"; };
+		7EA26C87E98C92438A0A2FF8 /* StuckHereStripQuickCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StuckHereStripQuickCheckTests.swift"; sourceTree = "<group>"; };
 		AE7672B0C13B4D7AE56EDB34 /* SubjectRegistryBossLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectRegistryBossLookupTests.swift"; sourceTree = "<group>"; };
 		AC38913614691B15CD045749 /* SubjectRegistryQuickCheckLookupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectRegistryQuickCheckLookupTests.swift"; sourceTree = "<group>"; };
 		19F3B61779C768EADF883456 /* SubjectRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectRegistryTests.swift"; sourceTree = "<group>"; };
@@ -3159,6 +3165,7 @@
 				5DE6E19DE42E578A3931FACD,
 				20B5D94DC9E7B604484EF3A2,
 				2053E9FDDD0F4B95051B4417,
+				D189C00586C239E2BB42ACDB,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
@@ -3951,6 +3958,7 @@
 				4F40F36BE5B49DE983D407DA,
 				4E902A3CDFE83A7C65A2E4A4,
 				843B8F73DDC119CFF925624D,
+				3A6BA61B199529F78B5C5C55,
 				38E463B0BFB780A040722A2F,
 				4A5646EA33D31AC41565A329,
 				45F3BA43B3BFDBEB2081F342,
@@ -3962,6 +3970,7 @@
 				ECC6A95CD9ABF9B8C9017257,
 				99C3FC971649DED61AA4104A,
 				6067FE30947A929F9D63049D,
+				7EA26C87E98C92438A0A2FF8,
 				AE7672B0C13B4D7AE56EDB34,
 				AC38913614691B15CD045749,
 				19F3B61779C768EADF883456,
@@ -4771,6 +4780,7 @@
 				6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */,
 				F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
+				D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,
@@ -5093,6 +5103,7 @@
 				1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */,
 				78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */,
 				8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */,
+				6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */,
 				2A8C187935DCEB515F6F302F /* QuickCheckSchemaTests.swift in Sources */,
 				DC5F3F1B94F553098F2BEF6C /* RecentlyMissedBossQuizTests.swift in Sources */,
 				A98202793C232A4B87293D96 /* RecentlyMissedQuickCheckTests.swift in Sources */,
@@ -5104,6 +5115,7 @@
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
 				DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */,
 				9651D940B237F2BB6D2EE9BA /* StreakBadgeVisibilityTests.swift in Sources */,
+				3FBE8BD2ADC7C3CFC836A1E3 /* StuckHereStripQuickCheckTests.swift in Sources */,
 				A03B28780DB8706DC5C3C68D /* SubjectRegistryBossLookupTests.swift in Sources */,
 				D94C3FD7FB9B2FD05CBCD340 /* SubjectRegistryQuickCheckLookupTests.swift in Sources */,
 				DDE458CA82ED8EC0011208D6 /* SubjectRegistryTests.swift in Sources */,

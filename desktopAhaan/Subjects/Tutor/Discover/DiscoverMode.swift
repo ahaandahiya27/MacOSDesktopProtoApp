@@ -41,8 +41,13 @@ enum DiscoverMode {
     /// Returns true if Discover Mode has hand-built scenes for this chapter.
     /// Used by `ChapterDetailView` to decide whether to show the entry button.
     static func hasExperience(for pack: SubjectPack, chapter: Chapter) -> Bool {
-        return pack.id == "science_class7" && supportedChapterIds.contains(chapter.id)
+        if pack.id == "science_class7" { return supportedChapterIds.contains(chapter.id) }
+        if pack.id == "maths_class7" { return mathsSupportedChapterIds.contains(chapter.id) }
+        return false
     }
+
+    /// Maths chapters with hand-built Discover experiences (pilot).
+    static let mathsSupportedChapterIds: Set<String> = ["ch10"]
 
     /// Pack id every Discover experience belongs to today. Hardcoded because
     /// Discover Mode is Science-only for now.
@@ -90,6 +95,13 @@ enum DiscoverMode {
                 DiscoverChapter18View(pack: pack, chapter: chapter)
             case "ch19":
                 DiscoverChapter19View(pack: pack, chapter: chapter)
+            default:
+                ComingSoonView(chapterTitle: chapter.title)
+            }
+        } else if pack.id == "maths_class7" {
+            switch chapter.id {
+            case "ch10":
+                DiscoverChapterMath10View(pack: pack, chapter: chapter)
             default:
                 ComingSoonView(chapterTitle: chapter.title)
             }

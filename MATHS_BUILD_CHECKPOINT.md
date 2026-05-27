@@ -4,7 +4,7 @@
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
 **Current phase:** Phase 2 — chapter content (ALL 15 CHAPTERS DONE — content complete)
-**Current chapter under construction:** NONE — CONTENT COMPLETE + ARTICLES DONE (mch-prefix subject-aware keying; 45 article files: mistakes/glossary/ncert_qa × 15, bundled & surfacing). Remaining: Discover Mode (in progress). All 15 chapters fairly cover the NEP curriculum (90 concepts, 148 questions; every thin chapter deepened across the 2026-05-27 enhancement loop). Article layer BLOCKED on a subject-aware-keying design decision (STOP_AND_ASK); cross-subject article leak fixed. The only remaining work is the two gated items below — both need your input / a runnable UI. The self-paced enhancement loop ENDED here (curriculum saturated; further additions would pad beyond the textbook).
+**Current chapter under construction:** NONE — CONTENT COMPLETE + ARTICLES DONE (mch-prefix subject-aware keying; 45 article files: mistakes/glossary/ncert_qa × 15, bundled & surfacing). Remaining: NONE for the core ask — Discover Mode pilot shipped for Ch.10. All 15 chapters fairly cover the NEP curriculum (90 concepts, 148 questions; every thin chapter deepened across the 2026-05-27 enhancement loop). Article layer BLOCKED on a subject-aware-keying design decision (STOP_AND_ASK); cross-subject article leak fixed. The only remaining work is the two gated items below — both need your input / a runnable UI. The self-paced enhancement loop ENDED here (curriculum saturated; further additions would pad beyond the textbook).
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -104,7 +104,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 4 concepts, 8 Q (added mixed numbers) |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
-| 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 4 concepts, 8 Q (added subtraction) |
+| 10  | ✅     | ✅ 2/2 topics | ✅ 3 | ✅ 4-scene | Operations with Integers — 4 concepts, 8 Q; articles + Discover pilot |
 | 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 4 concepts, 8 Q (added co-prime) |
 | 12  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Another Peek Beyond the Point (decimal ops) — 4 concepts, 6 Q |
 | 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 4 concepts, 7 Q (added range) |
