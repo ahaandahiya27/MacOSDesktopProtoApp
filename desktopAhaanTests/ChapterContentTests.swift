@@ -633,18 +633,36 @@ final class ChapterContentTests: XCTestCase {
     /// test pins that posture so a future "let's globally namespace"
     /// refactor doesn't silently break the contract — or so the day
     /// we DO globally namespace, this test fails first.
+    /// Walks EVERY bundled pack (not just science + sanskrit) so a newly
+    /// added subject can't silently reintroduce the collision. The Maths
+    /// pack originally reused Science's `chNN_tNN_cNN` scheme (73 collisions)
+    /// and this test was blind to it because it only loaded two packs;
+    /// `scripts/namespace_maths_concept_ids.py` re-keyed Maths to the
+    /// `mch…` namespace and this now polices all packs.
     @MainActor func testNoCrossPackConceptIdCollision() {
-        let sci = try? loadPack("science_class7")
-        let san = try? loadPack("sanskrit_class7")
-        guard let s = sci, let a = san else {
-            XCTFail("Could not load both packs")
-            return
+        let resources = ["science_class7", "sanskrit_class7", "maths_class7"]
+        var owner: [String: String] = [:]   // conceptId -> first pack that claimed it
+        var collisions: [String: [String]] = [:]
+        for resource in resources {
+            guard let pack = try? loadPack(resource) else {
+                XCTFail("Could not load pack \(resource)")
+                return
+            }
+            for id in pack.allConcepts.map({ $0.id }) {
+                if let prior = owner[id], prior != resource {
+                    collisions[id, default: [prior]].append(resource)
+                } else {
+                    owner[id] = resource
+                }
+            }
         }
-        let sIds = Set(s.allConcepts.map { $0.id })
-        let aIds = Set(a.allConcepts.map { $0.id })
-        let collisions = sIds.intersection(aIds)
-        XCTAssertTrue(collisions.isEmpty,
-                      "Concept IDs collide across packs: \(collisions.prefix(5))")
+        XCTAssertTrue(
+            collisions.isEmpty,
+            "Concept IDs collide across packs (must be globally unique — " +
+            "Bookmarks/discoverProgress key on the bare id):\n" +
+            collisions.prefix(8).map { "  - \($0.key): \($0.value)" }
+                .joined(separator: "\n")
+        )
     }
 
     private func loadPack(_ resource: String) throws -> SubjectPack {
