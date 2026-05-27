@@ -6988,6 +6988,56 @@
                 114
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t04_c02",
+              "title": "Co-interior (allied) angles",
+              "explanations": {
+                "oneLine": "Co-interior angles lie on the same side of the transversal, between the two lines; when the lines are parallel they are supplementary — they add to 180°.",
+                "kidFriendly": "A transversal cutting two parallel lines makes three special angle-pairs. You've met corresponding (equal) and alternate (equal). The third is co-interior angles (also called allied or same-side interior angles): the two angles on the SAME side of the transversal, sitting BETWEEN the two lines. Unlike the other two, these are NOT equal — they ADD UP to 180° (supplementary). So if one co-interior angle is 110°, its partner is 70°. You can see why: a co-interior angle and the alternate angle of its partner form a straight line (180°), and alternate angles are equal — so the two co-interior angles must sum to 180°. They form a 'C' or 'U' shape between the parallel lines.",
+                "textbook": "Co-interior angles (also allied or same-side interior angles) are the pair of angles on the same side of a transversal and between the two lines it crosses. When the two lines are parallel, co-interior angles are supplementary (sum to 180°). This follows from the alternate-angles result: one co-interior angle is supplementary to the alternate angle of the other (linear pair), and alternate angles are equal, so the two co-interior angles sum to 180°. They are distinct from corresponding and alternate angles, which are equal.",
+                "expert": "Co-interior supplementarity is the third transversal-angle relation, derivable from the corresponding-angles postulate: with angles labelled at the two intersections, a same-side interior pair (β, γ) satisfies β + γ = 180° because γ equals the alternate angle of β's linear-pair complement. Its converse (co-interior angles supplementary ⟹ lines parallel) is a standard parallelism test, equivalent to the corresponding- and alternate-angle criteria."
+              },
+              "reasoning": "Take two co-interior angles. One of them, plus the alternate angle of the other, lie along a straight line, so they sum to 180°. But alternate angles are equal — so swapping in the actual co-interior partner keeps the sum at 180°. Hence the two same-side interior angles are supplementary when the lines are parallel.",
+              "useCases": [
+                {
+                  "title": "Ladder against a wall",
+                  "description": "A ladder (transversal) crossing two parallel rungs makes co-interior angles that sum to 180° on each side.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Letter 'C' / 'U' shape",
+                  "description": "Co-interior angles trace a C (or U) between the parallel lines — a memory cue, and they total 180°.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Checking parallelism",
+                  "description": "If same-side interior angles sum to 180°, the two lines are parallel — a builder's test.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "The three transversal relations together — corresponding equal, alternate equal, co-interior supplementary — are three faces of the same parallel-postulate fact. Each also has a CONVERSE used to PROVE two lines parallel: equal corresponding angles, equal alternate angles, OR supplementary co-interior angles each guarantee parallelism. Surveyors and builders pick whichever pair is easiest to measure.",
+              "mnemonic": "Co-interior = same side, between the lines, 'C/U' shape → add to 180° (supplementary), NOT equal.",
+              "predictQuestion": "A transversal crosses two parallel lines and one co-interior angle is 110° — what is the other co-interior angle?",
+              "whyChain": [
+                "A transversal crossing two parallel lines creates three kinds of angle-pair. Corresponding and alternate angles are EQUAL. Co-interior angles — the two on the same side of the transversal, between the lines — behave differently, and it's worth knowing why.",
+                "Here's the reasoning: take one co-interior angle, β. The angle next to β along its line (its linear-pair partner) is 180° − β. That partner is the ALTERNATE angle of the other co-interior angle γ — and alternate angles are equal, so γ = 180° − β. Therefore β + γ = 180°: the co-interior angles are supplementary.",
+                "So the full transversal toolkit is: corresponding equal, alternate equal, co-interior supplementary (sum 180°). Each has a converse that PROVES two lines parallel, which is how builders and surveyors verify parallelism by measuring just one angle-pair. Mixing these up — treating co-interior as equal instead of supplementary — is the classic slip this concept guards against."
+              ],
+              "relatedConceptIds": [
+                "ch05_t04_c01",
+                "ch05_t03_c02",
+                "ch05_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch05_t04_q03",
+                "ch05_t04_q04"
+              ],
+              "pageRefs": [
+                114,
+                115
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -7062,6 +7112,81 @@
               "difficulty": 3,
               "pageRefs": [
                 114
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t04_q03",
+              "prompt": "A transversal crosses two parallel lines. One co-interior angle is 110°. Find the other co-interior angle.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "70°",
+              "solutionSteps": [
+                "Co-interior (same-side interior) angles are supplementary when the lines are parallel.",
+                "They sum to 180°.",
+                "Other angle = 180° − 110° = 70°."
+              ],
+              "commonMistakes": [
+                "Saying 110° (treating co-interior angles as equal — they are supplementary, not equal).",
+                "Computing 360 − 110 instead of 180 − 110."
+              ],
+              "variations": [
+                {
+                  "prompt": "One co-interior angle is 75°. Find the other.",
+                  "answer": "105°",
+                  "solutionSteps": [
+                    "180 − 75 = 105."
+                  ]
+                },
+                {
+                  "prompt": "Two co-interior angles are equal. What must each be, and what does it imply?",
+                  "answer": "Each is 90° (since they sum to 180°) — the transversal is perpendicular to the parallel lines.",
+                  "solutionSteps": [
+                    "Equal and summing to 180° → each 90°."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                114,
+                115
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_t04_q04",
+              "prompt": "A transversal cuts two lines. The two same-side interior angles measure 120° and 60°. Are the two lines parallel? Why?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes. Co-interior angles 120° + 60° = 180° (supplementary), and supplementary co-interior angles mean the lines are parallel.",
+              "solutionSteps": [
+                "Add the co-interior angles: 120° + 60° = 180°.",
+                "Supplementary co-interior angles are the converse test for parallel lines.",
+                "Since they sum to 180°, the two lines are parallel."
+              ],
+              "commonMistakes": [
+                "Requiring the angles to be EQUAL for parallelism (co-interior angles need to be SUPPLEMENTARY, not equal).",
+                "Thinking any two interior angles work — they must be the same-side (co-interior) pair."
+              ],
+              "variations": [
+                {
+                  "prompt": "Same-side interior angles are 100° and 90°. Parallel?",
+                  "answer": "No — they sum to 190° ≠ 180°.",
+                  "solutionSteps": [
+                    "100 + 90 = 190 ≠ 180, so not parallel."
+                  ]
+                },
+                {
+                  "prompt": "If corresponding angles are equal, are the lines parallel?",
+                  "answer": "Yes — equal corresponding angles is also a parallelism test.",
+                  "solutionSteps": [
+                    "Corresponding-angles converse guarantees parallel lines."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                115
               ],
               "needsHumanReview": false
             }

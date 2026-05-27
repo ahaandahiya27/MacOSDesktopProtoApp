@@ -99,7 +99,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 2   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Arithmetic Expressions — 10 concepts, 15 Q |
 | 3   | ✅     | ✅ 5/5 topics | ⚪    | ⚪       | A Peek Beyond the Point (decimals) — 7 concepts, 13 Q |
 | 4   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Expressions Using Letter-Numbers — 4 concepts, 8 Q |
-| 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 7 concepts, 9 Q |
+| 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 8 concepts, 11 Q (added co-interior) |
 | 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 5 concepts, 8 Q |
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 4 concepts, 8 Q (added mixed numbers) |
