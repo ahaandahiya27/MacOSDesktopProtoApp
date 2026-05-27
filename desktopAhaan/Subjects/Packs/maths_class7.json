@@ -7811,6 +7811,55 @@
                 126
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_c02",
+              "title": "Number grids: sums, bounds, and the 45-invariant",
+              "explanations": {
+                "oneLine": "In a 3×3 grid filled with 1–9 (no repeats), each circled row/column sum lies between 6 and 24, and all three row sums always total 45 — facts that let you solve or rule out a grid.",
+                "kidFriendly": "Fill a 3×3 grid with the numbers 1 to 9, each used once. The circled numbers around it are the sums of each row and each column. Two powerful facts pop out. First, BOUNDS: the smallest a row can sum to is 1+2+3 = 6, the largest is 7+8+9 = 24 — so any circle below 6 or above 24 makes the grid IMPOSSIBLE (just like a parity argument, you rule it out without trying!). Second, the 45-INVARIANT: since 1+2+…+9 = 45, the three row sums must add to 45, and so must the three column sums — so all six circled numbers always total 90. These let you fill in missing sums and spot impossible puzzles instantly.",
+                "textbook": "Consider a 3×3 grid filled with the digits 1–9 without repetition; the circled values are the sums of the three rows and three columns. Two invariants follow. (1) Bounds: each row/column sum lies in [6, 24], since the minimum sum of three distinct digits is 1+2+3 = 6 and the maximum is 7+8+9 = 24; any required sum outside this range makes the grid impossible. (2) Total: because 1+2+…+9 = 45, the three row sums total 45, as do the three column sums, so the six circled sums total 90. These facts allow deduction of missing sums and detection of impossible configurations.",
+                "expert": "The grid is a combinatorial constraint problem on a permutation of {1,…,9} into a 3×3 array. The row/column sums are linear functionals; their feasible range [6,24] is the min/max of a sum of three distinct elements, and the row-sum total equals the fixed array total Σ = 45 (an invariant independent of arrangement). These bound and conservation arguments are the same impossibility/invariant reasoning seen in parity (Ch.6.2): a quantity preserved or bounded across all configurations rules out infeasible targets without enumeration."
+              },
+              "reasoning": "The circled numbers are determined by which digits sit in each row and column. Since the digits are fixed (1–9, once each), the smallest and largest possible row sums are pinned (6 and 24), and the grand total of all entries (45) is fixed no matter how you arrange them — so the row sums must always add to 45. Bounds rule out the impossible; the total constrains the rest.",
+              "useCases": [
+                {
+                  "title": "Solving a sum-grid puzzle",
+                  "description": "Knowing the three row sums total 45 lets you find a missing row sum by subtraction.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Spotting an impossible grid",
+                  "description": "A circle showing 5 or 26 is instantly impossible (outside the 6–24 range) — no trial needed.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Magic squares",
+                  "description": "The same digit-sum reasoning underlies magic squares, where every row, column and diagonal shares one sum (15 for a 3×3 of 1–9).",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The 45-total and 6–24 bounds are the gateway to magic squares: a 3×3 magic square uses 1–9 so that every row, column and diagonal sums to the same value. Since the rows total 45 and there are 3 of them, that magic constant must be 45 ÷ 3 = 15. The same 'fixed total ÷ number of lines' argument gives the magic constant for any size — a neat payoff of the invariant idea.",
+              "mnemonic": "Each sum is 6–24 (else impossible); the three row sums total 45 (so all six circles total 90).",
+              "predictQuestion": "In a 3×3 grid of the digits 1–9, why can a circled row sum never be 5 or 26?",
+              "whyChain": [
+                "The circled numbers are the row and column sums of a grid holding the digits 1–9, each once. Because the digits are fixed, the possible sums are constrained: the three SMALLEST digits give the smallest row sum, 1+2+3 = 6, and the three LARGEST give the biggest, 7+8+9 = 24. So every row/column sum must lie between 6 and 24.",
+                "That bound is an impossibility test: a grid demanding a sum of 5 (below 6) or 26 (above 24) simply cannot exist — you rule it out instantly, without trying a single arrangement, exactly as a parity argument rules out the impossible.",
+                "There's also a conservation law. The whole grid always contains 1+2+…+9 = 45, no matter the arrangement. The three row sums partition that total, so they ALWAYS add to 45 (and likewise the columns), making all six circled sums total 90. Bounds plus this invariant let you fill missing sums and detect impossible puzzles by pure reasoning — and they lead straight to magic squares, whose 3×3 magic constant must be 45 ÷ 3 = 15."
+              ],
+              "relatedConceptIds": [
+                "ch06_t01_c01",
+                "ch06_t02_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch06_t01_q02",
+                "ch06_t01_q03"
+              ],
+              "pageRefs": [
+                131,
+                132
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -7847,6 +7896,82 @@
               "difficulty": 2,
               "pageRefs": [
                 126
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q02",
+              "prompt": "In a 3×3 grid filled with 1–9 (no repeats), a puzzle requires one row to sum to 5 and another to 26. Explain why this grid is impossible.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Impossible. The smallest sum of three distinct digits from 1–9 is 1+2+3 = 6, and the largest is 7+8+9 = 24. A row sum of 5 (below 6) or 26 (above 24) cannot occur, so no valid grid exists.",
+              "solutionSteps": [
+                "Minimum row sum = 1+2+3 = 6.",
+                "Maximum row sum = 7+8+9 = 24.",
+                "Every row/column sum must lie in [6, 24].",
+                "5 < 6 and 26 > 24, so both are impossible — no such grid exists."
+              ],
+              "commonMistakes": [
+                "Trying many arrangements instead of using the bound to rule it out.",
+                "Computing the bounds wrong (e.g. using 0 or repeated digits)."
+              ],
+              "variations": [
+                {
+                  "prompt": "What are the smallest and largest possible row sums in such a grid?",
+                  "answer": "6 and 24.",
+                  "solutionSteps": [
+                    "1+2+3 = 6; 7+8+9 = 24."
+                  ]
+                },
+                {
+                  "prompt": "Could a row sum be exactly 6? How?",
+                  "answer": "Yes — the row 1, 2, 3.",
+                  "solutionSteps": [
+                    "1+2+3 = 6, the minimum."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                131,
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_t01_q03",
+              "prompt": "In a 3×3 grid of 1–9, two of the three row sums are 13 and 17. What is the third row sum, and why?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "15. The three row sums always total 45 (since 1+2+…+9 = 45), so the third is 45 − 13 − 17 = 15.",
+              "solutionSteps": [
+                "The grid contains 1+2+…+9 = 45 in total.",
+                "The three row sums partition this total, so they add to 45.",
+                "Third row sum = 45 − 13 − 17 = 15."
+              ],
+              "commonMistakes": [
+                "Forgetting that the row sums must total 45.",
+                "Adding 13 + 17 and stopping, instead of subtracting from 45."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two column sums are 12 and 16. Find the third column sum.",
+                  "answer": "17",
+                  "solutionSteps": [
+                    "45 − 12 − 16 = 17."
+                  ]
+                },
+                {
+                  "prompt": "What must all six circled sums (3 rows + 3 columns) total?",
+                  "answer": "90",
+                  "solutionSteps": [
+                    "Rows total 45 and columns total 45, so 45 + 45 = 90."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                132
               ],
               "needsHumanReview": false
             }

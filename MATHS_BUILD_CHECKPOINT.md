@@ -4,7 +4,7 @@
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
 **Current phase:** Phase 2 — chapter content (ALL 15 CHAPTERS DONE — content complete)
-**Current chapter under construction:** NONE — all 15 chapters authored; thin chapters (8/10/11) deepened to 4 concepts. Article layer is BLOCKED on a subject-aware-keying design decision (STOP_AND_ASK 2026-05-27); cross-subject article leak fixed at ChapterDetailView. Next gate-safe work: Discover Mode scene (subject-aware path exists via DiscoverMode.hasExperience), or more content depth.
+**Current chapter under construction:** NONE — CONTENT COMPLETE. All 15 chapters fairly cover the NEP curriculum (90 concepts, 148 questions; every thin chapter deepened across the 2026-05-27 enhancement loop). Article layer BLOCKED on a subject-aware-keying design decision (STOP_AND_ASK); cross-subject article leak fixed. The only remaining work is the two gated items below — both need your input / a runnable UI. The self-paced enhancement loop ENDED here (curriculum saturated; further additions would pad beyond the textbook).
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -100,7 +100,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 3   | ✅     | ✅ 5/5 topics | ⚪    | ⚪       | A Peek Beyond the Point (decimals) — 7 concepts, 13 Q |
 | 4   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Expressions Using Letter-Numbers — 5 concepts, 10 Q (added pattern proofs) |
 | 5   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Parallel & Intersecting Lines — 8 concepts, 11 Q (added co-interior) |
-| 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 5 concepts, 8 Q |
+| 6   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | Number Play — 6 concepts, 10 Q (added number grids) |
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 4 concepts, 8 Q (added mixed numbers) |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
