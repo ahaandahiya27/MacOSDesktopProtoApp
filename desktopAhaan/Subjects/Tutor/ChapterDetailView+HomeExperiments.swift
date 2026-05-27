@@ -233,6 +233,23 @@ enum HomeExperimentLibrary {
         guard let list = experiments[chapterId] else { return false }
         return !list.isEmpty
     }
+
+    /// Per-chapter Try-at-Home count (drives the card's "N experiments" label).
+    static func count(forChapterId chapterId: String) -> Int {
+        (experiments[chapterId] ?? []).count
+    }
+
+    /// Per-chapter Try-at-Home subtitle, derived from the actual experiment
+    /// titles (no hand-authored copy — so it can't drift from the content).
+    /// Falls back to the generic line if a chapter has none.
+    static func subtitle(forChapterId chapterId: String) -> String {
+        let titles = (experiments[chapterId] ?? []).map { $0.title }
+        guard let first = titles.first else {
+            return "Hands-on experiments you can try this weekend."
+        }
+        if titles.count == 1 { return first + "." }
+        return first + ", and \(titles.count - 1) more to try this weekend."
+    }
 }
 
 struct HomeExperimentsSheet: View {

@@ -261,7 +261,10 @@ struct ChapterDetailView: View {
                                 // can collide with the Button-press render commit on
                                 // ChapterDetailView, sometimes tripping "Entangling
                                 // fence requested after pre-commit" → EXC_BAD_ACCESS.
-                                TryAtHomeCard {
+                                TryAtHomeCard(
+                                    subtitle: HomeExperimentLibrary.subtitle(forChapterId: chapter.id),
+                                    count: HomeExperimentLibrary.count(forChapterId: chapter.id)
+                                ) {
                                     DispatchQueue.main.async { sheetCoordinator.presented = .homeExperiments }
                                 }
                             }

@@ -75,6 +75,9 @@ struct BeyondTheBookCard: View {
 // MARK: - Try at Home card
 
 struct TryAtHomeCard: View {
+    /// Per-chapter copy derived from HomeExperimentLibrary (not hardcoded).
+    var subtitle: String = "Hands-on experiments you can do this weekend."
+    var count: Int = 5
     let onTap: () -> Void
     @State private var isHovered = false
 
@@ -88,12 +91,12 @@ struct TryAtHomeCard: View {
                         .font(.headline)
                         .foregroundColor(.white)
                 }
-                Text("Hands-on experiments you can do this weekend.")
+                Text(subtitle)
                     .font(.caption)
                     .foregroundColor(.white.opacity(0.92))
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
-                Text("5 experiments")
+                Text("\(count) experiment\(count == 1 ? "" : "s")")
                     .font(.caption2)
                     .foregroundColor(.white.opacity(0.85))
             }
