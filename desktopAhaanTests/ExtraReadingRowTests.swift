@@ -76,7 +76,8 @@ final class ExtraReadingRowTests: XCTestCase {
 
     func testEveryChipChapterFolderMatchesKeyPrefix() {
         let chipKeys = ArticleIndex.entries.keys.filter { key in
-            Self.chipSuffixes.contains { key.hasSuffix($0) }
+            // Exclude Maths (mch…) keys — this Science ratchet parses chXX folders.
+            !key.hasPrefix("mch") && Self.chipSuffixes.contains { key.hasSuffix($0) }
         }
         for key in chipKeys {
             guard let entry = ArticleIndex.entries[key] else { continue }

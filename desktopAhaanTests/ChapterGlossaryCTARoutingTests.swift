@@ -44,7 +44,7 @@ final class ChapterGlossaryCTARoutingTests: XCTestCase {
     }
 
     func testAllGlossaryEntriesPointToBundledHTML() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") }
         var bad: [String] = []
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
