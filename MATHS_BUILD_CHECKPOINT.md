@@ -4,7 +4,7 @@
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
 **Current phase:** Phase 2 — chapter content (ALL 15 CHAPTERS DONE — content complete)
-**Current chapter under construction:** NONE — all 15 chapters authored. Next: Discover Mode (Ch.1) + articles + readiness report.
+**Current chapter under construction:** NONE — all 15 chapters authored + thin chapters (8/10/11) deepened to 4 concepts each. Next deferred work: article HTML, then a Discover Mode scene.
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -105,7 +105,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 4 concepts, 8 Q (added mixed numbers) |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
 | 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 4 concepts, 8 Q (added subtraction) |
-| 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 3 concepts, 6 Q |
+| 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 4 concepts, 8 Q (added co-prime) |
 | 12  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Another Peek Beyond the Point (decimal ops) — 4 concepts, 6 Q |
 | 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 3 concepts, 5 Q |
 | 14  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Constructions and Tilings — 3 concepts, 4 Q |

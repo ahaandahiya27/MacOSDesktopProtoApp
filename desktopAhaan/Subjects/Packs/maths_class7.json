@@ -12272,6 +12272,56 @@
                 41
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_c02",
+              "title": "Co-prime numbers (HCF = 1)",
+              "explanations": {
+                "oneLine": "Two numbers are co-prime (relatively prime) if their only common factor is 1 — their HCF is 1, like 8 and 15.",
+                "kidFriendly": "Some pairs of numbers share no factor except 1. Take 8 (factors 1, 2, 4, 8) and 15 (factors 1, 3, 5, 15) — the only number in both lists is 1. So their HCF is 1, and we call them co-prime (or 'relatively prime'). Co-prime numbers needn't be prime themselves — 8 and 15 are both composite, yet co-prime! A handy fact: when two numbers are co-prime, their LCM is just their product (LCM(8,15) = 120 = 8 × 15), because they share nothing to 'overlap'. Any two different prime numbers are always co-prime.",
+                "textbook": "Two numbers are co-prime (or relatively prime) if their Highest Common Factor is 1, i.e. they share no common factor other than 1. Co-primality does not require the numbers themselves to be prime: 8 and 15 are composite yet co-prime. Consequences: for co-prime a and b, LCM(a,b) = a × b (since HCF × LCM = a × b and HCF = 1). Any two distinct primes are co-prime, and consecutive integers are always co-prime.",
+                "expert": "Co-primality, gcd(a,b) = 1, is the condition under which a is invertible modulo b (and vice versa) — the basis of modular inverses and the Chinese Remainder Theorem. The Euler totient φ(n) counts integers in [1,n] co-prime to n. Co-primality is also where the HCF×LCM = ab identity degenerates to LCM = ab, and it underlies the reduction of fractions to lowest terms (numerator and denominator co-prime)."
+              },
+              "reasoning": "The HCF collects the factors two numbers share. If they share nothing but 1, the HCF is 1 — there's no common ground to build a bigger common factor on. And since the HCF×LCM product always equals a×b, an HCF of 1 forces the LCM to be the full product.",
+              "useCases": [
+                {
+                  "title": "Gears that 'cycle through'",
+                  "description": "Gears with 8 and 15 teeth (co-prime) return to their start only after 8×15 = 120 teeth — every tooth meets every tooth.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Fractions in lowest terms",
+                  "description": "A fraction is fully reduced exactly when its numerator and denominator are co-prime, like 8/15.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Repeating schedules",
+                  "description": "Two events every 8 and 15 days (co-prime) next coincide after 120 days — the product.",
+                  "domain": "time"
+                }
+              ],
+              "beyondTheBook": "Co-primality powers modern cryptography: RSA encryption picks an exponent co-prime to a totient so that a decryption key exists. The same gcd-equals-1 condition that makes 8 and 15 co-prime is what lets secure messages be encoded and uniquely decoded. A Class 7 idea sits at the heart of internet security.",
+              "mnemonic": "Co-prime = HCF is 1 = share nothing but 1. (They needn't be prime themselves.)",
+              "predictQuestion": "Are 8 and 15 co-prime, even though neither is a prime number?",
+              "whyChain": [
+                "The HCF is the biggest factor two numbers share. Sometimes two numbers share nothing at all except the universal factor 1 — list the factors of 8 (1,2,4,8) and 15 (1,3,5,15) and only 1 appears in both. Their HCF is 1.",
+                "When that happens we call the numbers co-prime (relatively prime). Crucially, this is about what they SHARE, not about being prime individually: 8 and 15 are both composite, yet co-prime. Any two different primes are automatically co-prime, and so are any two consecutive whole numbers.",
+                "Co-primality has a neat payoff via HCF × LCM = a × b. If HCF = 1, then LCM = a × b — the full product, with no overlap to remove. So LCM(8,15) = 120. This same gcd-equals-1 condition is exactly when a fraction is in lowest terms, when gears mesh through every tooth, and (remarkably) the condition RSA encryption relies on to keep the internet secure."
+              ],
+              "relatedConceptIds": [
+                "ch11_t01_c01",
+                "ch11_t02_c01",
+                "ch11_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t01_q03",
+                "ch11_t01_q04"
+              ],
+              "pageRefs": [
+                41,
+                42
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -12348,6 +12398,81 @@
               "difficulty": 2,
               "pageRefs": [
                 41
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q03",
+              "prompt": "Are 8 and 15 co-prime? Find their HCF, and then their LCM.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes, co-prime. HCF(8,15) = 1, so LCM = 8 × 15 = 120.",
+              "solutionSteps": [
+                "Factors of 8: 1, 2, 4, 8. Factors of 15: 1, 3, 5, 15.",
+                "Only common factor is 1, so HCF = 1 → they are co-prime.",
+                "Since HCF × LCM = product, LCM = (8 × 15) ÷ 1 = 120."
+              ],
+              "commonMistakes": [
+                "Thinking numbers must be prime to be co-prime (8 and 15 are composite yet co-prime).",
+                "Computing the LCM as less than the product when the numbers are co-prime."
+              ],
+              "variations": [
+                {
+                  "prompt": "Are 9 and 16 co-prime? What is their LCM?",
+                  "answer": "Yes; LCM = 144.",
+                  "solutionSteps": [
+                    "9 = 3², 16 = 2⁴; no shared prime → HCF 1, co-prime. LCM = 9×16 = 144."
+                  ]
+                },
+                {
+                  "prompt": "Are 6 and 9 co-prime?",
+                  "answer": "No — they share the factor 3 (HCF = 3).",
+                  "solutionSteps": [
+                    "6 = 2·3, 9 = 3²; common factor 3, so not co-prime."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                41,
+                42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q04",
+              "prompt": "Two gears have 8 and 15 teeth. After how many teeth have passed do they return to their exact starting position?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "120 teeth",
+              "solutionSteps": [
+                "They realign after a common multiple of 8 and 15 — specifically the LCM.",
+                "8 and 15 are co-prime (HCF = 1), so LCM = 8 × 15 = 120.",
+                "After 120 teeth, both gears are back at their start."
+              ],
+              "commonMistakes": [
+                "Adding 8 + 15 = 23 instead of finding the LCM.",
+                "Assuming the LCM is smaller than the product even though the numbers are co-prime."
+              ],
+              "variations": [
+                {
+                  "prompt": "Gears with 6 and 8 teeth realign after how many teeth?",
+                  "answer": "24",
+                  "solutionSteps": [
+                    "HCF(6,8)=2, LCM = 6×8/2 = 24."
+                  ]
+                },
+                {
+                  "prompt": "Gears with 5 and 7 teeth (co-prime)?",
+                  "answer": "35",
+                  "solutionSteps": [
+                    "Co-prime → LCM = 5×7 = 35."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                42
               ],
               "needsHumanReview": false
             }
