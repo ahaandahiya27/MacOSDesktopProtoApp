@@ -14,33 +14,32 @@ import XCTest
 @MainActor
 final class MathsDiscoverModeRoutingTests: XCTestCase {
 
-    func testMathsDiscoverChaptersHaveExperience() throws {
+    /// Every one of the 15 Maths chapters now has a Discover experience.
+    func testEveryMathsChapterHasDiscover() throws {
         let maths = try loadPack("maths_class7")
-        for id in ["ch01", "ch08", "ch10"] {
-            XCTAssertTrue(DiscoverMode.hasExperience(for: maths, chapter: chapter(maths, id)),
-                "Maths \(id) should have a Discover experience.")
-            XCTAssertTrue(DiscoverMode.mathsSupportedChapterIds.contains(id))
+        XCTAssertEqual(maths.chapters.count, 15)
+        for ch in maths.chapters {
+            XCTAssertTrue(DiscoverMode.hasExperience(for: maths, chapter: ch),
+                "Maths \(ch.id) should have a Discover experience.")
+            XCTAssertTrue(DiscoverMode.mathsSupportedChapterIds.contains(ch.id))
         }
     }
 
-    /// Subject gate: a chapter id that has Discover in SCIENCE must NOT light up
-    /// in MATHS just because the ids collide.
+    /// Subject gate: the Maths Discover set is exactly the Maths chapter ids —
+    /// it must NOT claim Science-only ids (ch16–ch19), nor an unknown id, just
+    /// because chNN ids collide across packs.
     func testMathsDiscoverIsGatedToItsOwnChapters() throws {
         let maths = try loadPack("maths_class7")
-        let science = try loadPack("science_class7")
-
-        XCTAssertFalse(DiscoverMode.hasExperience(for: maths, chapter: chapter(maths, "ch02")),
-            "Maths Ch.2 has no Discover experience — must not inherit Science Ch.2's.")
-        XCTAssertTrue(DiscoverMode.hasExperience(for: science, chapter: chapter(science, "ch02")),
-            "Science Ch.2 does have Discover — confirms the gate discriminates by pack, not chapter id.")
+        let mathsIds = Set(maths.chapters.map { $0.id })
+        XCTAssertEqual(DiscoverMode.mathsSupportedChapterIds, mathsIds,
+            "Maths Discover set must equal exactly the Maths chapter ids.")
+        for scienceOnly in ["ch16", "ch17", "ch18", "ch19"] {
+            XCTAssertFalse(DiscoverMode.mathsSupportedChapterIds.contains(scienceOnly),
+                "Maths must not claim Science-only chapter \(scienceOnly).")
+        }
     }
 
     // MARK: - Helpers
-
-    private func chapter(_ pack: SubjectPack, _ id: String) -> Chapter {
-        // Force-unwrap is fine in a test: the pack is bundled and the id is known.
-        pack.chapters.first { $0.id == id }!
-    }
 
     private func loadPack(_ resource: String) throws -> SubjectPack {
         guard let url = Bundle.main.url(forResource: resource, withExtension: "json"),

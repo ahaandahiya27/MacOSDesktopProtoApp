@@ -108,11 +108,24 @@
 		0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */; };
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
 		D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */; };
+		B2BBE6896436679DF97DEDA0 /* DiscoverChapterMath11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2526F64FED98D7F2DAF16 /* DiscoverChapterMath11View.swift */; };
+		41E5EC51B0796E95952A30A0 /* DiscoverChapterMath12View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA235009B449A82195621CB /* DiscoverChapterMath12View.swift */; };
+		4D2D05B55A9A0D1EA12CB605 /* DiscoverChapterMath13View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002CB02DFDD7AEFD1F51F5BC /* DiscoverChapterMath13View.swift */; };
+		6BEDF0DBA1EB6005188FE4A7 /* DiscoverChapterMath14View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6190B7C01CB81851EBA1CF /* DiscoverChapterMath14View.swift */; };
+		E1D7020B39952239333E638D /* DiscoverChapterMath15View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8C6A90FE0C2B64A748D4B /* DiscoverChapterMath15View.swift */; };
 		636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */; };
+		019285EAFD05EAEDFF7C7C23 /* DiscoverChapterMath2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DCE3A57E5668A3F6FAF8B /* DiscoverChapterMath2View.swift */; };
+		D2DABA88CE07C588BEA4C139 /* DiscoverChapterMath3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B38526B9090513AB25DB1 /* DiscoverChapterMath3View.swift */; };
+		7D3D398DF6B90F76C60F19D5 /* DiscoverChapterMath4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7056F4740A60DD0D25779 /* DiscoverChapterMath4View.swift */; };
+		D67041C4540B03D92E4E3984 /* DiscoverChapterMath5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D25D9CBF2F73794F5B4674 /* DiscoverChapterMath5View.swift */; };
+		6102AB6EAA05CC55BBDE353B /* DiscoverChapterMath6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38975AD8A481CB5D655400B7 /* DiscoverChapterMath6View.swift */; };
+		8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */; };
 		A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */; };
+		F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
+		7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */; };
 		5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */; };
 		0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */; };
 		C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */; };
@@ -1667,11 +1680,24 @@
 		5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenesC.swift"; sourceTree = "<group>"; };
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
 		D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath10View.swift"; sourceTree = "<group>"; };
+		46B2526F64FED98D7F2DAF16 /* DiscoverChapterMath11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath11View.swift"; sourceTree = "<group>"; };
+		5AA235009B449A82195621CB /* DiscoverChapterMath12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath12View.swift"; sourceTree = "<group>"; };
+		002CB02DFDD7AEFD1F51F5BC /* DiscoverChapterMath13View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath13View.swift"; sourceTree = "<group>"; };
+		1B6190B7C01CB81851EBA1CF /* DiscoverChapterMath14View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath14View.swift"; sourceTree = "<group>"; };
+		AFC8C6A90FE0C2B64A748D4B /* DiscoverChapterMath15View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath15View.swift"; sourceTree = "<group>"; };
 		9D0958A2CA52EBA00D1A7E54 /* DiscoverChapterMath1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath1View.swift"; sourceTree = "<group>"; };
+		6B7DCE3A57E5668A3F6FAF8B /* DiscoverChapterMath2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath2View.swift"; sourceTree = "<group>"; };
+		1E6B38526B9090513AB25DB1 /* DiscoverChapterMath3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath3View.swift"; sourceTree = "<group>"; };
+		B9C7056F4740A60DD0D25779 /* DiscoverChapterMath4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath4View.swift"; sourceTree = "<group>"; };
+		98D25D9CBF2F73794F5B4674 /* DiscoverChapterMath5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath5View.swift"; sourceTree = "<group>"; };
+		38975AD8A481CB5D655400B7 /* DiscoverChapterMath6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath6View.swift"; sourceTree = "<group>"; };
+		C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath7View.swift"; sourceTree = "<group>"; };
 		28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath8View.swift"; sourceTree = "<group>"; };
+		03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath9View.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
+		EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathDiscoverComponents.swift"; sourceTree = "<group>"; };
 		D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_PlantKitchen.swift"; sourceTree = "<group>"; };
 		D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_PhotosynthesisLab.swift"; sourceTree = "<group>"; };
 		426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene3_InsideALeaf.swift"; sourceTree = "<group>"; };
@@ -3189,11 +3215,24 @@
 				5B6231A6A482DE634DDD57EA,
 				2053E9FDDD0F4B95051B4417,
 				D189C00586C239E2BB42ACDB,
+				46B2526F64FED98D7F2DAF16,
+				5AA235009B449A82195621CB,
+				002CB02DFDD7AEFD1F51F5BC,
+				1B6190B7C01CB81851EBA1CF,
+				AFC8C6A90FE0C2B64A748D4B,
 				9D0958A2CA52EBA00D1A7E54,
+				6B7DCE3A57E5668A3F6FAF8B,
+				1E6B38526B9090513AB25DB1,
+				B9C7056F4740A60DD0D25779,
+				98D25D9CBF2F73794F5B4674,
+				38975AD8A481CB5D655400B7,
+				C3D299441B29CACCBD745C93,
 				28E0FABBE207C13F43D6D255,
+				03321EC51EAF0CFDC1A3F760,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
+				EA28C7E1649CF17D0B7393B5,
 				DFE37917933D06DACC4E5013,
 				8878C8C2EDF6B9CCCF221F72,
 				CA3D4BF156458958C4D077E7,
@@ -4814,11 +4853,24 @@
 				0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
 				D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */,
+				B2BBE6896436679DF97DEDA0 /* DiscoverChapterMath11View.swift in Sources */,
+				41E5EC51B0796E95952A30A0 /* DiscoverChapterMath12View.swift in Sources */,
+				4D2D05B55A9A0D1EA12CB605 /* DiscoverChapterMath13View.swift in Sources */,
+				6BEDF0DBA1EB6005188FE4A7 /* DiscoverChapterMath14View.swift in Sources */,
+				E1D7020B39952239333E638D /* DiscoverChapterMath15View.swift in Sources */,
 				636B844F00307614CB0D86C0 /* DiscoverChapterMath1View.swift in Sources */,
+				019285EAFD05EAEDFF7C7C23 /* DiscoverChapterMath2View.swift in Sources */,
+				D2DABA88CE07C588BEA4C139 /* DiscoverChapterMath3View.swift in Sources */,
+				7D3D398DF6B90F76C60F19D5 /* DiscoverChapterMath4View.swift in Sources */,
+				D67041C4540B03D92E4E3984 /* DiscoverChapterMath5View.swift in Sources */,
+				6102AB6EAA05CC55BBDE353B /* DiscoverChapterMath6View.swift in Sources */,
+				8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */,
 				A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */,
+				F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,
+				7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */,
 				5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */,
 				0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */,
 				C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */,

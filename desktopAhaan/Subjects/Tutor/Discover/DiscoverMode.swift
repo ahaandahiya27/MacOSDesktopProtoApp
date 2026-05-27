@@ -47,7 +47,10 @@ enum DiscoverMode {
     }
 
     /// Maths chapters with hand-built Discover experiences (pilot).
-    static let mathsSupportedChapterIds: Set<String> = ["ch01", "ch08", "ch10"]
+    static let mathsSupportedChapterIds: Set<String> = [
+        "ch01", "ch02", "ch03", "ch04", "ch05", "ch06", "ch07", "ch08",
+        "ch09", "ch10", "ch11", "ch12", "ch13", "ch14", "ch15"
+    ]
 
     /// Pack id every Discover experience belongs to today. Hardcoded because
     /// Discover Mode is Science-only for now.
@@ -102,10 +105,34 @@ enum DiscoverMode {
             switch chapter.id {
             case "ch01":
                 DiscoverChapterMath1View(pack: pack, chapter: chapter)
+            case "ch02":
+                DiscoverChapterMath2View(pack: pack, chapter: chapter)
+            case "ch03":
+                DiscoverChapterMath3View(pack: pack, chapter: chapter)
+            case "ch04":
+                DiscoverChapterMath4View(pack: pack, chapter: chapter)
+            case "ch05":
+                DiscoverChapterMath5View(pack: pack, chapter: chapter)
+            case "ch06":
+                DiscoverChapterMath6View(pack: pack, chapter: chapter)
+            case "ch07":
+                DiscoverChapterMath7View(pack: pack, chapter: chapter)
             case "ch08":
                 DiscoverChapterMath8View(pack: pack, chapter: chapter)
+            case "ch09":
+                DiscoverChapterMath9View(pack: pack, chapter: chapter)
             case "ch10":
                 DiscoverChapterMath10View(pack: pack, chapter: chapter)
+            case "ch11":
+                DiscoverChapterMath11View(pack: pack, chapter: chapter)
+            case "ch12":
+                DiscoverChapterMath12View(pack: pack, chapter: chapter)
+            case "ch13":
+                DiscoverChapterMath13View(pack: pack, chapter: chapter)
+            case "ch14":
+                DiscoverChapterMath14View(pack: pack, chapter: chapter)
+            case "ch15":
+                DiscoverChapterMath15View(pack: pack, chapter: chapter)
             default:
                 ComingSoonView(chapterTitle: chapter.title)
             }
