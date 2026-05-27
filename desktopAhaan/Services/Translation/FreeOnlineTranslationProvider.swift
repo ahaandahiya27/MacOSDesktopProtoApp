@@ -28,11 +28,17 @@ final class FreeOnlineTranslationProvider: TranslationProvider {
 
         let fromCode = langCode(source)
         let toCode = langCode(target)
-        let encoded = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? text
+        // Build via URLComponents so the query text is encoded correctly.
+        // `.urlQueryAllowed` does NOT escape `&`/`=`, so a phrase containing
+        // them previously corrupted the `langpair` param (wrong results /
+        // param injection). queryItems percent-encodes each value properly.
+        var components = URLComponents(string: "https://api.mymemory.translated.net/get")
+        components?.queryItems = [
+            URLQueryItem(name: "q", value: text),
+            URLQueryItem(name: "langpair", value: "\(fromCode)|\(toCode)")
+        ]
 
-        let urlString = "https://api.mymemory.translated.net/get?q=\(encoded)&langpair=\(fromCode)|\(toCode)"
-
-        guard let url = URL(string: urlString) else {
+        guard let url = components?.url else {
             throw TranslationError.invalidResponse
         }
 
