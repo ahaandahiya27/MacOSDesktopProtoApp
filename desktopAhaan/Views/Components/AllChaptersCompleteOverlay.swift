@@ -108,6 +108,9 @@ struct AllChaptersCompleteOverlay: View {
                     .foregroundColor(.black)
             }
             .buttonStyle(.plain)
+            // Esc and Return both dismiss — this is a hand-rolled overlay
+            // (not a .sheet), so without these a keyboard-only user is stuck.
+            .keyboardShortcut(.cancelAction)
             .padding(.top, 12)
             .accessibilityLabel("Dismiss celebration")
         }

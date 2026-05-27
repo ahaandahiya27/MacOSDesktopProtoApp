@@ -80,7 +80,8 @@ struct ConceptDetailView: View {
                         systemImage: isBookmarked ? "bookmark.fill" : "bookmark"
                     )
                 }
-                .keyboardShortcut("b", modifiers: .command)
+                // ⌘⇧B (not ⌘B) — ⌘B is the app-level "Show Bookmarks" command.
+                .keyboardShortcut("b", modifiers: [.command, .shift])
                 .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept")
             }
             ToolbarItem(placement: .automatic) {
@@ -104,7 +105,9 @@ struct ConceptDetailView: View {
                     Label("Previous concept", systemImage: "arrow.left")
                 }
                 .disabled(siblings?.prevId == nil)
-                .keyboardShortcut("[", modifiers: .command)
+                // ⌘← (not ⌘[) — ⌘[ is the app-level "Go Back" command;
+                // matches QuestionDetailView's ⌘-arrow prev/next convention.
+                .keyboardShortcut(.leftArrow, modifiers: .command)
                 .help(siblingHelpText(direction: "Previous"))
             }
             ToolbarItem(placement: .automatic) {
@@ -116,7 +119,7 @@ struct ConceptDetailView: View {
                     Label("Next concept", systemImage: "arrow.right")
                 }
                 .disabled(siblings?.nextId == nil)
-                .keyboardShortcut("]", modifiers: .command)
+                .keyboardShortcut(.rightArrow, modifiers: .command)
                 .help(siblingHelpText(direction: "Next"))
             }
         }

@@ -152,7 +152,8 @@ struct QuestionDetailView: View {
                         ? "bookmark.fill" : "bookmark"
                 )
             }
-            .keyboardShortcut("b", modifiers: .command)
+            // ⌘⇧B (not ⌘B) — ⌘B is the app-level "Show Bookmarks" command.
+            .keyboardShortcut("b", modifiers: [.command, .shift])
             .help(isQuestionBookmarked
                   ? "Remove bookmark"
                   : "Bookmark this question to revisit it later")
@@ -227,7 +228,9 @@ struct QuestionDetailView: View {
                 }
             }
             .disabled(!hasPrevious)
-            .keyboardShortcut(.leftArrow, modifiers: [])
+            // Arrow-key shortcut lives solely in `keyboardShortcutSink` — a
+            // duplicate binding here made two enabled buttons claim ←, which
+            // is ambiguous in SwiftUI and could no-op.
             .accessibilityLabel("Previous question")
 
             Spacer()
@@ -245,7 +248,6 @@ struct QuestionDetailView: View {
                 }
             }
             .disabled(!hasNext)
-            .keyboardShortcut(.rightArrow, modifiers: [])
             .accessibilityLabel("Next question")
         }
         .padding(.top, 8)
