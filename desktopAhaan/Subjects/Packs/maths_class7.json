@@ -1272,6 +1272,14 @@
                     "5h40m vs 6h: 6h is the larger of the two, so the quote rounds UP.",
                     "Service quality logic: a 20-minute early arrival is fine; a 20-minute late arrival annoys customers."
                   ]
+                },
+                {
+                  "prompt": "A school orders notebooks for 250 students but expects a few extra to join. Round up or down, and to what?",
+                  "answer": "Round UP — e.g. to 275 or 300 — so no student is left without a notebook.",
+                  "solutionSteps": [
+                    "Cost of running short (a student with no notebook) is higher than a small surplus.",
+                    "So round up to a clean number above 250, like 275 or 300."
+                  ]
                 }
               ],
               "difficulty": 2,
@@ -1343,6 +1351,15 @@
                     "Round: 14,63,128 ≈ 15,00,000 and 4,90,020 ≈ 5,00,000.",
                     "Estimated difference: 10,00,000.",
                     "Exact: 14,63,128 − 4,90,020 = 9,73,108."
+                  ]
+                },
+                {
+                  "prompt": "Estimate 7,88,500 + 2,15,900 to the nearest lakh, then say whether the true sum is above or below your estimate.",
+                  "answer": "≈ 8,00,000 + 2,00,000 = 10,00,000; the true sum 10,04,400 is just above the estimate.",
+                  "solutionSteps": [
+                    "Round each addend to the nearest lakh: 7,88,500 ≈ 8,00,000; 2,15,900 ≈ 2,00,000.",
+                    "Estimated sum: 10,00,000.",
+                    "Exact: 7,88,500 + 2,15,900 = 10,04,400 — just above the estimate."
                   ]
                 }
               ],
@@ -1644,6 +1661,14 @@
                   "solutionSteps": [
                     "4-digit × 2-digit gives 5 or 6 digits.",
                     "Example: 1000 × 10 = 10,000 (5 digits). ✓"
+                  ]
+                },
+                {
+                  "prompt": "Can a 2-digit × 2-digit product ever be a 2-digit number?",
+                  "answer": "No. The smallest such product is 10 × 10 = 100 (3 digits), so the result always has 3 or 4 digits.",
+                  "solutionSteps": [
+                    "Smallest 2-digit × 2-digit = 10 × 10 = 100.",
+                    "100 already has 3 digits, so the product can never be only 2 digits."
                   ]
                 }
               ],
@@ -3378,7 +3403,7 @@
               ],
               "beyondTheBook": "The distributive property is the workhorse of algebra. Expanding (x + 2)(x + 3) uses it twice; factoring x² + 5x + 6 back into (x + 2)(x + 3) reverses it. Every time you 'multiply out brackets' or 'take out a common factor' in later years, you are using this exact rule. It also explains the column-multiplication algorithm you learned for multi-digit numbers.",
               "mnemonic": "Multiply the bracket = multiply EACH term inside, then add. Works in reverse too (factoring).",
-              "predictQuestion": "An arrangement has 2 rows of (5 yellow + 3 blue) squares. Write the count two ways and show they're equal.",
+              "predictQuestion": "An arrangement has 2 rows of (5 yellow + 3 blue) squares — what two equal expressions describe the total count?",
               "whyChain": [
                 "Multiplying by a whole number means taking that many copies of something. '2 × (5 + 3)' means two copies of the quantity (5 + 3). Two copies of '5 things and 3 things' is naturally '5 things twice and 3 things twice' — that is, 2 × 5 plus 2 × 3. The multiplier spreads across each part of the sum.",
                 "You can see it physically as a rectangle: 2 rows of (5 + 3) squares. Count the whole thing (2 × 8 = 16) or count the 5-block and the 3-block separately (5 × 2 + 3 × 2 = 10 + 6 = 16). Same 16 squares, two ways of grouping — which is exactly a × (b + c) = a × b + a × c.",
@@ -4614,7 +4639,7 @@
               ],
               "beyondTheBook": "Scientists use trailing zeros deliberately to show PRECISION even though they don't change the value: '2.50 cm' claims accuracy to the hundredth, while '2.5 cm' only to the tenth. So in science the zeros carry information about the measurement even when they don't change the number — a subtle but important distinction.",
               "mnemonic": "Trailing zeros: free, no change. Zeros that shove digits right: ten-times smaller each shove.",
-              "predictQuestion": "Is 0.2 equal to 0.20? Is 0.2 equal to 0.02? Decide both by thinking about place value.",
+              "predictQuestion": "Is 0.2 equal to 0.20, and is 0.2 equal to 0.02?",
               "whyChain": [
                 "A digit's contribution is digit × place-value. A zero contributes zero no matter its place. So appending zeros to the far right of a decimal — 0.2 → 0.20 → 0.200 — just adds 'zero hundredths', 'zero thousandths', which contribute nothing. The value stays exactly 2 tenths.",
                 "But a zero placed so that it SHIFTS a non-zero digit into a smaller place is a completely different move. Going from 0.2 to 0.02 pushes the 2 from the tenths place to the hundredths place, making it ten times smaller (2/10 vs 2/100). 0.002 pushes it smaller still. These are genuinely different numbers.",
@@ -5642,7 +5667,7 @@
               ],
               "beyondTheBook": "The 'mind the mistake' habit — checking a substitution, especially with negatives — is one of the highest-value skills in early algebra. Expressions like 3(m+1) with m = −6 trip up huge numbers of students who forget the bracket: 3(−6+1) = 3(−5) = −15, not 19. Slowing down on substitution prevents a cascade of later errors.",
               "mnemonic": "4 × n = 4n (number then letter). Substitute carefully — keep the sign of negatives!",
-              "predictQuestion": "Write 4 × n in short form, then find the value of 5m + 3 when m = 2.",
+              "predictQuestion": "How do you write 4 × n in short form, and what value does 5m + 3 take when m = 2?",
               "whyChain": [
                 "When a numeral multiplies a letter, the × sign is redundant — a letter is a single symbol, so 4n can only mean 4 × n. Dropping the sign (number first, then letter) is a clean convention that makes longer expressions far easier to read: 5m + 3 instead of 5 × m + 3.",
                 "To find an expression's value, substitute: replace each letter with its given number, then compute using order of operations. 5m + 3 with m = 2 means 5 × 2 + 3 = 13 — the 5m is a multiplication done before the +3, exactly as the terms rule demands.",
@@ -6945,7 +6970,7 @@
               ],
               "beyondTheBook": "Spotting alternate angles as the 'Z' pattern (and corresponding angles as the 'F' pattern) is a classic memory aid. But the real lesson is the PROOF: deriving ∠f = ∠d by chaining two known equalities is your first multi-step geometric argument — the same reasoning style used throughout the triangle chapter and all later geometry.",
               "mnemonic": "Alternate angles = the 'Z' pattern. Equal because corresponding-angle = vertically-opposite-angle, chained.",
-              "predictQuestion": "A transversal crosses two parallel lines. Alternate angle ∠f is 120°. Using corresponding and vertically-opposite angles (no protractor), find its alternate angle ∠d.",
+              "predictQuestion": "If alternate angle ∠f is 120°, what is its alternate angle ∠d, using only corresponding and vertically-opposite angles?",
               "whyChain": [
                 "Start with ∠f = 120°. Its corresponding angle ∠b is equal to it, because the two lines are parallel — that's the corresponding-angles fact. So ∠b = 120°.",
                 "Now ∠b and ∠d are vertically opposite angles at the same crossing, so they're equal regardless of anything — ∠d = ∠b = 120°.",
@@ -8605,7 +8630,7 @@
               ],
               "beyondTheBook": "The triangle inequality is one of the most important facts in all of mathematics — it defines what 'distance' means in every space, from flat geometry to the abstract spaces used in machine learning. 'The shortest distance between two points is a straight line' is just the triangle inequality in disguise.",
               "mnemonic": "Sum of any two sides > the third. Check: do the two shortest beat the longest?",
-              "predictQuestion": "Can the lengths 10, 15 and 30 form a triangle? Test them with the triangle inequality.",
+              "predictQuestion": "Can the lengths 10, 15 and 30 form a triangle?",
               "whyChain": [
                 "For three lengths to close into a triangle, the two shorter sides — swung down from the ends of the longest side — must actually reach across and meet. If they're too short combined, they never touch and no triangle forms.",
                 "That's the triangle inequality: the sum of any two sides must exceed the third. The decisive check is the two SHORTEST against the longest. For 10, 15, 30: the short sides sum to 10 + 15 = 25, which is LESS than 30. They fall 5 short of spanning the long side, so they can never meet — no triangle. (Compare 3, 4, 5: 3+4 = 7 > 5, so it works.)",
@@ -12245,7 +12270,7 @@
               ],
               "beyondTheBook": "The HCF × LCM = product identity is a gift: it turns a hard LCM into an easy division once you have the (easier) HCF. Prime factorisation itself — the fact that every number breaks into primes in exactly one way (the Fundamental Theorem of Arithmetic) — is one of the cornerstones of all mathematics.",
               "mnemonic": "HCF: common primes, lowest power. LCM: all primes, highest power. HCF × LCM = a × b.",
-              "predictQuestion": "Using 12 = 2²×3 and 18 = 2×3², find HCF and LCM, and check that HCF × LCM = 12 × 18.",
+              "predictQuestion": "Using 12 = 2²×3 and 18 = 2×3², what are the HCF and LCM, and does HCF × LCM equal 12 × 18?",
               "whyChain": [
                 "Write each number in primes: 12 = 2² × 3 and 18 = 2 × 3². The HCF keeps only the primes BOTH share, each to the LOWEST power present: 2¹ × 3¹ = 6. The LCM keeps EVERY prime that appears, each to the HIGHEST power: 2² × 3² = 36.",
                 "Now check the relationship: HCF × LCM = 6 × 36 = 216, and 12 × 18 = 216 — they match. This is no coincidence: for every prime, min(power) + max(power) equals the sum of the two powers, so multiplying HCF and LCM rebuilds exactly a × b.",
