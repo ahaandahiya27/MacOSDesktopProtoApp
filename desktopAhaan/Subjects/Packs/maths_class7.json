@@ -11127,6 +11127,815 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch10",
+      "number": 10,
+      "title": "Operations with Integers",
+      "summary": "A carrom coin struck left or right, tokens dropped into or pulled out of a bag — these models make integer arithmetic concrete. This chapter adds and subtracts integers (same signs add, opposite signs cancel; subtracting is adding the opposite) and multiplies them, deriving the famous sign rules: a positive times a negative is negative, and a negative times a negative is positive.",
+      "topics": [
+        {
+          "id": "ch10_t01",
+          "title": "Adding Integers",
+          "summary": "Model a struck carrom coin moving left (negative) or right (positive). Adding two integers of the SAME sign stacks them (the result keeps that sign); adding OPPOSITE signs cancels — a positive and a negative token form a 'zero pair' that vanishes.",
+          "concepts": [
+            {
+              "id": "ch10_t01_c01",
+              "title": "Adding integers — same and opposite signs",
+              "explanations": {
+                "oneLine": "Same-sign integers add and keep the sign; opposite-sign integers partly cancel (positive and negative tokens form zero pairs), and the larger-magnitude sign wins.",
+                "kidFriendly": "Picture a carrom coin at 0, struck along a number line: rightward is positive, leftward negative. Strike +4 then +3 and it lands at +7 — same direction, distances add. Strike +5 then −3 and the leftward strike undoes part of the rightward: you land at +2. The token model makes it crisp: a positive token and a negative token form a 'zero pair' that cancels to nothing. So (+5) + (−3): pair three of the five positives with the three negatives — they vanish — leaving +2. Same signs: add and keep the sign. Opposite signs: cancel in pairs; whatever sign has more tokens left wins.",
+                "textbook": "Integer addition: integers of the same sign add in magnitude, retaining the common sign: (+4)+(+3)=+7, (−4)+(−3)=−7. Integers of opposite sign partially cancel — a positive unit and a negative unit form a zero pair summing to 0 — and the result takes the sign of the larger-magnitude addend with magnitude equal to the difference: (+5)+(−3)=+2, (−5)+(+3)=−2. The number line (or token) model realises this.",
+                "expert": "Integer addition is the group operation of (ℤ,+). The zero-pair cancellation embodies the additive inverse axiom a+(−a)=0; same-sign addition is magnitude addition under a common sign, opposite-sign is the signed difference. On the number line, adding b translates by b (rightward if b>0). This structure makes (ℤ,+) an abelian group, the foundation for all later signed arithmetic."
+              },
+              "reasoning": "Going the same way twice covers more ground in that direction — distances add, sign stays. Going opposite ways means the second move undoes part of the first; the cancellation is a positive and negative pairing off to zero, and whichever direction had 'more' determines where you end up.",
+              "useCases": [
+                {
+                  "title": "Bank balance",
+                  "description": "Deposit ₹500 (+), withdraw ₹300 (−): balance changes by +200.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Lift floors",
+                  "description": "Up 4 floors then down 3: net +1 floor.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Temperature change",
+                  "description": "Rises 5°, then drops 8°: net −3° (the drop wins).",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "The 'zero pair' idea — a positive and a negative annihilating to nothing — is exactly how physicists describe matter meeting antimatter, and how accountants net credits against debits. This simple cancellation is one of the most reused ideas across science and finance.",
+              "mnemonic": "Same sign: add, keep sign. Opposite signs: cancel in pairs; bigger side's sign wins.",
+              "predictQuestion": "A carrom coin at 0 is struck +5 (right) then −3 (left). Where does it end up, and how do 'zero pairs' explain it?",
+              "whyChain": [
+                "Model rightward strikes as positive, leftward as negative. The first strike sends the coin to +5. The second, −3, pushes it 3 units back left, partly undoing the first move — landing at +2.",
+                "The token model makes the cancellation precise. Represent +5 as five positive tokens and −3 as three negative tokens. Each positive paired with a negative is a 'zero pair' that cancels to nothing. Three such pairs vanish, leaving 5 − 3 = 2 positive tokens: the result is +2.",
+                "This gives the general rule. Same-sign integers just stack — distances add, sign unchanged (+4 then +3 → +7). Opposite signs cancel in zero pairs, and whichever sign has tokens left over determines the result's sign and size. The zero-pair idea — a positive and negative annihilating — is the additive-inverse axiom a + (−a) = 0, and it reappears everywhere from accounting (credits vs debits) to physics (matter vs antimatter)."
+              ],
+              "relatedConceptIds": [
+                "ch10_t02_c01",
+                "ch10_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t01_q01",
+                "ch10_t01_q02"
+              ],
+              "pageRefs": [
+                24,
+                25,
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_c02",
+              "title": "Properties of integer addition",
+              "explanations": {
+                "oneLine": "Integer addition is commutative and associative, has identity 0, and every integer has an opposite (additive inverse) that sums with it to 0.",
+                "kidFriendly": "Integer addition behaves beautifully. You can add in any ORDER (commutative): (−3) + 5 = 5 + (−3) = 2. You can GROUP however you like (associative). Adding 0 changes nothing: 7 + 0 = 7 (0 is the identity). And every integer has an OPPOSITE that cancels it: 6 + (−6) = 0, (−6) + 6 = 0. These four properties — order-free, group-free, a do-nothing 0, and a canceling opposite for everyone — make integers a complete, reliable number system for adding. They're the same properties whole numbers had, plus the new power that EVERY integer (not just some) can be 'undone' by adding its opposite.",
+                "textbook": "Integer addition satisfies: commutativity (a+b=b+a), associativity ((a+b)+c=a+(b+c)), additive identity (a+0=a), and additive inverse (a+(−a)=0 for every a). The existence of an inverse for every integer is the key advance over whole numbers, where only 0 had an inverse. These properties let any integer sum be rearranged and regrouped freely.",
+                "expert": "(ℤ,+,0) is an abelian group: closure, associativity, identity 0, inverses (−a), and commutativity. The inverse axiom is precisely what whole numbers (ℕ,+) lack, making ℤ the 'completion' of ℕ under subtraction. This group structure underlies modular arithmetic, vector spaces, and essentially all of algebra."
+              },
+              "reasoning": "Adding combines amounts, and combining doesn't care about order or grouping — same as for whole numbers. What's new with integers is that every number now has a mirror-image opposite, so any addition can be exactly undone by adding that opposite.",
+              "useCases": [
+                {
+                  "title": "Cancelling a transaction",
+                  "description": "A ₹250 charge is reversed by a −₹250 refund: net 0.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Net displacement",
+                  "description": "Walk 8 m east then 8 m west: opposite moves sum to 0.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Score corrections",
+                  "description": "A +10 then −10 scoring fix leaves the score unchanged.",
+                  "domain": "sport"
+                }
+              ],
+              "beyondTheBook": "The leap from whole numbers to integers is exactly the leap to a system where subtraction always works — because subtracting is just adding the opposite, and now every number HAS an opposite. This 'closure under subtraction' is why integers were invented and why they make algebra possible.",
+              "mnemonic": "Add in any order/grouping; 0 does nothing; every integer has an opposite summing to 0.",
+              "predictQuestion": "What makes integers better than whole numbers for addition — what new property does every integer have?",
+              "whyChain": [
+                "Integer addition keeps all the friendly properties whole numbers had: you can add in any order (commutative), group terms any way (associative), and adding 0 changes nothing (identity). Those make sums easy to rearrange.",
+                "The genuinely NEW power is the additive inverse: every integer has an opposite that cancels it to zero — 6 + (−6) = 0, (−40) + 40 = 0. Whole numbers didn't have this; only 0 could cancel itself. Now EVERY number has a partner that undoes it.",
+                "This single new property is why integers were invented. Subtraction becomes 'adding the opposite', and since every integer now has an opposite, subtraction ALWAYS works — you can compute 3 − 7 and get −4 instead of being stuck. This 'closure under subtraction' is what makes integers a complete system for adding and subtracting, and it's the foundation that makes algebra possible."
+              ],
+              "relatedConceptIds": [
+                "ch10_t01_c01",
+                "ch10_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t01_q03"
+              ],
+              "pageRefs": [
+                26,
+                27
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch10_t01_q01",
+              "prompt": "A carrom coin at 0 is struck +5 then −3. Find its final position. Then find (−5) + (+3).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "(+5)+(−3) = +2; (−5)+(+3) = −2.",
+              "solutionSteps": [
+                "+5 then −3: opposite signs cancel in pairs. 5 − 3 = 2, and the larger side is positive → +2.",
+                "(−5)+(+3): cancel 3 pairs, 5−3 = 2 left, larger side negative → −2."
+              ],
+              "commonMistakes": [
+                "Adding magnitudes (5+3=8) for opposite signs.",
+                "Getting the resulting sign backwards."
+              ],
+              "variations": [
+                {
+                  "prompt": "Find (+4) + (+3).",
+                  "answer": "+7",
+                  "solutionSteps": [
+                    "Same sign: add, keep + → +7."
+                  ]
+                },
+                {
+                  "prompt": "Find (−6) + (−2).",
+                  "answer": "−8",
+                  "solutionSteps": [
+                    "Same sign: add, keep − → −8."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                24,
+                25,
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q02",
+              "prompt": "Compute (−8) + (+5) using the zero-pair idea.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "−3",
+              "solutionSteps": [
+                "Represent −8 as 8 negatives, +5 as 5 positives.",
+                "Pair 5 positives with 5 negatives → 5 zero pairs vanish.",
+                "3 negatives remain → −3."
+              ],
+              "commonMistakes": [
+                "Answering +3 (wrong sign — more negatives remain).",
+                "Adding to get −13 (that's same-sign behaviour)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute (+9) + (−4).",
+                  "answer": "+5",
+                  "solutionSteps": [
+                    "4 zero pairs cancel, 5 positives left."
+                  ]
+                },
+                {
+                  "prompt": "Compute (−7) + (+7).",
+                  "answer": "0",
+                  "solutionSteps": [
+                    "All tokens pair off — a zero pair total."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q03",
+              "prompt": "What is the additive inverse (opposite) of −12, and what do you get when you add an integer to its opposite?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "The opposite of −12 is +12. Adding any integer to its opposite gives 0.",
+              "solutionSteps": [
+                "The opposite of a number has the same size but the other sign: opposite of −12 is +12.",
+                "An integer plus its opposite cancels completely: −12 + 12 = 0.",
+                "This works for every integer (additive inverse property)."
+              ],
+              "commonMistakes": [
+                "Saying the opposite of −12 is −12.",
+                "Thinking only some integers have opposites."
+              ],
+              "variations": [
+                {
+                  "prompt": "Opposite of +7?",
+                  "answer": "−7",
+                  "solutionSteps": [
+                    "Same size, opposite sign."
+                  ]
+                },
+                {
+                  "prompt": "What is 45 + (−45)?",
+                  "answer": "0",
+                  "solutionSteps": [
+                    "A number plus its opposite is 0."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                26,
+                27
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch10_t02",
+          "title": "Multiplying Integers & Sign Rules",
+          "summary": "Using the token-bag model — a positive multiplier puts tokens in, a negative multiplier takes them out — the sign rules emerge: positive × positive = positive, positive × negative = negative, and negative × negative = positive. Multiplication stays commutative whatever the signs.",
+          "concepts": [
+            {
+              "id": "ch10_t02_c01",
+              "title": "The sign rules for multiplication",
+              "explanations": {
+                "oneLine": "Positive × positive = positive; positive × negative (or negative × positive) = negative; negative × negative = positive. The size is always the product of the magnitudes.",
+                "kidFriendly": "Use a token bag. 4 × 2 means 'put 2 positives in, 4 times' → 8 positives = +8. 4 × (−2) means 'put 2 NEGATIVES in, 4 times' → 8 negatives = −8 (positive × negative = negative). What about (−4) × 2? A negative multiplier means REMOVE tokens: 'remove 2 positives, 4 times'. From an empty bag you first add zero pairs, then remove the positives, leaving 8 negatives = −8. And (−4) × (−2)? Remove 2 NEGATIVES four times — removing negatives leaves positives behind: +8! That's why negative × negative = positive. The magnitudes always just multiply (4 × 2 = 8); only the sign follows the rules.",
+                "textbook": "Integer multiplication sign rules: (+)(+)=+, (+)(−)=−, (−)(+)=−, (−)(−)=+; the magnitude of the product is the product of the magnitudes. In the token model, a positive multiplier adds groups of tokens and a negative multiplier removes them (via zero pairs); removing negative tokens leaves positives, which is why (−)(−)=+. Multiplication remains commutative: a×b=b×a regardless of signs.",
+                "expert": "The sign rules follow from requiring multiplication to distribute over addition consistently with a·0=0: from a·(b+(−b))=0 one derives a·(−b)=−(a·b), and (−a)·(−b)=a·b. This makes (ℤ,+,·) a commutative ring. The token 'removal' model is a concrete realisation of the additive-inverse interaction; the rules are forced, not arbitrary, by the ring axioms."
+              },
+              "reasoning": "A positive multiplier means 'add this group, this many times'; a negative multiplier means 'remove this group, that many times'. Removing positives leaves a deficit (negative); removing negatives takes away debt, leaving a surplus (positive). So two negatives multiplied give a positive.",
+              "useCases": [
+                {
+                  "title": "Debt cancelled repeatedly",
+                  "description": "Removing a ₹2 debt 4 times improves your balance by +8: (−4)×(−2)=+8.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Reversing a downward trend",
+                  "description": "A −2°/hour cooling, considered 4 hours in the PAST (−4), means it was +8° warmer.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Direction × time",
+                  "description": "Moving −2 m/s for −4 s (time before now) = +8 m position earlier.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "Why 'two negatives make a positive' confuses everyone at first — but the token-removal model makes it inevitable: taking away negatives is a positive change. This rule isn't a convention chosen for convenience; it's forced by requiring multiplication to play nicely with addition (the distributive law), which is one of the deepest demands in all of algebra.",
+              "mnemonic": "Magnitudes multiply; signs follow: same signs → +, different signs → −.",
+              "predictQuestion": "Using the token-bag model, why does (−4) × (−2) come out positive?",
+              "whyChain": [
+                "In the token-bag model, a positive multiplier means 'put this group of tokens IN, that many times', while a negative multiplier means 'REMOVE this group, that many times'. So 4 × (−2) puts in 2 negatives four times → −8.",
+                "Now (−4) × (−2): the −4 says remove the group four times, and the group is 2 NEGATIVE tokens. To remove negatives from an empty bag, first add zero pairs (a positive and negative together, summing to 0), then take the negatives away. Removing the negatives leaves their positive partners behind. Doing this four times leaves 8 positive tokens — so (−4) × (−2) = +8.",
+                "That's why two negatives multiply to a positive: removing negatives is a positive change. The magnitudes simply multiply (4 × 2 = 8); only the sign follows the rules (same signs → +, different → −). And this isn't an arbitrary convention — it's forced by requiring multiplication to distribute over addition, one of the deepest consistency demands in algebra."
+              ],
+              "relatedConceptIds": [
+                "ch10_t01_c01",
+                "ch10_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t02_q01",
+                "ch10_t02_q02",
+                "ch10_t02_q03"
+              ],
+              "pageRefs": [
+                28,
+                29,
+                30
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch10_t02_q01",
+              "prompt": "Compute: (a) 4 × (−6), (b) (−9) × 7, (c) (−4) × (−2).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "(a) −24, (b) −63, (c) +8.",
+              "solutionSteps": [
+                "Magnitudes multiply; signs follow the rules.",
+                "(a) +×− = − : 4×6 = 24 → −24.",
+                "(b) −×+ = − : 9×7 = 63 → −63.",
+                "(c) −×− = + : 4×2 = 8 → +8."
+              ],
+              "commonMistakes": [
+                "Getting (−4)×(−2) = −8 (two negatives give a POSITIVE).",
+                "Mismatching magnitudes (e.g. 4×6 = 10)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute (−5) × (−5).",
+                  "answer": "+25",
+                  "solutionSteps": [
+                    "−×− = +; 5×5 = 25."
+                  ]
+                },
+                {
+                  "prompt": "Compute 8 × (−3).",
+                  "answer": "−24",
+                  "solutionSteps": [
+                    "+×− = −; 8×3 = 24."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                28,
+                29,
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t02_q02",
+              "prompt": "State the four sign rules for multiplying integers.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "(+)(+)=+, (+)(−)=−, (−)(+)=−, (−)(−)=+. The magnitude is always the product of the magnitudes.",
+              "solutionSteps": [
+                "Same signs give a positive product: (+)(+)=+ and (−)(−)=+.",
+                "Different signs give a negative product: (+)(−)=− and (−)(+)=−.",
+                "In every case, multiply the magnitudes for the size."
+              ],
+              "commonMistakes": [
+                "Thinking (−)(−)=− .",
+                "Forgetting that the size is just the product of magnitudes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sign of (negative) × (positive)?",
+                  "answer": "Negative.",
+                  "solutionSteps": [
+                    "Different signs → −."
+                  ]
+                },
+                {
+                  "prompt": "Sign of (negative) × (negative) × (negative)?",
+                  "answer": "Negative (odd number of negatives).",
+                  "solutionSteps": [
+                    "−×−=+, then +×− = −."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t02_q03",
+              "prompt": "Is (−6) × 3 equal to 3 × (−6)? What property does this show?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Yes — both equal −18. This shows integer multiplication is commutative (swapping the order doesn't change the product or its sign).",
+              "solutionSteps": [
+                "(−6) × 3 = −18 (different signs → −, 6×3 = 18).",
+                "3 × (−6) = −18 as well.",
+                "Equal — multiplication is commutative for integers, signs included."
+              ],
+              "commonMistakes": [
+                "Thinking the order changes the sign.",
+                "Computing different magnitudes for the two orders."
+              ],
+              "variations": [
+                {
+                  "prompt": "Does (−4) × (−5) = (−5) × (−4)?",
+                  "answer": "Yes, both +20.",
+                  "solutionSteps": [
+                    "Commutative; same signs → +."
+                  ]
+                },
+                {
+                  "prompt": "Sign of the product when multiplier and multiplicand swap?",
+                  "answer": "Unchanged.",
+                  "solutionSteps": [
+                    "Swapping never changes the sign."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "glossary": [
+        {
+          "id": "ch10_gl01",
+          "term": "Integer",
+          "definition": "A whole number that may be positive, negative, or zero.",
+          "example": "−3, 0, 7 are integers.",
+          "hindiTerm": "पूर्णांक",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl02",
+          "term": "Number line",
+          "definition": "A line with 0 in the middle, positives to the right and negatives to the left.",
+          "example": "−2 is two steps left of 0.",
+          "hindiTerm": "संख्या रेखा",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl03",
+          "term": "Zero pair",
+          "definition": "A positive and a negative token together, summing to 0.",
+          "example": "+1 and −1 form a zero pair.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl04",
+          "term": "Additive inverse (opposite)",
+          "definition": "The number with the same size but opposite sign; it sums with the original to 0.",
+          "example": "The opposite of −12 is 12.",
+          "hindiTerm": "योज्य प्रतिलोम",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_gl05",
+          "term": "Commutative property",
+          "definition": "Order doesn't change the result: a+b=b+a and a×b=b×a.",
+          "example": "(−6)×3 = 3×(−6).",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t01_c02",
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl06",
+          "term": "Associative property",
+          "definition": "Grouping doesn't change the result of addition (or multiplication).",
+          "example": "(a+b)+c = a+(b+c).",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_gl07",
+          "term": "Magnitude",
+          "definition": "The size of a number ignoring its sign.",
+          "example": "The magnitude of −8 is 8.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl08",
+          "term": "Sign rules (multiplication)",
+          "definition": "Same signs give a positive product; different signs give a negative product.",
+          "example": "(−)(−)=+, (+)(−)=−.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl09",
+          "term": "Token model",
+          "definition": "Using green (positive) and red (negative) tokens to model integer operations.",
+          "example": "4×(−2) = put 2 red tokens in 4 times.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_gl10",
+          "term": "Identity element",
+          "definition": "A number that leaves others unchanged: 0 for addition, 1 for multiplication.",
+          "example": "7 + 0 = 7.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch10_mn01",
+          "acronym": "Same add, opposite cancel",
+          "unpacking": "Adding same-sign integers: add and keep the sign. Opposite signs: cancel in zero pairs; the bigger side's sign wins.",
+          "context": "Use for adding integers.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_mn02",
+          "acronym": "Same +, different −",
+          "unpacking": "Multiplying: same signs give a positive product, different signs give a negative product. Magnitudes always multiply.",
+          "context": "Use for the multiplication sign rules.",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_mn03",
+          "acronym": "Remove negatives → positive",
+          "unpacking": "In the token model, removing negative tokens leaves positives — which is why (−)×(−) = +.",
+          "context": "Use to remember why two negatives make a positive.",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch10_ms01",
+          "kidsThink": "Adding two integers always makes a bigger number.",
+          "actually": "Adding a negative makes it smaller: (+5)+(−3)=+2, less than 5. Opposite signs partly cancel.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_ms02",
+          "kidsThink": "(−)×(−) = − (two negatives make a negative).",
+          "actually": "(−)×(−) = + . Removing negative tokens leaves positives; two negatives multiplied give a POSITIVE.",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_ms03",
+          "kidsThink": "Subtraction is different from addition for integers.",
+          "actually": "Subtracting is adding the opposite: 5 − (−3) = 5 + 3 = 8. Every subtraction is an addition in disguise.",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_ms04",
+          "kidsThink": "The sign of a product depends on which number is bigger.",
+          "actually": "It depends only on the SIGNS: same signs → +, different → −. Magnitude just sets the size.",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_ms05",
+          "kidsThink": "Only zero has an opposite.",
+          "actually": "EVERY integer has an opposite (additive inverse): the opposite of −12 is 12, of 7 is −7. This is what makes subtraction always possible.",
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch10_re01",
+          "title": "Bank balances go both ways",
+          "body": "A deposit is a positive integer, a withdrawal a negative one. Deposit ₹500 then withdraw ₹300: (+500)+(−300) = +200 change. Withdraw more than you have and the balance goes negative — integers are exactly the maths of money that can go below zero.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_re02",
+          "title": "Why removing debt is a gain",
+          "body": "If a ₹2 debt is cancelled (removed) 4 times, your balance rises by ₹8: (−4)×(−2) = +8. The puzzling 'negative times negative is positive' is just 'taking away something bad makes things better', four times over.",
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_re03",
+          "title": "Temperatures above and below zero",
+          "body": "In Shimla in January the temperature might be +3° at noon and fall to −4° at night — a change of −7°. Integer addition and subtraction describe every rise and fall across the zero of the freezing point.",
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch10_qa01",
+          "question": "A carrom coin at 0 is struck 4 units right, then 3 units right. Where does it end up, and what is the general formula for two same-direction strikes a and b?",
+          "modelAnswer": "It ends at 4 + 3 = 7 units from 0. In general the final position is P = a + b.",
+          "textbookPage": 25,
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa02",
+          "question": "Compute (+5) + (−3) and (−5) + (+3) using zero pairs.",
+          "modelAnswer": "(+5)+(−3): three zero pairs cancel, leaving +2. (−5)+(+3): three zero pairs cancel, leaving −2. Opposite signs partly cancel; the larger-magnitude sign remains.",
+          "textbookPage": 26,
+          "relatedConceptIds": [
+            "ch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa03",
+          "question": "What is the additive inverse of an integer, and give the inverse of −12.",
+          "modelAnswer": "The additive inverse of a number is the number with the same magnitude but opposite sign; it sums with the original to 0. The inverse of −12 is +12, since −12 + 12 = 0.",
+          "textbookPage": 27,
+          "relatedConceptIds": [
+            "ch10_t01_c02"
+          ]
+        },
+        {
+          "id": "ch10_qa04",
+          "question": "Using the token model, what is 4 × (−2)?",
+          "modelAnswer": "4 × (−2) means placing 2 negative tokens into an empty bag 4 times, giving 8 negatives, i.e. −8.",
+          "textbookPage": 28,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa05",
+          "question": "Why is (−4) × (−2) equal to +8?",
+          "modelAnswer": "A negative multiplier means removing tokens. (−4) × (−2) removes 2 negative tokens four times; removing negatives (after laying down zero pairs) leaves their positive partners, giving 8 positives, i.e. +8.",
+          "textbookPage": 29,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa06",
+          "question": "State the sign rules for multiplying two integers.",
+          "modelAnswer": "(+)(+)=+, (+)(−)=−, (−)(+)=−, (−)(−)=+. Same signs give a positive product, different signs a negative product; the magnitude is the product of the magnitudes.",
+          "textbookPage": 30,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa07",
+          "question": "Does swapping the multiplier and multiplicand change the product's sign?",
+          "modelAnswer": "No. Multiplication is commutative: a × b = b × a for all integers, and the sign is the same before and after swapping (same-sign stays +, different-sign stays −).",
+          "textbookPage": 30,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_qa08",
+          "question": "Compute (−9) × 7 and 8 × (−3).",
+          "modelAnswer": "(−9) × 7 = −63 (different signs → −, 9×7 = 63). 8 × (−3) = −24 (different signs → −, 8×3 = 24).",
+          "textbookPage": 30,
+          "relatedConceptIds": [
+            "ch10_t02_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch10_mp01",
+          "emoji": "🔴",
+          "title": "Token-Bag Integer Machine",
+          "needs": [
+            "Two colours of small counters (or paper circles) — say green for +1 and red for −1",
+            "A bowl or 'bag'",
+            "Paper to record"
+          ],
+          "steps": [
+            "Model addition: to compute (+5)+(−3), put 5 green and 3 red into the bag; remove every green-red 'zero pair'; count what's left.",
+            "Record the result and its sign. Repeat for (−6)+(+2), (+4)+(+3), (−5)+(−1).",
+            "Model multiplication: for 4×(−2), put 2 reds in, four times; count the result.",
+            "For (−4)×(−2): lay down zero pairs, then REMOVE 2 reds four times; count the greens left over.",
+            "Write the sign rule you discover for each kind of product."
+          ],
+          "expectedObservation": "Zero pairs cancel cleanly in addition; in multiplication, removing red (negative) tokens leaves green (positive) ones — so (−)×(−) comes out positive, just as the sign rule says.",
+          "whyItWorks": "The tokens make additive inverses physical: a green and a red sum to zero. A negative multiplier means 'remove', and removing negatives leaves positives behind — a hands-on demonstration that two negatives multiply to a positive, forced by how addition and removal interact.",
+          "estimatedMinutes": 35,
+          "relatedConceptIds": [
+            "ch10_t01_c01",
+            "ch10_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch10_t01_c01",
+            "label": "Adding integers",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.15
+          },
+          {
+            "id": "ch10_t01_c02",
+            "label": "Addition properties",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.15
+          },
+          {
+            "id": "ch10_t02_c01",
+            "label": "Multiplication sign rules",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.5
+          },
+          {
+            "id": "ch10_pivot_zero",
+            "label": "Zero pairs / inverses",
+            "kind": "pivot",
+            "x": 0.8,
+            "y": 0.32
+          },
+          {
+            "id": "ch10_pivot_ring",
+            "label": "Integers as a number system",
+            "kind": "pivot",
+            "x": 0.45,
+            "y": 0.78
+          },
+          {
+            "id": "ch01:ch01_t01_c01",
+            "label": "Ch.1 place value",
+            "kind": "crossChapter",
+            "x": 0.1,
+            "y": 0.5
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch10_e01",
+            "from": "ch10_t01_c01",
+            "to": "ch10_t01_c02",
+            "label": "obeys"
+          },
+          {
+            "id": "ch10_e02",
+            "from": "ch10_t01_c01",
+            "to": "ch10_pivot_zero",
+            "label": "uses"
+          },
+          {
+            "id": "ch10_e03",
+            "from": "ch10_t01_c02",
+            "to": "ch10_t02_c01",
+            "label": "extends to"
+          },
+          {
+            "id": "ch10_e04",
+            "from": "ch10_pivot_zero",
+            "to": "ch10_t02_c01",
+            "label": "explains −×−=+"
+          },
+          {
+            "id": "ch10_e05",
+            "from": "ch10_t01_c02",
+            "to": "ch10_pivot_ring",
+            "label": "makes ℤ complete"
+          },
+          {
+            "id": "ch10_e06",
+            "from": "ch10_t02_c01",
+            "to": "ch10_pivot_ring",
+            "label": "completes"
+          }
+        ]
+      }
     }
   ]
 }
