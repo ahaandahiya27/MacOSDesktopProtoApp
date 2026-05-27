@@ -13615,6 +13615,785 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch13",
+      "number": 13,
+      "title": "Connecting the Dots",
+      "summary": "Who batted better — the player with one huge score or the steady one? Comparing groups of numbers is the heart of data handling. This chapter introduces statistical thinking, then three representative values that summarise a data set in one number — the mean (average), the median (middle), and the mode (most frequent) — and how to picture data with bar graphs.",
+      "topics": [
+        {
+          "id": "ch13_t01",
+          "title": "Statistical Thinking",
+          "summary": "From 'a 6-foot friend is probably male' to 'this batter will likely score a century', we reason from data. Such statements are likely, not certain, and comparing groups fairly often needs more than a total.",
+          "concepts": [
+            {
+              "id": "ch13_t01_c01",
+              "title": "Reasoning from data",
+              "explanations": {
+                "oneLine": "Statistical thinking draws likely (not certain) conclusions from data, and comparing groups fairly often needs more than a single total.",
+                "kidFriendly": "If a teacher's two friends are 5 ft and 6 ft tall, you might guess the taller one is male — not certain, but likely, since 6-foot women are rarer. That's statistical thinking: reasoning from patterns to a LIKELY conclusion. Compare two cricketers: Shubman scores 0, 17, 21, 90 (total 128); Yashasvi 67, 55, 18, 35 (total 175). Who's better? Total favours Yashasvi, but Shubman hit the highest single score (90) and Yashasvi was steadier. If they'd played different numbers of matches, the total wouldn't even be a fair comparison. Good data reasoning asks which number truly REPRESENTS a group.",
+                "textbook": "Statistical thinking draws probable (not certain) conclusions from data and recognises that summary measures must be chosen appropriately. Comparing two groups by totals misleads when group sizes or spreads differ; a fair comparison uses a representative value (e.g. the mean) and considers consistency (spread). Statistical statements carry uncertainty.",
+                "expert": "Statistical inference reasons from sample data to likely population properties under uncertainty. Comparison by sum ignores sample size (motivating the mean) and dispersion (motivating range/variance). Distinguishing a deterministic claim from a probabilistic statistical statement is foundational to data literacy."
+              },
+              "reasoning": "Real-world numbers carry noise, so conclusions from them are likely, not guaranteed. And one summary like 'total' can hide differences — group sizes, or a single big value masking many small ones — so you must pick a summary that fairly represents the data.",
+              "useCases": [
+                {
+                  "title": "Height guesses",
+                  "description": "Guessing gender from height is statistical — likely, not certain.",
+                  "domain": "human body"
+                },
+                {
+                  "title": "Comparing batters",
+                  "description": "Totals mislead if players played different numbers of matches.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Weather forecasts",
+                  "description": "'70% chance of rain' is a statistical statement, not a certainty.",
+                  "domain": "weather"
+                }
+              ],
+              "beyondTheBook": "Statistical literacy — knowing the average can mislead, small samples are unreliable, one number rarely tells the whole story — is among the most valuable life skills maths teaches. News and advertising are full of statistics chosen to persuade; understanding representative values helps you see through them.",
+              "mnemonic": "Data reasoning gives LIKELY conclusions; a fair comparison needs the right summary, not just a total.",
+              "predictQuestion": "Shubman scored 0, 17, 21, 90 and Yashasvi 67, 55, 18, 35. Why might 'who scored more in total' not settle who batted better?",
+              "whyChain": [
+                "Statistical thinking means drawing a LIKELY conclusion from data patterns — like guessing a 6-foot person is probably male — while accepting it isn't certain. The same care applies to comparing two batters.",
+                "Total runs (Yashasvi 175 vs Shubman 128) is ONE summary, but it can mislead. Shubman hit the single highest score (90); Yashasvi was steadier. And if the two played DIFFERENT numbers of matches, comparing totals isn't even fair — more matches naturally means more total runs.",
+                "So 'better' depends on what you value — peak, consistency, or per-match output — and on choosing a number that fairly REPRESENTS each player's scores. That's exactly why we need representative values like the mean (which adjusts for match count), the median, and the mode. Knowing when a total deceives is the heart of data literacy."
+              ],
+              "relatedConceptIds": [
+                "ch13_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t01_q01"
+              ],
+              "pageRefs": [
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch13_t01_q01",
+              "prompt": "Shubman scores 23, 7, 10, 52, 18 (5 matches, total 110); Yashasvi scores 26, 53, 2, 15 (4 matches, total 96). Why is comparing totals unfair?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "They played different numbers of matches (5 vs 4), so more matches allow a higher total. A per-match mean is fairer: 110/5 = 22 vs 96/4 = 24.",
+              "solutionSteps": [
+                "Shubman: 5 matches, total 110. Yashasvi: 4 matches, total 96.",
+                "More matches gives more chances to accumulate runs, so a bigger total isn't necessarily better.",
+                "Compare per match (mean): 110/5 = 22 vs 96/4 = 24."
+              ],
+              "commonMistakes": [
+                "Concluding Shubman is better from the bigger total.",
+                "Ignoring the different match counts."
+              ],
+              "variations": [
+                {
+                  "prompt": "Each player's mean score?",
+                  "answer": "Shubman 22, Yashasvi 24.",
+                  "solutionSteps": [
+                    "110/5=22; 96/4=24."
+                  ]
+                },
+                {
+                  "prompt": "By average, who did better?",
+                  "answer": "Yashasvi (24>22).",
+                  "solutionSteps": [
+                    "Higher mean per match."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch13_t02",
+          "title": "Representative Values — Mean, Median, Mode",
+          "summary": "Three single numbers can summarise a data set: the mean (average) shares the total equally, the median is the middle value when sorted, and the mode is the most frequent. Each tells a different story; the right one depends on the question.",
+          "concepts": [
+            {
+              "id": "ch13_t02_c01",
+              "title": "Mean, median and mode",
+              "explanations": {
+                "oneLine": "The mean (average) = total ÷ count; the median = the middle value when data is sorted; the mode = the most frequently occurring value.",
+                "kidFriendly": "Three ways to capture a group of numbers in ONE value. The MEAN shares the total equally: add all, divide by how many — 0+17+21+90 = 128, ÷ 4 = 32. The MEDIAN is the middle once sorted: 0,17,21,90 has an even count, so average the two middle (17,21) = 19. The MODE is the value appearing most often (great for 'most common shoe size'). The mean uses every value (a single huge score pulls it up); the median ignores extremes (good for 'typical'); the mode finds the most popular. Pick the one that answers your question.",
+                "textbook": "Three measures of central tendency: mean = sum ÷ count; median = middle value of sorted data (average of the two middle if the count is even); mode = most frequent value. The mean uses all data and is sensitive to outliers; the median is robust to extremes; the mode identifies the most common value.",
+                "expert": "Mean, median and mode are the principal measures of central tendency. The mean minimises summed squared deviations; the median minimises summed absolute deviations (the 50th percentile, robust to outliers); the mode is the highest-frequency value, the only one applicable to nominal data. Choice depends on the distribution and goal."
+              },
+              "reasoning": "A whole list is hard to hold in mind, so we compress it to one representative. 'Share equally' gives the mean; 'the middle one' gives the median; 'the most common' gives the mode. Different compressions keep different information.",
+              "useCases": [
+                {
+                  "title": "Average marks",
+                  "description": "Class mean = total marks ÷ number of students.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Median income",
+                  "description": "Median is used for 'typical' income — a few rich people skew the mean up.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Most common size",
+                  "description": "A shop restocks the MODE shoe size — sold most often.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "Which average to use is consequential: 'average income' as the MEAN looks high because billionaires pull it up, while the MEDIAN shows the typical person far better. Knowing the difference is essential for reading any statistic honestly.",
+              "mnemonic": "Mean = total÷count. Median = middle when sorted. Mode = most frequent. Pick per question.",
+              "predictQuestion": "For 0, 17, 21, 90: find the mean and median. Why might the median better describe a 'typical' score?",
+              "whyChain": [
+                "The mean shares the total equally: (0+17+21+90) ÷ 4 = 128 ÷ 4 = 32. The median is the middle of the sorted data; with an even count we average the two middle values: (17+21) ÷ 2 = 19.",
+                "Mean (32) and median (19) differ a lot, because of the 90 — one unusually high score. The mean uses every value, so that big innings pulls the average UP above three of the four actual scores. The median ignores how extreme the ends are, sitting at 19, near the ordinary cluster.",
+                "That's why the median often better describes a 'typical' value with outliers: it isn't dragged by one freak score. The same reason makes 'median income' more honest than mean income. Mean, median and mode keep different information; choosing the right one for the question is the real skill."
+              ],
+              "relatedConceptIds": [
+                "ch13_t01_c01",
+                "ch13_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t02_q01",
+                "ch13_t02_q02",
+                "ch13_t02_q03"
+              ],
+              "pageRefs": [
+                98,
+                99,
+                100
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch13_t02_q01",
+              "prompt": "Find the mean of 0, 17, 21, 90.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "32",
+              "solutionSteps": [
+                "Add: 0+17+21+90 = 128.",
+                "Divide by 4: 128 ÷ 4 = 32.",
+                "Mean = 32."
+              ],
+              "commonMistakes": [
+                "Dividing by the wrong count.",
+                "Forgetting the 0 in the sum."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mean of 67,55,18,35?",
+                  "answer": "43.75",
+                  "solutionSteps": [
+                    "175÷4=43.75."
+                  ]
+                },
+                {
+                  "prompt": "Mean of 10,20,30?",
+                  "answer": "20",
+                  "solutionSteps": [
+                    "60÷3=20."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                98,
+                99
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_q02",
+              "prompt": "Find the median of 0, 17, 21, 90.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "19",
+              "solutionSteps": [
+                "Sort: 0,17,21,90.",
+                "Even count → average the two middle (17,21).",
+                "(17+21)/2 = 19."
+              ],
+              "commonMistakes": [
+                "Taking one middle value for an even count.",
+                "Not sorting first."
+              ],
+              "variations": [
+                {
+                  "prompt": "Median of 3,9,4,7,5?",
+                  "answer": "5",
+                  "solutionSteps": [
+                    "Sorted 3,4,5,7,9; middle 5."
+                  ]
+                },
+                {
+                  "prompt": "Median of 12,4,8,20?",
+                  "answer": "10",
+                  "solutionSteps": [
+                    "(8+12)/2=10."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                99,
+                100
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_q03",
+              "prompt": "Find the mode of 5, 3, 5, 7, 5, 8, 3.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "5 (appears three times).",
+              "solutionSteps": [
+                "Count each value: 5 appears 3 times, 3 twice, others once.",
+                "Most frequent is 5.",
+                "Mode = 5."
+              ],
+              "commonMistakes": [
+                "Choosing the largest value.",
+                "Confusing mode with mean/median."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mode of 2,2,4,6,6,6,9?",
+                  "answer": "6",
+                  "solutionSteps": [
+                    "6 appears most."
+                  ]
+                },
+                {
+                  "prompt": "Mode of sizes 7,8,8,8,9,9?",
+                  "answer": "8",
+                  "solutionSteps": [
+                    "Size 8 most frequent."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                100
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch13_t03",
+          "title": "Visualising Data",
+          "summary": "A bar graph turns a table into a picture where bar heights show quantities, making comparisons instant. Reading one means matching each bar to the scale; drawing one means choosing a scale so the bars fit and differences show.",
+          "concepts": [
+            {
+              "id": "ch13_t03_c01",
+              "title": "Bar graphs — picturing data",
+              "explanations": {
+                "oneLine": "A bar graph represents data as bars whose heights (read against a scale) show the quantities, making comparisons quick and visual.",
+                "kidFriendly": "A table is precise but hard to compare at a glance. A bar graph fixes that: each category gets a bar, and its HEIGHT shows its value, read off a scale. Taller bar = bigger value. To compare five players' runs, the graph lets you SEE who's highest instantly. To draw one: pick a scale (say 1 cm = 10 runs) so the biggest bar fits, then make each bar the right height. To read one: line each bar's top up with the scale. Bar graphs turn 'which is biggest?' from arithmetic into a glance.",
+                "textbook": "A bar graph displays categorical data as rectangular bars whose heights are proportional to their values, measured against a numerical scale axis. Reading requires matching bar height to the scale; constructing requires choosing a scale so all bars fit, with equal widths and spacing. Bar graphs make relative comparison immediate.",
+                "expert": "Bar charts encode magnitude in length, which human perception judges accurately, making them effective for category comparison. Scale choice (linear, starting at zero) governs honesty; truncated axes exaggerate differences. Bar graphs are the canonical encoding for categorical-vs-quantitative data."
+              },
+              "reasoning": "Eyes compare lengths far faster than digit strings. A bar graph maps each number to a bar height, so the data's shape — who's biggest, how spread out — is seen at once instead of computed.",
+              "useCases": [
+                {
+                  "title": "Comparing players' runs",
+                  "description": "A bar graph shows at a glance who scored most across a series.",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Rainfall by month",
+                  "description": "Monthly rainfall bars reveal the monsoon peak instantly.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Survey results",
+                  "description": "Favourite-sport tallies become an instantly readable chart.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "How a bar graph's SCALE is chosen can mislead — starting the axis above zero exaggerates small differences, a trick in misleading graphics. Reading the scale (not just the bar shape) is key to not being fooled by data visualisations.",
+              "mnemonic": "Bar height = value (read off the scale). Taller = bigger. Comparisons become a glance.",
+              "predictQuestion": "Why is a bar graph often better than a table for comparing the runs of five players?",
+              "whyChain": [
+                "A table gives exact numbers but forces you to read and compare digit strings one by one. A bar graph maps each player's runs to a bar HEIGHT against a scale.",
+                "Because eyes judge lengths quickly, you SEE which bar is tallest — who scored most — and the rough ranking, in a glance, with no arithmetic. Drawing one means picking a sensible scale so the biggest bar fits; reading one means lining each bar's top to that scale.",
+                "One caution: the SCALE controls honesty. If the axis doesn't start at zero, small differences look huge — a trick in misleading graphics. A careful reader checks the scale, not just the bar shapes. Used well, bar graphs turn 'which is biggest?' from a calculation into something you simply see."
+              ],
+              "relatedConceptIds": [
+                "ch13_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t03_q01"
+              ],
+              "pageRefs": [
+                100,
+                101
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch13_t03_q01",
+              "prompt": "A bar graph uses scale 1 cm = 10 runs. A player's bar is 4.5 cm tall — how many runs? If another scored 75 runs, how tall is their bar?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "4.5 cm = 45 runs; 75 runs needs a 7.5 cm bar.",
+              "solutionSteps": [
+                "Scale 1 cm = 10 runs, so 4.5 cm = 4.5 × 10 = 45 runs.",
+                "For 75 runs: 75 ÷ 10 = 7.5 cm."
+              ],
+              "commonMistakes": [
+                "Reading 4.5 cm as 4.5 runs (ignoring the scale).",
+                "Using the scale backwards."
+              ],
+              "variations": [
+                {
+                  "prompt": "With 1 cm = 5 runs, bar for 40 runs?",
+                  "answer": "8 cm",
+                  "solutionSteps": [
+                    "40÷5=8."
+                  ]
+                },
+                {
+                  "prompt": "A 6 cm bar at 1 cm = 10 runs?",
+                  "answer": "60 runs",
+                  "solutionSteps": [
+                    "6×10=60."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                100,
+                101
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "glossary": [
+        {
+          "id": "ch13_gl01",
+          "term": "Data",
+          "definition": "A collection of numbers or facts gathered for study.",
+          "example": "Runs scored across matches.",
+          "hindiTerm": "आँकड़े",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl02",
+          "term": "Mean (average)",
+          "definition": "The total of all values divided by how many there are.",
+          "example": "(0+17+21+90)/4 = 32.",
+          "hindiTerm": "माध्य",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl03",
+          "term": "Median",
+          "definition": "The middle value of sorted data (average of the two middle if the count is even).",
+          "example": "Median of 0,17,21,90 is 19.",
+          "hindiTerm": "माध्यिका",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl04",
+          "term": "Mode",
+          "definition": "The value that occurs most often.",
+          "example": "Mode of 5,3,5,7,5 is 5.",
+          "hindiTerm": "बहुलक",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl05",
+          "term": "Representative value",
+          "definition": "A single number summarising a data set (mean, median, or mode).",
+          "example": "Mean run-rate represents a batter's series.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl06",
+          "term": "Range",
+          "definition": "The difference between the largest and smallest values; a measure of spread.",
+          "example": "Range of 0..90 is 90.",
+          "hindiTerm": "परिसर",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl07",
+          "term": "Bar graph",
+          "definition": "A chart showing data as bars whose heights represent the values.",
+          "example": "Runs per player as bars.",
+          "hindiTerm": "दंड आलेख",
+          "relatedConceptIds": [
+            "ch13_t03_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl08",
+          "term": "Scale (of a graph)",
+          "definition": "How much each unit of length on the axis represents.",
+          "example": "1 cm = 10 runs.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch13_t03_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl09",
+          "term": "Outlier",
+          "definition": "A value far from most others, which can distort the mean.",
+          "example": "A score of 90 among 0,17,21.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_gl10",
+          "term": "Statistical statement",
+          "definition": "A claim about likely patterns in data, carrying uncertainty.",
+          "example": "'She will likely score a century.'",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch13_mn01",
+          "acronym": "Mean = total ÷ count",
+          "unpacking": "Add every value, divide by how many. The mean shares the total equally.",
+          "context": "Use to find the average.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_mn02",
+          "acronym": "Median = middle (sort first!)",
+          "unpacking": "Sort, then take the middle value (average the two middle if even count).",
+          "context": "Use for the typical value, robust to outliers.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_mn03",
+          "acronym": "Mode = most",
+          "unpacking": "The mode is the value appearing MOST often (mode and most both start 'mo').",
+          "context": "Use to find the most common value.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch13_ms01",
+          "kidsThink": "The bigger total always means better performance.",
+          "actually": "Only if the groups are the same size. With different match counts, compare the MEAN, not the total.",
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms02",
+          "kidsThink": "Mean, median and mode are all 'the average'.",
+          "actually": "Three different summaries: mean = total÷count, median = middle, mode = most frequent. They can differ greatly.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms03",
+          "kidsThink": "You can find the median without sorting.",
+          "actually": "You MUST sort first; the median is the middle of the SORTED list.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms04",
+          "kidsThink": "The mean is always the best 'typical' value.",
+          "actually": "One outlier can pull the mean far from typical; the median is often better then.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_ms05",
+          "kidsThink": "A taller bar always means a much bigger value.",
+          "actually": "Check the SCALE — if the axis doesn't start at zero, small differences look huge. Read the scale, not just the shape.",
+          "relatedConceptIds": [
+            "ch13_t03_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch13_re01",
+          "title": "Mean vs median income",
+          "body": "A village's 'average income' as the MEAN can look high if one family is very rich — that big value pulls the mean up. The MEDIAN (middle income) better reflects a typical family. Which 'average' is quoted can change the whole story.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_re02",
+          "title": "A batter's run-rate",
+          "body": "To compare two cricketers who played different numbers of matches, compare the MEAN runs per match, not totals. That's why commentators quote batting averages — the average adjusts for how many innings each had.",
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_re03",
+          "title": "Misleading bar graphs",
+          "body": "Advertisers sometimes draw bar graphs whose axis starts above zero, making a tiny lead look huge. Checking the scale before believing the bars is a real-world defence against being fooled.",
+          "relatedConceptIds": [
+            "ch13_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch13_qa01",
+          "question": "Two friends are 5 ft and 6 ft tall. Guessing their genders from height — is this certain?",
+          "modelAnswer": "No, it is statistical thinking: based on the pattern that men are more often taller, we guess the 6-foot person is male, but it is only likely, not certain.",
+          "textbookPage": 97,
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa02",
+          "question": "Shubman scored 0,17,21,90 and Yashasvi 67,55,18,35. Compare by total and consistency.",
+          "modelAnswer": "Totals: Shubman 128, Yashasvi 175 — Yashasvi more overall. But Shubman had the highest single score (90); Yashasvi was more consistent. 'Better' depends on what you value.",
+          "textbookPage": 98,
+          "relatedConceptIds": [
+            "ch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa03",
+          "question": "Find the mean of 0, 17, 21, 90.",
+          "modelAnswer": "Mean = (0+17+21+90) ÷ 4 = 128 ÷ 4 = 32 runs per match.",
+          "textbookPage": 98,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa04",
+          "question": "Find the median of 0, 17, 21, 90.",
+          "modelAnswer": "Sorted, with even count 4 the median is the average of the two middle values: (17+21) ÷ 2 = 19.",
+          "textbookPage": 99,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa05",
+          "question": "Find the mode of 5, 3, 5, 7, 5, 8, 3.",
+          "modelAnswer": "5 occurs three times, more than any other, so the mode is 5.",
+          "textbookPage": 100,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa06",
+          "question": "Shubman: 5 matches total 110; Yashasvi: 4 matches total 96. Compare fairly.",
+          "modelAnswer": "Compare means: 110 ÷ 5 = 22 vs 96 ÷ 4 = 24. By mean, Yashasvi did slightly better, though Shubman's total is higher.",
+          "textbookPage": 98,
+          "relatedConceptIds": [
+            "ch13_t01_c01",
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa07",
+          "question": "Why might the median be better than the mean when there is an outlier?",
+          "modelAnswer": "The mean uses every value, so one extreme outlier pulls it from the typical. The median is the middle value and ignores how extreme the ends are, staying closer to typical.",
+          "textbookPage": 99,
+          "relatedConceptIds": [
+            "ch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_qa08",
+          "question": "On a bar graph with 1 cm = 10 runs, how tall is the bar for 75 runs, and what does a 4.5 cm bar mean?",
+          "modelAnswer": "75 ÷ 10 = 7.5 cm tall. A 4.5 cm bar = 4.5 × 10 = 45 runs.",
+          "textbookPage": 100,
+          "relatedConceptIds": [
+            "ch13_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch13_mp01",
+          "emoji": "📊",
+          "title": "Class Data Detective",
+          "needs": [
+            "A survey question (e.g. shoe size, hours slept)",
+            "Classmates or family as the sample",
+            "Graph paper"
+          ],
+          "steps": [
+            "Pick a question and collect a number from 8-10 people.",
+            "Compute the MEAN (total÷count), MEDIAN (sort, middle), and MODE (most frequent).",
+            "Notice how the three compare — does an outlier pull the mean?",
+            "Draw a bar graph, choosing a scale so the tallest bar fits.",
+            "Write one honest statistical statement your data supports, and one it does NOT."
+          ],
+          "expectedObservation": "Mean, median and mode can differ — especially if one unusual value pulls the mean. The bar graph makes the data's shape visible at a glance.",
+          "whyItWorks": "Each representative value compresses the data differently: mean shares the total, median finds the middle, mode finds the most common. Real data rarely makes them identical, which is why choosing the right summary (and reading the scale) matters.",
+          "estimatedMinutes": 45,
+          "relatedConceptIds": [
+            "ch13_t02_c01",
+            "ch13_t03_c01"
+          ]
+        }
+      ],
+      "scientists": [
+        {
+          "id": "ch13_sci01",
+          "name": "Prasanta Chandra Mahalanobis",
+          "lifespan": "1893 – 1972",
+          "nationality": "Indian",
+          "oneLineLegacy": "Founder of the Indian Statistical Institute and pioneer of large-scale statistical surveys in India.",
+          "narrative": "P. C. Mahalanobis was the architect of modern statistics in India. He founded the Indian Statistical Institute in Kolkata in 1931 and developed large-scale sample-survey methods that shaped India's economic planning after independence. The 'Mahalanobis distance', still used worldwide in data science and machine learning, bears his name. He showed that careful sampling and representative values could describe an entire nation's agriculture, industry and population from a manageable amount of data — exactly the statistical thinking this chapter introduces. India's National Statistics Day falls on his birthday, 29 June.",
+          "relatedConceptIds": [
+            "ch13_t01_c01",
+            "ch13_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch13_t01_c01",
+            "label": "Statistical thinking",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.18
+          },
+          {
+            "id": "ch13_t02_c01",
+            "label": "Mean, median, mode",
+            "kind": "concept",
+            "x": 0.55,
+            "y": 0.45
+          },
+          {
+            "id": "ch13_t03_c01",
+            "label": "Bar graphs",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.75
+          },
+          {
+            "id": "ch13_pivot_summary",
+            "label": "Summarising data",
+            "kind": "pivot",
+            "x": 0.8,
+            "y": 0.45
+          },
+          {
+            "id": "ch01:ch01_t04_c01",
+            "label": "Ch.1 approximation",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.18
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch13_e01",
+            "from": "ch13_t01_c01",
+            "to": "ch13_t02_c01",
+            "label": "needs"
+          },
+          {
+            "id": "ch13_e02",
+            "from": "ch13_t02_c01",
+            "to": "ch13_t03_c01",
+            "label": "pictured by"
+          },
+          {
+            "id": "ch13_e03",
+            "from": "ch13_t02_c01",
+            "to": "ch13_pivot_summary",
+            "label": "is"
+          },
+          {
+            "id": "ch13_e04",
+            "from": "ch13_t03_c01",
+            "to": "ch13_pivot_summary",
+            "label": "visual form"
+          },
+          {
+            "id": "ch13_e05",
+            "from": "ch01:ch01_t04_c01",
+            "to": "ch13_t01_c01",
+            "label": "estimation feeds"
+          }
+        ]
+      }
     }
   ]
 }
