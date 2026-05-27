@@ -246,6 +246,7 @@
 		EF76CCA2C6ABA1F90F57F95B /* Scene8_AcidRainStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8644B412B9CA74605CB0B40 /* Scene8_AcidRainStory.swift */; };
 		612A185667283F225BFB3800 /* Scene9_BossQuiz_Ch5.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A6BAD15AD37BB317AF1C09 /* Scene9_BossQuiz_Ch5.swift */; };
 		4534EB478F8170A355681DF5 /* DiscoverChapter2View+InlineScenesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B50FD518AA931D54FD2BFB9 /* DiscoverChapter2View+InlineScenesB.swift */; };
+		6968B791898680129E52C989 /* DiscoverChapter2View+InlineScenesC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627521E4FC800F22F31558F8 /* DiscoverChapter2View+InlineScenesC.swift */; };
 		90900A62F34A881A650F4D4E /* DiscoverChapter2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DA426762308541E73CBB2 /* DiscoverChapter2View.swift */; };
 		A307B2CCF29A3E54EAAD97CD /* Scene1_TheMouthLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D06FA0B1E9BB8BCFF6B165 /* Scene1_TheMouthLab.swift */; };
 		3E651024C09E92CE7F1E7E3D /* Scene2_TheSwallowWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B9C19ABB23A010B2AD21A /* Scene2_TheSwallowWave.swift */; };
@@ -1798,6 +1799,7 @@
 		D8644B412B9CA74605CB0B40 /* Scene8_AcidRainStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene8_AcidRainStory.swift"; sourceTree = "<group>"; };
 		A9A6BAD15AD37BB317AF1C09 /* Scene9_BossQuiz_Ch5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene9_BossQuiz_Ch5.swift"; sourceTree = "<group>"; };
 		4B50FD518AA931D54FD2BFB9 /* DiscoverChapter2View+InlineScenesB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter2View+InlineScenesB.swift"; sourceTree = "<group>"; };
+		627521E4FC800F22F31558F8 /* DiscoverChapter2View+InlineScenesC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter2View+InlineScenesC.swift"; sourceTree = "<group>"; };
 		1A2DA426762308541E73CBB2 /* DiscoverChapter2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter2View.swift"; sourceTree = "<group>"; };
 		23D06FA0B1E9BB8BCFF6B165 /* Scene1_TheMouthLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_TheMouthLab.swift"; sourceTree = "<group>"; };
 		AA7B9C19ABB23A010B2AD21A /* Scene2_TheSwallowWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_TheSwallowWave.swift"; sourceTree = "<group>"; };
@@ -3454,6 +3456,7 @@
 			isa = PBXGroup;
 			children = (
 				4B50FD518AA931D54FD2BFB9,
+				627521E4FC800F22F31558F8,
 				1A2DA426762308541E73CBB2,
 				73F34E4DBD91C7AE522DB1A6,
 			);
@@ -4931,6 +4934,7 @@
 				EF76CCA2C6ABA1F90F57F95B /* Scene8_AcidRainStory.swift in Sources */,
 				612A185667283F225BFB3800 /* Scene9_BossQuiz_Ch5.swift in Sources */,
 				4534EB478F8170A355681DF5 /* DiscoverChapter2View+InlineScenesB.swift in Sources */,
+				6968B791898680129E52C989 /* DiscoverChapter2View+InlineScenesC.swift in Sources */,
 				90900A62F34A881A650F4D4E /* DiscoverChapter2View.swift in Sources */,
 				A307B2CCF29A3E54EAAD97CD /* Scene1_TheMouthLab.swift in Sources */,
 				3E651024C09E92CE7F1E7E3D /* Scene2_TheSwallowWave.swift in Sources */,
