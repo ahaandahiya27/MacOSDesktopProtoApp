@@ -19,11 +19,16 @@ import SwiftUI
 /// `ChapterDetailView+ExtraReadingRow.swift` and
 /// `ChapterDetailView+CommonMistakesCard.swift`.
 struct ChapterGlossaryCTA: View {
+    let pack: SubjectPack
     let chapter: Chapter
     @State private var presented: ArticleEntry?
 
     private var entry: ArticleEntry? {
-        let key = "\(chapter.id)_glossary"
+        // Maths article keys are `mch01_…`; Science reuses `ch01_…`. Without
+        // the pack-aware prefix a Maths chapter's CTA would open the SCIENCE
+        // glossary (shared `chNN` ids). Mirrors ChapterDetailView.resolvedArticleEntry.
+        guard pack.id == "science_class7" || pack.id == "maths_class7" else { return nil }
+        let key = (pack.id == "maths_class7" ? "m" : "") + "\(chapter.id)_glossary"
         guard let candidate = ArticleIndex.entries[key] else { return nil }
         // Bundle-existence gate — same shape as ExtraReadingRow's
         // resolvedEntry helper. Catches a chapter whose article
