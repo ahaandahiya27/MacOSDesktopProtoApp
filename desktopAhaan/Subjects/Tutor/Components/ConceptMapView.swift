@@ -53,7 +53,14 @@ struct ConceptMapView: View {
     /// Concept-id → label lookup so the a11y list can render
     /// "<from-label> → <to-label>" rather than ids.
     private var labelByNodeId: [String: String] {
-        Dictionary(uniqueKeysWithValues: nodes.map { ($0.id, $0.label) })
+        // Soft de-dup: conceptMap node ids are hand-authored (incl. synthetic
+        // pivot / cross-chapter ids), so a duplicate is plausible. The unsafe
+        // `Dictionary(uniqueKeysWithValues:)` would TRAP on a dup and kill the
+        // session when the kid opens this chapter's map — log + keep first.
+        Dictionary(nodes.map { ($0.id, $0.label) }, uniquingKeysWith: { first, _ in
+            CrashReporter.shared.logDataIssue("Duplicate conceptMap node id: keeping first label '\(first)'")
+            return first
+        })
     }
 
     var body: some View {

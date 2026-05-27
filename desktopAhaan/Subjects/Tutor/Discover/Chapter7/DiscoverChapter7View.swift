@@ -75,7 +75,7 @@ struct DiscoverChapter7View: View {
             { AnyView(MonsoonMapScene(onComplete: { self.markComplete(13) })) },
             { AnyView(QuickCheckQuizScene(
                 title: "Weather Symbols Quiz",
-                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                questions: Array(self.chapter.quickCheckQuestionsList.prefix(4)),
                 onComplete: { score in self.markComplete(14, score: score, max: 4) }
             )) },
             { AnyView(ClimateChangeStoryScene(onComplete: { self.markComplete(15) })) },

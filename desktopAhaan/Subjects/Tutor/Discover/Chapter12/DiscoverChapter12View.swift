@@ -79,7 +79,7 @@ struct DiscoverChapter12View: View {
             { AnyView(HibiscusBisexualScene(onComplete: { self.markComplete(17) })) },
             { AnyView(QuickCheckQuizScene(
                 title: "Reproduction Quiz",
-                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                questions: Array(self.chapter.quickCheckQuestionsList.prefix(4)),
                 onComplete: { score in self.markComplete(18, score: score, max: 4) }
             )) },
             { AnyView(Scene9_BossQuiz_Ch12(pack: self.pack, chapter: self.chapter, onComplete: { score in self.markComplete(19, score: score, max: 10) })) }

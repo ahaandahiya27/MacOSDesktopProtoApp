@@ -76,7 +76,7 @@ struct DiscoverChapter8View: View {
             { AnyView(PressureBeltScene(onComplete: { self.markComplete(14) })) },
             { AnyView(QuickCheckQuizScene(
                 title: "Cyclone Survival Quiz",
-                questions: Array(self.chapter.quickCheckQuestionsList[0..<4]),
+                questions: Array(self.chapter.quickCheckQuestionsList.prefix(4)),
                 onComplete: { score in self.markComplete(15, score: score, max: 4) }
             )) },
             { AnyView(TradeWindsMapScene(onComplete: { self.markComplete(16) })) },
