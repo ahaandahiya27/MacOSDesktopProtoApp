@@ -664,7 +664,7 @@ final class DataStore: ObservableObject {
         // Backfill/refresh the owning pack when the caller knows it.
         // `schedule` already preserves a previously-stored packId via its
         // `var r = review` copy, so a nil here never clears a known value.
-        if let packId { updated.packId = packId }
+        if let packId = packId { updated.packId = packId }
         questionReviews[questionId] = updated
         // Coalesced — a 10-question review session writes once at the end,
         // not 10 times in 30 seconds. flushSavesBeforeQuit covers ⌘Q.
