@@ -157,7 +157,7 @@ private struct QuizBankContent: View {
         .onAppear { rebuildCache() }
         .toolbar {
             ToolbarItem(placement: .automatic) {
-                Text("Showing \(filteredEntries.count) of \(cachedEntries.count)")
+                Text("Showing \(entries.count) of \(cachedEntries.count)")
                     .font(.caption.monospacedDigit())
                     .foregroundColor(.secondary)
             }

@@ -18,6 +18,9 @@ private struct SearchContent: View {
     /// pack picker added to QuizBank (E3) so the kid can ask "find this
     /// in Science but not Sanskrit" or vice versa.
     @State private var packFilter: String? = nil
+    /// Cached scan result. Recomputed only when `debouncedQuery` or
+    /// `packFilter` changes — NOT on every keystroke / unrelated re-render.
+    @State private var matches: [(SubjectPack, [Concept], [Question])] = []
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -83,6 +86,16 @@ private struct SearchContent: View {
             debounceWork = work
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: work)
         }
+        // Recompute the cached scan only when its inputs change.
+        .onChange(of: debouncedQuery) { _ in matches = computeMatches() }
+        .onChange(of: packFilter) { _ in matches = computeMatches() }
+        .onAppear {
+            // Restore results when returning with a query already typed
+            // (query/debouncedQuery persist across navigations via C1).
+            if matches.isEmpty && !debouncedQuery.trimmingCharacters(in: .whitespaces).isEmpty {
+                matches = computeMatches()
+            }
+        }
         // Cancel any pending debounce work on view disappear so the work
         // doesn't fire after the kid has navigated away and surprise-touch
         // `debouncedQuery` (the @State persists across navigations via the
@@ -146,15 +159,18 @@ private struct SearchContent: View {
             .filter { !$0.isEmpty }
     }
 
-    @ViewBuilder
-    private var resultsList: some View {
-        let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
-        let tokens = tokenize(trimmed)
+    /// Full corpus scan — scores + sorts every concept/question in scope.
+    /// Returned for caching in `matches` (see body's onChange wiring) so
+    /// that per-keystroke body re-renders, which only move `query` (not the
+    /// debounced value), don't re-pay this O(corpus) cost on the weak iMac.
+    private func computeMatches() -> [(SubjectPack, [Concept], [Question])] {
+        let tokens = tokenize(debouncedQuery.trimmingCharacters(in: .whitespaces))
+        guard !tokens.isEmpty else { return [] }
         let scopedPacks: [SubjectPack] = {
             guard let id = packFilter else { return subjectRegistry.packs }
             return subjectRegistry.packs.filter { $0.id == id }
         }()
-        let matches = scopedPacks.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
+        return scopedPacks.compactMap { pack -> (SubjectPack, [Concept], [Question])? in
             // Score each concept/question by match quality, then sort
             // descending. Title/prompt prefix > title contains > body
             // contains. Stable for ties via the original collection order.
@@ -175,7 +191,11 @@ private struct SearchContent: View {
             if cs.isEmpty && qs.isEmpty { return nil }
             return (pack, cs, qs)
         }
+    }
 
+    @ViewBuilder
+    private var resultsList: some View {
+        let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
         if matches.isEmpty {
             VStack(spacing: 12) {
                 Image(systemName: "magnifyingglass")
