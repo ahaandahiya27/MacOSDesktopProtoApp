@@ -66,7 +66,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     } else {
                         SoftShadowCard(padding: 18) {
                             VStack(alignment: .leading, spacing: 8) {
-                                Label("Three Highways of Heat", systemImage: "arrow.triangle.branch")
+                                Label("Three Highways of Heat", systemImage: SFSymbolCompat.name("arrow.triangle.branch"))
                                     .font(.title2.bold())
                                 Text("Heat can travel in three ways: conduction, convection, and radiation. Tap each lane to learn how!")
                                     .font(.body)

@@ -19,7 +19,7 @@ struct TranslationResultCard: View {
                     Spacer()
                     HStack(spacing: 12) {
                         Button(action: onSpeak) {
-                            Image(systemName: isSpeaking ? "speaker.wave.3.fill" : "speaker.wave.2")
+                            Image(systemName: SFSymbolCompat.name(isSpeaking ? "speaker.wave.3.fill" : "speaker.wave.2"))
                                 .foregroundColor(Color.compatIndigo)
                         }
                         .disabled(isSpeaking)
@@ -29,7 +29,7 @@ struct TranslationResultCard: View {
                         .accessibilityHint("Hear the translated text spoken aloud")
 
                         Button(action: onFavorite) {
-                            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                            Image(systemName: SFSymbolCompat.name(isFavorited ? "heart.fill" : "heart"))
                                 .foregroundColor(.pink)
                         }
                         .pointingCursor()
@@ -46,7 +46,7 @@ struct TranslationResultCard: View {
                                 showCopied = false
                             }
                         }) {
-                            Image(systemName: showCopied ? "checkmark" : "doc.on.doc")
+                            Image(systemName: SFSymbolCompat.name(showCopied ? "checkmark" : "doc.on.doc"))
                                 .foregroundColor(showCopied ? .green : .secondary)
                         }
                         .pointingCursor()
@@ -72,20 +72,20 @@ struct TranslationResultCard: View {
 
             ExpandableCard(
                 isExpanded: $isExpanded,
-                systemImage: "book.fill",
+                systemImage: SFSymbolCompat.name("book.fill"),
                 title: "Learn More",
                 tint: Color.compatIndigo
             ) {
                 VStack(alignment: .leading, spacing: 14) {
                     if let words = response.wordByWord, !words.isEmpty {
-                        DetailSection(title: "Word by Word", icon: "text.word.spacing") {
+                        DetailSection(title: "Word by Word", icon: SFSymbolCompat.name("text.word.spacing")) {
                             ForEach(words.indices, id: \.self) { idx in
                                 let word = words[idx]
                                 HStack(alignment: .top) {
                                     Text(word.source)
                                         .font(.subheadline.weight(.medium))
                                         .frame(width: 80, alignment: .leading)
-                                    Image(systemName: "arrow.right")
+                                    Image(systemName: SFSymbolCompat.name("arrow.right"))
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                     VStack(alignment: .leading) {
@@ -103,14 +103,14 @@ struct TranslationResultCard: View {
                     }
 
                     if let grammar = response.grammarNote, !grammar.isEmpty {
-                        DetailSection(title: "Grammar", icon: "text.book.closed") {
+                        DetailSection(title: "Grammar", icon: SFSymbolCompat.name("text.book.closed")) {
                             Text(grammar)
                                 .font(.subheadline)
                         }
                     }
 
                     if let tip = response.learningTip, !tip.isEmpty {
-                        DetailSection(title: "Learning Tip", icon: "lightbulb") {
+                        DetailSection(title: "Learning Tip", icon: SFSymbolCompat.name("lightbulb")) {
                             Text(tip)
                                 .font(.subheadline)
                                 .foregroundColor(Color.compatIndigo)
@@ -118,7 +118,7 @@ struct TranslationResultCard: View {
                     }
 
                     if let alts = response.alternatives, !alts.isEmpty {
-                        DetailSection(title: "Alternatives", icon: "arrow.triangle.branch") {
+                        DetailSection(title: "Alternatives", icon: SFSymbolCompat.name("arrow.triangle.branch")) {
                             ForEach(alts.indices, id: \.self) { idx in
                                 let alt = alts[idx]
                                 Text("- \(alt)")
@@ -129,7 +129,7 @@ struct TranslationResultCard: View {
 
                     if let conf = response.confidenceNote, !conf.isEmpty {
                         HStack(alignment: .top, spacing: 6) {
-                            Image(systemName: "info.circle")
+                            Image(systemName: SFSymbolCompat.name("info.circle"))
                                 .foregroundColor(.orange)
                             Text(conf)
                                 .font(.caption)
@@ -178,7 +178,7 @@ struct DifficultyBadge: View {
             Text(level.rawValue)
                 .font(.caption2.weight(.bold))
         } icon: {
-            Image(systemName: iconName)
+            Image(systemName: SFSymbolCompat.name(iconName))
                 .font(.system(size: 6))
         }
         .padding(.horizontal, 8)

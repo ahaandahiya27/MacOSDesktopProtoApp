@@ -950,7 +950,7 @@ struct QuestionDetailView: View {
     private var variationsSection: some View {
         if !question.variations.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
-                Label("Now try these variations", systemImage: "arrow.triangle.branch")
+                Label("Now try these variations", systemImage: SFSymbolCompat.name("arrow.triangle.branch"))
                     .font(.headline)
                 ForEach(question.variations) { v in
                     QuestionVariationCard(variation: v)

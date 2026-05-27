@@ -9,7 +9,7 @@ struct QuestionVariationCard: View {
     var body: some View {
         ExpandableCard(
             isExpanded: $expanded,
-            systemImage: "arrow.triangle.branch",
+            systemImage: SFSymbolCompat.name("arrow.triangle.branch"),
             title: variation.prompt,
             tint: Color.compatIndigo
         ) {

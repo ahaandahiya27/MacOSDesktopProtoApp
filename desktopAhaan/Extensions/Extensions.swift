@@ -140,6 +140,9 @@ enum SFSymbolCompat {
         case "chart.line.uptrend.xyaxis":  return "chart.bar.fill"         // SF Symbols 3+ — added 2026-05-19 (Ch.13 Scene 3 distance-time graph)
         case "sun.and.horizon.fill":       return "sunrise.fill"           // SF Symbols 3+ — added 2026-05-19 (Ch.19 Scene 5 spring/neap tides)
         case "wrench.and.screwdriver.fill": return "wrench.fill"           // SF Symbols 3+ — added 2026-05-26 (ExtraReadingRow MiniProject chip)
+        case "text.word.spacing":          return "textformat"             // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Word by Word section)
+        case "text.book.closed":           return "book.closed"            // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Grammar section)
+        case "arrow.triangle.branch":      return "arrow.branch"           // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Alternatives section)
         default:                           return modern
         }
     }
