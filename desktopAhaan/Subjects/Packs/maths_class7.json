@@ -14394,6 +14394,740 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch14",
+      "number": 14,
+      "title": "Constructions and Tilings",
+      "summary": "With just a compass and a straightedge — no measuring — you can construct exact perpendicular bisectors, 60° angles, and bisect any angle. The chapter then turns to tiling: covering a region with shapes leaving no gaps or overlaps, governed by one elegant rule — the angles meeting at any point must sum to exactly 360°, which is why squares, triangles and hexagons tile but pentagons don't.",
+      "topics": [
+        {
+          "id": "ch14_t01",
+          "title": "Compass Constructions",
+          "summary": "With only a compass and a straightedge you can construct exact figures — no measuring. Drawing equal-radius arcs from two points X and Y gives points equidistant from both, and joining them produces the perpendicular bisector of XY (the line of symmetry).",
+          "concepts": [
+            {
+              "id": "ch14_t01_c01",
+              "title": "The perpendicular bisector by equal arcs",
+              "explanations": {
+                "oneLine": "Drawing equal arcs above and below a segment from each endpoint locates two points equidistant from both ends; the line through them is the perpendicular bisector.",
+                "kidFriendly": "To make a symmetrical 'eye' shape, you need a supporting line of symmetry. Start with segment XY. From X, draw arcs above and below the line; from Y, draw arcs of the SAME radius. Where the arcs cross (one point above, one below) gives two points, each the same distance from X as from Y. Join those two crossing points: the line you get cuts XY exactly in half AND meets it at 90° — it's the perpendicular bisector. No ruler measuring needed; the equal radii guarantee the symmetry. This single construction is the workhorse of all compass-and-straightedge geometry.",
+                "textbook": "The perpendicular bisector of a segment XY is constructed by drawing arcs of equal radius (greater than half XY) from X and from Y on both sides; the two arc intersections are each equidistant from X and Y. The line through them is perpendicular to XY and bisects it, since every point equidistant from X and Y lies on this line (its locus definition).",
+                "expert": "The perpendicular bisector is the locus of points equidistant from two fixed points — a line, by the symmetry of the Euclidean metric. The compass construction realises this: equal radii force |PX| = |PY| at each intersection P, and two such points determine the locus line. This construction underlies bisection, midpoint-finding, and circumcircle construction."
+              },
+              "reasoning": "A point the same distance from both ends of a segment must lie on the segment's mirror line. Equal-radius arcs from each end mark exactly such equidistant points; two of them fix the mirror line, which cuts the segment in half at a right angle.",
+              "useCases": [
+                {
+                  "title": "Symmetrical eye drawing",
+                  "description": "Equal arcs find the line of symmetry for a balanced 'eye' shape.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Finding a midpoint",
+                  "description": "The perpendicular bisector crosses a segment exactly at its midpoint.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Equidistant well",
+                  "description": "To place a well equally far from two houses, build on the perpendicular bisector of the line joining them.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Compass-and-straightedge construction is an ancient Greek discipline with surprising depth — it's PROVABLY impossible to trisect a general angle or 'square the circle' with just these tools, results not settled until the 1800s. Yet the perpendicular bisector, one of the simplest constructions, is exact and used in everything from drafting to GPS triangulation.",
+              "mnemonic": "Equal arcs from both ends → equidistant points → the perpendicular bisector (cuts in half at 90°).",
+              "predictQuestion": "Drawing equal-radius arcs from each end of a segment XY, you get two crossing points. What line do they determine, and what is special about it?",
+              "whyChain": [
+                "Each arc from X marks points a fixed distance from X; each equal-radius arc from Y marks points the same distance from Y. So where an X-arc and a Y-arc cross, that point is EQUIDISTANT from X and Y. The equal radii are what guarantee this.",
+                "Do it above and below the segment and you get two such equidistant points. Join them: the line cuts XY exactly in half and meets it at 90° — the perpendicular bisector. No measuring was needed; the geometry of equal radii forced both the bisection and the right angle.",
+                "This works because the perpendicular bisector is precisely the set of all points equidistant from X and Y. It's the workhorse of compass-and-straightedge geometry — used to find midpoints, place a point equally far from two others, and build circumcircles. Constructions like this are exact, even though the Greeks proved some tasks (trisecting an angle, squaring the circle) impossible with these tools alone."
+              ],
+              "relatedConceptIds": [
+                "ch14_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t01_q01"
+              ],
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch14_t01_q01",
+              "prompt": "To find the midpoint of a segment XY with only a compass and straightedge, what construction do you use, and why does it land on the midpoint?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Construct the perpendicular bisector (equal arcs from X and Y, both sides; join the intersections). It crosses XY at the midpoint because every point on it is equidistant from X and Y, so it meets XY exactly halfway.",
+              "solutionSteps": [
+                "Draw equal-radius arcs from X and from Y, above and below XY.",
+                "Join the two arc intersections — this is the perpendicular bisector.",
+                "Every point on it is equidistant from X and Y, so where it crosses XY is the midpoint."
+              ],
+              "commonMistakes": [
+                "Trying to eyeball the midpoint instead of constructing it.",
+                "Using different radii from X and Y (breaks the equidistance)."
+              ],
+              "variations": [
+                {
+                  "prompt": "What angle does the perpendicular bisector make with XY?",
+                  "answer": "90°",
+                  "solutionSteps": [
+                    "It is perpendicular by construction."
+                  ]
+                },
+                {
+                  "prompt": "Why must the arc radius exceed half of XY?",
+                  "answer": "So the arcs from X and Y actually intersect.",
+                  "solutionSteps": [
+                    "Smaller radii wouldn't reach each other."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                148,
+                149
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch14_t02",
+          "title": "Constructing Angles",
+          "summary": "A compass can build exact angles too. Because an equilateral triangle has 60° angles, swinging equal arcs constructs a 60° angle without a protractor; bisecting an angle (equal arcs from its arms) halves it, so 60° gives 30°, and a right angle gives 45°.",
+          "concepts": [
+            {
+              "id": "ch14_t02_c01",
+              "title": "Constructing and bisecting angles",
+              "explanations": {
+                "oneLine": "A 60° angle is constructed using equal arcs (the equilateral-triangle angle); bisecting any angle with equal arcs from its arms halves it.",
+                "kidFriendly": "You can build exact angles with just a compass. To make 60°: draw a ray, swing an arc from its endpoint, then from where that arc crosses the ray swing the SAME radius to cut the arc — joining gives a 60° angle (it's the corner of an equilateral triangle, all 60°). To BISECT (halve) any angle: from the corner, draw an arc crossing both arms; from those two crossing points swing equal arcs to meet; the line to that meeting point splits the angle exactly in two. So 60° bisected gives 30°; a 90° right angle bisected gives 45°. Combining construction and bisection builds many exact angles — no protractor needed.",
+                "textbook": "A 60° angle is constructed by exploiting the equilateral triangle (equal arcs make all sides equal, so each angle is 60°). Any angle is bisected by drawing an arc cutting both arms, then equal arcs from those intersection points; the ray to their meeting point bisects the angle. Bisection halves the measure: 60°→30°, 90°→45°. These combine to construct angles like 30°, 45°, 90°, 120°.",
+                "expert": "Angle constructions realise constructible angles — those obtainable from 60° and 90° by bisection and addition, i.e. multiples of 15°. Angle bisection corresponds to the perpendicular bisector of the chord cut on the arms. The Gauss–Wantzel theorem characterises exactly which angles/polygons are constructible; 60° trisection (to 20°) is famously NOT, despite bisection being trivial."
+              },
+              "reasoning": "An equilateral triangle's corners are all 60°, so equal-radius arcs (making equal sides) hand you a 60° angle for free. Halving an angle just needs a point equidistant from both arms — found again by equal arcs — and the line to it splits the angle evenly.",
+              "useCases": [
+                {
+                  "title": "60° without a protractor",
+                  "description": "Equal arcs build the equilateral-triangle corner — exactly 60°.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Bisecting for 45°",
+                  "description": "Bisecting a right angle gives two 45° angles, used in set-square designs.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Drafting angles",
+                  "description": "Draughtsmen construct 30°, 45°, 60°, 90° by compass for precise drawings.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "While bisecting an angle is easy, TRISECTING a general angle (cutting it into three equal parts) with compass and straightedge is provably IMPOSSIBLE — a 2000-year-old puzzle finally settled in 1837. So you can construct 30° (half of 60°) effortlessly but cannot construct 20° (a third of 60°) this way. The line between easy and impossible in geometry is subtle and beautiful.",
+              "mnemonic": "60° from equal arcs (equilateral corner); bisect to halve any angle (60→30, 90→45).",
+              "predictQuestion": "How can you construct a 30° angle using only a compass and straightedge?",
+              "whyChain": [
+                "Start by constructing a 60° angle, which comes free from the equilateral triangle: draw a ray, swing an arc from its endpoint, then from where the arc meets the ray swing the SAME radius to cut the arc. Joining gives a 60° angle, because equal radii make an equilateral triangle whose every corner is 60°.",
+                "Now BISECT that 60° angle. From its corner, draw an arc crossing both arms; from those two crossing points swing equal arcs to meet; the ray to that meeting point splits the angle exactly in half. Half of 60° is 30°.",
+                "So 30° is constructed by 'build 60°, then bisect'. The same toolkit makes 45° (bisect a right angle), 15° (bisect 30°), and more. Curiously, while halving is always easy, TRISECTING a general angle — cutting 60° into three 20° parts — was proven impossible with these tools in 1837, a striking boundary between the easy and the impossible in geometry."
+              ],
+              "relatedConceptIds": [
+                "ch14_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t02_q01"
+              ],
+              "pageRefs": [
+                150,
+                151
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch14_t02_q01",
+              "prompt": "Using only a compass and straightedge, how do you construct a 30° angle? And what do you get if you bisect a right angle?",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Construct a 60° angle (equilateral-triangle corner via equal arcs), then bisect it to get 30°. Bisecting a 90° right angle gives 45°.",
+              "solutionSteps": [
+                "Construct 60°: equal arcs give the corner of an equilateral triangle (all angles 60°).",
+                "Bisect the 60° angle with equal arcs from its arms → 30°.",
+                "Bisecting a 90° angle similarly gives 45°."
+              ],
+              "commonMistakes": [
+                "Trying to measure 30° with a protractor instead of constructing it.",
+                "Thinking you can trisect to get 20° as easily (you can't, with these tools)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Bisect a 60° angle — what do you get?",
+                  "answer": "30°",
+                  "solutionSteps": [
+                    "Half of 60°."
+                  ]
+                },
+                {
+                  "prompt": "Construct 120° — how?",
+                  "answer": "Two 60° angles side by side.",
+                  "solutionSteps": [
+                    "60° + 60° = 120°."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                150,
+                151
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch14_t03",
+          "title": "Tiling the Plane",
+          "summary": "Tiling (tessellation) covers a region with shapes leaving no gaps and no overlaps. The key rule: wherever tiles meet at a point, the angles around that point must add up to exactly 360° — which is why squares and regular hexagons tile, but regular pentagons can't.",
+          "concepts": [
+            {
+              "id": "ch14_t03_c01",
+              "title": "Tiling and the 360° rule at a vertex",
+              "explanations": {
+                "oneLine": "A tiling covers a region with no gaps or overlaps; wherever corners meet at a point, the angles must sum to exactly 360°.",
+                "kidFriendly": "Tiling (or tessellation) means covering a flat region with shapes leaving no gaps and no overlaps — like floor tiles or a tangram rearranged to fill a square. The secret rule: at any point where tile corners meet, the angles around that point must add up to exactly 360° (a full turn). Squares (90° corners) tile because four meet at a point: 4 × 90° = 360°. Equilateral triangles (60°) tile: six meet, 6 × 60° = 360°. Regular hexagons (120°) tile: three meet, 3 × 120° = 360°. But regular pentagons (108°) can't: 3 × 108° = 324° (gap) and 4 × 108° = 432° (overlap) — no whole number of them makes 360°. The 360° rule decides what tiles.",
+                "textbook": "A tiling (tessellation) of the plane covers it with shapes leaving no gaps or overlaps. At each vertex where tile corners meet, the interior angles must sum to exactly 360°. A regular polygon tiles the plane alone only if its interior angle divides 360°: squares (90°, four per vertex), equilateral triangles (60°, six), and regular hexagons (120°, three). Regular pentagons (108°) cannot, since 108° does not divide 360° evenly.",
+                "expert": "Regular tessellations correspond to interior angles 360°/n being achievable by an integer number of tiles: only {3,4,6}-gons satisfy (interior angle)·k = 360° for integer k≥3. This is the classification of the three regular tilings. Relaxing regularity gives the 8 semiregular (Archimedean) tilings and infinitely many irregular ones; the 360°-at-a-vertex condition is the invariant throughout."
+              },
+              "reasoning": "Around any point there are exactly 360° of turning. For tiles to meet there with no gap and no overlap, their corner angles must fill that 360° exactly — no more, no less. So only shapes whose angle divides evenly into 360° can surround a point.",
+              "useCases": [
+                {
+                  "title": "Floor tiles",
+                  "description": "Square tiles meet 4-at-a-corner (4×90°=360°), covering a floor perfectly.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Honeycomb",
+                  "description": "Bees build hexagonal cells; three hexagons (3×120°=360°) meet at each point — the most efficient tiling.",
+                  "domain": "animals"
+                },
+                {
+                  "title": "Why not pentagon tiles",
+                  "description": "Regular pentagons leave gaps because 108° doesn't divide 360°.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Bees 'discovered' that regular hexagons tile most efficiently — using the least wax wall for the most storage — millions of years before mathematicians proved the 'Honeycomb Conjecture' in 1999. Tiling theory also underlies Islamic geometric art, M.C. Escher's prints, and even the structure of crystals. The humble 360°-at-a-vertex rule opens onto deep and beautiful mathematics.",
+              "mnemonic": "Tiles meet with no gaps/overlaps only if the angles at each meeting point sum to exactly 360°.",
+              "predictQuestion": "Why do squares and regular hexagons tile the plane, but regular pentagons cannot?",
+              "whyChain": [
+                "For tiles to cover a region with no gaps or overlaps, look at any point where their corners meet: the angles crowded around that point must add up to exactly 360°, a full turn. Too little leaves a gap; too much forces an overlap.",
+                "Squares have 90° corners, and four of them meet neatly: 4 × 90° = 360°. Equilateral triangles (60°) fit six per point: 6 × 60° = 360°. Regular hexagons (120°) fit three: 3 × 120° = 360°. Each works because its angle divides evenly into 360°.",
+                "Regular pentagons have 108° corners, and 108° does NOT divide 360° evenly: three give 324° (a gap), four give 432° (an overlap). No whole number of pentagons fills the 360° around a point, so they can't tile alone. This simple rule — angles at a vertex must total 360° — classifies the three regular tilings and reaches all the way to honeycombs, Islamic art, Escher's prints, and crystal structure."
+              ],
+              "relatedConceptIds": [
+                "ch14_t02_c01",
+                "ch05_t01_c02"
+              ],
+              "relatedQuestionIds": [
+                "ch14_t03_q01",
+                "ch14_t03_q02"
+              ],
+              "pageRefs": [
+                156,
+                157,
+                158
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch14_t03_q01",
+              "prompt": "Why can four squares meet exactly at a point in a tiling, and how many equilateral triangles meet at a point?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Four squares: 4 × 90° = 360°. Six equilateral triangles: 6 × 60° = 360°.",
+              "solutionSteps": [
+                "A square's corner is 90°. Angles around a point must total 360°.",
+                "360 ÷ 90 = 4, so four squares meet at each point.",
+                "An equilateral triangle's corner is 60°; 360 ÷ 60 = 6, so six triangles meet at a point."
+              ],
+              "commonMistakes": [
+                "Forgetting the 360° rule and guessing.",
+                "Using the wrong interior angle for the shape."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many regular hexagons meet at a tiling vertex?",
+                  "answer": "3 (3 × 120° = 360°).",
+                  "solutionSteps": [
+                    "360 ÷ 120 = 3."
+                  ]
+                },
+                {
+                  "prompt": "Do regular pentagons tile the plane?",
+                  "answer": "No — 108° doesn't divide 360° evenly.",
+                  "solutionSteps": [
+                    "3×108=324 (gap), 4×108=432 (overlap)."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                157,
+                158
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_t03_q02",
+              "prompt": "A regular octagon has interior angles of 135°. Can regular octagons tile the plane by themselves? Explain using the 360° rule.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "No. 360 ÷ 135 is not a whole number (two octagons give 270°, three give 405°), so octagons alone cannot surround a point exactly. (They can tile WITH squares, though.)",
+              "solutionSteps": [
+                "Angles at a meeting point must total exactly 360°.",
+                "Octagon interior angle = 135°. 2 × 135 = 270° (gap of 90°); 3 × 135 = 405° (overlap).",
+                "No whole number of 135° angles makes 360°, so octagons can't tile alone."
+              ],
+              "commonMistakes": [
+                "Assuming any regular polygon tiles.",
+                "Forgetting that the angle must divide 360° evenly."
+              ],
+              "variations": [
+                {
+                  "prompt": "The 90° gap left by two octagons is exactly which shape's corner?",
+                  "answer": "A square's (90°).",
+                  "solutionSteps": [
+                    "Octagons + squares tile together."
+                  ]
+                },
+                {
+                  "prompt": "Does a regular 12-gon (150°) tile alone?",
+                  "answer": "No — 360 ÷ 150 = 2.4, not whole.",
+                  "solutionSteps": [
+                    "Needs other shapes to fill."
+                  ]
+                }
+              ],
+              "difficulty": 3,
+              "pageRefs": [
+                158
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171
+      ],
+      "glossary": [
+        {
+          "id": "ch14_gl01",
+          "term": "Construction",
+          "definition": "Drawing an exact figure using only a compass and straightedge, without measuring.",
+          "example": "Constructing a perpendicular bisector.",
+          "hindiTerm": "रचना",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl02",
+          "term": "Perpendicular bisector",
+          "definition": "A line that cuts a segment in half at a right angle.",
+          "example": "Found by equal arcs from both ends.",
+          "hindiTerm": "लंब समद्विभाजक",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl03",
+          "term": "Angle bisector",
+          "definition": "A ray that divides an angle into two equal angles.",
+          "example": "Bisecting 60° gives two 30° angles.",
+          "hindiTerm": "कोण समद्विभाजक",
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl04",
+          "term": "Equidistant",
+          "definition": "At the same distance from two or more points.",
+          "example": "Points on a perpendicular bisector are equidistant from the segment's ends.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl05",
+          "term": "Tiling (tessellation)",
+          "definition": "Covering a region with shapes leaving no gaps or overlaps.",
+          "example": "Square floor tiles.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl06",
+          "term": "Interior angle",
+          "definition": "The angle inside a polygon at a vertex.",
+          "example": "A square's interior angle is 90°.",
+          "hindiTerm": "अंतःकोण",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl07",
+          "term": "Regular polygon",
+          "definition": "A polygon with all sides and all angles equal.",
+          "example": "A regular hexagon.",
+          "hindiTerm": "सम बहुभुज",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl08",
+          "term": "Vertex (tiling)",
+          "definition": "A point where tile corners meet; angles there sum to 360°.",
+          "example": "Four square corners meet at a vertex.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl09",
+          "term": "Tangram",
+          "definition": "A Chinese puzzle of 7 pieces cut from a square, rearranged into shapes.",
+          "example": "Forming an arrow from tangram pieces.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_gl10",
+          "term": "Straightedge",
+          "definition": "An unmarked ruler used only to draw straight lines in constructions.",
+          "example": "Used with a compass for exact figures.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch14_mn01",
+          "acronym": "Equal arcs → equidistant",
+          "unpacking": "Equal-radius arcs from both ends of a segment give points equidistant from both — the perpendicular bisector.",
+          "context": "Use to bisect a segment or find a midpoint.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_mn02",
+          "acronym": "60 free, then bisect",
+          "unpacking": "Equal arcs give a 60° angle (equilateral corner); bisecting halves any angle (60→30, 90→45).",
+          "context": "Use to construct 30°, 45°, 60°, 90°.",
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_mn03",
+          "acronym": "Tiles need 360 at a point",
+          "unpacking": "Shapes tile only if the angles meeting at each point add to exactly 360°.",
+          "context": "Use to decide whether a shape tiles.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch14_ms01",
+          "kidsThink": "You need a ruler to find the exact midpoint of a segment.",
+          "actually": "A compass-and-straightedge perpendicular bisector finds it exactly, no measuring — equal arcs guarantee equidistance.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms02",
+          "kidsThink": "If you can bisect an angle, you can also trisect it with compass and straightedge.",
+          "actually": "Bisecting is easy, but trisecting a general angle is provably IMPOSSIBLE with these tools. You can make 30° (half of 60°) but not 20° (a third).",
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms03",
+          "kidsThink": "Any regular polygon can tile the plane.",
+          "actually": "Only those whose interior angle divides 360° — triangles (60°), squares (90°), hexagons (120°). Pentagons (108°) cannot.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms04",
+          "kidsThink": "At a tiling point the angles can add to a bit less or more than 360°.",
+          "actually": "They must add to EXACTLY 360°. Less leaves a gap; more forces an overlap.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_ms05",
+          "kidsThink": "Constructed figures are just careful drawings.",
+          "actually": "They are EXACT by geometry (equal radii, equidistance), not by measurement — that's what makes constructions special.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch14_re01",
+          "title": "Why honeycombs are hexagonal",
+          "body": "Bees build hexagonal cells because three hexagons (3 × 120° = 360°) meet perfectly at each point with no wasted space, using the least wax wall for the most honey. The 360°-at-a-vertex rule, plus efficiency, explains a shape bees 'chose' millions of years before mathematicians proved it optimal.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_re02",
+          "title": "Constructions without measuring",
+          "body": "Draughtsmen, carpenters and masons construct exact right angles, midpoints and 60° angles using only a compass (or string) and straightedge — no protractor. The perpendicular bisector alone lets you find a point equally far from two others, used from temple layout to GPS.",
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_re03",
+          "title": "Islamic geometric art and Escher",
+          "body": "The intricate tilings of Islamic architecture and the impossible-looking tessellations of M.C. Escher both obey the same 360°-at-a-vertex rule you learn here. Tiling theory connects simple angle arithmetic to some of the world's most beautiful art.",
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch14_qa01",
+          "question": "How do you construct the perpendicular bisector of a segment XY?",
+          "modelAnswer": "From X and from Y, draw arcs of equal radius (more than half XY) above and below the line. Join the two points where the arcs intersect. This line bisects XY at right angles, because each intersection is equidistant from X and Y.",
+          "textbookPage": 148,
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa02",
+          "question": "Why does the perpendicular bisector pass through the midpoint of XY?",
+          "modelAnswer": "Every point on it is equidistant from X and Y. The only point of XY equidistant from both ends is the midpoint, so the bisector crosses XY exactly there.",
+          "textbookPage": 149,
+          "relatedConceptIds": [
+            "ch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa03",
+          "question": "How can you construct a 60° angle with compass and straightedge?",
+          "modelAnswer": "Draw a ray; from its endpoint swing an arc; from where the arc meets the ray, swing the same radius to cut the arc; join the endpoint to that intersection. The angle is 60° because the construction makes an equilateral triangle, all of whose angles are 60°.",
+          "textbookPage": 150,
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa04",
+          "question": "How do you construct a 30° angle?",
+          "modelAnswer": "Construct a 60° angle, then bisect it (arc across both arms, equal arcs from the crossings, join to the corner). Half of 60° is 30°.",
+          "textbookPage": 151,
+          "relatedConceptIds": [
+            "ch14_t02_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa05",
+          "question": "What does it mean to tile (tessellate) a region?",
+          "modelAnswer": "To cover the region completely with shapes leaving no gaps and no overlaps, like floor tiles.",
+          "textbookPage": 156,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa06",
+          "question": "What condition must the angles meeting at a point satisfy in a tiling?",
+          "modelAnswer": "They must sum to exactly 360°. Less than 360° leaves a gap; more than 360° forces an overlap.",
+          "textbookPage": 157,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa07",
+          "question": "Why do squares and regular hexagons tile the plane, but regular pentagons do not?",
+          "modelAnswer": "Four squares (4×90°) and three hexagons (3×120°) each total 360° at a point. A regular pentagon's angle is 108°, and no whole number of 108° angles equals 360° (3 give 324°, 4 give 432°), so pentagons cannot tile alone.",
+          "textbookPage": 158,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_qa08",
+          "question": "How many equilateral triangles meet at each vertex in a triangular tiling?",
+          "modelAnswer": "Six, since each angle is 60° and 6 × 60° = 360°.",
+          "textbookPage": 158,
+          "relatedConceptIds": [
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch14_mp01",
+          "emoji": "📐",
+          "title": "Construct & Tile",
+          "needs": [
+            "A compass",
+            "An unmarked ruler (straightedge)",
+            "Plain paper",
+            "Coloured paper for cut-out tiles"
+          ],
+          "steps": [
+            "Construct the perpendicular bisector of a drawn segment using equal arcs; check it crosses at the midpoint at 90°.",
+            "Construct a 60° angle, then bisect it to get 30°.",
+            "Cut several identical paper squares; try to tile a region with no gaps — see four meet at each point (4×90°=360°).",
+            "Cut identical regular pentagons (trace a template); try to tile — observe the gaps left (108° doesn't divide 360°).",
+            "Cut equilateral triangles or hexagons and confirm they DO tile, counting how many meet at each vertex."
+          ],
+          "expectedObservation": "Your constructions are exact without measuring. Squares, triangles and hexagons tile cleanly (angles total 360° at each vertex), while pentagons leave stubborn gaps.",
+          "whyItWorks": "Equal radii force equidistance, making constructions exact. Tiling works only when the corner angles meeting at a point fill exactly 360°; shapes whose angle divides 360° (60°, 90°, 120°) tile, while 108° pentagons cannot.",
+          "estimatedMinutes": 45,
+          "relatedConceptIds": [
+            "ch14_t01_c01",
+            "ch14_t03_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch14_t01_c01",
+            "label": "Perpendicular bisector",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.18
+          },
+          {
+            "id": "ch14_t02_c01",
+            "label": "Construct/bisect angles",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.18
+          },
+          {
+            "id": "ch14_t03_c01",
+            "label": "Tiling (360° rule)",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.55
+          },
+          {
+            "id": "ch14_pivot_exact",
+            "label": "Exactness by geometry",
+            "kind": "pivot",
+            "x": 0.82,
+            "y": 0.32
+          },
+          {
+            "id": "ch05:ch05_t01_c02",
+            "label": "Ch.5 angles at a point",
+            "kind": "crossChapter",
+            "x": 0.8,
+            "y": 0.7
+          },
+          {
+            "id": "ch07:ch07_t04_c01",
+            "label": "Ch.7 equilateral 60°",
+            "kind": "crossChapter",
+            "x": 0.15,
+            "y": 0.55
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch14_e01",
+            "from": "ch14_t01_c01",
+            "to": "ch14_t02_c01",
+            "label": "same tools"
+          },
+          {
+            "id": "ch14_e02",
+            "from": "ch14_t01_c01",
+            "to": "ch14_pivot_exact",
+            "label": "exact"
+          },
+          {
+            "id": "ch14_e03",
+            "from": "ch14_t02_c01",
+            "to": "ch14_t03_c01",
+            "label": "angles for"
+          },
+          {
+            "id": "ch14_e04",
+            "from": "ch05:ch05_t01_c02",
+            "to": "ch14_t03_c01",
+            "label": "360° around a point"
+          },
+          {
+            "id": "ch14_e05",
+            "from": "ch07:ch07_t04_c01",
+            "to": "ch14_t02_c01",
+            "label": "gives 60°"
+          }
+        ]
+      }
     }
   ]
 }

@@ -3,8 +3,8 @@
 **Last updated:** 2026-05-27 01:10 +05:30
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
-**Current phase:** Phase 2 — chapter content (Ch.1-13 done; Ch.14 next)
-**Current chapter under construction:** ch14 — Constructions and Tilings (gegp206.txt) — NOT STARTED
+**Current phase:** Phase 2 — chapter content (Ch.1-14 done; Ch.15 next — last chapter)
+**Current chapter under construction:** ch15 — Finding the Unknown (gegp207.txt) — NOT STARTED
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -108,8 +108,8 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 3 concepts, 6 Q |
 | 12  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Another Peek Beyond the Point (decimal ops) — 4 concepts, 6 Q |
 | 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 3 concepts, 5 Q |
-| 14  | ⚪     | ⚪      | ⚪       | ⚪       | Constructions and Tilings — RESUME HERE, src gegp206.txt |
-| 15  | ⚪     | ⚪      | ⚪       | ⚪       | Finding the Unknown — src gegp207.txt |
+| 14  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Constructions and Tilings — 3 concepts, 4 Q |
+| 15  | ⚪     | ⚪      | ⚪       | ⚪       | Finding the Unknown (equations) — RESUME HERE, src gegp207.txt |
 
 
 ---
