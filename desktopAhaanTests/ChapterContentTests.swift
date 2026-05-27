@@ -980,6 +980,26 @@ final class ChapterContentTests: XCTestCase {
         )
     }
 
+    func testSM2_EaseAndIntervalAreClampedUnderRepeatedEasy() {
+        let now = Date()
+        var r = QuestionReview.newReview(for: "q1", at: now)
+        // 50 consecutive Easy answers: without clamps, ease grows unbounded
+        // and intervalDays grows exponentially until Int(Double) overflows
+        // and TRAPS. Both must stay bounded and the loop must not crash.
+        for _ in 0..<50 {
+            r = SM2Scheduler.schedule(r, quality: .easy, at: now)
+            XCTAssertLessThanOrEqual(r.intervalDays, SM2Scheduler.maxIntervalDays,
+                "Interval must never exceed the cap (else Int conversion traps).")
+            XCTAssertGreaterThanOrEqual(r.intervalDays, 1)
+        }
+        XCTAssertLessThanOrEqual(r.ease, SM2Scheduler.maxEase,
+            "Repeated Easy must not grow ease past the cap.")
+        XCTAssertEqual(r.ease, SM2Scheduler.maxEase, accuracy: 0.001,
+            "After enough Easy answers ease should settle exactly at the cap.")
+        XCTAssertEqual(r.intervalDays, SM2Scheduler.maxIntervalDays,
+            "Interval should settle at the cap under sustained Easy.")
+    }
+
     func testSM2_EasyAnswerExtendsIntervalAndBoostsEase() {
         let now = Date()
         var r = QuestionReview.newReview(for: "q1", at: now)

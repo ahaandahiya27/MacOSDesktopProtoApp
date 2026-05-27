@@ -86,6 +86,10 @@ enum SM2Scheduler {
     /// future tweak ("first repeat should be 1 day, not 1 day after
     /// 3") is a one-line change with the unit test catching regression.
     static let minEase: Double = 1.3
+    /// Upper clamp on ease so repeated `.easy` answers can't grow the factor
+    /// (and therefore future intervals) without bound. SM-2 starts at 2.5;
+    /// 3.0 leaves comfortable headroom while keeping intervals sane.
+    static let maxEase: Double = 3.0
     static let easeDeltaForgot: Double = -0.20
     static let easeDeltaHard: Double = -0.15
     static let easeDeltaEasy: Double = 0.10
@@ -93,6 +97,19 @@ enum SM2Scheduler {
     static let firstIntervalAfterLearn: Int = 1
     static let secondIntervalAfterLearn: Int = 3
     static let easyBoostMultiplier: Double = 1.3
+    /// Hard ceiling on a single interval (days). Without it, repeated
+    /// Easy/Good answers grow `Double(intervalDays) * ease * boost`
+    /// exponentially until the `Int(...)` conversion TRAPS past Int.max
+    /// (a real crash, forbidden by the no-trap rule). ~1 year is also a
+    /// sane pedagogical maximum spacing.
+    static let maxIntervalDays: Int = 365
+
+    /// Round a raw interval and clamp it to `[1, maxIntervalDays]` entirely
+    /// in Double space, so the final `Int` conversion can never receive an
+    /// out-of-range (or infinite) value and trap.
+    static func clampedInterval(_ raw: Double) -> Int {
+        Int(min(Double(maxIntervalDays), max(1.0, raw.rounded())))
+    }
 
     static func schedule(_ review: QuestionReview,
                           quality: ReviewQuality,
@@ -115,7 +132,7 @@ enum SM2Scheduler {
         case .hard:
             r.bucket = max(1, r.bucket)
             let prior = max(1, r.intervalDays)
-            let next = max(1, Int((Double(prior) * 1.2).rounded()))
+            let next = clampedInterval(Double(prior) * 1.2)
             r.intervalDays = next
             r.ease = max(minEase, r.ease + easeDeltaHard)
             r.nextDueAt = calendar.date(
@@ -130,7 +147,7 @@ enum SM2Scheduler {
             } else if r.bucket == 2 {
                 next = secondIntervalAfterLearn
             } else {
-                next = max(1, Int((Double(r.intervalDays) * r.ease).rounded()))
+                next = clampedInterval(Double(r.intervalDays) * r.ease)
             }
             r.intervalDays = next
             r.nextDueAt = calendar.date(
@@ -147,12 +164,12 @@ enum SM2Scheduler {
                 // advantage. Floor at secondIntervalAfterLearn so Easy
                 // genuinely skips a card ahead.
                 next = max(secondIntervalAfterLearn,
-                           Int((Double(firstIntervalAfterLearn) * easyBoostMultiplier).rounded()))
+                           clampedInterval(Double(firstIntervalAfterLearn) * easyBoostMultiplier))
             } else {
-                next = max(1, Int((Double(r.intervalDays) * r.ease * easyBoostMultiplier).rounded()))
+                next = clampedInterval(Double(r.intervalDays) * r.ease * easyBoostMultiplier)
             }
             r.intervalDays = next
-            r.ease += easeDeltaEasy
+            r.ease = min(maxEase, r.ease + easeDeltaEasy)
             r.nextDueAt = calendar.date(
                 byAdding: .day, value: next, to: now
             ) ?? now
