@@ -24,7 +24,8 @@ struct PlainTextArticleFallback: View {
                     Text("Showing simplified view")
                         .font(.callout.weight(.semibold))
                     Spacer()
-                    if let url = url {
+                    if let url = url, url.isFileURL,
+                       url.path.hasPrefix(Bundle.main.bundlePath) {
                         Button("Open in Safari") {
                             NSWorkspace.shared.open(url)
                         }

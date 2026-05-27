@@ -355,7 +355,8 @@ class ArticleCoordinator: NSObject, ObservableObject, NSTextViewDelegate {
     }
 
     func openCurrentURL() {
-        guard let url = currentURL else { return }
+        // Bundled article files only — defense-in-depth vs. exfiltrating a remote URL.
+        guard let url = currentURL, url.isFileURL, url.path.hasPrefix(Bundle.main.bundlePath) else { return }
         NSWorkspace.shared.open(url)
     }
 
