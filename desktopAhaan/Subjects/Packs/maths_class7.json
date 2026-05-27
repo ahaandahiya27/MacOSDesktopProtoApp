@@ -14171,6 +14171,55 @@
                 100
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_c02",
+              "title": "Range — measuring spread and consistency",
+              "explanations": {
+                "oneLine": "The range of a data set is the largest value minus the smallest; it measures how spread out — or how consistent — the data is.",
+                "kidFriendly": "A representative value like the mean tells you the 'middle' of the data, but not how SPREAD OUT it is. That's what the range does: range = highest value − lowest value. Shubman scored 0, 17, 21, 90 — range = 90 − 0 = 90, very spread out (inconsistent!). Yashasvi scored 67, 55, 18, 35 — range = 67 − 18 = 49, less spread (more consistent). Two players can have a similar mean but very different ranges — the one with the SMALLER range is more consistent. So the mean and the range together tell a fuller story than either alone: one says 'how much on average', the other says 'how reliable'.",
+                "textbook": "The range of a data set is the difference between its greatest and least values: range = maximum − minimum. It is the simplest measure of dispersion (spread). A small range indicates the values are clustered together (consistent); a large range indicates they are widely scattered (inconsistent). The range complements measures of central tendency: the mean locates the centre, the range describes the spread around it.",
+                "expert": "The range, max − min, is the crudest measure of statistical dispersion: O(1) to interpret but highly sensitive to outliers (it depends only on the two extreme order statistics). More robust dispersion measures — the interquartile range, mean absolute deviation, and standard deviation — are introduced later, but the range is the entry point to the central idea that a distribution needs both a location parameter (mean/median) and a scale parameter (spread) to be summarised."
+              },
+              "reasoning": "Knowing the average isn't enough — two data sets can share a mean yet behave very differently, one tightly clustered and one wildly scattered. To capture that, you measure the gap between the biggest and smallest values. A small gap means consistent; a big gap means variable.",
+              "useCases": [
+                {
+                  "title": "Batting consistency",
+                  "description": "Two batters averaging 30 differ if one's range is 10 (steady) and the other's is 80 (boom-or-bust).",
+                  "domain": "sport"
+                },
+                {
+                  "title": "Daily temperature swing",
+                  "description": "A desert's day−night range (45°C − 10°C = 35°) is huge; a coastal city's is small.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Price stability",
+                  "description": "A vegetable whose weekly price ranges ₹20–₹25 (range 5) is more stable than one ranging ₹10–₹60 (range 50).",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "The range is the simplest of many 'spread' measures. Statisticians more often use the standard deviation, which accounts for every value rather than just the two extremes — because the range can be thrown off by a single freak data point. But the core insight is the same one the range introduces: a single 'average' hides how variable the data really is.",
+              "mnemonic": "Range = biggest − smallest. Small range = consistent; big range = scattered.",
+              "predictQuestion": "Two batters both average 30 runs, but one has range 10 and the other range 80 — which is the more consistent player?",
+              "whyChain": [
+                "A measure of central tendency (mean, median, mode) tells you WHERE the data centres, but says nothing about how tightly the values cluster around that centre. Two sets can have the identical mean yet look completely different — one bunched together, one wildly scattered.",
+                "The range captures that missing dimension with the simplest possible calculation: subtract the smallest value from the largest. Shubman's 0–90 gives range 90 (very spread, inconsistent); Yashasvi's 18–67 gives range 49 (tighter, more consistent). The smaller the range, the more reliable the performance.",
+                "So the mean and the range together tell a fuller story than either alone — location plus spread. This is a first taste of a deep statistical principle: a distribution needs both a centre and a measure of variability to be honestly summarised. Later you'll meet finer spread measures (standard deviation), but the range is the gateway idea, and it's the one cricket commentators mean when they call a batter 'consistent'."
+              ],
+              "relatedConceptIds": [
+                "ch13_t02_c01",
+                "ch13_t01_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch13_t02_q04",
+                "ch13_t02_q05"
+              ],
+              "pageRefs": [
+                98,
+                99
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -14284,6 +14333,82 @@
               "difficulty": 1,
               "pageRefs": [
                 100
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_q04",
+              "prompt": "Find the range of Shubman's scores 0, 17, 21, 90 and of Yashasvi's scores 67, 55, 18, 35. Who was more consistent?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Shubman's range = 90 − 0 = 90; Yashasvi's range = 67 − 18 = 49. Yashasvi was more consistent (smaller range).",
+              "solutionSteps": [
+                "Shubman: max 90, min 0 → range = 90 − 0 = 90.",
+                "Yashasvi: max 67, min 18 → range = 67 − 18 = 49.",
+                "A smaller range means more consistent, so Yashasvi (49 < 90) was more consistent."
+              ],
+              "commonMistakes": [
+                "Adding max and min instead of subtracting.",
+                "Thinking a bigger range means a better player — it means MORE variable, not better."
+              ],
+              "variations": [
+                {
+                  "prompt": "Find the range of 12, 5, 19, 8, 14.",
+                  "answer": "14",
+                  "solutionSteps": [
+                    "Max 19, min 5; range = 19 − 5 = 14."
+                  ]
+                },
+                {
+                  "prompt": "A week's temperatures: 30, 32, 28, 35, 27 °C. Range?",
+                  "answer": "8 °C",
+                  "solutionSteps": [
+                    "35 − 27 = 8."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                98,
+                99
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_t02_q05",
+              "prompt": "Two batters both have a mean of 30. Player A scored 28, 31, 29, 32; Player B scored 5, 55, 2, 58. Compute each range and say what it tells you.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "A: range = 32 − 28 = 4 (very consistent). B: range = 58 − 2 = 56 (very inconsistent). Same mean, but A is far more reliable.",
+              "solutionSteps": [
+                "Player A: max 32, min 28 → range 4.",
+                "Player B: max 58, min 2 → range 56.",
+                "Equal means (30) hide a big difference: A's tiny range means steady scores; B's huge range means boom-or-bust.",
+                "The range reveals consistency that the mean alone cannot."
+              ],
+              "commonMistakes": [
+                "Concluding the players are identical because their means match.",
+                "Forgetting that the range measures spread, not average."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mean is the same for two data sets; one has range 3, the other range 40. Which is more consistent?",
+                  "answer": "The one with range 3.",
+                  "solutionSteps": [
+                    "Smaller range = more consistent."
+                  ]
+                },
+                {
+                  "prompt": "Range of 100, 100, 100, 100?",
+                  "answer": "0",
+                  "solutionSteps": [
+                    "Max = min = 100, range 0 — perfectly consistent."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                99
               ],
               "needsHumanReview": false
             }

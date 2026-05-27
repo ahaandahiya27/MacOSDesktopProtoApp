@@ -107,7 +107,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 4 concepts, 8 Q (added subtraction) |
 | 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 4 concepts, 8 Q (added co-prime) |
 | 12  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Another Peek Beyond the Point (decimal ops) — 4 concepts, 6 Q |
-| 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 3 concepts, 5 Q |
+| 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 4 concepts, 7 Q (added range) |
 | 14  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Constructions and Tilings — 3 concepts, 4 Q |
 | 15  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding the Unknown (equations) — 4 concepts, 7 Q |
 
@@ -143,6 +143,31 @@ Curriculum divergence note — see STOP_AND_ASK.md `2026-05-27` entry.
 | — (interactive) | 2026-05-27 00:00 +05:30 | in progress | Phase 0 scaffolding |
 
 ---
+
+## Discover Mode for Maths — implementation plan (deferred Swift workstream)
+
+Investigated the architecture (DiscoverMode.swift). To add Maths Discover:
+1. `DiscoverMode.hasExperience(for:chapter:)` — currently `pack.id ==
+   "science_class7" && supportedChapterIds.contains(...)`. Extend to also
+   return true for `pack.id == "maths_class7"` for the specific Maths
+   chapter ids you implement (add a `mathsSupportedChapterIds` set).
+2. `DiscoverMode.view(for:chapter:)` — add an `else if pack.id ==
+   "maths_class7"` branch with a `switch chapter.id` routing to new
+   `DiscoverChapterMath{N}View`s (fall back to `ComingSoonView`).
+3. Author `DiscoverChapterMath{N}View.swift` modelled on
+   `DiscoverChapter1View` (116 LOC): a `sceneTitles` array + a body that
+   pages scenes via `@AppStorage(AppStorageKeys.discoverScene(N))`. Keep
+   scene bodies in `+InlineScenes` sister files (≤600 LOC each). Best
+   pilot: Ch.10 Operations with Integers (number-line scrubber, sign-rule
+   quadrant) or Ch.15 equation balance-scale.
+4. Boss-quiz items → `chapter.bossQuestions` as `bossquiz_mch{NN}_qII`;
+   quick-checks → `chapter.quickCheckQuestions` as `scenecheck_mch{NN}_qII`
+   (NOT `quickcheck_*`). Honour Big Sur: no Canvas/TimelineView (use
+   `SceneRequiresMacOS12View` fallback), animations RM-gated,
+   `ForEach(indices, id:)`, route SF Symbols via `SFSymbolCompat`.
+RISK: interactive scene bodies are the bulk and compile-risky blind; do
+this across several focused commits with a build after each, ideally where
+the UI can be run. Deferred from the autonomous content loop for that reason.
 
 ## Resume hints for next instance
 
