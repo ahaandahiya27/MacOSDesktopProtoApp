@@ -94,15 +94,55 @@ final class GlossaryArticleRoutingTests: XCTestCase {
 
     // MARK: - Helpers
 
+    // MARK: - Cross-pack glossary-key scoping (subject-leak guard)
+    //
+    // GlossarySheet's "Read full deck" gate built the article key from the
+    // bare `chapter.id` ("ch05_glossary"), so a Maths chapter checked the
+    // SCIENCE glossary article (chNN ids collide across packs). The gate now
+    // routes through `ArticleIndex.packScopedKey(forPackId:baseKey:)`. This
+    // pins that key across every (pack, chapter): Science → bare key,
+    // Maths → `m`-prefixed, Sanskrit (no articles) → nil.
+
+    func testGlossaryKeyIsPackScopedAcrossAllPacks() throws {
+        XCTAssertEqual(ArticleIndex.packScopedKey(forPackId: "science_class7", baseKey: "ch05_glossary"),
+                       "ch05_glossary")
+        XCTAssertEqual(ArticleIndex.packScopedKey(forPackId: "maths_class7", baseKey: "ch05_glossary"),
+                       "mch05_glossary")
+        XCTAssertNil(ArticleIndex.packScopedKey(forPackId: "sanskrit_class7", baseKey: "ch05_glossary"))
+
+        for resource in ["science_class7", "maths_class7", "sanskrit_class7"] {
+            guard let pack = try? loadPack(resource) else {
+                throw XCTSkip("\(resource).json missing from test bundle.")
+            }
+            for chapter in pack.chapters {
+                let key = ArticleIndex.packScopedKey(forPackId: pack.id,
+                                                     baseKey: "\(chapter.id)_glossary")
+                switch pack.id {
+                case "science_class7":
+                    XCTAssertEqual(key, "\(chapter.id)_glossary")
+                case "maths_class7":
+                    XCTAssertEqual(key, "m\(chapter.id)_glossary",
+                        "Maths \(chapter.id) glossary must resolve to mch…, not the Science ch… key.")
+                default:
+                    XCTAssertNil(key, "\(pack.id) ships no glossary articles, so the key must be nil.")
+                }
+            }
+        }
+    }
+
     private func chapterPrefix(from key: String) -> String {
         return String(key.split(separator: "_").first ?? "")
     }
 
-    private func loadSciencePack() throws -> SubjectPack {
-        guard let url = Bundle.main.url(forResource: "science_class7", withExtension: "json"),
+    private func loadPack(_ resource: String) throws -> SubjectPack {
+        guard let url = Bundle.main.url(forResource: resource, withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
-            throw XCTSkip("science_class7.json missing from test bundle.")
+            throw XCTSkip("\(resource).json missing from test bundle.")
         }
         return try JSONDecoder().decode(SubjectPack.self, from: data)
+    }
+
+    private func loadSciencePack() throws -> SubjectPack {
+        return try loadPack("science_class7")
     }
 }

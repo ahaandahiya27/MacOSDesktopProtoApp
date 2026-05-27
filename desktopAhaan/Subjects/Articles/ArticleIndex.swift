@@ -9,6 +9,23 @@ struct ArticleEntry: Hashable, Identifiable {
 }
 
 enum ArticleIndex {
+    /// Namespaces an article base key (e.g. `"ch05_glossary"`) to the owning
+    /// subject pack. Maths article keys carry an `m` prefix
+    /// (`mch05_glossary`); Science reuses the bare key. Returns nil for packs
+    /// that ship no articles (e.g. Sanskrit) so callers gate the surface off
+    /// entirely.
+    ///
+    /// Pure + testable single source of truth so a cross-subject article leak
+    /// (a Maths chapter resolving to a Science `chNN_` article because the key
+    /// was built from the shared `chapter.id` alone) can't recur silently.
+    static func packScopedKey(forPackId packId: String, baseKey: String) -> String? {
+        switch packId {
+        case "science_class7": return baseKey
+        case "maths_class7":   return "m" + baseKey
+        default:               return nil
+        }
+    }
+
     static let chapter1Folder = "Articles/Chapter1"
     static let chapter2Folder = "Articles/Chapter2"
     static let chapter3Folder = "Articles/Chapter3"

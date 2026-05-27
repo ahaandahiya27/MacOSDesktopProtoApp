@@ -336,7 +336,7 @@ struct ChapterDetailView: View {
                 .frame(minWidth: 720, idealWidth: 920,
                        minHeight: 540, idealHeight: 680)
             case .glossary:
-                GlossarySheet(chapter: chapter,
+                GlossarySheet(pack: pack, chapter: chapter,
                               onDismiss: { sheetCoordinator.presented = nil },
                               onOpenFullArticle: openGlossaryArticleFromSheet)
             case .insideTheLeafTour:

@@ -10,6 +10,7 @@ import AppKit
 // optional Hindi translation.
 
 struct GlossarySheet: View {
+    let pack: SubjectPack
     let chapter: Chapter
     var onDismiss: () -> Void
     /// Optional callback to open the per-chapter long-form
@@ -124,7 +125,11 @@ struct GlossarySheet: View {
     /// chapters whose article never got shipped (none today, but
     /// defensive against future regressions).
     private var hasFullArticleBundled: Bool {
-        let key = "\(chapter.id)_glossary"
+        // Pack-scoped key — a Maths chapter must check `mch{NN}_glossary`, not
+        // the Science `ch{NN}_glossary` it would hit via the shared chapter.id.
+        guard let key = ArticleIndex.packScopedKey(forPackId: pack.id,
+                                                   baseKey: "\(chapter.id)_glossary")
+        else { return false }
         guard let entry = ArticleIndex.entries[key] else { return false }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
         let resolved = Bundle.main.url(forResource: name, withExtension: "html",
