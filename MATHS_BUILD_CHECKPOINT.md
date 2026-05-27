@@ -104,7 +104,7 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 7   | ✅     | ✅ 4/4 topics | ⚪    | ⚪       | A Tale of Three Intersecting Lines (triangles) — 5 concepts, 7 Q |
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 3 concepts, 6 Q |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
-| 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 3 concepts, 6 Q |
+| 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 4 concepts, 8 Q (added subtraction) |
 | 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 3 concepts, 6 Q |
 | 12  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Another Peek Beyond the Point (decimal ops) — 4 concepts, 6 Q |
 | 13  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Connecting the Dots (data handling) — 3 concepts, 5 Q |

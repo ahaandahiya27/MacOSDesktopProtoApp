@@ -11261,6 +11261,56 @@
                 27
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_c03",
+              "title": "Subtracting integers — adding the opposite",
+              "explanations": {
+                "oneLine": "To subtract an integer, add its opposite: 5 − (−3) = 5 + 3 = 8, and 5 − 3 = 5 + (−3) = 2.",
+                "kidFriendly": "Subtraction of integers has one golden rule: subtracting a number is the same as ADDING its opposite. So 5 − 3 becomes 5 + (−3) = 2. And the tricky one, 5 − (−3), becomes 5 + (+3) = 8 — subtracting a negative actually ADDS! Think of it on the carrom number line: subtracting means facing the opposite way. Or think of debt: taking away a ₹3 debt (−3) leaves you ₹3 better off. Once every subtraction is rewritten as 'add the opposite', you never need a separate set of subtraction rules — the addition rules you already know handle everything.",
+                "textbook": "Subtraction of integers is defined as addition of the additive inverse: a − b = a + (−b). Thus 5 − 3 = 5 + (−3) = 2 and 5 − (−3) = 5 + (+3) = 8. Rewriting every subtraction as 'add the opposite' reduces all subtraction to the already-established rules of integer addition, and explains why subtracting a negative increases the value.",
+                "expert": "In the additive group (ℤ,+), subtraction is not a primitive operation but the composition a − b := a + (−b), where −b is the unique additive inverse of b. This is why ℤ is closed under subtraction while ℕ is not: every element has an inverse. The identity a − (−b) = a + b is double-negation (−(−b) = b), and it underlies sign-handling throughout algebra."
+              },
+              "reasoning": "Subtraction asks 'what's left after removing b'. Removing b has the same effect as adding the opposite of b: removing a gain is a loss, and removing a loss (a negative) is a gain. So a − b and a + (−b) always land on the same place.",
+              "useCases": [
+                {
+                  "title": "Temperature drop",
+                  "description": "From 5°C the temperature falls to −3°C: change = (−3) − 5 = −8°.",
+                  "domain": "weather"
+                },
+                {
+                  "title": "Cancelling a debt",
+                  "description": "Removing a ₹3 debt: balance − (−3) = balance + 3, you're ₹3 better off.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Lift movement",
+                  "description": "Going from floor 2 to floor −1 (basement) is a change of (−1) − 2 = −3 floors.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "This 'subtract = add the opposite' rule is why calculators and computers don't need separate subtraction circuitry — they negate the second number and add. In binary, negation uses 'two's complement', and subtraction is literally implemented as addition of the complement. One unifying idea removes a whole operation.",
+              "mnemonic": "Subtracting = adding the opposite. Keep-Change-Change: keep the first, change − to +, change the sign of the second.",
+              "predictQuestion": "What is 5 − (−3), and why does subtracting a negative make the answer bigger?",
+              "whyChain": [
+                "Subtraction undoes addition: a − b is the number you add to b to get a. The cleanest way to compute it is to notice that removing b has exactly the same effect as adding b's opposite. Take away a gain and you're worse off; take away a loss and you're better off.",
+                "So we DEFINE a − b = a + (−b). This turns every subtraction into an addition, meaning the integer-addition rules you already learned (same signs add, opposite signs cancel) handle subtraction too — no new rules needed. 5 − 3 = 5 + (−3) = 2; 5 − (−3) = 5 + 3 = 8.",
+                "The surprising case, subtracting a negative, now makes sense: −(−3) is +3 (double negation), so 5 − (−3) = 5 + 3 = 8, bigger than 5. Removing a debt is a gain. This single identity is why integers are closed under subtraction (every number has an opposite to add) and why computers implement subtraction as addition of a complement."
+              ],
+              "relatedConceptIds": [
+                "ch10_t01_c01",
+                "ch10_t01_c02",
+                "ch10_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch10_t01_q04",
+                "ch10_t01_q05"
+              ],
+              "pageRefs": [
+                26,
+                27
+              ],
+              "needsHumanReview": false
             }
           ],
           "questions": [
@@ -11371,6 +11421,81 @@
                 }
               ],
               "difficulty": 1,
+              "pageRefs": [
+                26,
+                27
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q04",
+              "prompt": "Compute 5 − (−3) by rewriting subtraction as adding the opposite.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "8",
+              "solutionSteps": [
+                "Subtracting a number = adding its opposite: 5 − (−3) = 5 + (+3).",
+                "The opposite of −3 is +3.",
+                "5 + 3 = 8."
+              ],
+              "commonMistakes": [
+                "Writing 5 − 3 = 2 (forgetting the inner number is negative).",
+                "Thinking subtracting always makes the answer smaller — subtracting a negative makes it bigger."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 2 − (−7).",
+                  "answer": "9",
+                  "solutionSteps": [
+                    "2 + 7 = 9."
+                  ]
+                },
+                {
+                  "prompt": "Compute (−4) − (−6).",
+                  "answer": "2",
+                  "solutionSteps": [
+                    "−4 + 6 = 2."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_t01_q05",
+              "prompt": "The temperature falls from 5 °C to −3 °C. What is the change in temperature?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "−8 °C",
+              "solutionSteps": [
+                "Change = final − initial = (−3) − 5.",
+                "Rewrite as adding the opposite: (−3) + (−5).",
+                "Same signs add, keep the sign: −8. So the change is −8 °C (a drop of 8 degrees)."
+              ],
+              "commonMistakes": [
+                "Computing 5 − 3 = 2 and ignoring the signs.",
+                "Getting +8 instead of −8 (the temperature dropped, so the change is negative)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Temperature rises from −4 °C to 3 °C. Change?",
+                  "answer": "+7 °C",
+                  "solutionSteps": [
+                    "3 − (−4) = 3 + 4 = 7."
+                  ]
+                },
+                {
+                  "prompt": "A lift goes from floor 2 to basement floor −1. Change in floors?",
+                  "answer": "−3",
+                  "solutionSteps": [
+                    "(−1) − 2 = −3."
+                  ]
+                }
+              ],
+              "difficulty": 2,
               "pageRefs": [
                 26,
                 27
