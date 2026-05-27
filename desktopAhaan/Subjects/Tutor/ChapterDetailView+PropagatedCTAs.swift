@@ -28,21 +28,37 @@ import AppKit
 //   - SF Symbol literals are passed as strings to `Ch1PilotCTACard`
 //     which routes them through `SFSymbolCompat.name(_:)`.
 
+// MARK: - Subject gate (single source of truth)
+
+/// The pilot Build-A-* sandboxes and Inside-the-* tours are hardcoded
+/// SCIENCE content. Maths and Sanskrit packs reuse the same `chNN` chapter
+/// ids, so the mount gate MUST key on the SUBJECT (pack id), not the chapter
+/// id alone — otherwise e.g. Build-A-Plant (Science Ch.1) leaks into Maths
+/// Ch.1. Pure + non-isolated so `PilotInteractiveSubjectGateTests` can pin it
+/// across every (pack, chapter) pair, and the @ViewBuilder mounts below all
+/// route through it so the gate can't silently diverge.
+func pilotInteractivesAreEnabled(forPackId packId: String) -> Bool {
+    packId == "science_class7"
+}
+
 // MARK: - Ch.1 pilot mounts
 
-/// Ch.1 pilot — the original five-surface pilot. The
-/// `chapter.id == "ch01"` gate is the leak-prevention point: every
-/// other chapter sees `EmptyView` here, preserving pixel + structural
-/// parity guarded by `Ch2_19_StructuralRatchetTests`. The concept-map
-/// CTA used to mount here; it now lives in the chapter-agnostic
-/// `conceptMapCTA` (commit 21d4d42) since every chapter has authored
-/// conceptMap data.
+/// Ch.1 pilot — the original five-surface pilot. The gate is the
+/// leak-prevention point: every other chapter sees `EmptyView` here,
+/// preserving pixel + structural parity guarded by
+/// `Ch2_19_StructuralRatchetTests`. These widgets are hardcoded SCIENCE
+/// content, so the gate MUST check `pack.id` too — Maths/Sanskrit chapters
+/// reuse the same `chNN` ids, and without the pack check the Build-A-Plant
+/// sandbox + Inside-the-Leaf tour leaked into Maths Ch.1 / Sanskrit Ch.1.
+/// The concept-map CTA used to mount here; it now lives in the
+/// chapter-agnostic `conceptMapCTA` (commit 21d4d42).
 @ViewBuilder
 func ch1PilotInteractives(
+    pack: SubjectPack,
     chapter: Chapter,
     coordinator: PilotInteractiveSheetCoordinator
 ) -> some View {
-    if chapter.id == "ch01" {
+    if pilotInteractivesAreEnabled(forPackId: pack.id), chapter.id == "ch01" {
         BuildAPlantSandbox(chapterId: chapter.id)
         insideTheLeafTourCTA(coordinator: coordinator)
     }
@@ -51,59 +67,67 @@ func ch1PilotInteractives(
 // MARK: - Per-chapter propagated CTAs
 
 /// Per-chapter Surface-2 / Surface-3 mounts propagated from the
-/// Ch.1 pilot (2026-05-24). Each gate on chapter.id keeps the wrong
-/// sandbox / tour from leaking into the wrong chapter. Split into
-/// A/B sub-groups so each Group stays under the 10-child
-/// @ViewBuilder cap on Big Sur (currently dispatching to 13 chapters
-/// — a single Group of 13 if/else arms would exceed the limit).
+/// Ch.1 pilot (2026-05-24). These are all hardcoded SCIENCE sandboxes /
+/// tours, so they gate on `pack.id == "science_class7"` FIRST — the
+/// `chNN` chapter ids collide across packs, so without the pack check
+/// every sandbox/tour leaked into the matching Maths (and Sanskrit Ch.1)
+/// chapter. Split into A/B sub-groups so each Group stays under the
+/// 10-child @ViewBuilder cap on Big Sur.
 @ViewBuilder
 func propagatedPilotInteractives(
+    pack: SubjectPack,
     chapter: Chapter,
     coordinator: PilotInteractiveSheetCoordinator
 ) -> some View {
-    propagatedPilotInteractivesA(chapter: chapter, coordinator: coordinator)
-    propagatedPilotInteractivesB(chapter: chapter, coordinator: coordinator)
+    propagatedPilotInteractivesA(pack: pack, chapter: chapter, coordinator: coordinator)
+    propagatedPilotInteractivesB(pack: pack, chapter: chapter, coordinator: coordinator)
 }
 
 @ViewBuilder
 private func propagatedPilotInteractivesA(
+    pack: SubjectPack,
     chapter: Chapter,
     coordinator: PilotInteractiveSheetCoordinator
 ) -> some View {
-    if chapter.id == "ch02" {
-        insideTheDigestiveTourCTA(coordinator: coordinator)
-    } else if chapter.id == "ch04" {
-        BuildAHeatFlowSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch05" {
-        BuildAPHSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch06" {
-        BuildAReactionSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch07" {
-        BuildAClimateSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch08" {
-        BuildAWindSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch09" {
-        BuildASoilSandbox(chapterId: chapter.id)
+    if pilotInteractivesAreEnabled(forPackId: pack.id) {
+        if chapter.id == "ch02" {
+            insideTheDigestiveTourCTA(coordinator: coordinator)
+        } else if chapter.id == "ch04" {
+            BuildAHeatFlowSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch05" {
+            BuildAPHSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch06" {
+            BuildAReactionSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch07" {
+            BuildAClimateSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch08" {
+            BuildAWindSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch09" {
+            BuildASoilSandbox(chapterId: chapter.id)
+        }
     }
 }
 
 @ViewBuilder
 private func propagatedPilotInteractivesB(
+    pack: SubjectPack,
     chapter: Chapter,
     coordinator: PilotInteractiveSheetCoordinator
 ) -> some View {
-    if chapter.id == "ch10" {
-        insideTheAlveolusTourCTA(coordinator: coordinator)
-    } else if chapter.id == "ch11" {
-        insideTheXylemTourCTA(coordinator: coordinator)
-    } else if chapter.id == "ch13" {
-        BuildAMotionSandbox(chapterId: chapter.id)
-    } else if chapter.id == "ch14" {
-        insideTheWireTourCTA(coordinator: coordinator)
-    } else if chapter.id == "ch15" {
-        insideTheLensTourCTA(coordinator: coordinator)
-    } else if chapter.id == "ch16" {
-        BuildAWaterCycleSandbox(chapterId: chapter.id)
+    if pilotInteractivesAreEnabled(forPackId: pack.id) {
+        if chapter.id == "ch10" {
+            insideTheAlveolusTourCTA(coordinator: coordinator)
+        } else if chapter.id == "ch11" {
+            insideTheXylemTourCTA(coordinator: coordinator)
+        } else if chapter.id == "ch13" {
+            BuildAMotionSandbox(chapterId: chapter.id)
+        } else if chapter.id == "ch14" {
+            insideTheWireTourCTA(coordinator: coordinator)
+        } else if chapter.id == "ch15" {
+            insideTheLensTourCTA(coordinator: coordinator)
+        } else if chapter.id == "ch16" {
+            BuildAWaterCycleSandbox(chapterId: chapter.id)
+        }
     }
 }
 

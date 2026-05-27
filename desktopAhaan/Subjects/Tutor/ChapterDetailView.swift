@@ -79,8 +79,8 @@ struct ChapterDetailView: View {
     @ViewBuilder
     private var surfacesGroupTop: some View {
         Group {
-            ch1PilotInteractives(chapter: chapter, coordinator: sheetCoordinator)
-            propagatedPilotInteractives(chapter: chapter, coordinator: sheetCoordinator)
+            ch1PilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
+            propagatedPilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)
