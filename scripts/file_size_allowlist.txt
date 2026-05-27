@@ -15,8 +15,9 @@
 
 # Ch.1 inline scenes — already split once (DiscoverChapter1View 1498→116
 # in commit ef1e867); the inline-scenes sister file is itself oversized.
-# Further splitting is a future iteration and risks Ch.1 enrichment work.
-desktopAhaan/Subjects/Tutor/Discover/DiscoverChapter1View+InlineScenes.swift: Already split once; remaining 1399 LOC is 12 inline scene structs that would need their own per-scene files.
+# (DiscoverChapter1View+InlineScenes.swift was split 3-way into +InlineScenes
+#  / +InlineScenesB / +InlineScenesC on 2026-05-27 — all now < 600 LOC, so it
+#  no longer needs an allowlist entry.)
 
 # Content registry file — articles indexed by chapter, splittable by
 # chapter but a refactor target rather than a hard gate.

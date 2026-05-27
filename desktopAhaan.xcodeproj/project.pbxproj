@@ -104,6 +104,8 @@
 		FA2743DE874F0C1FC03DDDA7 /* WhatsNewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DDF55F8AA820C9D66B40A /* WhatsNewSheet.swift */; };
 		6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */; };
 		F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */; };
+		D5B47AE6BF97919D8E28FCEA /* DiscoverChapter1View+InlineScenesB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35115E789CABA41019A6A255 /* DiscoverChapter1View+InlineScenesB.swift */; };
+		0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */; };
 		E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */; };
 		D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
@@ -1657,6 +1659,8 @@
 		812DDF55F8AA820C9D66B40A /* WhatsNewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WhatsNewSheet.swift"; sourceTree = "<group>"; };
 		5DE6E19DE42E578A3931FACD /* ChapterTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterTheme.swift"; sourceTree = "<group>"; };
 		20B5D94DC9E7B604484EF3A2 /* DiscoverChapter1View+InlineScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenes.swift"; sourceTree = "<group>"; };
+		35115E789CABA41019A6A255 /* DiscoverChapter1View+InlineScenesB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenesB.swift"; sourceTree = "<group>"; };
+		5B6231A6A482DE634DDD57EA /* DiscoverChapter1View+InlineScenesC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View+InlineScenesC.swift"; sourceTree = "<group>"; };
 		2053E9FDDD0F4B95051B4417 /* DiscoverChapter1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapter1View.swift"; sourceTree = "<group>"; };
 		D189C00586C239E2BB42ACDB /* DiscoverChapterMath10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath10View.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
@@ -3173,6 +3177,8 @@
 			children = (
 				5DE6E19DE42E578A3931FACD,
 				20B5D94DC9E7B604484EF3A2,
+				35115E789CABA41019A6A255,
+				5B6231A6A482DE634DDD57EA,
 				2053E9FDDD0F4B95051B4417,
 				D189C00586C239E2BB42ACDB,
 				21CF7836035E42F1747F477D,
@@ -4792,6 +4798,8 @@
 				FA2743DE874F0C1FC03DDDA7 /* WhatsNewSheet.swift in Sources */,
 				6C921B129814508D1CB69BCF /* ChapterTheme.swift in Sources */,
 				F022EB781BEDC225317FD3CD /* DiscoverChapter1View+InlineScenes.swift in Sources */,
+				D5B47AE6BF97919D8E28FCEA /* DiscoverChapter1View+InlineScenesB.swift in Sources */,
+				0DAD14C60FBB70D1B523C31E /* DiscoverChapter1View+InlineScenesC.swift in Sources */,
 				E2983B511334DE035CD11949 /* DiscoverChapter1View.swift in Sources */,
 				D8AF1B22E426F8BE88065D28 /* DiscoverChapterMath10View.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
