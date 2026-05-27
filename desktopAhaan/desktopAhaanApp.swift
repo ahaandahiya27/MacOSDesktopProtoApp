@@ -81,7 +81,14 @@ struct SanskritKoshApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var appState = AppState()
     @StateObject private var subjectRegistry = SubjectRegistry()
-    @StateObject private var dataStore = DataStore()
+    // MUST be the shared singleton: Boss-Quiz / quick-check scenes and
+    // `applicationWillTerminate` use `DataStore.shared`, while views read the
+    // injected `@EnvironmentObject`. A separate `DataStore()` here created a
+    // SECOND instance that autoloaded and atomic-wrote the SAME JSON files
+    // from a different in-memory dict — so a topic-question review (env) and a
+    // boss-quiz review (.shared) clobbered each other's reviews.json, and
+    // ⌘Q's flushSavesBeforeQuit drained the wrong (near-empty) instance.
+    @StateObject private var dataStore = DataStore.shared
 
     /// First-launch window ideal size. Design target is 2200×1380 (tuned
     /// for the 5K iMac at 2560×1440 logical, where `visibleFrame.height`

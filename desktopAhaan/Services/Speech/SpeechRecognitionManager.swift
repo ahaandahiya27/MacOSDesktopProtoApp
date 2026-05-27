@@ -357,10 +357,10 @@ final class SpeechRecognitionManager: ObservableObject {
     private func showTemporaryError(_ message: String) {
         errorMessage = message
         errorDismissTask?.cancel()
-        errorDismissTask = Task {
+        errorDismissTask = Task { [weak self] in
             try? await Task.sleep(nanoseconds: 10_000_000_000)
             if !Task.isCancelled {
-                self.errorMessage = nil
+                self?.errorMessage = nil
             }
         }
     }
