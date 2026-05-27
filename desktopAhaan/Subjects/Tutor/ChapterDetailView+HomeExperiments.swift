@@ -222,7 +222,14 @@ enum HomeExperimentLibrary {
         ]
     ]
 
-    static func hasExperiments(for chapterId: String) -> Bool {
+    /// The experiments are all hardcoded SCIENCE content keyed by bare `chNN`
+    /// chapter ids. Maths AND Sanskrit reuse those same ids, so the lookup
+    /// MUST be gated on the subject — otherwise the Science iodine-leaf test
+    /// leaks into Maths Ch.1 / Sanskrit Ch.1. Pure + testable
+    /// (`HomeExperimentSubjectGateTests`); the surfacing in ChapterDetailView
+    /// routes through here so the gate can't diverge.
+    static func hasExperiments(forPackId packId: String, chapterId: String) -> Bool {
+        guard packId == "science_class7" else { return false }
         guard let list = experiments[chapterId] else { return false }
         return !list.isEmpty
     }

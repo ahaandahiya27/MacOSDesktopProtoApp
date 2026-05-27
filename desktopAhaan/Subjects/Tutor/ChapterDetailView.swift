@@ -238,7 +238,7 @@ struct ChapterDetailView: View {
                 VStack(spacing: 12) {
                     if beyondTheBookEntry != nil
                         || commonMistakesEntry != nil
-                        || HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                        || HomeExperimentLibrary.hasExperiments(forPackId: pack.id, chapterId: chapter.id) {
                         HStack(spacing: 12) {
                             if let entry = beyondTheBookEntry {
                                 BeyondTheBookCard(entry: entry) {
@@ -254,7 +254,7 @@ struct ChapterDetailView: View {
                                     }
                                 }
                             }
-                            if HomeExperimentLibrary.hasExperiments(for: chapter.id) {
+                            if HomeExperimentLibrary.hasExperiments(forPackId: pack.id, chapterId: chapter.id) {
                                 // Defer the sheet-present to the next runloop tick.
                                 // Same C2 cascade fix as the Try Discover Mode nav.push
                                 // — setting sheetCoordinator.presented inside the Button action

@@ -60,3 +60,27 @@ final class PilotInteractiveSubjectGateTests: XCTestCase {
         return try JSONDecoder().decode(SubjectPack.self, from: data)
     }
 }
+
+// MARK: - HomeExperimentSubjectGateTests
+//
+// HomeExperimentLibrary holds hardcoded SCIENCE experiments (iodine leaf
+// starch test, etc.) keyed by bare chNN ids that Maths AND Sanskrit reuse.
+// Before the fix, `hasExperiments(for:)` keyed on chapter id alone, so the
+// Try-at-Home card + sheet leaked into Maths Ch.1/Ch.2 and Sanskrit Ch.1.
+// Pin that the lookup is gated on pack id.
+final class HomeExperimentSubjectGateTests: XCTestCase {
+
+    func testHomeExperimentsSurfaceForSciencePackOnly() {
+        // ch01 + ch02 are the Science chapters that ship experiments today.
+        for chapterId in ["ch01", "ch02"] {
+            XCTAssertTrue(
+                HomeExperimentLibrary.hasExperiments(forPackId: "science_class7", chapterId: chapterId),
+                "Science \(chapterId) should expose its home experiments.")
+            for other in ["maths_class7", "sanskrit_class7"] {
+                XCTAssertFalse(
+                    HomeExperimentLibrary.hasExperiments(forPackId: other, chapterId: chapterId),
+                    "\(other)/\(chapterId) must NOT surface Science home experiments.")
+            }
+        }
+    }
+}
