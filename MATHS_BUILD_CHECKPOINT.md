@@ -3,8 +3,8 @@
 **Last updated:** 2026-05-27 01:10 +05:30
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
-**Current phase:** Phase 2 — chapter content (Ch.1-10 done; Ch.11 next)
-**Current chapter under construction:** ch11 — Finding Common Ground (gegp203.txt) — NOT STARTED
+**Current phase:** Phase 2 — chapter content (Ch.1-11 done; Ch.12 next)
+**Current chapter under construction:** ch12 — Another Peek Beyond the Point (gegp204.txt) — NOT STARTED
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -105,8 +105,8 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
 | 8   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Working with Fractions — 3 concepts, 6 Q |
 | 9   | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Geometric Twins (congruence) — 4 concepts, 6 Q |
 | 10  | ✅     | ✅ 2/2 topics | ⚪    | ⚪       | Operations with Integers — 3 concepts, 6 Q |
-| 11  | ⚪     | ⚪      | ⚪       | ⚪       | Finding Common Ground (HCF/LCM) — RESUME HERE, src gegp203.txt |
-| 12  | ⚪     | ⚪      | ⚪       | ⚪       | Another Peek Beyond the Point — src gegp204.txt |
+| 11  | ✅     | ✅ 3/3 topics | ⚪    | ⚪       | Finding Common Ground (HCF/LCM) — 3 concepts, 6 Q |
+| 12  | ⚪     | ⚪      | ⚪       | ⚪       | Another Peek Beyond the Point (decimal ops) — RESUME HERE, src gegp204.txt |
 | 13  | ⚪     | ⚪      | ⚪       | ⚪       | Connecting the Dots — src gegp205.txt |
 | 14  | ⚪     | ⚪      | ⚪       | ⚪       | Constructions and Tilings — src gegp206.txt |
 | 15  | ⚪     | ⚪      | ⚪       | ⚪       | Finding the Unknown — src gegp207.txt |

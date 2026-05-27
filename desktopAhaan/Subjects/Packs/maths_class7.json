@@ -11936,6 +11936,817 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch11",
+      "number": 11,
+      "title": "Finding Common Ground",
+      "summary": "Sameeksha wants the largest square tile that fits a 12 ft by 16 ft room exactly — that's the Highest Common Factor (HCF) of 12 and 16. When two bells ring at different intervals, when do they ring together? That's the Least Common Multiple (LCM). This chapter finds HCF and LCM, the prime-factorisation method, and the elegant fact that HCF × LCM = the product of the two numbers.",
+      "topics": [
+        {
+          "id": "ch11_t01",
+          "title": "Highest Common Factor (HCF)",
+          "summary": "The HCF (or GCD) of two numbers is the largest number that divides both. The biggest square tile fitting a 12×16 room has side = HCF(12,16) = 4 ft, because the tile side must be a common factor of both dimensions, and we want the largest.",
+          "concepts": [
+            {
+              "id": "ch11_t01_c01",
+              "title": "HCF — the greatest common factor",
+              "explanations": {
+                "oneLine": "The Highest Common Factor (HCF, also GCD) of two numbers is the largest number that divides both exactly.",
+                "kidFriendly": "Sameeksha tiles a 12 ft × 16 ft room with the largest possible equal square tiles, whole-foot sides, fewest tiles. The tile side must divide 12 exactly (to fit the breadth) AND divide 16 exactly (to fit the length) — so it must be a COMMON factor of 12 and 16. Factors of 12: 1,2,3,4,6,12. Factors of 16: 1,2,4,8,16. Common ones: 1, 2, 4. The LARGEST is 4 — so 4 ft tiles, the fewest. This largest common factor is the Highest Common Factor (HCF), also called the Greatest Common Divisor (GCD). HCF(12,16) = 4.",
+                "textbook": "The Highest Common Factor (HCF) — equivalently the Greatest Common Divisor (GCD) — of two or more numbers is the greatest number that divides each of them exactly. It is found by listing common factors and taking the largest, or via prime factorisation (product of common prime factors to the lowest power). For 12 and 16: common factors 1, 2, 4; HCF = 4.",
+                "expert": "The GCD of a, b generates the ideal (a,b) in ℤ; gcd(a,b) is the smallest positive integer expressible as ax+by (Bézout). It equals the product of shared primes to minimum exponents. The Euclidean algorithm computes it in O(log) steps via gcd(a,b)=gcd(b, a mod b). The GCD is foundational to number theory, fraction reduction, and modular inverses."
+              },
+              "reasoning": "A tile must fit both room dimensions with no gaps, so its side has to divide both — a common factor. To use the fewest tiles, you want each tile as big as possible, so you take the GREATEST common factor.",
+              "useCases": [
+                {
+                  "title": "Largest square tile",
+                  "description": "Biggest tile for a 12×16 room is 4 ft (= HCF) — fewest tiles, exact fit.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Equal-size packing",
+                  "description": "84 kg and 108 kg of rice in equal bags (one farm each): bag size = HCF(84,108).",
+                  "domain": "kitchen"
+                },
+                {
+                  "title": "Reducing fractions",
+                  "description": "To simplify 12/16, divide both by HCF 4 → 3/4.",
+                  "domain": "other"
+                }
+              ],
+              "beyondTheBook": "The HCF is what you divide by to reduce a fraction to lowest terms — 12/16 ÷ 4/4 = 3/4. The Euclidean algorithm for computing GCD is over 2,000 years old (in Euclid's Elements) and is still used inside modern cryptography (RSA) every time you make a secure connection online.",
+              "mnemonic": "HCF = the BIGGEST number dividing both. Common factor, greatest of them.",
+              "predictQuestion": "Sameeksha tiles a 12 ft by 16 ft room with the largest equal square tiles (whole-foot sides). What size should the tiles be, and why?",
+              "whyChain": [
+                "For square tiles to fit a 12 ft by 16 ft room exactly with no gaps, each tile's side must divide BOTH dimensions evenly — it has to be a common factor of 12 and 16. The factors of 12 are 1,2,3,4,6,12; of 16 are 1,2,4,8,16; the common ones are 1, 2 and 4.",
+                "Sameeksha wants the FEWEST tiles, which means the biggest tiles — so she takes the LARGEST common factor, 4. Tiles of side 4 ft fit exactly (12 = 3×4, 16 = 4×4) and use the fewest pieces.",
+                "That largest common factor is the Highest Common Factor (HCF), also called the Greatest Common Divisor (GCD): HCF(12,16) = 4. The same idea reduces fractions (12/16 ÷ 4 = 3/4) and, via the 2,000-year-old Euclidean algorithm, even powers the cryptography behind every secure website."
+              ],
+              "relatedConceptIds": [
+                "ch11_t02_c01",
+                "ch11_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t01_q01",
+                "ch11_t01_q02"
+              ],
+              "pageRefs": [
+                40,
+                41
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch11_t01_q01",
+              "prompt": "Find the HCF of 12 and 16.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "4",
+              "solutionSteps": [
+                "Factors of 12: 1, 2, 3, 4, 6, 12.",
+                "Factors of 16: 1, 2, 4, 8, 16.",
+                "Common factors: 1, 2, 4.",
+                "The highest is 4, so HCF(12,16) = 4."
+              ],
+              "commonMistakes": [
+                "Picking a common factor that isn't the largest (e.g. 2).",
+                "Listing a multiple instead of a factor."
+              ],
+              "variations": [
+                {
+                  "prompt": "HCF of 84 and 108?",
+                  "answer": "12",
+                  "solutionSteps": [
+                    "84=2²·3·7, 108=2²·3³; common 2²·3 = 12."
+                  ]
+                },
+                {
+                  "prompt": "HCF of 15 and 25?",
+                  "answer": "5",
+                  "solutionSteps": [
+                    "Common factors 1, 5; highest is 5."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                40,
+                41
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t01_q02",
+              "prompt": "Lekhana has 84 kg of rice from one farm and 108 kg from another. She packs equal bags, each with rice from only one farm, using the largest possible bag size. What bag size, and how many bags?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "Bag size = HCF(84,108) = 12 kg. Bags: 84/12 + 108/12 = 7 + 9 = 16 bags.",
+              "solutionSteps": [
+                "Bag size must divide both 84 and 108 → a common factor; largest gives fewest bags → HCF.",
+                "HCF(84,108): 84 = 2²·3·7, 108 = 2²·3³ → common 2²·3 = 12.",
+                "Bags: 84 ÷ 12 = 7 and 108 ÷ 12 = 9. Total 16 bags."
+              ],
+              "commonMistakes": [
+                "Using a smaller common factor (more bags than needed).",
+                "Adding 84+108 first instead of treating farms separately."
+              ],
+              "variations": [
+                {
+                  "prompt": "Largest equal bag for 24 kg and 36 kg?",
+                  "answer": "12 kg",
+                  "solutionSteps": [
+                    "HCF(24,36)=12."
+                  ]
+                },
+                {
+                  "prompt": "How many 12 kg bags from 108 kg?",
+                  "answer": "9",
+                  "solutionSteps": [
+                    "108 ÷ 12 = 9."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                41
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch11_t02",
+          "title": "Least Common Multiple (LCM)",
+          "summary": "The LCM of two numbers is the smallest number that both divide into — the smallest common multiple. If one bell rings every 6 minutes and another every 8, they ring together every LCM(6,8) = 24 minutes. It's found from the multiples, or faster from prime factorisation.",
+          "concepts": [
+            {
+              "id": "ch11_t02_c01",
+              "title": "LCM — the least common multiple",
+              "explanations": {
+                "oneLine": "The Least Common Multiple (LCM) of two numbers is the smallest number that is a multiple of both.",
+                "kidFriendly": "Two bells: one rings every 6 minutes, the other every 8. They just rang together — when do they next ring together? You need a time that is a multiple of BOTH 6 and 8. Multiples of 6: 6,12,18,24,30… Multiples of 8: 8,16,24,32… The smallest shared one is 24. So they ring together every 24 minutes. This smallest common multiple is the Least Common Multiple (LCM). LCM(6,8) = 24. Unlike HCF (which is about dividing INTO numbers), LCM is about the smallest number these go into — useful for 'when do repeating events line up?' and for adding fractions with different denominators.",
+                "textbook": "The Least Common Multiple (LCM) of two or more numbers is the smallest positive number that is a multiple of each. It is found by listing multiples and taking the smallest common one, or via prime factorisation (product of all primes present to the highest power). For 6 and 8: 6 = 2·3, 8 = 2³, so LCM = 2³·3 = 24.",
+                "expert": "The LCM is the join in the divisibility lattice; lcm(a,b) = product of primes to maximum exponents. It is the generator of the intersection ideal (a)∩(b). The identity gcd(a,b)·lcm(a,b) = a·b links the two. LCM underlies the common denominator in ℚ and the period of combined cyclic events (Chinese Remainder contexts)."
+              },
+              "reasoning": "Events that repeat at different intervals line up again only at a time both intervals divide into evenly — a common multiple. The FIRST time they coincide is the smallest such number, the least common multiple.",
+              "useCases": [
+                {
+                  "title": "Bells ringing together",
+                  "description": "Bells every 6 and 8 min coincide every LCM = 24 min.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Adding fractions",
+                  "description": "To add 1/6 + 1/8, use the common denominator LCM(6,8) = 24.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Traffic-light cycles",
+                  "description": "Two lights with 6 s and 8 s cycles sync every 24 s.",
+                  "domain": "travel"
+                }
+              ],
+              "beyondTheBook": "The LCM is exactly the common denominator you need when adding fractions like 1/6 + 1/8 — rewrite both over 24. It also governs real cyclic phenomena: when planets align, when shift rosters repeat, when gears return to their start. 'When do repeating cycles coincide?' is always an LCM question.",
+              "mnemonic": "LCM = the SMALLEST number both go into. Useful for lining up repeating cycles.",
+              "predictQuestion": "One bell rings every 6 minutes, another every 8. If they ring together now, after how many minutes do they next ring together?",
+              "whyChain": [
+                "For both bells to ring at the same moment, the elapsed time must be a multiple of 6 (for the first bell) AND a multiple of 8 (for the second) — a COMMON multiple of 6 and 8.",
+                "List them: multiples of 6 are 6, 12, 18, 24, …; multiples of 8 are 8, 16, 24, …. The smallest shared value is 24. So the bells next coincide after 24 minutes — that's the Least Common Multiple, LCM(6,8) = 24.",
+                "Notice how LCM differs from HCF: HCF is the biggest number that divides INTO both (for splitting into equal parts), while LCM is the smallest number both divide into (for when repeating things line up). LCM is exactly the common denominator for adding 1/6 + 1/8, and it governs every 'when do cycles coincide?' question — synced traffic lights, repeating rosters, aligning gears."
+              ],
+              "relatedConceptIds": [
+                "ch11_t01_c01",
+                "ch11_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t02_q01",
+                "ch11_t02_q02"
+              ],
+              "pageRefs": [
+                42,
+                43
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch11_t02_q01",
+              "prompt": "Find the LCM of 6 and 8.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "24",
+              "solutionSteps": [
+                "Multiples of 6: 6, 12, 18, 24, 30, …",
+                "Multiples of 8: 8, 16, 24, 32, …",
+                "Smallest common multiple is 24.",
+                "LCM(6,8) = 24."
+              ],
+              "commonMistakes": [
+                "Picking 48 (a common multiple, but not the LEAST).",
+                "Confusing with HCF (which would be 2)."
+              ],
+              "variations": [
+                {
+                  "prompt": "LCM of 4 and 6?",
+                  "answer": "12",
+                  "solutionSteps": [
+                    "Multiples meet first at 12."
+                  ]
+                },
+                {
+                  "prompt": "LCM of 5 and 10?",
+                  "answer": "10",
+                  "solutionSteps": [
+                    "10 is a multiple of both."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                42,
+                43
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t02_q02",
+              "prompt": "Two traffic lights have cycles of 6 seconds and 8 seconds. They turn green together now. After how long do they next turn green together?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "24 seconds (LCM of 6 and 8).",
+              "solutionSteps": [
+                "They sync at a common multiple of 6 and 8.",
+                "LCM(6,8) = 24.",
+                "So they next turn green together after 24 seconds."
+              ],
+              "commonMistakes": [
+                "Adding 6 + 8 = 14 instead of finding the LCM.",
+                "Using HCF (2) instead of LCM."
+              ],
+              "variations": [
+                {
+                  "prompt": "Bells every 9 and 12 min — when do they coincide?",
+                  "answer": "36 minutes",
+                  "solutionSteps": [
+                    "LCM(9,12)=36."
+                  ]
+                },
+                {
+                  "prompt": "Common denominator for 1/6 + 1/8?",
+                  "answer": "24",
+                  "solutionSteps": [
+                    "LCM(6,8)=24."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                43
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch11_t03",
+          "title": "HCF, LCM and Prime Factorisation",
+          "summary": "Break each number into its prime building blocks. The HCF takes the common primes to the LOWEST power; the LCM takes all primes to the HIGHEST power. And there's a pretty shortcut: HCF × LCM always equals the product of the two numbers.",
+          "concepts": [
+            {
+              "id": "ch11_t03_c01",
+              "title": "Prime factorisation and the HCF×LCM relationship",
+              "explanations": {
+                "oneLine": "Using prime factorisation, HCF takes common primes to the lowest power and LCM takes all primes to the highest power; always, HCF × LCM = product of the two numbers.",
+                "kidFriendly": "Break numbers into prime building blocks. 12 = 2² × 3, 18 = 2 × 3². For the HCF, take each shared prime to its LOWEST power: 2¹ × 3¹ = 6. For the LCM, take every prime to its HIGHEST power: 2² × 3² = 36. Now the pretty fact: HCF × LCM = 6 × 36 = 216, and 12 × 18 = 216 too! For ANY two numbers, HCF × LCM = their product. This means once you know one, you can find the other: if you have the HCF, then LCM = (product) ÷ HCF. Prime factorisation makes both HCF and LCM fast, and the relationship ties them together beautifully.",
+                "textbook": "Via prime factorisation, the HCF is the product of common prime factors raised to the minimum exponent, and the LCM is the product of all prime factors raised to the maximum exponent. For any two positive integers a, b: HCF(a,b) × LCM(a,b) = a × b. Hence LCM = (a×b)/HCF, allowing one to be computed from the other.",
+                "expert": "By unique factorisation, writing a = ∏ p^{e_i}, b = ∏ p^{f_i}, gcd = ∏ p^{min(e_i,f_i)} and lcm = ∏ p^{max(e_i,f_i)}. Since min+max = e+f for each prime, gcd·lcm = ∏ p^{e_i+f_i} = a·b. This identity, plus the Euclidean algorithm for gcd, gives an efficient lcm computation without full factorisation."
+              },
+              "reasoning": "Each number is a product of prime powers. A factor common to both can only use primes both have, and only as many copies as the SMALLER has — that's the HCF. A multiple of both must include enough copies for the LARGER — that's the LCM. Because min + max of each prime's powers equals the total, the product HCF × LCM rebuilds a × b exactly.",
+              "useCases": [
+                {
+                  "title": "Quick LCM from HCF",
+                  "description": "HCF(12,18)=6, so LCM = 12×18/6 = 36 — no listing needed.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Reducing and combining fractions",
+                  "description": "Prime factors give both the HCF (to reduce) and LCM (to add) of denominators.",
+                  "domain": "other"
+                },
+                {
+                  "title": "Gear teeth alignment",
+                  "description": "Prime factors of two gears' tooth counts give when they realign (LCM).",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "The HCF × LCM = product identity is a gift: it turns a hard LCM into an easy division once you have the (easier) HCF. Prime factorisation itself — the fact that every number breaks into primes in exactly one way (the Fundamental Theorem of Arithmetic) — is one of the cornerstones of all mathematics.",
+              "mnemonic": "HCF: common primes, lowest power. LCM: all primes, highest power. HCF × LCM = a × b.",
+              "predictQuestion": "Using 12 = 2²×3 and 18 = 2×3², find HCF and LCM, and check that HCF × LCM = 12 × 18.",
+              "whyChain": [
+                "Write each number in primes: 12 = 2² × 3 and 18 = 2 × 3². The HCF keeps only the primes BOTH share, each to the LOWEST power present: 2¹ × 3¹ = 6. The LCM keeps EVERY prime that appears, each to the HIGHEST power: 2² × 3² = 36.",
+                "Now check the relationship: HCF × LCM = 6 × 36 = 216, and 12 × 18 = 216 — they match. This is no coincidence: for every prime, min(power) + max(power) equals the sum of the two powers, so multiplying HCF and LCM rebuilds exactly a × b.",
+                "This identity is a practical gift. The HCF is usually easy (small common factors); once you have it, LCM = (a × b) ÷ HCF — no listing of multiples needed. And it all rests on the Fundamental Theorem of Arithmetic: every number factors into primes in exactly one way, a cornerstone of mathematics."
+              ],
+              "relatedConceptIds": [
+                "ch11_t01_c01",
+                "ch11_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch11_t03_q01",
+                "ch11_t03_q02"
+              ],
+              "pageRefs": [
+                44,
+                45,
+                46
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch11_t03_q01",
+              "prompt": "Find the HCF and LCM of 12 and 18 using prime factorisation.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "12 = 2²×3, 18 = 2×3². HCF = 2×3 = 6 (common primes, lowest power); LCM = 2²×3² = 36 (all primes, highest power).",
+              "solutionSteps": [
+                "12 = 2 × 2 × 3 = 2²·3.",
+                "18 = 2 × 3 × 3 = 2·3².",
+                "HCF: common primes to lowest power → 2¹·3¹ = 6.",
+                "LCM: all primes to highest power → 2²·3² = 36."
+              ],
+              "commonMistakes": [
+                "Taking highest powers for HCF or lowest for LCM (swapped).",
+                "Missing a prime that appears in only one number when finding LCM."
+              ],
+              "variations": [
+                {
+                  "prompt": "HCF and LCM of 8 and 12?",
+                  "answer": "HCF 4, LCM 24.",
+                  "solutionSteps": [
+                    "8=2³, 12=2²·3; HCF 2²=4, LCM 2³·3=24."
+                  ]
+                },
+                {
+                  "prompt": "HCF and LCM of 9 and 15?",
+                  "answer": "HCF 3, LCM 45.",
+                  "solutionSteps": [
+                    "9=3², 15=3·5; HCF 3, LCM 3²·5=45."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                44,
+                45
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_t03_q02",
+              "prompt": "The HCF of two numbers is 6 and their product is 216. What is their LCM?",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "36",
+              "solutionSteps": [
+                "HCF × LCM = product of the two numbers.",
+                "6 × LCM = 216.",
+                "LCM = 216 ÷ 6 = 36."
+              ],
+              "commonMistakes": [
+                "Multiplying HCF by the product instead of dividing.",
+                "Forgetting the HCF×LCM = product relationship."
+              ],
+              "variations": [
+                {
+                  "prompt": "HCF 4, product 96. Find LCM.",
+                  "answer": "24",
+                  "solutionSteps": [
+                    "96 ÷ 4 = 24."
+                  ]
+                },
+                {
+                  "prompt": "LCM 60, HCF 5. Find the product of the numbers.",
+                  "answer": "300",
+                  "solutionSteps": [
+                    "5 × 60 = 300."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                46
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "glossary": [
+        {
+          "id": "ch11_gl01",
+          "term": "Factor",
+          "definition": "A number that divides another exactly, leaving no remainder.",
+          "example": "4 is a factor of 12.",
+          "hindiTerm": "गुणनखंड",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl02",
+          "term": "Multiple",
+          "definition": "A number obtained by multiplying a given number by a whole number.",
+          "example": "24 is a multiple of 6.",
+          "hindiTerm": "गुणज",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl03",
+          "term": "Common factor",
+          "definition": "A number that is a factor of two or more numbers.",
+          "example": "4 is a common factor of 12 and 16.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl04",
+          "term": "Highest Common Factor (HCF/GCD)",
+          "definition": "The greatest number that divides two or more numbers exactly.",
+          "example": "HCF(12,16) = 4.",
+          "hindiTerm": "महत्तम समापवर्तक",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl05",
+          "term": "Least Common Multiple (LCM)",
+          "definition": "The smallest number that is a multiple of two or more numbers.",
+          "example": "LCM(6,8) = 24.",
+          "hindiTerm": "लघुत्तम समापवर्त्य",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl06",
+          "term": "Prime number",
+          "definition": "A number greater than 1 with exactly two factors: 1 and itself.",
+          "example": "2, 3, 5, 7, 11.",
+          "hindiTerm": "अभाज्य संख्या",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl07",
+          "term": "Prime factorisation",
+          "definition": "Writing a number as a product of prime numbers.",
+          "example": "12 = 2² × 3.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl08",
+          "term": "Greatest Common Divisor (GCD)",
+          "definition": "Another name for the HCF — the greatest number dividing both.",
+          "example": "GCD(12,16) = 4.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl09",
+          "term": "Common multiple",
+          "definition": "A number that is a multiple of two or more numbers.",
+          "example": "24 is a common multiple of 6 and 8.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_gl10",
+          "term": "HCF×LCM identity",
+          "definition": "For two numbers, HCF × LCM equals their product.",
+          "example": "6 × 36 = 12 × 18.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch11_mn01",
+          "acronym": "HCF = Highest, divides into",
+          "unpacking": "The HCF is the biggest number that divides BOTH numbers — used to split into equal parts (largest tile, biggest bag).",
+          "context": "Use for 'largest equal share' problems.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_mn02",
+          "acronym": "LCM = Least, both go into",
+          "unpacking": "The LCM is the smallest number BOTH numbers divide into — used for when repeating cycles coincide and for common denominators.",
+          "context": "Use for 'when do cycles meet' problems.",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_mn03",
+          "acronym": "Low for HCF, High for LCM",
+          "unpacking": "From prime factors: HCF takes common primes to the LOWEST power; LCM takes all primes to the HIGHEST power.",
+          "context": "Use for the prime-factorisation method.",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch11_ms01",
+          "kidsThink": "The HCF is the biggest of the two numbers.",
+          "actually": "The HCF is the biggest number that DIVIDES both — it's never bigger than the smaller number. HCF(12,16) = 4, not 16.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms02",
+          "kidsThink": "The LCM is the product of the two numbers.",
+          "actually": "Only when they share no common factor. In general LCM = product ÷ HCF, so LCM(6,8) = 48/2 = 24, not 48.",
+          "relatedConceptIds": [
+            "ch11_t02_c01",
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms03",
+          "kidsThink": "HCF and LCM are the same kind of thing.",
+          "actually": "HCF divides INTO the numbers (small, for sharing); LCM is what the numbers divide into (large, for cycles). They're opposite directions.",
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms04",
+          "kidsThink": "For HCF take the highest powers of the primes.",
+          "actually": "For HCF take the LOWEST power of each COMMON prime. Highest powers (of ALL primes) give the LCM.",
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_ms05",
+          "kidsThink": "A bigger tile means more tiles.",
+          "actually": "A bigger tile means FEWER tiles. That's why the largest common factor (HCF) gives the fewest tiles for an exact fit.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch11_re01",
+          "title": "Tiling a floor with the fewest tiles",
+          "body": "To tile a 12 ft × 16 ft room with equal square tiles and no cutting, the side must divide both 12 and 16 — and the largest such tile (HCF = 4 ft) uses the fewest tiles. HCF answers every 'largest equal piece that fits exactly' question, from tiles to ribbon-cutting.",
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_re02",
+          "title": "When do the bells coincide?",
+          "body": "Two temple bells ringing every 6 and 8 minutes sound together every LCM = 24 minutes. The same LCM logic tells you when synced traffic lights realign, when two gears return to their starting positions, and when repeating work shifts coincide.",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_re03",
+          "title": "Common denominators",
+          "body": "Adding 1/6 + 1/8 needs a common denominator — and the smallest is LCM(6,8) = 24. Rewrite as 4/24 + 3/24 = 7/24. Every time you add fractions with different denominators, you're quietly computing an LCM.",
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch11_qa01",
+          "question": "Sameeksha tiles a 12 ft by 16 ft room with the largest equal square tiles. What size tile, and why?",
+          "modelAnswer": "The tile side must divide both 12 and 16 (a common factor); the largest such, the HCF, gives the fewest tiles. Common factors of 12 and 16 are 1, 2, 4; the HCF is 4, so 4 ft tiles.",
+          "textbookPage": 40,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa02",
+          "question": "What is the HCF (GCD) of two numbers?",
+          "modelAnswer": "It is the greatest number that divides both of them exactly — the highest of their common factors.",
+          "textbookPage": 41,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa03",
+          "question": "Lekhana packs 84 kg and 108 kg of rice (separately) into equal largest bags. Find the bag size and number of bags.",
+          "modelAnswer": "Bag size = HCF(84,108) = 12 kg. Bags = 84/12 + 108/12 = 7 + 9 = 16 bags.",
+          "textbookPage": 41,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa04",
+          "question": "What is the LCM of two numbers? Find LCM(6,8).",
+          "modelAnswer": "The LCM is the smallest number that is a multiple of both. Multiples of 6 (6,12,18,24…) and of 8 (8,16,24…) first meet at 24, so LCM(6,8) = 24.",
+          "textbookPage": 42,
+          "relatedConceptIds": [
+            "ch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa05",
+          "question": "Find the HCF and LCM of 12 and 18 by prime factorisation.",
+          "modelAnswer": "12 = 2²·3, 18 = 2·3². HCF = common primes to the lowest power = 2·3 = 6. LCM = all primes to the highest power = 2²·3² = 36.",
+          "textbookPage": 44,
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa06",
+          "question": "State and verify the relationship between HCF, LCM and the product of two numbers, using 12 and 18.",
+          "modelAnswer": "HCF × LCM = product of the numbers. For 12 and 18: HCF = 6, LCM = 36, and 6 × 36 = 216 = 12 × 18. Verified.",
+          "textbookPage": 46,
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa07",
+          "question": "The HCF of two numbers is 6 and their product is 216. Find their LCM.",
+          "modelAnswer": "Using HCF × LCM = product: 6 × LCM = 216, so LCM = 216 ÷ 6 = 36.",
+          "textbookPage": 46,
+          "relatedConceptIds": [
+            "ch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_qa08",
+          "question": "Why does the largest tile use the fewest tiles?",
+          "modelAnswer": "A larger tile covers more area per tile, so fewer are needed to cover the same floor. Taking the HCF as the side gives the largest tile that still fits both dimensions exactly, hence the fewest tiles.",
+          "textbookPage": 40,
+          "relatedConceptIds": [
+            "ch11_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch11_mp01",
+          "emoji": "🟦",
+          "title": "Tile the Room (HCF) & Sync the Bells (LCM)",
+          "needs": [
+            "Graph/squared paper",
+            "A pencil",
+            "A ruler"
+          ],
+          "steps": [
+            "Draw a 12 by 16 rectangle on squared paper (each square = 1 ft).",
+            "Try filling it exactly with equal squares of side 1, 2, 3, 4. Which sizes fit with no gaps? Which is largest?",
+            "Confirm the largest exact-fit square has side 4 — the HCF of 12 and 16 — and count how many tiles.",
+            "Now mark a timeline: tick every 6 units for one bell, every 8 for another. Where do the ticks first land together?",
+            "Confirm they coincide at 24 — the LCM of 6 and 8."
+          ],
+          "expectedObservation": "Only common factors (1,2,4) tile the room exactly, and the largest (HCF=4) needs the fewest tiles. The two bell-tick patterns first align at 24, the LCM — showing HCF for 'largest exact share' and LCM for 'first coincidence'.",
+          "whyItWorks": "A tile fits both dimensions only if its side divides both (common factor); the largest is the HCF. Repeating ticks coincide only at a common multiple, and first at the least one — the LCM. The grid and timeline make both ideas visible at once.",
+          "estimatedMinutes": 40,
+          "relatedConceptIds": [
+            "ch11_t01_c01",
+            "ch11_t02_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch11_t01_c01",
+            "label": "HCF (greatest divisor)",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.18
+          },
+          {
+            "id": "ch11_t02_c01",
+            "label": "LCM (least multiple)",
+            "kind": "concept",
+            "x": 0.65,
+            "y": 0.18
+          },
+          {
+            "id": "ch11_pivot_primes",
+            "label": "Prime factorisation",
+            "kind": "pivot",
+            "x": 0.45,
+            "y": 0.45
+          },
+          {
+            "id": "ch11_t03_c01",
+            "label": "HCF×LCM = product",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.72
+          },
+          {
+            "id": "ch01:ch01_t01_c01",
+            "label": "Ch.1 factors of large numbers",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.45
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch11_e01",
+            "from": "ch11_t01_c01",
+            "to": "ch11_pivot_primes",
+            "label": "found via"
+          },
+          {
+            "id": "ch11_e02",
+            "from": "ch11_t02_c01",
+            "to": "ch11_pivot_primes",
+            "label": "found via"
+          },
+          {
+            "id": "ch11_e03",
+            "from": "ch11_pivot_primes",
+            "to": "ch11_t03_c01",
+            "label": "reveals"
+          },
+          {
+            "id": "ch11_e04",
+            "from": "ch11_t01_c01",
+            "to": "ch11_t03_c01",
+            "label": "linked to"
+          },
+          {
+            "id": "ch11_e05",
+            "from": "ch11_t02_c01",
+            "to": "ch11_t03_c01",
+            "label": "linked to"
+          },
+          {
+            "id": "ch11_e06",
+            "from": "ch01:ch01_t01_c01",
+            "to": "ch11_pivot_primes",
+            "label": "factoring"
+          }
+        ]
+      }
     }
   ]
 }
