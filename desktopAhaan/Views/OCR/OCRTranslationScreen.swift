@@ -14,6 +14,9 @@ struct OCRTranslationScreen: View {
     /// Tracks whether a file is being dragged over the drop zone — drives
     /// the EM5 hover-state styling (dashed purple border + icon scale).
     @State private var isDropTargeted: Bool = false
+    /// Brief "Copied!" confirmation on the Extracted Text copy button,
+    /// matching the pattern used by TranslationResultCard.
+    @State private var showCopied = false
 
     var body: some View {
         ScrollView {
@@ -117,21 +120,35 @@ struct OCRTranslationScreen: View {
 
     private var extractedTextEditor: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack {
+            HStack(spacing: 12) {
                 Text("Extracted Text (editable)")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Spacer()
+                Button(action: copyExtractedText) {
+                    Image(systemName: SFSymbolCompat.name(showCopied ? "checkmark" : "doc.on.doc"))
+                        .foregroundColor(showCopied ? .green : .secondary)
+                }
+                .buttonStyle(.borderless)
+                .font(.caption)
+                .disabled(editedText.isEmpty)
+                .pointingCursor()
+                .help(showCopied ? "Copied!" : "Copy extracted text")
+                .accessibilityLabel(showCopied ? "Copied to clipboard" : "Copy extracted text")
+                .accessibilityHint("Copy the extracted text to your clipboard")
                 Button("Clear") {
                     editedText = ""
                     hasExtractedText = false
                     selectedImage = nil
+                    showCopied = false
                     ocrService.clear()
                     vm.clear()
                 }
                 .font(.caption)
                 .foregroundColor(.red)
             }
+
+            scanQualityIndicator
 
             TextEditor(text: $editedText)
                 .frame(minHeight: 80, maxHeight: 150)
@@ -151,6 +168,64 @@ struct OCRTranslationScreen: View {
         .background(Color(NSColor.controlBackgroundColor))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
+    }
+
+    /// Unobtrusive scan-quality chip derived from the Vision OCR confidence.
+    /// Only meaningful once there is extracted text. Below `lowConfidence`
+    /// (0.5) we add a gentle "double-check" hint, since accurate-level Vision
+    /// OCR confidences below ~0.5 usually mean a blurry or low-contrast scan.
+    private var scanQualityIndicator: some View {
+        Group {
+            if !editedText.isEmpty {
+                let confidence = ocrService.confidence
+                let quality = OCRTranslationScreen.scanQuality(for: confidence)
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 6) {
+                        Image(systemName: SFSymbolCompat.name(quality.symbol))
+                        Text("\(quality.label) scan quality")
+                        Text("\(Int((confidence * 100).rounded()))%")
+                            .opacity(0.8)
+                    }
+                    .font(.caption2.weight(.semibold))
+                    .foregroundColor(quality.color)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(quality.color.opacity(0.12))
+                    .clipShape(Capsule())
+
+                    if confidence < OCRTranslationScreen.lowConfidence {
+                        Text("This scan looked unclear — double-check the text below.")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+        }
+    }
+
+    private static let lowConfidence: Double = 0.5
+    private static let highConfidence: Double = 0.8
+
+    private static func scanQuality(for confidence: Double) -> (label: String, symbol: String, color: Color) {
+        if confidence >= highConfidence {
+            return ("High", "checkmark.seal.fill", .green)
+        } else if confidence >= lowConfidence {
+            return ("Medium", "exclamationmark.circle.fill", .orange)
+        } else {
+            return ("Low", "exclamationmark.triangle.fill", .red)
+        }
+    }
+
+    private func copyExtractedText() {
+        guard !editedText.isEmpty else { return }
+        NSPasteboard.general.clearContents()
+        NSPasteboard.general.setString(editedText, forType: .string)
+        showCopied = true
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 1_500_000_000)
+            showCopied = false
+        }
     }
 
     private var translationControls: some View {
