@@ -385,7 +385,6 @@
 		4DE7769656EC3386D653BEE8 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A101E35C398C9B51CCB10A /* FavoritesScreen.swift */; };
 		D545E88FED7C084B214D5563 /* OCRTranslationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20D370DE3217A16412029FB /* OCRTranslationScreen.swift */; };
 		0DCCABDDF2C04098BC35AF6F /* AllChaptersCompleteOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD3C8DF9CAA04F118ED2A92 /* AllChaptersCompleteOverlay.swift */; };
-		B91B5456ED5B8E82F6BD6F72 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2563940C2B544367FEECC98C /* ImagePicker.swift */; };
 		A0E892E4C3E3C6276B51BC74 /* InputCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1E24B8D2D6B6F33E8ED0A7 /* InputCard.swift */; };
 		41C4B5B835D45DEF2271CAD2 /* LanguageSelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693EC3C46A7D2D158F08A11E /* LanguageSelectorBar.swift */; };
 		3ECB88DEAA05D71F0A5DD91E /* StatusCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5092715102BBAADC05DE2FF /* StatusCards.swift */; };
@@ -2142,7 +2141,6 @@
 		C8A101E35C398C9B51CCB10A /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesScreen.swift"; sourceTree = "<group>"; };
 		F20D370DE3217A16412029FB /* OCRTranslationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRTranslationScreen.swift"; sourceTree = "<group>"; };
 		DCD3C8DF9CAA04F118ED2A92 /* AllChaptersCompleteOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllChaptersCompleteOverlay.swift"; sourceTree = "<group>"; };
-		2563940C2B544367FEECC98C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePicker.swift"; sourceTree = "<group>"; };
 		1D1E24B8D2D6B6F33E8ED0A7 /* InputCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputCard.swift"; sourceTree = "<group>"; };
 		693EC3C46A7D2D158F08A11E /* LanguageSelectorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageSelectorBar.swift"; sourceTree = "<group>"; };
 		D5092715102BBAADC05DE2FF /* StatusCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatusCards.swift"; sourceTree = "<group>"; };
@@ -4213,7 +4211,6 @@
 			isa = PBXGroup;
 			children = (
 				DCD3C8DF9CAA04F118ED2A92,
-				2563940C2B544367FEECC98C,
 				1D1E24B8D2D6B6F33E8ED0A7,
 				693EC3C46A7D2D158F08A11E,
 				D5092715102BBAADC05DE2FF,
@@ -5505,7 +5502,6 @@
 				4DE7769656EC3386D653BEE8 /* FavoritesScreen.swift in Sources */,
 				D545E88FED7C084B214D5563 /* OCRTranslationScreen.swift in Sources */,
 				0DCCABDDF2C04098BC35AF6F /* AllChaptersCompleteOverlay.swift in Sources */,
-				B91B5456ED5B8E82F6BD6F72 /* ImagePicker.swift in Sources */,
 				A0E892E4C3E3C6276B51BC74 /* InputCard.swift in Sources */,
 				41C4B5B835D45DEF2271CAD2 /* LanguageSelectorBar.swift in Sources */,
 				3ECB88DEAA05D71F0A5DD91E /* StatusCards.swift in Sources */,
