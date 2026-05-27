@@ -4,7 +4,7 @@
 **Wrapper attempt:** 0 (interactive session — wrapper not yet launched)
 **Last good commit SHA:** (Ch.5 Parallel & Intersecting Lines — see git log)
 **Current phase:** Phase 2 — chapter content (ALL 15 CHAPTERS DONE — content complete)
-**Current chapter under construction:** NONE — all 15 chapters authored + thin chapters (8/10/11) deepened to 4 concepts each. Next deferred work: article HTML, then a Discover Mode scene.
+**Current chapter under construction:** NONE — all 15 chapters authored; thin chapters (8/10/11) deepened to 4 concepts. Article layer is BLOCKED on a subject-aware-keying design decision (STOP_AND_ASK 2026-05-27); cross-subject article leak fixed at ChapterDetailView. Next gate-safe work: Discover Mode scene (subject-aware path exists via DiscoverMode.hasExperience), or more content depth.
 
 > ⚠️ **PDF text caveat for resuming agents:** the extracted text in
 > `/tmp/maths-pdf-text/` does NOT survive a reboot. On any fresh launch,
@@ -121,9 +121,12 @@ Full text extracted to `/tmp/maths-pdf-text/gegp1{01..08}.txt` and
   + SubjectRegistry).
 - Once pbxproj is touchable, register `maths_class7.json` as bundle
   resource via `scripts/generate_compat_pbxproj.py`.
-- Article id prefix `mch{NN}_<slug>` may need ArticleIndex.swift
-  extension if the loader assumes the legacy `ch{NN}_<slug>` form;
-  verify before authoring articles.
+- **Articles need a subject-aware-keying design decision** (see STOP_AND_ASK
+  2026-05-27). ArticleIndex keys by bare chapter id, so Maths (ch01…) collides
+  with Science. The cross-subject LEAK is now fixed at the two ChapterDetailView
+  resolver sites (pack guard); GlossarySheet + ChapterGlossaryCTA still need
+  `pack` threaded through. Authoring real Maths articles is blocked on the
+  namespacing choice (a or b in STOP_AND_ASK).
 
 ---
 

@@ -51,9 +51,9 @@ struct ChapterDetailView: View {
 
     /// Bundle-existence-gated entry lookup. Returns nil if missing/unbundled (card auto-hides).
     private func resolvedArticleEntry(forKey key: String) -> ArticleEntry? {
-        guard let entry = ArticleIndex.entries[key] else {
-            return nil
-        }
+        // Science-only article keys (Maths reuses ch01… ids — see STOP_AND_ASK 2026-05-27).
+        guard pack.id == "science_class7",
+              let entry = ArticleIndex.entries[key] else { return nil }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
         let resolved = Bundle.main.url(forResource: name, withExtension: "html",
                                         subdirectory: entry.chapterFolder)
@@ -103,7 +103,7 @@ struct ChapterDetailView: View {
             // Scientist Spotlight, What If?). Each chip auto-hides
             // when its article isn't bundled; the whole row hides
             // when none are bundled.
-            ExtraReadingRow(chapter: chapter) { entry in
+            ExtraReadingRow(pack: pack, chapter: chapter) { entry in
                 sheetCoordinator.presented = .article(entry)
             }
             GallerySectionView(chapter: chapter)

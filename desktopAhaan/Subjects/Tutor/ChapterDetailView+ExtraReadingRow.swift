@@ -20,6 +20,7 @@ import AppKit
 /// already use). Big-Sur-safe — no .keyboardShortcut(_:?)
 /// optional overload, no macOS 12+ Layout API.
 struct ExtraReadingRow: View {
+    let pack: SubjectPack
     let chapter: Chapter
     /// Called when the kid taps a chip. The parent
     /// `ChapterDetailView` wires this to
@@ -168,7 +169,9 @@ struct ExtraReadingRow: View {
     /// reimplemented here so this sister file stays self-contained.
     /// Subdirectory lookup with flat-bundle fallback.
     private func resolvedEntry(forKey key: String) -> ArticleEntry? {
-        guard let entry = ArticleIndex.entries[key] else { return nil }
+        // Science-only article keys (Maths reuses ch01… ids — see STOP_AND_ASK 2026-05-27).
+        guard pack.id == "science_class7",
+              let entry = ArticleIndex.entries[key] else { return nil }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
         let resolved = Bundle.main.url(forResource: name, withExtension: "html",
                                        subdirectory: entry.chapterFolder)

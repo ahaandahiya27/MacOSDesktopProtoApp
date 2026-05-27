@@ -4,6 +4,38 @@ Per §E of the 12-hour spec, this file is only written for the six exception con
 
 ## Open questions
 
+### 2026-05-27 — Article system is not subject-aware (Maths reuses ch01… ids); design decision needed for Maths articles
+
+`ArticleIndex.entries` is keyed by bare chapter/topic/concept id (`ch01`,
+`ch01_mistakes`, `ch01_glossary`, …) with no pack/subject qualifier. Maths
+chapters use the same ids (`ch01`…`ch15`), so a Maths chapter mis-resolves to
+**Science's** same-id article. This was a live cross-subject leak (e.g. Maths
+Ch.1's "Common Mistakes" card linked to Science's *Nutrition in Plants*
+article).
+
+**Fixed this iteration (pack guard, mirroring `DiscoverMode.hasExperience`):**
+- `ChapterDetailView.resolvedArticleEntry(forKey:)` — guards `pack.id == "science_class7"`
+  (covers the Common Mistakes card + the glossary-article handoff `openGlossaryArticleFromSheet`).
+- `ChapterDetailView` line ~112 — the `ExtraReadingRow(chapter:)` invocation is
+  now wrapped in `if pack.id == "science_class7"`.
+
+**Still leaking — need `pack` threaded through (not in scope there):**
+- `GlossarySheet.swift:~128` — its internal article resolver (the glossary
+  sheet itself shows the correct Maths glossary terms; only the optional
+  "read full article" handoff would resolve to Science). `GlossarySheet` has
+  only `let chapter`, no `pack`.
+- `ConceptDetailView+ChapterGlossaryCTA.swift:~27` — `ChapterGlossaryCTA` is a
+  separate struct without `pack`.
+
+**Decision for the human:** to ship *actual Maths articles* (not just stop the
+leak), article ids must become subject-aware. Two options: (a) prefix keys with
+the pack id (e.g. `maths_class7/ch01_overview`) and thread `pack` into every
+resolver + GlossarySheet/ChapterGlossaryCTA initialisers; or (b) namespace
+Maths article ids as `mch01_…` AND change the key derivation in ChapterDetailView
+to use a subject-prefix. Either is a cross-cutting change touching ~4 files and
+the article folder convention — out of scope for an autonomous content
+iteration, so deferred here for a deliberate design choice.
+
 ### 2026-05-27 — Maths curriculum divergence from autonomous prompt's expected chapter list
 
 The autonomous prompt at `../SUPERPROMPT_MATHS_AUTONOMOUS_20H.md` assumes
