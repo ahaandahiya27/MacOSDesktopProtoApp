@@ -13181,6 +13181,583 @@
         23,
         24
       ]
+    },
+    {
+      "id": "sch03",
+      "number": 4,
+      "title": "मित्राय नमः — Mitraya Namah (Salutation to the Sun)",
+      "summary": "NCERT Class 7 Sanskrit (Deepakam) Chapter 3. Students learn सूर्यनमस्कार (the Sun Salutation) from their teacher — a combination of postures, each paired with a mantra saluting the Sun by one of its twelve names (मित्राय नमः, रवये नमः …). The chapter teaches the dative case (चतुर्थी विभक्ति) that those mantras use, and the health, vigour, brilliance and wisdom the practice brings.",
+      "topics": [
+        {
+          "id": "sch03_t01",
+          "title": "सूर्यनमस्कारः — The Sun Salutation",
+          "summary": "The practice, its first mantra, the twelve names of the Sun, and its benefits.",
+          "concepts": [
+            {
+              "id": "sch03_t01_c01",
+              "title": "सूर्यनमस्कारः — The Sun Salutation",
+              "explanations": {
+                "oneLine": "सूर्यनमस्कारः (sūrya-namaskāraḥ) — 'salutation to the Sun', a set of yoga postures.",
+                "kidFriendly": "सूर्यनमस्कारः means 'salutation to the Sun'. The chapter explains it as a समाहारः (combination) of आसनानि (yoga postures) done facing the sun. Doing it daily gives a healthy body and mind.",
+                "textbook": "सूर्यनमस्कारः — 'Sun-salutation', a समाहारः ('collection/combination') of आसनानि (postures). The chapter teaches that before each posture comes one मन्त्रः.",
+                "expert": "सूर्यनमस्कारः is a tatpuruṣa compound: सूर्य ('sun') + नमस्कारः ('act of salutation', from नमस् 'bowing' + कार 'making'). Each posture is paired with a mantra addressed to the Sun."
+              },
+              "reasoning": "The chapter's dialogue has students learning सूर्यनमस्कारः from their teacher (आचार्या) as a daily practice for health.",
+              "useCases": [
+                {
+                  "title": "Do it daily",
+                  "description": "सूर्यनमस्कारः is a real morning exercise — the chapter recommends doing it प्रतिदिनम् (every day).",
+                  "domain": "speech"
+                },
+                {
+                  "title": "Break the word",
+                  "description": "सूर्य ('sun') + नमस्कारः ('salutation') = 'salutation to the Sun'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Answer the exercise",
+                  "description": "An exercise asks how many postures (आसनानि) it combines.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Each of the twelve postures of सूर्यनमस्कार is traditionally paired with one of the Sun's twelve names — the practice unites movement, breath and mantra.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t01_c02",
+              "title": "मित्राय नमः — The First Mantra (and the Dative Case)",
+              "explanations": {
+                "oneLine": "मित्राय नमः (mitrāya namaḥ) — 'salutation to Mitra (the Sun)'; नमः takes the dative case.",
+                "kidFriendly": "मित्राय नमः means 'salutation to the Sun (Mitra)'. It is the FIRST mantra of सूर्यनमस्कार. Notice मित्राय — not मित्रः: when you say नमः ('salutation TO'), the word for whom you bow goes into the चतुर्थी विभक्ति (dative, the 'to/for' case).",
+                "textbook": "मित्राय नमः — 'salutation to Mitra'. The chapter teaches that नमः governs the चतुर्थी विभक्ति (dative): मित्र → मित्राय ('to Mitra'). It is the first of the सूर्यनमस्कार mantras.",
+                "expert": "नमः is one of the words that idiomatically takes the dative (चतुर्थी) of the one saluted — मित्राय ('to Mitra'). The chapter's शब्दरूप table shows the अकारान्त pattern: छात्र → छात्राय, नायक → नायकाय, आदित्य → आदित्याय."
+              },
+              "reasoning": "The chapter explicitly teaches the dative through these mantras: 'salutation TO X' puts X in the चतुर्थी विभक्ति, so मित्र becomes मित्राय.",
+              "useCases": [
+                {
+                  "title": "Why मित्राय not मित्रः",
+                  "description": "नमः means 'salutation TO' — the 'to' is shown by the dative ending -आय.",
+                  "domain": "language"
+                },
+                {
+                  "title": "First mantra",
+                  "description": "सूर्यनमस्कारस्य प्रथमः मन्त्रः = मित्राय नमः.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Pattern spotting",
+                  "description": "छात्र→छात्राय, आदित्य→आदित्याय: the अकारान्त dative adds -आय.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "नमः, स्वाहा, स्वस्ति and अलम् are classic 'dative-governing' words in Sanskrit — wherever you greet, offer, or bless, the recipient takes the चतुर्थी.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch03_t01_c03",
+              "title": "सूर्यस्य द्वादश नामानि — The Twelve Names of the Sun",
+              "explanations": {
+                "oneLine": "The Sun has twelve names: मित्रः, रविः, सूर्यः, भानुः, खगः, पूषा, हिरण्यगर्भः, मरीचिः, आदित्यः, सविता, अर्कः, भास्करः.",
+                "kidFriendly": "The Sun is called by many names. The chapter lists मित्रः, खगः, पूषा, रविः, भानुः, हिरण्यगर्भः, मरीचिः, सविता, अर्कः, भास्करः — all meaning 'the Sun'. In सूर्यनमस्कार, each of the twelve postures salutes the Sun by a different name.",
+                "textbook": "The chapter's glossary groups मित्रः, खगः, पूषा, रविः, भानुः, हिरण्यगर्भः, मरीचिः, सविता, अर्कः, भास्करः (and आदित्यः) all under the meaning सूर्यः ('the Sun').",
+                "expert": "Sanskrit prizes synonyms (एकार्थकशब्दाः); the Sun's twelve names each highlight a quality — सविता ('the impeller'), भास्करः ('the light-maker'), अर्कः ('the radiant'), पूषा ('the nourisher'). The सूर्यनमस्कार mantras cycle through them in the dative (मित्राय, रवये, …)."
+              },
+              "reasoning": "The chapter teaches these as synonyms for the Sun, used across the twelve सूर्यनमस्कार mantras.",
+              "useCases": [
+                {
+                  "title": "One Sun, many names",
+                  "description": "मित्रः, रविः, भास्करः all mean the Sun — Sanskrit loves rich synonyms.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Link to the practice",
+                  "description": "Each सूर्यनमस्कार posture salutes the Sun by a different name.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Meaning hints",
+                  "description": "भास्करः = 'light-maker', सविता = 'impeller', पूषा = 'nourisher'.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "The names are not random: रवि gives us 'ravivāra' (Sunday), and भास्कर became the name of the great mathematician-astronomer Bhāskara — 'the one who makes light/knowledge'.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch03_t01_c04",
+              "title": "स्वस्थं शरीरम् — A Healthy Body and Mind",
+              "explanations": {
+                "oneLine": "स्वस्थम् (svastham) — 'healthy'; सूर्यनमस्कार gives a healthy body and mind.",
+                "kidFriendly": "स्वस्थम् means 'healthy'. The chapter says that by doing सूर्यनमस्कार daily, people gain a स्वस्थं शरीरम् (healthy body) and a स्वस्थं मनः (healthy mind). Glossary: नीरोगम् ('free of disease').",
+                "textbook": "स्वस्थम् — 'healthy', glossed नीरोगम्. The chapter states सूर्यनमस्कारेण ('by Sun-salutation') one attains a healthy body and mind.",
+                "expert": "स्वस्थ literally means 'self-abiding' (स्व 'self' + स्थ 'standing') — 'settled in oneself', hence 'well, healthy'. A lovely Sanskrit insight: health is being centred in your own self."
+              },
+              "reasoning": "An exercise asks 'सूर्यनमस्कारेण जनाः कीदृशं शरीरं प्राप्नुवन्ति?' — people get a स्वस्थम् (healthy) body.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet स्वस्थम् in NCERT Class 7 Sanskrit (Deepakam) Chapter 3; the glossary gives 'Healthy'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see स्वस्थम्, recall it means 'Healthy'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using स्वस्थम् ('Healthy').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "The word स्वस्थ ('self-abiding = healthy') captures an idea modern wellness rediscovered: true health is being at ease within yourself, not just being disease-free.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch03_t01_q01",
+              "prompt": "What is the first mantra of सूर्यनमस्कार?",
+              "questionType": "mcq",
+              "options": [
+                "रवये नमः",
+                "मित्राय नमः",
+                "भास्कराय नमः",
+                "अर्काय नमः"
+              ],
+              "answer": "मित्राय नमः",
+              "solutionSteps": [
+                "The chapter states सूर्यनमस्कारस्य प्रथमः मन्त्रः = मित्राय नमः.",
+                "मित्राय is the dative of मित्र ('the Sun/friend')."
+              ],
+              "commonMistakes": [
+                "All four are real Sun-salutation mantras, but the FIRST one is मित्राय नमः."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch03_t01_q02",
+              "prompt": "In 'मित्राय नमः', why is it मित्राय and not मित्रः?",
+              "questionType": "mcq",
+              "options": [
+                "it is plural",
+                "नमः takes the dative (चतुर्थी) — 'salutation TO'",
+                "it is past tense",
+                "it is feminine"
+              ],
+              "answer": "नमः takes the dative (चतुर्थी) — 'salutation TO'",
+              "solutionSteps": [
+                "नमः means 'salutation TO' — the one saluted goes into the चतुर्थी विभक्ति (dative).",
+                "मित्र → मित्राय, just like छात्र → छात्राय in the chapter's table."
+              ],
+              "commonMistakes": [
+                "मित्राय is not plural — the -आय ending is the singular dative ('to Mitra')."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t01_q03",
+              "prompt": "Which of these is NOT used in the chapter as a name of the Sun?",
+              "questionType": "mcq",
+              "options": [
+                "भास्करः",
+                "सविता",
+                "रिपुः",
+                "पूषा"
+              ],
+              "answer": "रिपुः",
+              "solutionSteps": [
+                "भास्करः, सविता, पूषा are all names of the Sun listed in the chapter.",
+                "रिपुः means 'enemy' (from Chapter 2) — not a Sun-name."
+              ],
+              "commonMistakes": [
+                "रिपुः ('enemy') comes from Chapter 2; it is not one of the Sun's names."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t01_q04",
+              "prompt": "Doing सूर्यनमस्कार daily gives people a ___ body.",
+              "questionType": "mcq",
+              "options": [
+                "रुग्णम् (sick)",
+                "स्वस्थम् (healthy)",
+                "दुर्बलम् (weak)",
+                "आलस्ययुक्तम् (lazy)"
+              ],
+              "answer": "स्वस्थम् (healthy)",
+              "solutionSteps": [
+                "The chapter says one attains a स्वस्थं शरीरम् ('healthy body') and स्वस्थं मनः ('healthy mind').",
+                "स्वस्थम् is glossed नीरोगम् ('disease-free')."
+              ],
+              "commonMistakes": [
+                "The whole point of the practice is HEALTH (स्वस्थम्), the opposite of sick or weak."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "sch03_t02",
+          "title": "चतुर्थी विभक्तिः + Words",
+          "summary": "The dative ('to/for') case taught by the mantras, plus key vocabulary.",
+          "concepts": [
+            {
+              "id": "sch03_t02_c01",
+              "title": "चतुर्थी विभक्तिः — The Dative ('to / for') Case",
+              "explanations": {
+                "oneLine": "चतुर्थी विभक्तिः — the dative case, the 'to/for' form; अकारान्त nouns add -आय (छात्र → छात्राय).",
+                "kidFriendly": "The चतुर्थी विभक्ति (dative, the fourth case) is the 'to/for' form. The chapter's table shows masculine अकारान्त nouns: छात्र → छात्राय ('to a student'), नायक → नायकाय, आदित्य → आदित्याय. Feminine आकारान्त: आचार्या → आचार्यायै.",
+                "textbook": "चतुर्थी विभक्तिः (dative). अकारान्त-पुंलिङ्गम् singular: stem + -आय (छात्राय, नायकाय, आदित्याय). आकारान्त-स्त्रीलिङ्गम् singular: -आयै (आचार्यायै, योगितायै). Used after नमः.",
+                "expert": "The dative marks the indirect object / recipient ('to/for whom'). The chapter teaches it through नमः-mantras: salute TO the Sun → मित्राय (dative). The dual/plural forms (-आभ्याम्, -एभ्यः) appear in the same table."
+              },
+              "reasoning": "The chapter teaches the dative specifically so students understand why salutation-mantras say मित्राय, रवये, सवित्रे — the Sun is the one saluted 'to'.",
+              "useCases": [
+                {
+                  "title": "Spot the 'to/for'",
+                  "description": "When English would say 'to X' or 'for X', Sanskrit often uses the चतुर्थी.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Memorise the ending",
+                  "description": "अकारान्त masculine dative singular = stem + -आय (छात्राय).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use with नमः",
+                  "description": "नमः + dative = 'salutation to ___' (मित्राय नमः).",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Sanskrit has eight cases (अष्ट विभक्तयः); the dative (चतुर्थी) is the fourth. Learning one full paradigm (like छात्र) unlocks hundreds of similar अकारान्त nouns.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch03_t02_c02",
+              "title": "प्रज्ञा — Wisdom / Intelligence",
+              "explanations": {
+                "oneLine": "प्रज्ञा (prajñā) — 'wisdom, deep intelligence'.",
+                "kidFriendly": "प्रज्ञा means wisdom or sharp intelligence. The chapter mentions that practices like सूर्यनमस्कार help develop प्रज्ञा. Glossary: मेधा ('intellect').",
+                "textbook": "प्रज्ञा — 'wisdom/intelligence', glossed मेधा. A feminine noun for the highest, discerning kind of intelligence.",
+                "expert": "प्रज्ञा is प्र ('forth, deeply') + the root ज्ञा ('to know') — 'deep/forward knowing', i.e. insight. It is the same प्रज्ञा as in the Buddhist 'prajñā' (transcendent wisdom)."
+              },
+              "reasoning": "The chapter associates physical and spiritual practice with the growth of प्रज्ञा (wisdom) and तेजः (brilliance).",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet प्रज्ञा in NCERT Class 7 Sanskrit (Deepakam) Chapter 3; the glossary gives 'Intelligence / Wisdom'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see प्रज्ञा, recall it means 'Intelligence / Wisdom'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using प्रज्ञा ('Intelligence / Wisdom').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "प्रज्ञा (deep knowing, from प्र+ज्ञा) is a step beyond ordinary बुद्धि — it is the discerning wisdom that the whole tradition of learning aims at.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t02_c03",
+              "title": "तेजः — Brilliance / Radiance",
+              "explanations": {
+                "oneLine": "तेजः (tejaḥ) — 'brilliance, radiant energy, splendour'.",
+                "kidFriendly": "तेजः means brilliance or radiant energy — like the shining glow of the Sun. The chapter uses it for the inner radiance one gains. Glossary: दीप्तिः ('shine').",
+                "textbook": "तेजः — 'brilliance, splendour', glossed दीप्तिः. A neuter s-stem noun; fittingly used in a chapter about the radiant Sun.",
+                "expert": "तेजस् is a neuter -as stem (तेजः in nominative/accusative) from the root तिज् ('to be sharp/bright'). It means both physical brilliance and the inner 'fire'/vitality of a person."
+              },
+              "reasoning": "In this Sun-themed chapter, तेजः ('radiance') is both the Sun's light and the inner brilliance the practice is said to give.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet तेजः in NCERT Class 7 Sanskrit (Deepakam) Chapter 3; the glossary gives 'Brilliance'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see तेजः, recall it means 'Brilliance'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using तेजः ('Brilliance').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "तेजस् belongs to the same family of -as neuter nouns as मनस् (mind), यशस् (fame) and वचस् (speech) — a whole class worth learning together.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t02_c04",
+              "title": "वीर्यम् — Vigour / Valour",
+              "explanations": {
+                "oneLine": "वीर्यम् (vīryam) — 'vigour, strength, valour'.",
+                "kidFriendly": "वीर्यम् means vigour or manly strength/valour. The chapter links daily practice to gaining वीर्यम्. Glossary: पराक्रमः ('prowess').",
+                "textbook": "वीर्यम् — 'vigour/valour', glossed पराक्रमः. A neuter noun; one of the qualities strengthened by सूर्यनमस्कार in the chapter.",
+                "expert": "वीर्यम् derives from वीर ('hero') + -य (abstract suffix) — 'the quality of a hero', i.e. vigour, valour, energy."
+              },
+              "reasoning": "The chapter presents वीर्यम् (vigour) alongside तेजः and प्रज्ञा as benefits of disciplined daily practice.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet वीर्यम् in NCERT Class 7 Sanskrit (Deepakam) Chapter 3; the glossary gives 'Vigour'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see वीर्यम्, recall it means 'Vigour'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using वीर्यम् ('Vigour').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "From the same root as वीर ('hero') and the English cognate 'virile'/'virtue' (via Latin vir, 'man') — many Indo-European languages share this 'hero/strength' root.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch03_t02_q01",
+              "prompt": "The 'चतुर्थी विभक्ति' (fourth case) is used to express —",
+              "questionType": "mcq",
+              "options": [
+                "possession ('of')",
+                "'to / for' (the recipient)",
+                "'from'",
+                "'in / on'"
+              ],
+              "answer": "'to / for' (the recipient)",
+              "solutionSteps": [
+                "The dative (चतुर्थी) marks the one TO/FOR whom — e.g. छात्राय 'to a student'.",
+                "नमः + dative = 'salutation TO ___'."
+              ],
+              "commonMistakes": [
+                "'Of' is the genitive (षष्ठी); 'from' is the ablative — the चतुर्थी is specifically 'to/for'."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch03_t02_q02",
+              "prompt": "The dative singular of the masculine अकारान्त noun 'छात्र' is —",
+              "questionType": "mcq",
+              "options": [
+                "छात्रः",
+                "छात्रम्",
+                "छात्राय",
+                "छात्रस्य"
+              ],
+              "answer": "छात्राय",
+              "solutionSteps": [
+                "The chapter's table gives छात्र → छात्राय (dative singular).",
+                "अकारान्त masculine dative singular adds -आय."
+              ],
+              "commonMistakes": [
+                "छात्रः is nominative, छात्रम् accusative, छात्रस्य genitive — the dative is छात्राय."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t02_q03",
+              "prompt": "What does 'प्रज्ञा' mean?",
+              "questionType": "mcq",
+              "options": [
+                "wisdom / intelligence",
+                "tiredness",
+                "anger",
+                "a river"
+              ],
+              "answer": "wisdom / intelligence",
+              "solutionSteps": [
+                "Glossary: प्रज्ञा = मेधा ('intellect/wisdom').",
+                "प्र + ज्ञा = 'deep knowing' — insight."
+              ],
+              "commonMistakes": [
+                "प्रज्ञा is deep wisdom, not a feeling like tiredness or anger."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_t02_q04",
+              "prompt": "'तेजः' means —",
+              "questionType": "mcq",
+              "options": [
+                "darkness",
+                "brilliance / radiance",
+                "hunger",
+                "fear"
+              ],
+              "answer": "brilliance / radiance",
+              "solutionSteps": [
+                "Glossary: तेजः = दीप्तिः ('shine, brilliance').",
+                "Fitting for a chapter about the radiant Sun."
+              ],
+              "commonMistakes": [
+                "तेजः is RADIANCE/brilliance — the opposite of darkness."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
     }
   ]
 }
