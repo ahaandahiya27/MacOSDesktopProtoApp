@@ -12747,6 +12747,874 @@
           }
         ]
       }
+    },
+    {
+      "id": "ch12",
+      "number": 12,
+      "title": "Another Peek Beyond the Point",
+      "summary": "Now that you can multiply and divide fractions and add and subtract decimals, this chapter completes the picture: multiplying and dividing decimals. The trick is that these are just whole-number operations with the decimal point placed correctly afterwards — and multiplying or dividing by 10, 100 or 1000 simply shifts the point. A quick estimate first keeps you from misplacing the point.",
+      "topics": [
+        {
+          "id": "ch12_t01",
+          "title": "Multiplying Decimals",
+          "summary": "To multiply decimals, ignore the points, multiply as whole numbers, then place the point so the answer has as many decimal places as the two factors together. Multiplying by 10, 100, 1000 just shifts the point right by 1, 2, 3 places.",
+          "concepts": [
+            {
+              "id": "ch12_t01_c01",
+              "title": "Multiplying decimals — count the decimal places",
+              "explanations": {
+                "oneLine": "Multiply decimals as if they were whole numbers, then put the decimal point so the product has as many decimal places as the two factors have combined.",
+                "kidFriendly": "What is 0.3 × 0.4? Ignore the points: 3 × 4 = 12. Now count decimal places in the factors: 0.3 has 1, 0.4 has 1, total 2. So the answer has 2 decimal places: 0.12. Check it makes sense — 0.3 × 0.4 is small (less than either), and 0.12 is. Why does counting work? 0.3 = 3/10 and 0.4 = 4/10, so 0.3 × 0.4 = 12/100 = 0.12 — the denominators (10 × 10 = 100) give two decimal places. So decimal multiplication is just whole-number multiplication plus correct point placement.",
+                "textbook": "To multiply decimals, multiply the numbers ignoring the decimal points (as whole numbers), then place the decimal point in the product so that the number of decimal places equals the sum of the decimal places in the two factors. This works because a decimal with n places is (integer)/10ⁿ, and multiplying gives a denominator 10^(m+n), i.e. m+n decimal places. Example: 0.3 × 0.4 = 12/100 = 0.12.",
+                "expert": "Decimal multiplication reduces to integer multiplication via the place-value isomorphism: (a·10^{−m})(b·10^{−n}) = ab·10^{−(m+n)}. The decimal-place count is additive in the exponents of 10. This is why the algorithm strips points, multiplies integers, and reinserts the point at position m+n — a direct consequence of the exponent law 10^{−m}·10^{−n} = 10^{−(m+n)}."
+              },
+              "reasoning": "A decimal is a whole number divided by a power of ten. Multiplying two of them multiplies the whole-number parts and multiplies the powers of ten — and multiplying 10ⁿ by 10ᵐ adds the place counts. So the answer's decimal places are just the sum of the factors' places.",
+              "useCases": [
+                {
+                  "title": "Cost of fuel",
+                  "description": "Petrol at ₹105.5/litre × 2.5 litres: multiply 1055 × 25, place the point (2 places) → ₹263.75.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Area of a plot",
+                  "description": "A 2.5 m × 1.4 m mat: 25 × 14 = 350, 2 decimal places → 3.50 m².",
+                  "domain": "building"
+                },
+                {
+                  "title": "Currency conversion",
+                  "description": "$3.20 at ₹83.5/$: multiply and place the point for the rupee amount.",
+                  "domain": "money"
+                }
+              ],
+              "beyondTheBook": "The 'count the decimal places' rule surprises students because the product 0.3 × 0.4 = 0.12 is SMALLER than both factors — the same 'multiplying by less than 1 shrinks' fact from the fractions chapter, now in decimal clothing. Estimating first (0.3 × 0.4 is roughly a tenth) guards against putting the point in the wrong spot.",
+              "mnemonic": "Multiply ignoring points; the answer's decimal places = sum of the factors' places.",
+              "predictQuestion": "What is 0.3 × 0.4, and how do you decide where the decimal point goes?",
+              "whyChain": [
+                "First multiply as if there were no decimal points at all: 3 × 4 = 12. The digits of the answer are settled; only the point's position remains.",
+                "Now count the decimal places in the factors and add them: 0.3 has one place, 0.4 has one place, total two. So the product has two decimal places: 12 becomes 0.12. The reason is fractions — 0.3 = 3/10 and 0.4 = 4/10, so their product is 12/100, and a denominator of 100 means two decimal places.",
+                "Sense-check: 0.12 is SMALLER than both 0.3 and 0.4 — the same 'multiplying by less than 1 shrinks' fact from fractions, now with decimals. A quick estimate (0.3 × 0.4 is roughly a tenth) confirms the point is in the right place. So decimal multiplication is just whole-number multiplication plus correct point placement."
+              ],
+              "relatedConceptIds": [
+                "ch12_t01_c02",
+                "ch08_t02_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t01_q01",
+                "ch12_t01_q02"
+              ],
+              "pageRefs": [
+                67,
+                68,
+                69
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_c02",
+              "title": "Multiplying by 10, 100, 1000 — shifting the point",
+              "explanations": {
+                "oneLine": "Multiplying a decimal by 10, 100 or 1000 shifts the decimal point right by 1, 2 or 3 places (one place per zero).",
+                "kidFriendly": "Multiplying by powers of ten is the easiest decimal operation: just slide the point. 4.56 × 10 = 45.6 (point moves 1 right). 4.56 × 100 = 456 (2 right). 4.56 × 1000 = 4560 (3 right — add a zero to make room). Count the zeros, move the point that many places right. Why? Each ×10 bumps every digit up one place value (tenths become ones, ones become tens), which is exactly what moving the point one step right does. This is why the metric system is so easy: converting 4.56 m to centimetres is ×100 = 456 cm, just a point-shift.",
+                "textbook": "Multiplying a decimal by 10ⁿ shifts the decimal point n places to the right (appending zeros if needed). This is because multiplying by 10 raises each digit's place value by one power of ten. E.g. 4.56 × 10 = 45.6, × 100 = 456, × 1000 = 4560. The number of places shifted equals the number of zeros in the power of ten.",
+                "expert": "Multiplication by 10ⁿ is a shift operator on the positional representation: it maps the coefficient of 10^k to 10^{k+n}, equivalently translating the radix point n positions right. In any base b, multiplication by bⁿ shifts the point; this is the basis of fixed-point and floating-point scaling in computing (binary point shifts for ×2ⁿ)."
+              },
+              "reasoning": "Multiplying by ten makes everything ten times bigger, so each digit jumps up one place — tenths turn into units, units into tens. Sliding the decimal point one place right does exactly that. More zeros, more shifts.",
+              "useCases": [
+                {
+                  "title": "Metres to centimetres",
+                  "description": "4.56 m × 100 = 456 cm — a pure point-shift, the metric advantage.",
+                  "domain": "building"
+                },
+                {
+                  "title": "Rupees to paise",
+                  "description": "₹4.56 × 100 = 456 paise.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Scaling a recipe ×10",
+                  "description": "0.25 kg × 10 = 2.5 kg for a big batch.",
+                  "domain": "kitchen"
+                }
+              ],
+              "beyondTheBook": "This point-shifting is why the metric system beats imperial units: every conversion (m↔cm↔mm, kg↔g) is a multiply/divide by a power of ten, i.e. a point-shift, while imperial conversions (feet to inches ×12, pounds to ounces ×16) need real multiplication. Computers do the same trick in binary for fast ×2ⁿ.",
+              "mnemonic": "×10 → point moves 1 right. ×100 → 2 right. One shift per zero.",
+              "predictQuestion": "What is 4.56 × 100, and why does multiplying by 100 just move the decimal point?",
+              "whyChain": [
+                "Multiplying by 100 makes the number a hundred times bigger. A hundred is 10 × 10, so every digit's place value jumps up two steps: the hundredths become units, the tenths become tens, and so on. There's a quick way to do all that at once.",
+                "Sliding the decimal point two places to the right achieves exactly this jump: 4.56 × 100 = 456. (For 4.56 × 1000 you'd shift three places, appending a zero to make room: 4560.) The rule is one point-shift per zero in the power of ten.",
+                "This is why the metric system is so convenient — converting 4.56 m to centimetres is just ×100 = 456 cm, a point-shift, with no real multiplication needed. Imperial units (feet to inches is ×12) get no such gift. Computers use the identical trick in binary for fast multiplication by powers of two."
+              ],
+              "relatedConceptIds": [
+                "ch12_t01_c01",
+                "ch12_t02_c01",
+                "ch03_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t01_q03"
+              ],
+              "pageRefs": [
+                70
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch12_t01_q01",
+              "prompt": "Compute 0.3 × 0.4.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "0.12",
+              "solutionSteps": [
+                "Ignore the points: 3 × 4 = 12.",
+                "Decimal places: 0.3 has 1, 0.4 has 1 → total 2 places.",
+                "Place the point: 0.12."
+              ],
+              "commonMistakes": [
+                "Answering 1.2 (only one decimal place).",
+                "Answering 12 (forgetting the point entirely)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 0.5 × 0.6.",
+                  "answer": "0.30 = 0.3",
+                  "solutionSteps": [
+                    "5×6=30, two places → 0.30."
+                  ]
+                },
+                {
+                  "prompt": "Compute 1.2 × 0.4.",
+                  "answer": "0.48",
+                  "solutionSteps": [
+                    "12×4=48, two places → 0.48."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                67,
+                68,
+                69
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_q02",
+              "prompt": "Compute 2.5 × 1.4 (e.g. the area of a 2.5 m by 1.4 m mat).",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "3.5 (m²)",
+              "solutionSteps": [
+                "Ignore points: 25 × 14 = 350.",
+                "Decimal places: 2.5 has 1, 1.4 has 1 → 2 places.",
+                "Place point: 3.50 = 3.5."
+              ],
+              "commonMistakes": [
+                "Placing only one decimal place (35.0).",
+                "Multiplying 25 × 14 incorrectly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 3.2 × 2.5.",
+                  "answer": "8.0 = 8",
+                  "solutionSteps": [
+                    "32×25=800, 2 places → 8.00."
+                  ]
+                },
+                {
+                  "prompt": "Compute 0.25 × 4.",
+                  "answer": "1.00 = 1",
+                  "solutionSteps": [
+                    "25×4=100, 2 places → 1.00."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                68,
+                69
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t01_q03",
+              "prompt": "Compute 4.56 × 10, 4.56 × 100 and 4.56 × 1000.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "45.6, 456, 4560.",
+              "solutionSteps": [
+                "× 10: move the point 1 place right → 45.6.",
+                "× 100: move 2 places → 456.",
+                "× 1000: move 3 places (append a zero) → 4560."
+              ],
+              "commonMistakes": [
+                "Moving the point the wrong direction (left).",
+                "Forgetting to append a zero for × 1000."
+              ],
+              "variations": [
+                {
+                  "prompt": "Convert 4.56 m to centimetres.",
+                  "answer": "456 cm",
+                  "solutionSteps": [
+                    "× 100 = 456."
+                  ]
+                },
+                {
+                  "prompt": "Compute 0.07 × 1000.",
+                  "answer": "70",
+                  "solutionSteps": [
+                    "Move point 3 right: 0.07 → 70."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                70
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch12_t02",
+          "title": "Dividing Decimals",
+          "summary": "Dividing by 10, 100, 1000 shifts the point LEFT. To divide by a decimal, shift the point in BOTH numbers until the divisor becomes a whole number, then divide normally — turning a tricky decimal division into an ordinary one.",
+          "concepts": [
+            {
+              "id": "ch12_t02_c01",
+              "title": "Dividing decimals and dividing by powers of ten",
+              "explanations": {
+                "oneLine": "Dividing by 10, 100, 1000 shifts the point left; to divide by a decimal, shift the point in both numbers until the divisor is whole, then divide as usual.",
+                "kidFriendly": "Dividing by ten makes things ten times smaller, so the point shifts LEFT: 45.6 ÷ 10 = 4.56; 456 ÷ 100 = 4.56. One left-shift per zero. But what about dividing BY a decimal, like 4.5 ÷ 0.5? Trick: multiply BOTH numbers by 10 to make the divisor whole — 4.5 ÷ 0.5 = 45 ÷ 5 = 9. (You can scale both by the same amount because it doesn't change the quotient: 4.5/0.5 = 45/5.) So you turn an awkward 'divide by 0.5' into an easy 'divide by 5'. As with fractions, dividing by a number less than 1 (like 0.5) gives a BIGGER answer.",
+                "textbook": "Dividing a decimal by 10ⁿ shifts the point n places left. To divide by a decimal divisor, multiply both dividend and divisor by the same power of ten to make the divisor a whole number (the quotient is unchanged), then perform ordinary division. E.g. 4.5 ÷ 0.5 = 45 ÷ 5 = 9. Dividing by a value < 1 yields a quotient larger than the dividend.",
+                "expert": "Division by 10ⁿ is the inverse shift operator (point moves n left). For a decimal divisor, scaling numerator and denominator by 10ᵏ uses the invariance a/b = (a·10ᵏ)/(b·10ᵏ) to reduce to integer-divisor division. This mirrors clearing denominators in rational arithmetic and is the standard long-division-with-decimals algorithm."
+              },
+              "reasoning": "Dividing by ten shrinks tenfold, so each digit drops one place — the point slides left. To divide by a decimal, you scale both numbers up equally (which leaves the answer unchanged) until the divisor is a whole number you can divide by normally.",
+              "useCases": [
+                {
+                  "title": "Splitting a bill",
+                  "description": "₹45.6 ÷ 10 friends = ₹4.56 each — point shifts left.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Price per unit",
+                  "description": "₹4.5 for 0.5 kg → ₹4.5 ÷ 0.5 = ₹9 per kg.",
+                  "domain": "money"
+                },
+                {
+                  "title": "cm to metres",
+                  "description": "456 cm ÷ 100 = 4.56 m.",
+                  "domain": "building"
+                }
+              ],
+              "beyondTheBook": "Dividing by a decimal less than 1 giving a bigger answer (4.5 ÷ 0.5 = 9) trips up many students — but it's the same truth as the fractions chapter: dividing by less than 1 counts how many small pieces fit, which is many. Estimating first ('4.5 divided by about a half should roughly double') keeps the point in place.",
+              "mnemonic": "÷10 → point moves 1 left. Divide by a decimal? Scale both up till the divisor is whole.",
+              "predictQuestion": "How do you compute 4.5 ÷ 0.5, and why is the answer bigger than 4.5?",
+              "whyChain": [
+                "Dividing by a decimal is awkward, so first make the divisor a whole number. Multiply BOTH numbers by 10: 4.5 becomes 45 and 0.5 becomes 5. Scaling both by the same factor doesn't change the quotient (4.5/0.5 = 45/5), so now it's an easy 45 ÷ 5 = 9.",
+                "(Dividing by powers of ten is even simpler — it just shifts the point LEFT: 45.6 ÷ 10 = 4.56, one left-shift per zero, because dividing by ten makes everything ten times smaller.)",
+                "The answer 9 is BIGGER than the 4.5 we started with — surprising until you read it as 'how many half-units fit into 4.5?', and nine halves do. Dividing by any number less than 1 makes the result larger, exactly as in the fractions chapter. A quick estimate ('÷ about a half ≈ double') keeps you from misplacing the point."
+              ],
+              "relatedConceptIds": [
+                "ch12_t01_c02",
+                "ch08_t03_c01",
+                "ch12_t03_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t02_q01",
+                "ch12_t02_q02"
+              ],
+              "pageRefs": [
+                71,
+                72,
+                73
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch12_t02_q01",
+              "prompt": "Compute 45.6 ÷ 10 and 456 ÷ 100.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "4.56 and 4.56.",
+              "solutionSteps": [
+                "÷ 10: shift the point 1 place left → 45.6 → 4.56.",
+                "÷ 100: shift 2 places left → 456 → 4.56."
+              ],
+              "commonMistakes": [
+                "Shifting the point right (that's multiplication).",
+                "Shifting the wrong number of places."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 7.0 ÷ 100.",
+                  "answer": "0.07",
+                  "solutionSteps": [
+                    "Two left shifts: 7.0 → 0.07."
+                  ]
+                },
+                {
+                  "prompt": "Convert 456 cm to metres.",
+                  "answer": "4.56 m",
+                  "solutionSteps": [
+                    "÷ 100 = 4.56."
+                  ]
+                }
+              ],
+              "difficulty": 1,
+              "pageRefs": [
+                71
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_t02_q02",
+              "prompt": "Compute 4.5 ÷ 0.5 by first making the divisor a whole number.",
+              "questionType": "numerical",
+              "options": null,
+              "answer": "9",
+              "solutionSteps": [
+                "Multiply both numbers by 10: 4.5 → 45, 0.5 → 5.",
+                "The quotient is unchanged: 4.5 ÷ 0.5 = 45 ÷ 5.",
+                "45 ÷ 5 = 9."
+              ],
+              "commonMistakes": [
+                "Dividing only the dividend by 10 (scaling must apply to both).",
+                "Expecting an answer smaller than 4.5."
+              ],
+              "variations": [
+                {
+                  "prompt": "Compute 3.6 ÷ 0.4.",
+                  "answer": "9",
+                  "solutionSteps": [
+                    "×10 both: 36 ÷ 4 = 9."
+                  ]
+                },
+                {
+                  "prompt": "Compute 1.2 ÷ 0.3.",
+                  "answer": "4",
+                  "solutionSteps": [
+                    "×10 both: 12 ÷ 3 = 4."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                72,
+                73
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "ch12_t03",
+          "title": "Look Before You Leap — Estimating Decimals",
+          "summary": "Before computing, estimate. Rounding 4.5 ÷ 0.5 to 'about 4 ÷ half' tells you the answer is roughly 8-10 — so an answer of 0.9 or 90 must be a misplaced point. A quick estimate is the cheapest way to catch decimal-point errors.",
+          "concepts": [
+            {
+              "id": "ch12_t03_c01",
+              "title": "Estimating to place the decimal point correctly",
+              "explanations": {
+                "oneLine": "Estimate the size of a decimal calculation first; the estimate tells you roughly where the decimal point belongs, catching common point-placement errors.",
+                "kidFriendly": "The biggest danger in decimal arithmetic isn't the digits — it's the POINT. 'Look before you leap': estimate first. For 2.5 × 1.4, think '2.5 is about 2-3, times about 1.4, so roughly 3-4'. So an answer of 35 or 0.35 is clearly wrong — only 3.5 fits. For 4.5 ÷ 0.5, estimate 'about 4 or 5 divided by a half is about 8-10' — so 0.9 or 90 are wrong, 9 is right. The digits come from the algorithm; the estimate guards the point. One rough mental estimate catches almost every decimal-point slip before it becomes a wrong answer.",
+                "textbook": "Estimation — rounding the operands to convenient values and computing approximately — provides an order-of-magnitude check that locates the decimal point in a product or quotient. Because point-placement errors change the answer by factors of 10, an estimate accurate to within a factor of 10 reliably detects them. This 'reasonableness check' should accompany every decimal calculation.",
+                "expert": "An order-of-magnitude estimate fixes ⌊log₁₀(result)⌋, which is exactly the information a misplaced decimal point corrupts. Since point errors are multiplicative by 10^k, an estimate good to a factor < 10 disambiguates them. This is the decimal analogue of dimensional analysis and significant-figure discipline in scientific computation."
+              },
+              "reasoning": "Point-placement mistakes throw the answer off by factors of ten — making it ten times too big or small. A rough estimate, even a crude one, pins down the right size, so any answer off by a factor of ten stands out immediately as wrong.",
+              "useCases": [
+                {
+                  "title": "Checking a shop bill",
+                  "description": "2.5 kg at ₹38/kg ≈ '2.5 × 40 ≈ 100', so a bill of ₹9.50 or ₹950 is clearly a point error.",
+                  "domain": "money"
+                },
+                {
+                  "title": "Verifying fuel cost",
+                  "description": "40 litres at ₹105.5 ≈ '40 × 100 = 4000', so ₹422 (point slip) is caught instantly.",
+                  "domain": "travel"
+                },
+                {
+                  "title": "Sanity-checking a calculator",
+                  "description": "If you fat-finger a decimal, the estimate flags the impossible result.",
+                  "domain": "technology"
+                }
+              ],
+              "beyondTheBook": "Professional engineers and scientists estimate BEFORE every real calculation precisely to catch decimal/order-of-magnitude errors — a mis-placed point has caused real disasters (a famous spacecraft was lost to a unit/scale mistake). The humble 'look before you leap' estimate is a habit that prevents costly mistakes for a lifetime.",
+              "mnemonic": "Estimate first — it pins the decimal point. Answers off by a factor of 10 are caught instantly.",
+              "predictQuestion": "Before computing 4.5 ÷ 0.5 exactly, how can a quick estimate tell you the answer should be near 9 and not 0.9 or 90?",
+              "whyChain": [
+                "Estimate by rounding to easy values: 4.5 is about 4-to-5, and dividing by 0.5 means 'how many halves fit', which roughly doubles the number. So the answer should be in the ballpark of 8-to-10.",
+                "That estimate instantly rules out the common point-placement errors. An answer of 0.9 (ten times too small) or 90 (ten times too big) is clearly outside the 8-10 range — only 9 fits. The estimate doesn't give the exact digits; it pins down the SIZE, which is exactly what a misplaced decimal point gets wrong.",
+                "This is why 'look before you leap' matters: point errors throw answers off by factors of ten, and a rough estimate catches them every time. Engineers and scientists estimate before every real calculation for exactly this reason — a misplaced point has caused real-world disasters. It's a cheap habit that prevents expensive mistakes for life."
+              ],
+              "relatedConceptIds": [
+                "ch12_t01_c01",
+                "ch12_t02_c01",
+                "ch01_t06_c01"
+              ],
+              "relatedQuestionIds": [
+                "ch12_t03_q01"
+              ],
+              "pageRefs": [
+                74,
+                75
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "ch12_t03_q01",
+              "prompt": "Estimate 2.5 × 1.4 first, then compute exactly. Use the estimate to confirm your point placement.",
+              "questionType": "shortAnswer",
+              "options": null,
+              "answer": "Estimate: about 2.5 × 1.4 ≈ 3 to 4. Exact: 3.5 — which lies in the estimated range, confirming the point is correctly placed.",
+              "solutionSteps": [
+                "Estimate: round to 2.5 × 1.4 ≈ 2.5 × 1.5 ≈ 3.75, so roughly 3 to 4.",
+                "Exact: 25 × 14 = 350, two decimal places → 3.50.",
+                "3.5 is in the 3-4 range, so the point is correctly placed (not 35 or 0.35)."
+              ],
+              "commonMistakes": [
+                "Skipping the estimate and mis-placing the point.",
+                "Rounding so aggressively the estimate is useless."
+              ],
+              "variations": [
+                {
+                  "prompt": "Estimate then compute 4.2 ÷ 0.7.",
+                  "answer": "Estimate ~6; exact 6 (42÷7).",
+                  "solutionSteps": [
+                    "~4 ÷ 0.7 ≈ 6; 42÷7 = 6."
+                  ]
+                },
+                {
+                  "prompt": "Is 0.5 × 0.5 = 2.5 reasonable?",
+                  "answer": "No — estimate says about a quarter; correct is 0.25.",
+                  "solutionSteps": [
+                    "Half of a half is small, ~0.25."
+                  ]
+                }
+              ],
+              "difficulty": 2,
+              "pageRefs": [
+                74,
+                75
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "glossary": [
+        {
+          "id": "ch12_gl01",
+          "term": "Decimal multiplication",
+          "definition": "Multiply ignoring the points, then place the point so decimal places equal the sum of the factors' places.",
+          "example": "0.3 × 0.4 = 0.12.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl02",
+          "term": "Decimal division",
+          "definition": "Make the divisor whole by scaling both numbers, then divide as usual.",
+          "example": "4.5 ÷ 0.5 = 45 ÷ 5 = 9.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl03",
+          "term": "Decimal places",
+          "definition": "The number of digits to the right of the decimal point.",
+          "example": "0.45 has 2 decimal places.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl04",
+          "term": "Point shift",
+          "definition": "Moving the decimal point when multiplying/dividing by powers of ten.",
+          "example": "× 100 shifts the point 2 places right.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl05",
+          "term": "Estimate",
+          "definition": "A rough value found by rounding, used to check a calculation's size.",
+          "example": "2.5 × 1.4 ≈ 3 to 4.",
+          "hindiTerm": "आकलन",
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl06",
+          "term": "Order of magnitude",
+          "definition": "The rough power-of-ten size of a number.",
+          "example": "3.5 is order of magnitude 'ones'.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl07",
+          "term": "Quotient",
+          "definition": "The result of a division.",
+          "example": "In 45 ÷ 5 = 9, the quotient is 9.",
+          "hindiTerm": "भागफल",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl08",
+          "term": "Power of ten",
+          "definition": "10, 100, 1000, … — used to shift decimal points.",
+          "example": "1000 = 10³.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_gl09",
+          "term": "Scaling (a division)",
+          "definition": "Multiplying dividend and divisor by the same number, which leaves the quotient unchanged.",
+          "example": "4.5/0.5 = 45/5.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_gl10",
+          "term": "Reasonableness check",
+          "definition": "Comparing an answer with an estimate to catch errors.",
+          "example": "3.5 fits the estimate 3-4; 35 doesn't.",
+          "hindiTerm": null,
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        }
+      ],
+      "mnemonics": [
+        {
+          "id": "ch12_mn01",
+          "acronym": "Multiply, then count places",
+          "unpacking": "Multiply decimals as whole numbers; the answer's decimal places = sum of the factors' decimal places.",
+          "context": "Use for multiplying decimals.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_mn02",
+          "acronym": "×10 right, ÷10 left",
+          "unpacking": "Multiplying by a power of ten shifts the point RIGHT; dividing shifts it LEFT — one place per zero.",
+          "context": "Use for ×/÷ by 10, 100, 1000.",
+          "relatedConceptIds": [
+            "ch12_t01_c02",
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_mn03",
+          "acronym": "Estimate guards the point",
+          "unpacking": "A rough estimate before computing pins down the decimal point and catches factor-of-ten errors.",
+          "context": "Use before every decimal calculation.",
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        }
+      ],
+      "misconceptions": [
+        {
+          "id": "ch12_ms01",
+          "kidsThink": "To multiply decimals you must line up the points (like addition).",
+          "actually": "For multiplication you do NOT line up points. Multiply as whole numbers, then place the point by counting total decimal places.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_ms02",
+          "kidsThink": "0.3 × 0.4 is bigger than 0.3.",
+          "actually": "It's 0.12 — SMALLER. Multiplying by a number less than 1 shrinks the value.",
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_ms03",
+          "kidsThink": "Multiplying by 100 adds two zeros to a decimal.",
+          "actually": "It SHIFTS the point two places right: 4.56 × 100 = 456 (not 4.5600).",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_ms04",
+          "kidsThink": "4.5 ÷ 0.5 is smaller than 4.5.",
+          "actually": "It's 9 — BIGGER. Dividing by a number less than 1 increases the result.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_ms05",
+          "kidsThink": "When dividing by a decimal, scale only the dividend.",
+          "actually": "Scale BOTH numbers by the same power of ten (so the quotient is unchanged) until the divisor is whole.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        }
+      ],
+      "realWorldExamples": [
+        {
+          "id": "ch12_re01",
+          "title": "The metric advantage",
+          "body": "Converting 4.56 m to centimetres is just ×100 = 456 cm — a decimal-point shift, no real multiplication. The whole metric system runs on multiplying and dividing by powers of ten, which is why scientists and most of the world prefer it over feet-and-inches (where conversions need awkward ×12).",
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_re02",
+          "title": "Price per kilogram",
+          "body": "₹4.5 for 0.5 kg of a spice means ₹4.5 ÷ 0.5 = ₹9 per kg. Shopkeepers and shoppers do this 'divide by a decimal' constantly to compare unit prices — and the answer being bigger than the price paid is exactly right.",
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_re03",
+          "title": "Estimate to avoid disasters",
+          "body": "Engineers estimate every calculation before trusting it — a misplaced decimal point or unit slip has destroyed real spacecraft. 'Look before you leap': a five-second estimate that pins the decimal point is one of the most valuable habits in all of applied maths.",
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        }
+      ],
+      "ncertQA": [
+        {
+          "id": "ch12_qa01",
+          "question": "Express the place values in 27.53.",
+          "modelAnswer": "27.53 = 2 tens, 7 units (ones), 5 tenths, and 3 hundredths. As a sum: 20 + 7 + 5/10 + 3/100.",
+          "textbookPage": 67,
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa02",
+          "question": "Compute 0.3 × 0.4 and explain the decimal-place rule.",
+          "modelAnswer": "Multiply 3 × 4 = 12. The factors have 1 + 1 = 2 decimal places, so the answer has 2: 0.12. (0.3 = 3/10, 0.4 = 4/10, product 12/100 = 0.12.)",
+          "textbookPage": 68,
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa03",
+          "question": "Compute 4.56 × 10, × 100 and × 1000.",
+          "modelAnswer": "Shift the point right by the number of zeros: 4.56 × 10 = 45.6, × 100 = 456, × 1000 = 4560.",
+          "textbookPage": 70,
+          "relatedConceptIds": [
+            "ch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_qa04",
+          "question": "Express 50 g, 100 g, 25 g and 250 g in kilograms as decimals.",
+          "modelAnswer": "Divide by 1000 (1 kg = 1000 g): 50 g = 0.05 kg, 100 g = 0.1 kg, 25 g = 0.025 kg, 250 g = 0.25 kg.",
+          "textbookPage": 67,
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa05",
+          "question": "Compute 45.6 ÷ 10 and 456 ÷ 100.",
+          "modelAnswer": "Shift the point left: 45.6 ÷ 10 = 4.56, and 456 ÷ 100 = 4.56.",
+          "textbookPage": 71,
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa06",
+          "question": "Compute 4.5 ÷ 0.5.",
+          "modelAnswer": "Multiply both by 10 to clear the divisor's point: 45 ÷ 5 = 9. Dividing by a number less than 1 gives a result larger than the dividend.",
+          "textbookPage": 72,
+          "relatedConceptIds": [
+            "ch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa07",
+          "question": "Why is it useful to estimate 2.5 × 1.4 before computing it exactly?",
+          "modelAnswer": "The estimate (≈ 3 to 4) tells you where the decimal point belongs. Since the exact digits are 350, the point must give 3.5 (in range), not 35 or 0.35. Estimation catches point-placement errors.",
+          "textbookPage": 74,
+          "relatedConceptIds": [
+            "ch12_t03_c01"
+          ]
+        },
+        {
+          "id": "ch12_qa08",
+          "question": "Compute the area of a 2.5 m by 1.4 m mat.",
+          "modelAnswer": "2.5 × 1.4: 25 × 14 = 350, with 2 decimal places → 3.5 m².",
+          "textbookPage": 69,
+          "relatedConceptIds": [
+            "ch12_t01_c01"
+          ]
+        }
+      ],
+      "miniProjects": [
+        {
+          "id": "ch12_mp01",
+          "emoji": "🛒",
+          "title": "Decimal Shopping Check",
+          "needs": [
+            "Some grocery price labels or a bill",
+            "A pen",
+            "Optional: a calculator to verify"
+          ],
+          "steps": [
+            "Pick three priced-by-weight items (e.g. ₹/kg) and a quantity for each in decimals (like 0.5 kg, 2.5 kg).",
+            "For each, ESTIMATE the cost first by rounding (e.g. 2.5 × ₹38 ≈ 2.5 × 40 ≈ ₹100).",
+            "Now compute the exact cost by decimal multiplication (multiply, then place the point).",
+            "Check the exact answer falls near your estimate — if it's off by a factor of ten, you misplaced the point.",
+            "Bonus: work out the price per kg for an item sold in a fractional weight using decimal division."
+          ],
+          "expectedObservation": "Your estimates land close to the exact costs, and any decimal-point slip jumps out because it's ten times too big or small. Estimating first reliably guards the point.",
+          "whyItWorks": "Decimal multiplication is whole-number multiplication plus point placement, and point errors change the size by factors of ten. A rounded estimate pins the order of magnitude, so it catches exactly the kind of error the algorithm is prone to.",
+          "estimatedMinutes": 30,
+          "relatedConceptIds": [
+            "ch12_t01_c01",
+            "ch12_t03_c01"
+          ]
+        }
+      ],
+      "conceptMap": {
+        "nodes": [
+          {
+            "id": "ch12_t01_c01",
+            "label": "Multiply decimals",
+            "kind": "concept",
+            "x": 0.25,
+            "y": 0.18
+          },
+          {
+            "id": "ch12_t01_c02",
+            "label": "×/÷ by powers of ten",
+            "kind": "concept",
+            "x": 0.6,
+            "y": 0.18
+          },
+          {
+            "id": "ch12_t02_c01",
+            "label": "Divide decimals",
+            "kind": "concept",
+            "x": 0.4,
+            "y": 0.48
+          },
+          {
+            "id": "ch12_t03_c01",
+            "label": "Estimate to place the point",
+            "kind": "concept",
+            "x": 0.45,
+            "y": 0.76
+          },
+          {
+            "id": "ch03:ch03_t03_c01",
+            "label": "Ch.3 decimal place value",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.32
+          },
+          {
+            "id": "ch08:ch08_t03_c01",
+            "label": "Ch.8 divide by fraction",
+            "kind": "crossChapter",
+            "x": 0.85,
+            "y": 0.6
+          }
+        ],
+        "edges": [
+          {
+            "id": "ch12_e01",
+            "from": "ch12_t01_c01",
+            "to": "ch12_t01_c02",
+            "label": "special case"
+          },
+          {
+            "id": "ch12_e02",
+            "from": "ch12_t01_c01",
+            "to": "ch12_t02_c01",
+            "label": "inverse"
+          },
+          {
+            "id": "ch12_e03",
+            "from": "ch12_t01_c02",
+            "to": "ch12_t02_c01",
+            "label": "shift left"
+          },
+          {
+            "id": "ch12_e04",
+            "from": "ch12_t02_c01",
+            "to": "ch12_t03_c01",
+            "label": "checked by"
+          },
+          {
+            "id": "ch12_e05",
+            "from": "ch03:ch03_t03_c01",
+            "to": "ch12_t01_c01",
+            "label": "extends"
+          },
+          {
+            "id": "ch12_e06",
+            "from": "ch08:ch08_t03_c01",
+            "to": "ch12_t02_c01",
+            "label": "parallels"
+          }
+        ]
+      }
     }
   ]
 }
