@@ -25,6 +25,14 @@
                           Paired with NSMicrophoneUsageDescription +
                           NSSpeechRecognitionUsageDescription in Info.plist
                           (configured via INFOPLIST_KEY_* build settings).
+  temporary-exception.files.home-relative-path.read-write [ /Documents/ ]
+                          pre-authorises read+write access to ~/Documents
+                          so the kid's iMac never sees the TCC "would like
+                          to access Documents folder" popup on first launch
+                          after a rebuild. Not allowed on Mac App Store
+                          submissions; fine for the single-user sideloaded
+                          build. Remove this entitlement to restore the
+                          prompt.
 -->
 <dict>
 	<key>com.apple.security.app-sandbox</key>
@@ -33,6 +41,10 @@
 	<true/>
 	<key>com.apple.security.files.user-selected.read-only</key>
 	<true/>
+	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
+	<array>
+		<string>/Documents/</string>
+	</array>
 	<key>com.apple.security.device.audio-input</key>
 	<true/>
 </dict>
