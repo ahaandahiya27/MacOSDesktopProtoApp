@@ -10,14 +10,19 @@ final class TextToSpeechManager: ObservableObject {
     private let synthesizer = AVSpeechSynthesizer()
     private var delegate: TTSDelegate?
 
+    /// True after a Sanskrit utterance had to be voiced with a non-Devanagari
+    /// (e.g. English) voice because no Hindi / Devanagari voice is installed.
+    /// Surfaces the otherwise-silent fallback so callers can decide whether to
+    /// warn; reset to `false` whenever a suitable voice is found.
+    @Published private(set) var sanskritVoiceUnavailable = false
+
+    /// Guards the once-per-process diagnostic log for a missing Devanagari voice.
+    private var loggedMissingSanskritVoice = false
+
     init() {
         delegate = TTSDelegate { [weak self] in
             Task { @MainActor [weak self] in
                 self?.isSpeaking = false
-                #if os(iOS) && !targetEnvironment(simulator)
-                // Deactivate audio session when done (real device only)
-                try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-                #endif
             }
         }
         synthesizer.delegate = delegate
@@ -27,50 +32,76 @@ final class TextToSpeechManager: ObservableObject {
     func speak(text: String, language: SupportedLanguage, transliteration: String? = nil) {
         stop()
 
-        // Ensure audio session is configured for playback (not recording)
-        // On Simulator, audio session setup can log warnings but TTS still works
-        #if os(iOS) && !targetEnvironment(simulator)
-        do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.playback, mode: .default, options: .duckOthers)
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        } catch {
-            // Non-fatal but TTS may not work
-        }
-        #endif
-
-        // For Sanskrit output, prefer transliteration with Hindi voice if Devanagari voice unavailable
         let textToSpeak: String
-        let voiceLocale: String
+        let resolvedVoice: AVSpeechSynthesisVoice?
 
         if language == .sanskrit {
-            // Try Hindi voice with transliteration for better pronunciation
+            // Sanskrit has no dedicated voice. Prefer a Hindi / Devanagari voice;
+            // if a Roman transliteration exists, an English-India voice reads it
+            // more naturally. Resolve deliberately and signal an honest fallback
+            // when no Devanagari-capable voice is installed.
             if let translit = transliteration, !translit.isEmpty {
                 textToSpeak = translit
-                voiceLocale = "en-IN" // English-India voice reads transliteration well
+                // Transliteration is Roman text: en-IN reads it well; fall back
+                // through the deliberate chain rather than silently to en-US.
+                resolvedVoice = Self.bestVoice(for: ["en-IN", "en-GB", "en-US"])
+                // Roman text in an English voice is the intended path, not a
+                // degraded one — do not raise the Sanskrit-unavailable signal.
+                sanskritVoiceUnavailable = false
             } else {
                 textToSpeak = text
-                voiceLocale = "hi-IN" // Hindi voice as closest fallback for Devanagari
+                let hindiVoice = Self.bestVoice(for: ["hi-IN"])
+                if let voice = hindiVoice {
+                    resolvedVoice = voice
+                    sanskritVoiceUnavailable = false
+                } else {
+                    // No Hindi / Devanagari voice installed. Devanagari text in an
+                    // English voice is gibberish, so make the gap visible instead
+                    // of pretending it worked.
+                    resolvedVoice = Self.bestVoice(for: ["en-IN", "en-US"])
+                    sanskritVoiceUnavailable = true
+                    if !loggedMissingSanskritVoice {
+                        loggedMissingSanskritVoice = true
+                        CrashReporter.shared.logDataIssue(
+                            "No Hindi/Devanagari (hi-IN) TTS voice installed; Sanskrit Devanagari will be read with a non-Devanagari voice. Install a Hindi voice in System Preferences > Accessibility > Spoken Content."
+                        )
+                    }
+                }
             }
         } else {
             textToSpeak = text
-            voiceLocale = language.ttsLocale
+            // Preferred locale first, then a generic English voice as a last resort.
+            resolvedVoice = Self.bestVoice(for: [language.ttsLocale, "en-US"])
         }
 
         guard !textToSpeak.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
 
         let utterance = AVSpeechUtterance(string: textToSpeak)
-        utterance.voice = AVSpeechSynthesisVoice(language: voiceLocale)
-        // Fallback to any available voice if preferred locale isn't available
-        if utterance.voice == nil {
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        }
+        utterance.voice = resolvedVoice
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.85 // Slightly slower for learning
         utterance.pitchMultiplier = 1.0
-        utterance.preUtteranceDelay = 0.1 // Small delay to let audio session activate
+        utterance.preUtteranceDelay = 0.1 // Small delay to let audio settle
 
         isSpeaking = true
         synthesizer.speak(utterance)
+    }
+
+    /// Returns the first available voice for the given ordered list of BCP-47
+    /// locale identifiers, or `nil` if none resolve. Matching tries an exact
+    /// locale first, then any installed voice whose language shares the same
+    /// two-letter prefix (e.g. any `hi-*` for `hi-IN`).
+    private static func bestVoice(for preferredLocales: [String]) -> AVSpeechSynthesisVoice? {
+        let installed = AVSpeechSynthesisVoice.speechVoices()
+        for locale in preferredLocales {
+            if let exact = AVSpeechSynthesisVoice(language: locale) {
+                return exact
+            }
+            let prefix = String(locale.prefix(2))
+            if let match = installed.first(where: { $0.language.hasPrefix(prefix) }) {
+                return match
+            }
+        }
+        return nil
     }
 
     func stop() {
