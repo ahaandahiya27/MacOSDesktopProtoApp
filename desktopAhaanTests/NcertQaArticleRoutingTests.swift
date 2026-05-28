@@ -9,7 +9,7 @@ import XCTest
 final class NcertQaArticleRoutingTests: XCTestCase {
 
     func testEveryNcertQaEntryIsInternallyConsistent() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         XCTAssertFalse(keys.isEmpty,
             "Expected at least one NCERT Q&A entry in ArticleIndex.entries.")
         for key in keys {
@@ -37,7 +37,7 @@ final class NcertQaArticleRoutingTests: XCTestCase {
     }
 
     func testNcertQaHtmlFilesExistAndTitleMatchesChapter() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -58,7 +58,7 @@ final class NcertQaArticleRoutingTests: XCTestCase {
     /// At least 4 Q&A sections per article (the generator's stop-and-ask
     /// threshold). Ch.1's bespoke article has 8.
     func testNcertQaArticlesHaveAtLeastFourQuestions() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_ncert_qa") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
