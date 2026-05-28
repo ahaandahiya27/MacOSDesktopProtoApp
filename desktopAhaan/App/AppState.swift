@@ -276,6 +276,7 @@ enum AppTab: String, Hashable, CaseIterable, Identifiable {
     case favorites
     case practice
     case scan
+    case chapters
     case settings
 
     var id: String { rawValue }
@@ -287,6 +288,7 @@ enum AppTab: String, Hashable, CaseIterable, Identifiable {
         case .favorites: return "Favorites"
         case .practice:  return "Practice"
         case .scan:      return "Scan"
+        case .chapters:  return "Chapters"
         case .settings:  return "Settings"
         }
     }
@@ -298,6 +300,7 @@ enum AppTab: String, Hashable, CaseIterable, Identifiable {
         case .favorites: return "heart.fill"
         case .practice:  return "graduationcap.fill"
         case .scan:      return "doc.text.viewfinder"
+        case .chapters:  return "books.vertical.fill"
         case .settings:  return "gearshape.fill"
         }
     }
