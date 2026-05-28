@@ -20224,6 +20224,617 @@
         151,
         152
       ]
+    },
+    {
+      "id": "sch15",
+      "number": 16,
+      "title": "धातुरूपाणि — Dhāturūpāṇi (Verb Conjugation Tables)",
+      "summary": "NCERT Class 7 Sanskrit (Deepakam) Chapter 15 — परिशिष्टम् २ (Appendix 2), the verb-conjugation reference. The appendix tables eight common Sanskrit roots (पठ्, अस्, कृ, श्रु, दा, ज्ञा, क्री, भाष्) across the लट् (present) tense in both parasmaipada and ātmanepada. This chapter introduces what a धातु (verb root) is, the लकार system of ten tense-moods, the two pada-classes (परस्मैपदम् vs आत्मनेपदम्), Sanskrit's three पुरुषs (note the reversed numbering — प्रथम = English 'third person'), and walks through paradigms of पठ् (read), अस् (be), कृ (do), and भाष् (speak).",
+      "topics": [
+        {
+          "id": "sch15_t01",
+          "title": "धातु, लकार, पद, पुरुष — The Verb System",
+          "summary": "Roots, the 10 लकाराs, parasmaipada vs ātmanepada, and Sanskrit's three persons.",
+          "concepts": [
+            {
+              "id": "sch15_t01_c01",
+              "title": "धातुः — A Verb Root",
+              "explanations": {
+                "oneLine": "धातुः (dhātuḥ) — 'a verb root', the building-block of every Sanskrit verb form.",
+                "kidFriendly": "धातु means a verb-root — the irreducible 'core' from which all the different forms of a verb are built. The appendix lists roots like पठ् (read), अस् (be), कृ (do), श्रु (hear), दा (give), ज्ञा (know), क्री (buy), भाष् (speak). Every Sanskrit verb you ever see traces back to one of these roots.",
+                "textbook": "धातुः — 'verb root'. The classical Sanskrit grammar tradition (Pāṇini's धातुपाठ) enumerates around 2,000 roots organised into 10 गणाः (classes). The chapter samples eight common roots and shows their forms.",
+                "expert": "Roots are usually monosyllabic (पठ्, गम्, कृ, दा) and end in a consonant or vowel. The grammarian's notation marks them with a virāma — पठ् (not पठ) — showing the bare root. From any धातु you derive: tenses (वर्तमान/भूत/भविष्यत्), moods (आज्ञा/विधि), participles (कृत), gerunds (कृत्वा), infinitives (-तुम्), agent nouns (-अक), etc. The root is the seed; the language is the tree."
+              },
+              "reasoning": "Knowing the धातु of a Sanskrit word is the master-key — once you know पठ् means 'read', forms like पठति (reads), पठितः (read, p.p.), पठितुम् (to read), पठनम् (reading) all open up.",
+              "useCases": [
+                {
+                  "title": "Spot the root",
+                  "description": "Behind every Sanskrit verb form lurks a single short धातु.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Hundreds from one",
+                  "description": "From पठ् come पठति, पठतः, पठन्ति, अपठत्, पठेत्, पठितुम्, पठितः, पठित्वा, पठ्यते, पाठकः, …",
+                  "domain": "language"
+                },
+                {
+                  "title": "Sample list",
+                  "description": "पठ्, अस्, कृ, श्रु, दा, ज्ञा, क्री, भाष् — the eight roots this appendix conjugates.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Pāṇini's धातुपाठ (the 'roots-recitation') lists about 2,000 Sanskrit verb roots — one of the world's first systematic linguistic catalogues, ~2,500 years old.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t01_c02",
+              "title": "लकाराः — Sanskrit's Ten Tense-Moods",
+              "explanations": {
+                "oneLine": "लकाराः — the ten 'L-tenses' of Sanskrit (लट्, लङ्, लोट्, …), one per tense/mood.",
+                "kidFriendly": "Sanskrit groups its tenses and moods into ten लकाराः — each named with a letter starting with ल-. The most-used: **लट्** (present, 'reads'), **लङ्** (imperfect past, 'read'), **लोट्** (imperative, 'read!'), **लृट्** (future, 'will read'), **विधिलिङ्** (optative, 'should read'). The appendix focuses on लट् (present).",
+                "textbook": "लकाराः — tense-mood labels in Sanskrit grammar: लट् (present), लङ् (imperfect), लिट् (perfect), लुट् (periphrastic future), लृट् (simple future), लेट् (Vedic subjunctive), लोट् (imperative), विधिलिङ् (optative), आशीर्लिङ् (benedictive), लुङ् (aorist), लृङ् (conditional). Ten in all.",
+                "expert": "Each लकार gets its own set of personal endings. The chapter focuses on लट् (वर्तमान — present): three persons × three numbers = 9 forms per root. The label 'ल' tags each tense-mood; the consonant after 'ल' (ट्/ङ्/ट्ओ/...) sets it apart."
+              },
+              "reasoning": "The लकार system gives Sanskrit one of the world's most regular tense-naming schemes: ten labels cover every standard tense/mood combination.",
+              "useCases": [
+                {
+                  "title": "Five everyday ones",
+                  "description": "लट् (now), लङ् (then), लृट् (will), लोट् (do!), विधिलिङ् (should) — these cover most reading.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Name the slot",
+                  "description": "If you see लट्, the verb is PRESENT tense. The label IS the answer.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Pāṇinian system",
+                  "description": "Ten labels, each with a fixed meaning — Sanskrit grammar's tense-grid.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "The 'ल-' naming convention is uniquely Sanskrit and reflects Pāṇini's love of compression: each tense is named by a single syllable. Modern grammarians elaborated, but the 'ल-' tags persist.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t01_c03",
+              "title": "परस्मैपदम् vs आत्मनेपदम् — Two Voice Classes",
+              "explanations": {
+                "oneLine": "परस्मैपदम् ('for-another') and आत्मनेपदम् ('for-oneself') — Sanskrit's two padas.",
+                "kidFriendly": "Sanskrit verb roots come in two families: **परस्मैपदम्** ('words for another') and **आत्मनेपदम्** ('words for oneself'). They use DIFFERENT endings. पठ् (read) is परस्मैपद; भाष् (speak) is आत्मनेपद. Some roots use both (उभयपद). The appendix shows both sets.",
+                "textbook": "परस्मैपदम् — 'for-another' endings (active sense). Sample लट् (present) for पठ्: पठति/पठतः/पठन्ति (3rd), पठसि/पठथः/पठथ (2nd), पठामि/पठावः/पठामः (1st). आत्मनेपदम् — 'for-oneself' endings. Sample लट् for भाष्: भाषते/भाषेते/भाषन्ते etc.",
+                "expert": "Originally परस्मैपद expressed 'action for another' (transitive sense) and आत्मनेपद 'action for oneself' (reflexive/middle). By Classical Sanskrit the distinction is largely lexical — each root just belongs to one or both classes, and you memorise which. Bhāṣ ('speak') is naturally a self-oriented action; पठ् (read) is naturally other-oriented — the pada-distinction sometimes still feels meaningful."
+              },
+              "reasoning": "The chapter teaches both pada-classes side by side so students recognise BOTH endings — पठति 'reads' AND भाषते 'speaks' — without being thrown by the second set.",
+              "useCases": [
+                {
+                  "title": "Two-voice system",
+                  "description": "Sanskrit verbs come in TWO ending-families: parasmaipada and ātmanepada.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Memorise the pada",
+                  "description": "Each root belongs to one (or both); the lexicon tells you which.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Spot the ending",
+                  "description": "-ति → parasmaipada; -ते → ātmanepada. The third-singular present is the giveaway.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Greek had a similar 'middle voice'; English collapsed all its verbs into one paradigm. Sanskrit's two-pada system preserves a deep Indo-European feature: who benefits from the action — another, or yourself.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_t01_c04",
+              "title": "त्रयः पुरुषाः — Three 'Persons' in Sanskrit (and Beware — They Are Reversed)",
+              "explanations": {
+                "oneLine": "Sanskrit's three पुरुष: प्रथमपुरुष (he/she — 'third person'), मध्यमपुरुष (you — 'second'), उत्तमपुरुष (I — 'first').",
+                "kidFriendly": "Sanskrit numbers its 'persons' the OPPOSITE WAY from English! What English calls 'first person' (I), Sanskrit calls उत्तमपुरुष ('best/last person'). What English calls 'third person' (he/she), Sanskrit calls प्रथमपुरुष ('first person'). And the 'second' (you) is मध्यमपुरुष ('middle person'). The order: he/she → you → I, not I → you → he/she.",
+                "textbook": "प्रथमपुरुष = 'first person in the table' = he/she/it. मध्यमपुरुष = 'middle person' = you. उत्तमपुरुष = 'last person in the table' = I. Sanskrit verb tables are ordered प्रथम (he) at the top and उत्तम (I) at the bottom — the inverse of English grammar books.",
+                "expert": "The Sanskrit ordering reflects how a sentence usually flows: someone speaks ABOUT a third party first, then addresses the listener, then themselves. The names refer to POSITION in the verb-table, not to importance. Pāṇini's ordering is consistent and used in every Sanskrit grammar; the 'first person = I' habit comes from Western grammar tradition."
+              },
+              "reasoning": "Knowing the Sanskrit ordering prevents a common confusion: when an Indian Sanskrit teacher says 'prathama-puruṣa', they mean HE/SHE (third person in English terms) — not I.",
+              "useCases": [
+                {
+                  "title": "Don't get confused",
+                  "description": "Sanskrit's प्रथमपुरुष = English 'third person' (he/she).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Three forms each",
+                  "description": "Each पुरुष has three numbers: singular, dual, plural — 3×3 = 9 forms per tense.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Table-order",
+                  "description": "Sanskrit verb tables read top→bottom: he, you, I (the reverse of English textbooks).",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "The numbering reflects an old logical idea: in any conversation, the topic (someone/something) comes first, the addressee second, and the speaker last — Pāṇini just codified this in his table layout.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch15_t01_q01",
+              "prompt": "'धातुः' in Sanskrit grammar means —",
+              "questionType": "mcq",
+              "options": [
+                "a metal",
+                "a verb root",
+                "a noun ending",
+                "a chapter"
+              ],
+              "answer": "a verb root",
+              "solutionSteps": [
+                "धातु is the 'root' of a verb — its irreducible core.",
+                "Pāṇini lists about 2,000 roots in his धातुपाठ."
+              ],
+              "commonMistakes": [
+                "Don't confuse with the chemistry usage; here धातु is a VERB ROOT."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_t01_q02",
+              "prompt": "Which लकार stands for the PRESENT tense?",
+              "questionType": "mcq",
+              "options": [
+                "लङ्",
+                "लट्",
+                "लोट्",
+                "विधिलिङ्"
+              ],
+              "answer": "लट्",
+              "solutionSteps": [
+                "लट्-लकार = वर्तमानकालः (present tense).",
+                "लङ् is past, लोट् is imperative, विधिलिङ् is optative."
+              ],
+              "commonMistakes": [
+                "लट् is the PRESENT tense; the others are different tenses/moods."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t01_q03",
+              "prompt": "Which set of endings does the root 'पठ्' (read) take?",
+              "questionType": "mcq",
+              "options": [
+                "परस्मैपदम्",
+                "आत्मनेपदम्",
+                "both equally",
+                "neither"
+              ],
+              "answer": "परस्मैपदम्",
+              "solutionSteps": [
+                "पठ् → पठति (-ति ending) = परस्मैपद (active, 'for another').",
+                "भाष् → भाषते (-ते ending) would be आत्मनेपद."
+              ],
+              "commonMistakes": [
+                "पठ् is parasmaipada (ending -ति in 3rd-sg present), not ātmanepada."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t01_q04",
+              "prompt": "In Sanskrit grammar, 'प्रथमपुरुष' (first person) refers to —",
+              "questionType": "mcq",
+              "options": [
+                "'I' (the speaker)",
+                "'you' (the listener)",
+                "'he/she/it' (third party)",
+                "an emperor"
+              ],
+              "answer": "'he/she/it' (third party)",
+              "solutionSteps": [
+                "Sanskrit orders persons OPPOSITELY from English: प्रथम = he/she.",
+                "'I' is उत्तमपुरुष (last in the Sanskrit table)."
+              ],
+              "commonMistakes": [
+                "Sanskrit's 'first person' (प्रथम) is the English THIRD person (he/she) — a famous reversal."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            }
+          ]
+        },
+        {
+          "id": "sch15_t02",
+          "title": "Four Common Paradigms (पठ्, अस्, कृ, भाष्)",
+          "summary": "Present-tense conjugation of the four key roots students meet most often.",
+          "concepts": [
+            {
+              "id": "sch15_t02_c01",
+              "title": "पठ् → पठति, पठतः, पठन्ति — Present of a Common Root",
+              "explanations": {
+                "oneLine": "पठ् in लट् (present), parasmaipada: पठति / पठतः / पठन्ति — 'he reads / they two read / they read'.",
+                "kidFriendly": "The verb-root पठ् ('to read') in present tense: 3rd-person singular पठति ('he/she reads'), dual पठतः ('the two read'), plural पठन्ति ('they read'). 2nd-person: पठसि / पठथः / पठथ ('you / you two / you all read'). 1st-person: पठामि / पठावः / पठामः ('I / we two / we read').",
+                "textbook": "पठ् धातुः, लट्-लकार (present), परस्मैपद. The endings, when added to the stem पठ्-: -ति/-तः/-न्ति, -सि/-थः/-थ, -मि/-वः/-मः. Apply these to almost any 1st-class (भ्वादि) parasmaipada root.",
+                "expert": "These endings (-ति/-तः/-न्ति …) are some of the most common in classical Sanskrit. They mark not only tense but person + number in one suffix — a single ending tells you BOTH who and how many. Compare गच्छति ('he goes'), नयति ('he leads'), वदति ('he speaks') — all the same पठति pattern."
+              },
+              "reasoning": "Learn पठति's full nine forms and you can recognise the present tense of HUNDREDS of common Sanskrit verbs.",
+              "useCases": [
+                {
+                  "title": "Nine forms, one tense",
+                  "description": "Three persons × three numbers = 9 forms per tense.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Endings to memorise",
+                  "description": "-ति/-तः/-न्ति (he/they-2/they); -सि/-थः/-थ (you); -मि/-वः/-मः (I).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Sentence sample",
+                  "description": "छात्रः पुस्तकं पठति = 'the student reads a book'.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "1st-class (भ्वादिगण) roots — the largest class — all decline like पठ्. Memorising पठति-table is one of the highest-leverage things a Sanskrit student can do.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t02_c02",
+              "title": "अस् → अस्ति, स्तः, सन्ति — The Verb 'To Be'",
+              "explanations": {
+                "oneLine": "अस् in present: अस्ति / स्तः / सन्ति — 'he is / they two are / they are'.",
+                "kidFriendly": "अस् ('to be') is the most common verb in any language — and Sanskrit is no exception. Present-tense forms: 3rd-person अस्ति / स्तः / सन्ति; 2nd-person असि / स्थः / स्थ; 1st-person अस्मि / स्वः / स्मः. Note: this is an athematic (irregular) root, so the forms involve stem-changes (अस् → अस्ति but स्तः, सन्ति).",
+                "textbook": "अस् is a 2nd-class (अदादि) root — athematic, meaning no thematic vowel between stem and ending. Present-tense full table includes irregular alternations (अस्ति vs स्तः). This is irregular enough that it must be memorised separately.",
+                "expert": "अस् ('to be') is one of those critical irregular verbs every language seems to have — English 'is/am/are/be/was', French 'être/suis/est', Sanskrit अस्ति/अस्मि/सन्ति. Linguists trace all of these to the Proto-Indo-European root *h₁es- ('to be'). Same root, deep history."
+              },
+              "reasoning": "Of all Sanskrit verbs, अस्ति is the one to know FIRST — it appears in countless sentences and quotations.",
+              "useCases": [
+                {
+                  "title": "Famous opening",
+                  "description": "'अहम् अस्मि' = 'I am' — the simplest Sanskrit sentence.",
+                  "domain": "speech"
+                },
+                {
+                  "title": "All irregular",
+                  "description": "अस्ति (he is), अस्मि (I am), सन्ति (they are), स्थः (you two are) — memorise the whole set.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Universal root",
+                  "description": "Same root as English 'is', Latin 'est', French 'est' — all from PIE *h₁es-.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "Every famous Sanskrit dictum uses अस्ति: सत्यम् अस्ति ('truth is'), विद्या एव सर्वस्वम् अस्ति ('knowledge alone is everything'). Recognising अस्ति/सन्ति is the threshold of reading.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t02_c03",
+              "title": "कृ → करोति, कुरुतः, कुर्वन्ति — 'To Do'",
+              "explanations": {
+                "oneLine": "कृ in present: करोति / कुरुतः / कुर्वन्ति — 'he does / they two do / they do'.",
+                "kidFriendly": "कृ ('to do/make') is another supremely common root. Present-tense (irregular!): 3rd-person करोति / कुरुतः / कुर्वन्ति; 1st-person करोमि / कुर्वः / कुर्मः. The stem-vowel shifts between करो-/कुर्व-/कुरु- in different forms — typical of 8th-class (तनादि) roots.",
+                "textbook": "कृ धातुः, लट्-लकार, परस्मैपद. 8th-class (तनादि-gana). Present stem alternates: करो- (strong) before -ति/-मि, कुरु-/कुर्व- (weak) before consonant/plural endings.",
+                "expert": "कृ's stem alternation looks complex but follows a regular pattern: 'strong' stem before singular endings, 'weak' before others. The same root gives countless derivatives: कार्यम् ('what is to be done'), कर्ता ('doer'), कर्म ('action'), कारणम् ('cause'), संस्कार ('refinement'), विकार ('change'), संस्कृति ('culture')."
+              },
+              "reasoning": "Of all roots, कृ has perhaps the richest derivative-family in Sanskrit — knowing it is opening a major treasure-chest.",
+              "useCases": [
+                {
+                  "title": "Stem alternation",
+                  "description": "Strong (करो-) before -ति/-मि; weak (कुरु-/कुर्व-) elsewhere.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Massive family",
+                  "description": "कर्म, कर्ता, कार्य, कारण, संस्कार — all from कृ.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Everyday sentence",
+                  "description": "'अहं कार्यं करोमि' = 'I do the work'.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Sanskrit's word 'संस्कृत' itself comes from कृ — सम् ('together, well') + कृत ('done') = 'well-made/refined'. The language names itself with its most important verb.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_t02_c04",
+              "title": "भाष् → भाषते, भाषेते, भाषन्ते — An ātmanepada Sample",
+              "explanations": {
+                "oneLine": "भाष् in present (आत्मनेपद): भाषते / भाषेते / भाषन्ते — 'he speaks / the two speak / they speak'.",
+                "kidFriendly": "भाष् ('to speak') is naturally an ātmanepada root. 3rd-person present: भाषते / भाषेते / भाषन्ते. Notice the endings: -ते / -एते / -अन्ते — quite different from parasmaipada's -ति / -तः / -न्ति. Other ātmanepada examples include सेव् (serve), लभ् (obtain), वन्द् (worship).",
+                "textbook": "भाष् धातुः, लट्-लकार, आत्मनेपद. The ātmanepada present-tense endings: -ते/-एते/-अन्ते (3rd), -से/-एथे/-ध्वे (2nd), -ए/-वहे/-महे (1st). Distinct enough from parasmaipada to be unmistakable.",
+                "expert": "The -ते (vs -ति) third-person-singular present is the easiest tell: see -ते and you've found an ātmanepada verb. Some roots actually use BOTH sets (उभयपद); the lexicon notes them as such."
+              },
+              "reasoning": "Recognising भाषते as 'he speaks' (and not getting confused that it doesn't end in -ति) is the chapter's practical pay-off — readers stop being thrown by the second voice.",
+              "useCases": [
+                {
+                  "title": "Spot the -ते",
+                  "description": "-ते ending in 3rd-singular = ātmanepada. Don't confuse with parasmaipada's -ति.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Common ātmanepada",
+                  "description": "भाष् (speak), सेव् (serve), लभ् (obtain), वन्द् (worship) — all -ते.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Bhagavad-Gītā example",
+                  "description": "'श्री-भगवान् उवाच' uses उच्/वच् with active sense; भाषते would be 'he speaks' in present.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "When you encounter the famous Gītā verse 'श्री-भगवानुवाच' ('Lord Krishna SPOKE'), उवाच is a perfect tense of वच् — but the same idea in present would be भाषते or वदति, both 'speaks'.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch15_t02_q01",
+              "prompt": "The 3rd-person singular present of the root 'पठ्' (to read) is —",
+              "questionType": "mcq",
+              "options": [
+                "पठतः",
+                "पठन्ति",
+                "पठति",
+                "पठामि"
+              ],
+              "answer": "पठति",
+              "solutionSteps": [
+                "पठ् + ति (3rd-singular parasmaipada present) = पठति.",
+                "Means 'he/she reads'."
+              ],
+              "commonMistakes": [
+                "पठति is SINGULAR; पठतः is dual, पठन्ति is plural, पठामि is 'I read'."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_t02_q02",
+              "prompt": "The 1st-person singular present of the root 'अस्' (to be) is —",
+              "questionType": "mcq",
+              "options": [
+                "अस्ति",
+                "अस्मि",
+                "सन्ति",
+                "आसीत्"
+              ],
+              "answer": "अस्मि",
+              "solutionSteps": [
+                "अहम् अस्मि = 'I AM'.",
+                "अस्ति = he is; सन्ति = they are; आसीत् = he was (past)."
+              ],
+              "commonMistakes": [
+                "अस्मि is FIRST PERSON ('I am'); अस्ति is third person ('he is')."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch15_t02_q03",
+              "prompt": "The 3rd-person singular present of the root 'कृ' (to do) is —",
+              "questionType": "mcq",
+              "options": [
+                "करोति",
+                "करोमि",
+                "कुर्वन्ति",
+                "कृतवान्"
+              ],
+              "answer": "करोति",
+              "solutionSteps": [
+                "कृ + 3rd-singular present (parasmaipada) = करोति ('he does').",
+                "करोमि = 'I do'; कुर्वन्ति = 'they do'; कृतवान् = past p.p."
+              ],
+              "commonMistakes": [
+                "करोति is the standard 3rd-singular form; the others are 1st-person, plural, or past."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_t02_q04",
+              "prompt": "Which ending tells you a verb is ĀTMANEPADA in the 3rd-person singular present?",
+              "questionType": "mcq",
+              "options": [
+                "-ति",
+                "-ते",
+                "-ात्",
+                "-त्वा"
+              ],
+              "answer": "-ते",
+              "solutionSteps": [
+                "3rd-singular present: parasmaipada -ति, ātmanepada -ते.",
+                "Spotting -ते means 'middle voice' — a different family of endings."
+              ],
+              "commonMistakes": [
+                "The DISTINGUISHING ending is -ते (vs parasmaipada -ति)."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                153,
+                154,
+                155,
+                156,
+                157,
+                158,
+                159
+              ],
+              "needsHumanReview": true
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159
+      ]
     }
   ]
 }
