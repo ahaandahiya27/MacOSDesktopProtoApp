@@ -19630,6 +19630,600 @@
         145,
         146
       ]
+    },
+    {
+      "id": "sch14",
+      "number": 15,
+      "title": "शब्दरूपाणि — Śabda-Rūpāṇi (Noun Declension Tables)",
+      "summary": "NCERT Class 7 Sanskrit (Deepakam) Chapter 14 — परिशिष्टम् १ (Appendix 1), the noun-declension reference. The appendix tables three masculine declension classes — अकारान्त (देव, राम), इकारान्त (कवि, हरि), उकारान्त (गुरु, शम्भु) — each across the seven cases and three numbers, plus the vocative. This chapter walks through what the seven cases are (प्रथमा subject, द्वितीया object, तृतीया 'by', चतुर्थी 'to/for', पञ्चमी 'from', षष्ठी 'of', सप्तमी 'in/on'), each declension paradigm, and how the same case-name carries the same role across every noun.",
+      "topics": [
+        {
+          "id": "sch14_t01",
+          "title": "The Seven Cases + Three Declension Paradigms",
+          "summary": "प्रथमा…सप्तमी, plus the three masculine paradigms देव / कवि / गुरु.",
+          "concepts": [
+            {
+              "id": "sch14_t01_c01",
+              "title": "सप्तविभक्तयः — The Seven Cases of Sanskrit",
+              "explanations": {
+                "oneLine": "Sanskrit has seven cases (विभक्ति) plus vocative — eight roles a noun can play.",
+                "kidFriendly": "Sanskrit packs everything about a noun's role into its ENDING. There are seven cases (विभक्तयः) plus the vocative (सम्बोधनम्): प्रथमा (nominative, subject), द्वितीया (accusative, object), तृतीया (instrumental, 'by/with'), चतुर्थी (dative, 'to/for'), पञ्चमी (ablative, 'from'), षष्ठी (genitive, 'of'), सप्तमी (locative, 'in/on'), सम्बोधनम् (vocative, calling).",
+                "textbook": "The eight noun-forms in classical Sanskrit grammar: प्रथमा (Nom.), द्वितीया (Acc.), तृतीया (Inst.), चतुर्थी (Dat.), पञ्चमी (Abl.), षष्ठी (Gen.), सप्तमी (Loc.), सम्बोधनम् (Voc.). Each comes in three numbers: एकवचनम् (sing.), द्विवचनम् (dual), बहुवचनम् (plural).",
+                "expert": "Sanskrit's case system is one of the world's most regular: each role gets its own ending, and the same case-name (e.g. चतुर्थी) names the case across ALL declensions. Learn the seven names once, and you can name forms across every noun class."
+              },
+              "reasoning": "The chapter pins the ordering down so students can read any declension table — knowing प्रथमा is row 1, सप्तमी is row 7, etc.",
+              "useCases": [
+                {
+                  "title": "Eight rows",
+                  "description": "Every noun table has 8 rows: 7 cases + vocative.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Three columns",
+                  "description": "Every row has 3 numbers: एकवचनम् / द्विवचनम् / बहुवचनम्.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Universal names",
+                  "description": "प्रथमा / द्वितीया / … always mean the same case, no matter which noun.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Pāṇini's case ordering (कारक → विभक्ति) is the standard model still used in every Sanskrit grammar — and modern linguistics' case-system terminology echoes it.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch14_t01_c02",
+              "title": "अकारान्त पुंलिङ्ग — Masculine Nouns Ending in अ (देव)",
+              "explanations": {
+                "oneLine": "देव declines: देवः / देवौ / देवाः ... देवात् ... देवस्य ... देवे ... हे देव!",
+                "kidFriendly": "अकारान्त ('-a-ending') masculine nouns like देव ('god/lord') follow this pattern. Across the seven cases: प्रथमा देवः/देवौ/देवाः; द्वितीया देवम्/देवौ/देवान्; तृतीया देवेन/देवाभ्याम्/देवैः; चतुर्थी देवाय/देवाभ्याम्/देवेभ्यः; पञ्चमी देवात्/देवाभ्याम्/देवेभ्यः; षष्ठी देवस्य/देवयोः/देवानाम्; सप्तमी देवे/देवयोः/देवेषु; सम्बोधनम् हे देव!/हे देवौ!/हे देवाः!.",
+                "textbook": "अकारान्त पुंलिङ्ग 'देव' (god) — the masculine -a-stem paradigm. Same pattern applies to: राम, बाल, भीम, शिव, कृष्ण, हस्त, पाद, शिक्षक, वृक्ष, चषक, etc. Hundreds of common Sanskrit masculine nouns share this exact set of endings.",
+                "expert": "अकारान्त (ending in अ) is the most productive masculine declension class in Sanskrit. Learning ONE such noun (देव) unlocks the case-forms of hundreds. The endings to memorise: -ः/-ौ/-आः (nom.), -म्/-ौ/-आन् (acc.), -एन/-आभ्याम्/-ऐः (inst.), and so on."
+              },
+              "reasoning": "Memorise the देव pattern and you have a key that opens hundreds of doors in Sanskrit reading.",
+              "useCases": [
+                {
+                  "title": "Apply broadly",
+                  "description": "देव, राम, बाल, शिव, कृष्ण all decline identically.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Pattern → mass",
+                  "description": "Learn one paradigm; recognise it in any Sanskrit text.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Eight endings to know",
+                  "description": "-ः -म् -एन -आय -आत् -स्य -ए -! for singular; learn dual/plural similarly.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "Around half of all common masculine Sanskrit nouns are अकारान्त — this is the highest-leverage declension to memorise first.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t01_c03",
+              "title": "इकारान्त पुंलिङ्ग — Masculine Nouns Ending in इ (कवि)",
+              "explanations": {
+                "oneLine": "कवि declines: कविः / कवी / कवयः ... कवेः ... कवीनाम् ... हे कवे!",
+                "kidFriendly": "इकारान्त ('-i-ending') masculine nouns like कवि ('poet') follow a distinct pattern. Sample: प्रथमा कविः/कवी/कवयः; द्वितीया कविम्/कवी/कवीन्; तृतीया कविना/कविभ्याम्/कविभिः; चतुर्थी कवये/कविभ्याम्/कविभ्यः; पञ्चमी/षष्ठी कवेः; सप्तमी कवौ; सम्बोधनम् हे कवे!.",
+                "textbook": "इकारान्त पुंलिङ्ग 'कवि' (poet) — the masculine -i-stem paradigm. Same set applies to: हरि (Vishnu), मुनि (sage), रवि (sun), कपि (monkey), विधि (rule), अग्नि (fire), गिरि (mountain), अरि (enemy), ऋषि (sage), etc.",
+                "expert": "इकारान्त nouns have a few extras worth noting: their dative/ablative/genitive sing. is -एः (कवेः, हरेः, मुनेः) — the same form three times. Their nominative plural is -अयः (कवयः, हरयः, मुनयः) — distinct from अकारान्त's -आः."
+              },
+              "reasoning": "Learn कवि and you can read इकारान्त nouns: हरि (Vishnu), मुनि (sage), ऋषि (seer), अग्नि (fire) — a whole shelf of common words.",
+              "useCases": [
+                {
+                  "title": "Apply broadly",
+                  "description": "कवि, हरि, मुनि, रवि, अग्नि, ऋषि all decline identically.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Spot the -एः",
+                  "description": "Dative, ablative, genitive singular all = -एः (कवेः) for इकारान्त.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Nominative plural",
+                  "description": "कवयः / हरयः / मुनयः end in -अयः, not -आः.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Many famous Sanskrit names are इकारान्त: हरिः (Vishnu/Hari), अग्निः (Agni), मुनिः (sage) — recognising the -ि stem instantly tells you the case-form family.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch14_t01_c04",
+              "title": "उकारान्त पुंलिङ्ग — Masculine Nouns Ending in उ (गुरु)",
+              "explanations": {
+                "oneLine": "गुरु declines: गुरुः / गुरू / गुरवः ... गुरोः ... गुरूणाम् ... हे गुरो!",
+                "kidFriendly": "उकारान्त ('-u-ending') masculine nouns like गुरु ('teacher/elder') decline this way: प्रथमा गुरुः/गुरू/गुरवः; द्वितीया गुरुम्/गुरू/गुरून्; तृतीया गुरुणा/गुरुभ्याम्/गुरुभिः; चतुर्थी गुरवे/गुरुभ्याम्/गुरुभ्यः; पञ्चमी/षष्ठी गुरोः; सप्तमी गुरौ; सम्बोधनम् हे गुरो!.",
+                "textbook": "उकारान्त पुंलिङ्ग 'गुरु' (teacher) — the masculine -u-stem paradigm. Same set applies to: शम्भु (Shiva), विष्णु, साधु (good man), प्रभु (lord), इन्दु (moon), तरु (tree).",
+                "expert": "उकारान्त mirrors इकारान्त: dative/ablative/genitive sing. all = -ओः (गुरोः, साधोः); nominative plural -अवः (गुरवः, साधवः). The vocative singular drops the visarga: हे गुरो!, हे साधो!."
+              },
+              "reasoning": "गुरु is one of Sanskrit's most-used words; its full declension unlocks how to use it in any role — गुरोः उपदेशम् ('teacher's instruction'), गुरवे नमः ('salutation to the teacher'), etc.",
+              "useCases": [
+                {
+                  "title": "Apply broadly",
+                  "description": "गुरु, शम्भु, विष्णु, साधु, प्रभु all decline identically.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Drop the visarga",
+                  "description": "Vocative singular: हे गुरो! (no -ः ending).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Same logic, different vowel",
+                  "description": "उकारान्त parallels इकारान्त — change the stem-vowel, the endings adjust predictably.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "गुरवे नमः (salutation to the teacher) is itself a classical prayer line — the dative singular गुरवे is a real word students use every day in school invocations.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch14_t01_q01",
+              "prompt": "How many विभक्तयः (cases) does Sanskrit have (excluding the vocative)?",
+              "questionType": "mcq",
+              "options": [
+                "five",
+                "six",
+                "seven",
+                "ten"
+              ],
+              "answer": "seven",
+              "solutionSteps": [
+                "प्रथमा, द्वितीया, तृतीया, चतुर्थी, पञ्चमी, षष्ठी, सप्तमी = SEVEN cases.",
+                "Plus the सम्बोधनम् (vocative) makes eight forms total."
+              ],
+              "commonMistakes": [
+                "Sanskrit has exactly SEVEN cases; the vocative (8th form) is usually counted separately."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t01_q02",
+              "prompt": "The dative singular (चतुर्थी एकवचनम्) of 'देव' is —",
+              "questionType": "mcq",
+              "options": [
+                "देवः",
+                "देवस्य",
+                "देवाय",
+                "देवेन"
+              ],
+              "answer": "देवाय",
+              "solutionSteps": [
+                "देव's चतुर्थी एकवचनम् = देवाय (the same -आय ending you saw in मित्राय नमः in Ch.3).",
+                "देवः = nom.; देवस्य = gen.; देवेन = inst."
+              ],
+              "commonMistakes": [
+                "The DATIVE ('to/for ___') of देव is देवाय; -आय is the अकारान्त dative singular ending."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t01_q03",
+              "prompt": "The nominative plural (प्रथमा बहुवचनम्) of 'कवि' is —",
+              "questionType": "mcq",
+              "options": [
+                "कविः",
+                "कवयः",
+                "कवीन्",
+                "कविभिः"
+              ],
+              "answer": "कवयः",
+              "solutionSteps": [
+                "इकारान्त nouns make nominative plural in -अयः: कवयः ('poets').",
+                "Compare हरयः, मुनयः, रवयः — same pattern."
+              ],
+              "commonMistakes": [
+                "कविः is singular; कवयः is PLURAL ('poets') — the -अयः ending."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch14_t01_q04",
+              "prompt": "Which noun stem-type does 'गुरु' belong to?",
+              "questionType": "mcq",
+              "options": [
+                "अकारान्त (ending in अ)",
+                "इकारान्त (ending in इ)",
+                "उकारान्त (ending in उ)",
+                "ऋकारान्त (ending in ऋ)"
+              ],
+              "answer": "उकारान्त (ending in उ)",
+              "solutionSteps": [
+                "गुरु ends in उ — so it is उकारान्त ('-u-ending').",
+                "Same family: शम्भु, विष्णु, साधु, प्रभु."
+              ],
+              "commonMistakes": [
+                "गुरु ends in उ — so it is the U-stem (उकारान्त) class."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "sch14_t02",
+          "title": "What Each Case Does (and the Vocative)",
+          "summary": "प्रथमा/द्वितीया/तृतीया/पञ्चमी/षष्ठी/सप्तमी roles + सम्बोधनम्.",
+          "concepts": [
+            {
+              "id": "sch14_t02_c01",
+              "title": "प्रथमा / द्वितीया — Nominative and Accusative",
+              "explanations": {
+                "oneLine": "प्रथमा (subject) and द्वितीया (object) — the two most basic case-roles.",
+                "kidFriendly": "प्रथमा (nominative) marks the SUBJECT of a sentence — who does the action. द्वितीया (accusative) marks the OBJECT — what receives the action. In 'रामः ग्रन्थं पठति' ('Rama reads a book'), रामः is प्रथमा (subject) and ग्रन्थम् is द्वितीया (object).",
+                "textbook": "प्रथमा (1st case = nominative): marks the subject (कर्ता). द्वितीया (2nd case = accusative): marks the direct object (कर्म). Endings (for अकारान्त sing.): -ः (nom.) vs -म् (acc.). Compare देवः (god, subject) vs देवम् (god, object).",
+                "expert": "Many languages mark subject/object only by word order; Sanskrit uses ENDINGS. This lets you re-order words freely without losing meaning: देवः मनुष्यं पश्यति = मनुष्यं देवः पश्यति = 'the god sees the man' — same meaning, free word order."
+              },
+              "reasoning": "Knowing प्रथमा and द्वितीया lets you immediately identify 'who does' and 'what receives' in any Sanskrit sentence.",
+              "useCases": [
+                {
+                  "title": "Subject vs object",
+                  "description": "प्रथमा = doer; द्वितीया = receiver. Endings reveal the role.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Free word order",
+                  "description": "Because endings carry meaning, Sanskrit lets you arrange words freely.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Sample",
+                  "description": "रामः रावणं हन्ति = 'Rama kills Ravana' — endings make it clear.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Sanskrit's free word order is rooted in its case endings — a feature it shares with Latin and Greek and lost in modern English (which now relies on word order).",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t02_c02",
+              "title": "तृतीया + पञ्चमी — Instrumental ('by') + Ablative ('from')",
+              "explanations": {
+                "oneLine": "तृतीया ('by/with' = means) and पञ्चमी ('from' = origin/separation).",
+                "kidFriendly": "तृतीया (instrumental) marks the MEANS — 'BY what' / 'WITH what'. पञ्चमी (ablative) marks 'FROM where/whom'. In Ch.4 you saw जलबिन्दुनिपातेन ('by sweat-drops') and शस्त्रेण हन्ति ('kills BY a weapon') — that is the तृतीया. From Ch.7, ब्रह्मणः ('from Brahman') is the पञ्चमी.",
+                "textbook": "तृतीया endings for अकारान्त sing.: -एन (देवेन, 'by the god'). पञ्चमी sing.: -आत् (देवात्, 'from the god'). Both have दुअल -आभ्याम् and plural -एभ्यः (interestingly, dat. + abl. plural share endings).",
+                "expert": "तृतीया covers all 'by means of' and 'in the company of' (शिष्येण सह 'with the student'). पञ्चमी covers 'from' (origin), 'because of' (cause), and 'than' (in comparison, e.g. रामात् श्रेष्ठः 'better than Rama'). The same case carries multiple related senses."
+              },
+              "reasoning": "Together, तृतीया and पञ्चमी give Sanskrit precise ways to say HOW something is done and WHERE it comes FROM.",
+              "useCases": [
+                {
+                  "title": "Means and origin",
+                  "description": "देवेन = by the god; देवात् = from the god. Different relationships.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Useful phrases",
+                  "description": "गुरुणा सह ('with the teacher'); पाठात् ('from the chapter').",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Comparison",
+                  "description": "'X is better than Y' uses Y in the पञ्चमी: रामात् श्रेष्ठः.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "The ablative's 'from'-meaning is wide: physical FROM (देवात् = from the god), causal FROM (दुःखात् = because of pain), and comparative FROM (श्रेष्ठात् = than the best).",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch14_t02_c03",
+              "title": "षष्ठी + सप्तमी — Genitive ('of') + Locative ('in/on')",
+              "explanations": {
+                "oneLine": "षष्ठी ('of' / possession) and सप्तमी ('in/on/at' = location).",
+                "kidFriendly": "षष्ठी (genitive) shows possession or relation — 'of ___', '___'s'. सप्तमी (locative) marks place or time — 'in/on/at ___'. देवस्य पुत्रः ('the god's son'); देवे विश्वासः ('faith IN the god').",
+                "textbook": "षष्ठी endings for अकारान्त sing./pl.: -स्य (देवस्य) / -आनाम् (देवानाम्). सप्तमी sing./pl.: -ए (देवे) / -एषु (देवेषु).",
+                "expert": "षष्ठी is the 'apostrophe-s' case (English '-'s'); सप्तमी is the 'in/on/at' case. The two together handle most of Sanskrit's relationships and locations. In compounds, the genitive sense is often folded in (देवस्यराज्यम् → देवराज्यम् 'god-kingdom')."
+              },
+              "reasoning": "Possession (-'s) and location (in/at) are basic to every story — knowing षष्ठी and सप्तमी unlocks reading.",
+              "useCases": [
+                {
+                  "title": "Apostrophe-s",
+                  "description": "Sanskrit's -स्य ending = English '___'s'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "In/on/at",
+                  "description": "सप्तमी (-ए / -एषु) marks place and time — पुस्तके (in the book), दिने (on a day).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Two friends",
+                  "description": "Together षष्ठी + सप्तमी handle 'of' and 'in/at' — half the world's relationships.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Modern Hindi shows the same survival: 'मुझे' is dative, 'से' is ablative-instrumental, 'का/की/के' is genitive (षष्ठी) — Sanskrit's case-logic still alive in everyday Hindi.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t02_c04",
+              "title": "सम्बोधनम् — The Vocative (Calling Someone)",
+              "explanations": {
+                "oneLine": "सम्बोधनम् — the case form for calling/addressing someone.",
+                "kidFriendly": "सम्बोधनम् is the form you use when CALLING someone — hailing them, addressing them directly. हे राम! ('Hey Rama!'), हे देव! ('O god!'), हे गुरो! ('O teacher!'). It is the eighth and final form in every declension table.",
+                "textbook": "सम्बोधनम् — vocative. For अकारान्त: हे देव! / हे देवौ! / हे देवाः!. For उकारान्त: हे गुरो! (note the dropped visarga). The hailing word हे (or भोः) often precedes.",
+                "expert": "सम्बोधनम् usually mirrors the प्रथमा (nominative) — but with key changes: अकारान्त vocative singular drops -ः (हे देव! not हे देवः!); उकारान्त vocative singular shifts to -ओ (हे गुरो!). These small shifts mark 'calling' grammatically."
+              },
+              "reasoning": "When characters in Sanskrit dialogue address each other — मातः!, वत्स!, आचार्ये! — they are all using the vocative. The chapter's own dialogue is full of these.",
+              "useCases": [
+                {
+                  "title": "Sound familiar",
+                  "description": "Every भोः बालाः!, मातः!, हे राम! you have read is a vocative.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Drop the visarga",
+                  "description": "हे देव! (not देवः!) — vocative singular often drops -ः.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Eighth slot",
+                  "description": "Every declension table ends with सम्बोधनम् as its 8th row.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "The vocative is the ONLY case-form not strictly counted among the सप्त-विभक्ति (seven cases) — but it appears in every classical declension table, making the count effectively 'seven plus calling'.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch14_t02_q01",
+              "prompt": "Which case (विभक्ति) marks the SUBJECT (कर्ता) of a sentence?",
+              "questionType": "mcq",
+              "options": [
+                "प्रथमा (1st)",
+                "द्वितीया (2nd)",
+                "षष्ठी (6th)",
+                "सप्तमी (7th)"
+              ],
+              "answer": "प्रथमा (1st)",
+              "solutionSteps": [
+                "प्रथमा (nominative) marks the doer/subject.",
+                "द्वितीया marks the object, षष्ठी 'of', सप्तमी 'in/on/at'."
+              ],
+              "commonMistakes": [
+                "The SUBJECT is the FIRST case (प्रथमा), not the genitive or locative."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t02_q02",
+              "prompt": "'देवस्य' is which case?",
+              "questionType": "mcq",
+              "options": [
+                "nominative (प्रथमा)",
+                "accusative (द्वितीया)",
+                "genitive (षष्ठी) — 'of the god'",
+                "locative (सप्तमी) — 'in the god'"
+              ],
+              "answer": "genitive (षष्ठी) — 'of the god'",
+              "solutionSteps": [
+                "-स्य is the अकारान्त singular genitive ending.",
+                "देवस्य पुत्रः = 'the god's son'."
+              ],
+              "commonMistakes": [
+                "The -स्य ending is GENITIVE ('of ___'), the same logic as English '___'s'."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_t02_q03",
+              "prompt": "'देवात्' is which case, and what does it mean?",
+              "questionType": "mcq",
+              "options": [
+                "instrumental (तृतीया) — 'by the god'",
+                "ablative (पञ्चमी) — 'from the god'",
+                "locative (सप्तमी) — 'in the god'",
+                "vocative (सम्बोधन) — 'O god!'"
+              ],
+              "answer": "ablative (पञ्चमी) — 'from the god'",
+              "solutionSteps": [
+                "-आत् ending is the ABLATIVE singular for अकारान्त.",
+                "Means 'FROM' — origin / separation / cause."
+              ],
+              "commonMistakes": [
+                "-आत् is ABLATIVE ('from'), not instrumental ('by')."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch14_t02_q04",
+              "prompt": "To call out 'O teacher!' in Sanskrit, you would say —",
+              "questionType": "mcq",
+              "options": [
+                "गुरुः",
+                "गुरुम्",
+                "हे गुरो!",
+                "गुरोः"
+              ],
+              "answer": "हे गुरो!",
+              "solutionSteps": [
+                "सम्बोधनम् (vocative) for उकारान्त singular: drop -ुः, shift to -ो: हे गुरो!.",
+                "गुरुः = nominative; गुरुम् = accusative; गुरोः = abl./gen."
+              ],
+              "commonMistakes": [
+                "VOCATIVE is the calling form: हे गुरो! (not the nominative गुरुः)."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                147,
+                148,
+                149,
+                150,
+                151,
+                152
+              ],
+              "needsHumanReview": true
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152
+      ]
     }
   ]
 }
