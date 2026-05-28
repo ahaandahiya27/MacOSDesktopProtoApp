@@ -76,8 +76,11 @@ final class ExtraReadingRowTests: XCTestCase {
 
     func testEveryChipChapterFolderMatchesKeyPrefix() {
         let chipKeys = ArticleIndex.entries.keys.filter { key in
-            // Exclude Maths (mch…) keys — this Science ratchet parses chXX folders.
-            !key.hasPrefix("mch") && Self.chipSuffixes.contains { key.hasSuffix($0) }
+            // Exclude Maths (mch…) AND Sanskrit (sch…) keys — this Science ratchet
+            // parses chNN folders. Per-pack folder/path conventions are pinned by
+            // their own routing tests (BeyondTheBookRoutingTests etc.).
+            !key.hasPrefix("mch") && !key.hasPrefix("sch")
+                && Self.chipSuffixes.contains { key.hasSuffix($0) }
         }
         for key in chipKeys {
             guard let entry = ArticleIndex.entries[key] else { continue }
