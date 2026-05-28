@@ -102,8 +102,8 @@ final class BeyondTheBookRoutingTests: XCTestCase {
                 continue
             }
             let chPrefix = chapterPrefix(from: key)
-            if chPrefix.hasPrefix("mch") {
-                // Maths Beyond articles are titled by chapter NAME, not
+            if chPrefix.hasPrefix("mch") || chPrefix.hasPrefix("sch") {
+                // Maths/Sanskrit Beyond articles are titled by chapter NAME, not
                 // "Chapter N", so the file-identity invariant is the
                 // anti-bug guarantee here: the on-disk HTML's
                 // data-article-id MUST equal the entry key. A copy-paste
@@ -134,11 +134,17 @@ final class BeyondTheBookRoutingTests: XCTestCase {
 
     /// Maps a chapter prefix to its number and on-disk folder, honouring the
     /// per-pack naming convention: Science uses `chNN` → `Articles/ChapterN`,
-    /// Maths uses `mchNN` → `Articles/MathsChapterN`.
+    /// Maths uses `mchNN` → `Articles/MathsChapterN`, Sanskrit uses `schNN`
+    /// → `Articles/SanskritChapterN`. Order matters — check `mch`/`sch` BEFORE
+    /// the `ch` fallback, since both start with `ch` after the first letter.
     private func chapterNumberAndFolder(fromPrefix prefix: String) -> (Int, String) {
         if prefix.hasPrefix("mch") {
             let n = Int(prefix.dropFirst(3)) ?? -1
             return (n, "Articles/MathsChapter\(n)")
+        }
+        if prefix.hasPrefix("sch") {
+            let n = Int(prefix.dropFirst(3)) ?? -1
+            return (n, "Articles/SanskritChapter\(n)")
         }
         let n = Int(prefix.dropFirst(2)) ?? -1
         return (n, "Articles/Chapter\(n)")

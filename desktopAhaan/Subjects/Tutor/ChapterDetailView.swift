@@ -51,8 +51,20 @@ struct ChapterDetailView: View {
 
     /// Bundle-existence-gated entry lookup. Returns nil if missing/unbundled (card auto-hides).
     private func resolvedArticleEntry(forKey key: String) -> ArticleEntry? {
-        guard pack.id == "science_class7" || pack.id == "maths_class7" else { return nil }
-        let lookup = pack.id == "maths_class7" ? "m" + key : key   // Maths keys are mch01_… (Science reuses ch01…)
+        guard ["science_class7", "maths_class7", "sanskrit_class7"].contains(pack.id) else { return nil }
+        // Maths keys are mch01_…; Science reuses ch01_…; Sanskrit's NEW NEP chapters use
+        // sch01_… (chapter id itself already namespaces the lookup, so no extra prefix needed).
+        // The Sanskrit pack ALSO contains the legacy `ch01` vocab-deck whose id collides with
+        // Science's `ch01` — we deliberately return nil for that case so it can't accidentally
+        // surface Science's ch01_* articles (the vocab deck ships no articles of its own).
+        let lookup: String
+        switch pack.id {
+        case "maths_class7":    lookup = "m" + key
+        case "sanskrit_class7":
+            guard key.hasPrefix("sch") else { return nil }
+            lookup = key
+        default:                lookup = key   // science_class7
+        }
         guard let entry = ArticleIndex.entries[lookup] else { return nil }
         let name = entry.filename.replacingOccurrences(of: ".html", with: "")
         let resolved = Bundle.main.url(forResource: name, withExtension: "html",

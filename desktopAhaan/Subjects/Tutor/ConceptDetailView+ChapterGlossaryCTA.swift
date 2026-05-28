@@ -24,11 +24,22 @@ struct ChapterGlossaryCTA: View {
     @State private var presented: ArticleEntry?
 
     private var entry: ArticleEntry? {
-        // Maths article keys are `mch01_…`; Science reuses `ch01_…`. Without
-        // the pack-aware prefix a Maths chapter's CTA would open the SCIENCE
-        // glossary (shared `chNN` ids). Mirrors ChapterDetailView.resolvedArticleEntry.
-        guard pack.id == "science_class7" || pack.id == "maths_class7" else { return nil }
-        let key = (pack.id == "maths_class7" ? "m" : "") + "\(chapter.id)_glossary"
+        // Maths article keys are `mch01_…`; Science reuses `ch01_…`; Sanskrit's NEW NEP
+        // chapters use `sch01_…`. Without the pack-aware prefix a Maths chapter's CTA
+        // would open the SCIENCE glossary (shared `chNN` ids).
+        // The Sanskrit pack ALSO has the legacy `ch01` vocab-deck whose id collides with
+        // Science's `ch01` — we gate it off so it cannot accidentally surface Science's
+        // ch01_glossary. Mirrors ChapterDetailView.resolvedArticleEntry.
+        guard ["science_class7", "maths_class7", "sanskrit_class7"].contains(pack.id) else { return nil }
+        let baseKey = "\(chapter.id)_glossary"
+        let key: String
+        switch pack.id {
+        case "maths_class7":    key = "m" + baseKey
+        case "sanskrit_class7":
+            guard chapter.id.hasPrefix("sch") else { return nil }
+            key = baseKey
+        default:                key = baseKey   // science_class7
+        }
         guard let candidate = ArticleIndex.entries[key] else { return nil }
         // Bundle-existence gate — same shape as ExtraReadingRow's
         // resolvedEntry helper. Catches a chapter whose article

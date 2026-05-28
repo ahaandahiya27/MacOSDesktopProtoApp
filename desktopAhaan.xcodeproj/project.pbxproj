@@ -60,6 +60,7 @@
 		8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD8EF41DB6ABC6718947F5 /* ArticleBrowserView.swift */; };
 		F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC01B7346C3FE70B57E15F /* ArticleEntryButton.swift */; };
 		8F85FD80EEAD3A43DA5F46C7 /* ArticleIndex+MathsEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF114FE32F21BC5BA5EADC1 /* ArticleIndex+MathsEntries.swift */; };
+		5864C1FB5136D34E637E5836 /* ArticleIndex+SanskritEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF971EFF7D7D29BE95BF64 /* ArticleIndex+SanskritEntries.swift */; };
 		3EC9DC1AC7685F3C45471C5D /* ArticleIndex+ScienceEntries1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4158426550D53A08CB57EA /* ArticleIndex+ScienceEntries1.swift */; };
 		4E5A816222DAA1C9157D4079 /* ArticleIndex+ScienceEntries2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1AA33C9A685D8FCB784A7 /* ArticleIndex+ScienceEntries2.swift */; };
 		7706AA5A667CCDDAFE86E527 /* ArticleIndex+ScienceEntries3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F16E6CFF71A62AF0DB65F6 /* ArticleIndex+ScienceEntries3.swift */; };
@@ -450,6 +451,8 @@
 		68900B84D1FDBDF93C2D63B0 /* mch15_storymode.html in Resources */ = {isa = PBXBuildFile; fileRef = 1127CFAC1264C07E0ADEF2F5 /* mch15_storymode.html */; };
 		ED973513E9259A0F75951530 /* mch15_style.css in Resources */ = {isa = PBXBuildFile; fileRef = A89C35E172A92BB5F19E219B /* mch15_style.css */; };
 		66CDCEBC3D356B59A1E5123F /* mch15_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 212F68CBD44AE6B581301ADC /* mch15_whatif.html */; };
+		1CF2582AB0FF7083939BCCDC /* sch01_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = EFE6B85C2968DBFD91167EBC /* sch01_beyond.html */; };
+		84173D1921AD4946281F877D /* sch01_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 58C20BEB4BA6441BA99CD249 /* sch01_style.css */; };
 		BF6D55209FFE556F1D9317F9 /* ch08_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = F8249CF315124C7FE21651E1 /* ch08_beyond.html */; };
 		F1AF90361DB3357B818CB284 /* ch08_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 850DC05D101429819CB3C83A /* ch08_glossary.html */; };
 		CD9DC4B9E6718B63A404A1BA /* ch08_miniproject.html in Resources */ = {isa = PBXBuildFile; fileRef = C7A8FBD8DFDA47671DC021E6 /* ch08_miniproject.html */; };
@@ -1181,6 +1184,8 @@
 		1127CFAC1264C07E0ADEF2F5 /* mch15_storymode.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch15_storymode.html"; sourceTree = "<group>"; };
 		A89C35E172A92BB5F19E219B /* mch15_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "mch15_style.css"; sourceTree = "<group>"; };
 		212F68CBD44AE6B581301ADC /* mch15_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch15_whatif.html"; sourceTree = "<group>"; };
+		EFE6B85C2968DBFD91167EBC /* sch01_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch01_beyond.html"; sourceTree = "<group>"; };
+		58C20BEB4BA6441BA99CD249 /* sch01_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch01_style.css"; sourceTree = "<group>"; };
 		F8249CF315124C7FE21651E1 /* ch08_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch08_beyond.html"; sourceTree = "<group>"; };
 		850DC05D101429819CB3C83A /* ch08_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch08_glossary.html"; sourceTree = "<group>"; };
 		C7A8FBD8DFDA47671DC021E6 /* ch08_miniproject.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch08_miniproject.html"; sourceTree = "<group>"; };
@@ -1813,6 +1818,7 @@
 		5DAD8EF41DB6ABC6718947F5 /* ArticleBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleBrowserView.swift"; sourceTree = "<group>"; };
 		4FFC01B7346C3FE70B57E15F /* ArticleEntryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleEntryButton.swift"; sourceTree = "<group>"; };
 		FFF114FE32F21BC5BA5EADC1 /* ArticleIndex+MathsEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+MathsEntries.swift"; sourceTree = "<group>"; };
+		09EF971EFF7D7D29BE95BF64 /* ArticleIndex+SanskritEntries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+SanskritEntries.swift"; sourceTree = "<group>"; };
 		8F4158426550D53A08CB57EA /* ArticleIndex+ScienceEntries1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries1.swift"; sourceTree = "<group>"; };
 		2BB1AA33C9A685D8FCB784A7 /* ArticleIndex+ScienceEntries2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries2.swift"; sourceTree = "<group>"; };
 		A6F16E6CFF71A62AF0DB65F6 /* ArticleIndex+ScienceEntries3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleIndex+ScienceEntries3.swift"; sourceTree = "<group>"; };
@@ -2361,6 +2367,7 @@
 				51A2D102C966303AC8EAD1CB,
 				73953FAFF9BA21479D7147F3,
 				BD8A7F38CD15EA8C2EEE6748,
+				E9B686D7A5DF11FD0980BBBB,
 				73E03A543AA0CF7230D3F4CB,
 				777590142BB314D981E4C7D1,
 				1DCA7328301F04BCB5A3754F,
@@ -3259,6 +3266,15 @@
 			path = "MathsChapter9";
 			sourceTree = "<group>";
 		};
+		E9B686D7A5DF11FD0980BBBB /* SanskritChapter1 */ = {
+			isa = PBXGroup;
+			children = (
+				EFE6B85C2968DBFD91167EBC,
+				58C20BEB4BA6441BA99CD249,
+			);
+			path = "SanskritChapter1";
+			sourceTree = "<group>";
+		};
 		18BBC6DB78D526774D31492B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -3346,6 +3362,7 @@
 				5DAD8EF41DB6ABC6718947F5,
 				4FFC01B7346C3FE70B57E15F,
 				FFF114FE32F21BC5BA5EADC1,
+				09EF971EFF7D7D29BE95BF64,
 				8F4158426550D53A08CB57EA,
 				2BB1AA33C9A685D8FCB784A7,
 				A6F16E6CFF71A62AF0DB65F6,
@@ -4509,6 +4526,8 @@
 				68900B84D1FDBDF93C2D63B0 /* mch15_storymode.html in Resources */,
 				ED973513E9259A0F75951530 /* mch15_style.css in Resources */,
 				66CDCEBC3D356B59A1E5123F /* mch15_whatif.html in Resources */,
+				1CF2582AB0FF7083939BCCDC /* sch01_beyond.html in Resources */,
+				84173D1921AD4946281F877D /* sch01_style.css in Resources */,
 				BF6D55209FFE556F1D9317F9 /* ch08_beyond.html in Resources */,
 				F1AF90361DB3357B818CB284 /* ch08_glossary.html in Resources */,
 				CD9DC4B9E6718B63A404A1BA /* ch08_miniproject.html in Resources */,
@@ -5177,6 +5196,7 @@
 				8CE132410472D356FD365070 /* ArticleBrowserView.swift in Sources */,
 				F4E3676E688027EFD3B5813F /* ArticleEntryButton.swift in Sources */,
 				8F85FD80EEAD3A43DA5F46C7 /* ArticleIndex+MathsEntries.swift in Sources */,
+				5864C1FB5136D34E637E5836 /* ArticleIndex+SanskritEntries.swift in Sources */,
 				3EC9DC1AC7685F3C45471C5D /* ArticleIndex+ScienceEntries1.swift in Sources */,
 				4E5A816222DAA1C9157D4079 /* ArticleIndex+ScienceEntries2.swift in Sources */,
 				7706AA5A667CCDDAFE86E527 /* ArticleIndex+ScienceEntries3.swift in Sources */,
