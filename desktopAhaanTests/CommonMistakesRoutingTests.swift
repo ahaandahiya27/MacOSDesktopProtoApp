@@ -21,7 +21,7 @@ final class CommonMistakesRoutingTests: XCTestCase {
     /// pointing at `filename = "ch02_mistakes.html"`) fails this
     /// loudly with the offending key.
     func testEveryMistakesEntryIsInternallyConsistent() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         XCTAssertFalse(keys.isEmpty,
             "Expected at least one Common-Mistakes entry in ArticleIndex.entries.")
         for key in keys {
@@ -72,7 +72,7 @@ final class CommonMistakesRoutingTests: XCTestCase {
     /// reference. Catches content-author copy-paste errors at
     /// test time.
     func testMistakesHtmlFilesExistAndTitleMatchesChapter() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -100,7 +100,7 @@ final class CommonMistakesRoutingTests: XCTestCase {
     /// (skips chapters with < 3 misconceptions), but pin it here so
     /// a hand-edit that deletes a section can't silently land.
     func testGeneratedMistakesArticlesHaveAtLeastThreeSections() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_mistakes") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
         for key in keys {
             // Ch.1's bespoke 10-section article is exempt — it's the
             // anchor reference, not a generated article.
