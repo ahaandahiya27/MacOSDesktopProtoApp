@@ -413,9 +413,11 @@
 		13F533563B65A1D865DC16AD /* sanskrit_class7_dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 461F748B303E8D498676D4F3 /* sanskrit_class7_dictionary.json */; };
 		14A1EC04D06C3AAC4B4599B3 /* sch13_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 856ABF57365EBFE963F969DA /* sch13_beyond.html */; };
 		30C6A35DBC67CB743039FEBE /* sch13_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 18CE61246626783DDCEC6094 /* sch13_glossary.html */; };
+		256D5D4197260CE3CFBB3435 /* sch13_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = F4FC7A4D746D4245354BAEFF /* sch13_selfcheck.html */; };
 		F9B914184D94835F2DCF3B8A /* sch13_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDD2AA353D1261479672F5 /* sch13_style.css */; };
 		E53FD2E388A90AEEFF784110 /* sch14_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 97AECB55EE8B299BD68F4E3E /* sch14_beyond.html */; };
 		C29A494C53A797AD02B39025 /* sch14_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = E5AE0F9B794AFF055083B47F /* sch14_glossary.html */; };
+		CDA14176F51639CBC15038CE /* sch14_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 51C9597C37F23C2D5A919512 /* sch14_selfcheck.html */; };
 		82064F97D50168D69EA554B5 /* sch14_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7E88A3D009D8840132FC7FED /* sch14_style.css */; };
 		3BA93F833C1EBF2A7E3CAFB8 /* mch14_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 6B2A0E6A770A0CA6C3219D30 /* mch14_beyond.html */; };
 		9F2E5ABB53072D2898038906 /* mch14_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = C3D266BBF35F0ACCB1A2D57B /* mch14_glossary.html */; };
@@ -439,9 +441,11 @@
 		89B18A503639D9556D7BF342 /* mch13_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 4E4432437514EB60E6E2EEB7 /* mch13_whatif.html */; };
 		DEB314569D448B3F5F331D72 /* sch07_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 5FE615A20A49D4A258868974 /* sch07_beyond.html */; };
 		816AAE6972794FD2C48CB061 /* sch07_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = B56443D87F8CBEC876D666F4 /* sch07_glossary.html */; };
+		93D31EA6E5AA5908F90BBE3A /* sch07_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = F7CB0629037E35E09CC324BB /* sch07_selfcheck.html */; };
 		40207E13035BBD51E1902AB3 /* sch07_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 9CAC8CD9663686D555195745 /* sch07_style.css */; };
 		7D8630154A77B024FCCF155D /* sch09_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 3606359F3BE3E7D559AD0044 /* sch09_beyond.html */; };
 		ACB4BD06A5C77F59CDB66676 /* sch09_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = F8AB8197A0307AA997B95961 /* sch09_glossary.html */; };
+		585F44F05E887EEA11F46C71 /* sch09_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = C210F0A550B829EB48AFA3FC /* sch09_selfcheck.html */; };
 		748E9AD01476E2890E1E943D /* sch09_style.css in Resources */ = {isa = PBXBuildFile; fileRef = ABB3BC323FF9A21EAA80303D /* sch09_style.css */; };
 		FB06632A423825CC2D926197 /* mch12_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 4848DD0B357187458FDEBB1F /* mch12_beyond.html */; };
 		3183CFB2DA6009F9D86E5001 /* mch12_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 4646490BAF3F3AD2762618CE /* mch12_glossary.html */; };
@@ -465,18 +469,23 @@
 		66CDCEBC3D356B59A1E5123F /* mch15_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 212F68CBD44AE6B581301ADC /* mch15_whatif.html */; };
 		9C1FC05B3F05632443ADE0CD /* sch15_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F35048DA0F0B3FFF4C8D555 /* sch15_beyond.html */; };
 		AF50690A65C516C058A042E0 /* sch15_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = A67A309741D11819EEA5C824 /* sch15_glossary.html */; };
+		00D029898033DB2881192704 /* sch15_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = B9A1E50CA49547287B1FA6B7 /* sch15_selfcheck.html */; };
 		70E0C30FE444A9FE2C014698 /* sch15_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 858BD99796508775568EE1C4 /* sch15_style.css */; };
 		1577D407F4C2F53C3F663AB5 /* sch12_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FD3C683B116F5125EC71256 /* sch12_beyond.html */; };
 		C66614CCB6EDC4B58D04ECAE /* sch12_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = A0866FFA9A373C6E75146935 /* sch12_glossary.html */; };
+		EF894CD28E6F059AD72BA82F /* sch12_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = C4D8F84AC6FEA9FFFDC497AA /* sch12_selfcheck.html */; };
 		B69AEF1217981B7DC2F4BED6 /* sch12_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6836BA60A711B714655468E3 /* sch12_style.css */; };
 		61D4E82754D489A496D3BAC6 /* sch08_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = A08DBC548B5C0D51B6D48D90 /* sch08_beyond.html */; };
 		F8DCC0A451727EFFF794BDBB /* sch08_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 47124B232FC08A02716DB47B /* sch08_glossary.html */; };
+		6029CB4FB90CA9D74795F9EB /* sch08_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 3B913B6F87587AFE8EB77F3E /* sch08_selfcheck.html */; };
 		50147A724122FFCEAFE7E3AB /* sch08_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 33B4F666186BEC3CA36BF493 /* sch08_style.css */; };
 		9341E4E0FB9C4EBC35FD0106 /* sch06_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 23CD87E7593929339849025D /* sch06_beyond.html */; };
 		9394706F7D4D2AE01B074D5B /* sch06_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = F7A7FBB494062CDE5F85D9E5 /* sch06_glossary.html */; };
+		38BDD9DA8FDD2B290B528697 /* sch06_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC6D9BA4703C4280202F2D /* sch06_selfcheck.html */; };
 		1057DE513E927FDCBFA442C8 /* sch06_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2864A6644BF43C4A7D6CF /* sch06_style.css */; };
 		1CF2582AB0FF7083939BCCDC /* sch01_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = EFE6B85C2968DBFD91167EBC /* sch01_beyond.html */; };
 		C755D8E03CAC8E2F2320AD5E /* sch01_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = FDAECE42CDB2F6AD0683DA64 /* sch01_glossary.html */; };
+		8930CEF5774C4A09D3FE5184 /* sch01_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = A0119D6ADBFEA33849242372 /* sch01_selfcheck.html */; };
 		84173D1921AD4946281F877D /* sch01_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 58C20BEB4BA6441BA99CD249 /* sch01_style.css */; };
 		BF6D55209FFE556F1D9317F9 /* ch08_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = F8249CF315124C7FE21651E1 /* ch08_beyond.html */; };
 		F1AF90361DB3357B818CB284 /* ch08_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 850DC05D101429819CB3C83A /* ch08_glossary.html */; };
@@ -791,12 +800,15 @@
 		902C808EEE2E5F8BD4D75795 /* ch16_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = 4014B39DB90DD6BCAB6EC753 /* ch16_whatif.html */; };
 		4A6CF0D460EA7BFC5AB4A70E /* sch04_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 8A66F8A6DBC7D363AC264E71 /* sch04_beyond.html */; };
 		6934E3DD8C8A1DCBA9AD1852 /* sch04_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 88280FACF36BD2CA7D0FB715 /* sch04_glossary.html */; };
+		15F040F1CE84C02E379FBECC /* sch04_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 0447F0404A348931941D1876 /* sch04_selfcheck.html */; };
 		0BB12B64BC7F6A35C2F24F04 /* sch04_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3F29CD8937C25C6AB261AEDA /* sch04_style.css */; };
 		505F853E81B6A468085B0D27 /* sch03_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 57E5FE987E0DCFD4F706772F /* sch03_beyond.html */; };
 		DCED97E049B3CA698C373EAE /* sch03_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 038238C97106BE1F4081974A /* sch03_glossary.html */; };
+		B372F285E9106E7719F3DC39 /* sch03_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = C839F4A980488B6E8B63711D /* sch03_selfcheck.html */; };
 		CD058CF89A4F6CB00148FFFC /* sch03_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 057736D6972165D1F20A43F2 /* sch03_style.css */; };
 		515EAA463E4BD28F81AE7506 /* sch10_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 376D39812C5E703E2ABF6386 /* sch10_beyond.html */; };
 		9A5D64604601091EFDADDF1E /* sch10_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 85347C50A0CCC40E11FAE0D8 /* sch10_glossary.html */; };
+		B574BDDC87616671662F52A8 /* sch10_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 730A1E165ED7FAF79825A921 /* sch10_selfcheck.html */; };
 		5CAD9CAEF7584108BDE2EED0 /* sch10_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3ED3E83C15E42639702FA73C /* sch10_style.css */; };
 		EA6E488DA6A4A5DFB1D68407 /* mch10_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F2FA7C4435E3082E32278C9 /* mch10_beyond.html */; };
 		487EBE806095F54395898EFA /* mch10_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = F6CEC4D1D0CDCEE673FFF9DD /* mch10_glossary.html */; };
@@ -810,9 +822,11 @@
 		D98E110C3D1EF3EE50CF43EF /* mch10_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = DF7FFFF1F6CB479ABFDB20F1 /* mch10_whatif.html */; };
 		54F0895485BD4652BAF83151 /* sch02_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = AE9AE6B256A422A0944B1B8C /* sch02_beyond.html */; };
 		806104F4949EC72D17246FA4 /* sch02_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 47F52D405858506AC0410BBC /* sch02_glossary.html */; };
+		D653188789DA3273A3860BE7 /* sch02_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 7704D94289357E52FA48E0A6 /* sch02_selfcheck.html */; };
 		ABD4734129A9FC2398B8F9A5 /* sch02_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 48079FF812CD81121695C065 /* sch02_style.css */; };
 		D145B30350B3168ADB83DDA5 /* sch05_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = F4FB62C14D34D4F68E184218 /* sch05_beyond.html */; };
 		67B31B3029A21EDAC677045F /* sch05_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = D52B8602AD6542F2E59D4339 /* sch05_glossary.html */; };
+		CB78CD7C7635B5B874A40A34 /* sch05_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 077666297FC44FE3A2D7D37A /* sch05_selfcheck.html */; };
 		86818A5BA6FE231E7803E54B /* sch05_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 57341A6D9D06C4BEE9C59A3D /* sch05_style.css */; };
 		D63236458120060848D20483 /* mch11_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = B0DDABDD84518CD1D4C2191C /* mch11_beyond.html */; };
 		CA619C96EB9A25196265871B /* mch11_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F98FE06CB9C5537FC7AF116 /* mch11_glossary.html */; };
@@ -826,6 +840,7 @@
 		8DAED6B83F281C622C9BA930 /* mch11_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = F7CB179B2909C96D0D7D84A6 /* mch11_whatif.html */; };
 		E045BB3F5F27B6546B3C2140 /* sch11_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 89252EEFD23291DD2B1668A9 /* sch11_beyond.html */; };
 		C3FF4C44F470C6797AB2EDC7 /* sch11_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 5FF59ADEC6318928E75DEF56 /* sch11_glossary.html */; };
+		A085C919DBAFC881BA6DE827 /* sch11_selfcheck.html in Resources */ = {isa = PBXBuildFile; fileRef = 0CB9704EB98B0AB9667E74D2 /* sch11_selfcheck.html */; };
 		73ADFED74E9379D035A81027 /* sch11_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3E83AEEAC1799F4B7DCF8162 /* sch11_style.css */; };
 		1092D6D61264950CE8D5413B /* ch05_beyond.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F0891830BB9976F693B4A68 /* ch05_beyond.html */; };
 		9A4DF2B0249B71A3FEC61ABD /* ch05_glossary.html in Resources */ = {isa = PBXBuildFile; fileRef = 5DDD0A68737CBF31F7C6D28F /* ch05_glossary.html */; };
@@ -1189,9 +1204,11 @@
 		461F748B303E8D498676D4F3 /* sanskrit_class7_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sanskrit_class7_dictionary.json"; sourceTree = "<group>"; };
 		856ABF57365EBFE963F969DA /* sch13_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch13_beyond.html"; sourceTree = "<group>"; };
 		18CE61246626783DDCEC6094 /* sch13_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch13_glossary.html"; sourceTree = "<group>"; };
+		F4FC7A4D746D4245354BAEFF /* sch13_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch13_selfcheck.html"; sourceTree = "<group>"; };
 		1FDDD2AA353D1261479672F5 /* sch13_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch13_style.css"; sourceTree = "<group>"; };
 		97AECB55EE8B299BD68F4E3E /* sch14_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch14_beyond.html"; sourceTree = "<group>"; };
 		E5AE0F9B794AFF055083B47F /* sch14_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch14_glossary.html"; sourceTree = "<group>"; };
+		51C9597C37F23C2D5A919512 /* sch14_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch14_selfcheck.html"; sourceTree = "<group>"; };
 		7E88A3D009D8840132FC7FED /* sch14_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch14_style.css"; sourceTree = "<group>"; };
 		6B2A0E6A770A0CA6C3219D30 /* mch14_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch14_beyond.html"; sourceTree = "<group>"; };
 		C3D266BBF35F0ACCB1A2D57B /* mch14_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch14_glossary.html"; sourceTree = "<group>"; };
@@ -1215,9 +1232,11 @@
 		4E4432437514EB60E6E2EEB7 /* mch13_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch13_whatif.html"; sourceTree = "<group>"; };
 		5FE615A20A49D4A258868974 /* sch07_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch07_beyond.html"; sourceTree = "<group>"; };
 		B56443D87F8CBEC876D666F4 /* sch07_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch07_glossary.html"; sourceTree = "<group>"; };
+		F7CB0629037E35E09CC324BB /* sch07_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch07_selfcheck.html"; sourceTree = "<group>"; };
 		9CAC8CD9663686D555195745 /* sch07_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch07_style.css"; sourceTree = "<group>"; };
 		3606359F3BE3E7D559AD0044 /* sch09_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch09_beyond.html"; sourceTree = "<group>"; };
 		F8AB8197A0307AA997B95961 /* sch09_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch09_glossary.html"; sourceTree = "<group>"; };
+		C210F0A550B829EB48AFA3FC /* sch09_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch09_selfcheck.html"; sourceTree = "<group>"; };
 		ABB3BC323FF9A21EAA80303D /* sch09_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch09_style.css"; sourceTree = "<group>"; };
 		4848DD0B357187458FDEBB1F /* mch12_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch12_beyond.html"; sourceTree = "<group>"; };
 		4646490BAF3F3AD2762618CE /* mch12_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch12_glossary.html"; sourceTree = "<group>"; };
@@ -1241,18 +1260,23 @@
 		212F68CBD44AE6B581301ADC /* mch15_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch15_whatif.html"; sourceTree = "<group>"; };
 		7F35048DA0F0B3FFF4C8D555 /* sch15_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch15_beyond.html"; sourceTree = "<group>"; };
 		A67A309741D11819EEA5C824 /* sch15_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch15_glossary.html"; sourceTree = "<group>"; };
+		B9A1E50CA49547287B1FA6B7 /* sch15_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch15_selfcheck.html"; sourceTree = "<group>"; };
 		858BD99796508775568EE1C4 /* sch15_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch15_style.css"; sourceTree = "<group>"; };
 		2FD3C683B116F5125EC71256 /* sch12_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch12_beyond.html"; sourceTree = "<group>"; };
 		A0866FFA9A373C6E75146935 /* sch12_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch12_glossary.html"; sourceTree = "<group>"; };
+		C4D8F84AC6FEA9FFFDC497AA /* sch12_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch12_selfcheck.html"; sourceTree = "<group>"; };
 		6836BA60A711B714655468E3 /* sch12_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch12_style.css"; sourceTree = "<group>"; };
 		A08DBC548B5C0D51B6D48D90 /* sch08_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch08_beyond.html"; sourceTree = "<group>"; };
 		47124B232FC08A02716DB47B /* sch08_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch08_glossary.html"; sourceTree = "<group>"; };
+		3B913B6F87587AFE8EB77F3E /* sch08_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch08_selfcheck.html"; sourceTree = "<group>"; };
 		33B4F666186BEC3CA36BF493 /* sch08_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch08_style.css"; sourceTree = "<group>"; };
 		23CD87E7593929339849025D /* sch06_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch06_beyond.html"; sourceTree = "<group>"; };
 		F7A7FBB494062CDE5F85D9E5 /* sch06_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch06_glossary.html"; sourceTree = "<group>"; };
+		0DFC6D9BA4703C4280202F2D /* sch06_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch06_selfcheck.html"; sourceTree = "<group>"; };
 		0CD2864A6644BF43C4A7D6CF /* sch06_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch06_style.css"; sourceTree = "<group>"; };
 		EFE6B85C2968DBFD91167EBC /* sch01_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch01_beyond.html"; sourceTree = "<group>"; };
 		FDAECE42CDB2F6AD0683DA64 /* sch01_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch01_glossary.html"; sourceTree = "<group>"; };
+		A0119D6ADBFEA33849242372 /* sch01_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch01_selfcheck.html"; sourceTree = "<group>"; };
 		58C20BEB4BA6441BA99CD249 /* sch01_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch01_style.css"; sourceTree = "<group>"; };
 		F8249CF315124C7FE21651E1 /* ch08_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch08_beyond.html"; sourceTree = "<group>"; };
 		850DC05D101429819CB3C83A /* ch08_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch08_glossary.html"; sourceTree = "<group>"; };
@@ -1567,12 +1591,15 @@
 		4014B39DB90DD6BCAB6EC753 /* ch16_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch16_whatif.html"; sourceTree = "<group>"; };
 		8A66F8A6DBC7D363AC264E71 /* sch04_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch04_beyond.html"; sourceTree = "<group>"; };
 		88280FACF36BD2CA7D0FB715 /* sch04_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch04_glossary.html"; sourceTree = "<group>"; };
+		0447F0404A348931941D1876 /* sch04_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch04_selfcheck.html"; sourceTree = "<group>"; };
 		3F29CD8937C25C6AB261AEDA /* sch04_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch04_style.css"; sourceTree = "<group>"; };
 		57E5FE987E0DCFD4F706772F /* sch03_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch03_beyond.html"; sourceTree = "<group>"; };
 		038238C97106BE1F4081974A /* sch03_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch03_glossary.html"; sourceTree = "<group>"; };
+		C839F4A980488B6E8B63711D /* sch03_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch03_selfcheck.html"; sourceTree = "<group>"; };
 		057736D6972165D1F20A43F2 /* sch03_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch03_style.css"; sourceTree = "<group>"; };
 		376D39812C5E703E2ABF6386 /* sch10_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch10_beyond.html"; sourceTree = "<group>"; };
 		85347C50A0CCC40E11FAE0D8 /* sch10_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch10_glossary.html"; sourceTree = "<group>"; };
+		730A1E165ED7FAF79825A921 /* sch10_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch10_selfcheck.html"; sourceTree = "<group>"; };
 		3ED3E83C15E42639702FA73C /* sch10_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch10_style.css"; sourceTree = "<group>"; };
 		5F2FA7C4435E3082E32278C9 /* mch10_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_beyond.html"; sourceTree = "<group>"; };
 		F6CEC4D1D0CDCEE673FFF9DD /* mch10_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_glossary.html"; sourceTree = "<group>"; };
@@ -1586,9 +1613,11 @@
 		DF7FFFF1F6CB479ABFDB20F1 /* mch10_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch10_whatif.html"; sourceTree = "<group>"; };
 		AE9AE6B256A422A0944B1B8C /* sch02_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch02_beyond.html"; sourceTree = "<group>"; };
 		47F52D405858506AC0410BBC /* sch02_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch02_glossary.html"; sourceTree = "<group>"; };
+		7704D94289357E52FA48E0A6 /* sch02_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch02_selfcheck.html"; sourceTree = "<group>"; };
 		48079FF812CD81121695C065 /* sch02_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch02_style.css"; sourceTree = "<group>"; };
 		F4FB62C14D34D4F68E184218 /* sch05_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch05_beyond.html"; sourceTree = "<group>"; };
 		D52B8602AD6542F2E59D4339 /* sch05_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch05_glossary.html"; sourceTree = "<group>"; };
+		077666297FC44FE3A2D7D37A /* sch05_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch05_selfcheck.html"; sourceTree = "<group>"; };
 		57341A6D9D06C4BEE9C59A3D /* sch05_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch05_style.css"; sourceTree = "<group>"; };
 		B0DDABDD84518CD1D4C2191C /* mch11_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch11_beyond.html"; sourceTree = "<group>"; };
 		5F98FE06CB9C5537FC7AF116 /* mch11_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch11_glossary.html"; sourceTree = "<group>"; };
@@ -1602,6 +1631,7 @@
 		F7CB179B2909C96D0D7D84A6 /* mch11_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mch11_whatif.html"; sourceTree = "<group>"; };
 		89252EEFD23291DD2B1668A9 /* sch11_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch11_beyond.html"; sourceTree = "<group>"; };
 		5FF59ADEC6318928E75DEF56 /* sch11_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch11_glossary.html"; sourceTree = "<group>"; };
+		0CB9704EB98B0AB9667E74D2 /* sch11_selfcheck.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "sch11_selfcheck.html"; sourceTree = "<group>"; };
 		3E83AEEAC1799F4B7DCF8162 /* sch11_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "sch11_style.css"; sourceTree = "<group>"; };
 		6F0891830BB9976F693B4A68 /* ch05_beyond.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch05_beyond.html"; sourceTree = "<group>"; };
 		5DDD0A68737CBF31F7C6D28F /* ch05_glossary.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch05_glossary.html"; sourceTree = "<group>"; };
@@ -3371,6 +3401,7 @@
 			children = (
 				EFE6B85C2968DBFD91167EBC,
 				FDAECE42CDB2F6AD0683DA64,
+				A0119D6ADBFEA33849242372,
 				58C20BEB4BA6441BA99CD249,
 			);
 			path = "SanskritChapter1";
@@ -3381,6 +3412,7 @@
 			children = (
 				376D39812C5E703E2ABF6386,
 				85347C50A0CCC40E11FAE0D8,
+				730A1E165ED7FAF79825A921,
 				3ED3E83C15E42639702FA73C,
 			);
 			path = "SanskritChapter10";
@@ -3391,6 +3423,7 @@
 			children = (
 				89252EEFD23291DD2B1668A9,
 				5FF59ADEC6318928E75DEF56,
+				0CB9704EB98B0AB9667E74D2,
 				3E83AEEAC1799F4B7DCF8162,
 			);
 			path = "SanskritChapter11";
@@ -3401,6 +3434,7 @@
 			children = (
 				2FD3C683B116F5125EC71256,
 				A0866FFA9A373C6E75146935,
+				C4D8F84AC6FEA9FFFDC497AA,
 				6836BA60A711B714655468E3,
 			);
 			path = "SanskritChapter12";
@@ -3411,6 +3445,7 @@
 			children = (
 				856ABF57365EBFE963F969DA,
 				18CE61246626783DDCEC6094,
+				F4FC7A4D746D4245354BAEFF,
 				1FDDD2AA353D1261479672F5,
 			);
 			path = "SanskritChapter13";
@@ -3421,6 +3456,7 @@
 			children = (
 				97AECB55EE8B299BD68F4E3E,
 				E5AE0F9B794AFF055083B47F,
+				51C9597C37F23C2D5A919512,
 				7E88A3D009D8840132FC7FED,
 			);
 			path = "SanskritChapter14";
@@ -3431,6 +3467,7 @@
 			children = (
 				7F35048DA0F0B3FFF4C8D555,
 				A67A309741D11819EEA5C824,
+				B9A1E50CA49547287B1FA6B7,
 				858BD99796508775568EE1C4,
 			);
 			path = "SanskritChapter15";
@@ -3441,6 +3478,7 @@
 			children = (
 				AE9AE6B256A422A0944B1B8C,
 				47F52D405858506AC0410BBC,
+				7704D94289357E52FA48E0A6,
 				48079FF812CD81121695C065,
 			);
 			path = "SanskritChapter2";
@@ -3451,6 +3489,7 @@
 			children = (
 				57E5FE987E0DCFD4F706772F,
 				038238C97106BE1F4081974A,
+				C839F4A980488B6E8B63711D,
 				057736D6972165D1F20A43F2,
 			);
 			path = "SanskritChapter3";
@@ -3461,6 +3500,7 @@
 			children = (
 				8A66F8A6DBC7D363AC264E71,
 				88280FACF36BD2CA7D0FB715,
+				0447F0404A348931941D1876,
 				3F29CD8937C25C6AB261AEDA,
 			);
 			path = "SanskritChapter4";
@@ -3471,6 +3511,7 @@
 			children = (
 				F4FB62C14D34D4F68E184218,
 				D52B8602AD6542F2E59D4339,
+				077666297FC44FE3A2D7D37A,
 				57341A6D9D06C4BEE9C59A3D,
 			);
 			path = "SanskritChapter5";
@@ -3481,6 +3522,7 @@
 			children = (
 				23CD87E7593929339849025D,
 				F7A7FBB494062CDE5F85D9E5,
+				0DFC6D9BA4703C4280202F2D,
 				0CD2864A6644BF43C4A7D6CF,
 			);
 			path = "SanskritChapter6";
@@ -3491,6 +3533,7 @@
 			children = (
 				5FE615A20A49D4A258868974,
 				B56443D87F8CBEC876D666F4,
+				F7CB0629037E35E09CC324BB,
 				9CAC8CD9663686D555195745,
 			);
 			path = "SanskritChapter7";
@@ -3501,6 +3544,7 @@
 			children = (
 				A08DBC548B5C0D51B6D48D90,
 				47124B232FC08A02716DB47B,
+				3B913B6F87587AFE8EB77F3E,
 				33B4F666186BEC3CA36BF493,
 			);
 			path = "SanskritChapter8";
@@ -3511,6 +3555,7 @@
 			children = (
 				3606359F3BE3E7D559AD0044,
 				F8AB8197A0307AA997B95961,
+				C210F0A550B829EB48AFA3FC,
 				ABB3BC323FF9A21EAA80303D,
 			);
 			path = "SanskritChapter9";
@@ -4729,9 +4774,11 @@
 				13F533563B65A1D865DC16AD /* sanskrit_class7_dictionary.json in Resources */,
 				14A1EC04D06C3AAC4B4599B3 /* sch13_beyond.html in Resources */,
 				30C6A35DBC67CB743039FEBE /* sch13_glossary.html in Resources */,
+				256D5D4197260CE3CFBB3435 /* sch13_selfcheck.html in Resources */,
 				F9B914184D94835F2DCF3B8A /* sch13_style.css in Resources */,
 				E53FD2E388A90AEEFF784110 /* sch14_beyond.html in Resources */,
 				C29A494C53A797AD02B39025 /* sch14_glossary.html in Resources */,
+				CDA14176F51639CBC15038CE /* sch14_selfcheck.html in Resources */,
 				82064F97D50168D69EA554B5 /* sch14_style.css in Resources */,
 				3BA93F833C1EBF2A7E3CAFB8 /* mch14_beyond.html in Resources */,
 				9F2E5ABB53072D2898038906 /* mch14_glossary.html in Resources */,
@@ -4755,9 +4802,11 @@
 				89B18A503639D9556D7BF342 /* mch13_whatif.html in Resources */,
 				DEB314569D448B3F5F331D72 /* sch07_beyond.html in Resources */,
 				816AAE6972794FD2C48CB061 /* sch07_glossary.html in Resources */,
+				93D31EA6E5AA5908F90BBE3A /* sch07_selfcheck.html in Resources */,
 				40207E13035BBD51E1902AB3 /* sch07_style.css in Resources */,
 				7D8630154A77B024FCCF155D /* sch09_beyond.html in Resources */,
 				ACB4BD06A5C77F59CDB66676 /* sch09_glossary.html in Resources */,
+				585F44F05E887EEA11F46C71 /* sch09_selfcheck.html in Resources */,
 				748E9AD01476E2890E1E943D /* sch09_style.css in Resources */,
 				FB06632A423825CC2D926197 /* mch12_beyond.html in Resources */,
 				3183CFB2DA6009F9D86E5001 /* mch12_glossary.html in Resources */,
@@ -4781,18 +4830,23 @@
 				66CDCEBC3D356B59A1E5123F /* mch15_whatif.html in Resources */,
 				9C1FC05B3F05632443ADE0CD /* sch15_beyond.html in Resources */,
 				AF50690A65C516C058A042E0 /* sch15_glossary.html in Resources */,
+				00D029898033DB2881192704 /* sch15_selfcheck.html in Resources */,
 				70E0C30FE444A9FE2C014698 /* sch15_style.css in Resources */,
 				1577D407F4C2F53C3F663AB5 /* sch12_beyond.html in Resources */,
 				C66614CCB6EDC4B58D04ECAE /* sch12_glossary.html in Resources */,
+				EF894CD28E6F059AD72BA82F /* sch12_selfcheck.html in Resources */,
 				B69AEF1217981B7DC2F4BED6 /* sch12_style.css in Resources */,
 				61D4E82754D489A496D3BAC6 /* sch08_beyond.html in Resources */,
 				F8DCC0A451727EFFF794BDBB /* sch08_glossary.html in Resources */,
+				6029CB4FB90CA9D74795F9EB /* sch08_selfcheck.html in Resources */,
 				50147A724122FFCEAFE7E3AB /* sch08_style.css in Resources */,
 				9341E4E0FB9C4EBC35FD0106 /* sch06_beyond.html in Resources */,
 				9394706F7D4D2AE01B074D5B /* sch06_glossary.html in Resources */,
+				38BDD9DA8FDD2B290B528697 /* sch06_selfcheck.html in Resources */,
 				1057DE513E927FDCBFA442C8 /* sch06_style.css in Resources */,
 				1CF2582AB0FF7083939BCCDC /* sch01_beyond.html in Resources */,
 				C755D8E03CAC8E2F2320AD5E /* sch01_glossary.html in Resources */,
+				8930CEF5774C4A09D3FE5184 /* sch01_selfcheck.html in Resources */,
 				84173D1921AD4946281F877D /* sch01_style.css in Resources */,
 				BF6D55209FFE556F1D9317F9 /* ch08_beyond.html in Resources */,
 				F1AF90361DB3357B818CB284 /* ch08_glossary.html in Resources */,
@@ -5107,12 +5161,15 @@
 				902C808EEE2E5F8BD4D75795 /* ch16_whatif.html in Resources */,
 				4A6CF0D460EA7BFC5AB4A70E /* sch04_beyond.html in Resources */,
 				6934E3DD8C8A1DCBA9AD1852 /* sch04_glossary.html in Resources */,
+				15F040F1CE84C02E379FBECC /* sch04_selfcheck.html in Resources */,
 				0BB12B64BC7F6A35C2F24F04 /* sch04_style.css in Resources */,
 				505F853E81B6A468085B0D27 /* sch03_beyond.html in Resources */,
 				DCED97E049B3CA698C373EAE /* sch03_glossary.html in Resources */,
+				B372F285E9106E7719F3DC39 /* sch03_selfcheck.html in Resources */,
 				CD058CF89A4F6CB00148FFFC /* sch03_style.css in Resources */,
 				515EAA463E4BD28F81AE7506 /* sch10_beyond.html in Resources */,
 				9A5D64604601091EFDADDF1E /* sch10_glossary.html in Resources */,
+				B574BDDC87616671662F52A8 /* sch10_selfcheck.html in Resources */,
 				5CAD9CAEF7584108BDE2EED0 /* sch10_style.css in Resources */,
 				EA6E488DA6A4A5DFB1D68407 /* mch10_beyond.html in Resources */,
 				487EBE806095F54395898EFA /* mch10_glossary.html in Resources */,
@@ -5126,9 +5183,11 @@
 				D98E110C3D1EF3EE50CF43EF /* mch10_whatif.html in Resources */,
 				54F0895485BD4652BAF83151 /* sch02_beyond.html in Resources */,
 				806104F4949EC72D17246FA4 /* sch02_glossary.html in Resources */,
+				D653188789DA3273A3860BE7 /* sch02_selfcheck.html in Resources */,
 				ABD4734129A9FC2398B8F9A5 /* sch02_style.css in Resources */,
 				D145B30350B3168ADB83DDA5 /* sch05_beyond.html in Resources */,
 				67B31B3029A21EDAC677045F /* sch05_glossary.html in Resources */,
+				CB78CD7C7635B5B874A40A34 /* sch05_selfcheck.html in Resources */,
 				86818A5BA6FE231E7803E54B /* sch05_style.css in Resources */,
 				D63236458120060848D20483 /* mch11_beyond.html in Resources */,
 				CA619C96EB9A25196265871B /* mch11_glossary.html in Resources */,
@@ -5142,6 +5201,7 @@
 				8DAED6B83F281C622C9BA930 /* mch11_whatif.html in Resources */,
 				E045BB3F5F27B6546B3C2140 /* sch11_beyond.html in Resources */,
 				C3FF4C44F470C6797AB2EDC7 /* sch11_glossary.html in Resources */,
+				A085C919DBAFC881BA6DE827 /* sch11_selfcheck.html in Resources */,
 				73ADFED74E9379D035A81027 /* sch11_style.css in Resources */,
 				1092D6D61264950CE8D5413B /* ch05_beyond.html in Resources */,
 				9A4DF2B0249B71A3FEC61ABD /* ch05_glossary.html in Resources */,
