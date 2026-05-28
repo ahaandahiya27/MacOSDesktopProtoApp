@@ -16641,6 +16641,583 @@
         90,
         91
       ]
+    },
+    {
+      "id": "sch09",
+      "number": 10,
+      "title": "अन्नाद् भवन्ति भूतानि — Annād Bhavanti Bhūtāni (From Food, Beings Come To Be)",
+      "summary": "NCERT Class 7 Sanskrit (Deepakam) Chapter 9. The chapter takes its title from Bhagavad Gītā 3.14 — 'from food, beings come to be; food from rain; rain from yajña; yajña from action' — and uses it to teach the cycle of creation, the omnipresent power of ब्रह्म, the role of ओषधि (herbs) and even मॉdern रसायनशास्त्र (chemistry). The lesson also models the optative (जानीयात् 'should know') and revisits जिज्ञासा (curiosity).",
+      "topics": [
+        {
+          "id": "sch09_t01",
+          "title": "अन्नाद् भवन्ति भूतानि — The Cycle of Creation",
+          "summary": "The Gītā verse, ब्रह्म as source, chemistry's modern echo, and the optative 'should know'.",
+          "concepts": [
+            {
+              "id": "sch09_t01_c01",
+              "title": "अन्नाद् भवन्ति भूतानि — From Food, Beings Come To Be",
+              "explanations": {
+                "oneLine": "अन्नाद् भवन्ति भूतानि — 'from food, beings come into being'; the chapter's title and the opening line of Gītā 3.14.",
+                "kidFriendly": "The chapter takes its title from the Bhagavad Gītā: अन्नाद् भवन्ति भूतानि — 'from food (अन्न), beings (भूतानि) come to be'. We are made from what we eat; everything that lives depends on food. Glossary: भूतानि = प्राणिनः ('all living beings').",
+                "textbook": "अन्नाद् भवन्ति भूतानि — Gītā 3.14a. अन्नात् ('from food', ablative of अन्न) + भवन्ति ('they come to be', 3rd plural of भू) + भूतानि ('beings'). The full verse extends the chain: food from rain, rain from yajña, yajña from action.",
+                "expert": "अन्नात् is the ablative singular of अन्न (5th case = 'from'); भवन्ति is 3rd-plural present of भू ('to be/become'); भूतानि is nominative plural of भूत (neuter past-participle 'become' used as noun for 'beings'). The full Gītā verse: 'अन्नाद् भवन्ति भूतानि पर्जन्यादन्नसम्भवः | यज्ञाद् भवति पर्जन्यो यज्ञः कर्मसमुद्भवः'."
+              },
+              "reasoning": "The chapter uses this Gītā line to set up a chain: food → beings, rain → food, yajña → rain, action → yajña. Everything is connected.",
+              "useCases": [
+                {
+                  "title": "Read the chain",
+                  "description": "Beings ← food ← rain ← yajña (sacrifice) ← action.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Spot the ablative",
+                  "description": "अन्नात् = 'from food' — the 5th-case 'from' ending.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Connect to ecology",
+                  "description": "Modern food chains and the water cycle echo this ancient idea.",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "Gītā 3.14 is a striking ancient statement of ecological cycle: humans are not separate from the chain of food, rain and action — we are part of it.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch09_t01_c02",
+              "title": "ब्रह्म — The Omnipresent Source",
+              "explanations": {
+                "oneLine": "ब्रह्म (brahma) — 'the all-pervading Cosmic Power; the ultimate source of all'.",
+                "kidFriendly": "ब्रह्म in the chapter means the omnipresent Cosmic Power — the consciousness/energy that pervades everything. The glossary explains it as सर्वव्याप्तः परमेश्वरः ('all-pervading Supreme Lord') and सर्वत्र व्याप्तचेतनशक्तिः ('the conscious power that pervades everywhere'). The cycle of food/rain/yajna ultimately rests in ब्रह्म.",
+                "textbook": "ब्रह्म — 'the Absolute, the all-pervading Cosmic Power', glossed समष्टि-चितिशक्तिः and सर्वव्याप्तः परमेश्वरः. The chapter places it as the ultimate source from which the entire cycle of creation arises.",
+                "expert": "ब्रह्म is a neuter n-stem noun (nominative ब्रह्म, genitive ब्रह्मणः). Distinct from ब्रह्मन् (the priest) and ब्रह्मा (the creator-god). The neuter ब्रह्म is the impersonal Absolute of Vedanta — the universal Power."
+              },
+              "reasoning": "The chapter teaches that the cycle of life (food → beings → rain → yajña → action) is rooted in ब्रह्म, the all-pervading Power.",
+              "useCases": [
+                {
+                  "title": "Three Brahmans",
+                  "description": "ब्रह्म (neuter, the Absolute), ब्रह्मन् (masc., priest), ब्रह्मा (masc., creator-god) are different words with different uses.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Source of the cycle",
+                  "description": "Everything in the food/rain/yajña/action chain ultimately depends on ब्रह्म.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Spot the ablative",
+                  "description": "ब्रह्मणः = 'from Brahman' (5th case singular).",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "Vedānta calls ब्रह्म 'सत्-चित्-आनन्द' (being-consciousness-bliss) — three words that together name the source of everything that is.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch09_t01_c03",
+              "title": "रसायनशास्त्रम् — The Modern Touch (Chemistry)",
+              "explanations": {
+                "oneLine": "रसायनशास्त्रम् (rasāyana-śāstram) — 'chemistry'; the chapter explicitly mentions modern chemistry.",
+                "kidFriendly": "रसायनशास्त्रम् means chemistry. The chapter uses this word to connect ancient ideas (food, herbs, the cycle of life) to modern science. Glossary: रसशास्त्रम् ('science of essences').",
+                "textbook": "रसायनशास्त्रम् — 'chemistry', glossed रसशास्त्रम् ('science of rasas/essences'). The chapter weaves a modern scientific term into a verse-based discussion of life and food.",
+                "expert": "रसायन (literally 'the path of rasa') was originally an Āyurvedic term for rejuvenation tonics and alchemy; modern Hindi/Sanskrit uses रसायनशास्त्र for 'chemistry' (study of substances and their transformations). शास्त्रम् is 'science/treatise'."
+              },
+              "reasoning": "The chapter shows Sanskrit's living adaptability: an ancient word (रसायन, originally alchemy) re-purposed for modern chemistry — old language, modern subject.",
+              "useCases": [
+                {
+                  "title": "Old word, new subject",
+                  "description": "रसायन once meant Āyurvedic tonics/alchemy; today रसायनशास्त्र is the chemistry-class subject.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Link to herbs",
+                  "description": "The chapter also names ओषधीनाम् ('of herbs') — the line from herbs/rasāyana to modern chemistry is direct.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Build the word",
+                  "description": "रस ('essence') + अयन ('path') + शास्त्रम् ('science') = 'science of essences' = chemistry.",
+                  "domain": "language"
+                }
+              ],
+              "beyondTheBook": "Many Sanskrit subject-names were coined this way: भूगोलशास्त्र (geography, 'science of earth-sphere'), जीवविज्ञान (biology, 'science of life'). The tradition still names new disciplines from old roots.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t01_c04",
+              "title": "जानीयात् — '(One) Should Know' (the Optative)",
+              "explanations": {
+                "oneLine": "जानीयात् (jānīyāt) — 'one should know'; the optative case used for advice/duty.",
+                "kidFriendly": "जानीयात् means '(one) should know'. The chapter uses it for the duty of knowing — that students should know the उत्पत्तिक्रमम् (order of creation). Glossary: अवगच्छेत् ('should understand').",
+                "textbook": "जानीयात् — 3rd-person singular optative of ज्ञा ('to know'), glossed अवगच्छेत्. The optative mood (विधिलिङ्) expresses 'should/ought to/might'.",
+                "expert": "Optative endings (विधिलिङ्) carry an -ईय- infix: ज्ञा → जानीयात् ('one should know'), पठेत् ('one should read'), कुर्यात् ('one should do'). The optative is Sanskrit's go-to for moral advice — 'one ought to ___'."
+              },
+              "reasoning": "The chapter uses जानीयात् to recommend, not command: a student SHOULD know how the world's living chain came to be.",
+              "useCases": [
+                {
+                  "title": "Soft duty",
+                  "description": "Optative -ईयात् / -एत् is 'should' — moral advice, not absolute command.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Other optatives",
+                  "description": "कुर्यात् ('should do'), पठेत् ('should read'), जानीयात् ('should know') — all the same pattern.",
+                  "domain": "language"
+                },
+                {
+                  "title": "In context",
+                  "description": "विद्यार्थिनः उत्पत्तिक्रमं जानीयुः — students should know the order of creation.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Sanskrit's optative is the polite, philosophical mood — at home in subhashitas ('one should give', 'one should speak truth'). Spot the -एत्/-यात् ending and you've found a moral 'should'.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": true
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch09_t01_q01",
+              "prompt": "'अन्नाद् भवन्ति भूतानि' is from which great Sanskrit work?",
+              "questionType": "mcq",
+              "options": [
+                "The Rāmāyaṇa",
+                "The Bhagavad Gītā",
+                "The Mahābhārata stories",
+                "The Rg Veda's Nāsadīya Sūkta"
+              ],
+              "answer": "The Bhagavad Gītā",
+              "solutionSteps": [
+                "This is the opening of Bhagavad Gītā 3.14.",
+                "The full verse builds a chain: food/rain/yajña/action."
+              ],
+              "commonMistakes": [
+                "The line is specifically from the GĪTĀ (3.14), not Rāmāyaṇa or another work."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch09_t01_q02",
+              "prompt": "According to the chapter's verse, 'भूतानि' (beings) come from —",
+              "questionType": "mcq",
+              "options": [
+                "fire",
+                "food (अन्नात्)",
+                "metal",
+                "stone"
+              ],
+              "answer": "food (अन्नात्)",
+              "solutionSteps": [
+                "The verse: अन्नाद् भवन्ति भूतानि — 'from food, beings come to be'.",
+                "अन्नात् is the ablative ('from food')."
+              ],
+              "commonMistakes": [
+                "The verse explicitly names FOOD (अन्न) as the source — not fire, metal or stone."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t01_q03",
+              "prompt": "'ब्रह्म' in this chapter refers to —",
+              "questionType": "mcq",
+              "options": [
+                "a priest",
+                "the all-pervading Cosmic Power",
+                "the creator-god Brahmā",
+                "a holy book"
+              ],
+              "answer": "the all-pervading Cosmic Power",
+              "solutionSteps": [
+                "Glossary: ब्रह्म = सर्वव्याप्तः परमेश्वरः ('all-pervading Supreme Power').",
+                "Neuter ब्रह्म is the impersonal Absolute, distinct from masculine ब्रह्मा."
+              ],
+              "commonMistakes": [
+                "Here ब्रह्म is the impersonal POWER (neuter), not the priest (ब्रह्मन्) or the creator-god (ब्रह्मा)."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t01_q04",
+              "prompt": "'रसायनशास्त्रम्' means —",
+              "questionType": "mcq",
+              "options": [
+                "mathematics",
+                "chemistry",
+                "music",
+                "history"
+              ],
+              "answer": "chemistry",
+              "solutionSteps": [
+                "Glossary: रसायनशास्त्रम् = रसशास्त्रम् ('science of rasas/essences') = chemistry.",
+                "An ancient word reused for the modern subject."
+              ],
+              "commonMistakes": [
+                "रसायनशास्त्र is the modern Sanskrit/Hindi word for CHEMISTRY, not maths or music."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        },
+        {
+          "id": "sch09_t02",
+          "title": "Words of Living Beings & Curiosity",
+          "summary": "भूतानि, जिज्ञासा (revisited), उत्पत्तिक्रमम्, ओषधीनाम्.",
+          "concepts": [
+            {
+              "id": "sch09_t02_c01",
+              "title": "भूतानि — All Living Beings",
+              "explanations": {
+                "oneLine": "भूतानि (bhūtāni) — 'all living beings, creatures'.",
+                "kidFriendly": "भूतानि means 'all living beings' — every creature that lives. Glossary: प्राणिनः ('living ones'). The chapter's title says all of them arise from food.",
+                "textbook": "भूतानि — 'beings/creatures', glossed प्राणिनः. Nominative plural of भूत (neuter past-participle 'become').",
+                "expert": "भूतानि is a beautiful Sanskrit usage: 'beings' = 'those that have become' (past-participle of भू, 'to be'). Existence itself is described as a 'having-become'. The same word covers humans, animals, plants — every living being."
+              },
+              "reasoning": "The chapter's central claim — 'from food, all भूतानि come to be' — only works because भूतानि means EVERY living being, not just humans.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet भूतानि in NCERT Class 7 Sanskrit (Deepakam) Chapter 9; the glossary gives 'All living beings'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see भूतानि, recall it means 'All living beings'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using भूतानि ('All living beings').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "भूत carries multiple senses across Sanskrit: 'past' (in तेन भूतेन कालेन, 'in the past time'), 'being/creature' (पञ्चभूत = the five elements), and 'spirit/ghost' (Hindi भूत). All trace to the same root भू, 'to be'.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t02_c02",
+              "title": "जिज्ञासा — Curiosity (returns!)",
+              "explanations": {
+                "oneLine": "जिज्ञासा (jijñāsā) — 'the wish to know' (returns from Chapter 1 — same word, same meaning).",
+                "kidFriendly": "जिज्ञासा appears again — the wish to know that drives a student. In this chapter, someone's जिज्ञासा about the order of creation sparks the lesson. Glossary: ज्ञातुम् इच्छा.",
+                "textbook": "जिज्ञासा — 'desire to know'. The chapter uses it (as in Ch.1 and Ch.7) for the curiosity that drives a learner. The same word, the same desiderative formation from ज्ञा.",
+                "expert": "जिज्ञासा is the desiderative noun from ज्ञा (wish-to-know) — recognising it across chapters builds your sense of Sanskrit's productive grammar. Sister words: पिपासा (wish-to-drink), बुभुक्षा (wish-to-eat), चिकित्सा (wish-to-cure)."
+              },
+              "reasoning": "The chapter shows that genuine learning starts with जिज्ञासा — the willingness to ASK why beings come from food and where it all begins.",
+              "useCases": [
+                {
+                  "title": "Familiar pattern",
+                  "description": "ज्ञा + desiderative + -आ = जिज्ञासा ('wish to know').",
+                  "domain": "language"
+                },
+                {
+                  "title": "Family of words",
+                  "description": "Same pattern: पिपासा (thirst), बुभुक्षा (hunger), चिकित्सा (wish to cure).",
+                  "domain": "language"
+                },
+                {
+                  "title": "Curiosity-driven",
+                  "description": "The chapter's lesson begins because someone is curious — that is good Sanskrit pedagogy.",
+                  "domain": "textbook"
+                }
+              ],
+              "beyondTheBook": "Recognising जिज्ञासा/पिपासा/बुभुक्षा as ONE pattern (desiderative-noun-of-X) is one of those moments where Sanskrit's regularity rewards you across many chapters.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t02_c03",
+              "title": "उत्पत्तिक्रमम् — The Order of Origin",
+              "explanations": {
+                "oneLine": "उत्पत्तिक्रमम् (utpatti-kramam) — 'the order/sequence in which things come into being'.",
+                "kidFriendly": "उत्पत्तिक्रमम् means the order/sequence of origination — the step-by-step chain of how things come to be. The chapter teaches the उत्पत्तिक्रमम्: food → beings → rain → yajna → action. Glossary: उत्पत्तेः क्रमम् ('the sequence of origin').",
+                "textbook": "उत्पत्तिक्रमम् — 'order of origination', glossed उत्पत्तेः क्रमम्. A neuter accusative form (the object of जानीयात्).",
+                "expert": "उत्पत्तिक्रमम् = उत्पत्ति ('arising, origination', उत् + पद् 'to step up') + क्रमम् ('order, sequence'). The Gītā's verse is exactly this — the सूचिका of how things arise in order."
+              },
+              "reasoning": "The chapter uses उत्पत्तिक्रमम् as the name for the chain it teaches — the ordered sequence of creation.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet उत्पत्तिक्रमम् in NCERT Class 7 Sanskrit (Deepakam) Chapter 9; the glossary gives 'Order of origin'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see उत्पत्तिक्रमम्, recall it means 'Order of origin'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using उत्पत्तिक्रमम् ('Order of origin').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "Sanskrit philosophy is very fond of क्रम (order/sequence): सृष्टिक्रम (order of creation), प्रलयक्रम (order of dissolution), कर्मक्रम (order of action). Naming a sequence makes it teachable.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t02_c04",
+              "title": "ओषधीनाम् — Of Herbs",
+              "explanations": {
+                "oneLine": "ओषधीनाम् (oṣadhīnām) — 'of the herbs (medicinal plants)'.",
+                "kidFriendly": "ओषधीनाम् means 'of the herbs' — the genitive plural of ओषधि. The chapter mentions ओषधीनाम् as part of the chain of life — plants/herbs as a key link between rain and beings. Glossary: औषधोपयोगिपादपानाम् ('of medicinally-useful plants').",
+                "textbook": "ओषधीनाम् — genitive plural of ओषधि ('herb, medicinal plant'), glossed औषधोपयोगि-पादपानाम्. The case ending -आनाम् is the standard feminine ī-stem genitive plural.",
+                "expert": "ओषधि literally suggests plants that 'hold (धि-) heat/efficacy (ओष-)' — i.e. potent, medicinal plants. The Sanskrit medical tradition (Āyurveda) catalogues thousands of ओषधि; the same word survives in modern Hindi/Sanskrit for medicinal herbs."
+              },
+              "reasoning": "The chapter ties ओषधीनाम् (herbs) into the cycle of creation — they connect rain to food to living beings.",
+              "useCases": [
+                {
+                  "title": "Read it in the chapter",
+                  "description": "You meet ओषधीनाम् in NCERT Class 7 Sanskrit (Deepakam) Chapter 9; the glossary gives 'Of herbs'.",
+                  "domain": "textbook"
+                },
+                {
+                  "title": "Recognise the meaning",
+                  "description": "When you see ओषधीनाम्, recall it means 'Of herbs'.",
+                  "domain": "language"
+                },
+                {
+                  "title": "Use it in a sentence",
+                  "description": "Try a simple Sanskrit sentence using ओषधीनाम् ('Of herbs').",
+                  "domain": "speech"
+                }
+              ],
+              "beyondTheBook": "The plant chapter of Sanskrit knowledge — from the Vedas through Caraka and Suśruta — is the world's longest continuous herbal medical tradition; ओषधि is its core word.",
+              "relatedConceptIds": [],
+              "relatedQuestionIds": [],
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ],
+          "questions": [
+            {
+              "id": "sch09_t02_q01",
+              "prompt": "'भूतानि' means —",
+              "questionType": "mcq",
+              "options": [
+                "foods",
+                "all living beings",
+                "clouds",
+                "tools"
+              ],
+              "answer": "all living beings",
+              "solutionSteps": [
+                "Glossary: भूतानि = प्राणिनः ('living ones').",
+                "Past-participle of भू, 'beings/those that have become'."
+              ],
+              "commonMistakes": [
+                "भूतानि is BEINGS, not foods or clouds — the verse says all beings come FROM food."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t02_q02",
+              "prompt": "'जिज्ञासा' appears in this chapter again — it means —",
+              "questionType": "mcq",
+              "options": [
+                "fear",
+                "the wish to know (curiosity)",
+                "hunger",
+                "sleep"
+              ],
+              "answer": "the wish to know (curiosity)",
+              "solutionSteps": [
+                "Glossary: जिज्ञासा = ज्ञातुम् इच्छा ('the wish to know').",
+                "Desiderative noun from ज्ञा — the same word as in Chapter 1."
+              ],
+              "commonMistakes": [
+                "जिज्ञासा is CURIOSITY (wish to know), familiar from Chapter 1."
+              ],
+              "variations": [],
+              "difficulty": 1,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_t02_q03",
+              "prompt": "'जानीयात्' is in which mood — and what does it convey?",
+              "questionType": "mcq",
+              "options": [
+                "imperative — a strict command",
+                "optative — 'should / ought to'",
+                "past — 'knew'",
+                "passive — 'was known'"
+              ],
+              "answer": "optative — 'should / ought to'",
+              "solutionSteps": [
+                "Glossary: जानीयात् = अवगच्छेत् ('should understand').",
+                "Optative ending -यात् = 'ought to' — Sanskrit's polite moral 'should'."
+              ],
+              "commonMistakes": [
+                "जानीयात् is OPTATIVE ('should know'), not a strict command — see the -यात् ending."
+              ],
+              "variations": [],
+              "difficulty": 3,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": true
+            },
+            {
+              "id": "sch09_t02_q04",
+              "prompt": "'ओषधीनाम्' means —",
+              "questionType": "mcq",
+              "options": [
+                "of stars",
+                "of herbs / medicinal plants",
+                "of mountains",
+                "of birds"
+              ],
+              "answer": "of herbs / medicinal plants",
+              "solutionSteps": [
+                "Glossary: ओषधीनाम् = औषधोपयोगि-पादपानाम् ('of medicinally-useful plants').",
+                "Genitive plural of ओषधि ('medicinal herb')."
+              ],
+              "commonMistakes": [
+                "ओषधि is a HERB / medicinal plant — the same root behind Hindi औषधि (medicine)."
+              ],
+              "variations": [],
+              "difficulty": 2,
+              "pageRefs": [
+                94,
+                95,
+                96,
+                97,
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ]
+        }
+      ],
+      "pageRefs": [
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
     }
   ]
 }
