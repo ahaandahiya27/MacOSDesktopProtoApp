@@ -15,9 +15,14 @@ final class WhatIfArticleRoutingTests: XCTestCase {
             XCTAssertEqual(entry.id, key)
             XCTAssertEqual(entry.filename, "\(key).html")
             let chPrefix = chapterPrefix(from: key)
-            let expectedFolder = chPrefix.hasPrefix("mch")
-                ? "Articles/MathsChapter\(Int(chPrefix.dropFirst(3)) ?? -1)"
-                : "Articles/Chapter\(Int(chPrefix.dropFirst(2)) ?? -1)"
+            let expectedFolder: String
+            if chPrefix.hasPrefix("mch") {
+                expectedFolder = "Articles/MathsChapter\(Int(chPrefix.dropFirst(3)) ?? -1)"
+            } else if chPrefix.hasPrefix("sch") {
+                expectedFolder = "Articles/SanskritChapter\(Int(chPrefix.dropFirst(3)) ?? -1)"
+            } else {
+                expectedFolder = "Articles/Chapter\(Int(chPrefix.dropFirst(2)) ?? -1)"
+            }
             XCTAssertEqual(entry.chapterFolder, expectedFolder)
         }
     }
@@ -48,7 +53,7 @@ final class WhatIfArticleRoutingTests: XCTestCase {
                 continue
             }
             let chPrefix = chapterPrefix(from: key)
-            if chPrefix.hasPrefix("mch") {
+            if chPrefix.hasPrefix("mch") || chPrefix.hasPrefix("sch") {
                 XCTAssertTrue(html.contains("data-article-id=\"\(key)\""),
                     "WhatIf HTML at \(resolved.lastPathComponent) doesn't declare data-article-id=\"\(key)\".")
             } else {
