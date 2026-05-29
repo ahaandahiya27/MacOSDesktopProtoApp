@@ -271,6 +271,7 @@ struct SettingsScreen: View {
 
             Section(header: Text("Data")) {
                 BackupExportButton()
+                BackupRestoreButton()
                 Button(action: { showClearConfirm = true }) {
                     Text("Clear All History")
                         .foregroundColor(.red)
