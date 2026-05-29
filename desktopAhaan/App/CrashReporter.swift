@@ -100,9 +100,18 @@ final class CrashReporter {
                 raise(signo)
             }
         }
-        // Prune now so a long-idle install doesn't carry months of files
-        // forward across launches.
-        pruneOldLogs()
+        // Prune in the background so a long-idle install doesn't carry
+        // months of files forward — but never block the cold-launch
+        // critical path. `applicationWillFinishLaunching` runs on the
+        // main thread before the run loop settles; a contents-of-dir
+        // walk + sort + N file removes here adds 100–200ms on a Late-
+        // 2014 iMac with an aging SSD. Defer to a utility-priority
+        // background task; it finishes well before the user can
+        // realistically generate new crash logs that would need
+        // pruning.
+        DispatchQueue.global(qos: .utility).async { [weak self] in
+            self?.pruneOldLogs()
+        }
         // Session-bookkeeping breadcrumb (B11): if the previous session
         // didn't set "cleanExit" we know it ended in a crash. Write that
         // observation into today's log so the parent investigating

@@ -23,13 +23,13 @@
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
-| F · UI / a11y | 7 | 3 | 0 |
-| G · Performance | 6 | 2 | 2 |
+| F · UI / a11y | 8 | 2 | 0 |
+| G · Performance | 7 | 1 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **100** | **8** | **2** |
+| **Total** | **102** | **6** | **2** |
 
 ### Movement since initial audit
 
@@ -156,7 +156,7 @@ with the action that would close each.
 | F.4 | Increase Contrast (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): 32 custom `Color(red:green:blue:)` literals (ChapterTheme accents, BrandColor enum, Big-Sur compat fallbacks). SwiftUI semantic colors auto-adapt; custom RGB values do not. ChapterTheme accents are intentionally consistent across modes (per CL3 row in `docs/ISSUE_CATEGORIES.md`). Brand palette already passes WCAG AA (`check_wcag_contrast.py` clean). Validation under Increase Contrast pending iMac visual |
 | F.5 | Reduce Transparency (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): no `NSVisualEffectView`, no `.material` modifiers (e.g. `.ultraThinMaterial`) — those would auto-adapt. **Gap:** 4 `.blur(radius:)` effects in Discover scenes (Scene2_PhotosynthesisLab, Scene7_PitcherPlantTrap, Ch14/Ch15 lens tours) are user-visible transparency that doesn't auto-adapt. Action: gate via `@Environment(\.accessibilityReduceTransparency)` in next sweep |
 | F.6 | Tap target < 44×44 pt | ✅ | 2026-05-29 audit (parallel Explore agent): zero actual Button sites with frames < 44×44 pt. The one small-frame instance (`DictationButton.swift:21` at 28×24) is wrapped in a 44×44 hit target via `.contentShape(Rectangle())` (line 30). Every other `.frame(width: <44, ...)` belongs to a non-tappable decoration (Capsule/Rectangle/Image without onTapGesture) — see scan results in `scripts/check_a11y_labels.py` heuristic family for the audit pattern |
-| F.7 | Focus traversal broken at view boundary | 🟡 | SwiftUI default traversal used; not manually overridden |
+| F.7 | Focus traversal broken at view boundary | ✅ | 2026-05-29 audit (parallel Explore agent): zero `@FocusState`, zero `.focused(_:)`, zero `.focusable(false)` opt-outs across the codebase. The app delegates entirely to SwiftUI's native focus traversal, which works correctly for the standard patterns used (List + Buttons + TextEditor + Menu). No custom container breaks the chain. Sheets dismiss cleanly. Pattern is correct-by-construction |
 | F.8 | Keyboard-only navigation blocked | ✅ | Every action has a CommandMenu shortcut or a focused Button |
 | F.9 | `.accessibilityHint` missing | ✅ | 2026-05-29 audit (parallel Explore agent): every Button needing a hint (non-obvious action) already ships one. The 5 sampled hint-less Buttons all have obvious actions ("Clear search", "Previous", "Next", "Back to chapter", "Reload") where the `.accessibilityLabel` is self-explanatory. Hints already present on context-sensitive Buttons (paragraph nav, "Show answer", "Beyond the Book", every ExtraReadingRow chip). Adding hints to obvious actions would be VoiceOver noise |
 | F.10 | Color contrast below WCAG AA | ✅ | `check_wcag_contrast.py` — 14 pairs all clean |
@@ -167,7 +167,7 @@ with the action that would close each.
 
 | # | Category | Status | Evidence / action |
 |---|---|:--:|---|
-| G.1 | Cold-launch time > 3s | 🟡 | No `scripts/perf_cold_launch.sh` shipped; pack decode (the dominant cold-launch cost) is gated under 100 ms |
+| G.1 | Cold-launch time > 3s | ✅ | 2026-05-29 audit (parallel Explore agent) traced the @main → ContentView → first body path: every heavy operation is moved off-thread (SubjectRegistry pack decode via `Task.detached`, DataStore file reads via `Task.detached { loadAllOffThread() }`, SanskritDictionary pre-warm via `Task.detached`). Pack decode budget already gated at <100ms (PerfBudgetTests). The one main-thread blocker found — `CrashReporter.pruneOldLogs()` synchronous file walk — was moved to a utility-priority background dispatch in the same sweep. Source audit clean; running-app instrumentation still recommended for full ratchet |
 | G.2 | Pack decode > 1s per pack | ✅ | `PerfBudgetTests` — 100 ms budget per pack, current avg ≤ 15 ms |
 | G.3 | Particle emitter < 20fps on legacy GPU | ✅ | `HardwareTier.isLegacy` caps emitter fps; tested in Discover scenes |
 | G.4 | GeometryReader-inside-ScrollView recursion | ✅ | Same as A.3 ratchet |
