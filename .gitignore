@@ -47,3 +47,6 @@ hrone_test/
 
 # Claude Code local session settings (per-machine; never tracked)
 .claude/
+
+# Release DMG output (scripts/build_release_dmg.sh) — built artifacts, never tracked
+dist/

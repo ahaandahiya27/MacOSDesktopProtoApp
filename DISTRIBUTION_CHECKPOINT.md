@@ -135,5 +135,14 @@ init gate sets that key first on a fresh install, so only the new tour shows.
 
 - pbxproj regenerated (`scripts/generate_compat_pbxproj.py`) to add the 3 new
   source files + 2 test files to the target.
-- Full gate (`scripts/ci-build-test.sh`) green with onboarding tests included.
+- **My code verified in isolation:** a direct `xcodebuild` Debug build + test
+  of the full target compiled cleanly and ran **13/13 onboarding tests green**
+  (`OnboardingFirstLaunchTests` 10 + `OnboardingSkipTests` 3, `** TEST
+  SUCCEEDED **`). The build compiles `desktopAhaanApp.swift`'s onboarding gate,
+  `FirstLaunchTourView`, `OnboardingStep`, and `OnboardingState`.
+- **Parallel-run note:** at one point the shared `scripts/ci-build-test.sh`
+  gate went transiently red on `check_dead_swift_types` flagging Agent A's
+  not-yet-wired `AchievementGalleryView` — outside this agent's domain. It
+  cleared once Agent A referenced the view; the lint now reports clean
+  (1075 type decls, all referenced).
 - `DISTRIBUTION_COMPLETE_SENTINEL_v1` printed on the final commit.

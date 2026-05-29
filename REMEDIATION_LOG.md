@@ -3362,3 +3362,44 @@ No View / Model / Service / `desktopAhaanApp.swift` / pack JSON / Resources
 HTML touched. STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Agent C (Distribution + Onboarding), PARALLEL OVERNIGHT v2
+
+Shipped the "fresh install on a new iMac" story:
+
+- **DMG packaging** — `scripts/build_release_dmg.sh` (ad-hoc by default,
+  Developer-ID/notarize path when `$DEVELOPMENT_TEAM` is set),
+  `scripts/check_release_build.sh` (pre-DMG sanity: version/build non-empty,
+  `MACOSX_DEPLOYMENT_TARGET == 11.5`, locked 5-key entitlements, 10 AppIcon
+  PNGs, zero-warning Release build), `scripts/install-receipt.sh` (read-only
+  path map), `desktopAhaan/Config/DevSigning.xcconfig` (headless ad-hoc
+  signing defaults). Big Sur tooling only.
+- **First-launch onboarding** — `Views/Onboarding/OnboardingStep.swift`
+  (4-page tour data) + `Views/Onboarding/FirstLaunchTourView.swift` (Big Sur
+  switch-pager, Skip on every page, CTA opens Science Ch.1) +
+  `Services/OnboardingState.swift` (`hasSeenOnboarding` flag). Wired in
+  `desktopAhaanApp.swift` via an `init()` gate that presents the new tour and
+  suppresses the legacy welcome tour + What's New on a fresh install (no
+  double onboarding); upgrading users are migrated silently.
+- **Tests** — `OnboardingFirstLaunchTests` (10) + `OnboardingSkipTests` (3):
+  flag lifecycle/persistence, tour-catalog shape, every-page render smoke.
+  Verified in isolation: full-target `xcodebuild` build + 13/13 green.
+- **Docs** — `README.md` v2 (parent-friendly), `INSTALL.md` (non-developer,
+  incl. Gatekeeper Open-Anyway flow), `DISTRIBUTION.md` (release runbook).
+  `.gitignore` gains `dist/` (DMG output).
+
+**Cross-agent incident + lesson.** A parallel agent twice ran a `git
+clean`-class working-tree wipe + checkout-revert that erased every untracked
+file this agent had authored and reverted its `desktopAhaanApp.swift` /
+`README.md` edits. Recovery: recreated all files verbatim from working
+context, then **committed immediately** — tracked files survive `git clean`,
+so an early commit (not a hold-until-gate) is the durable guard when agents
+share one working tree and any may run `git clean`. Separately, the shared
+`ci-build-test` gate went transiently red on `check_dead_swift_types` for
+Agent A's not-yet-wired `AchievementGalleryView`; it cleared once A referenced
+the view (no change made here — that file is outside this agent's domain).
+STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
