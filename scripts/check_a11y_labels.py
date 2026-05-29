@@ -36,17 +36,23 @@ import sys
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE_GLOB = os.path.join(REPO_ROOT, "desktopAhaan", "**", "*.swift")
 # Ratchet floor — see module docstring. Raise this as coverage improves.
-# Baseline 2026-05-29 (post-improved-heuristic): 84.78%. Floor at 80
-# carries a ~5-point buffer to absorb file-tree edits.
-COVERAGE_FLOOR = 80
+# 2026-05-29: baseline 63% → 85% after crediting Card/Row/Chip-suffixed
+# custom-view labels → 96% after crediting any Text(...) inside a label
+# slot (not just Text("literal"), which missed the common Boss-Quiz
+# pattern `label: { HStack { Text(variable) } }`). Floor sits at 90
+# with a 6-point cushion.
+COVERAGE_FLOOR = 90
 
 LABEL_MARKERS = (
     ".accessibilityLabel(",
     ".accessibilityHint(",
     ".help(",
     "Label(",      # SwiftUI Label(_, systemImage:) auto-narrates
-    'Text("',      # Text inside a Button body auto-narrates
-    "Text(\"",
+    "Text(",       # Any Text(...) inside a Button body auto-narrates —
+                   # includes Text("literal"), Text(opt), Text(verbatim:),
+                   # Text(LocalizedStringKey(...)), all of which VoiceOver
+                   # reads. Catches the `label: { HStack { Text(variable) ... } }`
+                   # pattern that's common in Boss Quiz answer Buttons.
 )
 
 # When a Button's label slot is a custom View type whose name ends

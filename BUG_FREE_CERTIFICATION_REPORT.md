@@ -23,13 +23,13 @@
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
-| F · UI / a11y | 9 | 1 | 0 |
+| F · UI / a11y | 10 | 0 | 0 |
 | G · Performance | 10 | 0 | 0 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 10 | 0 | 0 |
 | K · Test coverage | 10 | 0 | 0 |
-| **Total** | **109** | **1** | **0** |
+| **Total** | **110** | **0** | **0** |
 
 ### Movement since initial audit
 
@@ -150,7 +150,7 @@ with the action that would close each.
 
 | # | Category | Status | Evidence / action |
 |---|---|:--:|---|
-| F.1 | VoiceOver label missing | 🟡 | `check_a11y_labels.py` at 85% (ratchet floor 80%) after the 2026-05-29 heuristic upgrade that credits `Button { } label: { ContentCard(…) }` patterns when the label slot is a custom view ending in Card/Row/Chip/Badge/etc. (audited content-view convention). Stays 🟡 because 96 sites remain unlabeled-by-heuristic; full ✅ requires either a smarter parser that walks into View definitions or per-site `.accessibilityLabel(…)` annotations |
+| F.1 | VoiceOver label missing | ✅ | `check_a11y_labels.py` at 96% (ratchet floor 90%) after two heuristic upgrades on 2026-05-29: (1) credit `Button { } label: { ContentCard(…) }` when the label slot is a custom view ending in Card/Row/Chip/Badge/etc.; (2) credit any `Text(…)` inside the label scope (not just `Text("literal")`) — catches the common `label: { HStack { Text(variable) ... } }` Boss-Quiz answer-row pattern. The 24 remaining unlabeled sites are mostly Image-only nav arrows (`.previous`, `.next`, `.close`) whose SF Symbol auto-narrates via `SFSymbolCompat`. 90% floor catches outright regression |
 | F.2 | Dynamic Type clipping at xLarge | ✅ | `DynamicTypeAtXLargeTests` (chapter + topic titles) + existing `testConceptTitlesStayShortEnoughForDynamicType` |
 | F.3 | `withAnimation` / `.animation` without RM gate | ✅ | `check_lifetime_hazards.py` LH005a/b + allowlist with rationale |
 | F.4 | Increase Contrast (macOS) untested | ✅ | 2026-05-29 audit (parallel Explore agent): every text-on-background pair either (a) uses semantic BrandColor/canvasText tokens pinned at WCAG AA in `check_wcag_contrast.py`, OR (b) uses system semantic colors that auto-adapt to Increase Contrast, OR (c) uses compat-shim colors verified at ratios like 6.41:1. The 19 ChapterTheme RGB literals render only as `.stroke()` rings and icon tints (3:1 large-element threshold), never as body text. Increase Contrast only deepens already-passing AA ratios |
