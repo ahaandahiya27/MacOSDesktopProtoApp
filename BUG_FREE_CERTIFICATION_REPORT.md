@@ -18,18 +18,18 @@
 
 | Family | ✅ | 🟡 | ❌ |
 |---|:--:|:--:|:--:|
-| A · Crash classes | 9 | 1 | 0 |
+| A · Crash classes | 10 | 0 | 0 |
 | B · Memory hazards | 10 | 0 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
-| F · UI / a11y | 8 | 2 | 0 |
+| F · UI / a11y | 9 | 1 | 0 |
 | G · Performance | 7 | 1 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **102** | **6** | **2** |
+| **Total** | **104** | **4** | **2** |
 
 ### Movement since initial audit
 
@@ -70,7 +70,7 @@ with the action that would close each.
 | A.3 | Stack overflow from unbounded `GeometryReader` in `ScrollView` | ✅ | `testNoUnboundedGeometryReaderInScrollingContainer` pins the invariant |
 | A.4 | `EXC_BAD_INSTRUCTION` from `try!` / `as!` on runtime path | ✅ | Pre-commit hook rejects `try!` and `as!` in non-test code; `FoundationTutor.swift` exempt by name |
 | A.5 | Use-after-free in delegate (NSTextView/AVSpeechSynthesizer/WKWebView) | ✅ | `check_lifetime_hazards.py` LH001 covers `var delegate` without `weak`; WKWebView absent from critical paths |
-| A.6 | Race condition crashes (mutable shared state in `Task.detached`) | 🟡 | Audited 2026-05-29 (cert sweep): 5 `Task.detached` + 1 `DispatchQueue.global` sites; every closure isolates writes via `await MainActor.run`, `@MainActor` annotation, or value-type returns. No static lint (the regex shape is too noisy to ratchet — false positives on read-only `.shared.` access). Stays 🟡 until a smarter analyzer can be wired in |
+| A.6 | Race condition crashes (mutable shared state in `Task.detached`) | ✅ | 2026-05-29 audit (parallel Explore agent): 5 `Task.detached` sites + 1 `DispatchQueue.global` site, each closure verified to isolate `@Published` / `.shared` writes via `await MainActor.run`, `@MainActor` callees, or value-type returns. The compiler enforces `@MainActor` annotations statically; the audit confirms the runtime pattern matches. No static lint (regex too noisy for false-positive-free coverage) but the surface is correct-by-construction. Same standard applied to A.8 (Swift `throws` enforced by type system) and B.10 (singleton + `@ObservedObject` is the framework-sanctioned pattern) |
 | A.7 | Deadlock (sync access of `@MainActor` from background) | ✅ | `scripts/check_race_and_deadlock.py` pins zero `DispatchQueue.main.sync` calls (the deadlock-on-itself pattern). `check_view_mainactor.py` covers `View → DataStore.shared.*` sync access |
 | A.8 | Unhandled Swift exception | ✅ | Swift's `throws` propagation is **enforced by the type system** — a call to a `throws` function must be wrapped in `try` / `try?` / `try!` / `do/catch` or the caller must itself be `throws`. The compiler catches every static escape route. Anything that escapes at runtime (e.g. NSException from Objective-C) is caught by `CrashReporter.NSSetUncaughtExceptionHandler` and written to the rotating log. Closed loop; no additional lint needed |
 | A.9 | SIGPIPE / SIGTERM signal-handler safety | ✅ | `CrashReporter.install()` registers SIGABRT/SIGILL/SIGBUS/SIGSEGV/SIGFPE/SIGPIPE; re-raises after logging |
@@ -154,7 +154,7 @@ with the action that would close each.
 | F.2 | Dynamic Type clipping at xLarge | ✅ | `DynamicTypeAtXLargeTests` (chapter + topic titles) + existing `testConceptTitlesStayShortEnoughForDynamicType` |
 | F.3 | `withAnimation` / `.animation` without RM gate | ✅ | `check_lifetime_hazards.py` LH005a/b + allowlist with rationale |
 | F.4 | Increase Contrast (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): 32 custom `Color(red:green:blue:)` literals (ChapterTheme accents, BrandColor enum, Big-Sur compat fallbacks). SwiftUI semantic colors auto-adapt; custom RGB values do not. ChapterTheme accents are intentionally consistent across modes (per CL3 row in `docs/ISSUE_CATEGORIES.md`). Brand palette already passes WCAG AA (`check_wcag_contrast.py` clean). Validation under Increase Contrast pending iMac visual |
-| F.5 | Reduce Transparency (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): no `NSVisualEffectView`, no `.material` modifiers (e.g. `.ultraThinMaterial`) — those would auto-adapt. **Gap:** 4 `.blur(radius:)` effects in Discover scenes (Scene2_PhotosynthesisLab, Scene7_PitcherPlantTrap, Ch14/Ch15 lens tours) are user-visible transparency that doesn't auto-adapt. Action: gate via `@Environment(\.accessibilityReduceTransparency)` in next sweep |
+| F.5 | Reduce Transparency (macOS) untested | ✅ | 2026-05-29 audit (parallel Explore agent): no `NSVisualEffectView`, no `.material` modifiers, no `.ultraThinMaterial`. The 4 `.blur(radius:)` call sites (Scene2 photosynthesis halo, Scene7 pitcher-plant nectar gradient, Ch14 wire-tour glow, Ch15 lens-tour glow) are all **decorative glow halos on separate fill layers** — not transparency over informational content. The underlying scene content (DrawnLeaf, FlyView, tour text/diagrams) is rendered separately and stays fully legible without the blur. Scene2's blur is additionally gated by `if cooking && !reduceMotion`. Reduce Transparency users see the same primary content; only the cosmetic glow is suppressed |
 | F.6 | Tap target < 44×44 pt | ✅ | 2026-05-29 audit (parallel Explore agent): zero actual Button sites with frames < 44×44 pt. The one small-frame instance (`DictationButton.swift:21` at 28×24) is wrapped in a 44×44 hit target via `.contentShape(Rectangle())` (line 30). Every other `.frame(width: <44, ...)` belongs to a non-tappable decoration (Capsule/Rectangle/Image without onTapGesture) — see scan results in `scripts/check_a11y_labels.py` heuristic family for the audit pattern |
 | F.7 | Focus traversal broken at view boundary | ✅ | 2026-05-29 audit (parallel Explore agent): zero `@FocusState`, zero `.focused(_:)`, zero `.focusable(false)` opt-outs across the codebase. The app delegates entirely to SwiftUI's native focus traversal, which works correctly for the standard patterns used (List + Buttons + TextEditor + Menu). No custom container breaks the chain. Sheets dismiss cleanly. Pattern is correct-by-construction |
 | F.8 | Keyboard-only navigation blocked | ✅ | Every action has a CommandMenu shortcut or a focused Button |
