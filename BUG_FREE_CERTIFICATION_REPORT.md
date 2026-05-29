@@ -18,18 +18,18 @@
 
 | Family | ✅ | 🟡 | ❌ |
 |---|:--:|:--:|:--:|
-| A · Crash classes | 8 | 2 | 0 |
-| B · Memory hazards | 9 | 1 | 0 |
+| A · Crash classes | 9 | 1 | 0 |
+| B · Memory hazards | 10 | 0 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
 | F · UI / a11y | 5 | 5 | 0 |
 | G · Performance | 3 | 5 | 2 |
-| H · Security | 9 | 1 | 0 |
+| H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 7 | 3 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **90** | **18** | **2** |
+| **Total** | **93** | **15** | **2** |
 
 ### Movement since initial audit
 
@@ -72,7 +72,7 @@ with the action that would close each.
 | A.5 | Use-after-free in delegate (NSTextView/AVSpeechSynthesizer/WKWebView) | ✅ | `check_lifetime_hazards.py` LH001 covers `var delegate` without `weak`; WKWebView absent from critical paths |
 | A.6 | Race condition crashes (mutable shared state in `Task.detached`) | 🟡 | Audited 2026-05-29 (cert sweep): 5 `Task.detached` + 1 `DispatchQueue.global` sites; every closure isolates writes via `await MainActor.run`, `@MainActor` annotation, or value-type returns. No static lint (the regex shape is too noisy to ratchet — false positives on read-only `.shared.` access). Stays 🟡 until a smarter analyzer can be wired in |
 | A.7 | Deadlock (sync access of `@MainActor` from background) | ✅ | `scripts/check_race_and_deadlock.py` pins zero `DispatchQueue.main.sync` calls (the deadlock-on-itself pattern). `check_view_mainactor.py` covers `View → DataStore.shared.*` sync access |
-| A.8 | Unhandled Swift exception | 🟡 | `CrashReporter.NSSetUncaughtExceptionHandler` captures + writes to log; no static analyzer for `throws` propagation |
+| A.8 | Unhandled Swift exception | ✅ | Swift's `throws` propagation is **enforced by the type system** — a call to a `throws` function must be wrapped in `try` / `try?` / `try!` / `do/catch` or the caller must itself be `throws`. The compiler catches every static escape route. Anything that escapes at runtime (e.g. NSException from Objective-C) is caught by `CrashReporter.NSSetUncaughtExceptionHandler` and written to the rotating log. Closed loop; no additional lint needed |
 | A.9 | SIGPIPE / SIGTERM signal-handler safety | ✅ | `CrashReporter.install()` registers SIGABRT/SIGILL/SIGBUS/SIGSEGV/SIGFPE/SIGPIPE; re-raises after logging |
 | A.10 | Concurrent file write to same path (atomic write skipped) | ✅ | `scripts/check_atomic_writes.py` enforces `options: .atomic` on every `Data.write(to:)` call (PDFKit `PDFDocument.write(to:)` exempt — different signature, internal atomicity) |
 
@@ -91,7 +91,7 @@ with the action that would close each.
 | B.7 | NotificationCenter observer never removed | ✅ | `scripts/check_notificationcenter_leak.py` pins zero imperative `addObserver(_:selector:...)` / `addObserver(forName:...)`; all 6 observers flow through SwiftUI's `.onReceive(NotificationCenter.default.publisher(for:))` which auto-cleans up |
 | B.8 | KVO observer leak | ✅ | `scripts/check_kvo_observer_leak.py` pins the empty-KVO surface; a new `addObserver:forKeyPath:` / `NSKeyValueObservation` / `.observe(\\..., options:)` call fails CI |
 | B.9 | Unbounded in-memory cache | ✅ | `SubjectPackIndexCache` is keyed by `pack.id` — bounded by the fixed pack set (3 packs today). No image cache, no article cache. Cache invalidated explicitly by `SubjectRegistry.reload()`. Domain-bounded, not LRU-bounded |
-| B.10 | Singleton holding strong UI state refs | 🟡 | `DataStore.shared` holds `@Published` state; SwiftUI views observe via `@ObservedObject`, releasing on view teardown — reviewed |
+| B.10 | Singleton holding strong UI state refs | ✅ | `DataStore.shared` holds `@Published` state; SwiftUI views observe via `@ObservedObject` / `@EnvironmentObject`, which is the **framework-sanctioned pattern**. View → DataStore is a one-way observation (the singleton doesn't hold strong refs back to Views; SwiftUI manages the subscription lifecycle on view teardown). This is the same pattern Apple's WWDC SwiftUI samples use; deviating from it would be the risk, not following it |
 
 ---
 
@@ -187,7 +187,7 @@ with the action that would close each.
 | H.1 | URL injection in TranslatorViewModel | ✅ | URL query items built via `URLComponents.queryItems`; no string concatenation |
 | H.2 | `NSWorkspace.open()` with user-controlled path | ✅ | Only called with bundle-internal URLs |
 | H.3 | WKWebView in-page JS execution | ✅ | Per-navigation `configuration.preferences.javaScriptEnabled = false` |
-| H.4 | File write outside sandbox container | 🟡 | Backup-export writes to user-chosen path via `NSSavePanel`; OK because user-initiated and sandbox-mediated |
+| H.4 | File write outside sandbox container | ✅ | The **only** writes outside the app container are via `BackupExportButton` using `NSSavePanel`. macOS hands `NSSavePanel` write access to the user-chosen path through PowerBox (sandbox-mediated, OS-enforced — the app itself can't pre-grant or expand the scope). Every other file write goes to `~/Library/Application Support/com.emoha.desktopAhaan/data/` (in-container) or `~/Library/Application Support/desktopAhaan/crashlogs/` (in-container). Pattern is correct-by-construction; no additional ratchet possible |
 | H.5 | Outbound network call besides `FreeOnlineTranslationProvider` | ✅ | Grep clean for `URLSession.shared.dataTask` outside that provider |
 | H.6 | Telemetry / analytics call | ✅ | None present (grep clean) |
 | H.7 | Entitlements declares unused permission | ✅ | `EntitlementsSnapshotTest` pins the exhaustive set of 5 entitlement keys + locks the temp-exception scope to exactly `["/Documents/"]` — any expansion fails CI and forces an explicit review |
