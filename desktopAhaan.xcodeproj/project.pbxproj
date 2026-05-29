@@ -1266,6 +1266,7 @@
 		528B7A7644B56295FC19BA15 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBAA37F0DBA8A0610013437 /* Crash1_TryDiscoverMode_Ch1.swift */; };
 		7FC03FB7E1E6DEB0FF75C8AF /* Crash_BeyondThenDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60091D6C7364D788BE717EB9 /* Crash_BeyondThenDiscover.swift */; };
 		8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */; };
+		889E5F0DA83CB495E5D181AE /* MathsDiscoverWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569146173864AE8FFB7F0F6C /* MathsDiscoverWalkUITests.swift */; };
 		07D8B6C6B70B3A10DD9C65F7 /* SRS_Smoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C172966243DEABD91751F /* SRS_Smoke.swift */; };
 		DDB015C8D62C992B762151A6 /* Surface_AuditWalker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */; };
 /* End PBXBuildFile section */
@@ -2551,6 +2552,7 @@
 		1EBAA37F0DBA8A0610013437 /* Crash1_TryDiscoverMode_Ch1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crash1_TryDiscoverMode_Ch1.swift"; sourceTree = "<group>"; };
 		60091D6C7364D788BE717EB9 /* Crash_BeyondThenDiscover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crash_BeyondThenDiscover.swift"; sourceTree = "<group>"; };
 		EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoldenPathUITests.swift"; sourceTree = "<group>"; };
+		569146173864AE8FFB7F0F6C /* MathsDiscoverWalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDiscoverWalkUITests.swift"; sourceTree = "<group>"; };
 		923C172966243DEABD91751F /* SRS_Smoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SRS_Smoke.swift"; sourceTree = "<group>"; };
 		31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Surface_AuditWalker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -4949,6 +4951,7 @@
 				1EBAA37F0DBA8A0610013437,
 				60091D6C7364D788BE717EB9,
 				EB156BF5302D75DBA4A0B186,
+				569146173864AE8FFB7F0F6C,
 				923C172966243DEABD91751F,
 				31D8B5E1A41E3A1401C4C16B,
 			);
@@ -6362,6 +6365,7 @@
 				528B7A7644B56295FC19BA15 /* Crash1_TryDiscoverMode_Ch1.swift in Sources */,
 				7FC03FB7E1E6DEB0FF75C8AF /* Crash_BeyondThenDiscover.swift in Sources */,
 				8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */,
+				889E5F0DA83CB495E5D181AE /* MathsDiscoverWalkUITests.swift in Sources */,
 				07D8B6C6B70B3A10DD9C65F7 /* SRS_Smoke.swift in Sources */,
 				DDB015C8D62C992B762151A6 /* Surface_AuditWalker.swift in Sources */,
 			);
