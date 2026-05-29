@@ -254,6 +254,19 @@ struct SanskritKoshApp: App {
                 Button("About Audio Narration") {
                     NotificationCenter.default.post(name: .showAboutAudio, object: nil)
                 }
+
+                Divider()
+
+                // Parent / Weekly Progress dashboard. Opens in its own
+                // window (see WeeklyProgressWindow.swift) — no ContentView
+                // sheet routing needed. ⌘⇧W is unused by AppKit defaults
+                // (⌘W closes the window; the Shift variant is free).
+                Button("Weekly Progress") {
+                    WeeklyProgressWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("w", modifiers: [.command, .shift])
             }
         }
     }
