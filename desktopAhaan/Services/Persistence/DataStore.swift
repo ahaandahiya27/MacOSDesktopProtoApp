@@ -265,6 +265,21 @@ final class DataStore: ObservableObject {
     /// `understoodConceptIds.json`. Added 2026-05-26.
     @Published var understoodConceptIds: Set<String> = []
 
+    /// Last-visit timestamp + owning pack per concept id. Feeds the
+    /// Weekly Progress dashboard's per-day concept counts. Written at
+    /// `ConceptDetailView.onAppear` via `recordConceptVisit(id:packId:at:)`
+    /// and persisted to `conceptVisits.json`. NOT `@Published`: the only
+    /// reader (`WeeklyProgressView`) takes a snapshot in `onAppear`, so
+    /// binding it live would re-render the whole app on every concept
+    /// open for no benefit. Hydrated lazily from disk on first
+    /// access/write (see `DataStore+WeeklyActivity.swift`) rather than in
+    /// the cold-launch loader, so it costs nothing until the kid opens a
+    /// concept or the dashboard. Added 2026-05-29 (Parent Dashboard sweep).
+    var conceptVisitHistory: [String: ConceptVisit] = [:]
+    /// One-shot guard so the lazy hydrate of `conceptVisitHistory` reads
+    /// `conceptVisits.json` at most once per process.
+    var didHydrateConceptVisits = false
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files

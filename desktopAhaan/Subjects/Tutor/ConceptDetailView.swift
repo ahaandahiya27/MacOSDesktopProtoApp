@@ -580,6 +580,9 @@ struct ConceptDetailView: View {
             title: concept.title,
             subtitle: chapterLabel
         ))
+        // Feed the Weekly Progress dashboard's per-day concept counts.
+        // Last-visit-wins; coalesced write inside DataStore.
+        dataStore.recordConceptVisit(id: concept.id, packId: pack.id)
     }
 }
 
