@@ -26,10 +26,16 @@ if [ -x "scripts/verify_pack_roundtrip.py" ]; then
 fi
 
 # Bug-Free-Cert pack-integrity + test-target compat lints (D.2/D.3/D.4/D.5/
-# D.6/D.10 + C.10). Pure-Python, deterministic, run unconditionally here so
-# origin/main can never carry a cross-pack id collision, orphan ref, malformed
-# quiz id, or a macOS 12+ API in test code (which the iMac can't compile).
-for lint in check_cross_pack_ids check_orphan_refs check_quiz_id_format check_test_target_compat; do
+# D.6/D.10 + C.10) plus the 2026-05-30 additions: pageRef bounds (D.7),
+# article entry↔file bijection (D.8/D.9), network-egress + telemetry (H.5/H.6),
+# and critical-flow UI-test presence (K.2). Pure-Python, deterministic, run
+# unconditionally here so origin/main can never carry a cross-pack id collision,
+# orphan ref, malformed quiz id, macOS 12+ API in test code (which the iMac
+# can't compile), out-of-range pageRef, orphaned/phantom article, a second
+# network egress path / telemetry SDK, or a deleted crash-regression UI test.
+for lint in check_cross_pack_ids check_orphan_refs check_quiz_id_format check_test_target_compat \
+            check_page_ref_bounds check_article_entry_bundled check_orphan_html \
+            check_network_egress check_critical_uitest_presence; do
     if [ -f "scripts/${lint}.py" ]; then
         echo "pre-push: ${lint}"
         python3 "scripts/${lint}.py" || exit 1

@@ -1,5 +1,31 @@
 # 100-Category Bug-Free Certification Report
 
+**✅ 110/110 — held since 2026-05-29; hardened further 2026-05-30 by the overnight 3-agent run (Agent B).**
+
+> **2026-05-30 hardening pass (Agent B, parallel overnight).** The
+> certification was *already* at 110/110 on arrival — the "85/100" framing
+> in this run's mission brief was stale (prior sweeps had closed every
+> category). Rather than fabricate a regression, this pass **converted six
+> categories that were locked only by audit-rationale, a single Swift test,
+> or a one-time grep into categories additionally locked by a deterministic
+> pure-Python lint** that runs at commit + push time. No score change (it
+> was and remains 110/110); the posture is strictly stronger. The five new
+> lints (count **21 → 26**), each with a built-in `--selftest`, clean against
+> the current tree:
+>
+> | New lint | Locks | Converts from |
+> |---|---|---|
+> | `scripts/check_page_ref_bounds.py` | D.7 | boss-quiz-only Swift test → tree-wide pageRef shape gate (int ∈ [1,1000]; empty lists allowed) |
+> | `scripts/check_article_entry_bundled.py` | D.8 | XCTest-target Swift test → push-time check that all 727 `ArticleEntry` rows resolve to bundled HTML |
+> | `scripts/check_orphan_html.py` | D.9 | XCTest-target Swift test → push-time check that all 727 bundled HTML files are registered (entry↔file bijection) |
+> | `scripts/check_network_egress.py` | H.5 + H.6 | one-time audit grep → gate pinning the sole egress to `FreeOnlineTranslationProvider` + zero telemetry-SDK imports |
+> | `scripts/check_critical_uitest_presence.py` | K.2 | method-count audit → name-level presence gate for the 2 crash-regression + 6 golden/SRS/surface/maths-walk UI tests |
+>
+> Wired into `scripts/hooks/pre-commit` (conditional on the relevant staged
+> file type) and unconditionally into `scripts/hooks/pre-push`. Touch-list
+> compliant (NEW `check_*.py` + append-only hook wiring + report/log only);
+> no View / Model / Service / pack JSON / HTML touched.
+
 **Date:** 2026-05-29
 **Scope:** desktopAhaan macOS SwiftUI app — Big Sur 11.7 / Xcode 13.2.1 / Swift 5.5 deploy target
 **Source:** in-session audit against `SUPERPROMPT_100_CATEGORY_BUG_FREE_CERTIFICATION.md` (inline; the `run_bug_free_cert.sh` 22-hour dangerous-mode wrapper was not launched)
@@ -146,9 +172,9 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 | D.4 | Orphan `relatedConceptIds` | ✅ | `testNoConceptHasBrokenRelatedQuestionIds` + `testRelatedConceptIdsAreSymmetric` **+ `scripts/check_orphan_refs.py`** (per-pack resolution, gated commit + push) |
 | D.5 | Orphan `relatedQuestionIds` | ✅ | Same as D.4 **+ `scripts/check_orphan_refs.py`** |
 | D.6 | `conceptMap` node id doesn't resolve | ✅ | `testSanskritConceptMapEdgesResolve` (sanskrit) **+ `scripts/check_orphan_refs.py`** which validates conceptMap **edge→node** integrity across **all** packs (science included — closes the prior science-only gap), tolerating Maths synthetic "pivot" nodes by checking edge endpoints resolve to declared nodes rather than to concepts |
-| D.7 | `pageRefs` out of PDF range | ✅ | `testBossQuizMigrationRatchet.testEveryBossQuizHasPageRefs` pins boss-quiz; chapter-question pageRefs validated at content authoring. (PDF not bundled, so absolute-range validation N/A — presence + non-negativity is what is checked) |
-| D.8 | `ArticleEntry` references a non-bundled HTML file | ✅ | `testArticleFilenamesMatchEntryIds` + per-chapter routing ratchets; re-audit confirmed all 727 entries map to bundled HTML |
-| D.9 | Bundled HTML file with no `ArticleEntry` registration | ✅ | `ExtraReadingRowTests` plus per-chapter article-presence tests; re-audit confirmed all 727 bundled HTML files are registered |
+| D.7 | `pageRefs` out of PDF range | ✅ | `testBossQuizMigrationRatchet.testEveryBossQuizHasPageRefs` pins boss-quiz presence **+ `scripts/check_page_ref_bounds.py`** (2026-05-30) validates the *shape* of every `pageRefs` list tree-wide: each element is an integer in `[1, 1000]` (well above the largest real NCERT page, 241), empty lists allowed. The source PDF isn't bundled so an exact upper bound is impossible, but negatives/zeros/non-ints/gross typos are now gated at commit + push |
+| D.8 | `ArticleEntry` references a non-bundled HTML file | ✅ | `testArticleFilenamesMatchEntryIds` + per-chapter routing ratchets **+ `scripts/check_article_entry_bundled.py`** (2026-05-30) — deterministic push-time mirror confirming all 727 `ArticleEntry` rows resolve to a bundled HTML at `Resources/<chapterFolder>/<filename>` |
+| D.9 | Bundled HTML file with no `ArticleEntry` registration | ✅ | `ExtraReadingRowTests` plus per-chapter article-presence tests **+ `scripts/check_orphan_html.py`** (2026-05-30) — the reverse direction of D.8; together they pin an entry↔file bijection (727 ↔ 727, zero orphans) at commit + push |
 | D.10 | Boss-quiz / quick-check id format | ✅ | `BossQuizMigrationRatchetTests` **+ `scripts/check_quiz_id_format.py`** pins `bossquiz_<ns>NN_qII` / `scenecheck_<ns>NN_qII` shape tree-wide (200 boss + 68 scene ids, all canonical) |
 
 ---
@@ -212,8 +238,8 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 | H.2 | `NSWorkspace.open()` with user-controlled path | ✅ | Only called with bundle-internal URLs |
 | H.3 | WKWebView in-page JS execution | ✅ | Per-navigation `configuration.preferences.javaScriptEnabled = false` |
 | H.4 | File write outside sandbox container | ✅ | The **only** writes outside the app container are via `BackupExportButton` using `NSSavePanel`. macOS hands `NSSavePanel` write access to the user-chosen path through PowerBox (sandbox-mediated, OS-enforced — the app itself can't pre-grant or expand the scope). Every other file write goes to `~/Library/Application Support/com.emoha.desktopAhaan/data/` (in-container) or `~/Library/Application Support/desktopAhaan/crashlogs/` (in-container). Pattern is correct-by-construction; no additional ratchet possible |
-| H.5 | Outbound network call besides `FreeOnlineTranslationProvider` | ✅ | Grep clean for `URLSession.shared.dataTask` outside that provider |
-| H.6 | Telemetry / analytics call | ✅ | None present (grep clean) |
+| H.5 | Outbound network call besides `FreeOnlineTranslationProvider` | ✅ | **`scripts/check_network_egress.py`** (2026-05-30) pins networking primitives (`URLSession` / `URLRequest` / `.dataTask` / `NWConnection` / raw `socket(`) to the single allowlisted provider file, and verifies the allowlist isn't stale (the provider still contains networking). Comment-only lines don't trip it. Converts the prior one-time grep into a commit + push gate |
+| H.6 | Telemetry / analytics call | ✅ | Same lint (`check_network_egress.py`) forbids any `import` of a known analytics/telemetry/crash SDK (Firebase, Mixpanel, Amplitude, Segment, Sentry, Crashlytics, AppCenter, Bugsnag, Datadog, …) anywhere in the app target — none present |
 | H.7 | Entitlements declares unused permission | ✅ | `EntitlementsSnapshotTest` pins the exhaustive set of 5 entitlement keys + locks the temp-exception scope to exactly `["/Documents/"]` — any expansion fails CI and forces an explicit review |
 | H.8 | File write skipped `.atomic` | ✅ | Closed via `scripts/check_atomic_writes.py` (same lint as A.10) |
 | H.9 | Pack JSON loaded without schema validation | ✅ | `SubjectPack.validateRelatedRefs()` runs at decode |
@@ -260,7 +286,7 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 | # | Category | Status | Evidence |
 |---|---|:--:|---|
 | K.1 | ≥ 1 test per shipped surface | ✅ | 530+ XCTest methods; routing ratchets per chapter; per-pack content tests |
-| K.2 | UI test count per critical flow | ✅ | 15 UI test methods total: 2 crash-regression locks (C1, C2), 8 GoldenPathUITests, 2 Surface_AuditWalker (all 19 science chapters), 1 SRS_Smoke, **2 new MathsDiscoverWalkUITests** (Ch.5 geometry + Ch.10 integer arithmetic — together cover the two scene-family shapes in the maths Discover pack). Sanskrit ships no Discover Mode (out of scope per SANSKRIT_READINESS_REPORT.md). UI tests are opt-in via `--ui` flag because they need AX grant on the runner; once granted, the gate covers every shipped Discover pack |
+| K.2 | UI test count per critical flow | ✅ | **`scripts/check_critical_uitest_presence.py`** (2026-05-30) pins by *name* that each critical flow still has its test method present (deletion/rename guard — counting alone drifts): the 2 crash-regression locks + Ch.1 chapter-detail render + ConceptMap/Glossary sheet flows + SRS smoke + science surface walk + maths Discover walk. Does not run them (AX-grant `--ui` opt-in); asserts existence at commit + push. Detail: 15 UI test methods total — 2 crash-regression locks (C1, C2), 8 GoldenPathUITests, 2 Surface_AuditWalker (all 19 science chapters), 1 SRS_Smoke, **2 new MathsDiscoverWalkUITests** (Ch.5 geometry + Ch.10 integer arithmetic — together cover the two scene-family shapes in the maths Discover pack). Sanskrit ships no Discover Mode (out of scope per SANSKRIT_READINESS_REPORT.md). UI tests are opt-in via `--ui` flag because they need AX grant on the runner; once granted, the gate covers every shipped Discover pack |
 | K.3 | Schema integrity test per pack | ✅ | `testScienceClass7PackDecodes` + `testSanskritPackDecodes` + `testMathsPackDecodes` |
 | K.4 | Cross-pack id collision test | ✅ | `testNoCrossPackConceptIdCollision` |
 | K.5 | Subject-aware gate test | ✅ | `PilotInteractiveSubjectGateTests` |
@@ -306,7 +332,7 @@ category already has a documented lock or accepted rationale. Recorded in
 
 ## How future commits inherit the bug-free posture
 
-Every commit goes through the 21-lint + xcodebuild build + full test suite + 3-pack canonical-JSON round-trip pre-push gate. The ratchet tests added in the production-polish sweep + the prior Sanskrit sweep lock the categories above where the verdict is ✅.
+Every commit goes through the 26-lint + xcodebuild build + full test suite + 3-pack canonical-JSON round-trip pre-push gate. The ratchet tests added in the production-polish sweep + the prior Sanskrit sweep lock the categories above where the verdict is ✅.
 
 For the 🟡 categories, future commits should:
 1. Improve the heuristic if a smarter scanner is feasible (e.g., a11y label coverage via a parser instead of regex).

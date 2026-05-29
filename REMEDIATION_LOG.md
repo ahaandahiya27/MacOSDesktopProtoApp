@@ -3311,3 +3311,54 @@ caller) was written. Both resolved by finishing the dependent code before
 pushing. STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Bug-Free-Cert hardening: 5 new deterministic lints (Agent B, parallel overnight)
+
+**Framing correction first.** This run's mission brief said the certification
+was at "85/100" with 15 categories to close. That was stale: on arrival
+`BUG_FREE_CERTIFICATION_REPORT.md` already showed **110/110 ✅** (all families
+closed by prior sweeps; lint count 21). There were no open categories to
+close. Rather than fabricate a 85→100 narrative, this pass did the genuinely
+additive thing within the touch list: **converted six categories that were
+locked only by audit-rationale, a single Swift test, or a one-time grep into
+categories additionally locked by a deterministic pure-Python lint** that runs
+at commit + push time. Score unchanged (110/110); posture strictly stronger.
+
+### Baseline gate (CB0)
+All 20 pre-existing Python lints clean; `bash -n` clean on both hooks.
+
+### Five new lints (count 21 → 26), each with `--selftest`:
+
+| Lint | Category | What it pins |
+|---|---|---|
+| `scripts/check_page_ref_bounds.py` | D.7 | every `pageRefs` element is an int ∈ [1,1000] tree-wide across all 3 packs; empty lists allowed (401+488 exist legitimately); rejects negatives/zeros/non-ints/bools/gross typos |
+| `scripts/check_article_entry_bundled.py` | D.8 | all 727 `ArticleEntry` rows resolve to a bundled HTML at `Resources/<chapterFolder>/<filename>`; resolves both quoted-literal and `chapterNFolder`-constant folder forms |
+| `scripts/check_orphan_html.py` | D.9 | all 727 bundled HTML files are registered (reverse of D.8 → bijection); reuses D.8's parser so both agree byte-for-byte |
+| `scripts/check_network_egress.py` | H.5 + H.6 | sole networking site is `FreeOnlineTranslationProvider.swift`; no telemetry/analytics SDK import anywhere; comment-only lines ignored; stale-allowlist guard |
+| `scripts/check_critical_uitest_presence.py` | K.2 | the 2 crash-regression + 6 golden/SRS/surface/maths-walk UI tests exist by name (deletion/rename guard); does not run them (AX `--ui` opt-in) |
+
+### Verification
+- Each lint: `--selftest` PASS (clean + violation fixtures) **and** clean
+  against the real tree (D.8/D.9: 727↔727 zero orphans; D.7: clean across all
+  packs; H.5/H.6: sole egress confirmed; K.2: all 8 present).
+- A probe confirmed the empty-`pageRefs` reality (401 sanskrit + 488 science)
+  before writing D.7, so the rule allows empty lists and only validates
+  present elements — no false positives.
+
+### Wiring (append-only, per touch list)
+- `scripts/hooks/pre-commit`: D.7 added to the pack-staged integrity loop;
+  new conditional blocks 11–13 for D.8/D.9 (Articles `.swift` / Resources
+  `.html` staged), H.5/H.6 (app `.swift` staged), K.2 (UITests `.swift`
+  staged).
+- `scripts/hooks/pre-push`: all five added to the unconditional lint loop;
+  header comment updated.
+
+### Touch-list compliance
+Only NEW `scripts/check_*.py`, append-only hook wiring, status-flip rows in
+`BUG_FREE_CERTIFICATION_REPORT.md`, this log, and `CERT_100_CHECKPOINT.md`.
+No View / Model / Service / `desktopAhaanApp.swift` / pack JSON / Resources
+HTML touched. STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>

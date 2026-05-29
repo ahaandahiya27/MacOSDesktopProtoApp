@@ -181,7 +181,7 @@ fi
 PACK_STAGED_INTEGRITY=$(git diff --cached --name-only --diff-filter=ACM \
     | grep -E '^desktopAhaan/Subjects/Packs/.+\.json$' || true)
 if [ -n "$PACK_STAGED_INTEGRITY" ]; then
-    for lint in check_cross_pack_ids check_orphan_refs check_quiz_id_format; do
+    for lint in check_cross_pack_ids check_orphan_refs check_quiz_id_format check_page_ref_bounds; do
         if [ -f "scripts/${lint}.py" ]; then
             if ! python3 "scripts/${lint}.py"; then
                 echo
@@ -204,6 +204,62 @@ if [ -n "$TEST_SWIFT_STAGED" ] && [ -f "scripts/check_test_target_compat.py" ]; 
         echo
         echo "pre-commit: check_test_target_compat failed — macOS 12+ API in test code."
         echo "The iMac runs the tests on Big Sur; use a Big Sur-safe equivalent."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
+# 11) Article bundling integrity (Bug-Free-Cert D.8/D.9). Only run when an
+#     ArticleIndex entry file or a bundled HTML article is staged. D.8 — every
+#     ArticleEntry points at a bundled HTML; D.9 — every bundled HTML is
+#     registered. Together they pin the entry↔file bijection so a content edit
+#     can't silently orphan a file or register a phantom. Hard gate.
+ARTICLE_TOUCHED=$(git diff --cached --name-only --diff-filter=ACMD \
+    | grep -E '^desktopAhaan/(Subjects/Articles/.+\.swift|Resources/Articles/.+\.html)$' \
+    || true)
+if [ -n "$ARTICLE_TOUCHED" ]; then
+    for lint in check_article_entry_bundled check_orphan_html; do
+        if [ -f "scripts/${lint}.py" ]; then
+            if ! python3 "scripts/${lint}.py"; then
+                echo
+                echo "pre-commit: ${lint} failed — article entry/file mismatch."
+                echo "Fix: every ArticleEntry must point at a bundled HTML and vice-versa."
+                echo "If intentional, bypass with: git commit --no-verify"
+                exit 1
+            fi
+        fi
+    done
+fi
+
+# 12) Network-egress + telemetry gate (Bug-Free-Cert H.5/H.6). Runs when a
+#     desktopAhaan Swift file is staged. Pins the sole outbound path to
+#     FreeOnlineTranslationProvider and forbids any analytics/telemetry SDK
+#     import in this offline, no-telemetry, single-user app. Hard gate.
+STAGED_APP_SWIFT=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^desktopAhaan/.*\.swift$' || true)
+if [ -n "$STAGED_APP_SWIFT" ] && [ -f "scripts/check_network_egress.py" ]; then
+    if ! python3 scripts/check_network_egress.py; then
+        echo
+        echo "pre-commit: check_network_egress failed — a second egress path or a"
+        echo "telemetry SDK import would land. This app is offline-first with a single"
+        echo "sanctioned network call (FreeOnlineTranslationProvider)."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
+# 13) Critical-flow UI-test presence (Bug-Free-Cert K.2). Runs when a
+#     UI-test .swift file is staged. Asserts the named crash-regression and
+#     golden-path UI tests still exist (deletion/rename guard); does not run
+#     them (AX-grant / --ui opt-in). Hard gate.
+UITEST_STAGED=$(git diff --cached --name-only --diff-filter=ACMD \
+    | grep -E '^desktopAhaanUITests/.+\.swift$' || true)
+if [ -n "$UITEST_STAGED" ] && [ -f "scripts/check_critical_uitest_presence.py" ]; then
+    if ! python3 scripts/check_critical_uitest_presence.py; then
+        echo
+        echo "pre-commit: check_critical_uitest_presence failed — a critical-flow UI"
+        echo "test was deleted or renamed. Restore it, or update the manifest in the"
+        echo "lint if the flow was intentionally retired."
         echo "If intentional, bypass with: git commit --no-verify"
         exit 1
     fi
