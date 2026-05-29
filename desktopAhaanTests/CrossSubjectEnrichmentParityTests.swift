@@ -84,6 +84,125 @@ final class CrossSubjectEnrichmentParityTests: XCTestCase {
             "morphs into an NEP chapter, drop it from the exemption.")
     }
 
+    /// Locks in the *content* quality of every enrichment item in the
+    /// Sanskrit NEP chapters — not just the counts, but that the
+    /// strings the section views actually render aren't blank or
+    /// whitespace-only. Catches placeholder regressions a count
+    /// ratchet can't see.
+    func testSanskritEnrichmentContentIsNonEmpty() async throws {
+        let pack = try await loadPack("sanskrit_class7")
+        let scoped = pack.chapters.filter { $0.id.hasPrefix("sch") }
+        var blanks: [String] = []
+
+        for c in scoped {
+            for g in c.glossaryList {
+                report(c.id, "glossary[\(g.id)].term", g.term, &blanks, min: 1)
+                // Sanskrit glossaries are bilingual translations: many
+                // valid definitions are single English words ("Novel",
+                // "Curiosity", "Service"). The floor here only catches
+                // truly blank / single-character placeholders — content
+                // adequacy is editorial, not test-enforced.
+                report(c.id, "glossary[\(g.id)].definition", g.definition, &blanks, min: 3)
+            }
+            for m in c.mnemonicsList {
+                report(c.id, "mnemonic[\(m.id)].acronym", m.acronym, &blanks, min: 1)
+                report(c.id, "mnemonic[\(m.id)].unpacking", m.unpacking, &blanks, min: 10)
+            }
+            for m in c.misconceptionsList {
+                report(c.id, "misconception[\(m.id)].kidsThink", m.kidsThink, &blanks, min: 5)
+                report(c.id, "misconception[\(m.id)].actually", m.actually, &blanks, min: 10)
+            }
+            for w in c.whatIfsList {
+                report(c.id, "whatIf[\(w.id)].question", w.question, &blanks, min: 5)
+                report(c.id, "whatIf[\(w.id)].answer", w.answer, &blanks, min: 30)
+            }
+            for mp in c.miniProjectsList {
+                report(c.id, "miniProject[\(mp.id)].title", mp.title, &blanks, min: 3)
+                report(c.id, "miniProject[\(mp.id)].emoji", mp.emoji, &blanks, min: 1)
+                report(c.id, "miniProject[\(mp.id)].expectedObservation", mp.expectedObservation, &blanks, min: 10)
+                report(c.id, "miniProject[\(mp.id)].whyItWorks", mp.whyItWorks, &blanks, min: 10)
+                if mp.needs.isEmpty {
+                    blanks.append("[sanskrit_class7] \(c.id).miniProject[\(mp.id)].needs is empty")
+                }
+                if mp.steps.count < 3 {
+                    blanks.append("[sanskrit_class7] \(c.id).miniProject[\(mp.id)].steps has \(mp.steps.count) (<3)")
+                }
+            }
+            for s in c.scientistsList {
+                report(c.id, "scientist[\(s.id)].name", s.name, &blanks, min: 2)
+                report(c.id, "scientist[\(s.id)].oneLineLegacy", s.oneLineLegacy, &blanks, min: 10)
+                report(c.id, "scientist[\(s.id)].narrative", s.narrative, &blanks, min: 50)
+            }
+            for q in c.ncertQAList {
+                report(c.id, "ncertQA[\(q.id)].question", q.question, &blanks, min: 5)
+                report(c.id, "ncertQA[\(q.id)].modelAnswer", q.modelAnswer, &blanks, min: 20)
+            }
+            for r in c.realWorldExamplesList {
+                report(c.id, "realWorldExample[\(r.id)].title", r.title, &blanks, min: 3)
+                report(c.id, "realWorldExample[\(r.id)].body", r.body, &blanks, min: 30)
+            }
+        }
+
+        XCTAssertTrue(blanks.isEmpty,
+            "Sanskrit enrichment fields with blank / too-short content:\n  " +
+            blanks.prefix(20).joined(separator: "\n  ")
+        )
+    }
+
+    /// Locks in concept-map edge integrity for the Sanskrit NEP
+    /// chapters — every edge must reference a node that exists in
+    /// the same map, and every `.concept` node must resolve to a
+    /// concept id within that chapter. Mirrors the science-only
+    /// `testConceptMapNodesResolveWithinChapterOrToCrossChapterRef`
+    /// in `ChapterContentTests`.
+    func testSanskritConceptMapEdgesResolve() async throws {
+        let pack = try await loadPack("sanskrit_class7")
+        var conceptIdsByChapter: [String: Set<String>] = [:]
+        for c in pack.chapters {
+            var ids: Set<String> = []
+            for t in c.topics { for cc in t.concepts { ids.insert(cc.id) } }
+            conceptIdsByChapter[c.id] = ids
+        }
+        var unresolved: [String] = []
+        for c in pack.chapters where c.id.hasPrefix("sch") {
+            guard let map = c.conceptMap else { continue }
+            let own = conceptIdsByChapter[c.id] ?? []
+            let nodeIds = Set(map.nodes.map(\.id))
+            for n in map.nodes {
+                switch n.kind {
+                case .concept:
+                    if !own.contains(n.id) {
+                        unresolved.append("\(c.id):\(n.id) [.concept missing from chapter]")
+                    }
+                case .crossChapter:
+                    let parts = n.id.split(separator: ":", maxSplits: 1)
+                    guard parts.count == 2,
+                          let target = conceptIdsByChapter[String(parts[0])] else {
+                        unresolved.append("\(c.id):\(n.id) [malformed cross-chapter id]")
+                        continue
+                    }
+                    if !target.contains(String(parts[1])) {
+                        unresolved.append("\(c.id):\(n.id) [.crossChapter target missing]")
+                    }
+                case .pivot:
+                    break
+                }
+            }
+            for e in map.edges {
+                if !nodeIds.contains(e.from) {
+                    unresolved.append("\(c.id):edge \(e.id) — from=\(e.from) missing")
+                }
+                if !nodeIds.contains(e.to) {
+                    unresolved.append("\(c.id):edge \(e.id) — to=\(e.to) missing")
+                }
+            }
+        }
+        XCTAssertTrue(unresolved.isEmpty,
+            "Sanskrit conceptMap references unresolved:\n  " +
+            unresolved.prefix(10).joined(separator: "\n  ")
+        )
+    }
+
     // MARK: - Helpers
 
     private func assertFloorsHold(packId: String,
@@ -121,6 +240,17 @@ final class CrossSubjectEnrichmentParityTests: XCTestCase {
                        _ packId: String) {
         if actual < floor {
             breaches.append("[\(packId)] \(ch.id).\(field) = \(actual) < floor \(floor)")
+        }
+    }
+
+    private func report(_ chapterId: String,
+                        _ field: String,
+                        _ value: String,
+                        _ blanks: inout [String],
+                        min: Int) {
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.count < min {
+            blanks.append("[sanskrit_class7] \(chapterId).\(field) — \(trimmed.count) chars (<\(min))")
         }
     }
 
