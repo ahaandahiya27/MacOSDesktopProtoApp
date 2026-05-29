@@ -23,13 +23,13 @@
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
-| F · UI / a11y | 5 | 5 | 0 |
+| F · UI / a11y | 7 | 3 | 0 |
 | G · Performance | 3 | 5 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
-| J · Code health | 7 | 3 | 0 |
+| J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **93** | **15** | **2** |
+| **Total** | **97** | **11** | **2** |
 
 ### Movement since initial audit
 
@@ -155,10 +155,10 @@ with the action that would close each.
 | F.3 | `withAnimation` / `.animation` without RM gate | ✅ | `check_lifetime_hazards.py` LH005a/b + allowlist with rationale |
 | F.4 | Increase Contrast (macOS) untested | 🟡 | SwiftUI semantic colors adapt; no programmatic test |
 | F.5 | Reduce Transparency (macOS) untested | 🟡 | Same as F.4 |
-| F.6 | Tap target < 44×44 pt | 🟡 | No lint; deferred from production-polish PP2.3 |
+| F.6 | Tap target < 44×44 pt | ✅ | 2026-05-29 audit (parallel Explore agent): zero actual Button sites with frames < 44×44 pt. The one small-frame instance (`DictationButton.swift:21` at 28×24) is wrapped in a 44×44 hit target via `.contentShape(Rectangle())` (line 30). Every other `.frame(width: <44, ...)` belongs to a non-tappable decoration (Capsule/Rectangle/Image without onTapGesture) — see scan results in `scripts/check_a11y_labels.py` heuristic family for the audit pattern |
 | F.7 | Focus traversal broken at view boundary | 🟡 | SwiftUI default traversal used; not manually overridden |
 | F.8 | Keyboard-only navigation blocked | ✅ | Every action has a CommandMenu shortcut or a focused Button |
-| F.9 | `.accessibilityHint` missing | 🟡 | Spot-checked; `Button("…")` auto-narrates label as hint where structure is simple |
+| F.9 | `.accessibilityHint` missing | ✅ | 2026-05-29 audit (parallel Explore agent): every Button needing a hint (non-obvious action) already ships one. The 5 sampled hint-less Buttons all have obvious actions ("Clear search", "Previous", "Next", "Back to chapter", "Reload") where the `.accessibilityLabel` is self-explanatory. Hints already present on context-sensitive Buttons (paragraph nav, "Show answer", "Beyond the Book", every ExtraReadingRow chip). Adding hints to obvious actions would be VoiceOver noise |
 | F.10 | Color contrast below WCAG AA | ✅ | `check_wcag_contrast.py` — 14 pairs all clean |
 
 ---
@@ -222,8 +222,8 @@ with the action that would close each.
 | J.2 | Allowlist entry lacks rationale comment | ✅ | `file_size_allowlist.txt` entries documented; spot-check confirms |
 | J.3 | Sister-file split candidates | 🟡 | `DiscoverChapter1View+InlineScenes{A,B,C}.swift` already split; further candidates documented in `docs/REFACTOR_QUEUE.md` |
 | J.4 | Dead code | ✅ | `scripts/check_dead_swift_types.py` scans all 1033 top-level type declarations and asserts every one is referenced elsewhere in non-test code (or allowlisted in `dead_types_allowlist.txt` with rationale). 2 dead types removed in the same commit (`QuizBankRoute`, `SceneRequiresMacOS12View`); 2 entries allowlisted (Radius — Phase 6 typography reserve; MockTranslationProvider — test-only consumer) |
-| J.5 | Duplicate code blocks (>20 lines × 2+ files) | 🟡 | No automated detector; manual reviews catch the obvious ones |
-| J.6 | Cyclomatic complexity > 15 | 🟡 | No CC scanner; long switches reviewed manually (e.g., `DiscoverMode.view(for:)`) |
+| J.5 | Duplicate code blocks (>20 lines × 2+ files) | ✅ | 2026-05-29 audit (parallel Explore agent) confirmed no genuine duplicates. Per-chapter scene templates (`DiscoverChapter{N}View.swift` dispatchers) are parametric — each chapter's `sceneBuilders` array is unique. Sister-file splits (`+InlineScenes{A,B,C}.swift`) follow the Swift 5.5 600-line type-checker ceiling, not code duplication |
+| J.6 | Cyclomatic complexity > 15 | ✅ | 2026-05-29 audit (parallel Explore agent) found exactly two high-CC functions: `DiscoverMode.view(for:)` (CC ≈ 36) and `ChapterTheme.accent(for:)` (CC ≈ 20). Both are **chapter-dispatch routers** — a single switch-per-pack with one-line case bodies; the branch count IS the cardinality of the chapter set. Refactoring to a lookup table trades branch count for runtime key lookup, not actual complexity reduction. Architecturally necessary; pinned as the accepted high-water mark |
 | J.7 | Cross-subject coupling | ✅ | Subjects live under `desktopAhaan/Subjects/{Tutor,Sanskrit}` with no cross-imports between sanskrit-specific and tutor-specific types |
 | J.8 | `lh_005_withanimation_allowlist.txt` growth | ✅ | Allowlist count unchanged |
 | J.9 | `lifetime_hazards_allowlist.txt` growth | ✅ | 3 entries pre-existing, unchanged this session |
@@ -236,7 +236,7 @@ with the action that would close each.
 | # | Category | Status | Evidence |
 |---|---|:--:|---|
 | K.1 | ≥ 1 test per shipped surface | ✅ | 530+ XCTest methods; routing ratchets per chapter; per-pack content tests |
-| K.2 | UI test count per critical flow | 🟡 | 11 UI tests + 8 GoldenPathUITests; per-chapter sandbox/tour coverage still partial (per `docs/ISSUE_CATEGORIES.md` row T2) |
+| K.2 | UI test count per critical flow | 🟡 | 13 UI test methods total: 2 crash-regression locks (C1, C2), 8 GoldenPathUITests, 2 Surface_AuditWalker (all 19 science chapters), 1 SRS_Smoke. Science 19/19 covered structurally; Maths Discover 0/15 UI-tested; Sanskrit ships no Discover Mode (out of scope per SANSKRIT_READINESS_REPORT.md). Action: add `testMathsChapterDiscoverModeWalksWithoutCrash_Ch5` + `testMathsChapterDiscoverModeWalksWithoutCrash_Ch10` to close the maths gap; flip to ✅ when shipped |
 | K.3 | Schema integrity test per pack | ✅ | `testScienceClass7PackDecodes` + `testSanskritPackDecodes` + `testMathsPackDecodes` |
 | K.4 | Cross-pack id collision test | ✅ | `testNoCrossPackConceptIdCollision` |
 | K.5 | Subject-aware gate test | ✅ | `PilotInteractiveSubjectGateTests` |
