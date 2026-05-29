@@ -197,6 +197,14 @@ if [ -f "scripts/check_kvo_observer_leak.py" ]; then
     fi
 fi
 
+if [ -f "scripts/check_notificationcenter_leak.py" ]; then
+    echo "==> notificationcenter-leak lint (Family B.7 of bug-free cert)"
+    if ! python3 scripts/check_notificationcenter_leak.py; then
+        echo "ci-build-test: notificationcenter-leak lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/test_lints.py" ]; then
     echo "==> lint self-test"
     if ! python3 scripts/test_lints.py; then
