@@ -1226,6 +1226,7 @@
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
 		692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */; };
+		9E08C2E519DD9F6749427425 /* PerfBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A284210E2CFAD7940EBA67 /* PerfBudgetTests.swift */; };
 		BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */; };
 		1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */; };
 		6306FDADF7181E694E2E268B /* PilotInteractiveSubjectGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E88A01133D8DFEE60960 /* PilotInteractiveSubjectGateTests.swift */; };
@@ -2503,6 +2504,7 @@
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
 		6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRServiceTests.swift"; sourceTree = "<group>"; };
+		47A284210E2CFAD7940EBA67 /* PerfBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PerfBudgetTests.swift"; sourceTree = "<group>"; };
 		9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceTests.swift"; sourceTree = "<group>"; };
 		4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinatorTests.swift"; sourceTree = "<group>"; };
 		0781E88A01133D8DFEE60960 /* PilotInteractiveSubjectGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSubjectGateTests.swift"; sourceTree = "<group>"; };
@@ -4880,6 +4882,7 @@
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
 				6A9E76C7A79EA22389275391,
+				47A284210E2CFAD7940EBA67,
 				9AA1C3F53E9C14BC7C4B5C91,
 				4F40F36BE5B49DE983D407DA,
 				0781E88A01133D8DFEE60960,
@@ -6294,6 +6297,7 @@
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,
 				692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */,
+				9E08C2E519DD9F6749427425 /* PerfBudgetTests.swift in Sources */,
 				BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */,
 				1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */,
 				6306FDADF7181E694E2E268B /* PilotInteractiveSubjectGateTests.swift in Sources */,
