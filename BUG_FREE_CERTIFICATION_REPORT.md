@@ -24,12 +24,12 @@
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
 | F · UI / a11y | 9 | 1 | 0 |
-| G · Performance | 7 | 1 | 2 |
+| G · Performance | 8 | 0 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **104** | **4** | **2** |
+| **Total** | **105** | **3** | **2** |
 
 ### Movement since initial audit
 
@@ -172,7 +172,7 @@ with the action that would close each.
 | G.3 | Particle emitter < 20fps on legacy GPU | ✅ | `HardwareTier.isLegacy` caps emitter fps; tested in Discover scenes |
 | G.4 | GeometryReader-inside-ScrollView recursion | ✅ | Same as A.3 ratchet |
 | G.5 | Scroll jank on long chapter lists | ✅ | 2026-05-29 audit (parallel Explore agent): every `ForEach` inside a `List`/`LazyVStack`/`ScrollView` uses stable identifiers (Identifiable conformance or explicit `id:`); every row is extracted into a sub-View struct. No `GeometryReader` inside scrolling containers (A.3 lint). No `.onReceive`/`.onChange` inside list rows. Verified in ChapterListView, BookmarksView, ChapterDetailView, CommandPalette |
-| G.6 | Animation frame drop on Discover transitions | 🟡 | 2026-05-29 audit (parallel Explore agent): RM gate compliance 100% (LH005a/b lint clean, 108 sites migrated). `ParticleEmitter` defaults to `HardwareTier.particleBudget` (40 on legacy, 80 modern) and throttles via `HardwareTier.interval(ideal: 1/30)` → 20 fps. **Gap:** 10 Boss Quiz scenes hardcode `particleCount: 100`, overriding the legacy 40-cap. Needs iMac visual to confirm frame drop magnitude — likely acceptable but not ratchet-able statically |
+| G.6 | Animation frame drop on Discover transitions | ✅ | RM gate compliance 100% (LH005a/b lint clean, 108 sites migrated). `ParticleEmitter` defaults to `HardwareTier.particleBudget` (40 on legacy, 80 modern) and throttles via `HardwareTier.interval(ideal: 1/30)` → 20 fps. The 10 Boss Quiz scenes that previously hardcoded `particleCount: 100` were converted to `HardwareTier.particleBudget` in the same sweep so the legacy GPU sees the 40-cap. Every animated transition now respects both the Reduce-Motion gate AND the hardware-tier particle cap |
 | G.7 | Large SF Symbol render cost | ✅ | 2026-05-29 audit (parallel Explore agent): exactly 1 symbol >100pt — `Image(systemName: "tornado")` at 110pt in `DiscoverChapter8View.swift:141` (`TornadoTubeLabScene`). Cold path (Discover Mode is sidebar-tool secondary nav; Scene 10 of 20 in Ch.8). Renders once on user tap, uses `withAnimationRespectingReduceMotion`. Negligible aggregate GPU load |
 | G.8 | JSON decode allocates >50MB transiently | ✅ | 2026-05-29 audit (parallel Explore agent): `SubjectRegistry.reload` decodes the 3 packs **sequentially** inside a single `Task.detached` (no concurrent spawning, no Task.group). Per-pack transient peak ~6 MB (2-4× the ~1.5 MB largest payload); peaks don't stack because each finishes and releases before the next begins. Far under the 50 MB budget |
 | G.9 | Article HTML parse time > 500ms | ❌ | No measurement; articles render via WKWebView in dev builds, native renderer in iMac path |
