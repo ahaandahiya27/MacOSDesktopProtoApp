@@ -19,7 +19,7 @@
 | Family | ✅ | 🟡 | ❌ |
 |---|:--:|:--:|:--:|
 | A · Crash classes | 7 | 3 | 0 |
-| B · Memory hazards | 7 | 3 | 0 |
+| B · Memory hazards | 9 | 1 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 9 | 1 | 0 |
@@ -29,24 +29,32 @@
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 6 | 4 | 0 |
 | K · Test coverage | 8 | 2 | 0 |
-| **Total** | **83** | **25** | **2** |
+| **Total** | **85** | **23** | **2** |
 
 ### Movement since initial audit
 
-Post-cert sweep landed two new lints and one new test class, flipping
-four categories from 🟡 to ✅:
+Post-cert sweep landed three new lints and one new test class,
+flipping six categories from 🟡 to ✅:
 
 - **A.10 / H.8** — `scripts/check_atomic_writes.py` (commit `218ac11`)
   pins every `Data.write(to:)` call to ship `options: .atomic`. PDFKit
   writes exempt. Wired into the pre-push gate.
+- **B.7** — `scripts/check_notificationcenter_leak.py` (commit `4028d51`)
+  pins zero imperative `addObserver` calls; the codebase uses SwiftUI's
+  `.onReceive(NotificationCenter.default.publisher(for:))` which
+  auto-cleans up on view teardown.
 - **B.8** — `scripts/check_kvo_observer_leak.py` (commit `218ac11`)
   ratchets the empty-KVO posture. A new KVO observer without paired
   invalidation fails CI.
+- **B.9** — `SubjectPackIndexCache` audit (no commit needed) confirmed
+  the only in-memory cache is keyed by `pack.id` and thus
+  domain-bounded by the 3-pack universe. No LRU / eviction policy
+  needed.
 - **E.6** — `ToughFlagSymmetryTests` (commit `5e5e1af`) pins the
   `toggleToughQuestion` round-trip + SM-2 review seed-and-preserve
   invariants.
 
-Lint count: 12 → 14. The remaining 🟡 entries are documented below
+Lint count: 12 → 15. The remaining 🟡 entries are documented below
 with the action that would close each.
 
 (Family count is 10; the report has 11 families because Family K — Test coverage — is the rolled-up score from §1's K block. 100 categories total.)
@@ -80,9 +88,9 @@ with the action that would close each.
 | B.4 | `var delegate: T` without `weak` (LH001) | ✅ | `check_lifetime_hazards.py` LH001; 3 pre-existing entries grandfathered via allowlist with rationale |
 | B.5 | `unowned` capture (LH002) | ✅ | `check_lifetime_hazards.py` LH002 |
 | B.6 | `@unchecked Sendable` types (LH003) | ✅ | `check_lifetime_hazards.py` LH003 |
-| B.7 | NotificationCenter observer never removed | 🟡 | Grep `addObserver` against `removeObserver`: 4 observers; manual review confirms each lifetime-bound; no lint enforces |
+| B.7 | NotificationCenter observer never removed | ✅ | `scripts/check_notificationcenter_leak.py` pins zero imperative `addObserver(_:selector:...)` / `addObserver(forName:...)`; all 6 observers flow through SwiftUI's `.onReceive(NotificationCenter.default.publisher(for:))` which auto-cleans up |
 | B.8 | KVO observer leak | ✅ | `scripts/check_kvo_observer_leak.py` pins the empty-KVO surface; a new `addObserver:forKeyPath:` / `NSKeyValueObservation` / `.observe(\\..., options:)` call fails CI |
-| B.9 | Unbounded in-memory cache | 🟡 | `ImageCache` + article cache reviewed manually; bounded by SwiftUI's own view eviction; no LRU policy explicit |
+| B.9 | Unbounded in-memory cache | ✅ | `SubjectPackIndexCache` is keyed by `pack.id` — bounded by the fixed pack set (3 packs today). No image cache, no article cache. Cache invalidated explicitly by `SubjectRegistry.reload()`. Domain-bounded, not LRU-bounded |
 | B.10 | Singleton holding strong UI state refs | 🟡 | `DataStore.shared` holds `@Published` state; SwiftUI views observe via `@ObservedObject`, releasing on view teardown — reviewed |
 
 ---
