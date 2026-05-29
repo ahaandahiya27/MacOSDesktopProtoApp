@@ -124,3 +124,24 @@ non-parallel sweep.
 - [ ] **Month view / trend chart** — the current dashboard is a single
   trailing-7-day window. A month grid or a mastery-over-time sparkline is
   a natural follow-up once daily snapshots exist.
+
+## §6 — Daily Plan + Achievements (Agent A, overnight v2)
+
+- [ ] **Sidebar "🏆 Achievements" + "Today's Plan" entries** — both features
+  ship via Help menu + ⌘⇧A / ⌘⇧D + their own AppKit windows this run because
+  the sidebar lives in `AppState`/`ContentView` (out-of-domain). When a
+  surface owner is editing the sidebar, add `SidebarTool` cases (or a new
+  section) so they're reachable from the rail too.
+- [ ] **Discover Progress sidebar badge string** — `SidebarTool.discover`
+  `keyboardShortcut` in `AppState.swift` still reads "⌘⇧D", but the binding
+  moved to **⌘⌃D** (Daily Plan took ⌘⇧D per the feature brief). Update the
+  badge string to "⌘⌃D" to match. Cosmetic only — the actual key bindings
+  in `desktopAhaanApp.swift` are correct.
+- [ ] **Daily-plan reminder toggle in Settings** — the opt-in toggle ships
+  inside the Daily Plan window this run (Settings screen is out-of-domain).
+  A surface owner could mirror it under Settings → Notifications for
+  discoverability; it reads/writes `DailyPlanStorage.reminderEnabledKey`.
+- [ ] **Per-subject Discover attribution for Daily Plan** — the "open
+  Discover chapter" picker uses the Science host pack only (mirrors the
+  existing `DiscoverProgress`-has-no-packId limitation). Revisit once
+  DiscoverProgress carries a packId.

@@ -197,6 +197,15 @@ struct SanskritKoshApp: App {
                         }
                     )
                 }
+                // Start the achievement engine once the live store + registry
+                // exist. Idempotent (guarded inside `start`), so a re-rendered
+                // onAppear can't double-subscribe. Observing from launch is
+                // what lets a badge toast slide in during normal use; the
+                // first pass silently backfills anything already earned.
+                .onAppear {
+                    AchievementEngine.shared.start(
+                        dataStore: dataStore, registry: subjectRegistry)
+                }
         }
         .commands {
             CommandGroup(after: .newItem) {
@@ -251,10 +260,15 @@ struct SanskritKoshApp: App {
                 }
                 .keyboardShortcut("p", modifiers: [.command, .shift])
 
+                // ⌘⇧D is reassigned to the new Daily Plan (Help → Today's
+                // Plan), per the feature brief. Discover Progress moves to
+                // ⌘⌃D so both stay reachable. (The sidebar badge string for
+                // Discover lives in AppState, owned by another surface this
+                // run — its update is queued in POLISH_TODOS.)
                 Button("Show Discover Progress") {
                     appState.sidebarSelection = .tool(.discover)
                 }
-                .keyboardShortcut("d", modifiers: [.command, .shift])
+                .keyboardShortcut("d", modifiers: [.command, .control])
 
                 Button("Show Settings") {
                     appState.sidebarSelection = .tool(.settings)
@@ -327,6 +341,28 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("w", modifiers: [.command, .shift])
+
+                Divider()
+
+                // Daily Plan + Achievements. Both open in their own AppKit
+                // windows (same pattern as Weekly Progress) — no ContentView
+                // sheet routing needed. ⌘⇧D (reassigned from Discover
+                // Progress, now ⌘⌃D) opens Today's Plan; ⌘⇧A opens the
+                // achievement gallery.
+                Button("Today's Plan") {
+                    DailyPlanWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry,
+                        appState: appState
+                    )
+                }
+                .keyboardShortcut("d", modifiers: [.command, .shift])
+
+                Button("Achievements") {
+                    AchievementGalleryWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("a", modifiers: [.command, .shift])
             }
         }
     }

@@ -3403,3 +3403,77 @@ the view (no change made here — that file is outside this agent's domain).
 STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Daily Plan + Achievement/Badge system (Agent A, parallel overnight v2)
+
+Shipped the adaptive **Daily Plan** ("today's 5 things") + a 24-badge
+**Achievement system**, both reachable from the Help menu + keyboard
+shortcuts + their own AppKit windows (the shipped Weekly Progress pattern).
+
+### What landed
+- **`Models/Achievement.swift`** — 24 badges, 5 families (Streak 6, Mastery
+  6, Discover 4, Reading 4, Quiz 4) × 4 tiers. Pure value types
+  (`AchievementCriterion` / `AchievementSnapshot` / `AchievementProgress`)
+  so unlock logic is FS-free and unit-testable.
+- **`Services/AchievementEngine.swift`** — debounced observer of `DataStore`
+  + `SubjectRegistry`; silent first-launch backfill (no toast burst for
+  already-earned badges); pure `newlyUnlocked` core; gold/platinum chime
+  (RM-gated). Started from a `.onAppear` on the App's ContentView.
+- **`Services/Persistence/DataStore+Achievements.swift`** — `achievements.json`
+  round-trip via the shared coalesced-write plumbing + the snapshot builder
+  + static metric helpers (mastery counts, completed-Discover-chapter count,
+  Beyond-the-Book chapters, boss-quiz chapters, quick-check perfect day).
+- **`Views/Achievements/`** — `AchievementToastView` (top-right slide-in
+  NSPanel, queued), `AchievementBadgeView` (locked grayscale+lock / unlocked
+  colour+date), `AchievementGalleryView` (4-col LazyVGrid by family,
+  auto-hides not-started badges, detail sheet), `AchievementGalleryWindow`
+  presenter (⌘⇧A).
+- **`Models/DailyPlan.swift`** + **`Services/Persistence/DataStore+DailyPlan.swift`**
+  — the rollup (≤3 due reviews + 1 unmastered/unvisited-today concept + 1
+  open Discover chapter), 3 AM plan-day boundary, auto-Done reconciliation
+  against live signals, and the plan-completion streak (drives the
+  `quiz_practice_perfect_week` platinum badge).
+- **`Views/DailyPlan/`** — `DailyPlanView` (streak + done count header,
+  5-item list, tap-through routing via `AppState.pendingRoute`, ✓/Skip,
+  auto-Done on store change), `DailyPlanWindow` presenter (⌘⇧D),
+  `DailyPlanNotifications` (opt-in 5pm `UNUserNotificationCenter` reminder,
+  permission requested on first open, in-window toggle; no-ops under XCTest).
+- **App wiring** (`desktopAhaanApp.swift`, in-allowlist): engine start +
+  Help → "Today's Plan" (⌘⇧D) + "Achievements" (⌘⇧A); "Show Discover
+  Progress" relocated ⌘⇧D → ⌘⌃D (brief reassigns ⌘⇧D to Daily Plan).
+- **Tests (47, all green):** `AchievementCatalogTests` (16, pins the 24-id
+  set as the persistence contract), `AchievementEngineTests` (12),
+  `AchievementGalleryViewTests` (5 render smokes), `DailyPlanRollupTests`
+  (11), `DailyPlanViewTests` (3 render smokes).
+
+### Posture
+Debug build SUCCEEDED at `MACOSX_DEPLOYMENT_TARGET=11.5`; all gated
+`check_*.py` lints green; no macOS 12+ APIs (LazyVGrid/ProgressView/sheet
+are 11.0+, verified by the deployment-target availability check), SF Symbols
+via `SFSymbolCompat`, RM-gated animation, ViewBuilder ≤10 children, files
+< 600 LOC, `.atomic`/coalesced writes, no new entitlement (local
+notifications need none → locked set untouched).
+
+### Test-runner note (environmental, not a regression)
+All 47 new tests pass in isolation, and the full unit suite ran 147 tests /
+14 suites with **0 failures** before stalling on the project's
+*source-tree-scanning* meta-tests (`BossQuizSRSWiringTests`,
+`ChapterContentTests.testNoUnboundedGeometryReaderInScrollingContainer`).
+Those tests `String(contentsOf:)` every `.swift` under the repo, which lives
+on an **iCloud-synced `~/Documents` path**; under 3 concurrent overnight
+agents the File Provider stalls (POSIX 60) make them take many minutes each.
+This is independent of this change (additive, no boss-quiz / registry /
+GeometryReader code touched). Queued as a note; not overclaiming a full
+green.
+
+### Cross-agent
+Agent C's `feat(dist)` onboarding landed on `main` (`211fce7`) mid-session;
+rebuilt my work on top of that baseline. Touch-list honoured: only my new
+files + the shared regenerated pbxproj + in-allowlist app.swift menu
+additions. Sidebar entries + the Discover badge string + a Settings mirror
+of the reminder toggle are queued in `POLISH_TODOS §6` (AppState/ContentView
+out-of-domain). STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
