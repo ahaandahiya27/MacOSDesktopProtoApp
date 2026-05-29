@@ -78,3 +78,61 @@ The app is shippable to a wider audience than just Ahaan with confidence that:
 - User progress can be exported as a single file the parent can keep.
 
 The 🟡 items above are documented gaps, not unknown unknowns. Next sweep starts from this report.
+
+## Weekly Progress Dashboard (2026-05-29)
+
+A parent-facing roll-up that answers "what did Ahaan do this week?" in one
+glance — previously the data was siloed across Daily Practice, the Mastery
+Dashboard, Discover Progress, and the streak chip.
+
+**How to open**
+- **⌘⇧W** anywhere in the app, or
+- **Help → Weekly Progress** menu item.
+
+Both open `WeeklyProgressView` in its own AppKit window (via
+`WeeklyProgressWindowPresenter`). A standalone window — not a `ContentView`
+sheet — because the multi-window scene APIs are macOS 13+ and a sheet would
+require editing `ContentView`. Re-triggering focuses the open window;
+closing and reopening rebuilds with a fresh rollup.
+
+**What it shows**
+- Header + week range ("Week of May 23 – May 29").
+- Streak card: current streak, best ever, and the week's estimated minutes.
+- 7-day grid: one card per day with per-subject pills (`Sci 3 · Maths 2`),
+  empty days muted as "—", and a rough minute estimate.
+- Mastery delta card: "This week, Ahaan Mastered 1, got Confident on 3…".
+- **Export PDF Report** button → `NSSavePanel` → a single US-Letter page.
+
+**PDF export** (`WeeklyReportPDFExporter`)
+- Pure Core Graphics (`CGContext` + `CGDataConsumer`, macOS 10.0+) — no
+  PDFKit, no macOS 12+ APIs; builds + runs on the Big Sur iMac.
+- Saved wherever the parent chooses via `NSSavePanel`; default filename
+  `Ahaan-WeeklyProgress-YYYY-MM-DD.pdf`. Atomic write.
+- Single page, well under 100 KB (pinned by test).
+
+**Data sources** (all existing state — no new SRS schema)
+| Signal | Source |
+|---|---|
+| Reviews / day, per subject | `questionReviews[*].lastReviewedAt` + `.packId` |
+| Concepts visited / day | **new** `conceptVisitHistory` → `conceptVisits.json` (written at `ConceptDetailView.onAppear`, lazy-hydrated, last-visit-wins) |
+| Discover scenes / day | `discoverProgress[*].completedAt` (attributed to the host pack — see limitation) |
+| Mastery delta | `questionReviews` bucketed by `MasteryLevel.from(review:)` over the activity window |
+| Streak | `AppStorageKeys.reviewStreakDays` / `.reviewStreakBest` |
+
+**Documented limitations** (queued in `POLISH_TODOS.md`)
+- Discover-scene per-subject split folds the Maths Discover pilot under
+  Science: `DiscoverProgress` stores only `chapterId`, and Science + the
+  Maths pilot share bare chapter ids (`ch01…`). Day/week discover totals
+  are exact; only the per-subject pill is approximate. A `packId` on
+  `DiscoverProgress` would make it exact (deferred — schema change).
+- The mastery delta is the activity-window definition (questions whose
+  last review landed this week, by current level), not a true week-over-
+  week diff. A daily mastery snapshot would make it exact but needs a
+  launch hook (deferred).
+
+**Tests** — `WeeklyActivityRollupTests` (11: day bucketing, per-pack
+attribution, inclusive/exclusive window boundary, unique concept counting,
+discover attribution, mastery-delta semantics, minute formula, streak
+passthrough), `WeeklyProgressViewTests` (3: empty + seeded render smoke via
+NSHostingView, short-label mapping), `WeeklyReportPDFExporterTests` (4:
+`%PDF-` magic, non-empty, ≤ 100 KB, empty-week path, stamp format).

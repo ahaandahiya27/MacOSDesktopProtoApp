@@ -3263,3 +3263,51 @@ tests, F.1 labels, I.3 DRY, J.2 stale comment, G.* perf instrumentation).
 Report + checkpoint updated. STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## 2026-05-29 — Parent / Weekly Progress Dashboard (Agent B, parallel mode)
+
+Shipped the parent-facing weekly roll-up: ⌘⇧W / Help → Weekly Progress opens
+`WeeklyProgressView` (own AppKit window), and an Export PDF Report button
+produces a single US-Letter page via `WeeklyReportPDFExporter` (pure Core
+Graphics, Big-Sur-safe, atomic write). Aggregates existing state only — no
+new SRS schema.
+
+New files:
+- `desktopAhaan/Models/WeeklyActivity.swift` — rollup value types + the one
+  new persisted type `ConceptVisit`.
+- `desktopAhaan/Services/Persistence/DataStore+WeeklyActivity.swift` —
+  `weeklyActivity(endingAt:)` + lazy-hydrated concept-visit persistence
+  (`conceptVisits.json`).
+- `desktopAhaan/Views/Progress/WeeklyProgressView.swift`,
+  `…/WeeklyProgressWindow.swift` — the dashboard + window presenter.
+- `desktopAhaan/Services/WeeklyReportPDFExporter.swift` — single-page PDF.
+- `desktopAhaanTests/WeeklyActivityRollupTests.swift` (11),
+  `WeeklyProgressViewTests.swift` (3), `WeeklyReportPDFExporterTests.swift`
+  (4) — 18 new tests, all green.
+
+Minimal edits (per touch list): `DataStore.swift` (+2 stored properties
+`conceptVisitHistory` / `didHydrateConceptVisits`, non-@Published,
+lazy-hydrated off the cold-launch path); `ConceptDetailView.swift` (one
+`recordConceptVisit` call in `recordRecent()`); `desktopAhaanApp.swift` (Help
+menu item + ⌘⇧W).
+
+Big Sur posture held: all gated lints clean, no macOS 12+ APIs, SF Symbols
+via `SFSymbolCompat`, monospacedDigit via the AppKit-backed font, ViewBuilder
+≤ 10 children, files < 600 LOC, `.atomic` writes, ≥44pt tap target.
+
+Documented limitations (queued in `POLISH_TODOS.md`): per-subject Discover
+attribution folds the Maths pilot under Science (DiscoverProgress carries no
+packId; day/week totals stay exact); mastery delta uses the activity-window
+definition rather than a true week-over-week snapshot diff (a daily snapshot
+would need a launch hook, out of scope this run).
+
+A note on the shared working tree: WD1's first push failed twice for
+cross-agent reasons, not my code — once on a transient `pre-push` hook error
+while Agent C was mid-edit of the hook, once on `check_dead_swift_types`
+flagging `WeeklyReportPDFExporter` before `WeeklyProgressView` (its only
+caller) was written. Both resolved by finishing the dependent code before
+pushing. STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>

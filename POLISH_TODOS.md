@@ -100,3 +100,27 @@ non-parallel sweep.
   30-min memory-growth (<100MB) ratchets need a running-app / XCUITest harness
   or in-app `os_signpost` regions. Static audit is clean; these are
   measurement-infra tasks for a non-parallel sweep.
+
+## Parent / Weekly Progress Dashboard deferrals (2026-05-29)
+
+- [x] **View the kid's weekly activity** — shipped: `WeeklyProgressView`
+  (⌘⇧W / Help → Weekly Progress) + single-page PDF export
+  (`WeeklyReportPDFExporter`). See `PRODUCTION_READINESS_REPORT.md` →
+  "Weekly Progress Dashboard".
+- [ ] **Exact per-subject Discover attribution** — `DiscoverProgress`
+  stores only `chapterId`, and Science + the Maths Discover pilot share
+  bare chapter ids (`ch01…`), so the dashboard folds Maths-pilot scenes
+  under Science in the per-subject pill (day/week totals stay exact).
+  Adding a `packId` field to `DiscoverProgress` (+ a `discover.json`
+  migration) would make it exact. Schema change — deliberately out of
+  scope for the parallel run.
+- [ ] **True week-over-week mastery delta** — the dashboard's
+  `MasteryDelta` uses the activity-window definition (questions whose
+  last review landed in the 7 days, by current level). A persisted daily
+  mastery snapshot (`masterySnapshots.json`, auto-pruned to 30 days)
+  diffed week-start vs week-end would be exact, but recording one snapshot
+  per day needs an app-launch hook — deferred to a non-parallel sweep
+  (touching the launch path / loader was out of scope here).
+- [ ] **Month view / trend chart** — the current dashboard is a single
+  trailing-7-day window. A month grid or a mastery-over-time sparkline is
+  a natural follow-up once daily snapshots exist.
