@@ -25,11 +25,11 @@
 | E · SRS / persistence | 10 | 0 | 0 |
 | F · UI / a11y | 5 | 5 | 0 |
 | G · Performance | 3 | 5 | 2 |
-| H · Security | 8 | 2 | 0 |
+| H · Security | 9 | 1 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 6 | 4 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **87** | **21** | **2** |
+| **Total** | **88** | **20** | **2** |
 
 ### Movement since initial audit
 
@@ -190,7 +190,7 @@ with the action that would close each.
 | H.4 | File write outside sandbox container | 🟡 | Backup-export writes to user-chosen path via `NSSavePanel`; OK because user-initiated and sandbox-mediated |
 | H.5 | Outbound network call besides `FreeOnlineTranslationProvider` | ✅ | Grep clean for `URLSession.shared.dataTask` outside that provider |
 | H.6 | Telemetry / analytics call | ✅ | None present (grep clean) |
-| H.7 | Entitlements declares unused permission | 🟡 | `desktopAhaan.entitlements` has Documents temp-exception (justified by TCC popup fix), network-client (translator), microphone (TTS); reviewed |
+| H.7 | Entitlements declares unused permission | ✅ | `EntitlementsSnapshotTest` pins the exhaustive set of 5 entitlement keys + locks the temp-exception scope to exactly `["/Documents/"]` — any expansion fails CI and forces an explicit review |
 | H.8 | File write skipped `.atomic` | ✅ | Closed via `scripts/check_atomic_writes.py` (same lint as A.10) |
 | H.9 | Pack JSON loaded without schema validation | ✅ | `SubjectPack.validateRelatedRefs()` runs at decode |
 | H.10 | OCR image saved with PII | ✅ | OCR pipeline operates in-memory; no disk persistence of source image |

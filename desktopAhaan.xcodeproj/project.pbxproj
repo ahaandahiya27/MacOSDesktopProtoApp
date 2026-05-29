@@ -1216,6 +1216,7 @@
 		7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */; };
+		DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
 		7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */; };
 		ABD50BFA756452A64FB06788 /* GlossaryArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5363A8C59EDC011177705492 /* GlossaryArticleRoutingTests.swift */; };
@@ -2499,6 +2500,7 @@
 		24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyQuestionPickerTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicTypeAtXLargeTests.swift"; sourceTree = "<group>"; };
+		CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntitlementsSnapshotTest.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
 		19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtraReadingRowTests.swift"; sourceTree = "<group>"; };
 		5363A8C59EDC011177705492 /* GlossaryArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlossaryArticleRoutingTests.swift"; sourceTree = "<group>"; };
@@ -4882,6 +4884,7 @@
 				24E14C1BC2E36EC9E70CAA9D,
 				8C883748B706BDB46E529043,
 				FD7151492C97EDC9C4CFAEE3,
+				CEA91C543A578CC6E615E698,
 				33A3949D07E1B3CA2F232114,
 				19C42AD70C59A8AA39404012,
 				5363A8C59EDC011177705492,
@@ -6302,6 +6305,7 @@
 				7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */,
+				DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
 				7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */,
 				ABD50BFA756452A64FB06788 /* GlossaryArticleRoutingTests.swift in Sources */,
