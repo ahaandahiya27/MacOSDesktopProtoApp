@@ -98,3 +98,48 @@ Also: the prompt's `log stream … --signpost …` invocation fails on modern ma
 ## Resolved (archived from REMEDIATION_LOG.md)
 
 (none yet)
+
+---
+
+## 2026-05-30 — Agent C: push to origin deferred (environmental, not code)
+
+**Status of work:** COMPLETE. All Distribution + Onboarding deliverables are
+committed locally on `main` and are part of the shared HEAD `de6ce38`:
+- `211fce7` feat(dist): onboarding tour + DMG packaging + parent docs
+- `d04a1af` chore(dist): wire onboarding into target + checkpoint/log/gitignore
+- (`de6ce38` is Agent A's commit stacked on top; my two commits are ancestors)
+
+**Verified in isolation:** full app target builds; `OnboardingFirstLaunchTests`
+(10) + `OnboardingSkipTests` (3) = 13/13 green via a direct `xcodebuild` run on
+an isolated DerivedData. `check_release_build.sh` passes (zero-warning Release
+build, entitlements, icons, deploy target).
+
+**Blocker (deferred, not stopped):** the pushes could not complete because the
+pre-push gate (`scripts/ci-build-test.sh`) **deadlocks/OOM-kills under 3-way
+parallel contention**. Root cause: every agent's `ci-build-test.sh` uses the
+same `TMPDIR` DerivedData (`/tmp/claude-501/desktopAhaan-ci-derived`), so
+concurrent gate runs (observed 7–8 simultaneous `xcodebuild` processes)
+corrupt each other's build artifacts and starve memory. One run hung 37+ min
+on `BossQuizSRSWiringTests.testEvery19ChaptersHasBossQuizSRSWiring` (normally
+milliseconds). This is environmental — not caused by any Agent C change.
+
+**Resolution in flight (no human action required if agents finish overnight):**
+- A background watcher (`/tmp/agentC_push_watcher.sh`, log
+  `/tmp/agentC_push_watcher.log`) lands the push automatically once machine
+  contention drops, using an **isolated** DerivedData (`CI_DERIVED_OVERRIDE`)
+  so the gate can't be corrupted by other agents' builds.
+- Independently, the moment **any** agent lands a clean push of `de6ce38` (or a
+  descendant), Agent C's work ships too, since `211fce7`/`d04a1af` are ancestors.
+
+**If still un-pushed in the morning:** from a quiet machine (no other
+`xcodebuild` running), run:
+```
+cd <repo>
+git pull --rebase --autostash origin main
+CI_DERIVED_OVERRIDE=/tmp/dd-agentC-isolated git push origin main
+```
+No `--no-verify` / `--force` was ever used for a push; the gate must pass.
+
+**Suggested infra fix (out of Agent C's domain — scripts/ owned elsewhere):**
+make `ci-build-test.sh`'s DerivedData unique per-invocation (e.g. include
+`$$`) so parallel agent gates never share build artifacts.
