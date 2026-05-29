@@ -242,11 +242,6 @@ private struct QuizBankContent: View {
     }
 }
 
-struct QuizBankRoute: Hashable {
-    let packId: String
-    let questionId: String
-}
-
 private struct QuizBankRow: View {
     let pack: SubjectPack
     let chapter: Chapter

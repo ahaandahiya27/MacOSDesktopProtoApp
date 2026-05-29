@@ -1,0 +1,12 @@
+# Types declared in non-test code but referenced only from tests OR
+# reserved for a planned-but-unshipped use case. Each entry is the
+# bare type name (one per line) followed by an inline rationale.
+#
+# Adding an entry here is a deliberate choice — it suppresses
+# scripts/check_dead_swift_types.py for that name. If a type is
+# truly unused (no tests, no plans), delete it instead.
+#
+# Format: <TypeName>    # rationale (one line)
+
+Radius                  # DesignTokens.Radius — corner-radius primitives reserved for Phase 6 design-token migration (per docstring on Extensions.swift:235)
+MockTranslationProvider # Used by TranslationServiceTests T-SVC-018/019; lint excludes test target so the cross-target reference is invisible

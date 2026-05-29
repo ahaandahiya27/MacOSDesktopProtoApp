@@ -142,40 +142,6 @@ enum DiscoverMode {
     }
 }
 
-/// Per-scene fallback shown on Big Sur (macOS 11) when a specific Discover
-/// scene relies on APIs that aren't available before macOS 12 (Canvas,
-/// TimelineView). The chapter shell, navigation, and progress dots still
-/// work — only the interactive scene body is replaced.
-struct SceneRequiresMacOS12View: View {
-    let sceneTitle: String
-
-    var body: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "sparkles")
-                .font(.system(size: 36))
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-            Text(sceneTitle)
-                .font(.title3.bold())
-            Text("This interactive scene needs macOS 12 or later to render.")
-                .font(.callout)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center)
-            Text("You can still browse the rest of this chapter from the regular chapter view.")
-                .font(.caption)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center)
-                .padding(.top, 4)
-        }
-        .padding(28)
-        .frame(maxWidth: 460)
-        .background(
-            RoundedRectangle(cornerRadius: 14)
-                .fill(Color.white.opacity(0.95))
-        )
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
 private struct ComingSoonView: View {
     let chapterTitle: String
 

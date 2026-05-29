@@ -213,6 +213,14 @@ if [ -f "scripts/check_race_and_deadlock.py" ]; then
     fi
 fi
 
+if [ -f "scripts/check_dead_swift_types.py" ]; then
+    echo "==> dead-swift-types lint (Family J.4 of bug-free cert)"
+    if ! python3 scripts/check_dead_swift_types.py; then
+        echo "ci-build-test: dead-swift-types lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/test_lints.py" ]; then
     echo "==> lint self-test"
     if ! python3 scripts/test_lints.py; then

@@ -27,9 +27,9 @@
 | G · Performance | 3 | 5 | 2 |
 | H · Security | 9 | 1 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
-| J · Code health | 6 | 4 | 0 |
+| J · Code health | 7 | 3 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **89** | **19** | **2** |
+| **Total** | **90** | **18** | **2** |
 
 ### Movement since initial audit
 
@@ -221,7 +221,7 @@ with the action that would close each.
 | J.1 | File > 600 LOC not on allowlist | ✅ | `check_file_size.py` — 2 pre-existing grandfathered |
 | J.2 | Allowlist entry lacks rationale comment | ✅ | `file_size_allowlist.txt` entries documented; spot-check confirms |
 | J.3 | Sister-file split candidates | 🟡 | `DiscoverChapter1View+InlineScenes{A,B,C}.swift` already split; further candidates documented in `docs/REFACTOR_QUEUE.md` |
-| J.4 | Dead code | 🟡 | Periodic sweeps; no automated dead-code detector (Swift lacks one for the test target) |
+| J.4 | Dead code | ✅ | `scripts/check_dead_swift_types.py` scans all 1033 top-level type declarations and asserts every one is referenced elsewhere in non-test code (or allowlisted in `dead_types_allowlist.txt` with rationale). 2 dead types removed in the same commit (`QuizBankRoute`, `SceneRequiresMacOS12View`); 2 entries allowlisted (Radius — Phase 6 typography reserve; MockTranslationProvider — test-only consumer) |
 | J.5 | Duplicate code blocks (>20 lines × 2+ files) | 🟡 | No automated detector; manual reviews catch the obvious ones |
 | J.6 | Cyclomatic complexity > 15 | 🟡 | No CC scanner; long switches reviewed manually (e.g., `DiscoverMode.view(for:)`) |
 | J.7 | Cross-subject coupling | ✅ | Subjects live under `desktopAhaan/Subjects/{Tutor,Sanskrit}` with no cross-imports between sanskrit-specific and tutor-specific types |
