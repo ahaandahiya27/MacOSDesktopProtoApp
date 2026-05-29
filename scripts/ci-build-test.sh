@@ -205,6 +205,14 @@ if [ -f "scripts/check_notificationcenter_leak.py" ]; then
     fi
 fi
 
+if [ -f "scripts/check_race_and_deadlock.py" ]; then
+    echo "==> race-and-deadlock lint (Family A.7 of bug-free cert)"
+    if ! python3 scripts/check_race_and_deadlock.py; then
+        echo "ci-build-test: race-and-deadlock lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/test_lints.py" ]; then
     echo "==> lint self-test"
     if ! python3 scripts/test_lints.py; then

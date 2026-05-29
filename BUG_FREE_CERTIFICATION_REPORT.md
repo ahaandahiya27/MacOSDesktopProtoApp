@@ -18,7 +18,7 @@
 
 | Family | ✅ | 🟡 | ❌ |
 |---|:--:|:--:|:--:|
-| A · Crash classes | 7 | 3 | 0 |
+| A · Crash classes | 8 | 2 | 0 |
 | B · Memory hazards | 9 | 1 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
@@ -29,7 +29,7 @@
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 6 | 4 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **88** | **20** | **2** |
+| **Total** | **89** | **19** | **2** |
 
 ### Movement since initial audit
 
@@ -70,8 +70,8 @@ with the action that would close each.
 | A.3 | Stack overflow from unbounded `GeometryReader` in `ScrollView` | ✅ | `testNoUnboundedGeometryReaderInScrollingContainer` pins the invariant |
 | A.4 | `EXC_BAD_INSTRUCTION` from `try!` / `as!` on runtime path | ✅ | Pre-commit hook rejects `try!` and `as!` in non-test code; `FoundationTutor.swift` exempt by name |
 | A.5 | Use-after-free in delegate (NSTextView/AVSpeechSynthesizer/WKWebView) | ✅ | `check_lifetime_hazards.py` LH001 covers `var delegate` without `weak`; WKWebView absent from critical paths |
-| A.6 | Race condition crashes (mutable shared state in `Task.detached`) | 🟡 | No explicit lint; `@MainActor` annotations cover most surfaces; isolated risk remains in `SubjectRegistry.reload` off-thread decode (single-writer pattern reviewed) |
-| A.7 | Deadlock (sync access of `@MainActor` from background) | 🟡 | `check_view_mainactor.py` covers `View → DataStore.shared.*` sync access; non-View deadlock surface untested |
+| A.6 | Race condition crashes (mutable shared state in `Task.detached`) | 🟡 | Audited 2026-05-29 (cert sweep): 5 `Task.detached` + 1 `DispatchQueue.global` sites; every closure isolates writes via `await MainActor.run`, `@MainActor` annotation, or value-type returns. No static lint (the regex shape is too noisy to ratchet — false positives on read-only `.shared.` access). Stays 🟡 until a smarter analyzer can be wired in |
+| A.7 | Deadlock (sync access of `@MainActor` from background) | ✅ | `scripts/check_race_and_deadlock.py` pins zero `DispatchQueue.main.sync` calls (the deadlock-on-itself pattern). `check_view_mainactor.py` covers `View → DataStore.shared.*` sync access |
 | A.8 | Unhandled Swift exception | 🟡 | `CrashReporter.NSSetUncaughtExceptionHandler` captures + writes to log; no static analyzer for `throws` propagation |
 | A.9 | SIGPIPE / SIGTERM signal-handler safety | ✅ | `CrashReporter.install()` registers SIGABRT/SIGILL/SIGBUS/SIGSEGV/SIGFPE/SIGPIPE; re-raises after logging |
 | A.10 | Concurrent file write to same path (atomic write skipped) | ✅ | `scripts/check_atomic_writes.py` enforces `options: .atomic` on every `Data.write(to:)` call (PDFKit `PDFDocument.write(to:)` exempt — different signature, internal atomicity) |
