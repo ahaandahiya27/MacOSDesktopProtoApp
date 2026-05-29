@@ -11,7 +11,7 @@ every session has converged on.
 - **Production-readiness: per-criterion ✅** — see `PRODUCTION_READINESS_REPORT.md`.
 - **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck). See `{SUBJECT}_READINESS_REPORT.md` each.
 - **Pack ID namespacing:** Science `ch*`, Maths `mch*`, Sanskrit `sch*` — ratcheted by `testNoCrossPackConceptIdCollision`.
-- **Test surface:** 545+ XCTest methods + 66 swift-testing + 15 XCUITest. Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner).
+- **Test surface:** 555+ XCTest methods + 66 swift-testing + 28 XCUITest (15 maths-Discover walks + 13 prior). Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner).
 
 ## What this project is
 

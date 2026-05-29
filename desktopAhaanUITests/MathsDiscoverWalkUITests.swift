@@ -32,12 +32,55 @@ import XCTest
 
 final class MathsDiscoverWalkUITests: XCTestCase {
 
+    // Per-chapter walks. Each is its own test method so XCTest can
+    // report exactly which chapter regressed. Title substring is
+    // the unique fragment of `chapter.title` that the Discover shell
+    // renders in its header.
+
+    func testTryDiscoverModeFromMathsCh1_doesNotCrash() throws {
+        try walkMathsChapter(number: 1, titleSubstring: "Large Numbers Around Us")
+    }
+    func testTryDiscoverModeFromMathsCh2_doesNotCrash() throws {
+        try walkMathsChapter(number: 2, titleSubstring: "Arithmetic Expressions")
+    }
+    func testTryDiscoverModeFromMathsCh3_doesNotCrash() throws {
+        try walkMathsChapter(number: 3, titleSubstring: "A Peek Beyond the Point")
+    }
+    func testTryDiscoverModeFromMathsCh4_doesNotCrash() throws {
+        try walkMathsChapter(number: 4, titleSubstring: "Expressions Using Letter-Numbers")
+    }
     func testTryDiscoverModeFromMathsCh5_doesNotCrash() throws {
         try walkMathsChapter(number: 5, titleSubstring: "Parallel and Intersecting Lines")
     }
-
+    func testTryDiscoverModeFromMathsCh6_doesNotCrash() throws {
+        try walkMathsChapter(number: 6, titleSubstring: "Number Play")
+    }
+    func testTryDiscoverModeFromMathsCh7_doesNotCrash() throws {
+        try walkMathsChapter(number: 7, titleSubstring: "A Tale of Three Intersecting Lines")
+    }
+    func testTryDiscoverModeFromMathsCh8_doesNotCrash() throws {
+        try walkMathsChapter(number: 8, titleSubstring: "Working with Fractions")
+    }
+    func testTryDiscoverModeFromMathsCh9_doesNotCrash() throws {
+        try walkMathsChapter(number: 9, titleSubstring: "Geometric Twins")
+    }
     func testTryDiscoverModeFromMathsCh10_doesNotCrash() throws {
         try walkMathsChapter(number: 10, titleSubstring: "Operations with Integers")
+    }
+    func testTryDiscoverModeFromMathsCh11_doesNotCrash() throws {
+        try walkMathsChapter(number: 11, titleSubstring: "Finding Common Ground")
+    }
+    func testTryDiscoverModeFromMathsCh12_doesNotCrash() throws {
+        try walkMathsChapter(number: 12, titleSubstring: "Another Peek Beyond the Point")
+    }
+    func testTryDiscoverModeFromMathsCh13_doesNotCrash() throws {
+        try walkMathsChapter(number: 13, titleSubstring: "Connecting the Dots")
+    }
+    func testTryDiscoverModeFromMathsCh14_doesNotCrash() throws {
+        try walkMathsChapter(number: 14, titleSubstring: "Constructions and Tilings")
+    }
+    func testTryDiscoverModeFromMathsCh15_doesNotCrash() throws {
+        try walkMathsChapter(number: 15, titleSubstring: "Finding the Unknown")
     }
 
     // MARK: - Walk
