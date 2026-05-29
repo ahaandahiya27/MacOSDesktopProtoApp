@@ -1233,6 +1233,7 @@
 		BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */; };
 		1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */; };
 		6306FDADF7181E694E2E268B /* PilotInteractiveSubjectGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E88A01133D8DFEE60960 /* PilotInteractiveSubjectGateTests.swift */; };
+		856D52CA078A632C3AA5C9ED /* ProductionReadinessRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6FBA8F7A2F34634311A6F /* ProductionReadinessRatchetTests.swift */; };
 		78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */; };
 		8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */; };
 		6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */; };
@@ -2514,6 +2515,7 @@
 		9AA1C3F53E9C14BC7C4B5C91 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceTests.swift"; sourceTree = "<group>"; };
 		4F40F36BE5B49DE983D407DA /* PilotInteractiveSheetCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSheetCoordinatorTests.swift"; sourceTree = "<group>"; };
 		0781E88A01133D8DFEE60960 /* PilotInteractiveSubjectGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PilotInteractiveSubjectGateTests.swift"; sourceTree = "<group>"; };
+		28F6FBA8F7A2F34634311A6F /* ProductionReadinessRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductionReadinessRatchetTests.swift"; sourceTree = "<group>"; };
 		4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionSourceTests.swift"; sourceTree = "<group>"; };
 		843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckMigrationRatchetTests.swift"; sourceTree = "<group>"; };
 		3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckPedagogicalContentTests.swift"; sourceTree = "<group>"; };
@@ -4895,6 +4897,7 @@
 				9AA1C3F53E9C14BC7C4B5C91,
 				4F40F36BE5B49DE983D407DA,
 				0781E88A01133D8DFEE60960,
+				28F6FBA8F7A2F34634311A6F,
 				4E902A3CDFE83A7C65A2E4A4,
 				843B8F73DDC119CFF925624D,
 				3A6BA61B199529F78B5C5C55,
@@ -6313,6 +6316,7 @@
 				BD99EBEC5AF0570ED4A3308E /* PersistenceTests.swift in Sources */,
 				1C8B7F342F689C93CD73830B /* PilotInteractiveSheetCoordinatorTests.swift in Sources */,
 				6306FDADF7181E694E2E268B /* PilotInteractiveSubjectGateTests.swift in Sources */,
+				856D52CA078A632C3AA5C9ED /* ProductionReadinessRatchetTests.swift in Sources */,
 				78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */,
 				8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */,
 				6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */,
