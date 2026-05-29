@@ -4,6 +4,15 @@ Read this before touching the codebase. It's the durable summary of how
 this project is built, what platform it must run on, and the conventions
 every session has converged on.
 
+## Current status (2026-05-29)
+
+- **17 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh`.
+- **Bug-free certification: 110/110 categories ✅** — see `BUG_FREE_CERTIFICATION_REPORT.md` at the repo root.
+- **Production-readiness: per-criterion ✅** — see `PRODUCTION_READINESS_REPORT.md`.
+- **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck). See `{SUBJECT}_READINESS_REPORT.md` each.
+- **Pack ID namespacing:** Science `ch*`, Maths `mch*`, Sanskrit `sch*` — ratcheted by `testNoCrossPackConceptIdCollision`.
+- **Test surface:** 545+ XCTest methods + 66 swift-testing + 15 XCUITest. Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner).
+
 ## What this project is
 
 A single-window macOS SwiftUI app for a Class 7 student (Ahaan). Bundles:
@@ -93,6 +102,15 @@ Reference paths only inside `desktopAhaan/`.)
 - **JSON content packs** must run through `SubjectPack.validateRelatedRefs()`
   — orphan `relatedConceptIds` / `relatedQuestionIds` go into the
   crashlog as `DATA` entries.
+
+## Key invariants (must not break)
+
+- **Pack JSON canonical format:** `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`. The pre-push `verify_pack_roundtrip.py` compares byte-for-byte; `indent=1` or a missing trailing newline silently fails.
+- **File size ceiling:** 600 LOC per `.swift` file. 2 files grandfathered with rationale (`QuestionDetailView`, `DataStore`); see `scripts/file_size_allowlist.txt`. Sister-file splits handle dense SwiftUI bodies near the limit.
+- **Sanskrit `ch01` carve-out:** the legacy vocabulary deck stays at `ch01` and is intentionally exempt from the NEP cross-subject parity ratchets. NEP chapters use `sch01`–`sch15` additively.
+- **Cross-subject pack ID prefix:** Science `ch*`, Maths `mch*`, Sanskrit `sch*` — enforced by `testNoCrossPackConceptIdCollision`. Breaking this changes the persistence schema for SRS reviews.
+- **Content-view-suffix labelling convention:** Buttons whose label slot is a custom view ending in `Card`, `Row`, `Chip`, `Badge`, `Tile`, `Item`, `Entry`, `Banner`, `Pill`, `Tag`, `Block`, or `Bubble` are credited as labeled by `check_a11y_labels.py`. Don't break the convention without a heuristic update.
+- **Entitlements set is locked:** `EntitlementsSnapshotTest` pins the 5-key set. Adding a permission updates the test in the same commit; broadening the `/Documents/` temp-exception scope is a deliberate decision.
 
 ## Issue taxonomy
 
