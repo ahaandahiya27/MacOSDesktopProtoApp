@@ -1210,6 +1210,7 @@
 		382B0F54D63558E0CA715C89 /* ConceptSiblingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC605011853463B1419D26E3 /* ConceptSiblingsTests.swift */; };
 		09130B589B35723DD045B13E /* ConceptUnderstoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB326F900D05BD19E49893 /* ConceptUnderstoodTests.swift */; };
 		27785CE9A1E90F8F75A3D285 /* CrossPackReviewResolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641B35E84F7857ED625202B7 /* CrossPackReviewResolutionTests.swift */; };
+		13B4CC79E80A80C2CA0CE803 /* CrossSubjectEnrichmentParityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F745F0E4708B652E9A231ED7 /* CrossSubjectEnrichmentParityTests.swift */; };
 		7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
@@ -2486,6 +2487,7 @@
 		FC605011853463B1419D26E3 /* ConceptSiblingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConceptSiblingsTests.swift"; sourceTree = "<group>"; };
 		20AB326F900D05BD19E49893 /* ConceptUnderstoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConceptUnderstoodTests.swift"; sourceTree = "<group>"; };
 		641B35E84F7857ED625202B7 /* CrossPackReviewResolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossPackReviewResolutionTests.swift"; sourceTree = "<group>"; };
+		F745F0E4708B652E9A231ED7 /* CrossSubjectEnrichmentParityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrossSubjectEnrichmentParityTests.swift"; sourceTree = "<group>"; };
 		24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyQuestionPickerTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
@@ -4862,6 +4864,7 @@
 				FC605011853463B1419D26E3,
 				20AB326F900D05BD19E49893,
 				641B35E84F7857ED625202B7,
+				F745F0E4708B652E9A231ED7,
 				24E14C1BC2E36EC9E70CAA9D,
 				8C883748B706BDB46E529043,
 				33A3949D07E1B3CA2F232114,
@@ -6275,6 +6278,7 @@
 				382B0F54D63558E0CA715C89 /* ConceptSiblingsTests.swift in Sources */,
 				09130B589B35723DD045B13E /* ConceptUnderstoodTests.swift in Sources */,
 				27785CE9A1E90F8F75A3D285 /* CrossPackReviewResolutionTests.swift in Sources */,
+				13B4CC79E80A80C2CA0CE803 /* CrossSubjectEnrichmentParityTests.swift in Sources */,
 				7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
