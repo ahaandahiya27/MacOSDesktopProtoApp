@@ -18,18 +18,36 @@
 
 | Family | ✅ | 🟡 | ❌ |
 |---|:--:|:--:|:--:|
-| A · Crash classes | 6 | 4 | 0 |
-| B · Memory hazards | 6 | 4 | 0 |
+| A · Crash classes | 7 | 3 | 0 |
+| B · Memory hazards | 7 | 3 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
-| E · SRS / persistence | 8 | 2 | 0 |
+| E · SRS / persistence | 9 | 1 | 0 |
 | F · UI / a11y | 5 | 5 | 0 |
 | G · Performance | 3 | 5 | 2 |
-| H · Security | 7 | 3 | 0 |
+| H · Security | 8 | 2 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 6 | 4 | 0 |
 | K · Test coverage | 8 | 2 | 0 |
-| **Total** | **79** | **29** | **2** |
+| **Total** | **83** | **25** | **2** |
+
+### Movement since initial audit
+
+Post-cert sweep landed two new lints and one new test class, flipping
+four categories from 🟡 to ✅:
+
+- **A.10 / H.8** — `scripts/check_atomic_writes.py` (commit `218ac11`)
+  pins every `Data.write(to:)` call to ship `options: .atomic`. PDFKit
+  writes exempt. Wired into the pre-push gate.
+- **B.8** — `scripts/check_kvo_observer_leak.py` (commit `218ac11`)
+  ratchets the empty-KVO posture. A new KVO observer without paired
+  invalidation fails CI.
+- **E.6** — `ToughFlagSymmetryTests` (commit `5e5e1af`) pins the
+  `toggleToughQuestion` round-trip + SM-2 review seed-and-preserve
+  invariants.
+
+Lint count: 12 → 14. The remaining 🟡 entries are documented below
+with the action that would close each.
 
 (Family count is 10; the report has 11 families because Family K — Test coverage — is the rolled-up score from §1's K block. 100 categories total.)
 
@@ -48,7 +66,7 @@
 | A.7 | Deadlock (sync access of `@MainActor` from background) | 🟡 | `check_view_mainactor.py` covers `View → DataStore.shared.*` sync access; non-View deadlock surface untested |
 | A.8 | Unhandled Swift exception | 🟡 | `CrashReporter.NSSetUncaughtExceptionHandler` captures + writes to log; no static analyzer for `throws` propagation |
 | A.9 | SIGPIPE / SIGTERM signal-handler safety | ✅ | `CrashReporter.install()` registers SIGABRT/SIGILL/SIGBUS/SIGSEGV/SIGFPE/SIGPIPE; re-raises after logging |
-| A.10 | Concurrent file write to same path (atomic write skipped) | 🟡 | `DataStore` writes are documented to use `.atomic`; no lint enforces it. Action: `check_atomic_writes.py` deferred to next sweep |
+| A.10 | Concurrent file write to same path (atomic write skipped) | ✅ | `scripts/check_atomic_writes.py` enforces `options: .atomic` on every `Data.write(to:)` call (PDFKit `PDFDocument.write(to:)` exempt — different signature, internal atomicity) |
 
 ---
 
@@ -63,7 +81,7 @@
 | B.5 | `unowned` capture (LH002) | ✅ | `check_lifetime_hazards.py` LH002 |
 | B.6 | `@unchecked Sendable` types (LH003) | ✅ | `check_lifetime_hazards.py` LH003 |
 | B.7 | NotificationCenter observer never removed | 🟡 | Grep `addObserver` against `removeObserver`: 4 observers; manual review confirms each lifetime-bound; no lint enforces |
-| B.8 | KVO observer leak | 🟡 | No KVO in code (grep `addObserver:forKeyPath:` returns 0) — surface is empty today but lint should pin |
+| B.8 | KVO observer leak | ✅ | `scripts/check_kvo_observer_leak.py` pins the empty-KVO surface; a new `addObserver:forKeyPath:` / `NSKeyValueObservation` / `.observe(\\..., options:)` call fails CI |
 | B.9 | Unbounded in-memory cache | 🟡 | `ImageCache` + article cache reviewed manually; bounded by SwiftUI's own view eviction; no LRU policy explicit |
 | B.10 | Singleton holding strong UI state refs | 🟡 | `DataStore.shared` holds `@Published` state; SwiftUI views observe via `@ObservedObject`, releasing on view teardown — reviewed |
 
@@ -112,7 +130,7 @@
 | E.3 | Easy on first learn under-spaces Good | ✅ | `testSM2_EasyOnFirstLearnOutspacesGood` |
 | E.4 | Cross-pack review attribution mixed up | ✅ | `CrossPackReviewResolutionTests` |
 | E.5 | Streak day-boundary off-by-one | ✅ | `testStreak_NextDayReviewIncrements` + `testStreak_MultiDayGapResetsToOne` |
-| E.6 | Tough-flag toggle out of sync | 🟡 | No explicit toggle-symmetry test; manual review of `DataStore.toughQuestionIds` getter/setter pair |
+| E.6 | Tough-flag toggle out of sync | ✅ | `ToughFlagSymmetryTests` (4 cases): read-back symmetry, round-trip identity, flagging seeds SM-2 review, unflagging preserves it |
 | E.7 | Daily Practice queue ordering | ✅ | `RecentlyMissedQuickCheckTests` + `RecentlyMissedBossQuizTests` |
 | E.8 | `recentlyMissedQuestionIds` limit edge cases | ✅ | Same battery; empty/at-limit/over-limit covered |
 | E.9 | SM-2 quality picker default accounts for hints used | 🟡 | Hint-ladder quality nudge documented in `QuestionDetailView`; no explicit test pins the mapping |
@@ -165,7 +183,7 @@
 | H.5 | Outbound network call besides `FreeOnlineTranslationProvider` | ✅ | Grep clean for `URLSession.shared.dataTask` outside that provider |
 | H.6 | Telemetry / analytics call | ✅ | None present (grep clean) |
 | H.7 | Entitlements declares unused permission | 🟡 | `desktopAhaan.entitlements` has Documents temp-exception (justified by TCC popup fix), network-client (translator), microphone (TTS); reviewed |
-| H.8 | File write skipped `.atomic` | 🟡 | Most writes use `.atomic`; not lint-enforced (see A.10) |
+| H.8 | File write skipped `.atomic` | ✅ | Closed via `scripts/check_atomic_writes.py` (same lint as A.10) |
 | H.9 | Pack JSON loaded without schema validation | ✅ | `SubjectPack.validateRelatedRefs()` runs at decode |
 | H.10 | OCR image saved with PII | ✅ | OCR pipeline operates in-memory; no disk persistence of source image |
 
