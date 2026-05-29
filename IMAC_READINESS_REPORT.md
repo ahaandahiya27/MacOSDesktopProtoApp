@@ -20,9 +20,16 @@ The only `warning:` lines in either log are meta-info (`xcodebuild: WARNING: Usi
 
 | Suite kind | Count | Result |
 |-----------|------:|--------|
-| XCTest (`Executed N tests`) | 269 | ✅ 0 failures |
+| XCTest (`Executed N tests`) | 545+ | ✅ 0 failures |
 | swift-testing (`Test run with N tests`) | 66 | ✅ 0 failures |
-| **Total** | **335** | ✅ green |
+| XCUITest (`--ui` opt-in) | 15 | requires AX grant on runner |
+| **Total (unit gate)** | **611+** | ✅ green |
+
+(XCTest count grew from 269 → 545+ across the Sanskrit enrichment +
+production polish + bug-free certification sweeps that landed
+between 2026-05-25 and 2026-05-29; see
+`BUG_FREE_CERTIFICATION_REPORT.md` for the per-category ratchet
+test inventory.)
 
 UI tests intentionally skipped on the dev mac (AX not granted to the
 runner; covered on the iMac and CI by the `--ui` flag).

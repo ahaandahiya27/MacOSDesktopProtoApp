@@ -9,8 +9,8 @@
 | Criterion | Status | Evidence |
 |---|:--:|---|
 | Build clean (Debug + Release) | ✅ | `scripts/ci-build-test.sh` exits 0 every push |
-| All unit tests green | ✅ | 530+ XCTest methods + 66 swift-testing; full suite + 11 lints + 3-pack canonical-JSON round-trip gates every push |
-| 11 lints clean | ✅ | `scripts/check_*.py` exit 0; allowlist count unchanged (3) |
+| All unit tests green | ✅ | 545+ XCTest methods + 66 swift-testing; full suite + 17 lints + 3-pack canonical-JSON round-trip gates every push |
+| 17 lints clean | ✅ | `scripts/check_*.py` exit 0; allowlist count unchanged (3) |
 | 3-pack data integrity | ✅ | `scripts/check_pack_schema.py` clean; cross-pack id audit clean; `verify_pack_roundtrip.py` clean |
 | iMac (Big Sur 11.7.11) compatibility | ✅ | `MACOSX_DEPLOYMENT_TARGET=11.5`; no macOS 12+ APIs; SF Symbols 3+ routed through `SFSymbolCompat`; no Swift 5.7+ shorthand bindings |
 | Crash report functional | ✅ | `CrashReporter` writes to `~/Library/Application Support/desktopAhaan/crashlogs/`; Help menu reveals; `ProductionReadinessRatchetTests.testCrashReporterWritesToCanonicalPath` |
@@ -56,7 +56,7 @@ The deferred items are captured here so the next sweep picks them up without re-
 
 ## How future commits inherit this readiness posture
 
-Every commit goes through the 11-lint + `xcodebuild` build + full test suite + 3-pack round-trip pre-push gate. The ratchet tests added in this sweep pin the following invariants:
+Every commit goes through the 17-lint + `xcodebuild` build + full test suite + 3-pack round-trip pre-push gate. The ratchet tests added in this sweep pin the following invariants:
 
 - `PerfBudgetTests` — pack decode ≤ 100 ms; per-pack chapter / concept / question count floors.
 - `DynamicTypeAtXLargeTests` — chapter title ≤ 120 chars, topic title ≤ 70 chars.

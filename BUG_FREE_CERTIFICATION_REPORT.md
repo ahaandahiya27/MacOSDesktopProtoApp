@@ -54,8 +54,11 @@ flipping six categories from 🟡 to ✅:
   `toggleToughQuestion` round-trip + SM-2 review seed-and-preserve
   invariants.
 
-Lint count: 12 → 15. The remaining 🟡 entries are documented below
-with the action that would close each.
+Lint count: 12 → 17 across this session (added: atomic-writes,
+notificationcenter-leak, kvo-observer-leak, race-and-deadlock,
+dead-swift-types). The 🟡 entries that initially remained have all
+since been closed via subsequent agent audits + targeted fixes;
+final cert state is 110/110 ✅ as shown in the top-line score table.
 
 (Family count is 10; the report has 11 families because Family K — Test coverage — is the rolled-up score from §1's K block. 100 categories total.)
 
