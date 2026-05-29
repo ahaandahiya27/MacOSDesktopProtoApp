@@ -172,4 +172,41 @@ if [ -f "scripts/check_swift55_syntax.py" ]; then
     fi
 fi
 
+# 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
+#    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
+#    the pack keeps them from touching unrelated commits. They duplicate the
+#    Swift ratchet tests (ChapterContentTests) at commit time so a stray pack
+#    edit can't land a cross-pack id collision / orphan ref / malformed quiz
+#    id before the test suite runs. Hard gate.
+PACK_STAGED_INTEGRITY=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^desktopAhaan/Subjects/Packs/.+\.json$' || true)
+if [ -n "$PACK_STAGED_INTEGRITY" ]; then
+    for lint in check_cross_pack_ids check_orphan_refs check_quiz_id_format; do
+        if [ -f "scripts/${lint}.py" ]; then
+            if ! python3 "scripts/${lint}.py"; then
+                echo
+                echo "pre-commit: ${lint} failed — pack data integrity violation."
+                echo "Fix the listed ids/refs before committing."
+                echo "If intentional, bypass with: git commit --no-verify"
+                exit 1
+            fi
+        fi
+    done
+fi
+
+# 10) Test-target Big Sur compat (Bug-Free-Cert C.10). Only run when a test
+#     .swift file is staged. The iMac (Xcode 13.2.1) RUNS the test suite, so a
+#     macOS 12+ API in a test file fails to build there. Hard gate.
+TEST_SWIFT_STAGED=$(git diff --cached --name-only --diff-filter=ACM \
+    | grep -E '^desktopAhaan(UI)?Tests/.+\.swift$' || true)
+if [ -n "$TEST_SWIFT_STAGED" ] && [ -f "scripts/check_test_target_compat.py" ]; then
+    if ! python3 scripts/check_test_target_compat.py $TEST_SWIFT_STAGED; then
+        echo
+        echo "pre-commit: check_test_target_compat failed — macOS 12+ API in test code."
+        echo "The iMac runs the tests on Big Sur; use a Big Sur-safe equivalent."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 exit 0

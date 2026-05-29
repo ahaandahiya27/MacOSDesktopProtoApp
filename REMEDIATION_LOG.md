@@ -3225,3 +3225,41 @@ same repo during this session. Its `generate_compat_pbxproj.py` run
 (commit `9cc4806`) baked references to this session's still-untracked test
 files into project.pbxproj; committing the test sources here resolves that
 dangling reference. The science pack was untouched by the Maths commits.
+
+---
+
+## 2026-05-29 — 100-Category Bug-Free Re-Certification (parallel-mode Agent C)
+
+Base HEAD `82f04ff`. Ran an independent 11-family (A–K, 110-category) fan-out
+re-audit — one read-only Explore agent per family — against the existing
+`BUG_FREE_CERTIFICATION_REPORT.md` (110/110 ✅). The re-audit reproduced the
+same posture and landed **four new deterministic pure-Python lints** that
+harden categories previously locked by Swift test alone (or, for C.10, locked
+on inaccurate evidence):
+
+- `scripts/check_cross_pack_ids.py` — D.2 (within-pack dup concept id) + D.3
+  (cross-pack concept-id collision). Commit-time mirror of
+  `testNoCrossPackConceptIdCollision`.
+- `scripts/check_orphan_refs.py` — D.4 / D.5 (relatedConceptIds /
+  relatedQuestionIds resolution) + D.6 (conceptMap **edge→node** integrity,
+  across **all** packs incl. science; tolerates Maths synthetic pivot nodes).
+- `scripts/check_quiz_id_format.py` — D.10 (`bossquiz_<ns>NN_qII` /
+  `scenecheck_<ns>NN_qII` canonical id shape, tree-wide).
+- `scripts/check_test_target_compat.py` — **C.10 real fix.**
+  `check_macos12_apis.py` explicitly *skips* `desktopAhaanTests/` (line 312),
+  so the report's "runs against the test target too" claim was inaccurate. The
+  iMac (Xcode 13.2.1) compiles + runs the test suite, so a macOS 12+ API in
+  test code fails there. The new sibling lint scans both test targets with the
+  same ban rules (70 test files, clean).
+
+Each lint ships a built-in `--selftest` (clean + violation fixtures) and runs
+clean against the current packs + test target. Wired into
+`scripts/hooks/pre-commit` (conditional on staged pack JSON / test `.swift`)
+and unconditionally into `scripts/hooks/pre-push`. Lint count 17 → 21.
+
+No pack JSON, View, Model, or Service files were touched (parallel-mode touch
+list). Code-level findings deferred to `POLISH_TODOS.md §5` (E.7/E.10 ratchet
+tests, F.1 labels, I.3 DRY, J.2 stale comment, G.* perf instrumentation).
+Report + checkpoint updated. STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>

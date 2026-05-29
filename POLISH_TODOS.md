@@ -65,3 +65,38 @@ The 15 Optional `Chapter` content fields populate from JSON (332 of 342 parity c
 - [x] **Scientist Spotlight article at 19/19** (2026-05-26, commit `111ddc3`) — 18 templated `ch{NN}_scientists.html` from `chapter.scientists` JSON; 4-case `ScientistsArticleRoutingTests`. UI surfaced via `ExtraReadingRow` chip.
 - [x] **What If? article at 19/19** (2026-05-26, commit `290ac77`) — 18 templated `ch{NN}_whatif.html` from `chapter.whatIfs` JSON; 4-case `WhatIfArticleRoutingTests`. UI surfaced via `ExtraReadingRow` chip.
 - [x] **ExtraReadingRow UI surfacing** (2026-05-26, commit `577a31e`) — compact chip row on `ChapterDetailView.surfacesGroupBottom` exposes the 4 templated enrichment articles (Vocabulary Deck, NCERT Q&A, Scientist Spotlight, What If?) per chapter; each chip auto-hides when its article isn't bundled. Sister-file split keeps the parent view under 600 LOC.
+
+## §5. Deferred from 100-Category Bug-Free Re-Certification (2026-05-29, parallel-mode Agent C)
+
+These were surfaced by an 11-family fan-out re-audit. Each underlying cert
+category is already ✅ (locked or accepted-with-rationale); these are
+strengthening opportunities whose fix touches View/Model/Service code and so
+are out of bounds for the parallel-mode cert agent. They land in a later
+non-parallel sweep.
+
+- [ ] **E.7 ratchet test** — add `testDueQuestionIdsOrderedMostOverdueFirst`:
+  create 3 reviews with distinct `nextDueAt`, call `dueQuestionIds()`, assert
+  ascending-by-due order. Implementation (DataStore.swift ~L749-754) is
+  correct; only the pin is missing. (Touches DataStore — Agent B's domain this run.)
+- [ ] **E.10 ratchet test** — add a DataStore single-instance / shared-state
+  regression guard (the 6b5a706 review-loss class): record a review on one
+  handle, assert visibility through `.shared`. Prevents re-introduction of a
+  second `DataStore()`.
+- [ ] **F.1 unlabeled buttons** — 24 Image-only / empty-keyboard-proxy buttons
+  (96% labeled, > 90% floor). Add `.accessibilityLabel`/`.help` per site
+  (CommandPalette shortcut buttons, QuestionDetailView keyboard proxies,
+  FlipCard/DiscoveryStepper). View edits.
+- [ ] **I.3 DRY** — `ConceptDetailView+ChapterGlossaryCTA.swift` duplicates the
+  `m`-prefix article-key derivation; route it through
+  `ArticleIndex.packScopedKey(forPackId:baseKey:)` like GlossarySheet does.
+  No data leak (the prefix is correct) — cosmetic de-dup. View edit.
+- [ ] **J.2 stale allowlist comment** — `scripts/file_size_allowlist.txt`
+  DataStore rationale says "698 LOC after the +Loading/+Saving split"; the
+  file is now 822 LOC. Rationale still valid (domain mutators stay short, no
+  clean split); just refresh the number. (Left unedited this run to avoid
+  racing other agents who may grow the allowlist when adding files.)
+- [ ] **G.1 / G.6 / G.9 / G.10 perf instrumentation** — launch-time (<3s),
+  Discover-transition frame-rate (≥20fps legacy), article-parse (<500ms), and
+  30-min memory-growth (<100MB) ratchets need a running-app / XCUITest harness
+  or in-app `os_signpost` regions. Static audit is clean; these are
+  measurement-infra tasks for a non-parallel sweep.

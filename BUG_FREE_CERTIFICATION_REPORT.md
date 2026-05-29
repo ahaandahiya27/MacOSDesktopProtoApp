@@ -6,6 +6,27 @@
 
 **HEAD at certification:** `723c589` (post production-polish sweep)
 
+**Re-certification pass — 2026-05-29 (parallel-mode Agent C, base HEAD `82f04ff`):**
+An independent 11-family fan-out re-audit (one read-only Explore agent per
+family) re-verified all 110 categories and reached the same posture. This
+pass also **landed four new deterministic pure-Python lints** that convert
+several categories from "locked by Swift test only" (or, for C.10, "claimed
+but inaccurate") into "additionally locked by a commit-time + push-time lint":
+
+| New lint | Locks | Why it was needed |
+|---|---|---|
+| `scripts/check_cross_pack_ids.py` | D.2, D.3 | Commit-time mirror of `testNoCrossPackConceptIdCollision`; catches a collision before the Swift suite runs |
+| `scripts/check_orphan_refs.py` | D.4, D.5, D.6 | Validates `relatedConceptIds` / `relatedQuestionIds` resolution and conceptMap **edge→node** integrity across **all** packs (tolerates Maths synthetic "pivot" nodes) |
+| `scripts/check_quiz_id_format.py` | D.10 | Pins `bossquiz_<ns>NN_qII` / `scenecheck_<ns>NN_qII` canonical id shape tree-wide |
+| `scripts/check_test_target_compat.py` | C.10 | **Closes a real gap:** `check_macos12_apis.py` explicitly *skips* `desktopAhaanTests/` (line 312), so the prior C.10 evidence ("runs against the test target too") was inaccurate. The iMac *runs* the test suite on Xcode 13.2.1, so a macOS 12+ API in test code fails to build there. This lint scans the test target with the same ban rules |
+
+All four pass their built-in `--selftest` and run clean against the current
+packs + test target. Wired into `scripts/hooks/pre-commit` (conditional on a
+pack JSON / test `.swift` being staged) and unconditionally into
+`scripts/hooks/pre-push`. Lint count this session: **17 → 21**. Code-level
+findings (View/Model/Service) surfaced by the re-audit were deferred to
+`POLISH_TODOS.md` per parallel-mode rules; see "Deferred from re-audit" below.
+
 ## Legend
 
 | Status | Meaning |
@@ -111,7 +132,7 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 | C.7 | `WKWebView` reintroduction | ✅ | Banned post-2026-05-22; absent from current critical paths |
 | C.8 | `MACOSX_DEPLOYMENT_TARGET` bump | ✅ | `MACOSX_DEPLOYMENT_TARGET=11.5` pinned in `ci-build-test.sh` |
 | C.9 | Universal-binary regression (`ONLY_ACTIVE_ARCH=YES` in Release) | ✅ | `generate_compat_pbxproj.py` writes the canonical setting; Release is universal |
-| C.10 | Test code using macOS 12+ APIs | ✅ | `check_macos12_apis.py` runs against the test target too |
+| C.10 | Test code using macOS 12+ APIs | ✅ | `scripts/check_test_target_compat.py` (added 2026-05-29) scans `desktopAhaanTests/` + `desktopAhaanUITests/` with the same ban rules as `check_macos12_apis.py` — clean across 70 test files. **Correction:** `check_macos12_apis.py` itself explicitly *skips* the test target (line 312), so the prior "runs against the test target too" claim was inaccurate; the new sibling lint genuinely closes the gap (the iMac compiles + runs the test suite on Xcode 13.2.1). Wired into pre-commit (on staged test `.swift`) + pre-push (unconditional) |
 
 ---
 
@@ -120,15 +141,15 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 | # | Category | Status | Evidence |
 |---|---|:--:|---|
 | D.1 | Pack JSON schema violation | ✅ | `check_pack_schema.py` + `testSciencePackHasThreeChapters` + `testSanskritPackDecodes` |
-| D.2 | Duplicate concept id within a pack | ✅ | `testNoCrossPackConceptIdCollision` walks each pack |
-| D.3 | Cross-pack concept-id collision | ✅ | `testNoCrossPackConceptIdCollision` — `sch*` / `mch*` / `ch*` namespacing pinned |
-| D.4 | Orphan `relatedConceptIds` | ✅ | `testNoConceptHasBrokenRelatedQuestionIds` + `testRelatedConceptIdsAreSymmetric` |
-| D.5 | Orphan `relatedQuestionIds` | ✅ | Same as D.4 |
-| D.6 | `conceptMap` node id doesn't resolve | ✅ | `testConceptMapNodesResolveWithinChapterOrToCrossChapterRef` (science) + `testSanskritConceptMapEdgesResolve` (sanskrit) |
-| D.7 | `pageRefs` out of PDF range | ✅ | `testBossQuizMigrationRatchet.testEveryBossQuizHasPageRefs` pins boss-quiz; chapter-question pageRefs validated at content authoring |
-| D.8 | `ArticleEntry` references a non-bundled HTML file | ✅ | `testArticleFilenamesMatchEntryIds` + per-chapter routing ratchets |
-| D.9 | Bundled HTML file with no `ArticleEntry` registration | ✅ | `ExtraReadingRowTests` plus per-chapter article-presence tests |
-| D.10 | Boss-quiz / quick-check id format | ✅ | `BossQuizMigrationRatchetTests` |
+| D.2 | Duplicate concept id within a pack | ✅ | `testNoCrossPackConceptIdCollision` walks each pack **+ `scripts/check_cross_pack_ids.py`** (2026-05-29) pins it at commit/push time |
+| D.3 | Cross-pack concept-id collision | ✅ | `testNoCrossPackConceptIdCollision` — `sch*` / `mch*` / `ch*` namespacing pinned **+ `scripts/check_cross_pack_ids.py`** (deterministic pure-JSON, all 3 packs) |
+| D.4 | Orphan `relatedConceptIds` | ✅ | `testNoConceptHasBrokenRelatedQuestionIds` + `testRelatedConceptIdsAreSymmetric` **+ `scripts/check_orphan_refs.py`** (per-pack resolution, gated commit + push) |
+| D.5 | Orphan `relatedQuestionIds` | ✅ | Same as D.4 **+ `scripts/check_orphan_refs.py`** |
+| D.6 | `conceptMap` node id doesn't resolve | ✅ | `testSanskritConceptMapEdgesResolve` (sanskrit) **+ `scripts/check_orphan_refs.py`** which validates conceptMap **edge→node** integrity across **all** packs (science included — closes the prior science-only gap), tolerating Maths synthetic "pivot" nodes by checking edge endpoints resolve to declared nodes rather than to concepts |
+| D.7 | `pageRefs` out of PDF range | ✅ | `testBossQuizMigrationRatchet.testEveryBossQuizHasPageRefs` pins boss-quiz; chapter-question pageRefs validated at content authoring. (PDF not bundled, so absolute-range validation N/A — presence + non-negativity is what is checked) |
+| D.8 | `ArticleEntry` references a non-bundled HTML file | ✅ | `testArticleFilenamesMatchEntryIds` + per-chapter routing ratchets; re-audit confirmed all 727 entries map to bundled HTML |
+| D.9 | Bundled HTML file with no `ArticleEntry` registration | ✅ | `ExtraReadingRowTests` plus per-chapter article-presence tests; re-audit confirmed all 727 bundled HTML files are registered |
+| D.10 | Boss-quiz / quick-check id format | ✅ | `BossQuizMigrationRatchetTests` **+ `scripts/check_quiz_id_format.py`** pins `bossquiz_<ns>NN_qII` / `scenecheck_<ns>NN_qII` shape tree-wide (200 boss + 68 scene ids, all canonical) |
 
 ---
 
@@ -259,9 +280,33 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 
 Both are deferred with the same reason: shell-from-CI measurement of running-app behavior is unreliable; both need either an XCUITest harness or an in-app `os_signpost` region. Documented here so the next sweep picks them up.
 
+## Deferred from the 2026-05-29 re-audit (parallel mode → POLISH_TODOS)
+
+The re-audit confirmed every category's ✅/accepted-rationale verdict but
+surfaced enhancement opportunities whose fix touches View/Model/Service code
+(out of bounds for the parallel-mode cert agent — those land in a later
+non-parallel sweep). They do **not** lower the cert verdict; each underlying
+category already has a documented lock or accepted rationale. Recorded in
+`POLISH_TODOS.md`:
+
+- **E.7 / E.10 ratchet tests** — `dueQuestionIds()` most-overdue-first ordering
+  and a DataStore single-instance/shared-state regression guard are both
+  correct in implementation but lack a dedicated pinning test. (Adding the
+  tests requires referencing `DataStore`, owned by Agent B this run.)
+- **F.1 unlabeled buttons** — 24 Image-only/empty-proxy buttons (96% labeled,
+  above the 90% floor); per-site `.accessibilityLabel` is a View edit.
+- **I.3 DRY** — `ChapterGlossaryCTA` duplicates the `m`-prefix key derivation
+  instead of calling `ArticleIndex.packScopedKey(...)`. No leak; cosmetic.
+- **J.2 stale comment** — `file_size_allowlist.txt` DataStore rationale cites
+  "698 LOC"; file is now 822 LOC. Rationale still valid; number is stale.
+- **G.1 / G.6 / G.9 / G.10 perf instrumentation** — launch-time, transition
+  frame-rate, article-parse, and 30-min memory-growth ratchets need a running
+  app / XCUITest harness (see the ❌-action-plan note below; static audit
+  clean).
+
 ## How future commits inherit the bug-free posture
 
-Every commit goes through the 12-lint + xcodebuild build + full test suite + 3-pack canonical-JSON round-trip pre-push gate. The ratchet tests added in the production-polish sweep + the prior Sanskrit sweep lock the categories above where the verdict is ✅.
+Every commit goes through the 21-lint + xcodebuild build + full test suite + 3-pack canonical-JSON round-trip pre-push gate. The ratchet tests added in the production-polish sweep + the prior Sanskrit sweep lock the categories above where the verdict is ✅.
 
 For the 🟡 categories, future commits should:
 1. Improve the heuristic if a smarter scanner is feasible (e.g., a11y label coverage via a parser instead of regex).
