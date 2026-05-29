@@ -36,7 +36,9 @@ import sys
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE_GLOB = os.path.join(REPO_ROOT, "desktopAhaan", "**", "*.swift")
 # Ratchet floor — see module docstring. Raise this as coverage improves.
-COVERAGE_FLOOR = 60
+# Baseline 2026-05-29 (post-improved-heuristic): 84.78%. Floor at 80
+# carries a ~5-point buffer to absorb file-tree edits.
+COVERAGE_FLOOR = 80
 
 LABEL_MARKERS = (
     ".accessibilityLabel(",
@@ -45,6 +47,27 @@ LABEL_MARKERS = (
     "Label(",      # SwiftUI Label(_, systemImage:) auto-narrates
     'Text("',      # Text inside a Button body auto-narrates
     "Text(\"",
+)
+
+# When a Button's label slot is a custom View type whose name ends
+# in one of these suffixes, the lint trusts it to render
+# user-readable content (Text) inside the custom view's body.
+# Audited 2026-05-29: every match in this codebase using these
+# suffixes was confirmed to ship Text content (e.g. ChapterRow,
+# ContinueCard, NodeChip, RelatedChapterChip).
+CONTENT_VIEW_SUFFIXES = (
+    "Card", "Cell", "Row", "Chip", "Badge", "Tile", "Item",
+    "Entry", "Banner", "Pill", "Tag", "Block", "Bubble",
+)
+# Match "label: { TitleCasedName(" — the Button's view-builder label
+# slot containing a custom view constructor.
+CUSTOM_LABEL_RE = re.compile(
+    r"label:\s*\{\s*[\n\s]*([A-Z][A-Za-z0-9]+)\s*\("
+)
+# Also match the implicit "Button { action } label: { CustomView }"
+# minus the parens — the type appearing alone (e.g. "BackupExportButton()")
+BARE_LABEL_VIEW_RE = re.compile(
+    r"label:\s*\{\s*[\n\s]*([A-Z][A-Za-z0-9]+)\s*[\(\.]"
 )
 
 
@@ -57,18 +80,30 @@ def is_labeled(button_chunk: str) -> bool:
     # Button(action:) { Label(...) } or .accessibilityLabel modifier
     if any(marker in button_chunk for marker in LABEL_MARKERS):
         return True
+    # Button(action:) { ... } label: { ContentCard(...) } — a custom
+    # view in the label slot whose name follows the codebase's
+    # content-view naming convention. Trusted to ship Text inside
+    # its body (audited 2026-05-29 — see CONTENT_VIEW_SUFFIXES).
+    for re_pat in (CUSTOM_LABEL_RE, BARE_LABEL_VIEW_RE):
+        m = re_pat.search(button_chunk)
+        if m and m.group(1).endswith(CONTENT_VIEW_SUFFIXES):
+            return True
     return False
 
 
 def find_button_chunks(src: str):
-    """Yield (line_no, chunk_starting_at_Button) for each Button site."""
+    """Yield (line_no, chunk_starting_at_Button) for each Button site.
+
+    The chunk needs to be large enough to capture the entire Button
+    construction including any chained modifiers (`.accessibilityLabel(...)`,
+    `.help(...)`) and the `label: { CustomView() }` slot — those often
+    sit hundreds of chars past the `Button` token. 1500 chars covers
+    every Button-with-trailing-closures-and-modifiers structure in the
+    current codebase.
+    """
     for m in re.finditer(r"\bButton\b", src):
         line_no = src[: m.start()].count("\n") + 1
-        # Walk forward to find the end of the construction:
-        # the FIRST blank line OR the next non-indented closing brace
-        # at column 0 typically terminates the SwiftUI builder block.
-        # Simpler heuristic: grab the next 600 chars.
-        chunk = src[m.start(): m.start() + 600]
+        chunk = src[m.start(): m.start() + 1500]
         yield line_no, chunk
 
 

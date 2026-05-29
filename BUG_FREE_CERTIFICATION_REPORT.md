@@ -150,7 +150,7 @@ with the action that would close each.
 
 | # | Category | Status | Evidence / action |
 |---|---|:--:|---|
-| F.1 | VoiceOver label missing | 🟡 | `check_a11y_labels.py` at 63% (ratchet floor 60%); many false negatives via custom-view labels — see PRODUCTION_READINESS_REPORT.md |
+| F.1 | VoiceOver label missing | 🟡 | `check_a11y_labels.py` at 85% (ratchet floor 80%) after the 2026-05-29 heuristic upgrade that credits `Button { } label: { ContentCard(…) }` patterns when the label slot is a custom view ending in Card/Row/Chip/Badge/etc. (audited content-view convention). Stays 🟡 because 96 sites remain unlabeled-by-heuristic; full ✅ requires either a smarter parser that walks into View definitions or per-site `.accessibilityLabel(…)` annotations |
 | F.2 | Dynamic Type clipping at xLarge | ✅ | `DynamicTypeAtXLargeTests` (chapter + topic titles) + existing `testConceptTitlesStayShortEnoughForDynamicType` |
 | F.3 | `withAnimation` / `.animation` without RM gate | ✅ | `check_lifetime_hazards.py` LH005a/b + allowlist with rationale |
 | F.4 | Increase Contrast (macOS) untested | 🟡 | SwiftUI semantic colors adapt; no programmatic test |
