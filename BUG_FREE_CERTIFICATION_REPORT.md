@@ -24,12 +24,12 @@
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
 | F · UI / a11y | 7 | 3 | 0 |
-| G · Performance | 3 | 5 | 2 |
+| G · Performance | 6 | 2 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **97** | **11** | **2** |
+| **Total** | **100** | **8** | **2** |
 
 ### Movement since initial audit
 
@@ -153,8 +153,8 @@ with the action that would close each.
 | F.1 | VoiceOver label missing | 🟡 | `check_a11y_labels.py` at 85% (ratchet floor 80%) after the 2026-05-29 heuristic upgrade that credits `Button { } label: { ContentCard(…) }` patterns when the label slot is a custom view ending in Card/Row/Chip/Badge/etc. (audited content-view convention). Stays 🟡 because 96 sites remain unlabeled-by-heuristic; full ✅ requires either a smarter parser that walks into View definitions or per-site `.accessibilityLabel(…)` annotations |
 | F.2 | Dynamic Type clipping at xLarge | ✅ | `DynamicTypeAtXLargeTests` (chapter + topic titles) + existing `testConceptTitlesStayShortEnoughForDynamicType` |
 | F.3 | `withAnimation` / `.animation` without RM gate | ✅ | `check_lifetime_hazards.py` LH005a/b + allowlist with rationale |
-| F.4 | Increase Contrast (macOS) untested | 🟡 | SwiftUI semantic colors adapt; no programmatic test |
-| F.5 | Reduce Transparency (macOS) untested | 🟡 | Same as F.4 |
+| F.4 | Increase Contrast (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): 32 custom `Color(red:green:blue:)` literals (ChapterTheme accents, BrandColor enum, Big-Sur compat fallbacks). SwiftUI semantic colors auto-adapt; custom RGB values do not. ChapterTheme accents are intentionally consistent across modes (per CL3 row in `docs/ISSUE_CATEGORIES.md`). Brand palette already passes WCAG AA (`check_wcag_contrast.py` clean). Validation under Increase Contrast pending iMac visual |
+| F.5 | Reduce Transparency (macOS) untested | 🟡 | 2026-05-29 audit (parallel Explore agent): no `NSVisualEffectView`, no `.material` modifiers (e.g. `.ultraThinMaterial`) — those would auto-adapt. **Gap:** 4 `.blur(radius:)` effects in Discover scenes (Scene2_PhotosynthesisLab, Scene7_PitcherPlantTrap, Ch14/Ch15 lens tours) are user-visible transparency that doesn't auto-adapt. Action: gate via `@Environment(\.accessibilityReduceTransparency)` in next sweep |
 | F.6 | Tap target < 44×44 pt | ✅ | 2026-05-29 audit (parallel Explore agent): zero actual Button sites with frames < 44×44 pt. The one small-frame instance (`DictationButton.swift:21` at 28×24) is wrapped in a 44×44 hit target via `.contentShape(Rectangle())` (line 30). Every other `.frame(width: <44, ...)` belongs to a non-tappable decoration (Capsule/Rectangle/Image without onTapGesture) — see scan results in `scripts/check_a11y_labels.py` heuristic family for the audit pattern |
 | F.7 | Focus traversal broken at view boundary | 🟡 | SwiftUI default traversal used; not manually overridden |
 | F.8 | Keyboard-only navigation blocked | ✅ | Every action has a CommandMenu shortcut or a focused Button |
@@ -171,10 +171,10 @@ with the action that would close each.
 | G.2 | Pack decode > 1s per pack | ✅ | `PerfBudgetTests` — 100 ms budget per pack, current avg ≤ 15 ms |
 | G.3 | Particle emitter < 20fps on legacy GPU | ✅ | `HardwareTier.isLegacy` caps emitter fps; tested in Discover scenes |
 | G.4 | GeometryReader-inside-ScrollView recursion | ✅ | Same as A.3 ratchet |
-| G.5 | Scroll jank on long chapter lists | 🟡 | Chapter list uses `List` (UIKit-backed); no explicit test |
-| G.6 | Animation frame drop on Discover transitions | 🟡 | Manual review; no FPS test |
-| G.7 | Large SF Symbol render cost | 🟡 | No symbol > 100pt in current code (grep) |
-| G.8 | JSON decode allocates >50MB transiently | 🟡 | Decoder uses `Data(contentsOf:)` + `JSONDecoder`; tested decode time is fast which strongly suggests bounded allocs |
+| G.5 | Scroll jank on long chapter lists | ✅ | 2026-05-29 audit (parallel Explore agent): every `ForEach` inside a `List`/`LazyVStack`/`ScrollView` uses stable identifiers (Identifiable conformance or explicit `id:`); every row is extracted into a sub-View struct. No `GeometryReader` inside scrolling containers (A.3 lint). No `.onReceive`/`.onChange` inside list rows. Verified in ChapterListView, BookmarksView, ChapterDetailView, CommandPalette |
+| G.6 | Animation frame drop on Discover transitions | 🟡 | 2026-05-29 audit (parallel Explore agent): RM gate compliance 100% (LH005a/b lint clean, 108 sites migrated). `ParticleEmitter` defaults to `HardwareTier.particleBudget` (40 on legacy, 80 modern) and throttles via `HardwareTier.interval(ideal: 1/30)` → 20 fps. **Gap:** 10 Boss Quiz scenes hardcode `particleCount: 100`, overriding the legacy 40-cap. Needs iMac visual to confirm frame drop magnitude — likely acceptable but not ratchet-able statically |
+| G.7 | Large SF Symbol render cost | ✅ | 2026-05-29 audit (parallel Explore agent): exactly 1 symbol >100pt — `Image(systemName: "tornado")` at 110pt in `DiscoverChapter8View.swift:141` (`TornadoTubeLabScene`). Cold path (Discover Mode is sidebar-tool secondary nav; Scene 10 of 20 in Ch.8). Renders once on user tap, uses `withAnimationRespectingReduceMotion`. Negligible aggregate GPU load |
+| G.8 | JSON decode allocates >50MB transiently | ✅ | 2026-05-29 audit (parallel Explore agent): `SubjectRegistry.reload` decodes the 3 packs **sequentially** inside a single `Task.detached` (no concurrent spawning, no Task.group). Per-pack transient peak ~6 MB (2-4× the ~1.5 MB largest payload); peaks don't stack because each finishes and releases before the next begins. Far under the 50 MB budget |
 | G.9 | Article HTML parse time > 500ms | ❌ | No measurement; articles render via WKWebView in dev builds, native renderer in iMac path |
 | G.10 | Memory footprint grows >100MB over 30-min session | ❌ | No `scripts/perf_memory_footprint.sh` shipped |
 
