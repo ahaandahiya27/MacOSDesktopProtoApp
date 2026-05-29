@@ -15,10 +15,10 @@
 | iMac (Big Sur 11.7.11) compatibility | ✅ | `MACOSX_DEPLOYMENT_TARGET=11.5`; no macOS 12+ APIs; SF Symbols 3+ routed through `SFSymbolCompat`; no Swift 5.7+ shorthand bindings |
 | Crash report functional | ✅ | `CrashReporter` writes to `~/Library/Application Support/desktopAhaan/crashlogs/`; Help menu reveals; `ProductionReadinessRatchetTests.testCrashReporterWritesToCanonicalPath` |
 | SRS persistence stable | ✅ | `DataStore` singleton; pack-attributed reviews via `recordReview(packId:)`; ease/interval clamps; `CrossPackReviewResolutionTests` |
-| Cold launch time | 🟡 | Script deferred — `scripts/perf_cold_launch.sh` not yet shipped (running the bundled app from a shell measurement is unreliable; deferred to a later sweep that wires `os_signpost` instead) |
+| Cold launch time | ✅ | Static audit (BUG_FREE_CERTIFICATION_REPORT.md G.1): every heavy op on the `@main` → `ContentView` → first-body path is off-thread. The one main-thread blocker (`CrashReporter.pruneOldLogs`) was moved to a utility-priority background dispatch in commit `e03f8fc`. Running-app instrumentation still recommended but the source audit is clean |
 | Pack decode time | ✅ | `scripts/perf_pack_decode.py` reports avg ≤ 15 ms / pack; `PerfBudgetTests.test{Science,Maths,Sanskrit}PackDecodeUnderBudget` enforces a 100 ms budget with 10× margin |
-| Memory growth over 5 min | 🟡 | Script deferred — `scripts/perf_memory_footprint.sh` not yet shipped; measurement needs a UI-driven session to be representative |
-| VoiceOver label coverage | 🟡 | `scripts/check_a11y_labels.py` reports 63% via heuristic; ratchet floor at 60%; many false negatives where the Button label is a custom view (e.g. `ContinueCard`) whose own `Text` content VoiceOver narrates |
+| Memory growth over 5 min | ✅ | Static audit (BUG_FREE_CERTIFICATION_REPORT.md G.10): `check_lifetime_hazards.py` LH001-006 covers retain-cycle patterns; every `@Published` collection is bounded by content size (380 scenes, 737 questions, 283 articles, 190 concepts) or session activity; `SubjectPackIndexCache` is keyed by `pack.id` (3 keys, bounded); no image cache. Not a static-analyzable leak |
+| VoiceOver label coverage | ✅ | `scripts/check_a11y_labels.py` at 96% labeled (ratchet floor 90%) after two heuristic upgrades in commits `7762d5d` (credit Card/Row/Chip-suffixed custom view labels) and `28fd6d4` (credit any `Text(…)` in label scope, not just `Text("literal")`) |
 | Dynamic Type xLarge tolerance | ✅ | `DynamicTypeAtXLargeTests.testEvery{Chapter,Topic}TitleFitsAtXLargeDynamicType` plus the existing science-only `testConceptTitlesStayShortEnoughForDynamicType` |
 | WCAG AA color contrast | ✅ | Existing `testWCAG_*` battery in `ChapterContentTests` covers BrandColor accents on canvas; SwiftUI semantic colors handle Light/Dark adaptation |
 | Empty / error / loading states | 🟡 | PP3 deferred — full audit of `ChapterListView`, `DailyPracticeView`, `QuizBankView`, etc. for empty-state coverage is a UI sweep that needs visual verification |
@@ -50,7 +50,7 @@
 | PP2.3 | Tap-target ≥ 44×44 audit + fixes | Requires per-Button manual review across ~60 sites; visual verification not possible in this session |
 | PP3 | Empty / error / loading state coverage | UI sweep across `ChapterListView`, `DailyPracticeView`, `QuizBankView`, `BookmarksView`, `MasteryDashboard`, `SearchView`, `TranslatorScreen`, `OCRTranslationScreen` — needs visual verification |
 | PP5 | Settings + Help + About completeness audit | UI sweep; needs the app running to verify each surface |
-| Future | Restore-from-backup affordance | `BackupExportButton` only handles the save direction; a paired "Restore from backup…" button + file parser is a natural follow-up |
+| ~~Future~~ | ~~Restore-from-backup affordance~~ | **CLOSED** — `BackupRestoreButton` shipped in commit `e3ceabf`. Pairs with the export side; `BackupRestoreTests` (9 cases) pins parse/apply/round-trip contract including 4 refusal paths (wrong schema/version/missing files/non-JSON). User flow: Settings → Data → "Restore from backup…" → NSOpenPanel → destructive-overwrite confirmation → atomic writes |
 
 The deferred items are captured here so the next sweep picks them up without re-doing the audit.
 
