@@ -1,125 +1,75 @@
 # desktopAhaan
 
-A macOS SwiftUI study app for a Class 7 student.
+**A calm, offline study app for Class 7 — Science, Maths, and Sanskrit, all in
+one window on your Mac.**
 
-## What it does
+## What is desktopAhaan?
 
-- **Sanskrit translator** — bundled 246-word Sanskrit ↔ English ↔ Hindi
-  dictionary, on-device speech, OCR for handwritten input.
-- **Science tutor** — 19 chapters of NCERT Class 7 content with:
-  - Concepts with four explanation depths (one-line → expert).
-  - Topic-scoped MCQ + short-answer quizzes (635+ questions).
-  - **Discover Mode** — 8+ interactive scenes per chapter (animated
-    diagrams, sliders, sandboxes, a boss-quiz).
-  - HTML-rendered concept articles with Read-Aloud.
-- **Global search** across every subject pack with AND-of-tokens
-  matching and title-prefix > contains > body ranking.
+desktopAhaan is a single-window Mac app that helps a Class 7 student learn three
+subjects at their own pace. Every idea comes with a plain-language explanation,
+something interactive to poke at, and just enough practice to make it stick. It
+runs entirely on your Mac — no internet, no accounts, no sign-up.
 
-Offline-first. No accounts. No telemetry. One outbound network call
-(an optional online translator) which the user can disable.
+## Who's it for?
 
-## Platform
+Ahaan, age 12. And kids like him — anyone in Class 7 (or nearby) who learns
+better by exploring than by memorising. A parent can sit alongside and follow a
+weekly progress report; the child can use it alone without ever creating an
+account or touching a setting.
 
-Builds and runs on:
-- macOS 11 (Big Sur) through current.
-- Universal binary — Apple Silicon and Intel.
+## What's inside?
 
-Daily-driver targets a Late-2014 iMac with Big Sur 11.7.11 and an
-AMD R9 M290X GPU. Animation budgets honour a `HardwareTier.isLegacy`
-flag so the legacy GPU isn't asked to push 60-fps particles.
+- **Three subjects** — Science, Maths, and Sanskrit, each picked from a simple
+  sidebar.
+- **50 chapters** of NCERT / NEP Class 7 content — Science (19), Maths (15),
+  Sanskrit (16, including a vocabulary deck).
+- **Discover Mode** — interactive, illustrated scenes in every Science chapter:
+  drag things, move sliders, run a little experiment, then take a boss quiz.
+- **Articles** — "Beyond the Book" reading with **Read Aloud** that highlights
+  each paragraph as it's spoken.
+- **Daily Practice** — the app quietly remembers what's been learned and brings
+  each idea back right before it would be forgotten (spaced repetition). A few
+  minutes a day, not a cram session.
+- **Achievements & streaks** — gentle encouragement to keep showing up.
+- **Sanskrit translator** — an on-device dictionary, speech, and OCR for scanned
+  text.
+- **Weekly Progress** — a one-page parent dashboard (Help → Weekly Progress,
+  ⌘⇧W) you can read or export to PDF.
 
-Toolchain on the dev Mac is whatever Xcode you have; the iMac uses
-Xcode 13.2.1 / Swift 5.5. Code is written to compile under both.
+## How to install
 
-## Building
+You don't need to be a developer. Full step-by-step (with the one macOS
+security prompt explained) is in **[INSTALL.md](INSTALL.md)**.
 
-```
-git clone https://github.com/ahaandahiya27/MacOSDesktopProtoApp.git
-cd MacOSDesktopProtoApp
-open desktopAhaan.xcodeproj
-```
+Short version: open the `.dmg`, drag **desktopAhaan** into **Applications**, and
+the first time you open it, right-click → **Open** → **Open Anyway**. A short
+welcome tour appears the first time you launch.
 
-In Xcode: Product → Run.
+## Privacy
 
-From the command line:
+Single user. Offline-first. **No telemetry, no accounts, no tracking.** Your
+data stays on this Mac, under `~/Library/Application Support/desktopAhaan/`. The
+only thing that ever reaches the internet is an *optional* online translator,
+and you can turn it off in Settings (it's off the critical path either way).
 
-```
-bash scripts/ci-build-test.sh
-```
+## For developers
 
-Runs a Release build pinned to `MACOSX_DEPLOYMENT_TARGET=11.0`, then
-the Debug test suite. Exits non-zero on either failure.
+- Architecture, platform rules (Big Sur 11.5 deploy target, Swift 5.5), naming
+  and commit conventions: **[CLAUDE.md](CLAUDE.md)**.
+- How to cut and ship a release build / DMG: **[DISTRIBUTION.md](DISTRIBUTION.md)**.
+- The full audit taxonomy (what's done, what's pending):
+  `docs/ISSUE_CATEGORIES.md`.
+- Security model + entitlements rationale: `docs/SECURITY.md`.
 
-## Repo tour
-
-```
-desktopAhaan/
-    desktopAhaanApp.swift           # @main + Commands menu wiring
-    ContentView.swift               # sidebar + detail-pane layout
-    App/
-        CrashReporter.swift         # NSException + 6 POSIX signals
-                                    # → daily log file in App Support
-        AppState.swift              # sidebar selection + persistence
-    Models/                         # TranslationRecord, etc.
-    Resources/                      # bundled JSON + Articles/Chapter*/*.html
-    Services/
-        Persistence/DataStore.swift # atomic .json writes
-        Translation/                # local + online providers
-    Subjects/
-        ContentSchema/              # SubjectPack / Chapter / Topic
-        Loader/SubjectRegistry.swift # off-thread JSON decode + orphan ref guard
-        Tutor/                      # ConceptDetail, QuizBank, search, etc.
-        Tutor/Discover/             # interactive scenes per chapter
-        Articles/                   # WKWebView article renderer
-        Packs/*.json                # science + sanskrit content packs
-    Extensions/                     # SFSymbolCompat, Color.compat*, AppStorageKeys
-    ViewModels/                     # TranslatorViewModel, PracticeViewModel
-    Views/                          # Home, Settings, History, Favorites
-
-desktopAhaanTests/                  # ~335 tests across 16 files (269 XCTest + 66 swift-testing)
-
-docs/
-    ISSUE_CATEGORIES.md             # the audit taxonomy — what's done, what's not
-    SECURITY.md                     # threat model + entitlements rationale
-
-scripts/
-    ci-build-test.sh                # xcodebuild build + test
-    check_viewbuilder_limit.py      # static check for SwiftUI ≤10 children
-    imac-pull.sh                    # bulletproof git pull on the iMac
-    generate_compat_pbxproj.py      # MACOSX_DEPLOYMENT_TARGET=11 enforcement
-```
-
-## Sandbox + entitlements
-
-Four entitlements, each justified in `docs/SECURITY.md`:
-
-| Key | Why it's needed |
-|-----|-----------------|
-| `com.apple.security.app-sandbox` | mandatory |
-| `com.apple.security.network.client` | optional online translator |
-| `com.apple.security.files.user-selected.read-only` | OCR "Open Image…" |
-| `com.apple.security.device.audio-input` | dictation in translator + practice |
-
-Writes are confined to `~/Library/Application Support/desktopAhaan/`.
-
-## Crash workflow
+Build & test from a checkout:
 
 ```
-Help → Reveal Crash Logs in Finder
-    ↓
-    Daily log at ~/Library/Application Support/desktopAhaan/crashlogs/
-        crashlog-YYYY-MM-DD.txt
-    ↓
-    Captures EXCEPTION / SIGNAL / DATA / RECOVERY entries
-    Rotated at 1 MB and capped at 30 files.
+bash scripts/ci-build-test.sh        # Release build + Debug test suite
 ```
 
-## Contributing
-
-See `CLAUDE.md` for the working-agreement summary (platform rules,
-naming conventions, commit conventions, where to look for what).
-
-For a comprehensive audit checklist, see `docs/ISSUE_CATEGORIES.md`.
+The app is a universal binary (Apple Silicon + Intel) and is daily-driven on a
+Late-2014 iMac running Big Sur 11.7.11 — see CLAUDE.md for the hardware
+constraints that shape the codebase.
 
 ## License
 

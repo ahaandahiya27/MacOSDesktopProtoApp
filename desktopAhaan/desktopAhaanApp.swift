@@ -90,6 +90,11 @@ struct SanskritKoshApp: App {
     // ⌘Q's flushSavesBeforeQuit drained the wrong (near-empty) instance.
     @StateObject private var dataStore = DataStore.shared
 
+    /// Drives the first-launch onboarding sheet. Decided once in `init()`
+    /// (before any view appears) so the legacy welcome-tour auto-present is
+    /// reliably suppressed on a fresh install — see the gate in `init`.
+    @State private var showOnboarding: Bool = false
+
     /// First-launch window ideal size. Design target is 2200×1380 (tuned
     /// for the 5K iMac at 2560×1440 logical, where `visibleFrame.height`
     /// runs ~1417pt after the menu bar). On a 13" MBP at 1440×900 with
@@ -116,6 +121,41 @@ struct SanskritKoshApp: App {
             let n = SanskritDictionary.shared.entries.count
             appLogger.info("SanskritDictionary pre-warmed (\(n, privacy: .public) entries).")
         }
+
+        // ── First-launch onboarding gate ──────────────────────────────────
+        // Decided HERE, before any view body or `.onAppear`, because the
+        // ordering between this App's onAppear and ContentView's own onAppear
+        // is unspecified. Resolving the flags up front guarantees the legacy
+        // 3-panel welcome tour (auto-presented by ContentView when
+        // `!hasSeenWelcomeTour`) stays suppressed on a fresh install — the kid
+        // gets exactly ONE onboarding, the new 4-page FirstLaunchTourView.
+        //
+        // ContentView is owned by another surface this run and is not touched;
+        // suppression is achieved purely by pre-setting the UserDefaults keys
+        // it reads via @AppStorage.
+        let defaults = UserDefaults.standard
+        let seenOnboarding = defaults.bool(forKey: OnboardingState.hasSeenOnboardingKey)
+        let seenLegacyTour = defaults.bool(forKey: AppStorageKeys.hasSeenWelcomeTour)
+        var present = false
+        if !seenOnboarding {
+            if seenLegacyTour {
+                // Existing user upgrading from a build that only had the
+                // legacy tour — they already onboarded. Migrate the flag
+                // forward silently; do not re-onboard them.
+                defaults.set(true, forKey: OnboardingState.hasSeenOnboardingKey)
+            } else {
+                // Genuinely fresh install. Suppress BOTH of ContentView's
+                // first-launch auto-presents (welcome tour + What's New) so
+                // they don't stack behind / after the new tour, then present
+                // the new tour. `hasSeenOnboarding` flips when the tour
+                // completes or is skipped (see the sheet callbacks).
+                defaults.set(true, forKey: AppStorageKeys.hasSeenWelcomeTour)
+                defaults.set(WhatsNewSheet.currentVersion,
+                             forKey: AppStorageKeys.whatsNewLastSeenVersion)
+                present = true
+            }
+        }
+        _showOnboarding = State(initialValue: present)
     }
 
     var body: some Scene {
@@ -137,6 +177,26 @@ struct SanskritKoshApp: App {
                     minWidth: 1024, idealWidth: frame.width,
                     minHeight: 640, idealHeight: frame.height
                 )
+                // First-launch onboarding. Presented from the App level
+                // (not inside ContentView, which is owned elsewhere this
+                // run) and gated by `showOnboarding`, resolved in `init()`.
+                // On a fresh install ContentView's own first-launch sheet is
+                // suppressed (see the init gate), so only this sheet is ever
+                // active here — no Big Sur sheet-stacking conflict.
+                .sheet(isPresented: $showOnboarding) {
+                    FirstLaunchTourView(
+                        onClose: {
+                            OnboardingState.shared.markSeen()
+                            showOnboarding = false
+                        },
+                        onGetStarted: {
+                            OnboardingState.shared.markSeen()
+                            appState.sidebarSelection =
+                                .subject(OnboardingStep.getStartedPackId)
+                            showOnboarding = false
+                        }
+                    )
+                }
         }
         .commands {
             CommandGroup(after: .newItem) {

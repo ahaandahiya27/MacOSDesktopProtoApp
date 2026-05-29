@@ -1,0 +1,42 @@
+// DevSigning.xcconfig — signing defaults for command-line Release/DMG builds.
+//
+// This file is NOT wired into the .xcodeproj (the pbxproj generator only
+// picks up .swift / .json / .html / .css / .xcassets / .entitlements — see
+// scripts/generate_compat_pbxproj.py). It is applied explicitly at build
+// time by `scripts/build_release_dmg.sh` via `xcodebuild -xcconfig`.
+//
+// Why a standalone xcconfig instead of editing the project?
+//   - The project's interactive defaults stay "Automatic" + the developer's
+//     Apple Development team (TQM5Y6FG3Z) so Xcode → Run keeps working.
+//   - For an UNATTENDED command-line DMG build on a machine that may have no
+//     provisioning profile / login keychain unlocked (CI, or a fresh dev
+//     Mac), automatic signing fails. Ad-hoc signing ("-") always succeeds,
+//     produces a sandboxed app with entitlements applied, and is exactly
+//     what we want for sideloaded single-user distribution to the iMac.
+//
+// Override at build time (preferred when you DO have a Developer ID):
+//   DEVELOPMENT_TEAM=TQM5Y6FG3Z \
+//   CODE_SIGN_IDENTITY="Developer ID Application" \
+//   CODE_SIGN_STYLE=Manual \
+//   bash scripts/build_release_dmg.sh
+// build_release_dmg.sh forwards those env vars to xcodebuild, where they
+// take precedence over the defaults below.
+//
+// Big Sur note: ad-hoc signed apps trigger the Gatekeeper "cannot be
+// checked for malware" dialog on first open. INSTALL.md documents the
+// right-click → Open → Open Anyway flow that clears it once per machine.
+
+// Ad-hoc code signing — no team, no profile, always works headless.
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = -
+CODE_SIGN_IDENTITY[sdk=macosx*] = -
+DEVELOPMENT_TEAM =
+PROVISIONING_PROFILE_SPECIFIER =
+
+// Entitlements still apply under ad-hoc signing — keep the sandbox on.
+CODE_SIGN_ENTITLEMENTS = desktopAhaan/desktopAhaan.entitlements
+
+// Universal binary for the Intel deploy iMac + Apple Silicon dev Macs.
+// (Mirrors the project's Release setting; restated here so a -xcconfig
+// build is self-contained.)
+ONLY_ACTIVE_ARCH = NO
