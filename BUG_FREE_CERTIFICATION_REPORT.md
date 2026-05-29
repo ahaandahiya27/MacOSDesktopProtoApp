@@ -23,13 +23,13 @@
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
 | E · SRS / persistence | 10 | 0 | 0 |
-| F · UI / a11y | 9 | 1 | 0 |
+| F · UI / a11y | 8 | 2 | 0 |
 | G · Performance | 8 | 0 | 2 |
 | H · Security | 10 | 0 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 9 | 1 | 0 |
 | K · Test coverage | 9 | 1 | 0 |
-| **Total** | **105** | **3** | **2** |
+| **Total** | **104** | **4** | **2** |
 
 ### Movement since initial audit
 
