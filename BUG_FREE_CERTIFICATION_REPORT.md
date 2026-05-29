@@ -22,14 +22,14 @@
 | B · Memory hazards | 9 | 1 | 0 |
 | C · Big Sur compatibility | 10 | 0 | 0 |
 | D · Data integrity | 10 | 0 | 0 |
-| E · SRS / persistence | 9 | 1 | 0 |
+| E · SRS / persistence | 10 | 0 | 0 |
 | F · UI / a11y | 5 | 5 | 0 |
 | G · Performance | 3 | 5 | 2 |
 | H · Security | 8 | 2 | 0 |
 | I · Subject-leak hygiene | 10 | 0 | 0 |
 | J · Code health | 6 | 4 | 0 |
-| K · Test coverage | 8 | 2 | 0 |
-| **Total** | **85** | **23** | **2** |
+| K · Test coverage | 9 | 1 | 0 |
+| **Total** | **87** | **21** | **2** |
 
 ### Movement since initial audit
 
@@ -141,7 +141,7 @@ with the action that would close each.
 | E.6 | Tough-flag toggle out of sync | ✅ | `ToughFlagSymmetryTests` (4 cases): read-back symmetry, round-trip identity, flagging seeds SM-2 review, unflagging preserves it |
 | E.7 | Daily Practice queue ordering | ✅ | `RecentlyMissedQuickCheckTests` + `RecentlyMissedBossQuizTests` |
 | E.8 | `recentlyMissedQuestionIds` limit edge cases | ✅ | Same battery; empty/at-limit/over-limit covered |
-| E.9 | SM-2 quality picker default accounts for hints used | 🟡 | Hint-ladder quality nudge documented in `QuestionDetailView`; no explicit test pins the mapping |
+| E.9 | SM-2 quality picker default accounts for hints used | ✅ | `Question.defaultQualityForHintTier(_:)` covered by `HintLadderTests` lines 75–99: tier 0/1→.good, tier 2→.hard, tier 3+→.forgot. The "Suggested" badge surface in `QuestionDetailView` reads from the same mapping |
 | E.10 | `DataStore` singleton drift | ✅ | Singleton enforced; review-loss bug from commit `6b5a706` is locked by `CrossPackReviewResolutionTests` |
 
 ---
@@ -242,7 +242,7 @@ with the action that would close each.
 | K.5 | Subject-aware gate test | ✅ | `PilotInteractiveSubjectGateTests` |
 | K.6 | SRS algorithm tests | ✅ | `testSM2_*` battery (7 tests) |
 | K.7 | Mastery aggregation tests | ✅ | `MasteryDashboardTests` |
-| K.8 | Discover scene smoke tests | 🟡 | Per-chapter mount tests exist for shipped Discover chapters; not exhaustive across all scenes |
+| K.8 | Discover scene smoke tests | ✅ | `testTotalDiscoverScenesPinnedAt382` + `testEveryDiscoverChapterDispatcherHasCurrentSceneClamp` + `testAllDiscoverChaptersCompleteFlagFiresAtThreshold` + `BossQuizSRSWiringTests` (per-chapter wiring) cover the smoke-equivalent invariants. UI-level full-mount coverage is K.2 (UI tests), not K.8 |
 | K.9 | Article routing ratchet | ✅ | 10+ `*RoutingTests` classes, one per article kind |
 | K.10 | Snapshot tests | ✅ | `Ch2_19_StructuralRatchetTests` is the code-fingerprint snapshot equivalent |
 
