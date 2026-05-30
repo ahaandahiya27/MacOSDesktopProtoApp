@@ -91,6 +91,24 @@ progress and settings, run `bash scripts/install-receipt.sh --uninstall-hint`
 
 ## Troubleshooting
 
+### If the DMG won't open
+
+If double-clicking `desktopAhaan.app` is blocked, work through these in order —
+the first one almost always works:
+
+1. **Right-click → Open → Open Anyway.** Right-click (or Control-click) the app
+   in **Applications**, choose **Open**, then click **Open** (or **Open
+   Anyway**) in the dialog. You only do this once.
+2. **System Settings → Privacy & Security.** On newer macOS, open
+   **System Settings → Privacy & Security**, scroll to the bottom, and click
+   **Open Anyway** next to the desktopAhaan message.
+3. **Power users — clear the quarantine flag from Terminal:**
+   ```
+   xattr -dr com.apple.quarantine /Applications/desktopAhaan.app
+   ```
+   This removes the "downloaded from the internet" flag that triggers the
+   Gatekeeper prompt. Safe for this app; then double-click normally.
+
 - **"The app is damaged and can't be opened."** This usually means the download
   was incomplete or the quarantine flag got set oddly. Re-download the `.dmg`
   and try Step 4 again. On a developer checkout you can also clear quarantine

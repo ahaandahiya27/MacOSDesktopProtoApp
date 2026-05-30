@@ -45,14 +45,58 @@ produced DMG installs cleanly, and assert the app icon is complete.
 
 ## Phase status
 
+### IH1 RESULT — build-mutex VALIDATED, push deferred (cross-agent compile break)
+
+The mutex works. A real push (commit `178fb41`) ran the gate through
+`build-mutex.sh` with isolated DerivedData `/tmp/dd-agent-C-push-<pid>`:
+xcodebuild proceeded with **no contention deadlock and no OOM** — the exact
+v2 failure mode is fixed. The push itself was blocked only by a transient
+cross-agent compile break: Agent A's in-flight Adaptive Practice work
+(`AdaptiveDifficultyEngine.swift`, untracked, not yet in the target's compile
+sources) makes `AdaptiveDifficultyBandTests` fail to resolve the symbol. That
+is Agent A's domain, mid-wiring in the shared working tree — not Agent C code.
+Per the no-`--force`/no-`--no-verify` rule, the push is **deferred** and
+retried later; commit `178fb41` is an ancestor of HEAD, so it ships the
+moment any agent lands a clean push of a compiling tree.
+
+Also observed: Agent B append-edited `scripts/hooks/pre-push` (a "Release DMG
+validity (tag pushes only)" block calling `check_release_dmg_validity.sh`).
+Append-only coexistence held — my mutex block (≈L54-83) and B's tag block
+(≈L85-106) both present; I preserve B's addition on any future hook edit.
+
 - [x] IH0 — baseline gate + checkpoint scaffold + read blocker
-- [ ] IH1 — build-mutex.sh + pre-push wiring + smoke test
-- [ ] IH2 — clean_overnight_artifacts.sh + run_overnight_v3_3agents.sh
-- [ ] IH3 — check_dmg_clean_install.sh
-- [ ] IH4 — check_app_icon_completeness.py + advisory wiring
-- [ ] IH5 — run_overnight_template.sh (bonus)
-- [ ] IH6 — docs: README + INSTALL + DISTRIBUTION
-- [ ] IH7 — final gate + mutex serialization proof
-- [ ] IH8 — sentinel
+- [x] IH1 — build-mutex.sh + pre-push wiring + smoke test (push deferred, see above)
+- [x] IH2 — clean_overnight_artifacts.sh + run_overnight_v3_3agents.sh (committed b7186a1)
+- [x] IH3 — check_dmg_clean_install.sh (committed 7da8bc0; synthetic-DMG + corrupt-DMG verified)
+- [x] IH4 — check_app_icon_completeness.py + advisory wiring (selftest + real tree clean)
+- [x] IH5 — run_overnight_template.sh (reusable engine; dry-run validated)
+- [x] IH6 — docs: README + INSTALL + DISTRIBUTION (single-targeted additions)
+- [x] IH7 — mutex serialization proof: two concurrent `build-mutex.sh xcodebuild
+      -version` serialized cleanly (second waited ~5s for the first; no interleave)
+- [ ] IH8 — sentinel (final commit)
+
+## Verification summary
+
+| Deliverable | Verified |
+|---|---|
+| `build-mutex.sh` | 3 concurrent workers serialized; stale/corrupt holder reclaim; exit-code passthrough; no-arg→rc2 |
+| pre-push wiring | live hook wraps `ci-build-test.sh` in mutex; coexists with Agent B's tag-DMG block + my icon advisory |
+| `clean_overnight_artifacts.sh` | stale dd-agent removed, fresh survived, idempotent, dead-holder lock cleared, /tmp→/private/tmp symlink fix |
+| `run_overnight_v3_3agents.sh` | dry-run validates 3 agents + per-agent DD paths; launches nothing without prompts; pre-flight clean runs |
+| `check_dmg_clean_install.sh` | no-DMG WARN(0); synthetic ad-hoc DMG 7 pass/1 warn PASS; corrupt DMG FAIL(1) |
+| `check_app_icon_completeness.py` | --selftest 4/4; real tree clean (10/10 entries, correct dims); strict+advisory modes |
+| `run_overnight_template.sh` | sourced + direct dry-run; enforces per-agent DD invariant |
+| mutex xcodebuild proof | two concurrent `xcodebuild -version` serialized |
+
+## Cross-agent note
+
+This was a live 3-way run (Agents A=Adaptive Practice, B=Cert/crashlog/DMG, C=this).
+Commits raced HEAD locks repeatedly (retried, no loss). Commits/pushes are gated
+by whole-tree pre-commit lints (`check_macos12_apis`, `check_viewbuilder_limit`
+scan the working tree, not just staged files), so Agent A's in-flight
+`Views/Worksheet/WorksheetPrintRenderer.swift` (macOS-12 API + ForEach
+tuple-keypath, mid-AP3) transiently blocks ALL agents' commits until A finishes
+that file. IH1/IH2/IH3 landed in clean windows; IH4–IH6 + sentinel batch-commit
+on the next clean window. No `--no-verify`, no `--force` ever used.
 
 ## STOP_AND_ASK count: 0

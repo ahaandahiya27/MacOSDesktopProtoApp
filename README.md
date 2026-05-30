@@ -71,6 +71,25 @@ The app is a universal binary (Apple Silicon + Intel) and is daily-driven on a
 Late-2014 iMac running Big Sur 11.7.11 — see CLAUDE.md for the hardware
 constraints that shape the codebase.
 
+### Multi-agent overnight runs
+
+Large overnight work is split across several Claude agents running in parallel
+on the same checkout. Launch a fleet with:
+
+```
+bash scripts/run_overnight_v3_3agents.sh            # launch
+bash scripts/run_overnight_v3_3agents.sh --dry-run  # validate setup only
+```
+
+The launcher enforces the **per-agent DerivedData policy**: every agent builds
+into its own `/tmp/dd-agent-<LETTER>-<PID>` path (never a shared one), and the
+pre-push gate's `xcodebuild` is serialized behind `scripts/hooks/build-mutex.sh`.
+Together these stop the parallel gates from corrupting each other's module
+caches or OOM-killing the 8 GB iMac's Swift compiler — the failure mode that
+deferred the v2 run's push. A pre-flight `scripts/clean_overnight_artifacts.sh`
+clears stale DerivedData first. See **[DISTRIBUTION.md](DISTRIBUTION.md)** for
+the policy details.
+
 ## License
 
 Personal project — not for redistribution.

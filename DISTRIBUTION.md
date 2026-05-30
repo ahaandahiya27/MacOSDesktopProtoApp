@@ -97,6 +97,29 @@ subjects → Daily Practice → Open Science Ch.1). The gate lives in
 welcome tour + What's New so the child sees exactly one onboarding. Both can be
 replayed from the **Help** menu.
 
+## Per-agent DerivedData policy
+
+When several Claude agents run in parallel on one checkout (overnight runs —
+see `scripts/run_overnight_v3_3agents.sh`), their build gates must not share
+build artifacts. Two rules, both enforced by the launcher and the hooks:
+
+- **Every agent uses its own DerivedData path** — `/tmp/dd-agent-<LETTER>-<PID>`,
+  never a shared `${TMPDIR}/desktopAhaan-ci-derived`. The launcher exports it
+  as both `CI_DERIVED_OVERRIDE` (read by `scripts/ci-build-test.sh`, the
+  pre-push gate) and `XCODEBUILD_DERIVED_DATA_PATH` (for any per-commit
+  `xcodebuild -derivedDataPath` block).
+- **The pre-push gate's `xcodebuild` is serialized** behind
+  `scripts/hooks/build-mutex.sh` (a BSD-portable `flock` shim), so even two
+  gates firing at the same instant never run two heavy builds at once.
+
+**Rationale.** In the v2 run all three agents' gates shared one TMPDIR
+DerivedData path. Concurrent `xcodebuild` jobs (7–8 observed) corrupted each
+other's module caches and OOM-killed the 8 GB Late-2014 iMac's Swift compiler;
+one gate hung 37+ min and the run's push had to be deferred (commit `b7118dd`).
+Isolated paths remove the shared state; the mutex caps concurrent builds at one.
+`scripts/clean_overnight_artifacts.sh` (run pre-flight by the launcher) GCs
+stale `/tmp/dd-agent-*` paths so they don't accumulate across runs.
+
 ## Release checklist
 
 - [ ] `bash scripts/check_release_build.sh` is green (zero warnings).
