@@ -24,7 +24,11 @@ struct DailyPlanView: View {
             VStack(alignment: .leading, spacing: 20) {
                 header
                 if plan.items.isEmpty {
-                    emptyState
+                    if isDayOne {
+                        DailyPlanEmptyStateView(onStart: startDayOne)
+                    } else {
+                        emptyState
+                    }
                 } else {
                     ForEach(plan.items) { item in
                         DailyPlanRow(
@@ -117,6 +121,23 @@ struct DailyPlanView: View {
     }
 
     // MARK: - Actions
+
+    /// True when there's no practice history at all — the day-one welcome
+    /// empty state (vs the "all caught up" message for an established kid).
+    private var isDayOne: Bool {
+        dataStore.questionReviews.isEmpty
+            && dataStore.understoodConceptIds.isEmpty
+            && dataStore.discoverProgress.isEmpty
+    }
+
+    /// Day-one CTA: open Science Chapter 1 in the main window, then close.
+    private func startDayOne() {
+        let packId = "science_class7"
+        appState.sidebarSelection = .subject(packId)
+        appState.pendingRoute = PendingRoute(
+            route: .chapter(packId: packId, chapterId: "ch01"))
+        onNavigate?()
+    }
 
     private func reload() {
         plan = dataStore.currentDailyPlan(registry: subjectRegistry)

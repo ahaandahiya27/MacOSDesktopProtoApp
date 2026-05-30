@@ -30,7 +30,11 @@ struct AchievementGalleryView: View {
                 ForEach(AchievementFamily.allCases) { family in
                     familySection(family)
                 }
-                if visibleBadges.isEmpty { emptyState }
+                if visibleBadges.isEmpty {
+                    // Day-one: no unlocks and nothing started yet → preview the
+                    // first three bronze badges as goals (with live progress).
+                    AchievementGalleryEmptyStateView(snapshot: snapshot)
+                }
             }
             .padding(24)
         }
@@ -84,26 +88,6 @@ struct AchievementGalleryView: View {
                 }
             }
         }
-    }
-
-    // MARK: - Empty state
-
-    private var emptyState: some View {
-        VStack(spacing: 12) {
-            Text("🏆")
-                .font(.system(size: 56))
-                .accessibilityHidden(true)
-            Text("Your trophy case is waiting")
-                .font(.title3.weight(.semibold))
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Text("Start reviewing, reading, and exploring Discover scenes — badges appear here as you earn them.")
-                .font(.body)
-                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: 420)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
     }
 
     // MARK: - Visibility

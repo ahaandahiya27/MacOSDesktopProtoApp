@@ -392,12 +392,14 @@
 		C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */; };
 		F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */; };
 		A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */; };
+		AFA5CDC055BF565DF9374281 /* AchievementGalleryEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E670B9D6B588F50EC4E7DB /* AchievementGalleryEmptyStateView.swift */; };
 		01403B05B9FECCD8112F7A15 /* AchievementGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDE40C73AF28F09DBE4F058 /* AchievementGalleryView.swift */; };
 		74370364A1E9E06C828CC702 /* AchievementGalleryWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0FAE61F26DBF66D72B65B /* AchievementGalleryWindow.swift */; };
 		AFAAEC17A5E08EF5C7594DFC /* AchievementToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B6900FA9E88E5FF555C474 /* AchievementToastView.swift */; };
 		4DE7769656EC3386D653BEE8 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A101E35C398C9B51CCB10A /* FavoritesScreen.swift */; };
 		A53D1F081A031702832FADC1 /* PrintableWorksheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E9461536F2126CCCF6C187 /* PrintableWorksheetView.swift */; };
 		716DE286B68B264AF546A6C7 /* WorksheetPrintRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74E00CF7A3463DB4413152 /* WorksheetPrintRenderer.swift */; };
+		861811E5FE3E73315B73B750 /* DailyPlanEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0012609161580E72DA7B24A3 /* DailyPlanEmptyStateView.swift */; };
 		DA36295C84B85F88BDA7C5C3 /* DailyPlanNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C802CB6FFE592E4CFCE854 /* DailyPlanNotifications.swift */; };
 		8D8B32EAFB4769CF261D3C56 /* DailyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DE6421F4D0168BCA891B7E /* DailyPlanView.swift */; };
 		ACBA9A95F27BAD8F1DE3F4D1 /* DailyPlanWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D8A7E69E7B125E459B71B /* DailyPlanWindow.swift */; };
@@ -1253,6 +1255,7 @@
 		7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
 		2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */; };
+		5F6B20A8A2E5CFAD15B25843 /* EmptyStateRenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D223E1864DE863BD2BCD9 /* EmptyStateRenderTests.swift */; };
 		DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
 		7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */; };
@@ -2503,12 +2506,14 @@
 		72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressView.swift"; sourceTree = "<group>"; };
 		BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressWindow.swift"; sourceTree = "<group>"; };
 		DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementBadgeView.swift"; sourceTree = "<group>"; };
+		D1E670B9D6B588F50EC4E7DB /* AchievementGalleryEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementGalleryEmptyStateView.swift"; sourceTree = "<group>"; };
 		FFDE40C73AF28F09DBE4F058 /* AchievementGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementGalleryView.swift"; sourceTree = "<group>"; };
 		0EB0FAE61F26DBF66D72B65B /* AchievementGalleryWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementGalleryWindow.swift"; sourceTree = "<group>"; };
 		32B6900FA9E88E5FF555C474 /* AchievementToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementToastView.swift"; sourceTree = "<group>"; };
 		C8A101E35C398C9B51CCB10A /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoritesScreen.swift"; sourceTree = "<group>"; };
 		89E9461536F2126CCCF6C187 /* PrintableWorksheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrintableWorksheetView.swift"; sourceTree = "<group>"; };
 		0A74E00CF7A3463DB4413152 /* WorksheetPrintRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorksheetPrintRenderer.swift"; sourceTree = "<group>"; };
+		0012609161580E72DA7B24A3 /* DailyPlanEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlanEmptyStateView.swift"; sourceTree = "<group>"; };
 		69C802CB6FFE592E4CFCE854 /* DailyPlanNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlanNotifications.swift"; sourceTree = "<group>"; };
 		46DE6421F4D0168BCA891B7E /* DailyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlanView.swift"; sourceTree = "<group>"; };
 		561D8A7E69E7B125E459B71B /* DailyPlanWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlanWindow.swift"; sourceTree = "<group>"; };
@@ -2583,6 +2588,7 @@
 		24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyQuestionPickerTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
 		FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicTypeAtXLargeTests.swift"; sourceTree = "<group>"; };
+		096D223E1864DE863BD2BCD9 /* EmptyStateRenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmptyStateRenderTests.swift"; sourceTree = "<group>"; };
 		CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntitlementsSnapshotTest.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
 		19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtraReadingRowTests.swift"; sourceTree = "<group>"; };
@@ -4911,6 +4917,7 @@
 			isa = PBXGroup;
 			children = (
 				DB519EB841F9885D16C13AE0,
+				D1E670B9D6B588F50EC4E7DB,
 				FFDE40C73AF28F09DBE4F058,
 				0EB0FAE61F26DBF66D72B65B,
 				32B6900FA9E88E5FF555C474,
@@ -4933,6 +4940,7 @@
 		B15A8B87A169AE284DC3B16C /* DailyPlan */ = {
 			isa = PBXGroup;
 			children = (
+				0012609161580E72DA7B24A3,
 				69C802CB6FFE592E4CFCE854,
 				46DE6421F4D0168BCA891B7E,
 				561D8A7E69E7B125E459B71B,
@@ -5069,6 +5077,7 @@
 				24E14C1BC2E36EC9E70CAA9D,
 				8C883748B706BDB46E529043,
 				FD7151492C97EDC9C4CFAEE3,
+				096D223E1864DE863BD2BCD9,
 				CEA91C543A578CC6E615E698,
 				33A3949D07E1B3CA2F232114,
 				19C42AD70C59A8AA39404012,
@@ -6450,12 +6459,14 @@
 				C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */,
 				F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */,
 				A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */,
+				AFA5CDC055BF565DF9374281 /* AchievementGalleryEmptyStateView.swift in Sources */,
 				01403B05B9FECCD8112F7A15 /* AchievementGalleryView.swift in Sources */,
 				74370364A1E9E06C828CC702 /* AchievementGalleryWindow.swift in Sources */,
 				AFAAEC17A5E08EF5C7594DFC /* AchievementToastView.swift in Sources */,
 				4DE7769656EC3386D653BEE8 /* FavoritesScreen.swift in Sources */,
 				A53D1F081A031702832FADC1 /* PrintableWorksheetView.swift in Sources */,
 				716DE286B68B264AF546A6C7 /* WorksheetPrintRenderer.swift in Sources */,
+				861811E5FE3E73315B73B750 /* DailyPlanEmptyStateView.swift in Sources */,
 				DA36295C84B85F88BDA7C5C3 /* DailyPlanNotifications.swift in Sources */,
 				8D8B32EAFB4769CF261D3C56 /* DailyPlanView.swift in Sources */,
 				ACBA9A95F27BAD8F1DE3F4D1 /* DailyPlanWindow.swift in Sources */,
@@ -6536,6 +6547,7 @@
 				7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
 				2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */,
+				5F6B20A8A2E5CFAD15B25843 /* EmptyStateRenderTests.swift in Sources */,
 				DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
 				7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */,
