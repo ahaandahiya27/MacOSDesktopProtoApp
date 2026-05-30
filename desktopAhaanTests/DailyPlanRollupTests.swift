@@ -143,7 +143,13 @@ final class DailyPlanRollupTests: XCTestCase {
         let keys = [DailyPlanStorage.streakKey, DailyPlanStorage.streakLastDayKey,
                     DailyPlanStorage.streakBestKey]
         let saved = keys.map { defaults.object(forKey: $0) }
-        defer { for (i, k) in keys.enumerated() { defaults.set(saved[i], forKey: k) } }
+        // Precise restore — `set(nil,…)` would NOT clear a key, leaking plan
+        // streak state into sibling suites in the shared test process.
+        defer {
+            for (i, k) in keys.enumerated() {
+                if let v = saved[i] { defaults.set(v, forKey: k) } else { defaults.removeObject(forKey: k) }
+            }
+        }
         for k in keys { defaults.removeObject(forKey: k) }
 
         let store = tempStore()
@@ -178,8 +184,10 @@ final class DailyPlanRollupTests: XCTestCase {
         let saved = defaults.object(forKey: DailyPlanStorage.streakKey)
         let savedLast = defaults.object(forKey: DailyPlanStorage.streakLastDayKey)
         defer {
-            defaults.set(saved, forKey: DailyPlanStorage.streakKey)
-            defaults.set(savedLast, forKey: DailyPlanStorage.streakLastDayKey)
+            if let v = saved { defaults.set(v, forKey: DailyPlanStorage.streakKey) }
+            else { defaults.removeObject(forKey: DailyPlanStorage.streakKey) }
+            if let v = savedLast { defaults.set(v, forKey: DailyPlanStorage.streakLastDayKey) }
+            else { defaults.removeObject(forKey: DailyPlanStorage.streakLastDayKey) }
         }
         defaults.removeObject(forKey: DailyPlanStorage.streakKey)
         defaults.removeObject(forKey: DailyPlanStorage.streakLastDayKey)

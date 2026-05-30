@@ -8,6 +8,12 @@ import XCTest
 @MainActor
 final class AchievementEngineTests: XCTestCase {
 
+    /// Precise UserDefaults restore: re-set the saved value, or remove the
+    /// key entirely if it didn't exist (`set(nil,…)` would leave it polluted).
+    static func restore(_ d: UserDefaults, _ key: String, _ saved: Any?) {
+        if let saved = saved { d.set(saved, forKey: key) } else { d.removeObject(forKey: key) }
+    }
+
     private func tempStore() -> DataStore {
         let dir = FileManager.default.temporaryDirectory
             .appendingPathComponent("achv-\(UUID().uuidString)")
@@ -147,8 +153,11 @@ final class AchievementEngineTests: XCTestCase {
         let savedBest = defaults.object(forKey: AppStorageKeys.reviewStreakBest)
         let savedCur = defaults.object(forKey: AppStorageKeys.reviewStreakDays)
         defer {
-            defaults.set(savedBest, forKey: AppStorageKeys.reviewStreakBest)
-            defaults.set(savedCur, forKey: AppStorageKeys.reviewStreakDays)
+            // `set(nil, forKey:)` does NOT clear a key — restore precisely so
+            // this test can't leak streak state into a sibling suite
+            // (e.g. ChapterContentTests' streak tests) in the shared process.
+            Self.restore(defaults, AppStorageKeys.reviewStreakBest, savedBest)
+            Self.restore(defaults, AppStorageKeys.reviewStreakDays, savedCur)
         }
         defaults.set(9, forKey: AppStorageKeys.reviewStreakBest)
         defaults.set(2, forKey: AppStorageKeys.reviewStreakDays)
