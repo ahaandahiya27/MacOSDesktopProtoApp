@@ -3585,3 +3585,58 @@ no contention deadlock and no OOM (the exact v2 failure mode is gone). No
 `--no-verify`, no `--force` ever. STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Adaptive Practice + Worksheets + Study Timer (Agent A, parallel overnight v3)
+
+Shipped three kid-facing features + day-one empty-state polish, in five
+pushes, while Agents B (Cert) and C (Infra/Distribution) worked disjoint
+domains on the same working tree.
+
+### What landed (46 new tests, all green)
+- **AdaptiveDifficultyEngine** (`Services/AdaptiveDifficultyEngine.swift` +
+  `Models/AdaptiveDifficulty.swift`) — per-chapter rolling-5 window →
+  `DifficultyBand` (.easy/.core/.stretch/.challenge) per the brief's table.
+  Outcomes captured **read-only** by observing `DataStore.questionReviews`
+  lapse-deltas (SRS scheduler untouched). Persists `adaptive_difficulty.json`
+  via the shared `DataStore.readFile` + `performAtomicWrite` (300ms debounce,
+  atomic). Wired into the Daily Plan due-review pull via the read-only
+  `prioritizedDueQuestionIds` reorder. 18 tests.
+- **Printable Worksheet** (`Views/Worksheet/*`, ⌘⇧P) — pure `WorksheetSampler`
+  (SplitMix64-seeded deterministic sample, FNV-1a string seed, a/b/c/d answer
+  key) + AppKit `NSHostingView`/`NSPrintOperation.run()` renderer (block form,
+  not the deprecated sheet selector). 13 tests.
+- **Study Timer** (`Views/StudyTimer/*`, ⌘⇧T) — `PomodoroState` @MainActor
+  machine: 25/5/15, long break every 4th focus, UserDefaults-persisted,
+  RM-gated chime, plain `Timer.scheduledTimer`. 10 tests.
+- **Day-one empty states** — `DailyPlanEmptyStateView` (welcome + open Science
+  Ch.1 CTA) + `AchievementGalleryEmptyStateView` (first-3-bronze goals). 5 tests.
+- **Adaptive Practice Settings** (Help) — adaptive on/off, timer chime,
+  worksheet default length (`PracticeSettingsView`).
+
+### Posture
+Debug build SUCCEEDED at `MACOSX_DEPLOYMENT_TARGET=11.5`; gated `check_*.py`
+lints clean; no macOS 12+ APIs (default Button + `.defaultAction` instead of
+`.bordered`/`.borderedProminent`; LazyVGrid/Picker/ProgressView are 11.0+);
+SF Symbols via `SFSymbolCompat`; RM-gated animation/audio; ViewBuilder ≤10
+children; files < 600 LOC; atomic/coalesced writes; no new entitlement.
+
+### Shortcut reassignment
+⌘⇧P moved from "Show Daily Practice" → Printable Worksheet (per brief); Daily
+Practice is now ⌘⌥P. ⌘⇧T (Study Timer) is free in AppKit defaults.
+
+### Cross-agent notes (shared working tree + shared .git)
+All three agents commit to one local `main` and push serially; my AP1 commit
+(`ac8db2c`) interleaves cleanly with Agents B/C's infra commits. TWICE the
+shared index was swept by a concurrent `git add -A`/commit from another agent
+between my `git add` and `git commit` — once my staged Worksheet + app.swift
+changes landed inside another agent's commit (`3764756`). Verified after the
+fact that all my code is committed and the tree builds; subsequent commits use
+`git commit -F <msgfile>` immediately after a tight `git add` to shrink the
+window. The advisory `check_callout_reading_level.py` (not in hooks/ci-build)
+fails on pre-existing Discover-scene exam-prep callouts I don't own — left as-is.
+The `project.pbxproj` is treated as shared-regenerated (`generate_compat_pbxproj.py`,
+deterministic) and committed with each feature. STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
