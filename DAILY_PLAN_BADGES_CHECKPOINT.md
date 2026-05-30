@@ -99,6 +99,22 @@ Sentinel on completion: `DAILY_PLAN_BADGES_COMPLETE_SENTINEL_v1`.
   contract). View render-smokes pin no-crash across unlock states.
 - **DA8** ✅ checkpoint updated; sentinel printed.
 
+## SHIPPED — pushed to origin/main
+
+- Feature commit `de6ce38`, test-hardening commit `335b632` (precise
+  UserDefaults restore). Pushed `528a513..335b632 main -> main` (carried
+  Agent C's onboarding `211fce7`/`d04a1af`/`b7118dd` along, which had been
+  deferred for the same parallel-gate reason).
+- **Pre-push gate green: 628 tests, 0 failures** (Release build + all lints
+  + full Debug suite), run uncontended (~26 min — the iCloud-synced
+  source-scanning meta-tests dominate wall time).
+- First push attempt was rejected by 7 `ChapterContentTests.testStreak_*`
+  failures — proven to be **cross-process `UserDefaults.standard`
+  contention** from a concurrent parallel-agent test host (Agent C hit the
+  same wall, see `b7118dd`). The streak suite passes green in isolation
+  immediately after this agent's tests; `335b632` additionally hardens this
+  agent's own restore logic so it can never contribute residue.
+
 ## DA5 — ⌘⇧D resolution
 
 Daily Plan takes **⌘⇧D** (per brief). "Show Discover Progress" moves to
