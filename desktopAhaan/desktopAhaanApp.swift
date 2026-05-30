@@ -205,6 +205,11 @@ struct SanskritKoshApp: App {
                 .onAppear {
                     AchievementEngine.shared.start(
                         dataStore: dataStore, registry: subjectRegistry)
+                    // Adaptive practice: begin observing review deltas so the
+                    // per-chapter difficulty window tracks the kid's recent
+                    // performance. Idempotent + read-only w.r.t. SRS.
+                    AdaptiveDifficultyEngine.shared.configure(
+                        registry: subjectRegistry, dataStore: dataStore)
                 }
         }
         .commands {

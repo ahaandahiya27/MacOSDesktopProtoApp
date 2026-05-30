@@ -69,9 +69,20 @@ extension DataStore {
         hydrateConceptVisitsIfNeeded()
         var items: [DailyPlanItem] = []
 
-        // 1. Up to 3 SRS reviews due now (oldest-due first — `dueQuestionIds`
-        //    already sorts by `nextDueAt`).
-        for qid in dueQuestionIds(at: now).prefix(3) {
+        // 1. Up to 3 SRS reviews due now. `dueQuestionIds` sorts oldest-due
+        //    first; the AdaptiveDifficultyEngine then re-orders the due set so
+        //    band-appropriate questions surface first (a hot streak in a
+        //    chapter promotes its harder due question). This is a READ-ONLY
+        //    adapter — the SRS scheduler is untouched. With no registry, or
+        //    when the engine is disabled, the raw due order is preserved.
+        let dueIds: [String]
+        if let registry = registry {
+            dueIds = AdaptiveDifficultyEngine.shared.prioritizedDueQuestionIds(
+                dueQuestionIds(at: now), registry: registry, dataStore: self)
+        } else {
+            dueIds = dueQuestionIds(at: now)
+        }
+        for qid in dueIds.prefix(3) {
             let loc = registry?.location(forQuestionId: qid, preferredPackId: nil)
             let packId = loc?.pack.id ?? Self.inferredPackId(forQuestionId: qid)
             let title = loc?.question.prompt ?? "Review a question"
