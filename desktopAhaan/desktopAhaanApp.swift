@@ -260,10 +260,13 @@ struct SanskritKoshApp: App {
                 }
                 .keyboardShortcut("b", modifiers: .command)
 
+                // ⌘⇧P is reassigned to the new Printable Worksheet (Help →
+                // "Printable Worksheet…"), per the feature brief. Daily
+                // Practice moves to ⌘⌥P so both stay reachable.
                 Button("Show Daily Practice") {
                     appState.sidebarSelection = .tool(.dailyPractice)
                 }
-                .keyboardShortcut("p", modifiers: [.command, .shift])
+                .keyboardShortcut("p", modifiers: [.command, .option])
 
                 // ⌘⇧D is reassigned to the new Daily Plan (Help → Today's
                 // Plan), per the feature brief. Discover Progress moves to
@@ -308,6 +311,16 @@ struct SanskritKoshApp: App {
                     alert.addButton(withTitle: "OK")
                     alert.runModal()
                 }
+
+                // Parent-facing crash summary. Opens its own AppKit window
+                // (CrashLogSummaryWindowPresenter) showing the plain-English
+                // summary that scripts/analyze_crashlogs.py writes into the
+                // app container — "did the app ever crash?" answered in one
+                // glance, with Reveal-in-Finder + Copy fallbacks.
+                Button("Recent Crash Reports…") {
+                    CrashLogSummaryWindowPresenter.shared.present()
+                }
+                .keyboardShortcut("x", modifiers: [.command, .shift])
 
                 Divider()
 
@@ -368,6 +381,17 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("a", modifiers: [.command, .shift])
+
+                Divider()
+
+                // Printable Worksheet — paper homework. Opens its own AppKit
+                // window (same pattern as the dashboards). ⌘⇧P (reassigned
+                // from Daily Practice, now ⌘⌥P).
+                Button("Printable Worksheet…") {
+                    PrintableWorksheetWindowPresenter.shared.present(
+                        registry: subjectRegistry)
+                }
+                .keyboardShortcut("p", modifiers: [.command, .shift])
             }
         }
     }
