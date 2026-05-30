@@ -51,10 +51,33 @@ done
 # the install-time hint.
 EXTRA_FLAGS="${CI_BUILD_TEST_FLAGS:-}"
 
-if [ -n "$EXTRA_FLAGS" ]; then
-    echo "pre-push: running scripts/ci-build-test.sh $EXTRA_FLAGS"
-    bash scripts/ci-build-test.sh $EXTRA_FLAGS
+# App-icon completeness (advisory, never blocks). Day-1 releases should ship
+# a real icon set; this surfaces any missing/placeholder AppIcon entries into
+# POLISH_TODOS.md without failing the push. See scripts/check_app_icon_completeness.py.
+if [ -f "scripts/check_app_icon_completeness.py" ]; then
+    echo "pre-push: app-icon completeness (advisory)"
+    python3 scripts/check_app_icon_completeness.py || true
+fi
+
+# Serialize the xcodebuild-bearing gate behind a machine-wide build mutex.
+# Each parallel agent already gets its own DerivedData path (see
+# scripts/run_overnight_v3_3agents.sh), but two gates firing at the same
+# instant would still run two heavy xcodebuild jobs concurrently and can
+# OOM-kill the 8 GB Late-2014 iMac's Swift compiler (root cause of the
+# Overnight v2 deferred-push blocker, commit b7118dd). The mutex guarantees
+# only one gate's xcodebuild runs at a time across the whole machine.
+MUTEX="scripts/hooks/build-mutex.sh"
+if [ -x "$MUTEX" ]; then
+    GATE=(bash "$MUTEX" bash scripts/ci-build-test.sh)
 else
-    echo "pre-push: running scripts/ci-build-test.sh"
-    bash scripts/ci-build-test.sh
+    echo "pre-push: build-mutex.sh missing/not executable — running gate unserialized."
+    GATE=(bash scripts/ci-build-test.sh)
+fi
+
+if [ -n "$EXTRA_FLAGS" ]; then
+    echo "pre-push: running scripts/ci-build-test.sh $EXTRA_FLAGS (mutex-serialized)"
+    "${GATE[@]}" $EXTRA_FLAGS
+else
+    echo "pre-push: running scripts/ci-build-test.sh (mutex-serialized)"
+    "${GATE[@]}"
 fi
