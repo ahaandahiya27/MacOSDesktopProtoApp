@@ -290,6 +290,12 @@ struct SanskritKoshApp: App {
             //   Reveal Crash Logs in Finder — one-click access to the folder
             //   Clear Crash Logs           — wipe everything after a fix lands
             CommandGroup(replacing: .help) {
+                // Big Sur / Swift 5.5 buildBlock caps a ViewBuilder at 10
+                // direct children. This menu has more, so the items are
+                // bucketed into Group {} wrappers (Group flattens inline in
+                // a menu — same separators, same order). Keep each Group and
+                // the top level at ≤10 children.
+                Group {
                 Button("desktopAhaan Help") {
                     NotificationCenter.default.post(name: .openInAppHelp, object: nil)
                 }
@@ -321,12 +327,14 @@ struct SanskritKoshApp: App {
                     CrashLogSummaryWindowPresenter.shared.present()
                 }
                 .keyboardShortcut("x", modifiers: [.command, .shift])
+                }
 
                 Divider()
 
                 // Discoverability layer (2026-05-23 polish session).
                 // Each posts a notification that ContentView listens
                 // for and routes through its single-sheet dispatcher.
+                Group {
                 Button("Show Welcome Tour") {
                     NotificationCenter.default.post(name: .showWelcomeTour, object: nil)
                 }
@@ -346,9 +354,11 @@ struct SanskritKoshApp: App {
                 Button("About Audio Narration") {
                     NotificationCenter.default.post(name: .showAboutAudio, object: nil)
                 }
+                }
 
                 Divider()
 
+                Group {
                 // Parent / Weekly Progress dashboard. Opens in its own
                 // window (see WeeklyProgressWindow.swift) — no ContentView
                 // sheet routing needed. ⌘⇧W is unused by AppKit defaults
@@ -381,9 +391,11 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("a", modifiers: [.command, .shift])
+                }
 
                 Divider()
 
+                Group {
                 // Printable Worksheet — paper homework. Opens its own AppKit
                 // window (same pattern as the dashboards). ⌘⇧P (reassigned
                 // from Daily Practice, now ⌘⌥P).
@@ -404,6 +416,7 @@ struct SanskritKoshApp: App {
                 // worksheet default length.
                 Button("Adaptive Practice Settings") {
                     PracticeSettingsWindowPresenter.shared.present()
+                }
                 }
             }
         }

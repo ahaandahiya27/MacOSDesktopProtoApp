@@ -61,7 +61,7 @@ struct PrintableWorksheetView: View {
         }
         .padding(24)
         .frame(minWidth: 460, minHeight: 420)
-        .onAppear(perform: primeSelection)
+        .onAppear { primeSelection() }
     }
 
     // MARK: - Controls
@@ -137,7 +137,7 @@ struct PrintableWorksheetView: View {
         HStack {
             Spacer()
             Button("Close") { onClose?() }
-            Button("Print…", action: printWorksheet)
+            Button("Print…") { printWorksheet() }
                 .keyboardShortcut(.defaultAction)
                 .disabled(availableCount == 0)
         }

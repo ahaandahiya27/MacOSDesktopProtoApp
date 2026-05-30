@@ -25,7 +25,7 @@ struct DailyPlanView: View {
                 header
                 if plan.items.isEmpty {
                     if isDayOne {
-                        DailyPlanEmptyStateView(onStart: startDayOne)
+                        DailyPlanEmptyStateView(onStart: { startDayOne() })
                     } else {
                         emptyState
                     }

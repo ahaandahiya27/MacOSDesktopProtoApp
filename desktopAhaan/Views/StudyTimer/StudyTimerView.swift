@@ -57,7 +57,7 @@ struct StudyTimerView: View {
 
     private var controls: some View {
         HStack(spacing: 18) {
-            Button(action: toggleRun) {
+            Button(action: { toggleRun() }) {
                 Image(systemName: SFSymbolCompat.name(
                     pomodoro.isRunning ? "pause.fill" : "play.fill"))
                     .font(.system(size: 28))

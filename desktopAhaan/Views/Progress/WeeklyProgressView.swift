@@ -59,7 +59,7 @@ struct WeeklyProgressView: View {
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .background(Color(NSColor.windowBackgroundColor))
-        .onAppear(perform: reload)
+        .onAppear { reload() }
         .navigationTitle("Weekly Progress")
     }
 
