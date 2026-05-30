@@ -392,6 +392,19 @@ struct SanskritKoshApp: App {
                         registry: subjectRegistry)
                 }
                 .keyboardShortcut("p", modifiers: [.command, .shift])
+
+                // Study Timer — Pomodoro focus companion in its own window.
+                // ⌘⇧T is free in AppKit defaults.
+                Button("Study Timer") {
+                    StudyTimerWindowPresenter.shared.present()
+                }
+                .keyboardShortcut("t", modifiers: [.command, .shift])
+
+                // Adaptive Practice Settings — adaptive on/off, timer chime,
+                // worksheet default length.
+                Button("Adaptive Practice Settings") {
+                    PracticeSettingsWindowPresenter.shared.present()
+                }
             }
         }
     }
