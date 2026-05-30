@@ -145,3 +145,21 @@ non-parallel sweep.
   Discover chapter" picker uses the Science host pack only (mirrors the
   existing `DiscoverProgress`-has-no-packId limitation). Revisit once
   DiscoverProgress carries a packId.
+
+## Overnight v3 (Agent B) — deferred / follow-up
+
+- [ ] **Perf running-app instrumentation (cert G.1/G.6/G.9/G.10).** The
+  static audit closed these; the *enhancement* is signpost/XCUITest-based
+  measurement (launch-time, Discover transition frame-rate, article-parse
+  timer, 30-min memory-growth sample). Needs a running-app harness, out of
+  scope for shell-from-CI. Tracked here, not an open cert gap.
+- [ ] **Cosmetic commit mis-attribution.** Commit `3764756` carries Agent B's
+  "in-app crash-report summary view" message but contains Agent A's Printable
+  Worksheet files (shared-git-index race). The files are correctly committed;
+  only the message is wrong. Not worth a history rewrite in a live shared
+  repo — note for the changelog author.
+- [ ] **analyze_crashlogs.py as a scheduled refresh (optional).** The in-app
+  CrashLogSummaryView reads the cached summary JSON; today a human runs the
+  analyzer to refresh it. A future LaunchAgent (or an in-app, unsandboxed
+  helper) could refresh it automatically so the view is always current
+  without a terminal step.

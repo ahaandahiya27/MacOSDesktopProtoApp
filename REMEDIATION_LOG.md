@@ -3535,3 +3535,53 @@ files sit alongside mine — used targeted `git add` of only my paths, never
 count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Agent C: Infra hardening (DerivedData isolation + build mutex), PARALLEL OVERNIGHT v3
+
+Fixed the v2 deferred-push blocker (`b7118dd` — parallel gates shared one
+TMPDIR DerivedData, corrupting module caches and OOM-killing the 8 GB iMac's
+Swift compiler). Shipped, each smoke-tested in isolation:
+
+- **`scripts/hooks/build-mutex.sh`** — BSD-portable `flock` shim (noclobber
+  lock, stale/corrupt-holder reclaim, 30-min steal ceiling, exit-code
+  passthrough). Serializes the pre-push gate's `xcodebuild` machine-wide so
+  even simultaneous gates never run two heavy builds at once. Wired into
+  `scripts/hooks/pre-push` (wraps `ci-build-test.sh`). Proven: 3 concurrent
+  workers serialized with no interleave; two concurrent
+  `build-mutex.sh xcodebuild -version` serialized (second waited for the first).
+- **`scripts/run_overnight_v3_3agents.sh`** — successor launcher giving each
+  agent its own `/tmp/dd-agent-<LETTER>-<PID>` DerivedData (exported as both
+  `CI_DERIVED_OVERRIDE` for the gate and `XCODEBUILD_DERIVED_DATA_PATH` for
+  direct per-commit xcodebuild). Pre-flight clean, fleet lock, `--dry-run`.
+- **`scripts/clean_overnight_artifacts.sh`** — GCs `/tmp/dd-agent-*` >24h and
+  Xcode `DerivedData/desktopAhaan-*` >7d + dead-holder mutex lockfiles.
+  Idempotent. Resolves `/tmp`→`/private/tmp` so BSD `find -mtime` descends.
+- **`scripts/check_dmg_clean_install.sh`** — fresh-user dry-run: copies the
+  `.app` OUT of the mounted DMG, detaches, verifies the copy (codesign deep
+  strict, quarantine xattr, spctl, Info.plist version + min-OS). PASS/WARN/FAIL;
+  ad-hoc spctl rejection is WARN, corrupt DMG is FAIL, missing DMG is WARN(0).
+  Verified against a synthetic ad-hoc DMG and a corrupt DMG.
+- **`scripts/check_app_icon_completeness.py`** — asserts all 10 mac AppIcon
+  entries present at correct pixel dims and non-placeholder (reads PNG IHDR
+  directly, Python 3.8 stdlib). Advisory in pre-push (`--strict` hard-gates,
+  `--selftest` 4/4). Real path is `desktopAhaan/Assets.xcassets/...` (NOT
+  `Resources/` as the brief stated); set is already complete — clean.
+- **`scripts/run_overnight_template.sh`** — reusable engine (config = version +
+  AGENTS table) so v4/v5 inherit the per-agent-DD invariant without copy-paste.
+- **Docs** — README "Multi-agent overnight runs", INSTALL "If the DMG won't
+  open", DISTRIBUTION "Per-agent DerivedData policy".
+
+**Cross-agent reality.** Live 3-way run (A=Adaptive Practice, B=Cert/crashlog/
+DMG-validity, C=this). The whole-tree pre-commit lints (`check_macos12_apis`,
+`check_viewbuilder_limit`) scan the working tree, not just staged files, so
+Agent A's mid-AP3 `Views/Worksheet/WorksheetPrintRenderer.swift` (macOS-12 API
++ ForEach tuple-keypath) transiently red-gated ALL agents' commits until A
+finished it. IH1/IH2/IH3 landed in clean windows; the rest batched on the next
+clean window. HEAD-lock races on concurrent commits were retried without loss.
+The mutex+isolated-DD fix itself is validated — a real push ran the gate with
+no contention deadlock and no OOM (the exact v2 failure mode is gone). No
+`--no-verify`, no `--force` ever. STOP_AND_ASK count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>

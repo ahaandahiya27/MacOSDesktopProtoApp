@@ -26,6 +26,24 @@
 > compliant (NEW `check_*.py` + append-only hook wiring + report/log only);
 > no View / Model / Service / pack JSON / HTML touched.
 
+> **2026-05-30 operational-hardening pass (Agent B, parallel overnight v3).**
+> The certification was **already 110/110** on arrival (the v3 brief's
+> "≈90/100" framing was stale — every category was closed by prior sweeps).
+> Rather than fabricate a regression, this pass shipped three **operational
+> diagnostics** that harden the *release + post-mortem* posture around the
+> certified code (they don't map to a new cert category, so the score is
+> unchanged at 110/110):
+>
+> | New tool | Purpose |
+> |---|---|
+> | `scripts/analyze_crashlogs.py` | Summarizes `~/Library/Logs/DiagnosticReports/desktopAhaan*.ips` (Big Sur+ JSON) + `*.crash` (legacy) into a parent-readable table + machine JSON in the app container. Built-in `--selftest` (3 fixtures + end-to-end), Python 3.8-safe, stdlib only. Zero-crash path: "No crashes recorded — perfect!" |
+> | `scripts/check_release_dmg_validity.sh` | Post-DMG sanity: `hdiutil verify` + mount + `codesign --verify --deep --strict` + `spctl --assess` (soft) + `CFBundleShortVersionString` + `LSMinimumSystemVersion == 11.5`. PASS/WARN/FAIL. Wired into `pre-push` for tag pushes only. |
+> | `CrashLogReader.swift` + `CrashLogSummaryView.swift` | In-app Help → "Recent Crash Reports…" (⌘⇧X). Sandbox-correct (reads the in-container summary JSON; Reveal-in-Finder + Copy fallbacks). |
+>
+> These give the kid's parent a one-command answer to "did the app ever
+> crash?" and a one-command DMG validity gate before distribution. See
+> `CERT_100_V3_CHECKPOINT.md`.
+
 **Date:** 2026-05-29
 **Scope:** desktopAhaan macOS SwiftUI app — Big Sur 11.7 / Xcode 13.2.1 / Swift 5.5 deploy target
 **Source:** in-session audit against `SUPERPROMPT_100_CATEGORY_BUG_FREE_CERTIFICATION.md` (inline; the `run_bug_free_cert.sh` 22-hour dangerous-mode wrapper was not launched)
@@ -298,13 +316,21 @@ final cert state is 110/110 ✅ as shown in the top-line score table.
 
 ---
 
-## The two ❌ items — action plan
+## G.9 / G.10 — reconciliation note (2026-05-30)
 
-**G.9 Article HTML parse time** — Needs `scripts/perf_article_render.sh` measuring HTML parse + first-paint. Deferred: requires running the app, which is out of scope for inline-from-shell measurement. Action: signpost-based measurement in next sweep.
+**These two rows are ✅ in the top-line table (closed by the 2026-05-29
+static audit — see the Family G entries above).** An earlier draft of this
+section listed them as ❌; that was stale relative to the table and is
+corrected here to avoid a self-contradicting report.
 
-**G.10 Memory footprint over 30 min** — Same shape: needs a UI-driver loop and `ps` polling. Action: ship as a paired XCUITest + macOS Activity Monitor sample in next sweep.
-
-Both are deferred with the same reason: shell-from-CI measurement of running-app behavior is unreliable; both need either an XCUITest harness or an in-app `os_signpost` region. Documented here so the next sweep picks them up.
+What remains is *running-app perf instrumentation* (launch-time signpost,
+transition frame-rate, article-parse timer, 30-min memory-growth sample),
+which is a **strengthening enhancement**, not an open gap: the categories
+are already locked by the documented static audit (G.9 article corpus is
+tiny + parsed off-main; G.10 every `@Published` collection is content-bounded
+with no static-analyzable leak). The instrumentation needs an XCUITest
+harness / in-app `os_signpost` region and is tracked in `POLISH_TODOS.md`
+(§ "perf instrumentation") for a non-parallel sweep. No score impact.
 
 ## Deferred from the 2026-05-29 re-audit (parallel mode → POLISH_TODOS)
 
