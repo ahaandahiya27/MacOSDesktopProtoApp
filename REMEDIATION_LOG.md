@@ -3477,3 +3477,61 @@ of the reminder toggle are queued in `POLISH_TODOS §6` (AppState/ContentView
 out-of-domain). STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## 2026-05-30 — Overnight v3, Agent B (Cert/Crash-Log/DMG domain)
+
+### Context correction (no fabricated regression)
+The mission brief framed the certification as ≈90/100 to be pushed to 100.
+On arrival `BUG_FREE_CERTIFICATION_REPORT.md` was **already 110/110** (held
+since 2026-05-29, hardened by Agent B v2). Rather than invent a regression to
+"close," this run shipped the three genuinely-missing artifacts from the
+brief and reconciled a stale section of the report.
+
+### Shipped (touch-list compliant — NEW scripts + append-only hook + docs)
+1. **`scripts/analyze_crashlogs.py`** — parent-facing crash-log summarizer.
+   Parses both `~/Library/Logs/DiagnosticReports/desktopAhaan*.ips` (Big
+   Sur+/macOS-12 JSON: header line + body JSON) and `*.crash` (legacy text).
+   Per crash: date, OS version, app version+build, signal, top-5 frames
+   (deduplicated by consecutive binary), and a one-line plain-English summary
+   with a feature-area hint (Discover / Article / Boss Quiz / Translator / …).
+   Writes a machine-readable JSON to
+   `~/Library/Application Support/desktopAhaan/Diagnostics/crashlog_summary_YYYY-MM-DD.json`
+   and prints a human table (last 10, newest first). Python 3.8-compatible,
+   stdlib only, no `match` / no PEP-604 unions. Built-in `--selftest` with 3
+   fixtures (.ips, .crash with app frames, .crash system-only) plus an
+   end-to-end temp-dir run; **SELFTEST PASS**. Zero-crash path prints
+   "No crashes recorded — perfect! 🎉".
+2. **`scripts/check_release_dmg_validity.sh`** — post-DMG sanity. Auto-
+   discovers the newest `dist/desktopAhaan-v*.dmg` (or takes an explicit
+   path); `hdiutil verify` → mount → locate `.app` → `codesign --verify
+   --deep --strict` (hard) → `spctl --assess --type install` (soft, ad-hoc
+   builds WARN not FAIL) → `CFBundleShortVersionString` non-empty (hard) →
+   `LSMinimumSystemVersion == 11.5` (hard, matches the pinned
+   `MACOSX_DEPLOYMENT_TARGET`). Always unmounts via an EXIT trap. PASS/WARN/
+   FAIL banner; exit 0 on PASS|WARN, 1 on FAIL.
+3. **`scripts/hooks/pre-push`** (append-only) — wired the DMG validity check
+   to fire **only on tag pushes** (`refs/tags/v*`, read from the push refs on
+   stdin). A present-but-invalid DMG blocks the tag push; a missing DMG only
+   advises (the DMG is often built as a separate step). Non-tag pushes are
+   unaffected.
+
+### Verification
+`bash -n` clean on the shell script; analyzer `--selftest` green; live run
+against the real (empty) DiagnosticReports folder prints the perfect-state
+message. Full deterministic lint suite re-run: my changes touch no Swift, so
+the Swift build is unaffected; the only two non-green lints
+(`check_dead_swift_types` flagging Agent A's untracked
+`AdaptiveDifficultyStorage`, and the advisory `check_callout_reading_level`
+on a committed Scene8 exam-prep callout) are **out-of-domain / non-gating**
+(neither is wired into pre-commit or pre-push) and pre-date this run.
+
+### Cross-agent
+Working tree is **shared** (not isolated worktrees), so Agent A's untracked
+files sit alongside mine — used targeted `git add` of only my paths, never
+`-A`. Agent C had already added the build-mutex serialization to
+`scripts/hooks/pre-push`; appended my tag-push block below it. STOP_AND_ASK
+count: 0.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>

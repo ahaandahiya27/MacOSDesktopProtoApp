@@ -81,3 +81,26 @@ else
     echo "pre-push: running scripts/ci-build-test.sh (mutex-serialized)"
     "${GATE[@]}"
 fi
+
+# ── Release DMG validity (tag pushes only) ───────────────────────────────────
+# When a `v*` tag is being pushed we're cutting a release, so verify that a
+# built DMG (if one is staged in dist/) actually mounts, is signed, and ships
+# the right version + Big Sur min-OS. git feeds the pushed refs on stdin as
+# "<local ref> <local sha> <remote ref> <remote sha>" lines; nothing above
+# consumed stdin, so it's intact here. If no matching DMG exists yet we only
+# advise (the DMG is often built as a separate step), but a DMG that IS present
+# and invalid blocks the tag push. Non-tag pushes skip this entirely.
+PUSH_REFS="$(cat || true)"
+if echo "$PUSH_REFS" | grep -qE 'refs/tags/v'; then
+    if [ -f "scripts/check_release_dmg_validity.sh" ]; then
+        NEWEST_DMG="$(ls -t dist/desktopAhaan-v*.dmg 2>/dev/null | head -1 || true)"
+        if [ -n "$NEWEST_DMG" ]; then
+            echo "pre-push: tag push detected — validating release DMG ($NEWEST_DMG)"
+            bash scripts/check_release_dmg_validity.sh "$NEWEST_DMG" || exit 1
+        else
+            echo "pre-push: tag push detected but no dist/desktopAhaan-v*.dmg present."
+            echo "          Build it with scripts/build_release_dmg.sh and validate with"
+            echo "          scripts/check_release_dmg_validity.sh before distributing."
+        fi
+    fi
+fi
