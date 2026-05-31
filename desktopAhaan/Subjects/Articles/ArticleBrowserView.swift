@@ -189,7 +189,7 @@ struct ArticleBrowserView: View {
             }
             return "Read article aloud"
         }()
-        return Button(action: handleReadAloudTapped) {
+        return Button(action: { handleReadAloudTapped() }) {
             if speech.isSpeaking {
                 Image(systemName: "pause.fill")
                     .font(.body)

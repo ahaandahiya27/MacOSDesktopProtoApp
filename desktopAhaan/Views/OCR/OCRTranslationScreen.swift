@@ -93,7 +93,7 @@ struct OCRTranslationScreen: View {
                         .font(.headline)
                         .foregroundColor(isDropTargeted ? .purple : .primary)
 
-                    Button(action: openImagePanel) {
+                    Button(action: { openImagePanel() }) {
                         Label("Open Image", systemImage: SFSymbolCompat.name("photo.on.rectangle.angled"))
                             .font(.headline)
                             .frame(maxWidth: .infinity)
@@ -115,7 +115,7 @@ struct OCRTranslationScreen: View {
         )
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
-        .onDrop(of: ["public.file-url"], isTargeted: $isDropTargeted, perform: handleDrop)
+        .onDrop(of: ["public.file-url"], isTargeted: $isDropTargeted) { handleDrop(providers: $0) }
     }
 
     private var extractedTextEditor: some View {
@@ -125,7 +125,7 @@ struct OCRTranslationScreen: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Spacer()
-                Button(action: copyExtractedText) {
+                Button(action: { copyExtractedText() }) {
                     Image(systemName: SFSymbolCompat.name(showCopied ? "checkmark" : "doc.on.doc"))
                         .foregroundColor(showCopied ? .green : .secondary)
                 }

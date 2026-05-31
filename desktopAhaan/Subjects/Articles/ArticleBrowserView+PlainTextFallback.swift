@@ -57,7 +57,7 @@ struct PlainTextArticleFallback: View {
             .padding(20)
         }
         .background(Color(NSColor.windowBackgroundColor))
-        .onAppear(perform: load)
+        .onAppear { load() }
     }
 
     private func load() {

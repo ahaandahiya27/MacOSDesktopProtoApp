@@ -221,7 +221,7 @@ struct QuestionDetailView: View {
     @ViewBuilder
     private var navigationFooter: some View {
         HStack(spacing: 12) {
-            Button(action: gotoPrevious) {
+            Button(action: { gotoPrevious() }) {
                 HStack(spacing: 4) {
                     Image(systemName: "chevron.left")
                     Text("Previous")
@@ -241,7 +241,7 @@ struct QuestionDetailView: View {
             }
             Spacer()
 
-            Button(action: gotoNext) {
+            Button(action: { gotoNext() }) {
                 HStack(spacing: 4) {
                     Text("Next")
                     Image(systemName: "chevron.right")
@@ -258,18 +258,18 @@ struct QuestionDetailView: View {
     /// buttons. Placed in a background so they don't occupy layout space.
     private var keyboardShortcutSink: some View {
         ZStack {
-            Button(action: gotoPrevious) { EmptyView() }
+            Button(action: { gotoPrevious() }) { EmptyView() }
                 .keyboardShortcut(.leftArrow, modifiers: [])
                 .disabled(!hasPrevious)
-            Button(action: gotoNext) { EmptyView() }
+            Button(action: { gotoNext() }) { EmptyView() }
                 .keyboardShortcut(.rightArrow, modifiers: [])
                 .disabled(!hasNext)
             // Cmd+arrow alternatives — also work when the answer field has
             // focus (where bare arrow keys would move the text cursor).
-            Button(action: gotoPrevious) { EmptyView() }
+            Button(action: { gotoPrevious() }) { EmptyView() }
                 .keyboardShortcut(.leftArrow, modifiers: .command)
                 .disabled(!hasPrevious)
-            Button(action: gotoNext) { EmptyView() }
+            Button(action: { gotoNext() }) { EmptyView() }
                 .keyboardShortcut(.rightArrow, modifiers: .command)
                 .disabled(!hasNext)
         }

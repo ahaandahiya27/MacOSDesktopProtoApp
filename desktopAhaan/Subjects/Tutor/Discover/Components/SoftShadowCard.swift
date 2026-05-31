@@ -81,7 +81,7 @@ struct GotItButton: View {
     @State private var celebrating: Bool = false
 
     var body: some View {
-        Button(action: handleTap) {
+        Button(action: { handleTap() }) {
             Label(label, systemImage: systemImage)
                 .font(.title3.bold())
                 .padding(.horizontal, 28)
