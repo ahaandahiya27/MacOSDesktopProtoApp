@@ -4371,3 +4371,16 @@ not directly; a travelogue is one source to cross-check) + 2 realWorldExamples
 (Ellora's Kailasa temple carved downward from a single rock; Chola/Pallava village
 sabhas chosen by palm-leaf lottery). ssch15 glossary 11→17. All lints + Release
 build + suite green. Pushed 817161c. GL: ssch01–15 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 36 (ssch16 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch16 (Turning Tides, 11th–12th c). +6 glossary terms with
+etymology: Algebra (Ar al-jabr), Navy (Lat navis), Sultanate, Vimana, Trigonometry
+(Gk trigonon+metron), Plunder. +2 misconceptions (Mahmud of Ghazni RAIDED while the
+later Ghurids came to RULE; Al-Biruni shows two-way learning, not one-way plunder)
++ 2 realWorldExamples (the word 'sine' descends from Sanskrit jya via Arabic jiba
+→ Latin sinus; Rajendra Chola I's naval expedition to Srivijaya/Sumatra). ssch16
+glossary 11→17. All lints + Release build + suite green. Pushed e8af430. GL:
+ssch01–16 done.
