@@ -4482,3 +4482,14 @@ day is not the same as climate change' (weather/climate timescales, trend detect
 class_9). +2 cross-strand crossChapterRefs (→ssch13 monsoon & cropping seasons;
 →ssch08 seasons/rivers & sacred time/Kumbh). ssch03 deepDive 2→4, ccRefs 2→4. All
 lints + Release build + suite green. Pushed 3b324bb.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 44 (ssch04 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch04 (New Beginnings: Cities and States). +2 deepDive: 'How do we
+know cities returned without any history books?' (stratigraphy, NBPW pottery,
+coin layers, radiocarbon dating, class_10) and 'Why money, not barter, let cities
+grow' (coins enabled non-farmers and taxation, class_9). +2 cross-strand refs
+(→ssch09 early government forms; →ssch11 first coins & the idea of money). ssch04
+deepDive 2→4, ccRefs 2→4. All lints + Release build + suite green. Pushed ed383ee.
