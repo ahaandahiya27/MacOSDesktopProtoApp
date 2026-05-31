@@ -255,6 +255,28 @@
             197
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch20_t01_q04",
+          "prompt": "Banks offer different kinds of accounts for different needs. For each person, choose the BEST account — a SAVINGS account, a CURRENT account, or a FIXED DEPOSIT — and explain why: (a) a school student saving a little pocket money; (b) a shopkeeper who pays and receives money many times every day; (c) someone who has ₹50,000 they will not need for three years and want it to earn as much interest as possible.",
+          "questionType": "longAnswer",
+          "answer": "(a) The student should use a SAVINGS account: it is meant for ordinary people to keep small amounts safely, allows easy deposits and withdrawals, and pays some interest — perfect for slowly building up pocket money. (b) The shopkeeper should use a CURRENT account: it is designed for people and businesses who make many transactions every day, allowing frequent deposits and withdrawals without limits (it usually pays little or no interest, but that suits someone who needs constant access rather than savings). (c) The person with ₹50,000 for three years should use a FIXED DEPOSIT: by 'locking' the money for a fixed period they earn a HIGHER rate of interest than a savings account, which is ideal when you know you won't need the money for a while. So the right account depends on whether you want easy everyday access (savings/current) or the best growth on money you can lock away (fixed deposit).",
+          "solutionSteps": [
+            "(a) Student saving small amounts → savings account (safe, easy access, some interest).",
+            "(b) Shopkeeper with many daily transactions → current account (frequent, unlimited access).",
+            "(c) ₹50,000 not needed for 3 years → fixed deposit (locked, higher interest).",
+            "Conclude the choice depends on access needs vs maximising interest."
+          ],
+          "commonMistakes": [
+            "Putting the shopkeeper's daily-use money in a fixed deposit (it would be locked away).",
+            "Forgetting that a fixed deposit earns more BECAUSE the money is locked for a period."
+          ],
+          "variations": [
+            {"prompt": "Why does a fixed deposit usually pay more interest than a savings account?", "answer": "Because you agree to leave the money untouched for a fixed period, the bank can rely on using it for longer, so it rewards you with a higher rate of interest.", "solutionSteps": ["Recall a fixed deposit locks money for a set time.", "The bank can use it longer, so it pays more interest."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [195, 196],
+          "needsHumanReview": false
         }
       ]
     },
@@ -484,6 +506,28 @@
             200
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch20_t02_q04",
+          "prompt": "A loan lets you buy something now and pay for it later — but it is not free. Explain how a loan works (using the words PRINCIPAL and INTEREST), and then explain why borrowing can be both HELPFUL and RISKY, with an example of each.",
+          "questionType": "longAnswer",
+          "answer": "When you take a loan, the bank gives you a sum of money called the PRINCIPAL, and you agree to pay it back over time PLUS an extra charge called INTEREST — the price you pay for using the bank's money. So if you borrow ₹1,000 you might repay ₹1,100; the extra ₹100 is interest. Borrowing can be HELPFUL: it lets people do important things they could not afford all at once — for example, taking an education loan to go to college, or a loan to buy a house or start a small business — and then repaying gradually from future earnings. But borrowing is also RISKY: because you must repay the principal AND the interest, if you borrow too much or cannot earn enough, the debt grows and you may be unable to pay it back, which can lead to serious trouble. So a loan is a useful tool when used carefully for something worthwhile, but dangerous if you borrow more than you can repay.",
+          "solutionSteps": [
+            "Explain a loan: bank gives the principal; you repay principal + interest.",
+            "Give a number example (borrow ₹1,000, repay ₹1,100 → ₹100 is interest).",
+            "Helpful example: education/home/business loan enabling something worthwhile.",
+            "Risky: must repay with interest; over-borrowing → unpayable debt."
+          ],
+          "commonMistakes": [
+            "Thinking a loan is 'free money' and forgetting the interest that must be repaid.",
+            "Giving only the helpful side or only the risky side, not both."
+          ],
+          "variations": [
+            {"prompt": "What is the difference between the 'principal' and the 'interest' on a loan?", "answer": "The principal is the original amount you borrow; the interest is the extra charge you pay on top, as the price for borrowing the money.", "solutionSteps": ["Principal = the amount borrowed.", "Interest = the extra charge for borrowing."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [198, 199],
+          "needsHumanReview": false
         }
       ]
     },
@@ -640,6 +684,28 @@
           "pageRefs": [
             202
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch20_t03_q03",
+          "prompt": "The RBI can make borrowing across the whole country cheaper or costlier by changing the interest rate it charges banks. Explain step by step how RAISING interest rates can help the RBI cool down INFLATION (rapidly rising prices).",
+          "questionType": "longAnswer",
+          "answer": "The RBI is the 'banker to banks', so the rate it charges banks affects the rates banks charge everyone else. The chain works like this: Step 1 — the RBI RAISES its interest rate. Step 2 — banks then have to pay more to borrow from the RBI, so they raise the interest rates on their own loans to people and businesses. Step 3 — because loans are now more expensive, people and companies borrow and spend LESS, and save more. Step 4 — with less money chasing goods, demand falls, so shopkeepers and producers cannot keep pushing prices up — and rising prices (inflation) cool down. (Lowering rates does the opposite: cheaper loans encourage spending, which can boost a slow economy.) So by simply adjusting one interest rate, the RBI gently steers how much the whole country borrows and spends, which is one of its most powerful tools for keeping prices stable.",
+          "solutionSteps": [
+            "RBI raises the rate it charges banks (it is the banker to banks).",
+            "Banks raise their own loan rates → borrowing becomes costlier.",
+            "People/businesses borrow and spend less, save more.",
+            "Less spending → demand falls → prices stop rising fast → inflation cools."
+          ],
+          "commonMistakes": [
+            "Thinking the RBI sets the price of goods directly — it works indirectly through interest rates and spending.",
+            "Reversing the logic (higher rates do not increase spending; they reduce it)."
+          ],
+          "variations": [
+            {"prompt": "If the economy is slow and the RBI wants to encourage spending, should it raise or lower interest rates?", "answer": "Lower them — cheaper loans encourage people and businesses to borrow and spend more, which can boost a slow economy.", "solutionSteps": ["Recall lower rates make borrowing cheaper.", "Cheaper loans → more spending → boosts a slow economy."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [201, 202],
           "needsHumanReview": false
         }
       ]
@@ -947,6 +1013,28 @@
             209,
             210
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch20_t04_q05",
+          "prompt": "Both a CHEQUE and a UPI payment are ways of moving money without handing over cash. Compare them: give one big advantage of UPI, and one situation where a cheque (or a written bank record) is still useful.",
+          "questionType": "longAnswer",
+          "answer": "A CHEQUE is a written, signed paper instruction telling your bank to pay a named person a certain amount; the money moves after the cheque is deposited and cleared, which takes time. UPI (Unified Payments Interface) instead lets you send money instantly from your phone by scanning a code or entering an ID, any time of day. The big ADVANTAGE of UPI is SPEED and CONVENIENCE: the money reaches the other person in seconds, with no paper, no waiting and no need to visit a bank — which is why it transformed everyday payments in India. But a CHEQUE (or a formal written bank record) is still useful for LARGE or OFFICIAL payments where people want a signed paper proof — for example, paying a big amount like school fees or a property payment, where a cheque gives a clear, traceable record that everyone can keep. So UPI wins for fast, everyday and small payments, while cheques still serve where a formal, signed paper trail matters.",
+          "solutionSteps": [
+            "Define a cheque (written, signed, cleared over time) and UPI (instant phone payment).",
+            "UPI advantage: instant, convenient, no paper or bank visit.",
+            "Cheque still useful: large/official payments needing a signed paper record.",
+            "Conclude UPI for fast everyday payments, cheque for formal traceable ones."
+          ],
+          "commonMistakes": [
+            "Saying UPI has made cheques completely useless — cheques still suit large/formal payments.",
+            "Forgetting that a cheque's value is the signed, traceable paper record it leaves."
+          ],
+          "variations": [
+            {"prompt": "Why did UPI become so popular for everyday payments in India?", "answer": "Because it lets people send money instantly from a phone — even tiny amounts — any time, without cash, paperwork or a bank visit, making everyday payments fast and easy.", "solutionSteps": ["Recall UPI is instant phone-based payment.", "It needs no cash/paper and works any time.", "So it suits fast everyday payments."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [205, 206],
           "needsHumanReview": false
         }
       ]
@@ -1863,7 +1951,10 @@
       ],
       "needsHumanReview": false,
       "source": "boss_quiz"
-    }
+    },
+    {"id": "bossquiz_ssch20_q11", "prompt": "Money left untouched in a bank for a fixed period of time to earn a higher rate of interest is kept in a —", "questionType": "mcq", "options": ["Current account", "Fixed deposit", "Wallet", "Loan account"], "answer": "Fixed deposit", "solutionSteps": ["Locking money for a fixed period earns more interest.", "Such an account is a fixed deposit.", "A current account is for frequent transactions, not saving."], "commonMistakes": ["Confusing a fixed deposit (locked, high interest) with a current account (frequent access)."], "variations": [], "difficulty": 4, "pageRefs": [196], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch20_q12", "prompt": "To cool down rapidly rising prices (inflation), the RBI can —", "questionType": "mcq", "options": ["Raise interest rates so borrowing and spending fall", "Print unlimited cash for everyone", "Lower interest rates to boost spending", "Close all the banks"], "answer": "Raise interest rates so borrowing and spending fall", "solutionSteps": ["Higher RBI rates make bank loans costlier.", "People borrow and spend less, saving more.", "Less spending cools rising prices (inflation)."], "commonMistakes": ["Thinking lower rates fight inflation — lower rates encourage MORE spending."], "variations": [], "difficulty": 4, "pageRefs": [202], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch20_q13", "prompt": "The government scheme that gave crores of Indians their first-ever bank account is the —", "questionType": "mcq", "options": ["Pradhan Mantri Jan Dhan Yojana", "The Green Revolution", "The RTI Act", "SAARC"], "answer": "Pradhan Mantri Jan Dhan Yojana", "solutionSteps": ["Recall the financial-inclusion scheme.", "The Pradhan Mantri Jan Dhan Yojana opened accounts for millions.", "It brought the unbanked into the banking system."], "commonMistakes": ["Confusing a banking scheme with farming (Green Revolution) or governance (RTI)."], "variations": [], "difficulty": 4, "pageRefs": [200], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {
@@ -1972,6 +2063,8 @@
         "False"
       ],
       "source": "scene_quick_check"
-    }
+    },
+    {"id": "scenecheck_ssch20_q04", "prompt": "'Compound interest' means you earn interest on your original money AND on —", "questionType": "mcq", "options": ["The bank's profits", "The interest already added", "Other people's savings", "Nothing extra"], "answer": "The interest already added", "solutionSteps": ["Compounding adds interest to your balance.", "Next time, interest is earned on that larger balance too.", "So you earn interest on the interest already added."], "commonMistakes": ["Thinking interest is only ever calculated on the original amount."], "variations": [], "difficulty": 2, "pageRefs": [197], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch20_q05", "prompt": "When you take a loan, you must repay the amount you borrowed (the principal) PLUS —", "questionType": "mcq", "options": ["A gift", "Interest", "Nothing", "Another loan"], "answer": "Interest", "solutionSteps": ["A loan is not free.", "You repay the principal plus an extra charge called interest.", "Interest is the price of borrowing."], "commonMistakes": ["Thinking a loan only requires repaying the original amount, with no interest."], "variations": [], "difficulty": 2, "pageRefs": [198], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }

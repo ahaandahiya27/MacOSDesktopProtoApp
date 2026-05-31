@@ -4147,3 +4147,23 @@ depends on electricity), `t02_q04` (diff5 choose road/rail/metro for three tasks
 infrastructure). 3 boss MCQ (diff4): metro role, sea trade, electricity=energy infra.
 2 quick MCQ: hospitals=social infra, national highways. Pack 363→367 topic-Qs;
 ssch19 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 20 (ssch20 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch20 (Banks and the Magic of Finance)**. +8: 4 topic Qs —
+`t01_q04` (diff5 choose savings/current/fixed-deposit by need), `t02_q04` (diff5 how a
+loan works + helpful vs risky), `t03_q03` (diff5 how the RBI raises rates to cool
+inflation), `t04_q05` (diff5 cheque vs UPI compare). 3 boss MCQ (diff4): fixed deposit,
+RBI raises rates vs inflation, Jan Dhan Yojana. 2 quick MCQ: compound interest,
+loan=principal+interest. Pack 367→371 topic-Qs; ssch20 boss 10→13, quick 3→5.
+
+*** MILESTONE: OLYMPIAD_QUESTIONS track COMPLETE for ALL 20 chapters. ***
+Across cycles 1–20, +160 PDF-faithful higher-difficulty items (≈80 topic Qs at
+diff 4–5 + 60 boss MCQ diff4 + 40 quick MCQ): every chapter now carries a uniform
+Olympiad-tier layer (cause→effect chains, compare/contrast, source/data
+interpretation, applied scenarios) on top of the original content. Pack topic-Qs
+291→371. All 7 content lints + Big-Sur safety lints + Release build + full suite
+green on every push; no regressions. NEXT: second deepening pass — GLOSSARY_ETYMOLOGY,
+DEEPDIVE, and bespoke INTERACTIVE swaps, round-robin across chapters.
