@@ -1334,7 +1334,9 @@
         "ssch04_t04_c02",
         "ssch04_t05_c01"
       ]
-    }
+    },
+    {"id": "ssch04_rw04", "title": "Why an ancient city dug a moat and built a wall", "body": "Capitals of the mahaajanapadas, like Rajagriha and Ujjayini, ringed themselves with tall earthen ramparts, brick walls and water-filled moats. These fortifications did two jobs at once. They defended the city against rival kingdoms and raiders, and they funnelled everyone in and out through a few guarded gates — exactly where the rajaa's officials could count goods and collect taxes. Defence and revenue, built into the same wall.", "relatedConceptIds": ["ssch04_t02_c03", "ssch04_t03_c02"]},
+    {"id": "ssch04_rw05", "title": "How an iron plough helped build a city", "body": "When people learned to smelt iron, they could make ploughs and axes far tougher than wood or copper ones. Iron axes cleared the thick forests of the Ganga plains, and iron ploughs turned the heavy soil, so farmers grew much more grain than their families needed. That surplus could feed people who did NOT farm — potters, weavers, traders, soldiers and rulers — and those non-farmers gathered into the towns of the Second Urbanisation. A better tool quietly made the city possible.", "relatedConceptIds": ["ssch04_t04_c01", "ssch04_t01_c03"]}
   ],
   "mnemonics": [
     {
@@ -1382,7 +1384,9 @@
       "relatedConceptIds": [
         "ssch04_t04_c03"
       ]
-    }
+    },
+    {"id": "ssch04_ms04", "kidsThink": "The gana-sangha republics were full democracies where every person could vote.", "actually": "They were a big step away from one all-powerful king, but not modern democracies. Decisions were taken jointly by an assembly of the heads of leading families (the 'rajaas'), so it was rule by a group — closer to an oligarchy. Ordinary people, and usually women, did not vote.", "relatedConceptIds": ["ssch04_t03_c03"]},
+    {"id": "ssch04_ms05", "kidsThink": "Coins were invented so that people could become rich.", "actually": "Punch-marked coins were invented to make TRADE easier. A standard-weight piece of metal that everyone trusted was far simpler than swapping goods by barter. Coins were a tool for exchanging things fairly, not a goal in themselves.", "relatedConceptIds": ["ssch04_t04_c02"]}
   ],
   "ncertQA": [
     {
@@ -1527,7 +1531,14 @@
       "relatedConceptIds": [
         "ssch04_t05_c01"
       ]
-    }
+    },
+    {"id": "ssch04_gl11", "term": "Archaeology", "definition": "The study of the human past through what people left behind — tools, coins, pottery and ruins; from Greek archaios ('ancient') + logos ('study').", "example": "Archaeology, not books, is how we know about the Second Urbanisation.", "hindiTerm": "पुरातत्व", "relatedConceptIds": ["ssch04_t01_c03"]},
+    {"id": "ssch04_gl12", "term": "Metallurgy", "definition": "The craft of getting metals from rock and shaping them into tools; from Greek metallon ('metal') + ergon ('work').", "example": "Iron metallurgy gave farmers stronger ploughs and axes.", "hindiTerm": "धातुकर्म", "relatedConceptIds": ["ssch04_t04_c01"]},
+    {"id": "ssch04_gl13", "term": "Monarchy", "definition": "Rule by a single hereditary ruler such as a rajaa; from Greek monos ('one') + arkhein ('to rule').", "example": "Magadha was a powerful monarchy led by its rajaa.", "hindiTerm": "राजतंत्र", "relatedConceptIds": ["ssch04_t03_c02"]},
+    {"id": "ssch04_gl14", "term": "Republic", "definition": "A state with no hereditary king, where leaders are chosen and decisions are taken together; from Latin res publica ('the public affair').", "example": "The Vajji gana-sangha was an early republic, not a monarchy.", "hindiTerm": "गणराज्य", "relatedConceptIds": ["ssch04_t03_c03"]},
+    {"id": "ssch04_gl15", "term": "Rajaa", "definition": "A king or ruler; from Sanskrit rājan — the same ancient Indo-European root that gives Latin rex and English 'regal' and 'royal'.", "example": "A monarchy was led by a rajaa whose son usually inherited the throne.", "hindiTerm": "राजा", "relatedConceptIds": ["ssch04_t03_c02"]},
+    {"id": "ssch04_gl16", "term": "Fortification", "definition": "Walls, ramparts, gates and moats built to defend a city; from Latin fortis ('strong') + facere ('to make').", "example": "A mahaajanapada capital was protected by tall fortifications and a moat.", "hindiTerm": "किलेबंदी", "relatedConceptIds": ["ssch04_t02_c03"]},
+    {"id": "ssch04_gl17", "term": "Guild", "definition": "An organised group of merchants or craftspeople of the same trade who agreed on standards, prices and training.", "example": "Guilds of weavers and metalworkers helped the new cities trade along the great routes.", "hindiTerm": "श्रेणी / गुट", "relatedConceptIds": ["ssch04_t05_c01"]}
   ],
   "miniProjects": [
     {
