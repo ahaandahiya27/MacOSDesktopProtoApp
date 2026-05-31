@@ -4471,3 +4471,14 @@ convection and the sea breeze' (links temperature, pressure and wind, class_9).
 +2 cross-strand crossChapterRefs (→ssch13 reading weather to farm; →ssch19
 forecasting as disaster-warning infrastructure). ssch02 deepDive 2→4, ccRefs 2→4.
 All lints + Release build + suite green. Pushed a1791ae.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 43 (ssch03 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch03 (Climates of India). +2 deepDive: 'The monsoon: a sea breeze
+the size of a country' (pressure-driven mechanism + ITCZ hint, class_10) and 'A hot
+day is not the same as climate change' (weather/climate timescales, trend detection,
+class_9). +2 cross-strand crossChapterRefs (→ssch13 monsoon & cropping seasons;
+→ssch08 seasons/rivers & sacred time/Kumbh). ssch03 deepDive 2→4, ccRefs 2→4. All
+lints + Release build + suite green. Pushed 3b324bb.
