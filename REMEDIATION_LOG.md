@@ -4085,3 +4085,15 @@ cooperation), `t05_q04` (diff5 why SAARC / benefits of cooperation). 3 boss MCQ
 (diff4): maritime neighbours, Bangladesh 1971, Myanmar gateway. 2 quick MCQ:
 Himalayas (India–China), Bhutan=Thunder Dragon. Pack 343→347 topic-Qs; ssch14
 boss 10→13, quick 3→5 (chapter already had a diff-5 longAnswer boss q10). All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 15 (ssch15 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch15 (Empires and Kingdoms 6th–10th c.)** — full-enrichment
+chapter; authored around existing diff-4 Qs (dark-age, Bhakti, Sindh). +8: 4 topic Qs —
+`t02_q04` (diff5 why three powers fought for Kannauj), `t03_q04` (diff5 what stone
+temples reveal about a kingdom), `t04_q04` (diff5 king/samanta/village power-sharing +
+strength/weakness), `t05_q04` (diff5 why learning flourished in a divided age). 3 boss
+MCQ (diff4): Pala/Nalanda, Pallava/Mamallapuram, Chalukyas/Deccan. 2 quick MCQ: Harsha
+title, Kannauj city. Pack 347→351 topic-Qs; ssch15 boss 10→13, quick 3→5. All 7 lints green.
