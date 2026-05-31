@@ -7467,6 +7467,39 @@
                 69
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_t01_q04",
+              "prompt": "Historians describe a gap of about a THOUSAND years between India's First and Second Urbanisations. Explain what was there before the gap, what was lost during it, and what returned after it — and then argue why the Second Urbanisation is called a 'new beginning' rather than just a continuation of the first.",
+              "questionType": "longAnswer",
+              "answer": "Before the gap came the First Urbanisation — the Harappan (Indus / Sindhu-Sarasvati) civilisation, with its planned cities — which broke down in the early 2nd millennium BCE. During the gap, for roughly a thousand years, urban life was largely absent: India's big cities disappeared, though villages and regional cultures carried on. After the gap, in the 1st millennium BCE, a fresh wave of city-building rose in the Ganga plains — the Second Urbanisation. It is called a 'new beginning' rather than a continuation because the thread of city life had been broken for about a millennium: the new cities grew in a different region (the Ganga valley, not the Indus), and were powered by new things the Harappans did not have — iron tools, punch-marked coins, and new kinds of states (janapadas and mahaajanapadas). So city life was effectively re-invented, not simply carried on.",
+              "solutionSteps": [
+                "Before: the Harappan First Urbanisation, which declined in the early 2nd millennium BCE.",
+                "During: ~1,000 years with little urban life — only villages and regional cultures.",
+                "After: the Second Urbanisation rises in the Ganga plains in the 1st millennium BCE.",
+                "Argue 'new beginning': the gap broke continuity; new region; new features (iron, coins, mahaajanapadas)."
+              ],
+              "commonMistakes": [
+                "Thinking the Harappan cities simply 'continued' into the Second Urbanisation — there was a long gap.",
+                "Forgetting that the two urbanisations were in different regions (Indus vs Ganga)."
+              ],
+              "variations": [
+                {
+                  "prompt": "In which region did the Second Urbanisation mainly begin, and roughly when?",
+                  "answer": "Mainly in the Ganga plains, during the 1st millennium BCE.",
+                  "solutionSteps": [
+                    "Recall the Second Urbanisation's location: the Ganga plains.",
+                    "Recall its timing: the 1st millennium BCE."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                67,
+                68,
+                69
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -7707,6 +7740,38 @@
                 78
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_t02_q04",
+              "prompt": "Many capitals of the mahaajanapadas — such as Rajagriha, Kaushambi and Varanasi — are still busy, inhabited cities about 2,500 years later. What does this remarkable CONTINUITY suggest about why those particular sites were chosen in the first place?",
+              "questionType": "longAnswer",
+              "answer": "It strongly suggests the sites were chosen for lasting natural and strategic advantages — the kind that never stop being useful. Such cities were typically built beside rivers (giving drinking water, fertile land and a cheap transport route), along or where important trade routes met (bringing goods, wealth and travellers), and on ground that could be fortified with walls and a moat for defence. Because these advantages — water, trade and defensibility — remained valuable century after century, people had every reason to keep living there rather than abandon the spot. The fact that the cities survived for 2,500 years is itself evidence that the original location was very well chosen.",
+              "solutionSteps": [
+                "Note the key fact: these capitals are still living cities today.",
+                "Ask what kind of site advantage would stay useful for 2,500 years.",
+                "List the durable advantages: rivers (water + transport), trade routes (wealth), defensible ground (safety).",
+                "Conclude that lasting survival is evidence of a very well-chosen location."
+              ],
+              "commonMistakes": [
+                "Saying it is just luck or coincidence — the sites had real, lasting advantages.",
+                "Forgetting transport/trade and defence, and naming only one advantage."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name two natural advantages that would make a river-bank a good place to build an ancient capital.",
+                  "answer": "Any two of: a steady supply of drinking water; fertile land for farming; and an easy water route for transporting goods and people by boat.",
+                  "solutionSteps": [
+                    "Recall why rivers attract settlement.",
+                    "Name two of water, fertile soil, transport."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                70,
+                71
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -7939,6 +8004,39 @@
               ],
               "difficulty": 2,
               "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_t03_q04",
+              "prompt": "Compare a MONARCHY (like the kingdom of Magadha) with a GANA / SANGHA republic (like Vajji). For each, say who held the ultimate power and how big decisions were made. Then explain why historians call the ganas 'among the world's earliest republics'.",
+              "questionType": "longAnswer",
+              "answer": "In a MONARCHY, ultimate power rested with one person — the rajaa (king) — and the position was usually hereditary, passing down a family. He was helped by ministers and an assembly of elders, but the final authority was his. In a GANA or SANGHA, power was NOT held by a single hereditary king. Instead, an assembly of many leaders took the major decisions through discussion and, if needed, a vote — they could even select the rajaa themselves. Historians call the ganas 'among the world's earliest republics' because a republic is a state where rule is by an assembly or chosen representatives rather than by a single inherited monarch — and that is exactly how Vajji and Malla worked, more than 2,500 years ago.",
+              "solutionSteps": [
+                "Monarchy: one hereditary rajaa holds ultimate power; advised by ministers/elders.",
+                "Gana/sangha: an assembly of many takes big decisions by discussion and vote.",
+                "Note the assembly could even choose the rajaa.",
+                "Define 'republic' (rule by assembly/representatives, not a hereditary king) and match it to the ganas."
+              ],
+              "commonMistakes": [
+                "Saying the gana also had a hereditary king — its rajaa could be chosen by the assembly.",
+                "Treating 'republic' loosely — it specifically means rule is not by a single inherited monarch."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is a gana/sangha closer to a 'republic' than a monarchy is?",
+                  "answer": "Because in a gana/sangha an assembly of many people takes the major decisions (and can even pick the ruler), whereas a monarchy concentrates power in one hereditary king — and a republic, by definition, is ruled by an assembly or representatives rather than a single inherited monarch.",
+                  "solutionSteps": [
+                    "Recall the gana's assembly-based decisions.",
+                    "Recall the monarchy's single hereditary ruler.",
+                    "Match assembly-rule to the meaning of 'republic'."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                71,
                 72
               ],
               "needsHumanReview": false
@@ -8190,6 +8288,38 @@
               "difficulty": 3,
               "pageRefs": [
                 76
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_t04_q04",
+              "prompt": "Before coins, people traded by barter (swapping goods directly). (a) Explain why the new punch-marked coins made trade easier than barter. (b) Archaeologists sometimes find punch-marked coins far away from where they were made. What does that discovery tell us about this period?",
+              "questionType": "longAnswer",
+              "answer": "(a) In barter you must find someone who has what you want AND wants what you have — and you must agree how many of one thing equals another, which is awkward for everyday trade. Punch-marked coins solved this: a coin was a small piece of silver of accepted value stamped with symbols, so anyone would take it. A trader could sell goods for coins and later use those coins to buy something completely different, from anyone — making exchange far quicker and more flexible than barter. (b) Finding such coins far from where they were minted is evidence that goods and people were moving across long distances — in other words, that there were busy long-distance trade networks linking different regions (and even lands abroad) during the Second Urbanisation.",
+              "solutionSteps": [
+                "Recall the problem with barter: you need a double match of wants and an agreed rate.",
+                "Explain a coin is accepted-value silver, so it is taken by anyone — exchange becomes flexible.",
+                "Part (b): coins found far away = those coins travelled.",
+                "Conclude this is evidence of long-distance trade networks."
+              ],
+              "commonMistakes": [
+                "Saying coins are just 'prettier' than barter goods — the real gain is accepted, flexible value.",
+                "Missing the inference in (b): far-flung coins are EVIDENCE of trade, not just lost objects."
+              ],
+              "variations": [
+                {
+                  "prompt": "What were India's first coins called, and what were they made of?",
+                  "answer": "They were called punch-marked coins, and they were made of silver, stamped with symbols.",
+                  "solutionSteps": [
+                    "Recall the name: punch-marked coins.",
+                    "Recall the material: silver with stamped symbols."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                73,
+                74
               ],
               "needsHumanReview": false
             }
@@ -9240,6 +9370,88 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch04_q10",
+          "prompt": "The Harappan civilisation is called India's First Urbanisation. The wave of city-building in the Ganga plains during the 1st millennium BCE is therefore called the —",
+          "questionType": "mcq",
+          "options": [
+            "Third Urbanisation",
+            "Second Urbanisation",
+            "Vedic Age",
+            "Harappan revival"
+          ],
+          "answer": "Second Urbanisation",
+          "solutionSteps": [
+            "The Harappan cities were the First Urbanisation.",
+            "After a ~1,000-year gap, new cities rose in the Ganga plains.",
+            "This second wave is called the Second Urbanisation."
+          ],
+          "commonMistakes": [
+            "Treating the two urbanisations as continuous — a long gap separated them."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            67,
+            68
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch04_q11",
+          "prompt": "Vajji and Malla were ganas / sanghas. This means they were —",
+          "questionType": "mcq",
+          "options": [
+            "Monarchies ruled by a hereditary king",
+            "Early republics where an assembly took major decisions",
+            "Trading guilds with no government",
+            "Harappan-era towns"
+          ],
+          "answer": "Early republics where an assembly took major decisions",
+          "solutionSteps": [
+            "Ganas/sanghas were NOT monarchies.",
+            "Their assemblies took big decisions, even choosing the rajaa.",
+            "So they were among the world's earliest republics."
+          ],
+          "commonMistakes": [
+            "Assuming every mahaajanapada was a kingdom with a hereditary ruler."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            72
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch04_q12",
+          "prompt": "The spread of iron tools helped cities and states grow MAINLY because iron —",
+          "questionType": "mcq",
+          "options": [
+            "Was used to make the first coins",
+            "Made farming far more productive, creating surplus food",
+            "Replaced the need for trade routes",
+            "Was worshipped as sacred"
+          ],
+          "answer": "Made farming far more productive, creating surplus food",
+          "solutionSteps": [
+            "Iron axes and ploughs cleared forests and broke heavy soil.",
+            "More farmland → surplus food.",
+            "Surplus food let many people live in cities and support states."
+          ],
+          "commonMistakes": [
+            "Confusing iron's role (farming + weapons) with coins, which were made of silver."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            73
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -9321,6 +9533,60 @@
           "pageRefs": [
             80,
             81
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch04_q03",
+          "prompt": "India's first coins, made of silver and stamped with symbols, are known as —",
+          "questionType": "mcq",
+          "options": [
+            "Gold mohurs",
+            "Punch-marked coins",
+            "Paper notes",
+            "Copper plates"
+          ],
+          "answer": "Punch-marked coins",
+          "solutionSteps": [
+            "Growing trade led to India's first coins.",
+            "They were silver, stamped (punched) with symbols.",
+            "Hence the name punch-marked coins."
+          ],
+          "commonMistakes": [
+            "Thinking the first coins were gold or paper."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            73
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch04_q04",
+          "prompt": "In a janapada, the assembly or council where the clan's affairs were discussed was called the —",
+          "questionType": "mcq",
+          "options": [
+            "Moat",
+            "Sabhaa (or samiti)",
+            "Dakshinaapatha",
+            "Varna"
+          ],
+          "answer": "Sabhaa (or samiti)",
+          "solutionSteps": [
+            "Each janapada had an assembly for its affairs.",
+            "It was called the sabhaa or samiti.",
+            "The rajaa was expected to take its advice."
+          ],
+          "commonMistakes": [
+            "Confusing the sabhaa/samiti (assembly) with a trade route (Dakshinaapatha)."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            71
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"

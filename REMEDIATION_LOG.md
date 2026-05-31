@@ -3932,3 +3932,17 @@ OLYMPIAD_QUESTIONS for **ssch03 (Climates of India)**: +8 PDF-faithful items.
 cyclone + deceptive 'eye' + why east coast). 3 boss MCQ (diff4): rain shadow,
 altitude vs latitude, SW monsoon direction. 2 quick MCQ: altitude→cooler, cyclone eye.
 Pack 299→303 topic-Qs; ssch03 boss 10→13, quick 3→5. All 7 content lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 4 (ssch04 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch04 (New Beginnings: Cities and States)**: +8
+PDF-faithful items. 4 topic Qs — `t01_q04` (diff5 the millennium gap / why a
+'new beginning'), `t02_q04` (diff4 why capitals are still living cities — site
+advantages), `t03_q04` (diff5 monarchy vs gana/sangha republic compare), `t04_q04`
+(diff4 coins-vs-barter + coins-far-away = trade-network inference). 3 boss MCQ
+(diff4): First/Second Urbanisation, ganas=republics, iron→surplus. 2 quick MCQ:
+punch-marked coins, sabhaa/samiti. Pack 303→307 topic-Qs; ssch04 boss 10→13,
+quick 3→5. (Avoided overlap with existing diff4 q on iron and existing source-types
+q.) All 7 content lints green.
