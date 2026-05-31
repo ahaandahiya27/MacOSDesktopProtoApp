@@ -4446,3 +4446,16 @@ at 887 (glossary/misc/rw are not rendered to article HTML). Every push: pre-comm
 content lints + pre-push full Release build + test suite green; zero regressions.
 STOP_AND_ASK count: 0. NEXT: DEEPDIVE track (deepDive/timelines/conceptMap/
 crossChapterRefs), then bespoke INTERACTIVE widgets.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 41 (ssch01 deepDive + cross-chapter refs)
+
+DEEPDIVE pass begins (round-robin, start ssch01). +2 expert-tier deepDive entries
+anchored to in-chapter concepts: 'Seashells on the roof of the world' (Tethys-Sea
+fossils as continental-drift evidence, class_9) and 'Why the Northern Plains are
+kilometres deep' (alluvium depth, khadar vs bhangar, fertility & quake
+amplification, class_10). +2 cross-strand crossChapterRefs (→ssch08 sacred
+geography; →ssch13 soils/farming). ssch01 deepDive 2→4, crossChapterRefs 2→4. All
+lints + Release build + suite green via pre-push gate. Pushed 0b6ed4b. (deepDive/
+ccRefs not rendered to article HTML; bundle steady at 887.)
