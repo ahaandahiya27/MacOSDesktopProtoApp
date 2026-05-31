@@ -3989,3 +3989,17 @@ what they show about scientific method). 3 boss MCQ (diff4): copper plates,
 Kalidasa, land-tax+trade economy. 2 quick MCQ: Kamarupa/Brahmaputra, grand titles.
 Pack 315→319 topic-Qs; ssch07 boss 10→13, quick 3→5. (Pivoted away from Faxian
 source-crit and Ayurveda-texts which the chapter already covered.) All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 8 (ssch08 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch08 (How the Land Becomes Sacred)**: +8 PDF-faithful
+items in t01/t02/t04/t05 (t03's integration thesis was already the chapter's diff-4).
+4 topic Qs — `t01_q04` (diff5 tīrtha 'crossing place' literal→spiritual metaphor),
+`t02_q04` (diff5 hard hilltop trek mirrors the inner journey), `t04_q04` (diff5 why
+sources/confluences are sacred + Kumbh Mela link), `t05_q04` (diff5 belief→no-cutting→
+biodiversity+water causal chain, conservation tool). 3 boss MCQ (diff4): jyotirlinga
+networks, pilgrimage inner+outer, sacred sources/sangams. 2 quick MCQ: pilgrimage
+definition, 3,000-year tradition. Pack 319→323 topic-Qs; ssch08 boss 10→13, quick 3→5.
+*** ssch01–08 OLYMPIAD complete (the whole History+Geo-early block). *** All 7 lints green.
