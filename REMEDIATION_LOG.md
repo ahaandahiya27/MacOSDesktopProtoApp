@@ -4181,3 +4181,17 @@ vs rain-fed peninsular rivers) + 2 realWorldExamples (Ghats rain split; Sundarba
 mangroves). ssch01 glossary 10→17. All 7 content lints + full Big-Sur lint family
 + Release build + suite green via pre-push gate. Pushed 5c6bdaf. Article HTML
 unchanged (glossary not rendered to HTML; bundle count steady at 887).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 22 (ssch02 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch02 (Understanding the Weather). +7 glossary terms,
+each carrying its etymology: Thermometer (Gk thérmē 'heat'), Barometer (báros
+'weight'), Hygrometer (hygrós 'moist'), Rain gauge, Condensation (Lat condensare),
+Dew point, Wind vane (OE fana 'flag'). The -meter instruments were named in the
+chapter but missing from the glossary, so each add is doubly additive. +2
+misconceptions (barometer≠thermometer; humid≠imminent-rain) + 2 realWorldExamples
+(dew at dawn; a falling barometer keeps a fishing boat ashore). ssch02 glossary
+11→18. All 7 content lints + full Big-Sur lint family + Release build + suite green
+via pre-push gate. Pushed 35d60fb.
