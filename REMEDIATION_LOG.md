@@ -4291,3 +4291,17 @@ vote away fundamental rights) + 2 realWorldExamples (Gram Sabha = direct democra
 you can attend; three-referee analogy for separation of powers + courts striking
 down unconstitutional laws). ssch09 glossary 11→17. All lints + Release build +
 suite green. Pushed 6e50481. GL: ssch01–09 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 30 (ssch10 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch10 (The Constitution of India). +6 glossary terms
+completing the Preamble vocabulary with etymology: Socialist (Lat socius),
+Democratic (Gk demos+kratos), Justice (Lat justitia/jus), Liberty (libertas/
+liber), Equality (aequalis), Fraternity (frater). +2 misconceptions ('We, the
+People' declares the source of authority; India wove many constitutional sources
+rather than copying one) + 2 realWorldExamples (every official swears allegiance
+to the Constitution, which sits above them; the 86th Amendment turned education
+into a Fundamental Right). ssch10 glossary 10→16. All lints + Release build +
+suite green. Pushed bcf8d24. *** GL PASS HALFWAY: ssch01–10 done. ***
