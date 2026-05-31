@@ -65,18 +65,30 @@ func socialScienceInteractives(
     if socialScienceInteractivesAreEnabled(forPackId: pack.id) {
         if chapter.id == "ssch01" {
             IndiaPhysiographicExplorer(chapterId: chapter.id)
-        } else if chapter.id == "ssch05" {
-            // "Put history in order" challenge over the chapter's authored
-            // timeline (rise of the Maurya empire). Auto-hides if no timeline
-            // with ≥2 steps is present.
+        } else if chapter.id == "ssch11" {
+            BarterToMoneySim(chapterId: chapter.id)
+        } else if socialScienceChronologyChapterIds.contains(chapter.id) {
+            // History chapters whose first authored timeline is genuinely
+            // chronological — a "put history in order" challenge. Auto-hides if
+            // no timeline with ≥2 steps is present.
             if let tl = chapter.timelinesList.first, tl.steps.count >= 2 {
                 SSChronologyChallenge(timeline: tl)
             }
-        } else if chapter.id == "ssch11" {
-            BarterToMoneySim(chapterId: chapter.id)
         }
     }
 }
+
+/// Social Science History chapters that get the `SSChronologyChallenge`
+/// (their first timeline is a date-ordered sequence of events). Kept as a set
+/// so the gate test can pin it and it can grow without touching the mount.
+let socialScienceChronologyChapterIds: Set<String> = [
+    "ssch04",   // New Beginnings: Cities and States
+    "ssch05",   // The Rise of Empires
+    "ssch06",   // The Age of Reorganisation
+    "ssch07",   // The Gupta Era
+    "ssch15",   // Empires and Kingdoms: 6th–10th centuries
+    "ssch16"    // Turning Tides: 11th–12th centuries
+]
 
 // MARK: - Ch.1 pilot mounts
 

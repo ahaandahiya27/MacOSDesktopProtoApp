@@ -47,6 +47,24 @@ final class SocialScienceInteractiveGateTests: XCTestCase {
         }
     }
 
+    /// Every chapter wired to the chronology challenge must actually carry a
+    /// timeline with ≥2 steps, else the interactive silently hides. Authored
+    /// timelines are also expected to be chronological (the puzzle's premise).
+    func testChronologyChaptersHaveUsableTimelines() throws {
+        let pack = try loadPack("socialscience_class7")
+        let byId = Dictionary(uniqueKeysWithValues: pack.chapters.map { ($0.id, $0) })
+        for id in socialScienceChronologyChapterIds {
+            guard let ch = byId[id] else {
+                XCTFail("Chronology chapter \(id) not found in pack."); continue
+            }
+            guard let tl = ch.timelinesList.first else {
+                XCTFail("\(id) is wired to the chronology challenge but has no timeline."); continue
+            }
+            XCTAssertGreaterThanOrEqual(tl.steps.count, 2,
+                "\(id) timeline needs ≥2 steps for an ordering challenge.")
+        }
+    }
+
     // MARK: - Helpers
 
     private func loadPack(_ resource: String) throws -> SubjectPack {
