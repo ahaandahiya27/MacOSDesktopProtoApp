@@ -3960,3 +3960,18 @@ why Ashoka carved edicts in Prakrit on stone — source interpretation). 3 boss 
 śhrenīs. Pack 307→311 topic-Qs; ssch05 boss 10→13, quick 3→5. (Avoided overlap
 with existing diff4 Qs on Alexander/Kalinga and the lion-capital boss/quick.)
 All 7 content lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 6 (ssch06 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch06 (The Age of Reorganisation)**: +8 PDF-faithful
+items (chapter previously had NO diff-4+). 4 topic Qs — `t01_q04` (diff5 why
+'Reorganisation' not 'collapse'), `t02_q04` (diff4 Satavahana mother-names/queens
+→ women's status + why inscriptions are reliable), `t03_q04` (diff5 two sources of
+southern wealth: Grand Anicut land-engineering vs Roman sea-trade), `t05_q04` (diff5
+Gandhara vs Mathura schools + Gandhara blend as evidence of world contact). 3 boss
+MCQ (diff4): matrimonial alliances, Bharhut Stupa, Kushana patronage of both art
+schools. 2 quick MCQ: Kharavela=Jain, Mathura=Indian style. Pack 311→315 topic-Qs;
+ssch06 boss 10→13, quick 3→5. (Avoided overlap with existing boss/quick on Grand
+Anicut, Sangam, Shaka Samvat, Gandhara, Silk Route.) All 7 content lints green.
