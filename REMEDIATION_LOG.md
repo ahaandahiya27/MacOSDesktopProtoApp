@@ -4594,3 +4594,18 @@ billion-payment scale; class_9, anchor t05_c01). +2 cross-strand refs (→ssch12
 money as the medium that makes markets work; →ssch20 paper money & the RBI →
 banks and finance). ssch11 deepDive 2→4, ccRefs 2→4. All lints + Release build +
 suite green. Pushed 63ff74d.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 52 (ssch12 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch12 (Understanding Markets). +2 deepDive: 'Why a shirt passes
+through so many hands' (the wholesaler/distributor/retailer chain each adds a real
+service — bulk storage, transport, breaking bulk, last-mile reach — and survives
+only by adding value, which is why online selling removes links it doesn't need;
+class_9, anchor t04_c03) and 'The quality marks that protect you' (ISI, AGMARK,
+FSSAI, BIS Hallmark and consumer rights/courts as the trust system that lets
+buyers trust a stranger's product; class_9, anchor t05_c03). +2 cross-strand refs
+(→ssch13 farm produce reaching buyers through mandis & supply chains; →ssch19
+markets depending on roads/ports/telecom/electricity). ssch12 deepDive 2→4,
+ccRefs 2→4. All lints + Release build + suite green. Pushed 3d857fa.
