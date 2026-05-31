@@ -49759,6 +49759,24 @@
           "body": "When the news says 'the RBI raised the rate' or 'cut the rate', why does it matter to everyone, not just banks? The answer is a chain reaction. The RBI sets the benchmark rate at which it lends to banks. If the RBI raises this rate, banks must pay more to borrow, so they raise the interest they charge on home loans, car loans and business loans. Higher loan rates make people and companies borrow and spend less, which cools down the economy and helps control rising prices (inflation). If the RBI cuts the rate, the opposite happens: loans get cheaper, people borrow and spend more, and the economy speeds up. So a single decision about one number ripples out to the cost of millions of loans and the spending of an entire nation. This is called monetary policy, and it is one of the most powerful tools a country has to keep its economy steady - which is why central banks like the RBI are so important.",
           "prerequisite": "ssch20_t03_c02",
           "nextStepHint": "Read about 'inflation' to see why central banks raise rates to keep prices from rising too fast."
+        },
+        {
+          "id": "ssch20_dv03",
+          "title": "The snowball that is compound interest",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch20_t01_c03",
+          "body": "The chapter calls compounding 'magic', and the magic is that you earn interest not just on your money but on the interest it has already earned. Put ₹100 at 10% a year: after one year you have ₹110, but in the second year the 10% is taken on ₹110, not ₹100, so you earn ₹11, not ₹10 — and it keeps speeding up like a snowball rolling downhill. A handy trick captures this: the Rule of 72. Divide 72 by the yearly interest rate and you get roughly the number of years for money to double. At 8% money doubles in about 9 years (72 ÷ 8); at 6%, in about 12. The same rule works in reverse and in a scary way — it shows how fast a loan or inflation can double a debt. The deepest lesson is about time: because compounding accelerates, money saved when you are young grows far larger than the same amount saved later. Compounding rewards patience more than it rewards a big start.",
+          "prerequisite": "Knowing that compound interest means earning interest on interest.",
+          "nextStepHint": "Use the Rule of 72 to find how many years money doubles at 9% interest."
+        },
+        {
+          "id": "ssch20_dv04",
+          "title": "Owning a slice of a company: shares, risk and reward",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch20_t04_c03",
+          "body": "When you buy a share on the stock market, you are buying a tiny piece of ownership in a real company — if it does well, your share can rise in value and pay you a part of the profits (a dividend); if it does badly, your share can fall and you can lose money. That two-sided possibility is the heart of investing: higher possible reward always comes tied to higher risk. This is why a savings account (very safe, small return) and shares (riskier, possibly larger return) suit different needs. Smart investors manage the risk rather than gamble: they spread money across many companies (diversification, or 'not putting all your eggs in one basket') and stay invested for many years, so that compounding and a growing economy work in their favour while short-term ups and downs average out. The stock market is not a lottery — it is how ordinary people can share in the growth of the businesses around them, as long as they respect the link between risk and reward.",
+          "prerequisite": "Knowing that shares represent part-ownership of a company.",
+          "nextStepHint": "Explain why putting all your savings into a single company's shares is riskier than spreading it across many."
         }
       ],
       "crossChapterRefs": [
@@ -49787,6 +49805,24 @@
           "pointer": "UPI - 'India's gift to the world' - has been adopted by neighbours like Nepal, Bhutan and Sri Lanka, linking finance to India's regional ties.",
           "relatedConceptIds": [
             "ssch20_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch20_cc04",
+          "toChapterId": "ssch13",
+          "topic": "Credit that grows crops",
+          "pointer": "The loans and credit explained here are exactly what a farmer needs for seeds and equipment — the farming chapter's challenge of farm credit is solved by the banks studied in this chapter.",
+          "relatedConceptIds": [
+            "ssch20_t02_c01"
+          ]
+        },
+        {
+          "id": "ssch20_cc05",
+          "toChapterId": "ssch18",
+          "topic": "The RBI as regulator",
+          "pointer": "The RBI controlling banks and the Jan Dhan drive for banking-for-all are real examples of the government's 'regulator' and 'provider' roles from the chapter on the state and government.",
+          "relatedConceptIds": [
+            "ssch20_t03_c01"
           ]
         }
       ],
