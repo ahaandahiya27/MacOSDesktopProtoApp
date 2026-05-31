@@ -4411,3 +4411,17 @@ the govt itself; the executive = political ministers + permanent bureaucracy) + 
 realWorldExamples (the RTI Act passing through legislature→executive→judiciary; how
 road/school/currency come from three tiers of government). ssch18 glossary 11→17.
 All lints + Release build + suite green. Pushed 0389367. GL: ssch01–18 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 39 (ssch19 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch19 (Infrastructure). +6 glossary terms with etymology:
+Infrastructure-root (Lat infra 'below' + structura), Aviation (avis 'bird'), Port
+(portus 'harbour/gate'), Telecommunication (Gk tēle 'far' + communicare), Utility
+(utilis 'useful'), Logistics (Gk logistikē). +2 misconceptions (social
+infrastructure — schools/hospitals — is real infrastructure too; J.C. Bose's radio
+work shows India contributed to communication science) + 2 realWorldExamples (one
+deep-water port lifts a whole region; the Arthashastra's ancient roads-and-canals
+'public works' duty). ssch19 glossary 11→17. All lints + Release build + suite
+green. Pushed a1098c2. GL: ssch01–19 done; only ssch20 left.
