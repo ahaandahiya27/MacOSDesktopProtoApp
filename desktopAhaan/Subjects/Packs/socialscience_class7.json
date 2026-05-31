@@ -3839,6 +3839,24 @@
             "ssch02_t04_c01",
             "ssch02_t02_c01"
           ]
+        },
+        {
+          "id": "ssch02_rw04",
+          "title": "Why dew sparkles on the grass at dawn",
+          "body": "On a clear, still night the ground keeps radiating its heat away to the open sky and slowly cools. The thin layer of air touching the grass cools with it, and once that air drops to its dew point the water vapour it was holding can no longer stay a gas — it condenses into tiny droplets on the leaves. That is the dew you see glittering at sunrise. Cloudy or windy nights trap or mix the heat, so less dew forms — proof that you can 'read' last night's weather from the grass.",
+          "relatedConceptIds": [
+            "ssch02_t04_c01",
+            "ssch02_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch02_rw05",
+          "title": "A falling barometer keeps a fishing boat ashore",
+          "body": "Along India's coasts, fishing families watch the barometer as closely as the sky. A pressure reading that drops fast and far — toward or below 1000 millibars — is the fingerprint of a depression that can grow into a cyclone. When the India Meteorological Department spots such a fall and issues a warning, boats stay in harbour. A single number, read in time, can be the difference between a safe night and a lost crew.",
+          "relatedConceptIds": [
+            "ssch02_t03_c01",
+            "ssch02_t05_c02"
+          ]
         }
       ],
       "mnemonics": [
@@ -3888,6 +3906,24 @@
           "actually": "They use special instruments to measure each element precisely, collect data from many places over time, and apply scientific methods to predict the weather hours, days or even weeks ahead. It is a science called meteorology, not guesswork.",
           "relatedConceptIds": [
             "ssch02_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch02_ms04",
+          "kidsThink": "A barometer and a thermometer measure pretty much the same thing.",
+          "actually": "They measure two different elements. A thermometer measures temperature — how hot or cold the air is. A barometer measures atmospheric pressure — the weight of the air pressing down. Their Greek roots even say so: thérmē means 'heat', báros means 'weight'.",
+          "relatedConceptIds": [
+            "ssch02_t02_c01",
+            "ssch02_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch02_ms05",
+          "kidsThink": "If the air feels very humid, it must be about to rain.",
+          "actually": "High humidity only means the air is holding a lot of water vapour. Rain falls only when that air cools enough to reach its dew point, so the vapour condenses into clouds and droplets. A muggy day can stay completely dry if the air never cools that far.",
+          "relatedConceptIds": [
+            "ssch02_t04_c01",
+            "ssch02_t04_c02"
           ]
         }
       ],
@@ -4047,6 +4083,78 @@
           "definition": "An instrument with rotating cups that measures wind speed (and direction).",
           "example": "The faster the anemometer's cups spin, the stronger the wind.",
           "hindiTerm": "वायुवेगमापी",
+          "relatedConceptIds": [
+            "ssch02_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch02_gl12",
+          "term": "Thermometer",
+          "definition": "An instrument that measures temperature; from Greek thérmē ('heat') + métron ('measure').",
+          "example": "A thermometer showed 6.5°C as the day's maximum in Srinagar.",
+          "hindiTerm": "तापमापी / थर्मामीटर",
+          "relatedConceptIds": [
+            "ssch02_t02_c01"
+          ]
+        },
+        {
+          "id": "ssch02_gl13",
+          "term": "Barometer",
+          "definition": "An instrument that measures atmospheric pressure; from Greek báros ('weight' of the air) + métron ('measure').",
+          "example": "When the barometer falls quickly, a storm may be on the way.",
+          "hindiTerm": "वायुदाबमापी / बैरोमीटर",
+          "relatedConceptIds": [
+            "ssch02_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch02_gl14",
+          "term": "Hygrometer",
+          "definition": "An instrument that measures humidity; from Greek hygrós ('moist') + métron ('measure').",
+          "example": "The hygrometer read 84% relative humidity in Mumbai.",
+          "hindiTerm": "आर्द्रतामापी / हाइग्रोमीटर",
+          "relatedConceptIds": [
+            "ssch02_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch02_gl15",
+          "term": "Rain gauge",
+          "definition": "An open-mouthed funnel-and-scale instrument that measures precipitation; a 'gauge' is any tool for measuring an amount.",
+          "example": "The rain gauge collected 12 mm of rain overnight.",
+          "hindiTerm": "वर्षामापी",
+          "relatedConceptIds": [
+            "ssch02_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch02_gl16",
+          "term": "Condensation",
+          "definition": "The change of water vapour (gas) into liquid water droplets as the air cools; from Latin condensare ('to make dense').",
+          "example": "Condensation of vapour high in the sky forms clouds.",
+          "hindiTerm": "संघनन",
+          "relatedConceptIds": [
+            "ssch02_t04_c01",
+            "ssch02_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch02_gl17",
+          "term": "Dew point",
+          "definition": "The temperature at which the air becomes saturated (full of vapour) so that water begins to condense into dew.",
+          "example": "When the night air cools to its dew point, dew settles on the grass.",
+          "hindiTerm": "ओसांक",
+          "relatedConceptIds": [
+            "ssch02_t04_c01",
+            "ssch02_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch02_gl18",
+          "term": "Wind vane",
+          "definition": "A free-turning pointer, often arrow-shaped, that shows the direction FROM which the wind is blowing; 'vane' comes from Old English fana ('flag').",
+          "example": "The wind vane swung to point west, so a west wind was blowing.",
+          "hindiTerm": "वातदिक्सूचक / पवन दिशा सूचक",
           "relatedConceptIds": [
             "ssch02_t03_c03"
           ]
