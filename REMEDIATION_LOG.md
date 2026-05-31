@@ -4236,3 +4236,16 @@ ruled through vassals/satraps/bureaucracy, not directly) + 2 realWorldExamples
 (Ashoka's edicts = the first Indian ruler speaking to us directly; Arthaśhāstra as
 a still-studied statecraft handbook). ssch05 glossary 10→17. GL pass complete for
 ssch01–05. All lints + Release build + suite green. Pushed 50e6df2.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 26 (ssch06 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch06 (The Age of Reorganisation). +6 glossary terms with
+etymology: Samvat (Skt saṃvatsara 'year'), Anicut (Tamil aṇai 'dam' + kaṭṭu),
+Patron (Lat patronus), Gandhara school, Mathura school, Era (Lat aera). +2
+misconceptions (matrimonial alliance = political diplomacy, not just a wedding;
+Satavahana queens held real power via mother-names & land grants) + 2
+realWorldExamples (Gandhara Greek-robe vs Mathura red-stone Buddha = visible
+confluence; why a marriage could outweigh a battle). ssch06 glossary 10→16. All
+lints + Release build + suite green. Pushed 1c0b147. GL pass: ssch01–06 done.
