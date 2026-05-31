@@ -4714,3 +4714,23 @@ as proof; class_10, anchor t04_c03). +2 cross-strand refs (→ssch12 the highway
 ports/telecom on which markets and online trade run; →ssch11 the communications
 networks that carry UPI and QR-code digital money). ssch19 deepDive 2→4, ccRefs
 3→5. All lints + Release build + suite green. Pushed 8b397d9.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 60 (ssch20 deepDive — DEEPDIVE track complete)
+
+DEEPDIVE for ssch20 (Banks and the Magic of Finance). +2 deepDive: 'The snowball
+that is compound interest' (interest-on-interest, the Rule of 72 for doubling
+time, and how compounding rewards starting young; class_9, anchor t01_c03) and
+'Owning a slice of a company: shares, risk and reward' (shares & dividends, the
+risk-reward link, diversification and long horizons vs gambling; class_10, anchor
+t04_c03). +2 cross-strand refs (→ssch13 loans/credit for farmers; →ssch18 the RBI
+and Jan Dhan as the government's regulator/provider roles). ssch20 deepDive 2→4,
+ccRefs 3→5. All lints + Release build + suite green. Pushed 7d0d51f.
+
+MILESTONE: DEEPDIVE track complete for all 20 Social Science chapters (cycles
+41–60). Every chapter now carries 4 deepDive StretchTopics and 4–5 cross-chapter
+refs linking the geography/history/civics/economics strands. Pack steady at 293
+concepts / 371 topic-Qs; article bundle unchanged at 887. Three deepening tracks
+(Olympiad, Glossary-etymology, DeepDive) now complete subject-wide. Next pass:
+INTERACTIVE widgets behind the existing gate.
