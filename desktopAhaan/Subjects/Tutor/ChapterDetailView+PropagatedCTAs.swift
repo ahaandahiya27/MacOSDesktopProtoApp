@@ -74,6 +74,16 @@ func socialScienceInteractives(
             if let tl = chapter.timelinesList.first, tl.steps.count >= 2 {
                 SSChronologyChallenge(timeline: tl)
             }
+        } else {
+            // Default for the remaining (Civics / Economics / Society /
+            // Geography) chapters: a "match the key words" game over the
+            // chapter's own authored glossary. Every SS chapter ships ≥10
+            // glossary terms, so this guarantees every chapter has ≥1 bespoke,
+            // faithful interactive. Auto-hides only if a chapter somehow lacks
+            // a glossary.
+            if chapter.glossaryList.count >= 2 {
+                SSGlossaryMatchChallenge(title: chapter.title, glossary: chapter.glossaryList)
+            }
         }
     }
 }

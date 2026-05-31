@@ -65,6 +65,22 @@ final class SocialScienceInteractiveGateTests: XCTestCase {
         }
     }
 
+    /// Coverage: EVERY Social Science chapter must resolve to a renderable
+    /// interactive — it is ssch01 (relief), ssch11 (barter), a chronology
+    /// chapter with a usable timeline, OR a chapter with a usable glossary
+    /// (the default match challenge). No chapter may fall through to nothing.
+    func testEveryChapterResolvesToAnInteractive() throws {
+        let pack = try loadPack("socialscience_class7")
+        for ch in pack.chapters {
+            let bespoke = ch.id == "ssch01" || ch.id == "ssch11"
+            let chronology = socialScienceChronologyChapterIds.contains(ch.id)
+                && (ch.timelinesList.first?.steps.count ?? 0) >= 2
+            let glossary = ch.glossaryList.count >= 2
+            XCTAssertTrue(bespoke || chronology || glossary,
+                "\(ch.id) has no renderable interactive (no bespoke widget, no usable timeline, no glossary).")
+        }
+    }
+
     // MARK: - Helpers
 
     private func loadPack(_ resource: String) throws -> SubjectPack {
