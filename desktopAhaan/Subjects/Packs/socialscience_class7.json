@@ -6423,6 +6423,24 @@
             "ssch03_t05_c02",
             "ssch03_t05_c03"
           ]
+        },
+        {
+          "id": "ssch03_rw04",
+          "title": "The loo: north India's furnace wind",
+          "body": "On May afternoons the plains of north India are swept by the loo — a hot, dry, dusty wind that can push temperatures past 45°C. It is dangerous enough that people rest indoors at midday and drink cooling drinks like aam panna. But the loo also does something useful: the fierce summer heating it brings helps create the low-pressure zone over the land that, weeks later, pulls in the moist sea winds of the southwest monsoon. The same wind that scorches the plains helps set the stage for the rains.",
+          "relatedConceptIds": [
+            "ssch03_t02_c04",
+            "ssch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch03_rw05",
+          "title": "An El Niño year and a nervous farmer",
+          "body": "Every few years the surface of the Pacific Ocean warms in a pattern called El Niño — Spanish for 'the little boy'. Thousands of kilometres away, this can weaken India's southwest monsoon, so the rains arrive late or fall short. For a farmer who has timed sowing to the monsoon, an El Niño forecast is worrying news: less rain can mean a smaller harvest. It shows how India's climate is tied to events in an ocean on the other side of the world.",
+          "relatedConceptIds": [
+            "ssch03_t03_c01",
+            "ssch03_t04_c01"
+          ]
         }
       ],
       "mnemonics": [
@@ -6472,6 +6490,23 @@
           "actually": "The eye is actually the calm, cloudless centre of the storm. The fiercest winds are in the ring of cloud around the eye, which is why it is risky to go outside when the calm eye passes overhead.",
           "relatedConceptIds": [
             "ssch03_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch03_ms04",
+          "kidsThink": "The monsoon is simply India's season of rain.",
+          "actually": "The word 'monsoon' (from Arabic mausim, 'season') really names the WINDS that reverse direction with the seasons — blowing from sea to land in summer and from land to sea in winter. The famous rains are the RESULT of those moisture-carrying summer winds, not the monsoon itself.",
+          "relatedConceptIds": [
+            "ssch03_t03_c01",
+            "ssch03_t03_c02"
+          ]
+        },
+        {
+          "id": "ssch03_ms05",
+          "kidsThink": "Rain falls about equally on both sides of a mountain range.",
+          "actually": "Not at all. Moist winds are forced up the windward side, cool, and dump heavy rain there; by the time the air crosses to the leeward side it is dry, leaving a 'rain shadow'. That is why the western Western Ghats are drenched while the Deccan interior behind them is dry.",
+          "relatedConceptIds": [
+            "ssch03_t03_c03"
           ]
         }
       ],
@@ -6635,6 +6670,86 @@
           "hindiTerm": "लचीलापन / प्रत्यास्थता",
           "relatedConceptIds": [
             "ssch03_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl13",
+          "term": "Equator",
+          "definition": "From Latin aequator ('equaliser') — the imaginary line that divides the Earth into equal northern and southern halves; places near it receive the most direct sunlight all year.",
+          "example": "Lands near the Equator are hot because the Sun's rays strike them almost straight down.",
+          "hindiTerm": "भूमध्य रेखा",
+          "relatedConceptIds": [
+            "ssch03_t02_c01"
+          ]
+        },
+        {
+          "id": "ssch03_gl14",
+          "term": "Maritime climate",
+          "definition": "From Latin mare ('sea') — the mild, even climate of places near the sea, which warms and cools slowly.",
+          "example": "Mumbai's maritime climate keeps it pleasant all year, never very hot or very cold.",
+          "hindiTerm": "समुद्री जलवायु",
+          "relatedConceptIds": [
+            "ssch03_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl15",
+          "term": "Continental climate",
+          "definition": "From Latin continentem ('continuous land') — the climate of inland places far from the sea, with very hot summers and very cold winters.",
+          "example": "Nagpur, far inland, has a continental climate and bakes in summer.",
+          "hindiTerm": "महाद्वीपीय जलवायु",
+          "relatedConceptIds": [
+            "ssch03_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl16",
+          "term": "Windward",
+          "definition": "The side of a hill or mountain that faces the wind, where moist air is forced up, cools and drops heavy rain.",
+          "example": "The windward, western slopes of the Western Ghats are drenched by the monsoon.",
+          "hindiTerm": "पवनाभिमुख",
+          "relatedConceptIds": [
+            "ssch03_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl17",
+          "term": "Leeward",
+          "definition": "The sheltered side of a mountain, away from the wind; from Old English hleo ('shelter'). The air arriving here has already lost its moisture.",
+          "example": "The leeward, eastern side of the Western Ghats is much drier.",
+          "hindiTerm": "पवनविमुख",
+          "relatedConceptIds": [
+            "ssch03_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl18",
+          "term": "Rain shadow",
+          "definition": "The dry region on the leeward side of a mountain, left in the 'shadow' of the rain that fell on the windward side.",
+          "example": "The interior Deccan lies in the rain shadow of the Western Ghats.",
+          "hindiTerm": "वृष्टि छाया",
+          "relatedConceptIds": [
+            "ssch03_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch03_gl19",
+          "term": "Loo",
+          "definition": "The hot, dry, dusty wind that blows across the plains of north India on summer afternoons (Hindi लू).",
+          "example": "People stay indoors at midday in May to avoid the scorching loo.",
+          "hindiTerm": "लू",
+          "relatedConceptIds": [
+            "ssch03_t02_c04"
+          ]
+        },
+        {
+          "id": "ssch03_gl20",
+          "term": "El Niño",
+          "definition": "Spanish for 'the (Christ) child' — a periodic warming of the Pacific Ocean that can weaken India's monsoon and cause poor rains.",
+          "example": "In an El Niño year, India's farmers worry the monsoon may be weak.",
+          "hindiTerm": "एल नीन्यो",
+          "relatedConceptIds": [
+            "ssch03_t03_c01"
           ]
         }
       ],
