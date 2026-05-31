@@ -47380,6 +47380,24 @@
           "body": "The Indian Railways teach a deep lesson about how the same infrastructure can mean very different things depending on who controls it and why. The British built the railways from 1853 not to help Indians but to serve their empire: to drain India's raw materials to British ports, to flood India with British goods, and to rush troops to crush resistance. The very same tracks, after independence in 1947, became something almost opposite - a national lifeline binding a diverse country together, carrying ordinary people cheaply and moving the goods of a free economy. This shows that infrastructure is never just neutral concrete and steel; its purpose is set by the society that owns it. The lesson matters today too: when we build new roads, ports or digital networks, we should ask not only 'what does it do?' but 'whom does it serve?' Good infrastructure in a democracy should serve all its people - which is exactly why the chapter stresses inclusion, sustainability and collective responsibility.",
           "prerequisite": "ssch19_t02_c02",
           "nextStepHint": "Read how India expanded and 'Indianised' the railways after 1947 to serve its own people."
+        },
+        {
+          "id": "ssch19_dv03",
+          "title": "Why the second phone is worth more than the first",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch19_t03_c03",
+          "body": "Infrastructure has a special magic that ordinary goods do not: its value grows as more people join it. The very first telephone in the world was almost useless — there was no one to call. The millionth telephone was priceless, because it could reach a million others. Economists call this a 'network effect': each new road, railway line, port or mobile connection makes the whole network more valuable to everyone already on it, not just to the new user. This explains why building infrastructure is so powerful for development — a new highway does not just help one village, it links that village to every market, hospital and school the highway already touches. It also explains why infrastructure is usually planned by the government or as a shared project: no single person would pay to build a road that is only worth a lot once everyone uses it. The network, not the individual link, is the real asset.",
+          "prerequisite": "Knowing that roads, railways and communications form connected networks.",
+          "nextStepHint": "Explain why a mobile-phone network becomes more useful as more people in your area get phones."
+        },
+        {
+          "id": "ssch19_dv04",
+          "title": "The state as builder, two thousand years ago",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch19_t04_c03",
+          "body": "Treating infrastructure as a duty of the state is not a modern idea — the chapter's link to the Arthashastra shows how old it is. Kautilya's manual, written for the Mauryan state over two thousand years ago, instructed the king to build and maintain roads with measured widths for carts, troops and pedestrians; to plant shade trees and dig wells and rest-houses (called dharmashalas) along them for travellers; and above all to build and repair irrigation works, because a prosperous, tax-paying kingdom depended on watered fields. We even have proof it was done: an inscription at Junagadh records the great Sudarshana lake, a dam first built in Mauryan times and repaired by later rulers for centuries. So the principle the chapter teaches — that the state must provide the shared structures on which everyone's prosperity rests — is one India's thinkers had already worked out in antiquity. The technology changes from stone dams to fibre-optic cable, but the responsibility is the same.",
+          "prerequisite": "Knowing the Arthashastra discussed roads, rest-houses and irrigation.",
+          "nextStepHint": "Name one piece of infrastructure the Arthashastra told the king to build and its modern equivalent."
         }
       ],
       "crossChapterRefs": [
@@ -47409,6 +47427,24 @@
           "relatedConceptIds": [
             "ssch19_t02_c01",
             "ssch19_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch19_cc04",
+          "toChapterId": "ssch12",
+          "topic": "The roads that markets run on",
+          "pointer": "The highways, railways, ports and telecom built here are exactly what let the goods and online trade of the markets chapter move from seller to buyer.",
+          "relatedConceptIds": [
+            "ssch19_t01_c02"
+          ]
+        },
+        {
+          "id": "ssch19_cc05",
+          "toChapterId": "ssch11",
+          "topic": "The wires behind digital money",
+          "pointer": "The communications networks studied here are what carry the UPI and QR-code payments of the money chapter — digital money needs digital infrastructure.",
+          "relatedConceptIds": [
+            "ssch19_t03_c03"
           ]
         }
       ],
