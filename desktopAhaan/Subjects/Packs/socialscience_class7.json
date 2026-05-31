@@ -14568,6 +14568,38 @@
                 148
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_t01_q04",
+              "prompt": "The Iron Pillar of Delhi is about 1,600 years old, weighs 6 tonnes, and has still not rusted. Beyond proving that Gupta metalworkers were skilled, what does the very EXISTENCE of such a pillar tell us about Gupta SOCIETY as a whole?",
+              "questionType": "longAnswer",
+              "answer": "It tells us the Guptas had far more than clever metalworkers — they had a wealthy, well-organised society capable of a major project. To make a single 6-tonne iron pillar, someone had to mine and transport huge quantities of ore, build furnaces hot enough to work that much iron, employ and feed many skilled labourers, and then move and raise the finished pillar — all of which needs surplus wealth, organised administration and engineering know-how. The fact that it has resisted rust for 1,600 years also shows deliberate, advanced technique, not luck. So the pillar is evidence of an empire with the resources, skilled workforce and confidence to undertake — and pay for — ambitious public works, which fits the wider picture of the prosperous Gupta 'classical age'.",
+              "solutionSteps": [
+                "Note the question asks about SOCIETY, not just the metalworkers.",
+                "List what a 6-tonne pillar requires: mining, transport, fuel, skilled labour, organisation, wealth.",
+                "Note the rust-resistance shows deliberate advanced technique.",
+                "Conclude it is evidence of a rich, organised, confident empire."
+              ],
+              "commonMistakes": [
+                "Stopping at 'the metalworkers were skilled' without inferring anything about society.",
+                "Treating the rust-resistance as an accident rather than skilled technique."
+              ],
+              "variations": [
+                {
+                  "prompt": "During whose reign was the Iron Pillar raised?",
+                  "answer": "During the reign of Chandragupta II.",
+                  "solutionSteps": [
+                    "Recall the ruler linked to the Iron Pillar.",
+                    "Name Chandragupta II."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                146,
+                147
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -14843,6 +14875,39 @@
               "pageRefs": [
                 154,
                 155
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_t02_q04",
+              "prompt": "The Guptas grew powerful in TWO very different ways: by WAR (Samudragupta fought many campaigns to 'unify the Earth') and by DIPLOMACY and MARRIAGE (Chandragupta I's marriage to the Lichchhavi princess Kumaradevi; Prabhavati Gupta becoming regent among the Vakatakas). Compare the two strategies, and explain why a wise empire used BOTH rather than relying on war alone.",
+              "questionType": "longAnswer",
+              "answer": "War and marriage-diplomacy did different jobs. WAR, like Samudragupta's campaigns, could quickly conquer territory and announce the empire's strength — but it was costly, made enemies, and conquered peoples might rebel once the army left. MARRIAGE ALLIANCES worked the opposite way: Chandragupta I's marriage to the Lichchhavi princess won him prestige and a powerful ally without a battle, and sending Prabhavati Gupta to rule as regent among the Vakatakas kept a neighbouring kingdom firmly on the Guptas' side for years. Diplomacy was cheaper, created loyal friends rather than resentful subjects, and secured borders peacefully. A wise empire used BOTH because war alone wins land but breeds enemies, while alliances alone cannot stop a determined foe — together they let the Guptas expand AND hold what they gained.",
+              "solutionSteps": [
+                "Describe the WAR strategy (Samudragupta) — fast conquest and prestige, but costly and resented.",
+                "Describe the DIPLOMACY/MARRIAGE strategy (Kumaradevi alliance, Prabhavati as regent) — cheap, builds loyal allies, secures borders.",
+                "Contrast their strengths and weaknesses.",
+                "Conclude both were needed: war to expand, alliances to hold and secure."
+              ],
+              "commonMistakes": [
+                "Treating war as the only way the Guptas grew — marriage alliances were just as important.",
+                "Not explaining WHY both were needed together."
+              ],
+              "variations": [
+                {
+                  "prompt": "How did Chandragupta I's marriage help found Gupta power?",
+                  "answer": "His marriage to the Lichchhavi princess Kumaradevi brought prestige and a powerful allied family, strengthening the new Gupta dynasty without a war.",
+                  "solutionSteps": [
+                    "Recall the Lichchhavi marriage.",
+                    "Explain it gave prestige and a strong ally."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                150,
+                151,
+                154
               ],
               "needsHumanReview": false
             }
@@ -15134,6 +15199,38 @@
                 154
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_t03_q04",
+              "prompt": "Rather than ruling everything directly, the Guptas divided the empire into provinces and GRANTED LAND to local rulers, priests and chieftains, recording the grants on copper plates. (a) Why might a vast empire choose to govern this way instead of paying salaried officials everywhere? (b) What long-term RISK did this create — and how could it later help an empire decline?",
+              "questionType": "longAnswer",
+              "answer": "(a) For a vast empire, ruling every corner directly from the capital is slow and expensive — orders and tax collectors travel poorly across great distances. Granting land to trusted local rulers and priests was cheaper (the grantee lived off the land instead of a salary), rewarded loyalty, and put governing into the hands of people who already knew the area and its people. So the empire ran widely without a huge, costly central staff. (b) The risk is that those local landholders grow rich and powerful in their own regions. Over generations they can build their own armies and act almost independently, paying less heed to the distant emperor. When the centre weakens — as the Guptas did under Huna invasions — such powerful regional lords can simply break away, turning a single empire into many kingdoms. So the very system that helped the Guptas govern cheaply also planted the seeds of later fragmentation.",
+              "solutionSteps": [
+                "Part (a): direct rule over vast distances is slow and costly; land grants are cheap, reward loyalty, and use local knowledge.",
+                "Note grantees live off the land instead of a salary, so the centre needs less staff.",
+                "Part (b): grantees grow powerful and semi-independent over time.",
+                "Link to decline: when the centre weakens, powerful regional lords break away → fragmentation."
+              ],
+              "commonMistakes": [
+                "Only giving the benefit (cheap rule) and missing the long-term risk of breakaway regions.",
+                "Forgetting that the copper-plate land grants are also valuable EVIDENCE historians use today."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are the Gupta copper-plate land grants useful to historians?",
+                  "answer": "Because they are dated, first-hand official records carved in metal that survive to this day, telling us who held land, what rights they were given, and how the empire was administered.",
+                  "solutionSteps": [
+                    "Recall grants were recorded on durable copper plates.",
+                    "They are first-hand, datable records of land and administration."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                152,
+                153
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -15412,6 +15509,38 @@
               "pageRefs": [
                 159,
                 160
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_t04_q04",
+              "prompt": "Around 500 CE, Aryabhata proposed that the Earth SPINS on its axis (which is why we get day and night) and calculated the length of the year accurate to within minutes. Why are these achievements so remarkable for their time, and what do they tell us about how Gupta-age science worked?",
+              "questionType": "longAnswer",
+              "answer": "They are remarkable because Aryabhata reached conclusions that go AGAINST what our eyes seem to tell us. To anyone watching, it looks as if the Sun and stars move across a still Earth — yet Aryabhata argued the opposite, that the Earth itself turns. Getting the year's length right to within minutes, without any modern telescopes or clocks, also took extraordinary care. This tells us Gupta-age science was not just storytelling: it relied on careful, repeated OBSERVATION of the sky and on MATHEMATICS to test ideas, trusting reasoning and measurement over appearances. The long peace and royal patronage of the Gupta 'classical age' gave scholars like Aryabhata the time and support to do this disciplined work.",
+              "solutionSteps": [
+                "Note these ideas contradict everyday appearances (the sky seems to move, not the Earth).",
+                "Note the precision (year length to within minutes) achieved without modern instruments.",
+                "Infer the method: careful observation + mathematics, trusting evidence over appearances.",
+                "Link to the conditions: Gupta peace and patronage enabled such scholarship."
+              ],
+              "commonMistakes": [
+                "Just restating WHAT Aryabhata said without explaining why it was hard or what method it shows.",
+                "Assuming he had modern tools — his results came from observation and mathematics."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the name of Aryabhata's famous work?",
+                  "answer": "The Aryabhatiya.",
+                  "solutionSteps": [
+                    "Recall Aryabhata's text.",
+                    "Name the Aryabhatiya."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                158,
+                159
               ],
               "needsHumanReview": false
             }
@@ -16502,6 +16631,87 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch07_q10",
+          "prompt": "When the Guptas granted land to local rulers and priests, they recorded the grant on —",
+          "questionType": "mcq",
+          "options": [
+            "Paper scrolls",
+            "Copper plates",
+            "Cotton cloth",
+            "Palm-leaf books"
+          ],
+          "answer": "Copper plates",
+          "solutionSteps": [
+            "The Guptas divided the empire and granted land to locals.",
+            "These grants were engraved on copper plates.",
+            "Copper plates survive as evidence today."
+          ],
+          "commonMistakes": [
+            "Choosing perishable materials — copper plates lasted, which is why we still have them."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            152
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch07_q11",
+          "prompt": "The most celebrated poet of classical Sanskrit literature, author of the Meghadutam, was —",
+          "questionType": "mcq",
+          "options": [
+            "Aryabhata",
+            "Varahamihira",
+            "Kalidasa",
+            "Harisena"
+          ],
+          "answer": "Kalidasa",
+          "solutionSteps": [
+            "Recall the great Sanskrit poet of the Gupta age.",
+            "Kalidasa wrote the Meghadutam.",
+            "Aryabhata and Varahamihira were scientists; Harisena a court poet of inscriptions."
+          ],
+          "commonMistakes": [
+            "Confusing the poet Kalidasa with the scientists Aryabhata or Varahamihira."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            159
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch07_q12",
+          "prompt": "The Gupta economy rested on land tax AND on —",
+          "questionType": "mcq",
+          "options": [
+            "Conquering new continents",
+            "A vibrant long-distance trade across the Indian Ocean",
+            "Gold mined from the Himalayas",
+            "Tribute from the Roman emperor"
+          ],
+          "answer": "A vibrant long-distance trade across the Indian Ocean",
+          "solutionSteps": [
+            "Recall the two pillars of the Gupta economy.",
+            "One was land tax; the other was thriving trade.",
+            "That trade linked India to the Mediterranean, Southeast Asia and China by sea."
+          ],
+          "commonMistakes": [
+            "Forgetting trade — assuming the economy was based only on farming/tax."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            153
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -16582,6 +16792,60 @@
           "pageRefs": [
             156,
             157
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch07_q03",
+          "prompt": "The Kamarupa kingdom of the northeast, a centre of culture and learning, flourished in the valley of which river?",
+          "questionType": "mcq",
+          "options": [
+            "The Ganga",
+            "The Kaveri",
+            "The Brahmaputra",
+            "The Indus"
+          ],
+          "answer": "The Brahmaputra",
+          "solutionSteps": [
+            "Recall Kamarupa was in the northeast.",
+            "It lay in the Brahmaputra valley.",
+            "It was ruled by the Varman dynasty."
+          ],
+          "commonMistakes": [
+            "Placing Kamarupa on the Ganga or in the south."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            162
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch07_q04",
+          "prompt": "Gupta rulers took grand titles such as 'maharajadhiraja' and 'chakravartin' mainly to proclaim —",
+          "questionType": "mcq",
+          "options": [
+            "Their supreme authority over lesser kings",
+            "That they were merchants",
+            "Their skill at poetry",
+            "That they ruled only one village"
+          ],
+          "answer": "Their supreme authority over lesser kings",
+          "solutionSteps": [
+            "Recall the grand Gupta titles.",
+            "They were used to claim supreme overlordship.",
+            "So they proclaimed authority over lesser kings."
+          ],
+          "commonMistakes": [
+            "Reading the titles as job descriptions rather than claims of supreme power."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            154
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"

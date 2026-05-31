@@ -3975,3 +3975,17 @@ MCQ (diff4): matrimonial alliances, Bharhut Stupa, Kushana patronage of both art
 schools. 2 quick MCQ: Kharavela=Jain, Mathura=Indian style. Pack 311→315 topic-Qs;
 ssch06 boss 10→13, quick 3→5. (Avoided overlap with existing boss/quick on Grand
 Anicut, Sangam, Shaka Samvat, Gandhara, Silk Route.) All 7 content lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 7 (ssch07 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch07 (The Gupta Era)**: +8 PDF-faithful items.
+4 topic Qs — `t01_q04` (diff5 Iron Pillar as evidence about SOCIETY not just
+metalworkers), `t02_q04` (diff5 war vs marriage-diplomacy compare), `t03_q04`
+(diff5 land-grant governance: cheap rule now, breakaway risk later → decline),
+`t04_q04` (diff4 why Aryabhata's spinning-Earth + year-length are remarkable +
+what they show about scientific method). 3 boss MCQ (diff4): copper plates,
+Kalidasa, land-tax+trade economy. 2 quick MCQ: Kamarupa/Brahmaputra, grand titles.
+Pack 315→319 topic-Qs; ssch07 boss 10→13, quick 3→5. (Pivoted away from Faxian
+source-crit and Ayurveda-texts which the chapter already covered.) All 7 lints green.
