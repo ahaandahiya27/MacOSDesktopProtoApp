@@ -4398,3 +4398,16 @@ rather than weakened India) + 2 realWorldExamples (the 'sugar in milk' Parsi-
 arrival legend at Sanjan; copper-plate grants welcoming Kerala's Jewish & Syriac
 Christian communities). ssch17 glossary 11→17. All lints + Release build + suite
 green. Pushed 13783a3. GL: ssch01–17 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 38 (ssch18 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch18 (The State, the Government, and You). +6 glossary
+terms with etymology: Legislature (Lat lex+latio), Executive (exsequi), Judiciary
+(judex, jus+dicere), Federalism (foedus 'treaty'), Regulator (regula), Territory
+(terra). +2 misconceptions (police/army are state machinery the govt directs, not
+the govt itself; the executive = political ministers + permanent bureaucracy) + 2
+realWorldExamples (the RTI Act passing through legislature→executive→judiciary; how
+road/school/currency come from three tiers of government). ssch18 glossary 11→17.
+All lints + Release build + suite green. Pushed 0389367. GL: ssch01–18 done.
