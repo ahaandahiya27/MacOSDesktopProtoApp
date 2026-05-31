@@ -65,6 +65,15 @@ func socialScienceInteractives(
     if socialScienceInteractivesAreEnabled(forPackId: pack.id) {
         if chapter.id == "ssch01" {
             IndiaPhysiographicExplorer(chapterId: chapter.id)
+        } else if chapter.id == "ssch05" {
+            // "Put history in order" challenge over the chapter's authored
+            // timeline (rise of the Maurya empire). Auto-hides if no timeline
+            // with ≥2 steps is present.
+            if let tl = chapter.timelinesList.first, tl.steps.count >= 2 {
+                SSChronologyChallenge(timeline: tl)
+            }
+        } else if chapter.id == "ssch11" {
+            BarterToMoneySim(chapterId: chapter.id)
         }
     }
 }

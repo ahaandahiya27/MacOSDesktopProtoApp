@@ -386,7 +386,9 @@
 		887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */; };
 		6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */; };
 		E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */; };
+		D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */; };
 		B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */; };
+		B8481D4D2EC8C629836B8816 /* SSChronologyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8844EDE5FC49D75F8B242C /* SSChronologyChallenge.swift */; };
 		436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */; };
 		E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FB9E28D230C2430A2803 /* FoundationTutor.swift */; };
 		0C4B6823D6BE7EF4C0BD4DF6 /* BackupExportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A725E2F43DF35D5F155651 /* BackupExportButton.swift */; };
@@ -2869,7 +2871,9 @@
 		953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheDigestiveTour.swift"; sourceTree = "<group>"; };
 		E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAWaterCycleSandbox.swift"; sourceTree = "<group>"; };
 		0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheXylemAscentTour.swift"; sourceTree = "<group>"; };
+		DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarterToMoneySim.swift"; sourceTree = "<group>"; };
 		ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndiaPhysiographicExplorer.swift"; sourceTree = "<group>"; };
+		9F8844EDE5FC49D75F8B242C /* SSChronologyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSChronologyChallenge.swift"; sourceTree = "<group>"; };
 		819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheAlveolusTour.swift"; sourceTree = "<group>"; };
 		9944FB9E28D230C2430A2803 /* FoundationTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoundationTutor.swift"; sourceTree = "<group>"; };
 		77A725E2F43DF35D5F155651 /* BackupExportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupExportButton.swift"; sourceTree = "<group>"; };
@@ -5607,7 +5611,9 @@
 		127547F4B449A6930767EEBA /* SocialScience */ = {
 			isa = PBXGroup;
 			children = (
+				DE3102AF00CBD384EA4FA011,
 				ED6F1F2243AB387D5D3FA8EB,
+				9F8844EDE5FC49D75F8B242C,
 			);
 			path = "SocialScience";
 			sourceTree = "<group>";
@@ -7366,7 +7372,9 @@
 				887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */,
 				6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */,
 				E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */,
+				D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */,
 				B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */,
+				B8481D4D2EC8C629836B8816 /* SSChronologyChallenge.swift in Sources */,
 				436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */,
 				E951369D9AD3173C64C82938 /* FoundationTutor.swift in Sources */,
 				0C4B6823D6BE7EF4C0BD4DF6 /* BackupExportButton.swift in Sources */,
