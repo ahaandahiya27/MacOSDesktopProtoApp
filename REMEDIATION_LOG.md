@@ -4520,3 +4520,18 @@ the Gazette of India / AIR; class_9, anchor t04_c02). +2 cross-strand refs
 (→ssch07 reorganisation → Gupta Classical Age; →ssch08 stupas & the first Buddha
 image → sacred geography). ssch06 deepDive 2→4, ccRefs 2→4. All lints + Release
 build + suite green. Pushed 84fa5db.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 47 (ssch07 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch07 (The Gupta Era: An Age of Tireless Creativity). +2 deepDive:
+'Can we trust a traveller's diary?' (Faxian's account — its praise of Gupta
+prosperity/charity, and why historians cross-check a single foreign monk's
+viewpoint against coins and inscriptions; class_10, anchor t03_c04) and 'When
+kings gave away land — and power' (Gupta land grants on copper plates conferring
+tax and governance rights, the slow rise of local sāmantas under a weaker centre;
+class_11, anchor t03_c01). +2 cross-strand refs (→ssch15 Pallavas → later southern
+empires; →ssch18 Gupta administration & land grants → the state and government).
+ssch07 deepDive 2→4, ccRefs 2→4. All lints + Release build + suite green. Pushed
+8fc9ad0.
