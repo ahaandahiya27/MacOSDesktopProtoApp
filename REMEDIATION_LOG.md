@@ -4318,3 +4318,16 @@ Inflation (Lat inflare). +2 misconceptions (real money needn't be precious metal
 (the 2,000-year-old word 'rupee' from rūpya to digital rupee; the ₹100 note as a
 shared RBI-backed promise). ssch11 glossary 12→18. All lints + Release build +
 suite green. Pushed ebb7ddb. GL: ssch01–11 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 32 (ssch12 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch12 (Understanding Markets). +7 glossary terms with
+etymology: Bazaar (Persian bāzār), Haat, Commerce (Lat com-+merx, root of
+'merchant'/'e-commerce'), Negotiation (Lat negotium 'not-leisure'), Subsidy
+(subsidium), Consumer (consumere), MRP. +2 misconceptions (rising demand pushes
+price UP not down; an online shop is still a market) + 2 realWorldExamples (mango
+price swings with the season via supply/demand; the supply chain hidden in a ₹10
+biscuit packet — why middlemen add value). ssch12 glossary 10→17. All lints +
+Release build + suite green. Pushed 42556d7. GL: ssch01–12 done.
