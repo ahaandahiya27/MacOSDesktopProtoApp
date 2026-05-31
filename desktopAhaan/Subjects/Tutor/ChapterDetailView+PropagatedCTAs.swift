@@ -67,6 +67,8 @@ func socialScienceInteractives(
             IndiaPhysiographicExplorer(chapterId: chapter.id)
         } else if chapter.id == "ssch11" {
             BarterToMoneySim(chapterId: chapter.id)
+        } else if chapter.id == "ssch10" {
+            PreambleExplorer(chapterId: chapter.id)
         } else if socialScienceChronologyChapterIds.contains(chapter.id) {
             // History chapters whose first authored timeline is genuinely
             // chronological — a "put history in order" challenge. Auto-hides if
