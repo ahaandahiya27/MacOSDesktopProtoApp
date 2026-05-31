@@ -4208,3 +4208,17 @@ Rain shadow, Loo (Hindi लू), El Niño (Spanish 'the child'). +2 misconceptio
 across a range → rain shadow) + 2 realWorldExamples (the loo & monsoon onset;
 an El Niño year & a nervous farmer). ssch03 glossary 12→20. All lints + Release
 build + suite green via pre-push gate. Pushed 3d23173.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 24 (ssch04 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch04 (New Beginnings: Cities and States). +7 glossary
+terms with etymology: Archaeology (Gk archaios+logos), Metallurgy (metallon+ergon),
+Monarchy (monos+arkhein), Republic (Lat res publica), Rajaa (Skt rājan ~ Lat rex,
+Eng regal/royal), Fortification (fortis+facere), Guild. +2 misconceptions
+(gana-sangha republics = oligarchy of family-heads, not full democracy; coins
+invented to ease trade, not to make people rich) + 2 realWorldExamples (moat+wall
+served defence AND tax collection; iron plough surplus enabled the Second
+Urbanisation). ssch04 glossary 10→17. All lints + Release build + suite green via
+pre-push gate. Pushed e547b76.
