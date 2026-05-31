@@ -4624,3 +4624,17 @@ being revived; class_10, anchor t03_c03). +2 cross-strand refs (→ssch12 the
 harvest reaching mandis & markets with MSP support; →ssch20 farm credit, banks
 and loans for seeds and equipment). ssch13 deepDive 2→4, ccRefs 2→4. All lints +
 Release build + suite green. Pushed 7ed7ddd.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 54 (ssch14 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch14 (India and Her Neighbours). +2 deepDive: 'Why neighbours have
+to cooperate' (geography forces it — shared Ganga/Brahmaputra/Indus rivers, one
+monsoon, the Bay of Bengal cyclones and cheap next-door trade behind SAARC and
+BIMSTEC; class_10, anchor t05_c04) and 'Three vehicles, three Buddhist worlds'
+(Theravada to Sri Lanka/SE Asia, Mahayana to China/Japan, Vajrayana to Tibet/
+Bhutan — one Indian root, half a continent shaped; class_10, anchor t04_c03). +2
+cross-strand refs (→ssch12 ancient trade routes → international markets; →ssch16
+the Chola naval expeditions to Srivijaya). ssch14 deepDive 2→4, ccRefs 3→5. All
+lints + Release build + suite green. Pushed 644400a.
