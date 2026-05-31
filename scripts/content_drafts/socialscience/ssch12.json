@@ -1245,7 +1245,9 @@
         "ssch12_t01_c01",
         "ssch12_t01_c02"
       ]
-    }
+    },
+    {"id": "ssch12_rw04", "title": "Why a mango is cheap in May and dear in December", "body": "In May, mango trees are heavy with fruit, so markets overflow and prices drop — there is far more supply than buyers. By December the season is over; only a few costly imported or cold-stored mangoes remain, so the same fruit sells for many times the price. Nobody 'decides' this; the price simply follows supply meeting demand. Because mangoes are perishable, the swing is sharp — a tasty, everyday lesson in how markets set prices.", "relatedConceptIds": ["ssch12_t02_c02", "ssch12_t01_c03"]},
+    {"id": "ssch12_rw05", "title": "The hidden journey inside a ₹10 packet of biscuits", "body": "A biscuit packet on a village shelf has already travelled a supply chain: the factory bakes thousands of packets, a distributor carries them across the state, a wholesaler stores them in bulk, and the local retailer breaks the bulk into single packets you can afford. Each link adds a small cost but also a real service — transport, storage, reaching your street. That is why the 'middlemen' are not useless: they are the reason a factory-made biscuit can reach a tiny shop far away for just ₹10.", "relatedConceptIds": ["ssch12_t04_c03", "ssch12_t04_c01"]}
   ],
   "mnemonics": [
     {
@@ -1295,7 +1297,9 @@
         "ssch12_t04_c01",
         "ssch12_t04_c02"
       ]
-    }
+    },
+    {"id": "ssch12_ms04", "kidsThink": "When more people want something, its price falls.", "actually": "It is usually the opposite. When many buyers chase a limited supply, the price tends to RISE; when few want it or supply is plentiful, the price tends to fall. Demand pushes price up, supply pushes it down, and the 'just right' price is where they meet.", "relatedConceptIds": ["ssch12_t02_c02", "ssch12_t02_c01"]},
+    {"id": "ssch12_ms05", "kidsThink": "If there is no physical shop, there is no real market.", "actually": "A market is wherever buyers and sellers come together at a price — it does not need a building. An online store with buyers, sellers and prices is just as much a market as a village haat or a city mall; only the meeting place has changed.", "relatedConceptIds": ["ssch12_t03_c01", "ssch12_t01_c01"]}
   ],
   "ncertQA": [
     {
@@ -1442,7 +1446,14 @@
       "relatedConceptIds": [
         "ssch12_t05_c02"
       ]
-    }
+    },
+    {"id": "ssch12_gl11", "term": "Bazaar", "definition": "A permanent market of many shops along streets or in an enclosure; from Persian bāzār ('market').", "example": "The Hampi Bazaar once bustled with traders from many lands.", "hindiTerm": "बाज़ार", "relatedConceptIds": ["ssch12_t01_c01", "ssch12_t03_c01"]},
+    {"id": "ssch12_gl12", "term": "Haat", "definition": "A periodic rural market that gathers on fixed days of the week rather than every day.", "example": "Villagers sell vegetables and crafts at the weekly haat.", "hindiTerm": "हाट / पैंठ", "relatedConceptIds": ["ssch12_t01_c01"]},
+    {"id": "ssch12_gl13", "term": "Commerce", "definition": "The buying and selling of goods and services on a large scale; from Latin com- ('together') + merx ('goods') — the root also of 'merchant' and 'e-commerce'.", "example": "E-commerce is simply commerce carried on over the internet.", "hindiTerm": "वाणिज्य", "relatedConceptIds": ["ssch12_t03_c01", "ssch12_t05_c01"]},
+    {"id": "ssch12_gl14", "term": "Negotiation", "definition": "Bargaining between a buyer and a seller until both agree on a price; from Latin negotium ('business' — literally neg-otium, 'not-leisure').", "example": "After some negotiation, the buyer and shopkeeper settled on a 'just right' price.", "hindiTerm": "मोल-भाव / वार्ता", "relatedConceptIds": ["ssch12_t02_c01"]},
+    {"id": "ssch12_gl15", "term": "Subsidy", "definition": "Money the government gives to lower a price or support producers; from Latin subsidium ('help, support').", "example": "A subsidy on cooking gas lowers the price families pay.", "hindiTerm": "अनुदान / सब्सिडी", "relatedConceptIds": ["ssch12_t05_c02"]},
+    {"id": "ssch12_gl16", "term": "Consumer", "definition": "The person who finally buys and uses a good or service; from Latin consumere ('to use up').", "example": "A consumer checks quality and price before buying.", "hindiTerm": "उपभोक्ता", "relatedConceptIds": ["ssch12_t05_c03"]},
+    {"id": "ssch12_gl17", "term": "MRP (Maximum Retail Price)", "definition": "The highest price, printed on a pack, at which a product may be sold to a consumer in India, taxes included.", "example": "A shop may sell below the MRP but never above it.", "hindiTerm": "अधिकतम खुदरा मूल्य", "relatedConceptIds": ["ssch12_t05_c03"]}
   ],
   "miniProjects": [
     {
