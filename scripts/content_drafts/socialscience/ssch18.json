@@ -256,6 +256,28 @@
             147
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch18_t01_q04",
+          "prompt": "Governments in India change every few years through elections, yet the STATE of India carries on without a break. Explain why the STATE is permanent while a GOVERNMENT is temporary, using the four parts of a state.",
+          "questionType": "longAnswer",
+          "answer": "A state is made of four lasting parts: its PEOPLE (population), its TERRITORY (land), its GOVERNMENT, and its SOVEREIGNTY (the supreme power to rule itself). Of these, only the government is the team of people currently in charge — and that team is meant to change: at each election the citizens may choose new leaders. But the other three parts do not vanish when the rulers change: the people are still there, the territory is the same, and India remains a sovereign nation throughout. So a 'government' is just the temporary set of rulers running the state for now, while the 'state' is the whole enduring nation that continues across many governments. That is exactly why a new government can take over smoothly: it inherits the same state — same people, land and sovereignty — and only the people holding office have changed.",
+          "solutionSteps": [
+            "List the four parts of a state: population, territory, government, sovereignty.",
+            "Note the government is just the current set of rulers, meant to change at elections.",
+            "The other three parts (people, land, sovereignty) continue unchanged.",
+            "Conclude the state endures across many temporary governments."
+          ],
+          "commonMistakes": [
+            "Treating the 'government' and the 'state' as the same thing.",
+            "Thinking the country itself changes when the ruling party changes."
+          ],
+          "variations": [
+            {"prompt": "When a new party wins an election, does the STATE of India change?", "answer": "No. Only the GOVERNMENT (the set of rulers) changes; the state — its people, territory and sovereignty — stays the same.", "solutionSteps": ["Recall election changes the government, not the state.", "The state's other parts continue unchanged."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [145, 146],
+          "needsHumanReview": false
         }
       ]
     },
@@ -488,6 +510,28 @@
           "pageRefs": [
             151
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch18_t02_q04",
+          "prompt": "The ancient idea of 'matsya nyaya' (the 'law of the fish') says the big fish eats the small fish — the strong simply do what they like to the weak. Using a clear everyday example, explain how the RULE OF LAW protects ordinary people from matsya nyaya.",
+          "questionType": "longAnswer",
+          "answer": "'Matsya nyaya' describes a world with no fair authority, where whoever is stronger — richer, more powerful, better armed — can bully or rob anyone weaker, just as a big fish swallows a small one. The RULE OF LAW is the opposite: it says that there are fixed, fair laws that apply EQUALLY to everyone, and that even the most powerful person must obey them, with courts to enforce them. For example, if a powerful landlord tries to grab a poor farmer's field, under matsya nyaya the strong landlord would simply win; but under the rule of law the farmer can go to court, where the landlord — however rich — is judged by the same law, and the farmer's right to his land is protected. So the rule of law replaces 'might makes right' with 'everyone is equal before the law', which is exactly why we need a government and courts to shield ordinary people from the strong.",
+          "solutionSteps": [
+            "Explain matsya nyaya: no fair authority, so the strong do as they please to the weak.",
+            "Define the rule of law: fixed fair laws applying equally to all, even the powerful, with courts to enforce.",
+            "Give an everyday example (e.g. powerful landlord vs poor farmer) showing the contrast.",
+            "Conclude the rule of law replaces 'might makes right' with equality before the law."
+          ],
+          "commonMistakes": [
+            "Explaining matsya nyaya but not how the rule of law specifically counters it.",
+            "Forgetting that the rule of law binds even the powerful, not just ordinary people."
+          ],
+          "variations": [
+            {"prompt": "In one line, what does 'rule of law' mean?", "answer": "That everyone, including leaders and the powerful, is equally subject to the same fair laws.", "solutionSteps": ["Recall the rule of law applies equally to all.", "Even the powerful must obey it."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [151, 152],
           "needsHumanReview": false
         }
       ]
@@ -723,6 +767,28 @@
             160
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch18_t03_q04",
+          "prompt": "The legislature, the executive and the judiciary are kept SEPARATE. Explain how each organ can act as a CHECK on the others, so that no single organ becomes too powerful. Give one example of a check.",
+          "questionType": "longAnswer",
+          "answer": "Separating the three organs and letting each watch the others is what stops any one of them from turning into a tyrant. The LEGISLATURE makes the laws and controls money, so it can check the executive by questioning it, refusing its proposals, or changing the law. The EXECUTIVE carries out the laws and runs the country day to day, but it must answer to the legislature and act within the law. The JUDICIARY is the 'watchdog': through JUDICIAL REVIEW it can examine laws and government actions and strike down any that violate the Constitution — so it checks BOTH the legislature and the executive. For example, if the legislature passed a law that took away citizens' fundamental rights, the judiciary could declare that law invalid. Because power is split and each organ can restrain the others, no single organ can do whatever it likes — this is the system of checks and balances that protects citizens' freedom.",
+          "solutionSteps": [
+            "Legislature checks the executive (questions it, controls laws and money).",
+            "Executive must act within the law and answer to the legislature.",
+            "Judiciary checks both via judicial review (can strike down unconstitutional laws/actions).",
+            "Give an example (court voiding a rights-violating law); conclude this prevents any organ becoming too powerful."
+          ],
+          "commonMistakes": [
+            "Describing the three organs' jobs without explaining how they CHECK each other.",
+            "Forgetting judicial review as the judiciary's main check."
+          ],
+          "variations": [
+            {"prompt": "What is 'judicial review'?", "answer": "The power of the courts to examine laws and government actions and to strike down any that go against the Constitution.", "solutionSteps": ["Recall the judiciary's checking power.", "It can void laws/actions that violate the Constitution."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [155, 156, 157],
+          "needsHumanReview": false
         }
       ]
     },
@@ -957,6 +1023,28 @@
             161,
             162
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch18_t04_q04",
+          "prompt": "A village has had no working water supply for months, and complaints to the district office are ignored. Using the THREE TIERS of government and the ways citizens can HOLD THE GOVERNMENT ACCOUNTABLE, explain step by step what the villagers could do.",
+          "questionType": "longAnswer",
+          "answer": "First, the villagers should use the LOCAL tier of government — their gram panchayat (village council), which under decentralisation is responsible for local needs like water — and raise the problem in the gram sabha (village assembly) so it is officially on record. If the local level cannot fix it, they move up the tiers: to the STATE government (their MLA and the relevant state department) and, if needed, the UNION/central level (their MP), since elected representatives at each tier are meant to serve them. Alongside this, they can use the tools that hold government accountable: file a Right to Information (RTI) request to find out what happened to the water-scheme money and why nothing was done; petition and meet their elected representatives; use the media or public meetings to highlight the problem; and ultimately, at the next election, VOTE OUT representatives who failed them. If their rights are being denied, they could also approach the courts. So by working up the three tiers AND using accountability tools (RTI, representatives, media, the vote), ordinary villagers can press the government to act.",
+          "solutionSteps": [
+            "Start at the LOCAL tier: raise it in the gram panchayat/gram sabha (responsible for local water).",
+            "Escalate up the tiers: state government (MLA/department), then union (MP).",
+            "Use accountability tools: RTI to demand information, petitions, media, meeting representatives.",
+            "Ultimate check: vote out failing representatives; approach courts if rights are denied."
+          ],
+          "commonMistakes": [
+            "Naming only one tier or one tool instead of combining tiers + accountability methods.",
+            "Forgetting the local gram panchayat is the first and most relevant tier for water."
+          ],
+          "variations": [
+            {"prompt": "Which law lets a citizen formally ask the government for information about its work?", "answer": "The Right to Information (RTI) Act.", "solutionSteps": ["Recall the accountability tool for getting information.", "Name the RTI Act."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [159, 160, 161],
           "needsHumanReview": false
         }
       ]
@@ -1885,7 +1973,10 @@
       ],
       "needsHumanReview": false,
       "source": "boss_quiz"
-    }
+    },
+    {"id": "bossquiz_ssch18_q11", "prompt": "The principle that EVERYONE — ordinary citizens AND the most powerful leaders — is equally bound by the same law is called the —", "questionType": "mcq", "options": ["Rule of law", "Law of the fish (matsya nyaya)", "Rule of the majority", "Royal decree"], "answer": "Rule of law", "solutionSteps": ["Recall the opposite of matsya nyaya.", "The rule of law applies equally to all, even leaders.", "So the answer is the rule of law."], "commonMistakes": ["Confusing the rule of law with matsya nyaya, its opposite."], "variations": [], "difficulty": 4, "pageRefs": [151, 152], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch18_q12", "prompt": "Splitting power among the legislature, executive and judiciary so each can check the others and none becomes too powerful is called —", "questionType": "mcq", "options": ["Decentralisation", "Separation of powers", "Sovereignty", "Federalism"], "answer": "Separation of powers", "solutionSteps": ["Three organs are kept separate and check one another.", "This system is the separation of powers (with checks and balances).", "It stops any one organ from dominating."], "commonMistakes": ["Confusing separation of powers (among organs) with decentralisation (across tiers)."], "variations": [], "difficulty": 4, "pageRefs": [155], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch18_q13", "prompt": "When the government builds roads, runs schools and provides hospitals, it is acting in its role as a —", "questionType": "mcq", "options": ["Protector", "Provider", "Regulator", "Spectator"], "answer": "Provider", "solutionSteps": ["Recall the triple role: protector, provider, regulator.", "Building roads/schools/hospitals supplies services to people.", "That is the provider role."], "commonMistakes": ["Confusing provider (supplies services) with regulator (makes and enforces rules)."], "variations": [], "difficulty": 4, "pageRefs": [158], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {
@@ -1996,6 +2087,8 @@
         "The Supreme Court"
       ],
       "source": "scene_quick_check"
-    }
+    },
+    {"id": "scenecheck_ssch18_q04", "prompt": "Which organ of government is called the 'watchdog' because it guards the Constitution and citizens' rights?", "questionType": "mcq", "options": ["The legislature", "The executive", "The judiciary", "The police"], "answer": "The judiciary", "solutionSteps": ["Recall the three organs and their roles.", "The judiciary interprets laws and protects rights.", "It is called the 'watchdog'."], "commonMistakes": ["Confusing the judiciary (judges/courts) with the executive (carries out laws)."], "variations": [], "difficulty": 2, "pageRefs": [156], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch18_q05", "prompt": "Population, territory, government and sovereignty are the four essential parts of a —", "questionType": "mcq", "options": ["State", "Political party", "Court", "Market"], "answer": "State", "solutionSteps": ["Recall the four parts that make up a state.", "Population, territory, government and sovereignty.", "Together they form a state."], "commonMistakes": ["Confusing the 'state' with just the 'government' (only one of the four parts)."], "variations": [], "difficulty": 2, "pageRefs": [145], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }

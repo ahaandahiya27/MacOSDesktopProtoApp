@@ -4122,3 +4122,16 @@ Arabs/Armenians/Siddis by refuge vs opportunity), `t04_q05` (diff5 how all the
 stories illustrate Vasudhaiva Kutumbakam). 3 boss MCQ (diff4): Jews, Syriac
 Christians, refuge-seekers. 2 quick MCQ: Siddis=Africa, Armenians. Pack 355→359
 topic-Qs; ssch17 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 18 (ssch18 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch18 (The State, the Government, and You)** — already
+near-saturated with diff-4; authored application/synthesis angles. +8: 4 topic Qs —
+`t01_q04` (diff5 why the state is permanent but governments temporary), `t02_q04`
+(diff5 rule of law vs matsya nyaya with example), `t03_q04` (diff5 checks & balances
+among the three organs), `t04_q04` (diff5 accountability scenario: village water +
+three tiers + RTI/vote). 3 boss MCQ (diff4): rule of law, separation of powers,
+provider role. 2 quick MCQ: judiciary=watchdog, four parts→state. Pack 359→363
+topic-Qs; ssch18 boss 10→13, quick 3→5. All 7 lints green.
