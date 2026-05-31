@@ -3753,3 +3753,57 @@ chapters). This cycle laid the resumable infra and authored Chapter 1's content.
 
 Posture: dev-Mac lints are the proxy; final Big Sur confirmation still needs an
 iMac rebuild. Ledger (workspace root) tracks per-chapter stage state for resume.
+
+## 2026-05-31 — Social Science build cycle 2: CONTENT complete for all 20 chapters
+
+Continued the autonomous Social Science (`socialscience_class7`) build. At cycle
+start the repo had ssch01–09 CONTENT committed and ssch10–13 authored but
+uncommitted (sitting as fragment drafts). This cycle:
+
+- Validated + committed ssch10–13 CONTENT (Constitution, Barter to Money,
+  Markets, Indian Farming) — commit `2327b58`.
+- Authored ssch14–20 CONTENT from the NCERT Part-2 PDFs, faithfully covering each
+  chapter then extending to Olympiad-tier depth:
+  - ssch14 India and Her Neighbours (`50befa2`)
+  - ssch15 Empires & Kingdoms 6th–10th c. (`377ac2b`)
+  - ssch16 Turning Tides 11th–12th c. (`61e4668`)
+  - ssch17 India, a Home to Many (`f14419e`)
+  - ssch18 The State, the Government, and You (`2ea6a05`)
+  - ssch19 Infrastructure (`bb2721d`)
+  - ssch20 Banks and the Magic of Finance (`417d1a4`)
+- Pack is now **20 chapters / 293 concepts / 291 topic-questions**, the whole
+  subject browsable end-to-end. Every chapter: 4–5 topics; concepts with all 4
+  explanation depths + ≥3 useCases + beyondTheBook; topic Qs + 10 boss + 3
+  quickcheck (each with an object `variations` entry, solutionSteps,
+  commonMistakes); full enrichment arrays (realWorldExamples, mnemonics,
+  misconceptions, ncertQA, glossary, miniProjects, whatIfs, timelines,
+  conceptMap, examConnections, deepDive, crossChapterRefs).
+
+**Lint hardening (commit `50befa2`):** while landing ssch14 the pre-push
+`ci-build-test` caught two *runtime decode* hazards that the Python schema lint
+did not: an invalid `conceptMap` node `kind` ("branch"/"leaf") and an invalid
+question `source` ("ssch14"). Extended `scripts/check_pack_schema.py` to:
+  1. validate `conceptMap` node `kind` against Swift's `NodeKind`
+     (concept/crossChapter/pivot);
+  2. validate question `source` against `QuestionSource`
+     (book_end/boss_quiz/scene_quick_check);
+  3. validate chapter-level `bossQuestions` + `quickCheckQuestions` with the same
+     `check_question` rules as topic questions (previously skipped entirely —
+     the root cause both hazards slipped through). These now fail cheaply at lint
+     time instead of in the build. All 4 packs stay clean under the stricter lint.
+
+Every chapter commit passed all content lints + `verify_pack_roundtrip` +
+`ci-build-test` (Release build + Debug test suite) before push to origin/main.
+
+**Next stage (per build order):** ARTICLES for all 20 chapters — bundle HTML
+under `Resources/Articles/SocialScienceChapterN/`, create
+`Subjects/Articles/ArticleIndex+SocialScienceEntries.swift`
+(`socialScienceEntries`), merge it into `ArticleIndex.entries`, admit
+`socialscience_class7` to `ArticleIndex.packScopedKey`, regenerate the pbxproj,
+and satisfy `check_orphan_html` + `check_article_entry_bundled` (entries and
+files must land atomically). Then DISCOVER, then INTERACTIVE + ENRICHED.
+
+Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
+confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → Clean Build
+Folder ⇧⌘K → Build). See `SOCIAL_SCIENCE_BUILD_CHECKPOINT.md` (workspace root)
+and `SOCIAL_SCIENCE_BUILD_LEDGER.md` for resume state.
