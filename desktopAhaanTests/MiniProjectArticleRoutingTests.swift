@@ -7,7 +7,7 @@ import XCTest
 final class MiniProjectArticleRoutingTests: XCTestCase {
 
     func testEveryMiniProjectEntryIsInternallyConsistent() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") && !$0.hasPrefix("ssch") }
         XCTAssertFalse(keys.isEmpty)
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
@@ -40,7 +40,7 @@ final class MiniProjectArticleRoutingTests: XCTestCase {
     }
 
     func testMiniProjectHtmlFilesExistAndTitleMatchesChapter() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -64,7 +64,7 @@ final class MiniProjectArticleRoutingTests: XCTestCase {
     }
 
     func testMiniProjectArticlesHaveAtLeastOneProject() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_miniproject") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")

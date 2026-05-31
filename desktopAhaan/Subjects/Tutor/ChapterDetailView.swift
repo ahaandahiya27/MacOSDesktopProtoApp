@@ -51,9 +51,10 @@ struct ChapterDetailView: View {
 
     /// Bundle-existence-gated entry lookup. Returns nil if missing/unbundled (card auto-hides).
     private func resolvedArticleEntry(forKey key: String) -> ArticleEntry? {
-        guard ["science_class7", "maths_class7", "sanskrit_class7"].contains(pack.id) else { return nil }
+        guard ["science_class7", "maths_class7", "sanskrit_class7", "socialscience_class7"].contains(pack.id) else { return nil }
         // Maths keys are mch01_…; Science reuses ch01_…; Sanskrit's NEW NEP chapters use
-        // sch01_… (chapter id itself already namespaces the lookup, so no extra prefix needed).
+        // sch01_…; Social Science uses ssch01_… (the chapter id itself already namespaces
+        // the lookup, so no extra prefix is needed for either).
         // The Sanskrit pack ALSO contains the legacy `ch01` vocab-deck whose id collides with
         // Science's `ch01` — we deliberately return nil for that case so it can't accidentally
         // surface Science's ch01_* articles (the vocab deck ships no articles of its own).
@@ -62,6 +63,9 @@ struct ChapterDetailView: View {
         case "maths_class7":    lookup = "m" + key
         case "sanskrit_class7":
             guard key.hasPrefix("sch") else { return nil }
+            lookup = key
+        case "socialscience_class7":
+            guard key.hasPrefix("ssch") else { return nil }
             lookup = key
         default:                lookup = key   // science_class7
         }

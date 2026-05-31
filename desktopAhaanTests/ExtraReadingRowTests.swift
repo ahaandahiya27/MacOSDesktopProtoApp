@@ -79,7 +79,7 @@ final class ExtraReadingRowTests: XCTestCase {
             // Exclude Maths (mch…) AND Sanskrit (sch…) keys — this Science ratchet
             // parses chNN folders. Per-pack folder/path conventions are pinned by
             // their own routing tests (BeyondTheBookRoutingTests etc.).
-            !key.hasPrefix("mch") && !key.hasPrefix("sch")
+            !key.hasPrefix("mch") && !key.hasPrefix("sch") && !key.hasPrefix("ssch")
                 && Self.chipSuffixes.contains { key.hasSuffix($0) }
         }
         for key in chipKeys {

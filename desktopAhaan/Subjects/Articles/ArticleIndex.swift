@@ -53,6 +53,7 @@ enum ArticleIndex {
             .merging(scienceEntries4) { current, _ in current }
             .merging(mathsEntries) { current, _ in current }
             .merging(sanskritEntries) { current, _ in current }
+            .merging(socialScienceEntries) { current, _ in current }
 
 
     static func entry(forConceptId id: String) -> ArticleEntry? {

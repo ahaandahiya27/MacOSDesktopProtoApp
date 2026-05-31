@@ -3807,3 +3807,52 @@ Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
 confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → Clean Build
 Folder ⇧⌘K → Build). See `SOCIAL_SCIENCE_BUILD_CHECKPOINT.md` (workspace root)
 and `SOCIAL_SCIENCE_BUILD_LEDGER.md` for resume state.
+
+---
+
+## 2026-05-31 — Social Science ARTICLES stage complete (all 20 chapters)
+
+Drove the autonomous Class 7 Social Science build through its **ARTICLES**
+stage for all 20 chapters (CONTENT was already complete).
+
+**What landed**
+- New generator `scripts/generate_socialscience_articles.py` emits BOTH the
+  bundled HTML and the Swift article index from `socialscience_class7.json`, so
+  the D.8/D.9 article bijection (`check_article_entry_bundled` /
+  `check_orphan_html`) holds by construction. 8 chapter-level article types per
+  chapter — overview, glossary, ncert_qa, beyond (Olympiad-tier deepDive), whatif,
+  mistakes, miniproject, timeline — each rendered from an enrichment array already
+  present in the pack (no placeholder content). **160 HTML + 20 per-chapter CSS.**
+  deepDive `prerequisite`/`nextStepHint` fields that held a bare concept id are
+  resolved to the concept's title so the reader never sees `ssch15_t04_c02`.
+- New `Subjects/Articles/ArticleIndex+SocialScienceEntries.swift` (160 entries),
+  merged into `ArticleIndex.entries`.
+- Surfacing wired without leaking into other subjects:
+  `ChapterDetailView.resolvedArticleEntry` and `ExtraReadingRow.resolvedEntry`
+  admit `socialscience_class7` behind an `ssch` prefix gate; `ExtraReadingRow`
+  gained a pack-aware `socialScienceRows` (8 chips with SS-appropriate labels —
+  no awkward "Scientist Spotlight" for History/Civics/Geo/Eco).
+- Tests: added `SocialScienceArticleRoutingTests` (pack decodes; 8×20 = 160
+  article parity; cross-subject leak-gate asserting every SS key carries the
+  `ssch` namespace). Taught the legacy per-suffix routing tests the `ssch`
+  namespace — `BeyondTheBookRoutingTests` gets an explicit ssch branch
+  (folder → `SocialScienceChapterN`, title → `data-article-id` identity, which
+  the generated HTML declares); the format-coupled sweeps (Glossary, NcertQa,
+  CommonMistakes, WhatIf, MiniProject, ExtraReadingRow) exclude `ssch` since SS
+  has its own dedicated coverage. This mirrors how those tests already exclude
+  `mch`/`sch`.
+- pbxproj regenerated via `scripts/generate_compat_pbxproj.py` so the 160 HTML,
+  20 CSS, the index Swift file, and the new test all compile/bundle.
+
+**Verification:** all content + Big-Sur lints green; `test_lints` green;
+`scripts/ci-build-test.sh` → **680 tests, 0 failures, BUILD + TEST SUCCEEDED**.
+
+**Next stage (per build order):** DISCOVER — for each of the 20 chapters, 8
+learning scenes + a Boss Quiz scene 9 (`DiscoverChapterSocialScience<N>View`),
+plus `DiscoverMode.socialScienceSupportedChapterIds` + 20 dispatch cases. Then
+BOSS_SRS (`bossquiz_ssch` + `scenecheck_ssch` ephemeral prefixes), INTERACTIVE
+(≥1 gated interactive per chapter), ENRICHED, then per-chapter DONE sentinels.
+
+Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
+confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).
+The ARTICLES changes are data (HTML/CSS/JSON) plus small, lint-clean Swift edits.

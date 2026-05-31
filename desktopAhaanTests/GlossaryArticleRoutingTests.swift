@@ -13,7 +13,7 @@ import XCTest
 final class GlossaryArticleRoutingTests: XCTestCase {
 
     func testEveryGlossaryEntryIsInternallyConsistent() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") && !$0.hasPrefix("ssch") }
         XCTAssertFalse(keys.isEmpty,
             "Expected at least one Glossary entry in ArticleIndex.entries.")
         for key in keys {
@@ -47,7 +47,7 @@ final class GlossaryArticleRoutingTests: XCTestCase {
     }
 
     func testGlossaryHtmlFilesExistAndTitleMatchesChapter() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -71,7 +71,7 @@ final class GlossaryArticleRoutingTests: XCTestCase {
     /// Ch.1's bespoke article has 30 (also passes). Pinning catches
     /// hand-edits that drop terms below the floor.
     func testGlossaryArticlesHaveAtLeastFiveTerms() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_glossary") && !$0.hasPrefix("mch") && !$0.hasPrefix("sch") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")

@@ -8,7 +8,7 @@ import XCTest
 final class WhatIfArticleRoutingTests: XCTestCase {
 
     func testEveryWhatIfEntryIsInternallyConsistent() {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") && !$0.hasPrefix("ssch") }
         XCTAssertFalse(keys.isEmpty)
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
@@ -41,7 +41,7 @@ final class WhatIfArticleRoutingTests: XCTestCase {
     }
 
     func testWhatIfHtmlFilesExistAndTitleMatchesChapter() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
@@ -67,7 +67,7 @@ final class WhatIfArticleRoutingTests: XCTestCase {
     /// At least 2 scenarios per article (the generator's stop-and-ask
     /// threshold). Each scenario is a `<h2>What if N — ...</h2>` section.
     func testWhatIfArticlesHaveAtLeastTwoScenarios() throws {
-        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") }
+        let keys = ArticleIndex.entries.keys.filter { $0.hasSuffix("_whatif") && !$0.hasPrefix("ssch") }
         for key in keys {
             guard let entry = ArticleIndex.entries[key] else { continue }
             let name = entry.filename.replacingOccurrences(of: ".html", with: "")
