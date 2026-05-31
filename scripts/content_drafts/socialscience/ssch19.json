@@ -264,6 +264,28 @@
             "Diesel power",
             "Nuclear power"
           ]
+        },
+        {
+          "id": "ssch19_t01_q04",
+          "prompt": "Reliable ELECTRICITY is part of a country's energy/utilities infrastructure. Explain why almost ALL other infrastructure and services depend on a steady supply of electricity, giving at least three examples of what fails without it.",
+          "questionType": "longAnswer",
+          "answer": "Electricity is a kind of 'infrastructure for the other infrastructure' — so much depends on it that when the power fails, a chain of other things fails too. For example: (1) HOSPITALS need electricity to run operating theatres, ventilators, lights and medicine fridges — a power cut can endanger lives. (2) TRANSPORT depends on it — metros and many trains run on electric power, traffic signals need it, and even petrol pumps use electric pumps. (3) COMMUNICATIONS and computers — phone towers, the internet, banks and ATMs all stop without power. (4) WATER supply and factories often rely on electric pumps and machines. Because energy quietly powers transport, health, communication, water and industry alike, a steady electricity supply is one of the most important kinds of infrastructure: build everything else, and it still cannot work well without reliable power.",
+          "solutionSteps": [
+            "State that electricity underpins most other infrastructure and services.",
+            "Example 1: hospitals (equipment, lights, medicine fridges).",
+            "Example 2: transport (metros, signals, pumps).",
+            "Example 3: communications/computers (towers, internet, ATMs); add water/industry. Conclude it's foundational."
+          ],
+          "commonMistakes": [
+            "Treating electricity as just 'for lights' instead of the base other services run on.",
+            "Giving only one example when several systems depend on power."
+          ],
+          "variations": [
+            {"prompt": "Give one essential service that would stop working during a long power cut, and why.", "answer": "A hospital — its ventilators, operating equipment and medicine refrigerators all need electricity, so a long power cut could put patients in danger.", "solutionSteps": ["Pick a service needing power (e.g. hospital).", "Explain which functions fail without electricity."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [171, 172],
+          "needsHumanReview": false
         }
       ]
     },
@@ -496,6 +518,28 @@
           "pageRefs": [
             178
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch19_t02_q04",
+          "prompt": "For each task, say which is the BEST land-transport choice — roads, railways, or a city metro — and explain WHY: (a) moving 5,000 tonnes of coal from a mine to a distant power plant; (b) a farmer carrying vegetables to the town 10 km away; (c) millions of people commuting to work every day inside a crowded big city.",
+          "questionType": "longAnswer",
+          "answer": "(a) RAILWAYS are best for the coal: trains can haul enormous, heavy loads over long distances cheaply and using far less energy per tonne than road trucks, so bulk goods like coal go by rail. (b) ROADS are best for the farmer: roads reach right up to the village and the town market, so a small, flexible vehicle (or even a cart) can carry vegetables door-to-door — railways don't stop at every field. Roads are ideal for short, flexible, 'last-mile' journeys. (c) A city METRO is best for daily commuters: a metro moves huge numbers of people quickly through a crowded city, without adding to road traffic jams or pollution. So each mode fits a different job — rail for heavy long-distance bulk, roads for flexible short/last-mile trips, and metros for mass daily travel inside cities.",
+          "solutionSteps": [
+            "(a) Coal = heavy bulk over long distance → railways (cheap, energy-efficient for bulk).",
+            "(b) Vegetables to a nearby town → roads (flexible, reach door-to-door / last mile).",
+            "(c) Millions commuting in a city → metro (fast mass transit, less congestion/pollution).",
+            "Conclude each mode suits a different kind of journey."
+          ],
+          "commonMistakes": [
+            "Using roads for the bulk coal (far costlier and less efficient than rail).",
+            "Forgetting that roads provide the flexible 'last-mile' link railways cannot."
+          ],
+          "variations": [
+            {"prompt": "Why are railways better than road trucks for carrying very heavy goods long distances?", "answer": "A single train can carry a huge load in one go using far less energy per tonne than many trucks, making rail cheaper and more efficient for heavy, long-distance bulk goods.", "solutionSteps": ["Recall a train hauls large loads at once.", "It uses less energy per tonne than trucks.", "So rail is cheaper for bulk long-distance freight."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [174, 175, 176],
           "needsHumanReview": false
         }
       ]
@@ -732,6 +776,28 @@
             187
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch19_t03_q04",
+          "prompt": "India sends MOST of its heavy international trade by SEA (through ports), but uses AIR transport for urgent or very valuable goods. Compare sea and air transport, and explain why each is chosen for different kinds of goods.",
+          "questionType": "longAnswer",
+          "answer": "Sea and air transport have opposite strengths. SEA transport (cargo ships through ports) can carry ENORMOUS amounts — thousands of tonnes of oil, machinery, grain or containers — very CHEAPLY per tonne, but it is SLOW, taking days or weeks. So most of India's bulky, heavy or non-urgent international trade goes by sea, because cost and volume matter more than speed. AIR transport is the opposite: aircraft are FAST (hours, not weeks) but EXPENSIVE and can carry only limited weight. So air is chosen for goods that are urgent or high-value-for-their-weight — like medicines, fresh flowers, important documents, electronics or emergency supplies — where speed is worth the extra cost. In short: heavy, cheap, not-urgent → sea; light, valuable, urgent → air. Matching the cargo to the right mode keeps trade both affordable and fast where it needs to be.",
+          "solutionSteps": [
+            "Sea: huge volume, very cheap per tonne, but slow.",
+            "Air: very fast, but expensive and limited in weight.",
+            "Heavy/bulky/non-urgent goods → sea; urgent/high-value-light goods → air.",
+            "Conclude each mode is matched to the kind of cargo."
+          ],
+          "commonMistakes": [
+            "Thinking air is always 'better' — it is far costlier and limited in weight.",
+            "Forgetting that most heavy international trade goes by sea because it is cheap for bulk."
+          ],
+          "variations": [
+            {"prompt": "Why would a company ship medicines for an emergency by air rather than by sea?", "answer": "Because air transport is much faster (hours, not weeks), and for urgent, high-value goods like emergency medicines, speed is worth the higher cost.", "solutionSteps": ["Recall air is fast but costly.", "Emergency medicines are urgent and valuable.", "So speed justifies sending them by air."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [180, 181, 182],
+          "needsHumanReview": false
         }
       ]
     },
@@ -961,6 +1027,28 @@
           "pageRefs": [
             189
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch19_t04_q04",
+          "prompt": "Building roads, dams and power plants helps development but can also harm the environment. Explain what 'SUSTAINABLE infrastructure' means, why it matters, and give one example of building infrastructure in a more sustainable way.",
+          "questionType": "longAnswer",
+          "answer": "Sustainable infrastructure means building the roads, power, water and other facilities a country needs in a way that does NOT damage the environment or use up resources that future generations will need — building so that people can keep benefiting for a long time without harming the planet. It matters because infrastructure built carelessly can cut down forests, pollute air and water, and waste energy, leaving problems for the future even as it helps today. The goal is to meet present needs without spoiling things for the people who come after us. An example of building more sustainably is generating power from SOLAR energy instead of burning coal — for instance, an airport that runs on solar power produces clean electricity without the pollution and carbon emissions of fossil fuels, so it serves people now while protecting the environment for the future.",
+          "solutionSteps": [
+            "Define sustainable infrastructure: built without harming the environment or future generations' resources.",
+            "Explain why it matters: careless building pollutes and wastes resources, harming the future.",
+            "State the goal: meet present needs without spoiling things for those who come after.",
+            "Give an example: solar power instead of coal (e.g. a solar-powered airport)."
+          ],
+          "commonMistakes": [
+            "Defining 'sustainable' as just 'strong/long-lasting' and missing the environment/future aspect.",
+            "Giving no concrete example of a greener way to build."
+          ],
+          "variations": [
+            {"prompt": "Give one example of generating infrastructure power in an eco-friendly way.", "answer": "Using solar power (for example, a solar-powered airport or solar panels on buildings) instead of burning coal.", "solutionSteps": ["Recall a clean energy source.", "Cite solar power replacing coal."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [188, 189],
           "needsHumanReview": false
         }
       ]
@@ -1884,7 +1972,10 @@
       ],
       "needsHumanReview": false,
       "source": "boss_quiz"
-    }
+    },
+    {"id": "bossquiz_ssch19_q11", "prompt": "A city METRO rail system mainly helps a big city by —", "questionType": "mcq", "options": ["Replacing all ports", "Carrying many commuters quickly and easing road congestion and pollution", "Storing electricity", "Growing food"], "answer": "Carrying many commuters quickly and easing road congestion and pollution", "solutionSteps": ["A metro is mass urban transit.", "It moves many people fast through crowded cities.", "This reduces road jams and pollution."], "commonMistakes": ["Confusing a metro's city role with long-distance freight (railways) or sea trade (ports)."], "variations": [], "difficulty": 4, "pageRefs": [176], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch19_q12", "prompt": "Most of India's heavy INTERNATIONAL trade (by weight) is carried by —", "questionType": "mcq", "options": ["Aeroplanes", "Ships through ports", "Trucks on highways", "Metro trains"], "answer": "Ships through ports", "solutionSteps": ["Sea transport carries huge volumes very cheaply.", "So most heavy overseas trade goes by ship through ports.", "Air is used only for urgent/valuable goods."], "commonMistakes": ["Thinking aeroplanes carry most trade — they handle only light, urgent goods."], "variations": [], "difficulty": 4, "pageRefs": [181], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch19_q13", "prompt": "A steady supply of electricity is an example of which kind of infrastructure?", "questionType": "mcq", "options": ["Energy / utilities (physical) infrastructure", "Social infrastructure", "A trade route", "A fundamental right"], "answer": "Energy / utilities (physical) infrastructure", "solutionSteps": ["Recall physical infrastructure includes energy and utilities.", "Electricity supply is energy/utilities infrastructure.", "Most other services depend on it."], "commonMistakes": ["Confusing energy infrastructure with social infrastructure (schools, hospitals)."], "variations": [], "difficulty": 4, "pageRefs": [171], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {
@@ -1995,6 +2086,8 @@
         "Wood"
       ],
       "source": "scene_quick_check"
-    }
+    },
+    {"id": "scenecheck_ssch19_q04", "prompt": "Hospitals, schools and universities are examples of which kind of infrastructure?", "questionType": "mcq", "options": ["Physical infrastructure", "Social infrastructure", "Trade routes", "Sea ports"], "answer": "Social infrastructure", "solutionSteps": ["Recall the two kinds: physical and social.", "Health and education facilities serve people's well-being.", "These are social infrastructure."], "commonMistakes": ["Confusing social infrastructure (schools/hospitals) with physical (roads/power)."], "variations": [], "difficulty": 2, "pageRefs": [185], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch19_q05", "prompt": "Roads that link major cities across the country and are built by the national government are called —", "questionType": "mcq", "options": ["Village lanes", "National highways", "Metro lines", "Footpaths"], "answer": "National highways", "solutionSteps": ["Recall the types of roads.", "The big inter-city roads built by the national government are national highways.", "They form the backbone of road transport."], "commonMistakes": ["Confusing national highways with small village roads or city footpaths."], "variations": [], "difficulty": 2, "pageRefs": [174], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }

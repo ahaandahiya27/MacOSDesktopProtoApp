@@ -4135,3 +4135,15 @@ among the three organs), `t04_q04` (diff5 accountability scenario: village water
 three tiers + RTI/vote). 3 boss MCQ (diff4): rule of law, separation of powers,
 provider role. 2 quick MCQ: judiciary=watchdog, four parts→state. Pack 359→363
 topic-Qs; ssch18 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 19 (ssch19 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch19 (Infrastructure)** — dense diff-4 chapter; authored
+fresh application/compare angles. +8: 4 topic Qs — `t01_q04` (diff5 why everything
+depends on electricity), `t02_q04` (diff5 choose road/rail/metro for three tasks),
+`t03_q04` (diff5 sea vs air transport trade-off), `t04_q04` (diff5 sustainable
+infrastructure). 3 boss MCQ (diff4): metro role, sea trade, electricity=energy infra.
+2 quick MCQ: hospitals=social infra, national highways. Pack 363→367 topic-Qs;
+ssch19 boss 10→13, quick 3→5. All 7 lints green.
