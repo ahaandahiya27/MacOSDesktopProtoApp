@@ -4550,3 +4550,17 @@ t04_c02). +2 cross-strand refs (→ssch13 sacred groves & rivers → conservatio
 and sustainable land/water use; →ssch14 sacred geography beyond India → cultural
 links with neighbours). ssch08 deepDive 2→4, ccRefs 2→4. All lints + Release
 build + suite green. Pushed 593c252.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 49 (ssch09 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch09 (From the Rulers to the Ruled: Types of Governments). +2
+deepDive: 'India's republics, centuries before Greece's fame' (the gaṇa-saṅghas
+— Vajji confederacy, Lichchhavi clan — deciding by assembly debate and counting-
+pieces, with their real limits; class_10, anchor t05_c01) and 'Why split the
+government into three?' (separation of powers, Montesquieu, checks and balances
+as a guard against tyranny; class_10, anchor t03_c03). +2 cross-strand refs
+(→ssch10 government types → India's Constitution; →ssch18 the three organs →
+the state and government). ssch09 deepDive 2→4, ccRefs 2→4. All lints + Release
+build + suite green. Pushed f260f4b.
