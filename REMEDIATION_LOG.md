@@ -4669,3 +4669,18 @@ class_10, anchor t05_c01). +2 cross-strand refs (→ssch07 science continuing fr
 Aryabhata and the Gupta Classical Age; →ssch10 Basavanna's equality → the
 Constitution's equality and fraternity). ssch16 deepDive 2→4, ccRefs 3→5. All
 lints + Release build + suite green. Pushed 9742e51.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 57 (ssch17 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch17 (India, a Home to Many). +2 deepDive: 'How a tiny community
+keeps its identity: the Parsis' (the milk-and-sugar legend, fire-temples and
+marrying within the community balanced with full economic and public life — Tata,
+Bhabha, Naoroji; class_10, anchor t02_c02) and ''The world is one family' — and
+where it is written' (Vasudhaiva Kutumbakam from the Maha Upanishad, inscribed in
+India's Parliament and chosen as the G20 theme; class_10, anchor t04_c04). +2
+cross-strand refs (→ssch08 the synagogues/churches/fire-temples of many faiths →
+sacred geography; →ssch10 the ethos of acceptance → constitutional secularism,
+equality and fraternity). ssch17 deepDive 2→4, ccRefs 3→5. All lints + Release
+build + suite green. Pushed 7d65aff.
