@@ -1,0 +1,826 @@
+{
+  "id": "ssch10",
+  "number": 10,
+  "title": "The Constitution of India — An Introduction",
+  "summary": "Every year on 26 January, India celebrates Republic Day to mark the day its Constitution came into effect in 1950. But what is a constitution, and why does a country need one? This chapter explains that a constitution is the supreme 'rulebook' of a nation — a document that spells out the basic principles and laws, sets up the three organs of government (legislature, executive and judiciary), arranges checks and balances among them, lists the rights and duties of citizens, and states the long-term goals and values of the country. It tells the story of how India's Constitution was written by a Constituent Assembly formed in 1946 (389 members, later 299 after Partition, including 15 women), chaired by Dr. Rajendra Prasad, with a Drafting Committee headed by Dr. B.R. Ambedkar, and adopted on 26 November 1949. It traces the three great influences on the Constitution — the freedom struggle, India's civilisational heritage, and useful learnings from other countries' constitutions. It introduces the Fundamental Rights, Fundamental Duties and Directive Principles of State Policy, explains why the Constitution is a 'living document' that can be amended, and unpacks the nine key words of the Preamble — Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality and Fraternity.",
+  "pageRefs": [209, 210, 211, 212, 213, 214, 215, 216, 217, 220, 221, 222, 223, 224, 225, 226, 227],
+  "topics": [
+    {
+      "id": "ssch10_t01",
+      "title": "What Is a Constitution and Why We Need One",
+      "summary": "The idea of a constitution as a country's rulebook, the four big things it lays down, why a shared rulebook everyone agrees to is essential, and why high officials pledge to uphold it.",
+      "concepts": [
+        {
+          "id": "ssch10_t01_c01",
+          "title": "What a Constitution Is",
+          "explanations": {
+            "oneLine": "A constitution is the document that spells out a nation's basic principles and laws.",
+            "kidFriendly": "Think of a constitution as the master rulebook of a whole country. It says what kind of government the country will have, how that government is formed, what powers each part has, and what rights and duties the people have. India's Constitution is so important that it is kept safe in a special helium-filled glass case in Parliament so it does not get damaged over time.",
+            "textbook": "A constitution is a document that spells out a nation's basic principles and laws. It lays out four main things: (1) the framework of the three organs of the government — the legislature, the executive and the judiciary — and their roles and responsibilities; (2) the checks and balances among these three organs to ensure fairness, responsibility and accountability; (3) the rights and duties of the citizens; and (4) an outline of the long-term goals and aspirations of the nation. Many constitutions, including India's, also state the values and ideals the country is committed to, such as equality, justice, fraternity, pluralism and freedom.",
+            "expert": "A constitution is the supreme, foundational law of a state — the law from which all other laws derive their authority and against which they are tested for validity. Analytically it does two distinct jobs: it is 'constitutive' (it creates and empowers the organs of government, defining and limiting their jurisdiction) and it is 'aspirational' (it declares the values and long-term goals the polity commits to). Because it sits above ordinary legislation, a constitution typically also fixes the special procedure by which it alone can be changed. The blend of a power-distributing framework, an enforceable charter of rights, and a statement of guiding ideals is what distinguishes a constitution from a mere collection of statutes."
+          },
+          "reasoning": "A country is made of millions of people, many institutions and competing interests. To function fairly, everyone must agree in advance on one supreme set of rules: who governs, how, with what limits, and with what protections for individuals. A constitution is exactly that agreed, written foundation, which is why it ranks above every ordinary law.",
+          "useCases": [
+            {"title": "Settling who has power", "description": "When a dispute arises over whether Parliament or a state government may make a certain law, the answer is found by reading the Constitution's division of powers.", "domain": "civics"},
+            {"title": "Protecting a citizen", "description": "If a person is treated unfairly, they can point to the rights guaranteed in the Constitution and ask a court to enforce them.", "domain": "everyday"},
+            {"title": "Guiding new laws", "description": "Before a new law is passed, lawmakers check that it agrees with the principles and values written in the Constitution.", "domain": "governance"}
+          ],
+          "beyondTheBook": "The original Constitution of India is preserved in a helium-filled glass case in Parliament. Helium is an unreactive (inert) gas that does not react with the paper or ink, so it slows down the ageing and decay of the historic handwritten document.",
+          "relatedConceptIds": ["ssch10_t01_c02", "ssch10_t01_c03", "ssch10_t04_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [210, 212, 213],
+          "needsHumanReview": false,
+          "mnemonic": "A constitution = the country's master RULEBOOK: Roles of government, Limits (checks), Entitlements (rights), Beliefs (values).",
+          "predictQuestion": "Why might a country keep its original constitution in a sealed gas-filled case instead of an ordinary cupboard?"
+        },
+        {
+          "id": "ssch10_t01_c02",
+          "title": "Why We Need a Constitution",
+          "explanations": {
+            "oneLine": "We need a constitution so that everyone agrees in advance on fair rules for running the country and settling disputes.",
+            "kidFriendly": "Imagine a big kabaddi match with no rulebook. When a dispute breaks out, there is no fair way to settle it — each side just argues louder! A rulebook that both teams accept lets the referee settle things peacefully. A constitution is the 'rulebook' for a whole country: because everyone agrees to follow it, arguments about power and rights can be settled fairly instead of by force.",
+            "textbook": "The chapter explains the need for a constitution with the example of a kabaddi match: when a dispute arises, the referee and captains turn to an official rulebook that everyone has agreed to follow, and the dispute is settled fairly. Without such a rulebook, or if a team refused to accept it, there would be no fair way to resolve the disagreement. A constitution works the same way for a country. Its basic rules and principles determine what kind of government there will be, how it will be formed and how it will function — how laws are made and implemented, who elects the executive, how the judiciary is set up, and what rights and duties citizens have. Because everyone agrees to abide by it, the constitution lets a large, diverse country be governed fairly and peacefully.",
+            "expert": "The need for a constitution rests on the problem of legitimacy and coordination in a large society. Power must be exercised, but for it to be accepted rather than merely obeyed under threat, it must flow from rules agreed in advance and applied impartially. A constitution supplies this 'pre-commitment': by binding even the government to higher rules, it converts raw power into lawful authority, makes outcomes predictable, and provides a neutral standard (interpreted by an independent judiciary) for resolving disputes. The kabaddi analogy captures the deeper point — rules are useful only if the players accept their authority; a constitution must therefore command broad consent, which is why India's was made by a representative assembly rather than imposed by a ruler."
+          },
+          "reasoning": "Disputes are inevitable wherever people share power and resources. If there is no agreed, written standard to appeal to, disputes are settled by whoever is stronger or louder. A constitution gives everyone — including the government — a common rulebook they have promised to follow, so disagreements can be settled fairly and the same way every time.",
+          "useCases": [
+            {"title": "Resolving a power tussle", "description": "If two branches of government clash over who may act, the constitution provides the neutral rule that decides the matter.", "domain": "governance"},
+            {"title": "Limiting the rulers", "description": "Because even the prime minister and judges must obey the constitution, it stops any one person from doing whatever they like.", "domain": "civics"},
+            {"title": "Holding a fair election", "description": "The rules for who can vote and how votes are counted are fixed in advance, so an election cannot be twisted to suit one side.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The Constitution of India has 25 Parts and 12 Schedules today, making it the world's largest written constitution. When it first came into effect in 1950 it had 22 Parts and 8 Schedules — the numbers grew as new needs (like Fundamental Duties and Panchayati Raj) were added over the years.",
+          "relatedConceptIds": ["ssch10_t01_c01", "ssch10_t01_c03", "ssch10_t04_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [211, 212],
+          "needsHumanReview": false,
+          "whyChain": [
+            "Why does a country need a constitution at all? Because a country is made of millions of people, many institutions, and groups with very different interests. Whenever power and resources are shared, disagreements are certain to arise. Without a single agreed set of rules to turn to, every dispute would be settled by whoever is stronger, richer or louder, which is neither fair nor peaceful. A constitution provides one supreme rulebook that everyone, including the government, has promised to follow.",
+            "Why does writing the rules down and agreeing to them in advance help? Because rules fixed beforehand are predictable and neutral — they do not bend to favour the powerful in the heat of a quarrel. In the kabaddi example, the referee and captains settle the dispute calmly by reading a rulebook both sides already accepted. In the same way, when citizens and the government accept the constitution ahead of time, conflicts about power, elections or rights can be decided by a known standard rather than by force or shouting.",
+            "Why must even the rulers be bound by it? Because if the people who hold power could ignore the rules, the rulebook would protect no one. By binding the president, prime minister, ministers and judges — all of whom pledge to uphold it — the constitution turns raw power into lawful authority that the people can trust and question. This is exactly why India's Constitution was written by a representative Constituent Assembly and not handed down by a king: rules command real obedience only when people accept their authority as their own."
+          ]
+        },
+        {
+          "id": "ssch10_t01_c03",
+          "title": "Officials Who Pledge to Uphold the Constitution",
+          "explanations": {
+            "oneLine": "Key officials such as the President, Prime Minister, ministers and judges take an oath to follow and protect the Constitution.",
+            "kidFriendly": "The Constitution is not just a book on a shelf — the most powerful people in the country promise to obey it. The President takes an oath to 'preserve, protect, and defend' the Constitution, and the Prime Minister, the ministers and the judges all promise to follow its rules. So even the highest leaders are bound by the same rulebook.",
+            "textbook": "The Constitution of India is the document that many of the country's important officials pledge to uphold. The President takes an oath to preserve, protect and defend it. The Prime Minister, the council of ministers, and the judges promise to follow its provisions. This means that the people who hold the greatest power in the country are themselves bound by the Constitution and must act according to its rules.",
+            "expert": "The oath of office is the mechanism that converts a written constitution into binding practice. By swearing to uphold the Constitution, office-holders accept that their authority is conditional and limited — they may act only within the powers the Constitution grants and must defend the document itself against violation. This is the practical face of constitutionalism: the principle that government is subordinate to, not the master of, the supreme law. The President's specific duty to 'preserve, protect and defend' the Constitution makes the head of state its ultimate guardian, while the obligation on judges underpins judicial review, the power to test ordinary laws and executive actions against the Constitution and strike down those that conflict with it."
+          },
+          "reasoning": "A rulebook only works if those with power agree to be bound by it. By taking a public oath, the country's highest officials accept that their authority comes from the Constitution and is limited by it — so they cannot place themselves above the law they have sworn to uphold.",
+          "useCases": [
+            {"title": "Checking misuse of power", "description": "If an official acts against the Constitution they have sworn to uphold, courts and citizens can hold them accountable.", "domain": "civics"},
+            {"title": "Smooth transfer of power", "description": "A new Prime Minister taking the oath publicly signals that the same constitutional rules continue, no matter who is in charge.", "domain": "governance"},
+            {"title": "Guarding the document", "description": "The President's oath to 'defend' the Constitution makes the head of state a guardian of the nation's basic rules.", "domain": "civics"}
+          ],
+          "beyondTheBook": "Dr. Rajendra Prasad, who chaired the Constituent Assembly, became independent India's first President — the very office whose oath places the strongest duty to 'preserve, protect and defend' the Constitution. So one of the Constitution's makers became one of its first guardians.",
+          "relatedConceptIds": ["ssch10_t01_c01", "ssch10_t02_c02", "ssch10_t04_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [212],
+          "needsHumanReview": false,
+          "mnemonic": "P-P-D: the President swears to Preserve, Protect and Defend the Constitution."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch10_t01_q01",
+          "prompt": "List the four main things that a constitution lays out.",
+          "questionType": "shortAnswer",
+          "answer": "A constitution lays out: (1) the framework of the three organs of government — legislature, executive and judiciary — and their roles; (2) the checks and balances among these organs to ensure fairness, responsibility and accountability; (3) the rights and duties of citizens; and (4) an outline of the long-term goals and aspirations of the nation.",
+          "solutionSteps": [
+            "Recall that a constitution spells out a nation's basic principles and laws.",
+            "List the framework of the three organs of government and their roles.",
+            "Add the checks and balances among them.",
+            "Add the rights and duties of citizens.",
+            "Add the outline of the nation's long-term goals and aspirations."
+          ],
+          "commonMistakes": [
+            "Listing only rights and forgetting that a constitution also sets up the government and its checks and balances.",
+            "Confusing 'duties of citizens' with 'duties of the government'."
+          ],
+          "variations": [
+            {"prompt": "Name the three organs of government described by the Constitution.", "answer": "The legislature, the executive and the judiciary.", "solutionSteps": ["Recall the three organs introduced in the chapter.", "List legislature (makes laws), executive (implements laws), judiciary (interprets laws)."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [212],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t01_q02",
+          "prompt": "The chapter compares a constitution to which of the following?",
+          "questionType": "mcq",
+          "options": ["A rulebook for a country", "A history textbook", "A map of India", "A list of festivals"],
+          "answer": "A rulebook for a country",
+          "solutionSteps": [
+            "Recall the kabaddi example, where a rulebook settles a dispute.",
+            "The chapter states 'Our Constitution is something like a rulebook for the country.'",
+            "Choose the rulebook option."
+          ],
+          "commonMistakes": [
+            "Choosing 'history textbook' because the Constitution is old — it is a set of rules, not a history book."
+          ],
+          "variations": [
+            {"prompt": "In the kabaddi example, what did the referee use to settle the dispute fairly?", "answer": "A little official rulebook that all the players had agreed to follow.", "solutionSteps": ["Recall the kabaddi dispute.", "Identify the official rulebook as the tool that settled it fairly."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [211, 212],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t01_q03",
+          "prompt": "Why is it important that even the President, Prime Minister and judges take an oath to follow the Constitution?",
+          "questionType": "longAnswer",
+          "answer": "It is important because a rulebook only works if the most powerful people also agree to be bound by it. By taking an oath — the President swears to preserve, protect and defend the Constitution, and the Prime Minister, ministers and judges promise to follow its provisions — even the highest officials accept that their authority comes from the Constitution and is limited by it. This means no one is above the law, power cannot be misused freely, and citizens can hold leaders accountable when they break the rules they swore to uphold.",
+          "solutionSteps": [
+            "State that a constitution must bind everyone, including the powerful, to work.",
+            "Give the specific oaths: President preserves/protects/defends; PM, ministers and judges follow its provisions.",
+            "Explain that this limits their power and keeps them accountable.",
+            "Conclude that it ensures no one is above the law."
+          ],
+          "commonMistakes": [
+            "Saying the oath is just a ceremony with no real effect — it actually binds officials to the law.",
+            "Forgetting that the point is to limit the power of the rulers."
+          ],
+          "variations": [
+            {"prompt": "What exactly does the President swear to do regarding the Constitution?", "answer": "The President takes an oath to preserve, protect and defend the Constitution of India.", "solutionSteps": ["Recall the President's specific oath.", "State the three duties: preserve, protect, defend."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [212],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch10_t02",
+      "title": "Writing the Constitution of India",
+      "summary": "How a Constituent Assembly was formed in 1946 to write the Constitution, who led it, the role of the Drafting Committee under Dr. B.R. Ambedkar, and the key dates that gave us Republic Day.",
+      "concepts": [
+        {
+          "id": "ssch10_t02_c01",
+          "title": "The Constituent Assembly",
+          "explanations": {
+            "oneLine": "The Constituent Assembly was the elected body of representatives formed in 1946 to write India's Constitution.",
+            "kidFriendly": "While India was still fighting for freedom, leaders began planning how the country would govern itself. To decide all the big questions — what kind of government, who can vote, how to settle disputes — a Constituent Assembly was formed in 1946. It started with 389 members (later 299 after Partition), and 15 of them were women. These members came from India's many regions, professions and social groups, so the Constitution would speak for everyone.",
+            "textbook": "While India was struggling for independence from British rule, it became necessary to plan how the country would govern itself. To answer big questions — what type of government to have, what rules and principles should guide the country, who should have the right to vote, and how disputes should be decided — a Constituent Assembly was formed in 1946. It initially had 389 members, later reduced to 299 after the Partition of India, of which 15 were women. These members represented India's diverse regions, professions and social groups. The Assembly was formed on 9 December 1946, and its members were elected by the legislative assemblies of the provinces, whose own members had been elected by the people.",
+            "expert": "A 'constituent' assembly is one specially charged with framing a constitution, exercising the founding (constituent) power of the people rather than the ordinary law-making power. India's Assembly was indirectly elected — chosen by the provincial legislative assemblies, themselves elected on a limited franchise — yet it deliberately sought representation across regions, religions, castes, professions and gender so that the document would carry broad legitimacy. Its reduction from 389 to 299 members reflects the trauma of Partition, when members from areas that became Pakistan withdrew. The deliberative method, nearly three years of debate clause by clause, gave the Constitution its character of reasoned consensus rather than imposition, a key reason it has endured."
+          },
+          "reasoning": "For a constitution to be accepted by a huge, diverse country, it cannot be written by one ruler — it must be made by people who represent the whole nation. So an assembly drawn from India's many regions, professions and communities was formed, giving the resulting document authority and acceptance across the country.",
+          "useCases": [
+            {"title": "Building broad acceptance", "description": "Because members came from across India, different communities could see their concerns reflected, making the Constitution widely accepted.", "domain": "civics"},
+            {"title": "Recording many viewpoints", "description": "Diverse representatives meant debates covered the needs of farmers, women, minorities and different regions, not just one group.", "domain": "history"},
+            {"title": "Understanding indirect election", "description": "The Assembly shows how representatives can be chosen by other elected bodies, a pattern still used for some Indian offices.", "domain": "governance"}
+          ],
+          "beyondTheBook": "Of the Assembly's members, 15 were women — including leaders like Sarojini Naidu, Sucheta Kripalani, Hansa Mehta and Begum Aizaz Rasul, whose speech in the Assembly argued that equality for women was not a new idea but an ideal India had long cherished.",
+          "relatedConceptIds": ["ssch10_t02_c02", "ssch10_t02_c03", "ssch10_t03_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [213, 214],
+          "needsHumanReview": false,
+          "mnemonic": "Constituent Assembly: 389 down to 299, 15 women, formed 9 Dec 1946."
+        },
+        {
+          "id": "ssch10_t02_c02",
+          "title": "Dr. Rajendra Prasad and the Drafting Committee",
+          "explanations": {
+            "oneLine": "Dr. Rajendra Prasad chaired the Constituent Assembly, while a Drafting Committee headed by Dr. B.R. Ambedkar prepared the initial text.",
+            "kidFriendly": "Writing the Constitution was teamwork. Dr. Rajendra Prasad was the Chairman of the whole Constituent Assembly. To actually write the first text, a smaller group called the Drafting Committee was set up, led by Dr. B.R. Ambedkar — a great social reformer who became independent India's first Law and Justice minister.",
+            "textbook": "Dr. Rajendra Prasad was the Chairman of the Constituent Assembly. The initial text of the Constitution was prepared by a Drafting Committee chaired by Dr. B.R. Ambedkar, an eminent social reformer and the first Law and Justice minister of independent India. The Indian Constitution was developed and written by the Constituent Assembly over a period of almost three years, with the drafting work completed and adopted as the Constitution of India on 26 November 1949.",
+            "expert": "The division of labour between the full Assembly and the Drafting Committee is standard constitution-making practice: a large representative body sets directions and debates, while a small expert committee turns decisions into precise legal text. Dr. Ambedkar, as Chairman of the Drafting Committee, shaped the language, structure and safeguards of the document, especially provisions on equality and against discrimination, reflecting his lifelong fight against caste injustice; he is widely regarded as the principal architect of the Constitution. Dr. Rajendra Prasad, presiding over the Assembly, steered nearly three years of deliberation to consensus. The committee's drafts were debated clause by clause, amended, and only then adopted, a process that combined expert craftsmanship with democratic scrutiny."
+          },
+          "reasoning": "A document as large and detailed as a constitution needs both broad debate and careful drafting. So the full Assembly, chaired by Dr. Rajendra Prasad, debated and decided, while a small expert Drafting Committee under Dr. B.R. Ambedkar turned those decisions into precise legal wording.",
+          "useCases": [
+            {"title": "Understanding teamwork in law-making", "description": "The committee-plus-assembly model shows how a big group sets directions and a small expert group writes the exact text.", "domain": "governance"},
+            {"title": "Appreciating Ambedkar's role", "description": "Knowing Ambedkar chaired the drafting explains the Constitution's strong stress on equality and against discrimination.", "domain": "history"},
+            {"title": "Linking people to offices", "description": "Recognising that Ambedkar became the first Law minister shows how Constitution-makers also helped run the new government.", "domain": "civics"}
+          ],
+          "beyondTheBook": "Dr. B.R. Ambedkar is widely honoured as the chief architect of the Indian Constitution. Having himself faced caste discrimination, he made sure the document contained strong guarantees of equality and protections for the weakest groups in society.",
+          "relatedConceptIds": ["ssch10_t02_c01", "ssch10_t02_c03", "ssch10_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [214],
+          "needsHumanReview": false,
+          "mnemonic": "Prasad Presided (Assembly), Ambedkar's committee Authored the draft."
+        },
+        {
+          "id": "ssch10_t02_c03",
+          "title": "Key Dates: From Adoption to Republic Day",
+          "explanations": {
+            "oneLine": "The Constitution was adopted on 26 November 1949 and came into effect on 26 January 1950, which we celebrate as Republic Day.",
+            "kidFriendly": "There are three dates to remember. The Constituent Assembly was formed on 9 December 1946. After almost three years of work, the Constitution was adopted on 26 November 1949. It finally came into effect on 26 January 1950 — and that is why every year on 26 January we celebrate Republic Day with the great parade at Kartavya Path in Delhi.",
+            "textbook": "The Indian Constitution was developed and written by the Constituent Assembly, which was formed on 9 December 1946, over a period of almost three years. The drafting work was completed and the document was adopted as the Constitution of India on 26 November 1949. The Constitution came into effect on 26 January 1950, which is why we celebrate this day every year as Republic Day. The day is marked by the Republic Day Parade, including the unfurling of the tricolour at Kartavya Path.",
+            "expert": "The gap between adoption (26 November 1949) and commencement (26 January 1950) was deliberate and symbolic. The Indian National Congress had declared 'Purna Swaraj' (complete independence) on 26 January 1930, and that date was celebrated through the freedom movement as Independence Day; bringing the Constitution into force on 26 January 1950 honoured that earlier pledge. The two dates therefore mark distinct legal moments: 'adoption' is when the Constituent Assembly approved and signed the text, while 'commencement' is when it actually became the operative supreme law of the Republic, transforming India from a Dominion into a sovereign democratic republic with its own head of state."
+          },
+          "reasoning": "A constitution is first written and approved, then formally brought into force. India's Assembly adopted the text on 26 November 1949, but chose 26 January 1950 to enforce it, honouring the 1930 'complete independence' pledge — so Republic Day marks the day the Constitution actually became the law of the land.",
+          "useCases": [
+            {"title": "Remembering Republic Day", "description": "Knowing the Constitution came into effect on 26 January 1950 explains exactly what Republic Day celebrates.", "domain": "everyday"},
+            {"title": "Distinguishing two dates", "description": "Understanding 'adopted' (26 Nov 1949) versus 'came into effect' (26 Jan 1950) avoids a very common exam mistake.", "domain": "history"},
+            {"title": "Linking past and present", "description": "Connecting 26 January 1950 to the 1930 independence pledge shows how dates carry meaning across history.", "domain": "civics"}
+          ],
+          "beyondTheBook": "26 January was chosen on purpose: on 26 January 1930 the Indian National Congress had declared 'Purna Swaraj' (complete independence), and freedom fighters celebrated that day for years. Enforcing the Constitution on the same date in 1950 honoured that earlier promise.",
+          "relatedConceptIds": ["ssch10_t02_c01", "ssch10_t02_c02", "ssch10_t04_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [210, 214],
+          "needsHumanReview": false,
+          "mnemonic": "Adopted 26 Nov 1949, Active 26 Jan 1950 = Republic Day.",
+          "predictQuestion": "Why do you think the Constitution was adopted in November 1949 but only brought into force two months later, on 26 January 1950?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch10_t02_q01",
+          "prompt": "When was the Constituent Assembly formed, how many members did it have, and how many were women?",
+          "questionType": "shortAnswer",
+          "answer": "The Constituent Assembly was formed in 1946 (on 9 December 1946). It initially had 389 members, later reduced to 299 after the Partition of India. Of these, 15 were women.",
+          "solutionSteps": [
+            "Recall the Assembly was formed on 9 December 1946.",
+            "State the initial membership of 389.",
+            "Note the reduction to 299 after Partition.",
+            "Add that 15 members were women."
+          ],
+          "commonMistakes": [
+            "Forgetting the membership fell from 389 to 299 after Partition.",
+            "Mixing up the formation year (1946) with the year the Constitution came into effect (1950)."
+          ],
+          "variations": [
+            {"prompt": "Who were the Constituent Assembly's members elected by?", "answer": "They were elected by the legislative assemblies of the provinces, whose members had in turn been elected by the people.", "solutionSteps": ["Recall the indirect election described in the chapter.", "State that provincial assemblies elected the members."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [213, 214],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t02_q02",
+          "prompt": "Who chaired the Drafting Committee that prepared the initial text of the Constitution?",
+          "questionType": "mcq",
+          "options": ["Dr. Rajendra Prasad", "Dr. B.R. Ambedkar", "Dr. Sachidananda Sinha", "Begum Aizaz Rasul"],
+          "answer": "Dr. B.R. Ambedkar",
+          "solutionSteps": [
+            "Recall that the full Assembly was chaired by Dr. Rajendra Prasad.",
+            "Recall that a separate Drafting Committee wrote the initial text.",
+            "Identify Dr. B.R. Ambedkar as the chairman of the Drafting Committee."
+          ],
+          "commonMistakes": [
+            "Confusing the Chairman of the whole Assembly (Dr. Rajendra Prasad) with the Chairman of the Drafting Committee (Dr. B.R. Ambedkar)."
+          ],
+          "variations": [
+            {"prompt": "Who was the Chairman of the entire Constituent Assembly?", "answer": "Dr. Rajendra Prasad.", "solutionSteps": ["Recall the leadership of the Assembly.", "Name Dr. Rajendra Prasad as Chairman."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [214],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t02_q03",
+          "prompt": "The Constitution was adopted on 26 November 1949 but came into effect on ____, which we celebrate as Republic Day.",
+          "questionType": "fillInBlank",
+          "answer": "26 January 1950",
+          "solutionSteps": [
+            "Recall the two key dates: adoption and commencement.",
+            "Note that 26 November 1949 is the adoption date.",
+            "Identify 26 January 1950 as the date it came into effect — Republic Day."
+          ],
+          "commonMistakes": [
+            "Writing 15 August 1947 (Independence Day) instead of 26 January 1950 (Republic Day).",
+            "Swapping the adoption date and the commencement date."
+          ],
+          "variations": [
+            {"prompt": "Why do we celebrate Republic Day on 26 January?", "answer": "Because the Constitution of India came into effect on 26 January 1950; the date also honoured the 1930 'complete independence' pledge.", "solutionSteps": ["Recall the Constitution came into force on 26 January 1950.", "Link this to the annual Republic Day celebration."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [210, 214],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch10_t03",
+      "title": "What Shaped the Indian Constitution",
+      "summary": "The three great influences on the Constitution — the ideals of the freedom struggle, India's own civilisational heritage, and useful learnings from the constitutions of other countries.",
+      "concepts": [
+        {
+          "id": "ssch10_t03_c01",
+          "title": "Influence of the Freedom Movement",
+          "explanations": {
+            "oneLine": "The ideals and experiences of India's freedom struggle were carried into the Constitution by leaders who had fought for independence.",
+            "kidFriendly": "Many of the people who fought for India's freedom were also members of the Constituent Assembly. So the dreams of the freedom struggle — equality for all, justice for all, freedom and fraternity — were written straight into the Constitution. The struggle had also taught India practical lessons, like how to make sure every adult could vote and how to keep the parts of government separate.",
+            "textbook": "Many key ideals and values of the Indian freedom struggle were enshrined in the Constitution, which became the cornerstone for an independent India. A number of leaders of the freedom movement were members of the Constituent Assembly and carried their experience and ideas from the struggle into the Constitution. Some of these values and ideals are: equality of all, justice for all, freedom, fraternity, and the preservation of India's cultural heritage. The experience of the freedom struggle also helped answer practical 'how' and 'what' questions, such as how to ensure every adult citizen has the right to vote, how to keep the powers of the executive, legislature and judiciary separate, how to guarantee fundamental rights, how the Constitution could be amended, and what the relationship between the Central and State governments should be.",
+            "expert": "The freedom movement functioned as a long political laboratory whose conclusions hardened into constitutional choices. Decades of mass mobilisation across castes, religions and regions made universal adult franchise an obvious commitment — remarkably, India adopted 'one person, one vote' from the very start, unlike many older democracies that extended the vote only gradually. The movement's insistence on civil liberties under colonial repression shaped the chapter on Fundamental Rights; its experience of arbitrary executive power shaped the demand for an independent judiciary and separation of powers; and its negotiation of India's plurality shaped federalism and minority safeguards. The Constitution thus reads, in part, as the codified memory of the freedom struggle's hard-won lessons."
+          },
+          "reasoning": "The people who wrote the Constitution had just lived through the freedom struggle, so its lessons were fresh in their minds. The ideals they had fought for — equality, justice, freedom, fraternity — became the Constitution's values, and the problems they had faced under colonial rule shaped practical rules like the right to vote and separation of powers.",
+          "useCases": [
+            {"title": "Explaining universal adult franchise", "description": "The struggle's mass participation explains why India gave every adult the vote from the very beginning.", "domain": "civics"},
+            {"title": "Tracing Fundamental Rights", "description": "The fight for civil liberties under colonial rule explains the strong list of rights in the Constitution.", "domain": "history"},
+            {"title": "Understanding separation of powers", "description": "Experience of arbitrary colonial power explains why the Constitution keeps the executive, legislature and judiciary separate.", "domain": "governance"}
+          ],
+          "beyondTheBook": "India is the only country that gave universal adult franchise — the right of every adult to vote — to all its citizens right from the beginning. Many older democracies took decades or even centuries to let women and poorer people vote; India did it from its very first election.",
+          "relatedConceptIds": ["ssch10_t03_c02", "ssch10_t03_c03", "ssch10_t05_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [215],
+          "needsHumanReview": false,
+          "mnemonic": "Freedom struggle gave the Constitution its four ideals: Equality, Justice, Freedom, Fraternity (E-J-F-F)."
+        },
+        {
+          "id": "ssch10_t03_c02",
+          "title": "Influence of India's Civilisational Heritage",
+          "explanations": {
+            "oneLine": "Age-old Indian values like respect for differing views, the idea of duties, and 'the world is one family' shaped the Constitution.",
+            "kidFriendly": "The Constitution did not appear from nowhere — many of its ideas come from India's own ancient culture. Old Indian traditions valued accepting that people can have different views, treating Nature as sacred, the pursuit of knowledge, and respect for women. Beautiful ideas like vasudhaiva kutumbakam ('the world is one family') and a strong sense of people's duties all found a place in the Constitution, even if expressed in modern words.",
+            "textbook": "India's civilisational heritage and culture played a key role in shaping the Constitution. Some fundamental principles are embedded in Indian culture — the acceptance that people could have different points of view, treating Nature as sacred, the pursuit of learning and knowledge, respect for women, and the concepts of vasudhaiva kutumbakam ('the world is one family') and sarve bhavantu sukhinah (an invocation for the well-being of all creatures). All these principles find a place in the Constitution, though they may be expressed a little differently. India had also experimented with many governance systems — janapadas, sanghas, rulers and their councils, and ideas like Kauṭilya's saptanga and rajadharma — with a great emphasis on the duties and role of the people. So it was natural for the Constitution-makers to include such ideas, and 'Fundamental Duties', for instance, are part of the Constitution.",
+            "expert": "This influence is one of substance, not just sentiment. India's long tradition of pluralism — the acceptance of many viewpoints, sects and ways of life — underlies the constitutional commitments to secularism and to protecting diversity, captured by the older idea of 'unity in diversity'. The traditional stress on dharma and on the duties of rulers (rajadharma) and people anticipates the Fundamental Duties (Part IV-A). Pre-modern political experimentation — republican sanghas and janapadas, councils advising rulers, Kauṭilya's saptanga (the seven limbs of the state) — shows that consultative and rule-bound governance was not imported wholesale but resonated with indigenous practice. The Constitution-makers therefore drew on a civilisational vocabulary, re-expressed in modern legal form, which helped the document feel rooted rather than foreign."
+          },
+          "reasoning": "A constitution works best when it feels rooted in a country's own values. India already had deep traditions of accepting many viewpoints, respecting Nature and knowledge, and stressing people's duties — so the Constitution-makers wove these familiar ideas into the document, making it both modern and genuinely Indian.",
+          "useCases": [
+            {"title": "Explaining Fundamental Duties", "description": "India's old emphasis on the duties of people helps explain why the Constitution lists Fundamental Duties.", "domain": "civics"},
+            {"title": "Understanding secularism's roots", "description": "The tradition of accepting many viewpoints helps explain India's respect for all religions.", "domain": "culture"},
+            {"title": "Connecting past governance", "description": "Knowing about janapadas, sanghas and councils shows that rule-bound, consultative government has deep Indian roots.", "domain": "history"}
+          ],
+          "beyondTheBook": "The Sanskrit phrase 'vasudhaiva kutumbakam' — 'the world is one family' — comes from ancient Indian texts and is so valued that it was used as the theme of India's G20 presidency in 2023, showing how an old idea still guides modern India.",
+          "relatedConceptIds": ["ssch10_t03_c01", "ssch10_t03_c03", "ssch10_t04_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [216],
+          "needsHumanReview": false,
+          "predictQuestion": "How can a very old idea like 'the world is one family' still influence a modern legal document like the Constitution?"
+        },
+        {
+          "id": "ssch10_t03_c03",
+          "title": "Learnings from Other Countries",
+          "explanations": {
+            "oneLine": "India studied other democratic constitutions and borrowed useful ideas, like liberty-equality-fraternity from France and the independent judiciary idea from the USA.",
+            "kidFriendly": "In the spirit of the old saying 'Let noble thoughts come to me from every side', the Constitution-makers studied other countries' constitutions to find good ideas. From France's revolution came the famous values of liberty, equality and fraternity. The idea of an independent judiciary (courts free from government control) was shaped by the American Constitution, and the Directive Principles of State Policy were inspired by Ireland's Constitution.",
+            "textbook": "The Constitution-makers, in the Indian tradition of 'a no bhadrah kratavo yantu vishwatah' ('Let noble thoughts come to me from every side'), studied the constitutions of France, the USA, the UK, Ireland, Australia and other countries with a democratic system, to explore their usefulness for India's context. For example, the ideals of 'liberty, equality, fraternity' were adopted from France's constitution, which had enshrined them from the French Revolution of 1789; the idea of the Directive Principles of State Policy was inspired by the Irish Constitution; and the American Constitution helped shape the concept of an independent judiciary.",
+            "expert": "Comparative borrowing was selective and adaptive rather than imitative. From Britain India took the parliamentary (Westminster) form of government and the rule of law; from the United States, judicial review and an independent judiciary (and the very idea of a written, supreme Constitution with a Bill of Rights); from Ireland, the non-justiciable Directive Principles of State Policy as a statement of social goals; from France, the revolutionary trio of liberty, equality and fraternity; and from Australia, ideas about the federal arrangement and Concurrent List. The framers fitted each borrowed element to Indian conditions, producing a hybrid that is parliamentary like Britain yet federal and rights-protecting like the USA — an example of constitutional learning across borders."
+          },
+          "reasoning": "There was no need for India to invent everything from scratch. By studying democratic constitutions that had worked elsewhere, the makers could adopt tested ideas — but they adapted each one to India's own needs, rather than copying blindly.",
+          "useCases": [
+            {"title": "Tracing borrowed ideals", "description": "Knowing 'liberty, equality, fraternity' came from France helps explain those words in the Preamble.", "domain": "history"},
+            {"title": "Understanding the judiciary", "description": "The American influence explains why India's courts are independent of the government.", "domain": "governance"},
+            {"title": "Explaining DPSP's origin", "description": "Recognising the Irish source of the Directive Principles helps understand why they are goals rather than enforceable rights.", "domain": "civics"}
+          ],
+          "beyondTheBook": "The French slogan 'Liberté, Égalité, Fraternité' (liberty, equality, fraternity) was born in the French Revolution of 1789, alongside the famous 'Declaration of the Rights of Man and of the Citizen'. These three words now sit at the heart of India's Preamble too — proof of how ideas travel across the world.",
+          "relatedConceptIds": ["ssch10_t03_c01", "ssch10_t03_c02", "ssch10_t05_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [217],
+          "needsHumanReview": false,
+          "mnemonic": "France = liberty-equality-fraternity; Ireland = Directive Principles; USA = independent judiciary."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch10_t03_q01",
+          "prompt": "What were the three main influences that shaped the Indian Constitution?",
+          "questionType": "shortAnswer",
+          "answer": "The three main influences were: (1) the experience, ideas and ideals of the Indian freedom movement; (2) India's own civilisational heritage and culture; and (3) useful learnings from the constitutions of other democratic countries.",
+          "solutionSteps": [
+            "Recall that the Constitution was developed by the Constituent Assembly but had many influences.",
+            "Name the freedom movement as the first influence.",
+            "Name India's civilisational heritage and culture as the second.",
+            "Name learnings from other countries' constitutions as the third."
+          ],
+          "commonMistakes": [
+            "Mentioning only foreign constitutions and forgetting India's own freedom struggle and heritage.",
+            "Confusing 'influences on' the Constitution with 'features of' the Constitution."
+          ],
+          "variations": [
+            {"prompt": "Give one ideal that the freedom struggle contributed to the Constitution.", "answer": "Any one of: equality of all, justice for all, freedom, fraternity, or preservation of India's cultural heritage.", "solutionSteps": ["Recall the ideals carried from the freedom movement.", "State one such ideal."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [215, 216, 217],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t03_q02",
+          "prompt": "Match each country with the idea India learned from its constitution.",
+          "questionType": "matchTheFollowing",
+          "answer": "France → liberty, equality, fraternity; Ireland → Directive Principles of State Policy; USA → independent judiciary.",
+          "matchPairs": [
+            {"left": "France", "right": "The ideals of liberty, equality and fraternity"},
+            {"left": "Ireland", "right": "The idea of the Directive Principles of State Policy"},
+            {"left": "USA", "right": "The concept of an independent judiciary"}
+          ],
+          "solutionSteps": [
+            "Recall France's revolutionary ideals of liberty, equality, fraternity.",
+            "Recall that Directive Principles were inspired by the Irish Constitution.",
+            "Recall that the American Constitution shaped the independent judiciary.",
+            "Match each country to its idea."
+          ],
+          "commonMistakes": [
+            "Swapping the French ideals with the American influence — France gave the three ideals, the USA gave the independent judiciary."
+          ],
+          "variations": [
+            {"prompt": "From which country's constitution did India adopt the ideals of liberty, equality and fraternity?", "answer": "France (where they came from the French Revolution of 1789).", "solutionSteps": ["Recall the French Revolution's three ideals.", "Identify France as the source."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [217],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t03_q03",
+          "prompt": "How did India's civilisational heritage inspire some of the key features of the Constitution? Explain with examples.",
+          "questionType": "longAnswer",
+          "answer": "India's ancient culture contained many principles that found their way into the Constitution. Traditions of accepting that people may hold different points of view, treating Nature as sacred, valuing the pursuit of knowledge, and respect for women shaped the Constitution's spirit. Ideas like vasudhaiva kutumbakam ('the world is one family') and sarve bhavantu sukhinah (well-being of all) reflect its values of fraternity and welfare. India had also experimented with governance through janapadas, sanghas, rulers' councils and ideas like Kauṭilya's saptanga and rajadharma, with strong emphasis on the duties of people — which is why the Constitution includes Fundamental Duties. So although these old ideas are expressed in modern words, their roots lie in India's civilisational heritage.",
+          "solutionSteps": [
+            "State that many of the Constitution's principles come from India's culture.",
+            "Give value examples: acceptance of different views, Nature as sacred, pursuit of knowledge, respect for women.",
+            "Cite vasudhaiva kutumbakam and sarve bhavantu sukhinah.",
+            "Link the old emphasis on people's duties to the Fundamental Duties.",
+            "Conclude that these ideas are ancient but re-expressed in modern form."
+          ],
+          "commonMistakes": [
+            "Only listing foreign influences and ignoring India's own heritage.",
+            "Forgetting to connect the heritage of 'duties' to the Fundamental Duties."
+          ],
+          "variations": [
+            {"prompt": "Which part of the Constitution especially reflects India's traditional emphasis on the duties of people?", "answer": "The Fundamental Duties (Part IV-A).", "solutionSteps": ["Recall that Indian tradition stressed the duties of people.", "Identify the Fundamental Duties as the matching feature."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [216],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch10_t04",
+      "title": "Key Features of the Constitution",
+      "summary": "The three organs of government and separation of powers, the Fundamental Rights, Fundamental Duties and Directive Principles of State Policy, and why the Constitution is a 'living document' that can be amended.",
+      "concepts": [
+        {
+          "id": "ssch10_t04_c01",
+          "title": "Three Organs and Separation of Powers",
+          "explanations": {
+            "oneLine": "The Constitution sets up three organs of government — legislature, executive and judiciary — and keeps their powers separate.",
+            "kidFriendly": "The Constitution divides the government into three parts so that no single part becomes too powerful. The legislature makes the laws. The executive, headed by the Prime Minister, carries out the laws. The judiciary (the courts) checks that all laws follow the Constitution and decides whether a law has been broken. India also has a three-tier system — central, state and local (Panchayati Raj) — so power is shared at every level.",
+            "textbook": "There are three organs of government — the legislature, the executive and the judiciary — and the 'separation of powers' among them is essential for their effective working. The legislature makes the laws. The law is implemented by the executive, which is headed by the Prime Minister. The judiciary ensures that all laws made are in accordance with the Constitution, and also decides whether a law has been broken and what punishment is necessary. India has a three-tier system of government — central, state and local (the Panchayati Raj system). Some functions and responsibilities are reserved for the central government and others are assigned to the state government. The Constitution clearly defines the roles, functions, responsibilities and accountability of each organ, and lays down an electoral system so that every eligible citizen can vote.",
+            "expert": "Separation of powers distributes the three core state functions — making, executing and interpreting law — among distinct organs so that each can check the others, preventing the concentration of power that leads to tyranny. India follows a parliamentary version in which the executive (the council of ministers) is drawn from and accountable to the legislature, so the separation is functional rather than rigid, but the judiciary stands genuinely independent and exercises judicial review. Layered on top is a federal, three-tier structure (Union, State, and local self-government), with subjects divided through the Union, State and Concurrent Lists. The result is a double dispersal of power — horizontally across organs and vertically across levels — which is the structural heart of Indian constitutionalism."
+          },
+          "reasoning": "If one body could make laws, enforce them and judge disputes, it could do whatever it liked. Splitting these jobs among three organs lets each watch the others, so power is checked. Sharing power across central, state and local levels spreads it further still.",
+          "useCases": [
+            {"title": "Striking down a bad law", "description": "The judiciary can declare a law invalid if it conflicts with the Constitution — a direct use of separation of powers.", "domain": "governance"},
+            {"title": "Local decision-making", "description": "The three-tier system lets a village Panchayat decide local matters instead of everything coming from Delhi.", "domain": "civics"},
+            {"title": "Holding the executive accountable", "description": "Because the executive answers to the legislature, citizens' representatives can question the government's actions.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The path in New Delhi where the Republic Day parade is held was renamed from 'Rajpath' to 'Kartavya Path' in 2022. 'Kartavya' means 'duty' — a fitting name for the route that celebrates the Constitution, which balances citizens' rights with their duties.",
+          "relatedConceptIds": ["ssch10_t04_c02", "ssch10_t04_c03", "ssch10_t01_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [220],
+          "needsHumanReview": false,
+          "mnemonic": "L-E-J: Legislature makes, Executive enforces, Judiciary judges."
+        },
+        {
+          "id": "ssch10_t04_c02",
+          "title": "Rights, Duties and Directive Principles",
+          "explanations": {
+            "oneLine": "The Constitution gives citizens Fundamental Rights (enforceable promises), Fundamental Duties (responsibilities), and Directive Principles (goals for the government).",
+            "kidFriendly": "The Constitution has three special sets of rules for citizens and government. Fundamental Rights are promises that MUST be kept — if someone treats you unfairly, you can go to court. Fundamental Duties are the responsibilities of every citizen, like respecting the flag and protecting the environment. Directive Principles of State Policy (DPSP) are big goals the government should try to reach, like a good standard of living for all — but you cannot take the government to court if it does not achieve them; they are more like guidelines.",
+            "textbook": "Three core aspects of the Constitution are the Fundamental Rights, the Fundamental Duties and the Directive Principles of State Policy (DPSP). Fundamental Rights — such as the Right to Equality (Article 14), the Right to Freedom (Article 21), the Right against Exploitation and the Right to Education (Article 21-A) — are promises that must be kept: if someone treats you unfairly because of who you are, you can go to court and a judge can help you. Fundamental Duties are the responsibilities of citizens, such as to abide by the Constitution, respect the National Flag and National Anthem, defend the country, value the rich heritage of our composite culture, and protect the natural environment. The Directive Principles of State Policy represent the social and economic vision the framers had for India — for example, a good standard of living for everyone — but they are guidelines rather than strict rules, so one cannot go to a judge to complain if the government does not follow them.",
+            "expert": "These three components are deliberately different in legal force. Fundamental Rights (Part III) are 'justiciable' — citizens can move the courts directly to enforce them, and laws violating them can be struck down; they create a sphere the state may not invade. The Directive Principles (Part IV) are 'non-justiciable' — they are not enforceable in court but are 'fundamental in the governance of the country' and guide policy and legislation toward social and economic justice. Fundamental Duties (Part IV-A) are obligations on citizens, not on the state. The framers chose this design on purpose: rights that could be demanded immediately, paired with larger goals that a developing nation would realise gradually, balancing individual liberty against the collective project of building a just society."
+          },
+          "reasoning": "A good constitution must protect individuals now and also point the country toward a better future. So it makes Fundamental Rights enforceable at once, sets out Fundamental Duties that citizens owe in return, and lists Directive Principles as longer-term goals that a developing country can work toward over time.",
+          "useCases": [
+            {"title": "Demanding a right in court", "description": "A child denied school admission can use the Right to Education (Article 21-A) to claim a place, because rights are enforceable.", "domain": "civics"},
+            {"title": "Guiding government policy", "description": "Schemes for nutrition, health and welfare flow from the Directive Principles, even though they cannot be demanded in court.", "domain": "governance"},
+            {"title": "Living as a responsible citizen", "description": "Protecting the environment and respecting the flag are Fundamental Duties every citizen is expected to follow.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The Right to Education was not in the original Constitution — it was added later as Article 21-A by the 86th Amendment in 2002, making free and compulsory education a Fundamental Right for children aged 6 to 14. It shows how rights can grow over time.",
+          "relatedConceptIds": ["ssch10_t04_c01", "ssch10_t04_c03", "ssch10_t05_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [220, 221, 222],
+          "needsHumanReview": false,
+          "mnemonic": "Rights = must be kept (go to court); Duties = your responsibilities; DPSP = goals/guidelines (cannot be sued).",
+          "whyChain": [
+            "Why does the Constitution separate Fundamental Rights from Directive Principles? Because the two do different jobs. Fundamental Rights protect each individual right now — they are promises that must be kept, so if someone is treated unfairly they can go straight to court and a judge can act. Directive Principles, by contrast, set out big social and economic goals for the whole nation, like a good standard of living for everyone, which a young, developing country cannot achieve overnight but must keep working toward.",
+            "Why are Directive Principles only guidelines and not enforceable in court? Because goals like ending poverty or ensuring good health for all depend on resources, time and steady effort that the country has to build up gradually. If citizens could sue the government for not yet achieving them, courts would be deciding budgets and priorities that belong to elected governments. So the framers made the Principles 'fundamental in governance' to guide policy, but left their pace to the democratic process, while keeping Rights immediately enforceable.",
+            "Why pair rights with Fundamental Duties? Because a society where people only demand rights but accept no responsibilities cannot function fairly. The duties — to respect the flag and anthem, protect the environment, value our composite culture, defend the country and educate one's children — remind citizens that the freedoms the Constitution guarantees are sustained only when each person also contributes. Rights and duties together express the balance the Constitution-makers, drawing on India's heritage, wanted between the individual and the community."
+          ]
+        },
+        {
+          "id": "ssch10_t04_c03",
+          "title": "A Living Document",
+          "explanations": {
+            "oneLine": "The Constitution is a 'living document' because it can be changed by amendments as the country's needs evolve.",
+            "kidFriendly": "The makers of the Constitution knew that India would change over time and would need new rules. So they made it a 'living document' that can be updated through changes called amendments. For example, the Fundamental Duties were added in 1976, and the Panchayati Raj system was added in 1992. But amendments are not made carelessly — they are rigorously debated in Parliament, and sometimes in state assemblies and with the public, before being accepted.",
+            "textbook": "The Constitution is a living document. Its makers realised that a need for new laws and rules would emerge over time. For example, 'Part IV-A: Fundamental Duties' was added in 1976, and the Panchayati Raj system — which was not part of the original Constitution — was integrated into it in 1992 through the 73rd Constitutional Amendment Act. Any changes, called amendments, are rigorously debated in Parliament before they are accepted; some require a debate in legislative assemblies as well, opinions are often sought from the general public, and some changes can even be initiated by popular movements. For instance, after a citizen challenged a rule in court in 2004, the Supreme Court held that flying the national flag is part of the Fundamental Right to Freedom of Expression, so citizens may now fly the tricolour with pride.",
+            "expert": "Calling the Constitution a 'living document' captures both its formal amendability and its evolving interpretation. Formally, Article 368 lays down amendment procedures requiring special majorities in Parliament, with certain federal provisions also needing ratification by half the state legislatures — a process more demanding than ordinary law-making, which protects the Constitution's supremacy while allowing change. Substantively, the document also lives through judicial interpretation: courts read its words in light of new circumstances, as when the Supreme Court located the right to fly the flag within freedom of expression. This adaptability is balanced by limits — the 'basic structure' doctrine holds that the fundamental framework cannot be amended away — so the Constitution can grow without losing its essential identity."
+          },
+          "reasoning": "No one can foresee every future need, so a constitution that could never change would soon become outdated and useless. Making it a living document, changeable by carefully debated amendments, lets it adapt to new situations while still protecting its core through demanding procedures.",
+          "useCases": [
+            {"title": "Adding new rights and bodies", "description": "Amendments added Fundamental Duties (1976) and the Panchayati Raj system (1992) when the country needed them.", "domain": "governance"},
+            {"title": "Updating through courts", "description": "Court interpretations, like recognising the right to fly the flag, keep the Constitution relevant without rewriting it.", "domain": "civics"},
+            {"title": "Responding to people", "description": "Public feedback and popular movements can prompt constitutional change, keeping it connected to citizens.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The 73rd Amendment of 1992 gave Panchayati Raj a place in the Constitution and required that one-third of seats in panchayats be reserved for women — a single amendment that brought millions of women into local government for the first time.",
+          "relatedConceptIds": ["ssch10_t04_c01", "ssch10_t04_c02", "ssch10_t01_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [223],
+          "needsHumanReview": false,
+          "mnemonic": "Living document = grows by Amendments: Duties (1976), Panchayati Raj (1992)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch10_t04_q01",
+          "prompt": "What is the difference between a Fundamental Right and a Directive Principle of State Policy?",
+          "questionType": "longAnswer",
+          "answer": "A Fundamental Right is a promise that must be kept: if someone treats you unfairly or denies your right, you can go to court and a judge can help you enforce it. Examples include the Right to Equality and the Right to Freedom. A Directive Principle of State Policy (DPSP) is a goal or guideline that the government should try to achieve, such as ensuring a good standard of living for everyone. But if the government does not follow it, you cannot go to court and complain — DPSP are guidelines rather than strict, enforceable rules. So Rights can be demanded immediately, while Directive Principles are bigger goals to be reached over time.",
+          "solutionSteps": [
+            "Define a Fundamental Right as an enforceable promise.",
+            "State that one can go to court if a right is denied.",
+            "Define DPSP as goals/guidelines for the government.",
+            "State that DPSP cannot be enforced in court.",
+            "Conclude with the key difference: rights are immediate, DPSP are long-term goals."
+          ],
+          "commonMistakes": [
+            "Saying both can be enforced in court — only Fundamental Rights can.",
+            "Confusing Directive Principles with Fundamental Duties (which apply to citizens, not the government)."
+          ],
+          "variations": [
+            {"prompt": "Give one example each of a Fundamental Right and a Directive Principle.", "answer": "A Fundamental Right: the Right to Equality (Article 14) or the Right to Education (Article 21-A). A Directive Principle: ensuring a good standard of living for all, or welfare of the people (Article 41).", "solutionSteps": ["Recall the listed Fundamental Rights.", "Recall the example DPSP from the chapter.", "Give one of each."]}
+          ],
+          "difficulty": 4,
+          "pageRefs": [220, 222],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t04_q02",
+          "prompt": "Which organ of government makes the laws?",
+          "questionType": "mcq",
+          "options": ["The judiciary", "The executive", "The legislature", "The Election Commission"],
+          "answer": "The legislature",
+          "solutionSteps": [
+            "Recall the three organs: legislature, executive, judiciary.",
+            "The legislature makes laws.",
+            "The executive implements them and the judiciary interprets them.",
+            "Choose the legislature."
+          ],
+          "commonMistakes": [
+            "Choosing the executive — it implements laws, it does not make them.",
+            "Choosing the judiciary — it interprets and applies laws, it does not make them."
+          ],
+          "variations": [
+            {"prompt": "Which organ of government, headed by the Prime Minister, implements the laws?", "answer": "The executive.", "solutionSteps": ["Recall that the executive implements laws.", "Recall it is headed by the Prime Minister."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [220],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t04_q03",
+          "prompt": "Why is the Constitution called a 'living document'? Give an example of how it has changed.",
+          "questionType": "shortAnswer",
+          "answer": "It is called a living document because it can be changed through amendments as the country's needs evolve over time, instead of staying fixed forever. For example, the Fundamental Duties (Part IV-A) were added in 1976, and the Panchayati Raj system was added in 1992 through the 73rd Constitutional Amendment Act. Such amendments are rigorously debated in Parliament before being accepted.",
+          "solutionSteps": [
+            "Define a living document as one that can change over time.",
+            "Explain that changes are made through amendments.",
+            "Give an example: Fundamental Duties added 1976 or Panchayati Raj added 1992.",
+            "Note that amendments are carefully debated in Parliament."
+          ],
+          "commonMistakes": [
+            "Thinking 'living document' means it can be changed easily or carelessly — amendments are rigorously debated.",
+            "Forgetting to give a concrete example of a change."
+          ],
+          "variations": [
+            {"prompt": "In which year were the Fundamental Duties added to the Constitution?", "answer": "1976 (as Part IV-A).", "solutionSteps": ["Recall that Fundamental Duties were not in the original Constitution.", "State the year 1976."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [223],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch10_t05",
+      "title": "Understanding the Preamble",
+      "summary": "The Preamble as the heart of the Constitution, its description of India as a Sovereign, Socialist, Secular, Democratic Republic, and the goals it sets out — Justice, Liberty, Equality and Fraternity.",
+      "concepts": [
+        {
+          "id": "ssch10_t05_c01",
+          "title": "The Preamble and 'We, the People'",
+          "explanations": {
+            "oneLine": "The Preamble is the opening statement of the Constitution that sums up its core guiding values.",
+            "kidFriendly": "The Preamble is like the introduction at the very start of the Constitution. In just a few lines it captures all the most important values the country stands for. It begins with the powerful words 'WE, THE PEOPLE OF INDIA', which means the Constitution was drawn up and given to the country by the people themselves, through their representatives — not handed down by a king or any outside power.",
+            "textbook": "The Constitution's core values are the guiding principles for policies and decision-making, which the government is expected to follow and which citizens are also expected to practise to the best of their ability. These guiding values are present across the whole Constitution, but their essence is written in the Preamble. The Preamble opens with the words 'WE, THE PEOPLE OF INDIA', showing that the Constitution has been drawn up and enacted by the people through their representatives, and not handed down to them by a king or any outside power. It then describes the kind of nation India is — a Sovereign, Socialist, Secular, Democratic Republic — and the goals it seeks to secure for all citizens: Justice, Liberty, Equality and Fraternity.",
+            "expert": "The Preamble functions as the Constitution's mission statement and interpretive key. The phrase 'We, the People of India' asserts popular sovereignty — that ultimate authority rests with the people, who are the source of the Constitution's legitimacy. Although the Preamble itself is not directly enforceable, courts treat it as a guide to the Constitution's spirit and have held it to be part of the basic structure, using it to resolve ambiguities. It compactly states the nature of the polity (the four adjectives describing the Republic) and its aims (the four goals). Studying it last, as this chapter does, is apt: it gathers into a few lines the values that the rest of the document works out in detail."
+          },
+          "reasoning": "A long, detailed document needs a short statement of what it is all about. The Preamble does this by declaring who made the Constitution (the people), what kind of country India is, and what goals it pursues — so it acts as the heart and summary of the whole Constitution.",
+          "useCases": [
+            {"title": "Reading the Constitution's spirit", "description": "When a clause is unclear, the Preamble's values help judges and citizens understand its true intention.", "domain": "civics"},
+            {"title": "Recalling India's identity", "description": "The Preamble lets anyone state in one breath that India is a sovereign, socialist, secular, democratic republic.", "domain": "everyday"},
+            {"title": "Affirming people's power", "description": "'We, the People' reminds citizens that the government's authority flows from them, not the other way round.", "domain": "governance"}
+          ],
+          "beyondTheBook": "The whole Preamble is just one long sentence. Schoolchildren across India read it aloud together every year on 26 November, which is celebrated as 'Constitution Day' (Samvidhan Divas), marking the day the Constitution was adopted in 1949.",
+          "relatedConceptIds": ["ssch10_t05_c02", "ssch10_t05_c03", "ssch10_t03_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [224, 225],
+          "needsHumanReview": false,
+          "mnemonic": "Preamble starts with 'WE, THE PEOPLE' = power comes from the people, not a king.",
+          "predictQuestion": "Why do you think the Constitution begins with 'We, the People of India' rather than 'I, the King' or 'The Government of India'?"
+        },
+        {
+          "id": "ssch10_t05_c02",
+          "title": "Sovereign, Socialist, Secular, Democratic, Republic",
+          "explanations": {
+            "oneLine": "The Preamble describes India as a Sovereign, Socialist, Secular, Democratic Republic — five words that define what kind of nation India is.",
+            "kidFriendly": "Five big words in the Preamble describe India. Sovereign: India makes its own decisions and no outside power can dictate to it. Socialist: wealth is created by society and should be shared, with the government reducing the gap between rich and poor. Secular: citizens are free to follow any religion and there is no official state religion. Democratic: the people elect their leaders and can hold them accountable. Republic: the head of state (the President) is elected, not a king who inherits the throne.",
+            "textbook": "The Preamble describes India as a Sovereign, Socialist, Secular, Democratic Republic. SOVEREIGN means the people have the supreme right to make decisions on internal as well as external matters, and no external power can dictate the government of India. SOCIALIST means wealth is generated socially and should be shared by society, and the government should regulate the ownership of land and industry to reduce socio-economic inequalities. SECULAR means citizens have complete freedom to follow any religion, but there is no official religion and the government treats all religious beliefs and practices with equal respect. DEMOCRATIC means a form of government where the people enjoy equal political rights, elect their rulers and hold them accountable, and the government is run according to some basic rules. REPUBLIC means the head of the state is an elected person and not a hereditary position. The terms 'Socialist' and 'Secular' were added to the Preamble through the 42nd Constitutional Amendment in 1976.",
+            "expert": "Each term is a precise constitutional concept. Sovereignty means supreme legal authority, internal and external, with no superior power — India is bound by no foreign government. Socialist signals a commitment to social and economic justice and the reduction of inequality, pursued through democratic means rather than state ownership of everything. Secularism, in the Indian sense, is not hostility to religion but equal respect for all faiths with no state religion — a model suited to India's deep religious plurality. Democratic denotes government by the people through periodic, equal elections and accountability of rulers. Republic means the head of state is elected, not hereditary, marking the final break from monarchy and colonial rule. That 'Socialist' and 'Secular' were inserted only in 1976 (42nd Amendment) shows the Preamble itself is part of the Constitution's living, amendable text."
+          },
+          "reasoning": "These five words are not decoration — each makes a definite claim about India. Together they say India answers to no foreign power, works to reduce inequality, respects all religions equally, is run by the people through elections, and has an elected (not hereditary) head of state.",
+          "useCases": [
+            {"title": "Explaining religious freedom", "description": "The word 'Secular' explains why India has no official religion and protects everyone's right to worship as they choose.", "domain": "civics"},
+            {"title": "Why there is no king", "description": "'Republic' explains why India's head of state is an elected President, not an inherited monarch.", "domain": "governance"},
+            {"title": "Understanding equal votes", "description": "'Democratic' explains why every adult's vote counts equally and rulers can be voted out.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The words 'Socialist' and 'Secular' were not in the original 1950 Preamble — they were added by the 42nd Amendment in 1976, sometimes called the 'mini-Constitution' because it changed so many parts of the Constitution at once.",
+          "relatedConceptIds": ["ssch10_t05_c01", "ssch10_t05_c03", "ssch10_t04_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [225],
+          "needsHumanReview": false,
+          "mnemonic": "S-S-S-D-R: Sovereign, Socialist, Secular, Democratic, Republic — 'Some Strong Students Don't Rest'."
+        },
+        {
+          "id": "ssch10_t05_c03",
+          "title": "Justice, Liberty, Equality, Fraternity",
+          "explanations": {
+            "oneLine": "The Preamble promises every citizen Justice, Liberty, Equality and Fraternity — the four goals the Constitution seeks to secure.",
+            "kidFriendly": "Besides describing India, the Preamble lists four goals for everyone. JUSTICE: no one can be discriminated against because of caste, religion or gender, and social inequalities must be reduced. LIBERTY: there are no unreasonable restrictions on what citizens think, how they express themselves, and how they act. EQUALITY: all are equal before the law, social inequalities must end, and the government must ensure equal opportunity for all. FRATERNITY: we should all behave as members of one family, and no one should treat a fellow citizen as inferior.",
+            "textbook": "The Preamble sets out four goals for all citizens. JUSTICE means citizens cannot be discriminated against on the grounds of caste, religion or gender; social inequalities have to be reduced; and the government should work for the welfare of all, especially of less advantaged groups. LIBERTY means there are no unreasonable restrictions on citizens in what they think, how they wish to express their thoughts, and the way they wish to follow up their thoughts in action. EQUALITY means all are equal before the law, social inequalities have to be ended, and the government should ensure equal opportunity for all. FRATERNITY means all of us should behave as if we are members of the same family, and no one should treat a fellow citizen as inferior.",
+            "expert": "These four goals are mutually reinforcing and were drawn, in part, from the French Revolution's 'liberty, equality, fraternity', with justice added at the head. Justice spans the social, economic and political; liberty protects freedom of thought, expression, belief and action against arbitrary restriction; equality combines formal equality (equality before the law) with substantive equality (ending entrenched social inequalities and ensuring equal opportunity). Fraternity, often the least discussed, is the cement: it asks citizens to see one another as members of one family, sustaining the dignity of the individual and the unity of the nation. The framers understood that liberty without equality breeds privilege, and equality without liberty breeds coercion, while fraternity is needed for both to survive — a balance that defines the Indian constitutional vision."
+          },
+          "reasoning": "A nation needs not just a structure of government but goals to strive for. Justice, liberty, equality and fraternity spell out what the Constitution wants for every citizen — fair treatment, freedom, equal standing, and a sense of belonging together — so they act as the country's shared aims.",
+          "useCases": [
+            {"title": "Using the village well together", "description": "When people of all castes, genders and religions use a common well, the values of Equality and Justice are at work.", "domain": "everyday"},
+            {"title": "Speaking and writing freely", "description": "Liberty protects a citizen's right to express opinions, within reasonable limits.", "domain": "civics"},
+            {"title": "Building national unity", "description": "Fraternity asks citizens to treat one another as one family, holding a diverse country together.", "domain": "culture"}
+          ],
+          "beyondTheBook": "The four ideals of the Preamble echo the French Revolution's slogan 'liberty, equality, fraternity'. India placed 'Justice' first and added 'Fraternity' with the special note that it must assure 'the dignity of the individual and the unity of the nation' — showing how borrowed ideals were reshaped for India.",
+          "relatedConceptIds": ["ssch10_t05_c01", "ssch10_t05_c02", "ssch10_t04_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [225],
+          "needsHumanReview": false,
+          "mnemonic": "J-L-E-F: Justice, Liberty, Equality, Fraternity — the Preamble's four goals."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch10_t05_q01",
+          "prompt": "The Preamble describes India as a 'Sovereign, Socialist, Secular, Democratic Republic'. Explain the meaning of 'Secular' and 'Republic'.",
+          "questionType": "longAnswer",
+          "answer": "SECULAR means that citizens have complete freedom to follow any religion they wish, but the country has no official state religion, and the government treats all religious beliefs and practices with equal respect. REPUBLIC means that the head of the state is an elected person and not a hereditary position — so India has an elected President rather than a king or queen who inherits the throne.",
+          "solutionSteps": [
+            "Define 'Secular': freedom to follow any religion, no official religion, equal respect for all faiths.",
+            "Define 'Republic': the head of state is elected, not hereditary.",
+            "Give the practical contrast: an elected President, not an inherited king."
+          ],
+          "commonMistakes": [
+            "Thinking 'Secular' means India is against religion — it actually means equal respect for all religions with no official one.",
+            "Confusing 'Republic' (elected head of state) with 'Democratic' (people elect their rulers)."
+          ],
+          "variations": [
+            {"prompt": "What does 'Sovereign' mean in the Preamble?", "answer": "It means the people of India have the supreme right to make decisions on internal as well as external matters, and no external power can dictate the government of India.", "solutionSteps": ["Recall the meaning of sovereign as supreme decision-making power.", "Add that no outside power can dictate to India."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [225],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t05_q02",
+          "prompt": "Which two words were added to the Preamble by the 42nd Constitutional Amendment in 1976?",
+          "questionType": "mcq",
+          "options": ["Sovereign and Democratic", "Socialist and Secular", "Republic and Justice", "Liberty and Equality"],
+          "answer": "Socialist and Secular",
+          "solutionSteps": [
+            "Recall the note in the chapter about the 42nd Amendment of 1976.",
+            "It added 'Socialist' and 'Secular' to the Preamble.",
+            "Choose that pair."
+          ],
+          "commonMistakes": [
+            "Thinking all the words were in the original Preamble — 'Socialist' and 'Secular' were added in 1976.",
+            "Choosing 'Sovereign and Democratic', which were in the original Preamble."
+          ],
+          "variations": [
+            {"prompt": "In which year were 'Socialist' and 'Secular' added to the Preamble?", "answer": "In 1976, through the 42nd Constitutional Amendment.", "solutionSteps": ["Recall the 42nd Amendment.", "State the year 1976."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [225],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t05_q03",
+          "prompt": "The opening words 'WE, THE PEOPLE OF INDIA' in the Preamble show that the Constitution was given to the country by a king. True or False?",
+          "questionType": "trueFalse",
+          "answer": "False",
+          "solutionSteps": [
+            "Recall what 'We, the People of India' means.",
+            "It means the Constitution was drawn up and enacted by the people through their representatives.",
+            "It was NOT handed down by a king or any outside power, so the statement is False."
+          ],
+          "commonMistakes": [
+            "Thinking the Constitution was granted by a ruler — it was made by the people's representatives."
+          ],
+          "variations": [
+            {"prompt": "Who, according to the Preamble, drew up and enacted the Constitution?", "answer": "The people of India, through their representatives — not a king or any outside power.", "solutionSteps": ["Recall 'We, the People of India'.", "State that the people, through their representatives, enacted it."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [225],
+          "needsHumanReview": false
+        }
+      ]
+    }
+  ],
+  "realWorldExamples": [
+    {"id": "ssch10_rw01", "title": "The kabaddi rulebook", "body": "Imagine your school's kabaddi team in a state-level final. A player gets an opponent 'out', but the other team disputes it. To settle the argument fairly, the referee pulls out a little official rulebook that both teams have agreed to follow. They check the rules, agree the player was 'out', and your team wins — peacefully. A constitution is exactly this kind of rulebook, but for a whole country: because everyone accepts it in advance, disputes about power and rights can be settled fairly instead of by force.", "relatedConceptIds": ["ssch10_t01_c02", "ssch10_t01_c01"]},
+    {"id": "ssch10_rw02", "title": "Flying the tricolour with pride", "body": "There was a time when people in India were not allowed to fly the national flag at their homes. In 2004 a citizen felt that expressing pride in his country was his right and challenged the rule in court. The Supreme Court agreed, holding that flying the flag is part of the Fundamental Right to Freedom of Expression. Now any citizen can fly the tricolour with pride (keeping in mind it must never be dishonoured) — a perfect example of how the Constitution is a 'living document' that grows through the courts.", "relatedConceptIds": ["ssch10_t04_c03", "ssch10_t04_c02"]},
+    {"id": "ssch10_rw03", "title": "The Constitution kept in helium", "body": "The original handwritten Constitution of India is so precious that it is stored in a special airtight glass case in Parliament, filled with helium gas. Helium does not react with paper or ink, so it slows the natural ageing and decay of the historic document, keeping it safe for future generations. It is a striking reminder of how much value the country places on its founding rulebook.", "relatedConceptIds": ["ssch10_t01_c01"]}
+  ],
+  "mnemonics": [
+    {"id": "ssch10_mn01", "acronym": "SSSDR", "unpacking": "Sovereign, Socialist, Secular, Democratic, Republic — the five words in the Preamble that describe India. Remember them as 'Some Strong Students Don't Rest'.", "context": "Recalling the nature of the Indian state as described in the Preamble.", "relatedConceptIds": ["ssch10_t05_c02"]},
+    {"id": "ssch10_mn02", "acronym": "JLEF", "unpacking": "Justice, Liberty, Equality, Fraternity — the four goals the Preamble promises to secure for every citizen.", "context": "Remembering the aims of the Constitution as stated in the Preamble.", "relatedConceptIds": ["ssch10_t05_c03"]}
+  ],
+  "misconceptions": [
+    {"id": "ssch10_ms01", "kidsThink": "'Secular' means India is against religion or has no religion.", "actually": "'Secular' means citizens have complete freedom to follow ANY religion, that there is no official state religion, and that the government treats all religious beliefs and practices with equal respect. It is about equal respect for all faiths, not opposition to religion.", "relatedConceptIds": ["ssch10_t05_c02"]},
+    {"id": "ssch10_ms02", "kidsThink": "The Constitution can never be changed once it was written.", "actually": "The Constitution is a 'living document' that can be changed through amendments as the country's needs evolve — for example, Fundamental Duties were added in 1976 and Panchayati Raj in 1992. But amendments are rigorously debated before being accepted.", "relatedConceptIds": ["ssch10_t04_c03"]},
+    {"id": "ssch10_ms03", "kidsThink": "Republic Day (26 January) is when India became independent.", "actually": "India became independent on 15 August 1947 (Independence Day). Republic Day, 26 January, marks the day the Constitution came into effect in 1950, turning India into a republic with its own supreme rulebook.", "relatedConceptIds": ["ssch10_t02_c03"]}
+  ],
+  "ncertQA": [
+    {"id": "ssch10_nq01", "question": "'The Constituent Assembly had representatives from diverse backgrounds in India.' Why do you think it was important to have a diverse set of representatives from all over India?", "modelAnswer": "It was important because India is a very large and culturally diverse country, with people of many regions, religions, castes, languages and professions. If the Constitution had been written only by one group, it would have reflected only their interests and might have been rejected by others. By including representatives from diverse backgrounds — different regions, professions and social groups, and 15 women — the Constituent Assembly made sure that the concerns of many different communities were heard and built into the Constitution. This gave the document wide acceptance and legitimacy, so people across the whole country could feel it was truly their own rulebook.", "textbookPage": 227, "relatedConceptIds": ["ssch10_t02_c01", "ssch10_t03_c01"]},
+    {"id": "ssch10_nq02", "question": "Read the statements and identify which key feature or value of the Constitution is reflected: (a) Sheena, Rajat and Harsh are excited to cast their first vote in the general elections. (b) Radha, Imon and Harpreet study in the same class in the same school. (c) Parents must make arrangements to ensure their children's education. (d) People of all castes, genders and religions can use the village well.", "modelAnswer": "(a) The right to vote in elections reflects DEMOCRACY (and universal adult franchise) — the people elect their rulers. (b) Children of different backgrounds studying together reflects EQUALITY and the Right to Education (Article 21-A). (c) Parents ensuring their children's education reflects a FUNDAMENTAL DUTY (and supports the Right to Education). (d) People of all castes, genders and religions using the same well reflects EQUALITY and JUSTICE — no discrimination on grounds of caste, religion or gender.", "textbookPage": 227, "relatedConceptIds": ["ssch10_t04_c02", "ssch10_t05_c03"]},
+    {"id": "ssch10_nq03", "question": "You have learnt that 'India is the only country that provided universal adult franchise to its citizens from the beginning.' Can you explain why India did it?", "modelAnswer": "India provided universal adult franchise — the right of every adult to vote, regardless of wealth, education, caste, religion or gender — from its very first election. India did this because the freedom struggle had been a mass movement involving people from every section of society, who had fought together for independence and self-rule. It would have been unfair to then deny any of them a say in choosing their government. The Constitution-makers believed in equality and justice for all, and trusted the ordinary people of India. By contrast, many older democracies had given the vote only gradually, first to wealthy or educated men and only much later to women and the poor. India's bold decision showed deep faith in democracy and in the equality of all its citizens.", "textbookPage": 227, "relatedConceptIds": ["ssch10_t03_c01", "ssch10_t05_c03"]},
+    {"id": "ssch10_nq04", "question": "How did the freedom struggle inspire the making of the Constitution of India? How did India's civilisational heritage inspire some of the key features in the Constitution? Explain.", "modelAnswer": "The freedom struggle inspired the Constitution in two ways. First, the ideals the freedom fighters had fought for — equality of all, justice for all, freedom, fraternity and preservation of India's cultural heritage — were written into the Constitution, because many freedom-movement leaders were themselves members of the Constituent Assembly. Second, the experience of the struggle answered practical questions, such as giving every adult the right to vote, keeping the powers of the executive, legislature and judiciary separate, and guaranteeing fundamental rights. India's civilisational heritage inspired key features too: the old acceptance of different points of view supports secularism and pluralism; respect for Nature and the well-being of all creatures appears in values like sarve bhavantu sukhinah; and the long tradition stressing the duties of people (seen in janapadas, sanghas, rajadharma and Kauṭilya's saptanga) inspired the inclusion of Fundamental Duties.", "textbookPage": 227, "relatedConceptIds": ["ssch10_t03_c01", "ssch10_t03_c02"]}
+  ],
+  "glossary": [
+    {"id": "ssch10_gl01", "term": "Constitution", "definition": "The supreme document that spells out a nation's basic principles and laws, setting up the government, the rights and duties of citizens, and the country's long-term goals.", "example": "The Constitution of India came into effect on 26 January 1950.", "hindiTerm": "संविधान", "relatedConceptIds": ["ssch10_t01_c01"]},
+    {"id": "ssch10_gl02", "term": "Constituent Assembly", "definition": "The body of elected representatives formed in 1946 to write the Constitution of India.", "example": "The Constituent Assembly had 389 members, later reduced to 299 after Partition.", "hindiTerm": "संविधान सभा", "relatedConceptIds": ["ssch10_t02_c01"]},
+    {"id": "ssch10_gl03", "term": "Preamble", "definition": "The opening statement of the Constitution that sums up its core guiding values and the kind of nation India is.", "example": "The Preamble begins with the words 'We, the People of India'.", "hindiTerm": "प्रस्तावना", "relatedConceptIds": ["ssch10_t05_c01"]},
+    {"id": "ssch10_gl04", "term": "Sovereign", "definition": "Having the supreme right to make decisions on internal and external matters, with no external power able to dictate the government.", "example": "India is a sovereign nation that makes its own foreign policy.", "hindiTerm": "संप्रभु / प्रभुत्वसंपन्न", "relatedConceptIds": ["ssch10_t05_c02"]},
+    {"id": "ssch10_gl05", "term": "Secular", "definition": "Allowing citizens complete freedom to follow any religion, with no official state religion and equal respect for all faiths.", "example": "Because India is secular, the State has no official religion.", "hindiTerm": "धर्मनिरपेक्ष", "relatedConceptIds": ["ssch10_t05_c02"]},
+    {"id": "ssch10_gl06", "term": "Republic", "definition": "A form of state in which the head of state is an elected person, not a hereditary king or queen.", "example": "India is a republic with an elected President as head of state.", "hindiTerm": "गणराज्य / गणतंत्र", "relatedConceptIds": ["ssch10_t05_c02"]},
+    {"id": "ssch10_gl07", "term": "Fundamental Rights", "definition": "Basic rights guaranteed to citizens that must be protected, and which can be enforced through the courts.", "example": "The Right to Equality and the Right to Freedom are Fundamental Rights.", "hindiTerm": "मौलिक अधिकार", "relatedConceptIds": ["ssch10_t04_c02"]},
+    {"id": "ssch10_gl08", "term": "Fundamental Duties", "definition": "The responsibilities of citizens listed in the Constitution, such as respecting the National Flag and protecting the environment.", "example": "Protecting forests, lakes and rivers is a Fundamental Duty.", "hindiTerm": "मौलिक कर्तव्य", "relatedConceptIds": ["ssch10_t04_c02"]},
+    {"id": "ssch10_gl09", "term": "Directive Principles of State Policy", "definition": "Goals and guidelines for the government to work toward, which cannot be enforced in court but guide its policies.", "example": "Ensuring a good standard of living for all is a Directive Principle.", "hindiTerm": "राज्य के नीति निदेशक तत्व", "relatedConceptIds": ["ssch10_t04_c02"]},
+    {"id": "ssch10_gl10", "term": "Amendment", "definition": "A change made to the Constitution, rigorously debated in Parliament before it is accepted.", "example": "Fundamental Duties were added by an amendment in 1976.", "hindiTerm": "संशोधन", "relatedConceptIds": ["ssch10_t04_c03"]}
+  ],
+  "miniProjects": [
+    {"id": "ssch10_mp01", "emoji": "📜", "title": "Design a class constitution", "needs": ["A large chart paper", "Coloured pens", "A box for collecting suggestions", "Your whole class"], "steps": ["As a class, brainstorm what problems or disputes commonly arise in your classroom (turns, sharing, cleaning, noise).", "Collect everyone's suggested rules in the suggestion box, so every student gets a voice — like a Constituent Assembly.", "Read out the suggestions and discuss them; group similar ones together.", "Write a short Preamble beginning 'We, the students of Class 7…' stating your class's shared values.", "List a few 'rights' (e.g., the right to be heard) and matching 'duties' (e.g., the duty to keep the room clean).", "Add a rule for how the class constitution itself can be changed later (your own 'amendment' process).", "Vote to adopt the class constitution, then display it on the wall."], "expectedObservation": "You will see how hard but how fair it is to agree on rules everyone accepts, and why a constitution needs both rights and duties plus a way to be amended.", "whyItWorks": "Building rules together by discussion and voting mirrors exactly how the Constituent Assembly worked, turning the abstract idea of a constitution into a real, lived experience of consensus, rights, duties and amendment.", "estimatedMinutes": 60, "relatedConceptIds": ["ssch10_t01_c02", "ssch10_t02_c01"]},
+    {"id": "ssch10_mp02", "emoji": "🔍", "title": "Hunt for the Constitution in daily life", "needs": ["A notebook and pen", "One week of everyday observation"], "steps": ["For one week, watch out for moments in your neighbourhood that show a Preamble value in action.", "Write down anything that shows EQUALITY (e.g., people of all castes using the same well or bus).", "Write down anything that shows LIBERTY (e.g., people freely expressing opinions or following their religion).", "Write down anything that shows JUSTICE (e.g., equal treatment regardless of gender or background).", "Note any moment showing FRATERNITY (people helping each other as one community).", "For each observation, write which Preamble word it matches and one line on why.", "Share your list with the class and compare findings."], "expectedObservation": "You will discover that the values written in the Preamble are not just words in a book — they show up in ordinary, everyday life all around you.", "whyItWorks": "Linking abstract constitutional values to concrete daily scenes makes them memorable and real, and trains you to 'read' society through the lens of the Constitution's ideals.", "estimatedMinutes": 45, "relatedConceptIds": ["ssch10_t05_c03", "ssch10_t05_c01"]}
+  ],
+  "whatIfs": [
+    {"id": "ssch10_wi01", "question": "What if India had no constitution at all?", "answer": "Without a constitution, there would be no agreed rulebook to say who governs, how power is limited, or what rights people have. Disputes would be settled by whoever was strongest, not by fair rules, and rulers could do whatever they liked because nothing would bind them. There would be no clear way to make laws, hold elections, or protect citizens who are treated unfairly, and a huge, diverse country like India could easily fall into confusion and conflict. The constitution is what lets such a varied nation be governed fairly and stay united.", "relatedConceptIds": ["ssch10_t01_c01", "ssch10_t01_c02"]},
+    {"id": "ssch10_wi02", "question": "What if the Constitution could never be amended?", "answer": "If the Constitution could never change, it would slowly become outdated as the country's needs evolved. New ideas and bodies that were not thought of in 1950 — like the Fundamental Duties added in 1976 or the Panchayati Raj system added in 1992 — could never have been included. The Constitution might no longer fit modern India, and people would either have to ignore it or scrap it and start again. By making it a 'living document' that can be carefully amended after rigorous debate, the makers let it grow with the country while keeping its core values safe.", "relatedConceptIds": ["ssch10_t04_c03", "ssch10_t04_c02"]}
+  ],
+  "timelines": [
+    {"id": "ssch10_tl01", "title": "Making the Constitution of India, 1946–1950", "intro": "The key milestones in how India's Constitution was written and brought into force.", "steps": [
+      {"id": "ssch10_tl01_s01", "label": "Constituent Assembly formed", "body": "On 9 December 1946, the Constituent Assembly is formed to write India's Constitution, initially with 389 members.", "assetHint": "assembly hall with members seated"},
+      {"id": "ssch10_tl01_s02", "label": "Partition reduces members", "body": "After the Partition of India in 1947, the Assembly's membership is reduced to 299, of which 15 are women.", "assetHint": "map of partitioned subcontinent"},
+      {"id": "ssch10_tl01_s03", "label": "Drafting Committee at work", "body": "A Drafting Committee, chaired by Dr. B.R. Ambedkar, prepares the initial text while Dr. Rajendra Prasad chairs the full Assembly.", "assetHint": "drafting committee members at a table"},
+      {"id": "ssch10_tl01_s04", "label": "Constitution adopted", "body": "After almost three years of debate, the Constitution of India is adopted on 26 November 1949 (now Constitution Day).", "assetHint": "signing of the document"},
+      {"id": "ssch10_tl01_s05", "label": "Constitution comes into effect", "body": "On 26 January 1950 the Constitution comes into effect, making India a republic — celebrated every year as Republic Day.", "assetHint": "Republic Day parade with tricolour"}
+    ], "relatedConceptIds": ["ssch10_t02_c01", "ssch10_t02_c02", "ssch10_t02_c03"]}
+  ],
+  "conceptMap": {
+    "nodes": [
+      {"id": "ssch10_n01", "label": "The Constitution of India", "kind": "pivot", "x": 0.5, "y": 0.1},
+      {"id": "ssch10_n02", "label": "What & Why a Constitution", "kind": "concept", "x": 0.18, "y": 0.4},
+      {"id": "ssch10_n03", "label": "Constituent Assembly & Drafting", "kind": "concept", "x": 0.5, "y": 0.32},
+      {"id": "ssch10_n04", "label": "Influences (freedom, heritage, world)", "kind": "concept", "x": 0.82, "y": 0.4},
+      {"id": "ssch10_n05", "label": "Key Features (organs, rights, duties)", "kind": "concept", "x": 0.32, "y": 0.68},
+      {"id": "ssch10_n06", "label": "Living Document (amendments)", "kind": "concept", "x": 0.68, "y": 0.68},
+      {"id": "ssch10_n07", "label": "The Preamble & its values", "kind": "concept", "x": 0.5, "y": 0.92}
+    ],
+    "edges": [
+      {"id": "ssch10_e01", "from": "ssch10_n01", "to": "ssch10_n02", "label": "explains"},
+      {"id": "ssch10_e02", "from": "ssch10_n01", "to": "ssch10_n03", "label": "made by"},
+      {"id": "ssch10_e03", "from": "ssch10_n04", "to": "ssch10_n03", "label": "shaped"},
+      {"id": "ssch10_e04", "from": "ssch10_n03", "to": "ssch10_n05", "label": "produced"},
+      {"id": "ssch10_e05", "from": "ssch10_n05", "to": "ssch10_n06", "label": "can grow via"},
+      {"id": "ssch10_e06", "from": "ssch10_n05", "to": "ssch10_n07", "label": "summed up in"},
+      {"id": "ssch10_e07", "from": "ssch10_n07", "to": "ssch10_n01", "label": "is the heart of"}
+    ]
+  },
+  "examConnections": [
+    {"id": "ssch10_xc01", "title": "The Constitution returns in higher classes", "body": "The ideas introduced here — the Preamble, Fundamental Rights, Directive Principles, separation of powers and the federal structure — are studied in much greater depth in Class 8 ('The Indian Constitution', 'Understanding Secularism') and again in Class 9–10 Political Science (Democratic Politics). The making of the Constitution and the Constituent Assembly are favourite topics in board exams. Mastering the basics now — key dates, who chaired what, and the meaning of the Preamble words — makes the advanced version far easier later.", "targetExam": "CBSE Class 8–10 Political Science", "relatedConceptIds": ["ssch10_t04_c02", "ssch10_t05_c02"]},
+    {"id": "ssch10_xc02", "title": "Polity in competitive exams", "body": "Indian Polity is one of the most heavily tested subjects in competitive and civil-services examinations. Examiners love the exact facts of this chapter: the Constituent Assembly's formation (9 December 1946), Dr. Ambedkar as Drafting Committee chairman, adoption on 26 November 1949, commencement on 26 January 1950, the sources borrowed from other countries (France, Ireland, USA), and the 42nd Amendment adding 'Socialist' and 'Secular' in 1976. Knowing these precisely gives a strong head start.", "targetExam": "UPSC / State PSC / NTSE", "relatedConceptIds": ["ssch10_t02_c02", "ssch10_t03_c03"]}
+  ],
+  "deepDive": [
+    {"id": "ssch10_dv01", "title": "Why the Directive Principles can't be enforced in court", "gradeLevel": "class_8", "parentConceptId": "ssch10_t04_c02", "body": "Fundamental Rights are 'justiciable' — you can take a violation straight to court and a judge can order the government to act. Directive Principles are 'non-justiciable' — they cannot be enforced in court. Why the difference? Goals like ending poverty, ensuring good health and a decent standard of living for everyone need money, time and steady effort that a developing country has to build up gradually. If anyone could sue the government for not yet achieving them, judges, rather than elected governments, would end up deciding budgets and priorities. So the framers made the Directive Principles 'fundamental in the governance of the country' to guide policy, while leaving the pace of achieving them to the democratic process — and kept Fundamental Rights immediately enforceable so individuals are protected right now.", "prerequisite": "Knowing that Fundamental Rights can be enforced in court but Directive Principles are guidelines.", "nextStepHint": "Find one government scheme (for health, food or education) that puts a Directive Principle into action."},
+    {"id": "ssch10_dv02", "title": "The 'basic structure' — limits on amendment", "gradeLevel": "class_10", "parentConceptId": "ssch10_t04_c03", "body": "The Constitution is a living document that can be amended, but can Parliament change anything at all, even its core values? In a famous 1973 case (Kesavananda Bharati), the Supreme Court answered: no. It held that while Parliament can amend the Constitution, it cannot destroy or alter its 'basic structure' — features like the supremacy of the Constitution, democracy, secularism, separation of powers, the rule of law and judicial review. This doctrine is the reason the Constitution can grow with the country yet never lose its essential identity. It is a brilliant balance: flexible enough to adapt, but protected against being twisted into something that is no longer a free, democratic constitution.", "prerequisite": "Understanding that the Constitution can be changed through amendments under a special procedure.", "nextStepHint": "Read what the 'basic structure doctrine' lists as features that cannot be amended away."}
+  ],
+  "crossChapterRefs": [
+    {"id": "ssch10_cc01", "toChapterId": "ssch09", "topic": "The three organs of government", "pointer": "The legislature, executive and judiciary, and the three-tier system introduced in the previous Governance chapter, are the framework that the Constitution sets up and protects.", "relatedConceptIds": ["ssch10_t04_c01"]},
+    {"id": "ssch10_cc02", "toChapterId": "ssch01", "topic": "Unity in diversity", "pointer": "The idea that India is one country despite its diversity, explored in the geography and earlier 'Unity in Diversity' chapters, is embedded in the Constitution and reflected in its value of fraternity.", "relatedConceptIds": ["ssch10_t03_c02", "ssch10_t05_c03"]}
+  ],
+  "bossQuestions": [
+    {"id": "bossquiz_ssch10_q00", "prompt": "A constitution is best described as —", "questionType": "mcq", "options": ["A history of the country", "A document that spells out a nation's basic principles and laws", "A list of the country's festivals", "A map of the country's borders"], "answer": "A document that spells out a nation's basic principles and laws", "solutionSteps": ["Recall the definition of a constitution.", "It sets out basic principles and laws, government, rights and duties.", "Choose that option."], "commonMistakes": ["Confusing a constitution with a history book."], "variations": [], "difficulty": 1, "pageRefs": [212], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q01", "prompt": "The Constituent Assembly that wrote the Constitution was formed in —", "questionType": "mcq", "options": ["1942", "1946", "1950", "1976"], "answer": "1946", "solutionSteps": ["Recall the Assembly was formed on 9 December 1946.", "Choose 1946."], "commonMistakes": ["Confusing the formation year (1946) with the commencement year (1950)."], "variations": [], "difficulty": 2, "pageRefs": [213, 214], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q02", "prompt": "Who chaired the Drafting Committee of the Constitution?", "questionType": "mcq", "options": ["Dr. Rajendra Prasad", "Mahatma Gandhi", "Dr. B.R. Ambedkar", "Jawaharlal Nehru"], "answer": "Dr. B.R. Ambedkar", "solutionSteps": ["Recall the Drafting Committee wrote the initial text.", "It was chaired by Dr. B.R. Ambedkar.", "Choose Ambedkar."], "commonMistakes": ["Confusing the Assembly's Chairman (Dr. Rajendra Prasad) with the Drafting Committee's chairman."], "variations": [], "difficulty": 2, "pageRefs": [214], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q03", "prompt": "The Constitution of India came into effect on —", "questionType": "mcq", "options": ["15 August 1947", "26 November 1949", "26 January 1950", "9 December 1946"], "answer": "26 January 1950", "solutionSteps": ["The Constitution was adopted on 26 November 1949.", "It came into effect on 26 January 1950 — Republic Day.", "Choose 26 January 1950."], "commonMistakes": ["Choosing 15 August 1947 (Independence Day) or 26 November 1949 (adoption date)."], "variations": [], "difficulty": 2, "pageRefs": [214], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q04", "prompt": "Which organ of government makes the laws?", "questionType": "mcq", "options": ["The executive", "The legislature", "The judiciary", "The Election Commission"], "answer": "The legislature", "solutionSteps": ["Recall the three organs.", "The legislature makes laws, the executive implements them, the judiciary interprets them.", "Choose the legislature."], "commonMistakes": ["Confusing the executive (implements) with the legislature (makes laws)."], "variations": [], "difficulty": 1, "pageRefs": [220], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q05", "prompt": "Which of these can you enforce by going to court if it is violated?", "questionType": "mcq", "options": ["A Directive Principle of State Policy", "A Fundamental Right", "A long-term goal of the nation", "A Preamble value only"], "answer": "A Fundamental Right", "solutionSteps": ["Fundamental Rights are promises that must be kept and are enforceable in court.", "Directive Principles are guidelines and cannot be enforced.", "Choose Fundamental Right."], "commonMistakes": ["Thinking Directive Principles can be enforced in court — they cannot."], "variations": [], "difficulty": 3, "pageRefs": [222], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q06", "prompt": "From which country's constitution did India adopt the ideals of liberty, equality and fraternity?", "questionType": "mcq", "options": ["USA", "France", "Ireland", "Australia"], "answer": "France", "solutionSteps": ["These ideals came from the French Revolution of 1789.", "India adopted them from France's constitution.", "Choose France."], "commonMistakes": ["Confusing France (the three ideals) with the USA (independent judiciary)."], "variations": [], "difficulty": 3, "pageRefs": [217], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q07", "prompt": "The words 'Socialist' and 'Secular' were added to the Preamble by which amendment?", "questionType": "mcq", "options": ["The 42nd Amendment in 1976", "The 73rd Amendment in 1992", "The 86th Amendment in 2002", "They were in the original Preamble"], "answer": "The 42nd Amendment in 1976", "solutionSteps": ["Recall the note in the chapter.", "'Socialist' and 'Secular' were added by the 42nd Amendment in 1976.", "Choose that option."], "commonMistakes": ["Thinking these words were in the original 1950 Preamble."], "variations": [], "difficulty": 3, "pageRefs": [225], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q08", "prompt": "'Republic' in the Preamble means that —", "questionType": "mcq", "options": ["The head of state is an elected person, not hereditary", "There is no official religion", "Wealth must be shared by society", "The people elect their rulers"], "answer": "The head of state is an elected person, not hereditary", "solutionSteps": ["Recall the meaning of Republic in the chapter.", "It means the head of state is elected, not a hereditary king.", "Choose that option."], "commonMistakes": ["Confusing 'Republic' (elected head of state) with 'Democratic' (people elect rulers) or 'Secular' (no official religion)."], "variations": [], "difficulty": 2, "pageRefs": [225], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q09", "prompt": "The Constitution is called a 'living document' because —", "questionType": "mcq", "options": ["It is read aloud every day", "It can be changed through amendments as needs evolve", "It is kept in a glass case", "It was written by living people"], "answer": "It can be changed through amendments as needs evolve", "solutionSteps": ["Recall that a living document can change over time.", "It changes through amendments, like adding Fundamental Duties (1976).", "Choose that option."], "commonMistakes": ["Thinking 'living document' refers to how it is stored or read."], "variations": [], "difficulty": 2, "pageRefs": [223], "needsHumanReview": false, "source": "boss_quiz"}
+  ],
+  "quickCheckQuestions": [
+    {"id": "scenecheck_ssch10_q00", "prompt": "On which day every year do we celebrate the Constitution coming into effect?", "questionType": "mcq", "options": ["15 August (Independence Day)", "2 October (Gandhi Jayanti)", "26 January (Republic Day)", "26 November (Constitution Day)"], "answer": "26 January (Republic Day)", "solutionSteps": ["The Constitution came into effect on 26 January 1950.", "We celebrate this as Republic Day.", "Choose 26 January."], "commonMistakes": ["Choosing Independence Day (15 August) instead of Republic Day."], "variations": [], "difficulty": 1, "pageRefs": [210], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch10_q01", "prompt": "The opening words of the Preamble are —", "questionType": "mcq", "options": ["We, the Government of India", "We, the People of India", "I, the President of India", "We, the leaders of India"], "answer": "We, the People of India", "solutionSteps": ["Recall the Preamble's opening.", "It begins 'WE, THE PEOPLE OF INDIA'.", "Choose that option."], "commonMistakes": ["Thinking it begins with 'the Government' or 'the President'."], "variations": [], "difficulty": 1, "pageRefs": [225], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch10_q02", "prompt": "Citizens of all castes, genders and religions using the same village well best reflects which Preamble values?", "questionType": "mcq", "options": ["Sovereignty and Republic", "Equality and Justice", "Liberty and Socialism", "Fraternity and Sovereignty"], "answer": "Equality and Justice", "solutionSteps": ["Equal use regardless of caste, gender or religion shows Equality.", "No discrimination on these grounds shows Justice.", "Choose Equality and Justice."], "commonMistakes": ["Choosing Sovereignty, which is about national decision-making power, not equal treatment."], "variations": [], "difficulty": 2, "pageRefs": [225], "needsHumanReview": false, "source": "scene_quick_check"}
+  ]
+}

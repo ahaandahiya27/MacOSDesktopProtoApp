@@ -1,0 +1,2007 @@
+{
+  "id": "ssch12",
+  "number": 12,
+  "title": "Understanding Markets",
+  "summary": "Markets are the places — physical or online — where people buy and sell goods and services, fulfilling their needs and wants and connecting people, traditions and ideas. This chapter explores what a market is (from the glorious 16th-century Hampi Bazaar to today's malls and shopping apps), how every market needs buyers, sellers and an agreed price, and how prices settle 'just right' through bargaining and the interaction of demand and supply. It then maps the many forms markets take — physical and online, domestic and international, wholesale and retail — and traces the chain of participants (producer → wholesaler → distributor → retailer → consumer, with aggregators for online trade), using the Surat textile market as a living example. The chapter shows how markets benefit society beyond money — building trusted relationships and acting as melting pots of culture, like the women-run Ima Keithal of Imphal — and explains the government's role in controlling prices, ensuring quality and safety, curbing pollution and providing public goods. Finally, it teaches consumers to judge quality using certification marks (FSSAI, ISI/BIS, AGMARK, BEE Star), labels and online reviews.",
+  "pageRefs": [
+    247,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270
+  ],
+  "topics": [
+    {
+      "id": "ssch12_t01",
+      "title": "What Is a Market?",
+      "summary": "The meaning of a market, its many names, the basic features every market shares — buyers, sellers and an agreed price — and a glimpse of the famous Hampi Bazaar of the Vijayanagara Empire.",
+      "concepts": [
+        {
+          "id": "ssch12_t01_c01",
+          "title": "The Meaning of a Market",
+          "explanations": {
+            "oneLine": "A market is any place — physical or online — where people buy and sell goods and services.",
+            "kidFriendly": "A market is wherever buying and selling happens. It can be a noisy bazaar full of vegetables and clothes, a shop near your home, a big mall, or even an app on a phone! In Hindi it is called a haat or bazaar, and in Kannada a mārukatté. Markets are how goods and services reach individuals, families and businesses, and they have helped people meet their needs and wants for a very long time.",
+            "textbook": "A place where people buy and sell goods is called a market. It is also known as bazaar, haat (in Hindi) and mārukatté (in Kannada). A market can be a physical place or, as is becoming popular today, online. Goods and services become available to individuals, households and businesses through markets. For a long time, people have relied on markets to fulfil their needs and wants for goods and services. In addition, markets connect people, traditions and ideas.",
+            "expert": "Economically, a 'market' is not just a location but any arrangement that brings buyers and sellers into contact so that exchange can occur. It need not be a single physical spot: a stock exchange, a network of telephone-trading firms, or an e-commerce platform are all markets because they coordinate offers to buy and offers to sell. What defines a market is therefore the function of exchange, not the building. Markets reduce the cost of finding a trading partner, allow specialisation (people produce what they are good at and trade for the rest), and transmit information through prices — which is precisely why every economy, ancient or modern, organises itself around them."
+          },
+          "reasoning": "People cannot make everything they need themselves, so they must exchange what they have for what others have. A market is simply the meeting point that makes this exchange possible — which is why a market can be a physical bazaar or an online app, as long as buying and selling can take place there.",
+          "useCases": [
+            {
+              "title": "Naming markets around you",
+              "description": "You can recognise that your neighbourhood haat, the city mall and a shopping app are all 'markets' even though they look completely different.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Getting goods you cannot make",
+              "description": "A family that grows no rice can still eat rice because the market lets them buy it from someone who does grow it.",
+              "domain": "economy"
+            },
+            {
+              "title": "Exchanging ideas and culture",
+              "description": "Beyond goods, a market brings people of different communities together, so traditions and ideas spread along with the trade.",
+              "domain": "society"
+            }
+          ],
+          "beyondTheBook": "The English word 'market' comes from the Latin mercatus, meaning 'trade' or 'a place of trade', which also gives us 'merchant' and 'commerce'. Almost every Indian language has its own old word for a market — haat, bazaar, mandi, santhe, mārukatté, peth — showing how central trading places have always been to Indian life.",
+          "relatedConceptIds": [
+            "ssch12_t01_c02",
+            "ssch12_t01_c03",
+            "ssch12_t03_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            250,
+            251
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Market = a Meeting place where buying And selling Really happens — physical or online.",
+          "predictQuestion": "If a market does not have to be a physical place, what is the one thing it must always allow to happen?"
+        },
+        {
+          "id": "ssch12_t01_c02",
+          "title": "Needs, Wants and Why Markets Exist",
+          "explanations": {
+            "oneLine": "Markets exist because people have needs and wants they cannot meet on their own, so they trade for them.",
+            "kidFriendly": "A need is something you must have to survive — food, water, clothing, shelter. A want is something you would like but can live without, like a fancy toy or an ice cream. Since no single person can grow, build and make everything they need and want, people trade with each other. Markets are where this trading happens, so they help everyone satisfy both their needs and their wants.",
+            "textbook": "In economics, a need is something that a person requires to survive, such as food, water, clothing and shelter. A want is something that a person desires but is not essential for survival. Trade means the buying and selling or exchange of goods and services between people or countries. Because people cannot produce everything they require by themselves, they rely on markets, through trade, to fulfil their needs and wants for goods and services.",
+            "expert": "The distinction between needs and wants underlies the central economic problem: human wants are practically unlimited, but the resources to satisfy them are scarce. This scarcity forces choices, and trade is the mechanism that lets people get more satisfaction from limited resources than they could alone. By specialising in what they produce most efficiently (their comparative advantage) and exchanging the surplus in markets, individuals and nations together produce far more than if each were self-sufficient. Thus markets are not a luxury but a response to scarcity: they enlarge the range of needs and wants a society can meet from the same pool of resources."
+          },
+          "reasoning": "Because no one can produce everything they require, each person ends up with some things in surplus and short of others. Trade lets them swap surplus for shortage, and the market is the meeting place where that swap is arranged — so the deeper a society's division of labour, the more it depends on markets.",
+          "useCases": [
+            {
+              "title": "Sorting your shopping list",
+              "description": "Deciding what is a 'need' (school books) versus a 'want' (a video game) helps a family spend its money wisely.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Explaining specialisation",
+              "description": "A farmer grows wheat and a weaver makes cloth; each sells in the market and buys the other's product — both are better off.",
+              "domain": "economy"
+            },
+            {
+              "title": "Understanding trade between countries",
+              "description": "Countries trade for the same reason as people: to get goods they cannot produce well themselves.",
+              "domain": "economy"
+            }
+          ],
+          "beyondTheBook": "The chapter's epigraph quotes the 18th-century economist Adam Smith: 'Prosperity emanates from the market that develops when people need goods and services that they can't create themselves.' Smith's famous idea was that when each person pursues their own trade, society as a whole becomes richer — as if guided by an 'invisible hand'.",
+          "relatedConceptIds": [
+            "ssch12_t01_c01",
+            "ssch12_t02_c01",
+            "ssch12_t04_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            250
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Need = Necessary to survive; Want = Wish but not essential."
+        },
+        {
+          "id": "ssch12_t01_c03",
+          "title": "Features of a Market: Buyer, Seller and Price",
+          "explanations": {
+            "oneLine": "Every market must have a buyer, a seller and a price both agree on for a transaction to happen.",
+            "kidFriendly": "For a place to truly be a 'market', a few things are always needed. There must be a buyer (someone who wants to buy) and a seller (someone who wants to sell). Most importantly, they must agree on a price — the amount the buyer pays the seller. Often the buyer and seller bargain back and forth until they reach a price both are happy with. If they cannot agree, the deal does not happen!",
+            "textbook": "Certain features are required for a place to be called a market. Every market has a buyer and a seller, and they both need to agree on a price at which the transaction would take place. Price is the amount at which a buyer is willing to buy, and a seller is willing to sell, particular goods or services. Price is an important feature in completing a transaction. Often the buyers and sellers negotiate and bargain to arrive at an acceptable price; if such an agreement is not reached, the transaction may not take place.",
+            "expert": "A transaction requires a 'double coincidence' of willingness: the buyer must value the good at least as much as the asking price, and the seller must value the money at least as much as the good. Bargaining is the process of discovering whether an overlapping range of acceptable prices exists between the buyer's maximum and the seller's minimum. If that range exists, any price within it can close the deal; if it does not — the buyer's top price is below the seller's bottom price — no exchange occurs, no matter how long they haggle. Price therefore does two jobs at once: it completes the individual transaction and it signals to others how scarce and how wanted the good is."
+          },
+          "reasoning": "A sale is an agreement, and an agreement needs two willing sides. The buyer will only pay up to what the good is worth to them, and the seller will only accept what covers their cost and profit. The price is the single number on which these two sides must meet — without that meeting, there is no transaction.",
+          "useCases": [
+            {
+              "title": "Bargaining at a vegetable cart",
+              "description": "A buyer offering less and a seller asking more keep adjusting until they settle on a price both accept.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Knowing when a deal is impossible",
+              "description": "If a seller's lowest price is still higher than a buyer's highest, no amount of bargaining can complete the sale.",
+              "domain": "economy"
+            },
+            {
+              "title": "Reading a price tag",
+              "description": "A fixed price tag in a shop is the seller stating their price in advance, so there is little or no bargaining.",
+              "domain": "everyday"
+            }
+          ],
+          "beyondTheBook": "Some markets bargain hard (a roadside vegetable cart), while others almost never do (a supermarket with fixed price tags). Fixed prices save time and let huge shops sell to thousands of customers quickly — which is why big stores, malls and online apps usually do not bargain at all.",
+          "relatedConceptIds": [
+            "ssch12_t01_c01",
+            "ssch12_t02_c01",
+            "ssch12_t02_c02"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            251,
+            252
+          ],
+          "needsHumanReview": false,
+          "predictQuestion": "Why might a huge supermarket choose to put fixed price tags on everything instead of letting customers bargain?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch12_t01_q01",
+          "prompt": "What are the main features that every market must have?",
+          "questionType": "shortAnswer",
+          "answer": "Every market must have a buyer (someone willing to buy), a seller (someone willing to sell), and a price that both agree on for the transaction to take place. Often the buyer and seller bargain until they reach a mutually acceptable price; if they cannot agree on a price, the transaction does not happen.",
+          "solutionSteps": [
+            "Recall that a market is a place where buying and selling happen.",
+            "List the essential parties: a buyer and a seller.",
+            "Add the third feature: an agreed price.",
+            "Note that bargaining helps them reach this price, and no agreement means no sale."
+          ],
+          "commonMistakes": [
+            "Listing only a 'place' as the feature and forgetting buyer, seller and price.",
+            "Forgetting that the price must be agreed by BOTH sides, not set by one alone."
+          ],
+          "variations": [
+            {
+              "prompt": "Define 'price' as used in a market.",
+              "answer": "Price is the amount at which a buyer is willing to buy, and a seller is willing to sell, particular goods or services.",
+              "solutionSteps": [
+                "Recall price links the buyer's willingness to pay and the seller's willingness to sell.",
+                "State it as the agreed amount of money for the goods or services."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            251
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t01_q02",
+          "prompt": "Which of these is NOT another name for a market?",
+          "questionType": "mcq",
+          "options": [
+            "Haat",
+            "Bazaar",
+            "Mārukatté",
+            "Mānasrāva"
+          ],
+          "answer": "Mānasrāva",
+          "solutionSteps": [
+            "Recall the chapter's names for a market: bazaar, haat (Hindi), mārukatté (Kannada).",
+            "Check each option against this list.",
+            "'Mānasrāva' is the small extra quantity of ghee Kauṭilya said should be given to a buyer — not a name for a market."
+          ],
+          "commonMistakes": [
+            "Confusing mānasrāva (a term from the Arthaśhāstra about giving a little extra to the buyer) with a name for a marketplace."
+          ],
+          "variations": [
+            {
+              "prompt": "Give the Hindi and Kannada words for a market mentioned in the chapter.",
+              "answer": "Haat (Hindi) and mārukatté (Kannada); bazaar is also used.",
+              "solutionSteps": [
+                "Recall the regional names listed for a market."
+              ]
+            }
+          ],
+          "difficulty": 1,
+          "pageRefs": [
+            250,
+            266
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t01_q03",
+          "prompt": "Explain why markets exist, using the idea of needs and wants.",
+          "questionType": "longAnswer",
+          "answer": "A need is something a person requires to survive, such as food, water, clothing and shelter, while a want is something a person desires but is not essential for survival. No single person can produce everything they need and want by themselves. So people trade — they buy and sell or exchange goods and services. Markets are the places where this trade happens, allowing individuals, households and businesses to obtain the goods and services they need and want but cannot produce on their own. Markets also connect people, traditions and ideas.",
+          "solutionSteps": [
+            "Define a need (essential for survival) and a want (desired but not essential).",
+            "Explain that no one can produce everything they require.",
+            "Introduce trade as the buying, selling or exchange of goods and services.",
+            "Conclude that markets are where trade happens, letting people meet needs and wants."
+          ],
+          "commonMistakes": [
+            "Treating 'need' and 'want' as the same thing.",
+            "Saying markets exist only to make money, missing that they also let people get goods they cannot make and connect people and cultures."
+          ],
+          "variations": [
+            {
+              "prompt": "Give two examples of a need and two examples of a want.",
+              "answer": "Needs: food and water (also clothing, shelter). Wants: a video game and an expensive toy (anything desired but not essential for survival).",
+              "solutionSteps": [
+                "Recall needs are survival essentials.",
+                "Recall wants are desires that are not essential."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            250
+          ],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch12_t02",
+      "title": "How Prices Are Determined",
+      "summary": "How bargaining settles a price, what happens when a seller sets it too high or too low, and how the interaction of demand from buyers and supply from sellers fixes a price that is 'just right'.",
+      "concepts": [
+        {
+          "id": "ssch12_t02_c01",
+          "title": "Negotiation and the 'Just Right' Price",
+          "explanations": {
+            "oneLine": "A seller who asks too much finds no buyers, one who asks too little loses money, so bargaining settles a price that is just right for both.",
+            "kidFriendly": "Imagine a guava seller wants ₹80 per kg. If that feels too high, buyers walk away and the guavas don't sell. If he drops the price to just ₹20, he sells fast but barely earns anything. Over time he learns to set a price like ₹40 — not so high that buyers refuse, not so low that he makes no profit. That balanced price is the 'just right' price.",
+            "textbook": "In one scenario, a seller wants to sell guavas at ₹80 per kg, but buyers may not be willing to buy at that high price. In another, if the seller fixes the price very low (₹20), it is not profitable for him. Over time, the price of guavas is fixed at one that is just right — not very high for the buyer, and not too low for the seller (for example, ₹40). The buyer and seller negotiate until a mutually agreeable price is reached, and then the transaction can be completed. If such a point is not reached, the transaction may not take place.",
+            "expert": "This is the mechanism of price discovery. Each round of bargaining reveals information: a refusal at ₹80 tells the seller the price is above buyers' valuation; brisk sales at ₹20 tell him he has left profit on the table. Repeated transactions push the price toward the level where the quantity buyers want to buy roughly matches the quantity the seller wants to sell — the equilibrium price. Crucially, no central authority sets this number; it emerges from many decentralised bargains. The same logic scales from a single guava cart to entire national markets, where countless buyers and sellers, each acting in self-interest, jointly settle a price that coordinates their plans."
+          },
+          "reasoning": "A price that is too high drives buyers away, leaving the seller with unsold goods; a price that is too low sells everything but earns too little to cover costs and profit. Trial and bargaining push the price toward the middle, where both sides are willing to trade — that balance point is the 'just right' price.",
+          "useCases": [
+            {
+              "title": "Setting a price at a school fair stall",
+              "description": "If your stall's snacks don't sell, you lower the price; if they vanish instantly, you could have charged more — you home in on the right price.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Late-night discounts at a weekly market",
+              "description": "Vegetables are sold cheaper late at night because sellers would rather drop the price than be left with unsold, perishable stock.",
+              "domain": "economy"
+            },
+            {
+              "title": "End-of-season clearance sales",
+              "description": "Garment stores slash prices on woollens at winter's end, lowering the price to clear goods that will otherwise not sell.",
+              "domain": "economy"
+            }
+          ],
+          "beyondTheBook": "Sellers also learn from the price: once a guava seller sees how much sells at ₹40, he can estimate roughly what quantity buyers will want next time and bring just that much to market — so the price even guides how much a seller produces or stocks.",
+          "relatedConceptIds": [
+            "ssch12_t02_c02",
+            "ssch12_t01_c03",
+            "ssch12_t05_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            252,
+            253
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Too High = no buyers; Too Low = no profit; Just Right = both happy.",
+          "whyChain": [
+            "Why can't a seller simply charge the highest price he likes? Because buyers are not forced to buy. If a guava seller demands ₹80 per kg and buyers judge that too dear, they will refuse and walk to another seller or skip the purchase entirely. The seller is then left holding guavas that may rot before they sell, so an over-high price actually punishes the seller by wasting his stock and earning him nothing at all.",
+            "Why is a very low price also a problem for the seller? Because the money a seller receives must cover what he paid to obtain the guavas, his transport, his time, and still leave a profit. If he sells at ₹20 when the guavas cost him more than that to bring to market, every sale loses him money. He may empty his cart quickly, but he goes home poorer, so a too-low price is just as harmful to him as a too-high one is.",
+            "Why does bargaining tend to settle on a 'just right' price like ₹40? Because each refusal or quick sale is information. When buyers refuse ₹80, the seller learns the price is too high; when ₹20 sells out instantly, he learns he could charge more. By adjusting up and down over many transactions, both sides converge on a price high enough to give the seller a profit yet low enough that buyers are still willing to pay — the balance point where the most trade happens."
+          ]
+        },
+        {
+          "id": "ssch12_t02_c02",
+          "title": "Demand and Supply",
+          "explanations": {
+            "oneLine": "Prices are set by the interaction of demand from buyers and supply from sellers.",
+            "kidFriendly": "Demand is how much of something buyers are willing and able to buy at a given price. Supply is how much sellers are willing and able to sell at that price. When lots of buyers want something but little of it is available, the price goes up. When sellers bring much more than buyers want, the price falls. The price keeps adjusting until the amount offered matches the amount wanted.",
+            "textbook": "Markets function through the interaction of demand from buyers and supply by sellers. Demand is the quantity of a product or service that consumers are willing and able to purchase at a particular price at a given time. Supply is the quantity of a product or service that sellers are willing and able to sell at a particular price at a given time. Over time, the amount of goods offered by sellers and the amount required by buyers together help determine the price of the goods that is just right — high enough for the seller and low enough for the buyer.",
+            "expert": "Demand and supply are best thought of as schedules: for every possible price, there is a quantity buyers will demand and a quantity sellers will supply. As price rises, quantity demanded generally falls (the 'law of demand') while quantity supplied generally rises (the 'law of supply'). The market clears at the equilibrium price, where the two quantities are equal — no unsold surplus and no unmet shortage. A change on either side shifts this balance: if supply falls (a poor onion crop) while demand stays the same, the price rises; if demand rises while supply is fixed, the price also rises. This framework, taught formally in higher classes, is the single most powerful tool in economics for explaining why prices move."
+          },
+          "reasoning": "Buyers and sellers pull the price in opposite directions: buyers want it low, sellers want it high. When buyers want more than is available, they compete and bid the price up; when sellers offer more than buyers want, they compete and the price falls. The price settles where the quantity demanded equals the quantity supplied.",
+          "useCases": [
+            {
+              "title": "Why onion prices jump",
+              "description": "When the supply of onions falls in some seasons but people still want the same amount, the price of onions rises sharply.",
+              "domain": "economy"
+            },
+            {
+              "title": "Why a glut crashes prices",
+              "description": "When tomato farmers all harvest a huge crop at once, supply far exceeds demand and prices can fall so low that produce is wasted.",
+              "domain": "agriculture"
+            },
+            {
+              "title": "Predicting demand for next season",
+              "description": "A guava seller who knows how much sold this season can estimate next season's demand and plan his supply.",
+              "domain": "economy"
+            }
+          ],
+          "beyondTheBook": "Sometimes a product's price stays high even when few people buy it — for example, rare artwork, antiques or limited-edition items. Here scarcity (very low supply) and the special value buyers place on uniqueness keep the price high, showing that demand and supply depend on how rare and how wanted a thing is, not just on the number of buyers.",
+          "relatedConceptIds": [
+            "ssch12_t02_c01",
+            "ssch12_t04_c01",
+            "ssch12_t05_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            253,
+            265
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Demand = buyers' Desire to buy; Supply = sellers' Stock to sell; where they meet sets the price."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch12_t02_q01",
+          "prompt": "A guava seller first asks ₹80 per kg, then tries ₹20 per kg, and finally settles at ₹40 per kg. Explain what is happening and why ₹40 is the 'just right' price.",
+          "questionType": "longAnswer",
+          "answer": "At ₹80 the price is too high, so buyers refuse and the guavas do not sell. At ₹20 the price is too low — the seller sells easily but makes little or no profit, perhaps even a loss. Over time, through bargaining and seeing how buyers respond, the seller settles at ₹40, which is high enough for him to earn a profit but low enough that buyers are willing to pay. This balanced price, where the amount offered by the seller matches the amount wanted by buyers, is the 'just right' price.",
+          "solutionSteps": [
+            "Explain the ₹80 case: too high, buyers refuse, no sale.",
+            "Explain the ₹20 case: too low, sells fast but no profit.",
+            "Explain how repeated bargaining reveals a middle price.",
+            "Conclude ₹40 balances the seller's profit and the buyer's willingness to pay."
+          ],
+          "commonMistakes": [
+            "Thinking the lowest price is always best — a too-low price hurts the seller.",
+            "Thinking the seller alone decides the price, ignoring that buyers must be willing to pay it."
+          ],
+          "variations": [
+            {
+              "prompt": "Why are vegetables often sold cheaper late at night in a weekly market?",
+              "answer": "Because vegetables are perishable and the market is closing, so sellers would rather lower the price and sell their remaining stock than be left with vegetables that will spoil and earn nothing.",
+              "solutionSteps": [
+                "Note vegetables are perishable.",
+                "Note the market is ending, so leftover stock is a loss.",
+                "Conclude lowering the price clears the stock and reduces waste."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            252,
+            253
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t02_q02",
+          "prompt": "____ is the quantity of a product that consumers are willing and able to purchase at a particular price, while ____ is the quantity that sellers are willing and able to sell.",
+          "questionType": "fillInBlank",
+          "answer": "Demand; Supply",
+          "solutionSteps": [
+            "Recall the definition of demand (buyers' willingness and ability to buy).",
+            "Recall the definition of supply (sellers' willingness and ability to sell).",
+            "Fill the first blank with Demand and the second with Supply."
+          ],
+          "commonMistakes": [
+            "Swapping demand and supply.",
+            "Leaving out 'willing AND able' — demand requires both the desire and the means to pay."
+          ],
+          "variations": [
+            {
+              "prompt": "What generally happens to the price of onions when their supply falls but people still want the same amount?",
+              "answer": "The price of onions rises, because buyers compete for the smaller quantity available.",
+              "solutionSteps": [
+                "Recall lower supply with steady demand.",
+                "Conclude the price rises."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            253,
+            265
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t02_q03",
+          "prompt": "True or False: A product can have a high price even when only a few buyers want it.",
+          "questionType": "trueFalse",
+          "answer": "True",
+          "solutionSteps": [
+            "Recall that price depends on both demand and supply.",
+            "Note that very rare items (artwork, antiques, limited editions) have very low supply.",
+            "Scarcity and the special value buyers place on them keep the price high despite few buyers, so the statement is True."
+          ],
+          "commonMistakes": [
+            "Assuming few buyers must always mean a low price — scarcity of supply can keep the price high."
+          ],
+          "variations": [
+            {
+              "prompt": "Name one type of product whose price can stay high even though few people buy it.",
+              "answer": "Rare artwork, antiques, or limited-edition collectible items (any scarce, highly valued good).",
+              "solutionSteps": [
+                "Recall goods that are very scarce.",
+                "Note that scarcity plus special value keeps the price high."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            253,
+            271
+          ],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch12_t03",
+      "title": "Markets Around Us",
+      "summary": "The many forms markets take — physical and online, domestic and international — including malls, shopping apps, the stock market, and trade across borders through exports and imports.",
+      "concepts": [
+        {
+          "id": "ssch12_t03_c01",
+          "title": "Physical and Online Markets",
+          "explanations": {
+            "oneLine": "Physical markets are where buyers meet sellers in person; online markets let people trade through apps and websites without meeting.",
+            "kidFriendly": "Markets come in many forms. A physical market is one where you go and meet the seller — like a weekly haat with vegetable carts, a local shop selling street food and knick-knacks, or a big mall with many stores. An online market is different: you buy through an app or website on a phone or computer, even from a seller thousands of kilometres away, and the goods are delivered to your door!",
+            "textbook": "Markets are present everywhere and in various forms. A physical market is where buyers can meet the seller physically and purchase goods or services in exchange for money — this is the most common type. It includes weekly markets and haats where vendors sell vegetables, essential items and handicrafts, local markets with shops selling street food and knick-knacks, and multi-storey malls in cities and towns. Today, buyers and sellers need not meet in person: they can transact from a convenient location far away using shopping apps or websites created by businesses. One can buy books, clothes, furniture, groceries and electronics and have them delivered to the doorstep, and even avail of services like online classes, paying online.",
+            "expert": "The physical–online distinction is really about how buyers and sellers are matched. Physical markets rely on co-location: the parties share a place and a moment. Online markets dissolve both constraints — buyers and sellers can be separated by thousands of kilometres and by time, since a website accepts orders around the clock. This lowers 'search costs' dramatically and widens the market from a neighbourhood to potentially the whole world, but it introduces new problems the physical market did not have: the buyer cannot inspect the good before purchase and must trust the seller's description, which is why online reviews, ratings and return policies become essential institutions. Some services, however, require in-person contact — tailoring, a haircut, a medical examination — and so physical markets remain irreplaceable for them."
+          },
+          "reasoning": "The key difference is whether buyer and seller must be in the same place at the same time. Physical markets need that meeting; online markets replace it with apps and delivery, which lets them reach far-away customers but also means the buyer must trust a description instead of inspecting the goods.",
+          "useCases": [
+            {
+              "title": "Choosing how to shop",
+              "description": "A family might visit a local mandi for fresh vegetables but order a laptop online for home delivery — picking the market type that suits the good.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Services that need a physical market",
+              "description": "Tailoring, a haircut or a doctor's check-up need in-person contact, so they cannot be fully replaced by an online market.",
+              "domain": "society"
+            },
+            {
+              "title": "Reaching distant customers",
+              "description": "A small handicraft maker can sell to buyers in another state through a shopping app, something a single physical stall could never do.",
+              "domain": "economy"
+            }
+          ],
+          "beyondTheBook": "Not every market trades goods or services. The share or stock market is a market where people buy and sell tiny ownership shares of companies. The chapter notes you will explore this later — it shows that the word 'market' covers any organised place for buying and selling, even something as abstract as part-ownership of a business.",
+          "relatedConceptIds": [
+            "ssch12_t03_c02",
+            "ssch12_t04_c03",
+            "ssch12_t01_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            254,
+            255
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Physical = meet in Person; Online = trade On a screen, delivered to your door.",
+          "predictQuestion": "Online shopping lets you buy from far away — but what important thing can you NOT do that you could do in a physical shop?"
+        },
+        {
+          "id": "ssch12_t03_c02",
+          "title": "Domestic and International Markets",
+          "explanations": {
+            "oneLine": "A domestic market trades within a country's borders; an international market trades across borders through exports and imports.",
+            "kidFriendly": "A domestic market is one where buying and selling happen inside the country. For example, the paper to print this very book was bought from paper mills within India. An international market goes beyond a country's borders: sellers in one country export (sell) their products to another country, and buyers in one country import (buy) products made in another. So trade can happen across the borders of countries.",
+            "textbook": "A market where goods and services are bought and sold within the geographical boundaries of the country is called a domestic market. For example, to print this book, paper was procured from big paper mills located all over India, and the transaction took place within the country. International markets exist outside a nation's boundary: sellers in one country export their products to another country, or buyers in one country import products produced in another. Export means selling goods or services produced in one country to a buyer in another country. Import means buying goods or services from other countries and bringing them into one's own country. Thus, trade occurs across the borders of countries.",
+            "expert": "International trade rests on the same gains-from-specialisation logic as domestic trade, only across national borders, where countries exchange goods they produce relatively efficiently for goods others produce more efficiently. India, for instance, exports outsourced software services to North America, chemical products to South America, pharmaceuticals to Africa, engineering goods to Europe and refined petroleum to West Asia, while importing aircraft components, mineral ores, diamonds, electrical equipment, crude petroleum and vegetable oils in return. Such trade is shaped by resource endowments, skills, geography and policy (tariffs, port infrastructure). Because the buyer and seller are under different governments and currencies, international markets require extra institutions — shipping, customs, exchange of currencies — that domestic markets do not."
+          },
+          "reasoning": "The dividing line is a country's border. If a transaction happens entirely inside the country it is part of the domestic market; if goods cross the border it is international trade. Selling across the border is exporting and buying from across it is importing — the two halves of international trade.",
+          "useCases": [
+            {
+              "title": "Tracing where a product came from",
+              "description": "Checking whether the cotton, parts or oil in a product came from within India or from abroad tells you if a domestic or international market was involved.",
+              "domain": "economy"
+            },
+            {
+              "title": "Understanding India's exports",
+              "description": "India earns money by exporting software, chemicals, pharmaceuticals, engineering goods and refined petroleum to other parts of the world.",
+              "domain": "economy"
+            },
+            {
+              "title": "Explaining what India imports",
+              "description": "India imports crude petroleum, diamonds, aircraft components and vegetable oils because it needs more than it can produce itself.",
+              "domain": "economy"
+            }
+          ],
+          "beyondTheBook": "India was the world's largest importer of vegetable oils — like palm oil, sunflower oil and soybean oil — in 2024, with most of the palm oil coming from Malaysia, Indonesia and Thailand. This shows how a country imports goods it cannot grow enough of itself, linking Indian kitchens to farms thousands of kilometres away.",
+          "relatedConceptIds": [
+            "ssch12_t03_c01",
+            "ssch12_t04_c01",
+            "ssch12_t04_c02"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            255,
+            256
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Export = goods Exit the country (sell out); Import = goods come IN (buy in)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch12_t03_q01",
+          "prompt": "Distinguish between a physical market and an online market, giving one example of each.",
+          "questionType": "longAnswer",
+          "answer": "A physical market is one where the buyer meets the seller in person and buys goods or services in exchange for money — for example, a weekly haat, a local shop, or a mall. An online market lets buyers and sellers transact without meeting, using shopping apps or websites on a phone or computer, even from far away, with goods delivered to the doorstep — for example, buying clothes or a laptop from a shopping app. The main difference is that a physical market needs the parties to meet, while an online market does not, though a buyer online cannot inspect the goods before buying.",
+          "solutionSteps": [
+            "Define a physical market (buyer and seller meet in person).",
+            "Give a physical example (haat, shop or mall).",
+            "Define an online market (transact through apps/websites without meeting).",
+            "Give an online example and note the key difference."
+          ],
+          "commonMistakes": [
+            "Thinking a mall is an online market — a mall is a physical market.",
+            "Forgetting that in an online market the buyer cannot inspect the goods first."
+          ],
+          "variations": [
+            {
+              "prompt": "Name a service that needs a physical market and cannot be done online.",
+              "answer": "Services that require in-person contact, such as tailoring, a haircut at a salon, or a doctor's physical examination.",
+              "solutionSteps": [
+                "Recall services needing physical presence.",
+                "Name one such as tailoring or a haircut."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            254,
+            255
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t03_q02",
+          "prompt": "When India sells software services to North America, this is an example of —",
+          "questionType": "mcq",
+          "options": [
+            "An import",
+            "A domestic transaction",
+            "An export",
+            "A stock market"
+          ],
+          "answer": "An export",
+          "solutionSteps": [
+            "Recall that export means selling goods or services produced in one country to a buyer in another.",
+            "India produces the software and sells it abroad.",
+            "Therefore it is an export."
+          ],
+          "commonMistakes": [
+            "Confusing export (selling abroad) with import (buying from abroad)."
+          ],
+          "variations": [
+            {
+              "prompt": "When India buys crude petroleum from West Asia, what is this called?",
+              "answer": "An import, because India is buying goods from another country and bringing them into its own.",
+              "solutionSteps": [
+                "Recall import means buying from abroad.",
+                "India buys the petroleum, so it is an import."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            255,
+            256
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t03_q03",
+          "prompt": "Match each market type with its characteristic.",
+          "questionType": "matchTheFollowing",
+          "answer": "Physical market → requires the physical presence of buyer and seller; Online market → buyers and sellers meet virtually and can transact at any time; Domestic market → lies within the boundaries of a nation; International market → goods and services flow outside the nation's boundaries.",
+          "matchPairs": [
+            {
+              "left": "Physical market",
+              "right": "Requires the physical presence of buyer and seller"
+            },
+            {
+              "left": "Online market",
+              "right": "Buyers and sellers meet virtually and can transact at any time"
+            },
+            {
+              "left": "Domestic market",
+              "right": "Lies within the boundaries of a nation"
+            },
+            {
+              "left": "International market",
+              "right": "Goods and services flow outside the nation's boundaries"
+            }
+          ],
+          "solutionSteps": [
+            "Match 'physical' to the need for in-person presence.",
+            "Match 'online' to virtual, anytime transactions.",
+            "Match 'domestic' to trade within the country.",
+            "Match 'international' to trade across national borders."
+          ],
+          "commonMistakes": [
+            "Swapping domestic and international, or physical and online."
+          ],
+          "variations": [
+            {
+              "prompt": "Which market type deals in bulk quantities and serves shopkeepers rather than final consumers?",
+              "answer": "The wholesale market.",
+              "solutionSteps": [
+                "Recall wholesalers buy and sell in large quantities.",
+                "They supply retailers, not final consumers."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            254,
+            255,
+            271
+          ],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch12_t04",
+      "title": "The Chain from Producer to Consumer",
+      "summary": "How goods travel from producer to consumer through wholesalers, distributors and retailers in physical markets, and through aggregators in online markets, illustrated by the Surat textile market.",
+      "concepts": [
+        {
+          "id": "ssch12_t04_c01",
+          "title": "Wholesalers and Retailers",
+          "explanations": {
+            "oneLine": "Wholesalers buy in bulk from producers and sell to retailers, who then sell smaller quantities to final consumers.",
+            "kidFriendly": "Goods do not jump straight from the farm to your home — they pass through a chain. Wholesalers buy goods in big quantities straight from producers (like buying tonnes of vegetables from farms) and store them in large warehouses called godowns. They then supply these goods to retailers — the shopkeepers near your home. Retailers sell in small amounts to final consumers like us, for us to actually use, not to resell.",
+            "textbook": "Several participants play their role in the smooth functioning of markets. In physical markets, wholesalers buy goods in large quantities from the producer or manufacturer. For example, grains, vegetables and fruits are bought by wholesalers directly from the farms; the produce is stored in large warehouses called godowns (perishables may use cold storage) and then brought to markets called mandīs. Wholesale markets also exist for chemicals, electronic items, construction materials, automotive parts and more. The wholesalers supply goods to shops and stores located near households; these shopkeepers are called retailers, who sell goods to final consumers in smaller quantities, meant for consumption rather than resale. Retail also exists for services like salons, movie theatres and restaurants.",
+            "expert": "Wholesalers and retailers exist because they perform real economic functions that lower the total cost of getting goods from producer to consumer. Wholesalers achieve economies of scale: buying and transporting in bulk is far cheaper per unit than many small purchases, and by holding stock in godowns and cold storage they smooth the gap between when goods are produced (often seasonally) and when they are consumed (continuously). They also bear risk — of spoilage, of price changes — on behalf of others. Retailers, in turn, 'break bulk', converting large lots into the small, convenient quantities households actually want, and they locate near consumers to reduce the buyer's travel and search costs. Each layer adds a margin but also adds value, which is why the chain persists."
+          },
+          "reasoning": "Producers make goods in huge quantities in one place, but consumers want small amounts close to home. Wholesalers bridge this by buying bulk and storing it; retailers bridge it further by splitting bulk into small quantities sold nearby. Each step makes the goods more convenient for the next buyer in the chain.",
+          "useCases": [
+            {
+              "title": "Tracing a vegetable's journey",
+              "description": "Vegetables go from farm → wholesaler's godown → mandī → retailer's shop → your kitchen, each step bringing them closer and in smaller amounts.",
+              "domain": "economy"
+            },
+            {
+              "title": "Why a shop charges more than the mandī",
+              "description": "The retailer near your home charges a little more than the wholesale mandī because of the convenience, small quantities and service the retailer adds.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Storing perishables",
+              "description": "Cold storage warehouses keep vegetables and fruits fresh between the farm and the market, reducing waste.",
+              "domain": "agriculture"
+            }
+          ],
+          "beyondTheBook": "India has famous specialised wholesale markets: Khari Baoli in Old Delhi is Asia's largest spice and dry-fruit market, and Bengaluru has a huge flower market. These show how wholesalers often cluster by product, making it easy for retailers to find exactly what they need in one place.",
+          "relatedConceptIds": [
+            "ssch12_t04_c02",
+            "ssch12_t04_c03",
+            "ssch12_t02_c02"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            257,
+            258
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Wholesaler = buys Whole lots (bulk); Retailer = sells Retail bits (small) to you."
+        },
+        {
+          "id": "ssch12_t04_c02",
+          "title": "Distributors and Aggregators",
+          "explanations": {
+            "oneLine": "Distributors carry goods from wholesalers to far-flung retailers; aggregators are online platforms that combine many sellers' offers for consumers.",
+            "kidFriendly": "Sometimes a wholesaler cannot reach all the small shops because they are far away or hard to get to. Distributors fill this gap — they carry goods from manufacturers and wholesalers to retailers spread across distances and tough terrains (like the milkmen in the AMUL story). For online markets, the chain is different: an aggregator is a website or app that gathers offers from many different sellers in one place, then packs and delivers the product to the online buyer.",
+            "textbook": "In some cases it may be difficult for wholesalers to reach a large number of retailers because of distances and terrains. Distributors are individuals or businesses who supply goods from manufacturers and wholesalers to retailers, helping bridge this gap (like the middlemen for milk in the AMUL story). The distribution channel is different for online markets: here manufacturers send bulk quantities of their products to the warehouse of the business that sells through online apps. Consumers buy from the website or mobile application. These businesses are called aggregators — a website or mobile application that organises and combines offers from multiple sellers and sells them to consumers at one place. The aggregator then packs the products and delivers them to the online buyer.",
+            "expert": "Distributors and aggregators are both intermediaries, but they solve different coordination problems. A distributor solves a logistics problem: it extends a wholesaler's physical reach into territories that are too scattered or remote to serve directly, taking on transport, local storage and credit to small shops. An aggregator solves a matching and trust problem in the online world: by combining the catalogues of many sellers onto one platform, it lets a consumer compare and choose from a vast assortment in seconds, while the platform standardises payment, packing, delivery and returns. In effect the aggregator replaces the whole physical chain of wholesaler-distributor-retailer with a single digital layer plus a warehouse — which is why online retailing can sometimes reach consumers with fewer middlemen."
+          },
+          "reasoning": "When the gap between a wholesaler and scattered shops is too wide, a distributor steps in to physically carry goods across it. Online, the gap is not physical but one of choice and trust, so an aggregator app steps in to gather many sellers in one place and handle delivery — each middleman solving the problem its channel creates.",
+          "useCases": [
+            {
+              "title": "Reaching remote village shops",
+              "description": "A distributor carries soap or biscuits from a city wholesaler to small shops in distant villages a wholesaler could not easily reach.",
+              "domain": "economy"
+            },
+            {
+              "title": "Shopping on one app",
+              "description": "An aggregator app lets you compare clothes, books and electronics from many different sellers without visiting separate shops.",
+              "domain": "everyday"
+            },
+            {
+              "title": "The AMUL milk chain",
+              "description": "Middlemen collect milk from many small dairy farmers and distribute it onward — a real-life distribution network.",
+              "domain": "agriculture"
+            }
+          ],
+          "beyondTheBook": "The AMUL cooperative model is famous worldwide: instead of leaving small dairy farmers at the mercy of exploitative middlemen, farmers themselves own the cooperative that collects, processes and distributes their milk. It shows that the 'middleman' role is necessary, but who controls it decides whether farmers or outsiders capture the profit.",
+          "relatedConceptIds": [
+            "ssch12_t04_c01",
+            "ssch12_t04_c03",
+            "ssch12_t03_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            259
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Distributor = Delivers across Distances; Aggregator = Gathers many sellers in one App."
+        },
+        {
+          "id": "ssch12_t04_c03",
+          "title": "The Supply Chain: The Surat Textile Example",
+          "explanations": {
+            "oneLine": "A product passes through many stages and markets — as shown by raw cotton becoming finished sarees in Surat — before reaching the consumer.",
+            "kidFriendly": "Let's follow real cloth! Surat in Gujarat is Asia's oldest textile market. Raw cotton arrives there from nearby states like Maharashtra through cotton mandīs. It then passes through stage after stage — woven on power looms, dyed in processing units — moving through a separate market at each stage (for woven fabric, for dyed fabric, for finished sarees and garments). Finally, wholesalers sell the finished cloth to shopkeepers and big stores across India and even abroad.",
+            "textbook": "The Surat textile market in Gujarat — Asia's oldest textile market — consists of thousands of factories manufacturing cotton and synthetic textiles. Raw cotton is received through cotton mandīs from nearby states like Maharashtra and other parts of Gujarat. It is transformed into finished fabric or garments after processing at various stages — weaving on power looms, dyeing in processing units, and so on. The product moves from one stage to another through markets — for woven fabric, for dyed fabric, and for finished products like sarees or ready-made garments. The finished product is then traded by the manufacturing units in the wholesale market. The wholesalers oversee distribution to small shopkeepers and big retail stores across the country and internationally, assess how much each retailer needs, and thereby help maintain stock and ensure an uninterrupted supply of products to the end consumers.",
+            "expert": "The Surat example illustrates a 'value chain': raw material gains value at each successive stage of processing, and each stage is itself a market with its own buyers and sellers. This vertical chain of specialised markets allows extreme division of labour — spinners, weavers, dyers and garment-makers each focus on one task — which raises productivity but requires tight coordination so that output of one stage matches the input needs of the next. Wholesalers perform this coordination by reading retailer demand and signalling it back up the chain, so manufacturers produce neither too much nor too little. The clustering of all these stages in one city (an 'industrial cluster') further cuts transport time and lets skills, suppliers and infrastructure concentrate — which is exactly why Surat, with its port, railways and centuries of artisan skill, became a textile and diamond hub."
+          },
+          "reasoning": "A finished saree is not made in one step; it is built up from raw cotton through weaving, dyeing and stitching. Because each stage needs different skills and machines, each is its own little market where the half-finished product is bought and sold — so the good travels through a whole chain of markets before it is ready for a consumer.",
+          "useCases": [
+            {
+              "title": "Tracing a saree back to cotton",
+              "description": "Following a finished saree backward through dyeing, weaving and the cotton mandī shows how many markets and hands a single product passes through.",
+              "domain": "economy"
+            },
+            {
+              "title": "Why wholesalers prevent shortages",
+              "description": "By assessing how much each retailer needs, wholesalers tell manufacturers how much to produce, keeping shop shelves stocked.",
+              "domain": "economy"
+            },
+            {
+              "title": "Understanding industrial hubs",
+              "description": "Surat's port, railways and skilled artisans explain why so many textile and diamond businesses cluster there.",
+              "domain": "society"
+            }
+          ],
+          "beyondTheBook": "Apart from textiles, Surat is home to the largest diamond industry in the world — around 1.5 million artisans cut and polish diamonds there. Trade has flourished in Surat since the 16th century, helped by its west-coast location with ports and road networks, and by communities of skilled artisans whose crafts have been passed down over generations.",
+          "relatedConceptIds": [
+            "ssch12_t04_c01",
+            "ssch12_t04_c02",
+            "ssch12_t03_c02"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            260,
+            261,
+            262
+          ],
+          "needsHumanReview": false,
+          "predictQuestion": "Why does a single saree have to pass through several different markets before it is ready to be sold to you?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch12_t04_q01",
+          "prompt": "Describe the flow of goods from the producer to the consumer in a physical market, naming the participants.",
+          "questionType": "longAnswer",
+          "answer": "In a physical market, goods flow from the producer or manufacturer through several participants to the final consumer. Wholesalers buy goods in large quantities directly from producers (for example, grains and vegetables from farms) and store them in warehouses called godowns or in cold storage. Where wholesalers cannot easily reach scattered retailers, distributors carry the goods onward. The goods reach retailers — the shopkeepers near households — who sell them in small quantities to final consumers like us, meant for consumption rather than resale. So the chain is: Producer → Wholesaler → (Distributor) → Retailer → Consumer.",
+          "solutionSteps": [
+            "Start at the producer/manufacturer who makes the goods.",
+            "Wholesaler buys in bulk and stores in godowns/cold storage.",
+            "Distributor carries goods to far-off retailers where needed.",
+            "Retailer sells small quantities to the final consumer.",
+            "State the full chain: Producer → Wholesaler → Distributor → Retailer → Consumer."
+          ],
+          "commonMistakes": [
+            "Mixing up the wholesaler (bulk, sells to retailers) and the retailer (small quantities, sells to consumers).",
+            "Forgetting the distributor, who bridges the gap to distant retailers."
+          ],
+          "variations": [
+            {
+              "prompt": "What is a 'godown' and why are cold storage facilities sometimes used?",
+              "answer": "A godown is a large warehouse where wholesalers store goods bought in bulk. Cold storage is used for perishable goods like vegetables and fruits to keep them fresh and prevent spoilage.",
+              "solutionSteps": [
+                "Define a godown as a large storage warehouse.",
+                "Explain cold storage preserves perishables."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            257,
+            258,
+            259
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t04_q02",
+          "prompt": "In an online market, the business that organises and combines offers from multiple sellers, then packs and delivers products to buyers, is called a/an —",
+          "questionType": "mcq",
+          "options": [
+            "Wholesaler",
+            "Distributor",
+            "Aggregator",
+            "Retailer"
+          ],
+          "answer": "Aggregator",
+          "solutionSteps": [
+            "Recall the online chain: manufacturers send goods to the seller's warehouse, and consumers buy via an app or website.",
+            "The business running that app, combining many sellers' offers, is the aggregator.",
+            "It also packs and delivers, so the answer is Aggregator."
+          ],
+          "commonMistakes": [
+            "Confusing an aggregator (online platform combining many sellers) with a distributor (physical delivery to retailers)."
+          ],
+          "variations": [
+            {
+              "prompt": "Define an aggregator in your own words.",
+              "answer": "An aggregator is a website or mobile application that organises and combines offers from multiple sellers and sells them to consumers at one place, then packs and delivers the products.",
+              "solutionSteps": [
+                "Recall it is an online platform.",
+                "It gathers many sellers in one place and handles delivery."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            259
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t04_q03",
+          "prompt": "True or False: In the Surat textile market, raw cotton is turned into finished cloth in a single step.",
+          "questionType": "trueFalse",
+          "answer": "False",
+          "solutionSteps": [
+            "Recall that in Surat raw cotton passes through many stages: weaving, dyeing and so on.",
+            "The product moves through separate markets at each stage (woven fabric, dyed fabric, finished garments).",
+            "Therefore it is not a single step, so the statement is False."
+          ],
+          "commonMistakes": [
+            "Thinking a finished product is made in one step rather than passing through a chain of stages and markets."
+          ],
+          "variations": [
+            {
+              "prompt": "Name two stages a fabric passes through in Surat before becoming a finished garment.",
+              "answer": "Weaving on power looms and dyeing in processing units (the finished product is then sarees or ready-made garments).",
+              "solutionSteps": [
+                "Recall the processing stages.",
+                "Name weaving and dyeing."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            260,
+            261
+          ],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch12_t05",
+      "title": "Markets, Government and the Consumer",
+      "summary": "How markets benefit society beyond money, the government's roles in controlling prices, ensuring quality and safety, curbing pollution and providing public goods, and how consumers judge quality using certification marks and reviews.",
+      "concepts": [
+        {
+          "id": "ssch12_t05_c01",
+          "title": "How Markets Benefit Society",
+          "explanations": {
+            "oneLine": "Markets do more than enable buying and selling — they signal what to produce and build lasting human relationships.",
+            "kidFriendly": "Markets help society in surprising ways. When many buyers ask for refrigerators that use less electricity, producers get the message and start making energy-saving fridges — good for buyers and the planet. Markets also build relationships: families keep the same trusted tailor, jeweller or grocer for decades, sometimes across generations, and some keep a monthly account with the local grocer. So markets are about people and trust, not just money.",
+            "textbook": "Markets play an important role in the economic life of people: they facilitate transactions between producers and consumers and help individuals, households and businesses access goods and services they cannot produce themselves. Markets also benefit society in other ways. When a large number of consumers begin to ask for refrigerators that use less electricity, producers get an indication of what consumers want and produce energy-efficient refrigerators — benefiting society. Beyond monetary exchange, relationships often develop between buyers and sellers that continue across generations: some families have trusted relationships with their tailor, jeweller and doctor over decades, and many maintain a monthly account with the local grocer. So markets also have non-economic significance.",
+            "expert": "Markets perform a profound informational function: prices and buying behaviour aggregate the dispersed preferences of millions of consumers and transmit them to producers as signals about what, and how much, to produce. The shift toward energy-efficient refrigerators illustrates this — no planner ordered it; rising consumer demand pulled the change through the supply chain. Yet markets are also embedded in society, not separate from it. Repeated dealings create trust and reputation, which lower the cost of transacting (you need not re-check a trusted grocer's weights every time) and sustain credit arrangements like the monthly account. Markets thus knit economic and social life together — a market is simultaneously a price-coordination device and a meeting place for communities, cultures and ideas."
+          },
+          "reasoning": "Because producers want to sell, they pay close attention to what buyers ask for; so the choices of many buyers act like a message telling producers what to make. And because the same people trade again and again, trust grows between them — turning a mere exchange into a lasting relationship.",
+          "useCases": [
+            {
+              "title": "Greener products through demand",
+              "description": "When buyers demand energy-efficient appliances, the market pushes producers to make them, helping the environment.",
+              "domain": "environment"
+            },
+            {
+              "title": "Trusted local relationships",
+              "description": "A family's decades-long trust in one tailor or grocer makes shopping easier and supports informal credit like a monthly account.",
+              "domain": "society"
+            },
+            {
+              "title": "Markets as cultural melting pots",
+              "description": "Markets bring different communities together to exchange not just goods but ideas and traditions.",
+              "domain": "society"
+            }
+          ],
+          "beyondTheBook": "The Mother's Market (Ima Keithal) in Imphal, Manipur, is run entirely by about 3,000 women who own all the shops. It provides income for thousands of families and is a melting pot of cultures where people from different communities meet, trade and share traditions — a vivid example of how a market serves society far beyond simple buying and selling.",
+          "relatedConceptIds": [
+            "ssch12_t02_c02",
+            "ssch12_t05_c02",
+            "ssch12_t01_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            263,
+            264
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "Markets Move money, Messages (what to produce) and Meaningful relationships."
+        },
+        {
+          "id": "ssch12_t05_c02",
+          "title": "The Government's Role in Markets",
+          "explanations": {
+            "oneLine": "When markets do not work well on their own, the government steps in to control prices, ensure quality and safety, curb pollution and provide public goods.",
+            "kidFriendly": "Markets usually work through demand and supply, but sometimes they need help — and that's the government's job. It can set a maximum price on essential things like lifesaving medicines so sellers don't overcharge, and a minimum price for crops like wheat and paddy so farmers don't make losses. It checks that products are safe (like testing medicines), controls factories that pollute, watches the weights on packets, and provides public goods like roads, parks and policing that no business would make a profit on.",
+            "textbook": "Markets function through interactions of demand and supply, but in some situations this does not work well, and the government plays a crucial role. (1) Controlling prices: it may set a maximum price (for example, an upper limit on lifesaving drugs) to protect buyers, and a minimum price (for example, for wheat, paddy and maize) so farmers do not incur losses; it also sets minimum wages so employers pay workers fairly. Such limits must be set carefully — too low and producers lose motivation to produce, too high and consumers are disadvantaged. (2) Ensuring quality and safety: it sets procedures to approve medicines and conducts sample testing, and monitors the weights and measures of packaged products. (3) Mitigating external effects: it controls pollution from factories and may ban harmful items like single-use plastics. (4) Providing public goods: parks, roads and policing that producers would not make a profit on. However, too many rules can make it hard for markets to function.",
+            "expert": "Economists call the situations where unregulated markets fail to deliver good outcomes 'market failures', and each government role addresses one. Price controls (price ceilings on essential drugs, price floors like the Minimum Support Price on grain) protect vulnerable buyers or sellers from extreme prices, but must be set with care because a ceiling set below cost can cause shortages and a floor set above the market price can cause surpluses. Quality and safety regulation tackles 'information asymmetry' — buyers cannot test a medicine's purity, so a regulator must. Pollution is a 'negative externality': a cost the factory imposes on society but does not pay for, which the government internalises through regulation or bans. Public goods (roads, parks, policing) are 'non-excludable and non-rival' — everyone can use them and one person's use does not reduce another's — so private firms cannot profitably supply them, and the state must. The closing caution is equally standard: over-regulation imposes costs that can outweigh the failure it cures."
+          },
+          "reasoning": "Demand and supply usually set fair prices and good products, but not always: buyers can be overcharged for essentials, cheated on quality, harmed by pollution, or left without things no business will provide. In each of these gaps the market 'fails', so the government steps in to protect people — while taking care not to over-regulate.",
+          "useCases": [
+            {
+              "title": "Protecting patients",
+              "description": "An upper price limit on lifesaving drugs stops sellers from charging the sick whatever they like.",
+              "domain": "civics"
+            },
+            {
+              "title": "Protecting farmers",
+              "description": "A minimum price for paddy and wheat ensures farmers are not forced to sell below their costs and make losses.",
+              "domain": "agriculture"
+            },
+            {
+              "title": "Protecting the environment",
+              "description": "Banning single-use plastics and regulating polluting factories curbs harm the market alone would ignore.",
+              "domain": "environment"
+            }
+          ],
+          "beyondTheBook": "Protecting consumers is not new. Kauṭilya's Arthaśhāstra, written over two thousand years ago, instructed traders selling ghee (clarified butter) to give the buyer 1/50th part extra — called mānasrāva — to make up for the ghee that sticks to the measuring can. Ancient Indian rulers, like modern governments, set rules to ensure fair measure for buyers.",
+          "relatedConceptIds": [
+            "ssch12_t05_c01",
+            "ssch12_t05_c03",
+            "ssch12_t02_c02"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            265,
+            266,
+            267
+          ],
+          "needsHumanReview": false,
+          "whyChain": [
+            "Why does the government set a maximum price on goods like lifesaving medicines? Because when a good is essential and a buyer is desperate — a sick patient needing a drug to survive — a seller could demand an enormous price and the buyer would have little choice but to pay. Left entirely to demand and supply, the price of such essentials could rise beyond what ordinary families can afford, so the government caps the price to protect vulnerable buyers from being exploited in a moment of need.",
+            "Why does the government also set a minimum price for crops like wheat and paddy? Because in a bumper-harvest season, supply can be so large that the market price crashes far below what it cost farmers to grow the crop. If farmers sold at that price they would make losses and might stop farming, threatening the nation's food supply. A guaranteed minimum price assures farmers a floor below which the price will not fall, so they can recover their costs and keep producing the food everyone depends on.",
+            "Why must these price limits be set very carefully rather than generously? Because a price set wrongly creates its own problems. If a minimum price or wage is set too low, producers and workers have no motivation to produce or work; if a maximum price is set too low, producers cannot cover costs and may stop supplying, causing shortages; and if limits are set too high, consumers are disadvantaged. So the government must balance the interests of both buyers and sellers, and avoid so many rules that the market itself can no longer function properly."
+          ]
+        },
+        {
+          "id": "ssch12_t05_c03",
+          "title": "How Consumers Assess Quality",
+          "explanations": {
+            "oneLine": "Consumers judge a product's quality using government certification marks, package labels, reputation and online reviews.",
+            "kidFriendly": "How do you know a product is good and safe? Look for certification marks! The FSSAI mark means food has been tested by the government and is safe to eat. The ISI mark (from the Bureau of Indian Standards, BIS) is on electrical goods, tyres, construction materials and more. AGMARK certifies farm products like fruits, spices and honey. The BEE Star rating, shown as stars, tells you how energy-efficient an appliance is — more stars means less electricity used. You can also read the label (MRP, ingredients, manufacture and best-before dates) and trust word-of-mouth and online reviews.",
+            "textbook": "Markets give consumers a wide variety of goods, so every consumer needs to assess the quality of what they buy (thinking about price, size, strength, etc.). Government agencies provide certifications that help buyers judge quality; their presence confirms the product meets minimum standards. FSSAI (Food Safety and Standards Authority of India) marks food that has been tested by the government and is safe to consume. The ISI (Indian Standards Institution) mark, issued by the Bureau of Indian Standards (BIS), appears on electrical appliances, construction materials, automotive tyres, paper, etc., ensuring quality and safety. AGMARK (Ag for agriculture) certifies agricultural products like vegetables, fruits, cereals, pulses, spices and honey. The BEE Star rating (Bureau of Energy Efficiency), printed as stars, shows energy efficiency — more stars mean less energy used, saving money and helping the environment. Package labels also show net quantity, MRP, batch number, manufacture and best-before dates, ingredients, allergens, nutrition facts and the manufacturer's name. Buyers are also influenced by a product's reputation built through word of mouth, and by online reviews and feedback while shopping online.",
+            "expert": "Quality assessment is fundamentally a problem of information asymmetry: the seller knows the product's quality, the buyer often does not, and goods whose quality is hard to verify before purchase ('experience' and 'credence' goods) are especially vulnerable to deception. Certification marks solve this by having a trusted third party (a government agency or standards body) verify quality and signal it with a recognisable mark, so the buyer can rely on the signal instead of testing the good themselves. Mandatory labelling (net quantity, dates, ingredients, MRP) reduces asymmetry by forcing disclosure. Reputation and online reviews are decentralised alternatives: they aggregate the experience of past buyers into a signal for future ones, which is why ratings are crucial online, where the buyer cannot inspect the good at all. Together these mechanisms let trade in complex goods proceed despite buyers being unable to judge quality directly."
+          },
+          "reasoning": "A buyer usually cannot test a medicine's purity or an appliance's efficiency just by looking. So trusted outsiders — government agencies — test the products and stamp them with a mark, and labels are required to disclose key facts. These signals, plus the experiences of other buyers (reputation and reviews), let a consumer judge quality without testing everything themselves.",
+          "useCases": [
+            {
+              "title": "Buying safe food",
+              "description": "Checking for the FSSAI mark on a packet of gram flour tells you the government has tested it and it is safe to eat.",
+              "domain": "everyday"
+            },
+            {
+              "title": "Saving on electricity bills",
+              "description": "Choosing an appliance with a higher BEE Star rating means lower energy use, a smaller bill and less harm to the environment.",
+              "domain": "environment"
+            },
+            {
+              "title": "Shopping wisely online",
+              "description": "Reading other buyers' reviews and ratings helps you decide whether to buy a product you cannot inspect in person.",
+              "domain": "everyday"
+            }
+          ],
+          "beyondTheBook": "Each certification mark belongs to a specific kind of product: FSSAI for food, ISI/BIS for industrial and electrical goods, AGMARK for farm produce, and BEE for energy-using electronics. Knowing which mark to look for on which product is a quick way to shop safely — for example, you would look for AGMARK on honey but a BEE Star on an air conditioner.",
+          "relatedConceptIds": [
+            "ssch12_t05_c02",
+            "ssch12_t03_c01",
+            "ssch12_t05_c01"
+          ],
+          "relatedQuestionIds": [],
+          "pageRefs": [
+            267,
+            268,
+            269,
+            270
+          ],
+          "needsHumanReview": false,
+          "mnemonic": "FSSAI food, ISI/BIS industry, AGMARK agriculture, BEE stars for energy."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch12_t05_q01",
+          "prompt": "Describe four ways in which the government plays a role in markets.",
+          "questionType": "longAnswer",
+          "answer": "First, the government controls prices: it can set a maximum price on essential goods like lifesaving drugs to protect buyers, a minimum price for crops like wheat, paddy and maize so farmers do not make losses, and minimum wages so workers are paid fairly. Second, it ensures quality and safety, for example by approving and sample-testing medicines and monitoring the weights and measures of packaged goods. Third, it mitigates the external effects of markets, such as controlling factory pollution and banning harmful items like single-use plastics. Fourth, it provides public goods such as parks, roads and policing that producers would not make a profit on. It must, however, regulate carefully, since too many rules can stop markets from working well.",
+          "solutionSteps": [
+            "State role 1: controlling prices (maximum, minimum, minimum wages).",
+            "State role 2: ensuring quality and safety (testing medicines, checking weights).",
+            "State role 3: mitigating external effects (pollution, banning single-use plastics).",
+            "State role 4: providing public goods (parks, roads, policing).",
+            "Add the caution that over-regulation can harm markets."
+          ],
+          "commonMistakes": [
+            "Listing only price control and forgetting quality, pollution and public goods.",
+            "Forgetting that too many rules can make markets function poorly."
+          ],
+          "variations": [
+            {
+              "prompt": "Why does the government set a minimum price for crops like wheat and paddy?",
+              "answer": "So that farmers do not incur losses — it guarantees a floor below which the price will not fall, ensuring farmers recover their costs even when harvests are large and prices would otherwise crash.",
+              "solutionSteps": [
+                "Recall the minimum price protects farmers.",
+                "Explain it prevents losses when prices would fall too low."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            265,
+            266,
+            267
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t05_q02",
+          "prompt": "Which certification mark on a food packet shows that the food has been tested by the government and is safe to consume?",
+          "questionType": "mcq",
+          "options": [
+            "ISI mark",
+            "BEE Star rating",
+            "FSSAI mark",
+            "AGMARK"
+          ],
+          "answer": "FSSAI mark",
+          "solutionSteps": [
+            "Recall FSSAI stands for Food Safety and Standards Authority of India.",
+            "Its mark on food shows the government has tested it and it is safe to eat.",
+            "ISI is for industrial goods, BEE for energy efficiency, AGMARK for raw farm produce, so the answer is FSSAI."
+          ],
+          "commonMistakes": [
+            "Confusing FSSAI (processed/packaged food safety) with AGMARK (raw agricultural produce).",
+            "Picking ISI, which is for electrical and industrial goods, not packaged food."
+          ],
+          "variations": [
+            {
+              "prompt": "What does a higher BEE Star rating on an appliance tell a consumer?",
+              "answer": "That the appliance is more energy-efficient — it uses less electricity, which lowers the electricity bill and is better for the environment.",
+              "solutionSteps": [
+                "Recall BEE = Bureau of Energy Efficiency.",
+                "More stars mean less energy used."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            268,
+            269
+          ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t05_q03",
+          "prompt": "Besides earning money, give one way a market benefits society.",
+          "questionType": "shortAnswer",
+          "answer": "A market benefits society by signalling to producers what consumers want — for example, when many buyers ask for energy-efficient refrigerators, producers start making them, which helps the environment. Markets also build lasting, trusted relationships between buyers and sellers (such as a family's decades-long bond with a tailor, jeweller or grocer) and act as melting pots where different communities exchange ideas and traditions. (Any one of these is acceptable.)",
+          "solutionSteps": [
+            "Recall that markets do more than enable buying and selling.",
+            "Pick a non-money benefit: signalling demand (greener products), building trust, or sharing culture.",
+            "Explain the chosen benefit with an example."
+          ],
+          "commonMistakes": [
+            "Mentioning only the exchange of money and missing the social and signalling benefits."
+          ],
+          "variations": [
+            {
+              "prompt": "What is special about the Ima Keithal (Mother's Market) in Imphal?",
+              "answer": "It is run entirely by about 3,000 women who own all the shops; it provides income for thousands of families and is a melting pot where different communities meet and share traditions.",
+              "solutionSteps": [
+                "Recall it is a women-run market in Manipur.",
+                "Note its role in income and cultural exchange."
+              ]
+            }
+          ],
+          "difficulty": 2,
+          "pageRefs": [
+            263,
+            264
+          ],
+          "needsHumanReview": false
+        }
+      ]
+    }
+  ],
+  "realWorldExamples": [
+    {
+      "id": "ssch12_rw01",
+      "title": "Surat: from raw cotton to your saree",
+      "body": "In Surat, Gujarat — Asia's oldest textile market — raw cotton arrives from Maharashtra and other parts of Gujarat through cotton mandīs. Thousands of factories weave it on power looms, dye it in processing units, and stitch it into sarees and garments. At each stage the half-finished cloth is bought and sold in its own market. Finally wholesalers distribute the finished textiles to shops across India and abroad. A single saree thus passes through many hands and markets before it reaches a consumer.",
+      "relatedConceptIds": [
+        "ssch12_t04_c03",
+        "ssch12_t04_c01"
+      ]
+    },
+    {
+      "id": "ssch12_rw02",
+      "title": "Ima Keithal: the women's market of Imphal",
+      "body": "In Imphal, Manipur, the Ima Keithal or 'Mother's Market' is run entirely by about 3,000 women who own all the shops. They sell vegetables, traditional Manipuri attire, handloom and handicrafts, local produce and daily essentials. The market provides income for thousands of families and is a melting pot of cultures where people from different communities meet, trade and share traditions — proof that a market is a social institution, not just a money exchange.",
+      "relatedConceptIds": [
+        "ssch12_t05_c01",
+        "ssch12_t01_c01"
+      ]
+    },
+    {
+      "id": "ssch12_rw03",
+      "title": "The Glorious Hampi Bazaar",
+      "body": "The Hampi Bazaar in Karnataka was one of the most prosperous markets of the 16th-century Vijayanagara Empire, located opposite the Virupaksha temple. The Portuguese traveller Domingos Paes called Hampi 'the best-provided city in the world' for the variety it traded — grains, oil, silk, animals and even birds — while Fernao Nuniz described streets full of craftsmen making golden jewels and selling rubies, diamonds, pearls and cloth. It shows how vibrant Indian markets have been for centuries.",
+      "relatedConceptIds": [
+        "ssch12_t01_c01",
+        "ssch12_t01_c02"
+      ]
+    }
+  ],
+  "mnemonics": [
+    {
+      "id": "ssch12_mn01",
+      "acronym": "PORW",
+      "unpacking": "Producer → wholesaler → (distributor) → Retailer → cOnsumer, with the Wholesaler in bulk and the Retailer in small amounts. Remember the order: 'Producers Offer, Retailers Wrap' — goods start in bulk and end up wrapped for you.",
+      "context": "Recalling the chain of participants who move goods from producer to consumer in a physical market.",
+      "relatedConceptIds": [
+        "ssch12_t04_c01",
+        "ssch12_t04_c02"
+      ]
+    },
+    {
+      "id": "ssch12_mn02",
+      "acronym": "FIAB",
+      "unpacking": "FSSAI for Food, ISI/BIS for Industrial & electrical goods, AGMARK for Agricultural produce, BEE Star for energy-using electronics. 'FIAB' = the four marks a smart buyer checks.",
+      "context": "Remembering which government certification mark belongs on which kind of product.",
+      "relatedConceptIds": [
+        "ssch12_t05_c03"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "ssch12_ms01",
+      "kidsThink": "A market is always a physical place you can walk into.",
+      "actually": "A market is any arrangement where buying and selling happen. It can be a physical haat or mall, an online app or website, or even the stock market — what makes it a market is the exchange, not the building.",
+      "relatedConceptIds": [
+        "ssch12_t01_c01",
+        "ssch12_t03_c01"
+      ]
+    },
+    {
+      "id": "ssch12_ms02",
+      "kidsThink": "The lower the price, the better — a seller should always sell as cheap as possible.",
+      "actually": "A price that is too low means the seller makes no profit, or even a loss, and may stop selling. A 'just right' price is high enough for the seller to profit and low enough for the buyer to be willing to pay.",
+      "relatedConceptIds": [
+        "ssch12_t02_c01",
+        "ssch12_t02_c02"
+      ]
+    },
+    {
+      "id": "ssch12_ms03",
+      "kidsThink": "Middlemen like wholesalers and retailers are useless and just make things expensive.",
+      "actually": "Each middleman adds real value: wholesalers buy in bulk and store goods, distributors reach far-off shops, and retailers split bulk into small quantities sold near your home. They make goods cheaper to move and more convenient to buy, which is why the chain exists.",
+      "relatedConceptIds": [
+        "ssch12_t04_c01",
+        "ssch12_t04_c02"
+      ]
+    }
+  ],
+  "ncertQA": [
+    {
+      "id": "ssch12_nq01",
+      "question": "What are the main features of a market? Recall a recent visit to a market to purchase a product, and describe the features you observed.",
+      "modelAnswer": "The main features of a market are a buyer, a seller and a price that both agree on for a transaction to take place. On a recent visit to a vegetable market, for example, I (the buyer) wanted to buy tomatoes, the vendor (the seller) had tomatoes to sell, and we agreed on a price. I observed the vendor quoting a price, some bargaining or negotiation to reach an acceptable price, the exchange of money for goods, and many other buyers and sellers around, all features that make the place a market.",
+      "textbookPage": 271,
+      "relatedConceptIds": [
+        "ssch12_t01_c03",
+        "ssch12_t02_c01"
+      ]
+    },
+    {
+      "id": "ssch12_nq02",
+      "question": "Match the following types of markets with their characteristics: Physical market, Online market, Domestic market, International market, Wholesale market, Retail market.",
+      "modelAnswer": "Physical market → requires physical presence of buyers and seller. Online market → buyers and sellers meet virtually and can transact at any time. Domestic market → lies within the boundaries of a nation. International market → goods and services flow outside the nation's boundaries. Wholesale market → deals in bulk quantities. Retail market → serves the final consumers with goods and services.",
+      "textbookPage": 271,
+      "relatedConceptIds": [
+        "ssch12_t03_c01",
+        "ssch12_t03_c02",
+        "ssch12_t04_c01"
+      ]
+    },
+    {
+      "id": "ssch12_nq03",
+      "question": "Prices are generally determined by the interaction between demand from buyers and supply by sellers. Can you think of products where prices are high despite fewer buyers demanding the product? What could be the reasons?",
+      "modelAnswer": "Yes. Products like rare artwork, antiques, precious gems, designer or limited-edition items, and even Aakriti's oil paintings can have high prices despite few buyers. The reason is that their supply is very low (they are rare or unique) and the few buyers who want them place a very high value on them. So price depends not just on the number of buyers but on how scarce the good is and how much those buyers are willing to pay — a low supply combined with strong willingness to pay keeps the price high.",
+      "textbookPage": 271,
+      "relatedConceptIds": [
+        "ssch12_t02_c02",
+        "ssch12_t02_c01"
+      ]
+    },
+    {
+      "id": "ssch12_nq04",
+      "question": "A family refuses to buy beans at ₹30/kg from a cart seller (bargaining for ₹25) but then pays ₹40/kg for neatly packed beans at a super bazaar. What are the reasons, and are there factors affecting buying and selling that are not directly connected to price?",
+      "modelAnswer": "Yes, there are factors beyond price. The family may prefer the super bazaar because the beans are neatly packed and hygienically presented, the shop is cleaner and more convenient, the quality may seem more reliable or assured, and the experience of shopping there is more comfortable. Some buyers also trust a known store's quality or enjoy not having to bargain. So buying decisions are influenced by convenience, hygiene, packaging, perceived quality, trust and the shopping experience — not by price alone.",
+      "textbookPage": 272,
+      "relatedConceptIds": [
+        "ssch12_t02_c01",
+        "ssch12_t05_c03"
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "id": "ssch12_gl01",
+      "term": "Market",
+      "definition": "A place or arrangement — physical or online — where people buy and sell goods and services.",
+      "example": "A weekly haat, a mall and a shopping app are all markets.",
+      "hindiTerm": "बाज़ार / हाट",
+      "relatedConceptIds": [
+        "ssch12_t01_c01"
+      ]
+    },
+    {
+      "id": "ssch12_gl02",
+      "term": "Price",
+      "definition": "The amount at which a buyer is willing to buy, and a seller is willing to sell, particular goods or services.",
+      "example": "Guavas were finally sold at a price of ₹40 per kg.",
+      "hindiTerm": "मूल्य / दाम",
+      "relatedConceptIds": [
+        "ssch12_t01_c03",
+        "ssch12_t02_c01"
+      ]
+    },
+    {
+      "id": "ssch12_gl03",
+      "term": "Demand",
+      "definition": "The quantity of a product or service that consumers are willing and able to purchase at a particular price at a given time.",
+      "example": "When demand for energy-efficient fridges rose, producers made more of them.",
+      "hindiTerm": "माँग",
+      "relatedConceptIds": [
+        "ssch12_t02_c02"
+      ]
+    },
+    {
+      "id": "ssch12_gl04",
+      "term": "Supply",
+      "definition": "The quantity of a product or service that sellers are willing and able to sell at a particular price at a given time.",
+      "example": "When the supply of onions falls, their price tends to rise.",
+      "hindiTerm": "आपूर्ति",
+      "relatedConceptIds": [
+        "ssch12_t02_c02"
+      ]
+    },
+    {
+      "id": "ssch12_gl05",
+      "term": "Wholesaler",
+      "definition": "A trader who buys goods in large (bulk) quantities from producers and sells them to retailers.",
+      "example": "Wholesalers buy vegetables directly from farms and store them in godowns.",
+      "hindiTerm": "थोक विक्रेता",
+      "relatedConceptIds": [
+        "ssch12_t04_c01"
+      ]
+    },
+    {
+      "id": "ssch12_gl06",
+      "term": "Retailer",
+      "definition": "A shopkeeper who sells goods in small quantities to final consumers for use, not resale.",
+      "example": "The grocery store near your home is a retailer.",
+      "hindiTerm": "फुटकर / खुदरा विक्रेता",
+      "relatedConceptIds": [
+        "ssch12_t04_c01"
+      ]
+    },
+    {
+      "id": "ssch12_gl07",
+      "term": "Distributor",
+      "definition": "An individual or business who supplies goods from manufacturers and wholesalers to retailers, especially across distances.",
+      "example": "Distributors carry biscuits from a city wholesaler to far-off village shops.",
+      "hindiTerm": "वितरक",
+      "relatedConceptIds": [
+        "ssch12_t04_c02"
+      ]
+    },
+    {
+      "id": "ssch12_gl08",
+      "term": "Aggregator",
+      "definition": "A website or mobile application that organises and combines offers from multiple sellers and sells them to consumers at one place.",
+      "example": "An online shopping app that gathers many sellers and delivers to your door is an aggregator.",
+      "hindiTerm": "एग्रीगेटर / संग्राहक",
+      "relatedConceptIds": [
+        "ssch12_t04_c02",
+        "ssch12_t03_c01"
+      ]
+    },
+    {
+      "id": "ssch12_gl09",
+      "term": "Export and Import",
+      "definition": "Export is selling goods or services produced in one country to a buyer in another; import is buying goods or services from other countries and bringing them into one's own.",
+      "example": "India exports software and imports crude petroleum.",
+      "hindiTerm": "निर्यात और आयात",
+      "relatedConceptIds": [
+        "ssch12_t03_c02"
+      ]
+    },
+    {
+      "id": "ssch12_gl10",
+      "term": "Public goods",
+      "definition": "A service or commodity accessible to all members of a society, whose present use does not diminish its availability for future use, usually provided by the government.",
+      "example": "Roads, public parks and policing are public goods.",
+      "hindiTerm": "सार्वजनिक वस्तुएँ",
+      "relatedConceptIds": [
+        "ssch12_t05_c02"
+      ]
+    }
+  ],
+  "miniProjects": [
+    {
+      "id": "ssch12_mp01",
+      "emoji": "🧾",
+      "title": "Trace a product's supply chain",
+      "needs": [
+        "A notebook and pen",
+        "A product from home (e.g. a packet of biscuits or a vegetable)",
+        "Permission to talk to a nearby retailer"
+      ],
+      "steps": [
+        "Pick one product you can find in your home or local shop.",
+        "Visit or ask your nearest retailer where the product came from.",
+        "Ask who supplied it to them (a distributor or wholesaler) and where the wholesaler got it.",
+        "Try to trace it back to the producer or manufacturer and the place of origin.",
+        "Draw a flow chart like the diagram in the chapter: Producer → Wholesaler → Distributor → Retailer → Consumer.",
+        "Label each box with the real name or place you discovered for your product.",
+        "Share your flow chart with the class and compare chains for different products."
+      ],
+      "expectedObservation": "You will discover that even a simple product passes through several hands and places — often from another district or state — before it reaches your home.",
+      "whyItWorks": "Building the chain yourself turns the abstract diagram into a real story, fixing the roles of producer, wholesaler, distributor and retailer firmly in memory and showing why each middleman exists.",
+      "estimatedMinutes": 60,
+      "relatedConceptIds": [
+        "ssch12_t04_c01",
+        "ssch12_t04_c03"
+      ]
+    },
+    {
+      "id": "ssch12_mp02",
+      "emoji": "⭐",
+      "title": "Make a BEE Star energy chart",
+      "needs": [
+        "A notebook and pen",
+        "Access to electronic appliances at home (fridge, AC, TV, fan, etc.)",
+        "An adult's help to read labels safely"
+      ],
+      "steps": [
+        "List the electronic appliances in your home that have a BEE Star label.",
+        "For each appliance, carefully read and note the number of stars on its rating label.",
+        "Also note any other certification marks you find (FSSAI, ISI, AGMARK) on products at home.",
+        "Arrange your appliances in increasing order of energy efficiency (fewest stars to most stars).",
+        "Mark which appliances are the most and least energy-efficient.",
+        "Write one sentence on how choosing more stars could lower the electricity bill and help the environment."
+      ],
+      "expectedObservation": "You will see that appliances differ in their star ratings, and that higher-star appliances use less electricity — saving money and protecting the environment.",
+      "whyItWorks": "Reading real labels makes certification marks meaningful and shows how a consumer can assess quality and efficiency before buying, linking the chapter's ideas to everyday decisions.",
+      "estimatedMinutes": 45,
+      "relatedConceptIds": [
+        "ssch12_t05_c03",
+        "ssch12_t05_c01"
+      ]
+    }
+  ],
+  "whatIfs": [
+    {
+      "id": "ssch12_wi01",
+      "question": "What if there were no markets at all?",
+      "answer": "Without markets, every family would have to produce everything it needs by itself — growing its own food, weaving its own cloth, building its own home. Since no one can do all this well, people would have far fewer goods and services and a much harder life. Farmers could not sell their rice, wheat and vegetables, and cloth-makers in Surat could not buy the cotton they need, so production would collapse. There would also be no easy way to get goods you cannot make, no place for different communities to meet and trade, and no signals telling producers what people want. Markets exist precisely because they solve all these problems at once.",
+      "relatedConceptIds": [
+        "ssch12_t01_c02",
+        "ssch12_t05_c01"
+      ]
+    },
+    {
+      "id": "ssch12_wi02",
+      "question": "What if the government set the maximum price of a medicine far too low?",
+      "answer": "If the maximum price were set below what it costs to make the medicine, producers would lose money on every unit and would have no motivation to produce it. They might make less of it or stop altogether, causing shortages just when patients need it most. This is why the chapter warns that price limits must be set carefully: too low and producers stop producing, too high and consumers are disadvantaged. A good price control protects buyers without driving sellers out of the market.",
+      "relatedConceptIds": [
+        "ssch12_t05_c02",
+        "ssch12_t02_c02"
+      ]
+    }
+  ],
+  "timelines": [
+    {
+      "id": "ssch12_tl01",
+      "title": "The journey of a product: from producer to consumer",
+      "intro": "Follow a typical good as it travels through the chain of markets and participants until it reaches you.",
+      "steps": [
+        {
+          "id": "ssch12_tl01_s01",
+          "label": "Producer makes the goods",
+          "body": "A producer or manufacturer makes goods for sale — for example, a farmer grows vegetables or a Surat factory weaves cloth from raw cotton bought through a mandī.",
+          "assetHint": "farm or factory making goods"
+        },
+        {
+          "id": "ssch12_tl01_s02",
+          "label": "Wholesaler buys in bulk",
+          "body": "A wholesaler buys the goods in large quantities directly from the producer and stores them in big warehouses called godowns, using cold storage for perishables.",
+          "assetHint": "large warehouse with stacked stock"
+        },
+        {
+          "id": "ssch12_tl01_s03",
+          "label": "Distributor bridges the distance",
+          "body": "Where shops are far away or hard to reach, a distributor carries the goods from the wholesaler onward to scattered retailers across regions.",
+          "assetHint": "delivery truck on a road"
+        },
+        {
+          "id": "ssch12_tl01_s04",
+          "label": "Retailer sells small quantities",
+          "body": "A retailer — the shopkeeper near your home — splits the bulk into small quantities and sells them to final consumers, for use rather than resale.",
+          "assetHint": "neighbourhood shop with a counter"
+        },
+        {
+          "id": "ssch12_tl01_s05",
+          "label": "Consumer buys at an agreed price",
+          "body": "Finally the consumer buys the good at a price agreed with the seller, completing the transaction. Online, an aggregator app may replace much of this chain and deliver to the doorstep.",
+          "assetHint": "person buying and a delivery box"
+        }
+      ],
+      "relatedConceptIds": [
+        "ssch12_t04_c01",
+        "ssch12_t04_c02"
+      ]
+    }
+  ],
+  "conceptMap": {
+    "nodes": [
+      {
+        "id": "ssch12_n01",
+        "label": "Understanding Markets",
+        "kind": "pivot",
+        "x": 0.5,
+        "y": 0.1
+      },
+      {
+        "id": "ssch12_n02",
+        "label": "What Is a Market?",
+        "kind": "concept",
+        "x": 0.2,
+        "y": 0.32
+      },
+      {
+        "id": "ssch12_n03",
+        "label": "Price: Demand & Supply",
+        "kind": "concept",
+        "x": 0.5,
+        "y": 0.32
+      },
+      {
+        "id": "ssch12_n04",
+        "label": "Types of Markets",
+        "kind": "concept",
+        "x": 0.8,
+        "y": 0.32
+      },
+      {
+        "id": "ssch12_n05",
+        "label": "Producer → Consumer Chain",
+        "kind": "concept",
+        "x": 0.3,
+        "y": 0.6
+      },
+      {
+        "id": "ssch12_n06",
+        "label": "Wholesaler / Retailer / Aggregator",
+        "kind": "concept",
+        "x": 0.7,
+        "y": 0.6
+      },
+      {
+        "id": "ssch12_n07",
+        "label": "Government's Role",
+        "kind": "concept",
+        "x": 0.3,
+        "y": 0.85
+      },
+      {
+        "id": "ssch12_n08",
+        "label": "Assessing Quality (marks, reviews)",
+        "kind": "concept",
+        "x": 0.7,
+        "y": 0.85
+      }
+    ],
+    "edges": [
+      {
+        "id": "ssch12_e01",
+        "from": "ssch12_n01",
+        "to": "ssch12_n02",
+        "label": "defines"
+      },
+      {
+        "id": "ssch12_e02",
+        "from": "ssch12_n02",
+        "to": "ssch12_n03",
+        "label": "needs buyer, seller,"
+      },
+      {
+        "id": "ssch12_e03",
+        "from": "ssch12_n01",
+        "to": "ssch12_n04",
+        "label": "take many"
+      },
+      {
+        "id": "ssch12_e04",
+        "from": "ssch12_n04",
+        "to": "ssch12_n05",
+        "label": "move goods via"
+      },
+      {
+        "id": "ssch12_e05",
+        "from": "ssch12_n05",
+        "to": "ssch12_n06",
+        "label": "through"
+      },
+      {
+        "id": "ssch12_e06",
+        "from": "ssch12_n03",
+        "to": "ssch12_n07",
+        "label": "regulated by"
+      },
+      {
+        "id": "ssch12_e07",
+        "from": "ssch12_n07",
+        "to": "ssch12_n08",
+        "label": "helps with"
+      },
+      {
+        "id": "ssch12_e08",
+        "from": "ssch12_n06",
+        "to": "ssch12_n08",
+        "label": "consumer checks"
+      }
+    ]
+  },
+  "examConnections": [
+    {
+      "id": "ssch12_xc01",
+      "title": "Demand, supply and price in higher classes",
+      "body": "The simple guava-bargaining story you learned here grows into the formal 'theory of demand and supply' in Class 9 to Class 12 Economics, complete with demand and supply curves, equilibrium price, and the laws of demand and supply. Price ceilings (like drug-price limits) and price floors (like the Minimum Support Price for grain) are favourite board-exam and competitive-test topics. Understanding the intuition now — too high means no buyers, too low means no profit — makes the diagrams much easier later.",
+      "targetExam": "CBSE Class 9–12 Economics / NTSE",
+      "relatedConceptIds": [
+        "ssch12_t02_c01",
+        "ssch12_t02_c02"
+      ]
+    },
+    {
+      "id": "ssch12_xc02",
+      "title": "Market failure and the role of government",
+      "body": "The four government roles in this chapter — price control, quality and safety, curbing pollution, and providing public goods — are the everyday face of what economists call 'market failure', studied in higher Economics and in Civics. Topics like externalities (pollution), public goods, information asymmetry (why certification marks exist) and consumer protection appear in olympiads, the UPSC syllabus and senior-school exams. Mastering these examples now gives you a head start on those advanced ideas.",
+      "targetExam": "Economics Olympiads / UPSC foundation",
+      "relatedConceptIds": [
+        "ssch12_t05_c02",
+        "ssch12_t05_c03"
+      ]
+    }
+  ],
+  "deepDive": [
+    {
+      "id": "ssch12_dv01",
+      "title": "Equilibrium: where demand meets supply",
+      "gradeLevel": "class_9",
+      "parentConceptId": "ssch12_t02_c02",
+      "body": "In senior classes, demand and supply are drawn as two lines on a graph: a demand curve that slopes downward (buyers want more as the price falls) and a supply curve that slopes upward (sellers offer more as the price rises). The single point where the two lines cross is the 'equilibrium', and the price there is the equilibrium price — exactly the 'just right' price the guava seller discovered. At that price, the quantity buyers want to buy equals the quantity sellers want to sell, so there is no leftover surplus and no shortage. If demand or supply shifts — say onions become scarce — the curves move and the equilibrium price changes, which is how economists explain price rises and falls precisely.",
+      "prerequisite": "Understanding that price is set by the interaction of demand and supply.",
+      "nextStepHint": "Sketch a simple demand and supply graph for guavas and mark the ₹40 equilibrium point."
+    },
+    {
+      "id": "ssch12_dv02",
+      "title": "Externalities: the hidden costs of markets",
+      "gradeLevel": "class_11",
+      "parentConceptId": "ssch12_t05_c02",
+      "body": "When a factory makes a product, the buyer pays for the product but not for the pollution the factory releases into the air or river. That pollution is a real cost, but it falls on society — on people who never bought the product — rather than on the buyer or seller. Economists call such a spillover cost a 'negative externality'. Because the market price ignores it, the market on its own produces too much of the polluting good. This is why the government steps in with regulations, pollution limits, or bans (as on single-use plastics): it forces the cost back onto the producer so the true cost of the good is reflected. Recognising externalities is one of the most important reasons economists give for government action in markets.",
+      "prerequisite": "Knowing that markets can have effects beyond just buying and selling.",
+      "nextStepHint": "Find a real example of a 'positive externality' — a market activity that benefits people who did not pay for it."
+    }
+  ],
+  "crossChapterRefs": [
+    {
+      "id": "ssch12_cc01",
+      "toChapterId": "ssch11",
+      "topic": "Economic activities and goods",
+      "pointer": "The goods sold in markets come from the primary, secondary and tertiary economic activities studied earlier; this chapter shows how those goods actually reach consumers through markets.",
+      "relatedConceptIds": [
+        "ssch12_t01_c01",
+        "ssch12_t04_c03"
+      ]
+    },
+    {
+      "id": "ssch12_cc02",
+      "toChapterId": "ssch01",
+      "topic": "Geography, ports and trade hubs",
+      "pointer": "Surat became a textile and diamond hub partly because of its west-coast location with ports and road networks — a direct link between India's geography and where its markets flourish.",
+      "relatedConceptIds": [
+        "ssch12_t04_c03",
+        "ssch12_t03_c02"
+      ]
+    }
+  ],
+  "bossQuestions": [
+    {
+      "id": "bossquiz_ssch12_q00",
+      "prompt": "A market is best described as —",
+      "questionType": "mcq",
+      "options": [
+        "Only a physical building where shops are located",
+        "Any place or arrangement, physical or online, where people buy and sell goods and services",
+        "A place where only the government sells goods",
+        "A warehouse where goods are stored"
+      ],
+      "answer": "Any place or arrangement, physical or online, where people buy and sell goods and services",
+      "solutionSteps": [
+        "Recall a market is where buying and selling happen.",
+        "It can be physical or online.",
+        "So it is any arrangement enabling exchange."
+      ],
+      "commonMistakes": [
+        "Thinking a market must be a physical building."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        250
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q01",
+      "prompt": "Which three features must every market have?",
+      "questionType": "mcq",
+      "options": [
+        "A building, electricity and a cash counter",
+        "A buyer, a seller and an agreed price",
+        "A producer, a factory and a warehouse",
+        "A government, a tax and a licence"
+      ],
+      "answer": "A buyer, a seller and an agreed price",
+      "solutionSteps": [
+        "Every market needs someone to buy and someone to sell.",
+        "They must agree on a price.",
+        "So the answer is buyer, seller and price."
+      ],
+      "commonMistakes": [
+        "Listing physical things instead of the essential parties and price."
+      ],
+      "variations": [],
+      "difficulty": 1,
+      "pageRefs": [
+        251
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q02",
+      "prompt": "If a seller sets the price of guavas very high, the most likely result is that —",
+      "questionType": "mcq",
+      "options": [
+        "All the guavas sell instantly",
+        "Buyers refuse and the guavas may not sell",
+        "The seller makes a guaranteed profit",
+        "The government lowers the price"
+      ],
+      "answer": "Buyers refuse and the guavas may not sell",
+      "solutionSteps": [
+        "A too-high price discourages buyers.",
+        "They walk away, leaving guavas unsold."
+      ],
+      "commonMistakes": [
+        "Assuming a high price always means more profit."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        252
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q03",
+      "prompt": "'The quantity of a product that consumers are willing and able to buy at a particular price' defines —",
+      "questionType": "mcq",
+      "options": [
+        "Supply",
+        "Demand",
+        "Profit",
+        "Export"
+      ],
+      "answer": "Demand",
+      "solutionSteps": [
+        "Recall the definition of demand.",
+        "It is about buyers' willingness and ability to purchase.",
+        "So the term is Demand."
+      ],
+      "commonMistakes": [
+        "Confusing demand (buyers) with supply (sellers)."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        265
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q04",
+      "prompt": "When India buys crude petroleum from West Asia, this is an example of an —",
+      "questionType": "mcq",
+      "options": [
+        "Export",
+        "Import",
+        "Domestic sale",
+        "Wholesale"
+      ],
+      "answer": "Import",
+      "solutionSteps": [
+        "Import means buying from another country.",
+        "India buys petroleum from abroad.",
+        "So it is an import."
+      ],
+      "commonMistakes": [
+        "Swapping import and export."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        255,
+        256
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q05",
+      "prompt": "A trader who buys goods in bulk from producers and sells them to retailers is a —",
+      "questionType": "mcq",
+      "options": [
+        "Retailer",
+        "Consumer",
+        "Wholesaler",
+        "Aggregator"
+      ],
+      "answer": "Wholesaler",
+      "solutionSteps": [
+        "Wholesalers buy in large quantities from producers.",
+        "They sell to retailers, not final consumers.",
+        "So the answer is Wholesaler."
+      ],
+      "commonMistakes": [
+        "Confusing the wholesaler with the retailer."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        257
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q06",
+      "prompt": "In an online market, the platform that combines offers from many sellers and delivers products to buyers is called a/an —",
+      "questionType": "mcq",
+      "options": [
+        "Distributor",
+        "Aggregator",
+        "Wholesaler",
+        "Mandī"
+      ],
+      "answer": "Aggregator",
+      "solutionSteps": [
+        "An aggregator gathers many sellers in one app or website.",
+        "It packs and delivers to the online buyer.",
+        "So the answer is Aggregator."
+      ],
+      "commonMistakes": [
+        "Confusing an aggregator with a physical distributor."
+      ],
+      "variations": [],
+      "difficulty": 3,
+      "pageRefs": [
+        259
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q07",
+      "prompt": "Which is NOT one of the government's roles in markets described in the chapter?",
+      "questionType": "mcq",
+      "options": [
+        "Controlling prices of essential goods",
+        "Ensuring quality and safety standards",
+        "Personally selling vegetables in every market",
+        "Providing public goods like roads and parks"
+      ],
+      "answer": "Personally selling vegetables in every market",
+      "solutionSteps": [
+        "Recall the four government roles.",
+        "Selling vegetables in every market is not one of them.",
+        "So that is the odd one out."
+      ],
+      "commonMistakes": [
+        "Confusing the government's regulatory role with it acting as an ordinary seller."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        265,
+        266,
+        267
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q08",
+      "prompt": "The FSSAI mark on a packet tells a consumer that —",
+      "questionType": "mcq",
+      "options": [
+        "The food has been tested by the government and is safe to consume",
+        "The product is an electrical appliance",
+        "The item is energy-efficient",
+        "The product is an agricultural raw material"
+      ],
+      "answer": "The food has been tested by the government and is safe to consume",
+      "solutionSteps": [
+        "FSSAI = Food Safety and Standards Authority of India.",
+        "Its mark means the food is tested and safe.",
+        "So the answer is about food safety."
+      ],
+      "commonMistakes": [
+        "Confusing FSSAI with ISI or BEE marks."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        268,
+        269
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    },
+    {
+      "id": "bossquiz_ssch12_q09",
+      "prompt": "A higher BEE Star rating on an appliance means that the appliance —",
+      "questionType": "mcq",
+      "options": [
+        "Is more expensive",
+        "Uses less energy and electricity",
+        "Is bigger in size",
+        "Was made abroad"
+      ],
+      "answer": "Uses less energy and electricity",
+      "solutionSteps": [
+        "BEE = Bureau of Energy Efficiency.",
+        "More stars mean greater energy efficiency.",
+        "So it uses less electricity."
+      ],
+      "commonMistakes": [
+        "Thinking more stars means a bigger or costlier appliance rather than greater efficiency."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        269
+      ],
+      "needsHumanReview": false,
+      "source": "boss_quiz"
+    }
+  ],
+  "quickCheckQuestions": [
+    {
+      "id": "scenecheck_ssch12_q00",
+      "prompt": "You are bargaining for guavas. The seller wants a price too high and you offer one too low. What lets the sale finally happen?",
+      "questionType": "mcq",
+      "options": [
+        "The government fixing the price",
+        "Reaching a mutually agreed price through negotiation",
+        "The seller giving up all profit",
+        "Buying online instead"
+      ],
+      "answer": "Reaching a mutually agreed price through negotiation",
+      "solutionSteps": [
+        "A sale needs an agreed price.",
+        "Negotiation moves both sides toward a 'just right' price.",
+        "When they agree, the transaction completes."
+      ],
+      "commonMistakes": [
+        "Thinking the seller must abandon all profit to make a sale."
+      ],
+      "variations": [],
+      "difficulty": 1,
+      "pageRefs": [
+        252,
+        253
+      ],
+      "needsHumanReview": false,
+      "source": "scene_quick_check"
+    },
+    {
+      "id": "scenecheck_ssch12_q01",
+      "prompt": "A shopkeeper near your home sells you 1 kg of sugar for your family to use. This shopkeeper is a —",
+      "questionType": "mcq",
+      "options": [
+        "Wholesaler",
+        "Retailer",
+        "Distributor",
+        "Producer"
+      ],
+      "answer": "Retailer",
+      "solutionSteps": [
+        "The seller sells in a small quantity.",
+        "It is for consumption, not resale.",
+        "That makes them a retailer."
+      ],
+      "commonMistakes": [
+        "Confusing a small neighbourhood seller (retailer) with a bulk wholesaler."
+      ],
+      "variations": [],
+      "difficulty": 1,
+      "pageRefs": [
+        258
+      ],
+      "needsHumanReview": false,
+      "source": "scene_quick_check"
+    },
+    {
+      "id": "scenecheck_ssch12_q02",
+      "prompt": "Before buying a packet of gram flour, which mark should you look for to be sure the food is safe to eat?",
+      "questionType": "mcq",
+      "options": [
+        "BEE Star",
+        "ISI",
+        "FSSAI",
+        "AGMARK"
+      ],
+      "answer": "FSSAI",
+      "solutionSteps": [
+        "FSSAI certifies food safety.",
+        "It shows the food was government-tested and is safe.",
+        "So look for the FSSAI mark on food."
+      ],
+      "commonMistakes": [
+        "Picking ISI (industrial goods) or BEE (energy efficiency) instead of the food mark."
+      ],
+      "variations": [],
+      "difficulty": 2,
+      "pageRefs": [
+        268
+      ],
+      "needsHumanReview": false,
+      "source": "scene_quick_check"
+    }
+  ]
+}
