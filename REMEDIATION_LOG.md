@@ -4459,3 +4459,15 @@ amplification, class_10). +2 cross-strand crossChapterRefs (→ssch08 sacred
 geography; →ssch13 soils/farming). ssch01 deepDive 2→4, crossChapterRefs 2→4. All
 lints + Release build + suite green via pre-push gate. Pushed 0b6ed4b. (deepDive/
 ccRefs not rendered to article HTML; bundle steady at 887.)
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 42 (ssch02 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch02 (Understanding the Weather). +2 deepDive entries: 'How a
+weather forecast is actually made' (global data → 3-D computer models → chaos/
+butterfly effect → probability forecasts, class_10) and 'Why warm air rises:
+convection and the sea breeze' (links temperature, pressure and wind, class_9).
++2 cross-strand crossChapterRefs (→ssch13 reading weather to farm; →ssch19
+forecasting as disaster-warning infrastructure). ssch02 deepDive 2→4, ccRefs 2→4.
+All lints + Release build + suite green. Pushed a1791ae.
