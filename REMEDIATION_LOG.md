@@ -4109,3 +4109,16 @@ life — Bhaskaracharya), `t03_q04` (diff5 why the south flourished while the no
 raided), `t04_q04` (diff5 the scholar-king Bhoja). 3 boss MCQ (diff4): Khyber Pass,
 Kakatiyas/Hoysalas, Bhaskaracharya/Lilavati. 2 quick MCQ: Bhoja=Paramara, Lilavati.
 Pack 351→355 topic-Qs; ssch16 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 17 (ssch17 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch17 (India, a Home to Many)** — full-enrichment
+4-topic chapter; authored around existing diff-4s. +8: 4 topic Qs — `t01_q04`
+(diff5 India's ethos of acceptance vs treatment of minorities elsewhere), `t02_q04`
+(diff5 why sea-trade communities integrated peacefully), `t03_q04` (diff5 sort
+Arabs/Armenians/Siddis by refuge vs opportunity), `t04_q05` (diff5 how all the
+stories illustrate Vasudhaiva Kutumbakam). 3 boss MCQ (diff4): Jews, Syriac
+Christians, refuge-seekers. 2 quick MCQ: Siddis=Africa, Armenians. Pack 355→359
+topic-Qs; ssch17 boss 10→13, quick 3→5. All 7 lints green.
