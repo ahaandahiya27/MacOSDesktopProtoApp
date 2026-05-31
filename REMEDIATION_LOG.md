@@ -4535,3 +4535,18 @@ class_11, anchor t03_c01). +2 cross-strand refs (→ssch15 Pallavas → later so
 empires; →ssch18 Gupta administration & land grants → the state and government).
 ssch07 deepDive 2→4, ccRefs 2→4. All lints + Release build + suite green. Pushed
 8fc9ad0.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 48 (ssch08 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch08 (How the Land Becomes Sacred). +2 deepDive: 'Sacred groves:
+India's oldest nature reserves' (village deity-protected forest patches —
+kāvu/devarakādu/sarna/orans — preserving old-growth trees, springs and rare
+species; class_9, anchor t05_c02) and 'The astronomy hidden in the Kumbh Mela'
+(Jupiter/Sun/Moon positions fixing the festival's rotating place and holiest
+bathing days — sacred time on a classical-astronomy calendar; class_9, anchor
+t04_c02). +2 cross-strand refs (→ssch13 sacred groves & rivers → conservation
+and sustainable land/water use; →ssch14 sacred geography beyond India → cultural
+links with neighbours). ssch08 deepDive 2→4, ccRefs 2→4. All lints + Release
+build + suite green. Pushed 593c252.
