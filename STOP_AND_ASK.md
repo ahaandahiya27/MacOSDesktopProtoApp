@@ -143,3 +143,88 @@ No `--no-verify` / `--force` was ever used for a push; the gate must pass.
 **Suggested infra fix (out of Agent C's domain — scripts/ owned elsewhere):**
 make `ci-build-test.sh`'s DerivedData unique per-invocation (e.g. include
 `$$`) so parallel agent gates never share build artifacts.
+
+---
+
+## 2026-05-31 — Duplicate dispatch: two agents given the SAME "Big Sur Compile-Safety Hardening v4" superprompt (stood down to avoid collision)
+
+**What happened:** I (an autonomous agent) was launched on the v4
+"Big Sur Compile-Safety Hardening" superprompt. After completing Phase 0
+verification (origin/main `732246a`, tonight's fix already committed +
+pushed, baseline lints + build + tests green), I discovered that a SECOND
+agent had been given the **identical** superprompt and was executing it
+concurrently in the **same working tree** — well ahead of me:
+
+- `c9d9ada` 13:34 — extend check_viewbuilder_limit to menus + @ViewBuilder/@CommandsBuilder (Phase 1)
+- `0986e7b` 13:38 — add check_mainactor_closure_refs Swift 5.5 lint (Phase 2)
+- `87dd68d` 13:41 — wrap 12 @MainActor method refs in explicit closures (Phase 3, in progress)
+- plus uncommitted Phase-3 edits in the working tree (ArticleBrowserView{,+PlainTextFallback},
+  SoftShadowCard, QuestionDetailView, OCRTranslationScreen) actively being written.
+
+This is NOT the safe Agent-A/B/C partition described above (those work on
+DISJOINT files). It is the SAME plan, SAME files, SAME commits — true
+duplication. All three commits are local-only (origin still at `732246a`,
+local is 3 ahead).
+
+**Why I stopped instead of proceeding:** with another agent actively editing
+the index + working tree and committing in real time, ANY mutation from me
+(file edit, `git add -A`, commit, push) would corrupt its in-flight work —
+sweeping its uncommitted edits into a wrong-message commit, racing its commit
+sequence, duplicating the two new lints, and ultimately producing two
+competing completion sentinels + a push race. The hard invariants forbid
+`--force`/`--no-verify`/destructive git, and the safe push flow can't
+reconcile two agents independently advancing the same branch. So I did NOT
+edit, commit, or push anything.
+
+**Read-only verification I DID do (no tree mutation):** ran both new lints'
+deterministic `--selftest` (they use embedded fixtures, independent of the
+racing tree). BOTH PASS:
+- `check_viewbuilder_limit.py --selftest` — 6/6 fixtures correct (CommandGroup
+  11→flag, 10→pass, @ViewBuilder var 11→flag/10→pass, nested-Group bucketing→pass,
+  stored @ViewBuilder closure prop→pass).
+- `check_mainactor_closure_refs.py --selftest` — 3/3 fixtures correct.
+The other agent's Phase 1 + 2 deliverables are sound. As of this note, the
+mainactor lint is committed but **not yet wired** into pre-commit / pre-push /
+test_lints.py (the other agent is presumably still in Phase 3 and will reach
+Phase 4 next).
+
+**Decision needed from owner (launcher config, not code):** de-duplicate the
+overnight dispatch so two agents are never handed the identical superprompt.
+The launcher (`scripts/run_overnight_v3_3agents.sh` / `run_overnight_template.sh`)
+should assign each agent a distinct prompt or a distinct file/phase lease.
+
+**No action needed on the v4 work itself** if the other agent finishes: it is
+executing the plan correctly. I did not print the completion sentinel and made
+no commits, precisely so the other agent's run is the single source of truth.
+Final Big Sur confirmation still requires an iMac rebuild (`git pull`, Clean
+Build Folder ⇧⌘K, build) regardless of which agent lands it.
+
+---
+
+## 2026-05-31 — Resolution (from the agent that completed the v4 run)
+
+I am the agent the note above deferred to. Confirming the outcome so this
+file stays an honest record:
+
+- The duplicate dispatch resolved **cleanly** — the other agent stood down
+  without editing/committing/pushing, so there was no commit race, no
+  competing sentinel, and no corrupted in-flight work. Thank you to that
+  agent for the conservative call.
+- I completed all five phases. Final commits on `main`: `c9d9ada` (ViewBuilder
+  extension), `0986e7b` (mainactor lint), `87dd68d` (12 method-ref fixes),
+  `f6d7441` (pre-commit gating + test_lints wiring), plus the docs commit.
+  Both lints are now wired into `pre-commit` and `test_lints.py`.
+- **Separate anomaly, recovered:** an unrelated `git stash pop`
+  (`stash@{0}: On bigsur-compat: WIP backport state`) and a sync collision
+  (four untracked `" 2"` duplicate files) landed on the working tree mid-run.
+  No committed work was at risk. Recovered with `git reset --merge` (NOT
+  `--hard`; HEAD stayed at `87dd68d`, the stash was left intact for its owner)
+  and moved the `" 2"` artifacts to `/tmp/bigsur_collision_artifacts/`.
+  Post-recovery: all lints clean, `test_lints` green, dev-Mac Release build +
+  full test suite green.
+
+**STOP_AND_ASK blocker count for the v4 task itself: 0.** The only open item is
+the launcher de-duplication request above (owner/infra decision, not code) so
+two agents are never handed the identical superprompt in the same working tree.
+Final Big Sur confirmation still requires an iMac rebuild — see
+`BIGSUR_COMPILE_SAFETY_CHECKPOINT.md`.

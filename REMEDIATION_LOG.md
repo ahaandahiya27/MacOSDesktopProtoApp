@@ -3640,3 +3640,88 @@ The `project.pbxproj` is treated as shared-regenerated (`generate_compat_pbxproj
 deterministic) and committed with each feature. STOP_AND_ASK count: 0.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+---
+
+## Session: 2026-05-31 — Big Sur Compile-Safety Hardening v4 (overnight, autonomous)
+
+**Mission.** On 2026-05-30 the v3 work compiled clean on the dev Mac but
+hard-failed on the deploy iMac (Xcode 13.2.1 / Swift 5.5 / Big Sur). Two
+error classes slipped past every gate because the dev Mac's newer toolchain
+demotes both to warnings:
+
+1. **ViewBuilder >10 direct children inside a `CommandGroup`/menu builder.**
+   Swift 5.5 `buildBlock` caps a result builder at 10 children. The Help
+   `CommandGroup(replacing: .help)` had grown to 20. `check_viewbuilder_limit.py`
+   only inspected View-body layout containers, so it never saw the menu.
+2. **`@MainActor` method passed by bare reference where a non-isolated
+   `() -> Void` is expected** ("loses global actor 'MainActor'").
+
+Phase 0's fix (commit `732246a`, already on origin/main at session start)
+bucketed the Help menu into `Group {}` wrappers and wrapped the 5 method
+refs in the newly-landed feature files. This session closes the *gap* so the
+whole hazard family is caught deterministically on the dev Mac.
+
+### What changed (commit hashes)
+
+- **`c9d9ada`** — extended `check_viewbuilder_limit.py` to scan
+  `CommandGroup`/`CommandMenu`/`Menu`/`ToolbarItemGroup` closures and any
+  `@ViewBuilder`/`@CommandsBuilder` func/computed-var body (a stored closure
+  prop like `@ViewBuilder var content: () -> Content` is correctly NOT treated
+  as a body). Added a real `--quiet` flag (the pre-commit hook had been
+  invoking `--quiet`, which argparse rejected — the gate was inert) and a
+  `--selftest` (11-child menu flags; 10-child passes; 11/10-child @ViewBuilder
+  var; nested-Group bucketing passes; stored-builder-prop passes). Verified it
+  flags the pre-fix Help `CommandGroup` (20 children) in `d3bb6bb`.
+- **`0986e7b`** — new `check_mainactor_closure_refs.py`. Scans
+  `perform:`/`action:`/`on<Capital>:` argument values in `@MainActor` files;
+  classifies each bare ref against same-file decls (func → flag; closure-typed
+  prop/param → allowed; neither → advisory). `// mainactor-ok` per-line escape
+  hatch; `--selftest` green. First repo scan surfaced **12 genuine method refs**
+  in 5 files that Phase 0 had not touched.
+- **`87dd68d`** — Phase 3 sweep: wrapped all 12 in explicit closures
+  (behaviour-identical). Per-file counts:
+  - `ArticleBrowserView+PlainTextFallback.swift` — 1 (`.onAppear { load() }`)
+  - `ArticleBrowserView.swift` — 1 (`Button(action: { handleReadAloudTapped() })`)
+  - `Discover/Components/SoftShadowCard.swift` — 1 (`GotItButton` `Button(action: { handleTap() })`)
+  - `Subjects/Tutor/QuestionDetailView.swift` — 6 (`gotoPrevious`/`gotoNext`)
+  - `Views/OCR/OCRTranslationScreen.swift` — 3 (`openImagePanel`, `copyExtractedText`,
+    and the arg-taking `.onDrop(...) { handleDrop(providers: $0) }`)
+- **`f6d7441`** — wired both checks into `scripts/hooks/pre-commit` as hard
+  gates (ViewBuilder now actually blocks; MainActor gate has the
+  `// mainactor-ok` escape hatch). `scripts/test_lints.py` now drives both
+  lints' embedded `--selftest`. Re-installed via `scripts/install-git-hooks.sh`.
+
+Sibling-hazard sweeps confirmed clean repo-wide: `check_swift55_syntax`
+(shorthand bindings), `check_macos12_apis`, `check_view_mainactor`,
+`check_file_size`. No file exceeds 600 LOC. No edits to pbxproj, Package.swift,
+signing, deployment target (stays 11.5), the article renderer
+(`NativeArticleRepresentable`/`ArticleStructuredRenderer`), or the SRS layer
+(`QuestionReview`/`SM2Scheduler`).
+
+### Concurrency anomaly + recovery (no work lost)
+
+Mid-session a `git stash pop` of an unrelated stash (`stash@{0}: On
+bigsur-compat: WIP backport state`, sha `f76ce3d`) landed on the working tree
+and conflicted across ~100 files; a parallel sync also dropped four `" 2"`
+collision duplicates of tracked files (`DataStore 2.swift`,
+`ExpandableCard 2.swift`, `TutorNavigation 2.swift`,
+`generate_compat_pbxproj 2.py`). All four of this session's commits were
+already in HEAD/reflog and were never at risk. Recovery: `git reset --merge`
+(NOT `--hard`; HEAD stayed at `87dd68d`, the stash was left intact in
+`stash@{0}` for its owner), then moved the four untracked `" 2"` artifacts to
+`/tmp/bigsur_collision_artifacts/` (reversible; none referenced by the pbxproj
+or any import). Post-recovery: all lints clean, `test_lints` green, working
+tree == committed state. A second agent had been handed the identical v4
+superprompt, detected these commits, and stood down without editing/committing
+(its note is preserved in `STOP_AND_ASK.md`). STOP_AND_ASK count for blockers: 0.
+
+### Posture / honesty constraint
+
+The dev Mac CANNOT prove Big Sur / Swift 5.5 compilation. The proxy for
+correctness here is: the new + existing deterministic lints pass, the dev-Mac
+Release build + full test suite stay green, and each fix obeys the Swift 5.5
+rules above. **Final confirmation still requires an iMac rebuild** (`git pull`,
+Clean Build Folder ⇧⌘K, build) — see `BIGSUR_COMPILE_SAFETY_CHECKPOINT.md`.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
