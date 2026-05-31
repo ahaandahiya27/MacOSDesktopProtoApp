@@ -26224,6 +26224,23 @@
             "ssch11_t04_c01",
             "ssch11_t04_c02"
           ]
+        },
+        {
+          "id": "ssch11_rw04",
+          "title": "A 2,000-year-old word in your pocket",
+          "body": "The word 'rupee' comes from the Sanskrit rūpya, meaning 'wrought silver'. Punch-marked silver pieces in ancient India were rūpya; centuries later the ruler Sher Shah Suri issued a silver coin he called the rupiya; the British kept the name; and today even the cash-free 'digital rupee' carries it forward. Few words have survived so long, so unchanged — every time you say 'rupee' you are speaking a 2,000-year-old name for silver money.",
+          "relatedConceptIds": [
+            "ssch11_t04_c01",
+            "ssch11_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch11_rw05",
+          "title": "Why your ₹100 note is really a promise",
+          "body": "Look closely at an Indian banknote and you will see the signature of the Reserve Bank of India's Governor. That signature, and the law behind it, are what give the note its worth. The paper itself is nearly worthless; the note is valuable because the RBI and the government stand behind it and everyone agrees to accept it. In other words, money today is a shared promise — fiat money, trusted because we all trust it together.",
+          "relatedConceptIds": [
+            "ssch11_t04_c03"
+          ]
         }
       ],
       "mnemonics": [
@@ -26275,6 +26292,23 @@
           "relatedConceptIds": [
             "ssch11_t01_c01",
             "ssch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch11_ms04",
+          "kidsThink": "To be 'real' money, a coin must be made of valuable metal like gold or silver.",
+          "actually": "Early coins were precious metal, but modern coins and notes are 'fiat money'. They work because the government makes them legal tender and everyone trusts them — not because the metal or paper is worth much. The trust, not the material, gives them value.",
+          "relatedConceptIds": [
+            "ssch11_t04_c03",
+            "ssch11_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch11_ms05",
+          "kidsThink": "Digital money like UPI is a completely different kind of money from rupees.",
+          "actually": "UPI, cards and QR payments simply move the SAME rupees electronically between bank accounts. No new kind of money is created — only the method of transfer has changed, from handing over cash to sending it digitally.",
+          "relatedConceptIds": [
+            "ssch11_t05_c01"
           ]
         }
       ],
@@ -26440,6 +26474,66 @@
           "hindiTerm": "क्यूआर कोड",
           "relatedConceptIds": [
             "ssch11_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch11_gl13",
+          "term": "Rupee",
+          "definition": "The name of India's currency; from Sanskrit rūpya, meaning 'wrought (stamped) silver'.",
+          "example": "From ancient silver coins to today's digital rupee, the name 'rupee' has lasted over 2,000 years.",
+          "hindiTerm": "रुपया",
+          "relatedConceptIds": [
+            "ssch11_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch11_gl14",
+          "term": "Numismatics",
+          "definition": "The study of coins, paper money and the history they reveal; from Greek nomisma ('coin, current money').",
+          "example": "Numismatics lets historians read trade and power from old coins.",
+          "hindiTerm": "मुद्राशास्त्र",
+          "relatedConceptIds": [
+            "ssch11_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch11_gl15",
+          "term": "Obverse and reverse",
+          "definition": "The two faces of a coin: the obverse ('heads', the main side) and the reverse ('tails'); from Latin obvertere ('to turn toward') and reverse ('turned back').",
+          "example": "A coin's ruler or emblem is usually on the obverse, its value on the reverse.",
+          "hindiTerm": "मुख / पृष्ठ भाग",
+          "relatedConceptIds": [
+            "ssch11_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch11_gl16",
+          "term": "Fiat money",
+          "definition": "Money that has value because the government declares it legal tender and people trust it — not because the material is precious; from Latin fiat ('let it be done').",
+          "example": "Today's notes and coins are fiat money, valuable by trust, not by their metal or paper.",
+          "hindiTerm": "आदेशिक मुद्रा / फ़िएट मुद्रा",
+          "relatedConceptIds": [
+            "ssch11_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch11_gl17",
+          "term": "Legal tender",
+          "definition": "Money that, by law, must be accepted to settle a debt or payment within a country.",
+          "example": "The Indian rupee is legal tender across India.",
+          "hindiTerm": "वैध मुद्रा",
+          "relatedConceptIds": [
+            "ssch11_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch11_gl18",
+          "term": "Inflation",
+          "definition": "A general rise in prices over time, so each rupee buys a little less than before; from Latin inflare ('to blow up, inflate').",
+          "example": "Because of inflation, the same coin buys less today than it did decades ago.",
+          "hindiTerm": "मुद्रास्फीति",
+          "relatedConceptIds": [
+            "ssch11_t03_c03"
           ]
         }
       ],
