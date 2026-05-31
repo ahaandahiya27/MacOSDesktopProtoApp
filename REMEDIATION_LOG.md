@@ -4493,3 +4493,30 @@ coin layers, radiocarbon dating, class_10) and 'Why money, not barter, let citie
 grow' (coins enabled non-farmers and taxation, class_9). +2 cross-strand refs
 (→ssch09 early government forms; →ssch11 first coins & the idea of money). ssch04
 deepDive 2→4, ccRefs 2→4. All lints + Release build + suite green. Pushed ed383ee.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 45 (ssch05 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch05 (The Rise of Empires). +2 deepDive: 'Why Magadha, and not
+its neighbours?' (compounding causes — fertile Ganga plain, iron ore, war-
+elephants, river-trade control, ambitious rulers; class_10, anchor t03_c01) and
+'Śhrenīs: were India's guilds the first companies?' (written rules, seals,
+banking endowments at Sanchi, monastery donations; class_10, anchor t02_c02).
++2 cross-strand crossChapterRefs (→ssch11 trade routes & the idea of money;
+→ssch12 ancient guilds → modern markets). ssch05 deepDive 2→4, ccRefs 2→4. All
+lints + Release build + suite green. Pushed 4f0e8ac.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 46 (ssch06 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch06 (The Age of Reorganisation). +2 deepDive: 'Reading society
+from a queen's name' (Satavahana matronymics; Gautamīputra Sātakarni; Gautamī
+Balaśrī's Nashik inscription as social-history evidence; class_10, anchor
+t02_c04) and 'The calendar on India's government documents' (Shaka Samvat as
+India's official national calendar adopted 1957, Shaka year = CE − 78, used in
+the Gazette of India / AIR; class_9, anchor t04_c02). +2 cross-strand refs
+(→ssch07 reorganisation → Gupta Classical Age; →ssch08 stupas & the first Buddha
+image → sacred geography). ssch06 deepDive 2→4, ccRefs 2→4. All lints + Release
+build + suite green. Pushed 84fa5db.
