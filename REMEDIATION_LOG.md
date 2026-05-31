@@ -4609,3 +4609,18 @@ buyers trust a stranger's product; class_9, anchor t05_c03). +2 cross-strand ref
 (→ssch13 farm produce reaching buyers through mandis & supply chains; →ssch19
 markets depending on roads/ports/telecom/electricity). ssch12 deepDive 2→4,
 ccRefs 2→4. All lints + Release build + suite green. Pushed 3d857fa.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 53 (ssch13 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch13 (The Story of Indian Farming). +2 deepDive: 'Farming on the
+monsoon's clock' (the kharif/rabi/zaid cropping seasons set by the monsoon rhythm,
+their Arabic-origin names, and which thirsty vs moisture-residue crops fall in
+each; class_9, anchor t02_c03) and 'India's ancient answer to the dry season'
+(community-built water heritage — Deccan tanks/eris, Rajasthan baolis & johads,
+Bihar ahar-pyne, Himalayan terraces — as sustainable rainwater harvesting now
+being revived; class_10, anchor t03_c03). +2 cross-strand refs (→ssch12 the
+harvest reaching mandis & markets with MSP support; →ssch20 farm credit, banks
+and loans for seeds and equipment). ssch13 deepDive 2→4, ccRefs 2→4. All lints +
+Release build + suite green. Pushed 7ed7ddd.
