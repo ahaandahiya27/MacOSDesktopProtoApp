@@ -1721,7 +1721,9 @@
       "body": "When a factory makes a product, the buyer pays for the product but not for the pollution the factory releases into the air or river. That pollution is a real cost, but it falls on society — on people who never bought the product — rather than on the buyer or seller. Economists call such a spillover cost a 'negative externality'. Because the market price ignores it, the market on its own produces too much of the polluting good. This is why the government steps in with regulations, pollution limits, or bans (as on single-use plastics): it forces the cost back onto the producer so the true cost of the good is reflected. Recognising externalities is one of the most important reasons economists give for government action in markets.",
       "prerequisite": "Knowing that markets can have effects beyond just buying and selling.",
       "nextStepHint": "Find a real example of a 'positive externality' — a market activity that benefits people who did not pay for it."
-    }
+    },
+    {"id": "ssch12_dv03", "title": "Why a shirt passes through so many hands", "gradeLevel": "class_9", "parentConceptId": "ssch12_t04_c03", "body": "It can seem that wholesalers, distributors and retailers just take a 'cut' and make goods costlier. But look at how a Surat shirt reaches a village shop, and each middleman turns out to be doing real work. The mill makes thousands of identical shirts and has no time to sell them one by one. A wholesaler buys in bulk, stores them, and takes the risk that some won't sell. A distributor carries them across states and 'breaks bulk' — splitting a truckload into shop-sized boxes. The retailer keeps a handful on a shelf near you, gives advice, and lets you buy just one. Each link adds a service — storage, transport, breaking bulk, reaching the last customer — and is paid for it. Where one of these services isn't needed, markets do remove the link: that is exactly what online selling does when a factory ships straight to your door. So middlemen are not automatically 'bad'; they survive only as long as they add value someone is willing to pay for.", "prerequisite": "Knowing the roles of wholesalers, distributors and retailers in a supply chain.", "nextStepHint": "Pick one middleman in the shirt's journey and name the service they add."},
+    {"id": "ssch12_dv04", "title": "The quality marks that protect you", "gradeLevel": "class_9", "parentConceptId": "ssch12_t05_c03", "body": "How can a buyer judge quality when you cannot test a product before buying it? India built a system of trust-marks so you don't have to. The ISI mark (from the Bureau of Indian Standards) certifies safety on goods like helmets and electrical plugs; AGMARK grades farm products such as spices and honey; FSSAI's licence number must appear on packaged food; and the BIS Hallmark certifies the purity of gold jewellery. Behind these is the Consumer Protection law, which gives buyers rights — to safety, to information (such as the printed MRP and expiry date), to choose, and to complain — and special consumer courts to settle disputes cheaply. These marks and rights are a quiet but powerful part of how markets work: they let an ordinary person trust a stranger's product, which is the very thing a market needs to function.", "prerequisite": "Knowing consumers need ways to judge the quality of what they buy.", "nextStepHint": "Find an ISI, AGMARK, FSSAI or Hallmark mark on something at home and say what it certifies."}
   ],
   "crossChapterRefs": [
     {
@@ -1743,7 +1745,9 @@
         "ssch12_t04_c03",
         "ssch12_t03_c02"
       ]
-    }
+    },
+    {"id": "ssch12_cc03", "toChapterId": "ssch13", "topic": "From the farm to the market", "pointer": "The crops grown in the chapter on farming reach buyers through exactly the wholesalers, mandis and supply chains studied here.", "relatedConceptIds": ["ssch12_t04_c03"]},
+    {"id": "ssch12_cc04", "toChapterId": "ssch19", "topic": "Markets need infrastructure", "pointer": "Markets — especially online and international ones — depend on the roads, ports, telecom and electricity studied in the chapter on infrastructure.", "relatedConceptIds": ["ssch12_t03_c02"]}
   ],
   "bossQuestions": [
     {
