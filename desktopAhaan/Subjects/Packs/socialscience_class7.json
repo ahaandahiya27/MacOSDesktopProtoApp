@@ -32065,6 +32065,24 @@
           "body": "In economics, an 'externality' is a cost (or benefit) that falls on people or the environment but is not paid for by the person who causes it. The Green Revolution's high yields had a market price, but its damage — impoverished soil, depleted groundwater, polluted water, harmed health including more cancer cases in some rural areas, and dying pollinators like bees — was a cost paid by society and future generations, not charged to anyone at the time. Economists call these 'negative externalities'. Recognising them explains why purely maximising short-term yield is not the same as maximising true welfare, and why sustainable farming, which counts these hidden costs, is the rational long-term choice.",
           "prerequisite": "Understanding the benefits and harms of the Green Revolution.",
           "nextStepHint": "Look up how 'subsidies' on power and fertiliser can unintentionally encourage over-use of water and chemicals."
+        },
+        {
+          "id": "ssch13_dv03",
+          "title": "Farming on the monsoon's clock",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch13_t02_c03",
+          "body": "India's three cropping seasons are not random — they are set by the rhythm of the monsoon, and even their names tell the story. Kharif crops (the word is Arabic for 'autumn') are sown with the arrival of the southwest monsoon around June and harvested after the rains in September–October; they are the thirsty crops like rice, maize and cotton that need plenty of water. Rabi (Arabic for 'spring') crops are sown in the cooler, drier months around October–November on the moisture the monsoon left behind, and harvested in spring; wheat, gram and mustard belong here. Zaid is the short summer season between rabi and kharif, used for quick crops like watermelon and cucumber where water is available. So a single farmer reads the calendar by the sky: when the monsoon comes, what it leaves in the soil, and how hot the gap months are. Knowing why the seasons fall when they do explains why a failed monsoon hurts the kharif harvest most of all.",
+          "prerequisite": "Knowing the three cropping seasons are kharif, rabi and zaid.",
+          "nextStepHint": "Match rice, wheat and watermelon to their cropping seasons and explain why."
+        },
+        {
+          "id": "ssch13_dv04",
+          "title": "India's ancient answer to the dry season",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch13_t03_c03",
+          "body": "Long before electric pumps, Indians across the country invented clever ways to catch and store the monsoon for the long dry months — a heritage this chapter calls India's water structures. In the rocky Deccan, villages built bunded tanks (eris in the Tamil country) that caught run-off and let it soak slowly into wells and fields. In Rajasthan, stepwells (baolis) and johads stored precious rain; in Bihar, the ahar-pyne system channelled water across the land; terraced hillsides in the Himalayas and the Northeast held soil and water together. What is striking is that these were usually built and maintained by the community, not a distant government — a shared work that also shared the water fairly. Today, as groundwater runs low, engineers and villages are reviving these old structures, because rainwater harvesting that our ancestors mastered turns out to be one of the most sustainable answers to water scarcity we have.",
+          "prerequisite": "Knowing that India has a heritage of traditional water structures.",
+          "nextStepHint": "Find the local name for a traditional water structure in your region and how it stored water."
         }
       ],
       "crossChapterRefs": [
@@ -32086,6 +32104,24 @@
           "relatedConceptIds": [
             "ssch13_t02_c01",
             "ssch13_t02_c02"
+          ]
+        },
+        {
+          "id": "ssch13_cc03",
+          "toChapterId": "ssch12",
+          "topic": "Selling the harvest",
+          "pointer": "The crops grown here reach buyers through the mandis, wholesalers and supply chains studied in the chapter on markets, and government support like MSP links the two.",
+          "relatedConceptIds": [
+            "ssch13_t05_c04"
+          ]
+        },
+        {
+          "id": "ssch13_cc04",
+          "toChapterId": "ssch20",
+          "topic": "Credit for the farmer",
+          "pointer": "Among the biggest challenges farmers face is money for seeds and equipment — the farm loans, banks and credit that meet this need are studied in the chapter on banks and finance.",
+          "relatedConceptIds": [
+            "ssch13_t05_c04"
           ]
         }
       ],
