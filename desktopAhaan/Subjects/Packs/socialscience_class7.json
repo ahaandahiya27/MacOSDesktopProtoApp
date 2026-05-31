@@ -9864,6 +9864,40 @@
                 87
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_t01_q04",
+              "prompt": "Using the SIX features of an empire (an army, an administration, laws and currency, control over resources, support for art and learning, and communication networks), explain what makes an EMPIRE different from a single small kingdom or mahaajanapada.",
+              "questionType": "longAnswer",
+              "answer": "A single kingdom rules one people in one fairly small territory. An empire is much bigger — a collection of many kingdoms brought under one emperor — and to hold such a large, varied area together it needs the six features working at scale. It needs a large ARMY to conquer and defend distant regions; an ADMINISTRATION of officials to govern lands the emperor cannot personally visit; common LAWS AND CURRENCY so trade and justice work the same everywhere; CONTROL OVER RESOURCES (land, mines, forests, taxes) to pay for all of this; SUPPORT FOR ART AND LEARNING to display its power and unite its culture; and COMMUNICATION NETWORKS (roads and messengers) to carry orders and goods across huge distances. A small kingdom may have a little of each, but an empire is defined by running all six on a grand scale across many subject kingdoms — often with tributary rulers paying tribute to the emperor.",
+              "solutionSteps": [
+                "State the core difference in scale: a kingdom is one territory; an empire unites many kingdoms under one emperor.",
+                "Walk through why each of the six features must operate at large scale to hold an empire together.",
+                "Note tributaries/vassals paying tribute as a feature unique to the imperial scale.",
+                "Conclude that an empire is defined by running all six features across many subject kingdoms."
+              ],
+              "commonMistakes": [
+                "Saying an empire is just 'a bigger kingdom' without naming the features that hold it together.",
+                "Forgetting communication networks and administration — the very things that make ruling distant lands possible."
+              ],
+              "variations": [
+                {
+                  "prompt": "Pick ONE of the six features and explain why an empire would struggle to survive without it.",
+                  "answer": "For example, without COMMUNICATION NETWORKS (roads and messengers), the emperor's orders, tax collectors and army could not reach distant provinces quickly, so far-off regions would drift out of control and break away — and the empire would fall apart.",
+                  "solutionSteps": [
+                    "Choose one feature, e.g. communication networks.",
+                    "Explain what it does for the empire.",
+                    "Show how losing it lets distant regions break away."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84,
+                85,
+                86
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -10238,6 +10272,40 @@
                 93
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_t03_q04",
+              "prompt": "Magadha rose to become the most powerful state of its time. Identify its GEOGRAPHIC, ECONOMIC and MILITARY advantages, and then argue which ONE you think mattered most — and why the others depended on it.",
+              "questionType": "longAnswer",
+              "answer": "Geographic: Magadha sat in the fertile Ganga plains and lay between the Ganga and Son rivers, which watered its crops and gave it cheap river transport and control of trade. Economic: that fertile land produced large food surpluses, and nearby IRON ORE and forests gave it metal for tools and weapons and timber for building — wealth to pay for armies and officials. Military: Magadha had strong armies and, crucially, WAR ELEPHANTS from its forests, which were hard for rivals to match. I would argue the fertile, well-watered land mattered MOST, because the others depended on it: the surplus food it produced was what fed the soldiers, paid for the iron-working, and supported the people and officials. Without that agricultural base, Magadha could not have afforded its armies or its administration — so geography fed the economy, which in turn paid for the military.",
+              "solutionSteps": [
+                "List the GEOGRAPHIC advantages: fertile Ganga plains, Ganga + Son rivers for water and trade.",
+                "List the ECONOMIC advantages: food surplus, iron ore, forests (timber).",
+                "List the MILITARY advantages: strong armies and war elephants.",
+                "Argue one is most important and show the others depend on it (e.g. fertile land → surplus → pays for army and admin)."
+              ],
+              "commonMistakes": [
+                "Listing the advantages without ARGUING which mattered most or how they connect.",
+                "Forgetting the war elephants, a distinctive Magadhan military edge."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why were the Ganga and Son rivers such an advantage for Magadha?",
+                  "answer": "The rivers watered Magadha's fertile fields and gave it cheap, fast water transport, letting it control river trade and move goods and armies easily — turning geography into wealth and power.",
+                  "solutionSteps": [
+                    "Recall the rivers water the fertile plains.",
+                    "Rivers also give transport and trade control.",
+                    "Both translate into wealth and military reach."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                91,
+                92,
+                93
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -10491,6 +10559,38 @@
                 98,
                 100,
                 101
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_t04_q04",
+              "prompt": "In his Arthaśhāstra, Kauṭilya said a strong state has SEVEN essential parts (the saptānga), not just a powerful king. Why would a wise adviser insist that a kingdom needs ALL seven working together, rather than relying on the king alone? Use an example to make your point.",
+              "questionType": "longAnswer",
+              "answer": "Kauṭilya treated the state like a body whose limbs must all work together — that is what 'saptānga' (seven limbs) means. A king alone, however clever, cannot rule a large kingdom by himself: he needs ministers and officials to govern, a territory and people to rule, a fortified capital for safety, a treasury to pay for everything, an army to defend and enforce, and allies to support him. If even one limb fails, the whole state weakens — for example, a brave king with a strong army but an EMPTY TREASURY cannot pay or feed his soldiers, so the army melts away and enemies move in. By naming all seven and showing how they depend on one another, Kauṭilya was teaching that lasting power comes from a balanced, well-run system, not from one strong individual.",
+              "solutionSteps": [
+                "Explain 'saptānga' = the seven limbs/parts of the state (like limbs of a body).",
+                "Argue a king alone cannot run a large kingdom — he needs the other parts.",
+                "Give an example of one part failing and dragging the rest down (e.g. empty treasury → no army).",
+                "Conclude that lasting power comes from a balanced system, not one person."
+              ],
+              "commonMistakes": [
+                "Saying only the king and the army matter — Kauṭilya deliberately named seven interdependent parts.",
+                "Describing the saptānga without explaining WHY all seven are needed together."
+              ],
+              "variations": [
+                {
+                  "prompt": "Kauṭilya is compared to a 'kingmaker'. Which ruler did he help bring to power, and through which famous book did his ideas survive?",
+                  "answer": "He helped Chandragupta Maurya found the Maurya empire, and his ideas survive in his book the Arthaśhāstra.",
+                  "solutionSteps": [
+                    "Recall Kauṭilya mentored Chandragupta Maurya.",
+                    "Recall his book, the Arthaśhāstra."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                101,
+                102
               ],
               "needsHumanReview": false
             }
@@ -10805,6 +10905,40 @@
                 109,
                 111,
                 112
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_t05_q05",
+              "prompt": "Ashoka spread his idea of dhamma by carving EDICTS onto rocks and pillars, mostly in the Prakrit language and Brahmi script. (a) Why might he have chosen to CARVE them on stone rather than write them on perishable material? (b) What can historians infer from the fact that the edicts were in PRAKRIT (the everyday language) and not Sanskrit?",
+              "questionType": "longAnswer",
+              "answer": "(a) Carving on rock and stone pillars made the messages permanent and public: stone survives weather and centuries (which is why we can still read them after more than 2,200 years), and pillars placed where people gathered or travelled meant many could see them — far better than a single document that could rot, burn or be lost. (b) Writing in Prakrit, the common spoken language, rather than the more scholarly Sanskrit, suggests Ashoka wanted ORDINARY PEOPLE — not just priests and scholars — to understand his message of dhamma. Historians infer that the edicts were meant as direct communication from the emperor to his subjects, a sign of a ruler trying to teach and connect with the common people across his vast empire.",
+              "solutionSteps": [
+                "Part (a): stone is durable and public → the message lasts and reaches many (and survives for us to read).",
+                "Part (b): Prakrit = the everyday language, unlike scholarly Sanskrit.",
+                "Infer the audience was ordinary people, not just scholars.",
+                "Conclude the edicts were the emperor speaking directly to his subjects."
+              ],
+              "commonMistakes": [
+                "Only describing WHAT the edicts say, without explaining why stone and Prakrit were chosen.",
+                "Assuming Prakrit was a 'lesser' language — the point is it was the language ordinary people understood."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are Ashoka's edicts such valuable evidence for historians today?",
+                  "answer": "Because they are the emperor's own words, carved in stone at the time, surviving for over 2,200 years — a direct, datable source about Mauryan government and Ashoka's ideas, not a later retelling.",
+                  "solutionSteps": [
+                    "Recall the edicts are contemporary, first-hand stone records.",
+                    "They survive and can be dated.",
+                    "So they are direct evidence, more reliable than later accounts."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                105,
+                106,
+                107
               ],
               "needsHumanReview": false
             }
@@ -11589,6 +11723,89 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch05_q10",
+          "prompt": "The word 'empire' comes from the Latin word 'imperium'. What does imperium mean?",
+          "questionType": "mcq",
+          "options": [
+            "Peace treaty",
+            "Supreme power",
+            "Trade route",
+            "Holy city"
+          ],
+          "answer": "Supreme power",
+          "solutionSteps": [
+            "An empire is ruled by one powerful emperor.",
+            "The word comes from Latin imperium.",
+            "Imperium means 'supreme power'."
+          ],
+          "commonMistakes": [
+            "Guessing a meaning unrelated to power/rule."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            84
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch05_q11",
+          "prompt": "Ashoka spread his idea of dhamma (moral and ethical duty) across the empire mainly by —",
+          "questionType": "mcq",
+          "options": [
+            "Sending soldiers to every village",
+            "Engraving edicts on rocks and pillars",
+            "Printing books for everyone",
+            "Building a single great temple"
+          ],
+          "answer": "Engraving edicts on rocks and pillars",
+          "solutionSteps": [
+            "Recall how Ashoka communicated dhamma.",
+            "He had edicts carved on rocks and pillars, mostly in Prakrit.",
+            "Placed in public spots, they reached many people and lasted."
+          ],
+          "commonMistakes": [
+            "Choosing 'printing books' — printing did not exist then."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            105,
+            106
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch05_q12",
+          "prompt": "Which combination BEST explains why Magadha grew so powerful?",
+          "questionType": "mcq",
+          "options": [
+            "Coastal ports and a large navy",
+            "Fertile land, iron ore, forests and war elephants",
+            "Snowy mountains and a cold desert",
+            "Gold mines and ocean trade alone"
+          ],
+          "answer": "Fertile land, iron ore, forests and war elephants",
+          "solutionSteps": [
+            "Recall Magadha's advantages.",
+            "Fertile Ganga land + iron ore + forests + war elephants + river trade.",
+            "Pick the option listing those land-based strengths."
+          ],
+          "commonMistakes": [
+            "Choosing coastal/navy options — Magadha's strength was inland and river-based."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            91,
+            92
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -11666,6 +11883,61 @@
           "difficulty": 2,
           "pageRefs": [
             104
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch05_q03",
+          "prompt": "Chandragupta Maurya's brilliant mentor — author of the Arthaśhāstra — was —",
+          "questionType": "mcq",
+          "options": [
+            "Megasthenes",
+            "Kauṭilya (Chāṇakya)",
+            "Porus",
+            "Dhana Nanda"
+          ],
+          "answer": "Kauṭilya (Chāṇakya)",
+          "solutionSteps": [
+            "Recall who guided Chandragupta to power.",
+            "It was Kauṭilya, also called Chāṇakya.",
+            "He wrote the Arthaśhāstra on running a state."
+          ],
+          "commonMistakes": [
+            "Confusing Kauṭilya with the Greek envoy Megasthenes."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            100,
+            101
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch05_q04",
+          "prompt": "Self-governing associations of traders, craftsmen or moneylenders who made their own rules were called —",
+          "questionType": "mcq",
+          "options": [
+            "Śhrenīs (guilds)",
+            "Janapadas",
+            "Edicts",
+            "Tributaries"
+          ],
+          "answer": "Śhrenīs (guilds)",
+          "solutionSteps": [
+            "Recall the powerful self-organising associations of the period.",
+            "They were called śhrenīs, i.e. guilds.",
+            "They made and enforced their own rules."
+          ],
+          "commonMistakes": [
+            "Confusing a śhrenī (guild) with a janapada (territory/state)."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            89
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"

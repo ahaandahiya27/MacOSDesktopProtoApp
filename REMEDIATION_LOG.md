@@ -3946,3 +3946,17 @@ advantages), `t03_q04` (diff5 monarchy vs gana/sangha republic compare), `t04_q0
 punch-marked coins, sabhaa/samiti. Pack 303→307 topic-Qs; ssch04 boss 10→13,
 quick 3→5. (Avoided overlap with existing diff4 q on iron and existing source-types
 q.) All 7 content lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 5 (ssch05 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch05 (The Rise of Empires)**: +8 PDF-faithful items.
+4 topic Qs — `t01_q04` (diff4 empire vs kingdom via the six features), `t03_q04`
+(diff5 Magadha multi-factor rise, argue which mattered most), `t04_q04` (diff5
+saptānga interdependence — why a state needs all seven limbs), `t05_q05` (diff5
+why Ashoka carved edicts in Prakrit on stone — source interpretation). 3 boss MCQ
+(diff4): imperium etymology, edicts, Magadha advantages. 2 quick MCQ: Kauṭilya,
+śhrenīs. Pack 307→311 topic-Qs; ssch05 boss 10→13, quick 3→5. (Avoided overlap
+with existing diff4 Qs on Alexander/Kalinga and the lion-capital boss/quick.)
+All 7 content lints green.
