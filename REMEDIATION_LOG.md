@@ -4331,3 +4331,16 @@ price UP not down; an online shop is still a market) + 2 realWorldExamples (mang
 price swings with the season via supply/demand; the supply chain hidden in a ₹10
 biscuit packet — why middlemen add value). ssch12 glossary 10→17. All lints +
 Release build + suite green. Pushed 42556d7. GL: ssch01–12 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 33 (ssch13 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch13 (The Story of Indian Farming). +7 glossary terms
+with etymology: Sustainable (Lat sustinere), Fertiliser (ferre), Terrace farming,
+Subsistence (subsistere), Horticulture (hortus+cultura), Pesticide (pestis+caedere,
+'-cide'=killer), Bund. +2 misconceptions (Indian farming is highly varied, not
+uniform; modern seeds/chemicals aren't always better than traditional ones) + 2
+realWorldExamples (legume-after-grain crop rotation refreshes the soil; the Arabic
+origins of kharif/rabi/zaid season names). ssch13 glossary 11→18. All lints +
+Release build + suite green. Pushed 16ca3b5. GL: ssch01–13 done.
