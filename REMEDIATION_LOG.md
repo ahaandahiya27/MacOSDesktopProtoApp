@@ -4564,3 +4564,19 @@ as a guard against tyranny; class_10, anchor t03_c03). +2 cross-strand refs
 (→ssch10 government types → India's Constitution; →ssch18 the three organs →
 the state and government). ssch09 deepDive 2→4, ccRefs 2→4. All lints + Release
 build + suite green. Pushed f260f4b.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 50 (ssch10 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch10 (The Constitution of India — An Introduction). +2 deepDive:
+'Borrowed bricks, an Indian building' (features adapted from the UK, US, Ireland,
+Germany and Canada and reshaped for India, with Dr. Ambedkar's reply to the
+'borrowed' charge; class_9, anchor t03_c03) and 'Why 26 January? A date chosen on
+purpose' (the Constitution timed to come into force on the anniversary of the 1930
+Purna Swaraj declaration, distinguishing Republic Day from Independence Day;
+class_8, anchor t02_c03). +2 cross-strand refs (→ssch18 the Constitution's organs
+shown at work in the state and government; →ssch05 Ashoka's Sarnath Lion Capital →
+State Emblem and the dharma chakra on the flag). ssch10 deepDive 2→4, ccRefs 2→4.
+All lints + Release build + suite green. Pushed ddd99d4. DEEPDIVE pass halfway
+(ssch01–10 done).
