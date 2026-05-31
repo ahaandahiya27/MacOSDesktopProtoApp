@@ -46,6 +46,32 @@ enum ChapterTheme {
         // Space
         case "ch19": return Color(red: 0.20, green: 0.18, blue: 0.40)   // Earth, Moon, Sun — midnight indigo
 
+        // Class 7 Social Science (socialscience_class7) — strand-coded so the
+        // Discover chrome + dashboard tint give each chapter a recognisable
+        // identity. Geography = earth blues/greens; History = warm bronze/sepia;
+        // Civics = authority indigo/slate; Economics = prosperity green/gold;
+        // Culture/Society = saffron/magenta.
+        case "ssch01": return Color(red: 0.16, green: 0.42, blue: 0.45)   // Geographical Diversity — deep teal-green
+        case "ssch02": return Color(red: 0.26, green: 0.50, blue: 0.74)   // Weather — sky blue
+        case "ssch03": return Color(red: 0.20, green: 0.46, blue: 0.62)   // Climates — ocean blue
+        case "ssch04": return Color(red: 0.55, green: 0.40, blue: 0.22)   // Cities & States — clay bronze
+        case "ssch05": return Color(red: 0.62, green: 0.34, blue: 0.16)   // Rise of Empires — burnt amber
+        case "ssch06": return Color(red: 0.50, green: 0.30, blue: 0.20)   // Reorganisation — sepia
+        case "ssch07": return Color(red: 0.58, green: 0.42, blue: 0.12)   // Gupta Era — gold
+        case "ssch08": return Color(red: 0.72, green: 0.38, blue: 0.16)   // Land Becomes Sacred — saffron
+        case "ssch09": return Color(red: 0.24, green: 0.30, blue: 0.55)   // Types of Governments — indigo
+        case "ssch10": return Color(red: 0.20, green: 0.28, blue: 0.50)   // Constitution — deep blue
+        case "ssch11": return Color(red: 0.20, green: 0.45, blue: 0.32)   // Barter to Money — green
+        case "ssch12": return Color(red: 0.24, green: 0.48, blue: 0.30)   // Markets — market green
+        case "ssch13": return Color(red: 0.30, green: 0.46, blue: 0.18)   // Indian Farming — field green
+        case "ssch14": return Color(red: 0.18, green: 0.40, blue: 0.50)   // India & Her Neighbours — teal
+        case "ssch15": return Color(red: 0.56, green: 0.32, blue: 0.24)   // Empires & Kingdoms 6th–10th — terracotta
+        case "ssch16": return Color(red: 0.48, green: 0.28, blue: 0.28)   // Turning Tides 11th–12th — maroon
+        case "ssch17": return Color(red: 0.55, green: 0.24, blue: 0.42)   // India, a Home to Many — magenta
+        case "ssch18": return Color(red: 0.26, green: 0.32, blue: 0.46)   // State, Government & You — slate blue
+        case "ssch19": return Color(red: 0.30, green: 0.44, blue: 0.40)   // Infrastructure — slate green
+        case "ssch20": return Color(red: 0.22, green: 0.44, blue: 0.34)   // Banks & Finance — emerald
+
         default: return Color.compatIndigo
         }
     }
