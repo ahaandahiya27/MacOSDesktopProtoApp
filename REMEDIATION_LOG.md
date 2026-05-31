@@ -4580,3 +4580,17 @@ shown at work in the state and government; →ssch05 Ashoka's Sarnath Lion Capit
 State Emblem and the dharma chakra on the flag). ssch10 deepDive 2→4, ccRefs 2→4.
 All lints + Release build + suite green. Pushed ddd99d4. DEEPDIVE pass halfway
 (ssch01–10 done).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 51 (ssch11 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch11 (From Barter to Money). +2 deepDive: 'A coin is a tiny
+history book' (numismatics — reading a ruler's name, the script/era, the gods
+honoured, metal purity in hard times, and trade reach from find-spots; class_10,
+anchor t04_c01) and 'What really happens when you scan a QR code' (UPI mechanics
+— payment address, PIN approval, bank records updated, money as agreed data at
+billion-payment scale; class_9, anchor t05_c01). +2 cross-strand refs (→ssch12
+money as the medium that makes markets work; →ssch20 paper money & the RBI →
+banks and finance). ssch11 deepDive 2→4, ccRefs 2→4. All lints + Release build +
+suite green. Pushed 63ff74d.
