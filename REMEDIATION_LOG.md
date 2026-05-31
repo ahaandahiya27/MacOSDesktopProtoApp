@@ -4305,3 +4305,16 @@ rather than copying one) + 2 realWorldExamples (every official swears allegiance
 to the Constitution, which sits above them; the 86th Amendment turned education
 into a Fundamental Right). ssch10 glossary 10→16. All lints + Release build +
 suite green. Pushed bcf8d24. *** GL PASS HALFWAY: ssch01–10 done. ***
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 31 (ssch11 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch11 (From Barter to Money). +6 glossary terms with
+etymology: Rupee (Skt rūpya 'wrought silver'), Numismatics (Gk nomisma), Obverse/
+reverse (Lat obvertere), Fiat money (Lat fiat 'let it be done'), Legal tender,
+Inflation (Lat inflare). +2 misconceptions (real money needn't be precious metal
+— it's fiat/trust; UPI moves the same rupees, not a new money) + 2 realWorldExamples
+(the 2,000-year-old word 'rupee' from rūpya to digital rupee; the ₹100 note as a
+shared RBI-backed promise). ssch11 glossary 12→18. All lints + Release build +
+suite green. Pushed ebb7ddb. GL: ssch01–11 done.
