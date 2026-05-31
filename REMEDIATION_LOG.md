@@ -4344,3 +4344,17 @@ uniform; modern seeds/chemicals aren't always better than traditional ones) + 2
 realWorldExamples (legume-after-grain crop rotation refreshes the soil; the Arabic
 origins of kharif/rabi/zaid season names). ssch13 glossary 11→18. All lints +
 Release build + suite green. Pushed 16ca3b5. GL: ssch01–13 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 34 (ssch14 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch14 (India and Her Neighbours). +6 glossary terms with
+etymology: Diaspora (Gk diaspeirein 'to scatter'), Strait, Suvarnabhumi (Skt
+suvarna 'gold' + bhumi 'land'), Bilateral (Lat bi-+latus), Theravada/Mahayana/
+Vajrayana (the three Buddhist schools), Hydroelectricity (Gk hydro). +2
+misconceptions (Indian culture spread to SE Asia through trade/teachers, not
+conquest; landlocked neighbours still depend on the sea via Indian ports) + 2
+realWorldExamples (Ayodhya→Ayutthaya & the Ramakien; why Bangkok's airport is
+named Suvarnabhumi). ssch14 glossary 11→17. All lints + Release build + suite
+green. Pushed 2ecadbe. GL: ssch01–14 done.
