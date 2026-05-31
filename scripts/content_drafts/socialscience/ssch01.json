@@ -1,0 +1,864 @@
+{
+  "id": "ssch01",
+  "number": 1,
+  "title": "Geographical Diversity of India",
+  "summary": "India is the seventh-largest country in the world and the heart of the Indian Subcontinent. From the snowy Himalayas in the north to the warm islands of the south, the land changes dramatically across five great regions: the great mountain zone, the plains of the Ganga and Indus, the desert region, the southern peninsula, and the islands. This chapter takes a bird's-eye 'flight' over each region — the Himalayas and the cold desert of Ladakh, the fertile Northern Plains, the Thar Desert and the ancient Aravallis, the Peninsular Plateau with its Western and Eastern Ghats, the long coastlines and river deltas, the island groups, the Sundarbans, and the rainy hills of the Northeast — and shows how this geographical diversity has shaped India's climate, wildlife, ways of life, economy, culture and history, while still leaving the country united.",
+  "pageRefs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
+  "topics": [
+    {
+      "id": "ssch01_t01",
+      "title": "A Land of Many Lands: India's Location",
+      "summary": "Where India sits on the globe, why it is called a subcontinent, the five regions geographers use to describe it, and the natural barriers that frame it.",
+      "concepts": [
+        {
+          "id": "ssch01_t01_c01",
+          "title": "The Indian Subcontinent",
+          "explanations": {
+            "oneLine": "India is the seventh-largest country in the world and the centre of a region called the Indian Subcontinent.",
+            "kidFriendly": "Imagine a huge piece of land that is almost a continent by itself but is still joined to Asia — that is the Indian Subcontinent. India shares it with neighbours like Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka and Myanmar. India is so big and varied that it is sometimes called a 'mini-continent'.",
+            "textbook": "India is the seventh-largest country in the world and a part of Asia. Together with its neighbours — Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka and Myanmar — it forms the region known as the Indian Subcontinent. It is called a subcontinent because, although it is part of the continent of Asia, it is separated from the rest of the continent by great natural features and has its own distinct landforms, climate, plants, animals and cultures.",
+            "expert": "The term 'subcontinent' captures a landmass large and self-contained enough to be treated as a distinct unit, yet still attached to a larger continent. The Indian Subcontinent's distinctiveness is not merely cultural; it has a geological basis. The Indian plate was once part of the southern supercontinent Gondwana and later fused to Eurasia, raising the Himalayas along the suture. The mountain wall, the deserts and the surrounding seas together produced a semi-enclosed region whose monsoon climate, river systems and biodiversity differ sharply from the rest of Asia — which is exactly why geographers and historians treat it as a single 'subcontinent'."
+          },
+          "reasoning": "A 'continent' is one of Earth's main large landmasses; a 'subcontinent' is a part of a continent that is large and clearly set apart from the rest. India qualifies because the Himalayas to the north, the Thar Desert and Arabian Sea to the west, and the Indian Ocean and Bay of Bengal to the south and east wall it off, giving it its own climate, life and history.",
+          "useCases": [
+            {"title": "Reading a world map", "description": "When you find India on a globe, you can immediately name its neighbours and explain why this cluster of countries is grouped as one 'subcontinent'.", "domain": "geography"},
+            {"title": "Understanding the monsoon", "description": "The same barriers that make India a subcontinent also trap the monsoon winds, which is why almost all these neighbouring countries share a rainy season.", "domain": "weather"},
+            {"title": "Making sense of history", "description": "Traders and travellers had to cross mountains, deserts or seas to reach India, so its civilisation developed many features of its own — a direct result of being a walled-off subcontinent.", "domain": "history"}
+          ],
+          "beyondTheBook": "The word 'India' itself comes from the river Sindhu (the Indus). Ancient Persians pronounced 'S' as 'H', turning Sindhu into 'Hindu', and the Greeks dropped the 'H' to get 'Indus' and 'India'. So the country gave its name to the whole subcontinent it anchors.",
+          "relatedConceptIds": ["ssch01_t01_c02", "ssch01_t01_c03", "ssch01_t02_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [2],
+          "needsHumanReview": false,
+          "mnemonic": "Subcontinent = 'almost a continent, but still stuck to Asia'.",
+          "predictQuestion": "Why might a country be called a 'subcontinent' instead of just a large country?"
+        },
+        {
+          "id": "ssch01_t01_c02",
+          "title": "The Five Physiographic Regions",
+          "explanations": {
+            "oneLine": "Geographers describe India in five great regions: the mountains, the plains, the desert, the peninsula and the islands.",
+            "kidFriendly": "To talk about such a huge country, geographers split it into five big pieces: the great mountain zone (the Himalayas), the plains of the Ganga and Indus, the desert region, the southern peninsula, and the islands. In this chapter you 'fly' over all five.",
+            "textbook": "For the purpose of discussion, India is often described in five regions: (1) the great mountain zone of the Himalayas, (2) the plains of the Ganga and the Indus, (3) the desert region, (4) the southern peninsula, and (5) the islands. Each region has its own landforms, climate, soils, plants, animals and ways of life, and together they make India one of the most geographically diverse countries on Earth.",
+            "expert": "These five regions form a 'physiographic' division — a classification based on relief (the shape and height of the land) rather than on political boundaries. Each region is the product of different earth processes: the mountains from plate collision and folding; the plains from river deposition of alluvium; the desert from aridity and wind action; the peninsular plateau from ancient, stable Gondwana rock; and the islands from coral growth or volcanic activity. Recognising the five regions is the first step in explaining why India's climate, agriculture and population are distributed so unevenly."
+          },
+          "reasoning": "A country as large and varied as India cannot be understood as one flat space. Grouping the land by its physical form — height, slope, rock and water — lets us compare regions and explain why people farm, build and live so differently from one place to another.",
+          "useCases": [
+            {"title": "Organising what you learn", "description": "Every later section of the chapter fits into one of the five regions, so the framework becomes a mental 'map filing system'.", "domain": "study"},
+            {"title": "Explaining population", "description": "You can predict where most people live (the fertile plains) and where few do (high mountains, hot desert) just from the regions.", "domain": "geography"},
+            {"title": "Planning a trip", "description": "A traveller picks gear and clothing differently for the mountain zone, the desert and the islands — the five-region idea guides the choice.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "Some atlases use six or seven divisions, splitting the plains from the plateau or counting the coastal plains separately. There is no single 'correct' number — the divisions are a tool for describing the land, and geographers choose the grouping that best fits their purpose.",
+          "relatedConceptIds": ["ssch01_t01_c01", "ssch01_t02_c01", "ssch01_t03_c01", "ssch01_t04_c01", "ssch01_t05_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [2],
+          "needsHumanReview": false,
+          "mnemonic": "Mountains, Plains, Desert, Peninsula, Islands — 'My Plate Deserves Plenty of Idlis'."
+        },
+        {
+          "id": "ssch01_t01_c03",
+          "title": "India's Natural Boundaries",
+          "explanations": {
+            "oneLine": "Mountains, a desert, and seas form natural walls that separate India from the rest of Asia.",
+            "kidFriendly": "India has built-in 'fences' made by nature. The tall Himalayas guard the north, the Thar Desert and the Arabian Sea protect the west, and the Indian Ocean and the Bay of Bengal surround the south and east.",
+            "textbook": "The Himalayan mountain range stands as a natural barrier in the north, while the Thar Desert and the Arabian Sea mark India's western limits. To the south lies the Indian Ocean and to the east the Bay of Bengal. These features create a separation between India and the rest of the continent and have played a crucial role in shaping India's climate, culture and history.",
+            "expert": "Natural boundaries are physical features so difficult to cross that they limit the movement of people, goods, weather systems and even plants and animals. India's boundaries are unusually complete: a continuous high-mountain arc, an arid belt, and open ocean on two sides. This near-enclosure helped the monsoon system organise itself over the subcontinent, slowed (without ever stopping) invasions and migrations, and allowed distinctive languages, religions and farming systems to develop. Boundaries shape history precisely because they are barriers — but India's were always permeable through mountain passes and sea routes, which is why it also absorbed influences from outside."
+          },
+          "reasoning": "Tall mountains, waterless deserts and wide oceans are hard to cross, so they act like walls. By limiting easy movement, they keep weather, people and cultures somewhat 'inside', which is why India's climate and civilisation grew their own character.",
+          "useCases": [
+            {"title": "Explaining the monsoon's reach", "description": "The Himalayas block cold Central Asian winds and trap rain-bearing monsoon clouds over India — a direct effect of a natural boundary.", "domain": "weather"},
+            {"title": "Understanding old trade routes", "description": "Because the walls were hard but not impossible to cross, trade flowed through specific mountain passes and ports — knowing the boundaries tells you where.", "domain": "history"},
+            {"title": "Defence and security", "description": "Forts and outposts were often placed at gaps in the natural walls, such as mountain passes and island groups.", "domain": "civics"}
+          ],
+          "beyondTheBook": "No natural boundary is a perfect wall. The Khyber and Bolan passes in the northwest mountains were 'gates' through which traders and armies entered India for thousands of years — proof that even the mightiest barriers leave doorways.",
+          "relatedConceptIds": ["ssch01_t01_c01", "ssch01_t02_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [2, 3],
+          "needsHumanReview": false,
+          "whyChain": [
+            "Why do natural boundaries matter? Because features like high mountains, dry deserts and wide seas are extremely hard to cross. They slow down the movement of people, armies, traders, and even rain clouds and animals, so whatever is 'inside' the boundary tends to develop on its own for long stretches of time.",
+            "Why does that shape climate and culture? When monsoon winds are trapped by the Himalayas, rain falls heavily over India instead of escaping north, fixing the rhythm of farming and festivals. When people are partly enclosed, their languages, foods and beliefs grow distinct, because outside influences arrive slowly and get blended with local ways.",
+            "Why isn't India completely cut off, then? Because every barrier has weak points. Mountain passes such as the Khyber, and sea ports along both coasts, acted as doorways. Through them came traders, ideas, religions and new crops. So India was protected enough to be distinctive, yet open enough to keep absorbing the world — a balance that defines its history."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch01_t01_q01",
+          "prompt": "Why is the region containing India and its neighbours called the 'Indian Subcontinent'?",
+          "questionType": "shortAnswer",
+          "answer": "Because it is a very large, distinct landmass that is part of the continent of Asia but is set apart from the rest of it by the Himalayas, the Thar Desert and the surrounding seas, giving it its own landforms, climate and cultures.",
+          "solutionSteps": [
+            "Recall that a subcontinent is a large part of a continent that is clearly separated from the rest.",
+            "Identify the natural separators: Himalayas to the north, Thar Desert and Arabian Sea to the west, Indian Ocean and Bay of Bengal to the south and east.",
+            "Note that India shares this region with Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka and Myanmar.",
+            "Conclude that being large, distinct and partly enclosed makes it a 'subcontinent' rather than just a country."
+          ],
+          "commonMistakes": [
+            "Saying it is a separate continent — it is part of Asia, not a continent of its own.",
+            "Forgetting to mention the natural barriers that make it 'distinct'."
+          ],
+          "variations": [
+            {"prompt": "India is sometimes called a 'mini-continent'. Give one reason why.", "answer": "Because within one country it contains an enormous range of landforms and climates — snowy mountains, fertile plains, hot deserts, plateaus, coasts and islands — like a small continent.", "solutionSteps": ["Recall India's five physiographic regions.", "Note the wide range of climates from below -30°C in Ladakh to hot deserts.", "Conclude that such diversity packed into one country resembles a continent."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [2],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t01_q02",
+          "prompt": "Which of these is NOT one of the five regions geographers commonly use to describe India?",
+          "questionType": "mcq",
+          "options": ["The great mountain zone", "The plains of the Ganga and Indus", "The frozen continent", "The southern peninsula"],
+          "answer": "The frozen continent",
+          "solutionSteps": [
+            "List the five regions: mountain zone, plains, desert, peninsula, islands.",
+            "Check each option against the list.",
+            "'The frozen continent' is not among them — it is not part of India at all."
+          ],
+          "commonMistakes": [
+            "Confusing the cold desert of Ladakh with a 'frozen continent' — Ladakh is a region within the mountain zone, not a separate continent."
+          ],
+          "variations": [
+            {"prompt": "Name the five regions used to describe India.", "answer": "The great mountain zone, the plains of the Ganga and Indus, the desert region, the southern peninsula, and the islands.", "solutionSteps": ["Recall the five-region framework introduced at the start of the chapter."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [2],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t01_q03",
+          "prompt": "True or False: India's natural boundaries completely sealed it off so that no traders or armies could ever enter.",
+          "questionType": "trueFalse",
+          "answer": "False",
+          "solutionSteps": [
+            "Recall that mountains, deserts and seas are barriers but not perfect walls.",
+            "Remember that mountain passes (like the Khyber) and sea ports acted as doorways.",
+            "Conclude the statement is False — India was protected but never completely sealed."
+          ],
+          "commonMistakes": [
+            "Believing the Himalayas made India impossible to reach — passes and ports always allowed movement."
+          ],
+          "variations": [
+            {"prompt": "Name one 'doorway' through India's natural boundaries.", "answer": "A mountain pass such as the Khyber Pass, or any coastal port along the Arabian Sea or Bay of Bengal.", "solutionSteps": ["Recall that barriers have weak points.", "Name a pass or a port."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [2, 3],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch01_t02",
+      "title": "The Great Mountain Zone: The Himalayas",
+      "summary": "How the Himalayas were born from a slow collision of land, their three parallel ranges, why they are the 'Water Tower of Asia', and the surprising cold desert of Ladakh hidden among them.",
+      "concepts": [
+        {
+          "id": "ssch01_t02_c01",
+          "title": "How the Himalayas Were Formed",
+          "explanations": {
+            "oneLine": "The Himalayas rose when the Indian landmass drifted north and crashed into Asia, crumpling the land upward.",
+            "kidFriendly": "Long ago India was joined to Africa in a giant landmass called Gondwana. India broke away and slowly drifted north until, about 50 million years ago, it bumped into Asia. The land between them wrinkled up — just like a carpet wrinkles when you push it — and that wrinkle is the Himalayas! India is still pushing in about 5 cm a year, so the mountains keep growing a little taller.",
+            "textbook": "A long time ago, India was part of a much bigger landmass called Gondwana, where its neighbour was Africa. It broke away and slowly moved north. About 50 million years ago it reached the landmass of Eurasia and collided with it. As India pushed against Eurasia, the land between them crumpled and rose up — like a carpet wrinkling when pushed — forming the Himalayas. India is still moving into Asia at about 5 cm a year, so the Himalayas are still rising, by about 5 mm a year, which adds up to about 5 metres over a thousand years.",
+            "expert": "This is plate tectonics: Earth's outer shell is broken into slowly moving plates. The Indian plate separated from Gondwana, travelled thousands of kilometres, and converged with the Eurasian plate. Where two continental plates collide, neither can sink easily, so the crust shortens by folding and thrusting — producing the world's highest mountains. The 'folded layers of Himalayan rock' visible today, and the marine fossils found high in Ladakh, are direct evidence that rock once at the bottom of an ocean (the Tethys Sea) was pushed kilometres into the sky. Because the collision is ongoing, the Himalayas are seismically active and still growing."
+          },
+          "reasoning": "When two huge slabs of continental crust push against each other, the rock has nowhere to go but up and sideways, so it folds and stacks into mountains. Since the push has not stopped, the folding — and the height gain — continues today.",
+          "useCases": [
+            {"title": "Explaining earthquakes", "description": "The ongoing collision builds up stress in the rocks; when it releases, the Himalayan region experiences earthquakes.", "domain": "geography"},
+            {"title": "Reading rock layers", "description": "Folded and tilted rock layers in the mountains are evidence of squeezing — geologists use them to reconstruct the collision.", "domain": "science"},
+            {"title": "Understanding 'moonland' in Ladakh", "description": "The strange folded terrain of Ladakh, once an ocean floor, makes sense only once you know about the collision.", "domain": "geography"}
+          ],
+          "beyondTheBook": "Marine fossils — the remains of sea creatures — have been found high in the Himalayas. They are proof that this towering range was once beneath an ancient ocean called the Tethys Sea before the collision lifted it up.",
+          "relatedConceptIds": ["ssch01_t02_c02", "ssch01_t02_c04", "ssch01_t01_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [5],
+          "needsHumanReview": false,
+          "mnemonic": "Gondwana → drift north → crash → carpet wrinkle = Himalayas.",
+          "predictQuestion": "If India is still pushing into Asia, what do you think is happening to the height of the Himalayas?",
+          "whyChain": [
+            "Why did the Himalayas form where India meets Asia? Because the Indian plate, after breaking off from Gondwana, drifted north and collided with the Eurasian plate. At a collision between two continental plates, neither slab can easily sink, so the crust is squeezed. The only way for squeezed rock to go is up and sideways, which raises a mountain range exactly along the line of impact.",
+            "Why are they the tallest mountains on Earth? Because the collision is between two thick continental plates, not a thin ocean plate, so an enormous thickness of rock is folded and stacked. The push has also continued for about 50 million years without stopping, giving the range a very long time to keep rising rather than wearing down faster than it grows.",
+            "Why does this still matter today? The plates are still converging at about 5 cm a year, so the Himalayas keep rising by a few millimetres annually and the rocks store stress that is released as earthquakes. Knowing the cause helps explain the region's quakes, its folded 'moonland' rocks, and even the marine fossils found high on the peaks."
+          ]
+        },
+        {
+          "id": "ssch01_t02_c02",
+          "title": "The Three Ranges of the Himalayas",
+          "explanations": {
+            "oneLine": "The Himalayas have three parallel belts: the high Himadri, the gentler Himachal, and the low Shivalik hills.",
+            "kidFriendly": "The Himalayas are not one wall but three rows of mountains, one behind the other. The Himadri (Greater Himalayas) are the tallest and always snowy, with giant peaks like Mount Everest. The Himachal (Lower Himalayas) are gentler with a pleasant climate — that's where hill stations like Shimla and Darjeeling are. The Shivalik Hills are the lowest, with rolling hills and thick forests.",
+            "textbook": "The Himalayas are broadly categorised into three main ranges. The Himadri (the Greater Himalayas) are the highest and most rugged part, home to towering peaks like Mount Everest and Kanchenjunga, and remain snow-covered all year; few people live here. The Himachal (the Lower Himalayas) lie to the south, have a more moderate climate that supports rich biodiversity and habitation, and contain hill stations such as Nainital, Darjeeling, Shimla and Mussoorie. The Shivalik Hills (the Outer Himalayas) are the outermost and lowest, with rolling hills and dense forests, forming a transition zone to the Northern Plains.",
+            "expert": "The three ranges run roughly parallel for about 2,500 km and record the stages of the collision: the Himadri is built of ancient, deeply uplifted crust; the Himachal of strongly folded sedimentary rock; and the Shivaliks of young sediments eroded from the rising mountains and piled at their feet. Altitude controls life here through the 'lapse rate' — temperature falls with height — so vegetation, animals and settlement form clear belts: alpine and barren in the Himadri, temperate forests and towns in the Himachal, and subtropical forests in the Shivaliks. This vertical zonation is why a single mountain region holds such varied biodiversity."
+          },
+          "reasoning": "As you go higher, the air gets colder and thinner. So the three ranges, at three different heights, end up with three different climates — and therefore different plants, animals and amounts of human settlement.",
+          "useCases": [
+            {"title": "Choosing where to build a hill station", "description": "The moderate Himachal range, not the freezing Himadri, is where towns like Shimla and Darjeeling were built.", "domain": "everyday"},
+            {"title": "Planning a trek", "description": "Trekkers expect barren ice in the Himadri but green forests in the Shivaliks — knowing the ranges sets expectations.", "domain": "geography"},
+            {"title": "Protecting wildlife", "description": "Each range hosts different species, so conservation areas like the Great Himalayan National Park target particular altitude belts.", "domain": "environment"}
+          ],
+          "beyondTheBook": "The traditional 'kath-kuni' or 'dhajji-dewari' houses of the western Himalayas are built from layers of local stone and wood. The wood keeps the house warm and also lets it flex during mild earthquakes instead of cracking — a clever, local answer to a mountain problem.",
+          "relatedConceptIds": ["ssch01_t02_c01", "ssch01_t02_c03", "ssch01_t02_c04"],
+          "relatedQuestionIds": [],
+          "pageRefs": [6, 7],
+          "needsHumanReview": false,
+          "mnemonic": "Top to bottom: Himadri (Highest), Himachal (Habitable), Shivalik (Smallest)."
+        },
+        {
+          "id": "ssch01_t02_c03",
+          "title": "The Water Tower of Asia",
+          "explanations": {
+            "oneLine": "Snow and glaciers in the Himalayas feed great rivers like the Ganga, Indus and Brahmaputra, supplying water to hundreds of millions of people.",
+            "kidFriendly": "The Himalayas store water as snow and ice. In summer the snow melts and pours down as rivers — the Ganga, the Indus and the Brahmaputra. Because these mountains supply water to so many people across Asia, they are nicknamed the 'Water Tower of Asia'. Some peaks are over 8,000 metres tall and are called the 'Eight Thousanders'.",
+            "textbook": "Many Himalayan peaks rise over 8,000 metres and are together called the 'Eight Thousanders'; the range stretches across six countries — India, Nepal, Bhutan, China, Pakistan and Afghanistan. In summer the mountain snow melts and feeds major rivers such as the Ganga, Indus and Brahmaputra. These rivers and their tributaries provide water for drinking, farming and industry, connecting with the lives of hundreds of millions of people, which is why the Himalayas are called the 'Water Tower of Asia'. The mountains are also held sacred, with many temples and monasteries within them.",
+            "expert": "The Himalayas act as a giant frozen reservoir. Glaciers and seasonal snow store winter precipitation and release it gradually in the warm season, sustaining river flow even when there is no rain — a natural form of water regulation that no human dam matches in scale. This makes the rivers 'perennial' (flowing year-round), unlike rain-fed rivers that can dry up. Because the source is shared across borders, the meltwater also shapes the politics of water between nations. Climate change now threatens this system: as glaciers shrink, the long-term reliability of the 'Water Tower' is at risk, even though melting may briefly increase flow."
+          },
+          "reasoning": "Snow that falls in winter is stored as ice and melts slowly in summer, so the rivers keep flowing all year instead of only during the rains. That steady supply is what lets so many people depend on Himalayan rivers.",
+          "useCases": [
+            {"title": "Irrigating farms far away", "description": "Canals carry Himalayan river water hundreds of kilometres to fields in the plains, long after the snow that fed them has melted.", "domain": "agriculture"},
+            {"title": "Generating electricity", "description": "Fast-flowing mountain rivers turn turbines to make hydroelectricity, as at Jog Falls.", "domain": "economy"},
+            {"title": "Supplying drinking water to cities", "description": "Cities on the plains, like Delhi on the Yamuna, draw their drinking water from rivers born in the Himalayas.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The Bhagirathi, a major tributary of the Ganga, begins at Gaumukh ('Cow's Mouth'), the snout of the Gangotri Glacier in Uttarakhand. Pilgrims and trekkers visit this sacred spot — the literal starting point of the Ganga's long journey to the sea.",
+          "relatedConceptIds": ["ssch01_t02_c02", "ssch01_t03_c01", "ssch01_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [4, 5],
+          "needsHumanReview": false,
+          "mnemonic": "Himalayas = Asia's water tank: store snow in winter, pour rivers in summer."
+        },
+        {
+          "id": "ssch01_t02_c04",
+          "title": "The Cold Desert of Ladakh",
+          "explanations": {
+            "oneLine": "Ladakh is a cold desert high in the Himalayas, with very little rain, freezing winters and a moon-like landscape.",
+            "kidFriendly": "When you hear 'desert' you think of heat — but a desert just means a place with very little rain. Ladakh is a COLD desert! Winters drop below -30°C, there is barely any rain, and the rocky, folded land looks so strange it is called 'moonland'. Lakes like Pangong Tso are salty, and animals like the snow leopard and ibex live here.",
+            "textbook": "Although we usually picture a desert as hot, deserts are really defined by very low rainfall, and India has a cold desert in Ladakh, where winter temperatures fall below -30°C. The landscape is rugged, with rocky terrain, deep valleys and lakes such as Pangong Tso. The terrain resembles the moon's surface and is called 'moonland'; it formed when rock that was once part of an ocean floor was folded up during the India–Eurasia collision, so it is largely sand and clay shaped by wind and rain. Despite harsh conditions, Ladakh is home to snow leopards, ibex and Tibetan antelopes, and is known for ancient monasteries and festivals such as Losar and the Hemis Festival.",
+            "expert": "Ladakh is a cold desert because it sits in the 'rain shadow' of the Greater Himalayas: by the time monsoon winds clear the high peaks, they have lost almost all their moisture, so very little falls on Ladakh. High altitude makes it cold; aridity makes it a desert — together producing a cold desert. The folded marine sediments of 'moonland' are textbook evidence of the Tethys ocean floor uplifted by collision. Pangong Tso is saline because it is an endorheic (closed) lake with no river outlet: water leaves only by evaporation, leaving dissolved minerals behind to concentrate over time."
+          },
+          "reasoning": "A desert is defined by lack of rain, not by heat. Ladakh gets almost no rain because the Himalayas block the moist winds, and it is freezing because it is very high up — so it is a cold desert rather than a hot one.",
+          "useCases": [
+            {"title": "Correcting the 'all deserts are hot' idea", "description": "Ladakh proves that some deserts are bitterly cold; the key feature is dryness, not temperature.", "domain": "science"},
+            {"title": "Understanding salty lakes", "description": "Pangong Tso's saltiness shows how minerals build up in a lake with no outlet — a pattern seen in many closed basins.", "domain": "geography"},
+            {"title": "Appreciating adaptation", "description": "Ladakhi homes, clothing and festivals are designed for extreme cold and thin air — a model of living within a harsh environment.", "domain": "culture"}
+          ],
+          "beyondTheBook": "Ladakh's thin, clear, high-altitude air makes it one of the best places in India for astronomy. The Indian Astronomical Observatory at Hanle sits at about 4,500 metres — so high and dry that telescopes there get an unusually clear view of the night sky.",
+          "relatedConceptIds": ["ssch01_t02_c01", "ssch01_t03_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [8, 9],
+          "needsHumanReview": false,
+          "predictQuestion": "How can a place be called a 'desert' if it is freezing cold and not hot at all?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch01_t02_q01",
+          "prompt": "Explain how the Himalayas were formed.",
+          "questionType": "longAnswer",
+          "answer": "India was once part of a large landmass called Gondwana. It broke away and drifted slowly north. About 50 million years ago it collided with Eurasia. As India pushed against Eurasia, the land between them crumpled and rose up — like a carpet wrinkling when pushed — forming the Himalayas. India still pushes north by about 5 cm a year, so the mountains are still rising.",
+          "solutionSteps": [
+            "Start with India as part of Gondwana, next to Africa.",
+            "Describe India breaking away and drifting north.",
+            "State the collision with Eurasia about 50 million years ago.",
+            "Use the carpet-wrinkle image to explain the folding and uplift.",
+            "Add that the collision continues, so the Himalayas keep growing."
+          ],
+          "commonMistakes": [
+            "Saying the Himalayas were formed by a volcano — they were formed by collision and folding, not eruption.",
+            "Forgetting that the process is ongoing and the mountains are still rising."
+          ],
+          "variations": [
+            {"prompt": "What evidence shows the Himalayas were once under the sea?", "answer": "Marine fossils — the remains of sea creatures — found high in the Himalayas show that the rock was once on an ocean floor (the Tethys Sea) before the collision lifted it up.", "solutionSteps": ["Recall that the colliding edge was once an ocean.", "Name marine fossils as the evidence.", "Link to the uplift of the old sea floor."]},
+            {"prompt": "About how fast is India still moving into Asia, and what is the effect?", "answer": "About 5 cm per year, which keeps pushing the Himalayas higher by roughly 5 mm a year — about 5 metres over a thousand years.", "solutionSteps": ["Recall the 5 cm/year figure.", "Connect continued pushing to continued rising."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [5],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t02_q02",
+          "prompt": "Match each Himalayan range with its description.",
+          "questionType": "matchTheFollowing",
+          "answer": "Himadri → highest, snow-covered all year; Himachal → moderate climate with hill stations; Shivalik → lowest hills with dense forests.",
+          "matchPairs": [
+            {"left": "Himadri (Greater Himalayas)", "right": "Highest and most rugged, snow-covered all year, home to Everest"},
+            {"left": "Himachal (Lower Himalayas)", "right": "Moderate climate; hill stations like Shimla and Darjeeling"},
+            {"left": "Shivalik Hills (Outer Himalayas)", "right": "Lowest, rolling hills with dense forests, a transition to the plains"}
+          ],
+          "solutionSteps": [
+            "Order the ranges by height: Himadri highest, then Himachal, then Shivalik.",
+            "Match the highest, snowiest description to the Himadri.",
+            "Match the moderate, hill-station description to the Himachal.",
+            "Match the lowest, forested transition description to the Shivalik."
+          ],
+          "commonMistakes": [
+            "Placing hill stations in the Himadri — it is too cold and rugged; hill stations are in the Himachal."
+          ],
+          "variations": [
+            {"prompt": "In which Himalayan range are hill stations like Shimla and Darjeeling found?", "answer": "The Himachal (Lower Himalayas), because of its moderate climate.", "solutionSteps": ["Recall that hill stations need a pleasant, moderate climate.", "Match this to the Himachal range."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [6],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t02_q03",
+          "prompt": "The Himalayas are called the 'Water Tower of Asia' because they ____.",
+          "questionType": "fillInBlank",
+          "answer": "store water as snow and ice and release it in summer to feed major rivers like the Ganga, Indus and Brahmaputra, supplying hundreds of millions of people",
+          "solutionSteps": [
+            "Recall that the mountains store winter snow.",
+            "Note that summer melt feeds the great rivers.",
+            "Connect this water supply to the lives of hundreds of millions of people."
+          ],
+          "commonMistakes": [
+            "Thinking the rivers come only from rainfall — much of their water is melted Himalayan snow and glacier ice."
+          ],
+          "variations": [
+            {"prompt": "Name three major rivers fed by the Himalayan snowmelt.", "answer": "The Ganga, the Indus and the Brahmaputra.", "solutionSteps": ["Recall the three great Himalayan river systems."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [4],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t02_q04",
+          "prompt": "Why is Ladakh called a 'cold desert'?",
+          "questionType": "shortAnswer",
+          "answer": "Because a desert is a place with very little rainfall, and Ladakh gets almost no rain (it lies in the rain shadow of the Himalayas) while also being extremely cold, with winter temperatures below -30°C. So it is a desert that is cold rather than hot.",
+          "solutionSteps": [
+            "Define a desert by low rainfall, not by heat.",
+            "Note that the Himalayas block moist winds, so Ladakh is very dry.",
+            "Add that its high altitude makes it freezing cold.",
+            "Combine: dry + cold = a cold desert."
+          ],
+          "commonMistakes": [
+            "Assuming all deserts are hot — the defining feature is dryness."
+          ],
+          "variations": [
+            {"prompt": "Why is the lake Pangong Tso salty?", "answer": "Because it has no river outlet; water leaves only by evaporation, so dissolved minerals from the surrounding mountains stay behind and build up over time.", "solutionSteps": ["Note the lake has no outflow.", "Explain that evaporation leaves minerals behind.", "Conclude the water grows salty."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [8, 9],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch01_t03",
+      "title": "Plains, Deserts and Old Hills",
+      "summary": "The fertile Northern Plains where most Indians live, the hot Thar Desert and how people adapt to it, and the ancient Aravalli Hills that hold back the sand.",
+      "concepts": [
+        {
+          "id": "ssch01_t03_c01",
+          "title": "The Northern (Gangetic) Plains",
+          "explanations": {
+            "oneLine": "The flat, fertile Northern Plains are built by Himalayan rivers and are home to a large part of India's population.",
+            "kidFriendly": "South of the Himalayas lies a huge, flat, green plain made by rivers like the Ganga, Indus and Brahmaputra. These rivers carry tiny bits of mineral-rich soil from the mountains and spread them out, making the land perfect for farming. So many people live here that at night the satellite photos glow with light!",
+            "textbook": "Moving south from the Himalayas, we reach the vast and fertile Gangetic (Northern) Plains. They are nourished by mighty rivers originating in the Himalayas — the Ganga, Indus and Brahmaputra systems and their many tributaries — which enrich the soil with minerals, making it highly fertile and ideal for agriculture. The rivers also generate electricity. A large proportion of India's population lives in these plains, and the flat land has allowed an elaborate road and railway network, while the rivers themselves have been used for travel and trade for millennia.",
+            "expert": "The Northern Plains are an 'alluvial' landscape: over millions of years, rivers deposited fine sediment (alluvium) eroded from the Himalayas, building one of the largest and most fertile flatlands on Earth. Flatness plus fertile soil plus reliable, perennial river water explains the dense population, intensive multi-cropping and the ease of building transport networks. The same flatness, however, makes the region prone to flooding when rivers swell. Historically, this combination of fertility and connectivity made the plains the cradle of cities, empires and trade routes across the subcontinent."
+          },
+          "reasoning": "Rivers flowing down from the Himalayas slow down on the flat land and drop the mineral-rich soil they carry. Year after year this builds deep, fertile soil, and with plenty of river water and level ground, the plains can feed and support huge numbers of people.",
+          "useCases": [
+            {"title": "Explaining where people live", "description": "The bright concentration of night lights over the plains reflects the dense population drawn by fertile soil and water.", "domain": "geography"},
+            {"title": "Multi-cropping", "description": "Farmers in Uttar Pradesh and West Bengal grow more than one crop a year because the soil and water allow it.", "domain": "agriculture"},
+            {"title": "Building railways and roads", "description": "The flat terrain made it cheap and easy to lay India's dense rail and road network across the plains.", "domain": "economy"}
+          ],
+          "beyondTheBook": "The Brahmaputra is unusual in two ways: its name means 'son of Brahma' (most Indian rivers are named after goddesses), and it actually grows BIGGER in summer instead of drying up — because summer is when the Himalayan snow that feeds it melts the most.",
+          "relatedConceptIds": ["ssch01_t02_c03", "ssch01_t03_c03", "ssch01_t05_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [9, 10, 11],
+          "needsHumanReview": false,
+          "mnemonic": "Flat + fertile + river water = crowded, well-fed plains."
+        },
+        {
+          "id": "ssch01_t03_c02",
+          "title": "The Thar Desert and Human Adaptation",
+          "explanations": {
+            "oneLine": "The Thar is a hot, sandy desert in northwestern India where people have cleverly adapted to scarce water.",
+            "kidFriendly": "Move west and you reach the Thar Desert — golden sand dunes, blazing-hot days, cold nights and very little water. Sand dunes are hills of sand shaped by the wind, sometimes 150 metres high. People here use water very carefully: they scrub utensils with sand, reuse rinse water for plants, and collect rainwater in special tanks called taanka or kunds.",
+            "textbook": "Moving westward we reach the Thar Desert, a vast arid region of golden dunes and rugged terrain. Sand dunes form when wind shifts and shapes the sand into hill-like formations, sometimes rising 150 metres. Most of the Thar lies in India, across Rajasthan, Gujarat, Punjab and Haryana. The desert acts as a natural barrier because of very high daytime temperatures, cold nights and a lack of water. People have adapted their food, clothing and lifestyle to these harsh conditions: water is scarce, so utensils are scoured with sand, rinse water is reused, and rainwater is stored in ingenious systems such as taanka or kunds.",
+            "expert": "The Thar is a hot desert created by aridity: it lies away from the main path of the rain-bearing monsoon, and the Aravalli range runs parallel to (rather than across) the moist winds, so little rain is wrung out over it. Sand dunes are 'aeolian' (wind-built) landforms; their crescent and ridge shapes record the prevailing wind direction, which is why dunes far apart can share a similar shape. Human adaptation here is a study in water economy: taanka and kunds are rainwater-harvesting structures that capture and store the rare rainfall, a traditional technology now studied worldwide as a model for dry-region water security."
+          },
+          "reasoning": "With so little rain and such extreme heat, water is the desert's most precious resource. So every part of life — how dishes are cleaned, how rainwater is caught and stored, what clothes are worn — is shaped around saving water and surviving the temperature swings.",
+          "useCases": [
+            {"title": "Water harvesting elsewhere", "description": "Taanka and kund designs from the Thar inspire rainwater-storage projects in other dry regions of the world.", "domain": "environment"},
+            {"title": "Understanding dune shapes", "description": "Knowing dunes are wind-built explains why their shape is similar even though, unlike rock mountains, they can slowly move.", "domain": "geography"},
+            {"title": "Valuing water at home", "description": "The Thar's habit of reusing rinse water is a reminder not to leave taps running.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "Jaisalmer, the 'Golden City' in the middle of the Thar, is built of yellow sandstone that glows gold in the sun. Its great fort is a UNESCO World Heritage Site — and one of the few 'living forts' in the world, with thousands of people still living inside its walls.",
+          "relatedConceptIds": ["ssch01_t03_c03", "ssch01_t02_c04", "ssch01_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [12, 13, 14],
+          "needsHumanReview": false,
+          "predictQuestion": "If sand dunes are made of loose sand, why do dunes far apart still have a similar shape?"
+        },
+        {
+          "id": "ssch01_t03_c03",
+          "title": "The Aravalli Hills",
+          "explanations": {
+            "oneLine": "The Aravallis are among the world's oldest mountains and act as a natural wall that stops the Thar Desert from spreading east.",
+            "kidFriendly": "The Aravalli Hills are incredibly old — about 2.5 billion years! They are worn down and low now (mostly 300–900 m, with Mount Abu the tallest at over 1,700 m). One of their most important jobs is to act like a wall that stops the Thar Desert's sand from spreading further east. They are also rich in minerals like marble, granite, zinc and copper.",
+            "textbook": "Tracing eastward from the Thar, we reach the Aravalli Hills, among the oldest mountains in the world — some 2.5 billion years old. The range has many peaks and ridges; its highest peak, Mount Abu, rises over 1,700 m, but most hills are 300–900 m high. The Aravallis play a vital role in shaping the geography and climate of northwestern India, acting as a natural barrier that prevents the Thar Desert from expanding eastward. Rich in minerals like marble, granite, zinc and copper, they have supported mining for centuries; evidence from the ancient Zawar mines shows that, over eight centuries ago, Indians were the first in the world to master zinc extraction. Historic forts such as Chittorgarh, Kumbhalgarh and Ranthambore are located here.",
+            "expert": "The Aravallis are a deeply eroded remnant of a once-mighty mountain range, which is why they are so low today — billions of years of weathering have worn them down. Their barrier role is climatic and ecological: the ridge line helps check the eastward creep of desert sand and influences local wind and moisture patterns; where the range has been mined or deforested, desertification has measurably advanced. Zawar's medieval zinc smelting is a landmark in the history of metallurgy — distilling zinc requires capturing the metal as a vapour, a sophisticated process Indian smelters achieved centuries before it was known in Europe. The hilltop forts exploited the ridges as natural fortifications, a direct link between geography and military history."
+          },
+          "reasoning": "Because the Aravalli range runs as a long ridge along the eastern edge of the Thar, it physically blocks and slows the wind-blown sand, keeping the desert from spreading. Their great age also explains why they are so low — they have had billions of years to erode.",
+          "useCases": [
+            {"title": "Fighting desertification", "description": "Protecting and re-greening the Aravallis helps stop the Thar's sand from advancing toward cities like Delhi.", "domain": "environment"},
+            {"title": "Mining and industry", "description": "Marble, zinc and copper from the Aravallis have supplied builders and metalworkers for centuries.", "domain": "economy"},
+            {"title": "Choosing fort sites", "description": "Rulers built forts like Kumbhalgarh on Aravalli ridges because the hills made them hard to attack.", "domain": "history"}
+          ],
+          "beyondTheBook": "Kumbhalgarh Fort, set in the Aravallis, has a perimeter wall about 36 km long — said to be one of the longest continuous walls in the world, after the Great Wall of China. The hills made the fort almost impossible for enemies to storm.",
+          "relatedConceptIds": ["ssch01_t03_c02", "ssch01_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [14, 15],
+          "needsHumanReview": false,
+          "mnemonic": "Aravallis = ancient + a wall (they hold back the Thar)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch01_t03_q01",
+          "prompt": "Why is a large proportion of India's population concentrated in the Northern Plains?",
+          "questionType": "longAnswer",
+          "answer": "Because the plains are flat and extremely fertile. Himalayan rivers like the Ganga, Indus and Brahmaputra deposit mineral-rich soil (alluvium), making the land ideal for agriculture, while the rivers supply year-round water. The flat land also makes it easy to build roads and railways and to live and trade, so many people have always settled there.",
+          "solutionSteps": [
+            "Identify the two big advantages: fertile soil and plenty of water.",
+            "Explain that Himalayan rivers deposit rich soil and flow all year.",
+            "Add that flat land makes farming, building and transport easy.",
+            "Conclude these advantages attract a dense population."
+          ],
+          "commonMistakes": [
+            "Saying the plains are crowded only because they are flat — fertility and water are equally important.",
+            "Forgetting the role of Himalayan rivers in creating the fertile soil."
+          ],
+          "variations": [
+            {"prompt": "Why does the Northern Plains region glow so brightly in night satellite images?", "answer": "Because so many people live there; the dense population means many lit homes, towns and cities, which appear as concentrated light.", "solutionSteps": ["Link bright lights to dense population.", "Link dense population to fertile, well-watered, flat land."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [9, 10, 11],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t03_q02",
+          "prompt": "Name two traditional ways people of the Thar Desert save or store water.",
+          "questionType": "shortAnswer",
+          "answer": "They scour utensils with sand (using almost no water) and reuse the little rinse water for tasks like watering plants; and they store rainwater in special collection systems called taanka or kunds.",
+          "solutionSteps": [
+            "Recall that water is extremely scarce in the Thar.",
+            "Give one habit that saves water (sand-scouring and reusing rinse water).",
+            "Give one structure that stores water (taanka or kunds)."
+          ],
+          "commonMistakes": [
+            "Naming a modern tap or pipeline — the question asks for traditional desert methods."
+          ],
+          "variations": [
+            {"prompt": "What is a taanka or kund?", "answer": "A traditional rainwater-collection and storage system in Rajasthan that captures and stores rainwater, often for drinking.", "solutionSteps": ["Recall the Thar's water-harvesting structures.", "Describe their purpose: collect and store rainwater."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [13, 14],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t03_q03",
+          "prompt": "Which of the following best describes the main role of the Aravalli Hills in northwestern India?",
+          "questionType": "mcq",
+          "options": ["They feed the Ganga with snowmelt", "They act as a natural barrier that stops the Thar Desert from spreading eastward", "They are India's highest mountains", "They form the eastern coastline of India"],
+          "answer": "They act as a natural barrier that stops the Thar Desert from spreading eastward",
+          "solutionSteps": [
+            "Recall that the Aravallis run along the eastern edge of the Thar.",
+            "Remember their key role: blocking the eastward spread of desert sand.",
+            "Eliminate the other options — they describe the Himalayas, the Ghats, etc."
+          ],
+          "commonMistakes": [
+            "Confusing the low, ancient Aravallis with the tall, young Himalayas."
+          ],
+          "variations": [
+            {"prompt": "Roughly how old are the Aravalli Hills, and what does their age explain?", "answer": "About 2.5 billion years old; their great age explains why they are now so worn down and low, having eroded over a very long time.", "solutionSteps": ["Recall the 2.5-billion-year age.", "Link old age to long erosion and low height."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [15],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch01_t04",
+      "title": "The Peninsular Plateau and the Coasts",
+      "summary": "The ancient triangular plateau of the south, its bordering Western and Eastern Ghats, the rivers and tribal communities it supports, and India's long coastlines with their great river deltas.",
+      "concepts": [
+        {
+          "id": "ssch01_t04_c01",
+          "title": "The Peninsular Plateau and the Ghats",
+          "explanations": {
+            "oneLine": "Southern India is a very old, triangular plateau bordered by two mountain ranges, the Western and Eastern Ghats.",
+            "kidFriendly": "A plateau is a raised area of land with a flattish top and steep sides. Southern India is one big triangular plateau, surrounded by sea on three sides — that's why it's a 'peninsula'. Two ranges edge it: the tall Western Ghats run like a wall along the west coast (with lovely monsoon waterfalls), and the lower, broken Eastern Ghats run along the east coast. Between them lies the flat Deccan Plateau.",
+            "textbook": "A plateau is a landform that rises above the surrounding land and has a more or less flat surface, often with steep slopes on some sides. India's most important plateau is the triangular peninsular area in the middle and south of the country. Because it is surrounded by water on three sides — the Arabian Sea, the Bay of Bengal and the Indian Ocean — it is called a peninsular plateau. It is bordered by two ranges: the Western Ghats, which are taller and run like a wall along the west coast with many monsoon waterfalls (their northern part is the Sahyadri Hills), and the Eastern Ghats, which are lower and broken into smaller hills along the east coast. Between them lies the Deccan Plateau, a vast area of flat highlands. The Western Ghats are a UNESCO World Heritage Site with rich biodiversity.",
+            "expert": "The Peninsular Plateau is one of the oldest and most stable parts of the Earth's crust, a fragment of ancient Gondwana made largely of hard igneous and metamorphic rock — which is why, unlike the young folded Himalayas, it is not seismically active and has been worn into a low, rounded relief. The Western Ghats are not true mountains but the uplifted, eroded edge of the plateau (an 'escarpment'); they force the moist monsoon to rise and rain heavily on the windward (western) side, creating one of the world's biodiversity hotspots and casting a rain shadow to their east. The Eastern Ghats are older and far more dissected by rivers, hence their broken, hilly form."
+          },
+          "reasoning": "Because the plateau is a single ancient block tilted slightly, its raised western edge (the Western Ghats) stands tall and unbroken, while the eastern edge has been cut up by rivers into the lower, broken Eastern Ghats. The sea on three sides is what makes the whole landmass a peninsula.",
+          "useCases": [
+            {"title": "Explaining heavy west-coast rain", "description": "The Western Ghats force monsoon winds upward, dumping heavy rain on the west coast and leaving the Deccan drier.", "domain": "weather"},
+            {"title": "Protecting biodiversity", "description": "The Western Ghats' UNESCO status guides conservation of its many unique plants and animals.", "domain": "environment"},
+            {"title": "Understanding plateau stability", "description": "Engineers value the plateau's old, solid rock for building dams and reservoirs.", "domain": "economy"}
+          ],
+          "beyondTheBook": "The word 'Ghat' in Indian languages can mean a flight of steps or a mountain pass. The Western and Eastern 'Ghats' are named this way because, seen from the plains or coast, the plateau's edge rises like a giant staircase.",
+          "relatedConceptIds": ["ssch01_t04_c02", "ssch01_t04_c03", "ssch01_t01_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [16],
+          "needsHumanReview": false,
+          "mnemonic": "Western Ghats = tall Wall (west); Eastern Ghats = low and broken (east); Deccan in between.",
+          "predictQuestion": "Why do you think the west coast of southern India gets much heavier rain than the inland Deccan?"
+        },
+        {
+          "id": "ssch01_t04_c02",
+          "title": "Plateau Rivers, Minerals and Tribal Communities",
+          "explanations": {
+            "oneLine": "The peninsular plateau is rich in minerals and forests, sends most of its rivers east to the Bay of Bengal, and is home to many tribal communities.",
+            "kidFriendly": "The Deccan Plateau tilts slightly to the east, so most of its big rivers — the Godavari, Krishna, Kaveri and Mahanadi — flow eastward into the Bay of Bengal (only a few, like the Narmada and Tapti, flow west). The plateau is full of minerals, coal and forests. Its dense forests are home to tribal communities such as the Santhal, Gond, Baiga, Bhil and Korku, who have their own languages and traditions closely tied to nature.",
+            "textbook": "The peninsular plateau is rich in minerals, forests and fertile land, making it vital for India's economy. It tilts slightly to the east, so most major rivers — the Godavari, Krishna, Mahanadi and Kaveri — flow eastward into the Bay of Bengal, providing water for farming, industry and hydroelectric power; a few west-flowing rivers (the Narmada and Tapti) drain into the Arabian Sea. The dense forests of the plateau are home to tribal communities including the Santhal, Gond, Baiga, Bhil and Korku, spread across states such as Jharkhand, West Bengal, Odisha, Assam, Madhya Pradesh, Chhattisgarh, Maharashtra, Telangana and Gujarat. These communities have distinct languages, traditions and ways of life closely connected to nature.",
+            "expert": "The eastward tilt of the Deccan is the key to its drainage: rivers obey gravity, so the slight downward slope toward the east sends the major rivers across the plateau to the Bay of Bengal, where they build large deltas. The exceptions, the Narmada and Tapti, flow west through rift valleys (fault-bounded troughs) and therefore form estuaries rather than deltas. The plateau's ancient rocks are the source of much of India's coal, iron and other minerals, which is why heavy industry clustered here. The forests are also the homeland of many Adivasi (tribal) communities whose knowledge systems, languages and sustainable relationship with the land are an important part of India's cultural diversity."
+          },
+          "reasoning": "Rivers always flow downhill, so the direction the plateau tilts decides where its rivers go — eastward, in this case, to the Bay of Bengal. The plateau's old rocks store minerals and coal, and its thick forests have long sheltered tribal communities who live closely with the land.",
+          "useCases": [
+            {"title": "Predicting river directions", "description": "Knowing the plateau tilts east lets you predict that the Godavari and Krishna flow east, not west.", "domain": "geography"},
+            {"title": "Locating industry", "description": "Coal and iron from the plateau explain why many steel plants and industries grew in this region.", "domain": "economy"},
+            {"title": "Respecting cultural diversity", "description": "Understanding tribal communities' nature-based ways of life supports fairer policies on forests and land.", "domain": "civics"}
+          ],
+          "beyondTheBook": "The Narmada and Tapti are special: they are among the few large Indian rivers that flow WEST. They do so because they run through long cracks in the Earth's crust called rift valleys, which slope toward the Arabian Sea — so instead of building deltas like the east-flowing rivers, they form estuaries.",
+          "relatedConceptIds": ["ssch01_t04_c01", "ssch01_t04_c03", "ssch01_t05_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [16, 17, 18],
+          "needsHumanReview": false,
+          "mnemonic": "Deccan tilts east → big rivers go east (Godavari, Krishna, Kaveri, Mahanadi); Narmada & Tapti are the western rebels."
+        },
+        {
+          "id": "ssch01_t04_c03",
+          "title": "India's Coastlines and Deltas",
+          "explanations": {
+            "oneLine": "India has over 7,500 km of varied coastline, with a swift-river West Coast and a wide-delta East Coast.",
+            "kidFriendly": "India's coastline is over 7,500 km long and full of surprises — golden beaches, black rocks, coral reefs and forests. The West Coast (Gujarat to Kerala) has short, fast rivers from the Western Ghats that form coves, creeks and estuaries. The East Coast (Ganga delta to Kanyakumari) has wide plains and huge river deltas built by the Mahanadi, Godavari, Krishna and Kaveri, plus lakes and lagoons like Chilika and Pulicat.",
+            "textbook": "India's coastline is over 7,500 km long and dotted with beaches, rocky cliffs and forests. The West Coast stretches from Gujarat to Kerala through Maharashtra, Goa and Karnataka; most rivers here originate in the Western Ghats, flow swiftly, and form estuaries, coves and creeks, with the Narmada and Tapti estuaries the largest. It has many important ports and cities that have been centres of economic activity for millennia. The East Coast lies between the Eastern Ghats and the Bay of Bengal, from the Ganga delta to Kanyakumari; it has wide plains and major river deltas (Mahanadi, Godavari, Krishna and Kaveri) and important water bodies like Chilika Lake and Pulicat Lake (a lagoon). A delta is a landform built where a river deposits sediment into a larger body of water, building up a triangular or fan-shaped area of very fertile land.",
+            "expert": "The contrast between the two coasts comes from their rivers. West Coast rivers are short and steep because they rise in the nearby Western Ghats and plunge quickly to the sea; they carry little sediment and meet the sea in estuaries, where fresh and salt water mix. East Coast rivers are long and gentle, draining the whole tilted plateau; they carry vast loads of sediment and, on reaching the calm Bay of Bengal, drop it to build broad, extremely fertile deltas — among the most productive farmland and densely settled coasts in India. Lagoons like Chilika and Pulicat form where sandbars partly cut off a stretch of sea, creating rich, brackish ecosystems for fish and migratory birds."
+          },
+          "reasoning": "Whether a river builds a delta or an estuary depends on how much sediment it carries and how calm the sea is. Long east-flowing rivers gather lots of sediment and meet the calm Bay of Bengal, so they build big deltas; short, swift west-flowing rivers carry little and meet the open Arabian Sea, so they form estuaries.",
+          "useCases": [
+            {"title": "Understanding fertile farmland", "description": "The deltas of the Godavari, Krishna, Kaveri and Mahanadi are prime rice-growing land because deltas are so fertile.", "domain": "agriculture"},
+            {"title": "Siting ports", "description": "Natural harbours and estuaries on the West Coast became great ports and trading cities.", "domain": "economy"},
+            {"title": "Protecting lagoons", "description": "Chilika and Pulicat lagoons shelter fish and migratory birds, so they are protected wetlands.", "domain": "environment"}
+          ],
+          "beyondTheBook": "When a river nears the sea it often splits into many smaller channels that spread out like the fingers of a hand or the branches of a tree — these are called 'distributaries'. They are the opposite of tributaries (which join a river); distributaries leave it, and together they build the delta.",
+          "relatedConceptIds": ["ssch01_t04_c02", "ssch01_t05_c02", "ssch01_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [19, 20],
+          "needsHumanReview": false,
+          "predictQuestion": "Why might the East Coast have huge river deltas while the West Coast mostly has estuaries?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch01_t04_q01",
+          "prompt": "Why is southern India called a 'peninsular plateau'?",
+          "questionType": "shortAnswer",
+          "answer": "Because it is a plateau — a raised landform with a more or less flat top — and it is a peninsula, surrounded by water on three sides (the Arabian Sea, the Bay of Bengal and the Indian Ocean). A plateau that is also a peninsula is a 'peninsular plateau'.",
+          "solutionSteps": [
+            "Define a plateau: raised land with a flattish top and often steep sides.",
+            "Define a peninsula: land surrounded by water on three sides.",
+            "Note the three seas around southern India.",
+            "Combine the two definitions."
+          ],
+          "commonMistakes": [
+            "Calling it a plateau but forgetting the 'peninsula' part (water on three sides)."
+          ],
+          "variations": [
+            {"prompt": "Name the two mountain ranges that border the peninsular plateau.", "answer": "The Western Ghats (taller, along the west coast) and the Eastern Ghats (lower and broken, along the east coast).", "solutionSteps": ["Recall the plateau is edged by two ranges.", "Name and contrast the Western and Eastern Ghats."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [16],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t04_q02",
+          "prompt": "Most major rivers of the Deccan Plateau flow east into the Bay of Bengal because ____.",
+          "questionType": "fillInBlank",
+          "answer": "the plateau tilts (slopes) slightly toward the east, and rivers flow downhill in the direction of the slope",
+          "solutionSteps": [
+            "Recall that water flows downhill.",
+            "Recall that the Deccan tilts to the east.",
+            "Conclude the rivers therefore flow east to the Bay of Bengal."
+          ],
+          "commonMistakes": [
+            "Saying all peninsular rivers flow east — the Narmada and Tapti flow west through rift valleys."
+          ],
+          "variations": [
+            {"prompt": "Which two major peninsular rivers flow WEST, and why?", "answer": "The Narmada and the Tapti, because they flow through rift valleys (long cracks in the crust) that slope toward the Arabian Sea.", "solutionSteps": ["Recall the west-flowing exceptions.", "Explain the rift-valley reason."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [16, 17],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t04_q03",
+          "prompt": "What is a delta, and why is delta land good for farming?",
+          "questionType": "longAnswer",
+          "answer": "A delta is a triangular or fan-shaped landform built where a river deposits its sediment as it enters a larger body of water such as the sea. The river slows down near the sea and drops the fine, mineral-rich sediment it has carried; over time this builds up into very fertile, flat land, which is excellent for farming (especially rice).",
+          "solutionSteps": [
+            "Define a delta as sediment deposited where a river meets a larger water body.",
+            "Explain that the river slows and drops its sediment near the mouth.",
+            "Note the sediment is fine and mineral-rich.",
+            "Conclude that the built-up fertile, flat land is ideal for crops."
+          ],
+          "commonMistakes": [
+            "Confusing a delta (built by deposition at the river mouth) with an estuary (a funnel where river and sea water mix without much deposition)."
+          ],
+          "variations": [
+            {"prompt": "Name two rivers that build large deltas on India's East Coast.", "answer": "Any two of: the Godavari, Krishna, Kaveri and Mahanadi.", "solutionSteps": ["Recall the major east-flowing rivers.", "Pick two that form deltas on the East Coast."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [20],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch01_t05",
+      "title": "Islands, Sundarbans and the Northeast",
+      "summary": "India's two great island groups, the unique mangrove delta of the Sundarbans, the rainy hills of the Northeast, and how such diverse regions still form one united country.",
+      "concepts": [
+        {
+          "id": "ssch01_t05_c01",
+          "title": "The Indian Islands",
+          "explanations": {
+            "oneLine": "India has two major island groups — the coral Lakshadweep in the Arabian Sea and the volcanic Andaman and Nicobar Islands in the Bay of Bengal.",
+            "kidFriendly": "India also owns islands! Lakshadweep, in the Arabian Sea near Kerala, is a group of 36 small islands made of coral. The Andaman and Nicobar Islands, in the Bay of Bengal, are more than 500 volcanic islands and include Barren Island, the only active volcano in India. These islands have coral reefs, rare wildlife and ancient tribes, and they help India guard a huge area of ocean.",
+            "textbook": "The Indian Islands are groups of islands scattered across the Indian Ocean, the Arabian Sea and the Bay of Bengal that form part of India's territory. India has two major island groups: Lakshadweep, an archipelago (group of islands) of 36 coral islands in the Arabian Sea near the Malabar coast of Kerala, not all of which are inhabited; and the Andaman and Nicobar Islands, an archipelago of more than 500 volcanic islands in the Bay of Bengal. These islands have unique wildlife, beautiful beaches, coral reefs and even volcanoes — Barren Island in the Andamans is the only active volcano in India. They are strategically important 'outposts' that let India control a vast marine area for fishing, resources and protection. Several ancient tribes have lived on them for tens of thousands of years. The Andamans are also historically important: many freedom fighters were jailed there in the Cellular Jail under severe conditions.",
+            "expert": "The two groups have opposite origins, which shapes everything about them. Lakshadweep is built by coral — tiny living organisms whose limestone skeletons accumulate into reefs and low islands; such islands are fragile and very sensitive to ocean warming and sea-level rise. The Andaman and Nicobar Islands are the exposed peaks of a submerged mountain chain produced where tectonic plates meet, which is why they are volcanic and seismically active (Barren Island still erupts). Their position in the Bay of Bengal gives India an Exclusive Economic Zone over a vast ocean area and a forward position near major shipping lanes — geography translating directly into economic and strategic value. The islands' isolation also preserved some of the world's most ancient indigenous communities."
+          },
+          "reasoning": "How an island forms decides what it is like. Lakshadweep's islands are made by coral building up in warm, shallow seas, so they are low and coral-rich; the Andaman and Nicobar islands are tops of volcanoes rising from where plates meet, so they are higher, volcanic and earthquake-prone.",
+          "useCases": [
+            {"title": "Protecting coral reefs", "description": "Knowing Lakshadweep is coral-built explains why it is so vulnerable to ocean warming and must be protected.", "domain": "environment"},
+            {"title": "Guarding sea routes", "description": "The Andaman and Nicobar Islands let India monitor important shipping lanes in the Bay of Bengal.", "domain": "civics"},
+            {"title": "Studying volcanoes safely", "description": "Barren Island gives scientists a rare chance to study an active volcano on Indian territory.", "domain": "science"}
+          ],
+          "beyondTheBook": "The Cellular Jail in Port Blair (Andaman Islands) is also called 'Kālā Pānī' ('black water'), because being sent across the sea to it was one of the harshest punishments the British could give. It has been preserved as a national memorial to the freedom fighters who suffered there.",
+          "relatedConceptIds": ["ssch01_t05_c02", "ssch01_t04_c03", "ssch01_t01_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [20, 21, 22],
+          "needsHumanReview": false,
+          "mnemonic": "Lakshadweep = Limestone coral (low, Arabian Sea); Andaman & Nicobar = volcanic Antennas (Bay of Bengal)."
+        },
+        {
+          "id": "ssch01_t05_c02",
+          "title": "The Sundarbans Delta",
+          "explanations": {
+            "oneLine": "The Sundarbans is a unique mangrove forest in the delta of the Ganga and Brahmaputra, shared by India and Bangladesh and home to the Royal Bengal Tiger.",
+            "kidFriendly": "Where the Ganga and Brahmaputra meet the Bay of Bengal, they build a giant delta. Part of it, the Sundarbans, is a special forest of mangrove trees that grow with their roots in salty water. About half is in India and half in Bangladesh. It is a UNESCO World Heritage Site and the famous home of the Royal Bengal Tiger.",
+            "textbook": "Travelling from the islands back toward the eastern Himalayas via the Bay of Bengal, we reach the Sundarbans, located in the delta of the Ganga, the Brahmaputra and their tributaries. This delta has a unique combination of river, sea and land. About half of it lies in India and the rest in Bangladesh. It is a UNESCO World Heritage Site and home to many species, including the Royal Bengal Tiger. Its mangrove forests are specially adapted to grow where fresh river water and salty sea water mix.",
+            "expert": "The Sundarbans is the world's largest mangrove forest, occupying the active, tide-dominated delta of the Ganga–Brahmaputra. Mangroves are remarkable trees that tolerate salt and waterlogged mud using breathing roots and salt-excreting leaves; their dense roots trap sediment, stabilise the shifting delta and act as a natural shield against cyclones and storm surges from the Bay of Bengal. This makes the Sundarbans both an extraordinary biodiversity reserve — for the Royal Bengal Tiger, estuarine crocodiles and countless birds and fish — and a frontline defence for millions of people. It is also among the regions most threatened by rising seas and stronger cyclones, making its protection a shared India–Bangladesh concern."
+          },
+          "reasoning": "A delta forms where the Ganga and Brahmaputra dump huge amounts of sediment into the Bay of Bengal. The mix of fresh and salt water and soft mud suits mangrove trees, which in turn hold the land together and shelter rare wildlife like the Royal Bengal Tiger.",
+          "useCases": [
+            {"title": "Cyclone protection", "description": "The Sundarbans' mangroves absorb the force of storm surges, protecting coastal villages behind them.", "domain": "environment"},
+            {"title": "Wildlife conservation", "description": "As a tiger habitat and UNESCO site, the Sundarbans guides cross-border conservation between India and Bangladesh.", "domain": "civics"},
+            {"title": "Understanding brackish ecosystems", "description": "It is a living example of how plants and animals adapt to mixed salt-and-fresh water.", "domain": "science"}
+          ],
+          "beyondTheBook": "The name 'Sundarban' is often said to come from the 'sundari' tree, a kind of mangrove that grows there in abundance — so the forest is, quite literally, named after its trees ('the forest of sundari').",
+          "relatedConceptIds": ["ssch01_t05_c01", "ssch01_t04_c03", "ssch01_t03_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [22],
+          "needsHumanReview": false,
+          "mnemonic": "Sundarbans = mangroves + mud + Royal Bengal Tiger, shared by India & Bangladesh."
+        },
+        {
+          "id": "ssch01_t05_c03",
+          "title": "The Hills of the Northeast and India's Unity in Diversity",
+          "explanations": {
+            "oneLine": "The rainy hills of the Northeast complete India's diversity, and despite such varied regions India remains one united country.",
+            "kidFriendly": "Our last stop is the hills of the Northeast — Garo, Khasi and Jaintia in the Meghalaya Plateau — which get some of the highest rainfall in the world, making them lush and green with amazing waterfalls and living root bridges. After 'flying' over mountains, plains, deserts, plateaus, coasts and islands, the big lesson is this: even though India's regions are so different, they are all woven together into one country.",
+            "textbook": "The final stop on our journey is the hills of the Northeast — the Garo, Khasi and Jaintia hills of the Meghalaya Plateau — known for lush greenery, very heavy rainfall and breathtaking waterfalls; this region experiences one of the highest rainfalls in the world, making it rich in forests, wildlife and fertile land. Looking back over the whole chapter, India gives its name to the subcontinent it anchors; it has hugely diverse features, from the snowy Himalayas to the hot Thar Desert, plains watered by many rivers, and a peninsular plateau between the Arabian Sea and the Bay of Bengal. These diverse features created varied soils, plants, animals, lifestyles and economic opportunities and shaped a rich culture and civilisation — yet, despite the differences, India remains one country.",
+            "expert": "The Northeast's extreme rainfall (places like Mawsynram and Cherrapunji are among the wettest on Earth) results from monsoon winds funnelling against the hills and being forced sharply upward, wringing out enormous rain. The chapter's closing idea, 'unity in diversity', is the central theme of Indian geography and civics: physical diversity (relief, climate, rivers) produced cultural diversity (languages, foods, festivals, crafts), yet shared rivers, trade routes, the monsoon rhythm, and a long common history knit the regions together. Recognising that India's oneness is built from — not in spite of — its differences is the key takeaway, and it connects geography to the study of India's society, history and Constitution."
+          },
+          "reasoning": "When moist monsoon winds hit the Northeast hills, they are pushed up sharply and pour out rain, making the region one of the wettest on Earth. Across all the regions, the same rivers, monsoon and shared history tie very different places together, so diversity becomes a source of unity rather than division.",
+          "useCases": [
+            {"title": "Explaining record rainfall", "description": "The Northeast's geography shows why some places get the world's heaviest rain — winds forced up over hills.", "domain": "weather"},
+            {"title": "Valuing local engineering", "description": "Living root bridges, grown by weaving tree roots over years, are a brilliant local response to a wet, river-crossed land.", "domain": "culture"},
+            {"title": "Understanding national unity", "description": "'Unity in diversity' helps explain how a country with so many regions, languages and climates stays one nation.", "domain": "civics"}
+          ],
+          "beyondTheBook": "Mawlynnong in the East Khasi Hills is often called the 'cleanest village in Asia', famous for bamboo dustbins and eco-friendly living. Nearby, the Khasi people grow 'living root bridges' by training the roots of rubber-fig trees across streams over many years — bridges that get STRONGER as they grow, unlike bridges of wood or steel.",
+          "relatedConceptIds": ["ssch01_t05_c02", "ssch01_t01_c01", "ssch01_t01_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [23, 24],
+          "needsHumanReview": false,
+          "mnemonic": "Northeast = wettest + greenest; whole chapter = 'unity in diversity'.",
+          "whyChain": [
+            "Why does the Northeast get some of the world's heaviest rainfall? Because moist monsoon winds blowing in from the Bay of Bengal are funnelled by the shape of the land and forced to rise sharply against the Khasi and Jaintia hills. As air rises it cools, and cool air cannot hold as much water vapour, so the moisture condenses and falls as very heavy rain over these hills.",
+            "Why does so much geographical diversity not break India apart? Because the very features that differ also connect. The same monsoon brings a shared rainy season; great rivers like the Ganga link mountains, plains and the sea; and trade routes and a long common history tied distant regions together for thousands of years, letting goods, ideas and people move between very different lands.",
+            "Why is 'unity in diversity' the chapter's big idea? Because India's oneness is built out of its differences, not in spite of them. Varied land created varied foods, languages, festivals and crafts, while shared rivers, climate and history wove them into a single civilisation. Understanding this prepares you to study India's society, history and Constitution, which all rest on this balance of difference and togetherness."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch01_t05_q01",
+          "prompt": "Compare the Lakshadweep islands with the Andaman and Nicobar islands in terms of how they were formed.",
+          "questionType": "longAnswer",
+          "answer": "Lakshadweep, in the Arabian Sea, is made up of 36 coral islands — built by tiny coral organisms in warm, shallow seas — so the islands are low and coral-rich. The Andaman and Nicobar Islands, in the Bay of Bengal, are more than 500 volcanic islands (the tops of a submerged mountain chain where plates meet), so they are higher and include India's only active volcano, Barren Island.",
+          "solutionSteps": [
+            "State Lakshadweep's location (Arabian Sea) and origin (coral).",
+            "State the Andaman and Nicobar location (Bay of Bengal) and origin (volcanic).",
+            "Contrast the consequences: low coral islands vs higher volcanic islands with an active volcano."
+          ],
+          "commonMistakes": [
+            "Mixing up which group is coral and which is volcanic.",
+            "Forgetting that Barren Island (Andamans) is India's only active volcano."
+          ],
+          "variations": [
+            {"prompt": "Why are the Andaman and Nicobar Islands called India's 'outposts'?", "answer": "Because their position in the Bay of Bengal lets India keep watch over a vast ocean area and important shipping routes, and control a large marine zone for fishing and resources.", "solutionSteps": ["Recall their strategic Bay-of-Bengal position.", "Link position to monitoring sea routes and controlling marine area."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [20, 21],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t05_q02",
+          "prompt": "True or False: The Sundarbans is a mangrove forest in the delta of the Ganga and Brahmaputra, shared by India and Bangladesh.",
+          "questionType": "trueFalse",
+          "answer": "True",
+          "solutionSteps": [
+            "Recall the Sundarbans lies in the Ganga–Brahmaputra delta.",
+            "Recall it is a mangrove forest split roughly half-and-half between India and Bangladesh.",
+            "Conclude the statement is True."
+          ],
+          "commonMistakes": [
+            "Thinking the Sundarbans is entirely within India — about half of it is in Bangladesh."
+          ],
+          "variations": [
+            {"prompt": "Name the famous big cat that lives in the Sundarbans.", "answer": "The Royal Bengal Tiger.", "solutionSteps": ["Recall the Sundarbans is a UNESCO site famous for this tiger."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [22],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch01_t05_q03",
+          "prompt": "Despite having very different regions, India remains one country. Give one way its geography has helped unite its people.",
+          "questionType": "shortAnswer",
+          "answer": "The great rivers (like the Ganga) link the mountains, plains and coasts and have carried people, goods and ideas between regions for thousands of years; the shared monsoon gives a common rainy season; and old trade routes connected distant lands — so the diverse regions became woven into one civilisation.",
+          "solutionSteps": [
+            "Pick a unifying feature: rivers, monsoon, or trade routes.",
+            "Explain how it links different regions together.",
+            "Conclude that this connection helped form one country out of many regions."
+          ],
+          "commonMistakes": [
+            "Listing only differences between regions without explaining what connects them."
+          ],
+          "variations": [
+            {"prompt": "Why is the Northeast (Meghalaya hills) one of the rainiest places on Earth?", "answer": "Because moist monsoon winds are funnelled and forced sharply upward against the hills; as the air rises and cools, it releases huge amounts of rain.", "solutionSteps": ["Recall the role of monsoon winds.", "Explain the forced rise and cooling over the hills.", "Conclude this causes very heavy rainfall."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [23, 24],
+          "needsHumanReview": false
+        }
+      ]
+    }
+  ],
+  "realWorldExamples": [
+    {"id": "ssch01_rw01", "title": "Jog Falls turns water into light", "body": "At Jog Falls in Karnataka, a river plunges off the edge of the Deccan Plateau. The falling water spins special turbines that convert its energy into electricity — 'hydroelectricity' (hydro means water). It is a perfect example of how India's plateaus and waterfalls are not just beautiful but power homes and industries.", "relatedConceptIds": ["ssch01_t04_c01", "ssch01_t02_c03"]},
+    {"id": "ssch01_rw02", "title": "A 4½-hour drive from mountain to desert", "body": "A drive of about four and a half hours takes you from Mount Abu, high and green in the Aravalli Hills, down to Jodhpur in the hot, sandy Thar Desert. In half a day the land, plants, clothes and even the food change completely — a vivid demonstration of how dramatically India's geography varies over short distances.", "relatedConceptIds": ["ssch01_t03_c02", "ssch01_t03_c03"]},
+    {"id": "ssch01_rw03", "title": "Yaks: the all-in-one Himalayan animal", "body": "High in the cold Himalayas, families depend on the yak. It gives milk, meat, wool and dung (used as fuel), and it carries loads across icy passes. In a place where survival is hard, a single well-adapted animal becomes transport, food, clothing and fuel all at once — a lesson in how people work with the environment they are given.", "relatedConceptIds": ["ssch01_t02_c04", "ssch01_t02_c02"]}
+  ],
+  "mnemonics": [
+    {"id": "ssch01_mn01", "acronym": "MPDPI", "unpacking": "Mountains, Plains, Desert, Peninsula, Islands — the five regions of India. Remember it as 'My Plate Deserves Plenty of Idlis'.", "context": "Recalling India's five physiographic regions in order from north to south.", "relatedConceptIds": ["ssch01_t01_c02"]},
+    {"id": "ssch01_mn02", "acronym": "HHS", "unpacking": "Himadri (Highest, snowy), Himachal (Habitable, hill stations), Shivalik (Smallest, forested) — the three Himalayan ranges from top to bottom.", "context": "Ordering the three parallel ranges of the Himalayas by height.", "relatedConceptIds": ["ssch01_t02_c02"]}
+  ],
+  "misconceptions": [
+    {"id": "ssch01_ms01", "kidsThink": "All deserts are hot places full of sand.", "actually": "A desert is defined by very LOW rainfall, not by heat. Ladakh is a COLD desert where winters fall below -30°C. Dryness, not temperature, makes a place a desert.", "relatedConceptIds": ["ssch01_t02_c04"]},
+    {"id": "ssch01_ms02", "kidsThink": "The Himalayas were formed long ago and are now finished growing.", "actually": "India is still pushing into Asia at about 5 cm a year, so the Himalayas are still rising by a few millimetres each year — and the region still has earthquakes because of it.", "relatedConceptIds": ["ssch01_t02_c01"]},
+    {"id": "ssch01_ms03", "kidsThink": "A delta and an estuary are the same thing.", "actually": "A delta is fertile land BUILT UP where a river drops lots of sediment into a calm sea (as on the East Coast). An estuary is a funnel-shaped river mouth where fresh and salt water mix without building much land (as on the West Coast).", "relatedConceptIds": ["ssch01_t04_c03"]}
+  ],
+  "ncertQA": [
+    {"id": "ssch01_nq01", "question": "What, in your opinion, are two important geographical features of India? Why do you think they are important?", "modelAnswer": "Two very important features are the Himalayas and the Northern Plains. The Himalayas are important because they act as a natural barrier protecting the north, block cold winds, trap the monsoon to give India rain, and store snow that feeds great rivers all year. The Northern Plains are important because their flat, fertile, river-fed land feeds and supports a huge population and made it easy to build cities, farms and transport networks. (Other reasonable choices, such as the peninsular plateau's minerals or the long coastline's ports, are also valid if justified.)", "textbookPage": 24, "relatedConceptIds": ["ssch01_t02_c03", "ssch01_t03_c01"]},
+    {"id": "ssch01_nq02", "question": "India has been called a 'mini-continent'. Based on what you've read, why do you think this is so?", "modelAnswer": "India is called a mini-continent because, within a single country, it contains an enormous range of landforms and climates — snowy Himalayas, the cold desert of Ladakh, the fertile Gangetic Plains, the hot Thar Desert, the ancient Aravallis, the Deccan Plateau, long coastlines with deltas, and island groups. Such variety of relief, climate, soils, plants, animals and cultures is usually found across a whole continent, not one country, so India is described as a 'mini-continent'.", "textbookPage": 25, "relatedConceptIds": ["ssch01_t01_c01", "ssch01_t01_c02"]},
+    {"id": "ssch01_nq03", "question": "Why is the southern part of India referred to as a peninsular plateau?", "modelAnswer": "Because it is both a plateau and a peninsula. It is a plateau — a raised area of land with a more or less flat top and steep sides — and it is a peninsula because it is surrounded by water on three sides: the Arabian Sea to the west, the Bay of Bengal to the east, and the Indian Ocean to the south. A plateau that is also a peninsula is called a peninsular plateau.", "textbookPage": 25, "relatedConceptIds": ["ssch01_t04_c01"]},
+    {"id": "ssch01_nq04", "question": "Despite having such different regions (mountains, deserts, plains, coasts), India remains one country. How do you think our geography has helped unite people?", "modelAnswer": "Geography has united India in several ways. Great rivers such as the Ganga, Brahmaputra and the peninsular rivers link mountains, plains and coasts and have carried people, goods and ideas between regions for thousands of years. The monsoon gives almost the whole country a shared rhythm of seasons. Land and sea trade routes connected distant regions, exchanging foods, crafts and beliefs. So while the regions look very different, these connections wove them into a single civilisation — an example of 'unity in diversity'.", "textbookPage": 25, "relatedConceptIds": ["ssch01_t05_c03", "ssch01_t01_c01"]}
+  ],
+  "glossary": [
+    {"id": "ssch01_gl01", "term": "Subcontinent", "definition": "A large, distinct landmass that is part of a continent but set apart from the rest of it by natural features.", "example": "India and its neighbours form the Indian Subcontinent.", "hindiTerm": "उपमहाद्वीप", "relatedConceptIds": ["ssch01_t01_c01"]},
+    {"id": "ssch01_gl02", "term": "Plateau", "definition": "A landform that rises above the surrounding land and has a more or less flat top, often with steep sides.", "example": "The Deccan Plateau in southern India.", "hindiTerm": "पठार", "relatedConceptIds": ["ssch01_t04_c01"]},
+    {"id": "ssch01_gl03", "term": "Peninsula", "definition": "A piece of land surrounded by water on three sides.", "example": "Southern India is a peninsula bordered by three seas.", "hindiTerm": "प्रायद्वीप", "relatedConceptIds": ["ssch01_t04_c01"]},
+    {"id": "ssch01_gl04", "term": "Delta", "definition": "A triangular or fan-shaped landform built where a river deposits its sediment as it enters a larger body of water.", "example": "The Sundarbans lies in the Ganga–Brahmaputra delta.", "hindiTerm": "डेल्टा / नदीमुख", "relatedConceptIds": ["ssch01_t04_c03", "ssch01_t05_c02"]},
+    {"id": "ssch01_gl05", "term": "Estuary", "definition": "A funnel-shaped river mouth where fresh river water mixes with salty sea water.", "example": "The Narmada and Tapti form large estuaries on the West Coast.", "hindiTerm": "ज्वारनदमुख", "relatedConceptIds": ["ssch01_t04_c03"]},
+    {"id": "ssch01_gl06", "term": "Archipelago", "definition": "A group or chain of islands.", "example": "Lakshadweep is an archipelago of 36 coral islands.", "hindiTerm": "द्वीपसमूह", "relatedConceptIds": ["ssch01_t05_c01"]},
+    {"id": "ssch01_gl07", "term": "Tributary", "definition": "A smaller river or stream that flows into and joins a larger river.", "example": "The Bhagirathi is a tributary of the Ganga.", "hindiTerm": "सहायक नदी", "relatedConceptIds": ["ssch01_t02_c03"]},
+    {"id": "ssch01_gl08", "term": "Sand dune", "definition": "A hill or ridge of sand built up and shaped by the wind.", "example": "Thar Desert dunes can rise as high as 150 metres.", "hindiTerm": "बालू का टीला", "relatedConceptIds": ["ssch01_t03_c02"]},
+    {"id": "ssch01_gl09", "term": "Lagoon", "definition": "A body of water separated from a larger body of water by a natural barrier such as a sandbar.", "example": "Chilika Lake on the East Coast is a lagoon.", "hindiTerm": "अनूप / लैगून", "relatedConceptIds": ["ssch01_t04_c03"]},
+    {"id": "ssch01_gl10", "term": "Himalaya", "definition": "From Sanskrit hima ('snow') + ālaya ('abode'), meaning 'abode of snow' — India's great northern mountain range.", "example": "The Himalayas are the 'Water Tower of Asia'.", "hindiTerm": "हिमालय", "relatedConceptIds": ["ssch01_t02_c01", "ssch01_t02_c03"]}
+  ],
+  "miniProjects": [
+    {"id": "ssch01_mp01", "emoji": "🗺️", "title": "Build a relief map of India", "needs": ["A large sheet of cardboard", "Atta dough or modelling clay", "Paints (white, green, yellow, brown, blue)", "A pencil and a physical map of India to copy"], "steps": ["Draw the outline of India on the cardboard using the physical map.", "Build up clay to show the high Himalayas in the north (make them the tallest).", "Keep the Northern Plains flat and low, just south of the mountains.", "Raise a gentle triangular block for the Deccan Plateau in the south.", "Pinch up a ridge for the Western Ghats and lower bumps for the Eastern Ghats.", "Paint by height: white for snow peaks, brown/yellow for highlands and desert, green for plains, blue for seas and rivers.", "Add labels for the five regions and a small legend explaining your colours."], "expectedObservation": "You will see at a glance how the land steps down from the towering Himalayas to the flat plains and the plateau, and why rivers flow the way they do.", "whyItWorks": "A relief model turns flat map colours into real height, so the connection between altitude, rivers and climate becomes obvious. Building it by hand fixes the five regions and their positions firmly in memory.", "estimatedMinutes": 90, "relatedConceptIds": ["ssch01_t01_c02", "ssch01_t04_c01"]},
+    {"id": "ssch01_mp02", "emoji": "💧", "title": "A one-day Thar water diary", "needs": ["A notebook and pen", "A measuring jug or marked bottle"], "steps": ["For one whole day, write down every time you or your family use water (brushing, bathing, cooking, washing, cleaning).", "Estimate how many litres each use takes, using the measuring jug to check a few.", "Add up your household's total for the day.", "Now imagine you live in the Thar Desert, where women may walk far to fetch water.", "List three changes you could make to use less water (e.g., reuse rinse water on plants, turn off the running tap).", "Write what a 'taanka' or 'kund' is and how it would help your imagined desert home."], "expectedObservation": "You will be surprised how much water a normal day uses — and how clever Thar Desert habits like reusing rinse water really are.", "whyItWorks": "Measuring your own use makes the desert's water scarcity real and personal, turning an abstract fact into a habit you can change. It connects the geography of the Thar to everyday choices.", "estimatedMinutes": 60, "relatedConceptIds": ["ssch01_t03_c02"]}
+  ],
+  "whatIfs": [
+    {"id": "ssch01_wi01", "question": "What if the Himalayas did not exist?", "answer": "Without the Himalayan wall, cold, dry winds from Central Asia would sweep into India, making the north far colder in winter. The monsoon clouds would no longer be trapped, so India would get much less rain and large areas could turn dry or desert-like. There would be no stored snow to feed the great perennial rivers, so the Ganga, Indus and Brahmaputra would shrink or dry in the dry season, and the fertile, crowded Northern Plains might never have formed. India's climate, farming and history would be completely different.", "relatedConceptIds": ["ssch01_t02_c03", "ssch01_t03_c01"]},
+    {"id": "ssch01_wi02", "question": "What if the Aravalli Hills were completely flattened by mining?", "answer": "The Aravallis act as a natural wall that slows the eastward spread of the Thar Desert's sand. If they were levelled, blowing sand and dryness could creep east toward cities like Delhi, harming farms and worsening dust storms. The region would also lose forests, wildlife and the local rainfall patterns the hills help create. This is why protecting and re-greening the Aravallis is so important.", "relatedConceptIds": ["ssch01_t03_c03", "ssch01_t03_c02"]}
+  ],
+  "timelines": [
+    {"id": "ssch01_tl01", "title": "India's long journey: how the land took shape", "intro": "A few key moments in the deep history of India's landscape, from an ancient supercontinent to today.", "steps": [
+      {"id": "ssch01_tl01_s01", "label": "Part of Gondwana", "body": "India is joined to a giant southern supercontinent called Gondwana, with Africa as a neighbour.", "assetHint": "map of Gondwana"},
+      {"id": "ssch01_tl01_s02", "label": "Aravallis already ancient", "body": "The Aravalli mountains form — about 2.5 billion years ago — making them among the oldest mountains on Earth.", "assetHint": "worn old hills"},
+      {"id": "ssch01_tl01_s03", "label": "India drifts north", "body": "India breaks away from Gondwana and slowly moves north across the ocean toward Asia.", "assetHint": "arrow drifting north"},
+      {"id": "ssch01_tl01_s04", "label": "Collision with Eurasia", "body": "About 50 million years ago, India collides with Eurasia; the crumpling land begins to raise the Himalayas.", "assetHint": "crumpling carpet"},
+      {"id": "ssch01_tl01_s05", "label": "Still rising today", "body": "India keeps pushing north at about 5 cm a year, so the Himalayas are still growing and the region still has earthquakes.", "assetHint": "growing peak"}
+    ], "relatedConceptIds": ["ssch01_t02_c01", "ssch01_t03_c03"]}
+  ],
+  "conceptMap": {
+    "nodes": [
+      {"id": "ssch01_n01", "label": "Geographical Diversity of India", "kind": "pivot", "x": 0.5, "y": 0.1},
+      {"id": "ssch01_n02", "label": "Five Regions", "kind": "concept", "x": 0.5, "y": 0.3},
+      {"id": "ssch01_n03", "label": "Himalayas (Mountains)", "kind": "concept", "x": 0.15, "y": 0.55},
+      {"id": "ssch01_n04", "label": "Northern Plains", "kind": "concept", "x": 0.38, "y": 0.55},
+      {"id": "ssch01_n05", "label": "Thar Desert & Aravallis", "kind": "concept", "x": 0.6, "y": 0.55},
+      {"id": "ssch01_n06", "label": "Peninsular Plateau & Coasts", "kind": "concept", "x": 0.82, "y": 0.55},
+      {"id": "ssch01_n07", "label": "Islands, Sundarbans & NE", "kind": "concept", "x": 0.5, "y": 0.78},
+      {"id": "ssch01_n08", "label": "Unity in Diversity", "kind": "concept", "x": 0.5, "y": 0.95}
+    ],
+    "edges": [
+      {"id": "ssch01_e01", "from": "ssch01_n01", "to": "ssch01_n02", "label": "described by"},
+      {"id": "ssch01_e02", "from": "ssch01_n02", "to": "ssch01_n03", "label": "includes"},
+      {"id": "ssch01_e03", "from": "ssch01_n02", "to": "ssch01_n04", "label": "includes"},
+      {"id": "ssch01_e04", "from": "ssch01_n02", "to": "ssch01_n05", "label": "includes"},
+      {"id": "ssch01_e05", "from": "ssch01_n02", "to": "ssch01_n06", "label": "includes"},
+      {"id": "ssch01_e06", "from": "ssch01_n02", "to": "ssch01_n07", "label": "includes"},
+      {"id": "ssch01_e07", "from": "ssch01_n03", "to": "ssch01_n04", "label": "rivers feed"},
+      {"id": "ssch01_e08", "from": "ssch01_n07", "to": "ssch01_n08", "label": "all add up to"},
+      {"id": "ssch01_e09", "from": "ssch01_n03", "to": "ssch01_n08", "label": "diversity →"}
+    ]
+  },
+  "examConnections": [
+    {"id": "ssch01_xc01", "title": "Physiography returns in higher classes", "body": "The five-region view of India and the idea of physiographic divisions return in much greater detail in Class 9 and Class 10 Geography ('Physical Features of India', 'Drainage'). The Himalayan ranges, the Northern Plains, the Peninsular Plateau, the coastal plains and the islands all reappear, along with plate tectonics. Mastering the simple version now makes the advanced version easy later, and these topics are favourites in board exams and competitive tests.", "targetExam": "CBSE Class 9–10 Geography / NTSE", "relatedConceptIds": ["ssch01_t01_c02", "ssch01_t04_c01"]},
+    {"id": "ssch01_xc02", "title": "Plate tectonics in the science classroom", "body": "The story of how the Himalayas formed is a real-world example of plate tectonics, which you will study formally in higher-class Geography and Science. The same idea explains earthquakes, volcanoes (like Barren Island) and the folded 'moonland' rocks of Ladakh. Olympiad and quiz questions love asking about the India–Eurasia collision and the Tethys Sea fossils.", "targetExam": "Science/Geography Olympiads", "relatedConceptIds": ["ssch01_t02_c01", "ssch01_t02_c04"]}
+  ],
+  "deepDive": [
+    {"id": "ssch01_dv01", "title": "Orographic rainfall: why mountains make rain", "gradeLevel": "class_9", "parentConceptId": "ssch01_t05_c03", "body": "When moist winds meet a mountain or range of hills, they are forced to rise. As air rises it expands and cools, and cooler air can hold less water vapour, so the vapour condenses into clouds and falls as rain on the windward (wind-facing) side. This is called 'orographic' or 'relief' rainfall. It explains why the Western Ghats soak the west coast, why the Khasi hills of the Northeast are among the wettest places on Earth, and why the far side of a range (the 'rain shadow') stays dry — which is exactly why Ladakh, behind the Himalayas, is a desert. One range can therefore create both a rainforest and a desert, only a short distance apart.", "prerequisite": "Understanding that the Himalayas and Ghats force winds upward.", "nextStepHint": "Look up 'rain shadow' and find another example in India besides Ladakh."},
+    {"id": "ssch01_dv02", "title": "How geographers know India is still moving", "gradeLevel": "class_10", "parentConceptId": "ssch01_t02_c01", "body": "We can actually measure India creeping into Asia. Networks of GPS stations fixed to the ground record their positions to within millimetres, year after year, and they show the Indian plate moving north-northeast at roughly 5 cm a year. Geologists combine this with the age of rock layers, the pattern of earthquakes along the Himalayan front, and marine fossils found high in the mountains to reconstruct the whole collision. This is a great example of how a claim in your textbook ('the Himalayas are still rising') is not a guess but a measured, testable fact — the heart of how science works.", "prerequisite": "Knowing the Himalayas formed by the India–Eurasia collision.", "nextStepHint": "Find out what a 'seismograph' measures and how it maps Himalayan earthquakes."}
+  ],
+  "crossChapterRefs": [
+    {"id": "ssch01_cc01", "toChapterId": "ssch02", "topic": "Climate and the monsoon", "pointer": "The natural barriers and the Himalayas introduced here set up how India's weather and climate work — explored in 'Understanding the Weather' and 'Climates of India'.", "relatedConceptIds": ["ssch01_t01_c03", "ssch01_t02_c03"]},
+    {"id": "ssch01_cc02", "toChapterId": "ssch04", "topic": "Rivers, plains and the first cities", "pointer": "The fertile river plains described here became the cradle of India's earliest cities and states, picked up in the history chapters.", "relatedConceptIds": ["ssch01_t03_c01"]}
+  ],
+  "bossQuestions": [
+    {"id": "bossquiz_ssch01_q00", "prompt": "India is called a 'subcontinent' because it is —", "questionType": "mcq", "options": ["A separate continent from Asia", "A large, distinct landmass that is part of Asia but set apart by natural features", "The smallest country in Asia", "An island in the Indian Ocean"], "answer": "A large, distinct landmass that is part of Asia but set apart by natural features", "solutionSteps": ["Recall the meaning of 'subcontinent'.", "It is part of Asia, not separate.", "Natural barriers make it distinct."], "commonMistakes": ["Thinking a subcontinent is a separate continent."], "variations": [], "difficulty": 2, "pageRefs": [2], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q01", "prompt": "The Himalayas were formed when —", "questionType": "mcq", "options": ["A giant volcano erupted in the north", "The Indian landmass collided with Eurasia and the land folded upward", "A great river carved them out", "The sea dried up"], "answer": "The Indian landmass collided with Eurasia and the land folded upward", "solutionSteps": ["Recall the collision story.", "Folding, not eruption, raised the mountains."], "commonMistakes": ["Confusing folding with volcanic eruption."], "variations": [], "difficulty": 2, "pageRefs": [5], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q02", "prompt": "Which is the correct order of the Himalayan ranges from highest to lowest?", "questionType": "mcq", "options": ["Shivalik → Himachal → Himadri", "Himachal → Himadri → Shivalik", "Himadri → Himachal → Shivalik", "Himadri → Shivalik → Himachal"], "answer": "Himadri → Himachal → Shivalik", "solutionSteps": ["Himadri is highest and snowy.", "Himachal is middle with hill stations.", "Shivalik is the lowest range."], "commonMistakes": ["Reversing the order of the ranges."], "variations": [], "difficulty": 2, "pageRefs": [6], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q03", "prompt": "Ladakh is described as a 'cold desert' mainly because it —", "questionType": "mcq", "options": ["Is covered in snow all year", "Gets very little rainfall and is also extremely cold", "Has a lot of sand like the Thar", "Is below sea level"], "answer": "Gets very little rainfall and is also extremely cold", "solutionSteps": ["A desert is defined by low rainfall.", "Ladakh is both dry and freezing."], "commonMistakes": ["Thinking deserts must be hot."], "variations": [], "difficulty": 2, "pageRefs": [8], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q04", "prompt": "The Northern (Gangetic) Plains are very fertile because —", "questionType": "mcq", "options": ["They are made of volcanic lava", "Himalayan rivers deposit mineral-rich soil there", "They are covered by thick forests", "They are close to the sea"], "answer": "Himalayan rivers deposit mineral-rich soil there", "solutionSteps": ["Rivers carry soil from the mountains.", "They deposit it on the flat plains, enriching them."], "commonMistakes": ["Attributing plains' fertility to volcanic soil."], "variations": [], "difficulty": 2, "pageRefs": [9], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q05", "prompt": "The main role of the Aravalli Hills is to —", "questionType": "mcq", "options": ["Feed the Ganga with snow", "Stop the Thar Desert from spreading eastward", "Form India's east coast", "Provide India's highest peak"], "answer": "Stop the Thar Desert from spreading eastward", "solutionSteps": ["The Aravallis run along the desert's eastern edge.", "They block the eastward spread of sand."], "commonMistakes": ["Confusing the Aravallis with the Himalayas."], "variations": [], "difficulty": 2, "pageRefs": [15], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q06", "prompt": "Most major rivers of the Deccan Plateau flow eastward because the plateau —", "questionType": "mcq", "options": ["Tilts slightly toward the east", "Tilts toward the west", "Is perfectly flat", "Slopes toward the north"], "answer": "Tilts slightly toward the east", "solutionSteps": ["Rivers flow downhill.", "The eastward tilt sends them to the Bay of Bengal."], "commonMistakes": ["Assuming all rivers flow the same way regardless of slope."], "variations": [], "difficulty": 3, "pageRefs": [17], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q07", "prompt": "Which statement about India's island groups is correct?", "questionType": "mcq", "options": ["Lakshadweep is volcanic; Andaman & Nicobar are coral", "Lakshadweep is coral; Andaman & Nicobar are volcanic", "Both groups are coral", "Both groups are volcanic"], "answer": "Lakshadweep is coral; Andaman & Nicobar are volcanic", "solutionSteps": ["Lakshadweep (Arabian Sea) is made of coral.", "Andaman & Nicobar (Bay of Bengal) are volcanic."], "commonMistakes": ["Swapping the origins of the two island groups."], "variations": [], "difficulty": 3, "pageRefs": [20, 21], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q08", "prompt": "The Sundarbans is best described as —", "questionType": "mcq", "options": ["A cold desert in the Himalayas", "A mangrove forest in the Ganga–Brahmaputra delta", "A coral island in the Arabian Sea", "A plateau in central India"], "answer": "A mangrove forest in the Ganga–Brahmaputra delta", "solutionSteps": ["The Sundarbans lies in the eastern river delta.", "It is famous for mangroves and the Royal Bengal Tiger."], "commonMistakes": ["Confusing the Sundarbans with a desert or island."], "variations": [], "difficulty": 2, "pageRefs": [22], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch01_q09", "prompt": "The big theme of this chapter — that India's very different regions still form one country — is best summed up by the phrase —", "questionType": "mcq", "options": ["Survival of the fittest", "Unity in diversity", "Divide and rule", "Out of sight, out of mind"], "answer": "Unity in diversity", "solutionSteps": ["The chapter ends by stressing India stays one despite diversity.", "'Unity in diversity' captures this idea."], "commonMistakes": ["Picking an unrelated phrase."], "variations": [], "difficulty": 1, "pageRefs": [24], "needsHumanReview": false, "source": "boss_quiz"}
+  ],
+  "quickCheckQuestions": [
+    {"id": "scenecheck_ssch01_q00", "prompt": "Which of these is the highest, snow-covered range of the Himalayas?", "questionType": "mcq", "options": ["Shivalik Hills", "Himachal", "Himadri", "Aravalli"], "answer": "Himadri", "solutionSteps": ["The Himadri (Greater Himalayas) is the tallest range.", "It stays snow-covered all year."], "commonMistakes": ["Choosing the lower Himachal or Shivalik."], "variations": [], "difficulty": 1, "pageRefs": [6], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch01_q01", "prompt": "A river splitting into many streams near the sea, building fertile land, forms a —", "questionType": "mcq", "options": ["Glacier", "Delta", "Sand dune", "Plateau"], "answer": "Delta", "solutionSteps": ["Sediment dropped at the river mouth builds a delta.", "It splits into distributaries."], "commonMistakes": ["Confusing a delta with a plateau or dune."], "variations": [], "difficulty": 1, "pageRefs": [20], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch01_q02", "prompt": "Barren Island, India's only active volcano, lies in which island group?", "questionType": "mcq", "options": ["Lakshadweep", "The Maldives", "Andaman & Nicobar", "Sri Lanka"], "answer": "Andaman & Nicobar", "solutionSteps": ["Barren Island is volcanic.", "It lies in the volcanic Andaman & Nicobar group in the Bay of Bengal."], "commonMistakes": ["Placing the volcano in coral Lakshadweep."], "variations": [], "difficulty": 2, "pageRefs": [21], "needsHumanReview": false, "source": "scene_quick_check"}
+  ]
+}

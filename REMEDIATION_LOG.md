@@ -3725,3 +3725,31 @@ rules above. **Final confirmation still requires an iMac rebuild** (`git pull`,
 Clean Build Folder ⇧⌘K, build) — see `BIGSUR_COMPILE_SAFETY_CHECKPOINT.md`.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+
+## 2026-05-31 — Social Science subject build (cycle 1): infra + ssch01 CONTENT
+
+New autonomous subject build (`socialscience_class7`, 🌏, 20 NCERT Class 7
+chapters). This cycle laid the resumable infra and authored Chapter 1's content.
+
+- **Lints learn the `ss`/`ssch` namespace** (allowed extension, not a bypass):
+  `check_quiz_id_format` (regex `(ssch|mch|sch|ch)` + PACKS), `check_cross_pack_ids`,
+  `check_orphan_refs`, `check_page_ref_bounds` (PACKS), `check_pack_schema`
+  (DEFAULT_PACKS). Both `--selftest`s still pass; `test_lints.py` green.
+- **Fragment-assembly system** so each future cycle adds one small file:
+  `scripts/content_drafts/socialscience/_meta.json` + `sschNN.json` fragments,
+  stitched by `scripts/ss_build_pack.py` into the canonical pack
+  (`json.dumps(..., ensure_ascii=False, indent=2)+"\n"`, matches verify_pack_roundtrip).
+- **ssch01 — Geographical Diversity of India** authored from `gees101.pdf`:
+  5 topics, 16 concepts (all 4 explanation depths + ≥3 useCases + reasoning +
+  beyondTheBook; mnemonics, predictQuestions, two 3-layer whyChains), 16 topic
+  questions (each with solutionSteps, commonMistakes, ≥1 variation; mix of mcq/
+  short/long/fill/trueFalse/match), plus realWorldExamples, mnemonics,
+  misconceptions, ncertQA (4 textbook Q&A), 10-term glossary (with Devanagari),
+  2 miniProjects, 2 whatIfs, a formation timeline, a conceptMap, 2 examConnections,
+  2 Olympiad-tier deepDives, 2 crossChapterRefs, 10 `bossquiz_ssch01_*` MCQs, and
+  3 `scenecheck_ssch01_*` quick-checks.
+- Regenerated `project.pbxproj` via `scripts/generate_compat_pbxproj.py` (+4 lines:
+  bundles `socialscience_class7.json`). All content lints clean across all 4 packs.
+
+Posture: dev-Mac lints are the proxy; final Big Sur confirmation still needs an
+iMac rebuild. Ledger (workspace root) tracks per-chapter stage state for resume.

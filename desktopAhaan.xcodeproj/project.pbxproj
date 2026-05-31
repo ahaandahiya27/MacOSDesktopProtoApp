@@ -1223,6 +1223,7 @@
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
 		9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 307FB7481238DF1F6D61235B /* sanskrit_class7.json */; };
 		4D5743C43A54C95790C93C5E /* science_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D4EA3E7B426792E40B381DA /* science_class7.json */; };
+		C53AB75B6C95AA03391A681A /* socialscience_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 0558028CF6D453B31AB61648 /* socialscience_class7.json */; };
 		A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE2F98A2DF77A5876B26B1C /* Assets.xcassets */; };
 		2DC7D36BAFAE805A6B22A156 /* AchievementCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B49E84319614C65B594FBD /* AchievementCatalogTests.swift */; };
 		A908AA9CC53871E3064BD852 /* AchievementEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D033327D5539F6B20268E1C /* AchievementEngineTests.swift */; };
@@ -2186,6 +2187,7 @@
 		4E448E6E8BEEB87620A8C798 /* maths_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "maths_class7.json"; sourceTree = "<group>"; };
 		307FB7481238DF1F6D61235B /* sanskrit_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sanskrit_class7.json"; sourceTree = "<group>"; };
 		8D4EA3E7B426792E40B381DA /* science_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "science_class7.json"; sourceTree = "<group>"; };
+		0558028CF6D453B31AB61648 /* socialscience_class7.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "socialscience_class7.json"; sourceTree = "<group>"; };
 		FEEBCF376934C802AAE157FF /* ExpandableCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpandableCard.swift"; sourceTree = "<group>"; };
 		EB822F293F3C6E0EC21F0746 /* PackDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PackDecoder.swift"; sourceTree = "<group>"; };
 		AEFC5F49C2B2DA0EC9F34DFF /* SubjectRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubjectRegistry.swift"; sourceTree = "<group>"; };
@@ -4113,6 +4115,7 @@
 				4E448E6E8BEEB87620A8C798,
 				307FB7481238DF1F6D61235B,
 				8D4EA3E7B426792E40B381DA,
+				0558028CF6D453B31AB61648,
 			);
 			path = "Packs";
 			sourceTree = "<group>";
@@ -6049,6 +6052,7 @@
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
 				9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */,
 				4D5743C43A54C95790C93C5E /* science_class7.json in Resources */,
+				C53AB75B6C95AA03391A681A /* socialscience_class7.json in Resources */,
 				A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

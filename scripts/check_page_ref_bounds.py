@@ -32,7 +32,7 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACK_DIR = os.path.join(REPO, "desktopAhaan", "Subjects", "Packs")
-PACKS = ["science_class7", "maths_class7", "sanskrit_class7"]
+PACKS = ["science_class7", "maths_class7", "sanskrit_class7", "socialscience_class7"]
 
 CEILING = 1000  # generous: largest real page seen is 241
 

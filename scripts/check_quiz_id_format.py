@@ -30,11 +30,13 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACK_DIR = os.path.join(REPO, "desktopAhaan", "Subjects", "Packs")
-PACKS = ["science_class7", "maths_class7", "sanskrit_class7"]
+PACKS = ["science_class7", "maths_class7", "sanskrit_class7", "socialscience_class7"]
 
+# Namespace tokens, longest-first so `ssch` is preferred over `sch` when both
+# would match the same prefix (regex alternation is ordered).
 PATTERNS = {
-    "bossquiz_": re.compile(r"^bossquiz_(ch|mch|sch)\d{2}_q\d{2}$"),
-    "scenecheck_": re.compile(r"^scenecheck_(ch|mch|sch)\d{2}_q\d{2}$"),
+    "bossquiz_": re.compile(r"^bossquiz_(ssch|mch|sch|ch)\d{2}_q\d{2}$"),
+    "scenecheck_": re.compile(r"^scenecheck_(ssch|mch|sch|ch)\d{2}_q\d{2}$"),
 }
 
 
