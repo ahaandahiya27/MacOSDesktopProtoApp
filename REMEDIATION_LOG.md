@@ -4058,3 +4058,16 @@ FSSAI/ISI/BEE). 3 boss MCQ (diff4): supply definition, retailer, price=demand+su
 2 quick MCQ: online market, supply↑→price falls. Pack 335→339 topic-Qs; ssch12
 boss 10→13, quick 3→5. (Pivoted around existing Qs on negotiation, physical-vs-online,
 producer-flow, govt-roles.) All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 13 (ssch13 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch13 (The Story of Indian Farming)**: +8 PDF-faithful.
+4 topic Qs — `t02_q04` (diff5 monsoon sets kharif timing, why weak monsoon hurts),
+`t03_q04` (diff5 why match six soils to crops, alluvial/black examples), `t04_q04`
+(diff5 saved vs bought/hybrid seeds), `t05_q04` (diff5 organic/sustainable farming
+as a fix for Green-Revolution costs). 3 boss MCQ (diff4): zaid season, alluvial soil,
+crop rotation. 2 quick MCQ: kharif, terracing→erosion. Pack 339→343 topic-Qs; ssch13
+boss 10→13, quick 3→5. (Pivoted around existing rain-fed/irrigated, soil-health,
+Green-Revolution Qs.) All 7 lints green.

@@ -492,6 +492,28 @@
             7
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch13_t02_q04",
+          "prompt": "Kharif crops (like rice) are sown in June–July and harvested in autumn, while rabi crops (like wheat) are sown in winter. Explain how the MONSOON decides the timing of the kharif season, and why a LATE or WEAK monsoon hurts kharif farmers the most.",
+          "questionType": "longAnswer",
+          "answer": "The kharif season is tied directly to the southwest monsoon. Kharif crops like rice need a lot of water to grow, so farmers sow them in June–July, just as the monsoon rains arrive, and harvest them in autumn when the rains end. The monsoon water is what makes the crop grow, so the rhythm of the season follows the rain. This is exactly why a LATE or WEAK monsoon hits kharif farmers hardest: if the rains come late, sowing is delayed and the crop has less time to grow; if the rains are weak, the thirsty kharif crops do not get enough water and the harvest shrinks or fails. Rabi crops are less affected because they are grown in the drier winter and often rely on stored water or irrigation rather than the monsoon itself. So the kharif season lives and dies by the monsoon.",
+          "solutionSteps": [
+            "Link kharif sowing (June–July) to the arrival of the southwest monsoon.",
+            "Explain kharif crops (e.g. rice) need plenty of water, supplied by the monsoon.",
+            "A late monsoon delays sowing; a weak monsoon starves the crop of water.",
+            "Contrast with rabi (winter) crops, which rely less on the monsoon."
+          ],
+          "commonMistakes": [
+            "Thinking all crops depend equally on the monsoon — rabi crops are less monsoon-dependent.",
+            "Not connecting the timing of sowing to the arrival of the rains."
+          ],
+          "variations": [
+            {"prompt": "Name the three cropping seasons of India, with one crop for each.", "answer": "Kharif (e.g. rice), Rabi (e.g. wheat), and Zaid (e.g. watermelon or cucumber).", "solutionSteps": ["Recall the three seasons: kharif, rabi, zaid.", "Give one crop for each."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [6, 7],
+          "needsHumanReview": false
         }
       ]
     },
@@ -730,6 +752,28 @@
             17
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch13_t03_q04",
+          "prompt": "India has SIX major soil types. Why does one country need so many different soils to be matched with different crops? Explain the idea of matching soil to crop, and give two soil-and-crop examples.",
+          "questionType": "longAnswer",
+          "answer": "Different crops need different things from the ground — some need soil that holds water, some need soil that drains quickly, some need particular minerals — and India's huge variety of land and climate has produced many different soils. Matching the right crop to the right soil means each crop grows where it does best, giving better harvests with less waste. For example, the ALLUVIAL soil of the Northern Plains, deposited by rivers, is deep and fertile and holds water well, so it is ideal for rice and wheat; the BLACK soil (also called regur or 'cotton soil') of the Deccan holds moisture for a long time, which suits cotton. Farmers who plant a crop in the soil it is suited to get far more from the same effort — so knowing the soils is part of knowing where to grow what.",
+          "solutionSteps": [
+            "Explain different crops need different soil properties (water-holding, drainage, minerals).",
+            "India's varied land/climate produced many soils, so crops can be matched to the best soil.",
+            "Example 1: alluvial soil (Northern Plains) → rice and wheat.",
+            "Example 2: black/regur soil (Deccan) → cotton."
+          ],
+          "commonMistakes": [
+            "Thinking any crop grows equally well in any soil.",
+            "Mixing up which soil suits which crop (black soil for cotton, alluvial for rice/wheat)."
+          ],
+          "variations": [
+            {"prompt": "Which soil is known as 'cotton soil', and where is it mainly found?", "answer": "Black soil (also called regur), found mainly on the Deccan plateau, is known as 'cotton soil' because it suits cotton well.", "solutionSteps": ["Recall black/regur soil is the cotton soil.", "It is found on the Deccan plateau."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [12, 13, 14],
+          "needsHumanReview": false
         }
       ]
     },
@@ -916,6 +960,28 @@
           "pageRefs": [
             14
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch13_t04_q04",
+          "prompt": "Farmers can either SAVE seeds from their own harvest to plant next year, or BUY new (often hybrid) seeds from companies each season. Give one advantage of each choice, and explain one reason a farmer might WORRY about depending only on bought seeds.",
+          "questionType": "longAnswer",
+          "answer": "Saved seeds: the big advantage is that they are FREE and already suited to the farmer's own land and weather, having been grown there for generations — and saving many local varieties keeps a rich diversity of crops alive. Bought (hybrid) seeds: their advantage is that they can give HIGHER yields and may resist certain pests or diseases, so the harvest can be bigger. But depending ONLY on bought seeds is worrying because the farmer must spend money to buy them again EVERY season (many hybrids don't breed true if saved), which raises costs and debt; the farmer also becomes dependent on the company and the few varieties it sells, so if prices rise or that variety fails, the farmer has fewer fall-backs and local seed traditions can be lost. A wise approach often blends both — using improved seeds where helpful while keeping some hardy saved varieties as a safety net.",
+          "solutionSteps": [
+            "Saved seeds advantage: free, locally adapted, preserve diversity.",
+            "Bought (hybrid) seeds advantage: higher yields, pest/disease resistance.",
+            "Worry about bought-only: must repurchase every season → cost/debt and dependence on the company.",
+            "Note the loss of local varieties and the value of blending both."
+          ],
+          "commonMistakes": [
+            "Treating bought seeds as simply 'better' without noting the recurring cost and dependence.",
+            "Forgetting that saved seeds preserve local crop diversity."
+          ],
+          "variations": [
+            {"prompt": "Why can a farmer usually NOT save seeds from a hybrid crop to replant next year?", "answer": "Because hybrid seeds often do not 'breed true' — the next generation may not keep the parent's good qualities — so the farmer has to buy fresh hybrid seeds each season.", "solutionSteps": ["Recall hybrids may not breed true.", "So saved hybrid seed gives poorer, unpredictable plants.", "Hence farmers rebuy each season."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [19, 20],
           "needsHumanReview": false
         }
       ]
@@ -1194,6 +1260,28 @@
             25,
             26
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch13_t05_q04",
+          "prompt": "After seeing the harm caused by chemical-heavy farming, many farmers are turning to SUSTAINABLE and ORGANIC farming. Explain what each of these means, and why they are seen as a way to fix the problems left behind by the Green Revolution.",
+          "questionType": "longAnswer",
+          "answer": "ORGANIC farming means growing crops WITHOUT chemical fertilisers and pesticides, using natural inputs instead — compost, cow dung, green manure and natural pest control. SUSTAINABLE farming is the broader idea of farming in a way that protects the soil, water and environment so that the land stays productive for FUTURE generations, not just this season. They are seen as a fix for the Green Revolution's problems because that revolution, while it greatly raised food production, also overused chemicals and water — depleting groundwater, degrading and poisoning the soil, and harming health and nearby ecosystems. Organic and sustainable methods directly tackle these costs: by cutting out harsh chemicals they let the soil recover and stay alive, by using water more carefully they slow groundwater loss, and by protecting the land's long-term health they keep farming possible for the future. The whole state of Sikkim going fully organic is a real example of this shift.",
+          "solutionSteps": [
+            "Define organic farming: no chemical fertilisers/pesticides; natural inputs.",
+            "Define sustainable farming: protect soil/water/environment for the future.",
+            "Recall the Green Revolution's costs: groundwater depletion, soil degradation, chemical overuse.",
+            "Show how organic/sustainable methods reverse each of those costs (Sikkim as an example)."
+          ],
+          "commonMistakes": [
+            "Treating 'organic' and 'sustainable' as identical — organic is about avoiding chemicals; sustainable is the broader long-term goal.",
+            "Forgetting to connect them back to the SPECIFIC Green Revolution problems they fix."
+          ],
+          "variations": [
+            {"prompt": "Which Indian state has become fully organic, and roughly when?", "answer": "Sikkim, which banned chemical fertilisers and pesticides in 2014 to become a fully organic state.", "solutionSteps": ["Recall the fully organic state.", "Name Sikkim and its 2014 ban."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [22, 23],
           "needsHumanReview": false
         }
       ]
@@ -1998,7 +2086,10 @@
       ],
       "needsHumanReview": false,
       "source": "boss_quiz"
-    }
+    },
+    {"id": "bossquiz_ssch13_q10", "prompt": "The short summer cropping season between rabi and kharif, when quick crops like watermelon and cucumber are grown, is the —", "questionType": "mcq", "options": ["Kharif season", "Rabi season", "Zaid season", "Monsoon season"], "answer": "Zaid season", "solutionSteps": ["Recall the three seasons: kharif, rabi, zaid.", "The short summer season between rabi and kharif is zaid.", "Watermelon and cucumber are zaid crops."], "commonMistakes": ["Confusing zaid (short summer) with kharif (monsoon) or rabi (winter)."], "variations": [], "difficulty": 4, "pageRefs": [7], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch13_q11", "prompt": "The deep, river-deposited soil that covers the Northern Plains and is ideal for rice and wheat is —", "questionType": "mcq", "options": ["Black (regur) soil", "Alluvial soil", "Laterite soil", "Desert soil"], "answer": "Alluvial soil", "solutionSteps": ["Rivers deposit fine, fertile sediment on the plains.", "This is alluvial soil, the most widespread fertile soil.", "It suits rice and wheat."], "commonMistakes": ["Confusing alluvial soil (plains, rice/wheat) with black soil (Deccan, cotton)."], "variations": [], "difficulty": 4, "pageRefs": [13], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch13_q12", "prompt": "Growing different crops in a field in successive seasons to keep the soil fertile is called —", "questionType": "mcq", "options": ["Crop rotation", "Monocropping", "Hydroponics", "Terracing"], "answer": "Crop rotation", "solutionSteps": ["Different crops use and return different nutrients.", "Alternating them across seasons restores soil fertility.", "This practice is crop rotation."], "commonMistakes": ["Confusing crop rotation with growing the same crop repeatedly (monocropping)."], "variations": [], "difficulty": 4, "pageRefs": [18], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {
@@ -2078,6 +2169,8 @@
       ],
       "needsHumanReview": false,
       "source": "scene_quick_check"
-    }
+    },
+    {"id": "scenecheck_ssch13_q03", "prompt": "Crops sown at the start of the southwest monsoon (June–July) and harvested in autumn — like rice — belong to which season?", "questionType": "mcq", "options": ["Rabi", "Kharif", "Zaid", "Winter"], "answer": "Kharif", "solutionSteps": ["Recall kharif crops are sown with the monsoon's arrival.", "They are harvested in autumn.", "Rice is a typical kharif crop."], "commonMistakes": ["Confusing kharif (monsoon) with rabi (winter)."], "variations": [], "difficulty": 2, "pageRefs": [7], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch13_q04", "prompt": "On a hillside, building flat 'steps' (terraces) and ploughing along the curves of the slope are done mainly to —", "questionType": "mcq", "options": ["Make the farm look pretty", "Prevent soil erosion", "Grow taller crops", "Avoid using water"], "answer": "Prevent soil erosion", "solutionSteps": ["On slopes, rain washes soil downhill (erosion).", "Terraces and contour ploughing slow the run-off.", "So they mainly prevent soil erosion."], "commonMistakes": ["Thinking terracing is only for looks rather than saving soil."], "variations": [], "difficulty": 2, "pageRefs": [18], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }
