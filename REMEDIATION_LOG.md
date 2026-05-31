@@ -4249,3 +4249,17 @@ Satavahana queens held real power via mother-names & land grants) + 2
 realWorldExamples (Gandhara Greek-robe vs Mathura red-stone Buddha = visible
 confluence; why a marriage could outweigh a battle). ssch06 glossary 10→16. All
 lints + Release build + suite green. Pushed 1c0b147. GL pass: ssch01–06 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 27 (ssch07 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch07 (The Gupta Era). +8 glossary terms with etymology:
+Vikramaditya (Skt vikrama 'valour' + āditya 'sun'), Ayurveda (āyus+veda),
+Astronomy (Gk astron+nomos), Zero/shunya (śūnya 'empty'), Agrahara, Pilgrim (Lat
+peregrinus), Diplomacy (Gk diploma), Classical Age (Lat classicus). +2
+misconceptions (Guptas governed north/centre directly, used grants/allies
+elsewhere — not all-India direct rule; 'Golden Age' = cultural peak, not social
+equality, per Faxian on the chandalas) + 2 realWorldExamples (the Indian zero that
+became 'Arabic numerals'; Kalidasa still performed worldwide). ssch07 glossary
+10→18. All lints + Release build + suite green. Pushed 71087d7. GL: ssch01–07 done.
