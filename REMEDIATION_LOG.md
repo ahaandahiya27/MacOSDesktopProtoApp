@@ -4653,3 +4653,19 @@ saints; class_10, anchor t05_c01). +2 cross-strand refs (→ssch09 the Chola vil
 sabhas as ancient roots of self-government and democracy; →ssch13 village tanks
 and land grants → farming and irrigation heritage). ssch15 deepDive 2→4, ccRefs
 3→5. All lints + Release build + suite green. Pushed 7eb7c0e.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 56 (ssch16 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch16 (Turning Tides: 11th and 12th Centuries). +2 deepDive: 'Indian
+science that kept growing through hard times' (Bhaskaracharya's Siddhanta Shiromani
+— work with zero, an instantaneous-motion idea close to calculus, a Rolle's-theorem
+statement, and the Lilavati — proving learning advanced through upheaval; class_11,
+anchor t02_c02) and 'Basavanna and a religion without high or low' (the Lingayat/
+Virashaiva movement rejecting caste and untouchability, honouring kāyaka/labour as
+worship, vachanas in Kannada — equality eight centuries before the Constitution;
+class_10, anchor t05_c01). +2 cross-strand refs (→ssch07 science continuing from
+Aryabhata and the Gupta Classical Age; →ssch10 Basavanna's equality → the
+Constitution's equality and fraternity). ssch16 deepDive 2→4, ccRefs 3→5. All
+lints + Release build + suite green. Pushed 9742e51.
