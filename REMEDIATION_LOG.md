@@ -4195,3 +4195,16 @@ misconceptions (barometer≠thermometer; humid≠imminent-rain) + 2 realWorldExa
 (dew at dawn; a falling barometer keeps a fishing boat ashore). ssch02 glossary
 11→18. All 7 content lints + full Big-Sur lint family + Release build + suite green
 via pre-push gate. Pushed 35d60fb.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 23 (ssch03 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch03 (Climates of India). +8 glossary terms with
+etymology grounded in chapter content: Equator (Lat aequator 'equaliser'),
+Maritime (mare), Continental (continentem), Windward, Leeward (OE hleo 'shelter'),
+Rain shadow, Loo (Hindi लू), El Niño (Spanish 'the child'). +2 misconceptions
+(monsoon names the reversing winds, not just the rain; rain falls unequally
+across a range → rain shadow) + 2 realWorldExamples (the loo & monsoon onset;
+an El Niño year & a nervous farmer). ssch03 glossary 12→20. All lints + Release
+build + suite green via pre-push gate. Pushed 3d23173.
