@@ -4071,3 +4071,17 @@ as a fix for Green-Revolution costs). 3 boss MCQ (diff4): zaid season, alluvial 
 crop rotation. 2 quick MCQ: kharif, terracing→erosion. Pack 339→343 topic-Qs; ssch13
 boss 10→13, quick 3→5. (Pivoted around existing rain-fed/irrigated, soil-health,
 Green-Revolution Qs.) All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 14 (ssch14 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch14 (India and Her Neighbours)** — already a
+full-enrichment chapter, so authored fresh angles around its existing diff-4 Qs
+(regionalism, Buddhism links, Nepal open border, Chabahar). +8: 4 topic Qs —
+`t01_q04` (diff5 land vs maritime neighbours + Indian Ocean importance), `t02_q04`
+(diff5 China/Pakistan/Afghanistan contrast), `t03_q04` (diff5 shared rivers need
+cooperation), `t05_q04` (diff5 why SAARC / benefits of cooperation). 3 boss MCQ
+(diff4): maritime neighbours, Bangladesh 1971, Myanmar gateway. 2 quick MCQ:
+Himalayas (India–China), Bhutan=Thunder Dragon. Pack 343→347 topic-Qs; ssch14
+boss 10→13, quick 3→5 (chapter already had a diff-5 longAnswer boss q10). All 7 lints green.

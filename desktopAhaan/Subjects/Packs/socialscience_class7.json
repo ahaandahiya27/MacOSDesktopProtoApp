@@ -31057,6 +31057,39 @@
                 45
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_t01_q04",
+              "prompt": "India has both LAND neighbours (sharing a border on the ground) and MARITIME neighbours (across the sea). Explain the difference between the two, and then explain why India's position in the Indian Ocean makes its maritime neighbourhood so important.",
+              "questionType": "longAnswer",
+              "answer": "A LAND neighbour is a country that shares a land border with India, so people, goods and even tensions can cross directly on the ground — like China, Pakistan, Nepal, Bhutan, Bangladesh, Myanmar and Afghanistan. A MARITIME neighbour is a country separated from India by the sea, reached by ship — like Sri Lanka and the Maldives. India's position in the Indian Ocean makes its maritime neighbourhood very important because India sits at the centre of busy sea routes along which a huge amount of the world's trade and energy (such as oil) travels. Keeping these sea lanes safe and staying friendly with island neighbours helps India's own trade and security, and lets India act as a 'first responder' that can quickly send help across the water when a neighbour faces a disaster. So the sea is not a wall but a highway, and India's central place on it gives its maritime neighbours special weight.",
+              "solutionSteps": [
+                "Define a land neighbour (shares a land border) with examples.",
+                "Define a maritime neighbour (across the sea) with examples (Sri Lanka, Maldives).",
+                "Explain India's central Indian Ocean position controls busy trade/energy sea lanes.",
+                "Conclude why safe seas + friendly island neighbours matter for trade, security and disaster help."
+              ],
+              "commonMistakes": [
+                "Thinking the sea cuts India off — it is actually a busy highway of trade.",
+                "Listing only land neighbours and forgetting maritime ones (Sri Lanka, Maldives)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name India's two main maritime (across-the-sea) neighbours.",
+                  "answer": "Sri Lanka and the Maldives.",
+                  "solutionSteps": [
+                    "Recall the island neighbours to India's south.",
+                    "Name Sri Lanka and the Maldives."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                30,
+                31,
+                32
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -31296,6 +31329,39 @@
                 "Grand Trunk Road",
                 "Spice Route"
               ]
+            },
+            {
+              "id": "ssch14_t02_q04",
+              "prompt": "India's relationships with China, Pakistan and Afghanistan are each shaped by geography and history — but in very different ways. Briefly contrast how the Himalayas, the Partition, and ancient land links shape India's ties with these three neighbours.",
+              "questionType": "longAnswer",
+              "answer": "With CHINA, the dominant fact is geography: the towering Himalayas separate the two giants, so for ages they had little direct contact, but today there are disputes over exactly where the high mountain border runs. With PAKISTAN, the dominant fact is shared HISTORY turned difficult: the two were one land with a deeply shared heritage of language, food and culture until the Partition of 1947 split them, leaving a divided history and recurring tension alongside the closeness (seen in gestures like the Kartarpur Corridor). With AFGHANISTAN, the dominant theme is ancient LAND LINKS: long-standing trade and cultural ties stretch back centuries along the old land routes through the northwest, making it an ancient friend connected by land and shared history. So the same two forces — geography and history — produce three very different relationships: a mountain-separated rival, a partitioned sibling, and an ancient land-linked friend.",
+              "solutionSteps": [
+                "China: geography (Himalayas) → little old contact but a border dispute today.",
+                "Pakistan: shared heritage split by the 1947 Partition → divided history and tension.",
+                "Afghanistan: ancient land links and trade → an old land-connected friend.",
+                "Conclude the same forces (geography + history) shape three different relationships."
+              ],
+              "commonMistakes": [
+                "Treating all three relationships as the same kind of rivalry.",
+                "Forgetting that India and Pakistan share a deep common heritage despite Partition."
+              ],
+              "variations": [
+                {
+                  "prompt": "What natural feature separates India and China, and what problem does it leave today?",
+                  "answer": "The Himalayas separate India and China; today there are disputes over exactly where the border runs through these high mountains.",
+                  "solutionSteps": [
+                    "Recall the Himalayas as the China–India barrier.",
+                    "Note the modern border dispute."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                34,
+                35,
+                36
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -31591,6 +31657,39 @@
               "difficulty": 2,
               "pageRefs": [
                 42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_t03_q04",
+              "prompt": "India shares great rivers — like the Ganga and the Brahmaputra — with neighbours such as Nepal and Bangladesh, the water flowing from one country into another. Explain why SHARED RIVERS make cooperation between neighbours essential, and what could go wrong if neighbours did NOT cooperate.",
+              "questionType": "longAnswer",
+              "answer": "Shared rivers tie neighbours together because the same water is used by all the countries it flows through. Rivers like the Ganga and Brahmaputra rise in or pass through the Himalayan neighbours (such as Nepal) and flow down through India and into Bangladesh, so what one country does upstream directly affects those downstream. This makes cooperation essential: if neighbours agree on how to share the water, build flood warnings together and avoid polluting it, everyone benefits — farms get water, floods are managed, and the river stays healthy. If they did NOT cooperate, things could go badly wrong: an upstream country taking or blocking too much water could leave downstream farmers short; sudden releases or poor warning could cause floods; and pollution dumped upstream would harm everyone below. Because a river ignores borders, neighbours sharing one have little choice but to manage it together.",
+              "solutionSteps": [
+                "Note that a shared river's water is used by every country it flows through.",
+                "Explain upstream actions affect downstream neighbours (Nepal → India → Bangladesh).",
+                "Cooperation → fair water-sharing, flood warnings, less pollution → all benefit.",
+                "No cooperation → water shortages, floods, pollution harming downstream neighbours."
+              ],
+              "commonMistakes": [
+                "Thinking each country can manage its stretch of a river alone — the water crosses borders.",
+                "Forgetting the downstream effects of upstream actions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name a major river India shares with Bangladesh downstream.",
+                  "answer": "The Ganga (or the Brahmaputra), which flows from India into Bangladesh.",
+                  "solutionSteps": [
+                    "Recall the big rivers flowing into Bangladesh.",
+                    "Name the Ganga or Brahmaputra."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                38,
+                39,
+                40
               ],
               "needsHumanReview": false
             }
@@ -32116,6 +32215,38 @@
                 56,
                 57,
                 58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_t05_q04",
+              "prompt": "In 1985, India and its neighbours formed a regional organisation called SAARC. Why do neighbouring countries form organisations like this instead of each acting alone? Give TWO specific benefits of neighbours cooperating rather than competing.",
+              "questionType": "longAnswer",
+              "answer": "Neighbours form organisations like SAARC (the South Asian Association for Regional Cooperation, formed in 1985) because they share the same region and face many of the same challenges, so working together solves problems that no single country can solve alone. Benefit 1 — shared problems get shared solutions: neighbours can cooperate on trade, disaster relief, health and managing shared rivers, so that, for example, a flood-warning or a disease outbreak is handled together across borders rather than by each country struggling separately. Benefit 2 — cooperation builds peace and prosperity: when countries trade and talk through a common forum, they grow economically by buying and selling more easily with one another, and regular dialogue reduces suspicion and the chance of conflict. In short, the region's people, rivers, trade and dangers all cross borders, so cooperating multiplies everyone's strength, while competing wastes it.",
+              "solutionSteps": [
+                "Explain neighbours share a region and common challenges, so cooperation helps all.",
+                "Benefit 1: shared solutions to shared problems (trade, disaster relief, rivers, health).",
+                "Benefit 2: cooperation builds prosperity (easier trade) and peace (dialogue reduces conflict).",
+                "Conclude that cross-border issues make cooperation stronger than competition."
+              ],
+              "commonMistakes": [
+                "Giving only a definition of SAARC without explaining the BENEFITS of cooperating.",
+                "Listing vague 'friendship' instead of specific shared gains like trade or disaster relief."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does SAARC stand for, and in which year was it formed?",
+                  "answer": "The South Asian Association for Regional Cooperation, formed in 1985.",
+                  "solutionSteps": [
+                    "Expand the abbreviation SAARC.",
+                    "Recall it was formed in 1985."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                56,
+                57
               ],
               "needsHumanReview": false
             }
@@ -33092,6 +33223,88 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch14_q11",
+          "prompt": "India's two main MARITIME (across-the-sea) neighbours to the south are —",
+          "questionType": "mcq",
+          "options": [
+            "China and Nepal",
+            "Sri Lanka and the Maldives",
+            "Pakistan and Afghanistan",
+            "Bhutan and Myanmar"
+          ],
+          "answer": "Sri Lanka and the Maldives",
+          "solutionSteps": [
+            "Maritime neighbours are reached across the sea.",
+            "To India's south lie Sri Lanka and the Maldives.",
+            "China, Nepal, etc. are land neighbours."
+          ],
+          "commonMistakes": [
+            "Listing land neighbours instead of the island maritime ones."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            46,
+            47
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch14_q12",
+          "prompt": "Bangladesh, often called India's 'newborn neighbour', became an independent country in —",
+          "questionType": "mcq",
+          "options": [
+            "1947",
+            "1971",
+            "1985",
+            "2014"
+          ],
+          "answer": "1971",
+          "solutionSteps": [
+            "Recall Bangladesh's independence.",
+            "It became a separate country in 1971.",
+            "Hence 'newborn neighbour'."
+          ],
+          "commonMistakes": [
+            "Confusing 1971 (Bangladesh) with 1947 (India–Pakistan Partition)."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            38
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch14_q13",
+          "prompt": "Which neighbour is described as India's 'gateway to Southeast Asia'?",
+          "questionType": "mcq",
+          "options": [
+            "Sri Lanka",
+            "Afghanistan",
+            "Myanmar",
+            "Nepal"
+          ],
+          "answer": "Myanmar",
+          "solutionSteps": [
+            "Recall the neighbour bridging India and Southeast Asia.",
+            "Myanmar lies on India's east, opening toward Southeast Asia.",
+            "So Myanmar is the 'gateway to Southeast Asia'."
+          ],
+          "commonMistakes": [
+            "Choosing a western or southern neighbour instead of eastern Myanmar."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            44
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -33203,6 +33416,60 @@
             "True",
             "False"
           ],
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch14_q04",
+          "prompt": "The towering mountain range that forms a natural boundary between India and China is the —",
+          "questionType": "mcq",
+          "options": [
+            "Aravallis",
+            "Western Ghats",
+            "Himalayas",
+            "Vindhyas"
+          ],
+          "answer": "Himalayas",
+          "solutionSteps": [
+            "India and China are separated by high mountains.",
+            "These are the Himalayas.",
+            "They long limited direct contact between the two."
+          ],
+          "commonMistakes": [
+            "Naming smaller ranges like the Aravallis or Ghats instead of the Himalayas."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            34
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch14_q05",
+          "prompt": "Bhutan, India's peaceful Himalayan neighbour, is known as the Land of the —",
+          "questionType": "mcq",
+          "options": [
+            "Rising Sun",
+            "Thunder Dragon",
+            "Midnight Sun",
+            "Morning Calm"
+          ],
+          "answer": "Thunder Dragon",
+          "solutionSteps": [
+            "Recall Bhutan's nickname.",
+            "It is the Land of the Thunder Dragon.",
+            "It lies in the eastern Himalayas."
+          ],
+          "commonMistakes": [
+            "Confusing Bhutan's nickname with those of other countries."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            41
+          ],
+          "needsHumanReview": false,
           "source": "scene_quick_check"
         }
       ]
