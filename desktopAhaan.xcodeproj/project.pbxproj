@@ -133,10 +133,12 @@
 		8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */; };
 		A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */; };
 		F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */; };
+		971BB0AABA8D84DAF03EB947 /* DiscoverChapterSocialScienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B421C2817E576CB16ACA1 /* DiscoverChapterSocialScienceView.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
 		7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */; };
+		72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */; };
 		5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */; };
 		0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */; };
 		C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */; };
@@ -1474,6 +1476,7 @@
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
 		C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */; };
+		D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */; };
 		DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */; };
 		9651D940B237F2BB6D2EE9BA /* StreakBadgeVisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067FE30947A929F9D63049D /* StreakBadgeVisibilityTests.swift */; };
 		3FBE8BD2ADC7C3CFC836A1E3 /* StuckHereStripQuickCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA26C87E98C92438A0A2FF8 /* StuckHereStripQuickCheckTests.swift */; };
@@ -2611,10 +2614,12 @@
 		C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath7View.swift"; sourceTree = "<group>"; };
 		28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath8View.swift"; sourceTree = "<group>"; };
 		03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath9View.swift"; sourceTree = "<group>"; };
+		120B421C2817E576CB16ACA1 /* DiscoverChapterSocialScienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterSocialScienceView.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
 		EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathDiscoverComponents.swift"; sourceTree = "<group>"; };
+		1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverComponents.swift"; sourceTree = "<group>"; };
 		D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_PlantKitchen.swift"; sourceTree = "<group>"; };
 		D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_PhotosynthesisLab.swift"; sourceTree = "<group>"; };
 		426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene3_InsideALeaf.swift"; sourceTree = "<group>"; };
@@ -2990,6 +2995,7 @@
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
 		108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceArticleRoutingTests.swift"; sourceTree = "<group>"; };
+		678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryModeArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		6067FE30947A929F9D63049D /* StreakBadgeVisibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreakBadgeVisibilityTests.swift"; sourceTree = "<group>"; };
 		7EA26C87E98C92438A0A2FF8 /* StuckHereStripQuickCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StuckHereStripQuickCheckTests.swift"; sourceTree = "<group>"; };
@@ -4919,10 +4925,12 @@
 				C3D299441B29CACCBD745C93,
 				28E0FABBE207C13F43D6D255,
 				03321EC51EAF0CFDC1A3F760,
+				120B421C2817E576CB16ACA1,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
 				EA28C7E1649CF17D0B7393B5,
+				1DD4F6B4A3DE6A7B815C9E72,
 				DFE37917933D06DACC4E5013,
 				8878C8C2EDF6B9CCCF221F72,
 				CA3D4BF156458958C4D077E7,
@@ -5822,6 +5830,7 @@
 				E9B662F7364184B38EBF6256,
 				ECC6A95CD9ABF9B8C9017257,
 				108AC54929248AA058607155,
+				678377A34E68EE55DBACF757,
 				99C3FC971649DED61AA4104A,
 				6067FE30947A929F9D63049D,
 				7EA26C87E98C92438A0A2FF8,
@@ -7090,10 +7099,12 @@
 				8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */,
 				A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */,
 				F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */,
+				971BB0AABA8D84DAF03EB947 /* DiscoverChapterSocialScienceView.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,
 				7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */,
+				72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */,
 				5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */,
 				0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */,
 				C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */,
@@ -7475,6 +7486,7 @@
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
 				C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */,
+				D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */,
 				DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */,
 				9651D940B237F2BB6D2EE9BA /* StreakBadgeVisibilityTests.swift in Sources */,
 				3FBE8BD2ADC7C3CFC836A1E3 /* StuckHereStripQuickCheckTests.swift in Sources */,

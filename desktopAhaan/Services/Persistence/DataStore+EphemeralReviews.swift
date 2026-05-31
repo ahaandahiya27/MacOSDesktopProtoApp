@@ -57,7 +57,14 @@ extension DataStore {
     /// the format every wiring uses.
     static let ephemeralIdPrefixes: [String] = [
         "bossquiz_ch",
-        "scenecheck_ch"
+        "scenecheck_ch",
+        // Social Science Discover (socialscience_class7): boss-quiz +
+        // scene-quick-check ids are authored into the pack as
+        // `bossquiz_sschNN_qII` / `scenecheck_sschNN_qII`. Listed here so the
+        // Retry router treats them as ephemeral (jump back to the Discover
+        // boss scene) rather than trying to open a Question-detail view.
+        "bossquiz_ssch",
+        "scenecheck_ssch"
     ]
 
     // MARK: - Recently-missed aggregation (D3)

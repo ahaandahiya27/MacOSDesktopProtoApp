@@ -43,6 +43,7 @@ enum DiscoverMode {
     static func hasExperience(for pack: SubjectPack, chapter: Chapter) -> Bool {
         if pack.id == "science_class7" { return supportedChapterIds.contains(chapter.id) }
         if pack.id == "maths_class7" { return mathsSupportedChapterIds.contains(chapter.id) }
+        if pack.id == "socialscience_class7" { return socialScienceSupportedChapterIds.contains(chapter.id) }
         return false
     }
 
@@ -50,6 +51,15 @@ enum DiscoverMode {
     static let mathsSupportedChapterIds: Set<String> = [
         "ch01", "ch02", "ch03", "ch04", "ch05", "ch06", "ch07", "ch08",
         "ch09", "ch10", "ch11", "ch12", "ch13", "ch14", "ch15"
+    ]
+
+    /// Social Science chapters with a Discover experience. All 20 ship the
+    /// same generic 9-scene view (`DiscoverChapterSocialScienceView`) that
+    /// pulls its content live from the `socialscience_class7` pack.
+    static let socialScienceSupportedChapterIds: Set<String> = [
+        "ssch01", "ssch02", "ssch03", "ssch04", "ssch05", "ssch06", "ssch07",
+        "ssch08", "ssch09", "ssch10", "ssch11", "ssch12", "ssch13", "ssch14",
+        "ssch15", "ssch16", "ssch17", "ssch18", "ssch19", "ssch20"
     ]
 
     /// Pack id every Discover experience belongs to today. Hardcoded because
@@ -134,6 +144,15 @@ enum DiscoverMode {
             case "ch15":
                 DiscoverChapterMath15View(pack: pack, chapter: chapter)
             default:
+                ComingSoonView(chapterTitle: chapter.title)
+            }
+        } else if pack.id == "socialscience_class7" {
+            // All 20 Social Science chapters share one generic view that reads
+            // its 9 scenes from the pack. Gate on the supported-id set so a
+            // future pack edit can't accidentally dispatch an unknown chapter.
+            if socialScienceSupportedChapterIds.contains(chapter.id) {
+                DiscoverChapterSocialScienceView(pack: pack, chapter: chapter)
+            } else {
                 ComingSoonView(chapterTitle: chapter.title)
             }
         } else {
