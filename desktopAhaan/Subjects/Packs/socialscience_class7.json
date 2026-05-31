@@ -48490,6 +48490,23 @@
           "relatedConceptIds": [
             "ssch20_t04_c03"
           ]
+        },
+        {
+          "id": "ssch20_rw04",
+          "title": "The 'broken bench' hidden in the word 'bank'",
+          "body": "In medieval Italian markets, moneychangers and lenders sat at a long bench — a banca — to do business. That bench gave us the word 'bank'. And when a lender ran out of money and could no longer pay, people smashed his bench: banca rotta, 'broken bench', which became the English word 'bankrupt'. Two everyday banking words are really a picture of a market bench, whole or broken.",
+          "relatedConceptIds": [
+            "ssch20_t01_c02",
+            "ssch20_t02_c02"
+          ]
+        },
+        {
+          "id": "ssch20_rw05",
+          "title": "How ₹100 quietly becomes ₹200: the magic of compounding",
+          "body": "Put ₹100 in a deposit earning interest, and the next year you earn interest not just on your ₹100 but on the interest too. This 'interest on interest' is compounding. A handy shortcut, the 'Rule of 72', says that at about 8% a year your money roughly DOUBLES in 72÷8 = 9 years — without you adding a single rupee. Starting early matters more than starting big, because compounding rewards time.",
+          "relatedConceptIds": [
+            "ssch20_t01_c03"
+          ]
         }
       ],
       "mnemonics": [
@@ -48536,6 +48553,24 @@
           "actually": "Never share your OTP, PIN or password with anyone - a genuine bank never asks for them. Anyone who does is trying to commit fraud; report it on helpline 1930.",
           "relatedConceptIds": [
             "ssch20_t04_c04"
+          ]
+        },
+        {
+          "id": "ssch20_ms04",
+          "kidsThink": "Money in a savings account just sits idle in the bank.",
+          "actually": "The bank lends most of your deposit out to others as loans. It pays you some interest and charges borrowers more, keeping the difference. So your savings keep working in the economy — funding homes, businesses and farms — which is exactly how banks earn money.",
+          "relatedConceptIds": [
+            "ssch20_t02_c02",
+            "ssch20_t01_c02"
+          ]
+        },
+        {
+          "id": "ssch20_ms05",
+          "kidsThink": "Buying shares is just like a savings account — the money is sure to grow.",
+          "actually": "A savings deposit is safe and earns fixed interest. Shares can rise OR fall with the company and the market. Over time they may give higher returns, but they carry real risk — shares are an investment, not a guaranteed saving.",
+          "relatedConceptIds": [
+            "ssch20_t04_c03",
+            "ssch20_t01_c03"
           ]
         }
       ],
@@ -48696,6 +48731,67 @@
           "hindiTerm": "शेयर",
           "relatedConceptIds": [
             "ssch20_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch20_gl12",
+          "term": "Bank (root)",
+          "definition": "From Italian banca ('bench') — medieval moneylenders worked at benches in markets; a failed one had his banca rotta ('broken bench'), the origin of 'bankrupt'.",
+          "example": "The word 'bank' literally comes from the moneychanger's bench.",
+          "hindiTerm": "बैंक",
+          "relatedConceptIds": [
+            "ssch20_t01_c02"
+          ]
+        },
+        {
+          "id": "ssch20_gl13",
+          "term": "Credit",
+          "definition": "Money lent in the trust that it will be repaid; from Latin credere ('to believe, to trust').",
+          "example": "A bank gives credit because it trusts the borrower to repay with interest.",
+          "hindiTerm": "ऋण / उधार",
+          "relatedConceptIds": [
+            "ssch20_t02_c01"
+          ]
+        },
+        {
+          "id": "ssch20_gl14",
+          "term": "Finance",
+          "definition": "The management of money — saving, lending and investing; from Latin finis ('end'), once meaning the settling of a debt.",
+          "example": "Banks are the heart of a country's financial system.",
+          "hindiTerm": "वित्त",
+          "relatedConceptIds": [
+            "ssch20_t01_c01"
+          ]
+        },
+        {
+          "id": "ssch20_gl15",
+          "term": "Inflation",
+          "definition": "A general rise in prices over time, so money buys less; the RBI tries to keep it in check; from Latin inflare ('to blow up').",
+          "example": "If inflation rises too fast, the RBI may raise interest rates to cool it.",
+          "hindiTerm": "मुद्रास्फीति",
+          "relatedConceptIds": [
+            "ssch20_t03_c02"
+          ]
+        },
+        {
+          "id": "ssch20_gl16",
+          "term": "Dividend",
+          "definition": "The share of a company's profit paid to each shareholder; from Latin dividendum ('a thing to be divided').",
+          "example": "When a company does well, it may pay its shareholders a dividend.",
+          "hindiTerm": "लाभांश",
+          "relatedConceptIds": [
+            "ssch20_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch20_gl17",
+          "term": "Principal",
+          "definition": "The original sum of money lent or saved, before any interest is added; from Latin principalis ('first, chief').",
+          "example": "On a loan you repay the principal plus interest.",
+          "hindiTerm": "मूलधन",
+          "relatedConceptIds": [
+            "ssch20_t01_c03",
+            "ssch20_t02_c01"
           ]
         }
       ],
