@@ -3877,3 +3877,33 @@ NEXT: INTERACTIVE (≥1 gated bespoke interactive per chapter), then ENRICHED.
 
 Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
 confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN pass cycle 1 (ssch01 Olympiad questions)
+
+Additive deepening of the already-DONE `socialscience_class7` subject. New
+`SOCIAL_SCIENCE_DEEPEN_LEDGER.md` at the workspace root tracks per-chapter
+per-track depth; no rebuild, additive only, always green.
+
+OLYMPIAD_QUESTIONS for **ssch01 (Geographical Diversity of India)**: added 8
+higher-difficulty items, all grounded in facts already authored in the chapter
+(PDF-faithful) — no new claims introduced:
+- 4 topic Qs (difficulty 4–5) with full solutionSteps + commonMistakes + a
+  variation each: `t01_q04` (continent-vs-country compare/contrast),
+  `t02_q05` (collision→Himalayas→rivers→silt→fertile-plains cause-effect chain,
+  diff 5), `t04_q04` (why East-Coast deltas but not West), `t05_q04` (Lakshadweep
+  coral vs Andaman & Nicobar volcanic, source-log interpretation).
+- 3 boss MCQs (diff 4): `q10` Aravalli-as-barrier counterfactual, `q11`
+  S→N Himalayan range ordering, `q12` island-origin pairing.
+- 2 quick-check MCQs (diff 2): `q03` Ghats↔Peninsular Plateau, `q04` Sundarbans.
+
+Pack: 20 ch / 293 concepts / **295** topic-questions (was 291) / ssch01 boss 10→13,
+quick 3→5. Rebuilt via `ss_build_pack.py`; articles regenerated (idempotent — Qs
+don't render into article HTML, file count stays 160). All 7 content lints +
+Big-Sur safety lints + Release build + full suite green (**689 tests, 0 failures,
+BUILD + TEST SUCCEEDED**). The Science-pack boss ratchet
+(`BossQuizMigrationRatchetTests`) is unaffected (scoped to `science_class7.json`).
+
+Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
+confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).

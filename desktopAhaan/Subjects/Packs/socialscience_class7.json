@@ -271,6 +271,38 @@
                 3
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_t01_q04",
+              "prompt": "Two classmates argue: Ravi says India should be called a 'continent' of its own, while Meera says it is only a 'country'. Using evidence about India's size, its range of landforms and its range of climates, write a short reasoned paragraph that settles the debate.",
+              "questionType": "longAnswer",
+              "answer": "India is correctly called a country, but a remarkably continent-like one. The evidence for Ravi is real: India is the seventh-largest country, packs all five physiographic regions (mountains, plains, desert, peninsula and islands) into one land, and spans climates from the freezing cold desert of Ladakh to the hot Thar and the wet Northeast — a range usually seen across a whole continent. But Meera is right about the label: a continent is one of Earth's few huge landmasses, and India is part of the continent of Asia, set apart by the Himalayas, the Thar and the seas. So the fair conclusion is that India is a single country that is so large and diverse it is often called a 'subcontinent' or 'mini-continent' — not a continent in its own right.",
+              "solutionSteps": [
+                "State the two positions: 'continent' (Ravi) vs 'country' (Meera).",
+                "Marshal the evidence FOR continent-like status: 7th-largest, all five physiographic regions, climate range from Ladakh's cold desert to the hot Thar to the rainy Northeast.",
+                "Marshal the evidence AGAINST being a true continent: a continent is one of Earth's main landmasses; India sits inside Asia, separated only by natural barriers.",
+                "Resolve: India is a country, but its size and diversity earn it the name 'subcontinent' / 'mini-continent'."
+              ],
+              "commonMistakes": [
+                "Picking one side and ignoring the other student's evidence — the question asks you to weigh both.",
+                "Confusing 'subcontinent' with 'continent' — a subcontinent is part of a continent, not a separate one."
+              ],
+              "variations": [
+                {
+                  "prompt": "Give two pieces of evidence a geographer would use to defend calling India a 'mini-continent'.",
+                  "answer": "(1) It contains all five physiographic regions — mountains, plains, desert, peninsula and islands. (2) Its climate ranges from the freezing cold desert of Ladakh to the hot Thar Desert and the very wet Northeast — a span usually found only across a whole continent.",
+                  "solutionSteps": [
+                    "Recall the five regions packed into one country.",
+                    "Recall the extreme climate range from Ladakh to the Thar to the Northeast."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                1,
+                2
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -591,6 +623,42 @@
               "pageRefs": [
                 8,
                 9
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_t02_q05",
+              "prompt": "Trace the full chain of cause and effect that links the slow collision of the Indian landmass with Asia to the rich, fertile soil of the Northern Plains today. Show each link in the chain.",
+              "questionType": "longAnswer",
+              "answer": "Link 1: The Indian landmass drifted north and slowly collided with Asia. Link 2: The crash crumpled the land upward, raising the Himalayas. Link 3: Being so high, the Himalayas trap snow and grow glaciers — they become the 'Water Tower of Asia'. Link 4: Melting snow and glaciers feed great perennial rivers — the Ganga, Indus and Brahmaputra. Link 5: As these rivers rush down the steep mountains they grind rock into fine sediment (silt/alluvium) and carry it along. Link 6: When the rivers reach the flat land they slow down and drop this fertile silt, year after year, building the Northern Plains. Result: the deposited alluvium makes the plains' soil extremely fertile, which is why such a large share of India's people farm and live there.",
+              "solutionSteps": [
+                "Start the chain at the tectonic collision of India with Asia.",
+                "Collision → uplift → the Himalayas rise.",
+                "High mountains → snow and glaciers → perennial rivers (Ganga, Indus, Brahmaputra).",
+                "Fast mountain rivers erode rock into silt (alluvium) and carry it.",
+                "On the flat land the rivers slow and deposit the silt.",
+                "Repeated deposition builds the fertile Northern Plains — hence dense population and farming."
+              ],
+              "commonMistakes": [
+                "Skipping links (e.g. jumping straight from 'Himalayas' to 'fertile plains' without the rivers carrying silt).",
+                "Confusing the cause: the plains are built by river-deposited alluvium, not by the mountains directly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which single feature is the 'engine' that connects the Himalayas to the fertile plains, and why?",
+                  "answer": "The rivers (Ganga, Indus, Brahmaputra). Fed by Himalayan snow, they erode rock into silt high in the mountains and deposit it as fertile alluvium on the plains — without the rivers there would be no soil transport.",
+                  "solutionSteps": [
+                    "Identify the rivers as the link.",
+                    "Explain they carry silt from mountain to plain and deposit it."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                4,
+                5,
+                7,
+                11
               ],
               "needsHumanReview": false
             }
@@ -1047,6 +1115,40 @@
                 20
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_t04_q04",
+              "prompt": "India's East Coast has wide river deltas (like those of the Godavari and Krishna), but its West Coast usually does not. Explain the geographical reason for this difference.",
+              "questionType": "shortAnswer",
+              "answer": "It is because of where the rivers flow and how. Most large peninsular rivers flow EAST, gently sloping across the wide plateau before reaching the Bay of Bengal; being long and slow, they carry lots of sediment and drop it to build broad deltas. The West Coast is a narrow strip squeezed between the Western Ghats and the Arabian Sea, so its rivers are short, steep and swift — they reach the sea quickly without slowing enough to build up big deltas, often forming estuaries instead.",
+              "solutionSteps": [
+                "Recall that most big plateau rivers flow east to the Bay of Bengal; the West Coast rivers are short and swift.",
+                "Deltas form where a river slows down and deposits sediment near its mouth.",
+                "East-flowing rivers are long and gentle → they slow and deposit → wide deltas.",
+                "West Coast rivers are short and steep (narrow coast below the Ghats) → too fast to deposit → estuaries, not deltas."
+              ],
+              "commonMistakes": [
+                "Thinking the West Coast has no rivers — it does, but they are short and swift.",
+                "Forgetting that delta-building needs the river to SLOW DOWN and drop sediment."
+              ],
+              "variations": [
+                {
+                  "prompt": "The West Coast rivers often form estuaries rather than deltas. Why?",
+                  "answer": "Because they are short and fast and meet the sea on a narrow, steep coast, so instead of depositing sediment into a fan-shaped delta they flow straight out, forming funnel-shaped estuaries where river and sea water mix.",
+                  "solutionSteps": [
+                    "Recall West Coast rivers are short, steep and swift.",
+                    "They don't slow to deposit sediment, so no delta forms.",
+                    "Their mouths become estuaries."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                18,
+                19,
+                20
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -1272,6 +1374,37 @@
               "pageRefs": [
                 23,
                 24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_t05_q04",
+              "prompt": "A ship's log records 'low, flat islands ringed by coral reefs' near one Indian island group and 'steep, forested hills of volcanic rock' near another. Identify each group, say which sea it lies in, and explain why the two look so different.",
+              "questionType": "shortAnswer",
+              "answer": "The low, flat, coral-ringed islands are the Lakshadweep Islands, in the Arabian Sea to the west. The steep, volcanic, forested islands are the Andaman and Nicobar Islands, in the Bay of Bengal to the east. They look different because they were built in different ways: Lakshadweep are coral islands — built up slowly by tiny coral organisms, so they are low and flat — while the Andaman and Nicobar Islands are the tops of volcanic mountains rising from the sea floor, so they are tall, rocky and forested.",
+              "solutionSteps": [
+                "Match 'coral, low, flat' to Lakshadweep and 'volcanic, steep, forested' to Andaman & Nicobar.",
+                "Place each: Lakshadweep in the Arabian Sea (west); Andaman & Nicobar in the Bay of Bengal (east).",
+                "Explain the cause: coral is built by living organisms → low and flat; volcanic islands are mountain tops → steep and rocky."
+              ],
+              "commonMistakes": [
+                "Swapping the two seas — Lakshadweep is in the Arabian Sea, Andaman & Nicobar in the Bay of Bengal.",
+                "Saying both are coral or both are volcanic — their origins are different."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which Indian island group would you visit to see coral reefs, and which to see volcanic hills?",
+                  "answer": "Visit Lakshadweep (Arabian Sea) for coral reefs, and the Andaman and Nicobar Islands (Bay of Bengal) for volcanic hills.",
+                  "solutionSteps": [
+                    "Recall Lakshadweep = coral.",
+                    "Recall Andaman & Nicobar = volcanic."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                21,
+                22
               ],
               "needsHumanReview": false
             }
@@ -2055,6 +2188,91 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch01_q10",
+          "prompt": "The Aravalli Hills act as a natural wall on the eastern edge of the Thar. If these ancient hills did NOT exist, the most likely consequence would be that —",
+          "questionType": "mcq",
+          "options": [
+            "The Himalayas would grow taller",
+            "The Thar Desert's sand would spread further east",
+            "The Northern Plains would become a desert overnight",
+            "India would lose its coastline"
+          ],
+          "answer": "The Thar Desert's sand would spread further east",
+          "solutionSteps": [
+            "Recall the Aravallis act as a barrier that holds back the desert.",
+            "Remove the barrier → the sand can move east.",
+            "So the desert would spread further east."
+          ],
+          "commonMistakes": [
+            "Linking the Aravallis to the Himalayas — they are separate, far older hills.",
+            "Thinking a single change instantly turns the plains into desert."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            13,
+            14
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch01_q11",
+          "prompt": "Climbing from the plains in the south up to the highest snow peaks in the north, you cross the three Himalayan ranges in which order?",
+          "questionType": "mcq",
+          "options": [
+            "Himadri → Himachal → Shivalik",
+            "Shivalik → Himachal → Himadri",
+            "Himachal → Shivalik → Himadri",
+            "Shivalik → Himadri → Himachal"
+          ],
+          "answer": "Shivalik → Himachal → Himadri",
+          "solutionSteps": [
+            "The Shivaliks are the lowest, outermost (southern) range.",
+            "The Himachal is the middle range.",
+            "The Himadri (Greater Himalayas) is the highest, northernmost range.",
+            "So south-to-north (low to high) is Shivalik → Himachal → Himadri."
+          ],
+          "commonMistakes": [
+            "Reversing the order — the highest range (Himadri) is in the north, not the south."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            6
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch01_q12",
+          "prompt": "Which pairing of an Indian island group with how it was formed is CORRECT?",
+          "questionType": "mcq",
+          "options": [
+            "Lakshadweep — volcanic; Andaman & Nicobar — coral",
+            "Lakshadweep — coral; Andaman & Nicobar — volcanic",
+            "Both groups are coral islands",
+            "Both groups are volcanic islands"
+          ],
+          "answer": "Lakshadweep — coral; Andaman & Nicobar — volcanic",
+          "solutionSteps": [
+            "Lakshadweep, in the Arabian Sea, is built of coral.",
+            "The Andaman & Nicobar Islands, in the Bay of Bengal, are volcanic.",
+            "So the correct pairing is Lakshadweep–coral, Andaman & Nicobar–volcanic."
+          ],
+          "commonMistakes": [
+            "Swapping the two origins."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            21,
+            22
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -2132,6 +2350,58 @@
           "difficulty": 2,
           "pageRefs": [
             21
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch01_q03",
+          "prompt": "The Western Ghats and Eastern Ghats are the mountain edges of which major landform of India?",
+          "questionType": "mcq",
+          "options": [
+            "The Northern Plains",
+            "The Himalayas",
+            "The Peninsular Plateau",
+            "The Thar Desert"
+          ],
+          "answer": "The Peninsular Plateau",
+          "solutionSteps": [
+            "The Ghats border the southern, triangular plateau.",
+            "That landform is the Peninsular Plateau."
+          ],
+          "commonMistakes": [
+            "Confusing the Ghats with the Himalayas."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            16
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch01_q04",
+          "prompt": "The Sundarbans, home to the Royal Bengal Tiger, is what kind of place?",
+          "questionType": "mcq",
+          "options": [
+            "A cold mountain desert",
+            "A mangrove forest in a river delta",
+            "A coral island",
+            "A sandy hot desert"
+          ],
+          "answer": "A mangrove forest in a river delta",
+          "solutionSteps": [
+            "The Sundarbans sits in the Ganga–Brahmaputra delta.",
+            "It is a mangrove forest, famous for the Royal Bengal Tiger."
+          ],
+          "commonMistakes": [
+            "Mixing it up with a desert or island."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            22
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"
