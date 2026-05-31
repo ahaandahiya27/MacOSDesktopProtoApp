@@ -4277,3 +4277,17 @@ Jupiter/Sun cycle, not one fixed annual place) + 2 realWorldExamples (the Chār 
 stitches the subcontinent into one cultural space; sacred peepal/banyan trees =
 belief-driven conservation). ssch08 glossary 11→17. All lints + Release build +
 suite green. Pushed 62f2254. GL: ssch01–08 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 29 (ssch09 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch09 (Types of Governments). +6 glossary terms: a META
+entry "Kratos & arkhē" that decodes the Greek roots behind every -cracy/-archy
+word (Olympiad-tier), plus Parliament (parler 'to speak'), Constitution
+(constituere), Suffrage (suffragium), Referendum (referendum), Citizen (civis,
+also 'civics'/'city'). +2 misconceptions (democracy≠republic; majority cannot
+vote away fundamental rights) + 2 realWorldExamples (Gram Sabha = direct democracy
+you can attend; three-referee analogy for separation of powers + courts striking
+down unconstitutional laws). ssch09 glossary 11→17. All lints + Release build +
+suite green. Pushed 6e50481. GL: ssch01–09 done.
