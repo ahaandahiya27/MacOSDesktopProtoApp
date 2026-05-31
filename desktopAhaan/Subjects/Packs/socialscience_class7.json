@@ -1438,6 +1438,24 @@
             "ssch01_t02_c04",
             "ssch01_t02_c02"
           ]
+        },
+        {
+          "id": "ssch01_rw04",
+          "title": "Why one side of the Western Ghats is green and the other is dry",
+          "body": "When the summer monsoon blows in from the Arabian Sea, the tall, wall-like Western Ghats force the moist air to rise. As it climbs it cools and dumps heavy rain on the western, seaward slopes — which is why that coast is lush and full of waterfalls. By the time the air crosses to the Deccan Plateau behind the Ghats it has lost most of its water, so the interior is much drier. One mountain wall, two completely different landscapes.",
+          "relatedConceptIds": [
+            "ssch01_t04_c01",
+            "ssch01_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch01_rw05",
+          "title": "The Sundarbans: a forest that drinks salt water",
+          "body": "Where the Ganga and Brahmaputra finally reach the sea, they build the world's largest delta — a maze of muddy islands flooded twice a day by the tide. Ordinary trees would die in salty, waterlogged ground, but mangroves send up special roots that breathe air and filter out salt. This 'beautiful forest' (Sundarban) shelters the Royal Bengal Tiger and acts like a natural sea-wall, softening cyclones before they reach the cities inland.",
+          "relatedConceptIds": [
+            "ssch01_t05_c02",
+            "ssch01_t04_c03"
+          ]
         }
       ],
       "mnemonics": [
@@ -1483,6 +1501,23 @@
           "actually": "A delta is fertile land BUILT UP where a river drops lots of sediment into a calm sea (as on the East Coast). An estuary is a funnel-shaped river mouth where fresh and salt water mix without building much land (as on the West Coast).",
           "relatedConceptIds": [
             "ssch01_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch01_ms04",
+          "kidsThink": "The Western and Eastern Ghats are two matching walls of the same height.",
+          "actually": "They are very different. The Western Ghats are taller and almost unbroken, running like a wall close to the west coast. The Eastern Ghats are lower and broken into chunks, because east-flowing rivers like the Godavari and Krishna cut right through them on their way to the Bay of Bengal.",
+          "relatedConceptIds": [
+            "ssch01_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch01_ms05",
+          "kidsThink": "All of India's big rivers behave the same way through the year.",
+          "actually": "Himalayan rivers like the Ganga are 'perennial' — fed by melting snow and glaciers, they flow even in the dry season. Most peninsular rivers like the Godavari depend on rain, so they swell during the monsoon and shrink in summer.",
+          "relatedConceptIds": [
+            "ssch01_t04_c02",
+            "ssch01_t02_c03"
           ]
         }
       ],
@@ -1628,6 +1663,77 @@
           "relatedConceptIds": [
             "ssch01_t02_c01",
             "ssch01_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch01_gl11",
+          "term": "Deccan",
+          "definition": "From Sanskrit dakṣiṇa ('south'), through Prakrit dakkhiṇa — the large, ancient plateau that makes up most of southern India.",
+          "example": "The flat Deccan Plateau lies between the Western and Eastern Ghats.",
+          "hindiTerm": "दक्कन / दक्षिण पठार",
+          "relatedConceptIds": [
+            "ssch01_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch01_gl12",
+          "term": "Ghat",
+          "definition": "A Hindi/Marathi word for a flight of steps or a steep mountain pass that leads down to a plain or river — used for the two ranges edging the Deccan Plateau.",
+          "example": "The tall Western Ghats run like a wall along the west coast; the lower Eastern Ghats are broken by rivers.",
+          "hindiTerm": "घाट",
+          "relatedConceptIds": [
+            "ssch01_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch01_gl13",
+          "term": "Alluvium",
+          "definition": "From Latin alluvius ('washed against') — the fine, fertile soil that rivers carry and drop along their courses, also called alluvial soil.",
+          "example": "The Northern Plains are so productive because the Ganga and its tributaries spread thick alluvium over them.",
+          "hindiTerm": "जलोढ़ मिट्टी / कछार",
+          "relatedConceptIds": [
+            "ssch01_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch01_gl14",
+          "term": "Glacier",
+          "definition": "A slow-moving river of ice on a high mountain; in Hindi himnad, from Sanskrit hima ('snow') + nada ('river').",
+          "example": "Himalayan glaciers melt slowly all summer and keep the great rivers flowing even when it does not rain.",
+          "hindiTerm": "हिमनद / ग्लेशियर",
+          "relatedConceptIds": [
+            "ssch01_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch01_gl15",
+          "term": "Coral island",
+          "definition": "A low island built up over ages by tiny sea animals called corals; coral is pravāla in Sanskrit.",
+          "example": "The Lakshadweep islands are coral islands ringed by clear, shallow lagoons.",
+          "hindiTerm": "प्रवाल द्वीप",
+          "relatedConceptIds": [
+            "ssch01_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch01_gl16",
+          "term": "Mangrove",
+          "definition": "A salt-tolerant tidal forest that grows where river deltas meet the sea; the Sundarbans is named after its sundari trees (Bengali sundar 'beautiful' + ban 'forest').",
+          "example": "The Sundarbans mangroves are the home of the Royal Bengal Tiger.",
+          "hindiTerm": "ज्वारीय वन / मैंग्रोव",
+          "relatedConceptIds": [
+            "ssch01_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch01_gl17",
+          "term": "Monsoon",
+          "definition": "The seasonal winds that reverse direction with the seasons and bring India most of its rain; from Arabic mausim ('season'), the source of Hindi mausam.",
+          "example": "When the summer monsoon hits the Western Ghats, it pours rain over the waterfalls along the west coast.",
+          "hindiTerm": "मानसून / मौसमी हवाएँ",
+          "relatedConceptIds": [
+            "ssch01_t02_c03",
+            "ssch01_t04_c01"
           ]
         }
       ],
