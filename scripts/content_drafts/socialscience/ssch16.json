@@ -1303,7 +1303,9 @@
       "relatedConceptIds": [
         "ssch16_t05_c02"
       ]
-    }
+    },
+    {"id": "ssch16_rw04", "title": "Why 'sine' is secretly a Sanskrit word", "body": "Indian astronomers like Bhaskaracharya measured triangles using a quantity they called jya (later jiva). When their work reached Arab scholars, jiva was written as 'jiba', and a later European translator misread it as 'jaib' ('a fold or bay') — so he used the Latin word sinus, 'a bay'. From sinus we get the English 'sine' used in every trigonometry class today. A Sanskrit word travelled three languages and is still in your maths book.", "relatedConceptIds": ["ssch16_t02_c02", "ssch16_t02_c01"]},
+    {"id": "ssch16_rw05", "title": "A South Indian navy that sailed to Sumatra", "body": "Around 1025 CE, Rajendra Chola I sent a great fleet across the Bay of Bengal to attack Srivijaya, a powerful kingdom in today's Sumatra and the Malay Peninsula. Few ancient Indian rulers launched such a daring overseas naval expedition. It shows that the Cholas were not only land kings but masters of the sea, with the ships, wealth and trade links to project power across the ocean.", "relatedConceptIds": ["ssch16_t03_c03", "ssch16_t03_c02"]}
   ],
   "mnemonics": [
     {
@@ -1353,7 +1355,9 @@
         "ssch16_t02_c02",
         "ssch16_t05_c01"
       ]
-    }
+    },
+    {"id": "ssch16_ms04", "kidsThink": "Mahmud of Ghazni and the later Ghurids were the same kind of invaders.", "actually": "They were very different. Mahmud of Ghazni RAIDED for treasure and returned home each time. Over a century later the Ghurids came to STAY and rule, and their general Aibak founded the Delhi Sultanate. Raiding for loot and conquering to govern are not the same thing.", "relatedConceptIds": ["ssch16_t01_c03", "ssch16_t04_c03"]},
+    {"id": "ssch16_ms05", "kidsThink": "Foreign scholars like Al-Biruni came only with the armies and learned nothing from India.", "actually": "Al-Biruni learned Sanskrit and studied India's mathematics, astronomy, religion and customs deeply, writing a careful book about the country. This was an age of two-way learning: Indian science (like its sine tables) also travelled out and shaped mathematics far beyond India.", "relatedConceptIds": ["ssch16_t02_c01", "ssch16_t02_c02"]}
   ],
   "ncertQA": [
     {
@@ -1513,7 +1517,13 @@
       "relatedConceptIds": [
         "ssch16_t05_c02"
       ]
-    }
+    },
+    {"id": "ssch16_gl12", "term": "Algebra", "definition": "The branch of mathematics that uses letters and symbols for unknown numbers; from Arabic al-jabr ('reunion of broken parts'), the title of al-Khwarizmi's book.", "example": "Bhaskaracharya's work included problems we would today call algebra.", "hindiTerm": "बीजगणित", "relatedConceptIds": ["ssch16_t02_c02"]},
+    {"id": "ssch16_gl13", "term": "Navy", "definition": "A country's fighting ships and the sailors who crew them; from Latin navis ('ship'). The Cholas built a powerful navy.", "example": "Rajendra Chola's navy crossed the Bay of Bengal.", "hindiTerm": "नौसेना", "relatedConceptIds": ["ssch16_t03_c03", "ssch16_t03_c02"]},
+    {"id": "ssch16_gl14", "term": "Sultanate", "definition": "The territory or rule of a sultan; the Delhi Sultanate began at the very end of this period.", "example": "Aibak's rule marks the start of the Delhi Sultanate.", "hindiTerm": "सल्तनत", "relatedConceptIds": ["ssch16_t04_c03"]},
+    {"id": "ssch16_gl15", "term": "Vimana", "definition": "The tall tower built over the main shrine of a South Indian temple.", "example": "The Brihadisvara temple at Thanjavur has a huge stone vimana.", "hindiTerm": "विमान (मंदिर-शिखर)", "relatedConceptIds": ["ssch16_t03_c02"]},
+    {"id": "ssch16_gl16", "term": "Trigonometry", "definition": "The mathematics of triangles and angles, vital to astronomy; from Greek trigonon ('triangle') + metron ('measure').", "example": "Indian astronomers used trigonometry to track the Sun and Moon.", "hindiTerm": "त्रिकोणमिति", "relatedConceptIds": ["ssch16_t02_c02"]},
+    {"id": "ssch16_gl17", "term": "Plunder", "definition": "To rob a place of its goods by force, especially during war; the raids carried off vast plunder.", "example": "Mahmud's armies came to plunder wealth and then leave.", "hindiTerm": "लूटपाट", "relatedConceptIds": ["ssch16_t01_c03"]}
   ],
   "miniProjects": [
     {
