@@ -5352,6 +5352,41 @@
                 50
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_t02_q04",
+              "prompt": "Two Indian towns lie at the SAME latitude. Town A is on the coast at sea level; Town B is far inland on a high plateau. Predict how their climates will differ — in summer warmth, winter cold, and the evenness of temperature through the year — and name the climate FACTOR responsible for each difference.",
+              "questionType": "longAnswer",
+              "answer": "Because they share a latitude, the Sun's angle is similar, so the differences come from OTHER factors. Town A (coast, sea level): the sea acts as a moderator, so its summers are not too hot and its winters not too cold — temperatures stay mild and EVEN all year. That is the factor 'proximity to the sea'. Town B (inland, high plateau): being far from the sea, it has EXTREME temperatures — hot summers and cold winters — because of its inland position; and being high up, it is also generally COOLER than it would be at sea level, because of the factor 'altitude'. So Town A is mild and even (proximity to sea), while Town B is more extreme and, due to height, cooler overall (altitude + distance from sea).",
+              "solutionSteps": [
+                "Note they share latitude, so latitude is NOT the cause of the difference.",
+                "Coastal Town A: sea moderates temperature → mild, even climate (factor: proximity to the sea).",
+                "Inland Town B: far from the sea → extreme hot summers and cold winters (factor: distance from the sea).",
+                "Town B is also high up → cooler overall (factor: altitude).",
+                "Summarise each difference next to its responsible factor."
+              ],
+              "commonMistakes": [
+                "Blaming latitude — the two towns share it, so it can't explain the difference.",
+                "Forgetting that the inland town has MORE extreme (not milder) temperatures."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a coastal city like Mumbai have milder, more even temperatures than an inland city like Nagpur?",
+                  "answer": "Because Mumbai is next to the sea, which heats and cools slowly and so acts as a moderator, keeping summers cooler and winters warmer; Nagpur, far inland, lacks this moderating sea, so it has hotter summers and colder winters.",
+                  "solutionSteps": [
+                    "Recall the sea moderates temperature.",
+                    "Coastal Mumbai is moderated → even climate.",
+                    "Inland Nagpur lacks this → extreme climate."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                49,
+                50,
+                51
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -5587,6 +5622,39 @@
                 55
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_t03_q04",
+              "prompt": "The monsoon winds REVERSE direction between summer and winter. Starting from the single fact that land heats and cools FASTER than the sea, explain step by step why the summer (southwest) monsoon blows from sea to land and brings rain, while the winter (northeast) monsoon blows from land to sea and is dry.",
+              "questionType": "longAnswer",
+              "answer": "In SUMMER the land heats up quickly and becomes much hotter than the sea. Hot air over the land rises, creating an area of LOW pressure over the land, while the cooler sea stays at higher pressure. Because wind blows from high to low pressure, moist air rushes FROM the sea TO the land — this is the southwest monsoon, and the moisture it carries falls as India's main rains. In WINTER the land cools down quickly and becomes colder than the sea. Now there is HIGH pressure over the cold land and lower pressure over the warmer sea, so the wind reverses and blows FROM the land TO the sea — the northeast monsoon. Since this air comes off the dry land, it is mostly dry (though it picks up a little moisture over the Bay of Bengal and rains on the southeast coast). So the same simple cause — land changing temperature faster than the sea — flips the pressure pattern between the seasons and reverses the winds.",
+              "solutionSteps": [
+                "Start from: land heats and cools faster than the sea.",
+                "Summer: land hotter → low pressure over land → wind from (high-pressure) sea to land → moist → rain (SW monsoon).",
+                "Winter: land colder → high pressure over land → wind from land to (lower-pressure) sea → dry (NE monsoon).",
+                "Conclude the seasonal flip in pressure reverses the wind direction."
+              ],
+              "commonMistakes": [
+                "Saying the monsoon is just 'the rainy season' without explaining the sea↔land pressure difference that drives the winds.",
+                "Forgetting that the WINTER monsoon blows the opposite way (land to sea) and is mostly dry."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does the summer monsoon carry so much rain, while the winter monsoon is mostly dry?",
+                  "answer": "The summer monsoon blows from the sea onto the land, so it is loaded with moisture that falls as rain. The winter monsoon blows from the dry land out toward the sea, so it carries little moisture and is mostly dry.",
+                  "solutionSteps": [
+                    "Summer wind comes off the sea → moist → rain.",
+                    "Winter wind comes off the land → dry."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                52,
+                53,
+                54
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -5819,6 +5887,40 @@
                 64
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_t04_q04",
+              "prompt": "Explain the chain of cause and effect that links a factory burning coal to a farmer's failed monsoon crop years later. Use the idea of the greenhouse effect, and show each link.",
+              "questionType": "longAnswer",
+              "answer": "Link 1: Burning fossil fuels like coal releases greenhouse gases (mainly carbon dioxide) into the atmosphere. Link 2: These gases act like the glass of a greenhouse — they let the Sun's heat in but trap some of the heat that would otherwise escape back to space, so the Earth holds on to extra heat. Link 3: Done by millions of factories, vehicles and power plants over many years, this extra trapped heat slowly raises global temperatures — climate change. Link 4: A warmer climate disturbs long-settled weather patterns, making rainfall less reliable — the monsoon may come late, fail, or arrive as damaging heavy bursts. Link 5: A farmer who depends on a steady monsoon then loses the crop, because the rain no longer comes when and how it used to. So one factory's smoke is a tiny part of a global cause that, multiplied and built up over time, can reach all the way to a single failed harvest.",
+              "solutionSteps": [
+                "Burning coal/fossil fuels → releases greenhouse gases (CO2).",
+                "Greenhouse gases trap extra heat (the greenhouse effect).",
+                "Many sources over years → rising global temperature → climate change.",
+                "Climate change disrupts the monsoon (late, failed, or extreme rain).",
+                "Unreliable monsoon → the farmer's crop fails."
+              ],
+              "commonMistakes": [
+                "Stopping at 'pollution is bad' without naming the greenhouse gases and the trapped-heat step.",
+                "Treating one factory as the whole cause — it is the build-up of many sources over time."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the greenhouse effect compared to a greenhouse made of glass?",
+                  "answer": "Because just as the glass of a greenhouse lets sunlight in but stops the warmth from escaping, greenhouse gases let the Sun's heat reach the Earth but trap some of it from radiating back to space, keeping the planet warmer.",
+                  "solutionSteps": [
+                    "Recall glass lets light in but traps heat.",
+                    "Greenhouse gases do the same in the atmosphere.",
+                    "Hence the name 'greenhouse effect'."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                62,
+                63
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -6041,6 +6143,39 @@
               "difficulty": 1,
               "pageRefs": [
                 58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_t05_q04",
+              "prompt": "A town on India's eastern coast hears that a cyclone is approaching. (a) What is a cyclone? (b) During the storm there is suddenly a period of eerie calm with clear sky — should the townspeople assume the danger has passed? Explain. (c) Give one reason the east coast is especially at risk.",
+              "questionType": "longAnswer",
+              "answer": "(a) A cyclone is an intense low-pressure storm that forms over the warm sea, with very strong winds spiralling around a centre and bringing heavy rain. (b) No — the calm with clear sky is the 'eye' of the cyclone, its cloudless centre. After the eye passes, the other side of the storm arrives with violent winds again, often from the opposite direction. So the townspeople must NOT go out during the calm; the danger has not passed. (c) The east coast faces the Bay of Bengal, where warm sea water and conditions favour cyclones forming and striking that coast, so it is hit by cyclones more often than the west.",
+              "solutionSteps": [
+                "Define a cyclone: an intense low-pressure sea storm with strong winds and heavy rain.",
+                "Identify the calm as the 'eye' — the cloudless centre.",
+                "Warn that the storm resumes after the eye passes, so the calm is deceptive.",
+                "Give the east-coast reason: it borders the cyclone-prone Bay of Bengal."
+              ],
+              "commonMistakes": [
+                "Thinking the calm 'eye' means the cyclone is over — the worst half can still be coming.",
+                "Describing a cyclone as a high-pressure system — it is an intense LOW-pressure storm."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the centre of a cyclone called the 'eye', and what is it like?",
+                  "answer": "The 'eye' is the calm, cloudless centre of the cyclone. While fierce winds and rain spiral around it, the eye itself is strangely quiet and clear — which is why people are warned not to mistake it for the end of the storm.",
+                  "solutionSteps": [
+                    "Recall the cyclone has a calm centre.",
+                    "It is cloudless and quiet — hence 'eye'.",
+                    "The storm continues around and after it."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                58,
+                59
               ],
               "needsHumanReview": false
             }
@@ -6854,6 +6989,89 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch03_q10",
+          "prompt": "The western slopes of the Western Ghats are very wet, but the Deccan plateau just to the east is dry. This dry region in the 'shadow' of the mountains is called a —",
+          "questionType": "mcq",
+          "options": [
+            "Rain shadow",
+            "Cold desert",
+            "Delta",
+            "Microclimate"
+          ],
+          "answer": "Rain shadow",
+          "solutionSteps": [
+            "Moist sea winds rise over the windward (west) slopes and drop their rain there.",
+            "By the time the air crosses to the east (leeward) side, it is dry.",
+            "That dry leeward area is called a rain shadow."
+          ],
+          "commonMistakes": [
+            "Confusing a rain shadow (dry leeward side) with the wet windward side."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            54
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch03_q11",
+          "prompt": "Two towns are at the SAME latitude, but one sits high in the hills and one at sea level. The hill town is cooler mainly because of —",
+          "questionType": "mcq",
+          "options": [
+            "Its lower latitude",
+            "Its higher altitude",
+            "Being closer to the Sun",
+            "Being closer to the sea"
+          ],
+          "answer": "Its higher altitude",
+          "solutionSteps": [
+            "Same latitude → latitude is not the cause.",
+            "Temperature falls as altitude rises.",
+            "So the hill town is cooler because of its higher altitude."
+          ],
+          "commonMistakes": [
+            "Saying it is 'closer to the Sun' — height makes it cooler, not warmer."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            49,
+            50
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch03_q12",
+          "prompt": "The summer (southwest) monsoon brings India's main rains because it blows —",
+          "questionType": "mcq",
+          "options": [
+            "From the dry land out toward the sea",
+            "From the moist sea onto the land",
+            "Straight down from the upper atmosphere",
+            "Only along the Himalayas"
+          ],
+          "answer": "From the moist sea onto the land",
+          "solutionSteps": [
+            "In summer, low pressure over the hot land pulls air in from the sea.",
+            "Sea air is loaded with moisture.",
+            "Blowing onto the land, it drops that moisture as rain."
+          ],
+          "commonMistakes": [
+            "Mixing it up with the dry winter monsoon, which blows from land to sea."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            52,
+            53
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -6926,6 +7144,60 @@
           ],
           "commonMistakes": [
             "Confusing the rescue NDRF with the forecasting IMD."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            58
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch03_q03",
+          "prompt": "As you climb higher and higher up a mountain, the air temperature generally —",
+          "questionType": "mcq",
+          "options": [
+            "Increases",
+            "Decreases",
+            "Stays exactly the same",
+            "Doubles"
+          ],
+          "answer": "Decreases",
+          "solutionSteps": [
+            "Temperature falls as altitude rises.",
+            "That is why high peaks are cold and snow-covered.",
+            "So climbing higher, the temperature decreases."
+          ],
+          "commonMistakes": [
+            "Thinking it gets warmer higher up because you are 'closer to the Sun'."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            50
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch03_q04",
+          "prompt": "The calm, cloudless centre of a cyclone is called the —",
+          "questionType": "mcq",
+          "options": [
+            "Eye",
+            "Delta",
+            "Rain shadow",
+            "Front"
+          ],
+          "answer": "Eye",
+          "solutionSteps": [
+            "A cyclone spirals around a quiet centre.",
+            "That calm, cloudless centre is called the 'eye'.",
+            "The storm resumes once the eye passes."
+          ],
+          "commonMistakes": [
+            "Thinking the calm eye means the cyclone is over."
           ],
           "variations": [],
           "difficulty": 2,

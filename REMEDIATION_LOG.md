@@ -3920,3 +3920,15 @@ slows drying), `t05_q04` (diff5 read 4 instruments together to forecast). 3 boss
 (diff4): wind high→low, mean-temperature calc, wind sock for pilots. 2 quick MCQ:
 troposphere, anemometer. Pack 295→299 topic-Qs; ssch02 boss 10→13, quick 3→5.
 All 7 content lints green. Build+test gated by pre-push hook.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 3 (ssch03 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch03 (Climates of India)**: +8 PDF-faithful items.
+4 topic Qs — `t02_q04` (diff5 compare two same-latitude towns by climate factors),
+`t03_q04` (diff5 why the monsoon reverses, from land/sea heating), `t04_q04`
+(diff4 coal→greenhouse→climate-change→failed-monsoon chain), `t05_q04` (diff4
+cyclone + deceptive 'eye' + why east coast). 3 boss MCQ (diff4): rain shadow,
+altitude vs latitude, SW monsoon direction. 2 quick MCQ: altitude→cooler, cyclone eye.
+Pack 299→303 topic-Qs; ssch03 boss 10→13, quick 3→5. All 7 content lints green.
