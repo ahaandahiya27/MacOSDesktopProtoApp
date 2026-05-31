@@ -296,6 +296,29 @@
           "difficulty": 2,
           "pageRefs": [29],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t02_q04",
+          "prompt": "On a summer day a town recorded a maximum temperature of 38°C and a minimum of 26°C. What is that day's MEAN (average) daily temperature, in °C?",
+          "questionType": "numerical",
+          "answer": "32",
+          "solutionSteps": [
+            "Recall that the mean daily temperature = (maximum + minimum) ÷ 2.",
+            "Add the two readings: 38 + 26 = 64.",
+            "Divide by 2: 64 ÷ 2 = 32.",
+            "So the mean daily temperature is 32°C."
+          ],
+          "commonMistakes": [
+            "Confusing the MEAN (38+26)÷2 = 32 with the RANGE (38−26) = 12.",
+            "Forgetting to divide the sum by 2."
+          ],
+          "variations": [
+            {"prompt": "For the same day (max 38°C, min 26°C), what is the temperature RANGE in °C?", "answer": "12", "solutionSteps": ["Range = maximum − minimum.", "38 − 26 = 12.", "The range is 12°C."]},
+            {"prompt": "Over three days the maximum/minimum temperatures were Mon 30/18, Tue 33/19, Wed 28/20 (°C). On which day was the temperature range the GREATEST?", "answer": "Tuesday — its range was 33 − 19 = 14°C, larger than Monday's 12°C and Wednesday's 8°C.", "solutionSteps": ["Find each day's range (max − min): Mon 12, Tue 14, Wed 8.", "Compare the three ranges.", "Tuesday's 14°C is the largest."]}
+          ],
+          "difficulty": 4,
+          "pageRefs": [30, 31],
+          "needsHumanReview": false
         }
       ]
     },
@@ -441,6 +464,28 @@
           "difficulty": 1,
           "pageRefs": [36, 37],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t03_q04",
+          "prompt": "A weather map shows a region of HIGH atmospheric pressure lying right next to a region of LOW pressure. (a) Which way will the wind blow between them, and why? (b) If the difference in pressure is very large, how will the wind be different? Explain using how wind forms.",
+          "questionType": "longAnswer",
+          "answer": "(a) Wind will blow FROM the high-pressure region TO the low-pressure region. This is because air is a fluid: where the air is squashed harder (high pressure) it pushes out toward where it is pressing less hard (low pressure), and that moving air is what we call wind. (b) The bigger the difference between the two pressures, the harder the air is pushed, so the wind will be STRONGER and faster. A small pressure difference gives a gentle breeze; a very large difference gives strong, gusty winds.",
+          "solutionSteps": [
+            "Recall that wind is moving air, and air moves from high pressure to low pressure.",
+            "Part (a): name the direction — high → low — and explain the 'push' from squashed air to less-squashed air.",
+            "Part (b): link the SIZE of the pressure difference to wind strength.",
+            "Conclude: bigger pressure gap → stronger wind; small gap → gentle breeze."
+          ],
+          "commonMistakes": [
+            "Saying wind blows from low to high pressure — it is the other way round.",
+            "Forgetting that a bigger pressure difference makes the wind stronger, not just change its direction."
+          ],
+          "variations": [
+            {"prompt": "Two days have the same weather except the pressure difference across the town is much larger on Tuesday. On which day is the wind likely stronger, and why?", "answer": "Tuesday. A larger difference in pressure pushes the air harder from the high to the low side, so the wind blows faster and stronger.", "solutionSteps": ["Recall wind strength depends on the size of the pressure difference.", "Bigger difference → stronger push → stronger wind.", "So Tuesday's wind is stronger."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [35, 36],
+          "needsHumanReview": false
         }
       ]
     },
@@ -581,6 +626,28 @@
           "difficulty": 2,
           "pageRefs": [30, 32],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t04_q04",
+          "prompt": "On a hot afternoon a hygrometer shows the relative humidity climbing higher and higher. Explain why this makes the air feel 'sticky' and uncomfortable, and why your wet clothes on the line would dry more slowly.",
+          "questionType": "shortAnswer",
+          "answer": "Relative humidity tells us how much water vapour the air already holds compared to the most it could hold. When it climbs high, the air is nearly 'full' of water vapour. That makes it sticky because the sweat on your skin cannot evaporate easily into already-moist air, so it stays on you instead of cooling you down. For the same reason wet clothes dry slowly: drying means water evaporating from the cloth into the air, and air that is already nearly full of moisture cannot take in much more, so the water leaves the clothes only very slowly.",
+          "solutionSteps": [
+            "Recall that relative humidity = how full of water vapour the air is.",
+            "High humidity → air is nearly saturated, so it can absorb little extra moisture.",
+            "Sweat can't evaporate → skin stays wet → feels 'sticky' and hot.",
+            "Clothes dry by evaporation, which is slow when the air is already moist."
+          ],
+          "commonMistakes": [
+            "Thinking high humidity means it is raining — it just means the air holds a lot of water vapour.",
+            "Saying clothes dry FASTER in humid air — evaporation is actually slower."
+          ],
+          "variations": [
+            {"prompt": "Would clothes dry faster on a dry, breezy day or a humid, still day? Why?", "answer": "On the dry, breezy day. Dry air can absorb more water vapour and the breeze keeps replacing the moist air near the cloth with fresh dry air, so evaporation — and drying — is much faster.", "solutionSteps": ["Recall drying is evaporation into the air.", "Dry air can take more moisture; a breeze removes the moist air.", "So a dry, breezy day dries clothes faster."]}
+          ],
+          "difficulty": 4,
+          "pageRefs": [38, 39],
+          "needsHumanReview": false
         }
       ]
     },
@@ -700,6 +767,29 @@
           "difficulty": 1,
           "pageRefs": [39],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t05_q04",
+          "prompt": "Over a few hours a weather station records: the barometer FALLING steadily, the hygrometer reading RISING, the anemometer showing the wind SPEEDING UP, and the sky CLOUDING over. As the meteorologist on duty, what kind of weather would you forecast for the next few hours, and name the instrument that gave you each clue?",
+          "questionType": "longAnswer",
+          "answer": "I would forecast that wet, stormy weather is on the way — most likely rain, with possibly strong winds. The clues: the BAROMETER (pressure) is falling, and falling pressure usually means an area of low pressure with unsettled, rainy weather is approaching. The HYGROMETER shows humidity rising, meaning the air is filling with water vapour that can condense into clouds and rain. The ANEMOMETER shows the wind speeding up, which fits air rushing toward the low-pressure area. And the thickening clouds (seen by eye) are where the rain will form. Reading all the instruments together, not just one, is what lets a meteorologist forecast confidently.",
+          "solutionSteps": [
+            "Link each reading to the instrument: falling pressure → barometer; rising humidity → hygrometer; rising wind → anemometer.",
+            "Falling barometer → low pressure approaching → unsettled, rainy weather.",
+            "Rising humidity → more water vapour → clouds and rain likely.",
+            "Speeding wind → air rushing toward the low pressure.",
+            "Combine the clues into one forecast: rain and possibly strong winds soon."
+          ],
+          "commonMistakes": [
+            "Reading only ONE instrument — a good forecast combines several clues.",
+            "Thinking a RISING barometer signals rain; it is usually FALLING pressure that warns of bad weather."
+          ],
+          "variations": [
+            {"prompt": "Another day the barometer is steady and high, humidity is low and the sky is clear. What weather would you forecast?", "answer": "Fine, dry, settled weather. High steady pressure, low humidity and clear skies all point to calm, sunny conditions with little chance of rain.", "solutionSteps": ["High steady pressure → settled weather.", "Low humidity + clear sky → no rain expected.", "Forecast fine, dry weather."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [40, 41, 42],
+          "needsHumanReview": false
         }
       ]
     }
@@ -803,11 +893,16 @@
     {"id": "bossquiz_ssch02_q06", "prompt": "Wind blows from areas of —", "questionType": "mcq", "options": ["Low pressure to high pressure", "High pressure to low pressure", "Cold air to warm air only", "High humidity to low humidity"], "answer": "High pressure to low pressure", "solutionSteps": ["Recall wind is moving air.", "Air flows to balance pressure differences.", "It moves from high pressure to low pressure."], "commonMistakes": ["Reversing the direction of airflow."], "variations": [], "difficulty": 2, "pageRefs": [36], "needsHumanReview": false, "source": "boss_quiz"},
     {"id": "bossquiz_ssch02_q07", "prompt": "Which instrument measures the amount of water vapour in the air?", "questionType": "mcq", "options": ["Hygrometer", "Thermometer", "Wind vane", "Barometer"], "answer": "Hygrometer", "solutionSteps": ["Humidity is the amount of water vapour in the air.", "A hygrometer measures humidity.", "The others measure temperature, wind direction and pressure."], "commonMistakes": ["Confusing the hygrometer with the thermometer."], "variations": [], "difficulty": 1, "pageRefs": [38], "needsHumanReview": false, "source": "boss_quiz"},
     {"id": "bossquiz_ssch02_q08", "prompt": "Wet clothes dry slowly when the relative humidity is —", "questionType": "mcq", "options": ["Very low (dry air)", "Very high (the air is nearly full of vapour)", "Exactly 0%", "Always, regardless of humidity"], "answer": "Very high (the air is nearly full of vapour)", "solutionSteps": ["High humidity means the air is already nearly full of water vapour.", "It cannot absorb much more, so water evaporates slowly.", "Therefore wet clothes dry slowly."], "commonMistakes": ["Thinking high humidity helps clothes dry faster."], "variations": [], "difficulty": 2, "pageRefs": [37], "needsHumanReview": false, "source": "boss_quiz"},
-    {"id": "bossquiz_ssch02_q09", "prompt": "On an IMD weather-warning map, the colour RED means —", "questionType": "mcq", "options": ["No warning", "Watch / be updated", "Alert / be prepared", "Warning / take action"], "answer": "Warning / take action", "solutionSteps": ["Recall the IMD colour code: green, yellow, orange, red.", "Red is the most serious level.", "It means 'warning / take action'."], "commonMistakes": ["Mixing up orange (be prepared) with red (take action)."], "variations": [], "difficulty": 2, "pageRefs": [40], "needsHumanReview": false, "source": "boss_quiz"}
+    {"id": "bossquiz_ssch02_q09", "prompt": "On an IMD weather-warning map, the colour RED means —", "questionType": "mcq", "options": ["No warning", "Watch / be updated", "Alert / be prepared", "Warning / take action"], "answer": "Warning / take action", "solutionSteps": ["Recall the IMD colour code: green, yellow, orange, red.", "Red is the most serious level.", "It means 'warning / take action'."], "commonMistakes": ["Mixing up orange (be prepared) with red (take action)."], "variations": [], "difficulty": 2, "pageRefs": [40], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q10", "prompt": "Wind is moving air. It always blows from areas of ___ pressure toward areas of ___ pressure.", "questionType": "mcq", "options": ["low; high", "high; low", "warm; cold", "wet; dry"], "answer": "high; low", "solutionSteps": ["Recall that wind is air moving between pressure areas.", "Air is pushed from where it is squashed harder (high) to where it presses less (low).", "So wind blows from high to low pressure."], "commonMistakes": ["Reversing the direction — wind does not blow from low to high pressure."], "variations": [], "difficulty": 4, "pageRefs": [35], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q11", "prompt": "A day's maximum temperature was 38°C and its minimum was 26°C. Its MEAN daily temperature is —", "questionType": "mcq", "options": ["12°C", "30°C", "32°C", "64°C"], "answer": "32°C", "solutionSteps": ["Mean daily temperature = (max + min) ÷ 2.", "(38 + 26) ÷ 2 = 64 ÷ 2 = 32°C.", "Note 12°C would be the RANGE, not the mean."], "commonMistakes": ["Giving the range (12°C) instead of the mean.", "Forgetting to divide the sum by 2 (64°C)."], "variations": [], "difficulty": 4, "pageRefs": [30, 31], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q12", "prompt": "A pilot landing at an airport needs to judge the wind's direction and rough strength at a single glance. Which device is designed for exactly this?", "questionType": "mcq", "options": ["A barometer", "A wind sock", "A rain gauge", "A hygrometer"], "answer": "A wind sock", "solutionSteps": ["Recall the wind-related devices: wind vane, anemometer, wind sock.", "The wind sock is placed on airport tarmacs for pilots.", "It shows wind direction and rough strength at a glance."], "commonMistakes": ["Choosing the barometer or hygrometer, which measure pressure and humidity, not wind."], "variations": [], "difficulty": 4, "pageRefs": [36, 37], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {"id": "scenecheck_ssch02_q00", "prompt": "Which instrument would you use to measure how hot or cold the air is?", "questionType": "mcq", "options": ["Barometer", "Thermometer", "Rain gauge", "Anemometer"], "answer": "Thermometer", "solutionSteps": ["Temperature is how hot or cold the air is.", "A thermometer measures temperature.", "The others measure pressure, rainfall and wind."], "commonMistakes": ["Confusing the thermometer with the barometer."], "variations": [], "difficulty": 1, "pageRefs": [31], "needsHumanReview": false, "source": "scene_quick_check"},
     {"id": "scenecheck_ssch02_q01", "prompt": "An anemometer's cups are spinning very fast. This tells you the —", "questionType": "mcq", "options": ["Air pressure is high", "Wind is strong (high wind speed)", "Humidity is high", "Temperature is rising"], "answer": "Wind is strong (high wind speed)", "solutionSteps": ["An anemometer measures wind speed.", "The stronger the wind, the faster the cups spin.", "Fast spinning means high wind speed."], "commonMistakes": ["Thinking the spinning cups measure pressure or temperature."], "variations": [], "difficulty": 1, "pageRefs": [37], "needsHumanReview": false, "source": "scene_quick_check"},
-    {"id": "scenecheck_ssch02_q02", "prompt": "A barometer reading drops below 1000 mb. Meteorologists call this a —", "questionType": "mcq", "options": ["Heat wave", "Depression (low-pressure system)", "Drought", "Wind sock"], "answer": "Depression (low-pressure system)", "solutionSteps": ["Normal coastal pressure is about 1013 mb.", "A drop below 1000 mb indicates a depression.", "A depression can grow into a storm or cyclone."], "commonMistakes": ["Confusing a low-pressure depression with a heat wave or drought."], "variations": [], "difficulty": 2, "pageRefs": [35], "needsHumanReview": false, "source": "scene_quick_check"}
+    {"id": "scenecheck_ssch02_q02", "prompt": "A barometer reading drops below 1000 mb. Meteorologists call this a —", "questionType": "mcq", "options": ["Heat wave", "Depression (low-pressure system)", "Drought", "Wind sock"], "answer": "Depression (low-pressure system)", "solutionSteps": ["Normal coastal pressure is about 1013 mb.", "A drop below 1000 mb indicates a depression.", "A depression can grow into a storm or cyclone."], "commonMistakes": ["Confusing a low-pressure depression with a heat wave or drought."], "variations": [], "difficulty": 2, "pageRefs": [35], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch02_q03", "prompt": "Almost all of the Earth's weather happens in which layer of the atmosphere?", "questionType": "mcq", "options": ["The stratosphere", "The troposphere", "The mesosphere", "Outer space"], "answer": "The troposphere", "solutionSteps": ["The troposphere is the lowest layer, closest to the ground.", "Clouds, rain and wind all form there.", "So almost all weather happens in the troposphere."], "commonMistakes": ["Confusing the troposphere with the higher stratosphere."], "variations": [], "difficulty": 2, "pageRefs": [28], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch02_q04", "prompt": "Which instrument measures how FAST the wind is blowing?", "questionType": "mcq", "options": ["Wind vane", "Anemometer", "Barometer", "Thermometer"], "answer": "Anemometer", "solutionSteps": ["A wind vane shows wind direction, not speed.", "An anemometer's spinning cups measure wind speed.", "So the answer is the anemometer."], "commonMistakes": ["Picking the wind vane, which gives direction, not speed."], "variations": [], "difficulty": 2, "pageRefs": [36, 37], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }

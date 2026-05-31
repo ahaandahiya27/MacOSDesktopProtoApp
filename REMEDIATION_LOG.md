@@ -3907,3 +3907,16 @@ BUILD + TEST SUCCEEDED**). The Science-pack boss ratchet
 
 Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
 confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 2 (ssch02 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch02 (Understanding the Weather)**: +8 PDF-faithful
+higher-difficulty items. 4 topic Qs — `t02_q04` (numerical: mean daily temperature,
+with range + greatest-range-across-days variations), `t03_q04` (diff5 pressure→wind
+direction+strength cause-effect), `t04_q04` (diff4 why high humidity feels sticky /
+slows drying), `t05_q04` (diff5 read 4 instruments together to forecast). 3 boss MCQ
+(diff4): wind high→low, mean-temperature calc, wind sock for pilots. 2 quick MCQ:
+troposphere, anemometer. Pack 295→299 topic-Qs; ssch02 boss 10→13, quick 3→5.
+All 7 content lints green. Build+test gated by pre-push hook.
