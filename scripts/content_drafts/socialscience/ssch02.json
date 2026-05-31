@@ -1,0 +1,813 @@
+{
+  "id": "ssch02",
+  "number": 2,
+  "title": "Understanding the Weather",
+  "summary": "Weather is the state of the Earth's atmosphere at a particular time and place — whether it is hot or cold, dry or rainy, calm or windy. This chapter explores the thin layer of air around the Earth (especially the troposphere, where almost all weather happens) and the five elements that together define the weather: temperature, precipitation, atmospheric pressure, wind and humidity. For each element it explains what it means, why it matters, and the special instrument used to measure it — the thermometer, rain gauge, barometer, wind vane and anemometer, and hygrometer. It shows how people once read Nature's clues (ants, frogs, pine cones) to forecast weather, how the systematic study of weather (meteorology) replaced guessing, how weather stations and Automated Weather Stations gather data, and how meteorologists and the India Meteorological Department use that data to predict heavy rain, storms, droughts and heat waves so that people can prepare and stay safe.",
+  "pageRefs": [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+  "topics": [
+    {
+      "id": "ssch02_t01",
+      "title": "What Is Weather?",
+      "summary": "The meaning of weather, the atmosphere and its layers (especially the troposphere where weather happens), the five elements of weather, and why we need common standards to measure them.",
+      "concepts": [
+        {
+          "id": "ssch02_t01_c01",
+          "title": "Weather and the Atmosphere",
+          "explanations": {
+            "oneLine": "Weather is the state of the Earth's atmosphere at a particular time and place.",
+            "kidFriendly": "When you wake up shivering on a winter morning and reach for warm clothes, your body is sensing the weather. Weather is simply what the air is like right now where you are — hot or cold, sunny or cloudy, dry or rainy, calm or windy. All this happens in the 'atmosphere', the blanket of gases (we call them 'air') wrapped around the Earth.",
+            "textbook": "Weather is the state of the Earth's atmosphere at a particular time and place. The atmosphere is the layer of gases that surrounds some planets; in the case of the Earth, we call these gases 'air'. We use many words to describe the weather — hot, cold, rainy, cloudy, humid, snowy, windy — and these describe the different ways in which we experience the elements of weather. Because weather is tied to a specific time and place, it can change from hour to hour and from one town to the next.",
+            "expert": "Weather is the instantaneous, local condition of the lower atmosphere, distinct from climate, which is the average of weather over decades. The atmosphere is a thin, gravity-bound envelope of gases — chiefly nitrogen and oxygen — whose pressure, temperature and moisture vary constantly because the Sun heats the Earth unevenly. This uneven heating drives the circulation of air and the movement of moisture, which is the ultimate engine of all weather. The motto of the India Meteorological Department, ādityāt jāyate vriṣhti ('from the sun arises rain'), captures this beautifully: solar energy evaporates water, lifts and cools air, and so produces clouds, wind and rain. Weather is therefore the visible, daily expression of energy flowing through the atmosphere."
+          },
+          "reasoning": "Air is invisible, but we feel its effects all the time — its warmth, its dampness, its motion. 'Weather' is just the name for the condition of that air at one moment in one place. Because the Sun heats different places by different amounts and at different times, the air keeps changing, so the weather keeps changing too.",
+          "useCases": [
+            {"title": "Deciding what to wear", "description": "Your body senses the weather and you pick thick clothes on a cold day and light ones on a hot day — a daily response to the state of the atmosphere.", "domain": "everyday"},
+            {"title": "Planning the day", "description": "Knowing today's weather helps you decide whether to carry an umbrella, water the plants, or play outdoors.", "domain": "everyday"},
+            {"title": "Naming what we feel", "description": "Words like chilly, humid, breezy and snowy let us share and compare what the atmosphere is doing.", "domain": "language"}
+          ],
+          "beyondTheBook": "The same word 'weather' that means the state of the air also gives us 'to weather a storm' (to survive it) and 'weathering' (the slow wearing down of rocks by rain, wind and frost). All three meanings come from the way the atmosphere acts on the world around us.",
+          "relatedConceptIds": ["ssch02_t01_c02", "ssch02_t01_c03", "ssch02_t05_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [28],
+          "needsHumanReview": false,
+          "mnemonic": "Weather = 'what the air is doing here, right now'.",
+          "predictQuestion": "Why can the weather be sunny in one town and rainy in another town nearby on the very same day?"
+        },
+        {
+          "id": "ssch02_t01_c02",
+          "title": "The Troposphere: Where Weather Happens",
+          "explanations": {
+            "oneLine": "Almost all weather happens in the troposphere, the lowest layer of the atmosphere closest to the ground.",
+            "kidFriendly": "Think of the atmosphere as a cake with several layers. The layer touching the ground is called the 'troposphere', and this is where we live, breathe, and where almost all the weather happens — clouds, rain, wind and storms. It reaches up about 6 to 18 kilometres. It is thinner at the cold poles (cold air shrinks) and thicker over the warm tropics (warm air spreads out).",
+            "textbook": "The Earth's atmosphere may be compared to a cake with several layers. The layer closest to the surface of the Earth is called the troposphere, and that is where all land-based plants and animals (including humans) live and breathe. It is also where almost all weather phenomena take place. The troposphere extends to a height of 6 to 18 kilometres from the ground; it is less thick at the poles, where the cold air contracts, and thicker in the tropical zone, where the warmer air expands. Above it lie other layers, such as the stratosphere (which contains the ozone layer), separated by the tropopause; you will study these more in your Science classes.",
+            "expert": "The troposphere holds about three-quarters of the atmosphere's mass and nearly all of its water vapour, which is why weather is essentially a tropospheric phenomenon. Its defining feature is that temperature generally falls with height (the lapse rate), so warm, moist air near the surface is buoyant and rises, cools, and condenses into clouds and precipitation — the very processes that make weather. The troposphere's variable thickness (about 8 km at the poles, up to 18 km at the equator) follows directly from thermal expansion: warm tropical air is less dense and occupies more vertical space. The boundary above it, the tropopause, acts as a 'lid' where temperature stops falling, trapping most weather below it and explaining why jet aircraft cruise in the calm air just above."
+          },
+          "reasoning": "Weather needs air, water vapour and warmth to make clouds and rain. All three are concentrated in the lowest layer of the atmosphere, the troposphere, where we live. The higher layers are too thin and dry, so the action stays down near the ground.",
+          "useCases": [
+            {"title": "Understanding clouds and rain", "description": "Knowing that weather lives in the troposphere explains why clouds, rain and storms all form within a few kilometres of the ground.", "domain": "science"},
+            {"title": "Why mountains are cold", "description": "Because temperature usually drops as you go up through the troposphere, high mountains stay cold even in summer.", "domain": "geography"},
+            {"title": "Smooth flying", "description": "Pilots climb above the bumpy, weather-filled troposphere into the calmer layer above for a smoother ride.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The word 'troposphere' comes from the Greek tropos, meaning 'turning' or 'mixing'. It is the perfect name: this is the layer where the air constantly churns and mixes, which is exactly what makes the weather so changeable.",
+          "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t02_c01", "ssch02_t03_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [28],
+          "needsHumanReview": false,
+          "mnemonic": "Troposphere = 'the bottom layer where we live and the weather happens'.",
+          "whyChain": [
+            "Why does almost all weather happen in the troposphere? Because this lowest layer holds nearly all of the atmosphere's water vapour and most of its mass, and it is warmed from below by the Earth's surface. Warm, moist air near the ground is lighter than the cooler air above it, so it rises. As weather needs rising, cooling, moist air to make clouds and rain, the troposphere is the only layer with all the ingredients in plenty.",
+            "Why does the troposphere get thinner at the poles and thicker at the tropics? Because air expands when it is heated and contracts when it is cooled. Over the warm tropics the air is hot and spreads upward, pushing the top of the troposphere as high as about 18 kilometres. Over the cold poles the air is chilled and shrinks, so the troposphere there is squeezed down to roughly 6 to 8 kilometres — the same layer, just stretched or compressed by temperature.",
+            "Why does this matter for everyday life? Because we, our crops and our weather all share this single thin layer. Knowing that temperature falls with height inside it explains why hilltops are colder than valleys and why clouds form at certain levels. It also explains why a storm, a heat wave or a monsoon all play out within a few kilometres of the ground — close enough to affect every plant, animal and person living on the surface."
+          ]
+        },
+        {
+          "id": "ssch02_t01_c03",
+          "title": "The Five Elements of Weather",
+          "explanations": {
+            "oneLine": "Weather is described by five elements: temperature, precipitation, atmospheric pressure, wind and humidity.",
+            "kidFriendly": "Weather may feel like one big thing, but it is really made of five parts working together. Temperature tells how hot or cold the air is. Precipitation is any water falling from the sky — rain, snow, sleet or hail. Atmospheric pressure is the weight of all the air above us. Wind is moving air, with a speed and a direction. Humidity is how much water vapour (water as an invisible gas) is in the air. Put all five together and you have the weather!",
+            "textbook": "The elements of weather are: (1) Temperature — how hot or cold the atmosphere is; (2) Precipitation — any form of water, such as rain, snow, sleet or hail, that falls from the sky; (3) Atmospheric Pressure — the weight of the air above us, felt on the Earth's surface; (4) Wind — the movement of air, including its speed and direction; and (5) Humidity — the amount of water vapour in the air. Together, temperature, humidity, precipitation, wind and atmospheric pressure define the weather at a particular place. The condition of each element is measured using special instruments.",
+            "expert": "The five elements are not independent — they form a tightly coupled system. Temperature controls how much water vapour the air can hold, so it governs humidity and whether vapour will condense into precipitation. Differences in temperature create differences in atmospheric pressure (warm air rises and lowers surface pressure; cool air sinks and raises it). Those pressure differences in turn drive wind, since air always flows from high to low pressure. Wind then redistributes heat and moisture, feeding back into temperature and humidity elsewhere. This is why no single element can be understood in isolation, and why meteorologists must measure all five at once to predict how the weather will evolve. In different situations one element dominates — rainfall in July, temperature in May, pressure during a cyclone, wind during a loo."
+          },
+          "reasoning": "To describe something complicated, scientists break it into measurable parts. Weather is broken into five elements because each one can be felt, measured with its own instrument, and changes for its own reasons — yet together they capture everything we mean by 'the weather'.",
+          "useCases": [
+            {"title": "Reading a weather report", "description": "A forecast that gives temperature, humidity, rainfall, wind and pressure is simply reporting the five elements one by one.", "domain": "everyday"},
+            {"title": "Setting up a weather station", "description": "A weather station carries one instrument for each element, so all five can be tracked together.", "domain": "science"},
+            {"title": "Explaining a heat wave or a cyclone", "description": "Extreme weather is just one element going to an extreme — very high temperature in a heat wave, very low pressure in a cyclone.", "domain": "civics"}
+          ],
+          "beyondTheBook": "The chapter notes that at different times a different element 'takes over': rainfall dominates in July, temperature in May and December, atmospheric pressure when a cyclone moves in, and wind when the hot, dusty loo blows across north India in summer or when forest fires spread.",
+          "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t02_c01", "ssch02_t02_c02", "ssch02_t03_c01", "ssch02_t03_c02", "ssch02_t04_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [29],
+          "needsHumanReview": false,
+          "mnemonic": "Temperature, Precipitation, Pressure, Wind, Humidity — 'The Proud Penguins Wear Hats'."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch02_t01_q01",
+          "prompt": "What is weather, and in which layer of the atmosphere does almost all of it happen?",
+          "questionType": "shortAnswer",
+          "answer": "Weather is the state of the Earth's atmosphere at a particular time and place — for example, whether it is hot or cold, dry or rainy, calm or windy. Almost all weather happens in the troposphere, the lowest layer of the atmosphere, which is closest to the ground and where we live and breathe.",
+          "solutionSteps": [
+            "Define weather as the state of the atmosphere at a particular time and place.",
+            "Recall that the atmosphere is layered like a cake.",
+            "Name the lowest layer, the troposphere, as where almost all weather occurs.",
+            "Add that it is the layer closest to the ground where living things breathe."
+          ],
+          "commonMistakes": [
+            "Confusing weather with climate — weather is the condition right now, while climate is the long-term average.",
+            "Naming the stratosphere instead of the troposphere as the layer of weather."
+          ],
+          "variations": [
+            {"prompt": "Roughly how high does the troposphere extend, and why is it thicker over the tropics?", "answer": "About 6 to 18 kilometres. It is thicker over the warm tropics because warm air expands and spreads upward, and thinner over the cold poles because cold air contracts.", "solutionSteps": ["Recall the 6 to 18 km range.", "Link warm air expanding to a thicker troposphere over the tropics.", "Link cold air contracting to a thinner troposphere at the poles."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [28],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t01_q02",
+          "prompt": "Which of these is NOT one of the five elements of weather?",
+          "questionType": "mcq",
+          "options": ["Temperature", "Atmospheric pressure", "Soil colour", "Humidity"],
+          "answer": "Soil colour",
+          "solutionSteps": [
+            "List the five elements: temperature, precipitation, atmospheric pressure, wind, humidity.",
+            "Check each option against the list.",
+            "'Soil colour' is not an element of weather — it is a property of the ground, not the air."
+          ],
+          "commonMistakes": [
+            "Thinking soil or land features are part of weather — weather is about the atmosphere (air), not the ground."
+          ],
+          "variations": [
+            {"prompt": "Name all five elements of weather.", "answer": "Temperature, precipitation, atmospheric pressure, wind and humidity.", "solutionSteps": ["Recall the list of five elements introduced in the chapter."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [29],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t01_q03",
+          "prompt": "Krishnan in Chennai tells Amir in Kashmir that it has become 'chilly'. Why is the single word 'chilly' not enough for Amir to know how cold it really is?",
+          "questionType": "longAnswer",
+          "answer": "Because 'chilly' is a personal feeling, not a fixed measurement. What feels chilly to Krishnan, who is used to Chennai's warm weather, might feel pleasant or even warm to Amir, who is used to Kashmir's cold. To share weather accurately, people need a commonly agreed way to measure it — such as saying the temperature is 20°C. A number on a standard scale means the same thing to everyone, so Amir would then know exactly how cold Krishnan feels.",
+          "solutionSteps": [
+            "Note that 'chilly' describes a feeling, which differs from person to person.",
+            "Explain that Krishnan (used to warm Chennai) and Amir (used to cold Kashmir) have different ideas of 'cold'.",
+            "Conclude that a common standard, like measuring temperature in °C, is needed.",
+            "State that a number like 20°C means the same thing to everyone."
+          ],
+          "commonMistakes": [
+            "Saying Krishnan should just describe it better with more words — feelings are still personal; only a measurement is truly shared.",
+            "Forgetting that the whole point is the need for a common standard of measurement."
+          ],
+          "variations": [
+            {"prompt": "If Krishnan said it was 20°C, what is one reaction Amir (in cold Kashmir) might have?", "answer": "Amir might find 20°C quite warm or pleasant, and be surprised that Krishnan calls it cold — because people in Kashmir are used to much lower temperatures.", "solutionSteps": ["Recall that Kashmir is much colder than Chennai.", "Note that 20°C is mild and would feel warm to someone used to the cold."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [29, 32],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch02_t02",
+      "title": "Temperature and Precipitation",
+      "summary": "How hot or cold the air is and how we measure it with a thermometer, the useful numbers we can calculate (range and mean), and the different forms of precipitation and how a rain gauge measures rainfall.",
+      "concepts": [
+        {
+          "id": "ssch02_t02_c01",
+          "title": "Temperature and the Thermometer",
+          "explanations": {
+            "oneLine": "Temperature tells how hot or cold the atmosphere is, and it is measured with a thermometer.",
+            "kidFriendly": "Temperature is just how hot or cold the air is. We measure it with a thermometer. Many thermometers hold a coloured liquid that expands and rises up a tube when it gets warmer, and sinks when it gets cooler. We read temperature on scales like Celsius (°C) and Fahrenheit (°F) — for example, a cool 15°C is the same as 59°F. These days, digital thermometers are popular because they are more precise and can record lots of data.",
+            "textbook": "Temperature is how hot or cold the atmosphere is. There are several types of thermometers: some simply measure the ambient temperature (the temperature of the immediate surroundings); others record the maximum and minimum temperatures during a day. Thermometers often use a coloured liquid that expands when the temperature increases, so the level rises in a narrow tube. Increasingly, digital thermometers are preferred because they are more precise and can record more data. Temperatures are read on standard scales such as the Celsius scale (°C) and the Fahrenheit scale (°F); for example, 15°C is the same as 59°F.",
+            "expert": "A liquid-in-glass thermometer works on thermal expansion: as the liquid (historically mercury, now usually coloured alcohol) gains heat energy, its particles move faster and take up more space, so the column rises by an amount proportional to the temperature change — making the response linear and readable on a graduated scale. The Celsius scale fixes 0°C at the freezing point and 100°C at the boiling point of water at sea level, while Fahrenheit places these at 32°F and 212°F; the conversion is °F = (°C × 9/5) + 32, which is why 15°C maps to 59°F. Maximum-minimum thermometers use a small index or a constriction to 'remember' the day's extremes. Digital sensors instead use a thermistor or thermocouple whose electrical resistance or voltage changes with temperature, giving finer resolution and an easy way to log readings automatically."
+          },
+          "reasoning": "Most things expand a little when heated and shrink when cooled. A thermometer turns this hidden change into something we can see: a liquid climbing a thin tube. By marking the tube with a standard scale like Celsius, we turn a vague feeling of 'hot' or 'cold' into an exact, shareable number.",
+          "useCases": [
+            {"title": "Checking a fever", "description": "A clinical thermometer measures body temperature so a doctor or parent knows if someone has a fever.", "domain": "health"},
+            {"title": "Recording the daily high and low", "description": "Maximum-minimum thermometers let weather watchers note the hottest and coldest points of each day.", "domain": "science"},
+            {"title": "Sharing weather across places", "description": "Because 20°C means the same everywhere, people in different cities can compare how warm or cold it is.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "Old thermometers used liquid mercury, but mercury is poisonous if the glass breaks. That is why most modern liquid thermometers use a coloured alcohol (often dyed red or blue) instead — and why digital thermometers, with no liquid at all, are now so popular.",
+          "relatedConceptIds": ["ssch02_t02_c02", "ssch02_t01_c03", "ssch02_t05_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [31, 32],
+          "needsHumanReview": false,
+          "mnemonic": "Heat → liquid expands → column rises → read the number.",
+          "predictQuestion": "Why does the coloured liquid in a thermometer rise when it gets warmer?"
+        },
+        {
+          "id": "ssch02_t02_c02",
+          "title": "Temperature Statistics: Range and Mean",
+          "explanations": {
+            "oneLine": "From daily highs and lows we can calculate the temperature range and the mean daily temperature.",
+            "kidFriendly": "Once we record the highest and lowest temperatures, we can do some useful maths. The 'range' is the maximum temperature minus the minimum — it tells you how much the temperature swings in a day. The 'mean' (average) daily temperature is the maximum plus the minimum, divided by two. So if a day's high is 32°C and its low is 18°C, the range is 14°C and the mean is 25°C.",
+            "textbook": "Temperature recordings can be used to collect useful statistics. The range of temperature is the maximum temperature minus the minimum temperature during a particular period of time (usually 24 hours). The mean daily temperature is the maximum temperature plus the minimum temperature of the day, divided by two. (Statistics is the technique of gathering and analysing information or data in order to detect patterns, understand events or make predictions.) For example, if the maximum temperature on a day is 32°C and the minimum is 18°C, the range is 14°C and the mean daily temperature is (32 + 18) ÷ 2 = 25°C.",
+            "expert": "Range and mean are two complementary summary statistics. The mean (an average) captures the 'central' temperature of the day, smoothing out the highs and lows into a single representative value; the range captures the variability or spread. Both matter because two days can share the same mean yet feel completely different: a desert day with a 40°C high and a 10°C low has the same mean as a coastal day swinging only from 28°C to 22°C, but the desert's large range reflects clear skies and dry air that lose heat rapidly at night, while the coast's small range reflects the moderating effect of the sea and humidity. Meteorologists track means to detect trends (such as warming) and ranges to characterise a region's climate type — exactly the kind of pattern-finding that defines statistics."
+          },
+          "reasoning": "A single temperature does not tell the whole story of a day. By combining the high and the low, the range shows how big the swing was, and the mean gives a single 'typical' value. Together they pack a day's worth of temperature into two handy numbers we can compare across days and places.",
+          "useCases": [
+            {"title": "Comparing two days", "description": "The mean tells you which day was warmer overall, while the range tells you which day had bigger ups and downs.", "domain": "science"},
+            {"title": "Describing a region's climate", "description": "Deserts have huge daily ranges; coasts have small ones — the range helps describe the kind of place.", "domain": "geography"},
+            {"title": "Spotting warming trends", "description": "Tracking mean temperatures over years helps scientists detect whether a place is getting warmer.", "domain": "environment"}
+          ],
+          "beyondTheBook": "Deserts like the Thar have a huge daily temperature range — scorching by day but cold at night — because their dry, cloudless air cannot hold the day's heat after sunset. The sea, on the other hand, keeps coastal cities' range small, which is one reason places like Mumbai feel 'steady' all day.",
+          "relatedConceptIds": ["ssch02_t02_c01", "ssch02_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [32],
+          "needsHumanReview": false,
+          "mnemonic": "Range = max − min (the swing); Mean = (max + min) ÷ 2 (the middle)."
+        },
+        {
+          "id": "ssch02_t02_c03",
+          "title": "Precipitation and the Rain Gauge",
+          "explanations": {
+            "oneLine": "Precipitation is any water that falls from the sky, and rainfall is measured with a rain gauge.",
+            "kidFriendly": "Precipitation is any form of water that falls from the sky — rain, snow, sleet (frozen or partly frozen rain) or hail (small, hard balls of ice). To measure rain we use a rain gauge: rain falls into a funnel, collects in a cylinder, and a scale on the side measures how deep the water is. If the water is 5 mm deep, we say the area got 5 mm of rainfall. If snow falls, we let it melt first before measuring.",
+            "textbook": "Precipitation is any form of water — such as rain, snow, sleet or hail — that falls from the sky. (Sleet is frozen or partly frozen rain; hail is small, hard balls of ice that fall from the sky like rain.) The amount of rainfall is measured with an instrument called a rain gauge. When it rains, the water falls into a collecting funnel and is collected in a cylinder (measuring tube). A measuring scale is attached to the cylinder to measure the depth of rainwater collected. For example, when the height of the water collected is 5 mm, we say that the area received 5 mm of rainfall. A rain gauge should be placed in an open area, away from objects that might obstruct the rain, on a flat surface where it will not tilt or topple in the wind.",
+            "expert": "Rainfall is reported as a depth (in millimetres) rather than a volume because depth is independent of the collector's size: 5 mm of rain means that if none drained away or evaporated, the ground would be covered to a depth of 5 mm everywhere — so one number describes the whole area. The funnel's job is to channel a known catchment area's rain into a narrow tube, amplifying the reading so small amounts are measurable; the scale is calibrated to convert the deeper column in the narrow tube back into the equivalent depth over the wide funnel mouth. Snow is melted first because its frozen volume is far larger than the water it contains (fresh snow can be roughly ten times the depth of its melted equivalent), so measuring it un-melted would wildly overstate the precipitation. Siting matters because nearby buildings, trees or walls create wind eddies and rain shadows that bias the catch."
+          },
+          "reasoning": "Rain is spread over a huge area, so we cannot 'weigh' it directly. Instead we catch a sample in a funnel and measure how deep it gets in a tube. Because rain falls about equally over a small open patch, that depth stands for how much fell everywhere nearby — giving us a fair, comparable number.",
+          "useCases": [
+            {"title": "Reporting the monsoon", "description": "When the news says a city got '30 mm of rain in a day', that figure comes from a rain gauge.", "domain": "science"},
+            {"title": "Warning of floods", "description": "Very high rain-gauge readings warn authorities that rivers may overflow and flooding may follow.", "domain": "civics"},
+            {"title": "Helping farmers", "description": "Knowing how much rain has fallen helps farmers decide whether their crops need extra irrigation.", "domain": "agriculture"}
+          ],
+          "beyondTheBook": "There are four kinds of precipitation in the chapter: rain (liquid), snow (ice crystals), sleet (frozen or partly frozen rain) and hail (hard ice balls). Hail can form even in summer — strong updrafts inside thunderclouds carry raindrops high enough to freeze before they fall.",
+          "relatedConceptIds": ["ssch02_t05_c01", "ssch02_t04_c02", "ssch02_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [29, 33],
+          "needsHumanReview": false,
+          "mnemonic": "Rain gauge: funnel catches → cylinder collects → scale measures the depth in mm.",
+          "predictQuestion": "If snow falls into a rain gauge, why do we let it melt before reading the scale?"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch02_t02_q01",
+          "prompt": "A city's maximum temperature one day was 32°C and its minimum was 18°C. Calculate the range and the mean daily temperature.",
+          "questionType": "numerical",
+          "answer": "Range = 14°C; Mean daily temperature = 25°C.",
+          "solutionSteps": [
+            "Range = maximum − minimum = 32°C − 18°C = 14°C.",
+            "Mean daily temperature = (maximum + minimum) ÷ 2 = (32 + 18) ÷ 2.",
+            "(32 + 18) = 50; 50 ÷ 2 = 25.",
+            "So the range is 14°C and the mean daily temperature is 25°C."
+          ],
+          "commonMistakes": [
+            "Adding instead of subtracting for the range (or vice versa).",
+            "Forgetting to divide the sum by 2 when finding the mean."
+          ],
+          "variations": [
+            {"prompt": "From the chapter's Madhya Pradesh chart, the week's highest maximum was 32°C and the lowest minimum was 14°C. What is the temperature range for that week?", "answer": "Range = 32°C − 14°C = 18°C.", "solutionSteps": ["Identify the highest maximum (32°C) and lowest minimum (14°C) of the week.", "Subtract: 32 − 14 = 18°C."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [32],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t02_q02",
+          "prompt": "How does a rain gauge measure rainfall, and what does '5 mm of rainfall' mean?",
+          "questionType": "shortAnswer",
+          "answer": "A rain gauge has a funnel that catches falling rain and channels it into a cylinder (measuring tube) below. A scale attached to the cylinder shows the depth of the collected water. '5 mm of rainfall' means the water collected reached a depth of 5 mm — that is, the rain that fell over that area would cover flat ground to a depth of 5 millimetres.",
+          "solutionSteps": [
+            "Describe the funnel catching the rain.",
+            "Explain the water collecting in the cylinder below.",
+            "Note the scale measures the depth of the collected water.",
+            "State that '5 mm of rainfall' means the depth of water collected is 5 mm."
+          ],
+          "commonMistakes": [
+            "Saying rainfall is measured by weight or volume — it is measured as a depth in millimetres.",
+            "Forgetting that snow must be melted before its measurement is taken."
+          ],
+          "variations": [
+            {"prompt": "Why should a rain gauge be placed in an open area away from buildings and trees?", "answer": "So that nothing blocks or shields the falling rain. Buildings, walls or trees would catch some rain or create wind eddies, giving a false, lower reading.", "solutionSteps": ["Recall the gauge must catch rain fairly.", "Explain that obstacles would block or deflect rain, biasing the reading."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [33],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t02_q03",
+          "prompt": "Match each form of precipitation with its description.",
+          "questionType": "matchTheFollowing",
+          "answer": "Rain → liquid water falling from the sky; Snow → ice crystals; Sleet → frozen or partly frozen rain; Hail → small, hard balls of ice.",
+          "matchPairs": [
+            {"left": "Rain", "right": "Liquid water falling from the sky"},
+            {"left": "Snow", "right": "Soft white ice crystals that fall in cold weather"},
+            {"left": "Sleet", "right": "Frozen or partly frozen rain"},
+            {"left": "Hail", "right": "Small, hard balls of ice that fall from the sky like rain"}
+          ],
+          "solutionSteps": [
+            "Recall that precipitation is any water falling from the sky.",
+            "Match rain with liquid water.",
+            "Match snow with ice crystals and sleet with partly frozen rain.",
+            "Match hail with hard ice balls."
+          ],
+          "commonMistakes": [
+            "Confusing sleet (partly frozen rain) with hail (hard ice balls)."
+          ],
+          "variations": [
+            {"prompt": "What is the difference between sleet and hail?", "answer": "Sleet is frozen or partly frozen rain, usually small and soft-ish, while hail is small, hard balls of ice that fall from the sky like rain.", "solutionSteps": ["Recall the definition of sleet.", "Recall the definition of hail.", "Contrast: sleet is frozen rain; hail is hard ice balls."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [29],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch02_t03",
+      "title": "Atmospheric Pressure and Wind",
+      "summary": "The weight of the air and how it changes with altitude and forms depressions, how a barometer measures it, and how wind blows from high to low pressure and is measured by wind vanes and anemometers.",
+      "concepts": [
+        {
+          "id": "ssch02_t03_c01",
+          "title": "Atmospheric Pressure and the Barometer",
+          "explanations": {
+            "oneLine": "Atmospheric pressure is the weight of the air above us, measured with a barometer in millibars.",
+            "kidFriendly": "There is a whole ocean of air above your head, and it has weight. That weight pressing down is called atmospheric pressure. Sometimes the air feels 'heavy', like before a thunderstorm. Pressure is higher near the sea coast and lower high up in the mountains, where the air is thinner with less oxygen — that is why climbers can feel breathless or dizzy. We measure pressure with a barometer, in units called millibars (mb). Normal pressure at the coast is about 1013 mb; below 1000 mb means a 'depression'.",
+            "textbook": "Atmospheric pressure is the pressure exerted by the weight of the air above and around us, felt on the Earth's surface. The atmospheric pressure is higher near the sea coast and lower as we go higher up into the mountains: as you climb, the air gets thinner, so the air pressure is lower and there is less oxygen for your lungs, which is why people may feel breathless, dizzy or tired at high altitudes. Pressure does not stay high in the plains either — it sometimes drops dramatically, producing what meteorologists call a 'depression' or 'low-pressure system', which can develop into a storm or even a cyclone. The instrument used to measure atmospheric pressure is the barometer, which usually displays the millibar (mb). Normal pressure at the sea coast is around 1013 mb; a pressure below 1000 mb indicates a depression.",
+            "expert": "Atmospheric pressure at any point equals the weight per unit area of the entire air column above it, which is why it falls with altitude — there is simply less air overhead. The decrease is roughly exponential, so pressure at Khardung La in Ladakh (over 5,600 m) is only about 650 mb, far below the sea-level 1013 mb, and the partial pressure of oxygen falls in step, forcing the body to acclimatise by, for example, making more red blood cells. Low-pressure systems form where air is warmed and rises (or where converging winds force it aloft), leaving less air pressing down; the rising, cooling air condenses moisture into clouds and rain, which is why depressions bring stormy weather and, when intense over warm seas, can spin up into cyclones. The barometer detects these changes — historically by how high the air's weight can push a mercury column, today usually with an aneroid capsule that flexes as pressure changes."
+          },
+          "reasoning": "Air is not weightless — kilometres of it stack up above us and press down. The more air above you, the higher the pressure, so pressure drops as you climb a mountain. When a patch of air warms and rises, it leaves less weight behind, creating low pressure, which is often the seed of storms.",
+          "useCases": [
+            {"title": "Mountaineering safety", "description": "Climbers pause to acclimatise because low pressure at altitude means less oxygen; the army at Khardung La copes with about 650 mb.", "domain": "health"},
+            {"title": "Storm warning", "description": "A barometer reading dropping below 1000 mb signals a depression that may grow into a storm or cyclone.", "domain": "civics"},
+            {"title": "Aviation and weather maps", "description": "Pilots and meteorologists track pressure to anticipate turbulence and developing weather systems.", "domain": "science"}
+          ],
+          "beyondTheBook": "The chapter notes that our soldiers serving at Khardung La in Ladakh, over 5,600 metres high, work where the atmospheric pressure is only about 650 millibars — far below the 1013 mb at the coast. This is why travellers to high altitudes are told to pause on the way so the body can acclimatise to the thin air.",
+          "relatedConceptIds": ["ssch02_t03_c02", "ssch02_t01_c03", "ssch02_t04_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [34, 35],
+          "needsHumanReview": false,
+          "mnemonic": "More air above = higher pressure; barometer reads it in millibars (mb).",
+          "whyChain": [
+            "Why does atmospheric pressure fall as you climb a mountain? Because pressure is caused by the weight of all the air stacked above you. Down at the coast, the full height of the atmosphere presses down, giving about 1013 mb. As you climb higher, you leave more and more of that air below you, so there is less air overhead pushing down. With less weight above, the pressure drops — and the air also becomes thinner, with fewer oxygen particles in each breath.",
+            "Why do people feel breathless or dizzy at high altitudes? Because the lower pressure means the air is thinner, so each lungful contains less oxygen than the same breath would at sea level. Less oxygen reaches the blood, so the heart and lungs must work harder to keep the body supplied. This is why mountaineers pause on the way up to let the body acclimatise — given time, the body adjusts, for example by making more red blood cells to carry the scarce oxygen.",
+            "Why does a big drop in pressure warn of a storm? Because a 'depression', or low-pressure system, forms where warm air rises and leaves less air pressing down. As that air rises it cools, and its moisture condenses into clouds and rain. Winds rush in toward the low pressure, and over warm seas this swirling, rising, moisture-laden air can organise into a cyclone. So when a barometer falls below about 1000 mb, meteorologists know stormy weather may be on the way."
+          ]
+        },
+        {
+          "id": "ssch02_t03_c02",
+          "title": "Wind: Moving Air",
+          "explanations": {
+            "oneLine": "Wind is the movement of air from areas of high pressure to areas of low pressure, described by its speed and direction.",
+            "kidFriendly": "Wind is simply moving air. Air always flows from where the pressure is high to where it is low — like air rushing out of a balloon. Two things matter about wind: its speed (how fast) and its direction (where it comes from). Wind carries seeds, helps pilots and sailors, tells farmers where rain might come from, and dries the soil faster when it blows strongly.",
+            "textbook": "Wind is the movement of air from areas of high pressure to areas of low pressure. Speed and direction are the two important factors when we describe the wind. Wind is an important element of the weather: its direction and speed help in weather forecasting; air pilots and sailors need wind data because wind greatly influences flying or sailing; farmers use the wind direction to predict where rain might come from; and a greater wind speed causes the soil to dry faster. In north India in summer, a strong, hot and dusty wind called the loo blows, and high winds can also help forest fires spread.",
+            "expert": "Wind is the atmosphere's response to pressure differences: a 'pressure gradient force' pushes air from high to low pressure, and the steeper the gradient (the bigger the pressure difference over a distance), the stronger the wind. On the rotating Earth, the Coriolis effect deflects this flow so that, rather than blowing straight into a low, winds spiral — clockwise around highs and anticlockwise around lows in the Northern Hemisphere — which is why cyclones rotate. Wind is the great redistributor of the weather system: it carries heat from the tropics toward the poles and moisture from oceans onto land (the monsoon is exactly this), and it feeds back on the other elements by speeding evaporation and mixing temperatures. The hot, dry loo of north India illustrates how a particular wind can come to dominate the weather, raising heat-wave risk."
+          },
+          "reasoning": "Wherever there is more air pressing down in one place than another, the air slides 'downhill' from high pressure to low pressure to even things out — and that flowing air is wind. The bigger the pressure difference, the faster the wind blows.",
+          "useCases": [
+            {"title": "Spreading seeds", "description": "Light, winged seeds float on the wind to new places; without wind they would just fall straight down near the parent plant.", "domain": "science"},
+            {"title": "Flying and sailing", "description": "Pilots and sailors track wind speed and direction because wind strongly affects take-off, landing and a ship's course.", "domain": "everyday"},
+            {"title": "Predicting rain on a farm", "description": "Farmers watch the wind direction to guess where rain clouds will come from.", "domain": "agriculture"}
+          ],
+          "beyondTheBook": "The loo is a famous Indian wind — hot, dry and dusty — that blows across north India on summer afternoons and can be dangerous. People avoid going out in the loo and eat cooling foods like raw mango drink (aam panna) to protect themselves from the heat it brings.",
+          "relatedConceptIds": ["ssch02_t03_c01", "ssch02_t03_c03", "ssch02_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [36],
+          "needsHumanReview": false,
+          "mnemonic": "Wind = air flowing from High pressure to Low pressure (think 'H → L').",
+          "predictQuestion": "If air flows from high to low pressure, what would happen to the wind if two places had exactly the same pressure?"
+        },
+        {
+          "id": "ssch02_t03_c03",
+          "title": "Measuring Wind: Vanes, Wind Socks and Anemometers",
+          "explanations": {
+            "oneLine": "A wind vane shows wind direction, a wind sock helps pilots, and an anemometer measures wind speed.",
+            "kidFriendly": "How do we measure wind? A wind vane (weather vane) has a rotating arm with a pointer at one end and a tail at the other. When wind blows, it pushes the tail and the pointer swings to show where the wind comes from — it works even in a light breeze. At airports a 'wind sock' shows pilots the wind during take-off and landing. To measure how fast the wind blows, we use an anemometer: it has three or four cups that spin faster the stronger the wind, and a meter counts the spins to work out the speed in km/h.",
+            "textbook": "A wind vane (or weather vane) has a rotating arm with a pointer at one end and a tail at the other. When the wind blows, the tail is pushed and the pointer turns in the direction of the wind; it responds even to a light breeze. A wind sock is a special kind of vane placed on the tarmac at airports; it gives pilots an indication of the wind direction during take-off and landing, and similar socks are used in industries that release ash or gases. The simplest instrument to measure wind direction and speed is the anemometer: it has three or four metal cups that rotate on a vertical shaft when the wind blows — the stronger the wind, the faster the rotation. A meter attached at the bottom counts how many times it spins in a certain period and calculates the wind speed in kilometres per hour (km/h).",
+            "expert": "A wind vane finds direction by minimising drag: the broad tail catches the most wind and is pushed downwind, automatically swinging the slender pointer to face into the wind, so it reports the direction the wind is coming from (by convention, winds are named for their source). A cup anemometer measures speed because its hemispherical cups have more drag on their concave (open) face than their convex (back) face; the net force always drives the assembly in one direction, and the rotation rate becomes very nearly proportional to wind speed, allowing simple counting of revolutions to be converted to km/h. The wind sock additionally indicates strength: a light wind lets it droop, while a strong wind extends it fully horizontal, giving pilots an instant visual estimate of both direction and intensity at the critical moments of take-off and landing."
+          },
+          "reasoning": "Wind has two things to measure — which way it blows and how fast. A vane catches the wind on its tail and turns to reveal the direction; an anemometer lets the wind spin its cups, and counting the spins reveals the speed. Each instrument captures one part of the wind.",
+          "useCases": [
+            {"title": "Safe take-off and landing", "description": "A wind sock tells pilots the wind direction and rough strength right at the runway.", "domain": "everyday"},
+            {"title": "Forecasting", "description": "Wind speed and direction from anemometers and vanes feed into weather forecasts.", "domain": "science"},
+            {"title": "Industrial safety", "description": "Wind socks at factories show which way released ash or gas will drift, helping protect nearby people.", "domain": "civics"}
+          ],
+          "beyondTheBook": "Decorative weather vanes, often shaped like a rooster, have topped buildings for centuries — the rooster design dates back over a thousand years. Though they look ornamental, they do a real job: the figure's broad tail swings the whole vane to point into the wind.",
+          "relatedConceptIds": ["ssch02_t03_c02", "ssch02_t05_c01", "ssch02_t01_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [36, 37],
+          "needsHumanReview": false,
+          "mnemonic": "Vane = direction; Anemometer (with cups) = speed; Wind sock = direction for pilots."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch02_t03_q01",
+          "prompt": "Why is the atmospheric pressure lower at the top of a high mountain than at the sea coast?",
+          "questionType": "longAnswer",
+          "answer": "Atmospheric pressure is the weight of all the air above a point. At the sea coast, the full height of the atmosphere presses down, giving a high pressure of about 1013 mb. As you climb a mountain, more and more of the air is below you, so there is less air left overhead pressing down. With less weight above, the pressure is lower, and the air is also thinner with less oxygen — which is why people may feel breathless or dizzy high up. At Khardung La in Ladakh (over 5,600 m), pressure is only about 650 mb.",
+          "solutionSteps": [
+            "Define pressure as the weight of the air above a point.",
+            "Note that at the coast, the whole atmosphere presses down (~1013 mb).",
+            "Explain that climbing leaves more air below you, so less air is overhead.",
+            "Conclude pressure is lower and air is thinner, citing Khardung La (~650 mb)."
+          ],
+          "commonMistakes": [
+            "Thinking pressure is higher on mountains because they are 'closer to the sky' — it is actually lower because there is less air above.",
+            "Confusing thinner air (less oxygen) with there being no air at all."
+          ],
+          "variations": [
+            {"prompt": "What is a 'depression' or 'low-pressure system', and why is it important?", "answer": "It is a region where the atmospheric pressure drops dramatically, usually below 1000 mb. It is important because a depression can develop into a storm or even a cyclone, so meteorologists watch for it.", "solutionSteps": ["Recall a depression is a sharp drop in pressure (below ~1000 mb).", "Note it can grow into a storm or cyclone.", "Explain why it must be monitored."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [34, 35],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t03_q02",
+          "prompt": "Wind is the movement of air from areas of ____ pressure to areas of ____ pressure.",
+          "questionType": "fillInBlank",
+          "answer": "high; low",
+          "solutionSteps": [
+            "Recall that air always flows to balance out pressure differences.",
+            "It moves from where there is more pressure (high) to where there is less (low).",
+            "So wind blows from high pressure to low pressure."
+          ],
+          "commonMistakes": [
+            "Reversing the order and saying wind blows from low to high pressure."
+          ],
+          "variations": [
+            {"prompt": "Name the two factors used to describe wind.", "answer": "Speed (how fast it blows) and direction (where it comes from).", "solutionSteps": ["Recall that wind is described by two factors.", "Name speed and direction."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [36],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t03_q03",
+          "prompt": "Which instrument measures wind speed by counting how fast its cups spin?",
+          "questionType": "mcq",
+          "options": ["Barometer", "Hygrometer", "Anemometer", "Rain gauge"],
+          "answer": "Anemometer",
+          "solutionSteps": [
+            "Recall the wind-measuring instruments: wind vane (direction) and anemometer (speed).",
+            "An anemometer has three or four cups that spin in the wind.",
+            "A meter counts the spins to find the speed in km/h."
+          ],
+          "commonMistakes": [
+            "Confusing the anemometer (wind speed) with the wind vane (wind direction).",
+            "Picking the barometer, which measures pressure, not wind."
+          ],
+          "variations": [
+            {"prompt": "What does a wind vane tell us, and what is a 'wind sock' used for?", "answer": "A wind vane tells us the direction the wind is coming from. A wind sock is a vane on an airport tarmac that shows pilots the wind direction (and rough strength) during take-off and landing.", "solutionSteps": ["Recall the wind vane shows direction.", "Recall the wind sock helps pilots at airports."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [36, 37],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch02_t04",
+      "title": "Humidity and Reading Nature's Clues",
+      "summary": "What humidity is and how relative humidity is measured with a hygrometer, why it affects sweating and drying, and how people once forecast weather by observing animals and plants before meteorology took over.",
+      "concepts": [
+        {
+          "id": "ssch02_t04_c01",
+          "title": "Humidity and the Hygrometer",
+          "explanations": {
+            "oneLine": "Humidity is the amount of water vapour in the air, measured as relative humidity with a hygrometer.",
+            "kidFriendly": "Humidity is how much water vapour (water as an invisible gas) is in the air. We measure it as 'relative humidity', a percentage: 0% would mean totally dry air (which never really happens) and 100% means the air is completely full of water vapour. Dry weather is usually 20%–40%, while humid weather is 60%–80%. When humidity is high, sweat and wet clothes dry slowly, so you feel sticky. The instrument that measures humidity is the hygrometer.",
+            "textbook": "Humidity refers to the amount of water vapour present in the air; it also depends on factors like temperature, wind, pressure and location. Humidity is measured as relative humidity: air that would contain absolutely no water vapour (impossible in natural conditions) is rated at 0%, while air saturated with water vapour has a humidity of 100%. In practice, dry weather has a relative humidity between 20% and 40%, while humid weather usually falls between 60% and 80%. When the amount of water in the air is already high (more humidity), water evaporates slowly — as on a rainy day — which is why wet clothes dry slowly and people sweat more in humid places. Humidity is measured with an instrument called a hygrometer, of which there are several types. Measuring humidity matters in many industrial processes, such as food processing, and museums monitor it to keep a dry environment that preserves their exhibits.",
+            "expert": "Relative humidity is the ratio of the water vapour actually present to the maximum the air could hold at that temperature, expressed as a percentage. The key insight is that warm air can hold far more vapour than cold air, so relative humidity depends as much on temperature as on the absolute moisture content — cooling humid air toward its 'dew point' raises its relative humidity to 100% and triggers condensation (dew, fog or clouds). Evaporation, including sweating, is a cooling process because the fastest-moving water molecules escape and carry energy away; but when the surrounding air is near saturation, net evaporation slows almost to a halt, which is why high humidity makes us feel hot and sticky and why clothes dry slowly. Hygrometers exploit moisture-sensitive effects — for example, a human hair lengthens with humidity, or a wet-bulb thermometer reads lower than a dry one by an amount that depends on how much evaporative cooling the air permits."
+          },
+          "reasoning": "Air can hold only so much invisible water vapour. Relative humidity tells us how 'full' the air is, as a percentage. When the air is already nearly full (high humidity), it cannot accept much more water, so sweat and wet clothes evaporate slowly and we feel sticky.",
+          "useCases": [
+            {"title": "Why clothes dry slowly in the rains", "description": "On a humid, rainy day the air is already near saturation, so water evaporates slowly and washing takes ages to dry.", "domain": "everyday"},
+            {"title": "Preserving museum exhibits", "description": "Museums keep humidity low so that paintings, manuscripts and artefacts do not grow mould or decay.", "domain": "culture"},
+            {"title": "Food processing", "description": "Factories control humidity so that foods like biscuits and spices stay crisp and do not spoil.", "domain": "economy"}
+          ],
+          "beyondTheBook": "Coastal cities like Kochi and Mangaluru, right beside the sea, have much higher humidity than inland cities like Jaipur, because the sea constantly adds water vapour to the air. That is why a 30°C day by the sea feels far more uncomfortable and sticky than a 30°C day in the dry interior.",
+          "relatedConceptIds": ["ssch02_t05_c01", "ssch02_t01_c03", "ssch02_t02_c03"],
+          "relatedQuestionIds": [],
+          "pageRefs": [37, 38],
+          "needsHumanReview": false,
+          "mnemonic": "Relative humidity: 0% = bone dry, 100% = totally full; high humidity = slow drying.",
+          "predictQuestion": "In which city will wet clothes dry faster — Delhi at 52% humidity or Kochi at 84% humidity? Why?"
+        },
+        {
+          "id": "ssch02_t04_c02",
+          "title": "Reading Nature's Clues",
+          "explanations": {
+            "oneLine": "Before modern instruments, people forecast weather by carefully watching animals and plants.",
+            "kidFriendly": "Long before thermometers and barometers, people learned to read Nature's signals. Birds flying low, ants carrying their eggs to higher ground, squirrels gathering nuts, frogs croaking loudly, or pine cones opening and closing all hinted at coming rain or storms. This wisdom was passed down from grandparents to grandchildren, and even today many people in India use such traditional signs, especially to guess when the monsoon will arrive.",
+            "textbook": "From early times, humans closely observed Nature and learnt to read her signals to forecast the weather. Observing birds flying low, ants carrying eggs, squirrels gathering nuts, frogs croaking loudly, or even the opening and closing of pine cones provided valuable information about coming rain or storms. This knowledge has been passed down from generation to generation, and even today, in many parts of India, people use traditional ways to predict the weather, especially the arrival of the monsoon. For instance, ants shifting their eggs to higher ground signals expected heavy rain, and pine cones close in humid conditions (to protect their seeds) and open in dry conditions (to release them).",
+            "expert": "Traditional forecasting works because many natural behaviours are genuinely sensitive to the same physical variables instruments measure. Ants and other insects respond to falling pressure and rising humidity that precede rain, moving eggs to avoid flooding; many birds fly lower because falling pressure and humid air affect insect prey and the birds' own flight. Pine cones are a striking purely physical example: their scales are made of layered tissue that absorbs moisture and swells at different rates, so the cone closes in humid air and opens when dry — a moisture-driven mechanism much like a hygrometer, with no biology of 'sensing' involved at all. These clues are real but qualitative and local; the scientific revolution in weather prediction came from converting such signals into quantitative, standardised measurements (meteorology) that can be compared across many places and modelled mathematically."
+          },
+          "reasoning": "Animals and plants are exposed to the air all the time, so changes in pressure and humidity that come before rain affect their bodies and behaviour. People noticed these reliable reactions and used them as natural weather signs — clever, but limited to one place and to vague 'rain is coming' warnings.",
+          "useCases": [
+            {"title": "Predicting the monsoon", "description": "Farmers in many parts of India still watch traditional signs to judge when the monsoon will arrive and sow their crops.", "domain": "agriculture"},
+            {"title": "Preserving folk knowledge", "description": "Local sayings about weather, passed down for generations, record careful observation of nature.", "domain": "culture"},
+            {"title": "Understanding hygrometry", "description": "A pine cone opening and closing is a natural model of how a hygrometer responds to humidity.", "domain": "science"}
+          ],
+          "beyondTheBook": "The pine cone's trick is purely physical: its scales are not alive but are made of layers that swell when damp and shrink when dry. So a dead pine cone on your shelf will still close on a humid day and open on a dry one — a tiny natural weather instrument you can keep at home.",
+          "relatedConceptIds": ["ssch02_t04_c03", "ssch02_t04_c01", "ssch02_t05_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [29, 30],
+          "needsHumanReview": false,
+          "mnemonic": "Ants up, birds low, frogs loud, cones shut → rain is near."
+        },
+        {
+          "id": "ssch02_t04_c03",
+          "title": "Meteorology: The Science of Weather",
+          "explanations": {
+            "oneLine": "Meteorology is the systematic study of weather and its evolution, and it is the basis of forecasting.",
+            "kidFriendly": "Reading Nature's clues is helpful but rough. In the last few centuries, scientists worked out how to measure each element of weather precisely. This systematic study of weather and how it changes is called meteorology, and the scientists who do it are called meteorologists. Using careful measurements gathered over time, they predict how the weather will behave hours, days or even weeks ahead — not by guessing, but with instruments, data and scientific methods.",
+            "textbook": "Meteorology is the systematic study of weather and its evolution; this study is the basis for weather forecasting. In the last few centuries, scientists have worked out methods to measure and monitor the elements of the weather with great precision. Based on those inputs, meteorologists try to predict how the weather will behave in a particular region after a few hours, a few days, or even a few weeks. They do not just look at the sky and guess — they use special instruments and scientific methods. (A forecast means to predict or find out in advance — in this case, the weather.) The India Meteorological Department, set up in 1875, carries out this work in India; its motto is ādityāt jāyate vriṣhti, 'from the sun arises rain'.",
+            "expert": "Meteorology transformed weather prediction from anecdote into science by doing three things: standardising measurement (so a reading in Chennai means the same as one in Srinagar), networking observations (so the state of the atmosphere over a whole region can be reconstructed at one instant), and applying physical laws to project that state forward in time. Modern forecasting feeds these observations into numerical weather-prediction models — systems of equations describing how pressure, temperature, wind and moisture evolve — solved on powerful computers. The India Meteorological Department, founded in 1875, is one of the oldest such institutions in the world; its Sanskrit motto, drawn from the Manusmṛiti ('from the sun arises rain, from rain comes food, and from food, living beings originate'), elegantly states the physical truth that solar energy drives the entire water cycle and hence all weather."
+          },
+          "reasoning": "Guessing from a single sign in one place can be wrong. Meteorology fixes this by measuring every element precisely, gathering data from many places over time, and applying scientific methods. That turns scattered clues into reliable, far-reaching forecasts.",
+          "useCases": [
+            {"title": "Official forecasts", "description": "The India Meteorological Department issues the forecasts and warnings we see on the news.", "domain": "civics"},
+            {"title": "Preparing for disasters", "description": "Accurate predictions let governments mobilise resources before floods, cyclones or heat waves strike.", "domain": "civics"},
+            {"title": "From folklore to science", "description": "Meteorology builds on the same goal as traditional clues — predicting weather — but with measurement and method.", "domain": "science"}
+          ],
+          "beyondTheBook": "The India Meteorological Department's motto, ādityāt jāyate vriṣhti ('from the sun arises rain'), comes from the ancient text Manusmṛiti. The full saying continues: 'from rain comes food, and from food, living beings originate' — a 2,000-year-old description of how the Sun powers the water cycle that feeds all life.",
+          "relatedConceptIds": ["ssch02_t04_c02", "ssch02_t05_c01", "ssch02_t05_c02"],
+          "relatedQuestionIds": [],
+          "pageRefs": [30, 32],
+          "needsHumanReview": false,
+          "mnemonic": "Meteorology = measure + study + predict (not guess)."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch02_t04_q01",
+          "prompt": "Wet clothes dry faster in Jaipur (low humidity) than in Kochi (high humidity). Explain why, using the idea of relative humidity.",
+          "questionType": "longAnswer",
+          "answer": "Relative humidity is how full the air already is with water vapour. Jaipur, being inland, has low humidity, so its air can still absorb plenty of water — the water in wet clothes evaporates quickly and the clothes dry fast. Kochi, beside the sea, has high humidity, so its air is already nearly full of water vapour and cannot accept much more. Evaporation is slow there, so wet clothes dry slowly and people also sweat more, feeling sticky.",
+          "solutionSteps": [
+            "Define relative humidity as how full the air already is with water vapour.",
+            "Note Jaipur has low humidity (dry air that can absorb more water).",
+            "Explain that water therefore evaporates quickly, drying clothes fast.",
+            "Contrast with Kochi's high humidity, where air is nearly full and evaporation is slow."
+          ],
+          "commonMistakes": [
+            "Saying clothes dry faster where it is hotter — humidity, not just temperature, controls drying speed.",
+            "Thinking high humidity means the air is dry."
+          ],
+          "variations": [
+            {"prompt": "If Delhi is at 52% humidity and Kochi at 84%, where would you sweat more (at the same temperature) and why?", "answer": "You would sweat more in Kochi. Its high humidity (84%) means the air is already nearly full of water vapour, so your sweat evaporates slowly and cannot cool you well, leaving you hot, sticky and sweating more.", "solutionSteps": ["Recall that sweat cools us by evaporating.", "Note Kochi's high humidity slows evaporation.", "Conclude sweat builds up and you sweat more in Kochi."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [37, 38],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t04_q02",
+          "prompt": "Give two examples of how people traditionally read Nature's clues to forecast the weather.",
+          "questionType": "shortAnswer",
+          "answer": "People watched signs such as ants carrying their eggs to higher ground or birds flying low, which warned of coming rain. They also noticed frogs croaking loudly, squirrels gathering nuts, and pine cones opening in dry weather and closing in humid weather. Such signs hinted at rain or storms and were passed down through generations, especially to predict the monsoon.",
+          "solutionSteps": [
+            "Recall that people observed animals and plants for weather signs.",
+            "Give one animal example (ants moving eggs, low-flying birds, croaking frogs).",
+            "Give one plant example (pine cones opening and closing).",
+            "Note these clues warned of rain or storms."
+          ],
+          "commonMistakes": [
+            "Naming a modern instrument — the question asks for traditional, natural clues."
+          ],
+          "variations": [
+            {"prompt": "Why do pine cones close in humid weather?", "answer": "Their scales are made of layers that swell when damp, so in humid (moist) conditions the cone closes to protect its seeds; in dry conditions it opens to release them.", "solutionSteps": ["Recall the pine cone responds to humidity.", "Explain that damp scales swell and close the cone.", "Note this protects the seeds until the weather is dry."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [29, 30],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t04_q03",
+          "prompt": "What is meteorology, and how is it different from simply reading Nature's clues?",
+          "questionType": "shortAnswer",
+          "answer": "Meteorology is the systematic study of weather and how it changes, and it is the basis of weather forecasting. Unlike reading Nature's clues — which gives rough, local hints from animals and plants — meteorology uses special instruments to measure each element of weather precisely, gathers data from many places over time, and applies scientific methods to predict the weather hours, days or even weeks ahead.",
+          "solutionSteps": [
+            "Define meteorology as the systematic study of weather and its evolution.",
+            "Note it is the basis of forecasting.",
+            "Contrast with Nature's clues, which are rough and local.",
+            "Explain meteorology uses precise instruments, data and scientific methods."
+          ],
+          "commonMistakes": [
+            "Thinking meteorologists just look at the sky and guess — they use measurement and method."
+          ],
+          "variations": [
+            {"prompt": "When was the India Meteorological Department set up, and what does its motto mean?", "answer": "It was set up in 1875. Its motto, ādityāt jāyate vriṣhti, means 'from the sun arises rain'.", "solutionSteps": ["Recall the IMD was founded in 1875.", "State the meaning of its motto."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [30, 32],
+          "needsHumanReview": false
+        }
+      ]
+    },
+    {
+      "id": "ssch02_t05",
+      "title": "Weather Stations and Predicting the Weather",
+      "summary": "How weather stations and Automated Weather Stations bring all the instruments together, how meteorologists turn data into forecasts, and why accurate predictions help people prepare for floods, cyclones, droughts and heat waves.",
+      "concepts": [
+        {
+          "id": "ssch02_t05_c01",
+          "title": "Weather Stations and Automated Weather Stations",
+          "explanations": {
+            "oneLine": "A weather station gathers all the weather instruments in one place; an Automated Weather Station records data by itself using sensors.",
+            "kidFriendly": "Measuring the weather needs many instruments — thermometer, rain gauge, barometer, wind vane, anemometer and hygrometer. A weather station brings them all together in one place so the whole weather can be tracked easily, with readings taken at regular times. An Automated Weather Station (AWS) goes further: it uses sensors to measure and record temperature, humidity, wind, rainfall and pressure all by itself, without anyone needing to be there — perfect for far-off or dangerous places.",
+            "textbook": "We need several instruments to measure the weather at a particular place and time. A weather station brings all these instruments together, making it easy to measure and track the weather; readings are taken at regular intervals, which helps in mapping and forecasting. An Automated Weather Station (AWS) is a self-operating system that uses various sensors to measure and record weather data — such as temperature, humidity, wind speed and direction, precipitation, and atmospheric pressure. AWS are widely used in fields like agriculture, aviation, navigation and environmental monitoring, providing accurate and timely weather information without the need for human intervention. In 2023, the National Disaster Management Authority set up an AWS at a glacial lake in Sikkim, more than 4,800 metres above sea level, to give early information about upcoming weather.",
+            "expert": "A weather station is valuable not just because it co-locates instruments but because it standardises observation: instruments are placed at agreed heights and exposures (for example, thermometers in a ventilated screen out of direct sun) so that readings from thousands of stations are truly comparable, which is the precondition for mapping the atmosphere. Automated Weather Stations extend this network into places humans cannot easily staff — high glaciers, oceans, remote forests — by replacing manual reading with electronic sensors and telemetry that transmit data continuously. This dense, real-time, comparable data stream is what makes modern numerical forecasting possible. The Sikkim glacial-lake AWS illustrates a critical application: monitoring glacial lakes for the conditions that can trigger sudden, catastrophic outburst floods, turning weather data directly into disaster early-warning."
+          },
+          "reasoning": "Each element of weather needs its own instrument, and the readings only become useful when collected together and at regular times. A weather station does exactly that; an AWS adds sensors and automation so it can keep watch on its own, even in places too remote or risky for people.",
+          "useCases": [
+            {"title": "Mapping the weather", "description": "Regular readings from many stations are combined to map and forecast the weather across a region.", "domain": "science"},
+            {"title": "Monitoring dangerous places", "description": "An AWS at a Sikkim glacial lake watches for conditions that could cause a flood, with no one needing to be there.", "domain": "civics"},
+            {"title": "Helping farmers and pilots", "description": "AWS data supports agriculture, aviation and navigation by providing accurate, timely weather information.", "domain": "economy"}
+          ],
+          "beyondTheBook": "High in the Himalayas, glacial lakes are dammed only by loose rock and ice. If that natural dam fails, the lake can burst out in a sudden 'glacial lake outburst flood'. The 2023 AWS in Sikkim watches for exactly this danger — turning weather data into a life-saving early warning for villages downstream.",
+          "relatedConceptIds": ["ssch02_t05_c02", "ssch02_t02_c01", "ssch02_t03_c03", "ssch02_t04_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [39],
+          "needsHumanReview": false,
+          "mnemonic": "Weather station = all instruments together; AWS = sensors that record by themselves.",
+          "predictQuestion": "Why is an Automated Weather Station especially useful on a remote, high glacier where it is hard for people to live?"
+        },
+        {
+          "id": "ssch02_t05_c02",
+          "title": "Predicting the Weather and Why It Matters",
+          "explanations": {
+            "oneLine": "Meteorologists turn data into forecasts that warn us of dangerous weather so we can prepare and stay safe.",
+            "kidFriendly": "Meteorologists collect weather data with all these instruments over long periods, study it, and use scientific methods to predict the weather. These predictions matter more than ever because climate change is making extreme weather — droughts, floods, cyclones and heat waves — more frequent. Accurate forecasts let us get ready: fishermen are warned not to sail into stormy seas, and whole coastal areas can be evacuated before a cyclone hits. The India Meteorological Department even issues colour-coded warnings on maps.",
+            "textbook": "Meteorologists collect data using weather instruments over long periods of time, study it, and use scientific methods to predict the weather. Such predictions are very important nowadays, as climate change makes extreme weather — droughts, floods, cyclones and heat waves — more frequent. Accurate predictions help us be ready for such events and enable local governments to mobilise resources and prepare for disasters: for example, if stormy weather is expected at sea, fishermen are warned about venturing out, or a coastal area might be evacuated before a cyclone. The India Meteorological Department issues weather-warning maps using colour codes (Green: no warning; Yellow: watch/be updated; Orange: alert/be prepared; Red: warning/take action) for conditions such as heavy rain, heat waves, cold waves, thunderstorms and dust storms. Weather is also closely linked to climate, which is studied in the next chapter.",
+            "expert": "Forecasting is fundamentally a probabilistic projection: meteorologists ingest current observations and run them forward using physical models, but because the atmosphere is chaotic — tiny uncertainties grow over time — skill declines with lead time, which is why a 'few hours' forecast is far more reliable than a 'few weeks' one. The value of even imperfect forecasts is asymmetric: the cost of evacuating a coast unnecessarily is far smaller than the cost of not evacuating before a real cyclone, so warning systems are deliberately tuned to err toward caution, encoded in colour-coded alert levels (green/yellow/orange/red) that translate technical risk into clear public action. Climate change raises the stakes by increasing the frequency and intensity of extremes, making dense observation networks and rapid forecasting a central tool of disaster risk reduction — and linking this chapter directly to the study of climate that follows."
+          },
+          "reasoning": "Data on its own does not save anyone. By studying long records and applying scientific methods, meteorologists turn measurements into forecasts. A forecast given in advance is what gives people and governments time to act — warning fishermen, evacuating coasts, and preparing for disasters.",
+          "useCases": [
+            {"title": "Saving lives at sea", "description": "Forecasts of stormy seas warn fishermen to stay ashore, preventing boats from being caught in danger.", "domain": "civics"},
+            {"title": "Evacuating before a cyclone", "description": "Accurate warnings let governments move people out of a coastal area before a cyclone strikes.", "domain": "civics"},
+            {"title": "Reading IMD warning maps", "description": "Colour-coded maps (green to red) tell the public how serious the expected weather is and what to do.", "domain": "everyday"}
+          ],
+          "beyondTheBook": "The IMD's colour code is easy to remember, like a traffic light grown one step bigger: green means no warning, yellow means 'be updated', orange means 'be prepared', and red means 'take action'. The map for 19 May 2024 in the chapter showed many such warnings, including heat-wave alerts for several states.",
+          "relatedConceptIds": ["ssch02_t05_c01", "ssch02_t04_c03", "ssch02_t01_c01"],
+          "relatedQuestionIds": [],
+          "pageRefs": [39, 40, 41],
+          "needsHumanReview": false,
+          "mnemonic": "Collect data → study it → forecast → warn → prepare → stay safe."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ssch02_t05_q01",
+          "prompt": "What is an Automated Weather Station (AWS), and why is it especially useful in remote places?",
+          "questionType": "shortAnswer",
+          "answer": "An Automated Weather Station is a self-operating system that uses sensors to measure and record weather data — temperature, humidity, wind speed and direction, precipitation and atmospheric pressure — without anyone needing to be there. This makes it especially useful in remote or dangerous places, like a high glacial lake in Sikkim (over 4,800 m), where it can provide accurate, timely weather information and early warnings even though it is hard for people to live or work there.",
+          "solutionSteps": [
+            "Define an AWS as a self-operating system using sensors.",
+            "List the data it records (temperature, humidity, wind, precipitation, pressure).",
+            "Note it works without human intervention.",
+            "Explain this suits remote or dangerous places, e.g. the Sikkim glacial lake AWS."
+          ],
+          "commonMistakes": [
+            "Confusing an AWS with an ordinary weather station that needs a person to read it.",
+            "Forgetting that an AWS records data by itself."
+          ],
+          "variations": [
+            {"prompt": "Why did the National Disaster Management Authority set up an AWS at a glacial lake in Sikkim in 2023?", "answer": "To get early information about upcoming weather conditions at the high glacial lake, helping to warn people of dangers such as floods.", "solutionSteps": ["Recall the 2023 Sikkim AWS.", "Note its purpose: early warning about upcoming weather."]}
+          ],
+          "difficulty": 2,
+          "pageRefs": [39],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t05_q02",
+          "prompt": "How do weather predictions help us prepare for events like heavy rain, storms, droughts and heat waves?",
+          "questionType": "longAnswer",
+          "answer": "Meteorologists collect and study weather data and use scientific methods to predict the weather in advance. Accurate predictions give people and local governments time to get ready and mobilise resources before a disaster. For example, if stormy weather is expected at sea, fishermen can be warned not to venture out, and an entire coastal area can be evacuated before a cyclone arrives. The IMD also issues colour-coded warning maps so people know how serious the danger is and what action to take. This is increasingly important because climate change is making such extreme weather more frequent.",
+          "solutionSteps": [
+            "State that meteorologists predict the weather in advance from collected data.",
+            "Explain that advance warning gives time to prepare and mobilise resources.",
+            "Give concrete examples: warning fishermen, evacuating before a cyclone.",
+            "Mention colour-coded IMD warnings and the rising threat from climate change."
+          ],
+          "commonMistakes": [
+            "Listing only what the weather will be, without explaining how the warning helps people prepare.",
+            "Forgetting that climate change makes extreme weather more frequent."
+          ],
+          "variations": [
+            {"prompt": "On an IMD warning map, what do the colours green, yellow, orange and red mean?", "answer": "Green: no warning; Yellow: watch / be updated; Orange: alert / be prepared; Red: warning / take action.", "solutionSteps": ["Recall the IMD colour code.", "Match each colour to its level of action."]}
+          ],
+          "difficulty": 3,
+          "pageRefs": [40, 41],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch02_t05_q03",
+          "prompt": "True or False: A weather station is useful because it brings all the different weather instruments together in one place.",
+          "questionType": "trueFalse",
+          "answer": "True",
+          "solutionSteps": [
+            "Recall that each element of weather needs its own instrument.",
+            "A weather station collects them all in one place.",
+            "Readings taken together and at regular intervals help map and forecast the weather.",
+            "So the statement is True."
+          ],
+          "commonMistakes": [
+            "Thinking a single instrument can measure all elements of weather — each element needs its own."
+          ],
+          "variations": [
+            {"prompt": "Name three instruments you would expect to find at a weather station.", "answer": "Any three of: thermometer (temperature), rain gauge (rainfall), barometer (pressure), wind vane and anemometer (wind direction and speed), and hygrometer (humidity).", "solutionSteps": ["Recall the instruments for each element of weather.", "List any three of them."]}
+          ],
+          "difficulty": 1,
+          "pageRefs": [39],
+          "needsHumanReview": false
+        }
+      ]
+    }
+  ],
+  "realWorldExamples": [
+    {"id": "ssch02_rw01", "title": "Soldiers breathing thin air at Khardung La", "body": "Indian army personnel serve at Khardung La in Ladakh, over 5,600 metres above sea level, where the atmospheric pressure is only about 650 millibars — far below the 1013 mb at the coast. With so little oxygen in the thin air, the body must work much harder just to function. This is why anyone travelling to high altitudes is advised to pause on the way and let the body acclimatise, a vivid example of atmospheric pressure shaping how people live.", "relatedConceptIds": ["ssch02_t03_c01"]},
+    {"id": "ssch02_rw02", "title": "A weather watchdog on a Sikkim glacier", "body": "In 2023, the National Disaster Management Authority set up an Automated Weather Station at a glacial lake in Sikkim, more than 4,800 metres above sea level. No one needs to live there: the AWS uses sensors to measure temperature, humidity, wind, rainfall and pressure all by itself, sending early warnings about upcoming weather. In a place too cold and remote for people, an automated machine keeps watch and can warn villages downstream of dangerous floods.", "relatedConceptIds": ["ssch02_t05_c01"]},
+    {"id": "ssch02_rw03", "title": "Why Jyotsna packed light for Mumbai in June", "body": "Jyotsna checked the forecast before her June school trip to Mumbai: 29°C and 84% humidity. The high humidity told her the air would be sticky and sweat would not dry easily, so she packed light, breathable cotton clothes, a water bottle and an umbrella for the monsoon rains rather than warm or heavy clothing. A simple forecast of two weather elements — temperature and humidity — directly shaped what went into her bag.", "relatedConceptIds": ["ssch02_t04_c01", "ssch02_t02_c01"]}
+  ],
+  "mnemonics": [
+    {"id": "ssch02_mn01", "acronym": "TPPWH", "unpacking": "Temperature, Precipitation, Pressure (atmospheric), Wind, Humidity — the five elements of weather. Remember it as 'The Proud Penguins Wear Hats'.", "context": "Recalling all five elements of weather together.", "relatedConceptIds": ["ssch02_t01_c03"]},
+    {"id": "ssch02_mn02", "acronym": "THBVH", "unpacking": "Thermometer→temperature, rain gauge→precipitation (the H here is a memory peg), Barometer→pressure, Vane/anemometer→wind, Hygrometer→humidity. Quick chant: 'Thermometer, Rain gauge, Barometer, Vane, Hygrometer' for the five instruments.", "context": "Matching each element of weather to the instrument that measures it.", "relatedConceptIds": ["ssch02_t02_c01", "ssch02_t02_c03", "ssch02_t03_c01", "ssch02_t03_c03", "ssch02_t04_c01"]}
+  ],
+  "misconceptions": [
+    {"id": "ssch02_ms01", "kidsThink": "Weather and climate are the same thing.", "actually": "Weather is the state of the atmosphere at a particular time and place — what it is like right now. Climate is the average pattern of weather over a long time. Today's rain is weather; the fact that a place is rainy most years is climate.", "relatedConceptIds": ["ssch02_t01_c01"]},
+    {"id": "ssch02_ms02", "kidsThink": "Atmospheric pressure must be higher on a mountain because you are closer to the sky.", "actually": "Pressure is the weight of the air ABOVE you. As you climb, more air is below you and less is above, so pressure is LOWER on a mountain — only about 650 mb at Khardung La compared with 1013 mb at the coast.", "relatedConceptIds": ["ssch02_t03_c01"]},
+    {"id": "ssch02_ms03", "kidsThink": "Meteorologists just look at the sky and guess the weather.", "actually": "They use special instruments to measure each element precisely, collect data from many places over time, and apply scientific methods to predict the weather hours, days or even weeks ahead. It is a science called meteorology, not guesswork.", "relatedConceptIds": ["ssch02_t04_c03"]}
+  ],
+  "ncertQA": [
+    {"id": "ssch02_nq01", "question": "Match the instrument with the weather element it measures: Hygrometer, Anemometer, Barometer, Thermometer, Rain gauge.", "modelAnswer": "Hygrometer → Humidity; Anemometer → Wind direction and speed; Barometer → Atmospheric pressure; Thermometer → Temperature; Rain gauge → Precipitation (rainfall).", "textbookPage": 42, "relatedConceptIds": ["ssch02_t04_c01", "ssch02_t03_c03", "ssch02_t03_c01", "ssch02_t02_c01", "ssch02_t02_c03"]},
+    {"id": "ssch02_nq02", "question": "Jyotsna is deciding what clothes to pack for her school trip to Mumbai in June. The forecast predicts 29°C and 84% humidity. What would be your advice to her?", "modelAnswer": "At 29°C with 84% humidity, the weather in Mumbai will be warm and very sticky, with sweat drying slowly. I would advise her to pack light, loose, breathable cotton clothes that keep her cool and let sweat evaporate, carry a water bottle to stay hydrated, and bring an umbrella or raincoat because June is the start of Mumbai's monsoon, so heavy rain is likely. She should avoid heavy or woollen clothes, which would feel uncomfortable in the humid heat.", "textbookPage": 42, "relatedConceptIds": ["ssch02_t04_c01", "ssch02_t02_c01"]},
+    {"id": "ssch02_nq03", "question": "A small group of students is setting up a rain gauge. Which site should they choose — the school vegetable garden, the terrace of the school building, open ground with an elevated platform, the compound wall, or the verandah of the laboratory — and why?", "modelAnswer": "They should choose the open ground with an elevated platform. A rain gauge must be placed in an open area, away from buildings, walls and trees that could block the rain or create wind eddies and give a false reading. The terrace and verandah are near walls or roofs that obstruct rain; the compound wall and parts of the vegetable garden may also be sheltered or shaded. Open ground catches rain fairly, and the elevated platform keeps the gauge flat, stable and free from splashing, so the readings are accurate.", "textbookPage": 42, "relatedConceptIds": ["ssch02_t02_c03"]},
+    {"id": "ssch02_nq04", "question": "From the IMD chart for Jammu and Kashmir, how would you report the weather, covering temperature range, maximum and minimum temperatures, humidity and precipitation?", "modelAnswer": "Reading the chart, I would report each station's conditions: for example, Srinagar had a maximum of 6.5°C and a minimum of 0.2°C, giving a temperature range of about 6.3°C, with relative humidity of 89%, and only a trace of rainfall. Higher places like Gulmarg were colder, with the maximum below freezing (about −2.6°C) and snowfall recorded, while Qazigund saw both rain and snow. Overall, Jammu and Kashmir on that date was very cold, with sub-zero minimums in the hills, high humidity, and a mix of light rain and snow in several stations.", "textbookPage": 43, "relatedConceptIds": ["ssch02_t02_c01", "ssch02_t02_c02", "ssch02_t04_c01", "ssch02_t02_c03"]}
+  ],
+  "glossary": [
+    {"id": "ssch02_gl01", "term": "Weather", "definition": "The state of the Earth's atmosphere at a particular time and place.", "example": "The weather today is sunny, warm and dry.", "hindiTerm": "मौसम", "relatedConceptIds": ["ssch02_t01_c01"]},
+    {"id": "ssch02_gl02", "term": "Atmosphere", "definition": "The layer of gases (called 'air') that surrounds the Earth.", "example": "Almost all weather happens in the lowest part of the atmosphere.", "hindiTerm": "वायुमंडल", "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t01_c02"]},
+    {"id": "ssch02_gl03", "term": "Troposphere", "definition": "The lowest layer of the atmosphere, closest to the ground, where we live and where almost all weather occurs.", "example": "The troposphere extends about 6 to 18 km above the ground.", "hindiTerm": "क्षोभमंडल", "relatedConceptIds": ["ssch02_t01_c02"]},
+    {"id": "ssch02_gl04", "term": "Precipitation", "definition": "Any form of water — rain, snow, sleet or hail — that falls from the sky.", "example": "Rain and hail are both kinds of precipitation.", "hindiTerm": "वर्षण", "relatedConceptIds": ["ssch02_t02_c03", "ssch02_t01_c03"]},
+    {"id": "ssch02_gl05", "term": "Atmospheric pressure", "definition": "The pressure exerted by the weight of the air above and around us, felt on the Earth's surface.", "example": "Normal pressure at the sea coast is about 1013 millibars.", "hindiTerm": "वायुमंडलीय दाब", "relatedConceptIds": ["ssch02_t03_c01"]},
+    {"id": "ssch02_gl06", "term": "Humidity", "definition": "The amount of water vapour present in the air, usually measured as relative humidity (a percentage).", "example": "Coastal Kochi has higher humidity than inland Jaipur.", "hindiTerm": "आर्द्रता", "relatedConceptIds": ["ssch02_t04_c01"]},
+    {"id": "ssch02_gl07", "term": "Water vapour", "definition": "Water in its gaseous form, instead of liquid.", "example": "Humidity measures how much water vapour is in the air.", "hindiTerm": "जलवाष्प", "relatedConceptIds": ["ssch02_t04_c01"]},
+    {"id": "ssch02_gl08", "term": "Forecast", "definition": "To predict or find out in advance — in this case, the weather.", "example": "The weather forecast predicted heavy rain tomorrow.", "hindiTerm": "पूर्वानुमान", "relatedConceptIds": ["ssch02_t04_c03", "ssch02_t05_c02"]},
+    {"id": "ssch02_gl09", "term": "Meteorology", "definition": "The systematic study of weather and its evolution, which is the basis for weather forecasting.", "example": "Meteorology lets scientists predict the weather days ahead.", "hindiTerm": "मौसम विज्ञान", "relatedConceptIds": ["ssch02_t04_c03"]},
+    {"id": "ssch02_gl10", "term": "Depression (low-pressure system)", "definition": "A region where atmospheric pressure drops dramatically (below about 1000 mb), which can develop into a storm or cyclone.", "example": "A pressure below 1000 mb indicates a depression.", "hindiTerm": "निम्न दाब क्षेत्र", "relatedConceptIds": ["ssch02_t03_c01"]},
+    {"id": "ssch02_gl11", "term": "Anemometer", "definition": "An instrument with rotating cups that measures wind speed (and direction).", "example": "The faster the anemometer's cups spin, the stronger the wind.", "hindiTerm": "वायुवेगमापी", "relatedConceptIds": ["ssch02_t03_c03"]}
+  ],
+  "miniProjects": [
+    {"id": "ssch02_mp01", "emoji": "🌧️", "title": "Build your own rain gauge", "needs": ["A clear plastic bottle (1 to 2 litres)", "Scissors (use with an adult)", "A ruler and a waterproof marker", "Some small stones or sand", "A little water"], "steps": ["With an adult's help, cut off the top third of the bottle.", "Put a few stones or some sand in the bottom to keep it steady, then add water up to the top of the stones and mark this as your '0' line.", "Stick a ruler scale (in mm) on the side, starting from the 0 line.", "Turn the cut-off top upside down and place it into the bottle like a funnel.", "Put the gauge in open ground, away from walls, trees and roofs, on a flat surface where it will not topple in the wind.", "At the same time each day for a few weeks, read and record the depth of water above the 0 line, then empty it back to 0.", "If snow falls, let it melt before reading. Calculate the average rainfall for each week and compare the weeks."], "expectedObservation": "On rainy days the water rises by several millimetres; on dry days it stays at 0. You will see how much rainfall changes from day to day and week to week.", "whyItWorks": "The funnel catches rain over a wide mouth and channels it into the bottle, while the scale measures the depth — exactly how a real rain gauge reports rainfall in millimetres. Open siting stops walls and trees from blocking the rain and spoiling the reading.", "estimatedMinutes": 45, "relatedConceptIds": ["ssch02_t02_c03"]},
+    {"id": "ssch02_mp02", "emoji": "🌬️", "title": "Make a simple wind vane", "needs": ["A drinking straw", "A stiff paper or card (for an arrow and a tail)", "A pin and a pencil with an eraser", "A small lump of clay", "A compass (or a phone compass app)"], "steps": ["Cut a small triangular pointer (arrow) and a larger square tail from the card.", "Make a slit in each end of the straw and slide the pointer into one end and the bigger tail into the other.", "Push a pin through the exact middle of the straw and into the eraser of a pencil, so the straw can spin freely.", "Stand the pencil upright in a lump of clay as a base.", "Take it outdoors to an open spot; use the compass to mark North, South, East and West around the base.", "Watch which way the pointer turns when the wind blows, and note the direction the wind is coming from.", "Record the wind direction at the same time each day for a week and look for any pattern."], "expectedObservation": "The big tail is pushed by the wind, swinging the pointer to face into the wind, so the arrow shows where the wind is coming from — and it turns even in a light breeze.", "whyItWorks": "The tail has a larger surface for the wind to push, so it is always blown downwind, automatically turning the slender pointer to face the wind's source — the same principle as a real wind vane or weather vane.", "estimatedMinutes": 40, "relatedConceptIds": ["ssch02_t03_c03", "ssch02_t03_c02"]}
+  ],
+  "whatIfs": [
+    {"id": "ssch02_wi01", "question": "What if there were no atmosphere around the Earth?", "answer": "With no atmosphere there would be no air, so there would be no weather at all — no wind, no clouds, no rain, no humidity, and no atmospheric pressure. There would be nothing to breathe, and nothing to trap the Sun's warmth, so the surface would be scorching hot in sunlight and freezing cold in shadow, swinging wildly between extremes (much like the Moon, which has almost no atmosphere). Life as we know it could not survive, because all weather and the very air we breathe depend on the atmosphere.", "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t01_c02"]},
+    {"id": "ssch02_wi02", "question": "What if we had no way to forecast the weather?", "answer": "Without forecasts we would be taken by surprise by every storm, flood, cyclone, drought and heat wave. Fishermen might sail straight into stormy seas; coastal villages would have no warning to evacuate before a cyclone; farmers could sow at the wrong time and lose their crops; and governments could not prepare resources for disasters. People would be left relying only on rough natural clues, which give little warning. Accurate forecasting, built on meteorology, is what gives us the precious time to prepare and stay safe — and it matters even more as climate change makes extreme weather more frequent.", "relatedConceptIds": ["ssch02_t05_c02", "ssch02_t04_c03"]}
+  ],
+  "timelines": [
+    {"id": "ssch02_tl01", "title": "From a guess to a forecast: how a weather prediction is made", "intro": "The steps that turn the changing air into a weather warning you can act on.", "steps": [
+      {"id": "ssch02_tl01_s01", "label": "The atmosphere changes", "body": "The Sun heats the Earth unevenly, so temperature, pressure, wind, humidity and precipitation are always changing in the troposphere.", "assetHint": "sun heating layered atmosphere"},
+      {"id": "ssch02_tl01_s02", "label": "Instruments measure it", "body": "Thermometers, rain gauges, barometers, wind vanes, anemometers and hygrometers measure each element precisely.", "assetHint": "row of weather instruments"},
+      {"id": "ssch02_tl01_s03", "label": "Weather stations gather data", "body": "Weather stations and Automated Weather Stations bring the instruments together and record readings at regular intervals.", "assetHint": "automated weather station"},
+      {"id": "ssch02_tl01_s04", "label": "Meteorologists study the data", "body": "Meteorologists collect data over time and apply scientific methods to work out how the weather will behave.", "assetHint": "scientist studying weather maps"},
+      {"id": "ssch02_tl01_s05", "label": "A forecast and warning are issued", "body": "The India Meteorological Department issues forecasts and colour-coded warning maps (green, yellow, orange, red).", "assetHint": "IMD colour-coded warning map"},
+      {"id": "ssch02_tl01_s06", "label": "People prepare and stay safe", "body": "Fishermen are warned off the sea, coasts are evacuated before cyclones, and governments mobilise resources for disasters.", "assetHint": "people preparing for a storm"}
+    ], "relatedConceptIds": ["ssch02_t05_c01", "ssch02_t05_c02", "ssch02_t04_c03"]}
+  ],
+  "conceptMap": {
+    "nodes": [
+      {"id": "ssch02_n01", "label": "Weather", "kind": "pivot", "x": 0.5, "y": 0.1},
+      {"id": "ssch02_n02", "label": "Five Elements", "kind": "concept", "x": 0.5, "y": 0.3},
+      {"id": "ssch02_n03", "label": "Temperature (Thermometer)", "kind": "concept", "x": 0.1, "y": 0.55},
+      {"id": "ssch02_n04", "label": "Precipitation (Rain gauge)", "kind": "concept", "x": 0.3, "y": 0.55},
+      {"id": "ssch02_n05", "label": "Pressure (Barometer)", "kind": "concept", "x": 0.5, "y": 0.55},
+      {"id": "ssch02_n06", "label": "Wind (Vane & Anemometer)", "kind": "concept", "x": 0.7, "y": 0.55},
+      {"id": "ssch02_n07", "label": "Humidity (Hygrometer)", "kind": "concept", "x": 0.9, "y": 0.55},
+      {"id": "ssch02_n08", "label": "Weather Stations & AWS", "kind": "concept", "x": 0.35, "y": 0.8},
+      {"id": "ssch02_n09", "label": "Forecasting & IMD", "kind": "concept", "x": 0.65, "y": 0.8},
+      {"id": "ssch02_n10", "label": "Prepare & Stay Safe", "kind": "concept", "x": 0.5, "y": 0.95}
+    ],
+    "edges": [
+      {"id": "ssch02_e01", "from": "ssch02_n01", "to": "ssch02_n02", "label": "described by"},
+      {"id": "ssch02_e02", "from": "ssch02_n02", "to": "ssch02_n03", "label": "includes"},
+      {"id": "ssch02_e03", "from": "ssch02_n02", "to": "ssch02_n04", "label": "includes"},
+      {"id": "ssch02_e04", "from": "ssch02_n02", "to": "ssch02_n05", "label": "includes"},
+      {"id": "ssch02_e05", "from": "ssch02_n02", "to": "ssch02_n06", "label": "includes"},
+      {"id": "ssch02_e06", "from": "ssch02_n02", "to": "ssch02_n07", "label": "includes"},
+      {"id": "ssch02_e07", "from": "ssch02_n05", "to": "ssch02_n06", "label": "drives"},
+      {"id": "ssch02_e08", "from": "ssch02_n03", "to": "ssch02_n08", "label": "measured at"},
+      {"id": "ssch02_e09", "from": "ssch02_n08", "to": "ssch02_n09", "label": "data feeds"},
+      {"id": "ssch02_e10", "from": "ssch02_n09", "to": "ssch02_n10", "label": "warns so we"}
+    ]
+  },
+  "examConnections": [
+    {"id": "ssch02_xc01", "title": "Weather and climate in higher classes", "body": "This chapter ends by linking weather to climate, the subject of the very next chapter and a major theme in Class 9 and Class 10 Geography ('Climate'). The five elements — temperature, pressure, wind, humidity and precipitation — return in detail, along with pressure belts, planetary and local winds (including the monsoon), and the factors controlling India's climate. Understanding now that weather is the day-to-day state and climate is the long-term average makes the advanced material far easier, and these topics are common in board exams and competitive tests.", "targetExam": "CBSE Class 9–10 Geography / NTSE", "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t01_c03"]},
+    {"id": "ssch02_xc02", "title": "The physics of the atmosphere in science", "body": "The instruments in this chapter rest on physics you will meet later: thermal expansion (thermometers), the weight and pressure of air (barometers), evaporation and the water cycle (hygrometers and humidity), and pressure differences driving wind. Olympiad and quiz questions love asking why pressure falls with altitude, how relative humidity depends on temperature, and how a cup anemometer turns wind into a speed reading. Mastering the simple versions here builds a strong base for Class 8–10 Science.", "targetExam": "Science/Geography Olympiads", "relatedConceptIds": ["ssch02_t03_c01", "ssch02_t04_c01"]}
+  ],
+  "deepDive": [
+    {"id": "ssch02_dv01", "title": "Why pressure (and oxygen) falls with altitude", "gradeLevel": "class_9", "parentConceptId": "ssch02_t03_c01", "body": "Atmospheric pressure equals the weight of the entire column of air above a point, so it must fall as you climb, because more of the air ends up below you. But the fall is not steady — it is roughly exponential, dropping fastest near the ground where the air is densest. That is why pressure goes from about 1013 mb at sea level to around 650 mb at Khardung La (over 5,600 m): more than a third of the air is already below you. Crucially, the share of oxygen in air stays about 21% everywhere, but because the whole air is thinner, each breath contains fewer oxygen molecules. The body responds over days by making more red blood cells to carry the scarce oxygen — which is exactly why mountaineers acclimatise instead of climbing straight to the top.", "prerequisite": "Knowing that atmospheric pressure is the weight of the air above us.", "nextStepHint": "Find out what 'altitude sickness' is and why pilots' cabins are 'pressurised'."},
+    {"id": "ssch02_dv02", "title": "Relative humidity, dew point and why clouds form", "gradeLevel": "class_9", "parentConceptId": "ssch02_t04_c01", "body": "Air can hold only a limited amount of water vapour, and that limit rises sharply as the air gets warmer — warm air is 'roomier' for vapour. Relative humidity is the ratio of the vapour actually present to that maximum, as a percentage. The clever consequence: if you cool a parcel of air without adding any water, its relative humidity climbs, because the 'room' shrinks. Cool it enough to reach 100% — the 'dew point' — and vapour starts condensing into tiny droplets, forming dew, fog or clouds. This is why dew appears on cold mornings, why fog forms in cold valleys, and why rising air (which cools as it goes up) makes clouds. It also explains evaporative cooling: sweat and wet clothes dry slowly when the air is already near 100%, leaving you hot and sticky.", "prerequisite": "Understanding humidity as the amount of water vapour in the air.", "nextStepHint": "Look up the 'water cycle' and trace how the Sun's heat lifts water into the air and brings it back as rain."}
+  ],
+  "crossChapterRefs": [
+    {"id": "ssch02_cc01", "toChapterId": "ssch03", "topic": "From weather to climate", "pointer": "This chapter closes by noting that weather is closely linked to climate, which the next chapter explores — climate is the long-term average of the very elements (temperature, rainfall, wind, humidity, pressure) measured here.", "relatedConceptIds": ["ssch02_t01_c01", "ssch02_t01_c03"]},
+    {"id": "ssch02_cc02", "toChapterId": "ssch01", "topic": "How the land shapes the weather", "pointer": "The mountains, deserts, coasts and rain shadows from 'Geographical Diversity of India' explain why pressure, humidity and rainfall differ from place to place — for example, why coastal Kochi is humid while inland Jaipur is dry, and why pressure is low at high Khardung La.", "relatedConceptIds": ["ssch02_t03_c01", "ssch02_t04_c01"]}
+  ],
+  "bossQuestions": [
+    {"id": "bossquiz_ssch02_q00", "prompt": "Weather is best defined as —", "questionType": "mcq", "options": ["The average climate of a region over 30 years", "The state of the Earth's atmosphere at a particular time and place", "The study of weather instruments", "The layer of gases around the Earth"], "answer": "The state of the Earth's atmosphere at a particular time and place", "solutionSteps": ["Recall the definition of weather.", "Distinguish it from climate (the long-term average).", "Weather is the atmosphere's condition now, in one place."], "commonMistakes": ["Confusing weather with climate."], "variations": [], "difficulty": 2, "pageRefs": [28], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q01", "prompt": "Almost all weather phenomena take place in which layer of the atmosphere?", "questionType": "mcq", "options": ["Stratosphere", "Troposphere", "Ozone layer", "Tropopause"], "answer": "Troposphere", "solutionSteps": ["Recall the layers of the atmosphere.", "The troposphere is the lowest layer, closest to the ground.", "Almost all weather happens there."], "commonMistakes": ["Choosing the stratosphere instead of the troposphere."], "variations": [], "difficulty": 2, "pageRefs": [28], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q02", "prompt": "Which list contains ONLY elements of weather?", "questionType": "mcq", "options": ["Temperature, pressure, wind, humidity", "Temperature, soil, rivers, wind", "Pressure, mountains, humidity, rain", "Wind, oceans, temperature, forests"], "answer": "Temperature, pressure, wind, humidity", "solutionSteps": ["Recall the five elements: temperature, precipitation, pressure, wind, humidity.", "Check each option for non-weather items like soil, rivers or mountains.", "Only the first list is all weather elements."], "commonMistakes": ["Including land features like soil or mountains as weather elements."], "variations": [], "difficulty": 2, "pageRefs": [29], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q03", "prompt": "A day's maximum temperature is 30°C and minimum is 16°C. The mean daily temperature is —", "questionType": "mcq", "options": ["14°C", "23°C", "46°C", "16°C"], "answer": "23°C", "solutionSteps": ["Mean = (max + min) ÷ 2.", "(30 + 16) = 46.", "46 ÷ 2 = 23°C."], "commonMistakes": ["Subtracting instead of averaging (that gives the range, 14°C)."], "variations": [], "difficulty": 2, "pageRefs": [32], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q04", "prompt": "Rainfall is measured with a —", "questionType": "mcq", "options": ["Barometer", "Rain gauge", "Hygrometer", "Anemometer"], "answer": "Rain gauge", "solutionSteps": ["Recall the instrument for precipitation.", "A rain gauge catches rain in a funnel and measures its depth.", "The others measure pressure, humidity and wind."], "commonMistakes": ["Confusing the rain gauge with the barometer or hygrometer."], "variations": [], "difficulty": 1, "pageRefs": [33], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q05", "prompt": "As you climb a high mountain, the atmospheric pressure —", "questionType": "mcq", "options": ["Increases because you are closer to the sky", "Stays exactly the same", "Decreases because there is less air above you", "Becomes zero immediately"], "answer": "Decreases because there is less air above you", "solutionSteps": ["Pressure is the weight of the air above a point.", "Climbing leaves more air below and less above.", "So pressure decreases with altitude."], "commonMistakes": ["Thinking pressure rises on mountains."], "variations": [], "difficulty": 3, "pageRefs": [34], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q06", "prompt": "Wind blows from areas of —", "questionType": "mcq", "options": ["Low pressure to high pressure", "High pressure to low pressure", "Cold air to warm air only", "High humidity to low humidity"], "answer": "High pressure to low pressure", "solutionSteps": ["Recall wind is moving air.", "Air flows to balance pressure differences.", "It moves from high pressure to low pressure."], "commonMistakes": ["Reversing the direction of airflow."], "variations": [], "difficulty": 2, "pageRefs": [36], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q07", "prompt": "Which instrument measures the amount of water vapour in the air?", "questionType": "mcq", "options": ["Hygrometer", "Thermometer", "Wind vane", "Barometer"], "answer": "Hygrometer", "solutionSteps": ["Humidity is the amount of water vapour in the air.", "A hygrometer measures humidity.", "The others measure temperature, wind direction and pressure."], "commonMistakes": ["Confusing the hygrometer with the thermometer."], "variations": [], "difficulty": 1, "pageRefs": [38], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q08", "prompt": "Wet clothes dry slowly when the relative humidity is —", "questionType": "mcq", "options": ["Very low (dry air)", "Very high (the air is nearly full of vapour)", "Exactly 0%", "Always, regardless of humidity"], "answer": "Very high (the air is nearly full of vapour)", "solutionSteps": ["High humidity means the air is already nearly full of water vapour.", "It cannot absorb much more, so water evaporates slowly.", "Therefore wet clothes dry slowly."], "commonMistakes": ["Thinking high humidity helps clothes dry faster."], "variations": [], "difficulty": 2, "pageRefs": [37], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch02_q09", "prompt": "On an IMD weather-warning map, the colour RED means —", "questionType": "mcq", "options": ["No warning", "Watch / be updated", "Alert / be prepared", "Warning / take action"], "answer": "Warning / take action", "solutionSteps": ["Recall the IMD colour code: green, yellow, orange, red.", "Red is the most serious level.", "It means 'warning / take action'."], "commonMistakes": ["Mixing up orange (be prepared) with red (take action)."], "variations": [], "difficulty": 2, "pageRefs": [40], "needsHumanReview": false, "source": "boss_quiz"}
+  ],
+  "quickCheckQuestions": [
+    {"id": "scenecheck_ssch02_q00", "prompt": "Which instrument would you use to measure how hot or cold the air is?", "questionType": "mcq", "options": ["Barometer", "Thermometer", "Rain gauge", "Anemometer"], "answer": "Thermometer", "solutionSteps": ["Temperature is how hot or cold the air is.", "A thermometer measures temperature.", "The others measure pressure, rainfall and wind."], "commonMistakes": ["Confusing the thermometer with the barometer."], "variations": [], "difficulty": 1, "pageRefs": [31], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch02_q01", "prompt": "An anemometer's cups are spinning very fast. This tells you the —", "questionType": "mcq", "options": ["Air pressure is high", "Wind is strong (high wind speed)", "Humidity is high", "Temperature is rising"], "answer": "Wind is strong (high wind speed)", "solutionSteps": ["An anemometer measures wind speed.", "The stronger the wind, the faster the cups spin.", "Fast spinning means high wind speed."], "commonMistakes": ["Thinking the spinning cups measure pressure or temperature."], "variations": [], "difficulty": 1, "pageRefs": [37], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch02_q02", "prompt": "A barometer reading drops below 1000 mb. Meteorologists call this a —", "questionType": "mcq", "options": ["Heat wave", "Depression (low-pressure system)", "Drought", "Wind sock"], "answer": "Depression (low-pressure system)", "solutionSteps": ["Normal coastal pressure is about 1013 mb.", "A drop below 1000 mb indicates a depression.", "A depression can grow into a storm or cyclone."], "commonMistakes": ["Confusing a low-pressure depression with a heat wave or drought."], "variations": [], "difficulty": 2, "pageRefs": [35], "needsHumanReview": false, "source": "scene_quick_check"}
+  ]
+}
