@@ -4425,3 +4425,24 @@ work shows India contributed to communication science) + 2 realWorldExamples (on
 deep-water port lifts a whole region; the Arthashastra's ancient roads-and-canals
 'public works' duty). ssch19 glossary 11→17. All lints + Release build + suite
 green. Pushed a1098c2. GL: ssch01–19 done; only ssch20 left.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 40 (ssch20 glossary etymology) — GL TRACK COMPLETE
+
+GLOSSARY_ETYMOLOGY for ssch20 (Banks and the Magic of Finance). +6 glossary terms
+with etymology: Bank-root (It banca 'bench' → banca rotta 'broken bench' →
+'bankrupt'), Credit (Lat credere 'to trust'), Finance (Lat finis), Inflation
+(inflare), Dividend (dividendum), Principal (principalis). +2 misconceptions
+(savings aren't idle — banks lend them out; shares carry real risk unlike fixed
+savings) + 2 realWorldExamples (the 'broken bench' behind 'bank'/'bankrupt';
+compounding and the Rule of 72). ssch20 glossary 11→17. Pushed d3100c2.
+
+*** MILESTONE: GLOSSARY_ETYMOLOGY track COMPLETE for ALL 20 chapters (cycles 21–40). ***
+~130 etymology-rich glossary terms added across Sanskrit/Greek/Latin/Arabic/Persian/
+Tamil roots, plus ~40 misconception-busters and ~40 realWorldExamples, all additive
+and PDF-faithful. Pack concepts steady at 293, topic-Qs 371; article bundle steady
+at 887 (glossary/misc/rw are not rendered to article HTML). Every push: pre-commit
+content lints + pre-push full Release build + test suite green; zero regressions.
+STOP_AND_ASK count: 0. NEXT: DEEPDIVE track (deepDive/timelines/conceptMap/
+crossChapterRefs), then bespoke INTERACTIVE widgets.
