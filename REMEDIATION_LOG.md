@@ -4638,3 +4638,18 @@ Bhutan — one Indian root, half a continent shaped; class_10, anchor t04_c03). 
 cross-strand refs (→ssch12 ancient trade routes → international markets; →ssch16
 the Chola naval expeditions to Srivijaya). ssch14 deepDive 2→4, ccRefs 3→5. All
 lints + Release build + suite green. Pushed 644400a.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 55 (ssch15 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch15 (Empires and Kingdoms: 6th to 10th Centuries). +2 deepDive:
+'An election a thousand years ago, written on a wall' (the Uttaramerur inscription
+recording Chola village wards, candidate qualifications, the kudavolai pot-ticket
+lottery and accountability rules; class_10, anchor t04_c01) and 'Bhakti: when God
+was praised in the mother tongue' (the Nayanars and Alvars singing devotion in
+Tamil rather than Sanskrit, opening worship to all jatis, with Andal among the
+saints; class_10, anchor t05_c01). +2 cross-strand refs (→ssch09 the Chola village
+sabhas as ancient roots of self-government and democracy; →ssch13 village tanks
+and land grants → farming and irrigation heritage). ssch15 deepDive 2→4, ccRefs
+3→5. All lints + Release build + suite green. Pushed 7eb7c0e.
