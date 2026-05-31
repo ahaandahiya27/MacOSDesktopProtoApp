@@ -4358,3 +4358,16 @@ conquest; landlocked neighbours still depend on the sea via Indian ports) + 2
 realWorldExamples (Ayodhya→Ayutthaya & the Ramakien; why Bangkok's airport is
 named Suvarnabhumi). ssch14 glossary 11→17. All lints + Release build + suite
 green. Pushed 2ecadbe. GL: ssch01–14 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 35 (ssch15 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch15 (Empires and Kingdoms, 6th–10th c). +6 glossary
+terms with etymology: Monastery (Gk monos), Epigraphy (epi+graphein), Chronicle
+(chronos), Bhakti-root (Skt bhaj 'to share/be devoted'), Ratha (chariot), Tank/eri.
++2 misconceptions (kings ruled through samantas + self-governing village sabhas,
+not directly; a travelogue is one source to cross-check) + 2 realWorldExamples
+(Ellora's Kailasa temple carved downward from a single rock; Chola/Pallava village
+sabhas chosen by palm-leaf lottery). ssch15 glossary 11→17. All lints + Release
+build + suite green. Pushed 817161c. GL: ssch01–15 done.
