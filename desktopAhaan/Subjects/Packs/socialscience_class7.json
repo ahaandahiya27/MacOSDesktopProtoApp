@@ -18953,6 +18953,24 @@
             "ssch08_t05_c02",
             "ssch08_t01_c01"
           ]
+        },
+        {
+          "id": "ssch08_rw04",
+          "title": "Four shrines that stitch a country together",
+          "body": "The Chār Dhām place a holy site at each corner of India — Badrinath in the snowy north, Dwarka on the western sea, Puri on the eastern coast and Rameswaram in the far south. A devotee who sets out to visit all four must cross the entire subcontinent, meeting its languages, foods and landscapes along the way. Long before trains or a national flag, this web of pilgrimage quietly tied distant regions into one shared cultural space — a sacred map of India.",
+          "relatedConceptIds": [
+            "ssch08_t03_c01",
+            "ssch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ssch08_rw05",
+          "title": "Why a peepal tree survives where others are felled",
+          "body": "Walk through an Indian village and you will often find a single peepal or banyan left standing — in a field, by a temple, at a crossroads — while other trees are cut. People revere these trees as sacred (the Buddha's Bodhi tree was a peepal), so no one harms them. The result is accidental conservation: the old tree cools the air, shelters birds and squirrels, and keeps a patch of green alive. Belief does the work a forest law might otherwise have to.",
+          "relatedConceptIds": [
+            "ssch08_t05_c01",
+            "ssch08_t05_c02"
+          ]
         }
       ],
       "mnemonics": [
@@ -18999,6 +19017,23 @@
           "actually": "Sacred groves are protected mainly by belief — communities see them as the abodes of deities, so harming them is disrespect to a god. This belief has shielded their biodiversity and water for centuries, often without any formal law.",
           "relatedConceptIds": [
             "ssch08_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch08_ms04",
+          "kidsThink": "Each sacred site in India belongs to only one religion.",
+          "actually": "Many of India's holy places are shared. Sufi dargahs draw devotees of several faiths, and natural sacred places — rivers, mountains, groves — are revered across religions and communities. India's sacred geography is layered and often shared, not split neatly by faith.",
+          "relatedConceptIds": [
+            "ssch08_t01_c03",
+            "ssch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ssch08_ms05",
+          "kidsThink": "The Kumbh Mela is held at the same place every single year.",
+          "actually": "It is not. The Kumbh rotates among four sacred riverbank cities — Haridwar, Prayagraj, Nashik and Ujjain — on a roughly 12-year cycle fixed by the positions of Jupiter and the Sun. The site changes with the calendar of the sky.",
+          "relatedConceptIds": [
+            "ssch08_t04_c02"
           ]
         }
       ],
@@ -19155,6 +19190,68 @@
           "relatedConceptIds": [
             "ssch08_t04_c01",
             "ssch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ssch08_gl12",
+          "term": "Chār Dhām",
+          "definition": "The four holy abodes that ring India — Badrinath (north), Dwarka (west), Puri (east) and Rameswaram (south); from Sanskrit chār ('four') + dhām ('divine abode').",
+          "example": "A Chār Dhām pilgrimage carries a devotee to all four corners of India.",
+          "hindiTerm": "चार धाम",
+          "relatedConceptIds": [
+            "ssch08_t03_c01",
+            "ssch08_t03_c02"
+          ]
+        },
+        {
+          "id": "ssch08_gl13",
+          "term": "Kumbh Mela",
+          "definition": "A vast riverbank pilgrimage-fair held on a sacred calendar; from Sanskrit kumbh ('pot, pitcher') + mela ('gathering, fair'), recalling the pot of amṛita.",
+          "example": "The Kumbh Mela rotates between Haridwar, Prayagraj, Nashik and Ujjain.",
+          "hindiTerm": "कुम्भ मेला",
+          "relatedConceptIds": [
+            "ssch08_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch08_gl14",
+          "term": "Bodhi tree",
+          "definition": "The peepal tree under which the Buddha is said to have attained enlightenment; from Sanskrit bodhi ('awakening, enlightenment').",
+          "example": "Pilgrims visit Bodh Gaya to honour the Bodhi tree.",
+          "hindiTerm": "बोधि वृक्ष",
+          "relatedConceptIds": [
+            "ssch08_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch08_gl15",
+          "term": "Peepal",
+          "definition": "A sacred fig tree (Ficus religiosa) revered across Indian faiths; the Buddha's Bodhi tree was a peepal.",
+          "example": "A peepal is often left standing and worshipped even in the middle of a field.",
+          "hindiTerm": "पीपल",
+          "relatedConceptIds": [
+            "ssch08_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch08_gl16",
+          "term": "Banyan",
+          "definition": "A giant sacred fig tree (Ficus benghalensis) whose hanging roots grow into new trunks; the English name comes from the 'banias' (traders) who gathered in its shade.",
+          "example": "A single old banyan can shade a whole village meeting.",
+          "hindiTerm": "बरगद / वट",
+          "relatedConceptIds": [
+            "ssch08_t05_c01"
+          ]
+        },
+        {
+          "id": "ssch08_gl17",
+          "term": "Conservation",
+          "definition": "Protecting and keeping nature, biodiversity or heritage safe for the future; from Latin conservare ('to keep, preserve').",
+          "example": "Sacred groves achieve conservation through belief rather than law.",
+          "hindiTerm": "संरक्षण",
+          "relatedConceptIds": [
+            "ssch08_t05_c03",
+            "ssch08_t05_c02"
           ]
         }
       ],
