@@ -4734,3 +4734,34 @@ refs linking the geography/history/civics/economics strands. Pack steady at 293
 concepts / 371 topic-Qs; article bundle unchanged at 887. Three deepening tracks
 (Olympiad, Glossary-etymology, DeepDive) now complete subject-wide. Next pass:
 INTERACTIVE widgets behind the existing gate.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 61 (ssch10 bespoke Preamble Explorer — INTERACTIVE track start)
+
+INTERACTIVE track for the Social Science deepening pass. Authored `PreambleExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/PreambleExplorer.swift), a
+bespoke inline widget for Ch.10 'The Constitution of India — An Introduction'
+(ssch10), upgrading that chapter from the generic `SSGlossaryMatchChallenge` to a
+chapter-specific interactive.
+
+The widget shows the actual Preamble of India with the nine keywords highlighted
+inline (Text concatenation — no macOS-12 flow-layout API), then splits them into
+the chapter's own two pedagogical groups: 'What kind of nation India is'
+(Sovereign / Socialist / Secular / Democratic / Republic — from ssch10_t05_c02)
+and 'What it secures for every citizen' (Justice / Liberty / Equality / Fraternity
+— from ssch10_t05_c03). Tapping any word reveals its kid-friendly meaning grounded
+in the chapter, with beyondTheBook footnotes where the chapter carries a story (42nd
+Amendment added Socialist/Secular in 1976; Fraternity echoes the French Revolution).
+A progress line tracks 'explored N of 9'.
+
+Mounted in `socialScienceInteractives` behind the existing
+`socialScienceInteractivesAreEnabled` gate, keyed on exact pack.id +
+chapter.id == "ssch10", placed BEFORE the chronology/glossary fallbacks. Big-Sur
+safe throughout: manual chip wrapping (no LazyVGrid), SFSymbolCompat for every
+symbol (all SF Symbols 1/2 — building.columns.fill/checkmark/sparkles/
+checkmark.seal.fill/scope), reduce-motion-gated animation, @SceneStorage namespaced
+by chapter, VoiceOver labels + hints, compat colors. Extended
+`SocialScienceInteractiveGateTests.testEveryChapterResolvesToAnInteractive` to pin
+ssch10 as bespoke. pbxproj regenerated via scripts/generate_compat_pbxproj.py
+(443 app sources). Full lint family + Release build + full suite green. Pushed 84fb698.
