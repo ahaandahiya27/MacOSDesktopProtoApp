@@ -97,6 +97,7 @@ struct ChapterDetailView: View {
         Group {
             ch1PilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
             propagatedPilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
+            socialScienceInteractives(pack: pack, chapter: chapter)
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)

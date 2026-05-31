@@ -3856,3 +3856,24 @@ BOSS_SRS (`bossquiz_ssch` + `scenecheck_ssch` ephemeral prefixes), INTERACTIVE
 Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
 confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).
 The ARTICLES changes are data (HTML/CSS/JSON) plus small, lint-clean Swift edits.
+
+---
+
+## 2026-05-31 — Social Science DISCOVER + BOSS_SRS (cycle 4, commit 8e4c5e8)
+
+DISCOVER + BOSS_SRS stages COMPLETE for all 20 `socialscience_class7` chapters.
+One generic `DiscoverChapterSocialScienceView` renders a 9-scene experience
+(Big Picture → 4 concepts → 3 quick-checks → Boss Quiz) pulling content live
+from the pack; new `SocialScienceDiscoverComponents.swift` carries the scene
+views (quick-check + boss are `@MainActor` for the sync `DataStore.shared` SRS
+write — caught by `check_view_mainactor`). Boss/quick MCQ surfaces filter to
+renderable MCQs because chapters 14–20 mix in match/long/short/trueFalse items.
+SRS wired via `recordReview(...packId:)`; `bossquiz_ssch`/`scenecheck_ssch`
+added to `ephemeralIdPrefixes`. DiscoverMode dispatch + supported-id gate added;
+`SocialScienceDiscoverModeRoutingTests` pins routing, the leak-gate, the
+9-scene fillability invariants, and ephemeral-id recognition. pbxproj
+regenerated. All lints + Release build + full test suite green on the dev Mac.
+NEXT: INTERACTIVE (≥1 gated bespoke interactive per chapter), then ENRICHED.
+
+Posture unchanged: dev-Mac lints + build + tests are the proxy; final Big Sur
+confirmation still needs an iMac rebuild (`scripts/imac-pull.sh` → ⇧⌘K → Build).

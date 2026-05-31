@@ -41,6 +41,34 @@ func pilotInteractivesAreEnabled(forPackId packId: String) -> Bool {
     packId == "science_class7"
 }
 
+/// Parallel gate for the Social Science (`socialscience_class7`) bespoke
+/// interactives. Kept SEPARATE from `pilotInteractivesAreEnabled` so the
+/// hardcoded Science sandboxes/tours can never leak into Social Science (and
+/// vice-versa) even though some chapter ids rhyme — SS ids are `sschNN`, so
+/// they don't collide with the Science `chNN` ids, but a separate predicate
+/// makes the leak-gate explicit and unit-testable. Pure + non-isolated.
+func socialScienceInteractivesAreEnabled(forPackId packId: String) -> Bool {
+    packId == "socialscience_class7"
+}
+
+// MARK: - Social Science interactives
+
+/// Per-chapter bespoke interactives for the Social Science pack. Each is a
+/// self-contained inline widget (no coordinator sheet), gated on the SS pack
+/// id AND an exact chapter id so nothing shows on the wrong chapter or pack.
+/// Grows one `else if` per chapter as each chapter's INTERACTIVE stage lands.
+@ViewBuilder
+func socialScienceInteractives(
+    pack: SubjectPack,
+    chapter: Chapter
+) -> some View {
+    if socialScienceInteractivesAreEnabled(forPackId: pack.id) {
+        if chapter.id == "ssch01" {
+            IndiaPhysiographicExplorer(chapterId: chapter.id)
+        }
+    }
+}
+
 // MARK: - Ch.1 pilot mounts
 
 /// Ch.1 pilot — the original five-surface pilot. The gate is the
