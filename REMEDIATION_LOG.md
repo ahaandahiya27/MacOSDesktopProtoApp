@@ -4003,3 +4003,18 @@ biodiversity+water causal chain, conservation tool). 3 boss MCQ (diff4): jyotirl
 networks, pilgrimage inner+outer, sacred sources/sangams. 2 quick MCQ: pilgrimage
 definition, 3,000-year tradition. Pack 319→323 topic-Qs; ssch08 boss 10→13, quick 3→5.
 *** ssch01–08 OLYMPIAD complete (the whole History+Geo-early block). *** All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 9 (ssch09 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch09 (Types of Governments)**: +8 PDF-faithful items.
+4 topic Qs — `t01_q04` (diff5 apply all 3 functions to a speed-limit scenario),
+`t02_q04` (diff5 class-of-10 vs school-of-2000 → direct vs representative), `t04_q04`
+(diff5 classify oligarchy/theocracy/dictatorship with the deciding question), `t05_q04`
+(diff4 Vajji + Uttaramerur → democracy's ancient Indian roots). 3 boss MCQ (diff4):
+representative democracy, elections→accountability, absolute vs constitutional
+monarchy. 2 quick MCQ: third organ=judiciary, democracy=rule of the people.
+Pack 323→327 topic-Qs; ssch09 boss 10→13, quick 3→5. (Avoided existing diff-4 Qs
+on parliamentary/presidential and judiciary, and boss on universal-adult-franchise.)
+All 7 lints green.

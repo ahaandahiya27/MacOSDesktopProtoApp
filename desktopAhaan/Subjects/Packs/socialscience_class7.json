@@ -19465,6 +19465,39 @@
                 185
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch09_t01_q04",
+              "prompt": "A fast-growing town decides it needs a speed limit on its roads. Show how ALL THREE functions of government would each play a part — from creating the rule, to carrying it out, to dealing with people who break it. Name the function (legislative, executive, judicial) at each step.",
+              "questionType": "longAnswer",
+              "answer": "Step 1 — LEGISLATIVE: the law-making body discusses and passes the rule, e.g. 'the speed limit in town is 40 km/h.' Making rules is the legislative function. Step 2 — EXECUTIVE: the part of government that carries out rules puts up the signs, runs the speed cameras and sends the police to patrol and catch speeders. Carrying out and enforcing rules is the executive function. Step 3 — JUDICIAL: when someone is accused of breaking the limit, a court decides whether they really did and what the penalty should be, making sure the rule is applied fairly. Ensuring rules are followed and judging disputes is the judicial function. So one simple speed limit needs all three functions — make it, enforce it, and judge it — which is exactly why every government has these three jobs.",
+              "solutionSteps": [
+                "Identify the three functions: legislative (make rules), executive (carry out), judicial (ensure followed).",
+                "Step 1: the legislature passes the speed-limit law.",
+                "Step 2: the executive (police, signs, cameras) enforces it.",
+                "Step 3: the judiciary tries offenders and decides penalties fairly.",
+                "Conclude all three are needed for a single rule to work."
+              ],
+              "commonMistakes": [
+                "Mixing up the executive (enforces) with the judiciary (judges).",
+                "Listing the functions without tying each to a step in the speed-limit example."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which function of government actually PUNISHES someone who breaks a law, and which one MADE the law?",
+                  "answer": "The judiciary (courts) decides guilt and punishment; the legislature made the law in the first place.",
+                  "solutionSteps": [
+                    "Recall judicial = ensures rules are followed / judges.",
+                    "Recall legislative = makes the rules."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                186,
+                187
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -19741,6 +19774,38 @@
               "difficulty": 2,
               "pageRefs": [
                 192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch09_t02_q04",
+              "prompt": "In a class of 10 students, everyone can vote on every single decision. But a school of 2,000 students instead elects a small student committee to take decisions. Use this contrast to explain the difference between DIRECT democracy and REPRESENTATIVE democracy, and why large countries almost always use the representative form.",
+              "questionType": "longAnswer",
+              "answer": "The class of 10 is like a DIRECT democracy: the group is small enough that every member can take part in every decision themselves. The school of 2,000 is like a REPRESENTATIVE democracy: there are far too many people for everyone to debate and vote on everything, so they ELECT a few representatives (the committee) to decide on their behalf. Large countries — with crores of citizens — work the same way: it would be impossible for everyone to gather and vote on every law, so people elect leaders to make decisions for them, and replace them at the next election if they are unhappy. So direct democracy suits small groups, while representative democracy is what makes 'rule of the people' practical at the scale of a whole country.",
+              "solutionSteps": [
+                "Map the small class to DIRECT democracy: everyone decides everything.",
+                "Map the large school to REPRESENTATIVE democracy: elect a few to decide.",
+                "Explain why scale forces the representative form (too many people to vote on everything).",
+                "Conclude: direct for small groups, representative for large countries."
+              ],
+              "commonMistakes": [
+                "Swapping the two — direct democracy is the all-vote one; representative uses elected leaders.",
+                "Not explaining WHY size makes direct democracy impractical for a country."
+              ],
+              "variations": [
+                {
+                  "prompt": "Give one real situation where DIRECT democracy could actually work well.",
+                  "answer": "Any small group deciding together by everyone voting — for example a village gram sabha meeting, a small club, or a class of students voting on a class trip.",
+                  "solutionSteps": [
+                    "Recall direct democracy needs a small enough group.",
+                    "Give a small-group example where all can vote."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                190,
+                191
               ],
               "needsHumanReview": false
             }
@@ -20213,6 +20278,40 @@
                 204
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch09_t04_q04",
+              "prompt": "For EACH description below, name the form of government and give the KEY reason for your choice: (a) a small group of wealthy, influential families makes all the important decisions; (b) the country is ruled by religious leaders according to the principles of one religion; (c) one person seizes total power with no legal limits on what they can do.",
+              "questionType": "longAnswer",
+              "answer": "(a) This is an OLIGARCHY — the key feature is that a small, powerful group (often wealthy families) holds the decision-making power, rather than the people or a single ruler. (b) This is a THEOCRACY — the key feature is that religion and religious leaders rule, and the law is based on religious principles. (c) This is a DICTATORSHIP — the key feature is that one person (or a tiny group) holds absolute power with no legal limits and is not accountable to the people. The trick to telling them apart is to ask 'WHO holds the power and what limits it?': a few rich families (oligarchy), religious authority (theocracy), or one unchecked person (dictatorship).",
+              "solutionSteps": [
+                "(a) Small wealthy group decides → OLIGARCHY.",
+                "(b) Religious leaders rule by religious law → THEOCRACY.",
+                "(c) One person, absolute power, no limits → DICTATORSHIP.",
+                "State the deciding question for each: who holds power and what limits it?"
+              ],
+              "commonMistakes": [
+                "Confusing oligarchy (a small GROUP) with dictatorship (usually ONE person).",
+                "Calling any harsh government a 'dictatorship' without checking the defining feature."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the main difference between an oligarchy and a dictatorship?",
+                  "answer": "An oligarchy is ruled by a small GROUP (often wealthy or influential families), while a dictatorship concentrates absolute power in ONE person (or a very tiny group) with no legal limits.",
+                  "solutionSteps": [
+                    "Oligarchy = rule by a small group.",
+                    "Dictatorship = absolute power in one person.",
+                    "The difference is how many hold the power."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                202,
+                203,
+                204
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -20407,6 +20506,38 @@
               "pageRefs": [
                 195,
                 207
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch09_t05_q04",
+              "prompt": "The ancient Vajji mahājanapada chose its leaders by merit and election, and the 10th-century Uttaramerur inscriptions in Tamil Nadu describe a careful village election system. Why is this historical evidence important, and what does it tell us about the idea that 'the ruled can choose their rulers'?",
+              "questionType": "longAnswer",
+              "answer": "It is important because it shows that the idea of people choosing and replacing their leaders is NOT a recent or purely foreign invention — it has deep roots in India itself. The Vajji republic selected leaders by merit and vote more than 2,000 years ago, and the Uttaramerur inscriptions, carved in stone in the 10th century, set out detailed rules for electing village representatives (even with qualifications and ways to remove the unfit). This evidence tells us that 'the ruled choosing their rulers' is an ancient human idea that India practised long ago, so modern Indian democracy can be seen as reviving and building on its own old traditions, not simply copying others. It also reminds us that democracy must be actively organised with rules and elections — something people understood even centuries ago.",
+              "solutionSteps": [
+                "Note the two pieces of evidence: the Vajji republic and the Uttaramerur inscriptions.",
+                "Explain why they matter: they show democratic ideas are ancient and rooted in India.",
+                "Draw the lesson: 'the ruled choosing rulers' is an old idea India practised, not a modern import.",
+                "Add that they show democracy needs deliberate rules and elections, understood even then."
+              ],
+              "commonMistakes": [
+                "Treating democracy as a purely modern or Western invention, ignoring India's early examples.",
+                "Just naming the examples without explaining WHY the evidence matters."
+              ],
+              "variations": [
+                {
+                  "prompt": "What do the Uttaramerur inscriptions describe?",
+                  "answer": "A detailed village-level election system from 10th-century Tamil Nadu, including how representatives were chosen (and could be removed) — early evidence of organised local self-government in India.",
+                  "solutionSteps": [
+                    "Recall the Uttaramerur inscriptions record a village election system.",
+                    "Note they show organised early local democracy in India."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                205,
+                206
               ],
               "needsHumanReview": false
             }
@@ -21218,6 +21349,88 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch09_q10",
+          "prompt": "In a REPRESENTATIVE democracy, the people mainly govern by —",
+          "questionType": "mcq",
+          "options": [
+            "Voting personally on every single law",
+            "Electing representatives to make decisions for them",
+            "Letting one wise king decide everything",
+            "Drawing lots each morning"
+          ],
+          "answer": "Electing representatives to make decisions for them",
+          "solutionSteps": [
+            "Recall that direct democracy = citizens decide everything themselves.",
+            "Representative democracy = citizens elect leaders to decide for them.",
+            "Large countries use the representative form."
+          ],
+          "commonMistakes": [
+            "Confusing representative democracy with direct democracy (where all vote on everything)."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            191
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch09_q11",
+          "prompt": "Why are regular elections held at FIXED intervals so important in a democracy?",
+          "questionType": "mcq",
+          "options": [
+            "They make the government richer",
+            "They let people choose, and replace, their representatives — keeping the government accountable",
+            "They allow the ruler to stay forever",
+            "They replace the need for any laws"
+          ],
+          "answer": "They let people choose, and replace, their representatives — keeping the government accountable",
+          "solutionSteps": [
+            "Recall why elections matter.",
+            "Fixed-interval elections let people re-choose or remove leaders.",
+            "This keeps the government accountable to the people."
+          ],
+          "commonMistakes": [
+            "Treating elections as a formality rather than the tool of accountability."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            193
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch09_q12",
+          "prompt": "An ABSOLUTE monarchy differs from a CONSTITUTIONAL monarchy because in an absolute monarchy the king or queen —",
+          "questionType": "mcq",
+          "options": [
+            "Holds all the power",
+            "Has only nominal, symbolic power",
+            "Is elected by the people",
+            "Does not exist at all"
+          ],
+          "answer": "Holds all the power",
+          "solutionSteps": [
+            "Recall the two kinds of monarchy.",
+            "Absolute monarch = holds all the power.",
+            "Constitutional monarch = only nominal/symbolic power, real power lies elsewhere."
+          ],
+          "commonMistakes": [
+            "Swapping the two — the constitutional monarch is the one with only symbolic power."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            200,
+            201
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -21295,6 +21508,60 @@
           "difficulty": 1,
           "pageRefs": [
             203
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch09_q03",
+          "prompt": "The three organs of government are the legislature, the executive and the —",
+          "questionType": "mcq",
+          "options": [
+            "Judiciary",
+            "Monarchy",
+            "Military",
+            "Treasury"
+          ],
+          "answer": "Judiciary",
+          "solutionSteps": [
+            "Recall the three organs of government.",
+            "Legislature makes laws; executive carries them out.",
+            "The judiciary ensures laws are followed — the third organ."
+          ],
+          "commonMistakes": [
+            "Naming the military or treasury instead of the judiciary."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            195
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch09_q04",
+          "prompt": "The word 'democracy' literally means 'rule of the —'",
+          "questionType": "mcq",
+          "options": [
+            "King",
+            "People",
+            "Priests",
+            "Wealthy"
+          ],
+          "answer": "People",
+          "solutionSteps": [
+            "Recall the meaning of democracy.",
+            "It means 'rule of the people'.",
+            "The people are the source of power and authority."
+          ],
+          "commonMistakes": [
+            "Confusing democracy with monarchy (rule of a king) or theocracy (rule of priests)."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            189
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"
