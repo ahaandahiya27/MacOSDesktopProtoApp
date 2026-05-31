@@ -4684,3 +4684,18 @@ cross-strand refs (→ssch08 the synagogues/churches/fire-temples of many faiths
 sacred geography; →ssch10 the ethos of acceptance → constitutional secularism,
 equality and fraternity). ssch17 deepDive 2→4, ccRefs 3→5. All lints + Release
 build + suite green. Pushed 7d65aff.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 58 (ssch18 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch18 (The State, the Government, and You). +2 deepDive: 'Matsya
+nyaya: the reason we agree to be governed' (the law of the fishes from the
+Mahabharata/Arthashastra and the European social-contract idea — why free people
+accept a state, and the limit that bargain sets; class_10, anchor t02_c03) and
+'Bringing government to the village: the third tier' (the 73rd/74th Amendments,
+panchayati raj and municipalities, decentralisation, and its echo of the Chola
+village sabhas; class_10, anchor t04_c03). +2 cross-strand refs (→ssch19 the
+government's 'provider' role → infrastructure; →ssch12 the 'regulator' role →
+fair, safe markets). ssch18 deepDive 2→4, ccRefs 3→5. All lints + Release build +
+suite green. Pushed 68b45ac.
