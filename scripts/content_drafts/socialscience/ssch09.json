@@ -1324,7 +1324,9 @@
         "ssch09_t04_c02",
         "ssch09_t05_c02"
       ]
-    }
+    },
+    {"id": "ssch09_rw04", "title": "Direct democracy you can walk into: the Gram Sabha", "body": "Most of the time Indians practise representative democracy — we elect someone to decide for us. But in every village there is a place where democracy is direct: the Gram Sabha, a meeting of ALL the adult voters of the village. There they themselves question the panchayat's spending, approve plans and pick which works to do first. It is the same idea as the famous open-air assemblies of Switzerland, alive in rural India — citizens deciding for themselves, in person.", "relatedConceptIds": ["ssch09_t02_c04", "ssch09_t02_c02"]},
+    {"id": "ssch09_rw05", "title": "Three referees so no one player owns the game", "body": "India's power is split among three organs: the legislature makes the laws, the executive carries them out, and the judiciary checks them. The check is real — if Parliament passes a law that breaks the Constitution, the courts can strike it down. It is like having three independent referees for one match instead of letting a single player keep score: the separation of powers stops any one organ from quietly taking over.", "relatedConceptIds": ["ssch09_t03_c03"]}
   ],
   "mnemonics": [
     {
@@ -1374,7 +1376,9 @@
         "ssch09_t02_c03",
         "ssch09_t04_c03"
       ]
-    }
+    },
+    {"id": "ssch09_ms04", "kidsThink": "'Democracy' and 'republic' are just two words for the same thing.", "actually": "They describe different ideas. A democracy is rule BY the people; a republic specifically means the head of state is elected, not a hereditary king. So a country can be both (India is a democratic republic), or a democracy that still keeps a monarch (the United Kingdom).", "relatedConceptIds": ["ssch09_t02_c01", "ssch09_t05_c01"]},
+    {"id": "ssch09_ms05", "kidsThink": "In a democracy the majority can do absolutely anything it wants.", "actually": "Democracy is more than majority rule. It protects the rights of minorities and individuals, follows a constitution, and limits power through the separation of powers. The majority cannot simply vote away someone's fundamental rights.", "relatedConceptIds": ["ssch09_t02_c03", "ssch09_t03_c03"]}
   ],
   "ncertQA": [
     {
@@ -1531,7 +1535,13 @@
       "relatedConceptIds": [
         "ssch09_t05_c01"
       ]
-    }
+    },
+    {"id": "ssch09_gl12", "term": "Kratos & arkhē (roots of government words)", "definition": "Two Greek roots name most kinds of government: kratos ('power, rule') gives demo-cracy and theo-cracy; arkhē ('rule') gives mon-archy, olig-archy and an-archy.", "example": "Knowing kratos and arkhē lets you decode almost any '-cracy' or '-archy' word.", "hindiTerm": "शासन-सूचक यूनानी मूल", "relatedConceptIds": ["ssch09_t01_c03"]},
+    {"id": "ssch09_gl13", "term": "Parliament", "definition": "The assembly of elected representatives who debate and make a country's laws; from Old French parler ('to speak') — literally 'a place of speaking'.", "example": "In a parliamentary democracy the government is drawn from the parliament.", "hindiTerm": "संसद", "relatedConceptIds": ["ssch09_t03_c02"]},
+    {"id": "ssch09_gl14", "term": "Constitution", "definition": "The supreme set of rules by which a country is governed; from Latin constituere ('to establish, set up').", "example": "A constitutional monarch must act within the limits of the constitution.", "hindiTerm": "संविधान", "relatedConceptIds": ["ssch09_t04_c01"]},
+    {"id": "ssch09_gl15", "term": "Suffrage", "definition": "The right to vote in elections; from Latin suffragium ('a vote, support').", "example": "Universal adult suffrage gives every adult citizen one equal vote.", "hindiTerm": "मताधिकार", "relatedConceptIds": ["ssch09_t03_c01"]},
+    {"id": "ssch09_gl16", "term": "Referendum", "definition": "A direct vote in which all citizens decide a single question themselves; from Latin referendum ('a thing to be referred [to the people]').", "example": "In a referendum, voters answer one question directly rather than electing a representative.", "hindiTerm": "जनमत संग्रह", "relatedConceptIds": ["ssch09_t02_c04"]},
+    {"id": "ssch09_gl17", "term": "Citizen", "definition": "A full member of a state who holds its rights and duties; from Latin civis, which also gives 'civics' and 'city'.", "example": "In a democracy, power flows from the citizens.", "hindiTerm": "नागरिक", "relatedConceptIds": ["ssch09_t05_c02", "ssch09_t02_c03"]}
   ],
   "miniProjects": [
     {
