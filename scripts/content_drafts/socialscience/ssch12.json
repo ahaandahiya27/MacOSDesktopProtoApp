@@ -444,6 +444,28 @@
             271
           ],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t02_q04",
+          "prompt": "Mangoes are cheap and everywhere in summer, but expensive and hard to find in winter. Using the ideas of DEMAND and SUPPLY, explain step by step why the price is so different in the two seasons.",
+          "questionType": "longAnswer",
+          "answer": "In summer, mango trees are full of fruit, so the SUPPLY (the quantity sellers can offer) is very large. When there is a lot of a good for sale and only so many buyers, sellers must keep prices LOW to sell it all before it spoils — so mangoes are cheap. In winter, the trees are not fruiting, so the supply is tiny. Many people still WANT mangoes (demand is still there), but there are very few to go around, so buyers compete and sellers can charge much MORE — the price rises. So the price swing comes from the balance between demand and supply: lots of supply with limited demand pushes the price down (summer), while little supply with steady demand pushes the price up (winter). This is why seasonal fruits are cheapest when they are in season.",
+          "solutionSteps": [
+            "Summer: trees fruit heavily → supply is large.",
+            "Large supply, limited buyers → sellers cut prices → mangoes cheap.",
+            "Winter: little fruit → supply tiny, but demand remains.",
+            "Scarce supply + steady demand → price rises. Conclude price follows the demand–supply balance."
+          ],
+          "commonMistakes": [
+            "Saying prices change 'just because of the season' without explaining via supply and demand.",
+            "Forgetting that demand stays even when supply falls — that is why winter prices climb."
+          ],
+          "variations": [
+            {"prompt": "If the supply of tomatoes suddenly doubles but demand stays the same, what happens to the price?", "answer": "The price falls, because there are now far more tomatoes than buyers need, so sellers must lower prices to sell them.", "solutionSteps": ["More supply, same demand.", "Sellers compete to sell the surplus.", "Price falls."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [254, 255],
+          "needsHumanReview": false
         }
       ]
     },
@@ -653,6 +675,28 @@
             255,
             271
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t03_q04",
+          "prompt": "India sells software services and cotton clothes to other countries, but BUYS crude petroleum from West Asia. Using the idea of INTERNATIONAL markets, explain why countries trade with one another instead of each making everything they need themselves.",
+          "questionType": "longAnswer",
+          "answer": "No country has everything, and no country is best at producing everything — so countries trade in international markets to get what they lack and to sell what they are good at. India has very little crude petroleum of its own, so it must BUY oil from oil-rich regions like West Asia. At the same time, India is very good at producing software services and cotton textiles, so it SELLS those abroad. By specialising in what they do well and trading for the rest, both sides end up better off: India gets the oil it cannot produce, and the oil-sellers get software and goods they want. If every country tried to make everything itself, it would waste effort producing things it is bad at and go without things it simply cannot make. International markets let countries swap their strengths, so everyone gets more than they could alone.",
+          "solutionSteps": [
+            "State the key idea: no country has or is best at everything.",
+            "India lacks petroleum → buys it; India is good at software/textiles → sells them.",
+            "Explain specialise-and-trade makes both sides better off.",
+            "Contrast with self-sufficiency, which wastes effort and leaves gaps."
+          ],
+          "commonMistakes": [
+            "Thinking a country should make everything itself — it can't, and trading is more efficient.",
+            "Confusing what India sells (software, textiles) with what it must buy (crude oil)."
+          ],
+          "variations": [
+            {"prompt": "Give one thing India typically EXPORTS and one it typically IMPORTS.", "answer": "India exports goods/services such as software services or cotton textiles, and imports crude petroleum (oil) from West Asia.", "solutionSteps": ["Recall an Indian export (software/textiles).", "Recall an import (crude oil)."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [258, 259],
           "needsHumanReview": false
         }
       ]
@@ -884,6 +928,29 @@
             260,
             261
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t04_q04",
+          "prompt": "Some people complain that wholesalers, distributors and other 'middlemen' are useless — that they only make goods costlier between the producer and the buyer. Argue why these middle links actually EXIST and what useful jobs they do.",
+          "questionType": "longAnswer",
+          "answer": "The middle links exist because a producer usually cannot reach millions of scattered customers by themselves, and the customers cannot each travel to the producer. A WHOLESALER buys huge quantities from the producer in one go — which the producer wants — and stores them, taking on the risk and cost of holding stock. A DISTRIBUTOR or aggregator then carries the goods across long distances to many regions. A RETAILER finally splits the bulk into small amounts and sells them conveniently near where people live, often offering choice and after-sale help. So the 'middlemen' actually provide real services: bulk-buying, storage, transport, breaking bulk into small lots, and bringing goods close to the consumer. They do add some cost, but they save the producer and consumer far more time, travel and risk than they charge — which is exactly why the chain exists instead of everyone buying straight from the factory.",
+          "solutionSteps": [
+            "State the core reason: producers can't reach scattered consumers directly, and vice versa.",
+            "Wholesaler: buys in bulk, stores, takes on risk.",
+            "Distributor: transports goods across regions.",
+            "Retailer: breaks bulk into small lots, sells conveniently near consumers.",
+            "Conclude the services they provide outweigh the cost they add."
+          ],
+          "commonMistakes": [
+            "Agreeing they are 'useless' instead of naming the real services each link provides.",
+            "Forgetting that breaking bulk and reaching distant/scattered customers is hard for a producer alone."
+          ],
+          "variations": [
+            {"prompt": "What is the main difference between a wholesaler and a retailer?", "answer": "A wholesaler buys and sells in large (bulk) quantities, mainly to shopkeepers; a retailer sells in small quantities directly to final consumers.", "solutionSteps": ["Wholesaler = bulk, to shopkeepers.", "Retailer = small quantities, to final consumers."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [260, 261],
           "needsHumanReview": false
         }
       ]
@@ -1124,6 +1191,28 @@
             263,
             264
           ],
+          "needsHumanReview": false
+        },
+        {
+          "id": "ssch12_t05_q04",
+          "prompt": "Before buying a packet of food and, separately, a refrigerator, a careful shopper does not just trust the seller's word. Explain how a smart consumer can judge QUALITY and SAFETY, naming the certification marks/ratings that help and saying what each one tells the buyer.",
+          "questionType": "longAnswer",
+          "answer": "A smart consumer looks for official certification marks and other reliable signals rather than relying on the seller's claims. On a FOOD packet, the FSSAI mark shows that the food meets the Food Safety and Standards Authority's safety rules, so it is safe to eat; the shopper can also check the ingredients, the manufacturing and expiry dates, and the price. On an APPLIANCE like a refrigerator, the BEE Star rating shows how energy-efficient it is — more stars mean it uses less electricity and costs less to run — and standard quality marks (such as the ISI mark) show it meets basic quality standards. Beyond marks, a consumer can read other buyers' reviews and ratings, compare prices, and check warranty/return terms. Using these marks and signals, the buyer can judge quality and safety for themselves instead of just trusting the seller.",
+          "solutionSteps": [
+            "State the principle: use official marks and signals, not the seller's word.",
+            "Food: FSSAI mark = safety; also check ingredients, dates, price.",
+            "Appliance: BEE Star rating = energy efficiency; quality marks (e.g. ISI) = standards.",
+            "Add reviews, price comparison and warranty as extra checks."
+          ],
+          "commonMistakes": [
+            "Saying 'just trust a well-known brand' instead of naming the certification marks.",
+            "Mixing up the FSSAI mark (food safety) with the BEE Star rating (appliance energy use)."
+          ],
+          "variations": [
+            {"prompt": "What does a higher BEE Star rating on a refrigerator tell a buyer?", "answer": "That the appliance is more energy-efficient — more stars mean it uses less electricity, so it is cheaper to run and better for the environment.", "solutionSteps": ["Recall BEE Star = energy efficiency.", "More stars = less electricity used."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [268, 269],
           "needsHumanReview": false
         }
       ]
@@ -1918,7 +2007,10 @@
       ],
       "needsHumanReview": false,
       "source": "boss_quiz"
-    }
+    },
+    {"id": "bossquiz_ssch12_q10", "prompt": "The quantity of a product that SELLERS are willing to offer for sale at a given price is called —", "questionType": "mcq", "options": ["Demand", "Supply", "A subsidy", "A tariff"], "answer": "Supply", "solutionSteps": ["Demand is what buyers want; supply is what sellers offer.", "The question describes the seller's side.", "So it is supply."], "commonMistakes": ["Swapping supply (sellers) with demand (buyers)."], "variations": [], "difficulty": 4, "pageRefs": [255], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch12_q11", "prompt": "A shop that sells goods in SMALL quantities directly to final consumers is a —", "questionType": "mcq", "options": ["Wholesaler", "Retailer", "Producer", "Distributor"], "answer": "Retailer", "solutionSteps": ["Recall the chain producer → wholesaler → retailer → consumer.", "The retailer is the last link, selling small amounts to consumers.", "So the answer is retailer."], "commonMistakes": ["Confusing a retailer (small, to consumers) with a wholesaler (bulk, to shopkeepers)."], "variations": [], "difficulty": 4, "pageRefs": [260], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch12_q12", "prompt": "In a market, the price of a good is determined mainly by the balance between —", "questionType": "mcq", "options": ["The weather and the season", "Demand and supply", "The size of the shop", "The colour of the product"], "answer": "Demand and supply", "solutionSteps": ["Buyers create demand; sellers create supply.", "Where the two balance, a price is settled.", "So price depends on demand and supply."], "commonMistakes": ["Thinking price is set only by the seller, ignoring demand and supply."], "variations": [], "difficulty": 4, "pageRefs": [254, 255], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {
@@ -2002,6 +2094,8 @@
       ],
       "needsHumanReview": false,
       "source": "scene_quick_check"
-    }
+    },
+    {"id": "scenecheck_ssch12_q03", "prompt": "A market with no single physical place, where buyers and sellers connect and trade over the internet, is a(n) —", "questionType": "mcq", "options": ["Physical market", "Online market", "Wholesale mandi", "Weekly haat"], "answer": "Online market", "solutionSteps": ["Recall the two kinds of marketplace.", "An internet-based one with no fixed physical spot is an online market.", "A physical market needs a place and in-person presence."], "commonMistakes": ["Confusing an online market with a physical mandi or haat."], "variations": [], "difficulty": 2, "pageRefs": [256], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch12_q04", "prompt": "If the SUPPLY of a vegetable rises sharply while demand stays the same, its price will usually —", "questionType": "mcq", "options": ["Rise", "Fall", "Stay exactly the same", "Disappear"], "answer": "Fall", "solutionSteps": ["More supply with unchanged demand means a surplus.", "Sellers lower prices to sell the extra stock.", "So the price falls."], "commonMistakes": ["Thinking more supply raises the price — extra supply pushes prices down."], "variations": [], "difficulty": 2, "pageRefs": [255], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }

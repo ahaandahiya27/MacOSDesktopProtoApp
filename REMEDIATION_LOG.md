@@ -4045,3 +4045,16 @@ paper money is trusted / what if trust collapses), `t05_q04` (diff4 digital vs c
 advantages + the phone/power/network dependency). 3 boss MCQ (diff4): divisibility,
 deferred payment, medium of exchange. 2 quick MCQ: obverse, Junbeel Mela.
 Pack 331→335 topic-Qs; ssch11 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 12 (ssch12 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch12 (Understanding Markets)**: +8 PDF-faithful items.
+4 topic Qs — `t02_q04` (diff5 seasonal mango price via demand & supply), `t03_q04`
+(diff5 why countries trade — international markets), `t04_q04` (diff5 defend the
+'middlemen' / what each link does), `t05_q04` (diff5 how a consumer judges quality:
+FSSAI/ISI/BEE). 3 boss MCQ (diff4): supply definition, retailer, price=demand+supply.
+2 quick MCQ: online market, supply↑→price falls. Pack 335→339 topic-Qs; ssch12
+boss 10→13, quick 3→5. (Pivoted around existing Qs on negotiation, physical-vs-online,
+producer-flow, govt-roles.) All 7 lints green.
