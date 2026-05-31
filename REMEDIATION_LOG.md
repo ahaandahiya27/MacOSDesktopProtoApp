@@ -4222,3 +4222,17 @@ invented to ease trade, not to make people rich) + 2 realWorldExamples (moat+wal
 served defence AND tax collection; iron plough surplus enabled the Second
 Urbanisation). ssch04 glossary 10→17. All lints + Release build + suite green via
 pre-push gate. Pushed e547b76.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 25 (ssch05 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch05 (The Rise of Empires). +7 glossary terms with
+etymology: Emperor (Lat imperator), Dynasty (Gk dynastēs), Brahmi, Prakrit (Skt
+prākṛta 'natural' vs saṃskṛta 'refined'), Capital-of-a-pillar (Lat caput 'head'),
+Bureaucracy (Fr bureau + Gk -kratia), Annexation (Lat annectere). +2 misconceptions
+(Kalinga War CAUSED Ashoka's turn to dhamma, not fought to spread it; emperors
+ruled through vassals/satraps/bureaucracy, not directly) + 2 realWorldExamples
+(Ashoka's edicts = the first Indian ruler speaking to us directly; Arthaśhāstra as
+a still-studied statecraft handbook). ssch05 glossary 10→17. GL pass complete for
+ssch01–05. All lints + Release build + suite green. Pushed 50e6df2.
