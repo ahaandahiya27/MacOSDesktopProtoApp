@@ -4167,3 +4167,17 @@ interpretation, applied scenarios) on top of the original content. Pack topic-Qs
 291→371. All 7 content lints + Big-Sur safety lints + Release build + full suite
 green on every push; no regressions. NEXT: second deepening pass — GLOSSARY_ETYMOLOGY,
 DEEPDIVE, and bespoke INTERACTIVE swaps, round-robin across chapters.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 21 (ssch01 glossary etymology)
+
+GLOSSARY_ETYMOLOGY pass begins (round-robin, start ssch01). +7 glossary terms
+with etymologies grounded in the chapter — Deccan (Skt dakṣiṇa 'south'), Ghat,
+Alluvium (Lat alluvius), Glacier (Hindi himnad = hima+nada), Coral island (Skt
+pravāla), Mangrove (Sundarban = sundar+ban 'beautiful forest'), Monsoon (Arabic
+mausim → mausam). +2 misconceptions (Western≠Eastern Ghats; perennial Himalayan
+vs rain-fed peninsular rivers) + 2 realWorldExamples (Ghats rain split; Sundarbans
+mangroves). ssch01 glossary 10→17. All 7 content lints + full Big-Sur lint family
++ Release build + suite green via pre-push gate. Pushed 5c6bdaf. Article HTML
+unchanged (glossary not rendered to HTML; bundle count steady at 887).
