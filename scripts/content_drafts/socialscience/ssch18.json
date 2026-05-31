@@ -1075,7 +1075,9 @@
         "ssch18_t03_c02",
         "ssch18_t03_c03"
       ]
-    }
+    },
+    {"id": "ssch18_rw04", "title": "One law, three organs: the life of the RTI Act", "body": "The Right to Information shows the three organs working in turn. The LEGISLATURE — Parliament — debated and passed the RTI Act in 2005. The EXECUTIVE — government officials in every department — must now answer citizens' information requests. And the JUDICIARY stands ready to step in if the law is broken or challenged. A single right passes through lawmaker, enforcer and watchdog — exactly the separation of powers in action.", "relatedConceptIds": ["ssch18_t03_c01", "ssch18_t04_c02"]},
+    {"id": "ssch18_rw05", "title": "Why your road, school and currency come from three governments", "body": "Look at one day in your life. The local road and water are looked after by your Gram Panchayat or municipality. Your school and the police are run by the State government. The money in your pocket and the army at the border are the Union government's job. This is federalism: three tiers, each handling what it is closest to, so that decisions about local life are taken locally — decentralisation you can see all around you.", "relatedConceptIds": ["ssch18_t04_c03", "ssch18_t04_c01"]}
   ],
   "mnemonics": [
     {
@@ -1123,7 +1125,9 @@
       "relatedConceptIds": [
         "ssch18_t02_c01"
       ]
-    }
+    },
+    {"id": "ssch18_ms04", "kidsThink": "The police and the army ARE the government.", "actually": "They are part of the STATE's machinery that the government directs. The government is the team of elected leaders and officials who run the state for a fixed term. Governments change after elections, but the state, the police and the armed forces continue.", "relatedConceptIds": ["ssch18_t01_c02", "ssch18_t01_c03"]},
+    {"id": "ssch18_ms05", "kidsThink": "Only the ministers we elect run the country day to day.", "actually": "The executive has TWO parts. The political executive — ministers — sets direction and changes with elections. The permanent executive — the civil-service bureaucracy — stays on and actually implements decisions whichever party wins, giving the country steady administration.", "relatedConceptIds": ["ssch18_t03_c02"]}
   ],
   "ncertQA": [
     {
@@ -1286,7 +1290,13 @@
       "relatedConceptIds": [
         "ssch18_t04_c03"
       ]
-    }
+    },
+    {"id": "ssch18_gl12", "term": "Legislature", "definition": "The body that makes the laws; from Latin lex/legis ('law') + latio ('a bringing, proposing').", "example": "Parliament is India's national legislature.", "hindiTerm": "विधायिका", "relatedConceptIds": ["ssch18_t03_c01"]},
+    {"id": "ssch18_gl13", "term": "Executive", "definition": "The organ that carries out and enforces the laws; from Latin exsequi ('to carry out, follow through').", "example": "The executive includes ministers and the officials who put laws into action.", "hindiTerm": "कार्यपालिका", "relatedConceptIds": ["ssch18_t03_c02"]},
+    {"id": "ssch18_gl14", "term": "Judiciary", "definition": "The organ that interprets the laws and settles disputes; from Latin judex ('judge'), from jus ('law') + dicere ('to say').", "example": "The judiciary acts as a 'watchdog' over the other two organs.", "hindiTerm": "न्यायपालिका", "relatedConceptIds": ["ssch18_t03_c03"]},
+    {"id": "ssch18_gl15", "term": "Federalism", "definition": "A system in which power is shared between a central government and state/local governments; from Latin foedus ('treaty, league').", "example": "India's three tiers of government make it a federal country.", "hindiTerm": "संघवाद", "relatedConceptIds": ["ssch18_t04_c03"]},
+    {"id": "ssch18_gl16", "term": "Regulator", "definition": "A body or rule-maker that sets and enforces fair rules for an activity; from Latin regula ('rule').", "example": "As a regulator, the government sets safety rules for food and medicines.", "hindiTerm": "नियामक", "relatedConceptIds": ["ssch18_t04_c01"]},
+    {"id": "ssch18_gl17", "term": "Territory", "definition": "The defined land (and waters) over which a state has authority — one of the four parts of a state; from Latin terra ('land').", "example": "A state must have a clear territory with recognised borders.", "hindiTerm": "राज्यक्षेत्र", "relatedConceptIds": ["ssch18_t01_c01"]}
   ],
   "miniProjects": [
     {
