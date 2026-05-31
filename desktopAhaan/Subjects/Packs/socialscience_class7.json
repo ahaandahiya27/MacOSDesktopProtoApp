@@ -16476,6 +16476,24 @@
             "ssch07_t03_c03",
             "ssch07_t03_c04"
           ]
+        },
+        {
+          "id": "ssch07_rw04",
+          "title": "The zero that travelled around the world",
+          "body": "Indian mathematicians of the classical age worked with a place-value system in which a small circle, śūnya ('empty'), held an empty column. That simple idea — using zero as a number — made arithmetic enormously easier. Arab scholars learned it and called the numerals 'Hindi'; Europeans later borrowed them from the Arabs and named them 'Arabic numerals', though they began in India. The 0–9 digits you write today, and every computer that counts in them, descend from that Indian zero.",
+          "relatedConceptIds": [
+            "ssch07_t04_c02",
+            "ssch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch07_rw05",
+          "title": "Kalidasa, still on stage 1,500 years later",
+          "body": "The Gupta court poet Kalidasa wrote in Sanskrit, yet his play Abhijnana-Shakuntalam and poems like the Meghadutam are still performed, filmed and translated into dozens of languages around the world. When German writers in the 1790s read Shakuntala in translation, they were astonished by its beauty. A poet from a 5th-century Indian court remains a living part of world literature — proof of why the Gupta era is called a classical age.",
+          "relatedConceptIds": [
+            "ssch07_t04_c03",
+            "ssch07_t04_c01"
+          ]
         }
       ],
       "mnemonics": [
@@ -16524,6 +16542,24 @@
           "kidsThink": "Faxian's travelogue describes the whole of Gupta society exactly as it was.",
           "actually": "Faxian recorded only what he saw, mostly the prosperous cities, from his own viewpoint at one time. He himself also noted the harsh treatment of the chandalas, so historians must check his account against many sources before trusting it.",
           "relatedConceptIds": [
+            "ssch07_t03_c04"
+          ]
+        },
+        {
+          "id": "ssch07_ms04",
+          "kidsThink": "The Guptas directly ruled the whole of India, just as the Mauryas had.",
+          "actually": "The Gupta empire was large but mostly governed the north and centre directly. The south (the Pallavas) and the northeast (Kamarupa) had their own kingdoms, and even within the empire the Guptas often relied on land grants and allied kings rather than ruling every region themselves.",
+          "relatedConceptIds": [
+            "ssch07_t05_c02",
+            "ssch07_t05_c03"
+          ]
+        },
+        {
+          "id": "ssch07_ms05",
+          "kidsThink": "A 'Golden Age' means everyone in Gupta society was happy and equal.",
+          "actually": "The Gupta age was 'golden' in art, science, literature and trade — but society was far from equal. The traveller Faxian himself recorded the harsh treatment of the 'untouchable' chandalas, who had to live outside the towns. 'Golden Age' describes the cultural achievements, not equality for all.",
+          "relatedConceptIds": [
+            "ssch07_t04_c01",
             "ssch07_t03_c04"
           ]
         }
@@ -16670,6 +16706,86 @@
           "hindiTerm": "आर्यभटीय",
           "relatedConceptIds": [
             "ssch07_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch07_gl11",
+          "term": "Vikramaditya",
+          "definition": "A celebrated title of Chandragupta II; from Sanskrit vikrama ('valour') + āditya ('sun'), meaning 'Sun of Valour'.",
+          "example": "Chandragupta II took the title Vikramaditya during the Gupta golden age.",
+          "hindiTerm": "विक्रमादित्य",
+          "relatedConceptIds": [
+            "ssch07_t02_c03"
+          ]
+        },
+        {
+          "id": "ssch07_gl12",
+          "term": "Ayurveda",
+          "definition": "India's traditional system of medicine; from Sanskrit āyus ('life') + veda ('knowledge'), the 'science of life'.",
+          "example": "Ayurveda was codified in Gupta-era texts like the Charaka Samhita.",
+          "hindiTerm": "आयुर्वेद",
+          "relatedConceptIds": [
+            "ssch07_t04_c04"
+          ]
+        },
+        {
+          "id": "ssch07_gl13",
+          "term": "Astronomy",
+          "definition": "The scientific study of the stars, planets and sky; from Greek astron ('star') + nomos ('law').",
+          "example": "Aryabhata's astronomy correctly explained day and night by the Earth's spin.",
+          "hindiTerm": "खगोलशास्त्र",
+          "relatedConceptIds": [
+            "ssch07_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch07_gl14",
+          "term": "Zero (shunya)",
+          "definition": "The number standing for 'nothing'; from Sanskrit śūnya ('empty, void'). India's place-value system with zero later spread across the world.",
+          "example": "A place-value system using zero made the difficult sums in the Aryabhatiya possible.",
+          "hindiTerm": "शून्य",
+          "relatedConceptIds": [
+            "ssch07_t04_c02"
+          ]
+        },
+        {
+          "id": "ssch07_gl15",
+          "term": "Agrahara",
+          "definition": "A village or piece of land granted by a king, often tax-free, to brahmins or temples; a common form of Gupta land grant.",
+          "example": "Gupta land grants recorded on copper plates often created agraharas.",
+          "hindiTerm": "अग्रहार",
+          "relatedConceptIds": [
+            "ssch07_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch07_gl16",
+          "term": "Pilgrim",
+          "definition": "A person who travels to holy places; from Latin peregrinus ('foreigner, traveller').",
+          "example": "The Chinese pilgrim Faxian travelled across Gupta India to visit Buddhist sites.",
+          "hindiTerm": "तीर्थयात्री",
+          "relatedConceptIds": [
+            "ssch07_t03_c04"
+          ]
+        },
+        {
+          "id": "ssch07_gl17",
+          "term": "Diplomacy",
+          "definition": "Managing relations between states through negotiation and alliances rather than war; from Greek diploma ('a folded official document').",
+          "example": "Through marriage diplomacy, Prabhavati Gupta linked the Guptas and the Vakatakas.",
+          "hindiTerm": "कूटनीति",
+          "relatedConceptIds": [
+            "ssch07_t02_c04"
+          ]
+        },
+        {
+          "id": "ssch07_gl18",
+          "term": "Classical Age",
+          "definition": "A period later looked back on as a high point and a model of achievement in art and learning; from Latin classicus ('of the highest class').",
+          "example": "The Gupta era is called India's classical age because of its science, art and poetry.",
+          "hindiTerm": "शास्त्रीय युग / स्वर्ण युग",
+          "relatedConceptIds": [
+            "ssch07_t04_c01"
           ]
         }
       ],
