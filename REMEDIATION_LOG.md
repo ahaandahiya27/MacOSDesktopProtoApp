@@ -4263,3 +4263,17 @@ elsewhere — not all-India direct rule; 'Golden Age' = cultural peak, not socia
 equality, per Faxian on the chandalas) + 2 realWorldExamples (the Indian zero that
 became 'Arabic numerals'; Kalidasa still performed worldwide). ssch07 glossary
 10→18. All lints + Release build + suite green. Pushed 71087d7. GL: ssch01–07 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 28 (ssch08 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch08 (How the Land Becomes Sacred). +7 glossary terms
+with etymology: Chār Dhām (chār 'four' + dhām 'abode'), Kumbh Mela (kumbh 'pot' +
+mela 'fair'), Bodhi tree (bodhi 'awakening'), Peepal, Banyan (from 'banias'/
+traders), Conservation (conservare). +2 misconceptions (Indian sacred sites are
+often shared across faiths; the Kumbh rotates among four cities on a ~12-year
+Jupiter/Sun cycle, not one fixed annual place) + 2 realWorldExamples (the Chār Dhām
+stitches the subcontinent into one cultural space; sacred peepal/banyan trees =
+belief-driven conservation). ssch08 glossary 11→17. All lints + Release build +
+suite green. Pushed 62f2254. GL: ssch01–08 done.
