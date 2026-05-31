@@ -4384,3 +4384,17 @@ later Ghurids came to RULE; Al-Biruni shows two-way learning, not one-way plunde
 → Latin sinus; Rajendra Chola I's naval expedition to Srivijaya/Sumatra). ssch16
 glossary 11→17. All lints + Release build + suite green. Pushed e8af430. GL:
 ssch01–16 done.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 37 (ssch17 glossary etymology)
+
+GLOSSARY_ETYMOLOGY for ssch17 (India, a Home to Many). +6 glossary terms with
+etymology matched to the pluralism theme: Cosmopolitan (Gk kosmos+politēs
+'world-citizen'), Pluralism (Lat plus), Ethos (Gk ēthos), Migration (Lat migrare),
+Tolerance (Lat tolerare), Synagogue (Gk synagōgē). +2 misconceptions (a refugee
+flees danger vs an opportunity-seeking immigrant; welcoming diversity enriched
+rather than weakened India) + 2 realWorldExamples (the 'sugar in milk' Parsi-
+arrival legend at Sanjan; copper-plate grants welcoming Kerala's Jewish & Syriac
+Christian communities). ssch17 glossary 11→17. All lints + Release build + suite
+green. Pushed 13783a3. GL: ssch01–17 done.
