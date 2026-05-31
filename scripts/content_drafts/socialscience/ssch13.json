@@ -1313,7 +1313,9 @@
         "ssch13_t04_c01",
         "ssch13_t05_c04"
       ]
-    }
+    },
+    {"id": "ssch13_rw04", "title": "Why a wise farmer lets beans follow wheat", "body": "Instead of growing wheat in the same field year after year, many farmers follow a grain crop with a pulse like gram or beans. The reason is hidden in the roots: pulses host tiny bacteria that pull nitrogen out of the air and lock it into the soil. So the next wheat crop finds the soil already refreshed, and the farmer needs less bought fertiliser. This is crop rotation — an old trick that lets the land feed itself.", "relatedConceptIds": ["ssch13_t04_c01", "ssch13_t05_c03"]},
+    {"id": "ssch13_rw05", "title": "Three borrowed words that run the farming year", "body": "India's cropping calendar is built on three words from Arabic. Kharif (from a word for 'autumn') crops like rice and cotton are sown with the monsoon and harvested in autumn. Rabi (from 'spring') crops like wheat and gram are sown in winter and reaped in spring. Zaid is the short, hot-season crop — melons and cucumbers — grown between the two. Knowing what the names mean turns a list to memorise into a story about the seasons.", "relatedConceptIds": ["ssch13_t02_c03", "ssch13_t02_c01"]}
   ],
   "mnemonics": [
     {
@@ -1359,7 +1361,9 @@
       "relatedConceptIds": [
         "ssch13_t03_c01"
       ]
-    }
+    },
+    {"id": "ssch13_ms04", "kidsThink": "All farming in India is basically the same.", "actually": "It varies enormously. A subsistence farmer grows mainly to feed the family, while a commercial farmer grows crops to sell. Some fields depend only on rain, others on irrigation, and the crop changes with the soil, climate and season — kharif, rabi or zaid. There is no single 'Indian farm'.", "relatedConceptIds": ["ssch13_t05_c01", "ssch13_t02_c03"]},
+    {"id": "ssch13_ms05", "kidsThink": "Modern bought seeds and chemicals are always better than traditional methods.", "actually": "High-yield seeds and fertilisers did raise output in the Green Revolution, but they cost money, demand a lot of water and can damage the soil over time. That is why many farmers now blend saved traditional seeds and organic methods with modern inputs, rather than relying on chemicals alone.", "relatedConceptIds": ["ssch13_t05_c02", "ssch13_t04_c02"]}
   ],
   "ncertQA": [
     {
@@ -1514,7 +1518,14 @@
       "relatedConceptIds": [
         "ssch13_t05_c03"
       ]
-    }
+    },
+    {"id": "ssch13_gl12", "term": "Sustainable farming", "definition": "Farming that meets today's needs without harming the soil, water or the ability to farm in future; from Latin sustinere ('to hold up, maintain').", "example": "Rotating crops and saving water are part of sustainable farming.", "hindiTerm": "टिकाऊ खेती", "relatedConceptIds": ["ssch13_t05_c03"]},
+    {"id": "ssch13_gl13", "term": "Fertiliser", "definition": "A substance added to soil to supply nutrients and raise crop yield; from Latin ferre ('to bear, produce').", "example": "Chemical fertilisers boosted yields during the Green Revolution.", "hindiTerm": "उर्वरक / खाद", "relatedConceptIds": ["ssch13_t05_c02"]},
+    {"id": "ssch13_gl14", "term": "Terrace farming", "definition": "Cutting a hillside into level steps so crops can be grown and rainwater held back on steep slopes.", "example": "Terrace farming turns Himalayan hillsides into staircases of paddy fields.", "hindiTerm": "सीढ़ीदार खेती", "relatedConceptIds": ["ssch13_t04_c01"]},
+    {"id": "ssch13_gl15", "term": "Subsistence farming", "definition": "Growing mainly enough to feed one's own family, with little or nothing left to sell; from Latin subsistere ('to hold out, survive').", "example": "A subsistence farmer keeps most of the harvest to eat.", "hindiTerm": "निर्वाह खेती", "relatedConceptIds": ["ssch13_t05_c01"]},
+    {"id": "ssch13_gl16", "term": "Horticulture", "definition": "The cultivation of fruits, vegetables and flowers; from Latin hortus ('garden') + cultura ('cultivation').", "example": "Growing mangoes and vegetables for sale is horticulture.", "hindiTerm": "बागवानी / उद्यान-कृषि", "relatedConceptIds": ["ssch13_t01_c01"]},
+    {"id": "ssch13_gl17", "term": "Pesticide", "definition": "A chemical used to kill pests that damage crops; from Latin pestis ('plague') + caedere ('to kill') — the '-cide' ending means 'killer'.", "example": "Overusing pesticides can harm the soil and helpful insects.", "hindiTerm": "कीटनाशक", "relatedConceptIds": ["ssch13_t05_c02"]},
+    {"id": "ssch13_gl18", "term": "Bund", "definition": "A low raised embankment around or across a field that holds water in or keeps soil from washing away.", "example": "Farmers plant bananas on the bund between paddy fields.", "hindiTerm": "बंध / मेड़", "relatedConceptIds": ["ssch13_t03_c03"]}
   ],
   "miniProjects": [
     {
