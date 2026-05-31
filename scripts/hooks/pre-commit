@@ -26,15 +26,44 @@ if [ -n "$STAGED_SWIFT" ]; then
     fi
 fi
 
-# 2) ViewBuilder ≤10 children static check (heuristic; ok if it over-flags).
+# 2) ViewBuilder/CommandsBuilder ≤10 direct-children static check. Swift 5.5
+#    buildBlock caps a result builder at 10 children; the 11th compiles on the
+#    dev Mac but hard-fails on the iMac ("Extra arguments at positions #11..#N
+#    in call"). This is the gate that the Help CommandGroup (20 children) slipped
+#    past on 2026-05-30 — the lint now scans CommandGroup/CommandMenu/Menu/
+#    ToolbarItemGroup closures and @ViewBuilder/@CommandsBuilder funcs/vars, not
+#    just View-body layout containers. Hard gate. (--quiet keeps the happy path
+#    silent; the script was previously invoked with --quiet but argparse rejected
+#    it, silently neutering this gate — fixed alongside the scan extension.)
 if [ -f "scripts/check_viewbuilder_limit.py" ]; then
-    if ! python3 scripts/check_viewbuilder_limit.py --quiet 2>/dev/null; then
-        # The script prints details; fall through and let the dev decide.
+    if ! python3 scripts/check_viewbuilder_limit.py --quiet; then
         echo
-        echo "pre-commit: ViewBuilder check flagged something — verify on Big Sur."
-        echo "If false-positive, run with: git commit --no-verify"
-        # Don't block; this is a heuristic. Comment out the next line to enforce.
-        # exit 1
+        echo "pre-commit: ViewBuilder/CommandsBuilder check flagged a closure with"
+        echo "  >10 direct children. Wrap groups in a Group { ... } (it flattens"
+        echo "  inline in stacks/menus — same items, same order) or extract a"
+        echo "  @ViewBuilder computed var. Heuristic — verify by counting children."
+        echo "If a confirmed false-positive (deep multi-line modifier chain),"
+        echo "  bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
+# 2.5) @MainActor closure-ref check (deterministic, with escape hatch). Catches
+#      a @MainActor instance method passed by BARE reference where SwiftUI wants
+#      a plain () -> Void ("Converting '@MainActor () -> ()' to '() -> Void'
+#      loses global actor 'MainActor'") — a hard error on Swift 5.5 / Big Sur,
+#      only a warning on the dev Mac. This is the OTHER class that broke the iMac
+#      on 2026-05-30. Hard gate; per-line escape hatch is `// mainactor-ok`, so
+#      it can never be an unfixable false block (wrap in { } is the real fix).
+if [ -f "scripts/check_mainactor_closure_refs.py" ]; then
+    if ! python3 scripts/check_mainactor_closure_refs.py; then
+        echo
+        echo "pre-commit: @MainActor closure-ref check failed — a @MainActor method"
+        echo "  is passed by bare reference where a plain () -> Void is expected."
+        echo "Fix: wrap it in an explicit closure, e.g. action: { toggleRun() }."
+        echo "If it is a confirmed non-isolated reference, append // mainactor-ok"
+        echo "  to the line. (Bypass-all with: git commit --no-verify.)"
+        exit 1
     fi
 fi
 

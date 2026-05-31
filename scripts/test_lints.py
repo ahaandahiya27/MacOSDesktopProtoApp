@@ -117,6 +117,19 @@ def main() -> int:
     if not _check("clean fixture flags 0", 0, _count(v, "LH006")):
         failures.append("LH006 clean")
 
+    # The Big Sur compile-safety lints carry their own embedded fixtures via a
+    # `run_selftest()` entrypoint (no external fixture files). Drive them here
+    # so the suite fails loudly if a regex edit silently breaks classification.
+    print("== check_viewbuilder_limit — embedded --selftest ==")
+    vb = _import_lint_module("check_viewbuilder_limit")
+    if vb.run_selftest() != 0:
+        failures.append("check_viewbuilder_limit selftest")
+
+    print("== check_mainactor_closure_refs — embedded --selftest ==")
+    mc = _import_lint_module("check_mainactor_closure_refs")
+    if mc.run_selftest() != 0:
+        failures.append("check_mainactor_closure_refs selftest")
+
     print()
     if failures:
         print(f"test_lints: FAIL — {len(failures)} broken rule(s):")
