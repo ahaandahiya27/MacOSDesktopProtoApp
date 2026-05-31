@@ -4033,3 +4033,15 @@ uphold. 2 quick MCQ: Fraternity (4th goal), judiciary (third organ). Pack 327→
 topic-Qs; ssch10 boss 10→13, quick 3→5. (Pivoted around existing diff-4 t04_q01
 right-vs-DP, t03_q03 heritage, t05_q01 secular/republic, and 'We the People' q.)
 *** HALFWAY: ssch01–10 OLYMPIAD complete. *** All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 11 (ssch11 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch11 (From Barter to Money)**: +8 PDF-faithful items.
+4 topic Qs — `t02_q04` (diff5 four barter weaknesses each with an example), `t03_q04`
+(diff5 one ox-sale story showing all four functions of money), `t04_q04` (diff5 why
+paper money is trusted / what if trust collapses), `t05_q04` (diff4 digital vs cash
+advantages + the phone/power/network dependency). 3 boss MCQ (diff4): divisibility,
+deferred payment, medium of exchange. 2 quick MCQ: obverse, Junbeel Mela.
+Pack 331→335 topic-Qs; ssch11 boss 10→13, quick 3→5. All 7 lints green.

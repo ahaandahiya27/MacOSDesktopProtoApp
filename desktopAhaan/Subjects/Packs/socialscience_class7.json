@@ -24371,6 +24371,39 @@
                 233
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_t02_q04",
+              "prompt": "Barter has FOUR main weaknesses: (1) the double coincidence of wants, (2) no common measure of value, (3) goods that cannot be divided, and (4) goods that cannot be easily stored or carried. For EACH weakness, give a short everyday barter example that shows the problem in action.",
+              "questionType": "longAnswer",
+              "answer": "(1) Double coincidence of wants: a farmer who has rice and wants shoes must find a shoemaker who happens to want rice at that very moment — if no such person exists, no trade happens. (2) No common measure of value: two traders argue endlessly over how many bags of wheat equal one goat, because there is no agreed price to settle it. (3) No divisibility: someone with a cow who only wants to buy a little salt is stuck — you cannot cut a living cow into small pieces to pay. (4) Hard to store/carry: a fisherman who is paid in fish cannot save that 'money' — the fish rot in a day and are heavy to carry to market. Each example shows why barter is clumsy, and money fixes all four because it is widely wanted, gives every good a price, divides into small coins, and lasts and travels easily.",
+              "solutionSteps": [
+                "Recall the four weaknesses of barter.",
+                "Give a concrete example for double coincidence of wants (matching buyer and seller).",
+                "Give one for no common measure (no agreed price).",
+                "Give one for divisibility (can't split a cow) and one for storage/portability (fish rot)."
+              ],
+              "commonMistakes": [
+                "Describing the weaknesses in the abstract without a concrete everyday example.",
+                "Mixing up the divisibility problem with the double-coincidence problem."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the 'double coincidence of wants' the most famous problem with barter?",
+                  "answer": "Because for any barter trade to happen, each person must want exactly what the other has at the same time — and finding such a perfect match is often impossible, so many useful trades simply never take place.",
+                  "solutionSteps": [
+                    "Define double coincidence of wants.",
+                    "Explain why matching two wants at once is rare.",
+                    "Conclude it blocks many trades."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                233,
+                234
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -24599,6 +24632,38 @@
               "difficulty": 3,
               "pageRefs": [
                 237
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_t03_q04",
+              "prompt": "A farmer sells his ox for ₹40,000 today and, three months later, uses that money to buy seeds and to repay a loan. Using this single story, show how money is performing ALL FOUR of its functions: medium of exchange, store of value, measure of value, and standard of deferred payment.",
+              "questionType": "longAnswer",
+              "answer": "Medium of exchange: when the farmer swaps his ox for money (instead of bartering it directly for seeds), money is the in-between thing that makes the sale and later purchases easy — that is the medium-of-exchange function. Measure of value: the ox is priced at ₹40,000 and the seeds at some number of rupees, so money lets the farmer compare the worth of completely different things using one yardstick — that is the measure-of-value function. Store of value: the farmer keeps the ₹40,000 for three months and it does not rot or vanish like the ox or grain would, so money lets him store his wealth over time — the store-of-value function. Standard of deferred payment: he had earlier taken a loan and now repays it in money agreed in advance, so money lets debts be fixed now and settled later — the standard-of-deferred-payment function. One simple story thus uses all four jobs money does.",
+              "solutionSteps": [
+                "Medium of exchange: money goes between selling the ox and buying seeds.",
+                "Measure of value: prices in rupees let very different goods be compared.",
+                "Store of value: ₹40,000 keeps its worth over three months, unlike the ox.",
+                "Standard of deferred payment: a loan agreed earlier is repaid later in money."
+              ],
+              "commonMistakes": [
+                "Confusing 'store of value' (keeping worth over time) with 'measure of value' (comparing prices).",
+                "Naming the functions without tying each to a step in the farmer's story."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which function of money lets you take a loan now and repay it later?",
+                  "answer": "The standard of deferred payment — money lets a debt be fixed today and paid back at a later date.",
+                  "solutionSteps": [
+                    "Recall the four functions.",
+                    "Identify deferred payment as the loan-now-pay-later function."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                235,
+                236
               ],
               "needsHumanReview": false
             }
@@ -24832,6 +24897,38 @@
                 240
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_t04_q04",
+              "prompt": "A ₹100 note is just a printed piece of paper — as paper, it is worth almost nothing. Yet everyone accepts it as worth ₹100. Explain WHY paper money works, and what would happen to its value if people stopped trusting it.",
+              "questionType": "longAnswer",
+              "answer": "Paper money works because of TRUST and a GUARANTEE, not because the paper itself is valuable. In India, currency is issued by the Reserve Bank of India (RBI), and the note carries a promise backed by the government that it is worth ₹100. Because everyone trusts that promise and knows everyone else will accept the note, each person is happy to take it in exchange for goods — so it circulates as money. Its value is really shared confidence: 'I'll take this paper because I'm sure the next person will too.' If people STOPPED trusting it — if they feared no one would accept it or that the guarantee was worthless — they would refuse to take the notes, and the money would lose its value, no matter what is printed on it. So paper money is only as strong as the trust and authority standing behind it.",
+              "solutionSteps": [
+                "State that the paper itself is nearly worthless — value comes from elsewhere.",
+                "Explain the source: a guarantee from the RBI/government plus everyone's trust.",
+                "Explain why trust makes it circulate (everyone accepts it because everyone else will).",
+                "Explain that if trust collapsed, the notes would lose their value."
+              ],
+              "commonMistakes": [
+                "Thinking the paper or ink is itself worth ₹100.",
+                "Forgetting the roles of the RBI's guarantee and shared public trust."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who issues currency notes in India today?",
+                  "answer": "The Reserve Bank of India (RBI).",
+                  "solutionSteps": [
+                    "Recall who legally issues India's currency.",
+                    "Name the Reserve Bank of India."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240,
+                241
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -25022,6 +25119,39 @@
               ],
               "difficulty": 2,
               "pageRefs": [
+                243
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_t05_q04",
+              "prompt": "Compare paying with digital money (UPI / a QR code) to paying with coins and notes. Give TWO clear advantages of digital money, and ONE thing you still NEED for digital money to work that you do NOT need to pay with cash.",
+              "questionType": "longAnswer",
+              "answer": "Advantages of digital money: (1) You don't have to carry cash or worry about exact change — you can pay any amount instantly, even tiny or very large sums, straight from your bank account. (2) Every payment leaves an automatic record, which makes it easier to keep track of money and harder to lose, unlike cash which can be misplaced or stolen with no trace. (Other valid advantages: you can pay someone far away without meeting them, and it is quick.) But digital money has a requirement cash does not: you NEED a working phone or card AND electricity and an internet/network connection. With coins and notes you can pay even when the power is out or there is no signal; with digital money, if the network or battery fails, you simply cannot pay. So digital money is convenient but depends on technology that cash does not need.",
+              "solutionSteps": [
+                "Advantage 1: no need to carry cash/change; pay any amount instantly.",
+                "Advantage 2: automatic record, harder to lose than cash.",
+                "Requirement: digital money needs a phone/card + power + internet/network.",
+                "Contrast: cash works without any of that."
+              ],
+              "commonMistakes": [
+                "Listing only advantages and forgetting the dependence on phone/power/network.",
+                "Saying digital money is always better — it fails without electricity or a signal."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why might an elderly shopkeeper in a village with poor internet still prefer cash?",
+                  "answer": "Because cash works without any phone, electricity or network — so when the internet is down or signals are weak, cash payments still go through while digital ones may fail.",
+                  "solutionSteps": [
+                    "Recall digital money needs network/power.",
+                    "Poor internet → digital may fail.",
+                    "Cash always works, so it is preferred there."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                242,
                 243
               ],
               "needsHumanReview": false
@@ -25816,6 +25946,87 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch11_q10",
+          "prompt": "You have a cow but only want to buy a little salt. Barter makes this hard, but money solves it because money is —",
+          "questionType": "mcq",
+          "options": [
+            "Heavy",
+            "Divisible into small units",
+            "Made of gold only",
+            "Issued by shops"
+          ],
+          "answer": "Divisible into small units",
+          "solutionSteps": [
+            "A cow cannot be cut into small pieces to pay.",
+            "Money comes in small coins and notes.",
+            "So money is divisible, solving the problem."
+          ],
+          "commonMistakes": [
+            "Confusing divisibility with portability or durability."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            234
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch11_q11",
+          "prompt": "Buying something now and agreeing to pay for it later (like repaying a loan) is possible because money serves as a —",
+          "questionType": "mcq",
+          "options": [
+            "Medium of exchange",
+            "Standard of deferred payment",
+            "Sand timer",
+            "Barter token"
+          ],
+          "answer": "Standard of deferred payment",
+          "solutionSteps": [
+            "Recall money's four functions.",
+            "Fixing a debt now and paying later is the 'standard of deferred payment'.",
+            "Money's stable value makes this possible."
+          ],
+          "commonMistakes": [
+            "Confusing deferred payment with medium of exchange (paying on the spot)."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            236
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch11_q12",
+          "prompt": "When you hand over a ₹20 note to buy a pencil instead of swapping goods, money is acting as a —",
+          "questionType": "mcq",
+          "options": [
+            "Store of value",
+            "Medium of exchange",
+            "Measure of value",
+            "Commodity"
+          ],
+          "answer": "Medium of exchange",
+          "solutionSteps": [
+            "Money sits 'in between' the buyer and seller.",
+            "It is the thing exchanged for goods.",
+            "That is the medium-of-exchange function."
+          ],
+          "commonMistakes": [
+            "Confusing medium of exchange (used in the trade) with store of value (saved for later)."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            235
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -25893,6 +26104,60 @@
           "difficulty": 1,
           "pageRefs": [
             243
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch11_q03",
+          "prompt": "On a coin, the main side carrying the chief design or portrait is called the —",
+          "questionType": "mcq",
+          "options": [
+            "Obverse",
+            "Reverse",
+            "Margin",
+            "Alloy"
+          ],
+          "answer": "Obverse",
+          "solutionSteps": [
+            "A coin has two sides: obverse and reverse.",
+            "The obverse is the main/front side with the chief design.",
+            "The reverse is the other side."
+          ],
+          "commonMistakes": [
+            "Swapping obverse (front) and reverse (back)."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            239
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch11_q04",
+          "prompt": "At which Assam festival does the barter system still survive today, with tribes exchanging goods directly?",
+          "questionType": "mcq",
+          "options": [
+            "The Junbeel Mela",
+            "The Kumbh Mela",
+            "Diwali",
+            "The Hornbill cup"
+          ],
+          "answer": "The Junbeel Mela",
+          "solutionSteps": [
+            "Recall the living example of barter in the chapter.",
+            "It is the Junbeel Mela in Assam.",
+            "Tribes there still swap goods directly."
+          ],
+          "commonMistakes": [
+            "Confusing the Junbeel Mela with the Kumbh Mela (a river pilgrimage)."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            231
           ],
           "needsHumanReview": false,
           "source": "scene_quick_check"
