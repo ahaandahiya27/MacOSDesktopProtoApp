@@ -1457,7 +1457,9 @@
       "relatedConceptIds": [
         "ssch15_t04_c02"
       ]
-    }
+    },
+    {"id": "ssch15_rw04", "title": "A temple carved downward from one rock", "body": "Most buildings are built UP, brick by brick. The Kailasa temple at Ellora was made the opposite way: Rashtrakuta workers started at the top of a rocky hill and chiselled DOWNWARD, cutting away an estimated 200,000 tonnes of stone to reveal a full temple — courtyards, pillars, sculptures and all — out of a single mass of rock, with no joins and no mortar. It is the world's largest monolithic structure, and a staggering feat of planning, because a single mistake could not be undone.", "relatedConceptIds": ["ssch15_t02_c04", "ssch15_t03_c02"]},
+    {"id": "ssch15_rw05", "title": "A village that ran itself 1,200 years ago", "body": "Inscriptions on temple walls in the Chola and Pallava country describe village assemblies (sabhas) that governed local life. Committees to look after the tank, the temple and disputes were chosen by a lottery: names written on palm-leaf tickets were drawn from a pot. Members had to be honest and could be removed for misconduct. Long before modern elections, villages were quietly practising a careful form of local self-government.", "relatedConceptIds": ["ssch15_t04_c01"]}
   ],
   "mnemonics": [
     {
@@ -1505,7 +1507,9 @@
       "relatedConceptIds": [
         "ssch15_t04_c03"
       ]
-    }
+    },
+    {"id": "ssch15_ms04", "kidsThink": "A king of this age personally ran every part of his kingdom.", "actually": "He ruled through layers. Subordinate lords called samantas controlled their own areas in return for tribute and soldiers, while villages largely governed themselves through assemblies like the sabha. Royal power flowed down through many hands, not directly from the king to every village.", "relatedConceptIds": ["ssch15_t04_c01", "ssch15_t01_c01"]},
+    {"id": "ssch15_ms05", "kidsThink": "A traveller's account like Xuanzang's is a perfect, complete record of the time.", "actually": "A traveller writes from his own viewpoint, visits only some places, and can misunderstand or exaggerate. Historians treat such travelogues as ONE valuable source, to be cross-checked against inscriptions, coins and local records before trusting them.", "relatedConceptIds": ["ssch15_t01_c03"]}
   ],
   "ncertQA": [
     {
@@ -1666,7 +1670,13 @@
       "relatedConceptIds": [
         "ssch15_t05_c03"
       ]
-    }
+    },
+    {"id": "ssch15_gl12", "term": "Monastery", "definition": "A building where monks live, study and worship together; from Greek monos ('alone'). Nalanda and Vikramashila were great Buddhist monasteries.", "example": "The Palas built and supported famous Buddhist monasteries.", "hindiTerm": "मठ / विहार", "relatedConceptIds": ["ssch15_t02_c02"]},
+    {"id": "ssch15_gl13", "term": "Epigraphy", "definition": "The study of inscriptions carved on stone or metal; from Greek epi- ('on') + graphein ('to write').", "example": "Through epigraphy, historians read a king's deeds straight off a temple wall.", "hindiTerm": "अभिलेखशास्त्र", "relatedConceptIds": ["ssch15_t01_c03"]},
+    {"id": "ssch15_gl14", "term": "Chronicle", "definition": "A written record of events set down in the order they happened; from Greek chronos ('time').", "example": "Kalhana's Rajatarangini is a chronicle of Kashmir's kings.", "hindiTerm": "इतिवृत्त / कालक्रम", "relatedConceptIds": ["ssch15_t05_c03"]},
+    {"id": "ssch15_gl15", "term": "Bhakti (root)", "definition": "Loving personal devotion to a deity, open to everyone; the word comes from Sanskrit bhaj ('to share, to be devoted to').", "example": "The Alvars and Nayanars sang their bhakti in the people's own language.", "hindiTerm": "भक्ति", "relatedConceptIds": ["ssch15_t05_c01"]},
+    {"id": "ssch15_gl16", "term": "Ratha", "definition": "A temple or shrine carved to look like a chariot; from Sanskrit ratha ('chariot').", "example": "The Pancha Rathas at Mamallapuram are five temples shaped like chariots.", "hindiTerm": "रथ", "relatedConceptIds": ["ssch15_t03_c02"]},
+    {"id": "ssch15_gl17", "term": "Tank (eri)", "definition": "A large man-made reservoir that stores rainwater for irrigation and daily use, called eri in Tamil.", "example": "Pallava and Chola tanks still water fields in Tamil Nadu today.", "hindiTerm": "तालाब / जलाशय", "relatedConceptIds": ["ssch15_t04_c02"]}
   ],
   "miniProjects": [
     {
