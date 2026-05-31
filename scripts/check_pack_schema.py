@@ -54,6 +54,8 @@ VALID_TYPES = {
     "mcq", "shortAnswer", "longAnswer", "numerical",
     "trueFalse", "matchTheFollowing", "fillInBlank",
 }
+# Mirrors Swift's QuestionSource enum raw values (QuestionSource.swift).
+VALID_SOURCES = {"book_end", "boss_quiz", "scene_quick_check"}
 DEPTHS = ["oneLine", "kidFriendly", "textbook", "expert"]
 
 
@@ -173,6 +175,12 @@ def check_question(q: dict, v: Violations):
     for i, var in enumerate(q.get("variations") or []):
         check_variation(var, q.get("id", "?"), i, v)
 
+    # Optional `source` must match Swift's QuestionSource enum
+    # (QuestionSource.swift) — an invalid value is a hard decode failure.
+    src = q.get("source")
+    if src is not None and src not in VALID_SOURCES:
+        v.add(where, f"source '{src}' is not one of {sorted(VALID_SOURCES)}")
+
 
 def check_pack(pack_path: Path) -> int:
     """Lint one pack. Returns count of violations (0 on clean)."""
@@ -208,6 +216,25 @@ def check_pack(pack_path: Path) -> int:
                 check_concept(c, all_concept_ids, all_question_ids, v)
             for q in t.get("questions", []):
                 check_question(q, v)
+        # Chapter-level question arrays (bossQuestions, quickCheckQuestions)
+        # are decoded by the same Question initialiser as topic questions, so
+        # validate them with the same checks — previously they were skipped,
+        # letting invalid `source`/variation shapes reach the runtime decoder.
+        for q in (ch.get("bossQuestions") or []):
+            check_question(q, v)
+        for q in (ch.get("quickCheckQuestions") or []):
+            check_question(q, v)
+        # conceptMap node "kind" must match Swift's NodeKind enum
+        # (ConceptMap.swift) — an invalid value is a hard decode failure at
+        # runtime, so catch it cheaply here instead of in the build.
+        cm = ch.get("conceptMap")
+        if isinstance(cm, dict):
+            valid_kinds = {"concept", "crossChapter", "pivot"}
+            for i, node in enumerate(cm.get("nodes", []) or []):
+                k = node.get("kind") if isinstance(node, dict) else None
+                if k is not None and k not in valid_kinds:
+                    v.add(f"{ch_where}.conceptMap.nodes[{i}]",
+                          f"invalid kind '{k}' (must be one of {sorted(valid_kinds)})")
 
     if not v:
         print(f"{pack_path.name}: clean ({len(all_concept_ids)} concepts, {len(all_question_ids)} questions)")
