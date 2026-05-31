@@ -36394,6 +36394,38 @@
                 102
               ],
               "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_t01_q04",
+              "prompt": "For centuries the Hindu Shahis guarded the north-west frontier and its mountain passes, especially the Khyber Pass. Why was the Khyber Pass so important, and what does the long resistance of the Hindu Shahis tell us about HOW invasions reached India?",
+              "questionType": "longAnswer",
+              "answer": "The Khyber Pass was one of the few easy ways through the high, rugged mountains of the north-west, so it acted as a gateway between Central Asia and the Indian plains. Almost all early land invaders had to funnel through such passes, which is exactly why the Hindu Shahis — who ruled that frontier — fought so hard and so long to hold the Khyber: whoever controlled the pass controlled the door to India. Their long resistance tells us two things: first, that India was never sealed off — its natural mountain wall had gateways through which armies (and traders and ideas) could come; and second, that those gateways were defended frontiers, so invaders had to break through determined local kingdoms before reaching the rich plains beyond. When the Shahi defence finally weakened, the route lay open for raiders like Mahmud of Ghazni.",
+              "solutionSteps": [
+                "Explain the Khyber Pass is a rare easy route through the north-west mountains — a gateway to India.",
+                "Whoever holds the pass holds the 'door', so the Hindu Shahis fought hard for it.",
+                "Their resistance shows India had gateways, not a sealed wall, and that they were defended.",
+                "Once the Shahi defence failed, the route lay open to invaders like Mahmud of Ghazni."
+              ],
+              "commonMistakes": [
+                "Thinking the mountains made India impossible to invade — the passes were the way in.",
+                "Forgetting that the frontier was actively defended by kingdoms like the Hindu Shahis."
+              ],
+              "variations": [
+                {
+                  "prompt": "Through which mountain pass did most early land invaders enter India?",
+                  "answer": "The Khyber Pass, in the north-west.",
+                  "solutionSteps": [
+                    "Recall the main north-west gateway.",
+                    "Name the Khyber Pass."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                99,
+                100
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -36589,6 +36621,38 @@
                 "Sri Lanka and the Maldives",
                 "Persia and Iraq"
               ]
+            },
+            {
+              "id": "ssch16_t02_q04",
+              "prompt": "While raids shook the north-west, the mathematician Bhaskaracharya quietly continued India's great tradition of science in the 12th century. What does this tell us about the relationship between political TURMOIL and INTELLECTUAL life?",
+              "questionType": "longAnswer",
+              "answer": "It tells us that turmoil in one part of a land does not switch off learning everywhere. The raids of Mahmud and the Ghurids struck mainly the north-west, but much of India — especially the more stable south and centre — carried on its scholarly traditions. In those calmer regions, supported by local kings and old centres of learning, a scholar like Bhaskaracharya could write major works of mathematics and astronomy (such as the Lilavati). So intellectual life depends on having SOME stable, supported space to work in, not on the whole subcontinent being peaceful. The lesson is that a civilisation can keep thinking, calculating and creating even while parts of it are under attack — which is why this 'age of turning tides' was also an age of remarkable science. Political storms and intellectual achievement can exist side by side.",
+              "solutionSteps": [
+                "Note the raids hit mainly the north-west, not all of India.",
+                "Stabler regions (south/centre) kept their scholarly traditions, with royal support.",
+                "So a scholar like Bhaskaracharya could still produce major works (e.g. the Lilavati).",
+                "Conclude that turmoil in one area does not end learning everywhere — the two can coexist."
+              ],
+              "commonMistakes": [
+                "Assuming invasions stopped all learning across India.",
+                "Forgetting that stable regions and royal patronage are what let science continue."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name Bhaskaracharya's famous mathematics work.",
+                  "answer": "The Lilavati (part of his larger work, the Siddhanta Shiromani).",
+                  "solutionSteps": [
+                    "Recall Bhaskaracharya's text.",
+                    "Name the Lilavati."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                106,
+                107
+              ],
+              "needsHumanReview": false
             }
           ]
         },
@@ -36825,6 +36889,39 @@
               "pageRefs": [
                 111,
                 112
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_t03_q04",
+              "prompt": "In the very same centuries that the north faced Turkic raids, the SOUTHERN and DECCAN kingdoms (the Cholas, Kakatiyas and Hoysalas) were FLOURISHING — building great temples and sending ships overseas. Explain why the south could prosper while the north was under attack.",
+              "questionType": "longAnswer",
+              "answer": "Geography is a big part of the answer: the raiders came through the north-western passes and struck the northern plains, which lie far from the southern peninsula — so the Deccan and the deep south were shielded by sheer distance from those early attacks. Free from that pressure, the southern kingdoms could put their energy and wealth into building, trade and learning instead of constant defence. They grew rich especially from SEA trade: the Cholas built a powerful navy and traded across the Indian Ocean (Rajaraja and Rajendra Chola even reached Southeast Asia), and this wealth paid for magnificent temples like the Brihadishvara at Thanjavur. So while the north absorbed the shock of invasion, the distant, sea-trading south enjoyed peace and prosperity — a reminder that the 'turning tide' did not hit all of India at once.",
+              "solutionSteps": [
+                "Note the raids entered through the north-west and hit the north, far from the south.",
+                "Distance shielded the Deccan and deep south from early attacks.",
+                "Free from that pressure, the south invested in trade, navy and temple-building.",
+                "Sea trade (esp. the Cholas) brought wealth → great temples; conclude the tide didn't hit all India at once."
+              ],
+              "commonMistakes": [
+                "Assuming the whole of India suffered the invasions equally.",
+                "Forgetting the role of distance and sea-trade wealth in the south's prosperity."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name two southern/Deccan dynasties that flourished in this period.",
+                  "answer": "Any two of: the Cholas, the Kakatiyas and the Hoysalas.",
+                  "solutionSteps": [
+                    "Recall the flourishing southern powers.",
+                    "Name any two."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                108,
+                109,
+                110
               ],
               "needsHumanReview": false
             }
@@ -37075,6 +37172,38 @@
               "difficulty": 4,
               "pageRefs": [
                 116
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_t04_q04",
+              "prompt": "The Paramara king Bhoja is remembered as a 'scholar-king'. What does it mean for a RULER to also be a scholar, and why is such a figure especially notable in an age full of warfare?",
+              "questionType": "longAnswer",
+              "answer": "A 'scholar-king' is a ruler who is not only a warrior and administrator but also a learned person — someone who studies, writes and actively supports knowledge. King Bhoja of the Paramaras was famous for exactly this: he is said to have written on many subjects (from poetry and grammar to architecture and astronomy) and to have generously patronised scholars, poets and the arts. This is especially notable in an age full of warfare because it shows that even while kingdoms fought and raids struck the north, some rulers still poured their energy and wealth into learning and culture, keeping India's intellectual life alive. A scholar-king reminds us that power in this period was not only about armies and conquest — it could also be about preserving and advancing knowledge, and that culture continued to flower in the gaps between the storms.",
+              "solutionSteps": [
+                "Define a 'scholar-king': a ruler who is also learned — studies, writes, and patronises knowledge.",
+                "Give Bhoja's example: wrote on many subjects and supported scholars and the arts.",
+                "Explain why it's notable in a warlike age: shows learning/culture continued despite conflict.",
+                "Conclude power was not only about war — some rulers advanced knowledge too."
+              ],
+              "commonMistakes": [
+                "Thinking a king could only be a warrior, not also a scholar.",
+                "Missing the point that Bhoja shows culture surviving amid the era's warfare."
+              ],
+              "variations": [
+                {
+                  "prompt": "To which dynasty did the scholar-king Bhoja belong?",
+                  "answer": "The Paramaras (of Malwa, in central India).",
+                  "solutionSteps": [
+                    "Recall Bhoja's dynasty.",
+                    "Name the Paramaras."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                113,
+                114
               ],
               "needsHumanReview": false
             }
@@ -38251,6 +38380,87 @@
             "Kalyani"
           ],
           "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch16_q11",
+          "prompt": "Most early land invaders entered India through which mountain pass in the north-west?",
+          "questionType": "mcq",
+          "options": [
+            "The Khyber Pass",
+            "The Palghat Gap",
+            "The Nathu La",
+            "The Bolan delta"
+          ],
+          "answer": "The Khyber Pass",
+          "solutionSteps": [
+            "Recall the main north-west gateway into India.",
+            "It is the Khyber Pass, long guarded by the Hindu Shahis.",
+            "Invaders funnelled through it."
+          ],
+          "commonMistakes": [
+            "Confusing the Khyber Pass with southern or eastern routes."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            99
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch16_q12",
+          "prompt": "Which southern/Deccan dynasties flourished during the 11th–12th centuries while the north faced raids?",
+          "questionType": "mcq",
+          "options": [
+            "The Ghaznavids and Ghurids",
+            "The Kakatiyas and Hoysalas",
+            "The Hindu Shahis and Paramaras",
+            "The Mauryas and Guptas"
+          ],
+          "answer": "The Kakatiyas and Hoysalas",
+          "solutionSteps": [
+            "Recall the flourishing Deccan powers of this age.",
+            "The Kakatiyas and Hoysalas (with the Cholas) prospered in the south.",
+            "The Ghaznavids/Ghurids were the north-western invaders."
+          ],
+          "commonMistakes": [
+            "Confusing the southern dynasties with the invading Turkic powers."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            108
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_ssch16_q13",
+          "prompt": "The 12th-century mathematician who continued India's scientific tradition, author of the Lilavati, was —",
+          "questionType": "mcq",
+          "options": [
+            "Al-Biruni",
+            "Bhaskaracharya",
+            "Bhoja",
+            "Basavanna"
+          ],
+          "answer": "Bhaskaracharya",
+          "solutionSteps": [
+            "Recall the great Indian mathematician of this age.",
+            "Bhaskaracharya wrote the Lilavati.",
+            "Al-Biruni was a visiting Persian scholar; Bhoja a king; Basavanna a reformer."
+          ],
+          "commonMistakes": [
+            "Confusing the Indian mathematician Bhaskaracharya with the visiting scholar al-Biruni."
+          ],
+          "variations": [],
+          "difficulty": 4,
+          "pageRefs": [
+            107
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ],
       "quickCheckQuestions": [
@@ -38361,6 +38571,60 @@
             "Sri Lanka",
             "Thailand"
           ],
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch16_q04",
+          "prompt": "The learned 'scholar-king' Bhoja, famous for writing on many subjects, belonged to which dynasty?",
+          "questionType": "mcq",
+          "options": [
+            "The Paramaras",
+            "The Cholas",
+            "The Ghurids",
+            "The Hoysalas"
+          ],
+          "answer": "The Paramaras",
+          "solutionSteps": [
+            "Recall the scholar-king of central India.",
+            "King Bhoja belonged to the Paramaras of Malwa.",
+            "He patronised learning and the arts."
+          ],
+          "commonMistakes": [
+            "Confusing the Paramaras with southern dynasties like the Cholas or Hoysalas."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            113
+          ],
+          "needsHumanReview": false,
+          "source": "scene_quick_check"
+        },
+        {
+          "id": "scenecheck_ssch16_q05",
+          "prompt": "Bhaskaracharya's famous mathematics text, part of his Siddhanta Shiromani, is the —",
+          "questionType": "mcq",
+          "options": [
+            "Lilavati",
+            "Arthashastra",
+            "Indica",
+            "Rajatarangini"
+          ],
+          "answer": "Lilavati",
+          "solutionSteps": [
+            "Recall Bhaskaracharya's well-known work.",
+            "It is the Lilavati, on arithmetic and algebra.",
+            "It shows Indian science continued in this age."
+          ],
+          "commonMistakes": [
+            "Confusing the Lilavati with Kautilya's Arthashastra or Megasthenes' Indica."
+          ],
+          "variations": [],
+          "difficulty": 2,
+          "pageRefs": [
+            107
+          ],
+          "needsHumanReview": false,
           "source": "scene_quick_check"
         }
       ]

@@ -4097,3 +4097,15 @@ temples reveal about a kingdom), `t04_q04` (diff5 king/samanta/village power-sha
 strength/weakness), `t05_q04` (diff5 why learning flourished in a divided age). 3 boss
 MCQ (diff4): Pala/Nalanda, Pallava/Mamallapuram, Chalukyas/Deccan. 2 quick MCQ: Harsha
 title, Kannauj city. Pack 347→351 topic-Qs; ssch15 boss 10→13, quick 3→5. All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 16 (ssch16 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch16 (Turning Tides, 11th–12th c.)** — full-enrichment
+chapter; authored around its many existing diff-4 Qs. +8: 4 topic Qs — `t01_q04`
+(diff5 Khyber Pass / Hindu Shahi resistance), `t02_q04` (diff5 turmoil vs intellectual
+life — Bhaskaracharya), `t03_q04` (diff5 why the south flourished while the north was
+raided), `t04_q04` (diff5 the scholar-king Bhoja). 3 boss MCQ (diff4): Khyber Pass,
+Kakatiyas/Hoysalas, Bhaskaracharya/Lilavati. 2 quick MCQ: Bhoja=Paramara, Lilavati.
+Pack 351→355 topic-Qs; ssch16 boss 10→13, quick 3→5. All 7 lints green.
