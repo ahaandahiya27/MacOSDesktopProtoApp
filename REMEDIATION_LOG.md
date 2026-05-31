@@ -4699,3 +4699,18 @@ village sabhas; class_10, anchor t04_c03). +2 cross-strand refs (→ssch19 the
 government's 'provider' role → infrastructure; →ssch12 the 'regulator' role →
 fair, safe markets). ssch18 deepDive 2→4, ccRefs 3→5. All lints + Release build +
 suite green. Pushed 68b45ac.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 59 (ssch19 deepDive + cross-chapter refs)
+
+DEEPDIVE for ssch19 (Infrastructure: Engine of India's Development). +2 deepDive:
+'Why the second phone is worth more than the first' (the network effect — each new
+road/line/connection raises the value of the whole network, why infrastructure is
+planned as a shared public project; class_10, anchor t03_c03) and 'The state as
+builder, two thousand years ago' (Kautilya's Arthashastra on roads, shade trees,
+wells, rest-houses and irrigation, with the Junagadh Sudarshana lake inscription
+as proof; class_10, anchor t04_c03). +2 cross-strand refs (→ssch12 the highways/
+ports/telecom on which markets and online trade run; →ssch11 the communications
+networks that carry UPI and QR-code digital money). ssch19 deepDive 2→4, ccRefs
+3→5. All lints + Release build + suite green. Pushed 8b397d9.
