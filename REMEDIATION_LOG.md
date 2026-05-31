@@ -4018,3 +4018,18 @@ monarchy. 2 quick MCQ: third organ=judiciary, democracy=rule of the people.
 Pack 323→327 topic-Qs; ssch09 boss 10→13, quick 3→5. (Avoided existing diff-4 Qs
 on parliamentary/presidential and judiciary, and boss on universal-adult-franchise.)
 All 7 lints green.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 10 (ssch10 Olympiad questions)
+
+OLYMPIAD_QUESTIONS for **ssch10 (The Constitution of India)**: +8 PDF-faithful
+items. 4 topic Qs — `t01_q04` (diff5 three problems a country with no constitution
+faces), `t03_q04` (diff5 defend 'borrowing from other countries' as a strength),
+`t04_q04` (diff5 living document — amendments necessary AND risky → why not easy),
+`t05_q04` (diff5 explain two of Justice/Liberty/Equality/Fraternity with examples).
+3 boss MCQ (diff4): Fundamental Duties, 'Sovereign' meaning, officials' oath to
+uphold. 2 quick MCQ: Fraternity (4th goal), judiciary (third organ). Pack 327→331
+topic-Qs; ssch10 boss 10→13, quick 3→5. (Pivoted around existing diff-4 t04_q01
+right-vs-DP, t03_q03 heritage, t05_q01 secular/republic, and 'We the People' q.)
+*** HALFWAY: ssch01–10 OLYMPIAD complete. *** All 7 lints green.

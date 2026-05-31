@@ -148,6 +148,28 @@
           "difficulty": 3,
           "pageRefs": [212],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t01_q04",
+          "prompt": "Imagine a brand-new country that has NO constitution at all. Describe THREE specific problems that would soon arise, and explain how having a constitution prevents each one.",
+          "questionType": "longAnswer",
+          "answer": "Problem 1: No one would agree on WHO has the power to make decisions, so different leaders or groups would fight over control. A constitution prevents this by setting out in advance how the government is formed and who has which powers. Problem 2: The strong could trample the weak — there would be no guaranteed rights, so powerful people could take away others' freedoms. A constitution prevents this by promising Fundamental Rights that even the government cannot take away. Problem 3: There would be no agreed, fair way to settle disputes, so quarrels could turn into chaos or violence. A constitution prevents this by laying down laws and an independent judiciary to judge disputes fairly. In short, a constitution works like a rulebook everyone accepts BEFORE problems arise, so the country runs by fair agreed rules instead of by force.",
+          "solutionSteps": [
+            "Problem 1 — disputes over who holds power → constitution defines how government is formed and powers shared.",
+            "Problem 2 — the strong oppress the weak → constitution guarantees Fundamental Rights.",
+            "Problem 3 — no fair way to settle disputes → constitution provides laws and an independent judiciary.",
+            "Conclude: a constitution is an agreed rulebook set BEFORE problems arise."
+          ],
+          "commonMistakes": [
+            "Listing problems without saying how a constitution solves each one.",
+            "Giving only vague 'there would be chaos' instead of specific problems."
+          ],
+          "variations": [
+            {"prompt": "In one sentence, why do we need a constitution?", "answer": "So that everyone agrees in advance on fair rules for running the country, sharing power and settling disputes, rather than leaving it to force or chance.", "solutionSteps": ["Recall the purpose of a constitution.", "State it provides agreed fair rules in advance."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [210, 211],
+          "needsHumanReview": false
         }
       ]
     },
@@ -434,6 +456,28 @@
           "difficulty": 3,
           "pageRefs": [216],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t03_q04",
+          "prompt": "A critic says: 'India's Constitution borrowed ideas from other countries — like liberty-equality-fraternity from France and the independent-judiciary idea from the USA — so it is unoriginal and not truly Indian.' Write a reasoned argument AGAINST this view.",
+          "questionType": "longAnswer",
+          "answer": "The critic is mistaken. First, the makers of the Constitution did not blindly copy — they studied many democracies and chose only the ideas that suited India, adapting them to Indian conditions. Choosing wisely from the world's best experience is a sign of good judgement, not weakness; a doctor who learns from many teachers is not 'unoriginal'. Second, the Constitution is rooted just as deeply in things that ARE distinctly Indian — the ideals of the freedom movement, and age-old Indian values like respect for differing views, the importance of duties, and 'the world is one family'. Third, the way all these influences were combined into one coherent document suited to India's huge diversity is itself original work. So the Constitution is best seen as a thoughtful blend: Indian at its core, and wisely enriched by the world's best ideas — which makes it stronger, not weaker.",
+          "solutionSteps": [
+            "Reject the premise: borrowing wisely is good judgement, not copying.",
+            "Point out the makers adapted foreign ideas to Indian conditions.",
+            "Show the Constitution's distinctly Indian roots: freedom movement + civilisational values.",
+            "Argue that blending many sources into one coherent document is itself original and a strength."
+          ],
+          "commonMistakes": [
+            "Agreeing that borrowing = unoriginal, instead of arguing that wise borrowing is a strength.",
+            "Forgetting the strong Indian sources (freedom movement, heritage) that also shaped it."
+          ],
+          "variations": [
+            {"prompt": "Name one idea India adapted from another country, and one that came from India's own heritage.", "answer": "From abroad: 'liberty, equality, fraternity' (France) or the independent judiciary (USA). From India's heritage: the emphasis on duties, or respect for differing views ('the world is one family').", "solutionSteps": ["Recall a borrowed idea (France/USA).", "Recall an indigenous influence (duties / heritage values)."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [216, 217],
+          "needsHumanReview": false
         }
       ]
     },
@@ -582,6 +626,28 @@
           "difficulty": 3,
           "pageRefs": [223],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t04_q04",
+          "prompt": "The Constitution is called a 'living document' because it can be changed by AMENDMENTS. Explain why this power to amend is both NECESSARY and potentially RISKY, and what this tells us about why amendments are not made too easily.",
+          "questionType": "longAnswer",
+          "answer": "Amendment is NECESSARY because society changes: new problems, technologies and ideas of fairness appear that the original writers in 1949 could not foresee. A constitution that could never change would slowly become out of date and unable to serve the people — so the power to amend lets it stay alive and relevant (for example, Fundamental Duties were added in 1976). But the power is also RISKY: the Constitution protects citizens' most important rights and the basic shape of the government, so if it could be changed too easily or carelessly, a powerful group might strip away rights or upset the balance of power for their own benefit. This is why amendments are deliberately NOT made too easily — they usually need large special majorities and careful debate, so that change happens only with wide agreement. A living document must be able to grow, but its roots must be protected from hasty damage.",
+          "solutionSteps": [
+            "Necessary: society changes, so the Constitution must adapt to stay relevant (e.g. Fundamental Duties added 1976).",
+            "Risky: it guards vital rights and the structure of government, which careless change could damage.",
+            "Therefore amendments require special majorities and debate, not a simple easy vote.",
+            "Conclude: a living document must grow but its roots must be protected."
+          ],
+          "commonMistakes": [
+            "Only saying amendments let it 'change with time' without noting the risk and the safeguards.",
+            "Thinking amendments are made as easily as ordinary laws — they need special majorities."
+          ],
+          "variations": [
+            {"prompt": "Give one example of a change made to the Constitution by amendment.", "answer": "The Fundamental Duties were added to the Constitution by amendment in 1976.", "solutionSteps": ["Recall an example of an amendment.", "Cite the addition of Fundamental Duties in 1976."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [223],
+          "needsHumanReview": false
         }
       ]
     },
@@ -721,6 +787,28 @@
           "difficulty": 1,
           "pageRefs": [225],
           "needsHumanReview": false
+        },
+        {
+          "id": "ssch10_t05_q04",
+          "prompt": "The Preamble promises every citizen four great goals: Justice, Liberty, Equality and Fraternity. Choose any TWO of these and, with an everyday example each, explain what that goal actually promises a citizen.",
+          "questionType": "longAnswer",
+          "answer": "Take EQUALITY and FRATERNITY as an example. EQUALITY promises that every citizen is treated the same by the law and the state, regardless of caste, religion, gender or wealth — for instance, every child has the same right to sit in a government school, and everyone must draw water from the same village well without anyone being kept out. FRATERNITY promises a spirit of brotherhood and unity among all Indians, so that despite our many languages, religions and regions we treat one another as members of one family — for instance, neighbours of different faiths celebrating each other's festivals together. (LIBERTY promises freedoms such as speaking, believing and moving freely within the law; JUSTICE promises fair treatment in social, economic and political life.) Together these four goals describe the kind of society the Constitution is trying to build for every citizen.",
+          "solutionSteps": [
+            "Pick two of the four goals (Justice, Liberty, Equality, Fraternity).",
+            "For each, state what it promises a citizen in plain words.",
+            "Give an everyday example for each chosen goal.",
+            "Note that together the four describe the society the Constitution seeks."
+          ],
+          "commonMistakes": [
+            "Just listing the four words without explaining what any of them promises.",
+            "Confusing Equality (same treatment) with Liberty (freedoms)."
+          ],
+          "variations": [
+            {"prompt": "What is the difference between Liberty and Equality as Preamble goals?", "answer": "Liberty is about FREEDOMS — being free to think, speak, believe and move within the law. Equality is about being treated the SAME as everyone else by the law and the state, with no discrimination.", "solutionSteps": ["Liberty = freedoms within the law.", "Equality = equal, non-discriminatory treatment.", "State the contrast."]}
+          ],
+          "difficulty": 5,
+          "pageRefs": [225, 226],
+          "needsHumanReview": false
         }
       ]
     }
@@ -816,11 +904,16 @@
     {"id": "bossquiz_ssch10_q06", "prompt": "From which country's constitution did India adopt the ideals of liberty, equality and fraternity?", "questionType": "mcq", "options": ["USA", "France", "Ireland", "Australia"], "answer": "France", "solutionSteps": ["These ideals came from the French Revolution of 1789.", "India adopted them from France's constitution.", "Choose France."], "commonMistakes": ["Confusing France (the three ideals) with the USA (independent judiciary)."], "variations": [], "difficulty": 3, "pageRefs": [217], "needsHumanReview": false, "source": "boss_quiz"},
     {"id": "bossquiz_ssch10_q07", "prompt": "The words 'Socialist' and 'Secular' were added to the Preamble by which amendment?", "questionType": "mcq", "options": ["The 42nd Amendment in 1976", "The 73rd Amendment in 1992", "The 86th Amendment in 2002", "They were in the original Preamble"], "answer": "The 42nd Amendment in 1976", "solutionSteps": ["Recall the note in the chapter.", "'Socialist' and 'Secular' were added by the 42nd Amendment in 1976.", "Choose that option."], "commonMistakes": ["Thinking these words were in the original 1950 Preamble."], "variations": [], "difficulty": 3, "pageRefs": [225], "needsHumanReview": false, "source": "boss_quiz"},
     {"id": "bossquiz_ssch10_q08", "prompt": "'Republic' in the Preamble means that —", "questionType": "mcq", "options": ["The head of state is an elected person, not hereditary", "There is no official religion", "Wealth must be shared by society", "The people elect their rulers"], "answer": "The head of state is an elected person, not hereditary", "solutionSteps": ["Recall the meaning of Republic in the chapter.", "It means the head of state is elected, not a hereditary king.", "Choose that option."], "commonMistakes": ["Confusing 'Republic' (elected head of state) with 'Democratic' (people elect rulers) or 'Secular' (no official religion)."], "variations": [], "difficulty": 2, "pageRefs": [225], "needsHumanReview": false, "source": "boss_quiz"},
-    {"id": "bossquiz_ssch10_q09", "prompt": "The Constitution is called a 'living document' because —", "questionType": "mcq", "options": ["It is read aloud every day", "It can be changed through amendments as needs evolve", "It is kept in a glass case", "It was written by living people"], "answer": "It can be changed through amendments as needs evolve", "solutionSteps": ["Recall that a living document can change over time.", "It changes through amendments, like adding Fundamental Duties (1976).", "Choose that option."], "commonMistakes": ["Thinking 'living document' refers to how it is stored or read."], "variations": [], "difficulty": 2, "pageRefs": [223], "needsHumanReview": false, "source": "boss_quiz"}
+    {"id": "bossquiz_ssch10_q09", "prompt": "The Constitution is called a 'living document' because —", "questionType": "mcq", "options": ["It is read aloud every day", "It can be changed through amendments as needs evolve", "It is kept in a glass case", "It was written by living people"], "answer": "It can be changed through amendments as needs evolve", "solutionSteps": ["Recall that a living document can change over time.", "It changes through amendments, like adding Fundamental Duties (1976).", "Choose that option."], "commonMistakes": ["Thinking 'living document' refers to how it is stored or read."], "variations": [], "difficulty": 2, "pageRefs": [223], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q10", "prompt": "Fundamental DUTIES in the Constitution are best described as —", "questionType": "mcq", "options": ["Promises the government must give the courts", "Responsibilities expected of every citizen", "Powers given to the President", "Goals only for foreign policy"], "answer": "Responsibilities expected of every citizen", "solutionSteps": ["Recall the three: Fundamental Rights, Fundamental Duties, Directive Principles.", "Fundamental Duties are responsibilities expected of citizens.", "They were added by amendment in 1976."], "commonMistakes": ["Confusing Fundamental Duties (citizens' responsibilities) with Fundamental Rights (citizens' enforceable claims)."], "variations": [], "difficulty": 4, "pageRefs": [222], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q11", "prompt": "When the Preamble calls India 'Sovereign', it means India —", "questionType": "mcq", "options": ["Has a king as head of state", "Is free to make its own decisions without outside control", "Must follow another country's laws", "Has no government"], "answer": "Is free to make its own decisions without outside control", "solutionSteps": ["Recall the five descriptors: Sovereign, Socialist, Secular, Democratic, Republic.", "'Sovereign' means independent in decision-making.", "India answers to no outside power."], "commonMistakes": ["Confusing 'Sovereign' (independent) with 'Republic' (elected head of state)."], "variations": [], "difficulty": 4, "pageRefs": [224, 225], "needsHumanReview": false, "source": "boss_quiz"},
+    {"id": "bossquiz_ssch10_q12", "prompt": "On taking office, key officials such as the President, Prime Minister and judges take an oath to —", "questionType": "mcq", "options": ["Win the next election", "Follow and protect the Constitution", "Increase their own salaries", "Obey a foreign power"], "answer": "Follow and protect the Constitution", "solutionSteps": ["Recall that top officials pledge loyalty to the Constitution.", "Their oath is to follow and protect it.", "This keeps even the powerful bound by the Constitution."], "commonMistakes": ["Thinking the oath is to a person or party rather than to the Constitution."], "variations": [], "difficulty": 4, "pageRefs": [211], "needsHumanReview": false, "source": "boss_quiz"}
   ],
   "quickCheckQuestions": [
     {"id": "scenecheck_ssch10_q00", "prompt": "On which day every year do we celebrate the Constitution coming into effect?", "questionType": "mcq", "options": ["15 August (Independence Day)", "2 October (Gandhi Jayanti)", "26 January (Republic Day)", "26 November (Constitution Day)"], "answer": "26 January (Republic Day)", "solutionSteps": ["The Constitution came into effect on 26 January 1950.", "We celebrate this as Republic Day.", "Choose 26 January."], "commonMistakes": ["Choosing Independence Day (15 August) instead of Republic Day."], "variations": [], "difficulty": 1, "pageRefs": [210], "needsHumanReview": false, "source": "scene_quick_check"},
     {"id": "scenecheck_ssch10_q01", "prompt": "The opening words of the Preamble are —", "questionType": "mcq", "options": ["We, the Government of India", "We, the People of India", "I, the President of India", "We, the leaders of India"], "answer": "We, the People of India", "solutionSteps": ["Recall the Preamble's opening.", "It begins 'WE, THE PEOPLE OF INDIA'.", "Choose that option."], "commonMistakes": ["Thinking it begins with 'the Government' or 'the President'."], "variations": [], "difficulty": 1, "pageRefs": [225], "needsHumanReview": false, "source": "scene_quick_check"},
-    {"id": "scenecheck_ssch10_q02", "prompt": "Citizens of all castes, genders and religions using the same village well best reflects which Preamble values?", "questionType": "mcq", "options": ["Sovereignty and Republic", "Equality and Justice", "Liberty and Socialism", "Fraternity and Sovereignty"], "answer": "Equality and Justice", "solutionSteps": ["Equal use regardless of caste, gender or religion shows Equality.", "No discrimination on these grounds shows Justice.", "Choose Equality and Justice."], "commonMistakes": ["Choosing Sovereignty, which is about national decision-making power, not equal treatment."], "variations": [], "difficulty": 2, "pageRefs": [225], "needsHumanReview": false, "source": "scene_quick_check"}
+    {"id": "scenecheck_ssch10_q02", "prompt": "Citizens of all castes, genders and religions using the same village well best reflects which Preamble values?", "questionType": "mcq", "options": ["Sovereignty and Republic", "Equality and Justice", "Liberty and Socialism", "Fraternity and Sovereignty"], "answer": "Equality and Justice", "solutionSteps": ["Equal use regardless of caste, gender or religion shows Equality.", "No discrimination on these grounds shows Justice.", "Choose Equality and Justice."], "commonMistakes": ["Choosing Sovereignty, which is about national decision-making power, not equal treatment."], "variations": [], "difficulty": 2, "pageRefs": [225], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch10_q03", "prompt": "The Preamble promises four goals: Justice, Liberty, Equality and —", "questionType": "mcq", "options": ["Fraternity", "Royalty", "Currency", "Territory"], "answer": "Fraternity", "solutionSteps": ["Recall the four goals of the Preamble.", "Justice, Liberty, Equality and Fraternity.", "Fraternity means a spirit of brotherhood among all citizens."], "commonMistakes": ["Forgetting Fraternity, the fourth goal."], "variations": [], "difficulty": 2, "pageRefs": [226], "needsHumanReview": false, "source": "scene_quick_check"},
+    {"id": "scenecheck_ssch10_q04", "prompt": "The Constitution sets up three organs of government: the legislature, the executive and the —", "questionType": "mcq", "options": ["Judiciary", "Army", "Monarchy", "Civil service"], "answer": "Judiciary", "solutionSteps": ["Recall the three organs the Constitution creates.", "Legislature makes laws; executive carries them out.", "The judiciary ensures laws are followed."], "commonMistakes": ["Naming the army or civil service instead of the judiciary."], "variations": [], "difficulty": 2, "pageRefs": [220], "needsHumanReview": false, "source": "scene_quick_check"}
   ]
 }
