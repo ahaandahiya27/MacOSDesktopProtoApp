@@ -1492,6 +1492,7 @@
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
 		C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */; };
+		7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */; };
 		D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */; };
 		8507CB8146D311BCA9560280 /* SocialScienceInteractiveGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C51DBDA81236D0F1D4F5F1 /* SocialScienceInteractiveGateTests.swift */; };
 		DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */; };
@@ -3028,6 +3029,7 @@
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
 		108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceArticleRoutingTests.swift"; sourceTree = "<group>"; };
+		099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceContentDepthTests.swift"; sourceTree = "<group>"; };
 		678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		B2C51DBDA81236D0F1D4F5F1 /* SocialScienceInteractiveGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceInteractiveGateTests.swift"; sourceTree = "<group>"; };
 		99C3FC971649DED61AA4104A /* StoryModeArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryModeArticleRoutingTests.swift"; sourceTree = "<group>"; };
@@ -5888,6 +5890,7 @@
 				E9B662F7364184B38EBF6256,
 				ECC6A95CD9ABF9B8C9017257,
 				108AC54929248AA058607155,
+				099E1F28D6D1B177EEA75DB9,
 				678377A34E68EE55DBACF757,
 				B2C51DBDA81236D0F1D4F5F1,
 				99C3FC971649DED61AA4104A,
@@ -7561,6 +7564,7 @@
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
 				C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */,
+				7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */,
 				D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */,
 				8507CB8146D311BCA9560280 /* SocialScienceInteractiveGateTests.swift in Sources */,
 				DFC6A9A6AC5F394A7694CD82 /* StoryModeArticleRoutingTests.swift in Sources */,
