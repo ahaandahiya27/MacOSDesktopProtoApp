@@ -5982,3 +5982,47 @@ every subject carries the full enrichment surface set (deepDive, bossQuestions,
 crossChapterRefs, examConnections, whatIfs) plus Discover Mode. The Phase-1
 cross-subject enrichment-parity sweep is COMPLETE. NEXT: P1-J — final Phase-1
 parity-matrix refresh, then begin Phase 2 (MasteryEngine + Mastery Map).
+
+---
+
+## v6 Learning Journey · Cycle 12 (2026-06-01) — Phase 2 (start): MasteryEngine
+
+Phase 2 opens with the read-only cross-subject aggregation service that the
+Mastery Map window will render. Added desktopAhaan/Services/MasteryEngine.swift,
+which rolls the existing per-subject MasterySummary (DataStore+Mastery.swift)
+up into concept/topic -> chapter -> subject -> overall.
+
+Strict invariants honoured: READ-ONLY over the SRS (never mutates
+questionReviews, never schedules, never writes disk); built ON TOP of the
+existing infrastructure (reuses DataStore.masterySummary + MasteryLevel rather
+than re-deriving bucket math, so the Map and the single-subject dashboard can
+never drift). Pure cores (level(forFraction:), the OverallMasterySnapshot /
+SubjectMasterySnapshot rollups) are value-math, unit-testable with no live
+singletons; only snapshot(registry:dataStore:now:) touches the @MainActor
+singletons.
+
+Two axes the Map shows side by side: coverageFraction (distinct reviewed
+questions / all reviewable questions = topic+boss+quickCheck via
+Chapter.allQuestionIds) answers "have we been here?"; masteryFraction
+(reviewed-weighted MasteryLevel) answers "how solid?". A subject can be 100%
+mastered on 5% coverage, so both are surfaced. Per-subject dueCount is computed
+in one pass over questionReviews by nextDueAt <= now, attributed to the owning
+pack (recorded packId, else resolved via registry) — distinct from the global
+summary.dueCount. weakestStartedSubject (lowest mastery, tie-break on coverage
+then order) drives the Map's "focus next" nudge and will feed the Phase-3
+JourneyPlanner.
+
+Tests: desktopAhaanTests/MasteryEngineTests.swift (10 tests over the pure
+cores: level-band boundaries + out-of-range clamp; coverage = reviewed/
+reviewable with clamp + zero-denominator safety; reviewed-weighted mastery
+across chapters; overall weighted rollup; empty/unstarted = 0 not NaN;
+weakest-subject selection ignoring unstarted and tie-breaking on coverage).
+
+Green here: all 8 Big-Sur static lints + test_lints.py pass; pbxproj
+regenerated (MasteryEngine.swift + MasteryEngineTests.swift auto-wired);
+ci-build-test.sh -> BUILD + TEST SUCCEEDED, 0 failures (+10 XCTest). Additive
+only (new service + tests; no existing file touched); zero regressions; zero
+STOP_AND_ASK. NEXT: Phase 2 milestone 2 — the pure-SwiftUI Mastery Map window
+rendering this snapshot (coverage + mastery bars per subject, overall ring,
+focus-next nudge), under the Big-Sur / legacy-GPU invariants, then Help-menu
+wiring.

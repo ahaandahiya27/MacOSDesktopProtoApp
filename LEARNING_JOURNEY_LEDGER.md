@@ -27,7 +27,7 @@
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
 | 1 | ✅ DONE | **P1-A…P1-J complete.** Cross-subject **enrichment-parity sweep DONE**: every subject carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode — all four now at 🥈 STRONG or above. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); Social Science exam+whatIf 2→3/ch + `_whatif` articles regenerated (P1-I); `JOURNEY_PARITY_MATRIX.md` refreshed (P1-J). Remaining items are deferred optional polish (timelines, quickChecks, more `scientists`, bespoke SS Discover) — blocks nothing. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. |
-| 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
+| 2 | 🟡 IN PROGRESS | **MasteryEngine DONE** (cycle 12): read-only `Services/MasteryEngine.swift` aggregates the existing per-subject `MasterySummary` into cross-subject concept→subject→overall, with two axes (coverage vs mastery), per-subject due, and a `weakestStartedSubject` focus nudge. +10 unit tests on the pure cores; build+test green. **NEXT: the pure-SwiftUI Mastery Map window** + Help-menu wiring. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
 | 5 | ⬜ NOT STARTED | **Unblocked for all four subjects** — P1-A (Maths 45) + P1-B (Sanskrit 45) closed the `deepDive` gap; every subject now feeds the ladder. |
@@ -377,3 +377,29 @@ required before declaring the mission complete (Phase 6).
   of the existing `MasteryDashboard` / `DataStore+Mastery` / `MasteryLevel`,
   never mutating SRS), and a pure-SwiftUI Mastery Map window under the Big-Sur /
   legacy-GPU invariants. Read those existing files first; extend, don't replace.
+
+### Cycle 12 (2026-06-01) — Phase 2 (start) · MasteryEngine
+- Added read-only `desktopAhaan/Services/MasteryEngine.swift` — rolls the
+  existing per-subject `MasterySummary` up into cross-subject concept/topic →
+  chapter → subject → overall. READ-ONLY over SRS (no mutation/scheduling/disk
+  write); built ON TOP of `DataStore.masterySummary` + `MasteryLevel` (no
+  re-derived bucket math, so Map and dashboard can't drift).
+- Two axes surfaced side by side: **coverageFraction** (reviewed / all
+  reviewable = topic+boss+quickCheck) and **masteryFraction** (reviewed-
+  weighted level). Per-subject `dueCount` computed in one pass over
+  `questionReviews` (nextDueAt ≤ now, attributed to owning pack), distinct from
+  the global `summary.dueCount`. `weakestStartedSubject` (lowest mastery,
+  tie-break coverage→order) drives the Map's focus nudge + feeds Phase-3.
+- Pure cores (`level(forFraction:)`, the two snapshot structs) are value-math;
+  only `snapshot(registry:dataStore:now:)` touches the @MainActor singletons.
+- Added `desktopAhaanTests/MasteryEngineTests.swift` (10 tests: band
+  boundaries + clamp; coverage = reviewed/reviewable w/ clamp + zero-denom
+  safety; reviewed-weighted mastery; overall weighted rollup; empty/unstarted
+  = 0 not NaN; weakest-subject selection + tie-break).
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated
+  (service + test auto-wired); `ci-build-test.sh` → **BUILD + TEST SUCCEEDED, 0
+  failures** (+10 XCTest). Additive only; zero regressions; zero STOP_AND_ASK.
+- **NEXT:** Phase 2 milestone 2 — the pure-SwiftUI **Mastery Map window**
+  rendering this snapshot (per-subject coverage + mastery bars, overall ring,
+  focus-next nudge), under Big-Sur / legacy-GPU invariants; then Help-menu
+  wiring + a routing test.
