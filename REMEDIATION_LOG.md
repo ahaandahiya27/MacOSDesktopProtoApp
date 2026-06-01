@@ -6215,3 +6215,23 @@ regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 5 — Olympiad / Expert challenge ladder (tiered expert sets from
 deepDive, unlocked by mastery).
+
+## 2026-06-02 — Phase 5 M1 · Expert Challenge Ladder engine
+
+Read-only tiered expert-challenge ladder: ExpertTier (stretch/challenge/olympiad,
+unlock 0.20/0.50/0.80; pure classify by band, deepDive→olympiad) + ExpertTierSet
+/ SubjectChallengeLadder / ExpertChallengeLadder model; pure ExpertChallengePlanner
+.tierSets; @MainActor DataStore.buildExpertChallengeLadder gathering each subject's
+expert isAssessableMCQs (hardest topic questions + deepDive bonus questions),
+classified/deduped/capped(25), unlock from MasteryEngine snapshot. READ-ONLY over
+SRS. Recon: difficulty-4/5 abundant but deepDive.bonusQuestions unpopulated, so
+Olympiad is empty until authored (mechanism complete; M2 view hides empty tiers).
+Fixed a Swift-5.5 isolation error (nested func couldn't call @MainActor
+isAssessableMCQ) via a @MainActor helper method. +7 tests.
+
+Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 798 XCTest, 0 failures (was 791, +7). Additive; zero
+regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 5 M2 — Expert Challenges window (ladder view + challenge quiz reusing
+the Milestone MCQ flow) + menu wiring + render test.

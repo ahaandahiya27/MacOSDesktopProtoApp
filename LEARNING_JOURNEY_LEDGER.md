@@ -709,3 +709,54 @@ required before declaring the mission complete (Phase 6).
   sets sourced from chapter `deepDive` content, unlocked by mastery. Read the
   existing deepDive / expert content + the mastery gating first; extend, don't
   replace.
+
+### Cycle 20 (2026-06-02) — Phase 5 · M1 · Expert Challenge Ladder engine
+- Confirmed Phase 4 still green here (791 XCTest, 0 fail) before any change.
+- **Reconnaissance finding that shaped the design:** difficulty-4 (286) and
+  difficulty-5 (186) questions are abundant, but `deepDive.bonusQuestions` are
+  **unpopulated across every pack (0)**. So the ladder's two lower tiers are
+  content-rich from the existing hard questions, while the top (Olympiad) tier —
+  honestly sourced from `deepDive` per the brief — is empty until that content
+  is authored. No fake filler: the mechanism is complete + future-proof, and the
+  M2 view will render only non-empty tiers so today's kid sees a rich Stretch +
+  Challenge ladder, with Olympiad lighting up automatically once deepDive bonus
+  questions land (a content task, not a code one).
+- Built the **read-only Expert Challenge Ladder** (mirrors MasteryEngine /
+  JourneyPlanner pure-core + @MainActor-builder split):
+  - `desktopAhaan/Models/ExpertChallengeLadder.swift` — `ExpertTier`
+    (stretch/challenge/olympiad; `unlockMastery` 0.20/0.50/0.80 aligned to the
+    Familiar/Confident/Mastered bands; pure `classify(band:isDeepDive:)` — a
+    deepDive bonus question is always Olympiad, else `.stretch`/`.challenge` by
+    intrinsic band, `.easy`/`.core` excluded), `ExpertTierSet` (tier · isUnlocked
+    · questions · isPlayable), `SubjectChallengeLadder`, `ExpertChallengeLadder`.
+    Tiers reuse `AssessmentQuestion` so the M2 UI can present them like a
+    checkpoint.
+  - `desktopAhaan/Services/ExpertChallengePlanner.swift` — PURE `tierSets`:
+    always three tiers in order, each unlocked iff `masteryFraction ≥`
+    threshold.
+  - `desktopAhaan/Services/Persistence/DataStore+ExpertChallenge.swift` — the
+    `@MainActor buildExpertChallengeLadder`: gathers each subject's expert
+    `isAssessableMCQ`s (hardest topic questions + deepDive bonus questions),
+    classifies + dedupes them, orders each tier hardest-first and caps at 25,
+    and marks unlock from the `MasteryEngine.snapshot` mastery fraction.
+    READ-ONLY over the SRS.
+- **Caught + fixed a real Swift-5.5 isolation error:** a nested local `func`
+  doesn't inherit `@MainActor`, so it couldn't call the main-actor
+  `isAssessableMCQ` ("call to main actor-isolated static method in a synchronous
+  nonisolated context"). Replaced it with a `@MainActor` instance helper
+  (`expertEntry`) and inlined the dedup/append.
+- Tests (+7): `ExpertChallengePlannerTests.swift` (5 pure — classify by band,
+  deepDive-always-Olympiad, escalating unlock thresholds, three-tiers-in-order,
+  unlock-by-mastery incl. locked-not-playable) and
+  `ExpertChallengeIntegrationTests.swift` (2 @MainActor over the live registry:
+  tier structure + band-consistent classification + per-tier cap + all-MCQ +
+  unique-per-subject + ladder-not-empty + read-only-over-SRS; and tiers unlock
+  with a mastered subject while an unstarted subject stays locked).
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (3
+  source + 2 test files auto-wired); `ci-build-test.sh` → **BUILD + 798 XCTest,
+  0 failures** (was 791, +7). Purely additive; zero regressions; zero
+  STOP_AND_ASK.
+- **NEXT:** Phase 5 M2 — the **Expert Challenges window**: a pure-SwiftUI ladder
+  view (subjects → tiers with locked/unlocked/playable states; tap a playable
+  tier to run a challenge quiz reusing the Milestone MCQ flow), Help-menu wiring
+  + a render test. Render only non-empty tiers (Olympiad hidden until authored).
