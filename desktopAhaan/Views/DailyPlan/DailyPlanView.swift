@@ -18,11 +18,15 @@ struct DailyPlanView: View {
 
     @State private var plan: DailyPlan = DailyPlan(planDay: Date(), items: [])
     @State private var reminderOn: Bool = DailyPlanNotifications.shared.isReminderEnabled
+    /// Today vs Whole Journey. Seeded from the persisted choice; changing it
+    /// persists + rebuilds the plan through the new lens.
+    @State private var journeyMode: JourneyMode = JourneyPlannerStorage.currentMode()
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 header
+                modePicker
                 if plan.items.isEmpty {
                     if isDayOne {
                         DailyPlanEmptyStateView(onStart: { startDayOne() })
@@ -77,6 +81,33 @@ struct DailyPlanView: View {
         if streak > 0 {
             Label("\(streak)-day streak", systemImage: SFSymbolCompat.name("flame.fill"))
                 .foregroundColor(DesignTokens.BrandColor.mnemonic)
+        }
+    }
+
+    // MARK: - Mode picker (Today / Whole Journey)
+
+    /// Segmented Today ↔ Whole Journey switch. Whole Journey samples by mastery
+    /// gaps across every subject (see `JourneyPlanner`); changing it persists
+    /// the choice and rebuilds the plan. SegmentedPickerStyle + onChange are
+    /// both Big-Sur-safe (used elsewhere in the app).
+    private var modePicker: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Picker("Plan mode", selection: $journeyMode) {
+                ForEach(JourneyMode.allCases, id: \.self) { mode in
+                    Text(mode.title).tag(mode)
+                }
+            }
+            .pickerStyle(.segmented)
+            .labelsHidden()
+            .onChange(of: journeyMode) { newValue in
+                JourneyPlannerStorage.setMode(newValue)
+                reload()
+            }
+            .accessibilityLabel("Plan mode")
+            Text(journeyMode.subtitle)
+                .font(.caption)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 

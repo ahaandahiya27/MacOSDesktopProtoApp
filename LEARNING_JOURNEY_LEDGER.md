@@ -28,7 +28,7 @@
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
 | 1 | ✅ DONE | **P1-A…P1-J complete.** Cross-subject **enrichment-parity sweep DONE**: every subject carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode — all four now at 🥈 STRONG or above. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); Social Science exam+whatIf 2→3/ch + `_whatif` articles regenerated (P1-I); `JOURNEY_PARITY_MATRIX.md` refreshed (P1-J). Remaining items are deferred optional polish (timelines, quickChecks, more `scientists`, bespoke SS Discover) — blocks nothing. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. |
 | 2 | ✅ DONE | **MasteryEngine** (cycle 12, read-only cross-subject aggregation, +10 unit tests) **+ Mastery Map window** (cycle 13): pure-SwiftUI `MasteryMapView` + `MasteryMapWindowPresenter`, wired into Help → Mastery Map (⌘⇧M). Per-subject Coverage + Mastery meters, overall card, "focus next" nudge, legend, empty state; static bars (legacy-GPU-safe), full a11y, no SF Symbols/banned colours. +3 @MainActor integration tests. Build+test green. |
-| 3 | 🟡 IN PROGRESS | **Milestone 1 DONE** (cycle 14): read-only pure `Services/JourneyPlanner.swift` (weak-first subject focus order from a `MasteryEngine` snapshot + a weak-first review round-robin) + `DataStore+JourneyPlan.swift` `buildWholeJourneyPlan` (cross-subject, gap-weighted; Maths Discover excluded for the `chNN` collision) + `JourneyMode` flag wired into `currentDailyPlan` (mode switch rebuilds). +12 tests (9 pure + 3 integration). **NEXT:** Milestone 2 — the "Whole Journey" mode picker in `DailyPlanView` + routing test. |
+| 3 | 🟡 IN PROGRESS | **M1 + M2 DONE.** M1 (cycle 14): read-only pure `Services/JourneyPlanner.swift` (weak-first subject focus order from a `MasteryEngine` snapshot + a weak-first review round-robin) + `DataStore+JourneyPlan.swift` `buildWholeJourneyPlan` (cross-subject, gap-weighted; Maths Discover excluded for the `chNN` collision) + `JourneyMode` wired into `currentDailyPlan` (mode switch rebuilds). M2 (cycle 15): a Today ↔ Whole Journey **segmented picker in `DailyPlanView`** (bound to `JourneyPlannerStorage`, persists + rebuilds on change; subtitle line; Big-Sur-safe `SegmentedPickerStyle`+`onChange`) + render test. +13 tests total. **NEXT:** M3 — assess whether to fold the weakest-subject gap into `AdaptiveDifficultyEngine` surfacing, else close Phase 3. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
 | 5 | ⬜ NOT STARTED | **Unblocked for all four subjects** — P1-A (Maths 45) + P1-B (Sanskrit 45) closed the `deepDive` gap; every subject now feeds the ladder. |
 | 6 | ⬜ NOT STARTED | Final integration + checkpoint doc. |
@@ -490,3 +490,28 @@ required before declaring the mission complete (Phase 6).
   reloading the plan on change) under the Big-Sur invariants, + a view/routing
   test. Then Milestone 3 — fold the weakest-subject gap into the
   AdaptiveDifficultyEngine surfacing if warranted.
+
+### Cycle 15 (2026-06-02) — Phase 3 · M2 · Whole Journey mode picker (UI)
+- Confirmed M1 still green here (763 XCTest, 0 fail) before any change.
+- Surfaced the Phase-3 engine in the UI: `DailyPlanView` now shows a **Today ↔
+  Whole Journey segmented picker** under the header, seeded from
+  `JourneyPlannerStorage.currentMode()`. Changing it persists the choice and
+  `reload()`s — and because `currentDailyPlan` rebuilds when the stored plan's
+  mode no longer matches (M1), the plan instantly re-renders through the new
+  lens. A caption line shows the selected mode's one-line description.
+- Big-Sur-safe: `@MainActor` view; `Picker` + `.pickerStyle(.segmented)` +
+  `onChange(of:)` (all already used elsewhere in the app, lint-clean); picker
+  carries an a11y label, subtitle uses DesignTokens colours. VStack stays ≤10
+  children (header · picker · items · Divider · reminder = 5).
+- Added a `DailyPlanViewTests` render smoke test that persists Whole Journey
+  (save/restore), seeds due reviews, and lays out the view through
+  `NSHostingView` — proving the new body path doesn't crash.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj unchanged (no
+  new files); `ci-build-test.sh` → **BUILD + 764 XCTest, 0 failures** (was 763,
+  +1). Additive (sole edits: 1 @State, 1 VStack child, 1 computed picker prop);
+  zero regressions; zero STOP_AND_ASK.
+- **The Whole Journey mode is now end-to-end reachable** — engine + UI.
+- **NEXT:** Phase 3 M3 — decide whether the weakest-subject gap warrants
+  additional `AdaptiveDifficultyEngine` surfacing (e.g. a gap-aware nudge), or
+  declare Phase 3 complete and move to Phase 4 (Milestone Assessments + Parent
+  Report Card, extending `WeeklyReportPDFExporter`).

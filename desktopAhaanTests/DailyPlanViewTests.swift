@@ -60,6 +60,31 @@ final class DailyPlanViewTests: XCTestCase {
             .environmentObject(appState!))
     }
 
+    func testDailyPlanViewRendersInWholeJourneyMode() {
+        // Persist Whole Journey, render the picker + plan body, then restore.
+        let d = UserDefaults.standard
+        let saved = d.object(forKey: JourneyPlannerStorage.modeKey)
+        defer {
+            if let v = saved { d.set(v, forKey: JourneyPlannerStorage.modeKey) }
+            else { d.removeObject(forKey: JourneyPlannerStorage.modeKey) }
+        }
+        JourneyPlannerStorage.setMode(.wholeJourney)
+        XCTAssertEqual(JourneyPlannerStorage.currentMode(), .wholeJourney)
+
+        let past = Date(timeIntervalSince1970: 1_700_000_000)
+        for i in 1...4 {
+            let id = String(format: "ch01_t01_q%02d", i)
+            store.questionReviews[id] = QuestionReview(
+                questionId: id, bucket: 1, ease: 2.5, intervalDays: 1,
+                lastReviewedAt: past, nextDueAt: past, totalReviews: 1, lapses: 0,
+                packId: "science_class7")
+        }
+        render(DailyPlanView()
+            .environmentObject(store!)
+            .environmentObject(registry!)
+            .environmentObject(appState!))
+    }
+
     func testDailyPlanRowRendersAllStates() {
         let base = DailyPlanItem(kind: .review, packId: "science_class7",
                                  targetId: "ch01_t01_q01",
