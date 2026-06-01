@@ -388,6 +388,7 @@
 		E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */; };
 		D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */; };
 		852E1D9AD2B52B9D060211B2 /* CompoundingGrowth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C50A42B5B0874EDE2A152 /* CompoundingGrowth.swift */; };
+		4079F08B627295EE763D0550 /* CroppingSeasonExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83739928ED63507E0AA2ED88 /* CroppingSeasonExplorer.swift */; };
 		B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */; };
 		7AB4E90EB8F7172B9DDFB86F /* MarketPriceBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40287D99A02FB4137BB18496 /* MarketPriceBalance.swift */; };
 		EBFA56B53A19465811A9C3A7 /* PreambleExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D4B6B9E40727F166D26DD /* PreambleExplorer.swift */; };
@@ -2878,6 +2879,7 @@
 		0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheXylemAscentTour.swift"; sourceTree = "<group>"; };
 		DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarterToMoneySim.swift"; sourceTree = "<group>"; };
 		B17C50A42B5B0874EDE2A152 /* CompoundingGrowth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompoundingGrowth.swift"; sourceTree = "<group>"; };
+		83739928ED63507E0AA2ED88 /* CroppingSeasonExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CroppingSeasonExplorer.swift"; sourceTree = "<group>"; };
 		ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndiaPhysiographicExplorer.swift"; sourceTree = "<group>"; };
 		40287D99A02FB4137BB18496 /* MarketPriceBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketPriceBalance.swift"; sourceTree = "<group>"; };
 		789D4B6B9E40727F166D26DD /* PreambleExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreambleExplorer.swift"; sourceTree = "<group>"; };
@@ -5623,6 +5625,7 @@
 			children = (
 				DE3102AF00CBD384EA4FA011,
 				B17C50A42B5B0874EDE2A152,
+				83739928ED63507E0AA2ED88,
 				ED6F1F2243AB387D5D3FA8EB,
 				40287D99A02FB4137BB18496,
 				789D4B6B9E40727F166D26DD,
@@ -7389,6 +7392,7 @@
 				E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */,
 				D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */,
 				852E1D9AD2B52B9D060211B2 /* CompoundingGrowth.swift in Sources */,
+				4079F08B627295EE763D0550 /* CroppingSeasonExplorer.swift in Sources */,
 				B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */,
 				7AB4E90EB8F7172B9DDFB86F /* MarketPriceBalance.swift in Sources */,
 				EBFA56B53A19465811A9C3A7 /* PreambleExplorer.swift in Sources */,

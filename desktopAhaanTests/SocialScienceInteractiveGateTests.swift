@@ -68,15 +68,16 @@ final class SocialScienceInteractiveGateTests: XCTestCase {
     /// Coverage: EVERY Social Science chapter must resolve to a renderable
     /// interactive — it is ssch01 (relief), ssch10 (Preamble explorer),
     /// ssch11 (barter), ssch12 (market price balance), ssch18 (three-organs
-    /// sorter), ssch20 (compounding growth), a chronology chapter with a usable
-    /// timeline, OR a chapter with a usable glossary (the default match
-    /// challenge). No chapter may fall through to nothing.
+    /// sorter), ssch20 (compounding growth), ssch13 (cropping-season explorer),
+    /// a chronology chapter with a usable timeline, OR a chapter with a usable
+    /// glossary (the default match challenge). No chapter may fall through to
+    /// nothing.
     func testEveryChapterResolvesToAnInteractive() throws {
         let pack = try loadPack("socialscience_class7")
         for ch in pack.chapters {
             let bespoke = ch.id == "ssch01" || ch.id == "ssch11"
                 || ch.id == "ssch10" || ch.id == "ssch12"
-                || ch.id == "ssch18" || ch.id == "ssch20"
+                || ch.id == "ssch18" || ch.id == "ssch20" || ch.id == "ssch13"
             let chronology = socialScienceChronologyChapterIds.contains(ch.id)
                 && (ch.timelinesList.first?.steps.count ?? 0) >= 2
             let glossary = ch.glossaryList.count >= 2
