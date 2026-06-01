@@ -5375,3 +5375,20 @@ From the Rulers to the Ruled: Types of Governments — deepDive 4->6, ccRefs 4->
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed c81c1bb. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 88: ssch10 second DEEPDIVE pass
+
+The Constitution of India — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "'We, the People': who gives the Constitution its power?" (class_10,
+  anchor t05_c01): popular sovereignty; officials swear to the document, not a
+  person.
+- dv06 "How a whole nation wrote its rule book" (class_9, anchor t02_c01): the
+  Constituent Assembly (389/299 members, 15 women) and almost three years of
+  debate; a constitution argued out, not handed down.
+- cc05 -> ssch17 (Secular + fraternity -> India a home to many).
+- cc06 -> ssch04 (sabhā/samiti + gaṇa-saṅgha -> India's ancient democratic heritage).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed a28a0d5. 2nd DEEPDIVE pass now half done (ssch01-10). Zero regressions,
+zero STOP_AND_ASK.
