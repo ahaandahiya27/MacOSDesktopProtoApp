@@ -4556,6 +4556,24 @@
           "body": "Heat a parcel of air and it expands, becomes less dense than the air around it, and floats upward — just like a hot-air balloon. Cooler, denser air then flows in along the ground to take its place, and that horizontal flow is wind. This 'convection' explains the sea breeze: by day the land heats faster than the sea, so air rises over the warm land and cooler air blows in from the sea, giving coastal afternoons their refreshing breeze; at night it reverses. The same rising-and-sinking links straight back to pressure — air rises where pressure is low and sinks where it is high — so convection ties together temperature, pressure and wind, three of the five weather elements, into one moving picture.",
           "prerequisite": "Knowing that wind is moving air and that warm air is lighter than cold air.",
           "nextStepHint": "Work out which way the breeze blows at the coast at night, and why it is the opposite of the daytime sea breeze."
+        },
+        {
+          "id": "ssch02_dv05",
+          "title": "Why a thermometer lives in a white box in the shade",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch02_t02_c01",
+          "body": "If you leave a thermometer in direct sunshine it does not measure the air at all — it measures how hot the sun has made the glass, and can read many degrees too high. So a real weather station never does that. Its thermometers sit inside a white, louvred wooden box (a 'Stevenson screen') raised about a metre and a quarter above short grass. White paint reflects sunlight, the slatted sides let air flow freely past the bulb, and the standard height keeps the bulb away from heat radiating off the ground. The point is fairness: only if every station in the country measures the air the same way — in shade, at the same height, with free-flowing air — can a temperature taken in Delhi be honestly compared with one taken in Chennai. Good measurement is not just about the instrument; it is about measuring the same thing, the same way, everywhere.",
+          "prerequisite": "Knowing temperature is measured with a thermometer.",
+          "nextStepHint": "Try reading a thermometer in the sun and then in the shade at the same moment, and note the difference."
+        },
+        {
+          "id": "ssch02_dv06",
+          "title": "What a rain-gauge reading really means",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch02_t02_c03",
+          "body": "When a forecast says '25 mm of rain fell today', what does that number mean? A rain gauge catches rain through a funnel of a known opening and channels it into a narrow measuring tube. The reading is a DEPTH: 25 mm means that if the rain had not drained away, soaked in or evaporated, it would have covered flat ground to a depth of 25 millimetres — everywhere, not just in the gauge. The funnel matters because it concentrates the catch into the thin tube, so a tiny depth becomes an easy-to-read height of water. That is also why rainfall does not depend on the size of your gauge: a wide bucket and a narrow tube standing side by side both fill to the same depth. Turn the depth into volume and the numbers get dramatic — 25 mm over a single hectare is 250,000 litres of water.",
+          "prerequisite": "Knowing rainfall is measured with a rain gauge.",
+          "nextStepHint": "Work out how many litres of water 10 mm of rain drops on a flat rooftop 10 m by 10 m."
         }
       ],
       "crossChapterRefs": [
@@ -4597,6 +4615,24 @@
           "relatedConceptIds": [
             "ssch02_t05_c01",
             "ssch02_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch02_cc05",
+          "toChapterId": "ssch14",
+          "topic": "Weather hazards a region shares",
+          "pointer": "Cyclones in the Bay of Bengal and the monsoon itself do not stop at borders — they sweep across India and its neighbours alike, which is why countries share weather warnings, a cooperation taken up in 'India and its Neighbours'.",
+          "relatedConceptIds": [
+            "ssch02_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch02_cc06",
+          "toChapterId": "ssch16",
+          "topic": "The seasonal winds that powered sea trade",
+          "pointer": "The wind described here as moving air becomes, on the ocean scale, the dependable monsoon winds that ancient sailors timed their voyages by — the engine behind the Indian Ocean trade explored in the medieval-history chapters.",
+          "relatedConceptIds": [
+            "ssch02_t03_c02"
           ]
         }
       ],
