@@ -6235,3 +6235,23 @@ regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 5 M2 — Expert Challenges window (ladder view + challenge quiz reusing
 the Milestone MCQ flow) + menu wiring + render test.
+
+## 2026-06-02 — Phase 5 COMPLETE · M2 · Expert Challenges window
+
+Extracted shared MCQ UI (MCQOptionRow + MCQFeedbackBlock) and refactored
+MilestoneAssessmentView to use it (behavior-preserving) so the new ladder reuses
+it. Built ExpertChallengeLadderView (ladder → playing → result; only non-empty
+tiers shown, playable/locked states, local scoring, never writes SRS) +
+ExpertChallengeLadderWindowPresenter + Help → Expert Challenges (⌘⇧E). +2 render
+tests.
+
+Phase 5 complete: read-only mastery-gated tier engine (M1) + Expert Challenges
+window with playable challenges (M2). Olympiad tier populates once
+deepDive.bonusQuestions are authored (content task; mechanism done + tested).
+
+Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 800 XCTest, 0 failures (was 798, +2). Additive; zero
+regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 6 — integrate/test/doc: confirm Help-menu wiring, a11y/reduce-motion/
+legacy-GPU pass, round out tests, write LEARNING_JOURNEY_CHECKPOINT.md.

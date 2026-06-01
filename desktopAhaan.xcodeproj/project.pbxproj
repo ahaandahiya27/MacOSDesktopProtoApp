@@ -415,6 +415,9 @@
 		4A3CE77A95626D918E8241F5 /* BackupRestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAEE5826286F54387B3ACB3 /* BackupRestoreButton.swift */; };
 		1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */; };
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
+		D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */; };
+		99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */; };
+		DD0B459DA74DCC9D82FC202A /* MCQQuizComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42983DE5EF47E0D144BDD2E2 /* MCQQuizComponents.swift */; };
 		6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */; };
 		89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */; };
 		06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */; };
@@ -1499,6 +1502,7 @@
 		DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */; };
 		E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */; };
 		D39FF34BD1A5C7219453CC9E /* ExpertChallengeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECA1A7C62D2784B9A2A7CA5 /* ExpertChallengeIntegrationTests.swift */; };
+		198497A9D4F87CFB7CEE85E6 /* ExpertChallengeLadderViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19488760543D29F31D5A1DA2 /* ExpertChallengeLadderViewTests.swift */; };
 		847A0052DD6665429CD5A7FA /* ExpertChallengePlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F16655AD87A0B6F7F52D59 /* ExpertChallengePlannerTests.swift */; };
 		7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */; };
 		ABD50BFA756452A64FB06788 /* GlossaryArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5363A8C59EDC011177705492 /* GlossaryArticleRoutingTests.swift */; };
@@ -2993,6 +2997,9 @@
 		EFAEE5826286F54387B3ACB3 /* BackupRestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupRestoreButton.swift"; sourceTree = "<group>"; };
 		7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsScreen.swift"; sourceTree = "<group>"; };
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
+		5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderView.swift"; sourceTree = "<group>"; };
+		A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderWindow.swift"; sourceTree = "<group>"; };
+		42983DE5EF47E0D144BDD2E2 /* MCQQuizComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCQQuizComponents.swift"; sourceTree = "<group>"; };
 		2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapView.swift"; sourceTree = "<group>"; };
 		D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapWindow.swift"; sourceTree = "<group>"; };
 		6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentView.swift"; sourceTree = "<group>"; };
@@ -3095,6 +3102,7 @@
 		CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntitlementsSnapshotTest.swift"; sourceTree = "<group>"; };
 		33A3949D07E1B3CA2F232114 /* EphemeralReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EphemeralReviewTests.swift"; sourceTree = "<group>"; };
 		8ECA1A7C62D2784B9A2A7CA5 /* ExpertChallengeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeIntegrationTests.swift"; sourceTree = "<group>"; };
+		19488760543D29F31D5A1DA2 /* ExpertChallengeLadderViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderViewTests.swift"; sourceTree = "<group>"; };
 		82F16655AD87A0B6F7F52D59 /* ExpertChallengePlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengePlannerTests.swift"; sourceTree = "<group>"; };
 		19C42AD70C59A8AA39404012 /* ExtraReadingRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtraReadingRowTests.swift"; sourceTree = "<group>"; };
 		5363A8C59EDC011177705492 /* GlossaryArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlossaryArticleRoutingTests.swift"; sourceTree = "<group>"; };
@@ -5938,6 +5946,9 @@
 		055DFF040BBE16834D7BE15C /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				5EF59B7CEF78589B1199C3A5,
+				A4FE8CA4A2401D74766B0DDB,
+				42983DE5EF47E0D144BDD2E2,
 				2DB6A798EF07DB8D9CD4B3BD,
 				D235866F96FBF3E035A951C8,
 				6D962C53C2D8081E559D6567,
@@ -6015,6 +6026,7 @@
 				CEA91C543A578CC6E615E698,
 				33A3949D07E1B3CA2F232114,
 				8ECA1A7C62D2784B9A2A7CA5,
+				19488760543D29F31D5A1DA2,
 				82F16655AD87A0B6F7F52D59,
 				19C42AD70C59A8AA39404012,
 				5363A8C59EDC011177705492,
@@ -7640,6 +7652,9 @@
 				4A3CE77A95626D918E8241F5 /* BackupRestoreButton.swift in Sources */,
 				1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */,
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
+				D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */,
+				99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */,
+				DD0B459DA74DCC9D82FC202A /* MCQQuizComponents.swift in Sources */,
 				6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */,
 				89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */,
 				06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */,
@@ -7748,6 +7763,7 @@
 				DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */,
 				E652CB736AF95201ECE565DB /* EphemeralReviewTests.swift in Sources */,
 				D39FF34BD1A5C7219453CC9E /* ExpertChallengeIntegrationTests.swift in Sources */,
+				198497A9D4F87CFB7CEE85E6 /* ExpertChallengeLadderViewTests.swift in Sources */,
 				847A0052DD6665429CD5A7FA /* ExpertChallengePlannerTests.swift in Sources */,
 				7B6FD99375FFDB9CA32A3672 /* ExtraReadingRowTests.swift in Sources */,
 				ABD50BFA756452A64FB06788 /* GlossaryArticleRoutingTests.swift in Sources */,

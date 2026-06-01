@@ -412,6 +412,15 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("k", modifiers: [.command, .shift])
+
+                // Expert Challenges — mastery-gated tiered challenge ladder
+                // (v6 Phase 5). Own AppKit window, same pattern. ⌘⇧E is free.
+                Button("Expert Challenges") {
+                    ExpertChallengeLadderWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("e", modifiers: [.command, .shift])
                 }
 
                 Divider()

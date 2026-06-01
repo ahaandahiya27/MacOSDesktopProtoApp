@@ -760,3 +760,47 @@ required before declaring the mission complete (Phase 6).
   view (subjects → tiers with locked/unlocked/playable states; tap a playable
   tier to run a challenge quiz reusing the Milestone MCQ flow), Help-menu wiring
   + a render test. Render only non-empty tiers (Olympiad hidden until authored).
+
+### Cycle 21 (2026-06-02) — Phase 5 COMPLETE · M2 · Expert Challenges window
+- Confirmed M1 still green here (798 XCTest, 0 fail) before any change.
+- **Shared the MCQ UI first (DRY, no duplication):**
+  `desktopAhaan/Views/Progress/MCQQuizComponents.swift` — stateless reusable
+  `MCQOptionRow` (selection + graded styling, ✓/✗/●/○ glyphs, a11y label) and
+  `MCQFeedbackBlock` (correct/incorrect + first solution step). Refactored
+  `MilestoneAssessmentView` to use them (behavior-preserving — its render +
+  isAssessableMCQ tests stay green), so the new ladder reuses the exact same
+  option/feedback rendering instead of copying it.
+- **Built the Expert Challenges ladder:**
+  - `desktopAhaan/Views/Progress/ExpertChallengeLadderView.swift` (~390 LOC) — a
+    pure-SwiftUI three-phase flow (ladder → playing → result). The ladder lists
+    each subject-with-content with a mastery level chip and its tiers; only
+    tiers with authored questions are shown (so the empty Olympiad tier is hidden
+    today), each marked ⭐️ playable (Start button) or 🔒 locked ("Reach <Level>
+    to unlock"). Tapping a playable tier runs a short MCQ challenge over that
+    tier's questions using the shared components; the result screen scores it
+    locally with a Try-again / Back-to-challenges choice. Practice surface —
+    scoring is local (`AnswerValidator`), it **never writes the SRS**.
+  - `desktopAhaan/Views/Progress/ExpertChallengeLadderWindow.swift` —
+    `ExpertChallengeLadderWindowPresenter` (NSHostingController singleton). Help →
+    Expert Challenges (⌘⇧E) added to the dashboards Group in `desktopAhaanApp.swift`
+    (now 7 children, ≤10).
+- Big-Sur invariants: `@MainActor` views; DesignTokens colours; SF-Symbol-free
+  (emoji/glyphs); ViewBuilder ≤10 (Group + extracted subviews; the menu Group
+  re-counted at 7); transitions via `withAnimationRespectingReduceMotion`; no
+  force-unwrap; explicit a11y labels on every button + combined card labels;
+  `Button(action:)` wraps each method call in a closure (the lint stayed clean).
+- Tests (+2): `ExpertChallengeLadderViewTests.swift` — `NSHostingView`
+  render-smoke over a locked world and a mastered (tier-unlocked) world.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (3
+  source + 1 test auto-wired); `ci-build-test.sh` → **BUILD + 800 XCTest, 0
+  failures** (was 798, +2). Additive (sole existing-file edits: the Milestone MCQ
+  refactor to shared components + the one new menu Button); zero regressions;
+  zero STOP_AND_ASK.
+- **PHASE 5 (Olympiad / Expert Challenge Ladder) is COMPLETE** — the read-only
+  mastery-gated tier engine (M1) and the Expert Challenges window with playable
+  challenges (M2) are end-to-end reachable and green. (Content note: the Olympiad
+  tier populates once `deepDive.bonusQuestions` are authored — a content task;
+  the mechanism is done and tested.)
+- **NEXT:** Phase 6 — INTEGRATE / TEST / DOC: confirm all v6 Help-menu wiring,
+  do an a11y / WCAG / reduce-motion / legacy-GPU pass over the new windows, round
+  out tests, and write `LEARNING_JOURNEY_CHECKPOINT.md`.

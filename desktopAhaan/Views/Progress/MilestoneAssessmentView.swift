@@ -243,99 +243,16 @@ struct MilestoneAssessmentView: View {
 
     private func optionRow(_ option: String, question: AssessmentQuestion) -> some View {
         let isAnswer = AnswerValidator.matches(userInput: option, truth: question.question.answer)
-        let isSelected = selected == option
-        return Button(action: { if !revealed { selected = option } }) {
-            HStack(spacing: 10) {
-                Text(option)
-                    .font(.body)
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .multilineTextAlignment(.leading)
-                Spacer(minLength: 0)
-                optionMark(isAnswer: isAnswer, isSelected: isSelected)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 11)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .frame(minHeight: 44)
-            .background(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
-                    .fill(optionFill(isAnswer: isAnswer, isSelected: isSelected))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
-                    .stroke(optionStroke(isAnswer: isAnswer, isSelected: isSelected), lineWidth: 1.5)
-            )
-        }
-        .buttonStyle(.plain)
-        .disabled(revealed)
-        .accessibilityLabel(optionAccessibilityLabel(option, isAnswer: isAnswer, isSelected: isSelected))
-        .accessibilityAddTraits(isSelected ? .isSelected : [])
-    }
-
-    @ViewBuilder
-    private func optionMark(isAnswer: Bool, isSelected: Bool) -> some View {
-        if revealed && isAnswer {
-            Text("✓").font(.headline.weight(.bold))
-                .foregroundColor(DesignTokens.BrandColor.success).accessibilityHidden(true)
-        } else if revealed && isSelected {
-            Text("✗").font(.headline.weight(.bold))
-                .foregroundColor(DesignTokens.BrandColor.danger).accessibilityHidden(true)
-        } else if isSelected {
-            Text("●").font(.headline)
-                .foregroundColor(DesignTokens.BrandColor.primaryAction).accessibilityHidden(true)
-        } else {
-            Text("○").font(.headline)
-                .foregroundColor(DesignTokens.BrandColor.mutedSurface).accessibilityHidden(true)
-        }
-    }
-
-    private func optionFill(isAnswer: Bool, isSelected: Bool) -> Color {
-        if revealed && isAnswer { return DesignTokens.BrandColor.success.opacity(0.14) }
-        if revealed && isSelected { return DesignTokens.BrandColor.danger.opacity(0.12) }
-        if isSelected { return DesignTokens.BrandColor.primaryAction.opacity(0.10) }
-        return Color.gray.opacity(0.05)
-    }
-
-    private func optionStroke(isAnswer: Bool, isSelected: Bool) -> Color {
-        if revealed && isAnswer { return DesignTokens.BrandColor.success }
-        if revealed && isSelected { return DesignTokens.BrandColor.danger }
-        if isSelected { return DesignTokens.BrandColor.primaryAction }
-        return DesignTokens.BrandColor.dividerLine
-    }
-
-    private func optionAccessibilityLabel(_ option: String, isAnswer: Bool, isSelected: Bool) -> String {
-        var label = option
-        if revealed && isAnswer { label += ", correct answer" }
-        else if revealed && isSelected { label += ", your answer, incorrect" }
-        else if isSelected { label += ", selected" }
-        return label
+        return MCQOptionRow(
+            option: option, isAnswer: isAnswer, isSelected: selected == option,
+            revealed: revealed, onTap: { if !revealed { selected = option } })
     }
 
     private func feedbackBlock(_ q: AssessmentQuestion) -> some View {
-        let wasCorrect = correctById[q.id] ?? false
-        return VStack(alignment: .leading, spacing: 6) {
-            Text(wasCorrect ? "✅ Correct!" : "❌ Not quite — the answer is “\(q.question.answer)”.")
-                .font(.callout.weight(.semibold))
-                .foregroundColor(wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger)
-                .fixedSize(horizontal: false, vertical: true)
-            if let step = q.question.solutionSteps.first, !step.isEmpty {
-                Text(step)
-                    .font(.callout)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(12)
-        .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
-                .fill((wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger).opacity(0.08))
-        )
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel(wasCorrect
-            ? "Correct. \(q.question.solutionSteps.first ?? "")"
-            : "Not quite. The answer is \(q.question.answer). \(q.question.solutionSteps.first ?? "")")
+        MCQFeedbackBlock(
+            wasCorrect: correctById[q.id] ?? false,
+            answer: q.question.answer,
+            firstStep: q.question.solutionSteps.first)
     }
 
     private func actionRow(_ assessment: MilestoneAssessment, question: AssessmentQuestion) -> some View {
