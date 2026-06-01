@@ -5010,3 +5010,31 @@ ssch02 (weather lab), ssch03 (climate factors), ssch09 (govt forms), ssch10
 (Preamble), ssch11 (barter), ssch12 (market price), ssch13 (farming seasons), ssch18
 (three organs), ssch19 (infra sorter), ssch20 (compounding). History chapters carry
 SSChronologyChallenge. THREE chapters remain on glossary-match: ssch08, ssch14, ssch17.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 70 (ssch14 bespoke India's Neighbours Explorer — INTERACTIVE track)
+
+INTERACTIVE track. Authored `IndiaNeighboursExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/IndiaNeighboursExplorer.swift),
+a bespoke explorer for Ch.14 "India and Her Neighbours" (ssch14), upgrading that
+chapter from the generic glossary-match. The chapter's opening idea (ssch14_t01_c01)
+is that a neighbour meets India by LAND or across the SEA. The widget groups the
+nine neighbours into 'By land' (China, Pakistan, Afghanistan, Bangladesh, Nepal,
+Bhutan, Myanmar) and 'Across the sea' (Sri Lanka, Maldives); tapping one shows
+where it meets India and the shared heritage tie — Buddhism's spread, the
+Uttarapatha route, the open Nepal border, shared rivers and languages. Grounded in
+ssch14_t02–t04.
+
+Gated on exact pack.id + chapter.id == "ssch14", BEFORE the chronology/glossary
+fallbacks. Big-Sur safe: withAnimation (no .animation(_:value:)), SFSymbolCompat
+(all SF Symbols 1), manual chip wrapping, @SceneStorage namespaced by chapter,
+RM-gated motion, VoiceOver labels + hints, leaf-green Color(red:green:blue:).
+Mirrors the proven GovernmentFormsExplorer band+chip+detail structure. Extended
+SocialScienceInteractiveGateTests to pin ssch14 as bespoke. pbxproj regenerated
+(452 app sources). Full lint family + Release build + full suite green. Pushed 9d2135d.
+
+Bespoke Social Science interactives now cover TWELVE chapters: ssch01, ssch02,
+ssch03, ssch09, ssch10, ssch11, ssch12, ssch13, ssch14, ssch18, ssch19, ssch20.
+History chapters carry SSChronologyChallenge. TWO chapters remain on glossary-match:
+ssch08 (sacred geography), ssch17 (diversity).
