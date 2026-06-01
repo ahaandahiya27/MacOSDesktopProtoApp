@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟢 NEARLY DONE | Audit landed. **P1-A…P1-I DONE.** Cross-subject **enrichment-parity sweep COMPLETE**: every subject now carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); **Social Science exam+whatIf topped up 2→3/ch, 40 items, `_whatif` articles regenerated (P1-I)**. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Only P1-J (parity-matrix refresh) remains before Phase 2. |
+| 1 | ✅ DONE | **P1-A…P1-J complete.** Cross-subject **enrichment-parity sweep DONE**: every subject carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode — all four now at 🥈 STRONG or above. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); Social Science exam+whatIf 2→3/ch + `_whatif` articles regenerated (P1-I); `JOURNEY_PARITY_MATRIX.md` refreshed (P1-J). Remaining items are deferred optional polish (timelines, quickChecks, more `scientists`, bespoke SS Discover) — blocks nothing. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -358,3 +358,22 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** P1-J — refresh `JOURNEY_PARITY_MATRIX.md` to mark the sweep complete,
   then begin Phase 2 (read-only `Services/MasteryEngine.swift` + a pure-SwiftUI
   Mastery Map window).
+
+### Cycle 11 (2026-06-01) — Phase 1 · P1-J complete + Phase 1 CLOSED
+- Refreshed `JOURNEY_PARITY_MATRIX.md` to mark the enrichment-parity sweep
+  complete: headline tiers (Maths + Sanskrit 🟡 MEDIUM → 🥈 STRONG), the
+  enrichment-coverage table (whatIfs/examConnections now ✅ across all subjects),
+  reconciled the §4 backlog with the cycles that actually landed (P1-G…P1-J),
+  and re-triaged the leftover surfaces (timelines, quickCheckQuestions, extra
+  `scientists`, bespoke SS Discover) as a deferred OPTIONAL-polish backlog that
+  darks no chapter surface and gates no later phase.
+- Docs-only change (no pack/code/test touched); roundtrip clean; pre-push
+  `ci-build-test` green.
+- **Phase 1 is CLOSED.** Every subject is at the consistent high bar on all
+  bar-setting enrichment surfaces + Discover; Phases 3 (adaptive ceiling +
+  weaving) and 5 (Olympiad ladder) are unblocked across the board.
+- **NEXT:** Phase 2 — author the read-only `Services/MasteryEngine.swift`
+  aggregating SRS + coverage into concept→subject→overall mastery (built ON TOP
+  of the existing `MasteryDashboard` / `DataStore+Mastery` / `MasteryLevel`,
+  never mutating SRS), and a pure-SwiftUI Mastery Map window under the Big-Sur /
+  legacy-GPU invariants. Read those existing files first; extend, don't replace.

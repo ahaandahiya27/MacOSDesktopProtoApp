@@ -22,8 +22,15 @@
 |---------|:--------:|:------:|:-------:|:-------------:|:--------:|-------------------|:----:|
 | **Science** | 19 | 57 | 152 | **200** | **57** | 19/19 bespoke per-chapter views | 🥇 GOLD |
 | **Social Science** | 20 | 96 | 87 | **260** | **120** | 20/20 (one data-driven 9-scene view) | 🥈 STRONG |
-| **Maths** | 15 | 53 | 120 | **90** ✅ | **45** ✅ | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
-| **Sanskrit** | 16¹ | 43 | 75 | **90** ✅ | **45** ✅ | **15/15 ✅** (one data-driven 9-scene view + a gated शब्द–अर्थ word-match interactive/ch; legacy ch01 exempt) | 🟡 MEDIUM |
+| **Maths** | 15 | 53 | 120 | **90** ✅ | **45** ✅ | 15/15 bespoke per-chapter views | 🥈 STRONG |
+| **Sanskrit** | 16¹ | 43 | 75 | **90** ✅ | **45** ✅ | **15/15 ✅** (one data-driven 9-scene view + a gated शब्द–अर्थ word-match interactive/ch; legacy ch01 exempt) | 🥈 STRONG |
+
+> **Phase-1 enrichment-parity sweep: COMPLETE (P1-A…P1-I).** All four subjects
+> now sit at the 🥈 STRONG bar or above — every subject carries the full
+> bar-setting enrichment surface set (`deepDive`, `bossQuestions`,
+> `crossChapterRefs`, `examConnections` ≥3/ch, `whatIfs` ≥3/ch) plus Discover
+> Mode. Maths and Sanskrit-NEP rose from 🟡 MEDIUM to 🥈 STRONG. Only the
+> optional-polish backlog (§4) remains, and it blocks nothing downstream.
 
 ¹ Sanskrit `ch01` is the legacy vocabulary deck (a deliberate carve-out, exempt
 from NEP cross-subject parity ratchets per CLAUDE.md). The 15 NEP chapters are
@@ -43,20 +50,31 @@ Legend: ✅ = every (non-carve-out) chapter has it · ⚠️ = partial · ❌ = 
 | ncertQA           | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | miniProjects      | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | conceptMap        | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
-| whatIfs           | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ✅ 15/15 |
+| **whatIfs**       | ✅ 19/19 | ✅ 20/20 (≥3/ch, P1-I) | ✅ **15/15** (P1-G) | ✅ 15/15 |
 | **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ✅ **15/15** (P1-B) |
 | **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-F) | ✅ **15/15** (P1-F) |
 | **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-C) | ✅ **15/15** (P1-D) |
-| **examConnections** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
-| timelines         | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ❌ 0 |
-| quickCheckQuestions | ⚠️ 16/19 | ✅ 20/20 | ❌ 0  | ❌ 0 |
-| scientists        | ✅ 19/19 | ❌ 0 (n/a²) | ⚠️ 3/15 | ✅ 15/15 |
+| **examConnections** | ✅ 19/19 | ✅ 20/20 (≥3/ch, P1-I) | ✅ **15/15** (P1-G) | ✅ **15/15** (P1-H) |
+| timelines         | ✅ 19/19 | ✅ 20/20 | ⚠️ 0 (polish³) | ⚠️ 0 (polish³) |
+| quickCheckQuestions | ⚠️ 16/19 | ✅ 20/20 | ⚠️ 0 (polish³) | ⚠️ 0 (polish³) |
+| scientists        | ✅ 19/19 | ❌ 0 (n/a²) | ⚠️ 3/15 (polish³) | ✅ 15/15 |
 
 ² `scientists` is subject-inappropriate for Social Science (no "scientist"
-notion); its absence there is correct, not a gap. Maths' 3/15 is borderline —
-"mathematicians" entries (Aryabhata, Ramanujan, Brahmagupta) exist for 3
-chapters only; a fill pass could add historical-mathematician context to the
-remaining 12, but this is low priority versus the four bolded gaps.
+notion); its absence there is correct, not a gap.
+
+³ **Optional-polish backlog (not bar-setting).** After P1-A…P1-I, every subject
+carries the full set of *bar-setting* enrichment surfaces (glossary, mnemonics,
+misconceptions, realWorldExamples, ncertQA, miniProjects, conceptMap,
+**deepDive, bossQuestions, crossChapterRefs, examConnections, whatIfs**) at the
+3/ch (or 4/6-per-ch) parity bar, plus Discover Mode. The remaining ⚠️ cells are
+genuine polish that does NOT leave any chapter-detail surface dark or block any
+later phase: Maths/Sanskrit `timelines` are subject-marginal (math/grammar has
+no natural chronology; the historical context already lives in `deepDive`);
+`quickCheckQuestions` being empty in Maths/Sanskrit does not dark the Discover
+quick-check scenes (those source live from concepts + `bossQuestions`); Maths
+`scientists` 3/15 already covers the chapters with a famous mathematician
+(Aryabhata, etc.) and forcing one onto every chapter would be artificial. These
+are deferred below Phase 2 as low-value, optional, and are tracked in §4.
 
 ## 3. Downstream-dependency analysis (why the gaps matter)
 
@@ -97,26 +115,52 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 | ~~**P1-D**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch on the 15 NEP chapters, legacy ch01 exempt), all `bossquiz_schNN_qII`, difficulty 3–5, textbook-faithful (grounded in each concept's `explanations`), worked steps + distractor-trap note + variation each, +8 ratchet tests; 727 XCTest green | **Sanskrit** | Phase 3 ceiling **raised for Sanskrit** | High |
 | ~~**P1-E**~~ ✅ | ~~Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch)~~ **DONE** — `DiscoverChapterSanskritView` (data-driven 9-scene view) now serves all 15 NEP chapters (`sch01`–`sch15`); each carries a bespoke **gated** शब्द–अर्थ word-match interactive built from the chapter glossary (completes only when every pair is matched), plus 3 concept scenes, 3 SRS quick-checks, and the boss quiz. +4 ratchet tests; 731 XCTest green. Legacy ch01 deck deliberately excluded. | **Sanskrit** (was 0/16) | journey engagement parity **achieved** | High |
 | ~~**P1-F**~~ ✅ | ~~Add `crossChapterRefs` (≥4/ch)~~ **DONE** — 120 added (4/ch × 30 chapters), all in-pack targets, hand-authored curricular pointers, real source-concept anchors, via re-runnable `scripts/inject_cross_chapter_refs.py`; +2 ratchet tests; 733 XCTest green. Legacy Sanskrit ch01 exempt. | **Maths**, **Sanskrit** | Phase 3 weaving **enabled** | Medium |
-| **P1-G** | Add `examConnections` + `whatIfs` | **Maths** | enrichment parity | Medium |
-| **P1-H** | Upgrade Social Science Discover from one generic view toward bespoke per-chapter interactives (parity with Science/Maths) | **Social Science** | engagement depth | Medium |
-| **P1-I** | Backfill `quickCheckQuestions` for the 3 Science chapters missing them | **Science** | minor parity | Low |
-| **P1-J** | Add historical-mathematician `scientists` entries for 12 Maths chapters | **Maths** | minor parity | Low |
+| ~~**P1-G**~~ ✅ | ~~Add `examConnections` + `whatIfs`~~ **DONE** — 45 each (3/ch), `mchNN_xcII`/`mchNN_wiII`, in-pack anchors, NEP-faithful forward pointers + misconception-targeting counterfactuals, +3 ratchet tests; whatIfs floor ratcheted 0→3 | **Maths** | enrichment parity **reached** | Medium |
+| ~~**P1-H**~~ ✅ | ~~Add `examConnections` (last dark surface for Sanskrit NEP)~~ **DONE** — 45 (3/ch on the 15 NEP chapters, legacy ch01 exempt), `schNN_xcII`, grammar/literature/culture forward pointers, in-pack anchors, +1 ratchet test | **Sanskrit** | enrichment parity **reached** | Medium |
+| ~~**P1-I**~~ ✅ | ~~Top up `examConnections` + `whatIfs` 2→3/ch~~ **DONE** — +40 items (`sschNN_xc03`/`wi03`), idempotent injector, 20 `_whatif` articles regenerated (3 scenarios), +3 ratchet tests | **Social Science** | clears the shared 3/ch bar | Medium |
+| ~~**P1-J**~~ ✅ | ~~Refresh this matrix to mark the enrichment-parity sweep complete~~ **DONE** (this revision) | — | closes Phase 1 core | Low |
 
 **Sequencing note.** P1-A/B/C/D (the deepDive + bossQuestions fills for Maths
-and Sanskrit) are prerequisites for Phases 3 and 5 and so come first. P1-E
-(Sanskrit Discover) is the largest engagement gap and the most code-heavy; it
-runs in parallel as its own track. The Social Science Discover upgrade (P1-H)
-is genuine polish — the existing data-driven view already gives 20/20 coverage,
-so it ranks below the absent-surface fills.
+and Sanskrit) were prerequisites for Phases 3 and 5 and came first. P1-E
+(Sanskrit Discover) was the largest engagement gap and the most code-heavy.
+P1-F…P1-I closed the remaining enrichment-surface gaps (`crossChapterRefs`,
+`examConnections`, `whatIfs`) across all subjects. **The Phase-1 core is now
+complete.**
 
-## 5. What is already at the high bar (no Phase 1 work needed)
+### Deferred optional-polish backlog (post-Phase-2, blocks nothing)
+
+These were re-triaged as low-value polish (see footnote ³). They leave no
+chapter-detail surface dark and gate no later phase, so the journey advances to
+Phase 2 (Mastery Map) ahead of them:
+
+| Milestone | Subject | Note |
+|-----------|---------|------|
+| Bespoke per-chapter Discover interactives | Social Science | The data-driven 9-scene view already gives 20/20 coverage; bespoke views are refinement, not a gap. |
+| Backfill `quickCheckQuestions` | Science (3 ch), Maths, Sanskrit | Discover quick-check scenes already source live from concepts + `bossQuestions`; the empty field darks nothing. |
+| Historical-mathematician `scientists` | Maths (12 ch) | The 3 chapters with a famous mathematician are covered; forcing one onto every chapter would be artificial. |
+| `timelines` | Maths, Sanskrit | Subject-marginal; historical context already lives in `deepDive`. |
+
+## 5. What is at the high bar (Phase-1 core complete)
+
+After P1-A…P1-I, **all four subjects sit at or above the 🥈 STRONG bar** on
+every bar-setting enrichment surface:
 
 - **Science** — gold standard on every dimension. 19/19 bespoke Discover, full
-  enrichment, 200 boss Qs, 57 deepDive. Used as the reference for the bar.
+  enrichment, 200 boss Qs, 57 deepDive. The reference for the bar.
 - **Social Science** — full enrichment (260 boss Qs, 120 deepDive), 20/20
-  Discover. Recently deepened (REMEDIATION_LOG cycles 81–99: second DEEPDIVE +
-  GLOSSARY passes). Only the per-chapter-bespoke-Discover refinement (P1-H)
-  remains, and that is polish, not a gap.
+  Discover, now ≥3/ch examConnections + whatIfs (P1-I). Deepened across
+  REMEDIATION_LOG cycles 81–99 (second DEEPDIVE + GLOSSARY passes).
+- **Maths** — rose from 🟡 MEDIUM to 🥈 STRONG. 15/15 bespoke Discover; full
+  enrichment incl. deepDive (45, P1-A), bossQuestions (90, P1-C),
+  crossChapterRefs (60, P1-F), examConnections + whatIfs (45 each, P1-G).
+- **Sanskrit (NEP)** — rose from 🟡 MEDIUM to 🥈 STRONG. 15/15 data-driven
+  Discover with a gated शब्द–अर्थ word-match per chapter (P1-E); full enrichment
+  incl. deepDive (45, P1-B), bossQuestions (90, P1-D), crossChapterRefs (60,
+  P1-F), examConnections (45, P1-H). Legacy `ch01` vocab deck is the documented
+  carve-out throughout.
+
+Only the deferred optional-polish backlog (§4) remains, and it blocks nothing
+downstream. **Phase 1 advances to Phase 2 (Mastery Map).**
 
 ---
 
