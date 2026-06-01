@@ -5328,3 +5328,19 @@ The Age of Reorganisation — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed f2ce564. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 85: ssch07 second DEEPDIVE pass
+
+The Gupta Era — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "Aryabhata's spinning Earth — and eclipses without demons" (class_10,
+  anchor t04_c02): rotation explains day/night, an accurate year length, and
+  eclipses as shadows not demons — reasoning over appearances.
+- dv06 "Prabhavati Gupta: a queen who ruled in her own right" (class_9, anchor
+  t02_c04): a Vakataka regent who issued grants in her own name; royal marriage
+  as a tool of diplomacy.
+- cc05 -> ssch12 (Gupta's buzzing trade economy -> markets).
+- cc06 -> ssch08 (Gupta temple-building and devotion -> sacred geography).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed c29108a. Zero regressions, zero STOP_AND_ASK.
