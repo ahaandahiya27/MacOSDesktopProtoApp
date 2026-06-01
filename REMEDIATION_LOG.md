@@ -5344,3 +5344,19 @@ The Gupta Era — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed c29108a. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 86: ssch08 second DEEPDIVE pass
+
+How the Land Becomes Sacred — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "Tīrtha: why a holy place is called a 'crossing'" (class_9, anchor
+  t01_c02): the river-ford root and the spiritual crossing-over; why the journey
+  itself matters.
+- dv06 "Why mountains are seen as gateways to heaven" (class_10, anchor t04_c03):
+  peaks as earth-sky doorways, hilltop shrines, a worldwide human instinct
+  (Kailash, Olympus, Fuji).
+- cc05 -> ssch03 (sacred rivers + Kumbh calendar -> monsoon and seasons).
+- cc06 -> ssch17 (shrines of many faiths -> India's pluralism/diversity).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 8e43bcd. Zero regressions, zero STOP_AND_ASK.
