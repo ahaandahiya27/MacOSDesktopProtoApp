@@ -48062,6 +48062,24 @@
           "body": "Treating infrastructure as a duty of the state is not a modern idea — the chapter's link to the Arthashastra shows how old it is. Kautilya's manual, written for the Mauryan state over two thousand years ago, instructed the king to build and maintain roads with measured widths for carts, troops and pedestrians; to plant shade trees and dig wells and rest-houses (called dharmashalas) along them for travellers; and above all to build and repair irrigation works, because a prosperous, tax-paying kingdom depended on watered fields. We even have proof it was done: an inscription at Junagadh records the great Sudarshana lake, a dam first built in Mauryan times and repaired by later rulers for centuries. So the principle the chapter teaches — that the state must provide the shared structures on which everyone's prosperity rests — is one India's thinkers had already worked out in antiquity. The technology changes from stone dams to fibre-optic cable, but the responsibility is the same.",
           "prerequisite": "Knowing the Arthashastra discussed roads, rest-houses and irrigation.",
           "nextStepHint": "Name one piece of infrastructure the Arthashastra told the king to build and its modern equivalent."
+        },
+        {
+          "id": "ssch19_dv05",
+          "title": "Energy: the infrastructure every other one runs on",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch19_t01_c03",
+          "body": "Of all the kinds of infrastructure, energy has a special place: almost everything else stops without it. A hospital's machines, a railway's signals, a factory's motors, a phone tower, the pump that lifts water to your tap — all of them need electricity. That is why power plants, dams, solar parks and wind farms, and the web of wires and pipelines that carry power and water, are sometimes called the infrastructure BEHIND the infrastructure. India draws energy from many sources: big dams like Bhakra Nangal that give both electricity AND irrigation water; solar projects so ambitious that Cochin became the first airport in the world to run fully on solar power; and giant wind farms like Muppandal in Tamil Nadu. Mixing these sources matters, because clean energy from the sun and wind does not pollute or run out the way coal does. So when you flip a switch, you are using the one service on which nearly every other modern convenience quietly depends.",
+          "prerequisite": "Knowing energy and utilities are a kind of infrastructure.",
+          "nextStepHint": "List three other services in your day that would stop if the electricity failed."
+        },
+        {
+          "id": "ssch19_dv06",
+          "title": "Why almost everything you own once travelled by ship",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch19_t03_c02",
+          "body": "Look at the labels on things around you and many were made in another country — and the chances are they reached India by SEA. Most goods that travel between countries go by ship because it is by far the cheapest way to move huge amounts of cargo: a single container vessel can carry what thousands of trucks would. That is why ports are such vital infrastructure. India has major ports on both coasts — Mumbai, Jawaharlal Nehru, Kandla and Kochi in the west; Chennai, Vishakhapatnam, Kolkata and Paradip in the east — where cranes load and unload giant container ships. Their traffic is even measured in a special unit, the TEU (Twenty-foot Equivalent Unit), basically a count of standard containers. Ships are slower than planes, so urgent or light, high-value goods fly while bulky, heavy cargo sails — a neat example of choosing the right infrastructure for the job. A busy port quietly connects a whole region to the world's markets.",
+          "prerequisite": "Knowing ports handle most of India's overseas trade.",
+          "nextStepHint": "Why would a country send heavy machinery by sea but fresh flowers by air?"
         }
       ],
       "crossChapterRefs": [
@@ -48109,6 +48127,25 @@
           "pointer": "The communications networks studied here are what carry the UPI and QR-code payments of the money chapter — digital money needs digital infrastructure.",
           "relatedConceptIds": [
             "ssch19_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch19_cc06",
+          "toChapterId": "ssch01",
+          "topic": "Geography decides where infrastructure goes",
+          "pointer": "India's long coastlines, river plains and mountain passes — from 'Geographical Diversity of India' — decide where ports, dams, highways and rail lines can be built, shaping the whole map of infrastructure.",
+          "relatedConceptIds": [
+            "ssch19_t03_c02",
+            "ssch19_t01_c03"
+          ]
+        },
+        {
+          "id": "ssch19_cc07",
+          "toChapterId": "ssch03",
+          "topic": "Clean energy and the climate",
+          "pointer": "The solar parks and wind farms described here harness the very sunshine and winds studied in 'Climates of India', and they matter because clean energy helps fight the climate change explained there.",
+          "relatedConceptIds": [
+            "ssch19_t01_c03"
           ]
         }
       ],
