@@ -399,6 +399,7 @@
 		EBFA56B53A19465811A9C3A7 /* PreambleExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789D4B6B9E40727F166D26DD /* PreambleExplorer.swift */; };
 		B8481D4D2EC8C629836B8816 /* SSChronologyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8844EDE5FC49D75F8B242C /* SSChronologyChallenge.swift */; };
 		BEDBF64049BB05C20E2B0309 /* SSGlossaryMatchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4011AC3F86DC33C2DD767F /* SSGlossaryMatchChallenge.swift */; };
+		52C99E507EB43138A8F7A199 /* SacredGeographyExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E31E9BA0FC4E48425AC80E /* SacredGeographyExplorer.swift */; };
 		C11514B5E7AFC0ACA48069E7 /* ThreeOrgansSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E02B50BCD6A560B34DE6 /* ThreeOrgansSorter.swift */; };
 		FA6348B497C44BDA88EDF88F /* WeatherInstrumentLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5845EEF0FBF44C276A2339B1 /* WeatherInstrumentLab.swift */; };
 		436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */; };
@@ -2896,6 +2897,7 @@
 		789D4B6B9E40727F166D26DD /* PreambleExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreambleExplorer.swift"; sourceTree = "<group>"; };
 		9F8844EDE5FC49D75F8B242C /* SSChronologyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSChronologyChallenge.swift"; sourceTree = "<group>"; };
 		DE4011AC3F86DC33C2DD767F /* SSGlossaryMatchChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SSGlossaryMatchChallenge.swift"; sourceTree = "<group>"; };
+		53E31E9BA0FC4E48425AC80E /* SacredGeographyExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SacredGeographyExplorer.swift"; sourceTree = "<group>"; };
 		49F5E02B50BCD6A560B34DE6 /* ThreeOrgansSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThreeOrgansSorter.swift"; sourceTree = "<group>"; };
 		5845EEF0FBF44C276A2339B1 /* WeatherInstrumentLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherInstrumentLab.swift"; sourceTree = "<group>"; };
 		819089DC485FCC6907D1F804 /* InsideTheAlveolusTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheAlveolusTour.swift"; sourceTree = "<group>"; };
@@ -5648,6 +5650,7 @@
 				789D4B6B9E40727F166D26DD,
 				9F8844EDE5FC49D75F8B242C,
 				DE4011AC3F86DC33C2DD767F,
+				53E31E9BA0FC4E48425AC80E,
 				49F5E02B50BCD6A560B34DE6,
 				5845EEF0FBF44C276A2339B1,
 			);
@@ -7421,6 +7424,7 @@
 				EBFA56B53A19465811A9C3A7 /* PreambleExplorer.swift in Sources */,
 				B8481D4D2EC8C629836B8816 /* SSChronologyChallenge.swift in Sources */,
 				BEDBF64049BB05C20E2B0309 /* SSGlossaryMatchChallenge.swift in Sources */,
+				52C99E507EB43138A8F7A199 /* SacredGeographyExplorer.swift in Sources */,
 				C11514B5E7AFC0ACA48069E7 /* ThreeOrgansSorter.swift in Sources */,
 				FA6348B497C44BDA88EDF88F /* WeatherInstrumentLab.swift in Sources */,
 				436B366E7B3EBEA1BBA7E0B3 /* InsideTheAlveolusTour.swift in Sources */,

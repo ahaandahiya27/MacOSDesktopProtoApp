@@ -89,6 +89,8 @@ func socialScienceInteractives(
             IndiaNeighboursExplorer(chapterId: chapter.id)
         } else if chapter.id == "ssch17" {
             HomeToManyExplorer(chapterId: chapter.id)
+        } else if chapter.id == "ssch08" {
+            SacredGeographyExplorer(chapterId: chapter.id)
         } else if socialScienceChronologyChapterIds.contains(chapter.id) {
             // History chapters whose first authored timeline is genuinely
             // chronological — a "put history in order" challenge. Auto-hides if

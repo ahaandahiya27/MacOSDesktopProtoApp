@@ -71,10 +71,12 @@ final class SocialScienceInteractiveGateTests: XCTestCase {
     /// sorter), ssch20 (compounding growth), ssch13 (cropping-season explorer),
     /// ssch09 (government-forms explorer), ssch03 (climate-factors explorer),
     /// ssch02 (weather-instrument lab), ssch19 (infrastructure sorter), ssch14
-    /// (India's-neighbours explorer), ssch17 (home-to-many explorer), a
-    /// chronology chapter with a usable timeline, OR a chapter with a usable
-    /// glossary (the default match challenge). No chapter may fall through to
-    /// nothing.
+    /// (India's-neighbours explorer), ssch17 (home-to-many explorer), ssch08
+    /// (sacred-geography explorer), a chronology chapter with a usable timeline,
+    /// OR a chapter with a usable glossary (the default match challenge). No
+    /// chapter may fall through to nothing. (As of cycle 72 every non-history
+    /// chapter has a bespoke widget; the glossary fallback remains as a safety
+    /// net pinned by this test.)
     func testEveryChapterResolvesToAnInteractive() throws {
         let pack = try loadPack("socialscience_class7")
         for ch in pack.chapters {
@@ -84,7 +86,7 @@ final class SocialScienceInteractiveGateTests: XCTestCase {
                 || ch.id == "ssch13" || ch.id == "ssch09"
                 || ch.id == "ssch03" || ch.id == "ssch02"
                 || ch.id == "ssch19" || ch.id == "ssch14"
-                || ch.id == "ssch17"
+                || ch.id == "ssch17" || ch.id == "ssch08"
             let chronology = socialScienceChronologyChapterIds.contains(ch.id)
                 && (ch.timelinesList.first?.steps.count ?? 0) >= 2
             let glossary = ch.glossaryList.count >= 2
