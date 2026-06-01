@@ -5451,3 +5451,18 @@ India and Her Neighbours — deepDive 4->6, crossChapterRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 95f4a7f. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 93: ssch15 second DEEPDIVE pass
+
+Empires and Kingdoms: 6th to 10th Centuries — deepDive 4->6, ccRefs 5->7.
+- dv05 "Nalanda and Vikramashila: universities a thousand years ago" (class_10,
+  anchor t02_c02): Pala-patronised residential universities; knowledge as a king's
+  treasure; India as a hub of the Buddhist scholarly world.
+- dv06 "From rock to temple: the builders of Mamallapuram" (class_10, anchor
+  t03_c02): Pallava rock-cut/monolithic temples seeding South Indian architecture.
+- cc06 -> ssch08 (Bhakti + temple-building -> sacred geography).
+- cc07 -> ssch18 (Uttaramerur village self-government -> panchayati raj third tier).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed b632307. Zero regressions, zero STOP_AND_ASK.
