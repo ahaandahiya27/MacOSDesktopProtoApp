@@ -5294,3 +5294,20 @@ Rebuilt the pack via ss_build_pack.py; regenerated articles with --write. All 7
 content lints green; pre-push ci-build-test PASSED. Index/HTML steady at 180
 entries / 907 bundled files. Additive only. Pushed dd4215c. Zero regressions,
 zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 83: ssch05 second DEEPDIVE pass
+
+The Rise of Empires — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "The war that changed an emperor: Kalinga and the turn to Dhamma"
+  (class_9, anchor t05_c01): Ashoka's remorse in his own Rock Edict XIII; the
+  shift from digvijaya to dhammavijaya.
+- dv06 "Why even great empires fall apart" (class_10, anchor t05_c03): vast
+  size + slow communication + costly army/tribute + weak succession as the
+  paradox that makes empires fragile.
+- cc05 -> ssch10 (Sarnath Lion Capital -> State Emblem + flag dharmachakra).
+- cc06 -> ssch19 (Arthaśhāstra's roads/town-planning/irrigation as a blueprint
+  for public works/infrastructure).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 73ed226. Zero regressions, zero STOP_AND_ASK.
