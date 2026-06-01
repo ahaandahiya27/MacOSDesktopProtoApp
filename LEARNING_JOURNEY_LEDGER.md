@@ -26,11 +26,11 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A DONE** (Maths `deepDive`: 45 StretchTopics, 3/ch, +6 tests, 706 XCTest green). Backlog P1-B…P1-J pending. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A + P1-B DONE** (Maths + Sanskrit `deepDive`: 45 each, 3/ch, +12 tests, 712 XCTest green). Backlog P1-C…P1-J pending. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
-| 5 | ⬜ NOT STARTED | Maths **unblocked** (P1-A added 45 `deepDive`). Still blocked for Sanskrit until P1-B. |
+| 5 | ⬜ NOT STARTED | **Unblocked for all four subjects** — P1-A (Maths 45) + P1-B (Sanskrit 45) closed the `deepDive` gap; every subject now feeds the ladder. |
 | 6 | ⬜ NOT STARTED | Final integration + checkpoint doc. |
 
 ## Environment note (important for whoever resumes)
@@ -87,3 +87,31 @@ required before declaring the mission complete (Phase 6).
   ≥3/ch), the last subject blocking Phase 5. Same contract: in-chapter parent
   anchor, forward-grade extension faithful to the NEP Sanskrit text, ≥120-word
   bodies, mirror test, green before commit.
+
+### Cycle 3 (2026-06-01) — Phase 1 · P1-B complete (Sanskrit `deepDive`)
+- Added **45 `deepDive` StretchTopics** to the 15 NEP Sanskrit chapters
+  (`sch01`–`sch15`, 3 each) via the new re-runnable
+  `scripts/inject_sanskrit_deepdive.py`. The legacy `ch01` vocabulary deck is
+  the documented carve-out and is skipped (and exempted in the test floor).
+- Each is parent-anchored to a real in-chapter concept and is a genuine
+  forward-grade extension (class_8…class_11) along three faithful tracks:
+  **grammar** (samāsa, the कारक/विभक्ति system, the चतुर्थी after नमः, क्त्वा
+  gerund, लङ् imperfect, तुमुन् infinitive + causative, the ten गण, the लकार
+  system, परस्मैपद/आत्मनेपद, तसिल्/शस्/वति/मतुप् suffixes); **literature**
+  (Īśopaniṣad, Bhagavad Gītā 3.14, Bhartṛhari's subhāṣitas, the Pañcatantra
+  nīti tradition, अद्वैत वेदान्त + तत्त्वमसि); and **history/culture** (Vande
+  Mataram & Ānandamaṭha, the Cellular Jail/कालापानी, Mewar & Panna Dhai,
+  सूर्यनमस्कार/Yoga, आयुर्वेद, the वेदाङ्ग शिक्षा). All Devanagari/IAST
+  micro-detail checked; bodies ≥120 words with prerequisite + next-step.
+- Renders natively through the existing `DeepDiveSection` (same as Maths;
+  no HTML article needed).
+- Added `desktopAhaanTests/SanskritDeepDiveTests.swift` (6 ratchet tests; the
+  per-chapter floor exempts the legacy `ch01` deck).
+- Green here: content lints + `test_lints.py` pass; roundtrip + schema clean
+  (Devanagari survives byte-for-byte with `ensure_ascii=False`); pbxproj
+  regenerated; `ci-build-test.sh` → **BUILD + 712 XCTest, 0 failures** (was 706).
+- **Phase 5 (Olympiad ladder) is now open for ALL FOUR subjects.** Additive
+  only; zero regressions; zero STOP_AND_ASK.
+- **NEXT:** P1-C — Maths `bossQuestions` fill (≥6/ch) to raise the Phase 3
+  adaptive difficulty ceiling, then P1-D (Sanskrit `bossQuestions`). Same
+  loop: author → lint → pbxproj → ci-build-test green → commit/push → ledger.

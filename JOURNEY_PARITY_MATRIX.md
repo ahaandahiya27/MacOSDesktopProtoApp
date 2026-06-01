@@ -23,7 +23,7 @@
 | **Science** | 19 | 57 | 152 | **200** | **57** | 19/19 bespoke per-chapter views | 🥇 GOLD |
 | **Social Science** | 20 | 96 | 87 | **260** | **120** | 20/20 (one data-driven 9-scene view) | 🥈 STRONG |
 | **Maths** | 15 | 53 | 120 | 0 | **45** ✅ | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
-| **Sanskrit** | 16¹ | 43 | 75 | 0 | 0 | **0/16 — no Discover Mode** | 🔴 WEAKEST |
+| **Sanskrit** | 16¹ | 43 | 75 | 0 | **45** ✅ | **0/16 — no Discover Mode** | 🔴 WEAKEST |
 
 ¹ Sanskrit `ch01` is the legacy vocabulary deck (a deliberate carve-out, exempt
 from NEP cross-subject parity ratchets per CLAUDE.md). The 15 NEP chapters are
@@ -44,7 +44,7 @@ Legend: ✅ = every (non-carve-out) chapter has it · ⚠️ = partial · ❌ = 
 | miniProjects      | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | conceptMap        | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | whatIfs           | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ✅ 15/15 |
-| **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ❌ **0** |
+| **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ✅ **15/15** (P1-B) |
 | **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | **examConnections** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
@@ -64,10 +64,10 @@ The later journey phases are **not** independent of content depth. Two phases
 have hard data dependencies on fields that Maths and Sanskrit are missing:
 
 - **Phase 5 (Olympiad / Expert Challenge Ladder)** builds "tiered expert sets
-  from `deepDive`." Maths and Sanskrit have **zero `deepDive` items**, so as of
-  the baseline they **cannot participate in the Olympiad ladder at all.** This
-  is the single highest-leverage gap: closing it unblocks an entire phase for
-  two of four subjects.
+  from `deepDive`." At baseline Maths and Sanskrit had **zero `deepDive` items**,
+  so they could not participate at all. ✅ **RESOLVED** by P1-A (Maths, 45) and
+  P1-B (Sanskrit, 45): all four subjects now carry `deepDive`, so Phase 5 is
+  open across the board. This was the single highest-leverage gap.
 - **Phase 3 (Adaptive Cross-Subject Journey)** mixes practice across subjects.
   `bossQuestions` are the high-difficulty pool the adaptive engine escalates
   into. Maths/Sanskrit having **zero `bossQuestions`** means the adaptive
@@ -87,7 +87,7 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 | # | Milestone | Subject | Unblocks | Effort |
 |---|-----------|---------|----------|--------|
 | ~~**P1-A**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch, class_8–12 anchored)~~ **DONE** — 45 added (3/ch), all parent-anchored in-chapter, ≥120-word bodies, +6 ratchet tests; 706 XCTest green | **Maths** (15 ch) | Phase 5 ladder **now open for Maths** | High |
-| **P1-B** | Add `deepDive` StretchTopics (≥3/ch) | **Sanskrit** (15 NEP ch) | Phase 5 ladder | High |
+| ~~**P1-B**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch)~~ **DONE** — 45 added (3/ch), grammar/literature/culture forward-extensions, parent-anchored, ≥120-word bodies, +6 ratchet tests (ch01 legacy deck exempt); 712 XCTest green | **Sanskrit** (15 NEP ch) | Phase 5 ladder **now open for Sanskrit** | High |
 | **P1-C** | Add `bossQuestions` (≥6/ch) | **Maths** | Phase 3 ceiling | High |
 | **P1-D** | Add `bossQuestions` (≥6/ch) | **Sanskrit** | Phase 3 ceiling | High |
 | **P1-E** | Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch) | **Sanskrit** (0/16 today) | journey engagement parity | High |

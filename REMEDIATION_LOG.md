@@ -5644,3 +5644,45 @@ BUILD SUCCEEDED + TEST SUCCEEDED, 706 XCTest cases, 0 failures (was 700).
 Maths pack steady at 90 concepts / 148 topic-Qs; +45 deepDive. Additive only.
 Phase 5 (Olympiad ladder) is now open for Maths. Zero regressions, zero
 STOP_AND_ASK. NEXT: P1-B — Sanskrit deepDive fill (sch01–sch15, ≥3/ch).
+
+## 2026-06-01 — v6 "Learning Journey" cycle 3: Phase 1 · P1-B (Sanskrit deepDive)
+
+Closed the last subject's deepDive gap. The Sanskrit pack had ZERO deepDive
+entries; with P1-A (Maths) done, Sanskrit was the only subject still blocking
+Phase 5 (the Olympiad ladder reads deepDive) and capping Phase 3.
+
+Added 45 deepDive StretchTopics to the 15 NEP chapters sch01–sch15 (3 each) via
+the new re-runnable scripts/inject_sanskrit_deepdive.py. The legacy ch01
+vocabulary deck (CLAUDE.md carve-out) is skipped and exempted in the test floor.
+
+Each StretchTopic is parent-anchored to a real in-chapter concept and is a
+genuine forward-grade extension (class_8…class_11) along three faithful tracks:
+- GRAMMAR: समास (compound types + विग्रह), the कारक↔विभक्ति mapping and the
+  सप्तविभक्तयः, चतुर्थी governed by नमः, the क्त्वा gerund + ल्यप्, the लङ्
+  imperfect (अट् augment), the तुमुन् infinitive + णिच् causative, the ten गण,
+  the full लकार system, परस्मैपद vs आत्मनेपद (तिङ् endings), and the तसिल्/शस्/
+  वति/मतुप्/विनिप् suffix families; the तद्धित adverbs; उपसर्ग; सुप् endings + sandhi.
+- LITERATURE: the Īśopaniṣad, Bhagavad Gītā 3.14 (the यज्ञ-cycle), Bhartṛhari's
+  शतकत्रय and the subhāṣita anthologies, the Pañcatantra/Hitopadeśa nīti tradition,
+  अनुष्टुप् metre + छन्दस्, अलङ्कार (दृष्टान्त/उपमा), and अद्वैत वेदान्त (तत्त्वमसि,
+  नेति नेति, शङ्कर's भाष्य).
+- HISTORY/CULTURE: Vande Mataram & Ānandamaṭha (national song vs anthem), the
+  Cellular Jail/कालापानी and the freedom struggle, Mewar/Chittor/Panna Dhai,
+  सूर्यनमस्कार & Patañjali's अष्टाङ्गयोग, आयुर्वेद (चरक/सुश्रुत/कषाय), and the
+  वेदाङ्ग शिक्षा (स्थान/प्रयत्न, Pāṇini's माहेश्वरसूत्राणि).
+
+Devanagari/IAST micro-detail verified throughout; every body ≥120 words with a
+prerequisite + next-step hint. Renders natively via the existing DeepDiveSection
+(same as Maths; no article).
+
+Added desktopAhaanTests/SanskritDeepDiveTests.swift — 6 ratchet tests mirroring
+the Maths/Science deep-dive contract, with the per-chapter floor exempting the
+legacy ch01 deck.
+
+Green here (authoritative): content lints + test_lints.py pass; verify_pack_
+roundtrip clean (Devanagari survives byte-for-byte via ensure_ascii=False) +
+check_pack_schema clean on all four packs; pbxproj regenerated (new test file
+auto-wired); ci-build-test.sh → BUILD SUCCEEDED + TEST SUCCEEDED, 712 XCTest
+cases, 0 failures (was 706). Sanskrit pack steady at 367 concepts / 276 topic-Qs;
++45 deepDive. Additive only. Phase 5 is now open for ALL FOUR subjects. Zero
+regressions, zero STOP_AND_ASK. NEXT: P1-C — Maths bossQuestions fill (≥6/ch).
