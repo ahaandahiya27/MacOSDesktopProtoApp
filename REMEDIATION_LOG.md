@@ -5436,3 +5436,18 @@ The Story of Indian Farming — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 80ef5da. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 92: ssch14 second DEEPDIVE pass
+
+India and Her Neighbours — deepDive 4->6, crossChapterRefs 5->7.
+- dv05 "The open border: two countries, one doorway" (class_9, anchor t03_c02):
+  the India-Nepal open border; a boundary need not be a wall.
+- dv06 "How the Himalayas shaped India and China" (class_10, anchor t02_c01): a
+  wall high enough to keep two empires apart yet low at its passes for Buddhism
+  and travelling scholars (Faxian/Xuanzang/Bodhidharma) to cross.
+- cc06 -> ssch03 (monsoon winds -> the Indian Ocean neighbourhood).
+- cc07 -> ssch17 (shared heritage with neighbours -> India's pluralism).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 95f4a7f. Zero regressions, zero STOP_AND_ASK.
