@@ -6026,3 +6026,54 @@ STOP_AND_ASK. NEXT: Phase 2 milestone 2 — the pure-SwiftUI Mastery Map window
 rendering this snapshot (coverage + mastery bars per subject, overall ring,
 focus-next nudge), under the Big-Sur / legacy-GPU invariants, then Help-menu
 wiring.
+
+---
+
+## v6 Learning Journey · Cycle 13 (2026-06-01) — Phase 2 COMPLETE: Mastery Map window
+
+Built the pure-SwiftUI Mastery Map on top of the cycle-12 MasteryEngine, and
+wired it into the menu — Phase 2 is now complete.
+
+Added:
+  • desktopAhaan/Views/Progress/MasteryMapView.swift — one scrollable surface:
+    an Overall card (coverage + mastery meters, totals, level chip, due count),
+    a "Focus next" nudge toward the weakest started subject, a per-subject
+    section (each row: subject emoji + title + level chip + a Coverage meter
+    "N of M" + a Mastery meter "NN%" + due count; unstarted subjects show an
+    explicit "not started" state), a level legend, and a welcoming empty state.
+    A private MeterBar renders a static tinted capsule (no animation, no
+    particles → costs the legacy AMD GPU nothing; unaffected by Reduce Motion).
+  • desktopAhaan/Views/Progress/MasteryMapWindow.swift —
+    MasteryMapWindowPresenter, an NSHostingController-backed AppKit window
+    singleton, byte-for-byte the proven WeeklyProgress/DailyPlan pattern
+    (focus-existing on re-open, drop ref on close so the next open recomputes a
+    fresh snapshot).
+  • Help-menu wiring in desktopAhaanApp.swift — "Mastery Map" (⌘⇧M) in the
+    dashboards Group next to Weekly Progress / Today's Plan / Achievements.
+
+Big-Sur invariants honoured: @MainActor view (reads DataStore synchronously);
+all colours via DesignTokens.BrandColor + MasteryLevel.tint + Color.compatIndigo
+(no raw mint/indigo/teal/cyan/brown); SF-Symbol-free (emoji icons, dodging any
+SF Symbols 2 availability gap on the iMac); ViewBuilder ≤10 children (content
+split into a @ViewBuilder computed prop + Group buckets); no force-unwrap;
+every card carries an .accessibilityElement(children:.combine) + spoken label,
+meters are accessibility-hidden so the card speaks one clean summary.
+
+Tests: desktopAhaanTests/MasteryMapSnapshotTests.swift (3 @MainActor
+integration tests over the LIVE registry: one row per pack in registry order;
+positive coverage denominators; reviewed <= reviewable; coverage/mastery in
+[0,1] and never NaN; overall aggregates equal the sum across subjects; weakest
+subject is itself started). State-independent + non-mutating, so deterministic
+and proving the read-only contract end to end.
+
+Green here: all 8 Big-Sur static lints (incl. viewbuilder_limit,
+sf_symbols_compat, color_literals, view_mainactor) + test_lints.py pass; pbxproj
+regenerated (3 files auto-wired); ci-build-test.sh -> BUILD + TEST SUCCEEDED, 0
+failures (+3 XCTest). Additive only (one menu-button insertion in the App's
+command block is the sole edit to an existing file); zero regressions; zero
+STOP_AND_ASK.
+
+**Phase 2 (Mastery Map) is COMPLETE.** NEXT: Phase 3 — extend the existing
+JourneyPlanner / Daily Plan + AdaptiveDifficultyEngine into a cross-subject
+"Whole Journey" mode, sampling by the mastery gaps this engine now exposes
+(weakestStartedSubject + per-subject coverage/mastery).

@@ -27,7 +27,7 @@
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
 | 1 | ✅ DONE | **P1-A…P1-J complete.** Cross-subject **enrichment-parity sweep DONE**: every subject carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode — all four now at 🥈 STRONG or above. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); Social Science exam+whatIf 2→3/ch + `_whatif` articles regenerated (P1-I); `JOURNEY_PARITY_MATRIX.md` refreshed (P1-J). Remaining items are deferred optional polish (timelines, quickChecks, more `scientists`, bespoke SS Discover) — blocks nothing. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. |
-| 2 | 🟡 IN PROGRESS | **MasteryEngine DONE** (cycle 12): read-only `Services/MasteryEngine.swift` aggregates the existing per-subject `MasterySummary` into cross-subject concept→subject→overall, with two axes (coverage vs mastery), per-subject due, and a `weakestStartedSubject` focus nudge. +10 unit tests on the pure cores; build+test green. **NEXT: the pure-SwiftUI Mastery Map window** + Help-menu wiring. |
+| 2 | ✅ DONE | **MasteryEngine** (cycle 12, read-only cross-subject aggregation, +10 unit tests) **+ Mastery Map window** (cycle 13): pure-SwiftUI `MasteryMapView` + `MasteryMapWindowPresenter`, wired into Help → Mastery Map (⌘⇧M). Per-subject Coverage + Mastery meters, overall card, "focus next" nudge, legend, empty state; static bars (legacy-GPU-safe), full a11y, no SF Symbols/banned colours. +3 @MainActor integration tests. Build+test green. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
 | 5 | ⬜ NOT STARTED | **Unblocked for all four subjects** — P1-A (Maths 45) + P1-B (Sanskrit 45) closed the `deepDive` gap; every subject now feeds the ladder. |
@@ -403,3 +403,36 @@ required before declaring the mission complete (Phase 6).
   rendering this snapshot (per-subject coverage + mastery bars, overall ring,
   focus-next nudge), under Big-Sur / legacy-GPU invariants; then Help-menu
   wiring + a routing test.
+
+### Cycle 13 (2026-06-01) — Phase 2 COMPLETE · Mastery Map window
+- Built the pure-SwiftUI Mastery Map on the cycle-12 MasteryEngine and wired it
+  into the menu — Phase 2 done.
+- `desktopAhaan/Views/Progress/MasteryMapView.swift`: Overall card (coverage +
+  mastery meters, totals, level chip, due), "Focus next" nudge → weakest
+  started subject, per-subject rows (emoji + title + level chip + Coverage
+  meter "N of M" + Mastery meter "NN%" + due; unstarted shows a "not started"
+  state), level legend, welcoming empty state. Private `MeterBar` = static
+  tinted capsule (no animation/particles → legacy-GPU-free; Reduce-Motion-safe).
+- `desktopAhaan/Views/Progress/MasteryMapWindow.swift`:
+  `MasteryMapWindowPresenter`, NSHostingController AppKit window singleton
+  (proven WeeklyProgress/DailyPlan pattern). Help → Mastery Map (⌘⇧M) added to
+  the dashboards Group in `desktopAhaanApp.swift`.
+- Big-Sur invariants: @MainActor view; colours via DesignTokens + MasteryLevel
+  .tint + compatIndigo (no raw mint/indigo/teal/cyan/brown); SF-Symbol-free
+  (emoji icons); ViewBuilder ≤10 (Group buckets); no force-unwrap; every card
+  has a combined a11y label, meters accessibility-hidden.
+- Added `desktopAhaanTests/MasteryMapSnapshotTests.swift` (3 @MainActor
+  integration tests over the LIVE registry: one row/pack in order, positive
+  coverage denominators, reviewed ≤ reviewable, coverage/mastery ∈ [0,1] never
+  NaN, overall = Σ subjects, weakest is started). State-independent + non-
+  mutating → deterministic, proving the read-only contract end to end.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated
+  (3 files auto-wired); `ci-build-test.sh` → **BUILD + TEST SUCCEEDED, 0
+  failures** (+3 XCTest). Additive (sole existing-file edit is one menu button);
+  zero regressions; zero STOP_AND_ASK.
+- **Phase 2 (Mastery Map) is COMPLETE.**
+- **NEXT:** Phase 3 — extend the existing JourneyPlanner / Daily Plan +
+  `AdaptiveDifficultyEngine` into a cross-subject "Whole Journey" mode, sampling
+  by the mastery gaps this engine now exposes (weakestStartedSubject +
+  per-subject coverage/mastery). Read those existing services first; extend,
+  don't replace.

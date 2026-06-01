@@ -391,6 +391,17 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("a", modifiers: [.command, .shift])
+
+                // Mastery Map — cross-subject "where am I on the whole
+                // journey?" view (v6 Phase 2). Own AppKit window, same pattern
+                // as the dashboards above. ⌘⇧M is free in AppKit defaults
+                // (⌘M miniaturises; the Shift variant is unused).
+                Button("Mastery Map") {
+                    MasteryMapWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("m", modifiers: [.command, .shift])
                 }
 
                 Divider()
