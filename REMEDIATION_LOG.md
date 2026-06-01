@@ -5123,3 +5123,33 @@ GLOSSARY_ETYMOLOGY, DEEPDIVE, INTERACTIVE, TESTS(depth-pin). NEXT: A11Y_POLISH o
 ARTICLES (a new _deepdive/_olympiad HTML type would surface the glossary/deepDive
 depth that isn't rendered to HTML today — high value, bumps the 160 article-count
 floor).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycles 74–75 (ARTICLES: stale-artifact fix + cross-chapter links)
+
+ARTICLES track. Two slices.
+
+Cycle 74 (fix): discovered the Social Science reading articles had drifted stale.
+`scripts/generate_socialscience_articles.py` defaults to a DRY-RUN and only
+writes with `--write`, so the long run of glossary/misconception/deepDive
+deepening cycles enriched the pack arrays but never regenerated the 60 bundled
+`_glossary`/`_mistakes`/`_beyond` articles — the in-app Read-mode flow was still
+showing the original, thinner content (~130 glossary terms, ~40 misconception
+busters and ~40 deepDive StretchTopics were missing from the articles though the
+concept/quiz surfaces had them). Regenerated all 160 articles with `--write`.
+Purely additive: e.g. ssch01 Vocabulary Deck 10→17 terms, Beyond-the-Book 2→4
+deep-dives, Common Mistakes 3→5; read-time estimates in the index updated to
+match. File count steady at 160 (no SocialScienceArticleRoutingTests impact).
+Pushed dd53694. Workflow fix recorded: always pass `--write`.
+
+Cycle 75 (feat): the crossChapterRefs cross-strand web (4–5 links/chapter, woven
+during the DEEPDIVE pass) lived only in the in-app "Looking ahead" cards. Added
+a "🔗 Connect across chapters" section to the Beyond-the-Book generator — each
+ref now renders its topic + pointer and a live link to the connected chapter's
+overview ("Jump to <chapter> →"). Regenerated all 20 `_beyond` articles; every
+link verified to resolve to a bundled overview file. File count steady at 160;
+deepDive read-time unchanged. Pushed bc740f2.
+
+Both cycles: content lints + Release build + full suite green via the pre-push
+gate. Zero regressions, zero STOP_AND_ASK.
