@@ -4765,3 +4765,33 @@ by chapter, VoiceOver labels + hints, compat colors. Extended
 `SocialScienceInteractiveGateTests.testEveryChapterResolvesToAnInteractive` to pin
 ssch10 as bespoke. pbxproj regenerated via scripts/generate_compat_pbxproj.py
 (443 app sources). Full lint family + Release build + full suite green. Pushed 84fb698.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 62 (ssch12 bespoke Market Price Balance — INTERACTIVE track)
+
+INTERACTIVE track. Authored `MarketPriceBalance`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/MarketPriceBalance.swift), a
+bespoke inline widget for Ch.12 'Understanding Markets' (ssch12), upgrading that
+chapter from the generic glossary-match to a chapter-specific interactive.
+
+Two sliders set demand (buyers wanting guavas) and supply (guavas brought to
+market); the guava price moves live toward the balance point, shown on a
+low→high gradient gauge with a moving marker. Grounded in ssch12_t02_c02 'Demand
+and Supply' (when demand outweighs supply the price climbs; when supply outweighs
+demand it falls) and t02_c01 'Negotiation and the Just Right Price' (the book's
+guava example — ₹80 too high, ₹20 too low, ₹40 just right). When balanced the
+price settles at ₹40 with a 'just right' badge; pushed apart, a status banner
+explains why and adds the negotiation note when the price gets so high buyers walk
+away or so low the seller barely earns.
+
+Mounted in `socialScienceInteractives` behind the existing gate, keyed on exact
+pack.id + chapter.id == "ssch12", BEFORE the chronology/glossary fallbacks. Big-Sur
+safe: Slider + GeometryReader (both macOS 10.15+); deliberately uses NO
+`.animation(_:value:)` (that overload is macOS 12+ — caught by check_macos12_apis
+and removed, the slider drag already moves the marker continuously); SFSymbolCompat
+for every symbol (all SF Symbols 1 — checkmark.seal.fill / arrow.up.circle.fill /
+arrow.down.circle.fill); @SceneStorage namespaced by chapter; VoiceOver labels +
+values. Extended SocialScienceInteractiveGateTests coverage to pin ssch12 as
+bespoke. pbxproj regenerated (444 app sources). Full lint family + Release build +
+full suite green. Pushed 5332f84.
