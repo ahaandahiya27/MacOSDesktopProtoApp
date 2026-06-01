@@ -4886,3 +4886,37 @@ strands: ssch01 (Geography relief), ssch13 (Geography/farming seasons), ssch10
 (Civics Preamble), ssch18 (Civics three organs), ssch11 (Economics barter), ssch12
 (Economics market price), ssch20 (Economics compounding). History chapters carry
 the bespoke SSChronologyChallenge.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 66 (ssch09 bespoke Government Forms Explorer — INTERACTIVE track)
+
+INTERACTIVE track. Authored `GovernmentFormsExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/GovernmentFormsExplorer.swift),
+a bespoke inline widget for Ch.9 'From the Rulers to the Ruled: Types of
+Governments' (ssch09), upgrading that chapter from the generic glossary-match to a
+chapter-specific interactive. Arranges the forms of government along the chapter's
+own 'who holds power?' spectrum, grouped by how many rule — 'One person rules'
+(absolute monarchy, dictatorship), 'A few rule' (oligarchy, theocracy), 'The people
+rule' (republic, democracy, constitutional monarchy) — with person-count icons.
+Tapping a form reveals who holds power, a real example and its key feature, all
+grounded in ssch09_t02–t05.
+
+Mounted behind the existing gate, keyed on exact pack.id + chapter.id == "ssch09",
+BEFORE the chronology/glossary fallbacks. Big-Sur safe: withAnimation (no
+.animation(_:value:)), SFSymbolCompat (all SF Symbols 1 — person.fill /
+person.2.fill / person.3.fill / crown.fill / mappin.circle.fill), manual chip
+wrapping (no LazyVGrid), @SceneStorage namespaced by chapter, RM-gated motion,
+VoiceOver labels + hints, maroon Color(red:green:blue:). Extended
+SocialScienceInteractiveGateTests coverage to pin ssch09 as bespoke. pbxproj
+regenerated (448 app sources). Full lint family + Release build + full suite green.
+Pushed 48c1c36.
+
+RUN SUMMARY (2026-06-01, cycles 61–66): completed SIX bespoke Social Science
+INTERACTIVE widgets in one run — ssch10 (PreambleExplorer), ssch12
+(MarketPriceBalance), ssch18 (ThreeOrgansSorter), ssch20 (CompoundingGrowth),
+ssch13 (CroppingSeasonExplorer), ssch09 (GovernmentFormsExplorer). Every SS chapter
+now resolves to either a bespoke widget (8 chapters), the bespoke SSChronologyChallenge
+(6 history chapters) or the glossary-match fallback (6 remaining). 12 commits, all
+green (pre-commit lint family + pre-push ci-build-test). Zero regressions, zero
+STOP_AND_ASK.
