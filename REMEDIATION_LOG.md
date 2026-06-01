@@ -4920,3 +4920,34 @@ now resolves to either a bespoke widget (8 chapters), the bespoke SSChronologyCh
 (6 history chapters) or the glossary-match fallback (6 remaining). 12 commits, all
 green (pre-commit lint family + pre-push ci-build-test). Zero regressions, zero
 STOP_AND_ASK.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 67 (ssch03 bespoke Climate Factors Explorer — INTERACTIVE track)
+
+INTERACTIVE track. Authored `ClimateFactorsExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/ClimateFactorsExplorer.swift),
+a bespoke inline widget for Ch.3 "Climates of India" (ssch03), upgrading that
+chapter from the generic glossary-match to a chapter-specific explorer. Surfaces
+topic ssch03_t02 "Factors Determining the Climate" and its five forces — Latitude,
+Altitude, Proximity to the Sea, Winds, Topography & Microclimates. Tapping a factor
+reveals the rule it follows (cause -> effect) plus a side-by-side pair of the
+chapter's own real Indian places to make the contrast visible: Kanniyakumari vs
+Srinagar (latitude), the plains vs Shimla/Ooty/Darjeeling/Munnar (altitude),
+coastal Mumbai vs inland Nagpur (the sea's moderating cushion), dry desert winds vs
+moist monsoon winds, and the Himalaya-sheltered north vs the exposed Thar. Every
+fact is straight from ssch03_t02_c01..c05.
+
+Mounted behind the existing gate, keyed on exact pack.id + chapter.id == "ssch03",
+BEFORE the chronology/glossary fallbacks. Big-Sur safe: withAnimation (no
+.animation(_:value:)), SFSymbolCompat (all SF Symbols 1), manual chip wrapping
+(no LazyVGrid), @SceneStorage namespaced by chapter, RM-gated motion, VoiceOver
+labels + hints, teal Color(red:green:blue:). Extended SocialScienceInteractiveGateTests
+to pin ssch03 as bespoke. pbxproj regenerated (449 app sources). Full lint family
++ Release build + full suite green. Pushed 091f329.
+
+Bespoke Social Science interactives now cover NINE chapters across all four strands:
+ssch01 (relief), ssch03 (climate factors), ssch13 (farming seasons), ssch09 (govt
+forms), ssch10 (Preamble), ssch18 (three organs), ssch11 (barter), ssch12 (market
+price), ssch20 (compounding). History chapters carry the bespoke SSChronologyChallenge.
+Five chapters remain on glossary-match: ssch02, ssch08, ssch14, ssch17, ssch19.
