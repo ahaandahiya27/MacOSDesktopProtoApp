@@ -5832,3 +5832,57 @@ failures** (was 731, +2). Additive only. Zero regressions, zero STOP_AND_ASK.
 All four bolded enrichment gaps from the Phase-1 audit (deepDive,
 bossQuestions, crossChapterRefs + Sanskrit Discover) are now closed. NEXT:
 P1-G — examConnections + whatIfs for Maths.
+
+---
+
+## v6 Learning Journey · Cycle 8 (2026-06-01) — Phase 1 · P1-G: examConnections + whatIfs (Maths)
+
+The Maths pack shipped with ZERO `examConnections` and ZERO `whatIfs` — the
+last two enrichment surfaces where Science (3/ch each) still outranked Maths,
+leaving `ExamConnectionCalloutView` and `WhatIfsSectionView` dark on the Maths
+chapter tab. Added **45 examConnections + 45 whatIfs (3 + 3 per chapter × 15)**
+via the new re-runnable `scripts/inject_maths_enrichment.py`.
+
+Ids are `mchNN_xcII` / `mchNN_wiII` — the `mch` namespace keeps them distinct
+from Science's `chNN_xc` / `chNN_wi` (the two packs share `chNN` chapter ids),
+so a global Identifiable index never collides across packs. Each item is
+anchored by ≥1 REAL in-chapter `relatedConceptId`; the injector hard-fails if
+any anchor does not resolve in-pack, if a body falls outside 50–130 words, or
+if a whatIf answer is under 30 chars.
+
+examConnections are genuine NEP-faithful forward pointers — place value →
+standard form (ch01→Class 8), the distributive law → algebra (ch02→Class 8),
+parallel-line angles → the triangle angle-sum proof (ch05→Class 9), parity →
+invariant/olympiad proofs (ch06→JEE), the triangle inequality → the metric
+definition of distance (ch07→Class 10), congruence → similarity (ch09→Class
+10), closure → why each number system is invented (ch10→Class 8), Euclid's
+algorithm + the Fundamental Theorem of Arithmetic (ch11→Class 10), estimation →
+error analysis (ch12→Class 11 physics), mean/median/mode honesty + standard
+deviation (ch13→Class 9/11), the constructible-numbers impossibilities
+(ch14→Class 11), and transposition → simultaneous equations → quadratics
+(ch15→Class 10). targetExam tags span class8…class12 + jee.
+
+whatIfs are counterfactual prompts that target the chapter's real
+misconceptions — "what if multiplying always made numbers bigger?" (ch08, the
+fraction-shrinks insight), "what if a triangle had two right angles?" (ch07,
+the 180° budget), "what if (−1)×(−1) = −1?" (ch10, the distributive-law
+contradiction), "what if a bar graph's axis started at 90?" (ch13, the
+truncated-axis lie), and so on — each a 3–5 sentence guided answer.
+
+Tests: `desktopAhaanTests/MathsEnrichmentTests.swift` (3 ratchet tests:
+≥3/ch + ≥45 total for each surface, canonical-unique ids, ≥40-word exam bodies,
+non-blank titles + targetExam, ≥30-char whatIf answers, in-pack
+`relatedConceptIds`, and the `mch`-namespace boundary vs Science). Also raised
+the Maths `whatIfs` floor in `CrossSubjectEnrichmentParityTests` from 0 → 3 to
+lock the gain (the surface-goes-dark ratchet).
+
+Green here: roundtrip byte-for-byte clean on all four packs; `check_pack_schema`
++ all 8 Big-Sur static lints + `test_lints.py` pass; pbxproj regenerated (new
+test file auto-wired); `ci-build-test.sh` → **BUILD SUCCEEDED + TEST SUCCEEDED,
+0 failures** (+3 XCTest). Additive only. Zero regressions, zero STOP_AND_ASK.
+
+**Maths now reaches full enrichment-surface parity with Science** — every one
+of the nine ChapterDetailView surfaces plus deepDive, bossQuestions,
+crossChapterRefs, examConnections and whatIfs is populated. NEXT: P1-H —
+Sanskrit `examConnections` + `whatIfs` parity check (the NEP chapters already
+carry whatIfs ≥3; audit examConnections), then the remaining P1 backlog.

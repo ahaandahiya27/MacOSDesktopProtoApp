@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-F DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; +33 tests total, 733 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions` + `crossChapterRefs`, and all four have Discover Mode.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-G…P1-J pending (enrichment polish + minor parity). |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-G DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; **P1-G: Maths `examConnections` + `whatIfs` 45 each → full Maths/Science enrichment-surface parity**). **All four subjects carry `deepDive` + `bossQuestions` + `crossChapterRefs`, all four have Discover Mode, and Maths now matches Science on every ChapterDetailView surface.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-H…P1-J pending (Sanskrit `examConnections` audit + minor parity). |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -270,3 +270,33 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** P1-G — add `examConnections` + `whatIfs` to Maths (enrichment
   parity with Science/Social Science; both fields are 0/15 for Maths today).
   Same loop.
+
+### Cycle 8 (2026-06-01) — Phase 1 · P1-G complete (Maths `examConnections` + `whatIfs`)
+- Confirmed Phase 0 still green here (Release build + TEST SUCCEEDED) before any
+  change.
+- Added **45 `examConnections` + 45 `whatIfs`** (3 + 3 per chapter × 15) to the
+  Maths pack via the new re-runnable `scripts/inject_maths_enrichment.py` — the
+  last two enrichment surfaces where Science still outranked Maths.
+- Ids `mchNN_xcII` / `mchNN_wiII` (the `mch` namespace keeps them distinct from
+  Science's `chNN_xc` / `chNN_wi`, which share the `chNN` chapter ids). Each
+  item anchored by ≥1 real in-chapter `relatedConceptId`; injector hard-fails on
+  any unresolved anchor, a body outside 50–130 words, or a whatIf answer < 30
+  chars.
+- examConnections are NEP-faithful forward pointers (class8…class12 + jee);
+  whatIfs are counterfactual prompts targeting each chapter's real
+  misconceptions (fraction-shrinks, the 180° angle budget, the (−)(−)=(+)
+  distributive-law proof, the truncated-axis graph lie, …).
+- Added `desktopAhaanTests/MathsEnrichmentTests.swift` (3 ratchet tests:
+  ≥3/ch + ≥45 total per surface, canonical-unique ids, ≥40-word exam bodies,
+  non-blank titles + targetExam, ≥30-char whatIf answers, in-pack
+  `relatedConceptIds`, and the `mch`-namespace boundary vs Science). Raised the
+  Maths `whatIfs` floor in `CrossSubjectEnrichmentParityTests` 0 → 3.
+- Green here: roundtrip byte-for-byte on all four packs; `check_pack_schema` +
+  all 8 Big-Sur static lints + `test_lints.py` pass; pbxproj regenerated (new
+  test file auto-wired); `ci-build-test.sh` → **BUILD + TEST SUCCEEDED, 0
+  failures** (+3 XCTest). Additive only; zero regressions; zero STOP_AND_ASK.
+- **Maths now reaches full enrichment-surface parity with Science.**
+- **NEXT:** P1-H — audit Sanskrit `examConnections` (NEP chapters already carry
+  `whatIfs` ≥3; check the exam-connection surface), then the remaining P1
+  backlog. Same loop: author → lint → pbxproj → ci-build-test green →
+  commit/push → ledger.

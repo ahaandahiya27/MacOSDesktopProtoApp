@@ -16,9 +16,9 @@ import XCTest
 ///
 /// Per-pack scopes:
 ///   • science_class7  — every `ch*` chapter ratcheted.
-///   • maths_class7    — every `ch*` chapter ratcheted (whatIfs /
-///                       scientists currently absent across the pack;
-///                       floor stays at 0 until that ships).
+///   • maths_class7    — every `ch*` chapter ratcheted (whatIfs shipped
+///                       in v6 P1-G, floor now 3; scientists still
+///                       absent across the pack, floor stays at 0).
 ///   • sanskrit_class7 — every `sch*` chapter ratcheted. The legacy
 ///                       `ch01` vocab deck (`Class 7 Sanskrit
 ///                       Vocabulary`) is intentionally exempt — it's
@@ -46,7 +46,7 @@ final class CrossSubjectEnrichmentParityTests: XCTestCase {
 
     private let mathsFloors = Floors(
         glossary: 10, mnemonics: 3, misconceptions: 5,
-        realWorldExamples: 3, ncertQA: 8, whatIfs: 0,
+        realWorldExamples: 3, ncertQA: 8, whatIfs: 3,
         miniProjects: 1, scientists: 0, conceptMapNodes: 5
     )
 
