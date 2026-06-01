@@ -4951,3 +4951,31 @@ ssch01 (relief), ssch03 (climate factors), ssch13 (farming seasons), ssch09 (gov
 forms), ssch10 (Preamble), ssch18 (three organs), ssch11 (barter), ssch12 (market
 price), ssch20 (compounding). History chapters carry the bespoke SSChronologyChallenge.
 Five chapters remain on glossary-match: ssch02, ssch08, ssch14, ssch17, ssch19.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 68 (ssch02 bespoke Weather Instrument Lab — INTERACTIVE track)
+
+INTERACTIVE track. Authored `WeatherInstrumentLab`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/WeatherInstrumentLab.swift),
+a bespoke inline widget for Ch.2 "Understanding the Weather" (ssch02), upgrading
+that chapter from the generic glossary-match to a chapter-specific "weather
+station" lab. Surfaces the chapter's five elements of weather (ssch02_t01_c03) —
+temperature, precipitation, atmospheric pressure, wind and humidity — each paired
+with its instrument (thermometer, rain gauge, barometer, wind vane + anemometer,
+hygrometer), the unit it reads in, a real sample reading the chapter gives
+(15 °C = 59 °F; 5 mm of rain; ~1013 mb at the coast; 60–80% humidity), and a
+kid-friendly note on how the instrument works. Every fact from ssch02_t01–t04.
+
+Gated on exact pack.id + chapter.id == "ssch02", BEFORE the chronology/glossary
+fallbacks. Big-Sur safe: withAnimation (no .animation(_:value:)), SFSymbolCompat
+(all SF Symbols 1), manual chip wrapping, @SceneStorage namespaced by chapter,
+RM-gated motion, VoiceOver labels + hints. Extended SocialScienceInteractiveGateTests
+to pin ssch02 as bespoke. pbxproj regenerated (450 app sources). Full lint family +
+Release build + full suite green. Pushed fa37174.
+
+Bespoke Social Science interactives now cover TEN chapters: ssch01 (relief), ssch02
+(weather lab), ssch03 (climate factors), ssch09 (govt forms), ssch10 (Preamble),
+ssch11 (barter), ssch12 (market price), ssch13 (farming seasons), ssch18 (three
+organs), ssch20 (compounding). History chapters carry SSChronologyChallenge. FOUR
+chapters remain on glossary-match: ssch08, ssch14, ssch17, ssch19.
