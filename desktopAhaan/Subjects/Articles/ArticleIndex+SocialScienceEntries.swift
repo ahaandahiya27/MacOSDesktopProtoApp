@@ -11,12 +11,12 @@ import Foundation
 extension ArticleIndex {
     static let socialScienceEntries: [String: ArticleEntry] = [
         "ssch01_overview": ArticleEntry(id: "ssch01_overview", filename: "ssch01_overview.html", title: "Chapter Overview — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 8),
-        "ssch01_glossary": ArticleEntry(id: "ssch01_glossary", filename: "ssch01_glossary.html", title: "Vocabulary Deck — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 8),
+        "ssch01_glossary": ArticleEntry(id: "ssch01_glossary", filename: "ssch01_glossary.html", title: "Vocabulary Deck — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 11),
         "ssch01_ncert_qa": ArticleEntry(id: "ssch01_ncert_qa", filename: "ssch01_ncert_qa.html", title: "NCERT Q&A — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 8),
         "ssch01_beyond": ArticleEntry(id: "ssch01_beyond", filename: "ssch01_beyond.html", title: "Beyond the Book — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 18),
         "ssch01_olympiad": ArticleEntry(id: "ssch01_olympiad", filename: "ssch01_olympiad.html", title: "Challenge Problems — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 12),
         "ssch01_whatif": ArticleEntry(id: "ssch01_whatif", filename: "ssch01_whatif.html", title: "What If? — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 6),
-        "ssch01_mistakes": ArticleEntry(id: "ssch01_mistakes", filename: "ssch01_mistakes.html", title: "Common Mistakes — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 10),
+        "ssch01_mistakes": ArticleEntry(id: "ssch01_mistakes", filename: "ssch01_mistakes.html", title: "Common Mistakes — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 14),
         "ssch01_miniproject": ArticleEntry(id: "ssch01_miniproject", filename: "ssch01_miniproject.html", title: "Mini Project — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 25),
         "ssch01_timeline": ArticleEntry(id: "ssch01_timeline", filename: "ssch01_timeline.html", title: "Timeline — Geographical Diversity of India", chapterFolder: "Articles/SocialScienceChapter1", estimatedMinutes: 5),
         "ssch02_overview": ArticleEntry(id: "ssch02_overview", filename: "ssch02_overview.html", title: "Chapter Overview — Understanding the Weather", chapterFolder: "Articles/SocialScienceChapter2", estimatedMinutes: 8),
