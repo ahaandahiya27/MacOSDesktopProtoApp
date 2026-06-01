@@ -50478,6 +50478,24 @@
           "body": "When you buy a share on the stock market, you are buying a tiny piece of ownership in a real company — if it does well, your share can rise in value and pay you a part of the profits (a dividend); if it does badly, your share can fall and you can lose money. That two-sided possibility is the heart of investing: higher possible reward always comes tied to higher risk. This is why a savings account (very safe, small return) and shares (riskier, possibly larger return) suit different needs. Smart investors manage the risk rather than gamble: they spread money across many companies (diversification, or 'not putting all your eggs in one basket') and stay invested for many years, so that compounding and a growing economy work in their favour while short-term ups and downs average out. The stock market is not a lottery — it is how ordinary people can share in the growth of the businesses around them, as long as they respect the link between risk and reward.",
           "prerequisite": "Knowing that shares represent part-ownership of a company.",
           "nextStepHint": "Explain why putting all your savings into a single company's shares is riskier than spreading it across many."
+        },
+        {
+          "id": "ssch20_dv05",
+          "title": "A bank account for everyone: the Jan Dhan story",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch20_t02_c03",
+          "body": "For most of India's history, banking was for the few — before 2014 only about 15 crore Indians had a bank account, and most people kept their money as cash or depended on moneylenders who charged harsh interest. The Pradhan Mantri Jan Dhan Yojana, launched in 2014, set out to change that by offering every Indian a bank account with NO minimum balance and no fees. Since then more than 50 crore accounts have been opened — most of them by women. Why does a simple account matter so much? Because it plugs a person into the whole financial system: wages and pensions arrive directly, students get scholarships, government help reaches people without leaking away to middlemen, and a saver can earn safe interest instead of hiding cash. Economists call this 'financial inclusion', and it is one of the quiet revolutions of modern India — proof that infrastructure is not only roads and wires but also fair access to services everyone deserves.",
+          "prerequisite": "Knowing the Jan Dhan Yojana opened bank accounts for crores of Indians.",
+          "nextStepHint": "List two things a person can do with a bank account that is hard to do with only cash."
+        },
+        {
+          "id": "ssch20_dv06",
+          "title": "The one rule that defeats most money scams",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch20_t04_c04",
+          "body": "Digital payments are wonderfully convenient, but the same speed that helps you also helps cheats — which is why this is one of the most useful things in the whole book to remember. Most fraud works the same way: a stranger phones or messages pretending to be from your bank and tries to PANIC or TEMPT you into revealing your secret PIN, password or OTP (one-time password), or into tapping a strange link. The single golden rule defeats almost all of it: never share your PIN, password or OTP with ANYONE — because a real bank will NEVER ask for them. Add two habits and you are safer still: be suspicious of 'too good to be true' offers and of links from unknown numbers, and if something feels wrong, stop and check with your bank directly using its official number. Notice the pattern — scams attack not the technology but the human, by rushing you. Slowing down and keeping your secrets secret is a skill that will protect you for life.",
+          "prerequisite": "Knowing UPI and digital payments use a secret PIN/OTP.",
+          "nextStepHint": "Write down the 'golden rule' for OTPs and explain why a real bank never needs your OTP."
         }
       ],
       "crossChapterRefs": [
@@ -50524,6 +50542,25 @@
           "pointer": "The RBI controlling banks and the Jan Dhan drive for banking-for-all are real examples of the government's 'regulator' and 'provider' roles from the chapter on the state and government.",
           "relatedConceptIds": [
             "ssch20_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch20_cc06",
+          "toChapterId": "ssch12",
+          "topic": "The stock market is a market too",
+          "pointer": "A stock exchange where shares are bought and sold at a price set by demand and supply is just a special kind of the market studied in 'Understanding Markets' — only the 'goods' are pieces of ownership in companies.",
+          "relatedConceptIds": [
+            "ssch20_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch20_cc07",
+          "toChapterId": "ssch05",
+          "topic": "The ancient roots of banking",
+          "pointer": "Taking deposits, lending and paying interest are very old: the guilds (śhrenīs) of 'The Rise of Empires' acted as early banks long before modern banks existed.",
+          "relatedConceptIds": [
+            "ssch20_t01_c03",
+            "ssch20_t02_c01"
           ]
         }
       ],
