@@ -83,6 +83,8 @@ func socialScienceInteractives(
             ClimateFactorsExplorer(chapterId: chapter.id)
         } else if chapter.id == "ssch02" {
             WeatherInstrumentLab(chapterId: chapter.id)
+        } else if chapter.id == "ssch19" {
+            InfrastructureSorter(chapterId: chapter.id)
         } else if socialScienceChronologyChapterIds.contains(chapter.id) {
             // History chapters whose first authored timeline is genuinely
             // chronological — a "put history in order" challenge. Auto-hides if
