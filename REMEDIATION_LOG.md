@@ -4826,3 +4826,33 @@ full suite green. Pushed 49b9764.
 Bespoke Social Science interactives now cover ssch01 (relief), ssch10 (Preamble),
 ssch11 (barter), ssch12 (market price), ssch18 (three organs) — five chapters
 upgraded from the generic fallbacks.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 64 (ssch20 bespoke Compounding Growth — INTERACTIVE track)
+
+INTERACTIVE track. Authored `CompoundingGrowth`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/CompoundingGrowth.swift), a
+bespoke inline widget for Ch.20 'Banks and the Magic of Finance' (ssch20),
+upgrading that chapter from the generic glossary-match to a chapter-specific
+interactive. Three sliders (amount saved, yearly interest rate, number of years)
+drive a live compounded balance, contrasted with what plain simple interest would
+give, the extra the 'snowball' earns, and the Rule-of-72 doubling time. A split
+bar shows the interest slice growing against the money put in. Grounded in
+ssch20_t01_c03 'Interest and the Magic of Compounding' and the chapter deepDive
+'The snowball that is compound interest' (interest-on-interest; Rule of 72; the
+longer you wait, the faster it rolls).
+
+Mounted behind the existing gate, keyed on exact pack.id + chapter.id == "ssch20",
+BEFORE the chronology/glossary fallbacks. Big-Sur safe: Slider + GeometryReader
+(macOS 10.15+), pow() from Foundation, NO .animation(_:value:), SFSymbolCompat
+(sparkles — SF Symbols 1), @SceneStorage namespaced by chapter, VoiceOver labels +
+values, custom money-green Color(red:green:blue:). Extended
+SocialScienceInteractiveGateTests coverage to pin ssch20 as bespoke. pbxproj
+regenerated (446 app sources). Full lint family + Release build + full suite green.
+Pushed 988d93d.
+
+Bespoke Social Science interactives now cover SIX chapters: ssch01 (relief),
+ssch10 (Preamble), ssch11 (barter), ssch12 (market price), ssch18 (three organs),
+ssch20 (compounding) — every Economics/Civics economics-adjacent chapter now has a
+content-specific widget rather than the generic fallback.
