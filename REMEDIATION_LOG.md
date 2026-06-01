@@ -5099,3 +5099,27 @@ ssch03 (ClimateFactorsExplorer), ssch02 (WeatherInstrumentLab), ssch19
 ssch08 (SacredGeographyExplorer) — completing the IX track. 12 commits, all green
 (pre-commit lint family incl. check_macos12_apis + pre-push ci-build-test). Zero
 regressions, zero STOP_AND_ASK. NEXT pass: A11Y_POLISH / TESTS / ARTICLES (all `—`).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 73 (content-depth ratchet — TESTS track)
+
+TESTS track. Authored `desktopAhaanTests/SocialScienceContentDepthTests.swift`,
+a subject-wide lower-bound ratchet that locks in the depth reached by the three
+completed deepening tracks (OLYMPIAD_QUESTIONS, GLOSSARY_ETYMOLOGY, DEEPDIVE) so
+a future edit can't quietly regress it. Eight tests assert per-chapter floors —
+glossary ≥16 (term + ≥10-char definition), misconceptions ≥5, real-world ≥5,
+deepDive ≥4, crossChapterRefs ≥4, topic-Q difficulty≥4 ≥4, boss ≥13, quick ≥5 —
+plus a ≥371 total-topic-question floor. All bounds are `≥`, so continued additive
+deepening stays green; only deletion/regression turns them red.
+
+Test-target-only: no pack or app-source change. pbxproj regenerated via
+scripts/generate_compat_pbxproj.py (auto-discovers test files; app-source count
+unchanged at 454). Full lint family + Release build + full suite green. Pushed
+b74a2c1; pre-push ci-build-test PASSED.
+
+FIVE tracks now effectively complete subject-wide: OLYMPIAD_QUESTIONS,
+GLOSSARY_ETYMOLOGY, DEEPDIVE, INTERACTIVE, TESTS(depth-pin). NEXT: A11Y_POLISH or
+ARTICLES (a new _deepdive/_olympiad HTML type would surface the glossary/deepDive
+depth that isn't rendered to HTML today — high value, bumps the 160 article-count
+floor).
