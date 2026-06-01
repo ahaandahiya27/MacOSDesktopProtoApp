@@ -5573,3 +5573,33 @@ ci-build-test. Zero regressions, zero STOP_AND_ASK. Pack steady at 293 concepts 
 371 topic-Qs; article HTML steady 180 entries / 907 bundled. HEAD 22cef77.
 NEXT: continue the 2nd GLOSSARY pass round-robin ssch02+ (or a 2nd OLYMPIAD pass
 on thin chapters, or DISCOVER scenes). ALWAYS regen articles with --write.
+
+## 2026-06-01 — v6 "Learning Journey" cycle 1: Phase 0 baseline + Phase 1 audit
+
+Kicked off the v6 mission on the dev MacBook Pro (Xcode 26.5; the prompt assumes
+the iMac — see the environment note in LEARNING_JOURNEY_LEDGER.md). No prior v6
+ledger existed, so created one (committed).
+
+Phase 0 — COMPILE-FIRST baseline proven green:
+- pbxproj regenerated via generate_compat_pbxproj.py (already in sync, no diff).
+- test_lints.py PASS; 13 core Big-Sur/content lints clean.
+- bash scripts/ci-build-test.sh PASSED — Release build (MACOSX_DEPLOYMENT_TARGET
+  =11.0) + 700 XCTest cases, 0 failures.
+
+Phase 1 — PARITY AUDIT landed as JOURNEY_PARITY_MATRIX.md (data-backed from the
+four pack JSONs + DiscoverMode.swift). Findings:
+- Discover coverage: Science 19/19 bespoke, Maths 15/15 bespoke, Social Science
+  20/20 (one data-driven 9-scene view), Sanskrit 0/16 — NO Discover Mode.
+- Enrichment gaps: Maths AND Sanskrit have ZERO deepDive, bossQuestions,
+  crossChapterRefs, examConnections. This blocks Phase 5 (Olympiad ladder reads
+  deepDive) and caps Phase 3 difficulty for those two subjects.
+- Science = gold standard (200 boss / 57 deepDive); Social Science = strong
+  (260 boss / 120 deepDive, recently deepened cycles 81-99).
+- Prioritised depth-sweep backlog P1-A…P1-J defined; P1-A (Maths deepDive) is
+  the highest-leverage next milestone (unblocks Phase 5).
+
+Docs + .gitignore only this cycle (no Swift change) — tree stays green. Created
+LEARNING_JOURNEY_LEDGER.md + JOURNEY_PARITY_MATRIX.md; gitignored the v6
+launcher runtime artifacts. Zero regressions, zero STOP_AND_ASK.
+NEXT: P1-A — Maths deepDive fill (≥3/ch, class_8-12 anchored, PDF-faithful,
+additive, articles regenerated with --write).
