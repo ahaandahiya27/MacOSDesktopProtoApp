@@ -6178,3 +6178,20 @@ Additive; zero regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 4 M3 — extend the Weekly-Progress PDF into a parent report card
 folding in the MasteryEngine snapshot + latest checkpoint score.
+
+## 2026-06-02 — Phase 4 M3a · Checkpoint result persistence
+
+Persist completed checkpoints so the report card can fold in the latest score:
+MilestoneCheckpointResult / MilestoneSubjectScore value model + pure from() tally;
+DataStore record/load/latest over a capped history in milestone_checkpoints.json
+(READ-ONLY over SRS). The view now builds + persists the result on completion and
+renders from it. Fixed a real concurrency bug — read-modify-write raced the async
+save, clobbering history — by holding the history in memory (lazily hydrated),
+mirroring conceptVisitHistory. +5 tests.
+
+Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 786 XCTest, 0 failures (was 781, +5). Additive; zero
+regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 4 M3b — parent report card (extend Weekly-Progress PDF with mastery
+section + latest checkpoint), export wiring + test.

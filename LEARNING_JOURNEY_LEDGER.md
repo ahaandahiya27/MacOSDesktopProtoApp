@@ -637,3 +637,38 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** Phase 4 M3 — extend the Weekly-Progress PDF into a parent **report
   card** folding in the `MasteryEngine` snapshot (per-subject coverage/mastery)
   and the latest checkpoint score, then wire its export + a test.
+
+### Cycle 18 (2026-06-02) — Phase 4 · M3a · Checkpoint result persistence
+- Confirmed M2 still green here (781 XCTest, 0 fail) before any change.
+- Made the Milestone Checkpoint produce **durable** data so the parent report
+  card (M3b) can fold in "the latest checkpoint":
+  - `desktopAhaan/Models/MilestoneCheckpointResult.swift` — Codable value types
+    `MilestoneCheckpointResult` (takenAt, correctCount, totalQuestions,
+    per-subject breakdown; `scoreFraction`) and `MilestoneSubjectScore`, plus a
+    PURE `from(assessment:correctById:takenAt:)` tally (subject order preserved).
+  - `desktopAhaan/Services/Persistence/DataStore+MilestoneCheckpoint.swift` —
+    `recordCheckpointResult` / `loadCheckpointResults` / `latestCheckpointResult`
+    over a capped (50) chronological history in `milestone_checkpoints.json`,
+    reusing the shared atomic-write plumbing. READ-ONLY over the SRS (new file).
+  - `MilestoneAssessmentView` now builds the result once on completion, persists
+    it via `recordCheckpointResult`, and renders the result screen FROM it
+    (removed the view's ad-hoc breakdown in favour of the shared model).
+- **Caught + fixed a real concurrency bug (not just a test bug):** the first cut
+  did read-modify-write against the file (`loadCheckpointResults` → append →
+  `save`), but `save` writes ASYNCHRONOUSLY on `saveQueue`, so two records in
+  quick succession each read the not-yet-written file and clobbered history
+  (tests caught: count 1 not 2, cap 21 not 50). Fixed by holding the history in
+  memory on `DataStore` (`milestoneCheckpoints`, lazily hydrated once via
+  `hydrateMilestoneCheckpointsIfNeeded`, mirroring `conceptVisitHistory`) so the
+  append-then-save can't race the write.
+- Tests (+5): `MilestoneCheckpointResultTests.swift` — pure `from` tally + empty
+  case; and persistence (append + latest-is-newest, history cap keeps the most
+  recent N, read-only-over-SRS).
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (2
+  source + 1 test auto-wired; DataStore.swift gained 2 stored props); 
+  `ci-build-test.sh` → **BUILD + 786 XCTest, 0 failures** (was 781, +5). Additive
+  (sole existing-file edits: DataStore stored props + the view's result wiring);
+  zero regressions; zero STOP_AND_ASK.
+- **NEXT:** Phase 4 M3b — the parent **report card**: extend the Weekly-Progress
+  PDF with a `MasteryEngine` per-subject coverage/mastery section + the latest
+  checkpoint score, wire its export (NSSavePanel + menu), and a render test.

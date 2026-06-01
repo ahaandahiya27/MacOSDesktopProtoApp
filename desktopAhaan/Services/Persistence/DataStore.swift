@@ -280,6 +280,15 @@ final class DataStore: ObservableObject {
     /// `conceptVisits.json` at most once per process.
     var didHydrateConceptVisits = false
 
+    /// In-memory history of completed Milestone Checkpoints, oldest → newest.
+    /// Hydrated lazily from `milestone_checkpoints.json` on first access/write
+    /// (see `DataStore+MilestoneCheckpoint.swift`). Held in memory so a
+    /// read-modify-write isn't racing the asynchronous `save` write. v6 Phase 4.
+    var milestoneCheckpoints: [MilestoneCheckpointResult] = []
+    /// One-shot guard so the lazy hydrate of `milestoneCheckpoints` reads
+    /// `milestone_checkpoints.json` at most once per process.
+    var didHydrateMilestoneCheckpoints = false
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files

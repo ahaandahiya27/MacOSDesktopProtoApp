@@ -33,6 +33,8 @@ struct MilestoneAssessmentView: View {
     @State private var revealed = false
     /// questionId → was it answered correctly. Drives the score + breakdown.
     @State private var correctById: [String: Bool] = [:]
+    /// The finished + persisted result, built once when the quiz completes.
+    @State private var result: MilestoneCheckpointResult?
 
     var body: some View {
         ScrollView {
@@ -82,6 +84,7 @@ struct MilestoneAssessmentView: View {
         selected = nil
         revealed = false
         correctById = [:]
+        result = nil
         withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .answering }
     }
 
@@ -97,6 +100,12 @@ struct MilestoneAssessmentView: View {
             selected = nil
             revealed = false
         } else {
+            // Quiz complete: build the result once, persist it (new app state,
+            // never the SRS), and show it.
+            let finished = MilestoneCheckpointResult.from(
+                assessment: assessment, correctById: correctById, takenAt: Date())
+            result = finished
+            dataStore.recordCheckpointResult(finished)
             withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .result }
         }
     }
@@ -107,6 +116,7 @@ struct MilestoneAssessmentView: View {
         selected = nil
         revealed = false
         correctById = [:]
+        result = nil
         withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .intro }
     }
 
@@ -115,8 +125,6 @@ struct MilestoneAssessmentView: View {
               index >= 0, index < assessment.questions.count else { return nil }
         return assessment.questions[index]
     }
-
-    private var score: Int { correctById.values.filter { $0 }.count }
 
     // MARK: - Header
 
@@ -346,20 +354,24 @@ struct MilestoneAssessmentView: View {
     // MARK: - Result
 
     private func resultSection(_ assessment: MilestoneAssessment) -> some View {
-        VStack(alignment: .leading, spacing: 16) {
-            scoreCard(assessment)
-            breakdownSection(assessment)
+        // `result` is set when the quiz completes; the fallback keeps the body
+        // total in the (defensive) case it's reached without one.
+        let r = result ?? MilestoneCheckpointResult.from(
+            assessment: assessment, correctById: correctById, takenAt: Date())
+        return VStack(alignment: .leading, spacing: 16) {
+            scoreCard(r)
+            breakdownSection(r)
             resultActions()
         }
     }
 
-    private func scoreCard(_ assessment: MilestoneAssessment) -> some View {
-        let fraction = assessment.count > 0 ? Double(score) / Double(assessment.count) : 0
+    private func scoreCard(_ r: MilestoneCheckpointResult) -> some View {
+        let fraction = r.scoreFraction
         return VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 12) {
                 Text(resultEmoji(fraction)).font(.system(size: 34)).accessibilityHidden(true)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("You got \(score) of \(assessment.count)")
+                    Text("You got \(r.correctCount) of \(r.totalQuestions)")
                         .font(.title2.weight(.bold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                     Text(resultMessage(fraction))
@@ -377,24 +389,24 @@ struct MilestoneAssessmentView: View {
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
         )
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("You got \(score) of \(assessment.count). \(resultMessage(fraction))")
+        .accessibilityLabel("You got \(r.correctCount) of \(r.totalQuestions). \(resultMessage(fraction))")
     }
 
-    private func breakdownSection(_ assessment: MilestoneAssessment) -> some View {
+    private func breakdownSection(_ r: MilestoneCheckpointResult) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("By subject")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            ForEach(subjectBreakdown(assessment), id: \.packId) { row in
+            ForEach(r.perSubject, id: \.packId) { row in
                 breakdownRow(row)
             }
         }
     }
 
-    private func breakdownRow(_ row: BreakdownRow) -> some View {
+    private func breakdownRow(_ row: MilestoneSubjectScore) -> some View {
         HStack(spacing: 8) {
             Text(emoji(for: row.packId)).font(.system(size: 20)).accessibilityHidden(true)
-            Text(row.title)
+            Text(row.subjectTitle)
                 .font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineLimit(1)
@@ -413,7 +425,7 @@ struct MilestoneAssessmentView: View {
                 .fill(Color.gray.opacity(0.05))
         )
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(row.title): \(row.correct) of \(row.total) correct.")
+        .accessibilityLabel("\(row.subjectTitle): \(row.correct) of \(row.total) correct.")
     }
 
     private func resultActions() -> some View {
@@ -480,26 +492,6 @@ struct MilestoneAssessmentView: View {
     }
 
     // MARK: - Result helpers
-
-    /// One subject's correct/total tally for the result breakdown.
-    struct BreakdownRow { let packId: String; let title: String; let correct: Int; let total: Int }
-
-    private func subjectBreakdown(_ assessment: MilestoneAssessment) -> [BreakdownRow] {
-        // Preserve first-appearance subject order (matches the quiz order).
-        var order: [String] = []
-        var titleByPack: [String: String] = [:]
-        var totalByPack: [String: Int] = [:]
-        var correctByPack: [String: Int] = [:]
-        for q in assessment.questions {
-            if titleByPack[q.packId] == nil { order.append(q.packId); titleByPack[q.packId] = q.subjectTitle }
-            totalByPack[q.packId, default: 0] += 1
-            if correctById[q.id] == true { correctByPack[q.packId, default: 0] += 1 }
-        }
-        return order.map {
-            BreakdownRow(packId: $0, title: titleByPack[$0] ?? $0,
-                         correct: correctByPack[$0] ?? 0, total: totalByPack[$0] ?? 0)
-        }
-    }
 
     private func resultEmoji(_ fraction: Double) -> String {
         if fraction >= 0.8 { return "🌟" }

@@ -20,6 +20,7 @@
 		76F49D155D62BF76B2680C9D /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF9AEA340D87D952541992 /* DailyPlan.swift */; };
 		CBEBC9C2C3002FCC3B937DE1 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81B9914123B796966B7F2A /* Language.swift */; };
 		88641A584D7EC9057DF8D05C /* MilestoneAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FE60AB2F013D1DB3F30DC /* MilestoneAssessment.swift */; };
+		E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */; };
 		1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */; };
 		70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */; };
 		B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57508568891C194B522876E /* StudyState.swift */; };
@@ -470,6 +471,7 @@
 		D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */; };
 		7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */; };
 		1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */; };
+		07820572BCDAFB4F92F7DB3C /* DataStore+MilestoneCheckpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70473423C6F9387BBB00246A /* DataStore+MilestoneCheckpoint.swift */; };
 		52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */; };
 		33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */; };
 		F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2898E1F6693A8D631B6B65 /* DataStore.swift */; };
@@ -1510,6 +1512,7 @@
 		AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */; };
 		067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */; };
 		5AE32BBD094A7FCD974F290F /* MilestoneAssessmentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D5D0EF78AF82E12B944C2 /* MilestoneAssessmentViewTests.swift */; };
+		039EB27DA1A1BEF7DFAAEE9C /* MilestoneCheckpointResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93DE58AE5A96D4AF2BCD872 /* MilestoneCheckpointResultTests.swift */; };
 		66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
@@ -2584,6 +2587,7 @@
 		56CF9AEA340D87D952541992 /* DailyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlan.swift"; sourceTree = "<group>"; };
 		9D81B9914123B796966B7F2A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language.swift"; sourceTree = "<group>"; };
 		205FE60AB2F013D1DB3F30DC /* MilestoneAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessment.swift"; sourceTree = "<group>"; };
+		7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneCheckpointResult.swift"; sourceTree = "<group>"; };
 		D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeItem.swift"; sourceTree = "<group>"; };
 		DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeProgress.swift"; sourceTree = "<group>"; };
 		E57508568891C194B522876E /* StudyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyState.swift"; sourceTree = "<group>"; };
@@ -3038,6 +3042,7 @@
 		39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
 		CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Mastery.swift"; sourceTree = "<group>"; };
 		F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+MilestoneAssessment.swift"; sourceTree = "<group>"; };
+		70473423C6F9387BBB00246A /* DataStore+MilestoneCheckpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+MilestoneCheckpoint.swift"; sourceTree = "<group>"; };
 		76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Saving.swift"; sourceTree = "<group>"; };
 		172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+WeeklyActivity.swift"; sourceTree = "<group>"; };
 		2F2898E1F6693A8D631B6B65 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore.swift"; sourceTree = "<group>"; };
@@ -3096,6 +3101,7 @@
 		ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentIntegrationTests.swift"; sourceTree = "<group>"; };
 		7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentPlannerTests.swift"; sourceTree = "<group>"; };
 		0D3D5D0EF78AF82E12B944C2 /* MilestoneAssessmentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentViewTests.swift"; sourceTree = "<group>"; };
+		D93DE58AE5A96D4AF2BCD872 /* MilestoneCheckpointResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneCheckpointResultTests.swift"; sourceTree = "<group>"; };
 		55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
@@ -3260,6 +3266,7 @@
 				56CF9AEA340D87D952541992,
 				9D81B9914123B796966B7F2A,
 				205FE60AB2F013D1DB3F30DC,
+				7F7C95BDD7A3179165C62DEF,
 				D9EC6C50A2CE40EEDFB05CBE,
 				DF66CD2A72CAA0A5B69E40AF,
 				E57508568891C194B522876E,
@@ -4856,6 +4863,7 @@
 				39E9CF5DC39A7FFFD8240C41,
 				CC3B495C017114FD927D3AD1,
 				F3BF6CDCD4874F2E9E1716B7,
+				70473423C6F9387BBB00246A,
 				76232CCC964FE1CF70AA3379,
 				172FAB3609B485188711DCA2,
 				2F2898E1F6693A8D631B6B65,
@@ -6006,6 +6014,7 @@
 				ECDD9785C73D1E29E66F3BC4,
 				7D451650DFF0B97AADBBA265,
 				0D3D5D0EF78AF82E12B944C2,
+				D93DE58AE5A96D4AF2BCD872,
 				55AB731CAC2EE3D7C53517B9,
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
@@ -7215,6 +7224,7 @@
 				76F49D155D62BF76B2680C9D /* DailyPlan.swift in Sources */,
 				CBEBC9C2C3002FCC3B937DE1 /* Language.swift in Sources */,
 				88641A584D7EC9057DF8D05C /* MilestoneAssessment.swift in Sources */,
+				E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */,
 				1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */,
 				70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */,
 				B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */,
@@ -7665,6 +7675,7 @@
 				D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */,
 				7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */,
 				1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */,
+				07820572BCDAFB4F92F7DB3C /* DataStore+MilestoneCheckpoint.swift in Sources */,
 				52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */,
 				33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
@@ -7729,6 +7740,7 @@
 				AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */,
 				067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */,
 				5AE32BBD094A7FCD974F290F /* MilestoneAssessmentViewTests.swift in Sources */,
+				039EB27DA1A1BEF7DFAAEE9C /* MilestoneCheckpointResultTests.swift in Sources */,
 				66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,
