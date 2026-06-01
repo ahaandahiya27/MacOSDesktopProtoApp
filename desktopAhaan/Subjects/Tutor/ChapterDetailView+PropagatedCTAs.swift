@@ -79,6 +79,8 @@ func socialScienceInteractives(
             CroppingSeasonExplorer(chapterId: chapter.id)
         } else if chapter.id == "ssch09" {
             GovernmentFormsExplorer(chapterId: chapter.id)
+        } else if chapter.id == "ssch03" {
+            ClimateFactorsExplorer(chapterId: chapter.id)
         } else if socialScienceChronologyChapterIds.contains(chapter.id) {
             // History chapters whose first authored timeline is genuinely
             // chronological — a "put history in order" challenge. Auto-hides if
