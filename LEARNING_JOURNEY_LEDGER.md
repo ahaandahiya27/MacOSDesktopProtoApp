@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-D DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths + Sanskrit `bossQuestions`: 90 each, 6/ch; +27 tests total, 727 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions`** — Phase 3 ceiling + Phase 5 ladder open across the board. Backlog P1-E…P1-J pending. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-E DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths + Sanskrit `bossQuestions`: 90 each, 6/ch; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match interactive each**; +31 tests total, 731 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions`, and all four have Discover Mode.** Phase 3 ceiling + Phase 5 ladder open across the board; engagement parity reached. Backlog P1-F…P1-J pending. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -189,3 +189,48 @@ required before declaring the mission complete (Phase 6).
   interactive per chapter; Sanskrit is 0/16 today), the largest remaining
   engagement gap. Same loop, but this is code-heavy (new SwiftUI views under the
   Big-Sur/legacy-GPU invariants), so expect multiple cycles.
+
+### Cycle 6 (2026-06-01) — Phase 1 · P1-E complete (Sanskrit Discover)
+- Confirmed Phase 0 still green here (Release build + 727 XCTest, 0 fail) before
+  any change.
+- Built a **complete Sanskrit Discover experience** for all **15 NEP chapters**
+  (`sch01`–`sch15`). Mirrors the Social Science data-driven model (one generic
+  view reads its 9 scenes live from the pack) but adds a **bespoke GATED
+  interactive** the other subjects don't have:
+  * **`SanskritWordMatchScene.swift`** — a Devanagari शब्द–अर्थ (word–meaning)
+    tap-to-match game built from the chapter `glossary` (up to 5 pairs, spread
+    across the glossary). Tap a Sanskrit term, then its English meaning; correct
+    pairs lock green, wrong taps flash red. The scene completes — and chapter
+    progress is credited — ONLY once every pair is matched, so it cannot be
+    skipped with a single tap (the "gated" requirement). Tap-to-match, not drag
+    (Big-Sur SwiftUI drag is unreliable).
+  * **`SanskritDiscoverComponents.swift`** — info / quick-check / boss-quiz
+    scenes, saffron-accented, reading concepts + `bossquiz_sch*` MCQs from the
+    pack. Quick-checks and boss questions record SRS via the canonical
+    `recordReview(questionId:quality:packId:)` path; Sanskrit boss ids are REAL
+    pack rows resolved through the SubjectRegistry index (not synthetic
+    ephemeral ids — the `bossquiz_sch` vs `bossquiz_ch` prefix keeps Sanskrit
+    review state distinct from Science).
+  * **`DiscoverChapterSanskritView.swift`** — the 9-scene dispatcher (Big
+    Picture · 2 concepts · Word Match · 1 concept · 3 quick-checks · Boss Quiz).
+    Scene cursor uses `discoverScene(400 + number)` (no collision with Science
+    1–19 / Maths 101–115 / SS 300+); progress keys on the globally-unique
+    `schNN` id.
+- Wired `DiscoverMode` (`sanskritSupportedChapterIds` = the 15 NEP ids; the
+  legacy `ch01` vocabulary deck is the documented carve-out and is excluded) and
+  added 15 saffron/maroon/gold accents to `ChapterTheme`. Entry points
+  (`ChapterDetailView`, `ChapterListView`, `TutorNavigation`) were already
+  pack-agnostic via `hasExperience` / `view(for:)`, so no further wiring needed.
+- Added `desktopAhaanTests/SanskritDiscoverModeRoutingTests.swift` (4 ratchet
+  tests: NEP-has-Discover + legacy-ch01-excluded, exact subject gate with
+  cross-subject leak guards, per-chapter scene-shape fill incl. ≥3 word-match
+  glossary pairs, and the canonical-not-ephemeral boss-id boundary).
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated
+  (3 new source files + 1 test file auto-wired); `ci-build-test.sh` → **BUILD +
+  731 XCTest, 0 failures** (was 727, +4). Additive only; zero regressions; zero
+  STOP_AND_ASK.
+- **All four subjects now have Discover Mode** — engagement parity reached.
+- **NEXT:** P1-F — add `crossChapterRefs` (≥4/ch) to Maths and Sanskrit (the
+  last bolded enrichment gap that feeds Phase 3 cross-subject weaving). Content
+  milestone, same loop: author → lint → pbxproj → ci-build-test green →
+  commit/push → ledger.

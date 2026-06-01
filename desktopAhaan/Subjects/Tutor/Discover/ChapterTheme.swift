@@ -72,6 +72,26 @@ enum ChapterTheme {
         case "ssch19": return Color(red: 0.30, green: 0.44, blue: 0.40)   // Infrastructure — slate green
         case "ssch20": return Color(red: 0.22, green: 0.44, blue: 0.34)   // Banks & Finance — emerald
 
+        // Class 7 Sanskrit (sanskrit_class7) — 15 NEP chapters (`sch01`–`sch15`).
+        // Saffron / maroon / gold family, the traditional palette of Sanskrit
+        // texts, so the Discover chrome gives each chapter its own warm identity
+        // while reading unmistakably as the Sanskrit subject.
+        case "sch01": return Color(red: 0.72, green: 0.38, blue: 0.12)   // वन्दे भारतमातरम् — saffron
+        case "sch02": return Color(red: 0.58, green: 0.42, blue: 0.12)   // सुभाषितानि — gold
+        case "sch03": return Color(red: 0.62, green: 0.34, blue: 0.16)   // burnt amber
+        case "sch04": return Color(red: 0.56, green: 0.32, blue: 0.24)   // terracotta
+        case "sch05": return Color(red: 0.50, green: 0.30, blue: 0.20)   // sepia
+        case "sch06": return Color(red: 0.68, green: 0.36, blue: 0.14)   // marigold
+        case "sch07": return Color(red: 0.48, green: 0.28, blue: 0.28)   // maroon
+        case "sch08": return Color(red: 0.60, green: 0.40, blue: 0.10)   // turmeric gold
+        case "sch09": return Color(red: 0.64, green: 0.32, blue: 0.18)   // copper
+        case "sch10": return Color(red: 0.54, green: 0.36, blue: 0.16)   // ochre
+        case "sch11": return Color(red: 0.55, green: 0.24, blue: 0.30)   // deep rose-maroon
+        case "sch12": return Color(red: 0.70, green: 0.40, blue: 0.16)   // saffron-orange
+        case "sch13": return Color(red: 0.52, green: 0.30, blue: 0.22)   // clay
+        case "sch14": return Color(red: 0.58, green: 0.38, blue: 0.14)   // honey gold
+        case "sch15": return Color(red: 0.66, green: 0.34, blue: 0.20)   // sienna
+
         default: return Color.compatIndigo
         }
     }

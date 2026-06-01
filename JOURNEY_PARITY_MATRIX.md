@@ -23,7 +23,7 @@
 | **Science** | 19 | 57 | 152 | **200** | **57** | 19/19 bespoke per-chapter views | 🥇 GOLD |
 | **Social Science** | 20 | 96 | 87 | **260** | **120** | 20/20 (one data-driven 9-scene view) | 🥈 STRONG |
 | **Maths** | 15 | 53 | 120 | **90** ✅ | **45** ✅ | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
-| **Sanskrit** | 16¹ | 43 | 75 | **90** ✅ | **45** ✅ | **0/16 — no Discover Mode** | 🔴 WEAKEST |
+| **Sanskrit** | 16¹ | 43 | 75 | **90** ✅ | **45** ✅ | **15/15 ✅** (one data-driven 9-scene view + a gated शब्द–अर्थ word-match interactive/ch; legacy ch01 exempt) | 🟡 MEDIUM |
 
 ¹ Sanskrit `ch01` is the legacy vocabulary deck (a deliberate carve-out, exempt
 from NEP cross-subject parity ratchets per CLAUDE.md). The 15 NEP chapters are
@@ -91,7 +91,7 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 | ~~**P1-B**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch)~~ **DONE** — 45 added (3/ch), grammar/literature/culture forward-extensions, parent-anchored, ≥120-word bodies, +6 ratchet tests (ch01 legacy deck exempt); 712 XCTest green | **Sanskrit** (15 NEP ch) | Phase 5 ladder **now open for Sanskrit** | High |
 | ~~**P1-C**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch), all `bossquiz_mchNN_qII`, difficulty 3–5, worked steps + common-mistake note + variation each, +7 ratchet tests; 719 XCTest green | **Maths** | Phase 3 ceiling **raised for Maths** | High |
 | ~~**P1-D**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch on the 15 NEP chapters, legacy ch01 exempt), all `bossquiz_schNN_qII`, difficulty 3–5, textbook-faithful (grounded in each concept's `explanations`), worked steps + distractor-trap note + variation each, +8 ratchet tests; 727 XCTest green | **Sanskrit** | Phase 3 ceiling **raised for Sanskrit** | High |
-| **P1-E** | Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch) | **Sanskrit** (0/16 today) | journey engagement parity | High |
+| ~~**P1-E**~~ ✅ | ~~Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch)~~ **DONE** — `DiscoverChapterSanskritView` (data-driven 9-scene view) now serves all 15 NEP chapters (`sch01`–`sch15`); each carries a bespoke **gated** शब्द–अर्थ word-match interactive built from the chapter glossary (completes only when every pair is matched), plus 3 concept scenes, 3 SRS quick-checks, and the boss quiz. +4 ratchet tests; 731 XCTest green. Legacy ch01 deck deliberately excluded. | **Sanskrit** (was 0/16) | journey engagement parity **achieved** | High |
 | **P1-F** | Add `crossChapterRefs` (≥4/ch) | **Maths**, **Sanskrit** | Phase 3 weaving | Medium |
 | **P1-G** | Add `examConnections` + `whatIfs` | **Maths** | enrichment parity | Medium |
 | **P1-H** | Upgrade Social Science Discover from one generic view toward bespoke per-chapter interactives (parity with Science/Maths) | **Social Science** | engagement depth | Medium |

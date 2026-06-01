@@ -5734,3 +5734,60 @@ cases, 0 failures (was 719, +8). Additive only. Zero regressions, zero
 STOP_AND_ASK. Phase 3 adaptive ceiling now raised for ALL FOUR subjects; every
 subject feeds the Phase-5 ladder via deepDive + bossQuestions. NEXT: P1-E —
 Sanskrit Discover experience (≥1 gated bespoke interactive/ch; 0/16 today).
+
+---
+
+## v6 Learning Journey · Cycle 6 (2026-06-01) — Phase 1 · P1-E: Sanskrit Discover experience
+
+Built a complete Discover Mode for the Sanskrit pack (`sanskrit_class7`),
+closing the last engagement gap (Sanskrit was 0/16 — the only subject with no
+Discover Mode). All 15 NEP chapters (`sch01`–`sch15`) now ship a faithful
+9-scene experience; the legacy `ch01` vocabulary deck is the documented
+carve-out and is deliberately excluded.
+
+Three new source files:
+- `SanskritWordMatchScene.swift` — the bespoke **GATED** interactive each
+  chapter carries (the P1-E requirement). A Devanagari शब्द–अर्थ (word–meaning)
+  tap-to-match game built live from the chapter `glossary` (up to 5 pairs,
+  spread across the glossary entries). Tap a Sanskrit term, then its English
+  meaning: correct pairs lock green, wrong taps flash red and clear. The scene
+  completes — and chapter-completion credit is granted — ONLY once every pair
+  is matched, so it cannot be skipped with a single tap. Tap-to-match (not
+  drag — Big-Sur SwiftUI drag-and-drop is unreliable). Records no SRS (a
+  recognition warm-up, like the info scenes).
+- `SanskritDiscoverComponents.swift` — saffron-accented info / quick-check /
+  boss-quiz scenes that read concepts + `bossquiz_sch*` MCQs from the pack.
+  Quick-checks and boss questions record SRS through the canonical
+  `recordReview(questionId:quality:packId:)` path. Sanskrit boss ids are REAL
+  pack rows resolved via the SubjectRegistry global question index — NOT
+  synthetic ephemeral ids — so no `ephemeralIdPrefixes` wiring is needed; the
+  `bossquiz_sch` vs `bossquiz_ch` prefix boundary keeps Sanskrit review state
+  distinct from Science's.
+- `DiscoverChapterSanskritView.swift` — the data-driven 9-scene dispatcher
+  (Big Picture · 2 concepts · Word Match · 1 concept · 3 quick-checks · Boss
+  Quiz), modelled on `DiscoverChapterSocialScienceView`. Scene cursor uses
+  `discoverScene(400 + number)` (no collision with Science 1–19 / Maths
+  101–115 / SS 300+); progress keys on the globally-unique `schNN` id.
+
+Wiring (additive): `DiscoverMode.sanskritSupportedChapterIds` (15 NEP ids) +
+a `sanskrit_class7` branch in `hasExperience` / `view(for:)`; 15
+saffron/maroon/gold accents added to `ChapterTheme` (previously `sch*` fell
+back to indigo). The Discover entry points (`ChapterDetailView`,
+`ChapterListView`, `TutorNavigation`) were already pack-agnostic, so they
+needed no change.
+
+Tests: `desktopAhaanTests/SanskritDiscoverModeRoutingTests.swift` (4 ratchet
+tests) — NEP-chapters-have-Discover + legacy-ch01-excluded; exact subject gate
+with cross-subject leak guards (Science/Maths/SS never claim an `sch*` id and
+vice-versa); per-chapter scene-shape fill (≥3 concepts, ≥3 usable glossary
+pairs for the word-match, ≥5 MCQ boss questions, ≥3 distinct quick-check MCQs);
+and the canonical-not-ephemeral boss-id boundary.
+
+Green here: all 8 Big-Sur lints (`check_macos12_apis`, `check_swift55_syntax`,
+`check_sf_symbols_compat`, `check_color_literals`, `check_view_mainactor`,
+`check_mainactor_closure_refs`, `check_viewbuilder_limit`, `check_file_size`)
++ `test_lints.py` PASS; pbxproj regenerated (3 source + 1 test file
+auto-wired); `ci-build-test.sh` → **BUILD SUCCEEDED + TEST SUCCEEDED, 731
+XCTest cases, 0 failures** (was 727, +4). Additive only. Zero regressions,
+zero STOP_AND_ASK. All four subjects now have Discover Mode — engagement
+parity reached. NEXT: P1-F — `crossChapterRefs` (≥4/ch) for Maths + Sanskrit.

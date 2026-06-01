@@ -133,11 +133,14 @@
 		8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */; };
 		A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */; };
 		F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */; };
+		49B999B3EF8991E259450F87 /* DiscoverChapterSanskritView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CC60CA5CA42B024323C21 /* DiscoverChapterSanskritView.swift */; };
 		971BB0AABA8D84DAF03EB947 /* DiscoverChapterSocialScienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120B421C2817E576CB16ACA1 /* DiscoverChapterSocialScienceView.swift */; };
 		2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CF7836035E42F1747F477D /* DiscoverMode.swift */; };
 		1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */; };
 		E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */; };
 		7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */; };
+		A49EA37FDC55ABE1C7B2087E /* SanskritDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23A86F155BECB73818134B /* SanskritDiscoverComponents.swift */; };
+		3DE0F1879909D49AEB0866FD /* SanskritWordMatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699295170C6F0D1785771272 /* SanskritWordMatchScene.swift */; };
 		72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */; };
 		5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */; };
 		0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */; };
@@ -1512,6 +1515,7 @@
 		A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */; };
 		2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */; };
 		62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */; };
+		F5D37DC99510C2BFBE01C977 /* SanskritDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF093B7C4C1FBB3A5C4F1BD /* SanskritDiscoverModeRoutingTests.swift */; };
 		77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */; };
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
@@ -2676,11 +2680,14 @@
 		C3D299441B29CACCBD745C93 /* DiscoverChapterMath7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath7View.swift"; sourceTree = "<group>"; };
 		28E0FABBE207C13F43D6D255 /* DiscoverChapterMath8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath8View.swift"; sourceTree = "<group>"; };
 		03321EC51EAF0CFDC1A3F760 /* DiscoverChapterMath9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterMath9View.swift"; sourceTree = "<group>"; };
+		BE1CC60CA5CA42B024323C21 /* DiscoverChapterSanskritView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterSanskritView.swift"; sourceTree = "<group>"; };
 		120B421C2817E576CB16ACA1 /* DiscoverChapterSocialScienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverChapterSocialScienceView.swift"; sourceTree = "<group>"; };
 		21CF7836035E42F1747F477D /* DiscoverMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverMode.swift"; sourceTree = "<group>"; };
 		5D163DF5E9DC2786224DC1D3 /* DiscoverProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgress.swift"; sourceTree = "<group>"; };
 		F8A14F6831FAE3032A288676 /* DiscoverProgressDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressDashboard.swift"; sourceTree = "<group>"; };
 		EA28C7E1649CF17D0B7393B5 /* MathDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathDiscoverComponents.swift"; sourceTree = "<group>"; };
+		4B23A86F155BECB73818134B /* SanskritDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDiscoverComponents.swift"; sourceTree = "<group>"; };
+		699295170C6F0D1785771272 /* SanskritWordMatchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritWordMatchScene.swift"; sourceTree = "<group>"; };
 		1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverComponents.swift"; sourceTree = "<group>"; };
 		D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_PlantKitchen.swift"; sourceTree = "<group>"; };
 		D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_PhotosynthesisLab.swift"; sourceTree = "<group>"; };
@@ -3073,6 +3080,7 @@
 		BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewFlagTests.swift"; sourceTree = "<group>"; };
 		04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritBossQuestionsTests.swift"; sourceTree = "<group>"; };
 		63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDeepDiveTests.swift"; sourceTree = "<group>"; };
+		8AF093B7C4C1FBB3A5C4F1BD /* SanskritDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScientistsArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
@@ -5029,11 +5037,14 @@
 				C3D299441B29CACCBD745C93,
 				28E0FABBE207C13F43D6D255,
 				03321EC51EAF0CFDC1A3F760,
+				BE1CC60CA5CA42B024323C21,
 				120B421C2817E576CB16ACA1,
 				21CF7836035E42F1747F477D,
 				5D163DF5E9DC2786224DC1D3,
 				F8A14F6831FAE3032A288676,
 				EA28C7E1649CF17D0B7393B5,
+				4B23A86F155BECB73818134B,
+				699295170C6F0D1785771272,
 				1DD4F6B4A3DE6A7B815C9E72,
 				DFE37917933D06DACC4E5013,
 				8878C8C2EDF6B9CCCF221F72,
@@ -5958,6 +5969,7 @@
 				BE95DD4D15D17D6931C1D0F4,
 				04C6D1EA7A9108F6DAAE4370,
 				63C8801D773B06475CB44A58,
+				8AF093B7C4C1FBB3A5C4F1BD,
 				05C5BC3C8770E32738C39E97,
 				E9B662F7364184B38EBF6256,
 				ECC6A95CD9ABF9B8C9017257,
@@ -7253,11 +7265,14 @@
 				8A61FE55679F8A1C66EF2CE7 /* DiscoverChapterMath7View.swift in Sources */,
 				A91D88899731778BDDACEB93 /* DiscoverChapterMath8View.swift in Sources */,
 				F1B115E0428ECE8F84F530CF /* DiscoverChapterMath9View.swift in Sources */,
+				49B999B3EF8991E259450F87 /* DiscoverChapterSanskritView.swift in Sources */,
 				971BB0AABA8D84DAF03EB947 /* DiscoverChapterSocialScienceView.swift in Sources */,
 				2B3831577F9C985A3FD11F61 /* DiscoverMode.swift in Sources */,
 				1D0809D140AAB5993A918B7C /* DiscoverProgress.swift in Sources */,
 				E2FFA0C5031A540904FD940E /* DiscoverProgressDashboard.swift in Sources */,
 				7B02FF2D8ACF0F2342E2812B /* MathDiscoverComponents.swift in Sources */,
+				A49EA37FDC55ABE1C7B2087E /* SanskritDiscoverComponents.swift in Sources */,
+				3DE0F1879909D49AEB0866FD /* SanskritWordMatchScene.swift in Sources */,
 				72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */,
 				5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */,
 				0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */,
@@ -7656,6 +7671,7 @@
 				A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */,
 				2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */,
 				62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */,
+				F5D37DC99510C2BFBE01C977 /* SanskritDiscoverModeRoutingTests.swift in Sources */,
 				77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */,
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,

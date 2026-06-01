@@ -44,8 +44,20 @@ enum DiscoverMode {
         if pack.id == "science_class7" { return supportedChapterIds.contains(chapter.id) }
         if pack.id == "maths_class7" { return mathsSupportedChapterIds.contains(chapter.id) }
         if pack.id == "socialscience_class7" { return socialScienceSupportedChapterIds.contains(chapter.id) }
+        if pack.id == "sanskrit_class7" { return sanskritSupportedChapterIds.contains(chapter.id) }
         return false
     }
+
+    /// Sanskrit chapters with a Discover experience. The 15 NEP chapters
+    /// (`sch01`–`sch15`) each ship the same generic 9-scene view
+    /// (`DiscoverChapterSanskritView`) — including a bespoke gated शब्द–अर्थ
+    /// word-match interactive — pulling content live from the
+    /// `sanskrit_class7` pack. The legacy `ch01` vocabulary deck is the
+    /// documented carve-out and is deliberately excluded.
+    static let sanskritSupportedChapterIds: Set<String> = [
+        "sch01", "sch02", "sch03", "sch04", "sch05", "sch06", "sch07", "sch08",
+        "sch09", "sch10", "sch11", "sch12", "sch13", "sch14", "sch15"
+    ]
 
     /// Maths chapters with hand-built Discover experiences (pilot).
     static let mathsSupportedChapterIds: Set<String> = [
@@ -152,6 +164,16 @@ enum DiscoverMode {
             // future pack edit can't accidentally dispatch an unknown chapter.
             if socialScienceSupportedChapterIds.contains(chapter.id) {
                 DiscoverChapterSocialScienceView(pack: pack, chapter: chapter)
+            } else {
+                ComingSoonView(chapterTitle: chapter.title)
+            }
+        } else if pack.id == "sanskrit_class7" {
+            // The 15 NEP Sanskrit chapters share one generic view that reads
+            // its 9 scenes (incl. the gated word-match) from the pack. Gate on
+            // the supported-id set so the legacy `ch01` vocabulary deck and any
+            // future pack edit can't accidentally dispatch an unknown chapter.
+            if sanskritSupportedChapterIds.contains(chapter.id) {
+                DiscoverChapterSanskritView(pack: pack, chapter: chapter)
             } else {
                 ComingSoonView(chapterTitle: chapter.title)
             }
