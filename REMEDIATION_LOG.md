@@ -5360,3 +5360,18 @@ How the Land Becomes Sacred — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 8e43bcd. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 87: ssch09 second DEEPDIVE pass
+
+From the Rulers to the Ruled: Types of Governments — deepDive 4->6, ccRefs 4->6.
+- dv05 "Direct vs representative democracy: why we elect people" (class_9, anchor
+  t02_c04): scale forces representation; the referendum as the surviving direct
+  tool.
+- dv06 "When a king reigns but does not rule" (class_10, anchor t04_c01): absolute
+  vs constitutional monarchy — the label matters less than where power sits.
+- cc05 -> ssch05 (absolute monarchy = the emperors of history).
+- cc06 -> ssch19 (the three functions of govt -> running public services/infra).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed c81c1bb. Zero regressions, zero STOP_AND_ASK.
