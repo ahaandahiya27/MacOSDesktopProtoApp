@@ -5466,3 +5466,17 @@ Empires and Kingdoms: 6th to 10th Centuries — deepDive 4->6, ccRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed b632307. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 94: ssch16 second DEEPDIVE pass
+
+Turning Tides: 11th and 12th Centuries — deepDive 4->6, ccRefs 5->7.
+- dv05 "The Chola navy and the daring raid on Srivijaya" (class_9, anchor t03_c03):
+  open-sea power projection to control the Strait of Malacca and the China trade.
+- dv06 "Al-Biruni: the visitor who came to understand, not conquer" (class_10,
+  anchor t02_c01): learning Sanskrit, a peaceful two-way flow of knowledge.
+- cc06 -> ssch03 (monsoon winds -> the Chola voyages).
+- cc07 -> ssch12 (Strait of Malacca / China trade -> markets).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed fbee1f8. Zero regressions, zero STOP_AND_ASK.
