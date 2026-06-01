@@ -5495,3 +5495,18 @@ India, a Home to Many — deepDive 4->6, crossChapterRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 23bd678. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 96: ssch18 second DEEPDIVE pass
+
+The State, the Government, and You — deepDive 4->6, crossChapterRefs 5->7.
+- dv05 "State versus government: the four parts that make a country" (class_9,
+  anchor t01_c01): people/land/government/sovereignty; the state endures while
+  governments change.
+- dv06 "Why the country keeps running when the minister changes" (class_10, anchor
+  t03_c02): political executive sets direction, permanent executive gives continuity.
+- cc06 -> ssch04 (matsya nyaya -> the rise of the first states/kings).
+- cc07 -> ssch20 (government as guardian of money / the RBI).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 21baeae. Zero regressions, zero STOP_AND_ASK.
