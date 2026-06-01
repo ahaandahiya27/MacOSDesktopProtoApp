@@ -37,6 +37,46 @@ final class WeeklyReportPDFExporter {
         calendar: Calendar = .current,
         now: Date = Date()
     ) throws {
+        try withPDFContext(to: url) { ctx in
+            drawPage(ctx) { draw(activity, calendar: calendar, now: now) }
+        }
+    }
+
+    /// Render a two-page **parent report card** at `url`: page 1 is the weekly
+    /// summary (identical to `export`), page 2 adds the cross-subject mastery
+    /// picture (coverage + mastery per subject) and the latest milestone
+    /// checkpoint score. `masteryRows` and `checkpoint` are plain values the
+    /// caller builds from `MasteryEngine.snapshot` + `DataStore`, so the
+    /// exporter stays UI-free and testable.
+    static func exportReportCard(
+        activity: WeeklyActivity,
+        masteryRows: [ReportCardMasteryRow],
+        checkpoint: MilestoneCheckpointResult?,
+        to url: URL,
+        calendar: Calendar = .current,
+        now: Date = Date()
+    ) throws {
+        try withPDFContext(to: url) { ctx in
+            drawPage(ctx) { draw(activity, calendar: calendar, now: now) }
+            drawPage(ctx) {
+                drawReportCardPage(masteryRows: masteryRows, checkpoint: checkpoint,
+                                   calendar: calendar, now: now)
+            }
+        }
+    }
+
+    /// Filename-safe report-card name, e.g. `Ahaan-ReportCard-2026-05-24.pdf`.
+    static func reportCardFilename(_ activity: WeeklyActivity,
+                                   calendar: Calendar = .current) -> String {
+        "Ahaan-ReportCard-\(weekStartStamp(activity, calendar: calendar)).pdf"
+    }
+
+    // MARK: - PDF context plumbing
+
+    /// Create a US-Letter PDF context backed by an in-memory buffer, run
+    /// `body` (which draws one or more pages via `drawPage`), then close and
+    /// atomically write the result to `url`.
+    private static func withPDFContext(to url: URL, _ body: (CGContext) -> Void) throws {
         let pdfData = NSMutableData()
         guard let consumer = CGDataConsumer(data: pdfData as CFMutableData) else {
             throw ExportError.contextCreationFailed
@@ -45,19 +85,22 @@ final class WeeklyReportPDFExporter {
         guard let ctx = CGContext(consumer: consumer, mediaBox: &mediaBox, nil) else {
             throw ExportError.contextCreationFailed
         }
+        body(ctx)
+        ctx.closePDF()
+        try (pdfData as Data).write(to: url, options: .atomic)
+    }
 
+    /// Begin a page, install a flipped `NSGraphicsContext` (origin top-left, y
+    /// grows downward so the top-down `cursorY` layout reads naturally), run
+    /// `draw`, then restore + end the page.
+    private static func drawPage(_ ctx: CGContext, _ draw: () -> Void) {
         ctx.beginPDFPage(nil)
         let nsContext = NSGraphicsContext(cgContext: ctx, flipped: true)
         NSGraphicsContext.saveGraphicsState()
         NSGraphicsContext.current = nsContext
-        // flipped: true → origin top-left, y grows downward, so the
-        // top-down `cursorY` layout below reads naturally.
-        draw(activity, calendar: calendar, now: now)
+        draw()
         NSGraphicsContext.restoreGraphicsState()
         ctx.endPDFPage()
-        ctx.closePDF()
-
-        try (pdfData as Data).write(to: url, options: .atomic)
     }
 
     /// Filename-safe "week of" stamp, e.g. `2026-05-24`.
@@ -179,6 +222,106 @@ final class WeeklyReportPDFExporter {
                      width: contentWidth,
                      font: .systemFont(ofSize: 9, weight: .regular),
                      color: NSColor.gray)
+    }
+
+    /// Page 2 — the cross-subject mastery picture + latest checkpoint.
+    private static func drawReportCardPage(
+        masteryRows: [ReportCardMasteryRow],
+        checkpoint: MilestoneCheckpointResult?,
+        calendar: Calendar, now: Date
+    ) {
+        let contentWidth = pageSize.width - margin * 2
+        var cursorY = margin
+
+        cursorY = drawText("Ahaan — Report Card",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 26, weight: .bold),
+                           color: NSColor(calibratedRed: 0.18, green: 0.18, blue: 0.45, alpha: 1))
+        cursorY += 4
+        cursorY = drawText("Where Ahaan is across the whole learning journey.",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 13, weight: .regular),
+                           color: NSColor.darkGray)
+        cursorY += 18
+
+        // Mastery by subject.
+        cursorY = drawText("Mastery by subject",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 15, weight: .bold),
+                           color: NSColor.black)
+        cursorY += 6
+        if masteryRows.isEmpty {
+            cursorY = drawRow(label: "—",
+                              detail: "No subjects started yet.",
+                              at: cursorY, width: contentWidth)
+            cursorY += 4
+        } else {
+            for row in masteryRows {
+                let detail: String
+                if row.hasStarted {
+                    detail = "Coverage \(pct(row.coverageFraction))   ·   "
+                        + "Mastery \(pct(row.masteryFraction))   ·   \(row.levelName)"
+                } else {
+                    detail = "Not started yet"
+                }
+                cursorY = drawRow(label: row.subjectTitle, detail: detail,
+                                  at: cursorY, width: contentWidth)
+                cursorY += 4
+            }
+        }
+        cursorY += 14
+
+        // Latest checkpoint.
+        cursorY = drawText("Latest checkpoint",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 15, weight: .bold),
+                           color: NSColor.black)
+        cursorY += 6
+        if let checkpoint = checkpoint, checkpoint.totalQuestions > 0 {
+            let dateFmt = DateFormatter()
+            dateFmt.calendar = calendar
+            dateFmt.locale = Locale(identifier: "en_US_POSIX")
+            dateFmt.dateFormat = "MMMM d, yyyy"
+            let scoreLine = "Scored \(checkpoint.correctCount) of \(checkpoint.totalQuestions) "
+                + "(\(pct(checkpoint.scoreFraction))) on \(dateFmt.string(from: checkpoint.takenAt))."
+            cursorY = drawText(scoreLine,
+                               at: CGPoint(x: margin, y: cursorY),
+                               width: contentWidth,
+                               font: .systemFont(ofSize: 13, weight: .semibold),
+                               color: NSColor.black)
+            cursorY += 6
+            for sub in checkpoint.perSubject {
+                cursorY = drawRow(label: sub.subjectTitle,
+                                  detail: "\(sub.correct) of \(sub.total) correct",
+                                  at: cursorY, width: contentWidth)
+                cursorY += 4
+            }
+        } else {
+            cursorY = drawText("No checkpoint taken yet — open Help → Milestone Checkpoint to try one.",
+                               at: CGPoint(x: margin, y: cursorY),
+                               width: contentWidth,
+                               font: .systemFont(ofSize: 12.5, weight: .regular),
+                               color: NSColor.darkGray)
+        }
+
+        // Footer.
+        let footerFmt = DateFormatter()
+        footerFmt.calendar = calendar
+        footerFmt.locale = Locale(identifier: "en_US_POSIX")
+        footerFmt.dateFormat = "yyyy-MM-dd HH:mm"
+        _ = drawText("Coverage = how much of a subject has been attempted; Mastery = how well the attempted material is known. Generated \(footerFmt.string(from: now)).",
+                     at: CGPoint(x: margin, y: pageSize.height - margin - 24),
+                     width: contentWidth,
+                     font: .systemFont(ofSize: 9, weight: .regular),
+                     color: NSColor.gray)
+    }
+
+    private static func pct(_ f: Double) -> String {
+        "\(Int((max(0, min(1, f)) * 100).rounded()))%"
     }
 
     /// Draw a "label — detail" row with the label in a fixed-width gutter.

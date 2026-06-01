@@ -6195,3 +6195,23 @@ regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 4 M3b — parent report card (extend Weekly-Progress PDF with mastery
 section + latest checkpoint), export wiring + test.
+
+## 2026-06-02 — Phase 4 COMPLETE · M3b · Parent report card PDF
+
+Extended the Weekly-Progress PDF into a two-page parent report card. Factored the
+CG PDF context boilerplate (withPDFContext + drawPage; page-1 weekly output
+unchanged), added exportReportCard (page 2: Mastery by subject + Latest
+checkpoint) + reportCardFilename, and the ReportCardMasteryRow value + pure
+rows(from:) mapper. WeeklyProgressView's export now builds the MasteryEngine
+snapshot rows + latestCheckpointResult and exports the report card. UI-free
+exporter (plain-value inputs) — off-main + testable. +5 tests.
+
+Phase 4 complete: mastery-gap MCQ sampler (M1) + Milestone Checkpoint window (M2)
++ durable results (M3a) + two-page parent report card (M3b), all reachable+green.
+
+Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 791 XCTest, 0 failures (was 786, +5). Additive; zero
+regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 5 — Olympiad / Expert challenge ladder (tiered expert sets from
+deepDive, unlocked by mastery).

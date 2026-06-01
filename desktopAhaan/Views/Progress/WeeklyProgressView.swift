@@ -256,13 +256,13 @@ struct WeeklyProgressView: View {
             Button(action: { exportPDF(activity) }) {
                 HStack(spacing: 6) {
                     Image(systemName: SFSymbolCompat.name("square.and.arrow.up"))
-                    Text("Export PDF Report")
+                    Text("Export Report Card (PDF)")
                 }
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
                 .frame(minHeight: 44)
             }
-            .accessibilityLabel("Export a one-page PDF report of this week's progress to save or share.")
+            .accessibilityLabel("Export a PDF report card — this week's progress plus mastery by subject and the latest checkpoint — to save or share.")
             if let status = exportStatus {
                 Text(status)
                     .font(.caption)
@@ -275,11 +275,17 @@ struct WeeklyProgressView: View {
     private func exportPDF(_ activity: WeeklyActivity) {
         let panel = NSSavePanel()
         panel.allowedFileTypes = ["pdf"]
-        panel.nameFieldStringValue = "Ahaan-WeeklyProgress-\(WeeklyReportPDFExporter.weekStartStamp(activity)).pdf"
-        panel.message = "Save a one-page summary of this week's learning."
+        panel.nameFieldStringValue = WeeklyReportPDFExporter.reportCardFilename(activity)
+        panel.message = "Save a report card — this week plus mastery by subject and the latest checkpoint."
         guard panel.runModal() == .OK, let url = panel.url else { return }
+        // Build the cross-subject mastery rows + latest checkpoint to fold in.
+        let snapshot = MasteryEngine.snapshot(registry: registry, dataStore: dataStore)
+        let masteryRows = ReportCardMasteryRow.rows(from: snapshot)
+        let checkpoint = dataStore.latestCheckpointResult()
         do {
-            try WeeklyReportPDFExporter.export(activity, to: url)
+            try WeeklyReportPDFExporter.exportReportCard(
+                activity: activity, masteryRows: masteryRows,
+                checkpoint: checkpoint, to: url)
             exportStatus = "Saved to \(url.lastPathComponent)."
             exportIsError = false
         } catch {

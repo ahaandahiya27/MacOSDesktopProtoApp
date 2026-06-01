@@ -672,3 +672,40 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** Phase 4 M3b — the parent **report card**: extend the Weekly-Progress
   PDF with a `MasteryEngine` per-subject coverage/mastery section + the latest
   checkpoint score, wire its export (NSSavePanel + menu), and a render test.
+
+### Cycle 19 (2026-06-02) — Phase 4 COMPLETE · M3b · Parent report card PDF
+- Confirmed M3a still green here (786 XCTest, 0 fail) before any change.
+- Extended the Weekly-Progress PDF export into a **two-page parent report card**:
+  - `desktopAhaan/Services/WeeklyReportPDFExporter.swift` — factored the CG PDF
+    context boilerplate into `withPDFContext` + `drawPage` (page-1 weekly output
+    is byte-for-byte unchanged → existing exporter tests untouched), then added
+    `exportReportCard(activity:masteryRows:checkpoint:to:)`: page 1 = the weekly
+    summary, page 2 = **Mastery by subject** (per-subject Coverage% · Mastery% ·
+    level, or "Not started yet") + **Latest checkpoint** (score, date, per-subject
+    correct/total, or a "none yet" nudge). Plus `reportCardFilename`. Stays UI-free
+    — it takes plain values, not the live engine — so it's off-main + testable.
+  - `desktopAhaan/Models/ReportCardMasteryRow.swift` — the flat mastery-row value
+    + a pure `rows(from: OverallMasterySnapshot)` mapper (registry order).
+  - `WeeklyProgressView` — its export button now builds the `MasteryEngine`
+    snapshot rows + `latestCheckpointResult()` and calls `exportReportCard`
+    (relabelled "Export Report Card (PDF)", report-card filename + message). The
+    view already had both `dataStore` + `registry`, so no plumbing change.
+- Big-Sur safe: pure Core Graphics + AppKit text drawing (no PDFKit, no macOS-12
+  APIs), atomic write, value-type inputs; the second page reuses the existing
+  `drawText`/`drawRow` helpers.
+- Tests (+5): exporter — report card writes a valid (`%PDF-`) PDF under 200 KB,
+  handles a nil checkpoint + empty mastery, filename format; mapping —
+  `ReportCardMasteryRow.rows` preserves order + carries coverage/mastery/started,
+  and empty-snapshot → no rows.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (2
+  new files auto-wired); `ci-build-test.sh` → **BUILD + 791 XCTest, 0 failures**
+  (was 786, +5). Additive (sole existing-file edits: the exporter refactor +
+  WeeklyProgressView's export call); zero regressions; zero STOP_AND_ASK.
+- **PHASE 4 (Milestone Assessments + Parent Report Card) is COMPLETE** — the
+  mastery-gap MCQ sampler (M1), the Milestone Checkpoint window (M2), durable
+  checkpoint results (M3a), and the two-page parent report card (M3b) are all
+  end-to-end reachable and green.
+- **NEXT:** Phase 5 — OLYMPIAD / EXPERT CHALLENGE LADDER: tiered expert question
+  sets sourced from chapter `deepDive` content, unlocked by mastery. Read the
+  existing deepDive / expert content + the mastery gating first; extend, don't
+  replace.

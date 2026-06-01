@@ -107,4 +107,56 @@ final class WeeklyReportPDFExporterTests: XCTestCase {
         XCTAssertEqual(stamp.count, 10)
         XCTAssertEqual(stamp.filter { $0 == "-" }.count, 2)
     }
+
+    // MARK: - Report card (two-page) export
+
+    private func sampleMasteryRows() -> [ReportCardMasteryRow] {
+        [ReportCardMasteryRow(subjectTitle: "Science — Class 7", coverageFraction: 0.42,
+                              masteryFraction: 0.61, levelName: "Confident", hasStarted: true),
+         ReportCardMasteryRow(subjectTitle: "Maths — Class 7", coverageFraction: 0.10,
+                              masteryFraction: 0.20, levelName: "Familiar", hasStarted: true),
+         ReportCardMasteryRow(subjectTitle: "Sanskrit — Class 7", coverageFraction: 0,
+                              masteryFraction: 0, levelName: "Learning", hasStarted: false)]
+    }
+
+    private func sampleCheckpoint() -> MilestoneCheckpointResult {
+        MilestoneCheckpointResult(
+            takenAt: Date(timeIntervalSince1970: 1_716_000_000),
+            correctCount: 6, totalQuestions: 8,
+            perSubject: [
+                MilestoneSubjectScore(packId: "science_class7", subjectTitle: "Science — Class 7",
+                                      correct: 4, total: 5),
+                MilestoneSubjectScore(packId: "maths_class7", subjectTitle: "Maths — Class 7",
+                                      correct: 2, total: 3)])
+    }
+
+    func testReportCardWritesValidPDF() throws {
+        let url = tmp.appendingPathComponent("reportcard.pdf")
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: sampleMasteryRows(),
+            checkpoint: sampleCheckpoint(), to: url, calendar: cal)
+
+        XCTAssertTrue(FileManager.default.fileExists(atPath: url.path))
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8))
+        XCTAssertGreaterThan(data.count, 0)
+        XCTAssertLessThanOrEqual(data.count, 200 * 1024,
+            "A two-page text PDF should stay well under 200 KB (got \(data.count)).")
+    }
+
+    func testReportCardHandlesNilCheckpointAndEmptyMastery() throws {
+        let url = tmp.appendingPathComponent("reportcard-thin.pdf")
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: [],
+            checkpoint: nil, to: url, calendar: cal)
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8),
+            "A report card with no checkpoint / no started subjects is still a valid PDF.")
+    }
+
+    func testReportCardFilenameFormat() {
+        let name = WeeklyReportPDFExporter.reportCardFilename(sampleActivity(), calendar: cal)
+        XCTAssertTrue(name.hasPrefix("Ahaan-ReportCard-"))
+        XCTAssertTrue(name.hasSuffix(".pdf"))
+    }
 }

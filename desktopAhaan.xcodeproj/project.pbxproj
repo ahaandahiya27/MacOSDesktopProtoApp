@@ -23,6 +23,7 @@
 		E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */; };
 		1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */; };
 		70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */; };
+		4F88912844E3FE35B19F8CBD /* ReportCardMasteryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC6D1FF9731912BEBFC2A0 /* ReportCardMasteryRow.swift */; };
 		B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57508568891C194B522876E /* StudyState.swift */; };
 		58A3CB4A194EAA9A8D5BFD3B /* TranslationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82AD9F320BAE5C8B704E2 /* TranslationRecord.swift */; };
 		37836085349CB334374EB860 /* TranslationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D96B2F43222F478486AF8 /* TranslationResult.swift */; };
@@ -1534,6 +1535,7 @@
 		A98202793C232A4B87293D96 /* RecentlyMissedQuickCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3BA43B3BFDBEB2081F342 /* RecentlyMissedQuickCheckTests.swift */; };
 		848EBF3C63CD00CE279CA25B /* RecentlyMissedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7122067BE7830474EC604 /* RecentlyMissedTests.swift */; };
 		C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */; };
+		1A1C9AC6E23350B57998F712 /* ReportCardMasteryRowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB52B3EAB70806870B2F6508 /* ReportCardMasteryRowTests.swift */; };
 		A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */; };
 		2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */; };
 		62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */; };
@@ -2590,6 +2592,7 @@
 		7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneCheckpointResult.swift"; sourceTree = "<group>"; };
 		D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeItem.swift"; sourceTree = "<group>"; };
 		DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeProgress.swift"; sourceTree = "<group>"; };
+		9AAC6D1FF9731912BEBFC2A0 /* ReportCardMasteryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportCardMasteryRow.swift"; sourceTree = "<group>"; };
 		E57508568891C194B522876E /* StudyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyState.swift"; sourceTree = "<group>"; };
 		59C82AD9F320BAE5C8B704E2 /* TranslationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationRecord.swift"; sourceTree = "<group>"; };
 		761D96B2F43222F478486AF8 /* TranslationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationResult.swift"; sourceTree = "<group>"; };
@@ -3123,6 +3126,7 @@
 		45F3BA43B3BFDBEB2081F342 /* RecentlyMissedQuickCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyMissedQuickCheckTests.swift"; sourceTree = "<group>"; };
 		D3E7122067BE7830474EC604 /* RecentlyMissedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyMissedTests.swift"; sourceTree = "<group>"; };
 		00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelatedChaptersStripTests.swift"; sourceTree = "<group>"; };
+		CB52B3EAB70806870B2F6508 /* ReportCardMasteryRowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportCardMasteryRowTests.swift"; sourceTree = "<group>"; };
 		BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewFlagTests.swift"; sourceTree = "<group>"; };
 		04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritBossQuestionsTests.swift"; sourceTree = "<group>"; };
 		63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDeepDiveTests.swift"; sourceTree = "<group>"; };
@@ -3269,6 +3273,7 @@
 				7F7C95BDD7A3179165C62DEF,
 				D9EC6C50A2CE40EEDFB05CBE,
 				DF66CD2A72CAA0A5B69E40AF,
+				9AAC6D1FF9731912BEBFC2A0,
 				E57508568891C194B522876E,
 				59C82AD9F320BAE5C8B704E2,
 				761D96B2F43222F478486AF8,
@@ -6036,6 +6041,7 @@
 				45F3BA43B3BFDBEB2081F342,
 				D3E7122067BE7830474EC604,
 				00406863F2097E0853ACE132,
+				CB52B3EAB70806870B2F6508,
 				BE95DD4D15D17D6931C1D0F4,
 				04C6D1EA7A9108F6DAAE4370,
 				63C8801D773B06475CB44A58,
@@ -7227,6 +7233,7 @@
 				E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */,
 				1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */,
 				70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */,
+				4F88912844E3FE35B19F8CBD /* ReportCardMasteryRow.swift in Sources */,
 				B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */,
 				58A3CB4A194EAA9A8D5BFD3B /* TranslationRecord.swift in Sources */,
 				37836085349CB334374EB860 /* TranslationResult.swift in Sources */,
@@ -7762,6 +7769,7 @@
 				A98202793C232A4B87293D96 /* RecentlyMissedQuickCheckTests.swift in Sources */,
 				848EBF3C63CD00CE279CA25B /* RecentlyMissedTests.swift in Sources */,
 				C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */,
+				1A1C9AC6E23350B57998F712 /* ReportCardMasteryRowTests.swift in Sources */,
 				A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */,
 				2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */,
 				62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */,
