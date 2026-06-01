@@ -4979,3 +4979,34 @@ Bespoke Social Science interactives now cover TEN chapters: ssch01 (relief), ssc
 ssch11 (barter), ssch12 (market price), ssch13 (farming seasons), ssch18 (three
 organs), ssch20 (compounding). History chapters carry SSChronologyChallenge. FOUR
 chapters remain on glossary-match: ssch08, ssch14, ssch17, ssch19.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 69 (ssch19 bespoke Infrastructure Sorter — INTERACTIVE track)
+
+INTERACTIVE track. Authored `InfrastructureSorter`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/InfrastructureSorter.swift),
+a bespoke tap-game for Ch.19 "Infrastructure: Engine of India's Development"
+(ssch19), upgrading that chapter from the generic glossary-match. The chapter's
+opening idea (ssch19_t01_c01) is that infrastructure splits into PHYSICAL ('hardware'
+— transport, utilities, energy, communication) and SOCIAL (schools, hospitals,
+safety services, courts, libraries). The widget shows one chapter-named example at
+a time (NH44, Bhakra Nangal Dam, Indian Railways, J.C. Bose's wireless towers, the
+Jawaharlal Nehru port vs a school, hospital, police/fire station, court, public
+library) and asks Physical or Social, with a chapter-grounded reason on each so a
+wrong tap teaches. Running score + 'all 10 sorted' finish. Ten cards, five per kind,
+fixed order. Grounded in ssch19_t01–t04.
+
+Gated on exact pack.id + chapter.id == "ssch19", BEFORE the chronology/glossary
+fallbacks. Big-Sur safe: withAnimation (no .animation(_:value:)), SFSymbolCompat
+(all SF Symbols 1), @SceneStorage namespaced by chapter, RM-gated motion, VoiceOver
+labels + hints, steel-blue Color(red:green:blue:). Mirrors the proven ThreeOrgansSorter
+structure (header/progress/example card/category buttons/feedback/next). Extended
+SocialScienceInteractiveGateTests to pin ssch19 as bespoke. pbxproj regenerated (451
+app sources). Full lint family + Release build + full suite green. Pushed 88f76a2.
+
+Bespoke Social Science interactives now cover ELEVEN chapters: ssch01 (relief),
+ssch02 (weather lab), ssch03 (climate factors), ssch09 (govt forms), ssch10
+(Preamble), ssch11 (barter), ssch12 (market price), ssch13 (farming seasons), ssch18
+(three organs), ssch19 (infra sorter), ssch20 (compounding). History chapters carry
+SSChronologyChallenge. THREE chapters remain on glossary-match: ssch08, ssch14, ssch17.
