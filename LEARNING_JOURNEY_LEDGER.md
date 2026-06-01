@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-G DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; **P1-G: Maths `examConnections` + `whatIfs` 45 each → full Maths/Science enrichment-surface parity**). **All four subjects carry `deepDive` + `bossQuestions` + `crossChapterRefs`, all four have Discover Mode, and Maths now matches Science on every ChapterDetailView surface.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-H…P1-J pending (Sanskrit `examConnections` audit + minor parity). |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-H DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; **P1-G: Maths `examConnections` + `whatIfs` 45 each**; **P1-H: Sanskrit `examConnections` 45**). **All four subjects carry `deepDive` + `bossQuestions` + `crossChapterRefs` + Discover; Maths and Sanskrit-NEP now match Science on the full enrichment surface set.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-I…P1-J pending (Social Science exam/whatIf top-up 2→3, minor parity). |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -300,3 +300,32 @@ required before declaring the mission complete (Phase 6).
   `whatIfs` ≥3; check the exam-connection surface), then the remaining P1
   backlog. Same loop: author → lint → pbxproj → ci-build-test green →
   commit/push → ledger.
+
+### Cycle 9 (2026-06-01) — Phase 1 · P1-H complete (Sanskrit `examConnections`)
+- Confirmed Phase 0 still green here (Release build + TEST SUCCEEDED) before any
+  change.
+- Added **45 `examConnections`** (3 per NEP chapter × 15) to the Sanskrit pack
+  via the new re-runnable `scripts/inject_sanskrit_examconn.py` — the last dark
+  enrichment surface for the NEP chapters. The legacy `ch01` vocab deck is the
+  documented carve-out (skipped; a `ch01_xc*` id would collide with Science).
+- Ids `schNN_xcII` (distinct from Science `chNN_xc`). Each is a 60–120-word
+  NEP-faithful forward pointer (class8…class12) along the three authentic
+  tracks — grammar (समास, सप्तविभक्ति/kāraka, the लकार + गण verb system, क्तवतु/
+  तुमुन्, ordinals + किम्), literature/values (subhāṣita + Bhartṛhari + chandas +
+  alaṅkāra, the Pañcatantra, karma-yoga + the Gītā yajña-cycle, the Īśa
+  Upaniṣad, speech-ethics), history/culture (yoga/āyurveda, Cellular Jail/
+  Savarkar, Panna Dhai, Śikṣā). Each anchored by ≥1 real in-chapter
+  `relatedConceptId`; injector hard-fails on any unresolved anchor.
+- Added `desktopAhaanTests/SanskritExamConnectionsTests.swift` (1 comprehensive
+  ratchet: ≥3/ch + ≥45 total on NEP, legacy ch01 zero, canonical-unique ids,
+  sch-namespace boundary, ≥40-word bodies, non-blank title + targetExam, in-pack
+  `relatedConceptIds`).
+- Green here: roundtrip byte-for-byte on all four packs (Devanagari intact);
+  `check_pack_schema` + `check_orphan_refs` + `check_cross_pack_ids` + all
+  Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (new test
+  auto-wired); `ci-build-test.sh` → **BUILD + TEST SUCCEEDED, 0 failures** (+1
+  XCTest). Additive only; zero regressions; zero STOP_AND_ASK.
+- **Sanskrit NEP chapters now carry the full enrichment surface set.**
+- **NEXT:** P1-I — top up Social Science `examConnections` + `whatIfs` from 2 → 3
+  per chapter (one each × 20 chapters) so all four subjects clear the Science
+  3/ch floor. Same loop.

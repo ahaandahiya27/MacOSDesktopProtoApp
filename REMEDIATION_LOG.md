@@ -5886,3 +5886,52 @@ of the nine ChapterDetailView surfaces plus deepDive, bossQuestions,
 crossChapterRefs, examConnections and whatIfs is populated. NEXT: P1-H —
 Sanskrit `examConnections` + `whatIfs` parity check (the NEP chapters already
 carry whatIfs ≥3; audit examConnections), then the remaining P1 backlog.
+
+---
+
+## v6 Learning Journey · Cycle 9 (2026-06-01) — Phase 1 · P1-H: examConnections (Sanskrit)
+
+The 15 NEP Sanskrit chapters already carried whatIfs (≥3/ch), deepDive,
+bossQuestions and crossChapterRefs, but ZERO examConnections — so
+ExamConnectionCalloutView was dark on every Sanskrit chapter tab. Added **45
+examConnections (3 per NEP chapter × 15)** via the new re-runnable
+scripts/inject_sanskrit_examconn.py. The legacy ch01 vocabulary deck is the
+documented carve-out and is skipped (a ch01_xc* id would collide with Science's
+ch01_xc* and muddy the cross-pack id index).
+
+Ids schNN_xcII (sch namespace, distinct from Science chNN_xc). Each is a
+60–120-word NEP-faithful forward pointer toward where the Grade-7 idea is
+formally studied in higher Sanskrit (class8…class12), anchored by ≥1 real
+in-chapter relatedConceptId; the injector hard-fails on any unresolved anchor
+or out-of-bounds body.
+
+The pointers follow the three authentic tracks the deepDive established:
+GRAMMAR — समास compounds (sch01), the चतुर्थी/सप्तविभक्ति case system
+(sch03/sch14), kāraka theory (sch14), तसिल्/शस् adverb suffixes (sch04/sch08),
+the क्तवतु past participle (sch11), the तुमुन् infinitive (sch12), the लट्/लृट्/
+लङ्/विधिलिङ् लकार and परस्मैपद/आत्मनेपद + दश गण verb system (sch04/sch07/sch09/
+sch10/sch15), ordinals + the किम् pronoun (sch10); LITERATURE/VALUES — the
+subhāṣita tradition + Bhartṛhari's Śatakas + chandas prosody + alaṅkāra
+(sch02/sch06/sch13), the fable/Pañcatantra tradition (sch04), karma-yoga + the
+Gītā's yajña-cycle (sch05/sch09), the Īśa Upaniṣad/Advaita (sch07), the ethics
+of speech (sch08); HISTORY/CULTURE — sūryanamaskāra/yoga + āyurveda
+(sch03/sch05), the Cellular Jail/Savarkar (sch11), Panna Dhai/Rajput valour
+(sch12), Śikṣā/Vedic recitation (sch13). All Devanagari/IAST micro-detail
+checked.
+
+Tests: desktopAhaanTests/SanskritExamConnectionsTests.swift (1 comprehensive
+ratchet test: ≥3/ch + ≥45 total on the NEP chapters, legacy ch01 carries zero,
+canonical-unique schNN_xcII ids, sch-namespace boundary vs Science, ≥40-word
+bodies, non-blank titles + targetExam, in-pack relatedConceptIds).
+
+Green here: roundtrip byte-for-byte on all four packs (Devanagari intact via
+ensure_ascii=False); check_pack_schema + check_orphan_refs + check_cross_pack_ids
++ all Big-Sur static lints + test_lints.py pass; pbxproj regenerated (new test
+file auto-wired); ci-build-test.sh -> BUILD + TEST SUCCEEDED, 0 failures (+1
+XCTest). Additive only; zero regressions; zero STOP_AND_ASK.
+
+**Sanskrit NEP chapters now carry the full enrichment surface set** (deepDive,
+bossQuestions, crossChapterRefs, examConnections, whatIfs + Discover). The only
+remaining exam/whatIf gap is Social Science (2/ch each, one below the Science
+floor of 3). NEXT: P1-I — top up Social Science examConnections + whatIfs from
+2 → 3 per chapter (one each × 20 chapters).
