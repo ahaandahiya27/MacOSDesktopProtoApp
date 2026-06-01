@@ -112,7 +112,7 @@ extension ArticleIndex {
         "ssch12_overview": ArticleEntry(id: "ssch12_overview", filename: "ssch12_overview.html", title: "Chapter Overview — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 8),
         "ssch12_glossary": ArticleEntry(id: "ssch12_glossary", filename: "ssch12_glossary.html", title: "Vocabulary Deck — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 8),
         "ssch12_ncert_qa": ArticleEntry(id: "ssch12_ncert_qa", filename: "ssch12_ncert_qa.html", title: "NCERT Q&A — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 8),
-        "ssch12_beyond": ArticleEntry(id: "ssch12_beyond", filename: "ssch12_beyond.html", title: "Beyond the Book — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 12),
+        "ssch12_beyond": ArticleEntry(id: "ssch12_beyond", filename: "ssch12_beyond.html", title: "Beyond the Book — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 18),
         "ssch12_olympiad": ArticleEntry(id: "ssch12_olympiad", filename: "ssch12_olympiad.html", title: "Challenge Problems — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 12),
         "ssch12_whatif": ArticleEntry(id: "ssch12_whatif", filename: "ssch12_whatif.html", title: "What If? — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 6),
         "ssch12_mistakes": ArticleEntry(id: "ssch12_mistakes", filename: "ssch12_mistakes.html", title: "Common Mistakes — Understanding Markets", chapterFolder: "Articles/SocialScienceChapter12", estimatedMinutes: 10),
