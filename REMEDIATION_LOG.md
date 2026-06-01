@@ -5038,3 +5038,29 @@ Bespoke Social Science interactives now cover TWELVE chapters: ssch01, ssch02,
 ssch03, ssch09, ssch10, ssch11, ssch12, ssch13, ssch14, ssch18, ssch19, ssch20.
 History chapters carry SSChronologyChallenge. TWO chapters remain on glossary-match:
 ssch08 (sacred geography), ssch17 (diversity).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 71 (ssch17 bespoke Home to Many Explorer — INTERACTIVE track)
+
+INTERACTIVE track. Authored `HomeToManyExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/HomeToManyExplorer.swift), a
+bespoke explorer for Ch.17 "India, a Home to Many" (ssch17), upgrading that chapter
+from the generic glossary-match. The chapter's organising idea (ssch17_t01_c02) is
+that newcomers came for REFUGE or OPPORTUNITY, with the Siddis a harder story
+(brought enslaved). The widget groups communities by why they came: 'Came seeking
+refuge' (Jews, Syriac Christians, Parsis, Baha'is, Tibetans, the Polish children of
+the 'Good Maharaja'), 'Came seeking opportunity' (Arab & Armenian merchants), and an
+honest 'Brought against their will' band for the Siddis. Tapping one shows where and
+when they arrived and the chapter's story. Grounded in ssch17_t01–t04.
+
+Gated on exact pack.id + chapter.id == "ssch17", BEFORE the chronology/glossary
+fallbacks. Big-Sur safe: withAnimation (no .animation(_:value:)), SFSymbolCompat (all
+SF Symbols 1), manual chip wrapping, @SceneStorage namespaced by chapter, RM-gated
+motion, VoiceOver labels + hints, terracotta Color(red:green:blue:). Extended
+SocialScienceInteractiveGateTests to pin ssch17. pbxproj regenerated (453 app sources).
+Full lint family + Release build + full suite green. Pushed 355fabf.
+
+Bespoke Social Science interactives now cover THIRTEEN chapters. History chapters
+carry SSChronologyChallenge. ONE chapter remains on glossary-match: ssch08 (sacred
+geography).
