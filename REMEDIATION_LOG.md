@@ -5935,3 +5935,50 @@ bossQuestions, crossChapterRefs, examConnections, whatIfs + Discover). The only
 remaining exam/whatIf gap is Social Science (2/ch each, one below the Science
 floor of 3). NEXT: P1-I — top up Social Science examConnections + whatIfs from
 2 → 3 per chapter (one each × 20 chapters).
+
+---
+
+## v6 Learning Journey · Cycle 10 (2026-06-01) — Phase 1 · P1-I: SS exam/whatIf top-up 2→3
+
+Every Social Science chapter (ssch01–ssch20) shipped with exactly 2
+examConnections and 2 whatIfs — one below the Science floor of 3/ch, making it
+the last subject under the shared enrichment bar. Added a THIRD of each
+(sschNN_xc03 / sschNN_wi03) to all 20 chapters (20 + 20 = 40 new items) via the
+new re-runnable scripts/inject_socialscience_enrichment_topup.py, which appends
+idempotently (keeps xc01/xc02 + wi01/wi02, dedupes the new id on re-run).
+
+Each examConnection is a 50-130-word NEP-faithful forward pointer (CBSE Class
+8-12 / NTSE) anchored by >=1 real in-chapter relatedConceptId; each whatIf is a
+counterfactual with a 3-5 sentence guided answer. Content spans all three SS
+strands: geography (mineral wealth -> Cl.10, climatology, the greenhouse
+effect, the monsoon), history (early republics, Kautilya's Arthashastra,
+Gandhara/Mathura art, Aryabhata + zero, Ashoka's dhamma, the Grand Anicut,
+Al-Biruni/Bhaskaracharya, Rajendra Chola's navy, Xuanzang as a source), civics
+(separation of powers, the Preamble + Fundamental Rights, the three tiers,
+vasudhaiva kutumbakam, "what if no government?"), and economics (the functions
+of money, demand & supply, the Green Revolution, compound interest + the RBI,
+infrastructure, "what if no banks?"). The injector hard-fails on any unresolved
+anchor or out-of-bounds length.
+
+The third whatIf also flows into the read-mode surface: regenerated the 20
+ssch*_whatif HTML articles via scripts/generate_socialscience_articles.py
+--write (each now 3 scenarios, not 2; estimatedMinutes recalculated 6->9 in
+ArticleIndex+SocialScienceEntries.swift). examConnections render natively via
+ExamConnectionCalloutView, so no article needed for them.
+
+Tests: desktopAhaanTests/SocialScienceEnrichmentParityTests.swift (3 ratchets:
+>=3/ch + >=60 total for each surface, canonical-unique sschNN_xcII/wiII ids,
+in-pack relatedConceptIds, non-blank fields, and a JSON<->article sync check
+that the regenerated _whatif articles enumerate every pack whatIf).
+
+Green here: roundtrip byte-for-byte on all four packs; check_pack_schema +
+check_orphan_refs + check_article_entry_bundled (907 rows) + all Big-Sur lints
++ test_lints.py pass; pbxproj regenerated (new test auto-wired); ci-build-test.sh
+-> BUILD + TEST SUCCEEDED, 0 failures (+3 XCTest). Additive only; zero
+regressions; zero STOP_AND_ASK.
+
+**All four subjects now clear the 3/ch examConnections + whatIfs bar**, and
+every subject carries the full enrichment surface set (deepDive, bossQuestions,
+crossChapterRefs, examConnections, whatIfs) plus Discover Mode. The Phase-1
+cross-subject enrichment-parity sweep is COMPLETE. NEXT: P1-J — final Phase-1
+parity-matrix refresh, then begin Phase 2 (MasteryEngine + Mastery Map).

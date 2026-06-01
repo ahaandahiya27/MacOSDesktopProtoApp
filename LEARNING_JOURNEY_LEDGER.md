@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-H DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; **P1-G: Maths `examConnections` + `whatIfs` 45 each**; **P1-H: Sanskrit `examConnections` 45**). **All four subjects carry `deepDive` + `bossQuestions` + `crossChapterRefs` + Discover; Maths and Sanskrit-NEP now match Science on the full enrichment surface set.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-I…P1-J pending (Social Science exam/whatIf top-up 2→3, minor parity). |
+| 1 | 🟢 NEARLY DONE | Audit landed. **P1-A…P1-I DONE.** Cross-subject **enrichment-parity sweep COMPLETE**: every subject now carries `deepDive` + `bossQuestions` + `crossChapterRefs` + `examConnections` (≥3/ch) + `whatIfs` (≥3/ch) + Discover Mode. Highlights — Maths + Sanskrit `deepDive` 45 each, `bossQuestions` 90 each; `crossChapterRefs` 120; Sanskrit Discover 15/15 NEP w/ gated शब्द–अर्थ match; Maths exam+whatIf 45 each (P1-G); Sanskrit exam 45 (P1-H); **Social Science exam+whatIf topped up 2→3/ch, 40 items, `_whatif` articles regenerated (P1-I)**. Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Only P1-J (parity-matrix refresh) remains before Phase 2. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -329,3 +329,32 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** P1-I — top up Social Science `examConnections` + `whatIfs` from 2 → 3
   per chapter (one each × 20 chapters) so all four subjects clear the Science
   3/ch floor. Same loop.
+
+### Cycle 10 (2026-06-01) — Phase 1 · P1-I complete (Social Science exam/whatIf top-up)
+- Confirmed Phase 0 still green here before any change.
+- Topped up every Social Science chapter (ssch01–ssch20) from 2 → 3
+  `examConnections` and 2 → 3 `whatIfs` — adding `sschNN_xc03` + `sschNN_wi03`
+  (40 new items) via the new re-runnable, idempotent
+  `scripts/inject_socialscience_enrichment_topup.py` (keeps xc01/xc02 + wi01/wi02,
+  dedupes the new id on re-run).
+- Content spans all three SS strands (geography / history / civics / economics),
+  each anchored by ≥1 real in-chapter `relatedConceptId`; injector hard-fails on
+  any unresolved anchor or out-of-bounds length.
+- Regenerated the 20 `ssch*_whatif` HTML articles via
+  `scripts/generate_socialscience_articles.py --write` (each now 3 scenarios;
+  `estimatedMinutes` recalculated 6→9 in `ArticleIndex+SocialScienceEntries.swift`).
+  examConnections render natively via `ExamConnectionCalloutView` (no article).
+- Added `desktopAhaanTests/SocialScienceEnrichmentParityTests.swift` (3 ratchets:
+  ≥3/ch + ≥60 total per surface, canonical-unique ids, in-pack
+  `relatedConceptIds`, non-blank fields, and a JSON↔article sync check that the
+  regenerated `_whatif` articles enumerate every pack whatIf).
+- Green here: roundtrip byte-for-byte on all four packs; `check_pack_schema` +
+  `check_orphan_refs` + `check_article_entry_bundled` (907 rows) + all Big-Sur
+  lints + `test_lints.py` pass; pbxproj regenerated; `ci-build-test.sh` → **BUILD
+  + TEST SUCCEEDED, 0 failures** (+3 XCTest). Additive only; zero regressions;
+  zero STOP_AND_ASK.
+- **All four subjects now clear the 3/ch examConnections + whatIfs bar — the
+  cross-subject enrichment-parity sweep is COMPLETE.**
+- **NEXT:** P1-J — refresh `JOURNEY_PARITY_MATRIX.md` to mark the sweep complete,
+  then begin Phase 2 (read-only `Services/MasteryEngine.swift` + a pure-SwiftUI
+  Mastery Map window).
