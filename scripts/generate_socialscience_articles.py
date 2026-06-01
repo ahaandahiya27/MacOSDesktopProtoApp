@@ -166,6 +166,7 @@ def b_overview(chapter, nn, strand):
         f'      <a class="pill" href="ssch{nn}_glossary.html">Vocabulary Deck</a>\n'
         f'      <a class="pill" href="ssch{nn}_ncert_qa.html">NCERT Q&amp;A</a>\n'
         f'      <a class="pill" href="ssch{nn}_beyond.html">Beyond the Book</a>\n'
+        f'      <a class="pill" href="ssch{nn}_olympiad.html">Challenge Problems</a>\n'
         f'      <a class="pill" href="ssch{nn}_whatif.html">What If?</a>\n'
         f'      <a class="pill" href="ssch{nn}_mistakes.html">Common Mistakes</a>\n'
         f'      <a class="pill" href="ssch{nn}_miniproject.html">Mini Project</a>\n'
@@ -383,6 +384,69 @@ def b_timeline(chapter, nn, strand):
     return body, title, max(5, len(entries) * 4)
 
 
+def b_olympiad(chapter, nn, strand):
+    # The chapter's toughest questions (difficulty >= 4) — each one carries
+    # full worked solutionSteps, the commonMistakes that trip students up, and
+    # at least one variation. They live across the topics' question banks but
+    # are never gathered into one read-mode place; this article does that, in
+    # the chapter's own topic order, so a curious student or an Olympiad sitter
+    # can practise the hardest reasoning with the worked solution one tap away.
+    qs = []
+    for t in chapter.get("topics") or []:
+        for q in t.get("questions") or []:
+            if (q.get("difficulty") or 0) >= 4:
+                qs.append(q)
+    if not qs:
+        return None
+    blocks = []
+    for i, q in enumerate(qs, 1):
+        diff = int(q.get("difficulty") or 4)
+        steps = "".join(f'        <li>{esc(s)}</li>\n' for s in (q.get("solutionSteps") or []))
+        steps_b = (f'      <h3>How to crack it</h3>\n'
+                   f'      <ol>\n{steps}      </ol>\n') if steps else ""
+        mistakes = "".join(f'        <li>{esc(m)}</li>\n' for m in (q.get("commonMistakes") or []))
+        mistakes_b = (f'      <aside class="warning-box">\n'
+                      f'        <h3>&#9888;&#65039; Traps to avoid</h3>\n'
+                      f'        <ul>\n{mistakes}        </ul>\n'
+                      f'      </aside>\n') if mistakes else ""
+        twists = ""
+        for v in (q.get("variations") or []):
+            v_steps = "".join(f'          <li>{esc(s)}</li>\n' for s in (v.get("solutionSteps") or []))
+            v_steps_b = (f'          <ol>\n{v_steps}          </ol>\n') if v_steps else ""
+            twists += (
+                f'      <aside class="try-this">\n'
+                f'        <h3>&#128640; Now try this twist</h3>\n'
+                f'        <p>{esc(v.get("prompt",""))}</p>\n'
+                f'        <details class="check-understanding">\n'
+                f'          <summary>Open the answer</summary>\n'
+                f'          <p>{esc(v.get("answer",""))}</p>\n'
+                f'{v_steps_b}'
+                f'        </details>\n'
+                f'      </aside>\n')
+        blocks.append(
+            f'    <section>\n'
+            f'      <h2>Challenge {i} <span class="teaser">[Level {diff} &mdash; '
+            f'{"hardest" if diff >= 5 else "stretch"}]</span></h2>\n'
+            f'      <p>{esc(q.get("prompt",""))}</p>\n'
+            f'      <details class="check-understanding">\n'
+            f'        <summary>Try it yourself first &mdash; then open the worked solution</summary>\n'
+            f'        <p>{esc(q.get("answer",""))}</p>\n'
+            f'      </details>\n'
+            f'{steps_b}'
+            f'{mistakes_b}'
+            f'{twists}'
+            f'    </section>\n')
+    body = "".join(blocks) + (
+        f'    <aside class="kid-tip">\n'
+        f'      <h3>&#127937; How to use this set</h3>\n'
+        f'      <p>Don\'t peek. Read a challenge, write your own full answer first, '
+        f'and only then open the worked solution to compare your reasoning step by step. '
+        f'The marks &mdash; and the real learning &mdash; live in the reasons, not the final line.</p>\n'
+        f'    </aside>\n')
+    title = f"Challenge Problems — {chapter['title']}"
+    return body, title, max(8, len(qs) * 3)
+
+
 # suffix -> (builder, default lede). Order matters for the index file layout.
 TYPES = [
     ("_overview", b_overview,
@@ -397,6 +461,10 @@ TYPES = [
     ("_beyond", b_beyond,
      "Ready for more? These extensions take the chapter's ideas a few classes further &mdash; "
      "toward the depth a curious student or an Olympiad needs. Take them slowly."),
+    ("_olympiad", b_olympiad,
+     "The chapter's hardest questions, gathered in one place &mdash; each with a full, "
+     "step-by-step worked solution and the traps that catch careful students. This is the "
+     "Olympiad ceiling: try every one yourself before you open the answer."),
     ("_whatif", b_whatif,
      "History, geography and society are full of 'what if' turning points. Think about each "
      "question yourself first &mdash; then open the panel to compare your reasoning."),
