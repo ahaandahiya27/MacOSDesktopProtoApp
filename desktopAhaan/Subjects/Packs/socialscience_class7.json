@@ -14820,6 +14820,24 @@
           "body": "The Shaka Samvat (Shaka era) that began in this age of invaders did not stay in the past — it is still an official calendar of India today. When the Republic of India needed a single national calendar in 1957, a committee chose the Shaka era, with year 1 fixed at 78 CE. That is why the date on the masthead of the Gazette of India, on All India Radio broadcasts, and on many government notices is given in Shaka years alongside the Gregorian date — to find the Shaka year, you subtract 78 (or 79 early in the year) from the Common Era year. So a calendar started by the Shaka rulers nearly two thousand years ago quietly survives in the paperwork of a modern democracy. It is a neat example of how the deep past keeps living inside the present.",
           "prerequisite": "Knowing the Shakas gave India the Shaka Samvat calendar.",
           "nextStepHint": "Work out this year's Shaka year by subtracting 78 from the current Common Era year."
+        },
+        {
+          "id": "ssch06_dv05",
+          "title": "The Grand Anicut: a dam still working after 1,800 years",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch06_t03_c03",
+          "body": "Most things built two thousand years ago survive only as ruins — but the Chola king Karikala's Kallanai, or Grand Anicut, on the Kaveri river is still doing its job today. It is not a tall wall that stops the river; it is a long, low barrier laid across the stream to RAISE and DIVERT the water, spreading it through channels across the delta so that a wide area of farmland can be irrigated. That is why engineers call it a 'water-diversion' structure rather than a storage dam. Built in stone without modern cement, it was so well designed that the British later strengthened it rather than replacing it, and it still helps water one of South India's richest rice regions. The Grand Anicut shows that ancient Indians were not only artists and traders but also skilled hydraulic engineers, and that good public works can serve people for almost two millennia.",
+          "prerequisite": "Knowing Karikala Chola built the Kallanai/Grand Anicut on the Kaveri.",
+          "nextStepHint": "Find the difference between a diversion 'anicut' and a storage dam like Bhakra Nangal."
+        },
+        {
+          "id": "ssch06_dv06",
+          "title": "The Kushanas and the Silk Route: India plugged into the world",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch06_t05_c01",
+          "body": "The Kushanas, who came from Central Asia, ended up controlling a huge stretch of the Silk Route — the network of caravan roads carrying silk, spices, gold and ideas between China, Central Asia, India and the Roman world. Sitting astride those roads made the Kushana realm rich and turned India into a busy crossroads of trade and culture rather than an isolated land. Their coins are wonderful evidence: Kanishka's coins show the king on one side and a mix of deities — the Buddha, Shiva, and Greek and Persian gods — on the other, telling us that many faiths met and were respected under one ruler. Along these same routes Buddhism travelled north into Central Asia and China, carried by merchants and monks. The Kushana age shows how trade routes move far more than goods: they move beliefs, art styles and people, knitting distant civilisations together.",
+          "prerequisite": "Knowing the Kushanas controlled large parts of the Silk Route.",
+          "nextStepHint": "Trace on a map how Buddhism could travel from India to China along the Silk Route."
         }
       ],
       "crossChapterRefs": [
@@ -14860,6 +14878,25 @@
           "relatedConceptIds": [
             "ssch06_t02_c02",
             "ssch06_t05_c02"
+          ]
+        },
+        {
+          "id": "ssch06_cc05",
+          "toChapterId": "ssch13",
+          "topic": "The Grand Anicut and Indian farming",
+          "pointer": "Karikala's Grand Anicut on the Kaveri is an ancient answer to the same problem 'The Story of Indian Farming' tackles — getting river water onto fields — and it still irrigates the Kaveri delta's rice today.",
+          "relatedConceptIds": [
+            "ssch06_t03_c03"
+          ]
+        },
+        {
+          "id": "ssch06_cc06",
+          "toChapterId": "ssch14",
+          "topic": "Silk Route, sea trade and India's links abroad",
+          "pointer": "The Silk Route the Kushanas controlled and the Roman sea trade of the Cheras and Pandyas connected India to Central Asia, China and the West — early threads of the regional links explored in 'India, Her Neighbours and the World'.",
+          "relatedConceptIds": [
+            "ssch06_t05_c01",
+            "ssch06_t03_c04"
           ]
         }
       ],
