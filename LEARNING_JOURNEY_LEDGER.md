@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A + P1-B + P1-C DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths `bossQuestions`: 90, 6/ch; +19 tests total, 719 XCTest green). Backlog P1-D…P1-J pending. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-D DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths + Sanskrit `bossQuestions`: 90 each, 6/ch; +27 tests total, 727 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions`** — Phase 3 ceiling + Phase 5 ladder open across the board. Backlog P1-E…P1-J pending. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -148,3 +148,44 @@ required before declaring the mission complete (Phase 6).
   ≥6/ch, `bossquiz_schNN_qII`), the last subject capping the Phase-3 ceiling.
   Same loop: author → lint → pbxproj → ci-build-test green → commit/push →
   ledger.
+
+### Cycle 5 (2026-06-01) — Phase 1 · P1-D complete (Sanskrit `bossQuestions`)
+- Confirmed the tree was green here after P1-C (719 XCTest, 0 fail) before any
+  change.
+- Added **90 chapter-level `bossQuestions`** to the 15 NEP Sanskrit chapters
+  (`sch01`–`sch15`, 6 each) via the new re-runnable
+  `scripts/inject_sanskrit_boss.py`. The legacy `ch01` vocabulary deck is the
+  documented carve-out and is **skipped** — a `bossquiz_ch01_*` id would collide
+  with Science's `ch01` boss ids and orphan SM-2 review state across packs.
+- Each boss question is:
+  * a 4-option MCQ at **boss-tier difficulty 3–5**, id `bossquiz_schNN_qII`
+    (the `sch` namespace keeps Sanskrit review state distinct from `ch`/`mch`/
+    `ssch`),
+  * **textbook-faithful** — grounded in each concept's own `explanations`
+    (Devanagari/IAST checked against the NEP Sanskrit Grade-7 text), spanning the
+    three authentic tracks: literature/values (वन्दे मातरम्, सुभाषितानि,
+    ईशावास्यम्, अन्नाद् भवन्ति भूतानि, दशमः कः?), grammar (the चतुर्थी after नमः,
+    the पञ्चमी ablative, the optative जानीयात्, the क्त्वा gerund, the -तुम्
+    infinitive, the past active participle सोढवान्, मात्रा vowel quantities, the
+    सप्तविभक्ति/declension system, the लकार/पद/पुरुष verb system) and
+    history/culture (the Cellular Jail/कालापानी & Savarkar, Panna Dhai),
+  * carries worked `solutionSteps`, ≥1 `commonMistakes` note (each naming a
+    specific distractor trap, e.g. प्रथमपुरुष = English third person), and ≥1
+    re-drill `variation`; `pageRefs` inside the chapter's real page range;
+    `source: "boss_quiz"`.
+- Added `desktopAhaanTests/SanskritBossQuestionsTests.swift` (8 ratchet tests:
+  ≥6/ch NEP floor, **legacy ch01 carries zero boss Qs**, total ≥90, canonical+
+  unique ids, difficulty 3–5, mcq answer ∈ options, steps+mistakes+variation
+  present, `.bossQuiz` source).
+- Green here: all content lints + `test_lints.py` pass; roundtrip +
+  `check_pack_schema` clean on all four packs (Devanagari survives byte-for-byte
+  with `ensure_ascii=False`); pbxproj regenerated (new test file auto-wired);
+  `ci-build-test.sh` → **BUILD + 727 XCTest, 0 failures** (was 719, +8). Zero
+  regressions; zero STOP_AND_ASK.
+- **Phase 3 adaptive ceiling is now raised for ALL FOUR subjects**, and every
+  subject feeds the Phase-5 Olympiad ladder via both `deepDive` and
+  `bossQuestions`. Additive only.
+- **NEXT:** P1-E — build a real Sanskrit Discover experience (≥1 gated bespoke
+  interactive per chapter; Sanskrit is 0/16 today), the largest remaining
+  engagement gap. Same loop, but this is code-heavy (new SwiftUI views under the
+  Big-Sur/legacy-GPU invariants), so expect multiple cycles.

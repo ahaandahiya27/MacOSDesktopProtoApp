@@ -23,7 +23,7 @@
 | **Science** | 19 | 57 | 152 | **200** | **57** | 19/19 bespoke per-chapter views | 🥇 GOLD |
 | **Social Science** | 20 | 96 | 87 | **260** | **120** | 20/20 (one data-driven 9-scene view) | 🥈 STRONG |
 | **Maths** | 15 | 53 | 120 | **90** ✅ | **45** ✅ | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
-| **Sanskrit** | 16¹ | 43 | 75 | 0 | **45** ✅ | **0/16 — no Discover Mode** | 🔴 WEAKEST |
+| **Sanskrit** | 16¹ | 43 | 75 | **90** ✅ | **45** ✅ | **0/16 — no Discover Mode** | 🔴 WEAKEST |
 
 ¹ Sanskrit `ch01` is the legacy vocabulary deck (a deliberate carve-out, exempt
 from NEP cross-subject parity ratchets per CLAUDE.md). The 15 NEP chapters are
@@ -46,7 +46,7 @@ Legend: ✅ = every (non-carve-out) chapter has it · ⚠️ = partial · ❌ = 
 | whatIfs           | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ✅ 15/15 |
 | **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ✅ **15/15** (P1-B) |
 | **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
-| **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-C) | ❌ **0** |
+| **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-C) | ✅ **15/15** (P1-D) |
 | **examConnections** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | timelines         | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ❌ 0 |
 | quickCheckQuestions | ⚠️ 16/19 | ✅ 20/20 | ❌ 0  | ❌ 0 |
@@ -70,10 +70,11 @@ have hard data dependencies on fields that Maths and Sanskrit are missing:
   open across the board. This was the single highest-leverage gap.
 - **Phase 3 (Adaptive Cross-Subject Journey)** mixes practice across subjects.
   `bossQuestions` are the high-difficulty pool the adaptive engine escalates
-  into. ✅ **Maths RESOLVED** by P1-C (90 boss questions, 6/ch, difficulty 3–5),
-  so the adaptive ceiling for Maths now rises above the `ncertQA` set. Sanskrit
-  still has **zero `bossQuestions`** (P1-D) — its adaptive ceiling remains the
-  `ncertQA` set until that fill lands.
+  into. ✅ **RESOLVED for all four subjects** — P1-C (Maths, 90) and P1-D
+  (Sanskrit NEP, 90; legacy ch01 exempt) added the missing high-difficulty
+  pools, both 6/ch at difficulty 3–5 with worked steps + a distractor-trap note
+  + a re-drill variation each. The adaptive ceiling can now ramp a strong
+  student in every subject, not just Science/Social Science.
 - **`crossChapterRefs`** are what let the journey weave a subject into a
   connected arc rather than 15 isolated chapters. Absent in Maths/Sanskrit.
 
@@ -89,7 +90,7 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 | ~~**P1-A**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch, class_8–12 anchored)~~ **DONE** — 45 added (3/ch), all parent-anchored in-chapter, ≥120-word bodies, +6 ratchet tests; 706 XCTest green | **Maths** (15 ch) | Phase 5 ladder **now open for Maths** | High |
 | ~~**P1-B**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch)~~ **DONE** — 45 added (3/ch), grammar/literature/culture forward-extensions, parent-anchored, ≥120-word bodies, +6 ratchet tests (ch01 legacy deck exempt); 712 XCTest green | **Sanskrit** (15 NEP ch) | Phase 5 ladder **now open for Sanskrit** | High |
 | ~~**P1-C**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch), all `bossquiz_mchNN_qII`, difficulty 3–5, worked steps + common-mistake note + variation each, +7 ratchet tests; 719 XCTest green | **Maths** | Phase 3 ceiling **raised for Maths** | High |
-| **P1-D** | Add `bossQuestions` (≥6/ch) | **Sanskrit** | Phase 3 ceiling | High |
+| ~~**P1-D**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch on the 15 NEP chapters, legacy ch01 exempt), all `bossquiz_schNN_qII`, difficulty 3–5, textbook-faithful (grounded in each concept's `explanations`), worked steps + distractor-trap note + variation each, +8 ratchet tests; 727 XCTest green | **Sanskrit** | Phase 3 ceiling **raised for Sanskrit** | High |
 | **P1-E** | Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch) | **Sanskrit** (0/16 today) | journey engagement parity | High |
 | **P1-F** | Add `crossChapterRefs` (≥4/ch) | **Maths**, **Sanskrit** | Phase 3 weaving | Medium |
 | **P1-G** | Add `examConnections` + `whatIfs` | **Maths** | enrichment parity | Medium |

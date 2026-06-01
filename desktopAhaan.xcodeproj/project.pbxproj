@@ -1510,6 +1510,7 @@
 		848EBF3C63CD00CE279CA25B /* RecentlyMissedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7122067BE7830474EC604 /* RecentlyMissedTests.swift */; };
 		C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */; };
 		A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */; };
+		2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */; };
 		62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */; };
 		77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */; };
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
@@ -3070,6 +3071,7 @@
 		D3E7122067BE7830474EC604 /* RecentlyMissedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentlyMissedTests.swift"; sourceTree = "<group>"; };
 		00406863F2097E0853ACE132 /* RelatedChaptersStripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RelatedChaptersStripTests.swift"; sourceTree = "<group>"; };
 		BE95DD4D15D17D6931C1D0F4 /* ReviewFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReviewFlagTests.swift"; sourceTree = "<group>"; };
+		04C6D1EA7A9108F6DAAE4370 /* SanskritBossQuestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritBossQuestionsTests.swift"; sourceTree = "<group>"; };
 		63C8801D773B06475CB44A58 /* SanskritDeepDiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDeepDiveTests.swift"; sourceTree = "<group>"; };
 		05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScientistsArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
@@ -5954,6 +5956,7 @@
 				D3E7122067BE7830474EC604,
 				00406863F2097E0853ACE132,
 				BE95DD4D15D17D6931C1D0F4,
+				04C6D1EA7A9108F6DAAE4370,
 				63C8801D773B06475CB44A58,
 				05C5BC3C8770E32738C39E97,
 				E9B662F7364184B38EBF6256,
@@ -7651,6 +7654,7 @@
 				848EBF3C63CD00CE279CA25B /* RecentlyMissedTests.swift in Sources */,
 				C83AD82573083C0FF7A49CBC /* RelatedChaptersStripTests.swift in Sources */,
 				A0F8BD722D9F68B1FAD68885 /* ReviewFlagTests.swift in Sources */,
+				2E91FA05A69B232D9FE4C20A /* SanskritBossQuestionsTests.swift in Sources */,
 				62D6E2C2E3F2B669499CEC1F /* SanskritDeepDiveTests.swift in Sources */,
 				77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */,
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,

@@ -5707,3 +5707,30 @@ ci-build-test.sh → BUILD SUCCEEDED + TEST SUCCEEDED, 719 XCTest cases, 0 failu
 (was 712, +7). Maths pack now 90 concepts / 148 topic-Qs + 90 boss Qs. Additive
 only. Zero regressions, zero STOP_AND_ASK. Phase 3 adaptive ceiling raised for
 Maths. NEXT: P1-D — Sanskrit bossQuestions fill (≥6/ch, bossquiz_schNN_qII).
+
+---
+
+## v6 Learning Journey — Cycle 5 (2026-06-01): Phase 1 · P1-D Sanskrit bossQuestions
+
+Landed P1-D: added 90 chapter-level `bossQuestions` to the 15 NEP Sanskrit
+chapters (`sch01`–`sch15`, 6 each) via the new re-runnable
+`scripts/inject_sanskrit_boss.py`. The legacy `ch01` vocabulary deck is the
+documented carve-out and is SKIPPED — a `bossquiz_ch01_*` id would collide with
+Science's `ch01` boss ids. Each is a 4-option MCQ at boss-tier difficulty 3–5,
+id `bossquiz_schNN_qII`, textbook-faithful (grounded in each concept's
+`explanations`, Devanagari/IAST checked against the NEP Sanskrit Grade-7 text),
+with worked `solutionSteps`, ≥1 `commonMistakes` note (each a specific distractor
+trap), ≥1 re-drill `variation`, `pageRefs` in the chapter's real page range, and
+`source: boss_quiz`. Coverage spans the three authentic tracks: literature/values,
+grammar (नमः+चतुर्थी, पञ्चमी ablative, optative, क्त्वा gerund, -तुम् infinitive,
+past active participle, मात्रा, सप्तविभक्ति declension, the लकार/पद/पुरुष verb
+system) and history/culture (Cellular Jail/Savarkar, Panna Dhai). Added
+`desktopAhaanTests/SanskritBossQuestionsTests.swift` (8 ratchet tests, including a
+guard that the legacy ch01 deck carries zero boss questions). All content lints +
+`test_lints.py` clean; roundtrip + check_pack_schema clean on all four packs
+(Devanagari byte-for-byte intact); pbxproj regenerated (new test file
+auto-wired); ci-build-test.sh → BUILD SUCCEEDED + TEST SUCCEEDED, 727 XCTest
+cases, 0 failures (was 719, +8). Additive only. Zero regressions, zero
+STOP_AND_ASK. Phase 3 adaptive ceiling now raised for ALL FOUR subjects; every
+subject feeds the Phase-5 ladder via deepDive + bossQuestions. NEXT: P1-E —
+Sanskrit Discover experience (≥1 gated bespoke interactive/ch; 0/16 today).
