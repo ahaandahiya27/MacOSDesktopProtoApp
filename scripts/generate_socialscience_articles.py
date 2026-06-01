@@ -78,6 +78,12 @@ def grade_label(raw: str) -> str:
 CONCEPT_TITLES: dict = {}
 CONCEPT_ID_RE = __import__("re").compile(r'^ssch\d+_t\d+_c\d+$')
 
+# Populated in main(): chapter id -> chapter title and 2-digit number, so the
+# crossChapterRefs surfaced in Beyond-the-Book can link to the target chapter's
+# overview page with its real human title.
+CHAPTER_TITLES: dict = {}
+CHAPTER_NN: dict = {}
+
 
 def humanise_ref(value) -> str:
     """If `value` is a bare concept id, swap it for the concept's title;
@@ -243,6 +249,33 @@ def b_beyond(chapter, nn, strand):
             f'      <h2>{esc(e.get("title",""))}{grade_b}</h2>\n'
             f'      <p>{esc(e.get("body",""))}</p>\n'
             f'{extra}'
+            f'    </section>\n')
+    # Surface the cross-strand web: each crossChapterRef becomes a link to the
+    # connected chapter's overview, so a curious reader can follow how the four
+    # strands (geography ↔ history ↔ civics ↔ economics) thread together.
+    refs = chapter.get("crossChapterRefs") or []
+    if refs:
+        items = []
+        for r in refs:
+            to_id = r.get("toChapterId", "")
+            nn_to = CHAPTER_NN.get(to_id)
+            topic = esc(r.get("topic", ""))
+            pointer = esc(r.get("pointer", ""))
+            if nn_to:
+                dest_title = esc(CHAPTER_TITLES.get(to_id, to_id))
+                link = (f'<a href="ssch{nn_to}_overview.html">{dest_title}'
+                        f' &rarr;</a>')
+                items.append(
+                    f'        <li><strong>{topic}</strong> &mdash; {pointer}'
+                    f'<br><span class="teaser">Jump to {link}</span></li>\n')
+            else:
+                items.append(f'        <li><strong>{topic}</strong> &mdash; {pointer}</li>\n')
+        blocks.append(
+            f'    <section>\n'
+            f'      <h2>&#128279; Connect across chapters</h2>\n'
+            f'      <p>Social Science is one story told four ways. Here is where '
+            f'the ideas in this chapter show up again:</p>\n'
+            f'      <ul>\n{"".join(items)}      </ul>\n'
             f'    </section>\n')
     body = "".join(blocks)
     title = f"Beyond the Book — {chapter['title']}"
@@ -447,6 +480,8 @@ def main() -> int:
     # Build the concept id -> title map so deepDive prerequisite/nextStep
     # fields that hold a bare concept id render as a real concept name.
     for ch in pack["chapters"]:
+        CHAPTER_TITLES[ch["id"]] = ch.get("title", ch["id"])
+        CHAPTER_NN[ch["id"]] = f"{ch['number']:02d}"
         for t in ch.get("topics", []):
             for c in t.get("concepts", []):
                 CONCEPT_TITLES[c["id"]] = c.get("title", "")
