@@ -5480,3 +5480,18 @@ Turning Tides: 11th and 12th Centuries — deepDive 4->6, ccRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed fbee1f8. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 95: ssch17 second DEEPDIVE pass
+
+India, a Home to Many — deepDive 4->6, crossChapterRefs 5->7.
+- dv05 "The Jews of India: a refuge almost without parallel" (class_9, anchor
+  t01_c03): Bene Israel/Cochin Jews; a society tested by how safe its smallest
+  minorities feel.
+- dv06 "The Siddis: a hard journey that became an Indian story" (class_10, anchor
+  t03_c02): honest about enslaved origins + the rise to power at Janjira.
+- cc06 -> ssch12 (Arab/Armenian merchants -> trade/markets).
+- cc07 -> ssch01 (India's coasts and ports as the open door for seaborne newcomers).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 23bd678. Zero regressions, zero STOP_AND_ASK.
