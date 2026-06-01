@@ -26,11 +26,11 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit (`JOURNEY_PARITY_MATRIX.md`) landed. Depth-sweep backlog P1-A…P1-J defined; none executed yet. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A DONE** (Maths `deepDive`: 45 StretchTopics, 3/ch, +6 tests, 706 XCTest green). Backlog P1-B…P1-J pending. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
-| 5 | ⬜ NOT STARTED | **Blocked** for Maths + Sanskrit until P1-A/P1-B add `deepDive`. |
+| 5 | ⬜ NOT STARTED | Maths **unblocked** (P1-A added 45 `deepDive`). Still blocked for Sanskrit until P1-B. |
 | 6 | ⬜ NOT STARTED | Final integration + checkpoint doc. |
 
 ## Environment note (important for whoever resumes)
@@ -62,3 +62,28 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** begin P1-A (Maths `deepDive` fill) — highest leverage, unblocks
   Phase 5. PDF-faithful, additive, articles regenerated with `--write`, green
   here before commit.
+
+### Cycle 2 (2026-06-01) — Phase 1 · P1-A complete (Maths `deepDive`)
+- Added **45 `deepDive` StretchTopics** to the Maths pack (3 per chapter ×15),
+  via the new re-runnable `scripts/inject_maths_deepdive.py`. Each is anchored
+  by `parentConceptId` to a REAL concept in its own chapter, tagged
+  class_8…class_11 (a genuine forward extension of the NEP Grade-7 idea — e.g.
+  ch01 → standard form / significant figures / orders-of-magnitude; ch15 →
+  transposition / simultaneous equations / quadratics), with a prerequisite and
+  next-step hint and a ≥120-word body (Science floor is 100).
+- Renders natively through the existing `DeepDiveSection` →
+  `DeepDiveDetailSheet` in `ChapterDetailView` (no HTML article needed; the
+  "regenerate articles" step is a Social-Science-only surface).
+- Added `desktopAhaanTests/MathsDeepDiveTests.swift` (6 ratchet tests:
+  ≥3/ch floor, total ≥45, parent-anchored in-chapter, globally-unique ids,
+  ≥120-word bodies, prerequisite+nextStep present), mirroring the Science
+  deep-dive contract.
+- Green here: all content lints + `test_lints.py` pass; pbxproj regenerated
+  (new test file wired); `ci-build-test.sh` → **BUILD + 706 XCTest, 0 failures**
+  (was 700). roundtrip + `check_pack_schema` clean on all four packs.
+- **Phase 5 (Olympiad ladder) is now open for Maths.** Additive only; zero
+  regressions; zero STOP_AND_ASK.
+- **NEXT:** P1-B — Sanskrit `deepDive` fill (15 NEP chapters `sch01`–`sch15`,
+  ≥3/ch), the last subject blocking Phase 5. Same contract: in-chapter parent
+  anchor, forward-grade extension faithful to the NEP Sanskrit text, ≥120-word
+  bodies, mirror test, green before commit.

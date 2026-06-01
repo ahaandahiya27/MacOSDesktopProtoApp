@@ -5603,3 +5603,44 @@ LEARNING_JOURNEY_LEDGER.md + JOURNEY_PARITY_MATRIX.md; gitignored the v6
 launcher runtime artifacts. Zero regressions, zero STOP_AND_ASK.
 NEXT: P1-A — Maths deepDive fill (≥3/ch, class_8-12 anchored, PDF-faithful,
 additive, articles regenerated with --write).
+
+## 2026-06-01 — v6 "Learning Journey" cycle 2: Phase 1 · P1-A (Maths deepDive)
+
+Closed the single highest-leverage Phase-1 gap from JOURNEY_PARITY_MATRIX.md:
+the Maths pack had ZERO deepDive entries, which blocked Phase 5 (the Olympiad
+ladder reads `deepDive`) and capped Phase 3's adaptive ceiling for Maths.
+
+Added 45 `deepDive` StretchTopics (3 per chapter ×15) via the new re-runnable
+`scripts/inject_maths_deepdive.py`. Each StretchTopic:
+- is anchored by `parentConceptId` to a REAL concept id inside its own chapter
+  (keeps the stretch tied to a Class-7 base, not a free-floating dump);
+- is tagged class_8…class_11 — a genuine forward extension of the NEP Ganita
+  Prakash Grade-7 idea. Examples: ch01 → standard/scientific form, significant
+  figures, orders-of-magnitude (Fermi); ch02 → distributive law as the engine
+  of algebra, indices in BODMAS, non-commutativity; ch03 → terminating vs
+  recurring decimals, the real line, place-holding zeros; ch07 → triangle
+  inequality as shortest-path, Pythagoras, the triangle's special centres;
+  ch10 → closure/number-system growth, why (−)(−)=+ proved, the coordinate
+  plane; ch11 → Euclid's algorithm, the Fundamental Theorem of Arithmetic;
+  ch15 → transposition, simultaneous equations, quadratics;
+- carries a prerequisite + next-step hint and a ≥120-word body (Science floor
+  is 100; Maths authored richer).
+
+Renders natively through the existing DeepDiveSection → DeepDiveDetailSheet in
+ChapterDetailView (the section auto-appears once a chapter's deepDive is
+non-empty). No HTML article needed — the "regenerate articles with --write"
+step is a Social-Science-only surface, confirmed by reading DeepDiveSection.swift
+and check_article_entry_bundled.py (which only validates registered
+ArticleEntry rows, none added here).
+
+Added desktopAhaanTests/MathsDeepDiveTests.swift — 6 ratchet tests mirroring
+the Science deep-dive contract: ≥3/ch floor, total ≥45, parentConceptId resolves
+in-chapter, globally-unique ids, ≥120-word bodies, prerequisite+nextStep present.
+
+Green here (authoritative): all content lints + test_lints.py pass;
+verify_pack_roundtrip + check_pack_schema clean on all four packs; pbxproj
+regenerated (new test file auto-discovered + wired); ci-build-test.sh →
+BUILD SUCCEEDED + TEST SUCCEEDED, 706 XCTest cases, 0 failures (was 700).
+Maths pack steady at 90 concepts / 148 topic-Qs; +45 deepDive. Additive only.
+Phase 5 (Olympiad ladder) is now open for Maths. Zero regressions, zero
+STOP_AND_ASK. NEXT: P1-B — Sanskrit deepDive fill (sch01–sch15, ≥3/ch).

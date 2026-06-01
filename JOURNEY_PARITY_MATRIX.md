@@ -22,7 +22,7 @@
 |---------|:--------:|:------:|:-------:|:-------------:|:--------:|-------------------|:----:|
 | **Science** | 19 | 57 | 152 | **200** | **57** | 19/19 bespoke per-chapter views | 🥇 GOLD |
 | **Social Science** | 20 | 96 | 87 | **260** | **120** | 20/20 (one data-driven 9-scene view) | 🥈 STRONG |
-| **Maths** | 15 | 53 | 120 | 0 | 0 | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
+| **Maths** | 15 | 53 | 120 | 0 | **45** ✅ | 15/15 bespoke per-chapter views | 🟡 MEDIUM |
 | **Sanskrit** | 16¹ | 43 | 75 | 0 | 0 | **0/16 — no Discover Mode** | 🔴 WEAKEST |
 
 ¹ Sanskrit `ch01` is the legacy vocabulary deck (a deliberate carve-out, exempt
@@ -44,7 +44,7 @@ Legend: ✅ = every (non-carve-out) chapter has it · ⚠️ = partial · ❌ = 
 | miniProjects      | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | conceptMap        | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | whatIfs           | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ✅ 15/15 |
-| **deepDive**      | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
+| **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ❌ **0** |
 | **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | **examConnections** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
@@ -86,7 +86,7 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 
 | # | Milestone | Subject | Unblocks | Effort |
 |---|-----------|---------|----------|--------|
-| **P1-A** | Add `deepDive` StretchTopics (≥3/ch, class_8–12 anchored) | **Maths** (15 ch) | Phase 5 ladder | High |
+| ~~**P1-A**~~ ✅ | ~~Add `deepDive` StretchTopics (≥3/ch, class_8–12 anchored)~~ **DONE** — 45 added (3/ch), all parent-anchored in-chapter, ≥120-word bodies, +6 ratchet tests; 706 XCTest green | **Maths** (15 ch) | Phase 5 ladder **now open for Maths** | High |
 | **P1-B** | Add `deepDive` StretchTopics (≥3/ch) | **Sanskrit** (15 NEP ch) | Phase 5 ladder | High |
 | **P1-C** | Add `bossQuestions` (≥6/ch) | **Maths** | Phase 3 ceiling | High |
 | **P1-D** | Add `bossQuestions` (≥6/ch) | **Sanskrit** | Phase 3 ceiling | High |

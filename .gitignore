@@ -54,6 +54,5 @@ dist/
 # v6 "Learning Journey" autonomous-run artifacts (launcher runtime; per-machine)
 .v6-journey.lock/
 .v6-cycle.out
-.v6-imac-*.log
-.v6-phase0-build.log
+.v6-*.log
 .v6_journey_prompt.md

@@ -1485,6 +1485,7 @@
 		6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */; };
 		C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */; };
 		F3FE58600BFE6584F9DCD654 /* MathsChapterContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C7A565D28F9C9208D5B3B /* MathsChapterContentTests.swift */; };
+		5D2FFF2E1D4AF208F6B6B6E5 /* MathsDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A50A2B0B2C8E90BBA301E /* MathsDeepDiveTests.swift */; };
 		EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */; };
 		66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
@@ -3042,6 +3043,7 @@
 		751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryLevelTests.swift"; sourceTree = "<group>"; };
 		AA6ED7B9AC11073DDDBC610E /* MasterySummaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterySummaryTests.swift"; sourceTree = "<group>"; };
 		861C7A565D28F9C9208D5B3B /* MathsChapterContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsChapterContentTests.swift"; sourceTree = "<group>"; };
+		201A50A2B0B2C8E90BBA301E /* MathsDeepDiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDeepDiveTests.swift"; sourceTree = "<group>"; };
 		9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
@@ -5923,6 +5925,7 @@
 				751F0165CD3FAFE33996869B,
 				AA6ED7B9AC11073DDDBC610E,
 				861C7A565D28F9C9208D5B3B,
+				201A50A2B0B2C8E90BBA301E,
 				9E02387D41DE96B17A2C1779,
 				55AB731CAC2EE3D7C53517B9,
 				83AF5019561D3AFAD7B1183A,
@@ -7617,6 +7620,7 @@
 				6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */,
 				C06C79EC6EAC1F2AB308AF67 /* MasterySummaryTests.swift in Sources */,
 				F3FE58600BFE6584F9DCD654 /* MathsChapterContentTests.swift in Sources */,
+				5D2FFF2E1D4AF208F6B6B6E5 /* MathsDeepDiveTests.swift in Sources */,
 				EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */,
 				66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
