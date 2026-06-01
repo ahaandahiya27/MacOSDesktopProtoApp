@@ -5197,3 +5197,17 @@ Full content + Big-Sur lint family green; Release build + full suite (incl. the
 updated routing tests) PASSED via ci-build-test, both for the manual Swift-slice
 run and again at the pre-push gate. Additive only; no other subject touched.
 Pushed b4dc5f6. Zero regressions, zero STOP_AND_ASK.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 78 (pin Challenge Problems articles — TESTS)
+
+TESTS track. Extended `SocialScienceContentDepthTests` with
+`testOlympiadArticlesCarryEveryChallenge`: each chapter's cycle-77 `_olympiad`
+("Challenge Problems") article must render exactly one "Challenge N" section per
+diff>=4 topic question (occurrences of "<h2>Challenge " == the pack's diff>=4
+count, and at least the Olympiad floor). A stale regen run without --write, or an
+empty/missing page, now fails immediately — the same protection the cycle-76
+glossary and beyond-the-book ratchets give. Test-target-only; no pack, app-source
+or pbxproj change. Release build + full suite PASSED via ci-build-test. Pushed
+a33a842. Zero regressions, zero STOP_AND_ASK.
