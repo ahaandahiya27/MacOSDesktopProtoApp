@@ -5421,3 +5421,18 @@ Understanding Markets — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 081280b. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 91: ssch13 second DEEPDIVE pass
+
+The Story of Indian Farming — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "Why a soil's colour and type decide what grows" (class_9, anchor t03_c01):
+  India's six soils and the crops each suits.
+- dv06 "The 'backbone' puzzle: half the workers, a small slice of the output"
+  (class_10, anchor t01_c02): 46% of workers vs ~18% of output; share-of-output
+  vs share-of-workers; >75% of farm workers are women.
+- cc05 -> ssch03 (agroclimatic zones -> Climates of India).
+- cc06 -> ssch08 (community water structures + soil care -> conservation heritage).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 80ef5da. Zero regressions, zero STOP_AND_ASK.
