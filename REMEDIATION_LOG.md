@@ -5153,3 +5153,17 @@ deepDive read-time unchanged. Pushed bc740f2.
 
 Both cycles: content lints + Release build + full suite green via the pre-push
 gate. Zero regressions, zero STOP_AND_ASK.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 76 (articles-in-sync ratchet — TESTS)
+
+TESTS track. Extended `SocialScienceContentDepthTests` with two ratchets that
+pin the cycle-74/75 article work against future regression:
+`testGlossaryArticlesReflectPackTermCount` (each Vocabulary Deck article must
+carry "The N terms to know" with N = the chapter's current pack glossary count —
+a stale regen, e.g. one run without `--write`, fails immediately) and
+`testBeyondArticlesCarryConnectSection` (every chapter carries ≥4 crossChapterRefs
+so its Beyond-the-Book article must render the "Connect across chapters" links
+section). Bundled HTML loaded the same way the existing article-bundle tests do.
+Test-target-only; Release build + full suite green. Pushed 45374e1.
