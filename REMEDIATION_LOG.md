@@ -5211,3 +5211,27 @@ empty/missing page, now fails immediately — the same protection the cycle-76
 glossary and beyond-the-book ratchets give. Test-target-only; no pack, app-source
 or pbxproj change. Release build + full suite PASSED via ci-build-test. Pushed
 a33a842. Zero regressions, zero STOP_AND_ASK.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 79 (ssch01 second DEEPDIVE pass — DEEPDIVE)
+
+DEEPDIVE track, second pass (round-robin start at ssch01). Took ssch01
+"Geographical Diversity of India" from 4 to 6 deepDive StretchTopics and 4 to 6
+crossChapterRefs, all grounded in the chapter's own concepts:
+- dv05 "Why southern India's rivers run the 'wrong' way" (class_10, anchor
+  t04_c02): the peninsular plateau's eastward tilt carries the Godavari, Krishna
+  and Kaveri across India to the Bay of Bengal, while the western-slope rivers
+  race straight down to the Arabian Sea.
+- dv06 "Two kinds of Indian river: snow-fed and rain-fed" (class_10, anchor
+  t02_c03): perennial Himalayan rivers vs seasonal monsoon-fed peninsular rivers,
+  and why the peninsula relies on tanks and reservoirs.
+- cc05 -> ssch03 (relief as a climate factor — altitude and topography).
+- cc06 -> ssch14 (the Himalayas, Thar and seas as frontiers shared with neighbours).
+
+Rebuilt the pack via ss_build_pack.py and regenerated articles with --write;
+ssch01's Beyond-the-Book now renders 6 deep-dives and 6 Connect links (read-time
+12 -> 18 min). All content lints green; the pre-push ci-build-test gate PASSED.
+Index/HTML still 180 entries / 907 bundled files. Additive only. Pushed ca4df44.
+Confirms second-pass headroom: the depth ratchets use >= floors, so adding beyond
+the milestone count is safe. Zero regressions, zero STOP_AND_ASK.
