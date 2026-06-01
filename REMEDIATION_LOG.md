@@ -5544,3 +5544,32 @@ added 36 deepDive items + ~38 ccRefs, all PDF-faithful and additive. ***
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 3043f9c. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 99: ssch01 second GLOSSARY pass
+
+Geographical Diversity of India — glossary 17->23, misconceptions 5->7,
+realWorldExamples 5->7 (additive; SocialScienceContentDepthTests floors are
+lower bounds, so growth beyond them is safe).
+- +6 etymology terms: Relief (<relevare), Perennial (<per+annus), Silt,
+  Biodiversity (<bios), Khadar & Bhangar (new vs old alluvium, Hindi).
+- +ms06 (plains aren't empty — they're the fertile, crowded heartland),
+  +ms07 (tall != old: young Himalayas vs ancient Aravallis).
+- +rw06 (the Aravallis worn down by time), +rw07 (why most Indians live on the
+  plains: fertile silt + perennial water + flat land).
+
+Rebuilt the pack; regenerated articles with --write (Vocabulary Deck + Common
+Mistakes grow). All 7 content lints green; pre-push ci-build-test PASSED.
+Index/HTML steady 180/907. Pushed 22cef77. Starts a SECOND GLOSSARY pass
+(round-robin from ssch01). Zero regressions, zero STOP_AND_ASK.
+
+## RUN SUMMARY (2026-06-01, cycles 81-99)
+
+Completed the SECOND DEEPDIVE pass for all 20 chapters (cycles 81-98, doing
+ssch03-20; ssch01-02 were prior) — every chapter now has 6 deepDive StretchTopics
+and 6-7 crossChapterRefs (+36 deepDive, ~38 ccRefs this run). Then began a SECOND
+GLOSSARY_ETYMOLOGY pass (cycle 99, ssch01: +6 terms/+2 misc/+2 rw). 38 commits
+(19 content + 19 docs), every one green via the pre-commit lint family + pre-push
+ci-build-test. Zero regressions, zero STOP_AND_ASK. Pack steady at 293 concepts /
+371 topic-Qs; article HTML steady 180 entries / 907 bundled. HEAD 22cef77.
+NEXT: continue the 2nd GLOSSARY pass round-robin ssch02+ (or a 2nd OLYMPIAD pass
+on thin chapters, or DISCOVER scenes). ALWAYS regen articles with --write.
