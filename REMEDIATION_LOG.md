@@ -5791,3 +5791,44 @@ auto-wired); `ci-build-test.sh` → **BUILD SUCCEEDED + TEST SUCCEEDED, 731
 XCTest cases, 0 failures** (was 727, +4). Additive only. Zero regressions,
 zero STOP_AND_ASK. All four subjects now have Discover Mode — engagement
 parity reached. NEXT: P1-F — `crossChapterRefs` (≥4/ch) for Maths + Sanskrit.
+
+---
+
+## v6 Learning Journey · Cycle 7 (2026-06-01) — Phase 1 · P1-F: crossChapterRefs (Maths + Sanskrit)
+
+Both packs shipped with ZERO `crossChapterRefs`, leaving the adaptive journey
+(Phase 3) unable to weave each subject into a connected arc instead of N
+isolated chapters. Added **120 references — exactly 4 outbound per chapter** —
+across Maths (ch01–ch15, 60) and the 15 NEP Sanskrit chapters (sch01–sch15,
+60), via the new re-runnable `scripts/inject_cross_chapter_refs.py`. The legacy
+Sanskrit `ch01` vocabulary deck is the documented carve-out and carries none.
+
+Each ref points to a REAL in-pack chapter (never itself), uses the canonical id
+`{chapterId}_cx{NN}`, carries a hand-authored 1–2 sentence pointer explaining
+the genuine curricular connection, and is anchored by ≥1 real source-chapter
+`relatedConceptId`. The injector hard-fails if any `toChapterId` or anchoring
+concept id does not resolve in-pack, so every reference is guaranteed valid.
+
+Maths threads follow the textbook's own structure — place value down into
+decimals (ch01→ch03→ch12), expressions becoming equations (ch02→ch04→ch15),
+the geometry chain lines→triangles→congruence→constructions (ch05/07/09/14),
+and factors→fractions (ch11→ch08). Sanskrit threads follow the three authentic
+arcs: the grammar ladder (sch13 phonics → sch14 declension → sch15
+conjugation), the nationhood arc (sch01 Vande Bharatamataram ↔ sch11 Cellular
+Jail/Savarkar ↔ sch12 Panna Dhai), and the values/dharma arc (sch05 seva ↔
+sch07 Ishavasyam ↔ sch09 Annad Bhavanti).
+
+Tests: `desktopAhaanTests/CrossChapterRefsTests.swift` (2 ratchet tests) —
+Maths ≥4/ch; Sanskrit ≥4/ch on the NEP chapters with the legacy ch01 deck
+carrying zero; plus canonical-unique ids, real in-pack targets, no
+self-reference, non-empty topic, ≥30-char pointers, and in-pack
+`relatedConceptIds` anchors.
+
+Green here: roundtrip byte-for-byte clean on all four packs (Devanagari intact
+via `ensure_ascii=False`); `check_pack_schema` + `check_color_literals` +
+`test_lints.py` pass; pbxproj regenerated (new test file auto-wired);
+`ci-build-test.sh` → **BUILD SUCCEEDED + TEST SUCCEEDED, 733 XCTest cases, 0
+failures** (was 731, +2). Additive only. Zero regressions, zero STOP_AND_ASK.
+All four bolded enrichment gaps from the Phase-1 audit (deepDive,
+bossQuestions, crossChapterRefs + Sanskrit Discover) are now closed. NEXT:
+P1-G — examConnections + whatIfs for Maths.

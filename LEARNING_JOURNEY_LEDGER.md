@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-E DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths + Sanskrit `bossQuestions`: 90 each, 6/ch; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match interactive each**; +31 tests total, 731 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions`, and all four have Discover Mode.** Phase 3 ceiling + Phase 5 ladder open across the board; engagement parity reached. Backlog P1-F…P1-J pending. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A…P1-F DONE** (Maths + Sanskrit `deepDive`: 45 each; `bossQuestions`: 90 each; **Sanskrit Discover: 15/15 NEP chapters with a gated शब्द–अर्थ word-match each**; **`crossChapterRefs`: 120, 4/ch × 30 chapters, Maths + Sanskrit**; +33 tests total, 733 XCTest green). **All four subjects now carry `deepDive` + `bossQuestions` + `crossChapterRefs`, and all four have Discover Mode.** Phase 3 ceiling + weaving + Phase 5 ladder open across the board. Backlog P1-G…P1-J pending (enrichment polish + minor parity). |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -234,3 +234,39 @@ required before declaring the mission complete (Phase 6).
   last bolded enrichment gap that feeds Phase 3 cross-subject weaving). Content
   milestone, same loop: author → lint → pbxproj → ci-build-test green →
   commit/push → ledger.
+
+### Cycle 7 (2026-06-01) — Phase 1 · P1-F complete (`crossChapterRefs`)
+- Confirmed the tree was green here after P1-E (731 XCTest, 0 fail) before any
+  change.
+- Added **120 `crossChapterRefs`** — exactly **4 outbound per chapter** across
+  Maths (`ch01`–`ch15`, 60) and the 15 NEP Sanskrit chapters (`sch01`–`sch15`,
+  60) — via the new re-runnable `scripts/inject_cross_chapter_refs.py`. The
+  legacy Sanskrit `ch01` vocabulary deck is the documented carve-out and carries
+  none. Each ref:
+  * points to a **real in-pack chapter** (never itself), with the canonical id
+    `{chapterId}_cx{NN}`;
+  * carries a **hand-authored, curricularly-accurate** 1–2 sentence pointer
+    explaining the genuine connection (Maths: e.g. ch03 decimals → ch12 decimal
+    operations, ch04 letter-numbers → ch15 equations, ch05 lines → ch07
+    triangle angle-sum; Sanskrit: e.g. the grammar chain sch13 phonics → sch14
+    declension → sch15 conjugation, the patriotism arc sch01 ↔ sch11 ↔ sch12,
+    the values arc sch05 ↔ sch07 ↔ sch09);
+  * is anchored by ≥1 real **source-chapter `relatedConceptId`** (the injector
+    hard-fails if a target chapter or a concept id doesn't resolve in-pack).
+- Added `desktopAhaanTests/CrossChapterRefsTests.swift` (2 ratchet tests:
+  Maths ≥4/ch; Sanskrit ≥4/ch on the NEP chapters with the legacy ch01 deck
+  carrying zero — plus canonical-unique ids, real in-pack targets, no
+  self-reference, non-empty topic, ≥30-char pointers, and in-pack
+  `relatedConceptIds`).
+- Green here: roundtrip byte-for-byte clean on all four packs (Devanagari
+  intact via `ensure_ascii=False`); `check_pack_schema` + `check_color_literals`
+  + `test_lints.py` pass; pbxproj regenerated (new test file auto-wired);
+  `ci-build-test.sh` → **BUILD + 733 XCTest, 0 failures** (was 731, +2).
+  Additive only; zero regressions; zero STOP_AND_ASK.
+- **Phase 3 cross-subject weaving can now follow real curricular threads in
+  every subject.** All four bolded enrichment gaps from the Phase-1 audit
+  (`deepDive`, `bossQuestions`, `crossChapterRefs` + Sanskrit Discover) are
+  closed.
+- **NEXT:** P1-G — add `examConnections` + `whatIfs` to Maths (enrichment
+  parity with Science/Social Science; both fields are 0/15 for Maths today).
+  Same loop.

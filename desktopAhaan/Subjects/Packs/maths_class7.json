@@ -2737,6 +2737,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch01_cx01",
+          "toChapterId": "ch03",
+          "topic": "A Peek Beyond the Point",
+          "pointer": "Place value doesn't stop at the units column. Ch.3 extends the very same 10-times pattern the OTHER way — past the decimal point into tenths and hundredths.",
+          "relatedConceptIds": [
+            "mch01_t02_c01"
+          ]
+        },
+        {
+          "id": "ch01_cx02",
+          "toChapterId": "ch10",
+          "topic": "Operations with Integers",
+          "pointer": "Here every number is a counting number. Ch.10 mirrors the number line to the left of zero, so the values you read in lakhs and crores gain negative twins.",
+          "relatedConceptIds": [
+            "mch01_t01_c02"
+          ]
+        },
+        {
+          "id": "ch01_cx03",
+          "toChapterId": "ch06",
+          "topic": "Number Play",
+          "pointer": "The Indian comma groups and the +1 'largest-to-smallest' pattern are number play in disguise. Ch.6 turns these patterns into puzzles and proofs.",
+          "relatedConceptIds": [
+            "mch01_t01_c01"
+          ]
+        },
+        {
+          "id": "ch01_cx04",
+          "toChapterId": "ch12",
+          "topic": "Another Peek Beyond the Point",
+          "pointer": "Multiplying by 10, 100, 1000 just shifts each digit one place left. Ch.12 reuses that exact place-value shift to multiply and divide decimals.",
+          "relatedConceptIds": [
+            "mch01_t02_c01"
+          ]
+        }
       ]
     },
     {
@@ -4567,6 +4605,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch02_cx01",
+          "toChapterId": "ch04",
+          "topic": "Expressions Using Letter-Numbers",
+          "pointer": "An arithmetic expression uses only numbers. Ch.4 swaps some of those numbers for letters, so one expression can stand for a whole family of calculations.",
+          "relatedConceptIds": [
+            "mch02_t01_c01"
+          ]
+        },
+        {
+          "id": "ch02_cx02",
+          "toChapterId": "ch15",
+          "topic": "Finding the Unknown",
+          "pointer": "'Different expressions, same value' is the seed of an equation. Ch.15 sets two expressions equal and hunts for the unknown that makes them balance.",
+          "relatedConceptIds": [
+            "mch02_t01_c02"
+          ]
+        },
+        {
+          "id": "ch02_cx03",
+          "toChapterId": "ch10",
+          "topic": "Operations with Integers",
+          "pointer": "Order of operations is a rule about WHICH operation first. Ch.10 stress-tests it once the numbers can be negative, where a misplaced sign flips the answer.",
+          "relatedConceptIds": [
+            "mch02_t02_c01"
+          ]
+        },
+        {
+          "id": "ch02_cx04",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "Terms and brackets group a calculation. Ch.8 applies the same grouping when the terms are fractions, where 'of' quietly means multiply.",
+          "relatedConceptIds": [
+            "mch02_t02_c03"
+          ]
+        }
       ]
     },
     {
@@ -6178,6 +6254,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch03_cx01",
+          "toChapterId": "ch12",
+          "topic": "Another Peek Beyond the Point",
+          "pointer": "Ch.3 builds decimal place value; Ch.12 puts it to work — multiplying and dividing decimals by counting decimal places and shifting the point.",
+          "relatedConceptIds": [
+            "mch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_cx02",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "A tenth IS the fraction 1/10. Ch.8 works fractions in general, and decimals are simply fractions whose denominators are powers of ten.",
+          "relatedConceptIds": [
+            "mch03_t01_c02"
+          ]
+        },
+        {
+          "id": "ch03_cx03",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "The decimal point is the mirror line of place value. Ch.1's lakhs sit to its left; Ch.3's tenths and hundredths sit to its right — one continuous system.",
+          "relatedConceptIds": [
+            "mch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ch03_cx04",
+          "toChapterId": "ch13",
+          "topic": "Connecting the Dots",
+          "pointer": "Locating decimals on a number line is the skill Ch.13 leans on when it plots and averages real measured data.",
+          "relatedConceptIds": [
+            "mch03_t04_c01"
+          ]
+        }
       ]
     },
     {
@@ -7508,6 +7622,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch04_cx01",
+          "toChapterId": "ch15",
+          "topic": "Finding the Unknown",
+          "pointer": "Letter-numbers describe a general relationship. Ch.15 pins the letter down to one value by solving an equation, turning the general into the specific.",
+          "relatedConceptIds": [
+            "mch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_cx02",
+          "toChapterId": "ch02",
+          "topic": "Arithmetic Expressions",
+          "pointer": "Ch.4's algebraic expressions are exactly Ch.2's arithmetic expressions with letters in place of some numbers — the grammar of terms and brackets is identical.",
+          "relatedConceptIds": [
+            "mch04_t01_c01"
+          ]
+        },
+        {
+          "id": "ch04_cx03",
+          "toChapterId": "ch06",
+          "topic": "Number Play",
+          "pointer": "Using a letter to express and justify a number pattern is the bridge from Ch.6's number play to a real algebraic proof that works for every case.",
+          "relatedConceptIds": [
+            "mch04_t03_c02"
+          ]
+        },
+        {
+          "id": "ch04_cx04",
+          "toChapterId": "ch13",
+          "topic": "Connecting the Dots",
+          "pointer": "A formula is a relationship written with letters. Ch.13 uses one — the mean = sum ÷ count — to summarise a whole data set in a single number.",
+          "relatedConceptIds": [
+            "mch04_t01_c02"
+          ]
         }
       ]
     },
@@ -9035,6 +9187,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch05_cx01",
+          "toChapterId": "ch07",
+          "topic": "A Tale of Three Intersecting Lines",
+          "pointer": "Vertically opposite angles and linear pairs are the angle facts Ch.7 builds on to prove that a triangle's three angles always sum to 180°.",
+          "relatedConceptIds": [
+            "mch05_t01_c02"
+          ]
+        },
+        {
+          "id": "ch05_cx02",
+          "toChapterId": "ch07",
+          "topic": "A Tale of Three Intersecting Lines",
+          "pointer": "When a transversal cuts two parallel lines, corresponding angles are equal. Ch.7 uses that very fact to reason about the angles inside triangles.",
+          "relatedConceptIds": [
+            "mch05_t03_c02"
+          ]
+        },
+        {
+          "id": "ch05_cx03",
+          "toChapterId": "ch14",
+          "topic": "Constructions and Tilings",
+          "pointer": "Perpendicular and parallel lines are defined here; Ch.14 teaches how to CONSTRUCT them precisely with only a compass and straightedge.",
+          "relatedConceptIds": [
+            "mch05_t02_c01"
+          ]
+        },
+        {
+          "id": "ch05_cx04",
+          "toChapterId": "ch09",
+          "topic": "Geometric Twins",
+          "pointer": "Equal angles are the heart of congruence. Ch.9 uses the angle relationships from intersecting lines to decide when two figures are exact copies.",
+          "relatedConceptIds": [
+            "mch05_t01_c01"
+          ]
+        }
       ]
     },
     {
@@ -10411,6 +10601,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch06_cx01",
+          "toChapterId": "ch11",
+          "topic": "Finding Common Ground",
+          "pointer": "Parity (even/odd) is the simplest split by a factor of 2. Ch.11 generalises 'shared factors' into HCF, LCM and prime factorisation.",
+          "relatedConceptIds": [
+            "mch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_cx02",
+          "toChapterId": "ch10",
+          "topic": "Operations with Integers",
+          "pointer": "Ch.6 proves things with even and odd; Ch.10 gives parity its sign rules, where the product of signs behaves much like the parity of a sum.",
+          "relatedConceptIds": [
+            "mch06_t02_c01"
+          ]
+        },
+        {
+          "id": "ch06_cx03",
+          "toChapterId": "ch04",
+          "topic": "Expressions Using Letter-Numbers",
+          "pointer": "Cryptarithms put unknown digits behind letters. Ch.4 makes letters-as-numbers a deliberate tool for expressing and justifying patterns.",
+          "relatedConceptIds": [
+            "mch06_t04_c01"
+          ]
+        },
+        {
+          "id": "ch06_cx04",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "The number-grid sums and the 45-invariant are large-number patterns. Ch.1's place-value structure is what makes those patterns predictable.",
+          "relatedConceptIds": [
+            "mch06_t01_c02"
+          ]
+        }
       ]
     },
     {
@@ -11639,6 +11867,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch07_cx01",
+          "toChapterId": "ch05",
+          "topic": "Parallel and Intersecting Lines",
+          "pointer": "A triangle is three intersecting lines. Every angle fact Ch.7 uses — linear pairs, vertically opposite, transversal angles — was established in Ch.5.",
+          "relatedConceptIds": [
+            "mch07_t01_c01"
+          ]
+        },
+        {
+          "id": "ch07_cx02",
+          "toChapterId": "ch09",
+          "topic": "Geometric Twins",
+          "pointer": "Ch.7 classifies and builds triangles; Ch.9 asks when two of them are identical, giving the SSS/SAS/ASA/RHS congruence tests.",
+          "relatedConceptIds": [
+            "mch07_t04_c01"
+          ]
+        },
+        {
+          "id": "ch07_cx03",
+          "toChapterId": "ch14",
+          "topic": "Constructions and Tilings",
+          "pointer": "Constructing a triangle from its sides here is the warm-up for Ch.14's precise compass-and-straightedge constructions and bisections.",
+          "relatedConceptIds": [
+            "mch07_t03_c01"
+          ]
+        },
+        {
+          "id": "ch07_cx04",
+          "toChapterId": "ch05",
+          "topic": "Parallel and Intersecting Lines",
+          "pointer": "The triangle inequality limits which three lengths can even meet. It is a direct consequence of how the intersecting lines of Ch.5 can close up.",
+          "relatedConceptIds": [
+            "mch07_t02_c01"
+          ]
+        }
       ]
     },
     {
@@ -12836,6 +13102,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch08_cx01",
+          "toChapterId": "ch03",
+          "topic": "A Peek Beyond the Point",
+          "pointer": "A fraction and a decimal are two costumes for the same value. Ch.3 writes parts of a whole with a decimal point; Ch.8 writes them as numerator over denominator.",
+          "relatedConceptIds": [
+            "mch08_t02_c01"
+          ]
+        },
+        {
+          "id": "ch08_cx02",
+          "toChapterId": "ch12",
+          "topic": "Another Peek Beyond the Point",
+          "pointer": "Dividing by a fraction means multiplying by its reciprocal. Ch.12 shows the decimal face of the same division, dividing by tenths and hundredths.",
+          "relatedConceptIds": [
+            "mch08_t03_c01"
+          ]
+        },
+        {
+          "id": "ch08_cx03",
+          "toChapterId": "ch11",
+          "topic": "Finding Common Ground",
+          "pointer": "Adding or comparing fractions needs a common denominator — and the least one is the LCM that Ch.11 teaches you to find.",
+          "relatedConceptIds": [
+            "mch08_t01_c01"
+          ]
+        },
+        {
+          "id": "ch08_cx04",
+          "toChapterId": "ch02",
+          "topic": "Arithmetic Expressions",
+          "pointer": "'of' means multiply, and order of operations still rules. Ch.2's expression grammar carries straight over once the terms become fractions.",
+          "relatedConceptIds": [
+            "mch08_t02_c01"
+          ]
+        }
       ]
     },
     {
@@ -13961,6 +14265,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch09_cx01",
+          "toChapterId": "ch07",
+          "topic": "A Tale of Three Intersecting Lines",
+          "pointer": "Congruence is tested on triangles first. The SSS/SAS/ASA/RHS rules of Ch.9 decide when two of Ch.7's triangles are exact copies.",
+          "relatedConceptIds": [
+            "mch09_t02_c01"
+          ]
+        },
+        {
+          "id": "ch09_cx02",
+          "toChapterId": "ch05",
+          "topic": "Parallel and Intersecting Lines",
+          "pointer": "Pinning a triangle down uses equal angles and equal sides — the angle relationships from Ch.5's intersecting and parallel lines.",
+          "relatedConceptIds": [
+            "mch09_t01_c02"
+          ]
+        },
+        {
+          "id": "ch09_cx03",
+          "toChapterId": "ch14",
+          "topic": "Constructions and Tilings",
+          "pointer": "Congruent figures are exact copies; Ch.14's equal-arc constructions are precisely how you BUILD a copy with compass and straightedge.",
+          "relatedConceptIds": [
+            "mch09_t01_c01"
+          ]
+        },
+        {
+          "id": "ch09_cx04",
+          "toChapterId": "ch07",
+          "topic": "A Tale of Three Intersecting Lines",
+          "pointer": "'Equal sides face equal angles' connects a triangle's measurements. It explains why the isosceles and equilateral triangles of Ch.7 have the angles they do.",
+          "relatedConceptIds": [
+            "mch09_t03_c01"
+          ]
         }
       ]
     },
@@ -15151,6 +15493,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch10_cx01",
+          "toChapterId": "ch15",
+          "topic": "Finding the Unknown",
+          "pointer": "Adding the opposite to subtract is exactly the inverse-operation move Ch.15 uses to peel an unknown off one side of an equation.",
+          "relatedConceptIds": [
+            "mch10_t01_c03"
+          ]
+        },
+        {
+          "id": "ch10_cx02",
+          "toChapterId": "ch02",
+          "topic": "Arithmetic Expressions",
+          "pointer": "The sign rules for multiplication change how an expression evaluates. Ch.2's order-of-operations must be re-read carefully once integers can be negative.",
+          "relatedConceptIds": [
+            "mch10_t02_c01"
+          ]
+        },
+        {
+          "id": "ch10_cx03",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "Ch.1's number line ran from zero upward; Ch.10 extends it below zero, so every large number gains a negative partner the same distance from zero.",
+          "relatedConceptIds": [
+            "mch10_t01_c01"
+          ]
+        },
+        {
+          "id": "ch10_cx04",
+          "toChapterId": "ch06",
+          "topic": "Number Play",
+          "pointer": "The sign rules echo parity: a product of two negatives is positive, just as the sum of two odds is even. Ch.6's parity reasoning rhymes with integer signs.",
+          "relatedConceptIds": [
+            "mch10_t02_c01"
+          ]
         }
       ]
     },
@@ -16344,6 +16724,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch11_cx01",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "The LCM you find here is the least common DENOMINATOR Ch.8 needs to add or compare fractions — common ground in the most literal sense.",
+          "relatedConceptIds": [
+            "mch11_t02_c01"
+          ]
+        },
+        {
+          "id": "ch11_cx02",
+          "toChapterId": "ch06",
+          "topic": "Number Play",
+          "pointer": "Prime factorisation and co-primes are number play with a purpose. Ch.6's factor and parity puzzles are the playground that makes Ch.11's tools feel natural.",
+          "relatedConceptIds": [
+            "mch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_cx03",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "Breaking a number into primes is decomposition by FACTORS, the multiplicative cousin of the place-value decomposition you met for large numbers in Ch.1.",
+          "relatedConceptIds": [
+            "mch11_t03_c01"
+          ]
+        },
+        {
+          "id": "ch11_cx04",
+          "toChapterId": "ch12",
+          "topic": "Another Peek Beyond the Point",
+          "pointer": "HCF lets you reduce a fraction to lowest terms before you convert it to a decimal in Ch.12 — fewer steps, cleaner answers.",
+          "relatedConceptIds": [
+            "mch11_t01_c01"
+          ]
+        }
       ]
     },
     {
@@ -17467,6 +17885,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch12_cx01",
+          "toChapterId": "ch03",
+          "topic": "A Peek Beyond the Point",
+          "pointer": "Ch.3 introduced what a decimal IS; Ch.12 is the operations sequel — multiplying, dividing, and placing the point by counting decimal places.",
+          "relatedConceptIds": [
+            "mch12_t01_c01"
+          ]
+        },
+        {
+          "id": "ch12_cx02",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "Multiplying a decimal by 10, 100 or 1000 shifts every digit one place left — the very same place-value shift Ch.1 used to grow whole numbers.",
+          "relatedConceptIds": [
+            "mch12_t01_c02"
+          ]
+        },
+        {
+          "id": "ch12_cx03",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "Dividing a decimal by another is dividing by a fraction in disguise. Ch.8's reciprocal rule and Ch.12's point-shifting are two views of one operation.",
+          "relatedConceptIds": [
+            "mch12_t02_c01"
+          ]
+        },
+        {
+          "id": "ch12_cx04",
+          "toChapterId": "ch13",
+          "topic": "Connecting the Dots",
+          "pointer": "Estimating to place the decimal point is the sanity check Ch.13 relies on when it computes a mean or reads a value off a bar graph.",
+          "relatedConceptIds": [
+            "mch12_t03_c01"
+          ]
         }
       ]
     },
@@ -18628,6 +19084,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch13_cx01",
+          "toChapterId": "ch04",
+          "topic": "Expressions Using Letter-Numbers",
+          "pointer": "The mean is a formula — sum ÷ count — written for any data set. Ch.4's letter-numbers are what let one formula stand for every possible list of numbers.",
+          "relatedConceptIds": [
+            "mch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_cx02",
+          "toChapterId": "ch12",
+          "topic": "Another Peek Beyond the Point",
+          "pointer": "Real data is rarely whole. Computing a mean, median or range usually needs the decimal multiplication and division of Ch.12.",
+          "relatedConceptIds": [
+            "mch13_t02_c01"
+          ]
+        },
+        {
+          "id": "ch13_cx03",
+          "toChapterId": "ch01",
+          "topic": "Large Numbers Around Us",
+          "pointer": "Reasoning from data often means handling large counts — populations, rupees, distances — written in the lakh/crore place-value system of Ch.1.",
+          "relatedConceptIds": [
+            "mch13_t01_c01"
+          ]
+        },
+        {
+          "id": "ch13_cx04",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "Range and proportion compare parts to wholes, which is fraction thinking. Ch.8's fraction skills underpin how Ch.13 describes spread.",
+          "relatedConceptIds": [
+            "mch13_t02_c02"
+          ]
+        }
       ]
     },
     {
@@ -19743,6 +20237,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch14_cx01",
+          "toChapterId": "ch05",
+          "topic": "Parallel and Intersecting Lines",
+          "pointer": "Constructing a perpendicular bisector or a parallel line turns Ch.5's DEFINITIONS of perpendicular and parallel into something you draw exactly.",
+          "relatedConceptIds": [
+            "mch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_cx02",
+          "toChapterId": "ch07",
+          "topic": "A Tale of Three Intersecting Lines",
+          "pointer": "The compass arcs that bisect a segment are the same moves Ch.7 used to construct a triangle from its three sides.",
+          "relatedConceptIds": [
+            "mch14_t01_c01"
+          ]
+        },
+        {
+          "id": "ch14_cx03",
+          "toChapterId": "ch09",
+          "topic": "Geometric Twins",
+          "pointer": "Equal arcs create equal lengths — that is congruence in action, so every Ch.14 construction is really a Ch.9 congruent figure being built.",
+          "relatedConceptIds": [
+            "mch14_t03_c01"
+          ]
+        },
+        {
+          "id": "ch14_cx04",
+          "toChapterId": "ch05",
+          "topic": "Parallel and Intersecting Lines",
+          "pointer": "Tiling works because the angles meeting at a vertex add to 360°. That total is read straight off the angle facts of Ch.5.",
+          "relatedConceptIds": [
+            "mch14_t03_c01"
+          ]
         }
       ]
     },
@@ -20930,6 +21462,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "ch15_cx01",
+          "toChapterId": "ch04",
+          "topic": "Expressions Using Letter-Numbers",
+          "pointer": "The unknown in an equation is a letter-number from Ch.4. Solving simply finds the single value of that letter that makes the statement true.",
+          "relatedConceptIds": [
+            "mch15_t01_c02"
+          ]
+        },
+        {
+          "id": "ch15_cx02",
+          "toChapterId": "ch02",
+          "topic": "Arithmetic Expressions",
+          "pointer": "An equation is two expressions set equal. Ch.2's 'different expressions, same value' is the exact idea a balanced equation captures.",
+          "relatedConceptIds": [
+            "mch15_t01_c01"
+          ]
+        },
+        {
+          "id": "ch15_cx03",
+          "toChapterId": "ch10",
+          "topic": "Operations with Integers",
+          "pointer": "Doing the same to both sides often means adding the opposite or dividing by a negative — the integer moves Ch.10 made routine.",
+          "relatedConceptIds": [
+            "mch15_t02_c01"
+          ]
+        },
+        {
+          "id": "ch15_cx04",
+          "toChapterId": "ch08",
+          "topic": "Working with Fractions",
+          "pointer": "Inverse operations undo multiplication by a fraction with its reciprocal, so many Ch.15 solutions are the fraction arithmetic of Ch.8 run backwards.",
+          "relatedConceptIds": [
+            "mch15_t02_c01"
+          ]
         }
       ]
     }

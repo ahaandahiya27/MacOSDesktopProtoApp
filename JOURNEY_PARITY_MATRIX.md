@@ -45,7 +45,7 @@ Legend: ✅ = every (non-carve-out) chapter has it · ⚠️ = partial · ❌ = 
 | conceptMap        | ✅ 19/19 | ✅ 20/20 | ✅ 15/15 | ✅ 15/15 |
 | whatIfs           | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ✅ 15/15 |
 | **deepDive**      | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-A) | ✅ **15/15** (P1-B) |
-| **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
+| **crossChapterRefs** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-F) | ✅ **15/15** (P1-F) |
 | **bossQuestions** | ✅ 19/19 | ✅ 20/20 | ✅ **15/15** (P1-C) | ✅ **15/15** (P1-D) |
 | **examConnections** | ✅ 19/19 | ✅ 20/20 | ❌ **0** | ❌ **0** |
 | timelines         | ✅ 19/19 | ✅ 20/20 | ❌ 0    | ❌ 0 |
@@ -76,7 +76,11 @@ have hard data dependencies on fields that Maths and Sanskrit are missing:
   + a re-drill variation each. The adaptive ceiling can now ramp a strong
   student in every subject, not just Science/Social Science.
 - **`crossChapterRefs`** are what let the journey weave a subject into a
-  connected arc rather than 15 isolated chapters. Absent in Maths/Sanskrit.
+  connected arc rather than 15 isolated chapters. ✅ **RESOLVED** by P1-F:
+  4 outbound, in-pack, hand-authored references per chapter for Maths (60) and
+  Sanskrit NEP (60) — 120 total — each anchored to a real source concept. The
+  legacy Sanskrit `ch01` deck is exempt. Phase-3 cross-subject weaving can now
+  follow real curricular threads in every subject.
 
 ## 4. Prioritised depth-sweep backlog (drives subsequent Phase 1 cycles)
 
@@ -92,7 +96,7 @@ green here before commit, PDF-faithful and additive, articles regenerated with
 | ~~**P1-C**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch), all `bossquiz_mchNN_qII`, difficulty 3–5, worked steps + common-mistake note + variation each, +7 ratchet tests; 719 XCTest green | **Maths** | Phase 3 ceiling **raised for Maths** | High |
 | ~~**P1-D**~~ ✅ | ~~Add `bossQuestions` (≥6/ch)~~ **DONE** — 90 added (6/ch on the 15 NEP chapters, legacy ch01 exempt), all `bossquiz_schNN_qII`, difficulty 3–5, textbook-faithful (grounded in each concept's `explanations`), worked steps + distractor-trap note + variation each, +8 ratchet tests; 727 XCTest green | **Sanskrit** | Phase 3 ceiling **raised for Sanskrit** | High |
 | ~~**P1-E**~~ ✅ | ~~Build a real Sanskrit Discover experience (≥1 gated bespoke interactive/ch)~~ **DONE** — `DiscoverChapterSanskritView` (data-driven 9-scene view) now serves all 15 NEP chapters (`sch01`–`sch15`); each carries a bespoke **gated** शब्द–अर्थ word-match interactive built from the chapter glossary (completes only when every pair is matched), plus 3 concept scenes, 3 SRS quick-checks, and the boss quiz. +4 ratchet tests; 731 XCTest green. Legacy ch01 deck deliberately excluded. | **Sanskrit** (was 0/16) | journey engagement parity **achieved** | High |
-| **P1-F** | Add `crossChapterRefs` (≥4/ch) | **Maths**, **Sanskrit** | Phase 3 weaving | Medium |
+| ~~**P1-F**~~ ✅ | ~~Add `crossChapterRefs` (≥4/ch)~~ **DONE** — 120 added (4/ch × 30 chapters), all in-pack targets, hand-authored curricular pointers, real source-concept anchors, via re-runnable `scripts/inject_cross_chapter_refs.py`; +2 ratchet tests; 733 XCTest green. Legacy Sanskrit ch01 exempt. | **Maths**, **Sanskrit** | Phase 3 weaving **enabled** | Medium |
 | **P1-G** | Add `examConnections` + `whatIfs` | **Maths** | enrichment parity | Medium |
 | **P1-H** | Upgrade Social Science Discover from one generic view toward bespoke per-chapter interactives (parity with Science/Maths) | **Social Science** | engagement depth | Medium |
 | **P1-I** | Backfill `quickCheckQuestions` for the 3 Science chapters missing them | **Science** | minor parity | Low |

@@ -13136,6 +13136,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch01_cx01",
+          "toChapterId": "sch11",
+          "topic": "The Andaman & the Cellular Jail",
+          "pointer": "Vande Bharatamataram bows to the motherland; the Andaman lesson shows that love made flesh in the freedom fighters of the Cellular Jail, Savarkar among them.",
+          "relatedConceptIds": [
+            "sch01_t01_c01"
+          ]
+        },
+        {
+          "id": "sch01_cx02",
+          "toChapterId": "sch12",
+          "topic": "Panna Dhai, the Brave",
+          "pointer": "The hymn praises a land worth everything. Panna Dhai's story is that devotion in action — a mother who gave up her own son for her land's honour.",
+          "relatedConceptIds": [
+            "sch01_t02_c01"
+          ]
+        },
+        {
+          "id": "sch01_cx03",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "'Vande mātaram' literally means 'I bow to the Mother' — मातरम् is an accusative object. The full case system behind that ending is laid out in Shabda-Rupani.",
+          "relatedConceptIds": [
+            "sch01_t01_c01"
+          ]
+        },
+        {
+          "id": "sch01_cx04",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "This is your first taste of literary Sanskrit verse; the Subhashita lesson pours a daily cup of that same poetic nectar, one wise couplet at a time.",
+          "relatedConceptIds": [
+            "sch01_t01_c03"
+          ]
+        }
       ]
     },
     {
@@ -14344,6 +14382,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch02_cx01",
+          "toChapterId": "sch06",
+          "topic": "Shloka Antyakshari",
+          "pointer": "Subhashitas are wise couplets; the Shloka-Antyakshari lesson turns a whole game out of them, chaining one verse to the next by its last syllable.",
+          "relatedConceptIds": [
+            "sch02_t01_c01"
+          ]
+        },
+        {
+          "id": "sch02_cx02",
+          "toChapterId": "sch08",
+          "topic": "Useful and pleasing speech",
+          "pointer": "The 'five va-qualities' praise good conduct; 'rare is speech both useful and pleasing' is one more subhashita on the same theme of disciplined, worthy living.",
+          "relatedConceptIds": [
+            "sch02_t01_c02"
+          ]
+        },
+        {
+          "id": "sch02_cx03",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "'पिबामः' (we drink) is a present-tense verb. Dhaturupani sets out the full conjugation pattern that such '-āmaḥ / we' forms come from.",
+          "relatedConceptIds": [
+            "sch02_t01_c01"
+          ]
+        },
+        {
+          "id": "sch02_cx04",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "The six faults to give up are an ethic of self-improvement; Seva Hi Paramo Dharmah turns that inner discipline outward into service of others.",
+          "relatedConceptIds": [
+            "sch02_t01_c03"
+          ]
+        }
       ]
     },
     {
@@ -15494,6 +15570,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch03_cx01",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "'मित्राय नमः' uses the dative (चतुर्थी) case after नमः. Shabda-Rupani places that single case inside the full seven-case declension table.",
+          "relatedConceptIds": [
+            "sch03_t02_c01"
+          ]
+        },
+        {
+          "id": "sch03_cx02",
+          "toChapterId": "sch07",
+          "topic": "Ishavasyam — the all-pervading Lord",
+          "pointer": "Saluting the Sun with 'namaḥ' is devotion to the divine in nature; Ishavasyam takes that further — the whole universe is pervaded by the Lord.",
+          "relatedConceptIds": [
+            "sch03_t01_c02"
+          ]
+        },
+        {
+          "id": "sch03_cx03",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "Surya-namaskara is for a healthy body and mind; Seva Hi Paramo Dharmah explains WHY — a strong, well body is the instrument of selfless service.",
+          "relatedConceptIds": [
+            "sch03_t01_c04"
+          ]
+        },
+        {
+          "id": "sch03_cx04",
+          "toChapterId": "sch09",
+          "topic": "Annad Bhavanti Bhutani — food and life",
+          "pointer": "A healthy body needs good food; Annad Bhavanti Bhutani makes the same point cosmic — all beings arise from anna (food).",
+          "relatedConceptIds": [
+            "sch03_t01_c04"
+          ]
+        }
       ]
     },
     {
@@ -16579,6 +16693,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch04_cx01",
+          "toChapterId": "sch10",
+          "topic": "Dashamah Kah — Who is the Tenth?",
+          "pointer": "The fox's 'sour grapes' is a witty fable with a moral; Dashamah Kah is another short tale whose punchline teaches you something about yourself.",
+          "relatedConceptIds": [
+            "sch04_t01_c04"
+          ]
+        },
+        {
+          "id": "sch04_cx02",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "The -तः direction words (ततः, कुतः) are adverb forms; the full case system that organises such Sanskrit endings is taught in Shabda-Rupani.",
+          "relatedConceptIds": [
+            "sch04_t02_c01"
+          ]
+        },
+        {
+          "id": "sch04_cx03",
+          "toChapterId": "sch06",
+          "topic": "Shloka Antyakshari",
+          "pointer": "The fox excuses his failure — weak character dressed as wisdom. The Antyakshari subhashitas warn exactly against शीलम् (character) of that kind.",
+          "relatedConceptIds": [
+            "sch04_t01_c04"
+          ]
+        },
+        {
+          "id": "sch04_cx04",
+          "toChapterId": "sch08",
+          "topic": "Useful and pleasing speech",
+          "pointer": "'The grapes are sour' is self-flattering speech, not honest speech. Hitam Manohari prizes words that are both true and pleasing — the opposite of the fox's excuse.",
+          "relatedConceptIds": [
+            "sch04_t01_c03"
+          ]
         }
       ]
     },
@@ -17728,6 +17880,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch05_cx01",
+          "toChapterId": "sch07",
+          "topic": "Ishavasyam — the all-pervading Lord",
+          "pointer": "Service as the highest dharma rests on seeing the divine in everyone — exactly the vision of Ishavasyam, that the Lord pervades all beings.",
+          "relatedConceptIds": [
+            "sch05_t01_c02"
+          ]
+        },
+        {
+          "id": "sch05_cx02",
+          "toChapterId": "sch09",
+          "topic": "Annad Bhavanti Bhutani — food and life",
+          "pointer": "The physician serves by healing bodies; Annad Bhavanti Bhutani shows the most basic service of all — giving anna (food), from which life itself arises.",
+          "relatedConceptIds": [
+            "sch05_t01_c03"
+          ]
+        },
+        {
+          "id": "sch05_cx03",
+          "toChapterId": "sch03",
+          "topic": "Mitraya Namah — the Sun Salutation",
+          "pointer": "Serving 'tirelessly, like a machine' needs a fit body and mind — precisely what the Surya-namaskara of Mitraya Namah builds.",
+          "relatedConceptIds": [
+            "sch05_t01_c04"
+          ]
+        },
+        {
+          "id": "sch05_cx04",
+          "toChapterId": "sch12",
+          "topic": "Panna Dhai, the Brave",
+          "pointer": "Seva at its limit is total sacrifice; Panna Dhai lived that ideal, giving up her own child in the service of her ward and her land.",
+          "relatedConceptIds": [
+            "sch05_t01_c01"
+          ]
         }
       ]
     },
@@ -18897,6 +19087,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch06_cx01",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "Antyakshari is played WITH subhashitas; Nityam Pibamah Subhashitarasam is the lesson that first teaches you to savour those very couplets.",
+          "relatedConceptIds": [
+            "sch06_t01_c01"
+          ]
+        },
+        {
+          "id": "sch06_cx02",
+          "toChapterId": "sch08",
+          "topic": "Useful and pleasing speech",
+          "pointer": "These verses prize शीलम् (character) and knowledge; Hitam Manohari adds the verse on speech that is rare because it is both useful and pleasing.",
+          "relatedConceptIds": [
+            "sch06_t02_c02"
+          ]
+        },
+        {
+          "id": "sch06_cx03",
+          "toChapterId": "sch13",
+          "topic": "Varna-Matra — vowel quantity",
+          "pointer": "Antyakshari chains verses by their LAST syllable — pure sound-play. Varna-Matra teaches the vowel quantities that make those syllables long or short.",
+          "relatedConceptIds": [
+            "sch06_t01_c01"
+          ]
+        },
+        {
+          "id": "sch06_cx04",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "'क्रीडाम' (let us play) is a verb form; Dhaturupani lays out the conjugation system from which such 'let-us' (आम) endings are built.",
+          "relatedConceptIds": [
+            "sch06_t01_c01"
+          ]
+        }
       ]
     },
     {
@@ -20065,6 +20293,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch07_cx01",
+          "toChapterId": "sch09",
+          "topic": "Annad Bhavanti Bhutani — food and life",
+          "pointer": "Ishavasyam says the Lord pervades all; Annad Bhavanti Bhutani names that same omnipresent source 'Brahma', from which all beings spring through food.",
+          "relatedConceptIds": [
+            "sch07_t01_c01"
+          ]
+        },
+        {
+          "id": "sch07_cx02",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "If the divine dwells in everyone, serving anyone is serving the Lord — which is exactly why Seva Hi Paramo Dharmah calls service the highest duty.",
+          "relatedConceptIds": [
+            "sch07_t01_c01"
+          ]
+        },
+        {
+          "id": "sch07_cx03",
+          "toChapterId": "sch03",
+          "topic": "Mitraya Namah — the Sun Salutation",
+          "pointer": "Worship (आराधनम्) and name-chanting here echo the devotional 'namaḥ' you first offered to the Sun in Mitraya Namah.",
+          "relatedConceptIds": [
+            "sch07_t02_c01"
+          ]
+        },
+        {
+          "id": "sch07_cx04",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "This Upanishadic verse is the deepest 'subhashita' in your book; Nityam Pibamah is where you first learned to drink such concentrated wisdom.",
+          "relatedConceptIds": [
+            "sch07_t01_c01"
+          ]
+        }
       ]
     },
     {
@@ -21231,6 +21497,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch08_cx01",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "'Rare is speech both useful and pleasing' is itself a subhashita; Nityam Pibamah Subhashitarasam is the lesson devoted to such polished sayings.",
+          "relatedConceptIds": [
+            "sch08_t02_c01"
+          ]
+        },
+        {
+          "id": "sch08_cx02",
+          "toChapterId": "sch06",
+          "topic": "Shloka Antyakshari",
+          "pointer": "This verse scorns विकत्थनम् (boasting); the Antyakshari subhashitas make the matching point about a wicked person's empty knowledge and weak character.",
+          "relatedConceptIds": [
+            "sch08_t01_c03"
+          ]
+        },
+        {
+          "id": "sch08_cx03",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "It praises the क्रियावान् — the person of ACTION over talk. Seva Hi Paramo Dharmah is what that action looks like: tireless service of others.",
+          "relatedConceptIds": [
+            "sch08_t01_c04"
+          ]
+        },
+        {
+          "id": "sch08_cx04",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "क्रियावान् ('one who acts') is built from a verb root; Dhaturupani shows how Sanskrit grows whole families of words from those roots (धातु).",
+          "relatedConceptIds": [
+            "sch08_t01_c04"
+          ]
+        }
       ]
     },
     {
@@ -22381,6 +22685,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch09_cx01",
+          "toChapterId": "sch07",
+          "topic": "Ishavasyam — the all-pervading Lord",
+          "pointer": "'From food, beings come to be' names Brahma as the source — the very same all-pervading Lord that Ishavasyam declares fills the whole universe.",
+          "relatedConceptIds": [
+            "sch09_t01_c02"
+          ]
+        },
+        {
+          "id": "sch09_cx02",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "If all beings live by anna (food), then giving food is the most fundamental service — the seva that Seva Hi Paramo Dharmah crowns the highest duty.",
+          "relatedConceptIds": [
+            "sch09_t01_c01"
+          ]
+        },
+        {
+          "id": "sch09_cx03",
+          "toChapterId": "sch03",
+          "topic": "Mitraya Namah — the Sun Salutation",
+          "pointer": "Food becomes a healthy body; the Surya-namaskara of Mitraya Namah keeps that body fit, and the 'chemistry' note here even links anna to modern rasāyana.",
+          "relatedConceptIds": [
+            "sch09_t01_c03"
+          ]
+        },
+        {
+          "id": "sch09_cx04",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "'जानीयात्' ((one) should know) is the optative mood. Dhaturupani introduces the लकार system of tenses and moods that this single form belongs to.",
+          "relatedConceptIds": [
+            "sch09_t01_c04"
+          ]
+        }
       ]
     },
     {
@@ -23530,6 +23872,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch10_cx01",
+          "toChapterId": "sch04",
+          "topic": "The Fox and the Grapes",
+          "pointer": "'Who is the tenth?' is a witty teaching-tale with a twist, just like the Fox and the Grapes — a short story that hides a lesson about ourselves.",
+          "relatedConceptIds": [
+            "sch10_t01_c01"
+          ]
+        },
+        {
+          "id": "sch10_cx02",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "The ordinals प्रथमः, द्वितीयः … दशमः are adjectives that agree like nouns; Shabda-Rupani sets out the declension pattern they follow.",
+          "relatedConceptIds": [
+            "sch10_t02_c01"
+          ]
+        },
+        {
+          "id": "sch10_cx03",
+          "toChapterId": "sch06",
+          "topic": "Shloka Antyakshari",
+          "pointer": "The traveller's clever question turns sorrow to joy — the kind of pointed wit the Antyakshari subhashitas celebrate in a single couplet.",
+          "relatedConceptIds": [
+            "sch10_t01_c04"
+          ]
+        },
+        {
+          "id": "sch10_cx04",
+          "toChapterId": "sch08",
+          "topic": "Useful and pleasing speech",
+          "pointer": "The whole lesson hinges on a few well-chosen words from the पथिक that reveal the truth — speech that is both useful AND pleasing, the ideal of Hitam Manohari.",
+          "relatedConceptIds": [
+            "sch10_t01_c02"
+          ]
         }
       ]
     },
@@ -24733,6 +25113,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch11_cx01",
+          "toChapterId": "sch01",
+          "topic": "Vande Bharatamataram — the Motherland",
+          "pointer": "The Cellular Jail held heroes who lived the spirit of Vande Bharatamataram — their suffering was that hymn's reverence for the motherland made real.",
+          "relatedConceptIds": [
+            "sch11_t01_c03"
+          ]
+        },
+        {
+          "id": "sch11_cx02",
+          "toChapterId": "sch12",
+          "topic": "Panna Dhai, the Brave",
+          "pointer": "Savarkar's sacrifice in the Andaman and Panna Dhai's sacrifice in Mewar are two faces of one virtue: giving everything for land and honour.",
+          "relatedConceptIds": [
+            "sch11_t01_c03"
+          ]
+        },
+        {
+          "id": "sch11_cx03",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "The title 'द्वीपेषु' (among the islands) is a locative-plural — one of the seven cases whose full table is taught in Shabda-Rupani.",
+          "relatedConceptIds": [
+            "sch11_t01_c01"
+          ]
+        },
+        {
+          "id": "sch11_cx04",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "The freedom fighters' endurance was selfless service to the nation — seva at its most extreme, the highest dharma of Seva Hi Paramo Dharmah.",
+          "relatedConceptIds": [
+            "sch11_t01_c03"
+          ]
+        }
       ]
     },
     {
@@ -25918,6 +26336,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch12_cx01",
+          "toChapterId": "sch01",
+          "topic": "Vande Bharatamataram — the Motherland",
+          "pointer": "Panna Dhai's devotion to her land and its prince is the lived emotion that the hymn Vande Bharatamataram puts into verse.",
+          "relatedConceptIds": [
+            "sch12_t01_c01"
+          ]
+        },
+        {
+          "id": "sch12_cx02",
+          "toChapterId": "sch11",
+          "topic": "The Andaman & the Cellular Jail",
+          "pointer": "Her 'sacrifice of everything' stands beside the Andaman prisoners' suffering — both lessons teach that freedom and honour cost the dearest price.",
+          "relatedConceptIds": [
+            "sch12_t01_c02"
+          ]
+        },
+        {
+          "id": "sch12_cx03",
+          "toChapterId": "sch05",
+          "topic": "Seva — service as the highest duty",
+          "pointer": "A wet-nurse who gives up her own son for her ward embodies service above self — the very definition of Seva Hi Paramo Dharmah.",
+          "relatedConceptIds": [
+            "sch12_t01_c01"
+          ]
+        },
+        {
+          "id": "sch12_cx04",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "'षोडशे शतके' (in the sixteenth century) is a locative phrase using an ordinal; both the case and the ordinal pattern come from Shabda-Rupani.",
+          "relatedConceptIds": [
+            "sch12_t01_c03"
+          ]
+        }
       ]
     },
     {
@@ -27086,6 +27542,44 @@
           "needsHumanReview": false,
           "source": "boss_quiz"
         }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch13_cx01",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "Varna-Matra is phonics — the SOUND of Sanskrit; Shabda-Rupani is the next step, organising the words those sounds spell into the seven-case noun tables.",
+          "relatedConceptIds": [
+            "sch13_t01_c01"
+          ]
+        },
+        {
+          "id": "sch13_cx02",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "Mastering ह्रस्व/दीर्घ vowel lengths prepares you for Dhaturupani, where a long or short vowel in a verb ending changes the whole conjugation.",
+          "relatedConceptIds": [
+            "sch13_t01_c02"
+          ]
+        },
+        {
+          "id": "sch13_cx03",
+          "toChapterId": "sch06",
+          "topic": "Shloka Antyakshari",
+          "pointer": "Antyakshari is a game of last SYLLABLES; you can only play it once Varna-Matra has taught you which vowel is long, short, or extra-long.",
+          "relatedConceptIds": [
+            "sch13_t01_c01"
+          ]
+        },
+        {
+          "id": "sch13_cx04",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "Reciting a subhashita beautifully depends on the correct vowel quantities — exactly the ह्रस्व/दीर्घ/प्लुत distinctions this lesson drills.",
+          "relatedConceptIds": [
+            "sch13_t01_c02"
+          ]
+        }
       ]
     },
     {
@@ -28253,6 +28747,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch14_cx01",
+          "toChapterId": "sch15",
+          "topic": "Dhaturupani — verb conjugation",
+          "pointer": "Shabda-Rupani gives the NOUN tables (the seven cases); Dhaturupani is its companion — the VERB tables — and together they form the spine of Sanskrit grammar.",
+          "relatedConceptIds": [
+            "sch14_t01_c01"
+          ]
+        },
+        {
+          "id": "sch14_cx02",
+          "toChapterId": "sch13",
+          "topic": "Varna-Matra — vowel quantity",
+          "pointer": "Declension endings hang on vowel sounds — अकारान्त, इकारान्त, उकारान्त stems. Varna-Matra is the phonics that makes those endings audible and correct.",
+          "relatedConceptIds": [
+            "sch14_t01_c02"
+          ]
+        },
+        {
+          "id": "sch14_cx03",
+          "toChapterId": "sch03",
+          "topic": "Mitraya Namah — the Sun Salutation",
+          "pointer": "The चतुर्थी (dative) you used in 'मित्राय नमः' is just one row of this full case table; Mitraya Namah was your first meeting with it.",
+          "relatedConceptIds": [
+            "sch14_t02_c02"
+          ]
+        },
+        {
+          "id": "sch14_cx04",
+          "toChapterId": "sch01",
+          "topic": "Vande Bharatamataram — the Motherland",
+          "pointer": "'वन्दे मातरम्' put मातरम् in the accusative (द्वितीया); here that ending finally takes its place in the complete seven-case scheme.",
+          "relatedConceptIds": [
+            "sch14_t02_c01"
+          ]
         }
       ]
     },
@@ -29437,6 +29969,44 @@
           ],
           "needsHumanReview": false,
           "source": "boss_quiz"
+        }
+      ],
+      "crossChapterRefs": [
+        {
+          "id": "sch15_cx01",
+          "toChapterId": "sch14",
+          "topic": "Shabda-Rupani — noun declension",
+          "pointer": "Dhaturupani conjugates VERBS from their roots; Shabda-Rupani declines NOUNS through the seven cases — the two tables are the matched halves of Sanskrit grammar.",
+          "relatedConceptIds": [
+            "sch15_t01_c01"
+          ]
+        },
+        {
+          "id": "sch15_cx02",
+          "toChapterId": "sch13",
+          "topic": "Varna-Matra — vowel quantity",
+          "pointer": "A verb ending lives or dies by its vowel length, so the ह्रस्व/दीर्घ training of Varna-Matra is the groundwork for reading these conjugation tables.",
+          "relatedConceptIds": [
+            "sch15_t01_c02"
+          ]
+        },
+        {
+          "id": "sch15_cx03",
+          "toChapterId": "sch09",
+          "topic": "Annad Bhavanti Bhutani — food and life",
+          "pointer": "The optative 'जानीयात्' you met in Annad Bhavanti Bhutani is one of the ten लकाराः; here the whole tense-and-mood system it belongs to is laid out.",
+          "relatedConceptIds": [
+            "sch15_t01_c02"
+          ]
+        },
+        {
+          "id": "sch15_cx04",
+          "toChapterId": "sch02",
+          "topic": "Subhashitani — wise sayings",
+          "pointer": "'पिबामः' (we drink) from Nityam Pibamah Subhashitarasam is a present-tense, first-person-plural form — exactly the kind of conjugation tabulated here.",
+          "relatedConceptIds": [
+            "sch15_t02_c01"
+          ]
         }
       ]
     }
