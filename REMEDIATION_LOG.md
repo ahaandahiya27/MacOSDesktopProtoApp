@@ -5064,3 +5064,38 @@ Full lint family + Release build + full suite green. Pushed 355fabf.
 Bespoke Social Science interactives now cover THIRTEEN chapters. History chapters
 carry SSChronologyChallenge. ONE chapter remains on glossary-match: ssch08 (sacred
 geography).
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 72 (ssch08 bespoke Sacred Geography Explorer — INTERACTIVE track COMPLETE)
+
+INTERACTIVE track. Authored `SacredGeographyExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/SacredGeographyExplorer.swift),
+a bespoke explorer for Ch.8 "How the Land Becomes Sacred" (ssch08), upgrading the
+LAST glossary-match chapter. The chapter's striking idea (ssch08_t03_c01) is that
+India's sacred sites form NETWORKS spanning the land. The widget surfaces eight
+elements — Chār Dhām (4), Jyotirlingas (12), Shakti Pīṭhas (51), sacred rivers (19
+in the Ṛigveda) and sangams, the Kumbh Mela's four sites, sacred mountains, sacred
+groves and many-faiths shrines — each with its count and why it matters. Grounded
+in ssch08_t01–t05.
+
+Gated on exact pack.id + chapter.id == "ssch08", BEFORE the chronology/glossary
+fallbacks. Big-Sur safe: withAnimation (no .animation(_:value:)), SFSymbolCompat
+(all SF Symbols 1), manual chip wrapping, @SceneStorage namespaced by chapter,
+RM-gated motion, VoiceOver labels + hints, ochre Color(red:green:blue:). Extended
+SocialScienceInteractiveGateTests to pin ssch08. pbxproj regenerated (454 app
+sources). Full lint family + Release build + full suite green. Pushed 6588098.
+
+*** MILESTONE: the INTERACTIVE track is now COMPLETE subject-wide. Every one of the
+14 non-history Social Science chapters has a bespoke inline interactive
+(ssch01/02/03/08/09/10/11/12/13/14/17/18/19/20), the 6 history chapters use the
+bespoke SSChronologyChallenge, and the generic glossary-match now serves only as a
+pinned safety net. FOUR full tracks complete subject-wide: OLYMPIAD_QUESTIONS,
+GLOSSARY_ETYMOLOGY, DEEPDIVE, INTERACTIVE. ***
+
+RUN SUMMARY (2026-06-01, cycles 67–72): shipped SIX bespoke interactives this run —
+ssch03 (ClimateFactorsExplorer), ssch02 (WeatherInstrumentLab), ssch19
+(InfrastructureSorter), ssch14 (IndiaNeighboursExplorer), ssch17 (HomeToManyExplorer),
+ssch08 (SacredGeographyExplorer) — completing the IX track. 12 commits, all green
+(pre-commit lint family incl. check_macos12_apis + pre-push ci-build-test). Zero
+regressions, zero STOP_AND_ASK. NEXT pass: A11Y_POLISH / TESTS / ARTICLES (all `—`).
