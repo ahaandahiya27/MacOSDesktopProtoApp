@@ -5525,3 +5525,22 @@ Infrastructure: Engine of India's Development — deepDive 4->6, ccRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 36109fc. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 98: ssch20 second DEEPDIVE pass (PASS COMPLETE)
+
+Banks and the Magic of Finance — deepDive 4->6, crossChapterRefs 5->7.
+- dv05 "A bank account for everyone: the Jan Dhan story" (class_10, anchor t02_c03):
+  15cr -> 50cr+ accounts, financial inclusion, direct benefit transfer.
+- dv06 "The one rule that defeats most money scams" (class_9, anchor t04_c04):
+  never share PIN/OTP; scams attack the human, not the technology.
+- cc06 -> ssch12 (a stock market is just a market for shares).
+- cc07 -> ssch05 (guilds/śhrenīs as the ancient roots of banking).
+
+*** MILESTONE: the SECOND DEEPDIVE pass is COMPLETE for all 20 chapters. Every
+chapter now carries 6 deepDive StretchTopics (class_8-12, each anchored in-chapter)
+and 6-7 crossChapterRefs weaving the four strands together. This run (cycles 81-98)
+added 36 deepDive items + ~38 ccRefs, all PDF-faithful and additive. ***
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 3043f9c. Zero regressions, zero STOP_AND_ASK.
