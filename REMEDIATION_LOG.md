@@ -6255,3 +6255,20 @@ regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 6 — integrate/test/doc: confirm Help-menu wiring, a11y/reduce-motion/
 legacy-GPU pass, round out tests, write LEARNING_JOURNEY_CHECKPOINT.md.
+
+## 2026-06-02 — Phase 6 COMPLETE · v6 Learning Journey COMPLETE
+
+Integration/test/doc: verified all six v6 Help-menu commands (distinct ⌘⇧
+shortcuts W/D/A/M/K/E), a11y coverage (96% ≥ floor), reduce-motion/legacy-GPU
+posture on the new windows. Added LearningJourneyReadOnlyTests — a capstone that
+runs MasteryEngine.snapshot + buildWholeJourneyPlan + buildMilestoneAssessment +
+buildExpertChallengeLadder over the live registry and asserts the SRS is untouched.
+Wrote LEARNING_JOURNEY_CHECKPOINT.md.
+
+v6 COMPLETE: all six phases green on Big Sur (Release build + 801 XCTest, 0
+failures). Every new surface is read-only over the SRS. Follow-on content (no
+code): author deepDive.bonusQuestions to fill the Expert ladder's Olympiad tier.
+
+Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 801 XCTest, 0 failures (was 800, +1). Additive; zero
+regressions; zero STOP_AND_ASK.

@@ -804,3 +804,34 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** Phase 6 — INTEGRATE / TEST / DOC: confirm all v6 Help-menu wiring,
   do an a11y / WCAG / reduce-motion / legacy-GPU pass over the new windows, round
   out tests, and write `LEARNING_JOURNEY_CHECKPOINT.md`.
+
+### Cycle 22 (2026-06-02) — Phase 6 COMPLETE · v6 JOURNEY COMPLETE
+- Confirmed Phase 5 still green here (800 XCTest, 0 fail) before any change.
+- **Integration verification:** all six v6 Help-menu commands wired with distinct
+  ⌘⇧ shortcuts — Weekly Progress (W), Today's Plan (D), Achievements (A), Mastery
+  Map (M), Milestone Checkpoint (K), Expert Challenges (E). a11y coverage holds at
+  96% ≥ the 90% ratchet floor; the new windows carry explicit button + combined
+  card labels with meters/bars accessibility-hidden. Reduce-motion / legacy-GPU:
+  static bars (no particles), transitions via `withAnimationRespectingReduceMotion`.
+- **Capstone test:** `desktopAhaanTests/LearningJourneyReadOnlyTests.swift` runs
+  all four read-only surfaces — `MasteryEngine.snapshot`, `buildWholeJourneyPlan`,
+  `buildMilestoneAssessment`, `buildExpertChallengeLadder` — over the live registry
+  on one seeded isolated store and asserts the full SRS signature is byte-identical
+  afterward. Pins the journey layer's one invariant: it reads mastery + packs,
+  never writes the SRS.
+- **Doc:** wrote `LEARNING_JOURNEY_CHECKPOINT.md` — the phase-by-phase summary,
+  the read-only contract, the windows + shortcuts, the Big-Sur invariants, the
+  verify recipe, and the deepDive-bonusQuestions follow-on content opportunity.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (1
+  test file auto-wired); `ci-build-test.sh` → **BUILD + 801 XCTest, 0 failures**
+  (was 800, +1). Additive; zero regressions; zero STOP_AND_ASK.
+- **PHASE 6 (Integrate / Test / Doc) is COMPLETE.**
+
+## v6 "The Learning Journey" — COMPLETE ✅
+All six phases done and green on the Big-Sur deploy target (Release build + 801
+XCTest, 0 failures): Phase 1 parity/depth sweep · Phase 2 Mastery Map · Phase 3
+adaptive cross-subject Whole Journey · Phase 4 Milestone Assessments + parent
+report card · Phase 5 Olympiad/Expert challenge ladder · Phase 6 integrate/test/
+doc. Every new surface is read-only over the SRS (pinned by a capstone test).
+Single remaining *content* opportunity (no code needed): author
+`deepDive.bonusQuestions` to populate the Expert ladder's Olympiad tier.

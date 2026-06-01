@@ -1510,6 +1510,7 @@
 		F9DD3C52F62F9FDFE1A65A51 /* JourneyPlanIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B46C0D016D960B43D4797C /* JourneyPlanIntegrationTests.swift */; };
 		DF8FEA51F683EF07377E8AAA /* JourneyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF7DE1FE4809069BF253E9 /* JourneyPlannerTests.swift */; };
 		2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */; };
+		06E3EF028CA16BC00E1518B8 /* LearningJourneyReadOnlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62A810889597699616DA0AD /* LearningJourneyReadOnlyTests.swift */; };
 		03F9996DC1A4CDE0D9B585BB /* MasteryEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33CAD65E461953A0FE68AB /* MasteryEngineTests.swift */; };
 		6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */; };
 		D545FD9F00BC2F740A66781F /* MasteryMapSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E578713D1445CDF0C835B /* MasteryMapSnapshotTests.swift */; };
@@ -3110,6 +3111,7 @@
 		A1B46C0D016D960B43D4797C /* JourneyPlanIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JourneyPlanIntegrationTests.swift"; sourceTree = "<group>"; };
 		7BCF7DE1FE4809069BF253E9 /* JourneyPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JourneyPlannerTests.swift"; sourceTree = "<group>"; };
 		9BCBDD7642E6B995F329206B /* LanguageModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageModelTests.swift"; sourceTree = "<group>"; };
+		D62A810889597699616DA0AD /* LearningJourneyReadOnlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LearningJourneyReadOnlyTests.swift"; sourceTree = "<group>"; };
 		5A33CAD65E461953A0FE68AB /* MasteryEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryEngineTests.swift"; sourceTree = "<group>"; };
 		751F0165CD3FAFE33996869B /* MasteryLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryLevelTests.swift"; sourceTree = "<group>"; };
 		8E5E578713D1445CDF0C835B /* MasteryMapSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapSnapshotTests.swift"; sourceTree = "<group>"; };
@@ -6034,6 +6036,7 @@
 				A1B46C0D016D960B43D4797C,
 				7BCF7DE1FE4809069BF253E9,
 				9BCBDD7642E6B995F329206B,
+				D62A810889597699616DA0AD,
 				5A33CAD65E461953A0FE68AB,
 				751F0165CD3FAFE33996869B,
 				8E5E578713D1445CDF0C835B,
@@ -7771,6 +7774,7 @@
 				F9DD3C52F62F9FDFE1A65A51 /* JourneyPlanIntegrationTests.swift in Sources */,
 				DF8FEA51F683EF07377E8AAA /* JourneyPlannerTests.swift in Sources */,
 				2C7AD409EE556F64AF772340 /* LanguageModelTests.swift in Sources */,
+				06E3EF028CA16BC00E1518B8 /* LearningJourneyReadOnlyTests.swift in Sources */,
 				03F9996DC1A4CDE0D9B585BB /* MasteryEngineTests.swift in Sources */,
 				6C4479EF3A6D7A4EF8B050BA /* MasteryLevelTests.swift in Sources */,
 				D545FD9F00BC2F740A66781F /* MasteryMapSnapshotTests.swift in Sources */,
