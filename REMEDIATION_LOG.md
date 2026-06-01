@@ -5276,3 +5276,21 @@ Rebuilt the pack via ss_build_pack.py; regenerated articles with --write
 min). All 7 content lints green; pre-push ci-build-test PASSED. Index/HTML steady
 at 180 entries / 907 bundled files. Additive only. Pushed 0c0dfce. Zero
 regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 82: ssch04 second DEEPDIVE pass
+
+New Beginnings: Cities and States — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "How iron cleared the forests and grew the cities" (class_9, anchor
+  t04_c01): iron axe/plough -> forest cleared + heavy soil ploughed -> grain
+  surplus -> non-farmers (potters/traders/soldiers) -> cities; iron weapons
+  also armed the expanding kingdoms.
+- dv06 "Roads that became names: Uttarāpatha and Dakṣiṇāpatha" (class_10, anchor
+  t05_c01): the two great routes that interconnected the land; 'Deccan' from
+  Dakṣiṇāpatha and the Grand Trunk Road as the northern artery's afterlife.
+- cc05 -> ssch19 (ramparts/moats/gateways + trade roads as early infrastructure).
+- cc06 -> ssch12 (trade routes/coins -> the first markets and prices).
+
+Rebuilt the pack via ss_build_pack.py; regenerated articles with --write. All 7
+content lints green; pre-push ci-build-test PASSED. Index/HTML steady at 180
+entries / 907 bundled files. Additive only. Pushed dd4215c. Zero regressions,
+zero STOP_AND_ASK.
