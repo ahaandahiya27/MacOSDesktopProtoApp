@@ -73,6 +73,8 @@ func socialScienceInteractives(
             MarketPriceBalance(chapterId: chapter.id)
         } else if chapter.id == "ssch18" {
             ThreeOrgansSorter(chapterId: chapter.id)
+        } else if chapter.id == "ssch20" {
+            CompoundingGrowth(chapterId: chapter.id)
         } else if socialScienceChronologyChapterIds.contains(chapter.id) {
             // History chapters whose first authored timeline is genuinely
             // chronological — a "put history in order" challenge. Auto-hides if
