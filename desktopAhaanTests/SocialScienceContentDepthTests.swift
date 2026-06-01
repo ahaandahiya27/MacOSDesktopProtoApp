@@ -184,6 +184,29 @@ final class SocialScienceContentDepthTests: XCTestCase {
             missing.joined(separator: ", "))
     }
 
+    /// The cycle-77 "Challenge Problems" (`_olympiad`) article gathers every
+    /// diff≥4 topic question into the reading flow with a worked solution. Pin
+    /// the article to the pack: it must render exactly one "Challenge N" section
+    /// per diff≥4 question (≥ the Olympiad floor), so a stale regen (no --write)
+    /// or an empty page can't silently ship.
+    func testOlympiadArticlesCarryEveryChallenge() throws {
+        let pack = try loadSocialSciencePack()
+        var mismatched: [String] = []
+        for ch in pack.chapters {
+            let hard = ch.topics.flatMap { $0.questions }.filter { $0.difficulty >= 4 }.count
+            guard let html = loadArticleHTML(chapterId: ch.id, suffix: "_olympiad", number: ch.number) else {
+                throw XCTSkip("\(ch.id)_olympiad.html not in test bundle.")
+            }
+            let rendered = html.components(separatedBy: "<h2>Challenge ").count - 1
+            if rendered != hard || rendered < Self.minOlympiadTopicQsPerChapter {
+                mismatched.append("\(ch.id) rendered=\(rendered) pack=\(hard)")
+            }
+        }
+        XCTAssertTrue(mismatched.isEmpty,
+            "Challenge Problems articles out of sync with the pack's diff≥4 questions " +
+            "(re-run generate_socialscience_articles.py --write): " + mismatched.joined(separator: ", "))
+    }
+
     private func loadArticleHTML(chapterId: String, suffix: String, number: Int) -> String? {
         let name = "\(chapterId)\(suffix)"
         let url = Bundle.main.url(forResource: name, withExtension: "html",
