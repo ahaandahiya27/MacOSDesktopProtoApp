@@ -4795,3 +4795,34 @@ arrow.down.circle.fill); @SceneStorage namespaced by chapter; VoiceOver labels +
 values. Extended SocialScienceInteractiveGateTests coverage to pin ssch12 as
 bespoke. pbxproj regenerated (444 app sources). Full lint family + Release build +
 full suite green. Pushed 5332f84.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 63 (ssch18 bespoke Three Organs sorter — INTERACTIVE track)
+
+INTERACTIVE track. Authored `ThreeOrgansSorter`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/ThreeOrgansSorter.swift), a
+bespoke inline widget for Ch.18 'The State, the Government, and You' (ssch18),
+upgrading that chapter from the generic glossary-match to a chapter-specific
+interactive. Shows one government function at a time and asks the learner to tap
+the responsible organ — Legislature, Executive or Judiciary. Nine cards (three
+per organ) in fixed order, each with a chapter-grounded reason so a wrong tap
+teaches rather than just buzzes (Legislature: makes laws / is elected / state
+Vidhan Sabhas; Executive: carries out laws / PM+ministers political / IAS-IPS via
+UPSC permanent; Judiciary: settles disputes & protects rights / interprets unclear
+laws / judicial review as the 'watchdog'). All grounded in ssch18_t03_c01..c03.
+Running score + 'matched all 9' finish line.
+
+Mounted behind the existing gate, keyed on exact pack.id + chapter.id == "ssch18",
+BEFORE the chronology/glossary fallbacks. Big-Sur safe: withAnimation (NOT
+.animation(_:value:)), SFSymbolCompat for every symbol (all SF Symbols 1 —
+building.columns.fill / briefcase.fill / checkmark.shield.fill / checkmark.seal.fill
+/ list.number / checkmark.circle.fill / xmark.circle.fill), @SceneStorage namespaced
+by chapter, RM-gated motion, VoiceOver labels + hints, buttons disabled after the
+answer. Extended SocialScienceInteractiveGateTests coverage to pin ssch18 as
+bespoke. pbxproj regenerated (445 app sources). Full lint family + Release build +
+full suite green. Pushed 49b9764.
+
+Bespoke Social Science interactives now cover ssch01 (relief), ssch10 (Preamble),
+ssch11 (barter), ssch12 (market price), ssch18 (three organs) — five chapters
+upgraded from the generic fallbacks.
