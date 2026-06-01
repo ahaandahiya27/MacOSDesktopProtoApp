@@ -27551,6 +27551,24 @@
           "body": "When you pay by scanning a shop's QR code on a UPI app, no note or coin moves at all — yet money truly changes hands. Behind the scan, your app reads the shop's unique payment address, you approve the amount with a secret PIN, and within seconds instructions travel between your bank and the shop's bank so that your account is reduced and theirs is increased by the same amount. The 'money' here is just numbers updated in two banks' records, made trustworthy by the same idea as a banknote: everyone agrees these records count. India's UPI system now handles billions of such payments a month, letting even a tiny street vendor accept money without a card machine. Digital money does not replace what money is — a generally accepted medium of exchange — it only changes how the message is carried, from coins in a hand to data over a network.",
           "prerequisite": "Knowing that UPI and QR codes are forms of digital money.",
           "nextStepHint": "Explain why a QR-code payment still needs both people to trust the banks' records."
+        },
+        {
+          "id": "ssch11_dv05",
+          "title": "The double coincidence of wants: barter's biggest headache",
+          "gradeLevel": "class_9",
+          "parentConceptId": "ssch11_t02_c01",
+          "body": "Of all the troubles with barter, one is so important that economists gave it a name: the double coincidence of wants. To swap by barter, it is not enough that YOU want what someone has — they must ALSO want what you have, at the same time, in the right amount. A farmer with a spare ox who needs shoes must find a shoemaker who happens to want an ox; if the shoemaker wants grain instead, no deal. Each person has to satisfy the other's want as well as their own, and finding that perfect double match is rare and slow. Money dissolves the problem completely: the farmer sells the ox to ANYONE who wants it, takes money, and spends that money on shoes from ANYONE selling them. By splitting one awkward swap into two easy ones — a sale and a purchase — money frees trade from needing a coincidence at all. That single idea is the deepest reason money was invented.",
+          "prerequisite": "Knowing barter means swapping goods directly without money.",
+          "nextStepHint": "Describe a three-person barter chain and show how one coin would make it instant."
+        },
+        {
+          "id": "ssch11_dv06",
+          "title": "Why a ₹100 note is worth ₹100",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch11_t04_c03",
+          "body": "A ₹100 note is just a printed slip of paper — it is not made of anything worth ₹100, and you cannot eat it or wear it. So why does everyone accept it? Modern paper money is what economists call FIAT money: it has value not because of the material it is made of, but because the government and the Reserve Bank of India declare it legal tender and everyone trusts that declaration. Look closely and an Indian note carries the RBI Governor's promise 'I promise to pay the bearer the sum of one hundred rupees'. The real backing is shared trust: I accept the note because I am sure the next person will accept it from me too. That is also why only the RBI may print currency — if anyone could, trust would collapse and the notes would become worthless. So a banknote works on exactly the same magic as a QR-code payment: a society agreeing, together, on what counts as money.",
+          "prerequisite": "Knowing only the RBI may issue currency in India.",
+          "nextStepHint": "Find the RBI Governor's 'I promise to pay' line on a real banknote and explain what it means."
         }
       ],
       "crossChapterRefs": [
@@ -27589,6 +27607,24 @@
           "pointer": "Paper money and the RBI introduced here are the starting point for the chapter on banks and finance, which shows how money is saved, lent and kept safe.",
           "relatedConceptIds": [
             "ssch11_t04_c03"
+          ]
+        },
+        {
+          "id": "ssch11_cc05",
+          "toChapterId": "ssch05",
+          "topic": "Guilds as India's early bankers",
+          "pointer": "Long before banks, the guilds (śhrenīs) of 'The Rise of Empires' took deposits and paid a fixed return — an ancient cousin of money and credit that grew out of the same need this chapter describes.",
+          "relatedConceptIds": [
+            "ssch11_t04_c01"
+          ]
+        },
+        {
+          "id": "ssch11_cc06",
+          "toChapterId": "ssch19",
+          "topic": "Digital money rides on infrastructure",
+          "pointer": "UPI and QR-code payments only work because of mobile networks, the internet and electricity — the communication and power infrastructure studied in 'Public Institutions and Infrastructure'.",
+          "relatedConceptIds": [
+            "ssch11_t05_c01"
           ]
         }
       ],

@@ -103,7 +103,7 @@ extension ArticleIndex {
         "ssch11_overview": ArticleEntry(id: "ssch11_overview", filename: "ssch11_overview.html", title: "Chapter Overview — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 8),
         "ssch11_glossary": ArticleEntry(id: "ssch11_glossary", filename: "ssch11_glossary.html", title: "Vocabulary Deck — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 9),
         "ssch11_ncert_qa": ArticleEntry(id: "ssch11_ncert_qa", filename: "ssch11_ncert_qa.html", title: "NCERT Q&A — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 8),
-        "ssch11_beyond": ArticleEntry(id: "ssch11_beyond", filename: "ssch11_beyond.html", title: "Beyond the Book — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 12),
+        "ssch11_beyond": ArticleEntry(id: "ssch11_beyond", filename: "ssch11_beyond.html", title: "Beyond the Book — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 18),
         "ssch11_olympiad": ArticleEntry(id: "ssch11_olympiad", filename: "ssch11_olympiad.html", title: "Challenge Problems — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 12),
         "ssch11_whatif": ArticleEntry(id: "ssch11_whatif", filename: "ssch11_whatif.html", title: "What If? — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 6),
         "ssch11_mistakes": ArticleEntry(id: "ssch11_mistakes", filename: "ssch11_mistakes.html", title: "Common Mistakes — From Barter to Money", chapterFolder: "Articles/SocialScienceChapter11", estimatedMinutes: 10),
