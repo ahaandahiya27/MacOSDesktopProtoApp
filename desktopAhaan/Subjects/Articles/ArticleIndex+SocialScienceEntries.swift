@@ -31,7 +31,7 @@ extension ArticleIndex {
         "ssch03_overview": ArticleEntry(id: "ssch03_overview", filename: "ssch03_overview.html", title: "Chapter Overview — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 8),
         "ssch03_glossary": ArticleEntry(id: "ssch03_glossary", filename: "ssch03_glossary.html", title: "Vocabulary Deck — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 10),
         "ssch03_ncert_qa": ArticleEntry(id: "ssch03_ncert_qa", filename: "ssch03_ncert_qa.html", title: "NCERT Q&A — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 8),
-        "ssch03_beyond": ArticleEntry(id: "ssch03_beyond", filename: "ssch03_beyond.html", title: "Beyond the Book — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 12),
+        "ssch03_beyond": ArticleEntry(id: "ssch03_beyond", filename: "ssch03_beyond.html", title: "Beyond the Book — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 18),
         "ssch03_olympiad": ArticleEntry(id: "ssch03_olympiad", filename: "ssch03_olympiad.html", title: "Challenge Problems — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 15),
         "ssch03_whatif": ArticleEntry(id: "ssch03_whatif", filename: "ssch03_whatif.html", title: "What If? — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 6),
         "ssch03_mistakes": ArticleEntry(id: "ssch03_mistakes", filename: "ssch03_mistakes.html", title: "Common Mistakes — Climates of India", chapterFolder: "Articles/SocialScienceChapter3", estimatedMinutes: 10),

@@ -7200,6 +7200,24 @@
           "body": "It is easy to confuse one hot afternoon with global warming, but they belong to different timescales. Weather is what happens day to day and bounces around a lot; climate is the long-term AVERAGE of that weather over decades. Climate change means that average is slowly shifting, because greenhouse gases trap extra heat in the atmosphere. You cannot see it in a single day — a cold week proves nothing — but you can measure it in the trend: glaciers retreating year after year, monsoons becoming more erratic, cyclones drawing energy from warmer seas, and record-hot years clustering together. That is why scientists study patterns over 30 years or more, not yesterday's temperature, to detect climate change.",
           "prerequisite": "Knowing the difference between weather and climate, and what the greenhouse effect is.",
           "nextStepHint": "Look up how long a glacier like Gangotri has been retreating and by how much."
+        },
+        {
+          "id": "ssch03_dv05",
+          "title": "Why India counts six seasons, not four",
+          "gradeLevel": "class_8",
+          "parentConceptId": "ssch03_t01_c02",
+          "body": "Much of the world divides the year into four seasons, but the Indian tradition recognises six ṛitus — Vasanta (spring), Grīṣma (summer), Varṣā (the rains), Śharad (autumn), Hemanta (early winter) and Śhiśhira (late winter) — each about two months long. This is not just poetry: it is a finer reading of a climate ruled by the monsoon. A four-season scheme has no slot for the single most important event of the Indian year, the arrival and retreat of the rains, so the tradition gives Varṣā and the post-monsoon Śharad their own names. The six-ṛitu calendar lines up with the farmer's year and with festivals, showing how a culture's words for time grow out of the climate it lives in. The same monsoon that the rest of this chapter explains scientifically is what makes a six-fold year fit India better than a four-fold one.",
+          "prerequisite": "Knowing that India's year is built around the monsoon's arrival and retreat.",
+          "nextStepHint": "Match each of the six ṛitus to the months and to a festival celebrated then."
+        },
+        {
+          "id": "ssch03_dv06",
+          "title": "When the rains fail: El Niño and a far-off ocean",
+          "gradeLevel": "class_10",
+          "parentConceptId": "ssch03_t03_c01",
+          "body": "The monsoon is reliable most years, but every few years it weakens — and the cause can lie thousands of kilometres away in the Pacific Ocean. Normally the western Pacific near Asia is warm and feeds rising, rainy air. In an El Niño year the warm water shifts eastward toward South America, the giant pattern of pressure and winds across the whole tropical belt rearranges, and the pull that draws moist winds onto India weakens. The result can be a late or short southwest monsoon and poor rains. This long-distance link between a Pacific warming and an Indian drought is called a 'teleconnection' — tele meaning 'far'. It is a striking lesson that climate is one connected system: an ocean on the other side of the planet can decide whether an Indian farmer's harvest succeeds, which is exactly why monsoon forecasts watch the Pacific so closely.",
+          "prerequisite": "Knowing the monsoon is driven by ocean–land pressure differences.",
+          "nextStepHint": "Find out what La Niña is and whether it tends to strengthen or weaken India's monsoon."
         }
       ],
       "crossChapterRefs": [
@@ -7241,6 +7259,26 @@
           "relatedConceptIds": [
             "ssch03_t03_c01",
             "ssch03_t01_c02"
+          ]
+        },
+        {
+          "id": "ssch03_cc05",
+          "toChapterId": "ssch12",
+          "topic": "When the climate sets the price",
+          "pointer": "A weak monsoon or an El Niño year studied here means a smaller harvest, and a smaller harvest pushes up prices in the bazaar — the climate-to-market link that 'Understanding Markets' explores through demand and supply.",
+          "relatedConceptIds": [
+            "ssch03_t04_c01",
+            "ssch03_t03_c01"
+          ]
+        },
+        {
+          "id": "ssch03_cc06",
+          "toChapterId": "ssch16",
+          "topic": "Monsoon winds and sea trade",
+          "pointer": "The seasonal reversal of the southwest and northeast monsoon winds described here was the engine of Indian Ocean sailing — ships rode the winds out and back — a story taken up in 'Turning Tides' and the Chola sea voyages.",
+          "relatedConceptIds": [
+            "ssch03_t03_c02",
+            "ssch03_t03_c01"
           ]
         }
       ],
