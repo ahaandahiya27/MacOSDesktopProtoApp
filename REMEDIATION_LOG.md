@@ -4856,3 +4856,33 @@ Bespoke Social Science interactives now cover SIX chapters: ssch01 (relief),
 ssch10 (Preamble), ssch11 (barter), ssch12 (market price), ssch18 (three organs),
 ssch20 (compounding) — every Economics/Civics economics-adjacent chapter now has a
 content-specific widget rather than the generic fallback.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 65 (ssch13 bespoke Cropping Season Explorer — INTERACTIVE track)
+
+INTERACTIVE track. Authored `CroppingSeasonExplorer`
+(desktopAhaan/Subjects/Tutor/Surfaces/SocialScience/CroppingSeasonExplorer.swift),
+a bespoke inline widget for Ch.13 'The Story of Indian Farming' (ssch13), upgrading
+that chapter from the generic glossary-match to a chapter-specific interactive. A
+twelve-month calendar strip lights up the months of the tapped season; thematic
+icons (rain for kharif, snowflake for the cool rabi, sun for the hot zaid) make the
+monsoon's rhythm visible; a detail panel lists each season's crops and explains why
+it sits where it does, including the meaning of its Arabic name. Grounded in
+ssch13_t02_c03 'The Three Cropping Seasons' and the deepDive 'Farming on the
+monsoon's clock'.
+
+Mounted behind the existing gate, keyed on exact pack.id + chapter.id == "ssch13",
+BEFORE the chronology/glossary fallbacks. Big-Sur safe: withAnimation (no
+.animation(_:value:)), SFSymbolCompat (all SF Symbols 1 — cloud.rain.fill /
+snowflake / sun.max.fill / leaf.fill), @SceneStorage namespaced by chapter, RM-gated
+motion, VoiceOver labels + hints, per-season Color(red:green:blue:) tints. Extended
+SocialScienceInteractiveGateTests coverage to pin ssch13 as bespoke. pbxproj
+regenerated (447 app sources). a11y label coverage 96% (≥90% floor). Full lint
+family + Release build + full suite green. Pushed 0b46551.
+
+Bespoke Social Science interactives now cover SEVEN chapters across all four
+strands: ssch01 (Geography relief), ssch13 (Geography/farming seasons), ssch10
+(Civics Preamble), ssch18 (Civics three organs), ssch11 (Economics barter), ssch12
+(Economics market price), ssch20 (Economics compounding). History chapters carry
+the bespoke SSChronologyChallenge.
