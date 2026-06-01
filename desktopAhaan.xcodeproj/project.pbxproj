@@ -19,6 +19,7 @@
 		1BC6E9F9AEEB0A32F2A1BE33 /* AdaptiveDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398C27EBDAD6CF236DDB502 /* AdaptiveDifficulty.swift */; };
 		76F49D155D62BF76B2680C9D /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF9AEA340D87D952541992 /* DailyPlan.swift */; };
 		CBEBC9C2C3002FCC3B937DE1 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81B9914123B796966B7F2A /* Language.swift */; };
+		88641A584D7EC9057DF8D05C /* MilestoneAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FE60AB2F013D1DB3F30DC /* MilestoneAssessment.swift */; };
 		1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */; };
 		70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */; };
 		B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57508568891C194B522876E /* StudyState.swift */; };
@@ -446,6 +447,7 @@
 		D0A9A2B844126F26185FFFAC /* CrashLogReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2398E3563C5338C862BBDD /* CrashLogReader.swift */; };
 		994125FB6537CE3889C2E22A /* JourneyPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F9A7043A335A44A0FB6E0E /* JourneyPlanner.swift */; };
 		27288E6F00B38B2A567A7D65 /* MasteryEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1622F7BEE76A45C989CAB0 /* MasteryEngine.swift */; };
+		CA56D5478DA7BA4D0D5F07C8 /* MilestoneAssessmentPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088157E1CBD51A6D6793B7AC /* MilestoneAssessmentPlanner.swift */; };
 		BEA7A1FEA258B0B8ED889A1E /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95F8DA8F2752D3B5D616EA /* OnboardingState.swift */; };
 		EFE7D4131FAA75099607AE28 /* SpeechReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4494455597FAFEC11CD91D /* SpeechReader.swift */; };
 		7E8C49BB5C5F62A134B6333B /* WeeklyReportPDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9889E33A05671FDEEF2684BE /* WeeklyReportPDFExporter.swift */; };
@@ -465,6 +467,7 @@
 		0E8E76E524E1869B52B27CF4 /* DataStore+JourneyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA64D4A46D264D514F50EA1 /* DataStore+JourneyPlan.swift */; };
 		D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */; };
 		7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */; };
+		1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */; };
 		52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */; };
 		33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */; };
 		F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2898E1F6693A8D631B6B65 /* DataStore.swift */; };
@@ -1502,6 +1505,8 @@
 		5D2FFF2E1D4AF208F6B6B6E5 /* MathsDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201A50A2B0B2C8E90BBA301E /* MathsDeepDiveTests.swift */; };
 		EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */; };
 		A5C5546E4A74303E1C27560E /* MathsEnrichmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F9847237A529875C29A59 /* MathsEnrichmentTests.swift */; };
+		AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */; };
+		067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */; };
 		66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
@@ -2575,6 +2580,7 @@
 		1398C27EBDAD6CF236DDB502 /* AdaptiveDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdaptiveDifficulty.swift"; sourceTree = "<group>"; };
 		56CF9AEA340D87D952541992 /* DailyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlan.swift"; sourceTree = "<group>"; };
 		9D81B9914123B796966B7F2A /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Language.swift"; sourceTree = "<group>"; };
+		205FE60AB2F013D1DB3F30DC /* MilestoneAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessment.swift"; sourceTree = "<group>"; };
 		D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeItem.swift"; sourceTree = "<group>"; };
 		DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeProgress.swift"; sourceTree = "<group>"; };
 		E57508568891C194B522876E /* StudyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyState.swift"; sourceTree = "<group>"; };
@@ -3006,6 +3012,7 @@
 		DD2398E3563C5338C862BBDD /* CrashLogReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrashLogReader.swift"; sourceTree = "<group>"; };
 		02F9A7043A335A44A0FB6E0E /* JourneyPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JourneyPlanner.swift"; sourceTree = "<group>"; };
 		DD1622F7BEE76A45C989CAB0 /* MasteryEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryEngine.swift"; sourceTree = "<group>"; };
+		088157E1CBD51A6D6793B7AC /* MilestoneAssessmentPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentPlanner.swift"; sourceTree = "<group>"; };
 		8A95F8DA8F2752D3B5D616EA /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingState.swift"; sourceTree = "<group>"; };
 		CE4494455597FAFEC11CD91D /* SpeechReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechReader.swift"; sourceTree = "<group>"; };
 		9889E33A05671FDEEF2684BE /* WeeklyReportPDFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyReportPDFExporter.swift"; sourceTree = "<group>"; };
@@ -3025,6 +3032,7 @@
 		1CA64D4A46D264D514F50EA1 /* DataStore+JourneyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+JourneyPlan.swift"; sourceTree = "<group>"; };
 		39E9CF5DC39A7FFFD8240C41 /* DataStore+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Loading.swift"; sourceTree = "<group>"; };
 		CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Mastery.swift"; sourceTree = "<group>"; };
+		F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+MilestoneAssessment.swift"; sourceTree = "<group>"; };
 		76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Saving.swift"; sourceTree = "<group>"; };
 		172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+WeeklyActivity.swift"; sourceTree = "<group>"; };
 		2F2898E1F6693A8D631B6B65 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore.swift"; sourceTree = "<group>"; };
@@ -3080,6 +3088,8 @@
 		201A50A2B0B2C8E90BBA301E /* MathsDeepDiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDeepDiveTests.swift"; sourceTree = "<group>"; };
 		9E02387D41DE96B17A2C1779 /* MathsDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		245F9847237A529875C29A59 /* MathsEnrichmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsEnrichmentTests.swift"; sourceTree = "<group>"; };
+		ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentIntegrationTests.swift"; sourceTree = "<group>"; };
+		7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentPlannerTests.swift"; sourceTree = "<group>"; };
 		55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
@@ -3243,6 +3253,7 @@
 				1398C27EBDAD6CF236DDB502,
 				56CF9AEA340D87D952541992,
 				9D81B9914123B796966B7F2A,
+				205FE60AB2F013D1DB3F30DC,
 				D9EC6C50A2CE40EEDFB05CBE,
 				DF66CD2A72CAA0A5B69E40AF,
 				E57508568891C194B522876E,
@@ -4807,6 +4818,7 @@
 				DD2398E3563C5338C862BBDD,
 				02F9A7043A335A44A0FB6E0E,
 				DD1622F7BEE76A45C989CAB0,
+				088157E1CBD51A6D6793B7AC,
 				8A95F8DA8F2752D3B5D616EA,
 				CE4494455597FAFEC11CD91D,
 				9889E33A05671FDEEF2684BE,
@@ -4837,6 +4849,7 @@
 				1CA64D4A46D264D514F50EA1,
 				39E9CF5DC39A7FFFD8240C41,
 				CC3B495C017114FD927D3AD1,
+				F3BF6CDCD4874F2E9E1716B7,
 				76232CCC964FE1CF70AA3379,
 				172FAB3609B485188711DCA2,
 				2F2898E1F6693A8D631B6B65,
@@ -5982,6 +5995,8 @@
 				201A50A2B0B2C8E90BBA301E,
 				9E02387D41DE96B17A2C1779,
 				245F9847237A529875C29A59,
+				ECDD9785C73D1E29E66F3BC4,
+				7D451650DFF0B97AADBBA265,
 				55AB731CAC2EE3D7C53517B9,
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
@@ -7190,6 +7205,7 @@
 				1BC6E9F9AEEB0A32F2A1BE33 /* AdaptiveDifficulty.swift in Sources */,
 				76F49D155D62BF76B2680C9D /* DailyPlan.swift in Sources */,
 				CBEBC9C2C3002FCC3B937DE1 /* Language.swift in Sources */,
+				88641A584D7EC9057DF8D05C /* MilestoneAssessment.swift in Sources */,
 				1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */,
 				70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */,
 				B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */,
@@ -7617,6 +7633,7 @@
 				D0A9A2B844126F26185FFFAC /* CrashLogReader.swift in Sources */,
 				994125FB6537CE3889C2E22A /* JourneyPlanner.swift in Sources */,
 				27288E6F00B38B2A567A7D65 /* MasteryEngine.swift in Sources */,
+				CA56D5478DA7BA4D0D5F07C8 /* MilestoneAssessmentPlanner.swift in Sources */,
 				BEA7A1FEA258B0B8ED889A1E /* OnboardingState.swift in Sources */,
 				EFE7D4131FAA75099607AE28 /* SpeechReader.swift in Sources */,
 				7E8C49BB5C5F62A134B6333B /* WeeklyReportPDFExporter.swift in Sources */,
@@ -7636,6 +7653,7 @@
 				0E8E76E524E1869B52B27CF4 /* DataStore+JourneyPlan.swift in Sources */,
 				D614D3524B356EDD962593DB /* DataStore+Loading.swift in Sources */,
 				7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */,
+				1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */,
 				52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */,
 				33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
@@ -7697,6 +7715,8 @@
 				5D2FFF2E1D4AF208F6B6B6E5 /* MathsDeepDiveTests.swift in Sources */,
 				EB917351BC373A7CD91EB465 /* MathsDiscoverModeRoutingTests.swift in Sources */,
 				A5C5546E4A74303E1C27560E /* MathsEnrichmentTests.swift in Sources */,
+				AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */,
+				067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */,
 				66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,

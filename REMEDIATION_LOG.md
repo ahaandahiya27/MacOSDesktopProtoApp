@@ -6129,3 +6129,30 @@ zero regressions; zero STOP_AND_ASK.
 NEXT: Phase 3 Milestone 2 — surface the mode as a "Today / Whole Journey"
 picker in DailyPlanView (bound to JourneyPlannerStorage, reload on change) under
 the Big-Sur invariants, + a view/routing test.
+
+## 2026-06-02 — Phase 3 CLOSED · Phase 4 M1 · Milestone Assessment sampler
+
+Phase 3 declared COMPLETE (M3 decision): the Whole Journey is already adaptive on
+two orthogonal axes — subject-level mastery-gap ordering (JourneyPlanner) and
+within-subject band-aware difficulty ordering (AdaptiveDifficultyEngine, reused
+via prioritizedDueQuestionIds). Folding the subject aggregate into the per-chapter
+band would conflate distinct signals for no gain; Mastery Map already nudges the
+weakest subject. No code change for M3 by design.
+
+Phase 4 M1 — read-only Milestone Assessment sampler (mixed cross-subject quiz
+sampled by mastery gaps): pure MilestoneAssessmentPlanner (D'Hondt slot
+apportionment by gap weight + weak-first interleave reusing
+JourneyPlanner.roundRobinReviews), @MainActor DataStore.buildMilestoneAssessment
+(started subjects only, reviewed topic questions only, weakest-first within
+subject, packId-scoped collision-safe resolution), and the MilestoneAssessment /
+AssessmentQuestion value model. READ-ONLY over SRS. +13 tests (10 pure, 3 live).
+Fixed a test-only collision bug (Maths question ids share Science's bare chNN
+scheme; only concept ids are pack-prefixed) by seeding disjoint id sets.
+
+Green here: all 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 777 XCTest, 0 failures (was 764, +13). Purely additive;
+zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 4 M2 — the assessment-taking UI (pure-SwiftUI window: intro → answer
+→ result breakdown, reusing AnswerValidator + the window-presenter pattern), + a
+render test. Then M3 — extend the Weekly-Progress PDF into a parent report card.

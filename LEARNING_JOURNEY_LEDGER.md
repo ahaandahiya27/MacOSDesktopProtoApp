@@ -515,3 +515,74 @@ required before declaring the mission complete (Phase 6).
   additional `AdaptiveDifficultyEngine` surfacing (e.g. a gap-aware nudge), or
   declare Phase 3 complete and move to Phase 4 (Milestone Assessments + Parent
   Report Card, extending `WeeklyReportPDFExporter`).
+
+### Cycle 16 (2026-06-02) — Phase 3 CLOSED · Phase 4 M1 · Milestone Assessment sampler
+- Confirmed Phase 0 still green here before any change (Release build + **764
+  XCTest, 0 fail**; pbxproj in sync; all Big-Sur static lints clean; the lone
+  red script — `check_callout_reading_level.py` — is the documented non-gating
+  Discover-callout advisory, flags only untouched scene files).
+- **Phase 3 M3 DECISION — Phase 3 declared COMPLETE.** The cross-subject journey
+  is already adaptive on two *orthogonal* axes: SUBJECT-level mastery-gap
+  ordering (`JourneyPlanner.subjectFocusOrder` + `roundRobinReviews`) and
+  WITHIN-subject band-aware difficulty ordering (`AdaptiveDifficultyEngine`,
+  reused via `prioritizedDueQuestionIds`). Folding the subject-mastery aggregate
+  (a coverage/SRS rollup) into the per-chapter rolling-5-window difficulty band
+  would conflate two distinct signals and muddy the engine's read-only contract
+  for no pedagogical gain — and the Mastery Map already surfaces the weakest-
+  subject "focus next" nudge. The brief's Phase-3 promise ("JourneyPlanner
+  extends Daily Plan + AdaptiveDifficultyEngine; Whole Journey mode") is met
+  end-to-end (engine cycle 14 + UI cycle 15). No code change for M3 by design.
+- **Phase 4 Milestone 1 — the read-only Milestone Assessment sampler.** A short,
+  mixed, cross-subject quiz **sampled by mastery gaps**, mirroring the
+  MasteryEngine/JourneyPlanner read-only-pure-core + @MainActor-builder split:
+  - `desktopAhaan/Models/MilestoneAssessment.swift` — value types
+    `AssessmentQuestion` (packId + subject/chapter title + resolved `Question`)
+    and `MilestoneAssessment` (ordered questions, `generatedAt`, `subjectCounts`,
+    `subjectTitles`). FS-free, no clock read.
+  - `desktopAhaan/Services/MilestoneAssessmentPlanner.swift` — PURE core:
+    `allocateSlots` apportions the quiz's slots across subjects by mastery-gap
+    weight using **highest-averages (D'Hondt)** — proportional, deterministic,
+    sums to exactly `min(total, Σ available)`, respects each subject's pool cap,
+    ties break weakest-first by input order, zero-gap subjects kept eligible via
+    a `minWeight` floor; `compose` does allocate → truncate each gap-ordered pool
+    → interleave weak-first by **reusing `JourneyPlanner.roundRobinReviews`** (one
+    shared spread guarantee, not a re-implementation).
+  - `desktopAhaan/Services/Persistence/DataStore+MilestoneAssessment.swift` — the
+    `@MainActor buildMilestoneAssessment(registry:targetCount:now:)`: builds a
+    `MasteryEngine.snapshot`, and for each STARTED subject gathers its REVIEWED
+    topic questions ordered **weakest-first** (lowest `MasteryLevel`, then lowest
+    SM-2 ease, then authored order), weights each subject by gap
+    (`1 − masteryFraction`), composes, and resolves picks back to
+    `AssessmentQuestion`s. Scope choices: started subjects only (never quizzes an
+    unopened subject), reviewed *topic* questions only (never unseen content,
+    never scene-embedded boss/quick-check ids), pack-`packId`-scoped resolution
+    so a colliding bare `chNN_tNN_qNN` id is credited only to the subject the kid
+    answered it in. Degrades to a shorter quiz on a thin profile — no filler.
+    READ-ONLY over the SRS (no mutation/scheduling/write).
+- Tests (+13): `MilestoneAssessmentPlannerTests.swift` (10 pure —
+  proportionality, cap-spill, sum-to-capacity, weakest-first tie-break, zero-
+  weight floor, edge cases; compose allocate-by-gap + weak-first interleave,
+  truncation, total-clamp/empty, out-of-order pools) and
+  `MilestoneAssessmentIntegrationTests.swift` (3 @MainActor over the live
+  registry on an isolated temp store: empty-when-nothing-reviewed; cross-subject
+  spread + resolved-question integrity + collision-safe crediting + unique ids +
+  subjectCounts tally + read-only-over-SRS; and gap-weighting tests the weaker
+  subject more, leading the order with it).
+- **Caught + fixed a test bug, not a code bug:** the gap-weighting test first
+  assumed Science (`ch*`) and Maths question ids were disjoint — but only
+  *concept* ids are pack-prefixed; topic-question ids share the bare
+  `chNN_tNN_qNN` scheme, so the two seed sets collided and the second overwrote
+  the first (inverting the result). Fixed by seeding against a shared `seen` set
+  so the two id sets are disjoint strings, each with the correct `packId`. The
+  production code was already correct (it disambiguates by `packId`).
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (3
+  source + 2 test files auto-wired); `ci-build-test.sh` → **BUILD + 777 XCTest,
+  0 failures** (was 764, +13). Purely additive — zero existing-file edits; zero
+  regressions; zero STOP_AND_ASK.
+- **NEXT:** Phase 4 M2 — the assessment-taking UI: a pure-SwiftUI Milestone
+  Assessment window (intro → one-question-at-a-time answer/score → result
+  breakdown by subject), reusing the existing `AnswerValidator` correctness path
+  and the NSHostingController window-presenter pattern, under the Big-Sur /
+  legacy-GPU invariants, + a render/routing test. Then M3 — extend the
+  Weekly-Progress PDF into a parent **report card** folding in the mastery
+  snapshot + latest assessment score.
