@@ -5258,3 +5258,21 @@ All content lints green; pre-push ci-build-test PASSED. Index/HTML steady at 180
 entries / 907 bundled files. Additive only. Pushed acb2861. Zero regressions,
 zero STOP_AND_ASK. (Run cycles 77-80: new _olympiad article type + its ratchet +
 ssch01/ssch02 second DEEPDIVE pass; all green.)
+
+## 2026-06-01 — Social Science DEEPEN cycle 81: ssch03 second DEEPDIVE pass
+
+Climates of India: deepDive 4->6, crossChapterRefs 4->6 (additive).
+- dv05 "Why India counts six seasons, not four" (class_8, anchor t01_c02):
+  the six ṛitus (Vasanta/Grīṣma/Varṣā/Śharad/Hemanta/Śhiśhira) as a finer,
+  monsoon-shaped calendar a four-season scheme cannot capture.
+- dv06 "When the rains fail: El Niño and a far-off ocean" (class_10, anchor
+  t03_c01): the Pacific teleconnection that weakens the southwest monsoon.
+- cc05 -> ssch12 (weak monsoon/El Niño -> smaller harvest -> bazaar prices).
+- cc06 -> ssch16 (the monsoon's seasonal wind reversal -> Indian Ocean sailing
+  and the Chola sea voyages).
+
+Rebuilt the pack via ss_build_pack.py; regenerated articles with --write
+(ssch03 Beyond-the-Book now 6 deep-dives + 6 Connect links, read-time 12->18
+min). All 7 content lints green; pre-push ci-build-test PASSED. Index/HTML steady
+at 180 entries / 907 bundled files. Additive only. Pushed 0c0dfce. Zero
+regressions, zero STOP_AND_ASK.
