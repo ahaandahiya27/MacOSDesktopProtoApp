@@ -391,6 +391,7 @@
 		852E1D9AD2B52B9D060211B2 /* CompoundingGrowth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17C50A42B5B0874EDE2A152 /* CompoundingGrowth.swift */; };
 		4079F08B627295EE763D0550 /* CroppingSeasonExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83739928ED63507E0AA2ED88 /* CroppingSeasonExplorer.swift */; };
 		D0FDE8C0A6EA55ED878BC172 /* GovernmentFormsExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B237482B2E0A115D42164E /* GovernmentFormsExplorer.swift */; };
+		D9ADF2953350BFD580B49F96 /* IndiaNeighboursExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185C071B17E201B21839000 /* IndiaNeighboursExplorer.swift */; };
 		B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */; };
 		09BE2CD1A8916550741AAD74 /* InfrastructureSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE33D563B197D85F3C8629B /* InfrastructureSorter.swift */; };
 		7AB4E90EB8F7172B9DDFB86F /* MarketPriceBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40287D99A02FB4137BB18496 /* MarketPriceBalance.swift */; };
@@ -2886,6 +2887,7 @@
 		B17C50A42B5B0874EDE2A152 /* CompoundingGrowth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompoundingGrowth.swift"; sourceTree = "<group>"; };
 		83739928ED63507E0AA2ED88 /* CroppingSeasonExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CroppingSeasonExplorer.swift"; sourceTree = "<group>"; };
 		F8B237482B2E0A115D42164E /* GovernmentFormsExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GovernmentFormsExplorer.swift"; sourceTree = "<group>"; };
+		D185C071B17E201B21839000 /* IndiaNeighboursExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndiaNeighboursExplorer.swift"; sourceTree = "<group>"; };
 		ED6F1F2243AB387D5D3FA8EB /* IndiaPhysiographicExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndiaPhysiographicExplorer.swift"; sourceTree = "<group>"; };
 		3CE33D563B197D85F3C8629B /* InfrastructureSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfrastructureSorter.swift"; sourceTree = "<group>"; };
 		40287D99A02FB4137BB18496 /* MarketPriceBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketPriceBalance.swift"; sourceTree = "<group>"; };
@@ -5636,6 +5638,7 @@
 				B17C50A42B5B0874EDE2A152,
 				83739928ED63507E0AA2ED88,
 				F8B237482B2E0A115D42164E,
+				D185C071B17E201B21839000,
 				ED6F1F2243AB387D5D3FA8EB,
 				3CE33D563B197D85F3C8629B,
 				40287D99A02FB4137BB18496,
@@ -7407,6 +7410,7 @@
 				852E1D9AD2B52B9D060211B2 /* CompoundingGrowth.swift in Sources */,
 				4079F08B627295EE763D0550 /* CroppingSeasonExplorer.swift in Sources */,
 				D0FDE8C0A6EA55ED878BC172 /* GovernmentFormsExplorer.swift in Sources */,
+				D9ADF2953350BFD580B49F96 /* IndiaNeighboursExplorer.swift in Sources */,
 				B9BE25A8FC9D54943DDE9B44 /* IndiaPhysiographicExplorer.swift in Sources */,
 				09BE2CD1A8916550741AAD74 /* InfrastructureSorter.swift in Sources */,
 				7AB4E90EB8F7172B9DDFB86F /* MarketPriceBalance.swift in Sources */,
